@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc8d936ac4fca704e7e3069209d8ff75d46b044d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fde9586c1b3736b5db2c4814058dd23713dd34d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763467"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770336"
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask — Metoda
 Żądania, że środowisko uruchomieniowe języka wspólnego (CLR) odłożone zadania, bieżący [iclrtask —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) wystąpienie reprezentuje i udostępnić czas procesora do innych zadań.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT YieldTask ();  
 ```  
   

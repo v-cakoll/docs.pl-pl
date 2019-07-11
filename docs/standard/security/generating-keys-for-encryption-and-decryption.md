@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd6a5d710f4b42ae8d1bedb535abface7a053cbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 52ec268df38a12dfe7dac469eed9901d7c0646a1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654389"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769605"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Generowanie kluczy szyfrowania i odszyfrowywania
 Tworzenie i zarządzanie kluczami jest ważną częścią procesu szyfrowania. Symetryczne algorytmy wymaga utworzenia klucza i wektor inicjowania (IV). Klucz musi trzymane w tajemnicy każdy, kto powinien nie odszyfrowania danych. IV nie muszą być wpisu tajnego, ale powinna zostać zmieniona dla każdej sesji. Asymetryczne algorytmy wymagają utworzenia klucza publicznego i prywatnego klucza. Klucz publiczny mogą być ujawniane dla każdego, kto, gdy klucz prywatny musi znane tylko przez strony, która spowoduje odszyfrowanie dane zaszyfrowane przy użyciu klucza publicznego. W tej sekcji opisano sposób generowania i zarządzania kluczami symetrycznego i asymetrycznych algorytmów.  
   
 ## <a name="symmetric-keys"></a>Klucze symetryczne  
- Klasy szyfrowania symetrycznego, dostarczanych przez .NET Framework wymaga klucza i nowy wektor inicjowania (IV) do szyfrowania i odszyfrowywania danych. Zawsze, gdy tworzysz nowe wystąpienie jednego z zarządzanego symetrycznego klas kryptograficznych przy użyciu domyślnego konstruktora, nowy klucz i IV są tworzone automatycznie. Każda osoba, dzięki czemu można odszyfrować danych muszą posiadać ten sam klucz i IV i używać tego samego algorytmu. Ogólnie rzecz biorąc dla każdej sesji powinien zostać utworzony nowy klucz i IV, a klucz ani IV powinny być przechowywane do użytku w sesji nowsze.  
+ Klasy szyfrowania symetrycznego, dostarczanych przez .NET Framework wymaga klucza i nowy wektor inicjowania (IV) do szyfrowania i odszyfrowywania danych. Zawsze, gdy tworzysz nowe wystąpienie jednego z zarządzanego symetrycznego klas kryptograficznych za pomocą konstruktora bez parametrów, nowy klucz i IV są tworzone automatycznie. Każda osoba, dzięki czemu można odszyfrować danych muszą posiadać ten sam klucz i IV i używać tego samego algorytmu. Ogólnie rzecz biorąc dla każdej sesji powinien zostać utworzony nowy klucz i IV, a klucz ani IV powinny być przechowywane do użytku w sesji nowsze.  
   
  Do przekazywania klucza symetrycznego i IV zdalnego innych firm, będzie zazwyczaj szyfrowania klucza symetrycznego za pomocą asymetrycznych. Wysyłanie klucz za pośrednictwem niezabezpieczonej sieci bez szyfrowania stanowi zagrożenie, ponieważ każdy, kto przechwytuje klucz i IV odszyfrować danych. Aby uzyskać więcej informacji na temat wymiana danych przy użyciu szyfrowania, zobacz [tworzenie schematu kryptograficznego](../../../docs/standard/security/creating-a-cryptographic-scheme.md).  
   
@@ -60,7 +60,7 @@ tdes.GenerateKey();
  Po poprzednim kodzie jest wykonywana, klucza i IV są generowane podczas nowe wystąpienie klasy **TripleDESCryptoServiceProvider** wykonano. Inny klucz i IV są tworzone, gdy **do generowania kluczy** i **GenerateIV** metody są wywoływane.  
   
 ## <a name="asymmetric-keys"></a>Klucze asymetryczne  
- Program .NET Framework oferuje <xref:System.Security.Cryptography.RSACryptoServiceProvider> i <xref:System.Security.Cryptography.DSACryptoServiceProvider> klasy dla szyfrowanie asymetryczne. W ramach tych zajęć utworzyć parę kluczy publiczny/prywatny, używając domyślnego konstruktora do utworzenia nowego wystąpienia. Klucze asymetryczne może przechowywane do użytku w wielu sesjach lub generowane dla tylko jednej sesji. Podczas gdy klucz publiczny może być ogólnie dostępne, klucz prywatny powinny być ściśle chronione podobnie.  
+ Program .NET Framework oferuje <xref:System.Security.Cryptography.RSACryptoServiceProvider> i <xref:System.Security.Cryptography.DSACryptoServiceProvider> klasy dla szyfrowanie asymetryczne. W ramach tych zajęć tworzenie pary kluczy publiczny/prywatny, gdy używasz konstruktora bez parametrów do utworzenia nowego wystąpienia. Klucze asymetryczne może przechowywane do użytku w wielu sesjach lub generowane dla tylko jednej sesji. Podczas gdy klucz publiczny może być ogólnie dostępne, klucz prywatny powinny być ściśle chronione podobnie.  
   
  Pary kluczy publiczny/prywatny jest generowany, gdy tworzone jest nowe wystąpienie klasy algorytmu asymetrycznego. Po utworzeniu nowe wystąpienie klasy informacje o kluczu można wyodrębnić przy użyciu jednej z dwóch metod:  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ba62ab2c4df73b570fb1c76adaee44a2a2ce8c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a6b754e6ceef0c451c38055078d403c0601ce45
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597157"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755941"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyleave-method"></a>ICorProfilerCallback::ExceptionUnwindFinallyLeave — Metoda
 Powiadamia program profilujący, że fazy odwijanie wyjątków opuścił obsługi `finally` klauzuli.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT ExceptionUnwindFinallyLeave();  
 ```  
   

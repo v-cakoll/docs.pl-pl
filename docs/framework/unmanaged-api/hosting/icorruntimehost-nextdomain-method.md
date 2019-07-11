@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c3ff0c91713a6bb7449791bae6a754c43659335
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf19d322d8e4d0d05993d22b2aa7e46bda7b5a1d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700170"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780067"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>ICorRuntimeHost::NextDomain — Metoda
 Pobiera wskaźnik interfejsu do następnej domeny w wyliczeniu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT NextDomain (  
     [in] HCORENUM hEnum,  
     [out] void** pAppDomain  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26cd30be591c4167fa6a6e4d19ba9d1c909c6428
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc179236f5453724639d47558770179a1e80f706
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927344"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746195"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterMemoryValue — Metoda
 Pobiera wartość argumentu lub zmiennej lokalnej, z których word niski i wysoki word są przechowywane w lokalizacji w pamięci i określony rejestru, odpowiednio dla tej ramki natywne.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetLocalRegisterMemoryValue (  
     [in] CorDebugRegister   highWordReg,  
     [in] CORDB_ADDRESS      lowWordAddress,  

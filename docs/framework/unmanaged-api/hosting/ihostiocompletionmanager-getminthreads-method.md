@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: faac5adccecdd0aeecede3b4f50a4db554e3d162
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2022fcbbaaa419048203ecbacfb294160cab5752
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796867"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779745"
 ---
 # <a name="ihostiocompletionmanagergetminthreads-method"></a>IHostIoCompletionManager::GetMinThreads — Metoda
 Pobiera minimalną liczbę wątków, udostępnianych przez hosta do przetwarzania żądań We/Wy.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetMinThreads (  
     [out] DWORD *pdwMinIOCompletionThreads  
 );  

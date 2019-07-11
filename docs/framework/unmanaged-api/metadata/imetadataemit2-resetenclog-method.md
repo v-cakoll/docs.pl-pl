@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bae4dccacfa092243c7e0b1a2e6daad92b51d933
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60007467112fb46d3e455902a6d3a561e0c17227
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937101"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777157"
 ---
 # <a name="imetadataemit2resetenclog-method"></a>IMetaDataEmit2::ResetENCLog — Metoda
 Resetuje edit-and-continue dziennika i uruchamia nową sesję.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT ResetENCLog ();  
 ```  
   

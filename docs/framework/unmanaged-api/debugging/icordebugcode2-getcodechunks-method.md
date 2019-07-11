@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1428fc245d4f6993050c2753321684afee488c0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bbc7ac7d87c6a5d36dc3432c603bb7d16d62c00
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750153"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747427"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>ICorDebugCode2::GetCodeChunks — Metoda
 Pobiera fragmentów kodu, który składa się ten obiekt kodu z.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetCodeChunks (  
     [in]  ULONG32     cbufSize,  
     [out] ULONG32     *pcnumChunks,  

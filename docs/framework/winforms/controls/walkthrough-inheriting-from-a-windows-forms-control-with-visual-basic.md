@@ -10,12 +10,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: b606de4b7cf4648fdc7ada3c1f6faec81342d02c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcd65f231ab0e05da0ec152b05878233558f2cd9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792187"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772063"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Przewodnik: dziedziczenie z kontrolki formularzy systemu Windows z Visual Basic
 Za pomocą Visual Basic można tworzyć zaawansowane Kontrolki niestandardowe za pomocą *dziedziczenia*. Poprzez dziedziczenie jest możliwe w celu tworzenia formantów, które zachować wszystkie związane funkcje standardowych kontrolek Windows Forms, ale również dołączać niestandardowe funkcje. W tym instruktażu utworzysz prostą odziedziczoną kontrolkę o nazwie `ValueButton`. Ten przycisk będzie dziedziczyć funkcji z formularzy Windows <xref:System.Windows.Forms.Button> kontrolować i udostępni właściwość niestandardową o nazwie `ButtonValue`.  
@@ -26,7 +26,7 @@ Za pomocą Visual Basic można tworzyć zaawansowane Kontrolki niestandardowe za
 ## <a name="creating-the-project"></a>Tworzenie projektu  
  Podczas tworzenia nowego projektu, należy określić jego nazwę, aby ustawić głównej przestrzeni nazw, nazwa zestawu i nazwa projektu i upewnij się, że składnik domyślną będzie poprawną przestrzeń nazw.  
   
-#### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>Aby utworzyć ValueButtonLib Biblioteka kontrolek i kontrola ValueButton  
+### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>Aby utworzyć ValueButtonLib Biblioteka kontrolek i kontrola ValueButton  
   
 1. Na **pliku** menu wskaż **New** a następnie kliknij przycisk **projektu** otworzyć **nowy projekt** okno dialogowe.  
   
@@ -54,7 +54,7 @@ Za pomocą Visual Basic można tworzyć zaawansowane Kontrolki niestandardowe za
 ## <a name="adding-a-property-to-your-inherited-control"></a>Dodawanie właściwości do kontrolki dziedziczone  
  Jedno możliwe użycie dziedziczone kontrolek Windows Forms jest tworzenie elementów sterujących, które są takie same jak w wygląd i zachowanie (wyglądu i działania) standardowych kontrolek Windows Forms, ale udostępnianie właściwości niestandardowych. W tej sekcji dodasz właściwość o nazwie `ButtonValue` do formantu.  
   
-#### <a name="to-add-the-value-property"></a>Aby dodać właściwość wartość  
+### <a name="to-add-the-value-property"></a>Aby dodać właściwość wartość  
   
 1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **ValueButton.vb**, a następnie kliknij przycisk **Wyświetl kod** z menu skrótów.  
   
@@ -84,13 +84,13 @@ Za pomocą Visual Basic można tworzyć zaawansowane Kontrolki niestandardowe za
 ## <a name="testing-your-control"></a>Testowanie formantu  
  Formanty nie są autonomiczne projektów; muszą one być obsługiwane w kontenerze. Aby przetestować Twoją kontrolą, musisz podać projekt testowy dla niego do uruchamiania w. Należy również upewnić kontroli nad dostępne dla projektu testowego, tworząc (Kompilacja) go. W tej sekcji utworzysz formant i przetestować ją w formularzu Windows.  
   
-#### <a name="to-build-your-control"></a>Tworzenie formantu  
+### <a name="to-build-your-control"></a>Tworzenie formantu  
   
 1. Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.  
   
      Kompilacja zostanie pomyślnie zakończona bez błędów i ostrzeżeń.  
   
-#### <a name="to-create-a-test-project"></a>Aby utworzyć projekt testowy  
+### <a name="to-create-a-test-project"></a>Aby utworzyć projekt testowy  
   
 1. Na **pliku** menu wskaż **Dodaj** a następnie kliknij przycisk **nowy projekt** otworzyć **Dodaj nowy projekt** okno dialogowe.  
   
@@ -108,7 +108,7 @@ Za pomocą Visual Basic można tworzyć zaawansowane Kontrolki niestandardowe za
   
 8. W **Eksploratora rozwiązań** kliknij prawym przyciskiem myszy **testu** i wybierz **kompilacji**.  
   
-#### <a name="to-add-your-control-to-the-form"></a>Aby dodać formant do formularza  
+### <a name="to-add-your-control-to-the-form"></a>Aby dodać formant do formularza  
   
 1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **Form1.vb** i wybierz polecenie **Projektant widoków** z menu skrótów.  
   

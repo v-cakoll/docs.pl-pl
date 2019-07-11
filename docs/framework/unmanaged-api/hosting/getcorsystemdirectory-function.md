@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a412bd8410750ec826762e45d70d59c514c61542
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: deec4d40270a11b9e48a0ab39504d774314c077c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490385"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736189"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory — Funkcja
 Zwraca katalog instalacyjny środowisko uruchomieniowe języka wspólnego (CLR), który jest ładowany do procesu. Katalog instalacyjny jest w pełni kwalifikowany, na przykład "c:\windows\microsoft.net\framework\v1.0.3705".  
@@ -31,7 +31,7 @@ Zwraca katalog instalacyjny środowisko uruchomieniowe języka wspólnego (CLR),
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetCORSystemDirectory (   
     [out] LPWSTR  pbuffer,     
     [in]  DWORD   cchBuffer,   

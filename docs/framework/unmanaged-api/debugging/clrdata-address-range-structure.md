@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 484ca79483fc4a5d8f0d1cf2cd5a961c297249e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afcb4e642c9b54107423f7474771fdc28cde709e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961320"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741015"
 ---
 # <a name="clrdataaddressrange-structure"></a>CLRDATA_ADDRESS_RANGE, struktura
 
@@ -30,7 +30,7 @@ Definiuje zakres adresów.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 typedef struct
 {
     CLRDATA_ADDRESS startAddress;

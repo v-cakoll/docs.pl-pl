@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7dd4589da9b59d7e701ac641c8d45be3735d0b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 62c81741b1260c20b25a0f49a33d3a20ebde24a5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700153"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780409"
 ---
 # <a name="icorthreadpoolcorcallorqueueuserworkitem-method"></a>ICorThreadpool::CorCallOrQueueUserWorkItem — Metoda
 Ta metoda obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT CorCallOrQueueUserWorkItem (  
     [in] LPTHREAD_START_ROUTINE Function,  
     [in] PVOID                  Context,  

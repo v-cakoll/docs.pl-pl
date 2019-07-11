@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 64982308c6eb7e9df4b94b4e123857c65939f044
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 555926e0e6a669f70bdeff484cff0eb62ae11f7b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939753"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776940"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>ISymUnmanagedDocumentWriter::SetSource — Metoda
 Ustawia osadzone źródło dla dokumentu, który jest zapisywany.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT SetSource(  
     [in]  ULONG32  sourceSize,  
     [in, size_is(sourceSize)] BYTE  source[]);  

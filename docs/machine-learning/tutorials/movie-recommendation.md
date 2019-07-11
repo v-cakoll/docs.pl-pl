@@ -3,15 +3,15 @@ title: 'Samouczek: Tworzenie polecania filmu - factorization macierzy'
 description: W tym samouczku dowiesz się, jak tworzyć polecania filmów za pomocą platformy ML.NET w aplikacji konsoli .NET Core. Użyj kroków C# i Visual Studio 2019 r.
 author: briacht
 ms.author: johalex
-ms.date: 05/06/2019
+ms.date: 07/09/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 512c8d663835da77c05fb24926ff85c56afd11ca
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: bf04f5a098bd2c378a2b73d7684eb74e16feb728
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66725505"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779039"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Samouczek: Tworzenie polecania filmu, za pomocą factorizaton macierzy za pomocą platformy ML.NET
 
@@ -56,7 +56,7 @@ Istnieje kilka sposobów podejście problemy zalecenie, takie jak polecanie list
 
 3. Zainstaluj **Microsoft.ML** i **Microsoft.ML.Recommender** pakiety NuGet:
 
-    W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt i wybierz **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz opcję **Przeglądaj** kartę, wyszukaj **Microsoft.ML**, wybierz opcję **1.0.0** pakietu na liście, a następnie wybierz pozycję  **Zainstaluj** przycisku. Wybierz **OK** znajdujący się na **podgląd zmian** okna dialogowego, a następnie wybierz **akceptuję** znajdujący się na **akceptacja licencji** okno dialogowe Jeśli możesz Akceptuję postanowienia licencyjne dla pakietów wymienionych. Powtórz te kroki dla **Microsoft.ML.Recommender v0.12.0**.
+    W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt i wybierz **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz opcję **Przeglądaj** kartę, wyszukaj **Microsoft.ML**, a następnie wybierz pakiet z listy i wybierz **zainstalować** przycisku. Wybierz **OK** znajdujący się na **podgląd zmian** okna dialogowego, a następnie wybierz **akceptuję** znajdujący się na **akceptacja licencji** okno dialogowe Jeśli możesz Akceptuję postanowienia licencyjne dla pakietów wymienionych. Powtórz te kroki dla **Microsoft.ML.Recommender**.
 
 4. Dodaj następujący kod `using` instrukcji w górnej części Twojej *Program.cs* pliku:
 
@@ -350,7 +350,7 @@ Aby użyć modelu do prognozowania w aplikacji użytkownika końcowego, należy 
 Tworzenie `SaveModel()` metody tuż za `UseModelForSinglePrediction()` metody, używając następującego kodu:
 
 ```csharp
-public static void SaveModel(MLContext mlContext, ITransformer model)
+public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataViewSchema, ITransformer model)
 {
 
 }

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2bcc837fede7e7db59bdf88a0b5434a7c1924335
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5818cb8d7da7415feb61532799df5fa5a16fd3b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597119"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781213"
 ---
 # <a name="icorprofilerobjectenumskip-method"></a>ICorProfilerObjectEnum::Skip — Metoda
 Przesuwa kursor tego modułu wyliczającego z jego bieżącej pozycji, dzięki czemu są pomijane przez określoną liczbę elementów.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT Skip (  
     [in] ULONG   celt  
 );  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b616017745d7cc33d57b1626b6c27c59a0a60a32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a68ea07c40c966422be6ebb663e62508032c2610
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992293"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750447"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>ICorProfilerCallback::RootReferences — Metoda
 Powiadamia program profilujący informacje na temat odwołań do katalogu głównego po wyrzucania elementów bezużytecznych.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT RootReferences(  
     [in] ULONG    cRootRefs,  
     [in, size_is(cRootRefs)] ObjectID rootRefIds[] );  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e65a83d1da0580436babd15e4f27e2db7a698668
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: c9104550438a2a066cdf052b8d6592e86b831194
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377612"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749984"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits — Metoda
 Ustawia rozmiar segmentu i maksymalny rozmiar generacji 0.  
@@ -32,7 +32,7 @@ Ustawia rozmiar segmentu i maksymalny rozmiar generacji 0.
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT SetGCStartupLimits (  
     [in] DWORD SegmentSize,  
     [in] DWORD MaxGen0Size  

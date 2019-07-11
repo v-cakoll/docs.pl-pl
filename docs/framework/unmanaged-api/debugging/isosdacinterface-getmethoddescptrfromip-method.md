@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: c92b112262aa2bede03bddc1396947b5fdfd6286
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cd256250021436e611142de11c3625a21aeec814
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629987"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764744"
 ---
 # <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>Metoda ISOSDacInterface::GetMethodDescPtrFromIP
 
@@ -30,7 +30,7 @@ Pobiera wskaźnik MethodDesc odpowiadającej metody zawierającą adres instrukc
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 HRESULT GetMethodDescPtrFromIP(
     CLRDATA_ADDRESS ip,
     CLRDATA_ADDRESS * ppMD

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc840df9dd0793a7347b7f0d8a05296a09d634c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e32c0ace5f999a75220d0d093b85e0cbbfc73889
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050067"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757585"
 ---
 # <a name="imetadataemitsavetomemory-method"></a>IMetaDataEmit::SaveToMemory — Metoda
 Zapisuje wszystkie metadane w bieżącym zakresie do określonego obszaru pamięci.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT SaveToMemory (   
     [out]  void        *pbData,   
     [in]   ULONG       cbData   

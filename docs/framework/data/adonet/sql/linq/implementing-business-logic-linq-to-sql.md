@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 3dcc6f763acfff076bb03076a17e3a8f8916267c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9456340834c06e87f977cd784a37f7436523d29e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033569"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743127"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementowanie logiki biznesowej (LINQ to SQL)
 Termin "logikę biznesową" w tym temacie odnosi się do żadnych reguł niestandardowych lub testów sprawdzania poprawności, które są stosowane do danych, przed jego wstawione, zaktualizowane lub usunięte z bazy danych. Logika biznesowa jest również czasami określane jako "reguł biznesowych" lub "Logika domeny". W aplikacjach n warstwowych zazwyczaj służy jako logiczne warstwy tak, aby można było jej modyfikować niezależnie od warstwy prezentacji lub warstwy dostępu do danych. Logika biznesowa może być wywoływany przez warstwę dostępu do danych, przed lub po nim żadnych aktualizacji, wstawiania lub usuwania danych w bazie danych.  
@@ -18,14 +18,14 @@ Termin "logikę biznesową" w tym temacie odnosi się do żadnych reguł niestan
  Logika biznesowa może być tak proste, jak sprawdzanie poprawności schematu, aby upewnić się, że typ pola jest zgodny z typem kolumny w tabeli. Lub też może składać się z zestawu obiektów, które wchodzić w interakcje w sposób dowolnie złożone. Zasady mogą być wykonywane jako procedur składowanych w bazie danych lub obiektów w pamięci. Jednak logika biznesowa jest implementowana, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] umożliwia używasz klasy częściowe i metody częściowej, aby oddzielić logikę biznesową od kod dostępu do danych.  
   
 ## <a name="how-linq-to-sql-invokes-your-business-logic"></a>Jak wywołuje logikę biznesową w LINQ to SQL  
- Podczas generowania klasy jednostki w czasie projektowania, ręcznie lub za pomocą [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] lub SQLMetal, jest on zdefiniowany jako klasy częściowej. Oznacza to, że w osobnym pliku kodu, można zdefiniować innej części klasy jednostki, która zawiera niestandardowej logiki biznesowej. W czasie kompilacji dwie części są scalane w jednej klasie. Ale jeśli musisz ponownie wygenerować z klas jednostek za pomocą [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] lub SQLMetal, możesz to zrobić, a Twoja część klasy nie zostaną zmodyfikowane.  
+ Gdy użytkownik generuje klasę jednostki w czasie projektowania, ręcznie lub za pomocą Object Relational Designer lub SQLMetal, jest on zdefiniowany jako klasy częściowej. Oznacza to, że w osobnym pliku kodu, można zdefiniować innej części klasy jednostki, która zawiera niestandardowej logiki biznesowej. W czasie kompilacji dwie części są scalane w jednej klasie. Ale jeśli musisz ponownie wygenerować z klas jednostek za pomocą Object Relational Designer lub SQLMetal, możesz to zrobić, a Twoja część klasy nie zostaną zmodyfikowane.  
   
  Częściowe klasy, które definiują jednostek i <xref:System.Data.Linq.DataContext> zawierają metody częściowej. Są to punkty rozszerzeń, które można zastosować logikę biznesową, przed i po nim żadnych update, insert czy delete dla jednostki lub właściwości jednostki. Metody częściowe mogą być uważane za zdarzenia w czasie kompilacji. Generator kodu definiuje podpis metody i wywołuje metody get i ustaw Akcesory właściwości `DataContext` konstruktora, a w niektórych przypadkach w tle podczas <xref:System.Data.Linq.DataContext.SubmitChanges%2A> jest wywoływana. Jednak jeśli nie należy implementować określonej metody częściowej, wszystkie odwołania do niej definicji są usuwane w czasie kompilacji.  
   
  W definicji implementującej zapisu w pliku osobnego kodu można wykonywać, niezależnie od logiki niestandardowej jest wymagana. Częściowe klasy sama służy jako warstwa Twojej domeny, lub można wywołać z definicji implementującej metody częściowej do oddzielnych obiektu lub obiektów. W obu przypadkach logiki biznesowej nie pozostawia żadnych śladów jest oddzielony od kodu dostępu do danych i kodzie warstwy prezentacji.  
   
 ## <a name="a-closer-look-at-the-extensibility-points"></a>Bliższe spojrzenie na punkty rozszerzeń  
- W poniższym przykładzie przedstawiono część kod wygenerowany przez [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] dla `DataContext` klasy, która ma dwie tabele: `Customers` i `Orders`. Należy zauważyć, że wstawiania, aktualizowania i usuwania metody są zdefiniowane dla każdej tabeli w klasie.  
+ W poniższym przykładzie przedstawiono część kod wygenerowany przez Object Relational Designer for `DataContext` klasy, która ma dwie tabele: `Customers` i `Orders`. Należy zauważyć, że wstawiania, aktualizowania i usuwania metody są zdefiniowane dla każdej tabeli w klasie.  
   
 ```vb  
 Partial Public Class Northwnd  

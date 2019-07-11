@@ -5,15 +5,15 @@ ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6f437b7f7ae6a414971edb497bc2c84c03674fe8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0ff3fe98fcd9ced0063d2bec85928504ea19bab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904049"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743187"
 ---
 # <a name="how-to-map-inheritance-hierarchies"></a>Instrukcje: Mapowanie hierarchii dziedziczenia
-Aby zaimplementować mapowanie dziedziczenia w [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)], należy określić atrybuty i właściwości atrybutów w klasie głównego hierarchii dziedziczenia zgodnie z opisem w poniższych krokach. Za pomocą programu Visual Studio deweloperzy mogą używać [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do mapowanie hierarchii dziedziczenia. Zobacz [jak: Skonfigurować dziedziczenie za pomocą Projektanta obiektów relacyjnych](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).  
+Aby zaimplementować mapowanie dziedziczenia w [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)], należy określić atrybuty i właściwości atrybutów w klasie głównego hierarchii dziedziczenia zgodnie z opisem w poniższych krokach. Deweloperzy korzystający z programu Visual Studio umożliwia Object Relational Designer: mapowanie hierarchii dziedziczenia. Zobacz [jak: Skonfigurować dziedziczenie za pomocą Projektanta obiektów relacyjnych](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).  
   
 > [!NOTE]
 >  Na podklasy są wymagane nie atrybuty specjalne lub właściwości. Szczególnie Pamiętaj, że podklasy nie mają <xref:System.Data.Linq.Mapping.TableAttribute> atrybutu.  
@@ -43,7 +43,7 @@ Aby zaimplementować mapowanie dziedziczenia w [!INCLUDE[vbteclinq](../../../../
 ## <a name="example"></a>Przykład  
   
 > [!NOTE]
->  Jeśli używasz programu Visual Studio, możesz użyć [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Aby skonfigurować dziedziczenie. Zobacz [jak: Konfigurowanie dziedziczenia za pomocą narzędzia Object Relational Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)  
+>  Jeśli używasz programu Visual Studio, można użyć Object Relational Designer, aby skonfigurować dziedziczenie. Zobacz [jak: Konfigurowanie dziedziczenia za pomocą narzędzia Object Relational Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)  
   
  W poniższym przykładzie kodu `Vehicle` jest zdefiniowany jako Klasa główna i poprzednie kroki zostały wdrożone do opisania hierarchia [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
   

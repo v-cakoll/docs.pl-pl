@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bd993eb26f26818117a20d376c3331f88c46b26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aef821c10b8b44e54967245aaab3956c16ea15b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780903"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757385"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next — Metoda
 Pobiera określoną liczbę [cor_heapobject —](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) wystąpień, które zawierają informacje dotyczące obiektów na stosie zarządzanym.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT Next(  
     [in] ULONG celt,    [out, size_is(celt), length_is(*pceltFetched)] COR_HEAPOBJECT  objects[],   
     [out] ULONG *pceltFetched  
@@ -40,7 +40,7 @@ HRESULT Next(
  celt  
  [in] Liczba obiektów, które mają zostać pobrane.  
   
-  — obiekty  
+ — obiekty  
  [out] Tablica wskaźników, z których każdy wskazuje [cor_heapobject —](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) obiektu, który zawiera informacje dotyczące obiektu na stosie zarządzanym.  
   
  pceltFetched  

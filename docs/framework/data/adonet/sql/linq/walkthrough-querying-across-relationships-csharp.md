@@ -2,12 +2,12 @@
 title: 'Przewodnik: Wykonywanie zapytań w relacjach (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: d9233bc7501544fff04c1c9eae215bd981fa4bd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f36f618cfcb82847f6763641ee64565dcdedd919
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618027"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742648"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Przewodnik: Wykonywanie zapytań w relacjach (C#)
 W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *skojarzenia* do reprezentowania relacji klucza obcego w bazie danych.  
@@ -31,7 +31,7 @@ W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../incl
 ## <a name="mapping-relationships-across-tables"></a>Mapowanie relacji między tabelami  
  Po `Customer` definicji klasy, należy utworzyć `Order` jednostki definicji klasy, która zawiera następujący kod, który wskazuje, że `Order.Customer` odnosi się jako klucz obcy, aby `Customer.CustomerID`.  
   
-#### <a name="to-add-the-order-entity-class"></a>Aby dodać klasę jednostki zamówienia  
+### <a name="to-add-the-order-entity-class"></a>Aby dodać klasę jednostki zamówienia  
   
 - Wpisz lub wklej następujący kod po `Customer` klasy:  
   
@@ -40,7 +40,7 @@ W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../incl
 ## <a name="annotating-the-customer-class"></a>Dodawanie adnotacji do klasy odbiorcy  
  W tym kroku możesz dodawać adnotacje do `Customer` klasy, aby wskazać jej relacji z `Order` klasy. (To dodawanie nie jest bezwzględnie konieczne, ponieważ zdefiniowaniem relacji w dowolnym kierunku jest wystarczające, aby utworzyć łącze. Ale dodanie tej adnotacji umożliwiają łatwe nawigowanie obiektów w dowolnym kierunku).  
   
-#### <a name="to-annotate-the-customer-class"></a>Dodawać adnotacje do klasy odbiorcy  
+### <a name="to-annotate-the-customer-class"></a>Dodawać adnotacje do klasy odbiorcy  
   
 - Wpisz lub wklej następujący kod do `Customer` klasy:  
   
@@ -49,7 +49,7 @@ W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../incl
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Tworzenie i uruchamianie zapytań w relacji zamówienia klienta  
  Teraz uzyskiwać dostęp do `Order` obiektów bezpośrednio z `Customer` obiektów, lub w kolejności przeciwnej. Nie trzeba jawnie *sprzężenia* między klienci i zamówienia.  
   
-#### <a name="to-access-order-objects-by-using-customer-objects"></a>Dostęp do obiektów kolejności przy użyciu obiektów klienta  
+### <a name="to-access-order-objects-by-using-customer-objects"></a>Dostęp do obiektów kolejności przy użyciu obiektów klienta  
   
 1. Modyfikowanie `Main` metody, wpisując lub wklejając następujący kod do metody:  
   
@@ -67,7 +67,7 @@ W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../incl
   
  W poniższych krokach utworzysz `Customers` jako silnie typizowaną tabelę, która mapuje dane do tabeli Klienci w bazie danych.  
   
-#### <a name="to-strongly-type-the-datacontext-object"></a>Do silnie typu obiektu DataContext  
+### <a name="to-strongly-type-the-datacontext-object"></a>Do silnie typu obiektu DataContext  
   
 1. Dodaj następujący kod powyżej `Customer` deklaracji klasy.  
   

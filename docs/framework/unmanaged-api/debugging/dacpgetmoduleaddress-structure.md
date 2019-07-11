@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: cbea6c0562c68ae5d18247dc97bc53eb9dfbfd7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 145b06f89b45b165b9d6329a4c16ac5739406113
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965948"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739182"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress Structure
 
@@ -30,7 +30,7 @@ Definiuje kontener dla żądania adres modułu.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 struct DacpGetModuleAddress
 {
     CLRDATA_ADDRESS ModulePtr;

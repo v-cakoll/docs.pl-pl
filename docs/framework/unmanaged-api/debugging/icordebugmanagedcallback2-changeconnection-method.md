@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a06246434097ede2896d7f1b496348fe5d575744
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8a8f84d3dfd8f1e64197078d7e20d2aebef2323
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624525"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761225"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection — Metoda
 Powiadamia debuger zmieniono zestaw zadań skojarzonych z określonego połączenia.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT ChangeConnection (  
     [in] ICorDebugProcess     *pProcess,  
     [in] CONNID               dwConnectionId  

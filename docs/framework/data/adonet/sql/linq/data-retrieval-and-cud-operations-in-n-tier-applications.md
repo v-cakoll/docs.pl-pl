@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: 8ce30d60b05e600e4f6906221d4c360c7ad8c396
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 570b3d382157d4be832f57265ad3a064fcd3df9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586680"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743472"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Pobieranie danych i operacje CUD w aplikacjach N-warstwowych (LINQ to SQL)
 Podczas obiekty obiektów, takich jak klienci i zamówienia klienta za pośrednictwem sieci, te jednostki są odłączone od ich kontekstu danych. Kontekst danych śledzi już zmian lub ich skojarzenia z innymi obiektami. Nie jest to problem tak długo, jak klienci są tylko do odczytu danych. Jest również stosunkowo proste umożliwić klientom dodawanie nowych wierszy do bazy danych. Jednakże, jeśli aplikacja wymaga, aby klienci mogli aktualizować lub usuwać dane, następnie należy dołączyć jednostek do nowy kontekst danych przed wywołaniem <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Ponadto jeśli używasz kontroli optymistycznej współbieżności przy użyciu oryginalnych wartości, następnie należy również sposób zapewnienia bazy danych, jednostki i oryginalna jednostka zmodyfikowana. `Attach` Udostępniono metody umożliwiające umieść jednostek nowy kontekst danych po mają zostać odłączony.  
   
  Nawet wtedy, gdy są serializacji obiektów serwera proxy zamiast [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jednostek, nadal trzeba utworzyć jednostkę w warstwie dostępu do danych (DAL) i dołączyć go do nowego <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>, aby przesłać dane do bazy danych.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest całkowicie Obojętność o jak jednostki są serializowane. Aby uzyskać więcej informacji o sposobie używania [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] i SQLMetal narzędzia do generowania klasy, które są możliwe do serializacji przy użyciu Windows Communication Foundation (WCF), zobacz [jak: Umożliwianie serializacji jednostek](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest całkowicie Obojętność o jak jednostki są serializowane. Aby uzyskać więcej informacji na temat używania narzędzia Object Relational Designer i SQLMetal można wygenerować klas, które są możliwe do serializacji przy użyciu usługi Windows Communication Foundation (WCF), zobacz [jak: Umożliwianie serializacji jednostek](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
   
 > [!NOTE]
 >  Wywoływać tylko `Attach` metod na jednostkach nowych lub po deserializacji. Jedynym sposobem jednostki ma zostać odłączony od jego oryginalnego kontekstu danych jest dla niego serializacji. Jeśli próbujesz dołączyć undetached jednostki na nowy kontekst danych, a tej jednostki nadal ma być opóźniane modułów ładujących z jego poprzedniego kontekstu danych [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zostanie zgłoszony wyjątek. Jednostki z odroczonego modułów ładujących z dwóch kontekstów różnych danych może spowodować niepożądane wyniki, gdy wykonujesz insert, update i operacje usuwania tej jednostki. Aby uzyskać więcej informacji na temat odroczonego moduły ładujące przeznaczone zobacz [odroczone a ładowania bezpośredniego](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  

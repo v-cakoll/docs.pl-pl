@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: c8696ef58e0177d2d2bc6e2d4731206be77a33af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f6486965d9e44524420975523e10ded32a135b7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753879"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755213"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Definicja typu anonimowego (Visual Basic)
 
@@ -52,7 +52,7 @@ Public Class $Anonymous1
 End Class
 ```
 
-Ponadto definicje typów anonimowych zawierać konstruktora domyślnego. Konstruktory, które są wymagane parametry nie są dozwolone.
+Ponadto definicje typów anonimowych zawierać konstruktora bez parametrów. Konstruktory, które są wymagane parametry nie są dozwolone.
 
 Jeśli deklaracja typu anonimowego zawiera co najmniej jedną właściwość klucza, definicja typu zastępuje trzech członków dziedziczonych po elemencie <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, i <xref:System.Object.ToString%2A>. Jeśli nie właściwości klucza nie został zadeklarowany, tylko <xref:System.Object.ToString%2A> zostanie zastąpiona. Zastąpienia są dostępne następujące funkcje:
 

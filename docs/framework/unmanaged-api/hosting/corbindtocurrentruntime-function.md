@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ad977d4d423622ca364f764f91066dff51c5227
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 505bba3bb5d08c13e29543c20df2daaebc863d12
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490622"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768002"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime — Funkcja
 Ładuje środowisko uruchomieniowe języka wspólnego (CLR) do procesu za pomocą informacji o wersji przechowywanych w pliku XML. Format pliku XML jest modelowane pliku konfiguracji standardowej aplikacji. Aby uzyskać więcej informacji na temat plików konfiguracyjnych, zobacz [schemat pliku konfiguracji](../../../../docs/framework/configure-apps/file-schema/index.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "66490622"
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT CorBindToCurrentRuntime (  
     [in]  LPCWSTR   pwszFileName,  
     [in]  REFCLSID  rclsid,  

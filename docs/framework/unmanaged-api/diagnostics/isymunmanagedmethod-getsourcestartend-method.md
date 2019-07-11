@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d32e3ac0ff3179a9bb32f82e5ca33fd89c4ec410
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a75fed4c46ea7e31177ac0446c8fae7805535323
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939558"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759421"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd — Metoda
 Pobiera położenie dokumentu rozpoczęcia i zakończenia dla źródłowej, tej metody. Na pierwszym miejscu tablicy jest początek, a na drugim miejscu tablicy jest zakończenia.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetSourceStartEnd(  
     [in]  ISymUnmanagedDocument  *docs[2],  
     [in]  ULONG32                lines[2],  

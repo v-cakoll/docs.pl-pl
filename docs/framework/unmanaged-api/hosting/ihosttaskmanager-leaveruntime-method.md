@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81da8052b79047933b4afc6d5686029465d83eba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 959cb541013ca0a26557e849874dbb329489d855
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796698"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749531"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime — Metoda
 Powiadamia hosta, że aktualnie wykonywane zadanie zostanie pozostaw środowisko uruchomieniowe języka wspólnego (CLR), a następnie wprowadź kod niezarządzany.  
@@ -32,7 +32,7 @@ Powiadamia hosta, że aktualnie wykonywane zadanie zostanie pozostaw środowisko
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT LeaveRuntime (  
     [in] SIZE_T target  
 );  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83265c4f6dffed76f1710378cf5293aac7020ef2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0dbdee35e6c73fbf2d73edd8a6c479e2f2882ea
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986898"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764317"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType — Metoda
 Pobiera typ pierwotny obiekt "ICorDebugValue".  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetType (  
     [out] CorElementType   *pType  
 );  

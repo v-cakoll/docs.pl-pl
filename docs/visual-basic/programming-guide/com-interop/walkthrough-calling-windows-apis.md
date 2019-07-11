@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d2dc80ec689f3e9fd2f36c36c3847ec4e5d1a576
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592711"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783155"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Przewodnik: Wywoływanie Windows API (Visual Basic)
 Interfejsy API Windows są bibliotek dołączanych dynamicznie (dll), które są częścią systemu operacyjnego Windows. Użyj ich do wykonywania zadań, gdy jest trudne do pisania procedur równoważne własne. Na przykład Windows zapewnia funkcję o nazwie `FlashWindowEx` gwarantowaną na pasku tytułu aplikacji alternatywne między poszczególnymi jasny i ciemny.  
@@ -32,7 +32,7 @@ Interfejsy API Windows są bibliotek dołączanych dynamicznie (dll), które są
 ## <a name="api-calls-using-declare"></a>Zadeklaruj przy użyciu interfejsu API  
  Najczęstszym sposobem wywoływania interfejsów API Windows polega na użyciu `Declare` instrukcji.  
   
-#### <a name="to-declare-a-dll-procedure"></a>Aby zadeklarować procedury biblioteki DLL  
+### <a name="to-declare-a-dll-procedure"></a>Aby zadeklarować procedury biblioteki DLL  
   
 1. Określić nazwę funkcji, której chcesz się połączyć, oraz jego argumentów, typy argumentów i zwracać wartości, a także nazwę i lokalizację biblioteki DLL, która go zawiera.  
   
@@ -69,7 +69,7 @@ Interfejsy API Windows są bibliotek dołączanych dynamicznie (dll), które są
 #### <a name="windows-api-constants"></a>Stałe Windows API  
  Niektóre argumenty są kombinacje stałe. Na przykład `MessageBox` przedstawione w niniejszym instruktażu interfejs API akceptuje argument liczby całkowitej o nazwie `Typ` sterującą, jak zostanie wyświetlone okno komunikatu. Można określić wartość liczbową te stałe, sprawdzając `#define` instrukcje w pliku WinUser.h. Wartości numeryczne są wyświetlane w formacie szesnastkowym, ogólnie, więc możesz je dodać i Konwertuj na wartość dziesiętną przy użyciu kalkulatora. Na przykład, jeśli chcesz połączyć stałe dla stylu wykrzyknika `MB_ICONEXCLAMATION` 0x00000030 i tak/bez stylu `MB_YESNO` 0x00000004, można dodać liczb i uzyskanie wyniku 0x00000034 lub 52 dziesiętną. Chociaż można używać wyniku dziesiętna bezpośrednio, zaleca się deklarować te wartości jako stałe w aplikacji, a także połączyć je przy użyciu `Or` operatora.  
   
-###### <a name="to-declare-constants-for-windows-api-calls"></a>Aby zadeklarować stałe dla wywołań interfejsu API Windows  
+##### <a name="to-declare-constants-for-windows-api-calls"></a>Aby zadeklarować stałe dla wywołań interfejsu API Windows  
   
 1. Zajrzyj do dokumentacji dla funkcji Windows, którą wywołujesz. Określ nazwę stałe, które są używane i nazwę pliku .h, zawierająca wartości liczbowe dla tych stałych.  
   
@@ -77,7 +77,7 @@ Interfejsy API Windows są bibliotek dołączanych dynamicznie (dll), które są
   
      `#define MB_ICONQUESTION             0x00000020L`  
   
-3. Dodaj odpowiednik `Const` instrukcji do klasy lub modułu, aby udostępnić te stałe do aplikacji. Na przykład:  
+3. Dodaj odpowiednik `Const` instrukcji do klasy lub modułu, aby udostępnić te stałe do aplikacji. Przykład:  
   
      [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
@@ -94,7 +94,7 @@ Interfejsy API Windows są bibliotek dołączanych dynamicznie (dll), które są
 #### <a name="data-marshaling"></a>Marshaling danych  
  Visual Basic automatycznie konwertuje typów danych parametrów i wartości zwracane dla wywołań interfejsu API Windows, ale można użyć `MarshalAs` atrybutu, aby jawnie określić typy niezarządzanych danych, których oczekuje interfejs API. Aby uzyskać więcej informacji na temat marshaling międzyoperacyjny zobacz [Marshaling międzyoperacyjności](../../../framework/interop/interop-marshaling.md).  
   
-###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>Aby użyć Declare i MarshalAs w wywołaniu interfejsu API  
+##### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>Aby użyć Declare i MarshalAs w wywołaniu interfejsu API  
   
 1. Określ nazwę funkcji, którą chcesz wywołać oraz jej argumenty typów danych i zwracają wartość.  
   
@@ -111,7 +111,7 @@ Interfejsy API Windows są bibliotek dołączanych dynamicznie (dll), które są
   
  Możesz użyć `DllImport` z większości API Windows wywołuje tak długo, jak wywołanie odnosi się do udostępnionego (nazywane czasem *statyczne*) metody. Nie można używać metod, które wymagają wystąpienia klasy. W odróżnieniu od `Declare` instrukcji `DllImport` nie mogą używać wywołania `MarshalAs` atrybutu.  
   
-#### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>Aby wywołać interfejs API Windows za pomocą atrybutu DllImport  
+### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>Aby wywołać interfejs API Windows za pomocą atrybutu DllImport  
   
 1. Otwórz nowy projekt aplikacji Windows, klikając **New** na **pliku** menu, a następnie klikając polecenie **projektu**. **Nowy projekt** pojawi się okno dialogowe.  
   

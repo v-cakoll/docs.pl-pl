@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc5171b135facfbbe901b38a19fef9e9d47699b5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 33762e08192fae379f3cd249f50cc544e1c89b5a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490716"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775740"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Konfigurowanie środowiska profilowania
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "66490716"
   
 - COR_PROFILER: Jeśli COR_ENABLE_PROFILING sprawdzać przebiegów, CLR łączy się z programem profilującym, które ma identyfikator CLSID lub ProgID, które muszą być uprzednio przechowywane w rejestrze. Zmienna środowiskowa COR_PROFILER jest zdefiniowana jako ciąg znaków, jak pokazano w poniższych dwóch przykładach.  
   
-    ```  
+    ```cpp  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
     set COR_PROFILER="MyProfiler"  
     ```  
@@ -66,7 +66,7 @@ ms.locfileid: "66490716"
 ## <a name="initializing-the-profiler"></a>Inicjowanie Profiler  
  Gdy oba zmiennej środowiskowej zostały wykryte, CLR tworzy instancję programu profilującego w sposób podobny do COM `CoCreateInstance` funkcji. Program profilujący nie jest załadowany poprzez bezpośrednie wywołanie `CoCreateInstance`. W związku z tym, wywołanie `CoInitialize`, które wymaga utworzenia modelu wątku, jest unikane. Środowisko CLR następnie wywołuje [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) metodę w programie profiler. Podpis tej metody jest następujący.  
   
-```  
+```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
@@ -75,7 +75,7 @@ HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)
 ## <a name="setting-event-notifications"></a>Ustawianie powiadomień o zdarzeniach  
  Następnie program profilujący wywołuje [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) metodę, aby określić, którymi kategoriami powiadomień jest zainteresowany. Na przykład jeśli program profilujący zajmuje się tylko wprowadzeniem funkcji i pozostawia powiadomienia i powiadomienia dotyczące odzyskiwania pamięci, określa poniższe.  
   
-```  
+```cpp  
 ICorProfilerInfo* pInfo;  
 pICorProfilerInfoUnk->QueryInterface(IID_ICorProfilerInfo, (void**)&pInfo);  
 pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)  

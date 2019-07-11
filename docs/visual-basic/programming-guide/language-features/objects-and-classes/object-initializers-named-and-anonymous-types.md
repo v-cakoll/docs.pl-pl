@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: bf608ebb36a2e8f29e8429b77e023eced67273e1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 151c2f6cbb560d83ef0fcfef518bc50cec246ca2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649773"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783237"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inicjatory obiektów: Typy nazwane i anonimowe (Visual Basic)
 Inicjatory obiektów umożliwiają określenie właściwości dla obiektu złożonego za pomocą pojedynczego wyrażenia. One może służyć do tworzenia wystąpień nazwanych typów i typów anonimowych.  
@@ -32,7 +32,7 @@ Inicjatory obiektów umożliwiają określenie właściwości dla obiektu złoż
  Wymagania i wyniki dwie deklaracje nie są takie same. Aby uzyskać `namedCust`, `Customer` klasy, która ma `Name` właściwość musi już istnieć i deklaracja tworzy wystąpienie tej klasy. Aby uzyskać `anonymousCust`, kompilator określa nowej klasy, która ma jedną właściwość ciągu o nazwie `Name`i tworzy nowe wystąpienie klasy.  
   
 ## <a name="named-types"></a>Nazwane typy  
- Inicjatory obiektów zapewnia prostą metodę można wywołać konstruktora typu, a następnie ustaw wartości niektórych lub wszystkich właściwości w pojedynczej instrukcji. Kompilator wywołuje odpowiedniego konstruktora dla instrukcji: Konstruktor domyślny, jeśli nie argumentów lub sparametryzowania konstruktora, jeśli jeden lub więcej argumentów są wysyłane. Po tym określone właściwości są inicjowane w kolejności, w jakiej są przedstawione na liście inicjatora.  
+ Inicjatory obiektów zapewnia prostą metodę można wywołać konstruktora typu, a następnie ustaw wartości niektórych lub wszystkich właściwości w pojedynczej instrukcji. Kompilator wywołuje odpowiedniego konstruktora dla instrukcji: konstruktora bez parametrów, jeśli nie argumentów lub sparametryzowania konstruktora, jeśli jeden lub więcej argumentów są wysyłane. Po tym określone właściwości są inicjowane w kolejności, w jakiej są przedstawione na liście inicjatora.  
   
  Każdy inicjowania na liście inicjatora składa się z przypisania do składowej klasy wartości początkowej. Nazwy i typy danych elementów członkowskich są ustalane w momencie klasa jest zdefiniowana. W poniższych przykładach `Customer` klasy musi istnieć i musi mieć elementy członkowskie o nazwie `Name` i `City` który może akceptować wartości typu ciąg.  
   
@@ -42,7 +42,7 @@ Inicjatory obiektów umożliwiają określenie właściwości dla obiektu złoż
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- Każdy z tych deklaracji jest równoważne z poniższego przykładu, który tworzy `Customer` obiektu przy użyciu domyślnego konstruktora, a następnie określa wartość początkową dla `Name` i `City` właściwości przy użyciu `With` Instrukcja.  
+ Każdy z tych deklaracji jest równoważne z poniższego przykładu, który tworzy `Customer` obiektu za pomocą konstruktora bez parametrów, a następnie określa wartość początkową dla `Name` i `City` właściwości przy użyciu `With` Instrukcja.  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   

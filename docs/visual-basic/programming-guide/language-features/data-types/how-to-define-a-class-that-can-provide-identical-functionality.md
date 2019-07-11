@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 829ff08fe3805f37bc6189a66a6675b3518da138
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19988e766d0f9ec895a24dddfcd17d0854aaf8ad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601011"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757396"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Instrukcje: Definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych (Visual Basic)
 Można zdefiniować klasę, w którym możesz tworzyć obiekty, które zapewnić identyczną funkcjonalność różnych typów danych. Aby to zrobić, należy określić co najmniej jeden *parametry typu* w definicji. Klasy mogą następnie służyć jako szablon dla obiektów, które używają różnych typów danych. Nosi nazwę klasy zdefiniowanej w ten sposób *klasy generycznej*.  
@@ -62,7 +62,7 @@ Można zdefiniować klasę, w którym możesz tworzyć obiekty, które zapewnić
   
 6. Pamiętaj, że kod używa tylko operacje i metody, które są obsługiwane przez dowolny typ danych, można dostarczyć do `itemType`.  
   
-     W poniższym przykładzie zdefiniowano klasę, która zarządza listą bardzo proste. Przechowuje listę w tablicy wewnętrznej `items`oraz przy użyciu kodu można zadeklarować typ danych elementów listy. Sparametryzowania konstruktora umożliwia przy użyciu kodu, aby ustawić górną granicę `items`, i ustawia domyślny konstruktor, to do 9 (w sumie 10 elementów).  
+     W poniższym przykładzie zdefiniowano klasę, która zarządza listą bardzo proste. Przechowuje listę w tablicy wewnętrznej `items`oraz przy użyciu kodu można zadeklarować typ danych elementów listy. Sparametryzowania konstruktora umożliwia przy użyciu kodu, aby ustawić górną granicę `items`, i ustawia konstruktora bez parametrów, to do 9 (w sumie 10 elementów).  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   

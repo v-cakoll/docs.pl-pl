@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 21f6c07976198416bff6e8e2a1789e4ccbf5ca55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7337222f7f419c68ae21d604d1673158acca85ba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665016"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777392"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize — Metoda
 Szacowany rozmiar binarne zestawu i jego metadane są pobierane w bieżącym zakresie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetSaveSize (  
     [in]  CorSaveSize fSave,  
     [out] DWORD       *pdwSaveSize  

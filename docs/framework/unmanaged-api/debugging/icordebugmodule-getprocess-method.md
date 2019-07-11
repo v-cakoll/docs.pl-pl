@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97cecd66462cf6a88012b13dec82dbf617891dd5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff7c77a27e9be58e9702c3a5e3f990863dc83901
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988003"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763625"
 ---
 # <a name="icordebugmodulegetprocess-method"></a>ICorDebugModule::GetProcess — Metoda
 Pobiera proces zawierający ten moduł.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetProcess (  
     [out] ICorDebugProcess **ppProcess  
 );  

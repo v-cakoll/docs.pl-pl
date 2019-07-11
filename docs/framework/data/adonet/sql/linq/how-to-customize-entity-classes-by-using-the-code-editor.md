@@ -2,15 +2,15 @@
 title: 'Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu'
 ms.date: 03/30/2017
 ms.assetid: ec28332f-9f3c-4e0a-baca-60f9141a68c0
-ms.openlocfilehash: 05a523f8b98c7b64350b67c217baba07dca14de3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67a0e17b6a81d804ce101bf56d8da82fe330479c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037833"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743423"
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu
-Za pomocą programu Visual Studio deweloperzy mogą używać [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do tworzenia i dostosowywania ich klas jednostek.  
+Deweloperzy korzystający z programu Visual Studio można użyć Object Relational Designer do tworzenia i dostosowywania ich klas jednostek.  
   
  Umożliwia także Edytor kodu programu Visual Studio należy napisać kod mapowania lub dostosować program code, który został już wygenerowany. Aby uzyskać więcej informacji, zobacz [mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   

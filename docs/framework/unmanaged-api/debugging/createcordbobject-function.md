@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f546d7707c40f7f26a46177ae972a988e54e1e45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ab86277956469e558d20cea81174a7fdcc0020b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965837"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739326"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject — Funkcja
 Tworzy interfejs debugera ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)) zapewnia funkcje tworzenia wystąpienia zarządzanego sesji debugowania zdalnego procesu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT CordbCreateObject (  
        [in]  int         iDebuggerVersion,   
        [out] IUnknown**  ppCordb  

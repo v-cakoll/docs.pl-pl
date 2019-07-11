@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e13689e0c8324781b86ae7b9568cb441a31ec70
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c4f59bdb0537ab6ce404ed0623c40f9f3b31598d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423955"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766825"
 ---
 # <a name="generics-in-net"></a>Typy ogólne w .NET
 
@@ -83,7 +83,7 @@ ms.locfileid: "66423955"
   
 - *Kowariancja* i *kontrawariancja* typu rodzajowego parametry umożliwiają korzystanie skonstruowany typów ogólnych, w której argumenty typu są bardziej pochodnego (korelacja) lub mniej pochodnego (kontrawariancja) niż docelowy skonstruowany Typ. Kowariancja i kontrawariancja są nazywane zbiorczo *wariancji*. Aby uzyskać więcej informacji, zobacz [kowariancji i kontrawariancji](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
-- *Ograniczenia* obowiązują limity dotyczące parametrów typu ogólnego. Na przykład może ograniczać parametr typu dla typów, które implementują <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> ogólny interfejs, aby upewnić się, czy wystąpienia typu, może zostać określona. Możesz również ograniczyć parametrów typu do typów, które mają konkretnej klasy podstawowej, która ma domyślnego konstruktora lub są typy odwołań i typy wartości. Użytkownicy typ ogólny nie może zastąpić argumentów typu, które nie spełniają ograniczeń.  
+- *Ograniczenia* obowiązują limity dotyczące parametrów typu ogólnego. Na przykład może ograniczać parametr typu dla typów, które implementują <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> ogólny interfejs, aby upewnić się, czy wystąpienia typu, może zostać określona. Możesz również ograniczyć parametrów typu do typów, które mają konkretnej klasy podstawowej, która ma konstruktora bez parametrów lub są typy odwołań i typy wartości. Użytkownicy typ ogólny nie może zastąpić argumentów typu, które nie spełniają ograniczeń.  
   
 - A *definicję metody ogólnej* jest metodą o dwie listy parametrów: lista parametrów typu genetycznego oraz listę parametrów formalnych. Parametry typu mogą być wyświetlane jako zwracany typ lub typy parametrów formalnych, co ilustruje poniższy kod.  
   

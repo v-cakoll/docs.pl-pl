@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b0e78e10f092bce1c8f7762362f02b7a403c86a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 882d3b3c359724688c0fb8fe5e2b567f1d575e76
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597254"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782872"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a>ICorProfilerCallback::JITCachedFunctionSearchFinished — Metoda
 Powiadamia program profilujący, że wyszukiwanie zakończył się dla funkcji, która została skompilowana wcześniej przy użyciu Native Image Generator (NGen.exe).  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT JITCachedFunctionSearchFinished(  
     [in] FunctionID        functionId,  
     [in] COR_PRF_JIT_CACHE result);  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: beb76f18a55d6e197c1c6bcfc91e3a8ef0f8119b
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: de3fc8b23bd132179fc7fb67d29010552138e3ab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063112"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742823"
 ---
 # <a name="the-linq-to-sql-object-model"></a>Model obiektu LINQ to SQL
 W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], na model obiektów wyrażony w języku programowania, który jest mapowany na model danych relacyjnej bazy danych. Operacje na danych, następnie są przeprowadzane zgodnie z modelem obiektów.  
@@ -72,7 +72,7 @@ W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], na model 
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapowania procedur przechowywanych i funkcji do metod przy użyciu <xref:System.Data.Linq.Mapping.FunctionAttribute> i <xref:System.Data.Linq.Mapping.ParameterAttribute> atrybutów. Metody reprezentująca procedur składowanych różnią się od tych, które stanowią funkcje zdefiniowane przez użytkownika przez <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> właściwości. Jeśli ta właściwość jest ustawiona `false` (ustawienie domyślne), metoda reprezentuje procedury składowanej. Jeśli jest równa `true`, metoda reprezentuje funkcji bazy danych.  
   
 > [!NOTE]
->  Jeśli używasz programu Visual Studio, możesz użyć [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do utworzenia metody mapowany do procedur przechowywanych i funkcji zdefiniowanych przez użytkownika.  
+>  Jeśli używasz programu Visual Studio można użyć Object Relational Designer, aby utworzyć metody mapowany do procedur przechowywanych i funkcji zdefiniowanych przez użytkownika.  
   
 ### <a name="example"></a>Przykład  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: d2ee9537df540936e0a5ec448e6aaddbbbc162b1
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 56fed00ec049fd2746d5b07b9926b8abda998260
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610537"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742441"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Narzędzie generowania kodu)
 Narzędzie wiersza polecenia SqlMetal generuje kod i mapowanie dla [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] składnika programu .NET Framework. Stosując opisane w dalszej części tego tematu opcje, można za pomocą programu SqlMetal wykonać kilka różnych akcji, takich jak:  
@@ -28,7 +28,7 @@ Narzędzie wiersza polecenia SqlMetal generuje kod i mapowanie dla [!INCLUDE[vbt
  To narzędzie jest instalowane automatycznie z programem Visual Studio. Domyślnie plik znajduje się w `drive`: \Program Files\Microsoft SDKs\Windows\v`n.nn`\bin. Jeśli nie zostanie zainstalowany program Visual Studio, można także uzyskać plik SQLMetal, pobierając [zestawu Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225).  
   
 > [!NOTE]
->  Deweloperzy, którzy korzystają z programu Visual Studio można również użyć [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] do wygenerowania klas obiektów. Podejście z użyciem wiersza polecenia dobrze sprawdza się w przypadku dużych baz danych. Program SqlMetal to narzędzie wiersza polecenia, więc można użyć go w procesie kompilacji.  
+>  Deweloperzy, którzy korzystają z programu Visual Studio umożliwia również Object Relational Designer w celu wygenerowania klas obiektów. Podejście z użyciem wiersza polecenia dobrze sprawdza się w przypadku dużych baz danych. Program SqlMetal to narzędzie wiersza polecenia, więc można użyć go w procesie kompilacji.  
   
  Aby uruchomić narzędzie, należy użyć wiersz polecenia programisty dla programu Visual Studio (lub wiersza polecenia programu Visual Studio Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md). W wierszu polecenia wpisz następujące polecenie:  
   

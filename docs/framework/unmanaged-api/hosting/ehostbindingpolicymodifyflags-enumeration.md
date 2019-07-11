@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e8357d20edba993f5a7682f31c04afea4362afd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d70f7dd872cefbadce56c577ce2ecc9cbcb663b3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796061"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765845"
 ---
 # <a name="ehostbindingpolicymodifyflags-enumeration"></a>EHostBindingPolicyModifyFlags — Wyliczenie
 Zezwalaj hostowi na określenie typu przekierowania, których środowisko uruchomieniowe języka wspólnego (CLR), należy wykonać podczas stosowania zmian zasad z zestawu źródłowego zestawu docelowego.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef enum _hostBindingPolicyModifyFlags {  
     HOST_BINDING_POLICY_MODIFY_DEFAULT  = 0,  
     HOST_BINDING_POLICY_MODIFY_CHAIN    = 1,  

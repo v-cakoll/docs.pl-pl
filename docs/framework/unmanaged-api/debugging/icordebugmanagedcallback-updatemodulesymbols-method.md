@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 581ea4f974bfec3961a32cd7c9985a5e45d2bddd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a15e3ab0d50763ad53b1caa921035239868fec1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995075"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761231"
 ---
-# <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a><span data-ttu-id="9f2d3-102">ICorDebugManagedCallback::UpdateModuleSymbols — Metoda</span><span class="sxs-lookup"><span data-stu-id="9f2d3-102">ICorDebugManagedCallback::UpdateModuleSymbols Method</span></span>
-<span data-ttu-id="9f2d3-103">Powiadamia debuger zmieniono symbole dla moduł środowiska uruchomieniowego języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="9f2d3-103">Notifies the debugger that the symbols for a common language runtime module have changed.</span></span>  
+# <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a><span data-ttu-id="0a4be-102">ICorDebugManagedCallback::UpdateModuleSymbols — Metoda</span><span class="sxs-lookup"><span data-stu-id="0a4be-102">ICorDebugManagedCallback::UpdateModuleSymbols Method</span></span>
+<span data-ttu-id="0a4be-103">Powiadamia debuger zmieniono symbole dla moduł środowiska uruchomieniowego języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="0a4be-103">Notifies the debugger that the symbols for a common language runtime module have changed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9f2d3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9f2d3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a4be-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0a4be-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT UpdateModuleSymbols (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugModule    *pModule,  
@@ -37,32 +37,32 @@ HRESULT UpdateModuleSymbols (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9f2d3-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="9f2d3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0a4be-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="0a4be-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="9f2d3-106">[in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji zawierające moduł, w którym symbole zostały zmienione.</span><span class="sxs-lookup"><span data-stu-id="9f2d3-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the module in which the symbols have changed.</span></span>  
+ <span data-ttu-id="0a4be-106">[in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji zawierające moduł, w którym symbole zostały zmienione.</span><span class="sxs-lookup"><span data-stu-id="0a4be-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the module in which the symbols have changed.</span></span>  
   
  `pModule`  
- <span data-ttu-id="9f2d3-107">[in] Wskaźnik do obiektu ICorDebugModule, który reprezentuje moduł, w którym symbole zostały zmienione.</span><span class="sxs-lookup"><span data-stu-id="9f2d3-107">[in] A pointer to an ICorDebugModule object that represents the module in which the symbols have changed.</span></span>  
+ <span data-ttu-id="0a4be-107">[in] Wskaźnik do obiektu ICorDebugModule, który reprezentuje moduł, w którym symbole zostały zmienione.</span><span class="sxs-lookup"><span data-stu-id="0a4be-107">[in] A pointer to an ICorDebugModule object that represents the module in which the symbols have changed.</span></span>  
   
  `pSymbolStream`  
- <span data-ttu-id="9f2d3-108">[in] Wskaźnik do Win32 COM `IStream` obiekt, który zawiera symbole zmodyfikowane.</span><span class="sxs-lookup"><span data-stu-id="9f2d3-108">[in] A pointer to a Win32 COM `IStream` object that contains the modified symbols.</span></span>  
+ <span data-ttu-id="0a4be-108">[in] Wskaźnik do Win32 COM `IStream` obiekt, który zawiera symbole zmodyfikowane.</span><span class="sxs-lookup"><span data-stu-id="0a4be-108">[in] A pointer to a Win32 COM `IStream` object that contains the modified symbols.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9f2d3-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="9f2d3-109">Remarks</span></span>  
- <span data-ttu-id="9f2d3-110">Ta metoda zapewnia możliwość zaktualizuj widok debugera symboli dla modułu, wywołując [ISymUnmanagedReader::UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) lub [ISymUnmanagedReader::ReplaceSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).</span><span class="sxs-lookup"><span data-stu-id="9f2d3-110">This method provides an opportunity to update the debugger's view of a module's symbols by calling [ISymUnmanagedReader::UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) or [ISymUnmanagedReader::ReplaceSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0a4be-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0a4be-109">Remarks</span></span>  
+ <span data-ttu-id="0a4be-110">Ta metoda zapewnia możliwość zaktualizuj widok debugera symboli dla modułu, wywołując [ISymUnmanagedReader::UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) lub [ISymUnmanagedReader::ReplaceSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).</span><span class="sxs-lookup"><span data-stu-id="0a4be-110">This method provides an opportunity to update the debugger's view of a module's symbols by calling [ISymUnmanagedReader::UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) or [ISymUnmanagedReader::ReplaceSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).</span></span>  
   
- <span data-ttu-id="9f2d3-111">To wywołanie zwrotne, może wystąpić wiele razy dla tego samego modułu.</span><span class="sxs-lookup"><span data-stu-id="9f2d3-111">This callback can occur multiple times for the same module.</span></span>  
+ <span data-ttu-id="0a4be-111">To wywołanie zwrotne, może wystąpić wiele razy dla tego samego modułu.</span><span class="sxs-lookup"><span data-stu-id="0a4be-111">This callback can occur multiple times for the same module.</span></span>  
   
- <span data-ttu-id="9f2d3-112">Debuger starać się powiązać niepowiązanych poziom źródła punktów przerwania.</span><span class="sxs-lookup"><span data-stu-id="9f2d3-112">A debugger should try to bind unbound source-level breakpoints.</span></span>  
+ <span data-ttu-id="0a4be-112">Debuger starać się powiązać niepowiązanych poziom źródła punktów przerwania.</span><span class="sxs-lookup"><span data-stu-id="0a4be-112">A debugger should try to bind unbound source-level breakpoints.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9f2d3-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9f2d3-113">Requirements</span></span>  
- <span data-ttu-id="9f2d3-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9f2d3-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a4be-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0a4be-113">Requirements</span></span>  
+ <span data-ttu-id="0a4be-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0a4be-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9f2d3-115">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9f2d3-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0a4be-115">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0a4be-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9f2d3-116">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9f2d3-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0a4be-116">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0a4be-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9f2d3-117">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f2d3-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0a4be-117">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a4be-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9f2d3-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9f2d3-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a4be-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0a4be-118">See also</span></span>
 
-- [<span data-ttu-id="9f2d3-119">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="9f2d3-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="0a4be-119">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="0a4be-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

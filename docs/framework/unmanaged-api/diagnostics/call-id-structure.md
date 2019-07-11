@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6fa729b131d12b2825a2def700fd918ce8acc40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2823c018ff22607052cb9a298f69dbd0c4fe2c23
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986482"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769500"
 ---
-# <a name="callid-structure"></a><span data-ttu-id="4e544-102">CALL_ID — Struktura</span><span class="sxs-lookup"><span data-stu-id="4e544-102">CALL_ID Structure</span></span>
-<span data-ttu-id="4e544-103">Informacje debugera o funkcję, która jest wywoływana.</span><span class="sxs-lookup"><span data-stu-id="4e544-103">Provides information to a debugger about a function that is being called.</span></span> <span data-ttu-id="4e544-104">Zobacz [inotifysink2 —](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interfejsu, aby uzyskać więcej informacji.</span><span class="sxs-lookup"><span data-stu-id="4e544-104">See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.</span></span>  
+# <a name="callid-structure"></a><span data-ttu-id="4715b-102">CALL_ID — Struktura</span><span class="sxs-lookup"><span data-stu-id="4715b-102">CALL_ID Structure</span></span>
+<span data-ttu-id="4715b-103">Informacje debugera o funkcję, która jest wywoływana.</span><span class="sxs-lookup"><span data-stu-id="4715b-103">Provides information to a debugger about a function that is being called.</span></span> <span data-ttu-id="4715b-104">Zobacz [inotifysink2 —](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interfejsu, aby uzyskać więcej informacji.</span><span class="sxs-lookup"><span data-stu-id="4715b-104">See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4e544-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="4e544-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4715b-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="4715b-105">Syntax</span></span>  
   
-```  
+```cpp  
 typedef struct tagCALL_ID  
 {  
     LPCOLESTR       szMachine;  
@@ -40,21 +40,21 @@ typedef struct tagCALL_ID
 } CALL_ID;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4e544-106">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="4e544-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="4715b-106">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="4715b-106">Members</span></span>  
   
-|<span data-ttu-id="4e544-107">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="4e544-107">Member</span></span>|<span data-ttu-id="4e544-108">Opis</span><span class="sxs-lookup"><span data-stu-id="4e544-108">Description</span></span>|  
+|<span data-ttu-id="4715b-107">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="4715b-107">Member</span></span>|<span data-ttu-id="4715b-108">Opis</span><span class="sxs-lookup"><span data-stu-id="4715b-108">Description</span></span>|  
 |------------|-----------------|  
-|`szMachine`|<span data-ttu-id="4e544-109">Identyfikuje komputer, który wykonuje wywołanie.</span><span class="sxs-lookup"><span data-stu-id="4e544-109">Identifies the machine that is making the call.</span></span>|  
-|`dwPid`|<span data-ttu-id="4e544-110">Określa procesor maszyny.</span><span class="sxs-lookup"><span data-stu-id="4e544-110">Identifies the machine processor.</span></span>|  
-|`pUserThread`|<span data-ttu-id="4e544-111">Identyfikuje wątku, który wykonuje wywołanie.</span><span class="sxs-lookup"><span data-stu-id="4e544-111">Identifies the thread that is executing the call.</span></span>|  
-|`addrStackPointer`|<span data-ttu-id="4e544-112">Określa adres stosu wywołań.</span><span class="sxs-lookup"><span data-stu-id="4e544-112">Specifies the address of the call stack.</span></span>|  
-|`szEntryPoint`|<span data-ttu-id="4e544-113">Określa adres wywołania.</span><span class="sxs-lookup"><span data-stu-id="4e544-113">Specifies the address of the call.</span></span>|  
-|`szDestinationMachine`|<span data-ttu-id="4e544-114">Identyfikuje komputer, na którym będą wykonywane wywołanie.</span><span class="sxs-lookup"><span data-stu-id="4e544-114">Identifies the machine that will execute the call.</span></span>|  
+|`szMachine`|<span data-ttu-id="4715b-109">Identyfikuje komputer, który wykonuje wywołanie.</span><span class="sxs-lookup"><span data-stu-id="4715b-109">Identifies the machine that is making the call.</span></span>|  
+|`dwPid`|<span data-ttu-id="4715b-110">Określa procesor maszyny.</span><span class="sxs-lookup"><span data-stu-id="4715b-110">Identifies the machine processor.</span></span>|  
+|`pUserThread`|<span data-ttu-id="4715b-111">Identyfikuje wątku, który wykonuje wywołanie.</span><span class="sxs-lookup"><span data-stu-id="4715b-111">Identifies the thread that is executing the call.</span></span>|  
+|`addrStackPointer`|<span data-ttu-id="4715b-112">Określa adres stosu wywołań.</span><span class="sxs-lookup"><span data-stu-id="4715b-112">Specifies the address of the call stack.</span></span>|  
+|`szEntryPoint`|<span data-ttu-id="4715b-113">Określa adres wywołania.</span><span class="sxs-lookup"><span data-stu-id="4715b-113">Specifies the address of the call.</span></span>|  
+|`szDestinationMachine`|<span data-ttu-id="4715b-114">Identyfikuje komputer, na którym będą wykonywane wywołanie.</span><span class="sxs-lookup"><span data-stu-id="4715b-114">Identifies the machine that will execute the call.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4e544-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4e544-115">Requirements</span></span>  
- <span data-ttu-id="4e544-116">**Nagłówek:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="4e544-116">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4715b-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4715b-115">Requirements</span></span>  
+ <span data-ttu-id="4715b-116">**Nagłówek:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="4715b-116">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4e544-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4e544-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4715b-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4715b-117">See also</span></span>
 
-- [<span data-ttu-id="4e544-118">INotifySink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="4e544-118">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="4e544-119">Struktury magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="4e544-119">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [<span data-ttu-id="4715b-118">INotifySink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="4715b-118">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="4715b-119">Struktury magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="4715b-119">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

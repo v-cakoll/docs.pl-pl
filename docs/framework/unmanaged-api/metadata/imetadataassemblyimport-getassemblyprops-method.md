@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4817a62d276bfdb50bfcbf658f40f5568673bea0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec04588bd1cc21e585d89c734c152a86fb835b15
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905050"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772722"
 ---
-# <a name="imetadataassemblyimportgetassemblyprops-method"></a><span data-ttu-id="4cf50-102">IMetaDataAssemblyImport::GetAssemblyProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="4cf50-102">IMetaDataAssemblyImport::GetAssemblyProps Method</span></span>
-<span data-ttu-id="4cf50-103">Pobiera zbiór właściwości dla zestawu podpisem określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="4cf50-103">Gets the set of properties for the assembly with the specified metadata signature.</span></span>  
+# <a name="imetadataassemblyimportgetassemblyprops-method"></a><span data-ttu-id="ce2a8-102">IMetaDataAssemblyImport::GetAssemblyProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="ce2a8-102">IMetaDataAssemblyImport::GetAssemblyProps Method</span></span>
+<span data-ttu-id="ce2a8-103">Pobiera zbiór właściwości dla zestawu podpisem określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="ce2a8-103">Gets the set of properties for the assembly with the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4cf50-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="4cf50-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ce2a8-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ce2a8-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetAssemblyProps (  
     [in]  mdAssembly          mda,  
     [out] const void          **ppbPublicKey,   
@@ -43,43 +43,43 @@ HRESULT GetAssemblyProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4cf50-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="4cf50-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ce2a8-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="ce2a8-105">Parameters</span></span>  
  `mda`  
- <span data-ttu-id="4cf50-106">[in].</span><span class="sxs-lookup"><span data-stu-id="4cf50-106">[in].</span></span> <span data-ttu-id="4cf50-107">`mdAssembly` Token metadanych, który reprezentuje zestaw, dla którego można pobrać właściwości.</span><span class="sxs-lookup"><span data-stu-id="4cf50-107">The `mdAssembly` metadata token that represents the assembly for which to get the properties.</span></span>  
+ <span data-ttu-id="ce2a8-106">[in].</span><span class="sxs-lookup"><span data-stu-id="ce2a8-106">[in].</span></span> <span data-ttu-id="ce2a8-107">`mdAssembly` Token metadanych, który reprezentuje zestaw, dla którego można pobrać właściwości.</span><span class="sxs-lookup"><span data-stu-id="ce2a8-107">The `mdAssembly` metadata token that represents the assembly for which to get the properties.</span></span>  
   
  `ppbPublicKey`  
- <span data-ttu-id="4cf50-108">[out] Wskaźnik do tokenu metadanych lub klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="4cf50-108">[out] A pointer to the public key or the metadata token.</span></span>  
+ <span data-ttu-id="ce2a8-108">[out] Wskaźnik do tokenu metadanych lub klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="ce2a8-108">[out] A pointer to the public key or the metadata token.</span></span>  
   
  `pcbPublicKey`  
- <span data-ttu-id="4cf50-109">[out] Liczba bajtów zwróconych klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="4cf50-109">[out] The number of bytes in the returned public key.</span></span>  
+ <span data-ttu-id="ce2a8-109">[out] Liczba bajtów zwróconych klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="ce2a8-109">[out] The number of bytes in the returned public key.</span></span>  
   
  `pulHashAlgId`  
- <span data-ttu-id="4cf50-110">[out] Wskaźnik do algorytm wyznaczania wartości skrótu dla plików w zestawie.</span><span class="sxs-lookup"><span data-stu-id="4cf50-110">[out] A pointer to the algorithm used to hash the files in the assembly.</span></span>  
+ <span data-ttu-id="ce2a8-110">[out] Wskaźnik do algorytm wyznaczania wartości skrótu dla plików w zestawie.</span><span class="sxs-lookup"><span data-stu-id="ce2a8-110">[out] A pointer to the algorithm used to hash the files in the assembly.</span></span>  
   
  `szName`  
- <span data-ttu-id="4cf50-111">[out] Prosta nazwa zestawu.</span><span class="sxs-lookup"><span data-stu-id="4cf50-111">[out] The simple name of the assembly.</span></span>  
+ <span data-ttu-id="ce2a8-111">[out] Prosta nazwa zestawu.</span><span class="sxs-lookup"><span data-stu-id="ce2a8-111">[out] The simple name of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="4cf50-112">[in] Rozmiar w szerokie znaki z `szName`.</span><span class="sxs-lookup"><span data-stu-id="4cf50-112">[in] The size, in wide chars, of `szName`.</span></span>  
+ <span data-ttu-id="ce2a8-112">[in] Rozmiar w szerokie znaki z `szName`.</span><span class="sxs-lookup"><span data-stu-id="ce2a8-112">[in] The size, in wide chars, of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="4cf50-113">[out] Liczba szerokie znaki rzeczywistego zwrotu w `szName`.</span><span class="sxs-lookup"><span data-stu-id="4cf50-113">[out] The number of wide chars actually returned in `szName`.</span></span>  
+ <span data-ttu-id="ce2a8-113">[out] Liczba szerokie znaki rzeczywistego zwrotu w `szName`.</span><span class="sxs-lookup"><span data-stu-id="ce2a8-113">[out] The number of wide chars actually returned in `szName`.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="4cf50-114">[out] Wskaźnik do assemblymetadata — struktura, która zawiera metadane zestawu.</span><span class="sxs-lookup"><span data-stu-id="4cf50-114">[out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.</span></span>  
+ <span data-ttu-id="ce2a8-114">[out] Wskaźnik do assemblymetadata — struktura, która zawiera metadane zestawu.</span><span class="sxs-lookup"><span data-stu-id="ce2a8-114">[out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.</span></span>  
   
  `pdwAssemblyFlags`  
- <span data-ttu-id="4cf50-115">[out] Flagi, które opisują metadane zastosowany do zestawu.</span><span class="sxs-lookup"><span data-stu-id="4cf50-115">[out] Flags that describe the metadata applied to an assembly.</span></span> <span data-ttu-id="4cf50-116">Ta wartość składa się z co najmniej jeden [corassemblyflags —](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) wartości.</span><span class="sxs-lookup"><span data-stu-id="4cf50-116">This value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.</span></span>  
+ <span data-ttu-id="ce2a8-115">[out] Flagi, które opisują metadane zastosowany do zestawu.</span><span class="sxs-lookup"><span data-stu-id="ce2a8-115">[out] Flags that describe the metadata applied to an assembly.</span></span> <span data-ttu-id="ce2a8-116">Ta wartość składa się z co najmniej jeden [corassemblyflags —](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) wartości.</span><span class="sxs-lookup"><span data-stu-id="ce2a8-116">This value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4cf50-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4cf50-117">Requirements</span></span>  
- <span data-ttu-id="4cf50-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4cf50-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ce2a8-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ce2a8-117">Requirements</span></span>  
+ <span data-ttu-id="ce2a8-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ce2a8-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4cf50-119">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="4cf50-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ce2a8-119">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="ce2a8-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4cf50-120">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4cf50-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ce2a8-120">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ce2a8-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4cf50-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4cf50-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ce2a8-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce2a8-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4cf50-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4cf50-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce2a8-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ce2a8-122">See also</span></span>
 
-- [<span data-ttu-id="4cf50-123">IMetaDataAssemblyImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="4cf50-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="ce2a8-123">IMetaDataAssemblyImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="ce2a8-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

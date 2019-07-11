@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ce7e9ff4041abd1e89330bd3a565b755875d3b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca8db6fd1296420011dcbfbbb0e5682f8a484dc9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638505"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768814"
 ---
-# <a name="iclrruntimehostexecuteapplication-method"></a><span data-ttu-id="ccc4e-102">ICLRRuntimeHost::ExecuteApplication — Metoda</span><span class="sxs-lookup"><span data-stu-id="ccc4e-102">ICLRRuntimeHost::ExecuteApplication Method</span></span>
-<span data-ttu-id="ccc4e-103">Używane w oparte na manifeście scenariusze wdrażania technologii ClickOnce do określenia aplikacji zostanie uaktywniony w nowej domenie.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-103">Used in manifest-based ClickOnce deployment scenarios to specify the application to be activated in a new domain.</span></span> <span data-ttu-id="ccc4e-104">Aby uzyskać więcej informacji na temat tych scenariuszy, zobacz [wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).</span><span class="sxs-lookup"><span data-stu-id="ccc4e-104">For more information about these scenarios, see [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).</span></span>  
+# <a name="iclrruntimehostexecuteapplication-method"></a><span data-ttu-id="f1fec-102">ICLRRuntimeHost::ExecuteApplication — Metoda</span><span class="sxs-lookup"><span data-stu-id="f1fec-102">ICLRRuntimeHost::ExecuteApplication Method</span></span>
+<span data-ttu-id="f1fec-103">Używane w oparte na manifeście scenariusze wdrażania technologii ClickOnce do określenia aplikacji zostanie uaktywniony w nowej domenie.</span><span class="sxs-lookup"><span data-stu-id="f1fec-103">Used in manifest-based ClickOnce deployment scenarios to specify the application to be activated in a new domain.</span></span> <span data-ttu-id="f1fec-104">Aby uzyskać więcej informacji na temat tych scenariuszy, zobacz [wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).</span><span class="sxs-lookup"><span data-stu-id="f1fec-104">For more information about these scenarios, see [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ccc4e-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="ccc4e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f1fec-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="f1fec-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT ExecuteApplication(  
     [in] LPCWSTR   pwzAppFullName,  
     [in] DWORD     dwManifestPaths,  
@@ -40,58 +40,58 @@ HRESULT ExecuteApplication(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ccc4e-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="ccc4e-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f1fec-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="f1fec-106">Parameters</span></span>  
  `pwzAppFullName`  
- <span data-ttu-id="ccc4e-107">[in] Pełna nazwa aplikacji, zgodnie z definicją <xref:System.ApplicationIdentity>.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-107">[in] The full name of the application, as defined for <xref:System.ApplicationIdentity>.</span></span>  
+ <span data-ttu-id="f1fec-107">[in] Pełna nazwa aplikacji, zgodnie z definicją <xref:System.ApplicationIdentity>.</span><span class="sxs-lookup"><span data-stu-id="f1fec-107">[in] The full name of the application, as defined for <xref:System.ApplicationIdentity>.</span></span>  
   
  `dwManifestPaths`  
- <span data-ttu-id="ccc4e-108">[in] Liczbę ciągów zawartych w `ppwzManifestPaths` tablicy.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-108">[in] The number of strings contained in the `ppwzManifestPaths` array.</span></span>  
+ <span data-ttu-id="f1fec-108">[in] Liczbę ciągów zawartych w `ppwzManifestPaths` tablicy.</span><span class="sxs-lookup"><span data-stu-id="f1fec-108">[in] The number of strings contained in the `ppwzManifestPaths` array.</span></span>  
   
  `ppwzManifestPaths`  
- <span data-ttu-id="ccc4e-109">[in] Opcjonalnie.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-109">[in] Optional.</span></span> <span data-ttu-id="ccc4e-110">Tablica ciągu, który zawiera ścieżki manifestu dla aplikacji.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-110">A string array that contains manifest paths for the application.</span></span>  
+ <span data-ttu-id="f1fec-109">[in] Opcjonalnie.</span><span class="sxs-lookup"><span data-stu-id="f1fec-109">[in] Optional.</span></span> <span data-ttu-id="f1fec-110">Tablica ciągu, który zawiera ścieżki manifestu dla aplikacji.</span><span class="sxs-lookup"><span data-stu-id="f1fec-110">A string array that contains manifest paths for the application.</span></span>  
   
  `dwActivationData`  
- <span data-ttu-id="ccc4e-111">[in] Liczbę ciągów zawartych w `ppwzActivationData` tablicy.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-111">[in] The number of strings contained in the `ppwzActivationData` array.</span></span>  
+ <span data-ttu-id="f1fec-111">[in] Liczbę ciągów zawartych w `ppwzActivationData` tablicy.</span><span class="sxs-lookup"><span data-stu-id="f1fec-111">[in] The number of strings contained in the `ppwzActivationData` array.</span></span>  
   
  `ppwzActivationData`  
- <span data-ttu-id="ccc4e-112">[in] Opcjonalnie.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-112">[in] Optional.</span></span> <span data-ttu-id="ccc4e-113">Tablica ciągu, który zawiera dane aktywacji aplikacji, takich jak część ciągu zapytania adresu URL dla aplikacji wdrożonych w sieci Web.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-113">A string array that contains the application's activation data, such as the query string portion of the URL for applications deployed over the Web.</span></span>  
+ <span data-ttu-id="f1fec-112">[in] Opcjonalnie.</span><span class="sxs-lookup"><span data-stu-id="f1fec-112">[in] Optional.</span></span> <span data-ttu-id="f1fec-113">Tablica ciągu, który zawiera dane aktywacji aplikacji, takich jak część ciągu zapytania adresu URL dla aplikacji wdrożonych w sieci Web.</span><span class="sxs-lookup"><span data-stu-id="f1fec-113">A string array that contains the application's activation data, such as the query string portion of the URL for applications deployed over the Web.</span></span>  
   
  `pReturnValue`  
- <span data-ttu-id="ccc4e-114">[out] Wartość zwrócona z punktu wejścia aplikacji.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-114">[out] The value returned from the entry point of the application.</span></span>  
+ <span data-ttu-id="f1fec-114">[out] Wartość zwrócona z punktu wejścia aplikacji.</span><span class="sxs-lookup"><span data-stu-id="f1fec-114">[out] The value returned from the entry point of the application.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ccc4e-115">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="ccc4e-115">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f1fec-115">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="f1fec-115">Return Value</span></span>  
   
-|<span data-ttu-id="ccc4e-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ccc4e-116">HRESULT</span></span>|<span data-ttu-id="ccc4e-117">Opis</span><span class="sxs-lookup"><span data-stu-id="ccc4e-117">Description</span></span>|  
+|<span data-ttu-id="f1fec-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f1fec-116">HRESULT</span></span>|<span data-ttu-id="f1fec-117">Opis</span><span class="sxs-lookup"><span data-stu-id="f1fec-117">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="ccc4e-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="ccc4e-118">S_OK</span></span>|<span data-ttu-id="ccc4e-119">`ExecuteApplication` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-119">`ExecuteApplication` returned successfully.</span></span>|  
-|<span data-ttu-id="ccc4e-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="ccc4e-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="ccc4e-121">Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-121">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="ccc4e-122">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="ccc4e-122">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="ccc4e-123">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-123">The call timed out.</span></span>|  
-|<span data-ttu-id="ccc4e-124">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="ccc4e-124">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="ccc4e-125">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-125">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="ccc4e-126">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="ccc4e-126">HOST_E_ABANDONED</span></span>|<span data-ttu-id="ccc4e-127">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-127">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="ccc4e-128">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="ccc4e-128">E_FAIL</span></span>|<span data-ttu-id="ccc4e-129">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-129">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="ccc4e-130">Jeśli metoda zwraca E_FAIL, środowisko CLR nie będzie już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-130">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="ccc4e-131">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-131">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="f1fec-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="f1fec-118">S_OK</span></span>|<span data-ttu-id="f1fec-119">`ExecuteApplication` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="f1fec-119">`ExecuteApplication` returned successfully.</span></span>|  
+|<span data-ttu-id="f1fec-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="f1fec-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="f1fec-121">Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="f1fec-121">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="f1fec-122">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="f1fec-122">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="f1fec-123">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="f1fec-123">The call timed out.</span></span>|  
+|<span data-ttu-id="f1fec-124">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="f1fec-124">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="f1fec-125">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="f1fec-125">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="f1fec-126">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="f1fec-126">HOST_E_ABANDONED</span></span>|<span data-ttu-id="f1fec-127">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="f1fec-127">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="f1fec-128">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="f1fec-128">E_FAIL</span></span>|<span data-ttu-id="f1fec-129">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="f1fec-129">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="f1fec-130">Jeśli metoda zwraca E_FAIL, środowisko CLR nie będzie już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="f1fec-130">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="f1fec-131">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="f1fec-131">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ccc4e-132">Uwagi</span><span class="sxs-lookup"><span data-stu-id="ccc4e-132">Remarks</span></span>  
- <span data-ttu-id="ccc4e-133">`ExecuteApplication` Służy do aktywowania aplikacji ClickOnce w domenie nowo utworzonej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-133">`ExecuteApplication` is used to activate ClickOnce applications in a newly created application domain.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f1fec-132">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f1fec-132">Remarks</span></span>  
+ <span data-ttu-id="f1fec-133">`ExecuteApplication` Służy do aktywowania aplikacji ClickOnce w domenie nowo utworzonej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="f1fec-133">`ExecuteApplication` is used to activate ClickOnce applications in a newly created application domain.</span></span>  
   
- <span data-ttu-id="ccc4e-134">`pReturnValue` Parametr wyjściowy jest ustawiona na wartość zwracaną przez aplikację.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-134">The `pReturnValue` output parameter is set to the value returned by the application.</span></span> <span data-ttu-id="ccc4e-135">Jeśli podasz wartość null dla `pReturnValue`, `ExecuteApplication` nie kończy się niepowodzeniem, ale nie zwraca wartości.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-135">If you supply a value of null for `pReturnValue`, `ExecuteApplication` does not fail, but it does not return a value.</span></span>  
+ <span data-ttu-id="f1fec-134">`pReturnValue` Parametr wyjściowy jest ustawiona na wartość zwracaną przez aplikację.</span><span class="sxs-lookup"><span data-stu-id="f1fec-134">The `pReturnValue` output parameter is set to the value returned by the application.</span></span> <span data-ttu-id="f1fec-135">Jeśli podasz wartość null dla `pReturnValue`, `ExecuteApplication` nie kończy się niepowodzeniem, ale nie zwraca wartości.</span><span class="sxs-lookup"><span data-stu-id="f1fec-135">If you supply a value of null for `pReturnValue`, `ExecuteApplication` does not fail, but it does not return a value.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="ccc4e-136">Nie wywołuj [Metoda Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) metoda przed wywołaniem `ExecuteApplication` metodę, aby aktywować manifestu aplikacji.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-136">Do not call the [Start Method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) method before calling the `ExecuteApplication` method to activate a manifest-based application.</span></span> <span data-ttu-id="ccc4e-137">Jeśli `Start` najpierw jest wywoływana metoda `ExecuteApplication` wywołania metody zakończy się niepowodzeniem.</span><span class="sxs-lookup"><span data-stu-id="ccc4e-137">If the `Start` method is called first, the `ExecuteApplication` method call will fail.</span></span>  
+>  <span data-ttu-id="f1fec-136">Nie wywołuj [Metoda Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) metoda przed wywołaniem `ExecuteApplication` metodę, aby aktywować manifestu aplikacji.</span><span class="sxs-lookup"><span data-stu-id="f1fec-136">Do not call the [Start Method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) method before calling the `ExecuteApplication` method to activate a manifest-based application.</span></span> <span data-ttu-id="f1fec-137">Jeśli `Start` najpierw jest wywoływana metoda `ExecuteApplication` wywołania metody zakończy się niepowodzeniem.</span><span class="sxs-lookup"><span data-stu-id="f1fec-137">If the `Start` method is called first, the `ExecuteApplication` method call will fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ccc4e-138">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ccc4e-138">Requirements</span></span>  
- <span data-ttu-id="ccc4e-139">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ccc4e-139">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f1fec-138">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f1fec-138">Requirements</span></span>  
+ <span data-ttu-id="f1fec-139">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f1fec-139">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ccc4e-140">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ccc4e-140">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f1fec-140">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f1fec-140">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ccc4e-141">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ccc4e-141">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f1fec-141">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f1fec-141">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ccc4e-142">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ccc4e-142">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f1fec-142">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1fec-142">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ccc4e-143">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ccc4e-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f1fec-143">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f1fec-143">See also</span></span>
 
 - <xref:System.ActivationContext>
 - <xref:System.AppDomainManager>
 - <xref:System.ApplicationIdentity>
-- [<span data-ttu-id="ccc4e-144">ICLRRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="ccc4e-144">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
-- [<span data-ttu-id="ccc4e-145">SetAppDomainManager, metoda</span><span class="sxs-lookup"><span data-stu-id="ccc4e-145">SetAppDomainManager Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)
-- [<span data-ttu-id="ccc4e-146">Przewodnik: Pobieranie zestawów na żądanie przy użyciu interfejsu API wdrażania ClickOnce za pomocą Projektanta</span><span class="sxs-lookup"><span data-stu-id="ccc4e-146">Walkthrough: Downloading Assemblies on Demand with the ClickOnce Deployment API Using the Designer</span></span>](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+- [<span data-ttu-id="f1fec-144">ICLRRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="f1fec-144">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [<span data-ttu-id="f1fec-145">SetAppDomainManager, metoda</span><span class="sxs-lookup"><span data-stu-id="f1fec-145">SetAppDomainManager Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)
+- [<span data-ttu-id="f1fec-146">Przewodnik: Pobieranie zestawów na żądanie przy użyciu interfejsu API wdrażania ClickOnce za pomocą Projektanta</span><span class="sxs-lookup"><span data-stu-id="f1fec-146">Walkthrough: Downloading Assemblies on Demand with the ClickOnce Deployment API Using the Designer</span></span>](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)

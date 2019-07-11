@@ -17,40 +17,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf74da6eb0e7ce0215023a9a58d6b88c57c4fe8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1a044d1600f7e21e3abfbf704daef5213617b4c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936945"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780047"
 ---
-# <a name="icorruntimehostgetconfiguration-method"></a><span data-ttu-id="d5f96-102">ICorRuntimeHost::GetConfiguration — Metoda</span><span class="sxs-lookup"><span data-stu-id="d5f96-102">ICorRuntimeHost::GetConfiguration Method</span></span>
-<span data-ttu-id="d5f96-103">Pobiera obiekt, który zezwala hostów do określenia konfiguracji wywołania zwrotnego środowiska uruchomieniowego języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="d5f96-103">Gets an object that allows the host to specify the callback configuration of the common language runtime (CLR).</span></span>  
+# <a name="icorruntimehostgetconfiguration-method"></a><span data-ttu-id="9d438-102">ICorRuntimeHost::GetConfiguration — Metoda</span><span class="sxs-lookup"><span data-stu-id="9d438-102">ICorRuntimeHost::GetConfiguration Method</span></span>
+<span data-ttu-id="9d438-103">Pobiera obiekt, który zezwala hostów do określenia konfiguracji wywołania zwrotnego środowiska uruchomieniowego języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="9d438-103">Gets an object that allows the host to specify the callback configuration of the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5f96-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d5f96-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d438-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9d438-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetConfiguration(  
     [out] ICorConfiguration** pConfiguration  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d5f96-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d5f96-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9d438-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="9d438-105">Parameters</span></span>  
  `pConfiguration`  
- <span data-ttu-id="d5f96-106">[out] Wskaźnik na adres [icorconfiguration —](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) obiekt, który może służyć do konfigurowania środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="d5f96-106">[out] A pointer to the address of an [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) object that can be used to configure the CLR.</span></span>  
+ <span data-ttu-id="9d438-106">[out] Wskaźnik na adres [icorconfiguration —](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) obiekt, który może służyć do konfigurowania środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="9d438-106">[out] A pointer to the address of an [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) object that can be used to configure the CLR.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d5f96-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d5f96-107">Remarks</span></span>  
- <span data-ttu-id="d5f96-108">Środowisko CLR musi być skonfigurowany przed inicjacji; w przeciwnym razie `GetConfiguration` metoda zwraca wartość HRESULT wskazująca na wystąpienie błędu.</span><span class="sxs-lookup"><span data-stu-id="d5f96-108">The CLR must be configured prior to its initialization; otherwise, the `GetConfiguration` method returns an HRESULT indicating an error.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9d438-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="9d438-107">Remarks</span></span>  
+ <span data-ttu-id="9d438-108">Środowisko CLR musi być skonfigurowany przed inicjacji; w przeciwnym razie `GetConfiguration` metoda zwraca wartość HRESULT wskazująca na wystąpienie błędu.</span><span class="sxs-lookup"><span data-stu-id="9d438-108">The CLR must be configured prior to its initialization; otherwise, the `GetConfiguration` method returns an HRESULT indicating an error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d5f96-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d5f96-109">Requirements</span></span>  
- <span data-ttu-id="d5f96-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d5f96-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d438-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9d438-109">Requirements</span></span>  
+ <span data-ttu-id="9d438-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9d438-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d5f96-111">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d5f96-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="9d438-111">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9d438-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d5f96-112">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d5f96-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9d438-112">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9d438-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d5f96-113">**Wersje programu .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="d5f96-113">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="9d438-113">**Wersje programu .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="9d438-113">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d5f96-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d5f96-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d438-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9d438-114">See also</span></span>
 
-- [<span data-ttu-id="d5f96-115">ICorRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="d5f96-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="9d438-115">ICorRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="9d438-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

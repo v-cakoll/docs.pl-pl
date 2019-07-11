@@ -17,21 +17,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 247383e267ab3e8932d43621e122986a59d9a30d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: fe34ffded73e8305e4ade3bb9b402b1d8e1bcc49
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490511"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764676"
 ---
-# <a name="createdebugginginterfacefromversion-function"></a><span data-ttu-id="32864-102">CreateDebuggingInterfaceFromVersion — Funkcja</span><span class="sxs-lookup"><span data-stu-id="32864-102">CreateDebuggingInterfaceFromVersion Function</span></span>
-<span data-ttu-id="32864-103">Tworzy [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) obiektu na podstawie określonej wersji informacji.</span><span class="sxs-lookup"><span data-stu-id="32864-103">Creates an [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) object based on the specified version information.</span></span>  
+# <a name="createdebugginginterfacefromversion-function"></a><span data-ttu-id="daf1e-102">CreateDebuggingInterfaceFromVersion — Funkcja</span><span class="sxs-lookup"><span data-stu-id="daf1e-102">CreateDebuggingInterfaceFromVersion Function</span></span>
+<span data-ttu-id="daf1e-103">Tworzy [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) obiektu na podstawie określonej wersji informacji.</span><span class="sxs-lookup"><span data-stu-id="daf1e-103">Creates an [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) object based on the specified version information.</span></span>  
   
- <span data-ttu-id="32864-104">Ta funkcja jest przestarzała w programie .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="32864-104">This function is obsolete in the .NET Framework 4.</span></span> <span data-ttu-id="32864-105">Aby uzyskać interfejs na środowisko uruchomieniowe języka wspólnego (CLR) w wersji 2.0, użyj [iclrruntimeinfo::getinterface —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) metody i określ identyfikator klasy CLSID_CLRDebuggingLegacy oraz identyfikator interfejsu IID_ICorDebug.</span><span class="sxs-lookup"><span data-stu-id="32864-105">Instead, to get an interface for the common language runtime (CLR) 2.0, use the [ICLRRuntimeInfo::GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) method and specify the class identifier CLSID_CLRDebuggingLegacy and the interface identifier IID_ICorDebug.</span></span> <span data-ttu-id="32864-106">Aby uzyskać interfejs dla środowiska CLR 4 lub nowszy, wywołaj [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) funkcji, a następnie określ identyfikator klasy CLSID_CLRDebugging i identyfikator interfejsu IID_ICLRDebugging.</span><span class="sxs-lookup"><span data-stu-id="32864-106">To get an interface for CLR 4 or later, call the [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) function and specify the class identifier CLSID_CLRDebugging and the interface identifier IID_ICLRDebugging.</span></span>  
+ <span data-ttu-id="daf1e-104">Ta funkcja jest przestarzała w programie .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="daf1e-104">This function is obsolete in the .NET Framework 4.</span></span> <span data-ttu-id="daf1e-105">Aby uzyskać interfejs na środowisko uruchomieniowe języka wspólnego (CLR) w wersji 2.0, użyj [iclrruntimeinfo::getinterface —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) metody i określ identyfikator klasy CLSID_CLRDebuggingLegacy oraz identyfikator interfejsu IID_ICorDebug.</span><span class="sxs-lookup"><span data-stu-id="daf1e-105">Instead, to get an interface for the common language runtime (CLR) 2.0, use the [ICLRRuntimeInfo::GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) method and specify the class identifier CLSID_CLRDebuggingLegacy and the interface identifier IID_ICorDebug.</span></span> <span data-ttu-id="daf1e-106">Aby uzyskać interfejs dla środowiska CLR 4 lub nowszy, wywołaj [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) funkcji, a następnie określ identyfikator klasy CLSID_CLRDebugging i identyfikator interfejsu IID_ICLRDebugging.</span><span class="sxs-lookup"><span data-stu-id="daf1e-106">To get an interface for CLR 4 or later, call the [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) function and specify the class identifier CLSID_CLRDebugging and the interface identifier IID_ICLRDebugging.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="32864-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="32864-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="daf1e-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="daf1e-107">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT CreateDebuggingInterfaceFromVersion (  
     [in]  int      iDebuggerVersion,   
     [in]  LPCWSTR  szDebuggeeVersion,   
@@ -39,36 +39,36 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="32864-108">Parametry</span><span class="sxs-lookup"><span data-stu-id="32864-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="daf1e-108">Parametry</span><span class="sxs-lookup"><span data-stu-id="daf1e-108">Parameters</span></span>  
  `iDebuggerVersion`  
- <span data-ttu-id="32864-109">[in] Wersja `ICorDebug` jest to oczekiwane przez debuger.</span><span class="sxs-lookup"><span data-stu-id="32864-109">[in] The version of `ICorDebug` that is expected by the debugger.</span></span> <span data-ttu-id="32864-110">Zobacz [cordebuginterfaceversion —](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md) wyliczenie prawidłowych wartości.</span><span class="sxs-lookup"><span data-stu-id="32864-110">See the [CorDebugInterfaceVersion](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md) enumeration for valid values.</span></span>  
+ <span data-ttu-id="daf1e-109">[in] Wersja `ICorDebug` jest to oczekiwane przez debuger.</span><span class="sxs-lookup"><span data-stu-id="daf1e-109">[in] The version of `ICorDebug` that is expected by the debugger.</span></span> <span data-ttu-id="daf1e-110">Zobacz [cordebuginterfaceversion —](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md) wyliczenie prawidłowych wartości.</span><span class="sxs-lookup"><span data-stu-id="daf1e-110">See the [CorDebugInterfaceVersion](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md) enumeration for valid values.</span></span>  
   
  `szDebuggeeVersion`  
- <span data-ttu-id="32864-111">[in] Typowe wersja środowiska uruchomieniowego języka skojarzone z aplikacją lub procesu do debugowania.</span><span class="sxs-lookup"><span data-stu-id="32864-111">[in] The common language runtime version associated with the application or process to be debugged.</span></span> <span data-ttu-id="32864-112">Zobacz [getversionfromprocess —](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) lub [getrequestedruntimeversion —](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md) metody, aby uzyskać informacje dotyczące pobierania tej wartości.</span><span class="sxs-lookup"><span data-stu-id="32864-112">See the [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) or [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md) method for information on retrieving this value.</span></span>  
+ <span data-ttu-id="daf1e-111">[in] Typowe wersja środowiska uruchomieniowego języka skojarzone z aplikacją lub procesu do debugowania.</span><span class="sxs-lookup"><span data-stu-id="daf1e-111">[in] The common language runtime version associated with the application or process to be debugged.</span></span> <span data-ttu-id="daf1e-112">Zobacz [getversionfromprocess —](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) lub [getrequestedruntimeversion —](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md) metody, aby uzyskać informacje dotyczące pobierania tej wartości.</span><span class="sxs-lookup"><span data-stu-id="daf1e-112">See the [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) or [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md) method for information on retrieving this value.</span></span>  
   
  `ppCordb`  
- <span data-ttu-id="32864-113">[out] Lokalizacji, która otrzymuje wskaźnik `ICorDebug` obiektu.</span><span class="sxs-lookup"><span data-stu-id="32864-113">[out] The location that receives a pointer to the `ICorDebug` object.</span></span>  
+ <span data-ttu-id="daf1e-113">[out] Lokalizacji, która otrzymuje wskaźnik `ICorDebug` obiektu.</span><span class="sxs-lookup"><span data-stu-id="daf1e-113">[out] The location that receives a pointer to the `ICorDebug` object.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="32864-114">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="32864-114">Return Value</span></span>  
- <span data-ttu-id="32864-115">Ta metoda zwraca standardowych kodów błędu modelu COM, zgodnie z definicją w pliku WinError.h oprócz następujących wartości.</span><span class="sxs-lookup"><span data-stu-id="32864-115">This method returns standard COM error codes as defined in the WinError.h file in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="daf1e-114">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="daf1e-114">Return Value</span></span>  
+ <span data-ttu-id="daf1e-115">Ta metoda zwraca standardowych kodów błędu modelu COM, zgodnie z definicją w pliku WinError.h oprócz następujących wartości.</span><span class="sxs-lookup"><span data-stu-id="daf1e-115">This method returns standard COM error codes as defined in the WinError.h file in addition to the following values.</span></span>  
   
-|<span data-ttu-id="32864-116">Kod powrotu</span><span class="sxs-lookup"><span data-stu-id="32864-116">Return code</span></span>|<span data-ttu-id="32864-117">Opis</span><span class="sxs-lookup"><span data-stu-id="32864-117">Description</span></span>|  
+|<span data-ttu-id="daf1e-116">Kod powrotu</span><span class="sxs-lookup"><span data-stu-id="daf1e-116">Return code</span></span>|<span data-ttu-id="daf1e-117">Opis</span><span class="sxs-lookup"><span data-stu-id="daf1e-117">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="32864-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="32864-118">S_OK</span></span>|<span data-ttu-id="32864-119">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="32864-119">The method completed successfully.</span></span>|  
-|<span data-ttu-id="32864-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="32864-120">E_INVALIDARG</span></span>|<span data-ttu-id="32864-121">`szDebuggeeVersion` lub `ppCordb` ma wartość null lub wersji ciąg jest niepoprawny.</span><span class="sxs-lookup"><span data-stu-id="32864-121">`szDebuggeeVersion` or `ppCordb` is null, or the version string is incorrect.</span></span>|  
+|<span data-ttu-id="daf1e-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="daf1e-118">S_OK</span></span>|<span data-ttu-id="daf1e-119">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="daf1e-119">The method completed successfully.</span></span>|  
+|<span data-ttu-id="daf1e-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="daf1e-120">E_INVALIDARG</span></span>|<span data-ttu-id="daf1e-121">`szDebuggeeVersion` lub `ppCordb` ma wartość null lub wersji ciąg jest niepoprawny.</span><span class="sxs-lookup"><span data-stu-id="daf1e-121">`szDebuggeeVersion` or `ppCordb` is null, or the version string is incorrect.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="32864-122">Uwagi</span><span class="sxs-lookup"><span data-stu-id="32864-122">Remarks</span></span>  
- <span data-ttu-id="32864-123">`szDebuggeeVersion` Parametr mapowany na odpowiednią wersję plik MSCorDbi.dll.</span><span class="sxs-lookup"><span data-stu-id="32864-123">The `szDebuggeeVersion` parameter maps to the corresponding version of MSCorDbi.dll.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="daf1e-122">Uwagi</span><span class="sxs-lookup"><span data-stu-id="daf1e-122">Remarks</span></span>  
+ <span data-ttu-id="daf1e-123">`szDebuggeeVersion` Parametr mapowany na odpowiednią wersję plik MSCorDbi.dll.</span><span class="sxs-lookup"><span data-stu-id="daf1e-123">The `szDebuggeeVersion` parameter maps to the corresponding version of MSCorDbi.dll.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="32864-124">Wymagania</span><span class="sxs-lookup"><span data-stu-id="32864-124">Requirements</span></span>  
- <span data-ttu-id="32864-125">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="32864-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="daf1e-124">Wymagania</span><span class="sxs-lookup"><span data-stu-id="daf1e-124">Requirements</span></span>  
+ <span data-ttu-id="daf1e-125">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="daf1e-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="32864-126">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="32864-126">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="daf1e-126">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="daf1e-126">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="32864-127">**Biblioteka:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="32864-127">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="daf1e-127">**Biblioteka:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="daf1e-127">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="32864-128">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32864-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="daf1e-128">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="daf1e-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32864-129">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="32864-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="daf1e-129">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="daf1e-129">See also</span></span>
 
-- [<span data-ttu-id="32864-130">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="32864-130">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="daf1e-130">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="daf1e-130">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6156499368fb743b69c03f38b40ad3c5bcabce6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0755cb2a91d61725338562cb1fe249a9cfacc38
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992410"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781513"
 ---
-# <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="b2847-102">IMetaDataTables::GetColumnInfo — Metoda</span><span class="sxs-lookup"><span data-stu-id="b2847-102">IMetaDataTables::GetColumnInfo Method</span></span>
-<span data-ttu-id="b2847-103">Pobiera dane o określonej kolumny w określonej tabeli.</span><span class="sxs-lookup"><span data-stu-id="b2847-103">Gets data about the specified column in the specified table.</span></span>  
+# <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="091ff-102">IMetaDataTables::GetColumnInfo — Metoda</span><span class="sxs-lookup"><span data-stu-id="091ff-102">IMetaDataTables::GetColumnInfo Method</span></span>
+<span data-ttu-id="091ff-103">Pobiera dane o określonej kolumny w określonej tabeli.</span><span class="sxs-lookup"><span data-stu-id="091ff-103">Gets data about the specified column in the specified table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b2847-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b2847-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="091ff-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="091ff-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetColumnInfo (   
     [in]  ULONG        ixTbl,  
     [in]  ULONG        ixCol,  
@@ -40,35 +40,35 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b2847-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="b2847-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="091ff-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="091ff-105">Parameters</span></span>  
  `ixTbl`  
- <span data-ttu-id="b2847-106">[in] Indeks tabeli, którą chcesz.</span><span class="sxs-lookup"><span data-stu-id="b2847-106">[in] The index of the desired table.</span></span>  
+ <span data-ttu-id="091ff-106">[in] Indeks tabeli, którą chcesz.</span><span class="sxs-lookup"><span data-stu-id="091ff-106">[in] The index of the desired table.</span></span>  
   
  `ixCol`  
- <span data-ttu-id="b2847-107">[in] Indeks żądanej kolumny.</span><span class="sxs-lookup"><span data-stu-id="b2847-107">[in] The index of the desired column.</span></span>  
+ <span data-ttu-id="091ff-107">[in] Indeks żądanej kolumny.</span><span class="sxs-lookup"><span data-stu-id="091ff-107">[in] The index of the desired column.</span></span>  
   
  `poCol`  
- <span data-ttu-id="b2847-108">[out] Wskaźnik do przesunięcia kolumny w wierszu.</span><span class="sxs-lookup"><span data-stu-id="b2847-108">[out] A pointer to the offset of the column in the row.</span></span>  
+ <span data-ttu-id="091ff-108">[out] Wskaźnik do przesunięcia kolumny w wierszu.</span><span class="sxs-lookup"><span data-stu-id="091ff-108">[out] A pointer to the offset of the column in the row.</span></span>  
   
  `pcbCol`  
- <span data-ttu-id="b2847-109">[out] Wskaźnik do rozmiaru, w bajtach dla kolumny.</span><span class="sxs-lookup"><span data-stu-id="b2847-109">[out] A pointer to the size, in bytes, of the column.</span></span>  
+ <span data-ttu-id="091ff-109">[out] Wskaźnik do rozmiaru, w bajtach dla kolumny.</span><span class="sxs-lookup"><span data-stu-id="091ff-109">[out] A pointer to the size, in bytes, of the column.</span></span>  
   
  `pType`  
- <span data-ttu-id="b2847-110">[out] Wskaźnik do typu wartości w kolumnie.</span><span class="sxs-lookup"><span data-stu-id="b2847-110">[out] A pointer to the type of the values in the column.</span></span>  
+ <span data-ttu-id="091ff-110">[out] Wskaźnik do typu wartości w kolumnie.</span><span class="sxs-lookup"><span data-stu-id="091ff-110">[out] A pointer to the type of the values in the column.</span></span>  
   
  `ppName`  
- <span data-ttu-id="b2847-111">[out] Wskaźnik do wskaźnika na nazwę kolumny.</span><span class="sxs-lookup"><span data-stu-id="b2847-111">[out] A pointer to a pointer to the column name.</span></span>  
+ <span data-ttu-id="091ff-111">[out] Wskaźnik do wskaźnika na nazwę kolumny.</span><span class="sxs-lookup"><span data-stu-id="091ff-111">[out] A pointer to a pointer to the column name.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b2847-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b2847-112">Requirements</span></span>  
- <span data-ttu-id="b2847-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2847-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="091ff-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="091ff-112">Requirements</span></span>  
+ <span data-ttu-id="091ff-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="091ff-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b2847-114">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="b2847-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="091ff-114">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="091ff-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b2847-115">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b2847-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="091ff-115">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="091ff-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b2847-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2847-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="091ff-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="091ff-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2847-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b2847-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="091ff-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="091ff-117">See also</span></span>
 
-- [<span data-ttu-id="b2847-118">IMetaDataTables, interfejs</span><span class="sxs-lookup"><span data-stu-id="b2847-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="b2847-119">IMetaDataTables2, interfejs</span><span class="sxs-lookup"><span data-stu-id="b2847-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="091ff-118">IMetaDataTables, interfejs</span><span class="sxs-lookup"><span data-stu-id="091ff-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="091ff-119">IMetaDataTables2, interfejs</span><span class="sxs-lookup"><span data-stu-id="091ff-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

@@ -17,46 +17,46 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb4096b0ae083e0b6c0598ea18cc8b33c2fdfe3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1804a14c1197148afbffb5ec2cb4f29cb9ff019e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993606"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774554"
 ---
-# <a name="icorpublishenumprocesses-method"></a><span data-ttu-id="03f9e-102">ICorPublish::EnumProcesses — Metoda</span><span class="sxs-lookup"><span data-stu-id="03f9e-102">ICorPublish::EnumProcesses Method</span></span>
-<span data-ttu-id="03f9e-103">Pobiera moduł wyliczający dla zarządzanego procesów uruchomionych na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="03f9e-103">Gets an enumerator for the managed processes running on this computer.</span></span>  
+# <a name="icorpublishenumprocesses-method"></a><span data-ttu-id="d9122-102">ICorPublish::EnumProcesses — Metoda</span><span class="sxs-lookup"><span data-stu-id="d9122-102">ICorPublish::EnumProcesses Method</span></span>
+<span data-ttu-id="d9122-103">Pobiera moduł wyliczający dla zarządzanego procesów uruchomionych na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="d9122-103">Gets an enumerator for the managed processes running on this computer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03f9e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="03f9e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9122-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d9122-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnumProcesses (  
     [in] COR_PUB_ENUMPROCESS       Type,  
     [out] ICorPublishProcessEnum   **ppIEnum  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="03f9e-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="03f9e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d9122-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d9122-105">Parameters</span></span>  
  `Type`  
- <span data-ttu-id="03f9e-106">Wartość [cor_pub_enumprocess —](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md) wyliczenie, który określa typ procesu, które mają zostać pobrane.</span><span class="sxs-lookup"><span data-stu-id="03f9e-106">A value of the [COR_PUB_ENUMPROCESS](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md) enumeration that specifies the type of process to be retrieved.</span></span> <span data-ttu-id="03f9e-107">W bieżącej wersji COR_PUB_MANAGEDONLY tylko jest prawidłowa.</span><span class="sxs-lookup"><span data-stu-id="03f9e-107">In the current version, only COR_PUB_MANAGEDONLY is valid.</span></span>  
+ <span data-ttu-id="d9122-106">Wartość [cor_pub_enumprocess —](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md) wyliczenie, który określa typ procesu, które mają zostać pobrane.</span><span class="sxs-lookup"><span data-stu-id="d9122-106">A value of the [COR_PUB_ENUMPROCESS](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md) enumeration that specifies the type of process to be retrieved.</span></span> <span data-ttu-id="d9122-107">W bieżącej wersji COR_PUB_MANAGEDONLY tylko jest prawidłowa.</span><span class="sxs-lookup"><span data-stu-id="d9122-107">In the current version, only COR_PUB_MANAGEDONLY is valid.</span></span>  
   
  `ppIEnum`  
- <span data-ttu-id="03f9e-108">Wskaźnik na adres [icorpublishprocessenum —](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md) wystąpienia, które jest moduł wyliczający procesów.</span><span class="sxs-lookup"><span data-stu-id="03f9e-108">A pointer to the address of an [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md) instance that is the enumerator of the processes.</span></span>  
+ <span data-ttu-id="d9122-108">Wskaźnik na adres [icorpublishprocessenum —](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md) wystąpienia, które jest moduł wyliczający procesów.</span><span class="sxs-lookup"><span data-stu-id="d9122-108">A pointer to the address of an [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md) instance that is the enumerator of the processes.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="03f9e-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="03f9e-109">Remarks</span></span>  
- <span data-ttu-id="03f9e-110">Moduł wyliczający kolekcja procesów opiera się na migawki procesów, które są uruchomione podczas `EnumProcesses` metoda jest wywoływana.</span><span class="sxs-lookup"><span data-stu-id="03f9e-110">The enumerator's collection of processes is based on a snapshot of the processes that are running when the `EnumProcesses` method is called.</span></span> <span data-ttu-id="03f9e-111">Moduł wyliczający nie będzie zawierać wszystkie procesy, które kończy się przed lub uruchom po `EnumProcesses` jest wywoływana.</span><span class="sxs-lookup"><span data-stu-id="03f9e-111">The enumerator will not include any processes that terminate before or start after `EnumProcesses` is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d9122-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d9122-109">Remarks</span></span>  
+ <span data-ttu-id="d9122-110">Moduł wyliczający kolekcja procesów opiera się na migawki procesów, które są uruchomione podczas `EnumProcesses` metoda jest wywoływana.</span><span class="sxs-lookup"><span data-stu-id="d9122-110">The enumerator's collection of processes is based on a snapshot of the processes that are running when the `EnumProcesses` method is called.</span></span> <span data-ttu-id="d9122-111">Moduł wyliczający nie będzie zawierać wszystkie procesy, które kończy się przed lub uruchom po `EnumProcesses` jest wywoływana.</span><span class="sxs-lookup"><span data-stu-id="d9122-111">The enumerator will not include any processes that terminate before or start after `EnumProcesses` is called.</span></span>  
   
- <span data-ttu-id="03f9e-112">`EnumProcesses` Metoda może być wywoływana więcej niż raz w tym [ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md) wystąpienia, aby utworzyć nową kolekcję aktualne procesów.</span><span class="sxs-lookup"><span data-stu-id="03f9e-112">The `EnumProcesses` method may be called more than once on this [ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md) instance to create a new up-to-date collection of processes.</span></span> <span data-ttu-id="03f9e-113">Nie będzie mieć wpływ na istniejących kolekcji przez kolejne wywołania z `EnumProcesses` metody.</span><span class="sxs-lookup"><span data-stu-id="03f9e-113">Existing collections will not be affected by subsequent calls of the `EnumProcesses` method.</span></span>  
+ <span data-ttu-id="d9122-112">`EnumProcesses` Metoda może być wywoływana więcej niż raz w tym [ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md) wystąpienia, aby utworzyć nową kolekcję aktualne procesów.</span><span class="sxs-lookup"><span data-stu-id="d9122-112">The `EnumProcesses` method may be called more than once on this [ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md) instance to create a new up-to-date collection of processes.</span></span> <span data-ttu-id="d9122-113">Nie będzie mieć wpływ na istniejących kolekcji przez kolejne wywołania z `EnumProcesses` metody.</span><span class="sxs-lookup"><span data-stu-id="d9122-113">Existing collections will not be affected by subsequent calls of the `EnumProcesses` method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="03f9e-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="03f9e-114">Requirements</span></span>  
- <span data-ttu-id="03f9e-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03f9e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9122-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d9122-114">Requirements</span></span>  
+ <span data-ttu-id="d9122-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9122-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="03f9e-116">**Nagłówek:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="03f9e-116">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="d9122-116">**Nagłówek:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="d9122-116">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="03f9e-117">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="03f9e-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d9122-117">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9122-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="03f9e-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03f9e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d9122-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9122-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03f9e-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="03f9e-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9122-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d9122-119">See also</span></span>
 
-- [<span data-ttu-id="03f9e-120">ICorPublish, interfejs</span><span class="sxs-lookup"><span data-stu-id="03f9e-120">ICorPublish Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)
+- [<span data-ttu-id="d9122-120">ICorPublish, interfejs</span><span class="sxs-lookup"><span data-stu-id="d9122-120">ICorPublish Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)

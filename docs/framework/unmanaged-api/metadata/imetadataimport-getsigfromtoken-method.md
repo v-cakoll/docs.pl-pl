@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 823a172c05d2ce76fef790966f54d7216f579fde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2060a70e2a3ce355f43ade67e6d6843670e00ad3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777536"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778848"
 ---
-# <a name="imetadataimportgetsigfromtoken-method"></a><span data-ttu-id="7c9d4-102">IMetaDataImport::GetSigFromToken — Metoda</span><span class="sxs-lookup"><span data-stu-id="7c9d4-102">IMetaDataImport::GetSigFromToken Method</span></span>
-<span data-ttu-id="7c9d4-103">Pobiera podpisu binarne metadane skojarzone z określonym tokenem.</span><span class="sxs-lookup"><span data-stu-id="7c9d4-103">Gets the binary metadata signature associated with the specified token.</span></span>  
+# <a name="imetadataimportgetsigfromtoken-method"></a><span data-ttu-id="9e0dc-102">IMetaDataImport::GetSigFromToken — Metoda</span><span class="sxs-lookup"><span data-stu-id="9e0dc-102">IMetaDataImport::GetSigFromToken Method</span></span>
+<span data-ttu-id="9e0dc-103">Pobiera podpisu binarne metadane skojarzone z określonym tokenem.</span><span class="sxs-lookup"><span data-stu-id="9e0dc-103">Gets the binary metadata signature associated with the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7c9d4-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="7c9d4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9e0dc-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9e0dc-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetSigFromToken (   
    [in]   mdSignature        mdSig,   
    [out]  PCCOR_SIGNATURE    *ppvSig,   
@@ -37,26 +37,26 @@ HRESULT GetSigFromToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7c9d4-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="7c9d4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9e0dc-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="9e0dc-105">Parameters</span></span>  
  `mdSig`  
- <span data-ttu-id="7c9d4-106">[in] Token, który zwraca podpis binarne metadanych dla.</span><span class="sxs-lookup"><span data-stu-id="7c9d4-106">[in] The token to return the binary metadata signature for.</span></span>  
+ <span data-ttu-id="9e0dc-106">[in] Token, który zwraca podpis binarne metadanych dla.</span><span class="sxs-lookup"><span data-stu-id="9e0dc-106">[in] The token to return the binary metadata signature for.</span></span>  
   
  `ppvSig`  
- <span data-ttu-id="7c9d4-107">[out] Wskaźnik do podpisu zwróconych metadanych.</span><span class="sxs-lookup"><span data-stu-id="7c9d4-107">[out] A pointer to the returned metadata signature.</span></span>  
+ <span data-ttu-id="9e0dc-107">[out] Wskaźnik do podpisu zwróconych metadanych.</span><span class="sxs-lookup"><span data-stu-id="9e0dc-107">[out] A pointer to the returned metadata signature.</span></span>  
   
  `pcbSig`  
- <span data-ttu-id="7c9d4-108">[out] Rozmiar w bajtach sygnatura binarne metadanych.</span><span class="sxs-lookup"><span data-stu-id="7c9d4-108">[out] The size in bytes of the binary metadata signature.</span></span>  
+ <span data-ttu-id="9e0dc-108">[out] Rozmiar w bajtach sygnatura binarne metadanych.</span><span class="sxs-lookup"><span data-stu-id="9e0dc-108">[out] The size in bytes of the binary metadata signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7c9d4-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7c9d4-109">Requirements</span></span>  
- <span data-ttu-id="7c9d4-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7c9d4-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9e0dc-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9e0dc-109">Requirements</span></span>  
+ <span data-ttu-id="9e0dc-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9e0dc-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7c9d4-111">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="7c9d4-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9e0dc-111">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="9e0dc-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7c9d4-112">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7c9d4-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9e0dc-112">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9e0dc-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7c9d4-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7c9d4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9e0dc-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e0dc-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7c9d4-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7c9d4-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e0dc-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9e0dc-114">See also</span></span>
 
-- [<span data-ttu-id="7c9d4-115">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="7c9d4-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="7c9d4-116">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="7c9d4-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="9e0dc-115">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="9e0dc-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="9e0dc-116">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="9e0dc-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

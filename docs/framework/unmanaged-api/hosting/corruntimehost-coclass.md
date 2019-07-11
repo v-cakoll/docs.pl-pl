@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2143fc13db1757ac2fa8a9c5a43f104a0c519ca0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 942c9544a6ce868c3b6296569d4a16a44281cdba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985832"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758318"
 ---
-# <a name="corruntimehost-coclass"></a><span data-ttu-id="c7493-102">CorRuntimeHost — Klasa coclass</span><span class="sxs-lookup"><span data-stu-id="c7493-102">CorRuntimeHost Coclass</span></span>
-<span data-ttu-id="c7493-103">Zawiera interfejsy zarządzania aplikacji, które są wykonywane przez środowisko uruchomieniowe języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="c7493-103">Provides interfaces for managing applications that are being executed by the common language runtime.</span></span>  
+# <a name="corruntimehost-coclass"></a><span data-ttu-id="25494-102">CorRuntimeHost — Klasa coclass</span><span class="sxs-lookup"><span data-stu-id="25494-102">CorRuntimeHost Coclass</span></span>
+<span data-ttu-id="25494-103">Zawiera interfejsy zarządzania aplikacji, które są wykonywane przez środowisko uruchomieniowe języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="25494-103">Provides interfaces for managing applications that are being executed by the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c7493-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c7493-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="25494-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="25494-104">Syntax</span></span>  
   
-```  
+```cpp  
 coclass CorRuntimeHost {  
     [default] interface ICorRuntimeHost;  
     interface IGCHost;  
@@ -38,25 +38,25 @@ coclass CorRuntimeHost {
 };  
 ```  
   
-## <a name="interfaces"></a><span data-ttu-id="c7493-105">Interfejsy</span><span class="sxs-lookup"><span data-stu-id="c7493-105">Interfaces</span></span>  
+## <a name="interfaces"></a><span data-ttu-id="25494-105">Interfejsy</span><span class="sxs-lookup"><span data-stu-id="25494-105">Interfaces</span></span>  
   
-|<span data-ttu-id="c7493-106">Interface</span><span class="sxs-lookup"><span data-stu-id="c7493-106">Interface</span></span>|<span data-ttu-id="c7493-107">Opis</span><span class="sxs-lookup"><span data-stu-id="c7493-107">Description</span></span>|  
+|<span data-ttu-id="25494-106">Interface</span><span class="sxs-lookup"><span data-stu-id="25494-106">Interface</span></span>|<span data-ttu-id="25494-107">Opis</span><span class="sxs-lookup"><span data-stu-id="25494-107">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="c7493-108">ICorConfiguration, interfejs</span><span class="sxs-lookup"><span data-stu-id="c7493-108">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|<span data-ttu-id="c7493-109">Udostępnia metody do konfigurowania środowisko uruchomieniowe języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="c7493-109">Provides methods for configuring the common language runtime (CLR).</span></span>|  
-|[<span data-ttu-id="c7493-110">ICorRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="c7493-110">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|<span data-ttu-id="c7493-111">Udostępnia metody umożliwiające hosta do uruchamiania i zatrzymywania środowiska uruchomieniowego języka wspólnego jawnie, aby utworzyć i skonfigurować domeny aplikacji, dostęp do domyślnej domeny i wyliczyć wszystkich domen, uruchomiony w procesie.</span><span class="sxs-lookup"><span data-stu-id="c7493-111">Provides methods that enable the host to start and stop the common language runtime explicitly, to create and configure application domains, to access the default domain, and to enumerate all domains running in the process.</span></span>|  
-|[<span data-ttu-id="c7493-112">IDebuggerInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="c7493-112">IDebuggerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)|<span data-ttu-id="c7493-113">Udostępnia metody uzyskiwania informacji na temat stanu usług debugowania.</span><span class="sxs-lookup"><span data-stu-id="c7493-113">Provides methods for obtaining information about the state of the debugging services.</span></span>|  
-|[<span data-ttu-id="c7493-114">IGCHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="c7493-114">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|<span data-ttu-id="c7493-115">Udostępnia metody uzyskiwania informacji na temat systemu czyszczenia pamięci oraz kontrolowanie niektóre aspekty wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="c7493-115">Provides methods for obtaining information about the garbage collection system and for controlling some aspects of garbage collection.</span></span>|  
-|<span data-ttu-id="c7493-116">Ivalidator "—"</span><span class="sxs-lookup"><span data-stu-id="c7493-116">"IValidator"</span></span>|<span data-ttu-id="c7493-117">Udostępnia metody sprawdzania poprawności przenośnego pliku wykonywalnego obrazów i szczegółowe raporty błędów sprawdzania poprawności.</span><span class="sxs-lookup"><span data-stu-id="c7493-117">Provides methods for validation of portable executable images and detailed reporting of validation errors.</span></span>|  
+|[<span data-ttu-id="25494-108">ICorConfiguration, interfejs</span><span class="sxs-lookup"><span data-stu-id="25494-108">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|<span data-ttu-id="25494-109">Udostępnia metody do konfigurowania środowisko uruchomieniowe języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="25494-109">Provides methods for configuring the common language runtime (CLR).</span></span>|  
+|[<span data-ttu-id="25494-110">ICorRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="25494-110">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|<span data-ttu-id="25494-111">Udostępnia metody umożliwiające hosta do uruchamiania i zatrzymywania środowiska uruchomieniowego języka wspólnego jawnie, aby utworzyć i skonfigurować domeny aplikacji, dostęp do domyślnej domeny i wyliczyć wszystkich domen, uruchomiony w procesie.</span><span class="sxs-lookup"><span data-stu-id="25494-111">Provides methods that enable the host to start and stop the common language runtime explicitly, to create and configure application domains, to access the default domain, and to enumerate all domains running in the process.</span></span>|  
+|[<span data-ttu-id="25494-112">IDebuggerInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="25494-112">IDebuggerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)|<span data-ttu-id="25494-113">Udostępnia metody uzyskiwania informacji na temat stanu usług debugowania.</span><span class="sxs-lookup"><span data-stu-id="25494-113">Provides methods for obtaining information about the state of the debugging services.</span></span>|  
+|[<span data-ttu-id="25494-114">IGCHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="25494-114">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|<span data-ttu-id="25494-115">Udostępnia metody uzyskiwania informacji na temat systemu czyszczenia pamięci oraz kontrolowanie niektóre aspekty wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="25494-115">Provides methods for obtaining information about the garbage collection system and for controlling some aspects of garbage collection.</span></span>|  
+|<span data-ttu-id="25494-116">Ivalidator "—"</span><span class="sxs-lookup"><span data-stu-id="25494-116">"IValidator"</span></span>|<span data-ttu-id="25494-117">Udostępnia metody sprawdzania poprawności przenośnego pliku wykonywalnego obrazów i szczegółowe raporty błędów sprawdzania poprawności.</span><span class="sxs-lookup"><span data-stu-id="25494-117">Provides methods for validation of portable executable images and detailed reporting of validation errors.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c7493-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c7493-118">Requirements</span></span>  
- <span data-ttu-id="c7493-119">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c7493-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="25494-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="25494-118">Requirements</span></span>  
+ <span data-ttu-id="25494-119">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="25494-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c7493-120">**Nagłówek:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="c7493-120">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="25494-120">**Nagłówek:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="25494-120">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="c7493-121">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c7493-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="25494-121">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="25494-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c7493-122">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7493-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="25494-122">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25494-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c7493-123">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c7493-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25494-123">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="25494-123">See also</span></span>
 
-- [<span data-ttu-id="c7493-124">Współklasy hostingu</span><span class="sxs-lookup"><span data-stu-id="c7493-124">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+- [<span data-ttu-id="25494-124">Współklasy hostingu</span><span class="sxs-lookup"><span data-stu-id="25494-124">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

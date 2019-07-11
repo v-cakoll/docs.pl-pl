@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3a5a5bb26912c87cdf37ba0d8f0cee1cf1ffa97
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cccb862a0dfd16eb0bbfe557e3c35373cd7e7b8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609571"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740810"
 ---
-# <a name="corarraylayout-structure"></a><span data-ttu-id="4e980-102">COR_ARRAY_LAYOUT — Struktury</span><span class="sxs-lookup"><span data-stu-id="4e980-102">COR_ARRAY_LAYOUT Structure</span></span>
-<span data-ttu-id="4e980-103">Informacje dotyczące układu obiektu tablicowego w pamięci.</span><span class="sxs-lookup"><span data-stu-id="4e980-103">Provides information about the layout of an array object in memory.</span></span>  
+# <a name="corarraylayout-structure"></a><span data-ttu-id="46458-102">COR_ARRAY_LAYOUT — Struktury</span><span class="sxs-lookup"><span data-stu-id="46458-102">COR_ARRAY_LAYOUT Structure</span></span>
+<span data-ttu-id="46458-103">Informacje dotyczące układu obiektu tablicowego w pamięci.</span><span class="sxs-lookup"><span data-stu-id="46458-103">Provides information about the layout of an array object in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4e980-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="4e980-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="46458-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="46458-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef struct COR_ARRAY_LAYOUT {  
     COR_TYPEID componentID;  
     CorElementType componentType;  
@@ -41,34 +41,34 @@ typedef struct COR_ARRAY_LAYOUT {
 } COR_ARRAY_LAYOUT;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4e980-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="4e980-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="46458-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="46458-105">Members</span></span>  
   
-|<span data-ttu-id="4e980-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="4e980-106">Member</span></span>|<span data-ttu-id="4e980-107">Opis</span><span class="sxs-lookup"><span data-stu-id="4e980-107">Description</span></span>|  
+|<span data-ttu-id="46458-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="46458-106">Member</span></span>|<span data-ttu-id="46458-107">Opis</span><span class="sxs-lookup"><span data-stu-id="46458-107">Description</span></span>|  
 |------------|-----------------|  
-|`componentID`|<span data-ttu-id="4e980-108">Identyfikator typu obiektów zawartych w tablicy.</span><span class="sxs-lookup"><span data-stu-id="4e980-108">The identifier of the type of objects that the array contains.</span></span>|  
-|`componentType`|<span data-ttu-id="4e980-109">Corelementtype — wartość wyliczenia, która wskazuje, czy składnik jest odwołanie do kolekcji wyrzucania elementów, klasą wartości lub elementu podstawowego.</span><span class="sxs-lookup"><span data-stu-id="4e980-109">A CorElementType enumeration value that indicates whether the component is a garbage collection reference, a value class, or a primitive.</span></span>|  
-|`firstElementOffset`|<span data-ttu-id="4e980-110">Przesunięcie do pierwszego elementu w tablicy.</span><span class="sxs-lookup"><span data-stu-id="4e980-110">The offset to the first element in the array.</span></span>|  
-|`elementSize`|<span data-ttu-id="4e980-111">Rozmiar każdego elementu.</span><span class="sxs-lookup"><span data-stu-id="4e980-111">The size of each element.</span></span>|  
-|`countOffset`|<span data-ttu-id="4e980-112">Przesunięcie do liczby elementów w tablicy.</span><span class="sxs-lookup"><span data-stu-id="4e980-112">The offset to the number of elements in the array.</span></span>|  
-|`rankSize`|<span data-ttu-id="4e980-113">Rozmiar w bajtach rangi.</span><span class="sxs-lookup"><span data-stu-id="4e980-113">The size of the rank, in bytes.</span></span>|  
-|`numRanks`|<span data-ttu-id="4e980-114">Liczba rangę tablicy.</span><span class="sxs-lookup"><span data-stu-id="4e980-114">The number of ranks in the array.</span></span>|  
-|`rankOffset`|<span data-ttu-id="4e980-115">Przesunięcie, w którym start rangę.</span><span class="sxs-lookup"><span data-stu-id="4e980-115">The offset at which the ranks start.</span></span>|  
+|`componentID`|<span data-ttu-id="46458-108">Identyfikator typu obiektów zawartych w tablicy.</span><span class="sxs-lookup"><span data-stu-id="46458-108">The identifier of the type of objects that the array contains.</span></span>|  
+|`componentType`|<span data-ttu-id="46458-109">Corelementtype — wartość wyliczenia, która wskazuje, czy składnik jest odwołanie do kolekcji wyrzucania elementów, klasą wartości lub elementu podstawowego.</span><span class="sxs-lookup"><span data-stu-id="46458-109">A CorElementType enumeration value that indicates whether the component is a garbage collection reference, a value class, or a primitive.</span></span>|  
+|`firstElementOffset`|<span data-ttu-id="46458-110">Przesunięcie do pierwszego elementu w tablicy.</span><span class="sxs-lookup"><span data-stu-id="46458-110">The offset to the first element in the array.</span></span>|  
+|`elementSize`|<span data-ttu-id="46458-111">Rozmiar każdego elementu.</span><span class="sxs-lookup"><span data-stu-id="46458-111">The size of each element.</span></span>|  
+|`countOffset`|<span data-ttu-id="46458-112">Przesunięcie do liczby elementów w tablicy.</span><span class="sxs-lookup"><span data-stu-id="46458-112">The offset to the number of elements in the array.</span></span>|  
+|`rankSize`|<span data-ttu-id="46458-113">Rozmiar w bajtach rangi.</span><span class="sxs-lookup"><span data-stu-id="46458-113">The size of the rank, in bytes.</span></span>|  
+|`numRanks`|<span data-ttu-id="46458-114">Liczba rangę tablicy.</span><span class="sxs-lookup"><span data-stu-id="46458-114">The number of ranks in the array.</span></span>|  
+|`rankOffset`|<span data-ttu-id="46458-115">Przesunięcie, w którym start rangę.</span><span class="sxs-lookup"><span data-stu-id="46458-115">The offset at which the ranks start.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4e980-116">Uwagi</span><span class="sxs-lookup"><span data-stu-id="4e980-116">Remarks</span></span>  
- <span data-ttu-id="4e980-117">`rankSize` Pola określa rozmiar rangę tablicy wielowymiarowej.</span><span class="sxs-lookup"><span data-stu-id="4e980-117">The `rankSize` field specifies the size of a rank in a multi-dimensional array.</span></span> <span data-ttu-id="4e980-118">Jest prawidłowe dla także tablice jednowymiarowe.</span><span class="sxs-lookup"><span data-stu-id="4e980-118">It is accurate for single-dimensional arrays as well.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="46458-116">Uwagi</span><span class="sxs-lookup"><span data-stu-id="46458-116">Remarks</span></span>  
+ <span data-ttu-id="46458-117">`rankSize` Pola określa rozmiar rangę tablicy wielowymiarowej.</span><span class="sxs-lookup"><span data-stu-id="46458-117">The `rankSize` field specifies the size of a rank in a multi-dimensional array.</span></span> <span data-ttu-id="46458-118">Jest prawidłowe dla także tablice jednowymiarowe.</span><span class="sxs-lookup"><span data-stu-id="46458-118">It is accurate for single-dimensional arrays as well.</span></span>  
   
- <span data-ttu-id="4e980-119">Wartość `numRanks` 1 dla tablicy jednowymiarowej i `N` dla tablicy wielowymiarowej `N` wymiarów.</span><span class="sxs-lookup"><span data-stu-id="4e980-119">The value of `numRanks` is 1 for a single-dimensional array and `N` for a multi-dimensional array of `N` dimensions.</span></span>  
+ <span data-ttu-id="46458-119">Wartość `numRanks` 1 dla tablicy jednowymiarowej i `N` dla tablicy wielowymiarowej `N` wymiarów.</span><span class="sxs-lookup"><span data-stu-id="46458-119">The value of `numRanks` is 1 for a single-dimensional array and `N` for a multi-dimensional array of `N` dimensions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4e980-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4e980-120">Requirements</span></span>  
- <span data-ttu-id="4e980-121">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4e980-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="46458-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="46458-120">Requirements</span></span>  
+ <span data-ttu-id="46458-121">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="46458-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4e980-122">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4e980-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="46458-122">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="46458-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4e980-123">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4e980-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="46458-123">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="46458-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4e980-124">**Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4e980-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="46458-124">**Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46458-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4e980-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4e980-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="46458-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="46458-125">See also</span></span>
 
-- [<span data-ttu-id="4e980-126">Struktury debugowania</span><span class="sxs-lookup"><span data-stu-id="4e980-126">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="4e980-127">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="4e980-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="46458-126">Struktury debugowania</span><span class="sxs-lookup"><span data-stu-id="46458-126">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="46458-127">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="46458-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

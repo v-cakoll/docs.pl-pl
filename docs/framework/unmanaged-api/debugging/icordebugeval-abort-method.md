@@ -17,30 +17,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 682d6684b6c86485530b9e5283d843f3b2eb7e46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 052c467f5570119cd08b4719c768d178dd52aba2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995998"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752207"
 ---
-# <a name="icordebugevalabort-method"></a><span data-ttu-id="0c5be-102">ICorDebugEval::Abort — Metoda</span><span class="sxs-lookup"><span data-stu-id="0c5be-102">ICorDebugEval::Abort Method</span></span>
-<span data-ttu-id="0c5be-103">Przerywa obliczeń, który wykonuje obecnie ten obiekt ICorDebugEval.</span><span class="sxs-lookup"><span data-stu-id="0c5be-103">Aborts the computation this ICorDebugEval object is currently performing.</span></span>  
+# <a name="icordebugevalabort-method"></a><span data-ttu-id="039a5-102">ICorDebugEval::Abort — Metoda</span><span class="sxs-lookup"><span data-stu-id="039a5-102">ICorDebugEval::Abort Method</span></span>
+<span data-ttu-id="039a5-103">Przerywa obliczeń, który wykonuje obecnie ten obiekt ICorDebugEval.</span><span class="sxs-lookup"><span data-stu-id="039a5-103">Aborts the computation this ICorDebugEval object is currently performing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0c5be-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0c5be-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="039a5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="039a5-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Abort ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="0c5be-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0c5be-105">Remarks</span></span>  
- <span data-ttu-id="0c5be-106">Jeśli ocena jest zagnieżdżony, a nie jest ostatnim zadaniem `Abort` metoda może zakończyć się niepowodzeniem.</span><span class="sxs-lookup"><span data-stu-id="0c5be-106">If the evaluation is nested and it is not the most recent one, the `Abort` method may fail.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="039a5-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="039a5-105">Remarks</span></span>  
+ <span data-ttu-id="039a5-106">Jeśli ocena jest zagnieżdżony, a nie jest ostatnim zadaniem `Abort` metoda może zakończyć się niepowodzeniem.</span><span class="sxs-lookup"><span data-stu-id="039a5-106">If the evaluation is nested and it is not the most recent one, the `Abort` method may fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0c5be-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0c5be-107">Requirements</span></span>  
- <span data-ttu-id="0c5be-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0c5be-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="039a5-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="039a5-107">Requirements</span></span>  
+ <span data-ttu-id="039a5-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="039a5-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0c5be-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0c5be-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="039a5-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="039a5-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0c5be-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0c5be-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="039a5-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="039a5-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0c5be-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0c5be-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="039a5-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="039a5-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

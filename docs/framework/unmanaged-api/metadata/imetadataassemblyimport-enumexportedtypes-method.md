@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c32dcfe5d00e1d35f7c63aa98a33d26f6b179c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 62c44d0c3bd2e931b1708abb48bc9c854431419f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152688"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751151"
 ---
-# <a name="imetadataassemblyimportenumexportedtypes-method"></a><span data-ttu-id="d7908-102">IMetaDataAssemblyImport::EnumExportedTypes — Metoda</span><span class="sxs-lookup"><span data-stu-id="d7908-102">IMetaDataAssemblyImport::EnumExportedTypes Method</span></span>
-<span data-ttu-id="d7908-103">Wylicza typy wyeksportowany, do którego odwołuje się do manifestu zestawu w bieżącym zakresie metadanych.</span><span class="sxs-lookup"><span data-stu-id="d7908-103">Enumerates the exported types referenced in the assembly manifest in the current metadata scope.</span></span>  
+# <a name="imetadataassemblyimportenumexportedtypes-method"></a><span data-ttu-id="7fd3a-102">IMetaDataAssemblyImport::EnumExportedTypes — Metoda</span><span class="sxs-lookup"><span data-stu-id="7fd3a-102">IMetaDataAssemblyImport::EnumExportedTypes Method</span></span>
+<span data-ttu-id="7fd3a-103">Wylicza typy wyeksportowany, do którego odwołuje się do manifestu zestawu w bieżącym zakresie metadanych.</span><span class="sxs-lookup"><span data-stu-id="7fd3a-103">Enumerates the exported types referenced in the assembly manifest in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d7908-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d7908-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7fd3a-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="7fd3a-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnumExportedTypes (  
     [in, out] HCORENUM     *phEnum,   
     [out] mdExportedType   rExportedTypes[],   
@@ -38,35 +38,35 @@ HRESULT EnumExportedTypes (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d7908-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d7908-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7fd3a-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="7fd3a-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="d7908-106">[out w] Wskaźnik do modułu wyliczającego.</span><span class="sxs-lookup"><span data-stu-id="d7908-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="d7908-107">Musi to być wartość null wartość przy `EnumExportedTypes` metoda jest wywoływana po raz pierwszy.</span><span class="sxs-lookup"><span data-stu-id="d7908-107">This must be a null value when the `EnumExportedTypes` method is called for the first time.</span></span>  
+ <span data-ttu-id="7fd3a-106">[out w] Wskaźnik do modułu wyliczającego.</span><span class="sxs-lookup"><span data-stu-id="7fd3a-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="7fd3a-107">Musi to być wartość null wartość przy `EnumExportedTypes` metoda jest wywoływana po raz pierwszy.</span><span class="sxs-lookup"><span data-stu-id="7fd3a-107">This must be a null value when the `EnumExportedTypes` method is called for the first time.</span></span>  
   
  `rExportedTypes`  
- <span data-ttu-id="d7908-108">[out] Wyliczanie `mdExportedType` tokeny metadanych.</span><span class="sxs-lookup"><span data-stu-id="d7908-108">[out] The enumeration of `mdExportedType` metadata tokens.</span></span>  
+ <span data-ttu-id="7fd3a-108">[out] Wyliczanie `mdExportedType` tokeny metadanych.</span><span class="sxs-lookup"><span data-stu-id="7fd3a-108">[out] The enumeration of `mdExportedType` metadata tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="d7908-109">[in] Maksymalna liczba `mdExportedType` tokenów, które można umieścić w `rExportedTypes` tablicy.</span><span class="sxs-lookup"><span data-stu-id="d7908-109">[in] The maximum number of `mdExportedType` tokens that can be placed in the `rExportedTypes` array.</span></span>  
+ <span data-ttu-id="7fd3a-109">[in] Maksymalna liczba `mdExportedType` tokenów, które można umieścić w `rExportedTypes` tablicy.</span><span class="sxs-lookup"><span data-stu-id="7fd3a-109">[in] The maximum number of `mdExportedType` tokens that can be placed in the `rExportedTypes` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="d7908-110">[out] Liczba `mdExportedType` tokenów faktycznie umieszczone w `rExportedTypes`.</span><span class="sxs-lookup"><span data-stu-id="d7908-110">[out] The number of `mdExportedType` tokens actually placed in `rExportedTypes`.</span></span>  
+ <span data-ttu-id="7fd3a-110">[out] Liczba `mdExportedType` tokenów faktycznie umieszczone w `rExportedTypes`.</span><span class="sxs-lookup"><span data-stu-id="7fd3a-110">[out] The number of `mdExportedType` tokens actually placed in `rExportedTypes`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d7908-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="d7908-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7fd3a-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="7fd3a-111">Return Value</span></span>  
   
-|<span data-ttu-id="d7908-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d7908-112">HRESULT</span></span>|<span data-ttu-id="d7908-113">Opis</span><span class="sxs-lookup"><span data-stu-id="d7908-113">Description</span></span>|  
+|<span data-ttu-id="7fd3a-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7fd3a-112">HRESULT</span></span>|<span data-ttu-id="7fd3a-113">Opis</span><span class="sxs-lookup"><span data-stu-id="7fd3a-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="d7908-114">`EnumExportedTypes` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="d7908-114">`EnumExportedTypes` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="d7908-115">Nie ma żadnych tokeny do wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="d7908-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="d7908-116">W tym przypadku `pcTokens` jest równa zero.</span><span class="sxs-lookup"><span data-stu-id="d7908-116">In this case, `pcTokens` is set to zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="7fd3a-114">`EnumExportedTypes` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="7fd3a-114">`EnumExportedTypes` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="7fd3a-115">Nie ma żadnych tokeny do wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="7fd3a-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="7fd3a-116">W tym przypadku `pcTokens` jest równa zero.</span><span class="sxs-lookup"><span data-stu-id="7fd3a-116">In this case, `pcTokens` is set to zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d7908-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d7908-117">Requirements</span></span>  
- <span data-ttu-id="d7908-118">**Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d7908-118">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7fd3a-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7fd3a-117">Requirements</span></span>  
+ <span data-ttu-id="7fd3a-118">**Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7fd3a-118">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d7908-119">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="d7908-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7fd3a-119">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="7fd3a-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d7908-120">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d7908-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7fd3a-120">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7fd3a-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d7908-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d7908-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7fd3a-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7fd3a-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d7908-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d7908-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7fd3a-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7fd3a-122">See also</span></span>
 
-- [<span data-ttu-id="d7908-123">IMetaDataAssemblyImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="d7908-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="7fd3a-123">IMetaDataAssemblyImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="7fd3a-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

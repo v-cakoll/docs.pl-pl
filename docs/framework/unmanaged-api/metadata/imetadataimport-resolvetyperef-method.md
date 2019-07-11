@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f929e6b338d4fd48b2a6ef9588523377e0dd8faa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb8c232e63d1f3066737ff755d5911c185abe6fb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777406"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755370"
 ---
-# <a name="imetadataimportresolvetyperef-method"></a><span data-ttu-id="3e2a6-102">IMetaDataImport::ResolveTypeRef — Metoda</span><span class="sxs-lookup"><span data-stu-id="3e2a6-102">IMetaDataImport::ResolveTypeRef Method</span></span>
-<span data-ttu-id="3e2a6-103">Rozpoznaje <xref:System.Type> reprezentowany przez określony token TypeRef odwołania.</span><span class="sxs-lookup"><span data-stu-id="3e2a6-103">Resolves a <xref:System.Type> reference represented by the specified TypeRef token.</span></span>  
+# <a name="imetadataimportresolvetyperef-method"></a><span data-ttu-id="e770f-102">IMetaDataImport::ResolveTypeRef — Metoda</span><span class="sxs-lookup"><span data-stu-id="e770f-102">IMetaDataImport::ResolveTypeRef Method</span></span>
+<span data-ttu-id="e770f-103">Rozpoznaje <xref:System.Type> reprezentowany przez określony token TypeRef odwołania.</span><span class="sxs-lookup"><span data-stu-id="e770f-103">Resolves a <xref:System.Type> reference represented by the specified TypeRef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3e2a6-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3e2a6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e770f-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e770f-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT ResolveTypeRef (  
    [in]  mdTypeRef       tr,  
    [in]  REFIID          riid,  
@@ -38,38 +38,38 @@ HRESULT ResolveTypeRef (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3e2a6-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="3e2a6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e770f-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e770f-105">Parameters</span></span>  
  `tr`  
- <span data-ttu-id="3e2a6-106">[in] Token TypeRef metadanych do zwrócenia informacji o typie odwołania.</span><span class="sxs-lookup"><span data-stu-id="3e2a6-106">[in] The TypeRef metadata token to return the referenced type information for.</span></span>  
+ <span data-ttu-id="e770f-106">[in] Token TypeRef metadanych do zwrócenia informacji o typie odwołania.</span><span class="sxs-lookup"><span data-stu-id="e770f-106">[in] The TypeRef metadata token to return the referenced type information for.</span></span>  
   
  `riid`  
- <span data-ttu-id="3e2a6-107">[in] IID interfejsu do zwrócenia w `ppIScope`.</span><span class="sxs-lookup"><span data-stu-id="3e2a6-107">[in] The IID of the interface to return in `ppIScope`.</span></span> <span data-ttu-id="3e2a6-108">Zazwyczaj powinien to być IID_IMetaDataImport.</span><span class="sxs-lookup"><span data-stu-id="3e2a6-108">Typically, this would be IID_IMetaDataImport.</span></span>  
+ <span data-ttu-id="e770f-107">[in] IID interfejsu do zwrócenia w `ppIScope`.</span><span class="sxs-lookup"><span data-stu-id="e770f-107">[in] The IID of the interface to return in `ppIScope`.</span></span> <span data-ttu-id="e770f-108">Zazwyczaj powinien to być IID_IMetaDataImport.</span><span class="sxs-lookup"><span data-stu-id="e770f-108">Typically, this would be IID_IMetaDataImport.</span></span>  
   
  `ppIScope`  
- <span data-ttu-id="3e2a6-109">[out] Interfejs do zakresu modułu, w którym zdefiniowano typ odwołania.</span><span class="sxs-lookup"><span data-stu-id="3e2a6-109">[out] An interface to the module scope in which the referenced type is defined.</span></span>  
+ <span data-ttu-id="e770f-109">[out] Interfejs do zakresu modułu, w którym zdefiniowano typ odwołania.</span><span class="sxs-lookup"><span data-stu-id="e770f-109">[out] An interface to the module scope in which the referenced type is defined.</span></span>  
   
  `ptd`  
- <span data-ttu-id="3e2a6-110">[out] Wskaźnik do TypeDef token, który reprezentuje typ odwołania.</span><span class="sxs-lookup"><span data-stu-id="3e2a6-110">[out] A pointer to a TypeDef token that represents the referenced type.</span></span>  
+ <span data-ttu-id="e770f-110">[out] Wskaźnik do TypeDef token, który reprezentuje typ odwołania.</span><span class="sxs-lookup"><span data-stu-id="e770f-110">[out] A pointer to a TypeDef token that represents the referenced type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3e2a6-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3e2a6-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e770f-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e770f-111">Remarks</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="3e2a6-112">Nie należy używać tej metody, jeśli wiele domen aplikacji są ładowane.</span><span class="sxs-lookup"><span data-stu-id="3e2a6-112">Do not use this method if multiple application domains are loaded.</span></span> <span data-ttu-id="3e2a6-113">Metoda respektują granice domen aplikacji.</span><span class="sxs-lookup"><span data-stu-id="3e2a6-113">The method does not respect application domain boundaries.</span></span> <span data-ttu-id="3e2a6-114">Jeśli wiele wersji zestawu zostaną załadowane i zawierają ten sam typ o tej samej przestrzeni nazw, metoda zwraca zakres modułu pierwszego typu, które znajdzie.</span><span class="sxs-lookup"><span data-stu-id="3e2a6-114">If multiple versions of an assembly are loaded, and they contain the same type with the same namespace, the method returns the module scope of the first type it finds.</span></span>  
+>  <span data-ttu-id="e770f-112">Nie należy używać tej metody, jeśli wiele domen aplikacji są ładowane.</span><span class="sxs-lookup"><span data-stu-id="e770f-112">Do not use this method if multiple application domains are loaded.</span></span> <span data-ttu-id="e770f-113">Metoda respektują granice domen aplikacji.</span><span class="sxs-lookup"><span data-stu-id="e770f-113">The method does not respect application domain boundaries.</span></span> <span data-ttu-id="e770f-114">Jeśli wiele wersji zestawu zostaną załadowane i zawierają ten sam typ o tej samej przestrzeni nazw, metoda zwraca zakres modułu pierwszego typu, które znajdzie.</span><span class="sxs-lookup"><span data-stu-id="e770f-114">If multiple versions of an assembly are loaded, and they contain the same type with the same namespace, the method returns the module scope of the first type it finds.</span></span>  
   
- <span data-ttu-id="3e2a6-115">`ResolveTypeRef` Metoda wyszukiwania dla definicji typu w innych modułach.</span><span class="sxs-lookup"><span data-stu-id="3e2a6-115">The `ResolveTypeRef` method searches for the type definition in other modules.</span></span> <span data-ttu-id="3e2a6-116">Jeśli zostanie znaleziony w definicji typu, `ResolveTypeRef` zwraca interfejs do tego zakresu modułu, a także token element TypeDef dla typu.</span><span class="sxs-lookup"><span data-stu-id="3e2a6-116">If the type definition is found, `ResolveTypeRef` returns an interface to that module scope as well as the TypeDef token for the type.</span></span>  
+ <span data-ttu-id="e770f-115">`ResolveTypeRef` Metoda wyszukiwania dla definicji typu w innych modułach.</span><span class="sxs-lookup"><span data-stu-id="e770f-115">The `ResolveTypeRef` method searches for the type definition in other modules.</span></span> <span data-ttu-id="e770f-116">Jeśli zostanie znaleziony w definicji typu, `ResolveTypeRef` zwraca interfejs do tego zakresu modułu, a także token element TypeDef dla typu.</span><span class="sxs-lookup"><span data-stu-id="e770f-116">If the type definition is found, `ResolveTypeRef` returns an interface to that module scope as well as the TypeDef token for the type.</span></span>  
   
- <span data-ttu-id="3e2a6-117">Jeśli odniesienie typu, które mają zostać rozwiązane, ma zakres rozpoznawania elementu AssemblyRef, `ResolveTypeRef` metoda szuka dopasowania tylko w przypadku zakresów metadanych, które już zostały otwarte przy użyciu wywołań albo [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)metody lub [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="3e2a6-117">If the type reference to be resolved has a resolution scope of AssemblyRef, the `ResolveTypeRef` method searches for a match only in the metadata scopes that have already been opened with calls to either the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method or the [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method.</span></span> <span data-ttu-id="3e2a6-118">Jest to spowodowane `ResolveTypeRef` nie może ustalić z tylko zakres elementu AssemblyRef miejsce na dysku lub w globalnej pamięci podręcznej zestawu przechowywania.</span><span class="sxs-lookup"><span data-stu-id="3e2a6-118">This is because `ResolveTypeRef` cannot determine from only the AssemblyRef scope where on disk or in the global assembly cache the assembly is stored.</span></span>  
+ <span data-ttu-id="e770f-117">Jeśli odniesienie typu, które mają zostać rozwiązane, ma zakres rozpoznawania elementu AssemblyRef, `ResolveTypeRef` metoda szuka dopasowania tylko w przypadku zakresów metadanych, które już zostały otwarte przy użyciu wywołań albo [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)metody lub [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="e770f-117">If the type reference to be resolved has a resolution scope of AssemblyRef, the `ResolveTypeRef` method searches for a match only in the metadata scopes that have already been opened with calls to either the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method or the [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method.</span></span> <span data-ttu-id="e770f-118">Jest to spowodowane `ResolveTypeRef` nie może ustalić z tylko zakres elementu AssemblyRef miejsce na dysku lub w globalnej pamięci podręcznej zestawu przechowywania.</span><span class="sxs-lookup"><span data-stu-id="e770f-118">This is because `ResolveTypeRef` cannot determine from only the AssemblyRef scope where on disk or in the global assembly cache the assembly is stored.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3e2a6-119">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3e2a6-119">Requirements</span></span>  
- <span data-ttu-id="3e2a6-120">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3e2a6-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e770f-119">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e770f-119">Requirements</span></span>  
+ <span data-ttu-id="e770f-120">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e770f-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3e2a6-121">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="3e2a6-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e770f-121">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="e770f-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3e2a6-122">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3e2a6-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e770f-122">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e770f-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="3e2a6-123">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e2a6-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e770f-123">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e770f-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3e2a6-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3e2a6-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e770f-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e770f-124">See also</span></span>
 
-- [<span data-ttu-id="3e2a6-125">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="3e2a6-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="3e2a6-126">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="3e2a6-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="e770f-125">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="e770f-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="e770f-126">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="e770f-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

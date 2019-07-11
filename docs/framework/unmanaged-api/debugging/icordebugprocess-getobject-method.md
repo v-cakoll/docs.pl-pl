@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84b6edf122aa3d6d942e06c9f5c7dd13b0bfa19e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b67006a1e8db8bf52e9bbfbcba4632f09f68a35
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987730"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737059"
 ---
-# <a name="icordebugprocessgetobject-method"></a><span data-ttu-id="22b37-102">ICorDebugProcess::GetObject — Metoda</span><span class="sxs-lookup"><span data-stu-id="22b37-102">ICorDebugProcess::GetObject Method</span></span>
-<span data-ttu-id="22b37-103">Ta metoda nie została zaimplementowana.</span><span class="sxs-lookup"><span data-stu-id="22b37-103">This method has not been implemented.</span></span>  
+# <a name="icordebugprocessgetobject-method"></a><span data-ttu-id="9b4a2-102">ICorDebugProcess::GetObject — Metoda</span><span class="sxs-lookup"><span data-stu-id="9b4a2-102">ICorDebugProcess::GetObject Method</span></span>
+<span data-ttu-id="9b4a2-103">Ta metoda nie została zaimplementowana.</span><span class="sxs-lookup"><span data-stu-id="9b4a2-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="22b37-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="22b37-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9b4a2-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9b4a2-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetObject(  
     [out] ICorDebugValue **ppObject  
 );  

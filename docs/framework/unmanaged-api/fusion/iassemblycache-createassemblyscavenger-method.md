@@ -17,35 +17,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79626d53f3144f977459bae318a7da68cbc37986
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 99b7142a60f979210c44497ce33af3ed1ca5c105
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422225"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770978"
 ---
-# <a name="iassemblycachecreateassemblyscavenger-method"></a><span data-ttu-id="b90b8-102">IAssemblyCache::CreateAssemblyScavenger — Metoda</span><span class="sxs-lookup"><span data-stu-id="b90b8-102">IAssemblyCache::CreateAssemblyScavenger Method</span></span>
-<span data-ttu-id="b90b8-103">Zarezerwowane do użytku wewnętrznego przez technologię fusion.</span><span class="sxs-lookup"><span data-stu-id="b90b8-103">Reserved for internal use by the fusion technology.</span></span>  
+# <a name="iassemblycachecreateassemblyscavenger-method"></a><span data-ttu-id="e531f-102">IAssemblyCache::CreateAssemblyScavenger — Metoda</span><span class="sxs-lookup"><span data-stu-id="e531f-102">IAssemblyCache::CreateAssemblyScavenger Method</span></span>
+<span data-ttu-id="e531f-103">Zarezerwowane do użytku wewnętrznego przez technologię fusion.</span><span class="sxs-lookup"><span data-stu-id="e531f-103">Reserved for internal use by the fusion technology.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b90b8-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b90b8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e531f-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e531f-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT CreateAssemblyScavenger (  
     [out] IUnknown **ppUnkReserved  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b90b8-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="b90b8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e531f-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e531f-105">Parameters</span></span>  
  `ppUnkReserved`  
- <span data-ttu-id="b90b8-106">[out] Zwrócony `IUnknown` wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="b90b8-106">[out] The returned `IUnknown` pointer.</span></span>  
+ <span data-ttu-id="e531f-106">[out] Zwrócony `IUnknown` wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="e531f-106">[out] The returned `IUnknown` pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b90b8-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b90b8-107">Requirements</span></span>  
- <span data-ttu-id="b90b8-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b90b8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e531f-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e531f-107">Requirements</span></span>  
+ <span data-ttu-id="e531f-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e531f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b90b8-109">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="b90b8-109">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="e531f-109">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="e531f-109">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="b90b8-110">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b90b8-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e531f-110">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e531f-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b90b8-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b90b8-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e531f-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e531f-111">See also</span></span>
 
-- [<span data-ttu-id="b90b8-112">IAssemblyCache, interfejs</span><span class="sxs-lookup"><span data-stu-id="b90b8-112">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [<span data-ttu-id="e531f-112">IAssemblyCache, interfejs</span><span class="sxs-lookup"><span data-stu-id="e531f-112">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

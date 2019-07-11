@@ -17,30 +17,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7694c9b736700466ac1299b9632440e133109288
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae3575b759d8b6191f0b5e5cd557a6f6e56323fc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939896"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776741"
 ---
-# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="1edab-102">ISymUnmanagedDocument::GetDocumentType — Metoda</span><span class="sxs-lookup"><span data-stu-id="1edab-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
-<span data-ttu-id="1edab-103">Pobiera typ dokumentu w tym dokumencie.</span><span class="sxs-lookup"><span data-stu-id="1edab-103">Gets the document type of this document.</span></span>  
+# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="a77aa-102">ISymUnmanagedDocument::GetDocumentType — Metoda</span><span class="sxs-lookup"><span data-stu-id="a77aa-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
+<span data-ttu-id="a77aa-103">Pobiera typ dokumentu w tym dokumencie.</span><span class="sxs-lookup"><span data-stu-id="a77aa-103">Gets the document type of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1edab-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1edab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a77aa-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="a77aa-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetDocumentType(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1edab-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="1edab-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a77aa-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="a77aa-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="1edab-106">[out] Wskaźnik do zmiennej, która otrzymuje typ dokumentu.</span><span class="sxs-lookup"><span data-stu-id="1edab-106">[out] Pointer to a variable that receives the document type.</span></span>  
+ <span data-ttu-id="a77aa-106">[out] Wskaźnik do zmiennej, która otrzymuje typ dokumentu.</span><span class="sxs-lookup"><span data-stu-id="a77aa-106">[out] Pointer to a variable that receives the document type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1edab-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="1edab-107">Return Value</span></span>  
- <span data-ttu-id="1edab-108">S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="1edab-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a77aa-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="a77aa-107">Return Value</span></span>  
+ <span data-ttu-id="a77aa-108">S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="a77aa-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1edab-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1edab-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a77aa-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a77aa-109">See also</span></span>
 
-- [<span data-ttu-id="1edab-110">ISymUnmanagedDocument, interfejs</span><span class="sxs-lookup"><span data-stu-id="1edab-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="a77aa-110">ISymUnmanagedDocument, interfejs</span><span class="sxs-lookup"><span data-stu-id="a77aa-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

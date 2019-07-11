@@ -16,39 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36792d01ebdad72271a8b0597a33d83cab34780e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5274e70c5bead201beb158ee2895415d7ec9e53c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789587"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779131"
 ---
-# <a name="clsidresolutionflags-enumeration"></a><span data-ttu-id="efec9-102">CLSID_RESOLUTION_FLAGS — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="efec9-102">CLSID_RESOLUTION_FLAGS Enumeration</span></span>
-<span data-ttu-id="efec9-103">Zawiera wartości, które wskazują, jak środowisko uruchomieniowe języka wspólnego (CLR) powinna być rozpoznawana `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="efec9-103">Contains values that indicate how the common language runtime (CLR) should resolve a `CLSID`.</span></span>  
+# <a name="clsidresolutionflags-enumeration"></a><span data-ttu-id="2e662-102">CLSID_RESOLUTION_FLAGS — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="2e662-102">CLSID_RESOLUTION_FLAGS Enumeration</span></span>
+<span data-ttu-id="2e662-103">Zawiera wartości, które wskazują, jak środowisko uruchomieniowe języka wspólnego (CLR) powinna być rozpoznawana `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="2e662-103">Contains values that indicate how the common language runtime (CLR) should resolve a `CLSID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="efec9-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="efec9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2e662-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2e662-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum {  
     CLSID_RESOLUTION_DEFAULT      = 0x0,  
     CLSID_RESOLUTION_REGISTERED   = 0x1  
 } CLSID_RESOLUTION_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="efec9-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="efec9-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2e662-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="2e662-105">Members</span></span>  
   
-|<span data-ttu-id="efec9-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="efec9-106">Member</span></span>|<span data-ttu-id="efec9-107">Opis</span><span class="sxs-lookup"><span data-stu-id="efec9-107">Description</span></span>|  
+|<span data-ttu-id="2e662-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="2e662-106">Member</span></span>|<span data-ttu-id="2e662-107">Opis</span><span class="sxs-lookup"><span data-stu-id="2e662-107">Description</span></span>|  
 |------------|-----------------|  
-|`CLSID_RESOLUTION_DEFAULT`|<span data-ttu-id="efec9-108">Wskazuje zachowanie domyślne.</span><span class="sxs-lookup"><span data-stu-id="efec9-108">Indicates the default behavior.</span></span>|  
-|`CLSID_RESOLUTION_REGISTERED`|<span data-ttu-id="efec9-109">Wskazuje, że środowisko uruchomieniowe wyszukuje rejestru i stosuje zasady podkładki.</span><span class="sxs-lookup"><span data-stu-id="efec9-109">Indicates that the runtime searches the registry and applies shim policy.</span></span>|  
+|`CLSID_RESOLUTION_DEFAULT`|<span data-ttu-id="2e662-108">Wskazuje zachowanie domyślne.</span><span class="sxs-lookup"><span data-stu-id="2e662-108">Indicates the default behavior.</span></span>|  
+|`CLSID_RESOLUTION_REGISTERED`|<span data-ttu-id="2e662-109">Wskazuje, że środowisko uruchomieniowe wyszukuje rejestru i stosuje zasady podkładki.</span><span class="sxs-lookup"><span data-stu-id="2e662-109">Indicates that the runtime searches the registry and applies shim policy.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="efec9-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="efec9-110">Requirements</span></span>  
- <span data-ttu-id="efec9-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="efec9-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2e662-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2e662-110">Requirements</span></span>  
+ <span data-ttu-id="2e662-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2e662-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="efec9-112">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="efec9-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2e662-112">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2e662-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="efec9-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="efec9-113">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="2e662-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e662-113">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="efec9-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="efec9-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2e662-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2e662-114">See also</span></span>
 
-- [<span data-ttu-id="efec9-115">Hosting — wyliczenia</span><span class="sxs-lookup"><span data-stu-id="efec9-115">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="2e662-115">Hosting — wyliczenia</span><span class="sxs-lookup"><span data-stu-id="2e662-115">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

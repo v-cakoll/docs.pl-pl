@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b2ba46c025c2d031f0526c6a9da5f6ab07023741
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f3d74830de0541ec789081c47352beca8d81d74
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042742"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780713"
 ---
-# <a name="imetadataimportenumevents-method"></a><span data-ttu-id="20653-102">IMetaDataImport::EnumEvents — Metoda</span><span class="sxs-lookup"><span data-stu-id="20653-102">IMetaDataImport::EnumEvents Method</span></span>
-<span data-ttu-id="20653-103">Wylicza tokenów definicji zdarzeń dla określonego tokenu TypeDef.</span><span class="sxs-lookup"><span data-stu-id="20653-103">Enumerates event definition tokens for the specified TypeDef token.</span></span>  
+# <a name="imetadataimportenumevents-method"></a><span data-ttu-id="2373d-102">IMetaDataImport::EnumEvents — Metoda</span><span class="sxs-lookup"><span data-stu-id="2373d-102">IMetaDataImport::EnumEvents Method</span></span>
+<span data-ttu-id="2373d-103">Wylicza tokenów definicji zdarzeń dla określonego tokenu TypeDef.</span><span class="sxs-lookup"><span data-stu-id="2373d-103">Enumerates event definition tokens for the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20653-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="20653-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2373d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2373d-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnumEvents (   
    [in, out] HCORENUM    *phEnum,   
    [in]      mdTypeDef   td,   
@@ -39,39 +39,39 @@ HRESULT EnumEvents (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="20653-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="20653-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2373d-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="2373d-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="20653-106">[out w] Wskaźnik do modułu wyliczającego.</span><span class="sxs-lookup"><span data-stu-id="20653-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="2373d-106">[out w] Wskaźnik do modułu wyliczającego.</span><span class="sxs-lookup"><span data-stu-id="2373d-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `td`  
- <span data-ttu-id="20653-107">[in] Token TypeDef, których definicje zdarzeń są do wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="20653-107">[in] The TypeDef token whose event definitions are to be enumerated.</span></span>  
+ <span data-ttu-id="2373d-107">[in] Token TypeDef, których definicje zdarzeń są do wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="2373d-107">[in] The TypeDef token whose event definitions are to be enumerated.</span></span>  
   
  `rEvents`  
- <span data-ttu-id="20653-108">[out] Tablica zwrócona zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="20653-108">[out] The array of returned events.</span></span>  
+ <span data-ttu-id="2373d-108">[out] Tablica zwrócona zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="2373d-108">[out] The array of returned events.</span></span>  
   
  `cMax`  
- <span data-ttu-id="20653-109">[in] Maksymalny rozmiar `rEvents` tablicy.</span><span class="sxs-lookup"><span data-stu-id="20653-109">[in] The maximum size of the `rEvents` array.</span></span>  
+ <span data-ttu-id="2373d-109">[in] Maksymalny rozmiar `rEvents` tablicy.</span><span class="sxs-lookup"><span data-stu-id="2373d-109">[in] The maximum size of the `rEvents` array.</span></span>  
   
  `pcEvents`  
- <span data-ttu-id="20653-110">[out] Rzeczywista liczba zdarzeń zwróconych w `rEvents`.</span><span class="sxs-lookup"><span data-stu-id="20653-110">[out] The actual number of events returned in `rEvents`.</span></span>  
+ <span data-ttu-id="2373d-110">[out] Rzeczywista liczba zdarzeń zwróconych w `rEvents`.</span><span class="sxs-lookup"><span data-stu-id="2373d-110">[out] The actual number of events returned in `rEvents`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="20653-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="20653-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2373d-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="2373d-111">Return Value</span></span>  
   
-|<span data-ttu-id="20653-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="20653-112">HRESULT</span></span>|<span data-ttu-id="20653-113">Opis</span><span class="sxs-lookup"><span data-stu-id="20653-113">Description</span></span>|  
+|<span data-ttu-id="2373d-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2373d-112">HRESULT</span></span>|<span data-ttu-id="2373d-113">Opis</span><span class="sxs-lookup"><span data-stu-id="2373d-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="20653-114">`EnumEvents` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="20653-114">`EnumEvents` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="20653-115">Brak zdarzeń do wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="20653-115">There are no events to enumerate.</span></span> <span data-ttu-id="20653-116">W takim przypadku `pcEvents` wynosi zero.</span><span class="sxs-lookup"><span data-stu-id="20653-116">In that case, `pcEvents` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="2373d-114">`EnumEvents` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="2373d-114">`EnumEvents` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="2373d-115">Brak zdarzeń do wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="2373d-115">There are no events to enumerate.</span></span> <span data-ttu-id="2373d-116">W takim przypadku `pcEvents` wynosi zero.</span><span class="sxs-lookup"><span data-stu-id="2373d-116">In that case, `pcEvents` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="20653-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="20653-117">Requirements</span></span>  
- <span data-ttu-id="20653-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="20653-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2373d-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2373d-117">Requirements</span></span>  
+ <span data-ttu-id="2373d-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2373d-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="20653-119">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="20653-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="2373d-119">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="2373d-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="20653-120">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="20653-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="2373d-120">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2373d-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="20653-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20653-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2373d-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2373d-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20653-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="20653-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2373d-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2373d-122">See also</span></span>
 
-- [<span data-ttu-id="20653-123">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="20653-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="20653-124">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="20653-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="2373d-123">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="2373d-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="2373d-124">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="2373d-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

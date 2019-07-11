@@ -4,43 +4,43 @@ ms.date: 03/30/2017
 ms.assetid: 5a6c9a5a-ec72-4c40-a9c3-cee7baa63687
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e233fe78f6b2c721114f0307a8ca414625a0087e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a45f233fdec23a504a71a68370e9da8e38ac0bd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782645"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760874"
 ---
-# <a name="icordebugstaticfieldsymbolgetaddress-method"></a><span data-ttu-id="01bba-102">ICorDebugStaticFieldSymbol::GetAddress Method</span><span class="sxs-lookup"><span data-stu-id="01bba-102">ICorDebugStaticFieldSymbol::GetAddress Method</span></span>
-<span data-ttu-id="01bba-103">Pobiera adres pole statyczne.</span><span class="sxs-lookup"><span data-stu-id="01bba-103">Gets the address of a static field.</span></span>  
+# <a name="icordebugstaticfieldsymbolgetaddress-method"></a><span data-ttu-id="d8f21-102">ICorDebugStaticFieldSymbol::GetAddress Method</span><span class="sxs-lookup"><span data-stu-id="d8f21-102">ICorDebugStaticFieldSymbol::GetAddress Method</span></span>
+<span data-ttu-id="d8f21-103">Pobiera adres pole statyczne.</span><span class="sxs-lookup"><span data-stu-id="d8f21-103">Gets the address of a static field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01bba-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="01bba-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d8f21-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d8f21-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetAddress(  
    [out] CORDB_ADDRESS *pRVA  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="01bba-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="01bba-105">Parameters</span></span>  
- <span data-ttu-id="01bba-106">pRVA</span><span class="sxs-lookup"><span data-stu-id="01bba-106">pRVA</span></span>  
- <span data-ttu-id="01bba-107">[out] Wskaźnik do wirtualnej adres względny (RVA) pole statyczne.</span><span class="sxs-lookup"><span data-stu-id="01bba-107">[out] A pointer to the relative virtual address (RVA) of the static field.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d8f21-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d8f21-105">Parameters</span></span>  
+ <span data-ttu-id="d8f21-106">pRVA</span><span class="sxs-lookup"><span data-stu-id="d8f21-106">pRVA</span></span>  
+ <span data-ttu-id="d8f21-107">[out] Wskaźnik do wirtualnej adres względny (RVA) pole statyczne.</span><span class="sxs-lookup"><span data-stu-id="d8f21-107">[out] A pointer to the relative virtual address (RVA) of the static field.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="01bba-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="01bba-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d8f21-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d8f21-108">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="01bba-109">Ta metoda jest tylko dostępne z architekturą .NET Native.</span><span class="sxs-lookup"><span data-stu-id="01bba-109">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="d8f21-109">Ta metoda jest tylko dostępne z architekturą .NET Native.</span><span class="sxs-lookup"><span data-stu-id="d8f21-109">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="01bba-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="01bba-110">Requirements</span></span>  
- <span data-ttu-id="01bba-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01bba-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d8f21-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d8f21-110">Requirements</span></span>  
+ <span data-ttu-id="d8f21-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d8f21-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="01bba-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="01bba-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d8f21-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d8f21-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="01bba-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01bba-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d8f21-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d8f21-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="01bba-114">**Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01bba-114">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="d8f21-114">**Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d8f21-114">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01bba-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="01bba-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8f21-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d8f21-115">See also</span></span>
 
-- [<span data-ttu-id="01bba-116">ICorDebugStaticFieldSymbol, interfejs</span><span class="sxs-lookup"><span data-stu-id="01bba-116">ICorDebugStaticFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)
-- [<span data-ttu-id="01bba-117">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="01bba-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="d8f21-116">ICorDebugStaticFieldSymbol, interfejs</span><span class="sxs-lookup"><span data-stu-id="d8f21-116">ICorDebugStaticFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)
+- [<span data-ttu-id="d8f21-117">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="d8f21-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

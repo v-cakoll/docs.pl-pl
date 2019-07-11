@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6236d6b5349a9c2a528a85559c0cbc02c8da381
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b08149b2acd766aac428614205401e79246c5b21
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645490"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737254"
 ---
-# <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="d1fc1-102">ICorDebugAssembly::GetCodeBase — Metoda</span><span class="sxs-lookup"><span data-stu-id="d1fc1-102">ICorDebugAssembly::GetCodeBase Method</span></span>
-<span data-ttu-id="d1fc1-103">Ta metoda nie jest zaimplementowana w bieżącej wersji programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d1fc1-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="1bb55-102">ICorDebugAssembly::GetCodeBase — Metoda</span><span class="sxs-lookup"><span data-stu-id="1bb55-102">ICorDebugAssembly::GetCodeBase Method</span></span>
+<span data-ttu-id="1bb55-103">Ta metoda nie jest zaimplementowana w bieżącej wersji programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1bb55-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d1fc1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d1fc1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1bb55-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1bb55-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetCodeBase (  
     [in] ULONG32  cchName,  
     [out] ULONG32 *pcchName,  

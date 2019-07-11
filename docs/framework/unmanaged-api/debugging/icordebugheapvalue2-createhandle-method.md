@@ -17,42 +17,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 078dfd7162c250f0279b8bc372aeb39662aa0119
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da5c5a12df5689f113857045ba4bcda696bda8f5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779889"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756726"
 ---
-# <a name="icordebugheapvalue2createhandle-method"></a><span data-ttu-id="050b0-102">ICorDebugHeapValue2::CreateHandle — Metoda</span><span class="sxs-lookup"><span data-stu-id="050b0-102">ICorDebugHeapValue2::CreateHandle Method</span></span>
-<span data-ttu-id="050b0-103">Tworzy dojście do określonego typu dla wartości sterty, reprezentowane przez ten obiekt icordebugheapvalue2 —.</span><span class="sxs-lookup"><span data-stu-id="050b0-103">Creates a handle of the specified type for the heap value represented by this ICorDebugHeapValue2 object.</span></span>  
+# <a name="icordebugheapvalue2createhandle-method"></a><span data-ttu-id="fede2-102">ICorDebugHeapValue2::CreateHandle — Metoda</span><span class="sxs-lookup"><span data-stu-id="fede2-102">ICorDebugHeapValue2::CreateHandle Method</span></span>
+<span data-ttu-id="fede2-103">Tworzy dojście do określonego typu dla wartości sterty, reprezentowane przez ten obiekt icordebugheapvalue2 —.</span><span class="sxs-lookup"><span data-stu-id="fede2-103">Creates a handle of the specified type for the heap value represented by this ICorDebugHeapValue2 object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="050b0-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="050b0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fede2-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="fede2-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT CreateHandle (  
     [in] CorDebugHandleType      type,   
     [out] ICorDebugHandleValue   **ppHandle  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="050b0-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="050b0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fede2-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="fede2-105">Parameters</span></span>  
  `type`  
- <span data-ttu-id="050b0-106">[in] Wartość cordebughandletype — wyliczenie, który określa typ dojścia do utworzenia.</span><span class="sxs-lookup"><span data-stu-id="050b0-106">[in] A value of the CorDebugHandleType enumeration that specifies the type of handle to be created.</span></span>  
+ <span data-ttu-id="fede2-106">[in] Wartość cordebughandletype — wyliczenie, który określa typ dojścia do utworzenia.</span><span class="sxs-lookup"><span data-stu-id="fede2-106">[in] A value of the CorDebugHandleType enumeration that specifies the type of handle to be created.</span></span>  
   
  `ppHandle`  
- <span data-ttu-id="050b0-107">[out] Wskaźnik na adres icordebughandlevalue — obiekt, który reprezentuje nowy uchwyt dla tej wartości na stosie.</span><span class="sxs-lookup"><span data-stu-id="050b0-107">[out] A pointer to the address of an ICorDebugHandleValue object that represents the new handle for this heap value.</span></span>  
+ <span data-ttu-id="fede2-107">[out] Wskaźnik na adres icordebughandlevalue — obiekt, który reprezentuje nowy uchwyt dla tej wartości na stosie.</span><span class="sxs-lookup"><span data-stu-id="fede2-107">[out] A pointer to the address of an ICorDebugHandleValue object that represents the new handle for this heap value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="050b0-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="050b0-108">Remarks</span></span>  
- <span data-ttu-id="050b0-109">Dojście zostaną utworzone w domenie aplikacji, która jest skojarzona z wartością sterty i staną się nieprawidłowe, jeśli domena aplikacji zostanie zwolniona.</span><span class="sxs-lookup"><span data-stu-id="050b0-109">The handle will be created in the application domain that is associated with the heap value, and will become invalid if the application domain gets unloaded.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fede2-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="fede2-108">Remarks</span></span>  
+ <span data-ttu-id="fede2-109">Dojście zostaną utworzone w domenie aplikacji, która jest skojarzona z wartością sterty i staną się nieprawidłowe, jeśli domena aplikacji zostanie zwolniona.</span><span class="sxs-lookup"><span data-stu-id="fede2-109">The handle will be created in the application domain that is associated with the heap value, and will become invalid if the application domain gets unloaded.</span></span>  
   
- <span data-ttu-id="050b0-110">Spowoduje to utworzenie wielu wywołań tej funkcji dla tej samej wartości sterty obsługuje wiele.</span><span class="sxs-lookup"><span data-stu-id="050b0-110">Multiple calls to this function for the same heap value will create multiple handles.</span></span> <span data-ttu-id="050b0-111">Ponieważ uchwyty wpływa na wydajność modułu odśmiecania pamięci, debuger należy ograniczyć do stosunkowo małej liczby dojść (około 256), które są aktywne w danym momencie.</span><span class="sxs-lookup"><span data-stu-id="050b0-111">Because handles affect the performance of the garbage collector, the debugger should limit itself to a relatively small number of handles (about 256) that are active at a time.</span></span>  
+ <span data-ttu-id="fede2-110">Spowoduje to utworzenie wielu wywołań tej funkcji dla tej samej wartości sterty obsługuje wiele.</span><span class="sxs-lookup"><span data-stu-id="fede2-110">Multiple calls to this function for the same heap value will create multiple handles.</span></span> <span data-ttu-id="fede2-111">Ponieważ uchwyty wpływa na wydajność modułu odśmiecania pamięci, debuger należy ograniczyć do stosunkowo małej liczby dojść (około 256), które są aktywne w danym momencie.</span><span class="sxs-lookup"><span data-stu-id="fede2-111">Because handles affect the performance of the garbage collector, the debugger should limit itself to a relatively small number of handles (about 256) that are active at a time.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="050b0-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="050b0-112">Requirements</span></span>  
- <span data-ttu-id="050b0-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="050b0-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fede2-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="fede2-112">Requirements</span></span>  
+ <span data-ttu-id="fede2-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fede2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="050b0-114">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="050b0-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fede2-114">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fede2-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="050b0-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="050b0-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fede2-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fede2-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="050b0-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="050b0-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="fede2-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fede2-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

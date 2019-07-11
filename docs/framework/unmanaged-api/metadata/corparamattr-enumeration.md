@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97f62b082db11a5f0bb930e33cb47acef76e7a04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bfa8f1b5df76c7fdfe2f25b637b157bfa4424f7a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906307"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781651"
 ---
-# <a name="corparamattr-enumeration"></a><span data-ttu-id="1b681-102">CorParamAttr — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="1b681-102">CorParamAttr Enumeration</span></span>
-<span data-ttu-id="1b681-103">Zawiera wartości, które opisują metadane parametrem metody.</span><span class="sxs-lookup"><span data-stu-id="1b681-103">Contains values that describe the metadata of a method parameter.</span></span>  
+# <a name="corparamattr-enumeration"></a><span data-ttu-id="dcce1-102">CorParamAttr — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="dcce1-102">CorParamAttr Enumeration</span></span>
+<span data-ttu-id="dcce1-103">Zawiera wartości, które opisują metadane parametrem metody.</span><span class="sxs-lookup"><span data-stu-id="dcce1-103">Contains values that describe the metadata of a method parameter.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1b681-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1b681-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dcce1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="dcce1-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorParamAttr {  
   
     pdIn                        =   0x0001,  
@@ -44,25 +44,25 @@ typedef enum CorParamAttr {
 } CorParamAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="1b681-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="1b681-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="dcce1-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="dcce1-105">Members</span></span>  
   
-|<span data-ttu-id="1b681-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="1b681-106">Member</span></span>|<span data-ttu-id="1b681-107">Opis</span><span class="sxs-lookup"><span data-stu-id="1b681-107">Description</span></span>|  
+|<span data-ttu-id="dcce1-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="dcce1-106">Member</span></span>|<span data-ttu-id="dcce1-107">Opis</span><span class="sxs-lookup"><span data-stu-id="dcce1-107">Description</span></span>|  
 |------------|-----------------|  
-|`pdIn`|<span data-ttu-id="1b681-108">Określa, że parametr jest przekazywany do wywołania metody.</span><span class="sxs-lookup"><span data-stu-id="1b681-108">Specifies that the parameter is passed into the method call.</span></span>|  
-|`pdOut`|<span data-ttu-id="1b681-109">Określa, że parametr jest przekazywany z metody zwrotu.</span><span class="sxs-lookup"><span data-stu-id="1b681-109">Specifies that the parameter is passed from the method return.</span></span>|  
-|`pdOptional`|<span data-ttu-id="1b681-110">Określa, że parametr jest opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="1b681-110">Specifies that the parameter is optional.</span></span>|  
-|`pdReservedMask`|<span data-ttu-id="1b681-111">Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="1b681-111">Reserved for internal use by the common language runtime.</span></span>|  
-|`pdHasDefault`|<span data-ttu-id="1b681-112">Określa, że parametr ma wartość domyślną.</span><span class="sxs-lookup"><span data-stu-id="1b681-112">Specifies that the parameter has a default value.</span></span>|  
-|`pdHasFieldMarshal`|<span data-ttu-id="1b681-113">Określa, że parametr ma organizowanie informacji.</span><span class="sxs-lookup"><span data-stu-id="1b681-113">Specifies that the parameter has marshaling information.</span></span>|  
-|`pdUnused`|<span data-ttu-id="1b681-114">Nieużywane.</span><span class="sxs-lookup"><span data-stu-id="1b681-114">Unused.</span></span>|  
+|`pdIn`|<span data-ttu-id="dcce1-108">Określa, że parametr jest przekazywany do wywołania metody.</span><span class="sxs-lookup"><span data-stu-id="dcce1-108">Specifies that the parameter is passed into the method call.</span></span>|  
+|`pdOut`|<span data-ttu-id="dcce1-109">Określa, że parametr jest przekazywany z metody zwrotu.</span><span class="sxs-lookup"><span data-stu-id="dcce1-109">Specifies that the parameter is passed from the method return.</span></span>|  
+|`pdOptional`|<span data-ttu-id="dcce1-110">Określa, że parametr jest opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="dcce1-110">Specifies that the parameter is optional.</span></span>|  
+|`pdReservedMask`|<span data-ttu-id="dcce1-111">Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="dcce1-111">Reserved for internal use by the common language runtime.</span></span>|  
+|`pdHasDefault`|<span data-ttu-id="dcce1-112">Określa, że parametr ma wartość domyślną.</span><span class="sxs-lookup"><span data-stu-id="dcce1-112">Specifies that the parameter has a default value.</span></span>|  
+|`pdHasFieldMarshal`|<span data-ttu-id="dcce1-113">Określa, że parametr ma organizowanie informacji.</span><span class="sxs-lookup"><span data-stu-id="dcce1-113">Specifies that the parameter has marshaling information.</span></span>|  
+|`pdUnused`|<span data-ttu-id="dcce1-114">Nieużywane.</span><span class="sxs-lookup"><span data-stu-id="dcce1-114">Unused.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1b681-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1b681-115">Requirements</span></span>  
- <span data-ttu-id="1b681-116">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1b681-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dcce1-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="dcce1-115">Requirements</span></span>  
+ <span data-ttu-id="dcce1-116">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dcce1-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1b681-117">**Nagłówek:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="1b681-117">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="dcce1-117">**Nagłówek:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="dcce1-117">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="1b681-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b681-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="dcce1-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dcce1-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b681-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1b681-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dcce1-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="dcce1-119">See also</span></span>
 
-- [<span data-ttu-id="1b681-120">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="1b681-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="dcce1-120">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="dcce1-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

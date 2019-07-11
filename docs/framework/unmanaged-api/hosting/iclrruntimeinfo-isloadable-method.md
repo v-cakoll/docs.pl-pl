@@ -17,51 +17,51 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52257b30b8172b80f968df25115956b6995c1552
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4937c86be434ef5e97ec72763b7c53d5435bcaf4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771738"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774025"
 ---
-# <a name="iclrruntimeinfoisloadable-method"></a><span data-ttu-id="2484a-102">ICLRRuntimeInfo::IsLoadable — Metoda</span><span class="sxs-lookup"><span data-stu-id="2484a-102">ICLRRuntimeInfo::IsLoadable Method</span></span>
-<span data-ttu-id="2484a-103">Wskazuje, czy środowisko uruchomieniowe skojarzona z tym interfejsem, może być załadowany do bieżącego procesu, biorąc pod uwagę innych środowisk wykonawczych, które mogą już być załadowany do procesu.</span><span class="sxs-lookup"><span data-stu-id="2484a-103">Indicates whether the runtime associated with this interface can be loaded into the current process, taking into account other runtimes that might already be loaded into the process.</span></span>  
+# <a name="iclrruntimeinfoisloadable-method"></a><span data-ttu-id="1e41d-102">ICLRRuntimeInfo::IsLoadable — Metoda</span><span class="sxs-lookup"><span data-stu-id="1e41d-102">ICLRRuntimeInfo::IsLoadable Method</span></span>
+<span data-ttu-id="1e41d-103">Wskazuje, czy środowisko uruchomieniowe skojarzona z tym interfejsem, może być załadowany do bieżącego procesu, biorąc pod uwagę innych środowisk wykonawczych, które mogą już być załadowany do procesu.</span><span class="sxs-lookup"><span data-stu-id="1e41d-103">Indicates whether the runtime associated with this interface can be loaded into the current process, taking into account other runtimes that might already be loaded into the process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2484a-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2484a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1e41d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1e41d-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT IsLoadable(  
         [out, retval] BOOL *pbLoadable);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2484a-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="2484a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1e41d-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="1e41d-105">Parameters</span></span>  
  `pbLoadable`  
- <span data-ttu-id="2484a-106">[out] `true` Jeżeli to środowisko wykonawcze może być załadowany do bieżącego procesu; w przeciwnym razie `false`.</span><span class="sxs-lookup"><span data-stu-id="2484a-106">[out] `true` if this runtime could be loaded into the current process; otherwise, `false`.</span></span>  
+ <span data-ttu-id="1e41d-106">[out] `true` Jeżeli to środowisko wykonawcze może być załadowany do bieżącego procesu; w przeciwnym razie `false`.</span><span class="sxs-lookup"><span data-stu-id="1e41d-106">[out] `true` if this runtime could be loaded into the current process; otherwise, `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2484a-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="2484a-107">Return Value</span></span>  
- <span data-ttu-id="2484a-108">Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.</span><span class="sxs-lookup"><span data-stu-id="2484a-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1e41d-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="1e41d-107">Return Value</span></span>  
+ <span data-ttu-id="1e41d-108">Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.</span><span class="sxs-lookup"><span data-stu-id="1e41d-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="2484a-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2484a-109">HRESULT</span></span>|<span data-ttu-id="2484a-110">Opis</span><span class="sxs-lookup"><span data-stu-id="2484a-110">Description</span></span>|  
+|<span data-ttu-id="1e41d-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1e41d-109">HRESULT</span></span>|<span data-ttu-id="1e41d-110">Opis</span><span class="sxs-lookup"><span data-stu-id="1e41d-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="2484a-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="2484a-111">S_OK</span></span>|<span data-ttu-id="2484a-112">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="2484a-112">The method completed successfully.</span></span>|  
-|<span data-ttu-id="2484a-113">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="2484a-113">E_POINTER</span></span>|<span data-ttu-id="2484a-114">`pbLoadable` ma wartość null.</span><span class="sxs-lookup"><span data-stu-id="2484a-114">`pbLoadable` is null.</span></span>|  
+|<span data-ttu-id="1e41d-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="1e41d-111">S_OK</span></span>|<span data-ttu-id="1e41d-112">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="1e41d-112">The method completed successfully.</span></span>|  
+|<span data-ttu-id="1e41d-113">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="1e41d-113">E_POINTER</span></span>|<span data-ttu-id="1e41d-114">`pbLoadable` ma wartość null.</span><span class="sxs-lookup"><span data-stu-id="1e41d-114">`pbLoadable` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2484a-115">Uwagi</span><span class="sxs-lookup"><span data-stu-id="2484a-115">Remarks</span></span>  
- <span data-ttu-id="2484a-116">Jeśli innego środowiska uruchomieniowego jest już załadowany do procesu i środowiska uruchomieniowego skojarzona z tym interfejsem, mogą być ładowane w trakcie wykonywania side-by-side, `pbLoadable` zwraca `true`.</span><span class="sxs-lookup"><span data-stu-id="2484a-116">If another runtime is already loaded into the process and the runtime associated with this interface can be loaded for in-process side-by-side execution, `pbLoadable` returns `true`.</span></span> <span data-ttu-id="2484a-117">Jeśli dwa środowiska uruchomieniowe, nie można uruchomić side-by-side w procesie, `pbLoadable` zwraca `false`.</span><span class="sxs-lookup"><span data-stu-id="2484a-117">If the two runtimes cannot run side-by-side in-process, `pbLoadable` returns `false`.</span></span> <span data-ttu-id="2484a-118">Na przykład środowisko uruchomieniowe języka wspólnego (CLR) w wersji 4, można uruchomić side-by-side jest ten sam proces, za pomocą środowiska CLR w wersji 2.0 lub środowisko CLR w wersji 1.1.</span><span class="sxs-lookup"><span data-stu-id="2484a-118">For example, the common language runtime (CLR) version 4 can run side-by-side in the same process with CLR version 2.0 or CLR version 1.1.</span></span> <span data-ttu-id="2484a-119">Środowisko CLR w wersji 1.1 i środowisko CLR w wersji 2.0 nie można jednak uruchomić side-by-side w procesie.</span><span class="sxs-lookup"><span data-stu-id="2484a-119">However, CLR version 1.1 and CLR version 2.0 cannot run side-by-side in-process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1e41d-115">Uwagi</span><span class="sxs-lookup"><span data-stu-id="1e41d-115">Remarks</span></span>  
+ <span data-ttu-id="1e41d-116">Jeśli innego środowiska uruchomieniowego jest już załadowany do procesu i środowiska uruchomieniowego skojarzona z tym interfejsem, mogą być ładowane w trakcie wykonywania side-by-side, `pbLoadable` zwraca `true`.</span><span class="sxs-lookup"><span data-stu-id="1e41d-116">If another runtime is already loaded into the process and the runtime associated with this interface can be loaded for in-process side-by-side execution, `pbLoadable` returns `true`.</span></span> <span data-ttu-id="1e41d-117">Jeśli dwa środowiska uruchomieniowe, nie można uruchomić side-by-side w procesie, `pbLoadable` zwraca `false`.</span><span class="sxs-lookup"><span data-stu-id="1e41d-117">If the two runtimes cannot run side-by-side in-process, `pbLoadable` returns `false`.</span></span> <span data-ttu-id="1e41d-118">Na przykład środowisko uruchomieniowe języka wspólnego (CLR) w wersji 4, można uruchomić side-by-side jest ten sam proces, za pomocą środowiska CLR w wersji 2.0 lub środowisko CLR w wersji 1.1.</span><span class="sxs-lookup"><span data-stu-id="1e41d-118">For example, the common language runtime (CLR) version 4 can run side-by-side in the same process with CLR version 2.0 or CLR version 1.1.</span></span> <span data-ttu-id="1e41d-119">Środowisko CLR w wersji 1.1 i środowisko CLR w wersji 2.0 nie można jednak uruchomić side-by-side w procesie.</span><span class="sxs-lookup"><span data-stu-id="1e41d-119">However, CLR version 1.1 and CLR version 2.0 cannot run side-by-side in-process.</span></span>  
   
- <span data-ttu-id="2484a-120">Jeśli bez środowisk uruchomieniowych są ładowane do procesu, ta metoda zawsze zwraca `true`.</span><span class="sxs-lookup"><span data-stu-id="2484a-120">If no runtimes are loaded into the process, this method always returns `true`.</span></span>  
+ <span data-ttu-id="1e41d-120">Jeśli bez środowisk uruchomieniowych są ładowane do procesu, ta metoda zawsze zwraca `true`.</span><span class="sxs-lookup"><span data-stu-id="1e41d-120">If no runtimes are loaded into the process, this method always returns `true`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2484a-121">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2484a-121">Requirements</span></span>  
- <span data-ttu-id="2484a-122">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2484a-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1e41d-121">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1e41d-121">Requirements</span></span>  
+ <span data-ttu-id="1e41d-122">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1e41d-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2484a-123">**Nagłówek:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="2484a-123">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="1e41d-123">**Nagłówek:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="1e41d-123">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="2484a-124">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2484a-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1e41d-124">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1e41d-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2484a-125">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2484a-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="1e41d-125">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e41d-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2484a-126">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2484a-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e41d-126">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1e41d-126">See also</span></span>
 
-- [<span data-ttu-id="2484a-127">ICLRRuntimeInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="2484a-127">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="2484a-128">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="2484a-128">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="2484a-129">Hosting</span><span class="sxs-lookup"><span data-stu-id="2484a-129">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="1e41d-127">ICLRRuntimeInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="1e41d-127">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="1e41d-128">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="1e41d-128">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="1e41d-129">Hosting</span><span class="sxs-lookup"><span data-stu-id="1e41d-129">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86ddb4ed45479e483dde447983f6dc31edcc8930
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae1e5c89676eaebfed5bbcae76048c7c48db5a18
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026123"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779946"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Wykonywanie niezależnych od kultury operacji na ciągach w kolekcjach
-Brak klas i składowych w <xref:System.Collections> przestrzeni nazw, która zapewnia zachowanie wrażliwość na ustawienia kulturowe domyślnie. Konstruktory domyślne <xref:System.Collections.CaseInsensitiveComparer> i <xref:System.Collections.CaseInsensitiveHashCodeProvider> klasy zainicjować nowe wystąpienie, używając <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości. Wszystkie przeciążenia <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> metoda Utwórz nowe wystąpienie klasy <xref:System.Collections.Hashtable> przy użyciu `Thread.CurrentCulture` właściwości domyślnie. Przeciążenia <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> metoda wykonanie kultury sortowania przy użyciu domyślnego `Thread.CurrentCulture`. Sortowanie i wyszukiwanie w <xref:System.Collections.SortedList> mogą mieć wpływ `Thread.CurrentCulture` Jeśli ciągi są używane jako klucze. Postępuj zgodnie z zaleceniami użycia podane w tej sekcji w celu uzyskania wyników niezależnych od kultury z tych klas i metod w `Collections` przestrzeni nazw.  
+Brak klas i składowych w <xref:System.Collections> przestrzeni nazw, która zapewnia zachowanie wrażliwość na ustawienia kulturowe domyślnie. Konstruktorów bez parametrów dla <xref:System.Collections.CaseInsensitiveComparer> i <xref:System.Collections.CaseInsensitiveHashCodeProvider> klasy zainicjować nowe wystąpienie, używając <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości. Wszystkie przeciążenia <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> metoda Utwórz nowe wystąpienie klasy <xref:System.Collections.Hashtable> przy użyciu `Thread.CurrentCulture` właściwości domyślnie. Przeciążenia <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> metoda wykonanie kultury sortowania przy użyciu domyślnego `Thread.CurrentCulture`. Sortowanie i wyszukiwanie w <xref:System.Collections.SortedList> mogą mieć wpływ `Thread.CurrentCulture` Jeśli ciągi są używane jako klucze. Postępuj zgodnie z zaleceniami użycia podane w tej sekcji w celu uzyskania wyników niezależnych od kultury z tych klas i metod w `Collections` przestrzeni nazw.  
   
  **Uwaga** przekazywanie <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> do porównania metoda wykonać porównanie niezależnych od kultury. Jednak nie spowoduje nielingwistyczne porównania, na przykład ścieżki do plików, kluczy rejestru i zmiennych środowiskowych. Żadna z nich nie jest obsługiwany decyzje dotyczące bezpieczeństwa, w oparciu o wyniki porównania. Dla porównania nielingwistyczne lub pomocy technicznej dla decyzji dotyczących zabezpieczeń opartych na wynik, aplikacja powinna użyć metody porównania, która akceptuje <xref:System.StringComparison> wartość. Aplikacja powinna następnie przekazać <xref:System.StringComparison>.  
   
 ## <a name="using-the-caseinsensitivecomparer-and-caseinsensitivehashcodeprovider-classes"></a>Przy użyciu caseinsensitivecomparer — i caseinsensitivehashcodeprovider — klasy  
- Konstruktory domyślne `CaseInsensitiveHashCodeProvider` i `CaseInsensitiveComparer` inicjuje nowe wystąpienie klasy za pomocą `Thread.CurrentCulture`, dając w zachowaniu zależne od kultury. Poniższy przykład kodu pokazuje konstruktora dla `Hashtable` to wrażliwość na ustawienia kulturowe, ponieważ używa ona konstruktory domyślne `CaseInsensitiveHashCodeProvider` i `CaseInsensitiveComparer`.  
+ Konstruktorów bez parametrów dla `CaseInsensitiveHashCodeProvider` i `CaseInsensitiveComparer` inicjuje nowe wystąpienie klasy za pomocą `Thread.CurrentCulture`, dając w zachowaniu zależne od kultury. Poniższy przykład kodu pokazuje konstruktora dla `Hashtable` to wrażliwość na ustawienia kulturowe, ponieważ używa ona konstruktorów bez parametrów dla `CaseInsensitiveHashCodeProvider` i `CaseInsensitiveComparer`.  
   
 ```vb  
 internalHashtable = New Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseInsensitiveComparer.Default)  

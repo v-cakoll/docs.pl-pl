@@ -2,19 +2,19 @@
 title: Mapowanie oparte na atrybutach
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a524e37640959c20c9883aa68e978a89428e43a4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032971"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743616"
 ---
 # <a name="attribute-based-mapping"></a>Mapowanie oparte na atrybutach
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapuje bazę danych programu SQL Server do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektowego przez albo stosowanie atrybutów lub przy użyciu pliku mapowanie zewnętrzne. W tym temacie opisano podejście oparte na atrybutach.  
   
  W postaci najbardziej podstawowe [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapuje bazę danych do <xref:System.Data.Linq.DataContext>, tabeli klasy, kolumny i relacje z właściwościami w tych klas. Atrybuty umożliwia również mapowanie hierarchii dziedziczenia w modelu obiektu. Aby uzyskać więcej informacji, zobacz [jak: Generowanie modelu obiektu w języku Visual Basic lub C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
- Deweloperzy korzystający z programu Visual Studio zwykle wykonać mapowanie oparte na atrybutach przy użyciu [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Można również użyć narzędzia wiersza polecenia SQLMetal albo można kodować ręcznie atrybuty samodzielnie. Aby uzyskać więcej informacji, zobacz [jak: Generowanie modelu obiektu w języku Visual Basic lub C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Deweloperzy korzystający z programu Visual Studio zwykle wykonać mapowanie oparte na atrybutach za pomocą Object Relational Designer. Można również użyć narzędzia wiersza polecenia SQLMetal albo można kodować ręcznie atrybuty samodzielnie. Aby uzyskać więcej informacji, zobacz [jak: Generowanie modelu obiektu w języku Visual Basic lub C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
 > [!NOTE]
 >  Można również mapować przy użyciu zewnętrznego pliku XML. Aby uzyskać więcej informacji, zobacz [mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  

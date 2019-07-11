@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 141475c4d92278be02d6a832a93cd8553a4bcbd8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661136"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744215"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Całkowite typy liczbowe (C# odwołania)
 
@@ -76,14 +76,14 @@ var binaryLiteral = 0b_0010_1010;
 
 Literały dziesiętną nie wymagają dowolnego prefiksu. `x` Lub `X` oznacza prefiks *szesnastkowy literał*. `b` Lub `B` oznacza prefiks *pliku binarnego literału*. Deklaracja `binaryLiteral` demonstruje użycie `_` jako *separator cyfr*. Separator cyfr może służyć za pomocą wszystkich literałach numerycznych. Literały binarne oraz separator cyfr `_` są obsługiwane, począwszy od C# 7.0.
 
-## <a name="literal-suffixes"></a>Sufiksów literałów 
+### <a name="literal-suffixes"></a>Sufiksów literałów 
 
-`l` Lub `L` sufiks Określa, że powinien być typu całkowitego literał `long` typu. `ul` Lub `UL` Określa sufiks `ulong` typu. Jeśli `L` sufiks jest używany na literał, która jest większa niż 9,223,372,036,854,775,807 (maksymalna wartość `long`), wartość jest konwertowana na `ulong` typu. Jeśli wartości w postaci literału typu integer przekracza <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, błąd kompilatora [CS1021](../../misc/cs1021.md) występuje. 
+`l` Lub `L` sufiks Określa, że powinien być typu całkowitego literał `long` typu. `ul` Lub `UL` Określa sufiks `ulong` typu. Jeśli `L` sufiks jest używany na literał, która jest większa niż 9,223,372,036,854,775,807 (maksymalna wartość `long`), wartość jest konwertowana na `ulong` typu. Jeśli wartości w postaci literału typu całkowitego przekracza <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, błąd kompilatora [CS1021](../../misc/cs1021.md) występuje. 
 
 > [!NOTE]
 > Mała litera "l" można użyć jako sufiks. Jednakże spowoduje to wygenerowanie ostrzeżenia kompilatora ponieważ litera "l" można łatwo pomylić z cyfrą "1". Użyj "L" w celu uściślenia.
 
-## <a name="type-of-an-integral-literal"></a>Typ literału typu całkowitego
+### <a name="type-of-an-integral-literal"></a>Typ literału typu całkowitego
 
 Jeśli literał całkowity brak przyrostka, jego typ jest pierwszy następujące typy, w których jej wartość może być reprezentowana:
 

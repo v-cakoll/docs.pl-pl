@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 274b91793cd51348c42661bf12a4e4385e17f630
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 536f3249593333234f7f09921007b483fb80cf79
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697787"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778591"
 ---
 # <a name="getappidauthority-function"></a>GetAppIdAuthority — Funkcja
 Pobiera wskaźnik do [iappidauthority —](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) wystąpienie, które zarządza kluczami, dokumentacji i tożsamości aplikacji.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetAppIdAuthority (  
     [out] IAppIdAuthority **ppIAppIdAuthority  
  );  

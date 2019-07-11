@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: fdd7eef0994ca9c7b0533b6497d76a4720dd1f64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e916d7d335bcdeff64393a25ab697748209d147c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634643"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782631"
 ---
 # <a name="common-type-system"></a>System typu wspólnego
 Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządzane w środowisko uruchomieniowe języka wspólnego, a ponadto jest ważną częścią obsługi integracji wielu języków. Wspólny system typów wykonuje następujące funkcje:  
@@ -86,7 +86,7 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
   
  Elementy członkowskie klasy, które nie mają implementacji, są członkami abstrakcyjnymi. Klasa, która ma jeden lub więcej członków abstrakcyjnych sama jest abstrakcyjna; Nie można utworzyć nowych wystąpień. Niektóre języki przeznaczone dla środowiska uruchomieniowego pozwalają na oznacznie klasy jako abstrakcyjnej, nawet jeśli żaden z jej członków nie jest abstrakcyjna. Można użyć klasy abstrakcyjnej, jeśli chcesz hermetyzować podstawowy zestaw funkcji, które klasy pochodne mogą dziedziczony lub zastąpiony, gdy jest to konieczne. Klasy, które nie są abstrakcyjne, są nazywane konkretnych klas.  
   
- Klasa może implementować dowolną liczbę interfejsów, ale może dziedziczyć tylko z klasy bazowej, oprócz <xref:System.Object?displayProperty=nameWithType>, z której wszystkie klasy dziedziczą niejawnie. Wszystkie klasy muszą mieć co najmniej jednego konstruktora, który inicjuje nowe wystąpienia klasy. Jeśli użytkownik nie definiuje jawnie konstruktora, większość kompilatorów automatycznie dostarczy domyślnego (bezparametrowego) konstruktora.  
+ Klasa może implementować dowolną liczbę interfejsów, ale może dziedziczyć tylko z klasy bazowej, oprócz <xref:System.Object?displayProperty=nameWithType>, z której wszystkie klasy dziedziczą niejawnie. Wszystkie klasy muszą mieć co najmniej jednego konstruktora, który inicjuje nowe wystąpienia klasy. Jeśli użytkownik nie definiuje jawnie konstruktora, większość kompilatorów automatycznie dostarczy konstruktora bez parametrów.  
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>Struktury  
@@ -273,9 +273,9 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
 ### <a name="constructors"></a>Konstruktorów  
  Konstruktor jest specjalnym rodzajem metody, która tworzy nowe wystąpienia klasy lub struktury. Podobnie jak każda inna metoda Konstruktor może zawierać parametry; jednak konstruktory nie mają wartości zwracanej (czyli zwracają `void`).  
   
- Jeśli kod źródłowy dla klasy nie definiuje jawnie konstruktora, kompilator zawiera domyślnego (bezparametrowego) konstruktora. Jednakże jeśli kod źródłowy dla klasy definiuje tylko konstruktory sparametryzowane, kompilatory języków Visual Basic i C# nie generują konstruktora bez parametrów.  
+ Jeśli kod źródłowy dla klasy nie definiuje jawnie konstruktora, kompilator zawiera konstruktora bez parametrów. Jednakże jeśli kod źródłowy dla klasy definiuje tylko konstruktory sparametryzowane, kompilatory języków Visual Basic i C# nie generują konstruktora bez parametrów.  
   
- Jeśli kod źródłowy dla struktury definiuje konstruktory, muszą być sparametryzowane; Struktura nie może definiować domyślnego (bezparametrowego) konstruktora, a kompilatory nie generują konstruktorów bez parametrów dla struktur ani innych typów wartości. Wszystkie typy wartości mają niejawnego domyślnego konstruktora. Ten konstruktor jest implementowany przez środowisko uruchomieniowe języka wspólnego i inicjalizuje wszystkie pola struktury do ich wartości domyślnych.  
+ Jeśli kod źródłowy dla struktury definiuje konstruktory, muszą być sparametryzowane; Struktura nie może definiować konstruktora bez parametrów, a kompilatory nie generują konstruktorów bez parametrów dla struktur ani innych typów wartości. Wszystkie typy wartości mają niejawnego konstruktora bez parametrów. Ten konstruktor jest implementowany przez środowisko uruchomieniowe języka wspólnego i inicjalizuje wszystkie pola struktury do ich wartości domyślnych.  
   
 <a name="Events"></a>   
 ### <a name="events"></a>Zdarzenia  
@@ -297,7 +297,7 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
 |prywatne, rodzina, zestawu, rodziny i zestawu, rodziny lub zestawu lub publicznego|Wszystkie|Definiuje dostępność członka:<br /><br /> private<br /> Dostępne tylko z w obrębie tego samego typu co członek lub w ramach typu zagnieżdżonego.<br /><br /> Rodzina<br /> Dostępny w obrębie tego samego typu jako elementu członkowskiego oraz z pochodnych typów dziedziczących od niego.<br /><br /> zestaw<br /> Dostępne tylko w zestawie, w którym typ jest zdefiniowany.<br /><br /> Rodzina i zestaw<br /> Dostępne tylko z typów, które kwalifikują się do dostępu rodzinę i zestaw.<br /><br /> Rodzina lub zestaw<br /> Dostępne tylko z typów, które kwalifikują się do dostępu Rodzina lub zestaw.<br /><br /> public<br /> Dostępne z dowolnego typu.|  
 |końcowe|Metody, właściwości i zdarzenia|Nie można zastąpić metodę wirtualną w typie pochodnym.|  
 |tylko do inicjowania|Pola|Wartość może być inicjowane tylko i nie może być zapisywana po zainicjowaniu.|  
-|wystąpienia|Pola, metody, właściwości i zdarzenia|Jeżeli członek nie jest oznaczony jako `static` (C# i C++), `Shared` (Visual Basic), `virtual` (C# i C++) lub `Overridable` (Visual Basic), jest członkiem wystąpienia (istnieje żadne słowo kluczowe wystąpienia). Będzie tyle kopii takich elementów członkowskich w pamięci, ponieważ istnieją obiekty, które go używają.|  
+|instance|Pola, metody, właściwości i zdarzenia|Jeżeli członek nie jest oznaczony jako `static` (C# i C++), `Shared` (Visual Basic), `virtual` (C# i C++) lub `Overridable` (Visual Basic), jest członkiem wystąpienia (istnieje żadne słowo kluczowe wystąpienia). Będzie tyle kopii takich elementów członkowskich w pamięci, ponieważ istnieją obiekty, które go używają.|  
 |literal|Pola|Wartość przypisana do pola jest wartością stałą, znany w czasie kompilacji, o określonym wbudowanym typie wartości. Pola literałów są czasami określane jako stałe.|  
 |nowe gniazdo lub zastąpienie|Wszystkie|Definiuje, jak członek współdziała z dziedziczonymi członkami, którzy mają taki sam podpis:<br /><br /> nowego gniazda<br /> Ukrywa dziedziczonych członków, które mają taki sam podpis.<br /><br /> override<br /> Zastępuje definicję odziedziczonej metody wirtualnej.<br /><br /> Wartość domyślna to newslot.|  
 |static|Pola, metody, właściwości i zdarzenia|Element członkowski należy do typu, który jest zdefiniowany, nie do konkretnego wystąpienia typu; składowa istnieje, nawet jeśli nie jest tworzone wystąpienie typu i jest ona udostępniona wszystkim wystąpieniom typu.|  

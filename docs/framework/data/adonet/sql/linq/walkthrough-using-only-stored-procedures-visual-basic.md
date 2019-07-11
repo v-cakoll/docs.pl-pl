@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 22db347afb45b981602d5a92516271f75b8e4359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 270b0f2123a20787a8e75d40f56a675c55824243
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648681"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742569"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Przewodnik: Używanie tylko procedur składowanych (Visual Basic)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusz do uzyskiwania dostępu do danych za pomocą procedury składowane tylko. To podejście jest często używana przez administratorów baz danych, aby ograniczyć sposób dostępu do magazynu danych.  
@@ -19,7 +19,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
  Do celów tego przewodnika będziesz używać dwóch metod, które zostały zmapowane do procedur składowanych w bazie danych Northwind: CustOrdersDetail i CustOrderHist. Mapowanie występuje po uruchomieniu narzędzia wiersza polecenia SqlMetal, aby wygenerować plik języka Visual Basic. Aby uzyskać więcej informacji zobacz sekcję wymagania wstępne w dalszej części tego przewodnika.  
   
- W tym przewodniku nie zależą od [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Deweloperzy korzystający z programu Visual Studio można również użyć [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] do implementowania procedury składowanej. Zobacz [LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ W tym przewodniku nie zależą od Object Relational Designer. Deweloperzy korzystający z programu Visual Studio umożliwia również O/R Designer do implementowania procedury składowanej. Zobacz [LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -60,7 +60,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
 ## <a name="creating-a-linq-to-sql-solution"></a>Tworzenie składnika LINQ to SQL rozwiązanie  
  W tym pierwszym zadaniu tworzyć rozwiązania programu Visual Studio, który zawiera niezbędne odwołania, aby skompilować i uruchomić [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektu.  
   
-#### <a name="to-create-a-linq-to-sql-solution"></a>Aby utworzyć składnika LINQ to SQL rozwiązanie  
+### <a name="to-create-a-linq-to-sql-solution"></a>Aby utworzyć składnika LINQ to SQL rozwiązanie  
   
 1. W programie Visual Studio **pliku** menu, kliknij przycisk **nowy projekt**.  
   
@@ -77,7 +77,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
 ## <a name="adding-the-linq-to-sql-assembly-reference"></a>Dodawanie programu LINQ do SQL odwołanie do zestawu  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Moduł nie jest dołączony do standardowego szablonu aplikacja interfejsu Windows Forms. Trzeba będzie dodać zestaw samodzielnie, zgodnie z opisem w poniższych krokach:  
   
-#### <a name="to-add-systemdatalinqdll"></a>To add System.Data.Linq.dll  
+### <a name="to-add-systemdatalinqdll"></a>To add System.Data.Linq.dll  
   
 1. W **Eksploratora rozwiązań**, kliknij przycisk **Pokaż wszystkie pliki**.  
   
@@ -90,7 +90,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
 ## <a name="adding-the-northwind-code-file-to-the-project"></a>Dodawanie pliku Northwind kodu do projektu  
  Tego kroku przyjęto założenie, że trzeba użyć narzędzia SqlMetal do generowania pliku kodu z przykładowej bazy danych Northwind. Aby uzyskać więcej informacji zobacz sekcję wymagania wstępne we wcześniejszej części tego przewodnika.  
   
-#### <a name="to-add-the-northwind-code-file-to-the-project"></a>Aby dodać plik kodu northwind do projektu  
+### <a name="to-add-the-northwind-code-file-to-the-project"></a>Aby dodać plik kodu northwind do projektu  
   
 1. Na **projektu** menu, kliknij przycisk **Dodaj istniejący element**.  
   
@@ -101,7 +101,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
 ## <a name="creating-a-database-connection"></a>Tworzenie połączenia z bazą danych  
  W tym kroku zdefiniujesz połączenia z przykładową bazą danych Northwind. W tym instruktażu wykorzystano "c:\linqtest3\northwnd.mdf", jako ścieżkę.  
   
-#### <a name="to-create-the-database-connection"></a>Aby utworzyć połączenie z bazą danych  
+### <a name="to-create-the-database-connection"></a>Aby utworzyć połączenie z bazą danych  
   
 1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **Form1.vb**, a następnie kliknij przycisk **Wyświetl kod**.  
   
@@ -114,9 +114,9 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
 ## <a name="setting-up-the-user-interface"></a>Konfigurowanie interfejsu użytkownika  
  W tym zadaniu utworzysz interfejs, dzięki czemu użytkownicy mogą wykonać procedur składowanych na dostęp do danych w bazie danych. W aplikacji, która jest tworzona przy użyciu tego przewodnika użytkownicy mogą korzystać tylko przy użyciu procedur składowanych osadzone w aplikacji, dane z bazy danych.  
   
-#### <a name="to-set-up-the-user-interface"></a>Aby skonfigurować interfejs użytkownika  
+### <a name="to-set-up-the-user-interface"></a>Aby skonfigurować interfejs użytkownika  
   
-1. Wróć do Windows Forms Designer (**Form1.vb[Design]**).  
+1. Wróć do Windows Forms Designer (**Form1.vb[Design]** ).  
   
 2. Na **widoku** menu, kliknij przycisk **przybornika**.  
   
@@ -131,9 +131,9 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 4. Kliknij prawym przyciskiem myszy **Label1**, a następnie kliknij przycisk **właściwości**.  
   
-5. Zmiana **tekstu** właściwość **Label1** do **wprowadź OrderID:**.  
+5. Zmiana **tekstu** właściwość **Label1** do **wprowadź OrderID:** .  
   
-6. W ten sam sposób, aby uzyskać **etykiety 2**, zmienić **tekstu** właściwość **etykiety 2** do **wprowadź CustomerID:**.  
+6. W ten sam sposób, aby uzyskać **etykiety 2**, zmienić **tekstu** właściwość **etykiety 2** do **wprowadź CustomerID:** .  
   
 7. W ten sam sposób, jak zmienić **tekstu** właściwość **Button1** do **Orderdetails**.  
   
@@ -141,7 +141,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
      Tak, aby cały tekst jest widoczne, mogą zostać poszerzone formanty przycisków.  
   
-#### <a name="to-handle-button-clicks"></a>Do obsługi kliknięcia przycisków  
+### <a name="to-handle-button-clicks"></a>Do obsługi kliknięcia przycisków  
   
 1. Kliknij dwukrotnie **Orderdetails** na **Form1** utworzyć `Button1` program obsługi zdarzeń i otworzyć Edytor kodu.  
   
@@ -158,7 +158,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
 ## <a name="testing-the-application"></a>Testowanie aplikacji  
  Teraz nadszedł czas, aby przetestować aplikację. Należy pamiętać, że kontaktu z magazynu danych jest ograniczony do dowolnych akcje można wykonać dwie procedury składowane. Te akcje są do zwrócenia produktów, dostępny dla dowolnego orderID wprowadzona lub w celu zwrócenia historii produktów uporządkowane do dowolnego CustomerID wprowadzeniu.  
   
-#### <a name="to-test-the-application"></a>Aby przetestować aplikację  
+### <a name="to-test-the-application"></a>Aby przetestować aplikację  
   
 1. Naciśnij klawisz F5, aby rozpocząć debugowanie.  
   

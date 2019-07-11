@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b388dae0f109ff366f83c92de99b00b80bcc01a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 315d9aa6f7db51342e71ba3f8fcdc091f7707743
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905089"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777978"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName — Metoda
 Pobiera tablicę elementów zestawów z określonym `szAssemblyName` parametru, przy użyciu standardowych zasad stosowanych przez środowisko uruchomieniowe języka wspólnego (CLR) do rozpoznawania odwołań.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT FindAssembliesByName (  
     [in]  LPCWSTR     szAppBase,   
     [in]  LPCWSTR     szPrivateBin,   

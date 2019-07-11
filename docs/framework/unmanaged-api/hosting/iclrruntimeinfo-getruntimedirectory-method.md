@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c09f57ad805b4ba17b4bdafd3ced533199277a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2455c896ebdc12f2bb92a30d55745f7bd5bc308a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771712"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765518"
 ---
 # <a name="iclrruntimeinfogetruntimedirectory-method"></a>ICLRRuntimeInfo::GetRuntimeDirectory — Metoda
 Pobiera katalogu instalacji zestawu środowisko uruchomieniowe języka wspólnego (CLR) skojarzony z tym interfejsem.  
@@ -31,7 +31,7 @@ Pobiera katalogu instalacji zestawu środowisko uruchomieniowe języka wspólneg
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetRuntimeDirectory(  
 [out, size_is(*pcchBuffer)] LPWSTR pwzBuffer,  
 [in, out]  DWORD *pcchBuffer);  

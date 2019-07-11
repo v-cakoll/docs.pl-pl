@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-ms.openlocfilehash: 93aa679e02482e5c237c233655ee19f3bae17fd3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9f8d15b46f6e5575bd206bf572ffda0365e58f6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032854"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743553"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>Dostosowywanie operacji przy użyciu procedur składowanych
 Procedury składowane reprezentują Typowym rozwiązaniem w przypadku zastępowania domyślnego zachowania. W przykładach w tym temacie przedstawiono sposób korzystania generowane metody otoki dla procedur przechowywanych i jak można wywoływać procedury składowane bezpośrednio.  
   
- Jeśli używasz programu Visual Studio, możesz użyć [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] można przypisać procedur składowanych do wykonywania operacji wstawienia, aktualizacje i usunięcia.  
+ Jeśli używasz programu Visual Studio umożliwia Object Relational Designer przypisywanie procedur składowanych do wykonywania operacji wstawienia, aktualizacje i usunięcia.  
   
 > [!NOTE]
->  Aby odczytać wartości z powrotem wygenerowanych w bazie danych, należy użyć parametrów wyjściowych w przechowywanych procedur. Jeśli nie możesz użyć parametrów wyjściowych, napisać implementację metody częściowej, zamiast polegania na przesłonięcia generowane przez [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Elementy członkowskie wygenerowanych w bazie danych wartości musi być ustawione na odpowiednie wartości po `INSERT` lub `UPDATE` operacje zostały pomyślnie ukończone. Aby uzyskać więcej informacji, zobacz [obowiązki dewelopera w zastępowanie domyślne zachowanie](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  
+>  Aby odczytać wartości z powrotem wygenerowanych w bazie danych, należy użyć parametrów wyjściowych w przechowywanych procedur. Jeśli nie możesz użyć parametrów wyjściowych, zapisu przesłonięcia implementację metody częściowej, zamiast polegania na generowane przez Object Relational Designer. Elementy członkowskie wygenerowanych w bazie danych wartości musi być ustawione na odpowiednie wartości po `INSERT` lub `UPDATE` operacje zostały pomyślnie ukończone. Aby uzyskać więcej informacji, zobacz [obowiązki dewelopera w zastępowanie domyślne zachowanie](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  
   
 ## <a name="example"></a>Przykład  
   

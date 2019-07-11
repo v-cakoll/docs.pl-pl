@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 4468bc86634ad97f2dfbdb5f842eb5206f957a79
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: a9e5139e6d650aa6935bff934ca25502fdc14775
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307509"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744071"
 ---
 # <a name="type-testing-and-conversion-operators-c-reference"></a>Operatory badania typu i konwersji (C# odwołania)
 
@@ -109,7 +109,7 @@ W poniższym przykładzie pokazano jawnych konwersji liczbowych i odwołania:
 
 [!code-csharp-interactive[cast expression](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#Cast)]
 
-Aby uzyskać informacji na temat obsługiwanych jawnych konwersji, zobacz [jawne konwersje](~/_csharplang/spec/conversions.md#explicit-conversions) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md). Uzyskać informacji o definiowaniu typu niestandardowego jawnych lub niejawnych konwersji, zobacz [jawne](../keywords/explicit.md) lub [niejawne](../keywords/implicit.md) artykuł — słowo kluczowe, odpowiednio.
+Aby uzyskać informacji na temat obsługiwanych jawnych konwersji, zobacz [jawne konwersje](~/_csharplang/spec/conversions.md#explicit-conversions) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md). Aby uzyskać informacje o definiowaniu typu niestandardowego jawnych lub niejawnych konwersji, zobacz [konwersja zdefiniowana przez użytkownika operatory](user-defined-conversion-operators.md).
 
 ### <a name="other-usages-of-"></a>Inne sposoby użycia)
 
@@ -139,7 +139,7 @@ Użyj `typeof` operatora, aby sprawdzić, czy typ środowiska uruchomieniowego, 
 
 `is`, `as`, I `typeof` operatory nie są z możliwością przeciążenia.
 
-Typ zdefiniowany przez użytkownika nie mogą przeciążać `()` operatora, ale można zdefiniować konwersje typów niestandardowych, które mogą być wykonywane przez wyrażenie rzutowania. Aby uzyskać więcej informacji, zobacz [jawne](../keywords/explicit.md) i [niejawne](../keywords/implicit.md) artykuły — słowo kluczowe.
+Typ zdefiniowany przez użytkownika nie mogą przeciążać `()` operatora, ale można zdefiniować konwersje typów niestandardowych, które mogą być wykonywane przez wyrażenie rzutowania. Aby uzyskać więcej informacji, zobacz [konwersja zdefiniowana przez użytkownika operatory](user-defined-conversion-operators.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

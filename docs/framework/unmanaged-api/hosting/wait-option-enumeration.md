@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ac28f28d4d284ba26fadd46e53ebeb8e5b5f3cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eda866c1a1f1f69f0d042ccfde3dfad293df9b37
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984155"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776508"
 ---
 # <a name="waitoption-enumeration"></a>WAIT_OPTION — Wyliczenie
 Zawiera wartości, które wskazują, że akcja hosta powinno zająć, jeśli operacji wymaganej przez bloki języka, aby środowisko uruchomieniowe (języka wspólnego CLR).  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef enum {  
     WAIT_MSGPUMP       = 0x1,  
     WAIT_ALERTABLE     = 0x2,  

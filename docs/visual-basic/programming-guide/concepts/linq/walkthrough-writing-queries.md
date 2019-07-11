@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: f3671b7071cc30f5fae0dbd85677987f441d846f
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 55ded2f2fbd5c2c6e33627ce7fafe6bb4248d5ef
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505982"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783255"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Przewodnik: Pisanie zapytań w języku Visual Basic
 W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do zapisywania [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażeniach zapytań. Przewodnik pokazuje, jak tworzyć zapytania na liście obiektów dla uczniów, jak uruchamiać zapytania i sposobu ich modyfikacji. Kilka funkcji, w tym inicjatorów obiektów, wnioskowanie o typie lokalnym i typy anonimowe dołączyć do nich zapytania.  
@@ -21,7 +21,7 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
   
 ## <a name="create-a-project"></a>Tworzenie projektu  
   
-#### <a name="to-create-a-console-application-project"></a>Aby utworzyć projekt aplikacji konsoli  
+### <a name="to-create-a-console-application-project"></a>Aby utworzyć projekt aplikacji konsoli  
   
 1. Uruchom program Visual Studio.  
   
@@ -38,21 +38,21 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
 ## <a name="add-an-in-memory-data-source"></a>Dodaj źródło danych w pamięci  
  Źródło danych dla zapytania w tym przewodniku znajduje się lista `Student` obiektów. Każdy `Student` obiekt zawiera imię, nazwisko, rok klasy i rangi akademickich w treści dla uczniów.  
   
-#### <a name="to-add-the-data-source"></a>Aby dodać źródło danych  
+### <a name="to-add-the-data-source"></a>Aby dodać źródło danych  
   
 - Zdefiniuj `Student` klasy i tworzenie listy wystąpień klasy.  
   
     > [!IMPORTANT]
     >  Kod niezbędnej do zdefiniowania `Student` klasy i tworzenie listy używane w instruktażu przykłady znajduje się w [jak: Utwórz listę elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Można skopiować go w tym miejscu i wklej go do projektu. Nowy kod zastępuje kodu, które wystąpiły podczas tworzenia projektu.  
   
-#### <a name="to-add-a-new-student-to-the-students-list"></a>Aby dodać nowego studenta do listy studentów  
+### <a name="to-add-a-new-student-to-the-students-list"></a>Aby dodać nowego studenta do listy studentów  
   
 - Postępuj zgodnie ze wzorcem w `getStudents` metodę, aby dodać inne wystąpienie `Student` klasy do listy. Dodawanie student zostaną wprowadzone do inicjatorów obiektów. Aby uzyskać więcej informacji, zobacz [inicjatory obiektów: Typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="create-a-query"></a>Utwórz kwerendę  
  Po wykonaniu zapytania dodane w tej sekcji tworzy listę uczniów, w której akademickich pozycję umieszcza je w dziesięciu najlepszych. Ponieważ zapytanie wybiera pełne `Student` obiekt typu wyniku zapytania za każdym razem jest `IEnumerable(Of Student)`. Jednak zapytania zwykle nie określono typu w definicji zapytania. Zamiast tego kompilator używa wnioskowanie o typie lokalnym można ustalić typu. Aby uzyskać więcej informacji, zobacz [wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Zmienna zakresu zapytania, `currentStudent`, służy jako punkt odniesienia do każdego `Student` wystąpienia w źródle, `students`, zapewniając dostęp do właściwości każdego obiektu w `students`.  
   
-#### <a name="to-create-a-simple-query"></a>Aby utworzyć proste zapytanie  
+### <a name="to-create-a-simple-query"></a>Aby utworzyć proste zapytanie  
   
 1. Znajdź miejsce w `Main` metoda projektu, który jest oznaczony w następujący sposób:  
   
@@ -67,7 +67,7 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
 ## <a name="run-the-query"></a>Uruchom zapytanie  
  Zmienna `studentQuery` zawiera definicję kwerendy nie wynikami przeprowadzonej kwerendy. Typowe mechanizm do uruchamiania kwerendy jest `For Each` pętli. Każdy element w zwracanej sekwencji jest dostępny za pośrednictwem zmiennej iteracji pętli. Aby uzyskać więcej informacji na temat wykonywania zapytań, zobacz [Your pierwszego zapytania LINQ pisania](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
-#### <a name="to-run-the-query"></a>Aby uruchomić zapytanie  
+### <a name="to-run-the-query"></a>Aby uruchomić zapytanie  
   
 1. Dodaj następujący kod `For Each` pętli poniżej zapytania w projekcie.  
   
@@ -80,7 +80,7 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
 ## <a name="modify-the-query"></a>Zmodyfikuj zapytanie  
  Jest bardziej czytelne wyniki zapytania, jeśli znajdują się w określonej kolejności. Można sortować zwracana sekwencja, w oparciu o wszystkie dostępne pola.  
   
-#### <a name="to-order-the-results"></a>Aby uporządkować wyniki  
+### <a name="to-order-the-results"></a>Aby uporządkować wyniki  
   
 1. Dodaj następujący kod `Order By` klauzuli między `Where` instrukcji i `Select` instrukcja kwerendy. `Order By` Klauzuli będzie kolejność wyników alfabetycznie od A do Z, zgodnie z ostatnią nazwę każdego ucznia.  
   
@@ -98,7 +98,7 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
   
 3. Skompiluj i uruchom aplikację, naciskając klawisze CTRL + F5. Należy pamiętać, wyniki w oknie konsoli.  
   
-#### <a name="to-introduce-a-local-identifier"></a>Aby wprowadzić identyfikator lokalny  
+### <a name="to-introduce-a-local-identifier"></a>Aby wprowadzić identyfikator lokalny  
   
 1. Dodaj kod, w tej sekcji, aby wprowadzić identyfikator lokalny w wyrażeniu zapytania. Identyfikator lokalny będzie przechowywać wyniki pośrednie. W poniższym przykładzie `name` jest identyfikator, który przechowuje łączenia student imienia i nazwiska. Identyfikator lokalny może służyć do zapewnienia wygody, lub go może poprawić wydajność dzięki przechowywaniu wyniki wyrażenie, które w przeciwnym razie nalicza się wiele razy.  
   
@@ -106,7 +106,7 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
   
 2. Skompiluj i uruchom aplikację, naciskając klawisze CTRL + F5. Należy pamiętać, wyniki w oknie konsoli.  
   
-#### <a name="to-project-one-field-in-the-select-clause"></a>Aby zaprojektować jedno pole w klauzuli Wybierz  
+### <a name="to-project-one-field-in-the-select-clause"></a>Aby zaprojektować jedno pole w klauzuli Wybierz  
   
 1. Dodaj zapytanie i `For Each` pętli w tej sekcji, aby utworzyć zapytanie, który wytwarza sekwencję, w której elementy różnią się od elementów w źródle. W poniższym przykładzie źródło to zbiór `Student` obiektów, ale tylko jeden element członkowski każdy obiekt jest zwracany: imię studentów, których nazwisko jest Garcia. Ponieważ `currentStudent.First` jest ciągiem, typ danych sekwencji zwróconej przez `studentQuery3` jest `IEnumerable(Of String)`, sekwencją ciągów. Tak samo jak wcześniejszych przykładach przydział danych w polu `studentQuery3` pozostanie do kompilatora, aby określić za pomocą wnioskowanie o typie lokalnym.  
   
@@ -116,7 +116,7 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
   
 3. Skompiluj i uruchom aplikację, naciskając klawisze CTRL + F5. Należy pamiętać, wyniki w oknie konsoli.  
   
-#### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Aby utworzyć typ anonimowy w klauzuli Wybierz  
+### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Aby utworzyć typ anonimowy w klauzuli Wybierz  
   
 1. Dodaj kod z tej sekcji, aby zobaczyć, jak anonimowych typów są używane w kwerendach. Można ich używać w zapytaniach zwrócić wiele pól ze źródła danych, a nie pełne rekordy (`currentStudent` rekordów w poprzednich przykładach) lub pojedynczego pola (`First` w poprzedniej sekcji). Zamiast Definiowanie nowego typu nazwanego, który zawiera pola, które chcesz uwzględnić w wyniku, możesz określić pola w `Select` klauzuli i kompilator tworzy typ anonimowy z tych pól jako jego właściwości. Aby uzyskać więcej informacji, zobacz [typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   

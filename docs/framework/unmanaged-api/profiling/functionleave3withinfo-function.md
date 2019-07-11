@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce1f5a707cd739ec3b3e8384be2c70843748c8a4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 495ed887126f0b569acc1309609a0c132d0766eb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586714"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763312"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo — Funkcja
 Powiadamia program profilujący, że kontrolki zwracana przez funkcję, a także uchwyt, który może być przekazywany do [icorprofilerinfo3::getfunctionleave3info — metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) pobieranie ramki stosu i wartość zwracaną.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void __stdcall FunctionLeave3WithInfo(  
                [in] FunctionIDOrClientID functionIDOrClientID,  
                [in] COR_PRF_ELT_INFO eltInfo);  

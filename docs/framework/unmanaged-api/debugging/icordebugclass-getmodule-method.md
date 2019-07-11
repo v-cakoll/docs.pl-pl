@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e96d0d82b08449b4675ec7fd1517317006011ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 205b7670bac55d428d7458b7accaee5e00b00b03
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989225"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745584"
 ---
 # <a name="icordebugclassgetmodule-method"></a>ICorDebugClass::GetModule — Metoda
 Pobiera moduł, który definiuje tę klasę.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetModule (  
     [out] ICorDebugModule    **pModule  
 );  

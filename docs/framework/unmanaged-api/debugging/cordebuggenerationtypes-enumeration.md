@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1707a09f14fbab6150c2ecbcd188d7bf88064fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 193f5ffe96e89a00bed8a3c88ee346ba3ea9f2b4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989667"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740017"
 ---
 # <a name="cordebuggenerationtypes-enumeration"></a>CorDebugGenerationTypes — Wyliczenie
 Określa Generowanie region pamięci na stosie zarządzanym.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef enum CorDebugGenerationTypes {  
     CorDebug_Gen0 = 0,  
     CorDebug_Gen1 = 1,  
@@ -43,7 +43,7 @@ typedef enum CorDebugGenerationTypes {
 |-----------------|-----------------|  
 |`CorDebug_Gen0`|Generacji 0.|  
 |`CorDebug_Gen1`|Generacja 1.|  
-|`CorDebug_Gen2`|2. generacji.|  
+|`CorDebug_Gen2`|2\. generacji.|  
 |`CorDebug_LOH`|Stos dużych obiektów.|  
   
 ## <a name="remarks"></a>Uwagi  

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5754968511f7b2db48f60b99748f10f5d27e8d21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e959ce7a77ad6ceb7f2fc848193cbd9fff028279
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599406"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739617"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag — Wyliczenie
 Wskazuje, czy kontekst jest z aktywnej (lub liścia) ramek na stosie lub obliczeniu, odwijanie od innej ramki.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef enum CorDebugSetContextFlag  
 {  
    SET_CONTEXT_FLAG_ACTIVE_FRAME = 1  

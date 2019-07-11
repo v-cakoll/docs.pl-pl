@@ -12,19 +12,19 @@ helpviewer_keywords:
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: KrzysztofCwalina
-ms.openlocfilehash: cc5b8d7effda31b0236477b217bccf5cf2137f8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e787c5b34848a561b43c3457341673f11cc2bd00
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650144"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775542"
 ---
 # <a name="struct-design"></a>Projekt struktury
 Typ wartości ogólnego przeznaczenia najczęściej nazywa się struktury, jego słowo kluczowe języka C#. Ta sekcja zawiera wskazówki dotyczące projektowania struktury ogólne.  
   
- **X DO NOT** Podaj domyślnego konstruktora dla struktury.  
+ **X nie** dostarczyć konstruktora bez parametrów dla struktury.  
   
- Ta wytyczna następujące umożliwia tablic struktur, które ma zostać utworzony bez konieczności uruchamiania konstruktora dla każdego elementu tablicy. Należy zauważyć, że języka C# nie zezwala na struktur ma domyślnych konstruktorów.  
+ Ta wytyczna następujące umożliwia tablic struktur, które ma zostać utworzony bez konieczności uruchamiania konstruktora dla każdego elementu tablicy. Należy zauważyć, że C# nie zezwala na struktury mieć konstruktory bez parametrów.  
   
  **X DO NOT** Definiowanie typów modyfikowalne wartości.  
   

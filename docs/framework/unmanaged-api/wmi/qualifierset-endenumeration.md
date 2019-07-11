@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be2dfd6bb521dee14afd3728bdd9c446cb779e85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 206d6448835b60c55b378636ff5daa5fa4f8b5d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598847"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782599"
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration — funkcja
 Kończy wyliczenie uruchomione z wywołaniem [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) funkcji.  
@@ -30,7 +30,7 @@ Kończy wyliczenie uruchomione z wywołaniem [QualifierSet_BeginEnumeration](qua
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT QualifierSet_EndEnumeration (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 63353f670528cd52f3e2927426ae715432422504
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5c776942bced836437fdcb8aaf30faef48e3aaff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663865"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780145"
 ---
 # <a name="animation-overview"></a>Przegląd Animacja
 
@@ -242,7 +242,7 @@ W poniższej tabeli przedstawiono kilka typowych animacji i niektóre właściwo
 
 Wszystkie typy animacji dziedziczą z <xref:System.Windows.Media.Animation.Timeline> klasy; dlatego wszystkich animacji są specjalne rodzaje osi czasu. A <xref:System.Windows.Media.Animation.Timeline> definiuje odcinek czasu. Można określić *zachowania chronometrażu* osi czasu: jego <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, ile razy jest powtarzane, a także jak krótki czas w miarę dla niego.
 
-Ponieważ animacji <xref:System.Windows.Media.Animation.Timeline>, reprezentuje również odcinek czasu. Animacja oblicza również wartości wyjściowe w miarę jednak jego określony segment czasu (lub <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). Animacja w miarę, lub "odgrywa" aktualizuje właściwość, która jest skojarzony.
+Ponieważ animacji <xref:System.Windows.Media.Animation.Timeline>, reprezentuje również odcinek czasu. Animacja oblicza również wartości wyjściowe miarę za pośrednictwem jego określony segment czasu (lub <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). Animacja w miarę, lub "odgrywa" aktualizuje właściwość, która jest skojarzony.
 
 Są trzy właściwości często używanych chronometrażu <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, i <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>.
 
@@ -321,7 +321,7 @@ W poprzednim przykładzie pokazano, jak zacząć <xref:System.Windows.Media.Anim
 [!code-csharp[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/FillBehaviorExample.cs#fillbehaviorexamplerectangleinline)]
 [!code-vb[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/fillbehaviorexample.vb#fillbehaviorexamplerectangleinline)]
 
-Ponieważ jej <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> nie został zmieniony z wartości domyślnej, która jest <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, animacji posiada ona wartość końcową, 0, po jego zakończeniu. W związku z tym <xref:System.Windows.UIElement.Opacity%2A> pozostaje prostokąt w lokalizacji 0 po animacji kończy. Jeśli ustawisz <xref:System.Windows.UIElement.Opacity%2A> prostokąta z inną wartością kodu wydaje się mieć żadnego efektu, ponieważ animacji, nadal ma wpływ na <xref:System.Windows.UIElement.Opacity%2A> właściwości.
+Ponieważ jej <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> nie został zmieniony z wartości domyślnej, która jest <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, animacji przechowuje wartość końcową, 0, po jego zakończeniu. W związku z tym <xref:System.Windows.UIElement.Opacity%2A> pozostaje prostokąt w lokalizacji 0 po animacji kończy. Jeśli ustawisz <xref:System.Windows.UIElement.Opacity%2A> prostokąta z inną wartością kodu wydaje się mieć żadnego efektu, ponieważ animacji, nadal ma wpływ na <xref:System.Windows.UIElement.Opacity%2A> właściwości.
 
 Jednym ze sposobów odzyskania kontroli animowany właściwości w kodzie jest użycie <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> metodę i określić wartość null w przypadku <xref:System.Windows.Media.Animation.AnimationTimeline> parametru. Aby uzyskać więcej informacji i obejrzeć przykład, zobacz [ustawić właściwość po Zanimowaniu jej za pomocą scenorysu](how-to-set-a-property-after-animating-it-with-a-storyboard.md).
 
@@ -372,7 +372,7 @@ Poniższe przykłady mogą pomóc rozpocząć dodawanie animacji do aplikacji.
 |[Animacja i system chronometrażu — przegląd](animation-and-timing-system-overview.md)|W tym artykule opisano, jak system chronometrażu używa <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> klasy, które pozwalają na tworzenie animacji.|
 |[Animacja — porady i wskazówki](animation-tips-and-tricks.md)|Wyświetla listę przydatnych porad dotyczących rozwiązywania problemów z animacjami, takich jak wydajność.|
 |[Niestandardowe animacje — przegląd](custom-animations-overview.md)|Opisuje sposób rozszerzyć systemu animacji z klatkami kluczowymi, klasy animacji lub wywołań zwrotnych w poszczególnych klatkach.|
-|Przegląd Cechy animacji od/do/przez|W tym artykule opisano sposób tworzenia animacji, które przechodzi między dwiema wartościami.|
+|[Animacje od/do/przez — przegląd](from-to-by-animations-overview.md)|W tym artykule opisano sposób tworzenia animacji, które przechodzi między dwiema wartościami.|
 |[Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)|W tym artykule opisano sposób tworzenia wielu wartości docelowej, w tym możliwość kontrolowania metodę interpolacji animacji.|
 |[Funkcje easingu](easing-functions.md)|Wyjaśnia, jak mają dotyczyć wzory matematyczne animacji można pobrać realistyczne zachowania, na przykład odbijania.|
 |[Animacje ścieżki — przegląd](path-animations-overview.md)|Opisuje sposób przenoszenia lub obrócić obiekt na ścieżce złożone.|

@@ -3,12 +3,12 @@ title: 'Instrukcje: Tworzenie obsługującej oświadczenia aplikacji ASP.NET prz
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 039fccde55dd48571e38f064f68b16480b65cb44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b58a4066538441a48bc6646f364e846a25cc8c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650406"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742499"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Instrukcje: Tworzenie obsługującej oświadczenia aplikacji ASP.NET przy użyciu uwierzytelniania systemu Windows
 ## <a name="applies-to"></a>Dotyczy:  
@@ -56,7 +56,7 @@ ms.locfileid: "64650406"
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
  W tym kroku utworzysz nową aplikację ASP.NET Web Forms.  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>Aby utworzyć prostą aplikację platformy ASP.NET  
+### <a name="to-create-a-simple-aspnet-application"></a>Aby utworzyć prostą aplikację platformy ASP.NET  
   
 1. Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "64650406"
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Krok 2 — Konfigurowanie aplikacji ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows  
  W tym kroku dodasz wpis konfiguracyjny do *Web.config* konfiguracji plik i Modyfikuj *Default.aspx* plik, aby wyświetlić oświadczenia informacji o koncie.  
   
-#### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Aby skonfigurować aplikację ASP.NET dla oświadczeń przy użyciu uwierzytelniania Windows  
+### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Aby skonfigurować aplikację ASP.NET dla oświadczeń przy użyciu uwierzytelniania Windows  
   
 1. W **TestApp** projektu *Default.aspx* pliku, Zastąp istniejący kod znaczników następującym kodem:  
   
@@ -136,6 +136,6 @@ ms.locfileid: "64650406"
 ## <a name="step-3--test-your-solution"></a>Krok 3 — Przetestowanie rozwiązania  
  W tym kroku zostanie testowanie aplikacji ASP.NET Web Forms i sprawdź, czy są prezentowane oświadczenia, gdy użytkownik loguje się przy użyciu uwierzytelniania Windows.  
   
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Aby przetestować aplikację ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows  
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Aby przetestować aplikację ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows  
   
 1. Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację. Powinna pojawić się *Default.aspx*, i nazwę konta Windows (łącznie z nazwą domeny) już powinna zostać wyświetlona jako użytkownik uwierzytelniony w prawym górnym rogu strony. Zawartość strony powinna zawierać tabelę wypełnione oświadczeń pobierane z konta usługi Windows.

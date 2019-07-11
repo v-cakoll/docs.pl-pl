@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 26a43a4f-83c9-4732-806d-bb23aad0ff6b
-ms.openlocfilehash: 6a25ea5fe80da1fed16f44fd3243ebea4d64069f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa3690ae74869f5dc0fbaa8d824d4aebca8ce724
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902892"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743057"
 ---
 # <a name="insert-update-and-delete-operations"></a>Operacje wstawiania, aktualizowania i usuwania
 Należy wykonać `Insert`, `Update`, i `Delete` operacje w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przez dodawanie, zmienianie i usuwanie obiektów w modelu obiektu. Domyślnie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy swoje działania do bazy danych SQL i przesyła zmiany do bazy danych.  
@@ -30,7 +30,7 @@ Należy wykonać `Insert`, `Update`, i `Delete` operacje w [!INCLUDE[vbtecdlinq]
 > [!NOTE]
 >  To zachowanie można zastąpić za pomocą własnej logiki niestandardowej, zwykle za pomocą procedury składowanej. Aby uzyskać więcej informacji, zobacz [obowiązki dewelopera w zastępowanie domyślne zachowanie](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  
 >   
->  Za pomocą programu Visual Studio deweloperzy mogą używać [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Tworzenie procedur składowanych w tym celu.  
+>  Deweloperzy korzystający z programu Visual Studio umożliwia tworzenie procedur składowanych w tym celu Object Relational Designer.  
   
 ## <a name="see-also"></a>Zobacz także
 

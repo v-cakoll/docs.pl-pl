@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a4379a5f3c820889928f9008186b2f95b74b6da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80f130b392cbedb4d8f61c7428d48feb0d6ceece
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672721"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778354"
 ---
 # <a name="itypenamebuilderclear-method"></a>ITypeNameBuilder::Clear — Metoda
 Ta metoda obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT Clear ( );  
 ```  
   

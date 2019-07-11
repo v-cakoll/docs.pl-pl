@@ -2,17 +2,17 @@
 title: 'Przewodnik: Prosty model obiektu i zapytanie (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: dd4ba42247a8305b14d859a5b49da4c11cfc18bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62d28d61b3df0cfd792cedc87daf91526b162818
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617971"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742625"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Przewodnik: Prosty model obiektu i zapytanie (C#)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusza minimalnej złożoności. Utworzy klasę jednostki, który modeluje tabelę Klienci w przykładowej bazie danych Northwind. Spowoduje to utworzenie prostego zapytania do listy klientów, którzy znajdują się w Londynie.  
   
- Ten przewodnik jest zorientowany kodu zgodnie z projektem, aby ułatwić wyświetlanie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pojęcia. Zwykle rzecz biorąc, należy użyć [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do tworzenia modelu obiektu.  
+ Ten przewodnik jest zorientowany kodu zgodnie z projektem, aby ułatwić wyświetlanie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pojęcia. Zwykle rzecz biorąc, zostanie wykorzystany Object Relational Designer do tworzenia modelu obiektu.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   

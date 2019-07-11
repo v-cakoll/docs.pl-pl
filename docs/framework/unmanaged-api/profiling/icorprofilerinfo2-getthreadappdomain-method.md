@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32a69f948b936dd80ab364583dc2928778b34ba0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2fa4b1c45b7bf10d167089f80686f438d54288cf
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791589"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782223"
 ---
 # <a name="icorprofilerinfo2getthreadappdomain-method"></a>ICorProfilerInfo2::GetThreadAppDomain — Metoda
 Pobiera identyfikator domeny aplikacji, w którym określony wątek jest w trakcie wykonywania kodu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetThreadAppDomain(  
     [in]  ThreadID threadId,  
     [out] AppDomainID *pAppDomainId);  

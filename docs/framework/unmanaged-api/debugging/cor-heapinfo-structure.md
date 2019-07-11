@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23bda470b8b5812b567081ba268ad503ac39ecaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dd233643bd18b60b7d6176c34ee57e4061daf7c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609486"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740655"
 ---
 # <a name="corheapinfo-structure"></a>COR_HEAPINFO — Struktura
 Zawiera ogólne informacje o stercie wyrzucania elementów bezużytecznych, w tym, czy jest wyliczalna.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef struct _COR_HEAPINFO {  
     BOOL areGCStructuresValid;   
     DWORD pointerSize;   

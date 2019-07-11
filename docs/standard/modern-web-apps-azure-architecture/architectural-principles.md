@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74ff7196ce17807b98a975687a524041f15a7f5b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019574"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775899"
 ---
 # <a name="architectural-principles"></a>Zasady dotyczące architektury
 
@@ -50,7 +50,7 @@ Stosowanie zasady czystego odwrócenie zależności pozwala na wywoływanie meto
 
 ### <a name="explicit-dependencies"></a>Jawne zależności
 
-**Klasy i metody jawnie wymagać współpracujących obiekty, które są im potrzebne, aby działać poprawnie.** Konstruktory klasy zapewnienia możliwości dla klas zidentyfikować elementy, które są im potrzebne, aby mieć prawidłowy stan i działać prawidłowo. Po zdefiniowaniu klasy, która skonstruowany oraz o nazwie, ale które będzie działać tylko prawidłowo w przypadku niektórych składników administratorem globalnym lub infrastruktury w miejscu, w ramach tych zajęć są *nieuczciwych* za pomocą swoich klientów. Kontrakt konstruktora o tym, że klienta, który wymaga tylko określone czynności (prawdopodobnie pusta, jeśli klasa jest po prostu przy użyciu domyślnego konstruktora), ale, a następnie w czasie wykonywania, który okazuje się obiekt rzeczywiście potrzebujesz czegoś innego.
+**Klasy i metody jawnie wymagać współpracujących obiekty, które są im potrzebne, aby działać poprawnie.** Konstruktory klasy zapewnienia możliwości dla klas zidentyfikować elementy, które są im potrzebne, aby mieć prawidłowy stan i działać prawidłowo. Po zdefiniowaniu klasy, która skonstruowany oraz o nazwie, ale które będzie działać tylko prawidłowo w przypadku niektórych składników administratorem globalnym lub infrastruktury w miejscu, w ramach tych zajęć są *nieuczciwych* za pomocą swoich klientów. Kontrakt konstruktora o tym, że klienta, który wymaga tylko określone czynności (prawdopodobnie pusta, jeśli klasa jest po prostu przy użyciu konstruktora bez parametrów), ale, a następnie w czasie wykonywania, który okazuje się obiekt rzeczywiście potrzebujesz czegoś innego.
 
 Postępując zgodnie z zasadą jawne zależności, metod i klas są uczciwe za pomocą swoich klientów o to, czego potrzebują do działania. To sprawia, że Twój kod więcej pomocniczy i kodowania kontraktów bardziej przyjazny dla użytkownika, ponieważ użytkownicy będą ufać, że tak długo, jak długo stanowią, co jest wymagane w formularzu metodę lub parametry konstruktora, obiekty, które działają z będzie działać. poprawnie w czasie wykonywania.
 
@@ -85,7 +85,7 @@ Niektóre przykłady naruszenie tej zasady obejmują:
 
 - Klasy jest odpowiedzialny za zapisywanie samodzielnie (na przykład wzorzec aktywnym rekordzie).
 
-- Wymagane domyślnego konstruktora.
+- Wymagany konstruktor bez parametrów.
 
 - Właściwości wymagających virtual — słowo kluczowe.
 

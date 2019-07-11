@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60183291fda551e328ee1def03c02240314a71e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82af06837ead9a00923c23d4ce145015308fbbf7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598236"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782803"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>ICorProfilerCallback::JITInlining — Metoda
 Powiadamia program profilujący, że kompilator just-in-time (JIT) zostanie Wstawianie funkcji z innej funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT JITInlining(  
     [in]  FunctionID callerId,  
     [in]  FunctionID calleeId,  

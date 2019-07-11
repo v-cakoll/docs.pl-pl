@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c14b48a29993a65a0a0ab9fcb63bcb1e0d882042
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c79f3b3b976b83eb99f8aa26d38a1fe316de471a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645373"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744996"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>ICorDebugChain::GetActiveFrame — Metoda
 Pobiera aktywny (oznacza to, najbardziej aktualną) ramki w łańcuchu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetActiveFrame (  
     [out] ICorDebugFrame   **ppFrame  
 );  

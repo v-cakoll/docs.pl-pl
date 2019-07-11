@@ -2,12 +2,12 @@
 title: 'Przewodnik: Używanie tylko procedur składowanych (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: f4c34252f7d92985dac94663c85d3cca0dc58ab3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f16cbdc1d22e7ec08237c0f13db9499ee2f9194f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655126"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742556"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Przewodnik: Używanie tylko procedur składowanych (C#)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusz do uzyskiwania dostępu do danych, wykonując procedury składowane tylko. To podejście jest często używana przez administratorów baz danych, aby ograniczyć sposób dostępu do magazynu danych.  
@@ -17,7 +17,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
  Do celów tego przewodnika będziesz używać dwóch metod, które zostały zmapowane do procedur składowanych w bazie danych Northwind: CustOrdersDetail i CustOrderHist. Mapowanie występuje podczas uruchamiania narzędzia wiersza polecenia SqlMetal można wygenerować C# pliku. Aby uzyskać więcej informacji zobacz sekcję wymagania wstępne w dalszej części tego przewodnika.  
   
- W tym przewodniku nie zależą od [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Deweloperzy korzystający z programu Visual Studio można również użyć [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] do implementowania procedury składowanej. Zobacz [LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ W tym przewodniku nie zależą od Object Relational Designer. Deweloperzy korzystający z programu Visual Studio umożliwia również O/R Designer do implementowania procedury składowanej. Zobacz [LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -112,7 +112,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-set-up-the-user-interface"></a>Aby skonfigurować interfejs użytkownika  
   
-1. Wróć do Windows Forms Designer (**Form1.cs[Design]**).  
+1. Wróć do Windows Forms Designer (**Form1.cs[Design]** ).  
   
 2. Na **widoku** menu, kliknij przycisk **przybornika**.  
   
@@ -127,9 +127,9 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 4. Kliknij prawym przyciskiem myszy **label1**, a następnie kliknij przycisk **właściwości**.  
   
-5. Zmiana **tekstu** właściwość **label1** do **wprowadź OrderID:**.  
+5. Zmiana **tekstu** właściwość **label1** do **wprowadź OrderID:** .  
   
-6. W ten sam sposób, aby uzyskać **etykiety 2**, zmienić **tekstu** właściwość **etykiety 2** do **wprowadź CustomerID:**.  
+6. W ten sam sposób, aby uzyskać **etykiety 2**, zmienić **tekstu** właściwość **etykiety 2** do **wprowadź CustomerID:** .  
   
 7. W ten sam sposób, jak zmienić **tekstu** właściwość **button1** do **Orderdetails**.  
   

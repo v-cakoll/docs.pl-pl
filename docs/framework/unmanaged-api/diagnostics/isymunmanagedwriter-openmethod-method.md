@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b05ba185a9ad4ab076d29d7d609734d41677b760
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25178b5ea27aac7229ab51a167283d955b89addc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986053"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777263"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>ISymUnmanagedWriter::OpenMethod — Metoda
 Zostanie otwarty metody, w której symbol informacje są emitowane. Danej metody staje się bieżącą metodę dla wywołań do definiowania punktów sekwencji, parametrów i leksykalne zakresów. Istnieje niejawna zakresie leksykalnym, wokół całej metody. Zamknij metodę, która została wcześniej zamknięta usuwa wszystkie uprzednio zdefiniowany symboli dla tej metody. Jednocześnie może istnieć tylko jedna metoda open.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT OpenMethod(  
     [in] mdMethodDef method);  
 ```  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29c5f96bab374d6e2d43424370bff2a4a2ab6df3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee3a0c27d350dec8e9f3e9448174d978c7d50e81
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986591"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775689"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>ICorPublishProcess::IsManaged — Metoda
 Pobiera wartość wskazującą, czy proces odwołuje się ten [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) wiadomo, że masz kod zarządzany.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT IsManaged (  
     [out] BOOL   *pbManaged  
 );  

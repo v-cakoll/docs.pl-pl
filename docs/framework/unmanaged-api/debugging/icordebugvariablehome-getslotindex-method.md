@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b819f1f02870a8a85a531d7d341cbaf488a1ccd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 199c3ba5d5b9588db4c665070b4dec6266cefc2e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993671"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760346"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>Metoda ICorDebugVariableHome::GetSlotIndex
 Pobiera zarządzane miejsce indeks zmiennej lokalnej.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetSlotIndex(  
     [out] ULONG32 *pSlotIndex  
 );  

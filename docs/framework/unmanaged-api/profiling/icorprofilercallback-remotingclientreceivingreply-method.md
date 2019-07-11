@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2134a7f12ac482b3fe79ac722684ac8601a7280b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ff18d52091ca75152c20667d1ec1b024f44d6129
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662923"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782918"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply — Metoda
 Powiadamia program profilujący po stronie serwera część wywołanie komunikacji zdalnej została zakończona i klient otrzymuje teraz i wkrótce do przetwarzania odpowiedzi.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT RemotingClientReceivingReply(  
     [in] GUID *pCookie,  
     [in] BOOL fIsAsync);   

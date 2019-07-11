@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b24507c7cb0860fc04fa519c6bd95113483f629d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ae09b4f1cd069edf81be583c7c4226717736094
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993710"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764275"
 ---
-# <a name="icordebugvalueenumnext-method"></a><span data-ttu-id="e787d-102">ICorDebugValueEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="e787d-102">ICorDebugValueEnum::Next Method</span></span>
-<span data-ttu-id="e787d-103">Pobiera określoną liczbę wystąpień "ICorDebugValue" z wyliczenia, zaczynając od bieżącej pozycji.</span><span class="sxs-lookup"><span data-stu-id="e787d-103">Gets the specified number of "ICorDebugValue" instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugvalueenumnext-method"></a><span data-ttu-id="02521-102">ICorDebugValueEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="02521-102">ICorDebugValueEnum::Next Method</span></span>
+<span data-ttu-id="02521-103">Pobiera określoną liczbę wystąpień "ICorDebugValue" z wyliczenia, zaczynając od bieżącej pozycji.</span><span class="sxs-lookup"><span data-stu-id="02521-103">Gets the specified number of "ICorDebugValue" instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e787d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e787d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="02521-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="02521-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Next (  
     [in]  ULONG  celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  
@@ -38,23 +38,23 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e787d-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e787d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="02521-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="02521-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="e787d-106">[in] Liczba `ICorDebugValue` wystąpienia mają zostać pobrane.</span><span class="sxs-lookup"><span data-stu-id="e787d-106">[in] The number of `ICorDebugValue` instances to be retrieved.</span></span>  
+ <span data-ttu-id="02521-106">[in] Liczba `ICorDebugValue` wystąpienia mają zostać pobrane.</span><span class="sxs-lookup"><span data-stu-id="02521-106">[in] The number of `ICorDebugValue` instances to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="e787d-107">[out] Tablica wskaźników, z których każdy wskazuje `ICorDebugValue` obiektu.</span><span class="sxs-lookup"><span data-stu-id="e787d-107">[out] An array of pointers, each of which points to an `ICorDebugValue` object.</span></span>  
+ <span data-ttu-id="02521-107">[out] Tablica wskaźników, z których każdy wskazuje `ICorDebugValue` obiektu.</span><span class="sxs-lookup"><span data-stu-id="02521-107">[out] An array of pointers, each of which points to an `ICorDebugValue` object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="e787d-108">[out] Wskaźnik do liczby `ICorDebugValue` wystąpień rzeczywistego zwrotu.</span><span class="sxs-lookup"><span data-stu-id="e787d-108">[out] Pointer to the number of `ICorDebugValue` instances actually returned.</span></span> <span data-ttu-id="e787d-109">Ta wartość może mieć wartości null Jeśli `celt` jeden.</span><span class="sxs-lookup"><span data-stu-id="e787d-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="02521-108">[out] Wskaźnik do liczby `ICorDebugValue` wystąpień rzeczywistego zwrotu.</span><span class="sxs-lookup"><span data-stu-id="02521-108">[out] Pointer to the number of `ICorDebugValue` instances actually returned.</span></span> <span data-ttu-id="02521-109">Ta wartość może mieć wartości null Jeśli `celt` jeden.</span><span class="sxs-lookup"><span data-stu-id="02521-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e787d-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e787d-110">Requirements</span></span>  
- <span data-ttu-id="e787d-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e787d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="02521-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="02521-110">Requirements</span></span>  
+ <span data-ttu-id="02521-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="02521-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e787d-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e787d-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="02521-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="02521-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e787d-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e787d-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="02521-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="02521-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e787d-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e787d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="02521-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02521-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e787d-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e787d-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02521-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="02521-115">See also</span></span>

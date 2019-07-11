@@ -17,52 +17,52 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c3ff0c91713a6bb7449791bae6a754c43659335
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf19d322d8e4d0d05993d22b2aa7e46bda7b5a1d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700170"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780067"
 ---
-# <a name="icorruntimehostnextdomain-method"></a><span data-ttu-id="96164-102">ICorRuntimeHost::NextDomain — Metoda</span><span class="sxs-lookup"><span data-stu-id="96164-102">ICorRuntimeHost::NextDomain Method</span></span>
-<span data-ttu-id="96164-103">Pobiera wskaźnik interfejsu do następnej domeny w wyliczeniu.</span><span class="sxs-lookup"><span data-stu-id="96164-103">Gets an interface pointer to the next domain in the enumeration.</span></span>  
+# <a name="icorruntimehostnextdomain-method"></a><span data-ttu-id="adcf0-102">ICorRuntimeHost::NextDomain — Metoda</span><span class="sxs-lookup"><span data-stu-id="adcf0-102">ICorRuntimeHost::NextDomain Method</span></span>
+<span data-ttu-id="adcf0-103">Pobiera wskaźnik interfejsu do następnej domeny w wyliczeniu.</span><span class="sxs-lookup"><span data-stu-id="adcf0-103">Gets an interface pointer to the next domain in the enumeration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="96164-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="96164-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="adcf0-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="adcf0-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT NextDomain (  
     [in] HCORENUM hEnum,  
     [out] void** pAppDomain  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="96164-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="96164-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="adcf0-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="adcf0-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="96164-106">[in] Moduł wyliczający, który został uzyskany za pomocą wywołania [enumdomains —](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md).</span><span class="sxs-lookup"><span data-stu-id="96164-106">[in] The enumerator that was obtained through a call to [EnumDomains](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md).</span></span>  
+ <span data-ttu-id="adcf0-106">[in] Moduł wyliczający, który został uzyskany za pomocą wywołania [enumdomains —](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md).</span><span class="sxs-lookup"><span data-stu-id="adcf0-106">[in] The enumerator that was obtained through a call to [EnumDomains](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md).</span></span>  
   
  `pAppDomain`  
- <span data-ttu-id="96164-107">[out] Wskaźnik interfejsu do <xref:System._AppDomain?displayProperty=nameWithType> typ, który reprezentuje następnej domeny w wyliczenia lub wartość null, jeśli istnieje żadnych więcej domen.</span><span class="sxs-lookup"><span data-stu-id="96164-107">[out] An interface pointer to the <xref:System._AppDomain?displayProperty=nameWithType> type that represents the next domain in the enumeration, or null, if no more domains exist.</span></span>  
+ <span data-ttu-id="adcf0-107">[out] Wskaźnik interfejsu do <xref:System._AppDomain?displayProperty=nameWithType> typ, który reprezentuje następnej domeny w wyliczenia lub wartość null, jeśli istnieje żadnych więcej domen.</span><span class="sxs-lookup"><span data-stu-id="adcf0-107">[out] An interface pointer to the <xref:System._AppDomain?displayProperty=nameWithType> type that represents the next domain in the enumeration, or null, if no more domains exist.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="96164-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="96164-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="adcf0-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="adcf0-108">Return Value</span></span>  
   
-|<span data-ttu-id="96164-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="96164-109">HRESULT</span></span>|<span data-ttu-id="96164-110">Opis</span><span class="sxs-lookup"><span data-stu-id="96164-110">Description</span></span>|  
+|<span data-ttu-id="adcf0-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="adcf0-109">HRESULT</span></span>|<span data-ttu-id="adcf0-110">Opis</span><span class="sxs-lookup"><span data-stu-id="adcf0-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="96164-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="96164-111">S_OK</span></span>|<span data-ttu-id="96164-112">Operacja zakończyła się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="96164-112">The operation was successful.</span></span>|  
-|<span data-ttu-id="96164-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="96164-113">S_FALSE</span></span>|<span data-ttu-id="96164-114">Nie można ukończyć operacji, lub nie istnieją więcej domeny w wyliczeniu.</span><span class="sxs-lookup"><span data-stu-id="96164-114">The operation failed to complete, or there are no more domains in the enumeration.</span></span>|  
-|<span data-ttu-id="96164-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="96164-115">E_FAIL</span></span>|<span data-ttu-id="96164-116">Wystąpił błąd nieznanego, krytycznego.</span><span class="sxs-lookup"><span data-stu-id="96164-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="96164-117">Jeśli metoda zwraca E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe w procesie.</span><span class="sxs-lookup"><span data-stu-id="96164-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="96164-118">Kolejne wywołania do dowolnych hostowania interfejsów API zwraca HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="96164-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="96164-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="96164-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="96164-120">Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="96164-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="adcf0-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="adcf0-111">S_OK</span></span>|<span data-ttu-id="adcf0-112">Operacja zakończyła się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="adcf0-112">The operation was successful.</span></span>|  
+|<span data-ttu-id="adcf0-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="adcf0-113">S_FALSE</span></span>|<span data-ttu-id="adcf0-114">Nie można ukończyć operacji, lub nie istnieją więcej domeny w wyliczeniu.</span><span class="sxs-lookup"><span data-stu-id="adcf0-114">The operation failed to complete, or there are no more domains in the enumeration.</span></span>|  
+|<span data-ttu-id="adcf0-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="adcf0-115">E_FAIL</span></span>|<span data-ttu-id="adcf0-116">Wystąpił błąd nieznanego, krytycznego.</span><span class="sxs-lookup"><span data-stu-id="adcf0-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="adcf0-117">Jeśli metoda zwraca E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe w procesie.</span><span class="sxs-lookup"><span data-stu-id="adcf0-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="adcf0-118">Kolejne wywołania do dowolnych hostowania interfejsów API zwraca HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="adcf0-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="adcf0-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="adcf0-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="adcf0-120">Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="adcf0-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="96164-121">Wymagania</span><span class="sxs-lookup"><span data-stu-id="96164-121">Requirements</span></span>  
- <span data-ttu-id="96164-122">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="96164-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="adcf0-121">Wymagania</span><span class="sxs-lookup"><span data-stu-id="adcf0-121">Requirements</span></span>  
+ <span data-ttu-id="adcf0-122">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="adcf0-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="96164-123">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="96164-123">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="adcf0-123">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="adcf0-123">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="96164-124">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="96164-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="adcf0-124">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="adcf0-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="96164-125">**Wersje programu .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="96164-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="adcf0-125">**Wersje programu .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="adcf0-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="96164-126">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="96164-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="adcf0-126">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="adcf0-126">See also</span></span>
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [<span data-ttu-id="96164-127">ICorRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="96164-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="adcf0-127">ICorRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="adcf0-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

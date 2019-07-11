@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44595229eaefa0d8fc8ca7bf15a88d0fbf1ee0d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c307c09c4593a3e5eefcda2c834132ac57a12d5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787910"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779955"
 ---
-# <a name="icorprofilerthreadenumnext-method"></a><span data-ttu-id="36fa1-102">ICorProfilerThreadEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="36fa1-102">ICorProfilerThreadEnum::Next Method</span></span>
-<span data-ttu-id="36fa1-103">Pobiera określoną liczbę wątków sąsiadujących z sekwencyjną kolekcją wątków, zaczynając od modułu wyliczającego bieżąca pozycja w sekwencji.</span><span class="sxs-lookup"><span data-stu-id="36fa1-103">Gets the specified number of contiguous threads from a sequential collection of threads, starting at the enumerator's current position in the sequence.</span></span>  
+# <a name="icorprofilerthreadenumnext-method"></a><span data-ttu-id="13f16-102">ICorProfilerThreadEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="13f16-102">ICorProfilerThreadEnum::Next Method</span></span>
+<span data-ttu-id="13f16-103">Pobiera określoną liczbę wątków sąsiadujących z sekwencyjną kolekcją wątków, zaczynając od modułu wyliczającego bieżąca pozycja w sekwencji.</span><span class="sxs-lookup"><span data-stu-id="13f16-103">Gets the specified number of contiguous threads from a sequential collection of threads, starting at the enumerator's current position in the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="36fa1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="36fa1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13f16-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="13f16-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Next (    [in]  ULONG      celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  
                     ThreadID ids[],  
@@ -37,34 +37,34 @@ HRESULT Next (    [in]  ULONG      celt,
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="36fa1-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="36fa1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="13f16-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="13f16-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="36fa1-106">[in] Liczba wątków do pobierania.</span><span class="sxs-lookup"><span data-stu-id="36fa1-106">[in] The number of threads to retrieve.</span></span>  
+ <span data-ttu-id="13f16-106">[in] Liczba wątków do pobierania.</span><span class="sxs-lookup"><span data-stu-id="13f16-106">[in] The number of threads to retrieve.</span></span>  
   
  `ids`  
- <span data-ttu-id="36fa1-107">[out] Tablica `ThreadID` wartości, z których każdy reprezentuje pobrane wątku.</span><span class="sxs-lookup"><span data-stu-id="36fa1-107">[out] An array of `ThreadID` values, each of which represents a retrieved thread.</span></span>  
+ <span data-ttu-id="13f16-107">[out] Tablica `ThreadID` wartości, z których każdy reprezentuje pobrane wątku.</span><span class="sxs-lookup"><span data-stu-id="13f16-107">[out] An array of `ThreadID` values, each of which represents a retrieved thread.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="36fa1-108">[out] Wskaźnik do liczby wątków rzeczywistego zwrotu w `ids` tablicy.</span><span class="sxs-lookup"><span data-stu-id="36fa1-108">[out] A pointer to the number of threads actually returned in the `ids` array.</span></span>  
+ <span data-ttu-id="13f16-108">[out] Wskaźnik do liczby wątków rzeczywistego zwrotu w `ids` tablicy.</span><span class="sxs-lookup"><span data-stu-id="13f16-108">[out] A pointer to the number of threads actually returned in the `ids` array.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="36fa1-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="36fa1-109">Return Value</span></span>  
- <span data-ttu-id="36fa1-110">Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.</span><span class="sxs-lookup"><span data-stu-id="36fa1-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="13f16-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="13f16-109">Return Value</span></span>  
+ <span data-ttu-id="13f16-110">Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.</span><span class="sxs-lookup"><span data-stu-id="13f16-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="36fa1-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="36fa1-111">HRESULT</span></span>|<span data-ttu-id="36fa1-112">Opis</span><span class="sxs-lookup"><span data-stu-id="36fa1-112">Description</span></span>|  
+|<span data-ttu-id="13f16-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="13f16-111">HRESULT</span></span>|<span data-ttu-id="13f16-112">Opis</span><span class="sxs-lookup"><span data-stu-id="13f16-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="36fa1-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="36fa1-113">S_OK</span></span>|<span data-ttu-id="36fa1-114">`celt` elementy zostały zwrócone.</span><span class="sxs-lookup"><span data-stu-id="36fa1-114">`celt` elements were returned.</span></span>|  
-|<span data-ttu-id="36fa1-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="36fa1-115">S_FALSE</span></span>|<span data-ttu-id="36fa1-116">Mniej niż `celt` zwróconych elementów, co oznacza, że wyliczanie zostało zakończone.</span><span class="sxs-lookup"><span data-stu-id="36fa1-116">Fewer than `celt` elements were returned, which indicates that the enumeration is complete.</span></span>|  
+|<span data-ttu-id="13f16-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="13f16-113">S_OK</span></span>|<span data-ttu-id="13f16-114">`celt` elementy zostały zwrócone.</span><span class="sxs-lookup"><span data-stu-id="13f16-114">`celt` elements were returned.</span></span>|  
+|<span data-ttu-id="13f16-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="13f16-115">S_FALSE</span></span>|<span data-ttu-id="13f16-116">Mniej niż `celt` zwróconych elementów, co oznacza, że wyliczanie zostało zakończone.</span><span class="sxs-lookup"><span data-stu-id="13f16-116">Fewer than `celt` elements were returned, which indicates that the enumeration is complete.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="36fa1-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="36fa1-117">Requirements</span></span>  
- <span data-ttu-id="36fa1-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="36fa1-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="13f16-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="13f16-117">Requirements</span></span>  
+ <span data-ttu-id="13f16-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13f16-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="36fa1-119">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="36fa1-119">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="13f16-119">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="13f16-119">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="36fa1-120">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="36fa1-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="13f16-120">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="13f16-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="36fa1-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="36fa1-121">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="13f16-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13f16-121">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="36fa1-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="36fa1-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13f16-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="13f16-122">See also</span></span>
 
-- [<span data-ttu-id="36fa1-123">ICorProfilerThreadEnum, interfejs</span><span class="sxs-lookup"><span data-stu-id="36fa1-123">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [<span data-ttu-id="36fa1-124">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="36fa1-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="13f16-123">ICorProfilerThreadEnum, interfejs</span><span class="sxs-lookup"><span data-stu-id="13f16-123">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [<span data-ttu-id="13f16-124">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="13f16-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

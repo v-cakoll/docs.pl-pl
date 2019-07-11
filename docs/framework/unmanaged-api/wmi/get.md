@@ -16,22 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8a1942f903b1c7c15e58077e35b6a72a86a9419
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c1f838c26d45c0f3cfbd50ac0ce02d234b82ddae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636528"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746663"
 ---
-# <a name="get-function"></a><span data-ttu-id="f8027-103">Get, funkcja</span><span class="sxs-lookup"><span data-stu-id="f8027-103">Get function</span></span>
+# <a name="get-function"></a><span data-ttu-id="a3418-103">Get, funkcja</span><span class="sxs-lookup"><span data-stu-id="a3418-103">Get function</span></span>
 
-<span data-ttu-id="f8027-104">Pobiera wartość określonej właściwości, jeśli taki istnieje.</span><span class="sxs-lookup"><span data-stu-id="f8027-104">Retrieves the specified property value if it exists.</span></span>
+<span data-ttu-id="a3418-104">Pobiera wartość określonej właściwości, jeśli taki istnieje.</span><span class="sxs-lookup"><span data-stu-id="a3418-104">Retrieves the specified property value if it exists.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
-## <a name="syntax"></a><span data-ttu-id="f8027-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="f8027-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="a3418-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="a3418-105">Syntax</span></span>
 
-```
+```cpp
 HRESULT Get (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -43,63 +43,63 @@ HRESULT Get (
 ); 
 ```
 
-## <a name="parameters"></a><span data-ttu-id="f8027-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="f8027-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="a3418-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="a3418-106">Parameters</span></span>
 
 `vFunc`\
-<span data-ttu-id="f8027-107">[in] Ten parametr jest nieużywany.</span><span class="sxs-lookup"><span data-stu-id="f8027-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="a3418-107">[in] Ten parametr jest nieużywany.</span><span class="sxs-lookup"><span data-stu-id="a3418-107">[in] This parameter is unused.</span></span>
 
 `ptr`\
-<span data-ttu-id="f8027-108">[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="f8027-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="a3418-108">[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="a3418-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszName`\
-<span data-ttu-id="f8027-109">[in] Nazwa właściwości.</span><span class="sxs-lookup"><span data-stu-id="f8027-109">[in] The name of the property.</span></span>
+<span data-ttu-id="a3418-109">[in] Nazwa właściwości.</span><span class="sxs-lookup"><span data-stu-id="a3418-109">[in] The name of the property.</span></span>
 
 `lFlags`\
-<span data-ttu-id="f8027-110">[in] Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="f8027-110">[in] Reserved.</span></span> <span data-ttu-id="f8027-111">Ten parametr musi być 0.</span><span class="sxs-lookup"><span data-stu-id="f8027-111">This parameter must be 0.</span></span>
+<span data-ttu-id="a3418-110">[in] Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="a3418-110">[in] Reserved.</span></span> <span data-ttu-id="a3418-111">Ten parametr musi być 0.</span><span class="sxs-lookup"><span data-stu-id="a3418-111">This parameter must be 0.</span></span>
 
 `pVal`\
-<span data-ttu-id="f8027-112">[out] Jeśli funkcja zwraca pomyślnie, zawiera wartość `wszName` właściwości.</span><span class="sxs-lookup"><span data-stu-id="f8027-112">[out] If the function returns successfully, contains the value of the `wszName` property.</span></span> <span data-ttu-id="f8027-113">`pval` Argument jest przypisany poprawny typ i wartość kwalifikatora.</span><span class="sxs-lookup"><span data-stu-id="f8027-113">The `pval` argument is assigned the correct type and value for the qualifier.</span></span>
+<span data-ttu-id="a3418-112">[out] Jeśli funkcja zwraca pomyślnie, zawiera wartość `wszName` właściwości.</span><span class="sxs-lookup"><span data-stu-id="a3418-112">[out] If the function returns successfully, contains the value of the `wszName` property.</span></span> <span data-ttu-id="a3418-113">`pval` Argument jest przypisany poprawny typ i wartość kwalifikatora.</span><span class="sxs-lookup"><span data-stu-id="a3418-113">The `pval` argument is assigned the correct type and value for the qualifier.</span></span>
 
 `pvtType`\
-<span data-ttu-id="f8027-114">[out] Jeśli funkcja zwraca pomyślnie, zawiera [stałą typu modelu wspólnych informacji](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) oznacza typ właściwości.</span><span class="sxs-lookup"><span data-stu-id="f8027-114">[out] If the function returns successfully, contains a [CIM-type constant](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) that indicates the property type.</span></span> <span data-ttu-id="f8027-115">Wartość może być również `null`.</span><span class="sxs-lookup"><span data-stu-id="f8027-115">Its value can also be `null`.</span></span> 
+<span data-ttu-id="a3418-114">[out] Jeśli funkcja zwraca pomyślnie, zawiera [stałą typu modelu wspólnych informacji](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) oznacza typ właściwości.</span><span class="sxs-lookup"><span data-stu-id="a3418-114">[out] If the function returns successfully, contains a [CIM-type constant](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) that indicates the property type.</span></span> <span data-ttu-id="a3418-115">Wartość może być również `null`.</span><span class="sxs-lookup"><span data-stu-id="a3418-115">Its value can also be `null`.</span></span> 
 
 `plFlavor`\
-<span data-ttu-id="f8027-116">[out] Jeśli funkcja zwraca pomyślnie, otrzymuje informacje na temat źródła właściwości.</span><span class="sxs-lookup"><span data-stu-id="f8027-116">[out] If the function returns successfully, receives information about the origin of the property.</span></span> <span data-ttu-id="f8027-117">Wartość może być `null`, lub jeden z następujących stałych WBEM_FLAVOR_TYPE zdefiniowane w *WbemCli.h* pliku nagłówka:</span><span class="sxs-lookup"><span data-stu-id="f8027-117">Its value can be `null`, or one of the following WBEM_FLAVOR_TYPE constants defined in the *WbemCli.h* header file:</span></span> 
+<span data-ttu-id="a3418-116">[out] Jeśli funkcja zwraca pomyślnie, otrzymuje informacje na temat źródła właściwości.</span><span class="sxs-lookup"><span data-stu-id="a3418-116">[out] If the function returns successfully, receives information about the origin of the property.</span></span> <span data-ttu-id="a3418-117">Wartość może być `null`, lub jeden z następujących stałych WBEM_FLAVOR_TYPE zdefiniowane w *WbemCli.h* pliku nagłówka:</span><span class="sxs-lookup"><span data-stu-id="a3418-117">Its value can be `null`, or one of the following WBEM_FLAVOR_TYPE constants defined in the *WbemCli.h* header file:</span></span> 
 
-|<span data-ttu-id="f8027-118">Stała</span><span class="sxs-lookup"><span data-stu-id="f8027-118">Constant</span></span>  |<span data-ttu-id="f8027-119">Wartość</span><span class="sxs-lookup"><span data-stu-id="f8027-119">Value</span></span>  |<span data-ttu-id="f8027-120">Opis</span><span class="sxs-lookup"><span data-stu-id="f8027-120">Description</span></span>  |
+|<span data-ttu-id="a3418-118">Stała</span><span class="sxs-lookup"><span data-stu-id="a3418-118">Constant</span></span>  |<span data-ttu-id="a3418-119">Wartość</span><span class="sxs-lookup"><span data-stu-id="a3418-119">Value</span></span>  |<span data-ttu-id="a3418-120">Opis</span><span class="sxs-lookup"><span data-stu-id="a3418-120">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_ORIGIN_SYSTEM` | <span data-ttu-id="f8027-121">0x40</span><span class="sxs-lookup"><span data-stu-id="f8027-121">0x40</span></span> | <span data-ttu-id="f8027-122">Właściwość jest właściwością standardowych systemowych.</span><span class="sxs-lookup"><span data-stu-id="f8027-122">The property is a standard system property.</span></span> |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | <span data-ttu-id="f8027-123">0x20</span><span class="sxs-lookup"><span data-stu-id="f8027-123">0x20</span></span> | <span data-ttu-id="f8027-124">Dla klasy: Właściwość jest dziedziczona z klasy nadrzędnej.</span><span class="sxs-lookup"><span data-stu-id="f8027-124">For a class: The property is inherited from the parent class.</span></span> <br> <span data-ttu-id="f8027-125">W przypadku wystąpienia: Właściwości, podczas gdy dziedziczone z klasy nadrzędnej, nie został zmodyfikowany przez to wystąpienie.</span><span class="sxs-lookup"><span data-stu-id="f8027-125">For an instance: The property, while inherited from the parent class, has not been modified by the instance.</span></span>  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | <span data-ttu-id="f8027-126">0</span><span class="sxs-lookup"><span data-stu-id="f8027-126">0</span></span> | <span data-ttu-id="f8027-127">Dla klasy: Właściwość należy do klasy pochodnej.</span><span class="sxs-lookup"><span data-stu-id="f8027-127">For a class: The property belongs to the derived class.</span></span> <br> <span data-ttu-id="f8027-128">W przypadku wystąpienia: Ta właściwość jest modyfikowana przez wystąpienie; oznacza to, że podano wartość lub kwalifikator został dodany lub zmodyfikowany.</span><span class="sxs-lookup"><span data-stu-id="f8027-128">For an instance: The property is modified by the instance; that is, a value was supplied, or a qualifier was added or modified.</span></span> |
+| `WBEM_FLAVOR_ORIGIN_SYSTEM` | <span data-ttu-id="a3418-121">0x40</span><span class="sxs-lookup"><span data-stu-id="a3418-121">0x40</span></span> | <span data-ttu-id="a3418-122">Właściwość jest właściwością standardowych systemowych.</span><span class="sxs-lookup"><span data-stu-id="a3418-122">The property is a standard system property.</span></span> |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | <span data-ttu-id="a3418-123">0x20</span><span class="sxs-lookup"><span data-stu-id="a3418-123">0x20</span></span> | <span data-ttu-id="a3418-124">Dla klasy: Właściwość jest dziedziczona z klasy nadrzędnej.</span><span class="sxs-lookup"><span data-stu-id="a3418-124">For a class: The property is inherited from the parent class.</span></span> <br> <span data-ttu-id="a3418-125">W przypadku wystąpienia: Właściwości, podczas gdy dziedziczone z klasy nadrzędnej, nie został zmodyfikowany przez to wystąpienie.</span><span class="sxs-lookup"><span data-stu-id="a3418-125">For an instance: The property, while inherited from the parent class, has not been modified by the instance.</span></span>  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | <span data-ttu-id="a3418-126">0</span><span class="sxs-lookup"><span data-stu-id="a3418-126">0</span></span> | <span data-ttu-id="a3418-127">Dla klasy: Właściwość należy do klasy pochodnej.</span><span class="sxs-lookup"><span data-stu-id="a3418-127">For a class: The property belongs to the derived class.</span></span> <br> <span data-ttu-id="a3418-128">W przypadku wystąpienia: Ta właściwość jest modyfikowana przez wystąpienie; oznacza to, że podano wartość lub kwalifikator został dodany lub zmodyfikowany.</span><span class="sxs-lookup"><span data-stu-id="a3418-128">For an instance: The property is modified by the instance; that is, a value was supplied, or a qualifier was added or modified.</span></span> |
 
-## <a name="return-value"></a><span data-ttu-id="f8027-129">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="f8027-129">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="a3418-129">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="a3418-129">Return value</span></span>
 
-<span data-ttu-id="f8027-130">Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="f8027-130">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="a3418-130">Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="a3418-130">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="f8027-131">Stała</span><span class="sxs-lookup"><span data-stu-id="f8027-131">Constant</span></span>  |<span data-ttu-id="f8027-132">Wartość</span><span class="sxs-lookup"><span data-stu-id="f8027-132">Value</span></span>  |<span data-ttu-id="f8027-133">Opis</span><span class="sxs-lookup"><span data-stu-id="f8027-133">Description</span></span>  |
+|<span data-ttu-id="a3418-131">Stała</span><span class="sxs-lookup"><span data-stu-id="a3418-131">Constant</span></span>  |<span data-ttu-id="a3418-132">Wartość</span><span class="sxs-lookup"><span data-stu-id="a3418-132">Value</span></span>  |<span data-ttu-id="a3418-133">Opis</span><span class="sxs-lookup"><span data-stu-id="a3418-133">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | <span data-ttu-id="f8027-134">0x80041001</span><span class="sxs-lookup"><span data-stu-id="f8027-134">0x80041001</span></span> | <span data-ttu-id="f8027-135">Wystąpił błąd ogólny.</span><span class="sxs-lookup"><span data-stu-id="f8027-135">There has been a general failure.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="f8027-136">0x80041008</span><span class="sxs-lookup"><span data-stu-id="f8027-136">0x80041008</span></span> | <span data-ttu-id="f8027-137">Jeden lub więcej parametrów są nieprawidłowe.</span><span class="sxs-lookup"><span data-stu-id="f8027-137">One or more parameters are not valid.</span></span> |
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="f8027-138">0x80041002</span><span class="sxs-lookup"><span data-stu-id="f8027-138">0x80041002</span></span> | <span data-ttu-id="f8027-139">Nie znaleziono określonej właściwości.</span><span class="sxs-lookup"><span data-stu-id="f8027-139">The specified property was not found.</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="f8027-140">0x80041006</span><span class="sxs-lookup"><span data-stu-id="f8027-140">0x80041006</span></span> | <span data-ttu-id="f8027-141">Nie ma wystarczającej ilości pamięci jest dostępny do ukończenia tej operacji.</span><span class="sxs-lookup"><span data-stu-id="f8027-141">Not enough memory is available to complete the operation.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="f8027-142">0</span><span class="sxs-lookup"><span data-stu-id="f8027-142">0</span></span> | <span data-ttu-id="f8027-143">Wywołanie funkcji zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="f8027-143">The function call was successful.</span></span>  |
+|`WBEM_E_FAILED` | <span data-ttu-id="a3418-134">0x80041001</span><span class="sxs-lookup"><span data-stu-id="a3418-134">0x80041001</span></span> | <span data-ttu-id="a3418-135">Wystąpił błąd ogólny.</span><span class="sxs-lookup"><span data-stu-id="a3418-135">There has been a general failure.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="a3418-136">0x80041008</span><span class="sxs-lookup"><span data-stu-id="a3418-136">0x80041008</span></span> | <span data-ttu-id="a3418-137">Jeden lub więcej parametrów są nieprawidłowe.</span><span class="sxs-lookup"><span data-stu-id="a3418-137">One or more parameters are not valid.</span></span> |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="a3418-138">0x80041002</span><span class="sxs-lookup"><span data-stu-id="a3418-138">0x80041002</span></span> | <span data-ttu-id="a3418-139">Nie znaleziono określonej właściwości.</span><span class="sxs-lookup"><span data-stu-id="a3418-139">The specified property was not found.</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="a3418-140">0x80041006</span><span class="sxs-lookup"><span data-stu-id="a3418-140">0x80041006</span></span> | <span data-ttu-id="a3418-141">Nie ma wystarczającej ilości pamięci jest dostępny do ukończenia tej operacji.</span><span class="sxs-lookup"><span data-stu-id="a3418-141">Not enough memory is available to complete the operation.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="a3418-142">0</span><span class="sxs-lookup"><span data-stu-id="a3418-142">0</span></span> | <span data-ttu-id="a3418-143">Wywołanie funkcji zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="a3418-143">The function call was successful.</span></span>  |
 
-## <a name="remarks"></a><span data-ttu-id="f8027-144">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f8027-144">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="a3418-144">Uwagi</span><span class="sxs-lookup"><span data-stu-id="a3418-144">Remarks</span></span>
 
-<span data-ttu-id="f8027-145">Ta funkcja zawija wywołanie do [IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) metody.</span><span class="sxs-lookup"><span data-stu-id="f8027-145">This function wraps a call to the [IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) method.</span></span>
+<span data-ttu-id="a3418-145">Ta funkcja zawija wywołanie do [IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) metody.</span><span class="sxs-lookup"><span data-stu-id="a3418-145">This function wraps a call to the [IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) method.</span></span>
 
-<span data-ttu-id="f8027-146">`Get` Funkcji może również zwracać właściwości systemu.</span><span class="sxs-lookup"><span data-stu-id="f8027-146">The `Get` function can also return system properties.</span></span>
+<span data-ttu-id="a3418-146">`Get` Funkcji może również zwracać właściwości systemu.</span><span class="sxs-lookup"><span data-stu-id="a3418-146">The `Get` function can also return system properties.</span></span>
 
-<span data-ttu-id="f8027-147">`pVal` Argument jest przypisany poprawny typ i wartość kwalifikatora i COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) — funkcja</span><span class="sxs-lookup"><span data-stu-id="f8027-147">The `pVal` argument is assigned the correct type and value for the qualifier and the COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) function</span></span>
+<span data-ttu-id="a3418-147">`pVal` Argument jest przypisany poprawny typ i wartość kwalifikatora i COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) — funkcja</span><span class="sxs-lookup"><span data-stu-id="a3418-147">The `pVal` argument is assigned the correct type and value for the qualifier and the COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) function</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="f8027-148">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f8027-148">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="a3418-148">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a3418-148">Requirements</span></span>
 
- <span data-ttu-id="f8027-149">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f8027-149">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+ <span data-ttu-id="a3418-149">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a3418-149">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
- <span data-ttu-id="f8027-150">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="f8027-150">**Header:** WMINet_Utils.idl</span></span>
+ <span data-ttu-id="a3418-150">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="a3418-150">**Header:** WMINet_Utils.idl</span></span>
 
- <span data-ttu-id="f8027-151">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="f8027-151">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+ <span data-ttu-id="a3418-151">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="a3418-151">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f8027-152">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f8027-152">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a3418-152">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a3418-152">See also</span></span>
 
-- [<span data-ttu-id="f8027-153">Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="f8027-153">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="a3418-153">Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="a3418-153">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

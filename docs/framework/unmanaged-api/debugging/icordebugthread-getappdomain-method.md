@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12a37ee8367006975b0f8ee4fa638ae3d72f9486
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da473ed176ab6c69ed974d5f28b22fc8eb30c6af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987132"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762521"
 ---
-# <a name="icordebugthreadgetappdomain-method"></a><span data-ttu-id="5c92c-102">ICorDebugThread::GetAppDomain — Metoda</span><span class="sxs-lookup"><span data-stu-id="5c92c-102">ICorDebugThread::GetAppDomain Method</span></span>
-<span data-ttu-id="5c92c-103">Pobiera wskaźnik interfejsu do domeny aplikacji, w którym ta ICorDebugThread jest w trakcie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="5c92c-103">Gets an interface pointer to the application domain in which this ICorDebugThread is currently executing.</span></span>  
+# <a name="icordebugthreadgetappdomain-method"></a><span data-ttu-id="e63c3-102">ICorDebugThread::GetAppDomain — Metoda</span><span class="sxs-lookup"><span data-stu-id="e63c3-102">ICorDebugThread::GetAppDomain Method</span></span>
+<span data-ttu-id="e63c3-103">Pobiera wskaźnik interfejsu do domeny aplikacji, w którym ta ICorDebugThread jest w trakcie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="e63c3-103">Gets an interface pointer to the application domain in which this ICorDebugThread is currently executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5c92c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="5c92c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e63c3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e63c3-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetAppDomain (  
     [out] ICorDebugAppDomain  **ppAppDomain  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5c92c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="5c92c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e63c3-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e63c3-105">Parameters</span></span>  
  `ppAppDomain`  
- <span data-ttu-id="5c92c-106">[out] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, w którym ten wątek jest w trakcie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="5c92c-106">[out] A pointer to an ICorDebugAppDomain object that represents the application domain in which this thread is currently executing.</span></span>  
+ <span data-ttu-id="e63c3-106">[out] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, w którym ten wątek jest w trakcie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="e63c3-106">[out] A pointer to an ICorDebugAppDomain object that represents the application domain in which this thread is currently executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5c92c-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5c92c-107">Requirements</span></span>  
- <span data-ttu-id="5c92c-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5c92c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e63c3-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e63c3-107">Requirements</span></span>  
+ <span data-ttu-id="e63c3-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e63c3-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5c92c-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5c92c-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e63c3-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e63c3-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5c92c-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5c92c-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e63c3-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e63c3-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5c92c-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5c92c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="e63c3-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e63c3-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

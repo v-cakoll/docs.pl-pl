@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35e780c330d0184d40bd99f34c3454f83075c1e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40d1817b9eb7f341899efddb469c7fa17a8f8c0e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777783"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782397"
 ---
-# <a name="imetadataimportgetfieldmarshal-method"></a><span data-ttu-id="68bb2-102">IMetaDataImport::GetFieldMarshal — Metoda</span><span class="sxs-lookup"><span data-stu-id="68bb2-102">IMetaDataImport::GetFieldMarshal Method</span></span>
-<span data-ttu-id="68bb2-103">Pobiera wskaźnik do typu macierzystego, niezarządzanych pola reprezentowanego przez określone pole token metadanych.</span><span class="sxs-lookup"><span data-stu-id="68bb2-103">Gets a pointer to the native, unmanaged type of the field represented by the specified field metadata token.</span></span>  
+# <a name="imetadataimportgetfieldmarshal-method"></a><span data-ttu-id="c0f50-102">IMetaDataImport::GetFieldMarshal — Metoda</span><span class="sxs-lookup"><span data-stu-id="c0f50-102">IMetaDataImport::GetFieldMarshal Method</span></span>
+<span data-ttu-id="c0f50-103">Pobiera wskaźnik do typu macierzystego, niezarządzanych pola reprezentowanego przez określone pole token metadanych.</span><span class="sxs-lookup"><span data-stu-id="c0f50-103">Gets a pointer to the native, unmanaged type of the field represented by the specified field metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68bb2-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="68bb2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c0f50-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c0f50-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetFieldMarshal (  
    [in]  mdToken             tk,   
    [out] PCCOR_SIGNATURE     *ppvNativeType,  
@@ -37,26 +37,26 @@ HRESULT GetFieldMarshal (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="68bb2-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="68bb2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c0f50-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="c0f50-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="68bb2-106">[in] Token metadanych, który reprezentuje pole, które można pobrać międzyoperacyjny szeregowanie informacji dla.</span><span class="sxs-lookup"><span data-stu-id="68bb2-106">[in] The metadata token that represents the field to get interop marshaling information for.</span></span>  
+ <span data-ttu-id="c0f50-106">[in] Token metadanych, który reprezentuje pole, które można pobrać międzyoperacyjny szeregowanie informacji dla.</span><span class="sxs-lookup"><span data-stu-id="c0f50-106">[in] The metadata token that represents the field to get interop marshaling information for.</span></span>  
   
  `ppvNativeType`  
- <span data-ttu-id="68bb2-107">[out] Wskaźnik do podpisania metadanych w polu typu natywnego.</span><span class="sxs-lookup"><span data-stu-id="68bb2-107">[out] A pointer to the metadata signature of the field's native type.</span></span>  
+ <span data-ttu-id="c0f50-107">[out] Wskaźnik do podpisania metadanych w polu typu natywnego.</span><span class="sxs-lookup"><span data-stu-id="c0f50-107">[out] A pointer to the metadata signature of the field's native type.</span></span>  
   
  `pcbNativeType`  
- <span data-ttu-id="68bb2-108">[out] Rozmiar w bajtach `ppvNativeType`.</span><span class="sxs-lookup"><span data-stu-id="68bb2-108">[out] The size in bytes of `ppvNativeType`.</span></span>  
+ <span data-ttu-id="c0f50-108">[out] Rozmiar w bajtach `ppvNativeType`.</span><span class="sxs-lookup"><span data-stu-id="c0f50-108">[out] The size in bytes of `ppvNativeType`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="68bb2-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="68bb2-109">Requirements</span></span>  
- <span data-ttu-id="68bb2-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="68bb2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c0f50-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c0f50-109">Requirements</span></span>  
+ <span data-ttu-id="c0f50-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c0f50-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="68bb2-111">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="68bb2-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c0f50-111">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="c0f50-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="68bb2-112">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="68bb2-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c0f50-112">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c0f50-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="68bb2-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68bb2-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c0f50-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c0f50-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68bb2-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="68bb2-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c0f50-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c0f50-114">See also</span></span>
 
-- [<span data-ttu-id="68bb2-115">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="68bb2-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="68bb2-116">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="68bb2-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="c0f50-115">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="c0f50-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="c0f50-116">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="c0f50-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

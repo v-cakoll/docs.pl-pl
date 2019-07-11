@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e281022cd7bc9b2095fdbd3964061b811ef60e0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b949961e854facf8414c81c47f995b2ac57af3f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949035"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755385"
 ---
-# <a name="icordebugprocesssetthreadcontext-method"></a><span data-ttu-id="2075a-102">ICorDebugProcess::SetThreadContext — Metoda</span><span class="sxs-lookup"><span data-stu-id="2075a-102">ICorDebugProcess::SetThreadContext Method</span></span>
-<span data-ttu-id="2075a-103">Ustawia kontekst dla danego wątku w ramach tego procesu.</span><span class="sxs-lookup"><span data-stu-id="2075a-103">Sets the context for the given thread in this process.</span></span>  
+# <a name="icordebugprocesssetthreadcontext-method"></a><span data-ttu-id="47e3b-102">ICorDebugProcess::SetThreadContext — Metoda</span><span class="sxs-lookup"><span data-stu-id="47e3b-102">ICorDebugProcess::SetThreadContext Method</span></span>
+<span data-ttu-id="47e3b-103">Ustawia kontekst dla danego wątku w ramach tego procesu.</span><span class="sxs-lookup"><span data-stu-id="47e3b-103">Sets the context for the given thread in this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2075a-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2075a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="47e3b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="47e3b-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SetThreadContext(  
     [in] DWORD threadID,  
     [in] ULONG32 contextSize,  
@@ -37,30 +37,30 @@ HRESULT SetThreadContext(
     BYTE context[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2075a-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="2075a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="47e3b-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="47e3b-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="2075a-106">[in] Identyfikator wątku, do których chcesz ustawić kontekst.</span><span class="sxs-lookup"><span data-stu-id="2075a-106">[in] The ID of the thread for which to set the context.</span></span>  
+ <span data-ttu-id="47e3b-106">[in] Identyfikator wątku, do których chcesz ustawić kontekst.</span><span class="sxs-lookup"><span data-stu-id="47e3b-106">[in] The ID of the thread for which to set the context.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="2075a-107">[in] Rozmiar `context` tablicy.</span><span class="sxs-lookup"><span data-stu-id="2075a-107">[in] The size of the `context` array.</span></span>  
+ <span data-ttu-id="47e3b-107">[in] Rozmiar `context` tablicy.</span><span class="sxs-lookup"><span data-stu-id="47e3b-107">[in] The size of the `context` array.</span></span>  
   
  `context`  
- <span data-ttu-id="2075a-108">[in] Tablica bajtów, które opisują kontekst wątku.</span><span class="sxs-lookup"><span data-stu-id="2075a-108">[in] An array of bytes that describe the thread's context.</span></span>  
+ <span data-ttu-id="47e3b-108">[in] Tablica bajtów, które opisują kontekst wątku.</span><span class="sxs-lookup"><span data-stu-id="47e3b-108">[in] An array of bytes that describe the thread's context.</span></span>  
   
- <span data-ttu-id="2075a-109">Kontekst określa z architekturą procesora, na którym wykonywany jest wątek.</span><span class="sxs-lookup"><span data-stu-id="2075a-109">The context specifies the architecture of the processor on which the thread is executing.</span></span>  
+ <span data-ttu-id="47e3b-109">Kontekst określa z architekturą procesora, na którym wykonywany jest wątek.</span><span class="sxs-lookup"><span data-stu-id="47e3b-109">The context specifies the architecture of the processor on which the thread is executing.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2075a-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="2075a-110">Remarks</span></span>  
- <span data-ttu-id="2075a-111">Debuger powinien wywoływać tej metody, a nie Win32 `SetThreadContext` działać, ponieważ wątek rzeczywiście może być w stanie "przejętego", w którym zostało tymczasowo zmienione kontekst.</span><span class="sxs-lookup"><span data-stu-id="2075a-111">The debugger should call this method rather than the Win32 `SetThreadContext` function, because the thread may actually be in a "hijacked" state, in which its context has been temporarily changed.</span></span> <span data-ttu-id="2075a-112">Ta metoda powinna służyć tylko wtedy, gdy wątek jest w kodzie natywnym.</span><span class="sxs-lookup"><span data-stu-id="2075a-112">This method should be used only when a thread is in native code.</span></span> <span data-ttu-id="2075a-113">Użyj [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) dla wątków w kodzie zarządzanym.</span><span class="sxs-lookup"><span data-stu-id="2075a-113">Use [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) for threads in managed code.</span></span> <span data-ttu-id="2075a-114">Nigdy nie należy modyfikować kontekst wątku podczas zdarzenia debugowania poza pasmem (OOB).</span><span class="sxs-lookup"><span data-stu-id="2075a-114">You should never need to modify the context of a thread during an out-of-band (OOB) debug event.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="47e3b-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="47e3b-110">Remarks</span></span>  
+ <span data-ttu-id="47e3b-111">Debuger powinien wywoływać tej metody, a nie Win32 `SetThreadContext` działać, ponieważ wątek rzeczywiście może być w stanie "przejętego", w którym zostało tymczasowo zmienione kontekst.</span><span class="sxs-lookup"><span data-stu-id="47e3b-111">The debugger should call this method rather than the Win32 `SetThreadContext` function, because the thread may actually be in a "hijacked" state, in which its context has been temporarily changed.</span></span> <span data-ttu-id="47e3b-112">Ta metoda powinna służyć tylko wtedy, gdy wątek jest w kodzie natywnym.</span><span class="sxs-lookup"><span data-stu-id="47e3b-112">This method should be used only when a thread is in native code.</span></span> <span data-ttu-id="47e3b-113">Użyj [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) dla wątków w kodzie zarządzanym.</span><span class="sxs-lookup"><span data-stu-id="47e3b-113">Use [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) for threads in managed code.</span></span> <span data-ttu-id="47e3b-114">Nigdy nie należy modyfikować kontekst wątku podczas zdarzenia debugowania poza pasmem (OOB).</span><span class="sxs-lookup"><span data-stu-id="47e3b-114">You should never need to modify the context of a thread during an out-of-band (OOB) debug event.</span></span>  
   
- <span data-ttu-id="2075a-115">Dane przekazywane musi być strukturą kontekstu dla bieżącej platformy.</span><span class="sxs-lookup"><span data-stu-id="2075a-115">The data passed must be a context structure for the current platform.</span></span>  
+ <span data-ttu-id="47e3b-115">Dane przekazywane musi być strukturą kontekstu dla bieżącej platformy.</span><span class="sxs-lookup"><span data-stu-id="47e3b-115">The data passed must be a context structure for the current platform.</span></span>  
   
- <span data-ttu-id="2075a-116">Ta metoda może uszkodzić środowisko wykonawcze, jeśli niepoprawnie.</span><span class="sxs-lookup"><span data-stu-id="2075a-116">This method can corrupt the runtime if used improperly.</span></span>  
+ <span data-ttu-id="47e3b-116">Ta metoda może uszkodzić środowisko wykonawcze, jeśli niepoprawnie.</span><span class="sxs-lookup"><span data-stu-id="47e3b-116">This method can corrupt the runtime if used improperly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2075a-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2075a-117">Requirements</span></span>  
- <span data-ttu-id="2075a-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2075a-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="47e3b-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="47e3b-117">Requirements</span></span>  
+ <span data-ttu-id="47e3b-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="47e3b-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2075a-119">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2075a-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="47e3b-119">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="47e3b-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2075a-120">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2075a-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="47e3b-120">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="47e3b-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2075a-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2075a-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="47e3b-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="47e3b-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

@@ -17,41 +17,41 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68fe41afa1999295a32b930b779991e2bbddb19a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42cc0896dce713daed310f07d39a02bfb7386030
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042773"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777094"
 ---
-# <a name="imetadataerroronerror-method"></a><span data-ttu-id="c1c94-102">IMetaDataError::OnError — Metoda</span><span class="sxs-lookup"><span data-stu-id="c1c94-102">IMetaDataError::OnError Method</span></span>
-<span data-ttu-id="c1c94-103">Zapewnia powiadomienie błędów występujących podczas scalania metadanych.</span><span class="sxs-lookup"><span data-stu-id="c1c94-103">Provides notification of errors that occur during the metadata merge.</span></span>  
+# <a name="imetadataerroronerror-method"></a><span data-ttu-id="c8b03-102">IMetaDataError::OnError — Metoda</span><span class="sxs-lookup"><span data-stu-id="c8b03-102">IMetaDataError::OnError Method</span></span>
+<span data-ttu-id="c8b03-103">Zapewnia powiadomienie błędów występujących podczas scalania metadanych.</span><span class="sxs-lookup"><span data-stu-id="c8b03-103">Provides notification of errors that occur during the metadata merge.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c1c94-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c1c94-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c8b03-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c8b03-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT OnError (  
     [in] HRESULT   hrError,   
     [in] mdToken   token  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c1c94-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="c1c94-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c8b03-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="c8b03-105">Parameters</span></span>  
  `hrError`  
- <span data-ttu-id="c1c94-106">[in] Wartość błędu HRESULT zwracane do wywoływania metody.</span><span class="sxs-lookup"><span data-stu-id="c1c94-106">[in] The HRESULT error value returned to the calling method.</span></span>  
+ <span data-ttu-id="c8b03-106">[in] Wartość błędu HRESULT zwracane do wywoływania metody.</span><span class="sxs-lookup"><span data-stu-id="c8b03-106">[in] The HRESULT error value returned to the calling method.</span></span>  
   
  `token`  
- <span data-ttu-id="c1c94-107">[in] Token metadanych obiektu kod, który został scalane, gdy wystąpił błąd.</span><span class="sxs-lookup"><span data-stu-id="c1c94-107">[in] The metadata token of the code object that was being merged when the error occurred.</span></span>  
+ <span data-ttu-id="c8b03-107">[in] Token metadanych obiektu kod, który został scalane, gdy wystąpił błąd.</span><span class="sxs-lookup"><span data-stu-id="c8b03-107">[in] The metadata token of the code object that was being merged when the error occurred.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c1c94-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c1c94-108">Requirements</span></span>  
- <span data-ttu-id="c1c94-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c1c94-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c8b03-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c8b03-108">Requirements</span></span>  
+ <span data-ttu-id="c8b03-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c8b03-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c1c94-110">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="c1c94-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c8b03-110">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="c8b03-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c1c94-111">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c1c94-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c8b03-111">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c8b03-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c1c94-112">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1c94-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c8b03-112">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8b03-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c1c94-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c1c94-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8b03-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c8b03-113">See also</span></span>
 
-- [<span data-ttu-id="c1c94-114">IMetaDataError, interfejs</span><span class="sxs-lookup"><span data-stu-id="c1c94-114">IMetaDataError Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)
+- [<span data-ttu-id="c8b03-114">IMetaDataError, interfejs</span><span class="sxs-lookup"><span data-stu-id="c8b03-114">IMetaDataError Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)

@@ -17,46 +17,46 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 608612f6a0f4395092e33ce75fdbd249f19ae4f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03c969cbda8fdaf8fa418c2246f3d0937e622250
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771842"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765744"
 ---
-# <a name="iclrruntimehoststart-method"></a><span data-ttu-id="99c39-102">ICLRRuntimeHost::Start — Metoda</span><span class="sxs-lookup"><span data-stu-id="99c39-102">ICLRRuntimeHost::Start Method</span></span>
-<span data-ttu-id="99c39-103">Inicjuje środowisko uruchomieniowe języka wspólnego (CLR) do procesu.</span><span class="sxs-lookup"><span data-stu-id="99c39-103">Initializes the common language runtime (CLR) into a process.</span></span>  
+# <a name="iclrruntimehoststart-method"></a><span data-ttu-id="03b89-102">ICLRRuntimeHost::Start — Metoda</span><span class="sxs-lookup"><span data-stu-id="03b89-102">ICLRRuntimeHost::Start Method</span></span>
+<span data-ttu-id="03b89-103">Inicjuje środowisko uruchomieniowe języka wspólnego (CLR) do procesu.</span><span class="sxs-lookup"><span data-stu-id="03b89-103">Initializes the common language runtime (CLR) into a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="99c39-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="99c39-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03b89-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="03b89-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Start();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="99c39-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="99c39-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="03b89-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="03b89-105">Return Value</span></span>  
   
-|<span data-ttu-id="99c39-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="99c39-106">HRESULT</span></span>|<span data-ttu-id="99c39-107">Opis</span><span class="sxs-lookup"><span data-stu-id="99c39-107">Description</span></span>|  
+|<span data-ttu-id="03b89-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="03b89-106">HRESULT</span></span>|<span data-ttu-id="03b89-107">Opis</span><span class="sxs-lookup"><span data-stu-id="03b89-107">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="99c39-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="99c39-108">S_OK</span></span>|<span data-ttu-id="99c39-109">`Start` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="99c39-109">`Start` returned successfully.</span></span>|  
-|<span data-ttu-id="99c39-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="99c39-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="99c39-111">Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="99c39-111">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="99c39-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="99c39-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="99c39-113">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="99c39-113">The call timed out.</span></span>|  
-|<span data-ttu-id="99c39-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="99c39-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="99c39-115">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="99c39-115">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="99c39-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="99c39-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="99c39-117">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="99c39-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="99c39-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="99c39-118">E_FAIL</span></span>|<span data-ttu-id="99c39-119">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="99c39-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="99c39-120">Jeśli metoda zwraca E_FAIL, środowisko CLR nie będzie już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="99c39-120">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="99c39-121">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="99c39-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="03b89-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="03b89-108">S_OK</span></span>|<span data-ttu-id="03b89-109">`Start` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="03b89-109">`Start` returned successfully.</span></span>|  
+|<span data-ttu-id="03b89-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="03b89-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="03b89-111">Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="03b89-111">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="03b89-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="03b89-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="03b89-113">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="03b89-113">The call timed out.</span></span>|  
+|<span data-ttu-id="03b89-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="03b89-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="03b89-115">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="03b89-115">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="03b89-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="03b89-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="03b89-117">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="03b89-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="03b89-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="03b89-118">E_FAIL</span></span>|<span data-ttu-id="03b89-119">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="03b89-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="03b89-120">Jeśli metoda zwraca E_FAIL, środowisko CLR nie będzie już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="03b89-120">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="03b89-121">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="03b89-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="99c39-122">Uwagi</span><span class="sxs-lookup"><span data-stu-id="99c39-122">Remarks</span></span>  
- <span data-ttu-id="99c39-123">W wielu scenariuszach nie jest konieczne do wywołania `Start`, ponieważ środowisko uruchomieniowe będzie inicjował się automatycznie na pierwsze żądanie do uruchomienia kodu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="99c39-123">In many scenarios it is not necessary to call `Start`, because the runtime will initialize itself automatically upon the first request to run managed code.</span></span> <span data-ttu-id="99c39-124">Można jednak użyć `Start` określić dokładnie w gdy środowisko wykonawcze powinno zostać zainicjowane.</span><span class="sxs-lookup"><span data-stu-id="99c39-124">You can, however, use `Start` to specify exactly when the runtime should be initialized.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="03b89-122">Uwagi</span><span class="sxs-lookup"><span data-stu-id="03b89-122">Remarks</span></span>  
+ <span data-ttu-id="03b89-123">W wielu scenariuszach nie jest konieczne do wywołania `Start`, ponieważ środowisko uruchomieniowe będzie inicjował się automatycznie na pierwsze żądanie do uruchomienia kodu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="03b89-123">In many scenarios it is not necessary to call `Start`, because the runtime will initialize itself automatically upon the first request to run managed code.</span></span> <span data-ttu-id="03b89-124">Można jednak użyć `Start` określić dokładnie w gdy środowisko wykonawcze powinno zostać zainicjowane.</span><span class="sxs-lookup"><span data-stu-id="03b89-124">You can, however, use `Start` to specify exactly when the runtime should be initialized.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="99c39-125">Wymagania</span><span class="sxs-lookup"><span data-stu-id="99c39-125">Requirements</span></span>  
- <span data-ttu-id="99c39-126">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="99c39-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03b89-125">Wymagania</span><span class="sxs-lookup"><span data-stu-id="03b89-125">Requirements</span></span>  
+ <span data-ttu-id="03b89-126">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03b89-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="99c39-127">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="99c39-127">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="03b89-127">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="03b89-127">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="99c39-128">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="99c39-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="03b89-128">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="03b89-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="99c39-129">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="99c39-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="03b89-129">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03b89-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="99c39-130">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="99c39-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03b89-130">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="03b89-130">See also</span></span>
 
 - <xref:System.AppDomain>
-- [<span data-ttu-id="99c39-131">ICLRRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="99c39-131">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [<span data-ttu-id="03b89-131">ICLRRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="03b89-131">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

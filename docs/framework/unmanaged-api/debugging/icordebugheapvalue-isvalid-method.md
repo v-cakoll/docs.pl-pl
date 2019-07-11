@@ -17,40 +17,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e1edb1d25a62a9a689c397339740e563d986c8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ca3b86e90dcb76c1fece44cf2c5ed68e073d8e7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700234"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757220"
 ---
-# <a name="icordebugheapvalueisvalid-method"></a><span data-ttu-id="13d1a-102">ICorDebugHeapValue::IsValid — Metoda</span><span class="sxs-lookup"><span data-stu-id="13d1a-102">ICorDebugHeapValue::IsValid Method</span></span>
-<span data-ttu-id="13d1a-103">Pobiera wartość wskazującą, czy obiekt reprezentowany przez ten ICorDebugHeapValue jest prawidłowa.</span><span class="sxs-lookup"><span data-stu-id="13d1a-103">Gets a value that indicates whether the object represented by this ICorDebugHeapValue is valid.</span></span>  
+# <a name="icordebugheapvalueisvalid-method"></a><span data-ttu-id="cbbb9-102">ICorDebugHeapValue::IsValid — Metoda</span><span class="sxs-lookup"><span data-stu-id="cbbb9-102">ICorDebugHeapValue::IsValid Method</span></span>
+<span data-ttu-id="cbbb9-103">Pobiera wartość wskazującą, czy obiekt reprezentowany przez ten ICorDebugHeapValue jest prawidłowa.</span><span class="sxs-lookup"><span data-stu-id="cbbb9-103">Gets a value that indicates whether the object represented by this ICorDebugHeapValue is valid.</span></span>  
   
- <span data-ttu-id="13d1a-104">Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0.</span><span class="sxs-lookup"><span data-stu-id="13d1a-104">This method has been deprecated in the .NET Framework version 2.0.</span></span>  
+ <span data-ttu-id="cbbb9-104">Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0.</span><span class="sxs-lookup"><span data-stu-id="cbbb9-104">This method has been deprecated in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="13d1a-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="13d1a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cbbb9-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="cbbb9-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT IsValid (  
     [out] BOOL    *pbValid  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="13d1a-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="13d1a-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cbbb9-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="cbbb9-106">Parameters</span></span>  
  `pbValid`  
- <span data-ttu-id="13d1a-107">[out] Wskaźnik na wartość logiczną, wskazującą, czy ta wartość na stosie jest prawidłowa.</span><span class="sxs-lookup"><span data-stu-id="13d1a-107">[out] A pointer to a Boolean value that indicates whether this value on the heap is valid.</span></span>  
+ <span data-ttu-id="cbbb9-107">[out] Wskaźnik na wartość logiczną, wskazującą, czy ta wartość na stosie jest prawidłowa.</span><span class="sxs-lookup"><span data-stu-id="cbbb9-107">[out] A pointer to a Boolean value that indicates whether this value on the heap is valid.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="13d1a-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="13d1a-108">Remarks</span></span>  
- <span data-ttu-id="13d1a-109">Wartość jest nieprawidłowa, jeśli został odzyskany przez moduł odśmiecania pamięci.</span><span class="sxs-lookup"><span data-stu-id="13d1a-109">The value is invalid if it has been reclaimed by the garbage collector.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cbbb9-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="cbbb9-108">Remarks</span></span>  
+ <span data-ttu-id="cbbb9-109">Wartość jest nieprawidłowa, jeśli został odzyskany przez moduł odśmiecania pamięci.</span><span class="sxs-lookup"><span data-stu-id="cbbb9-109">The value is invalid if it has been reclaimed by the garbage collector.</span></span>  
   
- <span data-ttu-id="13d1a-110">Ta metoda jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="13d1a-110">This method has been deprecated.</span></span> <span data-ttu-id="13d1a-111">W programie .NET Framework 2.0, wszystkie wartości są ważne do [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) jest wywoływana, w których wartości są nieważne.</span><span class="sxs-lookup"><span data-stu-id="13d1a-111">In the .NET Framework 2.0, all values are valid until [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) is called, at which time the values are invalidated.</span></span>  
+ <span data-ttu-id="cbbb9-110">Ta metoda jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="cbbb9-110">This method has been deprecated.</span></span> <span data-ttu-id="cbbb9-111">W programie .NET Framework 2.0, wszystkie wartości są ważne do [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) jest wywoływana, w których wartości są nieważne.</span><span class="sxs-lookup"><span data-stu-id="cbbb9-111">In the .NET Framework 2.0, all values are valid until [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) is called, at which time the values are invalidated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="13d1a-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="13d1a-112">Requirements</span></span>  
- <span data-ttu-id="13d1a-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13d1a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cbbb9-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="cbbb9-112">Requirements</span></span>  
+ <span data-ttu-id="cbbb9-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cbbb9-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="13d1a-114">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="13d1a-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cbbb9-114">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cbbb9-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="13d1a-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="13d1a-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cbbb9-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cbbb9-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="13d1a-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13d1a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="cbbb9-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cbbb9-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

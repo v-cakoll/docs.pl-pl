@@ -17,44 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c48e92c73347957d8acc5c209f6f5473e9e18524
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2192b5d3b240211c8982eab7539896ea3626a072
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988276"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759671"
 ---
-# <a name="icordebugmanagedcallbackcreatethread-method"></a><span data-ttu-id="176e0-102">ICorDebugManagedCallback::CreateThread — Metoda</span><span class="sxs-lookup"><span data-stu-id="176e0-102">ICorDebugManagedCallback::CreateThread Method</span></span>
-<span data-ttu-id="176e0-103">Powiadamia debugera, czy wątek rozpoczęła wykonywanie kodu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="176e0-103">Notifies the debugger that a thread has started executing managed code.</span></span>  
+# <a name="icordebugmanagedcallbackcreatethread-method"></a><span data-ttu-id="195e6-102">ICorDebugManagedCallback::CreateThread — Metoda</span><span class="sxs-lookup"><span data-stu-id="195e6-102">ICorDebugManagedCallback::CreateThread Method</span></span>
+<span data-ttu-id="195e6-103">Powiadamia debugera, czy wątek rozpoczęła wykonywanie kodu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="195e6-103">Notifies the debugger that a thread has started executing managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="176e0-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="176e0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="195e6-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="195e6-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT CreateThread (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugThread    *thread  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="176e0-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="176e0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="195e6-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="195e6-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="176e0-106">[in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, która zawiera wątku.</span><span class="sxs-lookup"><span data-stu-id="176e0-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the thread.</span></span>  
+ <span data-ttu-id="195e6-106">[in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, która zawiera wątku.</span><span class="sxs-lookup"><span data-stu-id="195e6-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the thread.</span></span>  
   
  `thread`  
- <span data-ttu-id="176e0-107">[in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątku.</span><span class="sxs-lookup"><span data-stu-id="176e0-107">[in] A pointer to an ICorDebugThread object that represents the thread.</span></span>  
+ <span data-ttu-id="195e6-107">[in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątku.</span><span class="sxs-lookup"><span data-stu-id="195e6-107">[in] A pointer to an ICorDebugThread object that represents the thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="176e0-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="176e0-108">Remarks</span></span>  
- <span data-ttu-id="176e0-109">Wątek zostanie umieszczony w pierwszej instrukcji kodu zarządzanego do wykonania.</span><span class="sxs-lookup"><span data-stu-id="176e0-109">The thread will be positioned at the first managed code instruction to be executed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="195e6-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="195e6-108">Remarks</span></span>  
+ <span data-ttu-id="195e6-109">Wątek zostanie umieszczony w pierwszej instrukcji kodu zarządzanego do wykonania.</span><span class="sxs-lookup"><span data-stu-id="195e6-109">The thread will be positioned at the first managed code instruction to be executed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="176e0-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="176e0-110">Requirements</span></span>  
- <span data-ttu-id="176e0-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="176e0-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="195e6-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="195e6-110">Requirements</span></span>  
+ <span data-ttu-id="195e6-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="195e6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="176e0-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="176e0-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="195e6-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="195e6-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="176e0-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="176e0-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="195e6-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="195e6-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="176e0-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="176e0-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="195e6-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="195e6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="176e0-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="176e0-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="195e6-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="195e6-115">See also</span></span>
 
-- [<span data-ttu-id="176e0-116">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="176e0-116">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="195e6-116">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="195e6-116">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

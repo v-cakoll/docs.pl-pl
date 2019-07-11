@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ead1c1a91b910e7cfbb09f17ba823fc7a77ce0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76c852ac81126895ea3a2e1b40473722c8445201
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609012"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746558"
 ---
-# <a name="getcurrentapartmenttype-function"></a><span data-ttu-id="612c4-103">GetCurrentApartmentType — funkcja</span><span class="sxs-lookup"><span data-stu-id="612c4-103">GetCurrentApartmentType function</span></span>
-<span data-ttu-id="612c4-104">Pobiera rodzaj typu apartment, w którym jest wykonywany obiekt wywołujący.</span><span class="sxs-lookup"><span data-stu-id="612c4-104">Retrieves the type of apartment in which the caller is executing.</span></span>   
+# <a name="getcurrentapartmenttype-function"></a><span data-ttu-id="7711b-103">GetCurrentApartmentType — funkcja</span><span class="sxs-lookup"><span data-stu-id="7711b-103">GetCurrentApartmentType function</span></span>
+<span data-ttu-id="7711b-104">Pobiera rodzaj typu apartment, w którym jest wykonywany obiekt wywołujący.</span><span class="sxs-lookup"><span data-stu-id="7711b-104">Retrieves the type of apartment in which the caller is executing.</span></span>   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="612c4-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="612c4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7711b-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="7711b-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetCurrentApartmentType (
    [in] int                   vFunc, 
    [in] IComThreadingInfo*    ptr, 
@@ -38,35 +38,35 @@ HRESULT GetCurrentApartmentType (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="612c4-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="612c4-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="7711b-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="7711b-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="612c4-107">[in] Ten parametr jest nieużywany.</span><span class="sxs-lookup"><span data-stu-id="612c4-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="7711b-107">[in] Ten parametr jest nieużywany.</span><span class="sxs-lookup"><span data-stu-id="7711b-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="612c4-108">[in] Wskaźnik do [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="612c4-108">[in] A pointer to an [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) instance.</span></span>
+<span data-ttu-id="7711b-108">[in] Wskaźnik do [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="7711b-108">[in] A pointer to an [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) instance.</span></span>
 
 `aptType`  
-<span data-ttu-id="612c4-109">[out] Wskaźnik do [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) wartość wyliczenia wskazująca apartamentu obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="612c4-109">[out] A pointer to an [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) enumeration value that indicates the caller's apartment.</span></span>
+<span data-ttu-id="7711b-109">[out] Wskaźnik do [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) wartość wyliczenia wskazująca apartamentu obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="7711b-109">[out] A pointer to an [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) enumeration value that indicates the caller's apartment.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="612c4-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="612c4-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="7711b-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="7711b-110">Return value</span></span>
 
-|<span data-ttu-id="612c4-111">Stała</span><span class="sxs-lookup"><span data-stu-id="612c4-111">Constant</span></span>  |<span data-ttu-id="612c4-112">Wartość</span><span class="sxs-lookup"><span data-stu-id="612c4-112">Value</span></span>  |<span data-ttu-id="612c4-113">Opis</span><span class="sxs-lookup"><span data-stu-id="612c4-113">Description</span></span>  |
+|<span data-ttu-id="7711b-111">Stała</span><span class="sxs-lookup"><span data-stu-id="7711b-111">Constant</span></span>  |<span data-ttu-id="7711b-112">Wartość</span><span class="sxs-lookup"><span data-stu-id="7711b-112">Value</span></span>  |<span data-ttu-id="7711b-113">Opis</span><span class="sxs-lookup"><span data-stu-id="7711b-113">Description</span></span>  |
 |---------|---------|---------|
-| `S_OK` | <span data-ttu-id="612c4-114">0</span><span class="sxs-lookup"><span data-stu-id="612c4-114">0</span></span> | <span data-ttu-id="612c4-115">Funkcja została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="612c4-115">The function completed successfully.</span></span> |
-| `E_FAIL` | <span data-ttu-id="612c4-116">0x80000008</span><span class="sxs-lookup"><span data-stu-id="612c4-116">0x80000008</span></span> | <span data-ttu-id="612c4-117">Obiekt wywołujący nie jest wykonywana w komórce.</span><span class="sxs-lookup"><span data-stu-id="612c4-117">The caller is not executing in an apartment.</span></span> |
+| `S_OK` | <span data-ttu-id="7711b-114">0</span><span class="sxs-lookup"><span data-stu-id="7711b-114">0</span></span> | <span data-ttu-id="7711b-115">Funkcja została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="7711b-115">The function completed successfully.</span></span> |
+| `E_FAIL` | <span data-ttu-id="7711b-116">0x80000008</span><span class="sxs-lookup"><span data-stu-id="7711b-116">0x80000008</span></span> | <span data-ttu-id="7711b-117">Obiekt wywołujący nie jest wykonywana w komórce.</span><span class="sxs-lookup"><span data-stu-id="7711b-117">The caller is not executing in an apartment.</span></span> |
   
-## <a name="remarks"></a><span data-ttu-id="612c4-118">Uwagi</span><span class="sxs-lookup"><span data-stu-id="612c4-118">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="7711b-118">Uwagi</span><span class="sxs-lookup"><span data-stu-id="7711b-118">Remarks</span></span>
 
-<span data-ttu-id="612c4-119">Ta funkcja zawija wywołanie do [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) metody.</span><span class="sxs-lookup"><span data-stu-id="612c4-119">This function wraps a call to the [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
+<span data-ttu-id="7711b-119">Ta funkcja zawija wywołanie do [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) metody.</span><span class="sxs-lookup"><span data-stu-id="7711b-119">This function wraps a call to the [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="612c4-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="612c4-120">Requirements</span></span>  
- <span data-ttu-id="612c4-121">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="612c4-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7711b-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7711b-120">Requirements</span></span>  
+ <span data-ttu-id="7711b-121">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7711b-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="612c4-122">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="612c4-122">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="7711b-122">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="7711b-122">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="612c4-123">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="612c4-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="7711b-123">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="7711b-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="612c4-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="612c4-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7711b-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7711b-124">See also</span></span>
 
-- [<span data-ttu-id="612c4-125">Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="612c4-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="7711b-125">Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="7711b-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

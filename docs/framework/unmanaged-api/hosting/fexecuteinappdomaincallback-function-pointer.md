@@ -16,41 +16,41 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26b3de456bc28f51cb20ab72b3934041ec6b06ae
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8edd2a42ed1b826e1b6ea09e92165bc9fa967a8b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490444"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760249"
 ---
-# <a name="fexecuteinappdomaincallback-function-pointer"></a><span data-ttu-id="11c00-102">FExecuteInAppDomainCallback — Wskaźnik funkcji</span><span class="sxs-lookup"><span data-stu-id="11c00-102">FExecuteInAppDomainCallback Function Pointer</span></span>
-<span data-ttu-id="11c00-103">Wskazuje funkcję, która jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR) do wykonywania kodu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="11c00-103">Points to a function that is called by the common language runtime (CLR) to execute managed code.</span></span>  
+# <a name="fexecuteinappdomaincallback-function-pointer"></a><span data-ttu-id="b4a6c-102">FExecuteInAppDomainCallback — Wskaźnik funkcji</span><span class="sxs-lookup"><span data-stu-id="b4a6c-102">FExecuteInAppDomainCallback Function Pointer</span></span>
+<span data-ttu-id="b4a6c-103">Wskazuje funkcję, która jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR) do wykonywania kodu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="b4a6c-103">Points to a function that is called by the common language runtime (CLR) to execute managed code.</span></span>  
   
- <span data-ttu-id="11c00-104">Ten wskaźnik funkcji jest przestarzała w programie .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="11c00-104">This function pointer has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="b4a6c-104">Ten wskaźnik funkcji jest przestarzała w programie .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="b4a6c-104">This function pointer has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="11c00-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="11c00-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b4a6c-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="b4a6c-105">Syntax</span></span>  
   
-```  
+```cpp  
 typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (  
     [in] void  *cookie  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="11c00-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="11c00-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b4a6c-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="b4a6c-106">Parameters</span></span>  
  `cookie`  
- <span data-ttu-id="11c00-107">[in] Wskaźnik do nieprzezroczyste pamięci przydzielonej przez obiekt wywołujący, zawierający kod zarządzany do wykonania.</span><span class="sxs-lookup"><span data-stu-id="11c00-107">[in] A pointer to opaque caller-allocated memory that contains the managed code to be executed.</span></span>  
+ <span data-ttu-id="b4a6c-107">[in] Wskaźnik do nieprzezroczyste pamięci przydzielonej przez obiekt wywołujący, zawierający kod zarządzany do wykonania.</span><span class="sxs-lookup"><span data-stu-id="b4a6c-107">[in] A pointer to opaque caller-allocated memory that contains the managed code to be executed.</span></span>  
   
- <span data-ttu-id="11c00-108">Alokacji i okresie istnienia tej pamięci są kontrolowane przez obiekt wywołujący (CLR).</span><span class="sxs-lookup"><span data-stu-id="11c00-108">The allocation and lifetime of this memory are controlled by the caller (that is, the CLR).</span></span> <span data-ttu-id="11c00-109">Nie jest to pamięć sterty zarządzanej CLR.</span><span class="sxs-lookup"><span data-stu-id="11c00-109">This is not CLR managed-heap memory.</span></span>  
+ <span data-ttu-id="b4a6c-108">Alokacji i okresie istnienia tej pamięci są kontrolowane przez obiekt wywołujący (CLR).</span><span class="sxs-lookup"><span data-stu-id="b4a6c-108">The allocation and lifetime of this memory are controlled by the caller (that is, the CLR).</span></span> <span data-ttu-id="b4a6c-109">Nie jest to pamięć sterty zarządzanej CLR.</span><span class="sxs-lookup"><span data-stu-id="b4a6c-109">This is not CLR managed-heap memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="11c00-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="11c00-110">Requirements</span></span>  
- <span data-ttu-id="11c00-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="11c00-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b4a6c-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b4a6c-110">Requirements</span></span>  
+ <span data-ttu-id="b4a6c-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b4a6c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="11c00-112">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="11c00-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b4a6c-112">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b4a6c-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="11c00-113">**Biblioteka:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="11c00-113">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="b4a6c-113">**Biblioteka:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="b4a6c-113">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="11c00-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="11c00-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b4a6c-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b4a6c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="11c00-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="11c00-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b4a6c-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b4a6c-115">See also</span></span>
 
-- [<span data-ttu-id="11c00-116">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="11c00-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="b4a6c-116">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="b4a6c-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

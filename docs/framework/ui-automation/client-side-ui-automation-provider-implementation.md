@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9e3f0941d2fd92b8657d2d9df5b050e7793eb1d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02d77dfeb7a00292639131cad72cff7e079704c5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647211"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802220"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie klienta
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "64647211"
   
  Jednak starsze formanty, takie jak te w [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] bezpośrednio czy obsługa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Te kontrolki zamiast obsługiwanych przez dostawców, które istnieją w procesie klienta i uzyskać informacje na temat kontrolek przy użyciu komunikacji między procesami; na przykład przez monitorowanie komunikatów systemu windows do i z kontrolki. Taki dostawcy po stronie klienta są czasami nazywane serwerami proxy.  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] dostarcza dostawców dla warstwy standardowej [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] i formanty Windows Forms. Ponadto zapewnia częściowe rezerwowego dostawcy [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] obsługiwać dowolną kontrolkę, która nie jest obsługiwana przez innego dostawcę po stronie serwera lub serwer proxy, lecz jest [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] implementacji. Ci dostawcy są automatycznie załadowany i dostępne dla aplikacji klienckich.  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] dostarcza dostawców dla warstwy standardowej [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] i formanty Windows Forms. Ponadto zapewnia częściowe rezerwowego dostawcy [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] obsługiwać dowolną kontrolkę, która nie jest obsługiwana przez innego dostawcę po stronie serwera lub serwer proxy, ale ma z implementacją Microsoft Active Accessibility. Ci dostawcy są automatycznie załadowany i dostępne dla aplikacji klienckich.  
   
  Aby uzyskać więcej informacji na temat obsługi [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] i kontrolek Windows Forms, zobacz [UI Automation obsługi dla standardowych kontrolek](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
   

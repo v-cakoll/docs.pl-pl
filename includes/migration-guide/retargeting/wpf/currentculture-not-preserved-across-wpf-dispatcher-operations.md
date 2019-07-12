@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 190bca720504535cb54e498ca8da23fbb6634ad4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cce19d6c9afa5f5ce9bb17b5b5d92f2060a08414
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758430"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804558"
 ---
 ### <a name="currentculture-is-not-preserved-across-wpf-dispatcher-operations"></a>CurrentCulture nie są zachowywane w operacji dyspozytora WPF
 
@@ -12,6 +12,7 @@ ms.locfileid: "61758430"
 |---|---|
 |Szczegóły|Począwszy od programu .NET Framework 4.6, zmienia się na <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> lub <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> w ramach <xref:System.Windows.Threading.Dispatcher?displayProperty=name> zostaną utracone na końcu tej operacji dyspozytora. Podobnie, zmiany <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> lub <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> wprowadzone poza dyspozytora operacji nie zostaną odzwierciedlone po będzie działał. Praktycznie wypowiedzi, oznacza to, że <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> i <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> zmiany mogą nie przepływ między WPF UI wywołania zwrotne i inny kod w aplikacji WPF. Jest to spowodowane zmianę <xref:System.Threading.ExecutionContext?displayProperty=name> , dzięki któremu <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> i <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> mają być przechowywane na początku kontekstu wykonania za pomocą aplikacji przeznaczonych dla platformy .NET Framework 4.6. Operacje dyspozytora WPF przechowywać kontekstu wykonania pozwala rozpocząć operację i przywrócić poprzedni kontekst, po zakończeniu operacji. Ponieważ <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> i <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> są teraz częścią tego kontekstu, zmiany do nich w ramach operacji Dyspozytor nie są utrwalane poza wykonać operację.|
 |Sugestia|Aplikacje, których obejmie ta zmiana może go obejść, przechowując żądaną <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> lub <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> w polu i ewidencjonowanie wszystkich dyspozytora operacji treści (w tym obsługi wywołania zwrotnego zdarzenia interfejsu użytkownika), poprawny <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> i <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> są ustawione. Alternatywnie kontekście wykonywania zmienić podstawowy ta zmiana WPF ma wpływ tylko na aplikacje przeznaczone dla .NET Framework 4.6 lub nowszej, stosując 4.5.2.Apps .NET Framework, którego platformą docelową jest program .NET Framework 4.6 lub nowszym może również współpracować można uniknąć tego podziału wokół tego, ustawiając następujące zgodności przełącznika:<pre><code class="lang-csharp">AppContext.SetSwitch(&quot;Switch.System.Globalization.NoAsyncCurrentCulture&quot;, true);&#13;&#10;</code></pre>Ten problem został rozwiązany przez WPF w programie .NET Framework 4.6.2. Również został rozwiązany w platform .NET, 4.6, 4.6.1 za pośrednictwem [KB 3139549](https://support.microsoft.com/kb/3139549). Aplikacje przeznaczone dla .NET Framework 4.6 lub nowszy zostanie automatycznie pobrana właściwe zachowania w aplikacjach WPF — <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> / <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name>) będą zachowywane przez operacje dyspozytora.|
-|Zakres|Mały|
+|Scope|Mały|
 |Wersja|4.6|
 |Typ|Przekierowanie|
+

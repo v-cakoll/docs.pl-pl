@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2278d82d5362fe217ca4bce02a052d4b440843c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d058d3297471e67459164f18358b1d143465712
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664049"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803232"
 ---
 ### <a name="aspnet-mvc-now-escapes-spaces-in-strings-passed-in-via-route-parameters"></a>ASP.NET MVC teraz specjalne spacje w ciągach przekazaną za pomocą parametrów trasy
 
@@ -12,7 +12,8 @@ ms.locfileid: "61664049"
 |---|---|
 |Szczegóły|Aby można było zgodne z RFC 2396, miejsca do magazynowania w ścieżkach trasy są teraz poprzedzone znakiem zmiany znaczenia podczas wypełniania parametry akcji z trasy. Tak podczas gdy <code>/controller/action/some data</code> wcześniej będzie odpowiadać trasy <code>/controller/action/{data}</code> i podaj <code>some data</code> jako parametr danych, będzie teraz zapewniać <code>some%20data</code> zamiast tego.|
 |Sugestia|Kod powinien zostać zaktualizowany do unescape parametry ciągu z trasy. W razie potrzeby oryginalnego identyfikatora URI jest dostępny za pomocą <xref:System.Net.HttpWebRequest.RequestUri>. OriginalString interfejsu API.|
-|Zakres|Mały|
+|Scope|Mały|
 |Wersja|4.5.2|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)?displayProperty=nameWithType></li></ul>|
+

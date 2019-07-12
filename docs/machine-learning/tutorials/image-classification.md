@@ -1,15 +1,15 @@
 ---
 title: 'Samouczek: Klasyfikator obraz TensorFlow ponownego próbkowania - transferu uczenia'
 description: Dowiedz się, jak ponowne szkolenie modelu TensorFlow Klasyfikacja obrazów przy użyciu transferu uczenia i strukturze ML.NET. Oryginalny model został skonfigurowanych pod kątem klasyfikowania poszczególnych obrazów. Po ponownego trenowania, nowy model organizuje obrazów w ogólne kategorie.
-ms.date: 06/12/2019
+ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 9344d0757e140995dfd9ce7d1a355910a81c6d31
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539850"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804755"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Samouczek: Ponowne szkolenie TensorFlow klasyfikatora obrazu przy użyciu transferu uczenia i strukturze ML.NET
 
@@ -43,7 +43,7 @@ Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://git
 
 * [Katalog zasobów samouczka. Plik ZIP](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
 
-* [Model uczenia maszynowego InceptionV3](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
+* [Model uczenia maszynowego InceptionV1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>Wybierz zadanie uczenia odpowiedniej maszyny
 
@@ -77,7 +77,7 @@ Transfer uczenia obejmuje kilka strategii, takie jak *Ponowne szkolenie wszystki
 
 Model klasyfikacji obrazów ponownie używa [modelu powstania](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip), model rozpoznawania popularnego obrazu skonfigurowanych pod kątem w `ImageNet` zestawu danych, gdzie próbuje klasyfikowania cały TensorFlow model obrazy na tysiąc klasy, takie jak " Ogólny","Jersey"i"Zmywarki".
 
-`Inception v3 model` Mogą być klasyfikowane jako [głębokiego splotowe sieci neuronowe](https://en.wikipedia.org/wiki/Convolutional_neural_network) i mogą osiągnąć rozsądną wydajność na twardych visual zadań rozpoznawania, dopasowania lub przekroczenie ludzi wydajności w niektórych domen. Model/algorytm został opracowany przez wielu pracowników naukowo-badawczych i oparta na oryginalny dokument: ["Przemyślenie architektury powstania dla przetwarzania obrazów" przez Szegedy, et. Al.](https://arxiv.org/abs/1512.00567)
+`Inception v1 model` Mogą być klasyfikowane jako [głębokiego splotowe sieci neuronowe](https://en.wikipedia.org/wiki/Convolutional_neural_network) i mogą osiągnąć rozsądną wydajność na twardych visual zadań rozpoznawania, dopasowania lub przekroczenie ludzi wydajności w niektórych domen. Model/algorytm został opracowany przez wielu pracowników naukowo-badawczych i oparta na oryginalny dokument: ["Przemyślenie architektury powstania dla przetwarzania obrazów" przez Szegedy, et. Al.](https://arxiv.org/abs/1512.00567)
 
 Ponieważ `Inception model` została już wstępnie przeszkolonych na tysiącach różnych obrazów, zawiera on [obrazu funkcji](https://en.wikipedia.org/wiki/Feature_(computer_vision)) służące do identyfikacji obrazu. Niższych warstwach obrazu w funkcji rozpoznaje proste funkcje (na przykład krawędzie) i wyższe warstwy rozpoznaje bardziej złożonych funkcji (np. kształty). Ostatnia warstwa jest uczony względem znacznie mniejszy zestaw danych, ponieważ trwa uruchamianie za pomocą uczonego modelu sprzed i już zrozumienie sposobu klasyfikowania obrazów. Jako model umożliwia klasyfikowanie więcej niż dwie kategorie, jest to przykład [klasyfikatora wieloklasowej](../resources/tasks.md#multiclass-classification). 
 

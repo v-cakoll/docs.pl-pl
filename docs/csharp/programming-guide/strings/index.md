@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67503999"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802316"
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String> którego wartość jest wartością tekstową. Wewnętrznie, tekst jest przechowywany jako sekwencyjną kolekcją tylko do odczytu z <xref:System.Char> obiektów. Brak nie znaku zakończenia o wartości null na końcu ciągu języka C#; w związku z tym ciąg języka C# może zawierać dowolną liczbę osadzone znaki null ('\0'). <xref:System.String.Length%2A> Właściwość ciągu reprezentuje liczbę `Char` obiektów zawiera, nie liczbę znaków Unicode. Aby uzyskać dostęp do poszczególnych punkty kodowe Unicode w ciągu, należy użyć <xref:System.Globalization.StringInfo> obiektu.  
@@ -62,10 +62,10 @@ Ciąg jest obiektem typu <xref:System.String> którego wartość jest wartości�
 |\n|Nowy wiersz|0x000A|  
 |\r|Powrót karetki|0x000D|  
 |\t|tabulator poziomy|0x0009|  
-|\U|Sekwencja unikowa Unicode (UTF-32)|`\U00nnnnnn` (e.g. `\U0001F47D` = "&#x1F47D;")|  
-|\u|Sekwencja unikowa Unicode (UTF-16)|`\unnnn` (np. `\u0041` = "A")|  
 |\v|tabulator pionowy|0x000B|  
-|\x|Sekwencja unikowa Unicode jest podobny do "\u" z wyjątkiem o zmiennej długości.|`\x0041` lub `\x41` = "A"|  
+|\u|Sekwencja unikowa Unicode (UTF-16)|`\uHHHH` (zakres: 0000 – FFFF; przykład: `\u00E7` = "ç")|  
+|\U|Sekwencja unikowa Unicode (UTF-32)|`\U00HHHHHH` (zakres: 000000 - 10FFFF; example: `\U0001F47D` = "&#x1F47D;")|  
+|\x|Sekwencja unikowa Unicode jest podobny do "\u" z wyjątkiem o zmiennej długości|`\xH[H][H][H]` (zakres: 0 – FFFF; przykład: `\x00E7` lub `\x0E7` lub `\xE7` = "ç")|  
   
 > [!WARNING]
 >  Korzystając z `\x` ucieczki sekwencji i określenie mniej niż 4 cyfr szesnastkowych, jeśli znaki, które znajdują się bezpośrednio po sekwencji unikowej prawidłowych cyfr szesnastkowych (czyli 0-9, A-F i a-f), będą one interpretowane jako części sekwencji unikowej. Na przykład `\xA1` tworzy "&#161;", który jest punkt kodowy 00A1 U +. Jednak jeśli następny znak to "A" lub "a", następnie sekwencja unikowa będzie zamiast tego interpretowana jako `\xA1A` i generować "&#x0A1A;", który jest punkt kodowy 0A1A U +. W takich przypadkach, określając wszystkie 4 cyfr szesnastkowych (np. `\x00A1` ) będzie zapobiec błędnej możliwe.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 06cbc82f3636c4063b445a0ccbe871e0be1dd847
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02700c75152c32ebee3a0898de1e322ddf9b6e17
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032399"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802229"
 ---
 # <a name="ui-automation-overview"></a>Przegląd automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -28,7 +28,7 @@ ms.locfileid: "62032399"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zapewnia pełną funkcjonalność w [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)], i [!INCLUDE[TLA2#tla_winnetsvrfam](../../../includes/tla2sharptla-winnetsvrfam-md.md)].  
   
- Dostawcy automatyzacji interfejsu użytkownika oferują pewne obsługę [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] aplikacje klienckie, za pomocą wbudowanej usługi mostkowania.  
+ Dostawcy automatyzacji interfejsu użytkownika oferują pewne pomocy technicznej dla aplikacji klienckich Microsoft Active Accessibility, za pomocą wbudowanej usługi mostkowania.  
   
 <a name="Providers_and_Clients"></a>   
 ## <a name="providers-and-clients"></a>Dostawcami i klientami  
@@ -43,7 +43,7 @@ ms.locfileid: "62032399"
   
  Z perspektywy deweloperów oprogramowania, istnieją dwa sposoby korzystania z [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]: do utworzenia pomocy technicznej w przypadku kontrolek niestandardowych (przy użyciu dostawcy interfejsu API) i tworzenia aplikacji wykorzystujących [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core do komunikowania się z [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementów (przy użyciu Klient interfejsu API). W zależności od Twojego zespołu należy zapoznać się do różnych części dokumentacji. Można dowiedzieć się więcej na temat pojęć i uzyskiwanie porad wiedzy w poniższych sekcjach.  
   
-|Sekcja|Posiadaczem|Odbiorcy|  
+|`Section`|Posiadaczem|Odbiorcy|  
 |-------------|--------------------|--------------|  
 |[Podstawowe założenia automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/index.md) (w tej sekcji)|Szerokiego omówienia pojęć.|Wszystkie.|  
 |[Dostawcy automatyzacji interfejsu użytkownika do kodu zarządzanego](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)|Omówienie i porad ułatwiających stosowanie interfejs API dostawcy.|Deweloperzy kontroli.|  

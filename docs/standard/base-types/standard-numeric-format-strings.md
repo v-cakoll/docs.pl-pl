@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe82012116ebc3883a801f95f62ffd4c81c9119f
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 245492a8a903593dc1532b67ed96224e171aad7e
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663814"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804735"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardowe ciągi formatujące liczby
 
@@ -55,7 +55,7 @@ Ciągi standardowego formatu liczb są obsługiwane przez:
 
 |Specyfikator formatu|Nazwa|Opis|Przykłady|
 |----------------------|----------|-----------------|--------------|
-|„C” lub „c”|Waluta|Wynik: Wartość waluty.<br /><br /> Obsługiwane przez: Wszystkich typów liczbowych.<br /><br /> Specyfikator dokładności: Liczba cyfr dziesiętnych.<br /><br /> Domyślny Specyfikator dokładności: Zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [Specyfikator formatu Currency ("C")](#CFormatString).|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en US) -> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) ->-123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
+|„C” lub „c”|Waluta|Wynik: Wartość waluty.<br /><br /> Obsługiwane przez: Wszystkich typów liczbowych.<br /><br /> Specyfikator dokładności: Liczba cyfr dziesiętnych.<br /><br /> Domyślny Specyfikator dokładności: Zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [Specyfikator formatu Currency ("C")](#CFormatString).|123.456 ("C", en US) -> `$123.46`<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en US) -> `($123.456)`<br /><br /> -123.456 ("C3", fr-FR) ->-123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
 |„D” lub „d”|Wartość dziesiętna|Wynik: Liczby całkowite z opcjonalnym znakiem minus.<br /><br /> Obsługiwane przez: Tylko typy całkowite.<br /><br /> Specyfikator dokładności: Minimalna liczba cyfr.<br /><br /> Domyślny Specyfikator dokładności: Minimalna liczba wymaganych cyfr.<br /><br /> Więcej informacji: [Specyfikator formatu Decimal("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
 |„E” lub „e”|Wartość wykładnicza (naukowa)|Wynik: Zapis wykładniczy.<br /><br /> Obsługiwane przez: Wszystkich typów liczbowych.<br /><br /> Specyfikator dokładności: Liczba cyfr dziesiętnych.<br /><br /> Domyślny Specyfikator dokładności: 6.<br /><br /> Więcej informacji: [Specyfikatora formatu wykładniczego ("E")](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1, 052033e + 003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1, 05E + 003|
 |„F” lub „f”|Wartość stałoprzecinkowa|Wynik: Cyfry całkowite i dziesiętne z opcjonalnym znakiem minus.<br /><br /> Obsługiwane przez: Wszystkich typów liczbowych.<br /><br /> Specyfikator dokładności: Liczba cyfr dziesiętnych.<br /><br /> Domyślny Specyfikator dokładności: Zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [Specyfikatora formatu stałoprzecinkowego ("F")](#FFormatString).|1234.567 ("F", en US) -> 1234,57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en US) ->-1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> - 1234,5600|

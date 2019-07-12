@@ -4,12 +4,12 @@ description: Znajdź zasoby, aby dowiedzieć się, jak do kompilowania aplikacji
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: 2ec7f57250db8779552305b2ee69cbcf1db55d0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b111d464b83f3bc6a4a0da86678c5364bf4a9537
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614161"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802298"
 ---
 # <a name="get-started-with-net-core"></a>Rozpoczynanie pracy z platformą .NET Core
 
@@ -34,7 +34,7 @@ Powinny zostać wyświetlone następujące dane wyjściowe:
 Hello World!
 ```
 
-Gratulacje! Utworzono prostą aplikację platformy .NET Core. Można również użyć [programu Visual Studio Code](tutorials/with-visual-studio-code.md), [programu Visual Studio 2017](tutorials/with-visual-studio.md) (tylko Windows), lub [programu Visual Studio dla komputerów Mac](tutorials/using-on-mac-vs.md) (macOS tylko), aby utworzyć aplikację platformy .NET Core.
+Gratulacje! Utworzono prostą aplikację platformy .NET Core. Można również użyć [programu Visual Studio Code](tutorials/with-visual-studio-code.md), [programu Visual Studio](tutorials/with-visual-studio.md) (tylko Windows), lub [programu Visual Studio dla komputerów Mac](tutorials/using-on-mac-vs.md) (macOS tylko), aby utworzyć aplikację platformy .NET Core.
 
 ## <a name="tutorials"></a>Samouczki
 

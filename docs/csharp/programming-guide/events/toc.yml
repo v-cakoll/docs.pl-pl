@@ -9,7 +9,5 @@
       href: how-to-raise-base-class-events-in-derived-classes.md
     - name: 'Instrukcje: zdarzenia implementowania interfejsu'
       href: how-to-implement-interface-events.md
-    - name: 'Instrukcje: użycie słownika do przechowywania wystąpień zdarzeń'
-      href: how-to-use-a-dictionary-to-store-event-instances.md
     - name: 'Instrukcje: implementowanie niestandardowych metod dostępu zdarzeń'
       href: how-to-implement-custom-event-accessors.md

@@ -1,65 +1,70 @@
 ---
-title: Wybierz C# wersji językowej - C# przewodnik
-description: Konfigurowanie kompilatora przeprowadzić weryfikacji składni przy użyciu określonej wersji kompilatora
-ms.date: 02/28/2019
-ms.openlocfilehash: feb3e51a107f9830071b55c7985f202edc842f4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+title: C#przechowywanie wersji języka — C# przewodnik
+description: Dowiedz się więcej o tym, jak C# wersja językowa jest określana na podstawie projektu i różne wartości możesz ręcznie dostosować go do.
+ms.date: 07/10/2019
+ms.openlocfilehash: 2d593ca0588f291c61cdf52fbc1eb60a1f3f7ecb
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662289"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859604"
 ---
-# <a name="select-the-c-language-version"></a>Wybierz C# wersja językowa
+# <a name="c-language-versioning"></a>C#przechowywanie wersji języka
 
-C# Kompilator określa domyślną wersję języka na podstawie platformy docelowej projektu lub struktury. Jeśli projekt jest przeznaczony dla framework w wersji zapoznawczej, która jest odpowiednia wersja językowa (wersja zapoznawcza), wersja językowa, używana jest wersja językowa (wersja zapoznawcza). Gdy projekt nie jest kierowana framework w wersji zapoznawczej, wersji językowej, używana jest najnowsza wersja pomocnicza.
+C# Kompilator określa domyślną wersję języka na podstawie platformy docelowej projektu lub struktury. Jest to spowodowane C# język może mieć funkcje, które zależą od typów lub składniki środowiska uruchomieniowego, które nie są dostępne w każdej implementacji .NET. Dzięki temu, niezależnie od docelowego, projekt został skompilowany przed uzyskasz najwyższa wersja zgodna język domyślny.
 
-Na przykład w okresie wersji zapoznawczej dla platformy .NET Core 3.0, każdy projekt przeznaczonego `netcoreapp3.0` lub `netstandard2.1` (zarówno w wersji zapoznawczej) użyje C# 8.0 language (również w wersji zapoznawczej). Projekty przeznaczone dla dowolnej wersji wydanej użyje C# 7.3 (Najnowsza wersja wydana wersja). To zachowanie oznacza, że jakiegokolwiek projektu, przeznaczonych dla platformy .NET Framework będzie używać najnowszej (C# 7.3). 
+## <a name="defaults"></a>Wartość domyślna
 
-Ta funkcja oddziela decyzję, aby zainstalować nowe wersje zestawu SDK i narzędzi w środowisku programistycznym z decyzji, aby wprowadzić nowe funkcje języka w projekcie. Na komputerze kompilacji, można zainstalować najnowszy zestaw SDK oraz narzędzia. Każdy projekt można skonfigurować do użytku z określoną wersją języka jego kompilacji. Domyślne zachowanie oznacza, że wszelkie funkcji języka, które polegają na nowe typy lub nowe zachowanie środowiska CLR są włączone tylko wtedy, gdy projekty ukierunkowane na tych środowisk.
+Kompilator Określa domyślny na podstawie tych reguł:
 
-Zachowanie domyślne można przesłonić, określając w wersji językowej. Istnieje kilka sposobów, aby ustawić wersję językową:
+|Platforma docelowa|version|C#Domyślna wersja języka|
+|----------------|-------|---------------------------|
+|.NET Core|3.x|C# 8.0|
+|.NET Core|2.x|C# 7.3|
+|.NET Standard|wszystkie|C# 7.3|
+|.NET Framework|wszystkie|C# 7.3|
 
-- Zaufaj [szybkie działanie programu Visual Studio](#visual-studio-quick-action).
-- Ustawianie wersji języka [interfejsie użytkownika Visual Studio](#set-the-language-version-in-visual-studio).
-- Ręcznie Edytuj swoje [ **.csproj** pliku](#edit-the-csproj-file).
+## <a name="default-for-previews"></a>Domyślne dla wersji zapoznawczych
+
+Jeśli projekt jest przeznaczony dla framework w wersji zapoznawczej, która jest odpowiednia wersja językowa (wersja zapoznawcza), wersja językowa, używana jest wersja językowa (wersja zapoznawcza). Gwarantuje to, czy można użyć najnowsze funkcje, które mogą pracować w dowolnym środowisku w tej wersji zapoznawczej bez wywierania wpływu na swoje projekty przeznaczone wydanej wersji platformy .NET Core.
+
+## <a name="overriding-a-default"></a>Zastępowanie domyślnego
+
+Jeśli trzeba określić swoje C# wersji jawnie, możesz to zrobić na kilka sposobów:
+
+- Ręcznie Edytuj swoje [pliku projektu](#edit-the-project-file).
 - Ustawianie wersji języka [dla wielu projektów w podkatalogu](#configure-multiple-projects).
 - Konfigurowanie [ `-langversion` — opcja kompilatora](#set-the-langversion-compiler-option).
 
-## <a name="visual-studio-quick-action"></a>Visual Studio szybkich działań.
+### <a name="edit-the-project-file"></a>Edytuj plik projektu
 
-Program Visual Studio ułatwia określenie wersji językowej, których potrzebujesz. Jeśli używasz funkcji języka, który nie jest dostępna dla wersji aktualnie skonfigurowane, Visual Studio Pokazuje potencjalne poprawki, aby zaktualizować wersję języka dla projektu.
-
-## <a name="set-the-language-version-in-visual-studio"></a>Ustawianie wersji języka w programie Visual Studio
-
-Można ustawić wersji w programie Visual Studio. Kliknij prawym przyciskiem myszy węzeł projektu w Eksploratorze rozwiązań i wybierz **właściwości**. Wybierz **kompilacji** kartę, a następnie wybierz pozycję **zaawansowane** przycisku. Z listy rozwijanej wybierz wersję. Na poniższej ilustracji przedstawiono ustawienia "najnowsza":
-
-![Zrzut ekranu przedstawiający ustawienia zaawansowane kompilacji, w którym można określić wersji językowej](./media/configure-language-version/advanced-build-settings.png)
-
-> [!NOTE]
-> Jeśli używasz środowiska IDE programu Visual Studio do aktualizacji plików csproj, IDE tworzy osobne węzły dla każdej konfiguracji kompilacji. Będzie zazwyczaj wartość taka sama we wszystkich konfiguracjach kompilacji, ale musisz ustawiony w sposób jawny dla każdej konfiguracji kompilacji, lub wybierz pozycję "Wszystkie konfiguracje" po zmodyfikowaniu tego ustawienia. W pliku csproj, zostanie wyświetlone następujące czynności:
->
->```xml
-> <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
->  <LangVersion>latest</LangVersion>
-></PropertyGroup>
->
-> <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
->  <LangVersion>latest</LangVersion>
-> </PropertyGroup>
-> ```
->
-
-## <a name="edit-the-csproj-file"></a>Edytuj plik csproj
-
-Wersja językowa można ustawić w swojej **.csproj** pliku. Dodawanie elementu, jak pokazano poniżej:
+Wersja językowa można ustawić w pliku projektu. Na przykład jeżeli chcesz jawnie dostęp do funkcji w wersji zapoznawczej, można dodać elementu następująco:
 
 ```xml
 <PropertyGroup>
-   <LangVersion>latest</LangVersion>
+   <LangVersion>preview</LangVersion>
 </PropertyGroup>
 ```
 
-Wartość `latest` korzysta z najnowszą wersją pomocniczą C# języka. Prawidłowe wartości to:
+Wartość `preview` najnowsza wersja zapoznawcza C# język, który kompilator obsługuje.
+
+### <a name="configure-multiple-projects"></a>Konfigurowanie wielu projektów
+
+Możesz utworzyć **Directory.Build.props** pliku, który zawiera `<LangVersion>` element, aby skonfigurować wiele katalogów. Należy zwykle to zrobić w katalogu rozwiązania. Dodaj następujące polecenie, aby **Directory.Build.props** pliku w katalogu rozwiązania:
+
+```xml
+<Project>
+ <PropertyGroup>
+   <LangVersion>preview</LangVersion>
+ </PropertyGroup>
+</Project>
+```
+
+Teraz kompilacje w każdym podkatalogu katalogu zawierającego ten plik będzie używać wersji zapoznawczej C# wersji. Aby uzyskać więcej informacji, zobacz artykuł [Dostosowywanie kompilacji](/visualstudio/msbuild/customize-your-build).
+
+## <a name="c-language-version-reference"></a>C#Dokumentacja wersji języka
+
+W poniższej tabeli przedstawiono wszystkie bieżące C# wersji językowych. Kompilator nie może zawsze zrozumieć każda wartość, jeżeli jest starszy. Po zainstalowaniu programu .NET Core 3.0, będą mieć dostęp do wszystkiego, na liście.
 
 |Wartość|Znaczenie|
 |------------|-------------|
@@ -77,21 +82,3 @@ Wartość `latest` korzysta z najnowszą wersją pomocniczą C# języka. Prawid�
 |3|Kompilator akceptuje tylko w przypadku składni, która znajduje się w C# 3.0 lub niższą.|
 |ISO-2|Kompilator akceptuje tylko w przypadku składni, która znajduje się w 23270:2006 ISO/IEC C# (2.0) |
 |ISO-1|Kompilator akceptuje tylko w przypadku składni, która znajduje się w 23270:2003 ISO/IEC C# (1.0/1.2) |
-
-## <a name="configure-multiple-projects"></a>Konfigurowanie wielu projektów
-
-Możesz utworzyć **Directory.Build.props** pliku, który zawiera `<LangVersion>` element, aby skonfigurować wiele katalogów. Należy zwykle to zrobić w katalogu rozwiązania. Dodaj następujące polecenie, aby **Directory.Build.props** pliku w katalogu rozwiązania:
-
-```xml
-<Project>
- <PropertyGroup>
-   <LangVersion>7.3</LangVersion>
- </PropertyGroup>
-</Project>
-```
-
-Teraz kompilacje w każdym podkatalogu katalogu zawierającego ten plik będzie używać C# składni w wersji 7.3. Aby uzyskać więcej informacji, zobacz artykuł [Dostosowywanie kompilacji](/visualstudio/msbuild/customize-your-build).
-
-## <a name="set-the-langversion-compiler-option"></a>Ustaw langversion — opcja kompilatora
-
-Możesz użyć `-langversion` opcji wiersza polecenia. Aby uzyskać więcej informacji, zobacz artykuł [- langversion](../language-reference/compiler-options/langversion-compiler-option.md) — opcja kompilatora. Możesz wyświetlić listę prawidłowych wartości, wpisując `csc -langversion:?`.

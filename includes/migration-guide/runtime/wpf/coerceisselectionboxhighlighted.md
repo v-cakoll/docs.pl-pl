@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d9e1cd8d346a48fafc89367bddf923167a620889
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7cdd4ae030dfe9f1bc383092e041fd1f0739212
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764478"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857490"
 ---
 ### <a name="coerceisselectionboxhighlighted"></a>CoerceIsSelectionBoxHighlighted
 
@@ -12,7 +12,8 @@ ms.locfileid: "61764478"
 |---|---|
 |Szczegóły|Niektórych sekwencji działań dotyczących <xref:System.Windows.Controls.ComboBox?displayProperty=name> i źródłem danych może spowodować <xref:System.NullReferenceException?displayProperty=name>.|
 |Sugestia|Jeśli to możliwe Uaktualnij do platformy .NET Framework 4.6.2.|
-|Zakres|Mały|
+|Scope|Mały|
 |Wersja|4.6|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted?displayProperty=nameWithType></li></ul>|
+

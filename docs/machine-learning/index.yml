@@ -15,7 +15,7 @@ sections:
   - title: Rozpocznij
     items:
       - type: paragraph
-        text: 'Aby dowiedzieć się, jak zbudowane jest aplikacji uczenia maszynowego za pomocą platformy ML.NET, przeczytaj <a href="/dotnet/machine-learning/how-does-mldotnet-work">co to jest strukturze ML.NET i jak działa</a>? Lub zacznij pracę, dodając <b>Microsoft.ML</b> pakiet nuget do aplikacji.'
+        text: 'Aby dowiedzieć się, jak zbudowane jest aplikacji uczenia maszynowego za pomocą platformy ML.NET, przeczytaj <a href="/dotnet/machine-learning/how-does-mldotnet-work">co to jest strukturze ML.NET i jak działa</a>? Lub zacznij pracę, dodając <b>Microsoft.ML</b> pakiet NuGet do aplikacji.'
   - title: Samouczki krok po kroku
     items:
       - type: paragraph

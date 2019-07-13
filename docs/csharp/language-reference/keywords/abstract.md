@@ -8,15 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 64f650df0a9f6e6279e21b9cbd5ff444ef5c7a49
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 3a4d29ae4814ccceb7b405d9c1749150059a24a0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758436"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859588"
 ---
 # <a name="abstract-c-reference"></a>abstract (odwołanie w C#)
-`abstract` Modyfikator oznacza, że rzecz modyfikowanego ma implementacji brakujące lub niekompletne. Abstrakcyjna modyfikatora można używać z klas, metod, właściwości, indeksatorów i zdarzeń. Użyj `abstract` modyfikatora w deklaracji klasy, aby wskazać, czy klasa jest przeznaczona do użycia wyłącznie jako klasa bazowa innych klas nie są tworzone w jego własnej. Składowe oznaczone jako abstrakcyjne muszą być zaimplementowane przez klasy, które pochodzą z klasy abstrakcyjnej.
+`abstract` Modyfikator oznacza, że rzecz modyfikowanego ma implementacji brakujące lub niekompletne. Abstrakcyjna modyfikatora można używać z klas, metod, właściwości, indeksatorów i zdarzeń. Użyj `abstract` modyfikatora w deklaracji klasy, aby wskazać, czy klasa jest przeznaczona do użycia wyłącznie jako klasa bazowa innych klas nie są tworzone w jego własnej. Składowe oznaczone jako abstrakcyjne muszą być implementowane przez klasy nieabstrakcyjnej, wyprowadzonych z klasy abstrakcyjnej.
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie klasa `Square` musi dostarczać implementację `GetArea` ponieważ dziedziczy `Shape`:  

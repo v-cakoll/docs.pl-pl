@@ -11,25 +11,25 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: 28d1481b71979936bb16a2ecfb1140d85a674ef7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02be78c8f2b7529f1fb0e46e9fe610a3c66b0652
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054994"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860142"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse — Operator (Visual Basic)
 Wykonuje łączną sumę logiczną na dwóch wyrażeniach zwarcie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb
 result = expression1 OrElse expression2  
 ```  
   
 ## <a name="parts"></a>Części  
  `result`  
- Wymagana. Wszelkie `Boolean` wyrażenia.  
+ Wymagane. Wszelkie `Boolean` wyrażenia.  
   
  `expression1`  
  Wymagana. Wszelkie `Boolean` wyrażenia.  
@@ -49,7 +49,8 @@ result = expression1 OrElse expression2
 |`False`|`False`|`False`|  
   
 ## <a name="data-types"></a>Typy danych  
- `OrElse` Operator jest zdefiniowany tylko w przypadku [typ danych Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic konwertuje każdy argument konieczny do `Boolean` i wykonuje operację całkowicie w `Boolean`. Jeśli wynik jest przypisany do typu numerycznego, Visual Basic konwertuje go z `Boolean` do tego typu. Może to powodować nieoczekiwane zachowanie. Na przykład `5 OrElse 12` skutkuje `–1` podczas konwersji na `Integer`.  
+ `OrElse` Operator jest zdefiniowany tylko w przypadku [typ danych Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic konwertuje każdy argument konieczny do `Boolean` przed obliczając wartość wyrażenia. Jeśli wynik jest przypisany do typu numerycznego, Visual Basic konwertuje go z `Boolean` do tego typu tak, aby `False` staje się `0` i `True` staje się `-1`.
+Aby uzyskać więcej informacji, zobacz [logiczna konwersje typów](../data-types/boolean-data-type.md#type-conversions)
   
 ## <a name="overloading"></a>Przeciążenie  
  [Operatora Or](../../../visual-basic/language-reference/operators/or-operator.md) i [IsTrue Operator](../../../visual-basic/language-reference/operators/istrue-operator.md) może być *przeciążone*, co oznacza, że klasa lub Struktura można ponownie zdefiniować ich zachowania, gdy argument operacji ma typ tej klasy lub struktury. Przeciążanie `Or` i `IsTrue` operatory wpływa na zachowanie `OrElse` operatora. Jeśli kod używa `OrElse` dla klasy lub struktury, która przeciążenia `Or` i `IsTrue`, należy zrozumieć ich zachowanie zmieniony. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

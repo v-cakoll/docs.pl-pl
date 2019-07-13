@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: a4b2edce76bc5ab97e644ec8dbdf045931e87786
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66628e8cc1e56bff2227721d6f6b3e511be7453e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663431"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860056"
 ---
 # <a name="dependency-property-metadata"></a>Metadane zależności właściwości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] System właściwość zawiera metadane systemu, który wykracza poza jakie mogą być zgłaszane o właściwości przy użyciu odbicia lub ogólne raportowania [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości. Metadane dla właściwości zależności można przypisać również jednoznacznie przez klasę, która definiuje właściwości zależności, można zmienić, gdy właściwość zależności jest dodawany do innej klasy i mogą być szczególnie zastąpione przez wszystkie klasy pochodne, które dziedziczą Właściwości zależności z Definiowanie klasy bazowej.  
@@ -44,7 +44,7 @@ ms.locfileid: "64663431"
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>Kiedy należy zastąpić metadane, kiedy należy wyprowadzić klasę  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] System właściwości ustanowiła możliwości zmiany niektórych właściwości właściwości zależności bez konieczności ich być całkowicie ponownie zaimplementowane. Jest to realizowane przez utworzenie innego wystąpienia metadanych właściwości modelu dla właściwości zależności, zgodnie z jego lokalizacją w określonym typie. Należy pamiętać, że większości istniejących właściwości zależności nie są właściwości wirtualnego, więc ściślej "ponownie"ich wdrożenie na dziedziczonych klas można wykonywać tylko przez przesłanianie istniejącego elementu członkowskiego.  
   
- Jeśli scenariusz chcesz włączyć dla właściwości zależności typu nie da się osiągnąć, modyfikując właściwości istniejących właściwości zależności, następnie może być konieczne utworzenie klasy pochodnej, a następnie, aby zadeklarować właściwość zależność niestandardową w klasie pochodnej. Właściwości zależności niestandardowej działa identycznie do właściwości zależności zdefiniowane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Aby uzyskać więcej szczegółów na temat niestandardowe właściwości zależności zobacz [niestandardowe właściwości zależności](custom-dependency-properties.md).  
+ Jeśli scenariusz chcesz włączyć dla właściwości zależności typu nie da się osiągnąć, modyfikując właściwości istniejących właściwości zależności, następnie może być konieczne utworzenie klasy pochodnej, a następnie, aby zadeklarować właściwość zależność niestandardową w klasie pochodnej. Właściwości zależności niestandardowej działa identycznie do właściwości zależności zdefiniowane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interfejsów API. Aby uzyskać więcej szczegółów na temat niestandardowe właściwości zależności zobacz [niestandardowe właściwości zależności](custom-dependency-properties.md).  
   
  Co istotne cechy właściwości zależności, który nie może przesłonić jest jej typ wartości. Jeśli dziedziczą właściwości zależności, która ma przybliżony zachowanie wymagane, ale wymaga innego typu dla niego, trzeba będzie implementować właściwość zależności niestandardowej i być może połączyć właściwości, za pomocą konwersji typu i innych Implementacja na klasę niestandardową. Ponadto nie można zamienić istniejącego <xref:System.Windows.ValidateValueCallback>, ponieważ to wywołanie zwrotne nie istnieje w samym polu rejestracji, a nie w jego metadanych.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "64663431"
 ### <a name="overriding-metadata"></a>Zastępowanie metadanych  
  Zastępowanie metadanych ma przede wszystkim, aby mieć możliwość zmiany różnych zachowań pochodne metadanych, które są stosowane do właściwości zależności, ponieważ znajduje się na danego typu. Przyczyny tego omówiona bardziej szczegółowo w [metadanych](#dp_metadata_contents) sekcji. Aby uzyskać więcej informacji, w tym przykłady kodu, zobacz [zastąpić metadane dla właściwości zależności](how-to-override-metadata-for-a-dependency-property.md).  
   
- Metadane właściwości mogą być podawane dla właściwości zależności podczas wywołania rejestracji (<xref:System.Windows.DependencyProperty.Register%2A>). Jednak w wielu przypadkach możesz chcieć zapewniające metadanych specyficznych dla typu klasy dziedziczy właściwości zależności. Można to zrobić, wywołując <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> metody.  Na przykład z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], <xref:System.Windows.FrameworkElement> klasa jest typem, który najpierw rejestruje <xref:System.Windows.UIElement.Focusable%2A> właściwość zależności. Ale <xref:System.Windows.Controls.Control> klasa zastępuje metadane dla właściwości zależności, aby zapewnić jego własnej wartości początkowej domyślnej, zmieniając go z `false` do `true`, a w przeciwnym razie ponownie używa oryginalny <xref:System.Windows.UIElement.Focusable%2A> implementacji.  
+ Metadane właściwości mogą być podawane dla właściwości zależności podczas wywołania rejestracji (<xref:System.Windows.DependencyProperty.Register%2A>). Jednak w wielu przypadkach możesz chcieć zapewniające metadanych specyficznych dla typu klasy dziedziczy właściwości zależności. Można to zrobić, wywołując <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> metody.  Na przykład z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interfejsów API, <xref:System.Windows.FrameworkElement> klasa jest typem, który najpierw rejestruje <xref:System.Windows.UIElement.Focusable%2A> właściwość zależności. Ale <xref:System.Windows.Controls.Control> klasa zastępuje metadane dla właściwości zależności, aby zapewnić jego własnej wartości początkowej domyślnej, zmieniając go z `false` do `true`, a w przeciwnym razie ponownie używa oryginalny <xref:System.Windows.UIElement.Focusable%2A> implementacji.  
   
  Podczas zastąpienia metadanych właściwości metadanych są scalane lub zastąpiony.  
   

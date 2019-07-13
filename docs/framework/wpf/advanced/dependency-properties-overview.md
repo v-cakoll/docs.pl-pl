@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 483710281feafdf97cfef9b72a67af035dcf0efa
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052940"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860170"
 ---
 # <a name="dependency-properties-overview"></a>Przegląd właściwości zależności
 
@@ -78,7 +78,7 @@ Wprowadzenie wartości właściwości jest również zasadniczo wywołanie do im
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-Można również wywołać system właściwości [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> bezpośrednio. Nie jest to zazwyczaj konieczne, jeśli są przy użyciu istniejących właściwości (otoki są bardziej wygodne i zapewnić lepsze narażenia właściwości dla narzędzi dla deweloperów), ale wywołanie [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] bezpośrednio jest odpowiednie w przypadku niektórych scenariuszy.
+Można również wywołać interfejsów API systemu właściwość <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> bezpośrednio. Nie jest to zazwyczaj konieczne Jeśli używasz istniejącej właściwości (otoki są bardziej wygodne i zapewniają lepsze narażenia właściwości dla narzędzi dla deweloperów), ale bezpośrednie wywoływanie interfejsów API jest odpowiednia dla określonych scenariuszy.
 
 Właściwości można również ustawić w XAML i następnie uzyskać dostęp później w kodzie za pomocą związanym z kodem. Aby uzyskać więcej informacji, zobacz [związanym z kodem i XAML w WPF](code-behind-and-xaml-in-wpf.md).
 

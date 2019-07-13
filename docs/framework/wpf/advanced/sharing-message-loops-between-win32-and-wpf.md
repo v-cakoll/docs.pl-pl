@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: d2fe63ed4bdefc91e4847af799747219bd7b4a76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 31efc6e514682502e91487565869285dad22cab0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611727"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860021"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Udostępnianie pętli komunikatów pomiędzy Win32 i WPF
 W tym temacie opisano sposób implementacji pętlę komunikatów do współpracy z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], przy użyciu istniejących komunikatów narażenia pętli w <xref:System.Windows.Threading.Dispatcher> lub poprzez utworzenie pętli oddzielną wiadomość na [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] obok współdziałanie kodu.  
@@ -20,7 +20,7 @@ W tym temacie opisano sposób implementacji pętlę komunikatów do współpracy
 ## <a name="componentdispatcher-and-the-message-loop"></a>ComponentDispatcher i pętli komunikatów  
  Scenariusz normalnej obsługi zdarzeń klawiatury i współdziałanie jest zaimplementowanie <xref:System.Windows.Interop.IKeyboardInputSink>, lub do podklasy z klas, które zawierają już implementację <xref:System.Windows.Interop.IKeyboardInputSink>, takich jak <xref:System.Windows.Interop.HwndSource> lub <xref:System.Windows.Interop.HwndHost>. Jednak obsługa ujścia klawiatury nie opisano kwestii możliwe komunikat pętli wszystkiego, które mogą wystąpić podczas wysyłania i odbierania wiadomości granice współdziałanie. Celu formalnego pętli komunikatów architektura [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia <xref:System.Windows.Interop.ComponentDispatcher> klasy, która definiuje prosty protokół pętlę komunikatów do wykonania.  
   
- <xref:System.Windows.Interop.ComponentDispatcher> jest klasą statyczną, która udostępnia kilka elementów członkowskich. Zakres każdej metody niejawnie jest powiązany do wątku wywołującego. Pętla wiadomości musi wywołać niektóre z nich [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] czasami krytyczne (zgodnie z definicją w następnej sekcji).  
+ <xref:System.Windows.Interop.ComponentDispatcher> jest klasą statyczną, która udostępnia kilka elementów członkowskich. Zakres każdej metody niejawnie jest powiązany do wątku wywołującego. Pętla wiadomości musi wywołać niektóre z tych interfejsów API w czasie krytycznych, (zgodnie z definicją w następnej sekcji).  
   
  <xref:System.Windows.Interop.ComponentDispatcher> dostępne są zdarzenia, które mogą nasłuchiwać inne składniki (takie jak klawiatury ujścia). <xref:System.Windows.Threading.Dispatcher> Klasy wywołania wszystkich odpowiednich <xref:System.Windows.Interop.ComponentDispatcher> metod w odpowiedniej kolejności. W przypadku wdrażania własnych pętli komunikatów, Twój kod jest odpowiedzialny za wywołanie <xref:System.Windows.Interop.ComponentDispatcher> metod w podobny sposób.  
   

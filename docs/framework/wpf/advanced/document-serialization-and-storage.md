@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: a1a3d422ea4d9766e6a9f8dda079c3739be4a626
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: b60b3964ff8e1b1f05b6c0820c63ec06d9ea0f4c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663667"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859651"
 ---
 # <a name="document-serialization-and-storage"></a>Serializacja dokumentu i przechowywanie
 
@@ -23,7 +23,7 @@ Microsoft .NET Framework oferuje zaawansowane środowisko do tworzenia i wyświe
 
 Najlepiej proces serializacji i deserializacji dokumentu z, a następnie wstecz do pamięci jest niewidoczna dla aplikacji.  Aplikacja wywołuje element serializujący "write" metodę, aby zapisać dokumentu, podczas deserializacji "Odczyt" Metoda uzyskuje dostęp do magazynu danych oraz odtwarza oryginalnego wystąpienia w pamięci.  Określony format, którego dane są przechowywane w zwykle nie jest kwestią w aplikacji, jak długie jako serializacja i zdeserializować procesu odtwarza dokumentu z powrotem do ich oryginalnej postaci.
 
-Aplikacje często oferują wiele opcji serializacji, które pozwalają użytkownikowi zapisywać dokumenty w innych nośników lub w innym formacie.  Na przykład aplikacja może zaoferować "Zapisz jako" Opcje zapisywania dokumentu do pliku dysku, bazy danych lub usługi sieci web.  Podobnie różnych serializatory może przechowywać dokumentu w różnych formatach takich jak HTML, RTF, XML, XPS, lub też w formacie innych firm.  Do aplikacji serializacji definiuje interfejs, który izoluje szczegółowe informacje o nośniku w implementacji każdego określonego elementu serializującego.  Oprócz korzyści z enkapsulacji szczegółów magazynu, .NET Framework <xref:System.Windows.Documents.Serialization> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] zapewniają kilka ważnych funkcji.
+Aplikacje często oferują wiele opcji serializacji, które pozwalają użytkownikowi zapisywać dokumenty w innych nośników lub w innym formacie.  Na przykład aplikacja może zaoferować "Zapisz jako" Opcje zapisywania dokumentu do pliku dysku, bazy danych lub usługi sieci web.  Podobnie różnych serializatory może przechowywać dokumentu w różnych formatach takich jak HTML, RTF, XML, XPS, lub też w formacie innych firm.  Do aplikacji serializacji definiuje interfejs, który izoluje szczegółowe informacje o nośniku w implementacji każdego określonego elementu serializującego.  Oprócz korzyści z enkapsulacji szczegółów magazynu, .NET Framework <xref:System.Windows.Documents.Serialization> interfejsów API zapewniają kilka ważnych funkcji.
 
 ### <a name="features-of-net-framework-30-document-serializers"></a>Funkcje programu .NET Framework 3.0 dokumentu serializatorów
 

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: c68e6a69553f2cb14eb442c31e5138009f3c8411
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee38caedc5d5a29d2221d6e5a6bf6cf74617bf8c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619444"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859720"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Instrukcje: Wykrywanie, czy zadanie drukowania może zostać zrealizowane o tej porze dnia
 Kolejki wydruku nie zawsze są dostępne 24 godziny na dobę. Mają one właściwości czasu rozpoczęcia i zakończenia, które można ustawić, aby były niedostępne w pewnych porach dnia. Ta funkcja może być używana na przykład, aby zarezerwować drukarki do wyłącznego użytku określony dział po 17: 00. Takim wydziale musi innej kolejki drukarki niż innych działów obsługi użycia. Kolejka dla innych działów będzie miał ustawienie będzie niedostępna po 17: 00, podczas gdy kolejka dla działu favored mógł zostać ustawiony jako dostępny przez cały czas.  
   
  Ponadto można ustawić zadania drukowania, samodzielnie do druku tylko w obrębie określonego zakresu czasu.  
   
- <xref:System.Printing.PrintQueue> i <xref:System.Printing.PrintSystemJobInfo> klasy widoczne w [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] programu Microsoft .NET Framework zapewniają środki do zdalnego sprawdzanie, czy dane zadanie drukowania może drukować na danej kolejki w danej chwili.  
+ <xref:System.Printing.PrintQueue> i <xref:System.Printing.PrintSystemJobInfo> klasy widoczne w interfejsów API programu Microsoft .NET Framework zapewniają środki do zdalnego sprawdzanie, czy dane zadanie drukowania może drukować na danej kolejki w danej chwili.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie przedstawiono przykład diagnozować problemy z zadaniem drukowania.  
@@ -54,7 +54,7 @@ Kolejki wydruku nie zawsze są dostępne 24 godziny na dobę. Mają one właści
  Dwa przeciążenia **ReportAvailabilityAtThisTime** metody są identyczne, z wyjątkiem typu przekazany do nich tylko <xref:System.Printing.PrintQueue> wersji znajduje się poniżej.  
   
 > [!NOTE]
->  Fakt, że te metody są identyczne, z wyjątkiem typu wywołuje pytanie, dlaczego przykład nie powoduje utworzenia metody ogólnej **ReportAvailabilityAtThisTime\<T >**. Przyczyną jest to, że taka metoda musi zostać ograniczone do klasy, która ma **StartTimeOfDay** i **UntilTimeOfDay** właściwości, które wywołuje metodę, ale metody ogólnej tylko można ograniczyć do klasy i jedyna klasa wspólna dla obu <xref:System.Printing.PrintQueue> i <xref:System.Printing.PrintSystemJobInfo> jest drzewo dziedziczenia <xref:System.Printing.PrintSystemObject> którego nie ma takiego właściwości.  
+>  Fakt, że te metody są identyczne, z wyjątkiem typu wywołuje pytanie, dlaczego przykład nie powoduje utworzenia metody ogólnej **ReportAvailabilityAtThisTime\<T >** . Przyczyną jest to, że taka metoda musi zostać ograniczone do klasy, która ma **StartTimeOfDay** i **UntilTimeOfDay** właściwości, które wywołuje metodę, ale metody ogólnej tylko można ograniczyć do klasy i jedyna klasa wspólna dla obu <xref:System.Printing.PrintQueue> i <xref:System.Printing.PrintSystemJobInfo> jest drzewo dziedziczenia <xref:System.Printing.PrintSystemObject> którego nie ma takiego właściwości.  
   
  **ReportAvailabilityAtThisTime** — metoda (przedstawiony w poniższym przykładzie kodu), który rozpoczyna się od inicjowania <xref:System.Boolean> zmienną wartownik `true`. Urządzenie zostanie zresetowane do `false`, jeśli kolejka jest niedostępna.  
   

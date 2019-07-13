@@ -2,12 +2,12 @@
 title: polecenia DotNet
 description: Więcej informacji na temat polecenia dotnet (ogólny sterownik dla narzędzi interfejsu wiersza polecenia platformy .NET Core) i sposób jej użycia.
 ms.date: 06/04/2018
-ms.openlocfilehash: 5278adf44d12e428cdeacf1d475377ce9155c314
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2134bf8ed66157619499b027f01d39e03e84411f
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648532"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859552"
 ---
 # <a name="dotnet-command"></a>polecenia DotNet
 
@@ -230,7 +230,7 @@ Drukuje wersję zestawu .NET Core SDK w użyciu.
 
 ---
 
-### <a name="project-references"></a>Odwołania do projektu
+### <a name="project-references"></a>Odwołania projektu
 
 Polecenie | Funkcja
 --- | ---
@@ -304,7 +304,7 @@ Uruchamianie aplikacji biblioteki DLL, takich jak `myapp.dll`:
 
 `DOTNET_PACKAGES`
 
-Pakiet główny pamięci podręcznej. Jeśli nie został ustawiony, jego wartość domyślna to `$HOME/.nuget/packages` w systemach Unix lub `%HOME%\NuGet\Packages` na Windows.
+Folder globalnymi pakietami. Jeśli nie został ustawiony, jego wartość domyślna to `~/.nuget/packages` w systemach Unix lub `%userprofile%\.nuget\packages` na Windows.
 
 `DOTNET_SERVICING`
 
@@ -326,7 +326,7 @@ Wyłącza wersja pomocnicza przenoszenie do przodu, jeśli ustawiono `0`. Aby uz
 
 `DOTNET_PACKAGES`
 
-Pakiet główny pamięci podręcznej. Jeśli nie został ustawiony, jego wartość domyślna to `$HOME/.nuget/packages` w systemach Unix lub `%HOME%\NuGet\Packages` na Windows.
+Pakiet główny pamięci podręcznej. Jeśli nie został ustawiony, jego wartość domyślna to `$HOME/.nuget/packages` w systemach Unix lub `%userprofile%\.nuget\packages` na Windows.
 
 `DOTNET_SERVICING`
 
@@ -344,7 +344,7 @@ Określa, czy środowiska uruchomieniowego, udostępnionej platformy lub zestawu
 
 `DOTNET_PACKAGES`
 
-Pakiet główny pamięci podręcznej. Jeśli nie został ustawiony, jego wartość domyślna to `$HOME/.nuget/packages` w systemach Unix lub `%HOME%\NuGet\Packages` na Windows.
+Pakiet główny pamięci podręcznej. Jeśli nie został ustawiony, jego wartość domyślna to `$HOME/.nuget/packages` w systemach Unix lub `%userprofile%\.nuget\packages` na Windows.
 
 `DOTNET_SERVICING`
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14ab9b5b36eee607679ee95423c2af912ed02310
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775001"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859999"
 ---
 # <a name="trees-in-wpf"></a>Drzewa w WPF
 W wielu technologii elementów i składników są zorganizowane w strukturze drzewa, w którym deweloperzy bezpośrednio manipulowania węzły obiektów w drzewie wpływać na renderowanie lub zachowanie aplikacji. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] używa także kilku metafory strukturę drzewa do zdefiniowania relacji między elementami program. W większości deweloperów WPF można utworzyć aplikację w kodzie lub zdefiniować części aplikacji w XAML podczas zastanawiać się pod względem koncepcyjnym obiektu drzewa metaphor, ale będzie można wywołanie interfejsu API lub za pomocą oznaczenia zrobić tak, a nie niektóre ogólne manipulowanie drzewa obiektem API takich jak możesz wykorzystać w XML modelu DOM. WPF udostępnia dwie klasy pomocnika, które zapewniają widoku drzewa metaphor <xref:System.Windows.LogicalTreeHelper> i <xref:System.Windows.Media.VisualTreeHelper>. Drzewo wizualne warunki i drzewo logiczne są również używane w dokumentacji programu WPF, ponieważ te sam drzewa są przydatne dla zrozumienia, działanie niektórych kluczowych funkcji WPF. W tym temacie Określa, co reprezentuje drzewo wizualne i drzewo logiczne, w tym artykule omówiono, jak takie drzew odnoszą się do ogólnej koncepcji drzewa obiektów i wprowadza <xref:System.Windows.LogicalTreeHelper> i <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -51,7 +51,7 @@ W wielu technologii elementów i składników są zorganizowane w strukturze drz
   
 <a name="override_logical_tree"></a>   
 ### <a name="overriding-the-logical-tree"></a>Zastępowanie drzewa logicznego  
- Autorzy formantu zaawansowanego zastąpić drzewo logiczne, zastępując kilka [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] definiują sposób obiekt ogólny lub model zawartości dodaje lub usuwa obiektów w drzewie logicznym. Na przykład jak zastąpić drzewo logiczne zobacz [przesłanianie drzewa logicznego](how-to-override-the-logical-tree.md).  
+ Autorzy zaawansowane kontrolki można zastąpić drzewo logiczne przez zastąpienie kilka interfejsów API, które definiują, jak obiekt ogólny lub model zawartości dodaje lub usuwa obiektów w drzewie logicznym. Na przykład jak zastąpić drzewo logiczne zobacz [przesłanianie drzewa logicznego](how-to-override-the-logical-tree.md).  
   
 <a name="pvi"></a>   
 ### <a name="property-value-inheritance"></a>Przejęcie wartości właściwości  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 90768a0c816e790138ba60bd24afee242e41e652
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010400"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860285"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource — Rozszerzenie znaczników
 Zawiera wartość dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] właściwości atrybutu przez tę wartość jako odwołanie do zasobu zdefiniowanego opóźnienie. Zachowanie wyszukiwania dla tego zasobu jest analogiczne do wyszukiwania w czasie wykonywania.  
@@ -52,7 +52,7 @@ Zawiera wartość dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla
   
  Klucz zasobu może być dowolnym ciągiem, zdefiniowane w [xamlname — gramatyka](../../xaml-services/xamlname-grammar.md). Klucz zasobu może być również inne typy obiektów, takich jak <xref:System.Type>. A <xref:System.Type> klucza ma podstawowe znaczenie dla jak formanty mogą być ich styl, kompozycje. Aby uzyskać więcej informacji, zobacz [omówienie tworzenia kontrolek](../controls/control-authoring-overview.md).  
   
- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] Podczas wyszukiwania wartości zasobów takich jak <xref:System.Windows.FrameworkElement.FindResource%2A>, wykonaj tę samą logikę wyszukiwania zasobów jako używaną przez `DynamicResource`.  
+ Wartości interfejsów API na potrzeby wyszukiwania zasobów, takich jak <xref:System.Windows.FrameworkElement.FindResource%2A>, wykonaj tę samą logikę wyszukiwania zasobów jako używaną przez `DynamicResource`.  
   
  Deklaratywne alternatywnych metod odwołujące się do zasobu jest jako [staticresource — rozszerzenie znaczników](staticresource-markup-extension.md).  
   

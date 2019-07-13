@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 47d892db8418b44fffeec870e56b49d5f986b563
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 5835cfb633451025ed32c2a26228e33a1b24473e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610478"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67857064"
 ---
 # <a name="input-overview"></a>Przegląd Dane wejściowe
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Podsystemu zapewnia zaawansowany [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] w celu uzyskania danych wejściowych z różnych urządzeń, m.in. myszy, klawiatury, touch i Pióro. W tym temacie opisano usługi świadczone przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i opisano architekturę systemów danych wejściowych.
@@ -58,7 +58,7 @@ ms.locfileid: "67610478"
  <xref:System.Windows.Input.Mouse> i <xref:System.Windows.Input.Keyboard> klasy są opisane bardziej szczegółowo zawarte w tym omówieniu.
 
 ### <a name="stylus-input"></a>Wejście pióra
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] została zintegrowana obsługa <xref:System.Windows.Input.Stylus>.  <xref:System.Windows.Input.Stylus> Wejście pióra, takich jak strzelanki przez [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje można traktować pióro jako myszy za pomocą myszy interfejsu API, ale [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia również pióro abstrakcję urządzenia, które korzystają z modelu, podobnie jak klawiatury i myszy.  Wszystkie powiązane pióro [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] zawierają wyraz "Pióro".
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] została zintegrowana obsługa <xref:System.Windows.Input.Stylus>.  <xref:System.Windows.Input.Stylus> Wejście pióra, takich jak strzelanki przez [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje można traktować pióro jako myszy za pomocą myszy interfejsu API, ale [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia również pióro abstrakcję urządzenia, które korzystają z modelu, podobnie jak klawiatury i myszy.  Wszystkie interfejsy API, które są związane z pisaka zawierają wyraz "Pióro".
 
  Ponieważ pióro może działać jako mysz, aplikacje, które obsługują jedynie wprowadzanie za pomocą myszy można nadal uzyskać pewien poziom pomocy technicznej pióro automatycznie. Gdy pióro jest używany w taki sposób, aplikacja ma możliwość obsługi zdarzenia odpowiednie pióra i następnie obsługuje odpowiednie zdarzenie myszy. Ponadto usługi wyższego poziomu, takie jak odręczne są również dostępne za pomocą pióra abstrakcję urządzenia.  Aby uzyskać więcej informacji na temat pisma odręcznego jako dane wejściowe, zobacz [wprowadzenie do użycia atramentu](getting-started-with-ink.md).
 
@@ -354,7 +354,7 @@ ms.locfileid: "67610478"
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>Przechwytywanie myszy
- Myszy przytrzymaj specjalnie modalne cech, znane jako przechwytywanie myszy. Przechwytywanie myszy jest używany do obsługi przejściowym stanu danych wejściowych, po rozpoczęciu operacji przeciągania i upuszczania, aby inne operacje na ekranie obejmujące nominalna pozycji wskaźnika myszy nie zawsze występują. Podczas przeciągania użytkownik nie może kliknąć bez przerywania przeciągania i upuszczania, co sprawia, że większość podpowiedzi mouseover niewłaściwe podczas przechwytywania myszy jest utrzymywane przez element źródłowy przeciągania. Udostępnia system wejściowy [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] , można określić stanu przechwytywanie myszy, jak i [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] , wymusić przechwytywanie myszy określony element lub Wyczyść stan przechwytywanie myszy. Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania, zobacz [przeciągania i upuszczania Przegląd](drag-and-drop-overview.md).
+ Myszy przytrzymaj specjalnie modalne cech, znane jako przechwytywanie myszy. Przechwytywanie myszy jest używany do obsługi przejściowym stanu danych wejściowych, po rozpoczęciu operacji przeciągania i upuszczania, aby inne operacje na ekranie obejmujące nominalna pozycji wskaźnika myszy nie zawsze występują. Podczas przeciągania użytkownik nie może kliknąć bez przerywania przeciągania i upuszczania, co sprawia, że większość podpowiedzi mouseover niewłaściwe podczas przechwytywania myszy jest utrzymywane przez element źródłowy przeciągania. System wejściowy udostępnia interfejsy API, które można określić stanu przechwytywanie myszy, a także interfejsów API, które mogą wymusić przechwytywanie myszy do określonego elementu, lub Wyczyść stan przechwytywanie myszy. Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania, zobacz [przeciągania i upuszczania Przegląd](drag-and-drop-overview.md).
 
 <a name="commands"></a>
 ## <a name="commands"></a>Polecenia

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: ef07e1acd250ceeb7c0e30f8a78dd8d7b196fdcd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ed6dd33efd5fdc5e2c61df4173bec5cc2f0d807
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655540"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859696"
 ---
 # <a name="advanced-text-formatting"></a>Zaawansowane formatowanie tekstu
-Windows Presentation Foundation (WPF) zapewnia niezawodny zestaw [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] , w tym tekst w aplikacji. Układ i [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], takich jak <xref:System.Windows.Controls.TextBlock>, najbardziej typowe i ogólne elementy prezentacji tekstu. Rysowanie [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], takich jak <xref:System.Windows.Media.GlyphRunDrawing> i <xref:System.Windows.Media.FormattedText>, pozwalają na rysunkach, w tym tekstu sformatowanego. Najbardziej zaawansowane poziom [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera tekst extensible formatowania aparatu do kontrolowania każdy aspekt prezentacji tekstu, takie jak zarządzanie magazynem tekstu, zarządzania formatowania tekstu, uruchom i zarządzania osadzonego obiektu.  
+Windows Presentation Foundation (WPF) zapewnia niezawodny zestaw interfejsów API, w tym tekst w aplikacji. Układ i [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]interfejsów API, takich jak <xref:System.Windows.Controls.TextBlock>, najbardziej typowe i ogólne elementy prezentacji tekstu. Rysowanie interfejsów API, takich jak <xref:System.Windows.Media.GlyphRunDrawing> i <xref:System.Windows.Media.FormattedText>, pozwalają na rysunkach, w tym tekstu sformatowanego. Najbardziej zaawansowane poziom [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera tekst extensible formatowania aparatu do kontrolowania każdy aspekt prezentacji tekstu, takie jak zarządzanie magazynem tekstu, zarządzania formatowania tekstu, uruchom i zarządzania osadzonego obiektu.  
   
  Ten temat zawiera wprowadzenie do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] formatowania tekstu. Koncentruje się ona na wdrożenie klienta i stosowanie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aparatu formatowania tekstu.  
   
@@ -26,7 +26,7 @@ Windows Presentation Foundation (WPF) zapewnia niezawodny zestaw [!INCLUDE[TLA#t
 
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- W tym temacie założono, że czytelnik zna wyższego poziomu [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] użyte do prezentowania tekstu. Większość scenariuszy użytkownika nie będzie wymagać formatowania tekstu zaawansowane [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] omówione w tym temacie. Aby zapoznać się z innym tekstem [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], zobacz [dokumenty w WPF](documents-in-wpf.md).  
+ W tym temacie założono, że jesteś zaznajomiony z wyższym poziomie interfejsy API, używane do prezentacji tekstu. Większość scenariuszy użytkownika nie będzie wymagać zaawansowane interfejsy API omówione w tym temacie do formatowania tekstu. Aby zapoznać się z wprowadzeniem do tekstu różne interfejsy API, zobacz [dokumenty w WPF](documents-in-wpf.md).  
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>Zaawansowane formatowanie tekstu  

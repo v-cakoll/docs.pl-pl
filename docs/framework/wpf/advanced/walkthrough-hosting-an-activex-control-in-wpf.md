@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: f19186380b0cbc71cdd64013ca5e49361ba26cda
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0181093de1c40889110ab7eae75a3847a17845a9
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778384"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859935"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Przewodnik: hostowanie kontrolki ActiveX w WPF
-Aby włączone ulepszone współdziałanie z przeglądarki, można użyć [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] kontrolki w swojej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]— na podstawie aplikacji. W tym instruktażu pokazano, jak możesz hostować [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] jako formant na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] strony.
+Aby włączone ulepszone współdziałanie z przeglądarki, można użyć kontrolek ActiveX firmy Microsoft w usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]— na podstawie aplikacji. W tym instruktażu pokazano, jak możesz hostować [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] jako formant na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] strony.
 
  Zadania zilustrowane w tym przewodniku obejmują:
 
@@ -26,7 +26,7 @@ Aby włączone ulepszone współdziałanie z przeglądarki, można użyć [!INCL
 
 - Hosting kontrolki ActiveX na stronie WPF.
 
- Po ukończeniu tego przewodnika, wiedzieć, jak używać [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] kontrolki w Twojej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]— na podstawie aplikacji.
+ Po ukończeniu tego przewodnika, będzie zrozumienie, jak użyć kontrolek ActiveX firmy Microsoft w swojej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]— na podstawie aplikacji.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
@@ -60,7 +60,7 @@ Aby włączone ulepszone współdziałanie z przeglądarki, można użyć [!INCL
 9. Jeśli zostanie wyświetlony monit o zmianę nazwy wszystkich odwołań, kliknij przycisk **tak**.
 
 ## <a name="creating-the-activex-control"></a>Tworzenie kontrolki ActiveX
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] automatycznie generuje <xref:System.Windows.Forms.AxHost> klasy otoki dla [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] kontroli, gdy formant został dodany do powierzchni projektowej. Poniższa procedura tworzy zestaw zarządzany o nazwie AxInterop.WMPLib.dll.
+ [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] automatycznie generuje <xref:System.Windows.Forms.AxHost> klasy otoki kontrolki ActiveX firmy Microsoft, gdy formant został dodany do powierzchni projektowej. Poniższa procedura tworzy zestaw zarządzany o nazwie AxInterop.WMPLib.dll.
 
 ### <a name="to-create-the-activex-control"></a>Aby utworzyć formant ActiveX
 
@@ -76,7 +76,7 @@ Aby włączone ulepszone współdziałanie z przeglądarki, można użyć [!INCL
 
 ### <a name="to-host-the-activex-control"></a>Do hostowania kontrolki ActiveX
 
-1. W projekcie HostingAxInWpf, należy dodać odwołanie do wygenerowany [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] zestawu współdziałania.
+1. W projekcie HostingAxInWpf Dodaj odwołanie do wygenerowanego zestawu współdziałania ActiveX.
 
      Ten zestaw o nazwie AxInterop.WMPLib.dll i został dodany do folderu debugowania projektu WmpAxLib po zaimportowaniu formantu programu Windows Media Player.
 

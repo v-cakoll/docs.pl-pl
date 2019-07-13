@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c5547955a1d5d20938e3896406631da0fae0c5d
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981919"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860046"
 ---
 # <a name="property-value-inheritance"></a>Przejęcie wartości właściwości
 Dziedziczenie wartości właściwości jest funkcją [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] właściwości systemu. Dziedziczenie wartości właściwości umożliwia elementy podrzędne w drzewie elementów, aby uzyskać wartość określonej właściwości z obiektu nadrzędnego elementom dziedziczenie tę wartość, jak go w dowolnym miejscu została ustawiona w najbliższym elemencie nadrzędnym. Element nadrzędny może także uzyskać wartość poprzez dziedziczenie wartości właściwości, więc system potencjalnie recurses aż do głównej strony. Dziedziczenie wartości właściwości nie jest to domyślne zachowanie systemu właściwości; Właściwość, należy ustanowić z ustawieniem określonego metadanych aby spowodować, że tę właściwość można zainicjować dziedziczenie wartości właściwości dla elementów podrzędnych.  
@@ -22,7 +22,7 @@ Dziedziczenie wartości właściwości jest funkcją [!INCLUDE[TLA#tla_winclient
   
 <a name="Practical_Applications_of_Property_Value_Inheritance"></a>   
 ## <a name="practical-applications-of-property-value-inheritance"></a>Praktyczne zastosowania dziedziczenie wartości właściwości  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Zawierają kilka właściwości, które mają dziedziczenia właściwości włączone. Zazwyczaj scenariusz dla tych jest wymagają one właściwości w których jest właściwe, właściwość można ustawić tylko raz na każdej stronie, ale w przypadku tej właściwości jest również członkiem jednej z klas elementu podstawowego i dlatego będzie dostępne są także na większości elementów podrzędnych. Na przykład <xref:System.Windows.FrameworkElement.FlowDirection%2A> formantów właściwości kierunek, w którym przepływ zawartości powinien być prezentowane i rozmieszczone na stronie. Zazwyczaj chcesz koncepcji przepływu tekstu do obsłużenia spójnie w całej wszystkie elementy podrzędne. Kierunek przepływu były jakiegoś powodu Resetowanie w pewien poziom drzewa elementów przez użytkownika lub akcji środowiska, zazwyczaj należy resetować w całym. Gdy <xref:System.Windows.FrameworkElement.FlowDirection%2A> dziedziczą właściwości zostanie podjęta, tylko wartość muszą być Ustaw lub Wyzeruj raz, na poziomie drzewa elementu, który obejmuje na potrzeby prezentacji każdej strony w aplikacji. Nawet wartość początkową domyślną będzie dziedziczyć w ten sposób. Model dziedziczenia wartość właściwości nadal umożliwia poszczególne elementy zresetować wartość rzadkich przypadkach, gdy o różnych kierunki przepływu jest zamierzone.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Interfejsów API zawierają kilka właściwości, które mają dziedziczenia właściwości włączone. Zazwyczaj scenariusz dla tych jest wymagają one właściwości w których jest właściwe, właściwość można ustawić tylko raz na każdej stronie, ale w przypadku tej właściwości jest również członkiem jednej z klas elementu podstawowego i dlatego będzie dostępne są także na większości elementów podrzędnych. Na przykład <xref:System.Windows.FrameworkElement.FlowDirection%2A> formantów właściwości kierunek, w którym przepływ zawartości powinien być prezentowane i rozmieszczone na stronie. Zazwyczaj chcesz koncepcji przepływu tekstu do obsłużenia spójnie w całej wszystkie elementy podrzędne. Kierunek przepływu były jakiegoś powodu Resetowanie w pewien poziom drzewa elementów przez użytkownika lub akcji środowiska, zazwyczaj należy resetować w całym. Gdy <xref:System.Windows.FrameworkElement.FlowDirection%2A> dziedziczą właściwości zostanie podjęta, tylko wartość muszą być Ustaw lub Wyzeruj raz, na poziomie drzewa elementu, który obejmuje na potrzeby prezentacji każdej strony w aplikacji. Nawet wartość początkową domyślną będzie dziedziczyć w ten sposób. Model dziedziczenia wartość właściwości nadal umożliwia poszczególne elementy zresetować wartość rzadkich przypadkach, gdy o różnych kierunki przepływu jest zamierzone.  
   
 <a name="Making_a_Custom_Property_Inheritable"></a>   
 ## <a name="making-a-custom-property-inheritable"></a>Tworzenie niestandardowe właściwości dziedziczonych  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 2d263ac09cb4c9196b0d584dd5cf71182be01adc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0373d9150349dc24653270600a317b0d41b945b1
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584359"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859642"
 ---
 # <a name="events-c-programming-guide"></a>Zdarzenia (Przewodnik programowania w języku C#)
 Zdarzenie pozwala [klasy](../../../csharp/language-reference/keywords/class.md) lub obiektowi powiadomić inne klasy lub obiekty, gdy wystąpi stanie się coś istotnego. Klasa, która wysyła (lub *zgłasza*) nosi nazwę zdarzenia *wydawcy* klas, które odbierają i (lub *obsługi*) zdarzenia są wywoływane *subskrybentów* .  
@@ -44,8 +44,6 @@ Zdarzenie pozwala [klasy](../../../csharp/language-reference/keywords/class.md) 
 - [Instrukcje: Wywoływanie zdarzeń klasy podstawowej w klasach pochodnych](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)  
   
 - [Instrukcje:  Zdarzenia implementowania interfejsu](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)  
-  
-- [Instrukcje: Użycie słownika do wystąpień zdarzeń Store](../../../csharp/programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md)  
   
 - [Instrukcje: Implementowanie niestandardowych metod dostępu zdarzeń](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 374ab546cb0ba7a4b1fd789b13aca0158f22f686
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6bccff6bf3bb061a430a9105d99f2fee3511c7fd
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662903"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859902"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Przegląd Lokalizacja i globalizacja WPF
 
@@ -82,13 +82,13 @@ Podczas lokalizowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sha
 
 Podczas opracowywania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, proces kompilacji do lokalizacji jest następujący:
 
-- Deweloper tworzy i globalizes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. W pliku projektu do zestawów dla deweloperów `<UICulture>en-US</UICulture>` tak, aby podczas kompilowania aplikacji, jest generowany głównym zestawie niezależny od języka. Ten zestaw zawiera Satelita. resources.dll pliku, który zawiera wszystkie lokalizowalne zasoby. Opcjonalnie możesz zachować języka źródłowego w głównym zestawie ponieważ naszych lokalizacji [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] obsługuje wyodrębniania z zestawu głównego.
+- Deweloper tworzy i globalizes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. W pliku projektu do zestawów dla deweloperów `<UICulture>en-US</UICulture>` tak, aby podczas kompilowania aplikacji, jest generowany głównym zestawie niezależny od języka. Ten zestaw zawiera Satelita. resources.dll pliku, który zawiera wszystkie lokalizowalne zasoby. Opcjonalnie możesz zachować języka źródłowego w głównym zestawie ponieważ nasze interfejsy API lokalizacji obsługuje wyodrębniania z zestawu głównego.
 
 - Gdy plik jest skompilowany w kompilacji, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest konwertowana na formularz BAML XAML. Neutralne kulturalnie `MyDialog.exe` i kulturalnie zależne (angielski) `MyDialog.resources.dll` pliki są wydawane dla anglojęzycznego klienta.
 
 ### <a name="localization-workflow"></a>Przepływ pracy lokalizacji
 
-Proces lokalizacji rozpoczyna się po Niezlokalizowany `MyDialog.resources.dll` utworzony plik. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Elementów i właściwości w swojej pierwotnej [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] są wyodrębniane z formularz BAML XAML do pary klucz wartość, przy użyciu [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] w obszarze <xref:System.Windows.Markup.Localizer>. Lokalizatorzy używają pary klucz wartość, aby zlokalizować aplikację. Możesz wygenerować nowy. resource.dll z nowymi wartościami miar po zakończeniu lokalizacji.
+Proces lokalizacji rozpoczyna się po Niezlokalizowany `MyDialog.resources.dll` utworzony plik. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Elementów i właściwości w swojej pierwotnej [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] są wyodrębniane z formularz BAML XAML do pary klucz wartość, przy użyciu interfejsów API w ramach <xref:System.Windows.Markup.Localizer>. Lokalizatorzy używają pary klucz wartość, aby zlokalizować aplikację. Możesz wygenerować nowy. resource.dll z nowymi wartościami miar po zakończeniu lokalizacji.
 
 Klucze pary klucz wartość są `x:Uid` wartości, które są wprowadzane przez dewelopera w oryginalnym [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Te `x:Uid` wartości Włącz interfejs API, aby śledzić i scalania zmian, które odbywa się między warstwą Deweloper a lokalizatorowi podczas lokalizacji. Na przykład, jeśli deweloper zmienia [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] po rozpoczęciu lokalizatorowi lokalizowanie można scalić zmiany programowania za pomocą proces lokalizacji już zakończonej tak, aby minimalny tłumaczenia praca zostanie utracona.
 
@@ -130,9 +130,9 @@ Właściwość poprzednie okno automatycznie zmienia rozmiar okna według rozmia
 
 `<Grid x:Uid="Grid_1">`
 
-<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> właściwości są wymagane, aby [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lokalizacji [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] działała prawidłowo.
+<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> właściwości są wymagane, aby [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lokalizacji interfejsów API, aby działać poprawnie.
 
-Są one używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lokalizacji [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] do śledzenia zmian między środowiskami deweloperskim i lokalizacja [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> właściwości umożliwia scalanie nowszą wersję [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] przy użyciu starszych lokalizacji [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Możesz dodać <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> właściwości, uruchamiając `msbuild -t:updateuid RunDialog.csproj` w powłoce poleceń. Jest to zalecana metoda dodawania <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> właściwości ponieważ ręcznie dodawane jest zazwyczaj czasochłonne i mniej dokładne. Sprawdź, czy <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> właściwości są poprawnie ustawione, uruchamiając `msbuild -t:checkuid RunDialog.csproj`.
+Są one używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lokalizacji interfejsów API, aby śledzić zmiany między środowiskami deweloperskim i lokalizacja [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> właściwości umożliwia scalanie nowszą wersję [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] przy użyciu starszych lokalizacji [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Możesz dodać <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> właściwości, uruchamiając `msbuild -t:updateuid RunDialog.csproj` w powłoce poleceń. Jest to zalecana metoda dodawania <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> właściwości ponieważ ręcznie dodawane jest zazwyczaj czasochłonne i mniej dokładne. Sprawdź, czy <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> właściwości są poprawnie ustawione, uruchamiając `msbuild -t:checkuid RunDialog.csproj`.
 
 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Mają strukturę za pomocą <xref:System.Windows.Controls.Grid> formant, który jest formantem przydatne dla zalet automatycznego układu w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Należy pamiętać, że okno dialogowe jest podzielony na trzy wiersze i kolumny pięć. Nie jest jedną z definicji wierszy i kolumn ma stały rozmiar; Dzięki temu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementy, które są umieszczone w każdej komórce dostosowują się do wzrostu i zmniejsza rozmiar podczas lokalizacji.
 

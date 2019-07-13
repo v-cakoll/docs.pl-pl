@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 1453b781f9466f7832e57140db04fedceedb5568
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d212ba9beaa0ccc229204045c5a8174381440dfc
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775525"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860153"
 ---
 # <a name="best-practices-for-exceptions"></a>Najlepsze praktyki dotyczące wyjątków
 
@@ -122,7 +122,7 @@ Podaj dodatkowe właściwości, dla wyjątku (oprócz ciąg niestandardowy komun
 
 ## <a name="use-exception-builder-methods"></a>Używać metod konstruktora wyjątków
 
-Klasy często zgłaszają takie same wyjątki z różnych miejsc w swojej implementacji. Aby uniknąć nadmiernej ilości kodu, należy używać metod pomocników, które tworzą wyjątki i je zwracają. Przykład:
+Klasy często zgłaszają takie same wyjątki z różnych miejsc w swojej implementacji. Aby uniknąć nadmiernej ilości kodu, należy używać metod pomocników, które tworzą wyjątki i je zwracają. Na przykład:
 
 [!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
@@ -141,6 +141,14 @@ public void TransferFunds(Account from, Account to, decimal amount)
     // If the deposit fails, the withdrawal shouldn't remain in effect.
     to.Deposit(amount);
 }
+```
+
+```vb
+Public Sub TransferFunds(from As Account, [to] As Account, amount As Decimal)
+    from.Withdrawal(amount)
+    ' If the deposit fails, the withdrawal shouldn't remain in effect.
+    [to].Deposit(amount)
+End Sub
 ```
 
 Powyższej metody bezpośrednio nie generuje żadnych wyjątków, ale musi być pamiętać o napisana tak, aby w przypadku niepowodzenia operacji złożenia wycofanie została odwrócona.
@@ -163,19 +171,43 @@ private static void TransferFunds(Account from, Account to, decimal amount)
 }
 ```
 
+```vb
+Private Shared Sub TransferFunds(from As Account, [to] As Account, amount As Decimal)
+    Dim withdrawalTrxID As String = from.Withdrawal(amount)
+    Try
+        [to].Deposit(amount)
+    Catch
+        from.RollbackTransaction(withdrawalTrxID)
+        Throw
+    End Try
+End Sub
+```
+
 Ten przykład ilustruje użycie `throw` ponownie zgłosić oryginalny wyjątek, który może ułatwić aby wywołujący mogli zobaczyć przyczyny rzeczywistego problemu bez konieczności zbadać <xref:System.Exception.InnerException> właściwości. Alternatywą jest nowy wyjątku i obejmują oryginalnego wyjątku, ponieważ wyjątek wewnętrzny:
 
 ```csharp
 catch (Exception ex)
 {
     from.RollbackTransaction(withdrawalTrxID);
-    throw new TransferFundsException("Withdrawal failed", innerException: ex)
+    throw new TransferFundsException("Withdrawal failed.", innerException: ex)
     {
         From = from,
         To = to,
         Amount = amount
     };
 }
+```
+
+```vb
+Catch ex As Exception
+    from.RollbackTransaction(withdrawalTrxID)
+    Throw New TransferFundsException("Withdrawal failed.", innerException:=ex) With
+    {
+        .From = from,
+        .[To] = [to],
+        .Amount = amount
+    }
+End Try
 ```
 
 ## <a name="see-also"></a>Zobacz także

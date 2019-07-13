@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 2090c58369ed3c7bda5df1342291001d9550d48d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: acfc252708bf8be7abacb1adc2968122501315a0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610471"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860197"
 ---
 # <a name="printing-overview"></a>Przegląd Drukowanie
 Za pomocą programu Microsoft .NET Framework deweloperzy aplikacji przy użyciu Windows Presentation Foundation (WPF) mają bogaty zestaw nowych drukowanie i interfejsy API umożliwiające zarządzanie systemem drukowania. Za pomocą [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], niektóre z tych rozszerzeń systemu drukowania są również dostępne dla programistów tworzących [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji i deweloperzy korzystający z niezarządzanego kodu. W ramach tej nowej funkcji jest nowy [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] format pliku i [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżka wydruku.  
@@ -75,7 +75,7 @@ Za pomocą programu Microsoft .NET Framework deweloperzy aplikacji przy użyciu 
  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Kontrola zapewnia jeden punkt wejścia dla [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], konfiguracji i przesyłanie zadań do plików XPS. Aby uzyskać informacje o sposobie tworzenia instancji i korzystanie z kontrolki, zobacz [Wywołaj okno dialogowe Drukuj](how-to-invoke-a-print-dialog.md).  
   
 ### <a name="advanced-xps-printing"></a>Zaawansowane XPS, drukowanie  
- Aby uzyskać dostęp do pełnego zestawu funkcji XPS, należy użyć zaawansowanych drukowania interfejsu API. Kilka istotnych interfejsu API są opisane bardziej szczegółowo poniżej. Aby uzyskać pełną listę XPS ścieżka wydruku [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], zobacz <xref:System.Windows.Xps> i <xref:System.Printing> odwołania do przestrzeni nazw.  
+ Aby uzyskać dostęp do pełnego zestawu funkcji XPS, należy użyć zaawansowanych drukowania interfejsu API. Kilka istotnych interfejsu API są opisane bardziej szczegółowo poniżej. Aby uzyskać pełną listę ścieżka wydruku XPS interfejsów API, zobacz <xref:System.Windows.Xps> i <xref:System.Printing> odwołania do przestrzeni nazw.  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket — i printcapabilities —  
  <xref:System.Printing.PrintTicket> i <xref:System.Printing.PrintCapabilities> klasy stanowiących zaawansowane funkcje XPS. Oba typy obiektów są [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] sformatowane struktury zorientowane na drukowanie funkcji, takich jak sortowanie, drukowania dwustronnego, zszywanie itp. Te struktury są zdefiniowane w schemacie drukowania. A <xref:System.Printing.PrintTicket> powoduje, że drukarki sposób przetwarzania zadania drukowania. <xref:System.Printing.PrintCapabilities> Klasa definiuje możliwościach drukarki. Sondując możliwościach drukarki, <xref:System.Printing.PrintTicket> mogą być tworzone, że wykorzystuje pełną drukarki na obsługiwane funkcje. Podobnie można uniknąć nieobsługiwanych funkcji.  
@@ -87,7 +87,7 @@ Za pomocą programu Microsoft .NET Framework deweloperzy aplikacji przy użyciu 
  [!code-vb[xpscreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
   
 #### <a name="printserver-and-printqueue"></a>PrintServer i PrintQueue  
- <xref:System.Printing.PrintServer> Klasa reprezentuje serwer wydruku sieci i <xref:System.Printing.PrintQueue> klasa reprezentuje drukarki i danych wyjściowych kolejki zadań skojarzonych z nim. Razem te [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] umożliwia zaawansowane zarządzanie zadaniami drukowania na serwerze. A <xref:System.Printing.PrintServer>, lub jeden z jej klas pochodnych, jest używany do zarządzania <xref:System.Printing.PrintQueue>. <xref:System.Printing.PrintQueue.AddJob%2A> Metoda służy do wstawiania nowego zadania drukowania do kolejki.  
+ <xref:System.Printing.PrintServer> Klasa reprezentuje serwer wydruku sieci i <xref:System.Printing.PrintQueue> klasa reprezentuje drukarki i danych wyjściowych kolejki zadań skojarzonych z nim. Razem te interfejsy API umożliwiają Zaawansowane zarządzanie zadaniami drukowania na serwerze. A <xref:System.Printing.PrintServer>, lub jeden z jej klas pochodnych, jest używany do zarządzania <xref:System.Printing.PrintQueue>. <xref:System.Printing.PrintQueue.AddJob%2A> Metoda służy do wstawiania nowego zadania drukowania do kolejki.  
   
  Poniższy przykład przedstawia sposób tworzenia <xref:System.Printing.LocalPrintServer> i uzyskiwać dostęp do domyślnej <xref:System.Printing.PrintQueue> przy użyciu kodu.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 27554d7e0a7e980d240e0609fe0561c2138f0aa1
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 659497543d40c8eda18b55b4d98feac976c5abf5
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664060"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860247"
 ---
 # <a name="custom-dependency-properties"></a>Niestandardowe właściwości zależności
 
@@ -87,7 +87,7 @@ Definiowanie właściwości zależności składa się z czterech różnych poję
 
 ### <a name="registering-the-property-with-the-property-system"></a>Rejestrowanie właściwości w systemie właściwości
 
-Aby Twoja własność właściwość zależności musisz zarejestrować tę właściwość do tabeli obsługiwanego przez system właściwości i nadaj mu unikatowy identyfikator, który jest używany jako kwalifikator dla późniejszych operacji systemu właściwości. Te operacje mogą być operacji wewnętrznych lub własnego kodu właściwości systemu podczas wywoływania [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Aby zarejestrować właściwość, należy wywołać <xref:System.Windows.DependencyProperty.Register%2A> metody w treści klasy (wewnątrz klasy, ale poza wszystkie definicje elementów członkowskich). Pole identyfikatora również odbywa się przy <xref:System.Windows.DependencyProperty.Register%2A> wywołania metody, jako wartość zwracaną. Przyczyna, <xref:System.Windows.DependencyProperty.Register%2A> wywołanie jest wykonywane poza innego członka definicji jest, ponieważ umożliwia to wartość zwracana przypisać i utworzyć `public` `static` `readonly` pole typu <xref:System.Windows.DependencyProperty> jako część swojej klasy. To pole staje się na identyfikator swojej właściwości zależności.
+Aby Twoja własność właściwość zależności musisz zarejestrować tę właściwość do tabeli obsługiwanego przez system właściwości i nadaj mu unikatowy identyfikator, który jest używany jako kwalifikator dla późniejszych operacji systemu właściwości. Te operacje mogą być operacji wewnętrznych lub własnego kodu, wywoływanie interfejsów API systemu właściwości. Aby zarejestrować właściwość, należy wywołać <xref:System.Windows.DependencyProperty.Register%2A> metody w treści klasy (wewnątrz klasy, ale poza wszystkie definicje elementów członkowskich). Pole identyfikatora również odbywa się przy <xref:System.Windows.DependencyProperty.Register%2A> wywołania metody, jako wartość zwracaną. Przyczyna, <xref:System.Windows.DependencyProperty.Register%2A> wywołanie jest wykonywane poza innego członka definicji jest, ponieważ umożliwia to wartość zwracana przypisać i utworzyć `public` `static` `readonly` pole typu <xref:System.Windows.DependencyProperty> jako część swojej klasy. To pole staje się na identyfikator swojej właściwości zależności.
 
 [!code-csharp[WPFAquariumSln#RegisterAG](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerag)]
 [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]
@@ -174,7 +174,7 @@ Właściwości zależności typu kolekcji ma kilka problemów z implementacją d
 
 ## <a name="dependency-property-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń właściwości zależności
 
-Właściwości zależności powinien być zadeklarowany jako publiczny właściwości. Pola identyfikatora właściwości zależności powinien być zadeklarowany jako publiczny pola statyczne. Nawet wtedy, gdy użytkownik podejmie próbę zadeklarować innych poziomów dostępu (takich jak chroniony), właściwości zależności można uzyskać za pomocą identyfikatora w połączeniu z systemu właściwości [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Nawet pole identyfikatora chroniony jest potencjalnie dostępne ze względu na określenie metadanych raportowania lub wartość [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] będących częścią właściwości systemu, takie jak <xref:System.Windows.LocalValueEnumerator>. Aby uzyskać więcej informacji, zobacz [zabezpieczenia właściwości zależności](dependency-property-security.md).
+Właściwości zależności powinien być zadeklarowany jako publiczny właściwości. Pola identyfikatora właściwości zależności powinien być zadeklarowany jako publiczny pola statyczne. Nawet wtedy, gdy użytkownik podejmie próbę zadeklarować innych poziomów dostępu (takich jak chroniony), właściwości zależności można uzyskać za pomocą identyfikatora w połączeniu z interfejsów API systemu właściwości. Nawet pole Identyfikator chroniony jest potencjalnie dostępne ze względu na metadanych raportowania lub wartość oznaczanie interfejsów API, które są częścią właściwości systemu, takie jak <xref:System.Windows.LocalValueEnumerator>. Aby uzyskać więcej informacji, zobacz [zabezpieczenia właściwości zależności](dependency-property-security.md).
 
 <a name="DPCtor"></a>
 

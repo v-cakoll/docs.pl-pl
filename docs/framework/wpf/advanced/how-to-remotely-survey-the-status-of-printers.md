@@ -11,15 +11,15 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: da2576696b514dca882636125cfb3e31a82d7f6e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 4140152079b93e3c0a3d5fcda0e1b2c6f9fb89a4
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878202"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859863"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Instrukcje: Zdalne badanie stanu drukarek
-W dowolnym momencie w średnich i dużych firmach może istnieć wiele drukarek, które nie działa z powodu zakleszczenie papieru lub Brak papieru lub problematycznych sytuacji. Bogaty zestaw właściwości drukarki ujawnione w [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] programu Microsoft .NET Framework zapewniają środki do przeprowadzania szybkiej udział w ankiecie stanów drukarki.  
+W dowolnym momencie w średnich i dużych firmach może istnieć wiele drukarek, które nie działa z powodu zakleszczenie papieru lub Brak papieru lub problematycznych sytuacji. Bogaty zestaw właściwości drukarki ujawnione w interfejsów API programu Microsoft .NET Framework umożliwiają wykonywanie szybkiego przeglądu stanów drukarek.  
   
 ## <a name="example"></a>Przykład  
  Oto główne kroki tworzenia tego rodzaju narzędzia.  

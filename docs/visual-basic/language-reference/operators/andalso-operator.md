@@ -11,19 +11,19 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: 3876fd9c32d486b8ebecc9ee2428486a687a1624
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cb4d372d3ac228f29c6fa45f124796e5dfb6709
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608323"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859883"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso — Operator (Visual Basic)
 Wykonuje zwarcie logicznego połączenia dwóch wyrażeń.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb
 result = expression1 AndAlso expression2  
 ```  
   
@@ -31,9 +31,9 @@ result = expression1 AndAlso expression2
   
 |Termin|Definicja|  
 |---|---|  
-|`result`|Wymagana. Wszelkie `Boolean` wyrażenia. Wynik jest `Boolean` wynik porównania dwóch wyrażeń.|  
+|`result`|Wymagany. Wszelkie `Boolean` wyrażenia. Wynik jest `Boolean` wynik porównania dwóch wyrażeń.|  
 |`expression1`|Wymagana. Wszelkie `Boolean` wyrażenia.|  
-|`expression2`|Wymagana. Wszelkie `Boolean` wyrażenia.|  
+|`expression2`|Wymagane. Wszelkie `Boolean` wyrażenia.|  
   
 ## <a name="remarks"></a>Uwagi  
  Operacja logiczna jest nazywany *zwarcie* Jeśli skompilowany kod może obejść przedziały oceny jedno wyrażenie w zależności od wyniku innego wyrażenia. Jeśli wynik pierwsze wyrażenie obliczane określi ostateczny wynik operacji, nie ma potrzeby do oceny, drugie wyrażenie, ponieważ nie można zmienić, wynik końcowy. Zwarcie może poprawić wydajność, jeśli pominięto wyrażenie jest złożone, czy obejmuje wywołania procedur.  
@@ -47,7 +47,8 @@ result = expression1 AndAlso expression2
 |`False`|(nie oceniono)|`False`|  
   
 ## <a name="data-types"></a>Typy danych  
- `AndAlso` Operator jest zdefiniowany tylko w przypadku [typ danych Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic konwertuje każdy argument konieczny do `Boolean` i wykonuje operację całkowicie w `Boolean`. Jeśli wynik jest przypisany do typu numerycznego, Visual Basic konwertuje go z `Boolean` do tego typu. Może to powodować nieoczekiwane zachowanie. Na przykład `5 AndAlso 12` skutkuje `–1` podczas konwersji na `Integer`.  
+ `AndAlso` Operator jest zdefiniowany tylko w przypadku [typ danych Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic konwertuje każdy argument konieczny do `Boolean` przed obliczając wartość wyrażenia. Jeśli wynik jest przypisany do typu numerycznego, Visual Basic konwertuje go z `Boolean` do tego typu tak, aby `False` staje się `0` i `True` staje się `-1`.
+Aby uzyskać więcej informacji, zobacz [logiczna konwersje typów](../data-types/boolean-data-type.md#type-conversions)
   
 ## <a name="overloading"></a>Przeciążenie  
  [Operatora](../../../visual-basic/language-reference/operators/and-operator.md) i [IsFalse Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md) może być *przeciążone*, co oznacza, że klasa lub Struktura można ponownie zdefiniować ich zachowania, gdy argument operacji ma typ, który klasy lub struktury. Przeciążanie `And` i `IsFalse` operatory wpływa na zachowanie `AndAlso` operatora. Jeśli kod używa `AndAlso` dla klasy lub struktury, która przeciążenia `And` i `IsFalse`, należy zrozumieć ich zachowanie zmieniony. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

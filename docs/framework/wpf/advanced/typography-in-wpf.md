@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: eba59f81fa19ee3fe4fbb82682ca986d082e449f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94937b2c3e6935474d337c62bfd6698441dfcc2e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621587"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860121"
 ---
 # <a name="typography-in-wpf"></a>Typografia w WPF
 W tym temacie przedstawiono główne funkcje związane z typografią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Te funkcje obejmują poprawy jakości i wydajności renderowania tekstu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] typografii obsługi rozszerzonego tekstu międzynarodowe, rozszerzona obsługa czcionek i interfejsy programowania aplikacji w usłudze nowy tekst (API).  
@@ -71,7 +71,7 @@ Tekst z antialiasingu kierunku y ClearType
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>Nowy tekst interfejsy programowania aplikacji (API)  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera kilka tekst [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] dla deweloperów do użycia podczas łącznie z tekstem w swoich aplikacjach. Te [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] są podzielone na trzy kategorie:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera tekst kilka interfejsów API dla deweloperów do użycia podczas łącznie z tekstem w swoich aplikacjach. Te interfejsy API są podzielone na trzy kategorie:  
   
 - **Układ i interfejsu użytkownika**. Wspólny tekst kontrolki do [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)].  
   
@@ -80,7 +80,7 @@ Tekst z antialiasingu kierunku y ClearType
 - **Zaawansowane formatowanie tekstu**. Pozwala na implementowanie aparatu niestandardowego tekstu.  
   
 ### <a name="layout-and-user-interface"></a>Układ i interfejsu użytkownika  
- Na najwyższym poziomie funkcjonalności, tekst [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] zapewnić wspólnego [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] kontrolki, takie jak <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, i <xref:System.Windows.Controls.TextBox>. Te elementy sterujące udostępniają podstawowe [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów w obrębie aplikacji i oferty w prosty sposób obecne i wchodzić w interakcje z tekstem. Określa, takich jak <xref:System.Windows.Controls.RichTextBox> i <xref:System.Windows.Controls.PasswordBox> Włącz bardziej zaawansowany lub wyspecjalizowane obsługi tekstu. Takie jak klasy i <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, i <xref:System.Windows.Documents.TextPointer> Włącz manipulacja tekstem przydatne. Te [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementy sterujące udostępniają właściwości <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, i <xref:System.Windows.Controls.Control.FontStyle%2A>, które umożliwiają kontrolowanie czcionki, który jest używany do renderowania tekstu.  
+ Na najwyższym poziomie w funkcji text interfejsów API zapewniają typowe [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] kontrolki, takie jak <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, i <xref:System.Windows.Controls.TextBox>. Te elementy sterujące udostępniają podstawowe [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów w obrębie aplikacji i oferty w prosty sposób obecne i wchodzić w interakcje z tekstem. Określa, takich jak <xref:System.Windows.Controls.RichTextBox> i <xref:System.Windows.Controls.PasswordBox> Włącz bardziej zaawansowany lub wyspecjalizowane obsługi tekstu. Takie jak klasy i <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, i <xref:System.Windows.Documents.TextPointer> Włącz manipulacja tekstem przydatne. Te [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementy sterujące udostępniają właściwości <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, i <xref:System.Windows.Controls.Control.FontStyle%2A>, które umożliwiają kontrolowanie czcionki, który jest używany do renderowania tekstu.  
   
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>Przy użyciu efektów mapy bitowej, transformacji i efektów tekstowych  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Umożliwia tworzenie wizualnie interesujące używa tekstu przez korzysta z funkcji takich jak efektów mapy bitowej, transformacji i efektów tekstowych. Poniższy kod przedstawia typowy typ efektem cienia tekstu.  
@@ -140,7 +140,7 @@ Tekst z antialiasingu kierunku y ClearType
  Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.FormattedText> obiektu, zobacz [Rysowanie tekstu w formacie](drawing-formatted-text.md).  
   
 ### <a name="advanced-text-formatting"></a>Zaawansowane formatowanie tekstu  
- Najbardziej zaawansowane poziom tekst [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferuje możliwość utworzenia układu niestandardowego tekstu przy użyciu <xref:System.Windows.Media.TextFormatting.TextFormatter> obiektu a innymi typami danych w <xref:System.Windows.Media.TextFormatting> przestrzeni nazw. <xref:System.Windows.Media.TextFormatting.TextFormatter> i skojarzonych klas można zaimplementować układ niestandardowy tekst, który obsługuje własnych definicji formatów znaków, style akapitu wiersz reguł podziału, a inne układ funkcji międzynarodowych tekstu. Istnieje bardzo nielicznych przypadkach, w których chcesz zastąpić domyślną implementację elementu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługi układu tekstu. Jednak jeśli podczas tworzenia edycji formantu lub aplikacji tekstu, możesz wymagać inną implementację niż domyślna [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementacji.  
+ Najbardziej zaawansowane poziom tekstu interfejsów API, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferuje możliwość utworzenia układu niestandardowego tekstu przy użyciu <xref:System.Windows.Media.TextFormatting.TextFormatter> obiektu a innymi typami danych w <xref:System.Windows.Media.TextFormatting> przestrzeni nazw. <xref:System.Windows.Media.TextFormatting.TextFormatter> i skojarzonych klas można zaimplementować układ niestandardowy tekst, który obsługuje własnych definicji formatów znaków, style akapitu wiersz reguł podziału, a inne układ funkcji międzynarodowych tekstu. Istnieje bardzo nielicznych przypadkach, w których chcesz zastąpić domyślną implementację elementu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługi układu tekstu. Jednak jeśli podczas tworzenia edycji formantu lub aplikacji tekstu, możesz wymagać inną implementację niż domyślna [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementacji.  
   
  W przeciwieństwie do tradycyjnych tekstu [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], <xref:System.Windows.Media.TextFormatting.TextFormatter> wchodzi w interakcję z klientem układu tekstu za pomocą zestawu metod wywołania zwrotnego. Wymaga od klienta zapewnienia tych metod w celu wykonania <xref:System.Windows.Media.TextFormatting.TextSource> klasy. Na poniższym diagramie przedstawiono interakcje układu tekstu między aplikacji klienckiej i <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   

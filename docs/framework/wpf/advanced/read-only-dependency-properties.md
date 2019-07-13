@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 327897d50bd23a739d015a4151459d9d4a6fc1a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e74f7c2790a73211bcc8e6f13dcf2dfdc02e678b
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611788"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859985"
 ---
 # <a name="read-only-dependency-properties"></a>Właściwości zależności tylko do odczytu
 W tym temacie opisano właściwości zależności tylko do odczytu, w tym istniejących właściwości zależności tylko do odczytu i scenariuszy i techniki tworzenia właściwości niestandardowej zależności tylko do odczytu.  
@@ -37,7 +37,7 @@ W tym temacie opisano właściwości zależności tylko do odczytu, w tym istnie
   
 - Obiekt zwrócony przez rejestrację tylko do odczytu jest <xref:System.Windows.DependencyPropertyKey> zamiast <xref:System.Windows.DependencyProperty>. Nadal należy przechowywać w tym polu jako członka, ale zazwyczaj można nie zwiększyłoby publicznej składowej typu.  
   
- Niezależnie od prywatnych pola lub wartość ma zapasowy swoje właściwości zależności tylko do odczytu oczywiście można pełni zapisywalny, za pomocą dowolną logikę wymaganą zdecydujesz się. Jednak jest to najprostszy sposób ustaw właściwość początkowo lub jako część logiki czasu wykonywania do korzystania z systemu właściwości [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], zamiast obejście system właściwości i ustawienia bezpośrednio do pola prywatnego pomocniczego. W szczególności, ma podpis <xref:System.Windows.DependencyObject.SetValue%2A> , które akceptuje parametr typu <xref:System.Windows.DependencyPropertyKey>. Jak i gdzie tę wartość ustawiono programowo w ramach logiki aplikacji będzie miało wpływ na sposób możesz ustawić dostęp na <xref:System.Windows.DependencyPropertyKey> tworzone podczas pierwszej rejestracji właściwość zależności. Jeśli obsługiwać tę logikę w klasie można wprowadzić prywatnej lub jeśli chcesz, należy ustawić z innych części zestawu można ustawić jego wewnętrznych. Jedno z podejść jest wywołanie <xref:System.Windows.DependencyObject.SetValue%2A> w ramach programu obsługi zdarzeń klasy istotne zdarzenia, informujący o wystąpienia klasy, który musi zostać zmienione wartości właściwości przechowywanej. Innym rozwiązaniem jest powiązanie właściwości zależności za pomocą sparowane <xref:System.Windows.PropertyChangedCallback> i <xref:System.Windows.CoerceValueCallback> wywołania zwrotne w ramach tych właściwości metadanych podczas rejestracji.  
+ Niezależnie od prywatnych pola lub wartość ma zapasowy swoje właściwości zależności tylko do odczytu oczywiście można pełni zapisywalny, za pomocą dowolną logikę wymaganą zdecydujesz się. Jednak to najprostszy sposób początkowo lub jako część logiki czasu wykonywania, ustaw właściwość jest użycie interfejsów API systemu właściwości, zamiast obejście system właściwości i ustawienie bezpośrednio do pola prywatnego pomocniczego. W szczególności, ma podpis <xref:System.Windows.DependencyObject.SetValue%2A> , które akceptuje parametr typu <xref:System.Windows.DependencyPropertyKey>. Jak i gdzie tę wartość ustawiono programowo w ramach logiki aplikacji będzie miało wpływ na sposób możesz ustawić dostęp na <xref:System.Windows.DependencyPropertyKey> tworzone podczas pierwszej rejestracji właściwość zależności. Jeśli obsługiwać tę logikę w klasie można wprowadzić prywatnej lub jeśli chcesz, należy ustawić z innych części zestawu można ustawić jego wewnętrznych. Jedno z podejść jest wywołanie <xref:System.Windows.DependencyObject.SetValue%2A> w ramach programu obsługi zdarzeń klasy istotne zdarzenia, informujący o wystąpienia klasy, który musi zostać zmienione wartości właściwości przechowywanej. Innym rozwiązaniem jest powiązanie właściwości zależności za pomocą sparowane <xref:System.Windows.PropertyChangedCallback> i <xref:System.Windows.CoerceValueCallback> wywołania zwrotne w ramach tych właściwości metadanych podczas rejestracji.  
   
  Ponieważ <xref:System.Windows.DependencyPropertyKey> jest prywatny i nie jest propagowany przez system właściwość poza swój kod, ma właściwości zależności tylko do odczytu, lepiej ustawienia zabezpieczeń niż właściwość zależności odczytu i zapisu. Dla właściwości zależności odczytu i zapisu pole identyfikacyjne jest jawnie lub niejawnie publiczny i więc właściwość jest szeroko do ustawienia. Aby uzyskać więcej szczegółowych informacji, zobacz [zabezpieczenia właściwości zależności](dependency-property-security.md).  
   

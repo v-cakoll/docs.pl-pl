@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 72acd0029d0189de1c724856572957f111b9d18f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dab6b435a885d862d08f94dd31de79625f19bcc0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870509"
 ---
-## <a name="installation-instructions"></a>Instrukcje instalacji 
+## <a name="installation-instructions---visual-studio-installer"></a>Instrukcje dotyczące instalacji — Instalatora programu Visual Studio
 
 Istnieją dwa różne sposoby, aby znaleźć **zestawu SDK platformy kompilatora .NET** w **Instalatora programu Visual Studio**:
 
-### <a name="install-using-the-workloads-view"></a>Instalowanie przy użyciu widoku obciążeń
+### <a name="install-using-the-visual-studio-installer---workloads-view"></a>Instalowanie przy użyciu Instalatora programu Visual Studio — Wyświetlanie obciążeń
 
 Zestaw SDK platformy kompilatora .NET nie jest automatycznie wybierany jako część obciążenia projektowania rozszerzenia programu Visual Studio. Musisz wybrać go jako składnik opcjonalny.
 
@@ -25,7 +25,7 @@ Opcjonalnie można też **Edytor DGML** do wyświetlania wykresów w wizualizato
 1. Otwórz **poszczególne składniki** węzeł w drzewie podsumowania.
 1. Pole wyboru dla **Edytor DGML**
 
-### <a name="install-using-the-individual-components-tab"></a>Instalowanie przy użyciu na karcie poszczególne składniki
+### <a name="install-using-the-visual-studio-installer---individual-components-tab"></a>Instalowanie przy użyciu Instalatora programu Visual Studio — karcie poszczególne składniki
 
 1. Uruchom **Instalatora programu Visual Studio** 
 1. Wybierz **zmodyfikować** 

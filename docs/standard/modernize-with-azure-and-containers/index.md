@@ -2,12 +2,12 @@
 title: Modernizacja istniejących .NET aplikacje z chmury platformy Azure i kontenerów Windows (wersja 2)
 description: Dowiedz się, przenoszenie i shift i modernizacji istniejących aplikacji do chmury platformy Azure i kontenerów za pomocą tej książce elektronicznej.
 ms.date: 04/28/2018
-ms.openlocfilehash: 79e06c64867a7e1bb6c5d7da718886a713cb3c4c
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 4e632fcfbb8904a9def3fdad992286055c5df4f0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870599"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów Windows (wersja 2)
 
@@ -98,7 +98,7 @@ Tabela 1-1 w tym artykule opisano najważniejsze zalety i wybór każde podejśc
 | **Zalety**|
 | <li>Nie transformować żadnego nowego kodu <li> Co najmniej nakładu pracy dla szybkiej migracji <li> Najmniej uniwersalność w obsługiwane na platformie Azure <li> Gwarancje dostępności podstawowe <li> Po przeniesieniu do chmury, łatwiej jest je modernizowanie nawet więcej | <li> Nie transformować <li> Zmiany w minimalnym kodu/konfiguracji <li> Ulepszone wdrażanie i elastyczność DevOps do zwolnienia z powodu kontenerów <li> Zwiększona gęstość i niższe koszty wdrożenia <li> Przenośność aplikacji i zależności <li> Elastyczność cele hosta: Metody PaaS lub IaaS | <li> Architekt chmury, otrzymasz najlepszych korzyści z chmury, ale nowy kod jest wymagany <li> Metod natywnych dla chmury Mikrousług <li> Nowoczesne aplikacje o znaczeniu krytycznym, odporne na błędy dla chmury doskonale skalowalnej <li> W pełni zarządzane usługi <li> Zoptymalizowane pod kątem skalowania <li> Zoptymalizowane pod kątem elastyczności autonomicznego przez podsystem <li> Oparta na wdrożenia i metodyki DevOps |
 | **Challenges** |
-| <li> Mniejszą wartość chmury, innego niż przesunięcie kosztów operacyjnych lub zamyka centrów danych <li> Odbywa się trochę: Bez systemu operacyjnego i stosowanie poprawek oprogramowania pośredniczącego; może używać rozwiązań infrastruktury, takich jak narzędzia Terraform, Spinnaker lub Puppet | <li> Konteneryzowania jest dodatkowy krok w krzywą uczenia się dla deweloperów i operacji IT <li> Potoki metodyki DevOps i ciągłej integracji/ciągłego Dostarczania jest zazwyczaj "musisz" dla tej metody. Jeśli nie jest aktualnie obecna w kulturze organizacji, może być dodatkowym wyzwaniem| <li> Wymaga rearchitecture dla natywnych aplikacji w chmurze i architektur mikrousług i zazwyczaj wymaga znaczących kodu zdebugować podczas modernizacji lub refaktoryzacji (dłuższego czasu i budżetu) <li> Potoki metodyki DevOps i ciągłej integracji/ciągłego Dostarczania jest zazwyczaj "musisz" dla tej metody. Jeśli nie jest aktualnie obecna w kulturze organizacji, może być dodatkowym wyzwaniem|
+| <li> Mniejszą wartość chmury, innego niż przesunięcie kosztów operacyjnych lub zamyka centrów danych <li> Odbywa się trochę: Bez systemu operacyjnego i stosowanie poprawek oprogramowania pośredniczącego; może używać rozwiązań infrastruktury, takich jak narzędzia Terraform, Spinnaker lub Puppet | <li> Konteneryzowania jest dodatkowy krok w krzywą uczenia się dla deweloperów i operacji IT <li> Potoki ciągłej integracji/ciągłego Dostarczania i metodyki DevOps są zazwyczaj "musisz" dla tej metody. Jeśli nie jest aktualnie obecna w kulturze organizacji, może być dodatkowym wyzwaniem| <li> Wymaga rearchitecture dla natywnych aplikacji w chmurze i architektur mikrousług i zazwyczaj wymaga znaczących kodu zdebugować podczas modernizacji lub refaktoryzacji (dłuższego czasu i budżetu)|
 > **Tabela 1-1.** Korzyści i problemy ścieżki modernizacji istniejących aplikacji .NET i usługi
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Kluczowe technologie i architektur według poziomu dojrzałości

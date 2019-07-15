@@ -4,12 +4,12 @@ description: W tym samouczku dowiesz się, jak konteneryzowanie aplikacji .NET C
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 16edb129be679179450c485ced2586cea9ed9763
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: cb9a53520c513d96b9b1656ad64d55cf8aea1f08
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870424"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Samouczek: Konteneryzowanie aplikacji .NET Core
 
@@ -177,7 +177,7 @@ myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 W terminalu przejdź do katalogu do folderu roboczego, który został utworzony na początku w górę. Utwórz plik o nazwie *pliku Dockerfile* w folderze roboczym, a następnie otwórz go w edytorze tekstów. W pierwszym wierszu pliku, należy dodać następujące polecenie:
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 ```
 
 `FROM` Polecenie informuje, Docker, aby ściągnąć obraz oznaczony **2.2** z **mcr.microsoft.com/dotnet/core/runtime** repozytorium. Upewnij się, ściągania środowiska uruchomieniowego .NET Core, które odpowiada celem zestawu SDK środowiska uruchomieniowego. Na przykład aplikację utworzoną w poprzedniej sekcji używane .NET Core 2.2 SDK i utworzyć aplikację, która docelowej platformy .NET Core 2.2. Dlatego obraz podstawowy, o których mowa w *pliku Dockerfile* oznakowano **2.2**.
@@ -205,7 +205,13 @@ docker-working
     └───obj
 ```
 
-W terminalu Uruchom `docker build -t myimage -f Dockerfile .` i Docker będzie przetwarzać każdy wiersz w *pliku Dockerfile*. `.` w `docker build` polecenie informuje platformy docker do korzystania z bieżącego folderu można znaleźć *pliku Dockerfile*. To polecenie tworzy obraz i tworzy lokalne repozytorium o nazwie **myimage** wskazującego na tym obrazie. Po zakończeniu działania tego polecenia, uruchom `docker images` umożliwia wyświetlenie listy obrazów zainstalowane:
+W terminalu uruchom następujące polecenie:
+
+```console
+docker build -t myimage -f Dockerfile .
+```
+
+Docker będzie przetwarzać każdy wiersz w *pliku Dockerfile*. `.` w `docker build` polecenie informuje platformy Docker do korzystania z bieżącego folderu można znaleźć *pliku Dockerfile*. To polecenie tworzy obraz i tworzy lokalne repozytorium o nazwie **myimage** wskazującego na tym obrazie. Po zakończeniu działania tego polecenia, uruchom `docker images` umożliwia wyświetlenie listy obrazów zainstalowane:
 
 ```console
 > docker images

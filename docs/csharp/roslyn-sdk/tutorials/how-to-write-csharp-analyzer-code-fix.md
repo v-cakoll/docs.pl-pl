@@ -3,12 +3,12 @@ title: 'Samouczek: Zapisać swoje pierwsze analizator i poprawkę kodu'
 description: Ten samouczek zawiera instrukcje krok po kroku kompilacji analizator i poprawki kodu przy użyciu zestawu SDK kompilatora .NET (interfejsy API Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 1a4280741650b41174f93c4403008ee3522adbe6
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 45529a72e3c64a573bfc043fe44da29caed1a0c4
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870563"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Samouczek: Zapisać swoje pierwsze analizator i poprawkę kodu
 
@@ -18,9 +18,10 @@ W tym samouczku dowiesz się o tworzenie **analizatora** i towarzyszące **popra
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* [Visual Studio 2017](https://www.visualstudio.com/downloads)
+* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
+* [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-Należy zainstalować **zestawu SDK platformy kompilatora .NET**:
+Należy zainstalować **zestawu SDK platformy kompilatora .NET** za pomocą programu Visual Studio ponawiana jest próba:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -51,7 +52,7 @@ Console.WriteLine(x);
 Analizy, aby ustalić, czy zmienna jest możliwe stałej jest zaangażowana wymagających analizy składni, wyrażenia inicjatora stałej analizy i analizy przepływu danych, aby upewnić się, że zmienna nigdy nie są zapisywane. Platforma kompilatora .NET zawiera interfejsy API, które ułatwiają wykonywanie tej analizy. Pierwszym krokiem jest utworzenie nowego języka C# **Analyzer przy użyciu poprawki kodu** projektu.
 
 * W programie Visual Studio, wybierz **Plik > Nowy > Projekt...**  Aby wyświetlić okno dialogowe Nowy projekt.
-* W obszarze **Visual C# > rozszerzalności**, wybierz **Analyzer przy użyciu poprawki kodu (.NET Standard)**.
+* W obszarze **Visual C# > rozszerzalności**, wybierz **Analyzer przy użyciu poprawki kodu (.NET Standard)** .
 * Nazwij swój projekt "**MakeConst**" i kliknij przycisk OK.
 
 Analizator za pomocą szablonu poprawki kodu tworzy trzy projekty: jedna z nich zawiera analizator i poprawki kodu, druga jest projekt testów jednostkowych, a trzeci jest projekt VSIX. Domyślny projekt startowy jest projekt VSIX. Naciśnij klawisz **F5** można uruchomić projekt VSIX. Spowoduje to uruchomienie drugiego wystąpienia programu Visual Studio, który został załadowany z nowego analizatora.

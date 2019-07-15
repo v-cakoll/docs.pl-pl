@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: f902d6a92f9d982dc00c3446f7b516c372f1a30e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 346cfccd076866e9c321974aaa8c8ddd367a17ea
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662052"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859573"
 ---
 # <a name="async-c-reference"></a>async (odwołanie w C#)
 Użyj `async` modyfikator, aby określić, że metoda, [wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), lub [metody anonimowej](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) jest asynchroniczna. Jeśli metoda lub wyrażenie jest używany ten modyfikator, nazywa się *metody asynchronicznej*. W poniższym przykładzie zdefiniowano metodę async o nazwie `ExampleMethodAsync`: 
@@ -70,7 +70,7 @@ Metoda asynchroniczna może mieć następujące typy zwracane:
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [void](../../../csharp/language-reference/keywords/void.md), która powinna służyć wyłącznie do obsługi zdarzeń.
+- [void](../../../csharp/language-reference/keywords/void.md). `async void` metody są ogólnie unikać dla kodu innych niż procedury obsługi zdarzeń, ponieważ obiekty wywołujące nie `await` tych metod, którą należy wdrożyć innego mechanizmu do pomyślnego zakończenia lub warunków błędów.
 - Począwszy od C# 7.0, dowolny typ, który jest dostępny `GetAwaiter` metody. `System.Threading.Tasks.ValueTask<TResult>` Typ jest takie wdrożenie. Jest on dostępny, dodając pakiet NuGet `System.Threading.Tasks.Extensions`. 
 
 Metoda async nie może deklarować [w](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) lub [się](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametrów ani nie może on mieć [odwoływać się do wartości zwracanej](../../programming-guide/classes-and-structs/ref-returns.md), ale może wywołać metody które mają takie parametry.  

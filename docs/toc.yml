@@ -203,6 +203,14 @@
     - name: Samouczki
       href: core/tutorials/index.md
       items:
+        - name: Szablony dla interfejsu wiersza polecenia
+          items:
+            - name: 1 — Tworzenie szablonu elementu
+              href: core/tutorials/cli-templates-create-item-template.md
+            - name: 2 — Tworzenie szablonu projektu
+              href: core/tutorials/cli-templates-create-project-template.md
+            - name: 3 — Tworzenie pakietu szablonów
+              href: core/tutorials/cli-templates-create-template-pack.md
         - name: Wprowadzenie do platformy .NET Core w systemie macOS
           href: core/tutorials/using-on-macos.md
         - name: Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
@@ -219,8 +227,6 @@
           href: core/tutorials/aspnet-core.md
         - name: Hostowanie platformy .NET Core z kodu natywnego
           href: core/tutorials/netcore-hosting.md
-        - name: Tworzenie szablonu niestandardowego dla polecenia dotnet new
-          href: core/tutorials/create-custom-template.md
     - name: 'Pakiety, metapakiety i struktury'
       href: core/packages.md
     - name: Zmiany w interfejsie wiersza polecenia — omówienie

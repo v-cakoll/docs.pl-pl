@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: bfd901d10fe3158c1c5cb32c3a75f3bc15efd0ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 46e7d9caf0bdf0be25a4ac76e96fe04d0e131ed1
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640937"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238575"
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
 W tym temacie przedstawiono problemy, które należy wiedzieć podczas pisania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji na rynek globalny. Globalizacja programistyczny są zdefiniowane w [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] w `System.Globalization`.
@@ -73,7 +73,7 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
 
 - Bengalski
 
-- Devanagari
+- Dewanagari
 
 - Cyrylica
 
@@ -111,7 +111,7 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
 
 - Tibetan
 
- * W tej wersji wyświetlanie i edytowanie tajski tekstu jest obsługiwana; nie jest wyrazów.
+ \* W tej wersji wyświetlanie i edytowanie tajski tekstu jest obsługiwana; nie jest wyrazów.
 
  Obecnie nie są obsługiwane następujące skrypty:
 
@@ -121,7 +121,7 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
 
 - Myanmar
 
-- Sinhala
+- Syngaleski
 
  System pisma aparatów obsługi [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] czcionki mogą obejmować [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] tabelach układu, które umożliwiają twórcom czcionki projektowania lepiej międzynarodowych wysokiej klasy związane z typografią czcionek i. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Czcionki tabele zawierają informacje dotyczące podstawienia symbol, pozycjonowanie symbol, uzasadnienie i położenie punktu odniesienia, umożliwiając aplikacji przetwarzanie tekstu w celu zwiększenia układu tekstu.
 
@@ -156,7 +156,7 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Tworzenie zlokalizowanych aplikacjach
- Lokalizowanie oznacza dostosowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do różnych kultur. Zapewnienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji możliwych do zlokalizowania, umożliwiające tworzenie lokalizowalne zasoby w ramach zestawu zasobów. Zestaw zasobów jest zlokalizowany w różnych językach i korzysta z kodem — zarządzanie zasobami [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] do załadowania. Jeden z plików wymaganych do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji to plik projektu (plików Proj). Wszystkie zasoby, których używasz w aplikacji powinny być objęte w pliku projektu. Poniższy przykład z pliku .csproj pokazuje, jak to zrobić.
+ Lokalizowanie oznacza dostosowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do różnych kultur. Zapewnienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji możliwych do zlokalizowania, umożliwiające tworzenie lokalizowalne zasoby w ramach zestawu zasobów. Zestaw zasobów jest zlokalizowany w różnych językach i związane z kodem wykorzystuje interfejs API zarządzania zasobami można załadować. Jeden z plików wymaganych do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji to plik projektu (plików Proj). Wszystkie zasoby, których używasz w aplikacji powinny być objęte w pliku projektu. Poniższy przykład z pliku .csproj pokazuje, jak to zrobić.
 
 ```xml
 <Resource Include="data\picture1.jpg"/>

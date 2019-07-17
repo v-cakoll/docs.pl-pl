@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b021de74509b6d9ba77678d3105e0f7bb406f79d
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: fe6ff59066c9e6bcf5387e7c266c879b8ae173c6
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67856967"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237687"
 ---
 ### <a name="dataannotationsdatatypeattributedisableregex-app-setting-is-on-by-default-in-net-framework-472"></a>ustawienie aplikacji "dataAnnotations:dataTypeAttribute:disableRegEx" jest domyślnie w programie .NET Framework 4.7.2
 
@@ -15,4 +15,3 @@ ms.locfileid: "67856967"
 |Scope|Mały|
 |Wersja|4.7.2|
 |Typ|Środowisko uruchomieniowe|
-

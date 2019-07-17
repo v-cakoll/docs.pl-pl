@@ -2,12 +2,12 @@
 title: Co nowego w języku C# 6 — Przewodnik po języku C#
 description: Dowiedz się, nowych funkcji w języku C# w wersji 6
 ms.date: 12/12/2018
-ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49247109bd1acbf697f5700b5cfe9a2b85393b2c
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706185"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235725"
 ---
 # <a name="whats-new-in-c-6"></a>Co nowego w języku C# 6
 
@@ -137,7 +137,7 @@ Aby rozpocząć pracę z Interpolacja ciągów, zobacz [interpolacji w ciągu C#
 
 ## <a name="the-nameof-expression"></a>`nameof` Wyrażenia
 
-`nameof` Wyrażenie ma nazwę symbolu. Jest doskonałym sposobem na narzędzia do pracy w każdym przypadku, gdy potrzebna jest nazwa zmiennej, właściwość lub pole elementu członkowskiego. Jedną z najbardziej typowych używa `nameof` ma na celu dostarczenie nazwa symbolu, który spowodował wyjątek:
+[Nameof](../language-reference/operators/nameof.md) wyrażenie ma nazwę symbolu. Jest doskonałym sposobem na narzędzia do pracy w każdym przypadku, gdy potrzebna jest nazwa zmiennej, właściwość lub pole elementu członkowskiego. Jedną z najbardziej typowych używa `nameof` ma na celu dostarczenie nazwa symbolu, który spowodował wyjątek:
 
 [!code-csharp[nameof](../../../samples/snippets/csharp/new-in-6/NewCode.cs#UsingStaticString)]
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: d40d1636b510fcfe667ab3e728d1688ce38641d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611946"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238450"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optymalizacja wydajności: Wykorzystanie możliwości sprzętu
 Wewnętrznej architekturze programu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma renderowania dwa potoki, sprzętu i oprogramowania. Ten temat zawiera informacje o tych potoków renderowania ułatwiające podejmowanie decyzji dotyczących optymalizacji wydajności aplikacji.  
@@ -30,7 +30,7 @@ Wewnętrznej architekturze programu [!INCLUDE[TLA2#tla_winclient](../../../../in
 ### <a name="graphics-rendering-tiers"></a>Poziomy zmiany grafiki  
  Może być bardzo trudne do przewidzenia konfiguracji sprzętowej, która aplikacja zostanie uruchomiona w. Jednak warto wziąć pod uwagę projekt, który umożliwia aplikacji bezproblemowo przełączyć funkcji podczas uruchamiania na różnym sprzęcie, tak aby go mogą w pełni korzystać z każdej innej konfiguracji sprzętu.  
   
- Aby to osiągnąć, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferuje funkcje, aby określić możliwości grafiki systemu w czasie wykonywania. Możliwości grafiki jest określana przez skategoryzowanie karty wideo, jako jeden z trzech warstw możliwości renderowania. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] umożliwiająca aplikacji do wykonywania zapytań w warstwie możliwości renderowania. Aplikacja może następnie podjąć różne ścieżki w czasie wykonywania, w zależności od warstwy renderowania obsługiwana przez sprzęt.  
+ Aby to osiągnąć, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferuje funkcje, aby określić możliwości grafiki systemu w czasie wykonywania. Możliwości grafiki jest określana przez skategoryzowanie karty wideo, jako jeden z trzech warstw możliwości renderowania. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia interfejs API, który umożliwia aplikacji do wykonywania zapytań w warstwie możliwości renderowania. Aplikacja może następnie podjąć różne ścieżki w czasie wykonywania, w zależności od warstwy renderowania obsługiwana przez sprzęt.  
   
  Dostępne są następujące funkcje, możliwości sprzętu graficznego i że mają największy wpływ na poziom warstwy renderowania:  
   

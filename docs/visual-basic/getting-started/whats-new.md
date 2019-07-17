@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5b1547f596a0ff1c52a402f90457dced6ef604a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49c39e12aa67b1f36fc46c21f5d2b23223b3264d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797024"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238650"
 ---
 # <a name="whats-new-for-visual-basic"></a>Co nowego w języku Visual Basic
 
@@ -86,7 +86,6 @@ Należy zwrócić uwagę na to, czy jest to obcina zamiast wartości zmiennoprze
 
 W wersji Visual Basic 15.3 i starszych wersjach gdy wywołanie metody uwzględniało argumenty zarówno według pozycji, jak i według nazwy, argumenty pozycyjne musiały poprzedzać argumenty nazwane. W wersji Visual Basic 15.5 i nowszych argumenty pozycyjne i argumenty nazwane mogą występować w dowolnej kolejności, pod warunkiem że wszystkie argumenty (do ostatniego argumentu pozycyjnego) znajdują się we właściwych pozycjach. Jest to szczególnie przydatne, gdy argumenty nazwane są stosowane w celu poprawy czytelności kodu.
 
-
 Na przykład następujące wywołanie metody ma dwa argumenty pozycyjne, między argumentu nazwanego. Argument nazwany sprawia, że wyczyść wiek reprezentowany przez wartość 19.
 
 ```vb
@@ -127,7 +126,7 @@ Visual Basic obsługuje teraz kompilatora wiersza polecenia [ **- opcji refout**
 
 ## <a name="visual-basic-2017"></a>2017 Visual Basic
 
-[**Tuples**](../programming-guide/language-features/data-types/tuples.md)
+[**Krotki**](../programming-guide/language-features/data-types/tuples.md)
 
 Kolekcje są uproszczone danych struktury, które najczęściej umożliwia zwracanie wielu wartości z pojedynczym wywołaniu metody. Zazwyczaj zwracanie wielu wartości z metody, należy wykonać jedną z następujących czynności:
 
@@ -175,7 +174,7 @@ Aby uzyskać więcej informacji, zobacz [odwołania Return Values](../programmin
 
 ## <a name="visual-basic-14"></a>Visual Basic, 14
 
-[Nameof](../../csharp/language-reference/keywords/nameof.md)
+[Nameof](../../csharp/language-reference/operators/nameof.md)
 
 Można uzyskać nazwy niekwalifikowanej ciąg typu lub elementu członkowskiego do użytku w komunikacie o błędzie, bez twardych kodowanie ciągu.  Dzięki temu kodzie zachować poprawne podczas refaktoryzacji.  Ta funkcja jest również przydatne w przypadku Podłączanie łącza MVC model-view-controller i wyzwalanie zdarzenia zmiany właściwości.
 

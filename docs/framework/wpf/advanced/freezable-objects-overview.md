@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 79c539bd0117c712670601b7498c490fca76090e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: b2ef3c3dbbfbcef08f58c47948f76cb2c238b48a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610520"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238531"
 ---
 # <a name="freezable-objects-overview"></a>Przegląd Obiekty Freezable
 W tym temacie opisano, jak skutecznie używać i Utwórz <xref:System.Windows.Freezable> obiektów, które zapewniają funkcje specjalne, które mogą pomóc zwiększyć wydajność aplikacji. Przykładami obiektów freezable pędzle, pióra, przekształcenia, geometrii i animacji.  
@@ -148,7 +148,7 @@ mc:Ignorable="PresentationOptions"
   
  Należy również zgodna z poniższymi regułami do uzyskiwania dostępu i zapisywanie do elementów członkowskich danych, które nie są właściwości zależności:  
   
-- Na początku dowolnego [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , odczytuje elementy członkowskie danych właściwości bez zależności, wywołaj <xref:System.Windows.Freezable.ReadPreamble%2A> metody.  
+- Na początku dowolnego interfejsu API, który odczytuje elementy członkowskie danych właściwości bez zależności, należy wywołać <xref:System.Windows.Freezable.ReadPreamble%2A> metody.  
   
 - Na początku dowolnego interfejsu API, który zapisuje elementy członkowskie danych właściwości bez zależności, należy wywołać <xref:System.Windows.Freezable.WritePreamble%2A> metody. (Gdy została wywołana <xref:System.Windows.Freezable.WritePreamble%2A> w interfejsie API, nie potrzebujesz do wywoływania dodatkowych <xref:System.Windows.Freezable.ReadPreamble%2A> Jeśli przeczytaj również elementy członkowskie danych właściwości innych zależności.)  
   

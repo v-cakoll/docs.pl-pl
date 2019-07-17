@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d3d336b9626437d8fb597de421005763afd5f021
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: d5ef5da90dd3fc39febf8e4cd4955b4113343976
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67859316"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235600"
 ---
 ### <a name="changes-in-path-normalization"></a>Zmiany w ścieżce normalizacji
 
@@ -15,4 +15,3 @@ ms.locfileid: "67859316"
 |Scope|Mały|
 |Wersja|4.6.2|
 |Typ|Przekierowanie|
-

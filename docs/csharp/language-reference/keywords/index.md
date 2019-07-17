@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: ba4ee4366bf47d739c8a7ef98a4d5312c214bf54
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8bb61767324602ae54427c50c73e029a6c7bf3b7
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744101"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236016"
 ---
 # <a name="c-keywords"></a>Słowa kluczowe języka C#
 
@@ -40,7 +40,7 @@ Słowa kluczowe są wstępnie zdefiniowane, zarezerwowane identyfikatorów, któ
 |[return](return.md)|[sbyte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
 [sizeof](sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[string](string.md)|
 |[struct](struct.md)|[switch](switch.md)|[this](this.md)|[throw](throw.md)|
-|[true](true-literal.md)|[try](try-catch.md)|[typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
+|[true](true-literal.md)|[Wypróbuj](try-catch.md)|[typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
 |[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[unsafe](unsafe.md)|[ushort](../builtin-types/integral-numeric-types.md)|
 |[using](using.md)|[Przy użyciu statycznej](using-static.md)|[virtual](virtual.md)|[void](void.md)|
 |[volatile](volatile.md)|[while](while.md)|
@@ -56,9 +56,9 @@ Słowa kluczowe są wstępnie zdefiniowane, zarezerwowane identyfikatorów, któ
 |[descending](descending.md)|[dynamic](dynamic.md)|[equals](equals.md)|
 |[from](from-clause.md)|[get](get.md)|[global](global.md)|
 |[Grupy](group-clause.md)|[into](into.md)|[join](join-clause.md)|
-|[Let](let-clause.md)|[nameof](nameof.md)|[on](on.md)|
+|[Let](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
 |[orderby](orderby-clause.md)|[Partial (typ)](partial-type.md)|[Partial (metoda)](partial-method.md)|
-|[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
+|[remove](remove.md)|[Wybierz pozycję](select-clause.md)|[set](set.md)|
 |[value](value.md)|[var](var.md)|[when (warunek filtru)](when.md)|
 |[where (ograniczenie typu ogólnego)](where-generic-type-constraint.md)|[gdzie (klauzula zapytania)](where-clause.md)|[yield](yield.md)|
   

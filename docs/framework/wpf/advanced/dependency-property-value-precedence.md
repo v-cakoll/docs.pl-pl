@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 4ea417b2a922574eb92a07aa845c360f6e843f17
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d5ff09bb9cc8da45f44cf6fe952411e7cd3f4c4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663388"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238544"
 ---
 # <a name="dependency-property-value-precedence"></a>Następstwo zależności wartości właściwości
 <a name="introduction"></a> W tym temacie opisano sposób pracy z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system właściwości mogą mieć wpływ na wartość właściwości zależności i opisuje pierwszeństwa, które cechy właściwości systemu zastosowania do skutecznego wartości właściwości.  
@@ -43,7 +43,7 @@ ms.locfileid: "64663388"
   
 2. **Aktywne animacji i animacji z zachowaniem wstrzymania.** Aby można było ma praktycznego wpływu, animacji właściwości musi można mają pierwszeństwo przed (unanimated) wartość bazową, nawet wtedy, gdy ta wartość została ustawiona lokalnie. Aby uzyskać więcej informacji, zobacz [wymuszenia, animacji i wartość Base](#animations) w dalszej części tego tematu.  
   
-3. **Lokalna wartość.** Lokalna wartość może być ustawione za pośrednictwem wygody właściwości "otoki", co również ustawienie jako atrybut lub właściwość elementu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], lub przez wywołanie <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] za pomocą właściwości określonego wystąpienia. Jeśli ustawisz wartość lokalnego przy użyciu powiązania lub zasobu, te każdego działania w pierwszeństwo tak, jakby bezpośrednich wartość została ustawiona.  
+3. **Lokalna wartość.** Lokalna wartość może być ustawione za pośrednictwem wygody właściwości "otoki", co również ustawienie jako atrybut lub właściwość elementu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], lub przez wywołanie <xref:System.Windows.DependencyObject.SetValue%2A> interfejsu API przy użyciu właściwości określonego wystąpienia. Jeśli ustawisz wartość lokalnego przy użyciu powiązania lub zasobu, te każdego działania w pierwszeństwo tak, jakby bezpośrednich wartość została ustawiona.  
   
 4. **Właściwości szablonu TemplatedParent.** Element ma <xref:System.Windows.FrameworkElement.TemplatedParent%2A> Jeśli został utworzony jako część szablonu ( <xref:System.Windows.Controls.ControlTemplate> lub <xref:System.Windows.DataTemplate>). Szczegółowe informacje na temat gdy ma to zastosowanie, [TemplatedParent](#templatedparent) w dalszej części tego tematu. W szablonie dotyczy następującej kolejności:  
   

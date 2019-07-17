@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8546516124b2156e02446e15d7bdcaf3cdbd717d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703429"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238605"
 ---
 # <a name="focus-overview"></a>Przegląd Fokus
 W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] istnieją dwa główne pojęcia, które odnoszą się do fokus: za pomocą klawiatury fokus i fokus logiczny.  Fokus klawiatury, który odwołuje się do elementu, który odbiera dane wejściowe z klawiatury i fokus logiczny, który odwołuje się do elementu w zakresie fokus, który ma fokus.  Te pojęcia są szczegółowo omówione w tym omówieniu.  Opis różnicy w tych pojęć jest ważna dla tworzenia złożonych aplikacji z wielu regionów, w którym można uzyskać fokus.  
@@ -82,7 +82,7 @@ W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.m
   
 <a name="Manipulating_Focus_Programmatically"></a>   
 ## <a name="navigating-focus-programmatically"></a>Nawigacja programowo koncentracji uwagi  
- Dodatkowe [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] do pracy z fokusem są <xref:System.Windows.UIElement.MoveFocus%2A> i <xref:System.Windows.UIElement.PredictFocus%2A>.  
+ Są dodatkowe API do pracy z fokusem <xref:System.Windows.UIElement.MoveFocus%2A> i <xref:System.Windows.UIElement.PredictFocus%2A>.  
   
  <xref:System.Windows.FrameworkElement.MoveFocus%2A> zmiany fokus do następnego elementu w aplikacji.  A <xref:System.Windows.Input.TraversalRequest> służy do określania kierunku.   <xref:System.Windows.Input.FocusNavigationDirection> Przekazany do <xref:System.Windows.UIElement.MoveFocus%2A> określa fokus różnych kierunkach można przenosić, taką jak <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> i <xref:System.Windows.Input.FocusNavigationDirection.Down>.  
   

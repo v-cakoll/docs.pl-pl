@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: fe5cb97b4802c2b638a4b218a27da05468dc50fb
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 99f01983a575e9c6f96fdb66590e9d762eb882f7
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505561"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238436"
 ---
 # <a name="binding-sources-overview"></a>Przegląd Wiązanie źródeł
 W powiązaniu danych obiektu źródłowego powiązania odnosi się do obiektu, który można uzyskać danych z. W tym temacie omówiono typy obiektów, których można użyć jako źródło wiążące.  
@@ -24,7 +24,7 @@ W powiązaniu danych obiektu źródłowego powiązania odnosi się do obiektu, k
 |--------------------|-----------------|  
 |[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Obiekty|Można powiązać właściwości publiczne, właściwości podrzędnych, a także indeksatory dowolnego [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektu. Korzysta z aparatu powiązania [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] odbicia w celu uzyskania wartości właściwości. Alternatywnie, obiekty, które implementują <xref:System.ComponentModel.ICustomTypeDescriptor> lub masz zarejestrowany <xref:System.ComponentModel.TypeDescriptionProvider> również współpracować z aparatem powiązania.<br /><br /> Aby uzyskać więcej informacji na temat implementacji klasy, który może służyć jako źródło powiązania, zobacz [Implementowanie klasy źródło wiążące](#classes) w dalszej części tego tematu.|  
 |obiekty dynamiczne|Możesz powiązać dostępnych właściwości i indeksatorów obiektu, który implementuje <xref:System.Dynamic.IDynamicMetaObjectProvider> interfejsu. Jeśli uzyskujesz dostęp do elementu członkowskiego w kodzie, można ją powiązać. Na przykład, jeśli obiekt dynamiczny pozwala na uzyskiwanie dostępu do członka w kodzie za pomocą `someObjet.AProperty`, można powiązać je, ustawiając ścieżka powiązania `AProperty`.|  
-|[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] Obiekty|Możesz powiązać obiekty ADO.NET, takich jak <xref:System.Data.DataTable>. ADO.NET <xref:System.Data.DataView> implementuje <xref:System.ComponentModel.IBindingList> interfejs, który zawiera powiadomienia o zmianach, które wykrywa aparat powiązania.|  
+|Obiekty ADO.NET|Możesz powiązać obiekty ADO.NET, takich jak <xref:System.Data.DataTable>. ADO.NET <xref:System.Data.DataView> implementuje <xref:System.ComponentModel.IBindingList> interfejs, który zawiera powiadomienia o zmianach, które wykrywa aparat powiązania.|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] Obiekty|Możesz powiązać i uruchomić `XPath` zapytanie na <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, lub <xref:System.Xml.XmlElement>. Wygodny sposób, aby uzyskać dostęp do [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dane źródło wiążące w znacznikach jest użycie <xref:System.Windows.Data.XmlDataProvider> obiektu. Aby uzyskać więcej informacji, zobacz [powiązania danych XML przy użyciu XMLDataProvider i zapytań XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Możesz również powiązać <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument>, lub powiązać z wynikami zapytania uruchamiane na obiektach tego typu za pomocą LINQ to XML. Wygodny sposób używania składnika LINQ to XML z danymi XML dostępu, który jest źródłem powiązania w znacznikach jest użycie <xref:System.Windows.Data.ObjectDataProvider> obiektu. Aby uzyskać więcej informacji, zobacz [Powiąż z dokumentem, elementem x lub LINQ dla wyników zapytań XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
 |<xref:System.Windows.DependencyObject> Obiekty|Można powiązać właściwości zależności dowolnego <xref:System.Windows.DependencyObject>. Aby uzyskać przykład, zobacz [powiązywanie właściwości dwóch formantów](how-to-bind-the-properties-of-two-controls.md).|  
   
@@ -75,7 +75,7 @@ W powiązaniu danych obiektu źródłowego powiązania odnosi się do obiektu, k
 |Typ właściwości<br /><br /> (wszystkie modyfikatory dostępu)|Właściwości dynamiczne obiektu|Właściwości dynamiczne obiektu|Właściwość CLR|Właściwość CLR|Właściwości zależności|Właściwości zależności|  
 |------------------------------------------------|-----------------------------|-----------------------------|------------------|------------------|-------------------------|-------------------------|  
 |**Poziom zaufania**|**Pełne zaufanie**|**Częściowej relacji zaufania**|**Pełne zaufanie**|**Częściowej relacji zaufania**|**Pełne zaufanie**|**Częściowej relacji zaufania**|  
-|Klasa publiczna|Tak|Yes|Yes|Yes|Yes|Yes|  
+|Klasa publiczna|Yes|Yes|Yes|Yes|Yes|Yes|  
 |Klasa niepubliczne|Tak|Nie|Yes|Nie|Yes|Tak|  
   
  W tej tabeli opisano następujące ważne kwestie dotyczące wymagania dotyczące uprawnień w powiązaniu danych:  

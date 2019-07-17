@@ -2,12 +2,12 @@
 title: C#przechowywanie wersji języka — C# przewodnik
 description: Dowiedz się więcej o tym, jak C# wersja językowa jest określana na podstawie projektu i różne wartości możesz ręcznie dostosować go do.
 ms.date: 07/10/2019
-ms.openlocfilehash: 2d593ca0588f291c61cdf52fbc1eb60a1f3f7ecb
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859604"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236093"
 ---
 # <a name="c-language-versioning"></a>C#przechowywanie wersji języka
 
@@ -19,7 +19,7 @@ Kompilator Określa domyślny na podstawie tych reguł:
 
 |Platforma docelowa|version|C#Domyślna wersja języka|
 |----------------|-------|---------------------------|
-|.NET Core|3.x|C# 8.0|
+|.NET Core|3.x|C#8.0|
 |.NET Core|2.x|C# 7.3|
 |.NET Standard|wszystkie|C# 7.3|
 |.NET Framework|wszystkie|C# 7.3|
@@ -34,7 +34,7 @@ Jeśli trzeba określić swoje C# wersji jawnie, możesz to zrobić na kilka spo
 
 - Ręcznie Edytuj swoje [pliku projektu](#edit-the-project-file).
 - Ustawianie wersji języka [dla wielu projektów w podkatalogu](#configure-multiple-projects).
-- Konfigurowanie [ `-langversion` — opcja kompilatora](#set-the-langversion-compiler-option).
+- Konfigurowanie [ `-langversion` — opcja kompilatora](compiler-options/langversion-compiler-option.md)
 
 ### <a name="edit-the-project-file"></a>Edytuj plik projektu
 

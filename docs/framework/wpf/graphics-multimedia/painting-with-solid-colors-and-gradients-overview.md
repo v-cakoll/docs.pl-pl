@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: 4e004b624c331375501c5f48d2566a664b734d3b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ba8127d5be24a9fdcccf0bebcc08e5699d98033
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649983"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238403"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Przegląd Malowanie jednolitymi kolorami i gradientami
 W tym temacie opisano sposób użycia <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, i <xref:System.Windows.Media.RadialGradientBrush> obiektów malowanie jednolitymi kolorami, użyciu gradientów liniowych i użyciu gradientów promieniowych.  
@@ -31,7 +31,7 @@ W tym temacie opisano sposób użycia <xref:System.Windows.Media.SolidColorBrush
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
-- Wybierz kolor z palety kolorów 32-bitowych, określając ilości czerwony, zielony i niebieski, aby połączyć w jednym jednolitego koloru.  Określanie kolor z palety 32-bitowy format jest "*#rrggbb*", gdzie *rr* jest dwucyfrową liczbą szesnastkową, określając względna ilość czerwony, *gg* Określa kolor zielony, a *bb* określa ilość niebieski.  Ponadto można określić kolor jako "#*aarrggbb*" gdzie *aa* Określa *alfa* wartość lub Przezroczystość koloru. Takie podejście umożliwia tworzenie kolorów, które są częściowo przezroczyste.  W poniższym przykładzie <xref:System.Windows.Controls.Control.Background%2A> z <xref:System.Windows.Controls.Button> jest ustawiony na czerwony całkowicie nieprzezroczysty, przy użyciu notacji szesnastkowej.  
+- Wybierz kolor z palety kolorów 32-bitowych, określając ilości czerwony, zielony i niebieski, aby połączyć w jednym jednolitego koloru.  Określanie kolor z palety 32-bitowy format jest " *#rrggbb*", gdzie *rr* jest dwucyfrową liczbą szesnastkową, określając względna ilość czerwony, *gg* Określa kolor zielony, a *bb* określa ilość niebieski.  Ponadto można określić kolor jako "#*aarrggbb*" gdzie *aa* Określa *alfa* wartość lub Przezroczystość koloru. Takie podejście umożliwia tworzenie kolorów, które są częściowo przezroczyste.  W poniższym przykładzie <xref:System.Windows.Controls.Control.Background%2A> z <xref:System.Windows.Controls.Button> jest ustawiony na czerwony całkowicie nieprzezroczysty, przy użyciu notacji szesnastkowej.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
@@ -142,15 +142,15 @@ RadialGradientBrushes z różnymi ustawieniami GradientOrigin, Centrum, RadiusX 
   
 <a name="specifyinggradientcolors"></a>   
 ## <a name="specifying-transparent-or-partially-transparent-gradient-stops"></a>Określanie obszarów przezroczystych lub częściowo przejrzyste ograniczniki gradientu  
- Ponieważ ograniczniki gradientu nie zostanie określona przez właściwość nieprzezroczystości, należy określić kanał alfa kolorów za pomocą [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] notacji szesnastkowej znaczników lub użyj <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> metodę w celu utworzenia ograniczniki gradientu, znajdujących się na kilka obszarów przezroczystych lub częściowo przezroczyste. W poniższych sekcjach opisano sposób tworzenia częściowo przejrzyste ograniczniki gradientu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i kod.  
+ Ponieważ ograniczniki gradientu nie zostanie określona przez właściwość nieprzezroczystości, należy określić kanał alfa kolorów przy użyciu notacji szesnastkowych ARGB znaczników lub użyj <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> metodę w celu utworzenia ograniczniki gradientu, znajdujących się na kilka obszarów przezroczystych lub częściowo przezroczyste. W poniższych sekcjach opisano sposób tworzenia częściowo przejrzyste ograniczniki gradientu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i kod.  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Określanie Przezroczystość koloru w "XAML"  
- W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], możesz użyć [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] notacji szesnastkowej określić krycie poszczególnych kolorów. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] notacji szesnastkowej używa następującej składni:  
+ W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], notacji szesnastkowej ARGB umożliwia określenie nieprzezroczystość poszczególnych kolorów. Notacja szesnastkowych ARGB używa następującej składni:  
   
- `#` **aa** *rrggbb*  
+ `#` **AA** *rrggbb*  
   
- *Aa* w poprzednim wierszu reprezentuje wartość szesnastkową dwucyfrowy używany do określenia Przezroczystość koloru. *Rr*, *gg*, i *bb* każdy reprezentuje dwucyfrowa wartość szesnastkową, można określić ilość czerwony, zielony i niebieski w kolorze. Każdy cyfra szesnastkowa może mieć wartość z zakresu od 0 – 9 lub A – F. Usługa 0 jest najmniejsza wartość, a F jest większa. Wartości alfa 00 Określa, że kolor, który jest całkowicie przezroczysty, a wartość alfa FF tworzy kolor, który jest całkowicie nieprzezroczyste.  W poniższym przykładzie szesnastkowe [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] notacji służy do określania dwóch kolorów. Pierwszy jest częściowo przezroczyste (ma wartość alfa x20), podczas gdy druga jest całkowicie nieprzezroczysty.  
+ *Aa* w poprzednim wierszu reprezentuje wartość szesnastkową dwucyfrowy używany do określenia Przezroczystość koloru. *Rr*, *gg*, i *bb* każdy reprezentuje dwucyfrowa wartość szesnastkową, można określić ilość czerwony, zielony i niebieski w kolorze. Każdy cyfra szesnastkowa może mieć wartość z zakresu od 0 – 9 lub A – F. Usługa 0 jest najmniejsza wartość, a F jest większa. Wartości alfa 00 Określa, że kolor, który jest całkowicie przezroczysty, a wartość alfa FF tworzy kolor, który jest całkowicie nieprzezroczyste.  W poniższym przykładzie notacji szesnastkowej ARGB służy do określenia dwóch kolorów. Pierwszy jest częściowo przezroczyste (ma wartość alfa x20), podczas gdy druga jest całkowicie nieprzezroczysty.  
   
  [!code-xaml[GradientBrushExamples_snip#TransparentGradientStopExample1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/GradientStopsExample.xaml#transparentgradientstopexample1xaml)]  
   

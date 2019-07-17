@@ -4,12 +4,12 @@ description: Dowiedz się, jak ocenić, jak przenośny kod jest między różne 
 ms.date: 07/10/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: f05d4f4a2fce8fa9a4d2e334f44190ea37335038
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 73a9cacbce02880d236f87459673812af9828916
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859791"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238557"
 ---
 # <a name="the-net-portability-analyzer"></a>Narzędzia .NET Portability Analyzer
 
@@ -52,7 +52,7 @@ Raport uwzględnia tylko interfejsy API, które nie są obsługiwane przez platf
 
 ![Podsumowanie przenośności](./media/portability-analyzer/portabilitysummary.png)
 
-Sekcja Podsumowanie przenośność raport przedstawia procent przenośność dla każdego zestawu uwzględnione w procesie. W poprzednim przykładzie użyto 89.74% interfejsów API programu .NET Framework w `ConsoleAppFramework` aplikacji są dostępne w .NET Core i rozszerzenia platformy w wersji 2.2. Po uruchomieniu narzędzia .NET Portability Analyzer względem wielu zestawów każdego zestawu mają wiersz w raporcie Podsumowanie przenoszenia.
+Sekcja Podsumowanie przenośność raportu zawiera wartość procentową przenośność dla każdego zestawu uwzględnione w procesie. W poprzednim przykładzie użyto 89.74% interfejsów API programu .NET Framework w `ConsoleAppFramework` aplikacji są dostępne w .NET Core i rozszerzenia platformy w wersji 2.2. Po uruchomieniu narzędzia .NET Portability Analyzer względem wielu zestawów każdego zestawu mają wiersz w raporcie Podsumowanie przenoszenia.
 
 #### <a name="details"></a>Szczegóły
 
@@ -60,11 +60,11 @@ Sekcja Podsumowanie przenośność raport przedstawia procent przenośność dla
 
 Sekcja szczegółów raportu zawiera interfejsy API brakuje jednego z platform docelowych. 
 
- - Docelowy typ: Typ ma Brak interfejsu API platformy docelowej 
- - Docelowy element członkowski: Brak metody platformy docelowej 
- - Nazwa zestawu: zestaw .NET Framework, który Brak interfejsu API, który znajduje się w. 
- - Każdy z wybranych platformach docelowych jest jedną kolumnę, takich jak ".NET Core": Wartość "Nie jest obsługiwane" oznacza, że interfejs API nie jest obsługiwana na tej platformie docelowej. 
- - Zaleca się zmiany: zaleca się interfejsu API lub technologii, aby zmienić. Obecnie to pole jest puste lub nieaktualna dla wielu interfejsów API. Z powodu dużej liczby interfejsów API mamy dużym wyzwaniem, aby utrzymać ją w. Czekamy na alternatywne rozwiązania zawierają informacje przydatne dla klientów.
+- Docelowy typ: Typ ma Brak interfejsu API platformy docelowej 
+- Docelowy element członkowski: Brak metody platformy docelowej 
+- Nazwa zestawu: zestaw .NET Framework, który Brak interfejsu API, który znajduje się w. 
+- Każdy z wybranych platformach docelowych jest jedną kolumnę, takich jak ".NET Core": Wartość "Nie jest obsługiwane" oznacza, że interfejs API nie jest obsługiwana na tej platformie docelowej. 
+- Zaleca się zmiany: zaleca się interfejsu API lub technologii, aby zmienić. Obecnie to pole jest puste lub nieaktualna dla wielu interfejsów API. Z powodu dużej liczby interfejsów API mamy dużym wyzwaniem, aby utrzymać ją w. Czekamy na alternatywne rozwiązania zawierają informacje przydatne dla klientów.
 
 #### <a name="missing-assemblies"></a>Brak zestawów
 
@@ -73,5 +73,3 @@ Sekcja szczegółów raportu zawiera interfejsy API brakuje jednego z platform d
 W raporcie może się okazać sekcji Brak zestawów. Jej informuje, że ta lista zestawów odwołują się zestawy przeanalizowany i nie zostały przeanalizowane. Jeśli jest to zespół, którego jesteś właścicielem, dołączyć analizator przenośności interfejsu Api, uruchamianie, dzięki czemu można uzyskać interfejsu API poziomu przenośność szczegółowy raport dla niego. Jeśli istnieje biblioteki innej firmy, szuka jeśli mają nowszej wersji, obsługa docelowej platformy. Jeśli tak, należy wziąć pod uwagę przeniesienie do nowszej wersji. Po pewnym czasie można oczekiwać, że ta lista zawiera wszystkie zestawów innych firm, które Twoja aplikacja jest zależna od i potwierdza, że wersja docelowej platformy obsługi.  
 
 Aby uzyskać więcej informacji dotyczących narzędzia .NET Portability Analyzer, odwiedź stronę [dokumentację GitHub](https://github.com/Microsoft/dotnet-apiport#documentation) i [krótki Przyjrzyj się narzędzia .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer) wideo Channel 9.
-
-

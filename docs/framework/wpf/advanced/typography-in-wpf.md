@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 94937b2c3e6935474d337c62bfd6698441dfcc2e
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 98dc2899fd2c6a294f9f878ccbf87f60520bbe78
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860121"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238684"
 ---
 # <a name="typography-in-wpf"></a>Typografia w WPF
 W tym temacie przedstawiono główne funkcje związane z typografią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Te funkcje obejmują poprawy jakości i wydajności renderowania tekstu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] typografii obsługi rozszerzonego tekstu międzynarodowe, rozszerzona obsługa czcionek i interfejsy programowania aplikacji w usłudze nowy tekst (API).  
@@ -142,7 +142,7 @@ Tekst z antialiasingu kierunku y ClearType
 ### <a name="advanced-text-formatting"></a>Zaawansowane formatowanie tekstu  
  Najbardziej zaawansowane poziom tekstu interfejsów API, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferuje możliwość utworzenia układu niestandardowego tekstu przy użyciu <xref:System.Windows.Media.TextFormatting.TextFormatter> obiektu a innymi typami danych w <xref:System.Windows.Media.TextFormatting> przestrzeni nazw. <xref:System.Windows.Media.TextFormatting.TextFormatter> i skojarzonych klas można zaimplementować układ niestandardowy tekst, który obsługuje własnych definicji formatów znaków, style akapitu wiersz reguł podziału, a inne układ funkcji międzynarodowych tekstu. Istnieje bardzo nielicznych przypadkach, w których chcesz zastąpić domyślną implementację elementu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługi układu tekstu. Jednak jeśli podczas tworzenia edycji formantu lub aplikacji tekstu, możesz wymagać inną implementację niż domyślna [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementacji.  
   
- W przeciwieństwie do tradycyjnych tekstu [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], <xref:System.Windows.Media.TextFormatting.TextFormatter> wchodzi w interakcję z klientem układu tekstu za pomocą zestawu metod wywołania zwrotnego. Wymaga od klienta zapewnienia tych metod w celu wykonania <xref:System.Windows.Media.TextFormatting.TextSource> klasy. Na poniższym diagramie przedstawiono interakcje układu tekstu między aplikacji klienckiej i <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
+ W przeciwieństwie do tradycyjnych tekstu interfejsu API <xref:System.Windows.Media.TextFormatting.TextFormatter> wchodzi w interakcję z klientem układu tekstu za pomocą zestawu metod wywołania zwrotnego. Wymaga od klienta zapewnienia tych metod w celu wykonania <xref:System.Windows.Media.TextFormatting.TextSource> klasy. Na poniższym diagramie przedstawiono interakcje układu tekstu między aplikacji klienckiej i <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
  ![Diagram klienta układu tekstu i obiekt TextFormatter](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   
@@ -157,4 +157,4 @@ Tekst z antialiasingu kierunku y ClearType
 - [Rysowanie formatowanego tekstu](drawing-formatted-text.md)
 - [Zaawansowane formatowanie tekstu](advanced-text-formatting.md)
 - [Text](optimizing-performance-text.md)
-- [Microsoft Typography](https://docs.microsoft.com/typography/)
+- [Typografia firmy Microsoft](https://docs.microsoft.com/typography/)

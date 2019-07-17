@@ -4,12 +4,12 @@ description: Ten samouczek pokazuje, jak utworzyć aplikację konsoli .NET Core,
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 833aeeb045ef1fd7bb0e6dbd2236bc3d9da2e8fc
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 2dc4d68eb6a3aa5890e4d091e33c4624d79317e9
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506150"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238369"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Samouczek: Analizowanie opinii komentarze witryny sieci Web przy użyciu klasyfikacji binarnej w strukturze ML.NET
 
@@ -181,10 +181,10 @@ Podczas przygotowywania modelu, użyjesz część zestawu danych do nauczenia go
 
     |SentimentText                         |wskaźniki nastrojów klientów |Funkcje              |
     |--------------------------------------|----------|----------------------|
-    |Waitress była nieco wolno w usłudze.|    0     |[0.76, 0.65, 0.44, …] |
-    |Skórki nie jest dobra.                    |    0     |[0.98, 0.43, 0.54, …] |
-    |WOW... Pracowałem z tego miejsca.              |    1     |[0.35, 0.73, 0.46, …] |
-    |Usługa była bardzo szybkie.              |    1     |[0.39, 0, 0.75, …]    |
+    |Waitress była nieco wolno w usłudze.|    0     |[0.76, 0.65 0.44,...] |
+    |Skórki nie jest dobra.                    |    0     |[0,98, 0.43 0.54,...] |
+    |WOW... Pracowałem z tego miejsca.              |    1     |[0.35, 0.73 0.46,...] |
+    |Usługa była bardzo szybkie.              |    1     |[0.39, 0, 0,75,...]    |
 
 ### <a name="add-a-learning-algorithm"></a>Dodaj algorytmu uczenia
 
@@ -361,7 +361,6 @@ F1Score: 84.04%
 
 Sentiment: This was a very bad steak | Prediction: Negative | Probability: 0.1027377
 =============== End of Predictions ===============
-
 
 =============== Prediction Test of loaded model with a multiple samples ===============
 

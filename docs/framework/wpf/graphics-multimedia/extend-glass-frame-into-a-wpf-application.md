@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 1c3316fa88d3024af4e81072cbe64c13cfbdb18e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 11c872767b5e3595da1fb4982d3b12e0fc77db98
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610282"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238590"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Rozszerz szklaną klatkę na aplikację WPF
 
@@ -30,7 +30,7 @@ Na poniższym obrazie przedstawiono szklaną klatkę rozszerzony do adresu pasek
 
 ![Zrzut ekranu przedstawiający szklaną klatkę rozszerzony poza IE7 pasek adresu](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Aby rozszerzyć szklaną klatkę na [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, dostęp do niezarządzanego [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] jest wymagana. Poniższy kod wykonuje (funkcja pinvoke) do wywołania platformy dwóch interfejsów API potrzebne do rozszerzenia ramki do obszaru klienckiego. Każda z tych interfejsów API są zadeklarowane w klasie o nazwie **NonClientRegionAPI**.
+Aby rozszerzyć szklaną klatkę na [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji potrzebny jest dostęp do niezarządzanego interfejsu API. Poniższy kod wykonuje (funkcja pinvoke) do wywołania platformy dwóch interfejsów API potrzebne do rozszerzenia ramki do obszaru klienckiego. Każda z tych interfejsów API są zadeklarowane w klasie o nazwie **NonClientRegionAPI**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]

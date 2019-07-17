@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: acfc252708bf8be7abacb1adc2968122501315a0
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: bb3737ca879f3687b25b021348da0c50f663c58e
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860197"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238673"
 ---
 # <a name="printing-overview"></a>Przegląd Drukowanie
 Za pomocą programu Microsoft .NET Framework deweloperzy aplikacji przy użyciu Windows Presentation Foundation (WPF) mają bogaty zestaw nowych drukowanie i interfejsy API umożliwiające zarządzanie systemem drukowania. Za pomocą [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], niektóre z tych rozszerzeń systemu drukowania są również dostępne dla programistów tworzących [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji i deweloperzy korzystający z niezarządzanego kodu. W ramach tej nowej funkcji jest nowy [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] format pliku i [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżka wydruku.  
@@ -69,7 +69,7 @@ Za pomocą programu Microsoft .NET Framework deweloperzy aplikacji przy użyciu 
  ![Zrzut ekranu pokazuje, że system drukowania XPS.](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>Drukowanie plików XPS podstawowe  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] definiuje zarówno podstawowe i zaawansowane [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Dla tych aplikacji, które nie wymagają dokładne dostosowanie drukowania lub dostęp do funkcji XPS pełną ustawiona, podstawowa obsługa drukowania jest dostępna. Podstawowa pomoc techniczna drukowania jest dostępna za pośrednictwem formantu w oknie dialogowym drukowania, który wymaga minimalnej konfiguracji i funkcje powszechnie znane [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Wiele funkcji XPS są dostępne za pośrednictwem tego uproszczony model drukowania.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] definiuje zarówno podstawowych i zaawansowanych interfejsów API. Dla tych aplikacji, które nie wymagają dokładne dostosowanie drukowania lub dostęp do funkcji XPS pełną ustawiona, podstawowa obsługa drukowania jest dostępna. Podstawowa pomoc techniczna drukowania jest dostępna za pośrednictwem formantu w oknie dialogowym drukowania, który wymaga minimalnej konfiguracji i funkcje powszechnie znane [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Wiele funkcji XPS są dostępne za pośrednictwem tego uproszczony model drukowania.  
   
 #### <a name="printdialog"></a>PrintDialog  
  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Kontrola zapewnia jeden punkt wejścia dla [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], konfiguracji i przesyłanie zadań do plików XPS. Aby uzyskać informacje o sposobie tworzenia instancji i korzystanie z kontrolki, zobacz [Wywołaj okno dialogowe Drukuj](how-to-invoke-a-print-dialog.md).  
@@ -145,6 +145,6 @@ W przypadku aplikacji, które nie wymagają funkcji XPS lub pomocy technicznej, 
 - <xref:System.Printing.PrintQueue>
 - [Tematy z instrukcjami](printing-how-to-topics.md)
 - [Dokumenty w WPF](documents-in-wpf.md)
-- [XPS Documents](/windows/desktop/printdocs/documents)
+- [Dokumenty XPS](/windows/desktop/printdocs/documents)
 - [Serializacja dokumentu i przechowywanie](document-serialization-and-storage.md)
 - [Konwerter (MXDC) dokumentów XPS firmy Microsoft](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)

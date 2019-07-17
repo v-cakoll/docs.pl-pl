@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 3e4438b309d4e443d07a6c2db2310733927fd38b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 86178f3e49dc25bee57b0896f2ebc2cf729b69bd
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625349"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238479"
 ---
 # <a name="data-binding-overview"></a>Przegląd Wiązanie danych
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Powiązanie danych zapewnia prosty i spójny sposób w przypadku aplikacji, umożliwiające zaprezentowanie i interakcję z danymi. Elementy może być powiązana z danymi z różnych źródeł danych w formie [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s, takie jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.ItemsControl>s, takie jak <xref:System.Windows.Controls.ListBox> i <xref:System.Windows.Controls.ListView> posiada wbudowanej funkcji, aby umożliwić elastyczne stylu pojedynczymi elementami danych lub kolekcje elementów danych. Sortowanie, filtrowanie i widoki grup mogą być generowane na podstawie danych.  
@@ -28,7 +28,7 @@ ms.locfileid: "64625349"
 ## <a name="what-is-data-binding"></a>Co to jest wiązanie danych?  
  Powiązanie danych to proces, który nawiązuje połączenie między aplikacją [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] i logiki biznesowej. Jeśli wiązanie ma poprawne ustawienia i dane zapewnia właściwe powiadomienia, następnie, po zmianie danych jego wartości, elementy, które są powiązane z danymi odzwierciedlać zmiany, automatycznie. Powiązanie danych również może oznaczać, że jeśli zmieni się zewnętrznej reprezentacji danych w elemencie danych bazowych można automatycznie zaktualizowane w celu odzwierciedlenia zmiany. Na przykład, jeśli użytkownik edytuje wartość <xref:System.Windows.Controls.TextBox> elementu podstawową wartość danych jest automatycznie aktualizowana w celu odzwierciedlenia tej zmiany.  
   
- Typowym zastosowaniem wiązanie danych jest umieszczenie serwera lub dane konfiguracji lokalnej do formularzy i innych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kontrolki. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], takie podejście jest rozwinięta i obejmuje powiązanie szerokiej gamy właściwości do różnych źródeł danych. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], można powiązać właściwości zależności elementów [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów (w tym [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] obiektów lub obiekty skojarzone z właściwości sieci Web i usług sieci Web) i [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danych.  
+ Typowym zastosowaniem wiązanie danych jest umieszczenie serwera lub dane konfiguracji lokalnej do formularzy i innych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kontrolki. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], takie podejście jest rozwinięta i obejmuje powiązanie szerokiej gamy właściwości do różnych źródeł danych. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], można powiązać właściwości zależności elementów [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów (w tym ADO.NET obiektów lub obiekty skojarzone z właściwości sieci Web i usług sieci Web) i [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danych.  
   
  Na przykład powiązanie danych zapoznaj się z następującej aplikacji [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] z [pokaz powiązania danych](https://go.microsoft.com/fwlink/?LinkID=163703):  
   
@@ -68,7 +68,7 @@ ms.locfileid: "64625349"
   
 - Właściwość docelowa musi być właściwość zależności. Większość <xref:System.Windows.UIElement> właściwości są właściwości zależności i większość właściwości zależności, z wyjątkiem sieci tylko do odczytu, obsługuje powiązanie danych domyślnie. (Tylko <xref:System.Windows.DependencyObject> typów można zdefiniować właściwości zależności i wszystkie <xref:System.Windows.UIElement>s pochodzić od <xref:System.Windows.DependencyObject>.)  
   
-- Chociaż nie jest określony na rysunku, należy zauważyć, obiektu źródłowego powiązania nie jest ograniczony do bycia niestandardowego [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Powiązanie danych obsługuje dane w postaci [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów i [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Aby podać kilka przykładów, może być Twoje źródło wiążące <xref:System.Windows.UIElement>, dowolnego obiektu listy [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiekt, który jest skojarzony z [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] danych lub usługi sieci Web lub element XmlNode, który zawiera Twoje [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danych. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie źródeł](binding-sources-overview.md).  
+- Chociaż nie jest określony na rysunku, należy zauważyć, obiektu źródłowego powiązania nie jest ograniczony do bycia niestandardowego [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Powiązanie danych obsługuje dane w postaci [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów i [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Aby zapewnić kilka przykładów, może być Twoje źródło wiążące <xref:System.Windows.UIElement>, dowolnego obiektu listy [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiekt, który jest skojarzony z danych ADO.NET lub usług sieci Web lub element XmlNode, który zawiera Twoje [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danych. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie źródeł](binding-sources-overview.md).  
   
  Omówione w innych [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] tematy, ważne jest, aby pamiętać, że podczas ustanawiania powiązania są powiązania cel wiążący *do* źródło wiążące. Na przykład, jeśli są wyświetlane niektóre podstawowe [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dane w <xref:System.Windows.Controls.ListBox> używanie powiązania danych, której dokonywane jest wiązanie swoje <xref:System.Windows.Controls.ListBox> do [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danych.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "64625349"
   
  W poniższej tabeli przedstawiono przykładowy scenariusz dla każdego <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> wartości przy użyciu <xref:System.Windows.Controls.TextBox> jako przykładu:  
   
-|UpdateSourceTrigger value|Jeśli wartości źródłowej jest aktualizowany|Przykładowy scenariusz TextBox|  
+|Wartość obiektu UpdateSourceTrigger|Jeśli wartości źródłowej jest aktualizowany|Przykładowy scenariusz TextBox|  
 |-------------------------------|----------------------------------------|----------------------------------|  
 |LostFocus (domyślne dla <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>)|Gdy formant pola tekstowego traci fokus|A <xref:System.Windows.Controls.TextBox> skojarzonego z logikę weryfikacji (patrz sekcja sprawdzanie poprawności danych)|  
 |PropertyChanged|Podczas wpisywania w <xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox> kontrolki w oknie pokoju rozmów|  

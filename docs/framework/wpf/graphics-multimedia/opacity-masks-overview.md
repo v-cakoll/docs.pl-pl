@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 3ee02eca9719f4ffa3ee0c165ad2541c9ffd085e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7554471d8b812b60e0b1aeb6dd3096b542ca44d6
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625270"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238406"
 ---
 # <a name="opacity-masks-overview"></a>Przegląd Masek krycia
 Maski krycia umożliwiać wykonywanie części elementu lub visual przezroczyste lub częściowo przezroczyste. Aby utworzyć maski krycia, należy zastosować <xref:System.Windows.Media.Brush> do <xref:System.Windows.UIElement.OpacityMask%2A> właściwość elementu lub <xref:System.Windows.Media.Visual>.  Pędzel jest mapowany na element "lub" visual, a wartość nieprzezroczystości każdego piksela pędzla służy do określania wynikowy nieprzezroczystość każdego piksela odpowiedniego elementu lub visual.  
@@ -69,15 +69,15 @@ Przykład maskowania przezroczystość pędzla
 ## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>Określanie ograniczniki gradientu maski krycia  
  W poprzednim przykładzie kolor zdefiniowaną przez system <xref:System.Windows.Media.Colors.Black%2A> jest używany jako kolor początkowy gradientu. Ponieważ wszystkie kolory w <xref:System.Windows.Media.Colors> klasy, z wyjątkiem <xref:System.Windows.Media.Colors.Transparent%2A>, są całkowicie nieprzezroczyste, może służyć do definiowania po prostu kolor początkowy maski krycia gradientu.  
   
- Dla dodatkowej kontroli nad wartości alfa podczas definiowania maski krycia, należy określić kanał alfa kolorów przy użyciu [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] notacji szesnastkowej w znaczników lub przy użyciu <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> metody.  
+ W przypadku dodatkową kontrolę nad wartości alfa podczas definiowania maski krycia, możesz określić kanał alfa kolorów przy użyciu notacji szesnastkowej ARGB w znacznikach lub <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> metody.  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Określanie Przezroczystość koloru w "XAML"  
- W [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], możesz użyć [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] notacji szesnastkowej określić krycie poszczególnych kolorów. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] notacji szesnastkowej używa następującej składni:  
+ W [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], notacji szesnastkowej ARGB umożliwia określenie nieprzezroczystość poszczególnych kolorów. Notacja szesnastkowych ARGB używa następującej składni:  
   
- `#` **aa** *rrggbb*  
+ `#` **AA** *rrggbb*  
   
- *Aa* w poprzednim wierszu reprezentuje wartość szesnastkową dwucyfrowy używany do określenia Przezroczystość koloru. *Rr*, *gg*, i *bb* każdy reprezentuje dwucyfrowa wartość szesnastkową, można określić ilość czerwony, zielony i niebieski w kolorze. Każdy cyfra szesnastkowa może mieć wartość z zakresu od 0 – 9 lub A – F. Usługa 0 jest najmniejsza wartość, a F jest większa. Wartości alfa 00 Określa, że kolor, który jest całkowicie przezroczysty, a wartość alfa FF tworzy kolor, który jest całkowicie nieprzezroczyste.  W poniższym przykładzie szesnastkowe [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] notacji służy do określania dwóch kolorów. Pierwszy jest całkowicie nieprzezroczyste, podczas gdy druga jest całkowicie przezroczysty.  
+ *Aa* w poprzednim wierszu reprezentuje wartość szesnastkową dwucyfrowy używany do określenia Przezroczystość koloru. *Rr*, *gg*, i *bb* każdy reprezentuje dwucyfrowa wartość szesnastkową, można określić ilość czerwony, zielony i niebieski w kolorze. Każdy cyfra szesnastkowa może mieć wartość z zakresu od 0 – 9 lub A – F. Usługa 0 jest najmniejsza wartość, a F jest większa. Wartości alfa 00 Określa, że kolor, który jest całkowicie przezroczysty, a wartość alfa FF tworzy kolor, który jest całkowicie nieprzezroczyste.  W poniższym przykładzie notacji szesnastkowej ARGB służy do określenia dwóch kolorów. Pierwszy jest całkowicie nieprzezroczyste, podczas gdy druga jest całkowicie przezroczysty.  
   
  [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
   

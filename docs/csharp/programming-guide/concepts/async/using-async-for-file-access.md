@@ -1,33 +1,33 @@
 ---
-title: Użycie Async do uzyskiwania dostępu do plików (C#)
+title: Używanie Async na potrzeby dostępu doC#plików ()
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 34ce05bd1270877aa3c626292e8b2464a23fad0c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6ca47157575ef4569a43f334dae4f99a1986a7ce
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583435"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330935"
 ---
-# <a name="using-async-for-file-access-c"></a>Użycie Async do uzyskiwania dostępu do plików (C#)
-Funkcja async dostępu do plików. Za pomocą funkcji asynchronicznych, można wywoływać do metod asynchronicznych bez za pomocą wywołania zwrotne lub podział swój kod w wielu metod lub wyrażenia lambda. Aby synchroniczny kod asynchroniczny, możesz po prostu Wywołaj metodę asynchroniczną zamiast metody synchronicznej i dodać kilka słów kluczowych w kodzie.  
+# <a name="using-async-for-file-access-c"></a>Używanie Async na potrzeby dostępu doC#plików ()
+Do uzyskiwania dostępu do plików można użyć funkcji asynchronicznej. Za pomocą funkcji asynchronicznej można wywołać metody asynchroniczne bez używania wywołań zwrotnych lub dzieląc kod w wielu metodach lub wyrażeniach lambda. Aby przeprowadzić synchroniczne asynchroniczne kod, wystarczy wywołać metodę asynchroniczną zamiast metody synchronicznej i dodać kilka słów kluczowych do kodu.  
   
- Należy rozważyć następujące przyczyny Dodawanie asynchroniczności do wywołania dostępu do pliku:  
+ Aby dodać asynchroniczności do wywołań dostępu do plików, należy wziąć pod uwagę następujące przyczyny:  
   
-- Asynchroniczność sprawia, że interfejsu użytkownika aplikacji zwiększyć szybkość reakcji, ponieważ wątek interfejsu użytkownika, który uruchamia operację można wykonywać inne zadania. Jeśli kod muszą być wykonywane w wątku interfejsu użytkownika, trwa zbyt długo (np. więcej niż 50 MS), interfejs użytkownika może zawieszać się we/wy zakończenie i wątku interfejsu użytkownika jest ponownie przetwarzanie klawiatury i myszy zdarzenia wejściowe i inne.  
+- Asynchroniczności sprawia, że aplikacje interfejsu użytkownika działają szybciej, ponieważ wątek interfejsu użytkownika uruchamiający operację może wykonać inne czynności. Jeśli wątek interfejsu użytkownika musi wykonać kod, który zajmuje dużo czasu (na przykład więcej niż 50 milisekund), interfejs użytkownika może się zamrozić do momentu zakończenia operacji we/wy, a wątek interfejsu użytkownika może ponownie przetwarzać dane wejściowe klawiatury i myszy oraz inne zdarzenia.  
   
-- Asynchroniczność zwiększa skalowalność platformy ASP.NET i innych aplikacji opartych na serwerze, redukując potrzebę dla wątków. Jeśli aplikacja korzysta z dedykowanego wątku na odpowiedzi i tysiące żądań, które są aktualnie obsługiwane jednocześnie, prościej i skuteczniej niż wątki są wymagane. Operacje asynchroniczne często trzeba użyć wątku podczas oczekiwania. Oni korzystać z istniejącego wątku zakończenia operacji We/Wy krótko po zakończeniu.  
+- Asynchroniczności poprawia skalowalność ASP.NET i innych aplikacji opartych na serwerze, zmniejszając potrzebę wątków. Jeśli aplikacja korzysta z dedykowanego wątku na odpowiedź i jednocześnie są obsługiwane tysiące żądań, są zbędne tysiące wątków. Operacje asynchroniczne często nie muszą używać wątku podczas oczekiwania. Z chwilą korzystają z istniejącego wątku zakończenia operacji we/wy.  
   
-- Opóźnienie operacji dostępu do pliku może być bardzo niska, w ramach bieżących warunków, ale opóźnienie może znacznie zwiększyć w przyszłości. Na przykład pliku mogą być przenoszone do serwera, który jest na całym świecie.  
+- Opóźnienie operacji dostępu do pliku może być bardzo niskie w bieżących warunkach, ale opóźnienie może znacznie wzrosnąć w przyszłości. Na przykład plik można przenieść na serwer, na którym znajduje się na całym świecie.  
   
-- Dodano obciążenie związane z użyciem funkcji asynchronicznej jest mała.  
+- Dodatkowe obciążenie związane z korzystaniem z funkcji asynchronicznej jest małe.  
   
-- Łatwo można uruchomić zadania asynchroniczne równolegle.  
+- Zadania asynchroniczne można łatwo uruchomić równolegle.  
   
 ## <a name="running-the-examples"></a>Uruchamianie przykładów  
- Aby uruchomić przykłady w tym temacie, można utworzyć **aplikacji WPF** lub **aplikacja interfejsu Windows Forms** , a następnie dodaj **przycisk**. W przycisku `Click` zdarzeń, dodaj wywołanie do pierwszej metody w każdym przykładzie.  
+ Aby uruchomić przykłady w tym temacie, można utworzyć **aplikację WPF** lub **aplikację Windows Forms** , a następnie dodać **przycisk**. W `Click` zdarzeniu przycisku Dodaj wywołanie do pierwszej metody w każdym przykładzie.  
   
- W poniższych przykładach, m.in `using` instrukcji.  
+ W poniższych przykładach Uwzględnij poniższe `using` instrukcje.  
   
 ```csharp  
 using System;  
@@ -39,15 +39,15 @@ using System.Threading.Tasks;
 ```  
   
 ## <a name="use-of-the-filestream-class"></a>Użycie klasy FileStream  
- Przykłady w tym temacie <xref:System.IO.FileStream> klasy, która jest dostępna opcja, który powoduje, że asynchroniczne operacje We/Wy na poziomie systemu operacyjnego. Za pomocą tej opcji, możesz uniknąć blokowania puli wątków w wielu przypadkach. Aby włączyć tę opcję, należy określić `useAsync=true` lub `options=FileOptions.Asynchronous` argument w wywołaniu konstruktora.  
+ Przykłady w tym temacie używają <xref:System.IO.FileStream> klasy, która powoduje wystąpienie asynchroniczne we/wy na poziomie systemu operacyjnego. Korzystając z tej opcji, można uniknąć zablokowania wątku puli wątków w wielu przypadkach. Aby włączyć tę opcję, należy określić `useAsync=true` argument or `options=FileOptions.Asynchronous` w wywołaniu konstruktora.  
   
- Nie można użyć tej opcji z <xref:System.IO.StreamReader> i <xref:System.IO.StreamWriter> Jeśli możesz otworzyć bezpośrednio, określając ścieżkę do pliku. Jednak można użyć tej opcji, jeśli zostaną podane <xref:System.IO.Stream> , <xref:System.IO.FileStream> klasy otwarty. Należy zauważyć, że wywołania asynchroniczne szybsza w interfejsie użytkownika aplikacji, nawet jeśli puli wątków jest zablokowany, ponieważ wątek interfejsu użytkownika nie jest blokowane podczas oczekiwania.  
+ Nie można użyć tej opcji razem <xref:System.IO.StreamReader> z <xref:System.IO.StreamWriter> i, jeśli otworzysz je bezpośrednio, określając ścieżkę pliku. Można jednak użyć tej opcji, jeśli podajesz im <xref:System.IO.Stream> <xref:System.IO.FileStream> , że została otwarta Klasa. Należy zauważyć, że wywołania asynchroniczne są szybsze w aplikacjach interfejsu użytkownika, nawet jeśli wątek puli wątków jest zablokowany, ponieważ wątek interfejsu użytkownika nie jest blokowany podczas oczekiwania.  
   
 ## <a name="writing-text"></a>Pisanie tekstu  
- Poniższy przykład zapisuje tekst do pliku. W każdej await instrukcji, metoda natychmiast kończy pracę. Po zakończeniu operacji We/Wy pliku metody wznawia działanie w instrukcji, która następuje po instrukcji czekania. Należy zauważyć, że w definicji metody, które używają instrukcji czekania modyfikatora async.  
+ Poniższy przykład zapisuje tekst do pliku. W każdej instrukcji Await Metoda natychmiast opuszcza. Po zakończeniu operacji we/wy pliku Metoda zostaje wznowiona przy użyciu instrukcji, która następuje po instrukcji Await. Należy zauważyć, że modyfikator Async jest w definicji metod, które używają instrukcji Await.  
   
 ```csharp  
-public async void ProcessWrite()  
+public async Task ProcessWriteAsync()  
 {  
     string filePath = @"temp2.txt";  
     string text = "Hello World\r\n";  
@@ -68,20 +68,20 @@ private async Task WriteTextAsync(string filePath, string text)
 }  
 ```  
   
- Przykład oryginalnego zawiera instrukcję `await sourceStream.WriteAsync(encodedText, 0, encodedText.Length);`, który jest zmniejszenie dwie poniższe instrukcje:  
+ Oryginalny przykład zawiera instrukcję `await sourceStream.WriteAsync(encodedText, 0, encodedText.Length);`, która jest umową obejmującą następujące dwie instrukcje:  
   
 ```csharp  
 Task theTask = sourceStream.WriteAsync(encodedText, 0, encodedText.Length);  
 await theTask;  
 ```  
   
- Pierwsza instrukcja zwraca klasę task i powoduje, że przetwarzanie pliku rozpocząć. Druga instrukcja z await powoduje, że metody od razu zakończyć proces i zwraca inne zadanie. Po zakończeniu przetwarzania w dalszej części plików, wykonywanie powraca do instrukcji następującej await. Aby uzyskać więcej informacji, zobacz [Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ Pierwsza instrukcja zwraca zadanie i powoduje uruchomienie przetwarzania plików. Druga instrukcja z Await powoduje, że metoda natychmiast zakończy działanie i zwróci inne zadanie. Po późniejszym zakończeniu przetwarzania plików wykonanie powraca do instrukcji, która następuje po oczekiwania. Aby uzyskać więcej informacji, zobacz [sterowanie przepływem w programachC#asynchronicznych ()](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Odczytywanie tekstu  
- Poniższy przykład odczytuje tekst z pliku. Tekst buforowane i umieszczane w tym przypadku <xref:System.Text.StringBuilder>. Inaczej niż w poprzednim przykładzie oceny await generuje wartość. <xref:System.IO.Stream.ReadAsync%2A> Metoda zwraca <xref:System.Threading.Tasks.Task> \< <xref:System.Int32>>, więc tworzy oceny await `Int32` wartość (`numRead`) po zakończeniu operacji. Aby uzyskać więcej informacji, zobacz [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).  
+ Poniższy przykład odczytuje tekst z pliku. Tekst jest buforowany i, w tym przypadku, umieszczony w <xref:System.Text.StringBuilder>. W przeciwieństwie do poprzedniego przykładu, obliczanie oczekiwania powoduje utworzenie wartości. <xref:System.IO.Stream.ReadAsync%2A> Metoda <xref:System.Threading.Tasks.Task> `Int32` zwraca >, więc Ocena await generuje wartość(`numRead`) po zakończeniu operacji. \< <xref:System.Int32> Aby uzyskać więcej informacji, zobacz [asynchroniczne typy zwracaneC#()](../../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
 ```csharp  
-public async void ProcessRead()  
+public async Task ProcessReadAsync()  
 {  
     string filePath = @"temp2.txt";  
   
@@ -124,15 +124,15 @@ private async Task<string> ReadTextAsync(string filePath)
 }  
 ```  
   
-## <a name="parallel-asynchronous-io"></a>Równoległe asynchronicznego We/Wy  
- W poniższym przykładzie pokazano przetwarzania równoległego, pisząc 10 plików tekstowych. Dla każdego pliku <xref:System.IO.Stream.WriteAsync%2A> metoda zwraca klasę task, która następnie zostanie dodany do listy zadań. `await Task.WhenAll(tasks);` Instrukcji opuszcza metody i wznawia wewnątrz metody, gdy przetwarzanie plików jest pełny dla wszystkich zadań.  
+## <a name="parallel-asynchronous-io"></a>Równoległe asynchroniczne operacje we/wy  
+ Poniższy przykład ilustruje przetwarzanie równoległe, pisząc 10 plików tekstowych. Dla każdego pliku <xref:System.IO.Stream.WriteAsync%2A> Metoda zwraca zadanie, które jest następnie dodawane do listy zadań. `await Task.WhenAll(tasks);` Instrukcja kończy metodę i wznawia działanie w ramach metody po zakończeniu przetwarzania plików dla wszystkich zadań.  
   
- Kod z przykładu zamyka wszystkie <xref:System.IO.FileStream> wystąpienia w `finally` blokować po zakończeniu zadania. Jeśli każda `FileStream` zamiast tego została utworzona w `using` instrukcji `FileStream` może zostać usunięte przed ukończeniem zadania.  
+ Przykład zamyka wszystkie <xref:System.IO.FileStream> wystąpienia `finally` w bloku po zakończeniu zadań. Jeśli każdy `FileStream` z nich został utworzony `using` w instrukcji, `FileStream` może zostać usunięty przed ukończeniem zadania.  
   
- Należy pamiętać, że wszelkie zwiększeniu wydajności prawie całkowicie z przetwarzanie równoległe i przetwarzania asynchronicznego. Zalety asynchroniczności to, czy nie blokując wiele wątków i że nie blokowały wątek interfejsu użytkownika.  
+ Należy pamiętać, że zwiększenie wydajności jest niemal całkowicie wynikiem przetwarzania równoległego, a nie przetwarzania asynchronicznego. Zalety asynchroniczności są takie same, że nie wiążą się z wieloma wątkami i nie wiążą się z wątkiem interfejsu użytkownika.  
   
 ```csharp  
-public async void ProcessWriteMult()  
+public async Task ProcessWriteMultAsync()  
 {  
     string folder = @"tempfolder\";  
     List<Task> tasks = new List<Task>();  
@@ -172,10 +172,10 @@ public async void ProcessWriteMult()
 }  
 ```  
   
- Korzystając z <xref:System.IO.Stream.WriteAsync%2A> i <xref:System.IO.Stream.ReadAsync%2A> metody, można określić <xref:System.Threading.CancellationToken>, którego anulowanie strumienia środku operacji. Aby uzyskać więcej informacji, zobacz [Fine-Tuning aplikacji asynchronicznej (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) i [anulowanie w zarządzanych wątkach](../../../../standard/threading/cancellation-in-managed-threads.md).  
+ W przypadku korzystania <xref:System.IO.Stream.WriteAsync%2A> z <xref:System.IO.Stream.ReadAsync%2A> metod i można określić <xref:System.Threading.CancellationToken>, której można użyć do anulowania strumienia średniej operacji. Aby uzyskać więcej informacji, zobacz [dostrajanie aplikacji asynchronicznej (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) i [Anulowanie w zarządzanych wątkach](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie asynchroniczne z async i await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Programowanie asynchroniczne z Async i Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Asynchroniczne typy zwracane (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [Przepływ sterowania w programach Async (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [Przepływ sterowania w programach asynchronicznychC#()](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)

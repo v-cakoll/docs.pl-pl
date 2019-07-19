@@ -5,122 +5,122 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 6dca154dc6ff560fe589ea56ee49d761a2622fe9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca00b4a0450539741719f5f5a56d241e4bebfcc2
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614555"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331720"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Wdrażanie aplikacji WPF (WPF)
-Po są wbudowane aplikacje Windows Presentation Foundation (WPF), muszą zostać wdrożone. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] a .NET Framework zawierają kilka technologie wdrażania. Technologie wdrażania, które jest używane do wdrażania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacja jest zależna od typu aplikacji. Ten temat zawiera krótkie omówienie poszczególnych technologii wdrożenia i jak są używane w połączeniu z wymagań związanych z wdrażaniem każdego [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] typu aplikacji.  
+Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zostać wdrożone. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]a .NET Framework zawierają kilka technologii wdrażania. Technologia wdrażania, która jest używana do wdrażania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, zależy od typu aplikacji. Ten temat zawiera krótkie omówienie poszczególnych technologii wdrażania oraz sposób ich użycia w połączeniu z wymaganiami dotyczącymi wdrożenia poszczególnych [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] typów aplikacji.  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Technologie wdrażania  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i .NET Framework zawiera kilka technologii wdrożenia, w tym:  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].NET Framework obejmuje kilka technologii wdrażania, w tym:  
   
-- Umożliwia wdrażanie XCopy.  
+- Wdrażanie polecenia XCopy.  
   
-- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] wdrożenie.  
+- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]mieszczeniu.  
   
-- [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] wdrożenie.  
+- [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]mieszczeniu.  
   
 <a name="XCopy_Deployment"></a>   
-### <a name="xcopy-deployment"></a>Umożliwia wdrażanie XCopy  
- Umożliwia wdrażanie XCopy odnosi się do korzystania z programu wiersza polecenia XCopy, aby skopiować pliki z jednej lokalizacji do innej. Umożliwia wdrażanie XCopy jest odpowiednie w następujących okolicznościach:  
+### <a name="xcopy-deployment"></a>Wdrażanie polecenia XCopy  
+ Polecenie XCopy Deployment odnosi się do kopiowania plików z jednej lokalizacji do drugiej przy użyciu narzędzia wiersza polecenia XCopy. Wdrożenie polecenia XCopy jest odpowiednie w następujących okolicznościach:  
   
-- Aplikacja jest niezależna. Nie trzeba ją zaktualizować klienta do uruchomienia.  
+- Aplikacja jest samodzielna. Nie trzeba aktualizować klienta programu, aby uruchomić program.  
   
-- Pliki aplikacji należy przenieść z jednej lokalizacji do innej, takich jak z lokalizacji kompilacji (dysk lokalny, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] udziału plików i tak dalej) do lokalizacji publikowania (witryny sieci Web [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] udziału plików i tak dalej).  
+- Pliki aplikacji muszą zostać przeniesione z jednej lokalizacji do innej, na przykład z lokalizacji kompilacji (dysk lokalny, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] udział plików itd.), do lokalizacji publikowania (witryna sieci Web, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] udział plików itd.).  
   
-- Aplikacja nie wymaga integracji powłoki (skrótu w menu Start, ikony pulpitu i tak dalej).  
+- Aplikacja nie wymaga integracji powłoki (skrót menu Start, ikona pulpitu itp.).  
   
- Chociaż XCopy nadaje się do prostych wdrożeń, jest ograniczona w przypadku bardziej złożonych możliwości wdrażania wymagane. W szczególności za pomocą polecenia XCopy często wiąże się obciążenie do tworzenia, wykonywania i utrzymywania skrypty do zarządzania wdrożeniem w niezawodny sposób. Ponadto polecenia XCopy nie obsługuje przechowywania wersji, Odinstalowywanie lub wycofywania.  
+ Chociaż XCopy jest odpowiednie dla prostych scenariuszy wdrażania, jest ograniczone, gdy wymagane są bardziej złożone możliwości wdrażania. W szczególności użycie XCopy często polega na tworzeniu i wykonywaniu skryptów służących do zarządzania wdrażaniem w niezawodny sposób. Ponadto XCopy nie obsługuje przechowywania wersji, odinstalowywania lub wycofywania.  
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Instalator Windows  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] Umożliwia aplikacjom spakowanych jako autonomiczne pliki wykonywalne, które można łatwo dystrybuowane do klientów i uruchamiać. Ponadto [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] został zainstalowany przy użyciu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i umożliwia integrację z pulpitu, Start menu i programy w Panelu sterowania.  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]umożliwia pakowanie aplikacji jako samodzielnych plików wykonywalnych, które mogą być łatwo dystrybuowane do klientów i uruchamiane. Ponadto program [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] jest instalowany z [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] programem i umożliwia integrację z pulpitem, menu Start i panelami sterowania programy.  
   
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] upraszcza instalowania i odinstalowywania aplikacji, ale nie zapewnia funkcje służące do zapewnienia zainstalowane aplikacje są aktualizowane z punktu widzenia obsługi wersji.  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]upraszcza instalację i odinstalowywanie aplikacji, ale nie udostępnia obiektów do zapewnienia aktualności zainstalowanych aplikacji z punktu widzenia wersji systemu.  
   
- Aby uzyskać więcej informacji na temat Instalatora Windows, zobacz [wdrożenia Instalatora Windows](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
+ Aby uzyskać więcej informacji na temat Instalator Windows, zobacz [Instalator Windows Deployment](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>Wdrożenie ClickOnce  
- [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] Umożliwia wdrażanie aplikacji internetowych dla innych aplikacji. Aplikacje są publikowane i wdrażane z serwerów sieci Web lub pliku. Mimo że [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] nie obsługuje pełnej gamy klienta funkcji [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]— czy zainstalowane aplikacje, obsługuje ona podzestaw, który obejmuje następujące elementy:  
+ [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]umożliwia wdrażanie aplikacji w stylu sieci Web dla aplikacji innych niż sieci Web. Aplikacje są publikowane w sieci Web lub na serwerach plików i wdrażane z nich. Mimo [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] że program nie obsługuje pełnego zakresu [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]funkcji klienta zainstalowanych aplikacji, obsługuje podzestaw, który obejmuje następujące elementy:  
   
-- Integracja z Start menu i programy w Panelu sterowania.  
+- Integracja z menu Start i apletem Panel sterowania programy.  
   
-- Przechowywanie wersji, wycofywania i odinstalowywania.  
+- Przechowywanie wersji, wycofywanie i odinstalowywanie.  
   
-- Tryb instalacji w trybie online, który zawsze uruchamia aplikację w lokalizacji wdrożenia.  
+- Tryb instalacji online, który zawsze uruchamia aplikację z lokalizacji wdrożenia.  
   
-- Automatyczne aktualizowanie, gdy wydawane są nowe wersje.  
+- Automatyczne aktualizowanie po wydaniu nowych wersji.  
   
-- Rejestrowanie rozszerzeń nazw plików.  
+- Rejestracja rozszerzeń plików.  
   
- Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], zobacz [wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
+ Aby uzyskać więcej informacji [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]na temat, zobacz [zabezpieczenia i wdrażanie technologii ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 <a name="Deploying_WPF_Applications"></a>   
 ## <a name="deploying-wpf-applications"></a>Wdrażanie aplikacji WPF  
- Opcji wdrażania dla [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji są zależne od typu aplikacji. Z punktu widzenia wdrażania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dostępne są trzy typy znaczące aplikacji:  
+ Opcje [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wdrażania aplikacji zależą od typu aplikacji. Z perspektywy [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wdrożenia mają trzy znaczące typy aplikacji:  
   
 - Aplikacje autonomiczne.  
   
-- Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplikacji.  
+- Aplikacje tylko [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] do znaczników.  
   
 - [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Wdrażanie aplikacji autonomicznych  
- Aplikacje autonomiczne są wdrażane przy użyciu [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] lub [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. W obu przypadkach aplikacje autonomiczne wymaga pełnego zaufania do uruchomienia. Pełne zaufanie jest automatycznie przyznane dla aplikacji autonomicznych, które są wdrażane przy użyciu [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Aplikacje autonomiczne, które są wdrażane przy użyciu [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] nie są automatycznie przyznawane pełnego zaufania. Zamiast tego [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] Wyświetla zabezpieczeń, okno dialogowe Ostrzeżenie, które użytkownicy muszą zaakceptować przed zainstalowaniem aplikacji autonomicznej. Jeśli zaakceptowane, autonomiczną aplikacją jest zainstalowany i udzielone pełne zaufanie. Jeśli nie, nie zainstalowano aplikacji autonomicznej.  
+ Aplikacje autonomiczne są wdrażane [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] przy [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]użyciu lub. W obu przypadkach aplikacje autonomiczne wymagają pełnego zaufania do uruchomienia. Pełne zaufanie jest automatycznie przydzielane do aplikacji autonomicznych wdrożonych [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]przy użyciu programu. Aplikacje autonomiczne wdrożone przy [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] użyciu programu nie otrzymują automatycznie pełnego zaufania. Zamiast tego [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] program wyświetla okno dialogowe ostrzeżenia o zabezpieczeniach, które użytkownicy muszą zaakceptować przed zainstalowaniem aplikacji autonomicznej. W przypadku zaakceptowania aplikacja autonomiczna jest zainstalowana i ma przyznane pełne zaufanie. W przeciwnym razie aplikacja autonomiczna nie jest zainstalowana.  
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
-### <a name="deploying-markup-only-xaml-applications"></a>Wdrażanie aplikacji tylko do znaczników XAML  
- Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony są zazwyczaj publikowane na serwerach sieci Web, takie jak [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] strony i mogą być wyświetlane przy użyciu [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]. Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron uruchomić w piaskownicy częściowego zaufania zabezpieczeń bez ograniczeń, które są definiowane przez zestaw uprawnień strefy Internet. Dzięki temu równoważne izolowanym do [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]— na podstawie aplikacji sieci Web.  
+### <a name="deploying-markup-only-xaml-applications"></a>Wdrażanie aplikacji XAML tylko do znaczników  
+ Strony ze znacznikami są zwykle publikowane na serwerach sieci Web, [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] takich jak strony i mogą być wyświetlane [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]przyużyciu. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Strony zawierające tylko [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczniki są uruchamiane w obszarze piaskownicy zabezpieczeń częściowej relacji zaufania z ograniczeniami, które są zdefiniowane przez zestaw uprawnień strefy internetowej. Zapewnia to równoważną ochronę aplikacji sieci [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]Web opartych na zabezpieczeniach.  
   
- Aby uzyskać więcej informacji o zabezpieczeniach [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , zobacz [zabezpieczeń](../security-wpf.md).  
+ Aby uzyskać więcej informacji o zabezpieczeniach [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, zobacz [zabezpieczenia](../security-wpf.md).  
   
- Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony mogą być zainstalowane do lokalnego systemu plików przy użyciu dowolnego polecenia XCopy lub [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Te strony można wyświetlić przy użyciu [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] lub w Eksploratorze Windows.  
+ Strony tylko [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] do znaczników można zainstalować w lokalnym systemie plików przy użyciu polecenia XCOPY lub [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Te strony można wyświetlać przy użyciu [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] programu lub Eksploratora Windows.  
   
- Aby uzyskać więcej informacji na temat XAML, zobacz [Przegląd XAML (WPF)](../advanced/xaml-overview-wpf.md).  
+ Aby uzyskać więcej informacji na temat języka XAML, zobacz [Omówienie języka XAML (WPF)](../advanced/xaml-overview-wpf.md).  
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
-### <a name="deploying-xaml-browser-applications"></a>Deploying XAML Browser Applications  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] są skompilowanymi aplikacji, które wymagają następujących trzech plików do wdrożenia:  
+### <a name="deploying-xaml-browser-applications"></a>Wdrażanie aplikacji przeglądarki XAML  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]są skompilowanymi aplikacjami, które wymagają wdrożenia następujących trzech plików:  
   
-- *ApplicationName*.exe: Plik zestawu pliku wykonywalnego aplikacji.  
+- *ApplicationName*. exe: Plik wykonywalny aplikacji zestawu.  
   
-- *ApplicationName*XBAP: Manifest wdrożenia.  
+- *ApplicationName*. XBAP: Manifest wdrożenia.  
   
-- *ApplicationName*. exe.manifest: Manifest aplikacji.  
+- *ApplicationName*. exe. manifest: Manifest aplikacji.  
   
 > [!NOTE]
->  Aby uzyskać więcej informacji na temat manifesty wdrażania i aplikacji, zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  
+>  Aby uzyskać więcej informacji na temat wdrażania i manifestów aplikacji, zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  
   
- Te pliki są tworzone podczas [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] jest wbudowana. Aby uzyskać więcej informacji, zobacz [jak: Utwórz nowy projekt aplikacji przeglądarki WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Tylko znaczniki, takich jak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] najczęściej są publikowane na serwerze sieci Web oraz wyświetlać za pomocą [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
+ Te pliki są tworzone podczas [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kompilowania. Aby uzyskać więcej informacji, zobacz [jak: Utwórz nowy projekt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))aplikacji w przeglądarce WPF. Podobnie jak w przypadku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron ze [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] znakiem, są zwykle publikowane na serwerze sieci Web [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]i wyświetlane przy użyciu.  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] można wdrożyć na klientach przy użyciu dowolnej techniki wdrażania. Jednak [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] jest zalecane, ponieważ zapewnia następujące możliwości:  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]Program można wdrożyć na klientach przy użyciu dowolnych metod wdrażania. Jest jednak [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] zalecane, ponieważ zapewnia następujące możliwości:  
   
 1. Aktualizacje automatyczne po opublikowaniu nowej wersji.  
   
-2. Podniesienie uprawnień dla [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] uruchomiona z pełnym zaufaniem.  
+2. Podniesienie uprawnień dla [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] uruchomionego z pełnym zaufaniem.  
   
- Domyślnie ClickOnce publikowanie aplikacji pliki z rozszerzeniem .deploy. Może być problematyczne, ale można go wyłączyć. Aby uzyskać więcej informacji, zobacz [serwera i problemy z konfiguracją klienta we wdrożeniach ClickOnce](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments).  
+ Domyślnie ClickOnce publikuje pliki aplikacji przy użyciu rozszerzenia. deploy. Może to być przyczyną problemów, ale można ją wyłączyć. Aby uzyskać więcej informacji, zobacz [problemy z konfiguracją serwera i klienta we wdrożeniach ClickOnce](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments).  
   
- Aby uzyskać więcej informacji o wdrażaniu [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], zobacz [WPF XAML Browser Applications Overview](wpf-xaml-browser-applications-overview.md).  
+ Aby uzyskać więcej informacji na [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]temat wdrażania, zobacz [WPF XAML przeglądarki aplikacje przegląd](wpf-xaml-browser-applications-overview.md).  
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>Instalowanie programu .NET Framework  
- Aby uruchomić [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji Microsoft .NET Framework, należy można zainstalować na komputerze klienckim. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] automatycznie wykrywa, czy klienci zostali zainstalowani za pomocą .NET Framework podczas [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] są wyświetlane aplikacje hostowane w przeglądarce. Jeśli nie zainstalowano programu .NET Framework, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] monituje użytkowników o jego zainstalowanie.  
+ Aby można było [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uruchomić aplikację, na kliencie musi być zainstalowana platforma Microsoft .NET. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]Program automatycznie wykrywa, czy klienci zostali zainstalowani przy użyciu .NET Framework, gdy [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] są wyświetlane aplikacje hostowane w przeglądarce. Jeśli .NET Framework nie jest zainstalowana, program [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] poprosi użytkowników o ich zainstalowanie.  
   
- Aby wykryć, czy są zainstalowane .NET Framework, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] obejmuje aplikację program inicjujący, który jest zarejestrowany jako plan awaryjny [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] obsługi zawartości plików z następującymi rozszerzeniami: .xaml, XPS, XBAP i .application. Jeśli przejdziesz do tych typów plików i .NET Framework nie jest zainstalowany na komputerze klienckim, aplikacja inicjująca żąda uprawnienia do jej zainstalowania. Jeśli uprawnienie nie zostanie podany, .NET Framework ani aplikacji nie jest zainstalowany.  
+ Aby wykryć, czy .NET Framework jest zainstalowana, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] zawiera aplikację programu inicjującego, która jest zarejestrowana jako [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] procedura obsługi rezerwowej dla plików zawartości z następującymi rozszerzeniami:. XAML,. XPS,. XBAP i. Application. Jeśli przejdziesz do tych typów plików, a .NET Framework nie jest zainstalowana na kliencie, aplikacja inicjująca zażąda uprawnień do jej zainstalowania. Jeśli nie zostanie podane uprawnienie, ani .NET Framework ani aplikacja nie zostanie zainstalowana.  
   
- W przypadku przyznania uprawnienia [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] pobiorą i zainstalują przy użyciu .NET Framework [!INCLUDE[TLA#tla_bits](../../../../includes/tlasharptla-bits-md.md)]. Po pomyślnej instalacji programu .NET Framework pierwotnie żądany plik jest otwarty w nowym oknie przeglądarki.  
+ W przypadku udzielenia uprawnień program [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] pobiera i instaluje .NET Framework przy użyciu usługa inteligentnego transferu w tle Microsoft (BITS). Po pomyślnej instalacji .NET Framework pierwotnie żądany plik zostanie otwarty w nowym oknie przeglądarki.  
   
- Automatyczne wykrywanie .NET framework jest dostępna w [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], i [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] klienci, którzy mają [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] lub nowszej.  
+ Funkcja automatycznego wykrywania .NET Framework jest dostępna w [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)]systemach [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], i [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] klientach z [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] zainstalowanym systemem lub nowszym.  
   
- Aby uzyskać więcej informacji, zobacz [wdrażania aplikacji .NET Framework i](../../deployment/index.md).  
+ Aby uzyskać więcej informacji, zobacz [wdrażanie .NET Framework i aplikacji](../../deployment/index.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

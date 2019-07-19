@@ -1,134 +1,132 @@
 ---
-title: Przewidywanie za pomocą regresji za pomocą konstruktora modelu cen
-description: W tym samouczku pokazano, jak do zbudowania modelu regresji przy użyciu konstruktora modeli strukturze ML.NET do prognozowania cen, w szczególności taryf taksówek w Nowym Jorku.
+title: Przewidywanie cen przy użyciu regresji z konstruktorem modelu
+description: W tym samouczku przedstawiono sposób tworzenia modelu regresji przy użyciu konstruktora modelu ML.NET do przewidywania cen, w oddziałach, w oddziałach, w oddziałach
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d8c901a10c91c8a6c16ca59516b633a99785ebac
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: b4a08a9866bbc8816b57c95bdb22766bd1b07fdc
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238567"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331696"
 ---
-# <a name="predict-prices-using-regression-with-model-builder"></a>Przewidywanie za pomocą regresji za pomocą konstruktora modelu cen
+# <a name="predict-prices-using-regression-with-model-builder"></a>Przewidywanie cen przy użyciu regresji z konstruktorem modelu
 
-Dowiedz się, jak tworzyć model() regresji, do prognozowania cen za pomocą konstruktora modelu strukturze ML.NET.  Aplikacji konsolowej .NET, który tworzysz w tym samouczku przewiduje taksówek opłatami na podstawie danych historycznych taryfy taksówek w Nowym Jorku.
+Dowiedz się, jak za pomocą konstruktora modeli ML.NET utworzyć model regresji () w celu przewidywania cen.  Aplikacja konsolowa platformy .NET, którą opracowujesz w tym samouczku, przewiduje opłaty za taksówkę w oparciu o historyczne dane dotyczące opłat za taksówkę w Nowym Jorku.
 
-Szablon prognozowania ceny konstruktora modelu może być używany dla dowolnych scenariuszy wymaga wartości liczbowe prognozy. Przykładowe scenariusze obejmują: lokalne Prognozowanie cen, przewidywanie zapotrzebowania i Prognozowanie sprzedaży.
+Szablon prognozowania cen konstruktora modeli może być używany w każdym scenariuszu wymagającym wartości prognozowanych liczbowych. Przykładowe scenariusze obejmują: prognozowanie cen domu, prognozowanie popytu i prognozowanie sprzedaży.
 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
-> * Przygotuj i zrozumieć dane
+> * Przygotuj i poznanie danych
 > * Wybierz scenariusz
 > * Ładowanie danych
 > * Uczenie modelu
-> * Ocena modelu
-> * Na użytek modelu prognozy
+> * Oceń model
+> * Używanie modelu dla prognoz
 
 > [!NOTE]
-> Konstruktor modelu jest obecnie w wersji zapoznawczej.
+> Konstruktor modeli jest obecnie w wersji zapoznawczej.
 
 ## <a name="pre-requisites"></a>Wymagania wstępne
 
-Aby uzyskać listę wymagań wstępnych i instrukcje dotyczące instalacji, odwiedź stronę [Przewodnik instalacji konstruktora modeli](../how-to-guides/install-model-builder.md).
+Listę wymagań wstępnych i instrukcji instalacji można znaleźć w [podręczniku instalacji konstruktora modeli](../how-to-guides/install-model-builder.md).
 
 ## <a name="create-a-console-application"></a>Tworzenie aplikacji konsolowej
 
-1. Tworzenie **aplikacji konsoli .NET Core** o nazwie "TaxiFarePrediction".
+1. Utwórz **aplikację konsolową .NET Core** o nazwie "TaxiFarePrediction".
 
-## <a name="prepare-and-understand-the-data"></a>Przygotuj i zrozumieć dane
+## <a name="prepare-and-understand-the-data"></a>Przygotuj i poznanie danych
 
-1. Utwórz katalog o nazwie *danych* w projekcie mają być przechowywane pliki zestawu danych.
+1. Utwórz katalog o nazwie *dane* w projekcie, aby przechowywać pliki zestawu danych.
 
-1. Zestaw danych używany do nauczanie i ocena modeli usługi machine learning jest pierwotnie z zestawu danych NYC TLC taksówek podróży. 
+1. Zestaw danych służący do uczenia i oszacowania modelu uczenia maszynowego jest pierwotnie z zestawu danych o podróży NYC TLC.
 
-    Aby pobrać zestaw danych, przejdź do [link pobierania taksówek taryfy train.csv](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv). 
-    
-    Po załadowaniu strony, kliknij prawym przyciskiem myszy na stronie i wybierz **Zapisz jako**. 
-    
-    Użyj **Zapisz jako okno dialogowe** Aby zapisać plik w *danych* folderu utworzonego w poprzednim kroku. 
-    
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy *taksówek taryfy train.csv* plik i wybierz **właściwości**. W obszarze **zaawansowane**, zmień wartość właściwości **Kopiuj do katalogu wyjściowego** do **Kopiuj Jeśli nowszy**.
+    Aby pobrać zestaw danych, przejdź do linku [pobierania Taxi-Fare-Train. csv](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv).
 
-Każdy wiersz w `taxi-fare-train.csv` zestaw danych zawiera szczegółowe informacje o wymianie danych wprowadzonych przez taksówek.
+    Gdy strona zostanie załadowana, kliknij prawym przyciskiem myszy w dowolnym miejscu na stronie i wybierz polecenie **Zapisz jako**.
 
-1. Otwórz **taksówek taryfy train.csv** zestawu danych
+    Użyj **okna dialogowego Zapisz jako** , aby zapisać plik w folderze *danych* utworzonym w poprzednim kroku.
+
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy plik *Taxi-Fare-Train. csv* i wybierz polecenie **Właściwości**. W obszarze **Zaawansowane**Zmień wartość opcji **Kopiuj do katalogu wyjściowego** na Kopiuj, **jeśli nowszy**.
+
+Każdy wiersz w `taxi-fare-train.csv` zestawie danych zawiera szczegółowe informacje o podróży dokonywanych przez taksówkę.
+
+1. Otwórz zestaw danych **Taxi-Fare-Train. csv**
 
     Podany zestaw danych zawiera następujące kolumny:
 
-    * **vendor_id:** Identyfikator dostawcy taksówek jest funkcją.
-    * **rate_code:** Typ stawki podróży taksówek jest funkcją.
-    * **passenger_count:** Liczba osób w ramach wyzwolenie jest funkcją.
-    * **trip_time_in_secs:** Ilość czasu trwania podróży. 
-    * **trip_distance:** Odległość wyzwolenie jest funkcją.
-    * **payment_type:** Sposób zapłaty (pieniężnych lub karta kredytowa) jest funkcją.
-    * **fare_amount:** Taryfy taksówek łączna liczba płatnych jest etykieta.
+    * **vendor_id:** Identyfikator dostawcy taksówki jest funkcją.
+    * **rate_code:** Typ szybkości podróży z taksówką jest funkcją.
+    * **passenger_count:** Liczba pasażerów w podróży to funkcja.
+    * **trip_time_in_secs:** Czas trwania podróży.
+    * **trip_distance:** Odległość podróży to funkcja.
+    * **payment_type:** Forma płatności (karta kasowa lub kredytowa) to funkcja.
+    * **fare_amount:** Łączna liczba płatnych opłat za taksówkę to etykieta.
 
-`label` Kolumna, która chcesz przewidzieć. Podczas wykonywania zadania regresji, celem jest do przewidywania wartości liczbowej. W tym scenariuszu prognozowania ceny przewiduje koszt jazdy taksówek. W związku z tym **fare_amount** jest etykietą. Wskazywanego przez nią `features` to dane wejściowe, nadaj model do przewidywania `label`. W takim przypadku pozostałe kolumny są używane jako funkcje lub danych wejściowych do prognozowania kwota klasie.
+`label` Jest to kolumna, która ma zostać przewidywalna. Podczas wykonywania zadania regresji celem jest przewidywanie wartości liczbowej. W tym scenariuszu prognozowania cen jest przewidywany koszt najazdy z taksówką. W związku z tym **fare_amount** jest etykietą. Identyfikowane `features` są dane wejściowe, które dają model do `label`przewidywania. W takim przypadku pozostałe kolumny są używane jako funkcje lub dane wejściowe do przewidywania kwoty opłat.
 
 ## <a name="choose-a-scenario"></a>Wybierz scenariusz
 
-Do nauczenia modelu, należy wybrać z listy dostępnych usługi machine learning scenariuszy dostarczone przez Konstruktor modelu. W tym przypadku jest to scenariusz `Price Prediction`. 
+Aby szkolić model, musisz wybrać z listy dostępnych scenariuszy uczenia maszynowego udostępnianych przez konstruktora modelu. W tym przypadku scenariuszem jest `Price Prediction`.
 
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy *TaxiFarePrediction* projektu, a następnie wybierz **Dodaj** > **uczenia maszynowego**.
-1. W kroku scenariusza narzędzia Konstruktor modelu, wybierz *Prognozowanie cen* scenariusza.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt *TaxiFarePrediction* , a następnie wybierz pozycję **Dodaj** > **Machine Learning**.
+1. W kroku scenariusz narzędzia model Builder wybierz opcję scenariusz prognozowania *cen* .
 
 ## <a name="load-the-data"></a>Ładowanie danych
 
-Konstruktor modelu akceptuje dane z dwóch źródeł, bazy danych programu SQL Server lub lokalny plik w formacie csv lub tsv. 
+Konstruktor modelu akceptuje dane z dwóch źródeł, bazy danych SQL Server lub pliku lokalnego w formacie CSV lub TSV.
 
-1. W kroku danych narzędzia Konstruktor modelu, wybierz *pliku* z listy rozwijanej źródła danych.
-1. Kliknij przycisk Dalej, aby *wybierz plik* pole tekstowe i użyj Eksploratora plików, przeglądania i wybierania *taksówek taryfy test.csv* w *danych* katalogu
-1. Wybierz *fare_amount* w *etykiety lub kolumny Predict* listy rozwijanej i przejdź do kroku train narzędzia Konstruktor modelu.
+1. W kroku dane narzędzia model Builder wybierz pozycję *plik* z listy rozwijanej Źródło danych.
+1. Wybierz przycisk obok pola tekstowego *Wybierz plik* i Użyj Eksploratora plików do przeglądania i wybierania *Taxi-Fare-test. csv* w katalogu *danych*
+1. Wybierz *fare_amount* w *etykiecie lub kolumnie do przewidywania* rozwijania i przejdź do kroku uczenia narzędzia model Builder.
 
 ## <a name="train-the-model"></a>Uczenie modelu
 
-Używane do trenowania modelu prognozowania ceny w tym samouczku zadania uczenia maszynowego jest regresji. W trakcie szkolenia modelu konstruktora modeli szkolenie modeli na osobne modele przy użyciu regresji różnych algorytmów i ustawienia, aby znaleźć najlepiej działający model dla zestawu danych.
+Zadanie uczenia maszynowego używane do uczenia modelu prognozowania cen w tym samouczku to regresja. W trakcie procesu szkolenia modelu, Konstruktor modelu pociąga za siebie różne modele przy użyciu różnych algorytmów regresji i ustawień, aby znaleźć najlepszy model dla zestawu danych.
 
-Czas wymagany do do nauczenia modelu jest proporcjonalny do ilości danych. Skorzystaj z tej tabeli jako wskazówki wybrać odpowiednią wartość `Time to train (seconds)` pola:
+Czas wymagany przez model do uczenia jest proporcjonalny do ilości danych. Użyj tego wykresu jako wskazówek, aby wybrać odpowiednią wartość dla `Time to train (seconds)` pola:
 
-\* Rozmiar zestawu danych  | Typ zestawu danych       | Średni Czas do pociągu *
+\* Rozmiar zestawu danych  | Typ zestawu danych       | Średni Czas trwania uczenia *
 ------------- | ------------------ | --------------
-0 - 10 mb     | Liczbowe i tekstowe   | 10 s
-10 - 100 mb   | Liczbowe i tekstowe   | 10-minutowy materiał
-100 – 500 mb  | Liczbowe i tekstowe   | 30 minut
-500 — 1 Gb    | Liczbowe i tekstowe   | 60-minutowe
-1 Gb+         | Liczbowe i tekstowe   | 3 godziny +
+0-10 MB     | Wartości numeryczne i tekstowe   | 10 sekund
+10-100 MB   | Wartości numeryczne i tekstowe   | 10 min
+100 – 500 MB  | Wartości numeryczne i tekstowe   | 30 minut
+500 – 1 GB    | Wartości numeryczne i tekstowe   | 60 min
+1 Gb+         | Wartości numeryczne i tekstowe   | 3 godziny +
 
-1. Ponieważ plik danych szkoleniowych więcej niż 10MB, należy użyć 600 sekund (10 minut), jako wartość pozycji *czas na nauczenie (w sekundach)* .
-2. Wybierz *Rozpocznij szkolenie*.
+1. Ponieważ plik danych szkoleniowych jest większy niż 10 MB, użyj 600 sekund (10 minut) jako wartości *czasu do uczenia (w sekundach)* .
+2. Wybierz pozycję *Rozpocznij szkolenie*.
 
-Przez cały proces szkolenia postępu dane są wyświetlane w `Progress` części kroku pociągu.
+W trakcie całego procesu szkolenia dane o postępie są wyświetlane `Progress` w sekcji kroku uczenie.
 
-- Stan wyświetlany stan ukończenia procesu uczenia.
-- Najlepsze dokładności Wyświetla dokładność najlepiej działający model znalezione przez konstruktora modeli do tej pory. Większą dokładność oznacza, że model przewiduje właściwie na danych testowych.
-- Najlepszy algorytm Wyświetla nazwę algorytmu działają najlepiej wykonać znalezione przez konstruktora modeli do tej pory.
-- Ostatni algorytm Wyświetla nazwę algorytmu do nauczenia modelu, ostatnio używane przez konstruktora modelu.
+- Stan przedstawia stan zakończenia procesu szkolenia.
+- Najlepsza dokładność przedstawia dokładność najlepszego modelu, który został znaleziony przez konstruktora modelu do tej pory. Większa dokładność oznacza, że model przewidywalno dokładniej na danych testowych.
+- Najlepszym algorytmem jest wyświetlana nazwa najlepszego wykonywania algorytmu, który został wykonany przez konstruktora modelu do tej pory.
+- Ostatni algorytm wyświetla nazwę algorytmu ostatnio używanego przez konstruktora modelu do uczenia modelu.
 
-Po zakończeniu szkolenia, przejdź do kroku evaluate.
+Po zakończeniu szkolenia przejdź do kroku szacowania.
 
-## <a name="evaluate-the-model"></a>Ocena modelu
+## <a name="evaluate-the-model"></a>Oceń model
 
-Wynik kroku szkolenia będzie jednego modelu, który ma najwyższą wydajność. W kroku evaluate narzędzia Konstruktor modelu, w sekcji danych wyjściowych będzie zawierać algorytmów używanych przez funkcję najlepiej działający model w *najlepszy Model* wpisu wraz z metrykami w *Najlepsza jakość modeli (RSquared)* . Ponadto podsumowanie tabelę zawierającą pięć modeli i ich metryki. 
+Wynikiem kroku szkolenia będzie jeden model, który miał najlepszą wydajność. W kroku szacowania narzędzia model Builder sekcja Output będzie zawierać algorytm używany przez model najlepszego wykonywania w najlepszym wpisie *modelu* oraz metryki w *najlepszej jakości modelu (RSquared)* . Ponadto tabela podsumowująca zawierająca pięć najważniejszych modeli i ich metryki.
 
-Jeśli nie jesteś zadowolony z metryk dokładności, niektóre łatwy sposób zwiększenia dokładności modelu i spróbuj mają zwiększyć ilość czasu do nauczenia modelu, lub Użyj większej ilości danych. W przeciwnym razie przejdź do kroku kodu. 
+Jeśli Twoje metryki dokładności nie są zadowalające, niektóre proste sposoby wypróbowania i poprawienia dokładności modelu mają na celu zwiększenie ilości czasu na nauczenie modelu lub użycie większej ilości danych. W przeciwnym razie przejdź do kroku kodu.
 
-## <a name="add-the-code-to-make-predictions"></a>Dodaj kod, aby tworzyć prognozy
+## <a name="add-the-code-to-make-predictions"></a>Dodaj kod, aby tworzyć przewidywania
 
-Dwa projekty zostaną utworzone w wyniku procesu uczenia.
+W wyniku procesu szkolenia zostaną utworzone dwa projekty.
 
-- TaxiFarePredictionML.ConsoleApp: Aplikacja Konsolowa .NET Core, która zawiera kod, szkolenia i użycie modelu.
-- TaxiFarePredictionML.Model: Biblioteki klas .NET Standard zawierający modeli danych, które zdefiniować schemat danych wejściowych i wyjściowych modelu danych, a także utrwalonych wersję najlepiej działający model podczas szkolenia.
+- TaxiFarePredictionML.ConsoleApp: Aplikacja konsolowa platformy .NET Core, która zawiera model szkolenia i kod zużycia.
+- TaxiFarePredictionML. model: Biblioteka klas .NET Standard zawierająca modele danych, które definiują schemat danych wejściowych i wyjściowych, a także utrwalaną wersję najlepszego modelu podczas uczenia.
 
-
-1. W kroku kodu narzędzia Konstruktor modelu, wybierz **dodać projekty** dodać generowanych automatycznie projekty do rozwiązania.
-1. Kliknij prawym przyciskiem myszy *TaxiFarePrediction* projektu. Następnie **Dodaj > dokumentacja**. Wybierz **projektów > rozwiązania** węzła i z listy, sprawdź *TaxiFarePredictionML.Model* projektu, a następnie wybierz przycisk OK.
-1. Otwórz *Program.cs* w pliku *TaxiFarePrediction* projektu.
-1. Dodaj następujące za pomocą instrukcji, aby odwołać się do *Microsoft.ML* pakietu NuGet i *TaxiFarePredictionML.Model* projektu:
-
+1. W kroku Code narzędzia model Builder wybierz pozycję **Dodaj projekty** , aby dodać automatycznie generowane projekty do rozwiązania.
+1. Kliknij prawym przyciskiem myszy projekt *TaxiFarePrediction* . Następnie **Dodaj odwołanie >** . Wybierz węzeł **projekty > rozwiązaniu** i z listy Sprawdź projekt *TaxiFarePredictionML. model* i wybierz przycisk OK.
+1. Otwórz plik *program.cs* w projekcie *TaxiFarePrediction* .
+1. Dodaj następujące instrukcje using, aby odwołać się do pakietu NuGet *Microsoft.ml* i projektu *TaxiFarePredictionML. model* :
 
     ```csharp
     using System;
@@ -136,7 +134,7 @@ Dwa projekty zostaną utworzone w wyniku procesu uczenia.
     using TaxiFarePredictionML.Model.DataModels;
     ```
 
-1. Dodaj `ConsumeModel` metody `Program` klasy. 
+1. `ConsumeModel` Dodaj metodę`Program` do klasy.
 
     ```csharp
     static ModelOutput ConsumeModel(ModelInput input)
@@ -156,9 +154,9 @@ Dwa projekty zostaną utworzone w wyniku procesu uczenia.
     }
     ```
 
-    `ConsumeModel` Będzie załadować trenowanego modelu, tworzenie [ `PredictionEngine` ](xref:Microsoft.ML.PredictionEngine%602) modelu i użyj jej do prognozowania na nowych danych.
+    Program załaduje szkolony model, [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) utworzy dla modelu i użyje go do prognozowania nowych danych. `ConsumeModel`
 
-7. Przewiduje nowe dane przy użyciu modelu, należy utworzyć nowe wystąpienie klasy `ModelInput` klasy i użyć `ConsumeModel` metody. Należy zauważyć, że kwota taryfy nie jest częścią danych wejściowych. Jest to spowodowane modelu spowoduje wygenerowanie prognoz dla niego. Dodaj następujący kod do `Main` metody i uruchom aplikację
+1. Aby przeprowadzić prognozowanie nowych danych przy użyciu modelu, Utwórz nowe wystąpienie `ModelInput` klasy i `ConsumeModel` Użyj metody. Zwróć uwagę, że opłata za opłaty nie jest częścią danych wejściowych. Dzieje się tak, ponieważ model generuje dla niego prognozę. Dodaj następujący kod do `Main` metody i uruchom aplikację
 
     ```csharp
     // Create sample data
@@ -180,31 +178,31 @@ Dwa projekty zostaną utworzone w wyniku procesu uczenia.
     Console.ReadKey();
     ```
 
-    Dane wyjściowe generowane przez program powinien wyglądać podobnie jak poniższy fragment kodu:
+    Dane wyjściowe generowane przez program powinny wyglądać podobnie do poniższego fragmentu kodu:
 
     ```bash
     Predicted Fare: 16.82245
     ```
 
-Jeśli musisz odwoływać się do wygenerowanego projektów w późniejszym czasie wewnątrz innego rozwiązania, możesz znaleźć je wewnątrz `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` katalogu.
+Jeśli musisz odwoływać się do wygenerowanych projektów w późniejszym czasie w innym rozwiązaniu, możesz je znaleźć w `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` katalogu.
 
 ## <a name="next-steps"></a>Następne kroki
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
-> * Przygotuj i zrozumieć dane
+> * Przygotuj i poznanie danych
 > * Wybierz scenariusz
 > * Ładowanie danych
 > * Uczenie modelu
-> * Ocena modelu
-> * Na użytek modelu prognozy
+> * Oceń model
+> * Używanie modelu dla prognoz
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-Aby dowiedzieć się więcej na temat tematy wymienione w tym samouczku, odwiedź następujące zasoby:
+Aby dowiedzieć się więcej na temat tematów wymienionych w tym samouczku, odwiedź następujące zasoby:
 
 - [Scenariusze konstruktora modelu](../automate-training-with-model-builder.md#scenarios)
 - [Formaty danych konstruktora modelu](../automate-training-with-model-builder.md#data-formats)
 - [Regression](../resources/glossary.md#regression)
 - [Metryki modelu regresji](../resources/metrics.md#metrics-for-regression)
-- [Zestaw danych podróży taksówek TLC NYC](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
+- [Zestaw danych podróży NYC TLC](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)

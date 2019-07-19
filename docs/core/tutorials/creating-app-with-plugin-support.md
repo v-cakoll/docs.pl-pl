@@ -1,38 +1,38 @@
 ---
-title: Tworzenie aplikacji .NET Core za pomocą wtyczki
+title: Tworzenie aplikacji platformy .NET Core za pomocą wtyczek
 description: Dowiedz się, jak utworzyć aplikację platformy .NET Core, która obsługuje wtyczki.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: a9431ee28c7df21a8688f845be20e062eca21887
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 308fd2f853261e87da71892c42e17e36984d1978
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647233"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330982"
 ---
-# <a name="create-a-net-core-application-with-plugins"></a>Tworzenie aplikacji .NET Core za pomocą wtyczki
+# <a name="create-a-net-core-application-with-plugins"></a>Tworzenie aplikacji platformy .NET Core za pomocą wtyczek
 
-Ten samouczek pokazuje, jak do:
+W tym samouczku pokazano, jak:
 
 - Tworzenie struktury projektu do obsługi wtyczek.
-- Utwórz niestandardową <xref:System.Runtime.Loader.AssemblyLoadContext> załadować wtyczki.
-- Użyj `System.Runtime.Loader.AssemblyDependencyResolver` typu, aby umożliwić wtyczki do mają zależności.
-- Tworzenie wtyczek, które można łatwo wdrożyć przez skopiowanie artefaktów kompilacji.
+- Utwórz niestandardową <xref:System.Runtime.Loader.AssemblyLoadContext> , aby załadować każdą wtyczkę.
+- Użyj typu `System.Runtime.Loader.AssemblyDependencyResolver` , aby zezwolić na wtyczki.
+- Tworzenie wtyczek, które można łatwo wdrożyć przez Kopiowanie artefaktów kompilacji.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Zainstaluj [zestawu SDK platformy .NET Core 3.0 w wersji zapoznawczej 2](https://www.microsoft.com/net/core) lub nowszej.
+- Zainstaluj [zestaw SDK programu .NET Core 3,0 Preview 2](https://www.microsoft.com/net/core) lub nowszą wersję.
 
 ## <a name="create-the-application"></a>Tworzenie aplikacji
 
 Pierwszym krokiem jest utworzenie aplikacji:
 
-1. Utwórz nowy folder, a w tym folderze uruchom `dotnet new console -o AppWithPlugin`. 
-2. Aby skompilowanie projektu łatwiejsze, Utwórz plik rozwiązania Visual Studio. Uruchom `dotnet new sln` w tym samym folderze. 
-3. Uruchom `dotnet sln add AppWithPlugin/AppWithPlugin.csproj` można dodać projektu aplikacji do rozwiązania.
+1. Utwórz nowy folder i w tym folderze zostanie uruchomiony `dotnet new console -o AppWithPlugin`. 
+2. Aby ułatwić Kompilowanie projektu, Utwórz plik rozwiązania programu Visual Studio. Uruchom `dotnet new sln` w tym samym folderze. 
+3. Uruchom `dotnet sln add AppWithPlugin/AppWithPlugin.csproj` , aby dodać projekt aplikacji do rozwiązania.
 
-Teraz możemy Wypełnij szkielet naszej aplikacji. Zastąp kod w *AppWithPlugin/Program.cs* pliku następującym kodem:
+Teraz możemy wypełnić szkielet naszej aplikacji. Zastąp kod w pliku *AppWithPlugin/program. cs* następującym kodem:
 
 ```csharp
 using PluginBase;
@@ -85,19 +85,19 @@ namespace AppWithPlugin
 
 ```
 
-## <a name="create-the-plugin-interfaces"></a>Tworzenie interfejsów wtyczki
+## <a name="create-the-plugin-interfaces"></a>Tworzenie interfejsów wtyczek
 
-Następnym krokiem w tworzeniu aplikacji za pomocą wtyczki jest zdefiniowanie interfejs, który muszą implementować wtyczki. Zalecamy, aby biblioteka klas, który zawiera wszystkie typy, które ma być używany do komunikacji między aplikacji i wtyczek. Podział ten umożliwia publikowanie interfejsu wtyczki jako pakiet bez konieczności wysyłania pełnej aplikacji.
+Następnym krokiem tworzenia aplikacji z wtyczkami jest zdefiniowanie interfejsu, do którego wtyczki wymagają wdrożenia. Sugerujemy, aby utworzyć bibliotekę klas, która zawiera wszystkie typy, które mają być używane do komunikacji między aplikacją i wtyczkami. Ten oddział umożliwia opublikowanie interfejsu wtyczki jako pakietu bez konieczności dostarczania kompletnej aplikacji.
 
-W folderze głównym projektu, uruchom `dotnet new classlib -o PluginBase`. Ponadto uruchomić `dotnet sln add PluginBase/PluginBase.csproj` można dodać projektu do pliku rozwiązania. Usuń `PluginBase/Class1.cs` pliku i Utwórz nowy plik w `PluginBase` folder o nazwie `ICommand.cs` przy użyciu następującej definicji interfejsu:
+W folderze głównym projektu uruchom `dotnet new classlib -o PluginBase`polecenie. Ponadto Uruchom `dotnet sln add PluginBase/PluginBase.csproj` polecenie, aby dodać projekt do pliku rozwiązania. Usuń plik i Utwórz nowy plik `PluginBase` w folderze o nazwie `ICommand.cs` przy użyciu następującej definicji interfejsu: `PluginBase/Class1.cs`
 
 [!code-csharp[the-plugin-interface](~/samples/core/extensions/AppWithPlugin/PluginBase/ICommand.cs)]
 
-To `ICommand` interfejs jest interfejsem wszystkie wtyczki będzie implementowany.
+Ten `ICommand` interfejs jest interfejsem, który implementuje wszystkie wtyczki.
 
-Teraz, gdy `ICommand` interfejsu jest zdefiniowany, projekt aplikacji może być wypełnione nieco bardziej. Dodaj odwołanie z `AppWithPlugin` projekt `PluginBase` projektu o `dotnet add AppWithPlugin\AppWithPlugin.csproj reference PluginBase\PluginBase.csproj` polecenia w folderze głównym.
+Teraz, gdy interfejs jest zdefiniowany, projekt aplikacji może być wypełniony nieco więcej. `ICommand` Dodaj odwołanie z `AppWithPlugin` projektu `PluginBase` do projektu za pomocą `dotnet add AppWithPlugin\AppWithPlugin.csproj reference PluginBase\PluginBase.csproj` polecenia z folderu głównego.
 
-Zastąp `// Load commands from plugins` komentarz z poniższego fragmentu kodu, włączyć go do załadowania wtyczki z podanej ścieżki pliku:
+Zastąp `// Load commands from plugins` komentarz następującym fragmentem kodu, aby umożliwić mu ładowanie wtyczek z danych ścieżek plików:
 
 ```csharp
 string[] pluginPaths = new string[]
@@ -112,7 +112,7 @@ IEnumerable<ICommand> commands = pluginPaths.SelectMany(pluginPath =>
 }).ToList();
 ```
 
-Następnie zastąp `// Output the loaded commands` komentarz z poniższego fragmentu kodu:
+Następnie zastąp `// Output the loaded commands` komentarz następującym fragmentem kodu:
 
 ```csharp
 foreach (ICommand command in commands)
@@ -121,7 +121,7 @@ foreach (ICommand command in commands)
 }
 ```
 
-Zastąp `// Execute the command with the name passed as an argument` komentarza z następującego fragmentu kodu:
+Zastąp `// Execute the command with the name passed as an argument` komentarz następującym fragmentem kodu:
 
 ```csharp
 ICommand command = commands.FirstOrDefault(c => c.Name == commandName);
@@ -134,7 +134,7 @@ if (command == null)
 command.Execute();
 ```
 
-A na koniec należy dodać metody statyczne do `Program` klasę o nazwie `LoadPlugin` i `CreateCommands`, jak pokazano poniżej:
+A wreszcie Dodaj metody statyczne do `Program` klasy o nazwie `LoadPlugin` i `CreateCommands`, jak pokazano poniżej:
 
 ```csharp
 static Assembly LoadPlugin(string relativePath)
@@ -169,15 +169,15 @@ static IEnumerable<ICommand> CreateCommands(Assembly assembly)
 }
 ```
 
-## <a name="load-plugins"></a>Ładowanie wtyczki
+## <a name="load-plugins"></a>Załaduj wtyczki
 
-Teraz można poprawnie załadować i aplikacji wystąpienia poleceń z zestawów załadowanych wtyczki, ale jest nadal nie można załadować zestawy dodatków plug-in. Utwórz plik o nazwie *PluginLoadContext.cs* w *AppWithPlugin* folder o następującej zawartości:
+Teraz aplikacja może prawidłowo załadować i utworzyć wystąpienia poleceń z załadowanych zestawów wtyczek, ale nadal nie można załadować zestawów wtyczek. Utwórz plik o nazwie *PluginLoadContext.cs* w folderze *AppWithPlugin* o następującej zawartości:
 
 [!code-csharp[loading-plugins](~/samples/core/extensions/AppWithPlugin/AppWithPlugin/PluginLoadContext.cs)]
 
-`PluginLoadContext` Typ pochodzi z <xref:System.Runtime.Loader.AssemblyLoadContext>. `AssemblyLoadContext` Typ to specjalny typ w środowisku uruchomieniowym, która umożliwia deweloperom do izolowania załadowanych zestawów w różnych grupach, aby upewnić się, że wersje zestawów nie wchodzą w konflikt. Ponadto niestandardowy `AssemblyLoadContext` można wybrać różne ścieżki ładować zestawów z i zastąpić domyślne zachowanie. `PluginLoadContext` Używa wystąpienia `AssemblyDependencyResolver` typu wprowadzone w programie .NET Core 3.0 to rozpoznawanie nazw zestawu ścieżek. `AssemblyDependencyResolver` Obiekt jest konstruowany przy użyciu ścieżki do biblioteki klas platformy .NET. Jest on rozpoznawany jako zestawów i bibliotek natywnych ich względnych ścieżek na podstawie *deps.json* pliku dla biblioteki klas, w których ścieżka został przekazany do `AssemblyDependencyResolver` konstruktora. Niestandardowy `AssemblyLoadContext` umożliwia wtyczki do mają swoje własne zależności i `AssemblyDependencyResolver` ułatwia można prawidłowo załadować zależności.
+Typ pochodzi od <xref:System.Runtime.Loader.AssemblyLoadContext>. `PluginLoadContext` `AssemblyLoadContext` Typ jest specjalnym typem w środowisku uruchomieniowym, który umożliwia deweloperom izolowanie załadowanych zestawów do różnych grup, aby upewnić się, że wersje zestawu nie powodują konfliktu. Ponadto niestandardowe `AssemblyLoadContext` może wybrać różne ścieżki, z których mają zostać załadowane zestawy, i zastąpić zachowanie domyślne. `PluginLoadContext` Używa wystąpienia`AssemblyDependencyResolver` typu wprowadzonego w środowisku .NET Core 3,0 w celu rozpoznania nazw zestawów w ścieżkach. `AssemblyDependencyResolver` Obiekt jest skonstruowany ze ścieżką do biblioteki klas .NET. Rozwiązuje zestawy i biblioteki natywne do ich ścieżek względnych opartych na pliku *. deps. JSON* dla biblioteki klas, której ścieżka została przeniesiona `AssemblyDependencyResolver` do konstruktora. Niestandardowe `AssemblyLoadContext` umożliwiają wtyczki mają własne zależności `AssemblyDependencyResolver` i ułatwiają prawidłowe ładowanie zależności.
 
-Teraz, gdy `AppWithPlugin` projekt ma `PluginLoadContext` wpisz, zaktualizuj `Program.LoadPlugin` metody z treścią następujące:
+Teraz, gdy `AppWithPlugin` projekt `PluginLoadContext` ma typ, zaktualizuj `Program.LoadPlugin` metodę za pomocą następującej treści:
 
 ```csharp
 static Assembly LoadPlugin(string relativePath)
@@ -197,19 +197,19 @@ static Assembly LoadPlugin(string relativePath)
 }
 ```
 
-Przy użyciu innego `PluginLoadContext` wystąpienie dla każdej wtyczki wtyczki mogą mieć różne lub nawet sprzeczne zależności bez problemu.
+Przy użyciu innego `PluginLoadContext` wystąpienia dla każdej wtyczki wtyczki mogą mieć różne lub nawet zależności powodujące konflikty bez problemu.
 
-## <a name="create-a-simple-plugin-with-no-dependencies"></a>Tworzenie prostego wtyczki bez zależności
+## <a name="create-a-simple-plugin-with-no-dependencies"></a>Tworzenie prostej wtyczki bez zależności
 
 W folderze głównym wykonaj następujące czynności:
 
-1. Uruchom `dotnet new classlib -o HelloPlugin` Aby utworzyć nowy projekt biblioteki klas o nazwie `HelloPlugin`.
-2. Uruchom `dotnet sln add HelloPlugin/HelloPlugin.csproj` można dodać projektu do `AppWithPlugin` rozwiązania. 
-3. Zastąp *HelloPlugin/Class1.cs* pliku przy użyciu pliku o nazwie *HelloCommand.cs* z następującą zawartością:
+1. Uruchom `dotnet new classlib -o HelloPlugin` , aby utworzyć nowy projekt biblioteki klas o `HelloPlugin`nazwie.
+2. Uruchom `dotnet sln add HelloPlugin/HelloPlugin.csproj` , aby dodać projekt `AppWithPlugin` do rozwiązania. 
+3. Zastąp plik *HelloPlugin/Class1. cs* plikiem o nazwie *HelloCommand.cs* następującym zawartością:
 
 [!code-csharp[the-hello-plugin](~/samples/core/extensions/AppWithPlugin/HelloPlugin/HelloCommand.cs)]
 
-Teraz Otwórz *HelloPlugin.csproj* pliku. Powinny one wyglądać podobnie do następującego:
+Teraz otwórz plik *HelloPlugin. csproj* . Powinien wyglądać podobnie do poniższego:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -222,7 +222,7 @@ Teraz Otwórz *HelloPlugin.csproj* pliku. Powinny one wyglądać podobnie do nas
 
 ```
 
-Między `<Project>` tagi, Dodaj następujące elementy:
+W obu `<Project>` tagach Dodaj następujące elementy:
 
 ```xml
 <ItemGroup>
@@ -232,23 +232,23 @@ Między `<Project>` tagi, Dodaj następujące elementy:
 </ItemGroup>
 ```
 
-`<Private>false</Private>` Element jest bardzo ważne. Informuje program MSBuild nie kopią *PluginBase.dll* do katalogu wyjściowego dla HelloPlugin. Jeśli *PluginBase.dll* zestawu znajduje się w katalogu wyjściowym `PluginLoadContext` znajdzie istnieje zestaw i załadować go podczas ładowania *HelloPlugin.dll* zestawu. W tym momencie `HelloPlugin.HelloCommand` wdroży typu `ICommand` interfejs z *PluginBase.dll* w katalogu danych wyjściowych `HelloPlugin` projektu nie `ICommand` interfejsu, który jest ładowany do domyślny kontekst ładowania. Ponieważ środowisko uruchomieniowe uznaje różnych typów z różnych zestawów tych dwóch typów `AppWithPlugin.Program.CreateCommands` metody nie będą dostępne polecenia. W rezultacie `<Private>false</Private>` metadanych jest wymagana dla odwołania do zestawu zawierającego interfejsów wtyczki.
+`<Private>false</Private>` Element jest bardzo istotny. Oznacza to, że program MSBuild nie skopiuje *PluginBase. dll* do katalogu wyjściowego dla HelloPlugin. Jeśli zestaw *PluginBase. dll* jest obecny w katalogu wyjściowym, `PluginLoadContext` program odnajdzie zestaw i załaduje go podczas ładowania zestawu *HelloPlugin. dll* . `HelloPlugin.HelloCommand` W tym momencie typ `ICommand` Zaimplementuj interfejs z *PluginBase. dll* w katalogu `HelloPlugin` wyjściowym projektu, a `ICommand` nie interfejsu, który jest ładowany do domyślnego kontekstu ładowania. Ponieważ środowisko uruchomieniowe widzi te dwa typy jako różne typy z różnych zestawów, `AppWithPlugin.Program.CreateCommands` Metoda nie znajdzie poleceń. W związku `<Private>false</Private>` z tym metadane są wymagane dla odwołania do zestawu zawierającego interfejsy wtyczki.
 
-Teraz, gdy `HelloPlugin` projektu będzie gotowa, możemy zaktualizować `AppWithPlugin` projekt, aby wiedzieć, gdzie `HelloPlugin` można znaleźć wtyczki. Po `// Paths to plugins to load` komentarz, dodawanie `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` jako element `pluginPaths` tablicy.
+Po `HelloPlugin` zakończeniu projektu należy `AppWithPlugin` zaktualizować projekt, aby dowiedzieć się, `HelloPlugin` gdzie można znaleźć wtyczkę. Po komentarzu `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` Dodaj`pluginPaths`jakoelementtablicy. `// Paths to plugins to load`
 
-## <a name="create-a-plugin-with-library-dependencies"></a>Tworzenie wtyczki za pomocą zależności biblioteki
+## <a name="create-a-plugin-with-library-dependencies"></a>Tworzenie wtyczki z zależnościami biblioteki
 
-Prawie wszystkie wtyczki są bardziej skomplikowane niż proste "Hello World", a wiele wtyczek być zależny od innych bibliotek. `JsonPlugin` i `OldJson` projektów wtyczki w przykładzie przedstawiono dwa przykłady wtyczek przy użyciu zależności pakietów NuGet, na `Newtonsoft.Json`. Pliki projektu, sami nie mają żadnych specjalnych informacji odwołania projektu i (po dodaniu ścieżki wtyczki do `pluginPaths` tablicy) wtyczki uruchamiania idealnie, nawet wtedy, gdy uruchamiane w tym samym wykonywanie aplikacji AppWithPlugin. Jednak te projekty nie Kopiuj zestawy występujące w odwołaniach do swojego katalogu wyjściowego, więc zestawy muszą znajdować się na komputerze użytkownika dla wtyczek do pracy. Istnieją dwa sposoby obejścia tego problemu. Pierwszą opcją jest użycie `dotnet publish` polecenie w celu opublikowania biblioteki klas. Alternatywnie Jeśli chcesz mieć możliwość korzystania z danych wyjściowych `dotnet build` dla Twojej wtyczki, można dodać `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` właściwości między `<PropertyGroup>` tagów w pliku projektu wtyczki programu. Zobacz `XcopyablePlugin` wtyczki projektu, na przykład.
+Prawie wszystkie wtyczki są bardziej skomplikowane niż proste "Hello world", a wiele wtyczek ma zależności od innych bibliotek. Projekty wtyczki `OldJson`iw przykładzie pokazują dwa przykłady wtyczek `Newtonsoft.Json`z zależnościami pakietów NuGet. `JsonPlugin` Pliki projektu nie zawierają żadnych specjalnych informacji o odwołaniach do projektu i (po dodaniu ścieżek wtyczki do `pluginPaths` tablicy) wtyczki są wykonywane doskonale, nawet jeśli są uruchamiane w tym samym uruchomieniu aplikacji AppWithPlugin. Jednak te projekty nie kopiują zestawów, do których istnieją odwołania, do ich katalogu wyjściowego, więc zestawy muszą być obecne na komputerze użytkownika, aby wtyczki działały. Istnieją dwa sposoby obejścia tego problemu. Pierwszą opcją jest użycie `dotnet publish` polecenia do opublikowania biblioteki klas. Alternatywnie, jeśli chcesz mieć możliwość użycia danych wyjściowych `dotnet build` dla wtyczki, możesz `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` dodać właściwość między `<PropertyGroup>` tagami w pliku projektu wtyczki. Przykład można znaleźć w projekcie wtyczki.`XcopyablePlugin`
 
-## <a name="other-plugin-examples-in-the-sample"></a>Inne przykłady wtyczki w przykładzie
+## <a name="other-plugin-examples-in-the-sample"></a>Inne przykłady dodatków plug-in w przykładzie
 
-Pełnego kodu źródłowego w ramach tego samouczka można znaleźć w [repozytorium dotnet/samples](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). Ukończone przykład obejmuje kilka innych przykładów `AssemblyDependencyResolver` zachowanie. Na przykład `AssemblyDependencyResolver` obiektu można również rozwiązać natywnych bibliotek, a także zlokalizowane zestawy satelickie uwzględnione w pakietach NuGet. `UVPlugin` i `FrenchPlugin` w repozytorium przykładów przedstawione następujące scenariusze obejmujące.
+Pełny kod źródłowy dla tego samouczka można znaleźć w [repozytorium dotnet/Samples](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). Ukończony przykład zawiera kilka innych przykładowych `AssemblyDependencyResolver` zachowań. Na przykład `AssemblyDependencyResolver` obiekt może również rozpoznać biblioteki natywne oraz zlokalizowane zestawy satelickie zawarte w pakietach NuGet. `UVPlugin` Wrepozytorium`FrenchPlugin` przykładów przedstawiono te scenariusze.
 
-## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>Jak odwołanie do zestawu interfejsu wtyczki zdefiniowanych w pakiecie NuGet
+## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>Jak odwołać się do zestawu interfejsu wtyczki zdefiniowanego w pakiecie NuGet
 
-Załóżmy, że istnieje aplikacja A, która ma interfejs wtyczki zdefiniowanych w pakiecie NuGet o nazwie `A.PluginBase`. Jak odwołujesz się pakiet poprawnie w projekcie dodatku? Dla odwołań do projektu przy użyciu `<Private>false</Private>` metadanych na `ProjectReference` elementu w pliku projektu można zapobiec biblioteki dll są kopiowane do danych wyjściowych.
+Załóżmy, że istnieje aplikacja A, która ma interfejs wtyczki zdefiniowany w pakiecie NuGet o nazwie `A.PluginBase`. Jak prawidłowo odwołać pakiet w projekcie wtyczki? W przypadku odwołań do projektu użycie `<Private>false</Private>` metadanych `ProjectReference` w elemencie w pliku projektu uniemożliwiło skopiowanie biblioteki DLL do danych wyjściowych.
 
-Aby odwołać się prawidłowo `A.PluginBase` pakietu, który chcesz zmienić `<PackageReference>` elementu w pliku projektu do następującego:
+Aby prawidłowo utworzyć odwołanie `A.PluginBase` do pakietu, należy `<PackageReference>` zmienić element w pliku projektu na następujący:
 
 ```xml
 <PackageReference Include="A.PluginBase" Version="1.0.0">
@@ -256,8 +256,8 @@ Aby odwołać się prawidłowo `A.PluginBase` pakietu, który chcesz zmienić `<
 </PackageReference>
 ```
 
-Zapobiega to `A.PluginBase` zestawów z kopiowane do katalogu wyjściowego Twojej wtyczki i zapewnia, że Twoje wtyczka użyje A wersja `A.PluginBase`.
+Zapobiega `A.PluginBase` to kopiowaniu zestawów do katalogu wyjściowego wtyczki i gwarantuje, że wtyczka będzie używać wersji programu `A.PluginBase`.
 
-## <a name="plugin-target-framework-recommendations"></a>Wtyczka target framework zalecenia
+## <a name="plugin-target-framework-recommendations"></a>Zalecenia dotyczące platformy docelowej wtyczki
 
-Ponieważ zależność wtyczki, ładowanie używa *deps.json* plików znajduje się problemy związane z wtyczki platformy docelowej. W szczególności z wtyczek powinien dotyczyć środowiska uruchomieniowego, takich jak .NET Core 3.0 zamiast wersji programu .NET Standard. `deps.json` Generowany jest plik oparty na które framework cele projektu i ponieważ wiele pakietów zgodnego z technologią .NET Standard dostarczanie zestawy referencyjne do kompilowania dla zestawów .NET Standard i wykonania dla określonych środowisk uruchomieniowych `deps.json` może nie zostały prawidłowo zestawy implementacji Zobacz lub może on Pobierz .NET Standard wersją zestawu zamiast wersji platformy .NET Core, oczekujesz, że.
+Ponieważ ładowanie zależności wtyczki używa pliku *. deps. JSON* , istnieje Gotcha powiązane z platformą docelową wtyczki. W związku z tym wtyczki powinny kierować do środowiska uruchomieniowego, takiego jak .NET Core 3,0, zamiast wersji .NET Standard. Plik *. deps. JSON* jest generowany na podstawie struktury docelowej projektu, a ponieważ wiele pakietów zgodnych z .NET Standard dostarcza zestawy referencyjne do kompilowania względem zestawów .NET Standard i implementacji dla określonych środowisk uruchomieniowych, plik *. deps. JSON* może nie być prawidłowo widoczny dla zestawów implementacji lub może odnieść się do .NET Standard wersji zestawu zamiast oczekiwanej wersji platformy .NET Core.

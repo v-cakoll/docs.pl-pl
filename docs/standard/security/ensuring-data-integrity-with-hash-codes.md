@@ -16,43 +16,45 @@ helpviewer_keywords:
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16770ea938973372d1d94c628c42d5d5bf10c695
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0383dc3024352b9fac879532ab2789a60488c96
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795184"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331636"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Zapewnianie integralności danych za pomocą wartości skrótu
-Wartość skrótu jest wartością liczbową o stałej długości, która jednoznacznie identyfikuje dane. Wartości skrótów reprezentują dużych ilości danych jako dużo mniejsze wartości liczbowe, dzięki czemu są one używane, za pomocą podpisów cyfrowych. Wartość skrótu można podpisać efektywniej niż podpisywania większa wartość. Wartości skrótu są również przydatne w przypadku sprawdzania integralności danych przesyłanych za pośrednictwem niezabezpieczonych kanałów. Wartość skrótu odebranych danych można porównać do wartości skrótu danych jako wysłano w celu ustalenia, czy dane zostało zmienione.  
+Wartość skrótu to wartość liczbowa o stałej długości, która jednoznacznie identyfikuje dane. Wartości skrótu przedstawiają duże ilości danych jako dużo mniejsze wartości liczbowe, dlatego są używane z podpisami cyfrowymi. Wartość skrótu można podpisywać bardziej wydajnie niż podpisywanie większej wartości. Wartości skrótu są również przydatne do sprawdzania integralności danych wysyłanych za pomocą niezabezpieczonych kanałów. Wartość skrótu odebranych danych może być porównywana z wartością skrótu danych, która została wysłana w celu określenia, czy dane zostały zmienione.  
   
- W tym temacie opisano sposób generowania i sprawdzić kody skrótów przy użyciu klas w <xref:System.Security.Cryptography?displayProperty=nameWithType> przestrzeni nazw.  
+ W tym temacie opisano sposób generowania i weryfikowania kodów skrótów przy użyciu klas w <xref:System.Security.Cryptography?displayProperty=nameWithType> przestrzeni nazw.  
   
-## <a name="generating-a-hash"></a>Generowanie skrótów  
- Klasy zarządzane wyznaczania wartości skrótu można skrótu tablicę bajtów lub obiektu zarządzanego strumienia. W poniższym przykładzie użyto algorytmu wyznaczania wartości skrótu SHA1, aby utworzyć wartość skrótu ciągu. W przykładzie użyto <xref:System.Text.UnicodeEncoding> klasy w celu przekonwertowania ciągu na tablicę bajtów, które są przekazywane przy użyciu <xref:System.Security.Cryptography.SHA1Managed> klasy. Wartość skrótu jest następnie wyświetlana w konsoli.  
+## <a name="generating-a-hash"></a>Generowanie skrótu  
+ Zarządzane klasy skrótów mogą mieszać tablicę bajtów lub obiekt strumienia zarządzanego. W poniższym przykładzie jest używany algorytm skrótu SHA1 do tworzenia wartości skrótu dla ciągu. W przykładzie użyto <xref:System.Text.UnicodeEncoding> klasy do przekonwertowania ciągu na tablicę bajtów, które są zmieszane przy <xref:System.Security.Cryptography.SHA1Managed> użyciu klasy. Wartość skrótu zostanie następnie wyświetlona w konsoli programu.  
+
+ Ze względu na kolizje problemów z algorytmem SHA1 firma Microsoft zaleca SHA256ą lub lepszą.
   
  [!code-csharp[GeneratingAHash#1](../../../samples/snippets/csharp/VS_Snippets_CLR/generatingahash/cs/program.cs#1)]
  [!code-vb[GeneratingAHash#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/generatingahash/vb/program.vb#1)]  
   
- Ten kod wyświetli następujący ciąg do konsoli:  
+ Ten kod będzie wyświetlał następujący ciąg do konsoli:  
   
  `59 4 248 102 77 97 142 201 210 12 224 93 25 41 100 197 213 134 130 135`  
   
-## <a name="verifying-a-hash"></a>Weryfikowanie wartości skrótu  
- Dane można porównać do wartość skrótu, aby określić ich integralności. Zazwyczaj danych jest wyznaczana wartość skrótu w określonym czasie, a wartość skrótu jest chroniona w jakiś sposób. W późniejszym czasie dane można ponownie skrótu i porównywana z wartością chronionych. Jeśli wartości skrótu są zgodne, dane nie został zmieniony. Jeśli wartości nie są zgodne, zostały uszkodzone dane. Dla tego systemu do pracy chronionych skrótu musi być szyfrowane lub trzymane w tajemnicy wszystkie niezaufane.  
+## <a name="verifying-a-hash"></a>Weryfikowanie skrótu  
+ Dane można porównać do wartości skrótu, aby określić jej integralność. Zwykle dane są zmieszane w określonym czasie, a wartość skrótu jest chroniona w jakiś sposób. Później można ponownie wykonać mieszanie danych i porównywać ją z wartością chronioną. W przypadku dopasowania wartości skrótu dane nie zostały zmienione. Jeśli wartości nie są zgodne, dane zostały uszkodzone. Aby ten system działał, chroniony skrót musi być zaszyfrowany lub przechowywany jako wpis tajny ze wszystkich niezaufanych stron.  
   
- W poniższym przykładzie porównano poprzednią wartość skrótu ciągu na nową wartość skrótu. W tym przykładzie pętli poszczególne bajty wartości skrótu i sprawia, że porównanie.  
+ Poniższy przykład porównuje poprzednią wartość skrótu ciągu z nową wartością skrótu. Ten przykład powoduje pętlę przez każdy bajt wartości skrótu i wykonuje porównanie.  
   
  [!code-csharp[VerifyingAHash#1](../../../samples/snippets/csharp/VS_Snippets_CLR/verifyingahash/cs/program.cs#1)]
  [!code-vb[VerifyingAHash#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/verifyingahash/vb/program.vb#1)]  
   
- Jeśli wartości skrótu dwóch zgodne, ten kod wyświetla następujące do konsoli:  
+ Jeśli dwie wartości skrótów są zgodne, ten kod wyświetla następujące polecenie w konsoli programu:  
   
 ```  
 The hash codes match.  
 ```  
   
- Jeśli nie są zgodne, ten kod wyświetla następujące informacje:  
+ Jeśli nie są zgodne, kod wyświetla następujące elementy:  
   
 ```  
 The hash codes do not match.  

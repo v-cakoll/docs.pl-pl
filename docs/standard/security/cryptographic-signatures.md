@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15fd79a1289bd54b81db551abbdfcd63deef3e24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 862d520073dde1b935510bc7c68782c1204c6111
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795255"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331651"
 ---
 # <a name="cryptographic-signatures"></a>Podpisy kryptograficzne
 
-<a name="top"></a> Podpisy cyfrowe kryptograficzne umożliwia algorytmy kluczy publicznych zapewniają integralność danych. Po zalogowaniu danych przy użyciu podpisu cyfrowego, ktoś inny może zweryfikować podpisu, a można udowodnić, że dane pochodzą od użytkownika oraz nie została zmodyfikowana po użytkownik zarejestrowany. Aby uzyskać więcej informacji na temat podpisów cyfrowych, zobacz [usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md).
+<a name="top"></a>Kryptograficzne podpisy cyfrowe korzystają z algorytmów kluczy publicznych w celu zapewnienia integralności danych. Po podpisaniu danych za pomocą podpisu cyfrowego ktoś inny może zweryfikować podpis i może udowodnić, że dane pochodzą od Ciebie i nie zostały zmienione po podpisaniu. Aby uzyskać więcej informacji na temat podpisów cyfrowych, zobacz [usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md).
 
-W tym temacie opisano sposób rejestrowania i weryfikowania podpisów cyfrowych przy użyciu klas w <xref:System.Security.Cryptography?displayProperty=nameWithType> przestrzeni nazw.
+W tym temacie wyjaśniono, jak generować i weryfikować podpisy cyfrowe przy <xref:System.Security.Cryptography?displayProperty=nameWithType> użyciu klas w przestrzeni nazw.
 
 - [Generowanie podpisów](#generate)
 
@@ -43,7 +43,9 @@ W tym temacie opisano sposób rejestrowania i weryfikowania podpisów cyfrowych 
 
 ## <a name="generating-signatures"></a>Generowanie podpisów
 
-Podpisy cyfrowe są zazwyczaj stosowane do wartości skrótu, które reprezentują więcej danych. Poniższy przykład dotyczy wartości skrótu podpisu cyfrowego. Po pierwsze, nowe wystąpienie klasy <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasa została utworzona, można wygenerować pary kluczy publiczny/prywatny. Następnie <xref:System.Security.Cryptography.RSACryptoServiceProvider> jest przekazywany do nowego wystąpienia <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> klasy. To przesłanie klucza prywatnego <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>, który wykonuje cyfrowego podpisywania. Przed zarejestrowaniem skrótu, należy określić algorytm wyznaczania wartości skrótu do użycia. W tym przykładzie użyto algorytmu SHA1. Na koniec <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> metoda jest wywoływana w celu wykonania podpisywania.
+Podpisy cyfrowe są zwykle stosowane do wartości skrótu, które reprezentują większe dane. Poniższy przykład stosuje podpis cyfrowy do wartości skrótu. Najpierw tworzone jest nowe wystąpienie <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasy w celu wygenerowania pary kluczy publicznych/prywatnych. Następnie jest przenoszona do nowego wystąpienia <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> klasy. <xref:System.Security.Cryptography.RSACryptoServiceProvider> Spowoduje to przeniesienie klucza prywatnego do programu <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>, co w rzeczywistości wykonuje podpis cyfrowy. Przed podpisaniem kodu skrótu należy określić algorytm wyznaczania wartości skrótu. W tym przykładzie zastosowano algorytm SHA1. Na koniec Metoda jest wywoływana w celu przeprowadzenia podpisywania. <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A>
+
+Ze względu na kolizje problemów z algorytmem SHA1 firma Microsoft zaleca SHA256ą lub lepszą.
 
 ```vb
 Imports System
@@ -107,9 +109,9 @@ class Class1
 
 ### <a name="signing-xml-files"></a>Podpisywanie plików XML
 
-Program .NET Framework oferuje <xref:System.Security.Cryptography.Xml> przestrzeni nazw, co pozwala zarejestrować XML. Podpisywanie XML jest ważne w przypadku, gdy chcesz zweryfikować, że plik XML pochodzi z danego źródła. Na przykład jeśli używasz usługi notowań giełdowych, który używa XML możesz zweryfikować źródła XML jest podpisany.
+.NET Framework udostępnia <xref:System.Security.Cryptography.Xml> przestrzeń nazw, co umożliwia podpisywanie kodu XML. Podpisywanie kodu XML jest ważne, gdy chcesz sprawdzić, czy dane XML pochodzą z określonego źródła. Jeśli na przykład korzystasz z usługi notowań giełdowych korzystającej z kodu XML, możesz sprawdzić źródło kodu XML, jeśli jest on podpisany.
 
-Postępuj zgodnie z klas w tej przestrzeni nazw [zalecenie składni XML podpisu i przetwarzanie](https://www.w3.org/TR/xmldsig-core/) z konsorcjum World Wide Web.
+Klasy w tej przestrzeni nazw są zgodne ze [składnią podpisu XML i zaleceniem do przetwarzania](https://www.w3.org/TR/xmldsig-core/) z organizacja World Wide Web Consortium.
 
 [Powrót do początku](#top)
 
@@ -117,19 +119,19 @@ Postępuj zgodnie z klas w tej przestrzeni nazw [zalecenie składni XML podpisu 
 
 ## <a name="verifying-signatures"></a>Weryfikowanie podpisów
 
-Aby sprawdzić, czy dane został podpisany przez określoną stronę, musisz mieć następujące informacje:
+Aby sprawdzić, czy dane zostały podpisane przez określoną stronę, musisz dysponować następującymi informacjami:
 
-- Klucz publiczny w innej firmy, który podpisał danych.
+- Klucz publiczny podmiotu, który podpisał dane.
 
 - Podpis cyfrowy.
 
-- Dane, który został podpisany.
+- Dane, które zostały podpisane.
 
-- Algorytm skrótu używany przez osoby podpisującej.
+- Algorytm wyznaczania wartości skrótu używany przez program podpisujący.
 
-Aby zweryfikować podpisu, który został podpisany przez <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> klasy, należy użyć <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> klasy. <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> Klasa musi być podany klucz publiczny podpisu. Konieczne będzie wartości moduł i wykładnik, do określenia klucza publicznego. (Strona, która wygenerowała pary kluczy publiczny/prywatny podać te wartości.) Najpierw utwórz <xref:System.Security.Cryptography.RSACryptoServiceProvider> obiekt do przechowywania klucza publicznego, zweryfikować podpisu, a następnie zainicjuj <xref:System.Security.Cryptography.RSAParameters> struktury wyznaczanie modułu i wykładnik wartości, które określają klucz publiczny.
+Aby sprawdzić podpis podpisany przez <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> klasę, <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> Użyj klasy. <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> Klasa musi być dostarczona z kluczem publicznym osoby podpisującej. Do określenia klucza publicznego potrzebne będą wartości z modułu i wykładnika. (Strona, która wygenerowała parę kluczy publiczny/prywatny powinna podawać te wartości). Najpierw Utwórz <xref:System.Security.Cryptography.RSACryptoServiceProvider> obiekt przechowujący klucz publiczny, który będzie weryfikować podpis, a następnie <xref:System.Security.Cryptography.RSAParameters> zainicjuj strukturę do wartości modulo i wykładnik, które określają klucz publiczny.
 
-Poniższy kod ilustruje tworzenie <xref:System.Security.Cryptography.RSAParameters> struktury. `Modulus` Właściwości ustawiono wartość tablicy typu byte o nazwie `modulusData` i `Exponent` właściwości ustawiono wartość tablicy typu byte o nazwie `exponentData`.
+Poniższy kod przedstawia tworzenie <xref:System.Security.Cryptography.RSAParameters> struktury. Właściwość jest ustawiona na wartość tablicy bajtowej o nazwie `modulusData` i `Exponent` właściwość jest ustawiona na wartość tablicy bajtowej o nazwie `exponentData`. `Modulus`
 
 ```vb
 Dim rsaKeyInfo As RSAParameters
@@ -143,9 +145,9 @@ rsaKeyInfo.Modulus = modulusData;
 rsaKeyInfo.Exponent = exponentData;
 ```
 
-Po utworzeniu <xref:System.Security.Cryptography.RSAParameters> obiektu można zainicjować nowe wystąpienie klasy <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasy wartościom określonym w <xref:System.Security.Cryptography.RSAParameters>. <xref:System.Security.Cryptography.RSACryptoServiceProvider> z kolei przekazany do konstruktora obiektu <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> celu przeniesienia klucza.
+Po utworzeniu <xref:System.Security.Cryptography.RSAParameters> obiektu można zainicjować nowe wystąpienie <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasy do wartości określonych w <xref:System.Security.Cryptography.RSAParameters>. To z kolei jest przekazywane do konstruktora elementu <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> , aby przenieść klucz. <xref:System.Security.Cryptography.RSACryptoServiceProvider>
 
-Poniższy przykład ilustruje ten proces. W tym przykładzie `hashValue` i `signedHashValue` to tablice bajtów dostarczonym przez firmę zdalnego. Strona zdalna została podpisana `hashValue` przy użyciu algorytmu SHA1, tworzenie podpis cyfrowy `signedHashValue`. <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> Metoda sprawdza, czy podpis cyfrowy jest prawidłowa i czy został użyty do podpisania `hashValue`.
+Poniższy przykład ilustruje ten proces. W tym przykładzie `hashValue` i `signedHashValue` są tablicami bajtów dostarczanych przez stronę zdalną. Strona zdalna podpisała `hashValue` przy użyciu algorytmu SHA1, generując podpis `signedHashValue`cyfrowy. Metoda weryfikuje, czy podpis cyfrowy jest prawidłowy i został użyty do `hashValue`podpisania. <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType>
 
 ```vb
 Dim rsa As New RSACryptoServiceProvider()
@@ -174,7 +176,7 @@ else
 }
 ```
 
-Ten fragment kodu będą wyświetlane "`The signature is valid`" Jeśli podpis jest prawidłowy i "`The signature is not valid`" Jeśli nie jest.
+W tym fragmencie kodu zostanie wyświetlony`The signature is valid`element "", jeśli sygnatura jest`The signature is not valid`prawidłowa i "", jeśli nie jest.
 
 ## <a name="see-also"></a>Zobacz także
 

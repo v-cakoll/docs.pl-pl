@@ -1,21 +1,21 @@
 ---
-title: polecenia DotNet
-description: Więcej informacji na temat polecenia dotnet (ogólny sterownik dla narzędzi interfejsu wiersza polecenia platformy .NET Core) i sposób jej użycia.
+title: dotnet — polecenie
+description: Dowiedz się więcej na temat polecenia dotnet (sterownika generycznego dla narzędzi interfejs wiersza polecenia platformy .NET Core) i jego użycia.
 ms.date: 06/04/2018
-ms.openlocfilehash: 2134bf8ed66157619499b027f01d39e03e84411f
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e1571bea1594b492427bdf5b3a7959733459c54e
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859552"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331020"
 ---
-# <a name="dotnet-command"></a>polecenia DotNet
+# <a name="dotnet-command"></a>dotnet — polecenie
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Nazwa
 
-`dotnet` — Narzędzie służące do zarządzania kodu źródłowego .NET i plikach binarnych.
+`dotnet`-Narzędzie do zarządzania kodem źródłowym i plikami binarnymi platformy .NET.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -44,9 +44,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="description"></a>Opis
 
-`dotnet` to narzędzie do zarządzania kodu źródłowego .NET i pliki binarne. Udostępnia ona polecenia, które wykonują określone zadania, takie jak [ `dotnet build` ](dotnet-build.md) i [ `dotnet run` ](dotnet-run.md). Każde polecenie definiuje swój własny argumentów. Typ `--help` zatwierdzając każde z nich do dostępu krótki opis dokumentacji pomocy.
+`dotnet`jest narzędziem do zarządzania kodem źródłowym i plikami binarnymi platformy .NET. Udostępnia polecenia wykonujące określone zadania, takie jak [`dotnet build`](dotnet-build.md) i. [`dotnet run`](dotnet-run.md) Każde polecenie definiuje własne argumenty. Wpisz `--help` po każdym poleceniu, aby uzyskać dostęp do krótkiej dokumentacji pomocy.
 
-`dotnet` może służyć do uruchamiania aplikacji, określając aplikacji biblioteki DLL, takie jak `dotnet myapp.dll`. Zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md) dla Aby dowiedzieć się więcej o opcjach wdrażania.
+`dotnet`może służyć do uruchamiania aplikacji przez określenie biblioteki DLL aplikacji, takiej jak `dotnet myapp.dll`. Zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md) w celu uzyskania informacji na temat opcji wdrażania.
 
 ## <a name="options"></a>Opcje
 
@@ -54,27 +54,27 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--additional-deps <PATH>`
 
-Ścieżka do dodatkowych *deps.json* pliku.
+Ścieżka do pliku dodatkowego *. deps. JSON* .
 
 `--additionalprobingpath <PATH>`
 
-Ścieżki zawierające sondowania zasad i zestawy do sondowania.
+Ścieżka zawierająca zasady i zestawy do sondowania.
 
 `-d|--diagnostics`
 
-Umożliwia diagnostyczne dane wyjściowe.
+Włącza diagnostykę danych wyjściowych.
 
 `--fx-version <VERSION>`
 
-Wersja środowiska uruchomieniowego .NET Core do użycia, aby uruchomić aplikację.
+Wersja środowiska uruchomieniowego platformy .NET Core do użycia w celu uruchomienia aplikacji.
 
 `-h|--help`
 
-Wyświetla dokumentację dotyczącą danego polecenia, takie jak `dotnet build --help`. `dotnet --help` Wyświetla listę dostępnych poleceń.
+Drukuje dokumentację dla danego polecenia, na przykład `dotnet build --help`. `dotnet --help`Drukuje listę dostępnych poleceń.
 
 `--info`
 
-Drukuje szczegółowe informacje dotyczące instalacji platformy .NET Core i środowiska maszyny, takich jak bieżący system operacyjny i zatwierdzenie SHA wersji platformy .NET Core.
+Drukuje szczegółowe informacje na temat instalacji programu .NET Core i środowiska maszynowego, takiego jak bieżący system operacyjny, i zatwierdzania SHA dla wersji .NET Core.
 
 `--list-runtimes`
 
@@ -82,92 +82,92 @@ Wyświetla zainstalowane środowiska uruchomieniowe platformy .NET Core.
 
 `--list-sdks`
 
-Wyświetla zainstalowanych zestawów .NET Core SDK.
+Wyświetla zainstalowane zestawy SDK platformy .NET Core.
 
 `--roll-forward-on-no-candidate-fx <N>`
 
-Definiuje zachowanie, gdy wymaganej struktury udostępnionego nie jest dostępna. `N` może być:
-* `0` -Wyłącz nawet podverze przenoszenia do przodu.
-* `1` -Uaktualniane w wersji pomocniczej, ale nie w wersji głównej. Jest to zachowanie domyślne.
-* `2` -Uaktualniane na wersje pomocnicze, jak i głównej.
+Definiuje zachowanie, gdy wymagana architektura udostępniona jest niedostępna. `N` może być:
+* `0`-Wyłącz parzystą wersję pomocniczą do przodu.
+* `1`— Przewinięcie do wersji pomocniczej, ale nie w wersji głównej. Jest to zachowanie domyślne.
+* `2`— Przewinięcie do przodu w wersjach pomocniczych i głównych.
 
- Aby uzyskać więcej informacji, zobacz [uaktualniane](../whats-new/dotnet-core-2-1.md#roll-forward).
+ Aby uzyskać więcej informacji, zobacz [przewinięcie do przodu](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 `-v|--verbosity <LEVEL>`
 
-Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`. Nie jest obsługiwana w każdym poleceniu; zobacz stronę określone polecenie, aby określić, jeśli ta opcja jest dostępna.
+Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]` Nieobsługiwane w każdym poleceniu; Aby określić, czy ta opcja jest dostępna, zobacz określoną stronę poleceń.
 
 `--version`
 
-Drukuje wersję zestawu .NET Core SDK w użyciu.
+Drukuje używaną wersję zestaw .NET Core SDK.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--additional-deps <PATH>`
 
-Ścieżka do dodatkowych *deps.json* pliku.
+Ścieżka do pliku dodatkowego *. deps. JSON* .
 
 `--additionalprobingpath <PATH>`
 
-Ścieżki zawierające sondowania zasad i zestawy do sondowania.
+Ścieżka zawierająca zasady i zestawy do sondowania.
 
 `-d|--diagnostics`
 
-Umożliwia diagnostyczne dane wyjściowe.
+Włącza diagnostykę danych wyjściowych.
 
 `--fx-version <VERSION>`
 
-Wersja środowiska uruchomieniowego .NET Core do użycia, aby uruchomić aplikację.
+Wersja środowiska uruchomieniowego platformy .NET Core do użycia w celu uruchomienia aplikacji.
 
 `-h|--help`
 
-Wyświetla dokumentację dotyczącą danego polecenia, takie jak `dotnet build --help`. `dotnet --help` Wyświetla listę dostępnych poleceń.
+Drukuje dokumentację dla danego polecenia, na przykład `dotnet build --help`. `dotnet --help`Drukuje listę dostępnych poleceń.
 
 `--info`
 
-Drukuje szczegółowe informacje dotyczące instalacji platformy .NET Core i środowiska maszyny, takich jak bieżący system operacyjny i zatwierdzenie SHA wersji platformy .NET Core.
+Drukuje szczegółowe informacje na temat instalacji programu .NET Core i środowiska maszynowego, takiego jak bieżący system operacyjny, i zatwierdzania SHA dla wersji .NET Core.
 
 `--roll-forward-on-no-candidate-fx`
 
- Wyłącza wersja pomocnicza przenoszenie do przodu, jeśli ustawiono `0`. Aby uzyskać więcej informacji, zobacz [uaktualniane](../whats-new/dotnet-core-2-1.md#roll-forward).
+ Wyłącza dodatkową wersję do przodu, jeśli jest ustawiona `0`na. Aby uzyskać więcej informacji, zobacz [przewinięcie do przodu](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 `-v|--verbosity <LEVEL>`
 
-Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`. Nie jest obsługiwana w każdym poleceniu; zobacz stronę określone polecenie, aby określić, jeśli ta opcja jest dostępna.
+Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]` Nieobsługiwane w każdym poleceniu; Aby określić, czy ta opcja jest dostępna, zobacz określoną stronę poleceń.
 
 `--version`
 
-Drukuje wersję zestawu .NET Core SDK w użyciu.
+Drukuje używaną wersję zestaw .NET Core SDK.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--additionalprobingpath <PATH>`
 
-Ścieżki zawierające sondowania zasad i zestawy do sondowania.
+Ścieżka zawierająca zasady i zestawy do sondowania.
 
 `-d|--diagnostics`
 
-Umożliwia diagnostyczne dane wyjściowe.
+Włącza diagnostykę danych wyjściowych.
 
 `--fx-version <VERSION>`
 
-Wersja środowiska uruchomieniowego .NET Core do użycia, aby uruchomić aplikację.
+Wersja środowiska uruchomieniowego platformy .NET Core do użycia w celu uruchomienia aplikacji.
 
 `-h|--help`
 
-Wyświetla dokumentację dotyczącą danego polecenia, takie jak `dotnet build --help`. `dotnet --help` Wyświetla listę dostępnych poleceń.
+Drukuje dokumentację dla danego polecenia, na przykład `dotnet build --help`. `dotnet --help`Drukuje listę dostępnych poleceń.
 
 `--info`
 
-Drukuje szczegółowe informacje dotyczące instalacji platformy .NET Core i środowiska maszyny, takich jak bieżący system operacyjny i zatwierdzenie SHA wersji platformy .NET Core.
+Drukuje szczegółowe informacje na temat instalacji programu .NET Core i środowiska maszynowego, takiego jak bieżący system operacyjny, i zatwierdzania SHA dla wersji .NET Core.
 
 `-v|--verbosity <LEVEL>`
 
-Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`. Nie jest obsługiwana w każdym poleceniu; zobacz stronę określone polecenie, aby określić, jeśli ta opcja jest dostępna.
+Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]` Nieobsługiwane w każdym poleceniu; Aby określić, czy ta opcja jest dostępna, zobacz określoną stronę poleceń.
 
 `--version`
 
-Drukuje wersję zestawu .NET Core SDK w użyciu.
+Drukuje używaną wersję zestaw .NET Core SDK.
 
 ---
 
@@ -179,54 +179,54 @@ Drukuje wersję zestawu .NET Core SDK w użyciu.
 
 | Polecenie                                       | Funkcja                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)               | Tworzy aplikację .NET Core.                                     |
-| [dotnet build-server](dotnet-build-server.md) | Wchodzi w interakcję z serwerami, uruchomione przez kompilację.                          |
-| [dotnet clean](dotnet-clean.md)               | Czysta kompilacja danych wyjściowych.                                                |
-| [dotnet help](dotnet-help.md)                 | Zawiera bardziej szczegółowe dokumentację online dla polecenia.           |
-| [dotnet migrate](dotnet-migrate.md)           | Prawidłowy projekt w wersji 2 jest migrowana do projektu .NET Core SDK 1.0.  |
+| [dotnet build](dotnet-build.md)               | Kompiluje aplikację platformy .NET Core.                                     |
+| [dotnet build-server](dotnet-build-server.md) | Współdziała z serwerami uruchomionymi przez kompilację.                          |
+| [dotnet clean](dotnet-clean.md)               | Czyste dane wyjściowe kompilacji.                                                |
+| [dotnet help](dotnet-help.md)                 | Przedstawia bardziej szczegółową dokumentację dla polecenia w trybie online.           |
+| [dotnet migrate](dotnet-migrate.md)           | Migruje prawidłowy projekt w wersji zapoznawczej 2 do projektu zestaw .NET Core SDK 1,0.  |
 | [dotnet msbuild](dotnet-msbuild.md)           | Zapewnia dostęp do wiersza polecenia programu MSBuild.                        |
-| [dotnet new](dotnet-new.md)                   | Inicjuje C# lub F# projektu dla danego szablonu.                |
+| [dotnet new](dotnet-new.md)                   | Inicjuje projekt C# lub F# dla danego szablonu.                |
 | [dotnet pack](dotnet-pack.md)                 | Tworzy pakiet NuGet kodu.                               |
-| [dotnet publish](dotnet-publish.md)           | Publikuje aplikacji autonomicznej .NET framework-zależnych od ustawień lokalnych lub niezależna. |
+| [dotnet publish](dotnet-publish.md)           | Publikuje zależne od programu .NET Framework lub samodzielną aplikację. |
 | [dotnet restore](dotnet-restore.md)           | Przywraca zależności dla danej aplikacji.                  |
-| [dotnet run](dotnet-run.md)                   | Ze źródła do uruchamiania aplikacji.                                   |
-| [dotnet sln](dotnet-sln.md)                   | Opcje służące do dodawania, usuwania i wyświetlić listę projektów w pliku rozwiązania.       |
-| [dotnet store](dotnet-store.md)               | Przechowuje zestawy w Magazyn pakietu środowiska uruchomieniowego.                     |
-| [dotnet test](dotnet-test.md)                 | Uruchamia testy za pomocą narzędzia test runner.                                     |
+| [dotnet run](dotnet-run.md)                   | Uruchamia aplikację ze źródła.                                   |
+| [dotnet sln](dotnet-sln.md)                   | Opcje dodawania, usuwania i wyświetlania listy projektów w pliku rozwiązania.       |
+| [dotnet store](dotnet-store.md)               | Przechowuje zestawy w magazynie pakietów środowiska uruchomieniowego.                     |
+| [dotnet test](dotnet-test.md)                 | Uruchamia testy przy użyciu modułu uruchamiającego testy.                                     |
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 | Polecenie                             | Funkcja                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)     | Tworzy aplikację .NET Core.                                     |
-| [dotnet clean](dotnet-clean.md)     | Czysta kompilacja danych wyjściowych.                                              |
-| [dotnet help](dotnet-help.md)       | Zawiera bardziej szczegółowe dokumentację online dla polecenia.           |
-| [dotnet migrate](dotnet-migrate.md) | Prawidłowy projekt w wersji 2 jest migrowana do projektu .NET Core SDK 1.0.  |
+| [dotnet build](dotnet-build.md)     | Kompiluje aplikację platformy .NET Core.                                     |
+| [dotnet clean](dotnet-clean.md)     | Czyste dane wyjściowe kompilacji.                                              |
+| [dotnet help](dotnet-help.md)       | Przedstawia bardziej szczegółową dokumentację dla polecenia w trybie online.           |
+| [dotnet migrate](dotnet-migrate.md) | Migruje prawidłowy projekt w wersji zapoznawczej 2 do projektu zestaw .NET Core SDK 1,0.  |
 | [dotnet msbuild](dotnet-msbuild.md) | Zapewnia dostęp do wiersza polecenia programu MSBuild.                        |
-| [dotnet new](dotnet-new.md)         | Inicjuje C# lub F# projektu dla danego szablonu.                |
+| [dotnet new](dotnet-new.md)         | Inicjuje projekt C# lub F# dla danego szablonu.                |
 | [dotnet pack](dotnet-pack.md)       | Tworzy pakiet NuGet kodu.                               |
-| [dotnet publish](dotnet-publish.md) | Publikuje aplikacji autonomicznej .NET framework-zależnych od ustawień lokalnych lub niezależna. |
+| [dotnet publish](dotnet-publish.md) | Publikuje zależne od programu .NET Framework lub samodzielną aplikację. |
 | [dotnet restore](dotnet-restore.md) | Przywraca zależności dla danej aplikacji.                  |
-| [dotnet run](dotnet-run.md)         | Ze źródła do uruchamiania aplikacji.                                   |
-| [dotnet sln](dotnet-sln.md)         | Opcje służące do dodawania, usuwania i wyświetlić listę projektów w pliku rozwiązania.       |
-| [dotnet store](dotnet-store.md)     | Przechowuje zestawy w Magazyn pakietu środowiska uruchomieniowego.                     |
-| [dotnet test](dotnet-test.md)       | Uruchamia testy za pomocą narzędzia test runner.                                     |
+| [dotnet run](dotnet-run.md)         | Uruchamia aplikację ze źródła.                                   |
+| [dotnet sln](dotnet-sln.md)         | Opcje dodawania, usuwania i wyświetlania listy projektów w pliku rozwiązania.       |
+| [dotnet store](dotnet-store.md)     | Przechowuje zestawy w magazynie pakietów środowiska uruchomieniowego.                     |
+| [dotnet test](dotnet-test.md)       | Uruchamia testy przy użyciu modułu uruchamiającego testy.                                     |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 | Polecenie                             | Funkcja                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)     | Tworzy aplikację .NET Core.                                     |
-| [dotnet clean](dotnet-clean.md)     | Czysta kompilacja danych wyjściowych.                                              |
-| [dotnet migrate](dotnet-migrate.md) | Prawidłowy projekt w wersji 2 jest migrowana do projektu .NET Core SDK 1.0.  |
+| [dotnet build](dotnet-build.md)     | Kompiluje aplikację platformy .NET Core.                                     |
+| [dotnet clean](dotnet-clean.md)     | Czyste dane wyjściowe kompilacji.                                              |
+| [dotnet migrate](dotnet-migrate.md) | Migruje prawidłowy projekt w wersji zapoznawczej 2 do projektu zestaw .NET Core SDK 1,0.  |
 | [dotnet msbuild](dotnet-msbuild.md) | Zapewnia dostęp do wiersza polecenia programu MSBuild.                        |
-| [dotnet new](dotnet-new.md)         | Inicjuje C# lub F# projektu dla danego szablonu.                |
+| [dotnet new](dotnet-new.md)         | Inicjuje projekt C# lub F# dla danego szablonu.                |
 | [dotnet pack](dotnet-pack.md)       | Tworzy pakiet NuGet kodu.                               |
-| [dotnet publish](dotnet-publish.md) | Publikuje aplikacji autonomicznej .NET framework-zależnych od ustawień lokalnych lub niezależna. |
+| [dotnet publish](dotnet-publish.md) | Publikuje zależne od programu .NET Framework lub samodzielną aplikację. |
 | [dotnet restore](dotnet-restore.md) | Przywraca zależności dla danej aplikacji.                  |
-| [dotnet run](dotnet-run.md)         | Ze źródła do uruchamiania aplikacji.                                   |
-| [dotnet sln](dotnet-sln.md)         | Opcje służące do dodawania, usuwania i wyświetlić listę projektów w pliku rozwiązania.       |
-| [dotnet test](dotnet-test.md)       | Uruchamia testy za pomocą narzędzia test runner.                                     |
+| [dotnet run](dotnet-run.md)         | Uruchamia aplikację ze źródła.                                   |
+| [dotnet sln](dotnet-sln.md)         | Opcje dodawania, usuwania i wyświetlania listy projektów w pliku rozwiązania.       |
+| [dotnet test](dotnet-test.md)       | Uruchamia testy przy użyciu modułu uruchamiającego testy.                                     |
 
 ---
 
@@ -249,38 +249,38 @@ Polecenie | Funkcja
 
 Polecenie | Funkcja
 --- | ---
-[dotnet nuget delete](dotnet-nuget-delete.md) | Usuwa lub unlists pakietu z serwera.
-[dotnet nuget locals](dotnet-nuget-locals.md) | Usuwa lub wyświetla ich listę zasobów lokalnych NuGet, takie jak pamięć podręczna żądań http, tymczasowej pamięci podręcznej lub folder komputera globalnymi pakietami.
-[dotnet nuget push](dotnet-nuget-push.md) | Wypychanie pakietu do serwera i publikuje go.
+[dotnet nuget delete](dotnet-nuget-delete.md) | Usuwa pakiet z serwera lub go wystawia.
+[dotnet nuget locals](dotnet-nuget-locals.md) | Czyści lub wyświetla lokalne zasoby NuGet, takie jak pamięć podręczna żądań HTTP, tymczasowa pamięć podręczna lub folder pakietów globalnych dla całego komputera.
+[dotnet nuget push](dotnet-nuget-push.md) | Wypchnij pakiet na serwer i opublikuje go.
 
-### <a name="global-tools-commands"></a>Polecenia narzędzia globalne
+### <a name="global-tools-commands"></a>Polecenia narzędzi globalnych
 
-[Narzędzia programu .NET core globalnego](global-tools.md) są dostępne, począwszy od programu .NET Core SDK 2.1.300:
+[Narzędzia globalne platformy .NET Core](global-tools.md) są dostępne począwszy od zestaw .NET Core SDK 2.1.300:
 
 Polecenie | Funkcja
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | Instaluje narzędzie globalne na komputerze.
-[dotnet tool list](dotnet-tool-list.md) | Wyświetla listę wszystkich narzędzi globalnego aktualnie zainstalowane w domyślnym katalogu na komputerze lub w określonej ścieżce.
-[dotnet tool uninstall](dotnet-tool-uninstall.md) | Odinstalowuje narzędzie globalne z Twojego komputera.
-[dotnet tool update](dotnet-tool-update.md) | Aktualizuje narzędzie globalne na swojej maszynie.
+[dotnet tool list](dotnet-tool-list.md) | Wyświetla listę wszystkich narzędzi globalnych aktualnie zainstalowanych w domyślnym katalogu na komputerze lub w określonej ścieżce.
+[dotnet tool uninstall](dotnet-tool-uninstall.md) | Odinstalowuje narzędzie globalne z komputera.
+[dotnet tool update](dotnet-tool-update.md) | Aktualizuje narzędzie globalne na komputerze.
 
 ### <a name="additional-tools"></a>Dodatkowe narzędzia
 
-Począwszy od programu .NET Core SDK 2.1.300, wiele narzędzi, które były dostępne tylko na podstawę projektu przy użyciu `DotnetCliToolReference` są teraz dostępne jako część zestawu .NET Core SDK. Te narzędzia są wymienione w poniższej tabeli:
+Począwszy od zestaw .NET Core SDK 2.1.300, wiele narzędzi, które były dostępne tylko dla każdego projektu, przy użyciu `DotnetCliToolReference` , jest teraz dostępne jako część zestaw .NET Core SDK. Te narzędzia są wymienione w poniższej tabeli:
 
 | Narzędzie                                              | Funkcja                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
-| dev-certs                                         | Tworzy i zarządza certyfikatami rozwoju.                |
-| [EF](/ef/core/miscellaneous/cli/dotnet)           | Entity Framework Core narzędzia wiersza polecenia.                    |
-| sql-cache                                         | Narzędzia wiersza polecenia pamięci podręcznej programu SQL Server.                         |
-| [user-secrets](/aspnet/core/security/app-secrets) | Umożliwia zarządzanie wpisami tajnymi użytkowników rozwoju.                            |
-| [watch](/aspnet/core/tutorials/dotnet-watch)      | Uruchamia obserwatora pliku, który uruchamia polecenie, gdy zmienią się pliki. |
+| dev-certs                                         | Tworzy i zarządza certyfikatami deweloperskimi.                |
+| [bieżąco](/ef/core/miscellaneous/cli/dotnet)           | Entity Framework Core narzędzia wiersza polecenia.                    |
+| SQL-pamięć podręczna                                         | SQL Server narzędzia wiersza polecenia pamięci podręcznej.                         |
+| [wpisy tajne użytkownika](/aspnet/core/security/app-secrets) | Zarządza kluczami tajnymi użytkowników deweloperskich.                            |
+| [Obejrzyj](/aspnet/core/tutorials/dotnet-watch)      | Uruchamia obserwatora plików, który uruchamia polecenie, gdy pliki zmienią się. |
 
-Aby uzyskać więcej informacji na temat każdego z narzędzi, wpisz `dotnet <tool-name> --help`.
+Aby uzyskać więcej informacji na temat każdego narzędzia `dotnet <tool-name> --help`, wpisz.
 
 ## <a name="examples"></a>Przykłady
 
-Tworzy nową aplikację konsoli .NET Core:
+Tworzy nową aplikację konsolową platformy .NET Core:
 
 `dotnet new console`
 
@@ -290,11 +290,11 @@ Przywróć zależności dla danej aplikacji:
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Tworzenie projektu i jego zależności w danym katalogu:
+Kompiluj projekt i jego zależności w danym katalogu:
 
 `dotnet build`
 
-Uruchamianie aplikacji biblioteki DLL, takich jak `myapp.dll`:
+Uruchom bibliotekę DLL aplikacji, na `myapp.dll`przykład:
 
 `dotnet myapp.dll`
 
@@ -304,54 +304,54 @@ Uruchamianie aplikacji biblioteki DLL, takich jak `myapp.dll`:
 
 `DOTNET_PACKAGES`
 
-Folder globalnymi pakietami. Jeśli nie został ustawiony, jego wartość domyślna to `~/.nuget/packages` w systemach Unix lub `%userprofile%\.nuget\packages` na Windows.
+Folder pakiety globalne. Jeśli nie jest ustawiona, zostanie ona `~/.nuget/packages` domyślnie włączona w `%userprofile%\.nuget\packages` systemie UNIX lub w systemie Windows.
 
 `DOTNET_SERVICING`
 
-Określa lokalizację obsługi indeksu do użycia przez hosta udostępnionych podczas ładowania środowiska uruchomieniowego.
+Określa lokalizację indeksu obsługi, który ma być używany przez host udostępniony podczas ładowania środowiska uruchomieniowego.
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-Określa, czy dane dotyczące użycia narzędzia .NET Core jest zbierane i przesyłane do firmy Microsoft. Ustaw `true` można zrezygnować z funkcji danych telemetrycznych (wartości `true`, `1`, lub `yes` zaakceptowane). W przeciwnym wypadku ustaw `false` można zdecydować się na funkcje telemetrii (wartości `false`, `0`, lub `no` zaakceptowane). Jeśli nie jest ustawiona, wartość domyślna to `false` i funkcja telemetrii jest aktywna.
+Określa, czy dane dotyczące użycia narzędzi .NET Core są zbierane i wysyłane do firmy Microsoft. Ustaw, `true` aby zrezygnować z funkcji telemetrii (wartości `true`, `1`lub `yes` zaakceptować). W przeciwnym razie ustaw `false` opcję, aby można było wybrać funkcje telemetrii ( `no` wartości `false`, `0`lub zaakceptowane). Jeśli nie zostanie ustawiona, wartość domyślna `false` to i aktywna funkcja telemetrii.
 
 `DOTNET_MULTILEVEL_LOOKUP`
 
-Określa, czy środowiska uruchomieniowego, udostępnionej platformy lub zestawu SDK platformy .NET Core nie są rozwiązane z globalnej lokalizacji. Jeśli nie został ustawiony, jego wartość domyślna to `true`. Ustaw `false` rozwiązania z globalnej lokalizacji i izolowanych instalacji platformy .NET Core (wartości `0` lub `false` są akceptowane). Aby uzyskać więcej informacji na temat wyszukiwania wielopoziomowe zobacz [wyszukiwania SharedFX wielopoziomowymi](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+Określa, czy środowisko uruchomieniowe programu .NET Core, udostępnione środowisko lub zestaw SDK są rozpoznawane z lokalizacji globalnej. Jeśli nie zostanie ustawiona, domyślnie `true`jest to. Ustawiona na `false` wartość nie jest rozpoznawana z lokalizacji globalnej i ma wyizolowane instalacje .NET `0` Core `false` (wartości lub są akceptowane). Aby uzyskać więcej informacji o wyszukiwaniu wielu poziomów, zobacz [SharedFX wyszukiwanie na wielu poziomach](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
 
-Wyłącza wersja pomocnicza przenoszenie do przodu, jeśli ustawiono `0`. Aby uzyskać więcej informacji, zobacz [uaktualniane](../whats-new/dotnet-core-2-1.md#roll-forward).
+Wyłącza dodatkową wersję do przodu, jeśli jest ustawiona `0`na. Aby uzyskać więcej informacji, zobacz [przewinięcie do przodu](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `DOTNET_PACKAGES`
 
-Pakiet główny pamięci podręcznej. Jeśli nie został ustawiony, jego wartość domyślna to `$HOME/.nuget/packages` w systemach Unix lub `%userprofile%\.nuget\packages` na Windows.
+Podstawowa pamięć podręczna pakietu. Jeśli nie jest ustawiona, zostanie ona `$HOME/.nuget/packages` domyślnie włączona w `%userprofile%\.nuget\packages` systemie UNIX lub w systemie Windows.
 
 `DOTNET_SERVICING`
 
-Określa lokalizację obsługi indeksu do użycia przez hosta udostępnionych podczas ładowania środowiska uruchomieniowego.
+Określa lokalizację indeksu obsługi, który ma być używany przez host udostępniony podczas ładowania środowiska uruchomieniowego.
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-Określa, czy dane dotyczące użycia narzędzia .NET Core jest zbierane i przesyłane do firmy Microsoft. Ustaw `true` można zrezygnować z funkcji danych telemetrycznych (wartości `true`, `1`, lub `yes` zaakceptowane). W przeciwnym wypadku ustaw `false` można zdecydować się na funkcje telemetrii (wartości `false`, `0`, lub `no` zaakceptowane). Jeśli nie jest ustawiona, wartość domyślna to `false` i funkcja telemetrii jest aktywna.
+Określa, czy dane dotyczące użycia narzędzi .NET Core są zbierane i wysyłane do firmy Microsoft. Ustaw, `true` aby zrezygnować z funkcji telemetrii (wartości `true`, `1`lub `yes` zaakceptować). W przeciwnym razie ustaw `false` opcję, aby można było wybrać funkcje telemetrii ( `no` wartości `false`, `0`lub zaakceptowane). Jeśli nie zostanie ustawiona, wartość domyślna `false` to i aktywna funkcja telemetrii.
 
 `DOTNET_MULTILEVEL_LOOKUP`
 
-Określa, czy środowiska uruchomieniowego, udostępnionej platformy lub zestawu SDK platformy .NET Core nie są rozwiązane z globalnej lokalizacji. Jeśli nie został ustawiony, jego wartość domyślna to `true`. Ustaw `false` rozwiązania z globalnej lokalizacji i izolowanych instalacji platformy .NET Core (wartości `0` lub `false` są akceptowane). Aby uzyskać więcej informacji na temat wyszukiwania wielopoziomowe zobacz [wyszukiwania SharedFX wielopoziomowymi](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+Określa, czy środowisko uruchomieniowe programu .NET Core, udostępnione środowisko lub zestaw SDK są rozpoznawane z lokalizacji globalnej. Jeśli nie zostanie ustawiona, domyślnie `true`jest to. Ustawiona na `false` wartość nie jest rozpoznawana z lokalizacji globalnej i ma wyizolowane instalacje .NET `0` Core `false` (wartości lub są akceptowane). Aby uzyskać więcej informacji o wyszukiwaniu wielu poziomów, zobacz [SharedFX wyszukiwanie na wielu poziomach](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `DOTNET_PACKAGES`
 
-Pakiet główny pamięci podręcznej. Jeśli nie został ustawiony, jego wartość domyślna to `$HOME/.nuget/packages` w systemach Unix lub `%userprofile%\.nuget\packages` na Windows.
+Podstawowa pamięć podręczna pakietu. Jeśli nie jest ustawiona, zostanie ona `$HOME/.nuget/packages` domyślnie włączona w `%userprofile%\.nuget\packages` systemie UNIX lub w systemie Windows.
 
 `DOTNET_SERVICING`
 
-Określa lokalizację obsługi indeksu do użycia przez hosta udostępnionych podczas ładowania środowiska uruchomieniowego.
+Określa lokalizację indeksu obsługi, który ma być używany przez host udostępniony podczas ładowania środowiska uruchomieniowego.
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-Określa, czy dane dotyczące użycia narzędzia .NET Core jest zbierane i przesyłane do firmy Microsoft. Ustaw `true` można zrezygnować z funkcji danych telemetrycznych (wartości `true`, `1`, lub `yes` zaakceptowane). W przeciwnym wypadku ustaw `false` można zdecydować się na funkcje telemetrii (wartości `false`, `0`, lub `no` zaakceptowane). Jeśli nie jest ustawiona, wartość domyślna to `false` i funkcja telemetrii jest aktywna.
+Określa, czy dane dotyczące użycia narzędzi .NET Core są zbierane i wysyłane do firmy Microsoft. Ustaw, `true` aby zrezygnować z funkcji telemetrii (wartości `true`, `1`lub `yes` zaakceptować). W przeciwnym razie ustaw `false` opcję, aby można było wybrać funkcje telemetrii ( `no` wartości `false`, `0`lub zaakceptowane). Jeśli nie zostanie ustawiona, wartość domyślna `false` to i aktywna funkcja telemetrii.
 
 ---

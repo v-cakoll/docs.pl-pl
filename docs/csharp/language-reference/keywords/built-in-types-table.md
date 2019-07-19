@@ -1,24 +1,24 @@
 ---
-title: Tabela typów wbudowanych - C# odwołania
+title: Tabela typów wbudowanych — C# odwołanie
 ms.custom: seodec18
-description: Słowa kluczowe dla typy wbudowane C#
+description: Słowa kluczowe dla C# typów wbudowanych
 ms.date: 08/17/2018
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: e770c305afe098e633700b039efb51770c77ada7
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5db982c0a94814bfece087eb4db119a4df246094
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661451"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330965"
 ---
-# <a name="built-in-types-table-c-reference"></a>Tabela typów wbudowanych (odwołanie w C#)
+# <a name="built-in-types-table-c-reference"></a>Tabela typów wbudowanych (C# odwołanie)
 
-W poniższej tabeli przedstawiono typy wbudowane C#, które są aliasy wstępnie zdefiniowanych typów słowa kluczowe w <xref:System> przestrzeni nazw.  
+W poniższej tabeli przedstawiono słowa kluczowe dla C# typów wbudowanych, które są aliasami wstępnie zdefiniowanych typów w <xref:System> przestrzeni nazw.  
   
-|Typ C#|Typ architektury .NET|  
+|C#Wprowadź|Typ .NET|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
 |[byte](../builtin-types/integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|  
@@ -38,16 +38,16 @@ W poniższej tabeli przedstawiono typy wbudowane C#, które są aliasy wstępnie
   
 ## <a name="remarks"></a>Uwagi
 
-Wszystkie typy w tabeli, z wyjątkiem `object` i `string`, są nazywane typów prostych.  
+Wszystkie typy w tabeli, z wyjątkiem `object` i `string`, są określane jako typy proste.  
   
-Słowa kluczowe typu C# i ich aliasy są wymienne. Na przykład można zadeklarować zmienną całkowitoliczbową przy użyciu jednej z następujących deklaracje:  
+Typy .NET i ich C# aliasy słów kluczowych są zamienne. Na przykład można zadeklarować zmienną całkowitą przy użyciu jednej z następujących deklaracji:  
 
 ```csharp
 int x = 123;
 System.Int32 y = 123;
 ```
 
-Użyj [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) operatorem w celu uzyskania <xref:System.Type?displayProperty=nameWithType> wystąpienia, który reprezentuje określony typ:
+Użyj operatora [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) , aby uzyskać <xref:System.Type?displayProperty=nameWithType> wystąpienie, które reprezentuje określony typ:
 
 ```csharp
 Type stringType = typeof(string);

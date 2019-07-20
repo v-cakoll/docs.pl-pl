@@ -2,160 +2,160 @@
 title: Opis zmian stanu
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 858da2a88c17920910c05966bb3b211d754fb278
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 549620ee5317e68735b392ce35b73c92f2474eab
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424776"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363941"
 ---
 # <a name="understanding-state-changes"></a>Opis zmian stanu
-W tym temacie omówiono Stany i przejścia, które mają kanały, typy używane do struktury stany kanału i sposobie ich implementacji.  
+W tym temacie omówiono Stany i przejścia, które są dostępne dla kanałów, typy używane do struktury Stanów kanałów oraz sposób ich implementacji.  
   
-## <a name="state-machines-and-channels"></a>Stan maszyn i kanałów  
- Obiekty, które zajmują się komunikacji, na przykład gniazd, zwykle przedstawiają automatu stanów, w których stanami odnoszą się do przydzielania zasobów sieciowych, dzięki czemu lub może odbierać połączeń, zamykając połączenia i przerywa komunikacji. Automatu stanów kanału zapewnia jednolity model stanów obiektu komunikacyjnego, zapewniający abstrakcję podstawowej implementacji tego obiektu. <xref:System.ServiceModel.ICommunicationObject> Interfejs zapewnia zestaw stanów, stan przejścia metod i zdarzeń przejście stanu. Wszystkie kanały, fabryki kanałów i odbiorników kanału możesz zaimplementować maszynę stanu kanału.  
+## <a name="state-machines-and-channels"></a>Automaty stanów i kanały  
+ Obiekty, które zajmują się komunikacją, na przykład Sockets zwykle stanowią komputer stanu, którego zmiany stanu odnoszą się do alokowania zasobów sieciowych, tworzenia lub akceptowania połączeń, zamykania połączeń i kończenia komunikacji. Komputer stanu kanału zapewnia jednolity model stanów obiektu komunikacyjnego, który stanowi abstrakcyjną podstawową implementację tego obiektu. <xref:System.ServiceModel.ICommunicationObject> Interfejs zawiera zestaw Stanów, metody przechodzenia stanu i zdarzenia przejścia stanu. Wszystkie kanały, fabryki kanałów i odbiorniki kanałów implementują komputer stanu kanału.  
   
- Zdarzenia zamknięte, zamykanie, Faulted, otwartego i otwieranie sygnał obserwatora zewnętrznych, po wystąpieniu zmiany stanu.  
+ Zdarzenia zamknięte, zamykające, błędne, otwarte i otwierające sygnalizujący zewnętrzny obserwator po wystąpieniu przejścia stanu.  
   
- Metody przerwania, zamknij i Otwórz (i ich odpowiedniki asynchroniczne) powodują stanami.  
+ Metody przerywają, zamykają i otwierają (wraz z ich odpowiednikami asynchronicznymi) powodują przejścia stanu.  
   
- Właściwość stanu zwraca bieżący stan, zgodnie z definicją <xref:System.ServiceModel.CommunicationState>:  
+ Właściwość State zwraca bieżący stan zdefiniowany przez <xref:System.ServiceModel.CommunicationState>:  
   
-## <a name="icommunicationobject-communicationobject-and-states-and-state-transition"></a>ICommunicationObject, CommunicationObject i Stany i przejścia stanu  
- <xref:System.ServiceModel.ICommunicationObject> Rozpoczyna się w stanie Created, gdzie można skonfigurować jej różne właściwości. Jeden raz w stanie Opened obiektu są wykorzystywane do wysyłania i odbierania wiadomości, ale jego właściwości są traktowane jako niezmienialny. Gdy w stanie zamknięcia obiektu można nie jest już przetwarzać nowych wysyłania lub odbierania żądań, ale istniejącymi żądaniami ma szansę zakończyć aż do osiągnięcia limit czasu zamknięcia.  Jeśli wystąpi błąd nieodwracalny, obiekt przechodzi do stanu Faulted, gdzie może być sprawdzane pod kątem informacji o błędzie i ostatecznie zamknięte. Gdy w stanie zamkniętym obiekt zasadniczo osiągnął koniec automatu stanów. Raz obiektu przejścia z jednego stanu do drugiego, go nie wróć do poprzedniego stanu.  
+## <a name="icommunicationobject-communicationobject-and-states-and-state-transition"></a>Interfejs ICommunicationObject, CommunicationObject i Stany i zmiana stanu  
+ <xref:System.ServiceModel.ICommunicationObject> Rozpoczęcie w stanie utworzonym, w którym można skonfigurować różne właściwości. W stanie otwartym obiekt jest używany do wysyłania i otrzymywania komunikatów, ale jego właściwości są uważane za niezmienne. Po zamknięciu obiekt nie może już przetwarzać nowych żądań wysłania lub odebrania, ale istniejące żądania mają szansę ukończenia do momentu osiągnięcia limitu czasu zamknięcia.  Jeśli wystąpi nieodwracalny błąd, obiekt przechodzi do stanu błędu, który można sprawdzić w celu uzyskania informacji o błędzie i ostatecznie zamknięty. Gdy stan jest zamknięty, obiekt zasadniczo osiągnął koniec automatu Stanów. Gdy obiekt przechodzi z jednego stanu do następnego, nie przechodzi do poprzedniego stanu.  
   
- Na poniższym diagramie przedstawiono <xref:System.ServiceModel.ICommunicationObject> Stany i przejścia stanu. Stan przejścia może być spowodowana przez wywołanie jednej z trzech metod: Przerwij otwieranie, lub Zamknij. One może również być spowodowane wywołaniem innych metod specyficzne dla implementacji. Przejście do stanu Faulted może występować w wyniku błędy podczas otwierania lub po masz otwarty obiekt komunikacyjny.  
+ Na poniższym diagramie przedstawiono <xref:System.ServiceModel.ICommunicationObject> Stany i przejścia stanu. Przejścia stanu mogą być spowodowane wywoływaniem jednej z trzech metod: Przerwij, Otwórz lub Zamknij. Mogą być również spowodowane wywoływaniem innych metod specyficznych dla implementacji. Przejście do stanu błędu może wystąpić w wyniku błędów podczas otwierania lub po otwarciu obiektu komunikacyjnego.  
   
- Każdy <xref:System.ServiceModel.ICommunicationObject> rozpoczyna się w stanie Created. W tym stanie aplikacji można skonfigurować obiekt przez ustawienie jego właściwości. Gdy obiekt jest w stanie innym niż utworzony, jest uważany za niezmienialny.  
+ Każde <xref:System.ServiceModel.ICommunicationObject> zaczyna się w stanie created. W tym stanie aplikacja może skonfigurować obiekt przez ustawienie jego właściwości. Gdy obiekt jest w stanie innym niż utworzony, jest traktowany jako niezmienny.  
   
  ![Przejście stanu kanału](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
-Rysunek 1. Automatu stanów ICommunicationObject.  
+Rysunek 1. Maszyna stanu Interfejs ICommunicationObject.  
   
- Windows Communication Foundation (WCF) zapewnia abstrakcyjna klasa bazowa o nazwie <xref:System.ServiceModel.Channels.CommunicationObject> implementującej <xref:System.ServiceModel.ICommunicationObject> i automatu stanów kanału. Poniższa ilustracja jest diagram stanu modyfikacji, które są specyficzne dla <xref:System.ServiceModel.Channels.CommunicationObject>. Oprócz <xref:System.ServiceModel.ICommunicationObject> automatu stanów pokazuje przybliżonego dodatkowe <xref:System.ServiceModel.Channels.CommunicationObject> metody są wywoływane.  
+ Windows Communication Foundation (WCF) zawiera abstrakcyjną klasę bazową <xref:System.ServiceModel.Channels.CommunicationObject> o nazwie <xref:System.ServiceModel.ICommunicationObject> implementującą i maszyną stanu kanału. Poniższa ilustracja przedstawia zmodyfikowany Diagram stanu, który jest specyficzny <xref:System.ServiceModel.Channels.CommunicationObject>dla. Oprócz <xref:System.ServiceModel.ICommunicationObject> komputera stanu pokazuje on czas, gdy są wywoływane dodatkowe <xref:System.ServiceModel.Channels.CommunicationObject> metody.  
   
- ![Zmianie stanu](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
-Rysunek 2. Implementacja CommunicationObject ICommunicationObject automatu stanów, łącznie z wywołania zdarzenia i metody chronionej.  
+ ![Zmiany stanu](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
+Rysunek 2. Implementacja Communicationsobject automatu stanu Interfejs ICommunicationObject, w tym wywołania zdarzeń i metod chronionych.  
   
-### <a name="icommunicationobject-events"></a>Zdarzenia ICommunicationObject  
- <xref:System.ServiceModel.Channels.CommunicationObject> przedstawia pięć zdarzenia, zdefiniowany przez <xref:System.ServiceModel.ICommunicationObject>. Zdarzenia te zostały zaprojektowane dla kodu za pomocą obiektu komunikacyjnego, aby otrzymywać powiadomienia o zmianie stanu. Jak pokazano na rysunku 2 powyżej, każde zdarzenie jest uruchamiany raz, po stan obiektu przechodzi w stan, o nazwie określonej przez zdarzenie. Wszystkie zdarzenia pięciu są `EventHandler` typu, który jest zdefiniowany jako:  
+### <a name="icommunicationobject-events"></a>Zdarzenia Interfejs ICommunicationObject  
+ <xref:System.ServiceModel.Channels.CommunicationObject>uwidacznia pięć zdarzeń zdefiniowanych przez <xref:System.ServiceModel.ICommunicationObject>. Te zdarzenia są przeznaczone do obsługi kodu przy użyciu obiektu komunikacyjnego do powiadamiania o zmianach stanu. Jak pokazano na rysunku 2 powyżej, każde zdarzenie jest uruchamiane jeden raz po przejścia stanu obiektu do stanu o nazwie zdarzenia. Wszystkie pięć zdarzeń są typu, `EventHandler` który jest zdefiniowany jako:  
   
  `public delegate void EventHandler(object sender, EventArgs e);`  
   
- W <xref:System.ServiceModel.Channels.CommunicationObject> implementacji nadawcy jest <xref:System.ServiceModel.Channels.CommunicationObject> autonomiczną usługą Intune a niezależnie od rodzaju została przekazana jako nadawcy <xref:System.ServiceModel.Channels.CommunicationObject> konstruktora (jeśli został użyty tego przeciążenia konstruktora). Parametr EventArgs `e`, jest zawsze `EventArgs.Empty`.  
+ W implementacji nadawca jest <xref:System.ServiceModel.Channels.CommunicationObject> sama lub dowolnie przesłany <xref:System.ServiceModel.Channels.CommunicationObject> jako nadawca do konstruktora (jeśli zostało użyte przeciążenie konstruktora). <xref:System.ServiceModel.Channels.CommunicationObject> Parametr EventArgs, `e`,, jest zawsze `EventArgs.Empty`.  
   
-### <a name="derived-object-callbacks"></a>Wywołania zwrotne pochodnego obiektu  
- Oprócz pięciu zdarzenia <xref:System.ServiceModel.Channels.CommunicationObject> deklaruje ośmiu chronione metod wirtualnych, które pozwalają na pochodnej obiekt ma zostać wywołany przed i po zmianie stanu.  
+### <a name="derived-object-callbacks"></a>Wywołania zwrotne obiektu pochodnego  
+ Oprócz pięciu zdarzeń <xref:System.ServiceModel.Channels.CommunicationObject> deklaruje osiem chronionych metod wirtualnych zaprojektowanych tak, aby umożliwić wywoływanie obiektu pochodnego przed przejściami stanu i po nim.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> metody mają trzy takie wywołania zwrotne związany z każdą z nich. Na przykład, odpowiadający <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> ma <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType>, i <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType>. Skojarzone z <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> są <xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType>, i <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> metody.  
+ Metody i mają trzy takie wywołania zwrotne, <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> które są skojarzone z każdym z nich. <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> Na przykład odpowiada <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> to <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType>i. <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType> Skojarzone z <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType>to metody <xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType>, i<xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> .  
   
- Podobnie <xref:System.ServiceModel.Channels.CommunicationObject.Abort%2A?displayProperty=nameWithType> metoda ma odpowiadające mu <xref:System.ServiceModel.Channels.CommunicationObject.OnAbort%2A?displayProperty=nameWithType>.  
+ Podobnie Metoda ma odpowiednie <xref:System.ServiceModel.Channels.CommunicationObject.OnAbort%2A?displayProperty=nameWithType>. <xref:System.ServiceModel.Channels.CommunicationObject.Abort%2A?displayProperty=nameWithType>  
   
- Gdy <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType>, i <xref:System.ServiceModel.Channels.CommunicationObject.OnAbort%2A?displayProperty=nameWithType> nie mają domyślnej implementacji, inne wywołania zwrotne mają domyślną implementację, co jest niezbędne pod kątem poprawności maszyny stanu. Jeśli zastąpisz tych metod należy wywoływać implementację podstawową lub poprawnie go zastąpić.  
+ Podczas <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType>gdy <xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType>, i<xref:System.ServiceModel.Channels.CommunicationObject.OnAbort%2A?displayProperty=nameWithType> nie ma implementacji domyślnej, inne wywołania zwrotne mają implementację domyślną, która jest niezbędna do poprawności komputera stanu. Jeśli zastąpisz te metody, należy wywołać implementację podstawową lub ją poprawnie zastąpić.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> fire odpowiednich <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> zdarzenia. <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> odpowiednio ustawić stan obiektu Opened i zamknięte, a następnie fire odpowiednich <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> zdarzenia.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType><xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> Wygeneruj<xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> odpowiednie <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>zdarzenia .<xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType>i <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> Ustaw stan obiektu na otwarty i zamknięty, a następnie Wygeneruj odpowiednie <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> zdarzenia <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> i.  
   
-### <a name="state-transition-methods"></a>Metody przejścia stanu  
- <xref:System.ServiceModel.Channels.CommunicationObject> zawiera implementacje przerwania, zamknij i Otwórz. Zapewnia także metody błędów, co powoduje przejście do stanu Faulted. Na rysunku 2 przedstawiono <xref:System.ServiceModel.ICommunicationObject> automatu stanów z każdym przejściem oznaczone przez metodę, która powoduje, że (bez etykiety przejścia możliwe wewnątrz implementacji metody, która spowodowała ostatnie przejście etykietami).  
+### <a name="state-transition-methods"></a>Metody przejściowe stanu  
+ <xref:System.ServiceModel.Channels.CommunicationObject>zawiera implementacje Abort, Zamknij i Otwórz. Zapewnia również metodę błędu, która powoduje przejście stanu do stanu błędu. Rysunek 2 przedstawia <xref:System.ServiceModel.ICommunicationObject> komputer stanu z każdym przejściem oznaczonym przez metodę, która powoduje, że (przejścia nieoznaczone jako są wykonywane wewnątrz implementacji metody, która spowodowała ostatnie przejście z etykietą).  
   
 > [!NOTE]
->  Wszystkie <xref:System.ServiceModel.Channels.CommunicationObject> implementacje komunikacji stanu pobiera/ustawia są synchronizowane wątku.  
+>  Wszystkie <xref:System.ServiceModel.Channels.CommunicationObject> implementacje stanu komunikacji pobiera/zestawy są zsynchronizowane z wątkiem.  
   
  Konstruktor  
   
- <xref:System.ServiceModel.Channels.CommunicationObject> zapewnia trzy konstruktory, które należy pozostawić obiekt w stanie Created. Konstruktory są definiowane jako:  
+ <xref:System.ServiceModel.Channels.CommunicationObject>zawiera trzy konstruktory, z których wszystkie opuszczają obiekt w stanie created. Konstruktory są zdefiniowane jako:  
   
- Pierwszy Konstruktor jest konstruktorem domyślnym, który delegował do przeciążenia konstruktora, który przyjmuje obiekt:  
+ Pierwszy Konstruktor jest konstruktorem bez parametrów, który jest delegatem do przeciążenia konstruktora, który przyjmuje obiekt:  
   
  `protected CommunicationObject() : this(new object()) { … }`  
   
- Konstruktor, który pobiera obiekt używa tego parametru jako obiektu zostanie zablokowane podczas synchronizowania dostępu do stanu obiektu komunikacji:  
+ Konstruktor, który pobiera obiekt używa tego parametru jako obiektu, który ma być zablokowany podczas synchronizowania dostępu do stanu obiektu komunikacji:  
   
  `protected CommunicationObject(object mutex) { … }`  
   
- Na koniec trzeci Konstruktor zajmuje dodatkowy parametr, który jest używany jako argument nadawcy podczas <xref:System.ServiceModel.ICommunicationObject> zdarzenia są uruchamiane.  
+ Na koniec trzeci Konstruktor przyjmuje dodatkowy parametr, który jest używany jako argument nadawcy w przypadku <xref:System.ServiceModel.ICommunicationObject> uruchomienia zdarzeń.  
   
  `protected CommunicationObject(object mutex, object eventSender) { … }`  
   
- Poprzednie dwa konstruktory to ustawić nadawcy.  
+ Dwa poprzednie konstruktory ustawiają nadawcę.  
   
- Open — metoda  
+ Open — Metoda  
   
- Warunek wstępny: Stan jest tworzony.  
+ Warunek wstępny Stan został utworzony.  
   
- Warunek po: Stan to Opened lub Faulted. Może zgłaszać wyjątek.  
+ Warunek po: Stan jest otwarty lub wystąpił błąd. Może zgłosić wyjątek.  
   
- Metody Open() podejmie próbę otwarcia obiektu komunikacji i ustawić stan na Opened. Jeśli napotka błąd, zostanie ustawiony stan do Faulted.  
+ Metoda Open () podejmie próbę otwarcia obiektu komunikacyjnego i ustawienia stanu na otwarty. Jeśli wystąpi błąd, ustawi stan na błąd.  
   
- Metoda najpierw sprawdza, czy bieżący stan został utworzony. Jeśli bieżący stan jest otwierania lub otwarciem zgłasza <xref:System.InvalidOperationException>. W przypadku zamknięcia i zamknięte bieżący stan wyniku weryfikacji zgłasza wyjątek <xref:System.ServiceModel.CommunicationObjectAbortedException> Jeśli obiekt został zakończony i <xref:System.ObjectDisposedException> inaczej. Jeśli bieżący stan jest błędne, zgłasza <xref:System.ServiceModel.CommunicationObjectFaultedException>.  
+ Metoda najpierw sprawdza, czy bieżący stan został utworzony. Jeśli bieżący stan jest otwierany lub otwarty, zgłasza <xref:System.InvalidOperationException>. Jeśli bieżący stan jest zamykany lub zamknięty, zgłasza <xref:System.ServiceModel.CommunicationObjectAbortedException> , że obiekt został zakończony i <xref:System.ObjectDisposedException> w inny sposób. Jeśli bieżący stan jest błędny, zgłasza <xref:System.ServiceModel.CommunicationObjectFaultedException>.  
   
- Następnie ustawia stan do otwierania i wywołuje OnOpening() (który wywołuje zdarzenie otwierania) i OnOpen() OnOpened() w tej kolejności. OnOpened() ustawia stan Opened i zgłasza zdarzenie Opened. Jeśli dowolny z tych zgłasza wyjątek (Otwórz) wywołuje Fault() i umożliwia bąbelków wyjątek w. Na poniższym diagramie przedstawiono procesu otwierania bardziej szczegółowo.  
+ Następnie ustawia stan na otwieranie i wywoływanie metody OnOpening () (która wywołuje zdarzenie otwarcia), OnOpen () i OnOpened () w tej kolejności. OnOpened () ustawia stan na otwarty i wywołuje otwarte zdarzenie. Jeśli którykolwiek z tych zgłasza wyjątek, Open () wywołuje błąd () i umożliwia wyszukanie wyjątku. Na poniższym diagramie przedstawiono proces otwierania w bardziej szczegółowy sposób.  
   
- ![Zmianie stanu](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
-Zastąp metodę zdarzenia do zaimplementowania niestandardowej logiki open, takich jak otwieranie obiekt wewnętrzny komunikacji.  
+ ![Zmiany stanu](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
+Zastąp metodę OnOpen, aby zaimplementować niestandardową, otwartą logikę, taką jak otwieranie wewnętrznego obiektu komunikacyjnego.  
   
  Close — Metoda  
   
- Warunek wstępny: Brak.  
+ Warunek wstępny Brak.  
   
- Warunek po: Stan jest zamknięty. Może zgłaszać wyjątek.  
+ Warunek po: Stan jest zamknięty. Może zgłosić wyjątek.  
   
- Można wywołać metody Close() w każdym stanie. Próbuje zamykających obiekt w zwykły sposób. W przypadku napotkania błędu kończy obiektu. Metoda ma wartość nothing, jeśli bieżący stan jest zamykany lub zamknięte. W przeciwnym razie ustawia stan zamknięcia. Jeśli pierwotnego stanu została utworzona, otwieranie lub Faulted, wywołuje metodę Abort() (patrz poniższy diagram). Jeśli oryginalny stan został otwarty, wywołuje metodę OnClosing() (który wywołuje zdarzenie zamknięcia) i OnClose() OnClosed() w tej kolejności. Jeśli dowolny z tych zgłasza wyjątek (Zamknij) wywołuje metodę Abort() i umożliwia bąbelków wyjątek. OnClosed() ustawia stan na zamknięte i zgłasza zdarzenie zamknięte. Na poniższym diagramie przedstawiono zamknięciu przetwarzania bardziej szczegółowo.  
+ Metodę Close () można wywołać w dowolnym stanie. Próbuje ona zamknąć obiekt w normalny sposób. Jeśli wystąpi błąd, kończy obiekt. Metoda nie wykonuje żadnych operacji, jeśli bieżący stan jest zamykany lub zamknięty. W przeciwnym razie ustawia stan do zamknięcia. Jeśli oryginalny stan został utworzony, otwarcie lub błąd, wywołuje metodę Abort () (zobacz poniższy diagram). Jeśli pierwotny stan został otwarty, wywołuje metodę OnClose () (która wywołuje zdarzenie zamknięcia), w tej kolejności. Jeśli którykolwiek z tych zgłasza wyjątek, zamknięcia () wywołuje metodę Abort () i umożliwia wyszukanie wyjątku. OnClosed () ustawia stan na zamknięty i wywołuje zamknięte zdarzenie. Na poniższym diagramie przedstawiono proces zamykania bardziej szczegółowo.  
   
- ![Zmianie stanu](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO CloseFlowChartc")  
-Zastąp metodę OnClose — Aby zaimplementować logikę niestandardową Zamknij, np. zamknięcie obiekt wewnętrzny komunikacji. Wszystkie łagodne zamykanie logikę, która może blokować długo (np. Trwa oczekiwanie na drugiej stronie odpowiadać) powinny być zrealizowane w OnClose(), ponieważ pobiera on parametr limitu czasu i ponieważ nie jest wywoływana jako część metodę Abort().  
+ ![Zmiany stanu](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO — CloseFlowChartc")  
+Zastąp metodę OnClose, aby zaimplementować niestandardową logikę zamykającą, na przykład zamykającą wewnętrzny obiekt komunikacyjny. Wszelka dyskretna logika, która może być blokowana przez długi czas (na przykład oczekiwanie na odpowiedź drugiej strony) powinna zostać zaimplementowana w trybie OnClose (), ponieważ przyjmuje parametr timeout i ponieważ nie jest wywoływana jako część przerwania ().  
   
  Przerwij  
   
- Warunek wstępny: Brak.  
-Warunek po: Stan jest zamknięty. Może zgłaszać wyjątek.  
+ Warunek wstępny Brak.  
+Warunek po: Stan jest zamknięty. Może zgłosić wyjątek.  
   
- Metoda metodę Abort() nie działają, jeśli bieżącym stanem nie jest zamknięty lub jeśli obiekt został zakończony przed (na przykład prawdopodobnie przez metodę Abort() wykonywania w innym wątku). W przeciwnym razie ustawia stan do zamknięcia i wywołuje OnClosing() (który wywołuje zdarzenie zamknięcia), OnAbort() i OnClosed() w tej kolejności (nie wywołuje OnClose — ponieważ obiekt zostanie przerwany, nie jest zamknięty). OnClosed() ustawia stan na zamknięte i zgłasza zdarzenie zamknięte. Jeśli któregoś z powyższych zgłosić wyjątek, jest ponownie zgłoszony do obiektu wywołującego przerwania. Implementacje OnClosing(), OnClosed() i OnAbort() nie powinny blokować (na przykład na We/Wy). Na poniższym diagramie przedstawiono proces przerwania bardziej szczegółowo.  
+ Metoda Abort () nie wykonuje żadnych operacji, jeśli bieżący stan jest zamknięty lub jeśli obiekt został zakończony przed (na przykład może to być operacja Abort () wykonywana w innym wątku). W przeciwnym razie ustawia stan na zamykające i wywołuje metodę OnClose () (która wywołuje zdarzenie zamknięcia), OnAbort () i OnClosed () w tej kolejności (nie wywołuje metody onzamykającej, ponieważ obiekt jest przerywany, nie zamknięty). OnClosed () ustawia stan na zamknięty i wywołuje zamknięte zdarzenie. Jeśli którykolwiek z tych zgłasza wyjątek, zostanie ponownie zgłoszony wywołujący przerwanie. Implementacje onzamykając (), OnClosed () i OnAbort () nie powinny blokować (na przykład na wejściu/wyjściu). Na poniższym diagramie przedstawiono proces przerwania w bardziej szczegółowy sposób.  
   
- ![Zmianie stanu](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO AbortFlowChartc")  
-Zastąpienie metody OnAbort implementacji niestandardowych Zakończ logiki, takie jak przerywanie obiekt wewnętrzny komunikacji.  
+ ![Zmiany stanu](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO — AbortFlowChartc")  
+Zastąp metodę OnAbort, aby zaimplementować niestandardową logikę zakończenia, taką jak kończenie wewnętrznego obiektu komunikacyjnego.  
   
- Błędów  
+ Powodu  
   
- Metoda błędów zależy od <xref:System.ServiceModel.Channels.CommunicationObject> i nie jest częścią <xref:System.ServiceModel.ICommunicationObject> interfejsu. Została ona tutaj uwzględniona aby informacje były kompletne.  
+ Metoda Fault jest specyficzna dla <xref:System.ServiceModel.Channels.CommunicationObject> i nie jest częścią <xref:System.ServiceModel.ICommunicationObject> interfejsu. Jest ona tutaj dostępna do kompletności.  
   
- Warunek wstępny: Brak.  
+ Warunek wstępny Brak.  
   
- Warunek po: Stan jest błędne. Może zgłaszać wyjątek.  
+ Warunek po: Stan jest błędny. Może zgłosić wyjątek.  
   
- Metoda Fault() nie działa w przypadku bieżącego stanu Faulted lub zamknięte. W przeciwnym razie ustawia stan Faulted, a następnie wywołać OnFaulted(), który wywołuje zdarzenie Faulted. Jeśli OnFaulted zgłasza wyjątek jest ponownie zgłoszony.  
+ Metoda Fault () nie wykonuje żadnych operacji, jeśli bieżący stan jest błędny lub zamknięty. W przeciwnym razie ustawia stan na błąd i wywołanie onfaultd (), które wywołuje zdarzenie błędu. Jeśli onfaulting zgłosi wyjątek, zostanie ponownie zgłoszony.  
   
 ### <a name="throwifxxx-methods"></a>Metody ThrowIfXxx  
- CommunicationObject ma trzy metody chronionych, których można użyć zgłaszają wyjątki, jeśli obiekt jest w określonym stanie.  
+ Metoda CommunicationObject ma trzy metody chronione, których można użyć do zgłaszania wyjątków, jeśli obiekt jest w określonym stanie.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A> zgłasza wyjątek, jeśli stan jest zamknięcia, zamknięte lub Faulted.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A>zgłasza wyjątek, jeśli stan jest zamykany, zamknięty lub błędny.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A> zgłasza wyjątek, jeśli stan nie został utworzony.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A>zgłasza wyjątek, jeśli stan nie został utworzony.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A> zgłasza wyjątek, jeśli stan nie jest otwarty.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A>zgłasza wyjątek, jeśli stan nie jest otwarty.  
   
- Wyjątki generowane są zależne od stanu. W poniższej tabeli przedstawiono różne stany i odpowiedni typ wyjątek zgłoszony przez wywołanie metody ThrowIfXxx, która zgłasza w tym stanie.  
+ Zgłoszone wyjątki zależą od stanu. W poniższej tabeli przedstawiono różne Stany i odpowiedni typ wyjątku zgłoszone przez wywołanie elementu ThrowIfXxx, który zgłasza ten stan.  
   
-|Stan|Została wywołana przerwania?|Wyjątek|  
+|Stan|Czy wywołano przerwanie?|Wyjątek|  
 |-----------|----------------------------|---------------|  
 |Utworzono|Brak|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
-|Otwieranie|Brak|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
-|Otwarte|Brak|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
-|Zamykanie|Yes|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
+|Otwierania|Brak|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
+|Otworzyć|Brak|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
+|Zamykanie|Tak|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |Zamykanie|Nie|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|Zamknięte|Tak|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> w przypadku, że obiekt został zamknięty przez poprzednie i jawne wywołanie przerwania. Jeśli możesz wywołać operację Close dla obiektu, a następnie <xref:System.ObjectDisposedException?displayProperty=nameWithType> zgłaszany.|  
+|Zamknięte|Yes|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>w przypadku, gdy obiekt został zamknięty przez poprzednie i jawne wywołanie przerwania. W przypadku wywołania metody Close na obiekcie zostanie zgłoszony <xref:System.ObjectDisposedException?displayProperty=nameWithType> element.|  
 |Zamknięte|Nie|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|Wystąpił błąd|Brak|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
+|Faulted|Brak|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   
 ### <a name="timeouts"></a>Limity czasu  
- Kilka metod, które Omówiliśmy przyjmują parametry limitu czasu. Są to zamknij i Otwórz (niektóre przeciążenia i asynchronicznych wersji), OnClose zdarzenia. Te metody są zaprojektowane z myślą długotrwałej operacji (np. blokowania na We/Wy podczas bezpiecznie zamknąć połączenie), parametr limitu czasu wskazuje, ile takich operacji może zająć przed są przerwane. Implementacje dowolnej z tych metod powinny używać wartości podany limit czasu, aby upewnić się, że powraca do obiektu wywołującego w ramach tego limitu czasu. Implementacje innych metod, które nie przyjmują przekroczenie limitu czasu nie są przeznaczone dla długotrwałej operacji i nie powinny blokować na dane wejściowe i wyjściowe.  
+ Kilka metod omówionych przez nas parametrów limitu czasu. Są to zamknięcia, otwarte (Niektóre przeciążenia i wersje asynchroniczne), OnClose i OnOpen. Te metody zostały zaprojektowane w taki sposób, aby zezwalały na długotrwałe operacje (na przykład blokowanie danych wejściowych/wyjściowych i bezpieczne zamykanie połączenia), więc parametr timeout wskazuje, jak długo operacje mogą zostać wprowadzone przed przerwaniem. Implementacje dowolnej z tych metod powinny używać podanej wartości limitu czasu, aby upewnić się, że powraca do obiektu wywołującego w ramach tego limitu czasu. Implementacje innych metod, które nie przyjmują limitu czasu, nie są przeznaczone dla operacji długotrwałych i nie powinny blokować wejścia/wyjścia.  
   
- Wyjątkiem są Open() i Close() przeciążenia, które nie przyjmują przekroczenie limitu czasu. Te Użyj domyślnej wartości limitu czasu pochodzącego z klasy pochodnej. <xref:System.ServiceModel.Channels.CommunicationObject> udostępnia dwa chronione właściwości abstrakcyjnych, o nazwie <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> i <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> zdefiniowany jako:  
+ Wyjątkiem są przeciążenia Open () i Close (), które nie mają limitu czasu. Używają one domyślnej wartości limitu czasu dostarczonej przez klasę pochodną. <xref:System.ServiceModel.Channels.CommunicationObject>uwidacznia dwie chronione właściwości abstrakcyjne <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> o <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> nazwie i zdefiniowane jako:  
   
  `protected abstract TimeSpan DefaultCloseTimeout { get; }`  
   
  `protected abstract TimeSpan DefaultOpenTimeout { get; }`  
   
- Klasa pochodna implementuje te właściwości, aby podać domyślny limit czasu dla Open() i Close() przeciążeń, które nie przyjmują wartość limitu czasu. Następnie implementacji metody Open() i Close() delegować do przeciążenia, które przyjmuje przekazanie do niej domyślnej wartości limitu czasu, na przykład limit czasu:  
+ Klasa pochodna implementuje te właściwości w celu zapewnienia domyślnego limitu czasu dla przeciążenia Open () i Close (), które nie przyjmują wartości limitu czasu. Następnie do przeciążenia są przekazywane implementacje typu open () i Close (), które zajmują limit czasu podczas przekazywania go do domyślnej wartości limitu czasu, na przykład:  
   
  `public void Open()`  
   
@@ -166,4 +166,4 @@ Zastąpienie metody OnAbort implementacji niestandardowych Zakończ logiki, taki
  `}`  
   
 #### <a name="idefaultcommunicationtimeouts"></a>IDefaultCommunicationTimeouts  
- Ten interfejs ma cztery właściwości tylko do odczytu do prezentowania domyślne wartości limitów czasu dla otwierania, wysyłanie, odbieranie i zamykania. Każda implementacja jest odpowiedzialny za uzyskanie wartości domyślne w jakikolwiek sposób, które są odpowiednie. Dla wygody <xref:System.ServiceModel.Channels.ChannelFactoryBase> i <xref:System.ServiceModel.Channels.ChannelListenerBase> domyślne te wartości na 1 minutę.
+ Ten interfejs ma cztery właściwości tylko do odczytu, które zapewniają domyślne wartości limitu czasu dla operacji Otwórz, Wyślij, Odbierz i Zamknij. Każda implementacja jest odpowiedzialna za uzyskanie wartości domyślnych w dowolny sposób. Jako wygoda <xref:System.ServiceModel.Channels.ChannelFactoryBase> i <xref:System.ServiceModel.Channels.ChannelListenerBase> domyślne te wartości na 1 minutę każdego.

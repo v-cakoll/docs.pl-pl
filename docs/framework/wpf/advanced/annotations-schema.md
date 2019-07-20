@@ -6,34 +6,34 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: 503858b717ef541675b642a735289e3903b91fdc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d11b0bb2086bb449c0ffc0ff89430a55096a28d
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777084"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364342"
 ---
 # <a name="annotations-schema"></a>Schemat adnotacji
 
-W tym temacie opisano definicji schematu XML (XSD) używane przez Microsoft Framework adnotacje do zapisywania i pobierania danych adnotacji użytkownika.
+W tym temacie opisano definicję schematu XML (XSD) używaną przez strukturę adnotacji firmy Microsoft w celu zapisywania i pobierania danych adnotacji użytkownika.
 
-[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] Serializuje dane adnotacji z reprezentacji wewnętrznej na format XML.  Format XML używany do konwersji jest opisana przez [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] schematu XSD.  Schemat definiuje format XML niezależny od implementacji, który może służyć do wymiany adnotacji danych między aplikacjami.
+Struktura adnotacji serializować dane adnotacji z wewnętrznej reprezentacji do formatu XML.  Format XML używany do konwersji jest opisany w schemacie XSD struktury adnotacji.  Schemat definiuje niezależny od implementacji format XML, który może służyć do wymiany danych adnotacji między aplikacjami.
 
-[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] Definicji schematu XML, który składa się z dwóch subschemas
+Definicja schematu XML struktury adnotacji składa się z dwóch podschematów
 
-- Adnotacje Core schematu XML (schemat Core).
+- W schemacie XML Core (schemat podstawowy).
 
-- Adnotacje XML podstawowa schematem (schematem podstawowej).
+- Schemat bazowy XML adnotacji (schemat bazowy).
 
-Schemat Core definiuje podstawowej struktury XML <xref:System.Windows.Annotations.Annotation>.  Większość elementów XML zdefiniowane w schemacie Core odnoszą się do typów w <xref:System.Windows.Annotations> przestrzeni nazw.  Schemat Core udostępnia trzy punkty rozszerzenia, w którym aplikacji można dodawać własne dane XML.  Punkty te rozszerzenia obejmują <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>i "Zawartość".  (Zawartości, elementy znajdują się w formie <xref:System.Xml.XmlElement> listy.)
+Schemat podstawowy definiuje podstawową strukturę <xref:System.Windows.Annotations.Annotation>XML.  Większość elementów XML zdefiniowanych w podstawowym schemacie odpowiada typom w <xref:System.Windows.Annotations> przestrzeni nazw.  Podstawowy schemat udostępnia trzy punkty rozszerzenia, w których aplikacje mogą dodawać własne dane XML.  Te punkty rozszerzenia obejmują <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>i "zawartość".  (Elementy zawartości są udostępniane w postaci <xref:System.Xml.XmlElement> listy).
 
-Schemat podstawowy opisane w tym temacie Określa rozszerzenia dla <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>oraz zawartości typów dołączone do początkowej wersji Windows Presentation Foundation (WPF).
+Schemat podstawowy opisany w tym temacie definiuje rozszerzenia dla <xref:System.Windows.Annotations.Annotation.Authors%2A>typów zawartości, <xref:System.Windows.Annotations.ContentLocatorPart>i, które są dołączone do początkowej wersji Windows Presentation Foundation (WPF).
 
 <a name="CoreSchema"></a>
 
-## <a name="annotations-xml-core-schema"></a>Adnotacje XML Core schematu
+## <a name="annotations-xml-core-schema"></a>Schemat XML podstawowe adnotacji
 
-Schemat adnotacji XML Core definiuje struktury XML, który jest używany do przechowywania <xref:System.Windows.Annotations.Annotation> obiektów.
+Schemat XML podstawowe adnotacji definiuje strukturę XML, która jest używana do przechowywania <xref:System.Windows.Annotations.Annotation> obiektów.
 
 ```xml
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
@@ -187,7 +187,7 @@ Schemat adnotacji XML Core definiuje struktury XML, który jest używany do prze
 
 ## <a name="annotations-xml-base-schema"></a>Schemat bazowy XML adnotacji
 
-Schemat podstawowy definiuje struktury XML trzy elementy abstrakcyjne zdefiniowanymi w schemacie Core — <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, i <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.
+Schemat bazowy definiuje strukturę XML dla trzech elementów abstrakcyjnych zdefiniowanych w podstawowym schemacie — <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>i <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.
 
 ```xml
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
@@ -498,9 +498,9 @@ Schemat podstawowy definiuje struktury XML trzy elementy abstrakcyjne zdefiniowa
 
 <a name="SampleXML"></a>
 
-## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>Przykładowy kod XML utworzony przez XmlStreamStore adnotacji
+## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>Przykładowy kod XML tworzony przez adnotacje XmlStreamStore
 
-Plik XML, który następuje po zawierają dane wyjściowe adnotacje <xref:System.Windows.Annotations.Storage.XmlStreamStore> i organizowanie przykładowy plik, który zawiera trzy adnotacje — wyróżnienie, tekst-notatki i należy pamiętać hokejowego pisma odręcznego.
+Poniższy kod XML pokazuje dane wyjściowe adnotacji <xref:System.Windows.Annotations.Storage.XmlStreamStore> i organizacji przykładowego pliku, który zawiera trzy adnotacje — wyróżnienie, tekst w postaci tekstu i notatki odręczne.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

@@ -7,55 +7,55 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c9c9fb574b9f3e687b2d8d5c4606bfb66ebfa64
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939113"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364453"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource — Informacje o składniku
-<xref:System.Windows.Forms.BindingSource> Składnik jest tak zaprojektowany, aby uprościć proces powiązywanie kontrolek z bazowego źródła danych. <xref:System.Windows.Forms.BindingSource> Składnika działa jako kanał i źródła danych dla innych kontrolek, które można powiązać. Udostępnia abstrakcję połączenie danych formularza podczas przekazywania za pomocą poleceń do bazowego wykaz danych. Ponadto można dodać danych bezpośrednio do niego, tak aby sam składnik działa jako źródło danych.  
+<xref:System.Windows.Forms.BindingSource> Składnik został zaprojektowany, aby uprościć proces powiązań formantów do bazowego źródła danych. <xref:System.Windows.Forms.BindingSource> Składnik działa jako kanał i źródło danych dla innych formantów do powiązania. Zapewnia abstrakcję połączenia danych formularza podczas przekazywania poleceń do podstawowej listy danych. Ponadto można dodać bezpośrednio do niego dane, tak aby sam składnik funkcjonuje jako źródło danych.  
   
-## <a name="bindingsource-component-as-an-intermediary"></a>BindingSource, składnik jako pośrednik  
- <xref:System.Windows.Forms.BindingSource> Składnika działa jako źródło danych dla niektórych lub wszystkich kontrolek w formularzu. W programie Visual Studio <xref:System.Windows.Forms.BindingSource> może być powiązana z kontrolką poprzez `DataBindings` właściwość, która jest dostępna z **właściwości** okna. Zobacz też [jak: Powiązywanie kontrolek formularzy Windows ze składnikiem BindingSource przy użyciu narzędzia Projektant](bind-wf-controls-with-the-bindingsource.md).  
+## <a name="bindingsource-component-as-an-intermediary"></a>Składnik BindingSource jako pośrednik  
+ <xref:System.Windows.Forms.BindingSource> Składnik działa jako źródło danych dla niektórych lub wszystkich kontrolek w formularzu. W programie Visual Studio <xref:System.Windows.Forms.BindingSource> można powiązać kontrolkę za `DataBindings` pomocą właściwości, która jest dostępna z okna **Właściwości** . Zapoznaj [się również z tematem: Powiązywanie formantów Windows Forms ze składnikiem BindingSource przy użyciu narzędzia](bind-wf-controls-with-the-bindingsource.md)Projektant.  
   
- Możesz powiązać <xref:System.Windows.Forms.BindingSource> składnik do obu źródeł danych proste, jak w pojedynczej właściwości obiektu lub kolekcji podstawowych, takich jak <xref:System.Collections.ArrayList>i źródeł danych złożonych, takich jak tabela bazy danych. <xref:System.Windows.Forms.BindingSource> Składnika działa jako pośrednik, który zapewnia usługi zarządzania wiązanie i waluty. W czasie projektowania lub w czasie wykonywania można powiązać <xref:System.Windows.Forms.BindingSource> składnika ze źródłem danych złożonych, ustawiając jego <xref:System.Windows.Forms.BindingSource.DataSource%2A> i <xref:System.Windows.Forms.BindingSource.DataMember%2A> właściwości do bazy danych i tabeli, odpowiednio. Poniższa ilustracja przedstawia gdzie <xref:System.Windows.Forms.BindingSource> składnika dopasowuje się do istniejącej architektury powiązanie danych.  
+ Można powiązać <xref:System.Windows.Forms.BindingSource> składnik z prostymi źródłami danych, takimi jak pojedyncza właściwość obiektu lub Kolekcja podstawowa, taka jak <xref:System.Collections.ArrayList>i złożone źródła danych, takie jak tabela bazy danych. <xref:System.Windows.Forms.BindingSource> Składnik działa jako pośrednik, który zapewnia usługi dotyczące powiązań i zarządzania walutą. W czasie projektowania lub czasie wykonywania można powiązać <xref:System.Windows.Forms.BindingSource> składnik ze złożonym źródłem danych, ustawiając jego <xref:System.Windows.Forms.BindingSource.DataSource%2A> właściwości i <xref:System.Windows.Forms.BindingSource.DataMember%2A> odpowiednio do bazy danych i tabeli. Na poniższej ilustracji przedstawiono, <xref:System.Windows.Forms.BindingSource> gdzie składnik mieści się w istniejącej architekturze powiązania danych.  
   
- ![Powiązanie źródła i architektura powiązań danych](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
+ ![Architektura powiązania źródła i danych](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
   
 > [!NOTE]
->  W czasie projektowania, utworzy pewne akcje, takie jak przeciągnięcie tabeli bazy danych z okna dane na pusty formularz <xref:System.Windows.Forms.BindingSource> składnika powiązać bazowego źródła danych i dodawanie kontrolek obsługujących dane łącznie w jednej operacji. Zobacz też [formanty powiązania formularzy Windows do danych w programie Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio).  
+>  W czasie projektowania niektóre akcje, takie jak przeciąganie tabeli bazy danych z okna danych do pustego formularza, spowodują utworzenie <xref:System.Windows.Forms.BindingSource> składnika, powiązanie go z źródłowym źródłem danych i dodanie kontrolek obsługujących dane w jednej operacji. Zapoznaj [się również z kontrolkami Windows Forms powiązań z danymi w programie Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio).  
   
-## <a name="bindingsource-component-as-a-data-source"></a>BindingSource, składnik jako źródło danych  
- Jeśli rozpoczniesz Dodawanie elementów do <xref:System.Windows.Forms.BindingSource> składnika bez określenia listy może być powiązane z składnik będzie zachowywać się jak źródło danych styl listy i zaakceptować te dodane elementy.  
+## <a name="bindingsource-component-as-a-data-source"></a>BindingSource — składnik jako źródło danych  
+ Jeśli zaczniesz dodawać elementy do <xref:System.Windows.Forms.BindingSource> składnika bez wcześniejszego określenia listy, z którą chcesz powiązać, składnik będzie działał jak źródło danych w stylu listy i akceptuje te dodane elementy.  
   
- Ponadto, można napisać kod do dostarczają niestandardowych funkcjonalności "Działają funkcje AddNew" poprzez <xref:System.Windows.Forms.BindingSource.AddingNew> zdarzenie, które jest wywołane, gdy <xref:System.Windows.Forms.BindingSource.AddNew%2A> metoda jest wywoływana przed element dodawany do listy. Aby uzyskać więcej informacji, zobacz [architektura składnika BindingSource](bindingsource-component-architecture.md).  
+ Ponadto można napisać kod, aby zapewnić niestandardowe funkcje "AddNew" przy <xref:System.Windows.Forms.BindingSource.AddingNew> użyciu zdarzenia, które jest zgłaszane, <xref:System.Windows.Forms.BindingSource.AddNew%2A> gdy metoda jest wywoływana przed dodaniem elementu do listy. Aby uzyskać więcej informacji, zobacz temat [Architektura składnika BindingSource](bindingsource-component-architecture.md).  
   
 ## <a name="navigation"></a>Nawigacja  
- Dla użytkowników, którzy muszą nawigowanie po danych w formularzu <xref:System.Windows.Forms.BindingNavigator> składnika umożliwia nawigowanie i manipulowanie danymi w połączeniu z <xref:System.Windows.Forms.BindingSource> składnika. Aby uzyskać więcej informacji, zobacz [BindingNavigator — kontrolka](bindingnavigator-control-windows-forms.md).  
+ W przypadku użytkowników, którzy chcą nawigować po danych w formularzu, składnik <xref:System.Windows.Forms.BindingNavigator> ten umożliwia nawigowanie i manipulowanie danymi w ramach koordynacji <xref:System.Windows.Forms.BindingSource> z składnikiem. Aby uzyskać więcej informacji, zobacz [BindingNavigator — kontrolka](bindingnavigator-control-windows-forms.md).  
   
 ## <a name="data-manipulation"></a>Manipulowanie danymi  
- : <xref:System.Windows.Forms.BindingSource> Działa jako <xref:System.Windows.Forms.CurrencyManager> wszystkie jej powiązań i może, w związku z tym, zapewniają dostęp do waluty i pozycji informacji o źródle danych. W poniższej tabeli przedstawiono elementy członkowskie <xref:System.Windows.Forms.BindingSource> składnik udostępnia do uzyskiwania dostępu i manipulowania danych bazowych.  
+ : <xref:System.Windows.Forms.BindingSource> Działa<xref:System.Windows.Forms.CurrencyManager> jako dla wszystkich powiązań i może, w związku z tym, zapewnić dostęp do waluty i informacje o pozycji dotyczące źródła danych. W poniższej tabeli przedstawiono członków, których <xref:System.Windows.Forms.BindingSource> składnik zapewnia do uzyskiwania dostępu do danych źródłowych i manipulowania nimi.  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Current%2A> Właściwość|Pobiera bieżący element źródła danych.|  
-|<xref:System.Windows.Forms.BindingSource.Position%2A> Właściwość|Pobiera lub ustawia bieżącą pozycję na liście podstawowej.|  
-|<xref:System.Windows.Forms.BindingSource.List%2A> Właściwość|Pobiera listę, która jest ocena <xref:System.Windows.Forms.BindingSource.DataSource%2A> i <xref:System.Windows.Forms.BindingSource.DataMember%2A> oceny. Jeśli <xref:System.Windows.Forms.BindingSource.DataMember%2A> nie jest ustawiona, zwraca listę, określony przez <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
-|<xref:System.Windows.Forms.BindingSource.Insert%2A> — Metoda|Wstawia element na liście pod określonym indeksem.|  
-|<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> — Metoda|Usuwa bieżący element z listy.|  
-|<xref:System.Windows.Forms.BindingSource.EndEdit%2A> — Metoda|Ma zastosowanie oczekujących zmian do bazowego źródła danych.|  
-|<xref:System.Windows.Forms.BindingSource.CancelEdit%2A> — Metoda|Anuluje bieżącą operację edycji.|  
-|<xref:System.Windows.Forms.BindingSource.AddNew%2A> — Metoda|Dodaje nowy element do listy źródłowej. Jeśli źródło danych implementuje <xref:System.ComponentModel.IBindingList> i zwraca element <xref:System.Windows.Forms.BindingSource.AddingNew> zdarzenie dodaje ten element. W przeciwnym razie żądanie jest przekazywane do listy <xref:System.ComponentModel.IBindingList.AddNew%2A> metody. Jeśli nie jest podstawowa lista <xref:System.ComponentModel.IBindingList>, element jest tworzone automatycznie za pomocą jego publicznego konstruktora domyślnego.|  
+|<xref:System.Windows.Forms.BindingSource.Current%2A>wartość|Pobiera bieżący element źródła danych.|  
+|<xref:System.Windows.Forms.BindingSource.Position%2A>wartość|Pobiera lub ustawia bieżącą pozycję na liście podstawowej.|  
+|<xref:System.Windows.Forms.BindingSource.List%2A>wartość|Pobiera listę, która jest oszacowaniem <xref:System.Windows.Forms.BindingSource.DataSource%2A> i <xref:System.Windows.Forms.BindingSource.DataMember%2A> oszacowaniem. Jeśli <xref:System.Windows.Forms.BindingSource.DataMember%2A> nie jest ustawiona, zwraca listę określoną przez <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
+|<xref:System.Windows.Forms.BindingSource.Insert%2A>Method|Wstawia element na liście pod określonym indeksem.|  
+|<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>Method|Usuwa bieżący element z listy.|  
+|<xref:System.Windows.Forms.BindingSource.EndEdit%2A>Method|Stosuje oczekujące zmiany do bazowego źródła danych.|  
+|<xref:System.Windows.Forms.BindingSource.CancelEdit%2A>Method|Anuluje bieżącą operację edycji.|  
+|<xref:System.Windows.Forms.BindingSource.AddNew%2A>Method|Dodaje nowy element do listy podstawowej. Jeśli źródło danych implementuje <xref:System.ComponentModel.IBindingList> i zwraca element <xref:System.Windows.Forms.BindingSource.AddingNew> ze zdarzenia, dodaje ten element. W przeciwnym razie żądanie jest przesyłane do <xref:System.ComponentModel.IBindingList.AddNew%2A> metody listy. Jeśli podstawowa lista nie <xref:System.ComponentModel.IBindingList>jest, element jest automatycznie tworzony za pomocą publicznego konstruktora bez parametrów.|  
   
 ## <a name="sorting-and-filtering"></a>sortowanie i filtrowanie  
- Zazwyczaj powinien współpracować z uporządkowane lub filtrowane widok źródła danych. W poniższej tabeli przedstawiono elementy członkowskie <xref:System.Windows.Forms.BindingSource> zawiera składnik źródła danych.  
+ Zazwyczaj należy współpracować z widokiem uporządkowanym lub filtrowanym źródła danych. W poniższej tabeli przedstawiono elementy członkowskie <xref:System.Windows.Forms.BindingSource> udostępniane przez źródło danych składnika.  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Sort%2A> Właściwość|Jeśli źródło danych jest <xref:System.ComponentModel.IBindingList>, pobiera lub ustawia nazwę kolumny, używane do sortowania i informacje o kolejności sortowania. Jeśli źródło danych jest <xref:System.ComponentModel.IBindingListView> i obsługuje zaawansowane, sortowanie, pobiera wiele nazw kolumn, używane do sortowania i informacje o kolejności sortowania|  
-|<xref:System.Windows.Forms.BindingSource.Filter%2A> Właściwość|Jeśli źródło danych jest <xref:System.ComponentModel.IBindingListView>, pobiera lub ustawia wyrażenie używane do filtrowania, które wiersze są wyświetlane.|  
+|<xref:System.Windows.Forms.BindingSource.Sort%2A>wartość|Jeśli źródło danych to <xref:System.ComponentModel.IBindingList>, Pobiera lub ustawia nazwę kolumny służącą do sortowania i sortowania informacji. Jeśli źródło danych jest obsługiwane przez <xref:System.ComponentModel.IBindingListView> funkcję sortowania zaawansowanego, pobiera wiele nazw kolumn używanych do sortowania i sortowania informacji o kolejności|  
+|<xref:System.Windows.Forms.BindingSource.Filter%2A>wartość|Jeśli źródło danych jest <xref:System.ComponentModel.IBindingListView>, Pobiera lub ustawia wyrażenie używane do filtrowania wierszy, które są wyświetlane.|  
   
 ## <a name="see-also"></a>Zobacz także
 

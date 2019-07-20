@@ -10,28 +10,28 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09eb37fd2c1bf77e981a2eb7952b1fff5110e977
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bed67019fdd3bb81585d08349715a895dfe5a681
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61872381"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363960"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Omówienie modelu programowania opartego na atrybutach (MEF)
 
-W Managed Extensibility Framework (MEF), *model programowania* jest metodą określonego definiowania zestawu obiektów koncepcyjny, na których działa MEF. Te koncepcyjny obiekty obejmują elementy, importu i eksportu. MEF korzysta z tych obiektów, ale nie określa, jak powinna być reprezentowana. W związku z tym szerokiej gamy modele programowania są możliwe, w tym dostosowane modeli programowania.
+W Managed Extensibility Framework (MEF) *model programowania* jest konkretną metodą definiowania zestawu obiektów koncepcyjnych, na których MEF działa. Te obiekty koncepcyjne obejmują części, Importy i eksporty. MEF używa tych obiektów, ale nie określa sposobu ich reprezentowania. W związku z tym możliwe jest szeroką gamę modeli programowania, w tym dostosowane modele programowania.
 
-Wartość domyślna jest model programowania, używany w MEF *model programowania opartego na atrybutach*. W opartego na atrybutach programowania części modelu importów, eksportów i inne obiekty są definiowane za pomocą atrybutów, które dekoracji zwykłych klas .NET Framework. W tym temacie wyjaśniono, jak używać atrybutów opartego na atrybutach model programowania do tworzenia aplikacji MEF.
+Domyślny model programowania używany w MEF to *model programowania*z atrybutami. W przypadku częściowych modeli programowania, Importy, eksporty i inne obiekty są definiowane przy użyciu atrybutów, które dekorowaćą zwykłe klasy .NET Framework. W tym temacie wyjaśniono, jak używać atrybutów dostarczonych przez model programowania z atrybutami do tworzenia aplikacji MEF.
 
 <a name="import_and_export_basics"></a>
 
-## <a name="import-and-export-basics"></a>Importowanie i eksportowanie podstawy
+## <a name="import-and-export-basics"></a>Importowanie i eksportowanie podstawowych podstaw
 
-*Wyeksportować* jest wartością, która część zawiera z innymi częściami w kontenerze, oraz *zaimportować* jest to wymagane, określającym części do kontenera, do wypełnienia z dostępnych eksportowania. W modelu programowania opartego na atrybutach przywozu i wywozu są zadeklarowane przez urządzanie klas lub składowych o `Import` i `Export` atrybutów. `Export` Atrybut może dekoracji klasy, pola, właściwości lub metody podczas `Import` atrybut może dekoracji parametru pola, właściwości lub konstruktora.
+*Eksport* jest wartością, którą część dostarcza do innych części w kontenerze, a *Import* jest wymaganym przez część, która ma zostać wypełniona z dostępnych eksportów. W modelu programowania z atrybutami import i eksporty są deklarowane przez klasy dekorowania nazwy lub elementy członkowskie `Import` z `Export` atrybutami i. Atrybut może dekorować klasę, pole, właściwość lub metodę, `Import` podczas gdy atrybut może dekorować pole, właściwość lub parametr konstruktora. `Export`
 
-Aby Importuj, aby można dopasować Eksport, import i eksport muszą mieć taką samą *kontraktu*. Umowa składa się ciągu o nazwie *Nazwa kontraktu*oraz typ wyeksportowane lub importowany obiekt o nazwie *typ kontraktu*. Tylko wtedy, gdy zarówno Nazwa kontraktu, jak i kontrakt typ dopasowania Eksport uznaje się do spełnienia określonego importu.
+Aby import został dopasowany do eksportu, importowanie i eksportowanie musi mieć ten sam *kontrakt*. Umowa składa się z ciągu, zwanego *nazwą kontraktu*, i typu wyeksportowanego lub zaimportowanego obiektu, zwanego *typem kontraktu*. Tylko wtedy, gdy zarówno Nazwa kontraktu, jak i typ kontraktu są uważane za wyeksportowanie w celu spełnienia określonego importu.
 
-Jeden lub oba parametry kontrakt może być jawne lub niejawne. Poniższy kod przedstawia klasę, która deklaruje podstawowe importu.
+Jeden lub oba parametry kontraktu mogą być niejawne lub jawne. Poniższy kod przedstawia klasę, która deklaruje import podstawowy.
 
 ```vb
 Public Class MyClass1
@@ -48,9 +48,9 @@ public class MyClass
 }
 ```
 
-W tym importu `Import` atrybut nie ma typu kontraktu ani parametrem nazwy kontraktu dołączone. W związku z tym zarówno będzie można wywnioskować z ozdobione właściwości. W tym przypadku będzie typ kontraktu `IMyAddin`, Nazwa kontraktu. zostanie ona unikatowy ciąg utworzony na podstawie typu kontraktu. (Innymi słowy, Nazwa kontraktu pokaże tylko eksportu, których nazwy są również wnioskowany z typu `IMyAddin`.)
+W przypadku tego importu `Import` atrybut nie ma typu kontraktu ani dołączonego parametru nazwy kontraktu. W związku z tym oba zostaną wywnioskowane z właściwości dekoracyjnej. W takim przypadku typem kontraktu będzie `IMyAddin`, a nazwa kontraktu będzie unikatowym ciągiem utworzonym na podstawie typu kontraktu. (Innymi słowy Nazwa kontraktu będzie odpowiadać wyłącznie eksportom, których nazwy są również wywnioskowane z typu `IMyAddin`).
 
-Na poniższym obrazie przedstawiono eksportu, które pasuje do poprzedniego importu.
+Poniżej przedstawiono eksport pasujący do poprzedniego importu.
 
 ```vb
 <Export(GetType(IMyAddin))>
@@ -65,12 +65,12 @@ End Class
 public class MyLogger : IMyAddin { }
 ```
 
-W tym eksportu jest typ kontraktu `IMyAddin` ponieważ jest on parametr `Export` atrybutu. Wyeksportowanego typu musi być taki sam jak typ kontraktu, pochodzi od typu kontraktu lub implementować typ kontraktu, jeśli jest to interfejs. W tym eksportu, rzeczywisty typ `MyLogger` implementuje interfejs `IMyAddin`. Nazwa kontraktu jest wnioskowany z typu kontraktu, co oznacza, że tego eksportu będą zgodne poprzedniego importu.
+W przypadku tego eksportu typ kontraktu to `IMyAddin` , ponieważ jest określony jako parametr `Export` atrybutu. Wyeksportowany typ musi być taki sam jak typ kontraktu, pochodzić od typu kontraktu lub implementować typ kontraktu, jeśli jest to interfejs. W tym wywozie rzeczywisty typ `MyLogger` implementuje interfejs. `IMyAddin` Nazwa kontraktu jest wywnioskowana z typu kontraktu, co oznacza, że ten eksport będzie pasował do poprzedniego importu.
 
 > [!NOTE]
-> Eksportów i importów zwykle powinny zostać zadeklarowane na publiczne klasy lub elementów członkowskich. Innych deklaracji są obsługiwane, ale eksportowanie lub importowanie prywatny, chroniony lub wewnętrzny element członkowski przerywa modelu izolacji dla części i dlatego nie zaleca się.
+> Eksporty i Importy powinny być zwykle deklarowane dla publicznych klas lub członków. Inne deklaracje są obsługiwane, ale Eksportowanie lub importowanie prywatnego, chronionego lub wewnętrznego elementu członkowskiego dzieli model izolacji części i dlatego nie jest zalecane.
 
-Typ kontraktu musi być zgodna dokładnie do eksportowania i importowania, aby być uznane za pasujące. Należy wziąć pod uwagę następującej operacji eksportowania.
+Typ kontraktu musi dokładnie pasować do eksportu i importu, aby można go było uznać za dopasowanie. Rozważmy następujący eksport.
 
 ```vb
 <Export()> 'WILL NOT match the previous import!
@@ -85,9 +85,9 @@ End Class
 public class MyLogger : IMyAddin { }
 ```
 
-W tym eksportu jest typ kontraktu `MyLogger` zamiast `IMyAddin`. Mimo że `MyLogger` implementuje `IMyAddin`i mogą być rzutowane na `IMyAddin` obiektu tego eksportu nie będą zgodne poprzedniego importowania, ponieważ typy kontraktu nie są takie same.
+W przypadku tego eksportu typ kontraktu to `MyLogger` `IMyAddin`zamiast. Mimo że `MyLogger` implementuje `IMyAddin`i dlatego `IMyAddin` może być rzutowane do obiektu, ten eksport nie będzie pasował do poprzedniego importu, ponieważ typy kontraktu nie są takie same.
 
-Ogólnie rzecz biorąc nie jest konieczne określić nazwę kontraktu i kontrakty większość powinna być zdefiniowana pod względem typu kontraktu i metadanych. Jednak w pewnych okolicznościach należy bezpośrednio określić nazwę umowy. Najbardziej często zdarza się, gdy klasa eksportuje wiele wartości, które mają wspólnego typu, na przykład w nim elementów podstawowych. Nazwa kontraktu, można określić jako pierwszy parametr `Import` lub `Export` atrybutu. Poniższy kod przedstawia importu i eksportu o nazwie określonej umowy `MajorRevision`.
+Ogólnie rzecz biorąc nie trzeba określać nazwy kontraktu, a większość kontraktów powinna być zdefiniowana na podstawie typu kontraktu i metadanych. Jednak w pewnych okolicznościach ważne jest bezpośrednie określenie nazwy kontraktu. Najczęstszym przypadkiem jest to, że Klasa eksportuje kilka wartości, które współużytkują wspólny typ, takich jak elementy pierwotne. Nazwę kontraktu można określić jako pierwszy parametr `Import` atrybutu lub. `Export` Poniższy kod przedstawia import i eksport z określoną nazwą `MajorRevision`kontraktu.
 
 ```vb
 Public Class MyExportClass
@@ -126,11 +126,11 @@ public class MyExportClass
 }
 ```
 
-Jeśli nie określono typu kontraktu, nadal będzie można wywnioskować z typu importu lub eksportu. Jednak nawet jeśli nazwa kontraktu jest jawnie określona, typ kontraktu musi być również zgodna dokładnie do importowania i eksportowania do być uznane za pasujące. Na przykład jeśli `MajorRevision` pole było ciągu, typy kontraktu wywnioskowane nie będzie odpowiadać i eksportowania i importowania, pomimo o tej samej nazwie kontraktu nie będzie odpowiadać.
+Jeśli typ kontraktu nie zostanie określony, będzie on nadal wywnioskowany na podstawie typu importu lub eksportu. Jednak nawet jeśli nazwa kontraktu jest określona jawnie, typ kontraktu musi również pasować dokładnie do importu i eksportu, aby można go było uznać za dopasowanie. Na przykład, jeśli `MajorRevision` pole było ciągiem, wywnioskowane typy kontraktu nie będą zgodne, a eksport nie jest zgodny z importem, mimo że ma tę samą nazwę kontraktu.
 
-### <a name="importing-and-exporting-a-method"></a>Importowanie i eksportowanie — metoda
+### <a name="importing-and-exporting-a-method"></a>Importowanie i eksportowanie metody
 
-`Export` Atrybut może także dekoracji metody, w taki sam sposób jak klasa, właściwość lub funkcji. Eksportuje metody należy określić typ kontraktu lub Nazwa kontraktu, ponieważ nie można wywnioskować typu. Określony typ może być niestandardowego delegata lub typ ogólny, taką jak `Func`. Następujące klasy eksportuje metodę o nazwie `DoSomething`.
+Ten `Export` atrybut może również dekorować metodę w taki sam sposób jak Klasa, właściwość lub funkcja. Eksporty metod muszą określać typ kontraktu lub nazwę kontraktu, ponieważ nie można wywnioskować typu. Określony typ może być niestandardowym delegatem lub typem ogólnym, takim jak `Func`. Następująca Klasa eksportuje metodę o nazwie `DoSomething`.
 
 ```vb
 Public Class MyAddin
@@ -153,7 +153,7 @@ public class MyAddin
 }
 ```
 
-W tej klasie `DoSomething` metoda przyjmuje jeden `int` parametr i zwraca `string`. Aby dopasować tego eksportu, importowania część musi deklarować właściwego członka. Następujące klasy Importy `DoSomething` metody.
+W tej klasie `DoSomething` Metoda przyjmuje jeden `int` parametr i zwraca `string`. Aby można było dopasować ten eksport, część importująca musi deklarować odpowiedni element członkowski. Następująca Klasa importuje `DoSomething` metodę.
 
 ```vb
 Public Class MyClass1
@@ -172,17 +172,17 @@ public class MyClass
 }
 ```
 
-Aby uzyskać więcej informacji o sposobie użytkowania `Func<T, T>` obiektu, zobacz <xref:System.Func%602>.
+Aby uzyskać więcej informacji o sposobach korzystania z `Func<T, T>` obiektu, zobacz <xref:System.Func%602>.
 
 <a name="types_of_imports"></a>
 
-## <a name="types-of-imports"></a>Typy Importy
+## <a name="types-of-imports"></a>Typy importów
 
-MEF wsparcia podmiotu trzeciego zaimportować niektóre typy w tym dynamiczne, z opóźnieniem, wstępnie wymagane i opcjonalne.
+MEF obsługuje kilka typów importu, w tym dynamiczne, opóźnione, wymagania wstępne i opcjonalne.
 
 ### <a name="dynamic-imports"></a>Importy dynamiczne
 
-W niektórych przypadkach importowania klasy może być zgodny eksportów wystąpień dowolnego typu, o nazwie określonej umowy. W tym scenariuszu można zadeklarować klasy *dynamicznego importowania*. Następujący import pasuje do dowolnego eksportu z nazwą kontraktu "TheString".
+W niektórych przypadkach Klasa importowania może chcieć dopasować eksporty dowolnego typu, który ma określoną nazwę kontraktu. W tym scenariuszu Klasa może deklarować *Import dynamiczny*. Następujący import pasuje do dowolnego eksportu z nazwą kontraktu "TheString".
 
 ```vb
 Public Class MyClass1
@@ -201,7 +201,7 @@ public class MyClass
 }
 ```
 
-Gdy typ kontraktu jest wnioskowany z `dynamic` — słowo kluczowe, będą one zgodne dowolny typ kontraktu. W takim przypadku należy import **zawsze** Określ nazwę kontraktu do dopasowania. (Jeśli określono bez nazwy kontraktu, importowania zostanie ono uznane za eksportuje żadnych danych.) Oba następujące eksporty umożliwi dopasowanie poprzedniego importu.
+Gdy typ kontraktu jest wywnioskowany na podstawie `dynamic` słowa kluczowego, będzie pasować do dowolnego typu kontraktu. W takim przypadku import powinien **zawsze** określać nazwę kontraktu do dopasowania. (Jeśli nazwa kontraktu nie zostanie określona, importowanie zostanie uznane za niezgodne z eksportami). Oba poniższe eksporty byłyby zgodne z poprzednim importowaniem.
 
 ```vb
 <Export("TheString", GetType(IMyAddin))>
@@ -224,11 +224,11 @@ public class MyLogger : IMyAddin { }
 public class MyToolbar { }
 ```
 
-Oczywiście importowania klasy musi być przygotowana do czynienia z obiekt dowolnego typu.
+Oczywiście Importowanie klasy musi być przygotowana do działania z obiektem dowolnego typu.
 
-### <a name="lazy-imports"></a>Importy
+### <a name="lazy-imports"></a>Importy z opóźnieniem
 
-W niektórych przypadkach importowania klasy mogą wymagać pośrednie odwołanie do obiektu importowanych tak, aby obiekt nie zostanie uruchomiony natychmiast. W tym scenariuszu można zadeklarować klasy *importu z opóźnieniem* za pomocą typu kontraktu `Lazy<T>`. Następująca właściwość importowania deklaruje importu z opóźnieniem.
+W niektórych przypadkach Klasa import może wymagać pośredniego odwołania do zaimportowanego obiektu, tak aby obiekt nie został utworzony jako natychmiast. W tym scenariuszu Klasa może deklarować import z *opóźnieniem* przy użyciu typu `Lazy<T>`kontraktu. Następująca właściwość importowania deklaruje import z opóźnieniem.
 
 ```vb
 Public Class MyClass1
@@ -247,7 +247,7 @@ public class MyClass
 }
 ```
 
-Z punktu widzenia aparat kompozycji, typ kontraktu `Lazy<T>` uznaje się taka sama jak typ kontraktu `T`. W związku z tym poprzednie importu umożliwi dopasowanie następującej operacji eksportowania.
+Z punktu widzenia aparatu kompozycji typ `Lazy<T>` kontraktu jest uznawany za identyczny z `T`typem kontraktu. W związku z tym poprzedni import będzie pasował do poniższego eksportu.
 
 ```vb
 <Export(GetType(IMyAddin))>
@@ -262,22 +262,22 @@ End Class
 public class MyLogger : IMyAddin { }
 ```
 
-Nazwa kontraktu i typ umowy można określić w `Import` atrybutu do zaimportowania z opóźnieniem, zgodnie z wcześniejszym opisem w sekcji "Podstawowe przywozu i wywozu".
+Nazwę kontraktu i typ kontraktu można określić w `Import` atrybucie dla importu z opóźnieniem, zgodnie z wcześniejszym opisem w sekcji "podstawowe Importy i eksporty".
 
 ### <a name="prerequisite-imports"></a>Importy wymagań wstępnych
 
-Wyeksportowane części MEF są zwykle tworzone przez aparat kompozycji w odpowiedzi na żądanie bezpośredniego lub konieczność wypełnienia dopasowane importu. Domyślnie podczas tworzenia części aparat składu używa konstruktor bez parametrów. Aby aparat, użyj innego konstruktora, możesz oznaczyć go za pomocą `ImportingConstructor` atrybutu.
+Wyeksportowane części MEF są zwykle tworzone przez aparat kompozycji, w odpowiedzi na bezpośrednie żądanie lub potrzebę wypełnienia dopasowanego importu. Domyślnie podczas tworzenia części aparat kompozycji używa konstruktora bez parametrów. Aby aparat używał innego konstruktora, można oznaczyć go `ImportingConstructor` atrybutem.
 
-Każda część może mieć tylko jeden konstruktor do użycia przez aparat kompozycji. Brak domyślnego konstruktora i nie `ImportingConstructor` atrybutu lub podając więcej niż jeden `ImportingConstructor` atrybutu, spowoduje wygenerowanie błędu.
+Każda część może mieć tylko jeden Konstruktor do użytku przez aparat kompozycji. Nie ma żadnego konstruktora bez parametrów ani `ImportingConstructor` atrybutu lub nie zawiera więcej niż jednego `ImportingConstructor` atrybutu, spowoduje wystąpienie błędu.
 
-Aby wypełnić parametry do konstruktora oznaczonego `ImportingConstructor` atrybutu, wszystkie te parametry są automatycznie zadeklarowane jako import. Jest to wygodny sposób, aby zadeklarować importów, które są używane podczas inicjowania części. Następujące klasy używa `ImportingConstructor` do deklarowania importu.
+Aby wypełnić parametry konstruktora oznaczonego `ImportingConstructor` atrybutem, wszystkie te parametry są automatycznie deklarowane jako Importy. Jest to wygodny sposób deklarowania importu, które są używane podczas inicjowania części. Następująca Klasa używa `ImportingConstructor` do deklarowania importu.
 
 ```vb
 Public Class MyClass1
 
     Private _theAddin As IMyAddin
 
-    'Default constructor will NOT be used
+    'Parameterless constructor will NOT be used
     'because the ImportingConstructor
     'attribute is present.
     Public Sub New()
@@ -300,7 +300,7 @@ public class MyClass
 {
     private IMyAddin _theAddin;
 
-    //Default constructor will NOT be
+    //Parameterless constructor will NOT be
     //used because the ImportingConstructor
     //attribute is present.
     public MyClass() { }
@@ -316,7 +316,7 @@ public class MyClass
 }
 ```
 
-Domyślnie `ImportingConstructor` atrybutu używa wywnioskować typy kontraktu i kontrakt nazwy dla wszystkich importów parametru. Istnieje możliwość zastąpić to ustawienie przez urządzanie parametrów z `Import` atrybuty, które można zdefiniować typ kontraktu i Nazwa kontraktu jawnie. Poniższy kod demonstruje konstruktora, który używa tej składni, aby zaimportować klasy pochodnej zamiast klasy nadrzędnej.
+Domyślnie `ImportingConstructor` atrybut używa wnioskowanych typów kontraktu i nazw kontraktów dla wszystkich importowanych parametrów. Można to zastąpić, dekorowania nazwy parametry z `Import` atrybutami, a następnie jawnie zdefiniować typ kontraktu i nazwę kontraktu. Poniższy kod demonstruje konstruktora, który używa tej składni do importowania klasy pochodnej zamiast klasy nadrzędnej.
 
 ```vb
 <ImportingConstructor()>
@@ -333,17 +333,17 @@ public MyClass([Import(typeof(IMySubAddin))]IMyAddin MyAddin)
 }
 ```
 
-W szczególności należy zachować ostrożność przy użyciu kolekcji parametrów. Na przykład, jeśli określisz `ImportingConstructor` w Konstruktorze z parametrem typu `IEnumerable<int>`, importowanie będzie odpowiadał jednej Eksport typu `IEnumerable<int>`, zamiast zestawu eksportuje typ `int`. Do dopasowania zbiór eksportuje typ `int`, masz do dekorowania parametr o `ImportMany` atrybutu.
+W szczególności należy zachować ostrożność przy użyciu parametrów kolekcji. `ImportingConstructor` Na przykład jeśli określisz dla konstruktora z parametrem typu `IEnumerable<int>`, import będzie zgodny z pojedynczym eksportem typu `IEnumerable<int>`, a nie z zestawem eksportów typu `int`. Aby dopasować zestaw eksportów typu `int`, należy dekorować parametr `ImportMany` z atrybutem.
 
-Parametry zadeklarowane jako Import przez `ImportingConstructor` atrybutu są również oznaczane jako *importuje wstępnie wymaganego składnika*. MEF zwykle umożliwia eksportowanie i importowanie do formularza *cyklu*. Na przykład cykl jest, gdzie Importy obiekt A obiekt B, który z kolei importuje A. obiektu W zwykłych okolicznościach cyklu nie stanowi to problemu, a kontener kompozycji zazwyczaj tworzy oba obiekty.
+Parametry zadeklarowane jako Importy `ImportingConstructor` przez atrybut są również oznaczone jako *Importy wymagań wstępnych*. MEF zwykle zezwala na Eksporty i Importy w celu utworzenia *cyklu*. Na przykład cykl polega na tym, że obiekt A importuje obiekt B, który z kolei importuje obiekt A. W normalnych warunkach cykl nie jest problemem, a kontener kompozycji konstruuje oba obiekty w normalny sposób.
 
-Przy importowany wartość jest wymagana przez Konstruktor części, ten obiekt nie może uczestniczyć w cyklu. Jeśli obiekt A wymaga można skonstruować obiekt B, zanim można skonstruować sam, a obiekt B importuje element obiektu, a następnie cyklu nie będzie można rozwiązać, i wystąpi błąd kompozycji. Importy zadeklarowanego w Konstruktorze parametry są w związku z tym Importy wymagań wstępnych, które wszystkie należy podać przed wszystkich eksporty od obiektu, który wymaga ich używać.
+Gdy importowana wartość jest wymagana przez konstruktora części, ten obiekt nie może uczestniczyć w cyklu. Jeśli obiekt A wymaga skonstruowania obiektu B, zanim będzie mógł być skonstruowany, a obiekt B importuje obiekt A, cykl nie będzie mógł zostać rozpoznany i wystąpi błąd kompozycji. Importy zadeklarowane w parametrach konstruktorów są dlatego Importy wymagające wymagań wstępnych, które muszą zostać wypełnione przed wszelkimi eksportami z obiektu, który go wymaga.
 
 ### <a name="optional-imports"></a>Importy opcjonalne
 
-`Import` Atrybut określa wymagania dla części do funkcji. Jeśli import nie mogą być spełnione, kompozycji tę część zakończy się niepowodzeniem, a część nie będą dostępne.
+Ten `Import` atrybut określa wymaganie części do działania. Jeśli nie można spełnić importu, kompozycja tej części zakończy się niepowodzeniem, a część nie będzie dostępna.
 
-Można określić, że importowanie jest *opcjonalne* przy użyciu `AllowDefault` właściwości. W tym przypadku kompozycji zostanie wykonane pomyślnie nawet jeśli importowania jest niezgodny z dostępnych eksportowanie i importowanie właściwość zostanie ustawiona na domyślne dla tego typu właściwości (`null` dla właściwości obiektu `false` wartości logicznych lub wartości zero dla liczbowego Właściwości). Następujące klasy używa opcjonalny import.
+Można określić, że import jest *opcjonalny* przy użyciu `AllowDefault` właściwości. W takim przypadku kompozycja powiedzie się, nawet jeśli import nie jest zgodny z żadnym dostępnym eksportem, a właściwość import zostanie ustawiona na wartość domyślną dla tego typu właściwości`null` (dla właściwości obiektu `false` , dla wartości logicznych lub zero dla wartości numerycznych Właściwości.) W poniższej klasie jest stosowane opcjonalne importowanie.
 
 ```vb
 Public Class MyClass1
@@ -369,7 +369,7 @@ public class MyClass
 
 ### <a name="importing-multiple-objects"></a>Importowanie wielu obiektów
 
-`Import` Atrybut będzie tylko pomyślnie składać się podczas dopasowuje jeden i tylko jeden Eksport. Czasami powoduje wygenerowanie błędu kompozycji. Aby zaimportować więcej niż jeden Eksport, który odpowiada tej samej umowy, należy użyć `ImportMany` atrybutu. Importy z tym atrybutem zawsze są opcjonalne. Na przykład kompozycji zakończy się niepowodzeniem, jeśli podano pasującego eksportuje żadnych danych. Następujące klasy importuje dowolnej liczby eksportów typu `IMyAddin`.
+Ten `Import` atrybut zostanie utworzony pomyślnie tylko wtedy, gdy pasuje do jednego i tylko jeden eksport. Inne przypadki spowodują powstanie błędu kompozycji. Aby zaimportować więcej niż jeden eksport zgodny z tym samym kontraktem, użyj `ImportMany` atrybutu. Importy oznaczone przy użyciu tego atrybutu są zawsze opcjonalne. Na przykład kompozycja nie powiedzie się, jeśli nie ma pasujących eksportów. Następująca Klasa importuje dowolną liczbę eksportów typu `IMyAddin`.
 
 ```vb
 Public Class MyClass1
@@ -388,9 +388,9 @@ public class MyClass
 }
 ```
 
-Zaimportowane tablicy jest możliwy przy użyciu zwykłej `IEnumerable<T>` składni i metody. Istnieje również możliwość użycia zwykłych tablicy (`IMyAddin[]`) zamiast tego.
+Dostęp do zaimportowanej tablicy można uzyskać przy `IEnumerable<T>` użyciu zwykłej składni i metod. Istnieje również możliwość użycia zwykłej tablicy (`IMyAddin[]`).
 
-Ten wzorzec może być bardzo ważne, gdy jest on używany w połączeniu z `Lazy<T>` składni. Na przykład za pomocą `ImportMany`, `IEnumerable<T>`, i `Lazy<T>`, można importować pośredniego odwołania do dowolnej liczby obiektów i wystąpienia tylko te, które stały się niezbędne. Następujące klasy pokazuje tego wzorca.
+Ten wzorzec może być bardzo istotny, gdy jest używany w połączeniu z `Lazy<T>` składnią. Na przykład przy użyciu `ImportMany`, `IEnumerable<T>`, i `Lazy<T>`, można zaimportować odwołania pośrednie do dowolnej liczby obiektów i utworzyć tylko te, które staną się niezbędne. W poniższej klasie przedstawiono ten wzorzec.
 
 ```vb
 Public Class MyClass1
@@ -413,9 +413,9 @@ public class MyClass
 
 ## <a name="avoiding-discovery"></a>Unikanie odnajdywania
 
-W niektórych przypadkach można zapobiec część odbywa się odnajdowanie w ramach katalogu. Na przykład części może być klasa bazowa mają być dziedziczone z, ale nie używane. Istnieją dwa sposoby, w tym celu. Najpierw należy użyć `abstract` — słowo kluczowe w klasie części. Klasy abstrakcyjne nigdy nie zapewniają eksportu, mimo że zapewniają one dziedziczone eksporty do klas, które wynikają z nich.
+W niektórych przypadkach może być konieczne uniemożliwienie wykrycia części jako części wykazu. Na przykład część może być klasą bazową, która ma być dziedziczona z, ale nie jest używana. Istnieją dwa sposoby osiągnięcia tego celu. Najpierw można użyć `abstract` słowa kluczowego dla klasy części. Klasy abstrakcyjne nigdy nie zapewniają eksportów, chociaż mogą zapewnić dziedziczone eksporty do klas, które pochodzą z nich.
 
-Jeżeli klasy abstrakcyjnej, mogą ją za pomocą dekoracji `PartNotDiscoverable` atrybutu. Część dekorowane za pomocą tego atrybutu będzie nieuwzględnione w dowolnym wykazów. W poniższym przykładzie pokazano te wzorce. `DataOne` spowoduje odnalezienie katalogu. Ponieważ `DataTwo` jest abstrakcyjny, go nie zostanie odnaleziona. Ponieważ `DataThree` używane `PartNotDiscoverable` atrybutu, nie zostanie odnaleziona.
+Jeśli Klasa nie może być abstrakcyjna, można ją dekorować z `PartNotDiscoverable` atrybutem. Część dekoracyjna z tym atrybutem nie zostanie uwzględniona w żadnym wykazie. Poniższy przykład ilustruje te wzorce. `DataOne`zostaną odnalezione przez wykaz. Ponieważ `DataTwo` jest abstrakcyjny, nie zostanie odnaleziony. `DataThree` Ponieważ`PartNotDiscoverable` użyto atrybutu, nie zostanie on odnaleziony.
 
 ```vb
 <Export()>
@@ -464,11 +464,11 @@ public class DataThree
 
 <a name="metadata_and_metadata_views"></a>
 
-## <a name="metadata-and-metadata-views"></a>Metadane i widoków metadanych
+## <a name="metadata-and-metadata-views"></a>Widoki metadanych i metadanych
 
-Eksporty umożliwia uzyskanie dodatkowych informacji o sobie znany jako *metadanych*. Metadane może służyć do przekazania właściwości eksportowanego obiektu do importowania części. Podjęcie decyzji, które eksportuje użycia lub zebrać informacje dotyczące eksportu bez konieczności jego konstruowania, importowania części mogą używać tych danych. Z tego powodu importu musi być z opóźnieniem się wykorzystanie metadanych.
+Eksporty mogą dostarczyć dodatkowe informacje o sobie znane jako *metadane*. Metadane mogą służyć do przekazywania właściwości eksportowanego obiektu do części importującej. Część importująca może używać tych danych do decydowania, które eksporty mają być używane, lub do zbierania informacji na temat eksportu bez konieczności konstruowania go. Z tego powodu import musi być opóźniony, aby można było używać metadanych.
 
-Się wykorzystanie metadanych, zwykle zadeklarować interfejsu nazywane *widoku metadanych*, oświadcza, jakie metadane staną się dostępne. Interfejs widok metadanych musi mieć tylko właściwości, a te właściwości musi mieć `get` metod dostępu. Poniższy interfejs jest przykładowy widok metadanych.
+Aby użyć metadanych, zazwyczaj deklaruje interfejs znany jako *widok metadanych*, który deklaruje, jakie metadane będą dostępne. Interfejs widoku metadanych musi mieć tylko właściwości, a te właściwości muszą mieć `get` metody dostępu. Poniższy interfejs to przykładowy widok metadanych.
 
 ```vb
 Public Interface IPluginMetadata
@@ -491,9 +491,9 @@ public interface IPluginMetadata
 }
 ```
 
-Istnieje również możliwość użycia kolekcji ogólnej, `IDictionary<string, object>`, jako widoku metadanych, ale forfeits zalety sprawdzania typu i należy ich unikać.
+Istnieje również możliwość użycia kolekcji ogólnej, `IDictionary<string, object>`jako widoku metadanych, ale w ten sposób można uniknąć korzystania z sprawdzania typów i należy unikać.
 
-Zazwyczaj wymagane są wszystkie właściwości o nazwie w widoku metadanych i eksportowanie, które nie są oferowane ich nie zostanie uwzględniony dopasowania. `DefaultValue` Atrybut określa, że właściwość jest opcjonalna. Jeśli właściwość nie jest uwzględniona, zostanie do niej przypisana wartość domyślna określona jako parametr `DefaultValue`. Poniżej przedstawiono dwa różne klasy ozdobione metadanymi. Oba te klasy będzie pasował do poprzedniego widoku metadanych.
+Zwykle wszystkie właściwości o nazwie w widoku metadanych są wymagane, a wszelkie eksporty, które ich nie zapewniają, nie będą uważane za dopasowanie. Ten `DefaultValue` atrybut określa, że właściwość jest opcjonalna. Jeśli właściwość nie jest uwzględniona, zostanie przypisana wartość domyślna określona jako parametr `DefaultValue`. Poniżej znajdują się dwie różne klasy z metadanymi. Obie te klasy byłyby zgodne z poprzednim widokiem metadanych.
 
 ```vb
 <Export(GetType(IPlugin))>
@@ -529,9 +529,9 @@ public class DWriter : IPlugin
 }
 ```
 
-Metadane bazy danych jest wyrażona po `Export` atrybutu przy użyciu `ExportMetadata` atrybutu. Każda część metadanych składa się z pary nazwa/wartość. Część nazwy metadanych musi odpowiadać nazwie odpowiednie właściwości w widoku metadanych, a wartość zostanie przypisany do tej właściwości.
+Metadane są wyrażane po `Export` atrybucie przy `ExportMetadata` użyciu atrybutu. Każda część metadanych składa się z pary nazwa/wartość. Część nazwy metadanych musi być zgodna z nazwą odpowiedniej właściwości w widoku metadanych, a wartość zostanie przypisana do tej właściwości.
 
-Jeśli istnieją, będzie używany jest importera, który określa jakie widoku metadanych. Import za pomocą metadanych jest zadeklarowany jako import z opóźnieniem, za pomocą interfejsu metadanych jako drugi parametr typu `Lazy<T,T>`. Następujące klasy importuje poprzedniej części z metadanymi.
+Jest importerem, który określa, jaki widok metadanych (jeśli istnieje) będzie używany. Import z metadanymi jest zadeklarowany jako import z opóźnieniem, z interfejsem metadanych jako drugi parametr typu do `Lazy<T,T>`. Następująca Klasa importuje poprzednią część z metadanymi.
 
 ```vb
 Public Class Addin
@@ -549,7 +549,7 @@ public class Addin
 }
 ```
 
-W wielu przypadkach można połączyć metadanych za pomocą `ImportMany` atrybutu, aby można było analizować za pomocą dostępnych operacji importu i wybierz polecenie i utworzyć tylko jedno wystąpienie lub kolekcję, aby dopasować określony warunek filtrowania. Następujące klasy tworzy tylko `IPlugin` obiektów, które mają `Name` wartość "Rejestratora".
+W wielu przypadkach należy połączyć metadane z `ImportMany` atrybutem, aby przeanalizować przez dostępne Importy i wybrać i utworzyć wystąpienie tylko jednego lub odfiltrować kolekcję w celu dopasowania do określonego warunku. Następująca Klasa tworzy wystąpienia tylko `IPlugin` obiektów, które `Name` mają wartość "rejestrator".
 
 ```vb
 Public Class User
@@ -597,11 +597,11 @@ public class User
 
 ## <a name="import-and-export-inheritance"></a>Importowanie i eksportowanie dziedziczenia
 
-Jeśli klasa dziedziczy z części, tej klasy może również stać się częścią. Importy zawsze są dziedziczone przez podklasy. W związku z tym podklasę części zawsze będzie częścią, za pomocą tej samej operacji importu jako swojej klasy nadrzędnej.
+Jeśli klasa dziedziczy po części, ta klasa może być również częścią. Importy są zawsze dziedziczone przez podklasy. W związku z tym, podklasa części zawsze będzie częścią, z tym samym importem, który jest klasą nadrzędną.
 
-Eksporty zadeklarowane za pomocą `Export` atrybutów nie są dziedziczone przez podklasy. Jednak część można wyeksportować się za pomocą `InheritedExport` atrybutu. Podklasy części taka, a następnie podaj ten sam eksportu, łącznie z nazwą kontraktu i typ umowy. W odróżnieniu od `Export` atrybutu `InheritedExport` może odnosić się tylko na poziomie klasy, a nie na poziomie elementu członkowskiego. W związku z tym eksportuje poziom elementu członkowskiego nigdy nie mogą być dziedziczone.
+Eksporty zadeklarowane przy `Export` użyciu atrybutu nie są dziedziczone przez podklasy. Jednak część może eksportować sam siebie przy użyciu `InheritedExport` atrybutu. Podklasy części będą dziedziczyć i udostępniać te same eksporty, w tym nazwy kontraktu i typu kontraktu. W przeciwieństwie `Export` do atrybutu `InheritedExport` , można stosować tylko na poziomie klasy, a nie na poziomie elementu członkowskiego. W związku z tym eksport na poziomie elementu członkowskiego nie może być nigdy dziedziczony.
 
-Następujące cztery klasy pokazują zasady importowania i eksportowania dziedziczenia. `NumTwo` dziedziczy `NumOne`, więc `NumTwo` zaimportuje `IMyData`. Zwykłe eksporty nie są dziedziczone, więc `NumTwo` nie eksportuje żadnych elementów. `NumFour` dziedziczy `NumThree`. Ponieważ `NumThree` używane `InheritedExport`, `NumFour` ma jeden Eksport kontraktu typu `NumThree`. Poziom elementu członkowskiego eksporty nigdy nie są dziedziczone, więc `IMyData` nie są eksportowane.
+Poniższe cztery klasy przedstawiają zasady importowania i eksportowania dziedziczenia. `NumTwo`dziedziczy z `NumOne`, więc `NumTwo` spowoduje zaimportowanie `IMyData`. Zwykłe eksporty nie są dziedziczone, `NumTwo` dlatego nie eksportuje żadnych elementów. `NumFour`dziedziczy z `NumThree`. Ponieważ `NumThree` jest `InheritedExport`używany ,`NumFour` ma jeden eksport z typem `NumThree`kontraktu. Eksporty na poziomie elementu członkowskiego nigdy nie `IMyData` są dziedziczone, więc nie są eksportowane.
 
 ```vb
 <Export()>
@@ -687,7 +687,7 @@ public class NumFour : NumThree
 }
 ```
 
-W przypadku metadane skojarzone z `InheritedExport` atrybutu tych metadanych również będą dziedziczone. (Aby uzyskać więcej informacji, zobacz we wcześniejszej sekcji "Metadanych i widoków metadanych"). Nie można zmodyfikować metadanych dziedziczone przez podklasy. Jednakże, deklarując ponownie `InheritedExport` atrybutu z taką samą nazwę kontraktu i typ umowy, ale z nowymi metadanymi, podklasy mogą zastąpić dziedziczone metadanych nowymi metadanymi. Następujące klasy pokazuje tę zasadę. `MegaLogger` Część dziedziczy `Logger` i zawiera `InheritedExport` atrybutu. Ponieważ `MegaLogger` ponownie nowe metadane o nazwie Status, nie dziedziczy on nazwę i wersję metadanych z `Logger`.
+Jeśli istnieją metadane skojarzone z `InheritedExport` atrybutem, te metadane również są dziedziczone. (Aby uzyskać więcej informacji, zobacz wcześniejszą sekcję "widoki metadanych i metadanych"). Dziedziczone metadane nie mogą być modyfikowane przez podklasę. Jednak przez ponowne zadeklarowanie `InheritedExport` atrybutu o tej samej nazwie kontraktu i typie kontraktu, ale z nowymi metadanymi, podklasa może zastąpić dziedziczone metadane nowymi metadanymi. W poniższej klasie przedstawiono tę zasadę. Część dziedziczy z `Logger` i zawiera `InheritedExport` atrybut. `MegaLogger` Ponieważ `MegaLogger` ponowne deklarowanie nowych metadanych o nazwie status nie dziedziczy nazwy i wersji `Logger`metadanych.
 
 ```vb
 <InheritedExport(GetType(IPlugin))>
@@ -747,17 +747,17 @@ public class MegaLogger : Logger        {
 }
 ```
 
-Podczas deklarowania ponownie `InheritedExport` atrybutu, aby zastąpić metadane, upewnij się, że typy kontraktu są takie same. (W poprzednim przykładzie `IPlugin` jest typ kontraktu.) Będą się różnić, zamiast przesłaniać metodę, drugi atrybut utworzy eksportu drugi, niezależne od części. Ogólnie rzecz biorąc, oznacza to, że musisz jawnie określić typ kontraktu, aby zastąpić `InheritedExport` atrybutu, jak pokazano w poprzednim przykładzie.
+Podczas ponownego deklarowania `InheritedExport` atrybutu w celu przesłaniania metadanych upewnij się, że typy kontraktu są takie same. (W poprzednim przykładzie `IPlugin` jest typem kontraktu). Jeśli różnią się one zamiast przesłaniać, drugi atrybut utworzy drugi, niezależny eksport od części. Zazwyczaj oznacza to, że trzeba będzie jawnie określić typ kontraktu podczas przesłonięcia `InheritedExport` atrybutu, jak pokazano w poprzednim przykładzie.
 
-Ponieważ nie można bezpośrednio utworzyć wystąpienia interfejsów, ich zwykle nie może być dekorowane za pomocą `Export` lub `Import` atrybutów. Jednakże, interfejs może być dekorowane za pomocą `InheritedExport` atrybut na poziomie interfejsu i że eksportu wraz z wszelkimi skojarzone metadane będą dziedziczone przez wszystkie klasy implementującej. Interfejs, sama nie będą dostępne w ramach jednak.
+Ponieważ interfejsy nie mogą być tworzone bezpośrednio, zazwyczaj nie mogą być dekoracyjne `Export` ani `Import` atrybuty. Jednak interfejs może być uzupełniony `InheritedExport` atrybutem na poziomie interfejsu, a eksportowanie wraz ze wszystkimi skojarzonymi metadanymi będzie dziedziczone przez wszystkie klasy implementujące. Sam interfejs nie będzie jednak dostępny jako część.
 
 <a name="custom_export_attributes"></a>
 
-## <a name="custom-export-attributes"></a>Atrybuty Eksport niestandardowy
+## <a name="custom-export-attributes"></a>Niestandardowe atrybuty eksportu
 
-Atrybuty eksportu podstawowych `Export` i `InheritedExport`, można rozszerzyć do uwzględnienia metadanych jako właściwości atrybutów. Ta technika jest przydatna do stosowania metadanych podobne do wielu elementów lub tworzenia drzewa dziedziczenia atrybutów metadanych.
+Podstawowe atrybuty `Export` eksportu i `InheritedExport`, można rozszerzyć w celu uwzględnienia metadanych jako właściwości atrybutów. Ta technika jest przydatna w przypadku stosowania podobnych metadanych do wielu części lub tworzenia drzewa dziedziczenia atrybutów metadanych.
 
-Typ kontraktu, Nazwa kontraktu lub inne metadane, można określić atrybutu niestandardowego. Aby zdefiniować niestandardowy atrybut klasy dziedziczącej z `ExportAttribute` (lub `InheritedExportAttribute`) musi posiadać `MetadataAttribute` atrybutu. Następujące klasy definiuje atrybutu niestandardowego.
+Atrybut niestandardowy może określać typ kontraktu, nazwę kontraktu lub inne metadane. W celu zdefiniowania atrybutu niestandardowego Klasa dziedziczenia z `ExportAttribute` (lub `InheritedExportAttribute`) `MetadataAttribute` musi być uzupełniona atrybutem. Poniższa klasa definiuje atrybut niestandardowy.
 
 ```vb
 <MetadataAttribute()>
@@ -791,7 +791,7 @@ public class MyAttribute : ExportAttribute
 }
 ```
 
-Ta klasa definiuje atrybut niestandardowy o nazwie `MyAttribute` z typem umowy `IMyData` i niektórych metadanych o nazwie `MyMetadata`. Wszystkie właściwości w klasie oznaczone `MetadataAttribute` atrybutu są uznawane za metadanych zdefiniowanych w atrybucie niestandardowym. Poniższe dwie deklaracje są równoważne.
+Ta klasa definiuje niestandardowy atrybut o nazwie `MyAttribute` z typem `IMyData` kontraktu i niektórych metadanych o `MyMetadata`nazwie. Wszystkie właściwości w klasie oznaczonej `MetadataAttribute` atrybutem są uważane za metadane zdefiniowane w atrybucie niestandardowym. Poniższe dwie deklaracje są równoważne.
 
 ```vb
 <Export(GetType(IMyAddin))>
@@ -815,23 +815,23 @@ public MyAddin myAddin { get; set; }
 public MyAddin myAddin { get; set; }
 ```
 
-W pierwszej deklaracji typu kontraktu i metadane jawnie są zdefiniowane. W drugim deklaracji typu kontraktu i metadane są niejawne w niestandardowych atrybutów. Zwłaszcza w przypadkach, w którym dużej ilości metadanych identyczne należy zastosować do wielu elementów (na przykład, autora lub informacje o prawach autorskich) za pomocą atrybutu niestandardowego można zapisać mnóstwo czasu i dublowania. Dodatkowo umożliwia pozostawienie można utworzyć drzewa dziedziczenia atrybutów niestandardowych.
+W pierwszej deklaracji typ kontraktu i metadane są jawnie zdefiniowane. W drugiej deklaracji typ kontraktu i metadane są niejawne w dostosowanym atrybucie. Szczególnie w przypadku, gdy należy zastosować dużą ilość identycznych metadanych do wielu części (na przykład informacje o autorze lub prawach autorskich), przy użyciu atrybutu niestandardowego można zaoszczędzić dużo czasu i duplikacji. Ponadto można utworzyć drzewa dziedziczenia atrybutów niestandardowych, aby umożliwić stosowanie odmian.
 
-Aby utworzyć opcjonalne metadane w atrybucie niestandardowym, można użyć `DefaultValue` atrybutu. Ten atrybut jest stosowany do właściwości w klasie Atrybut niestandardowy, określa się że ozdobione właściwość jest opcjonalna i nie będzie musiał podać eksporter. Jeśli nie podano wartości dla właściwości, zostanie do niej przypisana wartość domyślna dla tego typu właściwości (zazwyczaj `null`, `false`, lub równa 0.)
+Aby utworzyć opcjonalne metadane w atrybucie niestandardowym, można użyć `DefaultValue` atrybutu. Gdy ten atrybut jest stosowany do właściwości w klasie atrybutów niestandardowych, określa, że właściwość dekoracyjna jest opcjonalna i nie musi być dostarczana przez eksportera. Jeśli wartość właściwości nie zostanie podana, zostanie przypisana wartość domyślna dla jej typu właściwości (zwykle `null`, `false`lub 0).
 
 <a name="creation_policies"></a>
 
-## <a name="creation-policies"></a>Tworzenie zasad
+## <a name="creation-policies"></a>Zasady tworzenia
 
-Gdy część określa importu i kompozycji jest wykonywane, pojemnik składu próbuje odnaleźć zgodnego eksportu. Importuj z eksportową pasujący pomyślnie, importowania elementu członkowskiego jest ustawione na wystąpienie eksportowanego obiektu. Z której pochodzi to wystąpienie jest kontrolowana przez część eksportowania *zasad tworzenia*.
+Gdy część określa Importowanie i składanie jest wykonywane, kontener kompozycji próbuje znaleźć pasujący eksport. Jeśli dopasowanie zostanie zakończone pomyślnie, element członkowski importu jest ustawiany na wystąpienie wyeksportowanego obiektu. Miejsce, z którego pochodzi to wystąpienie, jest kontrolowane przez *zasady tworzenia*części eksportu.
 
-Są dwie zasady może spowodować powstanie *udostępnionego* i *nieudostępnione*. W ramach zasad tworzenia zostaną udostępnione być współużytkowane przez każdego importu w kontenerze dla części z tej Umowy. Gdy aparat kompozycji znalezienia dopasowania i ustawić właściwość importowania, będzie on wystąpienia nową kopię część tylko wtedy, gdy jeszcze nie istnieje; w przeciwnym razie poda istniejącą kopię. Oznacza to, że wiele obiektów może mieć odwołania do tej samej części. Takie części nie należy polegać na stan wewnętrzny, który może ulec zmianie w wielu miejscach. Ta zasada jest odpowiednia dla części statycznych, elementy, które udostępniają usługi i części, które to zajmować dużo pamięci lub innych zasobów.
+Dwie możliwe zasady tworzenia są *udostępniane* i *nie są udostępniane*. Część z zasadami tworzenia udostępnioną zostanie udostępniona między każdym importem w kontenerze a częścią tego kontraktu. Gdy aparat kompozycji znajdzie dopasowanie i ma ustawić właściwość importowania, utworzy wystąpienie nowej kopii części tylko wtedy, gdy jeszcze nie istnieje; w przeciwnym razie dostarczy istniejącą kopię. Oznacza to, że wiele obiektów może odwoływać się do tej samej części. Takie części nie powinny polegać na stanie wewnętrznym, który można zmienić z wielu miejsc. Te zasady są odpowiednie dla części statycznych, części, które udostępniają usługi, i części, które zużywają wiele pamięci lub innych zasobów.
 
-Część nieudostępnione z zasadami tworzenia zostanie utworzony, za każdym razem, gdy znajduje pasujące importu dla jednego z jego eksportu. Nowa kopia w związku z tym będzie można utworzyć wystąpienia dla każdego importu w kontenerze, który pasuje do wyeksportowanych kontraktów części. Wewnętrzny stan tych kopii, nie będą udostępniane. Ta zasada jest odpowiednia dla części, w którym każdej operacji importowania wymaga własnej stanu wewnętrznego.
+Część z zasadami tworzenia nieudostępnianych elementów zostanie utworzona za każdym razem, gdy zostanie znaleziony pasujący import dla jednego z jego eksportu. W związku z tym zostanie utworzona nowa kopia dla każdego importu w kontenerze, który jest zgodny z jedną z kontraktów eksportu części. Wewnętrzny stan tych kopii nie zostanie udostępniony. Te zasady są odpowiednie dla części, w których każdy import wymaga własnego stanu wewnętrznego.
 
-Importowanie i eksportowanie można określić zasady tworzenia części, spośród wartości `Shared`, `NonShared`, lub `Any`. Wartość domyślna to `Any` dla obu importuje i eksportuje. Eksport określający `Shared` lub `NonShared` spowoduje dopasowanie tylko importu, który określa takie same lub określający `Any`. Podobnie, który określa import `Shared` lub `NonShared` spowoduje dopasowanie tylko eksportu, który określa takie same lub określający `Any`. Przywozu i wywozu przy użyciu zasad tworzenia niezgodne nie są uwzględniane w taki sam sposób jak importu i eksportu, w której nazwa lub kontrakt typu kontraktu nie są zgodne z dopasowania. Jeśli określono zarówno importowania i eksportowania `Any`, lub nie określaj zasad tworzenia i domyślnie `Any`, zasady tworzenia, domyślnie zostanie udostępniony.
+Zarówno import, jak i eksport mogą określać zasady tworzenia części, spośród wartości `Shared`, `NonShared`lub `Any`. Wartość domyślna dotyczy `Any` zarówno importu, jak i eksportu. Eksport, który określa `Shared` lub `NonShared` będzie zgodny z importem, który określa ten sam element lub określa `Any`. Analogicznie, importowanie, które `Shared` określa `NonShared` lub będzie zgodne tylko z eksportem, który określa ten sam lub `Any`określa. Importy i eksporty z niezgodnymi zasadami tworzenia nie są uważane za pasujące w taki sam sposób jak Importowanie i eksportowanie, których nazwa kontraktu lub typ kontraktu nie są zgodne. Jeśli określono `Any`zarówno opcję importu, jak i eksportu, albo nie określisz zasad tworzenia i `Any`domyślną wartością, zasady tworzenia zostaną domyślnie udostępnione.
 
-Poniższy przykład pokazuje, importuje i eksportuje Określanie zasad tworzenia. `PartOne` nie określono zasadę tworzenia, więc wartość domyślna to `Any`. `PartTwo` nie określono zasadę tworzenia, więc wartość domyślna to `Any`. Ponieważ zarówno importowania i eksportowania domyślnie `Any`, `PartOne` zostaną udostępnione. `PartThree` Określa `Shared` tworzenia zasad, więc `PartTwo` i `PartThree` współużytkują tę samą kopię `PartOne`. `PartFour` Określa `NonShared` tworzenia zasad, więc `PartFour` będzie nieudostępniany w `PartFive`. `PartSix` Określa `NonShared` tworzenia zasad. `PartFive` i `PartSix` każdego będą otrzymywać osobne kopie `PartFour`. `PartSeven` Określa `Shared` tworzenia zasad. Ponieważ istnieje nie wyeksportowane `PartFour` z zasadami tworzenia `Shared`, `PartSeven` importu nie pasuje do niczego i nie zostaną wypełnione.
+W poniższym przykładzie pokazano import i eksporty określające zasady tworzenia. `PartOne`nie określa zasad tworzenia, dlatego wartość domyślna to `Any`. `PartTwo`nie określa zasad tworzenia, dlatego wartość domyślna to `Any`. Ponieważ wartości domyślne `Any` `PartOne` importu i eksportu są udostępniane. `PartThree`Określa zasady `Shared` `PartOne`tworzenia `PartTwo` i`PartThree` będzie współużytkować tę samą kopię programu. `PartFour`Określa zasady `PartFour` tworzenia, dlatego nie będą udostępniane w programie `PartFive`. `NonShared` `PartSix`Określa zasady `NonShared` tworzenia. `PartFive`i `PartSix` otrzymają osobne `PartFour`kopie. `PartSeven`Określa zasady `Shared` tworzenia. Ponieważ nie ma żadnych wyeksportowanych `PartFour` `Shared`zasad tworzenia, `PartSeven` Importowanie nie jest zgodne i nie zostanie wypełnione.
 
 ```vb
 <Export()>
@@ -972,17 +972,17 @@ public class PartSeven
 
 <a name="life_cycle_and_disposing"></a>
 
-## <a name="life-cycle-and-disposing"></a>Cykl życia i usuwania
+## <a name="life-cycle-and-disposing"></a>Cykl życia i usuwanie
 
-Ponieważ części są przechowywane w kontenerze kompozycji, ich cyklu życia może być bardziej skomplikowane niż zwykłe obiektów. Części mogą zawierać dwie ważne interfejsy związanych z cyklem życia: `IDisposable` i `IPartImportsSatisfiedNotification`.
+Ponieważ części są hostowane w kontenerze kompozycji, ich cykl życia może być bardziej skomplikowany niż zwykłe obiekty. Części mogą zaimplementować dwa ważne interfejsy związane z cyklem życia `IDisposable` : `IPartImportsSatisfiedNotification`i.
 
-Części wymagające pracy do wykonania w zamykania w dół lub wymagające zwolnić zasoby powinny implementować `IDisposable`, jak zwykle dla obiektów .NET Framework. Jednak ponieważ kontener tworzy i obsługuje odwołania do części, kontenera, który jest właścicielem część powinny wywoływać `Dispose` metody na nim. Implementuje samego kontenera `IDisposable`oraz jako część jej oczyszczania w `Dispose` zostanie `Dispose` na wszystkie elementy, które jest właścicielem. Z tego powodu należy zawsze dysponować pojemnik składu podczas jej i częściami, który jest właścicielem nie są już potrzebne.
+Części, które wymagają pracy do wykonania przy zamykaniu lub które wymagają zwolnienia zasobów, powinny być `IDisposable`implementowane w sposób typowy dla .NET Framework obiektów. Jednak ponieważ kontener tworzy i zachowuje odwołania do części, tylko kontener, do którego należy część, powinien wywołać `Dispose` metodę. Sam kontener implementuje `IDisposable`, a jako część jego oczyszczania w `Dispose` tym elemencie zostanie wywołana `Dispose` wszystkie części, które jest właścicielem. Z tego powodu zawsze należy usunąć kontener kompozycji, gdy nie są już potrzebne wszystkie jego części.
 
-Kontenery długotrwałe kompozycji zużycie pamięci przez części za pomocą zasad tworzenia nieudostępnione może stać się problemem. Te częściami nieudostępnionymi można tworzyć wiele razy, a nie zostanie usunięte, dopóki nie zostanie usunięty, samego kontenera. Aby poradzić sobie z tym, zapewnia kontener `ReleaseExport` metody. Wywołanie tej metody na eksport nieudostępnione spowoduje usunięcie tego eksportu z kontener kompozycji i usuwa go. Elementy, które są używane tylko przez usunięto Eksport, i tak dalej na dół drzewa, również są usuwane i usunięty. W ten sposób można odzyskać bez usuwania sam pojemnik składu zasobów.
+W przypadku kontenerów o długim okresie ważności użycie pamięci przez części z zasadami tworzenia nieudostępnianych może stać się problemem. Te części nieudostępnione mogą być tworzone wiele razy i nie zostaną usunięte do momentu usunięcia kontenera. W tym celu kontener udostępnia `ReleaseExport` metodę. Wywołanie tej metody w wywozie nieudostępnionym spowoduje usunięcie tego eksportu z kontenera kompozycji i usunięcia go. Części, które są używane tylko przez usunięty eksport, i tak dalej na drzewie, również zostaną usunięte i usunięte. W ten sposób zasoby mogą być odzyskiwane bez usuwania kontenera kompozycji.
 
-`IPartImportsSatisfiedNotification` zawiera jedną metodę o nazwie `OnImportsSatisfied`. Ta metoda jest wywoływana, pojemnik składu w dowolnej części, które implementują interfejs, gdy kompozycja zostało ukończone i Importy części są gotowe do użycia. Elementy są tworzone przez aparat kompozycji, aby wypełnić polecenie importuje inne części. Przed zestawu polecenie importuje element nie może wykonać inicjowanie opiera się na lub zmienia wartości importowanych w Konstruktorze części, chyba że te wartości zostały określone jako warunki wstępne przy użyciu `ImportingConstructor` atrybutu. Zazwyczaj jest to preferowana metoda, ale w niektórych przypadkach iniekcji konstruktora mogą być niedostępne. W takich przypadkach można wykonać inicjowania w `OnImportsSatisfied`, i powinna implementować część `IPartImportsSatisfiedNotification`.
+`IPartImportsSatisfiedNotification`zawiera jedną metodę o `OnImportsSatisfied`nazwie. Ta metoda jest wywoływana przez kontener kompozycji dla każdej części implementującej interfejs, gdy kompozycja została ukończona, a Importy części są gotowe do użycia. Części są tworzone przez aparat kompozycji, aby wypełnić Importy innych części. Przed ustawieniem importu części nie można wykonać inicjalizacji, która polega na zaimportowaniu wartości i manipulowaniu nimi w konstruktorze częściowym, chyba że te wartości zostały określone jako wymagania wstępne przy użyciu `ImportingConstructor` atrybutu. Zwykle jest to preferowana metoda, ale w niektórych przypadkach iniekcja konstruktora może być niedostępna. W takich przypadkach Inicjalizacja może być wykonywana w `OnImportsSatisfied`, a część powinna zostać zaimplementowana. `IPartImportsSatisfiedNotification`
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wideo Channel 9: Otwórz swoje aplikacje za pomocą Managed Extensibility Framework —](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
-- [Wideo Channel 9: Struktura Managed Extensibility Framework (MEF) w wersji 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+- [Wideo Channel 9: Otwórz aplikacje za pomocą Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
+- [Wideo Channel 9: Managed Extensibility Framework (MEF) 2,0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

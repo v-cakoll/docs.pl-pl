@@ -7,71 +7,71 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0e34785fce3cd88bfe4fe4b075ba34b8d22bff4
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: e10b6fd7df003de739b57bbb3e17deb46215763f
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469656"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363993"
 ---
 # <a name="how-to-create-com-wrappers"></a>Instrukcje: Tworzenie otok COM
 
-Otoki Component Object Model (COM) można utworzyć za pomocą funkcji Visual Studio 2005 lub narzędzi programu .NET Framework, Tlbimp.exe i Regasm.exe. Obie metody wygenerować dwa typy otok COM:
+Otoki Component Object Model (COM) można tworzyć za pomocą funkcji programu Visual Studio 2005 lub narzędzi .NET Framework Tools Tlbimp. exe i Regasm. exe. Obie metody generują dwa typy otok COM:
 
-- A [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md) z biblioteki typów, aby uruchomić obiektów COM w kodzie zarządzanym.
+- Wywoływanie [otoki środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md) z biblioteki typów w celu uruchomienia obiektu com w kodzie zarządzanym.
 
-- A [wywoływana otoka COM](../../../docs/framework/interop/com-callable-wrapper.md) za pomocą ustawień rejestru wymagane do uruchamiania zarządzanego obiektu w aplikacji natywnej.
+- Wywoływany przez [com otokę](../../../docs/framework/interop/com-callable-wrapper.md) z wymaganymi ustawieniami rejestru w celu uruchomienia obiektu zarządzanego w aplikacji natywnej.
 
-W programie Visual Studio 2005 można dodać otoki COM jako odwołanie do projektu.
+W programie Visual Studio 2005 można dodać otokę COM jako odwołanie do projektu.
 
-## <a name="wrap-com-objects-in-a-managed-application"></a>Zawiń obiektów COM w aplikacji zarządzanej
+## <a name="wrap-com-objects-in-a-managed-application"></a>Zawijanie obiektów COM w aplikacji zarządzanej
 
-### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Aby utworzyć wywoływana otoka środowiska uruchomieniowego przy użyciu programu Visual Studio
+### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Aby utworzyć oddzielną otokę środowiska uruchomieniowego przy użyciu programu Visual Studio
 
 1. Otwórz projekt dla aplikacji zarządzanej.
 
-2. Na **projektu** menu, kliknij przycisk **Pokaż wszystkie pliki**.
+2. W menu **projekt** kliknij polecenie **Pokaż wszystkie pliki**.
 
-3. Na **projektu** menu, kliknij przycisk **Dodaj odwołanie**.
+3. W menu **projekt** kliknij polecenie **Dodaj odwołanie**.
 
-4. W oknie dialogowym Dodaj odwołanie, kliknij przycisk **COM** , a następnie wybierz składnik, należy użyć, a następnie kliknij przycisk **OK**.
+4. W oknie dialogowym Dodaj odwołanie kliknij kartę **com** , wybierz składnik, którego chcesz użyć, a następnie kliknij przycisk **OK**.
 
-     W **Eksploratora rozwiązań**, należy pamiętać, że składnik COM został dodany do folderu odwołań w projekcie.
+     W **Eksplorator rozwiązań**Zwróć uwagę, że składnik com jest dodawany do folderu References w projekcie.
 
-Teraz można napisać kod, aby uzyskać dostęp do obiektu COM. Możesz rozpocząć od zadeklarowania obiektu, takie jak za pomocą `Imports` instrukcji dla języka Visual Basic lub `Using` poufności informacji dotyczące C#.
+Teraz można napisać kod, aby uzyskać dostęp do obiektu COM. Można rozpocząć od zadeklarowania obiektu, takiego jak `Imports` instrukcja Visual Basic `Using` lub instrukcji dla. C#
 
 > [!NOTE]
-> Jeśli chcesz program Microsoft Office składniki, najpierw zainstaluj [podstawowe zestawy międzyoperacyjne pakietu Office Microsoft](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA) z Microsoft Download Center. W kroku 4, wybierz najnowszą dostępną dla produktu Office ma, takich jak biblioteki obiektów **Biblioteka obiektów programu Microsoft Word 11.0**.  
+> Jeśli chcesz programować Microsoft Office składniki, najpierw zainstaluj [Microsoft Office podstawowych zestawów](https://go.microsoft.com/fwlink/?LinkId=50479) międzyoperacyjnych (zestawów PIA) z centrum pobierania Microsoft. W kroku 4 Wybierz najnowszą wersję biblioteki obiektów dostępną dla żądanego produktu pakietu Office, na przykład **bibliotekę obiektów programu Microsoft Word 11,0**.  
   
-### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Aby utworzyć wywoływana otoka środowiska uruchomieniowego przy użyciu narzędzi programu .NET Framework  
+### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Aby utworzyć oddzielną otokę środowiska uruchomieniowego przy użyciu narzędzi .NET Framework  
   
-- Uruchom [Tlbimp.exe (Importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) narzędzia.  
+- Uruchom narzędzie [Tlbimp. exe (Importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) .  
   
- To narzędzie tworzy zestaw, który zawiera metadane środowiska wykonawczego dla typów zdefiniowanych w oryginalnej biblioteki typów.  
+ To narzędzie tworzy zestaw zawierający metadane czasu wykonywania dla typów zdefiniowanych w oryginalnej bibliotece typów.  
   
-## <a name="wrap-managed-objects-in-a-native-application"></a>OPAKOWYWANIE zarządzanych obiektów w aplikacji macierzystej  
+## <a name="wrap-managed-objects-in-a-native-application"></a>Zawijaj obiekty zarządzane w aplikacji natywnej  
   
-### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Aby utworzyć wywołalne opakowanie COM za pomocą programu Visual Studio  
+### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Aby utworzyć zawywoływaną przez COM otokę przy użyciu programu Visual Studio  
   
-1. Utwórz projekt biblioteki klas dla zarządzanej klasy, która ma zostać uruchomiony w kodzie natywnym. Klasa musi mieć domyślnego konstruktora.  
+1. Utwórz projekt biblioteki klas dla zarządzanej klasy, która ma być uruchamiana w kodzie natywnym. Klasa musi mieć konstruktora bez parametrów.  
   
-     Sprawdź, czy masz pełną Czteroczęściowy numer wersji zestawu w pliku AssemblyInfo. Ta liczba jest wymagany do obsługi przechowywania wersji w rejestrze systemu Windows. Aby uzyskać więcej informacji na temat numerów wersji, zobacz [przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md).  
+     Sprawdź, czy dla Twojego zestawu w pliku AssemblyInfo masz pełny numer wersji z czterema częścią. Ta liczba jest wymagana do obsługi wersji w rejestrze systemu Windows. Aby uzyskać więcej informacji o numerach wersji, zobacz [wersja zestawu](../../../docs/framework/app-domains/assembly-versioning.md).  
   
-2. Na **projektu** menu, kliknij przycisk **właściwości**.  
+2. W menu **projekt** kliknij polecenie **Właściwości**.  
   
-3. Kliknij przycisk **skompilować** kartę.  
+3. Kliknij kartę **kompilacja** .  
   
-4. Wybierz **Zarejestruj dla współdziałania COM** pole wyboru.  
+4. Zaznacz pole wyboru **Zarejestruj dla międzyoperacyjności modelu COM** .  
   
- Podczas kompilowania projektu zestawu jest automatycznie rejestrowane dla współdziałania z modelem COM. Jeśli tworzysz natywnych aplikacji w programie Visual Studio 2005, można użyć zestawu, klikając **Dodaj odwołanie** na **projektu** menu.  
+ Podczas kompilowania projektu zestaw jest automatycznie rejestrowany pod kątem współdziałania z modelem COM. Jeśli tworzysz aplikację natywną w programie Visual Studio 2005, możesz użyć zestawu, klikając pozycję **Dodaj odwołanie** w menu **projekt** .  
   
-### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>Aby utworzyć wywołalne opakowanie COM za pomocą narzędzi programu .NET Framework  
+### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>Aby utworzyć zawywoływaną przez COM otokę przy użyciu narzędzi .NET Framework  
   
-Uruchom [Regasm.exe (narzędzie rejestracji zestawów)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) narzędzia.  
+Uruchom narzędzie [Regasm. exe (Narzędzie rejestracji zestawów)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) .  
   
-To narzędzie odczytuje metadane zestawu i dodaje niezbędne wpisy do rejestru. W rezultacie klientów modelu COM może przezroczyste Tworzenie klas .NET Framework. Można użyć zestawu, tak jakby natywnych klasa COM.  
+To narzędzie odczytuje metadane zestawu i dodaje niezbędne wpisy do rejestru. W związku z tym klienci modelu COM mogą w niewidoczny sposób tworzyć klasy .NET Framework. Zestawu można użyć tak, jakby był natywną klasą COM.  
   
-Uruchamianie Regasm.exe na zestawu znajdującego się w dowolnym katalogu, a następnie uruchom [Gacutil.exe (Global Assembly Cache Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) przenieść je do globalnej pamięci podręcznej. Przenoszenie zestawu nie unieważnia wpisy rejestru lokalizacji, ponieważ w globalnej pamięci podręcznej jest badany zawsze, jeśli zestaw nie zostanie znaleziony gdzie indziej.  
+Program Regasm. exe można uruchomić na zestawie znajdującym się w dowolnym katalogu, a następnie uruchomić [Gacutil. exe (Global Assembly Cache Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) , aby przenieść go do globalnej pamięci podręcznej zestawów. Przeniesienie zestawu nie unieważnia wpisów rejestru lokalizacji, ponieważ globalna pamięć podręczna zestawów jest zawsze sprawdzana, jeśli zestaw nie został znaleziony w innym miejscu.  
   
 ## <a name="see-also"></a>Zobacz także
 

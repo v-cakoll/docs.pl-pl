@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 786c2937a3f413170665c39464dc2c94417008ad
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 546feb6f3c4515ceecdb5b5afa14c0fc99ab7020
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331368"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363907"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Wyrażenia lambda (C# Przewodnik programowania)
 
@@ -41,8 +41,6 @@ Lub można przekazać ją bezpośrednio jako argument metody:
 [!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
 Przy użyciu składni opartej na metodzie wywoływanie <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> metody <xref:System.Linq.Enumerable?displayProperty=nameWithType> w klasie (jak w LINQ to Objects i LINQ to XML) parametr jest typem <xref:System.Func%602?displayProperty=nameWithType>delegata. Użycie wyrażenia lambda jest najwygodniejszym sposobem tworzenia delegata. Po wywołaniu <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> metody <xref:System.Linq.Queryable?displayProperty=nameWithType> w klasie (jak w LINQ to SQL) typem parametru jest typ [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>)drzewa wyrażenia. I znowu wyrażenie lambda jest tylko bardzo zwięzłym sposobem konstruowania takiego drzewa wyrażeń. Wyrażenia lambda umożliwiają `Select` podobne wywołania, chociaż w rzeczywistości typ obiektu utworzonego na podstawie wyrażenia lambda jest inny.
-
-Wszystkie ograniczenia, które dotyczą [metod anonimowych](anonymous-methods.md) , również mają zastosowanie do wyrażeń lambda.
   
 ## <a name="expression-lambdas"></a>Wyrażenia lambda
 
@@ -82,7 +80,7 @@ Treść lambdy instrukcji może składać się z dowolnej liczby instrukcji, jed
 
 [!code-csharp-interactive[statement lambda](~/samples/snippets/csharp/programming-guide/lambda-expressions/ExpressionAndStatementLambdas.cs#StatementLambda)]
 
-Lambd instrukcji, podobnie jak metod anonimowych, nie można używać do tworzenia drzew wyrażeń.
+Instrukcji lambda nie można używać do tworzenia drzew wyrażeń.
   
 ## <a name="async-lambdas"></a>Asynchroniczne wyrażenia lambda
 
@@ -198,7 +196,7 @@ Należy zauważyć, że wyrażenia lambda same w sobie nie mają typu, ponieważ
 
 ## <a name="capture-of-outer-variables-and-variable-scope-in-lambda-expressions"></a>Przechwycenie zmiennych zewnętrznych i zakresu zmiennych w wyrażeniach lambda
 
-Wyrażenia lambda mogą odwoływać się do *zmiennych zewnętrznych* (zobacz [metody anonimowe](anonymous-methods.md)), które znajdują się w zakresie w metodzie, która definiuje wyrażenie lambda lub w zakresie typu, który zawiera wyrażenie lambda. Przechwytywane w ten sposób zmienne są przechowywane do użytku w wyrażeniu lambda, nawet gdyby w innym wypadku te zmienne znalazłyby się poza zakresem i zostałyby usunięte w ramach odśmiecania pamięci. Zewnętrzna zmienna musi być zdecydowanie przypisana, aby można jej było użyć w wyrażeniu lambda. W poniższym przykładzie pokazano te reguły:
+Wyrażenia lambda mogą odwoływać się do *zmiennych zewnętrznych*. Są to zmienne, które znajdują się w zakresie metody, która definiuje wyrażenie lambda lub w zakresie typu, który zawiera wyrażenie lambda. Przechwytywane w ten sposób zmienne są przechowywane do użytku w wyrażeniu lambda, nawet gdyby w innym wypadku te zmienne znalazłyby się poza zakresem i zostałyby usunięte w ramach odśmiecania pamięci. Zewnętrzna zmienna musi być zdecydowanie przypisana, aby można jej było użyć w wyrażeniu lambda. W poniższym przykładzie pokazano te reguły:
 
 [!code-csharp[variable scope](~/samples/snippets/csharp/programming-guide/lambda-expressions/VariableScopeWithLambdas.cs#VariableScope)]
 
@@ -226,7 +224,6 @@ Aby uzyskać więcej informacji, zobacz sekcję [wyrażenia funkcji anonimowej](
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [LINQ (zapytanie zintegrowane z językiem)](../concepts/linq/index.md)
-- [Metody anonimowe](anonymous-methods.md)
 - [Drzewa wyrażeń](../concepts/expression-trees/index.md)
 - [Funkcje lokalne w porównaniu z wyrażeniami lambda](../../local-functions-vs-lambdas.md)
 - [Niejawnie wpisane wyrażenia lambda](../../implicitly-typed-lambda-expressions.md)

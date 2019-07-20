@@ -12,94 +12,94 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4640e776cc76ef56227858f6a4aa04e77ecbbdc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586003"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364068"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Instrukcje: Podłączanie delegata za pomocą odbicia
-Gdy używasz odbicia można załadować i uruchomić zestawów, nie można używać funkcji języka, takich jak C# `+=` operatora lub Visual Basic [AddHandler — instrukcja](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) do podłączania zdarzeń. Poniższe procedury pokazują, jak dołączyć istniejącą metodę do zdarzenia przez pobranie wszystkich typów wymaganych przez odbicie, a także jak utworzyć metodę dynamiczną za pomocą odbicia emisji i podłączyć ją do zdarzenia.  
+W przypadku używania odbicia do ładowania i uruchamiania zestawów nie można użyć funkcji języka, takich C# `+=` jak operator lub Visual Basic [AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) , aby podłączyć zdarzenia. W poniższych procedurach pokazano, jak podłączyć istniejącą metodę do zdarzenia, pobierając wszystkie niezbędne typy poprzez odbicie i jak utworzyć metodę dynamiczną przy użyciu emisji odbicia i podłączyć ją do zdarzenia.  
   
 > [!NOTE]
->  Innym sposobem Podłączanie delegata obsługi zdarzeń, zobacz przykład kodu dla <xref:System.Reflection.EventInfo.AddEventHandler%2A> metody <xref:System.Reflection.EventInfo> klasy.  
+>  Aby móc podłączyć delegata obsługi zdarzeń, zobacz przykład kodu dla <xref:System.Reflection.EventInfo.AddEventHandler%2A> metody <xref:System.Reflection.EventInfo> klasy.  
   
-### <a name="to-hook-up-a-delegate-using-reflection"></a>Aby Podłączanie delegata za pomocą odbicia  
+### <a name="to-hook-up-a-delegate-using-reflection"></a>Aby podłączyć delegata przy użyciu odbicia  
   
-1. Załaduj zestaw, który zawiera typ, który wywołuje zdarzenia. Zestawy są zazwyczaj załadowane <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metody. W celu uproszczenia w tym przykładzie zastosowano pochodnej formularza w bieżącym zestawie, więc <xref:System.Reflection.Assembly.GetExecutingAssembly%2A> metoda jest używana do ładowania bieżącego zestawu.  
+1. Załaduj zestaw, który zawiera typ, który wywołuje zdarzenia. Zestawy są zwykle ładowane przy użyciu <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metody. Aby zachować ten przykład prosty, używany jest formularz pochodny w bieżącym zestawie, dlatego <xref:System.Reflection.Assembly.GetExecutingAssembly%2A> Metoda jest używana do ładowania bieżącego zestawu.  
   
      [!code-cpp[HookUpDelegate#3](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#3)]
      [!code-csharp[HookUpDelegate#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#3)]
      [!code-vb[HookUpDelegate#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#3)]  
   
-2. Pobierz <xref:System.Type> obiekt reprezentujący typ i utworzyć wystąpienie typu. <xref:System.Activator.CreateInstance%28System.Type%29> Metoda jest używana w poniższym kodzie, ponieważ formularza ma domyślnego konstruktora. Istnieje kilka innych przeciążeń <xref:System.Activator.CreateInstance%2A> metody można użyć, jeśli typ tworzenia nie ma domyślnego konstruktora. Nowe wystąpienie jest przechowywany jako typ <xref:System.Object> do utrzymania fikcja że żaden element nie jest znany o zestawie. (Odbicie umożliwia pobieranie typów w zestawie, nie wiedząc o tym ich nazwy z wyprzedzeniem.)  
+2. <xref:System.Type> Pobierz obiekt reprezentujący typ i Utwórz wystąpienie typu. <xref:System.Activator.CreateInstance%28System.Type%29> Metoda jest używana w poniższym kodzie, ponieważ formularz zawiera konstruktora bez parametrów. Istnieje kilka innych przeciążeń <xref:System.Activator.CreateInstance%2A> metody, których można użyć, jeśli tworzony typ nie ma konstruktora bez parametrów. Nowe wystąpienie jest przechowywane jako typ <xref:System.Object> do obsługi fikcyjnego, który nie jest znany o zestawie. (Odbicie umożliwia uzyskanie typów w zestawie bez poznania ich nazw z góry).  
   
      [!code-cpp[HookUpDelegate#4](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#4)]
      [!code-csharp[HookUpDelegate#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#4)]
      [!code-vb[HookUpDelegate#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#4)]  
   
-3. Pobierz <xref:System.Reflection.EventInfo> obiekt reprezentujący zdarzenia, a następnie użyj <xref:System.Reflection.EventInfo.EventHandlerType%2A> właściwości, aby uzyskać typ delegata używany do obsługi zdarzeń. W poniższym kodzie <xref:System.Reflection.EventInfo> dla <xref:System.Windows.Forms.Control.Click> uzyskuje się zdarzenie.  
+3. Pobierz obiekt reprezentujący zdarzenie i <xref:System.Reflection.EventInfo.EventHandlerType%2A> Użyj właściwości, aby uzyskać typ delegata użytego do obsłużenia zdarzenia. <xref:System.Reflection.EventInfo> W poniższym kodzie <xref:System.Reflection.EventInfo> jest uzyskiwany <xref:System.Windows.Forms.Control.Click> dla zdarzenia.  
   
      [!code-cpp[HookUpDelegate#5](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#5)]
      [!code-csharp[HookUpDelegate#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#5)]
      [!code-vb[HookUpDelegate#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#5)]  
   
-4. Pobierz <xref:System.Reflection.MethodInfo> obiekt reprezentujący metodę, która obsługuje zdarzenie. Kod programu ukończone w części przykładu w dalszej części tego tematu zawiera metodę, która pasuje do podpisu <xref:System.EventHandler> delegować, która obsługuje <xref:System.Windows.Forms.Control.Click> zdarzenia, ale można również wygenerować metod dynamicznych w czasie wykonywania. Aby uzyskać szczegółowe informacje zobacz procedurę towarzyszących do wygenerowania procedury obsługi zdarzeń w czasie wykonywania przy użyciu dynamicznej metody.  
+4. <xref:System.Reflection.MethodInfo> Pobierz obiekt reprezentujący metodę, która obsługuje zdarzenie. Pełny kod programu w sekcji przykład w dalszej części tego tematu zawiera metodę, która pasuje do podpisu <xref:System.EventHandler> delegata, który <xref:System.Windows.Forms.Control.Click> obsługuje zdarzenie, ale można również generować metody dynamiczne w czasie wykonywania. Aby uzyskać szczegółowe informacje, zobacz procedurę towarzyszącą w celu wygenerowania programu obsługi zdarzeń w czasie wykonywania przy użyciu metody dynamicznej.  
   
      [!code-cpp[HookUpDelegate#6](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#6)]
      [!code-csharp[HookUpDelegate#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#6)]
      [!code-vb[HookUpDelegate#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#6)]  
   
-5. Utwórz wystąpienie delegata, za pomocą <xref:System.Delegate.CreateDelegate%2A> metody. Ta metoda jest statyczna (`Shared` w języku Visual Basic), dlatego wymagane jest podanie typu delegata. Za pomocą przeciążenia <xref:System.Delegate.CreateDelegate%2A> o <xref:System.Reflection.MethodInfo> jest zalecane.  
+5. Utwórz wystąpienie delegata przy użyciu <xref:System.Delegate.CreateDelegate%2A> metody. Ta metoda jest statyczna`Shared` (w Visual Basic), więc należy podać typ delegata. Zalecane <xref:System.Reflection.MethodInfo> jest użycie przeciążenia <xref:System.Delegate.CreateDelegate%2A> , które to zajmie.  
   
      [!code-cpp[HookUpDelegate#7](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#7)]
      [!code-csharp[HookUpDelegate#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#7)]
      [!code-vb[HookUpDelegate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#7)]  
   
-6. Pobierz `add` metody dostępu i wywoływanie aby zaczepić zdarzenie. Wszystkie zdarzenia mają `add` metody dostępu i `remove` metody dostępu są ukrywane w składni języków wysokiego poziomu. Na przykład C# używa `+=` podpinanie zdarzeń i Visual Basic używa operatora [AddHandler — instrukcja](~/docs/visual-basic/language-reference/statements/addhandler-statement.md). Poniższy kod pobiera `add` akcesor <xref:System.Windows.Forms.Control.Click> zdarzeń, a następnie wywołuje on z późnym wiązaniem, przekazując to wystąpienie delegata. Argumenty muszą być przekazywane jako tablica.  
+6. Pobierz metodę `add` dostępu i Wywołaj ją, aby podłączyć zdarzenie. Wszystkie zdarzenia mają `add` akcesor `remove` i metodę dostępu, która jest ukryta przez składnię języków wysokiego poziomu. Na przykład C# używa `+=` operatora, aby podłączyć zdarzenia, a Visual Basic używa [instrukcji AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md). Poniższy kod pobiera `add` metodę dostępu <xref:System.Windows.Forms.Control.Click> dla zdarzenia i wywołuje ją z późnym wiązaniem, przekazując w wystąpieniu delegata. Argumenty muszą być przekazane jako tablica.  
   
      [!code-cpp[HookUpDelegate#8](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#8)]
      [!code-csharp[HookUpDelegate#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#8)]
      [!code-vb[HookUpDelegate#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#8)]  
   
-7. Przetestuj zdarzenia. Poniższy kod przedstawia formularz zdefiniowany w przykładzie kodu. Klikając formularz wywołuje program obsługi zdarzeń.  
+7. Przetestuj zdarzenie. Poniższy kod przedstawia formularz zdefiniowany w przykładowym kodzie. Kliknięcie formularza wywołuje program obsługi zdarzeń.  
   
      [!code-cpp[HookUpDelegate#12](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#12)]
      [!code-csharp[HookUpDelegate#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#12)]
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
 <a name="procedureSection1"></a>   
-### <a name="to-generate-an-event-handler-at-run-time-by-using-a-dynamic-method"></a>Aby wygenerować procedurę obsługi zdarzeń w czasie wykonywania przy użyciu dynamicznej metody  
+### <a name="to-generate-an-event-handler-at-run-time-by-using-a-dynamic-method"></a>Aby wygenerować procedurę obsługi zdarzeń w czasie wykonywania przy użyciu metody dynamicznej  
   
-1. W czasie wykonywania za pomocą uproszczonego metody dynamiczne mogą być generowane metody obsługi zdarzeń i emisji odbicia. Do utworzenia programu obsługi zdarzeń, potrzebne jest typ zwracany i typy parametrów delegata. Te można uzyskać, sprawdzając pełnomocnika `Invoke` metody. Poniższy kod używa `GetDelegateReturnType` i `GetDelegateParameterTypes` metody, aby uzyskać te informacje. Kod dla tych metod można znaleźć w części przykładu w dalszej części tego tematu.  
+1. Metody obsługi zdarzeń mogą być generowane w czasie wykonywania przy użyciu uproszczonych metod dynamicznych i emisji odbicia. Do skonstruowania procedury obsługi zdarzeń wymagany jest typ zwracany i typy parametrów delegata. Można je uzyskać, badając `Invoke` metodę delegata. Poniższy kod używa `GetDelegateReturnType` metod i `GetDelegateParameterTypes` , aby uzyskać te informacje. Kod dla tych metod można znaleźć w sekcji przykład w dalszej części tego tematu.  
   
-     Nie jest konieczne nazwanie <xref:System.Reflection.Emit.DynamicMethod>, więc pusty ciąg może być używany. W poniższym kodzie, ostatni argument kojarzy metodę dynamiczną z bieżącym typem, zapewniając obiektu delegowanego dostępu do wszystkich publicznych i prywatnych składowych `Example` klasy.  
+     Nazwa nie jest konieczna <xref:System.Reflection.Emit.DynamicMethod>, więc można użyć pustego ciągu. W poniższym kodzie, ostatni argument kojarzy metodę dynamiczną z bieżącym typem, dając delegata dostęp do wszystkich publicznych i prywatnych członków `Example` klasy.  
   
      [!code-cpp[HookUpDelegate#9](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#9)]
      [!code-csharp[HookUpDelegate#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#9)]
      [!code-vb[HookUpDelegate#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#9)]  
   
-2. Generowanie treści metody. Ta metoda ładuje ciągu, wywołuje przeciążenia <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> metody, która przyjmuje ciąg, pojawi się wartość zwracaną ze stosu (ponieważ program obsługi nie ma zwracanego typu), a następnie zwraca. Aby dowiedzieć się więcej na temat emitowanie metod dynamicznych, zobacz [jak: Definiowanie i wykonywanie metod dynamicznych](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md).  
+2. Generuj treść metody. Ta metoda ładuje ciąg, wywołuje Przeciążenie <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> metody, która pobiera ciąg znaków, wyświetla wartość zwracaną przez stos (ponieważ program obsługi nie ma zwracanego typu) i zwraca. Aby dowiedzieć się więcej o emitowaniu metod dynamicznych [, zobacz How to: Definiowanie i wykonywanie metod](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)dynamicznych.  
   
      [!code-cpp[HookUpDelegate#10](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#10)]
      [!code-csharp[HookUpDelegate#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#10)]
      [!code-vb[HookUpDelegate#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#10)]  
   
-3. Wykonaj metodę dynamiczną, wywołując jego <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> metody. Użyj `add` dostępu, aby dodać delegata do listy wywołań dla zdarzenia.  
+3. Ukończ metodę dynamiczną, wywołując <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> metodę. Użyj metody `add` dostępu, aby dodać delegata do listy wywołań dla zdarzenia.  
   
      [!code-cpp[HookUpDelegate#11](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#11)]
      [!code-csharp[HookUpDelegate#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#11)]
      [!code-vb[HookUpDelegate#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#11)]  
   
-4. Przetestuj zdarzenia. Poniższy kod ładuje formularz zdefiniowany w przykładzie kodu. Klikając formularz wywołuje program obsługi zdarzeń wstępnie zdefiniowanych i program obsługi zdarzeń emitowany.  
+4. Przetestuj zdarzenie. Poniższy kod ładuje formularz zdefiniowany w przykładowym kodzie. Kliknięcie formularza wywołuje zarówno wstępnie zdefiniowaną procedurę obsługi zdarzeń, jak i wyemitowaną procedurę obsługi zdarzeń.  
   
      [!code-cpp[HookUpDelegate#12](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#12)]
      [!code-csharp[HookUpDelegate#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#12)]
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje, jak dołączyć istniejącą metodę do zdarzenia przy użyciu odbicia, a także jak używać <xref:System.Reflection.Emit.DynamicMethod> klasy, aby emitować metodę w czasie wykonywania i podłączyć ją do zdarzenia.  
+ Poniższy przykład kodu pokazuje, jak podłączyć istniejącą metodę do zdarzenia przy użyciu odbicia, a także jak użyć <xref:System.Reflection.Emit.DynamicMethod> klasy do emisji metody w czasie wykonywania i podłączania do zdarzenia.  
   
  [!code-cpp[HookUpDelegate#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#1)]
  [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)]

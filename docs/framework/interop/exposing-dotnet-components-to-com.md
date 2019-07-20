@@ -8,47 +8,47 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a6c2b755b87f6f01f08f54a2f2fc567868dbb55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b2b2f550b21a8d64968c6280cc1a29c1d18bfabd
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626350"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364009"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Udostępnianie składników .NET Framework modelowi COM
-Typ architektury .NET do zapisywania i używania tego typu z niezarządzanego kodu są różne działania, dla deweloperów. W tej sekcji opisano kilka porad dotyczących pisaniu kodu zarządzanego, który współdziała z klientami COM:  
+Pisanie typu .NET i używanie tego typu z kodu niezarządzanego to odrębne działania dla deweloperów. W tej sekcji opisano kilka wskazówek dotyczących pisania kodu zarządzanego, który współdziała z klientami COM:  
   
-- [Kwalifikowanie typów .NET do międzyoperacyjności](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
+- [Kwalifikowanie typów .NET do](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)międzyoperacyjności.  
   
-     Wszystkie zarządzane typy, metody, właściwości, pola i zdarzenia, które chcesz udostępnić w COM muszą być publiczne. Typy muszą mieć publicznego konstruktora domyślnego, który jest tylko konstruktorem, który może być wywoływany za pomocą modelu COM.  
+     Wszystkie typy zarządzane, metody, właściwości, pola i zdarzenia, które mają zostać ujawnione w modelu COM, muszą być publiczne. Typy muszą mieć publiczny Konstruktor bez parametrów, który jest jedynym konstruktorem, który może być wywoływany przez COM.  
   
-- [Stosowanie atrybutów międzyoperacyjności](../../../docs/framework/interop/applying-interop-attributes.md).  
+- [Stosowanie atrybutów](../../../docs/framework/interop/applying-interop-attributes.md)międzyoperacyjnych.  
   
-     Niestandardowe atrybuty w kodzie zarządzanym może zwiększyć współdziałanie składnika.  
+     Atrybuty niestandardowe w kodzie zarządzanym mogą wzmocnić współdziałanie składnika.  
   
 - [Pakowanie zestawu dla modelu COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).  
   
-     Deweloperzy COM może wymagać podsumowania etapy odwołujące się do i wdrażaniu zestawów.  
+     Deweloperzy COM mogą wymagać podsumowania kroków związanych z odwołującymi się i wdrażaniem zestawów.  
   
- Ponadto w tej sekcji wymieniono zadania związane z wykorzystywanie typu zarządzanego z klientem COM.  
+ Ponadto w tej sekcji przedstawiono zadania związane z zużywaniem typu zarządzanego z klienta COM.  
   
-#### <a name="to-consume-a-managed-type-from-com"></a>Korzystanie z typu zarządzanego z modelu COM  
+#### <a name="to-consume-a-managed-type-from-com"></a>Aby użyć typu zarządzanego z modelu COM  
   
-1. [Rejestrowanie zestawów z modelem COM](../../../docs/framework/interop/registering-assemblies-with-com.md).  
+1. [Zarejestruj zestawy przy użyciu modelu COM](../../../docs/framework/interop/registering-assemblies-with-com.md).  
   
-     Typy w zestawie (i biblioteki typów) musi być zarejestrowana w czasie projektowania. Jeśli Instalator nie rejestruje zestaw, poinstruuj deweloperom COM, należy użyć Regasm.exe.  
+     Typy w zestawie (i biblioteki typów) muszą być zarejestrowane w czasie projektowania. Jeśli Instalator nie rejestruje zestawu, poinstruuj deweloperów COM, aby korzystali z Regasm. exe.  
   
-2. [Odwoływać się do typów .NET z modelu COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).  
+2. [Odwołuj się do typów .NET z modelu COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).  
   
-     Deweloperzy COM może odwoływać się typy w zestawie przy użyciu tych samych narzędzi i technik, które używają już dziś.  
+     Deweloperzy COM mogą odwoływać się do typów w zestawie przy użyciu tych samych narzędzi i technik, których używają dzisiaj.  
   
-3. [Wywołanie obiektu .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).  
+3. [Wywoływanie obiektu .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).  
   
-     Deweloperzy COM może wywoływać metody dla obiektu .NET taki sam sposób mogą wywoływać metody dla dowolnego typu niezarządzanego. Na przykład COM **CoCreateInstance** API aktywuje obiektów platformy .NET.  
+     Deweloperzy COM mogą wywoływanie metod w obiekcie .NET w taki sam sposób, jak wywoływanie metod dla dowolnego typu niezarządzanego. Na przykład interfejs API funkcji **COCREATEINSTANCE** com aktywuje obiekty .NET.  
   
-4. [Wdrażanie aplikacji do dostępu do modelu COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).  
+4. [Wdróż aplikację na potrzeby dostępu do modelu COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).  
   
-     Zestawu z silną nazwą, można zainstalować w globalnej pamięci podręcznej i wymaga podpisu od jego wydawcy. Zestawy, które nie są silną nazwę muszą być zainstalowane w katalogu aplikacji klienta.  
+     Zestaw o silnej nazwie można zainstalować w globalnej pamięci podręcznej zestawów i wymaga podpisu od jego wydawcy. Zestawy, które nie mają silnej nazwy, muszą być zainstalowane w katalogu aplikacji klienta.  
   
 ## <a name="see-also"></a>Zobacz także
 

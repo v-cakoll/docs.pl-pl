@@ -17,194 +17,194 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 5d7b76365178c78d2b20b9541d5e52a605158a77
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 42b1596082fe3e682a6fa806412ab5837b087bf9
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859825"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400708"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia zabezpieczeń WPF - zabezpieczenia platformy
-Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jednocześnie również wykorzystuje funkcje zabezpieczeń, możliwości platformy, która zawiera system operacyjny, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], i [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Te warstwy są łączone w celu zapewnienia [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] model zabezpieczeń silne, ochronę w głębi, który próbuje uniknąć dowolnego pojedynczego punktu awarii, jak pokazano na poniższej ilustracji:  
+Mimo że Windows Presentation Foundation (WPF) oferuje różne usługi zabezpieczeń, wykorzystuje również funkcje zabezpieczeń podstawowej platformy, w tym system operacyjny, środowisko CLR i [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Te warstwy łączą się [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , aby zapewnić mocny, kompleksowy model zabezpieczeń, który podejmuje próbę uniknięcia wszelkich Single Point of Failure, jak pokazano na poniższej ilustracji:  
   
- ![Diagram pokazujący model zabezpieczeń WPF.](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
+ ![Diagram przedstawiający model zabezpieczeń WPF.](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
- W pozostałej części tego tematu opisano funkcje, w każdym z tych warstw, które odnoszą się do [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] specjalnie.  
+ W pozostałej części tego tematu omówiono funkcje w każdej z tych warstw, które [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] odnoszą się do programu.  
 
 <a name="Operating_System_Security"></a>   
-## <a name="operating-system-security"></a>Zabezpieczeń systemu operacyjnego  
- Minimalny poziom systemu operacyjnego, która jest wymagana przez [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] jest [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]. Rdzeń [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] udostępnia kilka funkcji zabezpieczeń, które stanowią podstawę zabezpieczeń dla wszystkich aplikacji Windows, łącznie z tymi utworzonych za pomocą [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] zawiera funkcje zabezpieczeń [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] i rozszerza je dalej. W tym temacie omówiono szerokość te funkcje zabezpieczeń, które są istotne dla [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], a także [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] integruje się z nimi, aby zapewnić dalsze ochronę w głębi.  
+## <a name="operating-system-security"></a>Zabezpieczenia systemu operacyjnego  
+ Minimalny poziom systemu operacyjnego, który jest wymagany przez [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] program to. [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] Rdzeń programu [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] zapewnia kilka funkcji zabezpieczeń, które tworzą podstawę zabezpieczeń dla wszystkich aplikacji systemu Windows, w tym tych [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]utworzonych za pomocą programu. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]obejmuje funkcje zabezpieczeń programu i zwiększa ich [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] liczbę. W tym temacie omówiono zakres tych funkcji zabezpieczeń, które są ważne dla [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]programu, a także [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] integrację z nimi w celu zapewnienia dalszej ochrony szczegółowej.  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
- Oprócz ogólnego przeglądu i wzmocnienie Windows, istnieją trzy najważniejsze funkcje z [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] , omówimy w tym temacie:  
+ Oprócz ogólnego przeglądu i wzmocnienia systemu Windows, istnieją trzy kluczowe funkcje [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] , które są omawiane w tym temacie:  
   
-- Kompilacji/GS  
+- Kompilacja/GS  
   
 - [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
   
-#### <a name="gs-compilation"></a>/GS Compilation  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] zapewnia ochronę przez kompilację wiele bibliotek systemu core, wraz ze wszystkimi [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] zależności, takie jak [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], aby ułatwić uniknięcie przepełnienia buforu. Jest to osiągane przy użyciu parametru/GS za pomocą kompilatora wiersza polecenia języka C/C++. Chociaż należy jawnie unikać przepełnienia buforu, kompilacji/GS zawiera przykład obrony głębokiej względem potencjalnych luk w zabezpieczeniach, które nieodwracalnie lub celowego tworzonych przez nich.  
+#### <a name="gs-compilation"></a>Kompilacja/GS  
+ [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]zapewnia ochronę przez ponowną kompilację wielu podstawowych bibliotek systemowych, w tym [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] wszystkich zależności, takich jak środowisko CLR, aby pomóc w ograniczeniu przekroczenia buforu. Jest to osiągane przy użyciu parametru/GS z kompilatorem wierszaC++ polecenia C/. Mimo że przepełnienia buforów należy jawnie uniknąć, kompilacja/GS oferuje przykład obrony przed potencjalnymi lukami, które są przypadkowo lub złośliwie tworzone przez nie.  
   
- W przeszłości przepełnienia buforu zostały Przyczyna wielu lukami w zabezpieczeniach o dużym znaczeniu. Przepełnienie buforu występuje, gdy osoba atakująca wykorzystuje kodu, który umożliwia uruchomienie złośliwego kodu, który zapisuje poza granice buforu. Pozwala to następnie osobie atakującej przejąć kontrolę nad proces, w której kod jest wykonywany przez zastąpienie adres zwrotny funkcji, aby spowodować, że wykonywanie kodu osoby atakującej. Wynik jest złośliwy kod, który jest wykonywany dowolnego kodu z takie same uprawnienia jak proces przejętego.  
+ W przeszłości przekroczenia buforu były przyczyną wielu luk w zabezpieczeniach o dużym wpływie. Przepełnienie buforu występuje, gdy osoba atakująca korzysta z luki w zabezpieczeniach kodu, która pozwala na wstrzyknięcie złośliwego kodu, który zapisuje się poza granicami buforu. Dzięki temu osoba atakująca może przejąć proces, w którym wykonywany jest kod, zastępując adres zwrotny funkcji, aby spowodować wykonanie kodu osoby atakującej. Wynikiem jest złośliwy kod, który wykonuje dowolny kod z takimi samymi uprawnieniami co proces przejęty.  
   
- Na wysokim poziomie flagi kompilatora/GS chroni przed niektóre potencjalne przepełnienia buforów przez iniekcję specjalnych zabezpieczeniach plik cookie, aby chronić adres zwrotny funkcji, która ma buforów lokalnego ciągu. Po powrocie funkcji, pliku cookie zabezpieczeń jest porównywana z poprzedniej wartości. Jeśli wartość została zmieniona, może wystąpić przepełnienie buforu, a proces zostanie zatrzymany warunek błędu. Trwa zatrzymywanie procesu uniemożliwia wykonywanie potencjalnie złośliwego kodu. Zobacz [/GS (Sprawdzanie zabezpieczeń bufora)](/cpp/build/reference/gs-buffer-security-check) Aby uzyskać więcej informacji.  
+ Na wysokim poziomie flaga kompilatora/GS chroni przed niektórymi potencjalnymi przedziałami buforu poprzez wstrzyknięcie specjalnego pliku cookie zabezpieczeń w celu ochrony adresu zwrotnego funkcji, która ma lokalne bufory ciągów. Po powrocie funkcji plik cookie zabezpieczeń jest porównywany z poprzednią wartością. Jeśli wartość została zmieniona, może wystąpić przepełnienie buforu i proces zostanie zatrzymany z warunkiem błędu. Zatrzymanie procesu uniemożliwia wykonanie potencjalnie złośliwego kodu. Aby uzyskać więcej informacji, zobacz [/GS (sprawdzanie zabezpieczeń bufora)](/cpp/build/reference/gs-buffer-security-check) .  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] jest kompilowany za pomocą flagi/GS, aby dodać kolejną warstwę ochrony do [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacji.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]jest kompilowany za pomocą flagi/GS, aby dodać jeszcze inną warstwę obrony do [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacji.  
   
-#### <a name="microsoft-windows-update-enhancements"></a>Program Microsoft Windows aktualizacji rozszerzenia  
- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)] poprawiła się również w [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] w celu uproszczenia procesu pobierania i instalowania aktualizacji. Te zmiany znacznie poprawić zabezpieczenia [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] klientów dzięki zapewnieniu, że ich systemy są aktualne, szczególnie w odniesieniu do aktualizacji zabezpieczeń.  
+#### <a name="microsoft-windows-update-enhancements"></a>Udoskonalenia programu Microsoft Windows Update  
+ [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]Ulepszono również w [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] programie, aby uprościć proces pobierania i instalowania aktualizacji. Te zmiany znacząco zwiększają bezpieczeństwo [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] klientów, pomagając w upewnieniu się, że ich systemy są aktualne, szczególnie w odniesieniu do aktualizacji zabezpieczeń.  
   
 <a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Użytkownicy na [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] będzie korzystać z rozszerzeń zabezpieczeń systemu operacyjnego, "Najniższych dostęp użytkownika", sprawdzania integralności kodu, w tym i uprawnieniami izolacji.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] użytkownicy mogą korzystać z dodatkowych ulepszeń zabezpieczeń systemu operacyjnego, takich jak "dostęp użytkownika z najwyższymi uprawnieniami", sprawdzanie integralności kodu i izolacja uprawnień.  
   
 #### <a name="user-account-control-uac"></a>Kontrola konta użytkownika (UAC)  
- Obecnie użytkownicy Windows zwykle uruchomione z uprawnieniami administratora, ponieważ wiele aplikacji wymaga ich do instalacji lub wykonania lub obu. Przykładem jest możliwość zapisu domyślne ustawienia aplikacji w rejestrze.  
+ Obecnie użytkownicy systemu Windows mogą uruchamiać się z uprawnieniami administratora, ponieważ wiele aplikacji wymaga ich do instalacji lub wykonania albo obu tych metod. Przykładem może być zapisanie domyślnych ustawień aplikacji do rejestru.  
   
- Uruchomione z uprawnieniami administratora tak naprawdę oznacza, że aplikacje są wykonywane z procesów, które są przyznawane uprawnienia administratora. Wpływ zabezpieczeń jest złośliwy kod, który przejęcia proces uruchomiony z uprawnieniami administratora będą automatycznie dziedziczone tych uprawnień, łącznie z dostępem do krytyczne zasoby systemu.  
+ Uruchamianie z uprawnieniami administratora naprawdę oznacza, że aplikacje są wykonywane z procesów, które mają uprawnienia administratora. Wpływem bezpieczeństwa tego jest to, że dowolny złośliwy kod, który przejmuje proces z uprawnieniami administratora, będzie automatycznie dziedziczyć te uprawnienia, w tym dostęp do krytycznych zasobów systemu.  
   
- Jednym ze sposobów, aby chronić przed zagrożeniem bezpieczeństwa jest uruchomienie aplikacji z najmniejszą ilością uprawnień, które są wymagane. To jest znany jako zasadę najmniejszych uprawnień, a to funkcja core [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] systemu operacyjnego. Ta funkcja jest wywoływana kontroli konta użytkownika (UAC) i jest używany przez [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] funkcji Kontrola konta użytkownika na dwa sposoby klucza:  
+ Jednym ze sposobów ochrony przed tym zagrożeniem bezpieczeństwa jest uruchomienie aplikacji z najmniejszą ilością wymaganych uprawnień. Jest to nazywane zasadą najniższych uprawnień i jest podstawową funkcją [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] systemu operacyjnego. Ta funkcja jest nazywana kontrolą konta użytkownika (UAC) i jest używana przez [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] funkcję UAC na dwa kluczowe sposoby:  
   
-- Aby uruchamiać większość aplikacji przy użyciu uprawnień funkcji kontroli konta użytkownika domyślnie, nawet jeśli użytkownik jest administratorem; tylko te aplikacje, które są wymagane uprawnienia administratora zostanie uruchomione z uprawnieniami administratora. Aby uruchomić z uprawnieniami administracyjnymi, aplikacje muszą być jawnie oznaczone albo swoich aplikacji manifestu lub jako wpis w zasadach zabezpieczeń.  
+- Aby domyślnie uruchamiać większość aplikacji z uprawnieniami funkcji Kontrola konta użytkownika, nawet jeśli użytkownik jest administratorem. tylko aplikacje, które wymagają uprawnień administratora, będą uruchamiane z uprawnieniami administratora. Aby można było uruchamiać z uprawnieniami administracyjnymi, aplikacje muszą być jawnie oznaczone w manifeście aplikacji lub jako wpis w zasadach zabezpieczeń.  
   
-- Aby zapewnić zgodność z rozwiązaniami, takimi jak wirtualizacji. Na przykład wiele aplikacji próby zapisu ograniczeniami trafić C:\Program Files. W przypadku aplikacji wykonywanie w ramach kontroli konta użytkownika z lokalizacją użytkownika alternatywnych istnieje nie wymaga uprawnień administratora do zapisu. Dla aplikacji działających w ramach kontroli konta użytkownika C:\Program Files Wirtualizuje funkcji Kontrola konta użytkownika, tak, aby aplikacje, którzy wydaje się, że pisania do niego są faktycznie zapisu do lokalizacji alternatywnej, na użytkownika. Tego rodzaju pracy zgodności umożliwia uruchamianie wielu aplikacji, które wcześniej nie można uruchomić w funkcji kontroli konta użytkownika systemu operacyjnego.  
+- Zapewnianie rozwiązań zgodności, takich jak wirtualizacja. Przykładowo wiele aplikacji próbuje zapisywać w lokalizacjach z ograniczeniami, takimi jak C:\Program Files. W przypadku aplikacji uruchamianych w ramach funkcji Kontrola konta użytkownika istnieje alternatywna lokalizacja dla poszczególnych użytkowników, która nie wymaga uprawnień administratora do zapisu w usłudze. W przypadku aplikacji uruchamianych w ramach funkcji UAC funkcja Kontrola konta użytkownika umożliwia wirtualizację C:\Program Files w taki sposób, że aplikacje, które zauważają, że zapisu są w rzeczywistości zapisywane do alternatywnej lokalizacji na użytkownika. Ten rodzaj pracy zgodności umożliwia systemowi operacyjnemu uruchamianie wielu aplikacji, które nie mogły wcześniej działać w funkcji Kontrola konta użytkownika.  
   
 #### <a name="code-integrity-checks"></a>Sprawdzanie integralności kodu  
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] łączy w sobie lepiej sprawdzania integralności kodu w celu uniemożliwienia złośliwym kodem są wstrzykiwane do plików systemowych lub jądra w momencie uruchomienia/obciążenia. To wykracza poza ochrony plików systemowych.  
+ [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]zapewnia lepszą kontrolę integralności kodu, aby zapobiec wprowadzaniu złośliwego kodu do plików systemowych lub jądra w czasie ładowania/uruchamiania. Powoduje to przekroczenie ochrony plików systemowych.  
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
-### <a name="limited-rights-process-for-browser-hosted-applications"></a>Proces ograniczonych uprawnień dla aplikacji hostowanych w przeglądarce  
- Hostowana w przeglądarce [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje są wykonywane w piaskownicy strefy Internet. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Integracja z usługą [!INCLUDE[TLA#tla_ie](../../../includes/tlasharptla-ie-md.md)] rozszerza tę ochronę za pomocą dodatkowej pomocy technicznej.  
+### <a name="limited-rights-process-for-browser-hosted-applications"></a>Ograniczony proces uprawnień dla aplikacji hostowanych w przeglądarce  
+ Aplikacje hostowane [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] w przeglądarce są wykonywane w piaskownicy strefy internetowej. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Integracja z [!INCLUDE[TLA#tla_ie](../../../includes/tlasharptla-ie-md.md)] programem rozszerza tę ochronę dzięki dodatkowej obsłudze.  
   
-#### <a name="internet-explorer-6-service-pack-2-and-internet-explorer-7-for-xp"></a>Dodatek Service Pack 2 dla Internet Explorer 6 i Internet Explorer 7 XP  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] wykorzystuje zabezpieczeń systemu operacyjnego przez ograniczenie uprawnień procesów dla [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] do dalszej ochrony. Przed obsługiwane w przeglądarce [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacja jest uruchamiana, system operacyjny tworzy proces hosta, która usuwa niepotrzebnych uprawnień z tokenu procesu. Przykłady uprawnień, które są usuwane: możliwość zamknięcia komputera użytkownika, obciążenia sterowniki i dostęp do odczytu do wszystkich plików na komputerze.  
+#### <a name="internet-explorer-6-service-pack-2-and-internet-explorer-7-for-xp"></a>Internet Explorer 6 z dodatkiem Service Pack 2 i Internet Explorer 7 dla systemu XP  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]wykorzystuje zabezpieczenia systemu operacyjnego przez ograniczenie uprawnień procesu do [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] dalszej ochrony. Przed uruchomieniem aplikacji hostowanej [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] w przeglądarce system operacyjny tworzy proces hosta, który usuwa zbędne uprawnienia z tokenu procesu. Niektóre przykłady uprawnień, które zostały usunięte, obejmują możliwość zamykania komputera użytkownika, ładowania sterowników i dostępu do odczytu do wszystkich plików na komputerze.  
   
-#### <a name="internet-explorer-7-for-vista"></a>Internet Explorer 7 for Vista  
- W [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje są uruchamiane w trybie chronionym. W szczególności [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] Uruchom o poziomie średnim integralności.  
+#### <a name="internet-explorer-7-for-vista"></a>Internet Explorer 7 dla systemu Vista  
+ W programie [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)]aplikacjedziałająwtrybie chronionym.[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] W tym [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] celu należy uruchomić polecenie z integralnością średniego poziomu.  
   
-#### <a name="defense-in-depth-layer"></a>Warstwa ochronę w głębi  
- Ponieważ [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] są zazwyczaj piaskownicy za pośrednictwem Internetu, zestaw uprawnień strefy, usuwając te uprawnienia nie uszkodzić [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] z punktu widzenia zgodności. Zamiast tego tworzony jest dodatkową warstwę ochronę w głębi; Jeśli aplikacja w trybie piaskownicy jest w stanie wykorzystać innych warstw i przejęcia proces, proces będzie nadal tylko ma ograniczone uprawnienia.  
+#### <a name="defense-in-depth-layer"></a>Warstwa obrony szczegółowej  
+ Ponieważ [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] zwykle są w trybie piaskownicy przez zestaw uprawnień strefy Internet, Usunięcie tych uprawnień nie jest [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] szkodliwe dla perspektywy zgodności. Zamiast tego zostanie utworzona dodatkowa warstwa zabezpieczeń. Jeśli aplikacja w trybie piaskownicy może wykorzystywać inne warstwy i przejmowanie tego procesu, proces nadal będzie miał tylko ograniczone uprawnienia.  
   
- Zobacz [przy użyciu konta użytkownika najmniej uprzywilejowane](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29).  
+ Zobacz [Używanie konta użytkownika z najniższymi uprawnieniami](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29).  
   
 <a name="Common_Language_Runtime_Security"></a>   
-## <a name="common-language-runtime-security"></a>Zabezpieczenia usługi Common Language Runtime  
- [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] Oferuje szereg korzyści klucza zabezpieczeń, które obejmują sprawdzanie poprawności i weryfikacji, [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]i metodologia krytyczne zabezpieczeń.  
+## <a name="common-language-runtime-security"></a>Zabezpieczenia środowiska uruchomieniowego języka wspólnego  
+ Środowisko uruchomieniowe języka wspólnego (CLR) oferuje szereg najważniejszych korzyści z zabezpieczeń, które obejmują sprawdzanie poprawności i weryfikację, zabezpieczenia dostępu kodu (CAS) oraz krytyczną metodologię zabezpieczeń.  
   
 <a name="Validation_and_Verification"></a>   
-### <a name="validation-and-verification"></a>Sprawdzanie poprawności i weryfikacja  
- Zapewnienie izolacji zestawu oraz integralności, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] używa procesu sprawdzania poprawności. [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] Sprawdzanie poprawności zapewnia, że zestawy są izolowane, sprawdzając poprawność format pliku przenośny plik wykonywalny (PE) ich adresy, które wskazują spoza zestawu. [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] Sprawdzanie poprawności także weryfikuje integralność metadanych, który jest osadzony w zestawie.  
+### <a name="validation-and-verification"></a>Weryfikacja i weryfikacja  
+ Aby zapewnić izolację i integralność zestawu, środowisko CLR używa procesu weryfikacji. Sprawdzanie poprawności środowiska CLR zapewnia odizolowanie zestawów przez zweryfikowanie ich przenośnego formatu pliku wykonywalnego (PE) dla adresów, które wskazują poza zestawem. Sprawdzanie poprawności środowiska CLR sprawdza również integralność metadanych osadzonych w zestawie.  
   
- Aby zapewnić bezpieczeństwo typów, zapobiec typowych problemów z zabezpieczeniami (np. przepełnienie buforu) i Włącz tryb piaskownicy za pośrednictwem procesów podrzędnych izolacji [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] zabezpieczeń korzysta z koncepcji weryfikacji.  
+ Aby zapewnić bezpieczeństwo typów, należy zapobiec typowym problemom z zabezpieczeniami (na przykład przekroczenia buforu) i włączyć obsługę piaskownicy przez izolację podprocesów, a zabezpieczenia CLR wykorzystują koncepcję weryfikacji.  
   
- Zarządzane aplikacje są kompilowane do firmy Microsoft Intermediate Language (MSIL). Gdy są wykonywane w aplikacji zarządzanej metody, jego MSIL jest kompilowane do kodu natywnego za pośrednictwem kompilacji just in Time (JIT). Kompilacja JIT obejmuje proces weryfikacji, który ma zastosowanie wielu reguł bezpieczeństwa i niezawodności, które upewnij się, że nie ma kodu:  
+ Aplikacje zarządzane są kompilowane do języka pośredniego firmy Microsoft (MSIL). Gdy są wykonywane metody w aplikacji zarządzanej, jej MSIL jest kompilowany do kodu natywnego za pomocą kompilacji just-in-Time (JIT). Kompilacja JIT obejmuje proces weryfikacji, który stosuje wiele reguł bezpieczeństwa i niezawodności, które gwarantują, że kod nie:  
   
-- Naruszać kontraktów typu  
+- Narusza kontrakty typu  
   
-- Wprowadzenie przepełnienia buforów  
+- Wprowadź przekroczenia buforu  
   
-- Bardzo popularny mają dostęp do pamięci.  
+- Bezznaczne dostęp do pamięci.  
   
- Kod zarządzany, który nie jest zgodny z regułami weryfikacji jest niedozwolone są wykonywane, chyba że jest on uznawany za zaufany kod.  
+ Nie można wykonać kodu zarządzanego, który jest niezgodny z regułami weryfikacji, chyba że jest uznawany za zaufany kod.  
   
- Zaletą weryfikowalny kod jest klucza przyczyny, dlaczego [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] opiera się na programie .NET Framework. W zakresie, w jakim weryfikowalny kod jest używany, możliwość wykorzystania możliwe luki w zabezpieczeniach jest znacząco obniżona.  
+ Zaletą kodu możliwego do zweryfikowania jest powód [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , dla którego kompilacje na .NET Framework. W zakresie, w jakim jest używany kod możliwy do zweryfikowania, możliwość wykorzystania możliwych luk w zabezpieczeniach jest znacznie niższa.  
   
 <a name="Code_Access_Security"></a>   
 ### <a name="code-access-security"></a>Zabezpieczenia dostępu kodu  
- Komputer kliencki udostępnia szeroką gamę zasobów, że aplikacji zarządzanej może mieć dostęp do, w tym system plików, rejestru, usług drukowania, interfejs użytkownika, odbicia i zmiennych środowiskowych. Zanim zarządzanej aplikacji dostęp do zasobów na komputerze klienckim, musi mieć uprawnienia systemu .NET Framework, aby to zrobić. Dla uprawnienia w [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] jest podklasą <xref:System.Security.CodeAccessPermission>; [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] implementuje jedną podklasę dla poszczególnych zasobów, które zarządzane aplikacje mogą uzyskiwać dostęp do.  
+ Komputer kliencki uwidacznia szeroką gamę zasobów, do których może mieć dostęp aplikacja zarządzana, w tym system plików, rejestr, usługi drukowania, interfejs użytkownika, odbicie i zmienne środowiskowe. Aby aplikacja zarządzana mogła uzyskać dostęp do dowolnych zasobów na komputerze klienckim, musi mieć odpowiednie uprawnienia .NET Framework. Uprawnienie w urzędach certyfikacji jest podklasą <xref:System.Security.CodeAccessPermission>klasy; Urzędy certyfikacji implementują jedną podklasę dla każdego zasobu, do którego mogą uzyskać dostęp aplikacje zarządzane.  
   
- Zestaw uprawnień aplikacji zarządzanej jest udzielany przez [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] przy rozpoczęciu wykonywania jest znany jako zestaw uprawnień i jest określana przez dowody dostarczone przez aplikację. Aby uzyskać [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] jest dowód, który jest dostarczany aplikacji, lokalizacji lub strefy, z którego będą uruchamiane aplikacje. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] identyfikuje następujących stref:  
+ Zestaw uprawnień, które są przydzielane przez urzędy certyfikacji podczas uruchamiania, jest znany jako zestaw uprawnień i jest określany przez dowody dostarczone przez aplikację. W [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] przypadku aplikacji dostarczane dowody są lokalizacją lub strefą, z której są uruchamiane aplikacje. Urzędy certyfikacji identyfikują następujące strefy:  
   
-- **Mój komputer**. Aplikacje uruchomione na komputerze klienta (w pełni zaufane).  
+- **Mój komputer**. Aplikacje uruchomione z komputera klienckiego (w pełni zaufane).  
   
-- **Lokalny Intranet**. Aplikacje uruchamiane w sieci intranet. (W pewnym stopniu zaufany).  
+- **Lokalny intranet**. Aplikacje uruchamiane z intranetu. (Nieco zaufane).  
   
-- **Internet**. Aplikacje uruchomione z Internetu. (Najmniej zaufanej).  
+- **Internet**. Aplikacje uruchomione z Internetu. (Najmniej zaufany).  
   
-- **Zaufane witryny**. Aplikacje identyfikowane przez użytkownika jako jest zaufana. (Najmniej zaufanej).  
+- **Zaufane witryny**. Aplikacje identyfikowane przez użytkownika jako zaufane. (Najmniej zaufany).  
   
-- **Niezaufanych witryn**. Aplikacje, zidentyfikowane przez użytkownika jako jest niezaufany. (Niezaufanych).  
+- **Niezaufane witryny**. Aplikacje zidentyfikowane przez użytkownika jako niezaufanego. (Niezaufane).  
   
- Dla każdego z tych stref [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] udostępnia wstępnie zdefiniowanego zestawu uprawnień, który obejmuje uprawnienia odpowiadającego poziom zaufania związany z każdą. Należą do nich następujące elementy:  
+ W przypadku każdej z tych stref urzędy certyfikacji udostępniają wstępnie zdefiniowany zestaw uprawnień, który obejmuje uprawnienia zgodne z poziomem zaufania skojarzonym z każdym z nich. Należą do nich następujące elementy:  
   
-- **FullTrust**. W przypadku aplikacji, uruchomione z **Mój komputer** strefy. Wszystkie możliwe uprawnienia są przyznawane.  
+- **FullTrust**. W przypadku aplikacji uruchamianych z strefy **My Computer** . Przyznano wszystkie możliwe uprawnienia.  
   
-- **LocalIntranet**. W przypadku aplikacji, uruchomione z **lokalny Intranet** strefy. Podzbiór uprawnienia są przyznawane zapewniają umiarkowane dostęp do zasobów komputera klienta, w tym wydzielonej pamięci masowej, nieograniczony dostęp do interfejsu użytkownika, okna dialogowe pliku bez ograniczeń, ograniczone odbicia, ograniczony dostęp do zmiennych środowiskowych. Uprawnienia dla krytycznych zasobów, takich jak rejestru nie są dostarczane.  
+- **LocalIntranet**. W przypadku aplikacji uruchomionych ze strefy **Lokalny intranet** . Podzbiór uprawnień zapewnia średni dostęp do zasobów komputera klienckiego, w tym izolowany magazyn, nieograniczony dostęp do interfejsu użytkownika, nieograniczone okna dialogowe plików, ograniczone odbicie i ograniczony dostęp do zmiennych środowiskowych. Nie podano uprawnień do zasobów krytycznych, takich jak rejestr.  
   
-- **Internet**. W przypadku aplikacji, uruchomione z **Internet** lub **Zaufane witryny** strefy. Podzbiór uprawnienia udzielane pod warunkiem ograniczony dostęp do zasobów komputera klienta, w tym wydzielonej pamięci masowej, można otworzyć pliku tylko i ograniczenia interfejsu użytkownika. Zasadniczo to uprawnienie Ustaw izoluje aplikacje z komputera klienckiego.  
+- **Internet**. W przypadku aplikacji uruchamianych z strefy **Internet** lub **Zaufane witryny** . Podzbiór uprawnień zapewnia ograniczony dostęp do zasobów komputera klienckiego, w tym do magazynu izolowanego, tylko do otwierania plików i ograniczonych interfejsów użytkownika. Zasadniczo ten zestaw uprawnień izoluje aplikacje z komputera klienckiego.  
   
- Aplikacje określone jako pochodzącej z **niezaufanych witryn** strefy są przyznawane żadne uprawnienia przez [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] wcale. W związku z tym zestawu wstępnie zdefiniowanych uprawnień nie istnieje dla nich.  
+ Aplikacje zidentyfikowane jako pochodzące z strefy **niezaufane witryny** nie mają żadnych uprawnień przez urzędy certyfikacji. W związku z tym wstępnie zdefiniowany zestaw uprawnień nie istnieje.  
   
- Na poniższym rysunku przedstawiono relację między strefami, zestawy uprawnień, uprawnienia i zasoby:  
+ Na poniższej ilustracji przedstawiono relacje między strefami, zestawami uprawnień, uprawnieniami i zasobami:  
   
- ![Diagram pokazujący zestawy uprawnień CAS.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
+ ![Diagram przedstawiający zestawy uprawnień urzędów certyfikacji.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- Ograniczenia strefy Internet izolowanym stosuje się jednakowo do wszelki kod, który XBAP importuje z biblioteki systemu, w tym [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Gwarantuje to, że każdy bit kod jest zablokowane, nawet [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Niestety Aby móc wykonać XBAP musi korzystać z funkcji, która wymaga więcej uprawnień niż te, wynikające z piaskownicy zabezpieczeń strefy Internet.  
+ Ograniczenia trybu piaskownicy zabezpieczeń strefy internetowej są stosowane jednocześnie do dowolnego kodu, który jest importowany przez XBAP z biblioteki systemowej [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], włącznie z. Pozwala to zagwarantować, że każdy bit kodu jest zablokowany, nawet [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Niestety, aby można było wykonać, aplikacja XBAP musi wykonać funkcjonalność, która wymaga więcej uprawnień niż te włączone przez piaskownicę zabezpieczenia strefy internetowej.  
   
- Należy wziąć pod uwagę aplikacji XBAP, który zawiera następująca strona:  
-  
- [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
- [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
-  
- Do wykonania tego XBAP bazowego [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kod musi być wykonany więcej funkcji niż jest dostępne do wywoływania XBAP, w tym:  
-  
-- Tworzenie uchwyt okna (HWND) do renderowania  
-  
-- Podczas wysyłania wiadomości  
-  
-- Trwa ładowanie czcionki Tahoma  
-  
- Z zabezpieczeń będzie krytycznego punktu widzenia, dzięki czemu bezpośredni dostęp do dowolnego z tych operacji z aplikacji w trybie piaskownicy.  
-  
- Na szczęście [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] przeznaczony dla tej sytuacji, umożliwiając te operacje do wykonania z podwyższonym poziomem uprawnień w imieniu aplikacji w trybie piaskownicy. Podczas wszystkich [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] operacje są porównywane z ograniczonymi uprawnieniami zabezpieczeń strefy Internet domeny aplikacji XBAP [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (tak jak inne biblioteki systemu) otrzymuje zestawu uprawnień, który zawiera wszystkie możliwe uprawnienia.
-  
- Takie rozwiązanie wymaga [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] odbiera podwyższonego poziomu uprawnień podczas uniemożliwia tych uprawnień jest regulowane przez zestaw uprawnień strefy Internet domeny aplikacji hosta.  
-  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] robi to przy użyciu **Asercja** metoda uprawnienia. Poniższy kod pokazuje, jak to się dzieje.  
+ Rozważ użycie aplikacji XBAP zawierającej następującą stronę:  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- **Asercja** zasadniczo zapobiega nieograniczone uprawnienia wymagane przez [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] z są ograniczone przez Internet strefa uprawnienia XBAP.  
+ Aby wykonać tę operację XBAP, kod [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] źródłowy musi wykonywać więcej funkcji niż jest dostępny dla wywołującego programu XBAP, w tym:  
   
- Z punktu widzenia platformy [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] jest odpowiedzialny za pomocą **Asercja** poprawnie; niepoprawnego użycia **Asercja** można włączyć złośliwego kodu do podniesienia uprawnień. W związku z tym, należy następnie wywoływać tylko **Asercja** w razie potrzeby, oraz aby upewnić się, że piaskownicy ograniczenia pozostają bez zmian. Na przykład kodu w trybie piaskownicy nie może otworzyć plików losowych, ale może on być używać czcionek. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Umożliwia piaskownicy aplikacji przy użyciu funkcji czcionek, wywołując **Asercja**oraz [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] odczytu plików zawiera te czcionki w imieniu aplikacji w trybie piaskownicy.  
+- Tworzenie uchwytu okna (HWND) do renderowania  
+  
+- Wysyłanie komunikatów  
+  
+- Ładowanie czcionki Tahoma  
+  
+ Z punktu widzenia zabezpieczeń, umożliwienie bezpośredniego dostępu do którejkolwiek z tych operacji w aplikacji w trybie piaskownicy będzie katastrofalne.  
+  
+ Na szczęście zawarto tę sytuację, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] umożliwiając wykonywanie tych operacji z podwyższonym poziomem uprawnień w imieniu aplikacji w trybie piaskownicy. Wszystkie [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] operacje są sprawdzane względem ograniczonych uprawnień do zabezpieczeń strefy internetowej domeny aplikacji XBAP, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (podobnie jak w przypadku innych bibliotek systemowych) przyznany zestaw uprawnień, który obejmuje wszystkie możliwe uprawnienia.
+  
+ Wymaga to, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aby otrzymywać podwyższone uprawnienia, jednocześnie zapobiegając tym, aby te uprawnienia były regulowane przez zestaw uprawnień strefy internetowej domeny aplikacji hosta.  
+  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]w tym celu należy użyć metody **Assert** uprawnienia. Poniższy kod pokazuje, jak to się dzieje.  
+  
+ [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
+ [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
+  
+ **Potwierdzenie** zasadniczo uniemożliwia nieograniczone uprawnienia wymagane przez [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] program przed ograniczeniem uprawnień strefy Internetu aplikacji XBAP.  
+  
+ Z perspektywy platformy program [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] jest odpowiedzialny za używanie potwierdzeń prawidłowo; nieprawidłowe użycie **potwierdzenia** może umożliwić złośliwemu kodowi podwyższenie poziomu uprawnień. W związku z tym ważne jest, aby w razie potrzeby wywołać tylko **potwierdzenie** , i upewnić się, że ograniczenia piaskownicy pozostają nienaruszone. Na przykład kod w trybie piaskownicy nie może otwierać plików losowych, ale może korzystać z czcionek. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]umożliwia aplikacjom w trybie piaskownicy używanie funkcji czcionki przez wywoływanie metody [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Assert, a w celu odczytu plików, które są znane, zawierają te czcionki w imieniu aplikacji w trybie piaskownicy.  
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>Wdrożenie ClickOnce  
- [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] to technologia wdrażania kompleksowe, jest dołączana do .NET Framework, która integruje się z [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (zobacz [ClickOnce zabezpieczeń i wdrażania](/visualstudio/deployment/clickonce-security-and-deployment) Aby uzyskać szczegółowe informacje). Autonomiczny [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje można wdrożyć przy użyciu [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], natomiast aplikacje hostowane w przeglądarce musi zostać wdrożony za pomocą [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
+ ClickOnce to kompleksowa technologia wdrażania dołączona do .NET Framework i integruje się z programem [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (zobacz [zabezpieczenia i wdrażanie technologii ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) , aby uzyskać szczegółowe informacje). Aplikacje [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autonomiczne można wdrażać przy użyciu technologii ClickOnce, natomiast aplikacje hostowane w przeglądarce muszą być wdrażane za pomocą technologii ClickOnce.  
   
- Aplikacje wdrożone za pomocą [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] są podane jako dodatkowa warstwa zabezpieczeń za pośrednictwem [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]; zasadniczo [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] wdrożone aplikacje zażądać uprawnień, które są im niezbędne. Otrzymują uprawnienia Jeśli nie przekraczają zestaw uprawnień strefy, w którym aplikacja jest wdrażana. Dzięki zmniejszeniu zestaw uprawnień tylko do tych, które są potrzebne, nawet jeśli są mniejsze niż te dostarczone przez uprawnień strefy uruchamiania Ustaw, liczby zasobów, czy aplikacja ma dostęp do jest ograniczone do minimum systemu od zera. W związku z tym jeśli przejęta aplikacji jest mniejsze ryzyko uszkodzenia komputer kliencki.  
+ Aplikacje wdrożone przy użyciu technologii ClickOnce mają dodatkową warstwę zabezpieczeń w porównaniu z zabezpieczeniami dostępu kodu (CAS); zasadniczo aplikacje wdrożone ClickOnce żądają wymaganych uprawnień. Te uprawnienia są udzielane tylko wtedy, gdy nie przekraczają zestawu uprawnień dla strefy, z której aplikacja jest wdrażana. Zmniejszając zestaw uprawnień tylko do tych, które są niezbędne, nawet jeśli są one mniejsze niż te podane przez zestaw uprawnień strefy uruchamiania, liczba zasobów, do których aplikacja ma dostęp, jest ograniczona do minimum od zera. W związku z tym, jeśli aplikacja zostanie przejęta, potencjalne uszkodzenie komputera klienckiego jest ograniczone.  
   
 <a name="Security_Critical_Methodology"></a>   
-### <a name="security-critical-methodology"></a>Metodologia zabezpieczenia krytyczny  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Kodu, które używa uprawnień, aby włączyć piaskownicy strefy Internet, dla aplikacji XBAP musi być przechowywany na najwyższym możliwym stopniu inspekcji zabezpieczeń i kontroli. Aby ułatwić to wymaganie, .NET Framework zawiera nową obsługę zarządzania kod, który podnosi poziom uprawnień uprawnień. W szczególności [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] umożliwia Zidentyfikuj kod, który podnosi poziom uprawnień uprawnień i oznacz go za pomocą <xref:System.Security.SecurityCriticalAttribute>; każdy kod nie jest oznaczony atrybutem <xref:System.Security.SecurityCriticalAttribute> staje się *przezroczyste* przy użyciu tej metody. Z drugiej strony, zarządzanego kodu, który nie jest oznaczony atrybutem <xref:System.Security.SecurityCriticalAttribute> nie będzie mógł wzrasta uprawnień.  
+### <a name="security-critical-methodology"></a>Metodologia krytyczna dla zabezpieczeń  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Kod, który używa uprawnień do włączania piaskownicy strefy internetowej dla aplikacji XBAP, musi być utrzymywany do największego możliwego stopnia inspekcji i kontroli zabezpieczeń. Aby ułatwić to wymaganie, .NET Framework zapewnia nową obsługę zarządzania kodem, który podnosi uprawnienia. Środowisko CLR umożliwia zidentyfikowanie kodu, który podnosi poziom uprawnień i oznaczenie go z; dowolny kod <xref:System.Security.SecurityCriticalAttribute>, który nie jest <xref:System.Security.SecurityCriticalAttribute> oznaczony jako jest *przezroczysty* przy użyciu tej metodologii. Z drugiej strony kod zarządzany, który nie jest <xref:System.Security.SecurityCriticalAttribute> oznaczony za pomocą, nie jest zablokowany do podniesienia uprawnień.  
   
- Zabezpieczenia-krytyczny metodologii umożliwia organizacji [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kod, który podnosi poziom uprawnień uprawnień do *zabezpieczenia krytyczny jądra*, za pomocą reszta jest przezroczysty. Izolując kod zabezpieczenia krytyczny umożliwia [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] zespół inżynierów skupić się na dodatkowe analizy i źródła kontrole bezpieczeństwa na zabezpieczenia krytyczny jądra niż wskazówki dotyczące standardowych zabezpieczeń (zobacz [strategia zabezpieczeń WPF -Projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)).  
+ Metodologia krytyczna dla zabezpieczeń umożliwia organizacjom kodu [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] podnoszącym uprawnienia do *jądra o krytycznym znaczeniu dla bezpieczeństwa*, gdy pozostała część jest przejrzysta. Izolowanie kodu krytycznego dla zabezpieczeń umożliwia [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] zespołowi inżynieryjnemu skoncentrowanie się na dodatkowej analizie zabezpieczeń i kontroli źródła na jądrze o krytycznym znaczeniu dla bezpieczeństwa powyżej i poza standardowymi praktykami w zakresie zabezpieczeń (zobacz temat [strategia zabezpieczeń WPF — zabezpieczenia Inżynieria](wpf-security-strategy-security-engineering.md)).  
   
- Należy pamiętać, że .NET Framework pozwala zaufany kod, aby rozszerzyć piaskownicy strefy XBAP Internet, umożliwiając programistom pisanie zestawów zarządzanych, które są oznaczone <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) i wdrażana do użytkownika pamięci podręcznej (globalnej). Oznaczenia zestawu za pomocą APTCA jest operacją zabezpieczeń bardzo ważne, ponieważ pozwala ono żadnego kodu do wywoływania tego zestawu, w tym złośliwy kod z Internetu. Należy zachować wyjątkową ostrożność i najlepsze rozwiązania muszą być używane w ten sposób, a użytkownicy muszą dokonać wyboru zaufać oprogramowanie w celu zainstalowania.  
+ Należy pamiętać, że .NET Framework pozwala na rozbudowanie obszaru izolowanego strefy internetowej programu XBAP przez deweloperów, dzięki czemu deweloperzy mogą <xref:System.Security.AllowPartiallyTrustedCallersAttribute> pisać zarządzane zestawy oznaczone za pomocą (APTCA) i wdrożone w globalnej pamięci podręcznej zestawów (GAC) użytkownika. Oznaczanie zestawu za pomocą APTCA jest wysoce poufną operacją zabezpieczeń, ponieważ umożliwia każdemu kodowi wywoływanie tego zestawu, w tym złośliwy kod z Internetu. Należy zachować szczególną ostrożność i korzystać z najlepszych rozwiązań, aby użytkownicy mogli je zaufać.  
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
-## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer Security  
- Poza zmniejszenie problemy dotyczące zabezpieczeń i konfiguracji zabezpieczeń, uproszczenie [!INCLUDE[TLA#tla_ie6sp2](../../../includes/tlasharptla-ie6sp2-md.md)] zawiera kilka funkcji, w tym poprawki zabezpieczeń, zwiększających bezpieczeństwo dla użytkowników [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]. Kierunek te funkcje próbuje umożliwić użytkownikom większą kontrolę nad przeglądania.  
+## <a name="microsoft-internet-explorer-security"></a>Zabezpieczenia programu Microsoft Internet Explorer  
+ Poza zmniejszeniem problemów z zabezpieczeniami i uproszczenie konfiguracji zabezpieczeń [!INCLUDE[TLA#tla_ie6sp2](../../../includes/tlasharptla-ie6sp2-md.md)] program zawiera kilka funkcji, które zwiększają bezpieczeństwo użytkowników programu. [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] Nacisk tych funkcji próbuje umożliwić użytkownikom większą kontrolę nad ich doświadczeniem w przeglądaniu.  
   
- Przed [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)], użytkownicy mogą podlegać dowolne z następujących czynności:  
+ [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]W systemach wcześniejszych niż użytkownicy mogą podlegać dowolnym z następujących czynności:  
   
-- Losowe menu podręczne dla systemu windows.  
+- Losowe okna podręczne.  
   
-- Mylenie przekierowania skryptu.  
+- Mylące przekierowanie skryptów.  
   
 - Wiele okien dialogowych zabezpieczeń w niektórych witrynach sieci Web.  
   
- W niektórych przypadkach niezaufana witryn sieci Web może spróbować nakłonienia użytkowników fałszując instalacji [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] lub wielokrotnie przedstawiający okno dialogowe instalacji ActiveX firmy Microsoft, nawet jeśli użytkownik mógł anulować go. Korzystając z tych metod, jest możliwe, że znaczna liczba użytkowników zostały zwiódł już, że niską decyzje, które spowodowały instalację aplikacji programów szpiegujących.  
+ W niektórych przypadkach niezaufane witryny sieci Web próbują nakłonić użytkowników przez sfałszowanie instalacji [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] lub wielokrotne wyświetlanie okna dialogowego instalacji Microsoft ActiveX, mimo że użytkownik mógł go anulować. Korzystając z tych technik, istnieje możliwość, że znacząca liczba użytkowników została podzielona w celu podejmowania słabych decyzji, które spowodowały zainstalowanie aplikacji szpiegujących.  
   
- [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] zawiera kilka funkcji, aby uniknąć tego rodzaju problemów, które koncentrują się wokół koncepcji inicjowania użytkownika. [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] wykrywa, gdy użytkownik kliknął element link lub strony przed akcji, który jest znany jako *inicjowania użytkownika*i traktuje to inaczej niż kiedy podobne kroki zamiast tego jest wyzwalany przy użyciu skryptu na stronie. Na przykład [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] zawiera **blokowanie wyskakujących okienek** wykrywa, gdy użytkownik kliknie przycisk przed strony tworzenia okno podręczne. Dzięki temu [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] wyskakujące najbardziej nieszkodliwe uniemożliwiając wyskakujących okienek, które użytkownicy, poproś o ani ma. Zablokowane wyskakujące okienka są zablokował w nowym **pasek informacji**, który umożliwia użytkownikowi ręczne przesłonięcie blokady i wyświetlić w oknie podręcznym.  
+ [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]zawiera kilka funkcji, które ograniczają te rodzaje problemów, które koncentrują się na koncepcji inicjacji użytkownika. [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]wykrywa, kiedy użytkownik kliknął link lub element strony przed akcją, która jest znana jako *Inicjowanie użytkownika*i traktuje ją inaczej niż w przypadku wyzwolenia podobnej akcji przez skrypt na stronie. Na przykład [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] w programie znajduje się **blok wyskakujących okienek** , który wykrywa, kiedy użytkownik klika przycisk przed stroną tworzenia okna podręcznego. Dzięki [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] temu można zezwolić na większość wyskakujących okienek niewielkiej ilości, jednocześnie uniemożliwiając wyskakujące okienka, których użytkownicy nie proszą ani nie chcą. Zablokowane wyskakujące okienka są zalewkowane na nowym **pasku informacji**, co umożliwia użytkownikowi ręczne przesłonięcie bloku i wyświetlenie okienka wyskakującego.  
   
- Ta sama logika inicjowania użytkownika jest również zastosowane do **Otwórz**/**Zapisz** monity dotyczące zabezpieczeń. Instalacji ActiveX — okno dialogowe są zawsze zablokował poniżej paska informacji, o ile nie reprezentują one uaktualnienie z uprzednio zainstalowanych kontroli. Te miary są łączone w celu użytkownikom bezpieczniejszego, bardziej kontrolowanego interfejs użytkownika, ponieważ są one chronione przed witryn, które prześladowania je do zainstalowania złośliwego lub niechcianego oprogramowania.  
+ Ta sama logika inicjowania użytkownika jest również stosowana do **otwierania**/zapisywanych wskazówek zabezpieczeń. Okna dialogowe instalacji ActiveX są zawsze zalewkowane na pasku informacji, chyba że reprezentuje uaktualnienie z wcześniej zainstalowanej kontrolki. Te miary łączą się, aby zapewnić użytkownikom bezpieczniejsze i bardziej kontrolowane środowisko użytkownika, ponieważ są one chronione przed lokacjami, które nękaniy w celu zainstalowania niechcianych lub złośliwych oprogramowania.  
   
- Te funkcje także chronić klientów, którzy korzystają z [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] aby przejść do witryny sieci web, umożliwiające pobranie i zainstalowanie [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacji. W szczególności, jest to spowodowane [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] oferuje lepsze środowisko użytkownika, która zmniejsza ryzyko, które użytkownicy mogą zainstalować złośliwych lub devious aplikacji, niezależnie od tego, jakich technologii został użyty do kompilacji, w tym [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] dodaje do tych środków ochronnych za pomocą [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] ułatwiające pobieranie aplikacji niezbędnych do prowadzenia za pośrednictwem Internetu. Ponieważ [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] wykonywane w strefie Internet izolowanym, może zostać bezproblemowo uruchomione. Z drugiej strony, autonomiczny [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacji wymaga pełnego zaufania do wykonania. W przypadku tych aplikacji [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] wyświetli okno dialogowe zabezpieczeń podczas procesu uruchamiania, aby powiadomić użytkowania aplikacji dodatkowe wymagania dotyczące zabezpieczeń. Jednak to musi być inicjowane przez użytkownika, również podlega logiki zainicjowanej przez użytkownika i może być anulowany.  
+ Te funkcje umożliwiają również ochronę klientów, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] którzy korzystają z programu w celu przeglądania witryn sieci Web, dzięki [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] którym mogą oni pobierać i instalować aplikacje. W szczególności jest to spowodowane [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] tym, że oferuje lepsze środowisko użytkownika, co pozwala użytkownikom na instalowanie złośliwych lub deviousych aplikacji niezależnie od tego, jaka technologia została użyta w celu jej skompilowania, w tym. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]dodaje do tych ochrony przy użyciu technologii ClickOnce, aby ułatwić pobieranie aplikacji przez Internet. Od [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] momentu wykonania w piaskownicy zabezpieczenia strefy internetowej można uruchomić je bezproblemowo. Z drugiej strony Aplikacje autonomiczne [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] wymagają pełnego zaufania do wykonania. W przypadku tych aplikacji Technologia ClickOnce wyświetli okno dialogowe zabezpieczenia podczas procesu uruchamiania, aby powiadomić o użyciu dodatkowych wymagań w zakresie zabezpieczeń aplikacji. Jednak to musi być inicjowane przez użytkownika, a także będzie podlegać logiki zainicjowane przez użytkownika i może być anulowane.  
   
- [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)] dołącza i rozszerza możliwości zabezpieczeń [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] jako część nieustannie zobowiązuje się do zabezpieczeń.  
+ [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)]obejmuje i rozszerza możliwości [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] zabezpieczeń w ramach ciągłego zaangażowania w zabezpieczenia.  
   
 ## <a name="see-also"></a>Zobacz także
 

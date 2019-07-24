@@ -12,206 +12,206 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 05e7c1558f37ac9f89b98bf3ac66379add10e66c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 4fd8fe00fe6974bdcbf7b4af4da25150996de8c3
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664147"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401699"
 ---
 # <a name="wpf-add-ins-overview"></a>Przegląd Dodatki WPF
 
-<a name="Introduction"></a> Program .NET Framework zawiera dodatek modelu, który deweloperzy mogą używać do tworzenia aplikacji, które obsługuje rozszerzalność w dodatku. Ten dodatek model umożliwia tworzenie dodatków, które integrują się z oraz rozszerzanie funkcjonalności aplikacji. W niektórych przypadkach aplikacje wymagają także do wyświetlania interfejsu użytkownika, które są dostarczane przez dodatki. W tym temacie pokazano, jak WPF, rozszerzają model dodatku .NET Framework umożliwiają tych scenariuszy, architektura za go, jego zalety i jego pewne ograniczenia.
+<a name="Introduction"></a>.NET Framework zawiera model dodatków, za pomocą którego deweloperzy mogą tworzyć aplikacje obsługujące rozszerzalność dodatków. Ten model dodatku umożliwia tworzenie dodatków, które integrują się z funkcjonalnością i rozszerzenia aplikacji. W niektórych scenariuszach aplikacje muszą również wyświetlać interfejsy użytkownika udostępniane przez dodatki. W tym temacie pokazano, w jaki sposób WPF rozszerza model dodatku .NET Framework, aby umożliwić te scenariusze, jego architekturę, korzyści i ograniczenia.
 
 <a name="Requirements"></a>
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Wymagana jest znajomość model dodatku .NET Framework. Aby uzyskać więcej informacji, zobacz [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+Wymagana jest znajomość modelu dodatku .NET Framework. Aby uzyskać więcej informacji, zobacz [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="AddInsOverview"></a>
 
 ## <a name="add-ins-overview"></a>Omówienie dodatków
 
-W celu uniknięcia komplikacje związane z ponowną kompilację aplikacji i ponowne włączenie nowe funkcje, aplikacje zaimplementować rozszerzalności mechanizmów, które umożliwiają deweloperom (firmy Microsoft i innych firm), aby utworzyć inne aplikacje, które Integracja z nich. Jest najczęstszym sposobem obsługi tego rodzaju rozszerzalność przy użyciu dodatków (znany także jako "dodatki" i "dodatki"). Przykłady rzeczywistych aplikacjach, które uwidaczniają rozszerzalność przy użyciu dodatków:
+Aby uniknąć złożoności ponownej kompilacji i ponownego wdrożenia aplikacji w celu uwzględnienia nowych funkcji, aplikacje implementują mechanizmy rozszerzalności, które umożliwiają deweloperom (podmiotom pierwszej firmy i innej firmy) Tworzenie innych aplikacji, które Zintegruj z nimi. Najbardziej typowym sposobem obsługi tego typu rozszerzalności jest użycie dodatków (znanych również jako "Dodatki" i "wtyczki"). Przykładowe aplikacje w świecie, które uwidaczniają rozszerzalność z dodatkami, to m.in.:
 
 - Dodatki programu Internet Explorer.
 
-- Dodatki plug-in Windows Media Player.
+- Dodatki plug-in systemu Windows Media Player.
 
-- Visual Studio dodatków.
+- Dodatki programu Visual Studio.
 
-Na przykład model dodatku Windows Media Player umożliwia deweloperom innej firmy zaimplementować "dodatki", które rozszerzają Windows Media Player na różne sposoby, m.in. tworzenia dekoderów i koderów dla formatów multimediów, które nie są obsługiwane natywnie przez Windows Usługa Media Player (na przykład DVD, MP3), efekty dźwiękowe i skórki. Każdy model dodatek został opracowany pod kątem udostępniają funkcje, który jest unikatowy dla aplikacji, chociaż istnieje kilka jednostek i zachowania, które są wspólne dla wszystkich modeli dodatku.
+Na przykład model dodatku systemu Windows Media Player umożliwia deweloperom innych firm implementowanie dodatków plug-in, które poszerzają Media Player systemu Windows na różne sposoby, w tym tworzenie dekoderów i koderów dla formatów multimedialnych, które nie są obsługiwane natywnie przez system Windows Media Player (na przykład DVD, MP3), efekty audio i karnacje. Każdy model dodatku jest zbudowany w celu udostępnienia funkcji, która jest unikatowa dla aplikacji, chociaż istnieje kilka podmiotów i zachowań, które są wspólne dla wszystkich modeli dodatków.
 
-Są trzy główne jednostki rozszerzalności typowy dodatek rozwiązania *umów*, *dodatków*, i *hostowanie aplikacji*. Kontrakty określają, jak dodatki integracji z aplikacjami hosta na dwa sposoby:
+Trzy główne jednostki typowych rozwiązań rozszerzalności dodatków to kontrakty,  *Dodatki*i *aplikacje obsługujące hosty*. Kontrakty definiują sposób integracji dodatków z aplikacjami hosta na dwa sposoby:
 
-- Dodatki integracji z funkcjonalnością, który jest implementowany przez hosta aplikacji.
+- Dodatki integrują się z funkcją wdrożoną przez aplikacje hosta.
 
-- Hostowanie aplikacji ujawniać funkcjonalność dla dodatków do integracji z.
+- Aplikacje hosta udostępniają funkcje dodatków do integracji z programem.
 
-Aby dodatków do użycia hostowanie aplikacji trzeba je znaleźć i załadować je w czasie wykonywania. W związku z tym aplikacje, które obsługują dodatki mają następujące dodatkowe obowiązki:
+Aby można było używać dodatków, aplikacje hosta muszą je znaleźć i załadować w czasie wykonywania. W związku z tym aplikacje obsługujące dodatki mają następujące dodatkowe obowiązki:
 
-- **Odnajdywanie**: Znajdowanie dodatków zgodne z kontraktów obsługiwane przez hosta aplikacji.
+- **Odnajdywanie**: Znajdowanie dodatków, które są zgodne z kontraktami obsługiwanymi przez aplikacje hosta.
 
-- **Aktywacja**: Podczas ładowania, uruchamiania i nawiązywania połączenia z dodatków.
+- **Aktywacja**: Ładowanie, uruchamianie i nawiązywanie komunikacji z dodatkami.
 
-- **Izolacja**: Ustanowienie granic izolacji, które chronić aplikacje przed potencjalne i wykonywania problemy z dodatków przy użyciu domeny aplikacji lub procesów.
+- **Izolacja**: Za pomocą domen lub procesów aplikacji do ustanowienia granic izolacji chroniących aplikacje przed potencjalnymi problemami z zabezpieczeniami i wykonywaniem przy użyciu dodatków.
 
-- **Komunikacja**: Pozwalając dodatków i hostowanie aplikacji do komunikowania się ze sobą w granicach izolacji, wywoływanie metod i przekazując dane.
+- **Komunikacja**: Umożliwienie dodatków i aplikacji hostów do komunikowania się ze sobą w granicach izolacji przez wywoływanie metod i przekazywanie danych.
 
-- **Zarządzanie okresem istnienia**: Ładowanie i zwalnianie domeny aplikacji i procesów w sposób zawsze przejrzyste i przewidywalne (zobacz [domen aplikacji](../../app-domains/application-domains.md)).
+- **Zarządzanie okresem istnienia**: Ładowanie i zwalnianie domen i procesów aplikacji w sposób czysty i przewidywalny (zobacz [domeny aplikacji](../../app-domains/application-domains.md)).
 
-- **Przechowywanie wersji**: Zapewnienie, że dodatków i hostowania aplikacji może nadal komunikować się podczas tworzenia nowych wersji jednej.
+- **Przechowywanie wersji**: Zagwarantowanie, że aplikacje i dodatki hosta mogą nadal komunikować się, gdy zostaną utworzone nowe wersje jednego z nich.
 
-Ostatecznie tworzenia niezawodnych model dodatku jest trywialny przedsiębiorstwa. Z tego powodu programu .NET Framework zapewnia infrastrukturę do tworzenia modeli w dodatku.
+Ostatecznie tworzenie niezawodnego modelu dodatków jest nieuproszczonym przedsiębiorstwem. Z tego powodu .NET Framework zapewnia infrastrukturę do tworzenia modeli dodatków.
 
 > [!NOTE]
-> Aby uzyskać bardziej szczegółowe informacje dotyczące dodatków, zobacz [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+> Aby uzyskać bardziej szczegółowe informacje na temat dodatków, zobacz [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="NETFrameworkAddInModelOverview"></a>
 
-## <a name="net-framework-add-in-model-overview"></a>Przegląd Model dodatku .NET framework
+## <a name="net-framework-add-in-model-overview"></a>Omówienie modelu dodatku .NET Framework
 
-.NET Framework — w modelu znaleziono w <xref:System.AddIn> przestrzeni nazw, zawiera zestaw typów, które są zaprojektowane w celu uproszczenia opracowywania rozszerzeń w dodatku. Jest podstawową jednostką model dodatku .NET Framework *kontraktu*, która definiuje, jak aplikacji hosta i dodatek komunikują się ze sobą. Kontrakt jest widoczna dla aplikacji hosta, za pomocą hosta aplikacji specyficzne *widoku* kontraktu. Podobnie, add logującego się *widoku* Umowy ma połączenie dodatku. *Karty* służy do umożliwiania hosta aplikacji i Dodaj w komunikacji między swoimi opiniami odpowiedniej umowy. Kontrakty, widoki i adaptery są określane jako segmenty i stanowi zbiór powiązanych segmentów *potoku*. Potoki są podstawę, na którym model dodatku .NET Framework obsługuje odnajdywania, aktywacji, izolacji zabezpieczeń, izolacji wykonywania (przy użyciu domeny aplikacji i procesów), komunikacji, zarządzanie okresem istnienia i przechowywania wersji.
+.NET Framework model dodatku, który znajduje się w <xref:System.AddIn> przestrzeni nazw, zawiera zestaw typów, które są zaprojektowane w celu uproszczenia opracowywania rozszerzalności dodatków. Podstawową jednostką modelu dodatku .NET Framework jest *kontrakt*, który definiuje sposób, w jaki aplikacja hosta i dodatek komunikują się ze sobą. Kontrakt jest udostępniany aplikacji hosta za pomocą *widoku* określonego dla aplikacji hosta. Podobnie, szczegółowy *Widok* kontraktu jest narażony na dodatek. *Adapter* służy do zezwalania aplikacji hosta i dodatku do komunikacji między odpowiednimi widokami kontraktu. Kontrakty, widoki i karty są określane jako segmenty, a zestaw powiązanych segmentów stanowi potoku . Potoki stanowią podstawę, w której model dodatku .NET Framework obsługuje odnajdywanie, aktywację, izolację zabezpieczeń, izolację wykonania (przy użyciu aplikacji i procesów, zarządzania komunikacją, okresem istnienia i przechowywania wersji).
 
-Suma ta obsługa umożliwia deweloperom tworzenie dodatków, które integrują się z funkcjami aplikacji hosta. Jednak niektóre scenariusze wymagają obsługi aplikacji, aby wyświetlać interfejsy użytkownika dostępne dodatki. Ponieważ poszczególnych technologii prezentacji w programie .NET Framework ma swój własny model dotyczące implementowania interfejsów użytkownika, model dodatku .NET Framework nie obsługuje innych technologii prezentacji. Zamiast tego WPF rozszerza model dodatku .NET Framework z obsługą interfejsu użytkownika dla dodatków.
+Suma tej obsługi umożliwia deweloperom tworzenie dodatków, które integrują się z funkcjonalnością aplikacji hosta. Jednak niektóre scenariusze wymagają, aby aplikacje hosta wyświetlały interfejsy użytkownika udostępniane przez dodatki. Ponieważ każda Technologia prezentacji w .NET Framework ma własny model do implementowania interfejsów użytkownika, .NET Framework model dodatku nie obsługuje żadnej konkretnej technologii prezentacji. Zamiast tego, WPF rozszerza model dodatku .NET Framework z obsługą interfejsu użytkownika dla dodatków.
 
 <a name="WPFAddInModel"></a>
 
 ## <a name="wpf-add-ins"></a>Dodatki WPF
 
-WPF, w połączeniu z .NET Framework — w modelu pozwala rozwiązać szerokiej gamy scenariuszy, które wymagają obsługi aplikacji, aby wyświetlić interfejs użytkownika z dodatków. W szczególności te scenariusze są rozwiązywane przez WPF za pomocą następujących dwóch modelach programowania:
+WPF, w połączeniu z modelem dodatku .NET Framework, umożliwia rozwiązywanie różnorodnych scenariuszy, które wymagają, aby aplikacje hosta wyświetlały interfejsy użytkownika z dodatków. W szczególności te scenariusze są rozwiązywane przez WPF z następującymi dwoma modelami programowania:
 
-1. **Dodatek zwraca interfejs użytkownika**. Dodatek zwraca interfejs użytkownika do aplikacji hosta za pośrednictwem wywołania metody, zgodnie z definicją w umowie. W tym scenariuszu jest używany w następujących przypadkach:
+1. **Dodatek zwraca interfejs użytkownika**. Dodatek zwraca interfejs użytkownika do aplikacji hosta za pośrednictwem wywołania metody, zgodnie z definicją kontraktu. Ten scenariusz jest używany w następujących przypadkach:
 
-    - Wygląd interfejsu użytkownika, który jest zwracany przez dodatek jest zależny od danych albo lub warunków, które istnieją tylko w czasie wykonywania, takie jak dynamicznie wygenerowanych raportów.
+    - Wygląd interfejsu użytkownika, który jest zwracany przez dodatek, zależy od danych lub warunków, które istnieją tylko w czasie wykonywania, takich jak raporty generowane dynamicznie.
 
-    - W interfejsie użytkownika dla usług udostępnianych przez dodatek różni się od interfejsu użytkownika aplikacji hosta, które można używać dodatku.
+    - Interfejs użytkownika dla usług udostępnianych przez dodatek różni się od interfejsu użytkownika aplikacji hosta, które mogą korzystać z dodatku.
 
-    - Dodatek przede wszystkim wykonuje usługi dla aplikacji hosta i raportuje stan aplikacji hosta, za pomocą interfejsu użytkownika.
+    - Dodatek wykonuje głównie usługę dla aplikacji hosta i raportuje stan do aplikacji hosta za pomocą interfejsu użytkownika.
 
-2. **Dodatek jest interfejsem użytkownika**. Dodatek jest interfejsem użytkownika, zgodnie z definicją w umowie. W tym scenariuszu jest używany w następujących przypadkach:
+2. **Dodatek jest interfejsem użytkownika**. Dodatek jest interfejsem użytkownika, zdefiniowanym przez kontrakt. Ten scenariusz jest używany w następujących przypadkach:
 
-    - Dodatek nie zapewnia usługami innymi niż są wyświetlane, takich jak reklamy.
+    - Dodatek nie zapewnia usług innych niż wyświetlane, takich jak anonsowanie.
 
-    - W interfejsie użytkownika dla usług udostępnianych przez dodatek jest wspólne dla wszystkich aplikacji hosta, które można użyć tego dodatku, takich jak kalkulatora lub próbnika kolorów.
+    - Interfejs użytkownika dla usług udostępnianych przez dodatek jest wspólny dla wszystkich aplikacji hosta, które mogą korzystać z tego dodatku, takich jak Kalkulator lub selektor kolorów.
 
-Scenariusze te wymagają, że obiekty interfejsu użytkownika mogą być przekazywane między aplikacją hosta i domen aplikacji w dodatku. Od programu .NET Framework, który zależy od usług zdalnych do komunikowania się między domenami aplikacji model dodatku obiekty, które są przekazywane między nimi musi być może być zastosowana zdalnie.
+Te scenariusze wymagają, aby obiekty interfejsu użytkownika mogły być przesyłane między aplikacjami hosta i domenami aplikacji dodatkowych. Ponieważ model dodatku .NET Framework polega na komunikacji zdalnej między domenami aplikacji, obiekty, które są przekazywane między nimi, muszą być zdalne.
 
-Obiekt może być zastosowana zdalnie jest wystąpieniem klasy, która wykonuje jedno lub więcej z następujących czynności:
+Obiekt zdalny jest wystąpieniem klasy, która wykonuje co najmniej jedną z następujących czynności:
 
-- Pochodzi od klasy <xref:System.MarshalByRefObject> klasy.
+- Pochodzi od <xref:System.MarshalByRefObject> klasy.
 
-- Implementuje <xref:System.Runtime.Serialization.ISerializable> interfejsu.
+- <xref:System.Runtime.Serialization.ISerializable> Implementuje interfejs.
 
-- Ma <xref:System.SerializableAttribute> zastosowany.
+- Ma zastosowany <xref:System.SerializableAttribute> atrybut.
 
 > [!NOTE]
-> Aby uzyskać więcej informacji na temat tworzenia obiektów .NET Framework może być zastosowana zdalnie, zobacz [może być zastosowana zdalnie obiektów wprowadzania](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100)).
+> Aby uzyskać więcej informacji na temat tworzenia obiektów .NET Framework zdalnych, zobacz [Tworzenie obiektów zdalnie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100)).
 
-Typy WPF UI nie są wykonywane zdalnie. Aby rozwiązać ten problem, WPF rozszerza model dodatku .NET Framework umożliwia WPF UI utworzone przez dodatki mają być wyświetlane z hosta aplikacji. Ta pomoc techniczna jest świadczona przez WPF przez dwa typy: <xref:System.AddIn.Contract.INativeHandleContract> interfejsu i dwa statycznych metod zaimplementowanych przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters> klasy: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Na wysokim poziomie te typy i metody są używane w następujący sposób:
+Typy interfejsu użytkownika WPF nie są zdalne. Aby rozwiązać ten problem, WPF rozszerza model dodatku .NET Framework, aby umożliwić wyświetlanie interfejsu użytkownika WPF utworzonego przez dodatki do wyświetlania z aplikacji hosta. To wsparcie jest obsługiwane przez WPF <xref:System.AddIn.Contract.INativeHandleContract> przez dwa typy: interfejs i dwie metody statyczne zaimplementowane <xref:System.AddIn.Pipeline.FrameworkElementAdapters> przez klasę: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Na wysokim poziomie te typy i metody są używane w następujący sposób:
 
-1. WPF wymaga, że interfejsy użytkownika, dostarczone przez dodatki są klas, które pochodzą bezpośrednio lub pośrednio z <xref:System.Windows.FrameworkElement>, takich jak kształtów, formantów, kontrolki użytkownika, panele układu i strony.
+1. WPF wymaga, aby interfejsy użytkownika udostępniane przez dodatki to klasy, które są wyprowadzane bezpośrednio lub <xref:System.Windows.FrameworkElement>pośrednio z, takie jak kształty, formanty, formanty użytkownika, panele układu i strony.
 
-2. Wszędzie tam, gdzie kontrakt deklaruje, że interfejs użytkownika będą przekazywane między dodatkiem a aplikacją hosta, musi być zadeklarowany jako <xref:System.AddIn.Contract.INativeHandleContract> (nie <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> jest reprezentacją może być zastosowana zdalnie dodatku interfejs użytkownika, który może być przekazywany w granicach izolacji.
+2. Wszędzie tam, gdzie umowa deklaruje, że interfejs użytkownika zostanie przekazywać między dodatkiem a aplikacją hosta, musi być zadeklarowany jako <xref:System.AddIn.Contract.INativeHandleContract> (nie a <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> jest reprezentacją zdalną interfejsu użytkownika dodatku, który można przekazywać między granicami izolacji.
 
-3. Przed przesłaniem z dodatku w domenie aplikacji <xref:System.Windows.FrameworkElement> jest spakowany jako <xref:System.AddIn.Contract.INativeHandleContract> przez wywołanie metody <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.
+3. Przed przesłaniem z domeny aplikacji dodatku, <xref:System.Windows.FrameworkElement> jest spakowany <xref:System.AddIn.Contract.INativeHandleContract> jako wywołujący <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.
 
-4. Po były przekazywane do aplikacji hosta domeny aplikacji, <xref:System.AddIn.Contract.INativeHandleContract> muszą być udostępniane jako <xref:System.Windows.FrameworkElement> przez wywołanie metody <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.
+4. Po przekazaniu do domeny <xref:System.AddIn.Contract.INativeHandleContract> aplikacji hosta należy ponownie spakować pakiet <xref:System.Windows.FrameworkElement> jako przez wywołanie <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.
 
-Jak <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> służą zależy od konkretnego scenariusza. Poniższe sekcje zawierają szczegółowe informacje dla każdego modelu programowania.
+Sposób <xref:System.AddIn.Contract.INativeHandleContract>użycia <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>,, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> i są zależne od konkretnego scenariusza. Poniższe sekcje zawierają szczegółowe informacje dotyczące każdego modelu programowania.
 
 <a name="ReturnUIFromAddInContract"></a>
 
 ## <a name="add-in-returns-a-user-interface"></a>Dodatek zwraca interfejs użytkownika
 
-Dla dodatku do zwrócenia interfejsu użytkownika dla aplikacji hosta wymagane jest spełnienie następujących:
+Aby dodatek mógł zwrócić interfejs użytkownika do aplikacji hosta, wymagane są następujące elementy:
 
-1. Aplikacja hosta i potoku należy utworzyć, zgodnie z opisem w programie .NET Framework [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) dokumentacji.
+1. Należy utworzyć aplikację hosta, dodatek i potok, zgodnie z opisem w temacie .NET Framework [Dodatki i](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) dokumentacja rozszerzalności.
 
-2. Kontrakt musi implementować <xref:System.AddIn.Contract.IContract> i zwracać interfejsu użytkownika, kontrakt musi deklarować metody o wartości zwracanego typu <xref:System.AddIn.Contract.INativeHandleContract>.
+2. Kontrakt musi implementować <xref:System.AddIn.Contract.IContract> i, aby zwracał interfejs użytkownika, kontrakt musi deklarować metodę z wartością zwracaną typu. <xref:System.AddIn.Contract.INativeHandleContract>
 
-3. Interfejs użytkownika, który jest przekazywany między dodatkiem a aplikacją hosta należy bezpośrednio ani pośrednio dziedziczyć <xref:System.Windows.FrameworkElement>.
+3. Interfejs użytkownika, który jest przesyłany między dodatkiem a aplikacją hosta, musi bezpośrednio lub pośrednio pochodzić od <xref:System.Windows.FrameworkElement>.
 
-4. Interfejs użytkownika, który jest zwracany przez dodatek muszą zostać skonwertowane z <xref:System.Windows.FrameworkElement> do <xref:System.AddIn.Contract.INativeHandleContract> przed przekroczeniem granic izolacji.
+4. Interfejs użytkownika, który jest zwracany przez dodatek, musi zostać skonwertowany z elementu <xref:System.Windows.FrameworkElement> <xref:System.AddIn.Contract.INativeHandleContract> do przed przekroczeniem granicy izolacji.
 
-5. Interfejs użytkownika, który jest zwracany, muszą zostać skonwertowane z <xref:System.AddIn.Contract.INativeHandleContract> do <xref:System.Windows.FrameworkElement> po przekroczeniu granic izolacji.
+5. Zwracany interfejs użytkownika musi zostać skonwertowany od <xref:System.AddIn.Contract.INativeHandleContract> a do a <xref:System.Windows.FrameworkElement> po przekroczeniu granicy izolacji.
 
-6. Aplikacja hosta Wyświetla zwracanego <xref:System.Windows.FrameworkElement>.
+6. Aplikacja hosta wyświetla zwrócone <xref:System.Windows.FrameworkElement>.
 
-Na przykład, który demonstruje sposób implementacji dodatku, który zwraca interfejs użytkownika, zobacz [utworzyć dodatek zwracającego interfejs użytkownika](how-to-create-an-add-in-that-returns-a-ui.md).
+Przykład demonstrujący sposób implementacji dodatku, który zwraca interfejs użytkownika, znajduje się w temacie [Tworzenie dodatku, który zwraca interfejs użytkownika](how-to-create-an-add-in-that-returns-a-ui.md).
 
 <a name="AddInIsAUI"></a>
 
 ## <a name="add-in-is-a-user-interface"></a>Dodatek jest interfejsem użytkownika
 
-Gdy dodatek jest interfejsem użytkownika, wymagane są następujące:
+Gdy dodatek jest interfejsem użytkownika, wymagane są następujące elementy:
 
-1. Aplikacja hosta i potoku należy utworzyć, zgodnie z opisem w programie .NET Framework [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) dokumentacji.
+1. Należy utworzyć aplikację hosta, dodatek i potok, zgodnie z opisem w temacie .NET Framework [Dodatki i](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) dokumentacja rozszerzalności.
 
-2. Musi implementować interfejs kontraktu dla dodatku <xref:System.AddIn.Contract.INativeHandleContract>.
+2. Interfejs kontraktu dla dodatku musi implementować <xref:System.AddIn.Contract.INativeHandleContract>.
 
-3. Dodatek, który jest przekazywany do aplikacji hosta należy bezpośrednio ani pośrednio dziedziczyć <xref:System.Windows.FrameworkElement>.
+3. Dodatek, który jest przesyłany do aplikacji hosta, musi bezpośrednio lub pośrednio pochodzić od <xref:System.Windows.FrameworkElement>.
 
-4. Dodatek muszą zostać skonwertowane z <xref:System.Windows.FrameworkElement> do <xref:System.AddIn.Contract.INativeHandleContract> przed przekroczeniem granic izolacji.
+4. Dodatek musi zostać skonwertowany od a <xref:System.Windows.FrameworkElement> <xref:System.AddIn.Contract.INativeHandleContract> do a przed przekroczeniem granicy izolacji.
 
-5. Dodatek muszą zostać skonwertowane z <xref:System.AddIn.Contract.INativeHandleContract> do <xref:System.Windows.FrameworkElement> po przekroczeniu granic izolacji.
+5. Dodatek musi zostać skonwertowany od <xref:System.AddIn.Contract.INativeHandleContract> a do a <xref:System.Windows.FrameworkElement> po przekroczeniu granicy izolacji.
 
-6. Aplikacja hosta Wyświetla zwracanego <xref:System.Windows.FrameworkElement>.
+6. Aplikacja hosta wyświetla zwrócone <xref:System.Windows.FrameworkElement>.
 
-Na przykład, który demonstruje sposób implementacji dodatku, który jest interfejsem użytkownika, zobacz [dodatku oznacza to tworzenie interfejsu użytkownika](how-to-create-an-add-in-that-is-a-ui.md).
+Aby zapoznać się z przykładem, który ilustruje sposób implementacji dodatku, który jest interfejsem użytkownika, zobacz [Tworzenie dodatku, który jest interfejsem użytkownika](how-to-create-an-add-in-that-is-a-ui.md).
 
 <a name="ReturningMultipleUIsFromAnAddIn"></a>
 
 ## <a name="returning-multiple-uis-from-an-add-in"></a>Zwracanie wielu interfejsów użytkownika z dodatku
 
-Dodatki często udostępniają wiele interfejsów użytkownika dla aplikacji hosta do wyświetlenia. Na przykład należy wziąć pod uwagę dodatku, który jest interfejsem użytkownika, które również jako interfejs użytkownika umożliwia także informacje o stanie aplikacji hosta. Dodatek w następujący sposób można zaimplementować przy użyciu kombinacji metod z obu [interfejsu użytkownika dodatku zwraca](#ReturnUIFromAddInContract) i [dodatek jest to interfejs użytkownika](#AddInIsAUI) modeli.
+Dodatki często udostępniają wiele interfejsów użytkownika do wyświetlania aplikacji hosta. Rozważmy na przykład dodatek, który jest interfejsem użytkownika, który udostępnia również informacje o stanie aplikacji hosta, również jako interfejs użytkownika. Dodatek podobny do tego można zaimplementować przy użyciu kombinacji technik z obu [dodatków zwraca interfejs użytkownika](#ReturnUIFromAddInContract) , a [dodatek jest modelami interfejsu użytkownika](#AddInIsAUI) .
 
 <a name="AddInsAndXBAPs"></a>
 
-## <a name="add-ins-and-xaml-browser-applications"></a>Dodatki i aplikacje przeglądarek XAML
+## <a name="add-ins-and-xaml-browser-applications"></a>Dodatki i aplikacje przeglądarki XAML
 
-W przykładach do tej pory aplikacji hosta zostało zainstalowane oddzielną aplikację. Ale [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] może również obsługiwać dodatków, aczkolwiek z następujące dodatkowe wymagania kompilacji i wdrażania:
+W przykładach do tej pory aplikacja hosta była zainstalowaną aplikacją autonomiczną. Ale [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] mogą również hostować dodatki, chociaż z następującymi dodatkowymi wymaganiami dotyczącymi kompilacji i implementacji:
 
-- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Manifest aplikacji musi być skonfigurowany specjalnie do potoku (foldery i zestawy) i zestawu w dodatku, aby pobrać [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] pamięci podręcznej aplikacji na komputerze klienckim, w tym samym folderze co [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].
+- Manifest aplikacji musi być skonfigurowany specjalnie do pobierania potoku (folderów i zestawów) oraz zestawu dodatków do pamięci podręcznej aplikacji ClickOnce na komputerze klienckim w tym samym folderze, w którym znajduje się [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]plik. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]
 
-- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Należy użyć kodu wykrycie i załadowanie dodatków [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] pamięci podręcznej aplikacji [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] jako lokalizację potoku i dodatek.
+- Kod do odnalezienia i załadowania dodatków musi używać pamięci podręcznej [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] aplikacji ClickOnce jako lokalizacji potoków i dodatków. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]
 
-- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Należy załadować dodatek do kontekstu zabezpieczeń specjalne, jeśli dodatek odwołuje się luźne pliki, które znajdują się w miejscu pochodzenia; w przypadku hostowania za [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], dodatki mogą odwoływać się tylko luźne pliki, które znajdują się w witrynie aplikacji hosta pochodzenia.
+- Należy załadować dodatek do specjalnego kontekstu zabezpieczeń, jeśli dodatek odwołuje się do luźnych plików, które znajdują się w lokacji pochodzenia; w przypadku użycia przez [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]Dodatki dodatków mogą odwoływać się tylko do swobodnych plików, które znajdują się w lokacji aplikacji hosta. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] pochodzenia.
 
-Zadania te są opisane szczegółowo w następujących podsekcjach.
+Te zadania są szczegółowo opisane w poniższych podsekcjach.
 
-### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Konfigurowanie potoku i dodatek dla wdrażania ClickOnce
+### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Konfigurowanie potoku i dodatku dla wdrożenia ClickOnce
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] pobrane i uruchomić z bezpiecznego folderu w [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] wdrożenia w pamięci podręcznej. Aby [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] do hostowania dodatku, potoku i Dodaj w zestawie musi zostać pobrany do bezpiecznego folderu. Aby to osiągnąć, należy skonfigurować manifest aplikacji do uwzględnienia w potoku i zestawów w dodatku do pobrania. Najłatwiej jest to realizowane w [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], mimo że zestawu potoku dodatek i musi być zapisana w hoście [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] folderze głównym projektu, aby [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] wykrywania zestawy potoku.
+[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]są pobierane do i uruchamiane z bezpiecznego folderu w pamięci podręcznej wdrażania ClickOnce. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Aby można było hostować dodatek, Potok i zestaw dodatku muszą być również pobrane do bezpiecznego folderu. Aby to osiągnąć, należy skonfigurować manifest aplikacji w taki sposób, aby obejmował zarówno potok, jak i zestaw dodatków do pobrania. Jest to najbardziej proste w [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], chociaż potok i zestaw dodatku muszą znajdować się w folderze [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] głównym projektu hosta [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] w celu wykrycia zestawów potoku.
 
-W związku z tym, pierwszym krokiem jest utworzenie potoku i zestawów w dodatku do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] korzeniem projektu, ustawiając dane wyjściowe kompilacji, każdy potoku zestawu i Dodaj w projektach zestawu. W poniższej tabeli przedstawiono kompilacji dane wyjściowe ścieżki projektów zestawu potoku i projekt dodatku zestawu znajdujących się w tym samym folderze rozwiązania i głównego jako host [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projektu.
+W związku z tym pierwszym krokiem jest skompilowanie potoku i zestawu dodatków do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] katalogu głównego projektu przez ustawienie danych wyjściowych kompilacji dla każdego zestawu potoku i projektów zestawu dodatków. W poniższej tabeli przedstawiono ścieżki wyjściowe kompilacji dla projektów zestawu potoku i projektu zestawu dodatków, które znajdują się w tym samym rozwiązaniu i folderze głównym co [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projekt hosta.
 
-Tabela 1: Tworzenie ścieżki danych wyjściowych dla zestawów potoku, które są hostowane przez XBAP
+Tabela 1: Tworzenie ścieżek wyjściowych dla zestawów potoku hostowanych przez aplikację XBAP
 
-|Projekt zestawu potoku|Kompiluj ścieżkę wyjściową|
+|Projekt zestawu potoku|Ścieżka wyjściowa kompilacji|
 |-------------------------------|-----------------------|
 |Kontrakt|`..\HostXBAP\Contracts\`|
 |Widok dodatku|`..\HostXBAP\AddInViews\`|
-|Dodawanie strony karty|`..\HostXBAP\AddInSideAdapters\`|
-|Adaptery po stronie hosta|`..\HostXBAP\HostSideAdapters\`|
-|Add-In|`..\HostXBAP\AddIns\WPFAddIn1`|
+|Adapter dodatku|`..\HostXBAP\AddInSideAdapters\`|
+|Adapter po stronie hosta|`..\HostXBAP\HostSideAdapters\`|
+|Dodatek|`..\HostXBAP\AddIns\WPFAddIn1`|
 
-Następnym krokiem jest określenie zestawów potoku i zestawów w dodatku, jako [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] zawartości plików w [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] , wykonując następujące czynności:
+Następnym krokiem jest określenie zestawów potoków i zestawu dodatków jako [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] plików zawartości w programie [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] , wykonując następujące czynności:
 
-1. Łącznie z zestawu potoku i dodatek w projekcie, klikając prawym przyciskiem myszy każdy folder potoku w Eksploratorze rozwiązań i wybierając pozycję **załącz do projektu**.
+1. Uwzględniając potok i zestaw dodatków w projekcie, klikając prawym przyciskiem myszy każdy folder potoku w Eksplorator rozwiązań i wybierając opcję **Dołącz do projektu**.
 
-2. Ustawienie **Build Action** każdego zestawu potoku i zestawów w dodatku do **zawartości** z **właściwości** okna.
+2. Ustawianie **akcji kompilacji** dla każdego zestawu potoku i zestawu dodatków do **zawartości** z okna **Właściwości** .
 
-Ostatnim krokiem jest skonfigurowanie manifest aplikacji do uwzględnienia potoku plików zestawu i pliku zestawu w dodatku do pobrania. Pliki powinny się znajdować w foldery w katalogu głównym folderu w [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] pamięci podręcznej, który [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] zajmuje aplikacji. Konfigurację można osiągnąć w [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] , wykonując następujące czynności:
+Ostatnim krokiem jest skonfigurowanie manifestu aplikacji w celu uwzględnienia plików zestawu potoku i pliku zestawu dodatku do pobrania. Pliki powinny znajdować się w folderach znajdujących się w folderze głównym folderu w pamięci podręcznej [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ClickOnce, w której zajmowana jest aplikacja. Konfigurację można uzyskać w programie [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] , wykonując następujące czynności:
 
-1. Kliknij prawym przyciskiem myszy [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projektu, kliknij przycisk **właściwości**, kliknij przycisk **Publikuj**, a następnie kliknij przycisk **pliki aplikacji** przycisku.
+1. Kliknij prawym przyciskiem [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] myszy projekt, kliknij polecenie **Właściwości**, kliknij przycisk **Opublikuj**, a następnie kliknij przycisk **pliki aplikacji** .
 
-2. W **pliki aplikacji** okno dialogowe, zestaw **stan publikowania** każdego potoku i biblioteki DLL dodatku **Include (Auto)** i ustaw **grupa pobierania** dla każdego potoku dodatku DLL **(wymagane)** .
+2. W oknie dialogowym **pliki aplikacji** Ustaw **stan publikacji** każdego potoku i dodatku dll na wartość (Auto) i ustaw **grupę pobierania** dla każdego potoku i dodatku dll na **(wymagane)** .
 
-### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Przy użyciu potoku i dodać od podstawy aplikacji
+### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Korzystanie z potoku i dodatku z bazy aplikacji
 
-Jeśli skonfigurowana potoku i dodać do [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] wdrożenie, są one pobierane do tej samej [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] folder pamięci podręcznej jako [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Korzystanie z potoku i dodatek z [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kodu należy pobrać je z aplikacji podstawowej. Różne typy i członkowie model dodatku .NET Framework dla przy użyciu potoków i dodatki obsługi specjalnych dla tego scenariusza. Po pierwsze, ścieżka jest identyfikowane za pomocą <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> wartości wyliczenia. Będzie ona używana z przeciążeń odpowiednich członków dodatku dotyczące korzystania z potokiem, które są następujące:
+Gdy potok i dodatek są skonfigurowane do wdrażania ClickOnce, są pobierane do tego samego folderu pamięci podręcznej ClickOnce co [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Aby użyć potoku i dodatku z [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]programu [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] , kod musi pobrać je z bazy aplikacji. Różne typy i elementy członkowskie modelu dodatku .NET Framework na potrzeby używania potoków i dodatków zapewniają specjalną pomoc techniczną dla tego scenariusza. Po pierwsze ścieżka jest identyfikowana przez <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> wartość wyliczenia. Ta wartość jest używana z przeciążeniami odpowiednich członków dodatku, aby używać potoków, które obejmują następujące elementy:
 
 - <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 
@@ -221,98 +221,98 @@ Jeśli skonfigurowana potoku i dodać do [!INCLUDE[TLA2#tla_clickonce](../../../
 
 - <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 
-### <a name="accessing-the-hosts-site-of-origin"></a>Uzyskiwanie dostępu do witryny pochodzenia hosta
+### <a name="accessing-the-hosts-site-of-origin"></a>Uzyskiwanie dostępu do lokacji hosta pochodzenia
 
-Aby upewnić się, dodatek odwołać się do plików z witryny pochodzenia, dodatek muszą być ładowane izolacji zabezpieczeń, który jest odpowiednikiem aplikacji hosta. Ten poziom zabezpieczeń jest identyfikowany przez <xref:System.AddIn.Hosting.AddInSecurityLevel.Host?displayProperty=nameWithType> wartość wyliczenia i przekazywane do <xref:System.AddIn.Hosting.AddInToken.Activate%2A> metody, gdy dodatek jest aktywny.
+Aby zapewnić, że dodatek może odwoływać się do plików z lokacji źródłowej, dodatek musi być załadowany z izolacją zabezpieczeń, która jest równoważna z aplikacją hosta. Ten poziom zabezpieczeń jest identyfikowany przez <xref:System.AddIn.Hosting.AddInSecurityLevel.Host?displayProperty=nameWithType> wartość wyliczenia i przeszedł <xref:System.AddIn.Hosting.AddInToken.Activate%2A> do metody, gdy dodatek jest aktywowany.
 
 <a name="WPFAddInModelArchitecture"></a>
 
-## <a name="wpf-add-in-architecture"></a>Architektura dodatków WPF
+## <a name="wpf-add-in-architecture"></a>Architektura dodatku WPF
 
-Na najwyższym poziomie, jak w związku z czym dostrzegliśmy, WPF umożliwia dodatków .NET Framework do implementacji interfejsów użytkownika (który pochodzi bezpośrednio lub pośrednio od <xref:System.Windows.FrameworkElement>) przy użyciu <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Wynik jest zwracany jest aplikacja hosta <xref:System.Windows.FrameworkElement> która jest wyświetlana w interfejsie użytkownika w aplikacji hosta.
+Na najwyższym poziomie w miarę jak wiemy, WPF włącza dodatki .NET Framework do implementowania interfejsów użytkownika (które pochodzą bezpośrednio lub pośrednio z <xref:System.Windows.FrameworkElement>) przy <xref:System.AddIn.Contract.INativeHandleContract>użyciu <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> , <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>i. Wynika to z tego, że aplikacja hosta zostanie zwrócona <xref:System.Windows.FrameworkElement> , która jest wyświetlana z interfejsu użytkownika w aplikacji hosta.
 
-W przypadku prostego interfejsu użytkownika dodatku scenariuszy jest możliwie szczegółowo potrzebuje Deweloper. Dla bardziej złożonych scenariuszy, szczególnie te, w których podejmowana jest próba korzystanie z dodatkowych usług WPF, takie jak układ, zasobów i powiązania danych bardziej szczegółowych informacji dotyczących sposobu WPF rozszerza model dodatku .NET Framework z obsługą interfejsu użytkownika jest wymagane, aby zrozumieć korzyści i ograniczenia.
+W przypadku prostych scenariuszy dodatków interfejsu użytkownika jest to tak szczegółowe, jak w przypadku deweloperów. W przypadku bardziej złożonych scenariuszy, szczególnie tych, które próbują korzystać z dodatkowych usług WPF, takich jak układ, zasoby i powiązania danych, bardziej szczegółową wiedzą o tym, jak WPF rozszerza model dodatku .NET Framework z obsługą interfejsu użytkownika, aby zrozumieć jego korzyści i ograniczenia.
 
-Zasadniczo WPF nie przeszło interfejsu użytkownika z dodatku dla aplikacji hosta; Zamiast tego WPF przechodzi uchwyt okna Win32 dla interfejsu użytkownika przy użyciu współdziałanie WPF. Jako takie gdy interfejs użytkownika z dodatku jest przekazywany do aplikacji hosta, są następujące operacje:
+W rzeczywistości funkcja WPF nie przekazuje interfejsu użytkownika z dodatku do aplikacji hosta. Zamiast tego, WPF przekazuje uchwyt okna Win32 dla interfejsu użytkownika przy użyciu współdziałania WPF. W związku z tym, gdy interfejs użytkownika z dodatku jest przesyłany do aplikacji hosta, występują następujące sytuacje:
 
-- Po stronie dodatku WPF uzyskuje uchwyt okna interfejsu użytkownika, który będzie wyświetlany przez aplikację hosta. Uchwyt okna jest hermetyzowany przez Wewnętrzna klasa WPF, która pochodzi od klasy <xref:System.Windows.Interop.HwndSource> i implementuje <xref:System.AddIn.Contract.INativeHandleContract>. Wystąpienie tej klasy jest zwracany przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> i jest przekazywane z dodatku w domenie aplikacji do aplikacji hosta domeny aplikacji.
+- Na stronie dodatku WPF uzyskuje uchwyt okna dla interfejsu użytkownika, który będzie wyświetlany przez aplikację hosta. Uchwyt okna jest hermetyzowany przez wewnętrzną klasę WPF, która pochodzi z <xref:System.Windows.Interop.HwndSource> i implementuje. <xref:System.AddIn.Contract.INativeHandleContract> Wystąpienie tej klasy jest zwracane przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> i jest organizowane z domeny aplikacji dodatku do domeny aplikacji hosta.
 
-- Po stronie aplikacja hosta WPF przepakowuje <xref:System.Windows.Interop.HwndSource> jako Wewnętrzna klasa WPF, która pochodzi od klasy <xref:System.Windows.Interop.HwndHost> i wykorzystuje <xref:System.AddIn.Contract.INativeHandleContract>. Wystąpienie tej klasy jest zwracany przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> aplikacji hosta.
+- Na stronie aplikacji hosta platforma WPF repakuje <xref:System.Windows.Interop.HwndSource> jako wewnętrzną klasę WPF, która dziedziczy z <xref:System.Windows.Interop.HwndHost> i zużywa <xref:System.AddIn.Contract.INativeHandleContract>. Wystąpienie tej klasy jest zwracane przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> program do aplikacji hosta.
 
-<xref:System.Windows.Interop.HwndHost> istnieje, aby wyświetlać interfejsy użytkownika, identyfikowane za pomocą uchwytów okien, od interfejsów użytkownika WPF. Aby uzyskać więcej informacji, zobacz [WPF i Win32 — współdziałanie](../advanced/wpf-and-win32-interoperation.md).
+<xref:System.Windows.Interop.HwndHost>istnieje, aby wyświetlić interfejsy użytkownika, identyfikowane przez uchwyty okna, z interfejsów użytkownika WPF. Aby uzyskać więcej informacji, zobacz [WPF i Win32](../advanced/wpf-and-win32-interoperation.md)— współdziałanie.
 
-Podsumowując <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> pozwalających uchwytu okna WPF UI przekazany z dodatku dla aplikacji hosta, gdzie jest hermetyzowany przez <xref:System.Windows.Interop.HwndHost> i wyświetlane w interfejsie użytkownika aplikacji hosta.
+Podsumowując, <xref:System.AddIn.Contract.INativeHandleContract> <xref:System.Windows.Interop.HwndHost> , <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> i<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> istnieje, aby zezwolić na przekazanie uchwytu okna dla interfejsu użytkownika WPF z dodatku do aplikacji hosta, gdzie jest on hermetyzowany przez i wyświetlany jest interfejs użytkownika aplikacji hosta.
 
 > [!NOTE]
-> Ponieważ aplikacja hosta pobiera <xref:System.Windows.Interop.HwndHost>, aplikacji hosta nie można przekonwertować na obiekt, który jest zwracany przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> do typu jest implementowana za dodatek (na przykład <xref:System.Windows.Controls.UserControl>).
+> Ponieważ aplikacja hosta pobiera <xref:System.Windows.Interop.HwndHost>, aplikacja hosta nie może skonwertować obiektu, który jest zwracany przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> typ, który jest implementowany przez dodatek (na przykład a <xref:System.Windows.Controls.UserControl>).
 
-Z natury <xref:System.Windows.Interop.HwndHost> ma pewne ograniczenia, które wpływają na jak aplikacji hosta można z nich korzystać. Jednak rozszerza WPF <xref:System.Windows.Interop.HwndHost> możliwości kilku scenariuszach dodatku. Te korzyści i ograniczenia są opisane poniżej.
+Ze względu na <xref:System.Windows.Interop.HwndHost> swój charakter ma pewne ograniczenia, które mają wpływ na sposób, w jaki aplikacje hosta mogą z nich korzystać. Jednak WPF rozszerza <xref:System.Windows.Interop.HwndHost> się z kilkoma funkcjami dla scenariuszy dodatków. Te korzyści i ograniczenia są opisane poniżej.
 
 <a name="WPFAddInModelBenefits"></a>
 
-## <a name="wpf-add-in-benefits"></a>Korzyści z dodatku programu WPF
+## <a name="wpf-add-in-benefits"></a>Zalety dodatków WPF
 
-Ponieważ interfejsy użytkownika w dodatku WPF zostaną wyświetlone z aplikacji hosta, za pomocą klasą wewnętrzną, która pochodzi od klasy <xref:System.Windows.Interop.HwndHost>, te interfejsy użytkownika są ograniczone przez możliwości <xref:System.Windows.Interop.HwndHost> względem usługi WPF UI, takie jak układ Renderowanie, powiązań danych, style, szablony i zasoby. Jednak WPF rozszerzają jego wewnętrznych <xref:System.Windows.Interop.HwndHost> podklasy o dodatkowe funkcje, które obejmują następujące elementy:
+Ponieważ interfejsy użytkownika dodatku WPF są wyświetlane z aplikacji hosta przy użyciu wewnętrznej klasy, która pochodzi od <xref:System.Windows.Interop.HwndHost>, te interfejsy użytkownika są ograniczone przez możliwości programu <xref:System.Windows.Interop.HwndHost> w odniesieniu do usług interfejsu użytkownika WPF, takich jak układ, Renderowanie, powiązanie danych, style, szablony i zasoby. Jednak WPF rozszerza swoją wewnętrzną <xref:System.Windows.Interop.HwndHost> podklasę o dodatkowe możliwości, które obejmują następujące elementy:
 
-- Przełączania między interfejsu użytkownika dla aplikacji hosta i interfejsu użytkownika dodatku. Pamiętaj, że model programowania "dodatek jest interfejsem użytkownika" wymaga karty add w side zastąpić <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> włączyć klawiszem TAB, czy dodatek jest w pełni zaufana, czy częściowo zaufany.
+- Tabulacja między interfejsem użytkownika aplikacji hosta i interfejsem użytkownika dodatku. Należy pamiętać, że model programowania "dodatek jest interfejsem użytkownika" wymaga, aby karta dodatku została przesłonięta <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> , aby włączyć funkcję tabulacji, niezależnie od tego, czy dodatek jest w pełni zaufany, czy częściowo zaufany.
 
-- Zapewniane wymagania dotyczące ułatwień dostępu dla interfejsów użytkownika w dodatku, które są wyświetlane od interfejsów użytkownika aplikacji hosta.
+- Przestrzeganie wymagań dotyczących ułatwień dostępu dla interfejsów użytkownika dodatku, które są wyświetlane z interfejsów użytkownika aplikacji hosta.
 
-- Włączanie aplikacji WPF, bezpieczne uruchamianie w wielu scenariuszach domeny aplikacji.
+- Włączanie bezpiecznego działania aplikacji WPF w wielu scenariuszach domen aplikacji.
 
-- Zapobieganie niedozwolony dostęp do interfejsu użytkownika dodatku okna obsługuje uruchamiania dodatków przy użyciu zabezpieczeń, izolacji (to znaczy piaskownicy częściowego zaufania zabezpieczeń). Wywoływanie <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> zapewnia to bezpieczeństwo:
+- Zapobiegaj nielegalnemu dostępowi do okna interfejsu użytkownika dodatku, gdy dodatki są uruchamiane z izolacją zabezpieczeń (to jest obszar piaskownicy zabezpieczeń częściowego zaufania). Wywołanie <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> zapewnia następujące zabezpieczenia:
 
-  - "Add-in zwraca interfejs użytkownika" modelu programowania, jedynym sposobem, aby przekazać uchwyt okna dla dodatków interfejsu użytkownika przez granicę izolacji jest wywołać <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.
+  - W przypadku modelu programowania "dodatek zwraca interfejs użytkownika" jedynym sposobem przekazania uchwytu okna dla interfejsu użytkownika dodatku w granicach izolacji jest wywołanie <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.
 
-  - "Dodatek jest interfejsem użytkownika" modelu programowania zastępowanie <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> na karcie add w side i wywoływania <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (jak pokazano w poprzednich przykładach) jest wymagana, ponieważ wywoływany kartę add w side `QueryContract` implementację z Adaptery po stronie hosta.
+  - W przypadku modelu programowania "dodatek jest interfejsem użytkownika" wymagane jest przesłonięcie <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> karty dodatku i wywołanie <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (jak pokazano w powyższych przykładach), ponieważ wywołuje `QueryContract` implementację karty dodatku z Adapter po stronie hosta.
 
-- Zapewnienie ochrony wykonywania domeny w usłudze wielu aplikacji. Ze względu na ograniczenia z domenami aplikacji nieobsłużonych wyjątków, które są zgłaszane w domenach aplikacji dodatku spowodować całej aplikacji ulega awarii, nawet jeśli istnieje granic izolacji. Jednakże WPF i model dodatku .NET Framework zapewnia prostą metodę obejścia tego problemu i zwiększenia stabilności aplikacji. Dodatek programu WPF, który wyświetla interfejs użytkownika tworzy <xref:System.Windows.Threading.Dispatcher> dla wątku, który domeny aplikacji działa, jeśli aplikacja hosta aplikacji WPF. Można wykryć wszystkie nieobsługiwane wyjątki, występujących w domenie aplikacji, obsługując <xref:System.Windows.Threading.Dispatcher.UnhandledException> zdarzenia WPF dodatku <xref:System.Windows.Threading.Dispatcher>. Możesz uzyskać <xref:System.Windows.Threading.Dispatcher> z <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> właściwości.
+- Udostępnianie wielu domen aplikacji ochrony przed wykonywaniem. Ze względu na ograniczenia dotyczące domen aplikacji Nieobsłużone wyjątki, które są zgłaszane w domenach aplikacji dodatków, powodują awarię całej aplikacji, nawet jeśli istnieje granica izolacji. Jednak funkcja WPF i .NET Framework model dodatków zapewniają prosty sposób obejścia tego problemu i zwiększenie stabilności aplikacji. Dodatek WPF, który wyświetla interfejs użytkownika tworzy <xref:System.Windows.Threading.Dispatcher> dla wątku, w którym jest uruchomiona domena aplikacji, jeśli aplikacja hosta jest aplikacją WPF. Można wykryć wszystkie Nieobsłużone wyjątki, które występują w domenie aplikacji przez obsługę <xref:System.Windows.Threading.Dispatcher.UnhandledException> zdarzenia dodatku <xref:System.Windows.Threading.Dispatcher>WPF. Możesz pobrać <xref:System.Windows.Threading.Dispatcher> <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> z właściwości.
 
 <a name="WPFAddInModelLimitations"></a>
 
-## <a name="wpf-add-in-limitations"></a>Ograniczenia dotyczące dodawania WPF
+## <a name="wpf-add-in-limitations"></a>Ograniczenia dodatku WPF
 
-Poza korzyści, które WPF dodaje się do zachowania domyślne, dostarczone przez <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>i uchwytów okien są również ograniczenia dla interfejsów użytkownika w dodatku, które są wyświetlane z hosta aplikacji:
+Poza korzyściami, które program WPF dodaje do domyślnych zachowań dostarczonych <xref:System.Windows.Interop.HwndSource>przez <xref:System.Windows.Interop.HwndHost>, i uchwytów okien, istnieją także ograniczenia dotyczące interfejsów użytkownika dodatku, które są wyświetlane z aplikacji hosta:
 
-- Interfejsy użytkownika dodatku wyświetlane z aplikacją hosta nie respektują zachowanie wycinka aplikacji hosta.
+- Interfejsy użytkownika dodatku wyświetlane z aplikacji hosta nie respektują zachowania wycinka aplikacji hosta.
 
-- Pojęcie *powietrznej* w współdziałanie scenariuszy ma również zastosowanie do dodatków (zobacz [regiony technologiczne — Przegląd](../advanced/technology-regions-overview.md)).
+- Koncepcja *przestrzeni powietrznej* w scenariuszach współdziałania dotyczy również dodatków (zobacz [Omówienie regionów technologicznych](../advanced/technology-regions-overview.md)).
 
-- Interfejs użytkownika dla aplikacji hosta usług, takich jak dziedziczenie zasobów, powiązań danych i polecenia, nie są automatycznie dostępne dla dodatku interfejsów użytkownika. Aby zapewnić tych usług do dodatku, należy zaktualizować potoku.
+- Usługi interfejsu użytkownika aplikacji hosta, takie jak dziedziczenie zasobów, powiązanie danych i polecenia, nie są automatycznie dostępne dla interfejsów użytkowników dodatków. Aby zapewnić te usługi dla dodatku, należy zaktualizować potoku.
 
-- Dodatków interfejsu użytkownika nie można obracać, skalować, nierówne lub w przeciwnym razie wpływ transformacji (zobacz [przekształca Przegląd](../graphics-multimedia/transforms-overview.md)).
+- Nie można obrócić, przeskalować, obchylać lub w inny sposób przekształceniu (zobacz [Przegląd transformacji](../graphics-multimedia/transforms-overview.md)).
 
-- Zawartość wewnątrz interfejsy użytkownika dodatku renderowania za pomocą rysowania operacje z <xref:System.Drawing> przestrzeni nazw może obejmować przenikaniem alfa. Jednak zarówno dodatków interfejsu użytkownika, jak i hosta aplikacji interfejsu użytkownika, który go zawiera musi wskazywać 100% nieprzezroczyste; innymi słowy `Opacity` zarówno właściwość musi być równa 1.
+- Zawartość wewnątrz interfejsów użytkownika dodatku, które są renderowane przez operacje rysowania z <xref:System.Drawing> przestrzeni nazw, może obejmować mieszanie alfa. Jednak zarówno interfejs użytkownika dodatku, jak i interfejs użytkownika aplikacji hosta, który go zawiera, muszą być 100% nieprzezroczyste; Innymi słowy `Opacity` Właściwość obu tych właściwości musi być ustawiona na 1.
 
-- Jeśli <xref:System.Windows.Window.AllowsTransparency%2A> właściwości okna aplikacji hosta, który zawiera dodatków interfejsu użytkownika ustawiono `true`, dodatek jest niewidoczna. Ta zasada obowiązuje nawet w przypadku interfejsu użytkownika dodatku w 100% nieprzezroczyste (czyli `Opacity` właściwość ma wartość 1).
+- Jeśli właściwość okna w aplikacji hosta zawierającej interfejs użytkownika dodatku jest ustawiona na `true`, dodatek jest niewidoczny. <xref:System.Windows.Window.AllowsTransparency%2A> Jest to prawdziwe, nawet jeśli interfejs użytkownika dodatku ma 100% nieprzezroczysty (oznacza to, `Opacity` że właściwość ma wartość 1).
 
-- Dodatek interfejsu użytkownika musi znajdować się na inne elementy WPF, w tym samym oknie najwyższego poziomu.
+- Interfejs użytkownika dodatku musi znajdować się na innych elementach WPF w tym samym oknie najwyższego poziomu.
 
-- Nie części interfejsu użytkownika dodatku może być renderowany przy użyciu <xref:System.Windows.Media.VisualBrush>. Zamiast tego dodatku mogą utworzyć migawkę wygenerowany interfejs użytkownika, aby utworzyć mapę bitową, który może być przekazywany do aplikacji hosta, za pomocą metod zdefiniowanych przez umowy.
+- Żadna część interfejsu użytkownika dodatku nie może być renderowana przy użyciu <xref:System.Windows.Media.VisualBrush>. Zamiast tego dodatek może wykonać migawkę wygenerowanego interfejsu użytkownika w celu utworzenia mapy bitowej, która może zostać przeniesiona do aplikacji hosta przy użyciu metod zdefiniowanych przez umowę.
 
-- Pliki multimedialne, nie można odtworzyć z <xref:System.Windows.Controls.MediaElement> w dodatku w interfejsie użytkownika.
+- Pliki multimedialne nie mogą być odtwarzane <xref:System.Windows.Controls.MediaElement> z programu w interfejsie użytkownika dodatku.
 
-- Zdarzenia myszy generowane dla interfejsu użytkownika dodatku nie są odbierane ani zgłoszone przez aplikację hosta i `IsMouseOver` właściwości dla hosta aplikacji interfejsu użytkownika ma wartość `false`.
+- Zdarzenia myszy wygenerowane dla interfejsu użytkownika dodatku nie są odbierane ani zgłaszane przez aplikację hosta, a `IsMouseOver` Właściwość interfejsu użytkownika aplikacji hosta ma `false`wartość.
 
-- Gdy fokus jest przenoszony między kontrolkami w dodatku w interfejsie użytkownika, `GotFocus` i `LostFocus` zdarzenia nie są odbierane ani zgłoszone przez aplikację hosta.
+- Gdy fokus jest przenoszony między kontrolkami w interfejsie użytkownika dodatku, `GotFocus` zdarzenia `LostFocus` i nie są odbierane ani zgłaszane przez aplikację hosta.
 
-- Część aplikacji hosta, który zawiera dodatków interfejsu użytkownika pojawi się białe po wydrukowaniu.
+- Część aplikacji hosta zawierającej interfejs użytkownika dodatku pojawia się biały podczas drukowania.
 
-- Wszystkie dyspozytorów (zobacz <xref:System.Windows.Threading.Dispatcher>) utworzone przez dodatek interfejsu użytkownika musi być zamknięty ręcznie przed dodatku właściciel jest zwalniana, gdy aplikacja hosta kontynuuje wykonywanie. Kontrakt może implementować metody, które umożliwiają aplikacji hosta w celu sygnalizowania, że dodatek przed dodatek jest załadowany, umożliwiając w ten sposób dodatków interfejsu użytkownika do zamykania jego dyspozytorów.
+- Wszystkie dyspozytory (zobacz <xref:System.Windows.Threading.Dispatcher>) utworzone za pomocą interfejsu użytkownika dodatku muszą być zamykane ręcznie przed wyładowaniem dodatku właściciela, jeśli aplikacja hosta kontynuuje wykonywanie. Umowa może implementować metody, które umożliwiają aplikacji hosta zasygnalizowanie dodatku przed usunięciem dodatku, a tym samym dodanie go do interfejsu użytkownika dodatku.
 
-- Jeśli dodatek interfejs użytkownika jest <xref:System.Windows.Controls.InkCanvas> lub zawiera <xref:System.Windows.Controls.InkCanvas>, nie można zwolnić dodatku.
+- Jeśli interfejs użytkownika dodatku ma <xref:System.Windows.Controls.InkCanvas> lub <xref:System.Windows.Controls.InkCanvas>zawiera, nie można zwolnić dodatku.
 
 <a name="PerformanceOptimization"></a>
 
 ## <a name="performance-optimization"></a>Optymalizacja wydajności
 
-Domyślnie jeśli używanych jest wiele domen aplikacji, różnych zestawów .NET Framework, wymagane przez poszczególne aplikacje są wszystkie ładowane do domeny w tej aplikacji. W rezultacie czas wymagany do tworzenia nowych domen aplikacji i uruchamiania aplikacji w nich może wpłynąć na wydajność. Jednak .NET Framework umożliwia zmniejszenie czasu uruchomienia przez poinstruowanie aplikacjom udostępnianie zestawów w domenach aplikacji, jeśli są już załadowane. Możesz to zrobić przy użyciu <xref:System.LoaderOptimizationAttribute> atrybut, który należy zastosować do metody punktu wejścia (`Main`). W takim przypadku musisz podać tylko kod do implementacji definicji aplikacji (zobacz [Zarządzanie aplikacjami — omówienie](application-management-overview.md)).
+Domyślnie, gdy są używane wiele domen aplikacji, do domeny tej aplikacji są ładowane różne zestawy .NET Framework wymagane przez poszczególne aplikacje. W związku z tym czas wymagany do tworzenia nowych domen aplikacji i uruchamiania aplikacji w nich może mieć wpływ na wydajność. Jednak .NET Framework umożliwia skrócenie czasu uruchamiania przez nakazujenie aplikacjom udostępniania zestawów w domenach aplikacji, jeśli są już załadowane. Można to zrobić przy użyciu <xref:System.LoaderOptimizationAttribute> atrybutu, który musi zostać zastosowany do metody punktu wejścia (`Main`). W takim przypadku należy użyć tylko kodu w celu zaimplementowania definicji aplikacji (zobacz [Omówienie zarządzania aplikacjami](application-management-overview.md)).
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.LoaderOptimizationAttribute>
 - [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Domeny aplikacji](../../app-domains/application-domains.md)
-- [Przegląd komunikacji zdalnej programu .NET framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
-- [Tworzenie obiektów może być zastosowana zdalnie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
+- [.NET Framework Omówienie usług zdalnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [Udostępnianie obiektów zdalnie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [Tematy z instrukcjami](how-to-topics.md)

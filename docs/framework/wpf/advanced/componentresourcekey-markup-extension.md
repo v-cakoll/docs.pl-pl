@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 93735d12426042fd6517c10a55d1a9bd32f906bb
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: b373b33fcc962e49aa220f31e24b1484a0a8cd98
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363056"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401602"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey — Rozszerzenie znaczników
 Definiuje i odwołuje się do kluczy dla zasobów, które są ładowane z zestawów zewnętrznych. Dzięki temu Wyszukiwanie zasobów pozwala określić typ docelowy w zestawie, a nie jawny słownik zasobów w zestawie lub w klasie.  
@@ -46,7 +46,7 @@ Definiuje i odwołuje się do kluczy dla zasobów, które są ładowane z zestaw
   
 |||  
 |-|-|  
-|`targetTypeName`|Nazwa typu publicznego [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] , który jest zdefiniowany w zestawie zasobów.|  
+|`targetTypeName`|Nazwa typu publicznego środowiska uruchomieniowego języka wspólnego (CLR), który jest zdefiniowany w zestawie zasobów.|  
 |`targetID`|Klucz zasobu. Gdy zasoby są wyszukiwane `targetID` , będą analogiczne do [dyrektywy x:Key](../../xaml-services/x-key-directive.md) zasobu.|  
   
 ## <a name="remarks"></a>Uwagi  

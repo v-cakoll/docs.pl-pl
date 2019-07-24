@@ -10,188 +10,188 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 556ce7b42f13d7c5ba7fba36b09277cda9bcae5d
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021537"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400659"
 ---
 # <a name="data-templating-overview"></a>Przegląd Szablonowanie danych
-Model szablonowanie danych WPF zapewnia dużą elastyczność, aby zdefiniować prezentację danych. Formanty WPF posiada wbudowanej funkcji obsługującej Dostosowywanie prezentacji danych. W tym temacie najpierw pokazano, jak zdefiniować <xref:System.Windows.DataTemplate> i następnie wprowadza inne funkcje szablonów dane, takie jak wybór szablony na podstawie logiki niestandardowej i pomoc techniczna dotycząca wyświetlania danych hierarchicznych.  
+Model tworzenia szablonów danych WPF zapewnia dużą elastyczność definiowania prezentacji danych. Formanty WPF mają wbudowaną funkcję do obsługi dostosowywania prezentacji danych. W tym temacie najpierw pokazano, jak zdefiniować <xref:System.Windows.DataTemplate> i a następnie wprowadzić inne funkcje tworzenia szablonów danych, takie jak wybór szablonów oparty na logiki niestandardowej i obsługa wyświetlania danych hierarchicznych.  
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Ten temat koncentruje się na funkcjach szablonowanie danych i nie jest wprowadzenie koncepcji powiązań danych. Aby uzyskać informacje o pojęciach dotyczących wiązania danych podstawowych, zobacz [Data Binding Overview](data-binding-overview.md).  
+ Ten temat koncentruje się na funkcjach tworzenia szablonów danych i nie stanowi wprowadzenia koncepcji związanych z wiązaniem danych. Aby uzyskać informacje o podstawowych pojęciach dotyczących powiązań danych, zobacz [Omówienie powiązań danych](data-binding-overview.md).  
   
- <xref:System.Windows.DataTemplate> dotyczy prezentacji danych i jest jednym z wielu funkcji, dostarczonych przez model Tworzenie szablonów i stylów WPF. Wprowadzenie WPF Tworzenie szablonów i stylów modelu, takie jak używać <xref:System.Windows.Style> można ustawić właściwości formantów, zobacz [Tworzenie szablonów i stylów](../controls/styling-and-templating.md) tematu.  
+ <xref:System.Windows.DataTemplate>zawiera informacje o prezentacji danych i jest jedną z wielu funkcji udostępnianych przez style WPF i model tworzenia szablonów. Aby uzyskać informacje na temat wprowadzenia stylu WPF i modelu tworzenia szablonów, takich jak używanie <xref:System.Windows.Style> do ustawiania właściwości w kontrolkach, zobacz temat [Style i tworzenia szablonów](../controls/styling-and-templating.md) .  
   
- Ponadto jest ważne, aby zrozumieć `Resources`, które są zasadniczo co Włącz obiektów takich jak <xref:System.Windows.Style> i <xref:System.Windows.DataTemplate> się do ponownego użycia. Aby uzyskać więcej informacji na temat zasobów, zobacz [zasoby XAML](../advanced/xaml-resources.md).  
+ Ponadto ważne jest, aby zrozumieć `Resources`, które są zasadniczo, co pozwala na wielokrotne użycie obiektów, takich jak <xref:System.Windows.Style> i <xref:System.Windows.DataTemplate> . Aby uzyskać więcej informacji o zasobach, zobacz [zasoby XAML](../advanced/xaml-resources.md).  
   
 <a name="DataTemplating_Basic"></a>   
-## <a name="data-templating-basics"></a>Podstawowe informacje o danych szablonów  
+## <a name="data-templating-basics"></a>Podstawowe informacje dotyczące tworzenia szablonówi danych  
   
- Aby zademonstrować Dlaczego <xref:System.Windows.DataTemplate> jest ważna, Przejdźmy przykład powiązania danych. W tym przykładzie mamy <xref:System.Windows.Controls.ListBox> , jest powiązany z listy `Task` obiektów. Każdy `Task` obiekt ma `TaskName` (ciąg) `Description` (ciąg) `Priority` (int) i właściwość typu `TaskType`, czyli `Enum` wartościami `Home` i `Work`.  
+ Aby zademonstrować, dlaczego <xref:System.Windows.DataTemplate> jest ważne, przejdźmy na przykład powiązania danych. W tym przykładzie <xref:System.Windows.Controls.ListBox> mamy powiązanie z `Task` listą obiektów. Każdy `Task` obiekt `Priority` `TaskType` `Home` `Enum` `Work`ma `TaskName` (ciąg),(ciąg),a(int)iwłaściwośćtypu,którajest`Description` z wartościami i.  
   
  [!code-xaml[DataTemplatingIntro_snip#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#resources)]  
 [!code-xaml[DataTemplatingIntro_snip#UI1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#ui1)]  
 [!code-xaml[DataTemplatingIntro_snip#UI2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#ui2)]  
   
 <a name="without_a_datatemplate"></a>   
-### <a name="without-a-datatemplate"></a>Bez DataTemplate  
- Bez <xref:System.Windows.DataTemplate>, nasze <xref:System.Windows.Controls.ListBox> obecnie wygląda następująco:  
+### <a name="without-a-datatemplate"></a>Bez szablonu DataTemplate  
+ Bez, nasz <xref:System.Windows.Controls.ListBox> aktualnie wygląda następująco: <xref:System.Windows.DataTemplate>  
   
- ![Zrzut ekranu przykładu szablonowanie danych](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
+ ![Zrzut ekranu przedstawiający przykładowy tworzenia szablonów danych](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
   
- Co się dzieje jest fakt, że bez żadnych szczególnych instrukcji <xref:System.Windows.Controls.ListBox> przez domyślną funkcję wywołania `ToString` podczas próby wyświetlenia obiektów w kolekcji. W związku z tym jeśli `Task` obiektu zastąpienia `ToString` metody, a następnie <xref:System.Windows.Controls.ListBox> wyświetlany jest ciąg reprezentujący każdego obiektu źródłowego w kolekcji źródłowej.  
+ Dzieje się tak, że nie trzeba wykonywać żadnych określonych instrukcji, <xref:System.Windows.Controls.ListBox> domyślnie wywołania `ToString` podczas próby wyświetlenia obiektów w kolekcji. W związku z tym `Task` , jeśli obiekt `ToString` przesłania metodę, a <xref:System.Windows.Controls.ListBox> następnie wyświetla ciąg reprezentujący każdy obiekt źródłowy w źródłowej kolekcji.  
   
- Na przykład jeśli `Task` klasy zastąpienia `ToString` metody w ten sposób gdzie `name` jest polem dla `TaskName` właściwości:  
+ Na przykład, `Task` Jeśli Klasa `ToString` przesłania metodę w ten sposób, gdzie `name` to pole `TaskName` właściwości:  
   
  [!code-csharp[DataTemplatingIntro_snip#ToString](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Data.cs#tostring)]
  [!code-vb[DataTemplatingIntro_snip#ToString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataTemplatingIntro_snip/visualbasic/data.vb#tostring)]  
   
- A następnie <xref:System.Windows.Controls.ListBox> wygląda podobnie do następującego:  
+ <xref:System.Windows.Controls.ListBox> Następnie wygląda następująco:  
   
- ![Zrzut ekranu przykładu szablonowanie danych](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
+ ![Zrzut ekranu przedstawiający przykładowy tworzenia szablonów danych](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
- Dotyczy to jednak ograniczającą i sztywny. Ponadto jeśli dokonywane jest wiązanie [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danych, nie będziesz mieć możliwości do zastąpienia `ToString`.  
+ Jednak ograniczanie i elastyczność. Ponadto w przypadku tworzenia powiązań z [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danymi nie można przesłonić. `ToString`  
   
 <a name="defining_simple_datatemplate"></a>   
-### <a name="defining-a-simple-datatemplate"></a>Definiowanie prostych DataTemplate  
- Rozwiązanie polega na zdefiniowaniu <xref:System.Windows.DataTemplate>. Jest jednym ze sposobów, aby to zrobić, można ustawić <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> właściwość <xref:System.Windows.Controls.ListBox> do <xref:System.Windows.DataTemplate>. Określ w swojej <xref:System.Windows.DataTemplate> staje się struktura visual obiektu danych. Następujące <xref:System.Windows.DataTemplate> jest dość prosta. Udostępniamy możliwość instrukcji, które każdy element jest wyświetlany jako trzy <xref:System.Windows.Controls.TextBlock> elementów w obrębie <xref:System.Windows.Controls.StackPanel>. Każdy <xref:System.Windows.Controls.TextBlock> element jest powiązana z właściwością `Task` klasy.  
+### <a name="defining-a-simple-datatemplate"></a>Definiowanie prostego szablonu DataTemplate  
+ Rozwiązaniem jest zdefiniowanie <xref:System.Windows.DataTemplate>. Jednym ze sposobów jest ustawienie <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> właściwości <xref:System.Windows.Controls.ListBox> <xref:System.Windows.DataTemplate>na. Zawartość, którą określisz <xref:System.Windows.DataTemplate> , zmieni się na strukturę wizualizacji obiektu danych. Poniżej przedstawiono <xref:System.Windows.DataTemplate> stosunkowo proste. Podajemy instrukcje, że każdy element pojawia się <xref:System.Windows.Controls.TextBlock> jako trzy elementy <xref:System.Windows.Controls.StackPanel>w. Każdy <xref:System.Windows.Controls.TextBlock> element jest powiązany z właściwością `Task` klasy.  
   
  [!code-xaml[DataTemplatingIntro_snip#Inline](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#inline)]  
   
- Dane bazowe dla przykłady w tym temacie jest kolekcją [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów. Jeśli dokonywane jest wiązanie [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dane podstawowe pojęcia są takie same, ale istnieje niewielkie różnice składniowe. Na przykład, zamiast `Path=TaskName`, należy ustawić <xref:System.Windows.Data.Binding.XPath%2A> do `@TaskName` (Jeśli `TaskName` to atrybut usługi [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] węzła).  
+ Dane bazowe dla przykładów w tym temacie są kolekcją obiektów CLR. Jeśli tworzysz powiązanie z [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danymi, podstawowe koncepcje są takie same, ale istnieje niewielka różnica składni. `Path=TaskName`Na przykład zamiast ma być ustawiony `@TaskName` <xref:System.Windows.Data.Binding.XPath%2A> na (Jeśli `TaskName` jest atrybutem [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] węzła).  
   
- Obecnie nasz <xref:System.Windows.Controls.ListBox> wygląda podobnie do następującego:  
+ Teraz nasz <xref:System.Windows.Controls.ListBox> wygląd wygląda następująco:  
   
- ![Zrzut ekranu przykładu szablonowanie danych](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
+ ![Zrzut ekranu przedstawiający przykładowy tworzenia szablonów danych](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
   
 <a name="defining_datatemplate_as_a_resource"></a>   
-### <a name="creating-the-datatemplate-as-a-resource"></a>Tworzenie DataTemplate jako zasób  
- W powyższym przykładzie zdefiniowaliśmy <xref:System.Windows.DataTemplate> wbudowanego. Jest to bardziej powszechne, aby zdefiniować w sekcji zasobów, aby mogło być ono obiekt wielokrotnego użytku, jak w poniższym przykładzie:  
+### <a name="creating-the-datatemplate-as-a-resource"></a>Tworzenie szablonu DataTemplate jako zasobu  
+ W powyższym przykładzie zdefiniowano <xref:System.Windows.DataTemplate> wbudowaną. Jest to bardziej powszechne, aby zdefiniować go w sekcji Resources, aby mógł być obiektem wielokrotnego użytku, jak w poniższym przykładzie:  
   
  [!code-xaml[DataTemplatingIntro_snip#R1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r1)]  
 [!code-xaml[DataTemplatingIntro_snip#AsResource](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#asresource)]  
 [!code-xaml[DataTemplatingIntro_snip#R2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r2)]  
   
- Teraz możesz używać `myTaskTemplate` jako zasób, jak w poniższym przykładzie:  
+ Teraz można użyć `myTaskTemplate` jako zasobu, jak w poniższym przykładzie:  
   
  [!code-xaml[DataTemplatingIntro_snip#MyTaskTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#mytasktemplate)]  
   
- Ponieważ `myTaskTemplate` jest zasobem, możesz go użyć na innych kontrolek, które mają właściwość, która przyjmuje <xref:System.Windows.DataTemplate> typu. Jak pokazano powyżej, aby uzyskać <xref:System.Windows.Controls.ItemsControl> obiekty, takie jak <xref:System.Windows.Controls.ListBox>, jest <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> właściwości. Aby uzyskać <xref:System.Windows.Controls.ContentControl> obiektów, jest <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> właściwości.  
+ Ponieważ `myTaskTemplate` jest zasobem, można go teraz używać w innych kontrolkach, które mają właściwość <xref:System.Windows.DataTemplate> przyjmującą typ. Jak pokazano powyżej, w <xref:System.Windows.Controls.ItemsControl> przypadku obiektów, takich <xref:System.Windows.Controls.ListBox>jak, jest <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> to właściwość. W <xref:System.Windows.Controls.ContentControl> przypadku obiektów <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> jest to właściwość.  
   
 <a name="Styling_DataType"></a>   
-### <a name="the-datatype-property"></a>Właściwość DataType obiektu  
- <xref:System.Windows.DataTemplate> Klasa ma <xref:System.Windows.DataTemplate.DataType%2A> właściwość, która jest bardzo podobny do <xref:System.Windows.Style.TargetType%2A> właściwość <xref:System.Windows.Style> klasy. Dlatego zamiast określania `x:Key` dla <xref:System.Windows.DataTemplate> w powyższym przykładzie można wykonaj następujące czynności:  
+### <a name="the-datatype-property"></a>Właściwość DataType  
+ Klasa ma właściwość, która <xref:System.Windows.Style.TargetType%2A> jest bardzo podobna <xref:System.Windows.Style> do właściwości klasy. <xref:System.Windows.DataTemplate.DataType%2A> <xref:System.Windows.DataTemplate> W związku z tym zamiast określania `x:Key` wartości w powyższym przykładzie można wykonać następujące czynności: <xref:System.Windows.DataTemplate>  
   
  [!code-xaml[DataTemplatingIntro_snip#DataType](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#datatype)]  
   
- To <xref:System.Windows.DataTemplate> automatycznie stosowane do wszystkich `Task` obiektów. Należy pamiętać, że w tym przypadku `x:Key` ustawiono niejawnie. W związku z tym jeśli zostaną przypisane te <xref:System.Windows.DataTemplate> `x:Key` wartości są zastępowanie niejawny `x:Key` i <xref:System.Windows.DataTemplate> nie będą stosowane automatycznie.  
+ Zostanie ona zastosowana automatycznie do `Task` wszystkich obiektów. <xref:System.Windows.DataTemplate> Należy pamiętać, że w tym `x:Key` przypadku jest to ustawiane niejawnie. W związku z tym, jeśli <xref:System.Windows.DataTemplate> przypiszesz `x:Key` tę wartość, <xref:System.Windows.DataTemplate> zastępujesz `x:Key` niejawną, a nie zostanie ona zastosowana automatycznie.  
   
- Jeśli dokonywane jest wiązanie <xref:System.Windows.Controls.ContentControl> do kolekcji `Task` obiektów <xref:System.Windows.Controls.ContentControl> nie korzysta z powyższych <xref:System.Windows.DataTemplate> automatycznie. Jest to spowodowane wiązania w <xref:System.Windows.Controls.ContentControl> potrzebuje więcej informacji, aby odróżnić, czy chcesz powiązać z całej kolekcji lub poszczególnych obiektów. Jeśli Twoje <xref:System.Windows.Controls.ContentControl> służy do śledzenia wybór <xref:System.Windows.Controls.ItemsControl> typu, można ustawić <xref:System.Windows.Data.Binding.Path%2A> właściwość <xref:System.Windows.Controls.ContentControl> powiązanie z "`/`" Aby wskazać, że jesteś zainteresowany bieżącego elementu. Aby uzyskać przykład, zobacz [powiązania z kolekcją i wyświetlanie informacji na podstawie wybranych](how-to-bind-to-a-collection-and-display-information-based-on-selection.md). W przeciwnym razie należy określić <xref:System.Windows.DataTemplate> jawnie ustawiając <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> właściwości.  
+ Jeśli tworzysz powiązanie <xref:System.Windows.Controls.ContentControl> z `Task` kolekcją obiektów, program <xref:System.Windows.Controls.ContentControl> nie używa powyższych <xref:System.Windows.DataTemplate> informacji automatycznie. Jest to spowodowane tym, że powiązanie <xref:System.Windows.Controls.ContentControl> na potrzeby potrzeb dodatkowych informacji pozwalające określić, czy chcesz powiązać z całą kolekcją, czy z pojedynczymi obiektami. <xref:System.Windows.Controls.ContentControl> Jeśli śledzi wybór <xref:System.Windows.Controls.ItemsControl> typu`/`, można <xref:System.Windows.Controls.ContentControl> ustawić właściwość powiązania na "", aby wskazać, że interesuje <xref:System.Windows.Data.Binding.Path%2A> Cię bieżący element. Aby zapoznać się z przykładem, zobacz [Powiązywanie z kolekcją i wyświetlanie informacji na podstawie wyboru](how-to-bind-to-a-collection-and-display-information-based-on-selection.md). W przeciwnym razie należy określić <xref:System.Windows.DataTemplate> jawnie przez <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> ustawienie właściwości.  
   
- <xref:System.Windows.DataTemplate.DataType%2A> Właściwość jest szczególnie użyteczna w przypadku, gdy masz <xref:System.Windows.Data.CompositeCollection> różnych typów obiektów danych. Aby uzyskać przykład, zobacz [implementować CompositeCollection](how-to-implement-a-compositecollection.md).  
+ Właściwość jest szczególnie przydatna w przypadku <xref:System.Windows.Data.CompositeCollection> różnych typów obiektów danych. <xref:System.Windows.DataTemplate.DataType%2A> Aby zapoznać się z przykładem, zobacz [implementacja złożonego](how-to-implement-a-compositecollection.md)obiektu.  
   
 <a name="adding_more_to_datatemplate"></a>   
-## <a name="adding-more-to-the-datatemplate"></a>Dodawanie więcej do DataTemplate  
- Obecnie dane są wyświetlane niezbędne informacje, ale zdecydowanie się udoskonalić. Możemy poprawić na prezentacji, dodając <xref:System.Windows.Controls.Border>, <xref:System.Windows.Controls.Grid>ale niektóre <xref:System.Windows.Controls.TextBlock> elementy, które opisują dane, które są wyświetlane.  
+## <a name="adding-more-to-the-datatemplate"></a>Dodawanie więcej do szablonu DataTemplate  
+ Obecnie dane pojawiają się wraz z niezbędnymi informacjami, ale jest to w nieskończoność do poprawy. Ulepszamy prezentację <xref:System.Windows.Controls.Border> <xref:System.Windows.Controls.Grid>, dodając, a i niektóre <xref:System.Windows.Controls.TextBlock> elementy opisujące dane, które są wyświetlane.  
   
  [!code-xaml[DataTemplatingIntro#AddingMore](~/samples/snippets/xaml/VS_Snippets_Wpf/DataTemplatingIntro/xaml/window1.xaml#addingmore)]  
 [!code-xaml[DataTemplatingIntro#AddingMore2](~/samples/snippets/xaml/VS_Snippets_Wpf/DataTemplatingIntro/xaml/window1.xaml#addingmore2)]  
   
- Poniższy zrzut ekranu przedstawia <xref:System.Windows.Controls.ListBox> z tym zmodyfikowane <xref:System.Windows.DataTemplate>:  
+ Poniższy zrzut ekranu przedstawia <xref:System.Windows.Controls.ListBox> z tą modyfikacją: <xref:System.Windows.DataTemplate>  
   
- ![Zrzut ekranu przykładu szablonowanie danych](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
+ ![Zrzut ekranu przedstawiający przykładowy tworzenia szablonów danych](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
   
- Firma Microsoft można ustawić <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> do <xref:System.Windows.HorizontalAlignment.Stretch> na <xref:System.Windows.Controls.ListBox> się upewnić, że szerokość elementy zajmuje całe miejsce:  
+ Można ustawić <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> <xref:System.Windows.HorizontalAlignment.Stretch> na wartość na, <xref:System.Windows.Controls.ListBox> aby upewnić się, że szerokość elementów przyjmuje całe miejsce:  
   
  [!code-xaml[DataTemplatingIntro_snip#Stretch](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#stretch)]  
   
- Za pomocą <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> właściwością <xref:System.Windows.HorizontalAlignment.Stretch>, <xref:System.Windows.Controls.ListBox> teraz wygląda następująco:  
+ Gdy <xref:System.Windows.HorizontalAlignment.Stretch> <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> Właściwośćjestustawionana,terazwyglądanastępująco:<xref:System.Windows.Controls.ListBox>  
   
- ![Zrzut ekranu przykładu szablonowanie danych](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
+ ![Zrzut ekranu przedstawiający przykładowy tworzenia szablonów danych](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
   
 <a name="DataTrigger_to_Apply_Property_Values"></a>   
-### <a name="use-datatriggers-to-apply-property-values"></a>Umożliwia stosowanie wartości właściwości DataTriggers  
- Bieżącej prezentacji nie Powiedz nam, czy `Task` jest głównym zadania lub pakietu office. Należy pamiętać, że `Task` obiekt ma `TaskType` właściwości typu `TaskType`, który jest wyliczenie z wartościami `Home` i `Work`.  
+### <a name="use-datatriggers-to-apply-property-values"></a>Używanie wyzwalaczy DataTriggers do stosowania wartości właściwości  
+ Bieżąca prezentacja nie informuje nas o `Task` tym, czy jest to zadanie główne czy zadanie pakietu Office. Należy pamiętać, `Task` że obiekt `TaskType` ma właściwość typu `TaskType`, która jest wyliczeniem z wartościami `Home` i `Work`.  
   
- W poniższym przykładzie <xref:System.Windows.DataTrigger> ustawia <xref:System.Windows.Controls.Border.BorderBrush%2A> elementu o nazwie `border` do `Yellow` Jeśli `TaskType` właściwość `TaskType.Home`.  
+ <xref:System.Windows.DataTrigger> W poniższym przykładzie <xref:System.Windows.Controls.Border.BorderBrush%2A> ustawia `border` elemento`Yellow` nazwie na, jeśli `TaskType.Home`właściwość jest. `TaskType`  
   
  [!code-xaml[DataTemplatingIntro#DT](~/samples/snippets/xaml/VS_Snippets_Wpf/DataTemplatingIntro/xaml/window1.xaml#dt)]  
 [!code-xaml[DataTemplatingIntro#DataTrigger](~/samples/snippets/xaml/VS_Snippets_Wpf/DataTemplatingIntro/xaml/window1.xaml#datatrigger)]  
 [!code-xaml[DataTemplatingIntro#AddingMore2](~/samples/snippets/xaml/VS_Snippets_Wpf/DataTemplatingIntro/xaml/window1.xaml#addingmore2)]  
   
- Obecnie nasza aplikacja wygląda podobnie do poniższego. Głównego zadania są wyświetlane z żółte obramowanie i zadania pakietu office są wyświetlane z obramowaniem Akwamaryna:  
+ Nasza aplikacja wygląda teraz następująco. Zadania główne są wyświetlane z żółtym obramowaniem, a zadania pakietu Office są wyświetlane z obramowaniem akwamaryna:  
   
- ![Zrzut ekranu przykładu szablonowanie danych](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
+ ![Zrzut ekranu przedstawiający przykładowy tworzenia szablonów danych](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
   
- W tym przykładzie <xref:System.Windows.DataTrigger> używa <xref:System.Windows.Setter> można ustawić wartości właściwości. Klasy wyzwalacza również mieć <xref:System.Windows.TriggerBase.EnterActions%2A> i <xref:System.Windows.TriggerBase.ExitActions%2A> właściwości, które umożliwiają uruchomienie zestaw akcji, takich jak animacji. Ponadto dostępna jest również <xref:System.Windows.MultiDataTrigger> klasy, która pozwala na zastosowanie zmian na podstawie wielu powiązanych z danymi wartości właściwości.  
+ W tym przykładzie <xref:System.Windows.DataTrigger> <xref:System.Windows.Setter> używa do ustawiania wartości właściwości. Klasy wyzwalaczy mają <xref:System.Windows.TriggerBase.EnterActions%2A> również właściwości i <xref:System.Windows.TriggerBase.ExitActions%2A> , które umożliwiają uruchamianie zestawu akcji, takich jak animacje. Ponadto istnieje również <xref:System.Windows.MultiDataTrigger> Klasa, która pozwala na zastosowanie zmian w oparciu o wiele wartości właściwości powiązanych z danymi.  
   
- Alternatywny sposób, aby osiągnąć ten sam efekt jest, aby powiązać <xref:System.Windows.Controls.Border.BorderBrush%2A> właściwości `TaskType` właściwość i użycia konwertera wartości do zwrócenia kolor na podstawie `TaskType` wartości. Tworzenie za pomocą konwertera celowi jest nieco bardziej efektywne pod względem wydajności. Ponadto tworzenie własnych konwerter zapewnia większą elastyczność, ponieważ jest dostarczenie własnej logiki. Ostatecznie techniki, które możesz wybrać jest zależny od scenariusza i preferencje. Aby dowiedzieć się, jak napisać konwertera, zobacz <xref:System.Windows.Data.IValueConverter>.  
+ Alternatywnym sposobem osiągnięcia tego samego efektu jest powiązanie <xref:System.Windows.Controls.Border.BorderBrush%2A> właściwości `TaskType` z właściwością i użycie konwertera wartości w celu zwrócenia koloru na podstawie `TaskType` wartości. Tworzenie powyższego efektu przy użyciu konwertera jest nieco bardziej wydajne w zakresie wydajności. Ponadto Tworzenie własnego konwertera zapewnia większą elastyczność, ponieważ dostarczasz własną logikę. Na końcu wybrana technika zależy od Twojego scenariusza i preferencji. Informacje o sposobach pisania konwertera znajdują się <xref:System.Windows.Data.IValueConverter>w temacie.  
   
 <a name="what_belongs_in_datatemplate"></a>   
-### <a name="what-belongs-in-a-datatemplate"></a>Co to jest powiązana DataTemplate?  
+### <a name="what-belongs-in-a-datatemplate"></a>Co należy do szablonu DataTemplate?  
 
-W poprzednim przykładzie, możemy umieścić wyzwalacza w ramach <xref:System.Windows.DataTemplate> przy użyciu <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> Właściwość. <xref:System.Windows.Setter> Wyzwalacza ustawia wartości właściwości elementu ( <xref:System.Windows.Controls.Border> elementu) znajduje się w <xref:System.Windows.DataTemplate>. Jednak jeśli właściwości, Twoje `Setters` są zainteresowani nie są właściwości elementów, które znajdują się w bieżącej <xref:System.Windows.DataTemplate>, może być bardziej odpowiednie do ustawiania właściwości, za pomocą <xref:System.Windows.Style> to <xref:System.Windows.Controls.ListBoxItem> klasy (Jeśli formant, w której dokonywane jest wiązanie jest <xref:System.Windows.Controls.ListBox>). Na przykład, jeśli chcesz, aby Twoje <xref:System.Windows.Trigger> animować <xref:System.Windows.UIElement.Opacity%2A> wartość elementu, gdy wskaźnik myszy wskazuje element, zdefiniujesz Wyzwalacze w ramach <xref:System.Windows.Controls.ListBoxItem> stylu. Aby uzyskać przykład, zobacz [wprowadzenie do przykładowych szablonów i stylów](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
+W poprzednim przykładzie został umieszczony wyzwalacz w <xref:System.Windows.DataTemplate> <xref:System.Windows.DataTemplate>użyciu.<xref:System.Windows.DataTemplate.Triggers%2A> wartość. Wyzwalacz ustawia wartość właściwości elementu <xref:System.Windows.Controls.Border> (elementu <xref:System.Windows.DataTemplate>), który znajduje się w. <xref:System.Windows.Setter> Jeśli jednak właściwości, z `Setters` którymi się znajdują, nie są właściwościami elementów, które znajdują się w bieżącym <xref:System.Windows.DataTemplate>, może być bardziej odpowiednie do <xref:System.Windows.Style> ustawiania właściwości przy użyciu <xref:System.Windows.Controls.ListBoxItem> klasy, która jest klasą (Jeśli formant, który jest powiązany, <xref:System.Windows.Controls.ListBox>to a). Jeśli na przykład chcesz <xref:System.Windows.Trigger> <xref:System.Windows.UIElement.Opacity%2A> animować wartość elementu, gdy wskaźnik myszy wskazuje element, definiujesz Wyzwalacze w <xref:System.Windows.Controls.ListBoxItem> stylu. Aby zapoznać się z przykładem, zobacz [wprowadzenie do stylu i przykładu tworzenia szablonów](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
   
- Ogólnie rzecz biorąc, należy pamiętać, że <xref:System.Windows.DataTemplate> są stosowane do każdego z wygenerowanym <xref:System.Windows.Controls.ListBoxItem> (Aby uzyskać więcej informacji na temat jak i gdzie jest ona rzeczywiście stosowane zobacz <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> strony.). Twoje <xref:System.Windows.DataTemplate> dotyczy tylko z prezentacji i wyglądu obiektów danych. W większości przypadków wszystkie inne aspekty prezentacją, czyli jakich element Dzieję, gdy jest ono zaznaczone lub w sposób, w jaki <xref:System.Windows.Controls.ListBox> przygotowuje się do elementów, nie należą do definicji <xref:System.Windows.DataTemplate>. Aby uzyskać przykład, zobacz [ItemsControl Tworzenie szablonów i stylów](#DataTemplating_ItemsControl) sekcji.  
+ Ogólnie rzecz biorąc, pamiętaj, że <xref:System.Windows.DataTemplate> jest stosowana do każdego z wygenerowanych <xref:System.Windows.Controls.ListBoxItem> (Aby uzyskać więcej informacji na temat sposobu i miejsca, w którym jest <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> faktycznie stosowana, zobacz stronę). <xref:System.Windows.DataTemplate> Dotyczy tylko prezentacji i wyglądu obiektów danych. W większości przypadków wszystkie inne aspekty prezentacji, takie jak element wygląda na to, kiedy jest zaznaczone, lub jak <xref:System.Windows.Controls.ListBox> układają elementy, nie należą do definicji. <xref:System.Windows.DataTemplate> Aby zapoznać się z przykładem, zobacz sekcję [Style i tworzenia szablonów ItemsControl](#DataTemplating_ItemsControl) .  
   
 <a name="Styling_StyleSelection"></a>   
-## <a name="choosing-a-datatemplate-based-on-properties-of-the-data-object"></a>Wybieranie DataTemplate, na podstawie właściwości obiektu danych  
- W [Właściwość DataType obiektu](#Styling_DataType) sekcji opisano sposób zdefiniowania różnych danych szablonów obiektów danych. Jest szczególnie przydatne, gdy masz <xref:System.Windows.Data.CompositeCollection> o różnych typach lub kolekcje z elementami o różnych typach. W [Użyj DataTriggers stosowanie wartości właściwości](#DataTrigger_to_Apply_Property_Values) sekcji, firma Microsoft wykazały, że w przypadku kolekcji tego samego typu obiektów danych można utworzyć <xref:System.Windows.DataTemplate> , a następnie użyć wyzwalaczy, aby zastosować zmiany na podstawie wartości właściwości Każdy obiekt danych. Jednak wyzwalacze umożliwiają stosowanie wartości właściwości lub uruchomienie animacji, ale nie zapewniają elastyczność, aby odtworzyć strukturę obiektów danych. Niektórych scenariuszach może być konieczna utworzyć inną <xref:System.Windows.DataTemplate> danych obiektów, które są tego samego typu, ale ma inne właściwości.  
+## <a name="choosing-a-datatemplate-based-on-properties-of-the-data-object"></a>Wybieranie szablonu danych na podstawie właściwości obiektu dane  
+ W sekcji [Właściwości DataType](#Styling_DataType) omawiamy, że można definiować różne szablony danych dla różnych obiektów danych. Jest to szczególnie przydatne w przypadku, gdy <xref:System.Windows.Data.CompositeCollection> istnieje różne typy lub kolekcje z elementami różnych typów. W sekcji [Użyj DataTriggers do zastosowania wartości właściwości](#DataTrigger_to_Apply_Property_Values) wykazałeś, że jeśli masz kolekcję tego samego typu obiektów danych, możesz utworzyć <xref:System.Windows.DataTemplate> a następnie użyć wyzwalaczy, aby zastosować zmiany na podstawie wartości właściwości każdego obiektu danych. Wyzwalacze umożliwiają jednak stosowanie wartości właściwości lub uruchamianie animacji, ale nie pozwalają na odtworzenie struktury obiektów danych. Niektóre scenariusze mogą wymagać utworzenia innego <xref:System.Windows.DataTemplate> dla obiektów danych, które są tego samego typu, ale mają różne właściwości.  
   
- Na przykład, gdy `Task` obiekt ma `Priority` wartość `1`, warto nadać mu zupełnie inny wygląd, która będzie służyć jako alert dla siebie. W takim przypadku należy utworzyć <xref:System.Windows.DataTemplate> wyświetlania o wysokim priorytecie `Task` obiektów. Dodajmy następujące <xref:System.Windows.DataTemplate> do sekcji zasobów:  
+ Na przykład, gdy `Task` obiekt `Priority` ma wartość `1`, możesz chcieć nadać mu zupełnie inny wygląd, który będzie używany jako alert dla siebie. W takim przypadku należy utworzyć <xref:System.Windows.DataTemplate> do wyświetlania obiektów o wysokim priorytecie. `Task` Dodajmy następujące elementy <xref:System.Windows.DataTemplate> do sekcji Resources:  
   
  [!code-xaml[DataTemplatingIntro_snip#ImportantTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#importanttemplate)]  
   
- Zwróć uwagę, w tym przykładzie użyto <xref:System.Windows.DataTemplate>.<xref:System.Windows.FrameworkTemplate.Resources%2A> Właściwość. Zasoby zdefiniowane w tej sekcji są współużytkowane przez elementy w ramach <xref:System.Windows.DataTemplate>.  
+ Zauważ, że w <xref:System.Windows.DataTemplate>tym przykładzie używamy.<xref:System.Windows.FrameworkTemplate.Resources%2A> wartość. Zasoby zdefiniowane w tej sekcji są udostępniane przez elementy w obrębie <xref:System.Windows.DataTemplate>.  
   
- Umożliwiają określanie wartości logiki, aby wybrać, które <xref:System.Windows.DataTemplate> do użycia na podstawie `Priority` wartość obiektu danych, Utwórz podklasę <xref:System.Windows.Controls.DataTemplateSelector> i zastąpić <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> metody. W poniższym przykładzie <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> metoda udostępnia logikę do zwrócenia odpowiedniego szablonu na podstawie wartości z `Priority` właściwości. Szablon do zwrócenia zostanie znaleziony w zasoby obejmujące <xref:System.Windows.Window> elementu.  
+ Aby określić logikę do wyboru <xref:System.Windows.DataTemplate> <xref:System.Windows.Controls.DataTemplateSelector> , która ma być używana `Priority` na podstawie wartości obiektu danych, należy utworzyć <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> podklasę i zastąpić metodę. W poniższym przykładzie <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> Metoda udostępnia logikę do zwrócenia odpowiedniego szablonu na podstawie wartości `Priority` właściwości. Szablon do zwrócenia znajduje się w zasobach <xref:System.Windows.Window> elementu obejmujących.  
   
  [!code-csharp[DataTemplatingIntro_snip#DTSClass](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/TaskListDataTemplateSelector.cs#dtsclass)]
  [!code-vb[DataTemplatingIntro_snip#DTSClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataTemplatingIntro_snip/visualbasic/tasklistdatatemplateselector.vb#dtsclass)]  
   
- Firma Microsoft następnie może zadeklarować `TaskListDataTemplateSelector` jako zasób:  
+ Następnie można zadeklarować `TaskListDataTemplateSelector` jako zasób:  
   
  [!code-xaml[DataTemplatingIntro_snip#R1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r1)]  
 [!code-xaml[DataTemplatingIntro_snip#DTS](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#dts)]  
 [!code-xaml[DataTemplatingIntro_snip#R2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r2)]  
   
- Aby korzystać z zasobów selektor szablonu, należy przypisać ją do <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> właściwość <xref:System.Windows.Controls.ListBox>. <xref:System.Windows.Controls.ListBox> Wywołania <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> metody `TaskListDataTemplateSelector` dla każdego z elementów w kolekcji źródłowej. Wywołanie przekazuje obiekt danych jako parametru elementu. <xref:System.Windows.DataTemplate> Zwracanym przez metodę jest następnie stosowane do tego obiektu danych.  
+ Aby użyć zasobu selektora szablonów, przypisz go do <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> właściwości. <xref:System.Windows.Controls.ListBox> <xref:System.Windows.Controls.ListBox> Wywołuje<xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> metodę dla`TaskListDataTemplateSelector` każdego elementu w kolekcji źródłowej. Wywołanie przekazuje obiekt danych jako parametr elementu. Wartość <xref:System.Windows.DataTemplate> zwracana przez metodę jest następnie stosowana do tego obiektu danych.  
   
  [!code-xaml[DataTemplatingIntro_snip#ItemTemplateSelector](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#itemtemplateselector)]  
   
- Za pomocą selektora szablonu w miejscu <xref:System.Windows.Controls.ListBox> wygląda teraz następująco:  
+ Po dokonaniu <xref:System.Windows.Controls.ListBox> wyboru szablonu teraz pojawia się w następujący sposób:  
   
- ![Zrzut ekranu przykładu szablonowanie danych](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
+ ![Zrzut ekranu przedstawiający przykładowy tworzenia szablonów danych](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
 
-Zakończenie naszej dyskusji w tym przykładzie. Aby uzyskać pełny przykład, zobacz [wprowadzenie do próbki Szablonowanie danych](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro).
+Zakończymy nasze omówienie tego przykładu. Pełny przykład można znaleźć w artykule [wprowadzenie do danych tworzenia szablonów Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro).
 
 <a name="DataTemplating_ItemsControl"></a>   
-## <a name="styling-and-templating-an-itemscontrol"></a>Tworzenie szablonów elementu ItemsControl i stylów  
- Mimo że <xref:System.Windows.Controls.ItemsControl> nie jest tylko typ formantu, którego można używać <xref:System.Windows.DataTemplate> , jest to bardzo typowy scenariusz, aby powiązać <xref:System.Windows.Controls.ItemsControl> do kolekcji. W [co to jest powiązana DataTemplate](#what_belongs_in_datatemplate) sekcji omówiono, definicji usługi <xref:System.Windows.DataTemplate> powinny być tylko zaniepokojona prezentację danych. Aby dowiedzieć się, gdy nie nadaje się do użycia <xref:System.Windows.DataTemplate> jest ważne poznać różne właściwości stylów i szablonów, dostarczonych przez <xref:System.Windows.Controls.ItemsControl>. Poniższy przykład jest przeznaczony do zilustrowania funkcji każdego z tych właściwości. <xref:System.Windows.Controls.ItemsControl> w tym przykładzie jest powiązany do tej samej `Tasks` kolekcji, co w poprzednim przykładzie. Demonstracyjne celów, style i szablony, w tym przykładzie są wszystkie wbudowane zadeklarowane.  
+## <a name="styling-and-templating-an-itemscontrol"></a>Style i tworzenia szablonów ItemsControl  
+ Mimo że nie <xref:System.Windows.DataTemplate> <xref:System.Windows.Controls.ItemsControl> jest jedynym typem formantu, którego można używać z, jest to bardzo typowy scenariusz powiązania z <xref:System.Windows.Controls.ItemsControl> kolekcją. W obszarze [co należy](#what_belongs_in_datatemplate) do sekcji DataTemplate omówione, że definicja elementu <xref:System.Windows.DataTemplate> powinna dotyczyć tylko prezentacji danych. Aby dowiedzieć się, kiedy nie jest to odpowiednie do użycia <xref:System.Windows.DataTemplate> , ważne jest zrozumienie różnych właściwości stylu i szablonu dostarczonych <xref:System.Windows.Controls.ItemsControl>przez. Poniższy przykład został zaprojektowany w celu zilustrowania funkcji każdej z tych właściwości. W tym przykładzie jest to powiązane z tą samą `Tasks` kolekcją, jak w poprzednim przykładzie. <xref:System.Windows.Controls.ItemsControl> W celach demonstracyjnych, style i szablony w tym przykładzie są zadeklarowane wewnętrznie.  
   
  [!code-xaml[DataTemplatingIntro_snip#ItemsControlProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#itemscontrolproperties)]  
   
- Poniżej przedstawiono zrzut ekranu przykładu, gdy jest on renderowany:  
+ Poniżej znajduje się zrzut ekranu przedstawiający przykład podczas renderowania:  
   
- ![Zrzut ekranu przykładu elementu ItemsControl](./media/databinding-itemscontrolproperties.png "DataBinding_ItemsControlProperties")  
+ ![Przykładowy zrzut ekranu ItemsControl](./media/databinding-itemscontrolproperties.png "DataBinding_ItemsControlProperties")  
   
- Należy pamiętać, że zamiast <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, możesz użyć <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>. Zapoznaj się z poprzedniej sekcji, aby uzyskać przykład. Podobnie, zamiast <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>, masz możliwość użycia <xref:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector%2A>.  
+ Należy pamiętać, że zamiast korzystać <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>z programu, można <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>użyć. Na przykład zapoznaj się z poprzednią sekcją. Podobnie zamiast korzystać z programu <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>, można <xref:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector%2A>skorzystać z opcji.  
   
- Dwie inne stylu związane właściwości <xref:System.Windows.Controls.ItemsControl> , nie są wyświetlane w tym miejscu są <xref:System.Windows.Controls.ItemsControl.GroupStyle%2A> i <xref:System.Windows.Controls.ItemsControl.GroupStyleSelector%2A>.  
+ Dwie inne właściwości powiązane z stylem, <xref:System.Windows.Controls.ItemsControl> które nie są wyświetlane w tym <xref:System.Windows.Controls.ItemsControl.GroupStyle%2A> miejscu <xref:System.Windows.Controls.ItemsControl.GroupStyleSelector%2A>, to i.  
   
 <a name="DataTemplating_HeirarchicalDataTemplate"></a>   
 ## <a name="support-for-hierarchical-data"></a>Obsługa danych hierarchicznych  
- Do tej pory mają tylko zobaczyliśmy, jak powiązać i wyświetlić jedną kolekcję. Czasami masz kolekcję zawierającą inne kolekcje. <xref:System.Windows.HierarchicalDataTemplate> Klasa jest przeznaczona do użycia z <xref:System.Windows.Controls.HeaderedItemsControl> typów do wyświetlenia tych danych. W poniższym przykładzie `ListLeagueList` znajduje się lista `League` obiektów. Każdy `League` obiekt ma `Name` i kolekcji `Division` obiektów. Każdy `Division` ma `Name` i kolekcji `Team` obiektów i każdy `Team` obiekt ma `Name`.  
+ Do tej pory udałomy się tylko doprowadzić do tworzenia i wyświetlania pojedynczej kolekcji. Czasami kolekcja zawiera inne kolekcje. Klasa jest przeznaczona do użycia z <xref:System.Windows.Controls.HeaderedItemsControl> typami do wyświetlania takich danych. <xref:System.Windows.HierarchicalDataTemplate> W poniższym przykładzie `ListLeagueList` jest `League` listą obiektów. Każdy `League` obiekt makolekcję`Division` obiektów i. `Name` Każdy `Division` z nich `Name` ma kolekcję `Team` obiektów i każdy `Team` obiekt ma `Name`.  
   
  [!code-xaml[HierarchicalDataTemplateSnippet#HDT](~/samples/snippets/csharp/VS_Snippets_Wpf/HierarchicalDataTemplateSnippet/CS/window1.xaml#hdt)]  
   
- W przykładzie pokazano, że przy użyciu <xref:System.Windows.HierarchicalDataTemplate>, można łatwo wyświetlić dane z listy, który zawiera inne listy. Poniżej przedstawiono zrzut ekranu przykładu.  
+ W przykładzie pokazano, że przy użyciu programu <xref:System.Windows.HierarchicalDataTemplate>można łatwo wyświetlić dane listy zawierające inne listy. Poniżej znajduje się zrzut ekranu przedstawiający przykład.  
   
- ![Zrzut ekranu przykładu przykładowy obiekt HierarchicalDataTemplate](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
+ ![Przykładowy zrzut ekranu HierarchicalDataTemplate](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>Zobacz także
 

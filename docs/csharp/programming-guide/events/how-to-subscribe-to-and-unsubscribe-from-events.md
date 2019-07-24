@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Subskrybowanie i anulowanie subskrypcji zdarzeń - C# przewodnik programowania'
+title: 'Instrukcje: Subskrybowanie i anulowanie subskrypcji zdarzeń — C# Przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,37 +7,37 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 365ea55a112a4a04964a8271f2f7e5591a3b0d5d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 777eb3be5cbefe0a136bf49f826ad67685a8456d
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301042"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401081"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Instrukcje: Subskrybowanie i anulowanie subskrypcji zdarzeń (C# Programming Guide)
-Subskrybowanie zdarzenia, które jest opublikowane przez inną klasę napisać kod niestandardowy, który jest wywoływana, gdy zdarzenie jest zgłaszane. Na przykład może subskrybować przycisku `click` zdarzeń, aby zapewnić aplikacji zrobić coś, co jest przydatne, gdy użytkownik kliknie przycisk.  
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Instrukcje: Subskrybowanie i anulowanie subskrypcji zdarzeń (C# Przewodnik programowania)
+Zasubskrybujesz zdarzenie, które jest publikowane przez inną klasę, gdy chcesz napisać niestandardowy kod, który jest wywoływany, gdy zdarzenie jest zgłaszane. Na przykład można subskrybować `click` zdarzenie przycisku, aby aplikacja była przydatna, gdy użytkownik kliknie przycisk.  
   
-### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Aby subskrybować zdarzenia przy użyciu programu Visual Studio IDE  
+### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Aby subskrybować zdarzenia za pomocą środowiska IDE programu Visual Studio  
   
-1. Jeśli nie widzisz **właściwości** okna w **projektowania** wyświetlić, kliknij prawym przyciskiem myszy formularza lub kontrolki, dla której chcesz utworzyć program obsługi zdarzeń, a następnie wybierz pozycję **właściwości**.  
+1. Jeśli nie widzisz okna **Właściwości** , w widoku **projektu** kliknij prawym przyciskiem myszy formularz lub kontrolkę, dla której chcesz utworzyć procedurę obsługi zdarzeń, a następnie wybierz polecenie **Właściwości**.  
   
-2. W górnej części **właściwości** okna, kliknij przycisk **zdarzenia** ikony.  
+2. W górnej części okna **Właściwości** kliknij ikonę **zdarzenia** .  
   
-3. Kliknij dwukrotnie zdarzenie, które chcesz utworzyć, na przykład `Load` zdarzeń.  
+3. Kliknij dwukrotnie zdarzenie, które chcesz utworzyć, na przykład `Load` zdarzenie.  
   
-     Visual C# tworzy metodę programu obsługi zdarzeń pusty i dodaje go do kodu. Alternatywnie można dodać kod ręcznie w **kodu** widoku. Na przykład następujące wiersze kodu Zadeklaruj metodę programu obsługi zdarzeń, która zostanie wywołana kiedy `Form` klasy wywołuje `Load` zdarzeń.  
+     Wizualizacja C# tworzy pustą metodę obsługi zdarzeń i dodaje ją do kodu. Alternatywnie możesz dodać kod ręcznie w widoku **kodu** . Na przykład następujące wiersze kodu deklarują metodę procedury obsługi zdarzeń, która zostanie wywołana, gdy `Form` Klasa `Load` zgłasza zdarzenie.  
   
      [!code-csharp[csProgGuideEvents#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#11)]  
   
-     Wiersz kodu, który jest wymagany do subskrybowania zdarzenia jest automatycznie generowany w `InitializeComponent` metody w pliku Form1.Designer.cs w projekcie. Przypomina to:  
+     Wiersz kodu, który jest wymagany do subskrybowania zdarzenia, jest również generowany automatycznie w `InitializeComponent` metodzie w pliku Form1.Designer.cs w projekcie. Przypomina to:  
   
     ```csharp
     this.Load += new System.EventHandler(this.Form1_Load);  
     ```  
   
-### <a name="to-subscribe-to-events-programmatically"></a>Aby subskrybować zdarzenia programowe  
+### <a name="to-subscribe-to-events-programmatically"></a>Aby programowo subskrybować zdarzenia  
   
-1. Zdefiniuj metodę programu obsługi zdarzeń, którego podpis odpowiadają podpisowi delegata zdarzenia. Na przykład, jeśli zdarzenie jest oparty na <xref:System.EventHandler> typ delegata, poniższy kod przedstawia szkieletu metody:  
+1. Zdefiniuj metodę procedury obsługi zdarzeń, której sygnatura pasuje do sygnatury delegata zdarzenia. Na przykład, jeśli zdarzenie jest oparte na <xref:System.EventHandler> typie delegata, poniższy kod reprezentuje element zastępczy metody:  
   
     ```csharp
     void HandleCustomEvent(object sender, CustomEventArgs a)  
@@ -46,35 +46,34 @@ Subskrybowanie zdarzenia, które jest opublikowane przez inną klasę napisać k
     }  
     ```  
   
-2. Użyj operator przypisania dodawania (`+=`) do dołączenia programu obsługi zdarzeń do zdarzenia. W poniższym przykładzie przyjęto założenie, że obiekt o nazwie `publisher` posiada zdarzenie o nazwie `RaiseCustomEvent`. Należy pamiętać, że klasy subskrybenta wymaga odwołania do klasy wydawcy Aby subskrybować ze zdarzeniami.  
+2. Użyj operatora przypisania dodawania (`+=`), aby dołączyć procedurę obsługi zdarzeń do zdarzenia. W poniższym przykładzie Załóżmy, że obiekt o nazwie `publisher` ma zdarzenie o nazwie. `RaiseCustomEvent` Należy zauważyć, że Klasa subskrybenta wymaga odwołania do klasy wydawcy w celu subskrybowania jego zdarzeń.  
   
     ```csharp
     publisher.RaiseCustomEvent += HandleCustomEvent;  
     ```  
   
-     Należy pamiętać, że składnia poprzednich jest nowego w języku C# w wersji 2.0. Jest to równoważne dokładnie składni języka C# 1.0, w którym hermetyzowany delegata należy jawnie utworzyć przy użyciu `new` — słowo kluczowe:  
+     Należy pamiętać, że poprzednia składnia C# jest nowa w 2,0. Jest on dokładnie odpowiednikiem składni C# 1,0, w której delegata hermetyzowania musi być jawnie utworzona przy użyciu `new` słowa kluczowego:  
   
     ```csharp
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     Program obsługi zdarzeń mogą być również dodawane za pomocą wyrażenia lambda:  
+     Można również użyć [wyrażenia lambda](../statements-expressions-operators/lambda-expressions.md) do określenia programu obsługi zdarzeń:
   
     ```csharp
     public Form1()  
     {  
         InitializeComponent();  
-        // Use a lambda expression to define an event handler.  
-        this.Click += (s,e) => { MessageBox.Show(  
-           ((MouseEventArgs)e).Location.ToString());};  
+        this.Click += (s,e) =>
+            {
+                MessageBox.Show(((MouseEventArgs)e).Location.ToString());
+            };
     }  
     ```  
   
-     Aby uzyskać więcej informacji, zobacz [jak: Użycie wyrażeń Lambda poza LINQ](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).  
+### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Aby subskrybować zdarzenia za pomocą metody anonimowej  
   
-### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Aby subskrybować zdarzenia przy użyciu metody anonimowej  
-  
-- Jeśli nie trzeba będzie później anulować subskrypcję zdarzenia, można użyć operator przypisania dodawania (`+=`) można dołączyć metodę anonimową na zdarzenie. W poniższym przykładzie przyjęto założenie, że obiekt o nazwie `publisher` posiada zdarzenie o nazwie `RaiseCustomEvent` i `CustomEventArgs` klasy została zdefiniowana również przeprowadzenie pewnego rodzaju informacji o zdarzeniach specjalne. Należy pamiętać, że klasa subskrybenta wymaga odwołania do `publisher` Aby subskrybować ze zdarzeniami.  
+- Jeśli nie musisz anulować subskrybowania zdarzenia później, możesz użyć operatora przypisania dodawania (`+=`) w celu dołączenia anonimowej metody do zdarzenia. W poniższym przykładzie Załóżmy, że obiekt o nazwie `publisher` ma zdarzenie o nazwie `RaiseCustomEvent` i że `CustomEventArgs` Klasa została również zdefiniowana w taki sposób, aby wykonywała wyspecjalizowane informacje o zdarzeniu. Należy zauważyć, że Klasa subskrybenta wymaga odwołania `publisher` do, aby subskrybować jego zdarzenia.  
   
     ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
@@ -84,25 +83,25 @@ Subskrybowanie zdarzenia, które jest opublikowane przez inną klasę napisać k
     };  
     ```  
   
-     Należy zauważyć, że nie można łatwo anulować zdarzenie Jeśli funkcja anonimowa jest używany do subskrybowania. Aby anulować subskrypcję, w tym scenariuszu, należy przejść do kodu, gdzie możesz subskrybować zdarzenie, Zapisz metody anonimowej w zmiennej delegata, a następnie dodaj delegata zdarzenia. Ogólnie rzecz biorąc zaleca się, że nie należy używać funkcji anonimowych do subskrybowania zdarzenia, jeśli będzie konieczne anulowanie subskrypcji zdarzeń w pewnym momencie później w kodzie. Aby uzyskać więcej informacji na temat funkcji anonimowych zobacz [funkcjami anonimowymi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
+     Należy pamiętać, że nie można łatwo anulować subskrypcji zdarzenia, jeśli użyto anonimowej funkcji do subskrybowania. Aby anulować subskrypcję w tym scenariuszu, należy wrócić do kodu, w którym subskrybujesz zdarzenie, zapisać metodę anonimową w zmiennej delegata, a następnie dodać delegata do zdarzenia. Ogólnie rzecz biorąc, firma Microsoft zaleca, aby nie używać funkcji anonimowych do subskrybowania zdarzeń, jeśli będzie konieczne anulowanie subskrypcji zdarzenia w pewnym momencie w kodzie. Aby uzyskać więcej informacji na temat funkcji anonimowych, zobacz [funkcje anonimowe](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
   
 ## <a name="unsubscribing"></a>Anulowanie subskrypcji  
- Aby zapobiec sytuacji, w której obsługi zdarzenia są wywoływane, gdy zdarzenie jest wywoływane, Anuluj subskrypcję zdarzenia. Aby zapobiec przeciekom zasobów, anulujesz subskrypcję zdarzeń przed usunięcia obiektu subskrybenta. Dopóki nie można anulować subskrypcję zdarzenia, delegatów multiemisji, źródłową zdarzeń w obiekcie publikowania odwołuje się do delegata, który hermetyzuje programu obsługi zdarzeń subskrybenta. Tak długo, jak obiekt publikowania zawiera odwołanie do tego, wyrzucanie elementów bezużytecznych nie spowoduje usunięcia obiektu subskrybenta.  
+ Aby uniemożliwić wywoływanie programu obsługi zdarzeń po podniesieniu zdarzenia, Anuluj subskrypcję zdarzenia. Aby zapobiec przeciekom zasobów, należy anulować subskrypcję zdarzeń przed usunięciem obiektu subskrybenta. Dopóki nie subskrybujesz zdarzenia, delegat multiemisji, który opiera się na zdarzeniu w obiekcie do publikowania, ma odwołanie do delegata, który hermetyzuje procedurę obsługi zdarzeń subskrybenta. Tak długo, jak obiekt publikacji przechowuje to odwołanie, wyrzucanie elementów bezużytecznych nie usunie obiektu subskrybenta.  
   
 #### <a name="to-unsubscribe-from-an-event"></a>Aby anulować subskrypcję zdarzenia  
   
-- Użyj operator przypisania odejmowania (`-=`), aby anulować subskrypcję zdarzenia:  
+- Użyj operatora przypisywania odejmowania`-=`(), aby anulować subskrypcję zdarzenia:  
   
     ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  
     ```  
   
-     Gdy wszyscy subskrybenci została anulowana zdarzenie, wystąpienie zdarzenia w klasie wydawca jest ustawiona na `null`.  
+     Gdy Wszyscy subskrybenci nie subskrybują zdarzenia, wystąpienie zdarzenia w klasie wydawcy jest ustawione na `null`.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Zdarzenia](../../../csharp/programming-guide/events/index.md)
 - [event](../../../csharp/language-reference/keywords/event.md)
-- [Instrukcje: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
-- [— i Operatorzy-=](../../language-reference/operators/subtraction-operator.md)
-- [+ i operatory +=](../../language-reference/operators/addition-operator.md)
+- [Instrukcje: Publikuj zdarzenia zgodne z wytycznymi .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [Operatory-and-=](../../language-reference/operators/subtraction-operator.md)
+- [Operatory + i + =](../../language-reference/operators/addition-operator.md)

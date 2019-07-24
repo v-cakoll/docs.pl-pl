@@ -5,44 +5,44 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: 1b0d374c9dc3e24302a8acfbc56cd9468f41def5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f6fccf828552fbd4102c16bde7ffbaf394b69ac
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033101"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400694"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
   
- W tym omówieniu przedstawiono wzorców kontrolek dla klientów automatyzacji interfejsu użytkownika. Zawiera informacje dotyczące sposobu automatyzacji interfejsu użytkownika klient może używać wzorców kontrolek na dostęp do informacji o [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+ W tym omówieniu przedstawiono wzorce kontroli dla klientów automatyzacji interfejsu użytkownika. Zawiera informacje dotyczące sposobu, w jaki klient automatyzacji interfejsu użytkownika może używać wzorców kontroli w celu uzyskania [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]dostępu do informacji na temat.  
   
- Wzorce kontrolki umożliwiają klasyfikowanie i ujawniać funkcjonalność formantu niezależnie od typu formantu lub wygląd formantu. Klienci automatyzacji interfejsu użytkownika można sprawdzić <xref:System.Windows.Automation.AutomationElement> ustalenie, które określają wzorce są obsługiwane i należy zapewnić zachowanie formantu.  
+ Wzorce kontrolek umożliwiają kategoryzowanie i Uwidacznianie funkcjonalności formantu niezależnie od typu formantu lub wyglądu kontrolki. Klienci automatyzacji interfejsu użytkownika mogą przeanalizować <xref:System.Windows.Automation.AutomationElement> , aby określić, które wzorce kontroli są obsługiwane, i zapewnić zachowanie formantu.  
   
- Aby uzyskać pełną listę wzorców kontrolek, zobacz [Przegląd wzorców kontrolki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+ Aby uzyskać pełną listę wzorców kontrolek, zobacz [Omówienie wzorców kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
 <a name="uiautomation_getting_control_patterns"></a>   
-## <a name="getting-control-patterns"></a>Pobieranie wzorców kontrolki  
- Klienci pobierają wzorca kontrolki z <xref:System.Windows.Automation.AutomationElement> , wywołując jedną <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=nameWithType> lub <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=nameWithType>.  
+## <a name="getting-control-patterns"></a>Pobieranie wzorców kontrolek  
+ Klienci pobierają wzorzec kontroli z elementu <xref:System.Windows.Automation.AutomationElement> przez wywołanie albo <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=nameWithType> lub <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=nameWithType>.  
   
- Klienci mogą używać <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> metody lub osoba `IsPatternAvailable` właściwości (na przykład <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>) do określenia, czy wzorzec lub grupy wzorców jest obsługiwana na <xref:System.Windows.Automation.AutomationElement>. Jednak jest bardziej wydajne, aby spróbować uzyskać wzorca kontrolki i testować aplikacje dla `null` odwołania, niż można sprawdzić obsługiwanych właściwości i pobrać wzorca kontrolki, ponieważ powoduje ona mniejszą liczbę wywołań między procesami.  
+ Klienci mogą używać <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> metody lub <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>pojedynczej `IsPatternAvailable` właściwości (na przykład) w celu określenia, czy wzorzec <xref:System.Windows.Automation.AutomationElement>lub Grupa wzorców są obsługiwane w. Jednak bardziej wydajną próbą jest uzyskanie wzorca kontroli i testu dla `null` odwołania niż sprawdzenie obsługiwanych właściwości i pobranie wzorca kontrolki, ponieważ powoduje to zmniejszenie liczby wywołań między procesami.  
   
- Poniższy przykład pokazuje, jak uzyskać <xref:System.Windows.Automation.TextPattern> — wzorzec kontrolki z <xref:System.Windows.Automation.AutomationElement>.  
+ Poniższy przykład ilustruje, jak uzyskać <xref:System.Windows.Automation.TextPattern> wzorzec formantu <xref:System.Windows.Automation.AutomationElement>z.  
   
  [!code-csharp[UIATextPattern_snip#1037](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#1037)]  
   
 <a name="uiautomation_properties_on_control_patterns"></a>   
-## <a name="retrieving-properties-on-control-patterns"></a>Trwa pobieranie właściwości wzorce kontrolki  
- Klienci mogą pobierać wartości właściwości na wzorce kontrolki, wywołując jedną <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> lub <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> i rzutowania obiekt zwrócony do odpowiedniego typu. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości, zobacz [właściwości automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+## <a name="retrieving-properties-on-control-patterns"></a>Pobieranie właściwości dla wzorców formantów  
+ Klienci mogą pobrać wartości właściwości w wzorcach kontroli przez wywołanie albo <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> lub <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> i rzutowanie obiektu zwróconego do odpowiedniego typu. Aby uzyskać więcej informacji [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] na temat właściwości, zobacz [właściwości automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
- Oprócz `GetPropertyValue` metody, właściwości mogą być pobierane za pośrednictwem [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] metod dostępu w celu uzyskania dostępu do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości przy użyciu wzorca.  
+ Poza `GetPropertyValue` metodami wartości właściwości można pobierać za pomocą metod dostępu środowiska uruchomieniowego języka wspólnego (CLR), aby [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] uzyskać dostęp do właściwości wzorca.  
   
 <a name="uiautomation_with_variable_patterns"></a>   
-## <a name="controls-with-variable-patterns"></a>Formanty z wzory zmiennej  
- Niektóre typy formantów obsługuje różnych wzorców w zależności od ich stanu lub sposób, w którym formant jest używany. Przykłady formantów, które mogą mieć wzorów zmiennej są widoki list (miniatury, Kafelki, ikony, lista, szczegóły), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] wykresów (koło, wiersz paska wartość komórki przy użyciu formuły) [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]firmy dokumentów obszaru (normalny, układu strony sieci Web konspektu, układ wydruku Print Wersja zapoznawcza), a [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] skórki.  
+## <a name="controls-with-variable-patterns"></a>Kontrolki ze wzorcami zmiennych  
+ Niektóre typy formantów obsługują różne wzorce w zależności od ich stanu lub sposobu, w jaki formant jest używany. Przykłady formantów, które mogą mieć wzorce zmiennych, to widoki listy (miniatury, kafelki, ikony, lista, [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] szczegóły), wykresy (wykres kołowy, linia, słupek, wartość komórki [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]z formułą), obszar dokumentu (normalny, układ sieci Web, konspekt, układ wydruku, drukowanie Wersja zapoznawcza [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] ) i karnacje.  
   
- Implementowanie kontrolek niestandardowych typów formantów może mieć dowolny zbiór wzorców kontrolek, które są potrzebne do reprezentowania ich funkcje.  
+ Kontrolki implementujące niestandardowe typy kontrolek mogą mieć dowolny zestaw wzorców kontroli, które są potrzebne do reprezentowania ich funkcjonalności.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -51,6 +51,6 @@ ms.locfileid: "62033101"
 - [Wywoływanie kontrolki przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
 - [Pobieranie stanu przełączenia pola wyboru przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
 - [Mapowanie wzorców kontrolek dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [Przykładowy tekst wstawienia TextPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
-- [TextPattern wyszukiwania i wybór próbki](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)
-- [Klasy InvokePattern klasy ExpandCollapsePattern oraz klasy TogglePattern próbki](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)
+- [Przykład wstawiania TextPattern tekstu](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
+- [Przykład wyszukiwania i wybierania TextPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)
+- [Przykład InvokePattern, ExpandCollapsePattern i TogglePattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

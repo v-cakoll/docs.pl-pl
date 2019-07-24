@@ -15,15 +15,15 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: fcc5d3aa6d093f1fbf8af19c4f0c65036e1705d7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 259db84c8ab3b9bbad809b9636ba18537dd6fe62
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364383"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400724"
 ---
 # <a name="wpf-partial-trust-security"></a>Zabezpieczenie częściowej relacji zaufania WPF
-<a name="introduction"></a>Ogólnie rzecz biorąc, aplikacje internetowe powinny być ograniczone przez bezpośredni dostęp do krytycznych zasobów systemowych, aby zapobiec złośliwym szkodom. Domyślnie [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] języki skryptów po stronie klienta nie są w stanie uzyskać dostępu do krytycznych zasobów systemowych. Ponieważ aplikacje hostowane w przeglądarce Windows Presentation Foundation (WPF) mogą być uruchamiane z przeglądarki, powinny one być zgodne z podobnym zestawem ograniczeń. Aby wymusić te [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ograniczenia, należy włączyć zarówno zabezpieczenia dostępu kodu (CAS) [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] , jak i (zobacz temat [strategie zabezpieczeń WPF-platform Security](wpf-security-strategy-platform-security.md)). Domyślnie aplikacje hostowane w przeglądarce żądają zestawu uprawnień strefy Internetu, niezależnie od tego, czy są uruchamiane z Internetu, lokalnego intranetu, czy komputera lokalnego. Aplikacje działające z dowolnym elementem mniejszym niż pełny zestaw uprawnień są uznawane za działające z częściowym zaufaniem.  
+<a name="introduction"></a>Ogólnie rzecz biorąc, aplikacje internetowe powinny być ograniczone przez bezpośredni dostęp do krytycznych zasobów systemowych, aby zapobiec złośliwym szkodom. Domyślnie [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] języki skryptów po stronie klienta nie są w stanie uzyskać dostępu do krytycznych zasobów systemowych. Ponieważ aplikacje hostowane w przeglądarce Windows Presentation Foundation (WPF) mogą być uruchamiane z przeglądarki, powinny one być zgodne z podobnym zestawem ograniczeń. Aby wymusić te [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ograniczenia, należy zastosować zabezpieczenia dostępu kodu (CAS) i ClickOnce (zobacz temat [strategie zabezpieczeń WPF-platform Security](wpf-security-strategy-platform-security.md)). Domyślnie aplikacje hostowane w przeglądarce żądają zestawu uprawnień strefy Internetu, niezależnie od tego, czy są uruchamiane z Internetu, lokalnego intranetu, czy komputera lokalnego. Aplikacje działające z dowolnym elementem mniejszym niż pełny zestaw uprawnień są uznawane za działające z częściowym zaufaniem.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]zapewnia szeroką gamę pomocy technicznej, aby zapewnić, że możliwie największej funkcjonalności można bezpiecznie używać w częściowej relacji zaufania, a także w przypadku urzędów certyfikacji, zapewnia dodatkową pomoc techniczną w zakresie programowania częściowego zaufania.  
   
@@ -131,22 +131,22 @@ ms.locfileid: "68364383"
 |Uprawnienie|Atrybut|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|Dostęp do serwerów DNS|Tak|Nie|  
-|Zmienne środowiskowe|Odczyt|Tak|Nie|  
-|Okna dialogowe plików|Otwarcie|Tak|Yes|  
-|Okna dialogowe plików|Nieograniczone|Yes|Nie|  
-|Izolowany magazyn|Izolacja zestawu przez użytkownika|Yes|Nie|  
-|Izolowany magazyn|Nieznana izolacja|Yes|Tak|  
+|Zmienne środowiskowe|Odczyt|Yes|Nie|  
+|Okna dialogowe plików|Otwarcie|Tak|Tak|  
+|Okna dialogowe plików|Nieograniczone|Tak|Nie|  
+|Izolowany magazyn|Izolacja zestawu przez użytkownika|Tak|Nie|  
+|Izolowany magazyn|Nieznana izolacja|Yes|Yes|  
 |Izolowany magazyn|Nieograniczony limit przydziału użytkowników|Tak|Nie|  
-|Multimedialny|Bezpieczne audio, wideo i obrazy|Yes|Tak|  
-|Drukowanie|Drukowanie domyślne|Yes|Nie|  
-|Drukowanie|Bezpieczne drukowanie|Yes|Tak|  
+|Multimedialny|Bezpieczne audio, wideo i obrazy|Tak|Yes|  
+|Drukowanie|Drukowanie domyślne|Tak|Nie|  
+|Drukowanie|Bezpieczne drukowanie|Tak|Tak|  
 |Odbicie|Wysyłać|Tak|Nie|  
-|Zabezpieczenia|Wykonywanie kodu zarządzanego|Yes|Yes|  
+|Zabezpieczenia|Wykonywanie kodu zarządzanego|Tak|Yes|  
 |Zabezpieczenia|Potwierdzenie przyznanych uprawnień|Tak|Nie|  
-|Interfejs użytkownika|Nieograniczone|Yes|Nie|  
-|Interfejs użytkownika|Bezpieczne okna najwyższego poziomu|Yes|Tak|  
-|Interfejs użytkownika|Własny schowek|Yes|Tak|  
-|Przeglądarki sieci Web|Bezpieczne nawigowanie po ramce do kodu HTML|Tak|Tak|  
+|Interfejs użytkownika|Nieograniczone|Tak|Nie|  
+|Interfejs użytkownika|Bezpieczne okna najwyższego poziomu|Tak|Tak|  
+|Interfejs użytkownika|Własny schowek|Tak|Yes|  
+|Przeglądarki sieci Web|Bezpieczne nawigowanie po ramce do kodu HTML|Yes|Tak|  
   
 > [!NOTE]
 >  Operacje wycinania i wklejania są dozwolone tylko w częściowej relacji zaufania po zainicjowaniu użytkownika.  

@@ -8,31 +8,31 @@ helpviewer_keywords:
 - routed events [WPF], creating
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-ms.openlocfilehash: a3850875c8ca747f8709b55f8fe721d25be24304
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbfb88af4e35e3f090248982bb14d6b7a3a03cef
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776691"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401469"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>Instrukcje: Tworzenie niestandardowego zdarzenia trasowanego
-Do zdarzenia niestandardowe do obsługi routingu zdarzeń, należy zarejestrować <xref:System.Windows.RoutedEvent> przy użyciu <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> metody. W tym przykładzie pokazano tworzenie niestandardowe zdarzenie trasowane.  
+Aby niestandardowe zdarzenie obsługiwało routing zdarzeń, należy zarejestrować <xref:System.Windows.RoutedEvent> <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> za pomocą metody. W tym przykładzie przedstawiono podstawowe informacje na temat tworzenia niestandardowego zdarzenia kierowanego.  
   
 ## <a name="example"></a>Przykład  
- Jak pokazano w poniższym przykładzie, należy najpierw zarejestrować <xref:System.Windows.RoutedEvent> przy użyciu <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> metody. Zgodnie z Konwencją <xref:System.Windows.RoutedEvent> nazwę pola statyczne powinny kończyć się sufiksem ***zdarzeń***. W tym przykładzie nazwa zdarzenia jest `Tap` i strategii routingu zdarzenia <xref:System.Windows.RoutingStrategy.Bubble>. Po wywołaniu rejestracji umożliwia dodawanie i usuwanie [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] metod dostępu zdarzeń dla zdarzenia.  
+ Jak pokazano w poniższym przykładzie, należy najpierw zarejestrować <xref:System.Windows.RoutedEvent> <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> metodę przy użyciu metody. Zgodnie z Konwencją <xref:System.Windows.RoutedEvent> nazwa pola statycznego powinna kończyć się ***zdarzeniem***sufiksu. W tym przykładzie nazwa zdarzenia to `Tap` i strategia routingu <xref:System.Windows.RoutingStrategy.Bubble>zdarzenia. Po wywołaniu rejestracji można dostarczyć dla zdarzenia metody dostępu do zdarzeń środowiska uruchomieniowego języka wspólnego (CLR).  
   
- Należy pamiętać, że nawet jeśli zdarzenie jest wywoływane za pośrednictwem `OnTap` metodę wirtualną, w tym przykładzie, jak zgłaszać zdarzenia lub sposób reagowania zdarzenia zmiany zależy od Twoich potrzeb.  
+ Należy zauważyć, że mimo że zdarzenie jest zgłaszane przez `OnTap` metodę wirtualną w tym konkretnym przykładzie, jak podnieść wydarzenie lub wpływ zdarzenia na zmiany zależy od Twoich potrzeb.  
   
- Należy zauważyć, że w tym przykładzie po prostu implementuje całą podklasą <xref:System.Windows.Controls.Button>; tej podklasy jest kompilowany jako osobny zestaw, a następnie uruchomiony jako niestandardowej klasy na oddzielnym [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] strony. Ma to na celu zilustrowania koncepcji, że formanty będące podklasami mogą być wstawiane do drzewa zawierający inne formanty, i że w takiej sytuacji zdarzenia niestandardowe tych kontrolek mają bardzo te same możliwości routingu zdarzeń wszelkie native [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jest element.  
+ Należy zauważyć, że ten przykład zasadniczo implementuje całą podklasę <xref:System.Windows.Controls.Button>; ta podklasa jest tworzona jako oddzielny zestaw, a następnie tworzona jako Klasa niestandardowa na osobnej [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] stronie. Jest to zilustrowanie koncepcji, które podklasy kontrolki mogą być wstawiane do drzew składających się z innych kontrolek, a w takiej sytuacji niestandardowe zdarzenia na tych kontrolkach mają takie same możliwości routingu zdarzeń jak każdy [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] element macierzysty.  
   
  [!code-csharp[RoutedEventCustom#CustomClass](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#customclass)]
  [!code-vb[RoutedEventCustom#CustomClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#customclass)]  
   
  [!code-xaml[RoutedEventCustom#Page](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/RoutedEventCustomApp/default.xaml#page)]  
   
- Tunelowania powstają zdarzenia taki sam sposób, ale z <xref:System.Windows.RoutedEvent.RoutingStrategy%2A> równa <xref:System.Windows.RoutingStrategy.Tunnel> w wywołaniu rejestracji. Zgodnie z Konwencją, tunelowanie zdarzeń w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] są poprzedzone wyrazem "Podgląd".  
+ Zdarzenia tunelowania są tworzone w taki sam sposób, ale <xref:System.Windows.RoutedEvent.RoutingStrategy%2A> z <xref:System.Windows.RoutingStrategy.Tunnel> ustawionym na wartość w wywołaniu rejestracji. Zgodnie z Konwencją, tunelowanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzeń w programie jest poprzedzone wyrazem "Preview".  
   
- Aby zobaczyć przykład sposobu propagacji pracy zdarzeń, zobacz [obsłużyć zdarzenie kierowane](how-to-handle-a-routed-event.md).  
+ Aby zapoznać się z przykładem działania propagacji zdarzeń, zobacz temat [Obsługa zdarzenia kierowanego](how-to-handle-a-routed-event.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

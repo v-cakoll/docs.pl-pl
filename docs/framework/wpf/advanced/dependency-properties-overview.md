@@ -1,6 +1,6 @@
 ---
 title: Przegląd właściwości zależności
-description: Właściwość, która jest wspierana przez system właściwości WPF jest określany jako właściwość zależności. W tym omówieniu opisano system właściwości WPF i możliwości właściwość zależności.
+description: Właściwość, która jest obsługiwana przez system właściwości WPF, jest znana jako właściwość zależności. To omówienie zawiera opis systemu właściwości WPF i możliwości właściwości zależności.
 ms.date: 06/06/2018
 dev_langs:
 - csharp
@@ -14,76 +14,76 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 483710281feafdf97cfef9b72a67af035dcf0efa
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: b7401cd3e9551b378983193f4c5e8e4107954b74
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860170"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401417"
 ---
 # <a name="dependency-properties-overview"></a>Przegląd właściwości zależności
 
-Windows Presentation Foundation (WPF) zapewnia zestaw usług, które mogą służyć do rozszerzenia funkcji typu [właściwość](../../../standard/base-types/common-type-system.md#Properties). Zbiorczo te usługi są zwykle określane jako system właściwości WPF. Właściwość, która jest wspierana przez system właściwości WPF jest określany jako właściwość zależności. W tym omówieniu opisano system właściwości WPF i możliwości właściwość zależności. W tym dotyczące używania istniejących właściwości zależności w XAML i kodu. W tym omówieniu wprowadza również specjalistyczne aspektów właściwości zależności, takie jak metadane zależności właściwości oraz sposób tworzenia własnych właściwości zależności niestandardowej klasy.
+Windows Presentation Foundation (WPF) zawiera zestaw usług, których można użyć do rozszerania funkcjonalności [Właściwości](../../../standard/base-types/common-type-system.md#Properties)typu. Zbiorowo te usługi są zwykle określane jako system właściwości WPF. Właściwość, która jest obsługiwana przez system właściwości WPF, jest znana jako właściwość zależności. To omówienie zawiera opis systemu właściwości WPF i możliwości właściwości zależności. Obejmuje to używanie istniejących właściwości zależności w języku XAML i w kodzie. Ten przegląd zawiera również wyspecjalizowane aspekty właściwości zależności, takie jak metadane właściwości zależności, oraz sposób tworzenia własnej właściwości zależności w klasie niestandardowej.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
-W tym temacie założono, że niektóre podstawową wiedzę na temat systemu typu platformy .NET i programowanie zorientowane obiektowo. Aby można było pracować z przykładami w tym temacie, należy również zrozumieć XAML i wiedzieć, jak pisać aplikacje WPF. Aby uzyskać więcej informacji, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+W tym temacie założono, że masz pewną podstawową wiedzę na temat systemu typu .NET i programowania zorientowanego obiektowo. Aby postępować zgodnie z przykładami w tym temacie, należy również zrozumieć język XAML i wiedzieć, jak pisać aplikacje WPF. Aby uzyskać więcej informacji, [zobacz Przewodnik: Moja pierwsza aplikacja](../getting-started/walkthrough-my-first-wpf-desktop-application.md)klasyczna WPF.  
   
-## <a name="dependency-properties-and-clr-properties"></a>Właściwości zależności i właściwości aparatu CLR
- W środowisku WPF właściwości są zwykle widoczne jako standard .NET [właściwości](../../../standard/base-types/common-type-system.md#Properties). Na poziomie podstawowym możesz wchodzić w interakcje z tymi właściwościami bezpośrednio i nigdy nie wiadomo, że są one wykonywane jako właściwość zależności. Jednak należy zapoznać się z niektórych lub wszystkich funkcji w systemie właściwości WPF, tak aby można było korzystać z tych funkcji.
+## <a name="dependency-properties-and-clr-properties"></a>Właściwości zależności i właściwości CLR
+ W WPF właściwości są zwykle uwidaczniane jako standardowe [Właściwości](../../../standard/base-types/common-type-system.md#Properties)platformy .NET. Na poziomie podstawowym można bezpośrednio korzystać z tych właściwości i nigdy nie wiedzieć, że są one zaimplementowane jako właściwość zależności. Należy jednak zapoznać się z niektórymi lub wszystkimi funkcjami systemu właściwości WPF, dzięki czemu można korzystać z tych funkcji.
 
-Celem właściwości zależności jest sposób do obliczenia wartości właściwości, na podstawie wartości pozostałych danych wejściowych. Te dane wejściowe mogą zawierać właściwości systemu, na przykład motywy i preferencje użytkownika, just-in-time właściwość oznaczanie mechanizmów, takich jak powiązanie danych oraz animacji/scenorysów, szablony wielokrotnego użytku, takie jak zasoby i style lub znane wartości przy użyciu relacji nadrzędny podrzędny z innymi elementami w drzewie elementów. Ponadto można zaimplementować właściwości zależności zapewnienie niezależna Weryfikacja, wartości domyślne, wywołania zwrotne, które monitorują zmiany innych właściwości i systemu, w którym można przekształcić wartości właściwości, na podstawie potencjalnie informacji w czasie wykonywania. Klasy pochodne można również zmienić niektóre szczególne cechy istniejącej właściwości Zastępowanie metadanych właściwości zależności, a nie przesłanianie rzeczywistą implementację istniejących właściwości lub tworzenie nowych właściwości.
+Celem właściwości zależności jest zapewnienie sposobu obliczenia wartości właściwości na podstawie wartości innych danych wejściowych. Te inne dane wejściowe mogą obejmować właściwości systemu, takie jak motywy i preferencje użytkownika, mechanizmy wyznaczania właściwości just-in-Time, takie jak powiązanie danych i animacje/Scenorysy, szablony wielokrotnego użytku, takie jak zasoby i style lub znane wartości za pomocą relacji nadrzędny-podrzędny z innymi elementami w drzewie elementów. Ponadto można zaimplementować właściwość zależności, aby zapewnić samodzielną weryfikację, wartości domyślne, wywołania zwrotne, które monitorują zmiany do innych właściwości, oraz system, który może wymuszać wartości właściwości na podstawie informacji o potencjalnie czasie wykonywania. Klasy pochodne mogą również zmieniać pewne charakterystyki istniejącej właściwości poprzez zastępowanie metadanych właściwości zależności, zamiast przesłaniać rzeczywistą implementację istniejących właściwości lub tworzyć nowe właściwości.
 
-Dokumentacja zestawu SDK można zidentyfikować, dla którym właściwość jest właściwością zależności w obecności sekcji informacje dotyczące właściwości zależności, na stronie zarządzana dokumentacja dotycząca dla tej właściwości. Sekcja informacji o zależnościach właściwość zawiera łącze do <xref:System.Windows.DependencyProperty> identyfikator pola dla tej właściwości zależności i zawiera także listę opcji metadanych, które są ustawione dla tej właściwości, informacji o przesłonięciu klasy i inne szczegóły.
+W Kompendium zestawu SDK można określić, która właściwość jest właściwością zależności przez obecność sekcji Informacje o właściwości zależności na zarządzanej stronie odwołania dla tej właściwości. Sekcja informacji o zależnościach zawiera link do <xref:System.Windows.DependencyProperty> pola identyfikatora dla tej właściwości zależności, a także zawiera listę opcji metadanych ustawionych dla tej właściwości, informacje o zastępowaniu dla klasy i inne szczegóły.
 
-## <a name="dependency-properties-back-clr-properties"></a>Właściwości zależności kopii właściwości aparatu CLR
-Właściwości zależności i system właściwości WPF należy rozszerzyć funkcjonalność właściwości, zapewniając typ, który tworzy kopię właściwość, jako alternatywnej implementacji do standardowego wzorca zapisywania kopii właściwość z polem prywatnych. Nazwa tego typu jest <xref:System.Windows.DependencyProperty>. Inne ważne typ, który definiuje system właściwości WPF jest <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> definiuje klasę bazową, która może rejestrować i własne właściwości zależności.
+## <a name="dependency-properties-back-clr-properties"></a>Właściwości zależności z poprzednimi właściwościami środowiska CLR
+Właściwości zależności i funkcja rozszerzająca system właściwości WPF, dostarczając typ, który wykonuje kopię zapasową właściwości, jako alternatywną implementację standardowego wzorca wykonywania kopii zapasowej właściwości z polem prywatnym. Nazwa tego typu <xref:System.Windows.DependencyProperty>to. Innym ważnym typem, który definiuje system właściwości WPF, jest <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject>definiuje klasę bazową, która może zarejestrować właściwość zależności.
 
-Poniższa lista zawiera terminologii, który jest używany z właściwości zależności:
+Poniżej wymieniono terminologię używaną z właściwościami zależności:
 
-- **Właściwości zależności:** Właściwość, która jest wspierana przez <xref:System.Windows.DependencyProperty>.
+- **Właściwość zależności:** Właściwość, która jest obsługiwana przez <xref:System.Windows.DependencyProperty>.
 
-- **Identyfikator właściwości zależności:** A <xref:System.Windows.DependencyProperty> wystąpienia, które są uzyskiwane jako wartości zwracanej, podczas rejestrowania właściwości zależności, a następnie jest zapisywana jako członka statycznego w klasie. Ten identyfikator jest używany jako parametr do wielu interfejsów API, które interakcji z systemu właściwości WPF.
+- **Identyfikator właściwości zależności:** <xref:System.Windows.DependencyProperty> Wystąpienie, które jest uzyskiwane jako wartość zwracana podczas rejestrowania właściwości zależności, a następnie przechowywane jako statyczny element członkowski klasy. Ten identyfikator jest używany jako parametr dla wielu interfejsów API, które współdziałają z systemem właściwości WPF.
 
-- **"Opakowanie" CLR:** Rzeczywiste get i set implementacje dla właściwości. Tych implementacji zestawowi identyfikatora właściwości zależności, korzystając z niego w <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> wywołań, zapewniając w ten sposób zapasowy dla właściwości, korzystając z systemu właściwości WPF.
+- **Środowisko CLR "otoka":** Rzeczywiste implementacje get i Set dla właściwości. Te implementacje obejmują identyfikator właściwości zależności przy użyciu go w <xref:System.Windows.DependencyObject.GetValue%2A> wywołaniach i <xref:System.Windows.DependencyObject.SetValue%2A> , a tym samym udostępniają zapasowe właściwości przy użyciu systemu właściwości WPF.
 
-W poniższym przykładzie zdefiniowano `IsSpinning` właściwości zależności i pokazuje relację <xref:System.Windows.DependencyProperty> identyfikator ma właściwość, która tworzy kopię.
+Poniższy przykład definiuje `IsSpinning` właściwość zależności i pokazuje relację <xref:System.Windows.DependencyProperty> identyfikatora do właściwości, z którą się odwraca.
 
 [!code-csharp[PropertiesOvwSupport#DPFormBasic](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#dpformbasic)]
 [!code-vb[PropertiesOvwSupport#DPFormBasic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#dpformbasic)]  
   
-Konwencja nazewnictwa właściwości i tworzenia jego kopii <xref:System.Windows.DependencyProperty> pole jest ważne. Nazwa pola jest zawsze nazwę właściwości, wraz z sufiksem `Property` dołączane. Aby dowiedzieć się więcej o tę Konwencję oraz jego przyczyny, zobacz [niestandardowe właściwości zależności](custom-dependency-properties.md).  
+Konwencja nazewnictwa właściwości i jej pola zapasowego <xref:System.Windows.DependencyProperty> są ważne. Nazwa pola jest zawsze nazwą właściwości, z dołączonym sufiksem `Property` . Aby uzyskać więcej informacji na temat tej konwencji i przyczyn dla nich, zobacz [niestandardowe właściwości zależności](custom-dependency-properties.md).  
 
-## <a name="setting-property-values"></a>Ustawienie wartości właściwości
-Można ustawić właściwości, w kodzie lub w XAML.
+## <a name="setting-property-values"></a>Ustawianie wartości właściwości
+Można ustawić właściwości w kodzie lub w języku XAML.
 
-### <a name="setting-property-values-in-xaml"></a>Ustawianie wartości właściwości w XAML 
-W poniższym przykładzie XAML Określa kolor tła przycisku w kolorze czerwonym. Ten przykład ilustruje przypadek, gdzie wartości prostego ciągu atrybutu XAML jest konwertowany na typ przez parser WPF XAML na typ WPF ( <xref:System.Windows.Media.Color>, poprzez <xref:System.Windows.Media.SolidColorBrush>) w wygenerowanym kodzie.
+### <a name="setting-property-values-in-xaml"></a>Ustawianie wartości właściwości w języku XAML 
+Poniższy przykład XAML określa kolor tła przycisku w kolorze czerwonym. Ten przykład ilustruje przypadek, w którym prosta wartość ciągu dla atrybutu XAML jest konwertowana na typ w języku WPF XAML do typu WPF (a <xref:System.Windows.Media.Color> <xref:System.Windows.Media.SolidColorBrush>) w wygenerowanym kodzie.
 
 [!code-xaml[PropertiesOvwSupport#MostBasicProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#mostbasicproperty)]
 
-XAML obsługuje różne formy składni do ustawiania właściwości. Składnia dla określonej właściwości będzie zależeć od typu wartości, używanego właściwości, a także innych czynników, takich jak obecność konwertera typów. Aby uzyskać więcej informacji na temat składni XAML ustawienie właściwości, zobacz [Przegląd XAML (WPF)](xaml-overview-wpf.md) i [składnia XAML w szczegółów](xaml-syntax-in-detail.md).
+Język XAML obsługuje różne formy składni do ustawiania właściwości. Składnia, która ma być używana dla określonej właściwości, będzie zależeć od typu wartości, która jest używana przez właściwość, a także innych czynników, takich jak obecność konwertera typów. Aby uzyskać więcej informacji na temat składni języka XAML dla ustawienia właściwości, Zobacz szczegółowe [Omówienie języka XAML (WPF)](xaml-overview-wpf.md) i [składni języka XAML](xaml-syntax-in-detail.md).
 
-Na przykład składni-atrybut XAML poniższy kod przedstawia inny tło przycisku. Tym razem, zamiast ustawienia prostego, jednolitego koloru, tła ustawiono obrazu, z elementem reprezentujący ten obraz i źródła tego obrazu, określony jako atrybut elementu zagnieżdżonych. Jest to przykład składni elementu właściwości.
+Jako przykład składni nie będącej atrybutami, Poniższy przykład XAML pokazuje inne tło przycisku. Tym razem, zamiast ustawiania prostego pełnego koloru, tło jest ustawione na obraz, z elementem reprezentującym ten obraz oraz źródłem tego obrazu określony jako atrybut zagnieżdżonego elementu. Jest to przykład składni elementu właściwości.
 
 [!code-xaml[PropertiesOvwSupport#PESyntaxProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#pesyntaxproperty)]
 
 ### <a name="setting-properties-in-code"></a>Ustawianie właściwości w kodzie
- Ustawianie wartości właściwości zależności w kodzie jest zwykle po prostu wywołanie do implementacji zestawu udostępnianych przez [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "otoki".
+ Ustawianie wartości właściwości zależności w kodzie jest zazwyczaj tylko wywołaniem implementacji zestawu uwidocznionym przez środowisko CLR "otoka".
 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyset)]
 [!code-vb[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyset)]
 
-Wprowadzenie wartości właściwości jest również zasadniczo wywołanie do implementacji "otoki" get:
+Pobieranie wartości właściwości jest również zasadniczo wywołaniem implementacji "otoki":
 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-Można również wywołać interfejsów API systemu właściwość <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> bezpośrednio. Nie jest to zazwyczaj konieczne Jeśli używasz istniejącej właściwości (otoki są bardziej wygodne i zapewniają lepsze narażenia właściwości dla narzędzi dla deweloperów), ale bezpośrednie wywoływanie interfejsów API jest odpowiednia dla określonych scenariuszy.
+Możesz również wywołać interfejsy API <xref:System.Windows.DependencyObject.GetValue%2A> systemu właściwości i <xref:System.Windows.DependencyObject.SetValue%2A> bezpośrednio. Zwykle nie jest to konieczne, jeśli używasz istniejących właściwości (otoki są wygodniejsze i zapewniają lepszy ekspozycję właściwości dla narzędzi programistycznych), ale wywołania interfejsów API są odpowiednie dla pewnych scenariuszy.
 
-Właściwości można również ustawić w XAML i następnie uzyskać dostęp później w kodzie za pomocą związanym z kodem. Aby uzyskać więcej informacji, zobacz [związanym z kodem i XAML w WPF](code-behind-and-xaml-in-wpf.md).
+Właściwości można również ustawić w języku XAML, a następnie uzyskać do nich dostęp później w kodzie. Aby uzyskać szczegółowe informacje, zobacz [kod w kodzie i XAML w WPF](code-behind-and-xaml-in-wpf.md).
 
-## <a name="property-functionality-provided-by-a-dependency-property"></a>Funkcje właściwości udostępniane przez właściwości zależności
-Właściwości zależności zawiera funkcje, które rozszerza funkcjonalność właściwości, a nie właściwością, która jest wspierana przez pola. Często takie funkcje reprezentuje lub obsługuje jedną z następujących funkcji:
+## <a name="property-functionality-provided-by-a-dependency-property"></a>Funkcje właściwości zapewniane przez właściwość zależności
+Właściwość Dependency zawiera funkcje, które rozszerzają funkcjonalność właściwości w przeciwieństwie do właściwości, która jest obsługiwana przez pole. Często takie funkcje reprezentują lub obsługują jedną z następujących funkcji:
 
 - [Zasoby](#resources)
 
@@ -93,108 +93,108 @@ Właściwości zależności zawiera funkcje, które rozszerza funkcjonalność w
 
 - [Animacje](#animations)
 
-- [Zastępowanie metadanych](#metadata-overrides)
+- [Zastąpienia metadanych](#metadata-overrides)
 
 - [Dziedziczenie wartości właściwości](#property-value-inheritance)
 
-- [Integracja WPF Designer](#wpf-designer-integration)
+- [Integracja z projektantem WPF](#wpf-designer-integration)
 
 ### <a name="resources"></a>Zasoby
-Wartość właściwości zależności można ustawić, odwołując się do zasobu. Zasoby są zwykle określane jako `Resources` wartości właściwości elementu głównego strony lub aplikacji (te lokalizacje Włącz najdogodniejszy dostęp do zasobu). Poniższy przykład pokazuje jak zdefiniować <xref:System.Windows.Media.SolidColorBrush> zasobów.
+Wartość właściwości zależności można ustawić, odwołując się do zasobu. Zasoby są zwykle określane jako `Resources` wartość właściwości elementu głównego strony lub aplikacji (te lokalizacje umożliwiają najbardziej wygodny dostęp do zasobu). Poniższy przykład pokazuje, <xref:System.Windows.Media.SolidColorBrush> jak zdefiniować zasób.
 
 [!code-xaml[PropertiesOvwSupport#ResourcesResource](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesresource)]
 
-Po zdefiniowaniu zasobu można odwoływać się do zasobu i użyj go, aby podać wartość właściwości:
+Po zdefiniowaniu zasobu można odwołać się do zasobu i użyć go, aby podać wartość właściwości:
 
 [!code-xaml[PropertiesOvwSupport#ResourcesReference](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesreference)]
 
-Ten konkretny zasób jest określany jako [dynamicresource — rozszerzenie znaczników](dynamicresource-markup-extension.md) (w programie WPF XAML, możesz użyć odwołania statyczne lub dynamiczne zasobów). Można użyć odwołania do zasobu dynamicznego, możesz musi można Ustawianie właściwości zależności, dlatego specjalnie dynamiczne odwołanie użycie zasobów jest włączona w systemie właściwości WPF. Aby uzyskać więcej informacji, zobacz [zasoby XAML](xaml-resources.md).
+Ten konkretny zasób jest przywoływany jako [rozszerzenie znacznika DynamicResource —](dynamicresource-markup-extension.md) (w języku XAML WPF, można użyć odwołania do zasobu statycznego lub dynamicznego). Aby użyć dynamicznego odwołania do zasobów, należy ustawić właściwość zależności, więc jest to dokładnie dynamiczne użycie odwołania do zasobów, które jest włączone w systemie właściwości WPF. Aby uzyskać więcej informacji, zobacz [zasoby XAML](xaml-resources.md).
 
 > [!NOTE]
-> Zasoby są traktowane jako wartości lokalnej, co oznacza, że jeśli ustawisz innej wartości lokalnej, możesz wyeliminuje odwołanie do zasobu. Aby uzyskać więcej informacji, zobacz [następstwo wartości właściwości](dependency-property-value-precedence.md).
+> Zasoby są traktowane jako wartość lokalna, co oznacza, że jeśli zostanie ustawiona inna wartość lokalna, odwołanie do zasobu zostanie wyeliminowane. Aby uzyskać więcej informacji, zobacz [pierwszeństwo wartości właściwości zależności](dependency-property-value-precedence.md).
 
 ### <a name="data-binding"></a>Powiązanie danych
-Właściwości zależności można odwołać się do wartości za pomocą powiązania danych. Powiązywanie danych działa za pośrednictwem składni rozszerzenia znaczników w określonych w XAML, lub <xref:System.Windows.Data.Binding> obiektu w kodzie. Przy użyciu powiązania danych określenie wartości końcowej właściwość jest odroczone do czasu wykonywania, które wartości są uzyskiwane ze źródła danych.
+Właściwość zależności może odwoływać się do wartości za pomocą powiązania danych. Powiązanie danych działa przez określoną składnię rozszerzenia znacznika w języku XAML lub <xref:System.Windows.Data.Binding> obiekt w kodzie. W przypadku powiązania danych ostateczne Określanie wartości właściwości jest odroczone do czasu uruchomienia, podczas którego wartość jest uzyskiwana ze źródła danych.
 
-Poniższy przykład ustawia <xref:System.Windows.Controls.ContentControl.Content%2A> właściwość <xref:System.Windows.Controls.Button>, za pomocą powiązania zadeklarowanych w XAML. Powiązanie korzysta z kontekstu danych dziedziczone i <xref:System.Windows.Data.XmlDataProvider> źródła danych (niewyświetlany). Powiązanie, sama Określa właściwość source żądany przez <xref:System.Windows.Data.Binding.XPath%2A> w źródle danych.
+Poniższy przykład ustawia <xref:System.Windows.Controls.ContentControl.Content%2A> Właściwość <xref:System.Windows.Controls.Button>dla, przy użyciu powiązania zadeklarowanego w języku XAML. Powiązanie używa dziedziczonego kontekstu danych i <xref:System.Windows.Data.XmlDataProvider> źródła danych (niepokazywany). Samo powiązanie określa żądaną Właściwość <xref:System.Windows.Data.Binding.XPath%2A> Source w źródle danych.
 
 [!code-xaml[PropertiesOvwSupport#BasicInlineBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#basicinlinebinding)]
 
 > [!NOTE]
-> Powiązania są traktowane jako wartości lokalnej, oznacza to, czy Jeśli ustawisz innej wartości lokalnej, możesz wyeliminuje powiązania. Aby uzyskać więcej informacji, zobacz [następstwo wartości właściwości](dependency-property-value-precedence.md).
+> Powiązania są traktowane jako wartość lokalna, co oznacza, że jeśli ustawisz inną wartość lokalną, zostanie wyeliminowane powiązanie. Aby uzyskać szczegółowe informacje, zobacz [pierwszeństwo wartości właściwości zależności](dependency-property-value-precedence.md).
 
-Właściwości zależności lub <xref:System.Windows.DependencyObject> klasy, wykonaj zapewniają natywnej obsługi <xref:System.ComponentModel.INotifyPropertyChanged> na potrzeby powiadomień o zmianach w produkcji <xref:System.Windows.DependencyObject> źródła wartości właściwości dla operacji powiązanie danych. Aby uzyskać więcej informacji na temat tworzenia właściwości do użycia w powiązanie danych można zgłosić zmiany do obiektu docelowego powiązania danych, zobacz [Data Binding Overview](../data/data-binding-overview.md).
+Właściwości zależności lub <xref:System.Windows.DependencyObject> klasy nie obsługują <xref:System.ComponentModel.INotifyPropertyChanged> natywnie do celów tworzenia powiadomień o zmianach w <xref:System.Windows.DependencyObject> wartości właściwości źródłowej dla operacji powiązania danych. Aby uzyskać więcej informacji na temat tworzenia właściwości do użycia w powiązaniu danych, które mogą raportować zmiany w celu powiązania danych, zobacz temat [powiązanie danych — omówienie](../data/data-binding-overview.md).
 
 ### <a name="styles"></a>Style
-Style i szablony są dwa chief motywującego scenariusze użycia właściwości zależności. Style są szczególnie przydatne do ustawiania właściwości, które definiują aplikację [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Style są zazwyczaj definiowane jako zasoby w XAML. Style interakcji z systemem właściwość, ponieważ zawierają one zazwyczaj "ustawiających" dla określonej właściwości, a także "triggers", które zmieniają wartość właściwości, na podstawie wartości w czasie rzeczywistym dla innej właściwości.
+Style i szablony są dwa z głównego scenariusza z motywem do korzystania z właściwości zależności. Style są szczególnie przydatne do ustawiania właściwości definiujących aplikację [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Style są zazwyczaj definiowane jako zasoby w języku XAML. Style współdziałają z systemem właściwości, ponieważ zazwyczaj zawierają "Setters" dla określonych właściwości, a także "wyzwalacze", które zmieniają wartość właściwości na podstawie wartości w czasie rzeczywistym dla innej właściwości.
 
-W poniższym przykładzie utworzono bardzo prosty stylu (może zostać zdefiniowany w <xref:System.Windows.FrameworkElement.Resources%2A> słownika, nie wyświetlane), następnie zastosowanie stylu bezpośrednio do <xref:System.Windows.FrameworkElement.Style%2A> właściwość <xref:System.Windows.Controls.Button>. Metoda ustawiająca zestawy styl <xref:System.Windows.Controls.Control.Background%2A> właściwość ze stylem <xref:System.Windows.Controls.Button> na zielony.
+Poniższy przykład tworzy bardzo prosty styl (który zostanie zdefiniowany w <xref:System.Windows.FrameworkElement.Resources%2A> słowniku, niepokazywany), a następnie stosuje ten styl bezpośrednio <xref:System.Windows.FrameworkElement.Style%2A> do właściwości dla <xref:System.Windows.Controls.Button>. Metoda ustawiająca w stylu ustawia <xref:System.Windows.Controls.Control.Background%2A> Właściwość <xref:System.Windows.Controls.Button> stylu na zielony.
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyleDef](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyledef)]
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyle)]
 
-Aby uzyskać więcej informacji, zobacz [Tworzenie szablonów i stylów](../controls/styling-and-templating.md).
+Aby uzyskać więcej informacji, zobacz [Style i tworzenia szablonów](../controls/styling-and-templating.md).
 
 ### <a name="animations"></a>Animacje
-Właściwości zależności mogą być animowane. Gdy animacji są stosowane i jest uruchomiona, wartość animowany działa z wyższym priorytetem niż wartość (na przykład wartości lokalnego), który ma właściwość, w przeciwnym razie.
+Właściwości zależności można animować. Gdy animacja jest stosowana i jest uruchomiona, animowana wartość działa z wyższym priorytetem niż jakakolwiek wartość (na przykład wartość lokalna), która w przeciwnym razie ma.
 
-Animuje poniższy przykład <xref:System.Windows.Controls.Control.Background%2A> na <xref:System.Windows.Controls.Button> właściwości (z technicznego punktu widzenia <xref:System.Windows.Controls.Control.Background%2A> jest animowany przy użyciu składni elementu właściwości, aby określić puste <xref:System.Windows.Media.SolidColorBrush> jako <xref:System.Windows.Controls.Control.Background%2A>, a następnie <xref:System.Windows.Media.SolidColorBrush.Color%2A> własności, <xref:System.Windows.Media.SolidColorBrush> jest właściwość, która jest bezpośrednio animowany).
+Poniższy przykład <xref:System.Windows.Controls.Control.Background%2A> służy do animowania <xref:System.Windows.Controls.Control.Background%2A> <xref:System.Windows.Controls.Button> na właściwości (technicznie animowanej przy użyciu składni <xref:System.Windows.Controls.Control.Background%2A>elementu właściwości, aby <xref:System.Windows.Media.SolidColorBrush.Color%2A> określić wartość pustą <xref:System.Windows.Media.SolidColorBrush> jako, a następnie właściwość tej właściwości. <xref:System.Windows.Media.SolidColorBrush> jest właściwością, która jest animowana bezpośrednio.
 
 [!code-xaml[PropertiesOvwSupport#MiniAnimate](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#minianimate)]
 
-Aby uzyskać więcej informacji na temat Animowanie właściwości, zobacz [Przegląd animacja](../graphics-multimedia/animation-overview.md) i [Przegląd Scenorysy](../graphics-multimedia/storyboards-overview.md).
+Aby uzyskać więcej informacji na temat animowania właściwości, zobacz [Omówienie animacji](../graphics-multimedia/animation-overview.md) i [Omówienie scenorysów](../graphics-multimedia/storyboards-overview.md).
 
-### <a name="metadata-overrides"></a>Zastępowanie metadanych
-Zastępowanie metadanych dla tej właściwości w przypadku klasy wyprowadzonej z klasy, która pierwotnie rejestruje właściwości zależności można zmienić pewnymi rodzajami zachowań tych właściwości zależności. Zastępowanie metadanych opiera się na <xref:System.Windows.DependencyProperty> identyfikatora. Zastępowanie metadanych nie wymaga ponownej implementacji właściwości. Zmiana metadanych jest obsługiwany natywnie przez system właściwości; Każda klasa przechowuje potencjalnie poszczególnych metadane dla wszystkich właściwości, które są dziedziczone z klasy podstawowej, na podstawie typu.
+### <a name="metadata-overrides"></a>Zastąpienia metadanych
+Niektóre zachowania właściwości zależności można zmienić, zastępując metadane tej właściwości, gdy pochodzą z klasy, która pierwotnie rejestruje właściwość zależności. Zastępowanie metadanych opiera się <xref:System.Windows.DependencyProperty> na identyfikatorze. Zastępowanie metadanych nie wymaga ponownego wdrożenia właściwości. Zmiana metadanych jest obsługiwana natywnie przez system właściwości; Każda Klasa potencjalnie przechowuje pojedyncze metadane dla wszystkich właściwości, które są dziedziczone z klas bazowych, dla poszczególnych typów.
 
-Poniższy przykład zastępuje metadane dla właściwości zależności <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>. Zastępowanie metadanych właściwości zależności określonego jest część wzorca wdrożenia, który tworzy kontrolki używające domyślnych stylów z motywów.
+Poniższy przykład zastępuje metadane dla właściwości <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>zależności. Zastępowanie tego konkretnej metadanych właściwości zależności jest częścią wzorca implementacji, który tworzy kontrolki, które mogą używać domyślnych stylów z motywów.
 
 [!code-csharp[PropertiesOvwSupport#OverrideMetadata](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#overridemetadata)]
 [!code-vb[PropertiesOvwSupport#OverrideMetadata](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#overridemetadata)]
 
-Aby uzyskać więcej informacji o zastępowanie i uzyskiwanie metadanych właściwości modelu, zobacz [metadane zależności właściwości](dependency-property-metadata.md).
+Aby uzyskać więcej informacji na temat przesłaniania lub uzyskiwania metadanych właściwości, zobacz [metadane właściwości zależności](dependency-property-metadata.md).
 
 ### <a name="property-value-inheritance"></a>Dziedziczenie wartości właściwości
-Element może dziedziczyć wartość właściwości zależności od jego elementu nadrzędnego w drzewie obiektów.
+Element może dziedziczyć wartość właściwości zależności z jej elementu nadrzędnego w drzewie obiektów.
 
 > [!NOTE]
-> Zachowanie dziedziczenie wartości właściwości nie globalnie włączono dla wszystkich właściwości zależności, ponieważ czas obliczeń do obsługi dziedziczenia ma wpływ na wydajność. Dziedziczenie wartości właściwości zwykle jest włączona tylko dla właściwości, w którym konkretnego scenariusza sugeruje, że dziedziczenie wartości właściwości jest odpowiednie. Można określić, czy właściwość zależności dziedziczy, analizując **informacje dotyczące właściwości zależności** sekcji dla tej właściwości zależności w odwołaniu do zestawu SDK.
+> Zachowanie dziedziczenia wartości właściwości nie jest globalnie włączone we wszystkich właściwościach zależności, ponieważ czas obliczeń dla dziedziczenia ma wpływ na wydajność. Dziedziczenie wartości właściwości jest zazwyczaj włączone tylko dla właściwości, w których konkretny scenariusz sugeruje, że dziedziczenie wartości właściwości jest odpowiednie. Można określić, czy właściwość zależności dziedziczy przez przejrzenie sekcji **informacji o zależności** dla tej właściwości zależności w odwołaniu do zestawu SDK.
 
-Poniższy przykład pokazuje powiązanie i ustawia <xref:System.Windows.FrameworkElement.DataContext%2A> właściwość, która określa źródło powiązania, który nie został wyświetlony we wcześniejszym przykładzie powiązania. Wszystkie kolejne powiązania w obiekty podrzędne nie trzeba określić źródło, im wartości odziedziczone z <xref:System.Windows.FrameworkElement.DataContext%2A> w obiekcie nadrzędnym <xref:System.Windows.Controls.StackPanel> obiektu. (Alternatywnie obiekt podrzędny zamiast tego można wybrać bezpośrednio określić własny <xref:System.Windows.FrameworkElement.DataContext%2A> lub <xref:System.Windows.Data.Binding.Source%2A> w <xref:System.Windows.Data.Binding>, celowo nie dziedziczonej wartości i zgłaszania i kontekstu danych elementu powiązań.)
+Poniższy przykład przedstawia powiązanie i ustawia <xref:System.Windows.FrameworkElement.DataContext%2A> właściwość, która określa źródło powiązania, które nie zostało pokazane w poprzednim przykładzie powiązania. Wszystkie kolejne powiązania w obiektach podrzędnych nie muszą określać źródła, ale mogą używać dziedziczonej wartości z <xref:System.Windows.FrameworkElement.DataContext%2A> w obiekcie nadrzędnym. <xref:System.Windows.Controls.StackPanel> (Alternatywnie, obiekt podrzędny może zamiast tego wybrać <xref:System.Windows.FrameworkElement.DataContext%2A> <xref:System.Windows.Data.Binding>, aby bezpośrednio określić swój własny <xref:System.Windows.Data.Binding.Source%2A> lub w i w sposób celowy nie używać dziedziczonej wartości dla kontekstu danych powiązań).
 
 [!code-xaml[PropertiesOvwSupport#InheritanceContext](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#inheritancecontext)]
 
 Aby uzyskać więcej informacji, zobacz [dziedziczenie wartości właściwości](property-value-inheritance.md).
 
-### <a name="wpf-designer-integration"></a>Integracja projektanta WPF
-Formant niestandardowy z właściwościami, które są implementowane jako właściwości zależności będą otrzymywać właściwe [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] pomocy technicznej. Przykładem jest możliwość edytowania właściwości zależności bezpośrednich i dołączonych przy użyciu **właściwości** okna. Aby uzyskać więcej informacji, zobacz [omówienie tworzenia kontrolek](../controls/control-authoring-overview.md).
+### <a name="wpf-designer-integration"></a>Integracja z projektantem WPF
+Kontrolka niestandardowa z właściwościami, które są implementowane jako [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] właściwości zależności, będzie otrzymywać odpowiednie wsparcie. Przykładem jest możliwość edycji właściwości zależności bezpośrednie i dołączone przy użyciu okna **Właściwości** . Aby uzyskać więcej informacji, zobacz temat [Tworzenie kontroli — przegląd](../controls/control-authoring-overview.md).
 
-## <a name="dependency-property-value-precedence"></a>Następstwo wartości właściwości
-Po otrzymaniu wartość właściwości zależności są potencjalnie uzyskiwania wartość, która została ustawiona dla tej właściwości, za pomocą jednej z pozostałych na podstawie właściwości danych wejściowych, które uczestniczą w systemie właściwości WPF. Następstwo wartości właściwości istnieje, tak aby różne scenariusze dotyczące sposobu właściwości uzyskiwania ich wartości mogą wchodzić w interakcje w przewidywalny sposób.
+## <a name="dependency-property-value-precedence"></a>Pierwszeństwo wartości właściwości zależności
+Po otrzymaniu wartości właściwości zależności można uzyskać wartość ustawioną dla tej właściwości za pomocą dowolnego z innych danych wejściowych opartych na właściwościach, które uczestniczą w systemie właściwości WPF. Pierwszeństwo wartości właściwości zależności istnieje, dzięki czemu różne scenariusze dotyczące sposobu, w jaki właściwości uzyskują swoje wartości, mogą współdziałać w przewidywalny sposób.
 
-Rozważmy następujący przykład. Przykład zawiera style, która ma zastosowanie do wszystkich przycisków i ich <xref:System.Windows.Controls.Control.Background%2A> właściwości, ale również określa jeden z przycisków z lokalnie ustawiony <xref:System.Windows.Controls.Control.Background%2A> wartość.
+Rozważmy następujący przykład. Przykład zawiera styl stosowany do wszystkich przycisków i ich <xref:System.Windows.Controls.Control.Background%2A> właściwości, ale również określa jeden przycisk z wartością ustawione <xref:System.Windows.Controls.Control.Background%2A> lokalnie.
 
 > [!NOTE]
-> Zastosowań dokumentacji zestawu SDK warunki "lokalna wartość" lub "lokalnie. Ustaw wartość" od czasu do czasu Omawiając właściwości zależności. Lokalnie ustawiony wartość jest wartością właściwości, który jest ustawiony bezpośrednio na wystąpienie obiektu w kodzie lub jako atrybut elementu w XAML.  
+> Dokumentacja zestawu SDK używa warunków "lokalna wartość" lub "lokalnie ustawiona wartość" sporadycznie podczas omawiania właściwości zależności. Wartość ustawiona lokalnie to wartość właściwości, która jest ustawiana bezpośrednio w wystąpieniu obiektu w kodzie lub jako atrybut w elemencie XAML.  
   
-W zasadzie pierwszego przycisku dla właściwości ustawiono dwa razy, ale ma zastosowanie tylko jedna wartość: wartość o najwyższym priorytecie. Lokalnie ustawiony wartości ma najwyższy priorytet (z wyjątkiem uruchamiania animacji, ale żadna animacja nie stosuje się w tym przykładzie) i dlatego lokalnie ustaw wartość jest używana zamiast wartości metoda ustawiająca styl tła na pierwszy przycisk. Drugi przycisk ma nie wartości lokalnego (i inne wartości o wyższy priorytet niż style setter), a zatem tło tego przycisku pochodzi z metody ustawiającej stylu.
+W zasadzie dla pierwszego przycisku właściwość jest ustawiana dwa razy, ale stosowana jest tylko jedna wartość: wartość o najwyższym priorytecie. Ustawiona lokalnie wartość ma najwyższy priorytet (z wyjątkiem uruchomionej animacji, ale w tym przykładzie nie ma żadnej animacji), a tym samym wartość ustawiona lokalnie jest używana zamiast wartości style setter dla tła pierwszego przycisku. Drugi przycisk nie ma wartości lokalnej (i nie ma innej wartości o wyższym priorytecie niż Metoda ustawiająca styl) i w ten sposób tło tego przycisku pochodzi z metody ustawiającej style.
 
 [!code-xaml[PropertiesOvwSupport#MiniPrecedence](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#miniprecedence)]  
 
-### <a name="why-does-dependency-property-precedence-exist"></a>Dlaczego istnieje następstwo właściwości
-Zazwyczaj nie trzeba będzie style Zawsze stosuj i zasłaniać nawet lokalnie ustawiony wartości pojedynczego elementu (w przeciwnym razie byłoby bardzo trudne, ogólnie rzecz biorąc używać stylów lub elementów). W związku z tym, wartości, które pochodzą z style działać na niższym anulują niż lokalnie ustawiony wartość. Dla bardziej szczegółowego listę właściwości zależności i skąd pochodzą może być wartością skutecznych właściwości zależności, zobacz [następstwo wartości właściwości](dependency-property-value-precedence.md).
+### <a name="why-does-dependency-property-precedence-exist"></a>Dlaczego ma pierwszeństwo właściwość zależności?
+Zwykle nie chcesz, aby style były zawsze stosowane, i aby zasłaniać nawet lokalnie ustawioną wartość pojedynczego elementu (w przeciwnym razie trudno jest użyć w ogóle stylów lub elementów). W związku z tym wartości, które pochodzą ze stylów, działają przy mniejszej poprzedniku niż wartość ustawiona lokalnie. Aby zapoznać się z bardziej dokładną listą właściwości zależności i, w której może występować wartość właściwości zależności, zobacz [pierwszeństwo wartości właściwości zależności](dependency-property-value-precedence.md).
 
 > [!NOTE]
-> Istnieje kilka właściwości zdefiniowanych w przypadku elementów WPF, które nie są właściwościami zależności. Zasadniczo właściwości zostały zaimplementowane jako właściwości zależności tylko wtedy, gdy było potrzeby w celu obsługi co najmniej jeden scenariusze obsługiwane przez system właściwości: wiązania danych, style, animacji, obsługi wartości domyślne, dziedziczenie, dołączone właściwości, lub unieważnieniu.
+> W elementach WPF są zdefiniowane różne właściwości, które nie są właściwościami zależności. Według i duże, właściwości zostały zaimplementowane jako właściwości zależności tylko wtedy, gdy trzeba obsługiwać co najmniej jeden z scenariuszy włączonych przez system właściwości: powiązanie danych, styl, animacja, obsługa wartości domyślnych, dziedziczenie, dołączone właściwości lub unieważniania.
 
-## <a name="learning-more-about-dependency-properties"></a>Więcej informacji na temat właściwości zależności  
+## <a name="learning-more-about-dependency-properties"></a>Dowiedz się więcej o właściwościach zależności  
 
-- Dołączona właściwość jest typem właściwości, która obsługuje wyspecjalizowane składnia XAML. Dołączona właściwość często nie mają korespondencji 1:1, z [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości i niekoniecznie jest właściwość zależności. Typowym celem dołączoną właściwość jest umożliwienie podrzędnych elementów do zgłaszania wartości właściwości do elementu nadrzędnego, nawet wtedy, gdy element nadrzędny i element podrzędny nie korzystać tę właściwość jako część listy elementów członkowskich klasy. Podstawowy scenariusz jest umożliwienie elementów podrzędnych do powiadamia element nadrzędny, jak powinno zostać wyświetlone w [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]; na przykład zobacz <xref:System.Windows.Controls.DockPanel.Dock%2A> lub <xref:System.Windows.Controls.Canvas.Left%2A>. Aby uzyskać więcej informacji, zobacz [Przegląd właściwości dołączonych](attached-properties-overview.md).
+- Dołączona właściwość jest typem właściwości, która obsługuje wyspecjalizowaną składnię w języku XAML. Dołączona właściwość często nie ma zgodności 1:1 z właściwością środowiska uruchomieniowego języka wspólnego (CLR) i nie musi być właściwością zależności. Typowym celem dołączonej właściwości jest umożliwienie elementom podrzędnym zgłaszania wartości właściwości do elementu nadrzędnego, nawet jeśli element nadrzędny i element podrzędny nie posiadają tej właściwości jako części list elementów członkowskich klasy. Jednym z głównych scenariuszy jest włączenie elementów podrzędnych w celu informowania o tym, jak powinny [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]być prezentowane. Aby uzyskać <xref:System.Windows.Controls.DockPanel.Dock%2A> przykład <xref:System.Windows.Controls.Canvas.Left%2A>, zobacz lub. Aby uzyskać szczegółowe informacje, zobacz [Omówienie funkcji dołączone właściwości](attached-properties-overview.md).
 
-- Deweloperzy składników lub deweloperzy aplikacji mogą chcieć tworzyć własne właściwości zależności, aby włączyć funkcje, takie jak powiązania danych lub Obsługa stylów lub wymuszenia unieważnianie i wartość działu pomocy technicznej. Aby uzyskać więcej informacji, zobacz [niestandardowe właściwości zależności](custom-dependency-properties.md).
+- Deweloperzy składników lub deweloperzy aplikacji mogą chcieć utworzyć własną właściwość zależności, aby umożliwić obsługę takich funkcji jak powiązanie danych lub style, lub na potrzeby obsługi nieprawidłowych i wymuszania wartości. Aby uzyskać szczegółowe informacje, zobacz [niestandardowe właściwości zależności](custom-dependency-properties.md).
 
-- Właściwości zależności powinien ogólnie być uważany właściwości publiczne, dostępny lub co najmniej wykrywane przez dowolny obiekt wywołujący, który ma dostęp do wystąpienia. Aby uzyskać więcej informacji, zobacz [zabezpieczenia właściwości zależności](dependency-property-security.md).
+- Właściwości zależności powinny być ogólnie uznawane za właściwości publiczne, dostępne lub co najmniej wykrywalne przez dowolnego wywołującego, który ma dostęp do wystąpienia. Aby uzyskać więcej informacji, zobacz temat [Ochrona właściwości zależności](dependency-property-security.md).
 
 ## <a name="see-also"></a>Zobacz także
 

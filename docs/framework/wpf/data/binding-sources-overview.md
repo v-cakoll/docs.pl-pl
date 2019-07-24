@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 48df7083d990dde157c9b7b2a062c865954cf38a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364208"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401439"
 ---
 # <a name="binding-sources-overview"></a>Przegląd Wiązanie źródeł
 W powiązaniu danych obiekt źródłowy powiązania odwołuje się do obiektu, z którego pochodzą dane. W tym temacie omówiono typy obiektów, których można użyć jako źródła powiązań.  
@@ -22,7 +22,7 @@ W powiązaniu danych obiekt źródłowy powiązania odwołuje się do obiektu, z
   
 |Źródło powiązania|Opis|  
 |--------------------|-----------------|  
-|[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]elementy|Można powiązać z właściwościami publicznymi, podrzędnymi, a także indeksatorami dowolnego [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektu. Aparat powiązań używa [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] odbicia w celu pobrania wartości właściwości. Alternatywnie, obiekty, które <xref:System.ComponentModel.ICustomTypeDescriptor> implementują lub mają <xref:System.ComponentModel.TypeDescriptionProvider> zarejestrowany, również współpracują z aparatem powiązań.<br /><br /> Aby uzyskać więcej informacji na temat implementowania klasy, która może stanowić źródło powiązań, zobacz [implementowanie klasy dla źródła powiązania](#classes) w dalszej części tego tematu.|  
+|obiekty środowiska uruchomieniowego języka wspólnego (CLR)|Można powiązać z właściwościami publicznymi, podrzędnymi, a także indeksatorami dowolnego obiektu środowiska uruchomieniowego języka wspólnego (CLR). Aparat powiązań używa odbicia środowiska CLR w celu uzyskania wartości właściwości. Alternatywnie, obiekty, które <xref:System.ComponentModel.ICustomTypeDescriptor> implementują lub mają <xref:System.ComponentModel.TypeDescriptionProvider> zarejestrowany, również współpracują z aparatem powiązań.<br /><br /> Aby uzyskać więcej informacji na temat implementowania klasy, która może stanowić źródło powiązań, zobacz [implementowanie klasy dla źródła powiązania](#classes) w dalszej części tego tematu.|  
 |obiekty dynamiczne|Można powiązać z dostępnymi właściwościami i indeksatorami obiektu, który implementuje <xref:System.Dynamic.IDynamicMetaObjectProvider> interfejs. Jeśli masz dostęp do elementu członkowskiego w kodzie, możesz powiązać z nim. Na przykład, jeśli obiekt dynamiczny umożliwia dostęp do elementu członkowskiego w kodzie za pośrednictwem `someObjet.AProperty`, można utworzyć powiązanie z nim przez ustawienie ścieżki powiązania z. `AProperty`|  
 |ADO.NET — obiekty|Można powiązać z obiektami ADO.NET, takimi jak <xref:System.Data.DataTable>. <xref:System.Data.DataView> ADO.NET<xref:System.ComponentModel.IBindingList> implementuje interfejs, który zapewnia powiadomienia o zmianach, dla których aparat powiązania nasłuchuje.|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]elementy|Można powiązać i `XPath` uruchamiać zapytania <xref:System.Xml.XmlNode>na, <xref:System.Xml.XmlDocument>lub <xref:System.Xml.XmlElement>. Wygodnym sposobem uzyskiwania dostępu [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] do danych, które są źródłem powiązań w znaczniku, jest <xref:System.Windows.Data.XmlDataProvider> użycie obiektu. Aby uzyskać więcej informacji, zobacz [Powiązywanie z danymi XML przy użyciu XmlDataProvider i zapytań XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Można również powiązać z <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument>lub powiązać z wynikami zapytań uruchamianych na obiektach tego typu za pomocą LINQ to XML. Wygodnym sposobem korzystania z LINQ to XML w celu uzyskania dostępu do danych XML, które są źródłem powiązań w znaczniku <xref:System.Windows.Data.ObjectDataProvider> , jest użycie obiektu. Aby uzyskać więcej informacji, zobacz [Powiązywanie z wynikami kwerendy XDocument, XElement lub LINQ for XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
@@ -33,9 +33,9 @@ W powiązaniu danych obiekt źródłowy powiązania odwołuje się do obiektu, z
  Możesz tworzyć własne źródła powiązań. W tej sekcji omówiono zagadnienia, które należy poznać w przypadku implementowania klasy, która ma stanowić źródło powiązań.  
   
 ### <a name="providing-change-notifications"></a>Udostępnianie powiadomień o zmianach  
- Jeśli używasz obu <xref:System.Windows.Data.BindingMode.OneWay> lub <xref:System.Windows.Data.BindingMode.TwoWay> powiązań [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (ponieważ chcesz, aby aktualizacje były aktualizowane, gdy właściwości źródła powiązania są dynamicznie zmieniane), należy zaimplementować odpowiedni mechanizm powiadamiania o zmianie właściwości. Zalecany mechanizm jest przeznaczony dla [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] klasy dynamicznej lub <xref:System.ComponentModel.INotifyPropertyChanged> implementującej interfejs. Aby uzyskać więcej informacji, zobacz [implementacja powiadomienia o zmianie właściwości](how-to-implement-property-change-notification.md).  
+ Jeśli używasz obu <xref:System.Windows.Data.BindingMode.OneWay> lub <xref:System.Windows.Data.BindingMode.TwoWay> powiązań [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (ponieważ chcesz, aby aktualizacje były aktualizowane, gdy właściwości źródła powiązania są dynamicznie zmieniane), należy zaimplementować odpowiedni mechanizm powiadamiania o zmianie właściwości. Zalecany mechanizm jest przeznaczony dla środowiska CLR lub klasy dynamicznej, aby zaimplementować <xref:System.ComponentModel.INotifyPropertyChanged> interfejs. Aby uzyskać więcej informacji, zobacz [implementacja powiadomienia o zmianie właściwości](how-to-implement-property-change-notification.md).  
   
- W przypadku utworzenia [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektu, który nie implementuje <xref:System.ComponentModel.INotifyPropertyChanged>programu, należy rozmieścić własny system powiadomień, aby upewnić się, że dane używane w powiązaniu pozostają aktualne. Możesz dostarczyć powiadomienia o zmianach, obsługując `PropertyChanged` wzorzec dla każdej właściwości, dla której chcesz zmienić powiadomienia. Aby zapewnić obsługę tego wzorca, należy zdefiniować zdarzenie zmiany *PropertyName*dla każdej właściwości, gdzie *PropertyName* jest nazwą właściwości. Zdarzenie jest podniesione za każdym razem, gdy właściwość zostanie zmieniona.  
+ W przypadku utworzenia obiektu CLR, który nie implementuje <xref:System.ComponentModel.INotifyPropertyChanged>programu, należy rozmieścić własny system powiadomień, aby upewnić się, że dane używane w powiązaniu pozostają aktualne. Możesz dostarczyć powiadomienia o zmianach, obsługując `PropertyChanged` wzorzec dla każdej właściwości, dla której chcesz zmienić powiadomienia. Aby zapewnić obsługę tego wzorca, należy zdefiniować zdarzenie zmiany *PropertyName*dla każdej właściwości, gdzie *PropertyName* jest nazwą właściwości. Zdarzenie jest podniesione za każdym razem, gdy właściwość zostanie zmieniona.  
   
  Jeśli źródło powiązania implementuje jeden z tych mechanizmów powiadomień, aktualizacje docelowe są wykonywane automatycznie. Jeśli z jakiegokolwiek powodu Źródło powiązania nie zapewnia prawidłowej zmiany właściwości, można użyć <xref:System.Windows.Data.BindingExpression.UpdateTarget%2A> metody, aby jawnie zaktualizować Właściwość docelową.  
   
@@ -80,7 +80,7 @@ W powiązaniu danych obiekt źródłowy powiązania odwołuje się do obiektu, z
   
  W tej tabeli opisano następujące ważne punkty dotyczące wymagań dotyczących uprawnień w powiązaniu danych:  
   
-- W [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] przypadku właściwości powiązanie danych działa tak długo, jak aparat powiązań jest w stanie uzyskać dostęp do właściwości źródła powiązania przy użyciu odbicia. W przeciwnym razie aparat powiązań emituje ostrzeżenie, że nie można odnaleźć właściwości i używa wartości rezerwowej lub wartości domyślnej, jeśli jest ona dostępna.  
+- W przypadku właściwości CLR powiązanie danych działa tak długo, jak aparat powiązań jest w stanie uzyskać dostęp do właściwości źródła powiązania przy użyciu odbicia. W przeciwnym razie aparat powiązań emituje ostrzeżenie, że nie można odnaleźć właściwości i używa wartości rezerwowej lub wartości domyślnej, jeśli jest ona dostępna.  
   
 - Można powiązać z właściwościami obiektów dynamicznych, które są zdefiniowane w czasie kompilacji lub w czasie wykonywania.  
   

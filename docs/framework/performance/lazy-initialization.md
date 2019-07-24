@@ -9,152 +9,152 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b19fbeb0144698c5091a9bbe6bce45c21c4f0d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aef3105844ee61607bbc85332a76611c91a4198a
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616371"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364049"
 ---
 # <a name="lazy-initialization"></a>Inicjalizacja z opóźnieniem
-*Inicjalizacja z opóźnieniem* obiektu oznacza, że jego utworzenia jest odroczone do czasu jej pierwszym użyciu. (W tym temacie warunki *inicjowania z opóźnieniem* i *wystąpienia z opóźnieniem* oznaczają to samo.) Inicjalizacja z opóźnieniem służy głównie do zwiększenia wydajności, należy unikać marnotrawstwa obliczeń i zmniejszyć wymagania dotyczące pamięci programu. Poniżej przedstawiono najbardziej typowych scenariuszy:  
+*Inicjalizacja* z opóźnieniem obiektu oznacza, że jego tworzenie jest odroczone do czasu jego pierwszego użycia. (W tym temacie warunki inicjalizacji  z opóźnieniem i *utworzenia wystąpienia* z opóźnieniem są równoznaczne). Inicjalizacja z opóźnieniem służy głównie do poprawy wydajności, unikania obliczeń wasteful i zmniejszania wymagań dotyczących pamięci programu. Są to najczęstsze scenariusze:  
   
-- Gdy ma obiekt, który jest kosztowne, a program nie może używać. Na przykład załóżmy, że masz w pamięci `Customer` obiekt, który ma `Orders` właściwość, która zawiera dużą tablicę liczb `Order` obiekty, które zainicjowana, wymaga połączenia z bazą danych. Jeśli użytkownik nigdy nie prosi do wyświetlania zamówień lub użyć danych w obliczeń, następnie nie ma powodu ją utworzyć za pomocą pamięci systemowej lub cykli obliczeniowych. Za pomocą `Lazy<Orders>` do deklarowania `Orders` obiektu inicjowania z opóźnieniem, możesz uniknąć marnowania zasobów systemowych, jeśli obiekt nie jest używany.  
+- Gdy masz obiekt, który jest kosztowny do utworzenia i program może go nie używać. Załóżmy na przykład, że masz w pamięci `Customer` obiekt, który `Orders` ma właściwość, która `Order` zawiera dużą tablicę obiektów, która ma zostać zainicjowana, wymaga połączenia z bazą danych. Jeśli użytkownik nigdy nie monituje o wyświetlenie zamówień lub użycie danych w obliczeniach, nie istnieje powód, aby użyć pamięci systemowej lub cykle obliczeniowe do jego utworzenia. Za pomocą `Lazy<Orders>` do deklarowania `Orders` obiektu do inicjowania z opóźnieniem można uniknąć marnowania zasobów systemowych, gdy obiekt nie jest używany.  
   
-- Gdy obiekt, która jest kosztowna utworzyć i mają być odroczone jej tworzenia, aż po innych kosztowne operacje zostały zakończone. Załóżmy na przykład, czy program ładuje kilka wystąpień obiektu po jego uruchomieniu, ale tylko niektóre z nich wymagane jest od razu. Aby zwiększyć wydajność uruchamiania programów, należy Opóźnienie inicjowania obiektów, które nie są wymagane, dopóki nie zostały utworzone wymagane obiekty.  
+- Gdy masz obiekt, który jest kosztowny do utworzenia, i chcesz odroczyć jego tworzenie do momentu ukończenia innych kosztownych operacji. Załóżmy na przykład, że program ładuje kilka wystąpień obiektów podczas uruchamiania, ale tylko niektóre z nich są wymagane od razu. Wydajność uruchamiania programu można poprawić, odwołując inicjalizację obiektów, które nie są wymagane do momentu utworzenia wymaganych obiektów.  
   
- Mimo że można napisać własny kod, aby wykonać inicjowania z opóźnieniem, firma Microsoft zaleca użycie <xref:System.Lazy%601> zamiast tego. <xref:System.Lazy%601> oraz jego powiązanych typów również obsługuje bezpieczeństwo wątków i zasady propagacji wyjątku spójne.  
+ Chociaż można napisać własny kod w celu wykonania inicjalizacji z opóźnieniem, zalecamy użycie <xref:System.Lazy%601> zamiast tego. <xref:System.Lazy%601>i powiązane typy obsługują również bezpieczeństwo wątków i zapewniają zasady propagacji spójnych wyjątków.  
   
- W poniższej tabeli wymieniono typy, które zapewnia .NET Framework w wersji 4, umożliwiające inicjowanie z opóźnieniem w różnych scenariuszach.  
+ Poniższa tabela zawiera listę typów, które zawiera .NET Framework w wersji 4, aby włączyć inicjalizację z opóźnieniem w różnych scenariuszach.  
   
 |Typ|Opis|  
 |----------|-----------------|  
-|<xref:System.Lazy%601>|Klasa otoki, która zapewnia semantykę, inicjowania z opóźnieniem dla biblioteki klas lub typ zdefiniowany przez użytkownika.|  
-|<xref:System.Threading.ThreadLocal%601>|Przypomina <xref:System.Lazy%601> z tą różnicą, że zapewnia semantykę inicjowania z opóźnieniem na podstawie lokalnej wątku. Każdy wątek ma dostęp do jego własnej unikatowe wartości.|  
-|<xref:System.Threading.LazyInitializer>|Zapewnia zaawansowane `static` (`Shared` w języku Visual Basic) metody incjalizacji obiektów bez konieczności klasy.|  
+|<xref:System.Lazy%601>|Klasa otoki, która zapewnia semantykę inicjacji z opóźnieniem dla każdej biblioteki klas lub typu zdefiniowanego przez użytkownika.|  
+|<xref:System.Threading.ThreadLocal%601>|<xref:System.Lazy%601> Przypomina z tą różnicą, że zapewnia semantykę inicjacji z opóźnieniem w zależności od wątku. Każdy wątek ma dostęp do własnej unikatowej wartości.|  
+|<xref:System.Threading.LazyInitializer>|Zapewnia zaawansowane `static` metody`Shared` inicjacji obiektów (w Visual Basic) w odniesieniu do opóźnionej inicjalizacji obiektu bez nakładu pracy klasy.|  
   
-## <a name="basic-lazy-initialization"></a>Podstawowe inicjowania z opóźnieniem  
- Do zdefiniowania z opóźnieniem zainicjowany typem, na przykład `MyType`, użyj `Lazy<MyType>` (`Lazy(Of MyType)` w języku Visual Basic), jak pokazano w poniższym przykładzie. Jeśli delegowanie nie jest przekazywany w <xref:System.Lazy%601> opakowany typ konstruktora, jest tworzona przy użyciu <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> podczas pierwszego otwarcia właściwości value. Jeśli typ nie ma domyślnego konstruktora, zwracany jest wyjątek czasu wykonywania.  
+## <a name="basic-lazy-initialization"></a>Podstawowa Inicjalizacja z opóźnieniem  
+ Aby zdefiniować typ inicjowania z opóźnieniem, na przykład `MyType`, użyj `Lazy<MyType>` (`Lazy(Of MyType)` w Visual Basic), jak pokazano w poniższym przykładzie. Jeśli w <xref:System.Lazy%601> konstruktorze nie zostanie przesłany delegat, opakowany typ jest tworzony przy <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> użyciu, gdy zostanie uzyskany pierwszy raz. Jeśli typ nie ma konstruktora bez parametrów, zgłaszany jest wyjątek czasu wykonywania.  
   
- W poniższym przykładzie przyjęto założenie, że `Orders` to klasa, która zawiera tablicę `Order` obiekty są pobierane z bazy danych. A `Customer` obiekt zawiera wystąpienie `Orders`, ale w zależności od działań użytkownika, danych z `Orders` obiekt nie może być wymagane.  
+ W poniższym przykładzie Załóżmy, że `Orders` jest klasą zawierającą `Order` tablicę obiektów pobranych z bazy danych. Obiekt zawiera wystąpienie, ale w zależności od akcji użytkownika `Orders` , dane z obiektu mogą nie być wymagane. `Orders` `Customer`  
   
  [!code-csharp[Lazy#1](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#1)]
  [!code-vb[Lazy#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#1)]  
   
- Można również przekazać delegata w <xref:System.Lazy%601> Konstruktor, który wywołuje konstruktora określonego przeciążenia opakowanej typu w czasie tworzenia i wykonać pozostałe kroki inicjowania, które są wymagane, jak pokazano w poniższym przykładzie.  
+ Można również przekazać delegata w <xref:System.Lazy%601> konstruktorze, który wywołuje określone przeciążenie konstruktora dla opakowanego typu podczas tworzenia, i wykonać wszelkie inne wymagane kroki inicjowania, jak pokazano w poniższym przykładzie.  
   
  [!code-csharp[Lazy#2](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#2)]
  [!code-vb[Lazy#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#2)]  
   
- Po utworzeniu obiektu z opóźnieniem, żadne wystąpienie elementu `Orders` jest tworzony, dopóki <xref:System.Lazy%601.Value%2A> właściwości zmiennej z opóźnieniem odbywa się po raz pierwszy. Na pierwszym dostępie opakowany typ jest utworzony i zwracane, a także przechowywane, aby uzyskać dostęp do wszystkich przyszłych.  
+ Po utworzeniu obiektu z opóźnieniem żadne wystąpienie elementu `Orders` nie zostanie utworzone <xref:System.Lazy%601.Value%2A> do momentu uzyskania dostępu do właściwości zmiennej opóźnionej po raz pierwszy. Przy pierwszym dostępie opakowany typ jest tworzony i zwracany i przechowywany dla dowolnego przyszłego dostępu.  
   
  [!code-csharp[Lazy#3](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#3)]
  [!code-vb[Lazy#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#3)]  
   
- A <xref:System.Lazy%601> zawsze zwraca ten sam obiekt lub wartość, która została zainicjowana przy użyciu. W związku z tym <xref:System.Lazy%601.Value%2A> właściwość jest tylko do odczytu. Jeśli <xref:System.Lazy%601.Value%2A> zapisuje odwołanie do typu, nie można przypisać nowy obiekt do niego. (Jednak można zmienić wartość można ustawić pola publiczne i właściwości.) Jeśli <xref:System.Lazy%601.Value%2A> zapisuje wartość typu, nie można zmodyfikować jego wartości. Niemniej jednak można utworzyć nową zmienną za pomocą wywołania konstruktora zmiennej ponownie przy użyciu nowe argumenty.  
+ <xref:System.Lazy%601> Obiekt zawsze zwraca ten sam obiekt lub wartość, z którą została zainicjowana. W związku z <xref:System.Lazy%601.Value%2A> tym właściwość jest tylko do odczytu. W <xref:System.Lazy%601.Value%2A> przypadku przechowywania typu referencyjnego nie można przypisać do niego nowego obiektu. (Można jednak zmienić wartość jego pól publicznych i właściwości.). W <xref:System.Lazy%601.Value%2A> przypadku przechowywania typu wartości nie można zmodyfikować jego wartości. Niemniej jednak można utworzyć nową zmienną, wywołując Konstruktor zmiennej ponownie przy użyciu nowych argumentów.  
   
  [!code-csharp[Lazy#4](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#4)]
  [!code-vb[Lazy#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#4)]  
   
- Nowe wystąpienie z opóźnieniem, tak jak wcześniej, nie tworzy wystąpienia `Orders` do momentu jego <xref:System.Lazy%601.Value%2A> najpierw dostęp do właściwości.  
+ Nowe wystąpienie z opóźnieniem, takie jak wcześniejszy, nie tworzy `Orders` wystąpienia przed <xref:System.Lazy%601.Value%2A> pierwszym uzyskaniem dostępu do jego właściwości.  
   
-### <a name="thread-safe-initialization"></a>Wątkowo inicjowanie  
- Domyślnie <xref:System.Lazy%601> obiekty są odporne na wątki. Oznacza to, jeśli Konstruktor nie określa rodzaj bezpieczeństwo wątków <xref:System.Lazy%601> tworzy obiekty są odporne na wątki. W scenariuszach wielowątkowych, pierwszym wątkiem w celu uzyskania dostępu do <xref:System.Lazy%601.Value%2A> właściwość obsługujące wielowątkowość <xref:System.Lazy%601> obiektu inicjuje go dla wszystkich kolejnych dostępy do we wszystkich wątkach i wszystkie wątki udostępnianie tych samych danych. Dlatego nie ma znaczenia, który wątek inicjuje obiekt i sytuacje wyścigu sygnalizują poważnych problemów.  
+### <a name="thread-safe-initialization"></a>Inicjacja bezpieczna wątkowo  
+ Domyślnie <xref:System.Lazy%601> obiekty są bezpieczne wątkowo. Oznacza to, że jeśli Konstruktor nie określi rodzaju bezpieczeństwa wątków, <xref:System.Lazy%601> tworzone obiekty są bezpieczne wątkowo. W scenariuszach wielowątkowych pierwszy wątek uzyskuje dostęp <xref:System.Lazy%601.Value%2A> do właściwości obiektu bezpiecznego <xref:System.Lazy%601> wątkowo inicjuje go dla wszystkich kolejnych operacji dostępu we wszystkich wątkach, a wszystkie wątki współużytkują te same dane. W związku z tym nie ma znaczenia, który wątek inicjuje obiekt, a warunki wyścigu są niegroźne.  
   
 > [!NOTE]
->  Ten spójności w warunkach błędu można rozszerzyć za pomocą pamięci podręcznej wyjątek. Aby uzyskać więcej informacji, zobacz następną sekcję, [wyjątków w obiektów z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects).  
+>  Tę spójność można zwiększyć do warunków błędów przy użyciu buforowania wyjątków. Aby uzyskać więcej informacji, zobacz następną sekcję [wyjątki w odniesieniu do obiektów z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects).  
   
- Poniższy przykład pokazuje, że takie same `Lazy<int>` wystąpienie ma taką samą wartość dla trzech oddzielnych wątkach.  
+ Poniższy przykład pokazuje, że to samo `Lazy<int>` wystąpienie ma tę samą wartość dla trzech oddzielnych wątków.  
   
  [!code-csharp[Lazy#8](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#8)]
  [!code-vb[Lazy#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#8)]  
   
- Jeśli wymagane są osobne dane dla każdego wątku, należy użyć <xref:System.Threading.ThreadLocal%601> typ, zgodnie z opisem w dalszej części tego tematu.  
+ Jeśli wymagane są osobne dane w każdym wątku, użyj <xref:System.Threading.ThreadLocal%601> typu, zgodnie z opisem w dalszej części tego tematu.  
   
- Niektóre <xref:System.Lazy%601> konstruktorów mają parametrem logicznym o nazwie `isThreadSafe` używany do określenia czy <xref:System.Lazy%601.Value%2A> właściwości będą uzyskiwać dostęp z wielu wątków. Jeśli planujesz dostęp do właściwości z tylko jednego wątku, Przekaż `false` korzyści skromną wydajności. Jeśli planujesz dostęp do właściwości z wielu wątków, Przekaż `true` nakazać <xref:System.Lazy%601> wystąpienia poprawnie obsługuje sytuacje wyścigu, w których jeden wątek zgłasza wyjątek w czasie inicjowania.  
+ Niektóre <xref:System.Lazy%601> konstruktory mają parametr logiczny o `isThreadSafe` nazwie, który <xref:System.Lazy%601.Value%2A> służy do określenia, czy właściwość będzie dostępna z wielu wątków. Jeśli zamierzasz uzyskać dostęp do właściwości z tylko jednego wątku, Przekaż `false` , aby uzyskać nieznacznie korzyść wydajności. Jeśli zamierzasz uzyskać dostęp do właściwości z wielu wątków, Przekaż `true` , aby <xref:System.Lazy%601> poinstruować wystąpienie o prawidłowym obsłudze warunków wyścigu, w których jeden wątek zgłasza wyjątek w czasie inicjacji.  
   
- Niektóre <xref:System.Lazy%601> mają konstruktory <xref:System.Threading.LazyThreadSafetyMode> parametr o nazwie `mode`. Te konstruktory zapewniają tryb awaryjny wątku dodatkowe. W poniższej tabeli przedstawiono, jak bezpieczeństwo wątku <xref:System.Lazy%601> obiektu jest zależna od parametry konstruktora, które określają bezpieczeństwo wątkowe. Każdy Konstruktor ma co najwyżej jeden taki parametr.  
+ Niektóre <xref:System.Lazy%601> konstruktory <xref:System.Threading.LazyThreadSafetyMode> mają parametr o `mode`nazwie. Konstruktory te zapewniają dodatkowy tryb zabezpieczeń wątków. W poniższej tabeli przedstawiono, w jaki sposób bezpieczeństwo <xref:System.Lazy%601> wątku obiektu ma wpływ na parametry konstruktora, które określają bezpieczeństwo wątku. Każdy Konstruktor ma co najwyżej jeden taki parametr.  
   
-|Bezpieczeństwo wątków obiektu|`LazyThreadSafetyMode` `mode` Parametr|Wartość logiczna `isThreadSafe` parametru|Brak parametrów bezpieczeństwa wątków|  
+|Bezpieczeństwo wątku obiektu|`LazyThreadSafetyMode``mode` parametr|Parametr `isThreadSafe` logiczny|Brak parametrów zabezpieczeń wątku|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
-|W pełni wątkowo; tylko jeden wątek jednocześnie próbuje zainicjować wartości.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Tak.|  
-|Nie metodą o bezpiecznych wątkach.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Nie dotyczy.|  
-|W pełni wątkowo; Wyścig wątków do inicjacji wartości.|<xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>|Nie dotyczy.|Nie dotyczy.|  
+|W pełni bezpieczny wątkowo; tylko jeden wątek w czasie próbuje zainicjować wartość.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Tak.|  
+|Nie jest bezpieczny dla wątków.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Nie dotyczy.|  
+|W pełni bezpieczny wątkowo; możliwość zainicjowania wartości przez rasę wątków.|<xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>|Nie dotyczy.|Nie dotyczy.|  
   
- Jak widać w tabeli, określając <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> dla `mode` parametru jest taka sama jak określanie `true` dla `isThreadSafe` parametru i określając <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> jest taka sama jak określanie `false`.  
+ Jak tabela pokazuje <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> , określanie `mode` dla parametru jest `isThreadSafe` taka sama jak określenie `true` parametru, i określenie <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> jest taka sama jak określanie `false`.  
   
- Określanie <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType> zezwala na wiele wątków próbuje zainicjować <xref:System.Lazy%601> wystąpienia. Tylko jeden wątek może wygrać Wyścig, a inne wątki otrzymują wartość, która została zainicjowana przez wątek się pomyślnie. Jeśli w wątku, jest zgłaszany wyjątek podczas inicjowania, wątek nie otrzymuje wartość ustawioną przy użyciu pomyślne wątku. Wyjątki nie są buforowane, dlatego kolejna próba uzyskania dostępu <xref:System.Lazy%601.Value%2A> właściwość może doprowadzić do prawidłowego zainicjowania. To różni się od sposobu wyjątki są traktowane w innych trybach, który jest opisany w poniższej sekcji. Aby uzyskać więcej informacji, zobacz <xref:System.Threading.LazyThreadSafetyMode> wyliczenia.  
+ Określenie <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType> zezwala wielu wątkom na próbę <xref:System.Lazy%601> zainicjowania wystąpienia. Tylko jeden wątek może wygrać ten wyścigu, a wszystkie pozostałe wątki odbierają wartość, która została zainicjowana przez wątek zakończony powodzeniem. Jeśli wyjątek jest zgłaszany w wątku podczas inicjowania, ten wątek nie otrzymuje wartości ustawionej przez wątek zakończony powodzeniem. Wyjątki nie są buforowane, dlatego kolejna próba uzyskania dostępu <xref:System.Lazy%601.Value%2A> do właściwości może skutkować pomyślnym zainicjowaniem. Różni się to od sposobu traktowania wyjątków w innych trybach, które opisano w następnej sekcji. Aby uzyskać więcej informacji, zobacz <xref:System.Threading.LazyThreadSafetyMode> Wyliczenie.  
   
 <a name="ExceptionsInLazyObjects"></a>   
-## <a name="exceptions-in-lazy-objects"></a>Wyjątki w obiektów z opóźnieniem  
- Jak wspomniano wcześniej, <xref:System.Lazy%601> zawsze zwraca ten sam obiekt lub wartość, która została zainicjowana, i w związku z tym <xref:System.Lazy%601.Value%2A> właściwość jest tylko do odczytu. Po włączeniu buforowania wyjątek, wyjątek zachowanie rozszerzają to niezmienności. Jeśli obiekt inicjowany z opóźnieniem jest włączone buforowanie wyjątek i zgłasza wyjątek z jego metody inicjującej podczas <xref:System.Lazy%601.Value%2A> najpierw dostęp do właściwości, ten sam wyjątek jest zgłaszany w każdej kolejnej próby dostępu do <xref:System.Lazy%601.Value%2A> właściwości . Innymi słowy, Konstruktor opakowany typ nigdy nie zostanie ponownie wywołana, nawet w scenariuszach wielowątkowych. W związku z tym <xref:System.Lazy%601> obiektu nie można zgłosić wyjątek na jednym dostępu i zwraca wartości na kolejny dostęp.  
+## <a name="exceptions-in-lazy-objects"></a>Wyjątki w obiektach z opóźnieniem  
+ Jak wspomniano wcześniej, <xref:System.Lazy%601> obiekt zawsze zwraca ten sam obiekt lub wartość, która została zainicjowana, i w <xref:System.Lazy%601.Value%2A> związku z tym właściwość jest tylko do odczytu. W przypadku włączenia buforowania wyjątków ten niezmienności również rozszerza na zachowanie wyjątków. Jeśli obiekt zainicjowany z opóźnieniem ma włączone buforowanie wyjątków i zgłasza wyjątek z metody inicjującej podczas <xref:System.Lazy%601.Value%2A> pierwszego dostępu do właściwości, ten sam wyjątek jest zgłaszany przy każdej kolejnej próbie <xref:System.Lazy%601.Value%2A> uzyskania dostępu do właściwości . Innymi słowy, Konstruktor opakowanego typu nigdy nie jest ponownie wywoływany, nawet w scenariuszach wielowątkowych. W związku z tym obiektniemożezgłosićwyjątkudlajednegodostępuizwrócićwartościwkolejnymdostępie.<xref:System.Lazy%601>  
   
- Wyjątek jest włączone buforowanie przy użyciu jednej <xref:System.Lazy%601?displayProperty=nameWithType> konstruktora przyjmującego metodę inicjalizacji (`valueFactory` parametru), na przykład jest włączona, gdy używasz `Lazy(T)(Func(T))`konstruktora. Jeśli Konstruktor przyjmuje liczbę również <xref:System.Threading.LazyThreadSafetyMode> wartość (`mode` parametru), określ <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> lub <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Określanie metody inicjującej umożliwia wyjątek buforowania dla tych dwóch trybów. Metoda inicjująca może być bardzo proste. Na przykład może wywołać konstruktora domyślnego dla `T`: `new Lazy<Contents>(() => new Contents(), mode)` w języku C# lub `New Lazy(Of Contents)(Function() New Contents())` w języku Visual Basic. Jeśli używasz <xref:System.Lazy%601?displayProperty=nameWithType> Konstruktor, który nie określa metodę inicjalizacji, wyjątki wyrzucane przez domyślny konstruktor dla `T` nie są buforowane. Aby uzyskać więcej informacji, zobacz <xref:System.Threading.LazyThreadSafetyMode> wyliczenia.  
+ Buforowanie wyjątków jest włączane w przypadku użycia <xref:System.Lazy%601?displayProperty=nameWithType> dowolnego konstruktora, który przyjmuje metodę inicjującą (`valueFactory` parametr); na przykład jest on `Lazy(T)(Func(T))`włączony w przypadku użycia konstruktora. Jeśli Konstruktor pobiera <xref:System.Threading.LazyThreadSafetyMode> również wartość (`mode` parametr), określ <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> lub <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Określenie metody inicjującej umożliwia buforowanie wyjątków dla tych dwóch trybów. Metoda inicjacji może być bardzo prosta. Na przykład może wywołać konstruktora bez parametrów `T`dla: `new Lazy<Contents>(() => new Contents(), mode)` w C#, lub `New Lazy(Of Contents)(Function() New Contents())` w Visual Basic. Jeśli używasz <xref:System.Lazy%601?displayProperty=nameWithType> konstruktora, który nie określa metody inicjacji, wyjątki, które są zgłaszane przez konstruktora bez parametrów dla `T` nie są buforowane. Aby uzyskać więcej informacji, zobacz <xref:System.Threading.LazyThreadSafetyMode> Wyliczenie.  
   
 > [!NOTE]
->  Jeśli tworzysz <xref:System.Lazy%601> obiekt z `isThreadSafe` parametr konstruktora równa `false` lub `mode` parametr konstruktora równa <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>, musi mieć dostęp <xref:System.Lazy%601> obiektu z jednego wątku lub podać własne Synchronizacja. Dotyczy to wszystkich aspektów obiektu, w tym usługi pamięć podręczna wyjątek.  
+>  Jeśli <xref:System.Lazy%601> utworzysz obiekt <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> `false` `isThreadSafe` <xref:System.Lazy%601> z`mode` parametrem konstruktora ustawionym na lub parametrem konstruktora ustawionym na, musisz uzyskać dostęp do obiektu z pojedynczego wątku lub podać własny synchronizacji. Dotyczy to wszystkich aspektów obiektu, w tym buforowania wyjątków.  
   
- Jak wspomniano w poprzedniej sekcji <xref:System.Lazy%601> obiekty utworzone przez określenie <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType> inaczej traktują wyjątków. Za pomocą <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>, mogą konkurować wiele wątków, aby zainicjować <xref:System.Lazy%601> wystąpienia. W tym przypadku wyjątki nie są buforowane i próbuje uzyskać dostęp do <xref:System.Lazy%601.Value%2A> właściwości można kontynuować przed pomyślnym zakończeniem inicjowania.  
+ Jak wskazano w poprzedniej sekcji, <xref:System.Lazy%601> obiekty utworzone przez określanie <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType> wyjątków traktują się inaczej. W <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>przypadku wielu wątków może konkurować, aby <xref:System.Lazy%601> zainicjować wystąpienie. W takim przypadku wyjątki nie są buforowane, a próby uzyskania dostępu <xref:System.Lazy%601.Value%2A> do właściwości mogą być kontynuowane do momentu pomyślnego inicjalizacji.  
   
- Poniższa tabela zawiera podsumowanie sposobu <xref:System.Lazy%601> konstruktory kontrolowanie buforowania wyjątku.  
+ Poniższa tabela zawiera podsumowanie sposobu, w <xref:System.Lazy%601> jaki konstruktory kontrolują buforowanie wyjątków.  
   
-|Konstruktor|Tryb awaryjny wątku|Używa metody inicjującej|Wyjątki są buforowane.|  
+|Konstruktor|Tryb bezpieczny wątku|Używa metody inicjującej|Wyjątki są buforowane|  
 |-----------------|------------------------|--------------------------------|---------------------------|  
-|Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Nie|Nie|  
-|Lazy(T)(FUNC(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Tak|Yes|  
-|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Nie|Nie|  
-|Lazy(T)(FUNC(T), atrybut typu wartość logiczna)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Yes|Tak|  
-|Lazy(T)(LazyThreadSafetyMode)|Określone przez użytkownika|Nie|Nie|  
-|Lazy(T)(Func(T), LazyThreadSafetyMode)|Określone przez użytkownika|Yes|Nie, gdy użytkownik poda <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>; w przeciwnym razie tak.|  
+|Opóźnione (T) ()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Nie|Nie|  
+|Opóźniony (T) (Func (T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Tak|Yes|  
+|Opóźniony (T) (wartość logiczna)|`True`(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Nie|Nie|  
+|Opóźniony (T) (Func (T), wartość logiczna)|`True`(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Tak|Yes|  
+|Lazy(T)(LazyThreadSafetyMode)|Określony przez użytkownika|Nie|Nie|  
+|Opóźniony (T) (Func (T), LazyThreadSafetyMode)|Określony przez użytkownika|Tak|Nie, jeśli użytkownik <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>określi; w przeciwnym razie, tak.|  
   
-## <a name="implementing-a-lazy-initialized-property"></a>Implementowanie właściwości inicjowany z opóźnieniem  
- Aby zaimplementować właściwości publicznej przy użyciu inicjowania z opóźnieniem, zdefiniuj do pola pomocniczego właściwości jako <xref:System.Lazy%601>i zwróć <xref:System.Lazy%601.Value%2A> właściwość `get` metody dostępu właściwości.  
+## <a name="implementing-a-lazy-initialized-property"></a>Implementowanie właściwości inicjowania z opóźnieniem  
+ Aby zaimplementować Właściwość publiczną przy użyciu inicjowania z opóźnieniem, Zdefiniuj pole zapasowe właściwości jako <xref:System.Lazy%601>i <xref:System.Lazy%601.Value%2A> Zwróć właściwość z `get` metody dostępu do właściwości.  
   
  [!code-csharp[Lazy#5](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#5)]
  [!code-vb[Lazy#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#5)]  
   
- <xref:System.Lazy%601.Value%2A> Właściwość jest tylko do odczytu; w związku z tym, nie ma właściwość, która udostępniła je `set` metody dostępu. Jeśli potrzebujesz właściwości odczytu/zapisu, wspierane przez <xref:System.Lazy%601> obiektu `set` dostępu należy utworzyć nowy <xref:System.Lazy%601> obiektu i przypisz je do magazynu zapasowego. `set` Dostępu należy utworzyć wyrażenie lambda, które zwraca nową wartość właściwości, który został przekazany do `set` metody dostępu i przekazać to wyrażenie lambda do konstruktora dla nowego <xref:System.Lazy%601> obiektu. Następny dostęp <xref:System.Lazy%601.Value%2A> właściwość spowoduje, że inicjowania nowego <xref:System.Lazy%601>i jego <xref:System.Lazy%601.Value%2A> właściwości po tej dacie zwróci nową wartość, która została przypisana do właściwości. Przyczyna to zawiłe rozmieszczenie jest zachowanie wielowątkowość ochronę wbudowaną <xref:System.Lazy%601>. W przeciwnym razie Akcesory właściwości musiałaby pierwszą wartość zwrócona przez obiekt w pamięci podręcznej <xref:System.Lazy%601.Value%2A> właściwości i modyfikować tylko wartość w pamięci podręcznej i trzeba napisać własny kod metodą o bezpiecznych wątkach, aby to zrobić. Ze względu na dodatkowe inicjalizacje, wymagane przez właściwości odczytu/zapisu, wspierane przez <xref:System.Lazy%601> obiektu wydajności nie może być akceptowalne. Ponadto w zależności od konkretnego scenariusza dodatkowe koordynacji może być konieczne w celu uniknięcia wyścigu między metody ustawiające i metod pobierających.  
+ Właściwość <xref:System.Lazy%601.Value%2A> jest tylko do odczytu; w związku z tym właściwość, która ujawnia ją, `set` nie ma metody dostępu. Jeśli wymagana jest właściwość <xref:System.Lazy%601> odczytu/zapisu dla obiektu `set` , metoda dostępu musi utworzyć nowy <xref:System.Lazy%601> obiekt i przypisać go do magazynu zapasowego. Metoda dostępu musi utworzyć wyrażenie lambda zwracające nową wartość właściwości, która została przekazana `set` do metody dostępu, i przekazać do konstruktora wyrażenie lambda dla nowego <xref:System.Lazy%601> obiektu. `set` Następny dostęp <xref:System.Lazy%601.Value%2A> do właściwości spowoduje zainicjowanie nowej <xref:System.Lazy%601>, a jej <xref:System.Lazy%601.Value%2A> właściwość zwróci nową wartość, która została przypisana do właściwości. Przyczyną tego rozmieszczenia zawiłe jest zachowanie ochrony wielowątkowości wbudowanej <xref:System.Lazy%601>. W przeciwnym razie metody dostępu do właściwości będą musiały buforować pierwszą wartość zwróconą <xref:System.Lazy%601.Value%2A> przez właściwość i modyfikować tylko buforowaną wartość i należy napisać własny kod bezpieczny dla wątków, aby to zrobić. Ze względu na dodatkowe inicjalizacje wymagane przez właściwość odczytu/zapisu, które są <xref:System.Lazy%601> obsługiwane przez obiekt, wydajność może nie być akceptowalna. Ponadto w zależności od konkretnego scenariusza może być wymagana dodatkowa koordynacja, aby uniknąć sytuacji wyścigu między metodami tworzenia i pobierania.  
   
-## <a name="thread-local-lazy-initialization"></a>Inicjalizacja z opóźnieniem Thread-Local  
- W niektórych scenariuszach wielowątkowych można nadać każdy wątek prywatnych danych. Takie dane są nazywane *wątków lokalnych danych*. W .NET Framework w wersji 3.5 i starszych, można zastosować `ThreadStatic` atrybutu ze zmienną statycznej charakteryzowanych lokalnej wątku. Jednak przy użyciu `ThreadStatic` atrybut może prowadzić do powstawania błędów. Na przykład instrukcje inicjowania nawet podstawowe spowoduje, że zmienną można zainicjować tylko na pierwszym wątkiem, który uzyskuje dostęp do niego, jak pokazano w poniższym przykładzie.  
+## <a name="thread-local-lazy-initialization"></a>Inicjalizacja z opóźnieniem wątku lokalnego  
+ W niektórych scenariuszach wielowątkowych można przydzielić każdemu wątkowi swoje prywatne dane. Takie dane są nazywane *danymi lokalnymi wątku*. W .NET Framework w wersji 3,5 i starszych można zastosować `ThreadStatic` atrybut do zmiennej statycznej w celu ustawienia jej jako wątku lokalnego. Jednak użycie `ThreadStatic` atrybutu może prowadzić do delikatnych błędów. Na przykład nawet podstawowe instrukcje inicjowania spowodują, że zmienna zostanie zainicjowana tylko na pierwszym wątku, który uzyskuje do niego dostęp, jak pokazano w poniższym przykładzie.  
   
  [!code-csharp[Lazy#6](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#6)]
  [!code-vb[Lazy#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#6)]  
   
- W innych wątkach zmienna zostaną zainicjowane przy użyciu wartości domyślnej (zero). Jako alternatywę w .NET Framework w wersji 4, możesz użyć <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> typ, aby utworzyć zmienną oparta na wystąpieniach, lokalnej wątku, który jest inicjowany we wszystkich wątkach, <xref:System.Action%601> delegat, który należy podać. W poniższym przykładzie wszystkie wątki dostęp `counter` zostanie wyświetlona jego wartość początkową jako 1.  
+ We wszystkich innych wątkach zmienna zostanie zainicjowana przy użyciu wartości domyślnej (zero). Alternatywnie w .NET Framework w wersji 4, można użyć <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> typu, aby utworzyć zmienną lokalną wątku, która jest inicjowana we wszystkich wątkach <xref:System.Action%601> przez podaną delegata. W poniższym przykładzie wszystkie wątki, do których uzyskuje dostęp `counter` , będą widzieć wartość początkową 1.  
   
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601> opakowuje jego obiekt w podobny sposób jak <xref:System.Lazy%601>, za pomocą tych podstawowych różnic:  
+ <xref:System.Threading.ThreadLocal%601>Zawija swój obiekt w taki sam sposób jak <xref:System.Lazy%601>w przypadku następujących zasadniczych różnic:  
   
-- Każdy wątek inicjuje zmienną lokalną wątku, przy użyciu własnych danych prywatnego, który nie jest dostępny z innych wątków.  
+- Każdy wątek inicjuje zmienną lokalną wątku przy użyciu własnych danych prywatnych, które nie są dostępne z innych wątków.  
   
-- <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> Właściwość jest odczytu / zapisu i dowolną liczbę razy może być modyfikowany. Może to wpłynąć na Propagacja wyjątków, na przykład jeden `get` operacji może zgłosić wyjątek, ale następny może zostać pomyślnie zainicjowany wartość.  
+- <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> Właściwość jest do odczytu i zapisu i może być modyfikowana dowolną liczbę razy. Może to mieć wpływ na propagację wyjątku, na przykład `get` jedna operacja może zgłosić wyjątek, ale następny z nich może pomyślnie zainicjować wartość.  
   
-- Jeśli nie podano żadnych delegata inicjowania, <xref:System.Threading.ThreadLocal%601> zainicjuje jego typ opakowany przy użyciu wartości domyślnej typu. W tym zakresie <xref:System.Threading.ThreadLocal%601> jest spójna z <xref:System.ThreadStaticAttribute> atrybutu.  
+- Jeśli nie podano delegata inicjalizacji, <xref:System.Threading.ThreadLocal%601> program zainicjuje swój opakowany typ przy użyciu wartości domyślnej typu. W tym przypadku <xref:System.Threading.ThreadLocal%601> jest spójny <xref:System.ThreadStaticAttribute> z atrybutem.  
   
- W poniższym przykładzie pokazano, że każdy wątek, uzyskuje dostęp do `ThreadLocal<int>` wystąpienie zyskuje własną unikatową kopię danych.  
+ Poniższy przykład pokazuje, że każdy wątek, który uzyskuje `ThreadLocal<int>` dostęp do wystąpienia, pobiera własną unikatową kopię danych.  
   
  [!code-csharp[Lazy#9](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#9)]
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
-## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Thread-Local zmiennych Parallel.For i ForEach  
- Kiedy używasz <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody lub <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> metody do wykonywania iteracji źródeł danych w sposób równoległy, możesz użyć przeciążenia, które ma wbudowaną obsługę danych lokalnej wątku. W tych metodach umiejscowienie wątku jest realizowane za pośrednictwem lokalnego delegatów do tworzenia, dostęp i wyczyścić dane. Aby uzyskać więcej informacji, zobacz [jak: Zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) i [jak: Zapisywanie pętli Parallel.ForEach ze zmiennymi lokalnymi partycji](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Zmienne lokalne wątku równolegle. dla i ForEach  
+ W przypadku użycia <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody lub <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> metody do iteracji równolegle ze źródłami danych można użyć przeciążenia, które mają wbudowaną obsługę danych wątku lokalnego. W tych metodach można uzyskać dostęp do zasobów lokalnych przy użyciu lokalnych delegatów do tworzenia, uzyskiwania dostępu i czyszczenia danych. Aby uzyskać więcej informacji, zobacz [jak: Napisz Parallel. for — pętla ze zmiennymi](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) lokalnymi wątku i [instrukcje: Napisz równoległą pętlę. ForEach ze zmiennymi](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)lokalnymi partycji.  
   
-## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Przy użyciu inicjowania z opóźnieniem dla scenariuszy małym obciążeniem  
- W scenariuszach, w którym trzeba z opóźnieniem zainicjować dużą liczbę obiektów, można zdecydować o zawijania każdego obiektu w <xref:System.Lazy%601> wymaga zbyt dużej ilości pamięci lub zbyt wiele zasobów obliczeniowych. Lub możesz mieć rygorystyczne wymagania dotyczące sposobu incjalizacji jest widoczna. W takich przypadkach można użyć `static` (`Shared` w języku Visual Basic) metody <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> klasy z opóźnieniem inicjalizacji każdego obiektu bez opakowującego aplikacje dostępnego w wystąpieniu <xref:System.Lazy%601>.  
+## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Korzystanie z inicjowania z opóźnieniem dla scenariuszy o niskim obciążeniu  
+ W scenariuszach, w których konieczne jest zainicjowanie dużej liczby obiektów z opóźnieniem, można zdecydować, że opakowanie każdego obiektu <xref:System.Lazy%601> w wymaga zbyt dużej ilości pamięci lub zbyt wielu zasobów obliczeniowych. Można też mieć rygorystyczne wymagania dotyczące sposobu, w jaki jest ujawniane Inicjowanie z opóźnieniem. W takich `static` przypadkach można użyć metod (`Shared` w <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> Visual Basic) klasy do opóźnionego inicjowania każdego <xref:System.Lazy%601>obiektu bez zawijania go w wystąpieniu.  
   
- W poniższym przykładzie przyjęto założenie, że, zamiast zawijania cały `Orders` obiektu w jednym <xref:System.Lazy%601> obiektu jest inicjowany z opóźnieniem osoba `Order` obiektów tylko wtedy, gdy są one wymagane.  
+ W poniższym przykładzie Załóżmy, że zamiast zawijać cały `Orders` obiekt w jednym <xref:System.Lazy%601> obiekcie, są inicjowane z opóźnieniem pojedyncze `Order` obiekty tylko wtedy, gdy są wymagane.  
   
  [!code-csharp[Lazy#10](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#10)]
  [!code-vb[Lazy#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#10)]  
   
- W tym przykładzie należy zauważyć, że procedura inicjowania została wywołana w każdej iteracji pętli. W scenariuszach wielowątkowych pierwszym wątku do wywołania procedury inicjowania jest ten, którego wartość jest widoczna dla wszystkich wątków. Nowsze wątków także wywoływać procedury inicjowania, ale jego wyniki nie są używane. Jeśli tego rodzaju potencjalnych sytuacji wyścigu nie jest dopuszczalne, użyj przeciążenia <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> która przyjmuje argument logiczny i obiekt synchronizacji.  
+ W tym przykładzie należy zauważyć, że procedura inicjacji jest wywoływana na każdej iteracji pętli. W scenariuszach wielowątkowych pierwszy wątek do wywołania procedury inicjowania jest taki, którego wartość jest widoczna dla wszystkich wątków. Późniejsze wątki również wywołują procedurę inicjowania, ale ich wyniki nie są używane. Jeśli ten rodzaj potencjalnego warunku wyścigu nie jest akceptowalny, Użyj przeciążenia <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> , które przyjmuje argument logiczny i obiekt synchronizacji.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Zarządzana wątkowość — podstawy](../../../docs/standard/threading/managed-threading-basics.md)
 - [Wątki i wątkowość](../../../docs/standard/threading/threads-and-threading.md)
 - [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Instrukcje: Wykonywanie Incjalizacji obiektów](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Instrukcje: Wykonaj opóźnione inicjowanie obiektów](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

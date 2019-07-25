@@ -43,6 +43,8 @@
               href: keywords/void.md
             - name: var
               href: keywords/var.md
+            - name: Typy niezarządzane
+              href: builtin-types/unmanaged-types.md
             - name: Tabele odwołań dla typów
               items:
                 - name: Tabela typów wbudowanych

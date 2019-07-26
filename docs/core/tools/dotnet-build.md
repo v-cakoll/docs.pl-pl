@@ -1,17 +1,17 @@
 ---
-title: polecenie kompilacji DotNet
-description: Dotnet kompilacji polecenia kompilacji w projekt i wszystkie jego zależności.
+title: polecenie kompilacji dotnet
+description: Polecenie kompilacji dotnet kompiluje projekt i wszystkie jego zależności.
 ms.date: 04/24/2019
-ms.openlocfilehash: df264fe830259832e5c75db9fd71230ba70a9f18
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: db2c859529d3dd21d2cd43445419b99a4256b42e
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959192"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331059"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**Ten artykuł dotyczy: ✓** platformy .NET Core SDK w wersji 1.x i nowszymi wersjami
+**Ten artykuł dotyczy: ✓** .NET Core 1. x SDK i nowszych wersji
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -19,7 +19,7 @@ ms.locfileid: "65959192"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet build` -Kompiluje projekt i wszystkie jego zależności.
+`dotnet build`-Kompiluje projekt i wszystkie jego zależności.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -32,15 +32,15 @@ dotnet build [-h|--help]
 
 ## <a name="description"></a>Opis
 
-`dotnet build` Polecenie kompiluje projekt i jego zależności do zestawu plików binarnych. Pliki binarne obejmują kodu projektu w plikach języka pośredniego (IL) z *.dll* plików symboli i rozszerzenia, które są używane do debugowania za pomocą *.pdb* rozszerzenia. Plik JSON zależności (*\*. deps.json*) jest generowany, znajduje się wykaz zależności aplikacji. A  *\*. runtimeconfig.json* generowany jest plik, który określa udostępnionego środowiska uruchomieniowego i jego wersję aplikacji.
+`dotnet build` Polecenie kompiluje projekt i jego zależności do zestawu plików binarnych. Pliki binarne zawierają kod projektu w plikach języka pośredniego (IL) z rozszerzeniem *. dll* i plikami symboli używanymi do debugowania z rozszerzeniem *. pdb* . Tworzony jest plik JSON zależności ( *. deps. JSON*), który zawiera listę zależności aplikacji. Tworzony jest plik *. runtimeconfig. JSON* , który określa udostępnione środowisko uruchomieniowe i jego wersję dla aplikacji.
 
-Jeśli projekt zawiera zależności innych firm, takich jak biblioteki z pakietów NuGet, jest rozwiązany z pamięcią podręczną programu NuGet i nie są dostępne w skompilowanych danych wyjściowych projektu. Mając to na uwadze, wynikiem `dotnet build` nie jest gotowa do przeniesienia do innego komputera do uruchomienia. Jest to w przeciwieństwie do zachowania programu .NET Framework w budynku, które projekt wykonywalny (aplikacji) generuje dane wyjściowe, który jest możliwy do uruchomienia na dowolnym komputerze, gdzie .NET Framework jest zainstalowana. Aby podobnie środowisko z platformą .NET Core, musisz użyć [publikowania dotnet](dotnet-publish.md) polecenia. Aby uzyskać więcej informacji, zobacz [wdrożenie aplikacji programu .NET Core](../deploying/index.md).
+Jeśli projekt zawiera zależności innych firm, takie jak biblioteki z NuGet, są one rozpoznawane z pamięci podręcznej NuGet i nie są dostępne z skompilowanymi danymi wyjściowymi projektu. Z tego względu `dotnet build` produkt nie jest gotowy do przeniesienia na inną maszynę do uruchomienia. Jest to w przeciwieństwie do zachowania .NET Framework, w którym Kompilowanie projektu wykonywalnego (aplikacji) generuje dane wyjściowe, które są możliwy do uruchomienia na dowolnym komputerze, na którym zainstalowano .NET Framework. Aby korzystać z podobnego środowiska z platformą .NET Core, należy użyć polecenia [dotnet Publish](dotnet-publish.md) . Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md).
 
-Kompilowanie wymaga *project.assets.json* pliku, który znajduje się wykaz zależności aplikacji. Plik jest tworzony, gdy [ `dotnet restore` ](dotnet-restore.md) jest wykonywany. Bez pliku zasobów w miejscu narzędzi nie można rozpoznać zestawy odwołań, co powoduje błędy. Za pomocą programu .NET Core 1.x SDK wymagane do uruchamiania jawnie `dotnet restore` przed uruchomieniem `dotnet build`. Począwszy od programu .NET Core 2.0 SDK, `dotnet restore` uruchamia się domyślnie po uruchomieniu `dotnet build`. Jeśli chcesz wyłączyć niejawne przywracania, podczas uruchamiania polecenia kompilacji, można przekazać `--no-restore` opcji.
+Kompilowanie wymaga pliku *Project. assets. JSON* , który zawiera listę zależności aplikacji. Plik jest tworzony, gdy [`dotnet restore`](dotnet-restore.md) jest wykonywany. Bez pliku zasobów na miejscu narzędzia nie mogą rozpoznać zestawów referencyjnych, które powodują błędy. Przy użyciu zestawu SDK platformy .NET Core 1. x należy jawnie uruchomić `dotnet restore` program przed uruchomieniem. `dotnet build` Począwszy od zestawu SDK platformy .NET Core `dotnet restore` 2,0, jest uruchamiany niejawnie podczas uruchamiania. `dotnet build` Aby wyłączyć niejawne przywracanie podczas wykonywania polecenia Build, można przekazać `--no-restore` opcję.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-Projekt jest wykonywalny lub nie jest określana przez `<OutputType>` właściwość w pliku projektu. Poniższy przykład przedstawia projekt, który generuje kod wykonywalny:
+Czy projekt jest plikiem wykonywalnym, czy nie jest określony `<OutputType>` przez właściwość w pliku projektu. W poniższym przykładzie przedstawiono projekt tworzący kod wykonywalny:
 
 ```xml
 <PropertyGroup>
@@ -48,21 +48,21 @@ Projekt jest wykonywalny lub nie jest określana przez `<OutputType>` właściwo
 </PropertyGroup>
 ```
 
-Aby wygenerować bibliotekę, Pomiń `<OutputType>` właściwości. Główną różnicą w skompilowanych danych wyjściowych jest, że biblioteki DLL IL nie zawiera punkty wejścia i nie można wykonać.
+Aby utworzyć bibliotekę, należy pominąć `<OutputType>` właściwość. Główną różnicą w skompilowanych danych wyjściowych jest to, że biblioteka IL DLL biblioteki nie zawiera punktów wejścia i nie można jej wykonać.
 
 ### <a name="msbuild"></a>MSBuild
 
-`dotnet build` używa programu MSBuild do kompilowania projektu, więc obsługują równoległych oraz przyrostowe kompilacji. Aby uzyskać więcej informacji, zobacz [kompilacje przyrostowe](/visualstudio/msbuild/incremental-builds).
+`dotnet build`używa programu MSBuild do skompilowania projektu, aby obsługiwał kompilacje równoległe i przyrostowe. Aby uzyskać więcej informacji, [](/visualstudio/msbuild/incremental-builds)Zobacz Kompilacje przyrostowe.
 
-Oprócz jej opcji `dotnet build` polecenie akceptuje opcje programu MSBuild `-p` do ustawiania właściwości lub `-l` do definiowania rejestrator. Aby uzyskać więcej informacji o tych opcjach, zobacz [odwołanie do wiersza polecenia MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). Lub możesz również użyć [dotnet msbuild](dotnet-msbuild.md) polecenia.
+Oprócz opcji, `dotnet build` polecenie akceptuje Opcje programu MSBuild, takie jak `-p` właściwości ustawienia lub `-l` definiowania rejestratora. Aby uzyskać więcej informacji na temat tych opcji, zobacz [informacje dotyczące wiersza polecenia programu MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). Lub można również użyć polecenia programu [dotnet MSBuild](dotnet-msbuild.md) .
 
-Uruchamianie `dotnet build` jest odpowiednikiem `dotnet msbuild -restore -target:Build`.
+Uruchomiona `dotnet build` jest równoważna `dotnet msbuild -restore -target:Build`z.
 
 ## <a name="arguments"></a>Argumenty
 
 `PROJECT | SOLUTION`
 
-Plik projektu lub rozwiązania do kompilacji. Jeśli nie określono pliku projektu lub rozwiązania, MSBuild przeszukuje bieżącego katalogu roboczego dla pliku, który ma rozszerzenie pliku, który kończy się w jednym *proj* lub *sln* i używa tego pliku.
+Plik projektu lub rozwiązania do skompilowania. Jeśli plik projektu lub rozwiązania nie zostanie określony, program MSBuild przeszukuje bieżący katalog roboczy dla pliku, który ma rozszerzenie pliku, które kończy się w *proj* lub *sln* i używa tego pliku.
 
 ## <a name="options"></a>Opcje
 
@@ -72,79 +72,79 @@ Plik projektu lub rozwiązania do kompilacji. Jeśli nie określono pliku projek
 
 * **`-f|--framework <FRAMEWORK>`**
 
-  Kompiluje dla określonego [framework](../../standard/frameworks.md). Struktura musi być zdefiniowany w [pliku projektu](csproj.md).
+  Kompiluje dla określonej [struktury](../../standard/frameworks.md). Struktura musi być zdefiniowana w [pliku projektu](csproj.md).
 
 * **`--force`**
 
-  Wymusza wszystkie zależności rozwiązany, nawet wtedy, gdy ostatnie przywracanie zakończyło się pomyślnie. Określanie ta flaga jest taka sama jak usuwanie *project.assets.json* pliku. Dostępne, ponieważ .NET Core 2.0 SDK.
+  Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* . Dostępne od wersji .NET Core 2,0 SDK.
 
 * **`-h|--help`**
 
-  Drukuje krótki pomoc dotyczącą polecenia.
+  Drukuje krótką pomoc dla polecenia.
 
 * **`--interactive`**
 
-  Umożliwia polecenie, aby zatrzymać i czeka na dane wejściowe użytkownika lub akcji. Na przykład w celu ukończenia uwierzytelniania. Dostępne, ponieważ .NET Core SDK w wersji 3.0.
+  Zezwala na zatrzymanie polecenia i oczekiwanie na dane wejściowe użytkownika lub akcję. Na przykład, aby ukończyć uwierzytelnianie. Dostępne od wersji .NET Core 3,0 SDK.
 
 * **`--no-dependencies`**
 
-  Ignoruje odwołania do projektu do projektu (P2P) i tylko kompilacje określonym katalogu głównym projektu.
+  Ignoruje odwołania między projektami i projektami (P2P) i kompiluje tylko określony projekt główny.
 
 * **`--no-incremental`**
 
-  Oznaczenie kompilacji jako niebezpieczny dla kompilacji przyrostowej. Ta flaga powoduje wyłączenie kompilacji przyrostowej i wymusza czyste odbudowania tego wykresu zależności projektu.
+  Oznacza kompilację jako niebezpieczną dla kompilacji przyrostowej. Ta flaga powoduje wyłączenie kompilacji przyrostowej i wymuszenie czystej odbudowy wykresu zależności projektu.
 
 * **`--no-logo`**
 
-  Nie wyświetla transparentu lub komunikat o prawach autorskich. Dostępne, ponieważ .NET Core SDK w wersji 3.0.
+  Nie wyświetla transparentu początkowego ani komunikatu o prawach autorskich. Dostępne od wersji .NET Core 3,0 SDK.
 
 * **`--no-restore`**
 
-  Nie jest wykonywana niejawna przywracania, podczas kompilacji. Dostępne, ponieważ .NET Core 2.0 SDK.
+  Nie wykonuje przywracania niejawnego podczas kompilacji. Dostępne od wersji .NET Core 2,0 SDK.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Katalog, w której chcesz umieścić skompilowane pliki binarne. Musisz również zdefiniować `--framework` po określeniu tej opcji. Jeśli nie zostanie określony, domyślna ścieżka to `./bin/<configuration>/<framework>/`.
+  Katalog, w którym mają zostać umieszczone skompilowane pliki binarne. Należy również zdefiniować `--framework` po określeniu tej opcji. Jeśli nie zostanie określony, ścieżka domyślna to `./bin/<configuration>/<framework>/`.
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Określa docelowe środowisko uruchomieniowe. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych (RID), zobacz [katalogu RID](../rid-catalog.md).
+  Określa docelowy środowisko uruchomieniowe. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md).
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości MSBuild. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`. Wartość domyślna to `minimal`.
+  Ustawia poziom szczegółowości programu MSBuild. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]` Wartość domyślna to `minimal`.
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
-  Ustawia wartość `$(VersionSuffix)` właściwość do użycia podczas tworzenia projektu. To tylko wtedy, gdy `$(Version)` nie jest właściwością. Następnie `$(Version)` ustawiono `$(VersionPrefix)` w połączeniu z `$(VersionSuffix)`, oddzielone kreską.
+  Ustawia wartość `$(VersionSuffix)` właściwości, która ma być używana podczas kompilowania projektu. Działa to tylko wtedy, `$(Version)` gdy właściwość nie jest ustawiona. Następnie jest ustawiona `$(VersionPrefix)` na połączone z `$(VersionSuffix)`, oddzielone kreską. `$(Version)`
 
 ## <a name="examples"></a>Przykłady
 
-* Tworzenie projektu i jego zależności:
+* Kompiluj projekt i jego zależności:
 
   ```console
   dotnet build
   ```
 
-* Tworzenie projektu i jego zależności za pomocą wersji konfiguracji:
+* Kompilowanie projektu i jego zależności przy użyciu konfiguracji wydania:
 
   ```console
   dotnet build --configuration Release
   ```
 
-* Tworzenie projektu i jego zależności dla określonego środowiska uruchomieniowego (w tym przykładzie Ubuntu 18.04):
+* Kompiluj projekt i jego zależności dla określonego środowiska uruchomieniowego (w tym przykładzie Ubuntu 18,04):
 
   ```console
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
-* Skompiluj projekt, a następnie użyj określonego źródła pakietu NuGet podczas operacji przywracania (.NET Core 2.0 SDK i nowsze wersje):
+* Kompiluj projekt i Użyj określonego źródła pakietu NuGet podczas operacji przywracania (zestaw .NET Core 2,0 SDK i nowsze wersje):
 
   ```console
   dotnet build --source c:\packages\mypackages
   ```
 
-* Skompilować projekt i ustawić wersję 1.2.3.4 jako parametr kompilacji za pomocą `-p` [opcji MSBuild](#msbuild):
+* Skompiluj projekt i ustaw wersję 1.2.3.4 jako parametr kompilacji przy użyciu `-p` [opcji MSBuild](#msbuild):
 
   ```console
   dotnet build -p:Version=1.2.3.4

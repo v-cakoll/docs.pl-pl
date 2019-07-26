@@ -1,78 +1,78 @@
 ---
-title: Architektura bezserwerowa — aplikacje niekorzystające z serwera
-description: Badań różnych architektur oraz aplikacje, które są obsługiwane przez architektury bezserwerowe, w tym aplikacje sieci web, mobilnych i IoT.
+title: Architektura bezserwerowa — aplikacje bezserwerowe
+description: Eksploracja różnych architektur i aplikacji, które są obsługiwane przez architektury bezserwerowe, w tym aplikacje sieci Web, urządzenia przenośne i IoT.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b22fecfdc693154dbdeb3e872e0e246e8ca41f9
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967820"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68434068"
 ---
 # <a name="serverless-architecture"></a>Architektura bezserwerowa
 
-Dostępnych jest wiele metod za pomocą [bezserwerowe](http://azure.com/serverless) architektury. W tym rozdziale przedstawiono przykłady typowych architektur, które integrują się bez użycia serwera. Obejmuje ona również kwestie, które mogą stanowić wyzwania dodatkowe lub wymagają dodatkowych brany pod uwagę podczas implementowania bez użycia serwera. Na koniec kilka przykładów projektu są pod warunkiem, które ilustrują, różne przypadki użycia bez użycia serwera.
+Istnieje wiele metod korzystania z architektur [](https://azure.com/serverless) bezserwerowych. W tym rozdziale przedstawiono przykłady typowych architektur, które integrują bezserwerowo. Obejmuje to również problemy, które mogą powodować dodatkowe wyzwania lub wymagać dodatkowej uwagi podczas implementowania bezserwerowego. Na koniec przedstawiono kilka przykładów projektowania, które ilustrują różne przypadki użycia serwera.
 
-Bez użycia serwera hostów często używają istniejącego opartych na kontenerach lub warstwy PaaS do zarządzania wystąpieniami bez użycia serwera. Na przykład, na podstawie usługi Azure Functions [usługi Azure App Service](https://docs.microsoft.com/azure/app-service/). Usługa App Service umożliwia skalowanie w poziomie wystąpienia i zarządzanie nimi środowiska uruchomieniowego, który jest wykonywany kod usługi Azure Functions. W przypadku funkcji z systemem Windows działa hosta jako PaaS i skaluje się poza środowisko uruchomieniowe platformy .NET. Dla funkcji opartych na systemie Linux host korzysta z kontenerów.
+Hosty bezserwerowe często używają istniejącej warstwy opartej na kontenerze lub PaaS do zarządzania wystąpieniami bezserwerowymi. Na przykład Azure Functions jest oparta na [Azure App Service](https://docs.microsoft.com/azure/app-service/). App Service jest używany do skalowania wystąpień i zarządzania środowiskiem uruchomieniowym, które wykonuje Azure Functions kodzie. W przypadku funkcji opartych na systemie Windows Host działa jako PaaS i skaluje środowisko uruchomieniowe platformy .NET. W przypadku funkcji opartych na systemie Linux Host wykorzystuje kontenery.
 
-![Architektura usługi Azure Functions](./media/azure-functions-architecture.png)
+![Architektura Azure Functions](./media/azure-functions-architecture.png)
 
-Podstawowe zadania Webjob udostępnia kontekst wykonania dla funkcji. Środowisko uruchomieniowe języka uruchamia skrypty, wykonuje bibliotek i obsługuje framework dla języka docelowego. Na przykład środowisko Node.js jest używane do uruchamiania funkcji języka JavaScript i .NET Framework jest używany do uruchamiania funkcji języka C#. Dowiesz się więcej na temat opcji języka i platformy dalej w tym rozdziale.
+Rdzeń WebJobs zawiera kontekst wykonywania funkcji. Środowisko uruchomieniowe języka uruchamia skrypty, wykonuje biblioteki i obsługuje platformę dla języka docelowego. Na przykład program Node. js służy do uruchamiania funkcji języka JavaScript, a .NET Framework jest używany do uruchamiania C# funkcji. Więcej informacji o opcjach języka i platformy można znaleźć w dalszej części tego rozdziału.
 
-Niektóre projekty mogą korzystać z Przenosimy podejścia "całości opartą" bez użycia serwera. Aplikacje, które w dużym stopniu polegają na mikrousługi może wdrożyć wszystkie mikrousługi korzystające z technologii bezserwerowej. Większość aplikacji jest hybrydowych, następującego projektu N-warstwowa i składników, które mają sens, ponieważ składniki programu są moduły i skalowalnego niezależnie przy użyciu bezserwerowej. Aby poznać te scenariusze, w tej sekcji przedstawiono typowe przykłady architektury używających bez użycia serwera.
+Niektóre projekty mogą korzystać z metody "All-in" do bezserwerowego. Aplikacje, które opierają się na mikrousługach, mogą wdrożyć wszystkie mikrousługi przy użyciu technologii bezserwerowej. Większość aplikacji jest hybrydowych, po jednowarstwowym zaprojektowaniu i korzystaniu z serwera dla składników, które mają sens, ponieważ składniki są modularne i niezależnie skalowalne. Aby pomóc w tym scenariuszu, w tej sekcji omówiono niektóre typowe przykłady architektury, które używają bezserwerowego.
 
-## <a name="full-serverless-back-end"></a>Pełne bez użycia serwera zaplecza
+## <a name="full-serverless-back-end"></a>Pełne zaplecze bezserwerowe
 
-Pełne bezserwerowe zaplecze jest idealny dla kilka typów scenariuszy, szczególnie w przypadku tworzenia nowego lub aplikacje "green field". Aplikacji za pomocą dużej powierzchni interfejsów API może korzystać z wdrażania każdy interfejs API jako funkcję niewymagającą użycia serwera. Aplikacje, które są oparte na architekturze mikrousług są inny przykład, w którym można zaimplementować jako pełna bez użycia serwera zaplecza. Mikrousługi komunikują się za pośrednictwem różnych protokołów, które ze sobą. Konkretne scenariusze obejmują:
+Pełny zaplecza bezserwerowego jest idealnym rozwiązaniem dla kilku typów scenariuszy, szczególnie podczas tworzenia nowych lub "zielonych pól". Aplikacja o dużym obszarze interfejsów API może korzystać z implementacji każdego interfejsu API jako funkcji bezserwerowej. Aplikacje, które są oparte na architekturze mikrousług, są kolejnym przykładem, który można zaimplementować jako pełny zaplecza bezserwerowego. Mikrousługi komunikują się między sobą za pośrednictwem różnych protokołów. Określone scenariusze obejmują:
 
-* Oparte na interfejsie API produktów SaaS (przykład: procesor płatności finansowe).
-* Opartych na wiadomościach aplikacji (przykład: urządzenie rozwiązanie do monitorowania).
-* Aplikacje koncentruje się na integrację między usługami (przykład: aplikacja rezerwacji linii lotniczych).
-* Procesy okresowe uruchamianie (przykład: czyszczenie oparte na czasomierzu bazy danych).
-* Aplikacje koncentruje się na przekształcania danych (przykład: Importuj wyzwolone przez przekazywanie pliku).
-* Wyodrębnij procesów transformacji i ładowania (ETL).
+* SaaS produkty oparte na interfejsie API (przykład: procesor płatności finansowych).
+* Aplikacje sterowane komunikatami (przykład: rozwiązanie do monitorowania urządzeń).
+* Aplikacje ukierunkowane na integrację usług (przykład: aplikacja do rezerwacji linii lotniczych).
+* Procesy, które są uruchamiane okresowo (przykład: Oczyszczanie bazy danych oparte na czasomierzu).
+* Aplikacje ukierunkowane na Przekształcanie danych (przykład: import wyzwolony przez przekazywanie plików).
+* Wyodrębnij procesy transformacji i ładowania (ETL).
 
 Istnieją inne, bardziej szczegółowe przypadki użycia, które zostały omówione w dalszej części tego dokumentu.
 
-## <a name="monoliths-and-starving-the-beast"></a>Monolitycznych projektów i "blokują beast"
+## <a name="monoliths-and-starving-the-beast"></a>Monolitów i "blokują Beast"
 
-Typowe wyzwania jest migracja istniejącej aplikacji monolitycznych w chmurze. Co najmniej ryzykowne podejściem jest metodą "lift and shift" całkowicie na maszynach wirtualnych. Preferuj wielu sklepach na potrzeby migracji jako możliwość poczynienia modernizuj swoje bazy kodu. Praktyczne podejście do migracji jest nazywany "blokują beast". W tym scenariuszu monolitu jest migrowane "is" zaczynać. Następnie są zmodernizowane wybranych usług. W niektórych przypadkach podpis usługi jest taka sama jak oryginalny: po prostu jest obsługiwany w funkcji. Klienci zostaną zaktualizowani do użycia nową usługę, a nie punktu końcowego monolitu. W międzyczasie czynności, takie jak replikacja bazy danych, Włącz mikrousług, co umożliwia hostowanie własnych magazynu nawet wtedy, gdy transakcje są nadal obsługiwane przez monolitu. Po pewnym czasie wszyscy klienci są migrowane do nowych usług. Monolityczna jest "przetrzymywany" (jego usługi nie jest już wywoływana) do momentu wszystkie funkcje zostały zastąpione. Kombinacja bez użycia serwera i serwery proxy może ułatwić znaczną część tej migracji.
+Typowym wyzwaniem jest Migrowanie istniejącej aplikacji monolitycznej do chmury. Najmniej ryzykownym podejściem jest "podniesienie i przesunięcie" w całości na maszynach wirtualnych. Wiele sklepów preferuje korzystanie z migracji jako okazję do modernizacji bazy kodu. Praktyczne podejście do migracji nazywa się "blokują The Beast". W tym scenariuszu monolitu jest migrowany "AS IS", aby zacząć od. Następnie wybrane usługi są nowoczesne. W niektórych przypadkach podpis usługi jest identyczny z oryginałem: jest on po prostu obsługiwany jako funkcja. Klienci są uaktualniani do korzystania z nowej usługi, a nie punktu końcowego monolitu. W przypadku pośrednich kroków, takich jak replikacja bazy danych, umożliwiają mikrousługom hostowanie własnych magazynów nawet wtedy, gdy transakcje są nadal obsługiwane przez monolitu. Na koniec wszyscy klienci są migrowani do nowych usług. Monolitu jest "Starved" (usługi nie są już wywoływane), dopóki wszystkie funkcje nie zostaną zastąpione. Połączenie bezserwerowych i serwerów proxy może ułatwić większość tej migracji.
 
-![Migracja monolitu bez użycia serwera](./media/serverless-monolith-migration.png)
+![Migracja monolitu bezserwerowa](./media/serverless-monolith-migration.png)
 
-Aby dowiedzieć się więcej na temat tego podejścia, Obejrzyj klip wideo: [Udostępnij swoją aplikację w chmurze przy użyciu bezserwerowej usługi Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102).
+Aby dowiedzieć się więcej na temat tego podejścia, Obejrzyj film wideo: [Przenieś swoją aplikację do chmury, korzystając z bezserwerowego Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102).
 
 ## <a name="web-apps"></a>Aplikacje internetowe
 
-Aplikacje sieci Web są doskonałymi kandydatami do aplikacji bez użycia serwera. Istnieją dwie metody wspólne aplikacje sieci web już dzisiaj: opartych na serwerze i opartych na klienta (na przykład aplikacja jednostronicowa lub SPA). Aplikacje oparte na serwerze sieci web zazwyczaj korzystają warstwa oprogramowania pośredniczącego do wysyłania wywołania interfejsu API do renderowania interfejsu użytkownika sieci web. SPA aplikacji wykonywanie wywołań interfejsu API REST bezpośrednio z przeglądarki. W obu przypadkach bez użycia serwera może obsłużyć żądania interfejsu API REST lub oprogramowanie pośredniczące, udostępniając logikę biznesową niezbędne. Architektura jest do wdrożenia serwera uproszczone statyczną sieci web. Jednej strony aplikacji (SPA) służy HTML, CSS, JavaScript i inne zasoby przeglądarki. Aplikacja internetowa łączy się następnie z zapleczem mikrousług.
+Aplikacje sieci Web są doskonałymi kandydatami dla aplikacji bezserwerowych. Obecnie istnieją dwa popularne podejścia do aplikacji sieci Web: oparte na serwerze i klientach (takie jak aplikacja jednostronicowa lub SPA). Aplikacje sieci Web oparte na serwerze zwykle wykorzystują warstwę oprogramowania pośredniczącego do wystawiania wywołań interfejsu API w celu renderowania interfejsu użytkownika sieci Web. Aplikacje SPA powodują wywołania interfejsu API REST bezpośrednio z przeglądarki. W obu scenariuszach bezserwerowy może obsługiwać oprogramowanie pośredniczące lub żądanie interfejsu API REST, dostarczając niezbędną logikę biznesową. Wspólna architektura polega na rozdzieleniu uproszczonego statycznego serwera sieci Web. Aplikacja jednostronicowa (SPA) służy do obsługi języka HTML, CSS, JavaScript i innych zasobów przeglądarki. Aplikacja internetowa nawiązuje połączenie z zapleczem mikrousług.
 
-## <a name="mobile-back-ends"></a>Zaplecza aplikacji mobilnych
+## <a name="mobile-back-ends"></a>Zaplecza mobilne
 
-Paradygmat oparte na zdarzeniach, bezserwerowe aplikacje sprawia, że ich idealne jako mobilnych zaplecza. Urządzenie przenośne wyzwala zdarzenia i wykonuje kod bez użycia serwera, do spełnienia żądania. Korzystając z zalet modelu bez użycia serwera pozwala deweloperom na rozszerzanie logiki biznesowej bez konieczności wdrażania aktualizacji pełnej aplikacji. Bez użycia serwera podejście również umożliwia zespołom udostępnianie punktów końcowych i działają równolegle.
+Model oparty na zdarzeniach aplikacji bezserwerowych sprawia, że są one idealne dla zaplecza mobilnego. Urządzenie przenośne wyzwala zdarzenia i wykonuje kod bezserwerowy, aby spełnić żądania. Korzystając z modelu bezserwerowego, deweloperzy mogą ulepszyć logikę biznesową bez konieczności wdrażania pełnej aktualizacji aplikacji. Podejście bezserwerowe umożliwia również zespołom Udostępnianie punktów końcowych i równoległe działanie.
 
-Przenośne deweloperzy mogą tworzyć logiki biznesowej bez staje się ekspertami po stronie serwera. Tradycyjnie aplikacje mobilne połączone usługami lokalnymi. Tworzenie warstwy usług wymagane informacje o platformie server paradygmat programowania. Deweloperzy pracowano operacje, aby aprowizować serwery i odpowiednio je skonfigurować. Czasami dni lub nawet tygodnie spędzono na tworzeniu potoku wdrożenia. Wszystkie te wyzwania dotyczą bez użycia serwera.
+Deweloperzy aplikacji mobilnych mogą tworzyć logikę biznesową, nie będąc ekspertami po stronie serwera. Tradycyjnie aplikacje mobilne połączone z usługami lokalnymi. Utworzenie warstwy usług wymaga poznania platformy serwera i modelu programowania. Deweloperzy pracowali przy użyciu operacji w celu udostępniania serwerów i konfigurowania ich odpowiednio. Czasami kilka dni lub nawet tygodni zostały poświęcone na kompilowanie potoku wdrożenia. Wszystkie te wyzwania są rozwiązywane przez serwer.
 
-Aplikacje niewymagające użycia serwera przenosi zależności po stronie serwera i umożliwia deweloperom skoncentrowanie się na logice biznesowej. Na przykład dla deweloperów aplikacji mobilnych, który tworzy aplikacje przy użyciu platformy JavaScript, można tworzyć funkcje niewymagające użycia serwera za pomocą języka JavaScript oraz. Bez użycia serwera hosta zarządza systemu operacyjnego, wystąpienie programu Node.js do hostowania kodu, zależności pakietów i nie tylko. Deweloper jest udostępniana prosty zestaw danych wejściowych i standardowego szablonu dla danych wyjściowych. Następnie mogli skoncentrować się na tworzenie i testowanie logiki biznesowej. Są one mogli używać swoich umiejętności do tworzenia logiki zaplecza dla aplikacji mobilnej bez konieczności Dowiedz się, nowe platformy i stają się "deweloperów po stronie serwera."
+Bezserwerowe abstrakcyjne zależności po stronie serwera i umożliwia deweloperom skoncentrowanie się na logice biznesowej. Na przykład deweloper mobilny, który tworzy aplikacje przy użyciu struktury JavaScript, może również tworzyć funkcje bezserwerowe z JavaScript. Host bezserwerowy zarządza systemem operacyjnym, wystąpieniem środowiska Node. js do hostowania kodu, zależności pakietów i nie tylko. Deweloper jest udostępniany prosty zestaw danych wejściowych i standardowy szablon dla danych wyjściowych. Następnie mogą skupić się na tworzeniu i testowaniu logiki biznesowej. Z tego względu mogą korzystać z istniejących umiejętności do kompilowania logiki zaplecza dla aplikacji mobilnej bez konieczności uczenia się nowych platform ani do "dewelopera po stronie serwera".
 
-![Kończy zaplecza bez użycia serwera aplikacji mobilnych](./media/serverless-mobile-backend.png)
+![Zaplecze urządzenia przenośnego bezserwerowego](./media/serverless-mobile-backend.png)
 
-Większość dostawców rozwiązań w chmurze oferują mobile produktów opartych na bez użycia serwera, które upraszczają całego przenośnych cyklu życia. Produkty mogą zautomatyzować aprowizację baz danych w celu utrwalenia danych, obsługa dotyczy metodyki DevOps, oparte na chmurze kompilacji i testowania, struktur i możliwość procesów biznesowych skryptu przy użyciu projektanta preferowanego języka. Następujące podejście bez użycia serwera skoncentrowane na telefon komórkowy może uprościć proces. Aplikacje niewymagające użycia serwera usuwa ogromną obciążenie inicjowania obsługi, konfigurowania i utrzymywania serwerów zaplecza mobilnego.
+Większość dostawców chmury oferuje przenośne produkty bezserwerowe, które upraszczają cały cykl rozwoju aplikacji mobilnych. Produkty mogą zautomatyzować Inicjowanie obsługi baz danych w celu utrwalenia danych, obsłużyć DevOps problemy, zapewnić kompilacje oparte na chmurze i platformy testowania oraz możliwość tworzenia skryptów procesów firmy przy użyciu preferowanego języka dewelopera. Zastosowanie bezserwerowego podejścia opartego na urządzeniach przenośnych może usprawnić proces. Bezserwerowe eliminuje ogromne obciążenie, Konfigurowanie i konserwowanie serwerów na potrzeby zaplecza mobilnego.
 
 ## <a name="internet-of-things-iot"></a>Internet rzeczy (IoT)
 
-IoT odnosi się do obiektów fizycznych, które są połączone. Są one nazywane "podłączonych urządzeń" i "inteligentnych urządzeń". Wszystko — od samochodów i automaty mogą być połączone i wysyłanie informacji od magazynu danych czujników, takich jak temperatury i wilgotności. W przedsiębiorstwie IoT oferuje ulepszenia procesów biznesowych za pośrednictwem monitorowania i automatyzacji. Dane IoT mogą służyć do regulowania klimatu w magazynie dużych lub śledzenie stanu magazynu za pomocą łańcucha dostaw. IoT można sens wycieki chemicznych, a następnie skontaktować się z działem fire po wykryciu dymu.
+IoT odnosi się do obiektów fizycznych, które są połączone ze sobą. Są one czasami określane jako "urządzenia połączone" lub "urządzenia inteligentne". Wszystko z samochodów i maszyn sprzedaży może być połączone i wysyłać informacje od spisu do danych czujników, takich jak temperatury i wilgotność. W przedsiębiorstwie IoT oferuje udoskonalenia procesów firmy poprzez monitorowanie i automatyzację. Dane IoT mogą służyć do regulowania klimatu w dużych magazynach lub śledzenia spisu za pomocą łańcucha dostaw. IoT może wykrywać wycieki chemiczne i wywoływać dział pożaru w przypadku wykrycia dymu.
 
-Znaczne zmniejszenie ilości urządzeń i informacji często mówią, architektura sterowana zdarzeniami trasy i przetwarzania komunikatów. Bez użycia serwera to idealne rozwiązanie z kilku powodów:
+Zawiera ilość urządzeń i informacji często wymusza architekturę opartą na zdarzeniach, aby kierować i przetwarzać komunikaty. Bezserwerowy jest idealnym rozwiązaniem z kilku powodów:
 
-* Umożliwia skalowanie jako wolumin zwiększa urządzeń i danych.
-* Obsługuje dodawanie nowych punktów końcowych do obsługi nowych urządzeń i czujników.
-* Ułatwia niezależnie od wersji, dzięki czemu deweloperzy mogą zaktualizować logikę biznesową dla określonego urządzenia bez konieczności wdrażania całego systemu.
-* Odporność i minus Przestój.
+* Umożliwia skalowanie w miarę wzrostu ilości urządzeń i danych.
+* Służy do dodawania nowych punktów końcowych w celu obsługi nowych urządzeń i czujników.
+* Ułatwia niezależne przechowywanie wersji, dzięki czemu deweloperzy mogą aktualizować logikę biznesową dla określonego urządzenia bez konieczności wdrażania całego systemu.
+* Odporność i mniej przestojów.
 
-Wszechobecność IoT spowodowało kilka produktów bez użycia serwera koncentrujących się szczególnie na obaw IoT, takich jak [usługi Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub). Aplikacje niewymagające użycia serwera automatyzuje zadania, takie jak rejestracji urządzeń, wymuszanie zasad zostaje wyłączone, śledzenia i nawet wdrożenie kodu do urządzeń *krawędzi*. Krawędź odnosi się do urządzenia, na przykład czujniki i elementy wykonawcze, które są podłączone do, ale active część z Internetu.
+W efekcie usługi IoT wystąpiły różne produkty bezserwerowe, które koncentrują się na obawach IoT, takich jak [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub). Bezserwerowy automatyzuje zadania, takie jak rejestrowanie urządzeń, wymuszanie zasad, śledzenie i nawet Wdrażanie kodu na urządzeniach na *brzegu*. Brzeg odnosi się do urządzeń, takich jak czujniki i siłowniky, które są połączone z, ale nie z aktywną częścią, Internetu.
 
 >[!div class="step-by-step"]
->[Poprzednie](architecture-approaches.md)
->[dalej](serverless-architecture-considerations.md)
+>[Poprzedni](architecture-approaches.md)Następny
+>[](serverless-architecture-considerations.md)

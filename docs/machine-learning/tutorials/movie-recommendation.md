@@ -1,100 +1,100 @@
 ---
-title: 'Samouczek: Tworzenie polecania filmu - factorization macierzy'
-description: W tym samouczku dowiesz się, jak tworzyć polecania filmów za pomocą platformy ML.NET w aplikacji konsoli .NET Core. Użyj kroków C# i Visual Studio 2019 r.
+title: 'Samouczek: Tworzenie zalecenia dotyczącego filmu — factorization macierzy'
+description: W tym samouczku przedstawiono sposób tworzenia zalecenia dotyczącego filmu z ML.NET w aplikacji konsolowej .NET Core. Kroki używają C# i programu Visual Studio 2019.
 author: briacht
 ms.author: johalex
 ms.date: 07/09/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: bf04f5a098bd2c378a2b73d7684eb74e16feb728
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b58afca0671468d3e981c7615e0af1c0f8ae632f
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779039"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331659"
 ---
-# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Samouczek: Tworzenie polecania filmu, za pomocą factorizaton macierzy za pomocą platformy ML.NET
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Samouczek: Tworzenie zalecenia dotyczącego filmu przy użyciu narzędzia Matrix factorizaton z ML.NET
 
-W tym samouczku dowiesz się, jak tworzyć polecania filmów za pomocą platformy ML.NET w aplikacji konsoli .NET Core. Użyj kroków C# i Visual Studio 2019 r.
+W tym samouczku przedstawiono sposób tworzenia zalecenia dotyczącego filmu z ML.NET w aplikacji konsolowej .NET Core. Kroki używają C# i programu Visual Studio 2019.
 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
-> * Wybieranie algorytmu uczenia maszynowego
-> * Przygotowanie i ładowania danych
-> * Tworzenie i uczenie modelu
-> * Ocena modelu
+> * Wybierz algorytm uczenia maszynowego
+> * Przygotowywanie i ładowanie danych
+> * Kompilowanie i uczenie modelu
+> * Oceń model
 > * Wdrażanie i korzystanie z modelu
 
-Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) repozytorium.
+Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) .
 
-## <a name="machine-learning-workflow"></a>Maszyny uczenie się przepływu pracy
+## <a name="machine-learning-workflow"></a>Przepływ pracy uczenia maszynowego
 
-Poniższe kroki użyje do wykonywania zadań, a także inne zadanie w strukturze ML.NET:
+Wykonaj następujące kroki, aby wykonać zadanie, a także inne zadania ML.NET:
 
-1. [Załaduj dane](#load-your-data)
-2. [Tworzenie i uczenie modelu](#build-and-train-your-model)
-3. [Ocena modelu](#evaluate-your-model)
-4. [Użyj modelu](#use-your-model)
+1. [Ładowanie danych](#load-your-data)
+2. [Kompilowanie i uczenie modelu](#build-and-train-your-model)
+3. [Oceń model](#evaluate-your-model)
+4. [Korzystanie z modelu](#use-your-model)
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* [Visual Studio 2017 15.6 lub nowszym](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowanym obciążeniem "Programowanie dla wielu platform .NET Core".
+* [Program Visual Studio 2017 15,6 lub nowszy](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowanym obciążeniem "Programowanie dla wielu platform" platformy .NET Core.
 
-## <a name="select-the-appropriate-machine-learning-task"></a>Wybierz zadanie uczenia odpowiedniej maszyny
+## <a name="select-the-appropriate-machine-learning-task"></a>Wybierz odpowiednie zadanie uczenia maszynowego
 
-Istnieje kilka sposobów podejście problemy zalecenie, takie jak polecanie listy filmów lub zalecania listę powiązanych z nimi produktów, ale w tym przypadku będzie przewidywania jakie oceny (1-5) użytkownika będą dawać do konkretnego filmu i zaleca się ten film, jeśli jest przekracza określoną wartość progową (wyższa ocenę, tym wyższe prawdopodobieństwo użytkownika liking konkretnego filmu).
+Istnieje kilka sposobów podejścia do problemów z zaleceniami, takich jak zalecanie listy filmów lub zalecaną listę produktów pokrewnych, ale w tym przypadku można przewidzieć klasyfikację (1-5) użytkownika w określonym filmie i zalecać film, jeśli jest wyższy niż określony próg (im wyższa ocena, tym większe prawdopodobieństwo poniesienia określonego filmu przez użytkownika).
 
 ## <a name="create-a-console-application"></a>Tworzenie aplikacji konsolowej
 
 ### <a name="create-a-project"></a>Tworzenie projektu
 
-1. Otwórz program Visual Studio 2017. Wybierz **pliku** > **New** > **projektu** z paska menu. W **nowy projekt** okno dialogowe, wybierz opcję **Visual C#** węzła następuje **platformy .NET Core** węzła. Następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** pole tekstowe, wpisz "MovieRecommender", a następnie wybierz **OK** przycisku.
+1. Otwórz program Visual Studio 2017. Na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt** . W oknie dialogowym **Nowy projekt** wybierz węzeł **wizualizacji C#**  , a następnie węzeł **.NET Core** . Następnie wybierz szablon projektu **aplikacja konsoli (.NET Core)** . W polu tekstowym **Nazwa** wpisz "MovieRecommender", a następnie wybierz przycisk **OK** .
 
-2. Utwórz katalog o nazwie *danych* w projekcie do przechowywania zestawu danych:
+2. Utwórz katalog o nazwie *dane* w projekcie w celu zapisania zestawu danych:
 
-    W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt i wybierz **Dodaj** > **nowy Folder**. Wpisz "Dane", a następnie naciśnij klawisz Enter.
+    W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Dodaj** > **Nowy folder**. Wpisz "Data" i naciśnij klawisz ENTER.
 
-3. Zainstaluj **Microsoft.ML** i **Microsoft.ML.Recommender** pakiety NuGet:
+3. Zainstaluj pakiety NuGet **Microsoft.ml** i **Microsoft. ml. zalecenia** :
 
-    W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt i wybierz **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz opcję **Przeglądaj** kartę, wyszukaj **Microsoft.ML**, a następnie wybierz pakiet z listy i wybierz **zainstalować** przycisku. Wybierz **OK** znajdujący się na **podgląd zmian** okna dialogowego, a następnie wybierz **akceptuję** znajdujący się na **akceptacja licencji** okno dialogowe Jeśli możesz Akceptuję postanowienia licencyjne dla pakietów wymienionych. Powtórz te kroki dla **Microsoft.ML.Recommender**.
+    W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę **Przeglądaj** , wyszukaj pozycję **Microsoft.ml**, wybierz pakiet z listy, a następnie wybierz przycisk **Instaluj** . Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie **Wybierz przycisk** Akceptuję w oknie dialogowym **akceptacji licencji** , jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów. Powtórz te kroki dla **Microsoft. ml. zalecamy**.
 
-4. Dodaj następujący kod `using` instrukcji w górnej części Twojej *Program.cs* pliku:
+4. Dodaj następujące `using` instrukcje w górnej części pliku *program.cs* :
 
     [!code-csharp[UsingStatements](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#UsingStatements "Add necessary usings")]
 
 ### <a name="download-your-data"></a>Pobieranie danych
 
-1. Pobierz dwa zestawy danych i zapisywanie ich *danych* wcześniej utworzony folder:
+1. Pobierz dwa zestawy danych i Zapisz je w utworzonym wcześniej folderze *danych* :
 
-   * Kliknij prawym przyciskiem myszy [ *zalecenie klasyfikacje — train.csv* ](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv) i wybierz pozycję "Zapisz jako łącza (lub docelowego)..."
-   * Kliknij prawym przyciskiem myszy [ *zalecenie klasyfikacje — test.csv* ](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv) i wybierz pozycję "Zapisz jako łącza (lub docelowego)..."
+   * Kliknij prawym przyciskiem myszy plik [*Recommendation-ratings-Train. csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv) i wybierz pozycję "Zapisz link (lub cel) jako..."
+   * Kliknij prawym przyciskiem myszy plik [*Recommendation-ratings-test. csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv) i wybierz pozycję "Zapisz link (lub cel) jako..."
 
-     Upewnij się, albo zapisać \*plików CSV *danych* folderu lub po jego zapisaniu innym miejscu, Przenieś \*plików CSV *danych* folderu.
+     Upewnij \*się, że zapisano pliki CSV do folderu *danych* lub po jego zapisaniu w \*innym miejscu Przenieś pliki CSV do folderu *dane* .
 
-2. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy każdy z \*plików CSV, a następnie wybierz **właściwości**. W obszarze **zaawansowane**, zmień wartość właściwości **Kopiuj do katalogu wyjściowego** do **Kopiuj Jeśli nowszy**.
+2. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy każdy z \*plików CSV i wybierz polecenie **Właściwości**. W obszarze **Zaawansowane**Zmień wartość opcji **Kopiuj do katalogu wyjściowego** na Kopiuj, **jeśli nowszy**.
 
-   ![Kopiuj Jeśli nowszy w programie VS](./media/movie-recommendation/copytoout.gif)
+   ![Kopiuj, jeśli nowszy w programie VS](./media/movie-recommendation/copytoout.gif)
 
-## <a name="load-your-data"></a>Załaduj dane
+## <a name="load-your-data"></a>Ładowanie danych
 
-Pierwszym krokiem w procesie strukturze ML.NET jest przygotowanie i obciążenia sieci szkolenia i modelu danych testowych.
+Pierwszym krokiem w procesie ML.NET jest przygotowanie i załadowanie modelu szkolenia i testowanie danych.
 
-Dane oceny zalecenie jest podzielony na `Train` i `Test` zestawów danych. `Train` Danych służy do dopasowania modelu. `Test` Dane są używane do prognozowania za pomocą uczonego modelu i ocena wydajności modelu. Jest często mają 80/20, Podziel się `Train` i `Test` danych.
+Dane klasyfikacji rekomendacji są podzielone na `Train` i `Test` zestawy danych. `Train` Dane są używane do dopasowania do modelu. `Test` Dane służą do przeprowadzania prognoz z przeszkolonym modelem i oceny wydajności modelu. Często istnieje 80/20 podział z `Train` i `Test` danych.
 
-Poniżej znajduje się podgląd danych z usługi \*plików CSV:
+Poniżej znajduje się podgląd danych z \*plików CSV:
 
 ![Podgląd danych](./media/movie-recommendation/csv-dataset-preview.png)
 
-W \*plików CSV znajdują się cztery kolumny:
+\*W plikach CSV znajdują się cztery kolumny:
 
 * `userId`
 * `movieId`
 * `rating`
 * `timestamp`
 
-W usłudze machine learning, są nazywane kolumn, które są używane do prognozowania [funkcji](../resources/glossary.md#feature), i nosi nazwę kolumny z prognozowania zwracane [etykiety](../resources/glossary.md#label).
+W obszarze Uczenie maszynowe kolumny, które są używane do prognozowania, są nazywane [funkcjami](../resources/glossary.md#feature), a kolumna z zwróconym przewidywaniam nazywa się [etykietą](../resources/glossary.md#label).
 
-Chcesz przewidzieć klasyfikacji filmów, więc kolumny ocenę `Label`. Pozostałe trzy kolumny `userId`, `movieId`, i `timestamp` wyświetlane są wszystkie `Features` używać do prognozowania `Label`.
+Chcesz przewidzieć klasyfikację filmów, aby kolumna Rating była `Label`kolumną. Pozostałe trzy `userId`kolumny, `movieId`, i `timestamp` są `Features` używane do przewidywania `Label`.
 
 | Funkcje      | Etykieta         |
 | ------------- |:-------------:|
@@ -102,24 +102,24 @@ Chcesz przewidzieć klasyfikacji filmów, więc kolumny ocenę `Label`. Pozosta�
 | `movieId`      |               |
 | `timestamp`     |               |
 
-To Ty decydujesz o tym, które `Features` są używane do prognozowania `Label`. Można również użyć metod, takich jak [znaczenie permutacji funkcji](../how-to-guides/determine-global-feature-importance-in-model.md) ułatwiające wybranie najlepszych `Features`.
+Jest to konieczne, aby określić, które `Features` są używane do `Label`przewidywania. Możesz również użyć metod, takich jak [Funkcja Permutacja](../how-to-guides/determine-global-feature-importance-in-model.md) , aby ułatwić wybór najlepszych `Features`.
 
-W takim przypadku można wyeliminować `timestamp` jako kolumny `Feature` ponieważ sygnatura czasowa naprawdę wpływa na sposób użytkownik ocenia danego filmu, a zatem nie przyczyni się do wprowadzania dokładniejszych prognoz:
+W takim przypadku należy wyeliminować `timestamp` kolumnę `Feature` jako, ponieważ sygnatura czasowa nie wpływa na to, jak użytkownik ocenia dany film i w związku z tym nie przyczynia się do dokładniejszego przewidywania:
 
 | Funkcje      | Etykieta         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
 | `movieId`      |               |
 
-Następnie zdefiniuj strukturę danych wejściowych klasy.
+Następnie należy zdefiniować strukturę danych dla klasy wejściowej.
 
 Dodaj nową klasę do projektu:
 
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt, a następnie wybierz **Dodaj > Nowy element**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt, a następnie wybierz pozycję **Dodaj > nowy element**.
 
-2. W **okno dialogowe Dodaj nowy element**, wybierz opcję **klasy** i zmień **nazwa** pole *MovieRatingData.cs*. Następnie wybierz **Dodaj** przycisku.
+2. W **oknie dialogowym Dodaj nowy element**wybierz pozycję **Klasa** i zmień wartość pola **Nazwa** na *MovieRatingData.cs*. Następnie wybierz przycisk **Dodaj** .
 
-*MovieRatingData.cs* plik zostanie otwarty w edytorze kodu. Dodaj następujący kod `using` instrukcji na górze *MovieRatingData.cs*:
+Plik *MovieRatingData.cs* zostanie otwarty w edytorze kodu. Dodaj następującą `using` instrukcję na początku *MovieRatingData.cs*:
 
 ```csharp
 using Microsoft.ML.Data;
@@ -129,19 +129,19 @@ Utwórz klasę o nazwie `MovieRating` , usuwając istniejącą definicję klasy 
 
 [!code-csharp[MovieRatingClass](~/samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
 
-`MovieRating` Określa klasę danych wejściowych. [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) atrybut określa, które kolumny (według indeksu kolumny) w zestawie danych, które powinny być załadowane. `userId` i `movieId` kolumny są usługi `Features` (dane wejściowe zostanie nadana model do przewidywania `Label`), i kolumna Ocena jest `Label` czy będzie przewidzieć (dane wyjściowe modelu).
+`MovieRating`Określa klasę danych wejściowych. Atrybut [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) określa, które kolumny (według indeksu kolumn) w zestawie danych powinny zostać załadowane. `Label` `Label`Kolumny `userId` i`movieId` są`Features` kolumnami (dane wejściowe będą nadawać modelowi przewidywanie), a kolumna oceny jest przewidywalna (dane wyjściowe modelu).
 
-Tworzenie innej klasy `MovieRatingPrediction`, do reprezentowania wyników, dodając następujący kod po `MovieRating` klasy w *MovieRatingData.cs*:
+Utwórz kolejną klasę, `MovieRatingPrediction`aby reprezentować przewidywane wyniki, dodając następujący kod `MovieRating` po klasie w *MovieRatingData.cs*:
 
 [!code-csharp[PredictionClass](~/samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#PredictionClass "Add the Movie Prediction Class")]
 
-W *Program.cs*, Zastąp `Console.WriteLine("Hello World!")` następujący kod wewnątrz `Main()`:
+W *program.cs*, Zamień na `Console.WriteLine("Hello World!")` następujący kod `Main()`w:
 
 [!code-csharp[MLContext](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#MLContext "Add MLContext")]
 
-[Klasy MLContext](xref:Microsoft.ML.MLContext) to punkt początkowy dla wszystkich operacji w strukturze ML.NET oraz inicjowanie `mlContext` tworzy nowe środowisko strukturze ML.NET, które mogą być współużytkowane przez obiekty przepływu pracy tworzenia modelu. Przypomina, model `DBContext` platformy Entity Framework.
+[Klasa MLContext](xref:Microsoft.ML.MLContext) jest punktem początkowym dla wszystkich operacji ml.NET, a inicjowanie `mlContext` tworzy nowe środowisko ml.NET, które może być współużytkowane przez obiekty przepływu pracy tworzenia modelu. Jest to podobne, pojęciowo do `DBContext` w Entity Framework.
 
-Po `Main()`, utworzyć metodę o nazwie `LoadData()`:
+Po `Main()`utworzeniu należy utworzyć metodę o `LoadData()`nazwie:
 
 ```csharp
 public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
@@ -151,37 +151,37 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 ```
 
 > [!NOTE]
-> Ta metoda zapewni błąd do momentu dodania instrukcji return w poniższych krokach.
+> Ta metoda daje błąd do momentu dodania instrukcji return w poniższych krokach.
 
-Inicjowanie zmiennych ścieżki danych, Załaduj dane z \*plików CSV i zwrócenie `Train` i `Test` dane jako `IDataView` obiektów przez dodanie poniższego jako następnego wiersza kodu w `LoadData()`:
+Zainicjuj zmienne ścieżki \*danych, Załaduj dane z plików CSV i `Train` Zwróć dane oraz `Test` jako `IDataView` obiekty, dodając następujący kod jako następny wiersz kodu w `LoadData()`:
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadData "Load data from data paths")]
 
-Dane w strukturze ML.NET jest reprezentowany jako [klasy IDataView](xref:Microsoft.ML.IDataView). `IDataView` jest elastyczny i wydajny sposób opisu danych tabelarycznych (liczbowe i tekstowe). Dane można załadować z pliku tekstowego lub w czasie rzeczywistym (na przykład SQL bazy danych lub dziennika plików) do `IDataView` obiektu.
+Dane w ML.NET są reprezentowane jako [Klasa IDataView](xref:Microsoft.ML.IDataView). `IDataView`to elastyczny i wydajny sposób opisywania danych tabelarycznych (liczbowych i tekstowych). Dane można ładować z pliku tekstowego lub w czasie rzeczywistym (na przykład bazy danych SQL lub plików dziennika) do `IDataView` obiektu.
 
-[LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) definiuje schemat danych i odczytuje w pliku. Pobiera zmienne ścieżek danych i zwraca `IDataView`. W tym przypadku podaj ścieżkę dla Twojego `Test` i `Train` pliki i wskazać nagłówka pliku tekstowego (tak, aby go prawidłowo używać nazwy kolumn) i przecinkami danych znak separatora (domyślnym separatorem jest karta).
+[LoadFromTextFile ()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) definiuje schemat danych i odczytuje w pliku. Przyjmuje zmienne ścieżki danych i zwraca `IDataView`. W takim przypadku należy podać ścieżkę do `Test` plików i `Train` wskazać zarówno nagłówek pliku tekstowego (tak, aby można było poprawnie używać nazw kolumn), jak i separator danych znak przecinka (domyślny separator jest tabulatorem).
 
-Dodaj następujący kod jako następnych dwóch wierszach kodu w `Main()` metodę do wywołania usługi `LoadData()` metody i zwrócenie `Train` i `Test` danych:
+Dodaj następujące `Main()` dwa wiersze kodu w metodzie, aby `LoadData()` wywołać metodę i zwrócić `Train` dane i `Test` :
 
 [!code-csharp[LoadDataMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadDataMain "Add LoadData method to Main")]
 
-## <a name="build-and-train-your-model"></a>Tworzenie i uczenie modelu
+## <a name="build-and-train-your-model"></a>Kompilowanie i uczenie modelu
 
-Istnieją trzy główne pojęcia w strukturze ML.NET: [Dane](../resources/glossary.md#data), [transformatory](../resources/glossary.md#transformer), i [aplikacjom](../resources/glossary.md#estimator).
+Istnieją trzy podstawowe koncepcje w ML.NET: [Dane](../resources/glossary.md#data), [Transformatory](../resources/glossary.md#transformer)i [szacowania](../resources/glossary.md#estimator).
 
-Uczenie maszynowe szkolenia algorytmów wymaganych danych w określonym formacie. `Transformers` są używane do przekształcania danych tabelarycznych na format zgodny.
+Algorytmy szkoleniowe dotyczące uczenia maszynowego wymagają danych w określonym formacie. `Transformers`służy do przekształcania danych tabelarycznych w zgodny format.
 
-![Transformer obrazu](./media/movie-recommendation/transformer.png)
+![obraz transformatora](./media/movie-recommendation/transformer.png)
 
-Możesz utworzyć `Transformers` w strukturze ML.NET, tworząc `Estimators`. `Estimators` podjęcia w obszarach danych i zwrócenia `Transformers`.
+Tworzysz w ml.NET, tworząc `Estimators`. `Transformers` `Estimators`Zapoznaj się z danymi `Transformers`i wróć.
 
-![Narzędzie do szacowania obrazu](./media/movie-recommendation/estimator.png)
+![obraz szacowania](./media/movie-recommendation/estimator.png)
 
-Zalecenie uczenie algorytmu, będą używane na potrzeby szkolenia modelu jest przykładem `Estimator`.
+Algorytm szkolenia rekomendacji, który będzie używany do uczenia modelu, jest przykładem `Estimator`.
 
-Tworzenie `Estimator` następujące czynności:
+`Estimator` Wykonaj następujące czynności:
 
-Tworzenie `BuildAndTrainModel()` metody tuż za `LoadData()` metody, używając następującego kodu:
+Utwórz metodę, tuż po metodzie, przy użyciu następującego kodu: `LoadData()` `BuildAndTrainModel()`
 
 ```csharp
 public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView trainingDataView)
@@ -191,13 +191,13 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 ```
 
 > [!NOTE]
-> Ta metoda zapewni błąd do momentu dodania instrukcji return w poniższych krokach.
+> Ta metoda daje błąd do momentu dodania instrukcji return w poniższych krokach.
 
-Zdefiniować przekształceń danych, dodając następujący kod do `BuildAndTrainModel()`:
+Zdefiniuj przekształcenia danych, dodając następujący kod do `BuildAndTrainModel()`:
 
 [!code-csharp[DataTransformations](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#DataTransformations "Define data transformations")]
 
-Ponieważ `userId` i `movieId` reprezentują użytkowników i tytułów filmów, nie rzeczywiste wartości, użyj [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) metoda przekształcania każdego `userId` i każdy `movieId` do klucza typu liczbowego `Feature`kolumny (formacie akceptowanym przez algorytmy zalecenie) i dodaj je jako nowe kolumny zestawu danych:
+Ponieważ `userId` i `Feature` `movieId` [](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) `userId` reprezentują użytkowników i tytuły filmów, a nie wartości rzeczywiste, należy użyć metody MapValueToKey () do przekształcania każdego i każdego z nich w kolumnę typu klucza numerycznego (zaakceptowano format `movieId` według algorytmów rekomendacji) i Dodaj je jako nowe kolumny zestawu danych:
 
 | userId | movieId | Etykieta | userIdEncoded | movieIdEncoded |
 | ------------- |:-------------:| -----:|-----:|-----:|
@@ -205,38 +205,38 @@ Ponieważ `userId` i `movieId` reprezentują użytkowników i tytułów filmów,
 | 1 | 3 | 4 | userKey1 | movieKey2 |
 | 1 | 6 | 4 | userKey1 | movieKey3 |
 
-Wybieranie algorytmu uczenia maszynowego, a następnie dołącza je do definicji przekształcania danych, dodając następujące jako następnego wiersza kodu w `BuildAndTrainModel()`:
+Wybierz algorytm uczenia maszynowego i dołącz go do definicji transformacji danych, dodając następujący element jako następny wiersz kodu w `BuildAndTrainModel()`:
 
 [!code-csharp[AddAlgorithm](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#AddAlgorithm "Add the training algorithm with options")]
 
-[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) jest algorytm szkolenia zalecenia.  [Macierz Factorization](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) jest typowym podejściem do zalecenia, gdy masz dane, w jaki użytkownicy, które oceniły produktów w przeszłości jest tak w przypadku zestawów danych w ramach tego samouczka. Istnieją inne algorytmy zalecenie używane w przypadku różnych dostępnych danych (zobacz [inne algorytmy zalecenie](#other-recommendation-algorithms) sekcji poniżej, aby dowiedzieć się więcej).
+[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) jest algorytmem szkoleniowym rekomendacji.  [Factorization macierzy](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) jest powszechnym podejściem do rekomendacji, gdy masz dane dotyczące sposobu, w jaki użytkownicy mają sklasyfikowane produkty w przeszłości, czyli w przypadku zestawów danych w tym samouczku. Istnieją inne algorytmy rekomendacji, w których dostępne są różne dane (zobacz [inne algorytmy rekomendacji](#other-recommendation-algorithms) poniżej, aby dowiedzieć się więcej).
 
-W tym przypadku `Matrix Factorization` algorytm używa metodę o nazwie "współpracy filtering", która zakłada się, że jeśli 1 użytkownik ma ten sam opinia jako 2 użytkownika dotyczących niektórych problemów, a następnie 1 użytkownika jest bardziej prawdopodobne, że ten sam sposób jak 2 użytkowników o innym problemem.
+W tym przypadku `Matrix Factorization` algorytm używa metody zwanej "filtrowaniem do współpracy", która zakłada, że jeśli użytkownik 1 ma taką samą opinię co użytkownik 2 w przypadku pewnego problemu, wówczas użytkownik 1 będzie prawdopodobnie taki sam jak użytkownik 2, który ma inny problem.
 
-Na przykład jeśli użytkownik 1 i 2 użytkownika podobnie szybkości filmy, następnie 2 użytkownika jest bardziej prawdopodobne cieszyć się filmu 1 użytkownik ma obserwowane i o wysokiej:
+Na przykład jeśli użytkownik 1 i użytkownik 2 oceniają szybkość filmów w podobny sposób, wówczas użytkownik 2 może korzystać z filmu, który użytkownik 1 zaobserwuje i ocenił:
 
 | | `Incredibles 2 (2018)` | `The Avengers (2012)` | `Guardians of the Galaxy (2014)` |
 | -------------:|-------------:| -----:|-----:|
-| Użytkownik 1 | Monitorowane i zbędne filmu | Monitorowane i zbędne filmu | Monitorowane i zbędne filmu |
-| Użytkownik 2 | Monitorowane i zbędne filmu | Monitorowane i zbędne filmu | Nie ma obserwowane--zaleca się filmu |
+| Użytkownik 1 | Film obserwowany i Niemnie | Film obserwowany i Niemnie | Film obserwowany i Niemnie |
+| Użytkownik 2 | Film obserwowany i Niemnie | Film obserwowany i Niemnie | Nie został obserwowany — ZALECAnym filmem |
 
-`Matrix Factorization` Trainer ma kilka [opcje](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options), której możesz przeczytać więcej na temat w [hiperparametrów algorytm](#algorithm-hyperparameters) poniższej sekcji.
+Trainer ma kilka [opcji](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options), które można dowiedzieć się więcej o w poniższej sekcji "preparameters Algorithm". [](#algorithm-hyperparameters) `Matrix Factorization`
 
-Dopasuj do modelu `Train` danych i zwracają uczonego modelu przez dodanie poniższego jako następnego wiersza kodu w `BuildAndTrainModel()` metody:
+Dopasuj model do `Train` danych i zwróć przeszkolony model, dodając następujący kod jako następny wiersz kodu `BuildAndTrainModel()` w metodzie:
 
 [!code-csharp[FitModel](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#FitModel "Call the Fit method and return back the trained model")]
 
-[Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) metoda szkolenie modeli modelu za pomocą podanego szkolenia zestawu danych. Technicznie rzecz biorąc, wykonuje `Estimator` definicje, przekształcanie danych i stosując, szkolenia i zwraca kopię trenowanego modelu, który jest `Transformer`.
+Metoda [dopasowywania ()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) pociąga za siebie model z udostępnionym zestawem danych szkoleniowych. Technicznie wykonuje `Estimator` definicje przez Przekształcanie danych i stosowanie szkoleń i zwraca z powrotem model szkolony, który `Transformer`jest.
 
-Dodaj następujący kod jako następnego wiersza kodu w `Main()` metodę do wywołania usługi `BuildAndTrainModel()` metody i zwrócenie uczonego modelu:
+Dodaj następujący kod jako następny wiersz kodu w `Main()` metodzie, aby `BuildAndTrainModel()` wywołać metodę i zwrócić szkolony model:
 
 [!code-csharp[BuildTrainModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#BuildTrainModelMain "Add BuildAndTrainModel method in Main")]
 
-## <a name="evaluate-your-model"></a>Ocena modelu
+## <a name="evaluate-your-model"></a>Oceń model
 
-Gdy masz uczony model, korzystanie z Twoich danych testu do oceny, jak działa model.
+Po przeprowadzeniu szkolenia modelu Użyj danych testowych, aby oszacować, jak działa model.
 
-Tworzenie `EvaluateModel()` metody tuż za `BuildAndTrainModel()` metody, używając następującego kodu:
+Utwórz metodę, tuż po metodzie, przy użyciu następującego kodu: `BuildAndTrainModel()` `EvaluateModel()`
 
 ```csharp
 public static void EvaluateModel(MLContext mlContext, IDataView testDataView, ITransformer model)
@@ -245,25 +245,27 @@ public static void EvaluateModel(MLContext mlContext, IDataView testDataView, IT
 }
 ```
 
-Przekształcanie `Test` danych przez dodanie poniższego kodu `EvaluateModel()`: [!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
+Przekształć `EvaluateModel()`dane, dodając następujący kod do: `Test`
 
-[Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) metoda wykonuje prognozy dla wielu podać wiersze danych wejściowych zestawu testów.
+[!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
 
-Ocena modelu przez dodanie poniższego jako następnego wiersza kodu w `EvaluateModel()` metody:
+Metoda [Transform ()](xref:Microsoft.ML.ITransformer.Transform%2A) udostępnia prognozy dla wielu podanych danych wejściowych dla testu zestawu danych.
+
+Oceń model poprzez dodanie następujących elementów jako następny wiersz kodu w `EvaluateModel()` metodzie:
 
 [!code-csharp[Evaluate](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Evaluate "Evaluate the model using predictions from the test data")]
 
-Po utworzeniu prognozowania ustawiona, [Evaluate()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A) metoda ocenia modelu, który porównuje przewidywane wartości z rzeczywistych `Labels` w testowego zestawu danych i zwraca metryki dotyczące jak działa model.
+Po zestawie prognoz Metoda [oceny ()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A) ocenia model, który porównuje wartości przewidywane z wartością rzeczywistą `Labels` w testowanym zestawie danych i zwraca metryki dotyczące sposobu działania modelu.
 
-Drukuj metryk oceny do konsoli, dodając następujące jako następnego wiersza kodu w `EvaluateModel()` metody:
+Wydrukuj metryki oceny do konsoli, dodając następujący kod jako następny wiersz kodu w `EvaluateModel()` metodzie:
 
 [!code-csharp[PrintMetrics](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PrintMetrics "Print the evaluation metrics")]
 
-Dodaj następujący kod jako następnego wiersza kodu w `Main()` metodę do wywołania usługi `EvaluateModel()` metody:
+Dodaj następujący kod jako następny wiersz kodu w `Main()` metodzie, aby `EvaluateModel()` wywołać metodę:
 
 [!code-csharp[EvaluateModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#EvaluateModelMain "Add EvaluateModel method in Main")]
 
-Do tej pory dane wyjściowe powinny wyglądać podobnie do następującego tekstu:
+Dane wyjściowe do tej pory powinny wyglądać podobnie do następującego tekstu:
 
 ```console
 =============== Training the model ===============
@@ -293,19 +295,19 @@ Rms: 0.994051469730769
 RSquared: 0.412556298844873
 ```
 
-W poniższych danych wyjściowych istnieją 20 iteracjach. W każdej iteracji miary błąd zmniejsza i zbieżna dla wartości bliżej i bliżej 0.
+W tych danych wyjściowych występuje 20 iteracji. W każdej iteracji miara błędów jest zmniejszana i zbieżna bliżej i bliższa 0.
 
-`root of mean squared error` (Usługi RMS lub RMSE) służy do mierzenia różnice między model przewiduje wartości i zestawy danych testowych zaobserwowane wartości. Z technicznego punktu widzenia jest pierwiastek kwadratowy ze średniej kwadratów błędów. Im niższa, w tym lepsze model jest.
+`root of mean squared error` (RMS lub RMSE) służy do mierzenia różnic między wartościami przewidywanymi przez model i wartościami obserwowanymi testów zestawu danych. Jest to technicznie pierwiastek kwadratowy średniej kwadratów błędów. Im niższa wartość, tym lepszy jest model.
 
-`R Squared` Wskazuje, jak dobrze pasuje do modelu danych. Z zakresu od 0 do 1. Wartość 0 oznacza, że dane są losowych lub w inny sposób nie można dopasować do modelu. Wartość 1 oznacza, że model dokładnie pasują do danych. Chcesz, aby Twoje `R Squared` oceny być maksymalnie zbliżone do 1, jak to możliwe.
+`R Squared`wskazuje, jak dobre dane pasują do modelu. Zakresy z zakresu od 0 do 1. Wartość 0 oznacza, że dane są losowo lub w przeciwnym razie nie można dopasować do modelu. Wartość 1 oznacza, że model dokładnie pasuje do danych. Chcesz, aby `R Squared` wynik był możliwie blisko 1, jak to możliwe.
 
-Tworzenie modeli pomyślne jest procesem iteracyjnym. Ten model jest początkowa niższa jakość samouczek używa małych zestawów danych na przeszkolenie szybkiego modelu. Jeśli nie jesteś zadowolony z jakość modelu, możesz spróbować ją ulepszyć, zapewniając większych zestawów danych szkoleniowych lub wybierając szkolenia różnych algorytmów przy użyciu różnych funkcji hyper parametrów dla każdego algorytmu. Aby uzyskać więcej informacji, zapoznaj się z [poprawy modelu](#improve-your-model) poniższej sekcji.
+Kompilowanie udanych modeli jest procesem iteracyjnym. Ten model ma wstępną niższą jakość, ponieważ samouczek używa małych zestawów danych w celu zapewnienia szybkiego szkolenia modeli. Jeśli jakość modelu jest niezadowalająca, możesz spróbować go ulepszyć, dostarczając większe zestawy danych szkoleniowych lub wybierając różne algorytmy szkoleniowe z różnymi parametrami funkcji Hyper-Parameters dla każdego algorytmu. Aby uzyskać więcej informacji, zapoznaj się z sekcją [Popraw model](#improve-your-model) poniżej.
 
-## <a name="use-your-model"></a>Użyj modelu
+## <a name="use-your-model"></a>Korzystanie z modelu
 
-Teraz można użyć uczonego modelu do prognozowania na nowych danych.
+Teraz można użyć Twojego przeszkolonego modelu do prognozowania nowych danych.
 
-Tworzenie `UseModelForSinglePrediction()` metody tuż za `EvaluateModel()` metody, używając następującego kodu:
+Utwórz metodę, tuż po metodzie, przy użyciu następującego kodu: `EvaluateModel()` `UseModelForSinglePrediction()`
 
 ```csharp
 public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer model)
@@ -314,29 +316,29 @@ public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer
 }
 ```
 
-Użyj `PredictionEngine` do prognozowania tę klasyfikację, dodając następujący kod do `UseModelForSinglePrediction()`:
+Użyj do przewidywania klasyfikacji, dodając następujący kod do `UseModelForSinglePrediction()`: `PredictionEngine`
 
 [!code-csharp[PredictionEngine](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PredictionEngine "Create Prediction Engine")]
 
-[Klasy PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest wygoda interfejsu API, dzięki czemu można przekazać pojedyncze wystąpienie danych, a następnie wykonaj prognozę na to pojedyncze wystąpienie danych.
+[Klasa PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest WYGODNYm interfejsem API, który umożliwia przekazywanie pojedynczej instancji danych, a następnie przeprowadza prognozowanie na tym pojedynczym wystąpieniu danych.
 
-Utwórz wystąpienie obiektu `MovieRating` o nazwie `testInput` i przekaż go do aparatu prognozowania, dodając następujące jako z następującymi wierszami kodu w `UseModelForSinglePrediction()` metody:
+Utwórz wystąpienie o `MovieRating` nazwie `testInput` i przekaż je do aparatu przewidywania, dodając następujący element jako następny `UseModelForSinglePrediction()` wiersz kodu w metodzie:
 
 [!code-csharp[MakeSinglePrediction](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#MakeSinglePrediction "Make a single prediction with the Prediction Engine")]
 
-[Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) funkcja sprawia, że prognozę na pojedynczej kolumny danych.
+Funkcja [przewidywania ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) dokonuje prognozowania dla pojedynczej kolumny danych.
 
-Następnie można użyć `Score`, lub przewidywane oceny, ustalenie, czy polecisz film z movieId 10 użytkownika 6. Wyższe `Score`, tym większe prawdopodobieństwo użytkownika liking konkretnego filmu. W tym przypadku Załóżmy, że zalecane jest użycie filmów z oceną przewidywane > 3.5.
+Następnie można użyć `Score`lub klasyfikacji przewidywanej, aby określić, czy chcesz zalecić film z movieId 10 do użytkownika 6. Im wyższy poziom `Score`, tym większe prawdopodobieństwo, że użytkownik przydzieli określony film. W tym przypadku Załóżmy, że zaleca się używanie filmów z przewidywaną klasyfikacją > 3,5.
 
-Aby wydrukować wyniki, należy dodać następujące porty jako dalej wiersze kodu `UseModelForSinglePrediction()` metody:
+Aby wydrukować wyniki, Dodaj następujący kod jako następny wiersz kodu w `UseModelForSinglePrediction()` metodzie:
 
 [!code-csharp[PrintResults](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PrintResults "Print the recommendation prediction results")]
 
-Dodaj następujący kod jako następnego wiersza kodu w `Main()` metodę do wywołania usługi `UseModelForSinglePrediction()` metody:
+Dodaj następujący kod jako następny wiersz kodu w `Main()` metodzie, aby `UseModelForSinglePrediction()` wywołać metodę:
 
 [!code-csharp[UseModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#UseModelMain "Add UseModelForSinglePrediction method in Main")]
 
-Dane wyjściowe tej metody powinien wyglądać podobnie do następującego tekstu:
+Dane wyjściowe tej metody powinny wyglądać podobnie do następującego tekstu:
 
 ```console
 =============== Making a prediction ===============
@@ -345,9 +347,9 @@ Movie 10 is recommended for user 6
 
 ### <a name="save-your-model"></a>Zapisz model
 
-Aby użyć modelu do prognozowania w aplikacji użytkownika końcowego, należy najpierw zapisać modelu.
+Aby używać modelu do prognozowania aplikacji użytkowników końcowych, należy najpierw zapisać model.
 
-Tworzenie `SaveModel()` metody tuż za `UseModelForSinglePrediction()` metody, używając następującego kodu:
+Utwórz metodę, tuż po metodzie, przy użyciu następującego kodu: `UseModelForSinglePrediction()` `SaveModel()`
 
 ```csharp
 public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataViewSchema, ITransformer model)
@@ -356,23 +358,23 @@ public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataVie
 }
 ```
 
-Zapisania trenowanego modelu, dodając następujący kod w `SaveModel()` metody:
+Zapisz swój przeszkolony model, dodając następujący kod w `SaveModel()` metodzie:
 
 [!code-csharp[SaveModel](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#SaveModel "Save the model to a zip file")]
 
-Ta metoda zapisuje uczonego modelu do pliku zip (w folderze "Dane"), które następnie mogą być używane w innych aplikacjach platformy .NET do przewidywania przyszłych zdarzeń.
+Ta metoda zapisuje swój przeszkolony model do pliku zip (w folderze "dane"), który można następnie użyć w innych aplikacjach .NET do prognozowania.
 
-Dodaj następujący kod jako następnego wiersza kodu w `Main()` metodę do wywołania usługi `SaveModel()` metody:
+Dodaj następujący kod jako następny wiersz kodu w `Main()` metodzie, aby `SaveModel()` wywołać metodę:
 
 [!code-csharp[SaveModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#SaveModelMain "Create SaveModel method in Main")]
 
-### <a name="use-your-saved-model"></a>Użyj zapisanych modelu
+### <a name="use-your-saved-model"></a>Użyj zapisanego modelu
 
-Po zapisaniu uczonego modelu może zużywać model w różnych środowiskach (zobacz ["Poradnik"](../how-to-guides/consuming-model-ml-net.md) dowiesz się, jak do obsługi operacji modelu uczenia maszynowego uczonego w aplikacjach).
+Po zapisaniu przeszkolonego modelu można korzystać z modelu w różnych środowiskach (zobacz [Przewodnik po poradniku](../how-to-guides/consuming-model-ml-net.md) ), aby dowiedzieć się, jak operacjonalizować model uczenia maszynowego w aplikacjach.
 
 ## <a name="results"></a>Wyniki
 
-Po wykonaniu powyższych kroków, uruchom aplikację konsoli (Ctrl + F5). Wyniki z jednej prognozowania powyżej powinny być podobne do następujących. Może zostać wyświetlony, ostrzeżenia i przetwarzanie komunikatów, ale te komunikaty zostały usunięte z następujące wyniki dla przejrzystości.
+Po wykonaniu powyższych kroków uruchom aplikację konsolową (Ctrl + F5). Wyniki z pojedynczej przewidywania powyżej powinny być podobne do następujących. Mogą pojawić się ostrzeżenia lub komunikaty o przetwarzaniu, ale te komunikaty zostały usunięte z następujących wyników dla przejrzystości.
 
 ```console
 =============== Training the model ===============
@@ -405,33 +407,33 @@ Movie 10 is recommended for user 6
 =============== Saving the model to a file ===============
 ```
 
-Gratulacje! Usługi machine learning model polecanie filmów teraz zostały pomyślnie skompilowane. Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) repozytorium.
+Gratulacje! Pomyślnie skompilowano model uczenia maszynowego na potrzeby zalecanych filmów. Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) .
 
-## <a name="improve-your-model"></a>Poprawa modelu
+## <a name="improve-your-model"></a>Ulepszanie modelu
 
-Istnieje kilka sposobów, że może poprawić wydajność modelu, dzięki czemu można uzyskać dokładniejszych prognoz.
+Istnieje kilka sposobów na zwiększenie wydajności modelu, dzięki czemu można uzyskać dokładniejsze przewidywania.
 
 ### <a name="data"></a>Dane
 
-Dodawanie większej ilości danych szkoleniowych, który ma wystarczającej liczby próbek dla każdego użytkownika i identyfikator filmu może zwiększyć jakość modelu zalecenia.
+Dodanie więcej danych szkoleniowych, które mają wystarczającą ilość próbek dla każdego użytkownika i identyfikatora filmu, może pomóc w ulepszeniu jakości modelu rekomendacji.
 
-[Krzyżowe sprawdzanie poprawności](../how-to-guides/train-cross-validation-ml-net.md) to technika, który losowo oceniania modeli są rozróżniane danych na podzestawy (zamiast wyodrębniania się dane testowe z zestawu danych, jak zrobiono to w ramach tego samouczka) i przyjmuje niektórych grup nauczenia danych, a niektóre z tych grup jako test dane. Tej metody przewyższa przekształcania stosowane, dzięki czemu train-test podziału pod względem jakości modelu.
+[Krzyżowe sprawdzanie poprawności](../how-to-guides/train-cross-validation-ml-net.md) to technika służąca do oceniania modeli, które losowo dzielą dane na podzestawy (zamiast wyodrębniania danych testowych z zestawu danych, takiego jak w tym samouczku), a także niektóre grupy jako dane dotyczące uczenia i niektóre z tych grup. Ta metoda prowadzi do podzielenia testu pociągowego pod względem jakości modelu.
 
 ### <a name="features"></a>Funkcje
 
-W tym samouczku używasz tylko trzy `Features` (`user id`, `movie id`, i `rating`) są dostarczane przez zestaw danych.
+W tym samouczku używane są tylko `Features` trzy (`user id`, `movie id`i `rating`), które są udostępniane przez zestaw danych.
 
-Gdy jest to dobry początek, w rzeczywistości możesz chcieć dodać inne atrybuty lub `Features` (na przykład, wiek, płeć, geolokalizacja itp.), jeśli są one uwzględnione w zestawie danych. Dodawanie istotniejsze `Features` może zwiększyć wydajność modelu zalecenia.
+Chociaż jest to dobry początek, w rzeczywistości warto dodać inne atrybuty lub `Features` (na przykład wiek, płeć, lokalizację geograficzną itp.), jeśli są one zawarte w zestawie danych. Dodanie bardziej istotnych `Features` informacji może pomóc w zwiększeniu wydajności modelu rekomendacji.
 
-Jeśli nie wiesz o tym, które `Features` może być najbardziej istotne dla zadania machine learning, można również skorzystać z funkcji wkład obliczeń (FCC) i [znaczenie permutacji funkcji](../how-to-guides/determine-global-feature-importance-in-model.md), który zapewnia strukturze ML.NET Odkryj najbardziej duży wpływ `Features`.
+Jeśli nie masz pewności, co `Features` może być najbardziej odpowiednie dla zadania uczenia maszynowego, możesz również skorzystać z funkcji obliczania udziałów funkcji (FCC) i znaczenia wartości [permutacji](../how-to-guides/determine-global-feature-importance-in-model.md), która ml.NET umożliwia odnajdywanie najbardziej wpływ `Features`.
 
-### <a name="algorithm-hyperparameters"></a>Algorytm hiperparametrów
+### <a name="algorithm-hyperparameters"></a>Moje parametry algorytmu
 
-Strukturze ML.NET zapewnia dobre domyślne szkolenia algorytmów, jednocześnie można dodatkowo dostrajania wydajności przez zmianę tego algorytmu [hiperparametrów](../resources/glossary.md#hyperparameter).
+Chociaż ML.NET zapewnia dobre domyślne algorytmy szkoleniowe, można dokładniej dostosować wydajność przez zmianę [parametrów](../resources/glossary.md#hyperparameter)algorytmu.
 
-Aby uzyskać `Matrix Factorization`, można eksperymentować hiperparametrów takich jak [NumberOfIterations](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options.NumberOfIterations) i [ApproximationRank](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options.ApproximationRank) aby zobaczyć, jeśli zapewnia to lepsze wyniki.
+W `Matrix Factorization`przypadku programu można eksperymentować z parametrami, takimi jak [NumberOfIterations](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options.NumberOfIterations) i [ApproximationRank](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options.ApproximationRank) , aby sprawdzić, czy daje on lepsze wyniki.
 
-Na przykład w tym samouczku algorytm są następujące opcje:
+Na przykład w tym samouczku są dostępne następujące opcje algorytmu:
 
 ```csharp
 var options = new MatrixFactorizationTrainer.Options
@@ -444,32 +446,32 @@ var options = new MatrixFactorizationTrainer.Options
 };
 ```
 
-### <a name="other-recommendation-algorithms"></a>Inne algorytmy zalecenia
+### <a name="other-recommendation-algorithms"></a>Inne algorytmy rekomendacji
 
-Algorytm factorization macierzy za pomocą filtrowania z wykorzystaniem współpracy jest tylko jedno z podejść do wykonywania rekomendacji filmów. W wielu przypadkach może nie ma dostępnych danych oceny i mieć tylko historii film dostępny od użytkowników. W innych przypadkach może mieć więcej niż tylko przez użytkownika klasyfikacji danych.
+Algorytm factorization Matrix z filtrowaniem do współpracy jest tylko jednym podejściem do wykonywania zaleceń dotyczących filmów. W wielu przypadkach możesz nie mieć dostępnych danych klasyfikacji i mieć tylko historię filmów dostępną dla użytkowników. W innych przypadkach może być więcej niż tylko dane oceny użytkownika.
 
 | Algorytm       | Scenariusz           | Przykład  |
 | ------------- |:-------------:| -----:|
-| Factorization macierzy jednej klasy | Użyj tego, jeśli masz tylko identyfikator użytkownika i movieId. Ten styl zalecenie opiera się na scenariuszu wspólnej zakupu lub produktów często kupowane razem, co oznacza, że będzie zalecamy klientom zestaw produktów na podstawie własnych zakupu historii zamówień. | [> wypróbuj działanie rozwiązania](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
-| Pole pamiętać Factorization maszyn | Użyj tego zaleceń, gdy masz większą liczbą funkcji poza userId, identyfikator produktu i klasyfikacji (na przykład opis produktu lub cena produktu). Ta metoda używa również wspólne podejście filtrowania. | [> wypróbuj działanie rozwiązania](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
+| Factorization macierzy klasy 1 | Użyj tego, jeśli masz tylko userId i movieId. Ten styl rekomendacji jest oparty na scenariuszu współsprzedaży lub produktów często kupowanych, co oznacza, że klient będzie polecał klientom zestaw produktów oparty na ich historii zakupów. | [> Wypróbuj](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
+| Maszyny factorization z obsługą pól | Użyj tego do zaleceń, gdy masz więcej funkcji poza userId, productId i klasyfikacją (na przykład Opis produktu lub cena produktu). Ta metoda używa również podejścia do filtrowania wspólnie. | [> Wypróbuj](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
 
 ### <a name="new-user-scenario"></a>Nowy scenariusz użytkownika
 
-Jeden powszechny problem związany z filtrowania z wykorzystaniem współpracy jest problem zimnego, czyli w przypadku nowego użytkownika bez poprzedniego danych do rysowania wniosków z. To często problemu zadając nowych użytkowników, aby utworzyć profil i, na przykład filmy szybkość ich przejrzane w przeszłości. Gdy ta metoda powoduje niektórych obciążeń na użytkownika, zawiera dane wyjścia dla nowych użytkowników o Brak historii klasyfikacji.
+Jednym z typowych problemów w filtrowaniu do współpracy jest problem z zimnym rozpoczęciem, który jest przeznaczony dla nowego użytkownika, który nie ma żadnych poprzednich danych do rysowania wniosków z. Ten problem jest często rozwiązywany przez zaproszenie nowych użytkowników o utworzenie profilu, a na przykład ocenianie filmów, które pojawiły się w przeszłości. Chociaż ta metoda nakłada pewne obciążenie dla użytkownika, zapewnia pewne dane wyjściowe dla nowych użytkowników bez historii klasyfikacji.
 
 ## <a name="resources"></a>Zasoby
 
-Dane używane w tym samouczku jest tworzony na podstawie [MovieLens Dataset](http://files.grouplens.org/datasets/movielens/).
+Dane używane w tym samouczku pochodzą z [zestawu danych MovieLens](http://files.grouplens.org/datasets/movielens/).
 
 ## <a name="next-steps"></a>Następne kroki
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
-> * Wybieranie algorytmu uczenia maszynowego
-> * Przygotowanie i ładowania danych
-> * Tworzenie i uczenie modelu
-> * Ocena modelu
+> * Wybierz algorytm uczenia maszynowego
+> * Przygotowywanie i ładowanie danych
+> * Kompilowanie i uczenie modelu
+> * Oceń model
 > * Wdrażanie i korzystanie z modelu
 
 Przejdź do następnego samouczka, aby dowiedzieć się więcej

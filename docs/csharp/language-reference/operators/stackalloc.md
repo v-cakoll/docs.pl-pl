@@ -1,59 +1,61 @@
 ---
-title: operator stackalloc — C# odwołania
+title: operator stackalloc — C# odwołanie
 ms.custom: seodec18
 ms.date: 06/10/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 3be4e827e75e4e26a34d9ed70423af5aa317e7fb
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: f211acaa8c47ab42a1f7f06cff6c35570cd22b75
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025001"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433827"
 ---
-# <a name="stackalloc-operator-c-reference"></a>stackalloc — operator (C# odwołania)
+# <a name="stackalloc-operator-c-reference"></a>stackalloc — operatorC# (odwołanie)
 
-`stackalloc` Operator przydziela blok pamięci na stosie. Stos przydzielony blok pamięci, utworzony podczas wykonywania metody jest automatycznie odrzucane po powrocie z tej metody. Nie można jawnie zwolnić pamięć alokowaną `stackalloc` operatora. Blok pamięci przydzielony stos nie jest podlegają [wyrzucania elementów bezużytecznych](../../../standard/garbage-collection/index.md) i nie musi być przypinane z [ `fixed` instrukcji](../keywords/fixed-statement.md).
+`stackalloc` Operator przydziela blok pamięci na stosie. Blok pamięci przydzielony przez stos utworzony podczas wykonywania metody jest automatycznie usuwany, gdy ta metoda zwraca. Nie można jawnie zwolnić pamięci przydzieloną z `stackalloc` operatorem. Przydzielony blok pamięci stosu nie podlega wyrzucaniu [elementów](../../../standard/garbage-collection/index.md) bezużytecznych i nie musi być przypięty za pomocą [ `fixed` instrukcji](../keywords/fixed-statement.md).
 
-Możesz przypisać wynik `stackalloc` operatora zmiennej jednego z następujących typów:
+W `stackalloc T[E]`wyrażeniu `T` element musi być [typem](../builtin-types/unmanaged-types.md) niezarządzanym i `E` musi być wyrażeniem `int`typu.
 
-- Począwszy od C# 7.2, <xref:System.Span%601?displayProperty=nameWithType> lub <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, jak pokazano w poniższym przykładzie:
+Można przypisać wynik `stackalloc` operatora do zmiennej jednego z następujących typów:
+
+- Począwszy od C# 7,2 <xref:System.Span%601?displayProperty=nameWithType> lub <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, jak pokazano na poniższym przykładzie:
 
   [!code-csharp[stackalloc span](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToSpan)]
 
-  Nie trzeba stosować [niebezpieczne](../keywords/unsafe.md) kontekstu po przypisaniu stosu przydzielony blok pamięci, aby <xref:System.Span%601> lub <xref:System.ReadOnlySpan%601> zmiennej.
+  Nie trzeba używać niebezpiecznego [](../keywords/unsafe.md) kontekstu, gdy przypiszesz blok pamięci przydzielony przez stos do <xref:System.Span%601> zmiennej <xref:System.ReadOnlySpan%601> lub.
 
-  Podczas pracy z tych typów, można użyć `stackalloc` wyrażenia w [warunkowego](conditional-operator.md) lub wyrażenia przypisania, co ilustruje poniższy przykład:
+  Podczas pracy z tymi typami można użyć `stackalloc` wyrażenia w wyrażeniach [warunkowych](conditional-operator.md) lub przypisywania, jak pokazano na poniższym przykładzie:
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
   > [!NOTE]
-  > Firma Microsoft zaleca używanie <xref:System.Span%601> lub <xref:System.ReadOnlySpan%601> typy do pracy z na stosie pamięci, jeśli to możliwe.
+  > Zalecamy używanie <xref:System.Span%601> lub typy <xref:System.ReadOnlySpan%601> do pracy z przydzieloną pamięcią stosu, jeśli jest to możliwe.
 
-- A [typ wskaźnika](../../programming-guide/unsafe-code-pointers/pointer-types.md), jak pokazano w poniższym przykładzie:
+- [Typ wskaźnika](../../programming-guide/unsafe-code-pointers/pointer-types.md), jak pokazano na poniższym przykładzie:
 
   [!code-csharp[stackalloc pointer](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToPointer)]
 
-  Jak pokazano na poprzednim przykładzie, należy użyć `unsafe` kontekście podczas pracy z typami wskaźników.
+  Jak pokazano w powyższym przykładzie, należy użyć `unsafe` kontekstu podczas pracy z typami wskaźników.
 
-Zawartość nowo przydzielonego pamięci jest niezdefiniowane. Począwszy od C# 7.3, można użyć składni inicjatora tablicy definiowanie zawartości nowo alokacji pamięci. W poniższym przykładzie pokazano różne sposoby, aby to zrobić:
+Zawartość nowo przydzieloną pamięci jest niezdefiniowana. Począwszy od C# 7,3, można użyć składni inicjatora tablicy do zdefiniowania zawartości nowo przydzieloną pamięć. Poniższy przykład ilustruje różne sposoby, aby to zrobić:
 
 [!code-csharp[stackalloc initialization](~/samples/csharp/language-reference/operators/StackallocOperator.cs#StackallocInit)]
 
 ## <a name="security"></a>Zabezpieczenia
 
-Korzystanie z `stackalloc` automatycznie włącza funkcje wykrywania przepełnienia buforu, w środowisku uruchomieniowym języka (wspólnego CLR). W przypadku wykrycia przepełnienie buforu tak szybko, jak to możliwe, aby zminimalizować prawdopodobieństwo, że złośliwy kod jest wykonywany zakończenia procesu.
+Korzystanie z programu `stackalloc` automatycznie włącza funkcje wykrywania przepełnienia buforu w środowisku uruchomieniowym języka wspólnego (CLR). Jeśli wykryto przepełnienie buforu, proces zostaje zakończony jak najszybciej, aby zminimalizować prawdopodobieństwo wykonania złośliwego kodu.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [alokacji stosu](~/_csharplang/spec/unsafe-code.md#stack-allocation) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz sekcję [Alokacja stosu](~/_csharplang/spec/unsafe-code.md#stack-allocation) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwołanie](../index.md)
+- [C#odwoła](../index.md)
 - [Operatory języka C#](index.md)
-- [Wskaźnik związane z operatorów](pointer-related-operators.md)
+- [Operatory powiązane z wskaźnikiem](pointer-related-operators.md)
 - [Typy wskaźników](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Pamięć i typy związane z zakresem](../../../standard/memory-and-spans/index.md)

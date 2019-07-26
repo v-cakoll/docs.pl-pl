@@ -1,99 +1,99 @@
 ---
 title: Wybieranie między tradycyjnymi aplikacjami internetowymi i aplikacjami jednostronicowymi
-description: Dowiedz się, jak dokonać wyboru między tradycyjnych aplikacji i internetowych aplikacji jednostronicowej (źródła), podczas tworzenia aplikacji sieci web.
+description: Dowiedz się, jak wybierać między tradycyjnymi aplikacjami sieci Web i aplikacjami jednostronicowymi (aplikacji jednostronicowych) podczas kompilowania aplikacji sieci Web.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 5b8569f2abd5160fa8a080c06441a963fb455f6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d68c167dce791a31eeb5ca5729b50ec22c64f9b0
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019415"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331594"
 ---
-# <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Wybierz między aplikacjami tradycyjnej sieci Web i aplikacje jednostronicowe (źródła)
+# <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Wybór między tradycyjnymi Web Apps i aplikacjami jednostronicowymi (aplikacji jednostronicowych)
 
-> "Prawo Atwoodem firmy: Każda aplikacja, która może być napisana w języku JavaScript zostanie ostatecznie zapisany w języku JavaScript."  
-> _\- Jeffem Atwoodem_
+> "Atwoodem: Każda aplikacja, którą można napisać w języku JavaScript, zostanie ostatecznie zapisywana w języku JavaScript.  
+> _\-Jan Atwoodem_
 
-Dostępne są dwie opcje ogólne do kompilowania nowoczesnych aplikacji sieci web: aplikacje tradycyjnej sieci web, które wykonują większość logiki aplikacji na serwerze i aplikacji jednostronicowej (źródła), które wykonują większość logikę interfejsu użytkownika w przeglądarce sieci web Komunikacja z serwerem sieci web, przede wszystkim za pomocą interfejsów API sieci web. Możliwe jest również podejście hybrydowe, najprostszym trwa hosta jedną lub więcej zaawansowanych przypominającej SPA podrzędnych aplikacji w obrębie większej aplikacji sieci web tradycyjnych.
+Obecnie istnieją dwa ogólne podejścia do tworzenia aplikacji sieci Web: tradycyjne aplikacje sieci Web, które wykonują większość logiki aplikacji na serwerze i aplikacje jednostronicowe (aplikacji jednostronicowych), które wykonują większość logiki interfejsu użytkownika w przeglądarce internetowej. Komunikacja z serwerem sieci Web polega głównie na użyciu interfejsów API sieci Web. Podejście hybrydowe jest również możliwe, najprostszym hostem co najmniej jednej aplikacji podrzędnej, podobnej do SPA, w ramach większej tradycyjnej aplikacji sieci Web.
 
-Skorzystaj z aplikacji sieci web tradycyjnych po:
+Należy używać tradycyjnych aplikacji sieci Web, gdy:
 
-- Wymagania dotyczące Twojej aplikacji po stronie klienta są proste lub nawet tylko do odczytu.
+- Wymagania po stronie klienta aplikacji są proste lub nawet tylko do odczytu.
 
-- Aplikacja musi działać w różnych przeglądarkach bez konieczności obsługi języka JavaScript.
+- Aplikacja musi działać w przeglądarkach bez obsługi języka JavaScript.
 
-- Twój zespół nie jest zaznajomiony z technik programistycznych języka JavaScript lub TypeScript.
+- Twój zespół nie zna technik programowania JavaScript i języka TypeScript.
 
-Należy użyć SPA po:
+Należy użyć SPA, gdy:
 
-- Aplikacja musi ujawniać zaawansowanego interfejsu użytkownika z wieloma funkcjami.
+- Aplikacja musi uwidocznić rozbudowany interfejs użytkownika z wieloma funkcjami.
 
-- Zespół jest znajomość języka JavaScript i/lub TypeScript rozwoju.
+- Zespół jest zaznajomiony z programowaniem kodu JavaScript i/lub języka TypeScript.
 
-- Aplikacja musi już uwidaczniania interfejsu API dla innych klientów (wewnętrznego lub publicznego).
+- Aplikacja musi już uwidocznić interfejs API dla innych klientów (wewnętrznych lub publicznych).
 
-Ponadto wymagają większej struktury SPA architektury i doświadczenia w zakresie zabezpieczeń. One występować większe zmian z powodu częstych aktualizacji i nowych platform niż tradycyjne internetowych. Konfigurowanie zautomatyzowanych procesów kompilacji i wdrożenia, a korzystanie z opcji wdrażania, takich jak kontenery są za pomocą aplikacji SPA trudniejsze niż aplikacji tradycyjnej sieci web.
+Ponadto struktury SPA wymagają większej wiedzy o architekturze i zabezpieczeniach. Są one większe, ze względu na częste aktualizacje i nowe platformy niż tradycyjne aplikacje sieci Web. Konfigurowanie zautomatyzowanych procesów kompilacji i wdrażania oraz korzystanie z opcji wdrażania, takich jak kontenery, są trudniejsze w przypadku aplikacji SPA niż tradycyjne aplikacje sieci Web.
 
-Ulepszenia środowiska użytkownika staje się możliwy przez SPA model należy porównać te zagadnienia.
+Ulepszenia środowiska użytkownika wykonywane przez model SPA muszą zostać odważone względem tych zagadnień.
 
-## <a name="razor-components"></a>Składniki Razor
+## <a name="blazor"></a>Blazor
 
-Platforma ASP.NET Core 3.0 wprowadzono nowy model do tworzenia bogatych i interaktywnych i konfigurowalna interfejsu użytkownika o nazwie składniki Razor. Składniki razor umożliwić deweloperom tworzenie interfejsu użytkownika ze składnią Razor na serwerze, a dla tego kodu, które mają zostać dostarczone do przeglądarki i wykonywane przy użyciu biblioteki JavaScript o nazwie format WebAssembly klienta. Platforma ASP.NET Core 3.0 jest nadal w fazie projektowania, ale należy się spodziewać zobaczyć więcej informacji na temat tej technologii w wersji 3.0 aktualizacji tę książkę elektroniczną. Aby uzyskać więcej informacji na temat składników Razor (o nazwie Blazor kod), zobacz [wprowadzenie Blazor](https://blazor.net/docs/get-started.html).
+ASP.NET Core 3,0 wprowadza nowy model umożliwiający tworzenie rozbudowanego, interaktywnego i składającego się interfejsu użytkownika o nazwie Blazor. Blazor po stronie serwera umożliwia deweloperom tworzenie interfejsu użytkownika przy użyciu Razor na serwerze i dla tego kodu do dostarczenia do przeglądarki i wykonywanie po stronie klienta przy użyciu biblioteki JavaScript o nazwie webassembly. ASP.NET Core 3,0 nadal jest w fazie opracowywania, ale powinno się oczekiwać, że więcej informacji na temat tej technologii znajduje się w aktualizacji 3,0 do tej książki elektronicznej. Aby uzyskać więcej informacji na temat Blazor, zobacz [Rozpoczynanie pracy z Blazor](https://blazor.net/docs/get-started.html).
 
-## <a name="when-to-choose-traditional-web-apps"></a>Kiedy należy wybrać aplikacje tradycyjnej sieci web
+## <a name="when-to-choose-traditional-web-apps"></a>Kiedy należy wybrać tradycyjne aplikacje sieci Web
 
-Oto bardziej szczegółowy opis wcześniej podane przyczyny pobrania aplikacji tradycyjnej sieci web.
+Poniżej znajduje się bardziej szczegółowy opis przedstawionych wcześniej powodów dotyczących wybierania tradycyjnych aplikacji sieci Web.
 
-**Twoja aplikacja ma wymagania prosty, prawdopodobnie tylko do odczytu, po stronie klienta**
+**Twoja aplikacja ma proste, prawdopodobnie tylko do odczytu wymagania po stronie klienta**
 
-Wiele aplikacji sieci web są głównie używane w sposób umożliwiający tylko do odczytu przez większość użytkowników. Tylko do odczytu (lub przeczytaj najczęściej) aplikacji zwykle jest znacznie prostsze niż te, które utrzymują i manipulowania dużym stopniem stanu. Na przykład aparatu wyszukiwania może składać się z pojedynczego punktu wejścia przy użyciu pola tekstowego i drugiej stronie do wyświetlania wyników wyszukiwania. Anonimowi użytkownicy mogą łatwo wysyłać żądania, a istnieje potrzeba nieco logiki po stronie klienta. Podobnie blogu lub zawartości systemem zarządzania firmy publicznie dostępnych aplikacji zwykle składa się głównie z zawartości przy użyciu nieco zachowania po stronie klienta. Takie aplikacje łatwo są tworzone w aplikacji tradycyjnych oparte na serwerze sieci web, które wykonywania logiki na serwerze sieci web i renderowania elementów HTML mają być wyświetlane w przeglądarce. Fakt, że każdy unikatową stronę witryny ma swój własny adres URL, który może być zakładek i indeksowany przez wyszukiwarki (domyślnie, bez konieczności dodawania to jako osobna funkcja aplikacji) jest również wyczyść korzyści w takich scenariuszach.
+Wiele aplikacji sieci Web jest używanych głównie w sposób tylko do odczytu przez ogromną większość użytkowników. Aplikacje tylko do odczytu (lub do odczytu) są znacznie prostsze niż te, które utrzymują i manipulują dużą ilością. Na przykład aparat wyszukiwania może składać się z jednego punktu wejścia z polem tekstowym i drugą stroną do wyświetlania wyników wyszukiwania. Anonimowi użytkownicy mogą łatwo wprowadzać żądania i nie ma potrzeby dla logiki po stronie klienta. Podobnie aplikacja publiczna lub publiczny systemu zarządzania zawartością zwykle składa się głównie z zawartości z małym zachowaniem po stronie klienta. Takie aplikacje można łatwo utworzyć jako tradycyjne aplikacje sieci Web oparte na serwerze, które wykonują logikę na serwerze sieci Web i Renderuj HTML do wyświetlania w przeglądarce. Oznacza to, że każda unikatowa Strona witryny ma własny adres URL, który może być oznaczony zakładką i indeksowany przez aparaty wyszukiwania (domyślnie bez konieczności dodawania go jako osobnej funkcji aplikacji) również w takich scenariuszach.
 
-**Aplikacja musi działać w różnych przeglądarkach bez konieczności obsługi języka JavaScript**
+**Aplikacja musi działać w przeglądarkach bez obsługi języka JavaScript**
 
-Aplikacje sieci Web, które muszą działać w przeglądarkach z ograniczonym lub brak obsługi języka JavaScript powinna być zapisana przy użyciu przepływów pracy aplikacji w tradycyjnej sieci web (lub co najmniej można przełączyć się na takie zachowanie). Aplikacji jednostronicowych wymagają języka JavaScript po stronie klienta, aby funkcjonować; Jeśli nie jest dostępna, aplikacji jednostronicowych nie są dobrym wyborem.
+Aplikacje sieci Web, które muszą działać w przeglądarkach z ograniczoną lub nie obsługą języka JavaScript, powinny być zapisywane przy użyciu tradycyjnych przepływów pracy aplikacji sieci Web (lub co najmniej może powracać do takiego zachowania). Aplikacji jednostronicowych wymaga, aby kod JavaScript po stronie klienta działał; Jeśli nie jest on dostępny, aplikacji jednostronicowych nie jest dobrym rozwiązaniem.
 
-**Twój zespół nie jest zaznajomiony z technik programistycznych języka JavaScript lub TypeScript**
+**Twój zespół nie zna technik programowania JavaScript i języka TypeScript**
 
-Jeśli Twój zespół nie jest zaznajomiony z języka JavaScript lub TypeScript jest jednak zapoznać się z programowania aplikacji sieci web po stronie serwera, prawdopodobnie będzie mogła dostarczać aplikacji sieci web tradycyjnych znacznie szybciej niż SPA. Chyba, że celem jest learning, aby program aplikacji jednostronicowych lub komfortu zapewnianej przez SPA jest wymagany, aplikacje sieci web tradycyjnych są bardziej produktywne wybór dla zespołów, którzy znają już tworzenia ich.
+Jeśli Twój zespół nie zna języka JavaScript lub TypeScript, ale jest zaznajomiony z programowaniem aplikacji sieci Web po stronie serwera, to prawdopodobnie będzie możliwe szybsze dostarczanie tradycyjnej aplikacji sieci Web niż SPA. O ile nie jest wymagane uczenie się programu aplikacji jednostronicowych lub środowisko użytkownika zapewniane przez SPA, tradycyjne aplikacje sieci Web to bardziej wydajny wybór dla zespołów, które już znają ich Kompilowanie.
 
 ## <a name="when-to-choose-spas"></a>Kiedy należy wybrać aplikacji jednostronicowych
 
-Oto bardziej szczegółowe wyjaśnienie, kiedy należy wybrać aplikacje jednostronicowe stylu programowania dla aplikacji sieci web.
+Poniżej znajduje się bardziej szczegółowy opis sytuacji, w której można wybrać styl aplikacji jednostronicowej dla aplikacji sieci Web.
 
-**Aplikacja musi udostępniać zaawansowanego interfejsu użytkownika z wieloma funkcjami**
+**Aplikacja musi uwidaczniać rozbudowany interfejs użytkownika z wieloma funkcjami**
 
-Aplikacji jednostronicowych może obsługiwać zaawansowane funkcje po stronie klienta, która nie wymaga ponownie załadować stronę, gdy użytkownicy akcje lub przechodzenie między obszarami aplikacji. Aplikacji jednostronicowych mogą ładować szybsze pobieranie danych w tle, i akcji użytkownika są zwiększyć szybkość reakcji, ponieważ cała strona ładuje ponownie są rzadkie. Aplikacji jednostronicowych może obsługiwać aktualizacje przyrostowe zapisywanie częściowo wypełnione formularze lub dokumenty bez użytkownika, po kliknięciu przycisku, które można przesłać formularza. Aplikacji jednostronicowych może obsługiwać znacznie łatwiej niż tradycyjne aplikacje rozbudowane zachowania po stronie klienta, takich jak przeciągania i upuszczania. Źródła można zaprojektować do działania w trybie rozłączonym wprowadzania aktualizacji w modelu po stronie klienta, który ostatecznie są synchronizowane na serwerze, po ponownym nawiązaniu połączenia. Należy wybrać aplikację w języku SPA, jeśli wymagania dotyczące Twojej aplikacji zawiera zaawansowane funkcje, które wykraczają poza oferują typowy formularzy HTML.
+Aplikacji jednostronicowych może obsługiwać rozbudowane funkcje po stronie klienta, które nie wymagają ponownego załadowania strony, ponieważ użytkownicy podejmują działania lub Przechodź między obszarami aplikacji. Aplikacji jednostronicowych może szybciej ładować, pobierać dane w tle, a akcje poszczególnych użytkowników są większe, ponieważ pełne obciążenia stron są rzadkie. Aplikacji jednostronicowych może obsługiwać aktualizacje przyrostowe, zapisując częściowo zakończone formularze lub dokumenty bez konieczności klikania przycisku w celu przesłania formularza. Aplikacji jednostronicowych może obsługiwać rozbudowane zachowania po stronie klienta, na przykład przeciąganie i upuszczanie, znacznie łatwiejsze niż tradycyjne aplikacje. Aplikacji jednostronicowych może być zaprojektowana tak, aby działała w trybie rozłączenia, po wprowadzeniu aktualizacji do modelu po stronie klienta, które zostały ostatecznie zsynchronizowane z serwerem po ponownym nawiązaniu połączenia. Jeśli wymagania dotyczące aplikacji zawierają rozbudowane funkcje, które wykraczają poza typowe oferty formularzy HTML, należy wybrać aplikację w stylu SPA.
 
-Należy zauważyć, że często aplikacji jednostronicowych implementuje funkcje, które są wbudowane w platformę aplikacji tradycyjnej sieci web, takich jak wyświetlanie opisowy adres URL na adres pasku odzwierciedlający bieżącej operacji (i umożliwiając użytkownikom do zakładki lub link bezpośredni do tego adresu URL, aby powrócić do niego). Aplikacji jednostronicowych powinien również zezwolić użytkownikom korzystanie z wyników, które nie będą zaskakującymi je w przeglądarce przycisków Wstecz i dalej.
+Należy pamiętać, że często aplikacji jednostronicowych muszą implementować funkcje, które są wbudowane w tradycyjne aplikacje sieci Web, takie jak wyświetlanie zrozumiałego adresu URL na pasku adresu odzwierciedlające bieżącą operację (i Umożliwianie użytkownikom zakładek lub głębokiego linku do tego adresu URL w celu powrotu do niego). Aplikacji jednostronicowych powinien również zezwalać użytkownikom na używanie przycisków Wstecz i do przodu przeglądarki z wynikami, które nie są w ich przypadku niewidoczne.
 
-**Zespół jest znane, za pomocą języka JavaScript i/lub TypeScript**
+**Twój zespół zna język JavaScript i/lub programowanie TypeScript**
 
-Pisanie aplikacji jednostronicowych wymaga znajomości języka JavaScript i/lub TypeScript i techniki programowania po stronie klienta i bibliotek. Zespół powinien być właściwa w pisaniu nowoczesnego języka JavaScript przy użyciu SPA framework, takich jak Angular.
+Pisanie aplikacji jednostronicowych wymaga znajomości języka JavaScript i/lub technik programowania po stronie klienta i bibliotek. Zespół powinien być kompetentny do pisania nowoczesnego kodu JavaScript przy użyciu struktury SPA, takiej jak kątowy.
 
-> ### <a name="references--spa-frameworks"></a>Odwołania — struktury SPA
+> ### <a name="references--spa-frameworks"></a>References — platformy SPA
 >
 > - **Angular**  
 >   <https://angular.io>
-> - **Porównanie platformy JavaScript**  
+> - **Porównanie struktur języka JavaScript**  
 >   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
-**Aplikacja musi już uwidaczniania interfejsu API dla innych klientów (wewnętrznego lub publicznego)**
+**Aplikacja musi już udostępnić interfejs API innym (wewnętrznym lub publicznym) klientom**
 
-Jeśli masz już obsługi interfejsu API sieci web używane przez innych klientów, może wymagać mniejszym nakładzie pracy do utworzenia implementacji SPA, który korzysta z tych interfejsów API, a nie odtwarzanie logiki w formularzu po stronie serwera. Aplikacji jednostronicowych upewnij zwiększone użycie interfejsów API sieci web do wykonywania zapytań i aktualizacji danych, zgodnie z użytkownikom interakcję z aplikacją.
+Jeśli obsługujesz już internetowy interfejs API do użytku przez innych klientów, może być konieczne mniejsze nakłady pracy w celu utworzenia implementacji SPA, która wykorzystuje te interfejsy API zamiast odtwarzania logiki w formularzu po stronie serwera. Aplikacji jednostronicowych wykonywać wiele interfejsów API sieci Web, aby wysyłać zapytania i aktualizować dane, gdy użytkownicy współpracują z aplikacją.
 
-## <a name="decision-table--traditional-web-or-spa"></a>Tabela decyzji — tradycyjnej sieci Web lub SPA
+## <a name="decision-table--traditional-web-or-spa"></a>Tabela decyzyjna — tradycyjne sieci Web lub SPA
 
-W poniższej tabeli decyzji zawiera podsumowanie podstawowych czynników, które należy wziąć pod uwagę przy wyborze między aplikacją internetową tradycyjnych i SPA.
+Poniższa tabela decyzji podsumowuje niektóre podstawowe czynniki, które należy wziąć pod uwagę podczas wybierania między tradycyjną aplikacją sieci Web a SPA.
 
-| **współczynnik**                                           | **Aplikacja sieci Web tradycyjny** | **Aplikacja jednostronicowa** |
+| **1U**                                           | **Tradycyjna aplikacja internetowa** | **Aplikacja jednostronicowa** |
 | ---------------------------------------------------- | ----------------------- | --------------------------- |
-| Wymagane zespołu znajomość języka JavaScript/TypeScript | **Minimalny**             | **Wymagane**                |
-| Obsługa przeglądarki bez obsługi skryptów                   | **Obsługiwane**           | **Nie jest obsługiwany**           |
-| Zachowanie minimalnego aplikacji po stronie klienta             | **Well-Suited**         | **Obszerne**                |
-| Wymagania dotyczące interfejsu użytkownika zaawansowane, złożone            | **Ograniczone**             | **Well-Suited**             |
+| Wymagana znajomość zespołu w języku JavaScript/TypeScript | **Mniejsze**             | **Wymagane**                |
+| Obsługa przeglądarek bez obsługi skryptów                   | **Obsługiwane**           | **Nieobsługiwane**           |
+| Minimalne zachowanie aplikacji po stronie klienta             | **Well-Suited**         | **Zbyt obszerne**                |
+| Zaawansowane wymagania dotyczące interfejsu użytkownika            | **Separator**             | **Well-Suited**             |
 
 >[!div class="step-by-step"]
->[Poprzednie](modern-web-applications-characteristics.md)
->[dalej](architectural-principles.md)
+>[Poprzedni](modern-web-applications-characteristics.md)Następny
+>[](architectural-principles.md)

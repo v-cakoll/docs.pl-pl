@@ -1,5 +1,5 @@
 ---
-title: Fixed Statement - C# odwołania
+title: FIXED — C# odwołanie
 ms.custom: seodec18
 ms.date: 05/10/2018
 f1_keywords:
@@ -7,42 +7,42 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 88e2b93fda786db15b3a3a693bdb9293ed31df4c
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d3c87f0e71095bbcc7c5a1d64b026e92838a6306
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833218"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433752"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed — Instrukcja (odwołanie w C#)
 
-`fixed` Instrukcji zapobiega przemieszczanie zmienną ruchome moduł odśmiecania pamięci. `fixed` Instrukcji jest dozwolona tylko w [niebezpieczne](unsafe.md) kontekstu. Można również użyć `fixed` — słowo kluczowe, aby utworzyć [stałych buforów o rozmiarze](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
+`fixed` Instrukcja zapobiega ponownemu lokalizowaniu ruchomej zmiennej przez moduł wyrzucania elementów bezużytecznych. Instrukcja jest dozwolona tylko w niebezpiecznym kontekście. [](unsafe.md) `fixed` Możesz również użyć słowa kluczowego, `fixed` aby utworzyć bufory o ustalonym [rozmiarze](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
 
-`fixed` Instrukcja ustawia wskaźnik zarządzanego zmiennej i "przypięć" tej zmiennej podczas wykonywania instrukcji. Wskaźniki do zmiennych, ruchome zarządzane są przydatne tylko w `fixed` kontekstu. Bez `fixed` kontekstu, wyrzucanie elementów bezużytecznych może przenosić zmienne nieprzewidywalny. Kompilator języka C# tylko umożliwia przypisywanie wskaźnik do zmiennej zarządzanych w `fixed` instrukcji.
+`fixed` Instrukcja ustawia wskaźnik na zmienną zarządzaną i "pinezki", która jest zmienna podczas wykonywania instrukcji. Wskaźniki do ruchomych zmiennych zarządzanych są przydatne tylko w `fixed` kontekście. `fixed` Bez kontekstu, wyrzucanie elementów bezużytecznych może przewidzieć nieprzewidywalne zmienne. C# Kompilator umożliwia tylko przypisanie wskaźnika do zmiennej zarządzanej w `fixed` instrukcji.
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#1)]
 
-Aby zainicjować wskaźnik, należy za pomocą tablicy, ciąg, bufora o stałym rozmiarze lub adres zmiennej. Poniższy przykład ilustruje użycie zmiennej adresów, tablic i ciągi:
+Wskaźnik można zainicjować za pomocą tablicy, ciągu, buforu o ustalonym rozmiarze lub adresu zmiennej. Poniższy przykład ilustruje użycie adresów zmiennych, tablic i ciągów:
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
 
-Począwszy od C# 7.3, `fixed` instrukcji operuje na dodatkowe typy poza tablice, ciągi, bufory o stałym rozmiarze lub niezarządzanego zmiennych. Dowolny typ, który implementuje metodę o nazwie `GetPinnableReference` można przypiąć. `GetPinnableReference` Musi zwracać `ref` zmienną typu niezarządzanego. Zobacz temat w [typy wskaźników](../../programming-guide/unsafe-code-pointers/pointer-types.md) Aby uzyskać więcej informacji. Typy .NET <xref:System.Span%601?displayProperty=nameWithType> i <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> wprowadzone w programie .NET Core 2.0 upewnij Użyj tego wzorca i mogą być przypinane. Jest to pokazane w poniższym przykładzie:
+Począwszy od C# 7,3, `fixed` instrukcja działa na dodatkowych typach poza tablicami, ciągami, buforami o stałym rozmiarze lub zmiennymi niezarządzanymi. Każdy typ, który implementuje metodę o `GetPinnableReference` nazwie, może być przypięty. Musi zwracać zmienną typu niezarządzanego. [](../builtin-types/unmanaged-types.md) `GetPinnableReference` `ref` Typy <xref:System.Span%601?displayProperty=nameWithType> .NET i <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> wprowadzone w środowisku .NET Core 2,0 używają tego wzorca i mogą być przypięte. Jest to pokazane w poniższym przykładzie:
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
 
-Jeśli tworzysz typy, które należy wziąć udział w tym wzorcu, zobacz <xref:System.Span%601.GetPinnableReference?displayProperty=nameWithType> przykład implementacja wzorca.
+Jeśli tworzysz typy, które powinny wchodzić w skład tego wzorca, zobacz <xref:System.Span%601.GetPinnableReference?displayProperty=nameWithType> , aby zapoznać się z przykładem implementacji wzorca.
 
-Mogą być inicjowane wielu wskaźników w jednej instrukcji, jeśli są tego samego typu:
+W jednej instrukcji można zainicjować wiele wskaźników, jeśli są one tego samego typu:
 
 ```csharp
 fixed (byte* ps = srcarray, pd = dstarray) {...}
 ```
 
-Aby zainicjować wskaźników różnego typu, po prostu zagnieździć `fixed` instrukcje, jak pokazano w poniższym przykładzie.
+Aby zainicjować wskaźniki różnych typów, należy po prostu `fixed` zagnieżdżać instrukcje, jak pokazano w poniższym przykładzie.
 
 [!code-csharp[Initializing multiple pointers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#3)]
 
-Po wykonaniu kodu w instrukcji wszystkie przypięte zmienne są nieprzypięte i wyrzucania elementów bezużytecznych. W związku z tym, nie mogą wskazywać tych zmiennych na zewnątrz `fixed` instrukcji. Zmienne zadeklarowane w `fixed` instrukcji są ograniczone do tej instrukcji, ułatwiając to:
+Po wykonaniu kodu w instrukcji wszystkie przypięte zmienne są odpięte i podlegają wyrzucaniu elementów bezużytecznych. W związku z tym nie należy wskazywać na te `fixed` zmienne poza instrukcją. Zmienne zadeklarowane w `fixed` instrukcji należą do zakresu tej instrukcji, ułatwiając to:
 
 ```csharp
 fixed (byte* ps = srcarray, pd = dstarray)
@@ -52,7 +52,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 // ps and pd are no longer in scope here.
 ```
 
-Wskaźniki są inicjowane w `fixed` instrukcje są zmienne tylko do odczytu. Jeśli chcesz zmodyfikować wartość wskaźnika, należy zadeklarować zmienną drugi wskaźnik i zmodyfikować to. Zmienna zadeklarowana w `fixed` instrukcji nie można zmodyfikować:
+Wskaźniki inicjowane `fixed` w instrukcjach są zmiennymi tylko do odczytu. Jeśli chcesz zmodyfikować wartość wskaźnika, należy zadeklarować drugą zmienną wskaźnika i zmodyfikować ją. Nie można zmodyfikować zmiennej zadeklarowanej w `fixed` instrukcji:
 
 ```csharp
 fixed (byte* ps = srcarray, pd = dstarray)
@@ -63,11 +63,11 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-Można przydzielić pamięci na stosie, w którym nie podlega wyrzucania elementów bezużytecznych i dlatego nie trzeba przypiąć. Aby zrobić używające [ `stackalloc` operator](../operators/stackalloc.md).
+Możesz przydzielić pamięć na stosie, gdzie nie podlega wyrzucaniu elementów bezużytecznych i dlatego nie musi być przypięty. W tym celu należy użyć [ `stackalloc` operatora](../operators/stackalloc.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [instrukcji fixed](~/_csharplang/spec/unsafe-code.md#the-fixed-statement) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz sekcję [FIXED Statement](~/_csharplang/spec/unsafe-code.md#the-fixed-statement) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -75,4 +75,5 @@ Aby uzyskać więcej informacji, zobacz [instrukcji fixed](~/_csharplang/spec/un
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [unsafe](unsafe.md)
+- [Typy wskaźników](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Bufory o ustalonym rozmiarze](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

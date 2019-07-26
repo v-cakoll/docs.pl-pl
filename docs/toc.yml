@@ -68,12 +68,7 @@
     - name: Obsługa i zgłaszanie wyjątków
       href: standard/exceptions/
     - name: Zestawy w środowisku .NET
-      href: standard/assembly/index.md
-      items:
-        - name: Format pliku zestawu .NET
-          href: standard/assembly/file-format.md
-        - name: 'Instrukcje: Użycie i debugowanie funkcji zwolnienia zestawu w programie .NET Core'
-          href: standard/assembly/unloadability-howto.md
+      href: standard/assembly/
     - name: Odzyskiwanie pamięci
       href: standard/garbage-collection/
     - name: Typy ogólne

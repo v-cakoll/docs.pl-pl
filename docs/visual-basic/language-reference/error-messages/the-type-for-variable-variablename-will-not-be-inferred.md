@@ -7,85 +7,86 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: a595f38f6dd68b9c152bfa78ec0bebf36e173e17
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e56529919945558df178e18a83a895a79bfe4919
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649966"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512722"
 ---
-# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a><span data-ttu-id="2b5ab-102">Typ zmiennej "\<nazwa_zmiennej >' nie zostanie wywnioskowany, ponieważ jest on powiązany z polem w zakresie otaczającym</span><span class="sxs-lookup"><span data-stu-id="2b5ab-102">The type for variable '\<variablename>' will not be inferred because it is bound to a field in an enclosing scope</span></span>
-<span data-ttu-id="2b5ab-103">Typ zmiennej "\<nazwa_zmiennej >' nie zostanie wywnioskowany, ponieważ jest on powiązany z polem w zakresie otaczającym.</span><span class="sxs-lookup"><span data-stu-id="2b5ab-103">The type for variable '\<variablename>' will not be inferred because it is bound to a field in an enclosing scope.</span></span> <span data-ttu-id="2b5ab-104">Zmień nazwę "\<nazwa_zmiennej >", lub użyj w pełni kwalifikowana nazwa (na przykład "Me.variablename" lub "MyBase.variablename").</span><span class="sxs-lookup"><span data-stu-id="2b5ab-104">Either change the name of '\<variablename>', or use the fully qualified name (for example, 'Me.variablename' or 'MyBase.variablename').</span></span>  
-  
- <span data-ttu-id="2b5ab-105">Zmienna sterująca pętli w kodzie ma taką samą nazwę jako pola klasy lub innego zasięgu.</span><span class="sxs-lookup"><span data-stu-id="2b5ab-105">A loop control variable in your code has the same name as a field of the class or other enclosing scope.</span></span> <span data-ttu-id="2b5ab-106">Ponieważ zmienna sterująca jest używany bez `As` klauzula jest powiązany z polem w zasięgu, a kompilator nie tworzy nową zmienną dla niego ani nie wywnioskować jej typu.</span><span class="sxs-lookup"><span data-stu-id="2b5ab-106">Because the control variable is used without an `As` clause, it is bound to the field in the enclosing scope, and the compiler does not create a new variable for it or infer its type.</span></span>  
-  
- <span data-ttu-id="2b5ab-107">W poniższym przykładzie `Index`, zmienna sterująca w `For` instrukcji, jest powiązany z `Index` pole `Customer` klasy.</span><span class="sxs-lookup"><span data-stu-id="2b5ab-107">In the following example, `Index`, the control variable in the `For` statement, is bound to the `Index` field in the `Customer` class.</span></span> <span data-ttu-id="2b5ab-108">Kompilator nie tworzy nową zmienną dla zmienna sterująca `Index` lub wywnioskować jej typu.</span><span class="sxs-lookup"><span data-stu-id="2b5ab-108">The compiler does not create a new variable for the control variable `Index` or infer its type.</span></span>  
-  
-```  
-Class Customer  
-  
-    ' The class has a field named Index.  
-    Private Index As Integer  
-  
-    Sub Main()  
-  
-    ' The following line will raise this warning.  
-        For Index = 1 To 10  
-            ' ...  
-        Next  
-  
-    End Sub  
-End Class  
-```  
-  
- <span data-ttu-id="2b5ab-109">Domyślnie ta wiadomość jest ostrzeżenie.</span><span class="sxs-lookup"><span data-stu-id="2b5ab-109">By default, this message is a warning.</span></span> <span data-ttu-id="2b5ab-110">Aby uzyskać informacji na temat sposobu Ukryj ostrzeżenia lub jak Traktuj ostrzeżenia jako błędy, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="2b5ab-110">For information about how to hide warnings or how to treat warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
-  
- <span data-ttu-id="2b5ab-111">**Identyfikator błędu:** BC42110</span><span class="sxs-lookup"><span data-stu-id="2b5ab-111">**Error ID:** BC42110</span></span>  
-  
-### <a name="to-address-this-warning"></a><span data-ttu-id="2b5ab-112">Aby rozwiązać tego ostrzeżenia</span><span class="sxs-lookup"><span data-stu-id="2b5ab-112">To address this warning</span></span>  
-  
-- <span data-ttu-id="2b5ab-113">Zmienna sterująca pętli należy lokalnych, zmieniając jej nazwę na identyfikator, który nie jest również nazwę pola klasy.</span><span class="sxs-lookup"><span data-stu-id="2b5ab-113">Make the loop control variable local by changing its name to an identifier that is not also the name of a field of the class.</span></span>  
-  
-    ```  
-    For I = 1 To 10  
-    ```  
-  
-- <span data-ttu-id="2b5ab-114">Wyjaśnienie, że zmienna sterująca pętli wiąże pola klasy przez dodanie przedrostka `Me.` do nazwy zmiennej.</span><span class="sxs-lookup"><span data-stu-id="2b5ab-114">Clarify that the loop control variable binds to the class field by prefixing `Me.` to the variable name.</span></span>  
-  
-    ```  
-    For Me.Index = 1 To 10  
-    ```  
-  
-- <span data-ttu-id="2b5ab-115">Zamiast polegania na wnioskowanie o typie lokalnym, użyj `As` klauzuli, aby określić typ zmienna sterująca pętli.</span><span class="sxs-lookup"><span data-stu-id="2b5ab-115">Instead of relying on local type inference, use an `As` clause to specify a type for the loop control variable.</span></span>  
-  
-    ```  
-    For Index As Integer = 1 To 10  
-    ```  
-  
-## <a name="example"></a><span data-ttu-id="2b5ab-116">Przykład</span><span class="sxs-lookup"><span data-stu-id="2b5ab-116">Example</span></span>  
- <span data-ttu-id="2b5ab-117">Poniższy kod przedstawia wcześniejszy przykład przy pierwszym korekcji w miejscu.</span><span class="sxs-lookup"><span data-stu-id="2b5ab-117">The following code shows the earlier example with the first correction in place.</span></span>  
-  
-```  
-Class Customer  
-  
-    ' The class has a field named Index.  
-    Private Index As Integer  
-  
-    Sub Main()  
-  
-        For I = 1 To 10  
-            ' ...  
-        Next  
-  
-    End Sub  
-End Class  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="2b5ab-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2b5ab-118">See also</span></span>
+# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a><span data-ttu-id="0b9e5-102">Typ zmiennej "\<VariableName >" nie zostanie wywnioskowany, ponieważ jest powiązany z polem w zakresie otaczającym</span><span class="sxs-lookup"><span data-stu-id="0b9e5-102">The type for variable '\<variablename>' will not be inferred because it is bound to a field in an enclosing scope</span></span>
 
-- [<span data-ttu-id="2b5ab-119">Option Infer, instrukcja</span><span class="sxs-lookup"><span data-stu-id="2b5ab-119">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [<span data-ttu-id="2b5ab-120">For Each...Next, instrukcja</span><span class="sxs-lookup"><span data-stu-id="2b5ab-120">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [<span data-ttu-id="2b5ab-121">For...Next, instrukcja</span><span class="sxs-lookup"><span data-stu-id="2b5ab-121">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [<span data-ttu-id="2b5ab-122">Instrukcje: Odwoływanie się do bieżącego wystąpienia obiektu</span><span class="sxs-lookup"><span data-stu-id="2b5ab-122">How to: Refer to the Current Instance of an Object</span></span>](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
-- [<span data-ttu-id="2b5ab-123">Wnioskowanie o typie lokalnym</span><span class="sxs-lookup"><span data-stu-id="2b5ab-123">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [<span data-ttu-id="2b5ab-124">Me, My, MyBase i MyClass</span><span class="sxs-lookup"><span data-stu-id="2b5ab-124">Me, My, MyBase, and MyClass</span></span>](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+<span data-ttu-id="0b9e5-103">Typ zmiennej "\<VariableName >" nie zostanie wywnioskowany, ponieważ jest powiązany z polem w zakresie otaczającym.</span><span class="sxs-lookup"><span data-stu-id="0b9e5-103">The type for variable '\<variablename>' will not be inferred because it is bound to a field in an enclosing scope.</span></span> <span data-ttu-id="0b9e5-104">Zmień nazwę zmiennej "\<VariableName >" lub użyj w pełni kwalifikowanej nazwy (na przykład "Me. VariableName" lub "MyBase. VariableName").</span><span class="sxs-lookup"><span data-stu-id="0b9e5-104">Either change the name of '\<variablename>', or use the fully qualified name (for example, 'Me.variablename' or 'MyBase.variablename').</span></span>
+
+<span data-ttu-id="0b9e5-105">Zmienna sterująca pętli w kodzie ma taką samą nazwę jak pole klasy lub innego zakresu otaczającego.</span><span class="sxs-lookup"><span data-stu-id="0b9e5-105">A loop control variable in your code has the same name as a field of the class or other enclosing scope.</span></span> <span data-ttu-id="0b9e5-106">Ponieważ zmienna kontroli jest używana bez `As` klauzuli, jest ona powiązana z polem w otaczającym zakresie i kompilator nie tworzy dla niego nowej zmiennej ani nie wystawia jego typu.</span><span class="sxs-lookup"><span data-stu-id="0b9e5-106">Because the control variable is used without an `As` clause, it is bound to the field in the enclosing scope, and the compiler does not create a new variable for it or infer its type.</span></span>
+
+<span data-ttu-id="0b9e5-107">W poniższym przykładzie `Index`Zmienna sterująca `For` w instrukcji jest powiązana `Customer` z `Index` polem w klasie.</span><span class="sxs-lookup"><span data-stu-id="0b9e5-107">In the following example, `Index`, the control variable in the `For` statement, is bound to the `Index` field in the `Customer` class.</span></span> <span data-ttu-id="0b9e5-108">Kompilator nie tworzy nowej zmiennej dla zmiennej `Index` kontroli ani nie wywnioskuje jej typu.</span><span class="sxs-lookup"><span data-stu-id="0b9e5-108">The compiler does not create a new variable for the control variable `Index` or infer its type.</span></span>
+
+```vb
+Class Customer
+
+    ' The class has a field named Index.
+    Private Index As Integer
+
+    Sub Main()
+
+    ' The following line will raise this warning.
+        For Index = 1 To 10
+            ' ...
+        Next
+
+    End Sub
+End Class
+```
+
+<span data-ttu-id="0b9e5-109">Domyślnie ta wiadomość jest ostrzeżenie.</span><span class="sxs-lookup"><span data-stu-id="0b9e5-109">By default, this message is a warning.</span></span> <span data-ttu-id="0b9e5-110">Aby uzyskać informacje o sposobach ukrycia ostrzeżeń lub sposobie traktowania ostrzeżeń jako błędów, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="0b9e5-110">For information about how to hide warnings or how to treat warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>
+
+<span data-ttu-id="0b9e5-111">**Identyfikator błędu:** BC42110</span><span class="sxs-lookup"><span data-stu-id="0b9e5-111">**Error ID:** BC42110</span></span>
+
+### <a name="to-address-this-warning"></a><span data-ttu-id="0b9e5-112">Aby rozwiązać ten komunikat ostrzegawczy</span><span class="sxs-lookup"><span data-stu-id="0b9e5-112">To address this warning</span></span>
+
+- <span data-ttu-id="0b9e5-113">Ustaw zmienną sterującą pętli jako lokalną, zmieniając jej nazwę na identyfikator, który nie jest również nazwą pola klasy.</span><span class="sxs-lookup"><span data-stu-id="0b9e5-113">Make the loop control variable local by changing its name to an identifier that is not also the name of a field of the class.</span></span>
+
+  ```vb
+  For I = 1 To 10
+  ```
+
+- <span data-ttu-id="0b9e5-114">Wyjaśnij, że Zmienna sterująca pętli jest powiązana z polem klasy przez `Me.` prefiks do nazwy zmiennej.</span><span class="sxs-lookup"><span data-stu-id="0b9e5-114">Clarify that the loop control variable binds to the class field by prefixing `Me.` to the variable name.</span></span>
+
+  ```vb
+  For Me.Index = 1 To 10
+  ```
+
+- <span data-ttu-id="0b9e5-115">Zamiast polegać na wnioskach o typie lokalnym, należy użyć `As` klauzuli, aby określić typ dla zmiennej kontroli pętli.</span><span class="sxs-lookup"><span data-stu-id="0b9e5-115">Instead of relying on local type inference, use an `As` clause to specify a type for the loop control variable.</span></span>
+
+  ```vb
+  For Index As Integer = 1 To 10
+  ```
+
+## <a name="example"></a><span data-ttu-id="0b9e5-116">Przykład</span><span class="sxs-lookup"><span data-stu-id="0b9e5-116">Example</span></span>
+ <span data-ttu-id="0b9e5-117">Poniższy kod ilustruje poprzedni przykład przy pierwszej korekcie.</span><span class="sxs-lookup"><span data-stu-id="0b9e5-117">The following code shows the earlier example with the first correction in place.</span></span>
+
+```vb
+Class Customer
+
+    ' The class has a field named Index.
+    Private Index As Integer
+
+    Sub Main()
+
+        For I = 1 To 10
+            ' ...
+        Next
+
+    End Sub
+End Class
+```
+
+## <a name="see-also"></a><span data-ttu-id="0b9e5-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0b9e5-118">See also</span></span>
+
+- [<span data-ttu-id="0b9e5-119">Option Infer, instrukcja</span><span class="sxs-lookup"><span data-stu-id="0b9e5-119">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [<span data-ttu-id="0b9e5-120">For Each...Next, instrukcja</span><span class="sxs-lookup"><span data-stu-id="0b9e5-120">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [<span data-ttu-id="0b9e5-121">For...Next, instrukcja</span><span class="sxs-lookup"><span data-stu-id="0b9e5-121">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [<span data-ttu-id="0b9e5-122">Instrukcje: Odwoływanie się do bieżącego wystąpienia obiektu</span><span class="sxs-lookup"><span data-stu-id="0b9e5-122">How to: Refer to the Current Instance of an Object</span></span>](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
+- [<span data-ttu-id="0b9e5-123">Wnioskowanie o typie lokalnym</span><span class="sxs-lookup"><span data-stu-id="0b9e5-123">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [<span data-ttu-id="0b9e5-124">Me, My, MyBase i MyClass</span><span class="sxs-lookup"><span data-stu-id="0b9e5-124">Me, My, MyBase, and MyClass</span></span>](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

@@ -10,62 +10,67 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 593fda6a4949a55d77ae70edd19159a618cc6b6d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ac906494c49810e3d389591b1044f412e7320bc
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592077"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68513049"
 ---
 # <a name="object-data-type"></a>Object — typ danych
-Zawiera adresy, które odwołują się do obiektów. Dowolnego typu odwołania (ciąg, macierz, klasy lub interfejsu) można przypisać do `Object` zmiennej. `Object` Zmiennej może również odnosić się do danych o dowolnym typie wartości (numeryczne, `Boolean`, `Char`, `Date`, struktury lub wyliczenia).  
-  
-## <a name="remarks"></a>Uwagi  
- `Object` Danych dowolnego typu danych, w tym dowolne wystąpienie obiektu, aplikacja rozpoznaje wskazać typ danych. Użyj `Object` Jeśli nie wiesz, w czasie kompilacji dane typu zmiennej może wskazywać.  
-  
- Wartość domyślna `Object` jest `Nothing` (odwołanie o wartości null).  
-  
-## <a name="data-types"></a>Typy danych  
- Można przypisać zmiennej, stałej lub wyrażenia dowolnego typu danych, aby `Object` zmiennej. Można ustalić typu danych `Object` obecnie odnosi się zmienna, możesz użyć <xref:System.Type.GetTypeCode%2A> metody <xref:System.Type?displayProperty=nameWithType> klasy. Ilustruje to poniższy przykład.  
-  
-```  
-Dim myObject As Object  
-' Suppose myObject has now had something assigned to it.  
-Dim datTyp As Integer  
-datTyp = Type.GetTypeCode(myObject.GetType())  
-```  
-  
- `Object` — Typ danych jest typem referencyjnym. Jednakże, Visual Basic traktuje `Object` zmienną jako typ wartości, gdy jest on odnosi się do danych o typie wartości.  
-  
-## <a name="storage"></a>Magazyn  
- Niezależnie od typu danych, to dotyczy, `Object` automatycznie, ale raczej wskaźnika do wartości zmiennej nie zawiera wartości danych. Zawsze używa cztery bajty w pamięci komputera, ale nie obejmuje to magazyn dla danych reprezentujący wartość zmiennej. Ze względu na kod, który używa wskaźnika do zlokalizowania danych `Object` zawierający typy wartości zmiennych są nieco wolniejszy dostęp niż jawnie wpisane zmienne do.  
-  
-## <a name="programming-tips"></a>Porady dla programistów  
-  
-- **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework, na przykład obiektami automatyzacji lub COM, należy pamiętać o tym, że typy wskaźników w innych środowiskach nie są zgodne z języka Visual Basic `Object` typu.  
-  
-- **Wydajność.** Zmienna deklarowana za pomocą `Object` typu jest na tyle elastyczna, aby zawierała odwołanie do dowolnego obiektu. Jednak gdy wywołujesz metodę lub właściwość takiej zmiennej zawsze wiąże się z *późnym wiązaniu* (w czasie wykonywania). Aby wymusić *wczesne powiązania* (w czasie kompilacji) i większą wydajność, Zadeklaruj zmienną o nazwie określonej klasy lub go rzutować na typ danych określonych.  
-  
-     Kiedy Deklarujesz zmienną obiektu, spróbuj użyć typu określonej klasy, na przykład <xref:System.OperatingSystem>, zamiast ogólnych `Object` typu. Należy również użyć najbardziej odpowiednią klasę dostępne, takich jak <xref:System.Windows.Forms.TextBox> zamiast <xref:System.Windows.Forms.Control>, dzięki czemu można uzyskać dostęp, jego właściwości i metod. Zazwyczaj można używać **klasy** listy w **przeglądarki obiektów** można znaleźć nazwy dostępnych klas.  
-  
-- **Rozszerzanie.** Wszystkie typy danych i wszystkie typy referencyjne mogą zostać poszerzone do `Object` typu danych. Oznacza to, że można przekonwertować dowolnego typu do `Object` nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
-  
-     Jednak po konwersji między typami wartości i `Object`, Visual Basic wykonuje operacje o nazwie *pakowania* i *Rozpakowywanie*, udostępniają wykonywania wolniej.  
-  
-- **Znaki typu.** `Object` nie ma znak literalny typu lub znak typu identyfikator.  
-  
-- **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Object?displayProperty=nameWithType> klasy.  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano `Object` zmiennej wskazuje na wystąpienie obiektu.  
-  
-```  
-Dim objDb As Object  
-Dim myCollection As New Collection()  
-' Suppose myCollection has now been populated.  
-objDb = myCollection.Item(1)  
-```  
-  
+
+Przechowuje adresy odwołujące się do obiektów. Do `Object` zmiennej można przypisać dowolny typ referencyjny (ciąg, tablicę, klasę lub interfejs). Zmienna może również odwoływać się do danych dowolnego typu wartości (numeryczne `Boolean`, `Char`, `Date`,, struktura lub Wyliczenie). `Object`
+
+## <a name="remarks"></a>Uwagi
+
+Typ `Object` danych może wskazywać na dane dowolnego typu danych, łącznie z każdym wystąpieniem obiektu rozpoznawanym przez aplikację. Użyj `Object` , gdy w czasie kompilacji nie wiesz, jaki typ danych może wskazywać zmienna.
+
+Wartość `Object` domyślna to `Nothing` (odwołanie o wartości null).
+
+## <a name="data-types"></a>Typy danych
+
+Do `Object` zmiennej można przypisać zmienną, stałą lub wyrażenie dowolnego typu danych. Aby określić typ `Object` danych, do której obecnie odwołuje się zmienna, można <xref:System.Type.GetTypeCode%2A> użyć metody <xref:System.Type?displayProperty=nameWithType> klasy. Ilustruje to poniższy przykład.
+
+```vb
+Dim myObject As Object
+' Suppose myObject has now had something assigned to it.
+Dim datTyp As Integer
+datTyp = Type.GetTypeCode(myObject.GetType())
+```
+
+Typ `Object` danych jest typem referencyjnym. Jednakże Visual Basic traktuje `Object` zmienną jako typ wartości, gdy odwołuje się ona do danych typu wartości.
+
+## <a name="storage"></a>Magazyn
+
+Niezależnie od typu danych, do którego się `Object` odwołuje, zmienna nie zawiera samej wartości danych, ale raczej wskaźnikiem do wartości. Zawsze używa czterech bajtów w pamięci komputera, ale nie obejmuje to magazynu dla danych reprezentujących wartość zmiennej. Ze względu na kod, który używa wskaźnika do lokalizowania danych `Object` , zmienne o typach wartości są nieco wolniejsze w celu uzyskania dostępu niż jawnie wpisane zmienne.
+
+## <a name="programming-tips"></a>Porady dla programistów
+
+- **Zagadnienia dotyczące międzyoperacyjnych.** Jeśli masz połączenie ze składnikami niezapisanymi dla .NET Framework, na przykład obiekty automatyzacji lub com, pamiętaj, że typy wskaźnika w innych środowiskach nie są zgodne z typem Visual Basic `Object` .
+
+- **Wydajność.** Zmienna zadeklarowana z `Object` typem jest wystarczająco elastyczny, aby zawierała odwołanie do dowolnych obiektów. Jednak po wywołaniu metody lub właściwości w takiej zmiennej zawsze naliczane są *późne powiązania* (w czasie wykonywania). Aby wymusić *wczesne wiązanie* (w czasie kompilacji) i lepszą wydajność, należy zadeklarować zmienną z określoną nazwą klasy lub rzutować ją na określony typ danych.
+
+  Podczas deklarowania zmiennej obiektu spróbuj użyć konkretnego typu klasy, na przykład <xref:System.OperatingSystem>, zamiast `Object` typu uogólnionego. Należy również użyć najbardziej konkretnej dostępnej klasy, takiej jak <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.Control>zamiast, aby można było uzyskać dostęp do jej właściwości i metod. Zazwyczaj można użyć listy **klas** w **Przeglądarka obiektów** , aby znaleźć dostępne nazwy klas.
+
+- **Rozszerzającą.** Wszystkie typy danych i wszystkie typy odwołań rozszerzają się `Object` do typu danych. Oznacza to, że można skonwertować dowolny typ `Object` do bez napotkania <xref:System.OverflowException?displayProperty=nameWithType> błędu.
+
+  Jednak w przypadku konwersji między typami wartości i `Object`, Visual Basic wykonuje operacje nazywane *opakowaniem* i rozpakowywaniem, co powoduje wolniejsze wykonywanie.
+
+- **Znaki typu.** `Object`nie ma znaku typu literału lub znaku typu identyfikatora.
+
+- **Typ struktury.** Odpowiedni typ w .NET Framework jest <xref:System.Object?displayProperty=nameWithType> klasą.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład ilustruje `Object` zmienną wskazującą wystąpienie obiektu.
+
+```vb
+Dim objDb As Object
+Dim myCollection As New Collection()
+' Suppose myCollection has now been populated.
+objDb = myCollection.Item(1)
+```
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Object>
@@ -74,4 +79,4 @@ objDb = myCollection.Item(1)
 - [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
 - [Instrukcje: Określanie, czy dwa obiekty są powiązane](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
-- [Instrukcje: Określanie, czy dwa obiekty są jednakowe](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [Instrukcje: Określanie, czy dwa obiekty są identyczne](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

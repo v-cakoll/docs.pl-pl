@@ -1,72 +1,74 @@
 ---
-title: Port aplikacji WPF, .NET Core 3.0
-description: Dowiesz się, jak przenieść aplikację .NET Framework Windows Presentation Foundation, do programu .NET Core 3.0 dla Windows.
+title: Przenoszenie aplikacji WPF do programu .NET Core 3,0
+description: Naucz się, w jaki sposób portować .NET Framework aplikację Windows Presentation Foundation do programu .NET Core 3,0 dla systemu Windows.
 author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 5c7e3aca0a473abb831693244d1b194985f2ef7f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9885f666e68b795b9b6aba9cf31f9750e30fd170
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614560"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512285"
 ---
-# <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>Instrukcje: Port aplikacji klasycznej WPF i .NET Core
+# <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>Instrukcje: Port aplikacji klasycznej WPF do programu .NET Core
 
-W tym artykule opisano, jak do portu oparte na Windows Presentation Foundation (WPF) aplikacji komputerowej z .NET Framework .NET Core 3.0. Zestaw SDK programu .NET Core 3.0 zawiera obsługę aplikacji WPF. WPF nadal framework tylko do Windows i działa tylko w Windows. W tym przykładzie używa interfejsu wiersza polecenia platformy .NET Core SDK do tworzenia projektu i zarządzania nim.
+W tym artykule opisano sposób przenoszenia aplikacji klasycznej opartej na Windows Presentation Foundation (WPF) z .NET Framework do programu .NET Core 3,0. Zestaw SDK platformy .NET Core 3,0 obsługuje aplikacje WPF. WPF jest nadal strukturą tylko dla systemu Windows i działa tylko w systemie Windows. W tym przykładzie jest używany interfejs wiersza polecenia zestaw .NET Core SDK do tworzenia projektu i zarządzania nim.
 
-W tym artykule różne nazwy są używane do identyfikacji typów plików używany podczas migracji. Podczas migracji projektu, pliki będą miały nazwę nadaną inaczej, dlatego umysłowo dopasować je do wymienione poniżej:
+W tym artykule różne nazwy są używane do identyfikowania typów plików używanych do migracji. Podczas migrowania projektu pliki będą wyglądać inaczej, dlatego można je dopasować do nich w sposób psychiczny do wymienionych poniżej:
 
 | Plik | Opis |
 | ---- | ----------- |
 | **MyApps.sln** | Nazwa pliku rozwiązania. |
-| **MyWPF.csproj** | Nazwa projektu .NET Framework WPF do portu. |
-| **MyWPFCore.csproj** | Nazwa nowego tworzonego projektu .NET Core. |
-| **MyAppCore.exe** | Pliku wykonywalnego aplikacji .NET Core WPF. |
+| **MyWPF.csproj** | Nazwa .NET Framework projektu WPF do port. |
+| **MyWPFCore.csproj** | Nazwa nowego projektu .NET Core, który tworzysz. |
+| **MyAppCore.exe** | Plik wykonywalny aplikacji WPF platformy .NET Core. |
+
+>[!IMPORTANT]
+>Mimo że w tym artykule C# jest stosowany język docelowy, kroki są takie same dla VB.NET, z tą różnicą, że VB.NET używa plików *. vbproj* i *. vb* zamiast plików *. csproj* i *. cs* .
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) dla wszelkie prace projektanta, co chcesz zrobić.
+- [Program Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) dla wszystkich zadań, które chcesz wykonać.
 
-  Zainstaluj następujące obciążenia w programie Visual Studio:
+  Zainstaluj następujące obciążenia programu Visual Studio:
   - Programowanie aplikacji klasycznych dla platformy .NET
-  - Programowanie dla wielu platform na platformie .NET
+  - Programowanie dla wielu platform w środowisku .NET
 
-- Projekt WPF pracy w rozwiązaniu, który kompiluje i uruchamia bez problemu.
-- Projekt musi być kodowane w C#. 
-- Zainstaluj najnowszą wersję [.NET Core 3.0](https://aka.ms/netcore3download) (wersja zapoznawcza).
+- Roboczy projekt WPF w rozwiązaniu, które kompiluje i uruchamia bez problemu.
+- Zainstaluj najnowszą wersję zapoznawczą [programu .NET Core 3,0](https://aka.ms/netcore3download) .
 
 >[!NOTE]
->**Program Visual Studio 2017** nie obsługuje projektów .NET Core 3.0. **Visual Studio 2019** obsługuje projekty .NET Core 3.0, ale nie obsługuje jeszcze wizualnego projektanta dla projektów .NET Core 3.0 WPF. Aby użyć projektanta wizualnego, musi mieć projekt .NET WPF w danym rozwiązaniu, który udostępnia swoje pliki z projektu .NET Core.
+>**Program Visual Studio 2017** nie obsługuje projektów programu .net Core 3,0. **Program Visual Studio 2019** obsługuje projekty platformy .net Core 3,0, ale ma ograniczoną obsługę programu .NET Core WPF Visual Designer. Aby użyć w pełni obsługiwanego projektanta wizualnego, musisz mieć .NET Framework projekt WPF w rozwiązaniu, które udostępnia swoje pliki w projekcie .NET Core.
 
-### <a name="consider"></a>Należy wziąć pod uwagę
+### <a name="consider"></a>Pod
 
-Podczas przenoszenia aplikacji .NET Framework WPF, istnieje kilka rzeczy, które należy wziąć pod uwagę.
+Podczas przenoszenia aplikacji .NET Framework WPF należy wziąć pod uwagę kilka rzeczy.
 
 01. Sprawdź, czy aplikacja jest dobrym kandydatem do migracji.
 
-    Użyj [narzędzia .NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) ustalenie, jeśli projekt będzie migrować do platformy .NET Core 3.0. Jeśli projekt ma problemy z platformy .NET Core 3.0, analizator pomaga zidentyfikować te problemy.
+    Użyj [analizatora przenośności platformy .NET](../../standard/analyzers/portability-analyzer.md) , aby określić, czy projekt zostanie zmigrowany do programu .net Core 3,0. Jeśli projekt zawiera problemy z platformą .NET Core 3,0, Analizator pomaga zidentyfikować te problemy.
 
-01. Używasz innej wersji programu WPF.
+01. Używasz innej wersji WPF.
 
-    W przypadku platformy .NET Core 3.0 w wersji zapoznawczej 1 został wydany, WPF błąd typu open source w serwisie GitHub. Kod platformy .NET Core WPF jest rozwidlenie bazy kodu platformy .NET Framework WPF. Istnieje możliwość, istnieją pewne różnice i aplikacja nie będzie portu.
+    Po wydaniu programu .NET Core 3,0 wersja zapoznawcza 1 program WPF otrzymał wartość Open Source w witrynie GitHub. Kod dla platformy .NET Core WPF jest rozwidleniem bazy kodu .NET Framework WPF. Istnieją pewne różnice, które nie są dostępne dla aplikacji.
 
-01. [Systemie Windows Compatibility Pack] [ compat-pack] mogą pomóc w migracji.
+01. [Pakiet zgodności systemu Windows][compat-pack] może pomóc w migracji.
 
-    Niektóre interfejsy API, które są dostępne w programie .NET Framework nie są dostępne w programie .NET Core 3.0. [Systemie Windows Compatibility Pack] [ compat-pack] dodaje wiele z tych interfejsów API i może pomóc w aplikacji WPF stać się zgodny z platformą .NET Core.
+    Niektóre interfejsy API, które są dostępne w .NET Framework nie są dostępne w programie .NET Core 3,0. [Pakiet zgodności systemu Windows][compat-pack] dodaje wiele z tych interfejsów API i może pomóc aplikacji WPF z platformą .NET Core.
 
-01. Aktualizowanie pakietów NuGet, używaną w projekcie.
+01. Zaktualizuj pakiety NuGet używane przez Twój projekt.
 
-    Zawsze jest dobrą praktyką jest używanie najnowszych wersji pakietów NuGet przed wykonaniem dowolnej migracji. Jeśli aplikacja odwołuje się do żadnych pakietów NuGet, aktualizację do najnowszej wersji. Upewnij się, że Twoja aplikacja pomyślnie skompilowana. Po uaktualnieniu, w przypadku błędów pakietu obniżyć wersję pakietu do najnowszej wersji, który nie przerywa działania kodu.
+    Zawsze dobrym sposobem jest użycie najnowszych wersji pakietów NuGet przed migracją. Jeśli aplikacja odwołuje się do wszystkich pakietów NuGet, zaktualizuj je do najnowszej wersji. Upewnij się, że aplikacja została pomyślnie skompilowana. Po uaktualnieniu, jeśli występują jakiekolwiek błędy pakietów, można obniżyć pakiet do najnowszej wersji, która nie powoduje przerwania kodu.
 
-01. Visual Studio 2019 r dla programu .NET Core 3.0 nie obsługuje jeszcze projektanta WPF
+01. Program Visual Studio 2019 nie obsługuje jeszcze projektanta WPF dla platformy .NET Core 3,0
 
-    Obecnie należy zachować istniejący plik projektu programu .NET Framework WPF, jeśli chcesz użyć projektanta WPF w programie Visual Studio.
+    Obecnie należy zachować istniejący plik programu .NET Framework WPF, jeśli chcesz używać projektanta WPF w programie Visual Studio.
 
 ## <a name="create-a-new-sdk-project"></a>Utwórz nowy projekt zestawu SDK
 
-Nowe tworzonego projektu .NET Core 3.0 to musi być w innym katalogu z projektu .NET Framework. Jeśli są one w tym samym katalogu, mogą występować konflikty z plikami, które są generowane w **obj** katalogu. W tym przykładzie utworzysz katalog o nazwie **MyWPFAppCore** w **SolutionFolder** katalogu:
+Nowy projekt platformy .NET Core 3,0, który tworzysz, musi znajdować się w innym katalogu niż projekt .NET Framework. Jeśli oba te elementy znajdują się w tym samym katalogu, może wystąpić konflikt z plikami, które są generowane w katalogu **obj** . W tym przykładzie utworzysz katalog o nazwie **MyWPFAppCore** w katalogu **SolutionFolder** :
 
 ```
 SolutionFolder
@@ -76,7 +78,7 @@ SolutionFolder
 └───MyWPFAppCore      <--- New folder for core project
 ```
 
-Następnie należy utworzyć **MyWPFCore.csproj** projektu w **MyWPFAppCore** katalogu. Można utworzyć ten plik ręcznie przy użyciu tekstu wybranym edytorze. Wklej następujący kod XML:
+Następnie należy utworzyć projekt **MyWPFCore. csproj** w katalogu **MyWPFAppCore** . Ten plik można utworzyć ręcznie przy użyciu edytora tekstu. Wklej następujący kod XML:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
@@ -90,13 +92,13 @@ Następnie należy utworzyć **MyWPFCore.csproj** projektu w **MyWPFAppCore** ka
 </Project>
 ```
 
-Jeśli nie chcesz ręcznie utworzyć plik projektu, można użyć programu Visual Studio lub zestawu .NET Core SDK do generowania projektu. Jednakże należy usunąć wszystkie inne pliki generowane przez szablon projektu, z wyjątkiem pliku projektu. Aby użyć zestawu SDK, uruchom następujące polecenie z **SolutionFolder** katalogu:
+Jeśli nie chcesz tworzyć pliku projektu ręcznie, możesz użyć programu Visual Studio lub zestaw .NET Core SDK do wygenerowania projektu. Należy jednak usunąć wszystkie inne pliki wygenerowane przez szablon projektu, z wyjątkiem pliku projektu. Aby użyć zestawu SDK, uruchom następujące polecenie w katalogu **SolutionFolder** :
 
 ```cli
 dotnet new wpf -o MyWPFAppCore -n MyWPFCore
 ```
 
-Po utworzeniu **MyWPFCore.csproj**, strukturę katalogu powinien wyglądać podobnie do poniższego:
+Po utworzeniu **MyWPFCore. csproj**struktura katalogów powinna wyglądać następująco:
 
 ```
 SolutionFolder
@@ -107,28 +109,28 @@ SolutionFolder
     └───MyWPFCore.csproj
 ```
 
-Będziesz chciał dodać **MyWPFCore.csproj** projekt **MyApps.sln** za pomocą programu Visual Studio lub platformy .NET Core interfejsu wiersza polecenia z **SolutionFolder** katalogu:
+Należy dodać projekt **MyWPFCore. csproj** do elementu webapps **. sln** z programem Visual Studio lub interfejs wiersza polecenia platformy .NET Core z katalogu **SolutionFolder** :
 
 ```cli
 dotnet sln add .\MyWPFAppCore\MyWPFCore.csproj
 ```
 
-## <a name="fix-assembly-info-generation"></a>Generowanie informacji zestawu poprawki
+## <a name="fix-assembly-info-generation"></a>Napraw generowanie informacji o zestawie
 
-Projekty Windows Presentation Foundation, które zostały utworzone za pomocą .NET Framework obejmują `AssemblyInfo.cs` pliku, który zawiera zestaw atrybutów, takich jak wersja zestawu do wygenerowania. Projektów w stylu zestaw SDK automatycznie generować te informacje w oparciu o plik projektu zestawu SDK. Posiadanie oba rodzaje "informacje o zestawie" spowoduje konflikt. Rozwiązać ten problem, wyłączając automatyczne generowanie, co zmusza projekt, aby używać istniejącej `AssemblyInfo.cs` pliku.
+Windows Presentation Foundation projekty, które zostały utworzone za pomocą .NET Framework `AssemblyInfo.cs` obejmują plik, który zawiera atrybuty zestawu, takie jak wersja zestawu do wygenerowania. Projekty w stylu zestawu SDK automatycznie generują te informacje na podstawie pliku projektu zestawu SDK. W przypadku obu typów "informacje o zestawie" powstaje konflikt. Rozwiąż ten problem, wyłączając automatyczne generowanie, co wymusza, aby projekt korzystał `AssemblyInfo.cs` z istniejącego pliku.
 
-Dostępne są trzy ustawienia, aby dodać do głównego `<PropertyGroup>` węzła. 
+Istnieją trzy ustawienia do dodania do węzła głównego `<PropertyGroup>` . 
 
 - **GenerateAssemblyInfo**\
-Po ustawieniu wartości tej właściwości na `false`, nie będzie ona Generowanie atrybutów zestawu. Pozwala to uniknąć konfliktu z istniejącym `AssemblyInfo.cs` pliku z projektem .NET Framework.
+Ustawienie tej właściwości na `false`, nie spowoduje wygenerowanie atrybutów zestawu. Pozwala to uniknąć konfliktu z istniejącym `AssemblyInfo.cs` plikiem z projektu .NET Framework.
 
 - **AssemblyName**\
-Wartość tej właściwości jest wynikowy plik binarny utworzony podczas kompilowania. Nazwa nie musi rozszerzenie dodawanych do niego. Na przykład za pomocą `MyCoreApp` tworzy `MyCoreApp.exe`.
+Wartością tej właściwości jest wyjściowy plik binarny tworzony podczas kompilowania. Nazwa nie wymaga dodanego rozszerzenia. Na przykład przy użyciu `MyCoreApp` polecenia `MyCoreApp.exe`Generuj.
 
 - **RootNamespace**\
-Domyślna przestrzeń nazw używaną w projekcie. Powinien on odpowiadać domyślny obszar nazw projektu .NET Framework.
+Domyślna przestrzeń nazw używana przez projekt. Powinna być zgodna z domyślną przestrzenią nazw projektu .NET Framework.
 
-Te trzy elementy, aby dodać `<PropertyGroup>` w węźle `MyWPFCore.csproj` pliku:
+Dodaj te trzy elementy do `<PropertyGroup>` węzła `MyWPFCore.csproj` w pliku:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
@@ -146,10 +148,10 @@ Te trzy elementy, aby dodać `<PropertyGroup>` w węźle `MyWPFCore.csproj` plik
 </Project>
 ```
 
-## <a name="add-source-code"></a>Dodawanie kodu źródłowego
-Od razu **MyWPFCore.csproj** projektu nie skompilować jakiegokolwiek kodu. Domyślnie projekty .NET Core automatycznie uwzględnia całego kodu źródłowego w bieżącym katalogu i katalogi podrzędnych. Należy skonfigurować projekt, aby dołączyć kod z projektu .NET Framework za pomocą ścieżki względnej. Jeśli używany projekt .NET Framework **resx** pliki ikon i zasoby dla systemów windows i kontrolek, należy włączyć te zbyt. 
+## <a name="add-source-code"></a>Dodaj kod źródłowy
+Teraz projekt **MyWPFCore. csproj** nie kompiluje żadnego kodu. Domyślnie projekty platformy .NET Core automatycznie uwzględniają cały kod źródłowy w bieżącym katalogu i wszystkich katalogach podrzędnych. Należy skonfigurować projekt do dołączania kodu z projektu .NET Framework przy użyciu ścieżki względnej. Jeśli projekt .NET Framework używał plików **resx** dla ikon i zasobów dla okien i kontrolek, należy uwzględnić te pliki. 
 
-Pierwszy `<ItemGroup>` węzeł należy dodać do projektu **App.xaml** pliku, który reprezentuje konfiguracji uruchamiania i zasoby używany przez aplikację. **App.xaml** plik ma również towarzyszący **App.xaml.cs** plik, ale zostaną automatycznie uwzględnione w innej `<ItemGroup>`.
+Pierwszy `<ItemGroup>` węzeł, który należy dodać do projektu, zawiera plik **App. XAML** , który reprezentuje konfigurację startową i zasoby używane przez aplikację. Plik **App. XAML** ma także towarzyszący plik **App.XAML.cs** , ale zostanie automatycznie dołączony do innego `<ItemGroup>`.
 
 ```xml
   <ItemGroup>
@@ -159,7 +161,7 @@ Pierwszy `<ItemGroup>` węzeł należy dodać do projektu **App.xaml** pliku, kt
   </ItemGroup>
 ```
 
-Następnie dodaj następujące `<ItemGroup>` węzła do projektu. Każda instrukcja zawiera wzorzec glob pliku, która obejmuje katalogach podrzędnych. Zawiera kod źródłowy dla projektu, wszystkie pliki ustawień i zasobów. **Obj** katalogu jest jawnie wykluczone.
+Następnie Dodaj następujący `<ItemGroup>` węzeł do projektu. Każda instrukcja zawiera wzorzec globalizowania pliku, który zawiera katalogi podrzędne. Zawiera kod źródłowy projektu, wszystkie pliki ustawień i wszystkie zasoby. Katalog **obj** jest jawnie wykluczony.
 
 ```xml
   <ItemGroup>
@@ -169,7 +171,7 @@ Następnie dodaj następujące `<ItemGroup>` węzła do projektu. Każda instruk
   </ItemGroup>
 ```
 
-Następnie uwzględnić innego `<ItemGroup>` węzeł, który zawiera `<Page>` wpis dla każdego **xaml** pliku w projekcie, z wyjątkiem **App.xaml** pliku. Zawierają one wszystkie systemu windows, strony i zasoby, które znajdują się w **xaml** formatu. Nie można tutaj użyć wzorca globalizowania i należy dodać wpis dla każdego pliku i wskazują `<Generator>` używane.
+`<ItemGroup>` Następnie Dołącz inny `<Page>` węzeł zawierający wpis dla każdego pliku **XAML** w projekcie, z wyjątkiem pliku **App. XAML** . Zawierają one wszystkie okna, strony i zasoby, które są w formacie **XAML** . Nie można użyć w tym miejscu wzorca globalizowania i musi on dodać wpis dla każdego pliku i wskazać `<Generator>` używany.
 
 ```xml
   <ItemGroup>
@@ -179,17 +181,17 @@ Następnie uwzględnić innego `<ItemGroup>` węzeł, który zawiera `<Page>` wp
   </ItemGroup>
 ```
 
-## <a name="add-nuget-packages"></a>Dodawanie pakietów NuGet
+## <a name="add-nuget-packages"></a>Dodaj pakiety NuGet
 
-Dodaj pakiet NuGet, każdy przywoływanego przez projekt programu .NET Framework do projektu .NET Core. 
+Dodaj każdy pakiet NuGet, do którego odwołuje się projekt .NET Framework, do projektu .NET Core. 
 
-Prawdopodobnie ma aplikację .NET Framework WPF **packages.config** pliku, który zawiera listę wszystkich pakietów NuGet, które są przywoływane przez projekt. Zapoznanie się z tą listą, aby określić, które pakiety NuGet, aby dodać do projektu .NET Core. Na przykład, jeśli odwołuje się projekt programu .NET Framework `MahApps.Metro` NuGet pakietu, dodaj go do projektu przy użyciu programu Visual Studio. Możesz również dodać odwołanie do pakietu przy użyciu platformy .NET Core interfejsu wiersza polecenia z **SolutionFolder** katalogu:
+Prawdopodobnie aplikacja WPF .NET Framework ma plik Packages **. config** zawierający listę wszystkich pakietów NuGet, do których odwołuje się projekt. Możesz zapoznać się z tą listą, aby określić, które pakiety NuGet dodać do projektu .NET Core. Na przykład jeśli projekt .NET Framework odwołuje `MahApps.Metro` się do pakietu NuGet, Dodaj go do projektu za pomocą programu Visual Studio. Możesz również dodać odwołanie do pakietu przy użyciu interfejs wiersza polecenia platformy .NET Core z katalogu **SolutionFolder** :
 
 ```cli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package MahApps.Metro -v 2.0.0-alpha0262
 ```
 
-Poprzednie polecenie dodać następujące odwołanie NuGet do **MyWPFCore.csproj** projektu:
+Poprzednie polecenie doda następujące odwołanie NuGet do projektu **MyWPFCore. csproj** :
 
 ```xml
   <ItemGroup>
@@ -197,15 +199,15 @@ Poprzednie polecenie dodać następujące odwołanie NuGet do **MyWPFCore.csproj
   </ItemGroup>
 ```
 
-## <a name="problems-compiling"></a>Problemy z kompilacji
+## <a name="problems-compiling"></a>Problemy skompilowane
 
-Jeśli masz problemy z kompilowanie projektów, może być używany niektóre Windows — tylko do interfejsów API, które są dostępne w programie .NET Framework, ale nie jest dostępna w .NET Core. Możesz spróbować dodać [systemie Windows Compatibility Pack] [ compat-pack] pakiet NuGet do projektu. Ten pakiet tylko działa na Windows i dodaje około 20 000 Windows interfejsów API do projektów .NET Core i .NET Standard.
+Jeśli masz problemy z kompilowaniem projektów, możesz używać niektórych interfejsów API tylko dla systemu Windows, które są dostępne w .NET Framework ale nie są dostępne w środowisku .NET Core. Możesz spróbować dodać pakiet NuGet pakietu [zgodności systemu Windows][compat-pack] do projektu. Ten pakiet działa tylko w systemie Windows i dodaje około 20 000 interfejsów API systemu Windows do projektów .NET Core i .NET Standard.
 
 ```cli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package Microsoft.Windows.Compatibility
 ```
 
-Poprzednie polecenie dodaje następujące polecenie, aby **MyWPFCore.csproj** projektu:
+Poprzednie polecenie dodaje następujący do projektu **MyWPFCore. csproj** :
 
 ```xml
   <ItemGroup>
@@ -215,13 +217,13 @@ Poprzednie polecenie dodaje następujące polecenie, aby **MyWPFCore.csproj** pr
 
 ## <a name="wpf-designer"></a>Projektant WPF
 
-Zgodnie z opisem w tym artykule Visual Studio 2019 obsługuje projektanta WPF tylko w projektach .NET Framework. Tworząc projekt .NET Core side-by-side, można przetestować projektu na platformie .NET Core, podczas korzystania z projektu .NET Framework do projektowania formularzy. Plik rozwiązania zawiera projekty .NET Framework i .NET Core. Dodaj projekt formularzy i kontrolek w projekcie .NET Framework i wzorce glob pliku dodaliśmy do projektów .NET Core i wszelkich nowych lub zmienionych plików zostaną automatycznie uwzględnione w projektach .NET Core.
+Zgodnie z opisem w tym artykule program Visual Studio 2019 obsługuje tylko projektanta WPF w projektach .NET Framework. Tworząc równoległy projekt platformy .NET Core, można testować projekt przy użyciu platformy .NET Core podczas projektowania formularzy przy użyciu projektu .NET Framework. Plik rozwiązania zawiera zarówno projekty .NET Framework, jak i .NET Core. Dodawanie i projektowanie formularzy i kontrolek w projekcie .NET Framework i opartych na wzorcach globalizowania plików dodanych do projektów .NET Core, wszystkie nowe lub zmienione pliki zostaną automatycznie uwzględnione w projektach .NET Core.
 
-Gdy program Visual Studio 2019 obsługuje projektanta WPF, można kopiujesz/wklejasz zawartość pliku projektu .NET Core do pliku projektu .NET Framework. Następnie usuń wzorce glob plików, które są dodawane przy użyciu `<Source>` i `<EmbeddedResource>` elementów. Napraw ścieżki do dowolnego odwołania projektu do używanych przez aplikację. Projekt programu .NET Framework to skutecznie uaktualniania do projektu .NET Core.
- 
+Gdy program Visual Studio 2019 obsługuje projektanta WPF, można skopiować/wkleić zawartość pliku projektu .NET Core do pliku projektu .NET Framework. Następnie usuń pliki wzorców globalizowania dodane z `<Source>` elementami i. `<EmbeddedResource>` Popraw ścieżki do dowolnych odwołań do projektu używanych przez aplikację. Efektywnie uaktualnia projekt .NET Framework do projektu .NET Core.
+
 ## <a name="next-steps"></a>Następne kroki
 
-* Przeczytaj więcej na temat [systemie Windows Compatibility Pack][compat-pack].
-* Obejrzyj [wideo na przenoszenie](https://www.youtube.com/watch?v=5MomsgkWkVw&list=PLS__JrkRveTMiWxG-Lv4cBwYfMQ6m2gmt) projektu .NET Framework WPF i .NET Core.
+- Przeczytaj więcej na temat [pakietu zgodności systemu Windows][compat-pack].
+- Obejrzyj [film wideo podczas przenoszenia](https://www.youtube.com/watch?v=5MomsgkWkVw&list=PLS__JrkRveTMiWxG-Lv4cBwYfMQ6m2gmt) projektu WPF .NET Framework na platformę .NET Core.
 
 [compat-pack]: windows-compat-pack.md

@@ -22,130 +22,139 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: a63134b966fe6e6cd0cd40f69ac04a7cd986513d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5b092f50ddff5c432fbd6396b5fedafe7a6acba0
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591543"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512841"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Okres istnienia obiektu: Jak obiekty są tworzone i niszczone (Visual Basic)
-Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczowe. Inicjowanie zadania często muszą być wykonywane na nowe obiekty zanim zostaną użyte. Typowe zadania inicjowania obejmują otwierania plików, łączenie z bazami danych i odczytywania wartości kluczy rejestru. Visual Basic kontroluje inicjowania nowych obiektów za pomocą procedur o nazwie *konstruktory* (specjalne metody, które umożliwiają kontrolę nad inicjowania).  
-  
- Obiekt zwolnionego zakres jest on zwalniany przez środowisko uruchomieniowe języka wspólnego (CLR). Visual Basic kontroluje zwolnienia zasobów systemowych za pomocą procedur o nazwie *destruktory*. Razem konstruktory i destruktory obsługuje tworzenie bibliotek klas niezawodne i przewidywalne.  
-  
-## <a name="using-constructors-and-destructors"></a>Za pomocą konstruktorów i destruktorów  
- Konstruktory i destruktory kontrolować, tworzenie i niszczenie obiektów. `Sub New` i `Sub Finalize` procedury w Visual Basic, zainicjować i niszczy obiektów; zastępują one `Class_Initialize` i `Class_Terminate` metod używanych w Visual Basic 6.0 i starszych wersji.  
-  
-### <a name="sub-new"></a>Nowe podrzędne  
- `Sub New` Konstruktor można uruchomić tylko raz, po utworzeniu klasy. Nie można wywołać w jawnie w dowolnym miejscu innym niż w pierwszym wierszu kodu innego konstruktora z tej samej klasie lub klasie pochodnej. Ponadto kod w `Sub New` metody jest zawsze uruchamiany przed innymi kodami w klasie. Visual Basic i nowszych wersjach niejawnie tworzenie `Sub New` konstruktora w czasie wykonywania, jeżeli nie zdefiniujesz jawnie `Sub New` procedury dla klasy.  
-  
- Aby utworzyć konstruktor dla klasy, należy utworzyć procedurę o nazwie `Sub New` w dowolnym miejscu definicji klasy. Aby utworzyć sparametryzowania konstruktora, określ nazwy i typy danych argumentów `Sub New` tak samo jak należy określić argumenty dla innej procedury, zgodnie z poniższym kodem:  
-  
- [!code-vb[VbVbalrOOP#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#42)]  
-  
- Konstruktory często są przeciążone, zgodnie z poniższym kodem:  
-  
- [!code-vb[VbVbalrOOP#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#116)]  
-  
- Podczas definiowania klasy pochodzącej od innej klasy w pierwszym wierszu konstruktora musi być wywołaniem do konstruktora klasy bazowej, chyba że klasa bazowa ma dostępny konstruktor, który nie przyjmuje żadnych parametrów. Wywołania do klasy bazowej, zawierający powyżej konstruktora, na przykład będzie `MyBase.New(s)`. W przeciwnym razie `MyBase.New` jest opcjonalna, i wywołuje ona niejawnie środowiska uruchomieniowego języka Visual Basic.  
-  
- Po napisaniu kodu, aby wywołać konstruktora obiektu nadrzędnego, można dodać kodu inicjowania dodatkowe `Sub New` procedury. `Sub New` można zaakceptować argumenty wywołanego jako sparametryzowania konstruktora. Te parametry są przekazywane z procedury wywołanie konstruktora, na przykład `Dim AnObject As New ThisClass(X)`.  
-  
-### <a name="sub-finalize"></a>Sub Finalize  
- Przed wydaniem obiektów, automatycznie wywołuje środowisko CLR `Finalize` metody dla obiektów, które definiują `Sub Finalize` procedury. `Finalize` Metoda może zawierać kod, który trzeba wykonać przed obiekt jest niszczony, takie jak kod zamykanie plików i zapisywanie informacji o stanie. Zwłoka niewielkim wzroście wydajności do wykonywania `Sub Finalize`, więc należy zdefiniować `Sub Finalize` metody tylko wtedy, gdy trzeba jawnie zwolnić obiektów.  
-  
+
+Wystąpienie klasy, obiektu jest tworzone za pomocą `New` słowa kluczowego. Zadania inicjowania często należy wykonać na nowych obiektach przed ich użyciem. Typowe zadania inicjowania obejmują otwieranie plików, łączenie z bazami danych i odczytywanie wartości kluczy rejestru. Visual Basic steruje inicjalizacją nowych obiektów przy użyciu procedur  nazywanych konstruktorami (specjalne metody, które zezwalają na kontrolę nad inicjalizacją).
+
+Gdy obiekt zostanie pozostawiony, zostanie on opublikowany przez środowisko uruchomieniowe języka wspólnego (CLR). Visual Basic kontroluje wydawanie zasobów systemowych przy użyciu procedur nazywanych *destruktorami*. Razem konstruktory i destruktory obsługują tworzenie niezawodnych i przewidywalnych bibliotek klas.
+
+## <a name="using-constructors-and-destructors"></a>Używanie konstruktorów i destruktorów
+
+Konstruktory i destruktory kontrolują tworzenie i niszczenie obiektów. `Class_Initialize` `Class_Terminate` Procedury i w`Sub Finalize` Visual Basic zainicjować i zniszczyć obiekty; zastępują metody i używane w Visual Basic 6,0 i wcześniejszych wersjach. `Sub New`
+
+### <a name="sub-new"></a>Sub New
+
+`Sub New` Konstruktor można uruchomić tylko raz podczas tworzenia klasy. Nie można go wywołać jawnie wszędzie poza pierwszym wierszem kodu innego konstruktora z tej samej klasy lub z klasy pochodnej. Ponadto kod w `Sub New` metodzie zawsze jest uruchamiany przed jakimkolwiek innym kodem w klasie. Visual Basic i nowsze wersje niejawnie tworzą `Sub New` konstruktora w czasie wykonywania, jeśli nie `Sub New` określisz jawnie procedury dla klasy.
+
+Aby utworzyć konstruktora dla klasy, należy utworzyć procedurę o nazwie `Sub New` gdziekolwiek w definicji klasy. Aby utworzyć sparametryzowany Konstruktor, określ nazwy i typy danych argumentów `Sub New` tak samo jak w przypadku określenia argumentów dla każdej innej procedury, jak w poniższym kodzie:
+
+[!code-vb[VbVbalrOOP#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#42)]
+
+Konstruktory są często przeciążone, tak jak w poniższym kodzie:
+
+[!code-vb[VbVbalrOOP#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#116)]
+
+Podczas definiowania klasy pochodnej z innej klasy, pierwszy wiersz konstruktora musi być wywołaniem konstruktora klasy bazowej, chyba że klasa bazowa ma dostępnego konstruktora, który nie przyjmuje żadnych parametrów. Na przykład `MyBase.New(s)`wywołanie klasy bazowej zawierającej powyższy Konstruktor. W przeciwnym razie jest opcjonalne, a środowisko uruchomieniowe Visual Basic wywołuje je niejawnie. `MyBase.New`
+
+Po napisaniu kodu w celu wywołania konstruktora obiektu nadrzędnego można dodać do `Sub New` procedury dodatkowy kod inicjalizacji. `Sub New`można akceptować argumenty, gdy są wywoływane jako Konstruktor sparametryzowane. Te parametry są przesyłane z procedury wywołującej Konstruktor, na przykład `Dim AnObject As New ThisClass(X)`.
+
+### <a name="sub-finalize"></a>Podfinalize
+
+Przed zwolnieniem obiektów CLR automatycznie wywołuje `Finalize` metodę dla obiektów, które `Sub Finalize` definiują procedurę. `Finalize` Metoda może zawierać kod, który musi być wykonywany tuż przed zniszczeniem obiektu, taki jak kod zamykania plików i zapisywania informacji o stanie. Istnieje niewielki spadek wydajności dla wykonywania `Sub Finalize`, dlatego należy `Sub Finalize` zdefiniować metodę tylko wtedy, gdy trzeba będzie jawnie zwolnić obiekty.
+
 > [!NOTE]
->  Moduł zbierający elementy bezużyteczne w CLR nie jest i nie mogą usuwanie *niezarządzanych obiektów*, obiekty, które system operacyjny wykonuje bezpośrednio, poza środowiskiem CLR. Jest to spowodowane różnych obiektów niezarządzanych musi zostać usunięty z na różne sposoby. Informacje nie są bezpośrednio związane z obiektem niezarządzane; musi zostać znaleziony w dokumentacji dla obiektu. Klasa, która używa niezarządzane obiekty muszą usunięcia go w jego `Finalize` metody.  
-  
- `Finalize` Destruktor jest metodą chronionych, który można wywołać tylko z klasy należy ona do lub z klas pochodnych. Wywołania systemowe `Finalize` automatycznie kiedy obiekt jest niszczony, więc nie należy jawnie wywołać `Finalize` z poza klasy pochodnej `Finalize` implementacji.  
-  
- W odróżnieniu od `Class_Terminate`, które wykonuje, gdy tylko obiekt jest ustawiony na wartość nothing, jest zwykle opóźnienia między kiedy obiekt traci zakresu i kiedy wywołuje języka Visual Basic `Finalize` destruktora. Visual Basic i nowsze wersje umożliwiają dla drugiego rodzaju destruktora, <xref:System.IDisposable.Dispose%2A>, której można jawnie wywołać w dowolnym momencie, aby od razu zwolnić zasoby.  
-  
+> Moduł wyrzucania elementów bezużytecznych w środowisku CLR nie (i nie może) usuwania *obiektów niezarządzanych*, obiektów, które system operacyjny wykonuje bezpośrednio, poza środowiskiem CLR. Wynika to z faktu, że różne obiekty niezarządzane muszą zostać usunięte na różne sposoby. Te informacje nie są bezpośrednio skojarzone z obiektem niezarządzanym; należy ją znaleźć w dokumentacji dla obiektu. Klasa, która korzysta z obiektów niezarządzanych, musi usunąć je `Finalize` w swojej metodzie.
+
+`Finalize` Destruktor jest metodą chronioną, która może być wywoływana tylko z klasy, do której należy, lub z klas pochodnych. System automatycznie wywołuje `Finalize` , gdy obiekt jest niszczony, dlatego nie należy jawnie wywołać `Finalize` z zewnątrz `Finalize` implementacji klasy pochodnej.
+
+W przeciwieństwie `Class_Terminate`do, które jest wykonywane zaraz, gdy tylko obiekt jest ustawiony na wartość Nothing, zazwyczaj opóźnienie między obiektem traci zakres i kiedy Visual Basic `Finalize` wywołuje destruktor. Visual Basic i nowsze wersje umożliwiają użycie drugiego rodzaju destruktora, <xref:System.IDisposable.Dispose%2A>który można jawnie wywołać w dowolnym momencie, aby natychmiast zwolnić zasoby.
+
 > [!NOTE]
->  A `Finalize` destruktor nie powinna zgłaszać wyjątków, ponieważ nie mogą być obsługiwane przez aplikację i może spowodować nieplanowane zamknięcie aplikacji.  
-  
-### <a name="how-new-and-finalize-methods-work-in-a-class-hierarchy"></a>Jak nowe i zakończyć metody działają w hierarchii klas  
- Zawsze, gdy tworzone jest wystąpienie klasy, środowisko uruchomieniowe języka wspólnego (CLR) próbuje wykonać procedurę o nazwie `New`, jeśli taki istnieje w tym obiekcie. `New` rodzaj procedury o nazwie `constructor` używany do zainicjowania nowych obiektów, przed wykonaniem każdy inny kod w obiekcie. A `New` Konstruktor może służyć do otwierania plików, połączenie z bazami danych, zainicjować zmienne i zajmie się inne zadania, które należy wykonać, zanim obiekt może być używany.  
-  
- Po utworzeniu wystąpienia klasy pochodnej `Sub New` wykonaniem konstruktora klasy bazowej, najpierw następuje konstruktory w klasach pochodnych. Zdarza się to pierwszy wiersz kodu w `Sub New` Konstruktor używa składni `MyBase.New()`wywołać konstruktora klasy bezpośrednio nad sama w hierarchii klas. `Sub New` Konstruktor jest następnie wywoływana dla każdej klasy w hierarchii klas do konstruktora dla klasy bazowej zostanie osiągnięty. W tym momencie kod w Konstruktorze dla klasy bazowej jest wykonywana, a następnie kod w każdym konstruktora dla wszystkich klas pochodnych, a ostatnia wykonywany jest kod w najbardziej pochodnej klasy.  
-  
- ![Zrzut ekranu przedstawiający konstruktorów hierarchii klas i dziedziczenie.](./media/object-lifetime-how-objects-are-created-and-destroyed/subnew-constructor-inheritance.gif)  
-  
- Gdy obiekt nie jest już potrzebny, środowisko CLR wywołuje <xref:System.Object.Finalize%2A> metodę dla tego obiektu, przed zwolnieniem pamięci. <xref:System.Object.Finalize%2A> Wywoływana jest metoda `destructor` ponieważ wykonuje zadania oczyszczania, takie jak zapisywanie informacji o stanie, zamykanie plików i połączenia z bazami danych i innych zadań, które muszą być wykonane przed zwolnieniem obiektu.  
-  
- ![Zrzut ekranu przedstawiający destruktor metody Finalize.](./media/object-lifetime-how-objects-are-created-and-destroyed/finalize-method-destructor.gif)  
-  
-## <a name="idisposable-interface"></a>Interfejs IDisposable  
- Wystąpienia klasy często kontrolować zasoby, które nie są zarządzane przez środowisko CLR, takich jak Windows obsługuje i połączenia z bazą danych. Te zasoby muszą być usuwane w `Finalize` metody klasy, tak aby ich zwolniony, kiedy niszczony jest obiekt przez moduł odśmiecania pamięci. Jednak moduł odśmiecania pamięci niszczy obiektów tylko wtedy, gdy środowisko CLR wymaga więcej pamięci. Oznacza to, że zasoby mogą nie być dostępne aż do czasu, po obiekt wykracza poza zakres.  
-  
- Aby uzupełnić wyrzucania elementów bezużytecznych, Twoich zajęciach zapewnia mechanizm aktywnie zarządzać zasobami systemu, jeśli implementują <xref:System.IDisposable> interfejsu. <xref:System.IDisposable> zawiera jedną metodę <xref:System.IDisposable.Dispose%2A>, klientów, którzy powinny wywoływać po zakończeniu używania obiektu. Możesz użyć <xref:System.IDisposable.Dispose%2A> metodę, aby natychmiast zwolnienia zasobów i wykonywania zadań takich jak zamykanie plików i połączenia z bazą danych. W odróżnieniu od `Finalize` destruktora, <xref:System.IDisposable.Dispose%2A> metoda nie jest wywoływana automatycznie. Klienci klasy należy jawnie wywołać <xref:System.IDisposable.Dispose%2A> kiedy chcesz od razu zwolnić zasoby.  
-  
-### <a name="implementing-idisposable"></a>Implementowanie interfejsu IDisposable  
- Klasa, która implementuje <xref:System.IDisposable> interfejsu powinny zawierać te sekcje kodu:  
-  
-- Pole do śledzenia czy obiekt został usunięty:  
-  
-    ```  
-    Protected disposed As Boolean = False  
-    ```  
-  
-- Przeciążenia <xref:System.IDisposable.Dispose%2A> , zwalnia zasoby klasy. Ta metoda powinna być wywoływana przez <xref:System.IDisposable.Dispose%2A> i `Finalize` metody klasy bazowej:  
-  
-    ```  
-    Protected Overridable Sub Dispose(ByVal disposing As Boolean)  
-        If Not Me.disposed Then  
-            If disposing Then  
-                ' Insert code to free managed resources.  
-            End If  
-            ' Insert code to free unmanaged resources.  
-        End If  
-        Me.disposed = True  
-    End Sub  
-    ```  
-  
-- Implementacja <xref:System.IDisposable.Dispose%2A> zawierający następujący kod:  
-  
-    ```  
-    Public Sub Dispose() Implements IDisposable.Dispose  
-        Dispose(True)  
-        GC.SuppressFinalize(Me)  
-    End Sub  
-    ```  
-  
-- Zastępowanie `Finalize` metodę, która zawiera następujący kod:  
-  
-    ```  
-    Protected Overrides Sub Finalize()  
-        Dispose(False)  
-        MyBase.Finalize()  
-    End Sub  
-    ```  
-  
-### <a name="deriving-from-a-class-that-implements-idisposable"></a>Wyprowadzanie z klas, w którym zaimplementowano interfejs IDisposable  
- Klasa, która pochodzi z klasy bazowej, która implementuje <xref:System.IDisposable> interfejsu nie jest konieczne przesłonić metod bazowych, chyba że używa dodatkowe zasoby, które muszą zostać usunięte. W takiej sytuacji klasy pochodne powinny przesłaniać klasy bazowej `Dispose(disposing)` metody do usuwania zasobów klasy pochodnej. To zastąpienie musi wywołać klasy bazowej `Dispose(disposing)` metody.  
-  
-```  
-Protected Overrides Sub Dispose(ByVal disposing As Boolean)  
-    If Not Me.disposed Then  
-        If disposing Then  
-            ' Insert code to free managed resources.  
-        End If  
-        ' Insert code to free unmanaged resources.  
-    End If  
-    MyBase.Dispose(disposing)  
-End Sub  
-```  
-  
- Klasa pochodna nie powinien przesłonić klasy bazowej <xref:System.IDisposable.Dispose%2A> i `Finalize` metody. Gdy te metody są wywoływane z wystąpienia klasy pochodnej, klasa bazowa implementacji tych metod wywołania zastąpienie klasy pochodnej z `Dispose(disposing)` metody.  
-  
-## <a name="garbage-collection-and-the-finalize-destructor"></a>Wyrzucanie elementów bezużytecznych i finalizowanie — destruktor  
- .NET Framework używa *odwołania śledzenia wyrzucania elementów bezużytecznych* systemu, aby okresowo wersji nieużywane zasoby. Visual Basic 6.0 i starsze wersje należy użyć innego systemu o nazwie *zliczanie odwołań* do zarządzania zasobami. Mimo że oba systemy, które automatycznie pełnią taką samą funkcję, istnieje kilka istotnych różnic.  
-  
- Środowisko CLR okresowo niszczy obiekty, gdy system określi, że takie obiekty nie są już potrzebne. Obiekty są zwalniane szybciej, gdy wszystkie zasoby systemu są w przeciwnym razie podaż i rzadziej. Opóźnienie między kiedy obiekt traci zakresu i gdy środowisko CLR zwalnia go oznacza, że w przeciwieństwie do obiektów w Visual Basic 6.0 i starszych wersjach, nie można ustalić dokładnie gdy obiekt jest niszczony. W takiej sytuacji obiektów mówi się, że masz *niedeterministyczne okres istnienia*. W większości przypadków niedeterministyczne okresu istnienia nie zmienia sposobu pisania aplikacji, tak długo, jak należy pamiętać, że `Finalize` destruktor nie może być od razu wykonywane gdy obiekt traci zakresu.  
-  
- Inna różnica między systemami wyrzucania elementów bezużytecznych obejmuje użycie `Nothing`. Z zalet zliczanie w Visual Basic 6.0 i starszych wersjach, programiści czasami przypisane `Nothing` do obiektu zmiennych, aby zwolnić odwołań tych zmiennych przechowywanych. Jeśli zmienna przechowywane ostatnie odwołanie do obiektu, obiekt zasoby zostały wydane natychmiast. W nowszych wersjach programu Visual Basic gdy można wykluczyć sytuacji, w których ta procedura jest bardzo przydatna wykonywanie jej nigdy nie powoduje, że przywoływanego obiektu zwolnić jego zasoby, od razu. Aby zwolnić zasoby natychmiast, użyj obiektu <xref:System.IDisposable.Dispose%2A> metody, jeśli jest dostępny. Tylko wtedy należy ustawić zmienną `Nothing` jest, gdy czas względem czasu, moduł odśmiecania pamięci ma wykryć obiekty oddzielone cały okres ich istnienia.  
-  
+> `Finalize` Destruktor nie powinien zgłaszać wyjątków, ponieważ nie mogą być obsługiwane przez aplikację i może spowodować przerwanie działania aplikacji.
+
+### <a name="how-new-and-finalize-methods-work-in-a-class-hierarchy"></a>Jak metody New i Finalize działają w hierarchii klas
+
+Za każdym razem, gdy tworzone jest wystąpienie klasy, środowisko uruchomieniowe języka wspólnego (CLR) próbuje wykonać procedurę `New`o nazwie, jeśli istnieje w tym obiekcie. `New`jest typem procedury o nazwie `constructor` , która jest używana do inicjowania nowych obiektów przed wykonaniem dowolnego innego kodu w obiekcie. `New` Konstruktor może służyć do otwierania plików, łączenia z bazami danych, inicjowania zmiennych i ponoszenia innych zadań, które należy wykonać, aby można było użyć obiektu.
+
+Gdy tworzone jest wystąpienie klasy pochodnej, `Sub New` Konstruktor klasy bazowej jest wykonywany jako pierwszy, a następnie konstruktory w klasach pochodnych. Dzieje się tak, ponieważ pierwszy wiersz kodu w `Sub New` konstruktorze używa składni `MyBase.New()`do wywołania konstruktora klasy bezpośrednio powyżej w hierarchii klas. `Sub New` Konstruktor jest następnie wywoływany dla każdej klasy w hierarchii klas do momentu osiągnięcia konstruktora dla klasy bazowej. W tym momencie kod w konstruktorze klasy bazowej jest wykonywany, po którym następuje kod w każdym konstruktorze we wszystkich klasach pochodnych i kod w większości klas pochodnych jest wykonywany jako ostatni.
+
+![Zrzut ekranu przedstawiający konstruktory hierarchii klas i dziedziczenie.](./media/object-lifetime-how-objects-are-created-and-destroyed/subnew-constructor-inheritance.gif)
+
+Gdy obiekt nie jest już wymagany, środowisko CLR wywołuje <xref:System.Object.Finalize%2A> metodę dla tego obiektu przed zwolnieniem jego pamięci. Metoda jest wywoływana a `destructor` ponieważ wykonuje zadania oczyszczania, takie jak zapisywanie informacji o stanie, zamykanie plików i połączeń z bazami danych oraz inne zadania, które należy wykonać przed zwolnieniem obiektu. <xref:System.Object.Finalize%2A>
+
+![Zrzut ekranu przedstawiający destruktor metody Finalize.](./media/object-lifetime-how-objects-are-created-and-destroyed/finalize-method-destructor.gif)
+
+## <a name="idisposable-interface"></a>Interfejs IDisposable
+
+Wystąpienia klas często kontrolują zasoby, które nie są zarządzane przez środowisko CLR, takie jak uchwyty systemu Windows i połączenia bazy danych. Te zasoby muszą zostać usunięte `Finalize` z metody klasy, aby były zwalniane, gdy obiekt zostanie zniszczony przez moduł wyrzucania elementów bezużytecznych. Jednak Moduł wyrzucania elementów bezużytecznych niszczy obiekty tylko wtedy, gdy środowisko CLR wymaga więcej wolnej pamięci. Oznacza to, że zasoby mogą nie być uwalniane aż do momentu, gdy obiekt wykracza poza zakres.
+
+Aby uzupełniać odzyskiwanie pamięci, klasy mogą być mechanizmem do aktywnego zarządzania zasobami systemu, jeśli implementują <xref:System.IDisposable> interfejs. <xref:System.IDisposable>ma jedną metodę, <xref:System.IDisposable.Dispose%2A>która powinna być wywoływana przez klientów po zakończeniu korzystania z obiektu. Możesz użyć <xref:System.IDisposable.Dispose%2A> metody, aby natychmiast zwolnić zasoby i wykonać zadania, takie jak zamykanie plików i połączeń z bazą danych. `Finalize` W<xref:System.IDisposable.Dispose%2A> przeciwieństwie do destruktora Metoda nie jest wywoływana automatycznie. Klienci klasy muszą jawnie wywołać <xref:System.IDisposable.Dispose%2A> , gdy chcesz natychmiast zwolnić zasoby.
+
+### <a name="implementing-idisposable"></a>Implementowanie interfejsu IDisposable
+
+Klasa implementująca <xref:System.IDisposable> interfejs powinna zawierać następujące sekcje kodu:
+
+- Pole do śledzenia, czy obiekt został usunięty:
+
+  ```vb
+  Protected disposed As Boolean = False
+  ```
+
+- Przeciążenie <xref:System.IDisposable.Dispose%2A> zwalniające zasoby klasy. Ta metoda powinna być wywoływana przez <xref:System.IDisposable.Dispose%2A> metody i `Finalize` klasy bazowej:
+
+  ```vb
+  Protected Overridable Sub Dispose(ByVal disposing As Boolean)
+      If Not Me.disposed Then
+          If disposing Then
+              ' Insert code to free managed resources.
+          End If
+          ' Insert code to free unmanaged resources.
+      End If
+      Me.disposed = True
+  End Sub
+  ```
+
+- Implementacja programu <xref:System.IDisposable.Dispose%2A> , która zawiera tylko następujący kod:
+
+  ```vb
+  Public Sub Dispose() Implements IDisposable.Dispose
+      Dispose(True)
+      GC.SuppressFinalize(Me)
+  End Sub
+  ```
+
+- Przesłonięcie `Finalize` metody, która zawiera tylko następujący kod:
+
+  ```vb
+  Protected Overrides Sub Finalize()
+      Dispose(False)
+      MyBase.Finalize()
+  End Sub
+  ```
+
+### <a name="deriving-from-a-class-that-implements-idisposable"></a>Wyprowadzanie z klasy implementującej interfejs IDisposable
+
+Klasa, która dziedziczy z klasy bazowej implementującej <xref:System.IDisposable> interfejs, nie musi przesłonić żadnej z metod podstawowych, chyba że używa dodatkowych zasobów, które muszą zostać usunięte. W takiej sytuacji Klasa pochodna powinna zastąpić `Dispose(disposing)` metodę klasy bazowej, aby usunąć zasoby klasy pochodnej. To zastąpienie musi wywoływać `Dispose(disposing)` metodę klasy bazowej.
+
+```vb
+Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+    If Not Me.disposed Then
+        If disposing Then
+            ' Insert code to free managed resources.
+        End If
+        ' Insert code to free unmanaged resources.
+    End If
+    MyBase.Dispose(disposing)
+End Sub
+```
+
+Klasa pochodna nie powinna przesłaniać metod klasy <xref:System.IDisposable.Dispose%2A> bazowej i. `Finalize` Gdy te metody są wywoływane z wystąpienia klasy pochodnej, implementacja klasy bazowej `Dispose(disposing)` metoda wywołuje zastąpienie metody klasy pochodnej.
+
+## <a name="garbage-collection-and-the-finalize-destructor"></a>Odzyskiwanie pamięci i destruktor finalizatora
+
+.NET Framework używa systemu wyrzucania *elementów bezużytecznych śledzenia odwołań* do okresowego zwalniania nieużywanych zasobów. Visual Basic 6,0 i wcześniejsze wersje używają innego systemu zwanego *zliczaniem odwołań* do zarządzania zasobami. Chociaż obie systemy wykonują tę samą funkcję automatycznie, istnieje kilka istotnych różnic.
+
+Środowisko CLR okresowo niszczy obiekty, gdy system ustali, że takie obiekty nie są już potrzebne. Obiekty są uwalniane szybciej, gdy zasoby systemu są w krótkim dostawie i rzadziej w inny sposób. Opóźnienie między momentem, gdy obiekt traci zakres i kiedy środowisko CLR wykryje, że, w przeciwieństwie do obiektów w Visual Basic 6,0 i wcześniejszych wersjach, nie można określić dokładnie, gdy obiekt zostanie zniszczony. W takiej sytuacji obiekty są określane jako Niedeterministyczny *okres istnienia*. W większości przypadków okres istnienia Niedeterministyczny nie zmienia sposobu pisania aplikacji, o ile pamiętasz, że `Finalize` destruktor może nie zostać natychmiast wykonany, gdy obiekt utraci zakres.
+
+Inna różnica między systemami zbierania elementów bezużytecznych polega na użyciu `Nothing`programu. Aby skorzystać z zliczania odwołań w Visual Basic 6,0 i wcześniejszych wersjach, programiści czasami są `Nothing` przypisani do zmiennych obiektów w celu zwolnienia odwołań do tych zmiennych. Jeśli zmienna posiadała ostatnie odwołanie do obiektu, zasoby obiektu zostały wydane od razu. W nowszych wersjach Visual Basic, chociaż mogą wystąpić przypadki, w których ta procedura jest nadal cenna, wykonanie nigdy nie powoduje, że obiekt, do którego istnieje odwołanie, natychmiast zwolni swoje zasoby. Aby natychmiast zwolnić zasoby, użyj <xref:System.IDisposable.Dispose%2A> metody obiektu, jeśli jest dostępna. Jedynym momentem, w którym należy ustawić zmienną `Nothing` , jest to, kiedy jego okres istnienia jest długi względem czasu, gdy moduł zbierający elementy bezużyteczne wykrywa obiekty oddzielone.
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.IDisposable.Dispose%2A>

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 8bb61767324602ae54427c50c73e029a6c7bf3b7
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 2bfd4d9cbac8dbc9c93ceb1c5bb61ecd03f348d7
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236016"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512371"
 ---
 # <a name="c-keywords"></a>Słowa kluczowe języka C#
 
-Słowa kluczowe są wstępnie zdefiniowane, zarezerwowane identyfikatorów, które mają specjalne znaczenie dla kompilatora. Nie można ich używać jako identyfikatorów w programach, chyba że zawierają one `@` jako prefiksu. Na przykład `@if` jest prawidłowym identyfikatorem, ale `if` jest niezgodny, ponieważ `if` jest słowem kluczowym.  
+Słowa kluczowe są wstępnie zdefiniowanymi, zarezerwowanymi identyfikatorami, które mają specjalne znaczenie dla kompilatora. Nie można ich używać jako identyfikatorów w programie, chyba że zawierają `@` one jako prefiks. Na przykład, `@if` jest prawidłowym identyfikatorem, `if` ale nie jest `if` , ponieważ jest słowem kluczowym.  
   
- W pierwszej tabeli, w tym temacie wymieniono słowa kluczowe, które są zarezerwowanymi identyfikatorami w dowolnej części programu w języku C#. W drugiej tabeli, w tym temacie wymieniono kontekstowych słów kluczowych w języku C#. Kontekstowe słowa kluczowe mają specjalne znaczenie tylko w kontekście ograniczony program i mogą być używane jako identyfikatory poza tym kontekstem. Ogólnie rzecz biorąc podczas dodawania nowych słów kluczowych języka C#, zostaną dodane jako kontekstowymi słowami kluczowymi Aby uniknąć dzielenia programy napisane w starszych wersjach.  
+ W pierwszej tabeli w tym temacie wymieniono słowa kluczowe, które są zarezerwowane identyfikatory w C# dowolnej części programu. W drugiej tabeli w tym temacie wymieniono kontekstowe słowa C#kluczowe w. Kontekstowe słowa kluczowe mają specjalne znaczenie tylko w ograniczonym kontekście programu i mogą być używane jako identyfikatory poza tym kontekstem. Ogólnie rzecz biorąc, w miarę dodawania nowych słów C# kluczowych do języka są one dodawane jako kontekstowe słowa kluczowe, aby uniknąć przerywania programów pisanych we wcześniejszych wersjach.  
   
 |||||  
 |---|---|---|---|  
@@ -28,26 +28,26 @@ Słowa kluczowe są wstępnie zdefiniowane, zarezerwowane identyfikatorów, któ
 |[break](break.md)|[byte](../builtin-types/integral-numeric-types.md)|[case](switch.md)|[catch](try-catch.md)|  
 |[char](char.md)|[checked](checked.md)|[class](class.md)|[const](const.md)|  
 |[continue](continue.md)|[decimal](../builtin-types/floating-point-numeric-types.md)|[default](default.md)|[delegate](delegate.md)|  
-|[do](do.md)|[double](../builtin-types/floating-point-numeric-types.md)|[else](if-else.md)|[enum](enum.md)|  
+|[do](do.md)|[double](../builtin-types/floating-point-numeric-types.md)|[Przejmi](if-else.md)|[enum](enum.md)|  
 |[event](event.md)|[explicit](../operators/user-defined-conversion-operators.md)|[extern](extern.md)|[false](false-literal.md)|  
-|[finally](try-finally.md)|[Stała](fixed-statement.md)|[float](../builtin-types/floating-point-numeric-types.md)|[for](for.md)|  
-|[Instrukcja foreach](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[implicit](../operators/user-defined-conversion-operators.md)|  
+|[finally](try-finally.md)|[FIXED](fixed-statement.md)|[float](../builtin-types/floating-point-numeric-types.md)|[for](for.md)|  
+|[spowodował](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[implicit](../operators/user-defined-conversion-operators.md)|  
 |[in](in.md)|[int](../builtin-types/integral-numeric-types.md)|[interface](interface.md)|[internal](internal.md)|
 |[is](is.md)|[lock](lock-statement.md)|[long](../builtin-types/integral-numeric-types.md)|[namespace](namespace.md)|
 |[new](../operators/new-operator.md)|[null](null.md)|[object](object.md)|[operator](../operators/operator-overloading.md)|
 |[out](out.md)|[override](override.md)|[params](params.md)|[private](private.md)|
 |[protected](protected.md)|[public](public.md)|[readonly](readonly.md)|[ref](ref.md)|
 |[return](return.md)|[sbyte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
-[sizeof](sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[string](string.md)|
+[sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[string](string.md)|
 |[struct](struct.md)|[switch](switch.md)|[this](this.md)|[throw](throw.md)|
-|[true](true-literal.md)|[Wypróbuj](try-catch.md)|[typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
+|[true](true-literal.md)|[spróbował](try-catch.md)|[typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
 |[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[unsafe](unsafe.md)|[ushort](../builtin-types/integral-numeric-types.md)|
-|[using](using.md)|[Przy użyciu statycznej](using-static.md)|[virtual](virtual.md)|[void](void.md)|
+|[using](using.md)|[Używanie static](using-static.md)|[virtual](virtual.md)|[void](void.md)|
 |[volatile](volatile.md)|[while](while.md)|
 
 ## <a name="contextual-keywords"></a>Kontekstowe słowa kluczowe
 
- Kontekstowe słowo kluczowe służy do zapewnienia określone znaczenie w kodzie, ale nie jest wyrazem zastrzeżonym w języku C#. Niektóre kontekstowych słów kluczowych, takich jak `partial` i `where`, mają specjalne znaczenie w co najmniej dwóch kontekstów.  
+ Kontekstowe słowo kluczowe jest używane do zapewnienia określonego znaczenia w kodzie, ale nie jest to słowo zastrzeżone w C#. Niektóre kontekstowe słowa kluczowe, `partial` takie `where`jak i, mają specjalne znaczenie w co najmniej dwóch kontekstach.  
   
 ||||  
 |---|---|---|  
@@ -55,13 +55,13 @@ Słowa kluczowe są wstępnie zdefiniowane, zarezerwowane identyfikatorów, któ
 |[async](async.md)|[await](await.md)|[by](by.md)|
 |[descending](descending.md)|[dynamic](dynamic.md)|[equals](equals.md)|
 |[from](from-clause.md)|[get](get.md)|[global](global.md)|
-|[Grupy](group-clause.md)|[into](into.md)|[join](join-clause.md)|
-|[Let](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
-|[orderby](orderby-clause.md)|[Partial (typ)](partial-type.md)|[Partial (metoda)](partial-method.md)|
-|[remove](remove.md)|[Wybierz pozycję](select-clause.md)|[set](set.md)|
+|[Group](group-clause.md)|[into](into.md)|[join](join-clause.md)|
+|[wpuść](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
+|[orderby](orderby-clause.md)|[częściowy (typ)](partial-type.md)|[częściowe (Metoda)](partial-method.md)|
+|[remove](remove.md)|[zaznaczenia](select-clause.md)|[set](set.md)|
 |[value](value.md)|[var](var.md)|[when (warunek filtru)](when.md)|
-|[where (ograniczenie typu ogólnego)](where-generic-type-constraint.md)|[gdzie (klauzula zapytania)](where-clause.md)|[yield](yield.md)|
+|[where (ograniczenie typu ogólnego)](where-generic-type-constraint.md)|[WHERE (klauzula zapytania)](where-clause.md)|[yield](yield.md)|
   
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwołanie](../index.md)
+- [C#odwoła](../index.md)

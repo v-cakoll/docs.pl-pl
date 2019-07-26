@@ -7,80 +7,81 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: a595f38f6dd68b9c152bfa78ec0bebf36e173e17
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e56529919945558df178e18a83a895a79bfe4919
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649966"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512722"
 ---
-# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Typ zmiennej "\<nazwa_zmiennej >' nie zostanie wywnioskowany, ponieważ jest on powiązany z polem w zakresie otaczającym
-Typ zmiennej "\<nazwa_zmiennej >' nie zostanie wywnioskowany, ponieważ jest on powiązany z polem w zakresie otaczającym. Zmień nazwę "\<nazwa_zmiennej >", lub użyj w pełni kwalifikowana nazwa (na przykład "Me.variablename" lub "MyBase.variablename").  
-  
- Zmienna sterująca pętli w kodzie ma taką samą nazwę jako pola klasy lub innego zasięgu. Ponieważ zmienna sterująca jest używany bez `As` klauzula jest powiązany z polem w zasięgu, a kompilator nie tworzy nową zmienną dla niego ani nie wywnioskować jej typu.  
-  
- W poniższym przykładzie `Index`, zmienna sterująca w `For` instrukcji, jest powiązany z `Index` pole `Customer` klasy. Kompilator nie tworzy nową zmienną dla zmienna sterująca `Index` lub wywnioskować jej typu.  
-  
-```  
-Class Customer  
-  
-    ' The class has a field named Index.  
-    Private Index As Integer  
-  
-    Sub Main()  
-  
-    ' The following line will raise this warning.  
-        For Index = 1 To 10  
-            ' ...  
-        Next  
-  
-    End Sub  
-End Class  
-```  
-  
- Domyślnie ta wiadomość jest ostrzeżenie. Aby uzyskać informacji na temat sposobu Ukryj ostrzeżenia lub jak Traktuj ostrzeżenia jako błędy, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
-  
- **Identyfikator błędu:** BC42110  
-  
-### <a name="to-address-this-warning"></a>Aby rozwiązać tego ostrzeżenia  
-  
-- Zmienna sterująca pętli należy lokalnych, zmieniając jej nazwę na identyfikator, który nie jest również nazwę pola klasy.  
-  
-    ```  
-    For I = 1 To 10  
-    ```  
-  
-- Wyjaśnienie, że zmienna sterująca pętli wiąże pola klasy przez dodanie przedrostka `Me.` do nazwy zmiennej.  
-  
-    ```  
-    For Me.Index = 1 To 10  
-    ```  
-  
-- Zamiast polegania na wnioskowanie o typie lokalnym, użyj `As` klauzuli, aby określić typ zmienna sterująca pętli.  
-  
-    ```  
-    For Index As Integer = 1 To 10  
-    ```  
-  
-## <a name="example"></a>Przykład  
- Poniższy kod przedstawia wcześniejszy przykład przy pierwszym korekcji w miejscu.  
-  
-```  
-Class Customer  
-  
-    ' The class has a field named Index.  
-    Private Index As Integer  
-  
-    Sub Main()  
-  
-        For I = 1 To 10  
-            ' ...  
-        Next  
-  
-    End Sub  
-End Class  
-```  
-  
+# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Typ zmiennej "\<VariableName >" nie zostanie wywnioskowany, ponieważ jest powiązany z polem w zakresie otaczającym
+
+Typ zmiennej "\<VariableName >" nie zostanie wywnioskowany, ponieważ jest powiązany z polem w zakresie otaczającym. Zmień nazwę zmiennej "\<VariableName >" lub użyj w pełni kwalifikowanej nazwy (na przykład "Me. VariableName" lub "MyBase. VariableName").
+
+Zmienna sterująca pętli w kodzie ma taką samą nazwę jak pole klasy lub innego zakresu otaczającego. Ponieważ zmienna kontroli jest używana bez `As` klauzuli, jest ona powiązana z polem w otaczającym zakresie i kompilator nie tworzy dla niego nowej zmiennej ani nie wystawia jego typu.
+
+W poniższym przykładzie `Index`Zmienna sterująca `For` w instrukcji jest powiązana `Customer` z `Index` polem w klasie. Kompilator nie tworzy nowej zmiennej dla zmiennej `Index` kontroli ani nie wywnioskuje jej typu.
+
+```vb
+Class Customer
+
+    ' The class has a field named Index.
+    Private Index As Integer
+
+    Sub Main()
+
+    ' The following line will raise this warning.
+        For Index = 1 To 10
+            ' ...
+        Next
+
+    End Sub
+End Class
+```
+
+Domyślnie ta wiadomość jest ostrzeżenie. Aby uzyskać informacje o sposobach ukrycia ostrzeżeń lub sposobie traktowania ostrzeżeń jako błędów, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).
+
+**Identyfikator błędu:** BC42110
+
+### <a name="to-address-this-warning"></a>Aby rozwiązać ten komunikat ostrzegawczy
+
+- Ustaw zmienną sterującą pętli jako lokalną, zmieniając jej nazwę na identyfikator, który nie jest również nazwą pola klasy.
+
+  ```vb
+  For I = 1 To 10
+  ```
+
+- Wyjaśnij, że Zmienna sterująca pętli jest powiązana z polem klasy przez `Me.` prefiks do nazwy zmiennej.
+
+  ```vb
+  For Me.Index = 1 To 10
+  ```
+
+- Zamiast polegać na wnioskach o typie lokalnym, należy użyć `As` klauzuli, aby określić typ dla zmiennej kontroli pętli.
+
+  ```vb
+  For Index As Integer = 1 To 10
+  ```
+
+## <a name="example"></a>Przykład
+ Poniższy kod ilustruje poprzedni przykład przy pierwszej korekcie.
+
+```vb
+Class Customer
+
+    ' The class has a field named Index.
+    Private Index As Integer
+
+    Sub Main()
+
+        For I = 1 To 10
+            ' ...
+        Next
+
+    End Sub
+End Class
+```
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Option Infer, instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md)

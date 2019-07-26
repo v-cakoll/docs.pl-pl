@@ -9,83 +9,90 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 0b4e7c9e253f94e1e28700c8669d28799ab69d91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbc9e523e9b74cf380c65135e7416f1feba01a2e
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053720"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512895"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Wymiary tablic w Visual Basic
-A *wymiaru* jest kierunek, w którym mogą się różnić specyfikację elementów tablicy. Tablica, która przechowuje Sprzedaż całkowita za każdy dzień miesiąca ma jeden wymiar (dzień miesiąca). Tablica, która przechowuje Sprzedaż całkowita przez dział za każdy dzień miesiąca, ma dwa wymiary (numer działu i dzień miesiąca). Nosi nazwę liczbę wymiarów tablicy zawierającej jej *ranga*.  
-  
+
+*Wymiar* to kierunek, w którym można zmienić specyfikację elementów tablicy. Tablica, która przechowuje sumę sprzedaży dla każdego dnia miesiąca, ma jeden wymiar (dzień miesiąca). Tablica zawierająca sumę sprzedaży według działu dla każdego dnia miesiąca ma dwa wymiary (numer działu i dzień miesiąca). Liczba wymiarów, które tablica ma określać jej *rangę*.
+
 > [!NOTE]
->  Możesz użyć <xref:System.Array.Rank%2A> właściwości w celu określenia, ile wymiary tablicy zawierającej.  
-  
-## <a name="working-with-dimensions"></a>Praca z wymiarami  
- Określenie elementu tablicy, podając *indeksu* lub *indeks dolny* dla wszystkich jej wymiarów. Elementy są ciągłe wzdłuż każdego wymiaru z indeksu od 0 do najwyższego indeksu dla tego wymiaru.  
-  
- Na poniższych ilustracjach przedstawiono koncepcyjny struktury tablic o różnym stopniu. Każdy element na ilustracjach przedstawiono wartości indeksu, mających do niej dostęp. Na przykład, możesz uzyskać dostęp pierwszego elementu w drugim wierszu dwuwymiarowej tablicy, określając indeksów `(1, 0)`.  
-  
- ![Diagram przedstawiający Jednowymiarowa tablica.](./media/array-dimensions/one-dimensional-array.gif)  
-  
- ![Diagram przedstawia dwuwymiarową tablicę.](./media/array-dimensions/two-dimensional-array.gif)  
-  
- ![Diagram przedstawiający tablicę trójwymiarową.](./media/array-dimensions/three-dimensional-array.gif)  
-  
-### <a name="one-dimension"></a>Jeden wymiar  
- Wiele macierzy mają tylko jeden wymiar, takie jak liczba osób w każdym wieku. Jedynym wymaganiem, aby określić element jest okres ważności, dla którego ten element zawiera liczbę. W związku z tym takiej tablicy używa tylko jednego indeksu. Poniższy przykład deklaruje zmienną do przechowywania *jednowymiarową* wieku liczba w wieku od 0 do 120.  
-  
-```  
-Dim ageCounts(120) As UInteger  
-```  
-  
-### <a name="two-dimensions"></a>Dwa wymiary  
- Niektórych tablic ma dwa wymiary, takie jak liczba urzędy każdego piętra każdego tworzenia na uczelniach. Specyfikacja elementu wymaga numeru budynku i piętra, a każdy element przechowuje liczbę dla tej kombinacji budynku i piętra. W związku z tym takiej tablicy wykorzystuje dwa indeksy. Poniższy przykład deklaruje zmienną do przechowywania *dwuwymiarową tablicę* liczby office budynkach 0 za pomocą 40 i podłogi od 0 do 5.  
-  
-```  
-Dim officeCounts(40, 5) As Byte  
-```  
-  
- Tablicy dwuwymiarowej jest również nazywany *prostokątny tablicy*.  
-  
-### <a name="three-dimensions"></a>Trzy wymiary  
- Kilka tablic ma trzy wymiary, takie jak wartości w przestrzeni trójwymiarowej. Takie tablicy używa trzech indeksów, w tym przypadku reprezentujących x, y i z współrzędne przestrzeni fizycznej. Poniższy przykład deklaruje zmienną do przechowywania *tablicy trójwymiarowej* air temperatur w różnych punktach trójwymiarowej woluminu.  
-  
-```  
-Dim airTemperatures(99, 99, 24) As Single  
-```  
-  
-### <a name="more-than-three-dimensions"></a>Więcej niż trzech wymiarów  
- Mimo że tablica może mieć maksymalnie 32 wymiarów, to rzadkość, aby mieć więcej niż trzy.  
-  
+> Możesz użyć <xref:System.Array.Rank%2A> właściwości, aby określić, ile wymiarów ma tablica.
+
+## <a name="working-with-dimensions"></a>Praca z wymiarami
+
+Należy określić element tablicy przez dostarczenie *indeksu lub indeks* dolny dla  każdego z jego wymiarów. Elementy są ciągłe wzdłuż każdego wymiaru od indeksu 0 do najwyższego indeksu dla tego wymiaru.
+
+Na poniższych ilustracjach przedstawiono strukturę koncepcyjną tablic o różnych rangach. Każdy element na ilustracjach przedstawia wartości indeksu, które uzyskują do niego dostęp. Na przykład można uzyskać dostęp do pierwszego elementu drugiego wiersza tablicy dwuwymiarowej przez określenie indeksów `(1, 0)`.
+
+![Diagram przedstawiający tablicę jednowymiarową.](./media/array-dimensions/one-dimensional-array.gif)
+
+![Diagram przedstawiający dwuwymiarową tablicę.](./media/array-dimensions/two-dimensional-array.gif)
+
+![Diagram przedstawiający trójwymiarową tablicę.](./media/array-dimensions/three-dimensional-array.gif)
+
+### <a name="one-dimension"></a>Jeden wymiar
+
+Wiele tablic ma tylko jeden wymiar, taki jak liczba osób każdego wieku. Jedynym wymaganiem do określenia elementu jest wiek, dla którego ten element przechowuje liczbę. W związku z tym, taka tablica używa tylko jednego indeksu. Poniższy przykład deklaruje zmienną do przechowywania jednowymiarowej *tablicy* liczby lat od 0 do 120.
+
+```vb
+Dim ageCounts(120) As UInteger
+```
+
+### <a name="two-dimensions"></a>Dwa wymiary
+
+Niektóre tablice mają dwa wymiary, takie jak liczba biur w poszczególnych piętrach każdego budynku w kampusie. Specyfikacja elementu wymaga zarówno numeru budynku, jak i podłogi, a każdy element przechowuje liczbę dla tej kombinacji budynku i piętra. W związku z tym, taka tablica używa dwóch indeksów. Poniższy przykład deklaruje zmienną do przechowywania dwuwymiarowej *tablicy* liczników pakietu Office dla budynków od 0 do 40 i podłóg 0 – 5.
+
+```vb
+Dim officeCounts(40, 5) As Byte
+```
+
+Dwuwymiarowa tablica jest również nazywana *tablicą prostokątną*.
+
+### <a name="three-dimensions"></a>Trzy wymiary
+
+Kilka tablic ma trzy wymiary, takie jak wartości w trójwymiarowej przestrzeni. Taka tablica używa trzech indeksów, co w tym przypadku reprezentuje współrzędne x, y i z miejsca fizycznego. Poniższy przykład deklaruje zmienną do przechowywania trójwymiarowej *tablicy* temperatur w różnych punktach na trójwymiarowym woluminie.
+
+```vb
+Dim airTemperatures(99, 99, 24) As Single
+```
+
+### <a name="more-than-three-dimensions"></a>Więcej niż trzy wymiary
+
+Chociaż tablica może mieć maksymalnie 32 wymiarów, bardzo rzadko ma więcej niż trzy.
+
 > [!NOTE]
->  Po dodaniu wymiary tablicy, całkowita ilość miejsca, które są wymagane przez tablicę zwiększa znacznie, więc tablic wielowymiarowych użycie z rozwagą.  
-  
-## <a name="using-different-dimensions"></a>Przy użyciu różnych wymiarach  
- Załóżmy, że chcesz śledzić kwot sprzedaży dla każdego dnia miesiąca obecne. Jednowymiarowa tablica elementów 31 może deklarować jeden na każdy dzień miesiąca, w poniższym przykładzie pokazano.  
-  
-```  
-Dim salesAmounts(30) As Double  
-```  
-  
- Teraz załóżmy, że chcesz śledzić te same informacje, nie tylko dla każdego dnia, miesiąca, ale także do każdego miesiąca w roku. Może deklarować dwuwymiarową tablicę z 12 wierszy (w przypadku miesięcy) i 31 kolumn (dni), co ilustruje poniższy przykład.  
-  
-```  
-Dim salesAmounts(11, 30) As Double  
-```  
-  
- Teraz załóżmy, że możesz zdecydować, że macierz przechowywać informacje o więcej niż jeden rok. Jeśli chcesz śledzić kwot sprzedaży na 5 lat, można zadeklarować tablicy trójwymiarowej z warstwy 5, 12 wierszy i kolumn 31, jak w poniższym przykładzie pokazano.  
-  
-```  
-Dim salesAmounts(4, 11, 30) As Double  
-```  
-  
- Należy zauważyć, że ponieważ każdy indeks różni się od 0 do jego maksymalnej każdego wymiaru `salesAmounts` jest zadeklarowany jako jeden mniejsza niż wymagana długość danego wymiaru. Należy zauważyć, że rozmiar tablicy zwiększa się wraz z każdego nowego wymiaru. Trzy rozmiary w powyższych przykładach są odpowiednio 31, 372 i 1,860 elementów.  
-  
+> Po dodaniu wymiarów do tablicy łączny magazyn wymagany przez tablicę jest znacząco zwiększany, więc używaj tablic wielowymiarowych z opieką.
+
+## <a name="using-different-dimensions"></a>Korzystanie z różnych wymiarów
+
+Załóżmy, że chcesz śledzić kwoty sprzedaży dla każdego dnia bieżącego miesiąca. Można zadeklarować tablicę jednowymiarową z 31 elementami, jedną dla każdego dnia miesiąca, jak pokazano w poniższym przykładzie.
+
+```vb
+Dim salesAmounts(30) As Double
+```
+
+Teraz Załóżmy, że chcesz śledzić te same informacje nie tylko dla każdego dnia miesiąca, ale również dla każdego miesiąca roku. Można zadeklarować dwuwymiarową tablicę z 12 wierszami (przez miesiące) i 31 kolumn (w dniach), jak pokazano w poniższym przykładzie.
+
+```vb
+Dim salesAmounts(11, 30) As Double
+```
+
+Teraz Załóżmy, że chcesz, aby tablica zawierała informacje przez więcej niż jeden rok. Jeśli chcesz śledzić kwoty sprzedaży przez 5 lat, możesz zadeklarować trójwymiarową tablicę z 5 warstwami, 12 wierszami i 31 kolumnami, jak pokazano w poniższym przykładzie.
+
+```vb
+Dim salesAmounts(4, 11, 30) As Double
+```
+
+Należy pamiętać, że ponieważ każdy indeks różni się od 0 do maksimum, każdy wymiar `salesAmounts` jest zadeklarowany jako mniejszy niż wymagana długość dla tego wymiaru. Zwróć uwagę na to, że rozmiar tablicy rośnie wraz z każdym nowym wymiarem. Trzy powyższe wielkości w powyższych przykładach mają odpowiednio 31, 372 i 1 860 elementów.
+
 > [!NOTE]
->  Można utworzyć tablicę, bez używania `Dim` instrukcji lub `New` klauzuli. Na przykład, można wywołać <xref:System.Array.CreateInstance%2A> metody lub innego składnika można przekazać swój kod tablica utworzona w ten sposób. Takie tablica ma dolną granicę niż 0. Można zawsze sprawdzić, dolna granica wymiaru przy użyciu <xref:System.Array.GetLowerBound%2A> metody lub `LBound` funkcji.  
-  
+> Można utworzyć tablicę bez użycia `Dim` instrukcji `New` lub klauzuli. Na przykład można wywołać <xref:System.Array.CreateInstance%2A> metodę lub inny składnik może przekazać kod w ten sposób tablicę utworzoną w ten sposób. Taka tablica może mieć dolną granicę inną niż 0. Zawsze możesz testować dolną granicę wymiaru przy użyciu <xref:System.Array.GetLowerBound%2A> metody `LBound` lub funkcji.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

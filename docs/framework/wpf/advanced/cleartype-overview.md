@@ -5,65 +5,65 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 0127ee4112c4b42a7a55b9233217ea1e02604042
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7bf04e7c22bf13ed681be7afb582176edc2f3072
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051350"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484700"
 ---
 # <a name="cleartype-overview"></a>ClearType — Przegląd
-Ten temat zawiera omówienie [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] technologii znaleziony w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+Ten temat zawiera omówienie [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] technologii znajdującej [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]się w temacie.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Omówienie technologii  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] jest to technologia oprogramowanie opracowane przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] który poprawia czytelność tekstu na istniejące LCD (należy zmienić.), takie jak ekranów komputerów przenośnych, ekrany Pocket PC i monitory płaskie.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] działa, uzyskując dostęp do poszczególnych kolor pionowych elementy usługi stripe w każdy piksel ekran LCD. Przed [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], najmniejszy poziom szczegółowości, który można wyświetlić komputera został piksela, ale z [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] uruchamiania monitora LCD, można jest teraz wyświetlany funkcji tekst tak małej, jako ułamek pikseli szerokości. Dodatkowe rozwiązanie zwiększa ostrość niewielki Szczegóły sposobu wyświetlania tekstu, znacznie ułatwiając przeczytaniu długim czasie trwania.  
+ Technologia ClearType jest technologią oprogramowania opracowaną przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] program, która zwiększa czytelność tekstu w istniejących LCDS (w przypadku wyświetlaczy Liquid Crystal), takich jak ekrany laptopów, urządzenia Pocket PC i monitory płaskoekranowe.  Technologia ClearType działa przez uzyskanie dostępu do poszczególnych elementów pasków kolorów w pionie w każdym piksel ekranu LCD. Przed użyciem technologii ClearType najmniejszy poziom szczegółowości wyświetlany przez komputer był pojedynczy piksel, ale dzięki technologii ClearType działającej na monitorze LCD można teraz wyświetlać funkcje tekstu jako małe jako ułamek o szerokości pikseli. Dodatkowe rozwiązanie zwiększa ostrość niewielkich szczegółów w wyświetlaniu tekstu, ułatwiając odczytywanie ich w dłuższym czasie.  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Dostępne w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] to najnowsza generacja [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] mającym kilka ulepszeń wprowadzonych w wersji [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)].  
+ Technologia ClearType dostępna w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] programie to najnowsza generacja technologii ClearType, która ma kilka ulepszeń w porównaniu z [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]wersją zainstalowaną w programie.  
   
 <a name="sub-pixel_positioning"></a>   
-## <a name="sub-pixel-positioning"></a>Pozycjonowanie podrzędnych pikseli  
- Wprowadzono znaczące ulepszenia przez poprzednią wersję [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] polega na użyciu pozycjonowanie podrzędnych pikseli. W odróżnieniu od [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] implementacji znaleziony w [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)], [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] umożliwia symbole, które można uruchomić w ramach piksela i nie tylko granic początku piksela. Ze względu na to dodatkowe rozwiązanie pozycjonowania symbole odstępy i proporcje glify jest bardziej precyzyjna i spójne.  
+## <a name="sub-pixel-positioning"></a>Pozycjonowanie w pikselach podrzędnych  
+ Znaczną poprawę w porównaniu z poprzednią wersją technologii ClearType jest użycie pozycjonowania w pikselach podrzędnych. W przeciwieństwie do implementacji technologii ClearType [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]w programie technologia ClearType znaleziona w programie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] umożliwia uruchamianie symboli w pikselach, a nie tylko na początku piksela. Ze względu na to, że dodatkowe rozwiązanie w symbolach pozycjonowania, odstępy i proporcje symboli są bardziej precyzyjne i spójne.  
   
- Dwa poniższe przykłady pokazują, jak zacząć symbole na krawędzi podrzędnych pikseli stosowania pozycjonowanie podrzędnych pikseli. Przykład po lewej stronie jest renderowany przy użyciu wcześniejszej wersji [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] modułu renderowania, która nie zastosowana pozycjonowanie podrzędnych pikseli. Przykład po prawej stronie jest renderowany przy użyciu nowej wersji [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] modułu renderowania, za pomocą rozmieszczania podrzędnych pikseli. Należy zauważyć, jak każdy **e** i **l** obrazie po prawej stronie jest renderowany nieco inaczej, ponieważ każdy uruchamia się na różnych pikseli podrzędnych. Podczas wyświetlania tekstu normalnego rozmiaru na ekranie, różnica ta jest niezauważalne ze względu na wysoki kontrast obrazu symbolu. Jest to możliwe tylko ze względu na kolor zaawansowane filtrowanie zawartym w [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].  
+ W poniższych dwóch przykładach pokazano, jak symbole mogą rozpoczynać się w dowolnej granicy podrzędnej pikseli, gdy jest używane pozycjonowanie w pikselach podrzędnych. Przykład po lewej stronie jest renderowany przy użyciu wcześniejszej wersji modułu renderowania ClearType, która nie wykorzystuje pozycjonowania w pikselach podrzędnych. Przykład po prawej stronie jest renderowany przy użyciu nowej wersji renderowania ClearType przy użyciu pozycjonowania w pikselach podrzędnych. Zwróć uwagę, jak każda **e** i **l** w obrazie po prawej stronie jest renderowany nieco inaczej, ponieważ każdy z nich zaczyna się na innym pikselu. W przypadku wyświetlania tekstu na normalnym rozmiarze na ekranie różnica nie jest zauważalna ze względu na duży kontrast obrazu glifu. Jest to możliwe tylko ze względu na zaawansowane filtrowanie kolorów, które jest włączone w technologii ClearType.  
   
- ![Tekst wyświetlany w dwóch wersjach ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
-Tekst wyświetlany w starszych i nowszych wersjach ClearType  
+ ![Tekst wyświetlany z dwiema wersjami technologii ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
+Tekst wyświetlany w starszych i nowszych wersjach technologii ClearType  
   
- Dwa poniższe przykłady porównać dane wyjściowe z wcześniej [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] renderowania przy użyciu nowej wersji [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] modułu renderowania. Pozycjonowanie subpixel wyświetlane po prawej stronie, znacznie zwiększa odstępy typu na ekranie, zwłaszcza w małych rozmiarów, gdzie różnica między podrzędnych pikseli i całego pikseli reprezentuje znaczna część szerokość symbolu. Należy pamiętać, że odstępów między literami więcej nawet w przypadku drugi obraz. Zbiorcza zaletą podrzędnych pikseli pozycjonowanie na ogólny wygląd ekranu tekstu znacznie zwiększa się i reprezentuje znaczne zmiany w [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] technologii.  
+ Poniższe dwa przykłady porównują dane wyjściowe z wcześniejszego modułu renderowania ClearType przy użyciu nowej wersji modułu renderowania ClearType. Pozycjonowanie w pikselach, pokazane po prawej stronie, znacznie poprawia odstępy typu na ekranie, szczególnie w małych rozmiarach, w których różnica między pikselami podrzędnymi a całością pikseli reprezentuje znaczną część szerokości glifów. Należy zauważyć, że odstępy między literami są bardziej nawet w drugim obrazie. Skumulowana korzyść w stosunku do rozmieszczenia w pikselach na ogólny wygląd ekranu tekstu jest znacznie większa i reprezentuje znaczną ewolucję technologii ClearType.  
   
- ![Tekst wyświetlany za pomocą wcześniejszej wersji ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
-Tekst w starszych i nowszych wersjach ClearType  
+ ![Tekst wyświetlany w starszej wersji technologii ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
+Tekst z wcześniejszymi i nowszymi wersjami technologii ClearType  
   
 <a name="y-direction_antialiasing"></a>   
-## <a name="y-direction-antialiasing"></a>Antyaliasing kierunku Y  
- Ulepszanie innego [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jest wygładzanie kierunku y. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] bez kierunku y wygładzanie zapewnia lepsze rozwiązania na osi x, ale nie osi y. Wierzchołki i dołu krzywych płytkie nierówne krawędzie zmniejszyć jego czytelność.  
+## <a name="y-direction-antialiasing"></a>Wygładzanie kierunku Y  
+ Innym ulepszeniem technologii ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w programie jest Antyaliasowanie kierunku y. Technologia ClearType w [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] programie bez kierunku y ma lepszą rozdzielczość na osi x, ale nie oś y. Na wierzchołkach i u dołu płytki są postrzępione krawędzie, które są niezależne od ich czytelności.  
   
- Poniższy przykład pokazuje wpływ o bez antialiasingu kierunku y. W tym przypadku nieregularnej krawędzie u góry i u dołu litery są widoczne.  
+ W poniższym przykładzie przedstawiono efekt braku wygładzania kierunku osi y. W takim przypadku widoczne są nieregularne krawędzie na górze i u dołu litery.  
   
- ![Tekst z nierówne krawędzie na płytka krzywych](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
-Tekst z nierówne krawędzie na płytka krzywych  
+ ![Tekst z nieregularnymi krawędziami na skróconych krzywych](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
+Tekst z nieregularnymi krawędziami na skróconych krzywych  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia antialiasingu na poziomie kierunku y do wygładzania nagłych żadnych nieregularne krawędzi. Jest to szczególnie ważne, zwiększających czytelność języki wschodnioazjatyckie, gdzie ideogramy ma prawie taką samą ilość poziome i pionowe krzywych skrócona.  
+ Technologia ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w systemie zapewnia wygładzanie na poziomie kierunku y, aby wygładzić wszystkie nieregularne krawędzie. Jest to szczególnie ważne, aby poprawić czytelność języków wschodnioazjatyckich, gdzie ideogramy mają prawie równą liczbę pikseli w poziomie i w pionie.  
   
- Poniższy przykład pokazuje wpływ antialiasingu kierunku y. W tym przypadku to krzywa Pokaż górnej i dolnej części literę.  
+ W poniższym przykładzie pokazano efekt wygładzania kierunku osi y. W takim przypadku Góra i dół litery pokazują gładką krzywą.  
   
- ![Tekst z ClearType y&#45;kierunek ochrony przed złośliwym&#45;aliasów](./media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
-Tekst z antialiasingu kierunku y ClearType  
+ ![Tekst z wygładzaniem&#45;&#45;kierunku x ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+Tekst z wygładzaniem kierunku y w technologii ClearType  
   
 <a name="hardware_acceleration"></a>   
-## <a name="hardware-acceleration"></a>Przyspieszanie sprzętowe  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] korzystać z zalet przyspieszanie sprzętowe, aby uzyskać lepszą wydajność i zmniejszyć wymagania pamięci systemu i obciążenia procesora CPU. Przy użyciu programów do cieniowania pikseli i pamięci wideo karty graficznej [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] zapewnia szybsze renderowanie tekstu, szczególnie w przypadku, gdy jest używana animacji.  
+## <a name="hardware-acceleration"></a>Przyspieszenie sprzętowe  
+ Technologia ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w systemie może wykorzystać przyspieszenie sprzętowe, aby zapewnić lepszą wydajność i zmniejszyć wymagania dotyczące obciążenia procesora i pamięci systemowej. Za pomocą programów do cieniowania pikseli i wideo karty graficznej technologia ClearType zapewnia szybsze renderowanie tekstu, szczególnie w przypadku używania animacji.  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nie powoduje modyfikacji całego systemu [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ustawienia. Wyłączanie [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ustawia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] antialiasingu tryb skali szarości. Ponadto [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nie modyfikuje ustawienia [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
+ Technologia ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w programie nie modyfikuje ustawień technologii ClearType dla całego systemu. Wyłączenie technologii ClearType [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] programie ustawia funkcję antyaliasowania na tryb Skala szarości. Ponadto technologia ClearType w programie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nie modyfikuje ustawień [tunera ClearType PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
   
- Jedną z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] decyzji w zakresie projektowania architektury jest korzystać z funkcji rozpoznawania niezależnie od układu lepszą obsługę wyższej rozdzielczości DPI monitory, które stają się coraz bardziej powszechne. Ma to konsekwencją [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nie obsługuje aliasem renderowanie tekstu lub mapy bitowej w przypadku niektórych czcionek wschodnioazjatyckich ponieważ są one zarówno zależna od rozdzielczości.  
+ Jedną z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] decyzji projektowych dotyczących architektury jest to, że rozwiązanie niezależne pozwala lepiej obsługiwać monitory dpi o wyższej rozdzielczości, które stają się bardziej rozpowszechnione. Jest to wynikiem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nieobsługiwanego renderowania tekstu aliasów lub map bitowych w niektórych czcionkach wschodnioazjatyckich, ponieważ są one zależne od rozdzielczości.  
   
 <a name="further_information"></a>   
-## <a name="further-information"></a>Dalsze informacje  
- [Informacje o ClearType](https://www.microsoft.com/typography/ClearTypeInfo.mspx)  
+## <a name="further-information"></a>Dodatkowe informacje  
+ [Informacje o technologii ClearType](https://www.microsoft.com/typography/ClearTypeInfo.mspx)  
   
- [PowerToy ClearType Tuner](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
+ [PowerToy tunera ClearType](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>Zobacz także
 

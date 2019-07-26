@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 7587c8cd24197252506967208869bd454b4f27f2
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6e2b5eaff3ee80434d5cdf39391273685da9faf0
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400672"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68434076"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Wzorce formantów automatyzacji interfejsu użytkownika — omówienie
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "68400672"
   
 - Właściwości i zdarzenia zawierają informacje o funkcji wzorca kontroli, a także informacje o stanie formantu.  
   
- Wzorce kontrolne odnoszą się do [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] obiektów, jak interfejsy są powiązane z [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] obiektami. W [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)]programie można wysyłać zapytania do obiektu, aby zażądać obsługiwanych interfejsów, a następnie używać tych interfejsów do uzyskiwania dostępu do funkcji. W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]systemie klienci automatyzacji interfejsu użytkownika mogą zadawać formant, który obsługuje, a następnie współdziałać z kontrolką przez właściwości, metody, zdarzenia i struktury uwidocznione przez obsługiwane wzorce kontroli. Na przykład dla wielowierszowego pola edycji są implementowane <xref:System.Windows.Automation.Provider.IScrollProvider>dostawcy automatyzacji interfejsu użytkownika. Gdy klient wie, że <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.ScrollPattern> obsługuje wzorzec kontrolki, może użyć właściwości, metod i zdarzeń uwidocznionych przez ten wzorzec kontrolki, aby manipulować formantem lub uzyskać dostęp do informacji o formancie.  
+ Wzorce kontrolne odnoszą się do [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] interfejsów, jak interfejsy odnoszą się do obiektów Component Object Model (com). W modelu COM można wysyłać zapytania do obiektu, aby zażądać obsługiwanych interfejsów, a następnie używać tych interfejsów do uzyskiwania dostępu do funkcji. W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]systemie klienci automatyzacji interfejsu użytkownika mogą zadawać formant, który obsługuje, a następnie współdziałać z kontrolką przez właściwości, metody, zdarzenia i struktury uwidocznione przez obsługiwane wzorce kontroli. Na przykład dla wielowierszowego pola edycji są implementowane <xref:System.Windows.Automation.Provider.IScrollProvider>dostawcy automatyzacji interfejsu użytkownika. Gdy klient wie, że <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.ScrollPattern> obsługuje wzorzec kontrolki, może użyć właściwości, metod i zdarzeń uwidocznionych przez ten wzorzec kontrolki, aby manipulować formantem lub uzyskać dostęp do informacji o formancie.  
   
 <a name="uiautomation_control_pattern_client_provider"></a>   
 ## <a name="ui-automation-providers-and-clients"></a>Dostawcy automatyzacji interfejsu użytkownika i klienci  

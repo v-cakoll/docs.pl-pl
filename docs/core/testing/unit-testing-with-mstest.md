@@ -1,24 +1,24 @@
 ---
-title: Jednostki testowania C# przy użyciu MSTest i .NET Core
-description: Pojęcia dotyczące jednostek testów w języku C# i .NET Core za pomocą interaktywnych doświadczenia przykładowe rozwiązanie krok po kroku za pomocą polecenia dotnet test i struktury MSTest.
+title: Testowanie C# jednostkowe za pomocą MSTest i .NET Core
+description: Poznaj koncepcje testów jednostkowych w C# oprogramowaniu i .NET Core za pośrednictwem interaktywnego środowiska tworzenia przykładowego rozwiązania krok po kroku przy użyciu testu dotnet i MSTest.
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: c396be926d743b672cb4611dc5569ecb48b09fec
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 9d34b946dd13af4636b58a70c19721c5e381b69c
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397488"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484597"
 ---
-# <a name="unit-testing-c-with-mstest-and-net-core"></a>Jednostki testowania C# przy użyciu MSTest i .NET Core
+# <a name="unit-testing-c-with-mstest-and-net-core"></a>Testowanie C# jednostkowe za pomocą MSTest i .NET Core
 
-Ten samouczek przeprowadzi Cię przez środowisko interaktywne tworzenie przykładowe rozwiązanie krok po kroku, aby dowiedzieć się więcej pojęcia testów jednostkowych. Jeśli chcesz wykonać kroki samouczka przy użyciu wstępnie utworzone rozwiązania [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/) przed przystąpieniem do wykonywania. Aby uzyskać instrukcje pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Ten samouczek przeprowadzi Cię przez interaktywny proces tworzenia przykładowego rozwiązania krok po kroku, aby poznać koncepcje dotyczące testowania jednostkowego. Jeśli wolisz postępować zgodnie z samouczkiem przy użyciu wstępnie skompilowanego rozwiązania, przed rozpoczęciem [Wyświetl lub Pobierz przykładowy kod](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/) . Aby uzyskać instrukcje dotyczące pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-### <a name="creating-the-source-project"></a>Tworzenie projektu źródłowego
+### <a name="create-the-source-project"></a>Utwórz projekt źródłowy
 
-Otwieranie okna powłoki. Utwórz katalog o nazwie *jednostki — testowanie-przy użyciu mstest* do przechowywania rozwiązania. Wewnątrz tego nowy katalog uruchamiania [ `dotnet new sln` ](../tools/dotnet-new.md) do utworzenia nowego pliku rozwiązania projekt testu i biblioteki klas. Następnie należy utworzyć *PrimeService* katalogu. Następujące konspektu przedstawia strukturę katalogów i plików tej pory:
+Otwórz okno powłoki. Utwórz katalog o nazwie *Unit-Test-using-MSTest* , aby pomieścić rozwiązanie. W tym nowym katalogu Uruchom [`dotnet new sln`](../tools/dotnet-new.md) polecenie, aby utworzyć nowy plik rozwiązania dla biblioteki klas i projektu testowego. Następnie Utwórz katalog *PrimeService* . W poniższym konspekcie przedstawiono strukturę katalogów i plików:
 
 ```
 /unit-testing-using-mstest
@@ -26,7 +26,7 @@ Otwieranie okna powłoki. Utwórz katalog o nazwie *jednostki — testowanie-prz
     /PrimeService
 ```
 
-Wprowadź *PrimeService* bieżącego katalogu i uruchom [ `dotnet new classlib` ](../tools/dotnet-new.md) do utworzenia projektu źródłowego. Zmień nazwę *Class1.cs* do *PrimeService.cs*. Tworzenie wdrożenia niepowodzenie `PrimeService` klasy:
+Ustaw *PrimeService* w bieżącym katalogu i uruchom [`dotnet new classlib`](../tools/dotnet-new.md) , aby utworzyć projekt źródłowy. Zmień nazwę *Class1.cs* na *PrimeService.cs*. Tworzysz nieprawidłową implementację `PrimeService` klasy:
 
 ```csharp
 using System;
@@ -43,11 +43,11 @@ namespace Prime.Services
 }
 ```
 
-Zmień katalog kopii do *jednostki — testowanie-przy użyciu mstest* katalogu. Uruchom [ `dotnet sln add PrimeService/PrimeService.csproj` ](../tools/dotnet-sln.md) można dodać projektu biblioteki klas w rozwiązaniu. 
+Zmień katalog z powrotem do katalogu *testowego MSTest* . Uruchom [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) , aby dodać projekt biblioteki klas do rozwiązania. 
 
-### <a name="creating-the-test-project"></a>Tworzenie projektu testu
+### <a name="create-the-test-project"></a>Utwórz projekt testu
 
-Następnie należy utworzyć *PrimeService.Tests* katalogu. Następujące konspektu przedstawia strukturę katalogów:
+Następnie Utwórz katalog *PrimeService. Tests* . Poniższy konspekt przedstawia strukturę katalogów:
 
 ```
 /unit-testing-using-mstest
@@ -58,7 +58,7 @@ Następnie należy utworzyć *PrimeService.Tests* katalogu. Następujące konspe
     /PrimeService.Tests
 ```
 
-Wprowadź *PrimeService.Tests* katalogu bieżącego katalogu i Utwórz nowy projekt za pomocą [ `dotnet new mstest` ](../tools/dotnet-new.md). Nowe polecenie dotnet tworzy projekt testowy, który używa MSTest jako biblioteka testów. Wygenerowany szablon konfiguruje narzędzie test runner w *PrimeServiceTests.csproj* pliku:
+Utwórz katalog *PrimeService. Tests* jako bieżący katalog i Utwórz nowy projekt za pomocą [`dotnet new mstest`](../tools/dotnet-new.md)polecenia. Polecenie dotnet New umożliwia utworzenie projektu testowego, który używa MSTest jako biblioteki testowej. Wygenerowany szablon służy do konfigurowania modułu uruchamiającego testy w pliku *PrimeServiceTests. csproj* :
 
 ```xml
 <ItemGroup>
@@ -68,15 +68,15 @@ Wprowadź *PrimeService.Tests* katalogu bieżącego katalogu i Utwórz nowy proj
 </ItemGroup>
 ```
 
-Projekt testowy wymaga innych pakietów, aby utworzyć i uruchomić testy jednostkowe. `dotnet new` w poprzednim kroku, które są dodawane do zestawu SDK MSTest, MSTest przetestować framework i modułu uruchamiającego MSTest. Teraz Dodaj `PrimeService` biblioteki klas jako inny zależności do projektu. Użyj [ `dotnet add reference` ](../tools/dotnet-add-reference.md) polecenia:
+Projekt testowy wymaga innych pakietów do tworzenia i uruchamiania testów jednostkowych. `dotnet new`w poprzednim kroku dodano zestaw MSTest SDK, platformę test MSTest i moduł uruchamiający MSTest. Teraz Dodaj `PrimeService` bibliotekę klas jako inną zależność do projektu. [`dotnet add reference`](../tools/dotnet-add-reference.md) Użyj polecenia:
 
 ```
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
-Widać cały plik w [repozytorium przykładów](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService.Tests.csproj) w witrynie GitHub.
+Cały plik można zobaczyć w [repozytorium Samples](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService.Tests.csproj) w witrynie GitHub.
 
-Następujące konspektu przedstawia wybrany układ ostateczne rozwiązanie:
+W poniższym konspekcie przedstawiono końcowy układ rozwiązania:
 
 ```
 /unit-testing-using-mstest
@@ -89,11 +89,11 @@ Następujące konspektu przedstawia wybrany układ ostateczne rozwiązanie:
         PrimeServiceTests.csproj
 ```
 
-Wykonaj [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj` ](../tools/dotnet-sln.md) w *jednostki — testowanie-przy użyciu mstest* katalogu. 
+Wykonaj [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) w katalogu *testowym jednostkowym-using-MSTest* . 
 
-## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu
+## <a name="create-the-first-test"></a>Tworzenie pierwszego testu
 
-Jeden zapisu kończy się niepowodzeniem testu, ułatwiają — dostęp próbny, a następnie powtórz ten proces. Usuń *UnitTest1.cs* z *PrimeService.Tests* katalogu i Utwórz nowy C# plik o nazwie *PrimeService_IsPrimeShould.cs* o następującej zawartości:
+Napiszesz jeden test zakończony niepowodzeniem, upewnij się, a następnie powtórz ten proces. Usuń *UnitTest1.cs* z katalogu *PrimeService. Tests* i Utwórz nowy C# plik o nazwie *PrimeService_IsPrimeShould. cs* z następującą zawartością:
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -122,11 +122,11 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-`[TestClass]` Atrybut wskazuje klasę, która zawiera testy jednostkowe. `[TestMethod]` Atrybut wskazuje, metoda jest metodą testową. 
+[Atrybut TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) oznacza klasę, która zawiera testy jednostkowe. [Atrybut TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) wskazuje, że metoda jest metodą testową. 
 
-Zapisz ten plik i wykonaj [ `dotnet test` ](../tools/dotnet-test.md) do kompilacji, testów i biblioteki klas, a następnie uruchom testy. Moduł uruchamiający MSTest zawiera punkt wejścia programu, aby uruchomić testy. `dotnet test` Uruchamia narzędzie test runner, za pomocą projektu testu jednostkowego, który został utworzony.
+Zapisz ten plik i wykonaj [`dotnet test`](../tools/dotnet-test.md) , aby skompilować testy i bibliotekę klas, a następnie uruchom testy. Program MSTest Test Runner zawiera punkt wejścia programu do uruchamiania testów. `dotnet test`uruchamia program Test Runner przy użyciu utworzonego projektu testu jednostkowego.
 
-Test nie powiedzie się. Nie utworzono jeszcze wdrożenia. Wprowadź ten test, przekazać przez napisanie kodu najprostsza `PrimeService` klasę, która działa:
+Test zakończy się niepowodzeniem. Nie utworzono jeszcze implementacji. Wykonaj ten test, pisząc najprostszy kod w `PrimeService` klasie, która działa:
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -139,22 +139,28 @@ public bool IsPrime(int candidate)
 }
 ```
 
-W *jednostki — testowanie-przy użyciu mstest* katalogu, uruchom `dotnet test` ponownie. `dotnet test` Polecenie uruchamia kompilację dla `PrimeService` projektu i następnie `PrimeService.Tests` projektu. Po utworzeniu obu projektów, działa ten jeden test. Przekazuje on.
+W katalogu *testy jednostkowe-using-MSTest* Uruchom `dotnet test` ponownie. Polecenie uruchamia kompilację `PrimeService` dla `PrimeService.Tests` projektu, a następnie dla projektu. `dotnet test` Po skompilowaniu obu projektów jest uruchamiany ten pojedynczy test. Przekazuje.
 
-## <a name="adding-more-features"></a>Dodawanie większej liczby funkcji
+## <a name="add-more-features"></a>Dodaj więcej funkcji
 
-Teraz, gdy wprowadzono jeden przebieg testu, nadszedł czas na zapis więcej. Istnieje kilka innych przypadkach proste dla liczby pierwsze: 0, -1. Można dodać nowe testy za pomocą `[TestMethod]` atrybut, ale który szybko staje się uciążliwe. Istnieją inne atrybuty MSTest, które umożliwiają pisanie zestaw testów podobne.  A `[DataTestMethod]`atrybut reprezentuje zestaw testów, które wykonania tego samego kodu, ale mają różne argumenty wejściowe. Możesz użyć `[DataRow]` atrybutu, aby określić wartości dla tych danych wejściowych.
+Teraz, po wykonaniu jednego przebiegu testowego, należy napisać więcej. Istnieje kilka innych prostych przypadków dla numerów pierwszych: 0, -1. Można dodać nowe testy z atrybutem [TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute), ale szybko żmudnym. Istnieją inne atrybuty MSTest, które umożliwiają pisanie zestawu podobnych testów.  [Atrybut DataTestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute) reprezentuje zestaw testów, które wykonują ten sam kod, ale mają różne argumenty wejściowe. Można użyć [atrybutu DataRow](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute) , aby określić wartości dla tych danych wejściowych.
 
-Zamiast tworzyć nowe testy, należy zastosować te atrybuty do utworzenia pojedynczego testu opartego na danych. Opartych na test danych to metoda, która sprawdza kilka wartości mniejszej niż dwa, czyli najniższy numer prime:
+Zamiast tworzyć nowe testy, Zastosuj te dwa atrybuty w celu utworzenia pojedynczego testu opartego na danych. Test oparty na danych to metoda, która sprawdza kilka wartości mniejszej niż dwa, co jest najniższym numerem:
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-Uruchom `dotnet test`, i dwa pola spośród wymienionych testów kończyć się niepowodzeniem. Aby wszystkie przebieg testów, należy zmienić `if` klauzuli na początku metody:
+Uruchom `dotnet test`i dwa z tych testów zakończą się niepowodzeniem. Aby wszystkie testy zostały zakończone pomyślnie, należy zmienić `if` klauzulę na początku metody:
 
 ```csharp
 if (candidate < 2)
 ```
 
-Przejdź do iteracji, dodając więcej testów, więcej teorii i więcej kodu w bibliotece głównej. Masz [ukończoną wersję testy](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs) i [pełną implementację biblioteki](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/PrimeService/PrimeService.cs).
+Kontynuuj iteracje, dodając więcej testów, więcej teorie i więcej kodu w bibliotece głównej. Masz ukończoną [wersję testów](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs) i kompletną implementację [biblioteki](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/PrimeService/PrimeService.cs).
 
-Gdy masz utworzoną małych biblioteki i zestaw testów jednostkowych dla tej biblioteki. Tak, aby dodawania nowych pakietów została ze strukturą rozwiązania i testów jest częścią normalnego przepływu pracy. Po skoncentrowany większość czasu i wysiłku niewiele rozwiązywania cele aplikacji.
+Utworzono niewielką bibliotekę i zestaw testów jednostkowych dla tej biblioteki. Rozbudowane rozwiązanie jest przeznaczone do dodawania nowych pakietów i testów jest częścią normalnego przepływu pracy. Zbyt najwięcej czasu i wysiłku na rozwiązywanie celów aplikacji.
+
+## <a name="see-also"></a>Zobacz także
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting>
+- [Użyj struktury MSTest w testach jednostkowych](/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests)
+- [Dokumentacja platformy testowej MSTest v2](https://github.com/Microsoft/testfx-docs)

@@ -1,79 +1,79 @@
 ---
-title: Zbieranie danych telemetrycznych przez interfejs wiersza polecenia w strukturze ML.NET
-description: Dowiedz się więcej o funkcje telemetrii strukturze ML.NET interfejsu wiersza polecenia, które zbierają użycia informacje do analizy danych, które są zbierane i jak go wyłączyć. Ponadto Znajdź łącza do umowy licencyjnej .NET i informacje o zgodności z GDPR firmy Microsoft.
+title: Zbieranie danych telemetrycznych za pomocą interfejsu wiersza polecenia ML.NET
+description: Dowiedz się więcej o funkcjach telemetrycznych interfejsu wiersza polecenia ML.NET, które zbierają informacje o użyciu do analizy, zbierane dane i jak je wyłączyć. Znajdź także linki do umowy licencyjnej platformy .NET oraz informacje o zgodności z programem Microsoft Rodo.
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 94c66267dfeec4b70ba4dd1fc47518eb0e01509a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: eab1e37d7d0d47251c4f92422730b105cf2db265
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053575"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433793"
 ---
-# <a name="telemetry-collection-by-the-mlnet-cli"></a>Zbieranie danych telemetrycznych przez interfejs wiersza polecenia strukturze ML.NET
+# <a name="telemetry-collection-by-the-mlnet-cli"></a>Zbieranie danych telemetrycznych za pomocą interfejsu wiersza polecenia ML.NET
 
-[Interfejsu wiersza polecenia w strukturze ML.NET](http://aka.ms/mlnet-cli) obejmuje funkcję dane telemetryczne, które zbiera anonimowe dane użycia zagregowanych do użycia przez firmę Microsoft.
+[Interfejs wiersza polecenia ml.NET](https://aka.ms/mlnet-cli) zawiera funkcję telemetrii, która zbiera anonimowe dane użycia, które są agregowane na użytek firmy Microsoft.
 
 ## <a name="how-microsoft-uses-the-data"></a>Jak firma Microsoft używa danych
 
-Zespół pracujący nad produktem używa danych telemetrycznych interfejsu wiersza polecenia w strukturze ML.NET pomagające zrozumieć, jak poprawić narzędzia. Na przykład użycie klientów rzadko określonej usługi machine learning zadania, zespół pracujący nad produktem bada dlaczego i używa ustalenia, aby określić priorytety rozwój funkcji. Interfejs wiersza polecenia w strukturze ML.NET telemetrii pomaga również debugowanie problemów, takich jak awarie i anomalii kodu. 
+Zespół produktu używa danych telemetrycznych interfejsu wiersza polecenia ML.NET, aby pomóc zrozumieć, jak ulepszyć narzędzia. Na przykład jeśli klienci rzadko wykorzystują określone zadanie uczenia maszynowego, zespół produktu bada dlaczego i korzysta z wyników, aby określić priorytety projektowania funkcji. Dane telemetryczne interfejsu wiersza polecenia ML.NET pomagają również debugować problemy, takie jak awarie i anomalie w kodzie. 
 
-Gdy zespół pracujący nad produktem ocenia te szczegółowe informacje, wiemy również, że nie każdy chce wysyłać te dane. [Dowiedz się, jak wyłączyć telemetrię.](#opt-out-of-data-collection)
+Gdy zespół produktu docenia ten wgląd, wie również, że nie wszyscy chcą wysyłać te dane. [Dowiedz się, jak wyłączyć telemetrię.](#opt-out-of-data-collection)
 
 ## <a name="scope"></a>Scope
 
-`mlnet` Polecenie uruchamia strukturze ML.NET interfejsu wiersza polecenia, ale samo polecenie nie zbiera dane telemetryczne.
+`mlnet` Polecenie uruchamia interfejs wiersza polecenia ml.NET, ale samo polecenie nie zbiera danych telemetrycznych.
 
-Dane telemetryczne *nie włączono* po uruchomieniu `mlnet` polecenia żadne inne polecenie dołączone. Na przykład:
+Funkcja telemetrii *nie jest włączona* po uruchomieniu `mlnet` polecenia bez innego dołączonego polecenia. Na przykład:
 
 - `mlnet`
 - `mlnet --help`
 
-Dane telemetryczne *włączono* po uruchomieniu [polecenia interfejsu wiersza polecenia w strukturze ML.NET](../reference/ml-net-cli-reference.md), takich jak `mlnet auto-train`.
+Funkcja telemetrii *jest włączona* po uruchomieniu [polecenia ml.NET CLI](../reference/ml-net-cli-reference.md), takiego `mlnet auto-train`jak.
 
-## <a name="opt-out-of-data-collection"></a>Zrezygnować ze zbierania danych
+## <a name="opt-out-of-data-collection"></a>Rezygnacja z zbierania danych
 
-Funkcja telemetrii interfejsu wiersza polecenia w strukturze ML.NET jest włączona domyślnie.
+Funkcja telemetrii interfejsu wiersza polecenia ML.NET jest domyślnie włączona.
 
-Zrezygnować z funkcji danych telemetrycznych przez ustawienie `DOTNET_CLI_TELEMETRY_OPTOUT` zmiennej środowiskowej, aby `1` lub `true`. Ta zmienna środowiskowa globalnie stosuje się do narzędzia wiersza polecenia platformy .NET.
+Rezygnacja z funkcji telemetrii przez ustawienie `DOTNET_CLI_TELEMETRY_OPTOUT` zmiennej środowiskowej `1` na `true`lub. Ta zmienna środowiskowa jest stosowana globalnie do narzędzia interfejsu wiersza polecenia platformy .NET.
 
-## <a name="data-points-collected"></a>Zebranych punktów danych
+## <a name="data-points-collected"></a>Zebrane punkty danych
 
-Ta funkcja zbiera następujące dane:
+Funkcja zbiera następujące dane:
 
-- Jakie polecenia została wywołana, takich jak `auto-train`
-- Nazwy parametrów wiersza polecenia używane (czyli "Nazwa zestawu danych, nazwę kolumny etykiety, zadania uczenia maszynowego, ścieżkę wyjściową, max eksploracji w czasie, poziom szczegółowości")
-- Mieszana adres MAC: kryptograficznie (SHA256) anonimowe i unikatowy identyfikator dla maszyny
+- Jakie polecenie zostało wywołane, na przykład`auto-train`
+- Używane nazwy parametrów wiersza polecenia (tj. "DataSet-Name, Label-column-name, ml-Task, Output-Path, Max-Learning-Time, szczegółowości")
+- Skrótowy adres MAC: kryptograficzny (SHA256) anonimowy i unikatowy identyfikator dla komputera
 - Sygnatura czasowa wywołania
-- Trzy octet adres IP (nie pełnemu) używane tylko w celu określenia lokalizacji geograficznej
-- Nazwy wszystkich argumentów/parametry używane. Nie odbiorcy wartości, takich jak ciągi
-- Nazwa zestawu danych w formie skrótu pliku
-- Przedział rozmiaru pliku zestawu danych
-- Wersja systemu operacyjnego i
-- Wartość parametru--zadań: Podzielone wartości, takich jak `regression`, `binary-classification`, i `multiclass-classification`
-- Wersja interfejsu wiersza polecenia w strukturze ML.NET (tj. 0.3.27703.4)
+- Trzy oktetowe adresy IP (nie pełny adres IP) używane tylko do określania lokalizacji geograficznej
+- Nazwa wszystkich używanych argumentów/parametrów. Nie wartości klienta, takie jak ciągi
+- Nazwa pliku zestawu danych skrótów
+- Zasobnik rozmiaru pliku zestawu danych
+- System operacyjny i wersja
+- Wartość--parametru zadania: Kategorii wartości, takie jak `regression`, `binary-classification`i`multiclass-classification`
+- Wersja interfejsu wiersza polecenia ML.NET (np. 0.3.27703.4)
 
-Dane są przesyłane w bezpieczny sposób do serwerów firmy Microsoft przy użyciu [usługi Azure Application Insights](https://azure.microsoft.com/services/application-insights/) technologii, przechowywane w obszarze ograniczony dostęp i używane w ramach rygorystyczne kontrole zabezpieczeń z bezpiecznym [usługi Azure Storage](https://azure.microsoft.com/services/storage/) systemów.
+Dane są bezpiecznie przesyłane do serwerów firmy Microsoft przy użyciu technologii [Application Insights platformy Azure](https://azure.microsoft.com/services/application-insights/) , w ramach ograniczonego dostępu i stosowane w ramach ścisłej kontroli zabezpieczeń z bezpiecznych systemów [usługi Azure Storage](https://azure.microsoft.com/services/storage/) .
 
-### <a name="data-points-not-collected"></a>Nie zebrano punktów danych
-Funkcja telemetrii *nie* zbierania:
-- dane osobowe, takich jak nazwy użytkowników
-- nazwy plików zestawu danych
-- dane z plików zestawu danych
+### <a name="data-points-not-collected"></a>Punkty danych nie są zbierane
+Funkcja telemetrii *nie* zbiera:
+- dane osobowe, takie jak nazwy użytkowników
+- nazwy plików DataSet
+- dane z plików DataSet
 
-Jeśli podejrzewasz, że zbiera dane telemetryczne interfejsu wiersza polecenia w strukturze ML.NET poufne dane, lub że dane są insecurely lub niewłaściwie obsługiwane, Prześlij zgłoszenie do [strukturze ML.NET](https://github.com/dotnet/machinelearning) repozytorium na potrzeby badania.
+Jeśli podejrzewasz, że Telemetria interfejsu wiersza polecenia ML.NET zbiera poufne dane lub że dane są w sposób niezabezpieczony lub niewłaściwie obsłużony, należy rozwiązać problem w repozytorium [ml.NET](https://github.com/dotnet/machinelearning) w celu zbadania.
 
 ## <a name="license"></a>Licencja
 
-Dystrybucja Microsoft interfejsu wiersza polecenia w strukturze ML.NET ma licencję za pomocą [postanowienia licencyjne dotyczące oprogramowania firmy Microsoft: Microsoft .NET Library](https://aka.ms/dotnet-core-eula). Aby uzyskać szczegółowe informacje dotyczące zbierania i przetwarzania danych zobacz sekcję zatytułowaną "Dane".
+ML.NET interfejs wiersza polecenia firmy Microsoft do dystrybucji jest licencjonowany za pomocą [postanowień licencyjnych dotyczących oprogramowania firmy Microsoft: Biblioteka](https://aka.ms/dotnet-core-eula)Microsoft .NET. Aby uzyskać szczegółowe informacje na temat zbierania i przetwarzania danych, zobacz sekcję zatytułowaną "dane".
 
-## <a name="disclosure"></a>Ujawnienie
+## <a name="disclosure"></a>Mogąc
 
-Przy pierwszym uruchomieniu [polecenia interfejsu wiersza polecenia w strukturze ML.NET](../reference/ml-net-cli-reference.md) takich jak `mlnet auto-train`, narzędzia interfejsu wiersza polecenia w strukturze ML.NET Wyświetla tekst ujawnienie, który informuje, jak zrezygnować z danych telemetrycznych. Tekst może się nieco różnić w zależności od wersji korzystasz z interfejsu wiersza polecenia.
+Gdy po raz pierwszy uruchomisz [polecenie interfejsu wiersza polecenia ml.NET](../reference/ml-net-cli-reference.md) , takie jak `mlnet auto-train`, narzędzie ml.NET CLI wyświetla tekst, który informuje, jak zrezygnować z telemetrii. Tekst może się nieco różnić w zależności od używanej wersji interfejsu wiersza polecenia.
 
 ## <a name="see-also"></a>Zobacz także
-- [Dokumentacja interfejsu wiersza polecenia w strukturze ML.NET](../reference/ml-net-cli-reference.md)
-- [Postanowienia licencyjne dotyczące oprogramowania firmy Microsoft: Microsoft .NET Library](https://aka.ms/dotnet-core-eula)
-- [Ochrona prywatności w firmie Microsoft](https://www.microsoft.com/trustcenter/privacy/)
-- [Poufności informacji firmy Microsoft](https://privacy.microsoft.com/privacystatement)
+- [Dokumentacja interfejsu wiersza polecenia ML.NET](../reference/ml-net-cli-reference.md)
+- [Postanowienia licencyjne dotyczące oprogramowania firmy Microsoft: Biblioteka Microsoft .NET](https://aka.ms/dotnet-core-eula)
+- [Prywatność w firmie Microsoft](https://www.microsoft.com/trustcenter/privacy/)
+- [Zasady zachowania poufności informacji firmy Microsoft](https://privacy.microsoft.com/privacystatement)

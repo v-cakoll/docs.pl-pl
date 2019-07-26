@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać narzędzia analizatora przenośności pl
 ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 433936480aa1181370a6ebc2bd2ba9914a50dfa2
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 32b4f980061b0975c413a8cde436074f76cfabc9
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331743"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433952"
 ---
 # <a name="the-net-portability-analyzer"></a>Analizator przenośności platformy .NET
 
@@ -29,7 +29,7 @@ Aby rozpocząć korzystanie z analizatora przenośności platformy .NET w progra
 
 ![Zrzut ekranu z przenośnością](./media/portability-analyzer/portability-screenshot.png)
 
-Możesz również użyć aplikacji konsolowej ApiPort, pobrać ją z [repozytorium ApiPort](http://aka.ms/apiportdownload). Można użyć `listTargets` opcji polecenia, aby wyświetlić listę dostępnych obiektów docelowych, a następnie wybrać Platformy docelowe przez `-t` określenie `--target` lub opcję polecenia. 
+Możesz również użyć aplikacji konsolowej ApiPort, pobrać ją z [repozytorium ApiPort](https://aka.ms/apiportdownload). Można użyć `listTargets` opcji polecenia, aby wyświetlić listę dostępnych obiektów docelowych, a następnie wybrać Platformy docelowe przez `-t` określenie `--target` lub opcję polecenia. 
 
 ### <a name="analyze-portability"></a>Analiza przenośności
 Aby analizować cały projekt w programie Visual Studio, kliknij prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i wybierz pozycję **Analizuj przenośność zestawu**. W przeciwnym razie przejdź do menu **Analizuj** i wybierz pozycję **Analizuj przenośność zestawu**. Z tego miejsca wybierz plik wykonywalny lub DLL projektu.

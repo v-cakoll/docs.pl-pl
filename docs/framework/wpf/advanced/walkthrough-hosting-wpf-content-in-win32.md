@@ -6,23 +6,23 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 02f0831b46b8087c48b86e83a4b20f94bf3b79d0
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 3a0a6d09fe34fed9f5b0d353252461fdffbeb5e1
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401582"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484621"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Przewodnik: hostowanie zawartości WPF w Win32
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]oferuje bogate środowisko do tworzenia aplikacji. Jeśli jednak masz znaczną inwestycję w [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kod, bardziej efektywne może być dodanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcji do aplikacji zamiast ponownego pisania oryginalnego kodu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zapewnia prosty mechanizm do hostowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] w oknie.  
   
- W tym samouczku opisano sposób pisania przykładowej aplikacji, która udostępnia [zawartość WPF w przykładowym oknie Win32](https://go.microsoft.com/fwlink/?LinkID=160004), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] która hostuje [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] zawartość w oknie. Ten przykład można rozwinąć, aby hostować [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] dowolne okno. Ponieważ obejmuje mieszanie kodu zarządzanego i niezarządzanego, aplikacja jest zapisywana [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)].  
+ W tym samouczku opisano sposób pisania przykładowej aplikacji, która udostępnia [zawartość WPF w przykładowym oknie Win32](https://go.microsoft.com/fwlink/?LinkID=160004), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] która hostuje [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] zawartość w oknie. Ten przykład można rozwinąć, aby hostować [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] dowolne okno. Ponieważ obejmuje mieszanie kodu zarządzanego i niezarządzanego, aplikacja jest zapisywana C++w/CLI.  
 
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Wymagania  
  W tym samouczku założono podstawową znajomość obu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programowania. Aby zapoznać się z podstawowymi wprowadzeniem do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programowania, zobacz [wprowadzenie](../getting-started/index.md). Aby zapoznać się z [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] wprowadzeniem do programowania, należy odwołać się do dowolnej z wielu książek w temacie, w szczególności do *programowania systemu Windows* przez Charles Petzold.  
   
- Ponieważ przykład, który obejmuje ten samouczek, jest zaimplementowany w [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]programie, w tym samouczku założono, że [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] korzystanie z programu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]do obsługi interfejsu API i zrozumienie programowania kodu zarządzanego. Znajomość programu [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] jest przydatna, ale nie jest istotna.  
+ Ponieważ przykład, który obejmuje ten samouczek, jest zaimplementowany w C++/CLI, w tym samouczku założono, że korzystanie C++ z programu do obsługi interfejsu API systemu Windows oraz zrozumienie programowania kodu zarządzanego. Znajomość C++/CLI jest przydatna, ale nie jest istotna.  
   
 > [!NOTE]
 >  Ten samouczek zawiera wiele przykładów kodu ze skojarzonego przykładu. Jednak w celu zapewnienia czytelności nie obejmuje kompletny kod przykładowy. Aby uzyskać kompletny przykładowy kod, zobacz [hosting zawartości WPF w przykładzie okna Win32](https://go.microsoft.com/fwlink/?LinkID=160004).  
@@ -35,7 +35,7 @@ ms.locfileid: "68401582"
   
 1. Zaimplementuj [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość jako klasę zarządzaną.  
   
-2. Implementowanie [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]aplikacji za pomocą programu. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Jeśli zaczynasz od istniejącej aplikacji i niezarządzanego [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] kodu, możesz zwykle włączyć ją do wywoływania kodu zarządzanego, zmieniając ustawienia projektu w celu `/clr` uwzględnienia flagi kompilatora.  
+2. Implementowanie aplikacji systemu Windows C++za pomocą/CLI. Jeśli zaczynasz od istniejącej aplikacji i niezarządzanego C++ kodu, możesz zwykle włączyć ją do wywoływania kodu zarządzanego, zmieniając ustawienia projektu w celu uwzględnienia `/clr` flagi kompilatora.  
   
 3. Ustaw model wątkowości na Apartament jednowątkowy (STA).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68401582"
 
 <a name="implementing_the_application"></a>
 ## <a name="implementing-the-host-application"></a>Implementowanie aplikacji hosta
- W tej sekcji opisano, jak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hostować zawartość w [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikacji podstawowej. Sama zawartość jest implementowana w [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] postaci klasy zarządzanej. W większości przypadków jest to proste [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programowanie. Kluczowe aspekty implementacji zawartości zostały omówione w temacie implementowanie [zawartości WPF](#implementing_the_wpf_page).
+ W tej sekcji opisano, jak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hostować zawartość w [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikacji podstawowej. Sama zawartość jest implementowana w C++/CLI jako Klasa zarządzana. W większości przypadków jest to proste [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programowanie. Kluczowe aspekty implementacji zawartości zostały omówione w temacie implementowanie [zawartości WPF](#implementing_the_wpf_page).
 
 <a name="autoNestedSectionsOUTLINE1"></a>
 - [Podstawowa aplikacja](#the_basic_application)
@@ -79,7 +79,7 @@ ms.locfileid: "68401582"
 
 1. Otwórz program Visual Studio 2005 i wybierz pozycję **Nowy projekt** z menu **plik** .
 
-2. Z  listy [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)] typów projektów wybierz opcję Win32. Jeśli językiem domyślnym nie [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]jest, te typy projektów są dostępne w **innych językach**.
+2. Z  listy [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)] typów projektów wybierz opcję Win32. Jeśli językiem domyślnym nie C++jest, te typy projektów są dostępne w **innych językach**.
 
 3. Wybierz szablon **projektu Win32** , przypisz nazwę do projektu, a następnie kliknij przycisk **OK** , aby uruchomić **Kreatora aplikacji Win32**.
 
@@ -129,7 +129,7 @@ ms.locfileid: "68401582"
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Zawartości nie można hostować bezpośrednio w oknie aplikacji. Zamiast tego należy najpierw utworzyć <xref:System.Windows.Interop.HwndSource> obiekt, który będzie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawijał zawartość. Ten obiekt jest w zasadzie oknem, który jest przeznaczony do hostowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości. <xref:System.Windows.Interop.HwndSource> Obiekt można hostować w oknie nadrzędnym, tworząc go jako element podrzędny [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna, które jest częścią aplikacji. Parametry konstruktora zawierają wiele tych samych informacji, które można przekazać do okna, podczas [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] tworzenia okna podrzędnego. <xref:System.Windows.Interop.HwndSource>
 
- Następnie utworzysz wystąpienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektu Content. W takim przypadku [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość jest zaimplementowana jako oddzielna Klasa `WPFPage`, przy [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]użyciu. Możesz również zaimplementować [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. W tym celu należy jednak skonfigurować oddzielny projekt i skompilować [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]jako. Można dodać odwołanie [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] do projektu i użyć tego odwołania, aby utworzyć wystąpienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości.
+ Następnie utworzysz wystąpienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektu Content. W takim przypadku [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość jest zaimplementowana jako oddzielna `WPFPage`Klasa, przy C++użyciu/CLI. Możesz również zaimplementować [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. W tym celu należy jednak skonfigurować oddzielny projekt i skompilować [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]jako. Można dodać odwołanie [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] do projektu i użyć tego odwołania, aby utworzyć wystąpienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości.
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Zawartość w oknie podrzędnym można wyświetlić, przypisując odwołanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] do zawartości <xref:System.Windows.Interop.HwndSource.RootVisual%2A> właściwości <xref:System.Windows.Interop.HwndSource>.
 
@@ -167,7 +167,7 @@ ms.locfileid: "68401582"
 
 <a name="implementing_the_wpf_page"></a>
 ## <a name="implementing-the-wpf-page"></a>Implementowanie strony WPF
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Zawartość można hostować i korzystać z niej bez znajomości rzeczywistej implementacji. Jeśli zawartość została spakowana w osobnym [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)], mogła zostać skompilowana w dowolnym języku środowiska uruchomieniowego języka wspólnego (CLR). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Poniżej znajduje się krótki przewodnik [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] dotyczący implementacji, który jest używany w przykładzie. Ta sekcja zawiera następujące podsekcje.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Zawartość można hostować i korzystać z niej bez znajomości rzeczywistej implementacji. Jeśli zawartość została spakowana w osobnym [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)], mogła zostać skompilowana w dowolnym języku środowiska uruchomieniowego języka wspólnego (CLR). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Poniżej znajduje się krótki przewodnik implementacji C++/CLI, który jest używany w przykładzie. Ta sekcja zawiera następujące podsekcje.
 
 <a name="autoNestedSectionsOUTLINE2"></a>
 - [Układ](#page_layout)

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 0394522b8a006d6b187219c8ef7dfccd6556ffca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 646ad1ca99d83f9fb2994f3c394eca27a60c0eac
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617080"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484724"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier — dyrektywa
-Modyfikuje zachowanie kompilacji XAML, tak aby pola dla odwołania do obiektu o nazwie są definiowane za pomocą <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> dostępu zamiast <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> zachowanie domyślne.  
+Modyfikuje zachowanie kompilacji XAML, aby pola dla odwołań do nazwanych obiektów <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> były zdefiniowane z dostępem <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> zamiast zachowania domyślnego.  
   
 ## <a name="xaml-attribute-usage"></a>Użycie atrybutu języka XAML  
   
@@ -26,29 +26,29 @@ Modyfikuje zachowanie kompilacji XAML, tak aby pola dla odwołania do obiektu o 
   
 |||  
 |-|-|  
-|*Public*|Dokładnie taki ciąg znaków można przekazać do określenia <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> a <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> różni się w zależności od tego, jest używany język programowania związane z kodem. Zobacz uwagi.|  
+|*Public*|Dokładny ciąg, który można określić <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> w zależności od używanego języka programowania związanego z kodem. Zobacz uwagi.|  
   
 ## <a name="dependencies"></a>Zależności  
- Jeśli korzysta z produkcji XAML `x:FieldModifier` w dowolnym miejscu, należy zadeklarować element główny produkcji XAML [x: Class — dyrektywa](x-class-directive.md).  
+ Jeśli produkcja XAML używa `x:FieldModifier` dowolnego miejsca, element główny tej produkcji XAML musi deklarować [dyrektywę x:class](x-class-directive.md).  
   
 ## <a name="remarks"></a>Uwagi  
- `x:FieldModifier` nie jest odpowiednia do deklarowania poziom dostępu ogólne klasy lub jej elementów członkowskich. Może to być istotne tylko w przypadku przetwarzania XAML zachowanie, gdy określonego obiektu XAML, który jest częścią produkcji XAML jest przetwarzane i staje się obiektem potencjalnie dostępnym na grafie obiektu aplikacji. Domyślnie odwołania pola dla takiego obiektu jest przechowywany prywatny, który uniemożliwia modyfikowanie wykresu obiektu bezpośrednio przez konsumentów kontroli. Zamiast tego kontroli odbiorcy oczekują, aby zmodyfikować wykres obiektu za pomocą standardowych wzorców, które są włączone, modele programowania, takich jak dzięki uzyskaniu głównym obiektem układu elementu podrzędnego elementu kolekcji, dedykowanych właściwości publiczne i tak dalej.  
+ `x:FieldModifier`nie ma znaczenia w przypadku deklarowania ogólnego poziomu dostępu klasy lub jej elementów członkowskich. Jest to istotne tylko w przypadku przetwarzania kodu XAML, gdy określony obiekt XAML będący częścią produkcji XAML jest przetwarzany i stanie się obiektem, który jest potencjalnie dostępny na grafie obiektów aplikacji. Domyślnie odwołanie do pola dla takiego obiektu jest przechowywane jako prywatne, co uniemożliwia konsumentom kontroli bezpośrednie modyfikowanie grafu obiektów. Zamiast tego użytkownicy kontroli powinni zmodyfikować Graf obiektów przy użyciu standardowych wzorców włączonych przez modele programowania, takich jak Uzyskiwanie głównego układu, kolekcje elementów podrzędnych, dedykowane właściwości publiczne itd.  
   
- Wartość `x:FieldModifier` atrybutu zależy od języka programowania, a jej celem może różnić się w określonej struktury. Parametry do użycia zależy od tego, jak każdy język implementuje jego <xref:System.CodeDom.Compiler.CodeDomProvider> i konwertery typu, zwraca go do zdefiniowania znaczenie dla <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> i <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, i czy ten język jest uwzględniana wielkość liter.  
+ Wartość `x:FieldModifier` atrybutu różni się w zależności od języka programowania, a jego cel może się różnić w określonych strukturach. Ciąg, który ma być używany, zależy od tego, w <xref:System.CodeDom.Compiler.CodeDomProvider> jaki sposób każdy język implementuje swój i konwertery typów, które <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> zwraca <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, aby zdefiniować znaczenie dla i, oraz czy w tym języku jest uwzględniana wielkość liter.  
   
-- Dla języka C#, parametry do przekazania do wyznaczenia <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> jest `public`.  
+- Dla C#, ciąg, który ma zostać przekazany <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> do `public`wyznaczenia.  
   
-- Dla programu Microsoft Visual Basic .NET, parametry do przekazania do wyznaczenia <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> jest `Public`.  
+- W przypadku programu Microsoft Visual Basic .NET ciąg, który ma zostać <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> przekazany `Public`do wyznaczenia.  
   
-- Aby uzyskać [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], żadnych elementów docelowych dla XAML obecnie istnieje; dlatego parametry do przekazania jest niezdefiniowana.  
+- Dla C++/CLI nie istnieją żadne elementy docelowe dla języka XAML. w związku z tym ciąg do przekazania jest niezdefiniowany.  
   
- Można również określić <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> (`internal` w C#, `Friend` w języku Visual Basic) ale określanie <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> nietypowego ponieważ `NotPublic` zgodnie z zachowaniem już jest ustawieniem domyślnym.  
+ <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> Można również określić (`internal` w C#, w `Friend` Visual Basic), ale <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> określić, że jest `NotPublic` nietypowe, ponieważ zachowanie jest już domyślne.  
   
- <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> jest to zachowanie domyślne, ponieważ jest rzadkie, że kodu spoza zestawu, który skompilowany XAML wymaga dostępu do elementu utworzone XAML. Architektura zabezpieczeń WPF wraz z zachowanie kompilacji XAML nie uzna pola, które przechowują wystąpienia elementu jako publiczne, chyba że specjalnie `x:FieldModifier` aby pozwolić na publiczny dostęp.  
+ <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>jest zachowaniem domyślnym, ponieważ jest rzadko, gdy kod poza zestawem, który skompilowany XAML, potrzebuje dostępu do elementu utworzonego w języku XAML. Architektura zabezpieczeń WPF wraz z zachowaniem kompilacji XAML nie deklaruje pól, które przechowują wystąpienia elementów jako publiczne, chyba że `x:FieldModifier` określono opcję zezwalania na dostęp publiczny.  
   
- `x:FieldModifier` dotyczy tylko elementów o [x: Name — dyrektywa](x-name-directive.md) , ponieważ ta nazwa będzie używana do odwołanie do pola, gdy jest on publiczny.  
+ `x:FieldModifier`ma zastosowanie tylko do elementów z [dyrektywą x:Name](x-name-directive.md) , ponieważ ta nazwa jest używana do odwoływania się do pola po jego publicznym.  
   
- Domyślnie jest publiczna; częściowe klasy dla elementu głównego Jednakże, możesz przekształcić ją w niepublicznych przy użyciu [x: classmodifier — dyrektywa](x-classmodifier-directive.md). [X: classmodifier — dyrektywa](x-classmodifier-directive.md) wpływa również na poziom dostępu do wystąpienia klasy elementu głównego. Możesz umieścić zarówno `x:Name` i `x:FieldModifier` w katalogu głównym elementu, ale tylko sprawia, że pole publiczne kopię element główny z głównego true element klasy poziomem dostępu, nadal kontrolowane przez [x: classmodifier — dyrektywa](x-classmodifier-directive.md).  
+ Domyślnie Klasa częściowa elementu głównego jest publiczna; można jednak sprawić, aby był niepubliczny za pomocą [dyrektywy x:ClassModifier —](x-classmodifier-directive.md). [Dyrektywa x:ClassModifier —](x-classmodifier-directive.md) ma także wpływ na poziom dostępu wystąpienia klasy elementu głównego. Można umieścić zarówno `x:Name` element, `x:FieldModifier` jak i na elemencie głównym, ale tylko publiczną kopię pola elementu głównego z prawdziwym poziomem dostępu klasy elementu głównego, nadal kontrolowanym przez [dyrektywę x:ClassModifier —](x-classmodifier-directive.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

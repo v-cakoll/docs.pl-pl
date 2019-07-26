@@ -12,15 +12,15 @@ helpviewer_keywords:
 - x:Null markup extension [XAML Services]
 - XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
-ms.openlocfilehash: e46d8561b62d9137d4fed4df447338a97fc0577b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dbea2c7d4010d8defc572dbdc14a0dfd6d7601e
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938918"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484705"
 ---
 # <a name="xnull-markup-extension"></a>x:Null — Rozszerzenie znaczników
-Określa `null` jako wartość dla elementu członkowskiego XAML.  
+Określa `null` jako wartość dla elementu członkowskiego języka XAML.  
   
 ## <a name="xaml-attribute-usage"></a>Użycie atrybutu języka XAML  
   
@@ -29,20 +29,20 @@ Określa `null` jako wartość dla elementu członkowskiego XAML.
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Słowo kluczowe odwołanie o wartości null w C# i [!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)] ma wartość null. Słowo kluczowe języka Visual Basic dla odwołanie o wartości null jest `Nothing`, ale zawsze używaj `{x:Null}` jako użycie XAML niezależnie od tego, jaki język związanym z kodem, należy skojarzyć z XAML.  
+ Słowo kluczowe dla odwołania o wartości null C# w C++ i ma wartość null. Słowo kluczowe Microsoft Visual Basic dla odwołania o wartości null `Nothing`to, ale jest zawsze `{x:Null}` używane jako użycie XAML, niezależnie od kodu związanego z kodem, który jest skojarzony z XAML.  
   
- `x:Null` — Rozszerzenie znaczników nie ma żadnych właściwości do ustawienia.  
+ Rozszerzenie `x:Null` znaczników nie ma właściwości settable.  
   
- Użycie o wartości null jest często kojarzona z narażenia elementu członkowskiego XAML CLR <xref:System.Nullable%601> wartość.  
+ Użycie wartości null jest często kojarzone ze współczynnikiem członkowskim języka XAML <xref:System.Nullable%601> dla wartości CLR.  
   
- `x:Null` — Rozszerzenie znaczników, takich jak wszystkie rozszerzenia znaczników XAML używa nawiasów klamrowych (`{,}`) do anulowania obsługi wartości atrybutów były inne niż literały ani odwołania do obsługi zdarzeń. Składnią atrybutu jest składnia najczęściej używana z tym rozszerzeniem znacznika. Składnia elementu obiektu `<x:Null />` jest technicznie możliwe, ale jest rzadko używana, ponieważ `x:Null` — rozszerzenie znaczników nie ma parametry pozycyjne ani argumentów.  
+ Rozszerzenie znacznika, takie jak wszystkie rozszerzenia znaczników XAML, używa nawiasów (`{,}`) do ucieczki obsługi wartości atrybutów, aby były inne niż literały lub odwołania do obsługi zdarzeń. `x:Null` Składnia atrybutu jest składnią najczęściej używaną z tym rozszerzeniem znacznika. Składnia `<x:Null />` elementu obiektu jest technicznie możliwa, ale rzadko jest używana, `x:Null` ponieważ rozszerzenie znaczników nie ma parametrów pozycyjnych ani argumentów konstrukcji.  
   
- Aby uzyskać informacje na temat rozszerzeń znaczników, zobacz [rozszerzenia znacznikowania i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Aby uzyskać informacje na temat rozszerzeń znaczników, zobacz [rozszerzenia znaczników i XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
- W programie .NET Framework XAML Services obsługi dla tego rozszerzenia znacznika jest definiowany przez <xref:System.Windows.Markup.NullExtension> klasy.  
+ W .NET Framework usługach XAML obsługa tego rozszerzenia znacznika jest definiowana przez <xref:System.Windows.Markup.NullExtension> klasę.  
   
-## <a name="wpf-usage-notes"></a>Uwagi dotyczące użytkowania WPF  
- Należy pamiętać, że `null` niekoniecznie jest początkowa nie ustawiono wartość dla właściwości zależności typu odwołania. Wartość domyślna początkowej mogą się różnić dla każdej właściwości zależności i mogą opierać się na metadane właściwe dla właściwości. Wiele właściwości zależności nie są akceptowane `null` jako wartość za pomocą znaczników lub innego kodu ze względu na ich implementacji wywołanie zwrotne weryfikacji. Aby uzyskać więcej informacji na temat właściwości zależności zobacz [Przegląd właściwości zależności](../wpf/advanced/dependency-properties-overview.md).  
+## <a name="wpf-usage-notes"></a>Uwagi dotyczące użycia WPF  
+ Należy pamiętać `null` , że nie musi być początkową wartością ustawienia dla właściwości zależności typu odwołania. Początkowa wartość domyślna może różnić się w zależności od właściwości zależności i może opierać się na metadanych specyficznych dla właściwości. Wiele właściwości zależności nie akceptuje `null` jako wartości, za pomocą znaczników ani kodu ze względu na implementacje wywołania zwrotnego walidacji. Aby uzyskać więcej informacji na temat właściwości zależności, zobacz [Omówienie właściwości zależności](../wpf/advanced/dependency-properties-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

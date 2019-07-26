@@ -1,5 +1,5 @@
 ---
-title: Struct — C# odwołania
+title: struct- C# Reference
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 5317ea403575dca7ed64a5784fa9c993fa8d2f64
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1f1c512e1995df07fc4b9e18e34a85119e270bda
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633840"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433783"
 ---
-# <a name="struct-c-reference"></a><span data-ttu-id="d5696-102">struct (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="d5696-102">struct (C# Reference)</span></span>
+# <a name="struct-c-reference"></a><span data-ttu-id="af671-102">struct (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="af671-102">struct (C# Reference)</span></span>
 
-<span data-ttu-id="d5696-103">A `struct` typ jest typem wartości, które jest zazwyczaj używany do hermetyzacji mniejszym grupom powiązanych zmiennych, takich jak współrzędnych prostokąta lub właściwości elementu w magazynie.</span><span class="sxs-lookup"><span data-stu-id="d5696-103">A `struct` type is a value type that is typically used to encapsulate small groups of related variables, such as the coordinates of a rectangle or the characteristics of an item in an inventory.</span></span> <span data-ttu-id="d5696-104">Poniższy przykład przedstawia deklarację prostą strukturą:</span><span class="sxs-lookup"><span data-stu-id="d5696-104">The following example shows a simple struct declaration:</span></span>
+<span data-ttu-id="af671-103">`struct` Typ jest typem wartości, który zwykle jest używany do hermetyzowania małych grup powiązanych zmiennych, takich jak współrzędne prostokąta lub Charakterystyka elementu w spisie.</span><span class="sxs-lookup"><span data-stu-id="af671-103">A `struct` type is a value type that is typically used to encapsulate small groups of related variables, such as the coordinates of a rectangle or the characteristics of an item in an inventory.</span></span> <span data-ttu-id="af671-104">Poniższy przykład pokazuje prostą deklarację struktury:</span><span class="sxs-lookup"><span data-stu-id="af671-104">The following example shows a simple struct declaration:</span></span>
 
 ```csharp
 public struct Book
@@ -28,33 +28,33 @@ public struct Book
 }
 ```
 
-## <a name="remarks"></a><span data-ttu-id="d5696-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d5696-105">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="af671-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="af671-105">Remarks</span></span>
 
-<span data-ttu-id="d5696-106">Struktury mogą także zawierać [konstruktory](../../programming-guide/classes-and-structs/constructors.md), [stałe](../../programming-guide/classes-and-structs/constants.md), [pola](../../programming-guide/classes-and-structs/fields.md), [metody](../../programming-guide/classes-and-structs/methods.md), [właściwości](../../programming-guide/classes-and-structs/properties.md), [indeksatory](../../programming-guide/indexers/index.md), [operatory](../../programming-guide/statements-expressions-operators/operators.md), [zdarzenia](../../programming-guide/events/index.md), i [zagnieżdżone typy](../../programming-guide/classes-and-structs/nested-types.md), chociaż Jeśli kilka takich elementów członkowskich są wymagane, możesz należy wziąć pod uwagę klasy jako możliwej do typu Twojej zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="d5696-106">Structs can also contain [constructors](../../programming-guide/classes-and-structs/constructors.md), [constants](../../programming-guide/classes-and-structs/constants.md), [fields](../../programming-guide/classes-and-structs/fields.md), [methods](../../programming-guide/classes-and-structs/methods.md), [properties](../../programming-guide/classes-and-structs/properties.md), [indexers](../../programming-guide/indexers/index.md), [operators](../../programming-guide/statements-expressions-operators/operators.md), [events](../../programming-guide/events/index.md), and [nested types](../../programming-guide/classes-and-structs/nested-types.md), although if several such members are required, you should consider making your type a class instead.</span></span>
+<span data-ttu-id="af671-106">Struktury mogą również zawierać [konstruktory](../../programming-guide/classes-and-structs/constructors.md), [stałe](../../programming-guide/classes-and-structs/constants.md), [pola](../../programming-guide/classes-and-structs/fields.md), [metody](../../programming-guide/classes-and-structs/methods.md), [Właściwości](../../programming-guide/classes-and-structs/properties.md), [indeksatory](../../programming-guide/indexers/index.md), [Operatory](../../programming-guide/statements-expressions-operators/operators.md), [zdarzenia](../../programming-guide/events/index.md)i [typy zagnieżdżone](../../programming-guide/classes-and-structs/nested-types.md), chociaż w przypadku wielu takich członków wymagane, należy rozważyć przeprowadzenie klasy w zamian.</span><span class="sxs-lookup"><span data-stu-id="af671-106">Structs can also contain [constructors](../../programming-guide/classes-and-structs/constructors.md), [constants](../../programming-guide/classes-and-structs/constants.md), [fields](../../programming-guide/classes-and-structs/fields.md), [methods](../../programming-guide/classes-and-structs/methods.md), [properties](../../programming-guide/classes-and-structs/properties.md), [indexers](../../programming-guide/indexers/index.md), [operators](../../programming-guide/statements-expressions-operators/operators.md), [events](../../programming-guide/events/index.md), and [nested types](../../programming-guide/classes-and-structs/nested-types.md), although if several such members are required, you should consider making your type a class instead.</span></span>
 
-<span data-ttu-id="d5696-107">Aby uzyskać przykłady, zobacz [przy użyciu struktury](../../programming-guide/classes-and-structs/using-structs.md).</span><span class="sxs-lookup"><span data-stu-id="d5696-107">For examples, see [Using Structs](../../programming-guide/classes-and-structs/using-structs.md).</span></span>
+<span data-ttu-id="af671-107">Aby zapoznać się z przykładami, zobacz [using structs](../../programming-guide/classes-and-structs/using-structs.md).</span><span class="sxs-lookup"><span data-stu-id="af671-107">For examples, see [Using Structs](../../programming-guide/classes-and-structs/using-structs.md).</span></span>
 
-<span data-ttu-id="d5696-108">Struktury można zaimplementować interfejs, ale nie może dziedziczyć innej struktury.</span><span class="sxs-lookup"><span data-stu-id="d5696-108">Structs can implement an interface but they cannot inherit from another struct.</span></span> <span data-ttu-id="d5696-109">Z tego powodu składowe struktury nie można zadeklarować jako `protected`.</span><span class="sxs-lookup"><span data-stu-id="d5696-109">For that reason, struct members cannot be declared as `protected`.</span></span>
+<span data-ttu-id="af671-108">Struktury mogą implementować interfejs, ale nie mogą dziedziczyć z innej struktury.</span><span class="sxs-lookup"><span data-stu-id="af671-108">Structs can implement an interface but they cannot inherit from another struct.</span></span> <span data-ttu-id="af671-109">Z tego powodu elementy członkowskie struktury nie mogą być deklarowane jako `protected`.</span><span class="sxs-lookup"><span data-stu-id="af671-109">For that reason, struct members cannot be declared as `protected`.</span></span>
 
-<span data-ttu-id="d5696-110">Aby uzyskać więcej informacji, zobacz [struktury](../../programming-guide/classes-and-structs/structs.md).</span><span class="sxs-lookup"><span data-stu-id="d5696-110">For more information, see [Structs](../../programming-guide/classes-and-structs/structs.md).</span></span>
+<span data-ttu-id="af671-110">Aby uzyskać więcej informacji, zobacz [struktury](../../programming-guide/classes-and-structs/structs.md).</span><span class="sxs-lookup"><span data-stu-id="af671-110">For more information, see [Structs](../../programming-guide/classes-and-structs/structs.md).</span></span>
 
-## <a name="examples"></a><span data-ttu-id="d5696-111">Przykłady</span><span class="sxs-lookup"><span data-stu-id="d5696-111">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="af671-111">Przykłady</span><span class="sxs-lookup"><span data-stu-id="af671-111">Examples</span></span>
 
-<span data-ttu-id="d5696-112">Aby uzyskać więcej informacji, zobacz [przy użyciu struktury](../../programming-guide/classes-and-structs/using-structs.md).</span><span class="sxs-lookup"><span data-stu-id="d5696-112">For examples and more information, see [Using Structs](../../programming-guide/classes-and-structs/using-structs.md).</span></span>
+<span data-ttu-id="af671-112">Aby uzyskać przykłady i więcej informacji, zobacz [using struktury](../../programming-guide/classes-and-structs/using-structs.md).</span><span class="sxs-lookup"><span data-stu-id="af671-112">For examples and more information, see [Using Structs](../../programming-guide/classes-and-structs/using-structs.md).</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="d5696-113">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="d5696-113">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="af671-113">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="af671-113">C# language specification</span></span>
 
-<span data-ttu-id="d5696-114">Aby uzyskać przykłady, zobacz [przy użyciu struktury](../../programming-guide/classes-and-structs/using-structs.md).</span><span class="sxs-lookup"><span data-stu-id="d5696-114">For examples, see [Using Structs](../../programming-guide/classes-and-structs/using-structs.md).</span></span>
+<span data-ttu-id="af671-114">Aby zapoznać się z przykładami, zobacz [using structs](../../programming-guide/classes-and-structs/using-structs.md).</span><span class="sxs-lookup"><span data-stu-id="af671-114">For examples, see [Using Structs](../../programming-guide/classes-and-structs/using-structs.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d5696-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d5696-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af671-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="af671-115">See also</span></span>
 
-- [<span data-ttu-id="d5696-116">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="d5696-116">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="d5696-117">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="d5696-117">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="d5696-118">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="d5696-118">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="d5696-119">Tabela wartości domyślnych</span><span class="sxs-lookup"><span data-stu-id="d5696-119">Default Values Table</span></span>](default-values-table.md)
-- [<span data-ttu-id="d5696-120">Tabela typów wbudowanych</span><span class="sxs-lookup"><span data-stu-id="d5696-120">Built-In Types Table</span></span>](built-in-types-table.md)
-- [<span data-ttu-id="d5696-121">Typy</span><span class="sxs-lookup"><span data-stu-id="d5696-121">Types</span></span>](types.md)
-- [<span data-ttu-id="d5696-122">Typy wartości</span><span class="sxs-lookup"><span data-stu-id="d5696-122">Value Types</span></span>](value-types.md)
-- [<span data-ttu-id="d5696-123">class</span><span class="sxs-lookup"><span data-stu-id="d5696-123">class</span></span>](class.md)
-- [<span data-ttu-id="d5696-124">interface</span><span class="sxs-lookup"><span data-stu-id="d5696-124">interface</span></span>](interface.md)
-- [<span data-ttu-id="d5696-125">Klasy i struktury</span><span class="sxs-lookup"><span data-stu-id="d5696-125">Classes and Structs</span></span>](../../programming-guide/classes-and-structs/index.md)
+- [<span data-ttu-id="af671-116">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="af671-116">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="af671-117">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="af671-117">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="af671-118">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="af671-118">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="af671-119">Tabela wartości domyślnych</span><span class="sxs-lookup"><span data-stu-id="af671-119">Default Values Table</span></span>](default-values-table.md)
+- [<span data-ttu-id="af671-120">Tabela typów wbudowanych</span><span class="sxs-lookup"><span data-stu-id="af671-120">Built-In Types Table</span></span>](built-in-types-table.md)
+- [<span data-ttu-id="af671-121">Typy</span><span class="sxs-lookup"><span data-stu-id="af671-121">Types</span></span>](types.md)
+- [<span data-ttu-id="af671-122">Typy wartości</span><span class="sxs-lookup"><span data-stu-id="af671-122">Value Types</span></span>](value-types.md)
+- [<span data-ttu-id="af671-123">class</span><span class="sxs-lookup"><span data-stu-id="af671-123">class</span></span>](class.md)
+- [<span data-ttu-id="af671-124">interface</span><span class="sxs-lookup"><span data-stu-id="af671-124">interface</span></span>](interface.md)
+- [<span data-ttu-id="af671-125">Klasy i struktury</span><span class="sxs-lookup"><span data-stu-id="af671-125">Classes and Structs</span></span>](../../programming-guide/classes-and-structs/index.md)

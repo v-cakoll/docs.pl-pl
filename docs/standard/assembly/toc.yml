@@ -1,0 +1,11 @@
+- name: Zestawy w środowisku .NET
+  href: index.md
+  items:
+    - name: Przyjazne zestawy
+      items:
+        - name: Omówienie
+          href: friend-assemblies.md
+    - name: Format pliku zestawu .NET
+      href: file-format.md
+    - name: Sposób używania i debugowania funkcji zwolnienia zestawu w programie .NET Core
+      href: unloadability-howto.md

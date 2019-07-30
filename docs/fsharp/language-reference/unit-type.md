@@ -1,17 +1,17 @@
 ---
 title: Typ jednostki
-description: Dowiedz się, jak F# typ "jednostka" jest często używany do przechowywania to miejsce, w której wartość jest wymagana przez składnię języka żadnej wartości jest wymagane lub pożądane.
+description: Dowiedz się F# , w jaki sposób typ "Unit" jest często używany do przechowywania wartości wymaganej przez składnię języka, gdy wartość nie jest potrzebna lub nie jest wymagana.
 ms.date: 05/16/2016
-ms.openlocfilehash: d515e19489bfa7de6f17194fd74176cfa0bcd7c9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4e586702324565b8dcd4f6c7e11a0e1754f89c58
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645122"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630177"
 ---
 # <a name="unit-type"></a>Typ jednostki
 
-`unit` Typ to typ, który wskazuje brak określonej wartości; `unit` typ ma tylko jedną wartość, która działa jako symbolu zastępczego, gdy żadna inna wartość istnieje lub jest wymagana.
+Typ jest typem, który wskazuje brak określonej wartości `unit` ; typ ma tylko jedną wartość, która działa jako symbol zastępczy, gdy inna wartość nie istnieje lub nie jest wymagana. `unit`
 
 ## <a name="syntax"></a>Składnia
 
@@ -22,19 +22,19 @@ ms.locfileid: "65645122"
 
 ## <a name="remarks"></a>Uwagi
 
-Każdy F# wyrażenia musi być wartością. W wyrażeniach, które nie generują wartość, która ma znaczenie, wartości typu `unit` jest używany. `unit` Przypomina typu `void` typu w językach takich jak C# i C++.
+Każde F# wyrażenie musi być szacowane do wartości. W przypadku wyrażeń, które nie generują wartości będącej przedmiotem zainteresowania, używana jest wartość `unit` typu. Typ `unit` jest podobny do `void` typu w językach, takich jak C# i C++.
 
-`unit` Typ ma pojedynczą wartość, a ta wartość jest wskazywany przez token `()`.
+Typ ma pojedynczą wartość, a ta wartość jest wskazywana przez token `()`. `unit`
 
-Wartość `unit` typ jest często używany w F# programowania do przechowywania to miejsce, w przypadku, gdy wartość jest wymagana przez składnię języka, ale w przypadku, gdy wartość nie jest wymagane lub żądane. Przykładem może być wartość zwracaną przez `printf` funkcji. Ponieważ ważne akcje `printf` wykonać operacji w funkcji funkcji nie musi zwracać wartość rzeczywistą. W związku z tym, zwracana wartość jest typu `unit`.
+Wartość `unit` typu jest często używana w F# programowaniu do przechowywania miejsca, w którym wartość jest wymagana przez składnię języka, ale gdy wartość nie jest potrzebna lub nie jest wymagana. Przykładem może być wartość `printf` zwracana przez funkcję. Ponieważ ważne akcje `printf` operacji są wykonywane w funkcji, funkcja nie musi zwracać wartości rzeczywistej. W związku z tym wartość zwracana jest typu `unit`.
 
-Oczekiwać pewnych konstrukcji `unit` wartość. Na przykład `do` powiązania lub dowolnego kodu na najwyższym poziomie modułu powinien zwrócić `unit` wartość. Kompilator zgłosi ostrzeżenie podczas `do` powiązaniem lub kodem na najwyższym poziomie modułu daje wynik innych niż `unit` wartość, która nie jest używany, jak pokazano w poniższym przykładzie.
+Niektóre konstrukcje oczekują `unit` wartości. Na przykład, `do` oczekiwane jest powiązanie lub dowolny kod na najwyższym poziomie modułu, który ma zostać obliczony `unit` do wartości. Kompilator zgłasza ostrzeżenie, gdy `do` powiązanie lub kod na najwyższym poziomie modułu generuje wynik inny `unit` niż wartość, która nie jest używana, jak pokazano w poniższym przykładzie.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet901.fs)]
 
-To ostrzeżenie jest to cecha programowania funkcjonalnego. nie ma w innych .NET, języków programowania. W programie czysto funkcjonalności, funkcje nie są wszelkie efekty uboczne końcowa wartość zwracana jest tylko wynik wywołania funkcji. W związku z tym gdy wynik jest ignorowane, jest możliwy błąd programowania. Mimo że F# nie jest całkowicie funkcjonalny język programowania, jest dobrym rozwiązaniem, postępuj zgodnie z funkcjonalności stylu programowania, jeśli to możliwe.
+To ostrzeżenie jest cechą programowania funkcjonalnego; nie jest ona wyświetlana w innych językach programowania .NET. W czystym programie funkcjonalnym, w którym funkcje nie mają żadnych efektów ubocznych, końcowa wartość zwracana jest jedynym wynikiem wywołania funkcji. W związku z tym, gdy wynik jest ignorowany, jest to możliwy błąd programowania. Chociaż F# nie jest to czysto funkcjonalny język programowania, dobrym sposobem jest przestrzeganie stylu programowania funkcjonalnego, jeśli jest to możliwe.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Pierwotny](primitive-types.md)
+- [Podstawowy](primitive-types.md)
 - [Dokumentacja języka F#](index.md)

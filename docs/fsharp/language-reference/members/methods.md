@@ -1,17 +1,17 @@
 ---
 title: Metody
-description: Dowiedz się, jak F# metoda jest funkcją skojarzony z typem, które są używane do udostępnienia i wdrażaniu funkcji i zachowanie obiektów i typy.
+description: Dowiedz się F# , jak metoda jest funkcją skojarzoną z typem, który służy do uwidaczniania i implementowania funkcji i zachowań obiektów i typów.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9b661a3ff7fa9a7704f5a31570acb62deaac2fcf
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 13503690a59ace13dacba93b6fce9ea3240c5cc2
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641748"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627439"
 ---
 # <a name="methods"></a>Metody
 
-A *metoda* jest funkcją, która jest skojarzona z typem. W programowanie zorientowane obiektowo metody są używane do udostępnienia i wdrażaniu funkcji i zachowanie obiektów i typy.
+*Metoda* jest funkcją, która jest skojarzona z typem. W programowaniu zorientowanym na obiekty metody są używane do ujawniania i implementowania funkcji i zachowań obiektów i typów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,59 +49,59 @@ override self-identifier.method-name parameter-list [ : return-type ] =
 
 ## <a name="remarks"></a>Uwagi
 
-W poprzedniej składni można zobaczyć różne rodzaje definicje i deklaracje metody. W treści metod dłużej podział wiersza następuje znak równości (=) i tworzone jest wcięcie treści całej metody.
+W poprzedniej składni, można zobaczyć różne formy deklaracji i definicji metod. W większej liczbie metod, podział wiersza następuje po znaku równości (=), a cała treść metody jest wcięty.
 
-Atrybuty można zastosować do dowolnego deklaracji metody. One poprzedzać Składnia definicji metody i zazwyczaj są wyświetlane w osobnym wierszu. Aby uzyskać więcej informacji, zobacz [atrybuty](../attributes.md).
+Atrybuty mogą być stosowane do dowolnej deklaracji metody. Poprzedzają one składnię definicji metody i są zwykle wyświetlane w osobnym wierszu. Aby uzyskać więcej informacji, zobacz [atrybuty](../attributes.md).
 
-Można oznaczyć metody `inline`. Aby uzyskać informacje o `inline`, zobacz [funkcji śródwierszowych](../functions/inline-functions.md).
+Metody mogą być oznaczone `inline`. Aby uzyskać informacje `inline`na temat, zobacz [funkcje wbudowane](../functions/inline-functions.md).
 
-Inne niż wbudowane metody mogą być używane cyklicznie w ramach typu; nie trzeba jawnie użyć `rec` — słowo kluczowe.
+Metody inne niż śródwierszowe mogą być używane rekursywnie w obrębie typu; nie ma potrzeby jawnego używania `rec` słowa kluczowego.
 
-## <a name="instance-methods"></a>Metody wystąpienia
+## <a name="instance-methods"></a>Metody wystąpień
 
-Metody wystąpienia są uznane za pomocą `member` — słowo kluczowe i *własny identyfikator*, a następnie kropka (.) i nazwy metody i parametrów. Podobnie jak w przypadku dla `let` powiązań *listy parametrów* może być wzorca. Zazwyczaj należy ująć metoda parametry w nawiasach w formularzu krotki, czyli metody sposób są wyświetlane w F# gdy są one tworzone w innych językach .NET Framework. Rozwinięte formularza (rozdzielone spacjami parametry) jest również typowe i inne wzorce są również obsługiwane.
+Metody wystąpień są zadeklarowane za `member` pomocą słowa kluczowego i samodzielnego *identyfikatora*, po którym następuje kropka (.) oraz nazwa metody i parametry. Podobnie jak w przypadku `let` powiązań, *Lista parametrów* może być wzorcem. Zwykle parametry metody są umieszczane w nawiasach w postaci spójnej kolekcji, która jest sposobem, w F# jaki metody są wyświetlane, gdy są tworzone w innych językach .NET Framework. Jednak formularz rozwinięte (parametry oddzielone spacjami) jest również powszechny, a także inne wzorce są obsługiwane.
 
-Poniższy przykład ilustruje definicja oraz wykorzystanie metody wystąpienia nieabstrakcyjnej.
+Poniższy przykład ilustruje definicję i użycie nieabstrakcyjnej metody wystąpienia.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3401.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3401.fs)]
 
-W ramach metody wystąpienia nie należy używać własny identyfikator do dostępu do pola zdefiniowane przy użyciu powiązania let. Użyj identyfikatora samodzielnie, podczas uzyskiwania dostępu do innych elementów członkowskich i właściwości.
+W ramach metod wystąpień nie należy używać samego identyfikatora do uzyskiwania dostępu do pól zdefiniowanych przy użyciu let bindings. Użyj własnego identyfikatora podczas uzyskiwania dostępu do innych członków i właściwości.
 
 ## <a name="static-methods"></a>Metody statyczne
 
-Słowo kluczowe `static` służy do określania, czy metoda może być wywołana bez wystąpienia i nie jest skojarzony z wystąpieniem obiektu. W przeciwnym razie przedstawiono metody wystąpienia.
+Słowo kluczowe `static` jest używane do określania, że metoda może być wywoływana bez wystąpienia i nie jest skojarzona z wystąpieniem obiektu. W przeciwnym razie metody są metodami wystąpień.
 
-W przykładzie w następnej sekcji przedstawiono zadeklarowane za pomocą pola `let` właściwości elementów członkowskich zadeklarowanych za pomocą słowa kluczowego, `member` — słowo kluczowe, a metoda statyczna zadeklarowana za pomocą `static` — słowo kluczowe.
+W przykładzie w następnej sekcji przedstawiono pola zadeklarowane za pomocą `let` słowa kluczowego, członków właściwości zadeklarowanych `member` za pomocą słowa kluczowego i `static` statycznej metody zadeklarowanej za pomocą słowa kluczowego.
 
-Poniższy przykład ilustruje definicja oraz wykorzystanie metody statyczne. Przyjęto założenie, że te definicje metod znajdują się w `SomeType` klasy w poprzedniej sekcji.
+Poniższy przykład ilustruje definicję i użycie metod statycznych. Załóżmy, że te definicje metod znajdują `SomeType` się w klasie w poprzedniej sekcji.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3402.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3402.fs)]
 
-## <a name="abstract-and-virtual-methods"></a>Metody abstrakcyjne i wirtualnych
+## <a name="abstract-and-virtual-methods"></a>Metody abstrakcyjne i wirtualne
 
-Słowo kluczowe `abstract` wskazuje, że metoda ma miejsce wysyłania wirtualnego i nie może mieć definicji klasy. A *wysyłania wirtualnego miejsca* to wpis w obsługiwanej wewnętrznie tabeli funkcji używane w czasie wykonywania, aby wyszukać funkcji wirtualnej wywołuje typu zorientowane obiektowo. Mechanizm wysyłania wirtualnej to mechanizm, który implementuje *polimorfizm*, ważną funkcją programowanie zorientowane obiektowo. Jest klasą, która ma co najmniej jedną metodę abstrakcyjną bez definicji *abstrakcyjna klasa*, co oznacza, że nie można utworzyć jego wystąpienia tej klasy. Aby uzyskać więcej informacji na temat klasy abstrakcyjne, zobacz [klasy abstrakcyjne](../abstract-classes.md).
+Słowo kluczowe `abstract` wskazuje, że metoda ma wirtualne gniazdo wysyłkowe i może nie mieć definicji w klasie. *Wirtualne miejsce wysyłki* to wpis w wewnętrznie obsługiwanej tabeli funkcji, który jest używany w czasie wykonywania do wyszukiwania wywołań funkcji wirtualnych w typie zorientowanym obiektowo. Mechanizm wysyłania wirtualnego jest mechanizmem, który implementuje *polimorfizm*, ważną funkcję programowania zorientowanego na obiekt. Klasa, która ma co najmniej jedną metodę abstrakcyjną bez definicji, jest *klasą abstrakcyjną*, co oznacza, że nie można tworzyć wystąpień tej klasy. Aby uzyskać więcej informacji na temat klas abstrakcyjnych, zobacz [klasy abstrakcyjne](../abstract-classes.md).
 
-Deklaracje metody abstrakcyjnej nie zawierają treści metody. Zamiast tego nazwę metody następuje dwukropek (:) i typ podpisu dla metody. Sygnatura typu metody jest taka sama, jak pokazano w przez funkcję IntelliSense po zatrzymaniu wskaźnika myszy nad nazwy metody w edytorze programu Visual Studio Code z wyjątkiem bez nazwy parametrów. Podpisy typu są również wyświetlane przez interpretera fsi.exe podczas pracy w interaktywnie. Sygnatura typu metody jest tworzony przez listę się typy parametrów, następuje zwracany typ, a symbole separatorów odpowiednie. Rozwinięte parametry są rozdzielane `->` i krotki parametry są rozdzielane `*`. Wartość zwracana zawsze jest oddzielony od argumentów przez `->` symboli. Nawiasów może służyć do grupowania złożonych parametrów, na przykład gdy typ funkcji jest parametr, lub, aby wskazać, kiedy krotki jest traktowany jako jeden parametr, a nie jako dwa parametry.
+Deklaracje metody abstrakcyjnej nie zawierają treści metody. Zamiast tego, nazwa metody następuje dwukropek (:) i podpis typu dla metody. Sygnatura typu metody jest taka sama jak pokazana przez funkcję IntelliSense po zatrzymaniu wskaźnika myszy nad nazwą metody w edytorze Visual Studio Code, z wyjątkiem nazw parametrów. Sygnatury typów są również wyświetlane przez interpreter, FSI. exe, gdy pracujesz interaktywnie. Podpis typu metody jest tworzony przez wystawienie typów parametrów, po których następuje zwracany typ, z odpowiednimi symbolami separatora. Parametry rozwinięte są rozdzielone `->` , a parametry krotki są rozdzielone przez. `*` Wartość zwracana jest zawsze oddzielona od argumentów przez `->` symbol. Nawiasy mogą służyć do grupowania parametrów złożonych, takich jak, gdy typ funkcji jest parametrem lub aby wskazać, kiedy Krotka jest traktowana jako pojedynczy parametr, a nie jako dwa parametry.
 
-Definicje domyślne metody abstrakcyjne mogą również dawać przez dodanie definicji klasy i za pomocą `default` — słowo kluczowe, jak pokazano w bloku składni, w tym temacie. Metoda abstrakcyjna, który zawiera definicję w tej samej klasie jest odpowiednikiem wirtualnej metody w innych językach .NET Framework. Określa, czy definicja istnieje, `abstract` — słowo kluczowe tworzy nowe gniazdo wysyłania w tabeli funkcji wirtualnych dla tej klasy.
+Można również nadać abstrakcyjnym metodom definicje domyślne przez dodanie definicji do klasy i użycie `default` słowa kluczowego, jak pokazano w bloku składni w tym temacie. Metoda abstrakcyjna, która ma definicję w tej samej klasie, jest równoważna z metodą wirtualną w innych językach .NET Framework. Niezależnie od tego `abstract` , czy definicja istnieje, słowo kluczowe tworzy nowe miejsce wysyłki w tabeli funkcji wirtualnych dla klasy.
 
-Niezależnie od tego, czy klasa bazowa implementuje jego metody abstrakcyjne klasach pochodnych można podać implementacji metody abstrakcyjne. Aby zaimplementować metodę abstrakcyjną w klasie pochodnej, należy zdefiniować metodę, która ma taką samą nazwę i podpis w klasie pochodnej, z wyjątkiem użycia `override` lub `default` — słowo kluczowe i podaj treści metody. Słowa kluczowe `override` i `default` oznacza dokładnie tak samo. Użyj `override` Jeśli nowa metoda zastępuje implementacji klasy podstawowej; użyj `default` podczas tworzenia implementacji w tej samej klasy jako abstrakcyjnej pierwotnej deklaracji. Nie używaj `abstract` — słowo kluczowe w metodzie, która implementuje metodę, która został zadeklarowany jako abstrakcyjny w klasie bazowej.
+Niezależnie od tego, czy klasa bazowa implementuje metody abstrakcyjne, klasy pochodne mogą dostarczać implementacje metod abstrakcyjnych. Aby zaimplementować metodę abstrakcyjną w klasie pochodnej, zdefiniuj metodę, która ma taką samą nazwę i podpis w klasie pochodnej, z wyjątkiem użycia `override` słowa kluczowego or `default` i podaj treść metody. Słowa kluczowe `override` i `default` oznaczają dokładnie te same rzeczy. Użyj `override` , jeśli nowa metoda przesłania implementację klasy bazowej; Użyj `default` , gdy tworzysz implementację w tej samej klasie co oryginalna deklaracja abstrakcyjna. Nie należy używać `abstract` słowa kluczowego na metodzie implementującej metodę, która została zadeklarowana jako abstract w klasie bazowej.
 
-W poniższym przykładzie pokazano metodę abstrakcyjną `Rotate` zawierający implementacji domyślnej, odpowiednik metody wirtualnej .NET Framework.
+Poniższy przykład ilustruje metodę `Rotate` abstrakcyjną, która ma implementację domyślną, równoważnej metody wirtualnej .NET Framework.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3403.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3403.fs)]
 
-Poniższy przykład ilustruje klasę pochodną, która zastępuje metodę klasy bazowej. W tym przypadku zastąpienie zmienia zachowanie, tak aby nie robi nic, metoda.
+Poniższy przykład ilustruje klasę pochodną, która zastępuje metodę klasy bazowej. W takim przypadku zastąpienie zmieni zachowanie, tak aby Metoda niczego nie robi.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3404.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3404.fs)]
 
 ## <a name="overloaded-methods"></a>Przeciążone metody
 
-Przeciążone metody są metody, które mają identyczne nazwy w danego typu, ale mają różnymi argumentami. W F#, argumenty opcjonalne są zwykle używane zamiast przeciążonych metod. Jednak przeciążone metody są dozwolone w języku, pod warunkiem, że argumenty znajdują się w formularzu krotki i nie rozwinięte formularza.
+Przeciążone metody to metody, które mają identyczne nazwy w danym typie, ale które mają różne argumenty. W F#programie argumenty opcjonalne są zwykle używane zamiast przeciążonych metod. Jednak przeciążone metody są dozwolone w języku, pod warunkiem, że argumenty są w postaci krotki, nie rozwinięte form.
 
-## <a name="optional-arguments"></a>Argumenty opcjonalne.
+## <a name="optional-arguments"></a>Argumenty opcjonalne
 
-Począwszy od F# 4.1, mogą też istnieć Argumenty opcjonalne z wartością domyślną parametru za pomocą metod.  To, aby ułatwić współdziałanie z kodem C#.  Poniższy przykład pokazuje składnię:
+Począwszy od F# 4,1, można także mieć opcjonalne argumenty z domyślną wartością parametru w metodach.  W ten sposób można ułatwić współdziałanie C# z kodem.  Poniższy przykład ilustruje składnię:
 
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.
@@ -109,13 +109,13 @@ type C() =
     __.M([<Optional; DefaultParameterValue(12)>] i) = i + 1
 ```
 
-Należy zauważyć, że wartość przekazywana w dla `DefaultParameterValue` musi odpowiadać typowi danych wejściowych.  W powyższym przykładzie jest `int`.  Próba przekazania wartości niebędące liczbami całkowitymi, do `DefaultParameterValue` mogłoby spowodować błąd kompilacji.
+Należy zauważyć, że wartość przeniesiona `DefaultParameterValue` dla elementu musi być zgodna z typem danych wejściowych.  W powyższym przykładzie jest `int`to.  Próba przekazania wartości `DefaultParameterValue` innej niż całkowita spowoduje błąd kompilacji.
 
 ## <a name="example-properties-and-methods"></a>Przykład: Właściwości i metody
 
-Poniższy przykład zawiera typ, który zawiera przykłady pola, prywatne funkcje, właściwości i metody statycznej.
+Poniższy przykład zawiera typ, który ma przykłady pól, funkcji prywatnych, właściwości i metody statycznej.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3406.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3406.fs)]
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: dc7129e11a82741f5a095d7f1824de3f90421056
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: d1fcf15db750167a93344ff8efd5957933bed6c0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331761"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629845"
 ---
 # <a name="imaging-overview"></a>Przegląd Obrazowanie
 Ten temat zawiera wprowadzenie do programu [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]umożliwia deweloperom wyświetlanie, przekształcanie i formatowanie obrazów.  
@@ -165,7 +165,7 @@ Pędzle obrazu mogą wypełniać kształty, kontrolki, tekst i nie tylko
 ## <a name="image-metadata"></a>Metadane obrazu  
  Niektóre pliki obrazów zawierają metadane opisujące zawartość lub charakterystykę pliku. Na przykład większość kamer cyfrowych tworzy obrazy zawierające metadane dotyczące marki i modelu aparatu używane do przechwytywania obrazu. Każdy format obrazu obsługuje metadane inaczej, [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] ale zapewnia jednolity sposób przechowywania i pobierania metadanych dla każdego obsługiwanego formatu obrazu.  
   
- Dostęp do metadanych jest udostępniany przez <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> Właściwość <xref:System.Windows.Media.Imaging.BitmapSource> obiektu. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A><xref:System.Windows.Media.Imaging.BitmapMetadata> zwraca obiekt, który zawiera wszystkie metadane zawarte w obrazie. Te dane mogą znajdować się w jednym schemacie metadanych lub w połączeniu z różnymi schematami. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]obsługuje następujące schematy metadanych [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)]obrazów:, tEXt (dane tekstowe PNG) [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)], [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], i [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
+ Dostęp do metadanych jest udostępniany przez <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> Właściwość <xref:System.Windows.Media.Imaging.BitmapSource> obiektu. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A><xref:System.Windows.Media.Imaging.BitmapMetadata> zwraca obiekt, który zawiera wszystkie metadane zawarte w obrazie. Te dane mogą znajdować się w jednym schemacie metadanych lub w połączeniu z różnymi schematami. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]obsługuje następujące schematy metadanych obrazów: Plik obrazu z wymianą (EXIF), tekst (dane tekstowe PNG) [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)], i [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
   
  Aby uprościć proces odczytywania <xref:System.Windows.Media.Imaging.BitmapMetadata> metadanych, program udostępnia kilka nazwanych właściwości, które można łatwo uzyskać do nich dostęp, takich jak <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, i <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Wiele z tych nazwanych właściwości może również służyć do pisania metadanych. Dodatkowa obsługa odczytywania metadanych jest dostarczana przez czytelnika zapytania metadanych. Metoda jest używana do pobierania czytnika zapytań metadanych przez podanie ciągu zapytania, takiego jak *"/APP1/EXIF/".* <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> W poniższym przykładzie <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> jest używany do uzyskania tekstu przechowywanego w lokalizacji *"/text/Description"* .  
   

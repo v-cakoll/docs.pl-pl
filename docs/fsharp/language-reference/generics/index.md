@@ -1,17 +1,17 @@
 ---
 title: Typy ogólne
-description: Dowiedz się, jak używać F# ogólne funkcje i typy, które umożliwiają pisanie kodu działającego z różnymi typami bez konieczności użycia kodu.
+description: Dowiedz się, F# jak używać funkcji i typów ogólnych, które umożliwiają pisanie kodu, który działa z różnymi typami bez powtarzania kodu.
 ms.date: 05/16/2016
-ms.openlocfilehash: e30b00343e48d3a8abd51f62c003ba0d1984db18
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 47eed0b8e074cfb591e6d8e2c382b9ea6a6e97f0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641852"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630608"
 ---
 # <a name="generics"></a>Typy ogólne
 
-F#Funkcja wartości metod, właściwości i typy zagregowane, takie jak klasy, rejestruje i związki dyskryminowane mogą być *ogólny*. Konstrukcje ogólnego zawiera co najmniej jeden parametr typu, zwykle jest ona dostarczana przez użytkownika ogólnego konstrukcji. Ogólne funkcje i typy umożliwiają pisanie kodu działającego z różnymi typami bez powtarzania kodu dla każdego typu. Wprowadzanie kodu ogólny może okazać się proste w F#, ponieważ często kodu niejawnie wywnioskowana jest ogólny wnioskowanie o typie kompilatora i automatyczna Generalizacja mechanizmów.
+F#wartości funkcji, metody, właściwości i typy agregujące, takie jak klasy, rekordy i Unii rozłącznych, mogą być *Ogólne*. Konstrukcje generyczne zawierają co najmniej jeden parametr typu, który jest zwykle dostarczany przez użytkownika konstrukcji ogólnej. Funkcje i typy ogólne umożliwiają pisanie kodu, który działa z różnymi typami bez powtarzania kodu dla każdego typu. Uczynienie kodu generycznego może być proste F#w, ponieważ często kod jest niejawnie wnioskowany jako ogólny przez wnioskowanie typu kompilatora i automatyczne mechanizmy generalize.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,66 +31,66 @@ type type-name<type-parameters> type-definition
 
 ## <a name="remarks"></a>Uwagi
 
-Deklaracja jawnie ogólna funkcja lub typ znacznie jest podobne do funkcji nieogólnego lub typu, z wyjątkiem specyfikacji (i użyj) parametrami typu, w nawiasy ostre po nazwie funkcji lub typu.
+Deklaracja jawnej funkcji ogólnej lub typu jest znacznie taka sama jak w przypadku funkcji niegenerycznej lub typu, z wyjątkiem specyfikacji (i użycia) parametrów typu w nawiasach kątowych po nazwie funkcji lub typu.
 
-Deklaracje często są niejawnie ogólnego. Jeśli nie zostanie całkowicie typ każdego parametru, który jest używany do tworzenia, funkcja lub typ, kompilator spróbuje wywnioskować typ każdego parametru, wartość i zmienną z tworzonego kodu. Aby uzyskać więcej informacji, zobacz [wnioskowanie o typie](../type-inference.md). Jeśli kod dla typu lub funkcji nie inny sposób ograniczyć typy parametrów, funkcja lub typ jest niejawnie ogólnego. Proces ten nosi nazwę *automatyczna Generalizacja*. Istnieją pewne ograniczenia na automatyczna Generalizacja. Na przykład jeśli F# kompilator nie można wywnioskować typów ogólnych konstrukcji, kompilator zgłasza błąd, który odwołuje się do ograniczenia, o nazwie *wartość ograniczenia*. W takiej sytuacji może być konieczne dodawania niektórych adnotacji typu. Aby uzyskać więcej informacji na temat automatyczna Generalizacja i ograniczenie wartości oraz zmian w kodzie, aby rozwiązać ten problem, zobacz [automatyczna Generalizacja](automatic-generalization.md).
+Deklaracje są często niejawnie rodzajowe. Jeśli nie określisz w pełni typu każdego parametru, który jest używany do redagowania funkcji lub typu, kompilator próbuje wnioskować o typie każdego parametru, wartości i zmiennej z kodu, który napiszesz. Aby uzyskać więcej informacji, zobacz wnioskowanie o [typie](../type-inference.md). Jeśli kod typu lub funkcji nie ogranicza w inny sposób typów parametrów, funkcja lub typ są niejawnie rodzajowe. Ten proces nosi nazwę *automatycznego uogólniania*. Istnieją pewne ograniczenia dotyczące automatycznego uogólniania. Jeśli na przykład F# kompilator nie może wywnioskować typów dla konstrukcji ogólnej, kompilator zgłosi błąd, który odwołuje się do ograniczenia o nazwie *ograniczenia wartości*. W takim przypadku może być konieczne dodanie adnotacji typu. Aby uzyskać więcej informacji o automatycznym uogólnieniu i ograniczeniu wartości oraz sposobie zmiany kodu w celu rozwiązania problemu, zobacz [Automatyczne uogólnianie](automatic-generalization.md).
 
-W poprzedniej składni *parametrów typu* jest rozdzielaną przecinkami listę parametrów, które reprezentują nieznane typy, które zaczyna się od pojedynczego cudzysłowu, opcjonalnie z klauzulą ograniczenia, który dodatkowo ogranicza typy mogą można użyć dla tego parametru typu. Składnia klauzule ograniczenie różnych rodzajów oraz inne informacje o ograniczeniach, zobacz [ograniczenia](constraints.md).
+W poprzedniej składni *Typ-parametry* jest rozdzielaną przecinkami listą parametrów, które reprezentują nieznane typy, z których każdy zaczyna się od pojedynczego znaku cudzysłowu, opcjonalnie z klauzulą ograniczenia, która dodatkowo ogranicza typy, które mogą być używane dla tego typu konstruktora. Aby poznać składnię klauzul ograniczenia różnych rodzajów i inne informacje o ograniczeniach, zobacz [ograniczenia](constraints.md).
 
-*Definicji typu* w składni jest taka sama jak definicji typu dla typu nieogólnego. Zawiera parametry konstruktora dla typu klasy, opcjonalny `as` klauzuli, symbol taki sam, pola rekordu `inherit` klauzuli, opcje złożenia dyskryminowanego `let` i `do` powiązania, definicje elementów członkowskich i jeszcze jakieś dozwolone w definicji typu nieogólnego.
+*Definicja typu* w składni jest taka sama jak definicja typu dla typu innego niż ogólny. Obejmuje ona parametry konstruktora dla typu klasy, klauzulę opcjonalną `as` , znak równości, pola rekordu `inherit` , klauzulę, opcje dla Unii `let` rozłącznych i `do` powiązania, definicje elementów członkowskich, i wszystkie inne dozwolone w definicji typu nieogólnego.
 
-Inne elementy składni są takie same jak w przypadku funkcji innych niż ogólne i typów. Na przykład *identyfikator obiektu* jest identyfikatorem, który reprezentuje sam obiekt zawierający.
+Inne elementy składni są takie same jak dla funkcji i typów innych niż ogólne. Na przykład *obiekt-identyfikator* to identyfikator reprezentujący zawierający go obiekt.
 
-Właściwości, pola i konstruktory nie może być bardziej ogólny niż typ otaczający. Ponadto w module nie mogą być ogólne.
+Właściwości, pola i konstruktory nie mogą być bardziej ogólne niż typ otaczający. Ponadto wartości w module nie mogą być ogólne.
 
-## <a name="implicitly-generic-constructs"></a>Konstrukcje niejawnie ogólny
+## <a name="implicitly-generic-constructs"></a>Niejawnie konstrukcje ogólne
 
-Gdy F# kompilator wnioskuje typów w kodzie, automatycznie traktuje dowolnej funkcji, które mogą być rodzajowe jako ogólnego. Jeśli jawnie określić typ takich jak parametr typu, możesz zapobiec automatyczna Generalizacja.
+Gdy F# kompilator wnioskuje typy w kodzie, automatycznie traktuje wszystkie funkcje, które mogą być generyczne jako ogólne. W przypadku określenia typu jawnie, takiego jak typ parametru, można zapobiec automatycznemu generalizacji.
 
-W poniższym przykładzie kodu `makeList` jest ogólny, mimo że ten plik ani jego parametry są jawnie zadeklarowane jako ogólnego.
+W poniższym przykładzie `makeList` kodu jest ogólny, nawet mimo że ani jego parametry nie są jawnie zadeklarowane jako ogólne.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
 
-Podpis funkcji wywnioskowana jest `'a -> 'a -> 'a list`. Należy pamiętać, że `a` i `b` w tym przykładzie są wnioskowane mieć tego samego typu. Jest tak, ponieważ są one ze sobą uwzględnione na liście, a wszystkie elementy listy muszą być tego samego typu.
+Podpis funkcji jest wywnioskowany jako `'a -> 'a -> 'a list`. Należy zauważyć `a` , `b` że i w tym przykładzie są wywnioskowane w celu uzyskania tego samego typu. Jest to spowodowane tym, że są one uwzględnione na liście razem, a wszystkie elementy listy muszą być tego samego typu.
 
-Istnieje również możliwość funkcji ogólnego przy użyciu składni znak pojedynczego cudzysłowu w adnotacji typu, aby wskazać, że typ parametru jest parametr typu ogólnego. W poniższym kodzie `function1` jest ogólna, ponieważ jego parametry są deklarowane w ten sposób jako parametrów typu.
+Możesz również uczynić funkcję ogólną przy użyciu składni pojedynczego cudzysłowu w adnotacji typu, aby wskazać, że typ parametru jest parametrem typu ogólnego. W poniższym kodzie `function1` jest ogólny, ponieważ jego parametry są zadeklarowane w ten sposób jako parametry typu.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
 
-## <a name="explicitly-generic-constructs"></a>Konstrukcje jawnie ogólny
+## <a name="explicitly-generic-constructs"></a>Jawne konstrukcje generyczne
 
-Można również ustawić jako funkcja ogólnego jawnie deklarując jego parametrów typu w nawiasy ostre (`<type-parameter>`). Ilustruje to poniższy kod.
+Można również wykonać funkcję ogólną, jawnie deklarując jej parametry typu w nawiasach kątowych (`<type-parameter>`). Ilustruje to poniższy kod.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
 
-## <a name="using-generic-constructs"></a>Za pomocą zwykłego konstrukcji
+## <a name="using-generic-constructs"></a>Korzystanie z konstrukcji ogólnych
 
-Gdy używasz funkcji ogólnego lub metody, może nie należy określić argumenty typu. Kompilator używa wnioskowanie o typie wywnioskowania odpowiednie argumenty typu. Jeśli jest nadal niejednoznaczność, można podać argumentów typu w nawiasy ostre, oddziel przecinkami wiele argumentów typu.
+W przypadku korzystania z funkcji ogólnych lub metod, może nie trzeba określać argumentów typu. Kompilator używa wnioskowania o typie do wnioskowania odpowiednich argumentów typu. Jeśli nadal występuje niejednoznaczność, można podać argumenty typu w nawiasach kątowych, oddzielając wiele argumentów typu przecinkami.
 
-Poniższy kod przedstawia korzystania z funkcji, które są zdefiniowane w poprzednich sekcjach.
+Poniższy kod przedstawia użycie funkcji, które są zdefiniowane w poprzednich sekcjach.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
 > [!NOTE]
-> Istnieją dwa sposoby, aby odwołać się do typu ogólnego według nazwy. Na przykład `list<int>` i `int list` do odwoływania się do typu ogólnego na dwa sposoby `list` ma argument typu pojedynczego `int`. Drugim formularzu powszechnie jest używana tylko z wbudowanych F# typy takie jak `list` i `option`. Jeśli istnieje wiele argumentów typu, zwykle użyć składni `Dictionary<int, string>` , ale można również używać składni `(int, string) Dictionary`.
+> Istnieją dwa sposoby odwoływania się do typu ogólnego według nazwy. Na przykład `list<int>` i `int list` są dwa sposoby odwoływania się do typu `list` ogólnego, który ma jeden argument `int`typu. Ten drugi formularz jest stosowany do Konwencji tylko z wbudowanymi F# typami, takimi `list` jak `option`i. Jeśli istnieje wiele argumentów typu, zazwyczaj używana jest składnia `Dictionary<int, string>` , ale można również użyć składni. `(int, string) Dictionary`
 
-## <a name="wildcards-as-type-arguments"></a>Symboli wieloznacznych jako argumentów typu
+## <a name="wildcards-as-type-arguments"></a>Symbole wieloznaczne jako argumenty typu
 
-Aby określić, że argument typu powinny być zakładane przez kompilator, można użyć znaku podkreślenia lub symbol wieloznaczny (`_`), zamiast argumentu typu nazwanego. Jest to pokazane w poniższym kodzie.
+Aby określić, że argument typu powinien być wywnioskowany przez kompilator, można użyć znaku podkreślenia lub symbolu wieloznacznego (`_`) zamiast argumentu nazwanego typu. Jest to pokazane w poniższym kodzie.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
 
-## <a name="constraints-in-generic-types-and-functions"></a>Ograniczenia typów rodzajowych i funkcji
+## <a name="constraints-in-generic-types-and-functions"></a>Ograniczenia w typach ogólnych i funkcjach
 
-W ogólnym typie lub definicji funkcji można użyć tylko konstrukcji, które są znane jako dostępne na parametr typu ogólnego. Jest to wymagane, aby włączyć weryfikację wywołań funkcji i metody w czasie kompilacji. Parametry typu jest jawnie zadeklarowana, mogą dotyczyć jawne ograniczenie parametru typu ogólnego do powiadamiania kompilator, że niektóre metody i funkcje są dostępne. Jednak jeśli zezwolisz programowi F# kompilatorowi wywnioskowania swoje typy parametrów ogólnych określi ograniczenia odpowiedni dla Ciebie. Aby uzyskać więcej informacji, zobacz [ograniczenia](constraints.md).
+W definicji typu ogólnego lub funkcji można używać tylko tych konstrukcji, które są znane jako dostępne dla parametru typu ogólnego. Jest to wymagane, aby umożliwić weryfikację wywołań funkcji i metod w czasie kompilacji. Jeśli jawnie deklarujesz parametry typu, możesz zastosować jawne ograniczenie do parametru typu ogólnego, aby powiadomić kompilator, że niektóre metody i funkcje są dostępne. Jeśli jednak zezwolisz F# kompilatorowi na wnioskowanie o typach parametrów ogólnych, określisz odpowiednie ograniczenia. Aby uzyskać więcej informacji, zobacz [ograniczenia](constraints.md).
 
 ## <a name="statically-resolved-type-parameters"></a>Statycznie rozwiązywane parametry typu
 
-Istnieją dwa rodzaje parametrów typu, które mogą być używane w F# programów. Pierwszy to parametry typu ogólnego rodzaju opisanych w poprzednich sekcjach. Ten pierwszy rodzaj parametru typu jest odpowiednikiem parametrów typu ogólnego, które są używane w językach takich jak Visual Basic i C#. Inny rodzaj parametru typu zależy od F# i jest określany jako *statystycznie rozpoznany typ parametru*. Aby uzyskać informacji na temat te konstrukcje, zobacz [statycznie rozwiązywanych parametrach typu](statically-resolved-type-parameters.md).
+Istnieją dwa rodzaje parametrów typu, które mogą być używane w F# programach. Pierwsze są parametry typu ogólnego, które opisano w poprzednich sekcjach. Ten pierwszy rodzaj parametru typu jest odpowiednikiem parametrów typu ogólnego, które są używane w językach takich jak Visual Basic i C#. Inny rodzaj parametru typu jest specyficzny dla F# i jest określany jako *parametr typu statycznie rozpoznany*. Aby uzyskać informacje o tych konstrukcjach, zobacz [statycznie rozpoznane parametry typu](statically-resolved-type-parameters.md).
 
 ## <a name="examples"></a>Przykłady
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
 
 ## <a name="see-also"></a>Zobacz także
 

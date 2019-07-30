@@ -1,17 +1,17 @@
 ---
 title: Interfejsy
-description: Dowiedz się, jak F# interfejsy określają zestawy pokrewnych elementów członkowskich, które implementują innych klas.
+description: Dowiedz F# się, jak interfejsy określają zestawy powiązanych elementów członkowskich, które są implementowane przez inne klasy.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5b57769af6c05b83b3a112635033abf4efaca772
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8f054a668ad0fbc2453a45883e8052471280eca3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645377"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627649"
 ---
 # <a name="interfaces"></a>Interfejsy
 
-*Interfejsy* określić zestawy pokrewnych elementów członkowskich, które implementują innych klas.
+*Interfejsy* określają zestawy powiązanych członków, które są implementowane przez inne klasy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,53 +43,53 @@ let class-name (argument-list) =
 
 ## <a name="remarks"></a>Uwagi
 
-Deklaracje interfejsu przypominają deklaracji klasy, z tą różnicą, że żadne składowe są implementowane. Zamiast tego wszystkie elementy członkowskie są abstrakcyjne, wskazane przez słowo kluczowe `abstract`. Nie udostępniają treści metody metody abstrakcyjne. Jednak udostępnia domyślną implementację, umieszczając również oddzielne definicji elementu członkowskiego jako metoda wraz z `default` — słowo kluczowe. To jest odpowiednikiem tworzenie wirtualnej metody w klasie bazowej, w innych językach .NET. Metoda wirtualna może być zastąpiona w klasach, które implementują interfejs.
+Deklaracje interfejsów przypominają deklaracje klas, z tą różnicą, że żaden element członkowski nie jest zaimplementowany. Zamiast tego wszystkie elementy członkowskie są abstrakcyjne, zgodnie ze wskazaniem `abstract`słowa kluczowego. Nie udostępniamy treści metody dla metod abstrakcyjnych. Można jednak podać domyślną implementację, uwzględniając także odrębną definicję elementu członkowskiego jako metodę razem ze `default` słowem kluczowym. Jest to równoznaczne z tworzeniem metody wirtualnej w klasie bazowej w innych językach .NET. Taka metoda wirtualna może zostać przesłonięta w klasach, które implementują interfejs.
 
-Wartość domyślna dostępu dla interfejsów `public`.
+Domyślnymi ułatwieniami dostępu dla `public`interfejsów są.
 
-Użytkownik może opcjonalnie nazwij każdego parametru metody przy użyciu normalnych F# składni:
+Opcjonalnie możesz nadać każdemu parametrowi metody nazwę przy użyciu F# standardowej składni:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
 
-W powyższych `ISprintable` przykład `Print` metoda ma jeden parametr typu `string` o nazwie `format`.
+W powyższym `ISprintable` przykładzie `Print` Metoda ma jeden parametr typu `string` o nazwie `format`.
 
-Istnieją dwa sposoby, aby zaimplementować interfejsów: przy użyciu wyrażeń obiektów i za pomocą typu klasy. W obu przypadkach wyrażenie typu lub obiektu klasy zawiera treści metod dla metody abstrakcyjne interfejsu. Implementacje są właściwe dla każdego typu, który implementuje interfejs. W związku z tym metod interfejsu w różnych typach może się różnić od siebie nawzajem.
+Istnieją dwa sposoby implementacji interfejsów: przy użyciu wyrażeń obiektów i typów klas. W obu przypadkach typ klasy lub wyrażenie obiektu zawiera treść metody dla abstrakcyjnych metod interfejsu. Implementacje są specyficzne dla każdego typu, który implementuje interfejs. W związku z tym metody interfejsu dla różnych typów mogą się różnić od siebie.
 
-Słowa kluczowe `interface` i `end`, które oznaczania początku i końca definicji, są opcjonalne, jeśli używasz składni lekkiej. Jeśli nie używasz tych słów kluczowych, kompilator próbuje rozpoznać, czy typ jest klasą lub interfejs, analizując konstrukcje, których używasz. Jeśli możesz definiować element członkowski lub inną składnię klasy, typ jest interpretowany jako klasa.
+Słowa kluczowe `interface` i `end`, które oznaczają początek i koniec definicji, są opcjonalne w przypadku używania lekkiej składni. Jeśli nie używasz tych słów kluczowych, kompilator próbuje określić, czy typ jest klasą, czy interfejsem, analizując używane konstrukcje. Jeśli zdefiniujesz element członkowski lub użyjesz innej składni klasy, typ jest interpretowany jako Klasa.
 
-Styl kodowania platformy .NET jest rozpoczęcie wszystkie interfejsy z wielkiej litery `I`.
+Styl kodowania .NET polega na rozpoczęciu wszystkich interfejsów z stolicą `I`.
 
-## <a name="implementing-interfaces-by-using-class-types"></a>Implementacja interfejsów przy użyciu typów klas
+## <a name="implementing-interfaces-by-using-class-types"></a>Implementowanie interfejsów przy użyciu typów klas
 
-Można wdrożyć jeden lub więcej interfejsów w typie klasy przy użyciu `interface` — słowo kluczowe, nazwy interfejsu, a `with` — słowo kluczowe, a następnie definicji składowej interfejsu, jak pokazano w poniższym kodzie.
+Można zaimplementować jeden lub więcej interfejsów w typie klasy za pomocą `interface` słowa kluczowego, nazwy interfejsu `with` i słowa kluczowego, a następnie definicji elementu członkowskiego interfejsu, jak pokazano w poniższym kodzie.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2801.fs)]
 
-Implementacje interfejsu są dziedziczone, dzięki czemu nie trzeba ich ponownie wszystkie klasy pochodne.
+Implementacje interfejsu są dziedziczone, więc wszystkie klasy pochodne nie muszą ponownie wdrażać.
 
-## <a name="calling-interface-methods"></a>Wywoływanie metody interfejsu
+## <a name="calling-interface-methods"></a>Wywoływanie metod interfejsu
 
-Metody interfejsu może być wywoływana tylko za pośrednictwem interfejsu, a nie przy użyciu dowolnego obiektu typu, który implementuje interfejs. W związku z tym, może być konieczne rozszerzające typ interfejsu za pomocą `:>` operatora lub `upcast` operatora w celu wywołania tych metod.
+Metody interfejsu można wywoływać tylko za pomocą interfejsu, a nie za pomocą dowolnego obiektu typu, który implementuje interfejs. W ten sposób może być konieczne przerzutowanie na typ interfejsu za pomocą `:>` operatora `upcast` lub operatora w celu wywołania tych metod.
 
-Aby wywołać metodę interfejsu, w przypadku obiektu o typie `SomeClass`, należy najpierw rozszerzające obiektu do typu interfejsu, jak pokazano w poniższym kodzie.
+Aby wywołać metodę interfejsu, gdy masz obiekt typu `SomeClass`, należy przerzutować obiekt na typ interfejsu, jak pokazano w poniższym kodzie.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2802.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2802.fs)]
 
-Alternatywą jest do deklarowania metody dla obiektu tego upcasts i wywołuje metodę interfejsu, jak w poniższym przykładzie.
+Alternatywą jest zadeklarowanie metody na obiekcie, który rzutuje i wywołuje metodę interfejsu, jak w poniższym przykładzie.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2803.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2803.fs)]
 
-## <a name="implementing-interfaces-by-using-object-expressions"></a>Implementacja interfejsów przy użyciu wyrażeń obiektów
+## <a name="implementing-interfaces-by-using-object-expressions"></a>Implementowanie interfejsów przy użyciu wyrażeń obiektów
 
-Wyrażenia obiektów umożliwiają krótki do implementacji interfejsu. Są one przydatne, gdy nie trzeba tworzyć nazwany typ, a Ty chcesz po prostu obiekt, który obsługuje metody interfejsu, bez żadnych dodatkowych metod. Wyrażenie obiektu to zilustrowane w poniższym kodzie.
+Wyrażenia obiektów zapewniają krótki sposób implementacji interfejsu. Są one przydatne, gdy nie trzeba tworzyć nazwanego typu, a ty chcesz tylko obiekt obsługujący metody interfejsu, bez żadnych dodatkowych metod. Wyrażenie obiektu jest zilustrowane w poniższym kodzie.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2804.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2804.fs)]
 
-## <a name="interface-inheritance"></a>Dziedziczenia interfejsu
+## <a name="interface-inheritance"></a>Dziedziczenie interfejsu
 
-Interfejsy mogą dziedziczyć jeden lub więcej podstawowych interfejsów.
+Interfejsy mogą dziedziczyć z jednego lub kilku interfejsów podstawowych.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2805.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2805.fs)]
 
 ## <a name="see-also"></a>Zobacz także
 

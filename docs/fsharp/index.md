@@ -1,67 +1,67 @@
 ---
 title: Podręcznik języka F#
-description: Ten przewodnik zawiera omówienie różnych materiałów szkoleniowych dla F#, funkcjonalny język programowania, który działa na platformie .NET.
+description: Ten przewodnik zawiera omówienie różnych materiałów szkoleniowych dla F#programu — języka programowania funkcjonalnego działającego na platformie .NET.
 author: cartermp
 ms.date: 08/03/2018
-ms.openlocfilehash: 7bba949a7567173f5f3918a6ed32aabad26fb362
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd878fc907d1ebfe4c96a0b5a77151b70d74fb29
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772804"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629703"
 ---
 # <a name="f-guide"></a>Podręcznik języka F#
 
-F# Przewodnik zawiera wiele zasobów, aby dowiedzieć się więcej F# języka.
+F# Przewodnik zawiera wiele zasobów umożliwiających zapoznanie się F# z językiem.
 
-## <a name="learning-f"></a>Learning F\#
+## <a name="learning-f"></a>Nauka F\#
 
-[Co to jest F# ](what-is-fsharp.md) opisano, czego F# języka i jakie programowania w nim przypomina z przykładami krótki kod. Jest to zalecane, jeśli jesteś nowym użytkownikiem F#.
+Opis tego, czym jest F# język i w jakim z nich programowania, z krótkimi przykładami kodu. [ F# ](what-is-fsharp.md) Jest to zalecane, jeśli jesteś nowym F#.
 
-[Przewodnik po przykładzie F# ](tour.md) zawiera omówienie funkcji języka główne z dużą liczbą przykładów kodu. Jest to zalecane, jeśli interesują Cię core F# funkcje w działaniu.
+Samouczek zawiera omówienie najważniejszych funkcji języka z wieloma przykładami kodu. [ F# ](tour.md) Jest to zalecane, jeśli chcesz zobaczyć podstawowe F# funkcje w działaniu.
 
-[Rozpoczynanie pracy z usługą F# w programie Visual Studio](get-started/get-started-visual-studio.md) Jeśli jesteś na Windows i pragną w pełni korzystać z programu Visual Studio IDE (zintegrowanego środowiska programistycznego).
+[Zacznij korzystać z F# programu Visual Studio](./get-started/get-started-visual-studio.md) , jeśli jesteś w systemie Windows i chcesz uzyskać pełne środowisko IDE programu Visual Studio (zintegrowane środowisko programistyczne).
 
-[Rozpoczynanie pracy z usługą F# w programie Visual Studio dla komputerów Mac](get-started/get-started-with-visual-studio-for-mac.md) Jeśli w systemie macOS i chcesz użyć programu Visual Studio IDE.
+[Rozpocznij pracę z F# usługą w Visual Studio dla komputerów Mac](./get-started/get-started-with-visual-studio-for-mac.md) , jeśli jesteś w MACOS i chcesz używać środowiska IDE programu Visual Studio.
 
-[Rozpoczynanie pracy z usługą F# w programie Visual Studio Code](get-started/get-started-vscode.md) Jeśli chcesz, aby lekkie dla wielu platform i środowisko IDE wzbogacona.
+[Zacznij korzystać z F# programu w programie Visual Studio Code](./get-started/get-started-vscode.md) , jeśli chcesz mieć uproszczone, międzyplatformowe i spakowane środowisko IDE.
 
-[Rozpoczynanie pracy z usługą F# przy użyciu interfejsu wiersza polecenia platformy .NET Core](get-started/get-started-command-line.md) Jeśli chcesz używać narzędzi wiersza polecenia.
+[Rozpocznij pracę F# z interfejs wiersza polecenia platformy .NET Core,](./get-started/get-started-command-line.md) Jeśli chcesz używać narzędzi wiersza polecenia.
 
-[Rozpoczynanie pracy z usługą F# i Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) do programowania mobilnych za pomocą F#.
+[Rozpocznij pracę z F# programem i](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) platformą Xamarin dla F#aplikacji mobilnych za pomocą programu.
 
-[F#dla platformy Azure, notesy](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb) jest samouczek dotyczący uczenia F# w bezpłatnej, hostowanej notesu programu Jupyter.
+Azure Notebooks to samouczek dotyczący uczenia F# się w bezpłatnej, hostowanej Jupyter Notebook. [ F# ](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb)
 
 ## <a name="references"></a>Odwołania
 
-[F#Dokumentacja języka](language-reference/index.md) jest odwołaniem oficjalne, wszechstronnymi dla wszystkich F# funkcje języka. Każdego artykułu opisano składnię i przedstawiono przykłady kodu. Pasek filtru w spisie treści służy do znalezienia określonych artykułów.
+Dokumentacja języka to oficjalne, wyczerpujące odwołanie do wszystkich F# funkcji języka. [ F# ](./language-reference/index.md) W każdym artykule wyjaśniono składnię i przedstawiono przykłady kodu. Aby znaleźć określone artykuły, można użyć paska filtru w spisie treści.
 
-[F#Podstawowe informacje o bibliotece](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) jest odwołanie do interfejsu API F# podstawowej biblioteki.
+Odwołanie do biblioteki podstawowej jest odwołaniem do interfejsu F# API dla biblioteki podstawowej. [ F# ](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)
 
-## <a name="additional-guides"></a>Dodatkowe przewodniki
+## <a name="additional-guides"></a>Dodatkowe prowadnice
 
-[F#dla zabawy i zysk](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) kompleksowe i bardzo szczegółową książki w ramach nauki F#. Jego zawartość i autor są ukochanego przez F# społeczności. Docelowi odbiorcy to przede wszystkim deweloperom tła programowania zorientowana obiektowo.
+[na potrzeby zabawy i zysku to kompleksowa i bardzo szczegółowa książka szkoleniowa. F# ](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) F# Jego zawartość i autor są Beloved przez F# społeczność. Docelowi odbiorcy to głównie deweloperzy z zorientowanym na obiekty tłem programistycznym.
 
-[F#Wikibook programowania](https://en.wikibooks.org/wiki/F_Sharp_Programming) jest wikibook o funkcji uczenie F#. Również jest produktem F# społeczności. Docelowymi odbiorcami są osoby, które są nowe F#, za pomocą trochę obiektu zorientowanej na tle programowania.
+Wikibook programistyczny to Wikibook o uczeniu F#się. [ F# ](https://en.wikibooks.org/wiki/F_Sharp_Programming) Jest to również produkt F# społecznościowy. Odbiorcy docelowi to osoby, które są F#nowością, z małym sposobem na programowanie zorientowane obiektowo.
 
-## <a name="learn-f-through-videos"></a>Dowiedz się, F# za pomocą wideo
+## <a name="learn-f-through-videos"></a>Zapoznaj się F# z filmami wideo
 
-[F#samouczek dotyczący usługi YouTube](https://www.youtube.com/watch?v=c7eNDJN758U) stanowi znakomite wprowadzenie do F# przy użyciu programu Visual Studio, przedstawiający mnóstwo znajdują się świetne przykłady w miarę upływu 1,5 godziny. Docelowymi odbiorcami są deweloperzy programu Visual Studio, którzy dopiero F#.
+F# [samouczek w serwisie YouTube to doskonałe wprowadzenie do korzystania z programu Visual Studio, które przedstawia wiele doskonałych przykładów w ciągu 1,5 F# ](https://www.youtube.com/watch?v=c7eNDJN758U) godzin. Odbiorcy docelowi to deweloperzy programu Visual Studio, którzy F#są nowością w programie.
 
-[Wprowadzenie do programowania w języku F# ](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC) jest doskonałym serii wideo, która korzysta z programu Visual Studio Code jako główny Edytor. Seria filmów zaczyna się od nic i kończy się tworzenie gry wideo RPG oparte na tekście. Docelowymi odbiorcami są deweloperzy, którzy wolą programu Visual Studio Code (lub proste środowisko IDE) i dopiero F#.
+[Wprowadzenie do programowania w F# programie](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC) to świetna seria wideo, która używa Visual Studio Code jako głównego edytora. Seria filmów wideo zaczyna się od niczego i nie zaczyna się od tworzenia gry wideo RPG na podstawie tekstu. Odbiorcy docelowi to deweloperzy, którzy preferują Visual Studio Code (lub lekkich IDE) i F#są nowym systemem.
 
-[What's New in Visual Studio 2017 for F# dla deweloperów](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers) jest kurs wideo, który zawiera niektóre nowsze funkcje dla F# w programie Visual Studio 2017. Docelowymi odbiorcami są deweloperzy programu Visual Studio, którzy dopiero F#.
+[Co nowego w programie Visual Studio 2017 for F# Developers](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers) jest kurs wideo, który pokazuje niektóre nowsze funkcje F# programu Visual Studio 2017. Odbiorcy docelowi to deweloperzy programu Visual Studio, którzy F#są nowością w programie.
 
 ## <a name="other-useful-resources"></a>Inne przydatne zasoby
 
-[ F# Fragmenty witryny sieci Web](http://www.fssnip.net) zawiera zestaw dużych fragmentów kodu, w którym pokazano, jak zrobić wszystko, co w F#— od początkujących bezwzględne do bardzo zaawansowanych fragmentów kodu.
+[ F# Witryna internetowa wstawek](http://www.fssnip.net) zawiera ogromny zestaw fragmentów kodu pokazujących, jak zrobić coś w programie F#, od absolutnej początku do wysoce zaawansowanych wstawek.
 
-[ F# Software Foundation Slack](https://fsharp.org/guides/slack/) to doskonałe miejsce dla początkujących i ekspertów, jak to bardzo aktywne, a niektóre najlepsze na świecie F# programistów dostępne w celu prowadzenia rozmowy. Firma Microsoft zdecydowanie zaleca się dołączania.
+Zapasowy element programu [ F# Software Foundation](https://fsharp.org/guides/slack/) jest doskonałym miejscem dla początkujących i ekspertów, który jest wysoce aktywny i ma niektórych najlepszych F# programistów dostępnych dla rozmowy. Zdecydowanie zalecamy przyłączanie.
 
-## <a name="the-f-software-foundation"></a>The F# Software Foundation
+## <a name="the-f-software-foundation"></a>F# Program Software Foundation
 
-Mimo że firma Microsoft jest podstawowym dewelopera F# języka i jej narzędzi w programie Visual Studio, F# jest także wspierana przez niezależnych foundation F# Software Foundation (FSSF).
+Mimo że firma Microsoft jest głównym deweloperem F# języka i jego narzędzi w programie Visual Studio F# , jest również obsługiwana przez niezależną podstawę F# (FSSF).
 
-Celem F# Software Foundation jest wspieranie, ochronę i Rozwijaj F# język programowania oraz do obsługi i ułatwić rozwój społeczność zróżnicowanych i międzynarodowe F# programistów.
+Misja F# oprogramowania ma na celu promowanie, ochronę i przechodzenie w F# języku programowania oraz wsparcie i ułatwienie rozwoju różnorodnych i międzynarodowych społeczności F# programistów.
 
-Aby dowiedzieć się więcej i Dołącz do społeczności, zapoznaj się z [fsharp.org](https://fsharp.org). Bezpłatnie do dołączania i sieć F# deweloperów podstawą jest coś, co użytkownik nie chce ominęła!
+Aby dowiedzieć się więcej i uzyskać informacje, zobacz [FSharp.org](https://fsharp.org). Dołączenie do niego jest bezpłatne, a sieć F# deweloperów w Fundacji to coś, czego nie chcesz już tęsknić.

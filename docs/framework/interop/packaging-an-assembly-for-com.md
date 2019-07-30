@@ -1,5 +1,5 @@
 ---
-title: Pakowanie zestawu dla modelu COM
+title: Pakowanie zestawu .NET Framework dla modelu COM
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -18,85 +18,85 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb45fc253e24c9770436432d2734ba8fce249453
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 1ca87d688d6802df967ea81b8297b099350f1c86
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662370"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629321"
 ---
-# <a name="packaging-an-assembly-for-com"></a>Pakowanie zestawu dla modelu COM
+# <a name="packaging-a-net-framework-assembly-for-com"></a>Pakowanie zestawu .NET Framework dla modelu COM
 
-COM, deweloperzy mogą korzystać z następujące informacje na temat typów zarządzanych, ich planowanie, które należy uwzględnić w swoich aplikacji:
+Deweloperzy COM mogą skorzystać z następujących informacji o zarządzanych typach, które mają zostać dołączone do swojej aplikacji:
 
-- Lista typów, które mogą używać aplikacje COM
+- Lista typów, których mogą używać aplikacje COM
 
-  Niektóre typy zarządzane są niewidoczne dla modelu COM; Niektóre z nich są widoczne, ale nie jest możliwość utworzenia; a niektóre są widoczne i możliwe do utworzenia. Zestaw może zawierać dowolną kombinację typów niewidoczna, nie możliwe do utworzenia, przejrzyste i możliwe do utworzenia. Aby informacje były kompletne identyfikacji typów w zestawie, który chcesz udostępnić w COM, szczególnie w przypadku, gdy te typy są podzbiorem typy widoczne dla programu .NET Framework.
+  Niektóre typy zarządzane są niewidoczne dla modelu COM. Niektóre są widoczne, ale nie mogą być możliwe do utworzenia; a niektóre są widoczne i możliwe do utworzenia. Zestaw może składać się z dowolnej kombinacji typów niewidocznych, widocznych, niemożliwych do utworzenia i do utworzenia. Aby uzyskać kompletność, zidentyfikuj typy w zestawie, które zamierzasz uwidocznić dla modelu COM, zwłaszcza gdy te typy są podzbiorem typów ujawnionych dla .NET Framework.
 
-  Aby uzyskać więcej informacji, zobacz [kwalifikowanie typów .NET do międzyoperacyjności](qualifying-net-types-for-interoperation.md).
+  Aby uzyskać dodatkowe informacje, zobacz [kwalifikowanie typów .NET do](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)międzyoperacyjności.
 
-- Instrukcje obsługi wersji
+- Instrukcje dotyczące obsługi wersji
 
-  Klasy zarządzane, które implementują interfejs klasy (generowany międzyoperacyjności interfejsu COM) podlegają przechowywanie wersji ograniczenia.
+  Klasy zarządzane implementujące interfejs klasy (interfejs oparty na modelu COM Interop) podlegają ograniczeniom dotyczącym wersji.
 
-  Aby uzyskać wskazówki na temat korzystania z interfejsu klasy, zobacz [wprowadzenie interfejsu klasy](com-callable-wrapper.md#introducing-the-class-interface).
+  Aby uzyskać wskazówki dotyczące używania interfejsu klasy, zobacz [wprowadzenie do interfejsu klasy](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).
 
 - Instrukcje dotyczące wdrażania
 
-  Zestawy o silnych nazwach, które są podpisane przez wydawcę, można zainstalować w globalnej pamięci podręcznej. Zestawy nieoznaczone musi być zainstalowany na komputerze użytkownika jako zestawy prywatne.
+  Zestawy o silnych nazwach, które są podpisane przez wydawcę, można zainstalować w globalnej pamięci podręcznej zestawów. Zestawy bez znaku muszą być zainstalowane na komputerze użytkownika jako prywatne zespoły.
 
-  Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące zabezpieczeń zestawów](../app-domains/assembly-security-considerations.md).
+  Aby uzyskać dodatkowe informacje, zobacz [zagadnienia dotyczące zabezpieczeń zestawów](../app-domains/assembly-security-considerations.md).
 
-- Włączenie biblioteki typów
+- Dołączanie biblioteki typów
 
-  Większość typów wymagają bibliotekę typów, gdy jest używane przez aplikacji modelu COM. Możesz wygenerować bibliotekę typów lub masz deweloperów COM wykonania tego zadania. Zestaw Windows Software Development Kit (SDK) udostępnia następujące opcje podczas generowania biblioteki typów:
+  Większość typów wymaga biblioteki typów, gdy jest używana przez aplikację COM. Można wygenerować bibliotekę typów lub mieć deweloperów COM wykonujących to zadanie. Zestaw Windows Software Development Kit (SDK) oferuje następujące opcje generowania biblioteki typów:
 
   - [Eksporter biblioteki typów](#cpconpackagingassemblyforcomanchor1)
 
-  - [Typelibconverter — klasa](#cpconpackagingassemblyforcomanchor2)
+  - [Klasa TypeLibConverter](#cpconpackagingassemblyforcomanchor2)
 
   - [Narzędzie rejestracji zestawów](#cpconpackagingassemblyforcomanchor3)
 
   - [Narzędzie instalacji usług .NET](#cpconpackagingassemblyforcomanchor4)
 
-  Niezależnie od wybranego mechanizmu tylko typy publiczne zdefiniowane w zestawie, który podasz znajdują się w wygenerowanej biblioteki typów.
+  Niezależnie od wybranego mechanizmu, tylko typy publiczne zdefiniowane w zestawie, które dostarczasz, są uwzględniane w wygenerowanej bibliotece typów.
 
-Aby uzyskać instrukcje, zobacz [jak: Osadzanie bibliotek typu jako zasobów Win32 w. Aplikacje oparte na NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).
+Aby uzyskać instrukcje, [zobacz How to: Osadź biblioteki typów jako zasoby Win32 w. Aplikacje](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))oparte na sieci.
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 
 ## <a name="type-library-exporter"></a>Eksporter biblioteki typów
 
-[Eksporter biblioteki typów (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) jest narzędziem wiersza polecenia, który konwertuje klasy i interfejsy, które są zawarte w zestawie do biblioteki typów COM. Po udostępnieniu informacji o typie klasy klientów modelu COM można utworzyć wystąpienia klasy .NET i wywołać metodę wystąpienia, tak, jakby był to obiekt COM. Tlbexp.exe konwertuje cały zespół w tym samym czasie. Nie można użyć Tlbexp.exe do generowania informacji o typie dla podzbioru typów zdefiniowanych w zestawie.
+[Eksporter biblioteki typów (Tlbexp. exe)](../tools/tlbexp-exe-type-library-exporter.md) jest narzędziem wiersza polecenia, które konwertuje klasy i interfejsy zawarte w zestawie do biblioteki typów com. Po udostępnieniu informacji o typie klasy klienci COM mogą utworzyć wystąpienie klasy .NET i wywoływać metody tego wystąpienia, tak jakby był to obiekt COM. Tlbexp. exe konwertuje cały zestaw jednocześnie. Nie można użyć Tlbexp.exe do generowania informacji o typie dla podzbioru typów zdefiniowanych w zestawie.
 
 <a name="cpconpackagingassemblyforcomanchor2"></a>
 
-## <a name="typelibconverter-class"></a>Typelibconverter — klasa
+## <a name="typelibconverter-class"></a>Klasa TypeLibConverter
 
-<xref:System.Runtime.InteropServices.TypeLibConverter> Klasy, z siedzibą na terenie **System.Runtime.Interop** konwertuje przestrzeni nazw, klasy i interfejsy, które są zawarte w zestawie do biblioteki typów COM. Ten interfejs API zapewnia te same informacje o typie, eksporter biblioteki typów, opisanych w poprzedniej sekcji.
+Klasa znajdująca się w przestrzeni nazw **System. Runtime. Interop** konwertuje klasy i interfejsy zawarte w zestawie na bibliotekę typów com. <xref:System.Runtime.InteropServices.TypeLibConverter> Ten interfejs API tworzy takie same informacje o typie, jak Eksporter biblioteki typów, opisany w poprzedniej sekcji.
 
-**Typelibconverter — klasa** implementuje <xref:System.Runtime.InteropServices.ITypeLibConverter>.
+**Klasa TypeLibConverter** implementuje <xref:System.Runtime.InteropServices.ITypeLibConverter>.
 
 <a name="cpconpackagingassemblyforcomanchor3"></a>
 
 ## <a name="assembly-registration-tool"></a>Narzędzie rejestracji zestawów
 
-[Narzędzie rejestracji zestawów (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) można wygenerować i zarejestrować bibliotekę typów, po zastosowaniu **/TLB:** opcji. Klienci COM wymagają zainstalowania biblioteki typów w rejestrze systemu Windows. Bez tej opcji Regasm.exe rejestruje typy tylko w zestawie nie biblioteki typów. Rejestrowanie typów w zestawie i rejestrowania biblioteki typów są różne działania.
+[Narzędzie do rejestracji zestawu (Regasm. exe)](../tools/regasm-exe-assembly-registration-tool.md) może generować i rejestrować biblioteki typów podczas stosowania opcji **/tlb:** . Klienci COM wymagają, aby biblioteki typów były zainstalowane w rejestrze systemu Windows. Bez tej opcji Regasm. exe rejestruje typy w zestawie, a nie w bibliotece typów. Rejestrowanie typów w zestawie i rejestrowanie biblioteki typów to odrębne działania.
 
 <a name="cpconpackagingassemblyforcomanchor4"></a>
 
 ## <a name="net-services-installation-tool"></a>Narzędzie instalacji usług .NET
 
-[Narzędzie instalacji usług .NET (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) dodaje klas zarządzanych do usługi składników systemu Windows 2000 i łączy kilka zadań w ramach jednego narzędzia. Oprócz ładowania i zarejestrowaniu zestawu, Regsvcs.exe wygenerować, rejestrowanie i zainstalować biblioteki typów do istniejącej aplikacji COM + 1.0.
+[Narzędzie instalacji usług .NET (Regsvcs. exe)](../tools/regsvcs-exe-net-services-installation-tool.md) dodaje klasy zarządzane do usług składowych systemu Windows 2000 i łączy kilka zadań w ramach jednego narzędzia. Oprócz ładowania i rejestrowania zestawu, Regsvcs. exe może generować, rejestrować i instalować bibliotekę typów w istniejącej aplikacji COM+ 1,0.
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [Udostępnianie składników .NET Framework modelowi COM](exposing-dotnet-components-to-com.md)
-- [Kwalifikowanie typów .NET do międzyoperacyjności](qualifying-net-types-for-interoperation.md)
-- [Wprowadzenie interfejsu klasy](com-callable-wrapper.md#introducing-the-class-interface)
+- [Kwalifikowanie typów .NET do międzyoperacyjności](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
+- [Wprowadzenie do interfejsu klasy](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [Zagadnienia dotyczące zabezpieczeń zestawów](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Rejestrowanie zestawów do użycia z modelem COM](registering-assemblies-with-com.md)
-- [Instrukcje: Osadzanie bibliotek typu jako zasobów Win32 w aplikacjach](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))
+- [Instrukcje: Osadź biblioteki typów jako zasoby Win32 w aplikacjach](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

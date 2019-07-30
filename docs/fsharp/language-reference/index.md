@@ -1,115 +1,115 @@
 ---
 title: Materiały referencyjne dotyczące języka F#
-description: Znajdź F# informacji o funkcji języka z tego odwołania tokeny języka, pojęć, typów, wyrażenia i obsługiwane przez kompilator konstrukcji tematów.
+description: Znajdź F# informacje o funkcjach języka z tego odwołania do tokenów języka, pojęć, typów, wyrażeń i tematów konstrukcyjnych obsługiwanych przez kompilator.
 ms.date: 05/16/2016
-ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b37f9ddcd4fbf6939631f283be95ebf08cf072d6
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666446"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630695"
 ---
 # <a name="f-language-reference"></a>Materiały referencyjne dotyczące języka F#
 
-Ta sekcja jest odniesieniem do F# języka, wielo paradygmowym językiem programowania przeznaczonych dla platformy .NET. F# Język obsługuje modele programowania funkcjonalnego, zorientowane obiektowo i imperatywnego.
+Ta sekcja jest odwołaniem do F# języka, w języku programowania wieloznacznego ukierunkowanego na platformę .NET. F# Język obsługuje funkcjonalne, zorientowane obiektowo i bezwzględne modele programowania.
 
-## <a name="f-tokens"></a>F#Tokeny
+## <a name="f-tokens"></a>F#Żeton
 
-W poniższej tabeli przedstawiono tematów odwołania, które zawierają tabele słów kluczowych, symboli i literałów używane jako tokenów w F#.
+W poniższej tabeli przedstawiono tematy referencyjne, które zawierają tabele słów kluczowych, symboli i literałów używanych jako F#tokeny w programie.
 
 |Tytuł|Opis|
 |-----|-----------|
-|[Odwołanie do słów kluczowych](keyword-reference.md)|Zawiera łącza do informacji o wszystkich F# słowa kluczowe języka.|
-|[Odwołanie do symboli i operatorów](symbol-and-operator-reference/index.md)|Tabela symboli i operatorów, które są używane w F# języka.|
-|[Literały](literals.md)|W tym artykule opisano składnię wartości literału w F# i jak określić informacje o typie dla F# literały.|
+|[Odwołanie do słów kluczowych](keyword-reference.md)|Zawiera linki do informacji o wszystkich F# słowach kluczowych języka.|
+|[Odwołanie do symboli i operatorów](./symbol-and-operator-reference/index.md)|Zawiera tabelę symboli i operatorów, które są używane w F# języku.|
+|[Literały](literals.md)|Opisuje składnię wartości literału w F# i sposób określania informacji o typie dla F# literałów.|
 
 ## <a name="f-language-concepts"></a>F#Pojęcia dotyczące języka
 
-W poniższej tabeli przedstawiono dostępne, który opisano pojęcia języka tematy referencyjne.
+W poniższej tabeli przedstawiono dostępne tematy dotyczące języka.
 
 |Tytuł|Opis|
 |-----|-----------|
-|[Funkcje](functions/index.md)|Funkcje są podstawową jednostką wykonywanie programu w dowolnym języku programowania. Tak jak w innych językach F# funkcji o nazwie, mogą mieć parametry i argumenty take i ma treść. F#obsługuje również konstrukcji programowania funkcjonalnego, takich jak traktowanie funkcje jako wartości, przy użyciu nazwy funkcji w wyrażeniach kompozycja funkcji w celu utworzenia nowych funkcji, funkcje rozwinięte i definicję niejawną funkcji za pomocą częściowego Stosowanie argumentów funkcji.|
-|[Typy F#](fsharp-types.md)|W tym artykule opisano typy, które są używane w F# i w jaki sposób F# typów o nazwie i opisem.|
-|[Wnioskowanie o typie](type-inference.md)|W tym artykule opisano sposób, w jaki F# kompilator wnioskuje typów wartości, zmiennych, parametrów i zwracanych wartości.|
-|[Automatyczna generalizacja](generics/automatic-generalization.md)|W tym artykule opisano ogólny konstrukcje w F#.|
-|[Dziedziczenie](inheritance.md)|W tym artykule opisano dziedziczenie, który służy do modelowania relacji "jest a", lub subtyping w programowanie zorientowane obiektowo.|
-|[Elementy członkowskie](members/index.md)|W tym artykule opisano elementy członkowskie F# typy obiektów.|
-|[Parametry i argumenty](Parameters-and-Arguments.md)|W tym artykule opisano obsługę języka, aby Definiowanie parametrów i przekazanie argumentów do funkcji, metody i właściwości. Zawiera informacje dotyczące sposobu przekazywania według odwołania.|
-|[Przeładowanie operatora](operator-overloading.md)|W tym artykule opisano sposób przeciążania operatorów arytmetycznych w klasie lub typie rekordu oraz na poziomie globalnym.|
-|[Rzutowanie i konwersje](casting-and-conversions.md)|W tym artykule opisano obsługę konwersje typów w F#.|
-|[Kontrola dostępu](access-control.md)|W tym artykule opisano kontrola dostępu w F#. Kontrola dostępu oznacza, że deklarowania, w jaki klienci będą mogli korzystać z niektórych elementów programów, takich jak typy, metody, funkcje i tak dalej.|
-|[Dopasowanie do wzorca](pattern-matching.md)|W tym artykule opisano wzorce, które są regułami dotyczącymi przekształcania danych wejściowych, które są używane w całym F# języka, aby wyodrębnić dane porównania z wzorcem, rozkładania danych do części składowych lub wyodrębnienia informacji z danych na różne sposoby.|
-|[Wzorce aktywne](active-patterns.md)|W tym artykule opisano wzorców. Aktywne wzorce umożliwiają zdefiniowanie nazwanych partycji, które należy podzielić dane wejściowe. Wzorce aktywne służy do rozkładania danych w sposób dostosowany dla każdej partycji.|
-|[Asercje](assertions.md)|W tym artykule opisano `assert` wyrażenie, które jest funkcją debugowania, można użyć w celu przetestowania wyrażenia. W przypadku awarii w trybie debugowania potwierdzenie generuje okno dialogowe błędu systemu.|
-|[Obsługa wyjątków](exception-handling/index.md)|Zawiera informacje o pomocy technicznej w obsłudze wyjątków F# języka.|
-|[Atrybuty](attributes.md)|W tym artykule opisano atrybuty, które umożliwiają metadanych, które mają być stosowane do konstrukcji programowania.|
-|[Zarządzanie zasobami: słowo kluczowe `use`](resource-management-the-use-keyword.md)|W tym artykule opisano kluczowe `use` i `using`, które kontrolują, inicjowanie i zwolnienia zasobów|
-|[Przestrzenie nazw](namespaces.md)|W tym artykule opisano obsługę przestrzeni nazw w F#. Przestrzeń nazw umożliwia organizowanie kodu w obszarach powiązane funkcje, dzięki któremu można dołączyć nazwę do grupowania elementów programu.|
-|[Moduły](modules.md)|W tym artykule opisano modułów. F# Moduł to grupa F# możesz pisać kod, takie jak wartości, typy i wartości funkcji w F# program. Grupowanie kodu w modułach pomaga zachować kod pokrewny ze sobą oraz uniknąć konfliktów nazw w programie.|
-|[Deklaracje importowania: słowo kluczowe `open`](import-declarations-the-open-keyword.md)|W tym artykule opisano sposób `open` działa. Deklaracja importu określa modułu lub przestrzeni nazw elementów, których możesz odwoływać się bez korzystania z w pełni kwalifikowanej nazwy.|
-|[Podpisy](signatures.md)|W tym artykule opisano podpisów i plików sygnatur. Plik podpisu zawiera informacje o podpisów publicznych zestawu F# program elementy, takie jak typy, przestrzenie nazw i moduły. Może służyć do określenia dostępności te elementy programu.|
-|[Dokumentacja XML](xml-documentation.md)|W tym artykule opisano obsługę generowania pliki komentarzy dokumentacji XML, znany także jako Potrójna kreska ułamkowa komentarze dokumentacji. Można tworzyć komentarze do kodu w dokumentacji F# podobnie jak w innych językach .NET.|
-|[Pełna składnia](verbose-syntax.md)|W tym artykule opisano składnię F# konstrukcji, gdy lightweight — składnia nie jest włączone. Pełna składnia jest wskazywany przez `#light "off"` dyrektywę w górnej części pliku kodu.|
+|[Funkcje](./functions/index.md)|Funkcje są podstawową jednostką wykonywania programu w dowolnym języku programowania. Podobnie jak w innych językach, F# funkcja ma nazwę, może mieć parametry i przyjmować argumenty i ma treść. F#obsługuje również konstrukcje programowania funkcjonalnego, takie jak traktowanie funkcji jako wartości, za pomocą funkcji nienazwanych w wyrażeniach, skład funkcji do tworzenia nowych funkcji, funkcji rozwinięte i niejawnej definicji funkcji w formie częściowej stosowanie argumentów funkcji.|
+|[Typy F#](fsharp-types.md)|Opisuje typy, które są używane w F# programie, F# i sposób ich nazywania i opisywania.|
+|[Wnioskowanie o typie](type-inference.md)|Opisuje sposób, F# w jaki kompilator wnioskuje typy wartości, zmiennych, parametrów i zwracanych wartości.|
+|[Automatyczna generalizacja](./generics/automatic-generalization.md)|Opisuje konstrukcje ogólne w F#.|
+|[Dziedziczenie](inheritance.md)|Opisuje dziedziczenie, które jest używane do modelowania relacji "is-a" lub podpisywania w programowaniu zorientowanym obiektowo.|
+|[Elementy członkowskie](./members/index.md)|Opisuje elementy członkowskie F# typów obiektów.|
+|[Parametry i argumenty](Parameters-and-Arguments.md)|Opisuje obsługę języka w celu definiowania parametrów i przekazywania argumentów do funkcji, metod i właściwości. Zawiera informacje o sposobach przekazywania przez odwołanie.|
+|[Przeładowanie operatora](operator-overloading.md)|Opisuje sposób przeciążenia operatorów arytmetycznych w typie klasy lub rekordu oraz na poziomie globalnym.|
+|[Rzutowanie i konwersje](casting-and-conversions.md)|Opisuje obsługę konwersji typów w F#.|
+|[Kontrola dostępu](access-control.md)|Opisuje kontrolę dostępu w F#programie. Kontrola dostępu oznacza, że klienci mogą korzystać z niektórych elementów programu, takich jak typy, metody, funkcje i tak dalej.|
+|[Dopasowanie do wzorca](pattern-matching.md)|Opisuje wzorce, które są regułami dotyczącymi przekształcania danych wejściowych, które są używane F# w całym języku do wyodrębniania danych z wzorca, rozkładania danych do części składowych lub wyodrębniania informacji z danych na różne sposoby.|
+|[Wzorce aktywne](active-patterns.md)|Opisuje aktywne wzorce. Aktywne wzorce umożliwiają zdefiniowanie nazwanych partycji, które dzielą dane wejściowe. Przy użyciu aktywnych wzorców można rozkładać dane w dostosowany sposób dla każdej partycji.|
+|[Asercje](assertions.md)|`assert` Opisuje wyrażenie, które jest funkcją debugowania, której można użyć do przetestowania wyrażenia. W przypadku niepowodzenia w trybie debugowania potwierdzenie generuje okno dialogowe błędu systemu.|
+|[Obsługa wyjątków](/.exception-handling/index.md)|Zawiera informacje o obsłudze wyjątków w F# języku.|
+|[Attributes](attributes.md)|Opisuje atrybuty, które umożliwiają stosowanie metadanych do konstrukcji programistycznej.|
+|[Zarządzanie zasobami: słowo kluczowe `use`](resource-management-the-use-keyword.md)|Opisuje słowa kluczowe `use` i `using`, które mogą kontrolować inicjalizację i wydawanie zasobów|
+|[przestrzeni](namespaces.md)|Opisuje obsługę przestrzeni nazw F#w programie. Przestrzeń nazw umożliwia organizowanie kodu w obszary powiązanej funkcjonalności przez umożliwienie dołączenia nazwy do grupy elementów programu.|
+|[Moduły](modules.md)|Opisuje moduły. F# Moduł jest grupą F# kodów, takich jak wartości, typy i wartości funkcji, w F# programie. Grupowanie kodu w modułach ułatwia zachowanie powiązanego kodu i pozwala uniknąć konfliktów nazw w programie.|
+|[Deklaracje importowania: słowo kluczowe `open`](import-declarations-the-open-keyword.md)|Opisuje sposób `open` działania programu. Deklaracja importu określa moduł lub przestrzeń nazw, których elementy można odwoływać bez używania w pełni kwalifikowanej nazwy.|
+|[Podpisy](signatures.md)|Opisuje sygnatury i pliki sygnatur. Plik podpisu zawiera informacje o podpisach publicznych zestawu elementów F# programu, takich jak typy, przestrzenie nazw i moduły. Może służyć do określania dostępności tych elementów programu.|
+|[Dokumentacja XML](xml-documentation.md)|Opisuje obsługę generowania plików dokumentacji dla komentarzy do dokumentów XML, znanych także jako komentarze z potrójnym ukośnikiem. Dokumentację można utworzyć z komentarzy do F# kodu, tak jak w innych językach .NET.|
+|[Pełna składnia](verbose-syntax.md)|Opisuje składnię dla F# konstrukcji, gdy nie jest włączona składnia uproszczona. Składnia verbose jest wskazywana przez `#light "off"` dyrektywę w górnej części pliku kodu.|
 
 ## <a name="f-types"></a>Typy F#
 
-W poniższej tabeli przedstawiono dostępne tematy referencyjne, które opisują typy obsługiwane przez F# języka.
+W poniższej tabeli przedstawiono dostępne tematy referencyjne opisujące Typy obsługiwane przez F# język.
 
 |Tytuł|Opis|
 |-----|-----------|
-|[Wartości](values/index.md)|W tym artykule opisano wartości, które są niezmienne ilości, które mają określony typ; wartości mogą być liczb zmiennoprzecinkowych typu całkowitego lub zmiennoprzecinkowego, znaki lub tekst, list, sekwencji, tablice, krotek, związki dyskryminowane, rekordy, typy klas lub wartości funkcji.|
-|[Typy podstawowe](basic-types.md)|W tym artykule opisano podstawowe typy podstawowe, które są używane w F# języka. Dla każdego typu danych zapewnia również odpowiednie typy .NET i minimalne i maksymalne wartości.|
-|[Typ jednostki](unit-type.md)|W tym artykule opisano `unit` typ, który jest typem, który wskazuje brak określonej wartości; `unit` typ ma tylko jedną wartość, która działa jako symbolu zastępczego, gdy żadna inna wartość istnieje lub jest wymagana.|
-|[Ciągi](strings.md)|Opisuje ciągi w F#. `string` Typu reprezentuje niezmienny tekst, jako sekwencja znaków Unicode. `string` jest aliasem dla `System.String` w .NET Framework.|
-|[Krotki](tuples.md)|W tym artykule opisano krotek, której to grupy bez nazwy, ale uporządkowane wartości prawdopodobnie różnych typów.|
-|[Typy kolekcji F#](fsharp-collection-types.md)|Omówienie F# funkcjonalności kolekcji typów, w tym typy dla tablic, list, sekwencji (seq), map i zestawów.|
-|[Listy](lists.md)|W tym artykule opisano listy. Na liście F# jest uporządkowany i niezmienne szereg elementów wszystkie tego samego typu.|
-|[Opcje](options.md)|Opisuje typ opcji. Opcja w F# jest używany, gdy wartość może lub nie istnieje. Opcja ma podstawowy typ i może albo przechowują wartość tego typu i nie może mieć wartość.|
-|[Sekwencje](sequences.md)|W tym artykule opisano sekwencji. Sekwencja jest logiczną szereg elementów jeden typ. Sekwencji poszczególne elementy tylko są obliczane, w razie potrzeby, dlatego reprezentacji może być mniejszy niż liczba literal — element wskazuje.|
-|[Tablice](arrays.md)|W tym artykule opisano tablic. Tablice są stałym rozmiarze, zaczynający się od zera, mutable sekwencji kolejnych elementów danych, wszystkie tego samego typu.|
-|[Rekordy](records.md)|W tym artykule opisano rekordów. Rekordy reprezentują prostych wartości zagregowanych nazwanych wartości opcjonalnie wraz z elementów członkowskich.|
-|[Sumy rozłączne](discriminated-unions.md)|W tym artykule opisano związki dyskryminowane, które zapewnia obsługę wartości, które mogą być jednym z wielu przypadków nazwanych, każdy z potencjalnie różnych wartości i typów.|
-|[Wyliczenia](enumerations.md)|W tym artykule opisano wyliczenia są nazywane typami, które mają zdefiniowanego zestawu wartości. Można je zamiast literałów wprowadzić kod bardziej czytelny i łatwy w obsłudze.|
-|[Komórki odwołań](reference-cells.md)|W tym artykule opisano komórki odwołań, które są lokalizacje przechowywania, które umożliwiają tworzenie modyfikowalnych z semantyką odwołań.|
-|[Skróty typów](type-abbreviations.md)|W tym artykule opisano skróty typów, które są alternatywne nazwy dla typów.|
-|[Klasy](classes.md)|W tym artykule opisano klasy, które są typy, które reprezentują obiektów, które mogą mieć właściwości, metod i zdarzeń.|
-|[Struktury](structures.md)|W tym artykule opisano struktur, które są wybierane compact, które mogą być bardziej efektywne niż klasę dla typów, które mają niewielką ilość danych i prostego zachowanie.|
-|[Interfejsy](interfaces.md)|W tym artykule opisano interfejsy, które określają zestawów powiązanych elementów członkowskich, które implementują innych klas.|
-|[Klasy abstrakcyjne](abstract-classes.md)|W tym artykule opisano klasy abstrakcyjnej, które są klasami, które opuszczają niektórych lub wszystkich elementów członkowskich niezaimplementowane, tak aby implementacji może być udostępniane przez klasy pochodne.|
-|[Rozszerzenia typu](type-extensions.md)|Opisuje typ rozszerzenia, które pozwalają na dodawanie nowych członków do typu obiektu zdefiniowanego wcześniej.|
-|[Typy elastyczne](flexible-types.md)|W tym artykule opisano typy elastyczne. Adnotacja elastycznym typem jest określony wskazanie, że parametr, zmienna lub wartość ma typ, który jest zgodny z typem, w którym zgodność jest określana przez pozycji w hierarchii zorientowane obiektowo, klas lub interfejsów.|
-|[Delegaty](delegates.md)|W tym artykule opisano delegatów, które reprezentują wywołania funkcji jako obiekt.|
-|[Jednostki miary](units-of-measure.md)|W tym artykule opisano jednostki miary. W wartości zmiennoprzecinkowych F# może być skojarzony jednostki miary, które są zwykle używane w celu wskazania, długość, woluminu, urządzeń pamięci masowej i tak dalej.|
-|[Dostawcy typów](../tutorials/type-providers/index.md)|Opisuje typ zapewnia i zawiera łącza do przewodników na dostęp do baz danych i usług sieci web za pomocą wbudowanych dostawców typów.|
+|[wartością](./values/index.md)|Opisuje wartości, które są niezmienne ilości, które mają określony typ; wartości mogą być liczbami całkowitymi lub zmiennoprzecinkowymi, znakami lub tekstem, listami, sekwencjami, tablicami, krotkami, związkami rozłącznych, rekordami, typami klas lub wartościami funkcji.|
+|[Typy podstawowe](basic-types.md)|Zawiera opis podstawowych typów podstawowych, które są używane w F# danym języku. Zapewnia także odpowiednie typy .NET i minimalne i maksymalne wartości dla każdego typu.|
+|[Typ jednostki](unit-type.md)|Opisuje typ, który jest typem, który wskazuje brak określonej wartości `unit` ; typ ma tylko jedną wartość, która działa jako symbol zastępczy, gdy inna wartość nie istnieje lub nie jest wymagana. `unit`|
+|[Ciągi](strings.md)|Opisuje ciągi w F#. `string` Typ reprezentuje niezmienny tekst, jako sekwencję znaków Unicode. `string`jest aliasem dla `System.String` .NET Framework.|
+|[Krotki](tuples.md)|Opisuje krotki, które są grupowaniem nienazwanych, ale uporządkowane wartości prawdopodobnie różnych typów.|
+|[Typy kolekcji F#](fsharp-collection-types.md)|Przegląd typów kolekcji F# funkcjonalnej, w tym typów tablic, list, sekwencji (SEQ), map i zestawów.|
+|[Listy](lists.md)|Zawiera opis list. Lista w F# jest uporządkowaną, niemodyfikowalną serią wszystkich elementów tego samego typu.|
+|[Opcje](options.md)|Opisuje typ opcji. Opcja w F# jest używana, gdy wartość może lub nie istnieje. Opcja ma typ podstawowy i może zawierać wartość tego typu lub może nie mieć wartości.|
+|[Sekwencje](sequences.md)|Opisuje sekwencje. Sekwencja jest logiczną serią wszystkich elementów jednego typu. Poszczególne elementy sekwencji są obliczane tylko w razie potrzeby, więc reprezentacja może być mniejsza niż liczba elementów literału.|
+|[Tablice](arrays.md)|Opisuje tablice. Tablice są stałym rozmiarem (liczonym od zera sekwencją) kolejnych elementów danych, tego samego typu.|
+|[Rekordy](records.md)|Opisuje rekordy. Rekordy reprezentują proste Agregowanie wartości nazwanych, opcjonalnie z elementami członkowskimi.|
+|[Sumy rozłączne](discriminated-unions.md)|Opisuje związki rozłączne, które zapewniają obsługę wartości, które mogą być jednym z różnych nazwanych przypadków, z których każdy ma inne wartości i typy.|
+|[Wyliczenia](enumerations.md)|Opisuje typy wyliczeniowe, które mają zdefiniowany zestaw nazwanych wartości. Można ich użyć zamiast literałów, aby kod był bardziej czytelny i możliwy do utrzymania.|
+|[Komórki odwołań](reference-cells.md)|Opisuje komórki odwołań, które są lokalizacjami przechowywania, które umożliwiają tworzenie zmiennych modyfikowalnych z semantyką odwołania.|
+|[Skróty typów](type-abbreviations.md)|Opisuje skróty typów, które są alternatywnymi nazwami typów.|
+|[Klasy](classes.md)|Opisuje klasy, które reprezentują obiekty, które mogą mieć właściwości, metody i zdarzenia.|
+|[Struktury](structures.md)|Opisuje struktury, które są kompaktowymi typami obiektów, które mogą być bardziej wydajne niż Klasa dla typów, które mają niewielką ilość danych i proste zachowanie.|
+|[Interfejsy](interfaces.md)|Opisuje interfejsy, które określają zestawy powiązanych elementów członkowskich, które są implementowane przez inne klasy.|
+|[Klasy abstrakcyjne](abstract-classes.md)|Opisuje klasy abstrakcyjne, które są klasami, które opuszczają niektóre lub wszystkie składowe niezaimplementowane, dzięki czemu implementacje mogą być dostarczane przez klasy pochodne.|
+|[Rozszerzenia typu](type-extensions.md)|Opisuje rozszerzenia typów, które umożliwiają dodawanie nowych elementów członkowskich do wcześniej zdefiniowanego typu obiektu.|
+|[Typy elastyczne](flexible-types.md)|Opisuje elastyczne typy. Typ elastycznyj adnotacji jest wskaźnikiem, że parametr, zmienna lub wartość ma typ zgodny z określonym typem, w którym zgodność jest określana na podstawie położenia w hierarchii obiektów klasy lub interfejsów zorientowanych obiektowo.|
+|[Delegaty](delegates.md)|Opisuje delegatów, które reprezentują wywołanie funkcji jako obiekt.|
+|[Jednostki miary](units-of-measure.md)|Opisuje jednostki miary. Wartości zmiennoprzecinkowe w F# mogą mieć skojarzone jednostki miary, które zwykle są używane do wskazywania długości, objętości, masy itd.|
+|[Dostawcy typów](../tutorials/type-providers/index.md)|Opis typu udostępnia i zawiera linki do przewodników dotyczących korzystania z wbudowanych dostawców typów w celu uzyskania dostępu do baz danych i usług sieci Web.|
 
 ## <a name="f-expressions"></a>F# Expressions
 
-Poniższa tabela zawiera listę tematów, które opisują F# wyrażenia.
+W poniższej tabeli wymieniono tematy opisujące F# wyrażenia.
 
 |Tytuł|Opis|
 |-----|-----------|
-|[Wyrażenie warunkowe: `if...then...else`](conditional-expressions-if-then-else.md)|W tym artykule opisano `if...then...else` wyrażenie, które uruchamia gałęziami kodu i oblicza również innej wartości w zależności od tego, wyrażenie logiczne, biorąc pod uwagę.|
-|[Wyrażenia dopasowania](match-expressions.md)|W tym artykule opisano `match` wyrażenie zawiera rozgałęziania formant, który jest oparty na porównaniu wyrażenia zestaw wzorców.|
-|[Pętle: `for...to` Expression](loops-for-to-expression.md)|W tym artykule opisano `for...to` wyrażenia, który jest używany do wykonywania iteracji w pętli zakresu wartości zmiennej pętli.|
-|[Pętle: `for...in` Expression](loops-for-in-expression.md)|W tym artykule opisano `for...in` wyrażenia, konstrukcja pętli, która jest używana do wykonywania iteracji dopasowania wzorca w wyliczalny kolekcji, takie jak wyrażenie zakresu, sekwencji, lista, tablicy lub innej konstrukcji, który obsługuje wyliczenia.|
-|[Pętle: `while...do` Expression](loops-while-do-expression.md)|W tym artykule opisano `while...do` wyrażenie, które służy do przeprowadzania iteracji wykonywanie (pętli), gdy spełniony jest warunek określony test.|
-|[Wyrażenia obiektów](object-expressions.md)|W tym artykule opisano wyrażeń obiektów, które są wyrażeniami, które tworzenie nowych wystąpień typu utworzony dynamicznie, anonimowy obiekt, który jest oparty na istniejących typu podstawowego, interfejs lub zestawu interfejsów.|
-|[Wyrażenia z opóźnionym obliczaniem](lazy-expressions.md)|W tym artykule opisano wyrażeń z opóźnieniem, które są obliczenia, które nie są oceniane natychmiast, ale zamiast tego są oceniane, gdy wynik będzie to wymagane.|
-|[Wyrażenia obliczeń](computation-expressions.md)|W tym artykule opisano wyrażenia obliczeń w F#, który wygodnej składni do pisania obliczenia, które mogą być sekwencjonowania połączone za pomocą kontrolowanie i konstrukcje przepływów i powiązania. Może służyć do zapewnienia wygodnej składni dla *monads*, funkcjonalności funkcji programowania, który może służyć do zarządzania danych, kontroli i efekty uboczne w programach funkcjonalności. Jeden typ wyrażenia obliczeń, asynchronicznego przepływu pracy, zapewnia obsługę asynchronicznych i równoległych obliczeń. Aby uzyskać więcej informacji, zobacz [Asynchroniczne przepływy pracy](asynchronous-workflows.md).|
-|[Asynchroniczne przepływy pracy](asynchronous-workflows.md)|Asynchroniczne przepływy pracy, zawiera opis funkcji języka, umożliwiająca napisania kodu asynchronicznego w sposób, który jest bardzo zbliżona sposób można napisać naturalnie synchroniczny kod.|
-|[Cytaty kodu](code-quotations.md)|W tym artykule opisano cytaty kodu, funkcji języka, który umożliwia generowanie i pracować z F# programowo kodu wyrażenia.|
-|[Wyrażenia zapytania](query-expressions.md)|W tym artykule opisano wyrażeń zapytania, funkcji języka, który implementuje LINQ dla F# i umożliwia tworzenie zapytań dotyczących źródła danych lub kolekcji wyliczalny.|
+|[Wyrażenia warunkowe:`if...then...else`](conditional-expressions-if-then-else.md)|`if...then...else` Opisuje wyrażenie, które uruchamia różne gałęzie kodu, a także oblicza inną wartość w zależności od danego wyrażenia logicznego.|
+|[Wyrażenia dopasowania](match-expressions.md)|`match` Opisuje wyrażenie, które zapewnia sterowanie rozgałęzieniem oparte na porównaniu z zestawem wzorców.|
+|[Pętli `for...to`Wyrażenia](loops-for-to-expression.md)|`for...to` Opisuje wyrażenie, które jest używane do iteracji w pętli względem zakresu wartości zmiennej pętli.|
+|[Pętli `for...in`Wyrażenia](loops-for-in-expression.md)|`for...in` Opisuje wyrażenie, konstrukcja pętli, która jest używana do iteracji na dopasowaniach wzorca w wyliczalnej kolekcji, takiej jak wyrażenie zakresu, sekwencja, lista, tablica lub inna konstrukcja, która obsługuje Wyliczenie.|
+|[Pętli `while...do`Wyrażenia](loops-while-do-expression.md)|`while...do` Opisuje wyrażenie, które jest używane do wykonywania iteracji (zapętlenie), podczas gdy określony warunek testu ma wartość true.|
+|[Wyrażenia obiektów](object-expressions.md)|Opisuje wyrażenia obiektów, które są wyrażeniami, które tworzą nowe wystąpienia dynamicznie utworzonego, anonimowego typu obiektu, który jest oparty na istniejącym typie podstawowym, interfejsie lub zestawie interfejsów.|
+|[Wyrażenia z opóźnionym obliczaniem](lazy-expressions.md)|Opisuje wyrażenia z opóźnieniem, które są obliczeniami, które nie są natychmiast oceniane, ale zamiast tego są oceniane, gdy wynik jest rzeczywiście wymagany.|
+|[Wyrażenia obliczeń](computation-expressions.md)|Opisuje wyrażenia obliczeń w F#, które zapewniają wygodną składnię do pisania obliczeń, które mogą być sekwencjonowane i łączone przy użyciu konstrukcji przepływu sterowania i powiązań. Mogą one służyć do zapewnienia wygodnej składni dla *monads*, funkcji programowania funkcjonalnego, która może służyć do zarządzania danymi, kontrolkami i efektami ubocznymi w programach funkcjonalnych. Jeden typ wyrażenia obliczeń, asynchroniczny przepływ pracy, zapewnia obsługę obliczeń asynchronicznych i równoległych. Aby uzyskać więcej informacji, zobacz [asynchroniczne przepływy pracy](asynchronous-workflows.md).|
+|[Asynchroniczne przepływy pracy](asynchronous-workflows.md)|Opisuje asynchroniczne przepływy pracy, funkcję języka, która pozwala pisać kod asynchroniczny w sposób zbliżony do sposobu, w jaki można naturalnie pisać kod synchroniczny.|
+|[Cytaty kodu](code-quotations.md)|Opisuje cytaty kodu, funkcję języka, która umożliwia programistyczne generowanie i Używanie wyrażeń F# kodów.|
+|[Wyrażenia zapytania](query-expressions.md)|Opisuje wyrażenia zapytania, funkcję języka, która implementuje LINQ for F# i umożliwia pisanie zapytań względem źródła danych lub wyliczalnej kolekcji.|
 
 ## <a name="compiler-supported-constructs"></a>Konstrukcje obsługiwane przez kompilator
 
-Poniższa tabela zawiera listę tematów opisujących konstrukcje obsługiwane przez kompilator specjalnych.
+W poniższej tabeli przedstawiono tematy opisujące specjalne konstrukcje obsługiwane przez kompilator.
 
 |Temat|Opis|
 |-----|-----------|
-|[Opcje kompilatora](compiler-options.md)|W tym artykule opisano opcje wiersza polecenia dla F# kompilatora.|
-|[Dyrektywy kompilatora](compiler-directives.md)|Opis procesora dyrektywy i dyrektywy kompilatora.|
-|[Identyfikatory wiersza źródłowego, pliku i ścieżki](source-line-file-path-identifiers.md)|W tym artykule opisano identyfikatory `__LINE__`, `__SOURCE_DIRECTORY__` i `__SOURCE_FILE__`, które są wbudowane wartości, które umożliwiają dostęp do źródła wiersza numer, katalogów i plików nazwy w kodzie.|
+|[Opcje kompilatora](compiler-options.md)|Opisuje opcje wiersza polecenia dla F# kompilatora.|
+|[Dyrektywy kompilatora](compiler-directives.md)|Opisuje dyrektywy procesora i dyrektywy kompilatora.|
+|[Identyfikatory wiersza źródłowego, pliku i ścieżki](source-line-file-path-identifiers.md)|Opisuje identyfikatory `__LINE__` `__SOURCE_DIRECTORY__` i ,któresąwbudowanymiwartościami,któreumożliwiajądostępdonumeruwierszaźródłowego,kataloguinazwyplikuwkodzie.`__SOURCE_FILE__`|
 
 ## <a name="see-also"></a>Zobacz także
 

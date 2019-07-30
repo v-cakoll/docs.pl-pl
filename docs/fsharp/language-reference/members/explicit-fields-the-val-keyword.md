@@ -1,17 +1,17 @@
 ---
 title: 'Pola jawne: Val — słowo kluczowe'
-description: Dowiedz się więcej o F# słowo kluczowe "val", które jest używane do deklarowania lokalizację do przechowywania wartości w typie klasy lub struktury, bez inicjowania typu.
+description: Dowiedz się F# więcej o słowie kluczowym "Val", które jest używane do deklarowania lokalizacji do przechowywania wartości w typie klasy lub struktury bez inicjalizacji typu.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13e0ba2875e8accfd1c0da0e1c6fef4973309f9b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904920"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627534"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Pola jawne: Val — słowo kluczowe
 
-`val` — Słowo kluczowe jest używane do deklarowania lokalizację do przechowywania wartości w typie klasy lub struktury, bez jego inicjowania. Lokalizacje przechowywania, zadeklarowany w ten sposób są nazywane *pola jawne*. Używanie innego `val` — słowo kluczowe jest używana razem z `member` — słowo kluczowe do deklarowania automatycznie implementowanej właściwości. Aby uzyskać więcej informacji dotyczących automatycznie implementowanych właściwości, zobacz [właściwości](properties.md).
+`val` Słowo kluczowe jest używane do deklarowania lokalizacji do przechowywania wartości w typie klasy lub struktury, bez jej inicjalizacji. Lokalizacje magazynu zadeklarowane w ten sposób są nazywane *jawnymi polami*. Inne użycie `val` słowa kluczowego jest w połączeniu `member` ze słowem kluczowym w celu zadeklarować właściwości, która jest implementowana. Aby uzyskać więcej informacji na temat właściwości, które są implementowane, zobacz [Właściwości](properties.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,30 +21,30 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 ## <a name="remarks"></a>Uwagi
 
-Zwykle sposobem zdefiniowania pola w typie klasy lub struktury jest użycie `let` powiązania. Jednak `let` powiązania musi zostać zainicjowany jako część konstruktora klasy, które nie zawsze jest możliwe, wymagane lub pożądane. Możesz użyć `val` — słowo kluczowe, jeśli chcesz, aby pola, które nie został zainicjowany.
+Typowym sposobem definiowania pól w klasie lub typie struktury jest użycie `let` powiązania. `let` Jednakże powiązania muszą być zainicjowane jako część konstruktora klasy, co nie zawsze jest możliwe, konieczne lub pożądane. Możesz użyć `val` słowa kluczowego, gdy chcesz, aby pole, które jest niezainicjowane.
 
-Pola jawne może być statyczne lub niestatycznych. *Modyfikator dostępu* może być `public`, `private`, lub `internal`. Pola jawne są domyślnie publiczne. To różni się od `let` powiązania w klasach, które są zawsze prywatne.
+Jawne pola mogą być statyczne lub niestatyczne. *Modyfikatorem dostępu* może być `public`, `private`, lub `internal`. Domyślnie jawne pola są publiczne. Różni się to `let` od powiązań w klasach, które są zawsze prywatne.
 
-[DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58) atrybut jest wymagany na jawne pól w typach klasy, które mają podstawowy Konstruktor. Ten atrybut określa, że pole jest inicjowane od zera. Typ pola musi obsługiwać inicjowanie zero. Typ obsługuje inicjowania zero, jeśli jest to jeden z następujących czynności:
+Atrybut [DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58) jest wymagany w jawnych polach w typach klas, które mają Konstruktor podstawowy. Ten atrybut określa, że pole jest inicjowane na wartość zero. Typ pola musi obsługiwać inicjowanie o wartości zero. Typ obsługuje Inicjowanie zero, jeśli jest jedną z następujących:
 
-- Pierwotny typ, który ma wartość zero.
+- Typ pierwotny, który ma wartość zerową.
 
-- Typ, który obsługuje wartości null, albo jako wartość normalna, jako wartość nietypowe lub jako reprezentację wartości. Obejmuje to klasy, krotek, rekordy, funkcje, interfejsy, typy odwołań platformy .NET, `unit` typu i dyskryminowanego typu złożenia.
+- Typ, który obsługuje wartość null, jako wartość normalną, jako wartość nietypową lub jako reprezentację wartości. Obejmuje to klasy, krotki, rekordy, funkcje, interfejsy, typy odwołań platformy .NET, `unit` typ i typy Unii rozłącznych.
 
-- Typ wartości platformy .NET.
+- Typ wartości .NET.
 
-- Struktura, w których wszystkie pola obsługuje domyślną wartość zero.
+- Struktura, której pola wszystkie obsługują domyślną wartość zerową.
 
-Na przykład niezmienne pole o nazwie `someField` został skompilowany polem zapasowym na platformie .NET reprezentacji o nazwie `someField@`, i możesz uzyskać dostęp do wartości przechowywanej za pomocą właściwości o nazwie `someField`.
+Na przykład niezmienne pole o nazwie `someField` ma pole zapasowe w skompilowanej reprezentacji .NET o nazwie `someField@`i uzyskuje dostęp do przechowywanej wartości przy użyciu właściwości `someField`o nazwie.
 
-Modyfikowalne pola reprezentacja .NET skompilowanych jest polem .NET.
+W przypadku pola modyfikowalnego skompilowana reprezentacja .NET jest polem platformy .NET.
 
 >[!WARNING]
->Przestrzeń nazw .NET Framework `System.ComponentModel` zawiera atrybut, który ma taką samą nazwę. Aby uzyskać informacji na temat tego atrybutu, zobacz `System.ComponentModel.DefaultValueAttribute`.
+>Przestrzeń nazw `System.ComponentModel` .NET Framework zawiera atrybut, który ma taką samą nazwę. Informacje o tym atrybucie można znaleźć w `System.ComponentModel.DefaultValueAttribute`temacie.
 
-Poniższy kod przedstawia użycie pola jawne i dla porównania `let` powiązania w klasie, która ma konstruktora podstawowego. Należy pamiętać, że `let`— pole związane `myInt1` jest prywatny. Gdy `let`— pola związanego `myInt1` jest wywoływany przez metodę elementu członkowskiego własny identyfikator `this` nie jest wymagana. Jednak gdy odwołujesz się do pola jawne `myInt2` i `myString`, własny identyfikator jest wymagany.
+Poniższy kod przedstawia użycie jawnych pól i, w przypadku porównania, `let` powiązanie w klasie, która ma Konstruktor podstawowy. Zwróć uwagę, `let`że pole `myInt1` -powiązane jest prywatne. Gdy odwołanie do pola `myInt1` jest powiązane z metody składowej, jego identyfikator `this` samodzielny nie jest wymagany. `let` Ale w przypadku odwoływania się do jawnych `myString`pól `myInt2` i, wymagany jest sam identyfikator.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6701.fs)]
 
 Wynik jest następujący:
 
@@ -53,28 +53,28 @@ Wynik jest następujący:
 30 def
 ```
 
-Poniższy kod przedstawia użycie pola jawne w klasie, która nie ma konstruktora podstawowego. W tym przypadku `DefaultValue` atrybut nie jest wymagana, ale wszystkie pola muszą być zainicjowane w konstruktorach, które są zdefiniowane dla typu.
+Poniższy kod przedstawia użycie jawnych pól w klasie, która nie ma konstruktora podstawowego. W tym przypadku `DefaultValue` atrybut nie jest wymagany, ale wszystkie pola muszą być zainicjowane w konstruktorach, które są zdefiniowane dla tego typu.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6702.fs)]
 
-Dane wyjściowe są `35 22`.
+Dane wyjściowe to `35 22`.
 
-Poniższy kod przedstawia użycie pola jawne w strukturze. Ponieważ struktura jest typem wartości, automatycznie ma domyślnego konstruktora, która ustawia wartości pól do zera. W związku z tym `DefaultValue` atrybut nie jest wymagana.
+Poniższy kod przedstawia użycie jawnych pól w strukturze. Ponieważ struktura jest typem wartości, automatycznie ma konstruktora domyślnego, który ustawia wartości pól na zero. W związku z `DefaultValue` tym atrybut nie jest wymagany.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
 
-Dane wyjściowe są `11 xyz`.
+Dane wyjściowe to `11 xyz`.
 
-**Uwaga na podatne na**, jeśli chcesz zainicjować struktury o `mutable` pola bez `mutable` — słowo kluczowe, przypisania będzie działać na kopię struktury, które zostaną odrzucone bezpośrednio po przypisaniu. W związku z tym nie zmienią się ze strukturą.
+**Uważaj**, jeśli zamierzasz zainicjować strukturę przy użyciu `mutable` pól bez `mutable` słowa kluczowego, przypisania będą działać na kopii struktury, która zostanie odrzucona po przypisaniu. W związku z tym struktura nie ulegnie zmianie.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
 
-Pola jawne nie są przeznaczone do użytku procedur. Ogólnie rzecz biorąc, gdy jest to możliwe należy używać `let` powiązania w klasie zamiast jawnego pola. Pola jawne są przydatne w niektórych scenariuszach współpracy, takie jak kiedy należy zdefiniować strukturę, która będzie używana w wywołaniu do natywnych interfejsów API lub w scenariuszach międzyoperacyjnego modelu COM wywołania platformy. Aby uzyskać więcej informacji, zobacz [funkcji zewnętrznych](../functions/external-functions.md). Innej sytuacji, w którym może być konieczne jawne pola jest podczas pracy z F# generatora kodu, który emituje klasy bez konstruktora podstawowego. Pola jawne są także przydatne zmienne statyczne wątku lub podobne konstrukcji. Aby uzyskać więcej informacji, zobacz `System.ThreadStaticAttribute`.
+Jawne pola nie są przeznaczone do rutynowego użycia. Ogólnie rzecz biorąc, gdy jest to możliwe, `let` należy użyć powiązania w klasie zamiast pola jawnego. Jawne pola są przydatne w niektórych scenariuszach współdziałania, na przykład w sytuacji, gdy trzeba zdefiniować strukturę, która będzie używana w wywołaniu wywołania platformy do natywnego interfejsu API lub w scenariuszach międzyoperacyjnych modelu COM. Aby uzyskać więcej informacji, zobacz [funkcje zewnętrzne](../functions/external-functions.md). Inną sytuacją, w której może być wymagane jawne pole, jest to, że podczas F# pracy z generatorem kodu, który emituje klasy bez konstruktora podstawowego. Jawne pola są również przydatne w przypadku zmiennych statycznych wątków lub podobnych konstrukcji. Aby uzyskać więcej informacji, zobacz `System.ThreadStaticAttribute`.
 
-Gdy słowa kluczowe `member val` pojawiają się razem w definicji typu, jest on definicją automatycznie implementowanej właściwości. Aby uzyskać więcej informacji, zobacz [właściwości](properties.md).
+Gdy słowa kluczowe `member val` są wyświetlane razem w definicji typu, jest to definicja automatycznie implementowanej właściwości. Aby uzyskać więcej informacji, zobacz [Właściwości](properties.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Właściwości](properties.md)
 - [Elementy członkowskie](index.md)
-- [`let` Powiązania w klasach](let-bindings-in-classes.md)
+- [`let`Powiązania w klasach](let-bindings-in-classes.md)

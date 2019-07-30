@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: ffbd59cb398d417a36d75ff0ef9ef4ef143c30c0
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 743b9ec45c138053fcfcb5cbb1ea9c8490ba919e
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484647"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629906"
 ---
 # <a name="typography-in-wpf"></a>Typografia w WPF
 W tym temacie przedstawiono główne funkcje typograficzne programu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Te funkcje obejmują ulepszoną jakość i wydajność renderowania tekstu, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] obsługę typografii, ulepszony międzynarodowy tekst, rozszerzoną obsługę czcionek oraz nowe interfejsy programowania aplikacji tekstowych (API).  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Ulepszona jakość i wydajność tekstu  
- Tekst w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest renderowany przy [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]użyciu, co zwiększa czytelność i czytelność tekstu. Technologia ClearType jest technologią oprogramowania opracowaną przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] program, która zwiększa czytelność tekstu w istniejących LCDS (w przypadku wyświetlaczy Liquid Crystal), takich jak ekrany laptopów, urządzenia Pocket PC i monitory płaskoekranowe. Technologia ClearType używa renderowania w pikselach, co pozwala na wyświetlanie tekstu z większą dokładnością do jego prawdziwego kształtu przez wyrównanie znaków w ułamkowej części piksela. Dodatkowe rozwiązanie zwiększa ostrość niewielkich szczegółów w wyświetlaniu tekstu, ułatwiając odczytywanie ich w dłuższym czasie. Innym ulepszeniem technologii ClearType [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w programie jest wygładzanie kierunku y, co umożliwia wygładzanie wierzchołków i dolnych krzywych w znakach tekstowych. Aby uzyskać więcej informacji na temat funkcji ClearType, zobacz [Omówienie technologii ClearType](cleartype-overview.md).  
+ Tekst w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programie jest renderowany przy użyciu technologii Microsoft ClearType, która zwiększa czytelność i czytelność tekstu. Technologia ClearType jest technologią oprogramowania opracowaną przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] program, która zwiększa czytelność tekstu w istniejących LCDS (w przypadku wyświetlaczy Liquid Crystal), takich jak ekrany laptopów, urządzenia Pocket PC i monitory płaskoekranowe. Technologia ClearType używa renderowania w pikselach, co pozwala na wyświetlanie tekstu z większą dokładnością do jego prawdziwego kształtu przez wyrównanie znaków w ułamkowej części piksela. Dodatkowe rozwiązanie zwiększa ostrość niewielkich szczegółów w wyświetlaniu tekstu, ułatwiając odczytywanie ich w dłuższym czasie. Innym ulepszeniem technologii ClearType [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w programie jest wygładzanie kierunku y, co umożliwia wygładzanie wierzchołków i dolnych krzywych w znakach tekstowych. Aby uzyskać więcej informacji na temat funkcji ClearType, zobacz [Omówienie technologii ClearType](cleartype-overview.md).  
   
  ![Tekst z wygładzaniem kierunku x w technologii ClearType](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 Tekst z wygładzaniem kierunku y w technologii ClearType  

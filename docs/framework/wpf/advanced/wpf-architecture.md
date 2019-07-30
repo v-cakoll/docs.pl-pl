@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 987e48f163d35d27f6736464d7497451cca82c0c
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 440a6d76e5295613d2887c0a77d9a49e870e580b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400860"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629819"
 ---
 # <a name="wpf-architecture"></a>Architektura WPF
 Ten temat zawiera Przewodnik dotyczący hierarchii klas Windows Presentation Foundation (WPF). Obejmuje to większość głównych podsystemów [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]i opisuje sposób ich działania. Zawiera również szczegóły niektórych opcji dokonywanych przez architektów [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -30,7 +30,7 @@ Ten temat zawiera Przewodnik dotyczący hierarchii klas Windows Presentation Fou
 ## <a name="systemobject"></a>System.Object  
  Podstawowy [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] model programowania jest udostępniany za pomocą kodu zarządzanego. Wcześniej w fazie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] projektowania istniały wiele debat, w których linia powinna być narysowana między zarządzanymi składnikami systemu i niezarządzanymi. Środowisko CLR udostępnia wiele funkcji, które zwiększają produktywność i niezawodne programowanie (w tym zarządzanie pamięcią, obsługę błędów, wspólny system typów itp.), ale uzyskują koszt.  
   
- Główne składniki programu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] przedstawiono na poniższej ilustracji. Czerwona sekcja diagramu (platformie docelowej, 'Presentationcore i milcore) to główne fragmenty [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]kodu. Z nich tylko jeden jest składnikiem niezarządzanym — milcore. Milcore jest zapisywana w kodzie niezarządzanym w celu zapewnienia ścisłej integracji z programem [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. Wszystkie wyświetlacze [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] w programie są wykonywane [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] przez aparat, co pozwala na wydajne renderowanie sprzętu i oprogramowania. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]wymaga to również precyzyjnej kontroli nad pamięcią i wykonywaniem. Aparat kompozycji w milcore jest bardzo wrażliwy na wydajność i wymaga podania wielu zalet środowiska CLR w celu uzyskania wydajności.  
+ Główne składniki programu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] przedstawiono na poniższej ilustracji. Czerwona sekcja diagramu (platformie docelowej, 'Presentationcore i milcore) to główne fragmenty [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]kodu. Z nich tylko jeden jest składnikiem niezarządzanym — milcore. Milcore jest zapisywana w kodzie niezarządzanym w celu zapewnienia ścisłej integracji z DirectX. Wszystkie wyświetlacze [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] w programie odbywają się za pomocą aparatu DirectX, co umożliwia wydajne renderowanie sprzętu i oprogramowania. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]wymaga to również precyzyjnej kontroli nad pamięcią i wykonywaniem. Aparat kompozycji w milcore jest bardzo wrażliwy na wydajność i wymaga podania wielu zalet środowiska CLR w celu uzyskania wydajności.  
   
  ![Pozycja WPF w .NET Framework.](./media/wpf-architect1.PNG "wpf_architect1")  
   
@@ -104,7 +104,7 @@ Ten temat zawiera Przewodnik dotyczący hierarchii klas Windows Presentation Fou
   
  Aby to zrobić, <xref:System.Windows.UIElement> należy również wprowadzić pojęcie CommandBindings. System poleceń umożliwia deweloperom Definiowanie funkcji w postaci punktu końcowego polecenia — elementu, który implementuje <xref:System.Windows.Input.ICommand>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Powiązania poleceń umożliwiają elementu Definiowanie mapowania między gestem wejściowym (CTRL + N) i poleceniem (New). Zarówno gesty wejściowe, jak i definicje poleceń są rozszerzalne i mogą być połączone ze sobą w czasie użytkowania. Dzięki temu można na przykład zezwolić użytkownikowi końcowemu na dostosowanie kluczowych powiązań, których chcą używać w aplikacji.  
   
- Do tego punktu w temacie "podstawowe" funkcje [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] funkcji — funkcje zaimplementowane w zestawie 'presentationcore. Podczas [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]kompilowania, czyste rozdzielenie między częściami fundamentów (takie jak kontrakt do  układu z miarą i rozmieszczeniem) oraz elementy struktury (takie jak implementacja <xref:System.Windows.Controls.Grid>określonego układu, np.) było odpowiednie  wynikiem. Celem było zapewnienie niskich punktów rozszerzalności na stosie, które umożliwią deweloperom zewnętrznym tworzenie własnych platform w razie potrzeby.  
+ Do tego punktu w temacie "podstawowe" funkcje [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] funkcji — funkcje zaimplementowane w zestawie 'presentationcore. Podczas [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]kompilowania, czyste rozdzielenie między częściami fundamentów (takie jak kontrakt do układu z miarą i rozmieszczeniem) oraz elementy struktury (takie jak implementacja <xref:System.Windows.Controls.Grid>określonego układu, np.) było odpowiednie wynikiem. Celem było zapewnienie niskich punktów rozszerzalności na stosie, które umożliwią deweloperom zewnętrznym tworzenie własnych platform w razie potrzeby.  
   
 <a name="System_Windows_FrameworkElement"></a>   
 ## <a name="systemwindowsframeworkelement"></a>System.Windows.FrameworkElement  

@@ -1,19 +1,19 @@
 ---
 title: Co to jest F#
-description: Dowiedz się więcej o tym, co F# język programowania jest i co F# przypomina programowania. Więcej informacji na temat rozbudowane typy danych, funkcje i jak one współdziałają ze sobą.
+description: Dowiedz się więcej F# na temat tego, co F# to jest język programowania i jaki jest sposób programowania. Dowiedz się więcej o zaawansowanych typach danych, funkcjach i sposobach ich dopasowania.
 ms.date: 08/03/2018
-ms.openlocfilehash: fc4f4db771c43a4ec08cc9d3a247cf1f38e60457
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0c576fe49fadebd68e4fc9d2b20ea8f0cb991af5
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486832"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630461"
 ---
 # <a name="what-is-f"></a>Co to jest F\#
 
-F#to funkcjonalny język programowania, która ułatwia pisanie kodu poprawne i łatwego w utrzymaniu.
+F#to funkcjonalny język programowania, dzięki któremu można łatwo pisać kod poprawny i łatwiejszy w obsłudze.
 
-F#Programowanie przede wszystkim obejmuje Definiowanie typy i funkcje, które wywnioskować typu i automatycznie uogólniony. Dzięki temu zespół nadal korzystać z domeny problemu i manipulowanie nimi swoje dane, a nie szczegóły programowania.
+F#Programowanie przede wszystkim obejmuje Definiowanie typów i funkcji, które są automatycznie wywnioskowane i uogólnione. Pozwala to skupić się na domenie problemu i manipulowaniu swoimi danymi, a nie szczegółami programowania.
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
@@ -35,21 +35,21 @@ let main args =
     0
 ```
 
-F#udostępnia wiele funkcji, w tym:
+F#ma wiele funkcji, w tym:
 
-* Lightweight — Składnia
-* Klasa Immutable domyślnie
-* Wnioskowanie o typie i automatyczna Generalizacja
+* Składnia uproszczona
+* Domyślnie niezmienne
+* Wnioskowanie o typie i automatyczne uogólnianie
 * Funkcje pierwszoklasowe
-* Typy danych zaawansowane
+* Zaawansowane typy danych
 * Dopasowanie do wzorca
 * Programowanie asynchroniczne
 
-Pełny zestaw funkcji są udokumentowane w artykule [ F# Skorowidz języka](language-reference/index.md).
+Pełny zestaw funkcji jest udokumentowany w [ F# dokumentacji języka](./language-reference/index.md).
 
-## <a name="rich-data-types"></a>Rozbudowane typy danych
+## <a name="rich-data-types"></a>Zaawansowane typy danych
 
-Typy danych, takich jak [rekordów](language-reference/records.md) i [sumy rozłączne](language-reference/discriminated-unions.md) pozwalają reprezentują złożonych danych i domeny.
+Typy danych, takie jak [rekordy](./language-reference/records.md) i [związki rozłącznych](./language-reference/discriminated-unions.md) , umożliwiają przedstawianie złożonych danych i domen.
 
 ```fsharp
 // Group data with Records
@@ -72,11 +72,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-F#rekordy i sumy rozłączne są inną niż null, niezmienne i porównywalnych domyślnie, dzięki czemu jest bardzo łatwa w użyciu.
+F#rekordy i unie rozłączne mają domyślnie wartości inne niż null, niezmienne i porównywalne, co ułatwia ich używanie.
 
-## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>Wymuszone poprawność przy użyciu funkcji dopasowywania do wzorca
+## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>Wymuszone poprawność przy użyciu funkcji i dopasowania do wzorca
 
-F#funkcje są łatwe do deklarowania i Zaawansowane w praktyce. W połączeniu z [dopasowywania do wzorca](language-reference/pattern-matching.md), umożliwiają definiowanie zachowania, którego poprawność jest wymuszana przez kompilator.
+F#funkcje są łatwe do zadeklarować i zaawansowania. W połączeniu z [dopasowywaniem do wzorca](./language-reference/pattern-matching.md)pozwala na definiowanie zachowania, którego poprawność jest wymuszana przez kompilator.
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,11 +93,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-F#funkcje są również najwyższej jakości, co oznacza, mogą być przekazywane jako parametry i zwracane przez inne funkcje.
+F#funkcje są również pierwszą klasą, co oznacza, że mogą być przesyłane jako parametry i zwracane z innych funkcji.
 
-## <a name="functions-to-define-operations-on-objects"></a>Funkcje, aby zdefiniować operacje na obiektach
+## <a name="functions-to-define-operations-on-objects"></a>Funkcje do definiowania operacji na obiektach
 
-F#ma pełne wsparcie dla obiektów, które są typy danych przydatne, gdy potrzebujesz mieszania danych i funkcji. F#funkcje są używane do manipulowania obiektami.
+F#ma pełną obsługę obiektów, które są przydatnymi typami danych w przypadku konieczności mieszania danych i funkcjonalności. F#funkcje są używane do manipulowania obiektami.
 
 ```fsharp
 type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
@@ -119,8 +119,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-Zamiast pisania kodu, który jest zorientowana obiektowo, w F#, często piszesz kod, który traktuje obiekty jako inny typ danych dla funkcji do manipulowania. Funkcje, takie jak [interfejsów ogólnych](language-reference/interfaces.md), [wyrażenia obiektów](language-reference/object-expressions.md)oraz korzystać z [członków](language-reference/members/index.md) są powszechne w większych F# programów.
+Zamiast pisać kod, który jest zorientowany obiektowo, w programie F#często piszesz kod, który traktuje obiekty jako inny typ danych dla funkcji do manipulowania. Funkcje takie jak [interfejsy ogólne](./language-reference/interfaces.md), [wyrażenia obiektów](./language-reference/object-expressions.md)i rozsądne użycie [elementów członkowskich](./language-reference/members/index.md) są wspólne w większych F# programach.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Aby dowiedzieć się więcej na temat większy zbiór F# funkcji, zapoznaj się z [ F# samouczek](tour.md).
+Aby dowiedzieć się więcej na temat większego F# zestawu funkcji, zapoznaj się z [ F# przewodnikiem](tour.md).

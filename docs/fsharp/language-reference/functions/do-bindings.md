@@ -1,17 +1,17 @@
 ---
 title: do — Powiązania
-description: Dowiedz się, jak F# "do" powiązanie jest używana do wykonywania kodu bez definiowania funkcji lub wartości.
+description: Dowiedz się F# , w jaki sposób wiązanie "do" służy do wykonywania kodu bez definiowania funkcji ani wartości.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0755e36912fc4e5a645e55eb4bee5c730a56cadf
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f98f523296bfaceeda35d4861eafbfeaa5a60c32
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641912"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630539"
 ---
 # <a name="do-bindings"></a>do — Powiązania
 
-A `do` powiązania jest używany do wykonywania kodu bez definiowania funkcji lub wartości. Ponadto wykonaj powiązań mogą być używane w klasach, zobacz [ `do` powiązania w klasach](../members/do-bindings-in-classes.md).
+`do` Powiązanie służy do wykonywania kodu bez definiowania funkcji lub wartości. Ponadto, aby można było używać powiązań w klasach, zobacz [ `do` powiązania w klasach](../members/do-bindings-in-classes.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -22,11 +22,11 @@ A `do` powiązania jest używany do wykonywania kodu bez definiowania funkcji lu
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj `do` powiązanie wykonać kod, niezależnie od definicji funkcji lub wartości. Wyrażenie w `do` powiązania musi zwracać `unit`. Kod w najwyższego poziomu `do` powiązania jest wykonywany, gdy moduł został zainicjowany. Słowo kluczowe `do` jest opcjonalne.
+Użyj powiązania `do` , gdy chcesz wykonać kod niezależnie od definicji funkcji lub wartości. Wyrażenie w `do` powiązaniu musi zwracać `unit`. Kod w powiązaniu najwyższego poziomu `do` jest wykonywany po zainicjowaniu modułu. Słowo kluczowe `do` jest opcjonalne.
 
-Atrybuty mogą być stosowane do najwyższego poziomu `do` powiązania. Na przykład, jeśli program używa Usługa międzyoperacyjna modelu COM, warto zastosować `STAThread` atrybutu do programu. Można to zrobić za pomocą atrybutu na `do` powiązania, jak pokazano w poniższym kodzie.
+Atrybuty mogą być stosowane do powiązań najwyższego `do` poziomu. Na przykład jeśli program korzysta z międzyoperacyjności modelu COM, możesz chcieć zastosować `STAThread` atrybut do programu. Można to zrobić przy użyciu atrybutu dla `do` powiązania, jak pokazano w poniższym kodzie.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet201.fs)]
 
 ## <a name="see-also"></a>Zobacz także
 

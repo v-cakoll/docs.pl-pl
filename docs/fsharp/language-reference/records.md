@@ -1,17 +1,17 @@
 ---
 title: Rekordy
-description: Dowiedz się, jak F# rekordów reprezentują prostych wartości zagregowanych nazwanych wartości opcjonalnie wraz z elementów członkowskich.
+description: Dowiedz F# się, jak rekordy reprezentują proste Agregowanie wartości nazwanych, opcjonalnie z elementami członkowskimi.
 ms.date: 06/09/2019
-ms.openlocfilehash: cfb8de8272b479571119ae4cf91ea1d6fd5db73c
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: d92a1a7517e5b05ee687926df29f33fab123b4dd
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816192"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627283"
 ---
 # <a name="records"></a>Rekordy
 
-Rekordy reprezentują prostych wartości zagregowanych nazwanych wartości opcjonalnie wraz z elementów członkowskich. Mogą to być albo typu struktury lub odwołania.  Są one domyślnie typami odwołań.
+Rekordy reprezentują proste Agregowanie wartości nazwanych, opcjonalnie z elementami członkowskimi. Mogą to być struktury lub typy referencyjne.  Domyślnie są to typy odwołań.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,55 +26,55 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>Uwagi
 
-W poprzedniej składni *typename* jest nazwą typu rekordu *label1* i *etykiety 2* nazwy wartości, nazywane są *etykiety*, i *type1* i *type2* typy tych wartości. *Lista elementów członkowskich* jest opcjonalna lista elementów członkowskich typu.  Możesz użyć `[<Struct>]` atrybutu do utworzenia rekordu struktury, a nie rekord, który jest typem referencyjnym.
+W poprzedniej składni, *TypeName* jest nazwą typu rekordu, *Label1* i *etykiety 2* są nazwami wartości, zwanymi *etykietami*, a *Type1* i *Type2* są typami tych wartości. *Lista elementów członkowskich* jest opcjonalną listą elementów członkowskich typu.  Możesz użyć atrybutu, `[<Struct>]` aby utworzyć rekord struktury, a nie rekord, który jest typem referencyjnym.
 
 Poniżej przedstawiono kilka przykładów.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1901.fs)]
 
-Po każdej etykiety w osobnym wierszu średnik jest opcjonalne.
+Gdy każda etykieta znajduje się w osobnym wierszu, średnik jest opcjonalny.
 
-Można ustawić wartości w wyrażeniach, znane jako *rejestrowania wyrażenia*. Kompilator wnioskuje typ z etykiet, używane (Jeśli etykiety wystarczająco różnią się od tych innych typów rekordów). Nawiasy klamrowe ({}) powinno być rekord. Poniższy kod pokazuje wyrażenie rekordów, które inicjuje rekord za pomocą trzech elementów float z etykietami `x`, `y` i `z`.
+Można ustawić wartości w wyrażeniach nazywanych *wyrażeniami rekordów*. Kompilator wnioskuje typ z użytych etykiet (Jeśli etykiety są wystarczająco odrębne od tych z innych typów rekordów). Nawiasy klamrowe ({}) otaczają wyrażenie rekordu. Poniższy kod przedstawia wyrażenie rekordu, które inicjuje rekord z trzema elementami zmiennoprzecinkowymi z `x`etykietami `y` i `z`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
-Nie należy używać formy skróconej, jeśli może być innym typem, który ma również tej samej etykiety.
+Nie używaj skróconej formy, jeśli może istnieć inny typ, który ma również te same etykiety.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1903.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1903.fs)]
 
-Etykiety najbardziej niedawno zadeklarowanym typem pierwszeństwo wcześniej zadeklarowanej typu, więc w powyższym przykładzie `mypoint3D` jest `Point3D`. Można jawnie określić typ rekordu, tak jak w poniższym kodzie.
+Etykiety ostatnio zadeklarowanego typu mają pierwszeństwo przed poprzednimi zadeklarowanymi typem, więc w poprzednim przykładzie `mypoint3D` jest wywnioskowane. `Point3D` Można jawnie określić typ rekordu, jak w poniższym kodzie.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1908.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1908.fs)]
 
-Metody mogą być definiowane dla typów rekordów, podobnie jak w przypadku typu klasy.
+Metody można definiować dla typów rekordów, tak jak w przypadku typów klas.
 
-## <a name="creating-records-by-using-record-expressions"></a>Tworzenie rekordów za pomocą wyrażeń rekordów
+## <a name="creating-records-by-using-record-expressions"></a>Tworzenie rekordów przy użyciu wyrażeń rekordu
 
-Rekordy można zainicjować za pomocą etykiet, które są zdefiniowane w rekordzie. Wyrażenie, które ten jest nazywany *rejestrowania wyrażenie*. Powinno być rekord i użyj średnika jako ogranicznika, należy użyć nawiasów klamrowych.
+Rekordy można inicjować przy użyciu etykiet, które są zdefiniowane w rekordzie. Wyrażenie, które jest nazywane *wyrażeniem rekordu*. Użyj nawiasów klamrowych, aby ująć wyrażenie rekordu i użyć średnika jako ogranicznika.
 
 Poniższy przykład pokazuje, jak utworzyć rekord.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1904.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1904.fs)]
 
-Średnikami po ostatnim polu w wyrażeniu rekordu i w definicji typu są opcjonalne, niezależnie od tego, czy pola są wszystko w jednym wierszu.
+Średniki po ostatnim polu w wyrażeniu rekordu i w definicji typu są opcjonalne, bez względu na to, czy wszystkie pola znajdują się w jednym wierszu.
 
-Podczas tworzenia rekordu należy podać wartości dla każdego pola. Nie można odwołać się do wartości innych pól w wyrażeniu inicjowania dla dowolnego pola.
+Podczas tworzenia rekordu należy podać wartości dla każdego pola. Nie można odwołać się do wartości innych pól w wyrażeniu inicjalizacji dla każdego pola.
 
-W poniższym kodzie typ `myRecord2` wynika z nazwy pól. Opcjonalnie można jawnie określić nazwę typu.
+W poniższym kodzie typ `myRecord2` jest wywnioskowany na podstawie nazw pól. Opcjonalnie można jawnie określić nazwę typu.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
 
-Inna forma konstrukcji rekord może być przydatne, kiedy trzeba skopiować istniejący rekord, a być może zmienić niektóre wartości pól. Następujący wiersz kodu ilustruje to.
+Inna forma konstruowania rekordów może być przydatna, gdy trzeba skopiować istniejący rekord i ewentualnie zmienić niektóre wartości pól. Ilustruje to poniższy wiersz kodu.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
-Ta forma wyrażenia rekordu jest nazywany *kopiowanie i aktualizacja wyrażeń rekordów*.
+Ta forma wyrażenia rekordu jest nazywana wyrażeniem *Copy i Update Record*.
 
-Rekordy, które są niezmienne domyślnie; jednak można łatwo utworzyć zmodyfikowanych rekordów przy użyciu wyrażenia Kopiuj i Aktualizuj. Można również jawnie określić mutable pola.
+Rekordy są domyślnie niezmienne; można jednak łatwo tworzyć zmodyfikowane rekordy przy użyciu wyrażenia Copy i Update. Można również jawnie określić pole modyfikowalne.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1909.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1909.fs)]
 
-Nie używaj atrybutu DefaultValue przy użyciu pól rekordu. Lepszym rozwiązaniem jest zdefiniowanie wystąpieniami domyślnymi rekordów z polami, które są inicjowane do wartości domyślnych, a następnie użyć kopii i zaktualizować rekord wyrażenia, aby ustawić wszystkie pola, które różnią się od wartości domyślne.
+Nie używaj atrybutu DefaultValue z polami rekordów. Lepszym rozwiązaniem jest zdefiniowanie domyślnych wystąpień rekordów z polami, które są inicjowane do wartości domyślnych, a następnie użycie wyrażenia Kopiuj i Aktualizuj rekord, aby ustawić wszystkie pola, które różnią się od wartości domyślnych.
 
 ```fsharp
 // Rather than use [<DefaultValue>], define a default record.
@@ -90,13 +90,13 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
 
-## <a name="creating-mutually-recursive-records"></a>Tworzenie wzajemnie rekordów cykliczne
+## <a name="creating-mutually-recursive-records"></a>Tworzenie wzajemnie rekurencyjnych rekordów
 
-Później, podczas tworzenia rekordu, możesz go są zależne od innego typu, który chcesz zdefiniować później. Jest to błąd kompilacji, chyba że zdefiniujesz typów rekordów, które wzajemnie się jako cykliczne.
+Czasami podczas tworzenia rekordu można zależeć od innego typu, który ma zostać zdefiniowany później. Jest to błąd kompilacji, chyba że zostanie zdefiniowany typ rekordu, który ma być wzajemnie cykliczne.
 
-Definiowanie wzajemnie rekordów cyklicznego jest przeprowadzane za pomocą `and` — słowo kluczowe. Dzięki temu można połączyć ze sobą typy 2 lub więcej rekordów.
+Definiowanie wzajemnie cyklicznych rekordów odbywa się za `and` pomocą słowa kluczowego. Dzięki temu można połączyć 2 lub więcej typów rekordów jednocześnie.
 
-Na przykład, poniższy kod definiuje `Person` i `Address` typ jako wzajemnie cyklicznej:
+Na przykład poniższy kod definiuje `Person` a i `Address` typ jako wzajemnie cyklicznie:
 
 ```fsharp
 // Create a Person type and use the Address type that is not defined
@@ -111,15 +111,15 @@ and Address =
     PostCode: string }
 ```
 
-Jeśli potrzeba zdefiniowania poprzedniego przykładu bez `and` — słowo kluczowe, a następnie ją będzie niemożliwa. `and` — Słowo kluczowe jest wymagany dla wzajemnie definicje cykliczne.
+Jeśli zdefiniowano poprzedni przykład bez `and` słowa kluczowego, nie zostanie on skompilowany. `and` Słowo kluczowe jest wymagane dla wzajemnie cyklicznych definicji.
 
-## <a name="pattern-matching-with-records"></a>Dopasowywanie wzorca z rekordów
+## <a name="pattern-matching-with-records"></a>Dopasowanie wzorca z rekordami
 
-Rekordy można łączyć z dopasowywania do wzorca. Można jawnie określić niektóre pola i podać zmienne dla innych pól, które zostaną przypisane po wystąpieniu dopasowania. Pokazano to w poniższym przykładzie kodu.
+Rekordy mogą być używane z dopasowywaniem do wzorca. Niektóre pola można określić jawnie i podać zmienne dla innych pól, które będą przypisywane w przypadku wystąpienia dopasowania. Pokazano to w poniższym przykładzie kodu.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
 
-Dane wyjściowe tego kodu jest w następujący sposób.
+Dane wyjściowe tego kodu są następujące.
 
 ```
 Point is at the origin.
@@ -127,28 +127,28 @@ Point is on the x-axis. Value is 100.000000.
 Point is at (10.000000, 0.000000, -1.000000).
 ```
 
-## <a name="differences-between-records-and-classes"></a>Różnice między rekordami i klasy
+## <a name="differences-between-records-and-classes"></a>Różnice między rekordami i klasami
 
-Pola rekordu różnią się od klas są one automatycznie dostępne jako właściwości i są one używane do tworzenia i kopiowania rekordów. Konstrukcja rekordów również różni się od konstrukcji klasy. W polu Typ rekordu nie można zdefiniować Konstruktor. Zamiast tego składni konstrukcji opisane w tym temacie mają zastosowanie. Klasy nie mają bezpośredniego relacji między parametry konstruktora, pola i właściwości.
+Pola rekordów różnią się od klas, które są automatycznie uwidaczniane jako właściwości i są używane podczas tworzenia i kopiowania rekordów. Konstrukcja rekordu różni się także od konstrukcji klasy. W typie rekordu nie można zdefiniować konstruktora. Zamiast tego stosuje się składnię konstrukcyjną opisaną w tym temacie. Klasy nie mają bezpośredniej relacji między parametrami konstruktora, polami i właściwościami.
 
-Podobnie jak typy Unii i struktury rekordy mają semantykę porównania strukturalnego. Klasy mają odniesienie równości semantyki. Poniższy przykład kodu pokazuje to.
+Podobnie jak w przypadku typów Unii i struktury, rekordy mają semantykę równości strukturalnej. Klasy mają semantykę równości odwołań. Poniższy przykład kodu demonstruje ten sposób.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
-Dane wyjściowe tego kodu jest następująca:
+Dane wyjściowe tego kodu są następujące:
 
 ```
 The records are equal.
 ```
 
-Jeśli piszesz ten sam kod z klasami, obiektów dwóch klas będzie nierówne, ponieważ dwie wartości reprezentuje dwa obiekty na stosie i będzie można porównać tylko adresy (o ile nie zastępuje typ klasy `System.Object.Equals` metody).
+Jeśli piszesz ten sam kod z klasami, obiekty obu klas byłyby nierówne, ponieważ dwie wartości przedstawiają dwa obiekty na stercie i porównywane są tylko te adresy (chyba że typ klasy zastępuje `System.Object.Equals` metodę).
 
-Jeśli potrzebujesz odwołać równości dla rekordów, Dodaj atrybut `[<ReferenceEquality>]` powyżej rekordu.
+Jeśli potrzebujesz równości odwołań dla rekordów, Dodaj atrybut `[<ReferenceEquality>]` powyżej rekordu.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Typy F#](fsharp-types.md)
 - [Klasy](classes.md)
 - [Dokumentacja języka F#](index.md)
-- [Równość odniesienia](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+- [Odwołanie — równość](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
 - [Dopasowanie do wzorca](pattern-matching.md)

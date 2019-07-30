@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: fd99d97d677ef588c3f7e2a178190377d72c74ce
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 099d6b94f9094ac9baed25e5060d8a166e27573b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400640"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629926"
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
 Ten temat zawiera informacje o problemach, które należy wziąć pod [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uwagę podczas pisania aplikacji dla globalnego rynku. Elementy programowania globalizacji są zdefiniowane w [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] programie w programie. `System.Globalization`
@@ -127,7 +127,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
  [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]czcionki umożliwiają obsługę dużych zestawów glifów przy użyciu [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] kodowania. Takie kodowanie włącza szeroką pomoc techniczną, a także dla wariantów symboli typograficznych.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]renderowanie tekstu jest obsługiwane [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] przez technologię pikseli, która obsługuje niezależność rozpoznawania. Znacznie poprawia to czytelność i zapewnia możliwość obsługi dokumentów w stylu magazynu o wysokiej jakości dla wszystkich skryptów.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]renderowanie tekstu jest obsługiwane przez technologię Microsoft ClearType w pikselach, która obsługuje niezależność rozwiązań. Znacznie poprawia to czytelność i zapewnia możliwość obsługi dokumentów w stylu magazynu o wysokiej jakości dla wszystkich skryptów.
 
 <a name="intl_layout"></a>
 ### <a name="international-layout"></a>Układ Międzynarodowy

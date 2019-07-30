@@ -1,72 +1,72 @@
 ---
 title: Typy F#
-description: Informacje o typach, które są używane w F# i w jaki sposób F# typów o nazwie i opisem.
+description: Dowiedz się więcej o typach, które F# są używane F# w programie oraz o nazywaniu i opisywaniu typów.
 ms.date: 05/16/2016
-ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44bd9d985e0ce1afa1bf2a8457dcd9470b13dfe1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934644"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630218"
 ---
 # <a name="f-types"></a>Typy F#
 
-W tym temacie opisano typy, które są używane w F# i w jaki sposób F# typów o nazwie i opisem.
+W tym temacie opisano typy, które są używane F# w programie F# , i sposób ich nazywania i opisywania.
 
 ## <a name="summary-of-f-types"></a>Podsumowanie F# typów
-Niektóre typy są traktowane jako *typów pierwotnych*, takie jak typ Boolean `bool` i typów całkowitych i zmiennoprzecinkowych punkt o różnych rozmiarach, które obejmują typy bajtów i znaków. Te typy są opisane w [typów pierwotnych](primitive-types.md).
+Niektóre typy są uznawane za *typy pierwotne*, takie jak `bool` typ Boolean i typy całkowite i zmiennoprzecinkowe różnych rozmiarów, które obejmują typy dla bajtów i znaków. Te typy są opisane w [typach pierwotnych](primitive-types.md).
 
-Inne typy, które są wbudowane w języku obejmują krotek, list, tablic, sekwencji, rekordy i związków wyróżniających. Jeśli masz doświadczenie z innymi językami .NET i learning F#, możesz zapoznaj się z tematami dla każdego z tych typów. Linki do szczegółowych informacji o tych typach znajdują się w [Tematy pokrewne](https://msdn.microsoft.com/library/#rel) części tego tematu. Te F#-określonych typów obsługuje style programowania, które są wspólne dla języków programowania funkcjonalnego. Skojarzono wiele z tych typów w modułach F# biblioteki, która obsługuje typowe operacje na tych typach.
+Inne typy, które są wbudowane w język obejmują krotki, listy, tablice, sekwencje, rekordy i związki rozłącznych. Jeśli masz doświadczenie z innymi językami .NET i uczeniem F#się, zapoznaj się z tematami dotyczącymi każdego z tych typów. Linki do dodatkowych informacji na temat tych typów znajdują się w sekcji [Tematy pokrewne](https://msdn.microsoft.com/library/#rel) tego tematu. Te F#typy charakterystyczne obsługują style programowania, które są wspólne dla języków programowania. Wiele z tych typów ma skojarzone moduły w F# bibliotece, które obsługują Typowe operacje na tych typach.
 
-Typ funkcji zawiera informacje na temat typów parametrów i zwracany typ.
+Typ funkcji zawiera informacje o typach parametrów i zwracanym typie.
 
-.NET Framework jest źródłem typy obiektów, typy interfejsów, typy delegatów i inne. Można zdefiniować własne typy obiektów, podobnie jak w dowolnym języku .NET.
+.NET Framework jest źródłem typów obiektów, typów interfejsów, typów delegatów i innych. Możesz definiować własne typy obiektów tak samo jak w przypadku dowolnego innego języka .NET.
 
-Ponadto F# kodu można zdefiniować aliasy, które noszą nazwy *skróty typów*, które są alternatywne nazwy dla typów. Skróty typów można użyć, gdy typ mogą ulec zmianie w przyszłości i chcesz uniknąć zmieniania kodu, który zależy od typu. Lub można użyć jako przyjazna nazwa dla typu, który może uczynić kod łatwiejsze do odczytania i zinterpretowania skrótem typu.
+Ponadto F# kod może definiować aliasy, które są nazwanymi *skrótami*typów, które są alternatywnymi nazwami typów. Możesz użyć skrótów typu, gdy typ może ulec zmianie w przyszłości i chcesz uniknąć zmiany kodu, który zależy od typu. Lub można użyć skrótu typu jako przyjaznej nazwy dla typu, który może ułatwić odczytywanie i zrozumienie kodu.
 
-F#dostarcza typy przydatne kolekcji, które mają programowania funkcjonalnego, należy pamiętać. Używanie tych typów kolekcji ułatwia pisanie kodu, który jest bardziej funkcjonalnego w stylu. Aby uzyskać więcej informacji, zobacz [ F# typy kolekcji](fsharp-collection-types.md).
+F#oferuje przydatne typy kolekcji, które są przeznaczone do programowania funkcjonalnego. Korzystanie z tych typów kolekcji ułatwia pisanie kodu, który jest bardziej funkcjonalny w stylu. Aby uzyskać więcej informacji, zobacz [ F# typy kolekcji](fsharp-collection-types.md).
 
-## <a name="syntax-for-types"></a>Składnia dla typów
-W F# kodu, często musisz zapisać nazwy typów. Każdy typ ma formę składni i użycia tych formularzy składni w adnotacji typu, deklaracje metody abstrakcyjnej, deklaracje delegatów, sygnatur i innych konstrukcji. Zawsze, gdy należy zadeklarować nową konstrukcję program w interpreter, interpreter Wyświetla nazwę konstrukcja i składnię dla tego typu. Ta składnia może być tylko identyfikator typu zdefiniowanego przez użytkownika lub wbudowane identyfikatora takiego jak w przypadku `int` lub `string`, ale w przypadku bardziej złożonych typów jest bardziej złożona składnia.
+## <a name="syntax-for-types"></a>Składnia typów
+W F# kodzie często trzeba napisać nazwy typów. Każdy typ ma formę składni, a te formy są używane w adnotacjach typu, deklaracjach metod abstrakcyjnych, deklaracjach delegatów, sygnaturach i innych konstrukcjach. Za każdym razem, gdy deklarujesz nową konstrukcję programu w interpreterze, interpreter wyświetla nazwę konstrukcji i składnię dla jej typu. Ta składnia może być tylko identyfikatorem typu zdefiniowanego przez użytkownika lub wbudowanym identyfikatorem, takim jak dla `int` lub `string`, ale dla bardziej złożonych typów, składnia jest bardziej skomplikowana.
 
-W poniższej tabeli przedstawiono aspektów Składnia typu F# typów.
+W poniższej tabeli przedstawiono aspekty składni typów dla F# typów.
 
 |Typ|Składnia typu|Przykłady|
 |----|-----------|--------|
 |typ pierwotny|*Nazwa typu*|`int`<br /><br />`float`<br /><br />`string`|
-|odpowiedni typ agregacji (klasy, struktury, Unii, rekord, wyliczenia i tak dalej)|*Nazwa typu*|`System.DateTime`<br /><br />`Color`|
-|— Skrót typu|*type-abbreviation-name*|`bigint`|
-|w pełni kwalifikowanego typu|*Nazwa Namespaces.Type*<br /><br />lub<br /><br />*Nazwa Modules.Type*<br /><br />lub<br /><br />*Nazwa Namespaces.Modules.Type*|`System.IO.StreamWriter`|
-|tablica|*Nazwa typu*[] lub<br /><br />*Nazwa typu* tablicy|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
-|dwuwymiarową tablicę|*Nazwa typu*[,]|`int[,]`<br /><br />`float[,]`|
-|tablicy trójwymiarowej|*Nazwa typu*[,]|`float[,,]`|
-|Krotki|*Typ Nazwa1* &#42; *Nazwa2 typu* ...|Na przykład `(1,'b',3)` ma typ `int * char * int`|
-|Typ ogólny|*Parametr typu* *Nazwa typu ogólnego*<br /><br />lub<br /><br />*generic-type-name*&lt;*type-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
-|skonstruowany typ (typ ogólny, który został podany argument określonego typu)|*argument typu* *Nazwa typu ogólnego*<br /><br />lub<br /><br />*generic-type-name*&lt;*type-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|Typ funkcji, która ma jeden parametr|*Parametr type1*  - &gt; *zwracanego typu*|Funkcja, która przyjmuje `int` i zwraca `string` ma typ `int -> string`|
-|Typ funkcji, która ma wiele parametrów|*Parametr type1*  - &gt; *type2 parametr*  - &gt; ... —&gt; *zwracanego typu*|Funkcja, która przyjmuje `int` i `float` i zwraca `string` ma typ `int -> float -> string`|
-|wyższe funkcji order jako parametr|(*typu funkcji*)|`List.map` ma typ `('a -> 'b) -> 'a list -> 'b list`|
-|delegate|Delegowanie z *typu funkcji*|`delegate of unit -> int`|
-|elastycznym typem|#*Nazwa typu*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
+|typ agregacji (Klasa, struktura, Unia, rekord, Wyliczenie itd.)|*Nazwa typu*|`System.DateTime`<br /><br />`Color`|
+|Skrót typu|*Type-skrót-Name*|`bigint`|
+|w pełni kwalifikowany typ|*przestrzenie nazw. type-name*<br /><br />lub<br /><br />*modules. type-name*<br /><br />lub<br /><br />*przestrzenie nazw. modules. type-name*|`System.IO.StreamWriter`|
+|tablica|*Nazwa typu* [] lub<br /><br />Tablica *nazw typu*|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
+|Tablica dwuwymiarowa|*Nazwa typu* [,]|`int[,]`<br /><br />`float[,]`|
+|Tablica trójwymiarowa|*Nazwa typu* [,,]|`float[,,]`|
+|spoin|*Typ — Name1* &#42; *Typ-NAME2* ...|Na przykład `(1,'b',3)` ma typ`int * char * int`|
+|typ ogólny|*parametr typu* *Nazwa typu ogólnego*<br /><br />lub<br /><br />*typ ogólny*&lt;-typ-nazwa-*Lista parametrów*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
+|Typ skonstruowany (typ ogólny, który ma podany określony argument typu)|*argument typu* *Nazwa typu ogólnego*<br /><br />lub<br /><br />*rodzajowy*&lt;typ-nazwa-*Lista argumentów*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
+|Typ funkcji, która ma jeden parametr|*parametr-Type1*  - &gt; *return-Type*|Funkcja, która przyjmuje `int` i `string` zwraca typ`int -> string`|
+|Typ funkcji, która ma wiele parametrów|*parametr-Type1*  - parametru- - Type2&gt; ...-return-Type&gt; &gt;|Funkcja, która przyjmuje `int` `float` i a i zwraca `string` typ`int -> float -> string`|
+|wyższa funkcja Order jako parametr|(*Typ funkcji*)|`List.map`ma typ`('a -> 'b) -> 'a list -> 'b list`|
+|delegate|delegat *typu funkcji*|`delegate of unit -> int`|
+|Typ elastyczny|#*Nazwa typu*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
 |Temat|Opis|
 |-----|-----------|
-|[Typy pierwotne](primitive-types.md)|W tym artykule opisano wbudowanych typów prostych, takie jak typy całkowite, typ Boolean i typy znaków.|
-|[Typ jednostki](unit-type.md)|W tym artykule opisano `unit` typ, typ, który posiada jedną wartość i który jest wskazywany przez (); równoważna `void` w C# i `Nothing` w języku Visual Basic.|
-|[Krotki](tuples.md)|W tym artykule opisano, typu spoiny, typ, który składa się z skojarzone wartości dowolnego typu pogrupowane w pary, trójek, quadruples i tak dalej.|
-|[Opcje](options.md)|Opisuje typ opcji typu, który może mieć wartość lub być pusta.|
-|[Listy](lists.md)|W tym artykule opisano list, które są uporządkowane, niezmienne serię elementów wszystkie tego samego typu.|
-|[Tablice](arrays.md)|W tym artykule opisano, tablice, które są uporządkowane zestawy modyfikowalnych elementów tego samego typu, które zajmują ciągłego bloku pamięci i mają stały rozmiar.|
-|[Sekwencje](sequences.md)|Opisuje typ sekwencji, który reprezentuje logicznej serii wartości. poszczególne wartości są obliczane tylko w razie potrzeby.|
-|[Rekordy](records.md)|Opisuje typ rekordu małych agregacji nazwanych wartości.|
-|[Sumy rozłączne](discriminated-unions.md)|W tym artykule opisano dyskryminowanego typu złożenia typów, których wartości może być dowolny zestaw możliwych typów.|
-|[Funkcje](functions/index.md)|W tym artykule opisano wartości funkcji.|
-|[Klasy](classes.md)|W tym artykule opisano typu klasy, typ obiektu odpowiadający typowi dokumentacja platformy .NET. Typy klasy mogą zawierać elementy członkowskie, właściwości, implementowane interfejsy i typ podstawowy.|
-|[Struktury](structures.md)|W tym artykule opisano `struct` typ, typ obiektu, który odnosi się do typu wartości platformy .NET. `struct` Typ zazwyczaj reprezentuje małych agregację danych.|
-|[Interfejsy](interfaces.md)|Zawiera opis typów interfejsu, które są typy, które reprezentują zestaw elementów członkowskich dostarczające niektórych funkcji, ale które nie zawierają żadnych danych. Typ interfejsu muszą być zaimplementowane przez typ obiektu były przydatne.|
+|[Typy pierwotne](primitive-types.md)|Opisuje wbudowane typy proste, takie jak typy całkowite, typ Boolean i typy znaków.|
+|[Typ jednostki](unit-type.md)|Opisuje typ, typ, który ma jedną wartość i który jest wskazywany przez (); `void` odpowiednikiem w C# i `Nothing` w Visual Basic. `unit`|
+|[Krotki](tuples.md)|Opisuje typ krotki, typ, który składa się z skojarzonych wartości dowolnego typu zgrupowanych w parach, potrójnie, czterokrotnie itd.|
+|[Opcje](options.md)|Opisuje typ opcji, typ, który może mieć wartość lub być pusty.|
+|[Listy](lists.md)|Opisuje listy, które są uporządkowane, z niemodyfikowalnymi seriami wszystkich elementów tego samego typu.|
+|[Tablice](arrays.md)|Opisuje tablice, które są uporządkowanymi zestawami modyfikowalnych elementów tego samego typu, które zajmują ciągły blok pamięci i o stałym rozmiarze.|
+|[Sekwencje](sequences.md)|Opisuje typ sekwencji, który reprezentuje serię logiczną wartości; poszczególne wartości są obliczane tylko w razie potrzeby.|
+|[Rekordy](records.md)|Opisuje typ rekordu, niewielką wartość zagregowaną nazwanych wartości.|
+|[Sumy rozłączne](discriminated-unions.md)|Opisuje typ Unii rozłącznych, którego wartości mogą być jednym z zestawów możliwych typów.|
+|[Funkcje](./functions/index.md)|Opisuje wartości funkcji.|
+|[Klasy](classes.md)|Opisuje typ klasy, typ obiektu, który odnosi się do typu referencyjnego platformy .NET. Typy klas mogą zawierać elementy członkowskie, właściwości, zaimplementowane interfejsy i typ podstawowy.|
+|[Struktury](structures.md)|`struct` Opisuje typ, typ obiektu, który odpowiada typowi wartości .NET. `struct` Typ zwykle reprezentuje niewielką wartość zagregowaną danych.|
+|[Interfejsy](interfaces.md)|Opisuje typy interfejsów, które reprezentują zestaw elementów członkowskich, które udostępniają pewne funkcje, ale nie zawierają danych. Typ interfejsu musi być zaimplementowany przez typ obiektu, który ma być przydatny.|
 |[Delegaty](delegates.md)|Opisuje typ delegata, który reprezentuje funkcję jako obiekt.|
-|[Wyliczenia](enumerations.md)|W tym artykule opisano typy wyliczeniowe, w których wartości należą do zestawu nazwanych wartości.|
-|[Atrybuty](attributes.md)|W tym artykule opisano atrybuty, które są używane do określania metadanych dla innego typu.|
-|[Typy wyjątków](exception-handling/exception-types.md)|Opisuje wyjątki, które określają informacje o błędzie.|
+|[Wyliczenia](enumerations.md)|Opisuje typy wyliczeniowe, których wartości należą do zestawu nazwanych wartości.|
+|[Atrybuty](attributes.md)|Opisuje atrybuty, które są używane do określania metadanych dla innego typu.|
+|[Typy wyjątków](/.exception-handling/exception-types.md)|Opisuje wyjątki, które określają informacje o błędzie.|

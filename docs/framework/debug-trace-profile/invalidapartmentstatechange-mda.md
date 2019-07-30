@@ -13,42 +13,42 @@ helpviewer_keywords:
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d55329fd64176ad0a366c4b80453c2be34c166e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a7be97ef3184c6836cd67e47b4e9383214f1b5f
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614343"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629411"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
-`invalidApartmentStateChange` Zarządzanego Asystenta debugowania (MDS) została aktywowana przy użyciu jednej z dwa problemy:  
+Asystent `invalidApartmentStateChange` debugowania zarządzanego (MDS) jest uaktywniany z jednego z dwóch problemów:  
   
-- Aby zmienić stan apartamentu COM wątku, który został już zainicjowany przez model COM do stanu różnych apartamentu zostanie podjęta próba.  
+- Podjęto próbę zmiany stanu apartamentu COM wątku, który został już zainicjowany przez COM do innego stanu apartamentu.  
   
-- Stan apartamentu COM wątek nieoczekiwanie ulega zmianie.  
+- Stan apartamentu COM wątku zmienia się nieoczekiwanie.  
   
 ## <a name="symptoms"></a>Symptomy  
   
-- Stan apartamentu COM wątku jest nie żądano. Może to spowodować, że serwery proxy ma być używany dla składników modelu COM, które mają inny niż bieżący model wątkowości. To z kolei może spowodować, że <xref:System.InvalidCastException> zostanie wygenerowany podczas wywoływania obiektu COM za pomocą interfejsów, które nie są skonfigurowane do szeregowanie między apartamentu.  
+- Stan apartamentu COM wątku nie jest żądaniem. Może to spowodować, że serwery proxy mają być używane dla składników COM, które mają model wątkowości inny niż bieżący. To z kolei może spowodować, <xref:System.InvalidCastException> że w przypadku wywoływania obiektu com za pomocą interfejsów, które nie są skonfigurowane do organizowania między różnymi komórkami.  
   
-- Stan apartamentu COM wątku jest inny niż oczekiwano. Może to spowodować <xref:System.Runtime.InteropServices.COMException> z HRESULT RPC_E_WRONG_THREAD, a także <xref:System.InvalidCastException> podczas wprowadzania wzywa [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW). Może to również spowodować niektóre jednowątkowe składniki COM można uzyskać dostęp przez wiele wątków, w tym samym czasie, co może prowadzić do uszkodzenia lub utraty danych.  
+- Stan apartamentu COM wątku jest inny niż oczekiwano. Może to spowodować <xref:System.Runtime.InteropServices.COMException> wynik HRESULT of RPC_E_WRONG_THREAD, a także <xref:System.InvalidCastException> podczas wykonywania wywołań dla otoki (RCW) [środowiska uruchomieniowego](../../../docs/standard/native-interop/runtime-callable-wrapper.md) . Może to spowodować, że pewne składniki COM jednowątkowego są dostępne jednocześnie przez wiele wątków, co może prowadzić do uszkodzenia lub utraty danych.  
   
 ## <a name="cause"></a>Przyczyna  
   
-- Wątek był poprzednio inicjowany do innego stanu apartamentu COM. Należy pamiętać, że stan apartamentu wątku można ustawić jawnie lub niejawnie. Jawne operacje obejmują <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> właściwości i <xref:System.Threading.Thread.SetApartmentState%2A> i <xref:System.Threading.Thread.TrySetApartmentState%2A> metody. Wątek utworzone za pomocą <xref:System.Threading.Thread.Start%2A> niejawnie ustawiono metodę <xref:System.Threading.ApartmentState.MTA> chyba że <xref:System.Threading.Thread.SetApartmentState%2A> jest wywoływana przed wątek jest uruchomiony. Dodatkowo niejawnie zainicjowaniu wątku głównego aplikacji <xref:System.Threading.ApartmentState.MTA> chyba że <xref:System.STAThreadAttribute> atrybut jest określony w metodzie głównej.  
+- Wątek został wcześniej zainicjowany do innego stanu apartamentu COM. Należy zauważyć, że stan Apartment wątku może być ustawiony jawnie lub niejawnie. Operacje jawne obejmują <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> Właściwość <xref:System.Threading.Thread.SetApartmentState%2A> oraz metody i <xref:System.Threading.Thread.TrySetApartmentState%2A> . Wątek utworzony przy użyciu <xref:System.Threading.Thread.Start%2A> metody jest niejawnie ustawiony na <xref:System.Threading.ApartmentState.MTA> , chyba że <xref:System.Threading.Thread.SetApartmentState%2A> jest wywoływana przed uruchomieniem wątku. Główny wątek aplikacji jest również niejawnie zainicjowany <xref:System.Threading.ApartmentState.MTA> , <xref:System.STAThreadAttribute> chyba że atrybut jest określony w metodzie Main.  
   
-- `CoUninitialize` — Metoda (lub `CoInitializeEx` metoda) ze współbieżnością inny model jest wywoływana w wątku.  
+- `CoUninitialize` Metoda (`CoInitializeEx` lub metoda) z innym modelem współbieżności jest wywoływana w wątku.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Ustaw stan apartamentu wątku, przed rozpoczęciem, wykonania lub zastosować jedną <xref:System.STAThreadAttribute> atrybutu lub <xref:System.MTAThreadAttribute> atrybutu do metody głównej aplikacji.  
+ Ustaw stan apartamentu wątku przed rozpoczęciem jego wykonywania lub Zastosuj <xref:System.STAThreadAttribute> atrybut <xref:System.MTAThreadAttribute> lub atrybut do metody Main aplikacji.  
   
- Drugi przyczynę najlepiej, jeśli kod wywołująca `CoUninitialize` metody należy zmodyfikować, aby opóźnić wywołanie, aż wątek się zakończyć i nie ma żadnych RCW i komponentów COM nadal używany przez wątek. Jednakże jeśli nie jest możliwe zmodyfikować kod, który wywołuje `CoUninitialize` metody, a następnie RCW nie powinny być używane z wątków, które są niezainicjowana w ten sposób.  
+ Dla drugiej przyczyny, najlepiej, kod wywołujący `CoUninitialize` metodę należy zmodyfikować tak, aby opóźnić wywołanie do momentu zakończenia wątku, i nie RCW i ich bazowe składniki com nadal są używane przez wątek. Jednakże jeśli nie można zmodyfikować kodu wywołującego `CoUninitialize` metodę, nie należy używać RCW z wątków, które nie zostały zainicjowane w ten sposób.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Stan apartamentu COM bieżącego wątku, a stan, który próbowano zastosować kodu.  
+ Stan apartamentu modelu COM bieżącego wątku oraz stan, który próbuje zastosować kod.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -61,7 +61,7 @@ ms.locfileid: "64614343"
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie kodu pokazano sytuację, która może aktywować to zdarzenie MDA.  
+ Poniższy przykład kodu demonstruje sytuację, w której można aktywować to MDA.  
   
 ```csharp
 using System.Threading;  

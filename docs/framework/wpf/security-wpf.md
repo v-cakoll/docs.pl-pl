@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 8d01e018e570a1ab530f476368d80f4082a73bda
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ec026fd9273e99c88ec2e30cf46c3147419ace94
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400791"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629813"
 ---
 # <a name="security-wpf"></a>Zabezpieczenia (WPF)
 <a name="introduction"></a>Podczas opracowywania aplikacji autonomicznych i hostowanych przez program Windows Presentation Foundation (WPF) należy wziąć pod uwagę model zabezpieczeń. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Aplikacje autonomiczne są wykonywane z nieograniczonymi uprawnieniami (zestaw uprawnień CAS**FullTrust** ), niezależnie od tego, czy wdrożono przy użyciu Instalator Windows (. msi), XCOPY lub ClickOnce. Wdrożenie częściowego zaufania, autonomiczne aplikacje WPF za pomocą technologii ClickOnce nie jest obsługiwane. Jednak w pełni zaufane aplikacje hosta mogą utworzyć częściowe zaufanie <xref:System.AppDomain> przy użyciu modelu dodatku .NET Framework. Aby uzyskać więcej informacji, zobacz [Omówienie dodatków WPF](./app-development/wpf-add-ins-overview.md).  
@@ -216,9 +216,9 @@ ms.locfileid: "68400791"
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>Wyłączanie zestawów APTCA dla częściowo zaufanych aplikacji klienckich  
- Gdy zarządzane zestawy są instalowane w programie [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)], stają się w pełni zaufane, ponieważ użytkownik musi podać jawne uprawnienia, aby je zainstalować. Ponieważ są one w pełni zaufane, mogą z nich korzystać tylko w pełni zaufane zarządzane aplikacje klienckie. Aby umożliwić ich używanie częściowo zaufanych aplikacji, muszą one być oznaczone przy użyciu <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA). Tylko zestawy, które zostały przetestowane pod kątem bezpiecznego wykonywania w częściowej relacji zaufania, powinny być oznaczone tym atrybutem.  
+ Gdy zarządzane zestawy są zainstalowane w globalnej pamięci podręcznej zestawów (GAC), stają się w pełni zaufane, ponieważ użytkownik musi podać jawne uprawnienia, aby je zainstalować. Ponieważ są one w pełni zaufane, mogą z nich korzystać tylko w pełni zaufane zarządzane aplikacje klienckie. Aby umożliwić ich używanie częściowo zaufanych aplikacji, muszą one być oznaczone przy użyciu <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA). Tylko zestawy, które zostały przetestowane pod kątem bezpiecznego wykonywania w częściowej relacji zaufania, powinny być oznaczone tym atrybutem.  
   
- Jednak istnieje możliwość, że zestaw APTCA wykazuje lukę w zabezpieczeniach po zainstalowaniu do programu [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]. Po znalezieniu usterki zabezpieczeń wydawcy zestawu mogą utworzyć aktualizację zabezpieczeń, aby rozwiązać problem z istniejącymi instalacjami oraz chronić przed instalacjami, które mogą wystąpić po wykryciu problemu. Jedną z opcji aktualizacji jest odinstalowanie zestawu, chociaż może to spowodować uszkodzenie innych w pełni zaufanych aplikacji klienckich korzystających z zestawu.  
+ Jednak w przypadku zestawu APTCA może zostać wystawiona Luka w zabezpieczeniach po zainstalowaniu w pamięci podręcznej GAC. Po znalezieniu usterki zabezpieczeń wydawcy zestawu mogą utworzyć aktualizację zabezpieczeń, aby rozwiązać problem z istniejącymi instalacjami oraz chronić przed instalacjami, które mogą wystąpić po wykryciu problemu. Jedną z opcji aktualizacji jest odinstalowanie zestawu, chociaż może to spowodować uszkodzenie innych w pełni zaufanych aplikacji klienckich korzystających z zestawu.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]zapewnia mechanizm, za pomocą którego można wyłączyć zestaw APTCA dla częściowo zaufanych [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] bez odinstalowywania zestawu APTCA.  
   

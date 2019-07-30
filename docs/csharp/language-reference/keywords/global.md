@@ -1,5 +1,5 @@
 ---
-title: Global — słowo kluczowe kontekstowe - C# odwołania
+title: globalne kontekstowe słowo C# kluczowe — odwołanie
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - global keyword [C#]
 ms.assetid: 8932c16a-6959-42c2-86e7-2c4221ab788b
-ms.openlocfilehash: 1c0177c52e21ae60477a283085a2893e2e067c54
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9a8c7b5134cc29668aae53e8a3f86ddae4c8263a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633478"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627685"
 ---
 # <a name="global-c-reference"></a>global (odwołanie w C#)
 
-`global` Kontekstowego słowa kluczowego, gdy znajduje się przed [:: operator](../operators/namespace-alias-qualifer.md), odwołuje się do globalnej przestrzeni nazw, która jest domyślny obszar nazw dla dowolnego programu C#, a w przeciwnym razie jest bez nazwy. Aby uzyskać więcej informacji, zobacz [jak: Użycie globalnych aliasów Namespace](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
+Kontekstowe słowo kluczowe, gdy występuje przed [operatorem::](../operators/namespace-alias-qualifier.md), odwołuje się do globalnej przestrzeni nazw, która jest domyślną przestrzenią C# nazw dla każdego programu i w przeciwnym razie nie ma nazwy. `global` Aby uzyskać więcej informacji, zobacz [jak: Użyj globalnego aliasu](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)przestrzeni nazw.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak używać `global` kontekstowe słowo kluczowe, aby określić, że klasa `TestApp` jest zdefiniowany w globalnej przestrzeni nazw:
+Poniższy przykład pokazuje, jak używać `global` kontekstowego słowa kluczowego, aby określić, że Klasa `TestApp` jest zdefiniowana w globalnej przestrzeni nazw:
 
 [!code-csharp[csrefKeywordsContextual#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#13)]
 

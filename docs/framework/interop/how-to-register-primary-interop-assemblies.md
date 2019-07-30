@@ -7,40 +7,40 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b859f109cc224ebf1a8fd62a1d3d3440cf906c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e599696b75ed1a0186276dfa47baef2cdf9d7097
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636102"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629398"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Instrukcje: Rejestrowanie podstawowych zestawów międzyoperacyjnych
 
-Klasy mogą być organizowane wyłącznie przez współdziałania z modelem COM i zawsze są przekazywane jako interfejsy. W niektórych przypadkach interfejs używany do organizowania klasy jest nazywane interfejsu klasy. Aby dowiedzieć się, jak zastępowanie interfejsu klasy za pomocą ulubionego interfejsu, zobacz [wywoływana otoka COM](../../../docs/framework/interop/com-callable-wrapper.md).
+Klasy mogą być organizowane tylko przez międzyoperacyjność modelu COM i są zawsze organizowane jako interfejsy. W niektórych przypadkach interfejs używany do organizowania klasy jest nazywany interfejsem klasy. Aby uzyskać informacje na temat przesłaniania interfejsu klasy przy użyciu wybranego interfejsu, zobacz Wywoływanie [otoki com](../../../docs/standard/native-interop/com-callable-wrapper.md).
 
- Mimo że każdy Deweloper, który chce użyć typów modelu COM z poziomu aplikacji .NET Framework może generować zestaw międzyoperacyjny, wykonanie tej tak więc tworzy problem. Każdorazowo Deweloper importuje i rejestruje bibliotekę typów modelu COM, deweloper tworzy zestaw unikatowe typy, które są zgodne z tymi zaimportowane i podpisany przez inny dla deweloperów. To rozwiązanie tego problemu niezgodności typu dla każdego dewelopera uzyskać dostarczonego przez dostawcę i podpisany podstawowego zestawu międzyoperacyjnego.
+ Chociaż wszyscy deweloperzy, którzy chcą korzystać z typów COM z aplikacji .NET Framework mogą generować zestaw międzyoperacyjny, spowoduje to utworzenie problemu. Za każdym razem, gdy deweloper importuje i podpisuje bibliotekę typów modelu COM, ten deweloper tworzy zestaw unikatowych typów, które są niezgodne z tymi importowanymi i podpisanymi przez innego dewelopera. Rozwiązanie tego problemu niezgodności w przypadku tego typu jest przeznaczone dla każdego dewelopera, aby uzyskać określony przez dostawcę i podpisany podstawowy zestaw międzyoperacyjny.
 
- Jeśli planujesz ujawniać innych typów modelu COM do innych aplikacji, należy zawsze używać podstawowy zestaw międzyoperacyjny dostarczonych przez tego samego wydawcy, jak biblioteka typów, które definiuje. Ponadto, aby zapewnić zgodność z typem gwarantowane, podstawowe zestawy międzyoperacyjne często są dostosowywane przez dostawcę do ulepszenia współdziałania.
+ Jeśli planujesz uwidocznienie typów COM innych firm w innych aplikacjach, zawsze używaj podstawowego zestawu międzyoperacyjnego dostarczonego przez tego samego wydawcę, który definiuje biblioteka typów. Oprócz zapewnienia gwarantowanej zgodności typów, podstawowe zestawy międzyoperacyjności są często dostosowywane przez dostawcę w celu poprawienia współdziałania.
 
- Nawet jeśli nie planujesz udostępnianie innych typów modelu COM, zadanie współdziałanie ze składnikami modelu COM. może ułatwić przy użyciu podstawowego zestawu międzyoperacyjnego. Jednak ta strategia zapewnia nie izolacji od zmian, jakie typy zdefiniowane w podstawowy zestaw międzyoperacyjny wprowadzać dostawcy. Gdy aplikacja wymaga takich izolacji, generowanie własnego zestawu międzyoperacyjnego, zamiast korzystać z podstawowego zestawu międzyoperacyjnego.
+ Nawet jeśli nie planujesz udostępniania typów COM innych firm, użycie podstawowego zestawu międzyoperacyjnego może ułatwić zadanie współdziałania ze składnikami modelu COM. Jednak ta strategia nie zapewnia żadnych izolacji od zmian, które dostawca może wprowadzać do typów zdefiniowanych w podstawowym zestawie międzyoperacyjnym. Gdy aplikacja wymaga takiej izolacji, wygeneruj własny zestaw międzyoperacyjny zamiast korzystać z podstawowego zestawu międzyoperacyjnego.
 
- Można się odwołać je za pomocą programu Visual Studio na komputerze deweloperskim należy zarejestrować wszystkie uzyskano podstawowe zestawy międzyoperacyjne. Visual Studio szuka i używa podstawowego zestawu międzyoperacyjnego, możesz odwołać się do typu z biblioteki typów COM po raz pierwszy. Jeśli program Visual Studio nie może zlokalizować podstawowego zestawu międzyoperacyjnego skojarzone z biblioteki typów, monituje o je nabyć lub oferuje zamiast tego utwórz zestaw międzyoperacyjny. Podobnie [Importer biblioteki typów (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) również używa rejestru do zlokalizowania podstawowe zestawy międzyoperacyjne.
+ Aby można było odwoływać się do nich za pomocą programu Visual Studio, należy zarejestrować wszystkie nabyte podstawowe zestawy międzyoperacyjności na komputerze deweloperskim. Program Visual Studio szuka i używa podstawowego zestawu międzyoperacyjnego podczas pierwszego odwoływania się do typu z biblioteki typów COM. Jeśli program Visual Studio nie może zlokalizować podstawowego zestawu międzyoperacyjnego skojarzonego z biblioteką typów, zostanie wyświetlony komunikat z prośbą o pozyskanie lub ofertę utworzenia zestawu międzyoperacyjnego. Analogicznie, [Importer biblioteki typów (Tlbimp. exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) używa również rejestru do lokalizowania podstawowych zestawów międzyoperacyjnych.
 
- Chociaż nie jest to konieczne zarejestrować podstawowe zestawy międzyoperacyjne, chyba że zamierzasz używać programu Visual Studio, rejestracji ma dwie zalety:
+ Mimo że nie jest konieczne rejestrowanie podstawowych zestawów międzyoperacyjnych, chyba że zamierzasz korzystać z programu Visual Studio, rejestracja oferuje dwie korzyści:
 
-- Zarejestrowanego podstawowego zestawu międzyoperacyjnego jest jednoznacznie oznaczony w kluczu rejestru oryginalnej biblioteki typów. Rejestracja jest najlepszym sposobem lokalizowania podstawowego zestawu międzyoperacyjnego na tym komputerze.
+- Zarejestrowany podstawowy zestaw międzyoperacyjny jest jasno oznaczony kluczem rejestru oryginalnej biblioteki typów. Rejestracja jest najlepszym sposobem lokalizowania podstawowego zestawu międzyoperacyjnego na komputerze.
 
-- Możesz uniknąć przypadkowego generowania i za pomocą nowego zestawu międzyoperacyjnego, jeśli w czasie w przyszłości, należy używać programu Visual Studio, aby odwołać się do typu, dla którego ma się wyrejestrować podstawowy zestaw międzyoperacyjny.
+- Można uniknąć przypadkowego generowania i używania nowego zestawu międzyoperacyjnego, jeśli w danym momencie w przyszłości używasz programu Visual Studio do odwoływania się do typu, dla którego masz niezarejestrowany podstawowy zestaw międzyoperacyjny.
 
-Użyj [narzędzie rejestracji zestawów (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) zarejestrować podstawowy zestaw międzyoperacyjny.
+Użyj [narzędzia rejestracji zestawu (Regasm. exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) do zarejestrowania podstawowego zestawu międzyoperacyjnego.
 
-## <a name="to-register-a-primary-interop-assembly"></a>Aby zarejestrować się podstawowy zestaw międzyoperacyjny
+## <a name="to-register-a-primary-interop-assembly"></a>Aby zarejestrować podstawowy zestaw międzyoperacyjny
 
 1. W wierszu polecenia wpisz polecenie:
 
-     **regasm** *assemblyname*
+     **Regasm** *AssemblyName*
 
-     W tym poleceniu *assemblyname* jest nazwą pliku zestawu, który jest zarejestrowany. Regasm.exe dodaje wpis dla podstawowego zestawu międzyoperacyjnego w kluczu rejestru jako oryginalnej biblioteki typów.
+     W tym poleceniu *AssemblyName* jest nazwą pliku zestawu, który jest zarejestrowany. Regasm. exe dodaje wpis dla podstawowego zestawu międzyoperacyjnego w tym samym kluczu rejestru co oryginalna biblioteka typów.
 
 ## <a name="example"></a>Przykład
  Poniższy przykład rejestruje `CompanyA.UtilLib.dll` podstawowy zestaw międzyoperacyjny.
@@ -53,4 +53,4 @@ regasm CompanyA.UtilLib.dll
 
 - [Programowanie przy użyciu podstawowych zestawów międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
 - [Lokalizowanie podstawowych zestawów międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
-- [Redystrybucja podstawowych zestawów międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))
+- [Redystrybuowanie podstawowych zestawów międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))

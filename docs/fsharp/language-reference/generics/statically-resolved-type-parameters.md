@@ -1,17 +1,17 @@
 ---
 title: Statycznie rozwiązywane parametry typu
-description: Dowiedz się, jak używać F# statystycznie rozpoznany typ parametru, który jest zastępowany rzeczywistym typem w czasie kompilacji, a nie w czasie wykonywania.
+description: Dowiedz się, jak F# używać statycznie rozpoznanego parametru typu, który jest zastępowany rzeczywistym typem w czasie kompilacji, a nie w czasie wykonywania.
 ms.date: 05/16/2016
-ms.openlocfilehash: 337d4f40418ee76cb18397add27acba75f756091
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 43ed79b6e5f43a499a27b05e26472b021c455e44
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645256"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630582"
 ---
 # <a name="statically-resolved-type-parameters"></a>Statycznie rozwiązywane parametry typu
 
-A *statystycznie rozpoznany typ parametru* jest parametrem typu, który jest zastępowany rzeczywistym typem w czasie kompilacji, a nie w czasie wykonywania. Są poprzedzone symbolem, daszek (^).
+*Statycznie rozpoznany parametr typu* jest parametrem typu, który jest zastępowany rzeczywistym typem w czasie kompilacji, a nie w czasie wykonywania. Są poprzedzone symbolem karetki (^).
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,28 +21,28 @@ A *statystycznie rozpoznany typ parametru* jest parametrem typu, który jest zas
 
 ## <a name="remarks"></a>Uwagi
 
-W F# języka, istnieją dwa odrębne rodzaje parametrów typu. Pierwszy rodzaj jest parametrem standardowym typu rodzajowego. Te są oznaczane apostrofem ('), podobnie jak w `'T` i `'U`. Są one równoważnymi parametrami typu rodzajowego w innych językach .NET Framework. Inny rodzaj jest statycznie rozwiązany i jest oznaczany symbolem daszka, podobnie jak w `^T` i `^U`.
+W F# języku istnieją dwa odrębne rodzaje parametrów typu. Pierwszy rodzaj jest standardowym parametrem typu ogólnego. Są one wskazywane przez apostrof ('), jak w `'T` i `'U`. Są one odpowiednikami parametrów typu ogólnego w innych językach .NET Framework. Inny rodzaj jest statycznie rozpoznany i jest wskazywany przez symbol karetki, jak w `^T` i `^U`.
 
-Statycznie rozwiązywane parametry typu są szczególnie przydatne w połączeniu z ograniczeniami elementu członkowskiego, które są ograniczeniami, które pozwalają na określenie, że argument typu musi mieć danego członka lub członków, aby możliwe było użycie. Nie ma możliwości do utworzenia tego rodzaju ograniczenia przy użyciu parametru regularnego typu rodzajowego.
+Statycznie rozpoznane parametry typu są szczególnie przydatne w połączeniu z ograniczeniami elementu członkowskiego, które są ograniczeniami, które umożliwiają określenie, że argument typu musi mieć określonego członka lub członków, aby można go było używać. Nie ma możliwości utworzenia tego rodzaju ograniczenia przy użyciu zwykłego parametru typu ogólnego.
 
-W poniższej tabeli podsumowano podobieństwa i różnice między dwoma rodzajami parametrów typu.
+W poniższej tabeli zestawiono podobieństwa i różnice między dwoma rodzajami parametrów typu.
 
 |Funkcja|Ogólny|Statycznie rozwiązane|
 |-------|-------|-------------------|
 |Składnia|`'T`, `'U`|`^T`, `^U`|
-|Czas rozpoznawania nazw|W czasie wykonywania|Czas kompilacji|
+|Czas rozwiązania|W czasie wykonywania|Czas kompilacji|
 |Ograniczenia elementu członkowskiego|Nie można używać z ograniczeniami elementu członkowskiego.|Może być używany z ograniczeniami elementu członkowskiego.|
-|Generowanie kodu|Typ (lub metoda) ze standardowymi parametrami ogólnego typu powoduje generowanie jednego ogólnego typu lub metody.|Wiele wystąpień typów i metod jest generowanych, po jednym dla każdego typu, który jest potrzebny.|
-|Za pomocą typów|Może być stosowany na typach.|Nie może być stosowany na typach.|
-|Za pomocą wbudowanej funkcji|Nie. Funkcja śródwierszowa nie mogą być parametryzowane ze standardowym parametrem typu ogólnego.|Tak. Statycznie rozwiązywane parametry typu nie można używać na funkcje lub metody, które nie są wbudowane.|
+|Generowanie kodu|Typ (lub metoda) ze standardowymi parametrami typu ogólnego skutkuje generowaniem pojedynczego typu ogólnego lub metody.|Generowanych jest wiele wystąpień typów i metod, jeden dla każdego typu, który jest wymagany.|
+|Używanie z typami|Może być używany w typach.|Nie można używać w typach.|
+|Używanie z funkcjami wbudowanymi|Nie. Wbudowana funkcja nie może być sparametryzowana przy użyciu standardowego parametru typu ogólnego.|Tak. Parametry typu rozpoznane statycznie nie mogą być używane w funkcjach lub metodach, które nie są wbudowane.|
 
-Wiele F# funkcji biblioteki podstawowej, zwłaszcza operatory, ma statycznie rozwiązywane parametry typu. Te funkcje i operatory są wbudowane i powodują skuteczne generowanie kodu do obliczeń numerycznych.
+Wiele F# podstawowych funkcji biblioteki, w szczególności operatorów, ma statycznie rozwiązywane parametry typu. Te funkcje i operatory są wbudowane i powodują wydajne generowanie kodu dla obliczeń numerycznych.
 
-Wbudowane metody i funkcje, które używają operatorów lub innych funkcji, które mają statycznie rozwiązywane parametry typu, można również użyć parametrów typu statycznie rozpoznanych, samodzielnie. Często wnioskowanie o typie wnioskuje takie wbudowane funkcje, aby mieć statycznie rozwiązywane parametry typu. Poniższy przykład przedstawia definicję operatora która została wywnioskowana, ma parametr typu statycznie rozpoznanych.
+Metody wbudowane i funkcje, które używają operatorów lub używają innych funkcji, które mają parametry typu statycznie rozpoznane, mogą również używać parametrów typu statycznie rozpoznanych. Często, wnioskowanie o typie wnioskuje, że funkcje wbudowane, które mają statycznie rozwiązywane parametry typu. Poniższy przykład ilustruje definicję operatora, który jest wywnioskowany, aby miał statycznie rozpoznany parametr typu.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
 
-Rozpoznać typ `(+@)` opiera się na wykorzystaniu obu `(+)` i `(*)`, z którym spowodować, że wniosek typu wywnioskowuje ograniczenia Członkowskie na statycznie rozwiązywane parametry typu. Rozwiązany typ, jak pokazano na F# interpreter, jest następujący.
+Rozpoznany typ `(+@)` jest oparty na użyciu obu `(+)` i `(*)`, obu, z których wynika, że wnioskowanie o typie do wnioskowania ograniczeń składowych na statycznie rozpoznanych parametrach typu. Rozpoznany typ, jak pokazano w F# interpreterze, jest następujący.
 
 ```fsharp
 ^a -> ^c -> ^d
@@ -57,7 +57,7 @@ Dane wyjściowe są następujące:
 1.500000
 ```
 
-Począwszy od F# 4.1, można również określić konkretny typ nazwy w podpisach parametrów typu statycznie rozpoznanych.  W poprzednich wersjach języka nazwę typu można wywnioskować faktycznie przez kompilator, ale faktycznie nie można określić w podpisie.  Począwszy od programu F# 4.1, możesz również określić konkretny typ nazwy w podpisach parametrów typu statycznie rozpoznanych. Oto przykład:
+Począwszy od F# 4,1, można także określić konkretne nazwy typów w sygnaturach parametrów typu, które są rozpoznawane statycznie.  W poprzednich wersjach języka nazwa typu mogła zostać wywnioskowana przez kompilator, ale nie można jej było określić w podpisie.  Począwszy od F# 4,1, można także określić konkretne nazwy typów w sygnaturach parametrów typu, które są rozpoznawane statycznie. Oto przykład:
 
 ```fsharp
 let inline konst x _ = x

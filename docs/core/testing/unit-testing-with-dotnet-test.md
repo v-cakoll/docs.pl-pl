@@ -1,26 +1,26 @@
 ---
-title: Testowanie jednostek kodu języka C# w .NET Core za pomocą polecenia dotnet test i struktury xUnit
-description: Pojęcia dotyczące jednostek testów w języku C# i .NET Core za pomocą interaktywnych doświadczenia przykładowe rozwiązanie krok po kroku za pomocą polecenia dotnet test i struktury xUnit.
+title: Kod testu C# jednostkowego w programie .NET Core przy użyciu testu dotnet i xUnit
+description: Poznaj koncepcje testów jednostkowych w C# oprogramowaniu i .NET Core za pośrednictwem interaktywnego środowiska tworzenia przykładowego rozwiązania krok po kroku przy użyciu testu dotnet i xUnit.
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: 97cf42c78154375ce06639d4a3029ed87b993ced
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5319e33c314187ccce3e9832c4b01d93ba86c3ce
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665445"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626412"
 ---
-# <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Testowanie jednostek języka C# w .NET Core za pomocą polecenia dotnet test i struktury xUnit
+# <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Testowanie C# jednostkowe w programie .NET Core przy użyciu testu dotnet i xUnit
 
-Ten samouczek przeprowadzi Cię przez środowisko interaktywne tworzenie przykładowe rozwiązanie krok po kroku, aby dowiedzieć się więcej pojęcia testów jednostkowych. Jeśli chcesz wykonać kroki samouczka przy użyciu wstępnie utworzone rozwiązania [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/) przed przystąpieniem do wykonywania. Aby uzyskać instrukcje pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Ten samouczek przeprowadzi Cię przez interaktywny proces tworzenia przykładowego rozwiązania krok po kroku, aby poznać koncepcje dotyczące testowania jednostkowego. Jeśli wolisz postępować zgodnie z samouczkiem przy użyciu wstępnie skompilowanego rozwiązania, przed rozpoczęciem [Wyświetl lub Pobierz przykładowy kod](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/) . Aby uzyskać instrukcje dotyczące pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="creating-the-source-project"></a>Tworzenie projektu źródłowego
 
-Otwieranie okna powłoki. Utwórz katalog o nazwie *testowania — przy użyciu dotnet-test jednostkowy* do przechowywania rozwiązania.
-Wewnątrz tego nowy katalog uruchamiania [ `dotnet new sln` ](../tools/dotnet-new.md) do tworzenia nowego rozwiązania. Rozwiązanie ułatwia zarządzanie zarówno biblioteki klas, jak i projekt testów jednostkowych.
-Utwórz katalog rozwiązania *PrimeService* katalogu. Struktura katalogów i plików pory powinna być następująca:
+Otwórz okno powłoki. Utwórz katalog o nazwie *Unit-Test-using-dotnet-Testuj* , aby obtrzymać rozwiązanie.
+W tym nowym katalogu Uruchom [`dotnet new sln`](../tools/dotnet-new.md) polecenie, aby utworzyć nowe rozwiązanie. Rozwiązanie ułatwia zarządzanie zarówno biblioteką klas, jak i projektem testów jednostkowych.
+W katalogu rozwiązania Utwórz katalog *PrimeService* . W tej chwili struktura katalogów i plików powinna być następująca:
 
 ```
 /unit-testing-using-dotnet-test
@@ -28,7 +28,7 @@ Utwórz katalog rozwiązania *PrimeService* katalogu. Struktura katalogów i pli
     /PrimeService
 ```
 
-Wprowadź *PrimeService* bieżącego katalogu i uruchom [ `dotnet new classlib` ](../tools/dotnet-new.md) do utworzenia projektu źródłowego. Zmień nazwę *Class1.cs* do *PrimeService.cs*. Należy najpierw utworzyć niepowodzenie wykonania `PrimeService` klasy:
+Ustaw *PrimeService* w bieżącym katalogu i uruchom [`dotnet new classlib`](../tools/dotnet-new.md) , aby utworzyć projekt źródłowy. Zmień nazwę *Class1.cs* na *PrimeService.cs*. Najpierw utwórz nieprawidłową implementację `PrimeService` klasy:
 
 ```csharp
 using System;
@@ -39,23 +39,23 @@ namespace Prime.Services
     {
         public bool IsPrime(int candidate)
         {
-            throw new NotImplementedException("Please create a test first");
+            throw new NotImplementedException("Please create a test first.");
         }
     }
 }
 ```
 
-Zmień katalog kopii do *testowania — przy użyciu dotnet-test jednostkowy* katalogu.
+Zmień katalog z powrotem na katalog *testów jednostkowych-using-dotnet-test* .
 
-Uruchom [dotnet sln](../tools/dotnet-sln.md) polecenie, aby dodać projekt biblioteki klas do rozwiązania:
+Uruchom polecenie [dotnet sln](../tools/dotnet-sln.md) , aby dodać projekt biblioteki klas do rozwiązania:
 
 ```
 dotnet sln add ./PrimeService/PrimeService.csproj
 ```
 
-## <a name="creating-the-test-project"></a>Tworzenie projektu testu
+## <a name="creating-the-test-project"></a>Tworzenie projektu testowego
 
-Następnie należy utworzyć *PrimeService.Tests* katalogu. Następujące konspektu przedstawia strukturę katalogów:
+Następnie Utwórz katalog *PrimeService. Tests* . Poniższy konspekt przedstawia strukturę katalogów:
 
 ```
 /unit-testing-using-dotnet-test
@@ -66,7 +66,7 @@ Następnie należy utworzyć *PrimeService.Tests* katalogu. Następujące konspe
     /PrimeService.Tests
 ```
 
-Wprowadź *PrimeService.Tests* katalogu bieżącego katalogu i Utwórz nowy projekt za pomocą [ `dotnet new xunit` ](../tools/dotnet-new.md). To polecenie umożliwia utworzenie projektu testowego, który używa [xUnit](https://xunit.github.io/) jako biblioteka testów. Wygenerowany szablon konfiguruje narzędzie test runner w *PrimeServiceTests.csproj* pliku podobny do następującego kodu:
+Utwórz katalog *PrimeService. Tests* jako bieżący katalog i Utwórz nowy projekt za pomocą [`dotnet new xunit`](../tools/dotnet-new.md)polecenia. To polecenie tworzy projekt testowy, który używa [xUnit](https://xunit.github.io/) jako biblioteki testowej. Wygenerowany szablon służy do konfigurowania modułu uruchamiającego testy w pliku *PrimeServiceTests. csproj* podobnie jak w poniższym kodzie:
 
 ```xml
 <ItemGroup>
@@ -76,15 +76,15 @@ Wprowadź *PrimeService.Tests* katalogu bieżącego katalogu i Utwórz nowy proj
 </ItemGroup>
 ```
 
-Projekt testowy wymaga innych pakietów, aby utworzyć i uruchomić testy jednostkowe. `dotnet new` w poprzednim kroku dodawany xUnit, a moduł uruchamiający testy xUnit. Teraz Dodaj `PrimeService` biblioteki klas jako inny zależności do projektu. Użyj [ `dotnet add reference` ](../tools/dotnet-add-reference.md) polecenia:
+Projekt testowy wymaga innych pakietów do tworzenia i uruchamiania testów jednostkowych. `dotnet new`w poprzednim kroku dodano xUnit i moduł uruchamiający xUnit. Teraz Dodaj `PrimeService` bibliotekę klas jako inną zależność do projektu. [`dotnet add reference`](../tools/dotnet-add-reference.md) Użyj polecenia:
 
 ```
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
-Widać cały plik w [repozytorium przykładów](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService.Tests.csproj) w witrynie GitHub.
+Cały plik można zobaczyć w [repozytorium Samples](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService.Tests.csproj) w witrynie GitHub.
 
-Na poniższym obrazie przedstawiono układ ostateczne rozwiązanie:
+Poniżej przedstawiono końcowy układ rozwiązania:
 
 ```
 /unit-testing-using-dotnet-test
@@ -97,7 +97,7 @@ Na poniższym obrazie przedstawiono układ ostateczne rozwiązanie:
         PrimeServiceTests.csproj
 ```
 
-Aby dodać projekt testu w rozwiązaniu, uruchom [dotnet sln](../tools/dotnet-sln.md) polecenia w pliku *testowania — przy użyciu dotnet-test jednostkowy* katalogu:
+Aby dodać projekt testowy do rozwiązania, uruchom polecenie [dotnet sln](../tools/dotnet-sln.md) w katalogu *Unit-Test-using-dotnet* :
 
 ```
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
@@ -105,7 +105,7 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 ## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu
 
-Jeden zapisu kończy się niepowodzeniem testu, ułatwiają — dostęp próbny, a następnie powtórz ten proces. Usuń *UnitTest1.cs* z *PrimeService.Tests* katalogu i Utwórz nowy C# plik o nazwie *PrimeService_IsPrimeShould.cs*. Dodaj następujący kod:
+Napiszesz jeden test zakończony niepowodzeniem, upewnij się, a następnie powtórz ten proces. Usuń *UnitTest1.cs* z katalogu *PrimeService. Tests* i Utwórz nowy C# plik o nazwie *PrimeService_IsPrimeShould. cs*. Dodaj następujący kod:
 
 ```csharp
 using Xunit;
@@ -123,7 +123,7 @@ namespace Prime.UnitTests.Services
         }
 
         [Fact]
-        public void ReturnFalseGivenValueOf1()
+        public void IsPrime_InputIs1_ReturnFalse()
         {
             var result = _primeService.IsPrime(1);
 
@@ -133,9 +133,9 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-`[Fact]` Atrybut oznacza metodę testową, która jest uruchamiany przez narzędzie test runner. Z *PrimeService.Tests* folderu wykonaj [ `dotnet test` ](../tools/dotnet-test.md) do kompilacji, testów i biblioteki klas, a następnie uruchom testy. Moduł uruchamiający xUnit zawiera punkt wejścia programu, aby uruchomić testy. `dotnet test` Uruchamia narzędzie test runner, za pomocą projektu testu jednostkowego, który został utworzony.
+Ten `[Fact]` atrybut wskazuje metodę testową, która jest uruchamiana przez program Test Runner. W folderze *PrimeService. Tests* wykonaj [`dotnet test`](../tools/dotnet-test.md) polecenie, aby skompilować testy i bibliotekę klas, a następnie uruchom testy. Program xUnit Test Runner zawiera punkt wejścia programu do uruchamiania testów. `dotnet test`uruchamia program Test Runner przy użyciu utworzonego projektu testu jednostkowego.
 
-Test nie powiedzie się. Nie utworzono jeszcze wdrożenia. Wprowadź ten test, przekazać przez napisanie kodu najprostsza `PrimeService` klasę, która działa. Zastąp istniejące `IsPrime` implementacji metody z następującym kodem:
+Test zakończy się niepowodzeniem. Nie utworzono jeszcze implementacji. Wykonaj ten test, pisząc najprostszy kod w `PrimeService` klasie, która działa. Zastąp istniejącą `IsPrime` implementację metody następującym kodem:
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -144,33 +144,33 @@ public bool IsPrime(int candidate)
     {
         return false;
     }
-    throw new NotImplementedException("Please create a test first");
+    throw new NotImplementedException("Please create a test first.");
 }
 ```
 
-W *PrimeService.Tests* katalogu, uruchom `dotnet test` ponownie. `dotnet test` Polecenie uruchamia kompilację dla `PrimeService` projektu i następnie `PrimeService.Tests` projektu. Po utworzeniu obu projektów, działa ten jeden test. Przekazuje on.
+W katalogu *PrimeService. Tests* ponownie uruchom `dotnet test` polecenie. Polecenie uruchamia kompilację `PrimeService` dla `PrimeService.Tests` projektu, a następnie dla projektu. `dotnet test` Po skompilowaniu obu projektów jest uruchamiany ten pojedynczy test. Przekazuje.
 
 ## <a name="adding-more-features"></a>Dodawanie większej liczby funkcji
 
-Teraz, gdy wprowadzono jeden przebieg testu, nadszedł czas na zapis więcej. Istnieje kilka innych przypadkach proste dla liczby pierwsze: 0, -1. Możesz dodać te przypadki jako nowe testy za pomocą `[Fact]` atrybut, ale który szybko staje się uciążliwe. Istnieją inne atrybuty xUnit, które umożliwiają pisanie zestaw testów podobne:
+Teraz, po wykonaniu jednego przebiegu testowego, należy napisać więcej. Istnieje kilka innych prostych przypadków dla numerów pierwszych: 0, -1. Te przypadki można dodać jako nowe testy z `[Fact]` atrybutem, ale szybko żmudnym. Istnieją inne atrybuty xUnit, które umożliwiają pisanie zestawu podobnych testów:
 
-- `[Theory]` reprezentuje zestaw testów, które wykonania tego samego kodu, ale mają różne argumenty wejściowe.
+- `[Theory]`reprezentuje zestaw testów, które wykonują ten sam kod, ale mają różne argumenty wejściowe.
 
-- `[InlineData]` atrybut określa wartości dla tych danych wejściowych.
+- `[InlineData]`atrybut określa wartości dla tych danych wejściowych.
 
-Zamiast tworzyć nowe testy, należy zastosować te dwa atrybuty `[Theory]` i `[InlineData]`, aby utworzyć pojedynczy teorii w *PrimeService_IsPrimeShould.cs* pliku. Teorii to metoda, która sprawdza kilka wartości mniejszej niż dwa, czyli najniższy numer prime:
+Zamiast tworzyć nowe testy, Zastosuj te dwa atrybuty `[Theory]` i `[InlineData]`, aby utworzyć pojedynczy teorii w pliku *PrimeService_IsPrimeShould. cs* . Teoretyczna jest metoda, która sprawdza kilka wartości mniejszej niż dwa, które jest najniższą liczbą:
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-Uruchom `dotnet test` ponownie, a dwa z tych testów powinna zakończyć się niepowodzeniem. Aby wszystkie przebieg testów, należy zmienić `if` klauzuli na początku `IsPrime` method in Class metoda *PrimeService.cs* pliku:
+Uruchom `dotnet test` ponownie, a dwa z tych testów nie powiodą się. Aby wszystkie testy zostały zakończone pomyślnie, należy zmienić `if` klauzulę na początku `IsPrime` metody w pliku *PrimeService.cs* :
 
 ```csharp
 if (candidate < 2)
 ```
 
-Przejdź do iteracji, dodając więcej testów, więcej teorii i więcej kodu w bibliotece głównej. Masz [ukończoną wersję testy](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) i [pełną implementację biblioteki](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs).
+Kontynuuj iteracje, dodając więcej testów, więcej teorie i więcej kodu w bibliotece głównej. Masz ukończoną [wersję testów](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) i kompletną implementację [biblioteki](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs).
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - [Oficjalna witryna xUnit.net](https://xunit.github.io)
-- [Testowanie logiką kontrolera w programie ASP.NET Core](/aspnet/core/mvc/controllers/testing)
+- [Testowanie logiki kontrolera w ASP.NET Core](/aspnet/core/mvc/controllers/testing)

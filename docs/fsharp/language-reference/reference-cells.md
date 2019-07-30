@@ -1,17 +1,17 @@
 ---
 title: Komórki odwołań
-description: Dowiedz się, jak F# komórki odwołań są lokalizacje przechowywania, które umożliwiają tworzenie modyfikowalnych wartości z semantyką odwołań.
+description: Dowiedz F# się, w jaki sposób komórki referencyjne są lokalizacjami przechowywania, które umożliwiają tworzenie modyfikowalnych wartości przy użyciu semantyki odwołania.
 ms.date: 05/16/2016
-ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: faaa4a6b54ff0366163b6821edff7fa4cb2f5a88
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795407"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627251"
 ---
 # <a name="reference-cells"></a>Komórki odwołań
 
-*Komórki odwołań* to lokalizacje przechowywania, które umożliwiają tworzenie modyfikowalnych wartości z semantyką odwołań.
+*Komórki odwołań* to lokalizacje przechowywania, które umożliwiają tworzenie modyfikowalnych wartości z semantyką odwołania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,19 +21,19 @@ ref expression
 
 ## <a name="remarks"></a>Uwagi
 
-Możesz użyć `ref` przed wartością operatora do utworzenia nowej komórki odwołania, która hermetyzuje wartość. Podstawową wartość można będzie wtedy zmieniać, ponieważ jest ona modyfikowalna.
+Użyj `ref` operatora przed wartością, aby utworzyć nową komórkę odwołania, która hermetyzuje wartość. Podstawową wartość można będzie wtedy zmieniać, ponieważ jest ona modyfikowalna.
 
-Komórka odwołania zawiera wartość rzeczywistą, a nie sam adres. Podczas tworzenia komórek odwołań za pomocą `ref` operatora, Utwórz kopię podstawowej wartości jako hermetyzowana wartość modyfikowalna.
+Komórka odwołania zawiera wartość rzeczywistą, a nie sam adres. Podczas tworzenia komórki odniesienia przy użyciu `ref` operatora należy utworzyć kopię bazowej wartości jako hermetyzowaną wartość modyfikowalną.
 
-Komórkę odwołania można wyłuskać za pomocą `!` — operator (wykrzyknika).
+Można usunąć odwołanie do komórki odwołania przy użyciu `!` operatora (wykrzyknika).
 
 Poniższy przykład kodu ilustruje deklarowanie i używanie komórek odwołań.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2201.fs)]
 
-Dane wyjściowe są `50`.
+Dane wyjściowe to `50`.
 
-Komórki odwołań są wystąpieniami `Ref` ogólnego typu rekordu, który jest zadeklarowany w następujący sposób.
+Komórki odwołań są wystąpieniami `Ref` typu rekordu ogólnego, który jest zadeklarowany w następujący sposób.
 
 ```fsharp
 type Ref<'a> =
@@ -42,7 +42,7 @@ type Ref<'a> =
 
 Typ `'a ref` jest synonimem dla `Ref<'a>`. Pierwszy zapis jest stosowany do wyświetlania tego typu w kompilatorze i technologii IntelliSense w środowisku IDE, jednak podstawowa definicja ma postać jak w drugim zapisie.
 
-`ref` Operatora powoduje utworzenie nowej komórki odwołania. Poniższy kod stanowi deklarację `ref` operatora.
+`ref` Operator tworzy nową komórkę odwołania. Poniższy kod jest deklaracją `ref` operatora.
 
 ```fsharp
 let ref x = { contents = x }
@@ -52,17 +52,17 @@ W poniższej tabeli przedstawiono funkcje, które są dostępne w komórce odwo�
 
 |Operator, element członkowski lub pole|Opis|Typ|Definicja|
 |--------------------------|-----------|----|----------|
-|`!` (operator dereferencji)|Zwraca podstawową wartość.|`'a ref -> 'a`|`let (!) r = r.contents`|
-|`:=` (operator przypisania)|Zmienia podstawową wartość.|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
-|`ref` (operator)|Hermetyzuje wartość do nowej komórki odwołania.|`'a -> 'a ref`|`let ref x = { contents = x }`|
-|`Value` (właściwość)|Pobiera lub ustawia podstawową wartość.|`unit -> 'a`|`member x.Value = x.contents`|
-|`contents` (pole rekordu)|Pobiera lub ustawia podstawową wartość.|`'a`|`let ref x = { contents = x }`|
+|`!`(operator dereferencji)|Zwraca podstawową wartość.|`'a ref -> 'a`|`let (!) r = r.contents`|
+|`:=`(operator przypisania)|Zmienia podstawową wartość.|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
+|`ref`zakład|Hermetyzuje wartość do nowej komórki odwołania.|`'a -> 'a ref`|`let ref x = { contents = x }`|
+|`Value`wartość|Pobiera lub ustawia podstawową wartość.|`unit -> 'a`|`member x.Value = x.contents`|
+|`contents`(pole rekordu)|Pobiera lub ustawia podstawową wartość.|`'a`|`let ref x = { contents = x }`|
 
-Istnieje kilka sposobów dostępu do podstawowej wartości. Wartość zwracana przez operator wyłuskania (`!`) nie jest przypisywalna. W związku z tym, jeśli w przypadku modyfikowania podstawowej wartości należy użyć operatora przypisania (`:=`) zamiast tego.
+Istnieje kilka sposobów dostępu do podstawowej wartości. Wartość zwrócona przez operator dereferencji (`!`) nie jest wartością, którą można przypisać. W związku z tym, jeśli modyfikujesz wartość podstawową, należy zamiast tego użyć operatora przypisania`:=`().
 
-Zarówno `Value` właściwości i `contents` są przypisywalne. W związku z tym można za ich pomocą uzyskać dostęp do podstawowej wartości albo ją zmienić, jak pokazano w poniższym kodzie.
+`Value` Obie właściwości`contents` i pola są wartościami możliwymi do przypisania. W związku z tym można za ich pomocą uzyskać dostęp do podstawowej wartości albo ją zmienić, jak pokazano w poniższym kodzie.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2203.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2203.fs)]
 
 Dane wyjściowe są następujące:
 
@@ -73,15 +73,15 @@ Dane wyjściowe są następujące:
 12
 ```
 
-Pole `contents` zapewnia zgodność z innymi wersjami języka ML i spowoduje wygenerowanie ostrzeżenia podczas kompilacji. Aby wyłączyć to ostrzeżenie, użyj `--mlcompatibility` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).
+Pole `contents` jest zapewniane pod kątem zgodności z innymi wersjami ml i podczas kompilacji generuje ostrzeżenie. Aby wyłączyć ostrzeżenie, użyj `--mlcompatibility` opcji kompilatora. Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).
 
-C#Programiści powinni wiedzieć, że `ref` w C# nie jest tak samo jak `ref` w F#. Odpowiednik konstrukcje w F# są [zkratka](byrefs.md), które są różne koncepcji z komórki odwołań.
+C#Programiści powinni wiedzieć, `ref` że C# w programie nie są takie same `ref` jak F#w. Równoważne konstrukcje w F# to [ByRef](byrefs.md), które są różnymi koncepcjami z komórek odwołań.
 
-Wartości oznaczone jako `mutable`może zostać automatycznie podwyższony do `'a ref` przechwycone przez zamknięcie; zobacz [wartości](values/index.md).
+Wartości oznaczone jako `mutable`mogą zostać automatycznie podwyższone `'a ref` do, jeśli zostały przechwycone przez zamknięcie; zobacz [wartości](./values/index.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka F#](index.md)
 - [Parametry i argumenty](parameters-and-arguments.md)
-- [Odwołanie do symboli i operatorów](symbol-and-operator-reference/index.md)
-- [Wartości](values/index.md)
+- [Odwołanie do symboli i operatorów](./symbol-and-operator-reference/index.md)
+- [Wartości](./values/index.md)

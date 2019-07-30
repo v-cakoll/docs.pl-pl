@@ -1,17 +1,17 @@
 ---
 title: 'Pętle: for...to — Wyrażenie'
-description: Zobacz jak F# for... wyrażenie jest używany do wykonywania iteracji w pętli zakresu wartości zmiennej pętli.
+description: Zobacz, F# jak... do wyrażenia jest używany do iteracji w pętli względem zakresu wartości zmiennej pętli.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5b7bb9bac659ddf1d457be1ce17e90a2593666de
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 910c04aa4ea6b2c637dcad147347c1c317b5e0c0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645245"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626625"
 ---
 # <a name="loops-forto-expression"></a>Pętle: for...to — Wyrażenie
 
-`for...to` Wyrażenie jest używane do wykonywania iteracji w pętli zakresu wartości zmiennej pętli.
+`for...to` Wyrażenie służy do iteracji w pętli względem zakresu wartości zmiennej pętli.
 
 ## <a name="syntax"></a>Składnia
 
@@ -22,11 +22,11 @@ for identifier = start [ to | downto ] finish do
 
 ## <a name="remarks"></a>Uwagi
 
-Typ identyfikatora jest wnioskowany z typu *start* i *Zakończ* wyrażenia. Typy te wyrażenia musi być 32-bitowych liczb całkowitych.
+Typ identyfikatora jest wywnioskowany na podstawie typu wyrażeń *początkowych* i końcowych. Typy tych wyrażeń muszą być 32-bitowymi liczbami całkowitymi.
 
-Choć z technicznego punktu widzenia wyrażenie `for...to` przypomina tradycyjne instrukcji w języku programowania imperatywnego. Typ zwracany dla *wyrażenie treści* musi być `unit`. W poniższych przykładach pokazano różne przypadki użycia `for...to` wyrażenia.
+Choć technicznie wyrażenie `for...to` jest bardziej podobne do tradycyjnej instrukcji w języku programowania bezwzględnie. Typem zwracanym dla *wyrażenia Body* musi być `unit`. W poniższych przykładach pokazano różne zastosowania `for...to` wyrażenia.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5101.fs)]
 
 Dane wyjściowe poprzedniego kodu wyglądają następująco:
 
@@ -39,5 +39,5 @@ Dane wyjściowe poprzedniego kodu wyglądają następująco:
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka F#](index.md)
-- [Pętle: `for...in` Expression](loops-for-in-expression.md)
-- [Pętle: `while...do` Expression](loops-while-do-expression.md)
+- [Pętli `for...in`Wyrażenia](loops-for-in-expression.md)
+- [Pętli `while...do`Wyrażenia](loops-while-do-expression.md)

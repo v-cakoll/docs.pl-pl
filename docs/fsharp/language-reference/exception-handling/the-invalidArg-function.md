@@ -1,15 +1,15 @@
 ---
-title: 'Wyjątki: Invalidarg — funkcja'
-description: Dowiedz się, jak F# invalidarg "—" funkcja generuje wyjątek argumentu.
+title: 'Wyjątki: Funkcja invalidArg'
+description: Dowiedz się F# , jak funkcja "invalidArg —" generuje wyjątek argumentu.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1f0cbc9b7e805822544d6d54bc1fc69adf82967a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 010dbfe313f539093b4ee7a19984ef54500b072d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645490"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630308"
 ---
-# <a name="exceptions-the-invalidarg-function"></a>Wyjątki: Invalidarg — funkcja
+# <a name="exceptions-the-invalidarg-function"></a>Wyjątki: Funkcja invalidArg
 
 `invalidArg` Funkcja generuje wyjątek argumentu.
 
@@ -21,13 +21,13 @@ invalidArg parameter-name error-message-string
 
 ## <a name="remarks"></a>Uwagi
 
-Nazwa parametru w poprzedniej składni jest ciąg zawierający nazwę parametru, którego argument był nieprawidłowy. *Ciąg komunikatu o błędzie* jest ciągiem literału lub wartości typu `string`. Staje się `Message` własności obiektu wyjątku.
+Nazwa parametru w poprzedniej składni jest ciągiem o nazwie parametru, którego argument był nieprawidłowy. *Ciąg komunikatu o błędzie* jest ciągiem literału lub wartością typu `string`. Jest to właściwość obiektu Exception. `Message`
 
-Wyjątku, generowanych przez `invalidArg` jest `System.ArgumentException` wyjątku. Poniższy kod ilustruje sposób korzystania z `invalidArg` do zgłoszenia wyjątku.
+Wyjątek wygenerowany przez `invalidArg` `System.ArgumentException` to wyjątek. Poniższy kod ilustruje użycie `invalidArg` , aby zgłosić wyjątek.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6101.fs)]
 
-Dane wyjściowe są następujące polecenie, następuje ślad stosu (nie pokazane).
+Dane wyjściowe są następujące, po których następuje ślad stosu (niepokazywany).
 
 ```
 December
@@ -39,7 +39,7 @@ System.ArgumentException: Month parameter out of range.
 
 - [Obsługa wyjątków](index.md)
 - [Typy wyjątków](exception-types.md)
-- [Wyjątki: `try...with` Wyrażenia](the-try-with-expression.md)
-- [Wyjątki: `try...finally` Wyrażenia](the-try-finally-expression.md)
-- [Wyjątki: `raise` — funkcja](the-raise-function.md)
-- [Wyjątki: `failwith` — Funkcja](the-failwith-function.md)
+- [Wyjątki: `try...with` Wyrażenie](the-try-with-expression.md)
+- [Wyjątki: `try...finally` Wyrażenie](the-try-finally-expression.md)
+- [Wyjątki: `raise` funkcja](the-raise-function.md)
+- [Wyjątki: `failwith` Funkcja](the-failwith-function.md)

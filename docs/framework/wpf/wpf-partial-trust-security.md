@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 259db84c8ab3b9bbad809b9636ba18537dd6fe62
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: b8234dcb33e9d429329c6d68900119382ff2f1cb
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400724"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629794"
 ---
 # <a name="wpf-partial-trust-security"></a>Zabezpieczenie częściowej relacji zaufania WPF
 <a name="introduction"></a>Ogólnie rzecz biorąc, aplikacje internetowe powinny być ograniczone przez bezpośredni dostęp do krytycznych zasobów systemowych, aby zapobiec złośliwym szkodom. Domyślnie [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] języki skryptów po stronie klienta nie są w stanie uzyskać dostępu do krytycznych zasobów systemowych. Ponieważ aplikacje hostowane w przeglądarce Windows Presentation Foundation (WPF) mogą być uruchamiane z przeglądarki, powinny one być zgodne z podobnym zestawem ograniczeń. Aby wymusić te [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ograniczenia, należy zastosować zabezpieczenia dostępu kodu (CAS) i ClickOnce (zobacz temat [strategie zabezpieczeń WPF-platform Security](wpf-security-strategy-platform-security.md)). Domyślnie aplikacje hostowane w przeglądarce żądają zestawu uprawnień strefy Internetu, niezależnie od tego, czy są uruchamiane z Internetu, lokalnego intranetu, czy komputera lokalnego. Aplikacje działające z dowolnym elementem mniejszym niż pełny zestaw uprawnień są uznawane za działające z częściowym zaufaniem.  
@@ -113,7 +113,7 @@ ms.locfileid: "68400724"
   
  W wielu przypadkach powinno być możliwe znalezienie częściowej alternatywy zaufania.  
   
- W środowisku kontrolowanym, takim jak intranet, niestandardowe platformy zarządzane można zainstalować w ramach bazy klienta w [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]programie. Te biblioteki mogą wykonywać kod, który wymaga pełnego zaufania, i mogą być przywoływane z aplikacji, które są dozwolone <xref:System.Security.AllowPartiallyTrustedCallersAttribute> tylko częściowej relacji zaufania przy użyciu (Aby uzyskać więcej informacji [, zobacz temat](security-wpf.md) Security and [WPF Security strategi-platform Security](wpf-security-strategy-platform-security.md)).  
+ W środowisku kontrolowanym, takim jak intranet, niestandardowe platformy zarządzane można zainstalować w ramach bazy klientów w ramach globalnej pamięci podręcznej zestawów (GAC). Te biblioteki mogą wykonywać kod, który wymaga pełnego zaufania, i mogą być przywoływane z aplikacji, które są dozwolone <xref:System.Security.AllowPartiallyTrustedCallersAttribute> tylko częściowej relacji zaufania przy użyciu (Aby uzyskać więcej informacji [, zobacz temat](security-wpf.md) Security and [WPF Security strategi-platform Security](wpf-security-strategy-platform-security.md)).  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>Wykrywanie hosta przeglądarki  
@@ -130,23 +130,23 @@ ms.locfileid: "68400724"
   
 |Uprawnienie|Atrybut|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
-|DNS|Dostęp do serwerów DNS|Tak|Nie|  
-|Zmienne środowiskowe|Odczyt|Yes|Nie|  
-|Okna dialogowe plików|Otwarcie|Tak|Tak|  
-|Okna dialogowe plików|Nieograniczone|Tak|Nie|  
+|DNS|Dostęp do serwerów DNS|Yes|Nie|  
+|Zmienne środowiskowe|Odczyt|Tak|Nie|  
+|Okna dialogowe plików|Otwarcie|Tak|Yes|  
+|Okna dialogowe plików|Nieograniczone|Yes|Nie|  
 |Izolowany magazyn|Izolacja zestawu przez użytkownika|Tak|Nie|  
-|Izolowany magazyn|Nieznana izolacja|Yes|Yes|  
+|Izolowany magazyn|Nieznana izolacja|Tak|Yes|  
 |Izolowany magazyn|Nieograniczony limit przydziału użytkowników|Tak|Nie|  
-|Multimedialny|Bezpieczne audio, wideo i obrazy|Tak|Yes|  
+|Multimedialny|Bezpieczne audio, wideo i obrazy|Tak|Tak|  
 |Drukowanie|Drukowanie domyślne|Tak|Nie|  
 |Drukowanie|Bezpieczne drukowanie|Tak|Tak|  
-|Odbicie|Wysyłać|Tak|Nie|  
-|Zabezpieczenia|Wykonywanie kodu zarządzanego|Tak|Yes|  
+|Odbicie|Wysyłać|Yes|Nie|  
+|Zabezpieczenia|Wykonywanie kodu zarządzanego|Yes|Yes|  
 |Zabezpieczenia|Potwierdzenie przyznanych uprawnień|Tak|Nie|  
-|Interfejs użytkownika|Nieograniczone|Tak|Nie|  
+|Interfejs użytkownika|Nieograniczone|Yes|Nie|  
 |Interfejs użytkownika|Bezpieczne okna najwyższego poziomu|Tak|Tak|  
 |Interfejs użytkownika|Własny schowek|Tak|Yes|  
-|Przeglądarki sieci Web|Bezpieczne nawigowanie po ramce do kodu HTML|Yes|Tak|  
+|Przeglądarki sieci Web|Bezpieczne nawigowanie po ramce do kodu HTML|Tak|Tak|  
   
 > [!NOTE]
 >  Operacje wycinania i wklejania są dozwolone tylko w częściowej relacji zaufania po zainicjowaniu użytkownika.  

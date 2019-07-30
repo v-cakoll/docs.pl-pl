@@ -1,17 +1,17 @@
 ---
 title: Moduły
-description: Dowiedz się, jak F# moduł to grupa F# możesz pisać kod, takie jak wartości, typy i wartości funkcji w F# program.
+description: Dowiedz się F# , jak moduł jest grupą F# kodów, takich jak wartości, typy i wartości funkcji, w F# programie.
 ms.date: 04/24/2017
-ms.openlocfilehash: 07ea1eb9ed06988a780fd3c5acccbc8383a4dc55
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 685ab638e7e1b6c8d47d1a316483abcc18e40199
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641774"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627424"
 ---
 # <a name="modules"></a>Moduły
 
-W kontekście F# języka, *modułu* to grupa F# możesz pisać kod, takie jak wartości, typy i wartości funkcji w F# program. Grupowanie kodu w modułach pomaga zachować kod pokrewny ze sobą oraz uniknąć konfliktów nazw w programie.
+W kontekście F# języka *moduł* jest grupą F# kodów, takich jak wartości, typy i wartości funkcji, w F# programie. Grupowanie kodu w modułach ułatwia zachowanie powiązanego kodu i pozwala uniknąć konfliktów nazw w programie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,69 +26,69 @@ module [accessibility-modifier] module-name =
 
 ## <a name="remarks"></a>Uwagi
 
-F# Moduł to grupa F# konstrukcje kodu, takich jak typy wartości, wartości funkcji i kodu w `do` powiązania. Są one zaimplementowane jako wspólnej klasy środowiska uruchomieniowego (języka wspólnego CLR) języka, która ma tylko statyczne elementy członkowskie. Istnieją dwa typy deklaracje modułów, w zależności od tego, czy cały plik znajduje się w module: deklaracji najwyższego poziomu modułu i deklaracja modułu lokalnego. Deklaracji najwyższego poziomu modułu obejmuje cały plik w module. Deklaracji najwyższego poziomu modułu może znajdować się tylko jako pierwszej deklaracji w pliku.
+F# Moduł jest grupą konstrukcji F# kodu, takich jak typy, wartości, wartości funkcji i kod w `do` powiązaniach. Jest zaimplementowana jako Klasa środowiska uruchomieniowego języka wspólnego (CLR), która ma tylko statyczne składowe. Istnieją dwa typy deklaracji modułu, w zależności od tego, czy cały plik jest zawarty w module: Deklaracja modułu najwyższego poziomu i Deklaracja modułu lokalnego. Deklaracja modułu najwyższego poziomu zawiera cały plik w module. Deklaracja modułu najwyższego poziomu może być wyświetlana tylko jako pierwsza deklaracja w pliku.
 
-W składni deklaracji najwyższego poziomu modułu opcjonalnego *kwalifikowaną przestrzeń nazw* jest sekwencji nazwy zagnieżdżone przestrzenie nazw, która zawiera moduł. Kwalifikowanych przestrzeni nazw ma być uprzednio zadeklarowany.
+W składni dla deklaracji modułu najwyższego poziomu opcjonalna *kwalifikowana przestrzeń nazw* jest sekwencją nazw zagnieżdżonej przestrzeni nazw zawierającej moduł. Kwalifikowana przestrzeń nazw nie musi być wcześniej zadeklarowana.
 
-Nie masz Wcięcie Deklaracje w module najwyższego poziomu. Masz wcięcie wszystkie deklaracje modułów lokalnych. W module lokalnym deklaracji deklaracje, które tworzone jest wcięcie w obszarze deklaracja modułu są częścią tego modułu.
+Nie ma potrzeby wcięcia deklaracji w module najwyższego poziomu. Musisz wciąć wszystkie deklaracje w modułach lokalnych. W deklaracji modułu lokalnego tylko deklaracje, które są wcięte w deklaracji modułu, są częścią modułu.
 
-Plik kodu nie zaczyna się od deklaracji najwyższego poziomu modułu lub deklaracja przestrzeni nazw, całą zawartość pliku, w tym wszystkie moduły lokalne staje się częścią stworzonego modułu najwyższego poziomu, który ma taką samą nazwę jak plik, bez rozszerzenia i przy użyciu pierwszej litery na wielkie litery. Na przykład rozważmy następujący plik.
+Jeśli plik kodu nie zaczyna się od deklaracji modułu najwyższego poziomu lub deklaracji przestrzeni nazw, cała zawartość tego pliku, łącznie z modułami lokalnym, jest częścią niejawnie utworzonego modułu najwyższego poziomu, która ma taką samą nazwę jak plik, bez rozszerzenia z pierwszą literą przekonwertowaną na wielkie litery. Rozważmy na przykład następujący plik.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6601.fs)]
 
-Ten plik będzie można skompilować tak, jakby zostały napisane w ten sposób:
+Ten plik zostanie skompilowany tak, jakby został zapisany w ten sposób:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6602.fs)]
 
-Jeśli masz wiele modułów w pliku dla każdego modułu, należy użyć deklaracji modułu lokalnego. Jeśli zadeklarowano otaczającej przestrzeni nazw, moduły są częścią otaczającej przestrzeni nazw. Jeśli otaczającej przestrzeni nazw nie jest zadeklarowana, moduły stają się częścią stworzonego najwyższego poziomu modułu. Poniższy przykład kodu pokazuje pliku z kodem, który zawiera wiele modułów. Kompilator niejawnie tworzy moduł najwyższego poziomu o nazwie `Multiplemodules`, i `MyModule1` i `MyModule2` są zagnieżdżone w module najwyższego poziomu.
+Jeśli masz wiele modułów w pliku, musisz użyć lokalnej deklaracji modułu dla każdego modułu. W przypadku zadeklarowania otaczającej przestrzeni nazw te moduły są częścią otaczającej przestrzeni nazw. Jeśli otaczająca przestrzeń nazw nie jest zadeklarowana, moduły stają się częścią niejawnie utworzonego modułu najwyższego poziomu. Poniższy przykład kodu przedstawia plik kodu, który zawiera wiele modułów. Kompilator niejawnie tworzy moduł najwyższego poziomu o `Multiplemodules`nazwie i `MyModule1` i `MyModule2` jest zagnieżdżony w tym module najwyższego poziomu.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6603.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6603.fs)]
 
-Jeśli masz wiele plików w projekcie lub w pojedynczej kompilacji lub jeśli tworzysz biblioteki, musi zawierać deklaracji przestrzeni nazw lub module deklaracji w górnej części pliku. F# Kompilator określa tylko nazwy modułu niejawnie istnieje tylko jeden plik w wierszu polecenia kompilacji lub projektu, gdy tworzysz aplikację.
+Jeśli masz wiele plików w projekcie lub w pojedynczej kompilacji lub w przypadku kompilowania biblioteki, musisz dołączyć deklarację przestrzeni nazw lub deklarację modułu w górnej części pliku. F# Kompilator określa tylko nazwę modułu niejawnie, gdy istnieje tylko jeden plik w wierszu polecenia projektu lub kompilacji i tworzysz aplikację.
 
-*Modyfikator dostępności* może być jedną z następujących czynności: `public`, `private`, `internal`. Aby uzyskać więcej informacji, zobacz [kontroli dostępu](access-control.md). Wartość domyślna jest publiczny.
+*Modyfikator dostępności* może mieć jedną z następujących wartości: `public`, `private`, `internal`. Aby uzyskać więcej informacji, zobacz [Access Control](access-control.md). Wartość domyślna to Public.
 
-## <a name="referencing-code-in-modules"></a>Odwoływanie się do kodu w modułach
+## <a name="referencing-code-in-modules"></a>Wywoływanie kodu w modułach
 
-Gdy odwołujesz się funkcje, typy i wartości z innego modułu, należy użyć kwalifikowanej nazwy lub otworzyć modułu. Jeśli używasz nazwy kwalifikowanej, należy określić przestrzenie nazw, moduł i identyfikator elementu programu, który ma. Możesz oddzielić każda część kwalifikowana ścieżka pojedynczego znaku kropki (.), w następujący sposób.
+Podczas odwoływania się do funkcji, typów i wartości z innego modułu należy użyć kwalifikowanej nazwy lub otworzyć moduł. Jeśli używasz kwalifikowanej nazwy, musisz określić przestrzenie nazw, moduł i identyfikator dla elementu programu, który chcesz. Każdą część kwalifikowanej ścieżki należy oddzielić kropką (.) w następujący sposób.
 
 `Namespace1.Namespace2.ModuleName.Identifier`
 
-Można otworzyć moduł lub przynajmniej jednej przestrzeni nazw w celu uproszczenia kodu. Aby uzyskać więcej informacji na temat modułów i przestrzeni nazw otwierania zobacz [deklaracje importowania: `open` — Słowo kluczowe](import-declarations-the-open-keyword.md).
+Aby uprościć kod, możesz otworzyć moduł lub co najmniej jedną przestrzeń nazw. Aby uzyskać więcej informacji na temat otwierania obszarów nazw i [modułów, zobacz Importowanie deklaracji: `open` Słowo kluczowe](import-declarations-the-open-keyword.md).
 
-Poniższy przykład kodu pokazuje najwyższego poziomu modułu, który zawiera kod, aż do końca pliku.
+Poniższy przykład kodu pokazuje moduł najwyższego poziomu, który zawiera cały kod, do końca pliku.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6604.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6604.fs)]
 
-Aby użyć tego kodu z innego pliku, w tym samym projekcie, możesz użyć kwalifikowane nazwy lub możesz otworzyć modułu przed użyciem funkcji, jak pokazano w poniższych przykładach.
+Aby użyć tego kodu z innego pliku w tym samym projekcie, użyj kwalifikowanych nazw lub Otwórz moduł przed użyciem funkcji, jak pokazano w poniższych przykładach.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6605.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6605.fs)]
 
-## <a name="nested-modules"></a>Zagnieżdżone modułów
+## <a name="nested-modules"></a>Moduły zagnieżdżone
 
-Moduły mogą być zagnieżdżone. Wewnętrzne moduły muszą wcięty zakresu deklaracje zewnętrznego modułu, aby wskazać, że są one wewnętrzne moduły, nie nowych modułów. Na przykład Porównaj poniższe dwa przykłady. Moduł `Z` jest wewnętrzny moduł, w poniższym kodzie.
+Moduły mogą być zagnieżdżane. W przypadku modułów wewnętrznych należy zastosować wcięcie w postaci deklaracji modułu zewnętrznego, aby wskazać, że są one modułami wewnętrznymi, a nie nowymi modułami. Na przykład Porównaj poniższe dwa przykłady. Moduł `Z` jest modułem wewnętrznym w poniższym kodzie.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6607.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6607.fs)]
 
-Jednak moduł `Z` jest elementem równorzędnym modułu `Y` w poniższym kodzie.
+Ale moduł `Z` jest elementem równorzędnym do `Y` modułu w poniższym kodzie.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6608.fs)]
-Moduł `Z` jest również moduł element równorzędny w poniższym kodzie, ponieważ nie jest wcięty zakresu innych deklaracji w module `Y`.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6608.fs)]
+Moduł `Z` jest również modułem równorzędnym w poniższym kodzie, ponieważ nie jest wcięty do innych deklaracji w module `Y`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6609.fs)]
-Na koniec zewnętrznego modułu ma nie deklaracji i od razu następuje inny moduł deklaracji, nowe oświadczenie modułu zakłada, że moduł wewnętrzny, ale kompilator wyświetli ostrzeżenie, jeśli drugi definicji modułu nie będą wcięte farther niż pierwszy.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6609.fs)]
+Na koniec, jeśli moduł zewnętrzny nie ma deklaracji i jest przyjmowana bezpośrednio przez inną deklarację modułu, przyjmuje się, że deklaracja nowego modułu jest modułem wewnętrznym, ale kompilator wyświetli ostrzeżenie, jeśli druga definicja modułu nie ma wcięcia od pierwszego.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6610.fs)]
-Aby wyeliminować ostrzeżenia, należy utworzyć wcięcie moduł wewnętrzny.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6610.fs)]
+Aby wyeliminować ostrzeżenie, Zwiększ wcięcie modułu wewnętrznego.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6611.fs)]
-Jeśli chcesz, aby cały kod w pliku w pojedynczym module zewnętrzne i wewnętrzne moduły należy zewnętrznego modułu nie wymaga znaku równości, i nie trzeba być wcięty deklaracji, łącznie z wszelkimi deklaracjami moduł wewnętrzny, które zostanie umieszczona w module zewnętrznym. Deklaracje wewnątrz deklaracji wewnętrzny moduł musi być z wcięciem. Poniższy kod przedstawia tę sprawę.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6611.fs)]
+Jeśli chcesz, aby cały kod w pliku znajdował się w jednym module zewnętrznym i chcesz, aby moduły wewnętrzne, Moduł zewnętrzny nie wymagał znaku równości, a deklaracje, w tym wszelkie wewnętrzne deklaracje modułu, które przechodzą w module zewnętrznym, nie muszą mieć wcięcia. Dla deklaracji wewnątrz wewnętrznych deklaracji modułu należy zastosować wcięcia. W poniższym kodzie przedstawiono ten przypadek.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6612.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6612.fs)]
 
 ## <a name="recursive-modules"></a>Moduły cykliczne
 
-F#4.1 wprowadzono pojęcie modułów, które umożliwia wzajemnie się być typem rekursywnym wszystkie zawarte kodu.  Odbywa się za pośrednictwem `module rec`.  Korzystanie z `module rec` mogą złagodzić ich niektóre problemy, które nie jest możliwość pisania kodu wzajemnie referencyjne typy i moduły.  Oto przykład:
+F#4,1 wprowadza koncepcję modułów, które zezwalają na wzajemną rekursywnie wszystkie zawarte w nim kod.  Jest to realizowane za `module rec`pośrednictwem.  `module rec` Użycie może wyeliminować pewne problemy, ponieważ nie można napisać wzajemnie referencyjnego kodu między typami i modułami.  Poniżej znajduje się przykład:
 
 ```fsharp
 module rec RecursiveModule =
@@ -128,12 +128,12 @@ module rec RecursiveModule =
             | Down -> b |> peelSides
 ```
 
-Należy pamiętać, że wyjątek `DontSqueezeTheBananaException` i klasa `Banana` odnoszą się do siebie nawzajem.  Ponadto moduł `BananaHelpers` i klasa `Banana` także odwoływać się do siebie.  To nie jest możliwe do wyrażenia w F# usunięto `rec` słowo kluczowe z `RecursiveModule` modułu.
+Należy zauważyć, że `DontSqueezeTheBananaException` wyjątek i Klasa `Banana` odnoszą się do siebie nawzajem.  Ponadto moduł `BananaHelpers` i Klasa `Banana` odnoszą się do siebie nawzajem.  Nie będzie to możliwe w F# przypadku usunięcia `rec` słowa kluczowego z `RecursiveModule` modułu.
 
-Ta funkcja jest również możliwe w [przestrzenie nazw](namespaces.md) z F# 4.1.
+Ta możliwość jest również możliwa w [przestrzeniach nazw](namespaces.md) z F# 4,1.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka F#](index.md)
 - [Przestrzenie nazw](namespaces.md)
-- [F#RFC FS-1009 — Zezwalaj na wzajemnie referencyjne typy i moduły za pośrednictwem szerszego zakresu w plikach](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F#RFC FS-1009 — Zezwalaj na wzajemnie referencyjne typy i moduły dla większych zakresów w plikach](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

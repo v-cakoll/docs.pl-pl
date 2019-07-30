@@ -8,92 +8,92 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: b1c61aa333c428e5cb811a5d19469516cbb813e3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c3544769480a45068be0ca64e90f91253daf3e16
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663157"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629780"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Ustawienie rejestru renderowania grafiki
-Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderującego ustawień rejestru, które wpływają na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
+Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ustawień rejestru renderowania grafiki, które mają wpływ na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje.  
 
 <a name="overview"></a>   
-## <a name="when-to-use-graphics-rendering-registry-settings"></a>Kiedy należy używać ustawień rejestru renderowania grafiki  
- Te ustawienia są dostarczane dla rozwiązywania problemów, debugowania i do celów obsługi produktu. Ponieważ zmiany w rejestrze mają wpływ na wszystkie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, Twoja aplikacja nigdy nie powinien alter tych kluczy rejestru, automatycznie, lub podczas instalacji.  
+## <a name="when-to-use-graphics-rendering-registry-settings"></a>Kiedy używać ustawień rejestru renderowania grafiki  
+ Te ustawienia rejestru są dostępne na potrzeby rozwiązywania problemów, debugowania i obsługi produktów. Ponieważ zmiany w rejestrze wpływają na wszystkie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje, aplikacja nie powinna automatycznie zmieniać tych kluczy rejestru ani podczas instalacji.  
   
 <a name="xpdmandwddm"></a>   
-## <a name="what-are-xpdm-and-wddm"></a>Jakie są XPDM i WDDM?  
- Niektóre ustawienia rejestru renderującego mają różne domyślne wartości w zależności od tego, czy korzysta z XPDM lub WDDM sterownik karty wideo. Jest XPDM [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] modelu sterownika wyświetlania i WDDM jest Model sterownika wyświetlania Windows. WDDM jest dostępna na komputerach z systemem [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] i [!INCLUDE[win7](../../../../includes/win7-md.md)]. XPDM jest dostępna na komputerach z systemem [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)], i [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Aby uzyskać więcej informacji na temat WDDM zobacz [przewodnik projektowania modelu sterownika Windows Vista wyświetlania](https://go.microsoft.com/fwlink/?LinkId=178394).  
+## <a name="what-are-xpdm-and-wddm"></a>Co to są XPDM i WDDM?  
+ Niektóre ustawienia rejestru renderowania grafiki mają różne wartości domyślne, w zależności od tego, czy karta wideo korzysta ze sterownika XPDM czy WDDM. XPDM to [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] model sterownika wyświetlania, a WDDM to model sterownika wyświetlania systemu Windows. WDDM jest dostępny na komputerach z [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] systemami [!INCLUDE[win7](../../../../includes/win7-md.md)]i. XPDM jest dostępna na komputerach z [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]systemami [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)], i [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Aby uzyskać więcej informacji na temat usługi WDDM, zobacz [Przewodnik dotyczący projektowania modelu sterownika wyświetlania systemu Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178394).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Ustawienia rejestru  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia cztery ustawienia rejestru dla kontrolowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderowania:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia cztery ustawienia rejestru do kontrolowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderowania:  
   
 |Ustawienie|Opis|  
 |-------------|-----------------|  
-|**Wyłącz opcję Przyspieszanie sprzętowe**|Określa, czy powinno być włączone przyspieszanie sprzętowe.|  
-|**Maksymalna wartość wielopróbkowego**|Określa stopień multisampling antyaliasingu do zawartości 3D.|  
-|**Wymagany sterownik wideo daty ustawienie**|Określa, czy system wyłącza przyspieszanie sprzętowe dla sterowników wydanych przed listopada 2004.|  
-|**Za pomocą opcji rasteryzatora odwołanie**|Określa, czy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] należy używać rasteryzatora odwołania.|  
+|**Wyłącz opcję przyspieszania sprzętowego**|Określa, czy przyspieszenie sprzętowe powinno być włączone.|  
+|**Maksymalna wartość wielopróbkowa**|Określa stopień próbkowania wielostronicowego do wygładzania zawartości 3-D.|  
+|**Wymagane ustawienie daty sterownika wideo**|Określa, czy system wyłącza przyspieszenie sprzętowe dla sterowników wydanych przed listopad 2004.|  
+|**Użyj opcji rasteryzatora odwołań**|Określa, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] czy powinien być używany Rasteryzacja odwołania.|  
   
- Te ustawienia są dostępne dla dowolnego narzędzia konfiguracji zewnętrznego, który wie, jak utworzyć odwołanie do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ustawień rejestru. Te ustawienia można również utworzone lub zmodyfikowane, uzyskując dostęp do wartości bezpośrednio przy użyciu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Edytora rejestru.  
+ Dostęp do tych ustawień można uzyskać za pomocą dowolnego narzędzia konfiguracji zewnętrznej, które wie, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jak odwoływać się do ustawień rejestru. Te ustawienia można również utworzyć lub zmodyfikować, uzyskując dostęp do wartości bezpośrednio przy użyciu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] edytora rejestru.  
   
 <a name="disablehardwareacceleration"></a>   
-## <a name="disable-hardware-acceleration-option"></a>Wyłącz opcję Przyspieszanie sprzętowe  
+## <a name="disable-hardware-acceleration-option"></a>Wyłącz opcję przyspieszania sprzętowego  
   
 |Klucz rejestru|Typ wartości|  
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\DisableHWAcceleration`|DWORD|  
   
- **Wyłączyć opcję Przyspieszanie sprzętowe** pozwala wyłączyć przyspieszanie sprzętowe na potrzeby debugowania i testowania. Gdy pojawi się renderowania artefaktów w aplikacji, spróbuj wyłączyć przyspieszanie sprzętowe. Jeśli artefaktu znika, problem może być za pomocą sterownika wideo.  
+ **Opcja Wyłącz przyspieszenie sprzętowe** umożliwia wyłączenie przyspieszania sprzętowego na potrzeby debugowania i testowania. Gdy widzisz artefakty renderowania w aplikacji, spróbuj wyłączyć przyspieszenie sprzętowe. Jeśli artefakt zniknie, problem może być związany z Twoim sterownikiem wideo.  
   
- **Wyłączyć opcję Przyspieszanie sprzętowe** jest wartość typu DWORD, która jest równa 0 lub 1. Wartość 1 powoduje wyłączenie przyspieszanie sprzętowe. Wartość 0 umożliwia przyspieszanie sprzętowe, pod warunkiem system spełnia wymagania przyspieszanie sprzętowe; Aby uzyskać więcej informacji, zobacz [poziomy renderowania grafiki](../advanced/graphics-rendering-tiers.md).  
+ **Opcja Wyłącz przyspieszenie sprzętowe** jest wartością typu DWORD równą 0 lub 1. Wartość 1 powoduje wyłączenie przyspieszania sprzętowego. Wartość 0 włącza przyspieszenie sprzętowe, pod warunkiem, że system spełnia wymagania przyspieszania sprzętowego. Aby uzyskać więcej informacji, zobacz [warstwy renderowania grafiki](../advanced/graphics-rendering-tiers.md).  
   
 <a name="maxmultisample"></a>   
-## <a name="maximum-multisample-value"></a>Maksymalna wartość wielopróbkowego  
+## <a name="maximum-multisample-value"></a>Maksymalna wartość wielopróbkowa  
   
 |Klucz rejestru|Typ wartości|  
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- **Maksymalną wartość wielopróbkowego** umożliwia dostosowanie maksymalną ilość antialiasingu zawartości 3D. Użyj tego poziomu, aby wyłączyć antialiasingu 3-w [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] lub ją włączyć w [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
+ **Maksymalna wartość** wieloprzykładowa umożliwia dostosowanie maksymalnej liczby antyaliasów zawartości 3-D. Użyj tego poziomu, aby wyłączyć Antyaliasowanie 3-D [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] w programie lub włączyć [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]je w programie.  
   
- **Maksymalną wartość wielopróbkowego** jest wartość typu DWORD z zakresu od 0 do 16. Wartość 0 oznacza, że wielopróbkowego antialiasingu zawartości 3D powinny być wyłączone i wartość 16 spróbuje użyć maksymalnie 16 x wielopróbkowego antialiasingu, jeśli jest obsługiwany przez karty wideo. Należy pamiętać, że ustawienie tej wartości klucza rejestru na komputerach za pomocą sterowników XPDM spowoduje, że aplikacje korzystać z dużą ilością dodatkową pamięć, zmniejszyć wydajność renderowania 3W i może potencjalnie wprowadzić błędy renderowania i stabilności problemy.  
+ **Maksymalna wartość** wielowartościowa to wartość DWORD, która ma zakres od 0 do 16. Wartość 0 oznacza, że antypróbkowanie antyaliasowe zawartości 3-D powinno być wyłączone, a wartość 16 podejmie próbę użycia do próbkowania wieloznacznego, jeśli jest to obsługiwane przez kartę wideo. Uważaj, że ustawienie tej wartości klucza rejestru na komputerach używających sterowników XPDM spowoduje użycie dużej ilości dodatkowej pamięci wideo, zmniejszenie wydajności renderowania trójwymiarowego i dodanie błędów renderowania i stabilności dotyczące.  
   
- Gdy ten klucz rejestru nie jest ustawiona, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wartość domyślna to 0 dla sterowników XPDM i 4 dla sterowników WDDM.  
+ Jeśli ten klucz rejestru nie jest ustawiony, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wartość domyślna to 0 dla sterowników XPDM i 4 dla sterowników WDDM.  
   
 <a name="requiredvideodriverdatesetting"></a>   
-## <a name="required-video-driver-date-setting"></a>Wymagany sterownik wideo daty ustawienie  
+## <a name="required-video-driver-date-setting"></a>Wymagane ustawienie daty sterownika wideo  
   
 |Klucz rejestru|Typ wartości|  
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|String|  
   
- W listopadzie, 2004 r. [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] wydana nowa wersja sterownika wytyczne testowania; sterowniki minionych stabilności lepsza oferta daty. Domyślnie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] użyje potoku przyspieszanie sprzętowe te sterowniki, a następnie powróci do renderowania oprogramowania dla sterowników XPDM opublikowanych przed tą datą.  
+ W listopadzie 2004 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] wydano nową wersję wytycznych dotyczących testowania sterowników; sterowniki napisywane po tej dacie oferują lepszą stabilność. Domyślnie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] program użyje potoku przyspieszania sprzętowego dla tych sterowników i powróci do renderowania oprogramowania dla sterowników XPDM opublikowanych przed tą datą.  
   
- **Wymagane ustawienie daty sterownika wideo** umożliwia określenie alternatywnej minimalnej daty XPDM sterowniki. Daty wcześniejszej niż listopada 2004 należy określić tylko, jeśli masz pewność, że sterownik wideo jest stabilna, aby obsługiwać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ **Wymagane ustawienie daty sterownika wideo** pozwala określić alternatywną minimalną datę dla sterowników XPDM. Należy określić datę wcześniejszą niż listopad, 2004, jeśli masz pewność, że sterownik wideo jest wystarczająco stabilny do obsługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- Ustawienie wymaganego sterownika wideo ma następujący format ciągu:  
+ Wymagane ustawienie sterownika wideo Pobiera ciąg w następującym formacie:  
   
 | |  
 |-|  
-|*RRRR* `/` *MM* `/` *DD*|  
+|*RRRR* *MM* DD `/` `/`|  
   
- Gdzie *rrrr* jest czterocyfrowy rok, *MM* jest dwucyfrowy miesiąc i *DD* jest dniem dwóch cyfr. Jeśli ustawiono tę wartość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa listopada 2004 jako daty wymaganego sterownika wideo.  
+ Gdzie *rrrr* to czterocyfrowy rok, *mm* to dwucyfrowy miesiąc, a *DD* to dwucyfrowy dzień. Gdy ta wartość zostanie niezmieniona [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , program używa listopada 2004 jako wymaganej daty sterownika wideo.  
   
 <a name="usereferencerasterizeroption"></a>   
-## <a name="use-reference-rasterizer-option"></a>Za pomocą opcji rasteryzatora odwołanie  
+## <a name="use-reference-rasterizer-option"></a>Użyj opcji rasteryzatora odwołań  
   
 |Klucz rejestru|Typ wartości|  
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|DWORD|  
   
- **Za pomocą opcji rasteryzatora odwołanie** umożliwia wymuszenie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tryb renderowania symulowane sprzętu do debugowania: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przechodzi w tryb sprzętu, ale używa [!INCLUDE[TLA#tla_d3d](../../../../includes/tlasharptla-d3d-md.md)] odwołania rasteryzatora oprogramowania d3dref9.dll zamiast w rzeczywistości urządzeniem sprzętowym.  
+ **Opcja Użyj rasteryzacji odwołania** umożliwia wymuszenie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] symulowanego trybu renderowania sprzętu na potrzeby debugowania: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przechodzi do trybu sprzętowego, ale używa rasteryzatora oprogramowania referencyjnego Microsoft Direct3D, d3dref9. dll, zamiast rzeczywistego urządzenia sprzętowego.  
   
- Rasteryzatora odwołanie jest bardzo długi, ale pomija sterownika wideo, aby uniknąć jakichkolwiek problemów z renderowaniem spowodowane przez problemy sterownika. Z tego powodu można użyć rasteryzatora odwołania, aby określić, jeśli problemy z renderowaniem są spowodowane przez sterownik wideo. Plik d3dref9.dll musi być w lokalizacji, w którym aplikacja do niego dostęp, takie jak w dowolnym miejscu w ścieżce systemowej lub w lokalnym katalogu aplikacji.  
+ Rasteryzacja odwołania jest bardzo niska, ale pomija sterownik wideo, aby uniknąć problemów z renderowaniem spowodowanych przez problemy ze sterownikami. Z tego powodu można użyć rasteryzatora referencyjnego, aby określić, czy problemy z renderowaniem są spowodowane przez sterownik wideo. Plik d3dref9. dll musi znajdować się w lokalizacji, w której aplikacja może uzyskać do niej dostęp, na przykład w dowolnej lokalizacji w ścieżce systemowej lub w katalogu lokalnym aplikacji.  
   
- **Za pomocą opcji rasteryzatora odwołanie** przyjmuje wartość typu DWORD. Wartość 0 wskazuje, że rasteryzatora odwołania nie jest używany. Inne siły wartość niezerową [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używać rasteryzatora odwołania.  
+ **Opcja Użyj rasteryzacji odwołań** przyjmuje wartość typu DWORD. Wartość 0 oznacza, że Rasteryzacja odwołania nie jest używana. Wszystkie inne wartości inne niż zero wymuszają [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] użycie rasteryzatora Reference.  
   
 ## <a name="see-also"></a>Zobacz także
 

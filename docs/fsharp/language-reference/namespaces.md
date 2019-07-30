@@ -1,17 +1,17 @@
 ---
 title: Namespaces
-description: Dowiedz się, jak F# przestrzeń nazw umożliwia organizowanie kodu w obszarach powiązane funkcje, dzięki któremu można dołączyć nazwę do grupowania elementów programu.
+description: Dowiedz się F# , jak przestrzeń nazw umożliwia organizowanie kodu w obszary powiązanej funkcjonalności przez umożliwienie dołączenia nazwy do grupy elementów programu.
 ms.date: 12/08/2018
-ms.openlocfilehash: b315d654dad0d36e3584564ad027c68fb3c94cce
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d295f25cae81bc28b4fcb522bdcacde862f9517a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645272"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627375"
 ---
 # <a name="namespaces"></a>Namespaces
 
-Przestrzeń nazw umożliwia organizowanie kodu w obszarach powiązane funkcje, dzięki któremu można dołączyć nazwę grupie F# program elementów. Przestrzenie nazw są zazwyczaj najwyższego poziomu elementów w F# plików.
+Przestrzeń nazw umożliwia organizowanie kodu w obszary powiązanej funkcjonalności przez umożliwienie dołączenia nazwy do grupy elementów F# programu. Przestrzenie nazw są zwykle elementami najwyższego poziomu w F# plikach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,62 +21,62 @@ namespace [rec] [parent-namespaces.]identifier
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli chcesz umieścić kod w przestrzeni nazw, w pierwszej deklaracji w pliku musi deklarować przestrzeń nazw. Zawartość cały plik stają się częścią przestrzeni nazw, pod warunkiem istnieje żadna deklaracja przestrzeni nazw bardziej szczegółowo w pliku. Jeśli tak jest rzeczywiście, cały kod, aż do następnego deklaracji przestrzeni nazw jest traktowany jako mieścić się w pierwszej przestrzeni nazw.
+Jeśli chcesz umieścić kod w przestrzeni nazw, pierwsza deklaracja w pliku musi deklarować przestrzeń nazw. Zawartość całego pliku staje się częścią przestrzeni nazw, pod warunkiem, że w pliku nie istnieją dalsze deklaracje przestrzeni nazw. Jeśli tak, to cały kod, aż do następnej deklaracji przestrzeni nazw jest uznawany za znajdujący się w obrębie pierwszej przestrzeni nazw.
 
-Przestrzenie nazw nie może bezpośrednio zawierać wartości i funkcje. Zamiast tego wartości i funkcje, które muszą być zawarte w modułach i moduły są uwzględnione w przestrzeni nazw. Przestrzenie nazw może zawierać typy i moduły.
+Przestrzenie nazw nie mogą bezpośrednio zawierać wartości i funkcji. Zamiast tego, wartości i funkcje muszą być zawarte w modułach, a moduły są zawarte w przestrzeni nazw. Przestrzenie nazw mogą zawierać typy, moduły.
 
-Komentarze dokumentacji XML mogą być deklarowane powyżej przestrzeni nazw, ale są one ignorowane. Dyrektywy kompilatora mogą być także zadeklarowane powyżej przestrzeni nazw.
+Komentarze dokumentacji XML można zadeklarować powyżej przestrzeni nazw, ale są one ignorowane. Dyrektywy kompilatora można również deklarować powyżej przestrzeni nazw.
 
-Przestrzenie nazw mogą być deklarowane jawnie za pomocą słowa kluczowego przestrzeni nazw lub niejawnie podczas deklarowania modułu. Aby jawnie deklarować przestrzeń nazw, należy użyć słowo kluczowe przestrzeni nazw, a następnie według nazwy przestrzeni nazw. W poniższym przykładzie pokazano plik kodu, który deklaruje przestrzeni nazw `Widgets` o typie i moduł zawarty w tej przestrzeni nazw.
+Przestrzenie nazw można jawnie zadeklarować za pomocą słowa kluczowego Namespace lub niejawnie podczas deklarowania modułu. Aby jawnie zadeklarować przestrzeń nazw, użyj słowa kluczowego Namespace, po którym następuje nazwa przestrzeni nazw. W poniższym przykładzie przedstawiono plik kodu, który deklaruje przestrzeń `Widgets` nazw z typem i modułem zawartym w tej przestrzeni nazw.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
-Jeśli jeden moduł całą zawartość pliku, można również zadeklarować przestrzeni nazw niejawnie przy użyciu `module` — słowo kluczowe i podanie nowej nazwy przestrzeni nazw w module w pełni kwalifikowana nazwa. W poniższym przykładzie pokazano plik kodu, który deklaruje przestrzeni nazw `Widgets` i modułu `WidgetsModule`, która zawiera funkcję.
+Jeśli cała zawartość pliku znajduje się w jednym module, można także zadeklarować przestrzenie nazw niejawnie przy użyciu `module` słowa kluczowego i podać nową nazwę przestrzeni nazw w w pełni kwalifikowanej nazwie modułu. W poniższym przykładzie przedstawiono plik kodu, który deklaruje przestrzeń `Widgets` nazw i moduł `WidgetsModule`, który zawiera funkcję.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6401.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6401.fs)]
 
-Poniższy kod jest odpowiednikiem poprzedniego kodu, ale moduł jest deklaracją modułu lokalnego. W takim przypadku przestrzeni nazw musi znajdować się w osobnym wierszu.
+Poniższy kod jest równoważny poprzedzającemu kod, ale moduł jest deklaracją modułu lokalnego. W takim przypadku przestrzeń nazw musi znajdować się w osobnym wierszu.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/namespaces/snippet6402.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/namespaces/snippet6402.fs)]
 
-Jeśli więcej niż jeden moduł jest wymagane w tym samym pliku, w jeden lub kilka przestrzeni nazw, należy użyć deklaracje modułów lokalnych. Gdy używasz deklaracje modułów lokalnych, nie można używać kwalifikowanych przestrzeni nazw w deklaracjach modułów. Poniższy kod przedstawia plik, który zawiera deklarację przestrzeni nazw i dwie deklaracje modułów lokalnych. W tym przypadku moduły znajdują się bezpośrednio w przestrzeni nazw; nie ma żadnych stworzonego moduł, który ma taką samą nazwę jak plik. Każdy inny kod w pliku, takie jak `do` powiązanie, jest w przestrzeni nazw, ale nie w przypadku wewnętrznych modułów, więc musi kwalifikuj element członkowski modułu `widgetFunction` przy użyciu nazwy modułu.
+Jeśli więcej niż jeden moduł jest wymagany w tym samym pliku w co najmniej jednym obszarze nazw, należy użyć lokalnych deklaracji modułu. W przypadku korzystania z deklaracji modułu lokalnego nie można użyć kwalifikowanej przestrzeni nazw w deklaracjach modułów. Poniższy kod przedstawia plik, który zawiera deklarację przestrzeni nazw i dwie deklaracje modułu lokalnego. W takim przypadku moduły są zawarte bezpośrednio w przestrzeni nazw; nie utworzono niejawnie modułu, który ma taką samą nazwę jak plik. Każdy inny kod w pliku, taki jak `do` powiązanie, znajduje się w przestrzeni nazw, ale nie w modułach wewnętrznych, dlatego należy zakwalifikować element członkowski `widgetFunction` modułu przy użyciu nazwy modułu.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6403.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6403.fs)]
 
-W tym przykładzie dane wyjściowe wyglądają następująco.
+Dane wyjściowe tego przykładu są następujące.
 
 ```fsharp
 Module1 10 20
 Module2 5 6
 ```
 
-Aby uzyskać więcej informacji, zobacz [modułów](modules.md).
+Aby uzyskać więcej informacji, zobacz [moduły](modules.md).
 
 ## <a name="nested-namespaces"></a>Zagnieżdżone przestrzenie nazw
 
-Kiedy tworzysz zagnieżdżone przestrzenie nazw, możesz je pełnej kwalifikacji. W przeciwnym razie możesz utworzyć nową przestrzeń nazw najwyższego poziomu. Wcięcie jest ignorowany w deklaracji przestrzeni nazw.
+Gdy tworzysz zagnieżdżoną przestrzeń nazw, musisz ją w pełni zakwalifikować. W przeciwnym razie utworzysz nową przestrzeń nazw najwyższego poziomu. Wcięcie jest ignorowane w deklaracjach przestrzeni nazw.
 
-Poniższy przykład pokazuje sposób deklarowania zagnieżdżone przestrzenie nazw.
+Poniższy przykład pokazuje, jak zadeklarować zagnieżdżoną przestrzeń nazw.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6404.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6404.fs)]
 
-## <a name="namespaces-in-files-and-assemblies"></a>Przestrzenie nazw plików i zestawów
+## <a name="namespaces-in-files-and-assemblies"></a>Przestrzenie nazw w plikach i zestawach
 
-Przestrzenie nazw może obejmować wiele plików w jednym projekcie lub kompilacji. Termin *przestrzeni nazw fragmentu* opisuje część przestrzeni nazw, który znajduje się w jednym pliku. Przestrzenie nazw mogą obejmować wiele zestawów. Na przykład `System` przestrzeń nazw zawiera całe .NET Framework, który obejmuje wiele zestawów i zawiera wiele zagnieżdżone przestrzenie nazw.
+Przestrzenie nazw mogą obejmować wiele plików w jednym projekcie lub kompilacji. *Fragment przestrzeni nazw* zawiera opis części przestrzeni nazw, która jest uwzględniona w jednym pliku. Przestrzenie nazw mogą również obejmować wiele zestawów. Na przykład `System` przestrzeń nazw zawiera cały .NET Framework, która obejmuje wiele zestawów i zawiera wiele przestrzeni nazw zagnieżdżonych.
 
-## <a name="global-namespace"></a>Globalne Namespace
+## <a name="global-namespace"></a>Globalna przestrzeń nazw
 
-Użyj wstępnie zdefiniowanych nazw `global` umieszczenie nazwy w przestrzeni nazw .NET najwyższego poziomu.
+Używasz wstępnie zdefiniowanej przestrzeni `global` nazw do umieszczania nazw w przestrzeni nazw najwyższego poziomu platformy .NET.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6407.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6407.fs)]
 
-Umożliwia także globalne k odkazu .NET przestrzeń nazw najwyższego poziomu, na przykład, aby rozwiązać konflikty nazw z innych obszarów nazw.
+Można również użyć globalnego do odwoływania się do przestrzeni nazw platformy .NET najwyższego poziomu, na przykład w celu rozwiązania konfliktów nazw z innymi przestrzeniami nazw.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
 
-## <a name="recursive-namespaces"></a>Przestrzenie nazw cykliczne
+## <a name="recursive-namespaces"></a>Cykliczne przestrzenie nazw
 
-Przestrzenie nazw mogą być także zadeklarowane jako cykliczne do obsługi całego kodu zawarte jako wzajemnie cykliczne.  Odbywa się za pośrednictwem `namespace rec`. Korzystanie z `namespace rec` mogą złagodzić ich niektóre problemy, które nie jest możliwość pisania kodu wzajemnie referencyjne typy i moduły. Oto przykład:
+Przestrzenie nazw można także zadeklarować jako cykliczne, aby umożliwić wzajemną rekursywnie wszystkie zawarte w nim kod.  Jest to realizowane za `namespace rec`pośrednictwem. `namespace rec` Użycie może wyeliminować pewne problemy, ponieważ nie można napisać wzajemnie referencyjnego kodu między typami i modułami. Poniżej znajduje się przykład:
 
 ```fsharp
 namespace rec MutualReferences
@@ -117,12 +117,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-Należy pamiętać, że wyjątek `DontSqueezeTheBananaException` i klasa `Banana` odnoszą się do siebie nawzajem.  Ponadto moduł `BananaHelpers` i klasa `Banana` także odwoływać się do siebie. W takich sytuacjach przydałaby to wyrazić w F# usunięto `rec` słowo kluczowe z `MutualReferences` przestrzeni nazw.
+Należy zauważyć, że `DontSqueezeTheBananaException` wyjątek i Klasa `Banana` odnoszą się do siebie nawzajem.  Ponadto moduł `BananaHelpers` i Klasa `Banana` odnoszą się do siebie nawzajem. Nie będzie można go wyrazić, F# Jeśli usunięto `rec` słowo kluczowe z `MutualReferences` przestrzeni nazw.
 
-Ta funkcja jest również dostępna dla najwyższego poziomu [modułów](modules.md).
+Ta funkcja jest również dostępna dla [modułów](modules.md)najwyższego poziomu.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka F#](index.md)
 - [Moduły](modules.md)
-- [F#RFC FS-1009 — Zezwalaj na wzajemnie referencyjne typy i moduły za pośrednictwem szerszego zakresu w plikach](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F#RFC FS-1009 — Zezwalaj na wzajemnie referencyjne typy i moduły dla większych zakresów w plikach](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

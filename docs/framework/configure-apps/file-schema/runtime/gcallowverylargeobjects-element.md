@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2988b054030df23ae8ccd8840f83c239f0401321
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70c60461f3ddd6bdabd151f60c7bc81eef18e650
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607263"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629468"
 ---
-# <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> Element
-Na platformach 64-bitowych umożliwia tablic, które są większe niż 2 gigabajty (GB) w łącznym rozmiarze.  
+# <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects, element >
+Na platformach 64-bitowych program umożliwia korzystanie z tablic o rozmiarze większym niż 2 gigabajty (GB).  
   
- \<Konfiguracja > Element  
-\<środowisko uruchomieniowe > Element  
-\<gcAllowVeryLargeObjects> Element  
+ \<> elementu konfiguracji  
+\<Element > środowiska uruchomieniowego  
+\<gcAllowVeryLargeObjects, element >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,14 +35,14 @@ Na platformach 64-bitowych umożliwia tablic, które są większe niż 2 gigabaj
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy tablic, które są większe niż 2 GB w łącznym rozmiarze są włączone na platformach 64-bitowych.|  
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy tablice o rozmiarze większym niż 2 GB są włączone na platformach 64-bitowych.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`false`|Większa niż 2 GB łącznego rozmiaru tablic nie są włączone. Domyślnie włączone.|  
-|`true`|Tablic większych niż 2 GB w łącznym rozmiarze są włączone na platformach 64-bitowych.|  
+|`false`|Tablice o rozmiarze większym niż 2 GB nie są włączone. Domyślnie włączone.|  
+|`true`|Tablice o rozmiarze większym niż 2 GB są włączone na platformach 64-bitowych.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -55,16 +55,16 @@ Na platformach 64-bitowych umożliwia tablic, które są większe niż 2 gigabaj
 |`runtime`|Zawiera informacje dotyczące opcji inicjowania środowiska uruchomieniowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Przy użyciu tego elementu w pliku konfiguracyjnym aplikacji umożliwia tablic, które są większe niż 2 GB, rozmiar, ale nie zmienia się inne ograniczenia dotyczące rozmiaru obiektu lub rozmiar tablicy:  
+ Użycie tego elementu w pliku konfiguracji aplikacji umożliwia korzystanie z tablic o rozmiarze większym niż 2 GB, ale nie powoduje zmiany innych limitów rozmiaru obiektu lub rozmiaru tablicy:  
   
 - Maksymalna liczba elementów w tablicy to <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.  
   
-- Maksymalna wartość indeksu w dowolnym jeden wymiar jest 2,147,483,591 (0x7FFFFFC7) dla tablic bajtów i tablic struktur jednobajtowe i 2,146,435,071 (0X7FEFFFFF) w przypadku innych typów.  
+- Maksymalny indeks w dowolnym pojedynczym wymiarze to 2 147 483 591 (0x7FFFFFC7) dla tablic bajtowych i tablic jednobajtowych struktur oraz 2 146 435 071 (0X7FEFFFFF) dla innych typów.  
   
-- Maksymalny rozmiar dla ciągów i innych obiektów inny niż tablica jest bez zmian.  
+- Maksymalny rozmiar ciągów i innych obiektów niebędących tablicami jest niezmieniony.  
   
 > [!CAUTION]
->  Przed włączeniem tej funkcji, upewnij się, czy aplikacja nie zawiera niebezpieczny kod, który przyjęto założenie, że wszystkie tablice są mniejsze niż rozmiar 2 GB. Na przykład niebezpieczny kod, który używa tablic jako buforów może być podatny na przepełnienia buforu, zostanie zapisany na założeniu, że tablice nie przekroczy 2 GB.  
+>  Przed włączeniem tej funkcji upewnij się, że aplikacja nie zawiera niebezpiecznego kodu, który zakłada, że wszystkie tablice mają rozmiar mniejszy niż 2 GB. Na przykład kod niebezpieczny używający tablic jako bufory może być podatny na przepełnienia buforu, jeśli zostanie zapisany w założeniu, że tablice nie przekroczą 2 GB.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak włączyć tę funkcję dla aplikacji.  
@@ -77,6 +77,10 @@ Na platformach 64-bitowych umożliwia tablic, które są większe niż 2 gigabaj
 </configuration>  
 ```  
   
+## <a name="supported-in"></a>Obsługiwane w
+
+.NET Framework 4,5 i nowsze wersje
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)

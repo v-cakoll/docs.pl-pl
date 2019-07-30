@@ -1,17 +1,17 @@
 ---
 title: Klasy abstrakcyjne
-description: Dowiedz się więcej o F# abstrakcyjnej klasy, które pozostaw niektórych lub wszystkich elementów członkowskich niezaimplementowane i reprezentują typowych funkcji różnorodnych typów obiektów.
+description: Dowiedz F# się więcej na temat klas abstrakcyjnych, które opuszczają niektóre lub wszystkie elementy członkowskie niezaimplementowane i reprezentujące wspólną funkcjonalność różnorodnych typów obiektów.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8251d481c9056d40a0b13ae3c89353406986c116
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a6bbfc23b858d5f3833f3f52b6dca46753080f03
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645548"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629679"
 ---
 # <a name="abstract-classes"></a>Klasy abstrakcyjne
 
-*Klasy abstrakcyjne* są klasami, które opuszczają niektórych lub wszystkich elementów członkowskich niezaimplementowane, tak aby implementacji może być udostępniane przez klasy pochodne.
+*Klasy abstrakcyjne* to klasy, które opuszczają niektóre lub wszystkie składowe niezaimplementowane, dzięki czemu implementacje mogą być dostarczane przez klasy pochodne.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,23 +28,23 @@ abstract member member-name : type-signature
 
 ## <a name="remarks"></a>Uwagi
 
-W programowanie zorientowane obiektowo, klasa abstrakcyjna służy jako klasa bazowa hierarchii i reprezentuje typowych funkcji różnorodnych typów obiektów. Jak sugeruje nazwa "abstract", klasy abstrakcyjne często nie odpowiadają bezpośrednio na konkretnej jednostki w domenie problem. Jednak reprezentują one wiele różnych jednostek konkretnych posiadane przez wspólne.
+W programowaniu zorientowanym obiektowo Klasa abstrakcyjna jest używana jako klasa bazowa hierarchii i reprezentuje wspólną funkcjonalność różnorodnych typów obiektów. Jako że nazwa "abstract" oznacza, klasy abstrakcyjne często nie odpowiadają bezpośrednio na konkretne jednostki w domenie problemu. Jednak reprezentują one wiele różnych konkretnych jednostek.
 
-Klasy abstrakcyjne musi mieć `AbstractClass` atrybutu. Mogą mieć zaimplementowane i niezaimplementowane elementów członkowskich. Użycie terminów *abstrakcyjne* po zastosowaniu do klasy jest taka sama, jak w innych językach .NET; jednak użycie terminów *abstrakcyjne* po zastosowaniu do metody (i właściwości) różni się nieco w F# przed jego użyciem w innych językach .NET. W F#, gdy metoda jest oznaczona atrybutem `abstract` — słowo kluczowe, oznacza to, czy element członkowski ma wpis, znane jako *wysyłania wirtualnego miejsca*, w tabeli wewnętrznej funkcji wirtualnych dla tego typu. Innymi słowy, ta metoda jest wirtualny, mimo że `virtual` — słowo kluczowe nie jest używany w F# języka. Słowo kluczowe `abstract` jest używana na metod wirtualnych, niezależnie od tego, czy metoda jest implementowana. Deklaracja gniazdo wirtualnego wysyłania różni się od definicji metody dla tego miejsca wysyłania. W związku z tym F# odpowiednik metody wirtualnej deklaracji i definicji w innym języku .NET jest kombinacją zarówno w deklaracji metody abstrakcyjnej, jak i w oddzielnych definicji, z oboma `default` — słowo kluczowe lub `override` — słowo kluczowe. Aby uzyskać więcej informacji i przykładów, zobacz [metody](members/methods.md).
+Klasy abstrakcyjne muszą mieć `AbstractClass` atrybut. Mogą mieć zaimplementowane i niezaimplementowane elementy członkowskie. Użycie abstrakcyjnych warunków w przypadku zastosowania do klasy jest takie samo jak w innych językach .NET; Jednak użycie metody abstrakcyjnej w przypadku zastosowania do metod (i właściwości) jest nieco inne w F# porównaniu z użyciem w innych językach .NET. W F#programie, gdy metoda jest oznaczona za pomocą `abstract` słowa kluczowego, oznacza to, że element członkowski ma wpis, znany jako *wirtualne miejsce wysyłki*, w wewnętrznej tabeli funkcji wirtualnych dla tego typu. Innymi słowy, metoda jest wirtualna, chociaż `virtual` słowo kluczowe nie jest używane w F# języku. Słowo kluczowe `abstract` jest używane w metodach wirtualnych bez względu na to, czy metoda jest zaimplementowana. Deklaracja wirtualnego gniazda wysyłania jest oddzielona od definicji metody dla tego gniazda wysyłania. W związku z F# tym odpowiednik deklaracji i definicji metody wirtualnej w innym języku .NET jest kombinacją deklaracji metody abstrakcyjnej i oddzielnej definicji ze `default` słowem kluczowym lub `override` słowem kluczowym. Aby uzyskać więcej informacji i przykładów, zobacz [metody](./members/methods.md).
 
-Klasa jest traktowany jako abstrakcyjne, tylko wtedy, gdy istnieją metody abstrakcyjne, które są zadeklarowane, ale nie zdefiniowane. W związku z tym nie zawsze abstrakcyjnych klas są klasami, które zawierają metody abstrakcyjne. Jeśli klasa ma niezdefiniowane metody abstrakcyjne, nie używaj **abstractclass —** atrybutu.
+Klasa jest uznawana za abstrakcyjną tylko wtedy, gdy istnieją metody abstrakcyjne, które są zadeklarowane, ale nie zdefiniowane. W związku z tym klasy, które mają metody abstrakcyjne, nie są klasami abstrakcyjnymi. Jeśli Klasa nie ma niezdefiniowanych metod abstrakcyjnych, nie należy używać atrybutu **AbstractClass** .
 
-W poprzedniej składni *modyfikator dostępności* może być `public`, `private` lub `internal`. Aby uzyskać więcej informacji, zobacz [kontroli dostępu](access-control.md).
+W poprzedniej składni modyfikatora *Accessibility* może mieć `public` `private` wartość lub `internal`. Aby uzyskać więcej informacji, zobacz [Access Control](access-control.md).
 
-Podobnie jak w przypadku innych typów abstrakcyjnych klas może mieć klasy bazowej i przynajmniej jedna podstawowa interfejsów. Każdej klasy bazowej lub interfejsu pojawia się w osobnym wierszu wraz z `inherit` — słowo kluczowe.
+Podobnie jak w przypadku innych typów, klasy abstrakcyjne mogą mieć klasę bazową i jeden lub więcej interfejsów podstawowych. Każda klasa podstawowa lub interfejs pojawia się w osobnym wierszu razem ze `inherit` słowem kluczowym.
 
-Definicja typu klasy abstrakcyjnej mogą zawierać elementy członkowskie w pełni zdefiniowana, ale może również zawierać abstrakcyjne składowe. Składnia abstrakcyjne składowe są pokazane osobno w poprzedniej składni. W tej składni *sygnatura typu* elementu członkowskiego jest lista, która zawiera parametr wpisuje kolejność i typy zwracane, oddzielone `->` tokeny i/lub `*` tokenów zgodnie z potrzebami dla przenoszeni i tupled Parametry. Składnia podpisy typu abstrakcyjnej składowej jest taka sama jak używane w plikach podpisu i wyświetlanych przez funkcję IntelliSense w edytorze kodu programu Visual Studio.
+Definicja typu klasy abstrakcyjnej może zawierać w pełni zdefiniowane elementy członkowskie, ale może również zawierać abstrakcyjne elementy członkowskie. Składnia abstrakcyjnych elementów członkowskich jest wyświetlana osobno w poprzedniej składni. W tej składni sygnatura *typu* elementu członkowskiego jest listą zawierającą typy parametrów w kolejności i typy zwracane, oddzielone `->` tokenami i/lub `*` tokenami, zgodnie z potrzebami dla rozwinięte i parametrów krotek. Składnia sygnatur typu abstrakcyjnego elementu członkowskiego jest taka sama jak ta, która jest używana w plikach sygnatur i która jest wyświetlana przez funkcję IntelliSense w edytorze Visual Studio Code.
 
-Poniższy kod ilustruje klasę abstrakcyjną kształtu, który ma dwie nieabstrakcyjnej klasy pochodne, kwadratu i okrąg. W przykładzie pokazano sposób użycia klasy abstrakcyjne, metod i właściwości. W tym przykładzie klasa abstrakcyjna kształt reprezentuje typowe elementy okrąg konkretnej jednostki i kwadrat. Często używane funkcje wszystkich kształtów (w dwuwymiarowej współrzędnych) zostały wyabstrahowane na zewnątrz do klasy kształtu: pozycji na siatce, kąt obrotu i właściwości pole i obwód. Te można przesłonić, z wyjątkiem pozycji zachowanie, którego nie można zmienić poszczególnych kształtów.
+Poniższy kod ilustruje kształt klasy abstrakcyjnej, który ma dwie nieabstrakcyjne klasy pochodne, kwadrat i okrąg. W przykładzie pokazano, jak używać klas abstrakcyjnych, metod i właściwości. W przykładzie kształt klasy abstrakcyjnej reprezentuje wspólne elementy konkretnych jednostek, koło i kwadrat. Wspólne funkcje wszystkich kształtów (w dwuwymiarowym układzie współrzędnych) są wyodrębniane do klasy Shape: położenie w siatce, kąt obrotu oraz właściwości obszaru i obwodu. Można je zastąpić, z wyjątkiem pozycji, zachowanie, którego poszczególne kształty nie mogą zmienić.
 
-Metoda obrotu może zostać zastąpiona w jak klasa Circle jest obrót niezmiennej ze względu na jej symetrii. Dlatego w klasie okrąg metoda obrotu zastępuje metodę, która nie wykonuje żadnych działań.
+Metodę obrotu można zastąpić, podobnie jak w klasie Circle, która ma wartość rotacja niezmiennej ze względu na jej symetrię. Dlatego w klasie Circle Metoda rotacji jest zastępowana przez metodę, która nic nie robi.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2901.fs)]
 
 **Dane wyjściowe:**
 
@@ -58,6 +58,6 @@ Area of Circle: 78.539816
 ## <a name="see-also"></a>Zobacz także
 
 - [Klasy](classes.md)
-- [Elementy członkowskie](members/index.md)
-- [Metody](members/methods.md)
-- [Właściwości](members/Properties.md)
+- [Elementy członkowskie](./members/index.md)
+- [Metody](./members/methods.md)
+- [Właściwości](./members/Properties.md)

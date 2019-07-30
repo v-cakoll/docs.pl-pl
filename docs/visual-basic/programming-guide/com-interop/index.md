@@ -5,56 +5,56 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bcfba25c86c46f986c061241a5d09f9aaa6d248
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022418"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627081"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
-Component Object Model (COM) umożliwia obiektu do udostępnienia jej funkcjonalność do innych składników oraz obsługi aplikacji. Większość oprogramowaniu współczesnych zawiera obiekty COM. Mimo że zestawów .NET są najlepszym wyborem dla nowych aplikacji, czasami konieczne może być zastosowana obiektów COM. W tej sekcji opisano niektóre zagadnienia związane z tworzeniem i przy użyciu obiektów COM z Visual Basic.  
+Component Object Model (COM) umożliwia obiektowi uwidocznienie jego funkcjonalności innym składnikom i hostowanie aplikacji. Większość współczesnych oprogramowania obejmuje obiekty COM. Chociaż zestawy .NET najlepiej sprawdzają się w przypadku nowych aplikacji, może być konieczne korzystanie z obiektów COM. W tej sekcji omówiono niektóre problemy związane z tworzeniem i korzystaniem z obiektów COM przy użyciu Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wprowadzenie do usługi międzyoperacyjnej modelu COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
- Przegląd współdziałania COM.  
+ Zawiera omówienie współdziałania z modelem COM.  
   
- [Instrukcje: Obiekty odwołanie COM z Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
- Opisano, jak dodać odwołania do obiektów COM, które mają bibliotek typów.  
+ [Instrukcje: Odwołuje się do obiektów COM z Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ Opisuje sposób dodawania odwołań do obiektów COM z bibliotekami typów.  
   
  [Instrukcje: praca z kontrolkami ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Pokazuje, jak dodać funkcje do przybornika Visual Studio za pomocą istniejących formantów ActiveX.  
+ Pokazuje, jak używać istniejących kontrolek ActiveX do dodawania funkcji do przybornika programu Visual Studio.  
   
  [Przewodnik: wywoływanie interfejsów API systemu Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
- Przeprowadzi Cię przez proces wywoływania interfejsów API, które są częścią tego systemu operacyjnego Windows.  
+ Przeprowadzi Cię przez proces wywoływania interfejsów API, które są częścią systemu operacyjnego Windows.  
   
  [Instrukcje: wywoływanie interfejsów API systemu Windows](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
- Pokazuje, jak definiować i wywoływać `MessageBox` funkcji w bibliotece User32.dll.  
+ Pokazuje, jak definiować i wywoływać `MessageBox` funkcję w User32. dll.  
   
  [Instrukcje: wywoływanie funkcji systemu Windows wykorzystującej typy bez znaku](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- Pokazuje sposób wywołania funkcji Windows, która ma parametr typu bez znaku.  
+ Pokazuje, jak wywołać funkcję systemu Windows, która ma parametr typu bez znaku.  
   
- [Przewodnik: Tworzenie obiektów COM z Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- Przeprowadzi Cię przez proces tworzenia obiektów COM z lub bez szablonu klasy COM.  
+ [Przewodnik: Tworzenie obiektów COM przy użyciu Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
+ Przeprowadzi Cię przez proces tworzenia obiektów COM z szablonem klasy COM i bez niego.  
   
  [Rozwiązywanie problemów związanych z współdziałaniem](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
- Obejmuje niektóre problemy, które można napotkać podczas za pomocą modelu COM.  
+ Obejmuje niektóre problemy, które mogą wystąpić podczas korzystania z modelu COM.  
   
  [Współdziałanie COM w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- Zawiera omówienie sposobu użycia obiekty COM i .NET Framework w tej samej aplikacji.  
+ Zawiera omówienie sposobów korzystania z obiektów COM i .NET Framework obiektów w tej samej aplikacji.  
   
  [Przewodnik: implementowanie dziedziczenia z obiektami COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- W tym artykule opisano, przy użyciu istniejących obiektów COM jako podstawy dla nowych obiektów.  
+ Opisuje używanie istniejących obiektów COM jako podstawy dla nowych obiektów.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Współdziałanie z kodem niezarządzanym](../../../framework/interop/index.md)  
- Opisuje współdziałanie usługi udostępniane przez środowisko uruchomieniowe języka wspólnego.  
+ Opisuje usługi współdziałania udostępniane przez środowisko uruchomieniowe języka wspólnego.  
   
  [Udostępnianie składników COM programowi .NET Framework](../../../framework/interop/exposing-com-components.md)  
- W tym artykule opisano proces typy modelu COM za pomocą współdziałania z modelem COM podczas wywoływania.  
+ Opisuje proces wywoływania typów COM za pomocą międzyoperacyjności modelu COM.  
   
  [Udostępnianie składników .NET Framework modelowi COM](../../../framework/interop/exposing-dotnet-components-to-com.md)  
- W tym artykule opisano przygotowania i korzystanie z typami zarządzanymi z modelu COM.  
+ Opisuje przygotowanie i użycie typów zarządzanych z modelu COM.  
   
- [Stosowanie atrybutów międzyoperacyjności](../../../framework/interop/applying-interop-attributes.md)  
- Opisano atrybuty, których można użyć podczas pracy z kodem niezarządzanym.
+ [Stosowanie atrybutów międzyoperacyjności](../../../standard/native-interop/apply-interop-attributes.md)  
+ Obejmuje atrybuty, których można używać podczas pracy z niezarządzanym kodem.

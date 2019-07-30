@@ -1,42 +1,42 @@
 ---
-title: What's new in .NET Core 2.0
-description: Więcej informacji na temat nowych funkcji, które znajdują się w .NET Core.
+title: Co nowego w programie .NET Core 2.0
+description: Dowiedz się więcej o nowych funkcjach dostępnych w programie .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 2d0f6a9faaec4d4438452054624751a40c96c8e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f48b8e88a716df0f07a5626bdc8f66000cfaeed8
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646959"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626359"
 ---
-# <a name="whats-new-in-net-core-20"></a>What's new in .NET Core 2.0
+# <a name="whats-new-in-net-core-20"></a>Co nowego w programie .NET Core 2.0
 
-.NET core 2.0 zawiera ulepszenia i nowe funkcje w następujących obszarach:
+Program .NET Core 2,0 zawiera ulepszenia i nowe funkcje w następujących obszarach:
 
-- [Narzędzia](#tooling)
+- [Narzędzi](#tooling)
 - [Obsługa języków](#language-support)
 - [Ulepszenia platformy](#platform-improvements)
 - [Zmiany interfejsu API](#api-changes-and-library-support)
 - [Integracja z programem Visual Studio](#visual-studio-integration)
 - [Udoskonalenia dokumentacji](#documentation-improvements)
 
-## <a name="tooling"></a>Narzędzia
+## <a name="tooling"></a>Narzędzi
 
-### <a name="dotnet-restore-runs-implicitly"></a>DotNet restore uruchamia się domyślnie
+### <a name="dotnet-restore-runs-implicitly"></a>niejawnie uruchamiane dotnet restore
 
-W poprzednich wersjach programu .NET Core, trzeba było uruchomić [dotnet restore](../tools/dotnet-restore.md) polecenie, aby pobrać zależności natychmiast, po utworzeniu nowego projektu za pomocą [dotnet nowe](../tools/dotnet-new.md) polecenia, a także zawsze, gdy użytkownik dodać nowe zależności do projektu.
+W poprzednich wersjach programu .NET Core należy uruchomić polecenie [dotnet Restore](../tools/dotnet-restore.md) , aby pobrać zależności natychmiast po utworzeniu nowego projektu za pomocą polecenia [dotnet New](../tools/dotnet-new.md) , a także za każdym razem, gdy dodano nową zależność do projektu.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Można również wyłączyć automatyczne wywołanie `dotnet restore` , przekazując `--no-restore` przełączyć się do `new`, `run`, `build`, `publish`, `pack`, i `test` poleceń.
+Możesz również wyłączyć automatyczne wywoływanie `dotnet restore` przez `--no-restore` przekazanie przełącznika do `new`poleceń, `run`, `build`, `publish` `pack`, i `test` .
 
-### <a name="retargeting-to-net-core-20"></a>Trwa przekierowywanie do programu .NET Core 2.0
+### <a name="retargeting-to-net-core-20"></a>Przekierowywanie do programu .NET Core 2,0
 
-Jeśli zainstalowano zestawu .NET Core 2.0 SDK, projekty przeznaczone na platformę .NET Core 1.x można ukierunkowany na .NET Core 2.0.
+Jeśli jest zainstalowany zestaw SDK programu .NET Core 2,0, projekty przeznaczone dla platformy .NET Core 1. x można przekierować do programu .NET Core 2,0.
 
-Aby przekierować do platformy .NET Core 2.0, należy edytować plik projektu, zmieniając wartość `<TargetFramework>` elementu (lub `<TargetFrameworks>` elementu, jeśli masz więcej niż jeden element docelowy w pliku projektu) z 1.x do 2.0:
+Aby przekierować do programu .NET Core 2,0, edytuj plik projektu, zmieniając wartość `<TargetFramework>` elementu (lub elementu, `<TargetFrameworks>` Jeśli masz więcej niż jeden obiekt docelowy w pliku projektu) od 1. x do 2,0:
 
 ```xml
 <PropertyGroup>
@@ -44,7 +44,7 @@ Aby przekierować do platformy .NET Core 2.0, należy edytować plik projektu, z
  </PropertyGroup>
 ```
 
-Można również przekierować biblioteki .NET Standard, .NET Standard 2.0 tak samo:
+Można również przekierować .NET Standard biblioteki do .NET Standard 2,0 w ten sam sposób:
 
 ```xml
 <PropertyGroup>
@@ -52,115 +52,115 @@ Można również przekierować biblioteki .NET Standard, .NET Standard 2.0 tak s
  </PropertyGroup>
 ```
 
-Aby uzyskać więcej informacji na temat migracji projektu .NET Core 2.0, zobacz [migracji z programu ASP.NET Core 1.x do ASP.NET Core 2.0](/aspnet/core/migration/1x-to-2x/index).
+Aby uzyskać więcej informacji na temat migrowania projektu do programu .NET Core 2,0, zobacz [Migrowanie z ASP.NET Core 1. x do ASP.NET Core 2,0](/aspnet/core/migration/1x-to-2x/index).
 
 ## <a name="language-support"></a>Obsługa języków
 
-Oprócz obsługi C# i F#, .NET Core 2.0 obsługuje również języka Visual Basic.
+Oprócz obsługi C# i F#programu .NET Core 2,0 obsługuje również Visual Basic.
 
 ### <a name="visual-basic"></a>Visual Basic
 
-W wersji 2.0 .NET Core obsługuje teraz 2017 Visual Basic. Visual Basic umożliwia tworzenie następujących typów projektu:
+W wersji 2,0 program .NET Core obsługuje teraz Visual Basic 2017. Za pomocą Visual Basic można utworzyć następujące typy projektów:
 
-- Aplikacje konsoli .NET core
-- Biblioteki klas platformy .NET core
-- Biblioteki klas .NET standard
-- Projekty testów jednostkowych .NET core
-- Projekty testów xUnit platformy .NET core
+- Aplikacje konsolowe platformy .NET Core
+- Biblioteki klas platformy .NET Core
+- .NET Standard biblioteki klas
+- Projekty testów jednostkowych .NET Core
+- Projekty testowe programu .NET Core xUnit
 
-Na przykład aby utworzyć aplikację Visual Basic "Hello World", wykonaj następujące czynności w wierszu polecenia:
+Na przykład aby utworzyć Visual Basic aplikację "Hello world", wykonaj następujące kroki w wierszu polecenia:
 
-1. Otwórz okno konsoli, a następnie utwórz katalog dla projektu i ułatwiają bieżącego katalogu.
+1. Otwórz okno konsoli, Utwórz katalog dla projektu i ustaw go jako bieżący katalog.
 
 1. Wprowadź polecenie `dotnet new console -lang vb`.
 
-   Polecenie tworzy plik projektu o `.vbproj` pliku rozszerzenie, wraz z pliku kodu źródłowego języka Visual Basic o nazwie *Program.vb*. Ten plik zawiera kod źródłowy, aby zapisać ciąg "Hello World!" w oknie konsoli.
+   Polecenie tworzy plik projektu z `.vbproj` rozszerzeniem pliku wraz z Visual Basic plikiem kodu źródłowego o nazwie *program. vb*. Ten plik zawiera kod źródłowy do zapisu ciągu "Hello world!" do okna konsoli.
 
-1. Wprowadź polecenie `dotnet run`. [Interfejsu wiersza polecenia platformy .NET Core](../tools/index.md) automatycznie kompiluje i uruchamia aplikację, która wyświetla komunikat "Hello World!" w oknie konsoli.
+1. Wprowadź polecenie `dotnet run`. [Interfejs wiersza polecenia platformy .NET Core](../tools/index.md) automatycznie kompiluje i wykonuje aplikację, która wyświetla komunikat "Hello World!" w oknie konsoli.
 
-### <a name="support-for-c-71"></a>Obsługa języka C# 7.1
+### <a name="support-for-c-71"></a>Obsługa C# 7,1
 
-.NET core 2.0 obsługuje C# 7.1, który dodaje wiele nowych funkcji, w tym:
+Program .NET Core 2,0 C# obsługuje 7,1, który dodaje wiele nowych funkcji, takich jak:
 
-- `Main` Metody punktu wejścia aplikacji, mogą być oznaczone [async](../../csharp/language-reference/keywords/async.md) — słowo kluczowe.
-- Pochodnych nazw krotek.
-- Wyrażenia domyślnego.
+- Metoda, punkt wejścia aplikacji, może być oznaczona za pomocą słowa kluczowego [Async.](../../csharp/language-reference/keywords/async.md) `Main`
+- Wywnioskowane nazwy krotek.
+- Wyrażenia domyślne.
 
 <!-- For more information see [link to C# what's new](url). -->
 
 ## <a name="platform-improvements"></a>Ulepszenia platformy
 
-.NET core 2.0 obejmuje pewną liczbę funkcji, które ułatwiają instalowanie programu .NET Core i z niej korzystać w obsługiwanych systemach operacyjnych.
+Program .NET Core 2,0 zawiera szereg funkcji, które ułatwiają instalowanie programu .NET Core i korzystanie z nich w obsługiwanych systemach operacyjnych.
 
-### <a name="net-core-for-linux-is-a-single-implementation"></a>.NET core dla systemu Linux jest pojedynczą implementacją
+### <a name="net-core-for-linux-is-a-single-implementation"></a>.NET Core dla systemu Linux to jedna implementacja
 
-.NET core 2.0 oferuje pojedynczą implementacją systemu Linux, która działa na wielu dystrybucji systemu Linux. .NET core 1.x wymagane pobierania implementacji programu specyficzne dla dystrybucji systemu Linux.
+Platforma .NET Core 2,0 oferuje jedną implementację systemu Linux, która działa w przypadku wielu dystrybucji systemu Linux. Program .NET Core 1. x wymaga pobrania implementacji systemu Linux dotyczącej dystrybucji.
 
-Możesz również tworzyć aplikacje przeznaczone dla systemu Linux jako jeden system operacyjny. .NET core 1.x wymagane oddzielnie docelowe każdej dystrybucji systemu Linux.
+Możesz również opracowywać aplikacje przeznaczone dla systemu Linux jako pojedynczy system operacyjny. W przypadku programu .NET Core 1. x wymagana jest Każda dystrybucja systemu Linux osobno.
 
 ### <a name="support-for-the-apple-cryptographic-libraries"></a>Obsługa bibliotek kryptograficznych firmy Apple
 
-.NET core 1.x w systemie macOS wymagane kryptograficznych biblioteki OpenSSL zestawu narzędzi. .NET core 2.0 używa bibliotek kryptograficznych firmy Apple i nie wymaga biblioteki OpenSSL, dzięki czemu nie trzeba go zainstalować.
+Platforma .NET Core 1. x w systemie macOS wymagała biblioteki kryptograficznej zestawu narzędzi OpenSSL. Platforma .NET Core 2,0 korzysta z bibliotek kryptograficznych firmy Apple i nie wymaga OpenSSL, więc nie trzeba już jej instalować.
 
-## <a name="api-changes-and-library-support"></a>Zmiany interfejsu API i obsługa bibliotek
+## <a name="api-changes-and-library-support"></a>Obsługa zmian i bibliotek interfejsu API
 
-### <a name="support-for-net-standard-20"></a>Obsługa .NET Standard 2.0
+### <a name="support-for-net-standard-20"></a>Obsługa .NET Standard 2,0
 
-.NET Standard definiuje zestaw numerów wersji interfejsów API, które muszą być dostępne w implementacji .NET, które są zgodne z wersji standard. .NET Standard jest przeznaczona dla deweloperów bibliotek. Ma on funkcjonalność, która jest dostępna dla biblioteki, który jest przeznaczony dla wersji programu .NET Standard na każdej implementacji .NET. .NET core 1.x obsługuje .NET Standard w wersji 1.6; .NET Core 2.0 obsługuje najnowszej wersji .NET Standard 2.0. Aby uzyskać więcej informacji, zobacz [.NET Standard](../../standard/net-standard.md).
+.NET Standard definiuje zestaw interfejsów API, które muszą być dostępne w implementacjach platformy .NET, które są zgodne z tą wersją Standard. .NET Standard jest przeznaczona dla deweloperów biblioteki. Ma ona na celu zagwarantowanie, że funkcjonalność dostępna dla biblioteki, która jest przeznaczona dla wersji .NET Standard w każdej implementacji platformy .NET. Platforma .NET Core 1. x obsługuje .NET Standard w wersji 1,6; program .NET Core 2,0 obsługuje najnowszą wersję .NET Standard 2,0. Aby uzyskać więcej informacji, zobacz [.NET Standard](../../standard/net-standard.md).
 
-.NET standard 2.0 zawiera ponad 20 000 więcej interfejsów API nie były dostępne w wersji 1.6 standardowy .NET. Większość tego rozwinięte powierzchni wyników zawierających interfejsów API, które są wspólne dla środowiska .NET Framework i Xamarin do .NET Standard.
+.NET Standard 2,0 obejmuje ponad 20 000 więcej interfejsów API niż w .NET Standard 1,6. Większość tego rozwiniętego obszaru powierzchni polega na dołączaniu interfejsów API, które są wspólne dla .NET Framework i platformy Xamarin w .NET Standard.
 
-Biblioteki klas .NET standard 2.0 także odwoływać się do biblioteki klas .NET Framework, pod warunkiem, że będą wywoływać interfejsy API, które znajdują się w programie .NET Standard 2.0. Nie kompilację bibliotek programu .NET Framework jest wymagana.
+Biblioteki klas .NET Standard 2,0 mogą również odwoływać się do bibliotek klas .NET Framework, pod warunkiem, że wywoła interfejsy API, które znajdują się w .NET Standard 2,0. Nie jest wymagana ponowna kompilacja bibliotek .NET Framework.
 
-Aby uzyskać listę interfejsów API, które zostały dodane do .NET Standard od jej ostatniej wersji platformy .NET Standard w wersji 1.6, zobacz [vs .NET Standard 2.0. 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
+Aby zapoznać się z listą interfejsów API, które zostały dodane do .NET Standard od momentu jego ostatniej wersji, .NET standard 1,6 [, zobacz .NET Standard 2,0 a. 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
 
 ### <a name="expanded-surface-area"></a>Rozwinięty obszar powierzchni
 
-Całkowita liczba interfejsami API dostępnymi w programie .NET Core 2.0 podwoiła więcej niż w porównaniu z platformy .NET Core 1.1.
+Łączna liczba interfejsów API dostępnych w środowisku .NET Core 2,0 jest większa niż dwukrotnie w porównaniu z platformą .NET Core 1,1.
 
-I [systemie Windows Compatibility Pack](../porting/windows-compat-pack.md) przenoszenie z .NET Framework również stał się dużo prostsze.
+Natomiast [pakiet zgodności systemu Windows](../porting/windows-compat-pack.md) z .NET Framework został również znacznie łatwiejszy.
 
 ### <a name="support-for-net-framework-libraries"></a>Obsługa bibliotek .NET Framework
 
-Kod platformy .NET core może odwoływać się do istniejących bibliotek .NET Framework, w tym istniejących pakietów NuGet. Należy pamiętać, że bibliotek należy użyć interfejsów API, które znajdują się w programie .NET Standard.
+Kod .NET Core może odwoływać się do istniejących bibliotek .NET Framework, w tym istniejących pakietów NuGet. Należy pamiętać, że biblioteki muszą używać interfejsów API, które znajdują się w .NET Standard.
 
 ## <a name="visual-studio-integration"></a>integracja z programem Visual Studio
 
-Visual Studio 2017 w wersji 15.3, a w niektórych przypadkach program Visual Studio for Mac oferuje szereg znaczące ulepszenia dla deweloperów platformy .NET Core.
+Program Visual Studio 2017 w wersji 15,3 i w niektórych przypadkach Visual Studio dla komputerów Mac oferować szereg znaczących ulepszeń dla deweloperów platformy .NET Core.
 
-### <a name="retargeting-net-core-apps-and-net-standard-libraries"></a>Trwa przekierowywanie aplikacje platformy .NET Core oraz biblioteki .NET Standard
+### <a name="retargeting-net-core-apps-and-net-standard-libraries"></a>Przekierowywanie aplikacji .NET Core i bibliotek .NET Standard
 
-Jeśli zainstalowano zestawu .NET Core 2.0 SDK, można przekierować projektów programu .NET Core 1.x do platformy .NET Core 2.0 i .NET Standard 1.x bibliotek .NET Standard 2.0.
+Jeśli jest zainstalowany zestaw SDK programu .NET Core 2,0, można przekierować projekty platformy .NET Core 1. x do bibliotek .NET Core 2,0 i .NET Standard 1. x do .NET Standard 2,0.
 
-Aby przekierować projektu w programie Visual Studio, możesz otworzyć **aplikacji** na karcie okna dialogowego właściwości projektu i zmień **platformę docelową** wartość **.NET Core 2.0** lub **.NET standard 2.0**. Możesz również zmienić, klikając prawym przyciskiem myszy na projekt i wybierając **Edytuj \*pliku .csproj** opcji. Aby uzyskać więcej informacji, zobacz [narzędzi](#tooling) wcześniej w tym temacie.
+Aby przekierować projekt w programie Visual Studio, Otwórz kartę **aplikacji** okna dialogowego właściwości projektu i zmień wartość **platformy docelowej** na **.net Core 2,0** lub **.NET Standard 2,0**. Możesz również ją zmienić, klikając prawym przyciskiem myszy projekt i wybierając opcję  **\*Edytuj plik CSPROJ** . Aby uzyskać więcej informacji, zobacz sekcję dotyczącą [narzędzi](#tooling) wcześniej w tym temacie.
 
 ### <a name="live-unit-testing-support-for-net-core"></a>Obsługa funkcji Live Unit Testing dla platformy .NET Core
 
-Przy każdej modyfikacji kodu Live Unit Testing automatycznie uruchamia wszystkie testy jednostkowe wykorzystywanych w tle i wyświetla wyniki i pokrycia kodu na żywo w środowisku Visual Studio. .NET core 2.0 obsługuje teraz funkcję Live Unit Testing. Wcześniej Live Unit Testing była dostępna tylko w przypadku aplikacji .NET Framework.
+Za każdym razem, gdy modyfikujesz swój kod, Live Unit Testing automatycznie uruchamia wszystkie objęte testy jednostkowe w tle i wyświetla wyniki i pokrycie kodu na żywo w środowisku programu Visual Studio. Platforma .NET Core 2,0 obsługuje teraz Live Unit Testing. Wcześniej Live Unit Testing był dostępny tylko dla aplikacji .NET Framework.
 
-Aby uzyskać więcej informacji, zobacz [Live Unit Testing w programie Visual Studio 2017](/visualstudio/test/live-unit-testing) i [Live Unit Testing — często zadawane pytania](/visualstudio/test/live-unit-testing-faq).
+Aby uzyskać więcej informacji, zobacz [Live Unit Testing z programem Visual Studio 2017](/visualstudio/test/live-unit-testing) i [Live Unit Testing często zadawanych pytań](/visualstudio/test/live-unit-testing-faq).
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>Lepsza obsługa wielu platform docelowych
 
-Jeśli tworzysz projekt dla wielu platform docelowych można teraz wybrać platformę docelową menu najwyższego poziomu. Na poniższej ilustracji, projekt o nazwie SCD1 cele 64-bitowym z systemem macOS X 10.11 (`osx.10.11-x64`) i 64-bitowego systemu Windows 10/Windows Server 2016 (`win10-x64`). Przed wybraniem przycisku projektu, w tym przypadku kompilację debugowania, możesz wybrać platformy docelowej.
+Jeśli tworzysz projekt dla wielu struktur docelowych, możesz teraz wybrać platformę docelową z menu najwyższego poziomu. Na poniższej ilustracji projekt o nazwie SCD1 targets 64-bit macOS X 10,11 (`osx.10.11-x64`) i 64-bit Windows 10/Windows Server 2016 (`win10-x64`). Możesz wybrać platformę docelową przed wybraniem przycisku projektu, w tym przypadku, aby uruchomić kompilację debugowania.
 
-![Zrzut ekranu przedstawiający wybór framework docelowego podczas kompilowania projektu.](./media/dotnet-core-2-0/target-framework-selection.png)
+![Zrzut ekranu przedstawiający wybór platformy docelowej podczas kompilowania projektu.](./media/dotnet-core-2-0/target-framework-selection.png)
 
-### <a name="side-by-side-support-for-net-core-sdks"></a>Side-by-side obsługę zestawów .NET Core SDK
+### <a name="side-by-side-support-for-net-core-sdks"></a>Obsługa równoczesna dla zestawów SDK platformy .NET Core
 
-Można teraz zainstalować zestaw .NET Core SDK, niezależnie od programu Visual Studio. Umożliwia jednej wersji programu Visual Studio do tworzenia projektów tego kierują do różnych wersji programu .NET Core. Wcześniej Visual Studio i .NET Core SDK są ściśle powiązane; określoną wersję zestawu SDK wraz z określonej wersji programu Visual Studio.
+Teraz można zainstalować zestaw .NET Core SDK niezależnie od programu Visual Studio. Dzięki temu pojedynczej wersji programu Visual Studio można tworzyć projekty przeznaczone dla różnych wersji platformy .NET Core. Wcześniej program Visual Studio i zestaw .NET Core SDK były ściśle sprzężone; określona wersja zestawu SDK dołączona do określonej wersji programu Visual Studio.
 
 ## <a name="documentation-improvements"></a>Udoskonalenia dokumentacji
 
 ### <a name="net-application-architecture"></a>Architektura aplikacji .NET
 
-[Architektura aplikacji .NET](https://www.microsoft.com/net/learn/architecture) zapewnia dostęp do zestawu książkami elektronicznymi, które zapewniają wskazówki, najlepsze rozwiązania i przykładowe aplikacje, korzystając z platformy .NET do tworzenia:
+[Architektura aplikacji .NET](https://www.microsoft.com/net/learn/architecture) zapewnia dostęp do zestawu książek elektronicznych, które udostępniają wskazówki, najlepsze rozwiązania i przykładowe aplikacje w przypadku korzystania z platformy .NET do kompilowania:
 
-- [Mikrousług i kontenerów rozwiązania Docker](../../standard/microservices-architecture/index.md)
-- [Aplikacje sieci Web wykorzystujące technologie ASP.NET](../../standard/modern-web-apps-azure-architecture/index.md)
-- [Aplikacje mobilne za pomocą platformy Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index)
-- [Aplikacje, które są wdrażane w chmurze dzięki platformie Azure](/azure/architecture/reference-architectures/index)
+- [Mikrousługi i kontenery platformy Docker](../../architecture/microservices/index.md)
+- [Aplikacje sieci Web z ASP.NET](../../architecture/modern-web-apps-azure/index.md)
+- [Aplikacje mobilne przy użyciu platformy Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index)
+- [Aplikacje wdrożone w chmurze na platformie Azure](/azure/architecture/reference-architectures/index)
 
 ## <a name="see-also"></a>Zobacz także
 
-- [What's new in ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)
+- [Co nowego w ASP.NET Core 2,0](/aspnet/core/aspnetcore-2.0)

@@ -1,17 +1,17 @@
 ---
 title: Krotki
-description: Dowiedz się więcej o F# krotki, grupowanie bez nazwy, ale uporządkowane wartości, prawdopodobnie różnych typów.
+description: Dowiedz się F# więcej na temat krotki, grupowania nienazwanych, ale uporządkowanych wartości, prawdopodobnie różnych typów.
 ms.date: 05/16/2016
-ms.openlocfilehash: 950451ad1672e0c9fc609773f1bc32fc13636ddb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7a15d7e0c6c9b42118dd75066f02cbb2e05335fc
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645115"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630241"
 ---
 # <a name="tuples"></a>Krotki
 
-A *krotki* to zbiór wartości bez nazwy, ale uporządkowanym, prawdopodobnie różnych typów.  Kolekcje mogą być typami odwołań lub struktury.
+*Krotka* to grupa nienazwanych, ale uporządkowanych wartości, prawdopodobnie różnych typów.  Krotki mogą być typami referencyjnymi lub strukturami.
 
 ## <a name="syntax"></a>Składnia
 
@@ -22,75 +22,75 @@ struct(element, ... ,element )
 
 ## <a name="remarks"></a>Uwagi
 
-Każdy *elementu* w poprzedniej składni może być dowolne, prawidłowe F# wyrażenia.
+Każdy *element* w poprzedniej składni może być dowolnym prawidłowym F# wyrażeniem.
 
 ## <a name="examples"></a>Przykłady
 
-Przykładami krotek pary, trójek i tak dalej, tych samych lub różnych typów. Niektóre przykłady zostały zilustrowane w poniższym kodzie.
+Przykłady krotek obejmują pary, potrójne i tak dalej, o tych samych lub różnych typach. Przykłady przedstawiono w poniższym kodzie.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L6-L21)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L6-L21)]
 
-## <a name="obtaining-individual-values"></a>Uzyskiwanie poszczególne wartości
+## <a name="obtaining-individual-values"></a>Uzyskiwanie pojedynczych wartości
 
-Dopasowanie do wzorca można użyć dostępu i przypisać nazwy elementów krotki, jak pokazano w poniższym kodzie.
+Możesz użyć dopasowania wzorca, aby uzyskać dostęp i przypisać nazwy dla elementów krotki, jak pokazano w poniższym kodzie.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L27-L29)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L27-L29)]
 
-Można również dekonstruować krotki za pomocą dopasowywania do wzorca poza `match` wyrażenia za pośrednictwem `let` powiązania:
+Możesz również odtworzyć krotkę przez dopasowanie wzorca poza `match` wyrażeniem za pośrednictwem `let` powiązania:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L34-L37)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L34-L37)]
 
-Lub można wzorca dopasowania krotek jako dane wejściowe do funkcji:
+Lub można dopasować do wzorca spójnych krotek jako dane wejściowe do funkcji:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L43-L47)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L43-L47)]
 
-Jeśli potrzebujesz tylko jeden element krotki symbol wieloznaczny (podkreślenie) można uniknąć, tworząc nową nazwę dla wartości, która nie ma potrzeby.
+Jeśli potrzebujesz tylko jednego elementu krotki, symbol wieloznaczny (podkreślenie) można użyć, aby uniknąć tworzenia nowej nazwy dla niepotrzebnej wartości.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L53-L54)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L53-L54)]
 
-Kopiowanie elementów z krotki odwołania do krotki struktury również jest prosty:
+Kopiowanie elementów z krotki referencyjnej do krotki struktury jest również proste:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L62-L66)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L62-L66)]
 
-Funkcje `fst` i `snd` (odwoływać się tylko krotek) zwraca pierwszy i drugi elementów krotki, odpowiednio.
+Funkcje `fst` i`snd` (tylko krotki referencyjne) zwracają odpowiednio pierwszy i drugi element spójnej kolekcji.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L72-L73)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L72-L73)]
 
-Nie ma wbudowanych funkcji zwracającą trzeci element triple, ale łatwe napisania jednego w następujący sposób.
+Nie istnieje Wbudowana funkcja, która zwraca trzeci element trzykrotności, ale można ją łatwo napisać w następujący sposób.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L78-L78)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L78-L78)]
 
-Ogólnie rzecz biorąc lepiej jest dostęp do elementów poszczególne krotki z za pomocą dopasowywania do wzorca.
+Ogólnie rzecz biorąc lepiej jest używać dopasowywania wzorców w celu uzyskania dostępu do poszczególnych elementów krotki.
 
-## <a name="using-tuples"></a>Możliwość korzystania z krotek
+## <a name="using-tuples"></a>Używanie krotek
 
-Spójne kolekcje zapewniają wygodny sposób wielu wartości zwracane przez funkcję, jak pokazano w poniższym przykładzie. W tym przykładzie wykonuje dzielenie liczby całkowitej i zwraca zaokrąglony wynik operacji, ponieważ pierwszego elementu członkowskiego pary krotki, jak i resztę jako drugi element członkowski pary.
+Krotki zapewniają wygodny sposób zwracania wielu wartości z funkcji, jak pokazano w poniższym przykładzie. Ten przykład wykonuje dzielenie liczby całkowitej i zwraca zaokrąglony wynik operacji jako pierwszy element członkowski pary krotek i resztę jako drugi element członkowski pary.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L83-L86)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L83-L86)]
 
-Kolekcje można również jako argumenty funkcji uniknąć niejawne currying argumentów funkcji, które jest implikowane przez zwykłe składnię.
+Krotki mogą być również używane jako argumenty funkcji, gdy chcesz uniknąć niejawnego currying argumentów funkcji, które są implikowane przez normalną składnię funkcji.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L88-L88)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L88-L88)]
 
-Typowej składni do definiowania funkcji `let sum a b = a + b` pozwala na zdefiniowanie funkcja, która jest częściowym zastosowaniem pierwszy argument funkcji, jak pokazano w poniższym kodzie.
+Zwykła Składnia służąca do definiowania funkcji `let sum a b = a + b` umożliwia zdefiniowanie funkcji, która jest częściową aplikacją pierwszego argumentu funkcji, jak pokazano w poniższym kodzie.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L90-L94)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L90-L94)]
 
-Przy użyciu spójnych kolekcji jako parametr wyłącza currying. Aby uzyskać więcej informacji, zobacz "Częściowe stosowanie argumentów" w [funkcji](functions/index.md).
+Użycie krotki jako parametru powoduje wyłączenie currying. Aby uzyskać więcej informacji, zobacz "częściowe stosowanie argumentów" w [funkcjach](./functions/index.md).
 
-## <a name="names-of-tuple-types"></a>Nazwy typów krotki
+## <a name="names-of-tuple-types"></a>Nazwy typów krotek
 
-Kiedy piszesz się nazwę typu, który jest spójną kolekcją, możesz użyć `*` symbol do oddzielania elementów. Dla spójną kolekcją, która składa się z `int`, `float`, a `string`, takich jak `(10, 10.0, "ten")`, typu, które powinny być zapisane w następujący sposób.
+Podczas wpisywania nazwy typu, który jest krotką, należy użyć `*` symbolu do oddzielenia elementów. Dla krotki, która składa się `int`z `float`, a, i `string`a, takich `(10, 10.0, "ten")`jak, typ zostałby zapisany w następujący sposób.
 
 ```fsharp
 int * float * string
 ```
 
-## <a name="interoperation-with-c-tuples"></a>Współdziałanie z Krotkami języka C#
+## <a name="interoperation-with-c-tuples"></a>Współdziałanie C# z krotkami
 
-C# 7.0 wprowadzono krotek języka.  Kolekcje w C# są strukturami i są równoważne z krotek struktur w F#.  Jeśli musisz współdziałać z C#, należy użyć krotek struktur.
+C#7,0 wprowadza krotki do języka.  Krotki w C# są strukturami i są odpowiednikami krotek struktury w F#.  Jeśli musisz współpracować z programem C#, musisz użyć krotek struktury.
 
-Jest to proste.  Załóżmy, że trzeba przekazać krotki do klasy C#, a następnie zużyć je jej wynik, który jest również spójnej kolekcji:
+Jest to bardzo proste.  Załóżmy na przykład, że musisz przekazać krotkę do C# klasy, a następnie użyć jej wyniku, która jest również krotką:
 
 ```csharp
 namespace CSharpTupleInterop
@@ -103,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-W swojej F# kodu, można następnie przekazać krotki struktury jako parametr i korzystać z wynik w postaci krotki struktury.
+W F# kodzie można następnie przekazać krotkę struktury jako parametr i użyć wyniku jako krotki struktury.
 
 ```fsharp
 open TupleInterop
@@ -112,25 +112,25 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 // newX is now 2, and newY is now 3
 ```
 
-### <a name="converting-between-reference-tuples-and-struct-tuples"></a>Konwertowanie pomiędzy krotek struktur i kolekcje odwołania
+### <a name="converting-between-reference-tuples-and-struct-tuples"></a>Konwertowanie między Krotekmi referencyjnymi a krotkami struktury
 
-Ponieważ krotek struktur i kolekcje odwołanie całkowicie różnych reprezentacji podstawowych, nie są one niejawnej konwersji.  Oznacza to, że nie będzie kompilacji kodu, takie jak następujące:
+Ponieważ krotki referencyjne i krotek struktury mają zupełnie inną reprezentację podstawową, nie są one niejawnie konwertowane.  Oznacza to, że kod, taki jak następujące, nie zostanie skompilowany:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-Należy wzorca dopasowania po jednej krotce i konstruowania, pozostałe części składowe.  Na przykład:
+Musisz dopasować wzorzec dla jednej krotki i utworzyć drugą z częściami elementów.  Na przykład:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 
-## <a name="compiled-form-of-reference-tuples"></a>Skompilowanej formy krotek odwołania
+## <a name="compiled-form-of-reference-tuples"></a>Skompilowana forma kolekcji referencyjnych
 
-W tej sekcji opisano formularza krotek, gdy są one skompilowane.  W tym miejscu nie są one niezbędne do odczytu, o ile nie są przeznaczone dla .NET Framework 3.5 lub niższą.
+W tej sekcji opisano formę krotek, gdy są one kompilowane.  Informacje w tym miejscu nie są niezbędne do odczytania, chyba że jest przeznaczony .NET Framework 3,5 lub niższy.
 
-Kolekcje są kompilowane do jednego z kilku typów ogólnych, wszystkie nazwane obiekty `System.Tuple`, które są przeciążone na liczby argumentów lub liczbę parametrów typu. Typy krotek są wyświetlane w tym formularzu, gdy można je wyświetlić w innym języku, takich jak C# lub Visual Basic lub podczas korzystania z narzędzia, która nie ma informacji o F# konstrukcji. `Tuple` Typy zostały wprowadzone w programie .NET Framework 4. Jeśli jest przeznaczony dla starszej wersji programu .NET Framework, kompilator używa wersji [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) w wersji 2.0 F# podstawowej biblioteki. Typy w tej bibliotece są używane tylko w przypadku aplikacji przeznaczonych dla wersji 2.0, 3.0 i 3.5 wersje programu .NET Framework. Przekazywanie dalej typu służy do zapewnienia zgodność binarną między .NET Framework 2.0 i .NET Framework 4 F# składników.
+Krotki są kompilowane do obiektów jednego z kilku typów ogólnych, wszystkie nazwane `System.Tuple`, które są przeciążone dla liczby argumentów lub liczby parametrów typu. Typy krotek są wyświetlane w tym formularzu podczas wyświetlania ich z innego języka, takiego jak C# lub Visual Basic, lub podczas korzystania z narzędzia, które nie ma informacji o F# konstrukcjach. `Tuple` Typy zostały wprowadzone w .NET Framework 4. Jeśli obiektem docelowym jest wcześniejsza wersja .NET Framework, kompilator używa wersji elementu [System. krotka](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) z wersji 2,0 biblioteki F# podstawowej. Typy w tej bibliotece są używane tylko dla aplikacji przeznaczonych dla wersji 2,0, 3,0 i 3,5 .NET Framework. Przekazywanie typu jest używane w celu zapewnienia zgodności binarnej między składnikami .NET Framework F# 2,0 i .NET Framework 4.
 
-### <a name="compiled-form-of-struct-tuples"></a>Skompilowanej formy krotek struktur
+### <a name="compiled-form-of-struct-tuples"></a>Skompilowana forma krotek struktury
 
-Krotek struktur (na przykład `struct (x, y)`), są różni się od krotek odwołania.  Są one kompilowane do <xref:System.ValueTuple> typu przeciążony przez liczby argumentów lub liczbę parametrów typu.  Są one równoważnymi [C# 7.0 krotek](../../csharp/tuples.md) i [krotek 2017 Visual Basic](../../visual-basic/programming-guide/language-features/data-types/tuples.md)oraz współpraca dwukierunkowo.
+Krotki struktury (na przykład `struct (x, y)`) różnią się zasadniczo od krotek odwołania.  Są one kompilowane w <xref:System.ValueTuple> typie, przeciążonym przez liczbę argumentów lub liczbie parametrów typu.  Są one równoważne z [ C# 7,0 krotkami](../../csharp/tuples.md) i [Visual Basic 2017 krotek](../../visual-basic/programming-guide/language-features/data-types/tuples.md)i współdziałają dwukierunkowo.
 
 ## <a name="see-also"></a>Zobacz także
 

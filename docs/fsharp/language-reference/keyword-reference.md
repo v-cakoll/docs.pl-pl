@@ -1,96 +1,96 @@
 ---
 title: Odwołanie do słowa kluczowego
-description: Znajdź łącza do informacji na temat wszystkich F# słowa kluczowe języka.
+description: Znajdź linki do informacji o wszystkich słowach F# kluczowych języka.
 ms.date: 05/16/2016
-ms.openlocfilehash: d55846fe7c8d31454b6bc8684de75546800df7d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f845db74fd7ffd4164cc74acd192e39df7d2d6b1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904101"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627618"
 ---
 # <a name="keyword-reference"></a>Odwołanie do słowa kluczowego
 
-Ten temat zawiera łącza do informacji o wszystkich F# słowa kluczowe języka.
+Ten temat zawiera linki do informacji o wszystkich F# słowach kluczowych języka.
 
-## <a name="f-keyword-table"></a>F#Tabela — słowo kluczowe
+## <a name="f-keyword-table"></a>F#Tabela słów kluczowych
 
-W poniższej tabeli przedstawiono wszystkie F# słów kluczowych w kolejności alfabetycznej, wraz z krótkie opisy i linki do powiązanych tematów, które zawierają więcej informacji.
+W poniższej tabeli przedstawiono wszystkie F# słowa kluczowe w kolejności alfabetycznej wraz z krótkimi opisami i łączami do odpowiednich tematów, które zawierają więcej informacji.
 
 |Słowo kluczowe|Łącze|Opis|
 |-------|----|-----------|
-|`abstract`|[Elementy członkowskie](members/index.md)<br /><br />[Klasy abstrakcyjne](abstract-classes.md)|Określa metodę, która albo nie ma implementacji w typie, w którym jest zdeklarowana lub jest wirtualny i ma domyślną implementację.|
-|`and`|[`let` Powiązania](functions/let-bindings.md)<br /><br />[Rekordy](records.md)<br /><br />[Elementy członkowskie](members/index.md)<br /><br />[Ograniczenia](generics/constraints.md)|Używane w wzajemnie powiązania cyklicznego i rekordy, w deklaracji właściwości i za pomocą wielu ograniczeń w parametrach rodzajowych.|
-|`as`|[Klasy](classes.md)<br /><br />[Dopasowanie do wzorca](Pattern-Matching.md)|Umożliwia nazwij bieżący obiekt klasy obiektu. Umożliwia również nadaj nazwę całego wzorca w ciągu dopasowania do wzorca.|
-|`assert`|[Asercje](assertions.md)|Używane do weryfikacji kodu podczas debugowania.|
-|`base`|[Klasy](classes.md)<br /><br />[Dziedziczenie](inheritance.md)|Używane jako nazwę obiektu klasy bazowej.|
-|`begin`|[Pełna składnia](verbose-syntax.md)|W składni pełne wskazuje początek bloku kodu.|
-|`class`|[Klasy](classes.md)|W składni pełne wskazuje początek definicji klasy.|
-|`default`|[Elementy członkowskie](members/index.md)|Wskazuje implementację metody abstrakcyjnej; używany razem z deklaracji metody abstrakcyjnej, aby utworzyć metodę wirtualną.|
+|`abstract`|[Elementy członkowskie](./members/index.md)<br /><br />[Klasy abstrakcyjne](abstract-classes.md)|Wskazuje metodę, która nie ma implementacji w typie, w którym jest zadeklarowana lub jest wirtualna i ma implementację domyślną.|
+|`and`|[`let`Powiązań](./functions/let-bindings.md)<br /><br />[Rekordy](records.md)<br /><br />[Elementy członkowskie](./members/index.md)<br /><br />[Ograniczenia](./generics/constraints.md)|Używane w wzajemnie rekurencyjnych powiązaniach i rekordach, w deklaracjach właściwości i z wieloma ograniczeniami parametrów ogólnych.|
+|`as`|[Klasy](classes.md)<br /><br />[Dopasowanie do wzorca](Pattern-Matching.md)|Służy do nadawania obiektowi Current klasy nazwy obiektu. Służy również do przyciągania nazwy do całego wzorca w ramach dopasowania do wzorca.|
+|`assert`|[Asercje](assertions.md)|Służy do weryfikowania kodu podczas debugowania.|
+|`base`|[Klasy](classes.md)<br /><br />[Dziedziczenie](inheritance.md)|Używane jako nazwa obiektu klasy bazowej.|
+|`begin`|[Pełna składnia](verbose-syntax.md)|W instrukcji verbose wskazuje początek bloku kodu.|
+|`class`|[Klasy](classes.md)|W instrukcji verbose wskazuje początek definicji klasy.|
+|`default`|[Elementy członkowskie](./members/index.md)|Wskazuje implementację metody abstrakcyjnej; używane razem z deklaracją metody abstrakcyjnej do utworzenia metody wirtualnej.|
 |`delegate`|[Delegaty](delegates.md)|Używane do deklarowania delegata.|
-|`do`|[Powiązania „do”](functions/do-bindings.md)<br /><br />[Pętle: `for...to` Expression](loops-for-to-expression.md)<br /><br />[Pętle: `for...in` Expression](loops-for-in-expression.md)<br /><br />[Pętle: `while...do` Expression](loops-while-do-expression.md)|Używane w konstrukcji pętli lub wykonywanie kodu imperatywnego.|
-|`done`|[Pełna składnia](verbose-syntax.md)|W składni pełne wskazuje koniec bloku kodu w wyrażeniu pętli.|
-|`downcast`|[Rzutowanie i konwersje](casting-and-conversions.md)|Używana do konwersji do typu, które jest niżej w łańcuchu dziedziczenia.|
-|`downto`|[Pętle: `for...to` Expression](loops-for-to-expression.md)|W `for` wyrażenia używane w przypadku licząc w odwrotnej kolejności.|
-|`elif`|[Wyrażenie warunkowe: `if...then...else`](conditional-expressions-if-then-else.md)|Używane w rozgałęzień warunkowych. Krótką formą `else if`.|
-|`else`|[Wyrażenie warunkowe: `if...then...else`](conditional-expressions-if-then-else.md)|Używane w rozgałęzień warunkowych.|
-|`end`|[Struktury](structures.md)<br /><br />[Sumy rozłączne](discriminated-unions.md)<br /><br />[Rekordy](records.md)<br /><br />[Rozszerzenia typu](type-extensions.md)<br /><br />[Pełna składnia](verbose-syntax.md)|W definicji typu i rozszerzeń typu wskazuje koniec sekcji definicje elementów członkowskich.<br /><br />Pełne składnię, używany do określenia koniec bloku kodu, który rozpoczyna się od `begin` — słowo kluczowe.|
-|`exception`|[Obsługa wyjątków](exception-handling/index.md)<br /><br />[Typy wyjątków](exception-handling/exception-types.md)|Używane do deklarowania typ wyjątku.|
-|`extern`|[Funkcje zewnętrzne](functions/external-functions.md)|Wskazuje, że element zadeklarowany programu jest zdefiniowana w innym pliku binarnego lub zestawu.|
-|`false`|[Typy pierwotne](primitive-types.md)|Używane jako literału wartości logicznej.|
-|`finally`|[Wyjątki: `try...finally` Wyrażenia](exception-handling/the-try-finally-expression.md)|Wraz z `try` wprowadzenie bloku kodu, który jest wykonywany niezależnie od tego, czy wystąpi wyjątek.|
-|`fixed`|[Stała](fixed.md)|Umożliwia "przypinając" wskaźnik na stosie, aby uniemożliwić jego bezużyteczne.|
-|`for`|[Pętle: `for...to` Expression](loops-for-to-expression.md)<br /><br />[Pętle: wyrażenie for...in](loops-for-in-expression.md)|Używane w konstrukcji pętli.|
-|`fun`|[Lambda Expressions: słowo kluczowe `fun`](functions/lambda-expressions-the-fun-keyword.md)|Używane w wyrażeniach lambda, funkcji anonimowych tzw.|
-|`function`|[Wyrażenia dopasowania](match-expressions.md)<br /><br />[Lambda Expressions: Fun — słowo kluczowe](functions/lambda-expressions-the-fun-keyword.md)|Używane jako krótszy alternatywa dla `fun` — słowo kluczowe i `match` wyrażenia w wyrażeniu lambda, która ma dopasowania do wzorca w pojedynczy argument.|
-|`global`|[Przestrzenie nazw](namespaces.md)|Można odwoływać się do przestrzeni nazw .NET najwyższego poziomu.|
-|`if`|[Wyrażenie warunkowe: `if...then...else`](conditional-expressions-if-then-else.md)|Używane w konstrukcje warunkowe rozgałęziania.|
-|`in`|[Pętle: wyrażenie for...in](loops-for-in-expression.md)<br /><br />[Pełna składnia](verbose-syntax.md)|Używać wyrażeń sekwencji, a w Pełna składnia wyrażenia z powiązania.|
-|`inherit`|[Dziedziczenie](inheritance.md)|Można określić klasy bazowej lub interfejsu podstawowego.|
-|`inline`|[Funkcje](functions/index.md)<br /><br />[Funkcje śródwierszowe](functions/inline-functions.md)|Służy do wskazania funkcja, która powinna zostać włączona bezpośrednio do kodu wywołującego.|
-|`interface`|[Interfejsy](interfaces.md)|Używane do deklarowania i implementować interfejsy.|
-|`internal`|[Kontrola dostępu](access-control.md)|Można określić, że element członkowski jest widoczny w zestawie, ale nie poza nim.|
-|`lazy`|[Wyrażenia z opóźnionym obliczaniem](lazy-expressions.md)|Można określić wyrażenie, które ma być wykonywane tylko wtedy, gdy wynik jest wymagana.|
-|`let`|[`let` Powiązania](functions/let-bindings.md)|Służy do skojarzenia lub powiązać nazwę wartości lub funkcji.|
-|`let!`|[Asynchroniczne przepływy pracy](asynchronous-workflows.md)<br /><br />[Wyrażenia obliczeń](computation-expressions.md)|Używane w Asynchroniczne przepływy pracy, aby powiązać nazwę wynik asynchroniczne obliczenie, lub inne wyrażenia obliczeń użyte do utworzenia powiązania nazwy wyniku jest typem wyliczenia.|
-|`match`|[Wyrażenia dopasowania](match-expressions.md)|Używany do gałęzi przez porównanie wartości do wzorca.|
-|`match!`|[Wyrażenia obliczeń](computation-expressions.md#match)|Umożliwia wbudowane wywołanie w celu dopasowania wyrażenia i wzorzec obliczeń na jego wynik.|
-|`member`|[Elementy członkowskie](members/index.md)|Używane do deklarowania właściwości lub metody w typu obiektu.|
-|`module`|[Moduły](modules.md)|Umożliwia skojarzenie nazwy z grupą powiązanych typów wartości i funkcji do logicznego odseparowania od innego kodu.|
-|`mutable`|[Powiązania „let”](functions/let-bindings.md)|Używane do deklarowania zmiennej, oznacza to, które można zmienić wartość.|
-|`namespace`|[Przestrzenie nazw](namespaces.md)|Umożliwia skojarzenie nazwy z grupą powiązanych typów i moduły, do logicznego odseparowania od innego kodu.|
-|`new`|[Konstruktory](members/constructors.md)<br /><br />[Ograniczenia](generics/constraints.md)|Używane do deklarowania, zdefiniuj lub wywoływania konstruktora, który tworzy, lub który można utworzyć obiekt.<br /><br />Umożliwia również w ograniczenia parametru ogólnego wskazują, że typ musi mieć określone konstruktora.|
-|`not`|[Odwołanie do symboli i operatorów](symbol-and-operator-reference/index.md)<br /><br />[Ograniczenia](generics/constraints.md)|Bez faktycznego słowem kluczowym. Jednak `not struct` w połączeniu jest używany jako ograniczenie parametru ogólnego.|
-|`null`|[Wartości null](values/null-values.md)<br /><br />[Ograniczenia](generics/constraints.md)|Wskazuje brak obiektu.<br /><br />Również używany w ograniczenia parametru ogólnego.|
-|`of`|[Sumy rozłączne](discriminated-unions.md)<br /><br />[Delegaty](delegates.md)<br /><br />[Typy wyjątków](exception-handling/exception-types.md)|Używane w połączenia dyskryminowanych, aby wskazać typ kategorii wartości, a w deklaracjach delegata i wyjątków.|
-|`open`|[Deklaracje importowania: słowo kluczowe `open`](import-declarations-the-open-keyword.md)|Używane, aby udostępnić zawartość przestrzeni nazw lub module bez kwalifikacji.|
-|`or`|[Odwołanie do symboli i operatorów](symbol-and-operator-reference/index.md)<br /><br />[Ograniczenia](generics/constraints.md)|Używane z warunkami logiczną jako wartość logiczna `or` operatora. Odpowiednikiem `||`.<br /><br />Również używany w ograniczeniami elementu członkowskiego.|
-|`override`|[Elementy członkowskie](members/index.md)|Używany do implementowania nieco inna niż wersja podstawowa metody abstrakcyjne lub wirtualne.|
-|`private`|[Kontrola dostępu](access-control.md)|Ogranicza dostęp do elementu członkowskiego do kodu, w tym samym typie lub modułu.|
-|`public`|[Kontrola dostępu](access-control.md)|Umożliwia dostęp do elementu członkowskiego z zewnątrz typu.|
-|`rec`|[Funkcje](functions/index.md)|Służy do wskazania, że funkcja jest rekursywny.|
-|`return`|[Asynchroniczne przepływy pracy](Asynchronous-Workflows.md)<br /><br />[Wyrażenia obliczeń](computation-expressions.md)|Służy do wskazania wartość do dostarczenia jako wynik wyrażenia obliczeń.|
-|`return!`|[Wyrażenia obliczeń](computation-expressions.md)<br /><br />[Asynchroniczne przepływy pracy](asynchronous-workflows.md)|Służy do wskazywania wyrażenia obliczeń, gdy obliczane, zwraca wynik funkcji zawierających wyrażenia obliczeń.|
-|`select`|[Wyrażenia zapytania](query-expressions.md)|Używane w wyrażeniach zapytań, aby określić, jakie pola lub kolumny do wyodrębnienia. Należy pamiętać, że jest kontekstowym słowem kluczowym, co oznacza, że nie jest faktycznie słowem zastrzeżonym, i działa jak słowem kluczowym w odpowiedniego kontekstu.|
-|`static`|[Elementy członkowskie](members/index.md)|Służy do wskazania metodę lub właściwość, która może być wywołana bez wystąpienia typu lub składowej wartość, która jest udostępniona wszystkim wystąpieniom typu.|
-|`struct`|[Struktury](structures.md)<br /><br /> [Krotki](tuples.md)<br/><br/>[Ograniczenia](generics/constraints.md)|Używane do deklarowania typu struktury.<br /><br/>Służy do określania krotki struktury.<br/><br />Również używany w ograniczenia parametru ogólnego.<br /><br />Używane dla zgodności OCaml w definicji modułu.|
-|`then`|[Wyrażenie warunkowe: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Konstruktory](members/constructors.md)|Używane w wyrażeniach warunkowych.<br /><br />Umożliwia również wykonać efekty uboczne po konstrukcji obiektu.|
-|`to`|[Pętle: `for...to` Expression](loops-for-to-expression.md)|Używane w `for` pętli, aby określić zakres.|
-|`true`|[Typy pierwotne](primitive-types.md)|Używane jako literału wartości logicznej.|
-|`try`|[Wyjątki: Try... with — wyrażenie](exception-handling/the-try-with-expression.md)<br /><br />[Wyjątki: Try... finally — wyrażenie](exception-handling/the-try-finally-expression.md)|Umożliwia wprowadzenie bloku kodu, który może generować wyjątek. Wraz z `with` lub `finally`.|
-|`type`|[Typy F#](fsharp-types.md)<br /><br />[Klasy](classes.md)<br /><br />[Rekordy](records.md)<br /><br />[Struktury](structures.md)<br /><br />[Wyliczenia](enumerations.md)<br /><br />[Sumy rozłączne](discriminated-unions.md)<br /><br />[Skróty typów](type-abbreviations.md)<br /><br />[Jednostki miary](units-of-measure.md)|Używane do deklarowania klas, rekord, struktury, złożenia dyskryminowanego, typ wyliczeniowy, jednostka miary lub — typ skrótu.|
-|`upcast`|[Rzutowanie i konwersje](casting-and-conversions.md)|Używana do konwersji na typ, który znajduje się wyżej w łańcuchu dziedziczenia.|
-|`use`|[Zarządzanie zasobami: słowo kluczowe `use`](resource-management-the-use-keyword.md)|Używane zamiast `let` dla wartości, które wymagają `Dispose` wywoływana, aby zwolnić zasoby.|
-|`use!`|[Wyrażenia obliczeń](computation-expressions.md)<br /><br />[Asynchroniczne przepływy pracy](asynchronous-workflows.md)|Używane zamiast `let!` Asynchroniczne przepływy pracy i inne wyrażenia obliczeń dla wartości, które wymagają `Dispose` wywoływana, aby zwolnić zasoby.|
-|`val`|[Pola jawne: słowo kluczowe `val`](members/explicit-fields-the-val-keyword.md)<br /><br />[Podpisy](signatures.md)<br /><br />[Elementy członkowskie](members/index.md)|Używany w podpisie, aby wskazać wartość lub w typie, aby zadeklarować elementu członkowskiego, w ograniczonych sytuacjach.|
-|`void`|[Typy pierwotne](primitive-types.md)|Wskazuje .NET `void` typu. Używany podczas współpracy z innymi językami .NET.|
-|`when`|[Ograniczenia](generics/constraints.md)|Używane dla warunków logicznych (*podczas osłony*) na dopasowania do wzorca i wprowadzać Klauzula ograniczenia dla parametru typu ogólnego.|
-|`while`|[Pętle: `while...do` Expression](loops-while-do-expression.md)|Uvozuje Konstruktor.|
-|`with`|[Wyrażenia dopasowania](match-expressions.md)<br /><br />[Wyrażenia obiektów](object-expressions.md)<br /><br />[Kopiowanie i aktualizacja wyrażeń rekordów](copy-and-update-record-expressions.md)<br /><br />[Rozszerzenia typu](type-extensions.md)<br /><br />[Wyjątki: `try...with` Wyrażenia](exception-handling/the-try-with-expression.md)|Wraz z `match` słowa kluczowego w wyrażeniach dopasowania do wzorca. Również używane w wyrażeniach obiektu, wyrażeń kopiowania rekordów i rozszerzeń typu, wprowadzenie definicje elementów członkowskich oraz wprowadzenie obsługi wyjątków.|
-|`yield`|[Sekwencje](sequences.md)|W wyrażeniu sekwencji służy do uzyskiwania wartości sekwencji.|
-|`yield!`|[Wyrażenia obliczeń](computation-expressions.md)<br /><br />[Asynchroniczne przepływy pracy](asynchronous-workflows.md)|Używany w wyrażeniu obliczeń, można dołączyć wynik wyrażenia dane obliczenie do zbierania wyników zawierających wyrażenia obliczeń.|
+|`do`|[Powiązania „do”](./functions/do-bindings.md)<br /><br />[Pętli `for...to`Wyrażenia](loops-for-to-expression.md)<br /><br />[Pętli `for...in`Wyrażenia](loops-for-in-expression.md)<br /><br />[Pętli `while...do`Wyrażenia](loops-while-do-expression.md)|Używane w konstrukcjach pętli lub do wykonywania bezwzględnie kodu.|
+|`done`|[Pełna składnia](verbose-syntax.md)|W instrukcji verbose wskazuje koniec bloku kodu w wyrażeniu zapętlenia.|
+|`downcast`|[Rzutowanie i konwersje](casting-and-conversions.md)|Używane do konwertowania na typ, który jest niższy w łańcuchu dziedziczenia.|
+|`downto`|[Pętli `for...to`Wyrażenia](loops-for-to-expression.md)|`for` W wyrażeniu używanym podczas zliczania w odwrotnej postaci.|
+|`elif`|[Wyrażenia warunkowe:`if...then...else`](conditional-expressions-if-then-else.md)|Używane w rozgałęzieniu warunkowym. Krótka forma `else if`.|
+|`else`|[Wyrażenia warunkowe:`if...then...else`](conditional-expressions-if-then-else.md)|Używane w rozgałęzieniu warunkowym.|
+|`end`|[Struktury](structures.md)<br /><br />[Sumy rozłączne](discriminated-unions.md)<br /><br />[Rekordy](records.md)<br /><br />[Rozszerzenia typu](type-extensions.md)<br /><br />[Pełna składnia](verbose-syntax.md)|W definicjach typów i rozszerzeniach typów wskazuje koniec sekcji definicji elementu członkowskiego.<br /><br />W pełnej składni, używany do określenia końca bloku kodu, który rozpoczyna `begin` się od słowa kluczowego.|
+|`exception`|[Obsługa wyjątków](/.exception-handling/index.md)<br /><br />[Typy wyjątków](/.exception-handling/exception-types.md)|Używane do deklarowania typu wyjątku.|
+|`extern`|[Funkcje zewnętrzne](./functions/external-functions.md)|Wskazuje, że zadeklarowany element programu jest zdefiniowany w innym pliku binarnym lub zestawie.|
+|`false`|[Typy pierwotne](primitive-types.md)|Używany jako literał wartości logicznej.|
+|`finally`|[Wyjątki: `try...finally` Wyrażenie](/.exception-handling/the-try-finally-expression.md)|Używane razem z `try` , aby wprowadzić blok kodu, który jest wykonywany bez względu na to, czy wystąpił wyjątek.|
+|`fixed`|[FIXED](fixed.md)|Służy do "przypinania" wskaźnika na stosie, aby zapobiec występowaniu elementów bezużytecznych.|
+|`for`|[Pętli `for...to`Wyrażenia](loops-for-to-expression.md)<br /><br />[Pętle: wyrażenie for...in](loops-for-in-expression.md)|Używane w konstrukcjach zapętlenia.|
+|`fun`|[Wyrażenia lambda: słowo kluczowe `fun`](./functions/lambda-expressions-the-fun-keyword.md)|Używane w wyrażeniach lambda, znane także jako funkcje anonimowe.|
+|`function`|[Wyrażenia dopasowania](match-expressions.md)<br /><br />[Wyrażenia lambda: Zabawne słowo kluczowe](./functions/lambda-expressions-the-fun-keyword.md)|Używane jako krótsza alternatywa dla `fun` słowa kluczowego `match` i wyrażenia w wyrażeniu lambda, które ma dopasowanie wzorca dla jednego argumentu.|
+|`global`|[Przestrzenie nazw](namespaces.md)|Służy do odwoływania się do przestrzeni nazw najwyższego poziomu platformy .NET.|
+|`if`|[Wyrażenia warunkowe:`if...then...else`](conditional-expressions-if-then-else.md)|Używane w konstrukcjach rozgałęzień warunkowych.|
+|`in`|[Pętle: wyrażenie for...in](loops-for-in-expression.md)<br /><br />[Pełna składnia](verbose-syntax.md)|Używane dla wyrażeń sekwencji i, w składni pełnej, do oddzielania wyrażeń od powiązań.|
+|`inherit`|[Dziedziczenie](inheritance.md)|Służy do określania klasy bazowej lub interfejsu bazowego.|
+|`inline`|[Funkcje](./functions/index.md)<br /><br />[Funkcje śródwierszowe](./functions/inline-functions.md)|Służy do wskazywania funkcji, która powinna być zintegrowana bezpośrednio z kodem wywołującym.|
+|`interface`|[Interfejsy](interfaces.md)|Używane do deklarowania i implementowania interfejsów.|
+|`internal`|[Kontrola dostępu](access-control.md)|Służy do określenia, że element członkowski jest widoczny wewnątrz zestawu, ale nie poza nim.|
+|`lazy`|[Wyrażenia z opóźnionym obliczaniem](lazy-expressions.md)|Służy do określania wyrażenia, które ma zostać wykonane tylko wtedy, gdy jest wymagany wynik.|
+|`let`|[`let`Powiązań](./functions/let-bindings.md)|Służy do kojarzenia nazwy z wartością lub funkcją.|
+|`let!`|[Asynchroniczne przepływy pracy](asynchronous-workflows.md)<br /><br />[Wyrażenia obliczeń](computation-expressions.md)|Używany w asynchronicznych przepływach pracy w celu powiązania nazwy z wynikiem obliczeń asynchronicznych lub w innych wyrażeniach obliczeniowych, użytych do powiązania nazwy z wynikiem, który jest typem obliczenia.|
+|`match`|[Wyrażenia dopasowania](match-expressions.md)|Używane do rozgałęziania przez porównanie wartości ze wzorcem.|
+|`match!`|[Wyrażenia obliczeń](computation-expressions.md#match)|Służy do wbudowania wywołania wyrażenia obliczeń i dopasowania do wzorca w wyniku.|
+|`member`|[Elementy członkowskie](./members/index.md)|Używane do deklarowania właściwości lub metody w typie obiektu.|
+|`module`|[Moduły](modules.md)|Służy do kojarzenia nazwy z grupą powiązanych typów, wartości i funkcji, aby logicznie oddzielić ją od innego kodu.|
+|`mutable`|[Powiązania „let”](./functions/let-bindings.md)|Używane do deklarowania zmiennej, czyli wartości, którą można zmienić.|
+|`namespace`|[Przestrzenie nazw](namespaces.md)|Służy do kojarzenia nazwy z grupą powiązanych typów i modułów, aby logicznie oddzielić ją od innego kodu.|
+|`new`|[Konstruktory](./members/constructors.md)<br /><br />[Ograniczenia](./generics/constraints.md)|Służy do deklarowania, definiowania lub wywoływania konstruktora, który tworzy lub który może utworzyć obiekt.<br /><br />Używane również w ograniczeniach parametru generycznego, aby wskazać, że typ musi mieć określony Konstruktor.|
+|`not`|[Odwołanie do symboli i operatorów](./symbol-and-operator-reference/index.md)<br /><br />[Ograniczenia](./generics/constraints.md)|W rzeczywistości nie jest słowem kluczowym. `not struct` Jednak w kombinacji jest używana jako ograniczenie parametru ogólnego.|
+|`null`|[Wartości null](./values/null-values.md)<br /><br />[Ograniczenia](./generics/constraints.md)|Wskazuje brak obiektu.<br /><br />Używane również w ograniczeniach parametru generycznego.|
+|`of`|[Sumy rozłączne](discriminated-unions.md)<br /><br />[Delegaty](delegates.md)<br /><br />[Typy wyjątków](/.exception-handling/exception-types.md)|Używane w Unii rozłącznych, aby wskazać typ kategorii wartości, a w deklaracjach delegatów i wyjątków.|
+|`open`|[Deklaracje importowania: słowo kluczowe `open`](import-declarations-the-open-keyword.md)|Służy do udostępnienia zawartości przestrzeni nazw lub modułu bez kwalifikacji.|
+|`or`|[Odwołanie do symboli i operatorów](./symbol-and-operator-reference/index.md)<br /><br />[Ograniczenia](./generics/constraints.md)|Używany z warunkami logicznymi jako operator `or` logiczny. `||`Odpowiednik.<br /><br />Używane również w ograniczeniach elementu członkowskiego.|
+|`override`|[Elementy członkowskie](./members/index.md)|Służy do implementowania wersji metody abstrakcyjnej lub wirtualnej, która różni się od wersji podstawowej.|
+|`private`|[Kontrola dostępu](access-control.md)|Ogranicza dostęp do elementu członkowskiego do kodu w tym samym typie lub module.|
+|`public`|[Kontrola dostępu](access-control.md)|Zezwala na dostęp do elementu członkowskiego spoza typu.|
+|`rec`|[Funkcje](./functions/index.md)|Używane do wskazywania, że funkcja jest cykliczna.|
+|`return`|[Asynchroniczne przepływy pracy](Asynchronous-Workflows.md)<br /><br />[Wyrażenia obliczeń](computation-expressions.md)|Służy do wskazania wartości, która ma być używana jako wynik wyrażenia obliczeń.|
+|`return!`|[Wyrażenia obliczeń](computation-expressions.md)<br /><br />[Asynchroniczne przepływy pracy](asynchronous-workflows.md)|Służy do wskazania wyrażenia obliczeń, które, gdy jest oceniane, zawiera wynik wyrażenia zawierającego wyrażenie obliczeniowe.|
+|`select`|[Wyrażenia zapytania](query-expressions.md)|Używane w wyrażeniach zapytań w celu określenia pól lub kolumn do wyodrębnienia. Należy zauważyć, że jest to kontekstowe słowo kluczowe, co oznacza, że nie jest w rzeczywistości słowem zastrzeżonym i działa tylko jako słowo kluczowe w odpowiednim kontekście.|
+|`static`|[Elementy członkowskie](./members/index.md)|Służy do wskazywania metody lub właściwości, które można wywołać bez wystąpienia typu, lub elementu członkowskiego wartości, który jest współużytkowany przez wszystkie wystąpienia typu.|
+|`struct`|[Struktury](structures.md)<br /><br /> [Krotki](tuples.md)<br/><br/>[Ograniczenia](./generics/constraints.md)|Używane do deklarowania typu struktury.<br /><br/>Służy do określania krotki struktury.<br/><br />Używane również w ograniczeniach parametru generycznego.<br /><br />Używane na potrzeby zgodności OCaml w definicjach modułów.|
+|`then`|[Wyrażenia warunkowe:`if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Konstruktory](./members/constructors.md)|Używane w wyrażeniach warunkowych.<br /><br />Używane również do wykonywania efektów ubocznych po konstrukcji obiektu.|
+|`to`|[Pętli `for...to`Wyrażenia](loops-for-to-expression.md)|Używane w `for` pętlach, aby wskazać zakres.|
+|`true`|[Typy pierwotne](primitive-types.md)|Używany jako literał wartości logicznej.|
+|`try`|[Wyjątki: Try... Wyrażenie with](/.exception-handling/the-try-with-expression.md)<br /><br />[Wyjątki: Try... Wyrażenie finally](/.exception-handling/the-try-finally-expression.md)|Służy do wprowadzenia bloku kodu, który może generować wyjątek. Używane razem z `with` lub `finally`.|
+|`type`|[Typy F#](fsharp-types.md)<br /><br />[Klasy](classes.md)<br /><br />[Rekordy](records.md)<br /><br />[Struktury](structures.md)<br /><br />[Wyliczenia](enumerations.md)<br /><br />[Sumy rozłączne](discriminated-unions.md)<br /><br />[Skróty typów](type-abbreviations.md)<br /><br />[Jednostki miary](units-of-measure.md)|Służy do deklarowania klasy, rekordu, struktury, Unii rozłącznej, typu wyliczeniowego, jednostki miary lub skrótu typu.|
+|`upcast`|[Rzutowanie i konwersje](casting-and-conversions.md)|Używane do konwertowania na typ, który jest wyższy w łańcuchu dziedziczenia.|
+|`use`|[Zarządzanie zasobami: słowo kluczowe `use`](resource-management-the-use-keyword.md)|Używane zamiast `let` wartości, które wymagają `Dispose` wywołania w celu zwolnienia zasobów.|
+|`use!`|[Wyrażenia obliczeń](computation-expressions.md)<br /><br />[Asynchroniczne przepływy pracy](asynchronous-workflows.md)|Używane zamiast `let!` w asynchronicznych przepływach pracy i innych wyrażeniach obliczeń dla `Dispose` wartości, które wymagają wywołania w celu zwolnienia zasobów.|
+|`val`|[Pola jawne: słowo kluczowe `val`](./members/explicit-fields-the-val-keyword.md)<br /><br />[Podpisy](signatures.md)<br /><br />[Elementy członkowskie](./members/index.md)|Używane w podpisie do wskazywania wartości lub w typie do deklarowania elementu członkowskiego w ograniczonych sytuacjach.|
+|`void`|[Typy pierwotne](primitive-types.md)|Wskazuje typ .NET `void` . Używane podczas współdziałania z innymi językami .NET.|
+|`when`|[Ograniczenia](./generics/constraints.md)|Używane dla warunków logicznych (w*przypadku funkcji Guard*) w dopasowaniach wzorca i w celu wprowadzenia klauzuli ograniczenia dla parametru typu ogólnego.|
+|`while`|[Pętli `while...do`Wyrażenia](loops-while-do-expression.md)|Wprowadza konstrukcję pętli.|
+|`with`|[Wyrażenia dopasowania](match-expressions.md)<br /><br />[Wyrażenia obiektów](object-expressions.md)<br /><br />[Kopiowanie i aktualizacja wyrażeń rekordów](copy-and-update-record-expressions.md)<br /><br />[Rozszerzenia typu](type-extensions.md)<br /><br />[Wyjątki: `try...with` Wyrażenie](/.exception-handling/the-try-with-expression.md)|Używane razem ze `match` słowem kluczowym w wyrażeniach dopasowania wzorców. Używane również w wyrażeniach obiektów, rekordach kopiowania i rozszerzeniach w celu wprowadzenia definicji elementów członkowskich i wprowadzenia obsługi wyjątków.|
+|`yield`|[Sekwencje](sequences.md)|Używany w wyrażeniu sekwencji do tworzenia wartości dla sekwencji.|
+|`yield!`|[Wyrażenia obliczeń](computation-expressions.md)<br /><br />[Asynchroniczne przepływy pracy](asynchronous-workflows.md)|Używany w wyrażeniu obliczeniowym do dołączania wyniku danego wyrażenia obliczenia do kolekcji wyników dla zawierającego wyrażenie obliczenia.|
 
-Następujące generatory kodów są zarezerwowane w F# ponieważ są one słów kluczowych w języku OCaml:
+Następujące tokeny są zastrzeżone w F# programie, ponieważ są słowami kluczowymi w języku ocaml:
 
 * `asr`
 * `land`
@@ -101,9 +101,9 @@ Następujące generatory kodów są zarezerwowane w F# ponieważ są one słów 
 * `mod`
 * `sig`
 
-Jeśli używasz `--mlcompatibility` — opcja kompilatora, powyżej słowa kluczowe są dostępne do użycia jako identyfikatorów.
+Jeśli używasz `--mlcompatibility` opcji kompilatora, powyższe słowa kluczowe są dostępne do użycia jako identyfikatory.
 
-Następujące generatory kodów są zastrzeżone słowa kluczowe dla przyszłego rozwoju F# języka:
+Następujące tokeny są zastrzeżone jako słowa kluczowe do przyszłego rozwinięcia F# języka:
 
 * `atomic`
 * `break`
@@ -134,5 +134,5 @@ Następujące generatory kodów są zastrzeżone słowa kluczowe dla przyszłego
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka F#](index.md)
-- [Odwołanie do symboli i operatorów](symbol-and-operator-reference/index.md)
+- [Odwołanie do symboli i operatorów](./symbol-and-operator-reference/index.md)
 - [Opcje kompilatora](compiler-options.md)

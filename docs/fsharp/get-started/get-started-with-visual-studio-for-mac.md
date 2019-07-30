@@ -1,67 +1,67 @@
 ---
-title: Rozpoczynanie pracy z usługą F# w programie Visual Studio dla komputerów Mac
-description: Dowiedz się, jak używać F# z programem Visual Studio dla komputerów Mac.
+title: Rozpoczynanie pracy F# z usługą w Visual Studio dla komputerów Mac
+description: Dowiedz się, F# jak korzystać z programu z Visual Studio dla komputerów Mac.
 ms.date: 07/03/2018
-ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 679ed1ea28f5d0e0d910dbd407b38d1d2f0314f6
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949724"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629755"
 ---
-# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Rozpoczynanie pracy z usługą F# w programie Visual Studio dla komputerów Mac
+# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Rozpoczynanie pracy F# z usługą w Visual Studio dla komputerów Mac
 
-F#a wizualizacja F# narzędzi są obsługiwane w programie Visual Studio dla komputerów Mac w środowisku IDE. Upewnij się, że masz [Visual Studio for Mac zainstalowane](install-fsharp.md#install-f-with-visual-studio-for-mac).
+F#narzędzia wizualne F# są obsługiwane w Visual Studio dla komputerów Mac IDE. Upewnij się, że [zainstalowano Visual Studio dla komputerów Mac](install-fsharp.md#install-f-with-visual-studio-for-mac).
 
-## <a name="creating-a-console-application"></a>Tworzenie aplikacji konsoli
+## <a name="creating-a-console-application"></a>Tworzenie aplikacji konsolowej
 
-Jednym z najprostszych projektów w programie Visual Studio dla komputerów Mac jest aplikacji konsoli.  Oto jak to zrobić.  Po otwarciu programu Visual Studio dla komputerów Mac:
+Jednym z najpopularniejszych projektów w Visual Studio dla komputerów Mac jest Aplikacja konsolowa.  Oto jak to zrobić.  Gdy Visual Studio dla komputerów Mac jest otwarty:
 
-1. Na **pliku** menu wskaż **nowe rozwiązanie**.
+1. W menu **plik** wskaż polecenie **nowe rozwiązanie**.
 
-2. W oknie dialogowym Nowy projekt istnieją 2 różnych szablonów dla aplikacji konsoli.  Jest węzłem Other -> .NET, który jest przeznaczony dla .NET Framework.  Ten szablon jest w ramach platformy .NET Core -> Aplikacja, która jest przeznaczony dla platformy .NET Core.  Albo szablonu powinny działać na potrzeby tego artykułu.
+2. W oknie dialogowym Nowy projekt istnieją 2 różne szablony dla aplikacji konsolowej.  Istnieje jedna pod innymi > .NET, która jest przeznaczona dla .NET Framework.  Drugi szablon jest objęty aplikacją .NET Core->, która jest przeznaczona dla platformy .NET Core.  Każdy szablon powinien zadziałał na potrzeby tego artykułu.
 
-3. W obszarze aplikacji konsoli, zmień C# do F# w razie potrzeby.  Wybierz **dalej** przycisk umożliwiający przenoszenie do przodu!  
+3. W obszarze aplikacja konsoli, C# w F# razie potrzeby, przejdź do programu.  Wybierz przycisk **dalej** , aby przejść do przodu!  
 
-4. Nadaj projektowi nazwę, a następnie wybierz odpowiednie opcje dla aplikacji.  Powiadomienia w okienku podglądu, aby stronie ekranu, pokazujące strukturę katalogu, który zostanie utworzony w oparciu o wybrane opcje.  
+4. Nadaj projektowi nazwę, a następnie wybierz odpowiednie opcje dla aplikacji.  Zwróć uwagę, że okienko podglądu z boku ekranu spowoduje wyświetlenie struktury katalogów, która zostanie utworzona na podstawie wybranych opcji.  
 
-5. Kliknij przycisk **Utwórz**.  Powinien zostać wyświetlony F# projekt w Eksploratorze rozwiązań.
+5. Kliknij przycisk **Utwórz**.  Powinien być teraz widoczny F# projekt w Eksplorator rozwiązań.
 
 ## <a name="writing-your-code"></a>Pisanie kodu
 
-Zacznijmy napisanie kodu.  Upewnij się, że `Program.fs` plik jest otwarty, a następnie zastąp jego zawartość następującym kodem:
+Zacznijmy od zapisania najpierw kodu.  Upewnij się, że `Program.fs` plik jest otwarty, a następnie zastąp jego zawartość następującym:
 
-[!code-fsharp[HelloSquare](../../../samples/snippets/fsharp/getting-started/hello-square.fs)]
+[!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-W poprzednim przykładzie kodu funkcji `square` zdefiniowano, który przyjmuje dane wejściowe o nazwie `x` i mnożona przez siebie.  Ponieważ F# używa [wnioskowanie o typie](../language-reference/type-inference.md), typ `x` nie muszą być określone.  F# Kompilator rozpoznaje typy, których mnożenie jest prawidłowy i przypisze typu `x` zależnie od `square` jest wywoływana.  Po umieszczeniu wskaźnika myszy nad `square`, powinny pojawić się następujące:
+W poprzednim przykładzie kodu zdefiniowano funkcję `square` , która przyjmuje `x` dane wejściowe i mnoży ją przez siebie.  Ponieważ F# używa [wnioskowania o typie](../language-reference/type-inference.md), `x` nie trzeba określać typu.  F# Kompilator rozumie typy, w których mnożenie jest prawidłowe i przypisuje typ `x` na podstawie sposobu wywoływania metody `square` .  Po umieszczeniu wskaźnika myszy `square`na stronie powinny zostać wyświetlone następujące elementy:
 
 ```
 val square: x:int -> int
 ```
 
-Jest to, co jest nazywane podpisu typu funkcji.  Mogą być odczytywane następująco: "Kwadratu jest funkcją, która przyjmuje liczbą całkowitą o nazwie x i tworzy całkowitą".  Należy zauważyć, że kompilator nadaje `square` `int` typu teraz — jest to spowodowane mnożenie nie jest ogólna między *wszystkich* typów, ale raczej jest ogólny w zestawie zamknięte typy.  F# Kompilatora pobrane `int` tej punkt, ale skoryguje sygnatura typu Jeśli wywołasz `square` przy użyciu innego typu danych wejściowych, takich jak `float`.
+Jest to element znany jako podpis typu funkcji.  Można go odczytać w następujący sposób: "Square to funkcja, która przyjmuje liczbę całkowitą o nazwie x i tworzy liczbę całkowitą".  Należy zauważyć, że kompilator `square` nadał `int` teraz typ. jest to spowodowane tym, że mnożenie nie jest ogólne dla *wszystkich* typów, ale raczej jest ogólny w przypadku zamkniętego zestawu typów.  F# Kompilator jest wybierany `int` w tym momencie, ale dopasowuje podpis typu w przypadku wywołania `square` z `float`innym typem danych wejściowych, na przykład.
 
-Inną funkcję, `main`, jest zdefiniowany, który zostanie nadany `EntryPoint` atrybutu, aby poinformować F# powinny zacząć kompilator, że wykonywanie programu.  Jest zgodna z tej samej Konwencji co inne [języków programowania stylu C](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), gdzie argumenty wiersza polecenia mogą być przekazywane do tej funkcji i zostanie zwrócony kod liczby całkowitej (zazwyczaj `0`).
+Inna funkcja `main`,,, jest zdefiniowana `EntryPoint` z atrybutem, aby poinformować F# kompilator, że wykonanie programu powinno się uruchomić w tym miejscu.  Ta sama Konwencja jest zgodna z innymi [językami programowania w stylu C](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), gdzie argumenty wiersza polecenia mogą być przekazane do tej funkcji i zwracany jest kod liczby całkowitej (zazwyczaj `0`).
 
-Znajduje się w tej funkcji, które nazywamy `square` funkcji z argumentem `12`.  F# Kompilatora następnie przypisuje typ `square` jako `int -> int` (oznacza to, że funkcja, która przyjmuje `int` i tworzy `int`).  Wywołanie `printfn` jest sformatowany funkcję drukowania, który używa formatu ciągu, podobny do języków programowania w stylu języka C, parametry, które odnoszą się do tych określonych w ciągu formatu, a następnie drukuje wyniki i nowy wiersz.
+Jest to funkcja, która wywołuje `square` funkcję z `12`argumentem.  Następnie F# `square` kompilator przypisuje typ do `int -> int` (czyli `int`funkcję, która przyjmuje `int` i tworzy).  Wywołanie `printfn` jest sformatowaną funkcją drukowania, która używa ciągu formatu, podobnego do języków programowania w stylu C, parametrów, które odpowiadają określonym w ciągu formatu, a następnie drukuje wynik i nowy wiersz.
 
 ## <a name="running-your-code"></a>Uruchamianie kodu
 
-Można uruchomić kod i wyświetlić wyniki, klikając **Uruchom** menu najwyższego poziomu i następnie **Rozpocznij bez debugowania**.  To spowoduje Uruchom program bez debugowania i pozwala wyświetlić wyniki.
+Możesz uruchomić kod i zobaczyć wyniki, klikając polecenie **Uruchom** w menu najwyższego poziomu, a następnie **uruchamiając bez debugowania**.  Spowoduje to uruchomienie programu bez debugowania i umożliwi wyświetlenie wyników.
 
-Powinien zostać wyświetlony wypisywane w oknie konsoli, które program Visual Studio for Mac pojawiające się następujące czynności:
+W oknie konsoli powinna zostać wyświetlona następująca wartość, która Visual Studio dla komputerów Mac zdjęte:
 
 ```
 12 squared is 144!
 ```
 
-Gratulacje!  Utworzono pierwszej F# projektu w programie Visual Studio dla komputerów Mac, zapisywane F# funkcji drukowania wyniki wywołania funkcji i uruchom projekt, aby wyświetlać pewnych wyników.
+Gratulacje!  Został utworzony pierwszy F# projekt w Visual Studio dla komputerów Mac, zapisanie F# funkcji Wydrukowano wyniki wywołania tej funkcji i Uruchom projekt, aby zobaczyć niektóre wyniki.
 
-## <a name="using-f-interactive"></a>Za pomocą F# interaktywne
+## <a name="using-f-interactive"></a>Używanie F# interaktywne
 
-Jedną z najlepszych funkcji wizualizacji F# narzędzi w programie Visual Studio dla komputerów Mac jest F# okna interaktywnego.  Pozwala ona do wysłania kodu do procesu, w którym można wywołać ten kod i interaktywnie wyświetlić wynik.
+Jedną z najlepszych funkcji narzędzi wizualnych F# w Visual Studio dla komputerów Mac jest okno F# interaktywne.  Umożliwia wysyłanie kodu do procesu, w którym można wywołać ten kod i interaktywnie zobaczyć wynik.
 
-Aby zacząć z niego korzystać, wyróżnij `square` funkcję zdefiniowaną w kodzie.  Przejdź do menu **Edytuj** menu najwyższego poziomu.  Następnie wybierz pozycję **Wyślij zaznaczenie do F# Interactive**.  To wykonuje kod w F# okna interaktywnego.  Alternatywnie, kliknij zaznaczenie prawym przyciskiem myszy i wybierz polecenie **Wyślij zaznaczenie do F# Interactive**.  Powinien zostać wyświetlony F# okna interaktywnego pojawiają się z następującymi w nim:
+Aby rozpocząć korzystanie z niego, zaznacz `square` funkcję zdefiniowaną w kodzie.  Następnie kliknij pozycję **Edytuj** w menu najwyższego poziomu.  Następnie wybierz pozycję **Wyślij zaznaczenie F# do**opcji interaktywny.  Spowoduje to wykonanie kodu w oknie F# interaktywnym.  Alternatywnie możesz kliknąć prawym przyciskiem myszy zaznaczenie i wybrać polecenie **Wyślij zaznaczenie do F#** opcji interaktywny.  Powinno zostać wyświetlone okno F# interaktywne z następującym w nim:
 
 ```
 >
@@ -71,7 +71,7 @@ val square : x:int -> int
 >
 ```
 
-Pokazuje to taki sam podpis funkcji dla `square` funkcji, tak aby był wyświetlany po najechaniu za pośrednictwem funkcji.  Ponieważ `square` teraz jest zdefiniowany w F# interakcyjny proces, można wywołać go z różnymi wartościami:
+Pokazuje to ten sam podpis funkcji dla `square` funkcji, która została wcześniej umieszczona po umieszczeniu wskaźnika myszy nad funkcją.  Ponieważ `square` jest teraz zdefiniowany w procesie F# interaktywnym, można wywołać go z różnymi wartościami:
 
 ```
 > square 12;;
@@ -80,7 +80,7 @@ val it : int = 144
 val it : int = 169
 ```
 
-To wykonuje funkcję, łączy wynik pod nową nazwą `it`i wyświetla typ i wartość `it`.  Należy pamiętać, że musi kończyć się każdy wiersz z `;;`.  Jest to jak F# Interactive wie, po zakończeniu wywołania funkcji.  Można również definiować nowe funkcje w F# interakcyjne:
+Wykonuje funkcję, wiąże wynik z nową nazwą `it`i wyświetla typ i `it`wartość.  Należy pamiętać, że każdy wiersz należy zamknąć `;;`za pomocą.  Jest to sposób F# interaktywny wie, gdy wywołanie funkcji zostało zakończone.  Możesz również definiować nowe funkcje w F# trybie interaktywnym:
 
 ```
 > let isOdd x = x % 2 <> 0;;
@@ -91,27 +91,27 @@ val isOdd : x:int -> bool
 val it : bool = false
 ```
 
-Powyższe definiuje nową funkcję `isOdd`, która przyjmuje `int` i sprawdza, czy jest nieparzysta!  Możesz wywołać tę funkcję, aby zobaczyć zwróceniem przy użyciu różnych danych wejściowych.  Można wywołać funkcji w ramach wywołania funkcji:
+Powyższe definiuje nową funkcję, która `isOdd` `int` pobiera i sprawdza, czy jest nieparzysta.  Możesz wywołać tę funkcję, aby zobaczyć, co zwraca z innymi danymi wejściowymi.  Można wywoływać funkcje w ramach wywołań funkcji:
 
 ```
 > isOdd (square 15);;
 val it : bool = true
 ```
 
-Można również użyć [operatora potoku — przekazywanie](../language-reference/symbol-and-operator-reference/index.md) do potoku wartość w dwie funkcje:
+Można również użyć [operatora przekazywania potoków](../language-reference/symbol-and-operator-reference/index.md) , aby przekierować wartość do dwóch funkcji:
 
 ```
 > 15 |> square |> isOdd;;
 val it : bool = true
 ```
 
-Operator do przodu potoku i innych zostały omówione w kolejnych samouczkach.
+Operator przekazujący przekazanie dalej i inne są omówione w kolejnych samouczkach.
 
-Jest to tylko programistyczne do co można zrobić za pomocą F# interakcyjne.  Aby dowiedzieć się więcej, zapoznaj się z [interaktywne programowanie za pomocą F# ](../tutorials/fsharp-interactive/index.md).
+To tylko możliwość wypróbowania innowacyjnego, co możesz zrobić z F# interaktywną.  Aby dowiedzieć się więcej, zapoznaj się [z programowaniem interaktywnym przy użyciu programu F# ](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="next-steps"></a>Następne kroki
 
-Jeśli jeszcze nie, zapoznaj się z [Przewodnik po przykładzie F# ](../tour.md), które obejmują niektóre z podstawowych funkcji F# języka.  Uzyskasz przegląd możliwości F#oraz podać przykłady wystarczającą ilość kodu, które można skopiować do programu Visual Studio dla komputerów Mac i uruchom.  Dostępne są także kilka wspaniałych zasobów zewnętrznych, można użyć, pokazywane w [ F# przewodnik](../index.md).
+Jeśli jeszcze tego nie zrobiono, zapoznaj się [z F#przewodnikiem ](../tour.md), który obejmuje niektóre podstawowe funkcje F# języka.  Udostępnimy przegląd niektórych możliwości programu F#i udostępniamy dużo przykładów kodu, które można skopiować do Visual Studio dla komputerów Mac i uruchamiać.  Istnieją również pewne doskonałe zasoby zewnętrzne, których można użyć w [ F# przewodniku](../index.md).
 
 ## <a name="see-also"></a>Zobacz także
 

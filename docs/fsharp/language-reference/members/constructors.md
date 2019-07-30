@@ -2,12 +2,12 @@
 title: Konstruktorów
 description: Dowiedz się, jak definiować i używać F# konstruktorów w programie w celu tworzenia i inicjowania obiektów klasy i struktury.
 ms.date: 05/16/2016
-ms.openlocfilehash: ef5dc134ad98179b6a365c4c34a9eca22fe5f7f6
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364361"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627597"
 ---
 # <a name="constructors"></a>Konstruktorów
 
@@ -23,7 +23,7 @@ Niezależnie od tego, czy Konstruktor, który ma być wywoływany, jest konstruk
 
 Poniższy kod ilustruje klasę, która ma Konstruktor i różne sposoby tworzenia obiektów.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
 Dane wyjściowe są następujące:
 
@@ -40,7 +40,7 @@ Struktury są zgodne ze wszystkimi regułami klas. W związku z tym, można mie�
 
 Ponadto struktury często zawierają pola, które są tworzone za pomocą `val` słowa kluczowego; klasy mogą także mieć te pola. Struktury i klasy, które mają pola zdefiniowane za pomocą `val` słowa kluczowego, można również zainicjować w dodatkowych konstruktorach przy użyciu wyrażeń rekordów, jak pokazano w poniższym kodzie.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
 Aby uzyskać więcej informacji, [Zobacz pola jawne: `val` Słowo kluczowe](explicit-fields-the-val-keyword.md).
 
@@ -48,7 +48,7 @@ Aby uzyskać więcej informacji, [Zobacz pola jawne: `val` Słowo kluczowe](expl
 
 Konstruktor podstawowy w klasie może wykonać kod w `do` powiązaniu. Jednak co zrobić, jeśli trzeba wykonać kod w dodatkowym konstruktorze bez `do` powiązania? W tym celu należy użyć `then` słowa kluczowego.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
 
 Efekty uboczne konstruktora podstawowego nadal są wykonywane. W związku z tym dane wyjściowe są następujące.
 
@@ -62,11 +62,11 @@ Created an invalid person object.
 
 W innych elementach członkowskich należy podać nazwę bieżącego obiektu w definicji każdego elementu członkowskiego. Można również umieścić własny identyfikator w pierwszym wierszu definicji klasy za pomocą `as` słowa kluczowego bezpośrednio po parametrach konstruktora. Poniższy przykład ilustruje tę składnię.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
 W dodatkowych konstruktorach można również zdefiniować samodzielny identyfikator, umieszczając `as` klauzulę bezpośrednio po parametrach konstruktora. Poniższy przykład ilustruje tę składnię.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
 Problemy mogą wystąpić podczas próby użycia obiektu, zanim zostanie on w pełni zdefiniowany. W związku z tym użycie identyfikatora samodzielnego może spowodować, że kompilator emituje ostrzeżenie i wstawi dodatkowe sprawdzenia, aby upewnić się, że elementy członkowskie obiektu nie są dostępne przed zainicjowaniem obiektu. Samego identyfikatora można używać tylko w `do` powiązaniach konstruktora podstawowego lub `then` po słowie kluczowym w dodatkowych konstruktorach.
 
@@ -76,11 +76,11 @@ Nazwa identyfikatora własnego nie musi być `this`. Może być dowolnym prawid�
 
 Można przypisać wartości do właściwości obiektu klasy w kodzie inicjalizacji, dołączając listę przypisań formularza `property = value` do listy argumentów konstruktora. Jest to pokazane w poniższym przykładzie kodu.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
 Poniższa wersja poprzedniego kodu ilustruje kombinację zwykłych argumentów, argumentów opcjonalnych i ustawień właściwości w jednym wywołaniu konstruktora.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 
 ## <a name="constructors-in-inherited-class"></a>Konstruktory w dziedziczonej klasie
 

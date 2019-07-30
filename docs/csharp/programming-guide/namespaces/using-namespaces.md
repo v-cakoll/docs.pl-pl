@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: abd4c34661d96d8c3188e92dd2d76f847e17aae7
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: bf194e207262ecea0511a0b67bbafeadd8d5d31d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433532"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629492"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Używanie przestrzeni nazw (Przewodnik programowania w języku C#)
 Przestrzenie nazw są intensywnie używane w C# programach na dwa sposoby. Po pierwsze klasy .NET Framework używają przestrzeni nazw do organizowania wielu klas. Po drugie, zadeklarowanie własnych przestrzeni nazw może pomóc w kontroli zakresu nazw klas i metod w większych projektach programistycznych.  
@@ -66,7 +66,7 @@ Przestrzenie nazw są intensywnie używane w C# programach na dwa sposoby. Po pi
   
  Ogólnie rzecz biorąc służy `::` do odwoływania się do aliasu przestrzeni nazw lub `global::` odwoływania `.` się do globalnej przestrzeni nazw oraz do kwalifikowania typów lub członków.  
   
- Jest to błąd używany `::` z aliasem, który odwołuje się do typu zamiast przestrzeni nazw. Na przykład:  
+ Jest to błąd używany `::` z aliasem, który odwołuje się do typu zamiast przestrzeni nazw. Przykład:  
   
  [!code-csharp[csProgGuideNamespaces#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#11)]  
   
@@ -93,5 +93,5 @@ Przestrzenie nazw są intensywnie używane w C# programach na dwa sposoby. Po pi
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md)
 - [. operator](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
-- [:: operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
-- [extern](../../../csharp/language-reference/keywords/extern.md)
+- [:: operator](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
+- [extern alias](../../../csharp/language-reference/keywords/extern-alias.md)

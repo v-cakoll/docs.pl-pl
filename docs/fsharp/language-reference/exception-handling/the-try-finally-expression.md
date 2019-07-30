@@ -1,17 +1,17 @@
 ---
-title: 'Wyjątki: Try... finally — wyrażenie'
-description: Dowiedz się, jak F# "try... finally" wyrażenie umożliwia wykonanie kodu oczyszczania, nawet wtedy, gdy blok kodu zgłasza wyjątek.
+title: 'Wyjątki: Wyrażenie try...finally'
+description: Dowiedz się F# , jak "try... Finally "wyrażenie umożliwia wykonywanie kodu czyszczącego, nawet jeśli blok kodu zgłasza wyjątek.
 ms.date: 05/16/2016
-ms.openlocfilehash: d246bce52b5f30d5e8d7e3c36e9f7d7c48627913
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 03fbda1ef5d55560232f0217f603fc04c0af0eb4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645464"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630275"
 ---
-# <a name="exceptions-the-tryfinally-expression"></a>Wyjątki: Try... finally — wyrażenie
+# <a name="exceptions-the-tryfinally-expression"></a>Wyjątki: Wyrażenie try...finally
 
-`try...finally` Wyrażenie umożliwia wykonanie kodu oczyszczania, nawet wtedy, gdy blok kodu zgłasza wyjątek.
+`try...finally` Wyrażenie umożliwia wykonywanie czyszczenia kodu nawet wtedy, gdy blok kodu zgłasza wyjątek.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,30 +24,30 @@ finally
 
 ## <a name="remarks"></a>Uwagi
 
-`try...finally` Wyrażenie może służyć do wykonywania kodu w *wyrażenie2* w poprzedniej składni, niezależnie od tego, czy wyjątek jest generowany podczas wykonywania *wyrażenie1*.
+Wyrażenie może służyć do wykonywania kodu w wyrażenie2 w powyższej składni, bez względu na to, czy wyjątek jest generowany podczas wykonywania elementu *wyrażenie1*. `try...finally`
 
-Typ *wyrażenie2* nie wpływa wartość całego wyrażenia; typ zwracany, gdy nie występuje wyjątek jest ostatnią wartość *wyrażenie1*. Gdy wystąpi wyjątek, jest zwracana żadna wartość, a przepływ sterowania przesyła do następnego dopasowania obsługi wyjątków w górę stosu wywołań. Jeśli żadna procedura obsługi wyjątku zostanie znaleziony, program zakończy działanie. Zanim wykonywany jest kod w pasującej klauzuli obsługi lub program kończy działanie, kod w `finally` gałęzi jest wykonywany.
+Typ *wyrażenie2* nie przyczynia się do wartości całego wyrażenia; Typ zwracany, gdy wyjątek nie występuje, jest ostatnią wartością elementu *wyrażenie1*. W przypadku wystąpienia wyjątku nie jest zwracana żadna wartość i przepływ sterowania jest przesyłany do następnego dopasowania do stosu wywołań. Jeśli nie zostanie znaleziona procedura obsługi wyjątków, program zostanie przerwany. Przed wykonaniem kodu w zgodnej procedurze obsługi lub przerwaniem działania programu kod w `finally` gałęzi jest wykonywany.
 
-Poniższy przykład demonstruje użycie `try...finally` wyrażenia.
+Poniższy kod ilustruje użycie `try...finally` wyrażenia.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5701.fs)]
 
-Dostępne są następujące dane wyjściowe do konsoli.
+Dane wyjściowe konsoli programu są następujące.
 
 ```
 Closing stream
 Exception handled.
 ```
 
-Jak widać z danych wyjściowych, strumień został zamknięty, zanim zewnętrzne wyjątek został obsłużony, a plik `test.txt` zawiera tekst `test1`, co oznacza, że bufory opróżnionych i zapisywane na dysku, nawet jeśli wyjątek przesyłane do obsługi wyjątku zewnętrznym kontrolować.
+Jak widać na podstawie danych wyjściowych, strumień został zamknięty przed przeprowadzeniem zewnętrznego wyjątku, a plik `test.txt` zawiera tekst `test1`, który wskazuje, że bufory zostały opróżnione i zapisywana na dysku, nawet jeśli wyjątek został przesłany kontrolka na zewnętrzny program obsługi wyjątków.
 
-Należy pamiętać, że `try...with` konstrukcja jest oddzielnym konstrukcji z `try...finally` konstruowania. W związku z tym jeśli kod wymaga zarówno `with` bloku i `finally` bloku, należy zagnieździć dwóch konstrukcji, jak w poniższym przykładzie kodu.
+Należy zauważyć, `try...with` że konstrukcja jest oddzielna konstrukcja `try...finally` od konstrukcji. W związku z tym, jeśli kod wymaga `with` zarówno bloku, `finally` jak i bloku, należy zagnieździć dwa konstrukcje, jak w poniższym przykładzie kodu.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
 
-W kontekście wyrażenia obliczeń, w tym wyrażenia sekwencji i asynchroniczne przepływy pracy, **try... finally** wyrażeń może mieć implementację niestandardową. Aby uzyskać więcej informacji, zobacz [wyrażenia obliczeń](../computation-expressions.md).
+W kontekście wyrażeń obliczeń, w tym wyrażeń sekwencji i asynchronicznych przepływów pracy, **spróbuj... wyrażenia finally** mogą mieć implementację niestandardową. Aby uzyskać więcej informacji, zobacz [wyrażenia obliczeń](../computation-expressions.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Obsługa wyjątków](index.md)
-- [Wyjątki: `try...with` Wyrażenia](the-try-with-expression.md)
+- [Wyjątki: `try...with` Wyrażenie](the-try-with-expression.md)

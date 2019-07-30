@@ -1,17 +1,17 @@
 ---
 title: Powiązania let w klasach
-description: Dowiedz się, jak zdefiniować pola prywatne i prywatne funkcje dla F# klasy za pomocą "let" powiązania w definicji klasy.
+description: Dowiedz się, jak definiować pola prywatne i prywatne F# funkcje dla klas przy użyciu powiązań "let" w definicji klasy.
 ms.date: 05/16/2016
-ms.openlocfilehash: 29f843e3e065837a53fd5eb26c79088bc0778c76
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0086d3a91f85395c2bd0555f978c5d951c363357
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645172"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627485"
 ---
 # <a name="let-bindings-in-classes"></a>Powiązania let w klasach
 
-Możesz zdefiniować pola prywatne i prywatne funkcje dla F# klasy za pomocą `let` powiązania w definicji klasy.
+Można definiować pola prywatne i prywatne funkcje dla F# klas przy użyciu `let` powiązań w definicji klasy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,17 +25,17 @@ Możesz zdefiniować pola prywatne i prywatne funkcje dla F# klasy za pomocą `l
 
 ## <a name="remarks"></a>Uwagi
 
-Składnia poprzednich pojawia się po deklaracjach nagłówek i dziedziczenie klasy, ale przed wszystkie definicje elementów członkowskich. Składnia jest podobne do metody `let` powiązania poza klasy, ale nazw zdefiniowana w klasie mają zakres, który jest ograniczony do klasy. A `let` powiązania tworzy pole prywatne lub funkcję; aby uwidocznić dane lub funkcje deklarować publicznie, właściwość lub metoda elementu członkowskiego.
+Poprzednia składnia jest wyświetlana po nagłówku klasy i deklaracji dziedziczenia, ale przed żadną definicją elementu członkowskiego. Składnia jest taka sama jak `let` w przypadku powiązań poza klasami, ale nazwy zdefiniowane w klasie mają zakres, który jest ograniczony do klasy. `let` Powiązanie tworzy pole prywatne lub funkcję, aby ujawnić dane lub funkcje publicznie, deklaruj właściwość lub metodę elementu członkowskiego.
 
-A `let` powiązanie nie jest statyczna nosi nazwę wystąpienia `let` powiązania. Wystąpienie `let` powiązania wykonania podczas tworzenia obiektów. Statyczne `let` powiązania są częścią statycznego inicjatora dla klasy, która jest gwarantowane do wykonania przed pierwszym użyciu typu.
+Powiązanie, które nie jest statyczne jest nazywane powiązaniem `let`wystąpienia. `let` Powiązania `let` wystąpień są wykonywane podczas tworzenia obiektów. Powiązania `let` statyczne są częścią inicjatora statycznego dla klasy, która jest gwarantowana do wykonania przed pierwszym użyciem typu.
 
-Kod w wystąpieniu `let` powiązania, można użyć parametrów konstruktora podstawowego.
+Kod w powiązaniach `let` wystąpień może używać parametrów konstruktora podstawowego.
 
-Atrybuty i modyfikatory dostępności nie są dozwolone w `let` powiązania w klasach.
+Atrybuty i Modyfikatory dostępności są niedozwolone w `let` powiązaniach klas.
 
-W poniższych przykładach kodu pokazano kilka typów `let` powiązania w klasach.
+Poniższe przykłady kodu ilustrują kilka typów `let` powiązań w klasach.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3001.fs)]
 
 Dane wyjściowe są następujące:
 
@@ -45,12 +45,12 @@ Dane wyjściowe są następujące:
 
 ## <a name="alternative-ways-to-create-fields"></a>Alternatywne sposoby tworzenia pól
 
-Można również użyć `val` — słowo kluczowe, aby utworzyć pole prywatne. Korzystając z `val` — słowo kluczowe, pole nie zostanie podany wartość, gdy obiekt zostanie utworzony, ale zamiast tego jest inicjowany z wartością domyślną. Aby uzyskać więcej informacji, zobacz [pola jawne: Val — słowo kluczowe](explicit-fields-the-val-keyword.md).
+Możesz również użyć słowa kluczowego, `val` aby utworzyć pole prywatne. Przy użyciu `val` słowa kluczowego, pole nie otrzymuje wartości podczas tworzenia obiektu, ale zamiast tego jest inicjowane z wartością domyślną. Aby uzyskać więcej informacji, [Zobacz pola jawne: Val — słowo](explicit-fields-the-val-keyword.md)kluczowe.
 
-Można również definiować pola prywatne w klasie, przy użyciu definicji elementu członkowskiego i dodanie słowa kluczowego `private` do definicji. Może to być przydatne, jeśli spodziewasz się Zmień dostępność elementu członkowskiego, bez konieczności ponownego zapisu kodu. Aby uzyskać więcej informacji, zobacz [kontroli dostępu](../access-control.md).
+Można również zdefiniować pola prywatne w klasie za pomocą definicji elementu członkowskiego i dodać słowo kluczowe `private` do definicji. Może to być przydatne, jeśli zamierzasz zmienić dostępność elementu członkowskiego bez konieczności ponownego pisania kodu. Aby uzyskać więcej informacji, zobacz [Access Control](../access-control.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Elementy członkowskie](index.md)
-- [`do` Powiązania w klasach](do-bindings-in-classes.md)
-- [`let` Powiązania](../functions/let-bindings.md)
+- [`do`Powiązania w klasach](do-bindings-in-classes.md)
+- [`let`Powiązań](../functions/let-bindings.md)

@@ -1,17 +1,17 @@
 ---
 title: Wzorce aktywne
-description: Dowiedz się, jak zdefiniować nazwanych partycji, które należy podzielić dane wejściowe w przy użyciu wzorców F# języka programowania.
+description: Dowiedz się, jak używać aktywnych wzorców do definiowania nazwanych partycji, które dzielą dane wejściowe w języku F# programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: 25ab255574390d3761fe788aeb413c8ee04fda2a
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 12f423abe05e649e0b527ed04124b991feb5d592
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690407"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629950"
 ---
 # <a name="active-patterns"></a>Wzorce aktywne
 
-*Wzorce aktywne* umożliwiają definiowanie nazwanych partycji, które należy podzielić dane wejściowe, dzięki czemu można używać tych nazw w wyrażeniu dopasowania, tak jak w przypadku złożenia dyskryminowanego do wzorca. Wzorce aktywne służy do rozkładania danych w sposób dostosowany dla każdej partycji.
+*Aktywne wzorce* umożliwiają zdefiniowanie nazwanych partycji, które dzielą dane wejściowe, dzięki czemu można używać tych nazw w wyrażeniu dopasowania wzorca tak samo jak w przypadku Unii rozłącznych. Przy użyciu aktywnych wzorców można rozkładać dane w dostosowany sposób dla każdej partycji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,17 +30,17 @@ let (|identifier|_|) [arguments ] valueToMatch = expression
 
 ## <a name="remarks"></a>Uwagi
 
-W poprzedniej składni identyfikatory są nazwy partycji danych wejściowych, który jest reprezentowany przez *argumenty*, lub innymi słowy, nazwy dla podzbiorów zbiór wszystkich wartości argumentów. W definicji — aktywny wzorzec może być maksymalnie siedem partycji. *Wyrażenie* opisuje formularza, w którym do rozkładania danych. Definicja — aktywny wzorzec można użyć do zdefiniowania reguł do określania, której partycji nazwanej wartości podanej jako argumenty należą do. (| I |) symbole są określane jako *klipy banany* i jest wywoływana funkcja utworzone przez tego typu powiązania let *active rozpoznawania*.
+W poprzedniej składni identyfikatory są nazwami dla partycji danych wejściowych, które są reprezentowane przez *argumenty*lub, innymi słowy, nazwy podzestawów zestawu wszystkich wartości argumentów. W definicji aktywnego wzorca może istnieć maksymalnie siedem partycji. *Wyrażenie* opisuje formularz, w którym mają zostać rozdzielone dane. Możesz użyć aktywnej definicji wzorca, aby zdefiniować reguły określania, które z nazwanych partycji są wartościami podaną jako argumenty należą do. Symbole (| i |) są określane jako klipy *bananów* , a funkcja utworzona przez ten typ powiązania Let jest nazywana *aktywnym aparatem rozpoznawania*.
 
-Na przykład należy wziąć pod uwagę następujące aktywny wzorzec z nieprawidłowym argumentem.
+Na przykład rozważmy następujący Aktywny wzorzec z argumentem.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5001.fs)]
 
-Aktywny wzorzec można użyć w wyrażeniu, jak w poniższym przykładzie dopasowania do wzorca.
+Możesz użyć aktywnego wzorca w wyrażeniu dopasowania do wzorca, jak w poniższym przykładzie.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5002.fs)]
 
-Dane wyjściowe tego programu jest następująca:
+Dane wyjściowe tego programu są następujące:
 
 ```
 7 is odd
@@ -48,11 +48,11 @@ Dane wyjściowe tego programu jest następująca:
 32 is even
 ```
 
-Innym zastosowaniem wzorców jest do rozkładania typy danych na wiele sposobów, na przykład w przypadku tych samych danych bazowych różne reprezentacje to możliwe. Na przykład `Color` obiekt może być rozłożone na reprezentację w postaci RGB lub reprezentację w postaci HSB.
+Innym sposobem użycia aktywnych wzorców jest rozkład typów danych na wiele sposobów, na przykład wtedy, gdy te same dane podstawowe mają różne możliwe reprezentacje. Na przykład `Color` obiekt może zostać rozłożony na reprezentację RGB lub reprezentację HSB.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
-Dane wyjściowe programu powyżej jest następująca:
+Dane wyjściowe powyższego programu są następujące:
 
 ```
 Red
@@ -72,17 +72,17 @@ BlanchedAlmond
  Hue: 36.000000 Saturation: 1.000000 Brightness: 0.901961
 ```
 
-W połączeniu te dwa sposoby używania wzorców pozwalają na partycji i rozkładania danych do odpowiedniej postaci i wykonać odpowiednie obliczeń na odpowiednie dane w postaci najbardziej odpowiednim obliczeń.
+W połączeniu te dwa sposoby używania aktywnych wzorców umożliwiają partycjonowanie i rozdzielenie danych na odpowiedni formularz i wykonanie odpowiednich obliczeń na odpowiednich danych w formularzu najbardziej wygodnym do obliczenia.
 
-Wyrażenia dopasowania wzorca wynikowe Włącz dane są zapisywane w wygodny sposób, który jest bardzo czytelny, znaczne uproszczenie złożonych tworzenia rozgałęzień i kod analizy danych.
+Wyrażenia zgodne z wzorcem umożliwiają zapisywanie danych w wygodny sposób, który jest bardzo czytelny, co znacznie upraszcza tworzenie rozgałęzień i kodu analizy danych.
 
-## <a name="partial-active-patterns"></a>Wzorce aktywne częściowe
+## <a name="partial-active-patterns"></a>Częściowe aktywne wzorce
 
-Czasami musisz partycji tylko część obszaru danych wejściowych. W takim przypadku można zapisać zestawu częściowego wzorców, z nich odnosić się do niektórych danych wejściowych, ale nie można dopasować pozostałych danych wejściowych. Aktywne wzorce, które nie zawsze daje wartość są nazywane *częściowe wzorców*; mają zwracanej wartości, która jest typem opcji. Aby zdefiniować częściowe — aktywny wzorzec, należy użyć symbolu wieloznacznego (\_) na końcu listy wzorców wewnątrz klipów banany. Poniższy kod ilustruje sposób korzystania z częściowego — aktywny wzorzec.
+Czasami należy podzielić tylko część przestrzeni wejściowej. W takim przypadku należy napisać zestaw częściowych wzorców, z których każdy jest zgodny z niektórymi danymi wejściowymi, ale nie może dopasować innych danych wejściowych. Aktywne wzorce, które nie zawsze generują wartość, są nazywane *częściowymi wzorcami aktywnymi*; mają one wartość zwracaną, która jest typem opcji. Aby zdefiniować częściowy Aktywny wzorzec, należy użyć symbolu wieloznacznego\_() na końcu listy wzorców wewnątrz klipów bananów. Poniższy kod ilustruje użycie części aktywnego wzorca.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
-Dane wyjściowe poprzedniego przykładu, jest następujący:
+W poprzednim przykładzie przedstawiono dane wyjściowe poniższego przykładu:
 
 ```
 1.100000 : Floating point
@@ -92,7 +92,7 @@ Dane wyjściowe poprzedniego przykładu, jest następujący:
 Something else : Not matched.
 ```
 
-Korzystając z częściowego wzorców, czasami poszczególne opcje mogą być rozłączne lub wzajemnie się wykluczają, ale nie muszą być. W poniższym przykładzie kwadrat wzorca i wzorzec modułu nie są rozłączne, ponieważ niektóre numery kwadratów i modułów, takich jak 64. Następujący program używa wzorca i połączyć wzorców kwadratu i moduł. Wydrukować wszystkich liczb całkowitych maksymalnie 1000, które są zarówno kwadratów i modułów, a także tych, które są tylko moduły. 
+W przypadku używania częściowych aktywnych wzorców czasami poszczególne opcje mogą być rozłączne lub wykluczane wzajemnie, ale nie muszą być. W poniższym przykładzie, kwadrat wzorca i moduł wzorca nie są rozłączane, ponieważ niektóre liczby są kwadratami i modułami, takimi jak 64. Poniższy program używa wzorca i do łączenia wzorców kwadratowych i sześcianu. Drukuje wszystkie liczby całkowite o wartości do 1000, które są zarówno kwadratami, jak i modułami, a także tymi, które są tylko modułami. 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
@@ -111,23 +111,23 @@ Wynik jest następujący:
 1000 is a cube
 ```
 
-## <a name="parameterized-active-patterns"></a>Wzorce aktywne sparametryzowane
+## <a name="parameterized-active-patterns"></a>Sparametryzowane aktywne wzorce
 
-Wzorce aktywne zawsze uruchomić co najmniej jednego argumentu dla elementu są dopasowywane, ale potrwać dodatkowych argumentów, w tym przypadku nazwa *sparametryzowanego — aktywny wzorzec* ma zastosowanie. Dodatkowe argumenty zezwala na ogólny wzorzec można wyspecjalizować. Na przykład wzorców, które używają wyrażeń regularnych do analizowania ciągów często zawierają wyrażenia regularnego jako dodatkowego parametru, zgodnie z poniższym kodem, który także używa częściowe — aktywny wzorzec `Integer` zdefiniowane w poprzednim przykładzie kodu. W tym przykładzie podane są ciągów, które używają wyrażeń regularnych dla różnych formatów daty, aby dostosować ogólny ParseRegex — aktywny wzorzec. Liczba całkowita — aktywny wzorzec służy do konwertowania ciągów dopasowane do liczb całkowitych, które mogą być przekazywane do konstruktora daty/godziny.
+Aktywne wzorce zawsze przyjmują co najmniej jeden argument dla elementu, który jest dopasowywany, ale mogą również przyjmować dodatkowe argumenty, w tym przypadku ma zastosowanie nazwa *sparametryzowanego wzorca* . Dodatkowe argumenty umożliwiają użycie ogólnego wzorca. Na przykład aktywne wzorce używające wyrażeń regularnych do analizowania ciągów często zawierają wyrażenie regularne jako dodatkowy parametr, jak w poniższym kodzie, który używa również części aktywnego wzorca `Integer` zdefiniowanego w poprzednim przykładzie kodu. W tym przykładzie ciągi, które używają wyrażeń regularnych dla różnych formatów daty, są przyznawane w celu dostosowania ogólnego wzorca ParseRegex. Aktywny wzorzec w liczbie całkowitej służy do konwertowania dopasowanych ciągów do liczb całkowitych, które mogą być przesyłane do konstruktora DateTime.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
-Dane wyjściowe poprzedniego kodu jest następująca:
+Dane wyjściowe poprzedniego kodu są następujące:
 
 ```
 12/22/2008 12:00:00 AM 1/1/2009 12:00:00 AM 1/15/2008 12:00:00 AM 12/28/1995 12:00:00 AM
 ```
 
-Wzorce aktywne nie są ograniczone tylko do wyrażenia dopasowania do wzorca, można również użyć na let — powiązania.
+Aktywne wzorce nie są ograniczone tylko do wyrażeń dopasowania wzorca, ale można ich używać również na potrzeby powiązań.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
 
-Dane wyjściowe poprzedniego kodu jest następująca:
+Dane wyjściowe poprzedniego kodu są następujące:
 
 ```
 Hello, random citizen!

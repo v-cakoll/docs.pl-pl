@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użycie globalnych aliasów Namespace - C# przewodnik programowania'
+title: 'Instrukcje: Użyj globalnego aliasu przestrzeni nazw C# — Przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,42 +7,42 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: 6d3e0740a472f74116712e737e49f86d4202dea5
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: f44bb1f010f154973fc6982882c9b5a09528da76
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452791"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629442"
 ---
-# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Instrukcje: Użycie globalnych aliasów Namespace (C# Programming Guide)
-Możliwość dostępu do elementu członkowskiego w globalnym [przestrzeni nazw](../../../csharp/language-reference/keywords/namespace.md) jest przydatne, gdy element członkowski może być ono ukryte przez inną jednostkę o takiej samej nazwie.  
+# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Instrukcje: Użyj globalnego aliasu przestrzeni nazwC# (Przewodnik programowania)
+Możliwość uzyskania dostępu do elementu członkowskiego w globalnej [przestrzeni nazw](../../../csharp/language-reference/keywords/namespace.md) jest przydatna, gdy członek może być ukryty przez inną jednostkę o tej samej nazwie.  
   
- Na przykład w poniższym kodzie `Console` jest rozpoznawana jako `TestApp.Console` zamiast do `Console` wpisać <xref:System> przestrzeni nazw.  
+ Na przykład, `Console` w poniższym kodzie, jest rozpoznawana jako `TestApp.Console` zamiast <xref:System> do `Console` typu w przestrzeni nazw.  
   
  [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]  
   
  [!code-csharp[csProgGuideNamespaces#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#1)]  
   
- Za pomocą `System.Console` nadal powoduje błąd, ponieważ `System` przestrzeni nazw jest ukryty przez klasę `TestApp.System`:  
+ Użycie `System.Console` nadal powoduje błąd, `System` ponieważ przestrzeń nazw jest ukryta przez klasę `TestApp.System`:  
   
  [!code-csharp[csProgGuideNamespaces#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#2)]  
   
- Jednak możesz obejść ten błąd, za pomocą `global::System.Console`, podobnie do następującego:  
+ Można jednak obejść ten błąd przy użyciu `global::System.Console`, jak to:  
   
  [!code-csharp[csProgGuideNamespaces#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#3)]  
   
- Gdy jest identyfikator po lewej stronie `global`, wyszukaj identyfikator prawo rozpoczyna się w globalnej przestrzeni nazw. Na przykład następująca deklaracja odwołuje się do `TestApp` jako członek globalnej przestrzeni.  
+ Gdy lewy identyfikator to `global`, wyszukiwanie właściwego identyfikatora zaczyna się od globalnej przestrzeni nazw. Na przykład następująca deklaracja jest odwołująca `TestApp` się jako składowa obszaru globalnego.  
   
  [!code-csharp[csProgGuideNamespaces#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#4)]  
   
- Oczywiście, tworząc własne przestrzenie nazw o nazwie `System` nie jest zalecane, i jest mało prawdopodobne, będą napotykać jakiegokolwiek kodu, w którym to się stało. Jednak w dużych projektach, jest bardzo prawdziwy możliwość, że duplikacji przestrzeni nazw może wystąpić w czy innej formie. W takich sytuacjach kwalifikator globalnej przestrzeni nazw jest usługi gwarancji, że można określić głównej przestrzeni nazw.  
+ Oczywiście utworzenie własnych nazw o nazwie `System` nie jest zalecane i jest mało prawdopodobne, że zostanie napotkany kod, w którym wystąpił ten plik. Jednak w większych projektach jest to bardzo prawdziwa możliwość duplikowania przestrzeni nazw może wystąpić w jednej postaci lub w innym. W takich sytuacjach kwalifikator globalnej przestrzeni nazw jest gwarancją, że można określić główną przestrzeń nazw.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie obszar nazw `System` jest używana do włączenia klasy `TestClass` w związku z tym, `global::System.Console` musi być używana do odwołania `System.Console` klasy, która jest ukryta przez `System` przestrzeni nazw. Ponadto alias `colAlias` służy do odwoływania się do przestrzeni nazw `System.Collections`; w związku z tym, wystąpienie <xref:System.Collections.Hashtable?displayProperty=nameWithType> został utworzony za pomocą tego aliasu zamiast przestrzeni nazw.  
+ W `System` tym przykładzie przestrzeń nazw jest używana do uwzględnienia klasy `TestClass` , `global::System.Console` dlatego musi być używana do odwoływania `System.Console` się do klasy, która jest ukryta przez `System` przestrzeń nazw. Alias `colAlias` jest również używany do odwoływania się do przestrzeni nazw `System.Collections`, dlatego wystąpienie elementu <xref:System.Collections.Hashtable?displayProperty=nameWithType> zostało utworzone przy użyciu tego aliasu zamiast przestrzeni nazw.  
   
  [!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]  
   
-**1**
+**A 1**
 **B 2**
 **C 3**
 
@@ -50,5 +50,5 @@ Możliwość dostępu do elementu członkowskiego w globalnym [przestrzeni nazw]
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md)
-- [:: operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
+- [:: operator](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

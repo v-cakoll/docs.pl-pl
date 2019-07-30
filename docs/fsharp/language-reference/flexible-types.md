@@ -1,17 +1,17 @@
 ---
 title: Typy elastyczne
-description: Dowiedz się, jak używać F# adnotacji typu elastyczne, co oznacza, że parametr, zmienna lub wartość ma typ, który jest zgodny z określonym typem.
+description: Dowiedz się, F# jak używać elastycznej adnotacji typu, która wskazuje, że parametr, zmienna lub wartość ma typ zgodny z określonym typem.
 ms.date: 05/16/2016
-ms.openlocfilehash: e8edae671c54971862a35f03da8663c8567e2261
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 43caa6cd35630df648beda5cc43cffae2ecd6f6a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641926"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630261"
 ---
 # <a name="flexible-types"></a>Typy elastyczne
 
-A *adnotacji typu elastyczne* oznacza, że parametr, zmienna lub wartość ma typ, który jest zgodny z określonego typu, w którym zgodność jest określana przez pozycji w hierarchii zorientowane obiektowo, klas lub interfejsów. Typy elastyczne przydają się szczególnie, gdy automatycznej konwersji do typów wyżej w hierarchii typów nie występuje, ale nadal chcesz włączyć własne funkcje do pracy z dowolnego typu w hierarchii lub dowolny typ, który implementuje interfejs.
+Typ *elastycznyj adnotacji* wskazuje, że parametr, zmienna lub wartość ma typ, który jest zgodny z określonym typem, gdzie zgodność jest określana na podstawie położenia w hierarchii obiektów klasy lub interfejsów zorientowanych na obiekt. Typy elastyczne są przydatne w przypadku, gdy konwersja automatyczna na typy wyższe w hierarchii typów nie występuje, ale mimo to chcesz włączyć funkcję do pracy z dowolnym typem w hierarchii lub dowolnym typem, który implementuje interfejs.
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,9 +21,9 @@ A *adnotacji typu elastyczne* oznacza, że parametr, zmienna lub wartość ma ty
 
 ## <a name="remarks"></a>Uwagi
 
-W poprzedniej składni *typu* reprezentuje typem bazowym lub interfejsem.
+W poprzedniej składni *Typ* reprezentuje typ podstawowy lub interfejs.
 
-Typ ogólny, który ma ograniczenie, które ogranicza dozwolonymi typami na typy, które są zgodne z typem base lub interface odpowiada elastycznym typem. Oznacza to, że następujące dwa wiersze kodu są równoważne.
+Elastyczny typ jest równoważny z typem ogólnym, który ma ograniczenie, które ogranicza dozwolone typy do typów, które są zgodne z typem podstawowym lub interfejsem. Oznacza to, że dwa następujące wiersze kodu są równoważne.
 
 ```fsharp
 #SomeType
@@ -31,29 +31,29 @@ Typ ogólny, który ma ograniczenie, które ogranicza dozwolonymi typami na typy
 'T when 'T :> SomeType
 ```
 
-Typy elastyczne są przydatne w kilku sytuacjach. Na przykład w przypadku wyższych funkcji order (funkcji, która przyjmuje funkcję jako argument) jest często przydatne do funkcji elastyczne typ zwracany. W poniższym przykładzie użycie elastycznym typem z argumentem sekwencji w `iterate2` umożliwia wyższe funkcji kolejność pracy z funkcjami, które generują sekwencje, tablic, list i innego typu wyliczalny.
+Elastyczne typy są przydatne w kilku typach sytuacji. Na przykład jeśli masz funkcję wyższej kolejności (funkcja, która przyjmuje funkcję jako argument), często przydatna jest funkcja zwracająca typ elastyczny. W poniższym przykładzie użycie elastycznego typu z argumentem sekwencji w `iterate2` włącza funkcję wyższego rzędu do pracy z funkcjami, które generują sekwencje, tablice, listy i wszelkie inne wyliczalne typy.
 
-Należy wziąć pod uwagę następujące dwie funkcje, jeden z zwraca ona sekwencji innych, które zwraca elastycznym typem.
+Weź pod uwagę następujące dwie funkcje, z których jedna zwraca sekwencję, a druga zwraca typ elastyczny.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4101.fs)]
 
-Inny przykład należy wziąć pod uwagę [Seq.concat](https://msdn.microsoft.com/library/2eeb69a9-fc2f-4b7d-8dee-101fa2b00712) funkcja biblioteki:
+W innym przykładzie należy rozważyć funkcję biblioteki [SEQ. Concat](https://msdn.microsoft.com/library/2eeb69a9-fc2f-4b7d-8dee-101fa2b00712) :
 
 ```fsharp
 val concat: sequences:seq<#seq<'T>> -> seq<'T>
 ```
 
-Można przekazać dowolny poniższe sekwencje wyliczalny dotyczących wyłącznie tej funkcji:
+Do tej funkcji można przekazać dowolną z następujących wyliczalnych sekwencji:
 
-- Listę list
-- Listy tablic
-- Array, list
+- Lista list
+- Lista tablic
+- Tablica list
 - Tablica sekwencji
-- Dowolną kombinację wyliczalny sekwencji
+- Wszystkie inne kombinacje wyliczalnych sekwencji
 
-Poniższy kod używa `Seq.concat` aby zademonstrować scenariusze, które mogą być obsługiwane za pomocą typy elastyczne.
+Poniższy kod służy `Seq.concat` do zademonstrowania scenariuszy, które można obsługiwać przy użyciu elastycznych typów.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4102.fs)]
 
 Dane wyjściowe są następujące:
 
@@ -65,9 +65,9 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-W F#, tak jak w innych językach obiektowych istnieją typy pochodne kontekstów, w którym lub typy, które implementują interfejsy są automatycznie konwertowane na typ podstawowy lub typ interfejsu. Automatycznej konwersji występują w argumentach bezpośredni, ale nie wtedy, gdy typ jest w stanie podrzędny, jako część bardziej złożonych typów, takich jak typ zwracany typ funkcji lub jako argument typu. W związku z tym notacji elastycznym typem jest szczególnie przydatna, gdy typ, który chcesz zastosować go do jest częścią typu bardziej złożone.
+W F#, podobnie jak w innych językach zorientowanych obiektowo, istnieją konteksty, w których typy pochodne lub typy, które implementują interfejsy są automatycznie konwertowane na typ podstawowy lub typ interfejsu. Te konwersje automatyczne występują w argumentach bezpośrednich, ale nie w przypadku, gdy typ znajduje się w pozycji podrzędnej, jako część bardziej złożonego typu, takiego jak typ zwracany typu funkcji lub jako argument typu. W ten sposób, elastyczny zapis typu jest szczególnie przydatny, gdy typ, który jest stosowany, jest częścią bardziej złożonego typu.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka F#](index.md)
-- [Typy ogólne](generics/index.md)
+- [Typy ogólne](./generics/index.md)

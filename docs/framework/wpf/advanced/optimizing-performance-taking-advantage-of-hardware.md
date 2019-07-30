@@ -9,50 +9,50 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 7acf5a3f48ac4987037873c63111d988ec3a4979
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238450"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629647"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optymalizacja wydajności: Wykorzystanie możliwości sprzętu
-Wewnętrznej architekturze programu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma renderowania dwa potoki, sprzętu i oprogramowania. Ten temat zawiera informacje o tych potoków renderowania ułatwiające podejmowanie decyzji dotyczących optymalizacji wydajności aplikacji.  
+Wewnętrzna architektura programu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma dwa potoki renderowania, sprzęt i oprogramowanie. Ten temat zawiera informacje o tych potokach renderowania, które ułatwiają podejmowanie decyzji dotyczących optymalizacji wydajności aplikacji.  
   
-## <a name="hardware-rendering-pipeline"></a>Sprzętowy potok renderowania  
- Jedną z najważniejszych czynników przy określaniu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wydajności jest powiązana renderowania — więcej pikseli, masz do renderowania i większą wydajność kosztów. Jednak im więcej renderowania, który może być przenoszona do [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)], uzyskać więcej korzyści w zakresie wydajności. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aplikacji sprzętowy potok renderowania wykorzystuje pełną [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] funkcji na sprzęcie, który obsługuje co najmniej [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] w wersji 7.0. Dodatkowe optymalizacje mogą zostać uzyskane przez sprzęt obsługujący [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] w wersji 7.0 i funkcje PixelShader 2.0 +.  
+## <a name="hardware-rendering-pipeline"></a>Potok renderowania sprzętowego  
+ Jednym z najważniejszych czynników decydujących [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o wydajności jest to, że jest ona powiązana — im więcej pikseli ma być renderowanych, tym większym kosztem wydajności. Jednak lepsze renderowanie [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)], które może zostać przeciążać do, osiąga korzyści, które można uzyskać. Potok renderowania sprzętowego aplikacji korzysta z funkcji Microsoft DirectX na sprzęcie, który obsługuje co najmniej program Microsoft DirectX w wersji 7,0. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Dalsze optymalizacje mogą być uzyskane przez sprzęt obsługujący funkcje Microsoft DirectX w wersji 7,0 i Właściwość PixelShader 2.0.  
   
-## <a name="software-rendering-pipeline"></a>Programowy potok renderowania  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Programowy potok renderowania całkowicie CPU jest powiązany. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wykorzystuje instrukcji SSE i SSE2 ustawia w procesorze CPU do zaimplementowania rasteryzatora zoptymalizowane, w pełni funkcjonalne oprogramowanie. Powrót do oprogramowania działa bezproblemowo, każdym razem, gdy funkcjonalność aplikacji nie może być renderowany przy użyciu sprzętowy potok renderowania.  
+## <a name="software-rendering-pipeline"></a>Potok renderowania oprogramowania  
+ Potok [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderowania oprogramowania jest całkowicie powiązany z procesorem. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]wykorzystuje zestawy instrukcji SSE i SSE2 w PROCESORze, aby zaimplementować zoptymalizowany, w pełni funkcjonalny Rasteryzuj oprogramowania. Powrót do oprogramowania jest bezproblemowe, gdy funkcje aplikacji nie mogą być renderowane przy użyciu potoku renderowania sprzętowego.  
   
- Największy problem z wydajnością można napotkać podczas renderowania w trybie oprogramowania jest powiązany do wypełnienia szybkości, która jest zdefiniowana jako liczbę pikseli, które są renderowania. Jeśli dane dotyczące wydajności w tryb renderowania oprogramowania próbuje zminimalizować liczbę przypadków, gdy jest odświeżana, piksel. Na przykład jeśli masz aplikację z niebieskim tłem, która następnie renderuje nieco przezroczysty obraz nad nim, będą renderowane wszystkie piksele w aplikacji, dwa razy. W rezultacie potrwa dwa razy tak długo, aby renderować aplikacji przy użyciu tego obrazu, niż gdyby miał tylko niebieskie tło.  
+ Największym problemem z wydajnością podczas renderowania w trybie oprogramowania jest powiązana ze stawką wypełnienia, która jest definiowana jako liczba pikseli, które są używane. Jeśli obawiasz się o wydajność w trybie renderowania oprogramowania, spróbuj zminimalizować liczbę razy, przez które piksel zostanie odrysowany. Jeśli na przykład aplikacja ma niebieskie tło, a następnie renderuje nieco przezroczystego obrazu nad nim, wszystkie piksele w aplikacji zostaną wyrenderowane dwa razy. W związku z tym potrwa dwa razy, gdy aplikacja będzie renderowana w obrazie, niż gdyby miało tylko niebieskie tło.  
   
 ### <a name="graphics-rendering-tiers"></a>Poziomy zmiany grafiki  
- Może być bardzo trudne do przewidzenia konfiguracji sprzętowej, która aplikacja zostanie uruchomiona w. Jednak warto wziąć pod uwagę projekt, który umożliwia aplikacji bezproblemowo przełączyć funkcji podczas uruchamiania na różnym sprzęcie, tak aby go mogą w pełni korzystać z każdej innej konfiguracji sprzętu.  
+ Przewidywanie konfiguracji sprzętowej, na której będzie działać aplikacja, może być bardzo trudne. Warto jednak wziąć pod uwagę projekt, który umożliwia aplikacji bezproblemowe przełączanie funkcji w przypadku uruchamiania na różnych urządzeniach, dzięki czemu może ona w pełni korzystać z każdej innej konfiguracji sprzętowej.  
   
- Aby to osiągnąć, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferuje funkcje, aby określić możliwości grafiki systemu w czasie wykonywania. Możliwości grafiki jest określana przez skategoryzowanie karty wideo, jako jeden z trzech warstw możliwości renderowania. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia interfejs API, który umożliwia aplikacji do wykonywania zapytań w warstwie możliwości renderowania. Aplikacja może następnie podjąć różne ścieżki w czasie wykonywania, w zależności od warstwy renderowania obsługiwana przez sprzęt.  
+ W tym celu program [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia funkcje umożliwiające określenie możliwości grafiki systemu w czasie wykonywania. Możliwość grafiki jest określana przez kategoryzację karty wideo jako jedną z trzech warstw możliwości renderowania. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia interfejs API, który umożliwia aplikacji Wysyłanie zapytań do warstwy możliwości renderowania. Aplikacja może następnie zastosować różne ścieżki kodu w czasie wykonywania w zależności od warstwy renderowania obsługiwanej przez sprzęt.  
   
- Dostępne są następujące funkcje, możliwości sprzętu graficznego i że mają największy wpływ na poziom warstwy renderowania:  
+ Funkcje sprzętu grafiki, które mają największy wpływ na poziomy warstwy renderowania są następujące:  
   
-- **Pamięć RAM wideo** określa ilość pamięci wideo na sprzęt graficzny, rozmiar i liczba buforów, które mogą służyć do składania grafiki.  
+- **Pamięć RAM wideo** Ilość pamięci wideo na sprzęcie graficznym określa rozmiar i liczbę buforów, które mogą być używane do składania grafiki.  
   
-- **Program do cieniowania pikseli** program do cieniowania pikseli jest funkcja, która oblicza wpływ na podstawie każdego piksela GPU. W zależności od rozwiązania wyświetlanych grafiki może być kilka milionów piksele, które muszą być przetworzone w każdej klatce wyświetlania.  
+- Program do **cieniowania pikseli** Program do cieniowania pikseli jest funkcją przetwarzania grafiki, która oblicza wpływ na piksele. W zależności od rozdzielczości wyświetlanej grafiki może istnieć kilka milionów pikseli, które muszą zostać przetworzone dla każdej ramki wyświetlanej.  
   
-- **Program do cieniowania wierzchołków** program do cieniowania wierzchołków jest funkcja, która wykonuje operacje matematyczne na danych wierzchołka obiektu GPU.  
+- Program do cieniowania wierzchołków Program do cieniowania wierzchołków jest funkcją przetwarzania grafiki, która wykonuje operacje matematyczne na danych wierzchołka obiektu.  
   
-- **Obsługa multitekstur** multitekstur pomocy technicznej, który odwołuje się do możliwość stosowania co najmniej dwóch odrębnych tekstury podczas mieszania operacji na obiekcie grafiki 3D. Stopień multitexture pomocy technicznej jest określana przez liczbę jednostek multitexture na sprzęt graficzny.  
+- **Obsługa** wieloteksturowa Obsługa wieloteksturowego odnosi się do możliwości zastosowania dwóch lub większej liczby odrębnych tekstur podczas operacji mieszania na obiekcie graficznym 3W. Stopień wsparcia wieloteksturowego zależy od liczby jednostek wieloteksturowych na sprzęcie graficznym.  
   
- Program do cieniowania pikseli, program do cieniowania wierzchołków i multitexture funkcje, które są używane do definiowania określonego [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] poziomy wersji, które z kolei są używane do definiowania warstwy renderowania różnią w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ Program do cieniowania pikseli, cieniowania wierzchołków i funkcji wieloteksturowych jest używany do definiowania określonych poziomów wersji programu DirectX, które z kolei są używane do definiowania różnych warstw renderowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]w programie.  
   
- Funkcje, możliwości sprzętu graficznego i określić możliwości renderowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] System definiuje trzy poziomy renderowania:  
+ Funkcje sprzętu graficznego określają możliwości [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderowania aplikacji. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] System definiuje trzy warstwy renderowania:  
   
-- **Renderowanie warstwy 0** nie przyspieszania sprzętowego grafiki. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Poziom wersji jest niższy niż w wersji 7.0.  
+- **Warstwa renderowania 0** Brak przyspieszania sprzętowego. Poziom wersji programu DirectX jest mniejszy niż wersja 7,0.  
   
-- **Renderowanie warstwy 1** przyspieszanie sprzętowe częściowe grafiki. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Poziomie wersji jest większa lub równa wersji 7.0, i **mniejszym** niż wersja 9.0.  
+- **Warstwa renderowania 1** Częściowe przyspieszenie sprzętowe grafiki. Poziom wersji programu DirectX jest większy lub równy wersji 7,0 i jest **mniejszy** niż wersja 9,0.  
   
-- **Renderowanie warstwy 2** większość funkcji grafiki używał przyspieszania sprzętowego grafiki. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Poziomie wersji jest większa lub równa wersji 9.0.  
+- **Renderowanie warstwy 2** Większość funkcji graficznych wykorzystuje przyspieszenie sprzętowe grafiki. Poziom wersji programu DirectX jest większy lub równy wersji 9,0.  
   
- Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderowanie warstw, zobacz [warstwy renderowania grafiki](graphics-rendering-tiers.md).  
+ Aby uzyskać więcej informacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] na temat warstw renderowania, zobacz [warstwy renderowania grafiki](graphics-rendering-tiers.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

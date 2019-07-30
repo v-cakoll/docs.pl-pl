@@ -1,68 +1,68 @@
 ---
 title: Operatory arytmetyczne
-description: Dowiedz się więcej o operatorów arytmetycznych, które są dostępne w F# języka programowania.
+description: Dowiedz się więcej na temat operatorów arytmetycznych dostępnych F# w języku programowania.
 ms.date: 04/04/2018
-ms.openlocfilehash: 74ab813a7ca5018b6bd084aea10627e4afd62015
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b783a0134541f11f06dde83af97676699b797da1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641644"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630784"
 ---
 # <a name="arithmetic-operators"></a>Operatory arytmetyczne
 
-W tym temacie opisano operatorów arytmetycznych, które są dostępne w F# języka.
+W tym temacie opisano operatory arytmetyczne, które są F# dostępne w języku.
 
-## <a name="summary-of-binary-arithmetic-operators"></a>Podsumowanie binarne operatory arytmetyczne
+## <a name="summary-of-binary-arithmetic-operators"></a>Podsumowanie binarnych operatorów arytmetycznych
 
-Poniższa tabela zawiera podsumowanie binarne operatorów arytmetycznych, które są dostępne dla rozpakowany typów całkowitych i zmiennoprzecinkowych.
+Poniższa tabela zawiera podsumowanie binarnych operatorów arytmetycznych, które są dostępne dla nieopakowanych typów całkowitych i zmiennoprzecinkowych.
 
 |Operator binarny|Uwagi|
 |---------------|-----|
-|`+` (oprócz plus)|Niezaznaczone. Możliwe przepełnienia, gdy liczby są sumowane i suma przekracza maksymalną wartość bezwzględna obsługiwany przez typ.|
-|`-` (odejmowania, minus)|Niezaznaczone. Możliwe niedopełnienie warunku, gdy są odejmowane typy bez znaku lub różne wartości zmiennoprzecinkowe są zbyt małe, aby mogły być reprezentowane przez typ.|
-|`*` (mnożenia, razy)|Niezaznaczone. Możliwe przepełnienie warunek pomnożona liczb i produktu przekracza maksymalną wartość bezwzględna obsługiwany przez typ.|
-|`/` (dział, podzielona przez)|Dzielenie przez zero powoduje, że <xref:System.DivideByZeroException> w przypadku typów całkowitych. Dla typów zmiennopozycyjnych, dzielenie przez zero zapewnia specjalnych wartości zmiennoprzecinkowych `+Infinity` lub `-Infinity`. Istnieje również warunek niedopełnienie możliwe, gdy liczba zmiennoprzecinkowa jest zbyt mały, aby mogły być reprezentowane przez typ.|
-|`%` (resztę, rem)|Zwraca resztę z operacji dzielenia. Znak wyniku jest taki sam, jak znak pierwszego operandu.|
-|`**` (do potęgi równej potęgowania)|Możliwe przepełnienie warunek, gdy wynik przekracza maksymalną wartość bezwzględna dla typu.<br /><br />Operator potęgowania działa tylko z typów zmiennoprzecinkowych.|
+|`+`(dodatkowo i)|Unchecked. Możliwy warunek przepełnienia, gdy liczby są dodawane razem, a suma przekracza maksymalną wartość bezwzględną obsługiwaną przez typ.|
+|`-`(odejmowanie, minus)|Unchecked. Możliwy warunek nadmiarowy w przypadku odejmowania niepodpisanych typów lub gdy wartości zmiennoprzecinkowe są zbyt małe, aby były reprezentowane przez typ.|
+|`*`(mnożenie, godziny)|Unchecked. Możliwy warunek przepełnienia, gdy liczba jest mnożona, a iloczyn przekracza maksymalną wartość bezwzględną obsługiwaną przez typ.|
+|`/`(dzielenie, podzielone przez)|Dzielenie przez zero powoduje <xref:System.DivideByZeroException> dla typów całkowitych. W przypadku typów zmiennoprzecinkowych dzielenie przez zero daje specjalne wartości `+Infinity` zmiennoprzecinkowe lub. `-Infinity` Istnieje również możliwy warunek nadmiarowy, gdy liczba zmiennoprzecinkowa jest zbyt mała do reprezentowania przez typ.|
+|`%`(reszta, REM)|Zwraca resztę operacji dzielenia. Znak wyniku jest taki sam jak znak pierwszego operandu.|
+|`**`(Potęgowanie do potęgi)|Możliwy warunek przepełnienia, gdy wynik przekracza maksymalną wartość bezwzględną dla tego typu.<br /><br />Operator wykładniczy działa tylko z typami zmiennoprzecinkowymi.|
 
-## <a name="summary-of-unary-arithmetic-operators"></a>Podsumowanie jednoargumentowe operatory arytmetyczne
+## <a name="summary-of-unary-arithmetic-operators"></a>Podsumowanie jednoargumentowych operatorów arytmetycznych
 
-Poniższa tabela zawiera podsumowanie jednoargumentowe operatory arytmetyczne, które są dostępne dla typów całkowitych i zmiennoprzecinkowych.
+Poniższa tabela zawiera podsumowanie jednoargumentowych operatorów arytmetycznych, które są dostępne dla typów całkowitych i zmiennoprzecinkowych.
 
 |Jednoargumentowy operator|Uwagi|
 |--------------|-----|
-|`+` (pozytywna)|Mogą być stosowane do dowolnego wyrażenia arytmetyczne. Nie zmienia znak wartości.|
-|`-` (Negacja, ujemna)|Mogą być stosowane do dowolnego wyrażenia arytmetyczne. Zmienia znak wartości.|
+|`+`dodatni|Można zastosować do dowolnego wyrażenia arytmetycznego. Nie zmienia znaku wartości.|
+|`-`(Negacja, ujemna)|Można zastosować do dowolnego wyrażenia arytmetycznego. Zmienia znak wartości.|
 
-Zachowanie na przepełnienie lub niedopełnienie w przypadku typów całkowitych jest otacza. Powoduje to, że niepoprawny wynik. Przepełnienie liczby całkowitej jest potencjalnie poważny problem, który może przyczynić się do problemów z zabezpieczeniami, gdy oprogramowanie nie jest zapisywany na konto dla niego. Jeśli jest to istotna dla aplikacji, należy wziąć pod uwagę przy użyciu operatorów zaznaczone w `Microsoft.FSharp.Core.Operators.Checked`.
+Zachowanie w przypadku brakujących lub niedopełnienia typów całkowitych jest zawijane wokół. Powoduje to nieprawidłowe wyniki. Przepełnienie całkowite to potencjalnie poważny problem, który może przyczynić się do problemów z bezpieczeństwem, gdy oprogramowanie nie zostało zapisaną do konta. Jeśli jest to problem dla aplikacji, rozważ użycie zaewidencjonowanych operatorów w `Microsoft.FSharp.Core.Operators.Checked`.
 
-## <a name="summary-of-binary-comparison-operators"></a>Podsumowanie operatory binarne porównania
+## <a name="summary-of-binary-comparison-operators"></a>Podsumowanie operatorów porównywania binarnego
 
-W poniższej tabeli przedstawiono operatory binarne porównania, które są dostępne dla typów całkowitych i zmiennoprzecinkowych. Te operatory zwracają wartości typu `bool`.
+W poniższej tabeli przedstawiono binarne operatory porównywania, które są dostępne dla typów całkowitych i zmiennoprzecinkowych. Te operatory zwracają wartości typu `bool`.
 
-Liczby zmiennoprzecinkowe powinny być nigdy nie porównywane bezpośrednio pod kątem równości, ponieważ odwzorowanie liczby zmiennoprzecinkowej IEEE nie obsługuje operacji dokładnie równości. Dwóch liczb, który możesz łatwo zweryfikować za równe, sprawdzając kod faktycznie mogą mieć różnych bitowej reprezentacji.
+Liczby zmiennoprzecinkowe nigdy nie powinny być porównywane bezpośrednio ze względu na równość, ponieważ reprezentacja zmiennoprzecinkowa IEEE nie obsługuje dokładnej operacji równości. Dwie liczby, które można łatwo zweryfikować, aby były równe, sprawdzając kod może faktycznie mieć różne reprezentacje bitowe.
 
 |Operator|Uwagi|
 |--------|-----|
-|`=` (równości, równa się)|Nie jest to operator przypisania. Jest on używany tylko do porównania. To jest ogólny operator.|
-|`>` (większe niż)|To jest ogólny operator.|
-|`<` (mniejsze niż)|To jest ogólny operator.|
-|`>=` (większa niż lub równe)|To jest ogólny operator.|
-|`<=` (mniej niż lub równe)|To jest ogólny operator.|
-|`<>` (nie równa się)|To jest ogólny operator.|
+|`=`(równość, równa się)|To nie jest operator przypisania. Jest on używany tylko do porównania. Jest to operator generyczny.|
+|`>`(większe niż)|Jest to operator generyczny.|
+|`<`(mniejsze niż)|Jest to operator generyczny.|
+|`>=`(większe niż lub równe)|Jest to operator generyczny.|
+|`<=`(mniejsze niż lub równe)|Jest to operator generyczny.|
+|`<>`(nie równa się)|Jest to operator generyczny.|
 
-## <a name="overloaded-and-generic-operators"></a>Operatory przeciążone i ogólne
+## <a name="overloaded-and-generic-operators"></a>Operatory przeciążone i generyczne
 
-Wszystkie operatory omówione w tym temacie są zdefiniowane w **Microsoft.FSharp.Core.Operators** przestrzeni nazw. Niektóre operatory są definiowane za pomocą parametrów typu statycznie rozpoznanych. Oznacza to, że nie istnieją oddzielne definicje dla każdego określonego typu, która współdziała z tego operatora. Wszystkie jednoargumentowy i operatory dwuargumentowe arytmetyczne i bitowe znajdują się w tej kategorii. Operatory porównania są ogólne, a więc pracować z dowolnego typu, a nie po prostu pierwotnych typów arytmetycznych. Złożenia dyskryminowanego i typy rekordów mają własnych niestandardowych implementacji, które są generowane przez F# kompilatora. Typy klas należy użyć metody <xref:System.Object.Equals%2A>.
+Wszystkie operatory omówione w tym temacie są zdefiniowane w przestrzeni nazw **Microsoft. FSharp. Core. Operators** . Niektóre operatory są zdefiniowane przy użyciu statycznie rozpoznanych parametrów typu. Oznacza to, że istnieją oddzielne definicje dla każdego określonego typu, który działa z tym operatorem. Wszystkie operatory jednoargumentowe i arytmetyczne i bitowe są w tej kategorii. Operatory porównania są ogólne i w związku z tym pracują z dowolnym typem, a nie tylko typami arytmetycznymi pierwotnymi. Typ Unii rozłącznych i typów rekordów mają własne Implementacje niestandardowe, które są generowane F# przez kompilator. Typy klas używają metody <xref:System.Object.Equals%2A>.
 
-Ogólny operatory są możliwe do dostosowania. Aby dostosować funkcje porównania, należy zastąpić <xref:System.Object.Equals%2A> można podać własne niestandardowe porównania, a następnie wdrożyć <xref:System.IComparable>. <xref:System.IComparable?displayProperty=nameWithType> Interfejs zawiera jedną metodę, <xref:System.IComparable.CompareTo%2A> metody.
+Operatory ogólne można dostosowywać. Aby dostosować funkcje porównania, Przesłoń <xref:System.Object.Equals%2A> , aby zapewnić własne niestandardowe porównanie równości, a następnie zaimplementować <xref:System.IComparable>. Interfejs ma pojedynczą metodę <xref:System.IComparable.CompareTo%2A> , metodę. <xref:System.IComparable?displayProperty=nameWithType>
 
-## <a name="operators-and-type-inference"></a>Operatory i wnioskowanie o typie
+## <a name="operators-and-type-inference"></a>Operatory i wnioskowanie typów
 
-Użycie operatora w wyrażeniu ogranicza wnioskowanie o typie na tego operatora. Ponadto użycie operatorów zapobiega automatyczna Generalizacja, ponieważ użycie operatorów oznacza typ arytmetyczny. W przypadku braku innych informacji F# kompilator wnioskuje `int` jako typ wyrażenia arytmetyczne. To zachowanie można zastąpić, określając innego typu. Dlatego typy argumentów i zwracanego typu `function1` w poniższym kodzie są wywnioskowana `int`, ale typy dla `function2` są wywnioskowana `float`.
+Użycie operatora w wyrażeniu ogranicza wnioskowanie typu do tego operatora. Ponadto użycie operatorów zapobiega automatycznym uogólnieniu, ponieważ użycie operatorów oznacza typ arytmetyczny. W przypadku braku jakichkolwiek innych informacji F# kompilator wnioskuje `int` jako typ wyrażeń arytmetycznych. To zachowanie można zastąpić, określając inny typ. `function1` W ten sposób typy argumentów i zwracany typ w poniższym kodzie są wywnioskowane `int`jako, ale typy dla `function2` są wywnioskowane `float`.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3501.fs)]
 
 ## <a name="see-also"></a>Zobacz także
 

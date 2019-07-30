@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e10b6fd7df003de739b57bbb3e17deb46215763f
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: f4ae9710b99c85cfcbe3de2669c7ee85d0d24ef4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363993"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629337"
 ---
 # <a name="how-to-create-com-wrappers"></a>Instrukcje: Tworzenie otok COM
 
 Otoki Component Object Model (COM) można tworzyć za pomocą funkcji programu Visual Studio 2005 lub narzędzi .NET Framework Tools Tlbimp. exe i Regasm. exe. Obie metody generują dwa typy otok COM:
 
-- Wywoływanie [otoki środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md) z biblioteki typów w celu uruchomienia obiektu com w kodzie zarządzanym.
+- Wywoływanie [otoki środowiska uruchomieniowego](../../../docs/standard/native-interop/runtime-callable-wrapper.md) z biblioteki typów w celu uruchomienia obiektu com w kodzie zarządzanym.
 
-- Wywoływany przez [com otokę](../../../docs/framework/interop/com-callable-wrapper.md) z wymaganymi ustawieniami rejestru w celu uruchomienia obiektu zarządzanego w aplikacji natywnej.
+- Wywoływany przez [com otokę](../../../docs/standard/native-interop/com-callable-wrapper.md) z wymaganymi ustawieniami rejestru w celu uruchomienia obiektu zarządzanego w aplikacji natywnej.
 
 W programie Visual Studio 2005 można dodać otokę COM jako odwołanie do projektu.
 
@@ -75,5 +75,5 @@ Program Regasm. exe można uruchomić na zestawie znajdującym się w dowolnym k
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md)
-- [Wywoływana otoka COM](../../../docs/framework/interop/com-callable-wrapper.md)
+- [Wywoływana otoka środowiska uruchomieniowego](../../../docs/standard/native-interop/runtime-callable-wrapper.md)
+- [Wywoływana otoka COM](../../../docs/standard/native-interop/com-callable-wrapper.md)

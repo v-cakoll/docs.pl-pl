@@ -1,43 +1,43 @@
 ---
 title: Funkcje śródwierszowe
-description: Dowiedz się, jak używać F# funkcji śródwierszowych, wbudowane bezpośrednio w kodzie.
+description: Dowiedz się, F# jak używać funkcji wbudowanych, które są zintegrowane bezpośrednio z wywoływanym kodem.
 ms.date: 05/16/2016
-ms.openlocfilehash: d1c3fb3d2721024febc95b3c5e01e06cd547f81e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2830d1ada5b3005c3fcae975a44e85a7c84554f7
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642069"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630680"
 ---
 # <a name="inline-functions"></a>Funkcje śródwierszowe
 
-*Funkcje śródwierszowe* funkcji, które są zintegrowane bezpośrednio w kodzie wywołującym.
+*Funkcje wbudowane* to funkcje, które są zintegrowane bezpośrednio z wywoływanym kodem.
 
-## <a name="using-inline-functions"></a>Za pomocą funkcji śródwierszowych
+## <a name="using-inline-functions"></a>Korzystanie z funkcji wbudowanych
 
-Gdy używasz statycznych parametrów typu, wszystkie funkcje, które są parametryzowane przez parametry typu musi być wbudowany. Gwarantuje to, że kompilator może rozpoznać te parametry typu. Korzystając z parametrami typu generycznego zwykłych istnieje nie tego ograniczenia.
+W przypadku używania parametrów typu statycznego wszystkie funkcje, które są sparametryzowane przez parametry typu, muszą być wbudowane. Gwarantuje to, że kompilator może rozpoznać te parametry typu. W przypadku używania zwykłych parametrów typu ogólnego nie ma takich ograniczeń.
 
-Inne niż umożliwiające korzystanie z ograniczeniami elementu członkowskiego, wbudowane funkcje może być pomocne w optymalizacji kodu. Jednak nadużyciami wbudowanych funkcji może spowodować kodu jako mniej odporne na zmiany w optymalizacji kompilatora i stosowania funkcji biblioteki. Z tego powodu należy unikać używania wbudowane funkcje optymalizacji, chyba że Wypróbowano innych technik optymalizacji. Co wbudowanej funkcji lub metody czasami może poprawić wydajność, ale nie zawsze jest wymagane. W związku z tym aby sprawdzić, dzięki czemu wszystkie wbudowane daną funkcję w rzeczywistości ma pozytywny wpływ należy również użyć pomiarów wydajności.
+Oprócz włączania ograniczeń elementu członkowskiego funkcje wbudowane mogą być pomocne podczas optymalizowania kodu. Jednak użycie funkcji wbudowanych może spowodować, że kod będzie mniej odporny na zmiany optymalizacji kompilatora i implementację funkcji biblioteki. Z tego powodu należy unikać używania funkcji wbudowanych do optymalizacji, chyba że ponowią wszystkie inne techniki optymalizacji. Wprowadzenie funkcji lub metody w tekście może czasami zwiększyć wydajność, ale nie zawsze jest to przypadek. W związku z tym należy również użyć pomiarów wydajności, aby upewnić się, że udostępnianie każdej funkcji wbudowanej w rzeczywistości ma pozytywny wpływ.
 
-`inline` Modyfikator może odnosić się do funkcji na najwyższym poziomie, na poziomie modułu lub na poziomie metody w klasie.
+`inline` Modyfikator można zastosować do funkcji na najwyższym poziomie, na poziomie modułu lub na poziomie metody klasy.
 
-Poniższy przykład kodu ilustruje funkcja śródwierszowa najwyższego poziomu, metoda wystąpienia wbudowane i wbudowane metody statycznej.
+Poniższy przykład kodu ilustruje funkcję wbudowaną na najwyższym poziomie, wbudowaną metodę wystąpienia i wbudowaną metodę statyczną.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet201.fs)]
 
 ## <a name="inline-functions-and-type-inference"></a>Funkcje śródwierszowe i wnioskowanie o typie
 
-Obecność `inline` wpływa na wnioskowanie o typie. Jest to spowodowane wbudowane funkcje mogą mieć parametry typu statycznie rozpoznanych, natomiast nie funkcji innych niż inline. Poniższy przykład kodu pokazuje przypadek gdzie `inline` jest przydatne, ponieważ korzysta z funkcji, która ma parametr typu statycznie rozpoznanych `float` operatora konwersji.
+Obecność `inline` ma wpływ na wnioskowanie o typie. Wynika to z faktu, że funkcje wbudowane mogą mieć statycznie rozpoznane parametry typu, podczas gdy nie można korzystać z funkcji wbudowanych. Poniższy przykład kodu pokazuje przypadek, gdzie `inline` jest przydatne, ponieważ używana jest funkcja, która ma parametr typu statycznie rozpoznany `float` , Operator konwersji.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet202.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet202.fs)]
 
-Bez `inline` modyfikator, wnioskowanie o typie wymusza funkcji w celu określonego typu, w tym przypadku `int`. Ale `inline` modyfikator, funkcja również wywnioskowana ma parametr typu statycznie rozpoznanych. Za pomocą `inline` modyfikator, typ jest wnioskowany być następujące:
+Bez modyfikatora, wnioskowanie typu wymusza, aby funkcja przejęcia określonego typu w tym przypadku `int`. `inline` Ale z `inline` modyfikatorem, funkcja jest również wnioskowana, aby miał statycznie rozpoznany parametr typu. `inline` Z modyfikatorem, typ jest wywnioskowany jako następujący:
 
 ```fsharp
 ^a -> unit when ^a : (static member op_Explicit : ^a -> float)
 ```
 
-Oznacza to, że funkcja ta akceptuje dowolny typ, który obsługuje konwersję **float**.
+Oznacza to, że funkcja akceptuje dowolny typ, który obsługuje konwersjęna wartość zmiennoprzecinkową.
 
 ## <a name="see-also"></a>Zobacz także
 

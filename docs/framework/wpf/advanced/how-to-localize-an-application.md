@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 68bb3b8cd080e5b454776433e65027b7d18e7c3b
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 749ba2dd9318976289d9d4140cfadd711e0548d4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331558"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629871"
 ---
 # <a name="how-to-localize-an-application"></a>Instrukcje: Lokalizowanie aplikacji
 W tym samouczku wyjaśniono, jak utworzyć zlokalizowaną aplikację przy użyciu narzędzia LocBaml.  
@@ -66,7 +66,7 @@ W tym samouczku wyjaśniono, jak utworzyć zlokalizowaną aplikację przy użyci
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>Tworzenie zestawu satelickiego dla zasobów języka neutralnego  
  Po skonfigurowaniu aplikacji do generowania zestawu satelickiego dla neutralnych zasobów języka należy skompilować aplikację. Spowoduje to wygenerowanie głównego zestawu aplikacji oraz zestawu satelickiego dla zasobów języka neutralnego, który jest wymagany przez LocBaml do lokalizacji. Aby skompilować aplikację:  
   
-1. Kompiluj HelloApp, aby utworzyć [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
+1. Kompiluj HelloApp do tworzenia biblioteki dołączanej dynamicznie (DLL):  
   
      **MSBuild helloapp. csproj**  
   
@@ -91,7 +91,7 @@ W tym samouczku wyjaśniono, jak utworzyć zlokalizowaną aplikację przy użyci
   
 4. Opcje, które można określić, gdy uruchamiasz LocBaml są następujące:  
   
-    - **Analizuj** lub **-p:** Analizuje wartość BAML, zasoby lub [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] pliki w celu wygenerowania pliku CSV lub txt.  
+    - **Analizuj** lub **-p:** Analizuje pliki BAML, zasoby lub biblioteki DLL w celu wygenerowania pliku CSV lub txt.  
   
     - **Generuj** lub **-g:** Generuje zlokalizowany plik binarny przy użyciu przetłumaczonego pliku.  
   
@@ -101,7 +101,7 @@ W tym samouczku wyjaśniono, jak utworzyć zlokalizowaną aplikację przy użyci
   
     - **tłumaczenie** lub **Trans** {*Translation. csv*] **:** Przetłumaczony lub zlokalizowany plik.  
   
-    - **asmpath** lub **-asmpath:** {*FileDirectory*] **:** Jeśli kod zawiera niestandardowe kontrolki, należy podać asmpath do niestandardowego zestawu kontrolek.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
+    - **asmpath** lub **-asmpath:** {*FileDirectory*] **:** Jeśli kod zawiera niestandardowe kontrolki, należy podać asmpath do niestandardowego zestawu kontrolek. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
   
     - **nologo** Nie wyświetla logo ani informacji o prawach autorskich.  
   

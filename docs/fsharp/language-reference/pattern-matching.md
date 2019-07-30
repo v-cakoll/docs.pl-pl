@@ -1,23 +1,23 @@
 ---
 title: Dopasowanie wzorca
-description: Dowiedz się, jak wzorce są stosowane w F# do porównywania danych ze struktury logicznej, rozkładania danych do części składowych lub wyodrębnienia informacji z danych.
+description: Dowiedz się, w jaki F# sposób wzorce są używane w programie, aby porównać dane ze strukturami logicznymi, rozłożyć dane na części składowe lub Wyodrębnij informacje z danych.
 ms.date: 05/16/2016
-ms.openlocfilehash: f76a5fb675f83df87dd896f471a3552495f39e7e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641770"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627300"
 ---
 # <a name="pattern-matching"></a>Dopasowanie wzorca
 
-Wzorce są regułami dotyczącymi przekształcania danych wejściowych. Są one używane w całym F# język do porównywania danych ze strukturą logiczną lub strukturami, rozkładania danych do części składowych lub wyodrębnienia informacji z danych na różne sposoby.
+Wzorce są regułami do przekształcania danych wejściowych. Są one używane w całym F# języku do porównywania danych ze strukturą logiczną lub strukturami, rozkładania danych do części składowych lub wyodrębniania informacji z danych na różne sposoby.
 
 ## <a name="remarks"></a>Uwagi
 
-Wzorce są stosowane w wielu konstrukcjach języka, takich jak `match` wyrażenia. Są one używane podczas przetwarzania argumentów funkcji w `let` powiązania, wyrażeń lambda i procedurach obsługi wyjątków, skojarzone z `try...with` wyrażenia. Aby uzyskać więcej informacji, zobacz [wyrażenia dopasowań](match-expressions.md), [let — powiązania](functions/let-bindings.md), [wyrażenia Lambda: `fun` — Słowo kluczowe](functions/lambda-expressions-the-fun-keyword.md), i [wyjątków: `try...with` Wyrażenie](exception-handling/the-try-with-expression.md).
+Wzorce są używane w wielu konstrukcjach języka, takich jak `match` wyrażenie. Są one używane podczas przetwarzania argumentów dla funkcji w `let` powiązaniach, wyrażeniach lambda i w obsłudze wyjątków skojarzonych `try...with` z wyrażeniem. Aby uzyskać więcej informacji, zobacz [wyrażenia dopasowania](match-expressions.md), Zezwól na [ [powiązania](./functions/let-bindings.md), wyrażenia lambda: Słowo kluczowe](./functions/lambda-expressions-the-fun-keyword.md) i[wyjątki: `fun` `try...with` Wyrażenie.](/.exception-handling/the-try-with-expression.md)
 
-Na przykład w `match` wyrażenie *wzorzec* następuje symbol potoku.
+Na przykład, w `match` wyrażeniu *wzorzec* jest zgodny z symbolem potoku.
 
 ```fsharp
 match expression with
@@ -25,56 +25,56 @@ match expression with
 ...
 ```
 
-Każdy deseń działa jako reguła przekształcania danych wejściowych w jakiś sposób. W `match` wyrażenia, każdy wzorzec jest badany kolejno, można sprawdzić, czy dane wejściowe jest zgodny ze wzorcem. Jeśli zostanie znalezione dopasowanie, wynik wyrażenia jest wykonywana. Jeśli nie zostanie znalezione dopasowanie, bada się następną regułę wzorca. Opcjonalne, jeśli *warunek* część została wyjaśniona w [wyrażenia dopasowań](match-expressions.md).
+Każdy wzorzec działa jako reguła do przekształcania danych wejściowych w jakiś sposób. `match` W wyrażeniu każdy wzorzec jest sprawdzany z kolei, aby sprawdzić, czy dane wejściowe są zgodne ze wzorcem. W przypadku znalezienia dopasowania zostanie wykonane wyrażenie wynik. Jeśli dopasowanie nie zostanie znalezione, zostanie przetestowana następna reguła wzorca. Wartość opcjonalna , gdy część warunku jest objaśniona w [wyrażeniach dopasowania](match-expressions.md).
 
-Obsługiwane wzorce przedstawiono w poniższej tabeli. W czasie wykonywania dane wejściowe są testowane w odniesieniu do każdego z następujących wzorów w określonej kolejności w tabeli, a wzory są stosowane cyklicznie, od pierwszych do ostatniego w jakiej występują w kodzie i od lewej do prawej dla wzorca w każdym wierszu.
+Obsługiwane wzorce przedstawiono w poniższej tabeli. W czasie wykonywania, dane wejściowe są testowane względem każdego z następujących wzorców w kolejności wymienionej w tabeli, a wzorce są stosowane cyklicznie, od pierwszego do ostatniego, jak pojawiają się w kodzie, i od lewej do prawej dla wzorców w każdym wierszu.
 
 |Nazwa|Opis|Przykład|
 |----|-----------|-------|
-|Wzór stałej|Wszelkie wartości numeryczne, znak lub literał ciągu znaków, stała wyliczenia lub zdefiniowany identyfikator literału|`1.0`, `"test"`, `30`, `Color.Red`|
-|Wzorzec identyfikatora|Wartość case złożenia dyskryminowanego, etykieta wyjątku lub przypadek aktywnego wzoru|`Some(x)`<br /><br />`Failure(msg)`|
-|Wzór zmiennej|*Identyfikator*|`a`|
-|`as` Wzorzec|*wzorzec* jako *identyfikator*|`(a, b) as tuple1`|
-|Wzorzec lub|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
-|Wzorzec i|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
-|Wzór wad|*Identyfikator* :: *identyfikator listy*|`h :: t`|
+|Wzorzec stałej|Dowolny literał numeryczny, znak lub ciąg, stała wyliczenia lub zdefiniowany identyfikator literału|`1.0`, `"test"`, `30`, `Color.Red`|
+|Wzorzec identyfikatora|Wartość przypadku Unii rozłącznej, etykieta wyjątku lub przypadek aktywnego wzorca|`Some(x)`<br /><br />`Failure(msg)`|
+|Wzorzec zmiennej|*identyfikatora*|`a`|
+|`as`znaczne|*wzorzec* jako *Identyfikator*|`(a, b) as tuple1`|
+|LUB wzorzec|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
+|I wzorzec|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
+|Wzorzec wad|*Identyfikator* :: *list — identyfikator*|`h :: t`|
 |Wzorzec listy|[ *pattern_1*;...; *pattern_n* ]|`[ a; b; c ]`|
-|Wzorzec tablicy|[&#124; *pattern_1*; ..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
-|Wzorzec ujęty w nawiasy|( *wzorzec* )|`( a )`|
-|Wzór krotki|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
-|Rejestruj wzorzec|{ *identifier1* = *pattern_1*;...; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
-|Wzór symboli wieloznacznych|\_|`_`|
-|Wzorzec wraz ze wskazaniem typu|*wzorzec* : *typu*|`a : int`|
-|Wpisz wzór testu|:? *Typ* [jako *identyfikator* ]|`:? System.DateTime as dt`|
-|Wzorzec zerowy|wartość null|`null`|
+|Wzorzec tablicy|[&#124; *pattern_1*;... *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|Wzorzec w nawiasach|( *wzorzec* )|`( a )`|
+|Wzorzec krotki|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
+|Wzorzec rekordu|{ *Identifier1* = *pattern_1*;...; *identifier_n*  =  *pattern_n* }|`{ Name = name; }`|
+|Wzorzec wieloznaczny|\_|`_`|
+|Wzorzec wraz z adnotacją typu|*wzorzec* : *Typ*|`a : int`|
+|Typ wzorca testu|:? *Typ* [AS *Identyfikator* ]|`:? System.DateTime as dt`|
+|Wzorzec o wartości null|wartość null|`null`|
 
-## <a name="constant-patterns"></a>Wzory stałych
+## <a name="constant-patterns"></a>Wzorce stałe
 
-Wzorce stałych są liczbowych, znaków i literały ciągu stałych wyliczenia (z uwzględnioną nazwą typu wyliczenia). A `match` wyrażenie, które ma tylko stałe wzorce można porównać do wyrażenia CASE w innych językach. Dane wejściowe są porównywane z wartością literału a wzór pasuje, jeśli wartości są równe. Typ literału musi być zgodny z typem danych wejściowych.
+Wzorce stałe są literami, znakami i literałami ciągów, stałymi wyliczeniami (z uwzględnieniem nazwy typu wyliczenia). `match` Wyrażenie, które ma tylko stałe wzorce, można porównać do instrukcji case w innych językach. Dane wejściowe są porównywane z wartością literału, a wzorzec pasuje, jeśli wartości są równe. Typ literału musi być zgodny z typem danych wejściowych.
 
-Poniższy przykład pokazuje użycie wzorów literału i używa również wzór zmiennej oraz wzoru OR.
+Poniższy przykład demonstruje użycie wzorców literałów, a także używa wzorca zmiennej i wzorca OR.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4801.fs)]
 
-Innym przykładem wzorca literału jest wzorzec oparty na wyliczeniu stałych. Należy określić nazwę typu wyliczenia, gdy używasz stałych wyliczenia.
+Innym przykładem wzorca literału jest wzorzec oparty na stałych wyliczeniach. Należy określić nazwę typu wyliczeniowego w przypadku używania stałych wyliczania.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4802.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4802.fs)]
 
 ## <a name="identifier-patterns"></a>Wzorce identyfikatorów
 
-Jeśli wzorzec jest ciągiem znaków, który wchodzi w skład prawidłowy identyfikator, forma identyfikatora Określa, jak odbywa się dopasowanie. Jeśli identyfikator ma więcej niż jeden znak i rozpoczyna się od wielkiej litery, kompilator próbuje wykonać dopasowanie do wzorca identyfikatora. Identyfikator dla tego wzoru może być wartością oznakowaną za pomocą atrybutu literał, dyskryminowanego przypadku złożenia, identyfikatora wyjątku lub przypadek aktywnego wzoru. Jeśli pasujący identyfikator nie zostanie znaleziony, dopasowanie nie powiedzie się i Następna reguła wzorca — wzorzec zmiennych są porównywane w danych wejściowych.
+Jeśli wzorzec jest ciągiem znaków, który tworzy prawidłowy identyfikator, formularz identyfikatora określa sposób dopasowania wzorca. Jeśli identyfikator jest dłuższy niż pojedynczy znak i zaczyna się od wielkiej litery, kompilator próbuje dopasować wzorzec identyfikatora. Identyfikatorem tego wzorca może być wartość oznaczona przy użyciu atrybutu literału, przypadku Unii rozłącznej, identyfikatora wyjątku lub aktywnego przypadku wzorca. Jeśli nie znaleziono zgodnego identyfikatora, dopasowanie nie powiedzie się, a następna reguła wzorca, wzorzec zmiennej, jest porównywana z danymi wejściowymi.
 
-Rozróżniane wzorce połączeń mogą być proste o nazwie przypadków lub mogą mieć wartość, lub krotkę zawierającą wiele wartości. W przypadku wartości, należy określić identyfikator dla wartości. W przypadku spójnej kolekcji musisz podać wzorzec spójnej kolekcji za pomocą identyfikatora dla każdego elementu spójnej kolekcji lub identyfikatorem o nazwie pola dla jednego lub więcej nazwanych pól złożenia. Zobacz przykłady kodu w tej sekcji.
+Wzorce Unii rozłącznych mogą być prostymi nazwanymi przypadkami lub mogą mieć wartość lub krotkę zawierającą wiele wartości. Jeśli istnieje wartość, należy określić identyfikator dla tej wartości. W przypadku krotki, należy podać wzorzec krotki z identyfikatorem dla każdego elementu krotki lub identyfikatora z nazwą pola dla jednego lub więcej nazwanych pól Union. Przykłady kodu można znaleźć w przykładach w tej sekcji.
 
-`option` Typ jest złożeniem dyskryminowanym, które posiada dwa przypadki, `Some` i `None`. Jeden przypadek (`Some`) ma wartość, ale drugi (`None`) jest tylko nazwanym przypadkiem. W związku z tym `Some` musi mieć zmienną dla wartości skojarzonej z `Some` wielkości liter, ale `None` musi się pojawiać samodzielnie. W poniższym kodzie zmiennej `var1` jest podana wartość uzyskana przez dopasowanie do `Some` przypadek.
+Typ jest Unią rozłączną, która ma dwa przypadki, `Some` i `None`. `option` Jeden przypadek (`Some`) ma wartość, ale drugi (`None`) jest tylko nazwanym przypadkiem. W związku `Some` z tym, musi mieć zmienną dla wartości skojarzonej `Some` z przypadkiem, `None` ale musi być wyświetlana sama przez siebie. W poniższym kodzie zmienna `var1` otrzymuje wartość uzyskaną przez dopasowanie `Some` do wielkości liter.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4803.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4803.fs)]
 
-W poniższym przykładzie `PersonName` złożenia dyskryminowanego znajdują się różne ciągi i znaki, które reprezentują możliwe formy nazw. Przypadki złożeń dyskryminowanych są `FirstOnly`, `LastOnly`, i `FirstLast`.
+W poniższym przykładzie `PersonName` związek rozłącznych zawiera kombinację ciągów i znaków, które reprezentują możliwe formy nazw. Przypadki rozłącznych zbiorów to `FirstOnly`, `LastOnly`i `FirstLast`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4804.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4804.fs)]
 
-Dla sum rozłącznych, które mają pola nazwane możesz użyć znaku równości (=) do wyodrębnienia wartość nazwanego pola. Rozważmy na przykład sumę rozłączną z deklaracją jak następująca.
+W przypadku Unii rozłącznych, które mają nazwane pola, należy użyć znaku równości (=) do wyodrębnienia wartości nazwanego pola. Rozważmy na przykład Unię rozłącznych z deklaracją podobną do następującej.
 
 ```fsharp
 type Shape =
@@ -82,7 +82,7 @@ type Shape =
     | Circle of radius : float
 ```
 
-Można użyć nazwanych pól w wyrażeniu dopasowania wzorca w następujący sposób.
+Możesz użyć nazwanych pól w wyrażeniu dopasowania wzorca w następujący sposób.
 
 ```fsharp
 let matchShape shape =
@@ -91,9 +91,9 @@ let matchShape shape =
     | Circle(r) -> printfn "Circle with radius %f" r
 ```
 
-Korzystanie z nazwanego pola jest opcjonalne, więc w poprzednim przykładzie, zarówno `Circle(r)` i `Circle(radius = r)` mają ten sam efekt.
+Użycie nazwanego pola jest opcjonalne, dlatego w poprzednim przykładzie oba `Circle(r)` i `Circle(radius = r)` mają ten sam efekt.
 
-Podczas określania wielu pól, użyj średnika (;) jako separatora.
+Po określeniu wielu pól Użyj średnika (;) jako separator.
 
 ```
 match shape with
@@ -101,105 +101,105 @@ match shape with
 | _ -> ()
 ```
 
-Aktywne wzorce umożliwiają zdefiniowanie bardziej złożonego niestandardowego wzorca dopasowania. Aby uzyskać więcej informacji na temat wzorców, zobacz [wzorców](active-patterns.md).
+Aktywne wzorce umożliwiają zdefiniowanie bardziej złożonej niestandardowej dopasowywania do wzorca. Aby uzyskać więcej informacji na temat aktywnych wzorców, zobacz [aktywne wzorce](active-patterns.md).
 
-Przypadek, w którym identyfikator jest wyjątkiem jest używany podczas dopasowywania wzorca w kontekście obsługi wyjątków. Aby uzyskać informacje o dopasowywaniu do wzorca w obsługę wyjątków, zobacz [wyjątków: `try...with` Wyrażenie](exception-handling/the-try-with-expression.md).
+Przypadek, w którym identyfikator jest wyjątek jest używany w dopasowywaniu wzorców w kontekście obsługi wyjątków. Aby uzyskać informacje na temat dopasowywania wzorców w obsłudze wyjątków, zobacz [wyjątki: `try...with` Wyrażenie.](/.exception-handling/the-try-with-expression.md)
 
-## <a name="variable-patterns"></a>Wzory zmiennej
+## <a name="variable-patterns"></a>Wzorce zmiennych
 
-Wzór zmiennej przypisuje wartość dopasowaną do nazwy zmiennej, która jest dostępna do użytku w wyrażeniu wykonywania znajdującym się po prawej stronie `->` symboli. Sam wzorzec zmiennej nie pasuje do żadnych danych, ale wzorce zmiennej często pojawiają się w innych wzorcach, zatem bardziej złożonych struktur, takich jak tablice, aby być rozłożone na zmienne i kolekcje.
+Wzór zmiennej przypisuje wartość dopasowaną do nazwy zmiennej, która jest następnie dostępna do użycia w wyrażeniu wykonywania na prawo od `->` symbolu. Sam wzorzec zmiennej pasuje do dowolnych danych wejściowych, ale wzorce zmiennych często pojawiają się w innych wzorcach, co pozwala na bardziej złożone struktury, takie jak krotki i tablice, do rozdzielania na zmienne.
 
-Poniższy przykład ukazuje wzór zmiennej w ramach wzorca krotki.
+Poniższy przykład ilustruje wzór zmiennej w obrębie wzorca krotki.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4805.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4805.fs)]
 
 ## <a name="as-pattern"></a>jako wzorzec
 
-`as` Wzorzec jest wzorem, który ma `as` dołączoną klauzulę. `as` Klauzuli wiąże pasującą wartość nazwy, które mogą być używane w wyrażeniu wykonywania wyrażenia `match` wyrażenie, lub, w przypadku, gdy ten wzór jest używany w `let` powiązania, nazwa jest dodawana jako wiązanie do zakresu lokalnego.
+Wzorzec jest wzorcem `as` z dołączoną do niej klauzulą. `as` Klauzula wiąże dopasowaną wartość do nazwy, która może być używana w wyrażeniu `match` wykonywania wyrażenia lub, w przypadku, gdy ten `let` wzorzec jest używany w powiązaniu, nazwa jest dodawana jako powiązanie do zakresu lokalnego. `as`
 
-W poniższym przykładzie użyto `as` wzorca.
+Poniższy przykład używa `as` wzorca.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4806.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4806.fs)]
 
-## <a name="or-pattern"></a>Wzorzec lub
+## <a name="or-pattern"></a>LUB wzorzec
 
-Wzór OR jest używany, gdy dane wejściowe można dopasować do wielu wzorców, a chcesz wykonać w wyniku tego samego kodu. Typy obu stron wzorca OR muszą być zgodne.
+Wzorzec OR jest używany, gdy dane wejściowe mogą odpowiadać wielu wzorcem i chcesz wykonać ten sam kod w wyniku. Typy obu stron wzorca OR muszą być zgodne.
 
 Poniższy przykład demonstruje wzorzec OR.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4807.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4807.fs)]
 
-## <a name="and-pattern"></a>Wzorzec i
+## <a name="and-pattern"></a>I wzorzec
 
-Wzór AND wymaga, że dane wejściowe są zgodne dwa wzorce. Typy obu stron wzorca AND muszą być zgodne.
+Wzorzec i wymaga, aby dane wejściowe były zgodne z dwoma wzorcami. Typy obu stron wzorca i muszą być zgodne.
 
-Poniższy przykład jest jaki jak `detectZeroTuple` objętego [wzór krotki](https://msdn.microsoft.com/library/#tuple) sekcję w dalszej części tego tematu, ale tutaj zarówno `var1` i `var2` są uzyskiwane jako wartości za pomocą wzorca.
+Poniższy przykład jest `detectZeroTuple` podobny do przedstawionego w sekcji [wzorzec krotki](https://msdn.microsoft.com/library/#tuple) w dalszej części tego tematu `var1` , ale w tym miejscu i `var2` są uzyskiwane jako wartości przy użyciu wzorca i.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
 
-## <a name="cons-pattern"></a>Wzór wad
+## <a name="cons-pattern"></a>Wzorzec wad
 
-Wzór minusów służy do rozkładania listy na pierwszy element *head*i listę, która zawiera wszystkie pozostałe elementy *tail*.
+Wzorzec wad służy do rozdzielania listy na pierwszy element, *nagłówek*i listę zawierającą pozostałe elementy, *ogon*.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
 
 ## <a name="list-pattern"></a>Wzorzec listy
 
-Wzór listy umożliwia rozkładanie do liczby elementów list. Sam wzorzec listy może odnosić się tylko do list o określonej liczbie elementów.
+Wzorzec listy umożliwia rozdzielanie list na wiele elementów. Sam wzorzec listy może pasować tylko do list o określonej liczbie elementów.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4810.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4810.fs)]
 
 ## <a name="array-pattern"></a>Wzorzec tablicy
 
-Wzór tablicy przypomina wzór listy i może służyć do rozkładania tablic o określonej długości.
+Wzór tablicy przypomina wzorzec listy i może służyć do rozdzielania tablic o określonej długości.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4811.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4811.fs)]
 
-## <a name="parenthesized-pattern"></a>Wzorzec ujęty w nawiasy
+## <a name="parenthesized-pattern"></a>Wzorzec w nawiasach
 
-Nawiasy mogą być grupowane wokół wzorców, aby osiągnąć pożądaną łączność. W poniższym przykładzie nawiasy są używane do kontrolowania łączność między wzorcem and wzorcem cons.
+Nawiasy można grupować wokół wzorców w celu osiągnięcia żądanych łączność. W poniższym przykładzie nawiasy są używane do kontrolowania łączność między wzorcem a i wzorcem wad.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4812.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4812.fs)]
 
-## <a name="tuple-pattern"></a>Wzór krotki
+## <a name="tuple-pattern"></a>Wzorzec krotki
 
-Wzorzec krotki pasuje do danych wejściowych w formularzu krotki i umożliwia spójnej kolekcji być rozłożone na elementy składowe za pomocą zmiennych dla każdej pozycji w krotce pasujących do wzorca.
+Wzorzec krotki dopasowuje dane wejściowe w postaci spójnej kolekcji i umożliwia rozłożenie krotki na elementy składowe za pomocą zmiennych dopasowywania wzorców dla każdej pozycji w spójnej kolekcji.
 
-Poniższy przykład pokazuje wzór krotki i używa również wzorów literału, wzorów zmiennej oraz wzoru symboli wieloznacznych.
+Poniższy przykład demonstruje wzorzec krotki i używa także wzorców literałów, wzorów zmiennych i wzorca symboli wieloznacznych.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4813.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4813.fs)]
 
-## <a name="record-pattern"></a>Rejestruj wzorzec
+## <a name="record-pattern"></a>Wzorzec rekordu
 
-Wzór rejestrowania jest używany do rozkładania rekordów w celu wyodrębnienia wartości pól. Wzorzec nie będzie musiał odwoływać się do wszystkich pól rekordu; wszelkie pominięte pola po prostu nie biorą udziału w dopasowywania i nie zostały wyodrębnione.
+Wzorzec rekordu służy do rozkładania rekordów w celu wyodrębnienia wartości pól. Wzorzec nie musi odwoływać się do wszystkich pól rekordu; wszystkie pominięte pola tylko nie uczestniczą w dopasowaniu i nie są wyodrębniane.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4814.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4814.fs)]
 
-## <a name="wildcard-pattern"></a>Wzór symboli wieloznacznych
+## <a name="wildcard-pattern"></a>Wzorzec wieloznaczny
 
-Wzór symboli wieloznacznych jest reprezentowany przez znak podkreślenia (`_`) znak i pasuje do żadnych danych, podobnie jak wzór zmiennej, z tą różnicą, że dane wejściowe są odrzucane zamiast bycia przypisywanymi do zmiennej. Wzór symboli wieloznacznych jest często używana w ramach innych wzorów jako symbol zastępczy dla wartości, które nie są potrzebne w wyrażeniu na prawo od `->` symboli. Wzór symboli wieloznacznych jest też często używany na końcu listy wzorców do dopasowywania niedopasowanych danych wejściowych. Wzór symboli wieloznacznych jest demonstrowany w wielu przykładach kodu w tym temacie. Zobacz kod poprzedzający dla jednego przykładu.
+Wzorzec symbol wieloznaczny jest reprezentowany przez znak podkreślenia (`_`) i dopasowuje wszelkie dane wejściowe, podobnie jak wzór zmiennej, z tą różnicą, że dane wejściowe są odrzucane zamiast przypisywania do zmiennej. Wzorzec symbol wieloznaczny jest często używany w innych wzorcach jako symbol zastępczy dla wartości, które nie są konieczne w wyrażeniu `->` z prawej strony symbolu. Wzorzec symboli wieloznacznych jest również często używany na końcu listy wzorców w celu dopasowania do niedopasowanych danych wejściowych. Wzorzec symboli wieloznacznych jest prezentowany w wielu przykładach kodu w tym temacie. Zobacz poprzedni kod na jeden przykład.
 
-## <a name="patterns-that-have-type-annotations"></a>Wzorce mające wskazania typów
+## <a name="patterns-that-have-type-annotations"></a>Wzorce, które mają adnotacje typu
 
-Wzorce mogą mieć wskazania typów. Te zachowują się jak inne adnotacje i prowadzą wnioskowanie jak inne adnotacje. Nawiasy są wymagane wokół wskazań typów we wzorcach. Poniższy kod przedstawia wzór, który ma adnotacji typu.
+Wzorce mogą mieć adnotacje typu. Zachowują się one tak jak inne adnotacje typu i w odróżnieniu od innych typów. Nawiasy są wymagane wokół adnotacji typu w wzorcach. Poniższy kod przedstawia wzorzec, który ma adnotację typu.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4815.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4815.fs)]
 
-## <a name="type-test-pattern"></a>Wpisz wzór testu
+## <a name="type-test-pattern"></a>Typ wzorca testu
 
-Wpisz wzór testu jest używany do dopasowywania danych wejściowych do typu. Typ danych wejściowych jest, aby dopasowanie zakończyło się (lub typem pochodnym) typu określonego we wzorcu, dopasowanie zakończy się pomyślnie.
+Wzorzec testu typu jest używany do dopasowania danych wejściowych do typu. Jeśli typ danych wejściowych jest zgodny z (lub typem pochodnym) typu określonego we wzorcu, dopasowanie powiedzie się.
 
-Poniższy przykład demonstruje typ wzorca testowego.
+Poniższy przykład demonstruje wzorzec testu typu.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
 
-## <a name="null-pattern"></a>Wzorzec zerowy
+## <a name="null-pattern"></a>Wzorzec o wartości null
 
-Deseń zerowy pasuje do wartości zerowej, która może pojawić się podczas pracy z typami, które zezwalają na wartości null. Wzorce zerowe są często używane podczas współpracy z kodu .NET Framework. Na przykład, wartość zwracana przez interfejs API programu .NET może być dane wejściowe `match` wyrażenia. Możesz sterować przepływem programu na podstawie, czy wartość zwracana wynosi null, a także na podstawie innych cech zwróconej wartości. Deseń zerowy można użyć, aby zapobiec propagowanie do pozostałej części programu wartości null.
+Wzorzec o wartości null jest zgodny z wartością null, która może pojawić się podczas pracy z typami, które zezwalają na wartość null. Wzorce o wartości null są często używane podczas współdziałania z kodem .NET Framework. Na przykład wartość zwracana przez interfejs API platformy .NET może być danymi wejściowymi do `match` wyrażenia. Można kontrolować przepływ programu w zależności od tego, czy zwracana wartość jest równa null, a także od innych cech zwracanej wartości. Możesz użyć wzorca o wartości null, aby zapobiec propagowaniu wartości null do reszty programu.
 
-Poniższy przykład używa wzoru null i zmiennych.
+Poniższy przykład używa wzorca o wartości null i wzorca zmiennej.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,20 +1,20 @@
 ---
-title: 'Deklaracje importowania: Open — słowo kluczowe'
-description: Dowiedz się więcej o F# zaimportować deklaracje i jak określić modułu lub przestrzeni nazw elementów, których możesz odwoływać się bez korzystania z w pełni kwalifikowanej nazwy.
+title: 'Deklaracje importowania: słowo kluczowe open'
+description: Dowiedz F# się więcej na temat deklaracji importu i sposobu określania modułu lub przestrzeni nazw, których elementy można odwołać bez używania w pełni kwalifikowanej nazwy.
 ms.date: 04/04/2019
-ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 816bac551692c3397290f64c6267ee22e4ce90fb
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937504"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630578"
 ---
-# <a name="import-declarations-the-open-keyword"></a>Deklaracje importowania: `open` — Słowo kluczowe
+# <a name="import-declarations-the-open-keyword"></a>Deklaracje importowania: słowo kluczowe `open`
 
 > [!NOTE]
-> Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
+> Linki do odwołań do interfejsów API w tym artykule przeprowadzą Cię do subskrypcji MSDN.  Dokumentacja interfejsu API docs.microsoft.com nie została ukończona.
 
-*Deklaracja importu* określa modułu lub przestrzeni nazw elementów, których możesz odwoływać się bez korzystania z w pełni kwalifikowanej nazwy.
+*Deklaracja importu* określa moduł lub przestrzeń nazw, których elementy można odwoływać bez używania w pełni kwalifikowanej nazwy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,19 +24,19 @@ open module-or-namespace-name
 
 ## <a name="remarks"></a>Uwagi
 
-Odwoływanie się do kodu przy użyciu w pełni kwalifikowana ścieżka przestrzeni nazw lub module każdym razem, gdy można tworzyć kod, który jest trudny do zapisu, odczytu i obsługa. Zamiast tego można użyć `open` — słowo kluczowe dla często używanych modułów i przestrzeni nazw, dzięki czemu Gdy odwołujesz się członkiem tego modułu lub przestrzeni nazw, a nie w pełni kwalifikowana nazwa, można użyć krótkiej formy o nazwie. This — słowo kluczowe jest podobny do `using` — słowo kluczowe w języku C# `using namespace` w programie Visual C++ i `Imports` w języku Visual Basic.
+Odwoływanie się do kodu przy użyciu w pełni kwalifikowanej przestrzeni nazw lub ścieżki modułu za każdym razem, gdy program może utworzyć kod, który jest trudno pisać, czytać i konserwować. Zamiast tego można użyć `open` słowa kluczowego dla często używanych modułów i przestrzeni nazw, aby podczas odwoływania się do elementu członkowskiego tego modułu lub przestrzeni nazw można użyć krótkiej formy nazwy zamiast w pełni kwalifikowanej nazwy. To słowo kluczowe jest podobne do `using` słowa kluczowego `using namespace` C#w, C++w wizualizacji i `Imports` w Visual Basic.
 
-W tym samym projekcie lub w przywoływanego projektu lub zestawu, modułu lub przestrzeni nazw, pod warunkiem musi być. Jeśli nie jest dostępne, można dodać odwołania do projektu lub użyj `-reference` polecenia`-`opcji (lub jego skrót `-r`). Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).
+Dostarczony moduł lub przestrzeń nazw muszą znajdować się w tym samym projekcie lub w przywoływanym projekcie lub zestawie. Jeśli tak nie jest, można dodać odwołanie do projektu lub użyć `-reference` opcji wiersza polecenia`-` `-r`(lub jego skrótu). Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).
 
-Deklaracja importu udostępnia nazwy w kodzie, który następuje po deklaracji, aż do końcowego otaczającej przestrzeni nazw, modułu lub pliku.
+Deklaracja importu udostępnia nazwy dostępne w kodzie, który następuje po deklaracji, do końca otaczającej przestrzeni nazw, modułu lub pliku.
 
-Korzystając z wielu deklaracji importu, powinna zostać wyświetlona w osobnych wierszach.
+Jeśli używasz wielu deklaracji importu, powinny one pojawiać się w osobnych wierszach.
 
-Poniższy kod przedstawia użycie `open` — słowo kluczowe w celu uproszczenia kodu.
+Poniższy kod ilustruje użycie `open` słowa kluczowego w celu uproszczenia kodu.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
 
-F# Kompilator nie generuje błąd lub ostrzeżenie przypadku niejednoznaczności wystąpienia sytuacji takiej samej nazwie w więcej niż jeden otwarty modułu lub przestrzeni nazw. Gdy występują niejasności, F# preferuje bardziej ostatnio otwieranych modułu lub przestrzeni nazw. Na przykład w poniższym kodzie `empty` oznacza `Seq.empty`, nawet jeśli `empty` znajduje się w obu `List` i `Seq` modułów.
+F# Kompilator nie emituje błędu lub ostrzeżenia, gdy niejasności wystąpi, gdy ta sama nazwa występuje w więcej niż jednym otwartym module lub przestrzeni nazw. Gdy wystąpi niejasności, F# zapewnia preferencję dla ostatnio otwartego modułu lub przestrzeni nazw. Na przykład, w poniższym kodzie, `empty` oznacza `Seq.empty`, `empty` chociaż znajduje się zarówno `List` w module, jak i `Seq` .
 
 ```fsharp
 open List
@@ -44,27 +44,27 @@ open Seq
 printfn "%A" empty
 ```
 
-W związku z tym, należy zachować ostrożność podczas takich jak otwierania modułów i przestrzeni nazw `List` lub `Seq` zawierających elementy członkowskie, które mają identyczne nazwy; zamiast tego Rozważ użycie kwalifikowanej nazwy. Należy unikać każdej sytuacji, w której kod jest zależny od kolejności deklaracji importu.
+W związku z tym należy zachować ostrożność podczas otwierania modułów lub `List` przestrzeni `Seq` nazw, takich jak lub zawierających składowe o identycznych nazwach. zamiast tego należy rozważyć użycie kwalifikowanych nazw. Należy unikać każdej sytuacji, w której kod jest zależny od kolejności deklaracji importu.
 
-## <a name="namespaces-that-are-open-by-default"></a>Przestrzenie nazw, które są domyślnie otwarty
+## <a name="namespaces-that-are-open-by-default"></a>Obszary nazw, które są domyślnie otwarte
 
-Niektóre przestrzenie nazw, dlatego często są używane w F# kodu, że są one otwarte niejawnie bez konieczności deklaracji jawny import. W poniższej tabeli przedstawiono przestrzenie nazw, które są domyślnie otwarty.
+Niektóre przestrzenie nazw są często używane F# w kodzie, który są otwierane niejawnie bez potrzeby jawnej deklaracji importu. W poniższej tabeli przedstawiono obszary nazw, które są domyślnie otwarte.
 
 |Przestrzeń nazw|Opis|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|Zawiera podstawowe F# wpisz definicje dla typów wbudowanych, taką jak `int` i `float`.|
-|`Microsoft.FSharp.Core.Operators`|Zawiera podstawowe operacje arytmetyczne, takie jak `+` i `*`.|
-|`Microsoft.FSharp.Collections`|Zawiera klasy kolekcji niezmienialnej, takie jak `List` i `Array`.|
-|`Microsoft.FSharp.Control`|Zawiera typy dla konstrukcji kontrolki, takie jak obliczanie z opóźnieniem i asynchroniczne przepływy pracy.|
-|`Microsoft.FSharp.Text`|Zawiera funkcje dla sformatowane we/wy, takich jak `printf` funkcji.|
+|`Microsoft.FSharp.Core`|Zawiera podstawowe F# definicje typów dla typów wbudowanych, takich jak `int` i. `float`|
+|`Microsoft.FSharp.Core.Operators`|Zawiera podstawowe operacje arytmetyczne, `+` takie `*`jak i.|
+|`Microsoft.FSharp.Collections`|Zawiera niezmienne klasy kolekcji, `List` takie `Array`jak i.|
+|`Microsoft.FSharp.Control`|Zawiera typy dla konstrukcji kontroli, takich jak Ocena z opóźnieniem i asynchroniczne przepływy pracy.|
+|`Microsoft.FSharp.Text`|Zawiera funkcje dla sformatowanych operacji we/wy `printf` , takich jak funkcja.|
 
 ## <a name="autoopen-attribute"></a>AutoOpen — atrybut
 
-Można zastosować `AutoOpen` atrybut do zestawu, jeśli chcesz automatycznie otworzyć przestrzeni nazw lub module, gdy odwołuje się do zestawu. Można również zastosować `AutoOpen` atrybutu modułu, aby automatycznie otworzyć ten moduł, po otwarciu moduł nadrzędny lub przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Core.autoopenattribute — klasa](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d).
+Można zastosować `AutoOpen` atrybut do zestawu, jeśli chcesz automatycznie otworzyć przestrzeń nazw lub moduł, gdy odwołanie do zestawu. Można również zastosować `AutoOpen` atrybut do modułu, aby automatycznie otworzyć ten moduł po otwarciu modułu nadrzędnego lub przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Klasa Core.](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d)AutoOpenAttribute.
 
-## <a name="requirequalifiedaccess-attribute"></a>Requirequalifiedaccess — atrybut
+## <a name="requirequalifiedaccess-attribute"></a>RequireQualifiedAccess — atrybut
 
-Niektóre moduły, rekordów lub typy Unii mogą określać `RequireQualifiedAccess` atrybutu. Gdy odwołujesz się elementy te moduły, rekordów lub Unii, należy użyć kwalifikowanej nazwy, niezależnie od tego, czy obejmują deklaracji importu. Użycie tego atrybutu strategicznie dla typów, które definiują najczęściej używane nazwy, pomagają uniknąć konfliktów nazw, a tym samym wprowadzić kod bardziej odporne na zmiany w bibliotekach. Aby uzyskać więcej informacji, zobacz [Core.requirequalifiedaccessattribute — klasa](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D).
+Niektóre moduły, rekordy lub typy Unii mogą określać `RequireQualifiedAccess` atrybut. Gdy odwołujesz się do elementów tych modułów, rekordów lub Unii, musisz użyć kwalifikowanej nazwy bez względu na to, czy dołączysz deklarację importu. Jeśli ten atrybut jest używany strategicznie dla typów, które definiują często używane nazwy, można uniknąć kolizji nazw, a tym samym zwiększyć odporność kodu na zmiany w bibliotekach. Aby uzyskać więcej informacji, zobacz [Klasa Core. RequireQualifiedAccessAttribute —](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,17 +1,17 @@
 ---
-title: 'Lambda Expressions: Fun — słowo kluczowe'
-description: Dowiedz się, jak używać F# — słowo kluczowe "fun", aby zdefiniować wyrażenia lambda jest funkcją anonimową.
+title: 'Wyrażenia lambda: Zabawne słowo kluczowe'
+description: Dowiedz się, jak F# za pomocą słowa kluczowego "zabawny" zdefiniować wyrażenie lambda, które jest funkcją anonimową.
 ms.date: 05/16/2016
-ms.openlocfilehash: c59d32bd4226384213453f1a9d362209e68a6fb5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9818724686dd83a7e352fb36819289fa19b002df
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645391"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630663"
 ---
-# <a name="lambda-expressions-the-fun-keyword-f"></a>Lambda Expressions: Fun — słowo kluczowe (F#)
+# <a name="lambda-expressions-the-fun-keyword-f"></a>Wyrażenia lambda: Zabawne słowo kluczowe (F#)
 
-`fun` — Słowo kluczowe jest używane do definiowania Wyrażenie lambda, oznacza to, że funkcja anonimowa.
+`fun` Słowo kluczowe jest używane do definiowania wyrażenia lambda, czyli funkcji anonimowej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,7 +21,7 @@ fun parameter-list -> expression
 
 ## <a name="remarks"></a>Uwagi
 
-*Listy parametrów* zwykle składa się z nazwy i, opcjonalnie, typy parametrów. Ogólnie rzecz biorąc *listy parametrów* może składać się z dowolnej F# wzorców. Aby uzyskać pełną listę możliwości wzorców, zobacz [dopasowywania do wzorca](../pattern-matching.md). Listy prawidłowych parametrów zawierają następujące przykłady.
+*Lista parametrów* zwykle składa się z nazw i, opcjonalnie, typów parametrów. Ogólnie rzecz biorąc, *Lista parametrów* może składać się z jakichkolwiek F# wzorców. Aby uzyskać pełną listę możliwych wzorców, zobacz [Dopasowanie wzorców](../pattern-matching.md). Lista prawidłowych parametrów zawiera następujące przykłady.
 
 ```fsharp
 // Lambda expressions with parameter lists.
@@ -36,15 +36,15 @@ fun (a, b) -> …
 fun head :: tail -> …
 ```
 
-*Wyrażenie* treści funkcji ostatniego wyrażenia, które generuje wartość zwracaną. Przykłady wyrażeń lambda prawidłowe są następujące:
+*Wyrażenie* jest treścią funkcji, ostatnim wyrażeniem generującym wartość zwracaną. Przykłady prawidłowych wyrażeń lambda są następujące:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet301.fs)]
 
 ## <a name="using-lambda-expressions"></a>Korzystając z wyrażenia Lambda
 
-Wyrażenia lambda są szczególnie przydatne, jeśli chcesz wykonywać operacje na liście lub inna kolekcja i chcesz uniknąć dodatkowej pracy definiowania funkcji. Wiele F# funkcje biblioteki przyjmują wartości funkcji jako argumentów i może być szczególnie wygodne, można użyć wyrażenia lambda w tych przypadkach. Następujący kod dotyczy elementów listy, wyrażenia lambda. W takim przypadku funkcja anonimowa dodaje 1 dla każdego elementu listy.
+Wyrażenia lambda są szczególnie przydatne podczas wykonywania operacji na liście lub w innej kolekcji i chcą uniknąć dodatkowej pracy związanej z definiowaniem funkcji. Wiele F# funkcji biblioteki przyjmuje wartości funkcji jako argumenty i może być szczególnie wygodne do użycia wyrażenia lambda w tych przypadkach. Poniższy kod stosuje wyrażenie lambda do elementów listy. W takim przypadku funkcja anonimowa dodaje 1 do każdego elementu listy.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet302.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet302.fs)]
 
 ## <a name="see-also"></a>Zobacz także
 

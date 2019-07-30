@@ -1,0 +1,35 @@
+- name: Aplikacje bezserwerowe — książka elektroniczna
+  href: index.md
+  items:
+    - name: Podejścia do architektury
+      href: architecture-approaches.md
+      items:
+        - name: Podejścia do wdrażania architektury
+          href: architecture-deployment-approaches.md
+    - name: Architektura bezserwerowa
+      href: serverless-architecture.md
+      items:
+        - name: Zagadnienia dotyczące architektury bezserwerowej
+          href: serverless-architecture-considerations.md
+        - name: Przykłady projektów bezserwerowych
+          href: serverless-design-examples.md
+    - name: Bezserwerowa platforma Azure
+      href: azure-serverless-platform.md
+      items:
+        - name: Azure Functions
+          href: azure-functions.md
+        - name: Application Insights
+          href: application-insights.md
+        - name: Azure Logic Apps
+          href: logic-apps.md
+        - name: Azure Event Grid
+          href: event-grid.md
+    - name: Trwałe funkcje platformy Azure
+      href: durable-azure-functions.md
+      items:
+        - name: Wzorce orkiestracji
+          href: orchestration-patterns.md
+    - name: Scenariusze biznesowe i przypadki użycia bez korzystania z serwera
+      href: serverless-business-scenarios.md
+    - name: Wniosek
+      href: serverless-conclusion.md

@@ -19,10 +19,6 @@
     - name: Udostępnianie składników .NET Framework modelowi COM
       href: exposing-dotnet-components-to-com.md
       items:
-        - name: Kwalifikowanie typów .NET do międzyoperacyjności
-          href: qualifying-net-types-for-interoperation.md
-        - name: Stosowanie atrybutów międzyoperacyjności
-          href: applying-interop-attributes.md
         - name: Pakowanie zestawu dla modelu COM
           href: packaging-an-assembly-for-com.md
         - name: Rejestrowanie zestawów do użycia z modelem COM
@@ -94,15 +90,8 @@
               href: how-to-migrate-managed-code-dcom-to-wcf.md
     - name: 'Instrukcje: Mapowanie wyników HRESULT i wyjątków'
       href: how-to-map-hresults-and-exceptions.md
-    - name: Otoki COM
-      href: com-wrappers.md
-      items:
-        - name: Wywoływana otoka środowiska uruchomieniowego
-          href: runtime-callable-wrapper.md
-        - name: Wywoływana otoka COM
-          href: com-callable-wrapper.md
-        - name: 'Instrukcje: Tworzenie otok COM'
-          href: how-to-create-com-wrappers.md
+    - name: 'Instrukcje: Tworzenie otok COM'
+      href: how-to-create-com-wrappers.md
     - name: Równoważność typów i osadzone typy międzyoperacyjne
       href: type-equivalence-and-embedded-interop-types.md
     - name: 'Instrukcje: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe'

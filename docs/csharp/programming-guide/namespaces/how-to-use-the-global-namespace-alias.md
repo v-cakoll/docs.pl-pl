@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użycie globalnych aliasów Namespace - C# przewodnik programowania'
+title: 'Instrukcje: Użyj globalnego aliasu przestrzeni nazw C# — Przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,50 +7,50 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: 6d3e0740a472f74116712e737e49f86d4202dea5
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: f44bb1f010f154973fc6982882c9b5a09528da76
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452791"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629442"
 ---
-# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a><span data-ttu-id="dca84-102">Instrukcje: Użycie globalnych aliasów Namespace (C# Programming Guide)</span><span class="sxs-lookup"><span data-stu-id="dca84-102">How to: Use the Global Namespace Alias (C# Programming Guide)</span></span>
-<span data-ttu-id="dca84-103">Możliwość dostępu do elementu członkowskiego w globalnym [przestrzeni nazw](../../../csharp/language-reference/keywords/namespace.md) jest przydatne, gdy element członkowski może być ono ukryte przez inną jednostkę o takiej samej nazwie.</span><span class="sxs-lookup"><span data-stu-id="dca84-103">The ability to access a member in the global [namespace](../../../csharp/language-reference/keywords/namespace.md) is useful when the member might be hidden by another entity of the same name.</span></span>  
+# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a><span data-ttu-id="4c8b7-102">Instrukcje: Użyj globalnego aliasu przestrzeni nazwC# (Przewodnik programowania)</span><span class="sxs-lookup"><span data-stu-id="4c8b7-102">How to: Use the Global Namespace Alias (C# Programming Guide)</span></span>
+<span data-ttu-id="4c8b7-103">Możliwość uzyskania dostępu do elementu członkowskiego w globalnej [przestrzeni nazw](../../../csharp/language-reference/keywords/namespace.md) jest przydatna, gdy członek może być ukryty przez inną jednostkę o tej samej nazwie.</span><span class="sxs-lookup"><span data-stu-id="4c8b7-103">The ability to access a member in the global [namespace](../../../csharp/language-reference/keywords/namespace.md) is useful when the member might be hidden by another entity of the same name.</span></span>  
   
- <span data-ttu-id="dca84-104">Na przykład w poniższym kodzie `Console` jest rozpoznawana jako `TestApp.Console` zamiast do `Console` wpisać <xref:System> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="dca84-104">For example, in the following code, `Console` resolves to `TestApp.Console` instead of to the `Console` type in the <xref:System> namespace.</span></span>  
+ <span data-ttu-id="4c8b7-104">Na przykład, `Console` w poniższym kodzie, jest rozpoznawana jako `TestApp.Console` zamiast <xref:System> do `Console` typu w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="4c8b7-104">For example, in the following code, `Console` resolves to `TestApp.Console` instead of to the `Console` type in the <xref:System> namespace.</span></span>  
   
  [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]  
   
  [!code-csharp[csProgGuideNamespaces#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#1)]  
   
- <span data-ttu-id="dca84-105">Za pomocą `System.Console` nadal powoduje błąd, ponieważ `System` przestrzeni nazw jest ukryty przez klasę `TestApp.System`:</span><span class="sxs-lookup"><span data-stu-id="dca84-105">Using `System.Console` still results in an error because the `System` namespace is hidden by the class `TestApp.System`:</span></span>  
+ <span data-ttu-id="4c8b7-105">Użycie `System.Console` nadal powoduje błąd, `System` ponieważ przestrzeń nazw jest ukryta przez klasę `TestApp.System`:</span><span class="sxs-lookup"><span data-stu-id="4c8b7-105">Using `System.Console` still results in an error because the `System` namespace is hidden by the class `TestApp.System`:</span></span>  
   
  [!code-csharp[csProgGuideNamespaces#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#2)]  
   
- <span data-ttu-id="dca84-106">Jednak możesz obejść ten błąd, za pomocą `global::System.Console`, podobnie do następującego:</span><span class="sxs-lookup"><span data-stu-id="dca84-106">However, you can work around this error by using `global::System.Console`, like this:</span></span>  
+ <span data-ttu-id="4c8b7-106">Można jednak obejść ten błąd przy użyciu `global::System.Console`, jak to:</span><span class="sxs-lookup"><span data-stu-id="4c8b7-106">However, you can work around this error by using `global::System.Console`, like this:</span></span>  
   
  [!code-csharp[csProgGuideNamespaces#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#3)]  
   
- <span data-ttu-id="dca84-107">Gdy jest identyfikator po lewej stronie `global`, wyszukaj identyfikator prawo rozpoczyna się w globalnej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="dca84-107">When the left identifier is `global`, the search for the right identifier starts at the global namespace.</span></span> <span data-ttu-id="dca84-108">Na przykład następująca deklaracja odwołuje się do `TestApp` jako członek globalnej przestrzeni.</span><span class="sxs-lookup"><span data-stu-id="dca84-108">For example, the following declaration is referencing `TestApp` as a member of the global space.</span></span>  
+ <span data-ttu-id="4c8b7-107">Gdy lewy identyfikator to `global`, wyszukiwanie właściwego identyfikatora zaczyna się od globalnej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="4c8b7-107">When the left identifier is `global`, the search for the right identifier starts at the global namespace.</span></span> <span data-ttu-id="4c8b7-108">Na przykład następująca deklaracja jest odwołująca `TestApp` się jako składowa obszaru globalnego.</span><span class="sxs-lookup"><span data-stu-id="4c8b7-108">For example, the following declaration is referencing `TestApp` as a member of the global space.</span></span>  
   
  [!code-csharp[csProgGuideNamespaces#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#4)]  
   
- <span data-ttu-id="dca84-109">Oczywiście, tworząc własne przestrzenie nazw o nazwie `System` nie jest zalecane, i jest mało prawdopodobne, będą napotykać jakiegokolwiek kodu, w którym to się stało.</span><span class="sxs-lookup"><span data-stu-id="dca84-109">Obviously, creating your own namespaces called `System` is not recommended, and it is unlikely you will encounter any code in which this has happened.</span></span> <span data-ttu-id="dca84-110">Jednak w dużych projektach, jest bardzo prawdziwy możliwość, że duplikacji przestrzeni nazw może wystąpić w czy innej formie.</span><span class="sxs-lookup"><span data-stu-id="dca84-110">However, in larger projects, it is a very real possibility that namespace duplication may occur in one form or another.</span></span> <span data-ttu-id="dca84-111">W takich sytuacjach kwalifikator globalnej przestrzeni nazw jest usługi gwarancji, że można określić głównej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="dca84-111">In these situations, the global namespace qualifier is your guarantee that you can specify the root namespace.</span></span>  
+ <span data-ttu-id="4c8b7-109">Oczywiście utworzenie własnych nazw o nazwie `System` nie jest zalecane i jest mało prawdopodobne, że zostanie napotkany kod, w którym wystąpił ten plik.</span><span class="sxs-lookup"><span data-stu-id="4c8b7-109">Obviously, creating your own namespaces called `System` is not recommended, and it is unlikely you will encounter any code in which this has happened.</span></span> <span data-ttu-id="4c8b7-110">Jednak w większych projektach jest to bardzo prawdziwa możliwość duplikowania przestrzeni nazw może wystąpić w jednej postaci lub w innym.</span><span class="sxs-lookup"><span data-stu-id="4c8b7-110">However, in larger projects, it is a very real possibility that namespace duplication may occur in one form or another.</span></span> <span data-ttu-id="4c8b7-111">W takich sytuacjach kwalifikator globalnej przestrzeni nazw jest gwarancją, że można określić główną przestrzeń nazw.</span><span class="sxs-lookup"><span data-stu-id="4c8b7-111">In these situations, the global namespace qualifier is your guarantee that you can specify the root namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dca84-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="dca84-112">Example</span></span>  
- <span data-ttu-id="dca84-113">W tym przykładzie obszar nazw `System` jest używana do włączenia klasy `TestClass` w związku z tym, `global::System.Console` musi być używana do odwołania `System.Console` klasy, która jest ukryta przez `System` przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="dca84-113">In this example, the namespace `System` is used to include the class `TestClass` therefore, `global::System.Console` must be used to reference the `System.Console` class, which is hidden by the `System` namespace.</span></span> <span data-ttu-id="dca84-114">Ponadto alias `colAlias` służy do odwoływania się do przestrzeni nazw `System.Collections`; w związku z tym, wystąpienie <xref:System.Collections.Hashtable?displayProperty=nameWithType> został utworzony za pomocą tego aliasu zamiast przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="dca84-114">Also, the alias `colAlias` is used to refer to the namespace `System.Collections`; therefore, the instance of a <xref:System.Collections.Hashtable?displayProperty=nameWithType> was created using this alias instead of the namespace.</span></span>  
+## <a name="example"></a><span data-ttu-id="4c8b7-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="4c8b7-112">Example</span></span>  
+ <span data-ttu-id="4c8b7-113">W `System` tym przykładzie przestrzeń nazw jest używana do uwzględnienia klasy `TestClass` , `global::System.Console` dlatego musi być używana do odwoływania `System.Console` się do klasy, która jest ukryta przez `System` przestrzeń nazw.</span><span class="sxs-lookup"><span data-stu-id="4c8b7-113">In this example, the namespace `System` is used to include the class `TestClass` therefore, `global::System.Console` must be used to reference the `System.Console` class, which is hidden by the `System` namespace.</span></span> <span data-ttu-id="4c8b7-114">Alias `colAlias` jest również używany do odwoływania się do przestrzeni nazw `System.Collections`, dlatego wystąpienie elementu <xref:System.Collections.Hashtable?displayProperty=nameWithType> zostało utworzone przy użyciu tego aliasu zamiast przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="4c8b7-114">Also, the alias `colAlias` is used to refer to the namespace `System.Collections`; therefore, the instance of a <xref:System.Collections.Hashtable?displayProperty=nameWithType> was created using this alias instead of the namespace.</span></span>  
   
  [!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]  
   
-<span data-ttu-id="dca84-115">**1**
+<span data-ttu-id="4c8b7-115">**A 1**
 **B 2**
-**C 3**</span><span class="sxs-lookup"><span data-stu-id="dca84-115">**A 1**
+**C 3**</span><span class="sxs-lookup"><span data-stu-id="4c8b7-115">**A 1**
 **B 2**
 **C 3**</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="dca84-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="dca84-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4c8b7-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4c8b7-116">See also</span></span>
 
-- [<span data-ttu-id="dca84-117">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="dca84-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="dca84-118">Przestrzenie nazw</span><span class="sxs-lookup"><span data-stu-id="dca84-118">Namespaces</span></span>](../../../csharp/programming-guide/namespaces/index.md)
-- [<span data-ttu-id="dca84-119">:: operator</span><span class="sxs-lookup"><span data-stu-id="dca84-119">:: Operator</span></span>](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
-- [<span data-ttu-id="dca84-120">extern</span><span class="sxs-lookup"><span data-stu-id="dca84-120">extern</span></span>](../../../csharp/language-reference/keywords/extern.md)
+- [<span data-ttu-id="4c8b7-117">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="4c8b7-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="4c8b7-118">Przestrzenie nazw</span><span class="sxs-lookup"><span data-stu-id="4c8b7-118">Namespaces</span></span>](../../../csharp/programming-guide/namespaces/index.md)
+- [<span data-ttu-id="4c8b7-119">:: operator</span><span class="sxs-lookup"><span data-stu-id="4c8b7-119">:: Operator</span></span>](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
+- [<span data-ttu-id="4c8b7-120">extern</span><span class="sxs-lookup"><span data-stu-id="4c8b7-120">extern</span></span>](../../../csharp/language-reference/keywords/extern.md)

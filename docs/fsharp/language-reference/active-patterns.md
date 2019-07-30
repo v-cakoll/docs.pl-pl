@@ -1,19 +1,19 @@
 ---
 title: Wzorce aktywne
-description: Dowiedz się, jak zdefiniować nazwanych partycji, które należy podzielić dane wejściowe w przy użyciu wzorców F# języka programowania.
+description: Dowiedz się, jak używać aktywnych wzorców do definiowania nazwanych partycji, które dzielą dane wejściowe w języku F# programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: 25ab255574390d3761fe788aeb413c8ee04fda2a
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 12f423abe05e649e0b527ed04124b991feb5d592
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690407"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629950"
 ---
-# <a name="active-patterns"></a><span data-ttu-id="5dd4b-103">Wzorce aktywne</span><span class="sxs-lookup"><span data-stu-id="5dd4b-103">Active Patterns</span></span>
+# <a name="active-patterns"></a><span data-ttu-id="247f5-103">Wzorce aktywne</span><span class="sxs-lookup"><span data-stu-id="247f5-103">Active Patterns</span></span>
 
-<span data-ttu-id="5dd4b-104">*Wzorce aktywne* umożliwiają definiowanie nazwanych partycji, które należy podzielić dane wejściowe, dzięki czemu można używać tych nazw w wyrażeniu dopasowania, tak jak w przypadku złożenia dyskryminowanego do wzorca.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-104">*Active patterns* enable you to define named partitions that subdivide input data, so that you can use these names in a pattern matching expression just as you would for a discriminated union.</span></span> <span data-ttu-id="5dd4b-105">Wzorce aktywne służy do rozkładania danych w sposób dostosowany dla każdej partycji.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-105">You can use active patterns to decompose data in a customized manner for each partition.</span></span>
+<span data-ttu-id="247f5-104">*Aktywne wzorce* umożliwiają zdefiniowanie nazwanych partycji, które dzielą dane wejściowe, dzięki czemu można używać tych nazw w wyrażeniu dopasowania wzorca tak samo jak w przypadku Unii rozłącznych.</span><span class="sxs-lookup"><span data-stu-id="247f5-104">*Active patterns* enable you to define named partitions that subdivide input data, so that you can use these names in a pattern matching expression just as you would for a discriminated union.</span></span> <span data-ttu-id="247f5-105">Przy użyciu aktywnych wzorców można rozkładać dane w dostosowany sposób dla każdej partycji.</span><span class="sxs-lookup"><span data-stu-id="247f5-105">You can use active patterns to decompose data in a customized manner for each partition.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="5dd4b-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="5dd4b-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="247f5-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="247f5-106">Syntax</span></span>
 
 ```fsharp
 // Active pattern of one choice.
@@ -28,19 +28,19 @@ let (|identifer1|identifier2|...|) valueToMatch = expression
 let (|identifier|_|) [arguments ] valueToMatch = expression
 ```
 
-## <a name="remarks"></a><span data-ttu-id="5dd4b-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="5dd4b-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="247f5-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="247f5-107">Remarks</span></span>
 
-<span data-ttu-id="5dd4b-108">W poprzedniej składni identyfikatory są nazwy partycji danych wejściowych, który jest reprezentowany przez *argumenty*, lub innymi słowy, nazwy dla podzbiorów zbiór wszystkich wartości argumentów.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-108">In the previous syntax, the identifiers are names for partitions of the input data that is represented by *arguments*, or, in other words, names for subsets of the set of all values of the arguments.</span></span> <span data-ttu-id="5dd4b-109">W definicji — aktywny wzorzec może być maksymalnie siedem partycji.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-109">There can be up to seven partitions in an active pattern definition.</span></span> <span data-ttu-id="5dd4b-110">*Wyrażenie* opisuje formularza, w którym do rozkładania danych.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-110">The *expression* describes the form into which to decompose the data.</span></span> <span data-ttu-id="5dd4b-111">Definicja — aktywny wzorzec można użyć do zdefiniowania reguł do określania, której partycji nazwanej wartości podanej jako argumenty należą do.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-111">You can use an active pattern definition to define the rules for determining which of the named partitions the values given as arguments belong to.</span></span> <span data-ttu-id="5dd4b-112">(| I |) symbole są określane jako *klipy banany* i jest wywoływana funkcja utworzone przez tego typu powiązania let *active rozpoznawania*.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-112">The (| and |) symbols are referred to as *banana clips* and the function created by this type of let binding is called an *active recognizer*.</span></span>
+<span data-ttu-id="247f5-108">W poprzedniej składni identyfikatory są nazwami dla partycji danych wejściowych, które są reprezentowane przez *argumenty*lub, innymi słowy, nazwy podzestawów zestawu wszystkich wartości argumentów.</span><span class="sxs-lookup"><span data-stu-id="247f5-108">In the previous syntax, the identifiers are names for partitions of the input data that is represented by *arguments*, or, in other words, names for subsets of the set of all values of the arguments.</span></span> <span data-ttu-id="247f5-109">W definicji aktywnego wzorca może istnieć maksymalnie siedem partycji.</span><span class="sxs-lookup"><span data-stu-id="247f5-109">There can be up to seven partitions in an active pattern definition.</span></span> <span data-ttu-id="247f5-110">*Wyrażenie* opisuje formularz, w którym mają zostać rozdzielone dane.</span><span class="sxs-lookup"><span data-stu-id="247f5-110">The *expression* describes the form into which to decompose the data.</span></span> <span data-ttu-id="247f5-111">Możesz użyć aktywnej definicji wzorca, aby zdefiniować reguły określania, które z nazwanych partycji są wartościami podaną jako argumenty należą do.</span><span class="sxs-lookup"><span data-stu-id="247f5-111">You can use an active pattern definition to define the rules for determining which of the named partitions the values given as arguments belong to.</span></span> <span data-ttu-id="247f5-112">Symbole (| i |) są określane jako klipy *bananów* , a funkcja utworzona przez ten typ powiązania Let jest nazywana *aktywnym aparatem rozpoznawania*.</span><span class="sxs-lookup"><span data-stu-id="247f5-112">The (| and |) symbols are referred to as *banana clips* and the function created by this type of let binding is called an *active recognizer*.</span></span>
 
-<span data-ttu-id="5dd4b-113">Na przykład należy wziąć pod uwagę następujące aktywny wzorzec z nieprawidłowym argumentem.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-113">As an example, consider the following active pattern with an argument.</span></span>
+<span data-ttu-id="247f5-113">Na przykład rozważmy następujący Aktywny wzorzec z argumentem.</span><span class="sxs-lookup"><span data-stu-id="247f5-113">As an example, consider the following active pattern with an argument.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5001.fs)]
 
-<span data-ttu-id="5dd4b-114">Aktywny wzorzec można użyć w wyrażeniu, jak w poniższym przykładzie dopasowania do wzorca.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-114">You can use the active pattern in a pattern matching expression, as in the following example.</span></span>
+<span data-ttu-id="247f5-114">Możesz użyć aktywnego wzorca w wyrażeniu dopasowania do wzorca, jak w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="247f5-114">You can use the active pattern in a pattern matching expression, as in the following example.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5002.fs)]
 
-<span data-ttu-id="5dd4b-115">Dane wyjściowe tego programu jest następująca:</span><span class="sxs-lookup"><span data-stu-id="5dd4b-115">The output of this program is as follows:</span></span>
+<span data-ttu-id="247f5-115">Dane wyjściowe tego programu są następujące:</span><span class="sxs-lookup"><span data-stu-id="247f5-115">The output of this program is as follows:</span></span>
 
 ```
 7 is odd
@@ -48,11 +48,11 @@ let (|identifier|_|) [arguments ] valueToMatch = expression
 32 is even
 ```
 
-<span data-ttu-id="5dd4b-116">Innym zastosowaniem wzorców jest do rozkładania typy danych na wiele sposobów, na przykład w przypadku tych samych danych bazowych różne reprezentacje to możliwe.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-116">Another use of active patterns is to decompose data types in multiple ways, such as when the same underlying data has various possible representations.</span></span> <span data-ttu-id="5dd4b-117">Na przykład `Color` obiekt może być rozłożone na reprezentację w postaci RGB lub reprezentację w postaci HSB.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-117">For example, a `Color` object could be decomposed into an RGB representation or an HSB representation.</span></span>
+<span data-ttu-id="247f5-116">Innym sposobem użycia aktywnych wzorców jest rozkład typów danych na wiele sposobów, na przykład wtedy, gdy te same dane podstawowe mają różne możliwe reprezentacje.</span><span class="sxs-lookup"><span data-stu-id="247f5-116">Another use of active patterns is to decompose data types in multiple ways, such as when the same underlying data has various possible representations.</span></span> <span data-ttu-id="247f5-117">Na przykład `Color` obiekt może zostać rozłożony na reprezentację RGB lub reprezentację HSB.</span><span class="sxs-lookup"><span data-stu-id="247f5-117">For example, a `Color` object could be decomposed into an RGB representation or an HSB representation.</span></span>
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
-<span data-ttu-id="5dd4b-118">Dane wyjściowe programu powyżej jest następująca:</span><span class="sxs-lookup"><span data-stu-id="5dd4b-118">The output of the above program is as follows:</span></span>
+<span data-ttu-id="247f5-118">Dane wyjściowe powyższego programu są następujące:</span><span class="sxs-lookup"><span data-stu-id="247f5-118">The output of the above program is as follows:</span></span>
 
 ```
 Red
@@ -72,17 +72,17 @@ BlanchedAlmond
  Hue: 36.000000 Saturation: 1.000000 Brightness: 0.901961
 ```
 
-<span data-ttu-id="5dd4b-119">W połączeniu te dwa sposoby używania wzorców pozwalają na partycji i rozkładania danych do odpowiedniej postaci i wykonać odpowiednie obliczeń na odpowiednie dane w postaci najbardziej odpowiednim obliczeń.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-119">In combination, these two ways of using active patterns enable you to partition and decompose data into just the appropriate form and perform the appropriate computations on the appropriate data in the form most convenient for the computation.</span></span>
+<span data-ttu-id="247f5-119">W połączeniu te dwa sposoby używania aktywnych wzorców umożliwiają partycjonowanie i rozdzielenie danych na odpowiedni formularz i wykonanie odpowiednich obliczeń na odpowiednich danych w formularzu najbardziej wygodnym do obliczenia.</span><span class="sxs-lookup"><span data-stu-id="247f5-119">In combination, these two ways of using active patterns enable you to partition and decompose data into just the appropriate form and perform the appropriate computations on the appropriate data in the form most convenient for the computation.</span></span>
 
-<span data-ttu-id="5dd4b-120">Wyrażenia dopasowania wzorca wynikowe Włącz dane są zapisywane w wygodny sposób, który jest bardzo czytelny, znaczne uproszczenie złożonych tworzenia rozgałęzień i kod analizy danych.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-120">The resulting pattern matching expressions enable data to be written in a convenient way that is very readable, greatly simplifying potentially complex branching and data analysis code.</span></span>
+<span data-ttu-id="247f5-120">Wyrażenia zgodne z wzorcem umożliwiają zapisywanie danych w wygodny sposób, który jest bardzo czytelny, co znacznie upraszcza tworzenie rozgałęzień i kodu analizy danych.</span><span class="sxs-lookup"><span data-stu-id="247f5-120">The resulting pattern matching expressions enable data to be written in a convenient way that is very readable, greatly simplifying potentially complex branching and data analysis code.</span></span>
 
-## <a name="partial-active-patterns"></a><span data-ttu-id="5dd4b-121">Wzorce aktywne częściowe</span><span class="sxs-lookup"><span data-stu-id="5dd4b-121">Partial Active Patterns</span></span>
+## <a name="partial-active-patterns"></a><span data-ttu-id="247f5-121">Częściowe aktywne wzorce</span><span class="sxs-lookup"><span data-stu-id="247f5-121">Partial Active Patterns</span></span>
 
-<span data-ttu-id="5dd4b-122">Czasami musisz partycji tylko część obszaru danych wejściowych.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-122">Sometimes, you need to partition only part of the input space.</span></span> <span data-ttu-id="5dd4b-123">W takim przypadku można zapisać zestawu częściowego wzorców, z nich odnosić się do niektórych danych wejściowych, ale nie można dopasować pozostałych danych wejściowych.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-123">In that case, you write a set of partial patterns each of which match some inputs but fail to match other inputs.</span></span> <span data-ttu-id="5dd4b-124">Aktywne wzorce, które nie zawsze daje wartość są nazywane *częściowe wzorców*; mają zwracanej wartości, która jest typem opcji.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-124">Active patterns that do not always produce a value are called *partial active patterns*; they have a return value that is an option type.</span></span> <span data-ttu-id="5dd4b-125">Aby zdefiniować częściowe — aktywny wzorzec, należy użyć symbolu wieloznacznego (\_) na końcu listy wzorców wewnątrz klipów banany.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-125">To define a partial active pattern, you use a wildcard character (\_) at the end of the list of patterns inside the banana clips.</span></span> <span data-ttu-id="5dd4b-126">Poniższy kod ilustruje sposób korzystania z częściowego — aktywny wzorzec.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-126">The following code illustrates the use of a partial active pattern.</span></span>
+<span data-ttu-id="247f5-122">Czasami należy podzielić tylko część przestrzeni wejściowej.</span><span class="sxs-lookup"><span data-stu-id="247f5-122">Sometimes, you need to partition only part of the input space.</span></span> <span data-ttu-id="247f5-123">W takim przypadku należy napisać zestaw częściowych wzorców, z których każdy jest zgodny z niektórymi danymi wejściowymi, ale nie może dopasować innych danych wejściowych.</span><span class="sxs-lookup"><span data-stu-id="247f5-123">In that case, you write a set of partial patterns each of which match some inputs but fail to match other inputs.</span></span> <span data-ttu-id="247f5-124">Aktywne wzorce, które nie zawsze generują wartość, są nazywane *częściowymi wzorcami aktywnymi*; mają one wartość zwracaną, która jest typem opcji.</span><span class="sxs-lookup"><span data-stu-id="247f5-124">Active patterns that do not always produce a value are called *partial active patterns*; they have a return value that is an option type.</span></span> <span data-ttu-id="247f5-125">Aby zdefiniować częściowy Aktywny wzorzec, należy użyć symbolu wieloznacznego\_() na końcu listy wzorców wewnątrz klipów bananów.</span><span class="sxs-lookup"><span data-stu-id="247f5-125">To define a partial active pattern, you use a wildcard character (\_) at the end of the list of patterns inside the banana clips.</span></span> <span data-ttu-id="247f5-126">Poniższy kod ilustruje użycie części aktywnego wzorca.</span><span class="sxs-lookup"><span data-stu-id="247f5-126">The following code illustrates the use of a partial active pattern.</span></span>
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
-<span data-ttu-id="5dd4b-127">Dane wyjściowe poprzedniego przykładu, jest następujący:</span><span class="sxs-lookup"><span data-stu-id="5dd4b-127">The output of the previous example is as follows:</span></span>
+<span data-ttu-id="247f5-127">W poprzednim przykładzie przedstawiono dane wyjściowe poniższego przykładu:</span><span class="sxs-lookup"><span data-stu-id="247f5-127">The output of the previous example is as follows:</span></span>
 
 ```
 1.100000 : Floating point
@@ -92,11 +92,11 @@ BlanchedAlmond
 Something else : Not matched.
 ```
 
-<span data-ttu-id="5dd4b-128">Korzystając z częściowego wzorców, czasami poszczególne opcje mogą być rozłączne lub wzajemnie się wykluczają, ale nie muszą być.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-128">When using partial active patterns, sometimes the individual choices can be disjoint or mutually exclusive, but they need not be.</span></span> <span data-ttu-id="5dd4b-129">W poniższym przykładzie kwadrat wzorca i wzorzec modułu nie są rozłączne, ponieważ niektóre numery kwadratów i modułów, takich jak 64.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-129">In the following example, the pattern Square and the pattern Cube are not disjoint, because some numbers are both squares and cubes, such as 64.</span></span> <span data-ttu-id="5dd4b-130">Następujący program używa wzorca i połączyć wzorców kwadratu i moduł.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-130">The following program uses the AND pattern to combine the Square and Cube patterns.</span></span> <span data-ttu-id="5dd4b-131">Wydrukować wszystkich liczb całkowitych maksymalnie 1000, które są zarówno kwadratów i modułów, a także tych, które są tylko moduły.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-131">It print out all integers up to 1000 that are both squares and cubes, as well as those which are only cubes.</span></span> 
+<span data-ttu-id="247f5-128">W przypadku używania częściowych aktywnych wzorców czasami poszczególne opcje mogą być rozłączne lub wykluczane wzajemnie, ale nie muszą być.</span><span class="sxs-lookup"><span data-stu-id="247f5-128">When using partial active patterns, sometimes the individual choices can be disjoint or mutually exclusive, but they need not be.</span></span> <span data-ttu-id="247f5-129">W poniższym przykładzie, kwadrat wzorca i moduł wzorca nie są rozłączane, ponieważ niektóre liczby są kwadratami i modułami, takimi jak 64.</span><span class="sxs-lookup"><span data-stu-id="247f5-129">In the following example, the pattern Square and the pattern Cube are not disjoint, because some numbers are both squares and cubes, such as 64.</span></span> <span data-ttu-id="247f5-130">Poniższy program używa wzorca i do łączenia wzorców kwadratowych i sześcianu.</span><span class="sxs-lookup"><span data-stu-id="247f5-130">The following program uses the AND pattern to combine the Square and Cube patterns.</span></span> <span data-ttu-id="247f5-131">Drukuje wszystkie liczby całkowite o wartości do 1000, które są zarówno kwadratami, jak i modułami, a także tymi, które są tylko modułami.</span><span class="sxs-lookup"><span data-stu-id="247f5-131">It print out all integers up to 1000 that are both squares and cubes, as well as those which are only cubes.</span></span> 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
-<span data-ttu-id="5dd4b-132">Wynik jest następujący:</span><span class="sxs-lookup"><span data-stu-id="5dd4b-132">The output is as follows:</span></span>
+<span data-ttu-id="247f5-132">Wynik jest następujący:</span><span class="sxs-lookup"><span data-stu-id="247f5-132">The output is as follows:</span></span>
 
 ```
 1 is a cube and a square
@@ -111,30 +111,30 @@ Something else : Not matched.
 1000 is a cube
 ```
 
-## <a name="parameterized-active-patterns"></a><span data-ttu-id="5dd4b-133">Wzorce aktywne sparametryzowane</span><span class="sxs-lookup"><span data-stu-id="5dd4b-133">Parameterized Active Patterns</span></span>
+## <a name="parameterized-active-patterns"></a><span data-ttu-id="247f5-133">Sparametryzowane aktywne wzorce</span><span class="sxs-lookup"><span data-stu-id="247f5-133">Parameterized Active Patterns</span></span>
 
-<span data-ttu-id="5dd4b-134">Wzorce aktywne zawsze uruchomić co najmniej jednego argumentu dla elementu są dopasowywane, ale potrwać dodatkowych argumentów, w tym przypadku nazwa *sparametryzowanego — aktywny wzorzec* ma zastosowanie.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-134">Active patterns always take at least one argument for the item being matched, but they may take additional arguments as well, in which case the name *parameterized active pattern* applies.</span></span> <span data-ttu-id="5dd4b-135">Dodatkowe argumenty zezwala na ogólny wzorzec można wyspecjalizować.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-135">Additional arguments allow a general pattern to be specialized.</span></span> <span data-ttu-id="5dd4b-136">Na przykład wzorców, które używają wyrażeń regularnych do analizowania ciągów często zawierają wyrażenia regularnego jako dodatkowego parametru, zgodnie z poniższym kodem, który także używa częściowe — aktywny wzorzec `Integer` zdefiniowane w poprzednim przykładzie kodu.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-136">For example, active patterns that use regular expressions to parse strings often include the regular expression as an extra parameter, as in the following code, which also uses the partial active pattern `Integer` defined in the previous code example.</span></span> <span data-ttu-id="5dd4b-137">W tym przykładzie podane są ciągów, które używają wyrażeń regularnych dla różnych formatów daty, aby dostosować ogólny ParseRegex — aktywny wzorzec.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-137">In this example, strings that use regular expressions for various date formats are given to customize the general ParseRegex active pattern.</span></span> <span data-ttu-id="5dd4b-138">Liczba całkowita — aktywny wzorzec służy do konwertowania ciągów dopasowane do liczb całkowitych, które mogą być przekazywane do konstruktora daty/godziny.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-138">The Integer active pattern is used to convert the matched strings into integers that can be passed to the DateTime constructor.</span></span>
+<span data-ttu-id="247f5-134">Aktywne wzorce zawsze przyjmują co najmniej jeden argument dla elementu, który jest dopasowywany, ale mogą również przyjmować dodatkowe argumenty, w tym przypadku ma zastosowanie nazwa *sparametryzowanego wzorca* .</span><span class="sxs-lookup"><span data-stu-id="247f5-134">Active patterns always take at least one argument for the item being matched, but they may take additional arguments as well, in which case the name *parameterized active pattern* applies.</span></span> <span data-ttu-id="247f5-135">Dodatkowe argumenty umożliwiają użycie ogólnego wzorca.</span><span class="sxs-lookup"><span data-stu-id="247f5-135">Additional arguments allow a general pattern to be specialized.</span></span> <span data-ttu-id="247f5-136">Na przykład aktywne wzorce używające wyrażeń regularnych do analizowania ciągów często zawierają wyrażenie regularne jako dodatkowy parametr, jak w poniższym kodzie, który używa również części aktywnego wzorca `Integer` zdefiniowanego w poprzednim przykładzie kodu.</span><span class="sxs-lookup"><span data-stu-id="247f5-136">For example, active patterns that use regular expressions to parse strings often include the regular expression as an extra parameter, as in the following code, which also uses the partial active pattern `Integer` defined in the previous code example.</span></span> <span data-ttu-id="247f5-137">W tym przykładzie ciągi, które używają wyrażeń regularnych dla różnych formatów daty, są przyznawane w celu dostosowania ogólnego wzorca ParseRegex.</span><span class="sxs-lookup"><span data-stu-id="247f5-137">In this example, strings that use regular expressions for various date formats are given to customize the general ParseRegex active pattern.</span></span> <span data-ttu-id="247f5-138">Aktywny wzorzec w liczbie całkowitej służy do konwertowania dopasowanych ciągów do liczb całkowitych, które mogą być przesyłane do konstruktora DateTime.</span><span class="sxs-lookup"><span data-stu-id="247f5-138">The Integer active pattern is used to convert the matched strings into integers that can be passed to the DateTime constructor.</span></span>
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
-<span data-ttu-id="5dd4b-139">Dane wyjściowe poprzedniego kodu jest następująca:</span><span class="sxs-lookup"><span data-stu-id="5dd4b-139">The output of the previous code is as follows:</span></span>
+<span data-ttu-id="247f5-139">Dane wyjściowe poprzedniego kodu są następujące:</span><span class="sxs-lookup"><span data-stu-id="247f5-139">The output of the previous code is as follows:</span></span>
 
 ```
 12/22/2008 12:00:00 AM 1/1/2009 12:00:00 AM 1/15/2008 12:00:00 AM 12/28/1995 12:00:00 AM
 ```
 
-<span data-ttu-id="5dd4b-140">Wzorce aktywne nie są ograniczone tylko do wyrażenia dopasowania do wzorca, można również użyć na let — powiązania.</span><span class="sxs-lookup"><span data-stu-id="5dd4b-140">Active patterns are not restricted only to pattern matching expressions, you can also use them on let-bindings.</span></span>
+<span data-ttu-id="247f5-140">Aktywne wzorce nie są ograniczone tylko do wyrażeń dopasowania wzorca, ale można ich używać również na potrzeby powiązań.</span><span class="sxs-lookup"><span data-stu-id="247f5-140">Active patterns are not restricted only to pattern matching expressions, you can also use them on let-bindings.</span></span>
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
 
-<span data-ttu-id="5dd4b-141">Dane wyjściowe poprzedniego kodu jest następująca:</span><span class="sxs-lookup"><span data-stu-id="5dd4b-141">The output of the previous code is as follows:</span></span>
+<span data-ttu-id="247f5-141">Dane wyjściowe poprzedniego kodu są następujące:</span><span class="sxs-lookup"><span data-stu-id="247f5-141">The output of the previous code is as follows:</span></span>
 
 ```
 Hello, random citizen!
 Hello, George!
 ```
 
-## <a name="see-also"></a><span data-ttu-id="5dd4b-142">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5dd4b-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="247f5-142">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="247f5-142">See also</span></span>
 
-- [<span data-ttu-id="5dd4b-143">Dokumentacja języka F#</span><span class="sxs-lookup"><span data-stu-id="5dd4b-143">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="5dd4b-144">Wyrażenia dopasowania</span><span class="sxs-lookup"><span data-stu-id="5dd4b-144">Match Expressions</span></span>](match-expressions.md)
+- [<span data-ttu-id="247f5-143">Dokumentacja języka F#</span><span class="sxs-lookup"><span data-stu-id="247f5-143">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="247f5-144">Wyrażenia dopasowania</span><span class="sxs-lookup"><span data-stu-id="247f5-144">Match Expressions</span></span>](match-expressions.md)

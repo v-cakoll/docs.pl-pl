@@ -23,6 +23,8 @@
       href: tutorials/image-classification.md
     - name: Analiza sprzedaży produktu (wykrywanie anomalii)
       href: tutorials/sales-anomaly-detection.md
+    - name: Wykrywanie obiektów w obrazach (wykrywanie obiektów)
+      href: tutorials/object-detection-onnx.md
 - name: Przewodniki z instrukcjami
   items:
     - name: Ładowanie danych

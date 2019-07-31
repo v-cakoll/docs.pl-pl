@@ -13,25 +13,25 @@ helpviewer_keywords:
 - GIF decoding [WPF]
 - GIF encoding [WPF]
 ms.assetid: 9cdd9ec7-71eb-444b-b9e3-991958461163
-ms.openlocfilehash: 35bd08f0d5e4d2ee9b8731706c9f1d770d67f633
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec509a03d95e5f72af0b1f362e253799b07edc1f
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947618"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671691"
 ---
 # <a name="how-to-encode-and-decode-a-gif-image"></a>Instrukcje: Kodowanie i dekodowanie obrazu GIF
-W poniższych przykładach pokazano, jak dekodowanie i kodowanie [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] obrazów przy użyciu określonego <xref:System.Windows.Media.Imaging.GifBitmapDecoder> i <xref:System.Windows.Media.Imaging.GifBitmapEncoder> obiektów.  
+W poniższych przykładach pokazano, jak zdekodować i kodować obraz Graphics Interchange Format (GIF) przy użyciu <xref:System.Windows.Media.Imaging.GifBitmapDecoder> określonych <xref:System.Windows.Media.Imaging.GifBitmapEncoder> obiektów i.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie pokazano, jak dekodowanie [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] obrazów przy użyciu <xref:System.Windows.Media.Imaging.GifBitmapDecoder> z <xref:System.IO.FileStream>.  
+ W tym przykładzie pokazano, jak zdekodować obraz GIF przy <xref:System.Windows.Media.Imaging.GifBitmapDecoder> użyciu od <xref:System.IO.FileStream>a.  
   
  [!code-cpp[GifBitmapDecoderEncoder#1](~/samples/snippets/cpp/VS_Snippets_Wpf/GifBitmapDecoderEncoder/CPP/GifEncoderDecoder.cpp#1)]
  [!code-csharp[GifBitmapDecoderEncoder#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GifBitmapDecoderEncoder/CSharp/GifEncoderDecoder.cs#1)]
  [!code-vb[GifBitmapDecoderEncoder#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GifBitmapDecoderEncoder/VB/GifEncoderDecoder.vb#1)]  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie pokazano, jak kodować <xref:System.Windows.Media.Imaging.BitmapSource> do [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] obrazów przy użyciu <xref:System.Windows.Media.Imaging.GifBitmapEncoder>.  
+ Ten przykład ilustruje sposób kodowania <xref:System.Windows.Media.Imaging.BitmapSource> do obrazu GIF <xref:System.Windows.Media.Imaging.GifBitmapEncoder>przy użyciu.  
   
  [!code-cpp[GifBitmapDecoderEncoder#4](~/samples/snippets/cpp/VS_Snippets_Wpf/GifBitmapDecoderEncoder/CPP/GifEncoderDecoder.cpp#4)]
  [!code-csharp[GifBitmapDecoderEncoder#4](~/samples/snippets/csharp/VS_Snippets_Wpf/GifBitmapDecoderEncoder/CSharp/GifEncoderDecoder.cs#4)]

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: e2c93f4471db2d72851a5d5bd8806b59a3e5ee28
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629865"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671833"
 ---
 # <a name="technology-regions-overview"></a>Przegląd Regiony technologiczne
 Jeśli w aplikacji jest używanych wiele technologii prezentacji, takich jak WPF, Win32 lub DirectX, muszą one udostępnić obszary renderowania w ramach wspólnego okna najwyższego poziomu. W tym temacie opisano problemy, które mogą mieć wpływ na prezentację i dane wejściowe aplikacji międzyoperacyjnej WPF.  
@@ -52,13 +52,13 @@ Jeśli w aplikacji jest używanych wiele technologii prezentacji, takich jak WPF
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]obsługuje HRGNs; nie ma jednak żadnych zarządzanych interfejsów API dla tej funkcji. Można użyć wywołania platformy i <xref:System.Windows.Interop.HwndSource> wywołać odpowiednie [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] interfejsy API. Aby uzyskać więcej informacji, zobacz [wywoływanie funkcji natywnych z kodu zarządzanego](/cpp/dotnet/calling-native-functions-from-managed-code).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]okna z warstwami mają różne możliwości w różnych systemach operacyjnych. Dzieje się tak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , ponieważ używa DirectX do renderowania, a okna z warstwami zostały [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] głównie zaprojektowane do renderowania, a nie renderowania DirectX.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]okna z warstwami mają różne możliwości w różnych systemach operacyjnych. Jest to spowodowane [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tym, że program używa DirectX do renderowania, a warstwowe okna zostały głównie zaprojektowane do renderowania GDI, a nie renderowania DirectX.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]obsługuje przyspieszane sprzętowo okna w [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] systemie i nowszych wersjach. Przyspieszane sprzętowo okna [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] z warstwami są obsługiwane przez program Microsoft DirectX, dzięki czemu możliwości będą zależeć od wersji programu Microsoft DirectX na tym komputerze.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Program nie obsługuje przezroczystych kluczy kolorów, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ponieważ nie może gwarantować dokładnego koloru, szczególnie gdy renderowanie jest przyspieszane sprzętowo.  
   
-- Jeśli aplikacja jest uruchomiona w [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]systemie, okna warstwowe na wierzchu programu DirectX są migotane, gdy aplikacja DirectX jest renderowana.  (Rzeczywista sekwencja renderowania to [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] ukrycie okna warstwowego, a następnie DirectX, a następnie [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] ponowne umieszczenie okna z warstwą).  W przypadku[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] okien nienależących do warstwowego obowiązuje również ograniczenie.  
+- Jeśli aplikacja jest uruchomiona w [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]systemie, okna warstwowe na wierzchu programu DirectX są migotane, gdy aplikacja DirectX jest renderowana.  (Rzeczywista sekwencja renderowania polega na tym, że system Microsoft Windows GDI (GDI) ukrywa okno warstwowe, następnie program DirectX rysuje, a następnie system Microsoft Windows GDI (GDI) umieszcza ponownie okno warstwowe).  W przypadku[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] okien nienależących do warstwowego obowiązuje również ograniczenie.  
   
 ## <a name="see-also"></a>Zobacz także
 

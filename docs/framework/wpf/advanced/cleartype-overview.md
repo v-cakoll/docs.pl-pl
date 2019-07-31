@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: c9d86cadd5f2115d0214d9a1b1dce7e6682341e0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 405d06a8da8ec5c428c1565bcd08236de0f1fa88
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629727"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672058"
 ---
 # <a name="cleartype-overview"></a>ClearType — Przegląd
 Ten temat zawiera omówienie technologii Microsoft ClearType, która znajduje się w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -19,11 +19,11 @@ Ten temat zawiera omówienie technologii Microsoft ClearType, która znajduje si
 ## <a name="technology-overview"></a>Omówienie technologii  
  Technologia ClearType jest technologią oprogramowania opracowaną przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] program, która zwiększa czytelność tekstu w istniejących LCDS (w przypadku wyświetlaczy Liquid Crystal), takich jak ekrany laptopów, urządzenia Pocket PC i monitory płaskoekranowe.  Technologia ClearType działa przez uzyskanie dostępu do poszczególnych elementów pasków kolorów w pionie w każdym piksel ekranu LCD. Przed użyciem technologii ClearType najmniejszy poziom szczegółowości wyświetlany przez komputer był pojedynczy piksel, ale dzięki technologii ClearType działającej na monitorze LCD można teraz wyświetlać funkcje tekstu jako małe jako ułamek o szerokości pikseli. Dodatkowe rozwiązanie zwiększa ostrość niewielkich szczegółów w wyświetlaniu tekstu, ułatwiając odczytywanie ich w dłuższym czasie.  
   
- Technologia ClearType dostępna w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] programie to najnowsza generacja technologii ClearType, która ma kilka ulepszeń w porównaniu z [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]wersją zainstalowaną w programie.  
+ Technologia ClearType dostępna w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] programie to najnowsza generacja technologii ClearType, która ma kilka ulepszeń w porównaniu z wersją w systemie Microsoft Windows GDI (GDI).  
   
 <a name="sub-pixel_positioning"></a>   
 ## <a name="sub-pixel-positioning"></a>Pozycjonowanie w pikselach podrzędnych  
- Znaczną poprawę w porównaniu z poprzednią wersją technologii ClearType jest użycie pozycjonowania w pikselach podrzędnych. W przeciwieństwie do implementacji technologii ClearType [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]w programie technologia ClearType znaleziona w programie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] umożliwia uruchamianie symboli w pikselach, a nie tylko na początku piksela. Ze względu na to, że dodatkowe rozwiązanie w symbolach pozycjonowania, odstępy i proporcje symboli są bardziej precyzyjne i spójne.  
+ Znaczną poprawę w porównaniu z poprzednią wersją technologii ClearType jest użycie pozycjonowania w pikselach podrzędnych. W przeciwieństwie do implementacji technologii ClearType znalezionej w usłudze GDI, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] technologia ClearType znaleziona w programie umożliwia uruchamianie symboli w pikselach, a nie tylko na początku piksela. Ze względu na to, że dodatkowe rozwiązanie w symbolach pozycjonowania, odstępy i proporcje symboli są bardziej precyzyjne i spójne.  
   
  W poniższych dwóch przykładach pokazano, jak symbole mogą rozpoczynać się w dowolnej granicy podrzędnej pikseli, gdy jest używane pozycjonowanie w pikselach podrzędnych. Przykład po lewej stronie jest renderowany przy użyciu wcześniejszej wersji modułu renderowania ClearType, która nie wykorzystuje pozycjonowania w pikselach podrzędnych. Przykład po prawej stronie jest renderowany przy użyciu nowej wersji renderowania ClearType przy użyciu pozycjonowania w pikselach podrzędnych. Zwróć uwagę, jak każda **e** i **l** w obrazie po prawej stronie jest renderowany nieco inaczej, ponieważ każdy z nich zaczyna się na innym pikselu. W przypadku wyświetlania tekstu na normalnym rozmiarze na ekranie różnica nie jest zauważalna ze względu na duży kontrast obrazu glifu. Jest to możliwe tylko ze względu na zaawansowane filtrowanie kolorów, które jest włączone w technologii ClearType.  
   
@@ -37,7 +37,7 @@ Tekst z wcześniejszymi i nowszymi wersjami technologii ClearType
   
 <a name="y-direction_antialiasing"></a>   
 ## <a name="y-direction-antialiasing"></a>Wygładzanie kierunku Y  
- Innym ulepszeniem technologii ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w programie jest Antyaliasowanie kierunku y. Technologia ClearType w [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] programie bez kierunku y ma lepszą rozdzielczość na osi x, ale nie oś y. Na wierzchołkach i u dołu płytki są postrzępione krawędzie, które są niezależne od ich czytelności.  
+ Innym ulepszeniem technologii ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w programie jest Antyaliasowanie kierunku y. Technologia ClearType w interfejsie GDI bez kierunku t-aliasu nie umożliwia lepszego rozpoznawania na osi x, ale nie na osi y. Na wierzchołkach i u dołu płytki są postrzępione krawędzie, które są niezależne od ich czytelności.  
   
  W poniższym przykładzie przedstawiono efekt braku wygładzania kierunku osi y. W takim przypadku widoczne są nieregularne krawędzie na górze i u dołu litery.  
   

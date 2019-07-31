@@ -1,7 +1,7 @@
 ---
 title: Wyrażenia lambda — C# Przewodnik programowania
 ms.custom: seodec18
-ms.date: 03/14/2019
+ms.date: 07/29/2019
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,38 +9,44 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 546feb6f3c4515ceecdb5b5afa14c0fc99ab7020
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 36dab520d67d08d1b3304f1453bfb2c07a2f1c32
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363907"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671709"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Wyrażenia lambda (C# Przewodnik programowania)
 
-*Wyrażenie lambda* jest blokiem kodu (wyrażenie lub blok instrukcji), który jest traktowany jako obiekt. Może być przekazana jako argument do metod i może być również zwracany przez wywołania metody. Wyrażenia lambda są używane w szerokim stopniu dla:
+*Wyrażenie lambda* jest wyrażeniem jednej z następujących dwóch form:
 
-- Przekazywanie kodu, który ma być wykonywany w metodach asynchronicznych, takich <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType>jak.
+- [Wyrażenie lambda](#expression-lambdas) , które ma wyrażenie jako treść:
 
-- Pisanie [wyrażeń zapytań LINQ](../../linq/index.md).
+  ```csharp
+  (input-parameters) => expression
+  ```
 
-- Tworzenie [drzew wyrażeń](../concepts/expression-trees/index.md).
+- [Instrukcja lambda](#statement-lambdas) , która ma blok instrukcji jako treść:
 
-Wyrażenia lambda to kod, który może być reprezentowany jako delegat lub jako drzewo wyrażenia, które kompiluje do delegata. Określony typ delegata wyrażenia lambda zależy od jego parametrów i wartości zwracanej. Wyrażenia lambda, które nie zwracają wartości, odpowiadają określonemu `Action` delegatowi, w zależności od jego liczby parametrów. Wyrażenia lambda, które zwracają wartość, odpowiadają określonemu `Func` delegatowi, w zależności od jego liczby parametrów. Na przykład wyrażenie lambda, które ma dwa parametry, ale nie zwraca wartości odnosi się do <xref:System.Action%602> delegata. Wyrażenie lambda, które ma jeden parametr i zwraca wartość odnosi się do <xref:System.Func%602> delegata.
+  ```csharp  
+  (input-parameters) => { <sequence-of-statements> }
+  ```
 
-Wyrażenie lambda używa `=>` [operatora deklaracji lambda](../../language-reference/operators/lambda-operator.md), aby oddzielić listę parametrów lambda z jego kodu wykonywalnego. Aby utworzyć wyrażenie lambda, należy określić parametry wejściowe (jeśli istnieją) po lewej stronie operatora lambda, i umieścić wyrażenie lub blok instrukcji po drugiej stronie. Na przykład jednowierszowe wyrażenie `x => x * x` lambda określa parametr o nazwie `x` `x` i zwraca wartość kwadratową. To wyrażenie można przypisać do typu delegata, tak jak pokazano w poniższym przykładzie:
+Użyj [ `=>` operatora deklaracji lambda](../../language-reference/operators/lambda-operator.md) , aby oddzielić listę parametrów lambda z jej treści. Aby utworzyć wyrażenie lambda, należy określić parametry wejściowe (jeśli istnieją) po lewej stronie operatora lambda i wyrażenie lub blok instrukcji po drugiej stronie.
+
+Każde wyrażenie lambda można przekonwertować na typ [delegata](../../language-reference/builtin-types/reference-types.md#the-delegate-type) . Typ delegata, do którego można przekonwertować wyrażenie lambda, jest definiowany przez typy jego parametrów i wartość zwracaną. Jeśli wyrażenie lambda nie zwraca wartości, można je przekonwertować na jeden z `Action` typów delegatów; w przeciwnym razie można je przekonwertować na jeden `Func` z typów delegatów. Na przykład wyrażenie lambda, które ma dwa parametry i nie zwraca żadnej wartości, można przekonwertować na <xref:System.Action%602> delegata. Wyrażenie lambda, które ma jeden parametr i zwraca wartość, można przekonwertować na <xref:System.Func%602> obiekt delegowany. W poniższym przykładzie wyrażenie `x => x * x`lambda, które określa parametr o nazwie `x` `x` i zwraca wartość kwadratową, jest przypisywana do zmiennej typu delegata:
 
 [!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
 
-Można również przypisać wyrażenie lambda do typu drzewa wyrażenia:
+Wyrażenia lambda można również przekonwertować na typy [drzewa wyrażeń](../concepts/expression-trees/index.md) , jak pokazano w poniższym przykładzie:
 
 [!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
 
-Lub można przekazać ją bezpośrednio jako argument metody:
+Można użyć wyrażeń lambda w dowolnym kodzie, który wymaga wystąpienia typów delegatów lub drzew wyrażeń, na przykład jako argumentu <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> metody, aby przekazać kod, który powinien być wykonany w tle. Można również użyć wyrażeń lambda podczas pisania [wyrażeń zapytania LINQ](../../linq/index.md), jak pokazano w poniższym przykładzie:
 
-[!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
+[!code-csharp-interactive[lambda is argument in LINQ](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
-Przy użyciu składni opartej na metodzie wywoływanie <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> metody <xref:System.Linq.Enumerable?displayProperty=nameWithType> w klasie (jak w LINQ to Objects i LINQ to XML) parametr jest typem <xref:System.Func%602?displayProperty=nameWithType>delegata. Użycie wyrażenia lambda jest najwygodniejszym sposobem tworzenia delegata. Po wywołaniu <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> metody <xref:System.Linq.Queryable?displayProperty=nameWithType> w klasie (jak w LINQ to SQL) typem parametru jest typ [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>)drzewa wyrażenia. I znowu wyrażenie lambda jest tylko bardzo zwięzłym sposobem konstruowania takiego drzewa wyrażeń. Wyrażenia lambda umożliwiają `Select` podobne wywołania, chociaż w rzeczywistości typ obiektu utworzonego na podstawie wyrażenia lambda jest inny.
+W przypadku użycia składni opartej na metodzie do <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> wywołania metody <xref:System.Linq.Enumerable?displayProperty=nameWithType> w klasie, na przykład w LINQ to Objects i LINQ to XML, parametr jest typem <xref:System.Func%602?displayProperty=nameWithType>delegata. Po wywołaniu <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> metody <xref:System.Linq.Queryable?displayProperty=nameWithType> w klasie, na przykład w LINQ to SQL, typem parametru jest typ [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>)drzewa wyrażenia. W obu przypadkach można użyć tego samego wyrażenia lambda, aby określić wartość parametru. Powoduje to, że `Select` dwa wywołania wyglądają podobnie, chociaż w rzeczywistości typ obiektów utworzonych na podstawie wyrażeń lambda jest różny.
   
 ## <a name="expression-lambdas"></a>Wyrażenia lambda
 
@@ -73,7 +79,7 @@ Treść wyrażenia lambda może składać się z wywołania metody. Jeśli jedna
 Lambda instrukcji jest podobna do lambdy wyrażenia, z tym że instrukcje są ujęte w nawiasy klamrowe:
 
 ```csharp  
-(input-parameters) => { statement; }
+(input-parameters) => { <sequence-of-statements> }
 ```
 
 Treść lambdy instrukcji może składać się z dowolnej liczby instrukcji, jednak w praktyce jest ich zwykle nie więcej niż dwie lub trzy.

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 440a6d76e5295613d2887c0a77d9a49e870e580b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 39cf4b60262afb1e3745a82c734391385669f5d3
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629819"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671906"
 ---
 # <a name="wpf-architecture"></a>Architektura WPF
 Ten temat zawiera Przewodnik dotyczący hierarchii klas Windows Presentation Foundation (WPF). Obejmuje to większość głównych podsystemów [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]i opisuje sposób ich działania. Zawiera również szczegóły niektórych opcji dokonywanych przez architektów [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -76,9 +76,9 @@ Ten temat zawiera Przewodnik dotyczący hierarchii klas Windows Presentation Fou
   
  Inne ważne szczegóły, które nie są naprawdę zauważalne na diagramie, to sposób rzeczywistego wykonywania kompozycji przez system.  
   
- W User32 i [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]system działa w trybie natychmiastowego przycinania. Gdy składnik musi być renderowany, system ustanawia granice przycinające poza tym, że składnik nie może dotykać pikseli, a następnie składnik jest proszony o malowanie pikseli w tym polu. Ten system działa bardzo dobrze w systemach z ograniczoną ilością pamięci, ponieważ w przypadku, gdy tylko zmiany muszą być dotknięciem składnika, którego dotyczy problem — żadne dwa składniki nigdy nie współtworzyją koloru jednego piksela.  
+ W systemach User32 i GDI system działa w trybie natychmiastowego przycinania. Gdy składnik musi być renderowany, system ustanawia granice przycinające poza tym, że składnik nie może dotykać pikseli, a następnie składnik jest proszony o malowanie pikseli w tym polu. Ten system działa bardzo dobrze w systemach z ograniczoną ilością pamięci, ponieważ w przypadku, gdy tylko zmiany muszą być dotknięciem składnika, którego dotyczy problem — żadne dwa składniki nigdy nie współtworzyją koloru jednego piksela.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]używa modelu rysowania "algorytmu malarza". Oznacza to, że zamiast przycinania każdego składnika każdy składnik jest proszony o renderowanie od tyłu do przodu ekranu. Pozwala to każdemu składnikowi na malowanie na ekranie poprzedniego składnika. Zaletą tego modelu jest to, że możesz mieć złożone, częściowo przezroczyste kształty. Dzięki współczesnemu, nowoczesnemu sprzętowi graficznemu model ten jest stosunkowo szybki (w przypadku gdy User32 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] /zostały utworzone).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]używa modelu rysowania "algorytmu malarza". Oznacza to, że zamiast przycinania każdego składnika każdy składnik jest proszony o renderowanie od tyłu do przodu ekranu. Pozwala to każdemu składnikowi na malowanie na ekranie poprzedniego składnika. Zaletą tego modelu jest to, że możesz mieć złożone, częściowo przezroczyste kształty. Dzięki współczesnemu, nowoczesnemu sprzętowi graficznemu model ten jest stosunkowo szybki (w przypadku utworzenia User32/GDI).  
   
  Jak wspomniano wcześniej, podstawową [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zasadą jest przejście do bardziej deklaracyjnego modelu programowania "właściwości". W systemie wizualnym pokazuje to w kilku interesujących miejscach.  
   

@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 4f3d8a9f275a41b96b6518d63552ce9873cca0fb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ee5318b8ba1284f2805b80b3e41fab3ae739158c
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400816"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671997"
 ---
 # <a name="xaml-overview-wpf"></a>Przegląd XAML (WPF)
+
 W tym temacie opisano funkcje języka XAML i pokazano, jak można użyć języka XAML do pisania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. W tym temacie opisano w tym artykule język [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]XAML wdrożony przez program. Język XAML jest większym pojęciem języka [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]niż.  
 
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>Co to jest XAML?  
- XAML jest deklaratywnym językiem znaczników. Zgodnie z modelem programowania .NET Framework język XAML upraszcza tworzenie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aplikacji .NET Framework. Można utworzyć widoczne [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementy w deklaratywnym znaczniku XAML, a następnie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] oddzielić definicję od logiki czasu wykonywania przy użyciu plików powiązanych z kodem, przyłączonych do znaczników przy użyciu częściowych definicji klas. XAML bezpośrednio reprezentuje Tworzenie wystąpienia obiektów w określonym zestawie typów zapasowych zdefiniowanych w zestawach. Jest to w przeciwieństwie do większości innych języków znaczników, które są zwykle interpretowane, bez bezpośredniego powiązania z systemem typów zapasowych. Język XAML umożliwia przepływ pracy, w [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] którym osobne strony mogą korzystać z logiki aplikacji, przy użyciu potencjalnie różnych narzędzi.  
+ XAML jest deklaratywnym językiem znaczników. Zgodnie z modelem programowania .NET Framework język XAML upraszcza tworzenie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aplikacji .NET Framework. Można utworzyć widoczne [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementy w deklaratywnym znaczniku XAML, a następnie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] oddzielić definicję od logiki czasu wykonywania przy użyciu plików powiązanych z kodem, które są przyłączone do znaczników przy użyciu częściowych definicji klas. XAML bezpośrednio reprezentuje Tworzenie wystąpienia obiektów w określonym zestawie typów zapasowych zdefiniowanych w zestawach. Jest to w przeciwieństwie do większości innych języków znaczników, które są zwykle interpretowane, bez bezpośredniego powiązania z systemem typów zapasowych. Język XAML umożliwia przepływ pracy, w [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] którym osobne strony mogą korzystać z logiki aplikacji, przy użyciu potencjalnie różnych narzędzi.  
   
  Gdy jest reprezentowana jako tekst, pliki XAML są plikami XML, które zwykle `.xaml` mają rozszerzenie. Pliki mogą być kodowane przy użyciu dowolnego kodowania XML, ale kodowanie jako UTF-8 jest typowe.  
   
@@ -104,7 +105,7 @@ W tym temacie opisano funkcje języka XAML i pokazano, jak można użyć języka
   
  Jako reguła języka XAML, wartość właściwości zawartości XAML musi zostać podaną całkowicie przed lub całkowicie po jakimkolwiek innym elementom właściwości w tym elemencie obiektu. Na przykład następujące znaczniki nie kompilują:  
   
-```  
+```xaml
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -188,7 +189,7 @@ W tym temacie opisano funkcje języka XAML i pokazano, jak można użyć języka
  [!code-xaml[XAMLOvwSupport#MarginVerbose](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
   
 > [!NOTE]
->  Istnieje również ograniczona liczba obiektów, w których konwersja typu jest jedynym publicznym sposobem ustawiania właściwości tego typu bez uwzględniania podklasy, ponieważ sam typ nie ma konstruktora bezparametrycznego. Może to być na przykład <xref:System.Windows.Input.Cursor>.  
+> Istnieje również ograniczona liczba obiektów, w których konwersja typu jest jedynym publicznym sposobem ustawiania właściwości tego typu bez uwzględniania podklasy, ponieważ sam typ nie ma konstruktora bezparametrycznego. Może to być na przykład <xref:System.Windows.Input.Cursor>.  
   
  Aby uzyskać więcej informacji na temat sposobu konwersji typów i użycia dla składni atrybutów, zobacz [TypeConverters i XAML](typeconverters-and-xaml.md).  
   
@@ -228,7 +229,7 @@ W tym temacie opisano funkcje języka XAML i pokazano, jak można użyć języka
   
  Poniżej znajduje się bardzo podstawowy przykład sposobu działania niestandardowych prefiksów w znacznikach XAML. Prefiks `custom` jest zdefiniowany w tagu elementu głównego i mapowany do określonego zestawu, który jest spakowany i dostępny dla aplikacji. Ten zestaw zawiera typ `NumericUpDown`, który jest implementowany do obsługi ogólnego użycia XAML, a także przy użyciu dziedziczenia klasy, które pozwala na jego wstawienie w tym konkretnym punkcie w modelu zawartości XAML WPF. Wystąpienie tego `NumericUpDown` formantu jest zadeklarowane jako element obiektu, przy użyciu prefiksu, tak aby Analizator XAML wie, która przestrzeń nazw XAML zawiera typ, i w związku z tym, gdzie zestaw zapasowy zawiera definicję typu.  
   
-```  
+```xaml
 <Page  
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"   
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"   
@@ -285,9 +286,9 @@ W tym temacie opisano funkcje języka XAML i pokazano, jak można użyć języka
 ## <a name="attached-properties-and-attached-events"></a>Dołączone właściwości i dołączone zdarzenia  
  XAML określa funkcję języka, która umożliwia określenie pewnych właściwości lub zdarzeń w dowolnym elemencie, niezależnie od tego, czy właściwość lub zdarzenie istnieje w definicjach typu dla elementu, który jest ustawiany. Wersja właściwości tej funkcji jest nazywana dołączoną właściwością, a wersja zdarzenia jest nazywana dołączonym zdarzeniem. Koncepcyjnie można traktować dołączone właściwości i załączone zdarzenia jako elementy członkowskie globalne, które można ustawić dla dowolnego wystąpienia elementu/obiektu XAML. Jednak ten element/Klasa lub większa infrastruktura musi obsługiwać magazyn właściwości zapasowych dla dołączonych wartości.  
   
- Dołączone właściwości w języku XAML są zwykle używane przez składnię atrybutu. W składni atrybutu należy określić dołączoną właściwość w postaci OwnerType . Funkcja *PropertyName*.  
+ Dołączone właściwości w języku XAML są zwykle używane przez składnię atrybutu. W składni atrybutu należy określić dołączoną właściwość w postaci OwnerType. Funkcja *PropertyName*.  
   
- Jest to podobne, co przypomina użycie elementu właściwości, ale w tym przypadku jest on  zawsze innym typem niż element obiektu, w którym jest ustawiana dołączona właściwość. *OwnerType* jest typem, który dostarcza metody akcesora wymagane przez procesor XAML w celu uzyskania lub ustawienia wartości właściwości dołączone.  
+ Jest to podobne, co przypomina użycie elementu właściwości, ale w tym przypadku jest on zawsze innym typem niż element obiektu, w którym jest ustawiana dołączona właściwość. *OwnerType* jest typem, który dostarcza metody akcesora wymagane przez procesor XAML w celu uzyskania lub ustawienia wartości właściwości dołączone.  
   
  Najbardziej typowym scenariuszem dla dołączonych właściwości jest włączenie elementów podrzędnych, aby zgłosić wartość właściwości do ich elementu nadrzędnego.  
   
@@ -297,7 +298,7 @@ W tym temacie opisano funkcje języka XAML i pokazano, jak można użyć języka
   
  W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]programie większość lub wszystkie dołączone właściwości są również zaimplementowane jako właściwości zależności. Aby uzyskać szczegółowe informacje, zobacz [Omówienie funkcji dołączone właściwości](attached-properties-overview.md).  
   
- Zdarzenia dołączone używają podobnego typu *OwnerType*.  form EventName o składni atrybutów. Podobnie jak zdarzenia niedołączone, wartość atrybutu dla dołączonego zdarzenia w języku XAML określa nazwę metody obsługi, która jest wywoływana, gdy zdarzenie jest obsługiwane w elemencie. Dołączone użycia zdarzeń w języku XAML WPF są mniej popularne. Aby uzyskać więcej informacji, zobacz [Omówienie załączonych zdarzeń](attached-events-overview.md).  
+ Zdarzenia dołączone używają podobnego typu *OwnerType*. form EventName o składni atrybutów. Podobnie jak zdarzenia niedołączone, wartość atrybutu dla dołączonego zdarzenia w języku XAML określa nazwę metody obsługi, która jest wywoływana, gdy zdarzenie jest obsługiwane w elemencie. Dołączone użycia zdarzeń w języku XAML WPF są mniej popularne. Aby uzyskać więcej informacji, zobacz [Omówienie załączonych zdarzeń](attached-events-overview.md).  
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>Typy podstawowe i XAML  

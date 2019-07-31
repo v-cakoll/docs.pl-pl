@@ -1,0 +1,15 @@
+- name: Przewodnik po architekturze aplikacji platformy .NET
+  href: index.yml
+- name: Książki elektroniczne
+  expanded: true
+  items:
+    - name: Tworzenie architektury nowoczesnych aplikacji internetowych za pomocą platformy ASP.NET Core i platformy Microsoft Azure
+      href: modern-web-apps-azure/
+    - name: Modernizacja istniejących aplikacji platformy .NET za pomocą chmury platformy Azure i kontenerów systemu Windows
+      href: modernize-with-azure-containers/
+    - name: Cykl życia konteneryzowanych aplikacji platformy Docker korzystających z platformy i narzędzi firmy Microsoft
+      href: containerized-lifecycle/
+    - name: 'Mikrousługi .NET: architektura konteneryzowanych aplikacji .NET'
+      href: microservices/
+    - name: 'Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure'
+      href: serverless/

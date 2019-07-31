@@ -9,6 +9,25 @@
         - name: Przeglądarka interfejsów API na platformie .NET
           tocHref: /dotnet/api/
           topicHref: /dotnet/api/index
+        - name: Przewodnik po architekturze aplikacji platformy .NET
+          tocHref: /dotnet/architecture/
+          topicHref: /dotnet/architecture/index
+          items:
+            - name: Nowoczesne aplikacje internetowe ASP.NET (książka elektroniczna)
+              tocHref: /dotnet/architecture/modern-web-apps-azure/
+              topicHref: /dotnet/architecture/modern-web-apps-azure/index
+            - name: Mikrousługi na platformie .NET — achitektura (książka elektroniczna)
+              tocHref: /dotnet/architecture/microservices/
+              topicHref: /dotnet/architecture/microservices/index
+            - name: Modernizowanie aplikacji .NET (książka elektroniczna)
+              tocHref: /dotnet/architecture/modernize-with-azure-containers/
+              topicHref: /dotnet/architecture/modernize-with-azure-containers/index
+            - name: Mikrousługi .NET — metodyka DevOps (książka elektroniczna)
+              tocHref: /dotnet/architecture/containerized-lifecycle/
+              topicHref: /dotnet/architecture/containerized-lifecycle/index
+            - name: Aplikacje bezserwerowe — książka elektroniczna
+              tocHref: /dotnet/architecture/serverless/
+              topicHref: /dotnet/architecture/serverless/index
         - name: .NET — przewodnik
           tocHref: /dotnet/standard/
           topicHref: /dotnet/standard/index
@@ -19,21 +38,6 @@
             - name: Wskazówki dotyczące biblioteki typu open-source
               tocHref: /dotnet/standard/library-guidance/
               topicHref: /dotnet/standard/library-guidance/index
-            - name: Nowoczesne aplikacje internetowe ASP.NET (książka elektroniczna)
-              tocHref: /dotnet/standard/modern-web-apps-azure-architecture/
-              topicHref: /dotnet/standard/modern-web-apps-azure-architecture/index
-            - name: Mikrousługi na platformie .NET — achitektura (książka elektroniczna)
-              tocHref: /dotnet/standard/microservices-architecture/
-              topicHref: /dotnet/standard/microservices-architecture/index
-            - name: Modernizowanie aplikacji .NET (książka elektroniczna)
-              tocHref: /dotnet/standard/modernize-with-azure-and-containers/
-              topicHref: /dotnet/standard/modernize-with-azure-and-containers/index
-            - name: Mikrousługi .NET — metodyka DevOps (książka elektroniczna)
-              tocHref: /dotnet/standard/containerized-lifecycle-architecture/
-              topicHref: /dotnet/standard/containerized-lifecycle-architecture/index
-            - name: Aplikacje bezserwerowe — książka elektroniczna
-              tocHref: /dotnet/standard/serverless-architecture/
-              topicHref: /dotnet/standard/serverless-architecture/index
             - name: Wzorce programowania asynchronicznego
               tocHref: /dotnet/standard/asynchronous-programming-patterns/
               topicHref: /dotnet/standard/asynchronous-programming-patterns/index
@@ -439,7 +443,7 @@
                   tocHref: /dotnet/csharp/programming-guide/concepts/
                   topicHref: /dotnet/csharp/programming-guide/concepts/index
                   items:
-                    - name: Zestawy i pamięć GAC
+                    - name: Zestawy
                       tocHref: /dotnet/csharp/programming-guide/concepts/assemblies-gac/
                       topicHref: /dotnet/csharp/programming-guide/concepts/assemblies-gac/index
                     - name: Programowanie asynchroniczne
@@ -535,7 +539,7 @@
               tocHref: /dotnet/visual-basic/programming-guide/concepts/
               topicHref: /dotnet/visual-basic/programming-guide/concepts/index
               items:
-                - name: Zestawy i pamięć GAC
+                - name: Zestawy
                   tocHref: /dotnet/visual-basic/programming-guide/concepts/assemblies-gac/
                   topicHref: /dotnet/visual-basic/programming-guide/concepts/assemblies-gac/index
                 - name: Programowanie asynchroniczne

@@ -18,19 +18,6 @@
       href: standard/frameworks.md
     - name: Słownik platformy .NET
       href: standard/glossary.md
-    - name: Wskazówki dotyczące architektury
-      href: standard/guidance-architecture.md
-      items:
-        - name: Tworzenie architektury nowoczesnych aplikacji internetowych za pomocą platformy ASP.NET Core i platformy Microsoft Azure
-          href: standard/modern-web-apps-azure-architecture/
-        - name: Modernizacja istniejących aplikacji platformy .NET za pomocą chmury platformy Azure i kontenerów systemu Windows
-          href: standard/modernize-with-azure-and-containers/
-        - name: Cykl życia konteneryzowanych aplikacji platformy Docker korzystających z platformy i narzędzi firmy Microsoft
-          href: standard/containerized-lifecycle-architecture/
-        - name: 'Mikrousługi .NET: architektura konteneryzowanych aplikacji .NET'
-          href: standard/microservices-architecture/
-        - name: 'Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure'
-          href: standard/serverless-architecture/
     - name: Wskazówki dotyczące biblioteki typu open source
       href: standard/library-guidance/
     - name: Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych
@@ -113,6 +100,20 @@
           href: standard/native-interop/best-practices.md
         - name: Zestawy znaków i marshaling
           href: standard/native-interop/charset.md
+        - name: COM Interop
+          href: standard/native-interop/cominterop.md
+          items:
+            - name: Otoki COM
+              href: standard/native-interop/com-wrappers.md
+              items:
+                - name: Wywoływana otoka środowiska uruchomieniowego
+                  href: standard/native-interop/runtime-callable-wrapper.md
+                - name: Wywoływana otoka COM
+                  href: standard/native-interop/com-callable-wrapper.md
+            - name: Kwalifikowanie typów .NET do usługi międzyoperacyjnej modelu COM
+              href: standard/native-interop/qualify-net-types-for-interoperation.md
+        - name: Stosowanie atrybutów międzyoperacyjności
+          href: standard/native-interop/apply-interop-attributes.md
     - name: Kolekcje i struktury danych
       href: standard/collections/
     - name: Wartości numeryczne na platformie .NET
@@ -222,6 +223,10 @@
           href: core/tutorials/aspnet-core.md
         - name: Hostowanie platformy .NET Core z kodu natywnego
           href: core/tutorials/netcore-hosting.md
+    - name: Współdziałanie natywne
+      items:
+        - name: Udostępnianie składników .NET Core modelowi COM
+          href: core/native-interop/expose-components-to-com.md
     - name: 'Pakiety, metapakiety i struktury'
       href: core/packages.md
     - name: Zmiany w interfejsie wiersza polecenia — omówienie
@@ -1037,6 +1042,24 @@
     - name: Pojęcia związane z programowaniem
       href: visual-basic/programming-guide/concepts/index.md
       items:
+        - name: Zestawy
+          items:
+            - name: Przyjazne zestawy
+              items:
+                - name: 'Instrukcje: Tworzenie nieoznaczonych przyjaznych zestawów'
+                  href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md
+                - name: 'Instrukcje: Tworzenie oznaczonych przyjaznych zestawów'
+                  href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md
+            - name: 'Instrukcje: Tworzenie i korzystanie z zestawów przy użyciu wiersza polecenia'
+              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
+            - name: 'Instrukcje: Określanie, czy plik jest zestawem'
+              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
+            - name: 'Instrukcje: Ładowanie i zwalnianie zestawów'
+              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md
+            - name: 'Instrukcje: Udostępnianie zestawu w innych aplikacjach'
+              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-share-an-assembly-with-other-applications.md
+            - name: 'Przewodnik: osadzanie typów z zarządzanych zestawów'
+              href: visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md
         - name: Programowanie asynchroniczne z Async i Await
           href: visual-basic/programming-guide/concepts/async/index.md
         - name: Atrybuty
@@ -2393,5 +2416,7 @@
   href: machine-learning/index.yml
 - name: Przewodnik platformy .NET dla platformy Apache Spark
   href: spark/index.yml
+- name: Przewodnik po architekturze aplikacji platformy .NET
+  href: architecture/index.yml
 - name: Przykłady i samouczki
   href: samples-and-tutorials/index.md

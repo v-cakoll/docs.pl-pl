@@ -1,29 +1,29 @@
 ---
-title: Porównanie właściwości i indeksatorów - C# przewodnik programowania
+title: Porównanie właściwości i indeksatorów — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], vs. indexers
 - indexers [C#], vs. properties
 ms.assetid: 3358a89f-44a0-4a4d-bf8c-07237a90af39
-ms.openlocfilehash: 41b27905edb8a0e00a6af5a4cce38988161326d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31e6b4b10a6ffec031a2e41a2bd16c843f802fb7
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680093"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671678"
 ---
 # <a name="comparison-between-properties-and-indexers-c-programming-guide"></a>Porównanie właściwości i indeksatorów (Przewodnik programowania w języku C#)
-Indeksatory są podobne właściwości. Z wyjątkiem różnic pokazano w poniższej tabeli wszystkich reguł, które są zdefiniowane dla metod dostępu do właściwości dotyczą metod dostępu indeksatora również.  
+Indeksatory są podobne do właściwości. Z wyjątkiem różnic przedstawionych w poniższej tabeli, wszystkie reguły, które są zdefiniowane dla metod dostępu do właściwości stosuje się również do metod dostępu indeksatora.  
   
-|Właściwość|Indeksator|  
+|Właściwość|Indeksatora|  
 |--------------|-------------|  
-|Zezwala na metody wywołane, tak jakby były publiczne elementy członkowskie danych.|Umożliwia elementy kolekcji wewnętrznego obiektu można uzyskać dostęp przy użyciu tablicy notacji sam obiekt.|  
-|Dostępna za pośrednictwem prostej nazwie.|Dostępna za pośrednictwem indeksu.|  
-|Może być statyczna lub elementu członkowskiego wystąpienia.|Musi być składową wystąpienia.|  
-|A [uzyskać](../../../csharp/language-reference/keywords/get.md) metody dostępu właściwości nie ma parametrów.|A `get` akcesor indeksator ma tę samą listę parametrów formalnych jako indeksatora.|  
-|A [ustaw](../../../csharp/language-reference/keywords/set.md) metody dostępu właściwości zawiera niejawny `value` parametru.|A `set` akcesor indeksator ma tę samą listę parametrów formalnych jako indeksatora, a także [wartość](../../../csharp/language-reference/keywords/value.md) parametru.|  
-|Obsługuje skrócony składni [implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).|Nie obsługuje skróconej składni.|  
+|Umożliwia wywoływanie metod w taki sposób, jakby były publicznymi elementami członkowskimi danych.|Zezwala na dostęp do elementów w wewnętrznej kolekcji obiektów przy użyciu notacji tablicy dla samego obiektu.|  
+|Dostępne za pomocą prostej nazwy.|Dostępne za za poorednictwem indeksu.|  
+|Może być elementem członkowskim typu static lub instance.|Musi być elementem członkowskim wystąpienia.|  
+|Metoda dostępu [Get](../../../csharp/language-reference/keywords/get.md) właściwości nie ma parametrów.|`get` Metoda dostępu indeksatora ma taką samą formalną listę parametrów jak indeksator.|  
+|Metoda dostępu [Set](../../../csharp/language-reference/keywords/set.md) właściwości zawiera parametr niejawny `value` .|Metoda dostępu indeksatora ma taką samą formalną listę parametrów jak indeksator, a także parametr [Value.](../../../csharp/language-reference/keywords/value.md) `set`|  
+|Obsługuje skróconą składnię z [zaimplementowanymi właściwościami](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).|Obsługuje składowe wyrażeń składowanych tylko dla indeksatorów tylko do pobrania.|  
   
 ## <a name="see-also"></a>Zobacz także
 

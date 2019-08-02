@@ -2,12 +2,12 @@
 title: Uaktualnij interfejsy API z atrybutami, aby zdefiniować oczekiwania o wartości null
 description: W tym artykule wyjaśniono motywacje i techniki umożliwiające dodawanie opisowych atrybutów do opisu stanu wartości null argumentów oraz zwracanie wartości z interfejsów API
 ms.date: 07/31/2019
-ms.openlocfilehash: f8ff2063a3859954a5ccab006cd21c6a29dbc6b1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9a5eded385d5eac7a493a36876557cadf083afad
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710932"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733435"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Aktualizowanie bibliotek do używania typów referencyjnych dopuszczających wartości null i przekazywanie reguł dopuszczających wartość null do wywoływania.
 
@@ -89,7 +89,7 @@ Reguły interfejsów API mogą być `TryGetValue` bardziej skomplikowane, jak po
 - [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): Wartość zwracana do wartości null nigdy nie będzie równa null.
 - [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): Argument, który nie `out` dopuszcza `ref` wartości null lub, może mieć wartość null, gdy wartość zwracana spełnia warunek.
 - [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): Wartość dopuszczająca `out` wartość null lub `ref` argument nie może mieć wartości null, jeśli zwracaną wartością jest warunek.
-- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): wartość zwracana przez ciąg nie ma wartości null, gdy argument ciągu wejściowego nie ma wartości null.
+- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): Wartość zwracana nie ma wartości null, jeśli argument wejściowy dla określonego parametru nie ma wartości null.
 
 Powyższe opisy stanowią krótkie informacje o tym, co robi każdy atrybut. W poniższych sekcjach opisano zachowanie i ich znaczenie.
 

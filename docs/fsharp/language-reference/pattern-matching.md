@@ -2,12 +2,12 @@
 title: Dopasowanie wzorca
 description: Dowiedz się, w jaki F# sposób wzorce są używane w programie, aby porównać dane ze strukturami logicznymi, rozłożyć dane na części składowe lub Wyodrębnij informacje z danych.
 ms.date: 05/16/2016
-ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627300"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733468"
 ---
 # <a name="pattern-matching"></a>Dopasowanie wzorca
 
@@ -15,7 +15,7 @@ Wzorce są regułami do przekształcania danych wejściowych. Są one używane w
 
 ## <a name="remarks"></a>Uwagi
 
-Wzorce są używane w wielu konstrukcjach języka, takich jak `match` wyrażenie. Są one używane podczas przetwarzania argumentów dla funkcji w `let` powiązaniach, wyrażeniach lambda i w obsłudze wyjątków skojarzonych `try...with` z wyrażeniem. Aby uzyskać więcej informacji, zobacz [wyrażenia dopasowania](match-expressions.md), Zezwól na [ [powiązania](./functions/let-bindings.md), wyrażenia lambda: Słowo kluczowe](./functions/lambda-expressions-the-fun-keyword.md) i[wyjątki: `fun` `try...with` Wyrażenie.](/.exception-handling/the-try-with-expression.md)
+Wzorce są używane w wielu konstrukcjach języka, takich jak `match` wyrażenie. Są one używane podczas przetwarzania argumentów dla funkcji w `let` powiązaniach, wyrażeniach lambda i w obsłudze wyjątków skojarzonych `try...with` z wyrażeniem. Aby uzyskać więcej informacji, zobacz [wyrażenia dopasowania](match-expressions.md), Zezwól na [ [powiązania](./functions/let-bindings.md), wyrażenia lambda: Słowo kluczowe](./functions/lambda-expressions-the-fun-keyword.md) i[wyjątki: `fun` `try...with` Wyrażenie.](./exception-handling/the-try-with-expression.md)
 
 Na przykład, w `match` wyrażeniu *wzorzec* jest zgodny z symbolem potoku.
 
@@ -103,7 +103,7 @@ match shape with
 
 Aktywne wzorce umożliwiają zdefiniowanie bardziej złożonej niestandardowej dopasowywania do wzorca. Aby uzyskać więcej informacji na temat aktywnych wzorców, zobacz [aktywne wzorce](active-patterns.md).
 
-Przypadek, w którym identyfikator jest wyjątek jest używany w dopasowywaniu wzorców w kontekście obsługi wyjątków. Aby uzyskać informacje na temat dopasowywania wzorców w obsłudze wyjątków, zobacz [wyjątki: `try...with` Wyrażenie.](/.exception-handling/the-try-with-expression.md)
+Przypadek, w którym identyfikator jest wyjątek jest używany w dopasowywaniu wzorców w kontekście obsługi wyjątków. Aby uzyskać informacje na temat dopasowywania wzorców w obsłudze wyjątków, zobacz [wyjątki: `try...with` Wyrażenie.](./exception-handling/the-try-with-expression.md)
 
 ## <a name="variable-patterns"></a>Wzorce zmiennych
 

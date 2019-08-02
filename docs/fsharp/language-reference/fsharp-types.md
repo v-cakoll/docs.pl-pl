@@ -2,12 +2,12 @@
 title: Typy F#
 description: Dowiedz się więcej o typach, które F# są używane F# w programie oraz o nazywaniu i opisywaniu typów.
 ms.date: 05/16/2016
-ms.openlocfilehash: 44bd9d985e0ce1afa1bf2a8457dcd9470b13dfe1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 826bcb56aad3b50fbfcf8f807bb34e9cdcdecaf7
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630218"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733498"
 ---
 # <a name="f-types"></a>Typy F#
 
@@ -69,4 +69,4 @@ W poniższej tabeli przedstawiono aspekty składni typów dla F# typów.
 |[Delegaty](delegates.md)|Opisuje typ delegata, który reprezentuje funkcję jako obiekt.|
 |[Wyliczenia](enumerations.md)|Opisuje typy wyliczeniowe, których wartości należą do zestawu nazwanych wartości.|
 |[Atrybuty](attributes.md)|Opisuje atrybuty, które są używane do określania metadanych dla innego typu.|
-|[Typy wyjątków](/.exception-handling/exception-types.md)|Opisuje wyjątki, które określają informacje o błędzie.|
+|[Typy wyjątków](./exception-handling/exception-types.md)|Opisuje wyjątki, które określają informacje o błędzie.|

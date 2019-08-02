@@ -3,15 +3,15 @@ title: 'Samouczek: Wykrywanie obiektów przy użyciu głębokiej nauki z ONNX i 
 description: W tym samouczku przedstawiono sposób użycia wstępnie przeszkolonego modelu uczenia głębokiego ONNX w ML.NET do wykrywania obiektów w obrazach.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 07/31/2019
+ms.date: 08/01/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: acfff6d409a56e7676c7d38296ecc2085fa131ea
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 3e5b6b482dfbd1ff06347883a93a561944200a9f
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672137"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733398"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Samouczek: Wykrywanie obiektów przy użyciu ONNX w ML.NET
 
@@ -75,7 +75,7 @@ Open neuronowych Network Exchange (ONNX) to format Open Source dla modeli AI. ON
 
 ![](./media/object-detection-onnx/onnx-frameworks.png)
 
-Wstępnie szkolony model YOLOv2 jest przechowywany w formacie ONNX, szeregowaną reprezentacją warstw i wyznanie wzorców tych warstw. W programie ml.NET współdziałanie z usługą ONNX jest [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) realizowane [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) przy użyciu pakietów NuGet i. [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) Pakiet zawiera serię przekształceń, która pobiera obraz i koduje go na wartości liczbowe, które mogą być używane jako dane wejściowe do modelu lub potoku szkoleniowego. [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) Pakiet wykorzystuje środowisko uruchomieniowe ONNX w celu załadowania modelu ONNX i używania go do prognozowania na podstawie dostarczonego danych wejściowych. 
+Wstępnie szkolony model YOLOv2 jest przechowywany w formacie ONNX, szeregowaną reprezentacją warstw i wyznanie wzorców tych warstw. W programie ml.NET współdziałanie z usługą ONNX jest [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) realizowane [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) przy użyciu pakietów NuGet i. [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) Pakiet zawiera serię przekształceń, która pobiera obraz i koduje go na wartości liczbowe, które mogą być używane jako dane wejściowe w potoku predykcyjnym lub szkoleniowym. [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) Pakiet wykorzystuje środowisko uruchomieniowe ONNX w celu załadowania modelu ONNX i używania go do prognozowania na podstawie dostarczonego danych wejściowych. 
 
 ![](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
@@ -92,7 +92,7 @@ Teraz, gdy masz ogólne informacje o tym, co ONNX się i jak mała YOLOv2 dział
     - W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. 
     - Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę Przeglądaj, Wyszukaj pozycję **Microsoft.ml**. 
     - Wybierz przycisk **Instaluj** . 
-    - Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie **Wybierz przycisk** Akceptuję w oknie dialogowym **akceptacji licencji** , jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów. 
+    - Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie wybierz przycisk Akceptuję w oknie dialogowym **akceptacji licencji** , jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów. 
     - Powtórz te kroki dla **Microsoft. ml. ImageAnalytics** i **Microsoft. ml. OnnxTransformer**.
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>Przygotowywanie danych i wstępnie szkolony model
@@ -259,7 +259,7 @@ Model segmentuje obraz w `13 x 13` siatce, gdzie każda komórka siatki ma warto
 - `y`Pozycja y środka pola ograniczenia względem komórki siatki, z którą jest skojarzona.
 - `w`Szerokość pola ograniczenia.
 - `h`Wysokość pola ograniczenia. 
-- `o`wartość ufności, która istnieje w polu ograniczenia, znana także jako wynik Abjectness.
+- `o`wartość pewności, którą obiekt istnieje w polu ograniczenia, znanego również jako wynik obiektu.
 - `p1-p20`prawdopodobieństwa klasy dla każdej z 20 klas przewidywanych przez model.
 
 Łącznie 25 elementów opisujących każde z 5 pól ograniczenia tworzą elementy 125 zawarte w każdej komórce siatki.

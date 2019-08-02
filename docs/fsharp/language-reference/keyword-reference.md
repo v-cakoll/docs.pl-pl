@@ -2,12 +2,12 @@
 title: Odwołanie do słowa kluczowego
 description: Znajdź linki do informacji o wszystkich słowach F# kluczowych języka.
 ms.date: 05/16/2016
-ms.openlocfilehash: f845db74fd7ffd4164cc74acd192e39df7d2d6b1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 680b270a99eff7aa98652579d2fd31b4b05080ca
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627618"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733481"
 ---
 # <a name="keyword-reference"></a>Odwołanie do słowa kluczowego
 
@@ -35,10 +35,10 @@ W poniższej tabeli przedstawiono wszystkie F# słowa kluczowe w kolejności alf
 |`elif`|[Wyrażenia warunkowe:`if...then...else`](conditional-expressions-if-then-else.md)|Używane w rozgałęzieniu warunkowym. Krótka forma `else if`.|
 |`else`|[Wyrażenia warunkowe:`if...then...else`](conditional-expressions-if-then-else.md)|Używane w rozgałęzieniu warunkowym.|
 |`end`|[Struktury](structures.md)<br /><br />[Sumy rozłączne](discriminated-unions.md)<br /><br />[Rekordy](records.md)<br /><br />[Rozszerzenia typu](type-extensions.md)<br /><br />[Pełna składnia](verbose-syntax.md)|W definicjach typów i rozszerzeniach typów wskazuje koniec sekcji definicji elementu członkowskiego.<br /><br />W pełnej składni, używany do określenia końca bloku kodu, który rozpoczyna `begin` się od słowa kluczowego.|
-|`exception`|[Obsługa wyjątków](/.exception-handling/index.md)<br /><br />[Typy wyjątków](/.exception-handling/exception-types.md)|Używane do deklarowania typu wyjątku.|
+|`exception`|[Obsługa wyjątków](./exception-handling/index.md)<br /><br />[Typy wyjątków](./exception-handling/exception-types.md)|Używane do deklarowania typu wyjątku.|
 |`extern`|[Funkcje zewnętrzne](./functions/external-functions.md)|Wskazuje, że zadeklarowany element programu jest zdefiniowany w innym pliku binarnym lub zestawie.|
 |`false`|[Typy pierwotne](primitive-types.md)|Używany jako literał wartości logicznej.|
-|`finally`|[Wyjątki: `try...finally` Wyrażenie](/.exception-handling/the-try-finally-expression.md)|Używane razem z `try` , aby wprowadzić blok kodu, który jest wykonywany bez względu na to, czy wystąpił wyjątek.|
+|`finally`|[Wyjątki: `try...finally` Wyrażenie](./exception-handling/the-try-finally-expression.md)|Używane razem z `try` , aby wprowadzić blok kodu, który jest wykonywany bez względu na to, czy wystąpił wyjątek.|
 |`fixed`|[FIXED](fixed.md)|Służy do "przypinania" wskaźnika na stosie, aby zapobiec występowaniu elementów bezużytecznych.|
 |`for`|[Pętli `for...to`Wyrażenia](loops-for-to-expression.md)<br /><br />[Pętle: wyrażenie for...in](loops-for-in-expression.md)|Używane w konstrukcjach zapętlenia.|
 |`fun`|[Wyrażenia lambda: słowo kluczowe `fun`](./functions/lambda-expressions-the-fun-keyword.md)|Używane w wyrażeniach lambda, znane także jako funkcje anonimowe.|
@@ -62,7 +62,7 @@ W poniższej tabeli przedstawiono wszystkie F# słowa kluczowe w kolejności alf
 |`new`|[Konstruktory](./members/constructors.md)<br /><br />[Ograniczenia](./generics/constraints.md)|Służy do deklarowania, definiowania lub wywoływania konstruktora, który tworzy lub który może utworzyć obiekt.<br /><br />Używane również w ograniczeniach parametru generycznego, aby wskazać, że typ musi mieć określony Konstruktor.|
 |`not`|[Odwołanie do symboli i operatorów](./symbol-and-operator-reference/index.md)<br /><br />[Ograniczenia](./generics/constraints.md)|W rzeczywistości nie jest słowem kluczowym. `not struct` Jednak w kombinacji jest używana jako ograniczenie parametru ogólnego.|
 |`null`|[Wartości null](./values/null-values.md)<br /><br />[Ograniczenia](./generics/constraints.md)|Wskazuje brak obiektu.<br /><br />Używane również w ograniczeniach parametru generycznego.|
-|`of`|[Sumy rozłączne](discriminated-unions.md)<br /><br />[Delegaty](delegates.md)<br /><br />[Typy wyjątków](/.exception-handling/exception-types.md)|Używane w Unii rozłącznych, aby wskazać typ kategorii wartości, a w deklaracjach delegatów i wyjątków.|
+|`of`|[Sumy rozłączne](discriminated-unions.md)<br /><br />[Delegaty](delegates.md)<br /><br />[Typy wyjątków](./exception-handling/exception-types.md)|Używane w Unii rozłącznych, aby wskazać typ kategorii wartości, a w deklaracjach delegatów i wyjątków.|
 |`open`|[Deklaracje importowania: słowo kluczowe `open`](import-declarations-the-open-keyword.md)|Służy do udostępnienia zawartości przestrzeni nazw lub modułu bez kwalifikacji.|
 |`or`|[Odwołanie do symboli i operatorów](./symbol-and-operator-reference/index.md)<br /><br />[Ograniczenia](./generics/constraints.md)|Używany z warunkami logicznymi jako operator `or` logiczny. `||`Odpowiednik.<br /><br />Używane również w ograniczeniach elementu członkowskiego.|
 |`override`|[Elementy członkowskie](./members/index.md)|Służy do implementowania wersji metody abstrakcyjnej lub wirtualnej, która różni się od wersji podstawowej.|
@@ -77,7 +77,7 @@ W poniższej tabeli przedstawiono wszystkie F# słowa kluczowe w kolejności alf
 |`then`|[Wyrażenia warunkowe:`if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Konstruktory](./members/constructors.md)|Używane w wyrażeniach warunkowych.<br /><br />Używane również do wykonywania efektów ubocznych po konstrukcji obiektu.|
 |`to`|[Pętli `for...to`Wyrażenia](loops-for-to-expression.md)|Używane w `for` pętlach, aby wskazać zakres.|
 |`true`|[Typy pierwotne](primitive-types.md)|Używany jako literał wartości logicznej.|
-|`try`|[Wyjątki: Try... Wyrażenie with](/.exception-handling/the-try-with-expression.md)<br /><br />[Wyjątki: Try... Wyrażenie finally](/.exception-handling/the-try-finally-expression.md)|Służy do wprowadzenia bloku kodu, który może generować wyjątek. Używane razem z `with` lub `finally`.|
+|`try`|[Wyjątki: Try... Wyrażenie with](./exception-handling/the-try-with-expression.md)<br /><br />[Wyjątki: Try... Wyrażenie finally](./exception-handling/the-try-finally-expression.md)|Służy do wprowadzenia bloku kodu, który może generować wyjątek. Używane razem z `with` lub `finally`.|
 |`type`|[Typy F#](fsharp-types.md)<br /><br />[Klasy](classes.md)<br /><br />[Rekordy](records.md)<br /><br />[Struktury](structures.md)<br /><br />[Wyliczenia](enumerations.md)<br /><br />[Sumy rozłączne](discriminated-unions.md)<br /><br />[Skróty typów](type-abbreviations.md)<br /><br />[Jednostki miary](units-of-measure.md)|Służy do deklarowania klasy, rekordu, struktury, Unii rozłącznej, typu wyliczeniowego, jednostki miary lub skrótu typu.|
 |`upcast`|[Rzutowanie i konwersje](casting-and-conversions.md)|Używane do konwertowania na typ, który jest wyższy w łańcuchu dziedziczenia.|
 |`use`|[Zarządzanie zasobami: słowo kluczowe `use`](resource-management-the-use-keyword.md)|Używane zamiast `let` wartości, które wymagają `Dispose` wywołania w celu zwolnienia zasobów.|
@@ -86,7 +86,7 @@ W poniższej tabeli przedstawiono wszystkie F# słowa kluczowe w kolejności alf
 |`void`|[Typy pierwotne](primitive-types.md)|Wskazuje typ .NET `void` . Używane podczas współdziałania z innymi językami .NET.|
 |`when`|[Ograniczenia](./generics/constraints.md)|Używane dla warunków logicznych (w*przypadku funkcji Guard*) w dopasowaniach wzorca i w celu wprowadzenia klauzuli ograniczenia dla parametru typu ogólnego.|
 |`while`|[Pętli `while...do`Wyrażenia](loops-while-do-expression.md)|Wprowadza konstrukcję pętli.|
-|`with`|[Wyrażenia dopasowania](match-expressions.md)<br /><br />[Wyrażenia obiektów](object-expressions.md)<br /><br />[Kopiowanie i aktualizacja wyrażeń rekordów](copy-and-update-record-expressions.md)<br /><br />[Rozszerzenia typu](type-extensions.md)<br /><br />[Wyjątki: `try...with` Wyrażenie](/.exception-handling/the-try-with-expression.md)|Używane razem ze `match` słowem kluczowym w wyrażeniach dopasowania wzorców. Używane również w wyrażeniach obiektów, rekordach kopiowania i rozszerzeniach w celu wprowadzenia definicji elementów członkowskich i wprowadzenia obsługi wyjątków.|
+|`with`|[Wyrażenia dopasowania](match-expressions.md)<br /><br />[Wyrażenia obiektów](object-expressions.md)<br /><br />[Kopiowanie i aktualizacja wyrażeń rekordów](copy-and-update-record-expressions.md)<br /><br />[Rozszerzenia typu](type-extensions.md)<br /><br />[Wyjątki: `try...with` Wyrażenie](./exception-handling/the-try-with-expression.md)|Używane razem ze `match` słowem kluczowym w wyrażeniach dopasowania wzorców. Używane również w wyrażeniach obiektów, rekordach kopiowania i rozszerzeniach w celu wprowadzenia definicji elementów członkowskich i wprowadzenia obsługi wyjątków.|
 |`yield`|[Sekwencje](sequences.md)|Używany w wyrażeniu sekwencji do tworzenia wartości dla sekwencji.|
 |`yield!`|[Wyrażenia obliczeń](computation-expressions.md)<br /><br />[Asynchroniczne przepływy pracy](asynchronous-workflows.md)|Używany w wyrażeniu obliczeniowym do dołączania wyniku danego wyrażenia obliczenia do kolekcji wyników dla zawierającego wyrażenie obliczenia.|
 

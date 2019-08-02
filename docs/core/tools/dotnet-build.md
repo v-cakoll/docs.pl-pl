@@ -52,7 +52,7 @@ Aby utworzyć bibliotekę, należy pominąć `<OutputType>` właściwość. Gł�
 
 ### <a name="msbuild"></a>MSBuild
 
-`dotnet build`używa programu MSBuild do skompilowania projektu, aby obsługiwał kompilacje równoległe i przyrostowe. Aby uzyskać więcej informacji, [](/visualstudio/msbuild/incremental-builds)Zobacz Kompilacje przyrostowe.
+`dotnet build`używa programu MSBuild do skompilowania projektu, aby obsługiwał kompilacje równoległe i przyrostowe. Aby uzyskać więcej informacji, Zobacz [Kompilacje przyrostowe](/visualstudio/msbuild/incremental-builds).
 
 Oprócz opcji, `dotnet build` polecenie akceptuje Opcje programu MSBuild, takie jak `-p` właściwości ustawienia lub `-l` definiowania rejestratora. Aby uzyskać więcej informacji na temat tych opcji, zobacz [informacje dotyczące wiersza polecenia programu MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). Lub można również użyć polecenia programu [dotnet MSBuild](dotnet-msbuild.md) .
 

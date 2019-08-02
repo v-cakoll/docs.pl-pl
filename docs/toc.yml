@@ -595,14 +595,16 @@
       items:
         - name: 'System typów języka C#'
           href: csharp/programming-guide/types/index.md
+        - name: Typy referencyjne dopuszczające wartość null
+          href: csharp/nullable-references.md
+        - name: Opisywanie interfejsów API dopuszczających wartość null przy użyciu atrybutów i ograniczeń
+          href: csharp/nullable-attributes.md
         - name: Namespaces
           href: csharp/programming-guide/namespaces/index.md
         - name: Typy podstawowe
           href: csharp/basic-types.md
         - name: Klasy
           href: csharp/programming-guide/classes-and-structs/classes.md
-        - name: Typy referencyjne dopuszczające wartość null
-          href: csharp/nullable-references.md
         - name: Struktury
           href: csharp/structs.md
         - name: Krotki

@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Pisanie zapytania odnajdującego elementy na podstawie kontekstu (Visual Basic)'
+title: 'Instrukcje: Napisz zapytanie, które znajduje elementy na podstawie kontekstu (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: 0981da1e35f2c0b6023c009d4f62c95a612d8971
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1743a0793a8b572cb212d45a31924fe8eb93bf45
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614886"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710403"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Instrukcje: Pisanie zapytania odnajdującego elementy na podstawie kontekstu (Visual Basic)
-Czasami może być napisać zapytanie wybierające elementy na podstawie ich kontekstu. Można filtrować na podstawie poprzedzające lub następujące elementów równorzędnych. Można filtrować na podstawie podrzędnej lub elementów nadrzędnych.  
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Instrukcje: Napisz zapytanie, które znajduje elementy na podstawie kontekstu (Visual Basic)
+Czasami może być konieczne zapisanie zapytania, które wybiera elementy na podstawie ich kontekstu. Można filtrować na podstawie poprzedzających lub następujących elementów równorzędnych. Można filtrować na podstawie elementów podrzędnych lub nadrzędnych.  
   
- Można to zrobić przez napisanie zapytania i używanie wyniki zapytania w `where` klauzuli. Jeśli musisz najpierw testujemy współpracę z wartością null, a następnie sprawdź wartość, jest bardziej wygodne wykonać zapytanie w `let` klauzuli, a następnie użyć wyników w `where` klauzuli.  
+ Można to zrobić przez zapisanie zapytania i użycie wyników zapytania w `where` klauzuli. Jeśli konieczne jest pierwsze przetestowanie na wartość null, a następnie przetestowanie wartości, bardziej wygodne jest wykonanie zapytania w `let` klauzuli, a następnie użycie wyników `where` w klauzuli.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład powoduje zaznaczenie wszystkich `p` elementy, które są od razu następuje `ul` elementu.  
+ W poniższym przykładzie wybrano `p` wszystkie elementy, które są bezpośrednio następuje `ul` po elemencie.  
   
 ```vb  
 Dim doc As XElement = _  
@@ -58,7 +58,7 @@ id = 6
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw — omówienie (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -112,4 +112,4 @@ id = 6
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
 - <xref:System.Linq.Enumerable.FirstOrDefault%2A>
-- [Podstawowe zapytania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Zapytania podstawowe (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

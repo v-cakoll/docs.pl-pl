@@ -9,18 +9,18 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 7acf5a3f48ac4987037873c63111d988ec3a4979
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a47a4aae785d817904c30fe7c865a1c033eb3cca
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629647"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709225"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optymalizacja wydajności: Wykorzystanie możliwości sprzętu
 Wewnętrzna architektura programu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma dwa potoki renderowania, sprzęt i oprogramowanie. Ten temat zawiera informacje o tych potokach renderowania, które ułatwiają podejmowanie decyzji dotyczących optymalizacji wydajności aplikacji.  
   
 ## <a name="hardware-rendering-pipeline"></a>Potok renderowania sprzętowego  
- Jednym z najważniejszych czynników decydujących [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o wydajności jest to, że jest ona powiązana — im więcej pikseli ma być renderowanych, tym większym kosztem wydajności. Jednak lepsze renderowanie [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)], które może zostać przeciążać do, osiąga korzyści, które można uzyskać. Potok renderowania sprzętowego aplikacji korzysta z funkcji Microsoft DirectX na sprzęcie, który obsługuje co najmniej program Microsoft DirectX w wersji 7,0. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Dalsze optymalizacje mogą być uzyskane przez sprzęt obsługujący funkcje Microsoft DirectX w wersji 7,0 i Właściwość PixelShader 2.0.  
+ Jednym z najważniejszych czynników decydujących [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o wydajności jest to, że jest ona powiązana — im więcej pikseli ma być renderowanych, tym większym kosztem wydajności. Jednak lepsze renderowanie, które może zostać przeciążać do procesora graficznego (GPU), zwiększa korzyści z wydajności, które można uzyskać. Potok renderowania sprzętowego aplikacji korzysta z funkcji Microsoft DirectX na sprzęcie, który obsługuje co najmniej program Microsoft DirectX w wersji 7,0. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Dalsze optymalizacje mogą być uzyskane przez sprzęt obsługujący funkcje Microsoft DirectX w wersji 7,0 i Właściwość PixelShader 2.0.  
   
 ## <a name="software-rendering-pipeline"></a>Potok renderowania oprogramowania  
  Potok [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderowania oprogramowania jest całkowicie powiązany z procesorem. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]wykorzystuje zestawy instrukcji SSE i SSE2 w PROCESORze, aby zaimplementować zoptymalizowany, w pełni funkcjonalny Rasteryzuj oprogramowania. Powrót do oprogramowania jest bezproblemowe, gdy funkcje aplikacji nie mogą być renderowane przy użyciu potoku renderowania sprzętowego.  

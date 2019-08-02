@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Pisanie zapytania odnajdującego elementy na podstawie kontekstu (C#)'
+title: 'Instrukcje: Napisz zapytanie, które znajduje elementy na podstawie kontekstu (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: 92cbed3edc62b06be65fdd458e509108343d9e59
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f6fd0a9dc0f2579185f2f72997f1d406a885c636
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484653"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710026"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Instrukcje: Pisanie zapytania odnajdującego elementy na podstawie kontekstu (C#)
-Czasami może być napisać zapytanie wybierające elementy na podstawie ich kontekstu. Można filtrować na podstawie poprzedzające lub następujące elementów równorzędnych. Można filtrować na podstawie podrzędnej lub elementów nadrzędnych.  
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Instrukcje: Napisz zapytanie, które znajduje elementy na podstawie kontekstu (C#)
+Czasami może być konieczne zapisanie zapytania, które wybiera elementy na podstawie ich kontekstu. Można filtrować na podstawie poprzedzających lub następujących elementów równorzędnych. Można filtrować na podstawie elementów podrzędnych lub nadrzędnych.  
   
- Można to zrobić przez napisanie zapytania i używanie wyniki zapytania w `where` klauzuli. Jeśli musisz najpierw testujemy współpracę z wartością null, a następnie sprawdź wartość, jest bardziej wygodne wykonać zapytanie w `let` klauzuli, a następnie użyć wyników w `where` klauzuli.  
+ Można to zrobić przez zapisanie zapytania i użycie wyników zapytania w `where` klauzuli. Jeśli konieczne jest pierwsze przetestowanie na wartość null, a następnie przetestowanie wartości, bardziej wygodne jest wykonanie zapytania w `let` klauzuli, a następnie użycie wyników `where` w klauzuli.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład powoduje zaznaczenie wszystkich `p` elementy, które są od razu następuje `ul` elementu.  
+ W poniższym przykładzie wybrano `p` wszystkie elementy, które są bezpośrednio następuje `ul` po elemencie.  
   
 ```csharp  
 XElement doc = XElement.Parse(@"<Root>  
@@ -56,7 +56,7 @@ id = 6
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
+ W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
   
 ```csharp  
 XElement doc = XElement.Parse(@"<Root xmlns='http://www.adatum.com'>  

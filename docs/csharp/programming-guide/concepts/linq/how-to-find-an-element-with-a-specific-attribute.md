@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Wyszukiwanie elementu o określonym atrybucie (C#)'
+title: 'Instrukcje: Znajdź element z określonym atrybutem (C#)'
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: 7ec6240bf399058ca94cc52c66e6029f924fcd29
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 0362ded5984ff797a1ced93076679b7b975b998c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485560"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709954"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Instrukcje: Wyszukiwanie elementu o określonym atrybucie (C#)
-W tym temacie pokazano, jak znaleźć element, który ma atrybut, który ma określoną wartość.  
+# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Instrukcje: Znajdź element z określonym atrybutem (C#)
+W tym temacie pokazano, jak znaleźć element, który ma atrybut o określonej wartości.  
   
 ## <a name="example"></a>Przykład  
- W przykładzie pokazano, jak znaleźć `Address` element, który ma `Type` atrybut o wartości "Billing".  
+ W przykładzie pokazano, jak znaleźć `Address` element, który `Type` ma atrybut o wartości "rozliczenia".  
   
- W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Typowe zamówienie zakupu (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Typowe zamówienie zakupu (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrder.xml");  
@@ -41,9 +41,9 @@ foreach (XElement el in address)
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
+ W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
   
- W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Typowe zamówienie zakupu w Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Typowe zamówienie zakupu w przestrzeni nazw](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrderInNamespace.xml");  
@@ -73,5 +73,5 @@ foreach (XElement el in address)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Operacje rzutowania (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+- [Standardowe operatory zapytań — OmówienieC#()](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Operacje projekcjiC#()](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

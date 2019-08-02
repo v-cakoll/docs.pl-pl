@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 2667417c5d25821f2fed2101e1d485280e171eab
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6bea25fbd321eead9137caaeb212b76a9d528e88
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400647"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710394"
 ---
 # <a name="threading-model"></a>Model wątkowości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]służy do zapisywania deweloperów przed trudnościami z wątkami. W związku z tym większość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deweloperów nie będzie musiała pisać interfejsu, który używa więcej niż jednego wątku. Ponieważ programy wielowątkowe są skomplikowane i trudne do debugowania, należy je unikać, gdy istnieją rozwiązania jednowątkowe.  
@@ -56,7 +56,7 @@ ms.locfileid: "68400647"
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>Jednowątkowa aplikacja z długotrwałym obliczaniem  
- Większość [!INCLUDE[TLA#tla_gui#plural](../../../../includes/tlasharptla-guisharpplural-md.md)] spędza w dużej części czas bezczynności podczas oczekiwania na zdarzenia, które są generowane w odpowiedzi na interakcje użytkownika. Staranne programowanie tego czasu bezczynności może być stosowane zwyczajowo, bez wpływu na czas odpowiedzi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Model wątkowości nie zezwala na dane wejściowe do przerwania operacji wykonywanej [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] w wątku. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Oznacza to, że należy zwrócić uwagę na okresowe <xref:System.Windows.Threading.Dispatcher> , aby przetworzyć oczekujące zdarzenia wejściowe przed uzyskaniem starych.  
+ Większość graficznych interfejsów użytkownika (GUI) poświęca dużą część czasu bezczynności podczas oczekiwania na zdarzenia, które są generowane w odpowiedzi na interakcje użytkownika. Staranne programowanie tego czasu bezczynności może być stosowane zwyczajowo, bez wpływu na czas odpowiedzi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Model wątkowości nie zezwala na dane wejściowe do przerwania operacji wykonywanej [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] w wątku. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Oznacza to, że należy zwrócić uwagę na okresowe <xref:System.Windows.Threading.Dispatcher> , aby przetworzyć oczekujące zdarzenia wejściowe przed uzyskaniem starych.  
   
  Rozważmy następujący przykład:  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68400647"
   
 <a name="weather_sim"></a>   
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>Obsługa operacji blokowania z wątkiem w tle  
- Obsługa operacji blokowania w aplikacji graficznej może być trudna. Nie chcemy wywoływać metod blokowania z obsługi zdarzeń, ponieważ aplikacja zostanie wyświetlona w celu zablokowania. Możemy użyć oddzielnego wątku, aby obsłużyć te operacje, ale gdy wszystko będzie gotowe, musimy przeprowadzić synchronizację [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] z wątkiem, ponieważ nie można [!INCLUDE[TLA2#tla_gui](../../../../includes/tla2sharptla-gui-md.md)] bezpośrednio zmodyfikować elementu z naszego wątku roboczego. Możemy użyć <xref:System.Windows.Threading.Dispatcher.Invoke%2A> lub <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>,aby wstawić [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] delegatów do wątku.<xref:System.Windows.Threading.Dispatcher> W rezultacie te Delegaty zostaną wykonane z uprawnieniami do modyfikowania [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów.  
+ Obsługa operacji blokowania w aplikacji graficznej może być trudna. Nie chcemy wywoływać metod blokowania z obsługi zdarzeń, ponieważ aplikacja zostanie wyświetlona w celu zablokowania. Możemy użyć oddzielnego wątku do obsługi tych operacji, ale gdy wszystko będzie gotowe, musimy przeprowadzić synchronizację z [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątkiem, ponieważ nie można bezpośrednio zmodyfikować graficznego interfejsu użytkownika z naszego wątku roboczego. Możemy użyć <xref:System.Windows.Threading.Dispatcher.Invoke%2A> lub <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>,aby wstawić [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] delegatów do wątku.<xref:System.Windows.Threading.Dispatcher> W rezultacie te Delegaty zostaną wykonane z uprawnieniami do modyfikowania [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów.  
   
  W tym przykładzie naśladuje zdalne wywołanie procedury, które pobiera prognozę pogody. Używamy oddzielnego wątku roboczego do wykonania tego wywołania i planujemy metodę Update w <xref:System.Windows.Threading.Dispatcher> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku po zakończeniu.  
   

@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Sortowanie elementów na wielu kluczach (C#)'
+title: 'Instrukcje: Sortuj elementy w wielu kluczachC#()'
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 5ea01055eae0c91fac274f8c38a1d8112c4aaa0a
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 2325417fa2ed8a6c3ca13504cada4d4e1a49be42
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690091"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709915"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a>Instrukcje: Sortowanie elementów na wielu kluczach (C#)
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a>Instrukcje: Sortuj elementy w wielu kluczachC#()
 
-W tym temacie pokazano, jak ma być wykonywane sortowanie wielu kluczy.
+W tym temacie pokazano, jak sortować według wielu kluczy.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie wyniki są uporządkowane pierwszy według kod pocztowy wysyłki, następnie według dat zamówienia.
+W tym przykładzie wyniki są uporządkowane najpierw według kodu pocztowego wysyłki, a następnie według daty zamówienia.
 
-W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).
+W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -65,9 +65,9 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).
+W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).
 
-W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia w Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).
+W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia w przestrzeni nazw](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");

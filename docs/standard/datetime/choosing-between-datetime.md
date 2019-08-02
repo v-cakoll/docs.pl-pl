@@ -15,110 +15,110 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4c86ab618f6434a6a9ce4f056eeb001cacc84bc
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026565"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709197"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Wybieranie pomiędzy elementem DateTime, DateTimeOffset, TimeSpan i TimeZoneInfo
 
-Aplikacje platformy .NET, które używają informacji daty i godziny są bardzo zróżnicowane i tych informacji można użyć na kilka sposobów. Typowe zastosowania informacji daty i godziny obejmują co najmniej jeden z następujących czynności:
+Aplikacje .NET używające informacji o dacie i godzinie są bardzo zróżnicowane i mogą korzystać z tych informacji na kilka sposobów. Bardziej typowe zastosowania informacji o dacie i godzinie obejmują co najmniej jedną z następujących czynności:
 
-* Aby uwzględnić tylko datę, aby informacje o czasie nie jest ważna.
+* Aby odzwierciedlić tylko datę, tak aby informacje o czasie nie były ważne.
 
-* Aby uwzględnić tylko raz, więc informacje o tej dacie nie jest ważna.
+* Aby odzwierciedlić tylko czas, dlatego informacje o dacie nie są ważne.
 
-* Aby uwzględnić abstrakcyjne daty i godziny, który nie jest związany z określonym czasie i miejscu (na przykład większość sklepów w łańcuchu międzynarodowych Otwórz o godzinie 9:00 w dni robocze).
+* Aby odzwierciedlić abstrakcyjną datę i godzinę, która nie jest powiązana z określonym czasem i miejscem (na przykład większość magazynów w łańcuchu międzynarodowym otwartym w dniach tygodnia o godzinie 9:00).
 
-* Do pobierania informacji daty i godziny ze źródła poza .NET, zwykle daty i godziny informacje są przechowywane w prosty typ danych.
+* Aby pobrać informacje o dacie i godzinie ze źródeł poza platformą .NET, zazwyczaj gdzie informacje o dacie i godzinie są przechowywane w prostym typie danych.
 
-* Aby jednoznacznie i jednoznacznie zidentyfikować pojedynczy punkt w czasie. Niektóre aplikacje wymagają daty i godziny jednoznaczną tylko w systemie hosta; inne wymagają jej jednoznaczną we wszystkich systemach (oznacza to, datę serializowane w jednym systemie można się znacząco deserializacji i używane w innym systemie w dowolnym miejscu na świecie).
+* Aby jednoznacznie i jednoznacznie identyfikować pojedynczy punkt w czasie. Niektóre aplikacje wymagają, aby data i godzina były niejednoznaczne tylko w systemie hosta; inne wymagają, aby nie były niejednoznaczne w różnych systemach (to oznacza, że data serializacji w jednym systemie może być istotnie deserializowana i używana w innym systemie w dowolnym miejscu na świecie).
 
-* Aby zachować wielu związane z godziny (np. czas lokalny żądającego i serwera momencie otrzymania żądania sieci Web).
+* Aby zachować wiele pokrewnych czasów (takich jak czas lokalny obiektu żądającego i czas odbioru żądania sieci Web przez serwer).
 
-* Do wykonania, Data i godzina arytmetyczne, prawdopodobnie z wynikiem, które jednoznacznie i jednoznacznie identyfikują pojedynczy punkt w czasie.
+* Aby wykonać operacje arytmetyczne daty i godziny, prawdopodobnie z wynikiem, który jednoznacznie i jednoznacznie identyfikuje pojedynczy punkt w czasie.
 
-.NET zawiera <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, i <xref:System.TimeZoneInfo> typy, które może służyć do tworzenia aplikacji, które działają z datami i godzinami.
+Platforma .NET zawiera <xref:System.DateTime>typy <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, i <xref:System.TimeZoneInfo> , które mogą być używane do kompilowania aplikacji, które działają z datami i godzinami.
 
 > [!NOTE]
-> W tym temacie nie omówiono w nim typem czwarty <xref:System.TimeZone>, ponieważ jego funkcje są prawie całkowicie włączone w <xref:System.TimeZoneInfo> klasy. Jeśli to możliwe, należy używać deweloperzy <xref:System.TimeZoneInfo> klasy zamiast <xref:System.TimeZone> klasy.
+> Ten temat nie omawia czwartego typu, <xref:System.TimeZone>ponieważ jego funkcjonalność jest niemal całkowicie wbudowana <xref:System.TimeZoneInfo> w klasie. Jeśli to możliwe, deweloperzy powinni używać <xref:System.TimeZoneInfo> klasy zamiast <xref:System.TimeZone> klasy.
 
-## <a name="the-datetime-structure"></a>DateTime — struktura
+## <a name="the-datetime-structure"></a>Struktura DateTime
 
-A <xref:System.DateTime> wartość określa określonej daty i godziny. Zawiera ona <xref:System.DateTime.Kind%2A> właściwość, która udostępnia ograniczone informacje o strefie czasowej, do którego tej daty i godziny należy. <xref:System.DateTimeKind> Wartość zwrócona przez obiekt <xref:System.DateTime.Kind%2A> właściwość wskazuje, czy <xref:System.DateTime> wartość odpowiada czasowi lokalnemu (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), uniwersalny czas koordynowany (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>), lub przez czas nieokreślony (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
+<xref:System.DateTime> Wartość definiuje określoną datę i godzinę. Zawiera <xref:System.DateTime.Kind%2A> właściwość, która zawiera ograniczone informacje o strefie czasowej, do której należy ta data i godzina. <xref:System.DateTime> <xref:System.DateTimeKind.Utc?displayProperty=nameWithType><xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>Wartość zwracana <xref:System.DateTime.Kind%2A> przez właściwość wskazuje, czy wartość reprezentuje czas lokalny (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), uniwersalny czas koordynowany (UTC) () lub nieokreślony czas (). <xref:System.DateTimeKind>
 
-<xref:System.DateTime> Struktura jest odpowiednia dla aplikacji, które należy wykonać następujące czynności:
+<xref:System.DateTime> Struktura jest odpowiednia dla aplikacji, które wykonują następujące czynności:
 
-* Praca z tylko daty.
+* Pracuj tylko z datami.
 
-* Praca z tylko razy.
+* Pracuj tylko z godzinami.
 
-* Praca z abstrakcyjne daty i godziny.
+* Pracuj z datami i godzinami abstrakcyjnymi.
 
-* Praca z datami i godzinami, dla której strefie czasowej brakuje informacji.
+* Pracuj z datami i godzinami, dla których brakuje informacji o strefie czasowej.
 
-* Praca z datami UTC i czasem tylko.
+* Pracuj tylko z datami i godzinami UTC.
 
-* Pobieranie informacji daty i godziny ze źródeł poza .NET, takich jak bazy danych SQL. Zazwyczaj te źródła przechowywania informacji daty i godziny w formacie prostego, który jest zgodny z <xref:System.DateTime> struktury.
+* Pobierz informacje o dacie i godzinie ze źródeł poza platformą .NET, takich jak bazy danych SQL. Zwykle te źródła przechowują informacje o dacie i godzinie w prostym formacie zgodnym ze <xref:System.DateTime> strukturą.
 
-* Wykonywać daty i czasu arytmetyczne, ale są związane z ogólne wyniki. Na przykład w operacji dodawania, który dodaje sześć miesięcy do określonej daty i godziny, często nie jest istotne czy wynik jest uwzględniany czas letni.
+* Wykonaj operacje arytmetyczne daty i godziny, ale są one powiązane z ogólnymi wynikami. Na przykład w operacji dodawania, która dodaje sześć miesięcy do określonej daty i godziny, często nie ma znaczenia, czy wynik jest dostosowywany do czasu letniego.
 
-Chyba że określonego <xref:System.DateTime> wartość reprezentuje UTC, w tym dniu, a wartość czasu jest często niejednoznaczne lub ograniczone w jego przenoszenia. Na przykład jeśli <xref:System.DateTime> wartość odpowiada czasowi lokalnemu, jest przenośny w ramach tej strefy czasu lokalnego (to znaczy, jeśli wartość jest przeprowadzona w innym systemie w tej samej strefie czasowej, że wartość nadal jednoznacznie identyfikuje pojedynczy punkt w czasie). Poza lokalnej strefy czasowej, która <xref:System.DateTime> wartość może mieć wiele interpretacji. Jeśli wartości <xref:System.DateTime.Kind%2A> właściwość jest <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, jest on jeszcze mniej przenośny: jest teraz niejednoznaczne w ramach tej samej strefie czasowej i prawdopodobnie nawet w tym samym systemie go najpierw serializacji. Tylko wtedy, gdy <xref:System.DateTime> wartość reprezentuje UTC jest, że wartość jego jednoznacznej identyfikacji pojedynczego punktu w czasie, niezależnie od tego, czy system lub strefy czasowej, w której wartość jest używana.
+O ile określona <xref:System.DateTime> wartość nie reprezentuje czasu UTC, ta wartość daty i godziny jest często niejednoznaczna lub ograniczona w jego przenośności. Na przykład jeśli <xref:System.DateTime> wartość reprezentuje czas lokalny, jest ona przenośna w ramach tej lokalnej strefy czasowej (to oznacza, że jeśli wartość jest deserializowana w innym systemie w tej samej strefie czasowej, ta wartość nadal jednoznacznie identyfikuje pojedynczy punkt w czasie). Na zewnątrz lokalnej strefy czasowej ta <xref:System.DateTime> wartość może mieć wiele interpretacji. Jeśli <xref:System.DateTime.Kind%2A> Właściwość Value ma <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>wartość, jest ona jeszcze mniej przenośna: jest teraz niejednoznaczna w tej samej strefie czasowej i prawdopodobnie nawet w tym samym systemie, w którym została najpierw zserializowana. Tylko wtedy, <xref:System.DateTime> gdy wartość reprezentuje czas UTC, ta wartość jednoznacznie zidentyfikuje pojedynczy punkt w czasie, niezależnie od systemu lub strefy czasowej, w której jest używana wartość.
 
 > [!IMPORTANT]
-> Podczas zapisywania ani udostępniania <xref:System.DateTime> należy używać danych, UTC i <xref:System.DateTime> wartości <xref:System.DateTime.Kind%2A> właściwość powinna być ustawiona na <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.
+> Podczas zapisywania lub udostępniania <xref:System.DateTime> danych należy używać czasu UTC, <xref:System.DateTime> a <xref:System.DateTime.Kind%2A> Właściwość Value powinna być ustawiona na <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.
 
-## <a name="the-datetimeoffset-structure"></a>DateTimeOffset — struktura
+## <a name="the-datetimeoffset-structure"></a>Struktura DateTimeOffset
 
-<xref:System.DateTimeOffset> Struktury reprezentuje wartość daty i godziny, wraz z przesunięcia, która wskazuje, ile ta wartość różni się od czasu UTC. W związku z tym wartość zawsze jednoznacznie identyfikuje pojedynczy punkt w czasie.
+<xref:System.DateTimeOffset> Struktura reprezentuje wartość daty i godziny wraz z przesunięciem wskazującym, ile tej wartości różni się od czasu UTC. Z tego względu wartość zawsze jednoznacznie identyfikuje pojedynczy punkt w czasie.
 
-<xref:System.DateTimeOffset> Typu obejmuje wszystkie funkcje <xref:System.DateTime> typu wraz z świadomości strefy czasowej. Dzięki temu odpowiednia w przypadku aplikacji, które należy wykonać następujące czynności:
+Typ zawiera wszystkie funkcje <xref:System.DateTime> typu wraz z rozpoznawaniem strefy czasowej. <xref:System.DateTimeOffset> Dzięki temu aplikacje są odpowiednie dla aplikacji, które wykonują następujące czynności:
 
-* Jednoznacznie i jednoznacznie zidentyfikować pojedynczy punkt w czasie. <xref:System.DateTimeOffset> Typu może służyć do definiowania jednoznacznie znaczenie, "teraz", do dziennika transakcji logowań, czas zdarzeń systemu lub aplikacji i czas tworzenia i modyfikacji rekordu pliku.
+* Jednoznacznie i jednoznacznie Zidentyfikuj pojedynczy punkt w czasie. <xref:System.DateTimeOffset> Typ może służyć do jednoznacznego zdefiniowania znaczenia "teraz", rejestrowania czasu transakcji, rejestrowania czasu zdarzeń systemu lub aplikacji oraz rejestrowania czasu tworzenia i modyfikacji plików.
 
-* Wykonaj ogólne Data i czas operacji arytmetycznych.
+* Wykonaj ogólną arytmetyczną datę i godzinę.
 
-* Zachowaj wiele razy, powiązane, tak długo, jak te godziny są przechowywane jako dwa osobne wartości lub dwa elementy członkowskie struktury.
+* Zachowanie wielu pokrewnych czasów, o ile te czasy są przechowywane jako dwie odrębne wartości lub dwa elementy członkowskie struktury.
 
 > [!NOTE]
-> Te zastosowania <xref:System.DateTimeOffset> wartości są znacznie częściej niż <xref:System.DateTime> wartości. W rezultacie <xref:System.DateTimeOffset> należy rozważyć domyślny typ daty i godziny tworzenia aplikacji.
+> Te zastosowania w <xref:System.DateTimeOffset> przypadku wartości są znacznie bardziej typowe niż te <xref:System.DateTime> dla wartości. W związku <xref:System.DateTimeOffset> z tym należy traktować domyślny typ daty i godziny dla tworzenia aplikacji.
 
-A <xref:System.DateTimeOffset> wartość nie jest związany z daną strefę czasową, ale mogą pochodzić z wielu stref czasowych. Na przykład poniższy przykład wyświetla listę stref czasowych, do którego szereg <xref:System.DateTimeOffset> mogą należeć wartości (w tym lokalnym standardowy czas pacyficzny).
+<xref:System.DateTimeOffset> Wartość nie jest powiązana z konkretną strefą czasową, ale może pochodzić z dowolnej z różnych stref czasowych. W poniższym przykładzie wymieniono strefy czasowe, do których może należeć kilka <xref:System.DateTimeOffset> wartości (w tym lokalny czas pacyficzny).
 
 [!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
 [!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
 
-Dane wyjściowe wskazują, że każdego dnia i w tym przykładzie wartość czasu może należeć do co najmniej trzech różnych strefach czasowych. <xref:System.DateTimeOffset> Wartość 6/10/2007 jest wyświetlana, jeśli wartość daty i godziny reprezentuje czasu letniego, przesunięcie względem czasu UTC nawet niekoniecznie odpowiadają źródłowej strefy czasowej podstawowy przesunięcie czasu UTC lub przesunięcie względem czasu UTC, w jego nazwę wyświetlaną. Oznacza to, że ponieważ pojedynczy <xref:System.DateTimeOffset> wartość nie jest ściśle powiązany z ich strefą czasu, nie można odzwierciedlić, strefę czasową przejścia do i z czasu letniego. Może to być szczególnie problematyczny, gdy arytmetyka daty i godziny jest używany do manipulowania <xref:System.DateTimeOffset> wartość. (Omówienie sposobu wykonywania arytmetyka w sposób, który uwzględnia reguł korygowania jest strefa czasowa daty i godziny, zobacz [wykonywanie operacji arytmetycznych na wartościach dat i godzin](../../../docs/standard/datetime/performing-arithmetic-operations.md).)
+Dane wyjściowe pokazują, że każda wartość daty i godziny w tym przykładzie może należeć do co najmniej trzech różnych stref czasowych. <xref:System.DateTimeOffset> Wartość 6/10/2007 pokazuje, że jeśli wartość daty i godziny reprezentuje czas letni, jego przesunięcie od czasu UTC nie będzie nawet odpowiadać podstawowemu przesunięciu czasu UTC lub przesunięciu z czasu UTC znalezionego w jego nazwie wyświetlanej. Oznacza to, że ze względu <xref:System.DateTimeOffset> na to, że pojedyncza wartość nie jest ściśle sprzężona ze strefą czasową, nie może odzwierciedlać przejścia strefy czasowej do i od czasu letniego. Może to być szczególnie problematyczne, gdy do manipulowania <xref:System.DateTimeOffset> wartością jest używana arytmetyka daty i godziny. (Aby uzyskać informacje na temat sposobu przeprowadzania operacji arytmetycznych daty i godziny w sposób, który uwzględnia reguły dostosowania strefy czasowej, zobacz [wykonywanie obliczeń arytmetycznych z datami i godzinami](../../../docs/standard/datetime/performing-arithmetic-operations.md)).
 
 ## <a name="the-timespan-structure"></a>Struktura TimeSpan
 
-<xref:System.TimeSpan> Struktury reprezentuje przedział czasu. Jego dwie typowe zastosowania to:
+<xref:System.TimeSpan> Struktura reprezentuje przedział czasu. Poniżej przedstawiono dwa typowe zastosowania:
 
-* W czasie wykonywania odbicia przedział czasu między dwiema wartościami daty i godziny. Na przykład odjęcie jednego <xref:System.DateTime> wartości z innej zwraca <xref:System.TimeSpan> wartość.
+* Odzwierciedlanie interwału czasu między dwiema wartościami daty i godziny. Na przykład odjęcie jednej <xref:System.DateTime> wartości od innej <xref:System.TimeSpan> zwraca wartość.
 
-* Pomiar czasu. Na przykład <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> właściwość zwraca <xref:System.TimeSpan> wartość, która odzwierciedla przedział czasu, jaki upłynął od wywołania do jednego z <xref:System.Diagnostics.Stopwatch> metody, które zaczyna się, aby zmierzyć czas, który upłynął.
+* Pomiar czasu, który upłynął. Na przykład <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> Właściwość <xref:System.TimeSpan> zwraca wartość odzwierciedlającą przedział czasu, który upłynął od <xref:System.Diagnostics.Stopwatch> wywołania jednej z metod, które zaczynają mierzyć czas, który upłynął.
 
-A <xref:System.TimeSpan> wartość może również służyć jako zamiennika <xref:System.DateTime> wartości w przypadku tej wartości odzwierciedla czas bez odwołania do określonej porze dnia. To obciążenie jest podobny do <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> i <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> właściwości, które zwracają <xref:System.TimeSpan> wartość, która reprezentuje czas bez odwołań do daty. Na przykład <xref:System.TimeSpan> struktura może służyć do odzwierciedlenia codzienne opening lub godzina zamknięcia magazynu lub może służyć do reprezentowania czas, w którym występuje dowolne zdarzenie, regularne.
+Wartość może być również używana jako zamiennik <xref:System.DateTime> dla wartości, gdy ta wartość odzwierciedla czas bez odwołania do danego dnia. <xref:System.TimeSpan> To użycie jest podobne do <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> <xref:System.TimeSpan> właściwości i <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> , które zwracają wartość, która reprezentuje czas bez odwołania do daty. Na przykład <xref:System.TimeSpan> struktura może służyć do odzwierciedlenia codziennego otwarcia lub zamknięcia magazynu lub może służyć do reprezentowania czasu, w którym występuje każde zdarzenie regularne.
 
-W poniższym przykładzie zdefiniowano `StoreInfo` strukturę, która obejmuje <xref:System.TimeSpan> obiekty do przechowywania otwierający i zamykający godziny, a także <xref:System.TimeZoneInfo> obiekt, który reprezentuje strefę czasową w sklepie. Struktura obejmuje również dwie metody `IsOpenNow` i `IsOpenAt`, który wskazuje, czy magazyn jest otwarty w czasie określonym przez użytkownika, który zakłada, że w lokalnej strefie czasowej.
+W poniższym przykładzie zdefiniowano `StoreInfo` strukturę obejmującą <xref:System.TimeSpan> obiekty służące do otwierania i zamykania czasu <xref:System.TimeZoneInfo> oraz obiekt, który reprezentuje strefę czasową magazynu. Struktura zawiera również dwie metody `IsOpenNow` i `IsOpenAt`, która wskazuje, czy magazyn jest otwarty w określonym czasie przez użytkownika, który ma być w lokalnej strefie czasowej.
 
 [!code-csharp[Conceptual.ChoosingDates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.choosingdates/cs/datetimereplacement1.cs#1)]
 [!code-vb[Conceptual.ChoosingDates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.choosingdates/vb/datetimereplacement1.vb#1)]
 
-`StoreInfo` Struktury można następnie używane przez kod klienta, podobnie do poniższego.
+`StoreInfo` Strukturę można następnie użyć w kodzie klienta podobnym do poniższego.
 
 [!code-csharp[Conceptual.ChoosingDates#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.choosingdates/cs/datetimereplacement1.cs#2)]
 [!code-vb[Conceptual.ChoosingDates#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.choosingdates/vb/datetimereplacement1.vb#2)]
 
-## <a name="the-timezoneinfo-class"></a>TimezoneInfo — klasa
+## <a name="the-timezoneinfo-class"></a>Klasa TimeZoneInfo
 
-<xref:System.TimeZoneInfo> Klasa reprezentuje dowolne ziemi stref czasowych i umożliwia konwertowanie wszystkie daty i godziny w jednej strefie czasowej na jej odpowiednik w innej strefie czasowej. <xref:System.TimeZoneInfo> Klasy sprawia, że można pracować z daty i godziny — tak, aby wszystkie wartości daty i godziny jednoznacznie identyfikuje pojedynczy punkt w czasie. <xref:System.TimeZoneInfo> Klasy, również jest rozszerzalny. Mimo że zależy to informacje o strefie czasowej dostarczone dla systemów Windows i zdefiniowana w rejestrze, obsługuje tworzenie niestandardowych stref czasowych. Obsługuje ona również serializacji i deserializacji obiektu informacji o strefie czasowej.
+<xref:System.TimeZoneInfo> Klasa reprezentuje dowolną strefę czasową ziemi i umożliwia konwersję dowolnej daty i godziny w jednej strefie czasowej na jej odpowiednik w innej strefie czasowej. <xref:System.TimeZoneInfo> Klasa umożliwia pracy z datami i godzinami, tak aby każda wartość daty i godziny jednoznacznie wskazywała pojedynczy punkt w czasie. <xref:System.TimeZoneInfo> Klasa jest również rozszerzalna. Chociaż jest to zależne od informacji o strefie czasowej dla systemów Windows i zdefiniowanych w rejestrze, obsługuje tworzenie niestandardowych stref czasowych. Obsługuje również serializacji i deserializacji informacji o strefie czasowej.
 
-W niektórych przypadkach, w pełni korzystać z <xref:System.TimeZoneInfo> klasy mogą wymagać dalszej pracy programowania. Jeśli wartości daty i godziny nie są ściśle powiązane ze strefami czasowymi, do których należą, dalszych prac jest wymagana. Chyba, że aplikacja zapewnia pewien mechanizm dla łączenie daty i godziny za pomocą jego skojarzonego strefy czasowej, jest łatwe do określonej daty i wartości godziny stają się oddzielone od strefy czasowej. Jedną z metod łączenia tych informacji jest aby zdefiniować klasę lub strukturę, która zawiera daty i wartości w czasie oraz jego obiekt skojarzonych stref czasowych.
+W niektórych przypadkach korzystanie z <xref:System.TimeZoneInfo> pełnej funkcjonalności klasy może wymagać dalszej pracy programistycznej. Jeśli wartości daty i godziny nie są ściśle sprzężone z strefami czasowymi, do których należą, wymagana jest dodatkowa prace. Jeśli aplikacja nie zapewnia pewnego mechanizmu łączenia daty i godziny ze skojarzoną ze strefą czasową, jest to bardzo proste dla konkretnej wartości daty i godziny, która ma zostać nieskojarzona ze strefą czasową. Jedną z metod łączenia tych informacji jest zdefiniowanie klasy lub struktury, która zawiera zarówno wartość daty, jak i skojarzoną z nią obiekt strefy czasowej.
 
-Korzystając z zalet obsługę strefy czasowej na platformie .NET jest możliwe tylko wtedy, gdy strefa czasowa, do którego należy ta wartość daty i godziny jest określany podczas konkretyzacji tego obiektu daty i godziny. Często nie jest tak zwłaszcza w sieci Web lub aplikacji.
+Korzystanie z funkcji obsługi strefy czasowej w programie .NET jest możliwe tylko wtedy, gdy strefa czasowa, do której należy wartość daty i godziny, jest znana, gdy zostanie utworzone wystąpienie tego obiektu daty i godziny. Często nie jest to przypadek, szczególnie w aplikacjach sieci Web i sieciowych.
 
 ## <a name="see-also"></a>Zobacz także
 

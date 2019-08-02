@@ -1,21 +1,21 @@
 ---
-title: LINQ to XML a MODELU DOM (C#)
+title: LINQ to XML a DOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 3cd6edf9e950611d4e0ed205b89c7c7b073955c8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 65dff4dc1c2faa1cd17e640d0c1a0e1d2a514fbe
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484320"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710017"
 ---
-# <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML a MODELU DOM (C#)
-W tej sekcji opisano niektóre podstawowe różnice między [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] i bieżącej dominujący XML programowania interfejsu API, W3C Document Object Model (DOM).  
+# <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML a DOM (C#)
+W tej sekcji opisano niektóre kluczowe różnice [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] między programem a obecnym głównym interfejsem API programowania plików XML, W3C Document Object Model (dom).  
   
-## <a name="new-ways-to-construct-xml-trees"></a>Nowe sposoby tworzenia drzew XML  
- W modelu DOM W3C tworzysz drzewa XML z dołu. oznacza to Utwórz dokument, tworzyć elementy, a następnie dodać elementy do dokumentu.  
+## <a name="new-ways-to-construct-xml-trees"></a>Nowe sposoby konstruowania drzew XML  
+ W modelu W3C DOM utworzysz drzewo XML od dołu do góry. oznacza to, że tworzysz dokument, tworzysz elementy, a następnie dodasz elementy do dokumentu.  
   
- Na przykład, następujące byłoby typowym sposobem tworzenia drzewa XML przy użyciu implementacja firmy Microsoft w modelu DOM, <xref:System.Xml.XmlDocument>:  
+ Na przykład poniżej przedstawiono typowy sposób tworzenia drzewa XML przy użyciu implementacji modelu DOM <xref:System.Xml.XmlDocument>firmy Microsoft:  
   
 ```csharp  
 XmlDocument doc = new XmlDocument();  
@@ -50,9 +50,9 @@ contacts.AppendChild(contact);
 doc.AppendChild(contacts);  
 ```  
   
- Ten styl kodowania nie zapewnia wizualne dużej ilości informacji na temat struktury drzewa XML. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obsługuje takie podejście do Konstruowanie drzewa XML, ale obsługuje także alternatywne podejście, *konstrukcja funkcjonalna*. Konstrukcja funkcjonalna używa <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XAttribute> konstruktorów do tworzenia drzewa XML.  
+ Ten styl kodowania nie udostępnia wizualizacji więcej informacji o strukturze drzewa XML. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]obsługuje to podejście do konstruowania drzewa XML, ale również obsługuje alternatywne podejście, *konstrukcja funkcjonalna*. Konstrukcja funkcjonalna używa <xref:System.Xml.Linq.XElement> konstruktorów i <xref:System.Xml.Linq.XAttribute> do tworzenia drzewa XML.  
   
- Oto jak będzie konstruowania tych samych drzewa XML przy użyciu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] konstrukcja funkcjonalna:  
+ Poniżej przedstawiono sposób konstruowania tego samego drzewa XML przy użyciu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] konstrukcji funkcjonalnej:  
   
 ```csharp  
 XElement contacts =  
@@ -73,20 +73,20 @@ XElement contacts =
     );  
 ```  
   
- Należy zauważyć, że wcięć w kodzie do konstruowania drzewa XML pokazuje strukturę elementu bazowego XML.  
+ Zwróć uwagę, że Wcięcie kodu w celu skonstruowania drzewa XML pokazuje strukturę bazowego kodu XML.  
   
- Aby uzyskać więcej informacji, zobacz [tworzenie drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md).  
+ Aby uzyskać więcej informacji, zobacz [Tworzenie drzew XMLC#()](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md).  
   
-## <a name="working-directly-with-xml-elements"></a>Praca bezpośrednio z elementów XML  
- Gdy program za pomocą XML zespół podstawowego jest zazwyczaj na elementy XML, a być może w atrybutach. W [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], można pracować bezpośrednio z elementów XML oraz atrybuty. Można na przykład, wykonaj następujące czynności:  
+## <a name="working-directly-with-xml-elements"></a>Praca bezpośrednio z elementami XML  
+ Gdy program jest używany w języku XML, główny fokus jest zazwyczaj na elementach XML i prawdopodobnie na atrybutach. W [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]programie można bezpośrednio korzystać z elementów i atrybutów XML. Można na przykład wykonać następujące czynności:  
   
-- Tworzenie elementów XML bez przy użyciu obiektu dokumentu w ogóle. Upraszcza to programowania, gdy trzeba pracować przy użyciu fragmentów drzew XML.  
+- Utwórz elementy XML bez używania obiektu dokumentu. Upraszcza to programowanie, gdy trzeba będzie korzystać z fragmentów drzew XML.  
   
-- Obciążenia `T:System.Xml.Linq.XElement` obiektów bezpośrednio z pliku XML.  
+- Załaduj `T:System.Xml.Linq.XElement` obiekty bezpośrednio z pliku XML.  
   
-- Serializowanie `T:System.Xml.Linq.XElement` obiektów do pliku lub strumienia.  
+- Serializacja `T:System.Xml.Linq.XElement` obiektów do pliku lub strumienia.  
   
- To porównać do modelu DOM W3C, w którym dokument XML jest używany jako kontener logiczny dla drzewa XML. W modelu DOM węzłów XML, w tym elementów i atrybutów, należy utworzyć w kontekście dokumentu XML. Poniżej przedstawiono fragment kodu, aby utworzyć element nazwy w modelu DOM:  
+ Porównaj ten element z W3C DOM, w którym dokument XML jest używany jako kontener logiczny dla drzewa XML. W modelu DOM, węzły XML, w tym elementy i atrybuty, muszą zostać utworzone w kontekście dokumentu XML. Oto fragment kodu do utworzenia elementu Name w modelu DOM:  
   
 ```csharp  
 XmlDocument doc = new XmlDocument();  
@@ -95,41 +95,41 @@ name.InnerText = "Patrick Hines";
 doc.AppendChild(name);  
 ```  
   
- Jeśli chcesz użyć elementu na wiele dokumentów, należy zaimportować węzłów, wszystkich dokumentów. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pozwala uniknąć złożoności tej warstwy.  
+ Jeśli chcesz użyć elementu w wielu dokumentach, należy zaimportować węzły między dokumentami. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]pozwala uniknąć tej warstwy złożoności.  
   
- Podczas korzystania z LINQ to XML, należy użyć <xref:System.Xml.Linq.XDocument> klasy tylko wtedy, gdy chcesz dodać instrukcję przetwarzania lub komentarz na poziomie głównym dokumentu.  
+ W przypadku używania LINQ to XML <xref:System.Xml.Linq.XDocument> Klasa jest używana tylko wtedy, gdy chcesz dodać komentarz lub instrukcję przetwarzania na poziomie głównym dokumentu.  
   
 ## <a name="simplified-handling-of-names-and-namespaces"></a>Uproszczona obsługa nazw i przestrzeni nazw  
- Obsługa nazw, przestrzenie nazw i prefiksy przestrzeni nazw jest zazwyczaj złożonych częścią programowania XML. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] upraszcza nazw i przestrzeni nazw pozwala pozbyć się konieczności radzenia sobie z prefiksy przestrzeni nazw. Jeśli chcesz kontrolować prefiksy przestrzeni nazw, możesz. Jeśli zdecydujesz się nie zostały jawnie kontrolowanie prefiksów przestrzeni nazw, jednak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] spowoduje przypisanie prefiksy przestrzeni nazw podczas serializacji, jeśli wymagane są lub będą serializacji przy użyciu domyślnych przestrzeni nazw, jeśli nie są one. Jeśli używane są domyślne obszary nazw, nie będzie żadnych prefiksów przestrzeni nazw w utworzonego dokumentu. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
+ Obsługa nazw, przestrzeni nazw i prefiksów przestrzeni nazw jest ogólnie złożonym elementem programowania XML. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]upraszcza nazwy i przestrzenie nazw, eliminując wymóg postępowania z prefiksami przestrzeni nazw. Jeśli chcesz kontrolować prefiksy przestrzeni nazw, możesz. Ale jeśli zdecydujesz się nie jawnie kontrolować prefiksów przestrzeni nazw, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] program przypisze prefiksy przestrzeni nazw podczas serializacji, jeśli są wymagane, lub będzie serializować przy użyciu domyślnych przestrzeni nazw, jeśli nie. Jeśli są używane domyślne przestrzenie nazw, nie będzie żadnych prefiksów przestrzeni nazw w dokumencie będącym wynikiem. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
   
- Inny problem z modelu DOM jest, że nie zezwala Ci zmienić nazwę węzła. Zamiast tego należy utworzyć nowy węzeł i skopiuj wszystkie węzły podrzędne, utraty oryginalną tożsamość węzła. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pozwala uniknąć tego problemu, należy włączyć ustawienia <xref:System.Xml.Linq.XName> właściwość w węźle.  
+ Innym problemem z modelem DOM jest to, że nie pozwala na zmianę nazwy węzła. Zamiast tego należy utworzyć nowy węzeł i skopiować do niego wszystkie węzły podrzędne, tracąc oryginalną tożsamość węzła. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]pozwala uniknąć tego problemu, umożliwiając ustawienie <xref:System.Xml.Linq.XName> właściwości w węźle.  
   
-## <a name="static-method-support-for-loading-xml"></a>Obsługa statycznej metody ładowania danych XML  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Umożliwia ładowanie kodu XML przy użyciu metody statyczne, zamiast metody wystąpienia. Upraszcza to ładowania i analizowania. Aby uzyskać więcej informacji, zobacz [jak: Ładowanie kodu XML z pliku (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
+## <a name="static-method-support-for-loading-xml"></a>Obsługa metody statycznej do ładowania pliku XML  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]umożliwia ładowanie XML przy użyciu metod statycznych zamiast metod instancji. Upraszcza to ładowanie i analizowanie. Aby uzyskać więcej informacji, zobacz [jak: Załaduj plik XML z plikuC#(](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)).  
   
-## <a name="removal-of-support-for-dtd-constructs"></a>Usunięcie obsługi konstrukcji DTD  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dodatkowo upraszcza programowanie, usuwając obsługę jednostek i odwołań do jednostek XML. Zarządzanie jednostkami jest złożona i jest rzadko używana. Usuwanie ich obsługi zwiększa wydajność i upraszcza interfejs programowania. Gdy [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] drzewa jest wypełniana, zostaną rozwinięte wszystkie jednostki DTD.  
+## <a name="removal-of-support-for-dtd-constructs"></a>Usuwanie obsługi dla konstrukcji DTD  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]bardziej upraszcza programowanie XML przez usunięcie obsługi jednostek i odwołań do jednostek. Zarządzanie jednostkami jest skomplikowane i rzadko jest używane. Usunięcie ich obsługi zwiększa wydajność i upraszcza interfejs programowania. Po wypełnieniu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] drzewa wszystkie jednostki DTD są rozwinięte.  
   
 ## <a name="support-for-fragments"></a>Obsługa fragmentów  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nie zapewnia odpowiedniego dla `XmlDocumentFragment` klasy. W wielu przypadkach jednak `XmlDocumentFragment` pojęcia mogą być obsługiwane w wyniku zapytania, które jest <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XNode>, lub <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]nie zapewnia równoważnej `XmlDocumentFragment` klasy. W wielu `XmlDocumentFragment` przypadkach koncepcje mogą być obsługiwane przez wynik zapytania, które zostało wpisane <xref:System.Xml.Linq.XNode>w <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>.  
   
-## <a name="support-for-xpathnavigator"></a>Obsługa klasy XPathNavigator  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapewnia obsługę <xref:System.Xml.XPath.XPathNavigator> za pośrednictwem metody rozszerzające w <xref:System.Xml.XPath?displayProperty=nameWithType> przestrzeni nazw. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
+## <a name="support-for-xpathnavigator"></a>Obsługa elementu XPathNavigator  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapewnia obsługę <xref:System.Xml.XPath.XPathNavigator> za pomocą metod rozszerzających <xref:System.Xml.XPath?displayProperty=nameWithType> w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
   
 ## <a name="support-for-white-space-and-indentation"></a>Obsługa białych znaków i wcięć  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obsługuje biały znak, co jest prostsze niż DOM.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]obsługuje biały znak więcej niż w modelu DOM.  
   
- Typowym scenariuszem jest Odczytaj dane XML z wcięciami, utworzyć drzewa XML w pamięci bez wszystkie węzły tekstowe białe miejsca (to znaczy nie zachowania biały), wykonywanie operacji na pliku XML, a następnie zapisz plik XML, z wcięciem. Po użytkownik serializacji XML za pomocą formatowania, tylko istotne biały znak w drzewie XML są zachowywane. Jest to domyślne zachowanie dla [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+ Typowym scenariuszem jest odczytywanie wciętych plików XML, tworzenie drzewa XML w pamięci bez jakichkolwiek białych węzłów tekstowych (to nie zachowuje białych znaków), wykonywanie niektórych operacji na pliku XML, a następnie zapisywanie kodu XML z wcięciem. Podczas serializacji pliku XML z formatowaniem zachowywana jest tylko znaczący biały znak w drzewie XML. Jest to zachowanie domyślne dla programu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
- Inny typowy scenariusz polega na odczytywanie i modyfikację XML, który już został celowo z wcięciami. Nie można zmienić to wcięcie w dowolny sposób. W [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], można to zrobić przez zachowywanie białych znaków podczas ładowania lub nemohla analyzovat kód XML i wyłączanie formatowania podczas serializacji XML.  
+ Inny typowy scenariusz polega na odczytaniu i zmodyfikowaniu kodu XML, który został już celowo wcięty. W żaden sposób nie trzeba zmieniać tego wcięcia. W [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]programie można to zrobić przez zachowanie białych znaków podczas ładowania lub analizowania kodu XML oraz wyłączanie formatowania podczas serializacji XML.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] przechowuje biały znak jako <xref:System.Xml.Linq.XText> węzła zamiast wyspecjalizowanego <xref:System.Xml.XmlNodeType.Whitespace> typ węzła jako modelu DOM wykonuje.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapisuje biały znak jako <xref:System.Xml.Linq.XText> węzeł, zamiast mieć wyspecjalizowany <xref:System.Xml.XmlNodeType.Whitespace> typ węzła, jak dom.  
   
 ## <a name="support-for-annotations"></a>Obsługa adnotacji  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] elementy obsługuje extensible zbiór adnotacji. Jest to przydatne do śledzenia dodatkowych informacji na temat elementu, np. informacji o schemacie, informacji na temat tego, czy element jest powiązany z interfejsu użytkownika lub inne informacje dotyczące rodzaju specyficzne dla aplikacji. Aby uzyskać więcej informacji, zobacz [adnotacje LINQ to XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-annotations.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]elementy obsługują rozszerzalny zestaw adnotacji. Jest to przydatne do śledzenia różnych informacji o elemencie, takich jak informacje o schemacie, informacje o tym, czy element jest powiązany z interfejsem użytkownika, czy też innym rodzajem informacji specyficznych dla aplikacji. Aby uzyskać więcej informacji, zobacz [LINQ to XML adnotacje](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-annotations.md).  
   
 ## <a name="support-for-schema-information"></a>Obsługa informacji o schemacie  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapewnia obsługę walidację XSD za pośrednictwem metody rozszerzające w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw. Aby zweryfikować, że drzewa XML jest zgodny z XSD. Możesz wypełnić drzewa XML z zestaw informacji po weryfikacji (PSVI). Aby uzyskać więcej informacji, zobacz [jak: Weryfikowanie przy użyciu XSD](../../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) i <xref:System.Xml.Schema.Extensions>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapewnia obsługę walidacji XSD za pomocą metod rozszerzających <xref:System.Xml.Schema?displayProperty=nameWithType> w przestrzeni nazw. Można sprawdzić, czy drzewo XML jest zgodne z XSD. Drzewo XML można wypełnić za pomocą sprawdzonych po walidacji schematu (PSVI). Aby uzyskać więcej informacji, zobacz [jak: Weryfikuj przy użyciu](../../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) XSD <xref:System.Xml.Schema.Extensions>i.  
   
 ## <a name="see-also"></a>Zobacz także
 

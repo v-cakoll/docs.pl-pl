@@ -9,27 +9,31 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942808"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710213"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>Zaawansowane (Windows Presentation Foundation)
-W tej sekcji opisano niektóre zaawansowane obszarów na platformie WPF.  
+W tej sekcji opisano niektóre zaawansowane obszary w WPF.  
   
-## <a name="in-this-section"></a>W tej sekcji  
- [Architektura WPF](wpf-architecture.md)  
- [Elementy podstawowe](base-elements.md)  
- [Drzewo elementów i serializacja](element-tree-and-serialization.md)  
- [Przeciąganie i upuszczanie](drag-and-drop.md)  
- [Dokumenty](documents.md)  
- [Globalizacja i lokalizacja](globalization-and-localization.md)  
- [Migracja i współdziałanie](migration-and-interoperability.md)  
- [Wydajność](performance.md)  
- [Model wątkowości](threading-model.md)  
- [Dodatki WPF — omówienie](../app-development/wpf-add-ins-overview.md)  
- [Dokumentacja interfejsu API niezarządzanych WPF](wpf-unmanaged-api-reference.md)  
-  
-## <a name="related-sections"></a>Sekcje pokrewne
+## <a name="in-this-section"></a>W tej sekcji
+
+[Architektura WPF](wpf-architecture.md)  
+[XAML w WPF](xaml-in-wpf.md)  
+[Klasy elementu podstawowego](base-elements.md)  
+[Drzewo elementów i serializacja](element-tree-and-serialization.md)  
+[System właściwości WPF](properties-wpf.md)  
+[Zdarzenia w WPF](events-wpf.md)  
+[Dane wejściowe](input-wpf.md)  
+[Przeciąganie i upuszczanie](drag-and-drop.md)  
+[Zasoby](resources-wpf.md)  
+[Dokumenty](documents.md)  
+[Globalizacja i lokalizacja](globalization-and-localization.md)  
+[Układ](layout.md)  
+[Migracja i współdziałanie](migration-and-interoperability.md)  
+[Wydajność](performance.md)  
+[Model wątkowości](threading-model.md)  
+[Niezarządzana dokumentacja interfejsu API WPF](wpf-unmanaged-api-reference.md)  

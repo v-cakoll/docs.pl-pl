@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Prefiksy Namespace kontroli (LINQ to XML) (Visual Basic)'
+title: 'Instrukcje: Kontrolowanie prefiksów przestrzeni nazw (Visual Basic) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-ms.openlocfilehash: 7e5a05d2fa93e61338f450d0a4d890fa94c04fd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b89b49aa76df526c08143cad49685386ffd5e7c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855403"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709823"
 ---
-# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Instrukcje: Prefiksy Namespace kontroli (LINQ to XML) (Visual Basic)
-W tym temacie opisano, jak można kontrolować prefiksy przestrzeni nazw.  
+# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Instrukcje: Kontrolowanie prefiksów przestrzeni nazw (Visual Basic) (LINQ to XML)
+W tym temacie opisano sposób kontrolowania prefiksów przestrzeni nazw.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Ten przykład deklaruje dwie przestrzeni nazw. Określa, że `http://www.adventure-works.com` przestrzeni nazw ma prefiks `aw`oraz że `www.fourthcoffee.com` przestrzeń nazw ma prefiks `fc`.  
+ Ten przykład deklaruje dwie przestrzenie nazw. Określa, że `http://www.adventure-works.com` przestrzeń nazw ma prefiks `aw`i że `www.fourthcoffee.com` przestrzeń nazw ma prefiks `fc`.  
   
 ### <a name="code"></a>Kod  
   
@@ -55,4 +55,4 @@ End Module
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [Przegląd przestrzeni nazw (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

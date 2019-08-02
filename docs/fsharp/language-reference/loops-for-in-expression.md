@@ -1,17 +1,17 @@
 ---
 title: 'Pętle: for...in — Wyrażenie'
-description: Zobacz jak F# for... w wyrażeniu konstrukcji pętli jest używany do wykonywania iteracji dopasowania wzorca w kolekcji wyliczenia.
+description: Zobacz, F# jak... w konstrukcji zapętlania wyrażeń jest używany do iteracji na dopasowaniach wzorca w wyliczalnej kolekcji.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5346713b1747227f3fe79e308455d976e506f968
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 640b0f91f6c641f3b49a99dc67abe7e4c31911ea
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641803"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630715"
 ---
 # <a name="loops-forin-expression"></a>Pętle: for...in — Wyrażenie
 
-Tej konstrukcji pętli jest używany do wykonywania iteracji dopasowania wzorca w wyliczalny kolekcji, takie jak wyrażenie zakresu, sekwencji, listy, tablicy lub innej konstrukcji, który obsługuje wyliczenia.
+Ta konstrukcja zapętlenia służy do iteracji na dopasowaniach wzorca w wyliczalnej kolekcji, takiej jak wyrażenie zakresu, sekwencja, lista, tablica lub inna konstrukcja, która obsługuje Wyliczenie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -22,25 +22,25 @@ for pattern in enumerable-expression do
 
 ## <a name="remarks"></a>Uwagi
 
-`for...in` Wyrażenia można porównać do wyrażenia `for each` instrukcji w innych językach .NET, ponieważ służy on do pętli wartości w kolekcji wyliczenia. Jednak `for...in` obsługuje również dopasowywanie wzorców względem kolekcji, a nie po prostu iteracji przez całą kolekcję.
+Wyrażenie można porównać `for each` z instrukcją w innych językach .NET, ponieważ jest używana do pętli w przypadku wartości w wyliczalnej kolekcji. `for...in` Program `for...in` obsługuje jednak również dopasowanie wzorców do kolekcji, a nie tylko iteracji w całej kolekcji.
 
-Wyliczalne wyrażenia można określić jako wyliczalny kolekcji, lub za pomocą `..` operatora, jako zakres na typ całkowitoliczbowy. Przeliczalne kolekcje zawierają listy, sekwencji, tablice, zestawy, mapy i tak dalej. Dowolny typ, który implementuje `System.Collections.IEnumerable` mogą być używane.
+Wyliczalne wyrażenie może być określone jako wyliczalna kolekcja lub, za `..` pomocą operatora, jako zakresu w typie całkowitym. Wyliczalne kolekcje obejmują listy, sekwencje, tablice, zestawy, mapy itd. Można użyć dowolnego typu `System.Collections.IEnumerable` , który implementuje.
 
-Gdy zakres jest wyrazić za pomocą `..` operatora, należy użyć następującej składni.
+Gdy wyrażasz zakres przy użyciu `..` operatora, możesz użyć następującej składni.
 
-*Rozpocznij* ... *Zakończ*
+*Rozpocznij* .. *ukończyć*
 
-Można również użyć wersji, który zawiera przyrostu o nazwie *pominąć*, jak w poniższym kodzie.
+Możesz również użyć wersji, która zawiera przyrost o nazwie *Skip*, jak w poniższym kodzie.
 
-*Rozpocznij* ... *Pomiń* ... *Zakończ*
+*Rozpocznij* .. *Pomiń* .. *ukończyć*
 
-Korzystając z typu całkowitego zakresów i zmienną licznika prostego jako wzorzec, typowe zachowanie to zwiększyć wartości zmiennej licznika o 1 w każdej iteracji, ale jeśli ten zakres obejmuje wartości skip, licznik jest zwiększany przez wartość Pomiń zamiast tego.
+W przypadku korzystania z zakresów całkowitych i prostej zmiennej licznika jako wzorca typowym zachowaniem jest zwiększenie zmiennej licznika o 1 dla każdej iteracji, ale jeśli zakres zawiera wartość pomijania, licznik zostanie zwiększony przez wartość pomijania.
 
-Można także dopasować we wzorcu wartości w wyrażeniu treści.
+W wyrażeniu treści można także użyć wartości pasujących do wzorca.
 
-Poniższe przykłady kodu ilustrują używanie `for...in` wyrażenia.
+Poniższe przykłady kodu ilustrują użycie `for...in` wyrażenia.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5201.fs)]
 
 Dane wyjściowe są następujące:
 
@@ -52,9 +52,9 @@ Dane wyjściowe są następujące:
 788
 ```
 
-Poniższy przykład pokazuje sposób pętli sekwencji oraz korzystania z wzorca krotki zamiast prostej zmiennej.
+Poniższy przykład pokazuje, jak wykonać pętlę w sekwencji i jak używać wzorca krotek zamiast prostej zmiennej.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5202.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5202.fs)]
 
 Dane wyjściowe są następujące:
 
@@ -71,21 +71,21 @@ Dane wyjściowe są następujące:
 10 squared is 100
 ```
 
-Poniższy przykład pokazuje, jak w pętli za pośrednictwem prostego liczbą całkowitą.
+Poniższy przykład pokazuje, jak wykonać pętlę dla prostego zakresu liczb całkowitych.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5203.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5203.fs)]
 
-Dane wyjściowe function1 wyglądają następująco.
+Dane wyjściowe function1 są następujące.
 
 ```
 1 2 3 4 5 6 7 8 9 10
 ```
 
-Poniższy przykład pokazuje, jak w pętli w zakresie z pominięciem 2, która zawiera każdy inny element zakresu.
+Poniższy przykład pokazuje, jak pętla w zakresie z pominięciem 2, które obejmuje każdy inny element zakresu.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5204.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5204.fs)]
 
-Dane wyjściowe `function2` jest następujący.
+Dane wyjściowe `function2` są w następujący sposób.
 
 ```
 1 3 5 7 9
@@ -93,37 +93,37 @@ Dane wyjściowe `function2` jest następujący.
 
 Poniższy przykład pokazuje, jak używać zakresu znaków.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5205.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5205.fs)]
 
-Dane wyjściowe `function3` jest następujący.
+Dane wyjściowe `function3` są w następujący sposób.
 
 ```
 a b c d e f g h i j k l m n o p q r s t u v w x y z
 ```
 
-Poniższy przykład pokazuje, jak używać wartości ujemne Pomiń dla iteracji odwrotnej.
+Poniższy przykład pokazuje, jak używać ujemnej wartości pomijania dla iteracji odwrotnej.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5208.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5208.fs)]
 
-Dane wyjściowe `function4` jest następujący.
+Dane wyjściowe `function4` są w następujący sposób.
 
 ```
 10 9 8 7 6 5 4 3 2 1 ... Lift off!
 ```
 
-Początek i koniec zakresu, może być również wyrażeń, takie jak functions, tak jak w poniższym kodzie.
+Początek i koniec zakresu mogą również być wyrażeniami, takimi jak funkcje, jak w poniższym kodzie.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5206.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5206.fs)]
 
-Dane wyjściowe `function5` z tych danych wejściowych jest w następujący sposób.
+Dane wyjściowe `function5` z tymi danymi wejściowymi są następujące.
 
 ```
 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 ```
 
-W kolejnym przykładzie pokazano użycie symbolu wieloznacznego (\_) Jeśli element nie jest potrzebna w pętli.
+W następnym przykładzie pokazano użycie symbolu wieloznacznego (\_), gdy element nie jest wymagany w pętli.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5207.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5207.fs)]
 
 Dane wyjściowe są następujące:
 
@@ -131,10 +131,10 @@ Dane wyjściowe są następujące:
 Number of elements in list1: 5
 ```
 
-`Note` Możesz użyć `for...in` w sekwencji, wyrażenia i inne wyrażenia obliczeń, w którym to przypadku dostosowaną wersję `for...in` wyrażenie jest używane. Aby uzyskać więcej informacji, zobacz [sekwencje](sequences.md), [Asynchroniczne przepływy pracy](asynchronous-workflows.md), i [wyrażenia obliczeń](computation-expressions.md).
+`Note`Można używać `for...in` w wyrażeniach sekwencji i innych wyrażeniach obliczeniowych, w tym przypadku używana jest dostosowana wersja `for...in` wyrażenia. Aby uzyskać więcej informacji, [](sequences.md)Zobacz sekwencje, [asynchroniczne przepływy pracy](asynchronous-workflows.md)i [wyrażenia obliczeń](computation-expressions.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka F#](index.md)
-- [Pętle: `for...to` Expression](loops-for-to-expression.md)
-- [Pętle: `while...do` Expression](loops-while-do-expression.md)
+- [Pętli `for...to`Wyrażenia](loops-for-to-expression.md)
+- [Pętli `while...do`Wyrażenia](loops-while-do-expression.md)

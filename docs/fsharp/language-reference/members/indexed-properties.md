@@ -1,17 +1,17 @@
 ---
 title: Właściwości indeksowane
-description: Więcej informacji na temat właściwości indeksowanych w F#, które umożliwiają dostęp tablicy do danych uporządkowanych.
+description: Dowiedz się więcej na F#temat właściwości indeksowanych w programie, które umożliwiają dostęp do danych uporządkowanych w postaci zbliżonej do tablic.
 ms.date: 10/17/2018
-ms.openlocfilehash: 7fc8f46e029255c6ed985a43b92c8f7c2908c428
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 379417e31b8e178d8c939e5b23dc144bfb17e562
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489490"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627555"
 ---
 # <a name="indexed-properties"></a>Właściwości indeksowane
 
-Podczas definiowania klasy, która przenosi danych uporządkowanych, czasami może być przydatne do udostępnienia indeksowane dane bez narażania podstawowej implementacji. Jest to zrobić za pomocą `Item` elementu członkowskiego.
+Podczas definiowania klasy, która jest abstrakcyjna względem uporządkowanych danych, może być czasem przydatna do zapewnienia indeksowanego dostępu do tych danych bez uwidaczniania podstawowej implementacji. Odbywa się to za pomocą `Item` elementu członkowskiego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,19 +36,19 @@ member self-identifier.Item
 
 ## <a name="remarks"></a>Uwagi
 
-Formy składnia poprzednich pokazują, jak zdefiniować właściwości indeksowanych mających zarówno `get` i `set` metody mają `get` tylko metody lub `set` tylko metody. Można także połączyć oba te składni przedstawionej tylko polecenie get i składni przedstawionej tylko zestaw i generuje właściwości, która ma zarówno get i set. Ten formularz, ostatnie pozwala umieścić modyfikatory dostępności różnych i atrybuty w get i ustawianie metody.
+Formy poprzedniej składni pokazują, jak definiować indeksowane właściwości `get` , które mają zarówno metodę, jak `set` i, mają `get` tylko metodę, lub `set` tylko metodę. Można również połączyć składnię pokazaną tylko do pobrania i składnię wyświetlaną tylko dla zestawu i utworzyć właściwość, która ma oba metody get i Set. Ten ostatni formularz umożliwia umieszczenie różnych modyfikatorów dostępności i atrybutów w metodach get i Set.
 
-Przy użyciu nazwy `Item`, kompilator traktuje właściwości jako domyślnie indeksowanej właściwości. A *Właściwość indeksowana domyślnie* jest właściwością, która może uzyskać dostęp za pomocą składni tablicy na wystąpienie obiektu. Na przykład jeśli `o` jest obiektem typu, który definiuje tę właściwość, składnia `o.[index]` umożliwia dostęp do właściwości.
+Używając nazwy `Item`, kompilator traktuje właściwość jako domyślną właściwość indeksowaną. *Domyślną indeksowaną właściwością* jest właściwość, do której można uzyskać dostęp za pomocą składni podobnej do tablic w wystąpieniu obiektu. Na przykład jeśli `o` jest obiektem typu, który definiuje tę właściwość, składnia `o.[index]` jest używana w celu uzyskania dostępu do właściwości.
 
-Składnia służąca do uzyskiwania dostępu do właściwości indeksowanych innych niż domyślne jest do podania nazwy właściwości i indeksu w nawiasach, podobnie jak regularny członek. Na przykład jeśli właściwość `o` nosi nazwę `Ordinal`, piszesz `o.Ordinal(index)` do niego dostęp.
+Składnia służąca do uzyskiwania dostępu do właściwości indeksowanej innej niż domyślna to podanie nazwy właściwości i indeksu w nawiasach, podobnie jak zwykłego elementu członkowskiego. Na przykład, jeśli właściwość `o` jest wywoływana `Ordinal`, nastąpi zapis `o.Ordinal(index)` w celu uzyskania do niej dostępu.
 
-Niezależnie od tego formularza, którego używasz należy zawsze używać rozwinięte formularza metody set dla właściwości indeksowanych. Aby uzyskać informacje na temat funkcji rozwinięte zobacz [funkcji](../functions/index.md).
+Niezależnie od tego, który formularz jest używany, należy zawsze używać formularza rozwinięte dla metody Set dla właściwości indeksowanej. Aby uzyskać informacje o funkcjach rozwinięte [](../functions/index.md), zobacz Functions.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu ilustruje definicja oraz wykorzystanie domyślnej i właściwości indeksowanych innych niż domyślne, które get i ustawianie metody.
+Poniższy przykład kodu ilustruje definicję i użycie domyślnych i niedomyślnych właściwości indeksowanych, które mają metody get i Set.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
 
 ## <a name="output"></a>Dane wyjściowe
 
@@ -58,11 +58,11 @@ ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth
 ```
 
-## <a name="indexed-properties-with-multiple-index-values"></a>Właściwości indeksowane, za pomocą wielu wartości indeksu
+## <a name="indexed-properties-with-multiple-index-values"></a>Właściwości indeksowane z wieloma wartościami indeksu
 
-Właściwości indeksowane może mieć więcej niż jedną wartość indeksu. W takim przypadku wartości są oddzielone przecinkami, gdy jest używana. Metody set w takiej właściwości musi mieć dwa argumenty rozwinięte, pierwszy z nich jest krotkę zawierającą klucze, a drugi z nich jest wartość do ustawienia.
+Indeksowane właściwości mogą mieć więcej niż jedną wartość indeksu. W takim przypadku wartości są oddzielane przecinkami, gdy właściwość jest używana. Metoda Set w takiej właściwości musi mieć dwa argumenty rozwinięte, z których pierwszy jest krotką zawierającą klucze, a druga wartość do ustawienia.
 
-Poniższy przykład demonstruje użycie właściwości indeksowanej z wieloma wartościami indeksu.
+Poniższy kod ilustruje użycie właściwości indeksowanej z wieloma wartościami indeksu.
 
 ```fsharp
 open System.Collections.Generic

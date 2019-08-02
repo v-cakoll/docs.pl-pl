@@ -1,162 +1,162 @@
 ---
-title: Rozpoczynanie pracy z usługą F# w programie Visual Studio Code
-description: Dowiedz się, jak używać F# za pomocą programu Visual Studio Code i Ionide zestawu wtyczki.
+title: Rozpoczynanie pracy F# z usługą w Visual Studio Code
+description: Dowiedz się, F# jak używać programu z Visual Studio Code i pakietem wtyczek Ionide.
 ms.date: 12/23/2018
-ms.openlocfilehash: d9d5ed4008f657f956ee7a5611a2f5fdd8e5b44a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: baaa87207122cfe314972aee5dfaf8a41de2c394
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051878"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629980"
 ---
-# <a name="get-started-with-f-in-visual-studio-code"></a>Rozpoczynanie pracy z usługą F# w programie Visual Studio Code
+# <a name="get-started-with-f-in-visual-studio-code"></a>Rozpoczynanie pracy F# z usługą w Visual Studio Code
 
-Można napisać F# w [programu Visual Studio Code](https://code.visualstudio.com) z [wtyczki Ionide](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp) uzyskać dla wielu platform, proste tworzenie środowiska IDE (Integrated) spełni za pomocą funkcji IntelliSense i podstawowego kodu operacje refaktoryzacji. Odwiedź stronę [Ionide.io](http://ionide.io) Aby dowiedzieć się więcej na temat dodatku plug-in.
+Możesz pisać F# w [Visual Studio Code](https://code.visualstudio.com) z wtyczką [Ionide](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp) , aby uzyskać wspaniałe Międzyplatformowe, uproszczone zintegrowane środowisko programistyczne (IDE) z technologią IntelliSense i podstawowymi refaktoryzacjami kodu. Odwiedź stronę [Ionide.IO](http://ionide.io) , aby dowiedzieć się więcej na temat wtyczki.
 
-Aby rozpocząć, upewnij się, że [ F# i poprawnie zainstalowaną wtyczką Ionide](install-fsharp.md#install-f-with-visual-studio-code).
+Aby rozpocząć, upewnij się, że [ F# poprawnie zainstalowano wtyczkę Ionide](install-fsharp.md#install-f-with-visual-studio-code).
 
 > [!NOTE]
-> Ionide wygeneruje .NET Framework F# projektów, nie dotnet rdzeń procesora, który może mieć problemy ze zgodnością między platformami. Jeśli są uruchomione na **Linux** lub **OSX**, prostszy sposób na rozpoczęcie pracy jest użycie [narzędzia wiersza polecenia](get-started-command-line.md).
+> Ionide będzie generować projekty F# .NET Framework, a nie rdzeń dotnet, które mogą mieć problemy ze zgodnością między platformami. Jeśli pracujesz w systemie **Linux** lub **OSX**, prostszym sposobem na rozpoczęcie pracy jest użycie [narzędzi wiersza polecenia](get-started-command-line.md).
 
-## <a name="creating-your-first-project-with-ionide"></a>Tworzenie pierwszego projektu za pomocą Ionide
+## <a name="creating-your-first-project-with-ionide"></a>Tworzenie pierwszego projektu przy użyciu Ionide
 
-Aby utworzyć nowy F# projektu, Otwórz program Visual Studio Code w nowym folderze (można określić nazwę wedle uznania).
+Aby utworzyć nowy F# projekt, otwórz Visual Studio Code w nowym folderze (można go nazwać w dowolny sposób).
 
-Następnie otwórz paletę poleceń (**Widok > paletę poleceń**) i wpisz następujące polecenie:
+Następnie Otwórz paletę poleceń (**wyświetl > palecie poleceń**) i wpisz następujące polecenie:
 
 ```
 > F# new project
 ```
 
-Jest to obsługiwane przez [FORGE](https://github.com/fsharp-editing/Forge) projektu.
+Jest to obsługiwane przez projekt [podrabiania](https://github.com/fsharp-editing/Forge) .
 
 > [!NOTE]
-> Jeśli nie widzisz opcji szablonów, Odśwież szablony, uruchamiając następujące polecenie w palecie poleceń: `>F#: Refresh Project Templates`.
+> Jeśli nie widzisz opcji szablonu, spróbuj odświeżyć szablony, uruchamiając następujące polecenie w palecie poleceń `>F#: Refresh Project Templates`:.
 
-Wybierz pozycję "F#: Nowy projekt", naciskając **Enter**. Spowoduje to przejście do następnego kroku, która jest przez wybranie szablonu projektu.
+Wybierz pozycjęF#": Nowy projekt "przez naciśnięcie **klawisza ENTER**. Spowoduje to przejście do następnego kroku, który służy do wybierania szablonu projektu.
 
-Wybierz `classlib` szablonu, a następnie wybierz pozycję **Enter**.
+Wybierz szablon i naciśnij klawisz **Enter.** `classlib`
 
-Następnie wybierz katalog, aby utworzyć projekt w programie. Jeśli pole pozostanie puste, zostanie użyta bieżącego katalogu.
+Następnie wybierz katalog, w którym zostanie utworzony projekt. Jeśli pozostawisz to pole puste, zostanie użyty bieżący katalog.
 
-Na koniec nazwę projektu w ostatnim kroku. F#używa [pisanymi wielkimi literami](http://c2.com/cgi/wiki?PascalCase) dotyczące nazw projektów. W tym artykule wykorzystano `ClassLibraryDemo` jako nazwę. Po wprowadzeniu nazwę dla projektu trafień **Enter**.
+Na koniec Nadaj projektowi nazwę w ostatnim kroku. F#używa [przypadku języka Pascal](http://c2.com/cgi/wiki?PascalCase) dla nazw projektów. W tym artykule `ClassLibraryDemo` jest stosowana nazwa. Po wprowadzeniu nazwy dla projektu naciśnij klawisz **Enter**.
 
-Jeśli wykonano poprzedniego kroku, należy uzyskać Visual Studio Code obszaru roboczego po lewej stronie do pojawiają się z następujących czynności:
+Jeśli wykonano poprzedni krok, należy uzyskać obszar roboczy Visual Studio Code po lewej stronie, aby wyświetlić następujące elementy:
 
-1. F# Sam projekt poniżej `ClassLibraryDemo` folderu.
-2. Trwa dodawanie pakietów przy użyciu struktury katalogu poprawny [ `Paket` ](https://fsprojects.github.io/Paket/).
-3. Dla wielu platform, tworzenie skript [ `FAKE` ](https://fsharp.github.io/FAKE/).
-4. `paket.exe` Plik wykonywalny, który można pobrać pakiety i rozwiązywanie zależności.
-5. A `.gitignore` plik, jeśli chcesz dodać ten projekt do kontroli źródła opartych o Git.
+1. Sam F# projekt, poniżej `ClassLibraryDemo` folderu.
+2. Poprawna struktura katalogów służąca do [`Paket`](https://fsprojects.github.io/Paket/)dodawania pakietów za pośrednictwem.
+3. Międzyplatformowy skrypt kompilacji z [`FAKE`](https://fsharp.github.io/FAKE/).
+4. `paket.exe` Plik wykonywalny, który może pobierać pakiety i rozwiązywać zależności.
+5. Plik `.gitignore` , jeśli chcesz dodać ten projekt do kontroli źródła opartej na git.
 
 ## <a name="writing-some-code"></a>Pisanie kodu
 
-Otwórz *ClassLibraryDemo* folderu.  Powinny zostać wyświetlone następujące pliki:
+Otwórz folder *ClassLibraryDemo* .  Powinny zostać wyświetlone następujące pliki:
 
-1. `ClassLibraryDemo.fs`, F# pliku implementacji przy użyciu klasy zdefiniowane.
-2. `ClassLibraryDemo.fsproj`, F# pliku projektu, używany do tworzenia tego projektu.
-3. `Script.fsx`, F# pliku skryptu, który ładuje plik źródłowy.
+1. `ClassLibraryDemo.fs`, plik F# implementacji z zdefiniowaną klasą.
+2. `ClassLibraryDemo.fsproj`, plik F# projektu używany do kompilowania tego projektu.
+3. `Script.fsx`, plik F# skryptu ładujący plik źródłowy.
 4. `paket.references`, plik Paket, który określa zależności projektu.
 
 Otwórz `Script.fsx`i Dodaj następujący kod na końcu:
 
-[!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx)]
+[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx)]
 
-Ta funkcja konwertuje słowo na formę [Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin). Następnym krokiem jest ocena za pomocą F# interakcyjne (FSI).
+Ta funkcja konwertuje wyraz na formę surówki. [](https://en.wikipedia.org/wiki/Pig_Latin) Następnym krokiem jest oszacowanie go przy użyciu opcji F# Interactive (fsi).
 
-Zaznacz całą funkcję (powinno wskazywać 11 wierszy). Gdy jest wyróżniona, przytrzymaj **Alt** kluczy i kliknij przycisk **Enter**. Można zauważyć okno wyskakujące okienko poniżej, a powinna ona zostać wyświetlona mniej więcej tak:
+Zaznacz całą funkcję (powinna być 11 wierszy). Gdy zostanie ono wyróżnione, przytrzymaj klawisz **Alt** i naciśnij klawisz **Enter**. Zobaczysz okno podręczne poniżej i będzie ono wyglądać następująco:
 
-![Przykład F# Interactive dane wyjściowe z Ionide](media/getting-started-vscode/vscode-fsi.png)
+![Przykład danych F# wyjściowych interaktywnych z Ionide](./media/getting-started-vscode/vscode-fsi.png)
 
-To wykonanie trzech czynności:
+Było to trzy rzeczy:
 
-1. Proces FSI jego uruchomienia.
-2. Kod, który zostanie wyróżniony go przesyłane za pośrednictwem procesu FSI.
-3. Proces FSI oceniane kod, który wysyłane za pośrednictwem.
+1. Uruchomiono proces FSI.
+2. Wysłano kod wyróżniony w procesie FSI.
+3. Proces FSI ocenia kod, który został wysłany.
 
-Ponieważ był wysyłany za pośrednictwem [funkcja](../language-reference/functions/index.md), teraz można wywołać tę funkcję za pomocą FSI! W oknie interaktywnym wpisz następujące polecenie:
+Ponieważ wysłane przez Ciebie elementy były [funkcją](../language-reference/functions/index.md), można teraz wywołać tę funkcję za pomocą FSI! W oknie interaktywnym wpisz następujące polecenie:
 
 ```fsharp
 toPigLatin "banana";;
 ```
 
-Powinny zostać wyświetlone następujące wyniki:
+Powinien zostać wyświetlony następujący wynik:
 
 ```fsharp
 val it : string = "ananabay"
 ```
 
-Teraz Wypróbujmy się od samogłosek jako pierwszą literę. Wprowadź następujące informacje:
+Teraz Wypróbujmy samogłosy jako pierwszą literę. Wprowadź następujące elementy:
 
 ```fsharp
 toPigLatin "apple";;
 ```
 
-Powinny zostać wyświetlone następujące wyniki:
+Powinien zostać wyświetlony następujący wynik:
 
 ```fsharp
 val it : string = "appleyay"
 ```
 
-Funkcja wydaje się działać zgodnie z oczekiwaniami. Gratulacje, napisany właśnie pierwszej F# funkcji w programie Visual Studio Code i oceniać je za pomocą FSI!
+Funkcja wydaje się działać zgodnie z oczekiwaniami. Gratulacje, po prostu Zapisano pierwszą F# funkcję w Visual Studio Code i oceniamy ją za pomocą FSI!
 
 > [!NOTE]
-> Jak być może zauważono, wiersze FSI kończą się za pomocą `;;`. Jest to spowodowane FSI pozwala wprowadzić wiele wierszy. `;;` Na końcu umożliwia FSI dowiedzieć się, gdy kod jest zostało zakończone.
+> Jak zauważono, wiersze w FSI są kończone z `;;`. Dzieje się tak, ponieważ FSI umożliwia wprowadzanie wielu wierszy. `;;` Na końcu FSI wie, kiedy kod został ukończony.
 
-## <a name="explaining-the-code"></a>Wyjaśniające, kod
+## <a name="explaining-the-code"></a>Objaśnienie kodu
 
-Jeśli nie masz pewności, o jakie rzeczywiście jest zastosowanie danego kodu, poniżej przedstawiono instrukcje krok po kroku.
+Jeśli nie masz pewności, co robi kod w rzeczywistości, wykonaj instrukcje krok po kroku.
 
-Jak widać, `toPigLatin` jest funkcją, która przyjmuje word jako dane wejściowe i konwertuje ją na reprezentację w postaci Pig Latin tego wyrazu. Dostępne są następujące reguły, w tym:
+Jak widać, `toPigLatin` to funkcja, która przyjmuje słowo jako dane wejściowe i konwertuje ją na reprezentację w postaci tuszowej. Te reguły są następujące:
 
-Jeśli pierwszy znak w wyraz rozpoczyna się od samogłosek, należy dodać "yay" do końca słowa. Jeśli go nie zaczyna się od samogłosek, Przenieś pierwszym znaku do końca słowa i "ay" Dodaj do niej.
+Jeśli pierwszy znak w wyrazie zaczyna się od samogłosek, Dodaj "Yay" do końca wyrazu. Jeśli nie zaczyna się od samogłosek, Przenieś ten pierwszy znak na koniec wyrazu i Dodaj do niego wartość "AY".
 
-Być może zauważono FSI następujące czynności:
+W FSI mogły być zauważone następujące elementy:
 
 ```fsharp
 val toPigLatin : word:string -> string
 ```
 
-Stanowi to, że `toPigLatin` jest funkcją, która przyjmuje `string` jako dane wejściowe (o nazwie `word`) i zwraca innego `string`. Jest to nazywane [sygnatura typu funkcji](https://fsharpforfunandprofit.com/posts/function-signatures/), podstawowe fragment F# jest kluczem do zrozumienia F# kodu. Należy także zauważyć, to po umieszczeniu wskaźnika myszy nad funkcji w programie Visual Studio Code.
+To Stany `toPigLatin` , które są funkcją, która przyjmuje `string` jako dane wejściowe (nazywane `word`) i zwraca inną `string`. Jest to nazywane sygnaturą [typu funkcji](https://fsharpforfunandprofit.com/posts/function-signatures/), podstawową częścią F# tego klucza do poznania F# kodu. Zauważmy również, że po umieszczeniu wskaźnika myszy nad funkcją w Visual Studio Code.
 
-W treści funkcji można zauważyć dwa oddzielne części:
+W treści funkcji widoczne są dwie odrębne części:
 
-1. Wewnętrzna funkcja wywoływana `isVowel`, która określa, czy dany znak (`c`) jest samogłosek, sprawdzając, jeśli jest on zgodny z jednym z wzorców podanych za pośrednictwem [dopasowywania do wzorca](../language-reference/pattern-matching.md):
+1. Wewnętrzna funkcja, wywołana `isVowel`, która określa, czy dany znak (`c`) jest wygłosami przez sprawdzenie, czy pasuje do jednego z dostarczonych wzorców przez [dopasowanie wzorca](../language-reference/pattern-matching.md):
 
-   [!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L2-L6)]
+   [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L2-L6)]
 
-2. [ `if..then..else` ](../language-reference/conditional-expressions-if-then-else.md) Wyrażenie, które sprawdza, czy pierwszym znakiem jest samogłosek i konstrukcji, wartość zwracana z wprowadzonych znaków na podstawie jeśli pierwszym znakiem jest samogłosek, lub nie:
+2. [`if..then..else`](../language-reference/conditional-expressions-if-then-else.md) Wyrażenie, które sprawdza, czy pierwszy znak jest samogłosek i konstruuje zwracaną wartość z znaków wejściowych w oparciu o to, czy pierwszy znak był samogłosek lub nie:
 
-   [!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L8-L11)]
+   [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L8-L11)]
 
-Przepływ `toPigLatin` jest w ten sposób:
+Przepływ `toPigLatin` jest następujący:
 
-Sprawdź, czy pierwszy znak wyrazu danych wejściowych jest samogłosek. Jeśli tak jest, należy dołączyć "yay" do końca słowa. W przeciwnym razie przenieść pierwszym znaku do końca słowa i "ay" Dodaj do niej.
+Sprawdź, czy pierwszy znak wyrazu wejściowego to samogłoski. Jeśli tak, Dołącz "Yay" do końca wyrazu. W przeciwnym razie Przenieś ten pierwszy znak na koniec wyrazu i Dodaj do niego wartość "AY".
 
-Istnieje jedno końcowe należy zwrócić uwagę na ten temat: jest nie jawnego instrukcji, zostać zwrócony przez funkcję, w przeciwieństwie do wielu innych języków tam. Jest to spowodowane F# jest oparte na wyrażeniach i ostatniego wyrażenia w treści funkcji jest wartością zwracaną. Ponieważ `if..then..else` sama jest wyrażenie treści `then` bloku lub treści `else` blok zostanie zwrócona, w zależności od wartości wejściowej.
+Należy zwrócić uwagę na to, że nie ma żadnej bezpośredniej instrukcji zwracanej z funkcji, w przeciwieństwie do wielu innych języków. Wynika to z F# faktu, że jest oparte na wyrażeniach, a ostatnie wyrażenie w treści funkcji jest wartością zwracaną. Ponieważ `if..then..else` sama jest wyrażeniem, treść `then` bloku `else` lub treści bloku zostanie zwrócona w zależności od wartości wejściowej.
 
-## <a name="moving-your-script-code-into-the-implementation-file"></a>Przenoszenie kodu skryptu w pliku implementacji
+## <a name="moving-your-script-code-into-the-implementation-file"></a>Przeniesienie kodu skryptu do pliku implementacji
 
-Poprzednie sekcje w tym artykule przedstawiono typowe, pierwszym krokiem na piśmie F# kodu: pisanie funkcję początkową i wykonywania w interaktywnie przy użyciu FSI. Jest to nazywane projektowania opartego na REPL, gdzie [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) oznacza "Odczytu oceny — Drukuj pętlę". Jest to doskonały sposób na wypróbowanie funkcji, aż do uzyskania elementu pracy.
+W poprzednich sekcjach tego artykułu przedstawiono typowy pierwszy krok podczas pisania F# kodu: pisanie początkowej funkcji i wykonywanie jej interaktywnie przy użyciu FSI. Jest to nazywane programowaniem opartym na REPL, gdzie [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) to "Read-Szacuj-Print pętl". Jest to doskonały sposób na eksperymentowanie z funkcjami do momentu, w którym będzie działać.
 
-Następnym krokiem projektowania opartego na REPL jest przeniesienie działającego kodu do F# pliku implementacji. Następnie może być kompilowane przez F# kompilatora do zestawu, który może zostać wykonany.
+Następnym krokiem w programowaniu opartym na REPL polega na przeniesieniu kodu roboczego F# do pliku implementacji. Może zostać następnie skompilowany przez F# kompilator do zestawu, który może być wykonywany.
 
-Aby rozpocząć, otwórz `ClassLibraryDemo.fs`.  Można zauważyć, że jakiś kod jest już istnieje. Przejdź dalej i usuń definicję klasy, ale pamiętaj pozostawić [ `namespace` ](../language-reference/namespaces.md) deklaracji u góry.
+Aby rozpocząć, Otwórz `ClassLibraryDemo.fs`.  Zauważysz, że jakiś kod już istnieje. Przejdź dalej i usuń definicję klasy, ale upewnij się, że [`namespace`](../language-reference/namespaces.md) deklaracja znajduje się u góry.
 
-Następnie utwórz nową [ `module` ](../language-reference/modules.md) o nazwie `PigLatin` i skopiuj `toPigLatin` funkcji do niego w związku z tym:
+Następnie utwórz nową [`module`](../language-reference/modules.md) nazwę `PigLatin` i skopiuj `toPigLatin` funkcję do niej w taki sposób:
 
-[!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
+[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
 
-Następnie otwórz `Script.fsx` ponownie plik, a następnie usuń całą `toPigLatin` działać, ale pamiętaj zapewnić następujące dwa wiersze w pliku:
+Następnie ponownie Otwórz `Script.fsx` plik i Usuń całą `toPigLatin` funkcję, ale pamiętaj, aby zachować następujące dwa wiersze w pliku:
 
 ```fsharp
 #load "ClassLibraryDemo.fs"
 open ClassLibraryDemo
 ```
 
-Wybierz obie linie tekstu, a następnie naciśnij klawisze Alt + Enter, aby wykonać te wiersze w FSI. Te załaduje zawartość biblioteki Pig Latin procesem FSI i `open` `ClassLibraryDemo` przestrzeni nazw, aby mieć dostęp do funkcji.
+Zaznacz oba wiersze tekstu i naciśnij klawisze ALT + ENTER, aby wykonać te wiersze w FSI. Spowoduje to załadowanie zawartości biblioteki z wieprzowiny do procesu FSI i `open` `ClassLibraryDemo` przestrzeni nazw w celu uzyskania dostępu do funkcji.
 
-Następnie w oknie FSI Wywołaj funkcję z `PigLatin` moduł, który wcześniej zdefiniowaną:
+Następnie w oknie FSI wywołaj funkcję przy użyciu `PigLatin` zdefiniowanego wcześniej modułu:
 
 ```
 > PigLatin.toPigLatin "banana";;
@@ -165,36 +165,36 @@ val it : string = "ananabay"
 val it : string = "appleyay"
 ```
 
-SUKCES! Pobierz te same wyniki jak wcześniej, ale teraz ładowane z F# pliku implementacji. Główną różnicą jest to, że F# pliki źródłowe są kompilowane do zestawów, które mogą być wykonywane w dowolnym miejscu, nie tylko w FSI.
+Prawnego! Uzyskasz te same wyniki jak poprzednio, ale teraz załadowano je z pliku F# implementacji. Istotną różnicą jest to F# , że pliki źródłowe są kompilowane do zestawów, które można wykonać w dowolnym miejscu, a nie tylko w FSI.
 
 ## <a name="summary"></a>Podsumowanie
 
-W tym artykule wyjaśniono:
+W tym artykule przedstawiono następujące informacje:
 
-1. Jak skonfigurować program Visual Studio Code za pomocą Ionide.
-2. Tworzenie pierwszej F# projektu za pomocą Ionide.
-3. Jak używać F# skryptów do zapisania pierwszej F# działać w Ionide, a następnie uruchomić go w FSI.
-4. Jak przeprowadzić migrację kodu skryptu do F# źródła, a następnie wywołać kod z FSI.
+1. Jak skonfigurować Visual Studio Code za pomocą Ionide.
+2. Jak utworzyć swój pierwszy F# projekt przy użyciu Ionide.
+3. Używanie F# skryptów do pisania pierwszej F# funkcji w Ionide, a następnie wykonywania jej w FSI.
+4. Jak przeprowadzić migrację kodu skryptu do F# źródła, a następnie wywołać ten kod z FSI.
 
-Teraz masz umożliwiającymi zapisu m.in F# kodowanie przy użyciu programu Visual Studio Code i Ionide.
+Teraz możesz napisać znacznie więcej F# kodu przy użyciu Visual Studio Code i Ionide.
 
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów
 
-Oto kilka sposobów, które można rozwiązać niektóre problemy, które możesz napotkać:
+Poniżej przedstawiono kilka sposobów rozwiązywania niektórych problemów, które mogą być wykonywane w programie:
 
-1. Aby uzyskać funkcji Ionide, edycji kodu usługi F# pliki muszą zostać zapisane na dysku i wewnątrz folderu, która jest otwarta w obszarze roboczym programu Visual Studio Code.
-2. Jeśli zostały wprowadzone zmiany do systemu lub zainstalować wstępnie wymagane składniki Ionide za pomocą programu Visual Studio Code Otwórz, uruchom ponownie program Visual Studio Code.
-3. Upewnij się, że można użyć F# kompilatora i F# interakcyjne z wiersza polecenia bez w pełni kwalifikowaną ścieżkę. Możesz to zrobić, wpisując `fsc` w wierszu polecenia, aby uzyskać F# kompilator i `fsi` lub `fsharpi` wizualizacji F# narzędzi Windows i platformy Mono na Mac/Linux, odpowiednio.
-4. Jeśli masz nieprawidłowe znaki w katalogach projektu Ionide mogą nie działać.  Jeśli jest to możliwe, należy zmienić nazwy katalogów projektu.
-5. Brak polecenia Ionide pracy, sprawdź swoje [powiązania klawiszy programu Visual Studio Code](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts) aby zobaczyć, jeśli masz zastępowania ich przypadkowo.
-6. Jeśli Ionide jest dzielony na komputerze, a żadne z powyższych poprawił problemu, spróbuj usunąć `ionide-fsharp` katalogu na komputerze i ponowne zainstalowanie pakietu wtyczki.
+1. Aby uzyskać funkcje edytowania kodu Ionide, należy zapisać F# pliki na dysku i w folderze, który jest otwarty w obszarze roboczym Visual Studio Code.
+2. Jeśli wprowadzono zmiany w systemie lub zainstalowano wymagania wstępne Ionide z Visual Studio Code Otwórz, uruchom ponownie Visual Studio Code.
+3. Sprawdź, czy można użyć F# kompilatora i F# interaktywnie z wiersza polecenia bez w pełni kwalifikowanej ścieżki. Można to zrobić `fsc` , wpisując w wierszu polecenia F# kompilatora `fsi` i lub `fsharpi` dla narzędzi wizualnych F# w systemach Windows i mono odpowiednio na komputerze Mac/Linux.
+4. Jeśli w katalogach projektu znajdują się nieprawidłowe znaki, Ionide może nie zadziałał.  W takim przypadku Zmień nazwy katalogów projektu.
+5. Jeśli żaden z poleceń Ionide nie działa, sprawdź powiązania klawiszy [Visual Studio Code](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts) , aby sprawdzić, czy są one zastępowane przypadkowo.
+6. Jeśli Ionide jest przerwany na komputerze, a żaden z powyższych elementów nie rozwiązał problemu, spróbuj usunąć `ionide-fsharp` katalog na maszynie i ponownie zainstalować pakiet wtyczek.
 
-Ionide to projekt typu open source utworzone i przechowywane przez członków F# społeczności. Należy zgłaszać problemy i możesz współtworzyć na [Ionide VSCode: Repozytorium FSharp GitHub](https://github.com/ionide/ionide-vscode-fsharp).
+Ionide to projekt typu "open source" skompilowany i obsługiwany przez członków F# społeczności. Zgłoś problemy i śmiało, aby współtworzyć [Ionide-programu vscode: FSharp repozytorium](https://github.com/ionide/ionide-vscode-fsharp)GitHub.
 
-Jeśli masz problem do raportu, wykonaj [instrukcje dotyczące pobierania dzienników do użycia podczas zgłoszenia problemu dotyczącego](https://github.com/ionide/ionide-vscode-fsharp#how-to-get-logs-for-debugging--issue-reporting).
+Jeśli masz problem z raportem, postępuj zgodnie [z instrukcjami dotyczącymi pobierania dzienników do użycia podczas zgłaszania problemu](https://github.com/ionide/ionide-vscode-fsharp#how-to-get-logs-for-debugging--issue-reporting).
 
-Możesz również poprosić, aby uzyskać dalszą pomoc, od deweloperów Ionide i F# społeczności [kanału Ionide dotyczącym oprogramowania Gitter](https://gitter.im/ionide/ionide-project).
+Możesz również poszukać dalszej pomocy od deweloperów Ionide i F# społeczności w [kanale warunkom Ionide](https://gitter.im/ionide/ionide-project).
 
 ## <a name="next-steps"></a>Następne kroki
 
-Aby dowiedzieć się więcej na temat F# i z funkcji języka, zapoznaj się z [Przewodnik po przykładzie F# ](../tour.md).
+Aby dowiedzieć się F# więcej na temat funkcji języka, zobacz [Przewodnik F# ](../tour.md)po stronie.

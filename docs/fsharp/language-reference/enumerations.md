@@ -1,17 +1,17 @@
 ---
 title: Wyliczenia
-description: Dowiedz się, jak używać F# wyliczeń zamiast literałów sprawić, że kod bardziej czytelny i łatwy w obsłudze.
+description: Dowiedz się, F# jak używać wyliczeń zamiast literałów, aby kod był bardziej czytelny i konserwowany.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7ff62b1c0a6ab0fda58a30de9387acbb547f6b81
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 784cd9612b199e4648bb64432d3b4422ad35f649
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645551"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630336"
 ---
 # <a name="enumerations"></a>Wyliczenia
 
-*Wyliczenia*, znane również jako *wyliczenia*,, są typami całkowitymi, gdy etykiety są przypisane do podzbioru wartości. Można je zamiast literałów wprowadzić kod bardziej czytelny i łatwy w obsłudze.
+*Wyliczenia*, znane także jako *wyliczenia*, są typami całkowitymi, w których etykiety są przypisywane do podzestawu wartości. Można ich użyć zamiast literałów, aby kod był bardziej czytelny i możliwy do utrzymania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,31 +24,31 @@ type enum-name =
 
 ## <a name="remarks"></a>Uwagi
 
-Wyliczenie wygląda bardzo podobnie złożeniem dyskryminowanym, które ma prostych wartości, z tą różnicą, że można określić wartości. Wartości są zwykle liczb całkowitych, które rozpoczynają się od 0 lub 1 lub liczb całkowitych reprezentujących pozycji bitów. Jeśli wyliczenie jest przeznaczony do reprezentowania pozycje bitów, należy również użyć [flagi](xref:System.FlagsAttribute) atrybutu.
+Wyliczenie wygląda podobnie jak Unia rozłączna, która ma proste wartości, z tą różnicą, że można określić wartości. Wartości są zwykle liczbami całkowitymi, które zaczynają się od 0 lub 1 lub liczby całkowite reprezentujące pozycje bitowe. Jeśli Wyliczenie jest przeznaczone do reprezentowania pozycji bitowych, należy również użyć atrybutu flags [](xref:System.FlagsAttribute) .
 
-Podstawowym typem wyliczenia jest określana na podstawie literał, która jest używana, tak aby na przykład można literały z sufiksu, takich jak `1u`, `2u`i tak dalej na liczbę całkowitą bez znaku (`uint32`) typu.
+Typ podstawowy wyliczenia jest określany na podstawie literału, który jest używany, aby na przykład można było użyć literałów z sufiksem, takim jak `1u`, `2u`, i tak dalej, dla typu Liczba całkowita bez znaku (`uint32`).
 
-W przypadku nazwanych wartości, należy użyć nazwy samego typu wyliczenia jako kwalifikator, oznacza to, `enum-name.value1`, nie tylko `value1`. To zachowanie różni się od sumy rozłączne. Jest to spowodowane wyliczenia zawsze mają [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) atrybutu.
+Gdy odwołujesz się do nazwanych wartości, musisz użyć nazwy typu wyliczenia jako kwalifikatora, czyli `enum-name.value1`nie tylko. `value1` To zachowanie różni się od tych związków rozłącznych. Wynika to z faktu, że wyliczenia mają zawsze atrybut [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) .
 
-Poniższy kod ilustruje deklarowanie i używanie wyliczenia.
+Poniższy kod przedstawia deklarację i użycie wyliczenia.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2101.fs)]
 
-Można z łatwością przekształcić wyliczenia typem podstawowym za pomocą odpowiedniego operatora, jak pokazano w poniższym kodzie.
+Wyliczenia można łatwo przekonwertować na typ podstawowy przy użyciu odpowiedniego operatora, jak pokazano w poniższym kodzie.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2102.fs)]
 
-Typy wyliczone może mieć jedną z następujących typów podstawowych: `sbyte`, `byte`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint16`, `uint64`, i `char`. Typy wyliczeniowe są reprezentowane w .NET Framework jako typy, które są dziedziczone z `System.Enum`, który z kolei jest odziedziczone po `System.ValueType`. Dlatego są typy wartości, które znajdują się w stos lub bezpośrednio w zawierającego go obiektu i dowolną wartość typu podstawowego jest prawidłową wartością wyliczenia. Jest to znaczące podczas dopasowania do wzorca w wyliczenia wartości, ponieważ musisz podać wzorzec, który przechwytuje nienazwanych wartości.
+Typy wyliczeniowe mogą mieć jeden z następujących typów podstawowych: `sbyte`, `byte`, `int16` `uint16` `uint32` `int32` `uint16`,,,, `int64`, `uint64`,, i `char`. Typy wyliczeniowe są reprezentowane w .NET Framework jako typy dziedziczone z `System.Enum`, które z kolei są dziedziczone z. `System.ValueType` Z tego względu są to typy wartości, które znajdują się na stosie lub są wbudowane w obiekt zawierający, a każda wartość typu podstawowego jest prawidłową wartością wyliczenia. Jest to istotne w przypadku dopasowania wzorców do wartości wyliczenia, ponieważ należy dostarczyć wzorzec, który przechwytuje wartości nienazwanych.
 
-`enum` Działa w programach F# biblioteki może służyć do generowania wartości wyliczenia, nawet wartość inna niż jeden z wstępnie zdefiniowanych, o nazwie wartości. Możesz użyć `enum` funkcji w następujący sposób.
+Funkcja w F# bibliotece może służyć do generowania wartości wyliczenia, nawet wartości innej niż jedna ze wstępnie zdefiniowanych wartości nazwanych. `enum` `enum` Używasz funkcji w następujący sposób.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
 
-Wartość domyślna `enum` funkcja działa z typem `int32`. W związku z tym nie można używać z typami wyliczenia, które mają innych typów podstawowych. Zamiast tego należy użyć.
+Funkcja Domyślna `enum` działa z typem `int32`. W związku z tym nie można jej używać z typami wyliczeniowymi, które mają inne typy podstawowe. Zamiast tego należy użyć poniższego polecenia.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
 
-Ponadto przypadków dla typów wyliczeniowych zawsze są emitowane jako `public`. Jest to tak, aby były wyrównane w języku C# i pozostałą część platformy .NET.
+Ponadto przypadki wyliczeniowe są zawsze emitowane jako `public`. Jest to tak, aby były wyrównane C# z i resztą platformy .NET.
 
 ## <a name="see-also"></a>Zobacz także
 

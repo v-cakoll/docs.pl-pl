@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: b6a1cc3ced3205037eb5b83ac3841efbfbd1b5b9
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
-ms.translationtype: HT
+ms.openlocfilehash: 13ad16ab768cdaee96cab29811e2ed058dee977a
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331215"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512239"
 ---
 # <a name="c-operators-c-reference"></a>C#Operatory (C# odwołanie)
 
@@ -65,7 +65,7 @@ dostęp do elementu Array [&#91;x&#93; ](member-access-operators.md#indexer-oper
 
 [Delegate](delegate-operator.md) — deklaruje i zwraca wystąpienie delegata.
 
-[sizeof](../keywords/sizeof.md) — zwraca rozmiar operandu typu w bajtach.
+[sizeof](sizeof.md) — zwraca rozmiar operandu typu w bajtach.
 
 [stackalloc](stackalloc.md) — przydziela blok pamięci na stosie.
 

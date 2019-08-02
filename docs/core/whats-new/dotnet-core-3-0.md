@@ -6,30 +6,35 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 06/14/2019
-ms.openlocfilehash: b1dd243d754bfc3b682c084820547f6b7846f0ea
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
-ms.translationtype: MT
+ms.date: 07/25/2019
+ms.openlocfilehash: 5300ddd83330b9564e7154008c59737d0d642138
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484657"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626336"
 ---
-# <a name="whats-new-in-net-core-30-preview-6"></a>Co nowego w programie .NET Core 3,0 (wersja zapoznawcza 6)
+# <a name="whats-new-in-net-core-30-preview-7"></a>Co nowego w programie .NET Core 3,0 (wersja zapoznawcza 7)
 
-W tym artykule opisano nowości w programie .NET Core 3,0 (w wersji zapoznawczej 6). Jednym z największych ulepszeń jest obsługa aplikacji klasycznych systemu Windows (tylko system Windows). Korzystając z pulpitu systemu Windows składnika zestawu SDK platformy .NET Core 3,0, można przenieść aplikacje Windows Forms i Windows Presentation Foundation (WPF). Aby można było wyczyścić, składnik pulpitu systemu Windows jest obsługiwany i uwzględniany w systemie Windows. Aby uzyskać więcej informacji, zobacz sekcję [pulpitu systemu Windows](#windows-desktop) w dalszej części tego artykułu.
+W tym artykule opisano nowości w programie .NET Core 3,0 (w wersji zapoznawczej 7). Jednym z największych ulepszeń jest obsługa aplikacji klasycznych systemu Windows (tylko system Windows). Korzystając z pulpitu systemu Windows składnika zestawu SDK platformy .NET Core 3,0, można przenieść aplikacje Windows Forms i Windows Presentation Foundation (WPF). Aby można było wyczyścić, składnik pulpitu systemu Windows jest obsługiwany i uwzględniany w systemie Windows. Aby uzyskać więcej informacji, zobacz sekcję [pulpitu systemu Windows](#windows-desktop) w dalszej części tego artykułu.
 
 Program .NET Core 3,0 dodaje obsługę C# 8,0. Zdecydowanie zaleca się użycie [najnowszej wersji programu Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)lub Visual Studio Code z rozszerzeniem OmniSharp.
 
-[Pobierz i zacznij korzystać z programu .NET Core 3,0 w wersji zapoznawczej 6](https://aka.ms/netcore3download) teraz w systemach Windows, Mac i Linux.
+[Pobierz i zacznij korzystać z platformy .NET Core 3,0 w wersji zapoznawczej 7](https://aka.ms/netcore3download) teraz w systemach Windows, Mac i Linux.
 
 Aby uzyskać więcej informacji na temat każdej wersji zapoznawczej, zobacz następujące powiadomienia:
 
+- [Anons programu .NET Core 3,0 w wersji zapoznawczej 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [Anons programu .NET Core 3,0 w wersji 6](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [Anons programu .NET Core 3,0 Preview 5](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
 - [Anons programu .NET Core 3,0 Preview 4](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
 - [Anons programu .NET Core 3,0 Preview 3](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
 - [Anons programu .NET Core 3,0 w wersji zapoznawczej 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 - [Powiadomienie dotyczące programu .NET Core 3,0 Preview 1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+
+## <a name="production-supported-preview"></a>Wersja zapoznawcza obsługiwanej produkcji
+
+Program .NET Core Preview 7 jest uznawany za gotowy do produkcji przez firmę Microsoft i jest w pełni obsługiwany. Począwszy od wersji zapoznawczej 7, wersje będą skoncentrowane na polerowaniu platformy .NET Core 3,0 zamiast dodawania nowych funkcji. Aby uzyskać więcej informacji na temat zmian w wersji zapoznawczej 7, zapoznaj się z ogłoszeniem w [wersji zapoznawczej 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/).
 
 ## <a name="net-core-sdk-windows-installer"></a>Zestaw .NET Core SDK Instalator Windows
 
@@ -59,7 +64,7 @@ Jeśli używasz programu Visual Studio, potrzebujesz [programu Visual studio 201
 
 ## <a name="improved-net-core-version-apis"></a>Ulepszone interfejsy API wersji platformy .NET Core
 
-Począwszy od platformy .NET Core 3,0, interfejsy API wersji dostarczone z platformą .NET Core teraz zwracają oczekiwane informacje. Na przykład:
+Począwszy od platformy .NET Core 3,0, interfejsy API wersji dostarczone z platformą .NET Core teraz zwracają oczekiwane informacje. Przykład:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
@@ -174,23 +179,23 @@ Aby całkowicie wyłączyć TC, użyj tego ustawienia w pliku projektu:
 
 Można skrócić czas uruchamiania aplikacji .NET Core, kompilując zestawy aplikacji jako ReadyToRun (R2R). R2R to forma kompilacji z wyprzedzeniem (AOT).
 
-Pliki binarne R2R zwiększają wydajność uruchamiania przez zmniejszenie ilości pracy kompilatora, który jest potrzebny do załadowania aplikacji. Pliki binarne zawierają podobny kod natywny w porównaniu z przeznaczeniem JIT.
+Pliki binarne R2R zwiększają wydajność uruchamiania przez zmniejszenie ilości pracy kompilatora, który jest potrzebny do załadowania aplikacji. Pliki binarne zawierają podobny kod natywny w porównaniu z przeznaczeniem JIT. R2R pliki binarne są jednak większe, ponieważ zawierają kod języka pośredniego (IL), który jest nadal wymagany w niektórych scenariuszach i natywną wersję tego samego kodu. R2R jest dostępna tylko w przypadku publikowania aplikacji samodzielnej, która jest przeznaczona dla określonych środowisk uruchomieniowych (RID), takich jak Linux x64 lub Windows x64.
 
-Pliki binarne R2R są większe, ponieważ zawierają kod języka pośredniego (IL), który jest nadal wymagany w niektórych scenariuszach i natywną wersję tego samego kodu. R2R jest dostępna tylko w przypadku publikowania aplikacji samodzielnej, która jest przeznaczona dla określonych środowisk uruchomieniowych (RID), takich jak Linux x64 lub Windows x64.
+Aby skompilować projekt jako ReadyToRun, wykonaj następujące czynności:
 
-Aby skompilować aplikację jako R2R, Dodaj `<PublishReadyToRun>` ustawienie:
+01. `<PublishReadyToRun>` Dodaj ustawienie do projektu
 
-```xml
-<PropertyGroup>
-  <PublishReadyToRun>true</PublishReadyToRun>
-</PropertyGroup>
-```
+    ```xml
+    <PropertyGroup>
+      <PublishReadyToRun>true</PublishReadyToRun>
+    </PropertyGroup>
+    ```
 
-Publikowanie aplikacji samodzielnej. Na przykład to polecenie tworzy samodzielną aplikację dla 64-bitowej wersji systemu Windows:
+01. Publikowanie aplikacji samodzielnej. Na przykład to polecenie tworzy samodzielną aplikację dla 64-bitowej wersji systemu Windows:
 
-```console
-dotnet publish -c Release -r win-x64 --self-contained true
-```
+    ```console
+    dotnet publish -c Release -r win-x64 --self-contained true
+    ```
 
 ### <a name="cross-platformarchitecture-restrictions"></a>Ograniczenia dotyczące wielu platform/architektury
 
@@ -232,14 +237,14 @@ W programie .NET Core 3,0 wprowadzono funkcję wyboru, która pozwala aplikacji 
 - Zmienna środowiskowa:`DOTNET_ROLL_FORWARD`
 - Argument wiersza polecenia:`--roll-forward`
 
-Należy określić jedną z następujących wartości. Jeśli ustawienie zostanie pominięte, wartością  domyślną jest wartość pomocnicza.
+Należy określić jedną z następujących wartości. Jeśli ustawienie zostanie pominięte, wartością domyślną jest wartość pomocnicza.
 
 - **LatestPatch**\
 Przewinięcie do najwyższej wersji poprawki. Spowoduje to wyłączenie wycofywania wersji pomocniczej.
 - **Średni**\
 Przewinięcie do najmniejszej wyższej wersji pomocniczej, jeśli brakuje wymaganej wersji pomocniczej. Jeśli jest obecna żądana wersja pomocnicza, zostaną użyte zasady **LatestPatch** .
 - **Znaczny**\
-Zaczekaj na najmniejszą wyższą wersję główną i najniższą wersję pomocniczą, jeśli brakuje żądanej wersji głównej. Jeśli jest obecna żądana wersja główna, są używane  zasady pomocnicze.
+Zaczekaj na najmniejszą wyższą wersję główną i najniższą wersję pomocniczą, jeśli brakuje żądanej wersji głównej. Jeśli jest obecna żądana wersja główna, są używane zasady pomocnicze.
 - **LatestMinor**\
 Przewinięcie do przodu do najwyższej wersji pomocniczej, nawet jeśli jest obecna żądana wersja pomocnicza. Przeznaczone do scenariuszy hostingu składników.
 - **LatestMajor**\

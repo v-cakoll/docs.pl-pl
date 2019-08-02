@@ -1,41 +1,42 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Dokumentacja strukturze ML.NET
+title: Dokumentacja ML.NET
 metadata:
   document_id: na
-  title: Strukturze ML.NET dokumentacja — samouczki i dokumentacja interfejsu API
+  title: ML.NET Documentation — samouczki i dokumentacja interfejsu API
   meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
   ms.topic: landing-page
   ms.date: 04/18/2019
   ms.author: cgronlun
   author: cjgronlund
 abstract:
-  description: 'Dowiedz się, jak używać strukturze ML.NET, platforma uczenia maszynowego typu open source i dla wielu platform, tworzenie rozwiązań niestandardowego uczenia maszynowego i integrowanie aplikacji .NET. Samouczki, przykłady kodu, dokumentacja interfejsu API i innych dokumentach pokazano, jak.'
+  description: 'Dowiedz się, jak korzystać z ML.NET, platformy Open Source i międzyplatformowej platformy uczenia maszynowego do tworzenia niestandardowych rozwiązań do uczenia maszynowego i integrowania ich z aplikacjami platformy .NET. Samouczki, przykłady kodu, dokumentacja interfejsu API i inne dokumenty przedstawiające, jak to zrobić.'
 sections:
   - title: Rozpocznij
     items:
       - type: paragraph
-        text: 'Aby dowiedzieć się, jak zbudowane jest aplikacji uczenia maszynowego za pomocą platformy ML.NET, przeczytaj <a href="/dotnet/machine-learning/how-does-mldotnet-work">co to jest strukturze ML.NET i jak działa</a>? Lub zacznij pracę, dodając <b>Microsoft.ML</b> pakiet NuGet do aplikacji.'
+        text: 'Aby dowiedzieć się, jak aplikacja uczenia maszynowego została skompilowana za pomocą ML.NET, Przeczytaj <a href="/dotnet/machine-learning/how-does-mldotnet-work">co to jest ml.NET i jak to działa</a>? Lub Zacznij od dodania pakietu NuGet <b>Microsoft.ml</b> do aplikacji.'
   - title: Samouczki krok po kroku
     items:
       - type: paragraph
-        text: 'Dowiedz się, jak tworzenie typowych rozwiązań za pomocą platformy ML.NET:'
+        text: 'Dowiedz się, jak tworzyć popularne rozwiązania za pomocą ML.NET:'
       - type: list
         style: unordered
         items:
-          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis">Analizowanie opinii przy użyciu klasyfikacji binarnej</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">Klasyfikowanie problemów w usłudze GitHub za pomocą funkcji klasyfikacji wieloklasowej</a></li>
-          - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">Przewidywanie NYC taksówek opłaty za pomocą regresji</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">Kwiatów na kategorie według charakterystyki korzystania z klastra</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Tworzenie polecania filmu przy użyciu factorization macierzy</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Tworzenie klasyfikatora obrazu niestandardowego z TensorFlow</a>
-  - title: Informacje i zasoby
+          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis">Analizowanie tonacji przy użyciu klasyfikacji binarnej</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">Kategoryzacja problemów usługi GitHub przy użyciu klasyfikacji wieloklasowej</a></li>
+          - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">Przewidywanie opłat za taksówkę NYC przy użyciu regresji</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">Klasyfikowanie kwiatów według cech przy użyciu klastrowania</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Tworzenie polecania filmu za pomocą factorization macierzy</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Tworzenie niestandardowego klasyfikatora obrazu za pomocą TensorFlow</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">Wykrywanie obiektów w obrazach za pomocą ONNX</a>
+  - title: Dokumentacja i zasoby
     items:
       - type: paragraph
-        text: 'Interfejs API strukturze ML.NET ma dwa rodzaje pakietów: zwolnienia składników i składników w wersji zapoznawczej. Wersja interfejsu API zawiera składniki do obsługi algorytmy klasyfikacji binarnej, wieloklasowej klasyfikacji, regresji, wykrywanie anomalii i klasyfikacji, zapisywanie modelu i ładowania i wiele innych danych! Interfejs API w wersji zapoznawczej zawiera modelu ONNX i TensorFlow obsługi algorytmy dla zadań zalecenia i składników do przetwarzania danych szeregów czasowych.'
+        text: 'Interfejs API ML.NET ma dwa zestawy pakietów: komponenty wersji i składniki wersji zapoznawczej. Interfejs API wersji zawiera składniki do obsługi danych, algorytmy dla klasyfikacji binarnej, klasyfikacji wieloklasowej, regresji, wykrywania anomalii, szeregów czasowych i prognozowania, klasyfikacji, modelu zapisywania i ładowania, obsługi modelu ONNX i TensorFlow oraz znacznie więcej! Interfejs API w wersji zapoznawczej zawiera algorytmy dla zadań rekomendacji i obsługę standardowych modeli uczenia głębokiego.'
       - type: list
         style: unordered
         items:
-          - html: <a href="/dotnet/api/?view=ml-dotnet">INTERFEJS API W STRUKTURZE ML.NET</a>
-          - html: <a href="/dotnet/api/?view=ml-dotnet-preview">Strukturze ML.NET w wersji zapoznawczej interfejsu API</a>
-          - html: '<a href="https://github.com/dotnet/machinelearning-samples/blob/master/README.md">Przykłady strukturze ML.NET: C#iF#</a>'
+          - html: <a href="/dotnet/api/?view=ml-dotnet">INTERFEJS API ML.NET</a>
+          - html: <a href="/dotnet/api/?view=ml-dotnet-preview">Interfejs API podglądu ML.NET</a>
+          - html: '<a href="https://github.com/dotnet/machinelearning-samples/blob/master/README.md">Przykłady ML.NET: C#lubF#</a>'

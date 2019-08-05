@@ -60,7 +60,7 @@ Można zastosować ograniczenia do wielu parametrów i wiele ograniczeń do jedn
 
 - Operatory `!=` i`==` nie mogą być używane, ponieważ nie ma gwarancji, że argument typu konkretnego będzie obsługiwał te operatory.
 - Mogą być konwertowane do i z `System.Object` lub jawnie konwertowane na dowolny typ interfejsu.
-- Można je porównać z [wartością null](../../language-reference/keywords/null.md). Jeśli parametr niezwiązany jest porównywany z `null`, porównywanie zwróci wartość false, jeśli argument typu jest typem wartości.
+- Można je porównać z wartością [null](../../language-reference/keywords/null.md). Jeśli parametr niezwiązany jest porównywany z `null`, porównywanie zwróci wartość false, jeśli argument typu jest typem wartości.
 
 ## <a name="type-parameters-as-constraints"></a>Parametry typu jako ograniczenia
 

@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 07/25/2019
-ms.openlocfilehash: 5300ddd83330b9564e7154008c59737d0d642138
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626336"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733372"
 ---
 # <a name="whats-new-in-net-core-30-preview-7"></a>Co nowego w programie .NET Core 3,0 (wersja zapoznawcza 7)
 
@@ -411,7 +411,7 @@ Poniżej znajduje się C# przykład 8,0 do odczytu za pomocą pliku [Launch. jso
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
-<xref:System.Text.Json.Serialization.JsonSerializer?displayProperty=nameWithType>jest zbudowany w oparciu o <xref:System.Text.Json.Utf8JsonReader> i <xref:System.Text.Json.Utf8JsonWriter> , aby zapewnić szybką opcję serializacji o niskiej pamięci podczas pracy z dokumentami i fragmentami JSON.
+<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType>jest zbudowany w oparciu o <xref:System.Text.Json.Utf8JsonReader> i <xref:System.Text.Json.Utf8JsonWriter> , aby zapewnić szybką opcję serializacji o niskiej pamięci podczas pracy z dokumentami i fragmentami JSON.
 
 Badanie: https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md aby zapoznać się z przykładem dotyczącym portu do tego artykułu
 

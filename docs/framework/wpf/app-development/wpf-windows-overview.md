@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ffb397c673333b26649a815fce7a5d4e63e5b987
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401723"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796773"
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
 Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundation (WPF) za pomocą systemu Windows. Głównym celem okna jest hostowanie zawartości, która wizualizuje dane i umożliwia użytkownikom współdziałanie z danymi. Aplikacje [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autonomiczne zapewniają własne okna przy <xref:System.Windows.Window> użyciu klasy. Ten temat wprowadza <xref:System.Windows.Window> przede wszystkim podstawowe informacje na temat tworzenia i zarządzania oknami w aplikacjach autonomicznych.  
@@ -167,7 +167,7 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
   
 - Być zminimalizowane, zmaksymalizowane i przywrócone bez wpływu na pozostałe.  
   
- Niektóre okna wymagają relacji z oknem, które je otwiera. Na przykład [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] aplikacja może otworzyć okna właściwości i okna, których typowym zachowaniem jest pokryć okno, w którym zostały utworzone. Ponadto takie okna powinny zawsze zamykać, minimalizować, maksymalizować i przywracać w połączeniu z oknem, które je utworzyło. Tę relację można ustalić przez utworzenie jednego *okna innego i* jest ono realizowane przez ustawienie <xref:System.Windows.Window.Owner%2A> właściwości *okna należącego* do *okna właściciela*. Pokazano to w poniższym przykładzie.  
+ Niektóre okna wymagają relacji z oknem, które je otwiera. Na przykład aplikacja zintegrowanego środowiska programistycznego (IDE) może otworzyć okno właściwości i okna narzędzi, których typowe zachowanie dotyczy tworzonego okna. Ponadto takie okna powinny zawsze zamykać, minimalizować, maksymalizować i przywracać w połączeniu z oknem, które je utworzyło. Tę relację można ustalić przez utworzenie jednego okna innego i jest ono realizowane przez ustawienie <xref:System.Windows.Window.Owner%2A> właściwości *okna należącego* do *okna właściciela*. Pokazano to w poniższym przykładzie.  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
@@ -227,7 +227,7 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
 ### <a name="closing-a-window"></a>Zamykanie okna  
  Okres istnienia okna przechodzi do końca, gdy użytkownik go zamknie. Okno może być zamknięte przy użyciu elementów w obszarze nieklienckim, w tym:  
   
-- Element **zamknięcia** menu systemowego  .  
+- Element **zamknięcia** menu systemowego .  
   
 - Naciśnij klawisze ALT + F4.  
   
@@ -370,11 +370,11 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
   
 <a name="WindowState"></a>   
 ## <a name="window-state"></a>Stan okna  
- W okresie istnienia okna o zmiennym rozmiarze może istnieć trzy stany: normalny, zminimalizowany i zmaksymalizowany. Okno z normalnym  stanem jest domyślnym stanem okna. Okno z tym stanem umożliwia użytkownikowi przeniesienie i zmianę jego rozmiaru przy użyciu uchwytu zmiany rozmiaru lub obramowania, jeśli zostanie on zmieniony.  
+ W okresie istnienia okna o zmiennym rozmiarze może istnieć trzy stany: normalny, zminimalizowany i zmaksymalizowany. Okno z normalnym stanem jest domyślnym stanem okna. Okno z tym stanem umożliwia użytkownikowi przeniesienie i zmianę jego rozmiaru przy użyciu uchwytu zmiany rozmiaru lub obramowania, jeśli zostanie on zmieniony.  
   
- Okno ze zminimalizowanym  stanem jest zwijane do jego przycisku paska zadań, <xref:System.Windows.Window.ShowInTaskbar%2A> jeśli jest ustawiona `true`na; w przeciwnym razie zostanie zwinięte do najmniejszego możliwego rozmiaru, który może być w lewym dolnym rogu pulpitu. Nie można zmienić rozmiaru okna zminimalizowanego za pomocą obramowania ani uchwytu zmiany rozmiaru, chociaż zminimalizowane okno, które nie jest wyświetlane na pasku zadań, może być przeciągane wokół pulpitu.  
+ Okno ze zminimalizowanym stanem jest zwijane do jego przycisku paska zadań, <xref:System.Windows.Window.ShowInTaskbar%2A> jeśli jest ustawiona `true`na; w przeciwnym razie zostanie zwinięte do najmniejszego możliwego rozmiaru, który może być w lewym dolnym rogu pulpitu. Nie można zmienić rozmiaru okna zminimalizowanego za pomocą obramowania ani uchwytu zmiany rozmiaru, chociaż zminimalizowane okno, które nie jest wyświetlane na pasku zadań, może być przeciągane wokół pulpitu.  
   
- Okno z zmaksymalizowanym  stanem rozwija się do maksymalnego rozmiaru, który może być, co będzie tak duże, jak jego <xref:System.Windows.FrameworkElement.MaxWidth%2A>właściwości, <xref:System.Windows.FrameworkElement.MaxHeight%2A>i. <xref:System.Windows.Window.SizeToContent%2A> Jak okno zminimalizowane, nie można zmienić rozmiaru zmaksymalizowanego okna przy użyciu uchwytu zmiany rozmiaru lub przeciągając obramowanie.  
+ Okno z zmaksymalizowanym stanem rozwija się do maksymalnego rozmiaru, który może być, co będzie tak duże, jak jego <xref:System.Windows.FrameworkElement.MaxWidth%2A>właściwości, <xref:System.Windows.FrameworkElement.MaxHeight%2A>i. <xref:System.Windows.Window.SizeToContent%2A> Jak okno zminimalizowane, nie można zmienić rozmiaru zmaksymalizowanego okna przy użyciu uchwytu zmiany rozmiaru lub przeciągając obramowanie.  
   
 > [!NOTE]
 >  Wartości <xref:System.Windows.Window.Top%2A> ,<xref:System.Windows.Window.Left%2A>, i<xref:System.Windows.FrameworkElement.Height%2A> właściwości okna zawsze reprezentują wartości dla normalnego stanu, nawet gdy okno jest obecnie zmaksymalizowane lub zminimalizowane. <xref:System.Windows.FrameworkElement.Width%2A>  

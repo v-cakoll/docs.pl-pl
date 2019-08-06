@@ -1,34 +1,34 @@
 ---
-title: 'Instrukcje: Użycie wyrażeń Lambda w kwerendzie - C# przewodnik programowania'
+title: 'Instrukcje: Użycie wyrażeń lambda w przewodniku C# programowania zapytań'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 18f8823327719a120888df580779125be5d07b2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad9feed7ea3d96267d632f4ca4bc992f2c8d335f
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710215"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796645"
 ---
-# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Instrukcje: Użycie wyrażeń Lambda w kwerendzie (C# Programming Guide)
-Nie należy używać wyrażeń lambda, bezpośrednio w składni zapytań, ale należy ich używać w wywołaniach metod i wyrażenia zapytania może zawierać wywołania metody. W rzeczywistości niektórych operacji zapytań może być wyrażona w składni metody. Aby uzyskać więcej informacji na temat różnic między składnia zapytania a składnia metody, zobacz [składnia zapytania a składnia metody w technologii LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Instrukcje: Używanie wyrażeń lambda w kwerendzie (C# Przewodnik programowania)
+Wyrażenia lambda nie są używane bezpośrednio w składni zapytania, ale są używane w wywołaniach metod, a wyrażenia zapytań mogą zawierać wywołania metody. W rzeczywistości niektóre operacje zapytań można wyrazić tylko w składni metody. Aby uzyskać więcej informacji o różnicach między składnią zapytania i składnią metody, zobacz [składnia zapytań i składnia metod w LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak użyć wyrażenia lambda w kwerendzie oparte na metodzie, za pomocą <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> standardowego operatora zapytania. Należy pamiętać, że <xref:System.Linq.Enumerable.Where%2A> metody w tym przykładzie ma parametr wejściowy typu delegata <xref:System.Func%601> i ten delegat przyjmuje liczbę całkowitą jako dane wejściowe i zwraca wartość logiczną. Wyrażenie lambda można przekonwertować na delegata. Gdyby to [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] Zapytanie używane <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType> metody, byłoby typ parametru `Expression<Func<int,bool>>` , ale wyrażenia lambda będzie wyglądać dokładnie tak. Aby uzyskać więcej informacji na temat typów wyrażeń, zobacz <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType>.  
+ Poniższy przykład ilustruje sposób użycia wyrażenia lambda w kwerendzie opartej na metodzie przy użyciu <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> standardowego operatora zapytań. Należy zauważyć, <xref:System.Linq.Enumerable.Where%2A> że metoda w tym przykładzie ma parametr wejściowy typu <xref:System.Func%602> delegata i że delegat przyjmuje liczbę całkowitą jako dane wejściowe i zwraca wartość logiczną. Wyrażenie lambda można przekonwertować na tego delegata. Jeśli było [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] to zapytanie, które <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType> używało metody, typem `Expression<Func<int,bool>>` parametru będzie, ale wyrażenie lambda będzie wyglądać dokładnie tak samo. Aby uzyskać więcej informacji na temat typu wyrażenia, <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType>Zobacz.  
   
  [!code-csharp[csProgGuideLINQ#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#1)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak użyć wyrażenia lambda w wywołaniu metody, wyrażenia zapytania. Wyrażenie lambda jest konieczne ponieważ <xref:System.Linq.Enumerable.Sum%2A> standardowego operatora zapytania nie może być wywoływana przy użyciu składni zapytań.  
+ Poniższy przykład ilustruje sposób użycia wyrażenia lambda w wywołaniu metody wyrażenia zapytania. Lambda jest konieczne, ponieważ <xref:System.Linq.Enumerable.Sum%2A> standardowego operatora zapytania nie można wywołać przy użyciu składni zapytania.  
   
- Zgodnie z definicją w zapytaniu najpierw grupy uczniów, zgodnie z ich poziomem klasy korporacyjnej `GradeLevel` wyliczenia. Następnie dla każdej grupy dodaje całkowita wyniki dla każdego ucznia. Wymaga to dwóch `Sum` operacji. Wewnętrzny `Sum` oblicza łączny wynik dla każdego ucznia i zewnętrzny `Sum` śledzi bieżącą, łączna liczba dla wszystkich studentów w grupie.  
+ Zapytanie najpierw grupuje uczniów zgodnie z ich poziomem klasy, zgodnie z definicją w `GradeLevel` wyliczeniu. Następnie dla każdej grupy dodaje wszystkie wyniki dla każdego ucznia. Wymaga to dwóch `Sum` operacji. Wewnętrzna `Sum` oblicza łączny wynik dla każdego ucznia, a zewnętrzny `Sum` utrzymuje uruchomiony, łączny łącznie dla wszystkich uczniów w grupie.  
   
  [!code-csharp[csProgGuideLINQ#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#2)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Aby uruchomić ten kod, skopiuj i Wklej metodę do `StudentClass` , znajduje się w [jak: Zapytanie kolekcji obiektów](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md) i wywołać go z `Main` metody.  
+ Aby uruchomić ten kod, skopiuj i wklej metodę do programu `StudentClass` , która jest pokazana w [temacie How to: Zbadaj kolekcję obiektów](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md) i Wywołaj ją `Main` z metody.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -7,75 +7,75 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 81d8cdb8d2dfc593d37322b70c070bc0b9f10b25
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 077f19690d204d3b8f682d01c51feee9e9edbfd4
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659687"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796812"
 ---
 # <a name="white-space-processing-in-xaml"></a>Przetwarzanie spacji w XAML
-Stan reguły języka XAML, że znaczące biały znak muszą zostać przetworzone przez [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implementacji procesora. W tym temacie opisano te reguły języka XAML. Również dokumenty obsługi dodatkowe biały znak, który jest definiowany przez [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementacji procesora XAML i zapisywania XAML do serializacji.  
+Reguły języka dla stanu XAML, które mają znaczący biały znak, muszą być [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] przetwarzane przez implementację procesora. Ten temat dokumentuje te reguły języka XAML. Zawiera również dodatkową obsługę odstępów, która jest definiowana przez [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementację procesora XAML i składnika zapisywania XAML do serializacji.  
   
 <a name="whitespace_definition"></a>   
 ## <a name="white-space-definition"></a>Definicja odstępu  
- Zgodne z [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)], odstępu w [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] to miejsce, wysuwu wiersza i karty. Odpowiadają one [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] wartości 0020, 000A i 0009 odpowiednio.  
+ Spójne z [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)], biały znak w [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] to Space, wysuw wiersza i tabulator. Odpowiadają [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] odpowiednio wartościom 0020, 000A i 0009.  
   
 <a name="whitespace_normalization"></a>   
-## <a name="white-space-normalization"></a>Normalizacji biały znak —  
- Domyślnie następujące normalizacji biały znak — występuje gdy [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] procesów procesora [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] pliku:  
+## <a name="white-space-normalization"></a>Normalizacja białych miejsc  
+ Domyślnie następujące białe normalizacji są wykonywane, gdy [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] procesor [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] przetwarza plik:  
   
-1. Znaki wysuwu wiersza między znaki wschodnioazjatyckie są usuwane. Zobacz sekcję "Znaki wschodnioazjatyckie" w dalszej części tego tematu dla definicji tego terminu.  
+1. Znaki wysuwu wiersza między wschodnioazjatyckimi znakami są usuwane. Zobacz sekcję "znaki wschodnioazjatyckie" w dalszej części tego tematu, aby zapoznać się z definicją tego terminu.  
   
-2. Wszystkie znaki odstępu (spacja, wysuw wiersza, karta) są konwertowane na miejsca do magazynowania.  
+2. Wszystkie znaki odstępu (spacja, znak wysuwu wiersza) są konwertowane na spacje.  
   
-3. Wszystkich następujących po sobie spacji są usunięty i zastąpiony przez jedną spację.  
+3. Wszystkie kolejne spacje są usuwane i zastępowane jedną spacją.  
   
-4. Odstęp natychmiast po tagu początkowego jest usuwany.  
+4. Spacja bezpośrednio po tagu początkowym zostanie usunięta.  
   
-5. Miejsce, od razu, przed usunięciem tagu końcowego.  
+5. Spacja bezpośrednio przed tagiem końcowym zostanie usunięta.  
   
- "Domyślna" odnosi się do stanu wskazywane przez wartość domyślną [XML: Space](xml-space-handling-in-xaml.md) atrybutu.  
+ "Domyślnie" odpowiada stanowi wskazywanym przez wartość domyślną atrybutu [XML: Space](xml-space-handling-in-xaml.md) .  
   
 <a name="whitespace_in_inner_text_and_string_primitives"></a>   
-## <a name="white-space-in-inner-text-and-string-primitives"></a>Biały znak w tekst wewnętrzny i ciągu w nim elementów podstawowych  
- Poprzednie reguły normalizacji mają zastosowanie do wewnętrznego tekst, który znajduje się w obrębie elementów XAML. Po normalizacji procesor XAML konwertuje tekst wewnętrzny na odpowiedni typ w następujący sposób:  
+## <a name="white-space-in-inner-text-and-string-primitives"></a>Biały znak w tekście wewnętrznym i parametry pierwotne ciągu  
+ Poprzednie reguły normalizacji mają zastosowanie do tekstu wewnętrznego, który znajduje się w elementach XAML. Po normalizacji procesor XAML konwertuje tekst wewnętrzny na odpowiedni typ w następujący sposób:  
   
-- Jeśli typ właściwości nie jest kolekcją, ale nie jest bezpośrednio <xref:System.Object> typu procesor XAML próbuje przekonwertować danego typu przy użyciu jego konwertera typów. W tym miejscu nie powiodło się konwersja powoduje błąd kompilacji.  
+- Jeśli typ właściwości nie jest kolekcją, ale nie jest bezpośrednio <xref:System.Object> typem, procesor XAML próbuje skonwertować do tego typu przy użyciu konwertera typów. Konwersja nie powiodła się w tym miejscu powoduje błąd czasu kompilacji.  
   
-- Jeśli typ właściwości jest kolekcją, a tekst wewnętrzny jest ciągły (nie pośredniczące elementu tagi), tekst wewnętrzny jest analizowany jako pojedynczy <xref:System.String>. Jeśli typ kolekcji nie może akceptować <xref:System.String>, powoduje błąd kompilacji.  
+- Jeśli typ właściwości jest kolekcją, a tekst wewnętrzny jest ciągły (bez tagów elementów, które nie działa), tekst wewnętrzny jest analizowany jako pojedynczy <xref:System.String>. Jeśli typ kolekcji nie może akceptować <xref:System.String>, spowoduje to również błąd czasu kompilacji.  
   
-- Jeśli typ właściwości to <xref:System.Object>, tekst wewnętrzny jest analizowany jako pojedynczy <xref:System.String>. Jeśli są aktywne tagi elementów, powoduje to błąd w czasie kompilacji, ponieważ <xref:System.Object> typu oznacza pojedynczy obiekt (<xref:System.String> lub w inny sposób).  
+- Jeśli typ właściwości to <xref:System.Object>, tekst wewnętrzny jest analizowany jako pojedynczy. <xref:System.String> Jeśli istnieją elementy, które powodują interwencję, powoduje to błąd czasu kompilacji, ponieważ <xref:System.Object> typ implikuje pojedynczy obiekt (<xref:System.String> lub w inny sposób).  
   
-- Jeśli typ właściwości jest kolekcją, a tekst wewnętrzny nie jest ciągły, pierwszego podciągu jest konwertowana na <xref:System.String> dodany jako element kolekcji, pośredniczące element zostanie dodany jako element kolekcji, a na koniec jest końcowe substring (jeśli istnieje) dodawane do kolekcji jako trzeci <xref:System.String> elementu.  
+- Jeśli typ właściwości jest kolekcją, a tekst wewnętrzny nie jest ciągły, pierwszy podciąg jest konwertowany na <xref:System.String> a i dodany jako element kolekcji, element, który zostanie dodany jako element kolekcji, a wreszcie końcowy podciąg (jeśli istnieje) jest dodano do kolekcji jako trzeci <xref:System.String> element.  
   
 <a name="preserving_whitespace"></a>   
-## <a name="preserving-white-space"></a>Zachowywanie białych  
- Istnieje kilka technik w celu zachowania biały znak w źródle [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dla ostatecznej prezentacji, która nie ma wpływu [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] normalizacji biały znak — procesor.  
+## <a name="preserving-white-space"></a>Zachowywanie białych znaków  
+ Istnieje kilka technik zachowywania białych znaków w źródle [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dla prezentacji ostatecznej, które nie mają [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] wpływ na normalizację odstępów między procesorami.  
   
- **xml:space="preserve"**: Określ ten atrybut na poziomie elementu, gdzie jest pożądane zachowania miejsca biały. Ta zachowuje wszystkie białe miejsca, która zawiera spacje, które mogłyby zostać dodane przez edytowanie kodu aplikacji "pretty print" wyrównywania elementów jako wizualnie intuicyjne zagnieżdżania. Jednak tego, czy renderowanie te miejsca do magazynowania jest określany przez model zawartości elementu zawierającego. Unikaj określania `xml:space="preserve"` na poziomie głównym ponieważ większość obiektów modeli nie bierze pod uwagę białe miejsca tak duże, niezależnie od tego, jak ustawić atrybutu. Ustawienie `xml:space` globalnie może mieć konsekwencje wydajności na XAML w niektórych implementacjach na przetworzenie (zwłaszcza serializacji). Lepiej jest tylko ustawić atrybutu specjalnie na poziomie elementów, które renderowania biały znak wewnątrz ciągów lub są kolekcjami znaczące odstępu.  
+ **xml:space="preserve"** : Określ ten atrybut na poziomie elementu, w którym jest wymagane zachowywanie odstępu. Powoduje to zachowanie wszystkich białych znaków, które obejmują spacje, które mogą być dodawane przez aplikacje edytujące kod do "wyglądu" "widocznego" w postaci wizualnie intuicyjnego zagnieżdżenia. Jednak niezależnie od tego, czy te miejsca renderowania są określane przez model zawartości dla elementu zawierającego. Należy unikać `xml:space="preserve"` określania na poziomie głównym, ponieważ większość modeli obiektów nie traktuje odstępu jako znaczącego, niezależnie od sposobu ustawiania atrybutu. Ustawienie `xml:space` globalne może mieć wpływ na wydajność przetwarzania XAML (szczególnie serializacji) w niektórych implementacjach. Lepszym rozwiązaniem jest ustawienie atrybutu tylko w odróżnieniu od elementów, które renderują białe znaki w ciągu, lub są znacznymi znaczącymi kolekcjami.  
   
- **Jednostki i miejsca do magazynowania bez podziału**: [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] obsługuje umieszczanie dowolne [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] jednostki w modelu obiektu tekstu. Można użyć dedykowanej jednostki, takie jak spacja nierozdzielająca (&\#160; przy użyciu kodowania UTF-8). Można również użyć formantów tekstu sformatowanego, które obsługują znaki spacji nierozdzielających. Należy zachować ostrożność, jeśli używasz jednostek do symulacji layout charakterystyki, takie jak wcięcia, ponieważ dane wyjściowe w czasie wykonywania, które jednostek będzie zależeć od większa liczba czynników nie będzie możliwości przedstawiania wyników wcięcia w typowej system układu, takich jak polecenia paneli i marginesów. Na przykład, jednostki są mapowane na czcionek i rozmiar w odpowiedzi na wybór czcionki użytkownika można zmienić.  
+ **Jednostki i spacje**nierozdzielające: [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] program [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] obsługuje umieszczanie dowolnej jednostki w obrębie modelu obiektów tekstowych. Można użyć dedykowanych jednostek, takich jak spacja nierozdzielająca\#(& 160; w kodowaniu UTF-8). Można również użyć formantów tekstu sformatowanego, które obsługują znaki nierozdzielające. Należy zachować ostrożność, jeśli używasz jednostek do symulacji layout charakterystyki, takie jak wcięcia, ponieważ dane wyjściowe w czasie wykonywania, które jednostek będzie zależeć od większa liczba czynników nie będzie możliwości przedstawiania wyników wcięcia w typowej system układu, takich jak polecenia paneli i marginesów. Na przykład jednostki są mapowane na czcionki i mogą zmieniać rozmiar w odpowiedzi na wybór czcionki użytkownika.  
   
 <a name="east_asian_characters"></a>   
 ## <a name="east-asian-characters"></a>Znaki wschodnioazjatyckie  
- "Znaki wschodnioazjatyckie" jest zdefiniowany jako zestaw [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] znak zakresów 20000 U + do U + 2FFFD i U + 30000 do U + 3FFFD. Podzbiór ten jest również czasami określane jako "Ideogramy CJK". Aby uzyskać więcej informacji, zobacz <https://www.unicode.org>.  
+ "Znaki wschodnioazjatyckie" są zdefiniowane jako zestaw [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] zakresów znaku U + 20000 do u + 2FFFD i u + 30000 do u + 3FFFD. Ten podzestaw jest również czasami określany jako "ideogramy CJK". Aby uzyskać więcej informacji, zobacz <https://www.unicode.org>.  
   
 <a name="whitespace_and_text_content_models"></a>   
-## <a name="white-space-and-text-content-models"></a>Modele zawartości biały znak i tekstu  
- W praktyce zachowywanie białych znaków jest tylko problemem w przypadku podzbiór wszystkich możliwych modele zawartości. Podzbiór ten składa się z modeli zawartości, które mogą podejmować pojedynczego <xref:System.String> typu w pewnej postaci dedykowany <xref:System.String> kolekcji lub kombinację <xref:System.String> a innymi typami danych w <xref:System.Collections.IList> lub <xref:System.Collections.Generic.ICollection%601> kolekcji.  
+## <a name="white-space-and-text-content-models"></a>Biały znak i modele zawartości tekstu  
+ W tym celu zachowywanie białego miejsca jest tylko problemem tylko dla podzbioru wszystkich możliwych modeli zawartości. Ten podzbiór składa się z modeli zawartości, które mogą <xref:System.String> przyjmować pojedynczy typ w postaci <xref:System.String> pojedynczej kolekcji lub kombinacji <xref:System.String> i innych typów w <xref:System.Collections.IList> kolekcji lub <xref:System.Collections.Generic.ICollection%601> .  
   
-### <a name="white-space-and-text-content-models-in-wpf"></a>Modele zawartości biały znak i tekst w WPF  
- W celach ilustracyjnych w dalszej części tej sekcji odwołuje się określone typy, które są definiowane przez WPF. Funkcje obsługi odstępu, które są opisane w tym temacie są zazwyczaj przydatne do usług programu .NET Framework XAML i WPF. Aby wyświetlić to zachowanie w akcji, mogą eksperymentować z niektórych znaczników WPF XAML, wyświetlić wyniki w wykresu obiektu i następnie ponownie serializacji do znaczników.  
+### <a name="white-space-and-text-content-models-in-wpf"></a>Biały znak i modele zawartości tekstu w WPF  
+ W celach ilustracyjnych pozostała część tej sekcji odwołuje się do określonych typów, które są zdefiniowane przez WPF. Funkcje obsługi białych znaków, które są opisane w tym temacie, mają zwykle miejsce w przypadku usług XAML .NET Framework i WPF. Aby zobaczyć to zachowanie w działaniu, można eksperymentować z niektórymi znacznikami XAML WPF, przeglądać wyniki na grafie obiektów, a następnie ponownie serializować do znaczników.  
   
- Nawet w przypadku modeli zawartość, która może potrwać ciągami, zachowanie domyślne w ramach tych modeli zawartości jest, że dowolny biały obszar, który pozostaje nie jest traktowana jako istotny. Na przykład <xref:System.Windows.Controls.ListBox> przyjmuje <xref:System.Collections.IList>, ale biały (takie jak znaki wysuwu wiersza między poszczególnymi <xref:System.Windows.Controls.ListBoxItem>) jest nie są zachowywane i nie są renderowane. Jeśli spróbujesz użyć znaki wysuwu wiersza jako separatory między ciągi dla <xref:System.Windows.Controls.ListBoxItem> elementów, nie działa w ogóle; ciągów, które są oddzielone znaki wysuwu wiersza są traktowane jako jeden ciąg i jeden element.  
+ Nawet w przypadku modeli zawartości, które mogą przyjmować ciągi, domyślne zachowanie w ramach tych modeli zawartości polega na tym, że wszystkie białe miejsca, które pozostało nie są traktowane jako znaczące. Na przykład <xref:System.Windows.Controls.ListBox> <xref:System.Collections.IList>przyjmuje, że biały znak (na przykład wysuwu wiersza <xref:System.Windows.Controls.ListBoxItem>) nie jest zachowywany i nierenderowany. Jeśli próbujesz użyć znaku wysuwu wiersza jako separatorów między ciągami <xref:System.Windows.Controls.ListBoxItem> dla elementów, nie działa wcale. ciągi, które są rozdzielone znakami wysuwu wiersza, są traktowane jako jeden ciąg i jeden element.  
   
- Te kolekcje, które są traktowane biały znaczenia zwykle są częścią modelu dokument przepływu. Jest podstawowym kolekcji, która obsługuje zachowanie zachowania biały <xref:System.Windows.Documents.InlineCollection>. Ta klasa kolekcji jest zadeklarowana za pomocą <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>; w przypadku odnalezienia tego atrybutu [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] procesora traktują biały znak w kolekcji znaczenia. Kombinacja `xml:space="preserve"` i biały znak w <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> wskazywane Kolekcja to, czy wszystkie biały znak jest zachowywana i renderowania. Kombinacja `xml:space="default"` i biały znak w <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> powoduje, że początkowe normalizacji biały znak — opisanego wcześniej, co pozostawia jedno miejsce, w niektórych miejscach i te spacje są zachowywane i renderowania. Pożądane jest zachowanie zależy od użytkownika i należy używać `xml:space` selektywnie, aby umożliwić zachowanie, które chcesz.  
+ Kolekcje te, które traktują biały znak jako znaczące są zwykle częścią modelu dokumentu przepływu. Główna kolekcja, która obsługuje zachowanie zachowywania białych miejsc, <xref:System.Windows.Documents.InlineCollection>to. Ta klasa kolekcji jest zadeklarowana z <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>; po znalezieniu [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] tego atrybutu procesor będzie traktować biały znak w kolekcji jako znaczący. Kombinacja `xml:space="preserve"` i biały znak <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> w kolekcji oznacza, że wszystkie białe miejsca są zachowywane i renderowane. Kombinacja `xml:space="default"` i biały znak <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> w programie powoduje, że poprzednia Poprzednia pozostała normalizacja białych miejsc nie pozostawia jednego miejsca w niektórych położeniach, a te spacje są zachowywane i renderowane. Takie zachowanie jest pożądane i należy używać `xml:space` selektywnie, aby włączyć żądane zachowanie.  
   
- Ponadto niektóre elementy wbudowane, które oznacza rzeczywistej linebreak w modelu dokument przepływu celowo nie powinna wprowadzać dodatkowe miejsce, nawet w przypadku kolekcji znaczące odstępu. Na przykład <xref:System.Windows.Documents.LineBreak> element ma tę samą funkcję co \<BR / > tag w [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]i aby zwiększyć czytelność w znaczniku, zwykle <xref:System.Windows.Documents.LineBreak> jest oddzielona od tekstu kolejnych utworzone wysuwu wiersza. Tego wysuwu wiersza nie powinny być znormalizowane do stają się spację, kolejny wiersz. Aby włączyć to zachowanie w definicji klasy dla <xref:System.Windows.Documents.LineBreak> dotyczy elementu <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, który następnie jest interpretowany przez [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] procesora oznacza ten biały znak otaczającego <xref:System.Windows.Documents.LineBreak> zawsze są spacje.  
+ Ponadto niektóre elementy wbudowane, które zanotują LineBreak w modelu dokumentu przepływu, powinny celowo nie wprowadzać dodatkowego miejsca nawet w znaczącej kolekcji o białej przestrzeni. Na przykład <xref:System.Windows.Documents.LineBreak> element ma takie samo przeznaczenie \<jak tag br/> w kodzie HTML i czytelność <xref:System.Windows.Documents.LineBreak> w znaczniku, zazwyczaj jest oddzielona od dowolnego kolejnego tekstu przez utworzony znak wysuwu wiersza. Ten znak wysuwu wiersza nie powinien być znormalizowany, aby stał się początkowym miejscem w następnym wierszu. Aby włączyć to zachowanie, definicja klasy <xref:System.Windows.Documents.LineBreak> dla elementu <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>stosuje, który następnie [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] jest interpretowany przez procesor, aby oznaczało, że białe miejsce otaczające <xref:System.Windows.Documents.LineBreak> jest zawsze przycinane.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [Jednostki znaków XML i XAML](xml-character-entities-and-xaml.md)
-- [XML: Space — Obsługa w XAML](xml-space-handling-in-xaml.md)
+- [XML: obsługa miejsca w języku XAML](xml-space-handling-in-xaml.md)

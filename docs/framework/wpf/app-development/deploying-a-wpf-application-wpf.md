@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 4679a114f4b6d0bc2b3773d46a4dffa774d38918
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 2d3a72dad6a4e139288bf3c1fa9f4cde5124586f
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401673"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796766"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Wdrażanie aplikacji WPF (WPF)
 Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zostać wdrożone. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]a .NET Framework zawierają kilka technologii wdrażania. Technologia wdrażania, która jest używana do wdrażania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, zależy od typu aplikacji. Ten temat zawiera krótkie omówienie poszczególnych technologii wdrażania oraz sposób ich użycia w połączeniu z wymaganiami dotyczącymi wdrożenia poszczególnych [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] typów aplikacji.  
@@ -77,7 +77,7 @@ Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zost
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
 ### <a name="deploying-markup-only-xaml-applications"></a>Wdrażanie aplikacji XAML tylko do znaczników  
- Strony ze znacznikami są zwykle publikowane na serwerach sieci Web, [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] takich jak strony i mogą być wyświetlane [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]przyużyciu. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Strony zawierające tylko [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczniki są uruchamiane w obszarze piaskownicy zabezpieczeń częściowej relacji zaufania z ograniczeniami, które są zdefiniowane przez zestaw uprawnień strefy internetowej. Zapewnia to równoważną ochronę aplikacji sieci [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]Web opartych na zabezpieczeniach.  
+ Strony ze znacznikami są zwykle publikowane na serwerach sieci Web, takich jak strony HTML, i mogą być wyświetlane przy użyciu [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Strony zawierające tylko [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczniki są uruchamiane w obszarze piaskownicy zabezpieczeń częściowej relacji zaufania z ograniczeniami, które są zdefiniowane przez zestaw uprawnień strefy internetowej. Zapewnia to równorzędną piaskownicę zabezpieczeń dla aplikacji sieci Web opartych na języku HTML.  
   
  Aby uzyskać więcej informacji o zabezpieczeniach [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, zobacz [zabezpieczenia](../security-wpf.md).  
   

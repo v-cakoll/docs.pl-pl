@@ -15,36 +15,36 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84af29aa169710f8de86c383429bf391fbc20bd3
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 42665b3b971f9026bf49aeb081017521eab0117f
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469531"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796735"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Śledzenie i instrumentacja aplikacji
-Śledzenie jest sposobem monitorowania wykonywanie aplikacji, gdy jest on uruchomiony. Możesz dodać Instrumentacji śledzenia i debugowania aplikacji .NET Framework, Opracuj go, gdy zarówno podczas opracowywania aplikacji, jak i po jej wdrożeniu, można użyć tego instrumentacji. Możesz użyć <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, i <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> klasy do rejestrowania informacji o błędach oraz wykonywania aplikacji w dzienniki, pliki tekstowe lub innych urządzeń do późniejszej analizy.  
+Śledzenie służy do monitorowania wykonywania aplikacji w trakcie jej działania. Możesz dodać instrumentację śledzenia i debugowania do aplikacji .NET Framework podczas jej opracowywania i można używać jej zarówno podczas tworzenia aplikacji, jak i po jej wdrożeniu. Przy użyciu <xref:System.Diagnostics.Trace?displayProperty=nameWithType>klas, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>i <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> można rejestrować informacje o błędach i wykonywaniu aplikacji w dziennikach, plikach tekstowych lub innych urządzeniach w celu późniejszej analizy.  
   
- Termin *Instrumentacji* odwołuje się do możliwości monitorowania lub mierzyć poziom wydajności produktu i diagnozowanie błędów. W programowaniu, oznacza to, możliwości aplikacji, aby dołączyć:  
+ Termin *Instrumentacja* odnosi się do zdolności do monitorowania lub mierzenia poziomu wydajności produktu oraz do diagnozowania błędów. W programowaniu oznacza to zdolność aplikacji do dołączenia:  
   
-- **Śledzenie kodu** -odbiera komunikaty informacyjne dotyczące wykonywania aplikacji w czasie wykonywania.  
+- **Śledzenie kodu** — otrzymywanie komunikatów informacyjnych dotyczących wykonywania aplikacji w czasie wykonywania.  
   
-- **Debugowanie** — śledzenie i naprawia błędy programowania aplikacji w fazie projektowania. Aby uzyskać więcej informacji, zobacz [debugowanie](/visualstudio/debugger/debugging-in-visual-studio).  
+- **Debugowanie** — śledzenie i rozwiązywanie błędów programistycznych w aplikacji opracowywanej. Aby uzyskać więcej informacji, zobacz [debugowanie](/visualstudio/debugger/debugging-in-visual-studio).  
   
-- **Liczniki wydajności** — składniki, które pozwalają śledzić wydajność aplikacji. Aby uzyskać więcej informacji, zobacz [liczniki wydajności](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+- **Liczniki wydajności** — składniki, które umożliwiają śledzenie wydajności aplikacji. Aby uzyskać więcej informacji, zobacz [liczniki wydajności](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
-- **Dzienniki zdarzeń** — składniki, które pozwalają otrzymujesz i śledzisz istotnych zdarzeń podczas wykonywania aplikacji. Aby uzyskać więcej informacji, zobacz <xref:System.Diagnostics.EventLog> klasy.  
+- **Dzienniki zdarzeń** — składniki umożliwiające otrzymywanie i śledzenie najważniejszych zdarzeń w trakcie wykonywania aplikacji. Aby uzyskać więcej informacji, zobacz <xref:System.Diagnostics.EventLog> Klasa.  
   
- Instrumentacji aplikacji, umieszczając instrukcji śledzenia w lokalizacjach strategicznych w kodzie jest szczególnie przydatne w przypadku aplikacji rozproszonych. Za pomocą instrukcji śledzenia możliwe jest instrumentowanie aplikacji nie tylko do wyświetlania informacji w przypadku, gdy coś pójdzie źle, ale także do monitorowania, jak działa aplikacja.  
+ Instrumentacja aplikacji przez umieszczenie instrukcji Trace w strategicznych lokalizacjach w kodzie jest szczególnie przydatne w przypadku aplikacji rozproszonych. Przy użyciu instrukcji śledzenia można przystąpić do Instrumentacji aplikacji, aby nie tylko wyświetlała informacje, gdy coś się nie powiedzie, ale również do monitorowania, jak dobrze działa aplikacja.  
   
- <xref:System.Diagnostics.TraceSource> Klasa udostępnia rozszerzone funkcje śledzenia i mogą być używane zamiast metod statycznych starszej wersji <xref:System.Diagnostics.Trace> i <xref:System.Diagnostics.Debug> klasy śledzenia. Znanej <xref:System.Diagnostics.Trace> i <xref:System.Diagnostics.Debug> są nadal powszechnie używane klasy, ale <xref:System.Diagnostics.TraceSource> klasy jest zalecane w przypadku nowych poleceń śledzenia, takie jak <xref:System.Diagnostics.TraceSource.TraceEvent%2A> i <xref:System.Diagnostics.TraceSource.TraceData%2A>.  
+ Klasa udostępnia ulepszone funkcje śledzenia i może być używana zamiast metod statycznych klas starszych <xref:System.Diagnostics.Trace> i <xref:System.Diagnostics.Debug> śledzenia. <xref:System.Diagnostics.TraceSource> Znane <xref:System.Diagnostics.Trace> <xref:System.Diagnostics.TraceSource.TraceEvent%2A> i <xref:System.Diagnostics.Debug> klasy są nadal <xref:System.Diagnostics.TraceSource> szeroko używane, ale Klasa jest zalecana dla nowych poleceń śledzenia, takich jak i. <xref:System.Diagnostics.TraceSource.TraceData%2A>  
   
- <xref:System.Diagnostics.Trace> i <xref:System.Diagnostics.Debug> klasy są identyczne, z wyjątkiem sytuacji, w tym procedury składowane i funkcje z <xref:System.Diagnostics.Trace> klasy są kompilowane domyślnie do kompilacji wydania, ale w przypadku <xref:System.Diagnostics.Debug> klasy nie są.  
+ <xref:System.Diagnostics.Trace> <xref:System.Diagnostics.Debug> Klasy i są<xref:System.Diagnostics.Debug> identyczne, z tą różnicą, że procedury i funkcje klasy są kompilowane domyślnie do kompilacji wydań, ale te klasy nie są. <xref:System.Diagnostics.Trace>  
   
- <xref:System.Diagnostics.Trace> i <xref:System.Diagnostics.Debug> klasy zapewniają oznacza, że monitorowanie i badanie wydajności aplikacji podczas tworzenia lub po wdrożeniu. Na przykład, można użyć <xref:System.Diagnostics.Trace> klasy do śledzenia określonych rodzajów działań we wdrożonej aplikacji występują (np. tworzenia nowych połączeń z bazą danych) i w związku z tym można monitorować wydajność aplikacji.  
+ Klasy <xref:System.Diagnostics.Trace> i<xref:System.Diagnostics.Debug> zapewniają środki do monitorowania i badania wydajności aplikacji podczas tworzenia lub po wdrożeniu. Na przykład można użyć <xref:System.Diagnostics.Trace> klasy do śledzenia określonych typów akcji w wdrożonej aplikacji (na przykład tworzenia nowych połączeń z bazą danych) i w związku z tym może monitorować wydajność aplikacji.  
   
-## <a name="code-tracing-and-debugging"></a>Śledzenie kodu i debugowania  
- Podczas tworzenia aplikacji, można użyć metod wyjścia metod klasy <xref:System.Diagnostics.Debug> klasy, aby wyświetlić komunikaty w oknie danych wyjściowych programu Visual Studio zintegrowane środowisko programistyczne (IDE). Na przykład:  
+## <a name="code-tracing-and-debugging"></a>Śledzenie i debugowanie kodu  
+ Podczas programowania można użyć metod <xref:System.Diagnostics.Debug> wyjściowych klasy do wyświetlania komunikatów w oknie danych wyjściowych zintegrowanego środowiska programistycznego (IDE) programu Visual Studio. Na przykład:  
   
 ```vb  
 Trace.WriteLine("Hello World!")  
@@ -56,90 +56,87 @@ System.Diagnostics.Trace.WriteLine("Hello World!");
 System.Diagnostics.Debug.WriteLine("Hello World!");  
 ```  
   
- Każda z tych przykładów wyświetli "Hello World!" w oknie dane wyjściowe, gdy aplikacja jest uruchomiona w debugerze.  
+ W każdym z tych przykładów zostanie wyświetlony "Hello world!" w oknie dane wyjściowe, gdy aplikacja jest uruchamiana w debugerze.  
   
- Dzięki temu można debugować aplikacje i optymalizowania wydajności na podstawie ich zachowania w środowisku testowym. Można debugować aplikację w kompilacji debugowania za pomocą <xref:System.Diagnostics.Debug> atrybut conditional włączona, aby otrzymywać wszystkie dane wyjściowe debugowania. Gdy aplikacja jest gotowa do wydania, można kompilować kompilacji wersji bez włączania <xref:System.Diagnostics.Debug> warunkowe atrybutu, aby kompilator nie będzie zawierać debugowania kodu w końcowego pliku wykonywalnego. Aby uzyskać więcej informacji, zobacz [jak: Kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Aby uzyskać więcej informacji na temat innych konfiguracji kompilacji dla aplikacji, zobacz [kompilowanie i tworzenie](/visualstudio/ide/compiling-and-building-in-visual-studio).  
+ Dzięki temu można debugować aplikacje i zoptymalizować ich wydajność na podstawie ich zachowania w środowisku testowym. Można debugować aplikację w kompilacji debugowania z <xref:System.Diagnostics.Debug> włączonym atrybutem warunkowym, tak aby wszystkie dane wyjściowe debugowania były odbierane. Gdy aplikacja jest gotowa do wydania, można skompilować kompilację wydania bez włączania <xref:System.Diagnostics.Debug> atrybutu warunkowego, dzięki czemu kompilator nie będzie zawierać kodu debugowania w końcowym pliku wykonywalnym. Aby uzyskać więcej informacji, zobacz [jak: Kompiluj warunkowo, korzystając z funkcji](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)śledzenia i debugowania. Aby uzyskać więcej informacji na temat różnych konfiguracji kompilacji dla aplikacji, zobacz [Kompilowanie i kompilowanie](/visualstudio/ide/compiling-and-building-in-visual-studio).  
   
- Można także śledzić wykonywanie kodu w zainstalowanej aplikacji przy użyciu metod <xref:System.Diagnostics.Trace> klasy. Umieszczając [przełączniki śledzenia](../../../docs/framework/debug-trace-profile/trace-switches.md) w kodzie, kontrolowania tego, czy występuje śledzenia i jest jak bardzo rozbudowane. Dzięki temu można monitorować stan aplikacji w środowisku produkcyjnym. Jest to szczególnie ważne w aplikacji biznesowej, która korzysta z wielu składników, działające na wielu komputerach. Można kontrolować, jak przełączniki są używane po wdrożeniu za pomocą pliku konfiguracji. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+ Możesz również śledzić wykonywanie kodu w zainstalowanej aplikacji przy użyciu metod <xref:System.Diagnostics.Trace> klasy. Umieszczając [przełączniki śledzenia](../../../docs/framework/debug-trace-profile/trace-switches.md) w kodzie, można kontrolować, czy śledzenie ma się odbywać i jak obszerne. Umożliwia to monitorowanie stanu aplikacji w środowisku produkcyjnym. Jest to szczególnie ważne w przypadku aplikacji biznesowej, która używa wielu składników uruchomionych na wielu komputerach. Można kontrolować sposób używania przełączników po wdrożeniu za pomocą pliku konfiguracji. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie, inicjowanie i konfigurowanie przełączników](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)śledzenia.  
   
- Opracowując aplikację, dla którego mają być używane do śledzenia, należy zazwyczaj obejmują zarówno śledzenie i debugowanie wiadomości w kodzie aplikacji. Gdy wszystko jest gotowe do wdrożenia aplikacji, można kompilować kompilacji wersji bez włączania **debugowania** atrybut conditional. Jednakże, możesz włączyć **śledzenia** warunkowe atrybutu, aby kompilator zawiera kod śledzenia w pliku wykonywalnym. Aby uzyskać więcej informacji, zobacz [jak: Kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
+ Podczas tworzenia aplikacji, dla której zamierzasz korzystać z śledzenia, zwykle w kodzie aplikacji są uwzględniane zarówno śledzenie, jak i debugowanie komunikatów. Gdy wszystko będzie gotowe do wdrożenia aplikacji, można skompilować kompilację wydania bez włączania atrybutu warunku **debugowania** . Można jednak włączyć atrybut **śledzenia** warunkowego, aby kompilator uwzględniał kod śledzenia w pliku wykonywalnym. Aby uzyskać więcej informacji, zobacz [jak: Kompiluj warunkowo, korzystając z funkcji](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)śledzenia i debugowania.  
   
-### <a name="phases-of-code-tracing"></a>Fazy kod śledzenia  
- Dostępne są trzy etapy śledzenia kodu:  
+### <a name="phases-of-code-tracing"></a>Etapy śledzenia kodu  
+ Istnieją trzy fazy śledzenia kodu:  
   
-1. **Instrumentacja** — możesz dodać kod śledzenia do aplikacji.  
+1. **Instrumentacja** — Dodawanie kodu śledzenia do aplikacji.  
   
-2. **Śledzenie** — kod śledzenia zapisuje informacje w określonym obiekcie docelowym.  
+2. **Śledzenie** — kod śledzenia zapisuje informacje w określonym miejscu docelowym.  
   
-3. **Analiza** — ocena informacje śledzenia do identyfikowania i lepsze poznanie problemów w aplikacji.  
+3. **Analiza** — informacje o śledzeniu są oceniane, aby identyfikować i zrozumieć problemy w aplikacji.  
   
- Podczas tworzenia aplikacji wszystkie debugowania i śledzenia danych wyjściowych metody zapisywać informacje w oknie danych wyjściowych w programie Visual Studio domyślnie. We wdrożonej aplikacji metody zapisać informacje śledzenia do obiektów docelowych, które określisz. Aby uzyskać więcej informacji na temat określania celu dane wyjściowe śledzenia i debugowania, zobacz [detektorów śledzenia](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
+ Podczas tworzenia wszystkie metody debugowania i śledzenia danych wyjściowych zapisują informacje w oknie danych wyjściowych w programie Visual Studio domyślnie. W wdrożonej aplikacji metody zapisują informacje o śledzeniu do określonych celów. Aby uzyskać więcej informacji na temat określania docelowego wyjścia do śledzenia lub debugowania, zobacz [detektory śledzenia](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
   
- Poniżej przedstawiono ogólny widok główne etapy zazwyczaj przy użyciu śledzenia do analizowania i rozwiązać potencjalne problemy we wdrożonej aplikacji. Aby uzyskać więcej informacji na temat sposobu wykonywania tych kroków, zobacz odpowiednie łącze.  
+ Poniżej znajduje się ogólny widok najważniejszych kroków zwykle związanych z użyciem śledzenia do analizowania i rozwiązywania potencjalnych problemów w wdrożonych aplikacjach. Aby uzyskać więcej informacji na temat sposobu wykonywania tych kroków, zobacz odpowiedni link.  
   
 ##### <a name="to-use-tracing-in-an-application"></a>Aby użyć śledzenia w aplikacji  
   
-1. Należy wziąć pod uwagę, które śledzenia danych wyjściowych, że chcesz otrzymywać u klienta po wdrożeniu aplikacji.  
+1. Rozważ, które dane wyjściowe śledzenia mają być odbierane po wdrożeniu aplikacji.  
   
-2. Utwórz zestaw parametrów. Aby uzyskać więcej informacji, zobacz [jak: Konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+2. Utwórz zestaw przełączników. Aby uzyskać więcej informacji, zobacz [jak: Skonfiguruj przełączniki](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)śledzenia.  
   
-3. Dodawanie instrukcji śledzenia do kodu aplikacji.  
+3. Dodaj instrukcje śledzenia do kodu aplikacji.  
   
-4. Określ, gdzie dane wyjściowe śledzenia są wyświetlane, a następnie dodać odpowiednie odbiorników. Aby uzyskać więcej informacji, zobacz [tworzenie i Inicjowanie obiektów nasłuchujących śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
+4. Określ, gdzie mają być wyświetlane dane wyjściowe śledzenia i Dodaj odpowiednie detektory. Aby uzyskać więcej informacji, zobacz [Tworzenie i Inicjowanie odbiorników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
   
-5. Testowanie i debugowanie aplikacji i kod śledzenia, które zawiera.  
+5. Przetestuj i Debuguj aplikację oraz kod śledzenia, który zawiera.  
   
-6. Kompilowanie aplikacji na kod wykonywalny przy użyciu jednej z następujących procedur:  
+6. Skompiluj aplikację do kodu wykonywalnego za pomocą jednej z następujących procedur:  
   
-    - Użyj **kompilacji** menu wraz z **debugowania** strony **stron właściwości** okno dialogowe w **Eksploratora rozwiązań**. Użyj tego ustawienia podczas kompilowania w programie Visual Studio.  
+    - Użyj menu **kompilacja** wraz z stroną **debugowanie** okna dialogowego **strony właściwości** w **Eksplorator rozwiązań**. Użyj tego podczas kompilowania w programie Visual Studio.  
   
          \- lub —  
   
-    - Użyj **śledzenia** i **debugowania** dyrektywy kompilatora wiersza polecenia metody kompilowania. Aby uzyskać więcej informacji, zobacz [kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Użyj tego ustawienia podczas kompilowania z wiersza polecenia.  
+    - Zastosuj dyrektywy kompilatora **Trace** i **Debug** dla metody wiersza polecenia kompilowania. Aby uzyskać więcej informacji, zobacz [warunek kompilowania z użyciem śledzenia i debugowania](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Użyj tego podczas kompilowania z wiersza polecenia.  
   
-7. Jeśli wystąpi problem w czasie wykonywania, włącz przełącznik odpowiednie śledzenia. Aby uzyskać więcej informacji, zobacz [Konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+7. Jeśli w czasie wykonywania wystąpi problem, Włącz odpowiedni przełącznik śledzenia. Aby uzyskać więcej informacji, zobacz [Konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
-     Kod śledzenia zapisuje komunikaty dotyczące śledzenia w określonym miejscu docelowym, na przykład, ekran, plik tekstowy lub dziennik zdarzeń. Typ odbiornika zostało uwzględnione w **Trace.Listeners** Określa, kolekcji docelowej.  
+     Kod śledzenia zapisuje komunikaty śledzenia do określonego celu, na przykład ekran, plik tekstowy lub dziennik zdarzeń. Typ odbiornika, który został uwzględniony w kolekcji **Trace.** Listeners określa element docelowy.  
   
-8. Analizowanie komunikatów śledzenia do identyfikowania i zrozumienia problemu w aplikacji.  
+8. Analizowanie komunikatów śledzenia w celu zidentyfikowania i zrozumienia problemu w aplikacji.  
   
-## <a name="trace-instrumentation-and-distributed-applications"></a>Instrumentacji Śledź i aplikacji rozproszonych  
- Podczas tworzenia aplikacji rozproszonej może być trudno testowanie aplikacji w taki sposób, w którym będzie on używany. Kilka zespołów programistycznych wykorzystuje funkcję, aby przetestować wszystkie możliwe kombinacje systemów operacyjnych lub przeglądarek sieci Web (w tym wszystkie opcje zlokalizowane) lub do symulacji dużą liczbę użytkowników, którzy będą uzyskiwać dostęp do aplikacji, w tym samym czasie. W tych okolicznościach nie można przetestować, jak aplikacja rozproszona odpowie na dużej ilości danych, różne konfiguracje i zachowania unikatowy użytkownika końcowego. Ponadto wiele części aplikacji rozproszonej jest bez interfejsu użytkownika można wchodzić w interakcje bezpośrednio lub Wyświetl działania tych części.  
+## <a name="trace-instrumentation-and-distributed-applications"></a>Instrumentacja śledzenia i aplikacje rozproszone  
+ Podczas tworzenia aplikacji rozproszonej może być trudne przetestowanie aplikacji w sposób, w jaki zostanie ona użyta. Kilka zespołów programistycznych ma możliwość testowania wszystkich możliwych kombinacji systemów operacyjnych lub przeglądarek sieci Web (w tym wszystkich zlokalizowanych opcji języka) lub do symulowania dużej liczby użytkowników, którzy mają dostęp do aplikacji w tym samym czasie. W tych okolicznościach nie można sprawdzić, w jaki sposób aplikacja rozproszona będzie reagować na duże woluminy, różne konfiguracje i unikatowe zachowania użytkowników końcowych. Ponadto wiele części aplikacji rozproszonej nie ma interfejsu użytkownika, z którym można korzystać bezpośrednio lub wyświetlać działania tych części.  
   
- Jednak można zniwelować to przez włączenie aplikacji rozproszonych do opisania określonych zdarzeń przydatne dla administratorów systemu, zwłaszcza te rzeczy, które pójdzie nie tak, przez *Instrumentacji* aplikacji — czyli przez umieszczenie instrukcji śledzenia w lokalizacjach strategicznych w kodzie. Następnie, jeśli coś nieoczekiwanego występuje w czasie wykonywania (na przykład zbyt długi czas odpowiedzi), można określić prawdopodobną przyczyną.  
+ Można jednak zrekompensować ten element, umożliwiając aplikacjom rozproszonym opisywanie pewnych zdarzeń związanych z administratorami systemu, szczególnie niewłaściwymi, poprzez instrumentację aplikacji, czyli przez umieszczenie instrukcji śledzenia w strategiczne lokalizacje w kodzie. Wtedy, gdy coś nieoczekiwanego występuje w czasie wykonywania (na przykład nadmiernie długi czas odpowiedzi), można określić przyczynę najprawdopodobniej.  
   
- Za pomocą instrukcji śledzenia można uniknąć trudne badanie oryginalnego kodu źródłowego, modyfikowanie, ponownej kompilacji i podjęto próbę utworzenia błędów czasu wykonywania w środowisku debugowania. Należy pamiętać, że możliwe jest instrumentowanie aplikacji nie tylko do wyświetlania błędów, ale także do monitorowania wydajności.  
+ Za pomocą instrukcji śledzenia można uniknąć trudnego zadania sprawdzającego oryginalny kod źródłowy, modyfikacji, ponownej kompilacji i próby wygenerowania błędu czasu wykonywania w środowisku debugowania. Należy pamiętać, że można Instrumentacja aplikacji nie tylko w celu wyświetlenia błędów, ale również do monitorowania wydajności.  
   
-## <a name="strategic-placement-of-trace-statements"></a>Strategiczne rozmieszczenie instrukcji śledzenia  
- Szczególną muszą wykonywać, w przypadku umieszczenia Twojego instrukcji śledzenia do użycia w czasie wykonywania. Należy rozważyć informacjach śledzenia jest potrzebne byłyby we wdrożonej aplikacji, aby odpowiednio znajdują się wszystkie scenariusze prawdopodobnie śledzenia. Aplikacje, które używają śledzenia się nieznacznie różnić szeroko, jednak istnieją nie ogólne wskazówki dotyczące strategiczne rozmieszczenie śledzenia. Aby uzyskać więcej informacji na temat wprowadzania do instrukcji śledzenia, zobacz [jak: Dodawanie instrukcji śledzenia do kodu aplikacji](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md).  
+## <a name="strategic-placement-of-trace-statements"></a>Strategiczne rozmieszczenie instrukcji Trace  
+ Należy zachować szczególną ostrożność podczas umieszczania instrukcji śledzenia do użycia w czasie wykonywania. Należy wziąć pod uwagę, jakie informacje o śledzeniu mogą być potrzebne we wdrożonej aplikacji, tak aby wszystkie możliwe scenariusze śledzenia były odpowiednio omówione. Ze względu na to, że aplikacje korzystające ze śledzenia różnią się od siebie, jednak nie ma ogólnych wytycznych dotyczących strategicznego rozmieszczenia śledzenia. Aby uzyskać więcej informacji na temat umieszczania instrukcji [śledzenia, zobacz How to: Dodaj instrukcje śledzenia do kodu](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)aplikacji.  
   
-## <a name="output-from-tracing"></a>Dane wyjściowe śledzenia  
- Dane wyjściowe śledzenia są zbierane przez obiekty o nazwie *odbiorników*. Odbiornik jest obiektem, który odbiera dane wyjściowe śledzenia i zapisuje go na urządzeniach (zwykle plik okna, dziennika lub tekst). Po utworzeniu odbiornika śledzenia, zwykle jest ona dodawana do <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> kolekcji, dzięki czemu odbiornika do odbierania wszystkich danych wyjściowych śledzenia.  
+## <a name="output-from-tracing"></a>Dane wyjściowe ze śledzenia  
+ Dane wyjściowe śledzenia są zbierane przez obiektynazywane odbiornikami. Odbiornik jest obiektem, który odbiera dane wyjściowe śledzenia i zapisuje je na urządzeniu wyjściowym (zazwyczaj okno, dziennik lub plik tekstowy). Gdy odbiornik śledzenia jest tworzony, jest zazwyczaj dodawany do <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> kolekcji, co pozwala odbiornikowi odbierać wszystkie dane wyjściowe śledzenia.  
   
- Informacje śledzenia są zawsze zapisywane co najmniej wartość domyślna <xref:System.Diagnostics.Trace> celem danych wyjściowych <xref:System.Diagnostics.DefaultTraceListener>. Jeśli z jakiegoś powodu została usunięta <xref:System.Diagnostics.DefaultTraceListener> bez dodawania innych nasłuchujących, aby <xref:System.Diagnostics.Trace.Listeners%2A> kolekcji, nie otrzymasz żadnych komunikatów śledzenia. Aby uzyskać więcej informacji, zobacz [detektorów śledzenia](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
+ Informacje o śledzeniu są zawsze zapisywane co najmniej do <xref:System.Diagnostics.Trace> domyślnego docelowego wyjścia, <xref:System.Diagnostics.DefaultTraceListener>a. Jeśli z <xref:System.Diagnostics.DefaultTraceListener> jakiegoś powodu usunięto bez dodawania innych odbiorników <xref:System.Diagnostics.Trace.Listeners%2A> do kolekcji, nie otrzymasz żadnych komunikatów śledzenia. Aby uzyskać więcej informacji, zobacz [detektory śledzenia](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
   
- Sześciu <xref:System.Diagnostics.Debug> elementów członkowskich i <xref:System.Diagnostics.Trace> metody, które zapisują informacje śledzenia są wymienione w poniższej tabeli.  
+ Sześć <xref:System.Diagnostics.Debug> członków i <xref:System.Diagnostics.Trace> metod, które zapisują informacje o śledzeniu, są wymienione w poniższej tabeli.  
   
 |Metoda|Dane wyjściowe|  
 |------------|------------|  
-|**Assert**|Określony tekst. lub, jeśli nie określono wywołanie stosu. Dane wyjściowe są zapisywane tylko jeśli warunek określony jako argument w **Asercja** instrukcja jest **false**.|  
-|**Niepowodzenie**|Określony tekst. lub, jeśli nie określono wywołanie stosu.|  
-|**Zapis**|Określony tekst.|  
-|**Writeif —**|Określony tekst, jeśli warunek określony jako argument w **writeif —** instrukcji jest spełniony.|  
-|**WriteLine**|Określony tekst i znaku powrotu karetki.|  
-|**WriteLineIf**|Określony tekst i karetki zwracają, jeśli warunek określony jako argument w **WriteLineIf** instrukcji jest spełniony.|  
+|**Stanowcz**|Określony tekst; lub, jeśli nie jest określony, stos wywołań. Dane wyjściowe są zapisywane tylko wtedy, gdy warunek określony jako argument w instrukcji **Assert** ma **wartość false**.|  
+|**Udało**|Określony tekst; lub, jeśli nie jest określony, stos wywołań.|  
+|**Prawem**|Określony tekst.|  
+|**WriteIf**|Określony tekst, jeśli warunek określony jako argument w instrukcji **WriteIf** jest spełniony.|  
+|**WriteLine**|Określony tekst i znak powrotu karetki.|  
+|**WriteLineIf**|Określony tekst i znak powrotu karetki, jeśli warunek określony jako argument w instrukcji **WriteLineIf** jest spełniony.|  
   
- Wszystkie słuchaczy w <xref:System.Diagnostics.Trace.Listeners%2A> kolekcji odbierać komunikaty, opisano w powyższej tabeli, ale akcje wykonywane mogą się różnić w zależności od tego, jakiego rodzaju odbiornika odbiera komunikat. Na przykład <xref:System.Diagnostics.DefaultTraceListener> Wyświetla okno dialogowe potwierdzenia, po odebraniu **się nie powieść** lub nie powiodło się **Asercja** powiadomienia, ale <xref:System.Diagnostics.TextWriterTraceListener> po prostu zapisuje dane wyjściowe do strumienia jej.  
+ Wszystkie odbiorniki w <xref:System.Diagnostics.Trace.Listeners%2A> kolekcji otrzymują komunikaty opisane w powyższej tabeli, ale wykonane akcje mogą się różnić w zależności od tego, jakiego rodzaju odbiornik odbiera komunikat. <xref:System.Diagnostics.DefaultTraceListener> Na przykład okno dialogowe wyświetlanie potwierdzenia otrzymuje powiadomienie o niepowodzeniu lub niepowodzeniu <xref:System.Diagnostics.TextWriterTraceListener> potwierdzenia, ale po prostu zapisuje dane wyjściowe do strumienia.  
   
- Aby wygenerować wyniki niestandardowych, należy Implementowanie własnych odbiornika. Odbiornik śledzenia niestandardowe mogą, na przykład wyświetlanie wiadomości do okna komunikatu lub połączenie z bazą danych do dodawania komunikatów do tabeli. Wszystkie niestandardowe odbiorniki powinien obsługiwać sześciu metod wymienionych powyżej. Aby uzyskać więcej informacji na temat tworzenia odbiorników zdefiniowane dla deweloperów, zobacz <xref:System.Diagnostics.TraceListener> w dokumentacji .NET Framework.  
+ Możesz tworzyć niestandardowe wyniki, implementując własny odbiornik. Niestandardowy odbiornik śledzenia może na przykład wyświetlić komunikaty w oknie komunikatu lub połączyć się z bazą danych w celu dodania komunikatów do tabeli. Wszystkie odbiorniki niestandardowe powinny obsługiwać sześć metod wymienionych powyżej. Aby uzyskać więcej informacji na temat tworzenia detektorów zdefiniowanych przez <xref:System.Diagnostics.TraceListener> dewelopera, zobacz sekcję w temacie .NET Framework Reference.  
   
-> [!NOTE]
->  W języku Visual Basic **Debug.Write —**, **Debug.WriteIf**, **Debug.WriteLine**, i **Debug.WriteLineIf** zastąpiono metody **Debug.Print** metody, które były dostępne we wcześniejszych wersjach programu Visual Basic.  
-  
- **Zapisu** i **WriteLine** metody zawsze wpisać tekst należy określić. **Asercja**, **writeif —**, i **WriteLineIf** wymagają argument logiczny, który kontroluje, czy zapisują określony tekst; zapisują określony tekst tylko jeśli wyrażenie ma **true** (dla **writeif —** i **WriteLineIf**), lub **false** (dla **Asercja**). **Się nie powieść** metody są zawsze zapisywane określony tekst. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie instrukcji śledzenia do kodu aplikacji](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) i odwołania programu .NET Framework.  
+ Metody **Write** i **WriteLine** zawsze zapisują określony tekst. **Assert**, **WriteIf**i **WriteLineIf** wymagają argumentu logicznego, który kontroluje, czy piszą określony tekst; piszą określony tekst tylko wtedy, gdy wyrażenie ma **wartość true** (dla **WriteIf** i **WriteLineIf**) lub **false** (dla **potwierdzenia**). Metoda **FAIL** zawsze zapisuje określony tekst. Aby uzyskać więcej informacji, zobacz [jak: Dodaj instrukcje śledzenia do kodu](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) aplikacji i odwołania do .NET Framework.  
   
 ## <a name="security-concerns"></a>Zagadnienia dotyczące zabezpieczeń  
- Jeśli nie można wyłączyć śledzenie i debugowanie przed wdrożeniem aplikacji ASP.NET, aplikacja może ujawnić informacje o sobie, które mogą zostać wykorzystane przez złośliwych programów. Aby uzyskać więcej informacji, zobacz [jak: Kompiluj warunkowe ze śledzeniem i debugowaniem](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [kompilowanie i tworzenie](/visualstudio/ide/compiling-and-building-in-visual-studio), i [jak: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md). Debugowanie jest także można skonfigurować za pomocą programu Internet Information Services (IIS).  
+ Jeśli nie wyłączysz śledzenia i debugowania przed wdrożeniem aplikacji ASP.NET, aplikacja może ujawnić informacje o sobie, które mogą zostać wykorzystane przez złośliwy program. Aby uzyskać więcej informacji, zobacz [jak: Kompiluj warunkowo, korzystając z funkcji](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)śledzenia i debugowania, kompilowania [ [i kompilowania](/visualstudio/ide/compiling-and-building-in-visual-studio)oraz jak: Tworzenie, inicjowanie i konfigurowanie przełączników](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)śledzenia. Debugowanie można również skonfigurować za poorednictwem Internet Information Services (IIS).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -148,9 +145,9 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 - [Kontrakty kodu](../../../docs/framework/debug-trace-profile/code-contracts.md)
 - [Typy projektów C#, F# i Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
 - [Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Instrukcje: Kompiluj warunkowo z użyciem śledzenia i debugowania](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 - [Instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [Instrukcje: Tworzenie i Inicjowanie źródeł śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [Instrukcje: Użycie TraceSource i filtrów z obiektów nasłuchujących śledzenia](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [Instrukcje: Tworzenie i inicjowanie źródeł śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [Instrukcje: Używanie TraceSource i filtrów z odbiornikami śledzenia](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [Obiekty nasłuchujące śledzenie](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Przełączniki śledzenia](../../../docs/framework/debug-trace-profile/trace-switches.md)

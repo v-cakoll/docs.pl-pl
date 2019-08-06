@@ -6,12 +6,12 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 23fba8269670156000cb68b3aa07ae7c770eada1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d9889ce389eed73a9af0a3f72dcca6ec476cae15
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627743"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796507"
 ---
 # <a name="default-values-table-c-reference"></a>Tabela wartości domyślnych (C# odwołanie)
 
@@ -28,13 +28,13 @@ W poniższej tabeli przedstawiono wartości domyślne C# typów:
 |[struct](struct.md)|Wartość wygenerowana przez ustawienie wszystkich pól typu wartość na wartości domyślne i wszystkie pola typu odwołania do `null`.|
 |Dowolny [Typ wartości null](../../programming-guide/nullable-types/index.md)|Wystąpienie, dla którego <xref:System.Nullable%601.HasValue%2A> właściwość jest `false` i <xref:System.Nullable%601.Value%2A> właściwość jest niezdefiniowana. Ta wartość domyślna jest również znana jako wartość *null* typu wartości null.|
 
-Użyj [wyrażenia wartości domyślnej](../../programming-guide/statements-expressions-operators/default-value-expressions.md) , aby utworzyć wartość domyślną typu, jak pokazano w poniższym przykładzie:
+Użyj [operatora domyślnego](../operators/default.md) , aby utworzyć wartość domyślną typu, jak pokazano w poniższym przykładzie:
 
 ```csharp
 int a = default(int);
 ```
 
-Począwszy od C# 7,1, można użyć [ `default` literału](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) , aby zainicjować zmienną o wartości domyślnej typu:
+Począwszy od C# 7,1, można użyć [ `default` literału](../operators/default.md#default-literal) , aby zainicjować zmienną o wartości domyślnej typu:
 
 ```csharp
 int a = default;

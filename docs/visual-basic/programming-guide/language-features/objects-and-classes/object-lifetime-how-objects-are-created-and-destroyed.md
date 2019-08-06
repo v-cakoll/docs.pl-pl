@@ -22,16 +22,16 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 5b092f50ddff5c432fbd6396b5fedafe7a6acba0
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 932f56a9a277360b11c551aaa1faf819f8e07fe6
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512841"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796672"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Okres istnienia obiektu: Jak obiekty są tworzone i niszczone (Visual Basic)
 
-Wystąpienie klasy, obiektu jest tworzone za pomocą `New` słowa kluczowego. Zadania inicjowania często należy wykonać na nowych obiektach przed ich użyciem. Typowe zadania inicjowania obejmują otwieranie plików, łączenie z bazami danych i odczytywanie wartości kluczy rejestru. Visual Basic steruje inicjalizacją nowych obiektów przy użyciu procedur  nazywanych konstruktorami (specjalne metody, które zezwalają na kontrolę nad inicjalizacją).
+Wystąpienie klasy, obiektu jest tworzone za pomocą `New` słowa kluczowego. Zadania inicjowania często należy wykonać na nowych obiektach przed ich użyciem. Typowe zadania inicjowania obejmują otwieranie plików, łączenie z bazami danych i odczytywanie wartości kluczy rejestru. Visual Basic steruje inicjalizacją nowych obiektów przy użyciu procedur nazywanych konstruktorami (specjalne metody, które zezwalają na kontrolę nad inicjalizacją).
 
 Gdy obiekt zostanie pozostawiony, zostanie on opublikowany przez środowisko uruchomieniowe języka wspólnego (CLR). Visual Basic kontroluje wydawanie zasobów systemowych przy użyciu procedur nazywanych *destruktorami*. Razem konstruktory i destruktory obsługują tworzenie niezawodnych i przewidywalnych bibliotek klas.
 
@@ -41,7 +41,7 @@ Konstruktory i destruktory kontrolują tworzenie i niszczenie obiektów. `Class_
 
 ### <a name="sub-new"></a>Sub New
 
-`Sub New` Konstruktor można uruchomić tylko raz podczas tworzenia klasy. Nie można go wywołać jawnie wszędzie poza pierwszym wierszem kodu innego konstruktora z tej samej klasy lub z klasy pochodnej. Ponadto kod w `Sub New` metodzie zawsze jest uruchamiany przed jakimkolwiek innym kodem w klasie. Visual Basic i nowsze wersje niejawnie tworzą `Sub New` konstruktora w czasie wykonywania, jeśli nie `Sub New` określisz jawnie procedury dla klasy.
+`Sub New` Konstruktor można uruchomić tylko raz podczas tworzenia klasy. Nie można go wywołać jawnie wszędzie poza pierwszym wierszem kodu innego konstruktora z tej samej klasy lub z klasy pochodnej. Ponadto kod w `Sub New` metodzie zawsze jest uruchamiany przed jakimkolwiek innym kodem w klasie. Visual Basic niejawnie tworzy `Sub New` konstruktora w czasie wykonywania, jeśli nie `Sub New` określisz jawnie procedury dla klasy.
 
 Aby utworzyć konstruktora dla klasy, należy utworzyć procedurę o nazwie `Sub New` gdziekolwiek w definicji klasy. Aby utworzyć sparametryzowany Konstruktor, określ nazwy i typy danych argumentów `Sub New` tak samo jak w przypadku określenia argumentów dla każdej innej procedury, jak w poniższym kodzie:
 
@@ -64,7 +64,7 @@ Przed zwolnieniem obiektów CLR automatycznie wywołuje `Finalize` metodę dla o
 
 `Finalize` Destruktor jest metodą chronioną, która może być wywoływana tylko z klasy, do której należy, lub z klas pochodnych. System automatycznie wywołuje `Finalize` , gdy obiekt jest niszczony, dlatego nie należy jawnie wywołać `Finalize` z zewnątrz `Finalize` implementacji klasy pochodnej.
 
-W przeciwieństwie `Class_Terminate`do, które jest wykonywane zaraz, gdy tylko obiekt jest ustawiony na wartość Nothing, zazwyczaj opóźnienie między obiektem traci zakres i kiedy Visual Basic `Finalize` wywołuje destruktor. Visual Basic i nowsze wersje umożliwiają użycie drugiego rodzaju destruktora, <xref:System.IDisposable.Dispose%2A>który można jawnie wywołać w dowolnym momencie, aby natychmiast zwolnić zasoby.
+W przeciwieństwie `Class_Terminate`do, które jest wykonywane zaraz, gdy tylko obiekt jest ustawiony na wartość Nothing, zazwyczaj opóźnienie między obiektem traci zakres i kiedy Visual Basic `Finalize` wywołuje destruktor. Visual Basic .NET umożliwia korzystanie z drugiego rodzaju destruktora <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>, który może być jawnie wywoływany w dowolnym momencie w celu natychmiastowego zwolnienia zasobów.
 
 > [!NOTE]
 > `Finalize` Destruktor nie powinien zgłaszać wyjątków, ponieważ nie mogą być obsługiwane przez aplikację i może spowodować przerwanie działania aplikacji.

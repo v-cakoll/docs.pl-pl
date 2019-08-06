@@ -9,176 +9,176 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 2a0fa9b67f4fa1f3b701cb64579727bedbf5028c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: f9ea4acfc7ba86d3424bb11af0de685651f99c61
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663791"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796756"
 ---
 # <a name="pack-uris-in-wpf"></a>Pakuj URI w WPF
 
-W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] są używane do identyfikowania i ładowanie plików na wiele sposobów, w tym następujące:
+W Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] służy do identyfikowania i ładowania plików na wiele sposobów, w tym:
 
-- Określanie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] do wyświetlenia po pierwszym uruchomieniu aplikacji.
+- Określenie elementu [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] do wyświetlenia podczas pierwszego uruchomienia aplikacji.
 
 - Ładowanie obrazów.
 
-- Przejdź do strony.
+- Przechodzenie do stron.
 
-- Ładowanie plików danych innego niż plik wykonywalny.
+- Ładowanie niewykonywalnych plików danych.
 
-Ponadto [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] może służyć do identyfikowania i ładowanie plików z różnych miejsc, w tym następujące czynności:
+Ponadto program [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] może służyć do identyfikowania i ładowania plików z różnych lokalizacji, w tym następujących:
 
 - Bieżący zestaw.
 
-- Przywoływanego zestawu.
+- Przywoływany zestaw.
 
 - Lokalizacja względem zestawu.
 
-- Witryna aplikacji pochodzenia.
+- Lokacja źródłowa aplikacji.
 
-Aby zapewnić spójny mechanizm identyfikacji i ładowania tych typów plików z tych lokalizacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] korzysta z możliwości rozszerzania usługi *pakowanie schematu URI*. Ten temat zawiera omówienie schematu, opisano, jak utworzyć pakiet [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] dla różnych scenariuszy, w tym artykule omówiono bezwzględnym i względnym [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] i [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] rozdzielczości, przed wyświetleniem sposób użycia pakietu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] z obu znaczników i kod.
+Aby zapewnić spójny mechanizm do identyfikowania i ładowania tych typów plików z tych lokalizacji, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wykorzystuje rozszerzalność *schematu identyfikatora URI pakietu*. Ten temat zawiera omówienie schematu, a także informacje na [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] temat tworzenia pakietu dla różnych scenariuszy, omawiania absolutnej i względnej [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] i rozpoznawania [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] i kod.
 
 <a name="The_Pack_URI_Scheme"></a>
 
-## <a name="the-pack-uri-scheme"></a>Pakowanie schematu URI
+## <a name="the-pack-uri-scheme"></a>Schemat identyfikatora URI pakietu
 
-Ten pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schematu jest używany przez [otwarte konwencje pakietów](https://go.microsoft.com/fwlink/?LinkID=71255) specyfikacji (OPC) w tym artykule opisano model do organizowania i identyfikowanie zawartości. Kluczowe elementy modelu są pakiety i części, gdzie *pakietu* to logiczny kontener przeznaczony dla jednego lub więcej logicznej *części*. Na poniższym rysunku przedstawiono tę koncepcję.
+Schemat pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] jest używany przez specyfikację [Open](https://go.microsoft.com/fwlink/?LinkID=71255) Pack Conventions (OPC), która opisuje model służący do organizowania i identyfikowania zawartości. Kluczowymi elementami tego modelu są pakiety i części, w przypadku których *pakiet* jest kontenerem logicznym dla co najmniej jednej *części*logicznej. Poniższy rysunek ilustruje tę koncepcję.
 
 ![Diagram pakietu i części](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)
 
-Aby zidentyfikować elementy, specyfikacji OPC wykorzystuje rozszerzalności RFC 2396 (identyfikatory URI (Uniform Resource): Ogólna składnia) do definiowania pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schematu.
+Aby zidentyfikować części, Specyfikacja OPC korzysta z rozszerzalności RFC 2396 (Uniform Resource Identifiers (URI): Składnia ogólna) do definiowania schematu pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] .
 
-Schemat, który jest określony przez [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] jest definiowany przez jej prefiks; http, ftp i plik znajdują się znanych przykładów. Ten pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schemat używa "pakiet" jako jego schemat i zawiera dwa składniki: urzędu i ścieżkę. Poniżej przedstawiono formatu pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+Schemat, który jest określony przez [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , jest definiowany za pomocą jego prefiksu, protokołu HTTP, FTP i pliku są dobrze znane przykłady. Schemat pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] używa pakietu "Pack" jako schematu i zawiera dwa składniki: Authority i Path. Poniżej przedstawiono format pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
 
-pakiet: / /*urząd*/*ścieżki*
+*ścieżka* *urzędu*/Pack://
 
-*Urząd* Określa typ pakietu, który element jest zawarty w, podczas gdy *ścieżki* Określa lokalizację części w ramach pakietu.
+*Urząd* określa typ pakietu, w którym znajduje się część, a *ścieżka* określa lokalizację części w ramach pakietu.
 
-Poniższy rysunek przedstawia tę koncepcję:
+Pojęcie to jest zilustrowane na poniższej ilustracji:
 
-![Relacja między pakietu, uprawnienia i ścieżki](./media/pack-uris-in-wpf/wpf-relationship-diagram.png)
+![Relacja między pakietem, Urzędem i ścieżką](./media/pack-uris-in-wpf/wpf-relationship-diagram.png)
 
-Pakiety i części są analogiczne do aplikacji i plików, w której aplikacja (pakiet) może zawierać jeden lub więcej plików (części), w tym:
+Pakiety i części są analogiczne do aplikacji i plików, w których aplikacja (pakiet) może zawierać jeden lub więcej plików (części), w tym:
 
 - Pliki zasobów, które są kompilowane do zestawu lokalnego.
 
-- Pliki zasobów, które są kompilowane do przywoływanego zestawu.
+- Pliki zasobów, które są kompilowane do zestawu, do którego się odwołuje.
 
-- Pliki zasobów, które są kompilowane do zestawu odwołującego się.
+- Pliki zasobów, które są kompilowane do zestawu, do którego się odwołuje.
 
 - Pliki zawartości.
 
-- Witryna pochodzenia plików.
+- Lokacja plików pochodzenia.
 
-Aby uzyskiwać dostęp do tych typów plików, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obsługuje dwa urzędy: aplikacja: / / / oraz siteoforigin: / / /. Aplikacja: / / / Urząd identyfikuje pliki danych aplikacji, które są znane w czasie kompilacji, w tym pliki zasobów i zawartości. Siteoforigin: / / / Urząd identyfikuje witrynę pochodzenia plików. Zakres każdego uprawnień jest wyświetlany na poniższej ilustracji.
+Aby uzyskać dostęp do tych typów plików [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , program obsługuje dwa urzędy: Application:///i siteoforigin:///. Urząd application:///identyfikuje pliki danych aplikacji, które są znane w czasie kompilacji, w tym pliki zasobów i zawartości. Urząd siteoforigin:///określa lokację plików pochodzenia. Zakres każdego urzędu pokazano na poniższej ilustracji.
 
-![Schemat identyfikatora URI pakietu](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)
+![Diagram URI pakietu](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)
 
 > [!NOTE]
-> Składnik wystawcy pod pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] jest osadzony [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , wskazuje pakietu i muszą być zgodne z RFC 2396. Ponadto muszą zostać zastąpione przez znak "," znakiem "/", a zastrzeżone znaki, takie jak "%" i "?" musi być poprzedzone znakiem zmiany znaczenia. Zobacz OPC, aby uzyskać szczegółowe informacje.
+> Składnik urzędu pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] jest osadzony [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , który wskazuje na pakiet i musi być zgodny ze specyfikacją RFC 2396. Ponadto znak "/" musi zostać zastąpiony znakiem "," i znakami zastrzeżonymi, takimi jak "%" i "?", należy zmienić wartość ucieczki. Zobacz OPC, aby uzyskać szczegółowe informacje.
 
-W poniższych sekcjach opisano sposób tworzenia pakietu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] za pomocą tych dwóch urzędów w połączeniu z odpowiednich ścieżek do identyfikacji zasobu, zawartość i witryna pochodzenia plików.
+W poniższych sekcjach opisano sposób tworzenia pakietów [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] przy użyciu tych dwóch urzędów w połączeniu z odpowiednimi ścieżkami służącymi do identyfikowania zasobów, zawartości i lokacji plików pochodzenia.
 
 <a name="Resource_File_Pack_URIs___Local_Assembly"></a>
 
 ## <a name="resource-file-pack-uris"></a>Identyfikatory URI pakietu plików zasobów
 
-Pliki zasobów są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` elementy i są kompilowane do zestawów. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obsługuje konstrukcji pakietu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] który może służyć do identyfikowania plików zasobów, które są kompilowane do zestawu lokalnego lub skompilowany w zestawie, do którego odwołuje się z lokalnym zestawu.
+Pliki zasobów są konfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` elementy i są kompilowane do zestawów. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]obsługuje konstruowanie pakietu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , który może służyć do identyfikowania plików zasobów, które są kompilowane do zestawu lokalnego lub kompilowane do zestawu, do którego odwołuje się zestaw lokalny.
 
 <a name="Local_Assembly_Resource_File"></a>
 
-### <a name="local-assembly-resource-file"></a>Plik zasobów zestawu lokalnego
+### <a name="local-assembly-resource-file"></a>Plik zasobu zestawu lokalnego
 
-Ten pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] zasobu pliku, który jest kompilowany do zestawu lokalnego używa następujących urzędu i ścieżki:
+Pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla pliku zasobów, który jest kompilowany do zestawu lokalnego, używa następującego urzędu i ścieżki:
 
-- **Urząd**: aplikacja: / / /.
+- **Urząd**: Application:///.
 
-- **Ścieżka**: Nazwa pliku zasobów, w tym ścieżki względem katalogu głównego folderu projektu zestawu lokalnego.
+- **Ścieżka**: Nazwa pliku zasobów, łącznie z jego ścieżką, względem katalogu głównego lokalnego folderu projektu zestawu.
 
-W poniższym przykładzie pokazano pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zasobu, który znajduje się w katalogu głównym folderu projektu zestawu lokalnego.
+W poniższym przykładzie przedstawiono pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dla pliku zasobu, który znajduje się w folderze głównym folderu projektu zestawu lokalnego.
 
 `pack://application:,,,/ResourceFile.xaml`
 
-W poniższym przykładzie pokazano pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zasobu, który znajduje się w podfolderze folderu projektu zestawu lokalnego.
+Poniższy przykład pokazuje pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dla pliku zasobu, który znajduje się w podfolderze folderu projektu zestawu lokalnego.
 
 `pack://application:,,,/Subfolder/ResourceFile.xaml`
 
 <a name="Resource_File_Pack_URIs___Referenced_Assembly"></a>
 
-### <a name="referenced-assembly-resource-file"></a>Plik zasobów zestawu odwołania
+### <a name="referenced-assembly-resource-file"></a>Przywoływany plik zasobu zestawu
 
-Ten pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] zasobu pliku, który jest skompilowany w zestawie odwołania używa następujących urzędu i ścieżki:
+Pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla pliku zasobów, który jest kompilowany do zestawu, do którego istnieje odwołanie, używa następującego urzędu i ścieżki:
 
-- **Urząd**: aplikacja: / / /.
+- **Urząd**: Application:///.
 
-- **Ścieżka**: Nazwa pliku zasobu, który jest kompilowany do przywoływanego zestawu. Ścieżka musi być zgodna z następującym formatem:
+- **Ścieżka**: Nazwa pliku zasobów, który jest kompilowany do przywoływanego zestawu. Ścieżka musi być zgodna z następującym formatem:
 
-  *AssemblyShortName*{ *; Wersja*] { *; PublicKey*]; składnik /*ścieżki*
+  *AssemblyShortName* { *; Wersja*] { *; PublicKey*]; składnik/*ścieżka*
 
-  - **AssemblyShortName**: krótka nazwa dla przywoływanego zestawu.
+  - **AssemblyShortName**: krótka nazwa przywoływanego zestawu.
 
-  - **; Wersja** [Opcjonalna]: wersja przywoływanego zestawu, który zawiera plik zasobów. To jest używany, gdy co najmniej dwóch zestawach o tej samej krótkiej nazwie są ładowane.
+  - **; Wersja** [opcjonalna]: wersja przywoływanego zestawu zawierającego plik zasobów. Ta wartość jest używana w przypadku załadowania co najmniej dwóch przywoływanych zestawów o tej samej krótkiej nazwie.
 
-  - **; PublicKey** [Opcjonalna]: klucz publiczny, który został użyty do podpisania przywoływanego zestawu. To jest używany, gdy co najmniej dwóch zestawach o tej samej krótkiej nazwie są ładowane.
+  - **; PublicKey** [opcjonalnie]: klucz publiczny, który został użyty do podpisania przywoływanego zestawu. Ta wartość jest używana w przypadku załadowania co najmniej dwóch przywoływanych zestawów o tej samej krótkiej nazwie.
 
-  - **; składnik**: Określa, że z lokalnego zestawu odwołuje się do zestawu są określone.
+  - **; składnik**: określa, że zestaw, do którego odwołuje się odwołanie, jest przywoływany z zestawu lokalnego.
 
-  - **/ Ścieżka**: Nazwa pliku zasobów, w tym ścieżki względem katalogu głównego folderu projektu przywoływanego zestawu.
+  - **/Path**: nazwa pliku zasobów, łącznie z jego ścieżką, względem katalogu głównego folderu projektu zestawu, do którego się odwołuje.
 
-W poniższym przykładzie pokazano pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zasobu, który znajduje się w katalogu głównym folderu projektu przywoływanego zestawu.
+Poniższy przykład pokazuje pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dla pliku zasobu, który znajduje się w katalogu głównym folderu projektu zestawu, do którego się odwołuje.
 
 `pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml`
 
-W poniższym przykładzie pokazano pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zasobu, który znajduje się w podfolderze folderu projektu przywoływanego zestawu.
+Poniższy przykład pokazuje pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dla pliku zasobu, który znajduje się w podfolderze folderu projektu zestawu, do którego się odwołuje.
 
 `pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml`
 
-W poniższym przykładzie pokazano pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zasobu, który znajduje się w folderze głównym folderu projektu zestawu odwołania, specyficzny dla wersji.
+W poniższym przykładzie przedstawiono pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dla pliku zasobu, który znajduje się w folderze głównym odwołania do folderu projektu zestawu specyficznego dla wersji.
 
 `pack://application:,,,/ReferencedAssembly;v1.0.0.1;component/ResourceFile.xaml`
 
-Należy pamiętać, że pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] tylko w przypadku aplikacji można używać składni dla plików zasobów przywoływany zestaw: / / / urzędu. Na przykład, że nie jest obsługiwana w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+Należy zauważyć, że [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] składnia pakietu dla plików zasobów zestawu, do których istnieją odwołania, może być używana tylko z urzędem Application:///. Na przykład następujące elementy nie są obsługiwane w programie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
 
 `pack://siteoforigin:,,,/SomeAssembly;component/ResourceFile.xaml`
 
 <a name="Content_File_Pack_URIs"></a>
 
-## <a name="content-file-pack-uris"></a>Identyfikatory URI pakietu zawartości pliku
+## <a name="content-file-pack-uris"></a>Identyfikatory URI pakietu plików zawartości
 
-Ten pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla następujących urzędu i ścieżka pliku zawartości:
+Pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla pliku zawartości używa następującego urzędu i ścieżki:
 
-- **Urząd**: aplikacja: / / /.
+- **Urząd**: Application:///.
 
-- **Ścieżka**: Nazwa pliku zawartości, wraz ze ścieżką względną lokalizacji systemu plików w głównym zestawie pliku wykonywalnego aplikacji.
+- **Ścieżka**: Nazwa pliku zawartości, łącznie z ścieżką względną do lokalizacji systemu plików głównego zestawu plików wykonywalnych aplikacji.
 
-W poniższym przykładzie pokazano pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] zawartości pliku, znajdującego się w tym samym folderze co zestawu pliku wykonywalnego.
+Poniższy przykład pokazuje pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dla pliku zawartości znajdującego się w tym samym folderze co zestaw wykonywalny.
 
 `pack://application:,,,/ContentFile.xaml`
 
-W poniższym przykładzie pokazano pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] zawartości pliku, znajdującego się w podfolderze, która jest określana względem zestawu pliku wykonywalnego aplikacji.
+Poniższy przykład pokazuje pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dla pliku zawartości znajdujący się w podfolderze, który jest względny dla zestawu wykonywalnego aplikacji.
 
 `pack://application:,,,/Subfolder/ContentFile.xaml`
 
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] pliki zawartości nie nastąpi przejście. [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Nawigacji obsługuje tylko schemat [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] pliki, które znajdują się w miejscu pochodzenia.
+> Nie można przejść do plików zawartości HTML. [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Schemat obsługuje tylko nawigację do plików HTML, które znajdują się w lokalizacji źródłowej.
 
 <a name="The_siteoforigin_____Authority"></a>
 
-## <a name="site-of-origin-pack-uris"></a>Witryna pochodzenia identyfikatory URI z dodatkiem Service Pack
+## <a name="site-of-origin-pack-uris"></a>Witryna identyfikatorów URI pakietu pochodzenia
 
-Ten pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] witryny pochodzenia plik używa następujących urzędu i ścieżki:
+Pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla lokacji z plikiem pochodzenia używa następującego urzędu i ścieżki:
 
-- **Urząd**: siteoforigin: / / /.
+- **Urząd**: siteoforigin:///.
 
-- **Ścieżka**: Nazwa witryny pochodzenia pliku, w tym jego ścieżka względem lokalizacji, z której został uruchomiony zestawu pliku wykonywalnego.
+- **Ścieżka**: Nazwa witryny pliku pierwotnego, w tym jej ścieżka względem lokalizacji, z której został uruchomiony zestaw wykonywalny.
 
-W poniższym przykładzie pokazano pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] witryny pochodzenia pliku przechowywanego w lokalizacji, z którego uruchomiono zestawu pliku wykonywalnego.
+W poniższym przykładzie przedstawiono pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dla lokacji pliku pierwotnego, przechowywany w lokalizacji, z której jest uruchamiany zestaw wykonywalny.
 
 `pack://siteoforigin:,,,/SiteOfOriginFile.xaml`
 
-W poniższym przykładzie pokazano pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] witryny pochodzenia pliku przechowywanego w podfolderze, które jest powiązane z lokalizacją, z którego uruchomiono zestawu pliku wykonywalnego aplikacji.
+W poniższym przykładzie przedstawiono pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dla lokacji pliku pierwotnego, przechowywane w podfolderze odnoszący się do lokalizacji, z której jest uruchamiany zestaw wykonywalny aplikacji.
 
 `pack://siteoforigin:,,,/Subfolder/SiteOfOriginFile.xaml`
 
@@ -186,9 +186,9 @@ W poniższym przykładzie pokazano pakietowi [!INCLUDE[TLA2#tla_uri](../../../..
 
 ## <a name="page-files"></a>Pliki stronicowania
 
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki, które są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementy są kompilowane do zestawów w taki sam sposób, jak pliki zasobów. W związku z tym [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementy mogą być identyfikowane za pomocą pakietu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] plików zasobów.
+[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]pliki, które są skonfigurowane [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] jako `Page` elementy, są kompilowane do zestawów w taki sam sposób jak pliki zasobów. W związku z [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` tym elementy można zidentyfikować przy użyciu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] pakietu dla plików zasobów.
 
-Typy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki, które zwykle są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementy mają jedną z następujących jako ich elementu głównego:
+Typy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plików, które są powszechnie skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementy, mają jeden z następujących jako element główny:
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 
@@ -204,22 +204,22 @@ Typy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pli
 
 <a name="Absolute_vs_Relative_Pack_URIs"></a>
 
-## <a name="absolute-vs-relative-pack-uris"></a>Bezwzględny programu vs. Pakiet względne identyfikatory URI
+## <a name="absolute-vs-relative-pack-uris"></a>Bezwzględne a Względne identyfikatory URI pakietów
 
-Pełny pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] zawiera schemat, uprawnienia i ścieżki, i jest uznawany za pakietu bezwzględne [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]. Jako uproszczenia dla deweloperów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] elementy zazwyczaj pozwoli odpowiednich atrybutów z pakietem względną [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], która obejmuje tylko ścieżki.
+W pełni kwalifikowany pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] obejmuje schemat, Urząd i ścieżkę, a także jest traktowany jako [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]bezwzględny. Jako uproszczenie dla deweloperów, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] elementy zwykle umożliwiają ustawienie odpowiednich atrybutów z pakietem [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]względnym, który zawiera tylko ścieżkę.
 
-Na przykład rozważmy następujący pakiet bezwzględne [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla pliku zasobu w zestawie lokalnego.
+Rozważmy na przykład następujący bezwzględny [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] pakiet dla pliku zasobu w lokalnym zestawie.
 
 `pack://application:,,,/ResourceFile.xaml`
 
-Względna pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odwołujący się do tego zasobu pliku, rachunek będzie następujący.
+Pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] względny, który odwołuje się do tego pliku zasobów, będzie następujący.
 
 `/ResourceFile.xaml`
 
 > [!NOTE]
-> Ponieważ witryna pochodzenia pliki nie są skojarzone z zestawami, ich tylko można się odwoływać przy użyciu pakietu bezwzględne [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)].
+> Ze względu na to, że lokacja plików pochodzenia nie jest skojarzona z zestawami, można [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]odwoływać się tylko do bezwzględnego pakietu.
 
-Domyślnie pakiet względną [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] uznaje się względem lokalizacji pliku znaczników i kodu, który zawiera odwołanie. Jeśli używany jest wiodący ukośnik odwrotny, jednak względny pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odwołanie jest wtedy uważany za względem katalogu głównego aplikacji. Na przykład rozważmy następującą strukturę projektu.
+Domyślnie pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] względny jest traktowany względem lokalizacji znacznika lub kodu, który zawiera odwołanie. Jeśli jest używany [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] wiodący ukośnik odwrotny, jest on traktowany jako odwołanie względne do katalogu głównego aplikacji. Rozważmy na przykład następującą strukturę projektu.
 
 `App.xaml`
 
@@ -231,53 +231,53 @@ Domyślnie pakiet względną [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sh
 
 `+ Page2.xaml`
 
-Jeśli zawiera Page1.xaml [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odwołujący się *głównego*\SubFolder\Page2.xaml, odwołania można użyć następujących pakiet względną [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+Jeśli Strona1. XAML zawiera [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odwołanie do *elementu głównego*\SubFolder\Page2.XAML, można użyć następującego powiązanego pakietu. [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]
 
 `Page2.xaml`
 
-Jeśli zawiera Page1.xaml [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odwołujący się *głównego*\Page2.xaml, odwołania można użyć następujących pakiet względną [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+Jeśli Strona1. XAML zawiera [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odwołanie do *elementu głównego*\Page2.XAML, można użyć następującego powiązanego pakietu. [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]
 
 `/Page2.xaml`
 
 <a name="Pack_URI_Resolution"></a>
 
-## <a name="pack-uri-resolution"></a>Rozpoznawania identyfikatora URI pakietu
+## <a name="pack-uri-resolution"></a>Rozpoznawanie identyfikatora URI pakietu
 
-Format pakietu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] umożliwia pakiet [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] dla różnych typów plików, które wyglądają tak samo. Na przykład rozważmy następujący pakiet bezwzględne [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+Format pakietu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] umożliwia wyszukanie tego samego pakietu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] dla różnych typów plików. Rozważmy na przykład następujący bezwzględny [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]pakiet.
 
 `pack://application:,,,/ResourceOrContentFile.xaml`
 
-Ten pakiet bezwzględne [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] mogłoby się odwoływać do pliku zasobów w zestawie lokalnych lub zawartości pliku. To samo dotyczy następujących względny [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+Ten bezwzględny pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] może odwoływać się do pliku zasobów w zestawie lokalnym lub w pliku zawartości. Ta sama wartość dotyczy następujących względnych [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
 
 `/ResourceOrContentFile.xaml`
 
-Aby określić typ pliku, który pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odwołuje się do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] jest rozpoznawana jako [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] dla plików zasobów w lokalnych zestawów i plików zawartości przy użyciu następujących algorytmów heurystycznych:
+Aby określić typ pliku, do którego odwołuje się pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , program [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usuwa [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] pliki zasobów w lokalnych zestawach i plikach zawartości przy użyciu następujących algorytmów heurystycznych:
 
-1. Metadane zestawu dla sondy <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybut, który odpowiada pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+1. Sondowanie metadanych zestawu dla <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybutu, który jest zgodny z pakietem. [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]
 
-2. Jeśli <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybut zostanie znaleziony, ścieżki pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odwołuje się do zawartości pliku.
+2. Jeśli atrybut zostanie znaleziony, ścieżka do pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odnosi się do pliku zawartości. <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>
 
-3. Jeśli <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybut nie zostanie znaleziony, pliki zasobów zestawu, które są kompilowane do zestawu lokalnego sondowania.
+3. <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> Jeśli atrybut nie zostanie znaleziony, sonduje pliki zasobów zestawu, które są kompilowane do zestawu lokalnego.
 
-4. Jeśli plik zasobu, który odpowiada ścieżce pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] zostanie znaleziony, ścieżki pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odwołuje się do pliku zasobów.
+4. Jeśli zostanie znaleziony plik zasobów zgodny ze ścieżką pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , ścieżka do pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odnosi się do pliku zasobów.
 
-5. Jeśli zasób nie zostanie znaleziony, utworzone wewnętrznie <xref:System.Uri> jest nieprawidłowy.
+5. Jeśli zasób nie zostanie znaleziony, wewnętrznie utworzony <xref:System.Uri> jest nieprawidłowy.
 
-[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] rozwiązania nie dotyczy [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] odwołujące się do następujących:
+[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]rozwiązanie nie ma zastosowania w [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] odniesieniu do następujących informacji:
 
-- Zawartość plików w przywoływanych zestawów: następujące typy plików nie są obsługiwane przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+- Pliki zawartości w przywoływanych zestawach: te typy plików nie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]są obsługiwane przez program.
 
-- Osadzone pliki w przywoływanych zestawach: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] które identyfikują są unikatowe, ponieważ obejmują one nazwę przywoływanego zestawu i `;component` sufiks.
+- Osadzone pliki w przywoływanych [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] zestawach: identyfikują one są unikatowe `;component` , ponieważ obejmują zarówno nazwę przywoływanego zestawu, jak i sufiks.
 
-- Witryna pochodzenia plików: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] które identyfikują są unikatowe, ponieważ są one tylko pliki, które można zidentyfikowane przez pakiet [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] zawierających siteoforigin: / / / urzędu.
+- Lokacja plików pierwotnych [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] : określa, że są one unikatowe, ponieważ są to jedyne pliki, które mogą [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] być zidentyfikowane przez pakiet zawierający urząd siteoforigin:///.
 
-Uproszczenie jednego, który pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] rozpoznawania umożliwia, jest dla kodu w pewnym stopniu niezależnie od lokalizacji plików zasobów i zawartości. Na przykład, jeśli masz plik zasobów w zestawie lokalnego, który jest konfigurowana ponownie do pliku zawartości pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla zasobu pozostają takie same, jak kod, który używa pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+Jednym z uproszczeń [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , które może rozpoznać pakiet, jest to, aby kod był nieco niezależny od lokalizacji plików zasobów i zawartości. Jeśli na przykład plik zasobów w lokalnym zestawie, który zostanie ponownie skonfigurowany jako plik zawartości, pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla zasobu pozostaje taki sam, jak kod, który używa pakietu. [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]
 
 <a name="Programming_with_Pack_URIs"></a>
 
-## <a name="programming-with-pack-uris"></a>Programowanie za pomocą identyfikatorów URI pakietu
+## <a name="programming-with-pack-uris"></a>Programowanie przy użyciu identyfikatorów URI pakietów
 
-Wiele [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] klasy implementuje właściwości, które można skonfigurować z dodatkiem Service pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], w tym:
+Wiele [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] klas implementuje właściwości, które można ustawić za pomocą [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]pakietu, w tym:
 
 - <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>
 
@@ -291,62 +291,62 @@ Wiele [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] klas
 
 - <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>
 
-Te właściwości można ustawić zarówno z kodu znaczników i kodu. W tej sekcji przedstawiono podstawowe konstrukcje dla obu i następnie przedstawiono przykłady typowych scenariuszy.
+Te właściwości można ustawić zarówno przy użyciu znacznika, jak i kodu. W tej sekcji przedstawiono podstawowe konstrukcje obu programów, a następnie przedstawiono przykłady typowych scenariuszy.
 
 <a name="Using_Pack_URIs_in_Markup"></a>
 
-### <a name="using-pack-uris-in-markup"></a>Za pomocą identyfikatorów URI pakietu w znacznikach
+### <a name="using-pack-uris-in-markup"></a>Używanie identyfikatorów URI pakietów w znacznikach
 
-Pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] jest określona w znaczniku, ustawiając element atrybutu przy użyciu pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]. Na przykład:
+Pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] jest określony w znacznikach przez ustawienie elementu atrybutu z pakietem [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]. Przykład:
 
 `<element attribute="pack://application:,,,/File.xaml" />`
 
-Tabela 1 przedstawiono różne bezwzględna pakietu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , można określić w znacznikach.
+Tabela 1 ilustruje różne bezwzględne [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] pakiety, które można określić w znacznikach.
 
-Tabela 1: Identyfikatory URI bezwzględna pakietu, w znacznikach
+Tabela 1: Bezwzględne identyfikatory URI pakietów w znacznikach
 
-|Plik|Bezwzględna pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
+|Plik|Bezwzględny pakiet[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
-|Plik zasobów — zestawu lokalnego|`"pack://application:,,,/ResourceFile.xaml"`|
-|Plik zasobów w podfolderze — zestawu lokalnego|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|
-|Plik zasobów - przywoływanego zestawu|`"pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml"`|
-|Plik zasobów w podfolderze przywoływanego zestawu|`"pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|
-|Plik zasobów w określonej wersji zestawu odwołania|`"pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml"`|
+|Plik zasobu — zestaw lokalny|`"pack://application:,,,/ResourceFile.xaml"`|
+|Plik zasobów w podfolderze — zestaw lokalny|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|
+|Przywoływany zestaw plików zasobów|`"pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml"`|
+|Plik zasobów w podfolderze zestawu, do którego się odwołuje|`"pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|
+|Plik zasobów w przywoływanym zestawie|`"pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml"`|
 |Plik zawartości|`"pack://application:,,,/ContentFile.xaml"`|
 |Plik zawartości w podfolderze|`"pack://application:,,,/Subfolder/ContentFile.xaml"`|
-|Witryna pliku pierwotnego|`"pack://siteoforigin:,,,/SOOFile.xaml"`|
-|Witryna pochodzenia plik w podfolderze|`"pack://siteoforigin:,,,/Subfolder/SOOFile.xaml"`|
+|Lokacja pliku źródłowego|`"pack://siteoforigin:,,,/SOOFile.xaml"`|
+|Lokacja pliku źródłowego w podfolderze|`"pack://siteoforigin:,,,/Subfolder/SOOFile.xaml"`|
 
-Tabela 2 ilustruje różne pakiet względną [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , można określić w znacznikach.
+Tabela 2 ilustruje różne pakiety [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] względne, które można określić w znacznikach.
 
-Tabela 2: Pakiet względne identyfikatory URI, w znacznikach
+Tabela 2: Względne identyfikatory URI pakietu w znaczniku
 
-|Plik|Względna pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
+|Plik|Pakiet względny[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
-|Plik zasobów w zestawie lokalne|`"/ResourceFile.xaml"`|
+|Plik zasobów w lokalnym zestawie|`"/ResourceFile.xaml"`|
 |Plik zasobów w podfolderze zestawu lokalnego|`"/Subfolder/ResourceFile.xaml"`|
-|Plik zasobów w zestawie odwołania|`"/ReferencedAssembly;component/ResourceFile.xaml"`|
-|Plik zasobów w podfolderze przywoływanego zestawu|`"/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|
+|Plik zasobów w przywoływanym zestawie|`"/ReferencedAssembly;component/ResourceFile.xaml"`|
+|Plik zasobów w podfolderze zestawu, do którego się odwołuje|`"/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|
 |Plik zawartości|`"/ContentFile.xaml"`|
 |Plik zawartości w podfolderze|`"/Subfolder/ContentFile.xaml"`|
 
 <a name="Using_Pack_URIs_in_Code"></a>
 
-### <a name="using-pack-uris-in-code"></a>Za pomocą identyfikatorów URI pakietu w kodzie
+### <a name="using-pack-uris-in-code"></a>Używanie identyfikatorów URI pakietów w kodzie
 
-Określ pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] w kodzie przez utworzenie wystąpienia <xref:System.Uri> klasy i przekazywania pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] jako parametr do konstruktora. Jest to zaprezentowane w poniższym przykładzie.
+Należy określić pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] w kodzie, tworząc wystąpienie <xref:System.Uri> klasy i przekazując pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] jako parametr do konstruktora. Jest to zaprezentowane w poniższym przykładzie.
 
 ```csharp
 Uri uri = new Uri("pack://application:,,,/File.xaml");
 ```
 
-Domyślnie <xref:System.Uri> klasy uwzględnia pakiet [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , aby były absolutne. W związku z tym, zgłaszany jest wyjątek, jeśli wystąpienie <xref:System.Uri> klasa jest tworzona przy użyciu pakietu względną [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+Domyślnie <xref:System.Uri> Klasa traktuje pakiet [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] jako bezwzględny. W związku z tym wyjątek jest zgłaszany, gdy wystąpienie <xref:System.Uri> klasy jest tworzone z pakietem [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]względnym.
 
 ```csharp
 Uri uri = new Uri("/File.xaml");
 ```
 
-Na szczęście <xref:System.Uri.%23ctor%28System.String%2CSystem.UriKind%29> przeciążenia <xref:System.Uri> konstruktora klasy akceptuje parametr typu <xref:System.UriKind> pozwala określić, czy pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] jest bezwzględny lub względny.
+Na szczęście <xref:System.Uri> <xref:System.UriKind> przeciążenie konstruktora klasy akceptuje parametr typu, aby można było określić, czy pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] jest bezwzględny, czy względny. <xref:System.Uri.%23ctor%28System.String%2CSystem.UriKind%29>
 
 ```csharp
 // Absolute URI (default)
@@ -356,7 +356,7 @@ Uri relativeUri = new Uri("/File.xaml",
                         UriKind.Relative);
 ```
 
-Należy określić tylko <xref:System.UriKind.Absolute> lub <xref:System.UriKind.Relative> gdy masz pewność, że podany pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] jest jednej z nich. Jeśli nie znasz typ pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , użycia, na przykład gdy użytkownik wprowadza pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] w czasie wykonywania, użyj <xref:System.UriKind.RelativeOrAbsolute> zamiast tego.
+Należy określić tylko <xref:System.UriKind.Absolute> lub <xref:System.UriKind.Relative> wtedy, gdy masz pewność, że dostarczony pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] to jeden lub drugi. Jeśli nie znasz typu używanego pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , na przykład gdy użytkownik wprowadzi pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] w czasie wykonywania, użyj <xref:System.UriKind.RelativeOrAbsolute> zamiast tego.
 
 ```csharp
 // Relative or Absolute URI provided by user via a text box
@@ -364,72 +364,72 @@ TextBox userProvidedUriTextBox = new TextBox();
 Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 ```
 
-Tabela 3 ilustruje różne pakiet względną [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , można określić w kodzie za pomocą <xref:System.Uri?displayProperty=nameWithType>.
+Tabela 3 ilustruje różne pakiety [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] względne, które można określić w kodzie przy użyciu. <xref:System.Uri?displayProperty=nameWithType>
 
-Tabela 3: Identyfikatory URI bezwzględna pakietu, w kodzie
+Tabela 3: Bezwzględne identyfikatory URI pakietów w kodzie
 
-|Plik|Bezwzględna pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
+|Plik|Bezwzględny pakiet[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
-|Plik zasobów — zestawu lokalnego|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|
-|Plik zasobów w podfolderze — zestawu lokalnego|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
-|Plik zasobów - przywoływanego zestawu|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Absolute);`|
-|Plik zasobów w podfolderze przywoływanego zestawu|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
-|Plik zasobów w określonej wersji zestawu odwołania|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml", UriKind.Absolute);`|
+|Plik zasobu — zestaw lokalny|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|
+|Plik zasobów w podfolderze — zestaw lokalny|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
+|Przywoływany zestaw plików zasobów|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Absolute);`|
+|Plik zasobów w podfolderze zestawu, do którego się odwołuje|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
+|Plik zasobów w przywoływanym zestawie|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml", UriKind.Absolute);`|
 |Plik zawartości|`Uri uri = new Uri("pack://application:,,,/ContentFile.xaml", UriKind.Absolute);`|
 |Plik zawartości w podfolderze|`Uri uri = new Uri("pack://application:,,,/Subfolder/ContentFile.xaml", UriKind.Absolute);`|
-|Witryna pliku pierwotnego|`Uri uri = new Uri("pack://siteoforigin:,,,/SOOFile.xaml", UriKind.Absolute);`|
-|Witryna pochodzenia plik w podfolderze|`Uri uri = new Uri("pack://siteoforigin:,,,/Subfolder/SOOFile.xaml", UriKind.Absolute);`|
+|Lokacja pliku źródłowego|`Uri uri = new Uri("pack://siteoforigin:,,,/SOOFile.xaml", UriKind.Absolute);`|
+|Lokacja pliku źródłowego w podfolderze|`Uri uri = new Uri("pack://siteoforigin:,,,/Subfolder/SOOFile.xaml", UriKind.Absolute);`|
 
-Tabela 4 przedstawiono różne pakiet względną [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , można określić w kodzie za pomocą <xref:System.Uri?displayProperty=nameWithType>.
+W tabeli 4 przedstawiono różne powiązane pakiety [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , które można określić w kodzie przy <xref:System.Uri?displayProperty=nameWithType>użyciu.
 
-Tabela 4: Pakiet względne identyfikatory URI, w kodzie
+Tabela 4: Względne identyfikatory URI pakietu w kodzie
 
-|Plik|Względna pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
+|Plik|Pakiet względny[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
-|Plik zasobów — zestawu lokalnego|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|
-|Plik zasobów w podfolderze — zestawu lokalnego|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
-|Plik zasobów - przywoływanego zestawu|`Uri uri = new Uri("/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Relative);`|
-|Plik zasobów w podfolderze - przywoływanego zestawu|`Uri uri = new Uri("/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
+|Plik zasobu — zestaw lokalny|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|
+|Plik zasobów w podfolderze — zestaw lokalny|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
+|Przywoływany zestaw plików zasobów|`Uri uri = new Uri("/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Relative);`|
+|Plik zasobów w zestawie podfolderów, do którego się odwołuje|`Uri uri = new Uri("/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
 |Plik zawartości|`Uri uri = new Uri("/ContentFile.xaml", UriKind.Relative);`|
 |Plik zawartości w podfolderze|`Uri uri = new Uri("/Subfolder/ContentFile.xaml", UriKind.Relative);`|
 
 <a name="Common_Pack_URI_Scenarios"></a>
 
-### <a name="common-pack-uri-scenarios"></a>Typowe scenariusze identyfikatora URI pakietu
+### <a name="common-pack-uri-scenarios"></a>Scenariusze typowych identyfikatorów URI pakietu
 
-Poprzednich sekcji mają omówiono sposób tworzenia pakietu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] do identyfikacji zasobu, zawartość i witryna pochodzenia plików. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], te konstrukcje są używane w na różne sposoby, a w poniższych częściach omówiono kilka typowego użycia.
+W poprzednich sekcjach omówiono sposób konstruowania pakietu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] do identyfikowania zasobów, zawartości i lokalizacji plików pochodzenia. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]programie te konstrukcje są używane na różne sposoby, a poniższe sekcje obejmują kilka typowych zastosowań.
 
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>
 
-#### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>Określanie interfejsu użytkownika, aby pokazać podczas uruchamiania aplikacji
+#### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>Określanie interfejsu użytkownika do wyświetlania podczas uruchamiania aplikacji
 
-<xref:System.Windows.Application.StartupUri%2A> Określa pierwszy [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aby pokazać, kiedy [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacja zostanie uruchomiona. W przypadku aplikacji autonomicznych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] może być to okno, jak pokazano w poniższym przykładzie.
+<xref:System.Windows.Application.StartupUri%2A>Określa pierwszy [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , który ma być wyświetlany [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , gdy aplikacja jest uruchamiana. W przypadku aplikacji [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] autonomicznych może to być okno, jak pokazano w poniższym przykładzie.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
-Aplikacje autonomiczne i [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] można również określić strony jako początkowej interfejsu użytkownika, jak pokazano w poniższym przykładzie.
+Aplikacje autonomiczne [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] i mogą również określać stronę jako początkowy interfejs użytkownika, jak pokazano w poniższym przykładzie.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-Jeśli aplikacja jest aplikacją, a strona jest określony za pomocą <xref:System.Windows.Application.StartupUri%2A>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] otwiera <xref:System.Windows.Navigation.NavigationWindow> do obsługi strony. Aby uzyskać [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], strona jest wyświetlana w przeglądarce hosta.
+Jeśli aplikacja jest aplikacją autonomiczną, a strona jest określona za pomocą <xref:System.Windows.Application.StartupUri%2A>programu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , program <xref:System.Windows.Navigation.NavigationWindow> otwiera na potrzeby hostowania strony. W [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]przypadku programu strona jest wyświetlana w przeglądarce hosta.
 
 <a name="Navigating_to_a_Page"></a>
 
-#### <a name="navigating-to-a-page"></a>Przejdź do strony
+#### <a name="navigating-to-a-page"></a>Przechodzenie do strony
 
-Poniższy przykład pokazuje, jak można przejść do strony.
+Poniższy przykład pokazuje, jak przejść do strony.
 
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml1)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]
 
-Aby uzyskać więcej informacji na temat różnych sposobów nawigacji w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], zobacz [Nawigacja — omówienie](navigation-overview.md).
+Aby uzyskać więcej informacji na temat różnych sposobów nawigowania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]w programie, zobacz [Omówienie nawigacji](navigation-overview.md).
 
 <a name="Specifying_a_Window_Icon"></a>
 
-#### <a name="specifying-a-window-icon"></a>Określanie ikonę okna
+#### <a name="specifying-a-window-icon"></a>Określanie ikony okna
 
-Poniższy przykład pokazuje sposób korzystania z identyfikatora URI, aby określić ikonę okna.
+Poniższy przykład pokazuje, jak używać identyfikatora URI, aby określić ikonę okna.
 
 [!code-xaml[WindowIconSnippets#WindowIconSetXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]
 
@@ -437,9 +437,9 @@ Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Window.Icon%2A>.
 
 <a name="Loading_Image__Audio__and_Video_Files"></a>
 
-#### <a name="loading-image-audio-and-video-files"></a>Trwa ładowanie obrazu, dźwięku i wideo
+#### <a name="loading-image-audio-and-video-files"></a>Ładowanie plików obrazów, audio i wideo
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Umożliwia aplikacjom używanie różnych typów nośników, z których wszystkie zidentyfikowane i załadowany z dodatkiem Service pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], jak pokazano w poniższych przykładach.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]zezwala aplikacjom na korzystanie z różnych typów nośników, które mogą być zidentyfikowane i ładowane z pakietem [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], jak pokazano w poniższych przykładach.
 
 [!code-xaml[MediaPlayerVideoSample#VideoPackURIAtSOO](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]
 
@@ -447,17 +447,17 @@ Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Window.Icon%2A>.
 
 [!code-xaml[ImageSample#ImagePackURIContent](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageSample/CS/HomePage.xaml#imagepackuricontent)]
 
-Aby uzyskać więcej informacji na temat pracy z zawartości multimedialnej, zobacz [grafika i Multimedia](../graphics-multimedia/index.md).
+Aby uzyskać więcej informacji na temat pracy z zawartością multimedialną, zobacz [grafika i multimedia](../graphics-multimedia/index.md).
 
 <a name="Loading_a_Resource_Dictionary_from_the_Site_of_Origin"></a>
 
-#### <a name="loading-a-resource-dictionary-from-the-site-of-origin"></a>Trwa ładowanie słownika zasobów z witryny pochodzenia
+#### <a name="loading-a-resource-dictionary-from-the-site-of-origin"></a>Ładowanie słownika zasobów z lokacji źródłowej
 
-Słowniki zasobów (<xref:System.Windows.ResourceDictionary>) może służyć do obsługi motywów aplikacji. Jednym ze sposobów tworzenia i zarządzania nimi motywy jest do utworzenia wielu motywów jako słowniki zasobów, znajdujących się w witrynie aplikacji pochodzenia. Dzięki temu motywy, aby być dodawane lub aktualizowane bez konieczności ponownego kompilowania i ponownego wdrażania aplikacji. Te słowniki zasobów można zidentyfikować i załadowany przy użyciu pakietu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], która została przedstawiona w poniższym przykładzie.
+Słowniki zasobów<xref:System.Windows.ResourceDictionary>() mogą służyć do obsługi motywów aplikacji. Jednym ze sposobów tworzenia motywów i zarządzania nimi jest utworzenie wielu motywów jako słowników zasobów, które znajdują się w lokacji źródłowej aplikacji. Dzięki temu można dodawać i aktualizować motywy bez ponownego kompilowania i wdrażania aplikacji. Te słowniki zasobów można identyfikować i ładować przy [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]użyciu pakietu, który jest przedstawiony w poniższym przykładzie.
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
-Aby uzyskać przegląd motywów w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], zobacz [Tworzenie szablonów i stylów](../controls/styling-and-templating.md).
+Aby zapoznać się z omówieniem motywów w programie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], zobacz [Style i tworzenia szablonów](../controls/styling-and-templating.md).
 
 ## <a name="see-also"></a>Zobacz także
 

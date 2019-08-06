@@ -26,7 +26,7 @@ Firma Microsoft opracowuje przykłady i dokumentację, które są zgodne z wytyc
   
 ## <a name="naming-conventions"></a>Konwencje nazewnictwa  
   
-- Aby uzyskać informacje na temat określania zasad [](../../../standard/design-guidelines/naming-guidelines.md) nazewnictwa, zobacz temat Omówienie nazewnictwa.  
+- Aby uzyskać informacje na temat określania zasad [Wskazówki](../../../standard/design-guidelines/naming-guidelines.md) nazewnictwa, zobacz temat Omówienie nazewnictwa.  
   
 - Nie należy używać "my" ani "my" jako części nazwy zmiennej. To rozwiązanie tworzy pomyłkę z `My` obiektami.  
   

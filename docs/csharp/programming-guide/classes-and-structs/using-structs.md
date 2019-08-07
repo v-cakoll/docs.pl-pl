@@ -1,40 +1,40 @@
 ---
-title: Używanie struktur — C# przewodnik programowania
+title: Korzystanie z struktur — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 4d1acc758f0121e7450351c63538fd47f28ef732
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 5577a5042ba77e133e3c6ee7760f7c3a4cce0537
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398052"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796582"
 ---
 # <a name="using-structs-c-programming-guide"></a>Używanie struktur (Przewodnik programowania w języku C#)
-`struct` Typu nadaje się do reprezentowania lekkie obiekty, takie jak `Point`, `Rectangle`, i `Color`. Mimo że jest to po prostu jako wygodne reprezentuje punkt jako [klasy](../../../csharp/language-reference/keywords/class.md) z [implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), [struktury](../../../csharp/language-reference/keywords/struct.md) może być bardziej efektywne w niektórych scenariuszach. Na przykład, jeśli zadeklarować tablicę 1000 `Point` obiektów do odwoływania się do każdego obiektu; w tym przypadku przydzieli dodatkową pamięć, struktura będzie mniej kosztowne. Ponieważ programu .NET Framework zawiera obiekt o nazwie <xref:System.Drawing.Point>, struktury, w tym przykładzie ma nazwę "Coords" zamiast niego.  
+Typ jest odpowiedni do reprezentowania obiektów lekkich, takich `Point`jak `Rectangle`,, `Color`i. `struct` Chociaż nie jest to wygodne do reprezentowania punktu jako [klasy](../../../csharp/language-reference/keywords/class.md) z właściwościami, [](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)które są implementowane, [Struktura](../../../csharp/language-reference/keywords/struct.md) może być bardziej wydajna w niektórych scenariuszach. Na przykład, Jeśli deklarujesz tablicę z 1000 `Point` obiektów, przydzielasz dodatkową pamięć do odwoływania się do każdego obiektu. w tym przypadku struktura byłaby mniej kosztowna. Ponieważ .NET Framework zawiera obiekt o nazwie <xref:System.Drawing.Point>, struktura w tym przykładzie nosi nazwę "coords".  
   
  [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
   
- Jest to błąd, aby zdefiniować domyślnego (bezparametrowego) konstruktora struktury. Jest również błędu, aby zainicjować pola wystąpienia w treści struktury. Składowe struktury dostępną z zewnątrz można zainicjować tylko przy użyciu sparametryzowanego konstruktora, niejawne konstruktor bez parametrów, [inicjatora obiektu](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md), lub uzyskując dostęp do elementów członkowskich pojedynczo po struktury zadeklarowane. Wszystkie elementy członkowskie prywatne lub w inny sposób niedostępny korzystają z konstruktorów wyłącznie.
+ Wystąpił błąd podczas definiowania domyślnego konstruktora (bez parametrów) dla struktury. Jest również błędem inicjowania pola wystąpienia w treści struktury. Możliwe jest zainicjowanie zewnętrznie dostępnych elementów członkowskich struktury tylko przy użyciu konstruktora sparametryzowanego, niejawnego konstruktora bez parametrów, [inicjatora obiektów](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)lub przez uzyskanie dostępu do elementów członkowskich pojedynczo po zadeklarowaniu struktury. Wszelkie prywatne lub w inny sposób niedostępni członkowie wymagają użycia wyłącznie konstruktorów.
   
- Po utworzeniu obiektu struktury przy użyciu [nowe](../../../csharp/language-reference/operators/new-operator.md) operatora, powstaje i odpowiedniego konstruktora jest wywoływana, zgodnie z opisem w [sygnatury konstruktora firmy](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax). W przeciwieństwie do klasy, struktury mogą być utworzone bez użycia `new` operatora. W takim przypadku nie ma żadnych wywołanie konstruktora, co sprawia, że przydział jest bardziej wydajne. Jednak pola pozostaną nieprzypisane i nie można użyć obiektu, dopóki wszystkie pola są inicjowane. W tym z brakiem, aby pobrać lub ustawić wartości za pomocą właściwości.
+ Podczas tworzenia obiektu struktury przy użyciu operatora [New](../../../csharp/language-reference/operators/new-operator.md) , zostanie on utworzony, a odpowiedni Konstruktor jest wywoływany zgodnie z [podpisem konstruktora](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax). W przeciwieństwie do klas, struktury mogą być tworzone bez użycia `new` operatora. W takim przypadku nie istnieje wywołanie konstruktora, które zwiększa efektywność przydziału. Jednak pola pozostaną nieprzypisane i nie będzie można użyć obiektu, dopóki nie zostaną zainicjowane wszystkie pola. Obejmuje to brak możliwości pobrania lub ustawienia wartości za pomocą właściwości.
 
- W przypadku tworzenia wystąpienia obiektu struktury, przy użyciu domyślnego, konstruktora bez parametrów, wszystkie elementy członkowskie są przypisywane zgodnie z opisem w ich [wartości domyślne](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md).
+ W przypadku wystąpienia obiektu struktury przy użyciu domyślnego konstruktora bez parametrów wszystkie elementy członkowskie są przypisywane zgodnie z ich [wartościami domyślnymi](../../../csharp/language-reference/keywords/default-values-table.md).
   
- Podczas pisania konstruktora z parametrami struktury, należy jawnie zainicjować wszystkich elementów członkowskich; w przeciwnym razie co najmniej jednego członka pozostają nieprzypisane i struktury nie można użyć, błąd kompilatora CS0171 produkcji.  
+ Podczas pisania konstruktora z parametrami struktury należy jawnie zainicjować wszystkie elementy członkowskie; w przeciwnym razie co najmniej jeden element członkowski pozostaje nieprzypisany i nie można użyć struktury, generując błąd kompilatora CS0171.  
   
- Brak nie dziedziczenia dla struktury istnieje dla klasy. Struktura nie może dziedziczyć z innej struktury lub klasy, a nie może być podstawą klasy. Struktury, jednak dziedziczy z klasy bazowej <xref:System.Object>. Struktura może zaimplementować interfejsów, a tak, dokładnie tak jak klasy.  
+ Nie ma dziedziczenia struktur, ponieważ istnieją klasy. Struktura nie może dziedziczyć z innej struktury lub klasy i nie może być podstawą klasy. Struktury są jednak dziedziczone z klasy <xref:System.Object>bazowej. Struktura może implementować interfejsy i robi dokładnie jako klasy.  
   
- Nie można zadeklarować klasy za pomocą słowa kluczowego `struct`. W języku C# są semantycznie różne klasy i struktury. Struktura jest typem wartości, gdy klasa jest typem referencyjnym. Aby uzyskać więcej informacji, zobacz [typów wartości](../../../csharp/language-reference/keywords/value-types.md).  
+ Nie można zadeklarować klasy za pomocą słowa `struct`kluczowego. W C#, klasy i struktury są semantycznie różne. Struktura jest typem wartości, podczas gdy Klasa jest typem referencyjnym. Aby uzyskać więcej informacji, zobacz [typy wartości](../../../csharp/language-reference/keywords/value-types.md).  
   
- Chyba że potrzebujesz semantyki typ odwołania, mała klasa wydajniej zajmował się przez system, jeśli trzeba je zadeklarować jako struktury zamiast tego.  
+ O ile nie jest wymagana semantyka typu odwołania, niewielka Klasa może być bardziej wydajnie obsługiwana przez system, Jeśli zadeklarujesz ją jako strukturę.  
   
 ## <a name="example-1"></a>Przykład 1  
   
 ### <a name="description"></a>Opis  
- W tym przykładzie przedstawiono `struct` inicjalizacja za pomocą domyślnych i konstruktory sparametryzowane.  
+ Ten przykład ilustruje `struct` inicjalizację przy użyciu domyślnych i sparametryzowanych konstruktorów.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
@@ -44,7 +44,7 @@ ms.locfileid: "67398052"
 ## <a name="example-2"></a>Przykład 2  
   
 ### <a name="description"></a>Opis  
- W tym przykładzie pokazano funkcję, która jest unikatowa dla struktury. Tworzy obiekt Coords bez użycia `new` operatora. Jeżeli wymienisz wyraz `struct` wyrazami `class`, program nie zostanie skompilowany.  
+ Ten przykład ilustruje funkcję, która jest unikatowa dla struktur. Tworzy obiekt coords bez użycia `new` operatora. Jeśli wyraz `struct` zostanie zastąpiony słowem `class`, program nie zostanie skompilowany.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  

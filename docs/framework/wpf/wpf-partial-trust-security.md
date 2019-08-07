@@ -15,15 +15,15 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: b8234dcb33e9d429329c6d68900119382ff2f1cb
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 34beee309f080c53ecb16436beb0c4c6be7733e5
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629794"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796788"
 ---
 # <a name="wpf-partial-trust-security"></a>Zabezpieczenie częściowej relacji zaufania WPF
-<a name="introduction"></a>Ogólnie rzecz biorąc, aplikacje internetowe powinny być ograniczone przez bezpośredni dostęp do krytycznych zasobów systemowych, aby zapobiec złośliwym szkodom. Domyślnie [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] języki skryptów po stronie klienta nie są w stanie uzyskać dostępu do krytycznych zasobów systemowych. Ponieważ aplikacje hostowane w przeglądarce Windows Presentation Foundation (WPF) mogą być uruchamiane z przeglądarki, powinny one być zgodne z podobnym zestawem ograniczeń. Aby wymusić te [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ograniczenia, należy zastosować zabezpieczenia dostępu kodu (CAS) i ClickOnce (zobacz temat [strategie zabezpieczeń WPF-platform Security](wpf-security-strategy-platform-security.md)). Domyślnie aplikacje hostowane w przeglądarce żądają zestawu uprawnień strefy Internetu, niezależnie od tego, czy są uruchamiane z Internetu, lokalnego intranetu, czy komputera lokalnego. Aplikacje działające z dowolnym elementem mniejszym niż pełny zestaw uprawnień są uznawane za działające z częściowym zaufaniem.  
+<a name="introduction"></a>Ogólnie rzecz biorąc, aplikacje internetowe powinny być ograniczone przez bezpośredni dostęp do krytycznych zasobów systemowych, aby zapobiec złośliwym szkodom. Domyślnie języki skryptów HTML i po stronie klienta nie mogą uzyskać dostępu do krytycznych zasobów systemowych. Ponieważ aplikacje hostowane w przeglądarce Windows Presentation Foundation (WPF) mogą być uruchamiane z przeglądarki, powinny one być zgodne z podobnym zestawem ograniczeń. Aby wymusić te [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ograniczenia, należy zastosować zabezpieczenia dostępu kodu (CAS) i ClickOnce (zobacz temat [strategie zabezpieczeń WPF-platform Security](wpf-security-strategy-platform-security.md)). Domyślnie aplikacje hostowane w przeglądarce żądają zestawu uprawnień strefy Internetu, niezależnie od tego, czy są uruchamiane z Internetu, lokalnego intranetu, czy komputera lokalnego. Aplikacje działające z dowolnym elementem mniejszym niż pełny zestaw uprawnień są uznawane za działające z częściowym zaufaniem.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]zapewnia szeroką gamę pomocy technicznej, aby zapewnić, że możliwie największej funkcjonalności można bezpiecznie używać w częściowej relacji zaufania, a także w przypadku urzędów certyfikacji, zapewnia dodatkową pomoc techniczną w zakresie programowania częściowego zaufania.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "68629794"
   
  W wielu przypadkach powinno być możliwe znalezienie częściowej alternatywy zaufania.  
   
- W środowisku kontrolowanym, takim jak intranet, niestandardowe platformy zarządzane można zainstalować w ramach bazy klientów w ramach globalnej pamięci podręcznej zestawów (GAC). Te biblioteki mogą wykonywać kod, który wymaga pełnego zaufania, i mogą być przywoływane z aplikacji, które są dozwolone <xref:System.Security.AllowPartiallyTrustedCallersAttribute> tylko częściowej relacji zaufania przy użyciu (Aby uzyskać więcej informacji [, zobacz temat](security-wpf.md) Security and [WPF Security strategi-platform Security](wpf-security-strategy-platform-security.md)).  
+ W środowisku kontrolowanym, takim jak intranet, niestandardowe platformy zarządzane można zainstalować w ramach bazy klientów w ramach globalnej pamięci podręcznej zestawów (GAC). Te biblioteki mogą wykonywać kod, który wymaga pełnego zaufania, i mogą być przywoływane z aplikacji, które są dozwolone <xref:System.Security.AllowPartiallyTrustedCallersAttribute> tylko częściowej relacji zaufania przy [](security-wpf.md) użyciu (Aby uzyskać więcej informacji, zobacz temat Security and [WPF Security strategi-platform Security](wpf-security-strategy-platform-security.md)).  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>Wykrywanie hosta przeglądarki  
@@ -130,22 +130,22 @@ ms.locfileid: "68629794"
   
 |Uprawnienie|Atrybut|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
-|DNS|Dostęp do serwerów DNS|Yes|Nie|  
+|DNS|Dostęp do serwerów DNS|Tak|Nie|  
 |Zmienne środowiskowe|Odczyt|Tak|Nie|  
-|Okna dialogowe plików|Otwarcie|Tak|Yes|  
-|Okna dialogowe plików|Nieograniczone|Yes|Nie|  
+|Okna dialogowe plików|Otwarcie|Yes|Tak|  
+|Okna dialogowe plików|Nieograniczone|Tak|Nie|  
 |Izolowany magazyn|Izolacja zestawu przez użytkownika|Tak|Nie|  
-|Izolowany magazyn|Nieznana izolacja|Tak|Yes|  
+|Izolowany magazyn|Nieznana izolacja|Yes|Tak|  
 |Izolowany magazyn|Nieograniczony limit przydziału użytkowników|Tak|Nie|  
-|Multimedialny|Bezpieczne audio, wideo i obrazy|Tak|Tak|  
+|Multimedialny|Bezpieczne audio, wideo i obrazy|Tak|Yes|  
 |Drukowanie|Drukowanie domyślne|Tak|Nie|  
 |Drukowanie|Bezpieczne drukowanie|Tak|Tak|  
 |Odbicie|Wysyłać|Yes|Nie|  
-|Zabezpieczenia|Wykonywanie kodu zarządzanego|Yes|Yes|  
+|Zabezpieczenia|Wykonywanie kodu zarządzanego|Tak|Tak|  
 |Zabezpieczenia|Potwierdzenie przyznanych uprawnień|Tak|Nie|  
-|Interfejs użytkownika|Nieograniczone|Yes|Nie|  
-|Interfejs użytkownika|Bezpieczne okna najwyższego poziomu|Tak|Tak|  
-|Interfejs użytkownika|Własny schowek|Tak|Yes|  
+|Interfejs użytkownika|Nieograniczone|Tak|Nie|  
+|Interfejs użytkownika|Bezpieczne okna najwyższego poziomu|Tak|Yes|  
+|Interfejs użytkownika|Własny schowek|Yes|Tak|  
 |Przeglądarki sieci Web|Bezpieczne nawigowanie po ramce do kodu HTML|Tak|Tak|  
   
 > [!NOTE]

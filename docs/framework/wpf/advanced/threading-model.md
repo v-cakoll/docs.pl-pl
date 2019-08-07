@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 6bea25fbd321eead9137caaeb212b76a9d528e88
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: da9eaf127a4db02cddbb36e53a0d0ddb5b28b841
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710394"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818051"
 ---
 # <a name="threading-model"></a>Model wątkowości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]służy do zapisywania deweloperów przed trudnościami z wątkami. W związku z tym większość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deweloperów nie będzie musiała pisać interfejsu, który używa więcej niż jednego wątku. Ponieważ programy wielowątkowe są skomplikowane i trudne do debugowania, należy je unikać, gdy istnieją rozwiązania jednowątkowe.  
@@ -143,7 +143,7 @@ ms.locfileid: "68710394"
   
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]Eksplorator działa w ten sposób. Każde nowe okno Eksploratora należy do oryginalnego procesu, ale jest tworzone w ramach formantu niezależnego wątku.  
   
- Za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Frame> kontrolki można wyświetlić strony sieci Web. Można łatwo utworzyć prosty [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] substytut. Zaczynamy od ważnej funkcji: możliwość otwarcia nowego okna Eksploratora. Gdy użytkownik kliknie przycisk "nowe okno", zostanie uruchomiona kopia naszego okna w osobnym wątku. W ten sposób długotrwałe lub zablokowanie operacji w jednym z okien nie spowoduje zablokowania wszystkich innych okien.  
+ Za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Frame> kontrolki można wyświetlić strony sieci Web. Można łatwo utworzyć prosty substytut programu Internet Explorer. Zaczynamy od ważnej funkcji: możliwość otwarcia nowego okna Eksploratora. Gdy użytkownik kliknie przycisk "nowe okno", zostanie uruchomiona kopia naszego okna w osobnym wątku. W ten sposób długotrwałe lub zablokowanie operacji w jednym z okien nie spowoduje zablokowania wszystkich innych okien.  
   
  W rzeczywistości model przeglądarki sieci Web ma swój własny skomplikowany model wątkowości. Została wybrana, ponieważ powinna być znana większością czytelników.  
   

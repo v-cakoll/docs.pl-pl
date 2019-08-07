@@ -2,12 +2,12 @@
 title: Kontrola dostępu
 description: Dowiedz się, jak kontrolować dostęp do elementów programistycznych, takich jak typy, metody i funkcje, F# w języku programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: ed77a09cf87aabf9a4134276e89e84aa42abd3c3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 38f8f3fd4114c0428fbe8baca71594cd07740b2c
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629959"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817854"
 ---
 # <a name="access-control"></a>Kontrola dostępu
 
@@ -40,7 +40,7 @@ Kontrola dostępu podlega następującym zasadom:
 
 - Dostępność indywidualnych przypadków w Unii rozłącznych jest określana na podstawie dostępności samego związku rozłącznych. Oznacza to, że konkretny przypadek Unii nie jest mniej dostępny niż sam związek.
 
-- Ułatwienia dostępu dla poszczególnych pól typu rekordu nie mogą być określane przez dostępność samego rekordu. Oznacza to, że określona etykieta rekordu nie jest mniej dostępna od samego rekordu.
+- Dostępność dla poszczególnych pól typu rekordu jest określana na podstawie dostępności samego rekordu. Oznacza to, że określona etykieta rekordu nie jest mniej dostępna od samego rekordu.
 
 ## <a name="example"></a>Przykład
 

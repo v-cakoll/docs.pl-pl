@@ -17,8 +17,6 @@
           href: lambda-expressions.md
         - name: 'Instrukcje: użycie wyrażeń lambda w zapytaniu'
           href: how-to-use-lambda-expressions-in-a-query.md
-    - name: Wyrażenia wartości domyślnych
-      href: default-value-expressions.md
     - name: Równość i porównywanie równości
       items:
         - name: Porównywanie równości

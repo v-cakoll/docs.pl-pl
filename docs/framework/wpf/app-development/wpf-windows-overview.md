@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796773"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817953"
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
 Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundation (WPF) za pomocą systemu Windows. Głównym celem okna jest hostowanie zawartości, która wizualizuje dane i umożliwia użytkownikom współdziałanie z danymi. Aplikacje [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autonomiczne zapewniają własne okna przy <xref:System.Windows.Window> użyciu klasy. Ten temat wprowadza <xref:System.Windows.Window> przede wszystkim podstawowe informacje na temat tworzenia i zarządzania oknami w aplikacjach autonomicznych.  
   
 > [!NOTE]
->  Aplikacje hostowane [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] w przeglądarce, [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] w tym [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i luźne strony, nie zapewniają własnych okien. Zamiast tego są one hostowane w systemie Windows [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]udostępnianym przez program. Zobacz [Omówienie aplikacji przeglądarki XAML w języku WPF](wpf-xaml-browser-applications-overview.md).  
+>  Aplikacje hostowane [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] w przeglądarce, [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] w tym [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i luźne strony, nie zapewniają własnych okien. Zamiast tego są one hostowane w systemie Windows udostępnianym przez program Windows Internet Explorer. Zobacz [Omówienie aplikacji przeglądarki XAML w języku WPF](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Klasa okna  

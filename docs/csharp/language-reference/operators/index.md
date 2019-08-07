@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 13ad16ab768cdaee96cab29811e2ed058dee977a
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: bc5e2c88314c2f590aeddcfd37bd04c3a7400804
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512239"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796475"
 ---
 # <a name="c-operators-c-reference"></a>C#Operatory (C# odwołanie)
 
@@ -59,7 +59,7 @@ dostęp do elementu Array [&#91;x&#93; ](member-access-operators.md#indexer-oper
 
 [](../keywords/unchecked.md) unchecked — wyłącza sprawdzanie przepełnienia dla operacji całkowitych. Jest to domyślne zachowanie kompilatora.
 
-[Default (T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) — tworzy wartość domyślną typu T.
+[Default (T)](default.md) — tworzy wartość domyślną typu T.
 
 [nameof](nameof.md) — umożliwia uzyskanie prostej (niekwalifikowanej) nazwy zmiennej, typu lub składowej jako ciągu stałej.
 

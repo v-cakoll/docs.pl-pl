@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: eed20417b44b9af78c92871a619f2ccf857b6bba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b52ec2b1701d03bbcc11048610034a849a315e7
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864468"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817931"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Macierzysta przeglądarka WPF wsparcia API hostingu
-Hosting [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] aplikacji w przeglądarkach sieci Web jest zapewniana przez serwer aktywnego dokumentu (znany także jako obiekt DocObject) zarejestrowanych hosta WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] bezpośrednio można aktywować i integracja z aktywnego dokumentu. Do hostowania aplikacji XBAP i utracić wprowadzone dokumenty XAML w przeglądarkach Mozilla [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] udostępnia wtyczkę NPAPI, podobnie Środowisko hostingu, do [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] serwera aktywnego dokumentu jako [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] jest. Jednak praktyczne najprościej obsługi aplikacji XBAP i XAML dokumenty w innych przeglądarkach, a aplikacje autonomiczne to formant przeglądarka sieci Web programu Internet Explorer. Formant przeglądarki sieci Web zawiera złożone środowiska hostingu serwera aktywnego dokumentu, ale umożliwia ona obsługiwać dostosowywania i rozszerzania środowiska i komunikują się bezpośrednio z bieżącego obiektu aktywnego dokumentu.  
+[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Hosting aplikacji w przeglądarkach sieci Web jest ułatwiony przez aktywny serwer dokumentów (znany również jako DocObject) zarejestrowany z hosta WPF. Program Internet Explorer można bezpośrednio aktywować i zintegrować z aktywnym dokumentem. W przypadku hostowania aplikacji XBAP i luźnych dokumentów XAML w przeglądarkach przeglądarki Mozilla program [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] udostępnia wtyczkę NPAPI, która zapewnia podobne środowisko hostingu [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] na serwerze aktywnego dokumentu, jak w przypadku programu Internet Explorer. Jednak Najprostszym sposobem hostowania aplikacji XBAP i dokumentów XAML w innych przeglądarkach i aplikacjach autonomicznych jest za pośrednictwem kontrolki przeglądarki sieci Web programu Internet Explorer. Kontrolka przeglądarka sieci Web udostępnia złożone środowisko hostingu aktywnego dokumentu, ale umożliwia jego własnemu hostowi Dostosowywanie i zwiększanie tego środowiska oraz komunikowanie się bezpośrednio z bieżącym obiektem aktywnego dokumentu.  
   
- [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Serwer aktywnego dokumentu implementuje kilka typowych interfejsami hostingu, w tym [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). W przypadku hostowania w kontrolce przeglądarki sieci Web, interfejsy te mogą być zapytań z obiektu zwróconego przez [IWebBrowser2::Document](https://go.microsoft.com/fwlink/?LinkId=162048) właściwości.  
+ [](https://go.microsoft.com/fwlink/?LinkId=162045) [](https://go.microsoft.com/fwlink/?LinkId=162049) [](https://go.microsoft.com/fwlink/?LinkId=162050) [](https://go.microsoft.com/fwlink/?LinkId=162047) [](https://go.microsoft.com/fwlink/?LinkId=162051)Serwer aktywnego dokumentu implementuje kilka popularnych interfejsów hostingu, w tym IOleObject, IOleDocument, IOleInPlaceActiveObject, IPersistMoniker, IOleCommandTarget. [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Gdy jest hostowany w kontrolce przeglądarki sieci Web, te interfejsy mogą być zapytania z obiektu zwróconego przez właściwość [IWebBrowser2::D stopkę](https://go.microsoft.com/fwlink/?LinkId=162048) .  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- Implementacja serwera aktywnego dokumentu WPF [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) obsługuje wiele poleceń związanych z nawigacją i specyficznych dla przeglądarki standardowa OLE grupy poleceń (przy użyciu wartości null identyfikator GUID grupy poleceń). Ponadto rozpoznaje grupę poleceń niestandardowych o nazwie CGID_PresentationHost. Obecnie jest tylko jedno polecenie zdefiniowane w tej grupie.  
+ Implementacja programu [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) serwera aktywnego dokumentu WPF obsługuje liczne polecenia związane z nawigacją i przeglądarką dla standardowej grupy poleceń OLE (z identyfikatorem GUID grupy poleceń o wartości null). Ponadto rozpoznaje niestandardową grupę poleceń o nazwie CGID_PresentationHost. Obecnie istnieje tylko jedno polecenie zdefiniowane w tej grupie.  
   
 ```  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
@@ -29,7 +29,7 @@ enum PresentationHostCommands {
 };  
 ```  
   
- PHCMDID_TABINTO powoduje, że PresentationHost, aby przełączać fokus do pierwszego lub ostatniego elementu focusable w jego zawartości, w zależności od stanu klawisza Shift.  
+ PHCMDID_TABINTO instruuje PresentationHost, aby przełączyć fokus do pierwszego lub ostatniego elementu skoncentrowanego w zawartości, w zależności od stanu klawisza Shift.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  

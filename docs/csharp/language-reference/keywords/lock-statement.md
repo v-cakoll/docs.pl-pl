@@ -1,7 +1,7 @@
 ---
-title: Lock — instrukcja - C# odwołania
+title: Lock — instrukcja C# — odwołanie
 ms.custom: seodec18
-description: Umożliwia synchronizację dostępu wątków we współdzielonym zasobie przez instrukcję lock języka C#
+description: Używanie instrukcji C# Lock do synchronizowania dostępu do wątku z udostępnionym zasobem
 ms.date: 10/01/2018
 f1_keywords:
 - lock_CSharpKeyword
@@ -9,18 +9,18 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: c7d5d4ef7d812e186813cd08f9e4e2adf2ab1a58
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 96609264044e531bcc8671cb226a02fdc1b962b8
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306655"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796456"
 ---
-# <a name="lock-statement-c-reference"></a>Lock — instrukcja (odwołanie w C#)
+# <a name="lock-statement-c-reference"></a>Lock — instrukcjaC# (odwołanie)
 
-`lock` Instrukcji uzyskuje blokadę wykluczania wzajemnego dla danego obiektu, wykonuje blok instrukcji, a następnie zwalnia blokadę. Dopóki blokada jest utrzymywana, wątek, który posiada blokadę można ponownie pobrać i zwalnia blokadę. Inne wątku Zablokowano pobieranie blokady i czeka, aż blokada jest zwalniana.
+`lock` Instrukcja uzyskuje blokadę wykluczania wzajemnego dla danego obiektu, wykonuje blok instrukcji, a następnie zwalnia blokadę. Gdy blokada jest utrzymywana, wątek, który przechowuje blokadę, może ponownie uzyskać i zwolnić blokadę. Każdy inny wątek jest blokowany przed uzyskaniem blokady i czeka na zwolnienie blokady.
 
-`lock` Instrukcja jest formularza
+`lock` Instrukcja ma postać
 
 ```csharp
 lock (x)
@@ -29,7 +29,7 @@ lock (x)
 }
 ```
 
-gdzie `x` to wyrażenie [odwołania do typu](reference-types.md). Jest to równoważne dokładnie
+gdzie `x` jest wyrażeniem [typu odwołania](reference-types.md). Jest to dokładnie równoważne
 
 ```csharp
 object __lockObj = x;
@@ -45,34 +45,33 @@ finally
 }
 ```
 
-Ponieważ kod używa [try... finally](try-finally.md) bloku, blokada jest zwalniany, nawet wtedy, gdy wyjątek jest zgłaszany w treści `lock` instrukcji.
+Ponieważ kod używa [try... blok finally](try-finally.md) jest uwalniany nawet wtedy, gdy wyjątek jest zgłaszany w treści `lock` instrukcji.
 
-Nie można użyć [await](await.md) — słowo kluczowe w treści `lock` instrukcji.
+Nie można użyć słowa kluczowego [await](await.md) w treści `lock` instrukcji.
 
 ## <a name="remarks"></a>Uwagi
 
-Podczas synchronizowania dostępu wątków we współdzielonym zasobie blokady w wystąpieniu obiektu dedykowane (na przykład `private readonly object balanceLock = new object();`) lub innego wystąpienia, który prawdopodobnie nie ma być używany jako obiekt blokady przez niezwiązanych części kodu. Należy unikać tego samego wystąpienia obiektu blokady dla różnych zasobów udostępnionych, ponieważ może to spowodować zakleszczenia lub lock rywalizacji o zasoby. W szczególności należy unikać następujące jako obiekty blokady:
+Podczas synchronizowania dostępu do wątku z udostępnionym zasobem należy zablokować wystąpienie obiektu dedykowanego (na przykład `private readonly object balanceLock = new object();`) lub inne wystąpienie, które prawdopodobnie nie będzie używane jako obiekt blokady przez niepowiązane części kodu. Należy unikać używania tego samego wystąpienia obiektu blokady dla różnych udostępnionych zasobów, ponieważ może to spowodować zakleszczenie lub zablokowanie rywalizacji. W szczególności należy unikać używania następujących funkcji jako obiektów blokowania:
 
-- `this`, jak mogą być używane przez obiekty wywołujące jako blokadę.
-- <xref:System.Type> wystąpienia jako te, można uzyskać przez [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) operatora lub odbicia.
-- ciąg wystąpienia, w tym Literały ciągu, ponieważ te mogą być [interned](/dotnet/api/system.string.intern#remarks).
+- `this`, ponieważ mogą one być używane przez wywołujących jako blokadę.
+- <xref:System.Type>wystąpienia, ponieważ mogą być uzyskane przez operatora lub odbicie [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) .
+- wystąpienia ciągów, w tym literały ciągów, ponieważ mogą być [](/dotnet/api/system.string.intern#remarks)internice.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie zdefiniowano `Account` klasę, która synchronizuje dostęp do jego prywatny `balance` pole blokowania na dedykowany `balanceLock` wystąpienia. Przy użyciu tego samego wystąpienia dla blokowania masz pewność, że `balance` nie można zaktualizować pola jednocześnie przez dwa wątki, próba wywołania `Debit` lub `Credit` metod jednocześnie.
+W poniższym przykładzie zdefiniowano `Account` klasę, która synchronizuje dostęp do jego `balance` pola prywatnego przez zablokowanie `balanceLock` na dedykowanym wystąpieniu. Użycie tego samego wystąpienia do blokowania gwarantuje, że `balance` nie można jednocześnie aktualizować pola przez dwa wątki próbujące `Debit` wywołać metody lub `Credit` .
 
 [!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Aby uzyskać więcej informacji, zobacz sekcję [blokowanie instrukcji](~/_csharplang/spec/statements.md#the-lock-statement) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
-- [Dokumentacja języka C#](../index.md)
+- [C#odwoła](../index.md)
 - [Słowa kluczowe języka C#](index.md)
-- [Słowa kluczowe instrukcji](statement-keywords.md)
 - [Przegląd elementów podstawowych synchronizacji](../../../standard/threading/overview-of-synchronization-primitives.md)

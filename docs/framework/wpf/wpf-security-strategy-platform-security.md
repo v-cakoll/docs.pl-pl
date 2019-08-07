@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 42b1596082fe3e682a6fa806412ab5837b087bf9
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 65725851cb413e28ceff0d1c9c4b62b76c4fff18
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400708"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817883"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia zabezpieczeń WPF - zabezpieczenia platformy
-Mimo że Windows Presentation Foundation (WPF) oferuje różne usługi zabezpieczeń, wykorzystuje również funkcje zabezpieczeń podstawowej platformy, w tym system operacyjny, środowisko CLR i [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Te warstwy łączą się [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , aby zapewnić mocny, kompleksowy model zabezpieczeń, który podejmuje próbę uniknięcia wszelkich Single Point of Failure, jak pokazano na poniższej ilustracji:  
+Chociaż Windows Presentation Foundation (WPF) oferuje różne usługi zabezpieczeń, wykorzystuje również funkcje zabezpieczeń podstawowej platformy, w tym system operacyjny, środowisko CLR i program Internet Explorer. Te warstwy łączą się [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , aby zapewnić mocny, kompleksowy model zabezpieczeń, który podejmuje próbę uniknięcia wszelkich Single Point of Failure, jak pokazano na poniższej ilustracji:  
   
  ![Diagram przedstawiający model zabezpieczeń WPF.](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
@@ -75,15 +75,8 @@ Mimo że Windows Presentation Foundation (WPF) oferuje różne usługi zabezpiec
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>Ograniczony proces uprawnień dla aplikacji hostowanych w przeglądarce  
- Aplikacje hostowane [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] w przeglądarce są wykonywane w piaskownicy strefy internetowej. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Integracja z [!INCLUDE[TLA#tla_ie](../../../includes/tlasharptla-ie-md.md)] programem rozszerza tę ochronę dzięki dodatkowej obsłudze.  
+ Aplikacje hostowane [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] w przeglądarce są wykonywane w piaskownicy strefy internetowej. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Integracja z programem Microsoft Internet Explorer rozszerza tę ochronę o dodatkową pomoc techniczną.  
   
-#### <a name="internet-explorer-6-service-pack-2-and-internet-explorer-7-for-xp"></a>Internet Explorer 6 z dodatkiem Service Pack 2 i Internet Explorer 7 dla systemu XP  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]wykorzystuje zabezpieczenia systemu operacyjnego przez ograniczenie uprawnień procesu do [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] dalszej ochrony. Przed uruchomieniem aplikacji hostowanej [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] w przeglądarce system operacyjny tworzy proces hosta, który usuwa zbędne uprawnienia z tokenu procesu. Niektóre przykłady uprawnień, które zostały usunięte, obejmują możliwość zamykania komputera użytkownika, ładowania sterowników i dostępu do odczytu do wszystkich plików na komputerze.  
-  
-#### <a name="internet-explorer-7-for-vista"></a>Internet Explorer 7 dla systemu Vista  
- W programie [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)]aplikacjedziałająwtrybie chronionym.[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] W tym [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] celu należy uruchomić polecenie z integralnością średniego poziomu.  
-  
-#### <a name="defense-in-depth-layer"></a>Warstwa obrony szczegółowej  
  Ponieważ [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] zwykle są w trybie piaskownicy przez zestaw uprawnień strefy Internet, Usunięcie tych uprawnień nie jest [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] szkodliwe dla perspektywy zgodności. Zamiast tego zostanie utworzona dodatkowa warstwa zabezpieczeń. Jeśli aplikacja w trybie piaskownicy może wykorzystywać inne warstwy i przejmowanie tego procesu, proces nadal będzie miał tylko ograniczone uprawnienia.  
   
  Zobacz [Używanie konta użytkownika z najniższymi uprawnieniami](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29).  
@@ -168,7 +161,7 @@ Mimo że Windows Presentation Foundation (WPF) oferuje różne usługi zabezpiec
   
  **Potwierdzenie** zasadniczo uniemożliwia nieograniczone uprawnienia wymagane przez [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] program przed ograniczeniem uprawnień strefy Internetu aplikacji XBAP.  
   
- Z perspektywy platformy program [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] jest odpowiedzialny za używanie potwierdzeń prawidłowo; nieprawidłowe użycie **potwierdzenia** może umożliwić złośliwemu kodowi podwyższenie poziomu uprawnień. W związku z tym ważne jest, aby w razie potrzeby wywołać tylko **potwierdzenie** , i upewnić się, że ograniczenia piaskownicy pozostają nienaruszone. Na przykład kod w trybie piaskownicy nie może otwierać plików losowych, ale może korzystać z czcionek. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]umożliwia aplikacjom w trybie piaskownicy używanie funkcji czcionki przez wywoływanie metody [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Assert, a w celu odczytu plików, które są znane, zawierają te czcionki w imieniu aplikacji w trybie piaskownicy.  
+ Z perspektywy platformy program [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] jest odpowiedzialny za używanie potwierdzeń prawidłowo; nieprawidłowe użycie **potwierdzenia** może umożliwić złośliwemu kodowi podwyższenie poziomu uprawnień. W związku z tym ważne jest, aby w razie potrzeby wywołać tylko **potwierdzenie** , i upewnić się, że ograniczenia piaskownicy pozostają nienaruszone. Na przykład kod w trybie piaskownicy nie może otwierać plików losowych, ale może korzystać z czcionek. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]umożliwia aplikacjom w trybie piaskownicy używanie funkcji czcionkiprzez wywoływanie metody [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Assert, a w celu odczytu plików, które są znane, zawierają te czcionki w imieniu aplikacji w trybie piaskownicy.  
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>Wdrożenie ClickOnce  
@@ -186,9 +179,9 @@ Mimo że Windows Presentation Foundation (WPF) oferuje różne usługi zabezpiec
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Zabezpieczenia programu Microsoft Internet Explorer  
- Poza zmniejszeniem problemów z zabezpieczeniami i uproszczenie konfiguracji zabezpieczeń [!INCLUDE[TLA#tla_ie6sp2](../../../includes/tlasharptla-ie6sp2-md.md)] program zawiera kilka funkcji, które zwiększają bezpieczeństwo użytkowników programu. [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] Nacisk tych funkcji próbuje umożliwić użytkownikom większą kontrolę nad ich doświadczeniem w przeglądaniu.  
+ Poza zmniejszeniem problemów z zabezpieczeniami i uproszczeniem konfiguracji zabezpieczeń program Microsoft Internet Explorer 6 (SP2) zawiera kilka funkcji, które zwiększają bezpieczeństwo użytkowników programu [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]. Nacisk tych funkcji próbuje umożliwić użytkownikom większą kontrolę nad ich doświadczeniem w przeglądaniu.  
   
- [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]W systemach wcześniejszych niż użytkownicy mogą podlegać dowolnym z następujących czynności:  
+ Przed IE6 SP2 użytkownicy mogą podlegać dowolnym z następujących czynności:  
   
 - Losowe okna podręczne.  
   
@@ -198,13 +191,13 @@ Mimo że Windows Presentation Foundation (WPF) oferuje różne usługi zabezpiec
   
  W niektórych przypadkach niezaufane witryny sieci Web próbują nakłonić użytkowników przez sfałszowanie instalacji [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] lub wielokrotne wyświetlanie okna dialogowego instalacji Microsoft ActiveX, mimo że użytkownik mógł go anulować. Korzystając z tych technik, istnieje możliwość, że znacząca liczba użytkowników została podzielona w celu podejmowania słabych decyzji, które spowodowały zainstalowanie aplikacji szpiegujących.  
   
- [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]zawiera kilka funkcji, które ograniczają te rodzaje problemów, które koncentrują się na koncepcji inicjacji użytkownika. [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]wykrywa, kiedy użytkownik kliknął link lub element strony przed akcją, która jest znana jako *Inicjowanie użytkownika*i traktuje ją inaczej niż w przypadku wyzwolenia podobnej akcji przez skrypt na stronie. Na przykład [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] w programie znajduje się **blok wyskakujących okienek** , który wykrywa, kiedy użytkownik klika przycisk przed stroną tworzenia okna podręcznego. Dzięki [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] temu można zezwolić na większość wyskakujących okienek niewielkiej ilości, jednocześnie uniemożliwiając wyskakujące okienka, których użytkownicy nie proszą ani nie chcą. Zablokowane wyskakujące okienka są zalewkowane na nowym **pasku informacji**, co umożliwia użytkownikowi ręczne przesłonięcie bloku i wyświetlenie okienka wyskakującego.  
+ Program IE6 z dodatkiem SP2 zawiera kilka funkcji pozwalających wyeliminować te rodzaje problemów, które koncentrują się na koncepcji inicjacji użytkownika. Program IE6 SP2 wykrywa, kiedy użytkownik kliknie link lub element strony przed akcją, która jest znana jako *Inicjowanie użytkownika*i traktuje ją inaczej niż w przypadku wyzwolenia podobnej akcji przez skrypt na stronie. Przykładowo IE6 z dodatkiem SP2 obejmuje wyskakujące **okienko** wykrywające, kiedy użytkownik klika przycisk przed stroną tworzenia okna podręcznego. Dzięki temu program IE6 SP2 zezwala na większość wyskakujących okienek niewielkiej ilości, jednocześnie uniemożliwiając wyskakujące okienka, których użytkownicy nie proszą ani nie chcą. Zablokowane wyskakujące okienka są zalewkowane na nowym **pasku informacji**, co umożliwia użytkownikowi ręczne przesłonięcie bloku i wyświetlenie okienka wyskakującego.  
   
  Ta sama logika inicjowania użytkownika jest również stosowana do **otwierania**/zapisywanych wskazówek zabezpieczeń. Okna dialogowe instalacji ActiveX są zawsze zalewkowane na pasku informacji, chyba że reprezentuje uaktualnienie z wcześniej zainstalowanej kontrolki. Te miary łączą się, aby zapewnić użytkownikom bezpieczniejsze i bardziej kontrolowane środowisko użytkownika, ponieważ są one chronione przed lokacjami, które nękaniy w celu zainstalowania niechcianych lub złośliwych oprogramowania.  
   
- Te funkcje umożliwiają również ochronę klientów, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] którzy korzystają z programu w celu przeglądania witryn sieci Web, dzięki [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] którym mogą oni pobierać i instalować aplikacje. W szczególności jest to spowodowane [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] tym, że oferuje lepsze środowisko użytkownika, co pozwala użytkownikom na instalowanie złośliwych lub deviousych aplikacji niezależnie od tego, jaka technologia została użyta w celu jej skompilowania, w tym. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]dodaje do tych ochrony przy użyciu technologii ClickOnce, aby ułatwić pobieranie aplikacji przez Internet. Od [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] momentu wykonania w piaskownicy zabezpieczenia strefy internetowej można uruchomić je bezproblemowo. Z drugiej strony Aplikacje autonomiczne [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] wymagają pełnego zaufania do wykonania. W przypadku tych aplikacji Technologia ClickOnce wyświetli okno dialogowe zabezpieczenia podczas procesu uruchamiania, aby powiadomić o użyciu dodatkowych wymagań w zakresie zabezpieczeń aplikacji. Jednak to musi być inicjowane przez użytkownika, a także będzie podlegać logiki zainicjowane przez użytkownika i może być anulowane.  
+ Te funkcje umożliwiają również ochronę klientów korzystających z programu IE6 SP2 do przeglądania witryn sieci Web, dzięki którym mogą [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] oni pobierać i instalować aplikacje. W szczególności jest to spowodowane tym, że program IE6 z dodatkiem SP2 oferuje lepszy komfort pracy użytkowników, co zmniejsza prawdopodobieństwo, że użytkownicy instalują złośliwe lub Devious aplikacje niezależnie od tego [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], jaka technologia została użyta w celu jej skompilowania, w tym. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]dodaje do tych ochrony przy użyciu technologii ClickOnce, aby ułatwić pobieranie aplikacji przez Internet. Od [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] momentu wykonania w piaskownicy zabezpieczenia strefy internetowej można uruchomić je bezproblemowo. Z drugiej strony Aplikacje autonomiczne [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] wymagają pełnego zaufania do wykonania. W przypadku tych aplikacji Technologia ClickOnce wyświetli okno dialogowe zabezpieczenia podczas procesu uruchamiania, aby powiadomić o użyciu dodatkowych wymagań w zakresie zabezpieczeń aplikacji. Jednak to musi być inicjowane przez użytkownika, a także będzie podlegać logiki zainicjowane przez użytkownika i może być anulowane.  
   
- [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)]obejmuje i rozszerza możliwości [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] zabezpieczeń w ramach ciągłego zaangażowania w zabezpieczenia.  
+ Program Internet Explorer 7 obejmuje i rozszerza możliwości zabezpieczeń programu IE6 SP2 w ramach ciągłego zaangażowania w zabezpieczenia.  
   
 ## <a name="see-also"></a>Zobacz także
 

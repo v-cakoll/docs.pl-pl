@@ -5,126 +5,126 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 56dbdfd70dd335d32224d11c31a5e64abd3124af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a988baa64025dd9c188e367949c07d861413c197
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655465"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817983"
 ---
 # <a name="application-development"></a>Projektowanie aplikacji
-<a name="introduction"></a> Windows Presentation Foundation (WPF) to struktura prezentacji, która może służyć do tworzenia następujących typów aplikacji:  
+<a name="introduction"></a>Windows Presentation Foundation (WPF) to struktura prezentacji, za pomocą której można opracowywać następujące typy aplikacji:  
   
-- Aplikacje autonomiczne (tradycyjny styl [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] aplikacje tworzone w zestawach wykonywalnych, które są zainstalowane i uruchomienie z komputera klienta).  
+- Aplikacje autonomiczne (aplikacje [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] w stylu tradycyjnym skompilowane jako zestawy wykonywalne, które są instalowane i uruchamiane z komputera klienckiego).  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (aplikacje składające się z nawigacji strony, które są tworzone w zestawach wykonywalnych i hostowanych przez przeglądarki sieci Web, takich jak [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] lub Mozilla Firefox).  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](aplikacje złożone z stron nawigacyjnych, które są wbudowane jako zestawy wykonywalne i obsługiwane przez przeglądarki sieci Web, takie jak Microsoft Internet Explorer lub Mozilla Firefox).  
   
-- Biblioteki Kontrolki niestandardowe (niewykonywalnej zestawów zawierających formanty wielokrotnego użytku).  
+- Niestandardowe biblioteki formantów (zestawy niewykonywalne zawierające kontrolki wielokrotnego użytku).  
   
-- Biblioteki klas (niewykonywalnej zestawów zawierających klasy wielokrotnego użytku).  
+- Biblioteki klas (zestawy niewykonywalne, które zawierają klasy wielokrotnego użytku).  
   
 > [!NOTE]
->  Używanie typów WPF w usłudze Windows jest zdecydowanie odradzane. Jeśli spróbujesz użyć tych funkcji w usłudze Windows może nie działają zgodnie z oczekiwaniami.  
+>  Korzystanie z typów WPF w usłudze systemu Windows jest zdecydowanie odradzane. Jeśli spróbujesz użyć tych funkcji w usłudze systemu Windows, mogą one nie zadziałały zgodnie z oczekiwaniami.  
   
- Do tworzenia tego zestawu aplikacji, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementuje hosta usługi. Ten temat zawiera omówienie tych usług i gdzie można znaleźć więcej informacji.  
+ Aby skompilować ten zestaw aplikacji, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementuje hosta usług. Ten temat zawiera omówienie tych usług i miejsca, w których można znaleźć więcej informacji.  
 
 <a name="Application_Management"></a>   
 ## <a name="application-management"></a>Zarządzanie aplikacjami  
- Plik wykonywalny [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje często wymagają podstawowy zestaw funkcji, który obejmuje następujące elementy:  
+ Aplikacje [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wykonywalne często wymagają podstawowego zestawu funkcji, który obejmuje następujące elementy:  
   
-- Tworzenie i zarządzanie nimi wspólnej infrastruktury aplikacji (w tym tworzenia metody punktu wejścia i pętlę komunikatów Windows, aby otrzymać systemu i komunikaty wejściowe).  
+- Tworzenie wspólnej infrastruktury aplikacji (w tym tworzenie metody punktu wejścia i pętla komunikatów systemu Windows w celu odbierania komunikatów systemowych i wejściowych) oraz zarządzanie nimi.  
   
-- Śledzenie i interakcji z cyklu życia aplikacji.  
+- Śledzenie i posługiwanie się okresem istnienia aplikacji.  
   
-- Trwa pobieranie i przetwarzanie parametry wiersza polecenia.  
+- Pobieranie i przetwarzanie parametrów wiersza polecenia.  
   
-- Udostępnianie właściwości zakresu aplikacji i [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zasobów.  
+- Udostępnianie właściwości i [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zasobów zakresu aplikacji.  
   
 - Wykrywanie i przetwarzanie nieobsługiwanych wyjątków.  
   
 - Zwracanie kodów zakończenia.  
   
-- Zarządzanie systemem windows w aplikacje autonomiczne.  
+- Zarządzanie oknami w aplikacjach autonomicznych.  
   
-- Śledzenie nawigacji w [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]i aplikacji autonomicznych przy użyciu systemu windows nawigacji i ramki.  
+- Śledzenie nawigacji w [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]programie oraz aplikacji autonomicznych z oknami nawigacji i ramkami.  
   
- Te możliwości są implementowane przez <xref:System.Windows.Application> klasy, która dodawanie do aplikacji przy użyciu *definicji aplikacji*.  
+ Te możliwości są implementowane przez <xref:System.Windows.Application> klasę, która jest dodawana do aplikacji przy użyciu *definicji aplikacji*.  
   
- Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami — omówienie](application-management-overview.md).  
+ Aby uzyskać więcej informacji, zobacz [Omówienie zarządzania aplikacjami](application-management-overview.md).  
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>Zasoby aplikacji WPF, zawartość, pliki danych  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Rozszerzone wsparcie podstawowe programu Microsoft .NET Framework dla osadzonych zasobów dzięki obsłudze trzy rodzaje plików danych innego niż plik wykonywalny: zasób, zawartość i danych. Aby uzyskać więcej informacji, zobacz [zasoby aplikacji WPF, zawartość i pliki danych](wpf-application-resource-content-and-data-files.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]rozszerza podstawowe wsparcie w Microsoft .NET Framework dla zasobów osadzonych z obsługą trzech rodzajów niewykonywalnych plików danych: zasobu, zawartości i danych. Aby uzyskać więcej informacji, zapoznaj się z tematem [zasoby aplikacji WPF, zawartość i pliki danych](wpf-application-resource-content-and-data-files.md).  
   
- Kluczowym elementem obsługę plików danych niewykonywalnej WPF jest możliwość identyfikowania i załadować je przy użyciu unikatowej [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]. Aby uzyskać więcej informacji, zobacz [pakiet URI w WPF](pack-uris-in-wpf.md).  
+ Kluczowym elementem obsługi plików danych niewykonywalnych WPF jest możliwość identyfikowania i ładowania ich przy użyciu unikatowego [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]. Aby uzyskać więcej informacji, zobacz [identyfikatory URI pakietów w WPF](pack-uris-in-wpf.md).  
   
 <a name="Windows_and_Dialog_Boxes"></a>   
-## <a name="windows-and-dialog-boxes"></a>Windows i oknach dialogowych  
- Posługują się użytkownicy [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji autonomicznych przy użyciu systemu windows. Okno ma na celu hostowanie zawartości aplikacji i ujawniać funkcjonalność aplikacji, umożliwiający użytkownikom na interakcję z zawartością. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], systemu windows są hermetyzowane przez <xref:System.Windows.Window> klasy, który obsługuje:  
+## <a name="windows-and-dialog-boxes"></a>Okna i okna dialogowe  
+ Użytkownicy pracują [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] z autonomicznymi aplikacjami za pomocą systemu Windows. Przeznaczeniem okna jest hostowanie zawartości aplikacji i Uwidacznianie funkcjonalności aplikacji, która zwykle umożliwia użytkownikom współdziałanie z zawartością. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]systemie Windows są hermetyzowane <xref:System.Windows.Window> przez klasę, która obsługuje:  
   
-- Tworzenie i wyświetlanie systemu windows.  
+- Tworzenie i wyświetlanie okien.  
   
-- Ustanawianie relacji okno właściciela/właścicielem.  
+- Ustanawianie relacji okna właściciela/własności.  
   
-- Konfigurowanie wygląd okna (na przykład, rozmiar, lokalizację, ikony, tekst paska tytułu, obramowania).  
+- Konfigurowanie wyglądu okna (na przykład rozmiaru, lokalizacji, ikon, tekstu paska tytułu, obramowania).  
   
-- Śledzenie i interakcji z okresem istnienia okna.  
+- Śledzenie i posługiwanie się okresem istnienia okna.  
   
- Aby uzyskać więcej informacji, zobacz [Przegląd Windows WPF](wpf-windows-overview.md).  
+ Aby uzyskać więcej informacji, zobacz [WPF Windows — omówienie](wpf-windows-overview.md).  
   
- <xref:System.Windows.Window> obsługuje możliwość tworzenia specjalny rodzaj okna, znane jako okno dialogowe. Można utworzyć typy modalne i Niemodalne okna dialogowe.  
+ <xref:System.Windows.Window>obsługuje możliwość tworzenia specjalnego typu okna znanego jako okno dialogowe. Można utworzyć zarówno modalne, jak i niemodalne typy okien dialogowych.  
   
- Dla wygody i zalet możliwość ponownego wykorzystania i spójne środowisko użytkownika w aplikacjach [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] udostępnia trzy typowych okien dialogowych Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, i <xref:System.Windows.Controls.PrintDialog>.  
+ Dla wygody oraz korzyści z używania i spójnego środowiska [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] użytkownika w aplikacjach, uwidaczniają trzy okna dialogowe wspólnych okien: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, i <xref:System.Windows.Controls.PrintDialog>.  
   
- Okno komunikatu to specjalny typ okna dialogowego do wyświetlania ważnych informacji tekstowych dla użytkowników, a także dotyczące zadawania pytań tak/nie/OK/Anuluj. Możesz użyć <xref:System.Windows.MessageBox> klasa do tworzenia i wyświetlanie okien komunikatów.  
+ Okno komunikatu jest specjalnym typem okna dialogowego służącym do wyświetlania ważnych informacji tekstowych dla użytkowników, a w przypadku pytania proste tak/nie/OK/Anuluj. Użyj klasy, <xref:System.Windows.MessageBox> aby utworzyć i wyświetlić okna komunikatów.  
   
- Aby uzyskać więcej informacji, zobacz [Przegląd okien dialogowych](dialog-boxes-overview.md).  
+ Aby uzyskać więcej informacji, zobacz [okna dialogowe przegląd](dialog-boxes-overview.md).  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Nawigacja  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obsługuje nawigacji w stylu dla sieci Web za pomocą stron (<xref:System.Windows.Controls.Page>) i hiperłączy (<xref:System.Windows.Documents.Hyperlink>). Nawigacja mogą być implementowane w na różne sposoby, które obejmują następujące czynności:  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]obsługuje nawigowanie w stylu sieci Web za<xref:System.Windows.Controls.Page>pomocą stron ()<xref:System.Windows.Documents.Hyperlink>i hiperlinków (). Nawigację można zaimplementować na różne sposoby:  
   
-- Strony autonomicznych, które znajdują się w przeglądarce sieci Web.  
+- Autonomiczne strony hostowane w przeglądarce internetowej.  
   
-- Strony są kompilowane do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] jest hostowana w przeglądarce sieci Web.  
+- Strony skompilowane [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] w przeglądarce sieci Web.  
   
-- Strony kompilowane do aplikacji autonomicznej i pracujących na oknie nawigacji (<xref:System.Windows.Navigation.NavigationWindow>).  
+- Strony skompilowane w aplikacji autonomicznej i hostowane w oknie nawigacji<xref:System.Windows.Navigation.NavigationWindow>().  
   
-- Stron, które są hostowane przez ramki (<xref:System.Windows.Controls.Frame>), może być hostowana na stronie autonomicznego lub strona skompilowane w ramach jednej [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] lub aplikacją.  
+- Strony hostowane przez ramkę (<xref:System.Windows.Controls.Frame>), które mogą być hostowane na stronie autonomicznej lub na stronie skompilowanej [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] w aplikacji lub autonomicznej.  
   
- Aby ułatwić nawigację, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wykonuje następujące czynności:  
+ Aby ułatwić nawigację [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , implementuje następujące elementy:  
   
-- <xref:System.Windows.Navigation.NavigationService>, aparat nawigacji udostępnione do przetwarzania żądań nawigacji, które jest używane przez <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, i [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] do obsługi nawigacji w obrębie aplikacji.  
+- <xref:System.Windows.Navigation.NavigationService>udostępniony aparat nawigacyjny do przetwarzania żądań nawigacji, które są używane przez <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>i [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] do obsługi nawigacji wewnątrz aplikacji.  
   
-- Metody nawigacji do zainicjowania nawigacji.  
+- Metody nawigacji umożliwiające zainicjowanie nawigacji.  
   
-- Nawigacja zdarzenia do śledzenia i wchodzić w interakcje z okresem istnienia nawigacji.  
+- Zdarzenia nawigacji do śledzenia i współpracy z okresem istnienia nawigacji.  
   
-- Zapamiętywanie przy użyciu arkusza przeglądania do przodu i Wstecz, którego można się sprawdził i manipulować.  
+- Zapamiętywanie nawigacji z tyłu i do przodu przy użyciu dziennika, który można także sprawdzić i manipulować.  
   
- Aby uzyskać informacje, zobacz [Nawigacja — omówienie](navigation-overview.md).  
+ Aby uzyskać więcej informacji, zobacz [Omówienie nawigacji](navigation-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obsługuje również specjalny rodzaj nawigacji, znane jako strukturyzowana Nawigacja. Strukturyzowana Nawigacja może służyć do wywołania jednej lub więcej stron, które zwracają dane w sposób ze strukturą i przewidywalne, który jest zgodny z wywołaniem funkcji. Ta funkcja jest zależna od <xref:System.Windows.Navigation.PageFunction%601> klasy, która jest dokładniejszym opisem zawartym w [ze strukturą Przegląd Nawigacja](structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601> Służy również można uproszczenie tworzenia topologie nawigacji złożonych, które są opisane w [Przegląd topologia nawigacji](navigation-topologies-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]obsługuje również specjalny typ nawigacji znany jako Nawigacja strukturalna. Strukturalna Nawigacja może służyć do wywoływania co najmniej jednej strony, która zwraca dane w sposób strukturalny i przewidywalny, który jest zgodny z funkcjami wywołującymi. Ta funkcja zależy <xref:System.Windows.Navigation.PageFunction%601> od klasy, która jest opisana dokładniej w temacie [Omówienie nawigacji strukturalnej](structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601>służy również do uproszczenia tworzenia złożonych topologii nawigacyjnej, które są opisane w [Omówienie topologii nawigacji](navigation-topologies-overview.md).  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Hosting  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] może być hostowana w [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] lub Firefox. Każdy model hostingu ma swój własny zestaw zagadnienia i ograniczenia, które zostały omówione w [hostingu](hosting-wpf-applications.md).  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]mogą być hostowane w programie Microsoft Internet Explorer lub Firefox. Każdy model hostingu ma swój własny zestaw zagadnień i ograniczeń, które są omówione w [hostingu](hosting-wpf-applications.md).  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Wdróż i konfiguruj  
- Mimo że jest to prosty [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje można tworzyć przy użyciu kompilatorów wiersza polecenia w wierszu polecenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] integruje się z usługą [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] zapewnienie dodatkowego wsparcia, który uproszczony proces projektowania i kompilowania. Aby uzyskać więcej informacji, zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  
+ Chociaż proste [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje można kompilować z wiersza polecenia przy użyciu kompilatorów wiersza polecenia, integruje [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] się z programem [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] , aby zapewnić dodatkową pomoc techniczną, która uprości proces tworzenia i kompilowania. Aby uzyskać więcej informacji, zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  
   
- W zależności od typu aplikacji, które tworzysz istnieje co najmniej jedna opcja wdrażania do wyboru. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji WPF](deploying-a-wpf-application-wpf.md).  
+ W zależności od typu skompilowanej aplikacji istnieje co najmniej jedna opcja wdrażania do wyboru. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji WPF](deploying-a-wpf-application-wpf.md).  
   
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Zarządzanie aplikacjami — omówienie](application-management-overview.md)|Zawiera omówienie <xref:System.Windows.Application> klasy, w tym zarządzanie okresem istnienia aplikacji, systemu windows, zasobów aplikacji i nawigacji.|  
-|[Okna w programie WPF](windows-in-wpf-applications.md)|Zawiera szczegółowe informacje o zarządzanie systemem windows w Twojej aplikacji, takich jak używać <xref:System.Windows.Window> klasy i w oknach dialogowych.|  
-|[Nawigacja — omówienie](navigation-overview.md)|Omówienie zarządzania Nawigacja między stronami aplikacji.|  
-|[Hosting](hosting-wpf-applications.md)|Zawiera omówienie [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
-|[Tworzenie i wdrażanie](building-and-deploying-wpf-applications.md)|W tym artykule opisano sposób tworzenia i wdrażania aplikacji WPF.|  
-|[Wprowadzenie do platformy WPF w programie Visual Studio](../getting-started/introduction-to-wpf-in-vs.md)|W tym artykule opisano główne funkcje WPF.|  
-|[Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Przewodnik, który pokazuje, jak utworzyć WPF aplikacji za pomocą strony nawigacji, układ, formanty, obrazy, style i powiązania.|
+|[Zarządzanie aplikacjami — omówienie](application-management-overview.md)|Zawiera przegląd klasy, w <xref:System.Windows.Application> tym zarządzanie okresem istnienia aplikacji, systemem Windows, zasobami aplikacji i nawigacją.|  
+|[Okna w programie WPF](windows-in-wpf-applications.md)|Zawiera szczegółowe informacje dotyczące zarządzania oknami w aplikacji, w tym sposób używania <xref:System.Windows.Window> okien dialogowych i klas.|  
+|[Nawigacja — omówienie](navigation-overview.md)|Zawiera omówienie zarządzania nawigacją między stronami aplikacji.|  
+|[Hosting](hosting-wpf-applications.md)|Zawiera przegląd [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
+|[Tworzenie i wdrażanie](building-and-deploying-wpf-applications.md)|Opisuje sposób kompilowania i wdrażania aplikacji WPF.|  
+|[Wprowadzenie do platformy WPF w programie Visual Studio](../getting-started/introduction-to-wpf-in-vs.md)|Opisuje główne funkcje platformy WPF.|  
+|[Przewodnik: Moja pierwsza aplikacja klasyczna WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Przewodnik, który pokazuje, jak utworzyć aplikację WPF za pomocą nawigacji, układu, kontrolek, obrazów, stylów i powiązania.|

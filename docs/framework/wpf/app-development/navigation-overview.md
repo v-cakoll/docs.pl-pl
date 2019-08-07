@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: ee2f6050eeea6eec840156ed5dce9fb9b6172149
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
-ms.translationtype: HT
+ms.openlocfilehash: 145c4e33bd601fa61750df56b949bda5d43cc372
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796864"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818002"
 ---
 # <a name="navigation-overview"></a>Przegląd Nawigacja
 
@@ -38,7 +38,7 @@ Windows Presentation Foundation (WPF) obsługuje nawigację w stylu przeglądark
 <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], <xref:System.Windows.Navigation.NavigationService>, i arkusz stanowi rdzeń pomocy technicznej dla nawigacji oferowanej przez program. To omówienie zawiera szczegółowe informacje o tych funkcjach przed zaawansowaną obsługą nawigacji, która [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] obejmuje nawigację do luźnych plików, plików HTML i obiektów.
 
 > [!NOTE]
-> W tym temacie termin "Browser" dotyczy tylko przeglądarek, które mogą hostować [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje, które obecnie obejmują [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] i Firefox. W przypadku [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , gdy konkretne funkcje są obsługiwane tylko przez określoną przeglądarkę, wersja przeglądarki jest nazywana.
+> W tym temacie termin "Browser" dotyczy tylko przeglądarek, które mogą hostować [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje, które obecnie obejmują programy Microsoft Internet Explorer i Firefox. W przypadku [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , gdy konkretne funkcje są obsługiwane tylko przez określoną przeglądarkę, wersja przeglądarki jest nazywana.
 
 ## <a name="navigation-in-wpf-applications"></a>Nawigacja w aplikacjach WPF
 
@@ -180,7 +180,7 @@ Na poniższej ilustracji przedstawiono obiekt [!INCLUDE[TLA2#tla_xbap](../../../
 
 ![Strona z hiperłączem](./media/navigation-overview/xbap-with-a-page-with-a-hyperlink.png "Spowoduje to wyświetlenie aplikacji XBAP ze stroną z hiperłączem.")
 
-Zgodnie <xref:System.Windows.Documents.Hyperlink> z oczekiwaniami, kliknięcie [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] powoduje przejście <xref:System.Windows.Controls.Page> do elementu, który jest identyfikowany przez `NavigateUri` atrybut. Ponadto dodaje wpis dla poprzedniego <xref:System.Windows.Controls.Page> elementu do listy ostatnich stron w [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Jest to pokazane na poniższej ilustracji.
+Zgodnie <xref:System.Windows.Documents.Hyperlink> z oczekiwaniami, kliknięcie [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] powoduje przejście <xref:System.Windows.Controls.Page> do elementu, który jest identyfikowany przez `NavigateUri` atrybut. Ponadto dodaje wpis dla poprzedniego <xref:System.Windows.Controls.Page> elementu do listy ostatnich stron w programie Internet Explorer. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Jest to pokazane na poniższej ilustracji.
 
 ![Przyciski Wstecz i dalej](./media/navigation-overview/back-and-forward-navigation.png "Przejdź do przycisków Wstecz i do przodu.")
 
@@ -367,16 +367,16 @@ Jeśli zarejestrowano procedurę obsługi ze zdarzeniem nawigacji z <xref:System
 
 #### <a name="navigating-the-journal-from-internet-explorer"></a>Nawigowanie po dzienniku z programu Internet Explorer
 
-Koncepcyjnie dziennik działa tak samo, jak przyciski **Wstecz** i **dalej** w tym programie [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] . Są one pokazane na poniższej ilustracji.
+Koncepcyjnie dziennik działa tak samo, jak przyciski **Wstecz** i **dalej** w programie Internet Explorer. Są one pokazane na poniższej ilustracji.
 
 ![Przyciski Wstecz i dalej](./media/navigation-overview/back-and-forward-navigation.png "Przejdź do przycisków Wstecz i do przodu.")
 
-W [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] przypadku programu hostowanego [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] program[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]integruje dziennik z nawigacją. Pozwala to użytkownikom na [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] nawigowanie na stronach przy użyciu przycisków **Wstecz**, **do przodu**i **ostatnich stron** w programie [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]. Dziennik nie jest zintegrowany [!INCLUDE[TLA2#tla_ie6](../../../../includes/tla2sharptla-ie6-md.md)] w taki sam sposób, jak w przypadku programu [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] lub Internet Explorer 8. Zamiast tego [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]renderuje zastępczą nawigację. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]
+W [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] przypadku programu, który jest obsługiwany przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] program Internet Explorer, integruje dziennik [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] w nawigacji programu Internet Explorer. Dzięki temu użytkownicy mogą nawigować [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] na stronach przy użyciu przycisków **Wstecz**, **do przodu**i **ostatnich stron** w programie Internet Explorer.
 
 > [!IMPORTANT]
-> W [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]programie, gdy użytkownik nawiguje [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]do i z powrotem do, tylko wpisy dziennika dla stron, które nie były aktywne, są zachowywane w dzienniku. Aby poznać dyskusję na temat utrzymywania stron, zobacz [okres istnienia strony i dziennik](#PageLifetime) w dalszej części tego tematu.
+> W programie Internet Explorer, gdy użytkownik nawiguje do i z powrotem do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], tylko wpisy dziennika dla stron, które nie były aktywne, są przechowywane w dzienniku. Aby poznać dyskusję na temat utrzymywania stron, zobacz [okres istnienia strony i dziennik](#PageLifetime) w dalszej części tego tematu.
 
-Domyślnie tekst dla <xref:System.Windows.Controls.Page> każdego, który pojawia się na [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] liście [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] **ostatnio używanych stron** , jest dla elementu. <xref:System.Windows.Controls.Page> W wielu przypadkach nie jest to szczególnie istotne dla użytkownika. Na szczęście można zmienić tekst przy użyciu jednej z następujących opcji:
+Domyślnie tekst dla każdego z <xref:System.Windows.Controls.Page> nich pojawia się na liście **ostatnio używanych stron** programu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Internet Explorer <xref:System.Windows.Controls.Page>jest dla. W wielu przypadkach nie jest to szczególnie istotne dla użytkownika. Na szczęście można zmienić tekst przy użyciu jednej z następujących opcji:
 
 1. Dołączona `JournalEntry.Name` wartość atrybutu.
 
@@ -400,7 +400,7 @@ Poniższy przykład używa `Page.Title` atrybutu, aby zmienić tekst wyświetlan
 
 #### <a name="navigating-the-journal-using-wpf"></a>Nawigowanie po arkuszu przy użyciu WPF
 
-Mimo że użytkownik może nawigować po arkuszu przy użyciu stron z **tyłu**, **do przodu**i **ostatnich** w [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]programie, można także nawigować po dzienniku przy użyciu mechanizmów deklaratywnych i programistycznych [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]zapewnianych przez program. Jednym z powodów, aby to zrobić, jest zapewnienie [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] niestandardowej nawigacji na stronach.
+Chociaż użytkownik może nawigować po arkuszu przy użyciu stron z **tyłu**, **do przodu**i **ostatnich** w programie Internet Explorer, można także nawigować po dzienniku przy użyciu mechanizmów deklaratywnych i programistycznych zapewnianych przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]program. Jednym z powodów, aby to zrobić, jest zapewnienie [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] niestandardowej nawigacji na stronach.
 
 Obsługę nawigacji w dzienniku można deklaratywnie dodać przy użyciu poleceń nawigacyjnych uwidocznionych <xref:System.Windows.Input.NavigationCommands>przez program. Poniższy przykład ilustruje sposób użycia `BrowseBack` polecenia nawigacji.
 
@@ -547,7 +547,7 @@ Poniżej przedstawiono niektóre sposoby obsługi plików cookie w programie [!I
 
 - Obsługa plików cookie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] w programie jest taka sama dla wszystkich obsługiwanych przeglądarek.
 
-- W [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]systemie Zasady P3P, które odnoszą się do plików cookie, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]są honorowane przez, szczególnie w odniesieniu do podmiotów [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]pierwszej strony i innych firm.
+- W programie Internet Explorer Zasady P3P, które odnoszą się do plików cookie, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]są honorowane przez program, szczególnie w odniesieniu do [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]podmiotów pierwszej strony i innych firm.
 
 <a name="Structured_Navigation"></a>
 
@@ -606,7 +606,7 @@ Na poniższej ilustracji przedstawiono wynik.
 
 Okno ![dialogowe](./media/navigation-overview/navigation-window-as-dialog-box.png "Okno nawigacyjne jako okno dialogowe")
 
-Jak widać, wyświetlane są <xref:System.Windows.Navigation.NavigationWindow> [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]przyciski do **tyłu** i **do przodu** , które umożliwiają użytkownikom nawigowanie po arkuszu. Te przyciski zapewniają takie samo środowisko użytkownika, jak pokazano na poniższej ilustracji.
+Jak widać, <xref:System.Windows.Navigation.NavigationWindow> Wyświetla przyciski **Wstecz** i **do przodu** w stylu programu Internet Explorer, które umożliwiają użytkownikom nawigowanie po arkuszu. Te przyciski zapewniają takie samo środowisko użytkownika, jak pokazano na poniższej ilustracji.
 
 ![Przyciski Wstecz i dalej w NavigationWindow](./media/navigation-overview/back-and-forward-buttons-in-navigation-window.png "Przyciski Wstecz i dalej w oknie nawigacji")
 
@@ -646,7 +646,7 @@ Na poniższej ilustracji przedstawiono efekt nawigowania w obrębie <xref:System
 
 ![Ramka, która używa własnego dziennika](./media/navigation-overview/frame-uses-its-own-journal.png "Przedstawia efekt nawigowania w obrębie ramki korzystającej z własnego dziennika.")
 
-Należy zauważyć, że wpisy dziennika są wyświetlane przez nawigację [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Controls.Frame>w, a nie przez [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)].
+Należy zauważyć, że wpisy dziennika są wyświetlane przez nawigację [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Controls.Frame>w programie, a nie w programie Internet Explorer.
 
 > [!NOTE]
 > Jeśli element <xref:System.Windows.Controls.Frame> jest częścią zawartości <xref:System.Windows.Window>, która jest hostowana w <xref:System.Windows.Controls.Frame> usłudze, używa własnego dziennika i w związku z tym wyświetla własną nawigację [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].

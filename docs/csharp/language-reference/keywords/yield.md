@@ -34,7 +34,7 @@ Sekwencja zwrócona przez metodę iteratora może być używana przy użyciu ins
 
 Możesz użyć `yield break` instrukcji, aby zakończyć iterację.
 
-Aby uzyskać więcej informacji na temat iteratorów [](../../iterators.md), zobacz Iteratory.
+Aby uzyskać więcej informacji na temat iteratorów [Iteratory](../../iterators.md).
 
 ## <a name="iterator-methods-and-get-accessors"></a>Metody iteratorów i uzyskiwania dostępu
 
@@ -50,7 +50,7 @@ Nie można uwzględnić `yield return` instrukcji or `yield break` w:
 
 - [Wyrażenia lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) i [metody anonimowe](../operators/delegate-operator.md).
 
-- Metody, które zawierają bloki ze słowem kluczowym unsafe. Aby uzyskać więcej informacji, [](unsafe.md)Zobacz artykuł niebezpieczny.
+- Metody, które zawierają bloki ze słowem kluczowym unsafe. Aby uzyskać więcej informacji, [niebezpieczny](unsafe.md)
 
 ## <a name="exception-handling"></a>Obsługa wyjątków
 

@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 27f47d74a6e0775588e40760fe54c281a7f5e233
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 1e77c994062c7ac9ee009bc0e12d39e530e8af80
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363787"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868837"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Używanie delegatów (Przewodnik programowania w języku C#)
 [Delegat](../../../csharp/language-reference/keywords/delegate.md) jest typem, który bezpiecznie hermetyzuje metodę, podobną do wskaźnika funkcji w C i C++. W przeciwieństwie do wskaźników funkcji języka C, Delegaty są zorientowane obiektowo, typu bezpieczne i bezpieczne. Typ delegata jest definiowany przy użyciu nazwy delegata. Poniższy przykład deklaruje delegata o `Del` nazwie, który może hermetyzować metodę, która pobiera [ciąg](../../../csharp/language-reference/keywords/string.md) jako argument i zwraca wartość [void](../../../csharp/language-reference/keywords/void.md):  
   
  [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]  
   
- Obiekt delegata jest zwykle tworzony przez podanie nazwy metody, która zostanie zawinięty przez delegata, lub za pomocą [funkcji anonimowej](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md). Po utworzeniu wystąpienia delegata wywołanie metody przesłane do delegata zostanie przesłane przez delegata do tej metody. Parametry przesłane do delegata przez obiekt wywołujący są przesyłane do metody, a wartość zwracana, jeśli istnieje, jest zwracana do obiektu wywołującego przez delegata. Jest to nazywane wywołaniem delegata. Obiekt delegowany skonkretyzowany może być wywoływany tak, jakby była metodą opakowaną. Na przykład:  
+ Obiekt delegata jest zwykle tworzony przez podanie nazwy metody, która zostanie zawinięty przez delegata, lub za pomocą [funkcji anonimowej](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md). Po utworzeniu wystąpienia delegata wywołanie metody przesłane do delegata zostanie przesłane przez delegata do tej metody. Parametry przesłane do delegata przez obiekt wywołujący są przesyłane do metody, a wartość zwracana, jeśli istnieje, jest zwracana do obiektu wywołującego przez delegata. Jest to nazywane wywołaniem delegata. Obiekt delegowany skonkretyzowany może być wywoływany tak, jakby była metodą opakowaną. Przykład:  
   
  [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
   
@@ -45,11 +45,11 @@ ms.locfileid: "68363787"
   
  Wraz ze statycznym `DelegateMethod` pokazanym wcześniej mamy teraz trzy metody, które mogą być opakowane `Del` przez wystąpienie.  
   
- Delegat może wywołać więcej niż jedną metodę w przypadku wywołania. Nazywa się to multiemisją. Aby dodać dodatkową metodę do listy metod delegatów — Lista wywołań — wystarczy dodać dwa Delegaty przy użyciu operatora przypisania dodawania lub dodawania ("+" lub "+ ="). Przykład:  
+ Delegat może wywołać więcej niż jedną metodę w przypadku wywołania. Nazywa się to multiemisją. Aby dodać dodatkową metodę do listy metod delegatów — Lista wywołań — wystarczy dodać dwa Delegaty przy użyciu operatora przypisania dodawania lub dodawania ("+" lub "+ ="). Na przykład:  
   
  [!code-csharp[csProgGuideDelegates#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#27)]  
   
- W tym momencie `allMethodsDelegate` zawiera trzy metody na liście wywołań —`Method1`, `Method2`i `DelegateMethod`. Oryginalne trzy Delegaty, `d1`, `d2`i `d3`, pozostają bez zmian. Gdy `allMethodsDelegate` jest wywoływana, wszystkie trzy metody są wywoływane w kolejności. Jeśli delegat używa parametrów referencyjnych, odwołanie jest przesyłane sekwencyjnie do każdej z trzech metod z kolei, a wszelkie zmiany według jednej metody są widoczne dla następnej metody. Gdy którakolwiek z metod zgłasza wyjątek, który nie jest przechwytywany w ramach metody, ten wyjątek jest przesyłany do obiektu wywołującego delegata i nie są wywoływane kolejne metody z listy wywołań. Jeśli delegat ma wartość zwracaną i/lub parametry out, zwraca wartość zwracaną i parametry ostatniej wywołanej metody. Aby usunąć metodę z listy wywołań, użyj operatora przypisania zmniejszania lub zmniejszania ("-" lub "-="). Na przykład:  
+ W tym momencie `allMethodsDelegate` zawiera trzy metody na liście wywołań —`Method1`, `Method2`i `DelegateMethod`. Oryginalne trzy Delegaty, `d1`, `d2`i `d3`, pozostają bez zmian. Gdy `allMethodsDelegate` jest wywoływana, wszystkie trzy metody są wywoływane w kolejności. Jeśli delegat używa parametrów referencyjnych, odwołanie jest przesyłane sekwencyjnie do każdej z trzech metod z kolei, a wszelkie zmiany według jednej metody są widoczne dla następnej metody. Gdy którakolwiek z metod zgłasza wyjątek, który nie jest przechwytywany w ramach metody, ten wyjątek jest przesyłany do obiektu wywołującego delegata i nie są wywoływane kolejne metody z listy wywołań. Jeśli delegat ma wartość zwracaną i/lub parametry out, zwraca wartość zwracaną i parametry ostatniej wywołanej metody. Aby usunąć metodę z listy wywołań, użyj [operatorów odejmowania lub odejmowania](../../language-reference/operators/subtraction-operator.md) (`-` lub `-=`). Na przykład:  
   
  [!code-csharp[csProgGuideDelegates#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#28)]  
   

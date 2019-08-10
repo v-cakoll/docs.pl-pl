@@ -1,109 +1,109 @@
 ---
-title: Jak wybrać algorytm strukturze ML.NET
-description: Dowiedz się, jak wybrać algorytm strukturze ML.NET modelu uczenia maszynowego
+title: Jak wybrać algorytm ML.NET
+description: Dowiedz się, jak wybrać algorytm ML.NET dla modelu uczenia maszynowego
 author: natke
 ms.topic: overview
-ms.date: 04/20/1029
-ms.openlocfilehash: 89c3c612d79f02d58a16070feadb645b081dd3e3
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.date: 06/5/2019
+ms.openlocfilehash: a9f99a2213f95ce117a800507024ec7e00d0b43c
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722637"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869080"
 ---
-# <a name="how-to-choose-an-mlnet-algorithm"></a>Jak wybrać algorytm strukturze ML.NET
+# <a name="how-to-choose-an-mlnet-algorithm"></a>Jak wybrać algorytm ML.NET
 
-Dla każdego [zadań strukturze ML.NET](resources/tasks.md), istnieje wiele algorytmów szkoleń do wyboru. Co do wyboru zależy od problem próbuje rozwiązać, cechy Twoje dane i zasoby obliczeniowe i magazynowe masz dostępne. Należy pamiętać, że szkolenie modelu uczenia maszynowego jest procesem iteracyjnym. Może być konieczne wypróbować wiele algorytmów, aby znaleźć ten, który sprawdza się najlepiej.
+Dla każdego [zadania ml.NET](resources/tasks.md)istnieje wiele algorytmów szkoleniowych do wyboru. Który z nich należy wybrać, zależy od problemu, który próbujesz rozwiązać, charakterystyk danych oraz dostępnych zasobów obliczeniowych i magazynu. Należy pamiętać, że uczenie modelu uczenia maszynowego jest procesem iteracyjnym. Może być konieczne wypróbowanie wielu algorytmów w celu znalezienia tego, który działa najlepiej.
 
-Algorytmy działają na **funkcji**. Funkcje są wartości liczbowe obliczane na podstawie swoich danych wejściowych. Są one optymalne dane wejściowe dla algorytmów uczenia maszynowego. Przekształć nieprzetworzone dane wejściowe do funkcji za pomocą co najmniej jeden [przekształcenia danych](resources/transforms.md). Na przykład danych tekstowych jest przekształcana na zbiór liczba znaków i liczba kombinacji znaków. Gdy funkcje zostały wyodrębnione z typu danych raw, używanie przekształceń danych, ich są określane jako **neural**. Na przykład neural tekst lub dane obrazu neural.
+Algorytmy operująna funkcjach. Funkcje to wartości liczbowe obliczane na podstawie danych wejściowych. Są one optymalnymi danymi wejściowymi dla algorytmów uczenia maszynowego. Przekształć pierwotne dane wejściowe w funkcje przy użyciu co najmniej jednego [przekształcenia danych](resources/transforms.md). Na przykład dane tekstowe są przekształcane na zbiór liczników wyrazów i liczby kombinacji wyrazów. Po wyodrębnieniu funkcji z pierwotnego typu danych przy użyciu transformacji danych są one określane jako **featurized**. Na przykład featurized tekst lub featurized dane obrazu.
 
-## <a name="trainer--algorithm--task"></a>Trainer = algorytm + zadania
+## <a name="trainer--algorithm--task"></a>Trainer = algorytm + zadanie
 
-Algorytm jest matematycznych, który jest wykonywany w celu wygenerowania **modelu**. Różnych algorytmów, tworzyć modele o różnej charakterystyce. 
+Algorytm to zapis matematyczny wykonywany w celu utworzenia **modelu**. Różne algorytmy tworzą modele o różnej charakterystyce. 
 
-Za pomocą platformy ML.NET to ten sam algorytm można zastosować do różnych zadań. Na przykład stochastycznego podwójną Ascent skoordynowanego może służyć do klasyfikacji binarnej, kontra klasyfikacji i regresji. Różnica polega na w interpretacji danych wyjściowych algorytmu do dopasowania zadania. 
+W przypadku ML.NET tego samego algorytmu można zastosować do różnych zadań. Na przykład w przypadku klasyfikacji binarnej, klasyfikacji wieloklasowej i regresji można używać stochastycznego podwójnego wzniesienie. Różnica polega na tym, jak dane wyjściowe algorytmu są interpretowane w celu dopasowania do zadania. 
 
-Dla każdej kombinacji algorytmów lub zadania strukturze ML.NET udostępnia składnik, który wykonuje uczenie algorytmu i wykonaniu interpretacji. Te składniki są nazywane instruktorów. Na przykład <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> używa **StochasticDualCoordinatedAscent** algorytm dotyczą **regresji** zadania.
+Dla każdej kombinacji algorytmu/zadania ML.NET zapewnia składnik, który wykonuje algorytm szkolenia i wykonuje interpretację. Te składniki są nazywane instruktorami. Na przykład <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> używa algorytmu **StochasticDualCoordinatedAscent** stosowanego do zadania regresji .
 
-## <a name="linear-algorithms"></a>Algorytmy liniowego
+## <a name="linear-algorithms"></a>Algorytmy liniowe
 
-Algorytmy liniowej wygenerować model, który oblicza **wyniki** z liniowej kombinacji danych wejściowych oraz zestaw **wagi**. Wagi są parametrami modelu szacowane podczas szkolenia.
+Algorytmy liniowe tworzą model, który oblicza **wyniki** z liniowej kombinacji danych wejściowych i zestawu **wag**. Wagi są parametry modelu szacowane podczas szkolenia.
 
-Algorytmy liniowej zadziałać dla funkcji, które są [liniowo osobnych](https://en.wikipedia.org/wiki/Linear_separability).
+Algorytmy liniowe działają dobrze w przypadku [](https://en.wikipedia.org/wiki/Linear_separability)funkcji, które są rozdzielone liniowo.
 
-Przed szkolenia przy użyciu liniowego algorytmu, powinny być znormalizowane funkcji. Zapobiega to jedna z funkcji mających więcej wpływu na wynik niż inne.
+Przed rozpoczęciem szkolenia przy użyciu algorytmu liniowego należy znormalizować funkcje. Zapobiega to, że jedna funkcja ma większy wpływ na wynik niż inne.
 
-Ogólnie rzecz biorąc są algorytmy liniowego, skalowalne i, szybka i tania to w opracowywaniu tania do prognozowania. Skalowanie ich przez wiele funkcji i około rozmiar szkoleniowy zestaw danych.
+Ogólnie skalowalne algorytmy liniowe są skalowane i szybkie, Tanie do uczenia się. Są one skalowane przez liczbę funkcji i przybliżone według rozmiaru zestawu danych szkoleniowych.
 
-Liniowy algorytmy wykonania wielu przebiegów w ciągu danych szkoleniowych. Jeśli zestaw danych mieści się w pamięci, następnie dodając [punktu kontrolnego w pamięci podręcznej](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint*) do potokiem strukturze ML.NET przed dołączeniem trainer uczyni szkolenia wykonywania szybciej.
+Algorytmy liniowe czynią wiele przebiegów przez dane szkoleniowe. Jeśli zestaw danych mieści się w pamięci, a następnie dodasz [punkt kontrolny pamięci](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint*) podręcznej do potoku ml.NET przed dołączeniem Trainer, nastąpi szybsze działanie szkolenia.
 
-**Instruktorzy liniowego**
+**Instruktorzy liniowi**
 
-|Algorytm|Właściwości|Instruktorzy|
+|Algorytm|Właściwości|Instruktorów|
 |---------|----------|--------|
-|uśrednionej perceptron|Najlepsze dla klasyfikacji tekstu|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
-|Stochastycznego podwójną ascent skoordynowanego|Dostrajanie nie jest wymagana dla wydajności dobre domyślne|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
-|L-BFGS|Opcja używana podczas wiele funkcji jest duży. Tworzy regresji logistycznej szkolenia statystyki, ale nie skaluje oraz AveragedPerceptronTrainer|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
-|Symboliczne stochastycznego spadku gradientu|To najszybszy i najbardziej dokładna liniowej klasyfikacji binarnej instruktora. Skaluje się również przy użyciu liczba procesorów|<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>|
+|Średnia Perceptron|Najlepsza dla klasyfikacji tekstu|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
+|Stochastycznego Dual coordinateal|Dostrajanie nie jest wymagane dla dobrej wydajności domyślnej|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
+|L-BFGS|Użyj, gdy liczba funkcji jest duża. Tworzy statystykę szkoleniową z zakresu regresji logistycznej, ale nie skaluje się, a także AveragedPerceptronTrainer|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
+|Stochastycznego symboliczny gradient|Najszybsze i najbardziej precyzyjne Trainer klasyfikacji liniowej. Skaluj z liczbą procesorów|<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>|
 
 ## <a name="decision-tree-algorithms"></a>Algorytmy drzewa decyzyjnego
 
-Algorytmy drzewa decyzyjnego utworzyć model, który zawiera szereg decyzji: skutecznie Wykres przepływu za pomocą wartości danych.
+Algorytmy drzewa decyzyjne tworzą model zawierający serię decyzji: efektywnie wykres przepływu za pomocą wartości danych.
 
-Funkcje nie są liniowo wyodrębniona tego typu algorytmu. I funkcje nie powinny być znormalizowane, ponieważ poszczególne wartości w wektorze funkcji są używane niezależnie w podejmowaniu decyzji.
+Funkcje te nie muszą być liniowie oddzielone, aby można było używać tego typu algorytmu. Funkcje i nie muszą być znormalizowane, ponieważ poszczególne wartości w wektorze funkcji są używane niezależnie w procesie decyzyjnym.
 
-Algorytmy drzewa decyzyjnego są zazwyczaj bardzo dokładne.
+Algorytmy drzewa decyzyjnego są generalnie bardzo dokładne.
 
-Z wyjątkiem uogólniony dodatku modeli (GAMs) modele drzewa można braku explainability, gdy dużej liczby funkcji.
+Z wyjątkiem ogólnych modeli addytywne (GAMs), modele drzewa mogą nie mieć możliwości wyjaśnienia, gdy liczba funkcji jest duża.
 
-Algorytmy drzewa decyzyjnego zająć więcej zasobów, a nie skalowania także liniowej zrobić. Ich wykonywanie w zestawach danych, które można umieścić w pamięci.
+Algorytmy drzewa decyzyjne pobierają więcej zasobów i nie są skalowane, a także liniowe. Działają one wydajnie w zestawach danych, które mogą być dopasowane do pamięci.
 
-Drzewa decyzyjnego są zespole małych drzewa, gdzie każdy drzewa ocenia dane wejściowe i przekazuje wynik do drzewa dalej do tworzenia lepszych wyników i tak dalej, gdzie każdy drzewa w zespole usprawnieniem poprzedniego.
+Podwyższenie drzewa decyzyjne to zbiór małych drzew, w których każde drzewo ocenia dane wejściowe i przekazuje wynik do następnego drzewa, aby utworzyć lepszy wynik i tak dalej, gdzie poszczególne drzewa w ramach elementu szeregowego usprawniają poprzednią.
 
 **Instruktorzy drzewa decyzyjnego**
 
-|Algorytm|Właściwości|Instruktorzy|
+|Algorytm|Właściwości|Instruktorów|
 |---------|----------|--------|
-|Jasny maszyny wzmocnione gradientu|Najszybszym i najbardziej dokładna instruktorów drzewa klasyfikacji binarnej. Wysoce możliwą do dostosowania|<xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>|
-|Szybkie drzewa|Na użytek neural danych obrazu. Odporne na niezrównoważone danych. Wysoce możliwą do dostosowania | <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>|
-|Szybkie lasu|Skutecznie współdziała z hałas danych|<xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer><xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>|
-|Model dodatku uogólnionego (GAM)|Najlepsze dla problemów, które wykonują dobrze z algorytmy drzewa, ale których explainability ma najwyższy priorytet|<xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer><xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>|
+|Komputer z zwiększona gradientem świetlnym|Najszybsze i najdokładniejsze instruktorów drzewa klasyfikacji binarnej. Wysoce możliwość dostosowania|<xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>|
+|Szybkie drzewo|Używane dla danych obrazu featurized. Odporne na dane niezrównoważone. Wysoce możliwość dostosowania | <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>|
+|Szybki Las|Dobrze sprawdza się w przypadku danych o zakłóceniach|<xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer><xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>|
+|Model ogólnego zastosowania (mapie GAM)|Najlepsze w przypadku problemów, które dobrze sprawdzają się przy użyciu algorytmów drzewa, ale gdzie wyjaśnienie jest priorytetem|<xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer><xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>|
 
 ## <a name="matrix-factorization"></a>Factorization macierzy
 
-|Właściwości|Instruktorzy|
+|Właściwości|Instruktorów|
 |----------|--------|
-|Najlepsze dla rozrzedzone dane podzielone na kategorie z dużymi zestawami danych|<xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>|
+|Najlepsze dla rozrzedzonych danych kategorii z dużymi zbiorami|<xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>|
 
 ## <a name="meta-algorithms"></a>Algorytmy meta
 
-Te Instruktorzy utworzyć trainer wieloklasowej z trainer binarnego. Za pomocą <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>, <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>, <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>, <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>, <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>, <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>, <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>.
+Ci instruktorzy tworzą wieloklasowe Trainer z Trainer binarnych. Użyj z <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer> <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> ,,<xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>, ,,<xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>, .<xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer> <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
 
-|Algorytm|Właściwości|Instruktorzy|
+|Algorytm|Właściwości|Instruktorów|
 |---------|----------|--------|
-|Jeden, a wszystkie|Ta wieloklasowej klasyfikatora przygotowuje jeden klasyfikator binarny dla każdej klasy, która odróżnia tę klasę od innych klas. Jest ograniczona w skalowaniu liczby klas do kategoryzowania|[OneVersusAllTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
-|Parowania sprzężenia|Ta wieloklasowej klasyfikatora przygotowuje to algorytm klasyfikacji binarnej na każdej pary klasy. Jest ograniczona w skalowaniu liczby klas, ponieważ każda kombinacja dwóch klas muszą być uczony.|[PairwiseCouplingTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
+|Jeden a wszystko|Ten klasyfikator wieloklasowy pociąga za sobą jeden klasyfikator binarny dla każdej klasy, co odróżnia tę klasę od wszystkich innych klas. Jest ograniczone w skali przez liczbę klas do kategoryzacji|[OneVersusAllTrainer\<BinaryClassificationTrainer >](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
+|Sprzęganie parowania|Ten klasyfikator wieloklasowy pociąga za sobą binarny algorytm klasyfikacji dla każdej pary klas. Jest ograniczone w skali przez liczbę klas, ponieważ każda kombinacja dwóch klas musi być przeszkolone.|[PairwiseCouplingTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
-## <a name="k-means"></a>K-Means
+## <a name="k-means"></a>K — oznacza
 
-|Właściwości|Instruktorzy|
+|Właściwości|Instruktorów|
 |----------|--------|
-|Użyj dla klastra|<xref:Microsoft.ML.Trainers.KMeansTrainer>|
+|Użyj do klastrowania|<xref:Microsoft.ML.Trainers.KMeansTrainer>|
 
-## <a name="principal-component-analysis"></a>Analiza głównych składników
+## <a name="principal-component-analysis"></a>Analiza składników głównych
 
-|Właściwości|Instruktorzy|
+|Właściwości|Instruktorów|
 |----------|--------|
-|Używany do wykrywania anomalii|<xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>|
+|Użyj na potrzeby wykrywania anomalii|<xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>|
 
-## <a name="naive-bayes"></a>Bayesa firmy
+## <a name="naive-bayes"></a>Algorytm Bayesa Bayesa
 
-|Właściwości|Instruktorzy|
+|Właściwości|Instruktorów|
 |----------|--------|
-|Funkcje są niezależne, gdy zestaw danych szkoleniowych jest mały, należy użyć tego trainer klasyfikacji wieloklasowej.|<xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>|
+|Użyj tej Trainer klasyfikacji wieloklasowej, gdy funkcje są niezależne, a zestaw danych szkoleniowych jest mały.|<xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>|
 
-## <a name="prior-trainer"></a>Wcześniejsze instruktora
+## <a name="prior-trainer"></a>Poprzedni Trainer
 
-|Właściwości|Instruktorzy|
+|Właściwości|Instruktorów|
 |----------|--------|
-|Użyj tego trainer klasyfikacji binarnej do linii bazowej wydajności innych instruktorów. Zaczęła obowiązywać, metryki innych Instruktorzy powinna być lepsze niż wcześniejsze instruktora. |<xref:Microsoft.ML.Trainers.PriorTrainer>|
+|Użyj tej klasyfikacji binarnej Trainer, aby obsłużyć wydajność innych instruktorów. Aby zapewnić skuteczność, metryki innych instruktorów powinny być lepsze niż wcześniejsze Trainer. |<xref:Microsoft.ML.Trainers.PriorTrainer>|

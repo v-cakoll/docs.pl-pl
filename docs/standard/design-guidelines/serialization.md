@@ -1,26 +1,26 @@
 ---
-title: Serialization1
+title: Serializacja
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
 author: KrzysztofCwalina
-ms.openlocfilehash: f0ef8ab378fb3898f2d2e134f0b38668f6794ef3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0259bf82e74cbca7df8da246ca2e6ba7ef4542b3
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650157"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868522"
 ---
 # <a name="serialization"></a>Serializacja
-Serializacja jest proces konwersji obiektu do formatu, który można łatwo utrwalona lub transportowana. Na przykład możesz wykonać serializację obiektu, transport go w Internecie przy użyciu protokołu HTTP i deserializować go na komputerze docelowym.  
+Serializacja jest procesem konwersji obiektu do formatu, który może być łatwo utrwalany lub transportowany. Na przykład można serializować obiekt, transportować go za pośrednictwem Internetu przy użyciu protokołu HTTP i deserializacji go na maszynie docelowej.  
   
- .NET Framework oferuje trzy technologii serializacji głównym, zoptymalizowane pod kątem różnych scenariuszy serializacji. W poniższej tabeli przedstawiono te technologie i typy struktury związane z tych technologii.  
+ .NET Framework oferuje trzy podstawowe technologie serializacji zoptymalizowane pod kątem różnych scenariuszy serializacji. W poniższej tabeli przedstawiono te technologie i typy struktury związane z tych technologii.  
   
-|**Nazwa technologii**|**Główne typy**|**Scenariusze**|  
+|**Nazwa technologii**|**Typy główne**|**Sytuacji**|  
 |-------------------------|--------------------|-------------------|  
-|**Serializacja kontrakt danych**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|Trwałość ogólne<br />Usługi sieci Web<br />JSON|  
-|**Serializacji XML**|<xref:System.Xml.Serialization.XmlSerializer>|Format XML z pełną kontrolę nad kształt XML|  
-|**Środowisko wykonawcze serializacji (binarnych i protokołu SOAP)**|<xref:System.SerializableAttribute> <br /> <xref:System.Runtime.Serialization.ISerializable> <br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|Wywołaniem funkcji zdalnych .NET|  
+|**Serializacja kontraktu danych**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|Trwałość ogólne<br />Usługi sieci Web<br />JSON|  
+|**Serializacja XML**|<xref:System.Xml.Serialization.XmlSerializer>|Format XML z pełną kontrolą nad kształtem XML|  
+|**Serializacja czasu wykonywania (binarny i SOAP)**|<xref:System.SerializableAttribute> <br /> <xref:System.Runtime.Serialization.ISerializable> <br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|Wywołaniem funkcji zdalnych .NET|  
   
  **✓ DO** Pomyśl o serializacji podczas projektowania nowych typów.  
   
@@ -29,26 +29,26 @@ Serializacja jest proces konwersji obiektu do formatu, który można łatwo utrw
   
  **✓ CONSIDER** obsługę serializacji XML zamiast lub oprócz serializacji kontraktu danych, jeśli potrzebujesz większej kontroli nad formacie XML, który jest generowany, gdy typ jest serializowany.  
   
- Może to być konieczne w niektórych interoperacyjności konstruowania scenariuszy, w którym należy użyć pliku XML, który nie jest obsługiwany przez danych serializacji umowy, na przykład do tworzenia atrybutów XML.  
+ Może to być konieczne w niektórych scenariuszach współdziałania, w których należy użyć konstrukcji XML, która nie jest obsługiwana przez serializacji kontraktu danych, na przykład w celu utworzenia atrybutów XML.  
   
  **✓ CONSIDER** obsługę serializacji środowiska uruchomieniowego, jeśli konieczne są przesyłane między granicami .NET Remoting wystąpień tego typu.  
   
- **X AVOID** Obsługa środowiska uruchomieniowego serializacji lub serializacji XML tylko ze względów ogólne trwałości. Zamiast tego wolisz serializacji kontrakt danych.  
+ **X AVOID** Obsługa środowiska uruchomieniowego serializacji lub serializacji XML tylko ze względów ogólne trwałości. Zamiast tego Preferuj metodę serializacji kontraktu danych.  
   
 ## <a name="supporting-data-contract-serialization"></a>Pomocniczych serializacji kontrakt danych  
- Typy może obsługiwać serializacji kontrakt danych przez zastosowanie <xref:System.Runtime.Serialization.DataContractAttribute> do typu i <xref:System.Runtime.Serialization.DataMemberAttribute> do elementów członkowskich (pola i właściwości) tego typu.  
+ Typy mogą obsługiwać serializacji kontraktu danych przez zastosowanie <xref:System.Runtime.Serialization.DataContractAttribute> do typu <xref:System.Runtime.Serialization.DataMemberAttribute> i do elementów członkowskich (pól i właściwości) typu.  
   
  **✓ CONSIDER** oznaczenie elementy członkowskie danych z typu publiczne, jeśli typ może być używany w częściowej relacji zaufania.  
   
- W pełnej relacji zaufania serializatory umowy danych mogą serializacji i deserializacji niepublicznych typy i elementy członkowskie, ale tylko publiczne składowe mogą być serializacji i deserializacji w częściowej relacji zaufania.  
+ W przypadku pełnego zaufania serializatory kontraktu danych mogą serializować i deserializować typy niepubliczne i składowe, ale tylko publiczne składowe mogą być serializowane i deserializowane w częściowej relacji zaufania.  
   
- **✓ DO** implementuje metody pobierającej i ustawiającej dla wszystkich właściwości, które mają <xref:System.Runtime.Serialization.DataMemberAttribute>. Serializatory umowy danych wymagają zarówno getter i setter dla typu, który ma być brany pod uwagę serializacji. (W .NET Framework 3.5 z dodatkiem SP1, niektóre właściwości kolekcji można tylko do get.) Jeśli typ nie można używać w częściowej relacji zaufania, co najmniej jeden z metody dostępu właściwości można niepublicznych.  
+ **✓ DO** implementuje metody pobierającej i ustawiającej dla wszystkich właściwości, które mają <xref:System.Runtime.Serialization.DataMemberAttribute>. Serializatory kontraktu danych wymagają zarówno metody pobierającej, jak i metody ustawiającej dla typu, który ma być uznawany za możliwy do serializacji. (W .NET Framework 3,5 z dodatkiem SP1 niektóre właściwości kolekcji mogą być tylko do odczytu.) Jeśli typ nie można używać w częściowej relacji zaufania, co najmniej jeden z metody dostępu właściwości można niepublicznych.  
   
  **✓ CONSIDER** przy użyciu wywołania zwrotne serializacji dla inicjowania wystąpienia zdeserializowany.  
   
- Konstruktorów nie są wywoływane, gdy obiekty są deserializacji. (Istnieją wyjątki od reguły. Konstruktory kolekcje oznaczone <xref:System.Runtime.Serialization.CollectionDataContractAttribute> są wywoływane podczas deserializacji.) W związku z tym wszelka logika, która wykonuje podczas konstruowania normalnych musi zostać wdrożone jako jeden wywołania zwrotne serializacji.  
+ Konstruktorów nie są wywoływane, gdy obiekty są deserializacji. (Istnieją wyjątki od reguły. Konstruktory kolekcji z <xref:System.Runtime.Serialization.CollectionDataContractAttribute> oznaczeniem są wywoływane podczas deserializacji.) W związku z tym każda logika, która jest wykonywana podczas normalnej konstrukcji, musi być zaimplementowana jako jedno z wywołań zwrotnych serializacji.  
   
- `OnDeserializedAttribute` jest atrybutem najczęściej używane wywołania zwrotnego. Inne atrybuty z rodziny są <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>, i <xref:System.Runtime.Serialization.OnSerializedAttribute>. One służy do oznaczania wywołania zwrotne, które są wykonywane przed deserializacji, przed serializacji, a na końcu po serializacji, odpowiednio.  
+ `OnDeserializedAttribute`jest najczęściej używanym atrybutem wywołania zwrotnego. Inne atrybuty z rodziny są <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>, i <xref:System.Runtime.Serialization.OnSerializedAttribute>. One służy do oznaczania wywołania zwrotne, które są wykonywane przed deserializacji, przed serializacji, a na końcu po serializacji, odpowiednio.  
   
  **✓ CONSIDER** przy użyciu <xref:System.Runtime.Serialization.KnownTypeAttribute> wskazująca konkretne typy, które mają być używane podczas deserializacji wykresu obiektu złożonego.  
   
@@ -56,31 +56,31 @@ Serializacja jest proces konwersji obiektu do formatu, który można łatwo utrw
   
  Należy pamiętać, który serializowany strumieni przyszłych wersjach tego typu mogą zostać przeprowadzona deserializacja bieżącą wersję tego typu i na odwrót.  
   
- Upewnij się, że rozumiesz, że danych elementów członkowskich, nawet prywatne i wewnętrzne, nie można zmienić ich nazwy, typy lub nawet ich kolejność w przyszłych wersjach tego typu, chyba że specjalne jest uwagę, aby zachować zamówienia przy użyciu jawne parametry, atrybuty kontraktu danych .  
+ Upewnij się, że rozumiesz, że członkowie danych, nawet prywatna i wewnętrzna, nie mogą zmienić swoich nazw, typów lub nawet ich kolejności w przyszłych wersjach typu, chyba że szczególna szczególna potrzeba zachowywać się w celu zachowania kontraktu przy użyciu jawnych parametrów do atrybutów kontraktu danych. .  
   
- Testowanie zgodności serializacji podczas wprowadzania zmian do typów możliwych do serializacji. Spróbuj wykonać deserializacji nowej wersji w starszej wersji i na odwrót.  
+ Przetestuj zgodność serializacji podczas wprowadzania zmian w możliwych do serializacji typach. Spróbuj wykonać deserializacji nowej wersji w starszej wersji i na odwrót.  
   
  **✓ CONSIDER** implementacja <xref:System.Runtime.Serialization.IExtensibleDataObject> umożliwiają dwustronną komunikację między różnymi wersjami tego typu.  
   
- Interfejs umożliwia serializator upewnić się, że nie są żadne dane utracone podczas Pełna zgodnooć wersji. <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A?displayProperty=nameWithType> Właściwość jest używana do przechowywania wszelkich danych z przyszłej wersji typu, który jest nieznany do bieżącej wersji, a więc go nie można zapisać ją w składowych danych. Jeśli bieżąca wersja jest następnie serializacji i deserializacji w przyszłej wersji, dodatkowe dane są dostępne w strumieniu Zserializowany.  
+ Interfejs umożliwia serializator upewnić się, że nie są żadne dane utracone podczas Pełna zgodnooć wersji. <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A?displayProperty=nameWithType> Właściwość służy do przechowywania wszelkich danych z przyszłej wersji typu, która jest nieznana w bieżącej wersji i dlatego nie może być przechowywana w jego elementach członkowskich danych. Gdy bieżąca wersja jest następnie serializowana i deserializowana w przyszłej wersji, dodatkowe dane będą dostępne w strumieniu serializowanym.  
   
 ## <a name="supporting-xml-serialization"></a>Obsługa serializacji XML  
- Serializacja kontrakt danych jest głównym (domyślnie) technologii serializacji w programie .NET Framework, ale istnieją scenariusze serializacji, które nie obsługuje serializacji kontrakt danych. Na przykład jego zapewnia pełną kontrolę nad kształt XML utworzone lub używane przez program. Jeśli takie precyzyjnego jest wymagany, serializacji XML, które ma być używany, a trzeba utworzyć swój typ do obsługi tej technologii serializacji.  
+ Serializacja kontraktu danych jest główną (domyślną) technologią serializacji w .NET Framework, ale istnieją scenariusze serializacji, które nie obsługują serializacji kontraktu danych. Na przykład nie zapewnia pełnej kontroli nad kształtem XML produkowanym lub zużywanym przez serializator. Jeśli wymagana jest taka kontrola, serializacja XML musi być używana i musisz zaprojektować typy do obsługi tej technologii serializacji.  
   
  **X AVOID** projektowania z typów specjalnie z myślą o serializacji XML, chyba że masz bardzo silnych Przyczyna do kontrolowania kształtu XML utworzony. Ta technologia serializacji została zastąpiona przez serializacji kontrakt danych opisanych w poprzedniej sekcji.  
   
- **✓ CONSIDER** implementacja <xref:System.Xml.Serialization.IXmlSerializable> interfejsu, jeśli chcesz większą kontrolę nad kształtu serializacji XML niż co to jest oferowany przez stosowanie atrybutów serializacji XML. Dwie metody interfejsu, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> i <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, pozwalają na w pełni kontrolować Zserializowany strumień XML. Możesz również kontrolować schematu XML, który pobiera wygenerowany dla typu przez zastosowanie `XmlSchemaProviderAttribute`.  
+ **✓ CONSIDER** implementacja <xref:System.Xml.Serialization.IXmlSerializable> interfejsu, jeśli chcesz większą kontrolę nad kształtu serializacji XML niż co to jest oferowany przez stosowanie atrybutów serializacji XML. Dwie metody interfejsu <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> i <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>umożliwiają pełną kontrolę serializowanego strumienia XML. Można również kontrolować schemat XML, który jest generowany dla typu przez zastosowanie `XmlSchemaProviderAttribute`.  
   
 ## <a name="supporting-runtime-serialization"></a>Obsługa czasu wykonywania serializacji  
- Środowisko wykonawcze serializacji to technologia używana przez wywołaniem funkcji zdalnych .NET. Jeśli uważasz, że Twoje typy będzie transportowane przy użyciu wywołaniem funkcji zdalnych .NET, należy się upewnić, że obsługują serializacji w czasie wykonywania.  
+ Serializacja środowiska uruchomieniowego jest technologią używaną przez funkcję komunikacji zdalnej platformy .NET. Jeśli uważasz, że Twoje typy będą transportowane przy użyciu komunikacji zdalnej .NET, musisz upewnić się, że obsługują one serializacji środowiska uruchomieniowego.  
   
- Podstawowa pomoc techniczna dla serializacji w czasie wykonywania mogą być zapewniane przez zastosowanie <xref:System.SerializableAttribute>, i bardziej zaawansowanych scenariuszy wymagają, wykonania prostego czasu wykonywania serializacji wzorzec (Implementowanie <xref:System.Runtime.Serialization.ISerializable> i podaj konstruktora serializacji).  
+ Podstawowe wsparcie dla serializacji środowiska uruchomieniowego może być zapewnione przez <xref:System.SerializableAttribute>zastosowanie, a bardziej zaawansowane scenariusze obejmują wdrożenie prostego wzorca serializacji środowiska uruchomieniowego <xref:System.Runtime.Serialization.ISerializable> (implementacja i dostarczenie konstruktora serializacji).  
   
- **✓ CONSIDER** obsługę środowiska uruchomieniowego serializacji, jeśli Twoje typów będą używane z funkcji zdalnych .NET. Na przykład <xref:System.AddIn?displayProperty=nameWithType> nazw korzysta z wywołaniem funkcji zdalnych .NET, a więc wszystkie typy wymieniane między `System.AddIn` dodatków musi obsługiwać serializacji w czasie wykonywania.  
+ **✓ CONSIDER** obsługę środowiska uruchomieniowego serializacji, jeśli Twoje typów będą używane z funkcji zdalnych .NET. Na przykład <xref:System.AddIn?displayProperty=nameWithType> przestrzeń nazw używa komunikacji zdalnej .NET, a więc wszystkie typy wymieniane między `System.AddIn` dodatkami muszą obsługiwać serializację w czasie wykonywania.  
   
- **✓ CONSIDER** implementacja wzorca serializacji środowiska uruchomieniowego, jeśli mają pełną kontrolę nad procesem serializacji. Na przykład jeśli chcesz przekształcania danych jako jej pobiera serializowany lub deserializowany.  
+ **✓ CONSIDER** implementacja wzorca serializacji środowiska uruchomieniowego, jeśli mają pełną kontrolę nad procesem serializacji. Na przykład, jeśli chcesz przekształcić dane w sposób, w jaki są one serializowane lub deserializowane.  
   
- Wzorzec jest bardzo proste. Wszystko, czego potrzebujesz, aby zrobić to zaimplementować <xref:System.Runtime.Serialization.ISerializable> interfejs i dostarczyć konstruktora specjalne, który jest używany, gdy deserializowany jest.  
+ Wzorzec jest bardzo prosty. Wszystko, co musisz zrobić, implementuje <xref:System.Runtime.Serialization.ISerializable> interfejs i udostępnia specjalny Konstruktor, który jest używany podczas deserializacji obiektu.  
   
  **✓ DO** upewnij chroniony Konstruktor serializacji i podaj dwóch parametrów typu i o nazwie dokładnie tak jak pokazano w przykładzie poniżej.  
   
@@ -97,11 +97,11 @@ public class Person : ISerializable
   
  **✓ DO** zaimplementować <xref:System.Runtime.Serialization.ISerializable> elementy członkowskie jawnie.  
   
- **✓ DO** Zastosuj żądanie łącza do <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=nameWithType> implementacji. Dzięki temu który tylko w pełni zaufanego podstawowych oraz serializator środowiska wykonawczego ma dostęp do elementu członkowskiego.  
+ **✓ DO** Zastosuj żądanie łącza do <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=nameWithType> implementacji. Daje to pewność, że tylko w pełni zaufany rdzeń i Serializator środowiska uruchomieniowego mają dostęp do elementu członkowskiego.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: Konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku,](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 2. wydanie przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

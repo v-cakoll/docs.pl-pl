@@ -1,25 +1,25 @@
 ---
-title: Bookmarks1
+title: Zakładki — WF
 ms.date: 03/30/2017
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-ms.openlocfilehash: 8b7ca9549327087e30d6c72a8b784aa37ad09f3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a15a28cc39a4227765c238a6f2b86c72197f1a39
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774149"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868920"
 ---
 # <a name="bookmarks"></a>Zakładki
-Zakładki są mechanizm, który umożliwia działanie pasywnie czeka na dane wejściowe bez przytrzymywania na wątku przepływu pracy. Gdy działanie sygnalizuje, że trwa oczekiwanie bodziec, może utworzyć zakładki. Oznacza to, aby środowisko uruchomieniowe, wykonanie tego działania nie powinny być uwzględniane pełną nawet wtedy, gdy aktualnie wykonywanej metody (którym utworzono <xref:System.Activities.Bookmark>) zwraca.  
+Zakładki to mechanizm, który umożliwia działanie pasywnego oczekiwania na dane wejściowe bez udziału w wątku przepływu pracy. Gdy działanie sygnalizuje, że oczekuje na bodźce, może utworzyć zakładkę. Wskazuje to, że środowisko uruchomieniowe nie powinno być uznawane za wykonane, nawet gdy aktualnie wykonywana Metoda (która została utworzona <xref:System.Activities.Bookmark>) zwraca wartość.  
   
-## <a name="bookmark-basics"></a>Podstawowe informacje dotyczące zakładki  
- A <xref:System.Activities.Bookmark> reprezentuje punkt, w których wykonanie można wznowić (za pośrednictwem których dane wejściowe mogą być dostarczane) w ramach wystąpienie przepływu pracy. Zazwyczaj <xref:System.Activities.Bookmark> jest nadawana nazwa i kod zewnętrzny (hosta lub rozszerzeniu) jest odpowiedzialny za wznowienie zakładki z odpowiednimi danymi. Gdy <xref:System.Activities.Bookmark> zostanie wznowione, harmonogramy środowiska uruchomieniowego przepływu pracy <xref:System.Activities.BookmarkCallback> delegat, który został skojarzony z tym <xref:System.Activities.Bookmark> w czasie jego tworzenia.  
+## <a name="bookmark-basics"></a>Podstawowe informacje o zakładkach  
+ <xref:System.Activities.Bookmark> Reprezentuje punkt, w którym można wznowić wykonywanie (i za pomocą którego dane wejściowe można dostarczyć) w ramach wystąpienia przepływu pracy. <xref:System.Activities.Bookmark> Zazwyczaj otrzymujesz nazwę i zewnętrzny kod (hosta lub rozszerzenia) jest odpowiedzialny za wznawianie zakładki z odpowiednimi danymi. Gdy zostanie wznowiony, środowisko uruchomieniowe przepływu pracy <xref:System.Activities.BookmarkCallback> planuje delegata, który został <xref:System.Activities.Bookmark> skojarzony z tym w momencie jego tworzenia. <xref:System.Activities.Bookmark>  
   
-## <a name="bookmark-options"></a>Opcje zakładek  
- <xref:System.Activities.BookmarkOptions> Klasy określa typ <xref:System.Activities.Bookmark> tworzona. Możliwe wartości inne niż wzajemnie wykluczającymi się <xref:System.Activities.BookmarkOptions.None>, <xref:System.Activities.BookmarkOptions.MultipleResume>, i <xref:System.Activities.BookmarkOptions.NonBlocking>. Użyj <xref:System.Activities.BookmarkOptions.None>, domyślnie, podczas tworzenia <xref:System.Activities.Bookmark> zgodnie z oczekiwaniami można wznowić dokładnie jeden raz. Użyj <xref:System.Activities.BookmarkOptions.MultipleResume> podczas tworzenia <xref:System.Activities.Bookmark> , może być wznowione wiele razy. Użyj <xref:System.Activities.BookmarkOptions.NonBlocking> podczas tworzenia <xref:System.Activities.Bookmark> , nigdy nie może być wznowione. W przeciwieństwie do zakładki utworzone przy użyciu domyślnego <xref:System.Activities.BookmarkOptions>, <xref:System.Activities.BookmarkOptions.NonBlocking> zakładki uniemożliwia ukończenie działania.  
+## <a name="bookmark-options"></a>Opcje zakładki  
+ Klasa określa typ tworzonego elementu <xref:System.Activities.Bookmark>. <xref:System.Activities.BookmarkOptions> Możliwe niewzajemnie wykluczające się wartości <xref:System.Activities.BookmarkOptions.None>to <xref:System.Activities.BookmarkOptions.MultipleResume>,, <xref:System.Activities.BookmarkOptions.NonBlocking>i. Użyj <xref:System.Activities.BookmarkOptions.None>, domyślnie, podczas <xref:System.Activities.Bookmark> tworzenia, który jest oczekiwany do wznowienia dokładnie jeden raz. Używany <xref:System.Activities.BookmarkOptions.MultipleResume> podczas<xref:System.Activities.Bookmark> tworzenia, który może być wznowiony wiele razy. Używany <xref:System.Activities.BookmarkOptions.NonBlocking> podczas<xref:System.Activities.Bookmark> tworzenia, który może nigdy nie zostać wznowiony. W przeciwieństwie do zakładek utworzonych <xref:System.Activities.BookmarkOptions>przy <xref:System.Activities.BookmarkOptions.NonBlocking> użyciu domyślnego, zakładki nie uniemożliwiają ukończenia działania.  
   
 ## <a name="bookmark-resumption"></a>Wznowienie zakładki  
- Zakładki, może być wznowione przez kod poza przepływu pracy przy użyciu jednej z <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> przeciążenia. W tym przykładzie `ReadLine` utworzeniu działania. Po wykonaniu `ReadLine` tworzy działanie <xref:System.Activities.Bookmark>, rejestruje wywołanie zwrotne, a następnie czeka na <xref:System.Activities.Bookmark> wznowienie. Gdy zostanie wznowione, `ReadLine` działania przypisuje danych, który został przekazany z <xref:System.Activities.Bookmark> do jego <xref:System.Activities.Activity%601.Result%2A> argumentu.  
+ Zakładki można wznawiać przez kod poza przepływem pracy przy użyciu jednego z <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> przeciążeń. W tym przykładzie `ReadLine` tworzone jest działanie. Po wykonaniu `ReadLine` działanie <xref:System.Activities.Bookmark>tworzy, rejestruje wywołanie zwrotne, <xref:System.Activities.Bookmark> a następnie czeka na wznowienie. Gdy zostanie ono wznowione, `ReadLine` działanie przypisze dane, które zostały przesłane z do <xref:System.Activities.Bookmark> <xref:System.Activities.Activity%601.Result%2A> tego argumentu.  
   
 ```csharp  
 public sealed class ReadLine : NativeActivity<string>  
@@ -51,7 +51,7 @@ public sealed class ReadLine : NativeActivity<string>
 }  
 ```  
   
- W tym przykładzie przepływ pracy jest tworzony, który używa `ReadLine` działanie, aby zbierać nazwy użytkownika i wyświetl ją w oknie konsoli. Aplikacja hosta wykonuje rzeczywistą pracę zbierania danych wejściowych i przekazuje je do przepływu pracy przez wznawianie <xref:System.Activities.Bookmark>.  
+ W tym przykładzie zostanie utworzony przepływ pracy, który używa `ReadLine` działania do zbierania nazwy użytkownika i wyświetlania go w oknie konsoli. Aplikacja hosta wykonuje rzeczywistą ilość pracy zbierającej dane wejściowe i przekazuje ją do przepływu pracy przez wznowienie <xref:System.Activities.Bookmark>.  
   
 ```csharp  
 Variable<string> name = new Variable<string>  
@@ -111,7 +111,7 @@ wfApp.ResumeBookmark("UserName", Console.ReadLine());
 syncEvent.WaitOne();  
 ```  
   
- Gdy `ReadLine` jest wykonywane działanie, tworzy on <xref:System.Activities.Bookmark> o nazwie `UserName` , a następnie czeka zakładki wznowienie. Zbiera dane żądanego hosta, a następnie kontynuowanie <xref:System.Activities.Bookmark>. Przepływ pracy zostanie wznowione, wyświetla nazwę, a następnie kończy. Zwróć uwagę, że żaden kod synchronizacji wymagane w odniesieniu do wznowienie zakładki. A <xref:System.Activities.Bookmark> można wznowić tylko wtedy, gdy przepływ pracy jest bezczynny, i jeśli przepływ pracy nie jest bezczynny, wywołanie <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> blokuje, aż przepływu pracy staje się nieaktywna.  
+ Gdy działanie jest wykonywane, <xref:System.Activities.Bookmark> tworzy nazwę `UserName` , a następnie czeka na wznowienie zakładki. `ReadLine` Host zbiera wymagane dane, a następnie wznawia działanie <xref:System.Activities.Bookmark>. Przepływ pracy zostanie wznowiony, zostanie wyświetlona nazwa, a następnie zostanie zakończona. Należy pamiętać, że żaden kod synchronizacji nie jest wymagany w odniesieniu do wznowienia zakładki. Można wznowić tylko wtedy, gdy przepływ pracy jest bezczynny, a jeśli przepływ pracy nie jest bezczynny <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> , wywołanie bloków do momentu, gdy przepływ pracy przestanie być bezczynny. <xref:System.Activities.Bookmark>  
   
-## <a name="bookmark-resumption-result"></a>Wynik wznowienie zakładki  
- <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> Zwraca <xref:System.Activities.BookmarkResumptionResult> wartości wyliczenia, aby wskazać wyniki żądania wznowienie zakładki. Możliwe wartości zwracane są <xref:System.Activities.BookmarkResumptionResult.Success>, <xref:System.Activities.BookmarkResumptionResult.NotReady>, i <xref:System.Activities.BookmarkResumptionResult.NotFound>. Tej wartości można użyć hostów i rozszerzenia do określenia, jak można kontynuować.
+## <a name="bookmark-resumption-result"></a>Wynik wznowienia zakładki  
+ <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A>Zwraca wartość <xref:System.Activities.BookmarkResumptionResult> wyliczenia wskazującą wyniki żądania wznowienia zakładki. Możliwe wartości zwracane to <xref:System.Activities.BookmarkResumptionResult.Success>, <xref:System.Activities.BookmarkResumptionResult.NotReady>, i <xref:System.Activities.BookmarkResumptionResult.NotFound>. Hosty i rozszerzenia mogą używać tej wartości, aby określić sposób dalszego działania.

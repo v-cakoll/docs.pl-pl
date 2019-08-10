@@ -2,12 +2,12 @@
 title: Uaktualnij interfejsy API z atrybutami, aby zdefiniować oczekiwania o wartości null
 description: W tym artykule wyjaśniono motywacje i techniki umożliwiające dodawanie opisowych atrybutów do opisu stanu wartości null argumentów oraz zwracanie wartości z interfejsów API
 ms.date: 07/31/2019
-ms.openlocfilehash: 9a5eded385d5eac7a493a36876557cadf083afad
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: eebd3d190b8c93833de6e1c1f1594c1c1f56e14e
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733435"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868888"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Aktualizowanie bibliotek do używania typów referencyjnych dopuszczających wartości null i przekazywanie reguł dopuszczających wartość null do wywoływania.
 
@@ -67,7 +67,6 @@ Przed włączeniem typów referencyjnych dopuszczających wartości null, zmienn
 Inne prawdopodobnie Źródło ostrzeżeń ma zwracane wartości, gdy wartość nie została zainicjowana.
 
 Pierwszym krokiem w rozwiązywaniu ostrzeżeń kompilatora jest użycie `?` adnotacji dla parametrów i zwracanych typów, aby wskazać, kiedy argumenty lub wartości zwracane mogą mieć wartość null. Gdy zmienne odwołania nie mogą mieć wartości null, oryginalna deklaracja jest poprawna. W takim przypadku cel nie tylko naprawi ostrzeżenia. Im bardziej istotny jest sposób, aby kompilator mógł zrozumieć zamiar dla potencjalnych wartości null. Podczas badania ostrzeżeń możesz przejść do następnej głównej decyzji dotyczącej biblioteki. Czy chcesz rozważyć modyfikowanie sygnatur interfejsów API, aby dokładniej komunikować swój projekt? Lepszym podpisem interfejsu API `TryGetMessage` dla metody analizowanej wcześniej mogą być:
-
 
 ```csharp
 string? TryGetMessage(string key);

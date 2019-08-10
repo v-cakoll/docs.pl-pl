@@ -8,55 +8,54 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: febfe0ae0a3e478109b338b228d0bc306bf56454
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: dc7653b1d792c66b40c0ab1d55a1614c7a69b7d1
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052786"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869059"
 ---
 # <a name="additional-resources"></a>Dodatkowe zasoby
 
-Następujące witryny sieci web, wytyczne i mogą pomóc w znalezieniu odpowiedzi na typowe problemy.
+Poniższe witryny sieci Web oferują wskazówki i mogą pomóc w znalezieniu odpowiedzi na typowe problemy.
 
 ## <a name="microsoft-resources"></a>Zasoby firmy Microsoft
 
-### <a name="on-the-web"></a>W sieci web
+### <a name="on-the-web"></a>W sieci Web
 
-|Termin|Definicja|
+|Adres URL|Opis|
 |----------|----------------|
-|[Projektowanie języków platformy .NET w Visual Basic](https://github.com/dotnet/vblang)|Oficjalne repozytorium w usłudze GitHub, przeznaczone dla projektów w języku Visual Basic .NET.|
-|[Blog zespołu programu Microsoft Visual Basic](https://devblogs.microsoft.com/vbteam/)|Zapewnia dostęp do blogu zespołu języka Visual Basic.|
+|[Projekt języka Visual Basic .NET](https://github.com/dotnet/vblang)|Oficjalne repozytorium w usłudze GitHub, przeznaczone dla projektów w języku Visual Basic .NET.|
+|[Blog zespołu Visual Basic firmy Microsoft](https://devblogs.microsoft.com/vbteam/)|Zapewnia dostęp do blogu zespołu Visual Basic.|
 
 ### <a name="code-samples"></a>Przykłady kodu
 
-|Termin|Definicja|
+|Adres URL|Opis|
 |----------|----------------|
-|[Galeria kodu](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET)|Pobieraj i udostępniaj przykładowe aplikacje i inne zasoby w społeczności deweloperów.|
 |[Przykłady z dokumentacji języka Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|Zawiera przykłady używane w dokumentacji języka Visual Basic i technologii .NET.|
 
 ### <a name="forums"></a>Fora
 
-|Termin|Definicja|
+|Adres URL|Opis|
 |----------|----------------|
-|[Forum języka Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|W tym artykule omówiono zagadnienia ogólne języka Visual Basic.|
+|[Fora Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|Omawia ogólne problemy dotyczące Visual Basic.|
 
-### <a name="videos-and-webcasts"></a>Filmy i audycje w sieci Web
+### <a name="videos-and-webcasts"></a>Filmy wideo i Webcasts
 
-|Termin|Definicja|
+|Adres URL|Opis|
 |----------|----------------|
 |[Channel9](https://channel9.msdn.com/)|Stale aktualizowane materiały dla społeczności (filmy, strony typu wiki i forum).|
 
 ### <a name="support"></a>Pomoc techniczna
 
-|Termin|Definicja|
+|Adres URL|Opis|
 |----------|----------------|
-|[Pomoc techniczna firmy Microsoft](https://support.microsoft.com)|Zapewnia dostęp do artykułów bazy wiedzy Knowledge Base (KB), plików do pobrania, aktualizacji, webcastów i innych usług.|
+|[pomoc techniczna firmy Microsoft](https://support.microsoft.com)|Zapewnia dostęp do artykułów bazy wiedzy Knowledge Base (KB), plików do pobrania, aktualizacji, webcastów i innych usług.|
 |[Pytania dotyczące programu Visual Studio](https://developercommunity.visualstudio.com)|Umożliwia zgłaszanie błędów lub sugestii do firmy Microsoft dotyczących platform .NET i Visual Studio. Można również zgłosić błąd, wybierając pozycje **Pomoc**  >  **Wyślij opinię**  >  **Zgłoś problem** w programie Visual Studio.|
 
 ## <a name="third-party-resources"></a>Zasoby innych firm
 
-|Termin|Definicja|
+|Adres URL|Opis|
 |----------|----------------|
 |[VBForums](http://www.vbforums.com/)|Udostępnia forum dyskusyjne dotyczące języka Visual Basic, technologii .NET i innych.|
 |[vbCity](http://vbcity.com/)|Witryna społeczności, w której można dowiedzieć się więcej i zadawać pytania na temat języka Visual Basic i platformy .NET.|
@@ -64,5 +63,5 @@ Następujące witryny sieci web, wytyczne i mogą pomóc w znalezieniu odpowiedz
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do języka Visual Basic](../../visual-basic/getting-started/index.md)
+- [Wprowadzenie do Visual Basic](../../visual-basic/getting-started/index.md)
 - [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)

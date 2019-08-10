@@ -1,35 +1,35 @@
 ---
-title: Serializowanie do plików, elementów TextWriter i XmlWriters1
+title: Serializowanie do plików, elementów TextWriter i elementów XmlWriter
 ms.date: 07/20/2015
 ms.assetid: bd3ea6f7-895b-4ff4-a625-fe2bb55b1886
-ms.openlocfilehash: c74dc7f429e4ae27f08f7acb6b3a6c39161aac71
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 20cb84a9f79ca8de3e86a996f18c388dc53340ae
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483548"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868855"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Serializowanie do plików, elementów TextWriter i elementów XmlWriter
 
-Może wykonywać serializację drzew XML do <xref:System.IO.File>, <xref:System.IO.TextWriter>, lub <xref:System.Xml.XmlWriter>.
+Można serializować drzewa XML do <xref:System.IO.File>, a <xref:System.IO.TextWriter>lub <xref:System.Xml.XmlWriter>.
 
-Może wykonywać serializację dowolny składnik XML w tym <xref:System.Xml.Linq.XDocument> i <xref:System.Xml.Linq.XElement>, na ciąg przy użyciu `ToString` metody.
+Można serializować dowolny składnik XML, w tym <xref:System.Xml.Linq.XDocument> i <xref:System.Xml.Linq.XElement>, do ciągu przy użyciu `ToString` metody.
 
-Jeśli chcesz pominąć formatowania podczas serializowania na ciąg, możesz użyć <xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType> metody.
+Jeśli chcesz pominąć formatowanie podczas serializacji do ciągu, możesz użyć <xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType> metody.
 
-Domyślnym zachowaniem podczas serializacji do pliku jest formatowanie dokumentu (wcięcie) wynikowy kod XML. Możesz wciąć nieważny biały znak w drzewie XML nie zostaną zachowane. Do serializacji, za pomocą formatowania, użyj jednego z przeciążeń, które z poniższych metod, które nie przyjmują <xref:System.Xml.Linq.SaveOptions> jako argument:
-
-- <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>
-
-- <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>
-
-Opcja nie twórz wcięcia i Zachowaj nieważny biały znak w drzewie XML, użyć jednego z przeciążeń z następujących metod, które przyjmuje <xref:System.Xml.Linq.SaveOptions> jako argument:
+Zachowanie domyślne podczas serializowania do pliku ma format (wcięcie) otrzymany dokument XML. W przypadku wcięcia nie jest zachowywany znaczący biały znak w drzewie XML. Aby serializować z formatowaniem, użyj jednego z przeciążeń następujących metod, które nie przyjmują <xref:System.Xml.Linq.SaveOptions> argumentu:
 
 - <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>
 
 - <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>
 
-Przykłady zobacz temat odpowiednie odwołania.
+Jeśli chcesz, aby opcja nie była wcięty i aby zachować nieznaczący biały znak w drzewie XML, użyj jednego z przeciążeń następujących metod, które przyjmuje <xref:System.Xml.Linq.SaveOptions> jako argument:
+
+- <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>
+
+- <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>
+
+Przykłady znajdują się w odpowiednim temacie.
 
 ## <a name="see-also"></a>Zobacz także
 

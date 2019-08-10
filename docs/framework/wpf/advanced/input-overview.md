@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 8fa9f2dd668efca6a3108973ff792cc17b37b410
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 5eaf83f259abe4ee574dfd4d2269dfa1e9373c94
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818040"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869075"
 ---
 # <a name="input-overview"></a>Przegląd Dane wejściowe
 <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Podsystem udostępnia zaawansowany interfejs API umożliwiający uzyskiwanie danych z różnych urządzeń, w tym myszy, klawiatury, dotyku i pióra. W tym temacie opisano usługi zapewniane [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przez program i wyjaśniono architekturę systemów wejściowych.
@@ -115,7 +115,7 @@ ms.locfileid: "68818040"
 
  W przypadku wprowadzania z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klawiatury program najpierw wysyła <xref:System.Windows.ContentElement.KeyDown> odpowiednie / <xref:System.Windows.ContentElement.KeyUp> zdarzenia. Jeśli te zdarzenia nie są obsługiwane, a klucz to tekst (a nie klawisz kontrolny, taki jak strzałki kierunkowe lub klawisze funkcyjne), <xref:System.Windows.ContentElement.TextInput> zostanie zgłoszone zdarzenie.  Nie zawsze jest proste mapowanie <xref:System.Windows.ContentElement.KeyDown> jeden do jednego między / <xref:System.Windows.ContentElement.KeyUp> i zdarzeniami, <xref:System.Windows.ContentElement.TextInput> ponieważ wielokrotne naciśnięcie klawiszy może generować pojedynczy znak wprowadzania tekstu, a pojedynczy naciśnięcie klawisza może generować wiele znaków długooci.  Jest to szczególnie prawdziwe w przypadku języków takich jak chiński, japoński i koreański, które używają edytorów Input Method Editors (IME) do generowania tysięcy możliwych znaków w odpowiadających im alfabetach.
 
- Gdy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.KeyEventArgs.Key%2A> <xref:System.Windows.ContentElement.TextInput> wysyła zdarzenie, jest ustawione na<xref:System.Windows.Input.Key.System?displayProperty=nameWithType> , jeśli nacionięcia klawiszy mogą stać się częścią zdarzenia (na przykład naciśnięcie klawisza ALT + S). <xref:System.Windows.ContentElement.KeyUp> / <xref:System.Windows.ContentElement.KeyDown> Umożliwia to kod w programie <xref:System.Windows.ContentElement.KeyDown> obsługi zdarzeń, który ma <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> zostać wyszukany i, w przypadku znalezienia, pozostawić przetwarzanie dla <xref:System.Windows.ContentElement.TextInput> programu obsługi zdarzenia po tym zdarzeniu. W takich przypadkach różne właściwości <xref:System.Windows.Input.TextCompositionEventArgs> argumentu mogą służyć do określenia oryginalnych naciśnięć klawiszy. Podobnie, jeśli [!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)] jest aktywny, <xref:System.Windows.Input.Key> ma wartość <xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>i <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> zapewnia oryginalne naciśnięcie klawiszy lub naciśnięcia klawiszy.
+ Gdy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.KeyEventArgs.Key%2A> <xref:System.Windows.ContentElement.TextInput> wysyła zdarzenie, jest ustawione na<xref:System.Windows.Input.Key.System?displayProperty=nameWithType> , jeśli nacionięcia klawiszy mogą stać się częścią zdarzenia (na przykład naciśnięcie klawisza ALT + S). <xref:System.Windows.ContentElement.KeyUp> / <xref:System.Windows.ContentElement.KeyDown> Umożliwia to kod w programie <xref:System.Windows.ContentElement.KeyDown> obsługi zdarzeń, który ma <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> zostać wyszukany i, w przypadku znalezienia, pozostawić przetwarzanie dla <xref:System.Windows.ContentElement.TextInput> programu obsługi zdarzenia po tym zdarzeniu. W takich przypadkach różne właściwości <xref:System.Windows.Input.TextCompositionEventArgs> argumentu mogą służyć do określenia oryginalnych naciśnięć klawiszy. Podobnie, jeśli edytor IME jest aktywny, <xref:System.Windows.Input.Key> ma <xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>wartość i <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> nadaje oryginalne naciśnięcie klawiszy lub naciśnięcia klawiszy.
 
  W poniższym przykładzie zdefiniowano procedurę obsługi dla <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzenia i programu obsługi <xref:System.Windows.UIElement.KeyDown> zdarzenia.
 

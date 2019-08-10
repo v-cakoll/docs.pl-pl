@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 9adceb78f53d9c855ec05859a0b3449a1623e62b
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 845095567459fc486dd2f1c52e575444612c7bb8
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796839"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869118"
 ---
 # <a name="imaging-overview"></a>Przegląd Obrazowanie
 Ten temat zawiera wprowadzenie do programu [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]umożliwia deweloperom wyświetlanie, przekształcanie i formatowanie obrazów.  
@@ -57,7 +57,7 @@ Ten temat zawiera wprowadzenie do programu [!INCLUDE[TLA#tla_wic](../../../../in
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>Formaty obrazów WPF  
- Koder-dekoder służy do dekodowania lub kodowania określonego formatu multimediów. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]zawiera koder-dekoder dla formatów [!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]obrazów [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]BMP [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)],,,, GIF i ikon. Każdy z tych kodeków pozwala aplikacjom dekodować i, z wyjątkiem ikony, zakodować odpowiednie formaty obrazu.  
+ Koder-dekoder służy do dekodowania lub kodowania określonego formatu multimediów. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]zawiera koder-dekoder dla formatów obrazów bmp [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)], [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]JPEG [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)],,, GIF i ikon. Każdy z tych kodeków pozwala aplikacjom dekodować i, z wyjątkiem ikony, zakodować odpowiednie formaty obrazu.  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>jest ważną klasą używaną podczas dekodowania i kodowania obrazów. Jest to podstawowy blok [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] konstrukcyjny potoku i reprezentuje pojedynczy, stały zestaw pikseli o określonym rozmiarze i rozdzielczości. Może to być pojedyncza ramka obrazu z wieloma ramkami lub może być wynikiem przekształcenia wykonanego <xref:System.Windows.Media.Imaging.BitmapSource>na. <xref:System.Windows.Media.Imaging.BitmapSource> Jest elementem nadrzędnym wielu klas podstawowych używanych w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obrazach, takich jak. <xref:System.Windows.Media.Imaging.BitmapFrame>  
   

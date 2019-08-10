@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/01/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3e5b6b482dfbd1ff06347883a93a561944200a9f
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733398"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868724"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Samouczek: Wykrywanie obiektów przy użyciu ONNX w ML.NET
 
@@ -344,7 +344,6 @@ Teraz, gdy tworzone są klasy wymiarów i pól powiązanych, czas na utworzenie 
     - `CELL_HEIGHT`to wysokość jednej komórki w siatce obrazu.
     - `channelStride`jest pozycją początkową bieżącej komórki siatki.
 
-
     Gdy model ocenia obraz, dzieli `416px x 416px`dane wejściowe na siatkę komórek o `13 x 13`rozmiarze. Każda komórka zawiera `32px x 32px`. W każdej komórce istnieją 5 pól, które zawierają 5 funkcji (x, y, Szerokość, wysokość, pewność). Ponadto każde pole ograniczenia zawiera prawdopodobieństwo dla każdej klasy, która w tym przypadku jest równa 20. W związku z tym każda komórka zawiera 125 fragmenty informacji (5 funkcji + 20 prawdopodobieństwa dotyczącej klasy). 
 
 Utwórz listę kotwic poniżej `channelStride` dla wszystkich 5 pól ograniczenia:
@@ -654,7 +653,6 @@ Poniżej można używać `DrawBoundingBox` metody do rysowania pól ograniczenia
 Na koniec Dodaj kilka logiki rejestrowania za pomocą `LogDetectedObjects` metody.
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
-
 
 Po instrukcji try-catch Dodaj dodatkową logikę, aby wskazać, że proces jest wykonywany.
 

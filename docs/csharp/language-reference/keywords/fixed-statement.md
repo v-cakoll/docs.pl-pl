@@ -16,7 +16,7 @@ ms.locfileid: "68433752"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed — Instrukcja (odwołanie w C#)
 
-`fixed` Instrukcja zapobiega ponownemu lokalizowaniu ruchomej zmiennej przez moduł wyrzucania elementów bezużytecznych. Instrukcja jest dozwolona tylko w niebezpiecznym kontekście. [](unsafe.md) `fixed` Możesz również użyć słowa kluczowego, `fixed` aby utworzyć bufory o ustalonym [rozmiarze](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
+`fixed` Instrukcja zapobiega ponownemu lokalizowaniu ruchomej zmiennej przez moduł wyrzucania elementów bezużytecznych. Instrukcja jest dozwolona tylko w niebezpiecznym kontekście. [niebezpieczny](unsafe.md) `fixed` Możesz również użyć słowa kluczowego, `fixed` aby utworzyć bufory o ustalonym [rozmiarze](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
 
 `fixed` Instrukcja ustawia wskaźnik na zmienną zarządzaną i "pinezki", która jest zmienna podczas wykonywania instrukcji. Wskaźniki do ruchomych zmiennych zarządzanych są przydatne tylko w `fixed` kontekście. `fixed` Bez kontekstu, wyrzucanie elementów bezużytecznych może przewidzieć nieprzewidywalne zmienne. C# Kompilator umożliwia tylko przypisanie wskaźnika do zmiennej zarządzanej w `fixed` instrukcji.
 
@@ -26,7 +26,8 @@ Wskaźnik można zainicjować za pomocą tablicy, ciągu, buforu o ustalonym roz
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
 
-Począwszy od C# 7,3, `fixed` instrukcja działa na dodatkowych typach poza tablicami, ciągami, buforami o stałym rozmiarze lub zmiennymi niezarządzanymi. Każdy typ, który implementuje metodę o `GetPinnableReference` nazwie, może być przypięty. Musi zwracać zmienną typu niezarządzanego. [](../builtin-types/unmanaged-types.md) `GetPinnableReference` `ref` Typy <xref:System.Span%601?displayProperty=nameWithType> .NET i <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> wprowadzone w środowisku .NET Core 2,0 używają tego wzorca i mogą być przypięte. Jest to pokazane w poniższym przykładzie:
+Począwszy od C# 7,3, `fixed` instrukcja działa na dodatkowych typach poza tablicami, ciągami, buforami o stałym rozmiarze lub zmiennymi niezarządzanymi. Każdy typ, który implementuje metodę o `GetPinnableReference` nazwie, może być przypięty. Musi zwracać zmienną typu niezarządzanego. [Cómo se pronuncia
+typ niezarządzany](../builtin-types/unmanaged-types.md) `GetPinnableReference` `ref` Typy <xref:System.Span%601?displayProperty=nameWithType> .NET i <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> wprowadzone w środowisku .NET Core 2,0 używają tego wzorca i mogą być przypięte. Jest to pokazane w poniższym przykładzie:
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
 

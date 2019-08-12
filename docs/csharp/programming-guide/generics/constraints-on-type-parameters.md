@@ -78,7 +78,7 @@ Użyteczność parametrów typu jako ograniczenia z klasami generycznymi jest og
 
 ## <a name="unmanaged-constraint"></a>Niezarządzany warunek ograniczający
 
-Począwszy od C# 7,3, można użyć `unmanaged` ograniczenia, aby określić, że parametr typu musi być typem niezarządzanym. [](../../language-reference/builtin-types/unmanaged-types.md) `unmanaged` Ograniczenie umożliwia zapisanie procedur wielokrotnego użytku w celu pracy z typami, które mogą być manipulowane jako bloki pamięci, jak pokazano w następującym przykładzie:
+Począwszy od C# 7,3, można użyć `unmanaged` ograniczenia, aby określić, że parametr typu musi być typem niezarządzanym. [typ niezarządzany](../../language-reference/builtin-types/unmanaged-types.md) `unmanaged` Ograniczenie umożliwia zapisanie procedur wielokrotnego użytku w celu pracy z typami, które mogą być manipulowane jako bloki pamięci, jak pokazano w następującym przykładzie:
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 

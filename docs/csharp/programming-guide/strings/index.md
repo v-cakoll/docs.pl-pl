@@ -1,5 +1,5 @@
 ---
-title: Parametry - C# przewodnik programowania
+title: Ciągi — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 06/27/2019
 helpviewer_keywords:
@@ -7,116 +7,116 @@ helpviewer_keywords:
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "67802316"
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
-Ciąg jest obiektem typu <xref:System.String> którego wartość jest wartością tekstową. Wewnętrznie, tekst jest przechowywany jako sekwencyjną kolekcją tylko do odczytu z <xref:System.Char> obiektów. Brak nie znaku zakończenia o wartości null na końcu ciągu języka C#; w związku z tym ciąg języka C# może zawierać dowolną liczbę osadzone znaki null ('\0'). <xref:System.String.Length%2A> Właściwość ciągu reprezentuje liczbę `Char` obiektów zawiera, nie liczbę znaków Unicode. Aby uzyskać dostęp do poszczególnych punkty kodowe Unicode w ciągu, należy użyć <xref:System.Globalization.StringInfo> obiektu.  
+Ciąg jest obiektem typu <xref:System.String> , którego wartością jest Text. Wewnętrznie tekst jest przechowywany jako sekwencyjna kolekcja <xref:System.Char> obiektów tylko do odczytu. Na końcu C# ciągu nie ma znaku zamykającego wartości null; w związku C# z tym ciąg może zawierać dowolną liczbę osadzonych znaków null (' \ 0 '). Właściwość ciągu reprezentuje `Char` liczbę obiektów, które zawiera, a nie liczbę znaków Unicode. <xref:System.String.Length%2A> Aby uzyskać dostęp do poszczególnych punktów kodu Unicode w ciągu, użyj <xref:System.Globalization.StringInfo> obiektu.  
   
-## <a name="string-vs-systemstring"></a>Ciąg programu vs. System.String  
- W języku C# `string` — słowo kluczowe jest aliasem <xref:System.String>. W związku z tym `String` i `string` są równoważne, a można użyć jednego z tych konwencji nazewnictwa użytkownik sobie tego życzy. `String` Klasa udostępnia wiele metod tworzenia bezpiecznego, manipulowanie i porównywanie ciągów. Ponadto w języku C# przeciążenia niektóre operatory upraszczające typowe operacje na ciągach. Aby uzyskać więcej informacji na temat słowa kluczowego, zobacz [ciąg](../../../csharp/language-reference/keywords/string.md). Aby uzyskać więcej informacji o typie i jego metod, zobacz <xref:System.String>.  
+## <a name="string-vs-systemstring"></a>ciąg a System.String  
+ W programie C# <xref:System.String>słowo kluczowe jest aliasem dla. `string` W `String` związku z `string` tym i są równoważne i można użyć dowolnej preferowanej konwencji nazewnictwa. `String` Klasa zawiera wiele metod bezpiecznego tworzenia, manipulowania i porównywania ciągów. Ponadto C# język przeciążuje niektórych operatorów, aby uprościć Typowe operacje na ciągach. Aby uzyskać więcej informacji na temat słowa kluczowego, zobacz [ciąg](../../../csharp/language-reference/keywords/string.md). Aby uzyskać więcej informacji na temat typu i jego metod, <xref:System.String>Zobacz.  
   
 ## <a name="declaring-and-initializing-strings"></a>Deklarowanie i Inicjowanie ciągów  
- Można zadeklarować i zainicjować ciągi na różne sposoby, jak pokazano w poniższym przykładzie:  
+ Można zadeklarować i zainicjować ciągi na różne sposoby, jak pokazano w następującym przykładzie:  
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- Należy zauważyć, że nie używasz [nowe](../../../csharp/language-reference/operators/new-operator.md) operatora do utworzenia obiektu ciąg, z wyjątkiem sytuacji, gdy inicjowanie ciągu z tablicy znaków.  
+ Należy zauważyć, że nie używasz operatora [New](../../../csharp/language-reference/operators/new-operator.md) do tworzenia obiektu String, chyba że podczas inicjowania ciągu z tablicą znaków.  
   
- Inicjuje ciąg z użyciem <xref:System.String.Empty> stałą wartość, aby utworzyć nowy <xref:System.String> obiektu, którego parametry są o zerowej długości. Literał ciągu reprezentującego ciągiem o zerowej długości jest "". Przez inicjowanie ciągów za pomocą <xref:System.String.Empty> wartości zamiast [null](../../../csharp/language-reference/keywords/null.md), można zmniejszyć prawdopodobieństwo <xref:System.NullReferenceException> występuje. Używa się statycznej <xref:System.String.IsNullOrEmpty%28System.String%29> metodę, aby sprawdzić wartość ciągu, zanim spróbujesz uzyskać do niego dostęp.  
+ Zainicjuj ciąg z <xref:System.String.Empty> wartością stałą, aby utworzyć nowy <xref:System.String> obiekt, którego ciąg ma zerową długość. Literał ciągu reprezentujący ciąg o zerowej długości to "". Inicjując ciągi z <xref:System.String.Empty> wartością zamiast [wartości null](../../../csharp/language-reference/keywords/null.md), można zmniejszyć prawdopodobieństwo <xref:System.NullReferenceException> wystąpienia. Użyj metody statycznej <xref:System.String.IsNullOrEmpty%28System.String%29> , aby zweryfikować wartość ciągu przed próbą uzyskania do niego dostępu.  
   
-## <a name="immutability-of-string-objects"></a>Niezmienność obiektów w postaci ciągów  
- Obiektów w postaci ciągów są *niezmienne*: nie można zmienić po ich utworzeniu. Wszystkie <xref:System.String> metody i operatory C#, które pojawiają się zmodyfikować ciągu rzeczywistości zwracają wyniki w nowym obiekcie ciągu. W poniższym przykładzie gdy zawartość `s1` i `s2` są łączone w celu utworzenia pojedynczego ciągu, niezmodyfikowanego są dwa ciągi oryginalnej. `+=` Operatora, tworzy nowy ciąg, który zawiera połączone zawartość. Nowy obiekt jest przypisany do zmiennej `s1`, a oryginalny obiekt, który został przypisany do `s1` wydane do wyrzucania elementów bezużytecznych, ponieważ nie inne zmienna zawiera odwołanie do niej.  
+## <a name="immutability-of-string-objects"></a>Niezmienności obiektów String  
+ Obiekty String są *niezmienne*: nie można ich zmienić po ich utworzeniu. Wszystkie metody i C# operatory, które pojawiają się w celu zmodyfikowania ciągu faktycznie zwracają wyniki w nowym obiekcie ciągu. <xref:System.String> W poniższym przykładzie, gdy zawartość `s1` i `s2` są łączone w celu utworzenia jednego ciągu, dwa oryginalne ciągi nie są modyfikowane. `+=` Operator tworzy nowy ciąg, który zawiera łączną zawartość. Nowy obiekt jest przypisany do zmiennej `s1`, a oryginalny obiekt, który został przypisany do `s1` , jest uwalniany do wyrzucania elementów bezużytecznych, ponieważ żadna inna zmienna nie przechowuje odwołania do niego.  
   
  [!code-csharp[csProgGuideStrings#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#2)]  
   
- Ponieważ ciąg "modyfikacji" jest faktycznie nowe tworzenia ciągu, należy zachować ostrożność podczas tworzenia odwołania do ciągów. Jeśli utworzenie odwołania do ciągu, a następnie "Modyfikuj" oryginalny ciąg odwołania będzie nadal wskaż oryginalnego obiektu zamiast nowy obiekt, który został utworzony podczas modyfikacji ciągu. Poniższy kod ilustruje ten problem:  
+ Ponieważ ciąg "modyfikacja" jest w rzeczywistości nowym ciągiem, należy zachować ostrożność podczas tworzenia odwołań do ciągów. Jeśli utworzysz odwołanie do ciągu, a następnie "modyfikujesz" oryginalny ciąg, odwołanie będzie nadal wskazywało oryginalny obiekt zamiast nowego obiektu, który został utworzony podczas modyfikacji ciągu. Poniższy kod ilustruje to zachowanie:  
   
  [!code-csharp[csProgGuideStrings#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#25)]  
   
- Aby uzyskać więcej informacji na temat tworzenia nowych ciągów, które są oparte na modyfikacje, takich jak wyszukiwanie i zamienianie operacji w oryginalnym ciągu, zobacz [jak: Modyfikowanie zawartości ciągu](../../how-to/modify-string-contents.md).  
+ Aby uzyskać więcej informacji na temat sposobu tworzenia nowych ciągów opartych na modyfikacjach, takich jak wyszukiwanie i zamienianie na oryginalnym ciągu, [zobacz How to: Modyfikuj zawartość](../../how-to/modify-string-contents.md)ciągu.  
   
-## <a name="regular-and-verbatim-string-literals"></a>Literały ciągów znaków zwykłych i Verbatim  
- Używaj literałów ciągów regularne, gdy należy osadzić znaki ucieczki dostarczana przez C#, jak pokazano w poniższym przykładzie:  
+## <a name="regular-and-verbatim-string-literals"></a>Zwykłe i Verbatim literały ciągu  
+ Należy używać zwykłych literałów ciągów, gdy trzeba osadzić znaki ucieczki C#dostarczone przez, jak pokazano w poniższym przykładzie:  
   
  [!code-csharp[csProgGuideStrings#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#3)]  
   
- Na użytek ciągi verbatim zwiększenie wygody działania i zwiększenia czytelności, gdy ciąg tekstu zawiera ukośnik odwrotny znaków, na przykład w ścieżkach plików. Ponieważ ciągi verbatim Zachowaj znaki nowego wiersza, jako część ciąg tekstu, ich może służyć do zainicjowania ciągi wielowierszowe. Aby osadzić znak cudzysłowu wewnątrz ciąg verbatim, należy użyć podwójnego cudzysłowu. Jedne z typowych zastosowań ciągi verbatim można znaleźć w poniższym przykładzie:  
+ Używaj ciągów Verbatim, aby wygodnie i lepsza czytelność, gdy tekst ciągu zawiera znaki ukośnika odwrotnego, na przykład w ścieżkach plików. Ponieważ ciągi Verbatim zachowują znaki nowego wiersza w ramach tekstu ciągu, mogą one służyć do inicjowania ciągów wielowierszowych. Użyj podwójnych cudzysłowów do osadzenia cudzysłowu wewnątrz ciągu Verbatim. W poniższym przykładzie przedstawiono niektóre typowe zastosowania ciągów Verbatim:  
   
  [!code-csharp[csProgGuideStrings#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#4)]  
   
-## <a name="string-escape-sequences"></a>Sekwencje ucieczki w ciągu  
+## <a name="string-escape-sequences"></a>Sekwencje ucieczki ciągów  
   
-|Sekwencja unikowa|Nazwa znaków|Kodowanie Unicode|  
+|Sekwencja ucieczki|Nazwa znaku|Kodowanie Unicode|  
 |---------------------|--------------------|----------------------|  
-|\\'|pojedynczy cudzysłów|0x0027|  
-|\\"|podwójny cudzysłów|0x0022|  
+|\\'|Pojedynczy cytat|0x0027|  
+|\\"|Podwójny cudzysłów|0x0022|  
 |\\\\ |Ukośnik odwrotny|0x005C|  
 |\0|Null|0x0000|  
 |\a|Alerty|0x0007|  
 |\b|Backspace|0x0008|  
-|\f|Wysuw strony|0x000C|  
+|\f|Kanał informacyjny formularza|0x000C|  
 |\n|Nowy wiersz|0x000A|  
-|\r|Powrót karetki|0x000D|  
-|\t|tabulator poziomy|0x0009|  
-|\v|tabulator pionowy|0x000B|  
-|\u|Sekwencja unikowa Unicode (UTF-16)|`\uHHHH` (zakres: 0000 – FFFF; przykład: `\u00E7` = "ç")|  
-|\U|Sekwencja unikowa Unicode (UTF-32)|`\U00HHHHHH` (zakres: 000000 - 10FFFF; example: `\U0001F47D` = "&#x1F47D;")|  
-|\x|Sekwencja unikowa Unicode jest podobny do "\u" z wyjątkiem o zmiennej długości|`\xH[H][H][H]` (zakres: 0 – FFFF; przykład: `\x00E7` lub `\x0E7` lub `\xE7` = "ç")|  
+|\r|Znak powrotu karetki|0x000D|  
+|\t|Tabulator poziomy|0x0009|  
+|\v|Tabulator pionowy|0x000B|  
+|\u|Sekwencja unikowa Unicode (UTF-16)|`\uHHHH`zakresu 0000 — FFFF; przykład: `\u00E7` = "ç")|  
+|\U|Sekwencja unikowa Unicode (UTF-32)|`\U00HHHHHH`zakresu 000000 — 10FFFF; przykład: `\U0001F47D` = "&#x1F47D;")|  
+|\x|Sekwencja unikowa Unicode podobna do "\u" z wyjątkiem zmiennej długości|`\xH[H][H][H]`zakresu 0 — FFFF; przykład: `\x00E7` or `\x0E7` lub `\xE7` = "ç")|  
   
 > [!WARNING]
->  Korzystając z `\x` ucieczki sekwencji i określenie mniej niż 4 cyfr szesnastkowych, jeśli znaki, które znajdują się bezpośrednio po sekwencji unikowej prawidłowych cyfr szesnastkowych (czyli 0-9, A-F i a-f), będą one interpretowane jako części sekwencji unikowej. Na przykład `\xA1` tworzy "&#161;", który jest punkt kodowy 00A1 U +. Jednak jeśli następny znak to "A" lub "a", następnie sekwencja unikowa będzie zamiast tego interpretowana jako `\xA1A` i generować "&#x0A1A;", który jest punkt kodowy 0A1A U +. W takich przypadkach, określając wszystkie 4 cyfr szesnastkowych (np. `\x00A1` ) będzie zapobiec błędnej możliwe.  
+>  Przy użyciu `\x` sekwencji unikowej i określania mniej niż 4 cyfry szesnastkowe, jeśli znaki, które bezpośrednio podążają za sekwencją ucieczki, są prawidłowymi cyframi szesnastkowymi (tj. 0-9, a-f i a-f), będą interpretowane jako część sekwencji ucieczki. Na przykład `\xA1` tworzy "&#161;", który jest punktem kodu U + 00A1. Jeśli jednak następny znak to "a" lub "a", wówczas sekwencja ucieczki będzie interpretowana jako `\xA1A` "&#x0A1A;", która jest punktem kodu U + 0A1A. W takich przypadkach, określenie wszystkich 4 cyfr szesnastkowych (np `\x00A1` .) uniemożliwi wszelkie możliwe Błędne interpretacje.  
   
 > [!NOTE]
->  W czasie kompilacji ciągi verbatim są konwertowane na zwykłe ciągi przy użyciu tych samych sekwencje ucieczki. W związku z tym jeśli ciąg verbatim można wyświetlić w oknie czujki debugera, zobaczysz znaki ucieczki, które zostały dodane przez kompilator nie verbatim wersji z kodu źródłowego. Na przykład ciąg verbatim `@"C:\files.txt"` będą wyświetlane w oknie czujki jako "C:\\\files.txt".  
+>  W czasie kompilacji ciągi Verbatim są konwertowane na zwykłe ciągi ze wszystkimi tymi samymi sekwencjami ucieczki. W związku z tym, jeśli w oknie Czujka debugera zostanie wyświetlony ciąg Verbatim, zobaczysz znaki ucieczki, które zostały dodane przez kompilator, a nie wersję Verbatim z kodu źródłowego. Na przykład ciąg `@"C:\files.txt"` Verbatim pojawi się w oknie czujki jako "C:\\\files.txt".  
   
 ## <a name="format-strings"></a>Ciągi formatujące  
- Ciąg formatu to ciąg, w których zawartość jest określany dynamicznie w czasie wykonywania. Ciągi formatu są tworzone przez osadzanie *wyrażeń interpolowanych* lub symbole zastępcze w nawiasach klamrowych wewnątrz ciągu. Wszystko wewnątrz nawiasów klamrowych (`{...}`) zostanie rozpoznana jako wartość i dane wyjściowe jako sformatowany ciąg w czasie wykonywania. Istnieją dwie metody tworzenia ciągów formatu: ciąg interpolowania i formatowania złożonego.
+ Ciąg formatu jest ciągiem, którego zawartość jest określana dynamicznie w czasie wykonywania. Ciągi formatu są tworzone przez osadzanie *wyrażeń interpolowanych* lub symboli zastępczych wewnątrz nawiasów klamrowych w ciągu. Wszystkie elementy wewnątrz nawiasów klamrowych (`{...}`) zostaną rozpoznane jako ciąg sformatowany w czasie wykonywania. Istnieją dwie metody tworzenia ciągów formatowania: Interpolacja ciągów i formatowanie złożone.
 
 ### <a name="string-interpolation"></a>Interpolacja ciągów
-Dostępne w C# 6.0 lub nowszym, [ *ciągi interpolowane* ](../../language-reference/tokens/interpolated.md) są identyfikowane za pomocą `$` specjalne znaków i zawierać wyrażenia interpolowane w nawiasach klamrowych. Jeśli jesteś nowym użytkownikiem Interpolacja ciągów, zobacz [Interpolacja - ciągów C# interaktywny samouczek dotyczący](../../tutorials/exploration/interpolated-strings.yml) Aby uzyskać szybki przegląd.
+Dostępne w C# 6,0 i nowszych, [interpolowane ciągi](../../language-reference/tokens/interpolated.md) są `$` identyfikowane przez znak specjalny i zawierają interpolowane wyrażenia w nawiasach klamrowych. Jeśli dopiero zaczynasz interpolację ciągów, zobacz Interpolacja [ciągów — C# Interaktywny samouczek](../../tutorials/exploration/interpolated-strings.yml) , aby zapoznać się z krótkim omówieniem.
 
-Użyj Interpolacja ciągów, aby zwiększyć czytelność i łatwości utrzymania kodu. Interpolacja ciągów osiąga te same wyniki `String.Format` metody, ale zwiększa łatwość użycia i opcji wbudowanej przejrzystości.
+Używaj interpolacji ciągów, aby zwiększyć czytelność i łatwość utrzymania kodu. Interpolacja ciągów osiąga te same wyniki co `String.Format` Metoda, ale poprawia łatwość użycia i inline.
 
 [!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringInterpolation)]
 
 ### <a name="composite-formatting"></a>Złożone formatowanie
-<xref:System.String.Format%2A?displayProperty=nameWithType> Wykorzystuje symbole zastępcze w nawiasach klamrowych, aby utworzyć ciąg formatu. W tym przykładzie powoduje dane wyjściowe podobne do metody interpolacji ciągu powyżej.
+Symbole <xref:System.String.Format%2A?displayProperty=nameWithType> zastępcze wykorzystują w nawiasach klamrowych, aby utworzyć ciąg formatu. Ten przykład skutkuje podobnym wyjściem do metody interpolacji ciągów użytej powyżej.
   
 [!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringFormat)]
 
-Aby uzyskać więcej informacji na temat formatowania typów .NET, zobacz [typy formatowania na platformie .NET](../../../standard/base-types/formatting-types.md).
+Aby uzyskać więcej informacji na temat formatowania typów .NET, zobacz [Typy formatowania na platformie .NET](../../../standard/base-types/formatting-types.md).
   
 ## <a name="substrings"></a>Podciągów  
- Podciąg jest dowolną sekwencję znaków, który znajduje się w ciągu. Użyj <xref:System.String.Substring%2A> metodę, aby utworzyć nowy ciąg z części oryginalny ciąg. Jedno lub więcej wystąpień podciągu można wyszukiwać za pomocą <xref:System.String.IndexOf%2A> metody. Użyj <xref:System.String.Replace%2A> metodę, aby zastąpić wszystkie wystąpienia określony podciąg nowy ciąg. Podobnie jak <xref:System.String.Substring%2A> metody <xref:System.String.Replace%2A> rzeczywistości zwraca nowy ciąg, a nie zmodyfikuje oryginalny ciąg. Aby uzyskać więcej informacji, zobacz [porady: wyszukiwanie ciągów](../../how-to/search-strings.md) i [jak: Modyfikowanie zawartości ciągu](../../how-to/modify-string-contents.md).  
+ Podciąg to dowolna sekwencja znaków, która jest zawarta w ciągu. Użyj metody <xref:System.String.Substring%2A> , aby utworzyć nowy ciąg z części oryginalnego ciągu. Można wyszukać jedno lub więcej wystąpień podciągu przy użyciu <xref:System.String.IndexOf%2A> metody. Użyj metody <xref:System.String.Replace%2A> , aby zastąpić wszystkie wystąpienia określonego podciągu nowym ciągiem. Podobnie jak <xref:System.String.Replace%2A> Metoda, faktycznie zwraca nowy ciąg i nie modyfikuje pierwotnego ciągu. <xref:System.String.Substring%2A> Aby uzyskać więcej informacji, zobacz [How to: Search String](../../how-to/search-strings.md) and [How to: Modyfikuj zawartość](../../how-to/modify-string-contents.md)ciągu.  
   
  [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
-## <a name="accessing-individual-characters"></a>Uzyskiwanie dostępu do poszczególnych znaków  
- Za pomocą notacji tablicy i wartości indeksu można uzyskać dostęp tylko do odczytu do pojedynczych znaków, jak w poniższym przykładzie:  
+## <a name="accessing-individual-characters"></a>Uzyskiwanie dostępu do pojedynczych znaków  
+ Można użyć notacji Array z wartością indeksu, aby uzyskać dostęp tylko do odczytu do poszczególnych znaków, jak w poniższym przykładzie:  
   
  [!code-csharp[csProgGuideStrings#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#8)]  
   
- Jeśli <xref:System.String> metody nie udostępniają funkcje, które musi mieć, aby zmodyfikować pojedynczych znaków w ciągu, można użyć <xref:System.Text.StringBuilder> obiekt do zmodyfikowania poszczególne znaki "w miejscu", a następnie utwórz nowy ciąg do przechowywania wyników przy użyciu <xref:System.Text.StringBuilder> metody. W poniższym przykładzie przyjmijmy, że należy zmodyfikować oryginalny ciąg w określony sposób, a następnie zapisać wyniki do użycia w przyszłości:  
+ Jeśli metody nie zapewniają funkcjonalności, która musi być modyfikowana przez poszczególne znaki w ciągu, można <xref:System.Text.StringBuilder> użyć obiektu do modyfikacji pojedynczych znaków "w miejscu", a następnie utworzyć nowy ciąg do przechowywania wyników przy użyciu <xref:System.String> <xref:System.Text.StringBuilder> metody. W poniższym przykładzie Załóżmy, że należy zmodyfikować oryginalny ciąg w określony sposób, a następnie zapisać wyniki do użycia w przyszłości:  
   
  [!code-csharp[csProgGuideStrings#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#27)]  
   
-## <a name="null-strings-and-empty-strings"></a>Ciągi zerowe i puste ciągi  
- Pusty ciąg jest wystąpieniem <xref:System.String?displayProperty=nameWithType> obiekt, który zawiera zero znaków. Puste ciągi są często używane w różnych scenariuszach programowania do reprezentowania pole tekstowe puste. Można wywoływać metody dla pustych ciągów, ponieważ są one prawidłowe <xref:System.String?displayProperty=nameWithType> obiektów. Puste ciągi są inicjowane w następujący sposób:  
+## <a name="null-strings-and-empty-strings"></a>Ciągi o wartości null i puste ciągi  
+ Pusty ciąg jest wystąpieniem <xref:System.String?displayProperty=nameWithType> obiektu, który zawiera znaki zerowe. Puste ciągi są często używane w różnych scenariuszach programistycznych do reprezentowania pustego pola tekstowego. Możesz wywoływać metody dla pustych ciągów, ponieważ są <xref:System.String?displayProperty=nameWithType> one prawidłowymi obiektami. Puste ciągi są inicjowane w następujący sposób:  
   
 ```  
 string s = String.Empty;  
 ```  
   
- Z drugiej strony, pusty ciąg nie odwołuje się do wystąpienia <xref:System.String?displayProperty=nameWithType> obiekt i wszystkie próby wywołania metody wobec ciągiem o wartości null powoduje, że <xref:System.NullReferenceException>. Jednak można użyć ciągów o wartości null w operacji porównywania i łączenia z innymi ciągami. W poniższych przykładach pokazano niektóre przypadki, w których jest odwołanie do pusty ciąg, a nie powoduje zgłoszenie wyjątku:  
+ Z kolei ciąg o wartości null nie odwołuje się do wystąpienia <xref:System.String?displayProperty=nameWithType> obiektu, a jakakolwiek próba wywołania metody dla ciągu o wartości null <xref:System.NullReferenceException>powoduje. Można jednak używać ciągów o wartości null w operacjach łączenia i porównywania z innymi ciągami. Poniższe przykłady ilustrują niektóre przypadki, w których odwołanie do ciągu o wartości null i nie powoduje zgłoszenia wyjątku:  
   
  [!code-csharp[csProgGuideStrings#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#20)]  
   
-## <a name="using-stringbuilder-for-fast-string-creation"></a>Używanie StringBuilder do tworzenia szybkich ciągu  
- Operacje na ciągach w programie .NET wysoce zoptymalizowane i w większości przypadków nie znacznie wpłynąć na wydajność. Jednak w niektórych scenariuszach, takich jak ścisłej pętli, które są wykonywane wiele setki lub tysiące razy, operacje na ciągach może wpłynąć na wydajność. <xref:System.Text.StringBuilder> Klasy tworzy buforu ciągu, który oferuje lepszą wydajność, jeśli program wykonuje wiele działań na ciągach. <xref:System.Text.StringBuilder> Ciągu umożliwia także ponowne przypisywanie poszczególnych znaków coś wbudowanych ciągu nie obsługuje typu danych. Ten kod, na przykład zmiany zawartości ciągu bez tworzenia nowego ciągu:  
+## <a name="using-stringbuilder-for-fast-string-creation"></a>Używanie elementu StringBuilder do szybkiego tworzenia ciągów  
+ Operacje na ciągach w programie .NET są wysoce zoptymalizowane i w większości przypadków nie mają znaczącego wpływu na wydajność. Jednak w niektórych scenariuszach, takich jak ścisłe pętle wykonujące wiele setek lub tysięcy razy, operacje na ciągach mogą mieć wpływ na wydajność. <xref:System.Text.StringBuilder> Klasa tworzy bufor ciągów, który zapewnia lepszą wydajność, jeśli program wykonuje wiele operacji manipulowania ciągami. Ten <xref:System.Text.StringBuilder> ciąg umożliwia również ponowne przypisanie pojedynczych znaków, co nie jest obsługiwane w przypadku typu danych, który jest wbudowany. Ten kod, na przykład, zmienia zawartość ciągu bez tworzenia nowego ciągu:  
   
  [!code-csharp[csProgGuideStrings#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#15)]  
   
@@ -124,24 +124,24 @@ string s = String.Empty;
   
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
-## <a name="strings-extension-methods-and-linq"></a>Ciągi i metod rozszerzeń LINQ  
- Ponieważ <xref:System.String> typ implementuje <xref:System.Collections.Generic.IEnumerable%601>, można użyć metody rozszerzenia zdefiniowane w <xref:System.Linq.Enumerable> klasy na ciągi. Aby uniknąć zaśmiecania visual, te metody są wykluczane z technologii IntelliSense dla <xref:System.String> typu, ale są jednak dostępne. Można również użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeniach dla ciągów zapytań. Aby uzyskać więcej informacji, zobacz [LINQ i ciągi](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  
+## <a name="strings-extension-methods-and-linq"></a>Ciągi, metody rozszerzające i LINQ  
+ Ponieważ typ implementuje <xref:System.Collections.Generic.IEnumerable%601>, można użyć metod <xref:System.Linq.Enumerable> rozszerzających zdefiniowanych w klasie w ciągach. <xref:System.String> Aby uniknąć bałaganu wizualnego, te metody są wykluczone z <xref:System.String> IntelliSense dla typu, ale są one dostępne. Można również użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeń zapytania dla ciągów. Aby uzyskać więcej informacji, zobacz [LINQ i ciągi](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Instrukcje: Modyfikowanie zawartości ciągu](../../how-to/modify-string-contents.md)|Ilustruje techniki Przekształcanie ciągów i modyfikowania zawartości ciągów.|  
-|[Instrukcje: Porównywanie ciągów](../../how-to/compare-strings.md)|Pokazuje, jak przeprowadzić porządkowe i kultury określonej porównania ciągów.|  
-|[Instrukcje: Łączenie wielu ciągów](../../how-to/concatenate-multiple-strings.md)|Ilustruje różne sposoby, aby dołączyć wielu ciągów w jeden.|
-|[Instrukcje: Analizowanie ciągów za pomocą funkcji String.Split](../../how-to/parse-strings-using-split.md)|Zawiera przykłady kodu, które ilustrują sposób korzystania `String.Split` metodę, aby przeanalizować ciągi.|  
-|[Instrukcje: Wyszukiwanie ciągów](../../how-to/search-strings.md)|Opis sposobu użycia wyszukać określony tekst lub wzorców w ciągach.|  
-|[Instrukcje: Określanie, czy ciąg reprezentuje wartość numeryczną](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak bezpiecznie przeanalizować składni ciągu, aby zobaczyć, czy ma prawidłową wartość liczbową.|  
-|[Interpolacja ciągów](../../language-reference/tokens/interpolated.md)|Zawiera opis funkcji interpolacji ciągu, która udostępnia wygodne Składnia na ciągi formatu.|
-|[Podstawowe operacje na ciągach](../../../../docs/standard/base-types/basic-string-operations.md)|Zawiera łącza do tematów, które używają <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> metody, aby wykonywać podstawowe operacje na ciągach.|  
-|[Analizowanie ciągów](../../../standard/base-types/parsing-strings.md)|W tym artykule opisano sposób konwertowania ciągów reprezentujących podstawowych typów .NET do wystąpień odpowiednie typy.|  
-|[Analizowanie ciągów daty i godziny na platformie .NET](../../../standard/base-types/parsing-datetime.md)|Pokazuje, jak przekonwertować ciąg, taki jak "01/24/2008" Aby <xref:System.DateTime?displayProperty=nameWithType> obiektu.|  
-|[Porównywanie ciągów](../../../../docs/standard/base-types/comparing.md)|Zawiera informacje na temat sposobu porównywania ciągów i zawiera przykłady w języku C# i Visual Basic.|  
-|[Używanie klasy StringBuilder](../../../standard/base-types/stringbuilder.md)|W tym artykule opisano sposób tworzenia i modyfikowania obiektów dynamicznych parametrów przy użyciu <xref:System.Text.StringBuilder> klasy.|  
-|[LINQ i ciągi](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Zawiera informacje dotyczące sposobu wykonywania różnych operacji na ciągach przy użyciu zapytań LINQ.|  
-|[Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)|Zawiera łącza do tematów, które opisują konstrukcje programowania w języku C#.|  
+|[Instrukcje: Modyfikuj zawartość ciągu](../../how-to/modify-string-contents.md)|Ilustruje techniki przekształcania ciągów i modyfikowania zawartości ciągów.|  
+|[Instrukcje: Porównaj ciągi](../../how-to/compare-strings.md)|Pokazuje, w jaki sposób wykonywać porównania ciągów liczbowych i kulturowych.|  
+|[Instrukcje: Łączenie wielu ciągów](../../how-to/concatenate-multiple-strings.md)|Ilustruje różne sposoby sprzęgania wielu ciągów w jeden.|
+|[Instrukcje: Analizowanie ciągów za pomocą ciągu. Split](../../how-to/parse-strings-using-split.md)|Zawiera przykłady kodu, które ilustrują sposób użycia `String.Split` metody do analizowania ciągów.|  
+|[Instrukcje: Ciągi wyszukiwania](../../how-to/search-strings.md)|Wyjaśnia, jak używać wyszukiwania określonego tekstu lub wzorców w ciągach.|  
+|[Instrukcje: Określanie, czy ciąg reprezentuje wartość liczbową](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak bezpiecznie analizować ciąg, aby sprawdzić, czy ma prawidłową wartość liczbową.|  
+|[Interpolacja ciągów](../../language-reference/tokens/interpolated.md)|Opisuje funkcję interpolacji ciągów, która zapewnia wygodną składnię do formatowania ciągów.|
+|[Podstawowe operacje na ciągach](../../../../docs/standard/base-types/basic-string-operations.md)|Zawiera łącza do tematów, które <xref:System.String?displayProperty=nameWithType> używają <xref:System.Text.StringBuilder?displayProperty=nameWithType> metod i do wykonywania podstawowych operacji na ciągach.|  
+|[Analizowanie ciągów](../../../standard/base-types/parsing-strings.md)|W tym artykule opisano sposób konwertowania reprezentacji ciągów typów podstawowych na wystąpienia odpowiednich typów.|  
+|[Analizowanie ciągów daty i godziny w programie .NET](../../../standard/base-types/parsing-datetime.md)|Pokazuje, jak przekonwertować ciąg, taki jak "01/24/2008", na <xref:System.DateTime?displayProperty=nameWithType> obiekt.|  
+|[Porównywanie ciągów](../../../../docs/standard/base-types/comparing.md)|Zawiera informacje o sposobach porównywania ciągów i zawiera przykłady C# w i Visual Basic.|  
+|[Używanie klasy StringBuilder](../../../standard/base-types/stringbuilder.md)|Opisuje sposób tworzenia i modyfikowania dynamicznych obiektów ciągów przy użyciu <xref:System.Text.StringBuilder> klasy.|  
+|[LINQ i ciągi](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Zawiera informacje o sposobach wykonywania różnych operacji na ciągach przy użyciu zapytań LINQ.|  
+|[Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)|Zawiera łącza do tematów, które wyjaśniają konstrukcje C#programistyczne w programie.|  

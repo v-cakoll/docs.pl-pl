@@ -4,10 +4,10 @@ description: Dowiedz się więcej na temat definiowania typów i deklarowania zm
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
 ms.openlocfilehash: f06894d986973e4394b0586906d67ef41a9d9152
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "67661068"
 ---
 # <a name="types-and-variables"></a>Typy i zmienne
@@ -79,7 +79,7 @@ C#obsługuje tablice pojedynczych i wielowymiarowych dowolnego typu. W przeciwie
 
 Nie trzeba również deklarować typów wartości null, aby można było ich używać. Dla każdego typu `T` wartości niedopuszczających wartości null istnieje odpowiedni typ `T?`wartości null, który może `null`zawierać dodatkową wartość. Na przykład `int?` jest typem, który może zawierać dowolną 32-bitową liczbę całkowitą lub wartość `null`.
 
-C#System typów jest jednorodny, aby wartość dowolnego typu mogła być traktowana jako `object`. Każdy typ C# bezpośrednio lub pośrednio pochodzi od `object` typu klasy i `object` jest ostateczną klasą bazową wszystkich typów. Wartości typów referencyjnych są traktowane jako obiekty, po prostu wyświetlając wartości jako typ `object`. Wartości typów wartości są traktowane jako obiekty *przez wykonywanie* *operacji pakowania*i rozpakowywania. W poniższym przykładzie `int` wartość jest konwertowana na `object` i z powrotem do `int`.
+C#System typów jest jednorodny, aby wartość dowolnego typu mogła być traktowana jako `object`. Każdy typ C# bezpośrednio lub pośrednio pochodzi od `object` typu klasy i `object` jest ostateczną klasą bazową wszystkich typów. Wartości typów referencyjnych są traktowane jako obiekty, po prostu wyświetlając wartości jako typ `object`. Wartości typów wartości są traktowane jako obiekty przez wykonywanie *operacji pakowania*i rozpakowywania. W poniższym przykładzie `int` wartość jest konwertowana na `object` i z powrotem do `int`.
 
 [!code-csharp[Boxing](../../../samples/snippets/csharp/tour/types-and-variables/Program.cs#L1-L10)]
 

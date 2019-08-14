@@ -2,21 +2,21 @@
 title: 'Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 07fb81b474bd967d73dc9ff6a08e0c67e6ec0122
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0bc212ab40bccf5612ef6dea85608c439d2105f4
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585794"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012941"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (C#)
-Ten przykład przedstawia sposób wykonywania obliczeń agregacji, takich jak Suma, średnia, minimum i maksimum dla kolumn w pliku CSV. Zasady przykładu, które przedstawiono poniżej mogą dotyczyć innych typów strukturalnych tekstu.  
+Ten przykład pokazuje, jak wykonywać obliczenia zagregowane, takie jak sum, Average, min i Max w kolumnach pliku CSV. Przykładowe zasady, które są wyświetlane w tym miejscu, można zastosować do innych typów tekstu strukturalnego.  
   
-### <a name="to-create-the-source-file"></a>Aby utworzyć plik źródłowy  
+## <a name="to-create-the-source-file"></a>Aby utworzyć plik źródłowy  
   
-1. Skopiuj następujące wiersze do pliku, który nosi nazwę scores.csv i zapisz go w folderze projektu. Załóżmy, że pierwsza kolumna reprezentuje identyfikator dla uczniów, a kolejne kolumny reprezentują wyniki z czterech egzaminy.  
+1. Skopiuj następujące wiersze do pliku o nazwie Scores. csv i Zapisz go w folderze projektu. Załóżmy, że pierwsza kolumna reprezentuje identyfikator ucznia, a kolejne kolumny przedstawiają wyniki z czterech egzaminów.  
   
-    ```  
+    ```csv
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -156,10 +156,10 @@ class SumColumns
  */  
 ```  
   
- Zapytanie działa, korzystając z <xref:System.String.Split%2A> metodę, aby przekonwertować każdego wiersza tekstu do tablicy. Każdy element tablicy reprezentuje kolumnę. Na koniec tekstu w każdej kolumnie jest konwertowana na jego reprezentację liczbową. Jeśli plik jest plikiem rozdzielane znakami tabulacji, wystarczy zaktualizować argumentu w `Split` metody `\t`.  
+ Zapytanie działa przy użyciu <xref:System.String.Split%2A> metody, aby przekonwertować każdy wiersz tekstu na tablicę. Każdy element tablicy reprezentuje kolumnę. Na koniec tekst w każdej kolumnie jest konwertowany na jego reprezentację liczbową. Jeśli plik jest plikiem rozdzielanym tabulatorami, po prostu zaktualizuj argument w `Split` metodzie do. `\t`  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie C# konsoli projekt aplikacji z `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
+ Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.  
   
 ## <a name="see-also"></a>Zobacz także
 

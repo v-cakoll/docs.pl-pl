@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 07/25/2019
-ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 477aecec4381f26e505e88f7df38f68a85e8f70d
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733372"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012841"
 ---
 # <a name="whats-new-in-net-core-30-preview-7"></a>Co nowego w programie .NET Core 3,0 (wersja zapoznawcza 7)
 
@@ -159,7 +159,7 @@ Aby uzyskać więcej informacji na temat narzędzia konsolidatora IL, zapoznaj s
 
 [Kompilacja warstwowa](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC) jest domyślnie włączona z platformą .NET Core 3,0. Ta funkcja umożliwia środowisku uruchomieniowemu wydajniejsze używanie kompilatora just-in-Time (JIT) w celu uzyskania lepszej wydajności.
 
-Główną zaletą TC jest umożliwienie (ponownej) jitting metod z wolniejszym, ale szybszym użyciem kodu lub wyższej jakości, aby utworzyć kod. Pozwala to zwiększyć wydajność aplikacji, która przechodzi przez różne etapy wykonywania, od uruchamiania do stanu stałego. Jest to kontrast z podejściem innym niż TC, gdzie każda metoda jest skompilowana w jeden sposób (taka sama jak warstwa wysokiej jakości), która jest obciążona niestabilnym stanem w porównaniu z wydajnością uruchamiania.
+Główną zaletą TC jest włączenie (re-) metod jitting z niską jakością, ale szybszym lub wyższą warstwą. Pozwala to zwiększyć wydajność aplikacji, która przechodzi przez różne etapy wykonywania, od uruchamiania do stanu stałego. Jest to kontrast z podejściem innym niż TC, gdzie każda metoda jest skompilowana w jeden sposób (taka sama jak warstwa wysokiej jakości), która jest obciążona niestabilnym stanem w porównaniu z wydajnością uruchamiania.
 
 Aby włączyć funkcję szybkiego JIT (kod 0 trybie JIT), użyj tego ustawienia w pliku projektu:
 
@@ -305,7 +305,7 @@ Możliwe `highDpiMode` wartości wyrażone <xref:System.Windows.Forms.HighDpiMod
 
 Aby uzyskać więcej informacji na temat trybów wysokiej rozdzielczości DPI, zobacz [Tworzenie aplikacji klasycznych o wysokiej rozdzielczości DPI w systemie Windows](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).
 
-### <a name="ranges-and-indices"></a>Zakresy i indeksy
+## <a name="ranges-and-indices"></a>Zakresy i indeksy
 
 Nowy <xref:System.Index?displayProperty=nameWithType> typ może służyć do indeksowania. Można utworzyć jedną z nich na `int` podstawie liczby od początku lub z operatorem prefiksu `^` (C#), który liczy się od końca:
 
@@ -324,7 +324,7 @@ var slice = a[i1..i2]; // { 3, 4, 5 }
 
 Aby uzyskać więcej informacji, zobacz [Samouczek dotyczący zakresów i indeksów](../../csharp/tutorials/ranges-indexes.md).
 
-### <a name="async-streams"></a>Strumienie asynchroniczne
+## <a name="async-streams"></a>Strumienie asynchroniczne
 
 Typ jest nową wersją asynchroniczną programu <xref:System.Collections.Generic.IEnumerable%601>. <xref:System.Collections.Generic.IAsyncEnumerable%601> Język pozwala `await foreach` `IAsyncEnumerable<T>` na korzystanie z ich elementów i używanie `yield return` ich do tworzenia elementów.
 
@@ -372,7 +372,7 @@ Odnosi się do `scaleB` operacji IEEE, która przyjmuje wartość całkowitą, k
 Odpowiada operacji `log2` IEEE, Zwraca logarytm o podstawie 2. Minimalizuje błąd zaokrąglania.
 
 * <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-Odnosi się do `fma` operacji IEEE, dlatego wykonuje odrzucane mnożenie dodawania. Oznacza to, `(x * y) + z` że jest to jedyna operacja, czyli przez zminimalizowanie błędu zaokrąglania. Przykładem może być `FusedMultiplyAdd(1e308, 2.0, -1e308)` zwracana wartość `1e308`. Regularne `(1e308 * 2.0) - 1e308` zwroty `double.PositiveInfinity`.
+Odnosi się do `fma` operacji IEEE, dlatego wykonuje odrzucane mnożenie dodawania. Oznacza to, `(x * y) + z` że jest to jedna operacja, a tym samym Minimalizacja błędu zaokrąglania. Przykładem może być `FusedMultiplyAdd(1e308, 2.0, -1e308)` zwracana wartość `1e308`. Regularne `(1e308 * 2.0) - 1e308` zwroty `double.PositiveInfinity`.
 
 * <xref:System.Math.CopySign(System.Double,System.Double)>\
 Odpowiada operacji `x`IEEE, zwraca wartość, `y`ale ze znakiem. `copySign`
@@ -403,17 +403,15 @@ Oto przykład odczytywania za pomocą pliku [**Launch. JSON**](https://github.co
 
 Oto przykładowe użycie `JsonDocument` i `JsonElement` , które może służyć jako punkt początkowy:
 
-Poniżej znajduje się C# przykład 8,0 do odczytu za pomocą pliku [Launch. json](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) utworzonego przez Visual Studio Code:
-
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJson)]
+
+Poniżej znajduje się C# przykład 8,0 do odczytu za pomocą pliku [Launch. json](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) utworzonego przez Visual Studio Code:
 
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJsonCall)]
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
-<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType>jest zbudowany w oparciu o <xref:System.Text.Json.Utf8JsonReader> i <xref:System.Text.Json.Utf8JsonWriter> , aby zapewnić szybką opcję serializacji o niskiej pamięci podczas pracy z dokumentami i fragmentami JSON.
-
-Badanie: https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md aby zapoznać się z przykładem dotyczącym portu do tego artykułu
+<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType>jest zbudowany w oparciu <xref:System.Text.Json.Utf8JsonReader> o i <xref:System.Text.Json.Utf8JsonWriter> , aby zapewnić szybką, niską pamięć opcji serializacji podczas pracy z dokumentami i fragmentami JSON.
 
 Oto przykład serializacji obiektu do formatu JSON:
 

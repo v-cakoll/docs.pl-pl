@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 153df821b0dacccdcbf279bd20bfb106580f3392
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 37dda10a3dcbcb0968674e04292c5dc1a79be66f
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733422"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69013004"
 ---
 # <a name="compiling-an-interop-project"></a>Kompilowanie projektu międzyoperacyjnego
 
@@ -44,6 +44,6 @@ Projekty międzyoperacyjności modelu COM, które odwołują się do co najmniej
 - [Udostępnianie składników COM programowi .NET Framework](exposing-com-components.md)
 - [Niezależność od języka i składniki niezależne od języka](../../standard/language-independence-and-language-independent-components.md)
 - [Używanie typów COM w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [Przewodnik: Osadzanie typów z zestawów zarządzanych w programie Visual StudioC#()](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [Przewodnik: Osadzanie typów z zestawów zarządzanych w programie Visual Studio (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [Przewodnik: Osadzanie typów z zestawów zarządzanych w programie Visual StudioC#()](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [Przewodnik: Osadzanie typów z zestawów zarządzanych w programie Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)

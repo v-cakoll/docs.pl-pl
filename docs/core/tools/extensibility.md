@@ -3,12 +3,12 @@ title: Interfejs wiersza polecenia platformy .NET Core model rozszerzalności
 description: Dowiedz się, jak można rozłożyć narzędzia interfejsu wiersza polecenia (CLI).
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 784eb50dfdbc0f88050a9f727ddbf53db34d3209
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 400d47f9d5bca53a23d09eb4eb94519f9824b473
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331007"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012984"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Model rozszerzalności narzędzi interfejs wiersza polecenia platformy .NET Core
 
@@ -44,7 +44,7 @@ Używanie tych narzędzi wymaga dodania `<DotNetCliToolReference>` elementu do p
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-W przypadku narzędzi, które wymagają załadowania danych wyjściowych kompilacji projektu do wykonania, zazwyczaj istnieje inna zależność, która jest wymieniona w ramach zwykłych zależności w pliku projektu. Ponieważ interfejs wiersza polecenia używa programu MSBuild jako aparatu kompilacji, zalecamy, aby te części narzędzia były zapisywane jako niestandardowe [elementy docelowe](/visualstudio/msbuild/msbuild-targets) i [zadania](/visualstudio/msbuild/msbuild-tasks)programu MSBuild, ponieważ mogą one następnie wziąć udział w ogólnym procesie kompilacji. Ponadto mogą łatwo uzyskać wszystkie dane, które są tworzone przez kompilację, takie jak lokalizacja plików wyjściowych, Bieżąca konfiguracja utworzona itp. Wszystkie te informacje staną się zestawem właściwości programu MSBuild, które mogą być odczytywane z dowolnego celu. Aby dowiedzieć się, jak dodać niestandardowy obiekt docelowy przy użyciu narzędzia NuGet w dalszej części tego dokumentu.
+W przypadku narzędzi, które wymagają załadowania danych wyjściowych kompilacji projektu do wykonania, zazwyczaj istnieje inna zależność, która jest wymieniona w ramach zwykłych zależności w pliku projektu. Ponieważ interfejs wiersza polecenia używa programu MSBuild jako aparatu kompilacji, zalecamy, aby te części narzędzia były zapisywane jako niestandardowe [elementy docelowe](/visualstudio/msbuild/msbuild-targets) i [zadania](/visualstudio/msbuild/msbuild-tasks)programu MSBuild, ponieważ mogą one następnie wziąć udział w ogólnym procesie kompilacji. Ponadto mogą łatwo uzyskać wszystkie dane, które są tworzone przez kompilację, takie jak lokalizacja plików wyjściowych, Bieżąca konfiguracja utworzona i tak dalej. Wszystkie te informacje staną się zestawem właściwości programu MSBuild, które mogą być odczytywane z dowolnego celu. Aby dowiedzieć się, jak dodać niestandardowy obiekt docelowy przy użyciu narzędzia NuGet w dalszej części tego dokumentu.
 
 Zapoznajmy się z przykładem dodawania prostych narzędzi tylko do prostej części projektu. Po wywołaniu `dotnet-api-search` przykładowego polecenia, które umożliwia przeszukanie pakietów NuGet dla określonego interfejsu API, Oto plik projektu aplikacji konsolowej, który używa tego narzędzia:
 
@@ -79,7 +79,8 @@ W [repozytorium interfejs wiersza polecenia platformy .NET Core](https://github.
 Możesz również zobaczyć implementację [narzędzi używanych](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) w tym samym repozytorium.
 
 ## <a name="custom-targets"></a>Niestandardowe elementy docelowe
-Pakiet NuGet ma możliwość [spakowania niestandardowych obiektów docelowych programu MSBuild i plików props](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Dzięki przenoszeniu narzędzi interfejs wiersza polecenia platformy .NET Core do korzystania z programu MSBuild ten sam mechanizm rozszerzania ma teraz zastosowanie do projektów .NET Core. Tego typu rozszerzalność należy użyć, gdy chcesz rozszerzać proces kompilacji lub Kiedy chcesz uzyskać dostęp do dowolnego artefaktu w procesie kompilacji, na przykład wygenerowanych plików, lub chcesz sprawdzić konfigurację, w której jest wywoływana kompilacja. itd.
+
+Pakiet NuGet ma możliwość [spakowania niestandardowych obiektów docelowych programu MSBuild i plików props](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package). Dzięki przenoszeniu narzędzi interfejs wiersza polecenia platformy .NET Core do korzystania z programu MSBuild ten sam mechanizm rozszerzania ma teraz zastosowanie do projektów .NET Core. Tego typu rozszerzalność należy użyć, gdy chcesz rozszerzać proces kompilacji lub Kiedy chcesz uzyskać dostęp do dowolnego artefaktu w procesie kompilacji, na przykład wygenerowanych plików, lub chcesz sprawdzić konfigurację, w której jest wywoływana kompilacja. itd.
 
 W poniższym przykładzie można zobaczyć docelowy plik projektu przy użyciu `csproj` składni. Powoduje [`dotnet pack`](dotnet-pack.md) to nadanie polecenia co do pakowania, umieszczenia plików docelowych oraz zestawów w folderze *kompilacji* wewnątrz pakietu. Zwróć uwagę `<ItemGroup>` na element, który `Label` ma właściwość ustawioną na `dotnet pack instructions`i element docelowy zdefiniowany poniżej.
 

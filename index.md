@@ -6,12 +6,12 @@ title: Dokumentacja platformy .NET
 description: Dowiedz się, jak używać platformy .NET do tworzenia różnych aplikacji na dowolnej platformie w języku C#, Visual Basic i F#. Przeglądaj dokumentację dotyczącą interfejsu API, przykładowy kod, samouczki i inne zasoby.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 7cf46b0c4d88b7657a5c82c7aa0ae30655c9d5ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a6f6bc91a3055ffd0efe9f6b89ba0499921ed1d4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589989"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972384"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -309,7 +309,7 @@ ms.locfileid: "65589989"
                                 </a>
                             </li>
                             <li>
-                                <a href="/aspnet/overview">
+                                <a href="/aspnet/core/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -319,8 +319,8 @@ ms.locfileid: "65589989"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Co to jest ASP.NET?</h3>
-                                                    <p>Dowiedz się, jak tworzyć aplikacje internetowe platformy ASP.NET.</p>
+                                                    <h3>Co to jest ASP.NET Core?</h3>
+                                                    <p>Dowiedz się, jak kompilować aplikacje internetowe platformy ASP.NET Core.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -453,7 +453,7 @@ ms.locfileid: "65589989"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">Urządzenia przenośne</a>
+                        <a href="#mobile">Mobilne</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
@@ -515,7 +515,7 @@ ms.locfileid: "65589989"
                         </ul>
                     </li>
                     <li>
-                        <a href="#desktop">Komputer stacjonarny</a>
+                        <a href="#desktop">Aplikacje klasyczne</a>
                         <ul id="desktop" class="cardsC">
                             <li>
                                 <a href="/uwp">

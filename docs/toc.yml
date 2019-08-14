@@ -267,6 +267,14 @@
           href: core/docker/build-container.md
         - name: Narzędzia kontenerów w programie Visual Studio
           href: /visualstudio/containers/overview
+    - name: Narzędzia diagnostyczne
+      items:
+        - name: Omówienie
+          href: core/diagnostics/index.md
+        - name: Debugery zarządzane
+          href: core/diagnostics/managed-debuggers.md
+        - name: Rejestrowanie i śledzenie
+          href: core/diagnostics/logging-tracing.md
     - name: Testowanie jednostkowe
       href: core/testing/index.md
       items:

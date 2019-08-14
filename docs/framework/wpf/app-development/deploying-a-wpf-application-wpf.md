@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 924553bf457a6668143785c78871ebac6e01efa4
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16a0436accfb031ddd0bb413e519d80e550786b4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818028"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972268"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Wdrażanie aplikacji WPF (WPF)
 Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zostać wdrożone. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]a .NET Framework zawierają kilka technologii wdrażania. Technologia wdrażania, która jest używana do wdrażania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, zależy od typu aplikacji. Ten temat zawiera krótkie omówienie poszczególnych technologii wdrażania oraz sposób ich użycia w połączeniu z wymaganiami dotyczącymi wdrożenia poszczególnych [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] typów aplikacji.  
@@ -114,7 +114,7 @@ Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zost
 ## <a name="installing-the-net-framework"></a>Instalowanie programu .NET Framework  
  Aby można było [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uruchomić aplikację, na kliencie musi być zainstalowana platforma Microsoft .NET. Program Internet Explorer automatycznie wykrywa, czy klienci są instalowani z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] .NET Framework, gdy są wyświetlane aplikacje hostowane w przeglądarce. Jeśli .NET Framework nie jest zainstalowana, program Internet Explorer poprosi użytkowników o ich zainstalowanie.  
   
- Aby wykryć, czy .NET Framework jest zainstalowana, program Internet Explorer zawiera aplikację programu inicjującego, która jest zarejestrowana [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] jako procedura obsługi rezerwowej dla plików zawartości z następującymi rozszerzeniami:. XAML,. XPS,. XBAP i. Application. Jeśli przejdziesz do tych typów plików, a .NET Framework nie jest zainstalowana na kliencie, aplikacja inicjująca zażąda uprawnień do jej zainstalowania. Jeśli nie zostanie podane uprawnienie, ani .NET Framework ani aplikacja nie zostanie zainstalowana.  
+ Aby wykryć, czy .NET Framework jest zainstalowana, program Internet Explorer zawiera aplikację programu inicjującego, która jest zarejestrowana jako rezerwowa procedura obsługi rozszerzeń MIME (Multipurpose Internet Mail Extensions) dla plików zawartości z następującymi rozszerzeniami: XAML, XPS,. XBAP i. Application. Jeśli przejdziesz do tych typów plików, a .NET Framework nie jest zainstalowana na kliencie, aplikacja inicjująca zażąda uprawnień do jej zainstalowania. Jeśli nie zostanie podane uprawnienie, ani .NET Framework ani aplikacja nie zostanie zainstalowana.  
   
  W przypadku udzielenia uprawnienia program Internet Explorer pobiera i instaluje .NET Framework przy użyciu Usługa inteligentnego transferu w tle Microsoft (BITS). Po pomyślnej instalacji .NET Framework pierwotnie żądany plik zostanie otwarty w nowym oknie przeglądarki.  
   

@@ -13,57 +13,57 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: 6fa00c4ced8c05d056703560e5740689c6dcfe39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1e58aef6d02b6cf05a126b6afd25ab2a6004002
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981432"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972295"
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Instrukcje: Konfigurowanie w usługach IIS 5.0 oraz IIS 6.0 wdrażania aplikacji WPF
 
-Możesz wdrożyć [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji z większości serwerów sieci Web, tak długo, jak są one skojarzone z odpowiednim [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] typów. Domyślnie [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] skonfigurowano przy użyciu tych [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] typów, ale [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] i [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] nie są.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Aplikację można wdrożyć z większości serwerów sieci Web, o ile są one skonfigurowane przy użyciu odpowiednich typów MIME (Multipurpose Internet Mail Extensions). Domyślnie program [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] jest skonfigurowany przy użyciu tych typów MIME, ale [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] i [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] nie.
 
 W tym temacie opisano sposób konfigurowania [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] i [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] wdrażania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.
 
 > [!NOTE]
-> Możesz sprawdzić *UserAgent* ciągu w rejestrze, aby określić, czy system ma zainstalowane środowisko .NET Framework. Szczegółowe informacje i skrypt, który analizuje *UserAgent* ciągu, aby ustalić, czy .NET Framework jest zainstalowana w systemie, zobacz [wykryć czy .NET Framework 3.0 jest zainstalowana](how-to-detect-whether-the-net-framework-3-0-is-installed.md).
+> Możesz sprawdzić ciąg *UserAgent* w rejestrze, aby określić, czy system ma zainstalowaną .NET Framework. Aby uzyskać szczegółowe informacje i skrypt, który sprawdza ciąg *UserAgent* , aby określić, czy .NET Framework jest zainstalowana w systemie, zobacz [wykrywanie, czy .NET Framework 3,0 jest zainstalowany](how-to-detect-whether-the-net-framework-3-0-is-installed.md).
 
 <a name="content_expiration"></a>
 
-## <a name="adjust-the-content-expiration-setting"></a>Dopasowywanie ustawienia wygaśnięcia zawartości
+## <a name="adjust-the-content-expiration-setting"></a>Dostosuj ustawienie wygaśnięcia zawartości
 
-Należy dostosować ustawienia wygaśnięcia zawartości na 1 minutę. Poniższa procedura przedstawia sposób to [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)].
+Ustawienie wygaśnięcia zawartości należy dostosować do 1 minuty. Poniższa procedura przedstawia, jak to zrobić za pomocą programu [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)].
 
-1. Kliknij przycisk **Start** menu wskaż **narzędzia administracyjne**i kliknij przycisk **Internet Information Services (IIS) Manager**. Można również uruchomić tę aplikację z wiersza poleceń z "% SystemRoot%\system32\inetsrv\iis.msc".
+1. Kliknij menu **Start** , wskaż polecenie **Narzędzia administracyjne**, a następnie kliknij pozycję **Menedżer Internet Information Services (IIS)** . Tę aplikację można również uruchomić z wiersza polecenia z opcją "%SystemRoot%\system32\inetsrv\iis.msc".
 
-2. Rozwiń [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)] drzewa, aż znajdziesz **domyślnej witryny sieci Web** węzła.
+2. Rozwiń drzewo do momentu znalezienia **domyślnego węzła witryny sieci Web.** [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]
 
-3. Kliknij prawym przyciskiem myszy **domyślnej witryny sieci Web** i wybierz **właściwości** z menu kontekstowego.
+3. Kliknij prawym przyciskiem myszy pozycję **Domyślna witryna sieci Web** i wybierz polecenie **Właściwości** z menu kontekstowego.
 
-4. Wybierz **nagłówków HTTP** kartę, a następnie kliknij przycisk "Włącz wygasanie zawartości".
+4. Wybierz kartę **nagłówki HTTP** , a następnie kliknij pozycję "Włącz wygasanie zawartości".
 
-5. Ustaw zawartość wygasa po 1 minutę.
+5. Ustaw, aby zawartość wygaśnie po 1 minucie.
 
 <a name="register_mime_types"></a>
 
-## <a name="register-mime-types-and-file-extensions"></a>Rejestrowanie typów MIME i rozszerzenia plików
+## <a name="register-mime-types-and-file-extensions"></a>Rejestrowanie typów MIME i rozszerzeń plików
 
-Musisz się zarejestrować, kilka [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] typy i rozszerzenia plików, tak, aby przeglądarka w systemie klienta mogą ładować prawidłowe procedury obsługi. Należy dodać następujące typy:
+Należy zarejestrować kilka typów MIME i rozszerzeń plików, dzięki czemu przeglądarka w systemie klienta może załadować poprawną procedurę obsługi. Należy dodać następujące typy:
 
 |Wewnętrzny|Typ MIME|
 |---------------|---------------|
-|Manifest|manifest/aplikacji|
-|.XAML|Aplikacja/xaml + xml|
-|.Application|Application/x-ms aplikacji|
-|XBAP|application/x-ms-xbap|
-|.deploy|application/octet-stream.|
-|XPS|application/vnd.ms-xpsdocument|
+|. manifest|Aplikacja/manifest|
+|. XAML|Application/XAML + XML|
+|. aplikacja|aplikacja/x-MS-Application|
+|. XBAP|aplikacja/x-MS-XBAP|
+|. deploy|Aplikacja/oktet — strumień|
+|. XPS|application/vnd.ms-xpsdocument|
 
 > [!NOTE]
-> Nie trzeba zarejestrować [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] typów lub rozszerzeń plików w systemach klienckich. Są rejestrowane automatycznie po zainstalowaniu programu Microsoft .NET Framework.
+> Nie trzeba rejestrować typów MIME ani rozszerzeń plików w systemach klienckich. Są one rejestrowane automatycznie podczas instalowania Microsoft .NET Framework.
 
-W poniższym przykładzie programu Microsoft Visual Basic Scripting Edition (VBScript) automatycznie dodaje niezbędne [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] typy do [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]. Aby użyć skryptu, skopiuj kod do pliku vbs na serwerze. Następnie uruchom skrypt, uruchamiając plik z wiersza polecenia lub klikając dwukrotnie plik w [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].
+Poniższy przykład Microsoft Visual Basic Scripting Edition (VBScript) automatycznie dodaje wymagane typy MIME do [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]programu. Aby użyć skryptu, skopiuj kod do pliku vbs na serwerze. Następnie uruchom skrypt, uruchamiając plik z wiersza polecenia lub dwukrotnie klikając plik w [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].
 
 ```vb
 ' This script adds the necessary Windows Presentation Foundation MIME types
@@ -126,9 +126,9 @@ End Sub
 ```
 
 > [!NOTE]
-> Uruchomienie tego skryptu wielokrotnie tworzy wiele [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] wpisy w mapy [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] lub [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metabazy.
+> Uruchomienie tego skryptu wiele razy powoduje utworzenie wielu wpisów mapy MIME w [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] metabazie lub [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] .
 
-Po uruchomieniu tego skryptu, mogą nie być wyświetlane dodatkowe [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] typów z [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] lub [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] [!INCLUDE[TLA#tla_mmc](../../../../includes/tlasharptla-mmc-md.md)]. Jednak te [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] typy zostały dodane do [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] lub [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metabazy. Poniższy skrypt spowoduje wyświetlenie wszystkich [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] wpisuje [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] lub [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metabazy.
+Po uruchomieniu tego skryptu mogą nie być widoczne dodatkowe typy MIME z [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] lub. [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] [!INCLUDE[TLA#tla_mmc](../../../../includes/tlasharptla-mmc-md.md)] Jednak te typy MIME zostały dodane do [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] metabazy lub. [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] Poniższy skrypt będzie wyświetlał wszystkie typy MIME w [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] metabazie lub. [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]
 
 ```vb
 ' This script lists the MIME types for an IIS Server.
@@ -147,7 +147,7 @@ For Each mimeMap In allMimeMaps
 Next
 ```
 
-Zapisz skrypt jako `.vbs` pliku (na przykład `DiscoverIISMimeTypes.vbs`) i uruchom go z poziomu wiersza polecenia, używając następującego polecenia:
+Zapisz skrypt jako `.vbs` plik (na `DiscoverIISMimeTypes.vbs`przykład) i uruchom go z wiersza polecenia przy użyciu następującego polecenia:
 
 ```console
 cscript DiscoverIISMimeTypes.vbs

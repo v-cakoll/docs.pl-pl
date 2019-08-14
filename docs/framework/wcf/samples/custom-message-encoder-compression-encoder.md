@@ -2,355 +2,357 @@
 title: 'Niestandardowy koder komunikatów: Koder kompresji'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 32ca96987a86c04c227f8bb0d680f647898dfccf
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 84afb060e98a5936b24c5446ff543fd627864102
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348426"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971996"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Niestandardowy koder komunikatów: Koder kompresji
-Ten przykład demonstruje sposób implementacji niestandardowego kodera, za pomocą platformy Windows Communication Foundation (WCF).  
-  
+
+Ten przykład ilustruje sposób implementacji kodera niestandardowego przy użyciu platformy Windows Communication Foundation (WCF).
+
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
-  
-## <a name="sample-details"></a>Przykład szczegółów  
- W tym przykładzie składa się z (.exe) klienta konsoli programu, (.exe) usługa hostowana samodzielnie konsoli programu i kompresji komunikat kodera biblioteki (.dll). Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź". Kontrakt jest definiowany przez `ISampleServer` interfejs, który ujawnia podstawowe parametry wyświetlania operacji (`Echo` i `BigEcho`). Klient wysyła żądań synchronicznych do danej operacji i odpowiedzi usługi przez powtórzenie komunikatu do klienta. Aktywność klienta i usługi jest widoczna w oknie konsoli. Zamiarem tego przykładu jest pokazują, jak napisać niestandardowy koder i demonstrować wpływ kompresji wiadomości na łączu. Można dodać Instrumentację do kodera komunikatów kompresji, do obliczenia rozmiaru dla wiadomości i/lub czas przetwarzania.  
-  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`
+
+## <a name="sample-details"></a>Przykładowe szczegóły
+
+Ten przykład składa się z programu konsolowego klienta (exe), samodzielnego programu obsługi konsoli usług (exe) i biblioteki kodera komunikatów kompresji (. dll). Usługa implementuje kontrakt definiujący wzorzec komunikacji żądanie-odpowiedź. Kontrakt jest definiowany przez `ISampleServer` interfejs, który ujawnia podstawowe operacje ECHA ciągów (`Echo` i `BigEcho`). Klient wykonuje synchroniczne żądania do danej operacji i odpowiedzi usługi przez powtarzanie komunikatu z powrotem do klienta. Działanie klienta i usługi jest widoczne w oknach konsoli. Celem tego przykładu jest pokazanie sposobu pisania kodera niestandardowego i zademonstrowanie wpływu kompresji wiadomości w sieci. Można dodać instrumentację do kodera komunikatu kompresji, aby obliczyć rozmiar wiadomości, czas przetwarzania lub oba te elementy.
+
 > [!NOTE]
->  W programie .NET Framework 4 dekompresja automatyczna jest ma włączone klienta WCF, jeśli serwer wysyła odpowiedź skompresowany (utworzonych za pomocą algorytmu, takich jak GZip lub Deflate). W przypadku usługi sieci Web hostowanych w Internet Information Server (IIS), usługi IIS można skonfigurować do wysyłania skompresowane odpowiedzi usługi. Można w tym przykładzie, jeśli wymagane jest celu kompresja i Dekompresja zarówno klient, jak i usługi lub usługi jest samodzielnie hostowana.  
-  
- W przykładzie pokazano sposób tworzenia i zintegrować niestandardowy koder komunikatów aplikacji WCF. Biblioteka GZipEncoder.dll jest wdrażana przy użyciu zarówno klient, jak i usługi. Niniejszy przykład pokazuje także wpływ kompresowanie wiadomości. Kod w GZipEncoder.dll pokazuje następujące czynności:  
-  
-- Tworzenie niestandardowego kodera, a koder fabryki.  
-  
-- Tworzenie elementu powiązania dla niestandardowego kodera.  
-  
-- Za pomocą konfiguracji powiązania niestandardowego do integrowania elementy niestandardowego powiązania.  
-  
-- Tworzenie obsługi niestandardowej konfiguracji, który umożliwia skonfigurowanie pliku elementu niestandardowego powiązania.  
-  
- Jak wcześniej wspomniano, istnieje kilka warstw, które są implementowane w niestandardowego kodera. Aby lepiej zilustrować relacji między każdym z tych warstw, uproszczone kolejności zdarzeń dla uruchamiania usługi jest na poniższej liście:  
-  
-1. Serwer jest uruchamiany.  
-  
-2. Informacje o konfiguracji jest do odczytu.  
-  
-    1. Konfiguracja usługi rejestruje obsługi konfiguracji niestandardowej.  
-  
-    2. Host usługi zostanie utworzony i otwarty.  
-  
-    3. Niestandardowy element konfiguracji, tworzy i zwraca element niestandardowego powiązania.  
-  
-    4. Element niestandardowego powiązania, tworzy i zwraca fabrykę koder komunikatu.  
-  
-3. Wiadomość zostaje odebrana.  
-  
-4. Fabryki kodera komunikatów zwraca kodera komunikatów do odczytu w komunikacie i wypisywanie odpowiedzi.  
-  
-5. Warstwa kodera jest implementowany jako fabrykę klas. Fabryka klas kodera musi być publicznie udostępniany dla niestandardowego kodera. Obiekt fabryki jest zwracany przez element powiązania podczas <xref:System.ServiceModel.ServiceHost> lub <xref:System.ServiceModel.ChannelFactory%601> obiekt zostanie utworzony. Kodery komunikat może działać w tryb buforowany lub przesyłania strumieniowego. Niniejszy przykład pokazuje, zarówno w trybie buforowanego, jak i w trybie przesyłania strumieniowego.  
-  
- Dla każdego trybu istnieje towarzyszący `ReadMessage` i `WriteMessage` metody abstrakcyjnej `MessageEncoder` klasy. Większość pracy kodowania odbywa się w tych metodach. Przykład opakowuje istniejący tekst i koderów komunikatu binarnego. Zezwala na przykład delegować odczytu i zapisu o komunikacji sieciowej reprezentacji w postaci wiadomości do wewnętrznego kodera i umożliwia koder kompresji kompresji lub dekompresji wyniki. Ponieważ nie ma żadnych potoku na potrzeby kodowania komunikatu, jest tylko model dla programu WCF za pomocą koderów wielu. Gdy komunikat został zdekompresowany, wynikowy wiadomości są przekazywane stosu stosu kanału do obsługi. Podczas kompresji wynikowy skompresowany wiadomości są zapisywane bezpośrednio z podanego strumienia.  
-  
- W tym przykładzie użyto metody pomocnika (`CompressBuffer` i `DecompressBuffer`) do wykonywania konwersji z buforów do strumieni, aby użyć `GZipStream` klasy.  
-  
- Buforowane `ReadMessage` i `WriteMessage` wprowadzić klasy użytkowania `BufferManager` klasy. Koder jest dostępna wyłącznie za pośrednictwem fabryki kodera. Abstrakcyjna `MessageEncoderFactory` klasy zawiera właściwości o nazwie `Encoder` do uzyskiwania dostępu do bieżącego encoder i metodę o nazwie `CreateSessionEncoder` dla tworzenia koder, który obsługuje sesji. Takie koder może służyć w sytuacji, gdy kanał obsługuje sesji, porządkowania i jest niezawodne. Ten scenariusz umożliwia optymalizacji w każdej sesji dane zapisywane podczas transmisji. Jeśli jest to niepożądane, nie być przeciążone metody podstawowej. `Encoder` Właściwość udostępnia mechanizm do uzyskiwania dostępu do mniej sesji kodera i domyślną implementację elementu `CreateSessionEncoder` metoda zwraca wartość właściwości. Ponieważ próbki opakowuje istniejących koder zapewnienie kompresji, `MessageEncoderFactory` akceptuje implementacji `MessageEncoderFactory` reprezentujący fabryki wewnętrzny kodera.  
-  
- Skoro zdefiniowano encoder i fabryki kodera służy za pomocą klienta WCF i usługi. Jednak te koderów należy dodać do stosu kanału. Utworzeniu klasy pochodnej klasy z <xref:System.ServiceModel.ServiceHost> i <xref:System.ServiceModel.ChannelFactory%601> klasy i zastąpienie `OnInitialize` metody, aby ręcznie dodać tę fabrykę kodera. Należy również udostępnić fabryki kodera za pośrednictwem elementu niestandardowego powiązania.  
-  
- Aby utworzyć nowy element niestandardowego powiązania, należy wyprowadzić klasę z <xref:System.ServiceModel.Channels.BindingElement> klasy. Istnieje jednak kilka typów elementów wiązania. Aby upewnić się, że element niestandardowego powiązania jest rozpoznawany jako element powiązania kodowania komunikatu, należy także zaimplementować <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> Udostępnia metodę tworzenia nowej fabryki koder komunikatu (`CreateMessageEncoderFactory`), które jest implementowane w celu zwrócenia wystąpienia pasującego fabryki kodera komunikatów. Ponadto <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> nie ma właściwości, aby wskazać, wersja adresowania. Ponieważ w tym przykładzie opakowuje istniejących koderów, w przykładowej implementacji również opakowuje kodera istniejących elementów wiązania przyjmuje kodera wewnętrzny element powiązania jako parametr do konstruktora i udostępnia go za pośrednictwem właściwości. Następujący przykładowy kod przedstawia implementację `GZipMessageEncodingBindingElement` klasy.  
-  
-```  
-public sealed class GZipMessageEncodingBindingElement   
-                        : MessageEncodingBindingElement //BindingElement  
-                        , IPolicyExportExtension  
-{  
-  
-    //We use an inner binding element to store information   
-    //required for the inner encoder.  
-    MessageEncodingBindingElement innerBindingElement;  
-  
-        //By default, use the default text encoder as the inner encoder.  
-        public GZipMessageEncodingBindingElement()  
-            : this(new TextMessageEncodingBindingElement()) { }  
-  
-    public GZipMessageEncodingBindingElement(MessageEncodingBindingElement messageEncoderBindingElement)  
-    {  
-        this.innerBindingElement = messageEncoderBindingElement;  
-    }  
-  
-    public MessageEncodingBindingElement InnerMessageEncodingBindingElement  
-    {  
-        get { return innerBindingElement; }  
-        set { innerBindingElement = value; }  
-    }  
-  
-    //Main entry point into the encoder binding element.   
-    // Called by WCF to get the factory that creates the  
-    //message encoder.  
-    public override MessageEncoderFactory CreateMessageEncoderFactory()  
-    {  
-        return new   
-GZipMessageEncoderFactory(innerBindingElement.CreateMessageEncoderFactory());  
-    }  
-  
-    public override MessageVersion MessageVersion  
-    {  
-        get { return innerBindingElement.MessageVersion; }  
-        set { innerBindingElement.MessageVersion = value; }  
-    }  
-  
-    public override BindingElement Clone()  
-    {  
-        return new   
-        GZipMessageEncodingBindingElement(this.innerBindingElement);  
-    }  
-  
-    public override T GetProperty<T>(BindingContext context)  
-    {  
-        if (typeof(T) == typeof(XmlDictionaryReaderQuotas))  
-        {  
-            return innerBindingElement.GetProperty<T>(context);  
-        }  
-        else   
-        {  
-            return base.GetProperty<T>(context);  
-        }  
-    }  
-  
-    public override IChannelFactory<TChannel> BuildChannelFactory<TChannel>(BindingContext context)  
-    {  
-        if (context == null)  
-            throw new ArgumentNullException("context");  
-  
-        context.BindingParameters.Add(this);  
-        return context.BuildInnerChannelFactory<TChannel>();  
-    }  
-  
-    public override IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext context)  
-    {  
-        if (context == null)  
-            throw new ArgumentNullException("context");  
-  
-        context.BindingParameters.Add(this);  
-        return context.BuildInnerChannelListener<TChannel>();  
-    }  
-  
-    public override bool CanBuildChannelListener<TChannel>(BindingContext context)  
-    {  
-        if (context == null)  
-            throw new ArgumentNullException("context");  
-  
-        context.BindingParameters.Add(this);  
-        return context.CanBuildInnerChannelListener<TChannel>();  
-    }  
-  
-    void IPolicyExportExtension.ExportPolicy(MetadataExporter exporter, PolicyConversionContext policyContext)  
-    {  
-        if (policyContext == null)  
-        {  
-            throw new ArgumentNullException("policyContext");  
-        }  
-       XmlDocument document = new XmlDocument();  
-       policyContext.GetBindingAssertions().Add(document.CreateElement(  
-            GZipMessageEncodingPolicyConstants.GZipEncodingPrefix,  
-            GZipMessageEncodingPolicyConstants.GZipEncodingName,  
-            GZipMessageEncodingPolicyConstants.GZipEncodingNamespace));  
-    }  
-}  
-```  
-  
- Należy pamiętać, że `GZipMessageEncodingBindingElement` klasy implementuje `IPolicyExportExtension` interfejsu, tak aby ten element powiązania można wyeksportować jako zasady w metadanych, jak pokazano w poniższym przykładzie.  
-  
-```xml  
-<wsp:Policy wsu:Id="BufferedHttpSampleServer_ISampleServer_policy">  
-    <wsp:ExactlyOne>  
-      <wsp:All>  
-        <gzip:text xmlns:gzip=  
-        "http://schemas.microsoft.com/ws/06/2004/mspolicy/netgzip1" />   
-       <wsaw:UsingAddressing />   
-     </wsp:All>  
-   </wsp:ExactlyOne>  
-</wsp:Policy>  
-```  
-  
- `GZipMessageEncodingBindingElementImporter` Klasy implementuje `IPolicyImportExtension` interfejsu, ta klasa zaimportowanie zasad dla `GZipMessageEncodingBindingElement`. Narzędzia svcutil.exe może służyć do zaimportowania zasady do pliku konfiguracji, aby obsłużyć `GZipMessageEncodingBindingElement`, dodaje do Svcutil.exe.config.  
-  
-```xml  
-<configuration>  
-  <system.serviceModel>  
-    <extensions>  
-      <bindingElementExtensions>  
-        <add name="gzipMessageEncoding"   
-          type=  
-            "Microsoft.ServiceModel.Samples.GZipMessageEncodingElement, GZipEncoder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />  
-      </bindingElementExtensions>  
-    </extensions>  
-    <client>  
-      <metadata>  
-        <policyImporters>  
-          <remove type=  
-"System.ServiceModel.Channels.MessageEncodingBindingElementImporter, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
-          <extension type=  
-"Microsoft.ServiceModel.Samples.GZipMessageEncodingBindingElementImporter, GZipEncoder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />  
-        </policyImporters>  
-      </metadata>  
-    </client>  
-  </system.serviceModel>  
-</configuration>  
-```  
-  
- Teraz, czy jest pasujący element powiązania dla koder kompresji, jego mogą być programowo dołączane do usługi lub klienta tworząc nowy obiekt niestandardowego powiązania i Dodawanie elementu niestandardowego powiązania, jak pokazano w poniższym przykładowym kodzie.  
-  
-```  
-ICollection<BindingElement> bindingElements = new List<BindingElement>();  
-HttpTransportBindingElement httpBindingElement = new HttpTransportBindingElement();  
-GZipMessageEncodingBindingElement compBindingElement = new GZipMessageEncodingBindingElement ();  
-bindingElements.Add(compBindingElement);  
-bindingElements.Add(httpBindingElement);  
-CustomBinding binding = new CustomBinding(bindingElements);  
-binding.Name = "SampleBinding";  
-binding.Namespace = "http://tempuri.org/bindings";  
-```  
-  
- Chociaż może to być wystarczające w większości scenariuszy użytkowników, obsługa plik konfiguracyjny ma krytyczne znaczenie, jeśli usługa ma być hostowane w sieci Web. Aby zapewnić obsługę scenariusza hostingu w sieci Web, możesz tworzyć obsługi niestandardowej konfiguracji, aby zezwolić na element niestandardowego powiązania umożliwiać konfigurację w pliku.  
-  
- Można utworzyć program obsługi konfiguracji dla elementu powiązania na podstawie systemu konfiguracji. Obsługa konfiguracji element powiązania musi pochodzić od klasy <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> klasy. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> Informuje system konfiguracji typu elementu powiązania do utworzenia dla tej sekcji. Wszystkie aspekty `BindingElement` , może być zestaw powinny zostać ujawnione jako właściwości na <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> klasy pochodnej. <xref:System.Configuration.ConfigurationPropertyAttribute> Pomaga w mapowania atrybutów elementów konfiguracji do właściwości i ustawianie wartości domyślnych, jeśli atrybuty są spełnione. Po wartości z konfiguracji zostaną załadowane i zastosowane do właściwości, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> wywoływana jest metoda, która konwertuje właściwości na konkretne wystąpienie elementu powiązania. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> Metoda jest używana do konwersji właściwości na <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> klasy pochodnej na wartości, które ma być ustawiony na element nowo utworzone wiązanie.  
-  
- Następujący przykładowy kod przedstawia implementację `GZipMessageEncodingElement`.  
-  
-```  
-public class GZipMessageEncodingElement : BindingElementExtensionElement  
-{  
-    public GZipMessageEncodingElement()  
-    {  
-    }  
-  
-//Called by the WCF to discover the type of binding element this   
-//config section enables  
-    public override Type BindingElementType  
-    {  
-        get { return typeof(GZipMessageEncodingBindingElement); }  
-    }  
-  
-    //The only property we need to configure for our binding element is   
-    //the type of inner encoder to use. Here, we support text and  
-    //binary.  
-    [ConfigurationProperty("innerMessageEncoding",   
-                         DefaultValue = "textMessageEncoding")]  
-    public string InnerMessageEncoding  
-    {  
-        get { return (string)base["innerMessageEncoding"]; }  
-        set { base["innerMessageEncoding"] = value; }  
-    }  
-  
-    //Called by the WCF to apply the configuration settings (the   
-    //property above) to the binding element  
-    public override void ApplyConfiguration(BindingElement bindingElement)  
-    {  
-        GZipMessageEncodingBindingElement binding =   
-                (GZipMessageEncodingBindingElement)bindingElement;  
-        PropertyInformationCollection propertyInfo =   
-                    this.ElementInformation.Properties;  
-        if (propertyInfo["innerMessageEncoding"].ValueOrigin !=   
-                                     PropertyValueOrigin.Default)  
-        {  
-            switch (this.InnerMessageEncoding)  
-            {  
-                case "textMessageEncoding":  
-                    binding.InnerMessageEncodingBindingElement =   
-                      new TextMessageEncodingBindingElement();  
-                    break;  
-                case "binaryMessageEncoding":  
-                    binding.InnerMessageEncodingBindingElement =   
-                         new BinaryMessageEncodingBindingElement();  
-                    break;  
-            }  
-        }  
-    }  
-  
-    //Called by the WCF to create the binding element  
-    protected override BindingElement CreateBindingElement()  
-    {  
-        GZipMessageEncodingBindingElement bindingElement =   
-                new GZipMessageEncodingBindingElement();  
-        this.ApplyConfiguration(bindingElement);  
-        return bindingElement;  
-    }  
-}   
-```  
-  
- Ta procedura obsługi konfiguracji mapuje następujące reprezentacja w pliku App.config lub Web.config, usługi lub klienta.  
-  
-```xml  
-<gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />  
-```  
-  
- Aby korzystać z tej obsługi konfiguracji, musi być zarejestrowana w ramach [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementu, jak pokazano w poniższym Przykładowa konfiguracja.  
-  
-```xml  
-<extensions>  
-    <bindingElementExtensions>  
-       <add   
-           name="gzipMessageEncoding"   
-           type=  
-           "Microsoft.ServiceModel.Samples.GZipMessageEncodingElement,  
-           GZipEncoder, Version=1.0.0.0, Culture=neutral,   
-           PublicKeyToken=null" />  
-      </bindingElementExtensions>  
-</extensions>  
-```  
-  
- Po uruchomieniu serwera, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli. Naciśnij klawisz ENTER w oknie do zamykania serwera.  
-  
-```  
-Press Enter key to Exit.  
-  
-        Server Echo(string input) called:  
-        Client message: Simple hello  
-  
-        Server BigEcho(string[] input) called:  
-        64 client messages  
-```  
-  
- Po uruchomieniu klienta, operacji żądań i odpowiedzi są wyświetlane w oknie konsoli. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
-  
-```  
-Calling Echo(string):  
-Server responds: Simple hello Simple hello  
-  
-Calling BigEcho(string[]):  
-Server responds: Hello 0  
-  
-Press <ENTER> to terminate client.  
-```  
-  
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
-  
-1. Instalowanie programu ASP.NET 4.0, używając następującego polecenia:  
-  
-    ```  
-    %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
-    ```  
-  
-2. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-  
-3. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
-  
-4. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  
+> W .NET Framework 4 funkcja automatycznej dekompresji została włączona na kliencie WCF, jeśli serwer wysyła skompresowaną odpowiedź (utworzono przy użyciu algorytmu, takiego jak GZip lub Wklęśnięcie). Jeśli usługa jest hostowana w sieci Web w programie Internet Information Server (IIS), można skonfigurować usługi IIS do wysyłania skompresowanej odpowiedzi. Tego przykładu można użyć, jeśli wymagane jest kompresowanie i dekompresja zarówno klienta, jak i usługi, albo jeśli usługa jest samodzielna.
+
+W przykładzie pokazano, jak skompilować i zintegrować niestandardowy koder komunikatów z aplikacją WCF. Biblioteka GZipEncoder. dll jest wdrażana razem z klientem i usługą. Ten przykład ilustruje także wpływ kompresowania komunikatów. Kod w GZipEncoder. dll ilustruje następujące elementy:
+
+- Kompilowanie kodera niestandardowego i fabryki kodera.
+
+- Tworzenie elementu powiązania dla kodera niestandardowego.
+
+- Używanie konfiguracji niestandardowego powiązania do integrowania niestandardowych elementów powiązania.
+
+- Opracowywanie niestandardowego programu obsługi konfiguracji w celu zezwolenia na konfigurację pliku niestandardowego powiązania.
+
+Jak wskazano wcześniej, istnieje kilka warstw, które są zaimplementowane w niestandardowym koderie. Aby lepiej zilustrować relacje między każdą z tych warstw, uproszczona kolejność zdarzeń dla uruchamiania usługi znajduje się na poniższej liście:
+
+1. Serwer zostanie uruchomiony.
+
+2. Informacje o konfiguracji są odczytywane.
+
+    1. Konfiguracja usługi rejestruje procedurę obsługi konfiguracji niestandardowej.
+
+    2. Host usługi został utworzony i otwarty.
+
+    3. Niestandardowy element konfiguracji tworzy i zwraca niestandardowy element powiązania.
+
+    4. Niestandardowy element powiązania tworzy i zwraca fabrykę kodera komunikatów.
+
+3. Odebrano komunikat.
+
+4. Fabryka kodera komunikatów zwraca koder komunikatów służący do odczytu w komunikacie i zapisywania odpowiedzi.
+
+5. Warstwa kodera jest zaimplementowana jako fabryka klas. Tylko fabryka klas kodera musi być publicznie uwidoczniona dla kodera niestandardowego. Obiekt fabryki jest zwracany przez element powiązania po <xref:System.ServiceModel.ServiceHost> utworzeniu obiektu lub. <xref:System.ServiceModel.ChannelFactory%601> Kodery komunikatów mogą działać w trybie buforowanym lub przesyłania strumieniowego. Ten przykład pokazuje tryb buforowany i tryb przesyłania strumieniowego.
+
+Dla każdego trybu istnieje `ReadMessage` przyłączona i `WriteMessage` metoda klasy abstrakcyjnej `MessageEncoder` . Większość pracy z kodowaniem odbywa się w tych metodach. Przykład otacza istniejący tekst i binarne kodery komunikatów. Pozwala to przykładowi na oddelegowanie odczytu i zapisu komunikacji przewodowej komunikatów do kodera wewnętrznego i umożliwia koderowi kompresji kompresowanie lub kompresowanie wyników. Ponieważ nie ma potoku do kodowania komunikatów, jest to jedyny model używany do korzystania z wielu koderów w programie WCF. Po przeprowadzeniu dekompresowania komunikatu wynikowy komunikat jest przesyłany do stosu dla stosu kanału do obsłużenia. Podczas kompresji uzyskany skompresowany komunikat jest zapisywana bezpośrednio do podanego strumienia.
+
+W tym przykładzie użyto metod pomocnika `DecompressBuffer`(`CompressBuffer` i) do wykonania konwersji z buforów na strumienie, `GZipStream` aby użyć klasy.
+
+Buforowane `ReadMessage` i `WriteMessage` klasy`BufferManager` wykorzystują klasę. Koder jest dostępny tylko za pomocą fabryki kodera. Klasa abstrakcyjna `MessageEncoderFactory` zawiera właściwość o nazwie `Encoder` do uzyskiwania dostępu do bieżącego kodera oraz metodę `CreateSessionEncoder` o nazwie do tworzenia kodera, który obsługuje sesje. Takiego kodera można użyć w scenariuszu, w którym kanał obsługuje sesje, jest uporządkowany i niezawodny. Ten scenariusz umożliwia optymalizację w każdej sesji danych zapisywana w sieci. Jeśli nie jest to potrzebne, metoda podstawowa nie powinna być przeciążona. Właściwość zapewnia mechanizm uzyskiwania dostępu do kodera bez sesji i domyślna implementacja `CreateSessionEncoder` metody zwraca wartość właściwości. `Encoder` Ponieważ przykład otacza istniejący koder w celu zapewnienia kompresji, `MessageEncoderFactory` implementacja `MessageEncoderFactory` przyjmuje, że reprezentuje wewnętrzną fabrykę kodera.
+
+Teraz, gdy jest zdefiniowany koder i fabryka kodera, mogą one być używane z klientem i usługą WCF. Jednak te kodery muszą zostać dodane do stosu kanału. Można dziedziczyć klasy z <xref:System.ServiceModel.ServiceHost> klas i <xref:System.ServiceModel.ChannelFactory%601> i zastąpić `OnInitialize` metody, aby ręcznie dodać tę fabrykę kodera. Możesz również uwidocznić fabrykę koderów za pomocą niestandardowego elementu powiązania.
+
+Aby utworzyć nowy element powiązania niestandardowego, Utwórz klasę z <xref:System.ServiceModel.Channels.BindingElement> klasy. Istnieje jednak kilka typów elementów powiązania. Aby zapewnić, że element powiązania niestandardowego jest rozpoznawany jako element powiązania kodowania komunikatów, należy również zaimplementować <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. Uwidacznia metodę tworzenia nowej fabryki kodera komunikatów (`CreateMessageEncoderFactory`), która jest zaimplementowana w celu zwrócenia wystąpienia zgodnej fabryki kodera komunikatów. <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> Ponadto <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> ma właściwość, która wskazuje na wersję adresowania. Ponieważ ten przykład otacza istniejące kodery, implementacja przykładu otacza istniejące elementy powiązania kodera i przyjmuje wewnętrzny element powiązania kodera jako parametr do konstruktora i udostępnia go za pomocą właściwości. Poniższy przykładowy kod przedstawia implementację `GZipMessageEncodingBindingElement` klasy.
+
+```csharp
+public sealed class GZipMessageEncodingBindingElement
+                        : MessageEncodingBindingElement //BindingElement
+                        , IPolicyExportExtension
+{
+
+    //We use an inner binding element to store information
+    //required for the inner encoder.
+    MessageEncodingBindingElement innerBindingElement;
+
+        //By default, use the default text encoder as the inner encoder.
+        public GZipMessageEncodingBindingElement()
+            : this(new TextMessageEncodingBindingElement()) { }
+
+    public GZipMessageEncodingBindingElement(MessageEncodingBindingElement messageEncoderBindingElement)
+    {
+        this.innerBindingElement = messageEncoderBindingElement;
+    }
+
+    public MessageEncodingBindingElement InnerMessageEncodingBindingElement
+    {
+        get { return innerBindingElement; }
+        set { innerBindingElement = value; }
+    }
+
+    //Main entry point into the encoder binding element.
+    // Called by WCF to get the factory that creates the
+    //message encoder.
+    public override MessageEncoderFactory CreateMessageEncoderFactory()
+    {
+        return new
+GZipMessageEncoderFactory(innerBindingElement.CreateMessageEncoderFactory());
+    }
+
+    public override MessageVersion MessageVersion
+    {
+        get { return innerBindingElement.MessageVersion; }
+        set { innerBindingElement.MessageVersion = value; }
+    }
+
+    public override BindingElement Clone()
+    {
+        return new
+        GZipMessageEncodingBindingElement(this.innerBindingElement);
+    }
+
+    public override T GetProperty<T>(BindingContext context)
+    {
+        if (typeof(T) == typeof(XmlDictionaryReaderQuotas))
+        {
+            return innerBindingElement.GetProperty<T>(context);
+        }
+        else
+        {
+            return base.GetProperty<T>(context);
+        }
+    }
+
+    public override IChannelFactory<TChannel> BuildChannelFactory<TChannel>(BindingContext context)
+    {
+        if (context == null)
+            throw new ArgumentNullException("context");
+
+        context.BindingParameters.Add(this);
+        return context.BuildInnerChannelFactory<TChannel>();
+    }
+
+    public override IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext context)
+    {
+        if (context == null)
+            throw new ArgumentNullException("context");
+
+        context.BindingParameters.Add(this);
+        return context.BuildInnerChannelListener<TChannel>();
+    }
+
+    public override bool CanBuildChannelListener<TChannel>(BindingContext context)
+    {
+        if (context == null)
+            throw new ArgumentNullException("context");
+
+        context.BindingParameters.Add(this);
+        return context.CanBuildInnerChannelListener<TChannel>();
+    }
+
+    void IPolicyExportExtension.ExportPolicy(MetadataExporter exporter, PolicyConversionContext policyContext)
+    {
+        if (policyContext == null)
+        {
+            throw new ArgumentNullException("policyContext");
+        }
+       XmlDocument document = new XmlDocument();
+       policyContext.GetBindingAssertions().Add(document.CreateElement(
+            GZipMessageEncodingPolicyConstants.GZipEncodingPrefix,
+            GZipMessageEncodingPolicyConstants.GZipEncodingName,
+            GZipMessageEncodingPolicyConstants.GZipEncodingNamespace));
+    }
+}
+```
+
+Należy zauważyć `GZipMessageEncodingBindingElement` , że Klasa `IPolicyExportExtension` implementuje interfejs, dzięki czemu ten element powiązania można wyeksportować jako zasady w metadanych, jak pokazano w poniższym przykładzie.
+
+```xml
+<wsp:Policy wsu:Id="BufferedHttpSampleServer_ISampleServer_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <gzip:text xmlns:gzip=
+        "http://schemas.microsoft.com/ws/06/2004/mspolicy/netgzip1" />
+       <wsaw:UsingAddressing />
+     </wsp:All>
+   </wsp:ExactlyOne>
+</wsp:Policy>
+```
+
+Klasa implementuje interfejs, ta klasa importuje zasady dla `GZipMessageEncodingBindingElement`. `GZipMessageEncodingBindingElementImporter` `IPolicyImportExtension` Narzędzie Svcutil. exe może służyć do importowania zasad do pliku konfiguracji, aby obsłużyć `GZipMessageEncodingBindingElement`następujące czynności należy dodać do Svcutil. exe. config.
+
+```xml
+<configuration>
+  <system.serviceModel>
+    <extensions>
+      <bindingElementExtensions>
+        <add name="gzipMessageEncoding"
+          type=
+            "Microsoft.ServiceModel.Samples.GZipMessageEncodingElement, GZipEncoder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+      </bindingElementExtensions>
+    </extensions>
+    <client>
+      <metadata>
+        <policyImporters>
+          <remove type=
+"System.ServiceModel.Channels.MessageEncodingBindingElementImporter, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+          <extension type=
+"Microsoft.ServiceModel.Samples.GZipMessageEncodingBindingElementImporter, GZipEncoder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        </policyImporters>
+      </metadata>
+    </client>
+  </system.serviceModel>
+</configuration>
+```
+
+Teraz, gdy istnieje pasujący element powiązania dla kodera kompresji, można go programowo podłączyć do usługi lub klienta przez zbudowanie nowego niestandardowego obiektu powiązania i dodanie do niego elementu niestandardowego powiązania, jak pokazano w poniższym przykładowym kodzie.
+
+```csharp
+ICollection<BindingElement> bindingElements = new List<BindingElement>();
+HttpTransportBindingElement httpBindingElement = new HttpTransportBindingElement();
+GZipMessageEncodingBindingElement compBindingElement = new GZipMessageEncodingBindingElement ();
+bindingElements.Add(compBindingElement);
+bindingElements.Add(httpBindingElement);
+CustomBinding binding = new CustomBinding(bindingElements);
+binding.Name = "SampleBinding";
+binding.Namespace = "http://tempuri.org/bindings";
+```
+
+Chociaż może to być wystarczające dla większości scenariuszy użytkowników, obsługa konfiguracji plików jest niezwykle ważna, jeśli usługa ma być hostowana w Internecie. Aby zapewnić obsługę scenariusza hostowanego w sieci Web, należy opracować procedurę obsługi konfiguracji niestandardowej, aby umożliwić konfigurację elementu niestandardowego powiązania w pliku.
+
+Można utworzyć procedurę obsługi konfiguracji dla elementu Binding na górze systemu konfiguracyjnego. Program obsługi konfiguracji dla elementu Binding musi być pochodną <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> klasy. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> Informuje system konfiguracji typu elementu powiązania, który ma zostać utworzony dla tej sekcji. Wszystkie aspekty `BindingElement` , które można ustawić, powinny być uwidocznione jako właściwości <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> w klasie pochodnej. <xref:System.Configuration.ConfigurationPropertyAttribute> Pomaga w mapowaniu atrybutów elementu konfiguracji do właściwości i ustawiania wartości domyślnych w przypadku braku atrybutów. Po załadowaniu wartości z konfiguracji i zastosowaniu ich do właściwości <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> jest wywoływana metoda, która konwertuje właściwości na konkretne wystąpienie elementu powiązania. Metoda służy do konwertowania właściwości <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> klasy pochodnej na wartości, które mają być ustawiane dla nowo utworzonego elementu powiązania. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType>
+
+Poniższy przykładowy kod przedstawia implementację `GZipMessageEncodingElement`programu.
+
+```csharp
+public class GZipMessageEncodingElement : BindingElementExtensionElement
+{
+    public GZipMessageEncodingElement()
+    {
+    }
+
+//Called by the WCF to discover the type of binding element this
+//config section enables
+    public override Type BindingElementType
+    {
+        get { return typeof(GZipMessageEncodingBindingElement); }
+    }
+
+    //The only property we need to configure for our binding element is
+    //the type of inner encoder to use. Here, we support text and
+    //binary.
+    [ConfigurationProperty("innerMessageEncoding",
+                         DefaultValue = "textMessageEncoding")]
+    public string InnerMessageEncoding
+    {
+        get { return (string)base["innerMessageEncoding"]; }
+        set { base["innerMessageEncoding"] = value; }
+    }
+
+    //Called by the WCF to apply the configuration settings (the
+    //property above) to the binding element
+    public override void ApplyConfiguration(BindingElement bindingElement)
+    {
+        GZipMessageEncodingBindingElement binding =
+                (GZipMessageEncodingBindingElement)bindingElement;
+        PropertyInformationCollection propertyInfo =
+                    this.ElementInformation.Properties;
+        if (propertyInfo["innerMessageEncoding"].ValueOrigin !=
+                                     PropertyValueOrigin.Default)
+        {
+            switch (this.InnerMessageEncoding)
+            {
+                case "textMessageEncoding":
+                    binding.InnerMessageEncodingBindingElement =
+                      new TextMessageEncodingBindingElement();
+                    break;
+                case "binaryMessageEncoding":
+                    binding.InnerMessageEncodingBindingElement =
+                         new BinaryMessageEncodingBindingElement();
+                    break;
+            }
+        }
+    }
+
+    //Called by the WCF to create the binding element
+    protected override BindingElement CreateBindingElement()
+    {
+        GZipMessageEncodingBindingElement bindingElement =
+                new GZipMessageEncodingBindingElement();
+        this.ApplyConfiguration(bindingElement);
+        return bindingElement;
+    }
+}
+```
+
+Ta procedura obsługi konfiguracji mapuje do następującej reprezentacji w pliku App. config lub Web. config dla usługi lub klienta.
+
+```xml
+<gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />
+```
+
+Aby można było użyć tego programu obsługi konfiguracji, musi on być zarejestrowany w ramach [ \<elementu System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , jak pokazano w poniższej konfiguracji przykładowej.
+
+```xml
+<extensions>
+    <bindingElementExtensions>
+       <add
+           name="gzipMessageEncoding"
+           type=
+           "Microsoft.ServiceModel.Samples.GZipMessageEncodingElement,
+           GZipEncoder, Version=1.0.0.0, Culture=neutral,
+           PublicKeyToken=null" />
+      </bindingElementExtensions>
+</extensions>
+```
+
+Po uruchomieniu serwera programu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli. Naciśnij klawisz ENTER w oknie, aby zamknąć serwer.
+
+```
+Press Enter key to Exit.
+
+        Server Echo(string input) called:
+        Client message: Simple hello
+
+        Server BigEcho(string[] input) called:
+        64 client messages
+```
+
+Po uruchomieniu klienta żądania operacji i odpowiedzi są wyświetlane w oknie konsoli. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.
+
+```
+Calling Echo(string):
+Server responds: Simple hello Simple hello
+
+Calling BigEcho(string[]):
+Server responds: Hello 0
+
+Press <ENTER> to terminate client.
+```
+
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
+
+1. Zainstaluj program ASP.NET 4,0 przy użyciu następującego polecenia:
+
+    ```
+    %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
+    ```
+
+2. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+
+3. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+
+4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`

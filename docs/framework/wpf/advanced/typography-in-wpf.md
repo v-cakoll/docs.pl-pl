@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 818d013356c3ca8151e9b5bb675bce4726759f6c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 5f3560c899373b9835e2ead79590cf73777b2375
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710346"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972405"
 ---
 # <a name="typography-in-wpf"></a>Typografia w WPF
 W tym temacie przedstawiono główne funkcje typograficzne programu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Te funkcje obejmują ulepszoną jakość i wydajność renderowania tekstu, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] obsługę typografii, ulepszony międzynarodowy tekst, rozszerzoną obsługę czcionek oraz nowe interfejsy programowania aplikacji tekstowych (API).  
@@ -29,7 +29,7 @@ Tekst z wygładzaniem kierunku y w technologii ClearType
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>Bogaty Typografia  
- Format czcionki jest rozszerzeniem [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formatu czcionki. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Format czcionki został opracowany wspólnie przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] program i Adobe i oferuje bogaty asortyment zaawansowanych funkcji typograficznych. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Obiekt ujawnia wiele zaawansowanych [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] funkcji czcionek, takich jak alternatywy stylistyczne i znaki kaligraficzne. <xref:System.Windows.Documents.Typography> Zawiera zestaw przykładowych [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] czcionek, które są zaprojektowane z rozbudowanymi funkcjami, takimi jak czcionki Pericles i Pescadero. [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] Aby uzyskać więcej informacji, zobacz [przykładowy pakiet czcionek OpenType](sample-opentype-font-pack.md).  
+ Format czcionki jest rozszerzeniem [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formatu czcionki. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Format czcionki został opracowany wspólnie przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] program i Adobe i oferuje bogaty asortyment zaawansowanych funkcji typograficznych. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Obiekt ujawnia wiele zaawansowanych [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] funkcji czcionek, takich jak alternatywy stylistyczne i znaki kaligraficzne. <xref:System.Windows.Documents.Typography> Windows SDK zawiera zestaw przykładowych [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] czcionek, które są zaprojektowane z rozbudowanymi funkcjami, takimi jak czcionki Pericles i Pescadero. Aby uzyskać więcej informacji, zobacz [przykładowy pakiet czcionek OpenType](sample-opentype-font-pack.md).  
   
  Czcionka Pericles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] zawiera dodatkowe glify, które udostępniają alternatywy stylistyczne dla standardowego zestawu glifów. Następujący tekst zawiera stylistyczne glify alternatywne.  
   

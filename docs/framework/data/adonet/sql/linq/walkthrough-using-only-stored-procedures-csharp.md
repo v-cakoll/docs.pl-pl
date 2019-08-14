@@ -2,191 +2,201 @@
 title: 'Przewodnik: Używanie tylko procedur składowanych (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: f16cbdc1d22e7ec08237c0f13db9499ee2f9194f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 69419dd5bb49c2e47315d0079df3a7b575ad9afd
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742556"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971777"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Przewodnik: Używanie tylko procedur składowanych (C#)
-Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusz do uzyskiwania dostępu do danych, wykonując procedury składowane tylko. To podejście jest często używana przez administratorów baz danych, aby ograniczyć sposób dostępu do magazynu danych.  
-  
+
+Ten Instruktaż zawiera podstawowy kompleksowy [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusz uzyskiwania dostępu do danych przez wykonywanie procedur składowanych. Ta metoda jest często używana przez administratorów bazy danych do ograniczania dostępu do magazynu.
+
 > [!NOTE]
->  Można również użyć procedur składowanych w programie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji, aby zastąpić domyślne zachowanie, szczególnie w przypadku `Create`, `Update`, i `Delete` procesów. Aby uzyskać więcej informacji, zobacz [Dostosowywanie Insert, Update i operacje usuwania](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
-  
- Do celów tego przewodnika będziesz używać dwóch metod, które zostały zmapowane do procedur składowanych w bazie danych Northwind: CustOrdersDetail i CustOrderHist. Mapowanie występuje podczas uruchamiania narzędzia wiersza polecenia SqlMetal można wygenerować C# pliku. Aby uzyskać więcej informacji zobacz sekcję wymagania wstępne w dalszej części tego przewodnika.  
-  
- W tym przewodniku nie zależą od Object Relational Designer. Deweloperzy korzystający z programu Visual Studio umożliwia również O/R Designer do implementowania procedury składowanej. Zobacz [LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
-  
- [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
-  
- W tym przewodniku została napisana przy użyciu Visual C# ustawieniami środowiska deweloperskiego.  
-  
-## <a name="prerequisites"></a>Wymagania wstępne  
- Ten przewodnik wymaga następujących elementów:  
-  
-- W tym przewodniku używa dedykowanego folder ("c:\linqtest7") do przechowywania plików. Przed rozpoczęciem instruktażu, należy utworzyć ten folder.  
-  
-- Przykładowa bazy danych Northwind.  
-  
-     Jeśli nie masz tej bazy danych na komputerze deweloperskim, możesz ją pobrać z witryny pobierania firmy Microsoft. Aby uzyskać instrukcje, zobacz [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Po pobraniu bazy danych, skopiuj plik northwnd.mdf do folderu c:\linqtest7.  
-  
-- A C# plik kod wygenerowany z bazy danych Northwind.  
-  
-     Ten instruktaż został napisany za pomocą narzędzia SqlMetal za pomocą następującego polecenia:  
-  
-     **Program sqlmetal /code:"c:\linqtest7\northwind.cs" / Language: CSharp "c:\linqtest7\northwnd.mdf" /sprocs /functions / pluralize**  
-  
-     Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
-  
-## <a name="overview"></a>Omówienie  
- Ten przewodnik składa się z sześciu głównych zadań:  
-  
-- Konfigurowanie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] rozwiązania w programie Visual Studio.  
-  
-- Trwa dodawanie zestawu System.Data.Linq do projektu.  
-  
-- Dodawanie pliku kodu bazy danych do projektu.  
-  
-- Tworzenie połączenia z bazą danych.  
-  
-- Konfigurowanie interfejsu użytkownika.  
-  
-- Uruchamianie i testowanie aplikacji.  
-  
-## <a name="creating-a-linq-to-sql-solution"></a>Tworzenie składnika LINQ to SQL rozwiązanie  
- W tym pierwszym zadaniu tworzyć rozwiązania programu Visual Studio, który zawiera niezbędne odwołania, aby skompilować i uruchomić [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektu.  
-  
-#### <a name="to-create-a-linq-to-sql-solution"></a>Aby utworzyć składnika LINQ to SQL rozwiązanie  
-  
-1. W programie Visual Studio **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.  
-  
-2. W **typów projektów** okienka **nowy projekt** okno dialogowe, kliknij przycisk **Visual C#** .  
-  
-3. W **szablony** okienku kliknij **aplikacja interfejsu Windows Forms**.  
-  
-4. W **nazwa** wpisz **SprocOnlyApp**.  
-  
-5. W **lokalizacji** upewnij się, którym chcesz przechowywać swoje pliki projektu.  
-  
-6. Kliknij przycisk **OK**.  
-  
-     Zostanie otwarty projektant formularzy Windows.  
-  
-## <a name="adding-the-linq-to-sql-assembly-reference"></a>Dodawanie programu LINQ do SQL odwołanie do zestawu  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Moduł nie jest dołączony do standardowego szablonu aplikacja interfejsu Windows Forms. Trzeba będzie dodać zestaw samodzielnie, zgodnie z opisem w poniższych krokach:  
-  
-#### <a name="to-add-systemdatalinqdll"></a>To add System.Data.Linq.dll  
-  
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania**, a następnie kliknij przycisk **Dodaj odwołanie**.  
-  
-2. W **Dodaj odwołanie** okno dialogowe, kliknij przycisk **.NET**, kliknij zestaw System.Data.Linq, a następnie kliknij przycisk **OK**.  
-  
-     Zestaw został dodany do projektu.  
-  
-## <a name="adding-the-northwind-code-file-to-the-project"></a>Dodawanie pliku Northwind kodu do projektu  
- Tego kroku przyjęto założenie, że trzeba użyć narzędzia SqlMetal do generowania pliku kodu z przykładowej bazy danych Northwind. Aby uzyskać więcej informacji zobacz sekcję wymagania wstępne we wcześniejszej części tego przewodnika.  
-  
-#### <a name="to-add-the-northwind-code-file-to-the-project"></a>Aby dodać plik kodu northwind do projektu  
-  
-1. Na **projektu** menu, kliknij przycisk **Dodaj istniejący element**.  
-  
-2. W **Dodaj istniejący element** przenieść c:\linqtest7\northwind.cs okno dialogowe, a następnie kliknij przycisk **Dodaj**.  
-  
-     Plik northwind.cs zostanie dodany do projektu.  
-  
-## <a name="creating-a-database-connection"></a>Tworzenie połączenia z bazą danych  
- W tym kroku zdefiniujesz połączenia z przykładową bazą danych Northwind. W tym instruktażu wykorzystano "c:\linqtest7\northwnd.mdf", jako ścieżkę.  
-  
-#### <a name="to-create-the-database-connection"></a>Aby utworzyć połączenie z bazą danych  
-  
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **Form1.cs**, a następnie kliknij przycisk **Wyświetl kod**.  
-  
-2. Wpisz następujący kod do `Form1` klasy:  
-  
-     [!code-csharp[DLinqWalk4CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#1)]  
-  
-## <a name="setting-up-the-user-interface"></a>Konfigurowanie interfejsu użytkownika  
- W tym zadaniu konfigurujesz interfejs, dzięki czemu użytkownicy mogą wykonać procedur składowanych na dostęp do danych w bazie danych. W aplikacjach, które tworzysz z tym przewodnikiem użytkownicy mogą korzystać tylko przy użyciu procedur składowanych osadzone w aplikacji, dane z bazy danych.  
-  
-#### <a name="to-set-up-the-user-interface"></a>Aby skonfigurować interfejs użytkownika  
-  
-1. Wróć do Windows Forms Designer (**Form1.cs[Design]** ).  
-  
-2. Na **widoku** menu, kliknij przycisk **przybornika**.  
-  
-     Przybornik zostaje otwarty.  
-  
+> Można również użyć procedur składowanych w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacjach, aby przesłonić zachowanie domyślne `Create`, szczególnie w `Delete` przypadku procesów, `Update`i. Aby uzyskać więcej informacji, zobacz [Dostosowywanie operacji wstawiania, aktualizowania i usuwania](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).
+
+Na potrzeby tego instruktażu zostaną użyte dwie metody, które zostały zamapowane na procedury składowane w przykładowej bazie danych Northwind: CustOrdersDetail i CustOrderHist. Mapowanie odbywa się po uruchomieniu narzędzia wiersza polecenia SqlMetal w celu wygenerowania C# pliku. Aby uzyskać więcej informacji, zobacz sekcję wymagania wstępne w dalszej części tego przewodnika.
+
+Ten Instruktaż nie bazuje na Object Relational Designer. Deweloperzy korzystający z programu Visual Studio mogą również używać projektanta O/R do implementowania funkcjonalności procedury składowanej. Zobacz [narzędzia LINQ to SQL w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).
+
+[!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]
+
+Ten Instruktaż został zapisany przy użyciu ustawień C# deweloperskich.
+
+## <a name="prerequisites"></a>Wymagania wstępne
+
+Ten przewodnik wymaga następujących czynności:
+
+- W tym instruktażu do przechowywania plików służy dedykowany folder ("c:\linqtest7"). Utwórz ten folder przed rozpoczęciem przewodnika.
+
+- Przykładowa bazy danych Northwind.
+
+     Jeśli nie masz tej bazy danych na komputerze deweloperskim, możesz ją pobrać z witryny pobierania firmy Microsoft. Aby uzyskać instrukcje, zobacz [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Po pobraniu bazy danych Skopiuj plik northwnd. mdf do folderu c:\linqtest7.
+
+- Plik C# kodu wygenerowany na podstawie bazy danych Northwind.
+
+     Ten Instruktaż został zapisany przy użyciu narzędzia SqlMetal z następującym wierszem polecenia:
+
+     **SQLMetal/Code: "c:\linqtest7\northwind.cs"/Language: CSharp "c:\linqtest7\northwnd.mdf"/sprocs/Functions/pluralize**
+
+     Aby uzyskać więcej informacji, zobacz [SQLMetal. exe (Narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).
+
+## <a name="overview"></a>Omówienie
+
+Ten przewodnik składa się z sześciu głównych zadań:
+
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Konfigurowanie rozwiązania w programie Visual Studio.
+
+- Dodawanie zestawu System. Data. LINQ do projektu.
+
+- Dodawanie pliku kodu bazy danych do projektu.
+
+- Tworzenie połączenia z bazą danych.
+
+- Konfigurowanie interfejsu użytkownika.
+
+- Uruchamianie i testowanie aplikacji.
+
+## <a name="creating-a-linq-to-sql-solution"></a>Tworzenie rozwiązania LINQ to SQL
+
+W tym pierwszym zadaniu utworzysz rozwiązanie programu Visual Studio, które zawiera niezbędne odwołania do kompilowania i uruchamiania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektu.
+
+### <a name="to-create-a-linq-to-sql-solution"></a>Aby utworzyć rozwiązanie LINQ to SQL
+
+1. W menu **plik** programu Visual Studio wskaż polecenie **Nowy**, a następnie kliknij pozycję **projekt**.
+
+2. W okienku **typy projektów** okna dialogowego **Nowy projekt** kliknij pozycję Wizualizacja. **C#**
+
+3. W okienku **Szablony** kliknij pozycję **Windows Forms aplikacji**.
+
+4. W polu **Nazwa** wpisz **SprocOnlyApp**.
+
+5. W polu **Lokalizacja** Sprawdź, gdzie mają być przechowywane pliki projektu.
+
+6. Kliknij przycisk **OK**.
+
+     Zostanie otwarty Projektant formularzy systemu Windows.
+
+## <a name="adding-the-linq-to-sql-assembly-reference"></a>Dodawanie odwołania do zestawu LINQ to SQL
+
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Zestaw nie jest uwzględniony w szablonie standardowej aplikacji Windows Forms. Musisz samodzielnie dodać zestaw, jak wyjaśniono w następujących krokach:
+
+### <a name="to-add-systemdatalinqdll"></a>To add System.Data.Linq.dll
+
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **odwołania**, a następnie kliknij pozycję **Dodaj odwołanie**.
+
+2. W oknie dialogowym **Dodawanie odwołania** kliknij pozycję **.NET**, kliknij zestaw system. Data. LINQ, a następnie kliknij przycisk **OK**.
+
+     Zestaw zostanie dodany do projektu.
+
+## <a name="adding-the-northwind-code-file-to-the-project"></a>Dodawanie pliku kodu Northwind do projektu
+
+W tym kroku przyjęto założenie, że użyto narzędzia SqlMetal do wygenerowania pliku kodu z przykładowej bazy danych Northwind. Aby uzyskać więcej informacji, zobacz sekcję wymagania wstępne we wcześniejszej części tego przewodnika.
+
+### <a name="to-add-the-northwind-code-file-to-the-project"></a>Aby dodać plik kodu Northwind do projektu
+
+1. W menu **projekt** kliknij polecenie **Dodaj istniejący element**.
+
+2. W oknie dialogowym **Dodaj istniejący element** przejdź do c:\linqtest7\northwind.cs, a następnie kliknij przycisk **Dodaj**.
+
+     Plik northwind.cs jest dodawany do projektu.
+
+## <a name="creating-a-database-connection"></a>Tworzenie połączenia z bazą danych
+
+W tym kroku zdefiniujesz połączenie z przykładową bazą danych Northwind. W tym instruktażu jako ścieżki jest stosowany "c:\linqtest7\northwnd.mdf".
+
+### <a name="to-create-the-database-connection"></a>Aby utworzyć połączenie z bazą danych
+
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **Form1.cs**, a następnie kliknij pozycję **Wyświetl kod**.
+
+2. Wpisz następujący kod do `Form1` klasy:
+
+     [!code-csharp[DLinqWalk4CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#1)]
+
+## <a name="setting-up-the-user-interface"></a>Konfigurowanie interfejsu użytkownika
+
+To zadanie służy do konfigurowania interfejsu, dzięki czemu użytkownicy mogą wykonywać procedury składowane w celu uzyskania dostępu do danych w bazie danych. W aplikacjach opracowywanych przy użyciu tego przewodnika użytkownicy mogą uzyskać dostęp do danych w bazie danych tylko przy użyciu procedur przechowywanych osadzonych w aplikacji.
+
+### <a name="to-set-up-the-user-interface"></a>Aby skonfigurować interfejs użytkownika
+
+1. Wróć do Projektant formularzy systemu Windows (**Form1. cs [Design]** ).
+
+2. W menu **Widok** kliknij pozycję **Przybornik**.
+
+     Zostanie otwarty Przybornik.
+
     > [!NOTE]
-    >  Kliknij przycisk **autoukrywania** pinezki, aby nie zamykaj przybornika podczas wykonywania pozostałych kroków w tej sekcji.  
-  
-3. Przeciągnij z przybornika na dwa przyciski, dwóch pól tekstowych i dwie etykiety **Form1**.  
-  
-     Kontrolki będą ułożone, jak pokazano na ilustracji towarzyszącej. Rozwiń **Form1** tak, aby łatwo mieści się kontrolki.  
-  
-4. Kliknij prawym przyciskiem myszy **label1**, a następnie kliknij przycisk **właściwości**.  
-  
-5. Zmiana **tekstu** właściwość **label1** do **wprowadź OrderID:** .  
-  
-6. W ten sam sposób, aby uzyskać **etykiety 2**, zmienić **tekstu** właściwość **etykiety 2** do **wprowadź CustomerID:** .  
-  
-7. W ten sam sposób, jak zmienić **tekstu** właściwość **button1** do **Orderdetails**.  
-  
-8. Zmiana **tekstu** właściwość **button2** do **historii zamówień**.  
-  
-     Tak, aby cały tekst jest widoczne, mogą zostać poszerzone formanty przycisków.  
-  
-#### <a name="to-handle-button-clicks"></a>Do obsługi kliknięcia przycisków  
-  
-1. Kliknij dwukrotnie **Orderdetails** na **Form1** aby otworzyć program obsługi zdarzeń przycisku button1 w edytorze kodu.  
-  
-2. Wpisz następujący kod do `button1` procedury obsługi:  
-  
-     [!code-csharp[DLinqWalk4CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#2)]  
-  
-3. Teraz kliknij dwukrotnie **button2** na **Form1** otworzyć `button2` procedury obsługi  
-  
-4. Wpisz następujący kod do `button2` procedury obsługi:  
-  
-     [!code-csharp[DLinqWalk4CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#3)]  
-  
-## <a name="testing-the-application"></a>Testowanie aplikacji  
- Teraz nadszedł czas, aby przetestować aplikację. Należy pamiętać, że kontaktu z magazynu danych jest ograniczony do dowolnych akcje można wykonać dwie procedury składowane. Te akcje są do zwrócenia produktów, dostępny dla dowolnego orderID wprowadzona lub w celu zwrócenia historii produktów uporządkowane do dowolnego CustomerID wprowadzeniu.  
-  
-#### <a name="to-test-the-application"></a>Aby przetestować aplikację  
-  
-1. Naciśnij klawisz F5, aby rozpocząć debugowanie.  
-  
-     Zostanie wyświetlony formularz Form1.  
-  
-2. W **wprowadź OrderID** wpisz `10249`, a następnie kliknij przycisk **Orderdetails**.  
-  
-     Okno komunikatu Wyświetla listę produktów dołączone w kolejności 10249.  
-  
-     Kliknij przycisk **OK** aby zamknąć okno komunikatu.  
-  
-3. W **wprowadź CustomerID** wpisz `ALFKI`, a następnie kliknij przycisk **historii zamówień**.  
-  
-     Pojawi się komunikat zawierający listę historii zamówień klienta Customer ALFKI.  
-  
-     Kliknij przycisk **OK** aby zamknąć okno komunikatu.  
-  
-4. W **wprowadź OrderID** wpisz `123`, a następnie kliknij przycisk **Orderdetails**.  
-  
-     Okno komunikatu zostanie wyświetlone "Brak wyników".  
-  
-     Kliknij przycisk **OK** aby zamknąć okno komunikatu.  
-  
-5. Na **debugowania** menu, kliknij przycisk **Zatrzymaj debugowanie**.  
-  
-     Powoduje zamknięcie sesji debugowania.  
-  
-6. Jeśli zakończysz, eksperymentowanie, możesz kliknąć **Zamknij projekt** na **pliku** menu i zapisać projekt, po wyświetleniu monitu.  
-  
-## <a name="next-steps"></a>Następne kroki  
- Ten projekt można zwiększyć, dokonując pewnych zmian. Na przykład możesz wyświetlić listę dostępnych procedur składowanych w polu listy i użytkownik powinien wybrać, które procedury musisz wykonać. Można również przesyłać strumieniowo dane wyjściowe raportów do pliku tekstowego.  
-  
+    > Kliknij przycisk **Autoukrywanie** pinezki, aby zachować Przybornik otwarty podczas wykonywania pozostałych kroków w tej sekcji.
+
+3. Przeciągnij dwa przyciski, dwa pola tekstowe i dwie etykiety z przybornika na **formularz Form1**.
+
+     Rozmieść formanty jako towarzyszącą ilustrację. Rozwiń **formularz Form1** , aby umożliwić łatwe dopasowanie formantów.
+
+4. Kliknij prawym przyciskiem myszy pozycję **Label1**, a następnie kliknij pozycję **Właściwości**.
+
+5. Zmień właściwość **Text** z **Label1** , aby **wprowadzić IDZamówienia:** .
+
+6. W ten sam sposób dla **etykiety 2**Zmień właściwość **Text** z **etykiety 2** , aby **wprowadzić CustomerID:** .
+
+7. W ten sam sposób Zmień właściwość **Text** dla **Button1** na **Order**details.
+
+8. Zmień właściwość **Text** dla **Button2** na **historię kolejności**.
+
+     Rozszerz kontrolki przycisku, aby cały tekst był widoczny.
+
+### <a name="to-handle-button-clicks"></a>Aby obsłużyć kliknięcia przycisku
+
+1. Kliknij dwukrotnie pozycję **szczegóły zamówienia** na **formularzu Form1** , aby otworzyć program obsługi zdarzeń Button1 w edytorze kodu.
+
+2. Wpisz następujący kod do `button1` procedury obsługi:
+
+     [!code-csharp[DLinqWalk4CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#2)]
+
+3. Teraz kliknij dwukrotnie pozycję **Button2** na **formularzu Form1** , `button2` aby otworzyć procedurę obsługi
+
+4. Wpisz następujący kod do `button2` procedury obsługi:
+
+     [!code-csharp[DLinqWalk4CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#3)]
+
+## <a name="testing-the-application"></a>Testowanie aplikacji
+
+Teraz czas na przetestowanie aplikacji. Należy pamiętać, że kontakt z magazynem danych jest ograniczony do wszelkich akcji, które mogą wykonać dwie procedury składowane. Te akcje mają na celu zwrócenie produktów uwzględnionych w dowolnym przypisanym identyfikatorze IDZamówienia lub zwrócenie historii produktów zamówionych dla dowolnego elementu IDKlienta, który wprowadzasz.
+
+### <a name="to-test-the-application"></a>Aby przetestować aplikację
+
+1. Naciśnij klawisz F5, aby rozpocząć debugowanie.
+
+     Zostanie wyświetlony formularz Form1.
+
+2. W polu **Wprowadź identyfikator zamówienia** wpisz `10249`, a następnie kliknij pozycję **szczegóły zamówienia**.
+
+     Okno komunikatu zawiera listę produktów uwzględnionych w kolejności 10249.
+
+     Kliknij przycisk **OK** , aby zamknąć okno komunikatu.
+
+3. W polu **wprowadź wartość IDKlienta** wpisz `ALFKI`, a następnie kliknij pozycję **historia kolejności**.
+
+     Zostanie wyświetlone okno komunikatu z listą historii zamówień dla klienta ALFKI.
+
+     Kliknij przycisk **OK** , aby zamknąć okno komunikatu.
+
+4. W polu **Wprowadź identyfikator zamówienia** wpisz `123`, a następnie kliknij pozycję **szczegóły zamówienia**.
+
+     Zostanie wyświetlone okno komunikatu z napisem "Brak wyników".
+
+     Kliknij przycisk **OK** , aby zamknąć okno komunikatu.
+
+5. W menu **debugowanie** kliknij **Zatrzymaj debugowanie**.
+
+     Sesja debugowania zostanie zamknięta.
+
+6. Jeśli zakończysz eksperymentowanie, możesz kliknąć przycisk **Zamknij projekt** w menu **plik** i zapisać projekt po wyświetleniu monitu.
+
+## <a name="next-steps"></a>Następne kroki
+
+Możesz udoskonalić ten projekt, wprowadzając pewne zmiany. Na przykład można wyświetlić listę dostępnych procedur składowanych w polu listy i wybrać procedury, które należy wykonać. Możesz również przesyłać strumieniowo dane wyjściowe raportów do pliku tekstowego.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Nauka przez przewodniki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

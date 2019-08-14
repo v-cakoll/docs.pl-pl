@@ -20,18 +20,21 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: fb7758a3e59806b246a98c343d78500263433efc
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832826"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971478"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generator obrazu natywnego)
 
 Generator obrazów natywnych (Ngen.exe) jest narzędziem, które poprawia wydajność zarządzanych aplikacji. Program Ngen.exe tworzy obrazy natywne, które są plikami zawierającymi skompilowany kod maszynowy specyficzny dla procesora, i instaluje je w pamięci podręcznej obrazów natywnych na komputerze lokalnym. Środowisko uruchomieniowe może używać obrazów natywnych z tej pamięci podręcznej, zamiast używać kompilatora JIT (Just-In-Time) w celu skompilowania oryginalnego zestawu.
 
-Zmiany w Ngen.exe w .NET Framework 4:
+> [!NOTE]
+> Ngen. exe kompiluje obrazy natywne dla zestawów, które są przeznaczone tylko dla .NET Framework. Równoważny Generator obrazu natywnego dla platformy .NET Core to [CrossGen](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md). 
+
+Zmiany w programie Ngen. exe w .NET Framework 4:
 
 - Program Ngen.exe obecnie kompiluje zestawy w trybie pełnego zaufania, a zasady zabezpieczeń dostępu kodu (CAS) nie są już uwzględniane.
 
@@ -43,42 +46,42 @@ Zmiany w programie Ngen.exe wprowadzone w programie .NET Framework w wersji 2.0:
 
 - Obrazy natywne mogą być współużytkowane w różnych domenach aplikacji.
 
-- Nowa akcja `update`, ponownie tworzy obrazy, które zostały unieważnione.
+- Nowa Akcja `update`, program ponownie tworzy obrazy, które zostały unieważnione.
 
 - Akcje mogą być odraczane w celu wykonania przez usługę, która korzysta z czasu bezczynności komputera, aby generować i instalować obrazy.
 
 - Niektóre przyczyny unieważnienia obrazu zostały wyeliminowane.
 
-W systemie Windows 8 zobacz [Native Image Task](#native-image-task).
+W systemie Windows 8 zobacz [zadania obrazu natywnego](#native-image-task).
 
-Aby uzyskać dodatkowe informacje na temat korzystania z Ngen.exe i usługi obrazów natywnych, zobacz [Native Image Service](#native-image-service).
+Aby uzyskać dodatkowe informacje na temat korzystania z programu Ngen. exe i usługi obrazów natywnych, zobacz [Native Image Service](#native-image-service).
 
 > [!NOTE]
-> Składnia ngen.exe w wersjach 1.0 i 1.1 programu .NET Framework można znaleźć w [Native Image Generator (Ngen.exe) Legacy Syntax](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100)).
+> Składnię programu Ngen. exe dla wersji 1,0 i 1,1 .NET Framework można znaleźć w [starszej składni generatora obrazów natywnych (Ngen. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100)).
 
-To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersz polecenia programisty dla programu Visual Studio (lub wiersza polecenia programu Visual Studio Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
 W wierszu polecenia wpisz następujące polecenie:
 
 ## <a name="syntax"></a>Składnia
 
-```
+```console
 ngen action [options]
 ```
 
-```
+```console
 ngen /? | /help
 ```
 
 ## <a name="actions"></a>Akcje
 
-W poniższej tabeli pokazano składnię każdego `action`. Opisy poszczególnych części `action`, zobacz [argumenty](#ArgumentTable), [poziomy priorytetów](#PriorityTable), [scenariuszy](#ScenarioTable), i [Config](#ConfigTable)tabel. [Opcje](#OptionTable) tabeli opisano `options` i przełączniki pomocy.
+W poniższej tabeli przedstawiono składnię każdego z `action`nich. Aby zapoznać się z opisami poszczególnych części `action`elementu, zobacz [argumenty](#ArgumentTable), [poziomy priorytetów](#PriorityTable), [scenariusze](#ScenarioTable)i tabele [konfiguracyjne](#ConfigTable) . W tabeli [Options](#OptionTable) opisano `options` przełączniki i.
 
 |Akcja|Opis|
 |------------|-----------------|
-|`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Generuje obrazy natywne dla zestawu i jego zależności, a także instaluje obrazy w pamięci podręcznej obrazów natywnych.<br /><br /> Jeśli `/queue` jest określona, akcja jest kolejkowana dla usługi obrazów natywnych. Domyślnym priorytetem jest 3. Zobacz [poziomy priorytetów](#PriorityTable) tabeli.|
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Usuwa obrazy natywne zestawu i jego zależności z pamięci podręcznej obrazów natywnych.<br /><br /> Aby odinstalować pojedynczy obraz i jego zależności, należy użyć tych samych argumentów wiersza polecenia, które zostały użyte podczas instalacji obrazu. **Uwaga:**  Począwszy od programu .NET Framework 4, Akcja `uninstall` * nie jest już obsługiwana.|
-|`update` [`/queue`]|Aktualizuje obrazy natywne, które stały się nieprawidłowe.<br /><br /> Jeśli `/queue` jest określony, aktualizacje są kolejkowane dla usługi obrazów natywnych. Aktualizacje są zawsze planowane z priorytetem 3, więc są uruchamiane, gdy komputer znajduje się w stanie bezczynności.|
+|`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Generuje obrazy natywne dla zestawu i jego zależności, a także instaluje obrazy w pamięci podręcznej obrazów natywnych.<br /><br /> Jeśli `/queue` jest określona, akcja jest umieszczana w kolejce dla usługi obrazów natywnych. Domyślnym priorytetem jest 3. Zobacz tabelę [poziomów priorytetów](#PriorityTable) .|
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Usuwa obrazy natywne zestawu i jego zależności z pamięci podręcznej obrazów natywnych.<br /><br /> Aby odinstalować pojedynczy obraz i jego zależności, należy użyć tych samych argumentów wiersza polecenia, które zostały użyte podczas instalacji obrazu. **Uwaga:**  Począwszy od .NET Framework 4, Akcja `uninstall` * nie jest już obsługiwana.|
+|`update` [`/queue`]|Aktualizuje obrazy natywne, które stały się nieprawidłowe.<br /><br /> Jeśli `/queue` jest określony, aktualizacje są umieszczane w kolejce dla usługi obrazów natywnych. Aktualizacje są zawsze planowane z priorytetem 3, więc są uruchamiane, gdy komputer znajduje się w stanie bezczynności.|
 |`display` [`assemblyName` &#124; `assemblyPath`]|Wyświetla stan obrazów natywnych dla zestawu i jego zależności.<br /><br /> Jeśli nie zostaną dostarczone argumenty, będą wyświetlane wszystkie dane z pamięci podręcznej obrazów natywnych.|
 |`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> —lub—<br /><br /> `eqi` [1&#124;2&#124;3]|Wykonuje umieszczone w kolejce zadania kompilacji.<br /><br /> Jeśli określono priorytet, wykonywane są zadania kompilacji z większym lub równym priorytetem. Jeśli nie określono priorytetu, wykonywane są wszystkie skolejkowane zadania kompilacji.|
 |`queue` {`pause` &#124; `continue` &#124; `status`}|Wstrzymuje usługę obrazów natywnych, zezwala wstrzymanej usłudze na kontynuowanie działania lub bada stan usługi.|
@@ -89,18 +92,18 @@ W poniższej tabeli pokazano składnię każdego `action`. Opisy poszczególnych
 
 |Argument|Opis|
 |--------------|-----------------|
-|`assemblyName`|Pełna nazwa wyświetlana zestawu. Na przykład `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Uwaga:**  Można podać częściową nazwę zestawu, taką jak `myAssembly`, aby uzyskać `display` i `uninstall` akcji. <br /><br /> W jednym wierszu polecenia programu Ngen.exe można określić tylko jeden zestaw.|
+|`assemblyName`|Pełna nazwa wyświetlana zestawu. Na przykład `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Uwaga:**  Dla akcji `myAssembly` i`uninstall`można podać częściową nazwę zestawu, taką jak. `display` <br /><br /> W jednym wierszu polecenia programu Ngen.exe można określić tylko jeden zestaw.|
 |`assemblyPath`|Jawna ścieżka zestawu. Można określić pełną lub względną ścieżkę.<br /><br /> Jeśli użytkownik określi nazwę pliku bez ścieżki, zestaw musi znajdować się w bieżącym katalogu.<br /><br /> W jednym wierszu polecenia programu Ngen.exe można określić tylko jeden zestaw.|
 
 <a name="PriorityTable"></a>
 
 ## <a name="priority-levels"></a>Poziomy priorytetów
 
-|Priorytet|Opis|
+|Priority|Opis|
 |--------------|-----------------|
 |`1`|Obrazy natywne są generowane i instalowane natychmiast, bez czekania na okres bezczynności.|
 |`2`|Obrazy natywne są generowane i instalowane bez czekania na okres bezczynności, ale po zakończeniu wszystkich akcji z priorytetem 1 (i ich zależności).|
-|`3`|Obrazy natywne są instalowane, gdy usługa obrazów natywnych wykryje, że komputer jest w stanie bezczynności. Zobacz [usługi obrazów natywnych](#native-image-service).|
+|`3`|Obrazy natywne są instalowane, gdy usługa obrazów natywnych wykryje, że komputer jest w stanie bezczynności. Zobacz [Native Image Service](#native-image-service).|
 
 <a name="ScenarioTable"></a>
 
@@ -118,7 +121,7 @@ W poniższej tabeli pokazano składnię każdego `action`. Opisy poszczególnych
 
 |Konfiguracja|Opis|
 |-------------------|-----------------|
-|`/ExeConfig:``exePath`|Używa konfiguracji określonego zestawu wykonywalnego.<br /><br /> Program Ngen.exe musi podjąć te same decyzje, co moduł ładowania podczas tworzenia powiązania z zależnościami. Gdy współużytkowany składnik jest ładowany w czasie wykonywania, za pomocą <xref:System.Reflection.Assembly.Load%2A> metoda, pliku konfiguracji aplikacji określa zależności, które są ładowane dla współużytkowanego składnika — na przykład wersję zależności, który jest ładowany. `/ExeConfig` Przełącznik zapewnia Ngen.exe wskazówek, na którym zależności będą ładowane w czasie wykonywania.|
+|`/ExeConfig:``exePath`|Używa konfiguracji określonego zestawu wykonywalnego.<br /><br /> Program Ngen.exe musi podjąć te same decyzje, co moduł ładowania podczas tworzenia powiązania z zależnościami. Gdy składnik współużytkowany jest ładowany w czasie wykonywania, przy użyciu <xref:System.Reflection.Assembly.Load%2A> metody, plik konfiguracyjny aplikacji określa zależności, które są ładowane dla składnika współużytkowanego — na przykład wersję załadowanej zależności. Przełącznik `/ExeConfig` zapewnia wskazówki dla programu Ngen. exe, na których zależności zostałyby załadowane w czasie wykonywania.|
 |`/AppBase:``directoryPath`|Podczas lokalizowania zależności należy użyć określonego katalogu jako podstawy aplikacji.|
 
 <a name="OptionTable"></a>
@@ -129,7 +132,7 @@ W poniższej tabeli pokazano składnię każdego `action`. Opisy poszczególnych
 |------------|-----------------|
 |`/nologo`|Pomija wyświetlanie transparentu startowego firmy Microsoft.|
 |`/silent`|Pomija wyświetlanie komunikatów o sukcesie.|
-|`/verbose`|Wyświetla szczegółowe informacje na potrzeby debugowania. **Uwaga:**  Ze względu na ograniczenia systemu operacyjnego ta opcja nie wyświetla tak wielu dodatkowych informacji w systemach Windows 98 i Windows Millennium Edition.|
+|`/verbose`|Wyświetla szczegółowe informacje na potrzeby debugowania. **Uwaga:**  Ze względu na ograniczenia systemu operacyjnego ta opcja nie wyświetla więcej informacji o systemach Windows 98 i Windows Millennium Edition.|
 |`/help`, `/?`|Wyświetla składnię polecenia i opcje dla aktualnego wydania.|
 
 ## <a name="remarks"></a>Uwagi
@@ -137,24 +140,24 @@ W poniższej tabeli pokazano składnię każdego `action`. Opisy poszczególnych
 Użytkownik musi mieć uprawnienia administracyjne, aby uruchomić program Ngen.exe.
 
 > [!CAUTION]
-> Nie należy uruchamiać programu Ngen.exe dla zestawów, które nie są w pełni zaufane. Począwszy od programu .NET Framework 4 program Ngen.exe kompiluje zestawy w trybie pełnego zaufania, a zasady zabezpieczenia dostępu kodu nie są już uwzględniane.
+> Nie należy uruchamiać programu Ngen.exe dla zestawów, które nie są w pełni zaufane. Począwszy od .NET Framework 4, Ngen. exe kompiluje zestawy z pełnym zaufaniem, a zasady zabezpieczeń dostępu kodu (CAS) nie są już oceniane.
 
-Począwszy od programu .NET Framework 4, obrazy natywne, które są generowane przez program Ngen.exe może nie już być ładowane do aplikacji, które działają w trybie częściowego zaufania. Zamiast tego wywoływany jest kompilator JIT (Just-In-Time).
+Począwszy od .NET Framework 4, obrazy natywne, które są generowane przy użyciu programu Ngen. exe, nie mogą być już ładowane do aplikacji, które działają w częściowej relacji zaufania. Zamiast tego wywoływany jest kompilator JIT (Just-In-Time).
 
-Ngen.exe generuje obrazy natywne dla zestawu określonego przez `assemblyname` argument `install` akcji i wszystkich jego zależności. Zależności są ustalane na podstawie odwołań w manifeście zestawu. Jedyny scenariusz, w którym potrzebna jest oddzielna instalacja zależności jest, gdy aplikacja ładuje ją przy użyciu odbicia, na przykład przez wywołanie metody <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metody.
+Program Ngen. exe generuje obrazy natywne dla zestawu określonego przez `assemblyname` argument `install` dla akcji i wszystkich jej zależności. Zależności są ustalane na podstawie odwołań w manifeście zestawu. Jedyny scenariusz, w którym należy oddzielnie zainstalować zależność, to, gdy aplikacja ładuje ją przy użyciu odbicia, na przykład przez wywołanie <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metody.
 
 > [!IMPORTANT]
-> Nie używaj <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> metody z obrazów natywnych. Obraz załadowany za pomocą tej metody nie może być używany przez inne zestawy w kontekście wykonywania.
+> Nie należy używać <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> metody z obrazami natywnymi. Obraz załadowany za pomocą tej metody nie może być używany przez inne zestawy w kontekście wykonywania.
 
-Program Ngen.exe utrzymuje licznik zależności. Na przykład, załóżmy, że `MyAssembly.exe` i `YourAssembly.exe` są zainstalowane w pamięci podręcznej obrazów natywnych i mają odwołania do `OurDependency.dll`. Jeśli `MyAssembly.exe` zostanie odinstalowany, `OurDependency.dll` nie został odinstalowany. Jest on tylko usuwane podczas `YourAssembly.exe` również zostanie odinstalowany.
+Program Ngen.exe utrzymuje licznik zależności. Załóżmy na przykład, że `MyAssembly.exe` `YourAssembly.exe` są one zainstalowane w pamięci podręcznej obrazów natywnych, i oba zawierają `OurDependency.dll`odwołania do. Jeśli `MyAssembly.exe` program zostanie odinstalowany, `OurDependency.dll` nie zostanie odinstalowany. Jest on usuwany tylko `YourAssembly.exe` wtedy, gdy jest również odinstalowywany.
 
 Jeśli jest generowany obraz natywny dla zestawu przechowywanego w globalnej pamięci podręcznej zestawów, należy określić jego nazwę wyświetlaną. Zobacz <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>.
 
 Obrazy natywne, które generuje program Ngen.exe, mogą być współużytkowane w różnych domenach aplikacji. Oznacza to, że można używać programu Ngen.exe w scenariuszach aplikacji, które wymagają współużytkowania zestawów w różnych domenach aplikacji. Aby określić neutralność domeny:
 
-- Zastosuj <xref:System.LoaderOptimizationAttribute> atrybutu do aplikacji.
+- <xref:System.LoaderOptimizationAttribute> Zastosuj atrybut do aplikacji.
 
-- Ustaw <xref:System.AppDomainSetup.LoaderOptimization%2A?displayProperty=nameWithType> właściwość podczas tworzenia informacji Instalatora dla nowej domeny aplikacji.
+- <xref:System.AppDomainSetup.LoaderOptimization%2A?displayProperty=nameWithType> Ustaw właściwość podczas tworzenia informacji o konfiguracji dla nowej domeny aplikacji.
 
 Zawsze należy używać kodu neutralnego względem domeny podczas ładowania jego zestawu do wielu domen aplikacji. Jeśli obraz natywny zostanie załadowany do niewspółużytkowanej domeny aplikacji po załadowaniu do domeny współużytkowanej, nie będzie można go użyć.
 
@@ -165,9 +168,9 @@ W tej sekcji uwag:
 
 - [Generowanie obrazów dla różnych scenariuszy](#Scenarios)
 
-- [Ustalanie, kiedy używać obrazów natywnych](#WhenToUse)
+- [Ustalanie, kiedy należy używać obrazów natywnych](#WhenToUse)
 
-  - [Ulepszone wykorzystanie pamięci](#Memory)
+  - [Ulepszone użycie pamięci](#Memory)
 
   - [Szybsze uruchamianie aplikacji](#Startup)
 
@@ -175,13 +178,13 @@ W tej sekcji uwag:
 
 - [Ważność adresów podstawowych zestawu](#BaseAddresses)
 
-- [Trwałe powiązania](#HardBinding)
+- [Twarde powiązanie](#HardBinding)
 
-  - [Określanie wskazówki powiązania dla zależności](#DependencyHint)
+  - [Określanie wskazówki dotyczącej powiązań dla zależności](#DependencyHint)
 
-  - [Określanie domyślnej wskazówki powiązania dla zestawu](#AssemblyHint)
+  - [Określanie domyślnej wskazówki dotyczącej powiązań dla zestawu](#AssemblyHint)
 
-- [Przetwarzanie odroczone](#Deferred)
+- [Przetwarzanie Odroczone](#Deferred)
 
 - [Obrazy natywne i kompilacja JIT](#JITCompilation)
 
@@ -189,25 +192,25 @@ W tej sekcji uwag:
 
 - [Rozwiązywanie problemów](#Troubleshooting)
 
-  - [Assembly Binding Log Viewer](#Fusion)
+  - [Podgląd dziennika powiązań zestawów](#Fusion)
 
   - [Asystent debugowania zarządzanego JITCompilationStart](#MDA)
 
-  - [Rezygnacja z generowanie obrazu natywnego](#OptOut)
+  - [Rezygnacja z generowania obrazu natywnego](#OptOut)
 
 <a name="Scenarios"></a>
 
 ## <a name="generating-images-for-----different-scenarios"></a>Generowanie obrazów dla różnych scenariuszy
 
-Po wygenerowaniu obrazu natywnego dla zestawu, środowisko uruchomieniowe automatycznie próbuje zlokalizować i używać tego obrazu macierzystego za każdym razem, których ono działa zestawu. W zależności od scenariuszy użycia można generować wiele obrazów.
+Po wygenerowaniu obrazu natywnego zestawu środowisko uruchomieniowe automatycznie próbuje zlokalizować i używać tego obrazu natywnego przy każdym uruchomieniu zestawu. W zależności od scenariuszy użycia można generować wiele obrazów.
 
-Na przykład, jeśli zestaw zostanie uruchomiony w scenariuszu debugowania lub profilowania, środowisko uruchomieniowe szuka obrazu natywnego, który został wygenerowany za pomocą `/Debug` lub `/Profile` opcje. Jeśli nie można odnaleźć pasującego obrazu natywnego, środowisko uruchomieniowe przywraca standardową kompilację JIT. Jedynym sposobem debugowania obrazów natywnych jest utworzenie obrazu natywnego z użyciem `/Debug` opcji.
+Na przykład w przypadku uruchomienia zestawu w scenariuszu debugowania lub profilowania środowisko uruchomieniowe szuka obrazu natywnego, który został wygenerowany przy użyciu `/Debug` opcji lub. `/Profile` Jeśli nie można odnaleźć pasującego obrazu natywnego, środowisko uruchomieniowe przywraca standardową kompilację JIT. Jedynym sposobem debugowania obrazów natywnych jest utworzenie obrazu natywnego z `/Debug` opcją.
 
-`uninstall` Akcji także rozpoznaje scenariusze, można więc odinstalować wszystkie lub tylko wybrane scenariusze.
+`uninstall` Akcja rozpoznaje również scenariusze, dzięki czemu można odinstalować wszystkie scenariusze lub tylko wybrane scenariusze.
 
 <a name="WhenToUse"></a>
 
-## <a name="determining-when-to-use-native-images"></a>Ustalanie, kiedy używać obrazów natywnych
+## <a name="determining-when-to-use-native-images"></a>Ustalanie, kiedy należy używać obrazów natywnych
 
 Obrazy natywne zapewniają poprawę wydajności w dwóch obszarach: ulepszone wykorzystanie pamięci i skrócenie czasu uruchamiania.
 
@@ -216,7 +219,7 @@ Obrazy natywne zapewniają poprawę wydajności w dwóch obszarach: ulepszone wy
 
 <a name="Memory"></a>
 
-### <a name="improved-memory-use"></a>Ulepszone wykorzystanie pamięci
+### <a name="improved-memory-use"></a>Ulepszone użycie pamięci
 
 Obrazy natywne mogą znacznie poprawić wykorzystanie pamięci, gdy kod jest współużytkowany w różnych procesach. Obrazy natywne są plikami środowiska Windows PE, więc pojedyncza kopia pliku dll może być współużytkowana przez wiele procesów, natomiast kod natywny wytworzony przez kompilator JIT jest przechowywany w pamięci prywatnej i nie może być współużytkowany.
 
@@ -233,7 +236,7 @@ Wstępna kompilacja zestawów przy użyciu programu Ngen.exe może poprawić cza
 Trwałe powiązania mogą wpływać na czas uruchamiania, ponieważ wszystkie obrazy trwale powiązane z głównym zestawem aplikacji muszą zostać załadowane w tym samym czasie.
 
 > [!NOTE]
-> .NET Framework 3.5 Service Pack 1 należy umieścić składniki współużytkowane, o silnej nazwie w globalnej pamięci podręcznej, ponieważ moduł ładujący wykonywał dodatkową walidację silnie nazwanych zestawów, które są nie w globalnej pamięci podręcznej zestawów, efektywnie eliminując poprawę w czasie uruchamiania uzyskaną dzięki obrazom natywnym. Optymalizacje, które zostały wprowadzone w programie .NET Framework 3.5 SP1 usunięte dodatkową walidację.
+> Przed .NET Framework 3,5 z dodatkiem Service Pack 1 należy umieścić udostępnione, silnie nazwane składniki w globalnej pamięci podręcznej zestawów, ponieważ moduł ładujący wykonuje dodatkową weryfikację dla zestawów o silnych nazwach, które nie znajdują się w globalnej pamięci podręcznej zestawów, co skutecznie eliminuje Poprawa czasu uruchamiania uzyskana przy użyciu obrazów natywnych. Optymalizacje wprowadzone w .NET Framework 3,5 z dodatkiem SP1 spowodowały usunięcie dodatkowej weryfikacji.
 
 <a name="UsageSummary"></a>
 
@@ -287,22 +290,22 @@ Można użyć narzędzia, takiego jak dumpbin.exe, aby wyświetlić preferowany 
 
 <a name="HardBinding"></a>
 
-## <a name="hard-binding"></a>Trwałe powiązania
+## <a name="hard-binding"></a>Twarde powiązanie
 
 Trwałe powiązania zwiększają przepustowość i zmniejszają rozmiar zestawu roboczego dla obrazów natywnych. Wadą trwałych powiązań jest fakt, że wszystkie obrazy, które są trwale powiązane z zestawem, muszą być ładowane razem z zestawem. Może to znacznie zwiększyć czas uruchamiania dużych aplikacji.
 
 Trwałe powiązanie jest odpowiednie dla zależności, które są ładowane we wszystkich krytycznych pod względem wydajności scenariuszach aplikacji. Podobnie jak w przypadku każdego aspektu wykorzystania obrazu natywnego, staranne wykonywanie pomiarów wydajności jest jedynym sposobem ustalenia, czy trwałe powiązanie zwiększa wydajność aplikacji.
 
-<xref:System.Runtime.CompilerServices.DependencyAttribute> i <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> atrybutów umożliwiają dostarczenie wskazówek dotyczących trwałego powiązania do Ngen.exe.
+Atrybuty <xref:System.Runtime.CompilerServices.DependencyAttribute> i<xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> umożliwiają udostępnianie twardych wskazówek do programu Ngen. exe.
 
 > [!NOTE]
 > Te atrybuty są wskazówkami dla programu Ngen.exe, a nie poleceniami. Użycie ich nie gwarantuje uzyskania trwałego powiązania. Znaczenie tych atrybutów może się zmieniać w przyszłych wersjach.
 
 <a name="DependencyHint"></a>
 
-### <a name="specifying-a-binding-hint-for-a-dependency"></a>Określanie wskazówki powiązania dla zależności
+### <a name="specifying-a-binding-hint-for-a-dependency"></a>Określanie wskazówki dotyczącej powiązań dla zależności
 
-Zastosuj <xref:System.Runtime.CompilerServices.DependencyAttribute> do zestawu, aby określić prawdopodobieństwo, że określona zależność zostanie załadowana. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> Wskazuje, że trwałe powiązanie jest właściwe, <xref:System.Runtime.CompilerServices.LoadHint.Default> wskazuje, że powinny być używane domyślne dla zależności, i <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> wskazuje, że trwałe powiązanie jest właściwe.
+Zastosuj do <xref:System.Runtime.CompilerServices.DependencyAttribute> zestawu, aby wskazać prawdopodobieństwo, że zostanie załadowana określona zależność. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType>wskazuje, że stałe powiązanie jest odpowiednie <xref:System.Runtime.CompilerServices.LoadHint.Default> , wskazuje, że wartość domyślna dla zależności powinna być używana i <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> wskazuje, że twarde powiązanie nie jest odpowiednie.
 
 Poniższy kod pokazuje atrybuty dla zestawu mającego dwie zależności. Pierwsza zależność (Assembly1) jest odpowiednim kandydatem dla trwałego powiązania, ale druga zależność (Assembly2) nie jest.
 
@@ -328,20 +331,20 @@ Nazwa zestawu nie zawiera rozszerzenia nazwy pliku. Można używać nazw wyświe
 
 <a name="AssemblyHint"></a>
 
-### <a name="specifying-a-default-binding-hint-for-an-assembly"></a>Określanie domyślnej wskazówki powiązania dla zestawu
+### <a name="specifying-a-default-binding-hint-for-an-assembly"></a>Określanie domyślnej wskazówki dotyczącej powiązań dla zestawu
 
-Domyślne wskazówki powiązania potrzebne są tylko zestawom, które będą stosowane natychmiastowo i często przez dowolną aplikację, która jest od nich zależna. Zastosuj <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> z <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> do takich zestawów, aby określić, że trwałe powiązanie powinny być używane.
+Domyślne wskazówki powiązania potrzebne są tylko zestawom, które będą stosowane natychmiastowo i często przez dowolną aplikację, która jest od nich zależna. <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> Zastosujdotakichzestawów,abyokreślić,żetwarde<xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> powiązanie ma być używane.
 
 > [!NOTE]
-> Nie ma powodu do zastosowania <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> do zestawów dll, które nie należą do tej kategorii, ponieważ stosowanie tego atrybutu z dowolną wartością w innych niż <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> ma taki sam skutek jak Niezastosowanie atrybut wcale.
+> Nie ma powodów zastosowania <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> do zestawów dll, które nie należą do tej kategorii, ponieważ stosowanie atrybutu z jakąkolwiek wartością inną niż <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> ma ten sam efekt, co nie ma zastosowania atrybutu.
 
-Firma Microsoft używa <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> do określenia, że trwałe powiązanie jest domyślne dla bardzo niewielkiej liczby zestawów w programie .NET Framework, takich jak mscorlib.dll.
+Firma Microsoft korzysta <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> z programu, aby określić, że stałe powiązanie jest wartością domyślną dla bardzo niewielkiej liczby zestawów w .NET Framework, na przykład mscorlib. dll.
 
 <a name="Deferred"></a>
 
-## <a name="deferred-processing"></a>Przetwarzanie odroczone
+## <a name="deferred-processing"></a>Przetwarzanie Odroczone
 
-Generowanie obrazów natywnych dla bardzo dużych aplikacji może zająć znaczną ilość czasu. Podobnie zmiany składnika współużytkowanego lub zmiany w ustawieniach komputera mogą wymagać aktualizacji wielu obrazów natywnych. `install` i `update` akcji ma `/queue` opcja, która kolejkuje operację w celu odroczonego wykonania przez usługę obrazów natywnych. Ponadto program Ngen.exe ma `queue` i `executeQueuedItems` akcje, które zapewniają kontrolę nad usługą. Aby uzyskać więcej informacji, zobacz [Native Image Service](#native-image-service).
+Generowanie obrazów natywnych dla bardzo dużych aplikacji może zająć znaczną ilość czasu. Podobnie zmiany składnika współużytkowanego lub zmiany w ustawieniach komputera mogą wymagać aktualizacji wielu obrazów natywnych. Akcje `install` i `update` mają`/queue` opcję, która kolejkuje operację dla odroczonego wykonania przez usługę obrazu natywnego. Ponadto program Ngen. exe ma `queue` i `executeQueuedItems` akcje, które zapewniają kontrolę nad usługą. Aby uzyskać więcej informacji, zobacz [Native Image Service](#native-image-service).
 
 <a name="JITCompilation"></a>
 
@@ -359,7 +362,7 @@ Użycie programu Ngen.exe w celu utworzenia obrazu natywnego zestawu powoduje, �
 
 - Wersja programu .NET Framework.
 
-- Wersja systemu operacyjnego, jeśli zmiana następuje z systemów operacyjnych z rodziny Windows 9 x na rodzinę Windows NT.
+- Wersja systemu operacyjnego, jeśli zmiana pochodzi z rodziny Windows 9X do rodziny systemu Windows NT.
 
 - Dokładna tożsamość zestawu (ponowna kompilacja zmienia tożsamość).
 
@@ -371,11 +374,11 @@ Program Ngen.exe rejestruje te informacje podczas generowania obrazu natywnego. 
 
 - Wersja programu .NET Framework.
 
-     Jeśli zastosowano aktualizację programu .NET Framework, wszystkie obrazy natywne utworzone przy użyciu programu Ngen.exe stają się nieprawidłowe. Z tego powodu, wykonaj wszystkie aktualizacje programu .NET Framework `Ngen Update` polecenie, aby upewnić się, że wszystkie obrazy natywne są generowane. Program .NET Framework automatycznie tworzy nowe obrazy natywne dla bibliotek programu .NET Framework, które instaluje.
+     Jeśli zastosowano aktualizację programu .NET Framework, wszystkie obrazy natywne utworzone przy użyciu programu Ngen.exe stają się nieprawidłowe. Z tego powodu wszystkie aktualizacje .NET Framework wykonać `Ngen Update` polecenie, aby upewnić się, że wszystkie obrazy natywne zostaną ponownie wygenerowane. Program .NET Framework automatycznie tworzy nowe obrazy natywne dla bibliotek programu .NET Framework, które instaluje.
 
-- Wersja systemu operacyjnego, jeśli zmiana następuje z systemów operacyjnych z rodziny Windows 9 x na rodzinę Windows NT.
+- Wersja systemu operacyjnego, jeśli zmiana pochodzi z rodziny Windows 9X do rodziny systemu Windows NT.
 
-     Na przykład jeśli wersja systemu operacyjnego działającego na komputerze zmienia się z Windows 98 Windows XP, wszystkie obrazy natywne przechowywane w pamięci podręcznej obrazów natywnych stają się nieprawidłowe. Jednakże jeśli system operacyjny zmieni się z Windows 2000 Windows XP, obrazy nie są unieważniane.
+     Na przykład jeśli wersja systemu operacyjnego działającego na komputerze zmienia się z systemu Windows 98 na system Windows XP, wszystkie obrazy natywne przechowywane w pamięci podręcznej obrazów natywnych staną się nieprawidłowe. Jeśli jednak system operacyjny ulegnie zmianie z systemu Windows 2000 do systemu Windows XP, obrazy nie zostaną unieważnione.
 
 - Dokładna tożsamość zestawu.
 
@@ -383,93 +386,93 @@ Program Ngen.exe rejestruje te informacje podczas generowania obrazu natywnego. 
 
 - Dokładna tożsamość jakichkolwiek zestawów, do których odwołuje się zestaw.
 
-     Jeżeli zestaw zarządzany zostanie zaktualizowany, wszystkie obrazy natywne zależne bezpośrednio lub pośrednio od tego zestawu stają się nieprawidłowe i muszą zostać wygenerowane ponownie. Obejmuje to zarówno zwykłe odwołania, jak i trwale powiązane zależności. Po każdym zastosowaniu aktualizacji oprogramowania program instalacyjny powinien wykonać `Ngen Update` polecenie, aby zagwarantować ponowne wygenerowanie wszystkich zależnych obrazów natywnych.
+     Jeżeli zestaw zarządzany zostanie zaktualizowany, wszystkie obrazy natywne zależne bezpośrednio lub pośrednio od tego zestawu stają się nieprawidłowe i muszą zostać wygenerowane ponownie. Obejmuje to zarówno zwykłe odwołania, jak i trwale powiązane zależności. Za każdym razem, gdy aktualizacja oprogramowania zostanie zastosowana, program instalacyjny `Ngen Update` powinien wykonać polecenie, aby upewnić się, że wszystkie zależne obrazy natywne zostaną ponownie wygenerowane.
 
 - Czynniki związane z zabezpieczeniami.
 
      Zmiana zasad zabezpieczeń komputera ograniczająca uprawnienia udzielone uprzednio zestawowi może spowodować, że poprzednio skompilowane obrazy natywne dla tego zestawu staną się nieprawidłowe.
 
-     Aby uzyskać szczegółowe informacje dotyczące sposobu środowiska uruchomieniowego języka wspólnego administruje zabezpieczeniami dostępu kodu i sposobu używania uprawnień, zobacz [zabezpieczenia dostępu kodu](../../../docs/framework/misc/code-access-security.md).
+     Aby uzyskać szczegółowe informacje na temat sposobu, w jaki środowisko uruchomieniowe języka wspólnego administruje zabezpieczeniami dostępu kodu i jak korzystać z uprawnień, zobacz [zabezpieczenia dostępu kodu](../../../docs/framework/misc/code-access-security.md).
 
 <a name="Troubleshooting"></a>
 
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów
 
-Następujące tematy dotyczące rozwiązywania problemów pozwala zobaczyć które obrazy natywne są używane i nie można używać przez aplikację, aby określić, kiedy kompilator JIT zaczyna kompilować metody i pokazuje, jak zrezygnować z tworzenia obrazu natywnego określony metody.
+Poniższe tematy dotyczące rozwiązywania problemów umożliwiają sprawdzenie, które obrazy natywne są używane i które nie mogą być używane przez aplikację, aby określić, kiedy kompilator JIT zaczyna kompilować metodę, i pokazuje, jak zrezygnować z kompilacji obrazu natywnego określonego form.
 
 <a name="Fusion"></a>
 
 ### <a name="assembly-binding-log-viewer"></a>podgląd dziennika powiązań zestawów
 
-Aby upewnić się, że obrazy natywne są używane przez aplikację, możesz użyć [Fuslogvw.exe (Podgląd dziennika powiązań zestawów)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md). Wybierz **obrazy natywne** w **kategorie dziennika** pola w oknie Podgląd dziennika powiązań. Program Fuslogvw.exe dostarcza informacje o tym, dlaczego obraz natywny został odrzucony.
+Aby potwierdzić, że obrazy natywne są używane przez aplikację, można użyć [Fuslogvw. exe (Podgląd dziennika powiązań zestawów)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md). Wybierz opcję **obrazy natywne** w polu **kategorie dzienników** w oknie Przeglądarka dzienników powiązań. Program Fuslogvw.exe dostarcza informacje o tym, dlaczego obraz natywny został odrzucony.
 
 <a name="MDA"></a>
 
 ### <a name="the-jitcompilationstart-managed-debugging-assistant"></a>Asystent debugowania zarządzanego JITCompilationStart
 
-Możesz użyć [jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md) zarządzanego Asystenta debugowania (MDA), aby określić, kiedy kompilator JIT zaczyna kompilować funkcję.
+Za pomocą asystenta debugowania zarządzanego [jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md) (MDA) można określić, kiedy kompilator JIT zacznie kompilować funkcję.
 
 <a name="OptOut"></a>
 
-### <a name="opting-out-of-native-image-generation"></a>Rezygnacja z generowanie obrazu natywnego
+### <a name="opting-out-of-native-image-generation"></a>Rezygnacja z generowania obrazu natywnego
 
-W niektórych przypadkach program NGen.exe mogą mieć trudności generowania, który obraz natywny dla określonej metody lub możesz lepiej, że metoda być skompilowana w trybie JIT zamiast następnie kompilowane do obrazów natywnych. W takim przypadku można użyć `System.Runtime.BypassNGenAttribute` atrybutu, aby uniemożliwić NGen.exe generuje obraz natywny dla konkretnych metod. Ten atrybut musi stosowane osobno do każdej metody kod, którego nie chcesz dołączyć do obrazu natywnego. NGen.exe rozpoznaje atrybut i nie generuje kodu, obrazów natywnych dla odpowiedniej metody.
+W niektórych przypadkach program NGen. exe może mieć problemy z generowaniem obrazu natywnego dla określonej metody lub można preferować, aby Metoda była skompilowana JIT, a następnie skompilowana do obrazu natywnego. W takim przypadku można użyć `System.Runtime.BypassNGenAttribute` atrybutu, aby zapobiec generowaniu przez program Ngen. exe obrazu natywnego dla określonej metody. Ten atrybut musi być zastosowany indywidualnie dla każdej metody, której kod nie ma być dołączony do obrazu natywnego. Program NGen. exe rozpoznaje atrybut i nie generuje kodu w obrazie natywnym dla odpowiadającej metody.
 
-Zauważ, że `BypassNGenAttribute` nie jest zdefiniowana jako typ w bibliotece klas programu .NET Framework. Aby można było korzystać z atrybutu w kodzie, należy najpierw zdefiniować go w następujący sposób:
+Należy jednak pamiętać, że `BypassNGenAttribute` nie jest on zdefiniowany jako typ w bibliotece klas .NET Framework. Aby można było użyć atrybutu w kodzie, należy najpierw zdefiniować go w następujący sposób:
 
 [!code-csharp[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#1)]
 [!code-vb[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#1)]
 
-Można użyć atrybutu na podstawie-method. Poniższy przykład powoduje, że Generator obrazu natywnego, nie powinna generować obraz natywny dla `ExampleClass.ToJITCompile` metody.
+Następnie można zastosować atrybut dla poszczególnych metod. Poniższy przykład instruuje Generator obrazu natywnego, że nie powinien generować obrazu natywnego dla `ExampleClass.ToJITCompile` metody.
 
 [!code-csharp[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#2)]
 [!code-vb[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#2)]
 
 ## <a name="examples"></a>Przykłady
 
-Następujące polecenie generuje obraz natywny dla `ClientApp.exe`, znajduje się w bieżącym katalogu i instaluje obraz w pamięci podręcznej obrazów natywnych. Jeśli istnieje plik konfiguracji zestawu, program Ngen.exe go użyje. Ponadto obrazy natywne są generowane dla wszystkich plików dll, `ClientApp.exe` odwołania.
+Następujące polecenie generuje obraz natywny dla `ClientApp.exe`, znajdujący się w bieżącym katalogu i instaluje obraz w pamięci podręcznej obrazów natywnych. Jeśli istnieje plik konfiguracji zestawu, program Ngen.exe go użyje. Ponadto obrazy natywne są generowane dla dowolnych plików DLL, `ClientApp.exe` do których odwołuje się.
 
-```
+```console
 ngen install ClientApp.exe
 ```
 
 Obraz instalowany za pomocą programu Ngen.exe jest również nazywany elementem głównym. Elementem głównym może być aplikacja albo składnik współużytkowany.
 
-Następujące polecenie generuje obraz natywny dla `MyAssembly.exe` z określoną ścieżką.
+Następujące polecenie generuje obraz natywny dla `MyAssembly.exe` określonej ścieżki.
 
-```
+```console
 ngen install c:\myfiles\MyAssembly.exe
 ```
 
-Podczas lokalizowania zestawów i ich zależności program Ngen.exe używa tej samej logiki badania, co środowisko uruchomieniowe języka wspólnego (CLR). Domyślnie katalog, który zawiera `ClientApp.exe` jest używany jako katalog podstawowy aplikacji i wszelkie badania zestawów rozpoczynają się w tym katalogu. To zachowanie można zastąpić za pomocą `/AppBase` opcji.
+Podczas lokalizowania zestawów i ich zależności program Ngen.exe używa tej samej logiki badania, co środowisko uruchomieniowe języka wspólnego (CLR). Domyślnie katalog, który zawiera `ClientApp.exe` , jest używany jako katalog podstawowy aplikacji, a wszystkie sondy zestawu zaczynają się w tym katalogu. To zachowanie można zastąpić przy użyciu `/AppBase` opcji.
 
 > [!NOTE]
 > Zachowanie to różni się od zachowania programu Ngen.exe w wersjach 1.0 i 1.1 programu .NET Framework, gdzie podstawa aplikacji znajduje się w bieżącym katalogu.
 
-Zestaw może mieć zależność bez odwołania, na przykład jeśli ładuje plik dll za pomocą <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metody. Można utworzyć obraz natywny dla takiego pliku dll, przy użyciu informacji o konfiguracji dla zestawu aplikacji `/ExeConfig` opcji. Następujące polecenie generuje obraz natywny dla `MyLib.dll,` używając informacji konfiguracyjnych z `MyApp.exe`.
+Zestaw może mieć zależność bez odwołania, na przykład jeśli ładuje plik DLL za pomocą <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metody. Można utworzyć obraz natywny dla takiego pliku dll przy użyciu informacji konfiguracyjnych dla zestawu aplikacji z `/ExeConfig` opcją. Następujące polecenie generuje obraz natywny do `MyLib.dll,` użycia informacji o konfiguracji z `MyApp.exe`programu.
 
-```
+```console
 ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
 Zestawy instalowane w ten sposób nie są usuwane, gdy jest usuwana aplikacja.
 
-Aby odinstalować zależność, należy użyć tych samych opcji wiersza polecenia, które zostały użyte podczas jej instalowania. Poniższe polecenie odinstalowuje `MyLib.dll` z poprzedniego przykładu.
+Aby odinstalować zależność, należy użyć tych samych opcji wiersza polecenia, które zostały użyte podczas jej instalowania. Poniższe polecenie Odinstalowuje `MyLib.dll` z poprzedniego przykładu.
 
-```
+```console
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
 Aby utworzyć obraz natywny dla zestawu w globalnej pamięci podręcznej zestawów, należy użyć nazwy wyświetlanej zestawu. Na przykład:
 
-```
+```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL"
 ```
 
 Program NGen.exe generuje oddzielny zestaw obrazów dla każdego instalowanego scenariusza. Na przykład poniższe polecenia instalują kompletny zestaw obrazów natywnych dla normalnych operacji, drugi kompletny zestaw na potrzeby debugowania i trzeci na potrzeby profilowania:
 
-```
+```console
 ngen install MyApp.exe
 ngen install MyApp.exe /debug
 ngen install MyApp.exe /profile
@@ -479,43 +482,43 @@ ngen install MyApp.exe /profile
 
 Obrazy natywne zainstalowane w pamięci podręcznej można wyświetlić przy użyciu programu Ngen.exe. Poniższe polecenie wyświetla wszystkie obrazy natywne znajdujące się w pamięci podręcznej obrazów natywnych.
 
-```
+```console
 ngen display
 ```
 
-`display` Lista akcji wszystkie zestawy główne, a następnie listę obrazów natywnych na komputerze.
+`display` Akcja najpierw wyświetla listę wszystkich zestawów głównych, a następnie listę wszystkich obrazów natywnych na komputerze.
 
-Prosta nazwa zestawu służy do wyświetlania informacji dotyczących tylko tego zestawu. Następujące polecenie wyświetla wszystkie obrazy natywne w pamięci podręcznej obrazów natywnych, które pasują do nazwy częściowej `MyAssembly`, ich zależności, a wszystkie elementy główne, które są zależne od `MyAssembly`:
+Prosta nazwa zestawu służy do wyświetlania informacji dotyczących tylko tego zestawu. Następujące polecenie wyświetla wszystkie obrazy natywne w pamięci podręcznej obrazów natywnych, które `MyAssembly`pasują do nazwy częściowej, ich zależności i wszystkich elementów `MyAssembly`głównych, które mają zależność od:
 
-```
+```console
 ngen display MyAssembly
 ```
 
-Wiedząc, które elementy główne są zależne od zestawu współużytkowanego składnika są przydatne do oceny wpływu `update` akcji po uaktualnieniu składnika współużytkowanego.
+Znajomość tego, jakie elementy główne są zależne od zestawu współużytkowanego składnika, jest `update` przydatna w oceny wpływu akcji po uaktualnieniu składnika współużytkowanego.
 
 Aby określić rozszerzenie pliku zestawu, należy określić ścieżkę lub wykonać program Ngen.exe z katalogu zawierającego zestaw:
 
-```
+```console
 ngen display c:\myApps\MyAssembly.exe
 ```
 
-Następujące polecenie wyświetla wszystkie obrazy natywne w pamięci podręcznej obrazów natywnych o nazwie `MyAssembly` i wersji 1.0.0.0.
+Następujące polecenie wyświetla wszystkie obrazy natywne w pamięci podręcznej obrazów natywnych `MyAssembly` o nazwie i wersji 1.0.0.0.
 
-```
+```console
 ngen display "myAssembly, version=1.0.0.0"
 ```
 
 ### <a name="updating-images"></a>Aktualizacja obrazów
 
-Obrazy są zazwyczaj aktualizowane po uaktualnieniu składnika współużytkowanego. Aby zaktualizować wszystkie obrazy natywne, które zostały zmienione lub których zależności się zmieniły, należy użyć `update` akcji bez argumentów.
+Obrazy są zazwyczaj aktualizowane po uaktualnieniu składnika współużytkowanego. Aby zaktualizować wszystkie obrazy natywne, które uległy zmianie lub których zależności uległy zmianie `update` , użyj akcji bez argumentów.
 
-```
+```console
 ngen update
 ```
 
-Aktualizacja wszystkich obrazów może być długotrwałym procesem. Można kolejkować aktualizacje do wykonania przez usługę obrazów natywnych przy użyciu `/queue` opcji. Aby uzyskać więcej informacji na temat `/queue` priorytetów instalacji i opcji, zobacz [Native Image Service](#native-image-service).
+Aktualizacja wszystkich obrazów może być długotrwałym procesem. Można kolejkować aktualizacje do wykonania przez usługę obrazu macierzystego przy użyciu `/queue` opcji. Aby uzyskać więcej informacji na `/queue` temat opcji i priorytetów instalacji, zobacz [Native Image Service](#native-image-service).
 
-```
+```console
 ngen update /queue
 ```
 
@@ -523,116 +526,116 @@ ngen update /queue
 
 Program Ngen.exe utrzymuje listę zależności, aby składniki współużytkowane były usuwane tylko wtedy, gdy wszystkie zestawy, które od nich zależą, zostały usunięte. Ponadto współużytkowany składnik nie zostanie usunięty, jeśli został zainstalowany jako element główny.
 
-Poniższe polecenie Odinstalowuje wszystkie scenariusze dla głównego `ClientApp.exe`:
+Następujące polecenie Odinstalowuje wszystkie scenariusze dla katalogu głównego `ClientApp.exe`:
 
-```
+```console
 ngen uninstall ClientApp
 ```
 
-`uninstall` Akcji może służyć do usunięcia konkretnych scenariuszy. Poniższe polecenie Odinstalowuje wszystkie scenariusze debugowania `ClientApp.exe`:
+`uninstall` Akcja może służyć do usuwania konkretnych scenariuszy. Następujące polecenie Odinstalowuje wszystkie scenariusze debugowania dla `ClientApp.exe`:
 
-```
+```console
 ngen uninstall ClientApp /debug
 ```
 
 > [!NOTE]
-> Odinstalowywanie `/debug` scenariuszy nie powoduje odinstalowania scenariusza, który zawiera oba `/profile` i `/debug.`
+> Odinstalowywanie `/debug` scenariuszy nie powoduje odinstalowania scenariusza, który `/profile` obejmuje zarówno, jak i`/debug.`
 
-Poniższe polecenie Odinstalowuje wszystkie scenariusze dla określonej wersji `ClientApp.exe`:
+Następujące polecenie Odinstalowuje wszystkie scenariusze dla określonej wersji programu `ClientApp.exe`:
 
-```
+```console
 ngen uninstall "ClientApp, Version=1.0.0.0"
 ```
 
-Poniższe polecenia odinstalowują wszystkie scenariusze dla `"ClientApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL",` lub po prostu scenariusz debugowania dla tego zestawu:
+Następujące polecenia Odinstalowuje wszystkie scenariusze dla `"ClientApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL",` lub tylko scenariusz debugowania dla tego zestawu:
 
-```
+```console
 ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL"
 ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL" /debug
 ```
 
-Podobnie jak w przypadku `install` akcji, dostarczenie rozszerzenia wymaga wykonywania Ngen.exe z katalogu zawierającego zestaw lub określenia pełnej ścieżki.
+Podobnie jak w `install` przypadku działania, dostarczenie rozszerzenia wymaga wykonania programu Ngen. exe z katalogu zawierającego zestaw lub określenia pełnej ścieżki.
 
-Przykłady dotyczące usługi obrazów natywnych, zobacz [Native Image Service](#native-image-service).
+Aby zapoznać się z przykładami dotyczącymi usługi obrazów natywnych, zobacz [Native Image Service](#native-image-service).
 
 ## <a name="native-image-task"></a>Obraz macierzysty — zadanie
 
-Obraz macierzysty — zadanie jest zadaniem Windows, który generuje i przechowuje obrazy natywne. Obraz macierzysty — zadanie generuje i odzyskuje obrazów natywnych automatycznie dla obsługiwanych scenariuszach. Umożliwia ona także instalatorów do użycia [Ngen.exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) do tworzenia i aktualizowania obrazy natywne odroczonego naraz.
+Zadanie obrazu natywnego to zadanie systemu Windows, które generuje i utrzymuje obrazy natywne. Zadanie obrazu natywnego generuje i automatycznie przejmuje obrazy natywne dla obsługiwanych scenariuszy. Umożliwia także instalatorom używanie programu [Ngen. exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) do tworzenia i aktualizowania obrazów natywnych w odłożonym czasie.
 
-Obraz macierzysty — zadanie jest zarejestrowany, gdy dla każdego Procesora architektura obsługiwana na komputerze, aby umożliwić kompilację dla aplikacji przeznaczonych każdej architektury:
+Zadanie obrazu natywnego jest rejestrowane raz dla każdej architektury procesora obsługiwanej na komputerze, aby umożliwić kompilację dla aplikacji przeznaczonych dla każdej architektury:
 
-|Nazwa zadania|komputer 32-bitowy|komputer 64-bitowy|
+|Nazwa zadania|32-bitowy komputer|64-bitowy komputer|
 |---------------|----------------------|----------------------|
-|NET Framework NGEN 4.0.30319|Yes|Yes|
-|NET Framework NGEN 4.0.30319 64|Nie|Tak|
+|.NET Framework NGEN v 4.0.30319|Tak|Tak|
+|.NET Framework NGEN v 4.0.30319 64|Nie|Tak|
 
-Obraz macierzysty — zadanie jest dostępna w .NET Framework 4.5 i nowsze wersje, gdy uruchomiony w systemie Windows 8 lub nowszym. We wcześniejszych wersjach systemu Windows, .NET Framework używa [Native Image Service](#native-image-service).
+Zadanie obrazu natywnego jest dostępne w .NET Framework 4,5 i nowszych wersjach, gdy działa w systemie Windows 8 lub nowszym. We wcześniejszych wersjach systemu Windows .NET Framework używa [usługi obrazów natywnych](#native-image-service).
 
 ### <a name="task-lifetime"></a>Okres istnienia zadania
 
-Ogólnie rzecz biorąc harmonogram zadań Windows uruchamia zadanie obrazu natywnego, każdej nocy, gdy komputer jest w stanie bezczynności. Zadanie sprawdza, czy wszelkie prace odroczonego umieszczonych w kolejce przez programy instalacyjne aplikacji, wszystkie żądania aktualizacji odroczonego obrazu natywnego i wszystkich operacji tworzenia automatycznych obrazu. Zadanie kończy zaległych elementów pracy i zamknięcie. Jeśli komputer nie jest bezczynny, gdy zadanie jest uruchomione, zatrzymuje zadanie.
+Ogólnie rzecz biorąc, Harmonogram zadań systemu Windows uruchamia zadanie obrazu natywnego co noc, gdy komputer jest w stanie bezczynności. Zadanie sprawdza wszystkie odroczone zadania, które są umieszczane w kolejce przez instalatorów aplikacji, wszystkie odroczone żądania aktualizacji obrazów natywnych i wszelkie automatyczne tworzenie obrazu. Zadanie kończy zaległe elementy robocze, a następnie zamyka. Jeśli komputer przestanie być bezczynny, gdy zadanie jest uruchomione, zadanie zostanie zatrzymane.
 
-Można także uruchomić obraz macierzysty — zadanie ręcznie za pośrednictwem interfejsu użytkownika harmonogramu zadań lub ręcznego wywołania do NGen.exe. Jeśli zadanie zostało uruchomione przy użyciu jednej z tych metod, będzie nadal uruchomione, gdy nie jest już jest w stanie bezczynności. Obrazy utworzone ręcznie przy użyciu NGen.exe są uszeregowane według priorytetów umożliwia zachowanie przewidywalne dla programów instalacyjnych aplikacji.
+Możesz również ręcznie uruchomić zadanie natywnego obrazu za pomocą interfejsu użytkownika Harmonogram zadań lub ręcznie wywołania programu NGen. exe. Jeśli zadanie zostało rozpoczęte za pomocą jednej z tych metod, będzie ono nadal działać, gdy komputer nie będzie już w stanie bezczynności. Obrazy tworzone ręcznie przy użyciu programu NGen. exe są priorytetowe w celu włączenia przewidywalnego zachowania dla instalatorów aplikacji.
 
 ## <a name="native-image-service"></a>Usługa obrazu macierzystego
 
-Usługa obrazów natywnych jest usługa Windows, który generuje i przechowuje obrazy natywne. Usługa obrazów natywnych umożliwia deweloperowi odroczenie instalacji i aktualizacji obrazów natywnych na okresy, gdy komputer jest w stanie bezczynności.
+Natywna usługa obrazów to usługa systemu Windows, która generuje i utrzymuje obrazy natywne. Usługa obrazów natywnych umożliwia deweloperom odroczenie instalacji i aktualizacji obrazów natywnych na okresy, gdy komputer jest w stanie bezczynności.
 
-Zazwyczaj usługa obrazów natywnych jest inicjowane przez program instalacyjny (Instalator) dla aplikacji lub aktualizacji. Dla akcji z priorytetem 3 usługa była wykonywana w czasie bezczynności na komputerze. Usługa zapisuje swój stan i jest w stanie kontynuować przez wiele ponownego uruchomienia, jeśli to konieczne. Wiele kompilacji obrazu można umieścić w kolejce.
+Zwykle usługa obrazów natywnych jest inicjowana przez program instalacyjny (Instalator) dla aplikacji lub aktualizacji. W przypadku akcji o priorytecie 3 usługa jest wykonywana w czasie bezczynności na komputerze. Usługa zapisuje swój stan i umożliwia kontynuowanie wielu ponownych uruchomień, jeśli jest to konieczne. Kompilacja wielu obrazów może być umieszczona w kolejce.
 
-Usługa również współdziała z ręcznego polecenia Ngen.exe. Ręczne polecenia mają pierwszeństwo przed aktywności w tle.
+Usługa również współdziała z ręcznym poleceniem Ngen. exe. Polecenia ręczne mają pierwszeństwo przed działaniami w tle.
 
 > [!NOTE]
-> Windows Vista, nazwa jest wyświetlana na dla usługi obrazów natywnych "v2.0.50727_X86 NGEN Microsoft.NET Framework" lub "v2.0.50727_X64 NGEN Microsoft.NET Framework". We wszystkich wcześniejszych wersjach systemu Microsoft Windows nazwa jest "V2.0.50727_X86 usługi optymalizacji środowiska uruchomieniowego .NET" lub "Usługi optymalizacji środowiska uruchomieniowego .NET v2.0.50727_X64".
+> W systemie Windows Vista Nazwa wyświetlana dla usługi obrazów natywnych to "Microsoft.NET Framework NGEN v 2.0.50727 _X86" lub "Microsoft.NET Framework NGEN v 2.0.50727 _X64". We wszystkich wcześniejszych wersjach systemu Microsoft Windows nazwa to "Optymalizacja środowiska uruchomieniowego platformy .NET w usłudze 2.0.50727 _X86" lub "środowisko optymalizacji środowiska uruchomieniowego platformy .NET w 2.0.50727 _X64".
 
-### <a name="launching-deferred-operations"></a>Uruchamianie operacji odroczone
+### <a name="launching-deferred-operations"></a>Uruchamianie odroczonych operacji
 
-Przed rozpoczęciem instalacji lub uaktualniania, zaleca się wstrzymanie usługi. Daje to gwarancję, że usługa nie jest wykonywane, gdy Instalator jest kopiowanie plików lub umieszczając zestawów w globalnej pamięci podręcznej. Następujące polecenie w wierszu Ngen.exe wstrzymuje usługę:
+Przed rozpoczęciem instalacji lub uaktualnienia zaleca się wstrzymywanie usługi. Gwarantuje to, że usługa nie zostanie wykonana, podczas gdy Instalator kopiuje pliki lub umieszcza zestawy w globalnej pamięci podręcznej zestawów. Następujący wiersz polecenia Ngen. exe wstrzymuje usługę:
 
-```
+```console
 ngen queue pause
 ```
 
-Gdy wszystkie operacje odroczonego zostały umieszczone w kolejce, następujące polecenie umożliwia usługę, aby wznowić:
+Po dodaniu wszystkich odroczonych operacji do kolejki następujące polecenie umożliwia wznowienie działania usługi:
 
-```
+```console
 ngen queue continue
 ```
 
-Mają być odroczone generowanie obrazu natywnego, podczas instalowania nowej aplikacji lub podczas aktualizowania współużytkowany składnik, należy użyć `/queue` z opcją `install` lub `update` akcji. Następujące wiersze polecenia Ngen.exe Zainstaluj obraz natywny dla składnika współużytkowanego i wykonać aktualizację wszystkich katalogów głównych, które może mieć wpływ:
+Aby odroczyć generowanie obrazu natywnego podczas instalowania nowej aplikacji lub podczas aktualizowania składnika współużytkowanego, `/queue` należy użyć opcji `install` z `update` akcjami lub. Poniższe wiersze poleceń Ngen. exe instalują obraz macierzysty dla składnika współużytkowanego i przeprowadzają aktualizację wszystkich katalogów głównych, które mogły mieć to oddziaływać:
 
-```
+```console
 ngen install MyComponent /queue
 ngen update /queue
 ```
 
-`update` Akcji generuje wszystkie obrazy natywne, które zostały unieważnione, nie tylko te, które używają `MyComponent`.
+Akcja generuje ponownie wszystkie obrazy natywne, które zostały unieważnione, a nie tylko te, `MyComponent`które używają. `update`
 
-Jeśli aplikacja składa się z wielu katalogów głównych, możesz kontrolować priorytet odroczonego akcji. Następujące polecenia w kolejce instalacji trzech głównych. `Assembly1` jest zainstalowany jako pierwszy, bez czekania na okres bezczynności. `Assembly2` jest również instalowany bez oczekiwania na okres bezczynności, ale po zakończeniu wszystkich akcji z priorytetem 1. `Assembly3` jest zainstalowana, gdy usługa wykrywa, że komputer jest w stanie bezczynności.
+Jeśli aplikacja składa się z wielu katalogów głównych, można kontrolować priorytet akcji odroczonych. Następujące polecenia kolejką instalację trzech katalogów głównych. `Assembly1`Program jest instalowany jako pierwszy, bez czekania na czas bezczynności. `Assembly2`Program jest również instalowany bez oczekiwania na czas bezczynności, ale po zakończeniu wszystkich akcji o priorytecie 1. `Assembly3`Program jest instalowany, gdy usługa wykryje, że komputer jest w stanie bezczynności.
 
-```
+```console
 ngen install Assembly1 /queue:1
 ngen install Assembly2 /queue:2
 ngen install Assembly3 /queue:3
 ```
 
-Można wymusić akcji w kolejce nastąpi synchronicznie przy użyciu `executeQueuedItems` akcji. Jeśli podasz opcjonalne priorytet, ta akcja dotyczy tylko umieszczonych w kolejce akcje, które mają taki sam lub niższy priorytet. Domyślnym priorytetem jest 3, dzięki czemu polecenie Ngen.exe przetwarza wszystkich akcji w kolejce natychmiast i nie może zwracać dopóki nie zostaną one ukończone:
+Można wymusić, aby kolejkowane akcje były wykonywane synchronicznie `executeQueuedItems` za pomocą akcji. W przypadku podania opcjonalnego priorytetu ta akcja ma wpływ tylko na akcje znajdujące się w kolejce, które mają równy lub niższy priorytet. Domyślny priorytet to 3, dlatego następujące polecenie Ngen. exe natychmiast przetwarza wszystkie akcje w kolejce i nie zwraca do momentu zakończenia:
 
-```
+```console
 ngen executeQueuedItems
 ```
 
-Synchroniczne polecenia są wykonywane przez Ngen.exe i nie używaj usługi obrazów natywnych. Można wykonywać akcji przy użyciu Ngen.exe, gdy jest uruchomiona usługa obrazów natywnych.
+Polecenia synchroniczne są wykonywane przez program Ngen. exe i nie używają usługi obrazów natywnych. Akcje można wykonywać przy użyciu programu Ngen. exe, gdy jest uruchomiona usługa obrazów natywnych.
 
 ### <a name="service-shutdown"></a>Zamykanie usługi
 
-Po jest inicjowane przez wykonanie polecenia Ngen.exe, która obejmuje `/queue` opcja, usługa jest uruchamiana w tle do momentu zakończenia wszystkich akcji. Usługa zapisuje stanu tak, aby w razie potrzeby można kontynuować przez wiele ponownego uruchomienia. Kiedy usługa wykryje, że istnieją żadnych więcej akcji w kolejce resetuje stan tak, aby nie zostanie uruchomiony ponownie przy następnym rozruchu komputera i jej zamknięcie się.
+Po zainicjowaniu przez wykonanie polecenia Ngen. exe, które zawiera `/queue` opcję, usługa jest uruchamiana w tle do momentu zakończenia wszystkich akcji. Usługa zapisuje swój stan, aby umożliwić kontynuowanie wielu ponownych uruchomień, jeśli jest to konieczne. Gdy usługa wykryje, że nie ma więcej akcji w kolejce, resetuje jej stan tak, aby nie był uruchamiany ponownie przy następnym uruchomieniu komputera, a następnie zostanie zamknięty.
 
-### <a name="service-interaction-with-clients"></a>Usługa interakcji z klientami
+### <a name="service-interaction-with-clients"></a>Interakcja z klientami usługi
 
-W .NET Framework w wersji 2.0 jedyna interakcja z usługi obrazów natywnych jest przy użyciu wiersza polecenia narzędzia Ngen.exe. Narzędzie wiersza polecenia w skryptach instalacji do kolejki akcji dla usługi obrazów natywnych i interakcji z usługą.
+W .NET Framework w wersji 2,0 jedyną interakcją z usługą obrazów natywnych jest użycie narzędzia wiersza polecenia Ngen. exe. Użyj narzędzia wiersza polecenia w skryptach instalacyjnych, aby kolejkować akcje dla usługi obrazów natywnych i współdziałać z usługą.
 
 ## <a name="see-also"></a>Zobacz także
 

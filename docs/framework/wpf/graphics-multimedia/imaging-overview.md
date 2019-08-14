@@ -21,17 +21,16 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 845095567459fc486dd2f1c52e575444612c7bb8
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: fcf5e8e68492f4d1ff75221384b08ffad2b939f3
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869118"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971959"
 ---
 # <a name="imaging-overview"></a>Przegląd Obrazowanie
 Ten temat zawiera wprowadzenie do programu [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]umożliwia deweloperom wyświetlanie, przekształcanie i formatowanie obrazów.  
 
-<a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>Składnik programu WPF Imaging  
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]oferuje znaczące ulepszenia w zakresie możliwości tworzenia [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]obrazów w programie. Funkcje tworzenia obrazu, takie jak wyświetlanie mapy bitowej lub użycie obrazu w przypadku wspólnej kontrolki, były wcześniej oparte na bibliotekach Microsoft Windows GDI (GDI) lub Windows Microsoft GDI+. Ten interfejs API zapewnia podstawowe funkcje tworzenia obrazu, ale nie ma żadnych funkcji, takich jak obsługa rozszerzalności koderów-dekoder i obsługa obrazów o wysokiej wierności. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]został zaprojektowany w celu pokonania wad GDI i GDI+ oraz udostępnienie nowego zestawu interfejsów API do wyświetlania i używania obrazów w aplikacjach.  
   
@@ -39,7 +38,7 @@ Ten temat zawiera wprowadzenie do programu [!INCLUDE[TLA#tla_wic](../../../../in
   
 - Model rozszerzalności dla nowych lub własnościowych formatów obrazu.  
   
-- Ulepszona wydajność i bezpieczeństwo formatów obrazów natywnych, w tym map bitowych [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)](BMP [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]) [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)],, [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)],, Graphics Interchange Format (GIF) i ikony (. ico).  
+- Ulepszona wydajność i zabezpieczenia formatów obrazów natywnych, w tym mapy bitowej (BMP), Wspólna Grupa ekspertów (JPEG [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]) [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)],, Graphics Interchange Format (GIF) i ikona (. ico).  
   
 - Zachowywanie dużej ilości danych obrazu z dużymi bitami do 8 bitów na kanał (32 bitów na piksel).  
   
@@ -165,7 +164,7 @@ Pędzle obrazu mogą wypełniać kształty, kontrolki, tekst i nie tylko
 ## <a name="image-metadata"></a>Metadane obrazu  
  Niektóre pliki obrazów zawierają metadane opisujące zawartość lub charakterystykę pliku. Na przykład większość kamer cyfrowych tworzy obrazy zawierające metadane dotyczące marki i modelu aparatu używane do przechwytywania obrazu. Każdy format obrazu obsługuje metadane inaczej, [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] ale zapewnia jednolity sposób przechowywania i pobierania metadanych dla każdego obsługiwanego formatu obrazu.  
   
- Dostęp do metadanych jest udostępniany przez <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> Właściwość <xref:System.Windows.Media.Imaging.BitmapSource> obiektu. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A><xref:System.Windows.Media.Imaging.BitmapMetadata> zwraca obiekt, który zawiera wszystkie metadane zawarte w obrazie. Te dane mogą znajdować się w jednym schemacie metadanych lub w połączeniu z różnymi schematami. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]obsługuje następujące schematy metadanych obrazów: Plik obrazu z wymianą (EXIF), tekst (dane tekstowe PNG), katalog plików obrazów (IFD) [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)], i [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
+ Dostęp do metadanych jest udostępniany przez <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> Właściwość <xref:System.Windows.Media.Imaging.BitmapSource> obiektu. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A><xref:System.Windows.Media.Imaging.BitmapMetadata> zwraca obiekt, który zawiera wszystkie metadane zawarte w obrazie. Te dane mogą znajdować się w jednym schemacie metadanych lub w połączeniu z różnymi schematami. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]obsługuje następujące schematy metadanych obrazów: Plik obrazu z wymianą (EXIF), tekst (dane tekstowe PNG), katalog plików obrazów (IFD), międzynarodowa prasa telekomunikacyjna (IPTC) [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]i.  
   
  Aby uprościć proces odczytywania <xref:System.Windows.Media.Imaging.BitmapMetadata> metadanych, program udostępnia kilka nazwanych właściwości, które można łatwo uzyskać do nich dostęp, takich jak <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, i <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Wiele z tych nazwanych właściwości może również służyć do pisania metadanych. Dodatkowa obsługa odczytywania metadanych jest dostarczana przez czytelnika zapytania metadanych. Metoda jest używana do pobierania czytnika zapytań metadanych przez podanie ciągu zapytania, takiego jak *"/APP1/EXIF/".* <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> W poniższym przykładzie <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> jest używany do uzyskania tekstu przechowywanego w lokalizacji *"/text/Description"* .  
   

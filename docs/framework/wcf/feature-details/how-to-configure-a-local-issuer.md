@@ -8,74 +8,76 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 98d4c01bf2b84a6379eca5d0e1d5dbee68dc7cdd
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0028a0522447588ee0fb183b5b2f93d334a7b2b2
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487136"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972067"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Instrukcje: konfigurowanie lokalnego wystawcy
-W tym temacie opisano sposób konfigurowania klienta do używania wystawcy lokalnego dla wystawionych tokenów.  
-  
- Często gdy klient komunikuje się z usługi federacyjnej, usługi Określa adres zabezpieczeń, które usługi tokenu, który oczekuje się, aby wystawić token klient użyje do samodzielnego uwierzytelnienia usługi federacyjnej. W niektórych przypadkach klient może być skonfigurowany do użycia *wystawcy lokalnego*.  
-  
- Windows Communication Foundation (WCF) używa wystawcy lokalnego w przypadkach, gdy jest adres wystawcy powiązania federacyjnego `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` lub `null`. W takich przypadkach należy skonfigurować <xref:System.ServiceModel.Description.ClientCredentials> za pomocą adresu lokalnego wystawcy i powiązanie, aby używać do komunikowania się z tym wystawcą.  
-  
+
+W tym temacie opisano sposób konfigurowania klienta do używania lokalnego wystawcy dla wystawionych tokenów.
+
+Często, gdy klient komunikuje się z usługą federacyjną, usługa określa adres usługi tokenu zabezpieczającego, która powinna wydać token używany przez klienta do samodzielnego uwierzytelnienia w usłudze federacyjnej. W niektórych sytuacjach klient może być skonfigurowany do korzystania z *lokalnego*wystawcy.
+
+Windows Communication Foundation (WCF) używa wystawcy lokalnego w przypadkach, gdy adres wystawcy powiązania federacyjnego `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` to `null`lub. W takich przypadkach należy skonfigurować <xref:System.ServiceModel.Description.ClientCredentials> program przy użyciu adresu wystawcy lokalnego i powiązania, które ma być używane do komunikacji z tym wystawcą.
+
 > [!NOTE]
->  Jeśli <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> właściwość `ClientCredentials` klasy jest ustawiona na `true`, adres wystawcy lokalnego nie jest określony, i Wystawca adres podany przez [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) lub innych powiązania federacyjnego jest `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, lub `null`, użyta wystawcy Windows CardSpace.  
-  
-### <a name="to-configure-the-local-issuer-in-code"></a>Aby skonfigurować wystawcy lokalnego w kodzie  
-  
-1. Utwórz zmienną typu <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
-  
-2. Ustaw zmienną na wystąpienie zwrócone w wyniku <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> właściwość `ClientCredentials` klasy. To wystąpienie jest zwracany przez <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> właściwość klienta (odziedziczone <xref:System.ServiceModel.ClientBase%601>) lub <xref:System.ServiceModel.ChannelFactory.Credentials%2A> właściwość <xref:System.ServiceModel.ChannelFactory>:  
-  
+> `true`Jeśli właściwość klasy`ClientCredentials` jest ustawiona na, adres wystawcy lokalnego nie zostanie określony [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) , a adres wystawcy określony przez WSFederationHttpBinding > lub inne powiązanie federacyjne to <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self` ,`http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, lub jest `null`, używany jest wystawca programu Windows CardSpace.
+
+## <a name="to-configure-the-local-issuer-in-code"></a>Aby skonfigurować wystawcy lokalnego w kodzie
+
+1. Utwórz zmienną typu<xref:System.ServiceModel.Security.IssuedTokenClientCredential>
+
+2. Ustaw zmienną na wystąpienie zwracane z <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> właściwości `ClientCredentials` klasy. To wystąpienie <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> jest zwracane przez właściwość klienta (dziedziczone z <xref:System.ServiceModel.ClientBase%601>) <xref:System.ServiceModel.ChannelFactory>lub <xref:System.ServiceModel.ChannelFactory.Credentials%2A> Właściwość:
+
      [!code-csharp[c_CreateSTS#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#9)]
-     [!code-vb[c_CreateSTS#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#9)]  
-  
-3. Ustaw <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> właściwość nowe wystąpienie klasy <xref:System.ServiceModel.EndpointAddress>, przy użyciu adresu wystawcy lokalnego jako argumentu do konstruktora.  
-  
+     [!code-vb[c_CreateSTS#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#9)]
+
+3. Ustaw właściwość na nowe wystąpienie <xref:System.ServiceModel.EndpointAddress>elementu, z adresem wystawcy lokalnego jako argumentem konstruktora. <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>
+
      [!code-csharp[c_CreateSTS#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#10)]
-     [!code-vb[c_CreateSTS#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#10)]  
-  
-     Alternatywnie, Utwórz nową <xref:System.Uri> wystąpienie jako argument do konstruktora.  
-  
+     [!code-vb[c_CreateSTS#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#10)]
+
+     Alternatywnie Utwórz nowe <xref:System.Uri> wystąpienie jako argument konstruktora.
+
      [!code-csharp[c_CreateSTS#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#11)]
-     [!code-vb[c_CreateSTS#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#11)]  
-  
-     `addressHeaders` Parametr jest tablicą <xref:System.ServiceModel.Channels.AddressHeader> wystąpień, jak pokazano.  
-  
+     [!code-vb[c_CreateSTS#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#11)]
+
+     Parametr jest tablicą <xref:System.ServiceModel.Channels.AddressHeader>wystąpień `addressHeaders` , jak pokazano.
+
      [!code-csharp[c_CreateSTS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#12)]
-     [!code-vb[c_CreateSTS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#12)]  
-  
-4. Ustaw powiązanie wystawcy lokalnego przy użyciu <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> właściwości.  
-  
+     [!code-vb[c_CreateSTS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#12)]
+
+4. Ustaw powiązanie dla wystawcy lokalnego przy użyciu <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> właściwości.
+
      [!code-csharp[c_CreateSTS#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#13)]
-     [!code-vb[c_CreateSTS#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#13)]  
-  
-5. Opcjonalna. Dodawanie zachowania punktu końcowego skonfigurowanego dla wystawcy lokalnego, dodając takie zachowania do kolekcji zwróconej przez <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> właściwości.  
-  
+     [!code-vb[c_CreateSTS#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#13)]
+
+5. Opcjonalny. Dodaj skonfigurowane zachowania punktu końcowego dla wystawcy lokalnego przez dodanie takich zachowań do kolekcji zwróconej <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> przez właściwość.
+
      [!code-csharp[c_CreateSTS#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#14)]
-     [!code-vb[c_CreateSTS#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#14)]  
-  
-### <a name="to-configure-the-local-issuer-in-configuration"></a>Konfigurowanie lokalnego wystawcy w konfiguracji  
-  
-1. Tworzenie [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) element jako element podrzędny elementu [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) element, który jest elementem podrzędnym [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementu w zachowanie punktu końcowego.  
-  
-2. Ustaw `address` atrybutu adres wystawcy lokalnego, która będzie akceptować żądania tokenu.  
-  
-3. Ustaw `binding` i `bindingConfiguration` atrybuty wartości, które odwołują się odpowiednie powiązanie do użycia przy komunikacji z punktem końcowym wystawcy lokalnego.  
-  
-4. Opcjonalna. Ustaw [ \<tożsamości >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) element jako element podrzędny <`localIssuer`> element i określ informacje o tożsamości dla wystawcy lokalnego.  
-  
-5. Opcjonalna. Ustaw [ \<nagłówki >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) element jako element podrzędny <`localIssuer`> element i określić dodatkowych nagłówków, które są wymagane do prawidłowego adresowania wystawcy lokalnego.  
-  
-## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Należy pamiętać, że jeśli wystawcy adres i powiązanie są określone dla danego powiązania, wystawcy lokalnego nie jest używany dla punktów końcowych, korzystające z tego wiązania. Klienci, którzy oczekują zawsze używaj wystawcy lokalnego należy upewnić się, że nie używaj takiego powiązania lub mogą modyfikować powiązania tak, aby adres wystawcy jest `null`.  
-  
+     [!code-vb[c_CreateSTS#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#14)]
+
+## <a name="to-configure-the-local-issuer-in-configuration"></a>Aby skonfigurować wystawcę lokalnego w konfiguracji
+
+1. Utwórz element [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) LocalIssuer > jako obiekt podrzędny elementu issuedToken >, który jest samym elementem podrzędnym elementu ClientCredentials > w zachowaniu punktu końcowego. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)
+
+2. Ustaw wartość `address` atrybutu na adres wystawcy lokalnego, która będzie akceptować żądania tokenów.
+
+3. Ustaw atrybuty `bindingConfiguration` i na wartości, które odwołują się do odpowiedniego powiązania do użycia podczas komunikacji z punktem końcowym wystawcy lokalnego. `binding`
+
+4. Opcjonalna. Ustaw >`localIssuer`tożsamość elementu jako element podrzędny < > elementu i Określ informacje o tożsamości dla wystawcy lokalnego. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+
+5. Opcjonalny. `localIssuer` [ Ustawnagłówki>elementujakoelementpodrzędny<>elementuiokreśldodatkowenagłówki,któresąwymaganewceluprawidłowegoadresowania\<](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) wystawcy lokalnego.
+
+## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework
+
+Należy pamiętać, że jeśli dla danego powiązania określono adres wystawcy i powiązanie, wystawcy lokalnego nie jest używany dla punktów końcowych używających tego powiązania. Klienci, którzy oczekują zawsze używać wystawcy lokalnego, powinni upewnić się, że nie używają takiego powiązania lub że modyfikują powiązanie, tak aby adres `null`wystawcy był.
+
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Instrukcje: Konfigurowanie poświadczeń na usługa federacyjna](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Instrukcje: Tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Instrukcje: Tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Instrukcje: Utwórz WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

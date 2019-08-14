@@ -1,92 +1,92 @@
 ---
-title: Bezpiecznie aktualizować przy użyciu domyślnego interfejsu członków w interfejsachC#
-description: Ta zaawansowana w tym samouczku przedstawiono sposób można bezpiecznie dodać nowe możliwości do istniejących definicji interfejsu bez przerywania wszystkich klas i struktur, które implementują ten interfejs.
+title: Bezpiecznie Aktualizuj interfejsy przy użyciu domyślnych elementów członkowskich interfejsu wC#
+description: W tym zaawansowanym samouczku przedstawiono sposób bezpiecznego dodawania nowych funkcji do istniejących definicji interfejsów bez przerywania wszystkich klas i struktur, które implementują ten interfejs.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2d7265b7705fc931d356a3b7fe3504ab7f21c0b3
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877915"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971438"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Samouczek: Zaktualizuj interfejsów przy użyciu domyślnego interfejsu członków w C# 8.0
+# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Samouczek: Aktualizowanie interfejsów z domyślnymi elementami członkowskimi interfejsu w C# 8,0
 
-Począwszy od C# 8.0 w programie .NET Core 3.0, można zdefiniować implementację przy deklarowaniu składową interfejsu. Najbardziej typowym scenariuszem jest bezpiecznie dodać elementy członkowskie do interfejsu już ogólnie dostępnych i używanych przez niezliczone klientów.
+Począwszy od C# 8,0 na platformie .net Core 3,0, można zdefiniować implementację w przypadku deklarowania elementu członkowskiego interfejsu. Najbardziej typowym scenariuszem jest bezpieczne dodanie elementów członkowskich do interfejsu już wydanego i używanego przez klientów niezliczone.
 
 W tym samouczku dowiesz się, jak:
 
 > [!div class="checklist"]
-> * Bezpiecznie Rozszerz interfejsów przez dodanie metod z implementacji.
-> * Tworzenie sparametryzowanych implementacji, aby umożliwić większą elastyczność.
-> * Włącz implementacji w celu zapewnienia bardziej szczegółowe implementacji w formie zastąpienia.
+> * Bezpiecznie rozszerzając interfejsy przez dodanie metod z implementacjami.
+> * Utwórz sparametryzowane implementacje, aby zapewnić większą elastyczność.
+> * Włącz realizatorów, aby zapewnić bardziej konkretną implementację w postaci przesłonięcia.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Należy skonfigurować komputer do uruchamiania platformę .NET Core, w tym C# kompilatora 8.0 (wersja zapoznawcza). C# 8.0 kompilatora w wersji zapoznawczej jest dostępna, począwszy od [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), lub r [.NET Core 3.0 (wersja zapoznawcza) zestawu SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0). Domyślne elementy członkowskie z interfejsu są dostępne począwszy od programu .NET Core 3.0 w wersji zapoznawczej 4.
+Musisz skonfigurować maszynę do uruchamiania programu .NET Core, w tym kompilatora 8,0 w C# wersji zapoznawczej. Kompilator C# 8,0 w wersji zapoznawczej jest dostępny w programie [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)lub najnowszej wersji [zestawu SDK programu .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0). Domyślne elementy członkowskie interfejsu są dostępne począwszy od programu .NET Core 3,0 w wersji zapoznawczej 4.
 
 ## <a name="scenario-overview"></a>Omówienie scenariusza
 
-Ten samouczek rozpoczyna się od wersji 1 bibliotekę klienta relacji. Aplikacja startowa można uzyskać naszych [przykłady repozytorium w serwisie GitHub](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship). Firmy, która wbudowana tę bibliotekę przeznaczone klienci z istniejącymi aplikacjami przyjęcie ich biblioteki. Definicje minimalny interfejs dla użytkowników w ich biblioteki, aby zaimplementować one udostępniane. Poniżej znajduje się definicja interfejsu dla klienta:
+Ten samouczek rozpoczyna się od wersji 1 biblioteki relacji klienta. Możesz uzyskać aplikację Starter w naszym [repozytorium przykładów w witrynie GitHub](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship). Firma, która utworzyła tę bibliotekę, zaplanowali klientom istniejące aplikacje do przyjęcia ich biblioteki. Zapewniają one minimalne definicje interfejsów dla użytkowników ich bibliotek do wdrożenia. Oto definicja interfejsu klienta:
 
 [!code-csharp[InitialCustomerInterface](~/samples/csharp/tutorials/default-interface-members-versions/starter/customer-relationship/ICustomer.cs?name=SnippetICustomerVersion1)]
 
-Drugi interfejs, który reprezentuje kolejność one zdefiniowane:
+Zdefiniowano drugi interfejs, który reprezentuje zamówienie:
 
 [!code-csharp[InitialOrderInterface](~/samples/csharp/tutorials/default-interface-members-versions/starter/customer-relationship/IOrder.cs?name=SnippetIorderVersion1)]
 
-Z tych interfejsów zespołu można utworzyć biblioteki dla swoich użytkowników tworzyć lepsze środowisko dla swoich klientów. Ich celem było utworzyć relację bardziej istniejących klientów i poprawy relacji między nimi przy użyciu nowych klientów.
+Z tych interfejsów zespół może stworzyć bibliotekę dla swoich użytkowników, aby mogli tworzyć lepsze środowisko dla swoich klientów. Ich celem było stworzenie szczegółowej relacji z istniejącymi klientami i poprawa ich relacji z nowymi klientami.
 
-Teraz nadszedł czas na uaktualnienie biblioteki dla następnej wersji. Jedna z pożądanych funkcji umożliwia rabat w wysokości lojalności dla użytkowników, którzy mają wiele zamówień. Ten nowy rabat lojalności stosowane zawsze, gdy klient tworzy zamówienie. Określony rabat jest właściwością poszczególnych klientów. Każda implementacja ICustomer można ustawić różne zasady dotyczące rabatowej lojalności. 
+Teraz czas na uaktualnienie biblioteki do kolejnej wersji. Jedną z żądanych funkcji jest włączenie rabatu lojalnościowego dla klientów, którzy mają wiele zamówień. Ten nowy rabat dla lojalności zostanie zastosowany za każdym razem, gdy klient przyniesie zamówienie. Określony rabat jest właściwością każdego indywidualnego klienta. Każda implementacja ICustomer może ustawiać różne reguły rabatu lojalnościowego. 
 
-Jest to najbardziej naturalny sposób, aby dodać tę funkcjonalność udoskonalenie `ICustomer` interfejs za pomocą metody do stosowania rabatów lojalnościowych. Tę sugestię w projekt przyczyny dotyczą między doświadczonych deweloperów: "Interfejsy są niezmienne po po udostępnieniu! To jest istotną zmianę!" C#dodaje 8.0 *domyślne implementacje interfejsu* dla uaktualnienie interfejsów. Autorzy biblioteki można dodawać nowych członków do interfejsu i udostępnia domyślną implementację dla tych członków.
+Najbardziej naturalnym sposobem dodawania tej funkcji jest udoskonalenie `ICustomer` interfejsu za pomocą metody w celu zastosowania dowolnego rabatu lojalnościowego. Ta sugestia projektowa została spowodowana przez doświadczonych deweloperów: "Interfejsy są niemodyfikowalne po ich udostępnieniu! To jest istotna zmiana! " C#8,0 dodaje *domyślne implementacje interfejsu* w celu uaktualnienia interfejsów. Autorzy biblioteki mogą dodawać nowych członków do interfejsu i udostępniać domyślną implementację dla tych elementów członkowskich.
 
-Implementacje interfejsu domyślne umożliwiają deweloperom uaktualnienie interfejsu, ograniczając wszelkie implementors przesłonić tę implementację. Użytkownicy biblioteki może zaakceptować domyślną implementację zmian niepowodujących niezgodności. Jeśli ich reguły biznesowe są różne, można zastąpić.
+Domyślne implementacje interfejsu umożliwiają deweloperom uaktualnienie interfejsu, jednocześnie umożliwiając wszystkim wykonawcom przesłonięcie tej implementacji. Użytkownicy biblioteki mogą zaakceptować implementację domyślną jako nieistotną zmianę. Jeśli ich reguły biznesowe są inne, mogą przesłonić.
 
-## <a name="upgrade-with-default-interface-members"></a>Uaktualnienie przy użyciu domyślnego składowych interfejsu
+## <a name="upgrade-with-default-interface-members"></a>Uaktualnij z domyślnymi elementami członkowskimi interfejsu
 
-Zespół Zgadzam się na najbardziej prawdopodobne Domyślna implementacja: Rabat w wysokości lojalności klientów.
+Zespół wyraził zgodę na najprawdopodobniej domyślną implementację: Rabat dla klientów.
 
-Uaktualnienia należy udostępniają funkcje, które można ustawić dwie właściwości: liczba zamówień potrzebne kwalifikował się do rabat i procent rabatu. Dzięki temu scenariusz doskonałe dla składowych interfejsu domyślnego. Możesz dodać metodę do interfejsu ICustomer i najprawdopodobniej implementacji. Wszystkich istniejących i wszelkich nowych implementacji można użyć w implementacji domyślnej, lub podaj swoje własne.
+Uaktualnienie powinno zapewnić funkcjonalność, aby ustawić dwie właściwości: liczbę zamówień wymaganych do uzyskania rabatu oraz procent rabatu. To sprawia, że jest to idealny scenariusz dla domyślnych elementów członkowskich interfejsu. Można dodać metodę do interfejsu ICustomer i zapewnić najbardziej prawdopodobną implementację. Wszystkie istniejące i nowe implementacje mogą korzystać z implementacji domyślnej lub udostępniać własne.
 
-Najpierw dodaj nową metodę implementacji:
+Najpierw Dodaj nową metodę do implementacji:
 
 [!code-csharp[InitialOrderInterface](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionOne)]
 
-Tworzenie biblioteki napisał pierwszy test, aby sprawdzić wdrożenia:
+Autor biblioteki zapisał pierwszy test w celu sprawdzenia implementacji:
 
 [!code-csharp[TestDefaultImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetTestDefaultImplementation)]
 
-Zwróć uwagę, następujące części testu:
+Zwróć uwagę na następujące części testu:
 
 [!code-csharp[TestDefaultImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetHighlightCast)]
 
-Który rzutowanie z elementu `SampleCustomer` do `ICustomer` jest konieczne. `SampleCustomer` Klasy nie musi dostarczyć implementację `ComputeLoyaltyDiscount`; która jest dostarczona przez `ICustomer` interfejsu. Jednak `SampleCustomer` klasa nie dziedziczy członków z jego interfejsów. Tej reguły nie zmienił. Aby można było wywołać dowolną metodę zadeklarowana i zaimplementowane w interfejsie, zmienna musi być typu interfejsu, `ICustomer` w tym przykładzie.
+Rzutowanie z `SampleCustomer` do `ICustomer` na jest niezbędne. Klasa nie musi podawać implementacji dla elementu `ComputeLoyaltyDiscount`, `ICustomer` który jest dostarczany przez interfejs. `SampleCustomer` `SampleCustomer` Jednak Klasa nie dziedziczy członków z jego interfejsów. Ta reguła nie została zmieniona. Aby wywołać jakąkolwiek metodę zadeklarowaną i zaimplementowaną w interfejsie, zmienna musi być typem interfejsu, `ICustomer` w tym przykładzie.
 
-## <a name="provide-parameterization"></a>Podaj parametryzacji
+## <a name="provide-parameterization"></a>Podaj parametryzacja
 
-To dobry początek. Jednak w implementacji domyślnej jest zbyt restrykcyjne. Wielu klientów tego systemu mogą wybrać progi różnią się dla liczby zakupów, innej długości członkostwa lub inny procent rabatu. Możesz podać lepsze środowisko uaktualnienia większej liczby klientów, dzięki czemu można ustawić te parametry. Dodajmy statyczna metoda ustawia tych trzech parametrów, kontrolowanie domyślną implementację:
+To dobry początek. Jednak domyślna implementacja jest zbyt restrykcyjna. Wielu użytkowników tego systemu może wybrać różne progi dla liczby zakupów, innej długości członkostwa lub innego rabatu procentowego. Aby zapewnić większym klientom możliwość uaktualnienia, możesz określić te parametry. Dodajmy metodę statyczną, która ustawia te trzy parametry kontrolujące implementację domyślną:
 
 [!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionTwo)]
 
-Istnieje wiele nowych możliwości języka przedstawione w tym fragmencie mały kod. Interfejsy mogą teraz zawierać statyczne elementy członkowskie, w tym pól i metod. Modyfikatory dostępu różnych również są włączone. Dodatkowe pola są prywatne, nowa metoda jest publiczny. Dowolny modyfikatorów są dozwolone w składowych interfejsu.
+W tym małym fragmencie kodu pokazano wiele nowych funkcji językowych. Interfejsy mogą teraz zawierać statyczne elementy członkowskie, w tym pola i metody. Włączono również różne Modyfikatory dostępu. Dodatkowe pola są prywatne, Nowa metoda jest publiczna. Każdy modyfikator jest dozwolony w składowych interfejsu.
 
-Aplikacje, które używają ogólny wzór dotyczących przeprowadzania obliczeń rabatu lojalności, ale różnych parametrów, trzeba podać implementacja niestandardowa; ustawiają argumenty za pośrednictwem metody statycznej. Na przykład poniższy kod ustawia "Ocena klienta", który nagradza każdego klienta z więcej niż jeden miesiąc członkostwa:
+Aplikacje korzystające z ogólnej formuły do obliczania rabatu lojalnościowego, ale innych parametrów nie muszą podawać implementacji niestandardowej. można ustawić argumenty za pomocą metody statycznej. Na przykład poniższy kod ustawia "zwiększenie klienta", który nadaje klientowi więcej niż jeden miesiąc:
 
 [!code-csharp[SetLoyaltyThresholds](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetSetLoyaltyThresholds)]
 
-## <a name="extend-the-default-implementation"></a>Rozszerzanie Domyślna implementacja
+## <a name="extend-the-default-implementation"></a>Zwiększ implementację domyślną
 
-Kod, które zostały dodane do tej pory udostępnia wygodne implementacji dla tych scenariuszy, w której użytkownicy będą chcieli coś, np. Domyślna implementacja lub w celu udostępnienia niepowiązanych zbiór reguł. Dla funkcji powoduje końcowego umożliwia refaktoryzować kod nieco umożliwia scenariusze, w którym użytkownicy mogą chcieć tworzyć na domyślną implementację. 
+Kod, który został dodany do tej pory, udostępnia wygodną implementację dla tych scenariuszy, w których użytkownicy chcą, podobnie jak w przypadku implementacji domyślnej, lub w celu zapewnienia niepowiązanego zestawu reguł. Aby uzyskać ostateczną funkcję, należy ponownie oznaczyć kod jako bit, aby włączyć scenariusze, w których użytkownicy mogą chcieć skompilować zgodnie z domyślną implementacją. 
 
-Należy wziąć pod uwagę startowy, który chce przyciągnięcia nowych klientów. Oferują one 50% zniżki kolejność pierwszego nowego klienta. W przeciwnym razie istniejący klienci uzyskać rabat na wersję standard. Tworzenie biblioteki musi przenieść domyślną implementację do `protected static` metody, który każdy klasy implementującej interfejs ten można ponownie użyć kodu w ich realizacji. Domyślna implementacja elementu członkowskiego interfejsu wywołuje ten udostępnionej metody:
+Rozważ uruchomienie, które chce przyciągnąć nowych klientów. Oferują rabat w wysokości 50% od pierwszego zamówienia klienta. W przeciwnym razie istniejący klienci otrzymują rabat w warstwie Standardowa. Autor biblioteki musi przenieść domyślną implementację do `protected static` metody, tak aby każda klasa implementująca ten interfejs może ponownie wykorzystać kod w ich implementacji. Domyślna implementacja elementu członkowskiego interfejsu wywołuje tę metodę udostępnioną również:
 
 [!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetFinalVersion)]
 
-W implementacji klasy, która implementuje ten interfejs zastępowania można wywołać metodę pomocnika statycznych i rozszerzyć tej logiki, aby zapewnić "nowego klienta" rabat w wysokości:
+W implementacji klasy implementującej ten interfejs przesłonięcie może wywołać statyczną metodę pomocnika i zwiększyć tę logikę w celu zapewnienia rabatu "nowy klient":
 
 [!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/SampleCustomer.cs?name=SnippetOverrideAndExtend)]
 
-Widać cały kod zakończenia w naszym [przykłady repozytorium w serwisie GitHub] (aplikacja startowa można uzyskać naszych [przykłady repozytorium w serwisie GitHub](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship).
+Cały gotowy kod można zobaczyć w naszym [repozytorium przykładów w witrynie GitHub](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship). Możesz uzyskać aplikację Starter w naszym [repozytorium przykładów w witrynie GitHub](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship).
 
-Te nowe funkcje oznacza, że interfejsy mogą być aktualizowane bezpiecznie po uzasadnione Domyślna implementacja dla tych nowych członków. Dokładnie projektu interfejsach, express pojedynczego funkcjonalności pojęcia, które może być implementowana przez wiele klas. Ułatwia do uaktualnienia te definicje interfejsu, po odnalezieniu nowych wymagań dla tego samego idea funkcjonalności.
+Te nowe funkcje oznaczają, że interfejsy można aktualizować bezpiecznie, gdy istnieje domyślna implementacja dla tych nowych członków. Starannie Projektuj interfejsy, aby przedstawić koncepcje pojedynczych funkcjonalnych, które mogą być implementowane przez wiele klas. Dzięki temu można łatwiej uaktualnić te definicje interfejsów, gdy zostaną odnalezione nowe wymagania dla tego samego pomysłu funkcjonalnego.

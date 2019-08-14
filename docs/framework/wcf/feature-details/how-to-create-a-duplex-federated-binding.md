@@ -2,97 +2,98 @@
 title: 'Instrukcje: tworzenie dwukierunkowego wiązania federacyjnego'
 ms.date: 03/30/2017
 ms.assetid: 4331d2bc-5455-492a-9189-634a82597726
-ms.openlocfilehash: 510faa0b1d791b1d164c55e9fa32daafa559d56c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 71c970fa45d7d4ccd55fceddb2360d0aa0a768f8
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696213"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972060"
 ---
 # <a name="how-to-create-a-duplex-federated-binding"></a>Instrukcje: tworzenie dwukierunkowego wiązania federacyjnego
-<xref:System.ServiceModel.WSFederationHttpBinding> obsługuje tylko kontraktami wymiany komunikatów datagram i żądanie/nietypizowana odpowiedź. Aby użyć kontrakt wymiany komunikatów dupleksowy, należy utworzyć niestandardowego powiązania. Poniższe procedury pokazują, jak to zrobić w konfiguracji, za pomocą komunikatu tryb zabezpieczeń dla transportu HTTP i TCP i korzystanie z zabezpieczeń w trybie mieszanym dla warstwy transportowej TCP. Przykładowy kod, przedstawiający wszystkie powiązania 3 znajduje się na końcu tego tematu.  
-  
- Można również utworzyć powiązanie w kodzie. Aby uzyskać opis stosie elementów powiązania, aby utworzyć, zobacz [jak: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
-  
-### <a name="to-create-a-duplex-federated-custom-binding-with-http"></a>Aby utworzyć niestandardowe dwukierunkowego powiązania federacyjnego za pośrednictwem protokołu HTTP  
-  
-1. W [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) węzeł pliku konfiguracji, tworzenia [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) elementu.  
-  
-2. Wewnątrz [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) elementu, Utwórz [ \<powiązania >](../../../../docs/framework/misc/binding.md) element z `name` ustawioną wartość atrybutu `FederationDuplexHttpMessageSecurityBinding`.  
-  
-3. Wewnątrz [ \<powiązania >](../../../../docs/framework/misc/binding.md) elementu, Utwórz [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element z `authenticationMode` ustawioną wartość atrybutu `SecureConversation`.  
-  
-4. Wewnątrz [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elementu, Utwórz [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) element z `authenticationMode` ustawioną wartość atrybutu `IssuedTokenForCertificate` lub `IssuedTokenForSslNegotiated`.  
-  
-5. Następujące [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elementu, Utwórz pustą [ \<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) elementu.  
-  
-6. Następujące [ \<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) elementu, Utwórz pustą [ \<oneWay >](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) elementu.  
-  
-7. Następujące [ \<oneWay >](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) elementu, Utwórz pustą [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md) elementu.  
-  
-### <a name="to-create-a-duplex-federated-custom-binding-with-tcp-message-security-mode"></a>Aby utworzyć niestandardowe dwukierunkowego powiązania federacyjnego przy użyciu trybu zabezpieczenia wiadomości TCP  
-  
-1. W [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) węzeł pliku konfiguracji, tworzenia [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) elementu.   
-  
-2. Wewnątrz [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) elementu, Utwórz [ \<powiązania >](../../../../docs/framework/misc/binding.md) element z `name` ustawioną wartość atrybutu `FederationDuplexTcpMessageSecurityBinding`.  
-  
-3. Wewnątrz [ \<powiązania >](../../../../docs/framework/misc/binding.md) elementu, Utwórz [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element z `authenticationMode` ustawioną wartość atrybutu `SecureConversation`.  
-  
-4. Wewnątrz [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elementu, Utwórz [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) element z `authenticationMode` ustawioną wartość atrybutu `IssuedTokenForCertificate` lub `IssuedTokenForSslNegotiated`.  
-  
-5. Następujące [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elementu, Utwórz pustą [ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) elementu.  
-  
-### <a name="to-create-a-duplex-federated-custom-binding-with-tcp-mixed-security-mode"></a>Aby utworzyć dupleks federacyjnych niestandardowego powiązania za pomocą trybu mieszanego zabezpieczeń protokołu TCP  
-  
-1. W [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) węzeł pliku konfiguracji, tworzenia [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) elementu.   
-  
-2. Wewnątrz [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) elementu, Utwórz [ \<powiązania >](../../../../docs/framework/misc/binding.md) element z `name` ustawioną wartość atrybutu `FederationDuplexTcpTransportSecurityWithMessageCredentialBinding`.  
-  
-3. Wewnątrz [ \<powiązania >](../../../../docs/framework/misc/binding.md) elementu, Utwórz [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element z `authenticationMode` ustawioną wartość atrybutu `SecureConversation`.  
-  
-4. Wewnątrz [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elementu, Utwórz [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) element z `authenticationMode` ustawioną wartość atrybutu `IssuedTokenForCertificate` lub `IssuedTokenForSslNegotiated`.  
-  
-5. Następujące [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elementu, Utwórz pustą [ \<sslStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md) elementu.  
-  
-6. Następujące [ \<sslStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md) elementu, Utwórz pustą [ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) elementu.  
-  
-## <a name="code-sample"></a>Przykładowy kod  
-  
-#### <a name="sample-with-3-bindings"></a>Oto przykład z 3 powiązania  
-  
-1. Wstaw następujący kod do pliku konfiguracji.  
-  
-## <a name="example"></a>Przykład  
-  
-```xml  
-<bindings>  
-   <customBinding>  
-      <binding name="FederationDuplexHttpMessageSecurityBinding">  
-<!-- duplex contract requires secure conversation with require cancellation = true -->  
-          <security authenticationMode="SecureConversation">  
-              <secureConversationBootstrap authenticationMode="IssuedTokenForSslNegotiated" />  
-          </security>  
-          <compositeDuplex />  
-          <oneWay />  
-          <httpTransport />  
-       </binding>  
-<!-- duplex over https is not supported -->  
-       <binding name="FederationDuplexTcpMessageSecurityBinding">  
-<!-- duplex contract requires secure conversation with require cancellation = true -->  
-          <security authenticationMode="SecureConversation">  
-              <secureConversationBootstrap authenticationMode="IssuedTokenForSslNegotiated" />  
-          </security>  
-          <tcpTransport />  
-       </binding>              
-       <binding name="FederationDuplexTcpTransportSecurityWithMessageCredentialsBinding">  
-<!-- duplex contract requires secure conversation with require cancellation = true -->  
-          <security authenticationMode="SecureConversation">  
-              <secureConversationBootstrap authenticationMode="IssuedTokenOverTransport" />  
-          </security>  
-<!-- requireClientCertificate = true or <windowsStreamSecurity /> can be used, but does not make sense for most scenarios -->  
-          <sslStreamSecurity />  
-          <tcpTransport />  
-       </binding>              
-    </customBinding>  
-</bindings>  
+
+<xref:System.ServiceModel.WSFederationHttpBinding>obsługuje tylko kontrakty wymiany dla komunikatów datagram i Request/Reply. Aby można było korzystać z kontraktu programu Exchange z wiadomościami dwustronnymi, należy utworzyć niestandardowe powiązanie. Poniższe procedury pokazują, jak to zrobić w konfiguracji, przy użyciu zabezpieczeń trybu komunikatów dla transportów HTTP i TCP oraz przy użyciu zabezpieczeń w trybie mieszanym do transportu TCP. Przykładowy kod pokazujący wszystkie 3 powiązania znajduje się na końcu tego tematu.
+
+Możesz również utworzyć powiązanie w kodzie. Opis stosu elementów powiązania do utworzenia znajduje się w temacie [How to: Utwórz niestandardowe powiązanie przy użyciu elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).
+
+## <a name="to-create-a-duplex-federated-custom-binding-with-http"></a>Aby utworzyć niestandardowe powiązanie federacyjne z protokołem HTTP
+
+1. W węźle powiązania > [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) pliku konfiguracji Utwórz niestandardowy element >Binding. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+
+2. W elemencie CustomBinding `name` > Utwórz element `FederationDuplexHttpMessageSecurityBinding` [ >powiązaniazatrybutemustawionymna.\<](../../../../docs/framework/misc/binding.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+
+3. `authenticationMode` `SecureConversation` [ Wewnątrz\<elementu](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) [ Binding>Utwórzelement>zabezpieczeńz\<](../../../../docs/framework/misc/binding.md) atrybutem ustawionym na.
+
+4. `IssuedTokenForCertificate` `authenticationMode` `IssuedTokenForSslNegotiated` [ Wewnątrz\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) [ elementu>zabezpieczeńUtwórzelement>secureConversationBootstrapzatrybutem\<](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) ustawionym na lub.
+
+5. Po elemencie [> zabezpieczeńUtwórzpustyelement>compositeDuplex.\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)
+
+6. Po elemencie [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) compositeDuplex > Utwórz pusty element > oneWay. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)
+
+7. Po elemencie [> oneWayUtwórzpustyelement>httpTransport.\<](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)
+
+## <a name="to-create-a-duplex-federated-custom-binding-with-tcp-message-security-mode"></a>Aby utworzyć niestandardowe powiązanie federacyjne z trybem zabezpieczeń wiadomości TCP
+
+1. W węźle powiązania > [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) pliku konfiguracji Utwórz niestandardowy element >Binding. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+
+2. W elemencie CustomBinding `name` > Utwórz element `FederationDuplexTcpMessageSecurityBinding` [ >powiązaniazatrybutemustawionymna.\<](../../../../docs/framework/misc/binding.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+
+3. `authenticationMode` `SecureConversation` [ Wewnątrz\<elementu](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) [ Binding>Utwórzelement>zabezpieczeńz\<](../../../../docs/framework/misc/binding.md) atrybutem ustawionym na.
+
+4. `IssuedTokenForCertificate` `authenticationMode` `IssuedTokenForSslNegotiated` [ Wewnątrz\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) [ elementu>zabezpieczeńUtwórzelement>secureConversationBootstrapzatrybutem\<](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) ustawionym na lub.
+
+5. Po elemencie [> zabezpieczeńUtwórzpustyelement>tcpTransport.\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md)
+
+## <a name="to-create-a-duplex-federated-custom-binding-with-tcp-mixed-security-mode"></a>Aby utworzyć niestandardowe powiązanie federacyjne z trybem mieszanym protokołu TCP
+
+1. W węźle powiązania > [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) pliku konfiguracji Utwórz niestandardowy element >Binding. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+
+2. W elemencie CustomBinding `name` > Utwórz element `FederationDuplexTcpTransportSecurityWithMessageCredentialBinding` [ >powiązaniazatrybutemustawionymna.\<](../../../../docs/framework/misc/binding.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+
+3. `authenticationMode` `SecureConversation` [ Wewnątrz\<elementu](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) [ Binding>Utwórzelement>zabezpieczeńz\<](../../../../docs/framework/misc/binding.md) atrybutem ustawionym na.
+
+4. `IssuedTokenForCertificate` `authenticationMode` `IssuedTokenForSslNegotiated` [ Wewnątrz\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) [ elementu>zabezpieczeńUtwórzelement>secureConversationBootstrapzatrybutem\<](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) ustawionym na lub.
+
+5. Po elemencie [> zabezpieczeńUtwórzpustyelement>sslStreamSecurity.\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)
+
+6. Po sslStreamSecurity elementu > Utwórz pusty [ \<element tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) . [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)
+
+## <a name="code-sample"></a>Przykładowy kod
+
+### <a name="sample-with-3-bindings"></a>Przykład z 3 powiązaniami
+
+1. Wstaw następujący kod do pliku konfiguracji.
+
+## <a name="example"></a>Przykład
+
+```xml
+<bindings>
+   <customBinding>
+      <binding name="FederationDuplexHttpMessageSecurityBinding">
+<!-- duplex contract requires secure conversation with require cancellation = true -->
+          <security authenticationMode="SecureConversation">
+              <secureConversationBootstrap authenticationMode="IssuedTokenForSslNegotiated" />
+          </security>
+          <compositeDuplex />
+          <oneWay />
+          <httpTransport />
+       </binding>
+<!-- duplex over https is not supported -->
+       <binding name="FederationDuplexTcpMessageSecurityBinding">
+<!-- duplex contract requires secure conversation with require cancellation = true -->
+          <security authenticationMode="SecureConversation">
+              <secureConversationBootstrap authenticationMode="IssuedTokenForSslNegotiated" />
+          </security>
+          <tcpTransport />
+       </binding>
+       <binding name="FederationDuplexTcpTransportSecurityWithMessageCredentialsBinding">
+<!-- duplex contract requires secure conversation with require cancellation = true -->
+          <security authenticationMode="SecureConversation">
+              <secureConversationBootstrap authenticationMode="IssuedTokenOverTransport" />
+          </security>
+<!-- requireClientCertificate = true or <windowsStreamSecurity /> can be used, but does not make sense for most scenarios -->
+          <sslStreamSecurity />
+          <tcpTransport />
+       </binding>
+    </customBinding>
+</bindings>
 ```

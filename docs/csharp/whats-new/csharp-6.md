@@ -1,31 +1,31 @@
 ---
-title: Co nowego w języku C# 6 — Przewodnik po języku C#
-description: Dowiedz się, nowych funkcji w języku C# w wersji 6
+title: Co nowego w C# 6- C# przewodniku
+description: Poznaj nowe funkcje w C# wersji 6
 ms.date: 12/12/2018
-ms.openlocfilehash: 49247109bd1acbf697f5700b5cfe9a2b85393b2c
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: da40b4c9d4af0094fdd907c542e971ba55086e0f
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68235725"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971382"
 ---
-# <a name="whats-new-in-c-6"></a>Co nowego w języku C# 6
+# <a name="whats-new-in-c-6"></a>Co nowego w C# 6
 
-Wersja 6.0 C# zawiera wiele funkcji, które zwiększają produktywność dla deweloperów. Ogólny efekt tych funkcji jest pisania bardziej zwięzły widok kodu, który jest również bardziej czytelne. Składnia zawiera mniej procedury dla wielu typowych rozwiązań. Jest łatwiej zobaczyć założenia projektowe z mniej procedury. Dowiedz się również, te funkcje i zostanie mu bardziej wydajnej pracy i napisać bardziej czytelny kod. Możesz skoncentrować się więcej na temat Twojej funkcji niż w konstrukcji języka.
+Wersja 6,0 systemu C# zawiera wiele funkcji, które zwiększają produktywność dla deweloperów. Ogólnym efektem tych funkcji jest pisanie bardziej zwięzłego kodu, który jest również bardziej czytelny. Składnia zawiera mniej procedury dla wielu typowych praktyk. Łatwiej jest zobaczyć cel projektowania z mniejszą procedury. Poznaj te funkcje również, aby zwiększyć produktywność i napisać bardziej czytelny kod. Możesz skoncentrować się na swoich funkcjach, niż w konstrukcjach języka.
 
-W pozostałej części tego artykułu zawiera omówienie każdego z tych funkcji, za pomocą łącza, aby zapoznać się z każdej funkcji. Możesz też zapoznać się z funkcjami w [możliwość interaktywnego eksplorowania na C# 6](../tutorials/exploration/csharp-6.yml) w sekcji samouczków.
+Pozostała część tego artykułu zawiera omówienie każdej z tych funkcji z linkiem do eksplorowania każdej funkcji. Możesz również zapoznać się z funkcjami w [interaktywnej eksplorowaniu C# ](../tutorials/exploration/csharp-6.yml) w sekcji samouczki.
 
-## <a name="read-only-auto-properties"></a>Auto właściwości tylko do odczytu
+## <a name="read-only-auto-properties"></a>Autowłaściwości tylko do odczytu
 
-*Tylko do odczytu właściwości automatyczne* zapewniają bardziej zwięzły widok składnię, aby utworzyć typy niezmienne. Właściwość automatyczną deklarowana za pomocą tylko akcesor pobierania:
+*Właściwości autotylko do odczytu* zapewniają bardziej zwięzłą składnię do tworzenia niezmiennych typów. Właściwość autoproperty deklaruje się tylko przy użyciu metody dostępu get:
 
 [!code-csharp[ReadOnlyAutoProperty](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoProperty)]
 
-`FirstName` i `LastName` właściwości można ustawić tylko w treści konstruktora:
+Właściwości `FirstName` i`LastName` można ustawić tylko w treści konstruktora tej samej klasy:
 
 [!code-csharp[ReadOnlyAutoPropertyConstructor](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoPropertyConstructor)]
 
-Ustawiany `LastName` w innej metody generuje `CS0200` błąd kompilacji:
+Próba ustawienia `LastName` w innej metodzie spowoduje `CS0200` wygenerowanie błędu kompilacji:
 
 ```csharp
 public class Student
@@ -40,158 +40,158 @@ public class Student
 }
 ```
 
-Ta funkcja umożliwia obsługę języka true Tworzenie typów niezmienne i używa składni właściwości automatycznej bardziej zwięzłe i wygodne.
+Ta funkcja umożliwia obsługę języków w przypadku tworzenia niezmiennych typów i używa bardziej zwięzłej i wygodnej składni autowłaściwości.
 
-Jeśli dodanie tej składni nie powoduje usunięcia dostępnej metody, to [binarne zmiany zgodne](version-update-considerations.md#binary-compatible-changes).
+Jeśli dodanie tej składni nie spowoduje usunięcia dostępnej metody, jest to [zgodna](version-update-considerations.md#binary-compatible-changes)z binarną zmianą.
 
 ## <a name="auto-property-initializers"></a>Inicjatory właściwości automatycznej
 
-*Właściwości automatyczne* umożliwiają deklarowanie początkowa wartość auto właściwością jako część deklaracji właściwości.
+*Inicjatory właściwości automatycznie* umożliwiają deklarowanie wartości początkowej właściwości autoproperty jako części deklaracji właściwości.
 
 [!code-csharp[Initialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#Initialization)]
 
-`Grades` Elementu członkowskiego jest inicjowany, którym jest zdeklarowana. Który sprawia, że łatwiej wykonać inicjowania dokładnie jeden raz. Inicjowanie jest częścią deklaracji właściwości, dzięki czemu łatwiej jest równoważne Alokacja magazynu za pomocą interfejsu publicznego dla `Student` obiektów.
+Element `Grades` członkowski jest inicjowany w miejscu, w którym został zadeklarowany. Dzięki temu można łatwiej wykonać inicjalizację dokładnie jeden raz. Inicjalizacja jest częścią deklaracji właściwości, dzięki czemu łatwiej jest zrównać alokację magazynu z interfejsem publicznym dla `Student` obiektów.
 
-## <a name="expression-bodied-function-members"></a>Elementy członkowskie z wyrażeniem w treści funkcji
+## <a name="expression-bodied-function-members"></a>Składowe funkcji w postaci wyrażeń
 
-Wiele elementów członkowskich, które należy zapisać są pojedynczej instrukcji, które mogą być pojedynczego wyrażenia. Zamiast niego zapisu elementu członkowskiego z wyrażeniem w treści. Działa w przypadku metod i właściwości tylko do odczytu. Na przykład zastępowania metody `ToString()` często jest doskonałym kandydatem:
+Wiele składowych, które piszesz, to pojedyncze instrukcje, które mogą być pojedynczymi wyrażeniami. Zamiast tego Napisz element członkowski z wyrażeniem. Działa w przypadku metod i właściwości tylko do odczytu. Na przykład przesłonięcie `ToString()` jest często doskonałym kandydatem:
 
 [!code-csharp[ToStringExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#ToStringExpressionMember)]
 
-Dla właściwości tylko do odczytu, można również użyć następującej składni:
+Tej składni można także użyć do właściwości tylko do odczytu:
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-Zmienianie istniejącego elementu członkowskiego do elementu członkowskiego zabudowanego wyrażenie jest [binarne zmiany zgodne](version-update-considerations.md#binary-compatible-changes).
+Zmiana istniejącego elementu członkowskiego na wyrażenie składowane składowe jest [zgodną](version-update-considerations.md#binary-compatible-changes)z binarną zmianą.
 
-## <a name="using-static"></a>Przy użyciu statycznej
+## <a name="using-static"></a>Używanie static
 
-*Przy użyciu statycznej* ulepszenie umożliwia importowanie metod statycznych w tej samej klasy. Należy określić klasę, którą używasz:
+*Użycie statycznego* rozszerzenia umożliwia importowanie metod statycznych pojedynczej klasy. Należy określić klasę, z której korzystasz:
 
 [!code-csharp[UsingStaticMath](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStaticMath)]
 
-<xref:System.Math> Nie zawiera żadnych metod wystąpienia. Można również użyć `using static` można zaimportować metody statyczne klasy dla klasy, która ma statycznych i metod wystąpienia. Jednym z najbardziej przydatnych przykładów jest <xref:System.String>:
+<xref:System.Math> Nie zawiera żadnych metod wystąpienia. Można również użyć `using static` do zaimportowania metod statycznych klasy dla klasy, która ma zarówno metody statyczne, jak i wystąpienia. Jednym z najbardziej przydatnych przykładów jest <xref:System.String>:
 
 [!code-csharp[UsingStatic](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStatic)]
 
 > [!NOTE]
-> Należy użyć w pełni kwalifikowaną nazwę klasy, `System.String` w statycznych przy użyciu instrukcji.  Nie można użyć `string` słowa kluczowego zamiast tego.
+> Należy użyć `System.String` w pełni kwalifikowanej nazwy klasy w statycznej instrukcji using.  Nie można użyć `string` słowa kluczowego.
 
-Po zaimportowaniu z `static using` instrukcji, metody rozszerzające są tylko w zakresie, gdy wywoływany przy użyciu składni wywołania metody rozszerzenia. Nie są one w zakresie wywołanego jako metoda statyczna. Często zobaczysz następujący w kwerendach LINQ. Możesz zaimportować wzorzec LINQ, importując <xref:System.Linq.Enumerable>, lub <xref:System.Linq.Queryable>.
+W przypadku zaimportowania z `static using` instrukcji metody rozszerzające są tylko w zakresie, gdy są wywoływane przy użyciu składni wywołania metody rozszerzenia. Nie są one w zakresie, gdy jest wywoływana jako metoda statyczna. Często są one widoczne w zapytaniach LINQ. Wzorzec LINQ można zaimportować przez <xref:System.Linq.Enumerable>zaimportowanie lub. <xref:System.Linq.Queryable>
 
 [!code-csharp[UsingStaticLinq](../../../samples/snippets/csharp/new-in-6/newcode.cs#usingStaticLinq)]
 
-Zwykle wywołują metody rozszerzenia za pomocą wyrażenia wywołania metody rozszerzenia. Dodawanie nazwy klasy w rzadkich przypadkach, gdzie ich wywoływania przy użyciu wywołania metody statycznej składni usuwa niejednoznaczności.
+Metody rozszerzające są zwykle wywoływane przy użyciu wyrażeń wywołania metody rozszerzenia. Dodanie nazwy klasy w rzadkim przypadku, gdy są one wywoływane przy użyciu składni wywołania metody statycznej, rozwiązuje niejednoznaczności.
 
-`static using` Dyrektywy również importuje wszystkie typy zagnieżdżone. Wszelkie zagnieżdżone typy bez kwalifikacji można się odwoływać.
+`static using` Dyrektywa importuje również wszystkie typy zagnieżdżone. Można odwoływać się do wszelkich zagnieżdżonych typów bez kwalifikacji.
 
-## <a name="null-conditional-operators"></a>Operatory warunkowe null
+## <a name="null-conditional-operators"></a>Operatory warunkowe o wartości null
 
-*Operatora warunkowego wartości null* sprawia, że sprawdzenia wartości null znacznie łatwiejsze i płynny. Zastąp dostęp do elementu członkowskiego `.` z `?.`:
+*Operator warunkowy o wartości null* sprawia, że sprawdzanie wartości null jest znacznie łatwiejsze i płynne. Zastąp element członkowski `.` dostępem `?.`:
 
 [!code-csharp[NullConditional](../../../samples/snippets/csharp/new-in-6/program.cs#NullConditional)]
 
-W poprzednim przykładzie, zmienna `first` przypisano `null` przypadku obiektu osoba `null`. W przeciwnym razie jest przypisywana wartość `FirstName` właściwości. Co najważniejsze `?.` oznacza, że ten wiersz kodu nie generuje `NullReferenceException` Jeśli `person` zmienna jest `null`. Zamiast tego należy short-circuits i zwraca `null`. Umożliwia także null operatora warunkowego dostępu do tablicy i indeksatora. Zastąp `[]` z `?[]` w wyrażeniu indeksu.
+W poprzednim przykładzie zmienna `first` jest przypisywana `null` , jeśli obiektem jest `null`. W przeciwnym razie jest przypisana wartość `FirstName` właściwości. Co ważniejsze, `?.` oznacza, że ten wiersz kodu nie generuje elementu `NullReferenceException` , jeśli `person` zmienna jest `null`. Zamiast tego, krótkie obwody i zwraca `null`. Można również użyć operatora warunkowego null dla dostępu do tablicy lub indeksatora. Zamień `[]`nawwyrażeniuindeksu `?[]` .
 
-Poniższe wyrażenie zwraca `string`, niezależnie od tego, wartości `person`. Często używają tej konstrukcji z *łączenie wartości null* operatora, aby przypisać domyślnej wartości, gdy jedna z właściwości jest `null`. Gdy wyrażenie short-circuits, `null` wartość zwracana jest wpisany pasuje pełnego wyrażenia.
+Poniższe wyrażenie zwraca `string`, niezależnie od `person`wartości. Ta konstrukcja jest często używana z operatorem *łączenia wartości null* do przypisywania wartości domyślnych, gdy jedna `null`z właściwości jest. W przypadku krótkich obwodów `null` wyrażenia zwracana wartość jest wpisana w celu dopasowania pełnego wyrażenia.
 
 [!code-csharp[NullCoalescing](../../../samples/snippets/csharp/new-in-6/program.cs#NullCoalescing)]
 
-Można również użyć `?.` do warunkowo wywołania metody. Najczęściej używane funkcje Członkowskie za pomocą operatora warunkowego wartości null jest bezpiecznie wywoływać delegatów (lub programy obsługi zdarzeń), może być `null`.  Wywołasz pełnomocnika `Invoke` przy użyciu metody `?.` operatora dostępu do elementu członkowskiego. Widać w przykładzie [delegować wzorców](../delegates-patterns.md#handling-null-delegates) artykułu.
+Można również użyć `?.` do warunkowego wywoływania metod. Najbardziej typowym zastosowaniem funkcji Członkowskich z operatorem warunkowym null jest bezpieczne wywoływanie delegatów (lub obsługi zdarzeń), które `null`mogą być.  Wywołamy `Invoke` metodę delegata przy użyciu operatora, `?.` Aby uzyskać dostęp do elementu członkowskiego. W artykule dotyczącego [wzorców delegatów](../delegates-patterns.md#handling-null-delegates) można zobaczyć przykład.
 
-Reguły `?.` operatora, upewnij się, że po lewej stronie operatora jest oceniane tylko raz. Umożliwia ona wiele idiomy, w tym w poniższym przykładzie przy użyciu programów obsługi zdarzeń:
+Reguły `?.` operatora zapewniają, że lewa strona operatora jest szacowana tylko raz. Umożliwia ona wiele idiomy, w tym Poniższy przykład, przy użyciu obsługi zdarzeń:
 
 ```csharp
 // preferred in C# 6:
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-Zapewnienie, że po lewej stronie jest oceniane tylko raz, umożliwi to również użyć dowolnego wyrażenia, w tym wywołania metody, z lewej strony `?.`
+Upewnienie się, że lewa strona jest szacowana tylko raz, również umożliwia użycie dowolnego wyrażenia, w tym wywołań metod, po lewej stronie`?.`
 
 ## <a name="string-interpolation"></a>Interpolacja ciągów
 
-Za pomocą C# 6, nowe [Interpolacja ciągów](../language-reference/tokens/interpolated.md) funkcja umożliwia osadzanie wyrażeń w ciągu. Po prostu poprzedzony ciąg z `$`i używać wyrażeń między `{` i `}` zamiast liczby porządkowe:
+W C# przypadku opcji 6 Nowa funkcja [interpolacji ciągu](../language-reference/tokens/interpolated.md) umożliwia osadzanie wyrażeń w ciągu. Wystarczy wpisać ciąg z `$`wyrażeniami i używać wyrażeń między `{` i `}` zamiast liczb porządkowych:
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-W tym przykładzie użyto właściwości podstawione wyrażeń. Można użyć dowolnego wyrażenia. Na przykład można obliczyć Średnia ocen studenta w ramach interpolacji:
+W tym przykładzie zastosowano właściwości przedstawionych wyrażeń. Możesz użyć dowolnego wyrażenia. Na przykład można obliczyć średnią punktu oceny studenta w ramach interpolacji:
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
-Poprzedni wiersz kodu formatuje wartość `Grades.Average()` jako liczba zmiennoprzecinkowa z dwóch miejsc po przecinku.
+Poprzedni wiersz kodu formatuje wartość `Grades.Average()` jako liczbę zmiennoprzecinkową z dwoma miejscami dziesiętnymi.
 
-Często należy sformatować ciąg powstały, używając określonej kultury. Możesz użyć fakt, że obiekt utworzony przez Interpolacja ciągów, które mogą być niejawnie konwertowane na <xref:System.FormattableString?displayProperty=nameWithType>. <xref:System.FormattableString> Wystąpienie zawiera ciąg formatu złożonego oraz wynikiem oceny wyrażenia przed rozpoczęciem konwertowania ich na ciągi. Użyj <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> metodę, aby określić kulturę, gdy ciąg formatowania. Poniższy przykład tworzy ciąg przy użyciu kultury niemiecki (de-DE). (Domyślnie niemieckiego kultura używa znaku ',' jako separatora dziesiętnego i "." znaków jako separatora.)
+Często może zajść potrzeba sformatowania ciągu utworzonego przy użyciu określonej kultury. Możesz użyć faktu, że obiekt tworzony przez interpolację ciągu może być niejawnie konwertowany na <xref:System.FormattableString?displayProperty=nameWithType>. <xref:System.FormattableString> Wystąpienie zawiera ciąg formatu złożonego i wyniki oceny wyrażeń przed przekonwertowaniem ich na ciągi. <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> Użyj metody, aby określić kulturę podczas formatowania ciągu. Poniższy przykład generuje ciąg przy użyciu kultury niemieckiej (de-DE). (Domyślnie Kultura niemiecki używa znaku "," dla separatora dziesiętnego i znaku "." jako separatora tysięcy).
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-Aby rozpocząć pracę z Interpolacja ciągów, zobacz [interpolacji w ciągu C# ](../tutorials/exploration/interpolated-strings.yml) interaktywnego samouczka [Interpolacja ciągów](../language-reference/tokens/interpolated.md) artykułu, a [Interpolacja w C# ](../tutorials/string-interpolation.md) samouczka.
+Aby rozpocząć pracę z interpolacją ciągów, zobacz [Interpolacja ciągów C# w](../tutorials/exploration/interpolated-strings.yml) samouczku interaktywnym, artykuł [interpolacji ciągów](../language-reference/tokens/interpolated.md) i [Interpolacja ciągów w C# ](../tutorials/string-interpolation.md) samouczku.
 
 ## <a name="exception-filters"></a>Filtry wyjątków
 
-*Filtry wyjątków* są klauzule określające stosowania klauzuli catch danego. Jeśli w wyrażeniu użytym dla filtru wyjątku daje w wyniku `true`, klauzuli "catch" wykonuje jej normalne przetwarzanie po wystąpieniu wyjątku. Jeśli wyrażenie ma `false`, a następnie `catch` klauzula jest pomijany. Jednym z zastosowań jest zbadanie informacje o wyjątku, aby określić, czy `catch` klauzuli może przetwarzać wyjątek:
+*Filtry wyjątków* są klauzulami, które określają, kiedy należy zastosować daną klauzulę catch. Jeśli wyrażenie używane dla filtru wyjątków jest szacowane do `true`, klauzula catch wykonuje normalne przetwarzanie na wyjątek. Jeśli wyrażenie zwróci `false`wartość, `catch` klauzula jest pomijana. Jednym z nich jest badanie informacji o wyjątku, aby określić, czy `catch` klauzula może przetworzyć wyjątek:
 
 [!code-csharp[ExceptionFilter](../../../samples/snippets/csharp/new-in-6/NetworkClient.cs#ExceptionFilter)]
 
-## <a name="the-nameof-expression"></a>`nameof` Wyrażenia
+## <a name="the-nameof-expression"></a>`nameof` Wyrażenie
 
-[Nameof](../language-reference/operators/nameof.md) wyrażenie ma nazwę symbolu. Jest doskonałym sposobem na narzędzia do pracy w każdym przypadku, gdy potrzebna jest nazwa zmiennej, właściwość lub pole elementu członkowskiego. Jedną z najbardziej typowych używa `nameof` ma na celu dostarczenie nazwa symbolu, który spowodował wyjątek:
+Wyrażenie [nameof](../language-reference/operators/nameof.md) oblicza nazwę symbolu. Jest to świetny sposób, aby uzyskać dostęp do narzędzi, gdy potrzebna jest nazwa zmiennej, właściwości lub pola elementu członkowskiego. Jednym z najpopularniejszych użycia programu `nameof` jest podanie nazwy symbolu, który spowodował wyjątek:
 
 [!code-csharp[nameof](../../../samples/snippets/csharp/new-in-6/NewCode.cs#UsingStaticString)]
 
-Innym zastosowaniem jest z aplikacji opartych na XAML, które implementują `INotifyPropertyChanged` interfejsu:
+Innym zastosowaniem jest używanie aplikacji opartych na języku XAML `INotifyPropertyChanged` , które implementują interfejs:
 
 [!code-csharp[nameofNotify](../../../samples/snippets/csharp/new-in-6/viewmodel.cs#nameofNotify)]
 
-## <a name="await-in-catch-and-finally-blocks"></a>Await w Catch i Finally blokuje
+## <a name="await-in-catch-and-finally-blocks"></a>Await w blokach catch i finally
 
-C# 5 ma również kilka ograniczeń wokół gdzie można umieścić `await` wyrażenia. Za pomocą C# 6, można teraz używać `await` w `catch` lub `finally` wyrażenia. Jest to najczęściej używana w scenariuszach logowania:
+C#5 miało kilka ograniczeń, w których można `await` umieścić wyrażenia. Za C# pomocą 6 można teraz używać `await` wyrażeń in `catch` i. `finally` Jest to najczęściej używane w scenariuszach rejestrowania:
 
 [!code-csharp[AwaitFinally](../../../samples/snippets/csharp/new-in-6/NetworkClient.cs#AwaitFinally)]
 
-Szczegóły implementacji, aby dodać `await` obsługi w `catch` i `finally` klauzule upewnij się, że zachowanie jest zgodne z zachowaniem dla kodu synchronicznego. Gdy kod jest wykonywany w `catch` lub `finally` klauzuli zgłasza wyjątek, wykonanie szuka odpowiedniej `catch` klauzuli w następnym bloku otaczającego. Jeśli było bieżący wyjątek, ten wyjątek zostanie utracony. W tym celu za pomocą wyrażeń oczekiwane w `catch` i `finally` klauzule: odpowiedniej `catch` są wyszukiwane i bieżący wyjątek, jeśli istnieje, zostanie utracony.  
+Szczegóły implementacji umożliwiające dodanie `await` obsługi wewnątrz `catch` i `finally` klauzule upewnij się, że zachowanie jest zgodne z zachowaniem kodu synchronicznego. Gdy kod wykonywany w `catch` klauzuli or `finally` zgłasza, wykonanie szuka odpowiedniej `catch` klauzuli w następnym otaczającym bloku. Jeśli wystąpił bieżący wyjątek, ten wyjątek zostanie utracony. Dzieje się tak samo w przypadku wyrażeń oczekujących `finally` w `catch` klauzulach i `catch` : odpowiednia wartość jest wyszukiwana, a obecny wyjątek, jeśli istnieje, zostanie utracony.  
 
 > [!NOTE]
-> To zachowanie jest przyczyna, zaleca się zapisać `catch` i `finally` klauzule dokładnie, aby uniknąć wprowadzenia nowych wyjątków.
+> To zachowanie jest przyczyną, że zaleca się pisanie `catch` i `finally` klauzule uważnie, aby uniknąć wprowadzania nowych wyjątków.
 
-## <a name="initialize-associative-collections-using-indexers"></a>Inicjowanie asocjacyjnych kolekcji przy użyciu indeksatorów
+## <a name="initialize-associative-collections-using-indexers"></a>Inicjuj kolekcje asocjacyjne przy użyciu indeksatorów
 
-*Inicjatory indeksów* to jedna z dwóch funkcji, które inicjatory kolekcji bardziej spójny z użyciem indeksu. We wcześniejszych wersjach programu C#, można użyć *inicjatory kolekcji* z kolekcji stylów sekwencji, w tym <xref:System.Collections.Generic.Dictionary%602>, przez dodawanie nawiasów klamrowych otaczających klucz i wartość pary:
+*Inicjatory indeksów* to jedna z dwóch funkcji, które sprawiają, że Inicjatory kolekcji są bardziej spójne z użyciem indeksu. We wcześniejszych wersjach programu C#można było użyć *inicjatorów kolekcji* z kolekcjami stylów sekwencji, w <xref:System.Collections.Generic.Dictionary%602>tym, dodając nawiasy klamrowe wokół par klucz-wartość:
 
 [!code-csharp[ListInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#CollectionInitializer)]
 
-Możesz używać ich z <xref:System.Collections.Generic.Dictionary%602> kolekcje i inne typy miejsce dostępne `Add` metoda przyjmuje więcej niż jeden argument. Nowa składnia obsługuje przypisanie do kolekcji przy użyciu indeksu:
+Można ich używać z <xref:System.Collections.Generic.Dictionary%602> kolekcjami i innymi typami, w których dostępna `Add` Metoda akceptuje więcej niż jeden argument. Nowa składnia obsługuje przypisanie przy użyciu indeksu do kolekcji:
 
 [!code-csharp[DictionaryInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#DictionaryInitializer)]
 
-Tej funkcji oznacza, że kontenery asocjacyjne mogą być inicjowane przy użyciu składni podobnej do wprowadzonych w miejscu na potrzeby kontenerów sekwencji dla kilku wersji.
+Ta funkcja oznacza, że Kontenery asocjacyjne mogą być inicjowane przy użyciu składni podobnej do lokalizacji kontenerów sekwencji dla kilku wersji.
 
-## <a name="extension-add-methods-in-collection-initializers"></a>Rozszerzenie `Add` metody inicjatory kolekcji
+## <a name="extension-add-methods-in-collection-initializers"></a>Metody `Add` rozszerzające w inicjatorach kolekcji
 
-Kolejną funkcją, który ułatwia inicjowanie kolekcji jest możliwość używania *— metoda rozszerzenia* dla `Add` metody. Ta funkcja została dodana przez parzystość za pomocą Visual Basic. Ta funkcja jest najbardziej użyteczna, gdy masz klasę kolekcji niestandardowej, który ma metodę o innej nazwie do semantycznie dodawania nowych elementów.
+Kolejną funkcją, która ułatwia inicjowanie kolekcji, jest możliwość użycia *metody rozszerzenia* dla `Add` metody. Ta funkcja została dodana do parzystości z Visual Basic. Ta funkcja jest najbardziej przydatna, gdy istnieje Klasa kolekcji niestandardowej, która ma metodę o innej nazwie do semantycznie Dodaj nowe elementy.
 
-## <a name="improved-overload-resolution"></a>Rozpoznanie przeciążenia ulepszone
+## <a name="improved-overload-resolution"></a>Ulepszone rozwiązanie przeciążania
 
-Funkcja ta ostatnia jest jeden, który prawdopodobnie nie będą zauważyć. Wystąpiły konstrukcje poprzedniej wersji kompilatora języka C# może mieć wykryto niektóre wywołania metody obejmujące wyrażenia lambda jest niejednoznaczny. Należy wziąć pod uwagę tę metodę:
+Ta Ostatnia funkcja jest prawdopodobnie niezauważalna. Istnieją konstrukcje, w których Poprzednia wersja C# kompilatora mogła znaleźć pewne wywołania metody, które zawierają niejednoznaczne wyrażenia lambda. Rozważmy tę metodę:
 
 [!code-csharp[AsyncMethod](../../../samples/snippets/csharp/new-in-6/overloads.cs#AsyncMethod)]
 
-We wcześniejszych wersjach języka C# wywołanie tej metody, przy użyciu składni metody grupy może zakończyć się niepowodzeniem:
+We wcześniejszych wersjach programu C#wywołanie tej metody przy użyciu składni grupy metod nie powiedzie się:
 
 [!code-csharp[MethodGroup](../../../samples/snippets/csharp/new-in-6/overloads.cs#MethodGroup)]
 
-Wcześniej kompilator nie można odróżnić prawidłowo między `Task.Run(Action)` i `Task.Run(Func<Task>())`. W poprzednich wersjach należy użyć wyrażenia lambda jako argumentu:
+Wcześniejszy kompilator nie może rozróżnić `Task.Run(Action)` prawidłowo `Task.Run(Func<Task>())`między i. W poprzednich wersjach należy użyć wyrażenia lambda jako argumentu:
 
 [!code-csharp[Lambda](../../../samples/snippets/csharp/new-in-6/overloads.cs#Lambda)]
 
-Kompilator języka C# 6 poprawnie ustali, że `Task.Run(Func<Task>())` jest lepszym rozwiązaniem.
+C# 6 kompilator prawidłowo określa, że `Task.Run(Func<Task>())` jest to lepszy wybór.
 
-### <a name="deterministic-compiler-output"></a>Dane wyjściowe kompilatora deterministyczna
+### <a name="deterministic-compiler-output"></a>Deterministyczne dane wyjściowe kompilatora
 
-`-deterministic` Opcji powoduje, że kompilator generuje zestaw identycznych danych wyjściowych dla bajt dla kolejnych kompilacje tych samych plików źródłowych.
+`-deterministic` Opcja instruuje kompilator, aby wytwarzał zestaw danych wyjściowych o identycznym bajcie dla kolejnych kompilacji tych samych plików źródłowych.
 
-Domyślnie każdy kompilacji tworzy unikatowe dane wyjściowe w każdej kompilacji. Kompilator dodaje sygnaturę czasową i identyfikator GUID generowany na podstawie liczby losowe. Użyj tej opcji, jeśli chcesz porównać dla bajt danych wyjściowych, aby upewnić się, że zostało skompilowane zachowania spójności w.
+Domyślnie każda kompilacja generuje unikatowe dane wyjściowe dla każdej kompilacji. Kompilator dodaje sygnaturę czasową i identyfikator GUID generowany na podstawie liczb losowych. Użyj tej opcji, jeśli chcesz porównać dane wyjściowe bajty dla bajtów w celu zapewnienia spójności między kompilacjami.
 
-Aby uzyskać więcej informacji, zobacz [— opcja kompilatora deterministyczne](../language-reference/compiler-options/deterministic-compiler-option.md) artykułu.
+Aby uzyskać więcej informacji, zobacz artykuł [Opcja kompilatora-deterministyczna](../language-reference/compiler-options/deterministic-compiler-option.md) .

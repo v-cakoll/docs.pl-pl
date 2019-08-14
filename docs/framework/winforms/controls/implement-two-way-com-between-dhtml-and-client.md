@@ -14,100 +14,103 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 47002ffaee33be66e2cc99ac1a01896d4656885c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 45df54b3a590078eff6ddc1197db5b0124663cf5
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591808"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971922"
 ---
-# <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a><span data-ttu-id="0e8b7-102">Instrukcje: implementowanie dwukierunkowej komunikacji między kodem DHTML a kodem aplikacji klienta</span><span class="sxs-lookup"><span data-stu-id="0e8b7-102">How to: Implement Two-Way Communication Between DHTML Code and Client Application Code</span></span>
-<span data-ttu-id="0e8b7-103">Możesz użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istniejący dynamiczny kod aplikacji sieci Web HTML (DHTML) do aplikacji klienta Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-103">You can use the <xref:System.Windows.Forms.WebBrowser> control to add existing dynamic HTML (DHTML) Web application code to your Windows Forms client applications.</span></span> <span data-ttu-id="0e8b7-104">Jest to przydatne, gdy zainwestowali czas opracowywania znaczące w tworzeniu kontrolek na podstawie DHTML i chcesz korzystać z zalet użytkownikowi możliwości interfejsu Windows Forms bez konieczności ponownego zapisania istniejącego kodu.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-104">This is useful when you have invested significant development time in creating DHTML-based controls and you want to take advantage of the rich user interface capabilities of Windows Forms without having to rewrite existing code.</span></span>  
-  
- <span data-ttu-id="0e8b7-105"><xref:System.Windows.Forms.WebBrowser> Kontrola umożliwia Implementowanie dwukierunkowej komunikacji między kodu aplikacji klienckich i skryptów kodu strony sieci Web za pomocą <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> i <xref:System.Windows.Forms.WebBrowser.Document%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-105">The <xref:System.Windows.Forms.WebBrowser> control lets you implement two-way communication between your client application code and your Web page scripting code through the <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> and <xref:System.Windows.Forms.WebBrowser.Document%2A> properties.</span></span> <span data-ttu-id="0e8b7-106">Ponadto można skonfigurować <xref:System.Windows.Forms.WebBrowser> kontrolki formantów sieci Web programu blend bezproblemowo z innymi formantami na formularzu aplikacji ukrywanie ich implementacji DHTML.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-106">Additionally, you can configure the <xref:System.Windows.Forms.WebBrowser> control so that your Web controls blend seamlessly with other controls on your application form, hiding their DHTML implementation.</span></span> <span data-ttu-id="0e8b7-107">Aby dopasować bezproblemowo formanty, formatowanie stronę wyświetlaną, aby jej kolor tła i stylu wizualnego dopasowania pozostałej części formularza i używać <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>, <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A>, i <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> właściwości, aby wyłączyć funkcje standardową przeglądarką.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-107">To seamlessly blend the controls, format the page displayed so that its background color and visual style match the rest of the form, and use the <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>, <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A>, and <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> properties to disable standard browser features.</span></span>  
-  
-### <a name="to-embed-dhtml-in-your-windows-forms-application"></a><span data-ttu-id="0e8b7-108">Aby osadzić DHTML w aplikacji Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0e8b7-108">To embed DHTML in your Windows Forms application</span></span>  
-  
-1. <span data-ttu-id="0e8b7-109">Ustaw <xref:System.Windows.Forms.WebBrowser> kontrolki <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> właściwości `false` aby zapobiec <xref:System.Windows.Forms.WebBrowser> kontroli otwieranie plików upuszczone na go.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-109">Set the <xref:System.Windows.Forms.WebBrowser> control's <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from opening files dropped onto it.</span></span>  
-  
+# <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a><span data-ttu-id="7f1c8-102">Instrukcje: implementowanie dwukierunkowej komunikacji między kodem DHTML a kodem aplikacji klienta</span><span class="sxs-lookup"><span data-stu-id="7f1c8-102">How to: Implement Two-Way Communication Between DHTML Code and Client Application Code</span></span>
+
+<span data-ttu-id="7f1c8-103">Za pomocą <xref:System.Windows.Forms.WebBrowser> kontrolki można dodać istniejący kod aplikacji sieci Web (DHTML) do Windows Forms aplikacji klienckich.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-103">You can use the <xref:System.Windows.Forms.WebBrowser> control to add existing dynamic HTML (DHTML) Web application code to your Windows Forms client applications.</span></span> <span data-ttu-id="7f1c8-104">Jest to przydatne, gdy zainwestowano znaczący czas projektowania podczas tworzenia formantów opartych na języku DHTML i chcesz korzystać z zaawansowanych możliwości interfejsu użytkownika Windows Forms bez konieczności ponownego zapisywania istniejącego kodu.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-104">This is useful when you have invested significant development time in creating DHTML-based controls and you want to take advantage of the rich user interface capabilities of Windows Forms without having to rewrite existing code.</span></span>
+
+<span data-ttu-id="7f1c8-105">Kontrolka umożliwia zaimplementowanie dwukierunkowej komunikacji między kodem aplikacji klienta i kodem skryptowym strony sieci Web <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> za pomocą <xref:System.Windows.Forms.WebBrowser.Document%2A> właściwości i. <xref:System.Windows.Forms.WebBrowser></span><span class="sxs-lookup"><span data-stu-id="7f1c8-105">The <xref:System.Windows.Forms.WebBrowser> control lets you implement two-way communication between your client application code and your Web page scripting code through the <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> and <xref:System.Windows.Forms.WebBrowser.Document%2A> properties.</span></span> <span data-ttu-id="7f1c8-106">Ponadto można skonfigurować <xref:System.Windows.Forms.WebBrowser> kontrolkę tak, aby kontrolki sieci Web bezproblemowo mieszają się z innymi kontrolkami w formularzu aplikacji, ukrywając ich implementację DHTML.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-106">Additionally, you can configure the <xref:System.Windows.Forms.WebBrowser> control so that your Web controls blend seamlessly with other controls on your application form, hiding their DHTML implementation.</span></span> <span data-ttu-id="7f1c8-107">Aby bezproblemowo mieszać kontrolki, sformatuj wyświetlaną stronę tak, aby jej kolor tła i styl wizualny odpowiadały pozostałej części formularza <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>, <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A>i Użyj <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> właściwości, i, aby wyłączyć standardowe funkcje przeglądarki.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-107">To seamlessly blend the controls, format the page displayed so that its background color and visual style match the rest of the form, and use the <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>, <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A>, and <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> properties to disable standard browser features.</span></span>
+
+## <a name="to-embed-dhtml-in-your-windows-forms-application"></a><span data-ttu-id="7f1c8-108">Aby osadzić DHTML w aplikacji Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7f1c8-108">To embed DHTML in your Windows Forms application</span></span>
+
+1. <span data-ttu-id="7f1c8-109"><xref:System.Windows.Forms.WebBrowser> Ustaw <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> Właściwośćkontrolki`false` na, aby uniemożliwić kontrolowanie<xref:System.Windows.Forms.WebBrowser> otwierania plików.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-109">Set the <xref:System.Windows.Forms.WebBrowser> control's <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from opening files dropped onto it.</span></span>
+
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#1)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#1)]  
-  
-2. <span data-ttu-id="0e8b7-110">Ustaw dla formantu <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> właściwości `false` zapobiegające <xref:System.Windows.Forms.WebBrowser> kontroli wyświetlanie jego menu skrótów, gdy użytkownik kliknie prawym przyciskiem myszy go.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-110">Set the control's <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from displaying its shortcut menu when the user right-clicks it.</span></span>  
-  
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#1)]
+
+2. <span data-ttu-id="7f1c8-110">Ustaw <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> właściwość kontrolki na `false` , aby zapobiec <xref:System.Windows.Forms.WebBrowser> wyświetlaniu menu skrótów przez formant po kliknięciu go prawym przyciskiem myszy.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-110">Set the control's <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from displaying its shortcut menu when the user right-clicks it.</span></span>
+
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#2)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#2)]  
-  
-3. <span data-ttu-id="0e8b7-111">Ustaw dla formantu <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> właściwości `false` zapobiegające <xref:System.Windows.Forms.WebBrowser> kontroli ją klawiszy skrótów.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-111">Set the control's <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from responding to shortcut keys.</span></span>  
-  
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#2)]
+
+3. <span data-ttu-id="7f1c8-111">Ustaw <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> właściwość kontrolki na `false` , aby uniemożliwić <xref:System.Windows.Forms.WebBrowser> sterowanie odpowiedzią na skróty klawiaturowe.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-111">Set the control's <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from responding to shortcut keys.</span></span>
+
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#3)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#3)]  
-  
-4. <span data-ttu-id="0e8b7-112">Ustaw <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> właściwość w Konstruktorze formularza lub <xref:System.Windows.Forms.Form.Load> programu obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-112">Set the <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> property in the form's constructor or a <xref:System.Windows.Forms.Form.Load> event handler.</span></span>  
-  
-     <span data-ttu-id="0e8b7-113">W poniższym kodzie użyto samej klasy formularza dla skryptów obiektu.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-113">The following code uses the form class itself for the scripting object.</span></span>  
-  
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#3)]
+
+4. <span data-ttu-id="7f1c8-112">Ustaw właściwość w Konstruktorze formularza <xref:System.Windows.Forms.Form.Load> lub programie obsługi zdarzeń. <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A></span><span class="sxs-lookup"><span data-stu-id="7f1c8-112">Set the <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> property in the form's constructor or a <xref:System.Windows.Forms.Form.Load> event handler.</span></span>
+
+     <span data-ttu-id="7f1c8-113">Poniższy kod używa samej klasy form dla obiektu Scripting.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-113">The following code uses the form class itself for the scripting object.</span></span>
+
     > [!NOTE]
-    >  <span data-ttu-id="0e8b7-114">Component Object Model (COM) musi mieć możliwość dostępu do obiektu skryptów.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-114">Component Object Model (COM) must be able to access the scripting object.</span></span> <span data-ttu-id="0e8b7-115">Aby formularz był widoczny dla modelu COM, należy dodać <xref:System.Runtime.InteropServices.ComVisibleAttribute> atrybutów do klasy formularza.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-115">To make your form visible to COM, add the <xref:System.Runtime.InteropServices.ComVisibleAttribute> attribute to your form class.</span></span>  
-  
+    >  <span data-ttu-id="7f1c8-114">Component Object Model (COM) musi być w stanie uzyskać dostęp do obiektu skryptów.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-114">Component Object Model (COM) must be able to access the scripting object.</span></span> <span data-ttu-id="7f1c8-115">Aby formularz był widoczny dla modelu COM, Dodaj <xref:System.Runtime.InteropServices.ComVisibleAttribute> atrybut do klasy formularza.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-115">To make your form visible to COM, add the <xref:System.Runtime.InteropServices.ComVisibleAttribute> attribute to your form class.</span></span>
+
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#4)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#4)]  
-  
-5. <span data-ttu-id="0e8b7-116">Implementuje właściwości publiczne lub metody w kodzie aplikacji, która będzie używana w kodzie skryptu.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-116">Implement public properties or methods in your application code that your script code will use.</span></span>  
-  
-     <span data-ttu-id="0e8b7-117">Na przykład jeśli używasz klasy formularza dla skryptów obiektu, Dodaj następujący kod do klasy formularza.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-117">For example, if you use the form class for the scripting object, add the following code to your form class.</span></span>  
-  
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#4)]
+
+5. <span data-ttu-id="7f1c8-116">Implementowanie publicznych właściwości lub metod w kodzie aplikacji, który będzie używany przez kod skryptu.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-116">Implement public properties or methods in your application code that your script code will use.</span></span>
+
+     <span data-ttu-id="7f1c8-117">Na przykład, jeśli używasz klasy form dla obiektu Scripting, Dodaj następujący kod do klasy formularza.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-117">For example, if you use the form class for the scripting object, add the following code to your form class.</span></span>
+
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#5)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#5)]  
-  
-6. <span data-ttu-id="0e8b7-118">Użyj `window.external` obiektu w kodzie skryptu do publicznej właściwości i metody określonego obiektu.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-118">Use the `window.external` object in your scripting code to access public properties and methods of the specified object.</span></span>  
-  
-     <span data-ttu-id="0e8b7-119">Poniższy kod HTML przedstawia sposób wywołania metody wobec obiektu skryptów od kliknięcia przycisku.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-119">The following HTML code demonstrates how to call a method on the scripting object from a button click.</span></span> <span data-ttu-id="0e8b7-120">Skopiuj ten kod do elementu BODY dokumentu HTML, który należy załadować przy użyciu formantu <xref:System.Windows.Forms.WebBrowser.Navigate%2A> metody lub przypisać formantu <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-120">Copy this code into the BODY element of an HTML document that you load using the control's <xref:System.Windows.Forms.WebBrowser.Navigate%2A> method or that you assign to the control's <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> property.</span></span>  
-  
-    ```  
-    <button onclick="window.external.Test('called from script code')">  
-        call client code from script code  
-    </button>  
-    ```  
-  
-7. <span data-ttu-id="0e8b7-121">Implementowanie funkcji w kodzie skryptu, który będzie używany w kodzie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-121">Implement functions in your script code that your application code will use.</span></span>  
-  
-     <span data-ttu-id="0e8b7-122">Następujący element HTML skrypt zawiera przykład funkcja.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-122">The following HTML SCRIPT element provides an example function.</span></span> <span data-ttu-id="0e8b7-123">Skopiuj ten kod w element główny dokumentu HTML, który należy załadować przy użyciu formantu <xref:System.Windows.Forms.WebBrowser.Navigate%2A> metody lub przypisać formantu <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-123">Copy this code into the HEAD element of an HTML document that you load using the control's <xref:System.Windows.Forms.WebBrowser.Navigate%2A> method or that you assign to the control's <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> property.</span></span>  
-  
-    ```  
-    <script>  
-    function test(message) {   
-        alert(message);   
-    }  
-    </script>  
-    ```  
-  
-8. <span data-ttu-id="0e8b7-124">Użyj <xref:System.Windows.Forms.WebBrowser.Document%2A> właściwości dostępu do kodu skryptu w kodzie aplikacji klienta.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-124">Use the <xref:System.Windows.Forms.WebBrowser.Document%2A> property to access the script code from your client application code.</span></span>  
-  
-     <span data-ttu-id="0e8b7-125">Na przykład, Dodaj następujący kod do przycisku <xref:System.Windows.Forms.Control.Click> programu obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-125">For example, add the following code to a button <xref:System.Windows.Forms.Control.Click> event handler.</span></span>  
-  
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#5)]
+
+6. <span data-ttu-id="7f1c8-118">`window.external` Użyj obiektu w kodzie skryptów, aby uzyskać dostęp do publicznych właściwości i metod określonego obiektu.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-118">Use the `window.external` object in your scripting code to access public properties and methods of the specified object.</span></span>
+
+     <span data-ttu-id="7f1c8-119">Poniższy kod HTML demonstruje sposób wywołania metody dla obiektu skryptu z kliknięcia przycisku.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-119">The following HTML code demonstrates how to call a method on the scripting object from a button click.</span></span> <span data-ttu-id="7f1c8-120">Skopiuj ten kod do elementu body dokumentu HTML, który jest ładowany przy użyciu <xref:System.Windows.Forms.WebBrowser.Navigate%2A> metody kontrolki lub przypisanej do <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> właściwości kontrolki.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-120">Copy this code into the BODY element of an HTML document that you load using the control's <xref:System.Windows.Forms.WebBrowser.Navigate%2A> method or that you assign to the control's <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> property.</span></span>
+
+    ```html
+    <button onclick="window.external.Test('called from script code')">
+        call client code from script code
+    </button>
+    ```
+
+7. <span data-ttu-id="7f1c8-121">Zaimplementuj funkcje w kodzie skryptu, który będzie używany przez kod aplikacji.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-121">Implement functions in your script code that your application code will use.</span></span>
+
+     <span data-ttu-id="7f1c8-122">Poniższy element skryptu HTML zawiera przykład funkcji.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-122">The following HTML SCRIPT element provides an example function.</span></span> <span data-ttu-id="7f1c8-123">Skopiuj ten kod do elementu nagłówkowego dokumentu HTML, który jest ładowany przy użyciu <xref:System.Windows.Forms.WebBrowser.Navigate%2A> metody kontrolki lub przypisanej do <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> właściwości kontrolki.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-123">Copy this code into the HEAD element of an HTML document that you load using the control's <xref:System.Windows.Forms.WebBrowser.Navigate%2A> method or that you assign to the control's <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> property.</span></span>
+
+    ```html
+    <script>
+    function test(message) {
+        alert(message);
+    }
+    </script>
+    ```
+
+8. <span data-ttu-id="7f1c8-124"><xref:System.Windows.Forms.WebBrowser.Document%2A> Użyj właściwości, aby uzyskać dostęp do kodu skryptu z kodu aplikacji klienckiej.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-124">Use the <xref:System.Windows.Forms.WebBrowser.Document%2A> property to access the script code from your client application code.</span></span>
+
+     <span data-ttu-id="7f1c8-125">Na przykład Dodaj następujący kod do programu obsługi zdarzeń przycisku <xref:System.Windows.Forms.Control.Click> .</span><span class="sxs-lookup"><span data-stu-id="7f1c8-125">For example, add the following code to a button <xref:System.Windows.Forms.Control.Click> event handler.</span></span>
+
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#8)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#8)]  
-  
-9. <span data-ttu-id="0e8b7-126">Po zakończeniu debugowania usługi DHTML ustawić <xref:System.Windows.Forms.WebBrowser.ScriptErrorsSuppressed%2A> właściwości `true` zapobiegające <xref:System.Windows.Forms.WebBrowser> kontroli wyświetlanie komunikatów o błędach dla problemów kodu skryptu.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-126">When you are finished debugging your DHTML, set the control's <xref:System.Windows.Forms.WebBrowser.ScriptErrorsSuppressed%2A> property to `true` to prevent the <xref:System.Windows.Forms.WebBrowser> control from displaying error messages for script code problems.</span></span>  
-  
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#8)]
+
+9. <span data-ttu-id="7f1c8-126">Po zakończeniu debugowania kodu DHTML Ustaw <xref:System.Windows.Forms.WebBrowser.ScriptErrorsSuppressed%2A> właściwość kontrolki na `true` , aby zapobiec <xref:System.Windows.Forms.WebBrowser> wyświetlaniu przez formant komunikatów o błędach w przypadku problemów z kodem skryptu.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-126">When you are finished debugging your DHTML, set the control's <xref:System.Windows.Forms.WebBrowser.ScriptErrorsSuppressed%2A> property to `true` to prevent the <xref:System.Windows.Forms.WebBrowser> control from displaying error messages for script code problems.</span></span>
+
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#9)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#9)]  
-  
-## <a name="example"></a><span data-ttu-id="0e8b7-127">Przykład</span><span class="sxs-lookup"><span data-stu-id="0e8b7-127">Example</span></span>  
- <span data-ttu-id="0e8b7-128">Poniższy przykład kompletny kod zapewnia aplikacji demonstracyjnych, która umożliwia zrozumienie tej funkcji.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-128">The following complete code example provides a demonstration application that you can use to understand this feature.</span></span> <span data-ttu-id="0e8b7-129">Kod HTML jest ładowany do <xref:System.Windows.Forms.WebBrowser> kontrolować za pośrednictwem <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> właściwości zamiast ładowana z pliku HTML.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-129">The HTML code is loaded into the <xref:System.Windows.Forms.WebBrowser> control through the <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> property instead of being loaded from a separate HTML file.</span></span>  
-  
- [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#0)]
- [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#0)]  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="0e8b7-130">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="0e8b7-130">Compiling the Code</span></span>  
- <span data-ttu-id="0e8b7-131">Ten kod wymaga:</span><span class="sxs-lookup"><span data-stu-id="0e8b7-131">This code requires:</span></span>  
-  
-- <span data-ttu-id="0e8b7-132">Odwołania do zestawów System i przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="0e8b7-132">References to the System and System.Windows.Forms assemblies.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="0e8b7-133">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0e8b7-133">See also</span></span>
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#9)]
+
+## <a name="example"></a><span data-ttu-id="7f1c8-127">Przykład</span><span class="sxs-lookup"><span data-stu-id="7f1c8-127">Example</span></span>
+
+<span data-ttu-id="7f1c8-128">Poniższy pełny kod zawiera przykładową aplikację, której można użyć do zrozumienia tej funkcji.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-128">The following complete code example provides a demonstration application that you can use to understand this feature.</span></span> <span data-ttu-id="7f1c8-129">Kod HTML jest ładowany do <xref:System.Windows.Forms.WebBrowser> kontrolki <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> za pośrednictwem właściwości zamiast ładowania z oddzielnego pliku HTML.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-129">The HTML code is loaded into the <xref:System.Windows.Forms.WebBrowser> control through the <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> property instead of being loaded from a separate HTML file.</span></span>
+
+[!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#0)]
+[!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#0)]
+
+## <a name="compiling-the-code"></a><span data-ttu-id="7f1c8-130">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="7f1c8-130">Compiling the Code</span></span>
+
+<span data-ttu-id="7f1c8-131">Ten kod wymaga:</span><span class="sxs-lookup"><span data-stu-id="7f1c8-131">This code requires:</span></span>
+
+- <span data-ttu-id="7f1c8-132">Odwołania do zestawów system i system. Windows. Forms.</span><span class="sxs-lookup"><span data-stu-id="7f1c8-132">References to the System and System.Windows.Forms assemblies.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="7f1c8-133">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7f1c8-133">See also</span></span>
 
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="0e8b7-134">WebBrowser, kontrolka</span><span class="sxs-lookup"><span data-stu-id="0e8b7-134">WebBrowser Control</span></span>](webbrowser-control-windows-forms.md)
+- [<span data-ttu-id="7f1c8-134">WebBrowser, kontrolka</span><span class="sxs-lookup"><span data-stu-id="7f1c8-134">WebBrowser Control</span></span>](webbrowser-control-windows-forms.md)

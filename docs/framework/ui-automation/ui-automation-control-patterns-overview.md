@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 6e2b5eaff3ee80434d5cdf39391273685da9faf0
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 259594858e96897cb377cde4104e17b748f902c4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434076"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971808"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Wzorce formantów automatyzacji interfejsu użytkownika — omówienie
 > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "68434076"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Używane dla kontrolek, w których stan może być przełączany. Na przykład pola wyboru i elementy menu umożliwiające sprawdzanie.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Używany do kontrolek, które mogą być zmieniane, przenoszone i obracane. Typowe zastosowania wzorca kontrolki przekształcania znajdują się w projektantach, formularzach, edytorach graficznych i aplikacjach do rysowania.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|Umożliwia klientom pobieranie lub Ustawianie wartości w kontrolkach, które nie obsługują zakresu wartości. Na przykład wybór daty i godziny.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Udostępnia informacje specyficzne dla systemu Windows, podstawowe koncepcje [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] systemu operacyjnego. Przykłady formantów, które są Windows są oknami aplikacji najwyższego poziomu[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]( [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)],, i tak dalej) [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] , podrzędne okna i okna dialogowe.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Udostępnia informacje specyficzne dla systemu Windows, podstawowe koncepcje [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] systemu operacyjnego. Przykłady formantów, które są Windows są oknami aplikacji najwyższego poziomu[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]( [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)],, i tak dalej), oknach podrzędnych interfejsu wielu dokumentów (MDI) i oknach dialogowych.|  
   
 ## <a name="see-also"></a>Zobacz także
 

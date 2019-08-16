@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 5f3560c899373b9835e2ead79590cf73777b2375
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 7c83cfa22770695861b07e3bff29a38fcd125dd2
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972405"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545238"
 ---
 # <a name="typography-in-wpf"></a>Typografia w WPF
-W tym temacie przedstawiono główne funkcje typograficzne programu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Te funkcje obejmują ulepszoną jakość i wydajność renderowania tekstu, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] obsługę typografii, ulepszony międzynarodowy tekst, rozszerzoną obsługę czcionek oraz nowe interfejsy programowania aplikacji tekstowych (API).  
+W tym temacie przedstawiono główne funkcje typograficzne programu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Te funkcje obejmują ulepszoną jakość i wydajność renderowania tekstu, obsługę typografii OpenType, ulepszony międzynarodowy tekst, rozszerzoną obsługę czcionek oraz nowe interfejsy programowania aplikacji tekstowych (API).  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Ulepszona jakość i wydajność tekstu  
@@ -29,9 +29,9 @@ Tekst z wygładzaniem kierunku y w technologii ClearType
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>Bogaty Typografia  
- Format czcionki jest rozszerzeniem [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formatu czcionki. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Format czcionki został opracowany wspólnie przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] program i Adobe i oferuje bogaty asortyment zaawansowanych funkcji typograficznych. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Obiekt ujawnia wiele zaawansowanych [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] funkcji czcionek, takich jak alternatywy stylistyczne i znaki kaligraficzne. <xref:System.Windows.Documents.Typography> Windows SDK zawiera zestaw przykładowych [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] czcionek, które są zaprojektowane z rozbudowanymi funkcjami, takimi jak czcionki Pericles i Pescadero. Aby uzyskać więcej informacji, zobacz [przykładowy pakiet czcionek OpenType](sample-opentype-font-pack.md).  
+ Format czcionki OpenType jest rozszerzeniem [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formatu czcionki. Format czcionki OpenType został opracowany wspólnie przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] program i Adobe i oferuje bogaty asortyment zaawansowanych funkcji typograficznych. <xref:System.Windows.Documents.Typography> Obiekt ujawnia wiele zaawansowanych funkcji czcionek OpenType, takich jak alternatywy stylistyczne i znaki kaligraficzne. Windows SDK zawiera zestaw przykładowych czcionek OpenType, które są zaprojektowane z rozbudowanymi funkcjami, takimi jak czcionki Pericles i Pescadero. Aby uzyskać więcej informacji, zobacz [przykładowy pakiet czcionek OpenType](sample-opentype-font-pack.md).  
   
- Czcionka Pericles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] zawiera dodatkowe glify, które udostępniają alternatywy stylistyczne dla standardowego zestawu glifów. Następujący tekst zawiera stylistyczne glify alternatywne.  
+ Czcionka Pericles OpenType zawiera dodatkowe glify, które udostępniają alternatywy stylistyczne dla standardowego zestawu symboli. Następujący tekst zawiera stylistyczne glify alternatywne.  
   
  ![Tekst przy użyciu alternatywnych symboli OpenType](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "Tekst przy użyciu alternatywnych symboli OpenType")  
   
@@ -39,7 +39,7 @@ Tekst z wygładzaniem kierunku y w technologii ClearType
   
  ![Tekst korzystający z symboli standardowych i kaligraficzne OpenType](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "Tekst korzystający z symboli standardowych i kaligraficzne OpenType")  
   
- Aby uzyskać więcej informacji [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] na temat funkcji, zobacz [funkcje czcionek OpenType](opentype-font-features.md).  
+ Aby uzyskać więcej informacji na temat funkcji OpenType, zobacz [funkcje czcionek OpenType](opentype-font-features.md).  
   
 <a name="Enhanced_International_Text_Support"></a>   
 ## <a name="enhanced-international-text-support"></a>Rozszerzona obsługa tekstu międzynarodowego  

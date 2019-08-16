@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 58dc070e1642773f39f9ab2a9037ca60175b27cf
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401290"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545271"
 ---
 # <a name="panels-overview"></a>Przegląd Panele
 <xref:System.Windows.Controls.Panel>elementy to składniki kontrolujące renderowanie elementów — ich rozmiar i wymiary, ich położenie oraz układ zawartości podrzędnej. Zawiera wiele wstępnie zdefiniowanych <xref:System.Windows.Controls.Panel> elementów, a także możliwość konstruowania elementów niestandardowych <xref:System.Windows.Controls.Panel>. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]  
@@ -66,7 +66,7 @@ ms.locfileid: "68401290"
 |------------------|---------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|Tak|Definiuje obszar, w obrębie którego możesz jawnie pozycjonować elementy podrzędne według współrzędnych <xref:System.Windows.Controls.Canvas> względem obszaru.|  
 |<xref:System.Windows.Controls.DockPanel>|Tak|Definiuje obszar, w którym można rozmieścić elementy podrzędne w poziomie lub w pionie względem siebie.|  
-|<xref:System.Windows.Controls.Grid>|Yes|Definiuje elastyczny obszar siatki składający się z kolumn i wierszy. Elementy <xref:System.Windows.Controls.Grid> podrzędne elementu można umieścić precyzyjnie <xref:System.Windows.FrameworkElement.Margin%2A> przy użyciu właściwości.|  
+|<xref:System.Windows.Controls.Grid>|Tak|Definiuje elastyczny obszar siatki składający się z kolumn i wierszy. Elementy <xref:System.Windows.Controls.Grid> podrzędne elementu można umieścić precyzyjnie <xref:System.Windows.FrameworkElement.Margin%2A> przy użyciu właściwości.|  
 |<xref:System.Windows.Controls.StackPanel>|Tak|Rozmieszcza elementy podrzędne w pojedynczym wierszu, który może być zorientowany w poziomie lub w pionie.|  
 |<xref:System.Windows.Controls.Primitives.TabPanel>|Nie|Obsługuje układ przycisków karty w <xref:System.Windows.Controls.TabControl>elemencie.|  
 |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Nie|Rozmieszcza zawartość w <xref:System.Windows.Controls.ToolBar> formancie.|  
@@ -94,7 +94,7 @@ ms.locfileid: "68401290"
   
 <a name="Panels_overview_Canvas_subsection"></a>   
 ### <a name="canvas"></a>Kanwa  
- Element umożliwia pozycjonowanie zawartości według absolutnych współrzędnych x i *y*.  <xref:System.Windows.Controls.Canvas> Elementy mogą być rysowane w unikatowej lokalizacji; lub, jeśli elementy zajmują te same współrzędne, kolejność, w której są wyświetlane w znaczniku, określa kolejność, w jakiej są rysowane elementy.  
+ Element umożliwia pozycjonowanie zawartości według absolutnych współrzędnych x i *y*. <xref:System.Windows.Controls.Canvas> Elementy mogą być rysowane w unikatowej lokalizacji; lub, jeśli elementy zajmują te same współrzędne, kolejność, w której są wyświetlane w znaczniku, określa kolejność, w jakiej są rysowane elementy.  
   
  <xref:System.Windows.Controls.Canvas>zapewnia najbardziej elastyczną obsługę <xref:System.Windows.Controls.Panel>układu. Właściwości Height i Width są używane do definiowania obszaru kanwy, a elementy wewnątrz są przypisane bezwzględnych współrzędnych względem obszaru elementu nadrzędnego <xref:System.Windows.Controls.Canvas>. Cztery dołączone właściwości, <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType> <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType> <xref:System.Windows.Controls.Canvas>, i ,<xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>umożliwiają dokładniejszą kontrolę nad umieszczaniem obiektów w obrębie, co umożliwia deweloperom pozycjonowanie i precyzyjne porządkowanie elementów na ekranie. <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType>  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68401290"
 ### <a name="dockpanel"></a>DockPanel  
  <xref:System.Windows.Controls.DockPanel> Element<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> używa dołączonej właściwości zgodnie z ustawieniem w podrzędnych elementach zawartości, aby pozycjonować zawartość wzdłuż krawędzi kontenera. Gdy <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> jest ustawiona na <xref:System.Windows.Controls.Dock.Top> lub <xref:System.Windows.Controls.Dock.Bottom>, ustawia elementy podrzędne powyżej lub poniżej siebie. Gdy <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> jest ustawiona na <xref:System.Windows.Controls.Dock.Left> lub <xref:System.Windows.Controls.Dock.Right>, ustawia elementy podrzędne w lewo lub w prawo. Właściwość określa pozycję końcowego elementu dodanego jako element podrzędny <xref:System.Windows.Controls.DockPanel>elementu. <xref:System.Windows.Controls.DockPanel.LastChildFill%2A>  
   
- Można użyć <xref:System.Windows.Controls.DockPanel> , aby pomieścić grupę powiązanych kontrolek, takich jak zestaw przycisków. Alternatywnie można użyć go do utworzenia "okienkowego" [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], podobnego do znalezionego w. [!INCLUDE[TLA#tla_outlook](../../../../includes/tlasharptla-outlook-md.md)]  
+ Można użyć <xref:System.Windows.Controls.DockPanel> , aby pomieścić grupę powiązanych kontrolek, takich jak zestaw przycisków. Alternatywnie można użyć go do utworzenia "okienkowego" [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], podobnego do znalezionego w programie Microsoft Outlook.  
   
 #### <a name="sizing-to-content"></a>Ustalanie wielkości do zawartości  
  Jeśli jego <xref:System.Windows.FrameworkElement.Height%2A> właściwości <xref:System.Windows.FrameworkElement.Width%2A> i nie są określone, <xref:System.Windows.Controls.DockPanel> rozmiary do zawartości. Rozmiar może zwiększyć lub zmniejszyć do rozmiaru elementów podrzędnych. Jednak jeśli te właściwości są określone i nie jest już miejsce dla następnego określonego elementu podrzędnego, program <xref:System.Windows.Controls.DockPanel> nie wyświetla tego elementu podrzędnego ani kolejnych elementów podrzędnych i nie mierzy kolejnych elementów podrzędnych.  

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: cab39cdb13b92c0bfcb697de4bb8c05feae4c146
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 5bcd2ccd99940a3ce22f0894a1706eccf8627158
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972394"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545209"
 ---
 # <a name="fonts-wpf"></a>Czcionki (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]obejmuje obsługę bogatej prezentacji tekstu przy użyciu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek. Przykładowy pakiet [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek jest dołączony do Windows SDK.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]obejmuje obsługę bogatej prezentacji tekstu przy użyciu czcionek OpenType. Przykładowy pakiet czcionek OpenType jest dołączony do Windows SDK.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Funkcje czcionki OpenType](opentype-font-features.md)  

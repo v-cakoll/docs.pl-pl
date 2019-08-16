@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: fda64cd15e15fb437db415b8a8083829c2d773cb
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039864"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545323"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Samouczek: Tworzenie aplikacji usługi systemu Windows
 
@@ -296,7 +296,7 @@ Ustawienia stanu SERVICE_START_PENDING i SERVICE_STOP_PENDING można zaimplement
 
 6. Obowiązkowe Jeśli <xref:System.ServiceProcess.ServiceBase.OnStop%2A> jest metodą długotrwałą, powtórz tę procedurę `OnStop` w metodzie. Zaimplementuj stan SERVICE_STOP_PENDING i zwróć stan SERVICE_STOPPED przed wyjściem `OnStop` z metody.
 
-   Na przykład:
+   Przykład:
 
     ```csharp
     // Update the service state to Stop Pending.
@@ -538,7 +538,7 @@ Jeśli aplikacja usługi systemu Windows nie jest już potrzebna, można ją usu
 
 Teraz, gdy została utworzona usługa, możesz:
 
-- Utwórz autonomiczny program instalacyjny, który będzie używany przez inne osoby do instalacji usługi systemu Windows. Użyj zestawu [narzędzi WIX](http://wixtoolset.org/) , aby utworzyć Instalatora dla usługi systemu Windows. Aby poznać inne pomysły, zobacz [Tworzenie pakietu Instalatora](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
+- Utwórz autonomiczny program instalacyjny, który będzie używany przez inne osoby do instalacji usługi systemu Windows. Użyj zestawu [narzędzi WIX](https://wixtoolset.org/) , aby utworzyć Instalatora dla usługi systemu Windows. Aby poznać inne pomysły, zobacz [Tworzenie pakietu Instalatora](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
 - <xref:System.ServiceProcess.ServiceController> Eksploruj składnik, który umożliwia wysyłanie poleceń do zainstalowanej usługi.
 

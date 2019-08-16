@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: cab39cdb13b92c0bfcb697de4bb8c05feae4c146
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 5bcd2ccd99940a3ce22f0894a1706eccf8627158
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972394"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545209"
 ---
-# <a name="fonts-wpf"></a><span data-ttu-id="38328-102">Czcionki (WPF)</span><span class="sxs-lookup"><span data-stu-id="38328-102">Fonts (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="38328-103">obejmuje obsługę bogatej prezentacji tekstu przy użyciu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek.</span><span class="sxs-lookup"><span data-stu-id="38328-103">includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="38328-104">Przykładowy pakiet [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek jest dołączony do Windows SDK.</span><span class="sxs-lookup"><span data-stu-id="38328-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the Windows SDK.</span></span>  
+# <a name="fonts-wpf"></a><span data-ttu-id="29cb1-102">Czcionki (WPF)</span><span class="sxs-lookup"><span data-stu-id="29cb1-102">Fonts (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="29cb1-103">obejmuje obsługę bogatej prezentacji tekstu przy użyciu czcionek OpenType.</span><span class="sxs-lookup"><span data-stu-id="29cb1-103">includes support for rich presentation of text using OpenType fonts.</span></span> <span data-ttu-id="29cb1-104">Przykładowy pakiet czcionek OpenType jest dołączony do Windows SDK.</span><span class="sxs-lookup"><span data-stu-id="29cb1-104">A sample pack of OpenType fonts is included with the Windows SDK.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="38328-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="38328-105">In This Section</span></span>  
- [<span data-ttu-id="38328-106">Funkcje czcionki OpenType</span><span class="sxs-lookup"><span data-stu-id="38328-106">OpenType Font Features</span></span>](opentype-font-features.md)  
- [<span data-ttu-id="38328-107">Pakowanie czcionek z aplikacjami</span><span class="sxs-lookup"><span data-stu-id="38328-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
- [<span data-ttu-id="38328-108">Przykład pakietu czcionek OpenType</span><span class="sxs-lookup"><span data-stu-id="38328-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
- [<span data-ttu-id="38328-109">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="38328-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="29cb1-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="29cb1-105">In This Section</span></span>  
+ [<span data-ttu-id="29cb1-106">Funkcje czcionki OpenType</span><span class="sxs-lookup"><span data-stu-id="29cb1-106">OpenType Font Features</span></span>](opentype-font-features.md)  
+ [<span data-ttu-id="29cb1-107">Pakowanie czcionek z aplikacjami</span><span class="sxs-lookup"><span data-stu-id="29cb1-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
+ [<span data-ttu-id="29cb1-108">Przykład pakietu czcionek OpenType</span><span class="sxs-lookup"><span data-stu-id="29cb1-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
+ [<span data-ttu-id="29cb1-109">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="29cb1-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="38328-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="38328-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="29cb1-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="29cb1-110">See also</span></span>
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [<span data-ttu-id="38328-111">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="38328-111">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="38328-112">Typografia w WPF</span><span class="sxs-lookup"><span data-stu-id="38328-112">Typography in WPF</span></span>](typography-in-wpf.md)
+- [<span data-ttu-id="29cb1-111">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="29cb1-111">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="29cb1-112">Typografia w WPF</span><span class="sxs-lookup"><span data-stu-id="29cb1-112">Typography in WPF</span></span>](typography-in-wpf.md)

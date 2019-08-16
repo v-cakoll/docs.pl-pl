@@ -5,33 +5,30 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], parenting to forms
 - Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
-ms.openlocfilehash: 9106a69ea9f28442da6e3270f7cf5abb9374b62d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6519add6789485d41146633abb5e11f80913649
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913660"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039826"
 ---
-# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a><span data-ttu-id="181af-102">Instrukcje: przenoszenie elementu ToolStrip z ToolStripContainer na formularz</span><span class="sxs-lookup"><span data-stu-id="181af-102">How to: Move a ToolStrip Out of a ToolStripContainer onto a Form</span></span>
-<span data-ttu-id="181af-103">Użyj poniższej procedury, aby przenieść <xref:System.Windows.Forms.ToolStrip> poza <xref:System.Windows.Forms.ToolStripContainer> w formularzu.</span><span class="sxs-lookup"><span data-stu-id="181af-103">Use the following procedure to move a <xref:System.Windows.Forms.ToolStrip> out of a <xref:System.Windows.Forms.ToolStripContainer> onto a form.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="181af-104">Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania.</span><span class="sxs-lookup"><span data-stu-id="181af-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="181af-105">Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu.</span><span class="sxs-lookup"><span data-stu-id="181af-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="181af-106">Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="181af-106">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
-  
-### <a name="to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a><span data-ttu-id="181af-107">Aby przenieść ToolStrip z ToolStripContainer na formularz</span><span class="sxs-lookup"><span data-stu-id="181af-107">To move a ToolStrip out of a ToolStripContainer onto a form</span></span>  
-  
-1. <span data-ttu-id="181af-108">Wybierz <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="181af-108">Select the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
-  
-2. <span data-ttu-id="181af-109">Wytnij <xref:System.Windows.Forms.ToolStrip> przez naciśnięcie klawisza CTRL + X lub kliknij prawym przyciskiem myszy <xref:System.Windows.Forms.ToolStrip> i wybierz polecenie **Wytnij** z menu kontekstowego.</span><span class="sxs-lookup"><span data-stu-id="181af-109">Cut the <xref:System.Windows.Forms.ToolStrip> by pressing CTRL+X, or right-click the <xref:System.Windows.Forms.ToolStrip> and choose **Cut** from the context menu.</span></span>  
-  
-3. <span data-ttu-id="181af-110">Wybierz formularz.</span><span class="sxs-lookup"><span data-stu-id="181af-110">Select the form.</span></span>  
-  
-4. <span data-ttu-id="181af-111">Wklej <xref:System.Windows.Forms.ToolStrip> przez naciśnięcie klawiszy CTRL + V lub wybierz **Wklej** z **Edytuj** menu.</span><span class="sxs-lookup"><span data-stu-id="181af-111">Paste the <xref:System.Windows.Forms.ToolStrip> by pressing CTRL+V, or choose **Paste** from the **Edit** menu.</span></span>  
-  
-5. <span data-ttu-id="181af-112">Ustaw <xref:System.Windows.Forms.ToolStrip.Dock%2A> właściwość <xref:System.Windows.Forms.ToolStrip> do **górnej**.</span><span class="sxs-lookup"><span data-stu-id="181af-112">Set the <xref:System.Windows.Forms.ToolStrip.Dock%2A> property of the <xref:System.Windows.Forms.ToolStrip> to **Top**.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="181af-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="181af-113">See also</span></span>
+# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a><span data-ttu-id="241d2-102">Instrukcje: przenoszenie elementu ToolStrip z ToolStripContainer na formularz</span><span class="sxs-lookup"><span data-stu-id="241d2-102">How to: Move a ToolStrip Out of a ToolStripContainer onto a Form</span></span>
+<span data-ttu-id="241d2-103">Poniższa procedura umożliwia przechodzenie <xref:System.Windows.Forms.ToolStrip> poza <xref:System.Windows.Forms.ToolStripContainer> do formularza.</span><span class="sxs-lookup"><span data-stu-id="241d2-103">Use the following procedure to move a <xref:System.Windows.Forms.ToolStrip> out of a <xref:System.Windows.Forms.ToolStripContainer> onto a form.</span></span>
+
+## <a name="to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a><span data-ttu-id="241d2-104">Aby przenieść element ToolStrip z elementu ToolStripContainer do formularza</span><span class="sxs-lookup"><span data-stu-id="241d2-104">To move a ToolStrip out of a ToolStripContainer onto a form</span></span>
+
+1. <span data-ttu-id="241d2-105">Wybierz pozycję <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="241d2-105">Select the <xref:System.Windows.Forms.ToolStrip>.</span></span>
+
+2. <span data-ttu-id="241d2-106">Wytnij <xref:System.Windows.Forms.ToolStrip> przez naciśnięcie klawiszy Ctrl + X lub kliknij prawym przyciskiem myszy i wybierz polecenie Wytnij z menu kontekstowego. <xref:System.Windows.Forms.ToolStrip></span><span class="sxs-lookup"><span data-stu-id="241d2-106">Cut the <xref:System.Windows.Forms.ToolStrip> by pressing CTRL+X, or right-click the <xref:System.Windows.Forms.ToolStrip> and choose **Cut** from the context menu.</span></span>
+
+3. <span data-ttu-id="241d2-107">Wybierz formularz.</span><span class="sxs-lookup"><span data-stu-id="241d2-107">Select the form.</span></span>
+
+4. <span data-ttu-id="241d2-108">Wklej przez naciśnięcie klawiszy Ctrl + V lub wybierz **Wklej** z menu **Edycja.** <xref:System.Windows.Forms.ToolStrip></span><span class="sxs-lookup"><span data-stu-id="241d2-108">Paste the <xref:System.Windows.Forms.ToolStrip> by pressing CTRL+V, or choose **Paste** from the **Edit** menu.</span></span>
+
+5. <span data-ttu-id="241d2-109"><xref:System.Windows.Forms.ToolStrip.Dock%2A> Ustaw właściwość <xref:System.Windows.Forms.ToolStrip> na **Top**.</span><span class="sxs-lookup"><span data-stu-id="241d2-109">Set the <xref:System.Windows.Forms.ToolStrip.Dock%2A> property of the <xref:System.Windows.Forms.ToolStrip> to **Top**.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="241d2-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="241d2-110">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripContainer>
-- [<span data-ttu-id="181af-114">ToolStrip, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="181af-114">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="241d2-111">ToolStrip, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="241d2-111">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)

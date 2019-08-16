@@ -8,140 +8,137 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: dc9abbf520d3af79a2c64884adcdfa2f1066ce1b
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: df88f9ae0b32ecd3b79686f3271e09b92ad7d4fd
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65558000"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040193"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a><span data-ttu-id="50620-102">Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms przy użyciu języka Visual C\#</span><span class="sxs-lookup"><span data-stu-id="50620-102">Walkthrough: Inheriting from a Windows Forms Control with Visual C\#</span></span>
-<span data-ttu-id="50620-103">Z wizualizacją C#, można tworzyć zaawansowane Kontrolki niestandardowe za pomocą *dziedziczenia*.</span><span class="sxs-lookup"><span data-stu-id="50620-103">With Visual C#, you can create powerful custom controls through *inheritance*.</span></span> <span data-ttu-id="50620-104">Poprzez dziedziczenie jest możliwe w celu tworzenia formantów, które zachować wszystkie związane funkcje standardowych kontrolek Windows Forms, ale również dołączać niestandardowe funkcje.</span><span class="sxs-lookup"><span data-stu-id="50620-104">Through inheritance you are able to create controls that retain all of the inherent functionality of standard Windows Forms controls but also incorporate custom functionality.</span></span> <span data-ttu-id="50620-105">W tym instruktażu utworzysz prostą odziedziczoną kontrolkę o nazwie `ValueButton`.</span><span class="sxs-lookup"><span data-stu-id="50620-105">In this walkthrough, you will create a simple inherited control called `ValueButton`.</span></span> <span data-ttu-id="50620-106">Ten przycisk będzie dziedziczyć funkcji z formularzy Windows <xref:System.Windows.Forms.Button> kontrolować i udostępni właściwość niestandardową o nazwie `ButtonValue`.</span><span class="sxs-lookup"><span data-stu-id="50620-106">This button will inherit functionality from the standard Windows Forms <xref:System.Windows.Forms.Button> control, and will expose a custom property called `ButtonValue`.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="50620-107">Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania.</span><span class="sxs-lookup"><span data-stu-id="50620-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="50620-108">Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu.</span><span class="sxs-lookup"><span data-stu-id="50620-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="50620-109">Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="50620-109">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
-  
-## <a name="creating-the-project"></a><span data-ttu-id="50620-110">Tworzenie projektu</span><span class="sxs-lookup"><span data-stu-id="50620-110">Creating the Project</span></span>  
- <span data-ttu-id="50620-111">Podczas tworzenia nowego projektu, należy określić jego nazwę, aby ustawić głównej przestrzeni nazw, nazwa zestawu i nazwa projektu i upewnij się, że składnik domyślną będzie poprawną przestrzeń nazw.</span><span class="sxs-lookup"><span data-stu-id="50620-111">When you create a new project, you specify its name in order to set the root namespace, assembly name, and project name, and to ensure that the default component will be in the correct namespace.</span></span>  
-  
-#### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a><span data-ttu-id="50620-112">Aby utworzyć ValueButtonLib Biblioteka kontrolek i kontrola ValueButton</span><span class="sxs-lookup"><span data-stu-id="50620-112">To create the ValueButtonLib control library and the ValueButton control</span></span>  
-  
-1. <span data-ttu-id="50620-113">Na **pliku** menu wskaż **New** a następnie kliknij przycisk **projektu** otworzyć **nowy projekt** okno dialogowe.</span><span class="sxs-lookup"><span data-stu-id="50620-113">On the **File** menu, point to **New** and then click **Project** to open the **New Project** dialog box.</span></span>  
-  
-2. <span data-ttu-id="50620-114">Wybierz **Biblioteka kontrolek formularzy Windows** szablonu projektu z listy projektów programu Visual C# i typu `ValueButtonLib` w **nazwa** pole.</span><span class="sxs-lookup"><span data-stu-id="50620-114">Select the **Windows Forms Control Library** project template from the list of Visual C# Projects, and type `ValueButtonLib` in the **Name** box.</span></span>  
-  
-     <span data-ttu-id="50620-115">Nazwa projektu `ValueButtonLib`, również jest domyślnie przypisane do głównej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="50620-115">The project name, `ValueButtonLib`, is also assigned to the root namespace by default.</span></span> <span data-ttu-id="50620-116">Główna przestrzeń nazw są używane do kwalifikowania nazwy elementów w zestawie.</span><span class="sxs-lookup"><span data-stu-id="50620-116">The root namespace is used to qualify the names of components in the assembly.</span></span> <span data-ttu-id="50620-117">Na przykład, jeśli dwa zestawy zawiera składniki o nazwie `ValueButton`, możesz określić swoje `ValueButton` za pomocą składnika `ValueButtonLib.ValueButton`.</span><span class="sxs-lookup"><span data-stu-id="50620-117">For example, if two assemblies provide components named `ValueButton`, you can specify your `ValueButton` component using `ValueButtonLib.ValueButton`.</span></span> <span data-ttu-id="50620-118">Aby uzyskać więcej informacji, zobacz [przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md).</span><span class="sxs-lookup"><span data-stu-id="50620-118">For more information, see [Namespaces](../../../csharp/programming-guide/namespaces/index.md).</span></span>  
-  
-3. <span data-ttu-id="50620-119">W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **UserControl1.cs**, następnie wybierz **Zmień nazwę** z menu skrótów.</span><span class="sxs-lookup"><span data-stu-id="50620-119">In **Solution Explorer**, right-click **UserControl1.cs**, then choose **Rename** from the shortcut menu.</span></span> <span data-ttu-id="50620-120">Zmień nazwę pliku, aby `ValueButton.cs`.</span><span class="sxs-lookup"><span data-stu-id="50620-120">Change the file name to `ValueButton.cs`.</span></span> <span data-ttu-id="50620-121">Kliknij przycisk **tak** przycisku, gdy zostanie wyświetlony monit, jeśli chcesz zmienić wszystkie odwołania do elementu kodu '`UserControl1`".</span><span class="sxs-lookup"><span data-stu-id="50620-121">Click the **Yes** button when you are asked if you want to rename all references to the code element '`UserControl1`'.</span></span>  
-  
-4. <span data-ttu-id="50620-122">W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **ValueButton.cs** i wybierz **Wyświetl kod**.</span><span class="sxs-lookup"><span data-stu-id="50620-122">In **Solution Explorer**, right-click **ValueButton.cs** and select **View Code**.</span></span>  
-  
-5. <span data-ttu-id="50620-123">Znajdź `class` wiersz instrukcji `public partial class ValueButton`, a następnie zmień typ, z której dziedziczy ten formant <xref:System.Windows.Forms.UserControl> do <xref:System.Windows.Forms.Button>.</span><span class="sxs-lookup"><span data-stu-id="50620-123">Locate the `class` statement line, `public partial class ValueButton`, and change the type from which this control inherits from <xref:System.Windows.Forms.UserControl> to <xref:System.Windows.Forms.Button>.</span></span> <span data-ttu-id="50620-124">Dzięki temu Twoje odziedziczoną kontrolkę dziedziczyć wszystkie funkcje programu <xref:System.Windows.Forms.Button> kontroli.</span><span class="sxs-lookup"><span data-stu-id="50620-124">This allows your inherited control to inherit all the functionality of the <xref:System.Windows.Forms.Button> control.</span></span>  
-  
-6. <span data-ttu-id="50620-125">W **Eksploratora rozwiązań**, otwórz **ValueButton.cs** węzeł, aby wyświetlić plik kod wygenerowany przez projektanta **ValueButton.Designer.cs**.</span><span class="sxs-lookup"><span data-stu-id="50620-125">In **Solution Explorer**, open the **ValueButton.cs** node to display the designer-generated code file, **ValueButton.Designer.cs**.</span></span> <span data-ttu-id="50620-126">Otwórz ten plik w **Edytor kodu**.</span><span class="sxs-lookup"><span data-stu-id="50620-126">Open this file in the **Code Editor**.</span></span>  
-  
-7. <span data-ttu-id="50620-127">Znajdź `InitializeComponent` metody i usunąć wiersza, który przypisuje <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="50620-127">Locate the `InitializeComponent` method and remove the line that assigns the <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> property.</span></span> <span data-ttu-id="50620-128">Ta właściwość nie istnieje w <xref:System.Windows.Forms.Button> kontroli.</span><span class="sxs-lookup"><span data-stu-id="50620-128">This property does not exist in the <xref:System.Windows.Forms.Button> control.</span></span>  
-  
-8. <span data-ttu-id="50620-129">Z **pliku** menu, wybierz **Zapisz wszystko** być zapisany projekt.</span><span class="sxs-lookup"><span data-stu-id="50620-129">From the **File** menu, choose **Save All** to save the project.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="50620-130">Projektant wizualny nie jest już dostępna.</span><span class="sxs-lookup"><span data-stu-id="50620-130">A visual designer is no longer available.</span></span> <span data-ttu-id="50620-131">Ponieważ <xref:System.Windows.Forms.Button> formantu nie swój własny rysowania, nie można zmodyfikować jego wygląd w projektancie.</span><span class="sxs-lookup"><span data-stu-id="50620-131">Because the <xref:System.Windows.Forms.Button> control does its own painting, you are unable to modify its appearance in the designer.</span></span> <span data-ttu-id="50620-132">Jego wizualnej reprezentacji będzie dokładnie taka sama jak klasa dziedziczy (czyli <xref:System.Windows.Forms.Button>) o ile nie zmodyfikowano w kodzie.</span><span class="sxs-lookup"><span data-stu-id="50620-132">Its visual representation will be exactly the same as that of the class it inherits from (that is, <xref:System.Windows.Forms.Button>) unless modified in the code.</span></span> <span data-ttu-id="50620-133">Składniki, które mają bez elementów interfejsu użytkownika, można nadal dodawać do powierzchni projektowej.</span><span class="sxs-lookup"><span data-stu-id="50620-133">You can still add components, which have no UI elements, to the design surface.</span></span>  
-  
-## <a name="adding-a-property-to-your-inherited-control"></a><span data-ttu-id="50620-134">Dodawanie właściwości do kontrolki dziedziczone</span><span class="sxs-lookup"><span data-stu-id="50620-134">Adding a Property to Your Inherited Control</span></span>  
- <span data-ttu-id="50620-135">Jedno możliwe użycie dziedziczone kontrolek Windows Forms jest tworzenie elementów sterujących, które są identyczne w wygląd i działanie standardowych kontrolek Windows Forms, ale udostępnianie właściwości niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="50620-135">One possible use of inherited Windows Forms controls is the creation of controls that are identical in look and feel of standard Windows Forms controls, but expose custom properties.</span></span> <span data-ttu-id="50620-136">W tej sekcji dodasz właściwość o nazwie `ButtonValue` do formantu.</span><span class="sxs-lookup"><span data-stu-id="50620-136">In this section, you will add a property called `ButtonValue` to your control.</span></span>  
-  
-#### <a name="to-add-the-value-property"></a><span data-ttu-id="50620-137">Aby dodać właściwość wartość</span><span class="sxs-lookup"><span data-stu-id="50620-137">To add the Value property</span></span>  
-  
-1. <span data-ttu-id="50620-138">W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **ValueButton.cs**, a następnie kliknij przycisk **Wyświetl kod** z menu skrótów.</span><span class="sxs-lookup"><span data-stu-id="50620-138">In **Solution Explorer**, right-click **ValueButton.cs**, and then click **View Code** from the shortcut menu.</span></span>  
-  
-2. <span data-ttu-id="50620-139">Znajdź `class` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="50620-139">Locate the `class` statement.</span></span> <span data-ttu-id="50620-140">Natychmiast po `{`, wpisz następujący kod:</span><span class="sxs-lookup"><span data-stu-id="50620-140">Immediately after the `{`, type the following code:</span></span>  
-  
-    ```csharp  
-    // Creates the private variable that will store the value of your   
-    // property.  
-    private int varValue;  
-    // Declares the property.  
-    public int ButtonValue  
-    {  
-       // Sets the method for retrieving the value of your property.  
-       get  
-       {  
-          return varValue;  
-       }  
-       // Sets the method for setting the value of your property.  
-       set  
-       {  
-          varValue = value;  
-       }  
-    }  
-    ```  
-  
-     <span data-ttu-id="50620-141">Ten kod ustawia metody za pomocą którego `ButtonValue` właściwości przechowywania i pobierania.</span><span class="sxs-lookup"><span data-stu-id="50620-141">This code sets the methods by which the `ButtonValue` property is stored and retrieved.</span></span> <span data-ttu-id="50620-142">`get` Instrukcja ustawia wartości zwracanej wartości, która jest przechowywana w zmiennej prywatnej `varValue`i `set` instrukcja ustawia wartość zmiennej prywatnej przy użyciu `value` — słowo kluczowe.</span><span class="sxs-lookup"><span data-stu-id="50620-142">The `get` statement sets the value returned to the value that is stored in the private variable `varValue`, and the `set` statement sets the value of the private variable by use of the `value` keyword.</span></span>  
-  
-3. <span data-ttu-id="50620-143">Z **pliku** menu, wybierz **Zapisz wszystko** być zapisany projekt.</span><span class="sxs-lookup"><span data-stu-id="50620-143">From the **File** menu, choose **Save All** to save the project.</span></span>  
-  
-## <a name="testing-your-control"></a><span data-ttu-id="50620-144">Testowanie formantu</span><span class="sxs-lookup"><span data-stu-id="50620-144">Testing Your Control</span></span>  
- <span data-ttu-id="50620-145">Formanty nie są autonomiczne projektów; muszą one być obsługiwane w kontenerze.</span><span class="sxs-lookup"><span data-stu-id="50620-145">Controls are not stand-alone projects; they must be hosted in a container.</span></span> <span data-ttu-id="50620-146">Aby przetestować Twoją kontrolą, musisz podać projekt testowy dla niego do uruchamiania w.</span><span class="sxs-lookup"><span data-stu-id="50620-146">In order to test your control, you must provide a test project for it to run in.</span></span> <span data-ttu-id="50620-147">Należy również upewnić kontroli nad dostępne dla projektu testowego, tworząc (Kompilacja) go.</span><span class="sxs-lookup"><span data-stu-id="50620-147">You must also make your control accessible to the test project by building (compiling) it.</span></span> <span data-ttu-id="50620-148">W tej sekcji utworzysz formant i przetestować ją w formularzu Windows.</span><span class="sxs-lookup"><span data-stu-id="50620-148">In this section, you will build your control and test it in a Windows Form.</span></span>  
-  
-#### <a name="to-build-your-control"></a><span data-ttu-id="50620-149">Tworzenie formantu</span><span class="sxs-lookup"><span data-stu-id="50620-149">To build your control</span></span>  
-  
-1. <span data-ttu-id="50620-150">Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.</span><span class="sxs-lookup"><span data-stu-id="50620-150">On the **Build** menu, click **Build Solution**.</span></span>  
-  
-     <span data-ttu-id="50620-151">Kompilacja zostanie pomyślnie zakończona bez błędów i ostrzeżeń.</span><span class="sxs-lookup"><span data-stu-id="50620-151">The build should be successful with no compiler errors or warnings.</span></span>  
-  
-#### <a name="to-create-a-test-project"></a><span data-ttu-id="50620-152">Aby utworzyć projekt testowy</span><span class="sxs-lookup"><span data-stu-id="50620-152">To create a test project</span></span>  
-  
-1. <span data-ttu-id="50620-153">Na **pliku** menu wskaż **Dodaj** a następnie kliknij przycisk **nowy projekt** otworzyć **Dodaj nowy projekt** okno dialogowe.</span><span class="sxs-lookup"><span data-stu-id="50620-153">On the **File** menu, point to **Add** and then click **New Project** to open the **Add New Project** dialog box.</span></span>  
-  
-2. <span data-ttu-id="50620-154">Wybierz **Windows** węzła, podrzędne **Visual C#** węzeł, a następnie kliknij przycisk **aplikacja interfejsu Windows Forms**.</span><span class="sxs-lookup"><span data-stu-id="50620-154">Select the **Windows** node, beneath the **Visual C#** node, and click **Windows Forms Application**.</span></span>  
-  
-3. <span data-ttu-id="50620-155">W **nazwa** wpisz `Test`.</span><span class="sxs-lookup"><span data-stu-id="50620-155">In the **Name** box, type `Test`.</span></span>  
-  
-4. <span data-ttu-id="50620-156">W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania** węzeł dla projektu testowego, następnie wybierz pozycję **Dodaj odwołanie** z menu skrótów, aby wyświetlić  **Dodaj odwołanie** okno dialogowe.</span><span class="sxs-lookup"><span data-stu-id="50620-156">In **Solution Explorer**, right-click the **References** node for your test project, then select **Add Reference** from the shortcut menu to display the **Add Reference** dialog box.</span></span>  
-  
-5. <span data-ttu-id="50620-157">Kliknij kartę **projektów**.</span><span class="sxs-lookup"><span data-stu-id="50620-157">Click the tab labeled **Projects**.</span></span> <span data-ttu-id="50620-158">Twoje `ValueButtonLib` projektu zostaną wyświetlone w obszarze **Nazwa projektu**.</span><span class="sxs-lookup"><span data-stu-id="50620-158">Your `ValueButtonLib` project will be listed under **Project Name**.</span></span> <span data-ttu-id="50620-159">Kliknij dwukrotnie projektu można dodać odwołania do projektu testowego.</span><span class="sxs-lookup"><span data-stu-id="50620-159">Double-click the project to add the reference to the test project.</span></span>  
-  
-6. <span data-ttu-id="50620-160">W **Eksploratora rozwiązań** kliknij prawym przyciskiem myszy **testu** i wybierz **kompilacji**.</span><span class="sxs-lookup"><span data-stu-id="50620-160">In **Solution Explorer,** right-click **Test** and select **Build**.</span></span>  
-  
-#### <a name="to-add-your-control-to-the-form"></a><span data-ttu-id="50620-161">Aby dodać formant do formularza</span><span class="sxs-lookup"><span data-stu-id="50620-161">To add your control to the form</span></span>  
-  
-1. <span data-ttu-id="50620-162">W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **Form1.cs** i wybierz polecenie **Projektant widoków** z menu skrótów.</span><span class="sxs-lookup"><span data-stu-id="50620-162">In **Solution Explorer**, right-click **Form1.cs** and choose **View Designer** from the shortcut menu.</span></span>  
-  
-2. <span data-ttu-id="50620-163">W **przybornika**, kliknij przycisk **składniki ValueButtonLib**.</span><span class="sxs-lookup"><span data-stu-id="50620-163">In the **Toolbox**, click **ValueButtonLib Components**.</span></span> <span data-ttu-id="50620-164">Kliknij dwukrotnie **ValueButton**.</span><span class="sxs-lookup"><span data-stu-id="50620-164">Double-click **ValueButton**.</span></span>  
-  
-     <span data-ttu-id="50620-165">A **ValueButton** pojawia się w formularzu.</span><span class="sxs-lookup"><span data-stu-id="50620-165">A **ValueButton** appears on the form.</span></span>  
-  
-3. <span data-ttu-id="50620-166">Kliknij prawym przyciskiem myszy **ValueButton** i wybierz **właściwości** z menu skrótów.</span><span class="sxs-lookup"><span data-stu-id="50620-166">Right-click the **ValueButton** and select **Properties** from the shortcut menu.</span></span>  
-  
-4. <span data-ttu-id="50620-167">W **właściwości** okna, sprawdź właściwości tej kontrolki.</span><span class="sxs-lookup"><span data-stu-id="50620-167">In the **Properties** window, examine the properties of this control.</span></span> <span data-ttu-id="50620-168">Należy pamiętać, są identyczne z właściwości ujawnione przez przycisk standardowy, z tą różnicą, że istnieje dodatkowa właściwość `ButtonValue`.</span><span class="sxs-lookup"><span data-stu-id="50620-168">Note that they are identical to the properties exposed by a standard button, except that there is an additional property, `ButtonValue`.</span></span>  
-  
-5. <span data-ttu-id="50620-169">Ustaw `ButtonValue` właściwość `5`.</span><span class="sxs-lookup"><span data-stu-id="50620-169">Set the `ButtonValue` property to `5`.</span></span>  
-  
-6. <span data-ttu-id="50620-170">W **wszystkie formularze Windows** karcie **przybornika**, kliknij dwukrotnie **etykiety** dodać <xref:System.Windows.Forms.Label> formantu do formularza.</span><span class="sxs-lookup"><span data-stu-id="50620-170">In the **All Windows Forms** tab of the **Toolbox**, double-click **Label** to add a <xref:System.Windows.Forms.Label> control to your form.</span></span>  
-  
-7. <span data-ttu-id="50620-171">Przenieś etykietę do środka formularza.</span><span class="sxs-lookup"><span data-stu-id="50620-171">Relocate the label to the center of the form.</span></span>  
-  
-8. <span data-ttu-id="50620-172">Kliknij dwukrotnie `valueButton1`.</span><span class="sxs-lookup"><span data-stu-id="50620-172">Double-click `valueButton1`.</span></span>  
-  
-     <span data-ttu-id="50620-173">**Edytor kodu** otwiera `valueButton1_Click` zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="50620-173">The **Code Editor** opens to the `valueButton1_Click` event.</span></span>  
-  
-9. <span data-ttu-id="50620-174">Wstaw następujący wiersz kodu.</span><span class="sxs-lookup"><span data-stu-id="50620-174">Insert the following line of code.</span></span>  
-  
-    ```csharp  
-    label1.Text = valueButton1.ButtonValue.ToString();  
-    ```  
-  
-10. <span data-ttu-id="50620-175">W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **testu**i wybierz polecenie **Ustaw jako projekt startowy** z menu skrótów.</span><span class="sxs-lookup"><span data-stu-id="50620-175">In **Solution Explorer**, right-click **Test**, and choose **Set as Startup Project** from the shortcut menu.</span></span>  
-  
-11. <span data-ttu-id="50620-176">Z **debugowania** menu, wybierz opcję **Rozpocznij debugowanie**.</span><span class="sxs-lookup"><span data-stu-id="50620-176">From the **Debug** menu, select **Start Debugging**.</span></span>  
-  
-     <span data-ttu-id="50620-177">`Form1` zostanie wyświetlone.</span><span class="sxs-lookup"><span data-stu-id="50620-177">`Form1` appears.</span></span>  
-  
-12. <span data-ttu-id="50620-178">Kliknij przycisk `valueButton1`.</span><span class="sxs-lookup"><span data-stu-id="50620-178">Click `valueButton1`.</span></span>  
-  
-     <span data-ttu-id="50620-179">Cyfry, '5' jest wyświetlana w `label1`, pokazując, `ButtonValue` właściwości dziedziczonych formant został przekazany do `label1` za pośrednictwem `valueButton1_Click` metody.</span><span class="sxs-lookup"><span data-stu-id="50620-179">The numeral '5' is displayed in `label1`, demonstrating that the `ButtonValue` property of your inherited control has been passed to `label1` through the `valueButton1_Click` method.</span></span> <span data-ttu-id="50620-180">Ten sposób Twoja `ValueButton` kontrola dziedziczy wszystkie funkcje standardowe przycisku Windows Forms, ale udostępnia dodatkowe, niestandardowe właściwości.</span><span class="sxs-lookup"><span data-stu-id="50620-180">Thus your `ValueButton` control inherits all the functionality of the standard Windows Forms button, but exposes an additional, custom property.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="50620-181">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="50620-181">See also</span></span>
+# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a><span data-ttu-id="7d3d5-102">Przewodnik: Dziedziczenie z kontrolki Windows Forms przy użyciu języka Visual C\#</span><span class="sxs-lookup"><span data-stu-id="7d3d5-102">Walkthrough: Inheriting from a Windows Forms Control with Visual C\#</span></span>
+<span data-ttu-id="7d3d5-103">Za pomocą C#wizualizacji można tworzyć zaawansowane niestandardowe kontrolkiprzez dziedziczenie.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-103">With Visual C#, you can create powerful custom controls through *inheritance*.</span></span> <span data-ttu-id="7d3d5-104">Za pomocą dziedziczenia można tworzyć kontrolki, które zachowują wszystkie nieodłączne funkcje standardowych formantów Windows Forms, ale również zawierają funkcje niestandardowe.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-104">Through inheritance you are able to create controls that retain all of the inherent functionality of standard Windows Forms controls but also incorporate custom functionality.</span></span> <span data-ttu-id="7d3d5-105">W tym instruktażu utworzysz prostą dziedziczoną kontrolkę o nazwie `ValueButton`.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-105">In this walkthrough, you will create a simple inherited control called `ValueButton`.</span></span> <span data-ttu-id="7d3d5-106">Ten przycisk dziedziczy funkcje ze standardowego formantu Windows Forms <xref:System.Windows.Forms.Button> i uwidacznia właściwość niestandardową o nazwie. `ButtonValue`</span><span class="sxs-lookup"><span data-stu-id="7d3d5-106">This button will inherit functionality from the standard Windows Forms <xref:System.Windows.Forms.Button> control, and will expose a custom property called `ButtonValue`.</span></span>
 
-- [<span data-ttu-id="50620-182">Instrukcje: Wyświetlanie kontroli w wybierz elementy przybornika — okno dialogowe</span><span class="sxs-lookup"><span data-stu-id="50620-182">How to: Display a Control in the Choose Toolbox Items Dialog Box</span></span>](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [<span data-ttu-id="50620-183">Przewodnik: Tworzenie formantu złożonego za pomocą Visual C#</span><span class="sxs-lookup"><span data-stu-id="50620-183">Walkthrough: Authoring a Composite Control with Visual C#</span></span>](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+## <a name="creating-the-project"></a><span data-ttu-id="7d3d5-107">Tworzenie projektu</span><span class="sxs-lookup"><span data-stu-id="7d3d5-107">Creating the Project</span></span>
+ <span data-ttu-id="7d3d5-108">Podczas tworzenia nowego projektu należy określić jego nazwę, aby ustawić główną przestrzeń nazw, nazwę zestawu i nazwę projektu oraz upewnić się, że domyślny składnik będzie w poprawnej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-108">When you create a new project, you specify its name in order to set the root namespace, assembly name, and project name, and to ensure that the default component will be in the correct namespace.</span></span>
+
+### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a><span data-ttu-id="7d3d5-109">Aby utworzyć bibliotekę kontrolek ValueButtonLib i formant ValueButton</span><span class="sxs-lookup"><span data-stu-id="7d3d5-109">To create the ValueButtonLib control library and the ValueButton control</span></span>
+
+1. <span data-ttu-id="7d3d5-110">W menu **plik** wskaż polecenie **Nowy** , a następnie kliknij pozycję **projekt** , aby otworzyć okno dialogowe **Nowy projekt** .</span><span class="sxs-lookup"><span data-stu-id="7d3d5-110">On the **File** menu, point to **New** and then click **Project** to open the **New Project** dialog box.</span></span>
+
+2. <span data-ttu-id="7d3d5-111">Wybierz szablon projektu **Biblioteka formantów Windows Forms** z listy projektów C# wizualizacji, a następnie wpisz `ValueButtonLib` w polu **Nazwa** .</span><span class="sxs-lookup"><span data-stu-id="7d3d5-111">Select the **Windows Forms Control Library** project template from the list of Visual C# Projects, and type `ValueButtonLib` in the **Name** box.</span></span>
+
+     <span data-ttu-id="7d3d5-112">Nazwa projektu, `ValueButtonLib`, również jest domyślnie przypisana do głównej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-112">The project name, `ValueButtonLib`, is also assigned to the root namespace by default.</span></span> <span data-ttu-id="7d3d5-113">Główna przestrzeń nazw służy do kwalifikowania nazw składników w zestawie.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-113">The root namespace is used to qualify the names of components in the assembly.</span></span> <span data-ttu-id="7d3d5-114">Na przykład jeśli dwa zestawy dostarczają składniki o nazwie `ValueButton`, można `ValueButton` określić składnik przy użyciu `ValueButtonLib.ValueButton`.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-114">For example, if two assemblies provide components named `ValueButton`, you can specify your `ValueButton` component using `ValueButtonLib.ValueButton`.</span></span> <span data-ttu-id="7d3d5-115">Aby uzyskać więcej informacji, zobacz [przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md).</span><span class="sxs-lookup"><span data-stu-id="7d3d5-115">For more information, see [Namespaces](../../../csharp/programming-guide/namespaces/index.md).</span></span>
+
+3. <span data-ttu-id="7d3d5-116">W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **UserControl1.cs**, a następnie wybierz polecenie **Zmień nazwę** z menu skrótów.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-116">In **Solution Explorer**, right-click **UserControl1.cs**, then choose **Rename** from the shortcut menu.</span></span> <span data-ttu-id="7d3d5-117">Zmień nazwę pliku na `ValueButton.cs`.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-117">Change the file name to `ValueButton.cs`.</span></span> <span data-ttu-id="7d3d5-118">Kliknij przycisk **tak** po wyświetleniu monitu, jeśli chcesz zmienić nazwy wszystkich odwołań do elementu kodu '`UserControl1`'.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-118">Click the **Yes** button when you are asked if you want to rename all references to the code element '`UserControl1`'.</span></span>
+
+4. <span data-ttu-id="7d3d5-119">W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **ValueButton.cs** i wybierz polecenie **Wyświetl kod**.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-119">In **Solution Explorer**, right-click **ValueButton.cs** and select **View Code**.</span></span>
+
+5. <span data-ttu-id="7d3d5-120">`class` Znajdź <xref:System.Windows.Forms.UserControl> <xref:System.Windows.Forms.Button>wiersz instrukcji i Zmień typ, z którego dziedziczy `public partial class ValueButton`ten formant.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-120">Locate the `class` statement line, `public partial class ValueButton`, and change the type from which this control inherits from <xref:System.Windows.Forms.UserControl> to <xref:System.Windows.Forms.Button>.</span></span> <span data-ttu-id="7d3d5-121">Dzięki temu Odziedziczone kontrolki dziedziczą wszystkie funkcje <xref:System.Windows.Forms.Button> formantu.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-121">This allows your inherited control to inherit all the functionality of the <xref:System.Windows.Forms.Button> control.</span></span>
+
+6. <span data-ttu-id="7d3d5-122">W **Eksplorator rozwiązań**otwórz węzeł **ValueButton.cs** , aby wyświetlić plik kodu wygenerowany przez projektanta, **ValueButton.Designer.cs**.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-122">In **Solution Explorer**, open the **ValueButton.cs** node to display the designer-generated code file, **ValueButton.Designer.cs**.</span></span> <span data-ttu-id="7d3d5-123">Otwórz ten plik w **edytorze kodu**.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-123">Open this file in the **Code Editor**.</span></span>
+
+7. <span data-ttu-id="7d3d5-124">Znajdź metodę i Usuń wiersz, który <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> przypisuje właściwość. `InitializeComponent`</span><span class="sxs-lookup"><span data-stu-id="7d3d5-124">Locate the `InitializeComponent` method and remove the line that assigns the <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> property.</span></span> <span data-ttu-id="7d3d5-125">Ta właściwość nie istnieje w <xref:System.Windows.Forms.Button> kontrolce.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-125">This property does not exist in the <xref:System.Windows.Forms.Button> control.</span></span>
+
+8. <span data-ttu-id="7d3d5-126">Z menu **plik** wybierz polecenie **Zapisz wszystko** , aby zapisać projekt.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-126">From the **File** menu, choose **Save All** to save the project.</span></span>
+
+    > [!NOTE]
+    >  <span data-ttu-id="7d3d5-127">Projektant wizualny nie jest już dostępny.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-127">A visual designer is no longer available.</span></span> <span data-ttu-id="7d3d5-128"><xref:System.Windows.Forms.Button> Ponieważ kontrolka wykonuje własne malowanie, nie można modyfikować jej wyglądu w projektancie.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-128">Because the <xref:System.Windows.Forms.Button> control does its own painting, you are unable to modify its appearance in the designer.</span></span> <span data-ttu-id="7d3d5-129">Jego reprezentacja wizualna będzie dokładnie taka sama jak Klasa, która dziedziczy z (czyli), <xref:System.Windows.Forms.Button>chyba że zostanie zmodyfikowana w kodzie.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-129">Its visual representation will be exactly the same as that of the class it inherits from (that is, <xref:System.Windows.Forms.Button>) unless modified in the code.</span></span> <span data-ttu-id="7d3d5-130">Można nadal dodawać składniki, które nie mają elementów interfejsu użytkownika, do powierzchni projektowej.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-130">You can still add components, which have no UI elements, to the design surface.</span></span>
+
+## <a name="adding-a-property-to-your-inherited-control"></a><span data-ttu-id="7d3d5-131">Dodawanie właściwości do kontrolki dziedziczonej</span><span class="sxs-lookup"><span data-stu-id="7d3d5-131">Adding a Property to Your Inherited Control</span></span>
+ <span data-ttu-id="7d3d5-132">Jednym z możliwych użycia dziedziczonych kontrolek Windows Forms jest utworzenie kontrolek, które są identyczne w wyglądzie i działaniu standardowych kontrolek Windows Forms, ale Uwidacznianie właściwości niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-132">One possible use of inherited Windows Forms controls is the creation of controls that are identical in look and feel of standard Windows Forms controls, but expose custom properties.</span></span> <span data-ttu-id="7d3d5-133">W tej sekcji dodasz właściwość o nazwie `ButtonValue` do kontrolki.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-133">In this section, you will add a property called `ButtonValue` to your control.</span></span>
+
+### <a name="to-add-the-value-property"></a><span data-ttu-id="7d3d5-134">Aby dodać właściwość Value</span><span class="sxs-lookup"><span data-stu-id="7d3d5-134">To add the Value property</span></span>
+
+1. <span data-ttu-id="7d3d5-135">W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **ValueButton.cs**, a następnie kliknij pozycję **Wyświetl kod** w menu skrótów.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-135">In **Solution Explorer**, right-click **ValueButton.cs**, and then click **View Code** from the shortcut menu.</span></span>
+
+2. <span data-ttu-id="7d3d5-136">`class` Znajdź instrukcję.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-136">Locate the `class` statement.</span></span> <span data-ttu-id="7d3d5-137">Natychmiast po `{`wpisz następujący kod:</span><span class="sxs-lookup"><span data-stu-id="7d3d5-137">Immediately after the `{`, type the following code:</span></span>
+
+    ```csharp
+    // Creates the private variable that will store the value of your
+    // property.
+    private int varValue;
+    // Declares the property.
+    public int ButtonValue
+    {
+       // Sets the method for retrieving the value of your property.
+       get
+       {
+          return varValue;
+       }
+       // Sets the method for setting the value of your property.
+       set
+       {
+          varValue = value;
+       }
+    }
+    ```
+
+     <span data-ttu-id="7d3d5-138">Ten kod ustawia metody, za pomocą których `ButtonValue` właściwość jest przechowywana i pobierana.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-138">This code sets the methods by which the `ButtonValue` property is stored and retrieved.</span></span> <span data-ttu-id="7d3d5-139">Instrukcja ustawia wartość zwracaną na wartość, która jest przechowywana w zmiennej `varValue`prywatnej, a `set` instrukcja ustawia wartość zmiennej prywatnej za pomocą `value` słowa kluczowego. `get`</span><span class="sxs-lookup"><span data-stu-id="7d3d5-139">The `get` statement sets the value returned to the value that is stored in the private variable `varValue`, and the `set` statement sets the value of the private variable by use of the `value` keyword.</span></span>
+
+3. <span data-ttu-id="7d3d5-140">Z menu **plik** wybierz polecenie **Zapisz wszystko** , aby zapisać projekt.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-140">From the **File** menu, choose **Save All** to save the project.</span></span>
+
+## <a name="testing-your-control"></a><span data-ttu-id="7d3d5-141">Testowanie kontrolki</span><span class="sxs-lookup"><span data-stu-id="7d3d5-141">Testing Your Control</span></span>
+ <span data-ttu-id="7d3d5-142">Formanty nie są projektami autonomicznymi; muszą być hostowane w kontenerze.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-142">Controls are not stand-alone projects; they must be hosted in a container.</span></span> <span data-ttu-id="7d3d5-143">W celu przetestowania kontrolki musisz dostarczyć projekt testowy, aby uruchomić go w programie.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-143">In order to test your control, you must provide a test project for it to run in.</span></span> <span data-ttu-id="7d3d5-144">Należy również udostępnić formant dla projektu testowego przez skompilowanie (skompilowanie).</span><span class="sxs-lookup"><span data-stu-id="7d3d5-144">You must also make your control accessible to the test project by building (compiling) it.</span></span> <span data-ttu-id="7d3d5-145">W tej sekcji utworzysz swój formant i przetestujesz go w formularzu systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-145">In this section, you will build your control and test it in a Windows Form.</span></span>
+
+### <a name="to-build-your-control"></a><span data-ttu-id="7d3d5-146">Aby skompilować swój formant</span><span class="sxs-lookup"><span data-stu-id="7d3d5-146">To build your control</span></span>
+
+1. <span data-ttu-id="7d3d5-147">Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-147">On the **Build** menu, click **Build Solution**.</span></span>
+
+     <span data-ttu-id="7d3d5-148">Kompilacja powinna zakończyć się powodzeniem bez błędów lub ostrzeżeń kompilatora.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-148">The build should be successful with no compiler errors or warnings.</span></span>
+
+### <a name="to-create-a-test-project"></a><span data-ttu-id="7d3d5-149">Aby utworzyć projekt testowy</span><span class="sxs-lookup"><span data-stu-id="7d3d5-149">To create a test project</span></span>
+
+1. <span data-ttu-id="7d3d5-150">W menu **plik** wskaż polecenie **Dodaj** , a następnie kliknij pozycję **Nowy projekt** , aby otworzyć okno dialogowe **Dodaj nowy projekt** .</span><span class="sxs-lookup"><span data-stu-id="7d3d5-150">On the **File** menu, point to **Add** and then click **New Project** to open the **Add New Project** dialog box.</span></span>
+
+2. <span data-ttu-id="7d3d5-151">Wybierz węzeł **systemu Windows** znajdujący się pod węzłem **wizualizacji C#**  , a następnie kliknij pozycję **Windows Forms aplikacji**.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-151">Select the **Windows** node, beneath the **Visual C#** node, and click **Windows Forms Application**.</span></span>
+
+3. <span data-ttu-id="7d3d5-152">W polu **Nazwa** wpisz `Test`.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-152">In the **Name** box, type `Test`.</span></span>
+
+4. <span data-ttu-id="7d3d5-153">W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy węzeł **odwołania** dla projektu testowego, a następnie wybierz polecenie **Dodaj odwołanie** z menu skrótów, aby wyświetlić okno dialogowe **Dodawanie odwołania** .</span><span class="sxs-lookup"><span data-stu-id="7d3d5-153">In **Solution Explorer**, right-click the **References** node for your test project, then select **Add Reference** from the shortcut menu to display the **Add Reference** dialog box.</span></span>
+
+5. <span data-ttu-id="7d3d5-154">Kliknij kartę z etykietą **projekty**.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-154">Click the tab labeled **Projects**.</span></span> <span data-ttu-id="7d3d5-155">Projekt zostanie wyświetlony na liście **Nazwa projektu.** `ValueButtonLib`</span><span class="sxs-lookup"><span data-stu-id="7d3d5-155">Your `ValueButtonLib` project will be listed under **Project Name**.</span></span> <span data-ttu-id="7d3d5-156">Kliknij dwukrotnie projekt, aby dodać odwołanie do projektu testowego.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-156">Double-click the project to add the reference to the test project.</span></span>
+
+6. <span data-ttu-id="7d3d5-157">W **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy pozycję **Testuj** i wybierz polecenie **Kompiluj**.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-157">In **Solution Explorer,** right-click **Test** and select **Build**.</span></span>
+
+### <a name="to-add-your-control-to-the-form"></a><span data-ttu-id="7d3d5-158">Aby dodać kontrolkę do formularza</span><span class="sxs-lookup"><span data-stu-id="7d3d5-158">To add your control to the form</span></span>
+
+1. <span data-ttu-id="7d3d5-159">W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **Form1.cs** i wybierz polecenie **View Designer** z menu skrótów.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-159">In **Solution Explorer**, right-click **Form1.cs** and choose **View Designer** from the shortcut menu.</span></span>
+
+2. <span data-ttu-id="7d3d5-160">W **przyborniku**kliknij pozycję **składniki ValueButtonLib**.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-160">In the **Toolbox**, click **ValueButtonLib Components**.</span></span> <span data-ttu-id="7d3d5-161">Kliknij dwukrotnie pozycję **ValueButton**.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-161">Double-click **ValueButton**.</span></span>
+
+     <span data-ttu-id="7d3d5-162">**ValueButton** pojawia się w formularzu.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-162">A **ValueButton** appears on the form.</span></span>
+
+3. <span data-ttu-id="7d3d5-163">Kliknij prawym przyciskiem myszy **ValueButton** i wybierz polecenie **Właściwości** z menu skrótów.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-163">Right-click the **ValueButton** and select **Properties** from the shortcut menu.</span></span>
+
+4. <span data-ttu-id="7d3d5-164">W oknie **Właściwości** , przejrzyj właściwości tej kontrolki.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-164">In the **Properties** window, examine the properties of this control.</span></span> <span data-ttu-id="7d3d5-165">Należy zauważyć, że są one takie same jak właściwości udostępniane przez standardowy przycisk, z tą różnicą, że istnieje `ButtonValue`dodatkowa właściwość.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-165">Note that they are identical to the properties exposed by a standard button, except that there is an additional property, `ButtonValue`.</span></span>
+
+5. <span data-ttu-id="7d3d5-166">Ustaw `ButtonValue` właściwość `5`.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-166">Set the `ButtonValue` property to `5`.</span></span>
+
+6. <span data-ttu-id="7d3d5-167">Na karcie **wszystkie Windows Forms** przybornika kliknijdwukrotnie pozycję <xref:System.Windows.Forms.Label> **etykieta** , aby dodać kontrolkę do formularza.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-167">In the **All Windows Forms** tab of the **Toolbox**, double-click **Label** to add a <xref:System.Windows.Forms.Label> control to your form.</span></span>
+
+7. <span data-ttu-id="7d3d5-168">Przenieś etykietę do środka formularza.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-168">Relocate the label to the center of the form.</span></span>
+
+8. <span data-ttu-id="7d3d5-169">Kliknij `valueButton1`dwukrotnie.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-169">Double-click `valueButton1`.</span></span>
+
+     <span data-ttu-id="7d3d5-170">**Edytor kodu** zostanie otwarty dla `valueButton1_Click` zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-170">The **Code Editor** opens to the `valueButton1_Click` event.</span></span>
+
+9. <span data-ttu-id="7d3d5-171">Wstaw następujący wiersz kodu.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-171">Insert the following line of code.</span></span>
+
+    ```csharp
+    label1.Text = valueButton1.ButtonValue.ToString();
+    ```
+
+10. <span data-ttu-id="7d3d5-172">W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **test**, a następnie wybierz polecenie **Ustaw jako projekt startowy** z menu skrótów.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-172">In **Solution Explorer**, right-click **Test**, and choose **Set as Startup Project** from the shortcut menu.</span></span>
+
+11. <span data-ttu-id="7d3d5-173">Z menu **Debuguj** wybierz polecenie **Rozpocznij debugowanie**.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-173">From the **Debug** menu, select **Start Debugging**.</span></span>
+
+     <span data-ttu-id="7d3d5-174">`Form1`się.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-174">`Form1` appears.</span></span>
+
+12. <span data-ttu-id="7d3d5-175">Kliknij `valueButton1`pozycję.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-175">Click `valueButton1`.</span></span>
+
+     <span data-ttu-id="7d3d5-176">Liczba "5 `label1`" jest wyświetlana w, pokazując, `ButtonValue` że właściwość dziedziczonego formantu została przeniesiona do `label1` za pomocą `valueButton1_Click` metody.</span><span class="sxs-lookup"><span data-stu-id="7d3d5-176">The numeral '5' is displayed in `label1`, demonstrating that the `ButtonValue` property of your inherited control has been passed to `label1` through the `valueButton1_Click` method.</span></span> <span data-ttu-id="7d3d5-177">W ten sposób formant dziedziczy wszystkie funkcje standardowego przycisku Windows Forms, ale uwidacznia dodatkową, niestandardową właściwość. `ValueButton`</span><span class="sxs-lookup"><span data-stu-id="7d3d5-177">Thus your `ValueButton` control inherits all the functionality of the standard Windows Forms button, but exposes an additional, custom property.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="7d3d5-178">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7d3d5-178">See also</span></span>
+
+- [<span data-ttu-id="7d3d5-179">Instrukcje: Wyświetlanie kontrolki w oknie dialogowym Wybierz elementy przybornika</span><span class="sxs-lookup"><span data-stu-id="7d3d5-179">How to: Display a Control in the Choose Toolbox Items Dialog Box</span></span>](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [<span data-ttu-id="7d3d5-180">Przewodnik: Tworzenie formantu złożonego za pomocą wizualizacjiC#</span><span class="sxs-lookup"><span data-stu-id="7d3d5-180">Walkthrough: Authoring a Composite Control with Visual C#</span></span>](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

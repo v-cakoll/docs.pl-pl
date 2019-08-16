@@ -10,50 +10,47 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 50f5f91a946aeebc4d82630b25d18d8f8d2ea4be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5559a3a3e4e62ce9e620de23feef3cbfa0ab8f60
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013130"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039852"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Instrukcje: ustawianie kolejności tabulacji na formularzach systemu Windows
-Kolejność tabulacji polega na kolejności, w którym użytkownik przenosi fokus z jednego formantu do drugiego, naciskając klawisz TAB. Każdy formularz ma swój własny kolejności tabulacji. Domyślnie kolejność dostępu jest taka sama jak kolejność, w którym utworzono kontrolki. Kolejność tabulacji numerowania rozpoczyna się od zera.  
-  
-> [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-set-the-tab-order-of-a-control"></a>Aby ustawić kolejność tabulacji kontrolki  
-  
-1. Na **widoku** menu, kliknij przycisk **kolejność tabulacji**.  
-  
-     Aktywuje tryb wyboru kolejność tabulacji w formularzu. Numer (reprezentujący <xref:System.Windows.Forms.Control.TabIndex%2A> właściwość) pojawia się w lewym górnym rogu każdej kontrolki.  
-  
-2. Kliknij formanty, które po kolei, aby ustanowić kolejność tabulacji, które chcesz.  
-  
+Kolejność tabulacji to kolejność, w której użytkownik przenosi fokus z jednej kontrolki do innej przez wciśnięcie klawisza TAB. Każdy formularz ma własną kolejność tabulacji. Domyślnie kolejność tabulacji jest taka sama jak kolejność, w której zostały utworzone formanty. Numeracja kolejności tabulacji rozpoczyna się od zera.
+
+## <a name="to-set-the-tab-order-of-a-control"></a>Aby ustawić kolejność tabulacji kontrolki
+
+1. W menu **Widok** kliknij **kolejność tabulacji**.
+
+     Aktywuje to tryb wyboru kolejności tabulacji w formularzu. Liczba (reprezentująca <xref:System.Windows.Forms.Control.TabIndex%2A> Właściwość) pojawia się w lewym górnym rogu każdej kontrolki.
+
+2. Klikaj kontrolki sekwencyjnie, aby ustalić kolejność tabulacji.
+
     > [!NOTE]
-    >  Kontrolki miejscu w kolejności tabulacji można ustawić dowolną wartość większa niż lub równa 0. Gdy występują duplikaty, porządek dwie kontrolki jest obliczane i kontroli na górze na kartach jest pierwszy. (Warstwy visual kontrolek w formularzu wzdłuż osi z formularza [głębokość] jest porządku osi z. Porządek określa formanty, które znajdują się przed innymi kontrolkami). Aby uzyskać więcej informacji na temat porządku osi z, zobacz [Układanie warstwowo obiektów na formularzach Windows Forms](how-to-layer-objects-on-windows-forms.md).  
-  
-3. Po zakończeniu kliknij przycisk **kolejność tabulacji** na **widoku** menu ponownie, aby wyjść z trybu zlecenia kartę.  
-  
+    >  Dla kontrolki w kolejności tabulacji można ustawić dowolną wartość większą lub równą 0. W przypadku występowania duplikatów porządek osi z dwóch kontrolek jest oceniany, a kontrolka na górze jest z tabulacją na pierwszy. (Kolejność z jest wizualną warstwą formantów w formularzu wzdłuż osi z [głębokość]). Porządek osi z określa, które kontrolki znajdują się przed innymi kontrolkami. Aby uzyskać więcej informacji na temat porządku osi z, zobacz [warstwowanie obiektów na Windows Forms](how-to-layer-objects-on-windows-forms.md).
+
+3. Po zakończeniu kliknij pozycję **kolejność tabulacji** w menu **Widok** , aby pozostawić tryb kolejności tabulacji.
+
     > [!NOTE]
-    >  Formanty, które nie można pobrać fokus, a także wyłączone i niewidoczne formantów, nie mają <xref:System.Windows.Forms.Control.TabIndex%2A> właściwości i są nie zawarte w kolejności tabulacji. Jako użytkownik naciśnie klawisz TAB, te kontrolki są pomijane.  
-  
- Alternatywnie, można ustawić kolejność tabulacji w oknie właściwości, używając <xref:System.Windows.Forms.Control.TabIndex%2A> właściwości. <xref:System.Windows.Forms.Control.TabIndex%2A> Właściwości formantu Określa, gdzie jest umieszczony w kolejności tabulacji. Domyślnie ma pierwszy formant rysowane <xref:System.Windows.Forms.Control.TabIndex%2A> wartość 0, drugi ma <xref:System.Windows.Forms.Control.TabIndex%2A> 1 i tak dalej.  
-  
- Ponadto domyślnie <xref:System.Windows.Forms.GroupBox> kontrolka ma swój własny <xref:System.Windows.Forms.Control.TabIndex%2A> wartość, która jest liczbą całkowitą. A <xref:System.Windows.Forms.GroupBox> sama kontrolka nie ma fokusu w czasie wykonywania. W związku z tym, każdy formant, w ramach <xref:System.Windows.Forms.GroupBox> ma swój własny dziesiętnych <xref:System.Windows.Forms.Control.TabIndex%2A> wartości, zaczynając od.0. Oczywiście jako <xref:System.Windows.Forms.Control.TabIndex%2A> z <xref:System.Windows.Forms.GroupBox> kontroli jest zwiększany, w związku z tym jest zwiększany zawarte w niej kontrolki. Jeśli zmienisz <xref:System.Windows.Forms.Control.TabIndex%2A> wartość z zakresu od 5 do 6, <xref:System.Windows.Forms.Control.TabIndex%2A> wartość pierwszą kontrolkę w jego grupie automatycznie zmieni się w wersji 6.0 i tak dalej.  
-  
- Na koniec dowolną kontrolkę wielu w formularzu można pominąć w kolejności tabulacji. Zazwyczaj klawisza TAB kolejno w czasie wykonywania wybiera każdego formantu w kolejności tabulacji. Wyłączając <xref:System.Windows.Forms.Control.TabStop%2A> właściwości, aby włączyć kontrolki w kolejności tabulacji formularza można przekazać za pośrednictwem.  
-  
-#### <a name="to-remove-a-control-from-the-tab-order"></a>Aby usunąć formant z kolejność tabulacji  
-  
-1. Ustaw dla formantu <xref:System.Windows.Forms.Control.TabStop%2A> właściwości `false` w oknie dialogowym właściwości.  
-  
-     A formant, którego <xref:System.Windows.Forms.Control.TabStop%2A> została ustawiona właściwość `false` nadal obsługuje jego położenie w kolejności tabulacji, mimo że formant zostanie pominięta, gdy przechodzić między formantami za pomocą klawisza TAB.  
-  
+    >  Kontrolki, które nie mogą uzyskać fokusu, a także wyłączone i niewidoczne kontrolki, <xref:System.Windows.Forms.Control.TabIndex%2A> nie mają właściwości i nie są uwzględnione w kolejności tabulacji. Gdy użytkownik naciśnie klawisz TAB, te kontrolki są pomijane.
+
+ Alternatywnie można ustawić kolejność tabulacji w okno właściwości przy użyciu <xref:System.Windows.Forms.Control.TabIndex%2A> właściwości. <xref:System.Windows.Forms.Control.TabIndex%2A> Właściwość kontrolki określa miejsce, w którym jest umieszczony w kolejności tabulacji. Domyślnie pierwszy rysowany formant ma <xref:System.Windows.Forms.Control.TabIndex%2A> wartość 0, a druga <xref:System.Windows.Forms.Control.TabIndex%2A> — od 1 itd.
+
+ Ponadto domyślnie <xref:System.Windows.Forms.GroupBox> kontrolka ma własną <xref:System.Windows.Forms.Control.TabIndex%2A> wartość, która jest liczbą całkowitą. <xref:System.Windows.Forms.GroupBox> Kontrolka nie może mieć fokusu w czasie wykonywania. W tym celu każda kontrolka <xref:System.Windows.Forms.GroupBox> w ramach ma własną <xref:System.Windows.Forms.Control.TabIndex%2A> wartość dziesiętną, zaczynając od. 0. W naturalny sposób, <xref:System.Windows.Forms.Control.TabIndex%2A> gdy <xref:System.Windows.Forms.GroupBox> kontrolka jest zwiększana, zostaną odpowiednio zwiększone. Jeśli zmieniono <xref:System.Windows.Forms.Control.TabIndex%2A> wartość z przedziału od 5 do 6 <xref:System.Windows.Forms.Control.TabIndex%2A> , wartość pierwszej kontrolki w grupie automatycznie zmieni się na 6,0 itd.
+
+ Na koniec w kolejności tabulacji można pominąć dowolną kontrolkę wiele w formularzu. Zwykle naciśnięcie klawisza TAB w czasie wykonywania wybiera każdy formant w kolejności tabulacji. Wyłączenie <xref:System.Windows.Forms.Control.TabStop%2A> właściwości umożliwia przekazanie kontrolki w kolejności tabulacji w formularzu.
+
+## <a name="to-remove-a-control-from-the-tab-order"></a>Aby usunąć formant z kolejności tabulacji
+
+1. Ustaw <xref:System.Windows.Forms.Control.TabStop%2A> właściwość kontrolki na `false` okno właściwości.
+
+     Formant, którego <xref:System.Windows.Forms.Control.TabStop%2A> właściwość została ustawiona tak, `false` aby nadal utrzymuje swoją pozycję w kolejności tabulacji, nawet jeśli formant zostanie pominięty podczas przechodzenia przez kontrolki za pomocą klawisza Tab.
+
     > [!NOTE]
-    >  Grupa przycisków radiowych ma jedną kartę Zatrzymaj w czasie wykonywania. Wybrany przycisk (oznacza to, że przycisk z jego <xref:System.Windows.Forms.RadioButton.Checked%2A> właściwością `true`) ma jego <xref:System.Windows.Forms.Control.TabStop%2A> automatycznie właściwością `true`, podczas gdy inne przyciski powinny mieć ich <xref:System.Windows.Forms.Control.TabStop%2A> właściwością `false`. Aby uzyskać więcej informacji na temat grupowania <xref:System.Windows.Forms.RadioButton> formantów, zobacz [grupowanie Windows formantów RadioButton formularzy aby działały jak zestaw](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
-  
+    >  Grupa przycisków radiowych ma jeden tabulator w czasie wykonywania. Wybrany przycisk (czyli <xref:System.Windows.Forms.RadioButton.Checked%2A> przycisk z właściwością ustawioną na `true`) ma <xref:System.Windows.Forms.Control.TabStop%2A> ustawioną właściwość automatycznie <xref:System.Windows.Forms.Control.TabStop%2A> na `true`, a pozostałe przyciski mają ustawioną `false`właściwość. Aby uzyskać więcej informacji na <xref:System.Windows.Forms.RadioButton> temat formantów grupowania, zobacz [grupowanie Windows Forms formantów RadioButton do działania jako zestaw](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Kontrolki formularzy Windows Forms](index.md)

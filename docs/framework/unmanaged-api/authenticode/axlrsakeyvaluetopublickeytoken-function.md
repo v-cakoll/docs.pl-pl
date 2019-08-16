@@ -1,5 +1,5 @@
 ---
-title: Funkcja _AxlRSAKeyValueToPublicKeyToken
+title: _AxlRSAKeyValueToPublicKeyToken, funkcja
 ms.date: 03/30/2017
 api_name:
 - _AxlRSAKeyValueToPublicKeyToken
@@ -10,16 +10,16 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f9981c4cf2e45795576024b797f93831324dbc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eca6c5fc61d4f7e80046102a560d228fc01e5292
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741268"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038418"
 ---
-# <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken — funkcja
+# <a name="_axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken, funkcja
 
-Konwertuje wyznaczanie modułu i wykładnik silnej nazwy token klucza publicznego.  
+Konwertuje modulo i wykładnik na token klucza publicznego o silnej nazwie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,16 +33,16 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
   
 ## <a name="parameters"></a>Parametry  
  `pModulusBlob`  
- [in] Zakodowane w formacie base64 blob modulo (z \<modulo > element).  Zobacz [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struktury.  
+ podczas Obiekt BLOB modułu kodowanego algorytmem Base64 ( \<z elementu > modułu).  Zobacz strukturę [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
  `pExponentBlob`  
- [in] Wykładnik algorytmem Base64 obiekt blob (z \<wykładnik > element). Zobacz [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struktury.  
+ podczas Obiekt BLOB wykładnika zakodowany algorytmem Base64 \<(z elementu wykładnika >). Zobacz strukturę [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
  `ppwszPublicKeyToken`  
- [out] Wskaźnik do WCHAR * do odbierania zakodowanego szesnastkowo token klucza publicznego.  
+ określoną Wskaźnik do WCHAR *, aby otrzymać token klucza publicznego zakodowany w formacie szesnastkowym.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli funkcja się powiedzie. W przeciwnym razie zwraca kod błędu.  
+ `S_OK`Jeśli funkcja się powiedzie. W przeciwnym razie zwraca kod błędu.  
   
 ## <a name="see-also"></a>Zobacz także
 

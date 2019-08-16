@@ -8,25 +8,23 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: 6c87b3d29a1c55b2a7517da78a1951d94676dd68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5239017eb63ca6360ae8811a76497256fafbd1b1
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756822"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040136"
 ---
 # <a name="effects-of-modifying-a-base-forms-appearance"></a>Efekty modyfikowania wyglądu formularza podstawowego
-Podczas opracowywania aplikacji często konieczne może być zmiana wyglądu formularza podstawowego, z której dziedziczą inne formy w projekcie (lub w innych projektach).  
-  
- W czasie projektowania, zmienia się na wygląd formularza podstawowego (jest to ustawienie właściwości lub dodawania i odejmowania formantów) są odzwierciedlane na odziedziczone formularze, podczas kompilowania projektu zawierającego formularz podstawowy. Nie jest wystarczające, umożliwiające po prostu zapisać zmiany w podstawowej postaci. Aby utworzyć projekt, wybierz **kompilacji** z **kompilacji** menu.  
-  
-> [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
- Modyfikacje wprowadzone do formularza podstawowego w czasie wykonywania mają nie będzie miała wpływu na odziedziczone formularze, które już są tworzone.  
-  
+
+Podczas opracowywania aplikacji może być konieczna zmiana wyglądu formularza podstawowego, z którego są dziedziczone inne formularze w projekcie (lub w innych projektach).
+
+W czasie projektowania zmiany w wyglądzie formularza podstawowego (są to ustawienia właściwości, a Dodawanie i odejmowanie kontrolek) są odzwierciedlone w formularzach dziedziczonych po skompilowaniu projektu zawierającego formularz podstawowy. Po prostu zapisanie zmian w formularzu podstawowym nie jest wystarczające. Aby skompilować projekt, wybierz opcję **Kompiluj** z menu **kompilacja** .
+
+Modyfikacje wprowadzone w formularzu podstawowym w czasie wykonywania nie mają wpływu na dziedziczone formularze, które zostały już utworzone.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [base](~/docs/csharp/language-reference/keywords/base.md)
-- [Instrukcje: Dziedziczenie formularzy Windows](how-to-inherit-windows-forms.md)
+- [Instrukcje: Dziedzicz Windows Forms](how-to-inherit-windows-forms.md)
 - [Formularze Windows Forms — dziedziczenie wizualizacji](windows-forms-visual-inheritance.md)

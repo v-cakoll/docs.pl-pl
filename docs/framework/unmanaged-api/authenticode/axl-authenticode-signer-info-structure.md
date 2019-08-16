@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 81c0f8b4-ce35-4716-8651-b642d40648a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 232c78db32aecd0ee1379d4d969fa0378db4159a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c69be0de98e2996176e7360bae0bb0736c1a797
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741358"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038438"
 ---
-# <a name="axlauthenticodesignerinfo-structure"></a>Struktura AXL_AUTHENTICODE_SIGNER_INFO
-Definiuje informacje podpisu Authenticode.  
+# <a name="axl_authenticode_signer_info-structure"></a>Struktura AXL_AUTHENTICODE_SIGNER_INFO
+Definiuje informacje o podpisie Authenticode.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,10 +35,10 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
 |`cbSize`|Rozmiar tej struktury.|  
 |`dwError`|Kod błędu.|  
 |`algHash`|Algorytm wyznaczania wartości skrótu.|  
-|`pwszHash`|Skrót.|  
+|`pwszHash`|Wartość skrótu.|  
 |`pwszDescription`|Opis.|  
 |`pwszDescriptionUrl`|Adres URL opisu.|  
-|`pChainContext`|Kontekst łańcuch osoby podpisującej. Zobacz [CERT_CONTEXT](/windows/desktop/api/wincrypt/ns-wincrypt-_cert_context) struktury.|  
+|`pChainContext`|Kontekst łańcucha osoby podpisującej. Zobacz strukturę [CERT_CONTEXT](/windows/win32/api/wincrypt/ns-wincrypt-cert_context) .|  
   
 ## <a name="see-also"></a>Zobacz także
 

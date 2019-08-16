@@ -6,38 +6,38 @@ helpviewer_keywords:
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 0b36c25742757f2606d103d6af05eee7bc175ea0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b058e9df6b8ba5a9dd0066f9df1f4b233a00e162
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644105"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69039385"
 ---
-# <a name="developing-web-apps-with-aspnet"></a>Tworzenie aplikacji sieci Web przy użyciu platformy ASP.NET
+# <a name="developing-web-apps-with-aspnet"></a>Tworzenie aplikacji sieci Web za pomocą ASP.NET
 
-ASP.NET jest technologią .NET Framework do tworzenia aplikacji sieci web. Aby uzyskać więcej informacji na temat platformy ASP.NET zobacz:
+ASP.NET jest technologią .NET Frameworkową do tworzenia aplikacji internetowych. Aby uzyskać więcej informacji na temat ASP.NET, zobacz:
 
-- [Dokumentacja platformy ASP.NET](/aspnet/overview)
+- [Dokumentacja ASP.NET](/aspnet/overview)
 - [ASP.NET MVC](https://go.microsoft.com/fwlink/p/?LinkID=227227)
 - [ASP.NET Web Pages](https://go.microsoft.com/fwlink/p/?LinkId=251040)
 - [ASP.NET Web API](https://go.microsoft.com/fwlink/p/?LinkId=251041)  
-- [Tworzenie aplikacji internetowej środowiska ASP.NET Framework na platformie Azure](/azure/app-service/app-service-web-get-started-dotnet-framework)
+- [Tworzenie aplikacji sieci Web platformy ASP.NET Framework na platformie Azure](/azure/app-service/app-service-web-get-started-dotnet-framework)
 
-## <a name="developing-web-apps-with-aspnet-core"></a>Tworzenie aplikacji sieci Web przy użyciu platformy ASP.NET Core
+## <a name="developing-web-apps-with-aspnet-core"></a>Tworzenie aplikacji sieci Web za pomocą ASP.NET Core
 
-Platforma ASP.NET Core to przeprojektowana platforma ASP.NET 4.x. Niektóre z korzyści platformy ASP.NET Core oferuje za pośrednictwem programu ASP.NET:
+Platforma ASP.NET Core to przeprojektowana platforma ASP.NET 4.x. Niektóre korzyści ASP.NET Core w porównaniu z ASP.NET:
 
 - Wiele platform.
-- Bardziej zwartej i modułowej więcej.
+- Leaner i więcej modułowych.
 - Ujednolicony scenariusz na potrzeby tworzenia internetowego interfejsu użytkownika i internetowych interfejsów API.
 
-Zobacz [Dlaczego warto korzystać z platformy ASP.NET Core?](/aspnet/core#why-use-aspnet-core) dla rozwiniętą listę korzyści.
+Zobacz, [Dlaczego warto używać ASP.NET Core?](/aspnet/core#why-choose-aspnet-core) , aby zapoznać się z rozszerzoną listą korzyści.
 
-Aby uzyskać więcej informacji na temat ASP.NET Core](/aspnet/core) zobacz:
+Aby uzyskać więcej informacji na temat ASP.NET Core] (/ASPNET/Core), zobacz:
 
 - [Wprowadzenie do korzystania ze stron Razor](/aspnet/core/tutorials/razor-pages/razor-pages-start)
 - [Tworzenie interfejsu Web API](/aspnet/core/tutorials/first-web-api)
-- [Tworzenie aplikacji internetowej platformy ASP.NET Core na platformie Azure](/azure/app-service/app-service-web-get-started-dotnet)
+- [Tworzenie aplikacji sieci Web ASP.NET Core na platformie Azure](/azure/app-service/app-service-web-get-started-dotnet)
   
 ## <a name="see-also"></a>Zobacz także
 

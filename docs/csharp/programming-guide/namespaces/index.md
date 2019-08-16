@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 79b7057b1f6a9cdba2215124160b28efb9a1c0be
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cf5a7f239cf7d3cd3a6e39f31d16adb830646afc
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629523"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039492"
 ---
 # <a name="namespaces-c-programming-guide"></a>Przestrzenie nazw (Przewodnik programowania w języku C#)
 
@@ -42,15 +42,14 @@ Przestrzenie nazw mają następujące właściwości:
 - `using` Dyrektywa eliminuje konieczność określenia nazwy przestrzeni nazw dla każdej klasy.  
 - Przestrzeń nazw jest przestrzenią nazw "root" `global::System` : zawsze odwołuje się do przestrzeni nazw platformy .NET <xref:System>. `global`  
 
-## <a name="c-language-specification"></a>Specyfikacja języka C#
+## <a name="c-language-specification"></a>specyfikacja języka C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+Aby uzyskać więcej informacji, zobacz sekcję [przestrzenie nazw](~/_csharplang/spec/namespaces.md) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Używanie przestrzeni nazw](using-namespaces.md)
-- [Instrukcje: Użyj globalnego aliasu przestrzeni nazw](how-to-use-the-global-namespace-alias.md)
 - [Instrukcje: Korzystanie z przestrzeni nazw my](how-to-use-the-my-namespace.md)
 - [Nazwy identyfikatorów](../inside-a-program/identifier-names.md)
 - [using, dyrektywa](../../language-reference/keywords/using-directive.md)

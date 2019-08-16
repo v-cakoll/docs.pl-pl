@@ -7,29 +7,26 @@ helpviewer_keywords:
 - menu items [Windows Forms], disabling
 - menus [Windows Forms], disabling items
 ms.assetid: 985e311e-7d67-4205-b5a3-d045b68a4a03
-ms.openlocfilehash: 9965825458afcd50b29699c3b89ed506078e04d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd80a6543c83ae957cd9c51b068d0702559f0925
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954248"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040272"
 ---
 # <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>Instrukcje: wyłączanie ToolStripMenuItems przy użyciu narzędzia Projektant
-Można ograniczyć lub rozszerzenia poleceń, które użytkownik może wprowadzić, włączanie i wyłączanie elementów menu w odpowiedzi na działania użytkownika. Elementy menu są włączone domyślnie, gdy są one tworzone, ale to może być regulowany poprzez <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> właściwości. Tę właściwość można manipulować w czasie projektowania w **właściwości** okna lub ustawiając je programowo w kodzie. Aby uzyskać więcej informacji, zobacz [jak: Wyłączanie kontrolki ToolStripMenuItems](how-to-disable-toolstripmenuitems.md).  
-  
-> [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-disable-a-menu-item-at-design-time"></a>Aby wyłączyć element menu w czasie projektowania  
-  
-1. W menu elementu wybranego w formularzu, ustawiać <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> właściwość `false`.  
-  
+Można ograniczyć lub rozszerzyć polecenia, które użytkownik może wprowadzić, włączając i wyłączając elementy menu w odpowiedzi na działania użytkownika. Elementy menu są domyślnie włączone, gdy są tworzone, ale można je dostosować za pomocą <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> właściwości. Tę właściwość można manipulować w czasie projektowania w oknie **Właściwości** lub programowo przez ustawienie jej w kodzie. Aby uzyskać więcej informacji, zobacz [jak: Wyłącz kontrolki ToolStripMenuItems](how-to-disable-toolstripmenuitems.md).
+
+## <a name="to-disable-a-menu-item-at-design-time"></a>Aby wyłączyć element menu w czasie projektowania
+
+1. Z elementem menu wybranym w formularzu Ustaw <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> właściwość na. `false`
+
     > [!TIP]
-    >  Wyłączanie elementu menu pierwszy lub najwyższego poziomu w menu powoduje wyłączenie wszystkich elementów menu zawartych w menu. Podobnie wyłączenie element menu, który zawiera elementy podmenu powoduje wyłączenie elementów podmenu. Jeśli wszystkie polecenia w danym menu są dostępne dla użytkownika, uważa się dobrą praktyką programowania, aby ukryć i wyłączyć całe menu, jak to stanowi interfejs użytkownika czyste. Należy zarówno ukryć i Wyłącz menu, zgodnie z ukrywanie samodzielnie nie uniemożliwia dostępu do polecenia menu za pomocą klawisza skrótu. Ustaw <xref:System.Windows.Forms.ToolStripItem.Visible%2A> właściwości elementu menu najwyższego poziomu do `false` ukryć całe menu.  
-  
+    >  Wyłączenie elementu menu pierwszy lub najwyższego poziomu w menu powoduje wyłączenie wszystkich elementów menu zawartych w menu. Analogicznie, wyłączenie elementu menu zawierającego elementy podmenu powoduje wyłączenie elementów podmenu. Jeśli wszystkie polecenia w danym menu są niedostępne dla użytkownika, jest on uznawany za dobry sposób programowania, aby ukryć i wyłączyć całe menu, ponieważ prezentuje to czysty interfejs użytkownika. Należy ukryć i wyłączyć menu, ponieważ ukrywanie samo nie uniemożliwia dostępu do polecenia menu za pośrednictwem klawisza skrótu. Ustaw właściwość elementu menu najwyższego poziomu, aby `false` ukryć całe menu. <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Instrukcje: Ukrywanie kontrolki ToolStripMenuItems](how-to-hide-toolstripmenuitems.md)
+- [Instrukcje: Ukryj kontrolki ToolStripMenuItems](how-to-hide-toolstripmenuitems.md)
 - [MenuStrip, kontrolka — omówienie](menustrip-control-overview-windows-forms.md)

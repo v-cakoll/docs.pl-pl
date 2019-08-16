@@ -9,90 +9,87 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 04597283a8ff2e21a0f227268671d3605eac6356
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 5c57d86b2f08733dc4a729bf6091eab23c6035f2
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343593"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039708"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Instrukcje: dodawanie kontrolek do formularzy systemu Windows
-Większość formularzy poprzez dodawanie formantów do powierzchni formularza do definiowania interfejsu użytkownika (UI). A *kontroli* jest składnikiem w formularzu, używane do wyświetlania informacji i akceptuje dane wejściowe użytkownika. Aby uzyskać więcej informacji na temat formantów, zobacz [kontrolek formularzy Windows Forms](index.md).  
-  
-> [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-draw-a-control-on-a-form"></a>Narysuj kontrolkę w formularzu  
-  
-1. Otwórz formularz. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie formularzy Windows w Projektancie](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
-  
-2. W **przybornika**, kliknij kontrolkę, którą chcesz dodać do formularza.  
-  
-3. W formularzu kliknij w miejscu lewego górnego rogu kontrolki można znaleźć i przeciągnij w odpowiednie miejsce prawym dolnym rogu formantu w zlokalizowanym.  
-  
-     Formant jest dodawany do formularza z określonej lokalizacji i rozmiaru.  
-  
+Większość formularzy służy do dodawania kontrolek do powierzchni formularza w celu zdefiniowania interfejsu użytkownika. *Kontrolka* to składnik formularza służący do wyświetlania informacji lub akceptowania danych wejściowych użytkownika. Aby uzyskać więcej informacji na temat kontrolek, zobacz [Windows Forms Controls](index.md).
+
+## <a name="to-draw-a-control-on-a-form"></a>Aby narysować kontrolkę w formularzu
+
+1. Otwórz formularz. Aby uzyskać więcej informacji, zobacz [jak: Wyświetl Windows Forms w projektancie](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
+
+2. W **przyborniku**kliknij kontrolkę, którą chcesz dodać do formularza.
+
+3. Na formularzu kliknij miejsce w lewym górnym rogu kontrolki, a następnie przeciągnij do miejsca, w którym ma się znajdować prawy dolny róg kontrolki.
+
+     Kontrolka zostanie dodana do formularza z określoną lokalizacją i rozmiarem.
+
     > [!NOTE]
-    >  Każda kontrolka ma domyślny rozmiar zdefiniowany. Można dodać formant do formularza w formantu domyślny rozmiar, przeciągając go z **przybornika** do formularza.  
-  
-### <a name="to-drag-a-control-to-a-form"></a>Przeciągnij formant do formularza  
-  
-1. Otwórz formularz. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie formularzy Windows w Projektancie](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
-  
-2. W **przybornika**, ma miejsce kliknięcie kontrolki i przeciągnij je do formularza.  
-  
-     Formant jest dodawany do formularza w określonej lokalizacji w jej domyślny rozmiar.  
-  
+    >  Każdy formant ma zdefiniowany rozmiar domyślny. Możesz dodać formant do formularza w domyślnym rozmiarze kontrolki, przeciągając go z przybornika do formularza .
+
+## <a name="to-drag-a-control-to-a-form"></a>Aby przeciągnąć formant do formularza
+
+1. Otwórz formularz. Aby uzyskać więcej informacji, zobacz [jak: Wyświetl Windows Forms w projektancie](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
+
+2. W **przyborniku**kliknij żądany formant i przeciągnij go do formularza.
+
+     Kontrolka jest dodawana do formularza w określonej lokalizacji w domyślnym rozmiarze.
+
     > [!NOTE]
-    >  Możesz kliknąć dwukrotnie formant w **przybornika** Aby dodać go do lewego górnego rogu formularza w jej domyślny rozmiar.  
-  
-     Możesz również dodać formanty dynamicznie do formularza w czasie wykonywania. W poniższym przykładzie kodu <xref:System.Windows.Forms.TextBox> formant zostanie dodany do formularza, gdy <xref:System.Windows.Forms.Button> kliknięciu formantu.  
-  
+    >  Możesz dwukrotnie kliknąć kontrolkę w przyborniku, aby dodać ją do lewego górnego rogu formularza w domyślnym rozmiarze.
+
+     Kontrolki można także dynamicznie dodawać do formularza w czasie wykonywania. W poniższym przykładzie <xref:System.Windows.Forms.TextBox> kodu formant zostanie dodany do formularza, <xref:System.Windows.Forms.Button> gdy zostanie kliknięty formant.
+
     > [!NOTE]
-    >  Poniższa procedura wymaga istnienia formularza z **przycisk** kontroli `Button1`, już umieszczony na nim.  
-  
-### <a name="to-add-a-control-to-a-form-programmatically"></a>Aby programowo dodać formant do formularza  
-  
-1. W metodzie, która obsługuje przycisku `Click` zdarzenia w obrębie klasy formularza, Wstaw kod podobne do następujących czynności, aby dodać odwołanie do zmiennej kontrolki, ustaw dla formantu `Location`i Dodaj formant.  
-  
-    ```vb  
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
-       Dim MyText As New TextBox()  
-       MyText.Location = New Point(25, 25)  
-       Me.Controls.Add(MyText)  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    private void button1_Click(object sender, System.EventArgs e)   
-    {  
-       TextBox myText = new TextBox();  
-       myText.Location = new Point(25,25);  
-       this.Controls.Add (myText);  
-    }  
-    ```  
-  
-    ```cpp  
-    private:  
-      System::Void button1_Click(System::Object ^  sender,  
-        System::EventArgs ^  e)  
-      {  
-        TextBox ^ myText = gcnew TextBox();  
-        myText->Location = Point(25,25);  
-        this->Controls->Add(myText);  
-      }  
-    ```  
-  
+    >  Poniższa procedura wymaga istnienia formularza z kontrolką `Button1` **przycisku** , która jest już umieszczona w nim.
+
+## <a name="to-add-a-control-to-a-form-programmatically"></a>Aby programowo dodać formant do formularza
+
+1. W metodzie, która obsługuje `Click` zdarzenie przycisku w klasie formularza, Wstaw kod podobny do poniższego, aby dodać odwołanie do zmiennej kontroli, ustaw `Location`kontrolkę i Dodaj kontrolkę.
+
+    ```vb
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+       Dim MyText As New TextBox()
+       MyText.Location = New Point(25, 25)
+       Me.Controls.Add(MyText)
+    End Sub
+    ```
+
+    ```csharp
+    private void button1_Click(object sender, System.EventArgs e)
+    {
+       TextBox myText = new TextBox();
+       myText.Location = new Point(25,25);
+       this.Controls.Add (myText);
+    }
+    ```
+
+    ```cpp
+    private:
+      System::Void button1_Click(System::Object ^  sender,
+        System::EventArgs ^  e)
+      {
+        TextBox ^ myText = gcnew TextBox();
+        myText->Location = Point(25,25);
+        this->Controls->Add(myText);
+      }
+    ```
+
     > [!NOTE]
-    >  Można również dodać kod do zainicjowania inne właściwości formantu.  
-  
+    >  Możesz również dodać kod, aby zainicjować inne właściwości formantu.
+
     > [!IMPORTANT]
-    >  Na komputerze lokalnym to zagrożenie bezpieczeństwa, za pośrednictwem sieci można uwidocznić, odwołując się do złośliwych `UserControl`. Powinien to być jedynie kwestią w przypadku złośliwe osoby tworzącej szkodliwe kontrolka niestandardowa, a następnie przez Ciebie przez pomyłkę dodawania do projektu.  
-  
+    >  Komputer lokalny może być narażony na zagrożenia bezpieczeństwa przez sieć, odwołując się do `UserControl`złośliwej. Może to stanowić problem tylko w przypadku złośliwej osoby, która tworzy szkodliwą kontrolkę niestandardową, a następnie nie dodawaj jej do projektu.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Kontrolki formularzy Windows Forms](index.md)
 - [Rozmieszczanie kontrolek na formularzach Windows Forms](arranging-controls-on-windows-forms.md)
-- [Instrukcje: Zmiana rozmiaru formantów na formularzach Windows Forms](how-to-resize-controls-on-windows-forms.md)
-- [Instrukcje: Ustawianie tekstu wyświetlanego przez kontrolki formularzy Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Instrukcje: Zmień rozmiar kontrolek na Windows Forms](how-to-resize-controls-on-windows-forms.md)
+- [Instrukcje: Ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)

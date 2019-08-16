@@ -10,31 +10,28 @@ helpviewer_keywords:
 - rows [Windows Forms], spanning
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-ms.openlocfilehash: 02db78b07930676235e55e535fb24f6ff618d823
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a215b2b4e05bab5c81d2779d4b67d5b9d57b6ba5
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012974"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039701"
 ---
 # <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>Instrukcje: obejmowanie rzędów i kolumn w kontrolce TableLayoutPanel
-Kontrolki w <xref:System.Windows.Forms.TableLayoutPanel> kontrolki mogą znajdować się na sąsiadujących wierszy i kolumn.  
-  
-> [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-span-columns-and-rows"></a>Obejmować kolumnami i wierszami  
-  
-1. Przeciągnij <xref:System.Windows.Forms.TableLayoutPanel> z kontrolować **przybornika** do formularza.  
-  
-2. Przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do lewej górnej komórki <xref:System.Windows.Forms.TableLayoutPanel> kontroli.  
-  
-3. Ustaw <xref:System.Windows.Forms.Button> kontrolki **ColumnSpan** właściwości **2**. Należy pamiętać, że <xref:System.Windows.Forms.Button> kontroli obejmuje pierwsza i druga kolumna.  
-  
-4. Ustaw <xref:System.Windows.Forms.Button> kontrolki **RowSpan** właściwości **2**. Należy pamiętać, że <xref:System.Windows.Forms.Button> kontroli rozciąga się pierwszym i drugim wierszu.  
-  
-5. Ustaw <xref:System.Windows.Forms.Button> kontrolki **ColumnSpan** właściwości **1**. Należy pamiętać, że <xref:System.Windows.Forms.Button> kontrola przechodzi do pierwszej kolumny i obejmuje pierwszym i drugim wierszu.  
-  
+Kontrolki w <xref:System.Windows.Forms.TableLayoutPanel> kontrolce mogą obejmować sąsiadujące wiersze i kolumny.
+
+## <a name="to-span-columns-and-rows"></a>Aby rozpiętie kolumn i wierszy
+
+1. Przeciągnij kontrolkę z przybornika do formularza. <xref:System.Windows.Forms.TableLayoutPanel>
+
+2. Przeciągnij kontrolkę z **przybornika** do <xref:System.Windows.Forms.TableLayoutPanel> lewej górnej komórki formantu. <xref:System.Windows.Forms.Button>
+
+3. Ustaw właściwość **ColumnSpan**kontrolki na 2 <xref:System.Windows.Forms.Button> . Należy zauważyć, <xref:System.Windows.Forms.Button> że formant obejmuje pierwszą i drugą kolumnę.
+
+4. Ustaw właściwość **RowSpan**kontrolki na 2 <xref:System.Windows.Forms.Button> . Należy zauważyć, <xref:System.Windows.Forms.Button> że formant obejmuje pierwszy i drugi wiersz.
+
+5. Ustaw właściwość **ColumnSpan**kontrolki na 1 <xref:System.Windows.Forms.Button> . Należy zauważyć, <xref:System.Windows.Forms.Button> że formant jest przenoszony do pierwszej kolumny i rozciąga się na pierwszy i drugi wiersz.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [TableLayoutPanel, kontrolka](tablelayoutpanel-control-windows-forms.md)

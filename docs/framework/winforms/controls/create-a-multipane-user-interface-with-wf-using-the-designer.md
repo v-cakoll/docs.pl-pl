@@ -6,46 +6,43 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 9f3350e32c0fbff58678052d26be954d30d512a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f96124f7d97e733b1f0e2559320ce2e09ba5ff21
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011518"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039959"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami systemu Windows przy użyciu narzędzia Projektant
-W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do komentarzowi użytemu w programie Microsoft Outlook przy użyciu **folderu** listy **wiadomości** okienku i **wwersjizapoznawczej** okienka. Taki układ odbywa się głównie za pośrednictwem dokowanie kontrolek za pomocą formularza.  
-  
- Po zadokowaniu kontrolkę, należy określić, które krawędzią kontenera nadrzędnego formantu jest podłączony. W związku z tym Jeśli ustawisz <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Right>, prawą krawędzią kontrolki będzie zadokowany na prawej krawędzi kontrolki nadrzędnej. Ponadto aby pasował do jego kontrolki kontenera zmieniany jest zadokowany krawędzią formantu. Aby uzyskać więcej informacji o tym, jak <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość znaleźć [jak: Dokowanie formantów na formularzach Windows Forms](how-to-dock-controls-on-windows-forms.md).  
-  
- Ta procedura polega na rozmieszczanie <xref:System.Windows.Forms.SplitContainer> i inne kontrolki na formularzu, a nie na dodawanie funkcji do aplikacji Microsoft Outlook naśladować.  
-  
- Aby utworzyć ten interfejs użytkownika, umieść wszystkie kontrolki w ramach <xref:System.Windows.Forms.SplitContainer> formant, który zawiera <xref:System.Windows.Forms.TreeView> kontrolki w panelu po lewej stronie. Na panelu po prawej stronie <xref:System.Windows.Forms.SplitContainer> kontrolka zawiera sekundy <xref:System.Windows.Forms.SplitContainer> kontrolką <xref:System.Windows.Forms.ListView> kontrolki powyżej <xref:System.Windows.Forms.RichTextBox> kontroli. Te <xref:System.Windows.Forms.SplitContainer> kontrolki umożliwiają, niezależnie od rozmiaru formantów w formularzu. Możliwość dostosowania technik w tej procedurze, aby tworzenie niestandardowych interfejsów użytkownika samodzielnie.  
-  
-> [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-create-an-outlook-style-user-interface-at-design-time"></a>Aby utworzyć interfejs użytkownika programu Outlook stylu w czasie projektowania  
-  
-1. Utwórz nowy projekt aplikacji Windows (**pliku** > **New** > **projektu** > **Visual C#** lub **języka Visual Basic** > **Classic Desktop** > **Windows Forms aplikacji**).  
-  
-2. Przeciągnij <xref:System.Windows.Forms.SplitContainer> z kontrolować **przybornika** do formularza. W oknie **Właściwości** ustaw właściwość <xref:System.Windows.Forms.SplitContainer.Dock%2A> na <xref:System.Windows.Forms.DockStyle.Fill>.   
-  
-3. Przeciągnij <xref:System.Windows.Forms.TreeView> z kontrolować **przybornika** do panelu po lewej stronie <xref:System.Windows.Forms.SplitContainer> kontroli. W **właściwości** oknie <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Left> , klikając w panelu po lewej stronie ekranu, w edytorze wartości wyświetlane po kliknięciu strzałki w dół.  
-  
-4. Przeciągnij kolejny <xref:System.Windows.Forms.SplitContainer> z kontrolować **przybornika**; umieść go w panelu po prawej stronie <xref:System.Windows.Forms.SplitContainer> formant został dodany do formularza. W **właściwości** oknie <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Fill> i <xref:System.Windows.Forms.SplitContainer.Orientation%2A> właściwość <xref:System.Windows.Forms.Orientation.Horizontal>.  
-  
-5. Przeciągnij <xref:System.Windows.Forms.ListView> z kontrolować **przybornika** na górnym panelu drugi <xref:System.Windows.Forms.SplitContainer> formant został dodany do formularza. Ustaw <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość <xref:System.Windows.Forms.ListView> kontrolę <xref:System.Windows.Forms.DockStyle.Fill>.  
-  
-6. Przeciągnij <xref:System.Windows.Forms.RichTextBox> z kontrolować **przybornika** do dolnej części drugiej <xref:System.Windows.Forms.SplitContainer> kontroli. Ustaw <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość <xref:System.Windows.Forms.RichTextBox> kontrolę <xref:System.Windows.Forms.DockStyle.Fill>.  
-  
-     W tym momencie użytkownik naciśnie klawisz F5, aby uruchomić aplikację, formularz zawiera interfejs użytkownika trzyczęściowej serii, podobnie jak w przypadku programu Microsoft Outlook.  
-  
+Poniższa procedura umożliwia utworzenie wielookienkowego interfejsu użytkownika, który jest podobny do tego, który jest używany w programie Microsoft Outlook, z listą **folderów** , okienkiem **wiadomości** i okienkiem **podglądu** . To rozwiązanie jest uzyskiwane głównie przez dokowanie kontrolek za pomocą formularza.
+
+ Po zadokowanym formancie należy określić, z której krawędzią kontenera nadrzędnego jest przymocowany formant. W takim przypadku, jeśli ustawisz <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość na <xref:System.Windows.Forms.DockStyle.Right>, prawą krawędzią kontrolki będzie zadokowany do prawej krawędzi jego kontrolki nadrzędnej. Ponadto zostanie zmieniony rozmiar zadokowanej krawędzi kontrolki w celu dopasowania jej do kontrolki kontenera. Aby uzyskać więcej informacji o tym <xref:System.Windows.Forms.SplitContainer.Dock%2A> , jak działa Właściwość [, zobacz How to: Zadokuj kontrolki na Windows Forms](how-to-dock-controls-on-windows-forms.md).
+
+ Ta procedura koncentruje się <xref:System.Windows.Forms.SplitContainer> na układaniu i innych kontrolkach w formularzu, a nie na dodawaniu funkcji w celu naśladowania aplikacji Microsoft Outlook.
+
+ Aby utworzyć ten interfejs użytkownika, należy umieścić wszystkie kontrolki w <xref:System.Windows.Forms.SplitContainer> kontrolce, która <xref:System.Windows.Forms.TreeView> zawiera kontrolkę w panelu po lewej stronie. Panel <xref:System.Windows.Forms.SplitContainer> po prawej stronie kontrolki zawiera drugą <xref:System.Windows.Forms.SplitContainer> kontrolkę <xref:System.Windows.Forms.RichTextBox> z <xref:System.Windows.Forms.ListView> kontrolką nad kontrolką. Formanty <xref:System.Windows.Forms.SplitContainer> te umożliwiają niezależne zmienianie rozmiarów innych kontrolek w formularzu. Można dostosować techniki w tej procedurze, aby nawiązać własne niestandardowe interfejsy użytkownika.
+
+## <a name="to-create-an-outlook-style-user-interface-at-design-time"></a>Aby utworzyć interfejs użytkownika w stylu programu Outlook w czasie projektowania
+
+1. Tworzenie nowego projektu aplikacji systemu Windows (**plik** > **Nowy** > **projekt** > **Visual C#**  lub **Visual Basic** > **klasyczny** pulpit >  **Windows Forms aplikacji**).
+
+2. Przeciągnij kontrolkę z przybornika do formularza. <xref:System.Windows.Forms.SplitContainer> W oknie **Właściwości** ustaw właściwość <xref:System.Windows.Forms.SplitContainer.Dock%2A> na <xref:System.Windows.Forms.DockStyle.Fill>.
+
+3. Przeciągnij kontrolkę z **przybornika** do panelu <xref:System.Windows.Forms.SplitContainer> po lewej stronie kontrolki. <xref:System.Windows.Forms.TreeView> W oknie **Właściwości** Ustaw <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość na <xref:System.Windows.Forms.DockStyle.Left> , klikając panel po lewej stronie w edytorze wartości widocznym po kliknięciu strzałki w dół.
+
+4. Przeciągnij inny <xref:System.Windows.Forms.SplitContainer> formant z **przybornika**, umieść go w panelu <xref:System.Windows.Forms.SplitContainer> po prawej stronie kontrolki dodanej do formularza. W oknie **Właściwości** Ustaw <xref:System.Windows.Forms.SplitContainer.Dock%2A> <xref:System.Windows.Forms.DockStyle.Fill> <xref:System.Windows.Forms.Orientation.Horizontal>właściwość na i właściwość na. <xref:System.Windows.Forms.SplitContainer.Orientation%2A>
+
+5. Przeciągnij kontrolkę z **przybornika** do górnego panelu drugiej <xref:System.Windows.Forms.SplitContainer> kontrolki dodanej do formularza. <xref:System.Windows.Forms.ListView> <xref:System.Windows.Forms.SplitContainer.Dock%2A> Ustaw właściwość <xref:System.Windows.Forms.ListView> formantu na <xref:System.Windows.Forms.DockStyle.Fill>.
+
+6. Przeciągnij kontrolkę z **przybornika** do dolnego panelu drugiej <xref:System.Windows.Forms.SplitContainer> kontrolki. <xref:System.Windows.Forms.RichTextBox> <xref:System.Windows.Forms.SplitContainer.Dock%2A> Ustaw właściwość <xref:System.Windows.Forms.RichTextBox> formantu na <xref:System.Windows.Forms.DockStyle.Fill>.
+
+     W tym momencie naciśnij klawisz F5, aby uruchomić aplikację, a w formularzu zostanie wyświetlony interfejs użytkownika z trzema częścią, podobny do tego w programie Microsoft Outlook.
+
     > [!NOTE]
-    >  Po umieszczeniu wskaźnika myszy nad albo rozdzielaczy w ramach <xref:System.Windows.Forms.SplitContainer> kontrolek, możesz zmienić rozmiar wewnętrznych wymiarów.  
-  
-     W tym momencie podczas tworzenia aplikacji ma specjalnie interfejsu użytkownika zaawansowane. Następnym krokiem jest przejściem z programowaniem aplikacji, być może, łącząc <xref:System.Windows.Forms.TreeView> kontroli i <xref:System.Windows.Forms.ListView> kontrolki do pewnego rodzaju źródła danych. Aby uzyskać więcej informacji na temat kontrolek o łączeniu z danymi, zobacz [powiązanie danych i formularze Windows](../data-binding-and-windows-forms.md).  
-  
+    >  Po umieszczeniu wskaźnika myszy nad dowolnym rozdzielaczem w <xref:System.Windows.Forms.SplitContainer> kontrolkach można zmienić rozmiar wewnętrznych wymiarów.
+
+Na tym etapie opracowywania aplikacji przygotowano zaawansowany interfejs użytkownika. Następnym krokiem jest przechodzenie między programowaniem aplikacji, na przykład przez połączenie <xref:System.Windows.Forms.TreeView> kontrolki i <xref:System.Windows.Forms.ListView> kontrolek z pewnym rodzajem źródła danych. Aby uzyskać więcej informacji na temat łączenia formantów z danymi, zobacz [powiązanie danych i Windows Forms](../data-binding-and-windows-forms.md).
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.SplitContainer>

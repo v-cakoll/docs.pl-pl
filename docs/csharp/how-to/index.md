@@ -2,12 +2,12 @@
 title: Instrukcje (C# przewodnik)
 description: Kolekcja szybkich porad i krótkich, ukierunkowanych przykładów kodu
 ms.date: 12/20/2017
-ms.openlocfilehash: 09e39e3c9bea5d4b9240039e37d2a5998fe1ebf8
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 92f7e94d8003823c0b166cc617563e63aba78027
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400735"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038018"
 ---
 # <a name="how-to-c"></a>Instrukcje (C#)
 
@@ -19,7 +19,6 @@ Istnieje kilka porad i wskazówek, które są typowymi C# rozwiązaniami program
 
 - [Inicjowanie obiektów za pomocą inicjatora obiektów](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [Zapoznaj się z różnicami między przekazywaniem struktury a klasą do metody](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
-- [Rozwiązywanie konfliktów nazw typów przy użyciu globalnego aliasu przestrzeni nazw](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
 - [Użyj przeciążenia operatora](../language-reference/operators/operator-overloading.md).
 - [Implementowanie i wywoływanie niestandardowej metody rozszerzenia](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
 - Nawet C# programiści mogą chcieć [ `My` użyć przestrzeni nazw w języku VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).

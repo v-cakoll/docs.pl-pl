@@ -7,145 +7,145 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: 717abc8f54669a5ca814a61827a0865215204e1b
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: b5d5a4456bef925cd8093fe9c696145aff83660e
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487356"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039417"
 ---
 # <a name="application-settings-architecture"></a>Architektura ustawień aplikacji
-W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje zaawansowanych funkcji architektury, takich jak ustawienia pogrupowanych i klucze ustawienia.  
-  
- Architektura ustawień aplikacji obsługuje definiowanie ustawień silnie typizowaną z albo aplikacji lub zakres użytkowników oraz przechowywanie ustawienia między sesjami aplikacji. Architektura zawiera domyślny aparat trwałości, zapisywania ustawień i ładowania ich z lokalnego systemu plików. Architektura definiuje również interfejsów dla podanie aparatu niestandardowego.  
-  
- Interfejsy są dostarczane, dzięki którym składników niestandardowych utrwalić własne ustawienia, jeśli są one hostowane w aplikacji. Przy użyciu kluczy ustawienia, składniki zachować ustawienia dla wielu wystąpień składnika oddzielne.  
-  
-## <a name="defining-settings"></a>Definiowanie ustawień  
- Architektura ustawień aplikacji jest używany w ASP.NET i Windows Forms i zawiera wiele klas bazowych, które są udostępniane w obu środowiskach. Najważniejsze jest <xref:System.Configuration.SettingsBase>, która zapewnia dostęp do ustawień za pomocą kolekcji, a także metody niskiego poziomu ładowania i zapisywania ustawień. Każde środowisko implementuje własne klasy pochodzącej od <xref:System.Configuration.SettingsBase> umożliwiają korzystanie z funkcji dodatkowych ustawień dla tego środowiska. W aplikacji opartej na formularzach Windows, wszystkie ustawienia aplikacji musi być zdefiniowana w klasę pochodną <xref:System.Configuration.ApplicationSettingsBase> klasy, która dodaje następujące funkcje do klasy bazowej:  
-  
-- Ładowanie wyższego poziomu i zapisywanie operacji  
-  
-- Obsługa ustawień zakresu użytkownika  
-  
-- Przywracanie ustawień użytkownika do wstępnie zdefiniowanych ustawień domyślnych  
-  
-- Uaktualnianie ustawień z poprzedniej wersji aplikacji  
-  
-- Weryfikowanie ustawień, zanim zostaną one zmienione lub przed ich zapisaniem  
-  
- Ustawienia można opisać za pomocą numeru atrybuty zdefiniowane w ramach <xref:System.Configuration> przestrzeni nazw; te ustawienia zostały opisane w [atrybuty ustawień aplikacji](application-settings-attributes.md). Podczas definiowania ustawienie, należy zastosować go z oboma <xref:System.Configuration.ApplicationScopedSettingAttribute> lub <xref:System.Configuration.UserScopedSettingAttribute>, która opisuje, czy ustawienie dotyczy całej aplikacji, lub po prostu bieżącego użytkownika.  
-  
- Poniższy kod definiuje klasę ustawienia niestandardowe, za pomocą pojedynczego ustawienia `BackgroundColor`.  
-  
+W tym temacie opisano sposób działania architektury ustawień aplikacji oraz omówiono zaawansowane funkcje architektury, takie jak pogrupowane ustawienia i klucze ustawień.
+
+ Architektura ustawień aplikacji obsługuje definiowanie ustawień o jednoznacznie określonym typie przy użyciu aplikacji lub zakresu użytkownika i utrwalanie ustawień między sesjami aplikacji. Architektura zapewnia domyślny aparat trwałości do zapisywania ustawień i ładowania ich z lokalnego systemu plików. Architektura definiuje również interfejsy umożliwiające dostarczenie niestandardowego aparatu trwałości.
+
+ Dostępne są interfejsy, które umożliwiają składnikom niestandardowym zachowywanie własnych ustawień, gdy są one hostowane w aplikacji. Korzystając z kluczy ustawień, składniki mogą zachować różne ustawienia dla wielu wystąpień składnika.
+
+## <a name="defining-settings"></a>Definiowanie ustawień
+ Architektura ustawień aplikacji jest używana zarówno w ASP.NET, jak i Windows Forms i zawiera szereg klas bazowych, które są współużytkowane w obu środowiskach. Najważniejszym z nich <xref:System.Configuration.SettingsBase>jest, która zapewnia dostęp do ustawień za pomocą kolekcji i zapewnia metody niskiego poziomu do ładowania i zapisywania ustawień. Każde środowisko implementuje własną klasę pochodną od <xref:System.Configuration.SettingsBase> w celu zapewnienia dodatkowych funkcji ustawień dla tego środowiska. W aplikacji opartej na Windows Forms wszystkie ustawienia aplikacji muszą być zdefiniowane w klasie pochodzącej od <xref:System.Configuration.ApplicationSettingsBase> klasy, która dodaje następujące funkcje do klasy bazowej:
+
+- Operacje ładowania i zapisywania wyższego poziomu
+
+- Obsługa ustawień z zakresu użytkownika
+
+- Przywracanie ustawień użytkownika do wstępnie zdefiniowanych wartości domyślnych
+
+- Uaktualnianie ustawień z poprzedniej wersji aplikacji
+
+- Weryfikowanie ustawień przed ich zmianą lub przed ich zapisaniem
+
+ Ustawienia te można opisać przy użyciu wielu atrybutów zdefiniowanych <xref:System.Configuration> w przestrzeni nazw. są one opisane w obszarze [atrybuty ustawień aplikacji](application-settings-attributes.md). Podczas definiowania ustawienia, należy zastosować je z <xref:System.Configuration.ApplicationScopedSettingAttribute> lub <xref:System.Configuration.UserScopedSettingAttribute>, w tym opis, czy ustawienie ma zastosowanie do całej aplikacji, czy tylko dla bieżącego użytkownika.
+
+ Poniższy przykład kodu definiuje klasę ustawień niestandardowych z pojedynczym ustawieniem `BackgroundColor`.
+
  [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
- [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
-  
-## <a name="settings-persistence"></a>Ustawienia trwałości  
- <xref:System.Configuration.ApplicationSettingsBase> Klasy nie sam utrwalić lub załadować ustawień; tego zadania znajduje się z dostawcą ustawienia klasy, która pochodzi od klasy <xref:System.Configuration.SettingsProvider>. Jeśli klasa pochodna <xref:System.Configuration.ApplicationSettingsBase> nie określono ustawień dostawcy za pośrednictwem <xref:System.Configuration.SettingsProviderAttribute>, domyślny dostawca, a następnie <xref:System.Configuration.LocalFileSettingsProvider>, jest używany.  
-  
- System konfiguracyjny, który pierwotnie został wydany przy użyciu programu .NET Framework obsługuje, zapewniając dane konfiguracji statycznej aplikacji za pomocą komputera lokalnego pliku machine.config lub w ramach `app.`pliku exe.config, który można wdrożyć za pomocą Twoja aplikacja. <xref:System.Configuration.LocalFileSettingsProvider> Klasa rozszerza ten macierzystą obsługę w następujący sposób:  
-  
-- Ustawienia w zakresie aplikacji mogą być przechowywane w dowolnym pliku machine.config lub `app.`exe.config plików. Machine.config zawsze jest tylko do odczytu, podczas `app`. exe.config jest ograniczony przez zagadnienia dotyczące zabezpieczeń tylko do odczytu dla większości aplikacji.  
-  
-- Ustawienia z zakresu użytkownika mogą być przechowywane w `app`. exe.config plików, w którym to przypadku będą one traktowane jako statyczne ustawienia domyślne.  
-  
-- Inne niż domyślne ustawień zakresu użytkownika są przechowywane w nowym pliku *użytkownika*.config, gdzie *użytkownika* to nazwa użytkownika osoby, w trakcie wykonywania aplikacji. Można określić jako domyślną dla ustawień z zakresu użytkownika za pomocą <xref:System.Configuration.DefaultSettingValueAttribute>. Ponieważ ustawienia z zakresu użytkownika często zmieniać podczas wykonywania aplikacji `user`.config jest zawsze odczytu/zapisu.  
-  
- Wszystkie pliki konfiguracji trzy ustawienia są przechowywane w formacie XML. Element XML najwyższego poziomu dla ustawień o zakresie aplikacji jest `<appSettings>`, podczas gdy `<userSettings>` służy do ustawienia z zakresu użytkownika. `app`. Plik exe.config, który zawiera ustawienia z zakresu aplikacji i ustawień domyślnych ustawień zakresu użytkownika będzie wyglądać następująco:  
-  
-```xml  
-<?xml version="1.0" encoding="utf-8" ?>  
-<configuration>  
-    <configSections>  
-        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >  
-            <section name="WindowsApplication1.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
-        </sectionGroup>  
-        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >  
-            <section name="WindowsApplication1.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" />  
-        </sectionGroup>  
-    </configSections>  
-    <applicationSettings>  
-        <WindowsApplication1.Properties.Settings>  
-            <setting name="Cursor" serializeAs="String">  
-                <value>Default</value>  
-            </setting>  
-            <setting name="DoubleBuffering" serializeAs="String">  
-                <value>False</value>  
-            </setting>  
-        </WindowsApplication1.Properties.Settings>  
-    </applicationSettings>  
-    <userSettings>  
-        <WindowsApplication1.Properties.Settings>  
-            <setting name="FormTitle" serializeAs="String">  
-                <value>Form1</value>  
-            </setting>  
-            <setting name="FormSize" serializeAs="String">  
-                <value>595, 536</value>  
-            </setting>  
-        </WindowsApplication1.Properties.Settings>  
-    </userSettings>  
-</configuration>  
-```  
-  
- Dla definicji elementów w obrębie sekcji Ustawienia aplikacji w pliku konfiguracji, zobacz [schemat ustawień aplikacji](../../configure-apps/file-schema/application-settings-schema.md).  
-  
-### <a name="settings-bindings"></a>Ustawienia powiązań  
- Ustawienia aplikacji używa architektury powiązanie danych formularzy Windows w celu zapewnienia dwukierunkowej komunikacji aktualizacji ustawień między obiektu ustawień i składników. Jeśli używasz programu Visual Studio do tworzenie ustawień aplikacji i przypisać je do właściwości składnika te powiązania są generowane automatycznie.  
-  
- Ustawienie aplikacji można powiązać tylko z składnik, który obsługuje <xref:System.Windows.Forms.IBindableComponent> interfejsu. Również składnik musi implementować zdarzenia zmiany dla określonego powiązane właściwości lub powiadomić ustawienia aplikacji, których właściwość zmieniła się za pośrednictwem <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu. Jeśli składnik nie implementuje <xref:System.Windows.Forms.IBindableComponent> i której dokonywane jest wiązanie za pomocą programu Visual Studio, powiązane właściwości można ustawić po raz pierwszy, ale nie będzie aktualizowana. Jeśli składnik implementuje <xref:System.Windows.Forms.IBindableComponent> , ale nie pomocy technicznej właściwość zmienia się powiadomienia, powiązanie nie zostanie zaktualizowana w pliku ustawień po zmianie właściwości.  
-  
- Niektóre składniki formularzy Windows, takich jak <xref:System.Windows.Forms.ToolStripItem>, nie obsługuje ustawienia powiązania.  
-  
-### <a name="settings-serialization"></a>Ustawienia serializacji  
- Gdy <xref:System.Configuration.LocalFileSettingsProvider> należy zapisać ustawienia dysku, wykonuje następujące czynności:  
-  
-1. Używa odbicia, aby sprawdzić wszystkie właściwości zdefiniowane w Twojej <xref:System.Configuration.ApplicationSettingsBase> klasy i znajdowania tych, które są stosowane z oboma <xref:System.Configuration.ApplicationScopedSettingAttribute> lub <xref:System.Configuration.UserScopedSettingAttribute>.  
-  
-2. Serializuje właściwości na dysku. Najpierw próbuje wywołać <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> lub <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> na skojarzonej z typem <xref:System.ComponentModel.TypeConverter>. Jeśli to się nie powiedzie, używa serializacji XML zamiast tego.  
-  
-3. Określa ustawienia, które go, w której pliki na podstawie atrybutu tego ustawienia.  
-  
- W przypadku zastosowania klasy ustawienia, można użyć <xref:System.Configuration.SettingsSerializeAsAttribute> do oznaczania ustawienie binarne lub niestandardowej serializacji przy użyciu <xref:System.Configuration.SettingsSerializeAs> wyliczenia. Aby uzyskać więcej informacji na temat tworzenia własnych klas ustawień w kodzie, zobacz [jak: Tworzenie ustawień aplikacji](how-to-create-application-settings.md).  
-  
-### <a name="settings-file-locations"></a>Ustawienia lokalizacji plików  
- Lokalizacja `app`. exe.config i *użytkownika*.config pliki będą się różnić w zależności od sposobu instalowania aplikacji. W przypadku aplikacji opartych na formularzach Windows skopiować na komputer lokalny `app`. exe.config będą znajdować się w tym samym katalogu, jako katalog podstawowy aplikacji głównego pliku wykonywalnego, i *użytkownika*.config będą znajdować się w lokalizacji określonej przez <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> właściwości. Dla aplikacji zainstalowane za pomocą technologii ClickOnce, oba te pliki będą znajdować się w katalogu danych ClickOnce poniżej %InstallRoot%\Documents i ustawienia\\*username*\Local ustawienia.  
-  
- Lokalizacja przechowywania tych plików jest nieco inny, jeśli użytkownik włączył profile mobilne umożliwiającego użytkownikowi na definiowanie Windows różnych ustawień i aplikacji, jeśli użytkownik korzysta z innych komputerów w domenie. W takim przypadku zarówno aplikacji ClickOnce, jak i aplikacji ClickOnce nie będą mieć ich `app`. exe.config i *użytkownika*.config pliki przechowywane w obszarze Ustawienia i %InstallRoot%\Documents\\  *Nazwa użytkownika*\Application.  
-  
- Aby uzyskać więcej informacji na temat działania funkcji ustawień aplikacji za pomocą nowej technologii wdrażania zobacz [ClickOnce i ustawienia aplikacji](/visualstudio/deployment/clickonce-and-application-settings). Aby uzyskać więcej informacji o katalogu danych ClickOnce, zobacz [Accessing Local and Remote Data in ClickOnce Applications](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications).  
-  
-## <a name="application-settings-and-security"></a>Ustawienia aplikacji i zabezpieczeń  
- Ustawienia aplikacji są przeznaczone do pracy w trybie częściowego zaufania ograniczonym środowisku, które jest ustawieniem domyślnym dla aplikacji Windows Forms, hostowanych przez Internet lub intranet. Żadne specjalne uprawnienia, poza częściowej relacji zaufania są potrzebne do ustawień aplikacji za pomocą ustawienia domyślnego dostawcy.  
-  
- Gdy ustawienia aplikacji są używane w aplikacji ClickOnce, `user`.config plik jest przechowywany w katalogu danych ClickOnce. Rozmiar aplikacji `user`plik .config nie może przekraczać limit przydziału directory ustawić za pomocą technologii ClickOnce. Aby uzyskać więcej informacji, zobacz [ClickOnce i ustawienia aplikacji](/visualstudio/deployment/clickonce-and-application-settings).  
-  
-## <a name="custom-settings-providers"></a>Niestandardowe ustawienia dostawcy  
- W architekturze ustawienia aplikacji znajduje się tym luźne powiązanie ustawienia aplikacji klasy otoki pochodzące z <xref:System.Configuration.ApplicationSettingsBase>, i skojarzone ustawienia lub dostawców, pochodnych <xref:System.Configuration.SettingsProvider>. To skojarzenie jest zdefiniowana tylko przez <xref:System.Configuration.SettingsProviderAttribute> stosowane do klasy otoki lub jego poszczególnych właściwości. Jeśli ustawienia, dostawca nie jest jawnie określona, domyślny dostawca <xref:System.Configuration.LocalFileSettingsProvider>, jest używany. W rezultacie Ta architektura obsługuje tworzenie i używanie dostawców ustawień niestandardowych.  
-  
- Załóżmy, że chcesz tworzyć i używać `SqlSettingsProvider`, dostawcy, w której będą przechowywane wszystkie dane ustawienia w bazie danych programu Microsoft SQL Server. Twoje <xref:System.Configuration.SettingsProvider>-klasy pochodnej będą otrzymywać te informacje w jego `Initialize` metoda jako parametr typu <xref:System.Collections.Specialized.NameValueCollection?displayProperty=nameWithType>. Umożliwi wdrożenie <xref:System.Configuration.SettingsProvider.GetPropertyValues%2A> metodę, aby pobrać ustawienia z magazynu danych i <xref:System.Configuration.SettingsProvider.SetPropertyValues%2A> je zapisać. Można użyć dostawcy <xref:System.Configuration.SettingsPropertyCollection> dostarczane do <xref:System.Configuration.SettingsProvider.GetPropertyValues%2A> Aby określić nazwę właściwości, typie i zakresie, jak również wszelkie inne atrybuty ustawienia zdefiniowane dla tej właściwości.  
-  
- Twój dostawca musi implementować jedną właściwość i jedną metodę, której implementacji może nie być oczywista. <xref:System.Configuration.SettingsProvider.ApplicationName%2A> Właściwość jest abstrakcyjny właściwość <xref:System.Configuration.SettingsProvider>; programujesz powinno zwrócić następujące czynności:  
-  
+ [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]
+
+## <a name="settings-persistence"></a>Trwałość ustawień
+ Klasa nie sama sama lub nie ładuje ustawień. to zadanie jest przeznaczone dla dostawcy ustawień, klasy, która pochodzi od <xref:System.Configuration.SettingsProvider>. <xref:System.Configuration.ApplicationSettingsBase> Jeśli klasa pochodna programu <xref:System.Configuration.ApplicationSettingsBase> nie określi dostawcy ustawień <xref:System.Configuration.SettingsProviderAttribute>za pomocą programu, zostanie użyty domyślny dostawca <xref:System.Configuration.LocalFileSettingsProvider>.
+
+ System konfiguracyjny, który pierwotnie wydano w .NET Framework, obsługuje dostarczanie statycznych danych konfiguracyjnych aplikacji za pomocą pliku Machine. config komputera lokalnego lub w `app.`pliku exe. config, który jest wdrażany za pomocą Twoja aplikacja. <xref:System.Configuration.LocalFileSettingsProvider> Klasa rozszerza tę natywną obsługę w następujący sposób:
+
+- Ustawienia o zakresie aplikacji mogą być przechowywane w plikach Machine. config lub `app.`exe. config. Plik Machine. config jest zawsze tylko do odczytu, `app`natomiast plik. exe. config jest ograniczony przez zagadnienia dotyczące zabezpieczeń tylko do odczytu dla większości aplikacji.
+
+- Ustawienia o zakresie użytkownika mogą być przechowywane w `app`plikach. exe. config, w takim przypadku są one traktowane jako statyczne wartości domyślne.
+
+- Ustawienia z zakresu użytkownika inne niż domyślne są przechowywane w nowym pliku, *User*. config, gdzie *użytkownik* jest nazwą użytkownika osoby, która aktualnie wykonuje aplikację. Wartość domyślną dla ustawienia zakresu użytkownika można określić za pomocą <xref:System.Configuration.DefaultSettingValueAttribute>. Ponieważ ustawienia o zakresie użytkownika często zmieniają się podczas wykonywania aplikacji, `user`plik. config ma zawsze odczyt/zapis.
+
+ Wszystkie trzy pliki konfiguracji przechowują ustawienia w formacie XML. Element XML najwyższego poziomu dla ustawień o zakresie aplikacji ma wartość `<appSettings>`, natomiast `<userSettings>` jest używany dla ustawień z zakresu użytkownika. Plik `app`. exe. config, który zawiera ustawienia dotyczące zakresu aplikacji i ustawienia domyślne dla ustawień o zakresie użytkownika, będzie wyglądać następująco:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="WindowsApplication1.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        </sectionGroup>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="WindowsApplication1.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" />
+        </sectionGroup>
+    </configSections>
+    <applicationSettings>
+        <WindowsApplication1.Properties.Settings>
+            <setting name="Cursor" serializeAs="String">
+                <value>Default</value>
+            </setting>
+            <setting name="DoubleBuffering" serializeAs="String">
+                <value>False</value>
+            </setting>
+        </WindowsApplication1.Properties.Settings>
+    </applicationSettings>
+    <userSettings>
+        <WindowsApplication1.Properties.Settings>
+            <setting name="FormTitle" serializeAs="String">
+                <value>Form1</value>
+            </setting>
+            <setting name="FormSize" serializeAs="String">
+                <value>595, 536</value>
+            </setting>
+        </WindowsApplication1.Properties.Settings>
+    </userSettings>
+</configuration>
+```
+
+ Aby zapoznać się z definicją elementów w sekcji Ustawienia aplikacji w pliku konfiguracji, zobacz [Schemat ustawień aplikacji](../../configure-apps/file-schema/application-settings-schema.md).
+
+### <a name="settings-bindings"></a>Powiązania ustawień
+ Ustawienia aplikacji używają architektury powiązań danych Windows Forms w celu zapewnienia dwukierunkowej komunikacji między ustawieniami ustawień a obiektem ustawień. Jeśli używasz programu Visual Studio do tworzenia ustawień aplikacji i przypisywania ich do właściwości składników, te powiązania są generowane automatycznie.
+
+ Ustawienie aplikacji można powiązać tylko ze składnikiem, który obsługuje <xref:System.Windows.Forms.IBindableComponent> interfejs. Ponadto składnik musi zaimplementować zdarzenie zmiany dla konkretnej powiązanej właściwości lub Powiadom ustawienia aplikacji, że właściwość została zmieniona za pomocą <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu. Jeśli składnik nie zostanie zaimplementowany <xref:System.Windows.Forms.IBindableComponent> i masz powiązanie za pomocą programu Visual Studio, właściwości powiązane zostaną ustawione po raz pierwszy, ale nie zostaną zaktualizowane. Jeśli składnik implementuje <xref:System.Windows.Forms.IBindableComponent> , ale nie obsługuje powiadomień o zmianach właściwości, powiązanie nie zostanie zaktualizowane w pliku ustawień, gdy właściwość zostanie zmieniona.
+
+ Niektóre składniki Windows Forms, takie jak <xref:System.Windows.Forms.ToolStripItem>, nie obsługują powiązań ustawień.
+
+### <a name="settings-serialization"></a>Serializacja ustawień
+ Gdy <xref:System.Configuration.LocalFileSettingsProvider> program musi zapisać ustawienia na dysku, wykonuje następujące czynności:
+
+1. Używa odbicia, aby przejrzeć wszystkie właściwości zdefiniowane w <xref:System.Configuration.ApplicationSettingsBase> klasie pochodnej, wyszukując te, które są stosowane <xref:System.Configuration.ApplicationScopedSettingAttribute> z lub <xref:System.Configuration.UserScopedSettingAttribute>.
+
+2. Serializować właściwość na dysk. Najpierw próbuje wywołać <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> lub <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> na skojarzonym <xref:System.ComponentModel.TypeConverter>typie. Jeśli to się nie powiedzie, zamiast tego używa serializacji XML.
+
+3. Określa, które Ustawienia przejdź do plików, na podstawie atrybutu ustawienia.
+
+ W przypadku zaimplementowania własnej klasy ustawień można użyć <xref:System.Configuration.SettingsSerializeAsAttribute> do oznaczenia ustawienia dla serializacji binarnej lub niestandardowej <xref:System.Configuration.SettingsSerializeAs> przy użyciu wyliczenia. Aby uzyskać więcej informacji na temat tworzenia własnych klas ustawień w kodzie, [zobacz How to: Utwórz ustawienia](how-to-create-application-settings.md)aplikacji.
+
+### <a name="settings-file-locations"></a>Lokalizacje plików ustawień
+ Lokalizacja `app`plików exe. config i *User*. config różni się w zależności od sposobu instalowania aplikacji. W przypadku aplikacji opartej na Windows Forms skopiowanej na komputer `app`lokalny plik. exe. config będzie znajdować się w tym samym katalogu, co katalog podstawowy głównego pliku wykonywalnego aplikacji, a *User*. config będzie znajdować się w lokalizacji określonej przez <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> właściwość. W przypadku aplikacji zainstalowanej za pomocą technologii ClickOnce oba te pliki będą znajdować się w katalogu danych ClickOnce poniżej%InstallRoot%\Documents i ustawienia\\*username*\Ustawienia Settings.
+
+ Lokalizacja przechowywania tych plików jest nieco inna, jeśli użytkownik włączył profile mobilne, dzięki czemu użytkownik może zdefiniować różne ustawienia systemu Windows i aplikacji, gdy używa innych komputerów w domenie. W takim przypadku zarówno aplikacje ClickOnce, jak i aplikacje inne niż ClickOnce będą mieć `app`pliki. exe. config i *User*. config przechowywane w obszarze%InstallRoot%\Documents i\\Settings*username*\Dane dane.
+
+ Aby uzyskać więcej informacji o tym, jak funkcja ustawienia aplikacji współpracuje z nową technologią wdrażania, zobacz [ustawienia technologii ClickOnce i aplikacji](/visualstudio/deployment/clickonce-and-application-settings). Aby uzyskać więcej informacji na temat katalogu danych ClickOnce, zobacz [dostęp do danych lokalnych i zdalnych w aplikacjach ClickOnce](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications).
+
+## <a name="application-settings-and-security"></a>Ustawienia i zabezpieczenia aplikacji
+ Ustawienia aplikacji są przeznaczone do pracy w częściowej relacji zaufania, czyli środowiska z ograniczeniami, które jest domyślnie przeznaczone dla aplikacji Windows Forms hostowanych przez Internet lub intranet. Nie są konieczne żadne specjalne uprawnienia poza częściową relacją zaufania, aby użyć ustawień aplikacji z domyślnym dostawcą ustawień.
+
+ Gdy ustawienia aplikacji są używane w aplikacji ClickOnce, `user`plik. config jest przechowywany w katalogu danych ClickOnce. Rozmiar pliku `user`. config aplikacji nie może przekroczyć limitu przydziału katalogu danych określonego przez ClickOnce. Aby uzyskać więcej informacji, zobacz [ustawienia technologii ClickOnce i aplikacji](/visualstudio/deployment/clickonce-and-application-settings).
+
+## <a name="custom-settings-providers"></a>Dostawcy ustawień niestandardowych
+ W architekturze ustawień aplikacji istnieje luźny sprzężenie między klasą otoki ustawień aplikacji, pochodną <xref:System.Configuration.ApplicationSettingsBase>od i dostawcami powiązanych ustawień lub dostawcy, pochodnymi <xref:System.Configuration.SettingsProvider>od. To skojarzenie jest zdefiniowane tylko przez <xref:System.Configuration.SettingsProviderAttribute> zastosowany do klasy otoki lub jej poszczególnych właściwości. Jeśli dostawca ustawień nie został jawnie określony, używany jest domyślny dostawca <xref:System.Configuration.LocalFileSettingsProvider>. W efekcie ta architektura obsługuje tworzenie i używanie dostawców ustawień niestandardowych.
+
+ Załóżmy na przykład, że chcesz utworzyć i użyć `SqlSettingsProvider`dostawcy, który będzie przechowywać wszystkie dane ustawień w Microsoft SQL Server bazie danych. Klasa pochodna otrzyma te informacje w swojej `Initialize` metodzie jako parametr typu <xref:System.Collections.Specialized.NameValueCollection?displayProperty=nameWithType>. <xref:System.Configuration.SettingsProvider> Następnie należy zaimplementować <xref:System.Configuration.SettingsProvider.GetPropertyValues%2A> metodę w celu pobrania ustawień z magazynu danych i <xref:System.Configuration.SettingsProvider.SetPropertyValues%2A> zapisania ich. Dostawca może użyć <xref:System.Configuration.SettingsPropertyCollection> dostarczonych do <xref:System.Configuration.SettingsProvider.GetPropertyValues%2A> , aby określić nazwę, typ i zakres właściwości, a także inne atrybuty ustawień zdefiniowane dla tej właściwości.
+
+ Dostawca będzie musiał zaimplementować jedną właściwość i jedną metodę, której implementacje mogą nie być oczywiste. Właściwość jest właściwością abstrakcyjną; należy ją zaprogramować, aby zwracała następujące elementy: <xref:System.Configuration.SettingsProvider> <xref:System.Configuration.SettingsProvider.ApplicationName%2A>
+
  [!code-csharp[ApplicationSettings.Architecture#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
- [!code-vb[ApplicationSettings.Architecture#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
-  
- Klasy pochodnej musi implementować też `Initialize` metodę, która nie przyjmuje żadnych argumentów i nie zwraca żadnej wartości. Ta metoda nie jest zdefiniowany przez <xref:System.Configuration.SettingsProvider>.  
-  
- Na koniec należy zaimplementować <xref:System.Configuration.IApplicationSettingsProvider> na Twój dostawca w celu zapewnienia obsługi odświeżanie ustawień przywrócenie ustawień domyślnych i aktualizowanie ustawień z wersji jednej aplikacji na inny.  
-  
- Po zaimplementowane i kompilowane dostawcy należy wydać polecenie klasy ustawienia do używania tego dostawcy zamiast domyślnego. Osiągniesz to za pośrednictwem <xref:System.Configuration.SettingsProviderAttribute>. Zastosowanie do całej klasy ustawień dostawcy jest używany dla każdego ustawienia, który definiuje klasę; Jeśli stosowane do poszczególnych ustawień, architektura ustawień aplikacji używa tego dostawcy tylko do tych ustawień i używa <xref:System.Configuration.LocalFileSettingsProvider> przez resztę. W poniższym przykładzie kodu pokazano, jak nakazać Klasa ustawień, aby użyć niestandardowego dostawcy.  
-  
+ [!code-vb[ApplicationSettings.Architecture#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]
+
+ Klasa pochodna musi również implementować `Initialize` metodę, która nie przyjmuje argumentów i nie zwraca żadnej wartości. Ta metoda nie jest definiowana przez <xref:System.Configuration.SettingsProvider>.
+
+ Na koniec należy wdrożyć <xref:System.Configuration.IApplicationSettingsProvider> na swoim dostawcy, aby zapewnić obsługę odświeżania ustawień, przywrócenie ustawień domyślnych i uaktualnienie ustawień z jednej wersji aplikacji do innej.
+
+ Po zaimplementowaniu i skompilowaniu dostawcy należy poinstruować klasę ustawień, aby używała tego dostawcy zamiast domyślnego. Można to zrobić za pomocą <xref:System.Configuration.SettingsProviderAttribute>. W przypadku zastosowania do całej klasy ustawień dostawca jest używany dla każdego ustawienia, które definiuje Klasa; w przypadku zastosowania do poszczególnych ustawień Architektura ustawień aplikacji używa tego dostawcy tylko dla tych ustawień i używa <xref:System.Configuration.LocalFileSettingsProvider> dla reszty. Poniższy przykład kodu pokazuje, jak nakazać klasie ustawień użycie dostawcy niestandardowego.
+
  [!code-csharp[ApplicationSettings.Architecture#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
- [!code-vb[ApplicationSettings.Architecture#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
-  
- Dostawca może być wywoływana z wielu wątków jednocześnie, ale zawsze będzie zapisywać w tej samej lokalizacji magazynu; w związku z tym Architektura ustawień aplikacji będzie tylko tworzy pojedyncze wystąpienie klasy dostawcy.  
-  
+ [!code-vb[ApplicationSettings.Architecture#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]
+
+ Dostawca może być wywoływany z wielu wątków jednocześnie, ale zawsze będzie zapisywać w tej samej lokalizacji magazynu; w związku z tym Architektura ustawień aplikacji będzie kiedykolwiek tworzyć wystąpienie tylko jednego wystąpienia klasy dostawcy.
+
 > [!IMPORTANT]
->  Należy upewnić się, Twój dostawca jest bezpieczna dla wątków i może składać się jednemu wątkowi w czasie do zapisu do plików konfiguracji.  
-  
- Twój dostawca musi obsługiwać wszystkie ustawienia zdefiniowane atrybuty w <xref:System.Configuration?displayProperty=nameWithType> przestrzeni nazw, chociaż jest to wymagane na minimalna obsługa <xref:System.Configuration.ApplicationScopedSettingAttribute> i <xref:System.Configuration.UserScopedSettingAttribute>i powinien obsługiwać <xref:System.Configuration.DefaultSettingValueAttribute>. Te atrybuty, które nie obsługuje Twój dostawca powinna po prostu zakończyć się niepowodzeniem bez powiadomienia; nie należy go zgłosić wyjątek. Jeśli klasa ustawień korzysta z nieprawidłową kombinację atrybutów, jednak — takich jak stosowanie <xref:System.Configuration.ApplicationScopedSettingAttribute> i <xref:System.Configuration.UserScopedSettingAttribute> takie samo ustawienie — dostawcy należy zgłosić wyjątek i zaprzestanie działania.  
-  
+>  Należy upewnić się, że dostawca jest bezpieczny dla wątków i zezwala tylko jednemu wątkowi na zapisywanie w plikach konfiguracji.
+
+ Dostawca nie musi obsługiwać wszystkich <xref:System.Configuration?displayProperty=nameWithType> atrybutów ustawień zdefiniowanych w przestrzeni nazw, chociaż musi mieć minimalną pomoc techniczną <xref:System.Configuration.ApplicationScopedSettingAttribute> i <xref:System.Configuration.UserScopedSettingAttribute>, i powinien również obsługiwać <xref:System.Configuration.DefaultSettingValueAttribute>. Dla tych atrybutów, które nie są obsługiwane, dostawca powinien po prostu kończyć się niepowodzeniem bez powiadomienia; nie powinna zgłosić wyjątku. Jeśli jednak Klasa Settings używa nieprawidłowej kombinacji atrybutów, takie jak zastosowanie <xref:System.Configuration.ApplicationScopedSettingAttribute> i <xref:System.Configuration.UserScopedSettingAttribute> do tego samego ustawienia — dostawca powinien zgłosić wyjątek i zakończyć operację.
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Configuration.ApplicationSettingsBase>

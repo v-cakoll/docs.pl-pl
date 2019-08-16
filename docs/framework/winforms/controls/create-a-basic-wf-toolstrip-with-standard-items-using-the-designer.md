@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie podstawowy Windows Forms ToolStrip z elementami standardowymi przy użyciu narzędzia Projektant'
+title: 'Instrukcje: Tworzenie podstawowego elementu ToolStrip Windows Forms za pomocą elementów standardowych przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating
@@ -7,27 +7,24 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: df6fe22eef338732c14d6f1ff56f25e6d1aa8a2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b205aee6df537fdeafd14a98869fb23ce972011
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011446"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039972"
 ---
-# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Instrukcje: Tworzenie podstawowy Windows Forms ToolStrip z elementami standardowymi przy użyciu narzędzia Projektant
-Poniższa procedura przedstawia sposób tworzenia <xref:System.Windows.Forms.ToolStrip> i Dodaj siedem <xref:System.Windows.Forms.ToolStripButton> formantów, które reprezentują typowych zadań.  
-  
-> [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-add-standard-items-in-the-designer"></a>Aby dodać elementy standardowe w Projektancie  
-  
-1. Utwórz <xref:System.Windows.Forms.ToolStrip> kontroli.  
-  
-2. W prawym górnym rogu <xref:System.Windows.Forms.ToolStrip>, kliknij strzałkę inteligentne zadań, aby wyświetlić **ToolStrip — zadania** okienka.  
-  
-3. W **ToolStrip — zadania** okienku wybierz **Wstaw elementy standardowe**.  
-  
+# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Instrukcje: Tworzenie podstawowego elementu ToolStrip Windows Forms za pomocą elementów standardowych przy użyciu narzędzia Projektant
+Poniższa procedura pokazuje, jak utworzyć <xref:System.Windows.Forms.ToolStrip> i dodać siedem <xref:System.Windows.Forms.ToolStripButton> kontrolek, które reprezentują typowe zadania.
+
+## <a name="to-add-standard-items-in-the-designer"></a>Aby dodać elementy standardowe do projektanta
+
+1. <xref:System.Windows.Forms.ToolStrip> Utwórz formant.
+
+2. W prawym górnym rogu <xref:System.Windows.Forms.ToolStrip>, kliknij strzałkę zadania inteligentnego, aby wyświetlić okienko **zadania ToolStrip** .
+
+3. W okienku **zadania ToolStrip** wybierz pozycję **Wstaw elementy standardowe**.
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.ToolStrip>

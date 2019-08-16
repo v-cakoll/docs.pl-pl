@@ -6,58 +6,55 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 51e18555a322e32f0877167d42cd30776068c746
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011731"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040033"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Instrukcje: wiązanie danych z kontrolką DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
-Projektant umożliwia łączenie <xref:System.Windows.Forms.DataGridView> kontrolki źródła danych na kilka różnych odmian, w tym baz danych, obiekty biznesowe lub usług sieci Web. Gdy powiąże formant ze źródłem danych przy użyciu narzędzia Projektant kontrolki zostanie automatycznie powiązany <xref:System.Windows.Forms.BindingSource> składnik, który reprezentuje źródło danych. Ponadto kolumny są automatycznie generowane w formancie do dopasowania informacji o schemacie, dostarczone przez źródło danych.  
-  
- Od wygenerowania kolumn, można zmodyfikować je stosownie do potrzeb. Na przykład, usuń lub ukrywanie kolumn nie jest w trakcie wyświetlania, można zmienić kolejność kolumn lub zmodyfikować typy kolumn. Aby uzyskać więcej informacji na temat modyfikowania kolumn zobacz tematy wymienione w sekcji Zobacz też.  
-  
- Możesz również powiązać wiele <xref:System.Windows.Forms.DataGridView> kontrolek w tabelach pokrewnych w celu utworzenia relacji wzorzec/szczegół. W tej konfiguracji jeden formant Wyświetla tabelę nadrzędną, a inny formant wyświetli tylko wiersze z tabeli podrzędnej that are related to bieżący wiersz w tabeli nadrzędnej. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie powiązanych danych w Windows Forms aplikacji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120)).  
-  
- Poniższa procedura wymaga **aplikacji Windows** projektu za pomocą formularza, który zawiera <xref:System.Windows.Forms.DataGridView> dwie kontrolki dla relacji wzorzec/szczegół. Aby uzyskać informacji o uruchamianiu taki projekt, zobacz [jak: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) i [jak: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md).  
-  
-> [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-bind-the-control-to-a-data-source"></a>Aby powiązać formant ze źródłem danych  
-  
-1. Kliknij symbol tagu inteligentnego (![symbol tagu inteligentnego](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) w prawym górnym rogu <xref:System.Windows.Forms.DataGridView> kontroli.  
-  
-2. Kliknij strzałkę listy rozwijanej dla **wybierz źródło danych** opcji.  
-  
-3. Jeśli projekt nie ma źródła danych, kliknij przycisk **Dodaj źródło danych projektu** i postępuj zgodnie z instrukcjami, wskazane przez kreatora.  
-  
-     Aby uzyskać więcej informacji, zobacz [Kreatora konfiguracji źródła danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120)). Nowego źródła danych będą wyświetlane w **wybierz źródło danych** okna listy rozwijanej. Jeśli nowe źródło danych zawiera tylko jednego członka, takiego jak tabela pojedynczej bazy danych, formant będzie automatycznie wiązany tego członka. W przeciwnym razie przejdź do następnego kroku.  
-  
-4. Rozwiń **innych źródeł danych** i **zdroje dat projektu** węzłów, jeśli nie są jeszcze rozwinięte, a następnie wybierz źródło danych, aby powiązać formant.  
-  
-5. Jeśli źródło danych zawiera więcej niż jeden element członkowski, np. Jeśli utworzono <xref:System.Data.DataSet?displayProperty=nameWithType> zawierający wiele tabel, rozwiń węzeł źródła danych, a następnie wybierz określonego członka, aby powiązać.  
-  
-6. Aby tworzenie relacji wzorzec/szczegół w **wybierz źródło danych** okna listy rozwijanej na sekundę <xref:System.Windows.Forms.DataGridView> sterowania, a następnie rozwiń <xref:System.Windows.Forms.BindingSource> utworzone dla tabeli nadrzędnej, a następnie wybierz pokrewnej tabeli podrzędnej na liście wyświetlane.  
-  
+Za pomocą projektanta można połączyć <xref:System.Windows.Forms.DataGridView> kontrolę ze źródłami danych różnych odmian, w tym bazami danych, obiektami biznesowymi lub usługami sieci Web. Po powiązaniu formantu ze źródłem danych przy użyciu projektanta, formant jest automatycznie powiązany ze <xref:System.Windows.Forms.BindingSource> składnikiem, który reprezentuje źródło danych. Ponadto kolumny są generowane automatycznie w formancie, aby odpowiadały informacje o schemacie dostarczone przez źródło danych.
+
+ Po wygenerowaniu kolumn można je zmodyfikować, aby spełniały Twoje potrzeby. Na przykład można usunąć lub ukryć kolumny, które nie są wyświetlane, można zmienić ich rozmieszczenie lub można zmodyfikować typy kolumn. Aby uzyskać więcej informacji na temat modyfikowania kolumn, zobacz tematy wymienione w sekcji Zobacz też.
+
+ Można również powiązać wiele <xref:System.Windows.Forms.DataGridView> formantów z powiązanymi tabelami, aby utworzyć relacje wzorzec/szczegóły. W tej konfiguracji jedna kontrolka Wyświetla tabelę nadrzędną, a inna kontrolka wyświetla tylko te wiersze z tabeli podrzędnej, które są powiązane z bieżącym wierszem w tabeli nadrzędnej. Aby uzyskać więcej informacji, zobacz [jak: Wyświetl powiązane dane w aplikacji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))Windows Forms.
+
+ Poniższa procedura wymaga projektu **aplikacji systemu Windows** z formularzem zawierającym <xref:System.Windows.Forms.DataGridView> kontrolkę lub dwie kontrolki dla relacji wzorzec/szczegóły. Aby uzyskać informacje o uruchamianiu takiego projektu, [zobacz How to: Utwórz projekt](/visualstudio/ide/step-1-create-a-windows-forms-application-project) aplikacji Windows Forms i [instrukcje: Dodaj formanty do Windows Forms](how-to-add-controls-to-windows-forms.md).
+
+## <a name="to-bind-the-control-to-a-data-source"></a>Aby powiązać formant ze źródłem danych
+
+1. Kliknij symbol taga inteligentnego (![tag inteligentny](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) w prawym górnym <xref:System.Windows.Forms.DataGridView> rogu kontrolki.
+
+2. Kliknij strzałkę listy rozwijanej dla opcji **Wybierz źródło danych** .
+
+3. Jeśli projekt nie ma jeszcze źródła danych, kliknij przycisk **Dodaj źródło danych projektu** i postępuj zgodnie z instrukcjami podanymi przez kreatora.
+
+     Aby uzyskać więcej informacji, zobacz [Kreator konfiguracji źródła danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120)). Nowe źródło danych pojawi się w oknie listy rozwijanej **Wybierz źródło danych** . Jeśli nowe źródło danych zawiera tylko jeden element członkowski, taki jak tabela pojedynczej bazy danych, formant zostanie automatycznie powiązany z tym elementem członkowskim. W przeciwnym razie przejdź do następnego kroku.
+
+4. Rozwiń węzły **inne źródła danych** i **źródła danych projektu** , jeśli nie zostały jeszcze rozwinięte, a następnie wybierz źródło danych, z którym chcesz powiązać formant.
+
+5. Jeśli źródło danych zawiera więcej niż jeden element członkowski, na przykład jeśli utworzono <xref:System.Data.DataSet?displayProperty=nameWithType> , który zawiera wiele tabel, rozwiń źródło danych, a następnie wybierz konkretny element członkowski, z którym ma zostać utworzone powiązanie.
+
+6. Aby utworzyć relację wzorzec/szczegóły, w oknie listy rozwijanej **Wybierz źródło danych** dla drugiej <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.BindingSource> kontrolki rozwiń węzeł utworzony dla tabeli nadrzędnej, a następnie wybierz powiązaną tabelę podrzędną z wyświetlonej listy.
+
     > [!NOTE]
-    >  Jeśli projekt zawiera już źródło danych, można również użyć **źródeł danych** okna, aby utworzyć formularz danych. Aby uzyskać więcej informacji, zobacz [okna źródeł danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120)).  
-  
+    >  Jeśli projekt ma już źródło danych, możesz również użyć okna **źródła danych** , aby utworzyć formularz danych. Aby uzyskać więcej informacji, zobacz [okno źródła danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120)).
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
-- [Instrukcje: Łączenie z danymi w bazie danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
-- [Instrukcje: Dodawanie i usuwanie kolumn w formancie DataGridView formularzy Windows przy użyciu narzędzia Projektant](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [Instrukcje: Zmienianie kolejności kolumn w formancie DataGridView formularzy Windows przy użyciu narzędzia Projektant](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
-- [Instrukcje: Zmień typ kolumny formantu DataGridView formularzy Windows przy użyciu narzędzia Projektant](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
-- [Instrukcje: Blokowanie kolumn w formancie DataGridView formularzy Windows przy użyciu narzędzia Projektant](freeze-columns-in-the-datagrid-using-the-designer.md)
-- [Instrukcje: Ukrywanie kolumn w formancie DataGridView formularzy Windows przy użyciu narzędzia Projektant](hide-columns-in-the-datagrid-using-the-designer.md)
-- [Instrukcje: Nadawanie kolumnom w trybie tylko do odczytu w formancie DataGridView formularzy Windows przy użyciu narzędzia Projektant](make-columns-read-only-in-the-datagrid-using-the-designer.md)
-- [Instrukcje: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Instrukcje: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Instrukcje: Nawiązywanie połączenia z danymi w bazie danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
+- [Instrukcje: Dodawanie i usuwanie kolumn w kontrolce DataGridView Windows Forms przy użyciu narzędzia Projektant](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [Instrukcje: Zmiana kolejności kolumn w kontrolce DataGridView Windows Forms przy użyciu narzędzia Projektant](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
+- [Instrukcje: Zmienianie typu Windows Forms kolumnie DataGridView przy użyciu narzędzia Projektant](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
+- [Instrukcje: Zablokuj kolumny w kontrolce DataGridView Windows Forms przy użyciu narzędzia Projektant](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [Instrukcje: Ukrywanie kolumn w kontrolce DataGridView Windows Forms przy użyciu narzędzia Projektant](hide-columns-in-the-datagrid-using-the-designer.md)
+- [Instrukcje: Ustaw kolumny jako tylko do odczytu w kontrolce DataGridView Windows Forms przy użyciu narzędzia Projektant](make-columns-read-only-in-the-datagrid-using-the-designer.md)
+- [Instrukcje: Tworzenie projektu aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Instrukcje: Dodawanie formantów do Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [Okno źródeł danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
 - [Instrukcje: Wyświetlanie powiązanych danych w aplikacji Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))

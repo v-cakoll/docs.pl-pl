@@ -2,7 +2,8 @@
 title: 'Instrukcje: Obsługa międzyoperacyjności modelu COM za pomocą wyświetlania każdego formularza systemu Windows w jego własnym wątku'
 ms.date: 03/30/2017
 dev_langs:
-- vb
+- CSharp
+- VB
 helpviewer_keywords:
 - COM interop [Windows Forms], Windows Forms
 - COM [Windows Forms]
@@ -10,45 +11,47 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: f158cf71f69ed3221dcaf7d3abbe495cf818638b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 90bbd7df45424f8513598e9d7439d8ae6bf6f52c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593188"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040310"
 ---
-# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Instrukcje: Obsługa międzyoperacyjności modelu COM za pomocą wyświetlania każdego formularza systemu Windows w jego własnym wątku
-Można rozwiązać problemy ze współdziałaniem COM za pomocą wyświetlania formularza w pętli komunikatów .NET Framework, który można utworzyć za pomocą <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> metody.  
-  
- Aby dzieło formularza Windows poprawnie z modelu COM aplikacji klienckiej, należy uruchomić formularza na pętli komunikatów Windows Forms. Aby to zrobić, użyj jednej z następujących metod:  
-  
-- Użyj <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> metodę w celu wyświetlenia formularza Windows. Aby uzyskać więcej informacji, zobacz [jak: Obsługa międzyoperacyjności modelu COM za pomocą wyświetlania formularza Windows, za pomocą metody ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md).  
-  
-- Wyświetlania każdego formularza Windows w oddzielnym wątku.  
-  
- Brak zaawansowaną obsługę dla tej funkcji w programie Visual Studio.  
-  
- Zobacz też [instruktażu: Obsługiwanie COM Interop poprzez wyświetlanie każdego formularzu Windows w jego własnym wątku](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100)).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład kodu demonstruje sposób wyświetlania formularza w oddzielnym wątku i wywołania <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> metodę, aby uruchomić pompy komunikatów formularzy Windows w tym wątku. Aby użyć tej metody, należy kierować wszelkie wywołania do formularza z niezarządzanych aplikacji przy użyciu <xref:System.Windows.Forms.Control.Invoke%2A> metody.  
-  
- Takie podejście wymaga każde wystąpienie formularza działa przy użyciu własnej pętli komunikatów w jego własnym wątku. Nie może mieć więcej niż jeden pętli komunikatów uruchomiona na wątek. W związku z tym nie można zmienić pętli komunikatów dla aplikacji klienckiej. Jednakże można zmodyfikować składnik .NET Framework, można rozpocząć nowego wątku, która używa pętli komunikatów dla własnej.  
-  
- [!code-vb[System.Windows.Forms.ComInterop#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/COMForm.vb#1)]  
-  
- [!code-vb[System.Windows.Forms.ComInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/FormManager.vb#10)]  
-  
- [!code-vb[System.Windows.Forms.ComInterop#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/Form1.vb#100)]  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
-  
-- Skompilować `COMForm`, `Form1`, i `FormManager` typów w zestawie o nazwie `COMWinform.dll`. Zarejestrować zestaw do współdziałania z modelem COM przy użyciu jednej z metod opisanych w [pakowanie zestawu dla modelu COM](../../interop/packaging-an-assembly-for-com.md). Można teraz używać zestawu i jego odpowiedni plik biblioteki (.tlb) typu w aplikacjach niezarządzanych. Na przykład można użyć biblioteki typów jako odwołania w projekcie języka Visual Basic 6.0 pliku wykonywalnego.  
-  
+# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Instrukcje: Obsługa międzyoperacyjności modelu COM przez wyświetlanie każdego formularza systemu Windows w jego własnym wątku
+
+Problemy ze współdziałaniem modelu COM można rozwiązać, wyświetlając formularz w pętli .NET Framework komunikatów, którą można utworzyć za pomocą <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> metody.
+
+Aby formularz systemu Windows działał prawidłowo z aplikacji klienckiej modelu COM, należy uruchomić formularz w pętli komunikatów Windows Forms. W tym celu należy użyć jednej z następujących metod:
+
+- <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> Użyj metody, aby wyświetlić formularz systemu Windows. Aby uzyskać więcej informacji, zobacz [jak: Obsługa międzyoperacyjności modelu COM przez wyświetlanie formularza systemu Windows przy](com-interop-by-displaying-a-windows-form-shadow.md)użyciu metody ShowDialog.
+
+- Wyświetl Każdy formularz systemu Windows w osobnym wątku.
+
+W programie Visual Studio jest dostępna szeroka obsługa tej funkcji.
+
+Zobacz [również przewodnik: Obsługa międzyoperacyjności modelu COM przez wyświetlanie każdego formularza systemu Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100))w jego własnym wątku.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład kodu pokazuje, jak wyświetlić formularz w osobnym wątku i wywołać <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> metodę, aby uruchomić Windows Forms pompę komunikatów na tym wątku. Aby użyć tej metody, należy zorganizować wszystkie wywołania formularza z niezarządzanej aplikacji za pomocą <xref:System.Windows.Forms.Control.Invoke%2A> metody.
+
+Takie podejście wymaga, aby każde wystąpienie formularza było uruchamiane we własnym wątku przy użyciu własnej pętli komunikatów. Na wątek nie może być uruchomiona więcej niż jedna pętla komunikatów. W związku z tym nie można zmienić pętli komunikatów aplikacji klienta. Można jednak zmodyfikować składnik .NET Framework, aby uruchomić nowy wątek, który używa własnej pętli komunikatów.
+
+[!code-vb[System.Windows.Forms.ComInterop#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/COMForm.vb#1)]
+
+[!code-vb[System.Windows.Forms.ComInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/FormManager.vb#10)]
+
+[!code-vb[System.Windows.Forms.ComInterop#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/Form1.vb#100)]
+
+## <a name="compile-the-code"></a>Skompilować kod
+
+`COMForm`Skompiluj, `Form1`, `COMWinform.dll`i `FormManager` , do zestawu o nazwie. Zarejestrowanie zestawu dla współdziałania z modelem COM przy użyciu jednej z metod opisanych w pakiecie [pakowanie zestawu dla modelu COM](../../interop/packaging-an-assembly-for-com.md). Teraz można używać zestawu i odpowiedniego pliku biblioteki typów (TLB) w aplikacjach niezarządzanych. Można na przykład użyć biblioteki typów jako odniesienia w projekcie wykonywalnym Visual Basic 6,0.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Udostępnianie składników .NET Framework modelowi COM](../../interop/exposing-dotnet-components-to-com.md)
 - [Pakowanie zestawu dla modelu COM](../../interop/packaging-an-assembly-for-com.md)
 - [Rejestrowanie zestawów do użycia z modelem COM](../../interop/registering-assemblies-with-com.md)
-- [Instrukcje: Obsługa międzyoperacyjności modelu COM za pomocą wyświetlania formularza Windows, za pomocą ShowDialog — metoda](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Instrukcje: Obsługa międzyoperacyjności modelu COM przez wyświetlanie formularza systemu Windows przy użyciu metody ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
 - [Przegląd formularzy Windows Forms i niezarządzanych aplikacji](windows-forms-and-unmanaged-applications-overview.md)

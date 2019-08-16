@@ -1,17 +1,17 @@
 ---
-title: ICorDebugMutableDataTarget::SetThreadContext Method
+title: 'ICorDebugMutableDataTarget:: SetThreadContext —, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6629af393eeadb68292f8f2360ecb60c09a0cd03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21a24b3ae3563db09f1f7e9229f388abf8de654c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764615"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038315"
 ---
-# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>ICorDebugMutableDataTarget::SetThreadContext Method
+# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>ICorDebugMutableDataTarget:: SetThreadContext —, Metoda
 Ustawia kontekst (wartości rejestru) dla wątku.  
   
 ## <a name="syntax"></a>Składnia  
@@ -24,25 +24,25 @@ HRESULT SetThreadContext(
   
 ## <a name="parameters"></a>Parametry  
  `dwThreadID`  
- [in] Identyfikator wątku zdefiniowaną przez system operacyjny.  
+ podczas Identyfikator wątku zdefiniowanego przez system operacyjny.  
   
  `contextSize`  
- [in] Rozmiar `pContext` bufor do zapisania.  
+ podczas Rozmiar `pContext` buforu, który ma zostać zapisany.  
   
  `pContext`  
- [in] Wskaźnik do bajtów do zapisania.  
+ podczas Wskaźnik do bajtów do zapisania.  
   
 ## <a name="remarks"></a>Uwagi  
- `SetThreadContext` Metody aktualizacji bieżący kontekst wątku określonego przez system operacyjny zdefiniowane `dwThreadID` argumentu. Format rekordu kontekstu jest określana przez platformę, wskazywanym przez [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) metody. W przypadku Windows, jest to [KONTEKSTU](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) struktury.  
+ Metoda aktualizuje bieżący kontekst dla wątku określonego przez argument zdefiniowany `dwThreadID` przez system operacyjny. `SetThreadContext` Format rekordu kontekstu jest określany przez platformę wskazywaną przez metodę [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) . W systemie Windows jest to struktura [kontekstu](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

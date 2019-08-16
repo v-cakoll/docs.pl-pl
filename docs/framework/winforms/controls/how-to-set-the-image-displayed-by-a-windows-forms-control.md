@@ -12,50 +12,51 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 1de835bda5ac906837ac3fbd97b87f68f14d1953
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99bde4fac7b3057358c7e6a8550efdb4cc351eb0
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013143"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037881"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Instrukcje: ustawianie obrazu wyświetlanego przez kontrolkę formularzy systemu Windows
-Kilka kontrolek Windows Forms można wyświetlać obrazy. Obrazy te można ikony, które wyjaśnienie przeznaczenia kontrolki, takie jak ikonę dyskietki na przycisku określające elementy **Zapisz** polecenia. Alternatywnie ikony może być obrazów tła do zapewnienia kontroli, wygląd i zachowanie, które chcesz.  
-  
-### <a name="to-set-the-image-displayed-by-a-control"></a>Aby ustawić obrazu wyświetlanego przez kontrolkę  
-  
-1. Ustaw dla formantu `Image` lub `BackgroundImage` właściwość do obiektu typu <xref:System.Drawing.Image>. Ogólnie rzecz biorąc, można będzie się ładuje obraz z pliku przy użyciu <xref:System.Drawing.Image.FromFile%2A> metody.  
-  
-     W poniższym przykładzie kodu ścieżkę zestawu dla lokalizacji obrazu jest **Moje obrazy** folderu. Większość komputerów z systemem operacyjnym Windows będzie zawierać tego katalogu. Umożliwia także użytkownikom minimalny system poziomy dostępu do bezpiecznego uruchamiania aplikacji. Poniższy przykład kodu wymaga jeszcze formularza z <xref:System.Windows.Forms.PictureBox> dodane kontrolki.  
-  
-    ```vb  
-    ' Replace the image named below  
-    ' with an icon of your own choosing.  
-    PictureBox1.Image = Image.FromFile _  
-       (System.Environment.GetFolderPath _  
-       (System.Environment.SpecialFolder.MyPictures) _  
-       & "\Image.gif")  
-    ```  
-  
-    ```csharp  
-    // Replace the image named below  
-    // with an icon of your own choosing.  
-    // Note the escape character used (@) when specifying the path.  
-    pictureBox1.Image = Image.FromFile  
-       (System.Environment.GetFolderPath  
-       (System.Environment.SpecialFolder.MyPictures)  
-       + @"\Image.gif");  
-    ```  
-  
-    ```cpp  
-    // Replace the image named below  
-    // with an icon of your own choosing.  
-    pictureBox1->Image = Image::FromFile(String::Concat  
-       (System::Environment::GetFolderPath  
-       (System::Environment::SpecialFolder::MyPictures),  
-       "\\Image.gif"));  
-    ```  
-  
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Instrukcje: Ustawianie obrazu wyświetlanego przez kontrolkę Windows Forms
+
+Kilka kontrolek Windows Forms może wyświetlać obrazy. Te obrazy mogą być ikonami, które wyjaśniają przeznaczenie kontrolki, na przykład ikona dyskietki na przycisku oznaczającego polecenie **Zapisz** . Alternatywnie, ikony mogą być obrazami tła, aby nadać formantowi wygląd i zachowanie.
+
+## <a name="to-set-the-image-displayed-by-a-control"></a>Aby ustawić obraz wyświetlany przez kontrolkę
+
+1. Ustaw kontrolkę `Image` lub `BackgroundImage` właściwość na obiekt typu <xref:System.Drawing.Image>. Ogólnie rzecz biorąc, zostanie załadowany obraz z pliku za pomocą <xref:System.Drawing.Image.FromFile%2A> metody.
+
+     W poniższym przykładzie kodu ścieżka ustawiona dla lokalizacji obrazu jest folderem **Moje obrazy** . Większość komputerów z systemem operacyjnym Windows będzie zawierać ten katalog. Dzięki temu użytkownicy mający minimalne poziomy dostępu do systemu mogą bezpiecznie uruchamiać aplikację. Poniższy przykład kodu wymaga, aby formularz z <xref:System.Windows.Forms.PictureBox> dodaną kontrolką został już dodany.
+
+    ```vb
+    ' Replace the image named below
+    ' with an icon of your own choosing.
+    PictureBox1.Image = Image.FromFile _
+       (System.Environment.GetFolderPath _
+       (System.Environment.SpecialFolder.MyPictures) _
+       & "\Image.gif")
+    ```
+
+    ```csharp
+    // Replace the image named below
+    // with an icon of your own choosing.
+    // Note the escape character used (@) when specifying the path.
+    pictureBox1.Image = Image.FromFile
+       (System.Environment.GetFolderPath
+       (System.Environment.SpecialFolder.MyPictures)
+       + @"\Image.gif");
+    ```
+
+    ```cpp
+    // Replace the image named below
+    // with an icon of your own choosing.
+    pictureBox1->Image = Image::FromFile(String::Concat
+       (System::Environment::GetFolderPath
+       (System::Environment::SpecialFolder::MyPictures),
+       "\\Image.gif"));
+    ```
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Drawing.Image.FromFile%2A>

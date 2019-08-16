@@ -1,5 +1,5 @@
 ---
-title: 'Samouczek: Tworzenie aplikacji usługi Windows'
+title: 'Samouczek: Tworzenie aplikacji usługi systemu Windows'
 ms.date: 03/27/2019
 dev_langs:
 - csharp
@@ -9,74 +9,74 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 8d30b7b98648e36a3008ac015f9560620f77b363
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fda64cd15e15fb437db415b8a8083829c2d773cb
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751824"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039864"
 ---
-# <a name="tutorial-create-a-windows-service-app"></a>Samouczek: Tworzenie aplikacji usługi Windows
+# <a name="tutorial-create-a-windows-service-app"></a>Samouczek: Tworzenie aplikacji usługi systemu Windows
 
-W tym artykule pokazano, jak utworzyć aplikację usługi Windows w programie Visual Studio, która wypisuje komunikaty w dzienniku zdarzeń.
+W tym artykule pokazano, jak utworzyć aplikację usługi systemu Windows w programie Visual Studio, która zapisuje komunikaty w dzienniku zdarzeń.
 
 ## <a name="create-a-service"></a>Tworzenie usługi
 
-Aby rozpocząć, Utwórz projekt i ustaw wartości, które są niezbędne do poprawnego działania usługi.
+Aby rozpocząć, Utwórz projekt i ustaw wartości, które są wymagane do poprawnego działania usługi.
 
-1. W programie Visual Studio **pliku** menu, wybierz opcję **New** > **projektu** (lub naciśnij **Ctrl** + **Shift**+**N**) aby otworzyć **nowy projekt** okna.
+1. Z menu **plik** programu Visual Studio wybierz pozycję **Nowy** > **projekt** (lub naciśnij **klawisze CTRL**+**SHIFT**+**N**), aby otworzyć okno **Nowy projekt** .
 
-2. Przejdź do, a następnie wybierz pozycję **usługi Windows (.NET Framework)** szablonu projektu. Aby ją znaleźć, rozwiń węzeł **zainstalowane** i **Visual C#**  lub **języka Visual Basic**, a następnie wybierz **pulpitu Windows**. Lub wprowadź *usługi Windows* w polu wyszukiwania w prawym górnym rogu, a następnie naciśnij klawisz **Enter**.
+2. Przejdź do i wybierz szablon projektu **usługi systemu Windows (.NET Framework)** . Aby go znaleźć, rozwiń węzeł **zainstalowane** i **Wizualizacja C#**  lub **Visual Basic**, a następnie wybierz pozycję **Windows Desktop**. Lub wprowadź *usługę systemu Windows* w polu wyszukiwania w prawym górnym rogu, a następnie naciśnij klawisz **Enter**.
 
-   ![Szablon usługi Windows w oknie dialogowym Nowy projekt, w programie Visual Studio](media/new-project-dialog.png)
+   ![Szablon usługi systemu Windows w oknie dialogowym Nowy projekt w programie Visual Studio](media/new-project-dialog.png)
 
    > [!NOTE]
-   > Jeśli nie widzisz **usługi Windows** szablonu, użytkownik może być konieczne zainstalowanie **programowanie aplikacji klasycznych dla platformy .NET** obciążenia:
+   > Jeśli szablon **usługi systemu Windows** nie jest widoczny, może być konieczne zainstalowanie obciążeń **programistycznych programu .NET Desktop** :
    >
-   > W **nowy projekt** okno dialogowe, wybierz opcję **Otwórz Instalator programu Visual Studio** w lewym dolnym rogu. Wybierz **programowanie aplikacji klasycznych dla platformy .NET** obciążenia, a następnie wybierz **Modyfikuj**.
+   > W oknie dialogowym **Nowy projekt** wybierz pozycję **Otwórz Instalator programu Visual Studio** w lewym dolnym rogu. Wybierz obciążenie **Programowanie aplikacji klasycznych platformy .NET** , a następnie wybierz pozycję **Modyfikuj**.
 
-3. Aby uzyskać **nazwa**, wprowadź *MyNewService*, a następnie wybierz pozycję **OK**.
+3. W obszarze **Nazwa**wpisz *MyNewService*, a następnie wybierz przycisk **OK**.
 
-   **Projektowania** zostanie wyświetlona karta (**Service1.cs [projekt]** lub **Service1.vb [projekt]**).
+   Zostanie wyświetlona karta **projektowanie** (**Service1.cs [projekt]** lub **Service1. vb [projekt]** ).
 
-   Szablon projektu zawiera klasę składnika o nazwie `Service1` tej, która dziedziczy <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Zawiera ona większość podstawowego kodu usługi, takie jak kod, aby uruchomić usługę.
+   Szablon projektu zawiera klasę składnika o nazwie `Service1` , która dziedziczy z. <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> Zawiera on wiele podstawowych kodów usług, takich jak kod do uruchomienia usługi.
 
 ## <a name="rename-the-service"></a>Zmień nazwę usługi
 
-Zmień nazwę usługi z **Service1** do **MyNewService**.
+Zmień nazwę usługi z **Service1** na **MyNewService**.
 
-1. W **Eksploratora rozwiązań**, wybierz opcję **Service1.cs**, lub **Service1.vb**i wybierz polecenie **Zmień nazwę** z menu skrótów. Zmień nazwę pliku do **MyNewService.cs**, lub **MyNewService.vb**, a następnie naciśnij klawisz **Enter**
+1. W **Eksplorator rozwiązań**wybierz pozycję **Service1.cs**lub **Service1. vb**i wybierz polecenie **Zmień nazwę** z menu skrótów. Zmień nazwę pliku na **MyNewService.cs**lub **MyNewService. vb**, a następnie naciśnij klawisz **Enter** .
 
-    Okno wyskakujące pojawia się pytaniem, czy chcesz zmienić wszystkie odwołania do elementu kodu *Service1*.
+    Zostanie wyświetlone okno podręczne z pytaniem, czy chcesz zmienić nazwy wszystkich odwołań do elementu kodu *Service1*.
 
-2. W oknie podręcznym wybierz **tak**.
+2. W oknie podręcznym wybierz pozycję **tak**.
 
-    ![Zmień nazwę wiersza](media/windows-service-rename.png "usługi Windows zmień nazwę wiersza")
+    ![Zmień nazwę monitu](media/windows-service-rename.png "Monit o zmianę nazwy usługi systemu Windows")
 
-3. W **projektowania** zaznacz **właściwości** z menu skrótów. Z **właściwości** oknie zmiany **ServiceName** wartość *MyNewService*.
+3. Na karcie **projektowanie** wybierz pozycję **Właściwości** z menu skrótów. W oknie **Właściwości** Zmień wartość właściwości **ServiceName** na *MyNewService*.
 
-    ![Właściwości usługi](media/windows-service-properties.png "właściwości usługi Windows")
+    ![Właściwości usługi](media/windows-service-properties.png "Właściwości usługi systemu Windows")
 
-4. Wybierz **Zapisz wszystko** z **pliku** menu.
+4. Wybierz pozycję **Zapisz wszystko** w menu **plik** .
 
 ## <a name="add-features-to-the-service"></a>Dodawanie funkcji do usługi
 
-W tej sekcji dodasz niestandardowy dziennik zdarzeń do usługi Windows. <xref:System.Diagnostics.EventLog> Składnik jest przykładem typu składnika można dodać do usługi Windows.
+W tej sekcji dodasz niestandardowy dziennik zdarzeń do usługi systemu Windows. <xref:System.Diagnostics.EventLog> Składnik jest przykładem typu składnika, który można dodać do usługi systemu Windows.
 
-### <a name="add-custom-event-log-functionality"></a>Dodać funkcjonalność niestandardowego dziennika zdarzeń
+### <a name="add-custom-event-log-functionality"></a>Dodaj niestandardową funkcję dziennika zdarzeń
 
-1. W **Eksploratora rozwiązań**, z menu skrótów dla **MyNewService.cs**, lub **MyNewService.vb**, wybierz **Projektant widoków**.
+1. W **Eksplorator rozwiązań**z menu skrótów dla **MyNewService.cs**lub **MyNewService. vb**wybierz polecenie **Projektant widoków**.
 
-2. W **przybornika**, rozwiń węzeł **składniki**, a następnie przeciągnij **dziennika zdarzeń** do **Service1.cs [projekt]**, lub  **Service1.VB [projekt]** kartę.
+2. W **przyborniku**rozwiń węzeł **składniki**, a następnie przeciągnij składnik **EventLog** do karty **Service1.cs [Design]** lub **Service1. vb [Design]** .
 
-3. W **Eksploratora rozwiązań**, z menu skrótów dla **MyNewService.cs**, lub **MyNewService.vb**, wybierz **Wyświetl kod**.
+3. W **Eksplorator rozwiązań**z menu skrótów dla **MyNewService.cs**lub **MyNewService. vb**wybierz polecenie **Wyświetl kod**.
 
-4. Zdefiniować niestandardowy dziennik zdarzeń. Aby uzyskać C#, zmodyfikować istniejący `MyNewService()` Konstruktor; dla języka Visual Basic należy dodać `New()` konstruktora:
+4. Zdefiniuj niestandardowy dziennik zdarzeń. W C#przypadku, Edytuj istniejący `MyNewService()` Konstruktor; dla `New()` Visual Basic Dodaj Konstruktor:
 
    [!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#2)]
    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]
 
-5. Dodaj `using` instrukcję, aby **MyNewService.cs** (jeśli jeszcze nie istnieje), lub `Imports` instrukcji **MyNewService.vb**, dla <xref:System.Diagnostics?displayProperty=nameWithType> przestrzeni nazw:
+5. `Imports` <xref:System.Diagnostics?displayProperty=nameWithType>Dodaj instrukcję do MyNewService.cs (jeśli jeszcze nie istnieje) lub instrukcji MyNewService. vb dla przestrzeni nazw: `using`
 
     ```csharp
     using System.Diagnostics;
@@ -86,27 +86,27 @@ W tej sekcji dodasz niestandardowy dziennik zdarzeń do usługi Windows. <xref:S
     Imports System.Diagnostics
     ```
 
-6. Wybierz **Zapisz wszystko** z **pliku** menu.
+6. Wybierz pozycję **Zapisz wszystko** w menu **plik** .
 
-### <a name="define-what-occurs-when-the-service-starts"></a>Określić zachowanie występujące podczas uruchamiania usługi
+### <a name="define-what-occurs-when-the-service-starts"></a>Zdefiniuj, co ma miejsce w przypadku uruchomienia usługi
 
-W edytorze kodu dla **MyNewService.cs** lub **MyNewService.vb**, zlokalizuj <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metody. Podczas tworzenia projektu programu Visual Studio automatycznie tworzony definicję metody pusty. Dodaj kod, który zapisuje wpis dziennika zdarzeń, podczas uruchamiania usługi:
+W edytorze kodu dla **MyNewService.cs** lub **MyNewService. vb**Znajdź <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metodę; Program Visual Studio automatycznie utworzył pustą definicję metody podczas tworzenia projektu. Dodaj kod, który zapisuje wpis w dzienniku zdarzeń po uruchomieniu usługi:
 
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-#### <a name="polling"></a>Sondowanie
+#### <a name="polling"></a>Sondowania
 
-Ponieważ aplikacja usługi została zaprojektowana jako długotrwałych, zazwyczaj sonduje lub monitoruje system, który został skonfigurowany w <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metody. `OnStart` Metoda musi powrócić do systemu operacyjnego, po rozpoczęciu operacji usługi, tak aby system nie jest zablokowany.
+Ponieważ aplikacja usługi jest zaprojektowana tak, aby była długotrwała, zwykle sonduje lub monitoruje system, który został skonfigurowany w <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metodzie. `OnStart` Metoda musi powrócić do systemu operacyjnego po rozpoczęciu operacji usługi, aby system nie został zablokowany.
 
-Aby skonfigurować prosty mechanizm sondowania, użyj <xref:System.Timers.Timer?displayProperty=nameWithType> składnika. Wywołuje czasomierza <xref:System.Timers.Timer.Elapsed> zdarzeń w regularnych odstępach czasu, co Twoja usługa mogła wykonać jego monitorowanie. Możesz użyć <xref:System.Timers.Timer> składnika w następujący sposób:
+Aby skonfigurować prosty mechanizm sondowania, użyj <xref:System.Timers.Timer?displayProperty=nameWithType> składnika. Czasomierz zgłasza <xref:System.Timers.Timer.Elapsed> zdarzenie w regularnych odstępach czasu, w którym usługa może przeprowadzić monitorowanie. <xref:System.Timers.Timer> Składnik jest używany w następujący sposób:
 
-- Ustawianie właściwości <xref:System.Timers.Timer> składnika w `MyNewService.OnStart` metody.
-- Uruchomienia czasomierza, wywołując <xref:System.Timers.Timer.Start%2A> metody.
+- Ustaw właściwości <xref:System.Timers.Timer> składnika `MyNewService.OnStart` w metodzie.
+- Uruchom czasomierz, wywołując <xref:System.Timers.Timer.Start%2A> metodę.
 
-##### <a name="set-up-the-polling-mechanism"></a>Konfigurowanie mechanizmu sondowania.
+##### <a name="set-up-the-polling-mechanism"></a>Skonfiguruj mechanizm sondowania.
 
-1. Dodaj następujący kod w `MyNewService.OnStart` zdarzenie, aby ustawić mechanizm sondowania:
+1. Dodaj następujący kod w `MyNewService.OnStart` zdarzeniu, aby skonfigurować mechanizm sondowania:
 
    ```csharp
    // Set up a timer that triggers every minute.
@@ -124,7 +124,7 @@ Aby skonfigurować prosty mechanizm sondowania, użyj <xref:System.Timers.Timer?
    timer.Start()
    ```
 
-2. Dodaj `using` instrukcję, aby **MyNewService.cs**, lub `Imports` instrukcję, aby **MyNewService.vb**, aby uzyskać <xref:System.Timers?displayProperty=nameWithType> przestrzeni nazw:
+2. `Imports` Dodajinstrukcjędo<xref:System.Timers?displayProperty=nameWithType> MyNewService.cs lub instrukcję do **MyNewService. vb**dla przestrzeni nazw: `using`
 
    ```csharp
    using System.Timers;
@@ -134,7 +134,7 @@ Aby skonfigurować prosty mechanizm sondowania, użyj <xref:System.Timers.Timer?
    Imports System.Timers
    ```
 
-3. W `MyNewService` klasy, Dodaj `OnTimer` metody, aby obsłużyć <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> zdarzeń:
+3. W klasie Dodaj metodę, aby obsłużyć <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> zdarzenie: `OnTimer` `MyNewService`
 
    ```csharp
    public void OnTimer(object sender, ElapsedEventArgs args)
@@ -152,7 +152,7 @@ Aby skonfigurować prosty mechanizm sondowania, użyj <xref:System.Timers.Timer?
    End Sub
    ```
 
-4. W `MyNewService` klasy, Dodaj zmienną składową. Zawiera identyfikator następne zdarzenie do zapisu do dziennika zdarzeń:
+4. `MyNewService` W klasie Dodaj zmienną członkowską. Zawiera identyfikator następnego zdarzenia do zapisu w dzienniku zdarzeń:
 
    ```csharp
    private int eventId = 1;
@@ -162,33 +162,33 @@ Aby skonfigurować prosty mechanizm sondowania, użyj <xref:System.Timers.Timer?
    Private eventId As Integer = 1
    ```
 
-Zamiast uruchamiać swoją pracę w wątku głównym, można uruchamiać zadania za pomocą wątków w tle proces roboczy. Aby uzyskać więcej informacji, zobacz <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.
+Zamiast uruchamiać wszystkie prace w głównym wątku, można uruchamiać zadania przy użyciu wątków roboczych w tle. Aby uzyskać więcej informacji, zobacz <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.
 
-### <a name="define-what-occurs-when-the-service-is-stopped"></a>Określić zachowanie występujące podczas zatrzymywania usługi
+### <a name="define-what-occurs-when-the-service-is-stopped"></a>Określ, co ma miejsce w przypadku zatrzymania usługi
 
-Wstaw wiersz kodu w <xref:System.ServiceProcess.ServiceBase.OnStop%2A> metodę, która dodaje wpis w dzienniku zdarzeń, gdy usługa zostanie zatrzymana:
+Wstaw wiersz kodu w <xref:System.ServiceProcess.ServiceBase.OnStop%2A> metodzie, która dodaje wpis do dziennika zdarzeń po zatrzymaniu usługi:
 
 [!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#4)]
 [!code-vb[VbRadconService#4](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#4)]
 
-### <a name="define-other-actions-for-the-service"></a>Zdefiniuj inne akcje usługi
+### <a name="define-other-actions-for-the-service"></a>Zdefiniuj inne akcje dla usługi
 
-Można zastąpić <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>, i <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> metody, aby zdefiniować dodatkowe przetwarzanie składnika.
+Można zastąpić <xref:System.ServiceProcess.ServiceBase.OnPause%2A>metody, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>i <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> , aby zdefiniować dodatkowe przetwarzanie dla składnika.
 
-Poniższy kod przedstawia sposób na zastąpienie <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> method in Class metoda `MyNewService` klasy:
+Poniższy kod pokazuje, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> jak zastąpić metodę `MyNewService` w klasie:
 
 [!code-csharp[VbRadconService#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#5)]
 [!code-vb[VbRadconService#5](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#5)]
 
-## <a name="set-service-status"></a>Ustaw stan usługi
+## <a name="set-service-status"></a>Ustawianie stanu usługi
 
-Usługi raportowania ich stanu do [Menedżera sterowania usługami](/windows/desktop/Services/service-control-manager) , dzięki czemu użytkownik może stwierdzić, czy usługa działa poprawnie. Domyślnie usługa tej, która dziedziczy <xref:System.ServiceProcess.ServiceBase> ograniczony zestaw stan ustawienia, które obejmują SERVICE_STOPPED, SERVICE_PAUSED i SERVICE_RUNNING raportów. Jeśli usługa może trochę mogła się uruchomić, jest przydatne do raportowania stanu SERVICE_START_PENDING.
+Usługi raportują swój stan do [Menedżera kontroli usług](/windows/desktop/Services/service-control-manager) , aby użytkownik mógł stwierdzić, czy usługa działa poprawnie. Domyślnie usługa, która dziedziczy z <xref:System.ServiceProcess.ServiceBase> raportów, zawiera ograniczony zestaw ustawień stanu, takich jak SERVICE_STOPPED, SERVICE_PAUSED i SERVICE_RUNNING. Jeśli uruchomienie usługi trwa dłużej, warto zgłosić status SERVICE_START_PENDING.
 
-Ustawienia stanu SERVICE_START_PENDING i SERVICE_STOP_PENDING można zaimplementować, dodając kod, który wywołuje Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) funkcji.
+Ustawienia stanu SERVICE_START_PENDING i SERVICE_STOP_PENDING można zaimplementować, dodając kod, który wywołuje funkcję [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) systemu Windows.
 
-### <a name="implement-service-pending-status"></a>Implementowanie usługi w stanie oczekiwania
+### <a name="implement-service-pending-status"></a>Zaimplementuj stan oczekiwania usługi
 
-1. Dodaj `using` instrukcję, aby **MyNewService.cs**, lub `Imports` instrukcję, aby **MyNewService.vb**, aby uzyskać <xref:System.Runtime.InteropServices?displayProperty=nameWithType> przestrzeni nazw:
+1. `Imports` Dodajinstrukcjędo<xref:System.Runtime.InteropServices?displayProperty=nameWithType> MyNewService.cs lub instrukcję do **MyNewService. vb**dla przestrzeni nazw: `using`
 
     ```csharp
     using System.Runtime.InteropServices;
@@ -198,7 +198,7 @@ Ustawienia stanu SERVICE_START_PENDING i SERVICE_STOP_PENDING można zaimplement
     Imports System.Runtime.InteropServices
     ```
 
-2. Dodaj następujący kod do **MyNewService.cs**, lub **MyNewService.vb**, aby zadeklarować `ServiceState` wartości i można dodać struktury stanu, która będzie używana na platformie wywołania wywołania:
+2. Dodaj następujący kod do **MyNewService.cs**lub **MyNewService. vb**, `ServiceState` aby zadeklarować wartości i dodać strukturę dla stanu, który będzie używany w wywołaniu wywołania platformy:
 
     ```csharp
     public enum ServiceState
@@ -249,9 +249,9 @@ Ustawienia stanu SERVICE_START_PENDING i SERVICE_STOP_PENDING można zaimplement
     ```
 
     > [!NOTE]
-    > Korzysta z Menedżera sterowania usługami `dwWaitHint` i `dwCheckpoint` członkowie [struktury SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status) określić ilość czasu oczekiwania dla usługi Windows uruchomić lub zamknąć. Jeśli Twoje `OnStart` i `OnStop` metody trwają długo, usługi mogą żądać więcej czasu, przez wywołanie metody `SetServiceStatus` ponownie, używając zwiększona `dwCheckPoint` wartość.
+    > Menedżer sterowania usługami używa `dwWaitHint` i `dwCheckpoint` składowych [struktury SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) , aby określić czas oczekiwania na uruchomienie lub wyłączenie usługi systemu Windows. Jeśli metody `OnStop` `dwCheckPoint` i są wykonywane długo, usługa może zażądać więcej czasu, wywołując `SetServiceStatus` ponownie z wartością przyrostową. `OnStart`
 
-3. W `MyNewService` klasy, Zadeklaruj [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) funkcji przy użyciu [wywołania platformy](../interop/consuming-unmanaged-dll-functions.md):
+3. W klasie deklaruj funkcję [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) przy użyciu [wywołania platformy:](../interop/consuming-unmanaged-dll-functions.md) `MyNewService`
 
     ```csharp
     [DllImport("advapi32.dll", SetLastError = true)]
@@ -280,7 +280,7 @@ Ustawienia stanu SERVICE_START_PENDING i SERVICE_STOP_PENDING można zaimplement
     SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
-5. Dodaj kod na końcu `OnStart` metodę, aby ustawić stan na SERVICE_RUNNING:
+5. Dodaj kod na końcu `OnStart` metody, aby ustawić stan na SERVICE_RUNNING:
 
     ```csharp
     // Update the service state to Running.
@@ -294,7 +294,7 @@ Ustawienia stanu SERVICE_START_PENDING i SERVICE_STOP_PENDING można zaimplement
     SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
-6. (Opcjonalnie) Jeśli <xref:System.ServiceProcess.ServiceBase.OnStop%2A> jest metoda długotrwałych, powtórz tę procedurę w `OnStop` metody. Implementowanie stan SERVICE_STOP_PENDING i zwrócony stan SERVICE_STOPPED przed `OnStop` wyjścia metody.
+6. Obowiązkowe Jeśli <xref:System.ServiceProcess.ServiceBase.OnStop%2A> jest metodą długotrwałą, powtórz tę procedurę `OnStop` w metodzie. Zaimplementuj stan SERVICE_STOP_PENDING i zwróć stan SERVICE_STOPPED przed wyjściem `OnStop` z metody.
 
    Na przykład:
 
@@ -324,60 +324,60 @@ Ustawienia stanu SERVICE_START_PENDING i SERVICE_STOP_PENDING można zaimplement
 
 ## <a name="add-installers-to-the-service"></a>Dodawanie instalatorów do usługi
 
-Przed uruchomieniem usługi Windows, musisz zainstalować go, który rejestruje je z Menedżerem sterowania usługami. Dodawanie instalatorów do projektu w celu obsługi szczegółów rejestracji.
+Przed uruchomieniem usługi systemu Windows należy ją zainstalować, co spowoduje zarejestrowanie jej w Menedżerze kontroli usług. Dodaj Instalatory do projektu, aby obsłużyć szczegóły rejestracji.
 
-1. W **Eksploratora rozwiązań**, z menu skrótów dla **MyNewService.cs**, lub **MyNewService.vb**, wybierz **Projektant widoków**.
+1. W **Eksplorator rozwiązań**z menu skrótów dla **MyNewService.cs**lub **MyNewService. vb**wybierz polecenie **Projektant widoków**.
 
-2. W **projektowania** wyświetlić, wybierz obszar tła, a następnie wybierz **Dodaj Instalatora** z menu skrótów.
+2. W widoku **projekt** wybierz obszar tła, a następnie wybierz polecenie **Dodaj Instalatora** z menu skrótów.
 
-     Domyślnie program Visual Studio dodana Klasa składnika o nazwie `ProjectInstaller`, który zawiera dwa pliki instalacyjne do projektu. Te instalatory są usługi i procesu skojarzonego z usługi.
+     Domyślnie program Visual Studio dodaje klasę składnika o nazwie `ProjectInstaller`, która zawiera dwóch instalatorów do projektu. Te Instalatory są przeznaczone dla usługi i dla procesu związanego z usługą.
 
-3. W **projektowania** wyświetlić **ProjectInstaller**, wybierz opcję **serviceInstaller1** dla wizualizacji C# projektu, lub **ServiceInstaller1**projektu języka Visual Basic, następnie wybierz **właściwości** z menu skrótów.
+3. W widoku **projekt** dla **ProjectInstaller**wybierz pozycję **serviceInstaller1** dla projektu wizualnego C# lub **serviceInstaller1** dla projektu Visual Basic, a następnie wybierz **Właściwości** z menu skrótów.
 
-4. W **właściwości** oknie Sprawdź <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwość jest ustawiona na **MyNewService**.
+4. W oknie **Właściwości** Sprawdź, czy <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwość jest ustawiona na **MyNewService**.
 
-5. Dodawanie tekstu do <xref:System.ServiceProcess.ServiceInstaller.Description%2A> właściwości, takie jak *usługi przykładowe*.
+5. Dodaj tekst do <xref:System.ServiceProcess.ServiceInstaller.Description%2A> właściwości, takiej jak *Przykładowa usługa*.
 
-     Ten tekst jest wyświetlany w **opis** kolumny **usług** okna i zawiera opis usługi dla użytkownika.
+     Ten tekst jest wyświetlany w kolumnie **Opis** okna **usługi** i zawiera opis usługi dla użytkownika.
 
-    ![Opis usługi, w oknie usług. ](media/windows-service-description.png "Opis usługi")
+    ![Opis usługi w oknie usługi.](media/windows-service-description.png "Opis usługi")
 
-6. Dodawanie tekstu do <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> właściwości. Na przykład *nazwę wyświetlaną MyNewService*.
+6. Dodaj tekst do <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> właściwości. Na przykład *MyNewService nazwa wyświetlana*.
 
-     Ten tekst jest wyświetlany w **nazwę wyświetlaną** kolumny **usług** okna. Ta nazwa może różnić się od <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwość, która jest nazwą, wówczas system używa (na przykład nazwy można użyć dla `net start` polecenie, aby uruchomić usługę).
+     Ten tekst jest wyświetlany w kolumnie **Nazwa wyświetlana** okna **usługi** . Ta nazwa może się różnić od <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwości, która jest nazwą używaną przez system (na przykład nazwę używaną `net start` przez polecenie w celu uruchomienia usługi).
 
-7. Ustaw <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> właściwość <xref:System.ServiceProcess.ServiceStartMode.Automatic> z listy rozwijanej.
+7. Ustaw właściwość na <xref:System.ServiceProcess.ServiceStartMode.Automatic> wartość z listy rozwijanej. <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>
 
-8. Gdy skończysz, **właściwości** windows powinno wyglądać podobnie do poniższej ilustracji:
+8. Po zakończeniu okna **Właściwości** powinny wyglądać tak, jak na poniższej ilustracji:
 
-     ![Właściwości Instalatora usługi Windows](media/windows-service-installer-properties.png "właściwości Instalatora usługi Windows")
+     ![Właściwości Instalatora dla usługi systemu Windows](media/windows-service-installer-properties.png "Właściwości Instalatora usługi systemu Windows")
 
-9. W **projektowania** wyświetlić **ProjectInstaller**, wybierz **serviceProcessInstaller1** dla wizualizacji C# projektu, lub **ServiceProcessInstaller1**  projektu języka Visual Basic, następnie wybierz **właściwości** z menu skrótów. Ustaw <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> właściwość <xref:System.ServiceProcess.ServiceAccount.LocalSystem> z listy rozwijanej.
+9. W widoku **projekt** dla **ProjectInstaller**wybierz pozycję **ServiceProcessInstaller1** dla projektu wizualnego C# lub **ServiceProcessInstaller1** dla projektu Visual Basic, a następnie wybierz **Właściwości** z menu skrótów. . Ustaw właściwość na <xref:System.ServiceProcess.ServiceAccount.LocalSystem> wartość z listy rozwijanej. <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>
 
-     To ustawienie instaluje usługę i uruchamia je przy użyciu konta systemu lokalnego.
+     To ustawienie powoduje zainstalowanie usługi i uruchomienie jej przy użyciu lokalnego konta systemowego.
 
     > [!IMPORTANT]
-    > <xref:System.ServiceProcess.ServiceAccount.LocalSystem> Konto ma szerokie uprawnienia, w tym możliwość zapisu do dziennika zdarzeń. Należy go używać ostrożnie, ponieważ może zwiększyć ryzyko ataku przez złośliwe oprogramowanie. W przypadku innych zadań, należy wziąć pod uwagę przy użyciu <xref:System.ServiceProcess.ServiceAccount.LocalService> konta, które działa jako użytkownik bez uprawnień na komputerze lokalnym i przedstawia poświadczenia anonimowe każdemu zdalnemu serwerowi. W tym przykładzie zakończy się niepowodzeniem, jeśli zostanie podjęta próba użycia <xref:System.ServiceProcess.ServiceAccount.LocalService> konta, ponieważ wymaga uprawnień do zapisu w dzienniku zdarzeń.
+    > <xref:System.ServiceProcess.ServiceAccount.LocalSystem> Konto ma szerokie uprawnienia, w tym możliwość zapisu w dzienniku zdarzeń. Należy go używać ostrożnie, ponieważ może zwiększyć ryzyko ataku przez złośliwe oprogramowanie. W przypadku innych zadań należy rozważyć użycie <xref:System.ServiceProcess.ServiceAccount.LocalService> konta, które działa jako użytkownik nieuprzywilejowany na komputerze lokalnym i prezentuje anonimowe poświadczenia na dowolnym serwerze zdalnym. Ten przykład kończy się niepowodzeniem, jeśli spróbujesz użyć <xref:System.ServiceProcess.ServiceAccount.LocalService> konta, ponieważ wymaga ono uprawnienia do zapisu w dzienniku zdarzeń.
 
-Aby uzyskać więcej informacji na temat instalatory zobacz [jak: Dodawanie instalatorów od aplikacji usług](how-to-add-installers-to-your-service-application.md).
+Aby uzyskać więcej informacji na temat instalatorów [, zobacz How to: Dodaj Instalatory do aplikacji](how-to-add-installers-to-your-service-application.md)usługi.
 
-## <a name="optional-set-startup-parameters"></a>(Opcjonalnie) Ustaw parametry uruchamiania
+## <a name="optional-set-startup-parameters"></a>Obowiązkowe Ustaw parametry uruchamiania
 
 > [!NOTE]
-> Przed podjęciem decyzji o Dodaj parametry uruchamiania, należy rozważyć, czy jest najlepszym sposobem przekazywania informacji do usługi. Mimo że są one łatwe w użyciu i analizy, a użytkownik może łatwo je zastąpić, może być trudniejsze dla użytkownika do użytku bez dokumentacji. Ogólnie rzecz biorąc Jeśli usługa wymaga więcej niż kilku Parametry uruchamiania, należy użyć rejestru lub pliku konfiguracji zamiast tego.
+> Przed podjęciem decyzji o dodaniu parametrów uruchamiania należy rozważyć, czy jest to najlepszy sposób przekazywania informacji do usługi. Mimo że jest to łatwe w użyciu i przeanalizowanie, a użytkownik może je łatwo przesłonić, może być trudniejsze dla użytkownika do odnalezienia i użycia bez dokumentacji. Ogólnie rzecz biorąc, jeśli usługa wymaga więcej niż kilku parametrów uruchamiania, zamiast tego należy użyć rejestru lub pliku konfiguracji.
 
-Usługa Windows może akceptować argumentów wiersza polecenia lub parametry uruchamiania. Po dodaniu kodu z parametrami uruchomienia procesu, użytkownik może uruchomić usługi za pomocą ich własnych parametrów startowy niestandardowe w oknie dialogowym właściwości usługi. Jednak te parametry uruchamiania nie są zachowywane podczas następnego uruchomienia usługi. Aby ustawić parametry uruchamiania trwale, należy ustawić je w rejestrze.
+Usługa systemu Windows może akceptować argumenty wiersza polecenia lub parametry uruchamiania. Po dodaniu kodu do przetwarzania parametrów uruchamiania, użytkownik może uruchomić usługę z własnymi własnymi parametrami uruchamiania w oknie właściwości usługi. Jednak te Parametry uruchomieniowe nie są zachowywane podczas następnego uruchomienia usługi. Aby trwale ustawić parametry uruchamiania, ustaw je w rejestrze.
 
-Każda usługa Windows ma wpis rejestru, w obszarze **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services** podklucza. W podkluczu każdej z tych usług użyj **parametry** podklucz do przechowywania informacji, które mogą uzyskiwać dostęp do usługi. Może używać plików konfiguracji aplikacji dla usługi Windows w taki sam sposób jak w przypadku innych programów. Przykładowy kod, zobacz <xref:System.Configuration.ConfigurationManager.AppSettings?displayProperty=nameWithType>.
+Każda usługa systemu Windows ma wpis rejestru w podkluczu **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services** . W obszarze podklucza każdego usługi Użyj podklucza **Parameters** do przechowywania informacji, do których usługa może uzyskać dostęp. Można używać plików konfiguracji aplikacji dla usługi systemu Windows w taki sam sposób jak w przypadku innych typów programów. Aby zapoznać się z przykładowym kodem, zobacz <xref:System.Configuration.ConfigurationManager.AppSettings?displayProperty=nameWithType>.
 
 ### <a name="to-add-startup-parameters"></a>Aby dodać parametry uruchamiania
 
-1. Wybierz **Program.cs**, lub **MyNewService.Designer.vb**, następnie wybierz **Wyświetl kod** z menu skrótów. W `Main` metodę, Zmień kod, aby dodać parametr wejściowy i przekaż go do konstruktora usługi:
+1. Wybierz pozycję **program.cs**lub **MyNewService. Designer. vb**, a następnie wybierz pozycję **Wyświetl kod** z menu skrótów. `Main` W metodzie Zmień kod, aby dodać parametr wejściowy i przekazać go do konstruktora usługi:
 
    [!code-csharp[VbRadconService](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/Program-add-parameter.cs?highlight=1,6)]
    [!code-vb[VbRadconService](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.Designer-add-parameter.vb?highlight=1-2)]
 
-2. W **MyNewService.cs**, lub **MyNewService.vb**, zmień `MyNewService` konstruktora, aby przetworzyć parametr wejściowy w następujący sposób:
+2. W **MyNewService.cs**lub **MyNewService. vb**Zmień `MyNewService` konstruktora, aby przetworzyć parametr wejściowy w następujący sposób:
 
    ```csharp
    using System.Diagnostics;
@@ -433,9 +433,9 @@ Każda usługa Windows ma wpis rejestru, w obszarze **HKEY_LOCAL_MACHINE\SYSTEM\
    End Sub
    ```
 
-   Ten kod ustawia nazwę źródła i dziennik zdarzeń, zgodnie z Parametry uruchamiania, które użytkownik podaje. Jeśli zostały dostarczone żadne argumenty, używa domyślnych wartości.
+   Ten kod ustawia Źródło zdarzenia i nazwę dziennika zgodnie z parametrami uruchamiania dostarczanymi przez użytkownika. Jeśli nie podano argumentów, używa wartości domyślnych.
 
-3. Aby określić argumenty wiersza polecenia, Dodaj następujący kod do `ProjectInstaller` klasy w **ProjectInstaller.cs**, lub **ProjectInstaller.vb**:
+3. Aby określić argumenty wiersza polecenia, Dodaj następujący kod do `ProjectInstaller` klasy w **ProjectInstaller.cs**lub **ProjectInstaller. vb**:
 
    ```csharp
    protected override void OnBeforeInstall(IDictionary savedState)
@@ -454,25 +454,25 @@ Każda usługa Windows ma wpis rejestru, w obszarze **HKEY_LOCAL_MACHINE\SYSTEM\
    End Sub
    ```
 
-   Zazwyczaj ta wartość zawiera pełną ścieżkę do pliku wykonywalnego dla usługi Windows. Dla usługi została prawidłowo uruchomiona że użytkownik musi podać znaki cudzysłowu dla ścieżki i wszystkich poszczególnych parametrów. Użytkownik może zmienić parametry w **ImagePath** wpis rejestru, aby zmienić parametry uruchamiania usługi Windows. Jednak lepszy sposób jest programowe Zmienianie wartości i udostępniają funkcje w sposób, przyjazny dla użytkownika, takie jak za pomocą narzędzia zarządzania lub konfiguracji.
+   Zazwyczaj ta wartość zawiera pełną ścieżkę do pliku wykonywalnego dla usługi systemu Windows. Aby usługa została prawidłowo uruchomiona, użytkownik musi podać znaki cudzysłowu dla ścieżki i każdego parametru. Aby zmienić parametry uruchamiania usługi systemu Windows, użytkownik może zmienić parametry w wpisie w rejestrze **ImagePath** . Lepszym sposobem jest jednak zmiana wartości programowo i udostępnienie funkcji w sposób przyjazny dla użytkownika, na przykład za pomocą narzędzia do zarządzania lub konfiguracji.
 
 ## <a name="build-the-service"></a>Tworzenie usługi
 
-1. W **Eksploratora rozwiązań**, wybierz **właściwości** z menu skrótów dla **MyNewService** projektu.
+1. W **Eksplorator rozwiązań**, wybierz **Właściwości** z menu skrótów dla projektu **MyNewService** .
 
-   Są wyświetlane na stronach właściwości projektu.
+   Pojawią się strony właściwości projektu.
 
-2. Na **aplikacji** na karcie **obiekt początkowy** wybierz **MyNewService.Program**, lub **Sub Main** dla projektów języka Visual Basic.
+2. Na karcie **aplikacja** na liście **obiekt początkowy** wybierz **MyNewService. program**lub **Sub Main** dla projektów Visual Basic.
 
-3. Aby skompilować projekt, w **Eksploratora rozwiązań**, wybierz **kompilacji** z menu skrótów dla projektu (lub naciśnij **Ctrl**+**Shift** + **B**).
+3. Aby skompilować projekt, w **Eksplorator rozwiązań**wybierz opcję **Kompiluj** z menu skrótów dla projektu (lub naciśnij **klawisze CTRL**+**SHIFT**+**B**).
 
 ## <a name="install-the-service"></a>Instalowanie usługi
 
-Teraz, gdy masz utworzoną usługę Windows, należy ją zainstalować. Aby zainstalować usługę Windows, musi mieć poświadczenia administratora na komputerze, na którym jest zainstalowany.
+Teraz, gdy została skompilowana usługa systemu Windows, możesz ją zainstalować. Aby zainstalować usługę systemu Windows, musisz mieć poświadczenia administratora na komputerze, na którym jest zainstalowany.
 
-1. Otwórz [wiersz polecenia programisty dla programu Visual Studio](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs) przy użyciu poświadczeń administracyjnych. Od Windows **Start** menu, wybierz opcję **wiersz polecenia programisty dla programu VS 2017** w folderze programu Visual Studio, a następnie zaznacz **więcej** > **Uruchom jako Administrator** z menu skrótów.
+1. Otwórz [wiersz polecenia dla deweloperów dla programu Visual Studio](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs) z poświadczeniami administracyjnymi. Z menu **Start** systemu Windows wybierz opcję **wiersz polecenia dla deweloperów dla programu vs 2017** w folderze Visual Studio, a następnie wybierz pozycję **więcej** > **Uruchom jako administrator** z menu skrótów.
 
-2. W **wiersz polecenia programisty dla programu Visual Studio** okna, przejdź do folderu, który zawiera dane wyjściowe projektu (domyślnie *\bin\Debug* podkatalogu projektu).
+2. W oknie **wiersz polecenia dla deweloperów dla programu Visual Studio** przejdź do folderu, który zawiera dane wyjściowe projektu (domyślnie podkatalog *\bin\debug* projektu).
 
 3. Wprowadź następujące polecenie:
 
@@ -480,51 +480,51 @@ Teraz, gdy masz utworzoną usługę Windows, należy ją zainstalować. Aby zain
     installutil MyNewService.exe
     ```
 
-    Jeśli usługa zostanie zainstalowana pomyślnie, polecenie zgłosi powodzenie operacji.
+    Jeśli usługa zostanie pomyślnie zainstalowana, polecenie zgłosi powodzenie.
 
-    Jeśli system nie może znaleźć *installutil.exe*, upewnij się, że istnieje na tym komputerze. To narzędzie jest instalowane z .NET Framework do folderu *% windir%\Microsoft.NET\Framework[64]\\&lt;framework w wersji&gt;*. Na przykład jest domyślna ścieżka dla 64-bitowej wersji *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
+    Jeśli system nie może odnaleźć pliku *Installutil. exe*, upewnij się, że istnieje on na komputerze. To narzędzie jest instalowane z .NET Framework do folderu *%windir%\Microsoft.NET\Framework [64]\\&lt;&gt;Framework wersja*. Na przykład domyślną ścieżką dla wersji 64-bitowej jest *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
 
-    Jeśli **installutil.exe** przetwarzania zakończy się niepowodzeniem, sprawdź dziennik instalacji, aby dowiedzieć się, dlaczego. Domyślnie dziennik jest w tym samym folderze co pliku wykonywalnego usługi. Instalacja może zakończyć się niepowodzeniem, jeśli:
-    - <xref:System.ComponentModel.RunInstallerAttribute> Klasy nie znajduje się w `ProjectInstaller` klasy.
+    Jeśli proces **Installutil. exe** nie powiedzie się, sprawdź dziennik instalacji, aby dowiedzieć się, dlaczego. Domyślnie dziennik znajduje się w tym samym folderze co plik wykonywalny usługi. Instalacja może zakończyć się niepowodzeniem, jeśli:
+    - Klasa nie jest obecna `ProjectInstaller` w klasie. <xref:System.ComponentModel.RunInstallerAttribute>
     - Atrybut nie jest ustawiony na `true`.
-    - `ProjectInstaller` Klasa nie jest zdefiniowana jako `public`.
+    - Klasa nie jest zdefiniowana jako `public`. `ProjectInstaller`
 
-Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie usług](how-to-install-and-uninstall-services.md).
+Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie](how-to-install-and-uninstall-services.md)usług.
 
-## <a name="start-and-run-the-service"></a>Uruchom program i uruchom usługę
+## <a name="start-and-run-the-service"></a>Uruchom i uruchom usługę
 
-1. Windows, otwórz **usług** aplikacji klasycznej. Naciśnij klawisz **Windows**+**R** otworzyć **Uruchom** wprowadź *services.msc*, a następnie naciśnij klawisz **Enter** lub wybierz **OK**.
+1. W systemie Windows otwórz aplikację Desktop **Services** . Naciśnij pozycję **Windows**+**R** , aby otworzyć okno **uruchamiania** , wpisz *Services. msc*, a następnie naciśnij klawisz **Enter** lub wybierz **przycisk OK**.
 
-     Powinien zostać wyświetlony na liście usługi **usług**, wyświetlane alfabetycznie według nazwy wyświetlanej, ustaw dla niego.
+     Twoja usługa powinna zostać wyświetlona na liście **usługi**, w kolejności alfabetycznej według nazwy wyświetlanej, która została ustawiona dla tego ustawienia.
 
-     ![MyNewService w oknie usług.](media/windowsservices-serviceswindow.PNG)
+     ![MyNewService w oknie usługi.](media/windowsservices-serviceswindow.PNG)
 
-2. Aby uruchomić usługę, wybierz opcję **Start** z menu skrótów usługi.
+2. Aby uruchomić usługę, wybierz pozycję **Rozpocznij** od menu skrótów usługi.
 
-3. Aby zatrzymać usługę, wybierz opcję **zatrzymać** z menu skrótów usługi.
+3. Aby zatrzymać usługę, wybierz pozycję **Zatrzymaj** w menu skrótów usługi.
 
-4. (Opcjonalnie) W wierszu polecenia należy użyć poleceń **net start &lt;nazwa usługi&gt;**  i **net stop &lt;nazwa usługi&gt;**  uruchamianie i zatrzymywanie usługi.
+4. Obowiązkowe W wierszu polecenia Użyj poleceń **net start &lt;Service Name&gt;**  i **net stop &lt;Service Name&gt;**  , aby uruchomić i zatrzymać usługę.
 
-### <a name="verify-the-event-log-output-of-your-service"></a>Sprawdź dane wyjściowe dziennika zdarzeń, usługi
+### <a name="verify-the-event-log-output-of-your-service"></a>Weryfikowanie danych wyjściowych dziennika zdarzeń usługi
 
-1. Windows, otwórz **Podgląd zdarzeń** aplikacji klasycznej. Wprowadź *Podgląd zdarzeń* w wyszukiwaniu Windows paska, a następnie wybierz pozycję **Podgląd zdarzeń** w wynikach wyszukiwania.
+1. W systemie Windows otwórz aplikację klasyczną **Podgląd zdarzeń** . Wprowadź *Podgląd zdarzeń* na pasku wyszukiwania systemu Windows, a następnie wybierz **Podgląd zdarzeń** z wyników wyszukiwania.
 
    > [!TIP]
-   > W programie Visual Studio są dostępne dzienniki zdarzeń, otwierając **Eksploratora serwera** z **widoku** menu (lub naciśnij **Ctrl**+**Alt** + **S**) i rozwijając **dzienniki zdarzeń** węzła na komputerze lokalnym.
+   > W programie Visual Studio można uzyskać dostęp do dzienników zdarzeń, **otwierając Eksplorator serwera** z **menu Widok** (lub naciskając klawisze **Ctrl**+**Alt**+**S**) i rozszerzając węzeł **dzienniki zdarzeń** dla komputera lokalnego.
 
-2. W **Podgląd zdarzeń**, rozwiń węzeł **Dzienniki aplikacji i usług**.
+2. W **Podgląd zdarzeń**rozwiń węzeł **Dzienniki aplikacji i usług**.
 
-3. Odszukaj **MyNewLog** (lub **MyLogFile1** po wykonaniu procedury, aby dodać argumenty wiersza polecenia) i rozwiń go. Powinny być widoczne wpisy dwie akcje (rozpoczęcie i zakończenie), wykonanych przez usługę.
+3. Znajdź listę dla **myNewLog** (lub **MyLogFile1** , jeśli wykonano procedurę dodawania argumentów wiersza polecenia) i rozwiń ją. Powinny zostać wyświetlone wpisy dotyczące dwóch akcji (uruchamiania i zatrzymywania) wykonywanych przez usługę.
 
-     ![Użyj podglądu zdarzeń, aby wyświetlić wpisy dziennika zdarzeń](media/windows-service-event-viewer.png)
+     ![Użyj Podgląd zdarzeń, aby wyświetlić wpisy dziennika zdarzeń](media/windows-service-event-viewer.png)
 
 ## <a name="clean-up-resources"></a>Oczyszczanie zasobów
 
-Jeśli nie potrzebujesz już Windows service app, możesz go usunąć.
+Jeśli aplikacja usługi systemu Windows nie jest już potrzebna, można ją usunąć.
 
-1. Otwórz **wiersz polecenia programisty dla programu Visual Studio** przy użyciu poświadczeń administracyjnych.
+1. Otwórz **wiersz polecenia dla deweloperów dla programu Visual Studio** z poświadczeniami administracyjnymi.
 
-2. W **wiersz polecenia programisty dla programu Visual Studio** okna, przejdź do folderu, który zawiera dane wyjściowe projektu.
+2. W oknie **wiersz polecenia dla deweloperów dla programu Visual Studio** przejdź do folderu, który zawiera dane wyjściowe projektu.
 
 3. Wprowadź następujące polecenie:
 
@@ -532,21 +532,21 @@ Jeśli nie potrzebujesz już Windows service app, możesz go usunąć.
     installutil.exe /u MyNewService.exe
     ```
 
-   Jeśli usługa zostanie pomyślnie odinstalowana polecenia Raporty z usługą został pomyślnie usunięty. Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie usług](how-to-install-and-uninstall-services.md).
+   Jeśli usługa została pomyślnie odinstalowana, polecenie zgłosi, że usługa została pomyślnie usunięta. Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie](how-to-install-and-uninstall-services.md)usług.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Teraz, po utworzeniu usługi, możesz wykonywać następujące czynności:
+Teraz, gdy została utworzona usługa, możesz:
 
-- Utwórz autonomiczny program instalacyjny dla innych użytkowników, aby zainstalować usługę Windows. Użyj [zestaw narzędzi WiX](http://wixtoolset.org/) możliwość utworzenia Instalatora usługi Windows. Zapoznać się z pomysłami z innymi zobacz [Utwórz pakiet instalacyjny](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
+- Utwórz autonomiczny program instalacyjny, który będzie używany przez inne osoby do instalacji usługi systemu Windows. Użyj zestawu [narzędzi WIX](http://wixtoolset.org/) , aby utworzyć Instalatora dla usługi systemu Windows. Aby poznać inne pomysły, zobacz [Tworzenie pakietu Instalatora](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
-- Zapoznaj się z <xref:System.ServiceProcess.ServiceController> składnik, który umożliwia wysyłanie poleceń do usługi, po zainstalowaniu.
+- <xref:System.ServiceProcess.ServiceController> Eksploruj składnik, który umożliwia wysyłanie poleceń do zainstalowanej usługi.
 
-- Zamiast tworzenia dziennika zdarzeń, gdy aplikacja zostanie uruchomiona, należy użyć Instalatora do tworzenia dziennika zdarzeń podczas instalowania aplikacji. Dziennik zdarzeń jest usunięte przez Instalatora po odinstalowaniu aplikacji. Aby uzyskać więcej informacji, zobacz <xref:System.Diagnostics.EventLogInstaller>.
+- Zamiast tworzyć dziennik zdarzeń, gdy aplikacja jest uruchomiona, użyj Instalatora, aby utworzyć dziennik zdarzeń podczas instalowania aplikacji. Dziennik zdarzeń jest usuwany przez Instalatora podczas odinstalowywania aplikacji. Aby uzyskać więcej informacji, zobacz <xref:System.Diagnostics.EventLogInstaller>.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Aplikacje usług Windows](index.md)
-- [Wprowadzenie do aplikacji usług Windows](introduction-to-windows-service-applications.md)
-- [Instrukcje: Debugowanie aplikacji usług Windows](how-to-debug-windows-service-applications.md)
+- [Aplikacje usług systemu Windows](index.md)
+- [Wprowadzenie do aplikacji usług systemu Windows](introduction-to-windows-service-applications.md)
+- [Instrukcje: Debuguj aplikacje usług systemu Windows](how-to-debug-windows-service-applications.md)
 - [Usługi (Windows)](/windows/desktop/Services/services)

@@ -1,38 +1,38 @@
 ---
-title: Dostosowywanie struktury marshaling — .NET
-description: Dowiedz się, jak dostosować, jak .NET organizuje Twoje struktur natywną reprezentację.
+title: Dostosowywanie organizowania struktury — .NET
+description: Dowiedz się, jak dostosować platformę .NET do organizowania struktur w natywną reprezentację.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: da36f2a703fe817c171e192b9c94e473c93447a3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 6e3dcaeb71ae32812d3b022fff2bdc4e3e0691bf
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065472"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040153"
 ---
-# <a name="customizing-structure-marshaling"></a>Dostosowywanie struktury organizacyjne
+# <a name="customizing-structure-marshaling"></a>Dostosowywanie marshalingu struktur
 
-Czasami organizowania reguły domyślne w strukturach nie są dokładnie potrzebnych składników. Środowiska uruchomieniowe platformy .NET zawierają kilka punktów rozszerzeń, którą można dostosować układ i jak pola są przekazywane do struktury.
+Czasami domyślne reguły organizowania dla struktur nie są dokładnie tym, czego potrzebujesz. Środowiska uruchomieniowe platformy .NET udostępniają kilka punktów rozszerzenia, które umożliwiają dostosowanie układu struktury i sposobu organizowania pól.
 
 ## <a name="customizing-structure-layout"></a>Dostosowywanie układu struktury
 
-.NET zapewnia <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> atrybutu i <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> wyliczenie, aby możliwe było dostosować jak pola są umieszczane w pamięci. Poniższe wskazówki pomogą pozwala uniknąć typowych problemów.
+Platforma .NET udostępnia <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> atrybut <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> i Wyliczenie umożliwiające dostosowanie sposobu umieszczania pól w pamięci. Poniższe wskazówki pomogą uniknąć typowych problemów.
 
-**ROZWAŻ ✔️** przy użyciu `LayoutKind.Sequential` zawsze, gdy jest to możliwe.
+**✔️ rozważyć** użycie `LayoutKind.Sequential` wszędzie tam, gdzie to możliwe.
 
-**CZY ✔️** składać się tylko `LayoutKind.Explicit` marshaling po swojej natywnej struktury jest również ma układ jawny, na przykład Unii.
+**✔️ są** używane `LayoutKind.Explicit` tylko podczas organizowania, gdy struktura natywna ma również jawny układ, taki jak Unia.
 
-**Należy UNIKAĆ ❌** przy użyciu `LayoutKind.Explicit` podczas przekazywania struktur na platformach innych niż Windows. Środowisko uruchomieniowe platformy .NET Core nie obsługuje przekazywanie struktury jawnej przez wartość do funkcji natywnych w systemach Intel lub AMD 64-bitowych inne niż Windows. Środowisko wykonawcze obsługuje jednak jawne przekazywanie struktury przez odniesienie na wszystkich platformach.
+**❌ Unikać** `LayoutKind.Explicit` tworzenia struktur na platformach innych niż Windows. Środowisko uruchomieniowe platformy .NET Core nie obsługuje przekazywania jawnych struktur przez wartość do funkcji natywnych w systemach Intel lub AMD 64-bitowych systemów innych niż Windows. Jednak środowisko uruchomieniowe obsługuje przekazywanie jawnych struktur przez odwołanie na wszystkich platformach.
 
-## <a name="customizing-boolean-field-marshaling"></a>Dostosowywanie pola logicznych marshalingu
+## <a name="customizing-boolean-field-marshaling"></a>Dostosowywanie kierowania pola logicznego
 
-Kod natywny ma wiele różnych reprezentacji boolean. Na Windows samodzielnie istnieją trzy sposoby do reprezentowania wartości logiczne. Środowisko wykonawcze nie wiedzieć natywnych definicji struktury, dlatego najlepiej, co można zrobić zgadnąć na temat sposobu organizowania z wartościami logicznymi. Środowisko uruchomieniowe platformy .NET zapewnia sposób, aby wskazać sposób organizowania pola logicznych. W poniższych przykładach pokazano, jak kierować .NET `bool` na różnych typach boolean natywnych.
+Kod natywny ma wiele różnych reprezentacji wartości logicznych. W systemie Windows, istnieją trzy sposoby reprezentowania wartości logicznych. Środowisko uruchomieniowe nie zna natywnej definicji struktury, dlatego najlepszym rozwiązaniem jest przypuszczenie metody organizowania wartości logicznych. Środowisko uruchomieniowe platformy .NET zapewnia sposób organizowania pola wartości logicznej. W poniższych przykładach pokazano, jak skierować `bool` platformę .NET do różnych natywnych typów logicznych.
 
-Atrybut typu wartość logiczna wartości domyślne kierowanie jako natywny Win32 4-bajtowych [ `BOOL` ](/windows/desktop/winprog/windows-data-types#BOOL) wartość, jak pokazano w poniższym przykładzie:
+Wartości logiczne są domyślnie organizowane jako natywne 4-bajtowe wartości [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) Win32, jak pokazano w następującym przykładzie:
 
 ```csharp
 public struct WinBool
@@ -48,7 +48,7 @@ struct WinBool
 };
 ```
 
-Jeśli chcesz mieć jawne, możesz użyć <xref:System.Runtime.InteropServices.UnmanagedType.Bool?displayProperty=nameWithType> wartości, aby uzyskać takie samo zachowanie, jak powyżej:
+Jeśli chcesz być jawnie, możesz użyć <xref:System.Runtime.InteropServices.UnmanagedType.Bool?displayProperty=nameWithType> wartości, aby uzyskać takie samo zachowanie jak powyżej:
 
 ```csharp
 public struct WinBool
@@ -65,7 +65,7 @@ struct WinBool
 };
 ```
 
-Za pomocą `UnmanagedType.U1` lub `UnmanagedType.I1` poniższych wartości, możesz poinformować środowiska uruchomieniowego, aby zorganizować `b` pola jako natywny 1-bajtowe `bool` typu.
+Korzystając z `UnmanagedType.U1` wartości `UnmanagedType.I1` lub poniżej, można powiedzieć środowisko uruchomieniowe, aby zorganizować `b` pole jako 1-bajtowy typ `bool` natywny.
 
 ```csharp
 public struct CBool
@@ -82,7 +82,7 @@ struct CBool
 };
 ```
 
-Windows, mogą używać <xref:System.Runtime.InteropServices.UnmanagedType.VariantBool?displayProperty=nameWithType> wartość, aby poinformować środowiska uruchomieniowego do organizowania 2-bajtowych wartości logicznych `VARIANT_BOOL` wartość:
+W systemie Windows można użyć <xref:System.Runtime.InteropServices.UnmanagedType.VariantBool?displayProperty=nameWithType> wartości, aby poinformować środowisko uruchomieniowe o kierowaniu wartości logicznej do wartości 2-bajtowej: `VARIANT_BOOL`
 
 ```csharp
 public struct VariantBool
@@ -100,13 +100,13 @@ struct VariantBool
 ```
 
 > [!NOTE]
-> `VARIANT_BOOL` różni się od większości typów bool, w tym `VARIANT_TRUE = -1` i `VARIANT_FALSE = 0`. Ponadto wszystkie wartości, które nie są równe `VARIANT_TRUE` są traktowane jako wartość false.
+> `VARIANT_BOOL`jest inna niż większość typów bool w tym `VARIANT_TRUE = -1` i `VARIANT_FALSE = 0`. Ponadto wszystkie wartości, które nie `VARIANT_TRUE` są równe, są uważane za fałszywe.
 
-## <a name="customizing-array-field-marshaling"></a>Dostosowywanie marshaling pola tablicy
+## <a name="customizing-array-field-marshaling"></a>Dostosowywanie organizowania pól tablicy
 
-.NET zawiera także kilka sposobów dostosowywania, organizowanie tablicy.
+Platforma .NET zawiera również kilka sposobów dostosowywania organizowania tablic.
 
-Domyślnie .NET kieruje tablic jako wskaźnik do listy sąsiadujących elementów:
+Domyślnie program .NET kierowanie tablic jako wskaźnika do ciągłej listy elementów:
 
 ```csharp
 public struct DefaultArray
@@ -122,7 +122,7 @@ struct DefaultArray
 };
 ```
 
-Jeśli masz komunikowanie się z interfejsów API modelu COM, może być konieczne przeprowadzanie marshalingu tablic jako `SAFEARRAY*` obiektów. Możesz użyć <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> i <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> wartość, aby poinformować środowiska uruchomieniowego, aby zorganizować tablicę jako `SAFEARRAY*`:
+Jeśli korzystasz z interfejsów API modelu COM, może być konieczne kierowanie tablic jako `SAFEARRAY*` obiektów. Można użyć <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> i wartości, aby określić, że środowisko uruchomieniowe ma `SAFEARRAY*`zorganizować tablicę jako:
 
 ```csharp
 public struct SafeArrayExample
@@ -139,9 +139,9 @@ struct SafeArrayExample
 };
 ```
 
-Jeśli chcesz dostosować, jakiego rodzaju elementu jest w `SAFEARRAY`, wówczas można użyć <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> i <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> typu pola, aby dostosować element dokładnie `SAFEARRAY`.
+Jeśli musisz dostosować `SAFEARRAY`typ elementu w, możesz <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> użyć pól i <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> , `SAFEARRAY`aby dostosować dokładny typ elementu.
 
-Jeśli musisz kierować tablicy w miejscu, można użyć <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType> wartość, aby poinformować Organizator, aby zorganizować tablicę w miejscu. Podczas korzystania z tego organizowanie, również należy podać wartość <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> pole Liczba elementów w tablicy, dzięki czemu środowisko uruchomieniowe poprawnie można przydzielić miejsca w strukturze.
+Jeśli trzeba zorganizować tablicę w miejscu, można użyć <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType> wartości, aby poinformować organizatora, aby zorganizować tablicę w miejscu. W przypadku korzystania z tego organizowania należy również podać wartość <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> pola dla liczby elementów w tablicy, aby środowisko uruchomieniowe prawidłowo przydzielić miejsce dla struktury.
 
 ```csharp
 public struct InPlaceArray
@@ -159,13 +159,13 @@ struct InPlaceArray
 ```
 
 > [!NOTE]
-> .NET nie obsługuje organizowanie pole o zmiennej długości tablicy jako składowej tablicowej z elastycznych C99.
+> Platforma .NET nie obsługuje organizowania pola tablicy o zmiennej długości jako C99 elastycznej składowej tablicy.
 
-## <a name="customizing-string-field-marshaling"></a>Dostosowywanie marshaling pola ciągu
+## <a name="customizing-string-field-marshaling"></a>Dostosowywanie organizowania pól ciągów
 
-.NET zapewnia także szeroką gamę dostosowania marshaling pól ciągów.
+Platforma .NET udostępnia również szeroką gamę dostosowań do organizowania pól ciągów.
 
-Domyślnie .NET kieruje ciąg jako wskaźnik na ciąg zakończony znakiem null. Kodowanie jest zależne od wartości <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> pole <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType>. Jeśli atrybut nie zostanie określony, kodowanie, wartość domyślna to kodowania ANSI.
+Domyślnie program .NET kierujący ciąg jako wskaźnik do ciągu zakończonego wartością null. Kodowanie zależy od wartości <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> pola <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType>w. Jeśli żaden atrybut nie jest określony, kodowanie jest domyślnie zgodne z kodowaniem ANSI.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -197,7 +197,7 @@ struct DefaultString
 };
 ```
 
-Jeśli musisz używać różnych kodowań dla różnych pól lub po prostu chcesz być dokładniejsze w definicji struktury, można użyć <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> lub <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> wartości na <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> atrybutu.
+Jeśli potrzebujesz użyć innych kodowań dla różnych pól lub wolisz bardziej jawnie w definicji struktury, możesz użyć <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> wartości lub <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> dla <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> atrybutu.
 
 ```csharp
 public struct AnsiString
@@ -229,7 +229,7 @@ struct UnicodeString
 };
 ```
 
-Jeśli chcesz kierować swoje ciągi przy użyciu kodowania UTF-8, możesz użyć <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> wartość w swojej <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
+Jeśli chcesz zorganizować ciągi przy użyciu kodowania UTF-8, możesz użyć <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> wartości <xref:System.Runtime.InteropServices.MarshalAsAttribute>w.
 
 ```csharp
 public struct UTF8String
@@ -247,9 +247,9 @@ struct UTF8String
 ```
 
 > [!NOTE]
-> Za pomocą <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> wymaga programu .NET Framework 4.7 (lub nowszy) lub .NET Core 1.1 (lub nowszy). Nie jest dostępne w programie .NET Standard 2.0.
+> Użycie <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> wymaga .NET Framework 4,7 (lub nowszych) lub .NET Core 1,1 (lub nowszych). Nie jest on dostępny w .NET Standard 2,0.
 
-Jeśli pracujesz z interfejsów API modelu COM, może być konieczne kierować ciąg w kodowaniu `BSTR`. Za pomocą <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> wartości, można kierować ciąg jako `BSTR`.
+Jeśli pracujesz z interfejsami API modelu COM, może być konieczne przekierowanie ciągu `BSTR`jako. Korzystając z <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> wartości, można zorganizować ciąg `BSTR`jako.
 
 ```csharp
 public struct BString
@@ -266,7 +266,7 @@ struct BString
 };
 ```
 
-Korzystając z interfejsu API opartego na WinRT, konieczne może być kierować ciąg w kodowaniu `HSTRING`.  Za pomocą <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> wartości, można kierować ciąg jako `HSTRING`.
+W przypadku korzystania z interfejsu API opartego na WinRT może być konieczne zorganizowanie ciągu jako `HSTRING`.  Korzystając z <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> wartości, można zorganizować ciąg `HSTRING`jako.
 
 ```csharp
 public struct HString
@@ -283,7 +283,7 @@ struct BString
 };
 ```
 
-Jeśli Twój interfejs API wymaga przekazania parametrów w miejscu w strukturze, możesz użyć <xref:System.Runtime.InteropServices.UnmanagedType.ByValTStr?displayProperty=nameWithType> wartość. Należy pamiętać, że kodowanie ciągu organizowane przez `ByValTStr` jest określana na podstawie `CharSet` atrybutu. Ponadto wymaga ona, że długość ciągu jest przekazywany przez <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> pola.
+Jeśli interfejs API wymaga przekazania ciągu w strukturze, można użyć <xref:System.Runtime.InteropServices.UnmanagedType.ByValTStr?displayProperty=nameWithType> wartości. Należy pamiętać, że kodowanie dla ciągu organizowanego przez `ByValTStr` jest określane `CharSet` na podstawie atrybutu. Ponadto wymaga, aby długość ciągu była przenoszona przez <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> pole.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -317,9 +317,9 @@ struct DefaultString
 };
 ```
 
-## <a name="customizing-decimal-field-marshaling"></a>Dostosowywanie marshaling pola wartości dziesiętnej
+## <a name="customizing-decimal-field-marshaling"></a>Dostosowywanie organizowania pól dziesiętnych
 
-Jeśli pracujesz w Windows, mogą wystąpić niektóre interfejsy API, używanego przez natywnych [ `CY` lub `CURRENCY` ](/windows/desktop/api/wtypes/ns-wtypes-tagcy) struktury. Domyślnie .NET `decimal` wpisz marshals do natywnych [ `DECIMAL` ](/windows/desktop/api/wtypes/ns-wtypes-tagdec) struktury. Można jednak użyć <xref:System.Runtime.InteropServices.MarshalAsAttribute> z <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> wartość, aby nakazać Organizator, aby przekonwertować `decimal` wartość do macierzystej `CY` wartość.
+Jeśli pracujesz w systemie Windows, możesz napotkać niektóre interfejsy API, które używają natywnego [ `CY` lub `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1) struktury. Domyślnie typ .NET `decimal` ma kierowanie do struktury natywnej [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) . Można jednak użyć <xref:System.Runtime.InteropServices.MarshalAsAttribute> wartości z wartością, <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> aby nakazać `decimal` Organizatorowi przekonwertowanie wartości na wartość natywną `CY` .
 
 ```csharp
 public struct Currency
@@ -336,14 +336,14 @@ struct Currency
 };
 ```
 
-## <a name="marshaling-systemobjects"></a>Marshaling `System.Object`s
+## <a name="marshaling-systemobjects"></a>Kierowanie `System.Object`s
 
-W Windows, może kierować element `object`-wpisane pola do kodu macierzystego. Można kierować te pola do jednego z trzech typów:
-- [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
+W systemie Windows można skierować `object`pola do kodu natywnego. Można kierować te pola do jednego z trzech typów:
+- [`VARIANT`](/windows/win32/api/oaidl/ns-oaidl-variant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 - [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 
-Domyślnie `object`— będzie można zorganizować wpisane pola `IUnknown*` która otacza obiekt.
+Domyślnie `object`pole z określonym typem zostanie zorganizowane `IUnknown*` do obiektu, który otacza obiekt.
 
 ```csharp
 public struct ObjectDefault
@@ -359,7 +359,7 @@ struct ObjectDefault
 };
 ```
 
-Jeśli chcesz kierować pola obiektu do `IDispatch*`, Dodaj <xref:System.Runtime.InteropServices.MarshalAsAttribute> z <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType> wartości.
+Jeśli chcesz zorganizować pole obiektu do `IDispatch*`, Dodaj element <xref:System.Runtime.InteropServices.MarshalAsAttribute> z <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType> wartością.
 
 ```csharp
 public struct ObjectDispatch
@@ -376,7 +376,7 @@ struct ObjectDispatch
 };
 ```
 
-Jeśli chcesz kierować go jako `VARIANT`, Dodaj <xref:System.Runtime.InteropServices.MarshalAsAttribute> z <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> wartości.
+Jeśli chcesz zorganizować ją jako `VARIANT`, Dodaj element <xref:System.Runtime.InteropServices.MarshalAsAttribute> z <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> wartością.
 
 ```csharp
 public struct ObjectVariant
@@ -393,9 +393,9 @@ struct ObjectVariant
 };
 ```
 
-W poniższej tabeli opisano, jak różne typy środowiska uruchomieniowego `obj` mapowania pól do różnych typów, które są przechowywane w `VARIANT`:
+W poniższej tabeli opisano, jak różne typy środowiska uruchomieniowego są `obj` mapowane na różne typy przechowywane `VARIANT`w:
 
-| Typ architektury .NET | Typ VARIANT | | Typ architektury .NET | Typ VARIANT |
+| Typ .NET | Typ VARIANT | | Typ .NET | Typ VARIANT |
 |------------|--------------|-|----------|--------------|
 |  `byte`  | `VT_UI1` |     | `System.Runtime.InteropServices.BStrWrapper` | `VT_BSTR` |
 | `sbyte`  | `VT_I1`  |     | `object`  | `VT_DISPATCH` |

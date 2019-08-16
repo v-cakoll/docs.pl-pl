@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d2f5ad2afb2e73acead82369782f142aa10aac3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b9bec757071a98e085ccdeee3fc66bfc07f52bc
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782713"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040162"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver — Funkcja
-Ładuje bibliotekę typów i korzysta z podanym [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) rozpoznać wszystkie biblioteki typu wewnętrznie odwołania.  
+Ładuje bibliotekę typów i używa dostarczonego [interfejsu ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) do rozpoznawania wszelkich wewnętrznie przywoływanych bibliotek typów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,62 +38,62 @@ HRESULT LoadTypeLibWithResolver(
   
 ## <a name="parameters"></a>Parametry  
  `szFile`  
- [in] Ścieżka pliku biblioteki typów.  
+ podczas Ścieżka pliku biblioteki typów.  
   
  `regkind`  
- [in] A [wyliczenie REGKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) flagi, które kontroluje sposób zrejestrowanej biblioteki typów. Jego możliwe wartości to:  
+ podczas Flaga [wyliczenia REGKIND](https://docs.microsoft.com/windows/win32/api/oleauto/ne-oleauto-regkind) , która kontroluje sposób rejestrowania biblioteki typów. Możliwe wartości to:  
   
-- `REGKIND_DEFAULT`: Użyj domyślnego zachowania rejestracji.  
+- `REGKIND_DEFAULT`: Użyj domyślnego zachowania rejestrowania.  
   
-- `REGKIND_REGISTER`: Zarejestruj tego typu biblioteki.  
+- `REGKIND_REGISTER`: Zarejestruj tę bibliotekę typów.  
   
 - `REGKIND_NONE`: Nie rejestruj tej biblioteki typów.  
   
  `pTlbResolver`  
- [in] Wskaźnik do implementacji [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).  
+ podczas Wskaźnik do implementacji [interfejsu ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).  
   
  `pptlib`  
- [out] Odwołanie do biblioteki typów, który jest ładowany.  
+ określoną Odwołanie do biblioteki typów, która jest ładowana.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Jedna z wartości HRESULT, wymienione w poniższej tabeli.  
+ Jedna z wartości HRESULT wymienionych w poniższej tabeli.  
   
 |Wartość zwracana|Znaczenie|  
 |------------------|-------------|  
-|`S_OK`|Powodzenie.|  
+|`S_OK`|Prawnego.|  
 |`E_OUTOFMEMORY`|Za mało pamięci.|  
-|`E_POINTER`|Co najmniej jeden ze wskaźników są nieprawidłowe.|  
-|`E_INVALIDARG`|Co najmniej jeden z argumentów są nieprawidłowe.|  
-|`TYPE_E_IOERROR`|Funkcja nie można zapisać do pliku.|  
+|`E_POINTER`|Co najmniej jeden wskaźnik jest nieprawidłowy.|  
+|`E_INVALIDARG`|Co najmniej jeden z argumentów jest nieprawidłowy.|  
+|`TYPE_E_IOERROR`|Funkcja nie może wykonać zapisu w pliku.|  
 |`TYPE_E_REGISTRYACCESS`|Nie można otworzyć bazy danych rejestracji systemu.|  
 |`TYPE_E_INVALIDSTATE`|Nie można otworzyć biblioteki typów.|  
-|`TYPE_E_CANTLOADLIBRARY`|Nie można załadować biblioteki typów lub DLL.|  
+|`TYPE_E_CANTLOADLIBRARY`|Nie można załadować biblioteki typów lub biblioteki DLL.|  
   
 ## <a name="remarks"></a>Uwagi  
- [Tlbexp.exe (Eksporter biblioteki typów)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) wywołania `LoadTypeLibWithResolver` funkcji w procesie konwersji zestawu do typu biblioteki.  
+ [Tlbexp. exe (Eksporter biblioteki typów)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) wywołuje `LoadTypeLibWithResolver` funkcję w procesie konwersji zestawu na typ biblioteki.  
   
- Ta funkcja ładuje określonej biblioteki typu przy użyciu minimalnego dostępu do rejestru. Funkcja następnie sprawdza, czy biblioteki typów dla wewnętrznie odwołania biblioteki typów, z których każdy musi być załadowane i dodawane do biblioteki typu nadrzędnego.  
+ Ta funkcja ładuje określoną bibliotekę typów o minimalnym dostępie do rejestru. Funkcja następnie analizuje bibliotekę typów dla wewnętrznie przywoływanych bibliotek typów, z których każdy musi być załadowany i dodany do biblioteki typów nadrzędnych.  
   
- Przed załadowaniem przywoływanej biblioteki typów, ścieżki pliku odwołania muszą zostać rozwiązane do pełnej ścieżki pliku. Jest to realizowane za pośrednictwem [resolvetypelib — metoda](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) dostarczanym przez [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), która jest przekazywana w `pTlbResolver` parametru.  
+ Przed załadowaniem przywoływanej biblioteki typów, jej ścieżka do pliku odniesienia musi zostać rozpoznana jako pełna ścieżka pliku. Jest to realizowane za pomocą [metody ResolveTypeLib —](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) dostarczonej przez [interfejs ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), który jest `pTlbResolver` przekazywany do parametru.  
   
- Gdy znana jest pełną ścieżką do pliku biblioteki typów w przywoływanych, `LoadTypeLibWithResolver` funkcji ładuje i dodaje przywoływanej biblioteki typów do biblioteki typów nadrzędnego, tworzenie biblioteki typów wzorca połączone.  
+ Gdy znana jest pełna ścieżka pliku przywoływanej biblioteki typów, `LoadTypeLibWithResolver` funkcja ładuje i dodaje przywoływaną bibliotekę typów do biblioteki typów nadrzędnych, tworząc połączoną bibliotekę typów głównych.  
   
- Po funkcji rozpoznaje i ładuje wszystkie biblioteki wewnętrznie odwołanie typu, zwraca odwołanie do biblioteki wzorca rozpoznany typ w `pptlib` parametru.  
+ Po rozpoznaniu i załadowaniu wszystkich wewnętrznie przywoływanych bibliotek typów funkcja zwraca odwołanie do głównej, rozwiązanej biblioteki typów `pptlib` w parametrze.  
   
- `LoadTypeLibWithResolver` Funkcja jest zazwyczaj wywoływana przez [Tlbexp.exe (Eksporter biblioteki typów)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), który dostarcza własnego wewnętrznego [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementacji `pTlbResolver` parametr.  
+ Funkcja jest zazwyczaj wywoływana przez [Tlbexp. exe (Eksporter biblioteki typów)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), która dostarcza własną wewnętrzną implementację [interfejsu](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) `pTlbResolver` ITypeLibResolver w parametrze. `LoadTypeLibWithResolver`  
   
- Jeśli wywołasz `LoadTypeLibWithResolver` bezpośrednio, należy podać własne [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementacji.  
+ Jeśli wywołasz `LoadTypeLibWithResolver` bezpośrednio, musisz podać własną implementację [interfejsu ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** TlbRef.h  
+ **Nagłówki** TlbRef. h  
   
- **Biblioteka:** TlbRef.lib  
+ **Biblioteki** TlbRef.lib  
   
- **Wersja programu .NET framework:** 3.5, 3.0, 2.0  
+ **Wersja .NET Framework:** 3,5, 3,0, 2,0  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Tlbexp, funkcje pomocy](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
-- [LoadTypeLibEx — funkcja](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [LoadTypeLibEx, funkcja](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

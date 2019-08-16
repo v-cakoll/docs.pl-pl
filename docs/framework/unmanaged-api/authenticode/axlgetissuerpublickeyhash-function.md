@@ -10,15 +10,15 @@ api_type:
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de55594db68e084009a095a083e065fbd0b8f0df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1cfc2f5cde22bf63275dd4bdc65857ac1d51b3fe
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741329"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038430"
 ---
-# <a name="axlgetissuerpublickeyhash-function"></a>\_AxlGetIssuerPublicKeyHash — funkcja
-Pobiera Skrót SHA-1 klucza publicznego skojarzonego z kluczem prywatnym, który jest używany do podpisywania określonego certyfikatu.  
+# <a name="_axlgetissuerpublickeyhash-function"></a>\_AxlGetIssuerPublicKeyHash, funkcja
+Pobiera skrót SHA-1 klucza publicznego skojarzonego z kluczem prywatnym, który jest używany do podpisywania określonego certyfikatu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,13 +31,13 @@ HRESULT _AxlGetIssuerPublicKeyHash (
   
 ## <a name="parameters"></a>Parametry  
  `pChainContext`  
- [in] Dostawcy usług Kryptograficznych blob klucza publicznego. Zobacz [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struktury.  
+ podczas Obiekt BLOB klucza publicznego dostawcy usług kryptograficznych. Zobacz strukturę [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
  `ppwszPublicKeyHash`  
- [out] Wskaźnik do WCHAR * do odbierania zakodowanego szesnastkowo token klucza publicznego.  
+ określoną Wskaźnik do WCHAR *, aby otrzymać token klucza publicznego zakodowany w formacie szesnastkowym.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli funkcja się powiedzie; w przeciwnym razie `S_FALSE`.  
+ `S_OK`Jeśli funkcja się powiedzie; w `S_FALSE`przeciwnym razie.  
   
 ## <a name="see-also"></a>Zobacz także
 

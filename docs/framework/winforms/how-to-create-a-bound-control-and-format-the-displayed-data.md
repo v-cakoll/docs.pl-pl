@@ -6,57 +6,55 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: d81995840aa4df4610d5b6e880b9cdbbc717f2e5
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 052e619acb23fb2e25f42daf7b4eaaacb0688f31
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690385"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039427"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Instrukcje: Tworzenie kontrolki powiązanej oraz formatowanie wyświetlanych danych
 
-Za pomocą powiązanie danych formularzy Windows, możesz sformatować dane wyświetlane w kontrolce powiązanych z danymi za pomocą **formatowanie i zaawansowane powiązanie** okno dialogowe.
+Za pomocą powiązania danych Windows Forms można sformatować dane wyświetlane w kontrolce powiązanej z danymi przy użyciu okna dialogowego **Formatowanie i powiązanie zaawansowane** .
 
-> [!NOTE]
-> Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-### <a name="to-bind-a-control-and-format-the-displayed-data"></a>Aby powiązać formant oraz formatowanie wyświetlanych danych
+### <a name="to-bind-a-control-and-format-the-displayed-data"></a>Aby powiązać formant i sformatować wyświetlane dane
 
-1. Łączenie ze źródłem danych.
+1. Nawiąż połączenie ze źródłem danych.
 
-     Aby uzyskać więcej informacji, zobacz [nawiązania połączenia ze źródłem danych](../data/adonet/connecting-to-a-data-source.md).
+     Aby uzyskać więcej informacji, zobacz [nawiązywanie połączenia ze źródłem danych](../data/adonet/connecting-to-a-data-source.md).
 
-2. W formularzu wybierz kontrolkę, a następnie otwórz okno właściwości.
+2. W formularzu zaznacz kontrolkę, a następnie otwórz okno Właściwości.
 
-3. Rozwiń **(powiązania danych)** właściwości, a następnie w polu **(zaawansowane)** polu i kliknij przycisk wielokropka (![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/how-to-create-a-bound-control-and-format-the-displayed-data/visual-studio-ellipsis-button.png)) Aby wyświetlić **formatowanie i powiązywanie zaawansowane** okno dialogowe, które zawiera pełną listę właściwości dla tej kontrolki.
+3. Rozwiń Właściwość **(DataBindings)** , a następnie w polu **(Zaawansowane)** kliknij przycisk wielokropka (![przycisk wielokropka (...) w okno właściwości programu Visual Studio](./media/how-to-create-a-bound-control-and-format-the-displayed-data/visual-studio-ellipsis-button.png)), aby wyświetlić **Formatowanie i zaawansowane** Okno dialogowe powiązania, które zawiera kompletną listę właściwości tej kontrolki.
 
-4. Wybierz właściwość, aby powiązać, a następnie kliknij przycisk **powiązanie** strzałki.
+4. Wybierz właściwość, którą chcesz powiązać, a następnie kliknij strzałkę **powiązania** .
 
      Zostanie wyświetlona lista dostępnych źródeł danych.
 
-5. Rozwiń źródło danych, które chcesz powiązać, dopóki nie znajdziesz element danych jednego, który ma.
+5. Rozwiń źródło danych, do którego chcesz powiązać, dopóki nie znajdziesz jednego z nich.
 
-     Na przykład jeśli dokonywane jest wiązanie wartość kolumny w tabeli zestawu danych, rozwiń węzeł z nazwą zestawu danych, a następnie rozwiń nazwę tabeli, aby wyświetlić nazwy kolumn.
+     Na przykład jeśli powiążesz się z wartością kolumny w tabeli zestawu danych, rozwiń nazwę zestawu danych, a następnie rozwiń nazwę tabeli, aby wyświetlić nazwy kolumn.
 
-6. Kliknij nazwę elementu można powiązać.
+6. Kliknij nazwę elementu, z którym ma zostać utworzone powiązanie.
 
-7. W **sformatować typu** kliknij format, w którym chcesz zastosować do danych wyświetlanych w formancie.
+7. W polu **Typ formatu** kliknij format, który ma zostać zastosowany do danych wyświetlanych w kontrolce.
 
-     W każdym przypadku można określić wartości wyświetlanej w kontrolce, jeśli źródło danych zawiera <xref:System.DBNull>. W przeciwnym razie różne opcje nieco w zależności od wybranego typu formatu. W poniższej tabeli przedstawiono typy formatów i opcje.
+     W każdym przypadku można określić wartość wyświetlaną w kontrolce, jeśli źródło danych zawiera <xref:System.DBNull>. W przeciwnym razie Opcje różnią się nieco w zależności od wybranego typu formatu. W poniższej tabeli przedstawiono typy i opcje formatu.
 
     |Typ formatu|Opcja formatowania|
     |-----------------|-----------------------|
     |Bez formatowania|Brak opcji.|
-    |Numeric|Określ liczbę miejsc dziesiętnych, za pomocą **miejsc dziesiętnych** formantu góra dół.|
-    |Waluta|Określ liczbę miejsc dziesiętnych, za pomocą **miejsc dziesiętnych** formantu góra dół.|
-    |Data i godzina|Wybierz sposób wyświetlania daty i godziny, wybierając jeden z elementów w **typu** pola wyboru.|
-    |naukowe|Określ liczbę miejsc dziesiętnych, za pomocą **miejsc dziesiętnych** formantu góra dół.|
-    |Niestandardowe|Określ ciąg formatu niestandardowego za pomocą.<br /><br /> Aby uzyskać więcej informacji, zobacz [typy formatowania](../../standard/base-types/formatting-types.md). **Uwaga:**  Tworzenie niestandardowych formatów ciągów nie ma gwarancji pomyślnie komunikacji dwustronnej między źródłem danych i powiązanej kontrolki. Zamiast tego obsługiwać <xref:System.Windows.Forms.Binding.Parse> lub <xref:System.Windows.Forms.Binding.Format> zdarzeń dla wiązania i zastosować niestandardowe formatowanie w kodzie obsługi zdarzeń.|
+    |Numeric|Określ liczbę miejsc dziesiętnych przy użyciu funkcji **miejsca dziesiętnego** .|
+    |Waluta|Określ liczbę miejsc dziesiętnych przy użyciu funkcji **miejsca dziesiętnego** .|
+    |Data i godzina|Wybierz, w jaki sposób ma być wyświetlana data i godzina, wybierając jeden z elementów w polu wyboru **typu** .|
+    |Nauk|Określ liczbę miejsc dziesiętnych przy użyciu funkcji **miejsca dziesiętnego** .|
+    |Celnej|Określ niestandardowy ciąg formatujący przy użyciu.<br /><br /> Aby uzyskać więcej informacji, zobacz [Typy formatowania](../../standard/base-types/formatting-types.md). **Uwaga:**  Niestandardowe ciągi formatujące nie są gwarantowane w celu pomyślnej rundy między źródłem danych i kontrolą powiązaną. Zamiast tego obsłużyć <xref:System.Windows.Forms.Binding.Parse> zdarzenie or <xref:System.Windows.Forms.Binding.Format> dla powiązania i zastosować niestandardowe formatowanie w kodzie obsługi zdarzeń.|
 
-8. Kliknij przycisk **OK** zamknąć **formatowanie i powiązywanie zaawansowane** okno dialogowe i wrócić do okna właściwości.
+8. Kliknij przycisk **OK** , aby zamknąć okno dialogowe **Formatowanie i łączenie zaawansowane** i wrócić do okno właściwości.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Tworzenie prostego formantu powiązanego na formularzu Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Instrukcje: Tworzenie prostego formantu powiązanego w formularzu systemu Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Weryfikacja danych użytkownika w formularzach Windows Forms](user-input-validation-in-windows-forms.md)
 - [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)

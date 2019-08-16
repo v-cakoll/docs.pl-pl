@@ -5,32 +5,37 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: e371c60e3fb674e4243cec008e1098172725d4cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35a7cd8cc1daaf76a25977751ddc9ec0709e5947
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937725"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037905"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Instrukcje: Tworzenie nowego ustawienia w czasie projektowania
-Za pomocą projektanta ustawień, można utworzyć nowe ustawienie w czasie projektowania. Projektant ustawień jest interfejsem styl siatki, która pozwala na tworzenie nowych ustawień, a następnie określ właściwości tych ustawień. Należy określić nazwę, wartość, typie i zakresie dla nowych ustawień. Po utworzeniu to ustawienie jest dostępne w kodzie.  
-  
-### <a name="to-create-a-new-setting-at-design-time-in-c"></a>Aby utworzyć nowe ustawienie w czasie projektowania w języku C\#
-  
-1. W **Eksploratora rozwiązań**, rozwiń węzeł **właściwości** węzła projektu.  
-  
-2. Kliknij dwukrotnie plik .settings, w której chcesz dodać nowe ustawienie. Domyślna nazwa dla tego pliku jest Settings.settings.  
-  
-3. W Projektancie ustawień Ustaw nazwę, wartość, typie i zakresie dla ustawienia. Każdy wiersz reprezentuje ustawienia jednej.  
-  
-### <a name="to-create-a-new-setting-at-design-time-in-visual-basic"></a>Aby utworzyć nowe ustawienie w czasie projektowania w języku Visual Basic  
-  
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy węzeł projektu i wybierz polecenie **właściwości**.  
-  
-2. W **właściwości** wybierz opcję **ustawienia** kartę.  
-  
-3. W Projektancie ustawień Ustaw nazwę, wartość, typie i zakresie dla ustawienia. Każdy wiersz reprezentuje ustawienia jednej.  
-  
+
+Nowe ustawienie można utworzyć w czasie projektowania przy użyciu projektanta ustawień w programie Visual Studio. Projektant ustawień jest interfejsem stylu siatki, który umożliwia tworzenie nowych ustawień i określanie właściwości tych ustawień. Należy określić nazwę, wartość, typ i zakres dla nowych ustawień. Po utworzeniu ustawienia jest ono dostępne w kodzie.
+
+## <a name="create-a-new-setting-at-design-time-in-c"></a>Tworzenie nowego ustawienia w czasie projektowania w języku C\#
+
+1. Otwórz program Visual Studio.
+
+2. W **Eksplorator rozwiązań**rozwiń węzeł **Właściwości** projektu.
+
+3. Kliknij dwukrotnie plik ustawień, w którym chcesz dodać nowe ustawienie. Domyślna nazwa tego pliku to Settings. Settings.
+
+4. W projektancie ustawień Ustaw **nazwę**, **wartość**, **Typ**i **zakres** dla ustawienia. Każdy wiersz reprezentuje jedno ustawienie.
+
+## <a name="create-a-new-setting-at-design-time-in-visual-basic"></a>Utwórz nowe ustawienie w czasie projektowania w Visual Basic
+
+1. Otwórz program Visual Studio.
+
+2. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy węzeł projektu i wybierz polecenie **Właściwości**.
+
+3. Na stronie **Właściwości** wybierz kartę **Ustawienia** .
+
+4. W projektancie ustawień Ustaw **nazwę**, **wartość**, **Typ**i **zakres** dla ustawienia. Każdy wiersz reprezentuje jedno ustawienie.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Używanie ustawień aplikacji i ustawień użytkownika](using-application-settings-and-user-settings.md)

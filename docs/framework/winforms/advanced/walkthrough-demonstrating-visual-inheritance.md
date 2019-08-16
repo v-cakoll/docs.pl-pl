@@ -11,160 +11,156 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: a5e2a8b0bf982ff112d7930e331456fa69485dfc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6fd504269ae9afbfd02b58276582a644674e1e0f
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665908"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040324"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Przewodnik: Demonstrowanie dziedziczenia Visual
-Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i dodać nowe kontrolki. W tym instruktażu utworzysz formularza podstawowego i skompiluj go do biblioteki klas. Będzie zaimportować tej biblioteki klas do innego projektu i utworzyć nowy formularz, który dziedziczy z formularza podstawowego. Z tego instruktażu dowiesz się jak:  
-  
-- Utwórz projekt biblioteki klas zawierający formularz podstawowy.  
-  
-- Dodaj przycisk z właściwościami, które pochodne klasy formularza podstawowego można modyfikować.  
-  
-- Dodaj przycisk, który nie może modyfikować obiektów dziedziczących z formularza podstawowego.  
-  
-- Utwórz projekt zawierający formularz, który dziedziczy z `BaseForm`.  
-  
- Ostatecznie w tym instruktażu będą pokazują różnicę między prywatnych i chronionych formantów na odziedziczony formularz.  
-  
-> [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
+
+Dziedziczenie wizualne umożliwia wyświetlanie kontrolek w formularzu podstawowym i dodawanie nowych kontrolek. W tym instruktażu utworzysz formularz podstawowy i skompilujesz go w bibliotece klas. Ta biblioteka klas zostanie zaimportowana do innego projektu i zostanie utworzony nowy formularz, który dziedziczy po formularzu podstawowym. W tym instruktażu dowiesz się, jak:
+
+- Utwórz projekt biblioteki klas zawierający formularz podstawowy.
+
+- Dodaj przycisk z właściwościami, które mogą modyfikować klasy pochodne formularza podstawowego.
+
+- Dodaj przycisk, którego nie można modyfikować przez dziedziczenie formularza podstawowego.
+
+- Utwórz projekt zawierający formularz, który dziedziczy z `BaseForm`.
+
+W tym instruktażu przedstawiono różnicę między kontrolkami prywatnymi i chronionymi w formularzu dziedziczonym.
+
 > [!CAUTION]
->  Nie wszystkie formanty obsługuje dziedziczenie visual z formularza podstawowego. Następujące elementy sterujące nie obsługują scenariusza opisanego w tym przewodniku:  
->   
->  <xref:System.Windows.Forms.WebBrowser>  
->   
->  <xref:System.Windows.Forms.ToolStrip>  
->   
->  <xref:System.Windows.Forms.ToolStripPanel>  
->   
->  <xref:System.Windows.Forms.TableLayoutPanel>  
->   
->  <xref:System.Windows.Forms.FlowLayoutPanel>  
->   
->  <xref:System.Windows.Forms.DataGridView>  
->   
->  Te kontrolki w odziedziczony formularz są zawsze, niezależnie od tego, Modyfikatory używasz jest tylko do odczytu (`private`, `protected`, lub `public`).  
-  
-## <a name="scenario-steps"></a>Kroki w scenariuszu  
- Pierwszym krokiem jest utworzyć formularz podstawowy.  
-  
-#### <a name="to-create-a-class-library-project-containing-a-base-form"></a>Aby utworzyć projekt biblioteki klas zawierający formularza podstawowego  
-  
-1. Z **pliku** menu, wybierz **New**, a następnie **projektu** otworzyć **nowy projekt** okno dialogowe.  
-  
-2. Tworzenie aplikacji Windows Forms o nazwie `BaseFormLibrary`.  
-  
-3. Aby utworzyć bibliotekę klas, zamiast do standardowej aplikacji Windows Forms w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **BaseFormLibrary** węzła projektu, a następnie wybierz pozycję **właściwości**.  
-  
-4. We właściwościach projektu, należy zmienić **typ danych wyjściowych** z **aplikacji Windows** do **biblioteki klas**.  
-  
-5. Z **pliku** menu, wybierz **Zapisz wszystko** do zapisania projektu i plików w lokalizacji domyślnej.  
-  
- W dwóch następnych procedur dodać przyciski do formularza podstawowego. Aby zademonstrować dziedziczenie visual, zostanie nadana przyciski różne poziomy dostępu, ustawiając ich `Modifiers` właściwości.  
-  
-#### <a name="to-add-a-button-that-inheritors-of-the-base-form-can-modify"></a>Aby dodać przycisk, który może modyfikować obiektów dziedziczących z formularza podstawowego  
-  
-1. Otwórz **Form1** w projektancie.  
-  
-2. Na **wszystkie formularze Windows** karcie **przybornika**, kliknij dwukrotnie **przycisk** Aby dodać przycisk do formularza. Aby ustawić położenie i rozmiar przycisku za pomocą myszy.  
-  
-3. W oknie właściwości ustaw następujące właściwości przycisku:  
-  
-    - Ustaw **tekstu** właściwości **Say Hello**.  
-  
-    - Ustaw **(nazwa)** właściwości **btnProtected**.  
-  
-    - Ustaw **Modyfikatory** właściwości **chronione**. Dzięki temu możliwe formularzy, które dziedziczą z **Form1** można zmodyfikować właściwości **btnProtected**.  
-  
-4. Kliknij dwukrotnie **Say Hello** przycisk, aby dodać moduł obsługi zdarzenia **kliknij** zdarzeń.  
-  
-5. Dodaj następujący wiersz kodu do obsługi zdarzeń:  
-  
-    ```vb  
-    MessageBox.Show("Hello, World!")  
-    ```  
-  
-    ```csharp  
-    MessageBox.Show("Hello, World!");  
-    ```  
-  
-#### <a name="to-add-a-button-that-cannot-be-modified-by-inheritors-of-the-base-form"></a>Aby dodać przycisk, który nie może modyfikować obiektów dziedziczących z formularza podstawowego  
-  
-1. Przełącz do widoku projektu, klikając pozycję **Form1.vb [projekt], Form1.cs [projekt] lub [projekt] Form1.jsl** kartę powyżej edytora kodu lub naciskając klawisz F7.  
-  
-2. Dodaj drugi przycisk i ustaw jego właściwości w następujący sposób:  
-  
-    - Ustaw **tekstu** właściwości **Say Goodbye**.  
-  
-    - Ustaw **(nazwa)** właściwości **btnPrivate**.  
-  
-    - Ustaw **Modyfikatory** właściwości **prywatnej**. Uniemożliwia jej formularzy, które dziedziczą z **Form1** można zmodyfikować właściwości **btnPrivate**.  
-  
-3. Kliknij dwukrotnie **Say Goodbye** przycisk, aby dodać moduł obsługi zdarzenia **kliknij** zdarzeń. Umieść następujący wiersz kodu w procedurze zdarzenia:  
-  
-    ```vb  
-    MessageBox.Show("Goodbye!")  
-    ```  
-  
-    ```csharp  
-    MessageBox.Show("Goodbye!");  
-    ```  
-  
-4. Z **kompilacji** menu, wybierz **kompilacji biblioteki BaseForm** do tworzenia biblioteki klas.  
-  
-     Po skompilowaniu biblioteki można utworzyć nowy projekt, który dziedziczy z formularza, który został utworzony.  
-  
-#### <a name="to-create-a-project-containing-a-form-that-inherits-from-the-base-form"></a>Aby utworzyć projekt zawierający formularz, który dziedziczy z formularza podstawowego  
-  
-1. Z **pliku** menu, wybierz **Dodaj** i następnie **nowy projekt** otworzyć **Dodaj nowy projekt** okno dialogowe.  
-  
-2. Tworzenie aplikacji Windows Forms o nazwie `InheritanceTest`.  
-  
-#### <a name="to-add-an-inherited-form"></a>Aby dodać odziedziczony formularz  
-  
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **InheritanceTest** projektu, wybierz opcję **Dodaj**, a następnie wybierz pozycję **nowy element**.  
-  
-2. W **Dodaj nowy element** okno dialogowe, wybierz opcję **Windows Forms** kategorii (Jeśli masz listę kategorii), a następnie wybierz **dziedziczone formularza** szablonu.  
-  
-3. Pozostaw domyślną nazwę `Form2` a następnie kliknij przycisk **Dodaj**.  
-  
-4. W **selektor dziedziczenia** okno dialogowe, wybierz opcję **Form1** z **BaseFormLibrary** projektu jako formularz, aby dziedziczyć z, a następnie kliknij przycisk **OK** .  
-  
-     Spowoduje to utworzenie formularza w **InheritanceTest** projektu, który pochodzi z formularza w **BaseFormLibrary**.  
-  
-5. Otwórz odziedziczony formularz (**formularz2**) w projektancie, klikając dwukrotnie plik, go, jeśli nie jest już otwarty.  
-  
-     W Projektancie dziedziczone przyciski powinny mieć symbol (![Zrzut ekranu przedstawiający symbolu dziedziczenie Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) w górnym rogu, wskazując, są one dziedziczone.  
-  
-6. Wybierz **Say Hello** przycisk i obserwuj uchwytami zmiany rozmiaru. Ponieważ ten przycisk jest chroniony, obiektów dziedziczących można go przenieść, zmienić jego rozmiar, zmień swój podpis i wprowadzać inne modyfikacje.  
-  
-7. Wybierz prywatna **Say Goodbye** przycisku i zwróć uwagę, że nie ma uchwytami zmiany rozmiaru. Ponadto **właściwości** okna właściwości ten przycisk jest wyszarzony do wskazania, nie można ich modyfikować.  
-  
-8. Jeśli używasz Visual C#:  
-  
-    1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **Form1** w **InheritanceTest** projektu, a następnie wybierz **Usuń**. W wyświetlonym oknie komunikatu kliknij **OK** o potwierdzenie usunięcia.  
-  
-    2. Otwórz plik Program.cs i zmień wiersz `Application.Run(new Form1());` do `Application.Run(new Form2());`.  
-  
-9. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **InheritanceTest** projektu, a następnie wybierz **Ustaw jako projekt startowy**.  
-  
-10. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **InheritanceTest** projektu, a następnie wybierz **właściwości**.  
-  
-11. W **InheritanceTest** stron właściwości ustaw **obiekt początkowy** jako odziedziczony formularz (**formularz2**).  
-  
-12. Naciśnij klawisz F5, aby uruchomić aplikację i przyjrzeć się zachowaniu odziedziczony formularz.  
-  
-## <a name="next-steps"></a>Następne kroki  
- Dziedziczenie w przypadku kontrolek użytkownika działa w taki sam sposób. Otwórz nowy projekt biblioteki klas i Dodaj kontrolkę użytkownika. Umieść formanty składników na nim i skompiluj projekt. Otwórz inny nowy projekt biblioteki klas i Dodaj odwołanie do biblioteki klas skompilowany. Ponadto spróbuj dodać odziedziczoną kontrolkę (za pośrednictwem **Dodaj nowe elementy** okno dialogowe) do projektu i przy użyciu **selektor dziedziczenia**. Dodaj formant użytkownika, a następnie zmień `Inherits` (`:` w języku Visual C#) instrukcja. Aby uzyskać więcej informacji, zobacz [jak: Dziedziczenie formularzy Windows](how-to-inherit-windows-forms.md).  
-  
+> Nie wszystkie formanty obsługują dziedziczenie wizualne z formularza podstawowego. Następujące kontrolki nie obsługują scenariusza opisanego w tym instruktażu:
+>
+>  <xref:System.Windows.Forms.WebBrowser>
+>
+>  <xref:System.Windows.Forms.ToolStrip>
+>
+>  <xref:System.Windows.Forms.ToolStripPanel>
+>
+>  <xref:System.Windows.Forms.TableLayoutPanel>
+>
+>  <xref:System.Windows.Forms.FlowLayoutPanel>
+>
+>  <xref:System.Windows.Forms.DataGridView>
+>
+>  Te kontrolki w dziedziczonym formularzu są zawsze tylko do odczytu, niezależnie od używanej modyfikatora (`private`, `protected`lub `public`).
+
+## <a name="create-a-class-library-project-containing-a-base-form"></a>Tworzenie projektu biblioteki klas zawierającego formularz podstawowy
+
+1. W programie Visual Studio w menu **plik** wybierz polecenie **Nowy** > **projekt** , aby otworzyć okno dialogowe **Nowy projekt** .
+
+2. Utwórz aplikację Windows Formsową o `BaseFormLibrary`nazwie.
+
+3. Aby utworzyć bibliotekę klas zamiast standardowej aplikacji Windows Forms, w **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy węzeł projektu **BaseFormLibrary** , a następnie wybierz polecenie **Właściwości**.
+
+4. We właściwościach projektu Zmień **Typ danych wyjściowych** z **aplikacji systemu Windows** na **bibliotekę klas**.
+
+5. Z menu **plik** wybierz polecenie **Zapisz wszystko** , aby zapisać projekt i pliki w domyślnej lokalizacji.
+
+ Dwie następne procedury umożliwiają dodanie przycisków do formularza podstawowego. Aby zademonstrować dziedziczenie wizualne, nadajesz przyciskom różne poziomy dostępu `Modifiers` , ustawiając ich właściwości.
+
+## <a name="add-a-button-that-inheritors-of-the-base-form-can-modify"></a>Dodaj przycisk, który może modyfikować dziedziczenie formularza podstawowego
+
+1. Otwórz **formularz Form1** w projektancie.
+
+2. Na karcie **wszystkie Windows Forms** przybornika kliknijdwukrotnie przycisk, aby dodać przycisk do formularza. Użyj myszy, aby ustawić położenie przycisku i zmienić jego rozmiar.
+
+3. W okno Właściwości ustaw następujące właściwości przycisku:
+
+    - Ustaw właściwość **Text** , aby **powiedzieć Hello**.
+
+    - Ustaw właściwość **(Name)** na **btnProtected**.
+
+    - Ustaw właściwość **Modyfikatory** na wartość **Protected**. Dzięki temu formularze dziedziczące z **formularza Form1** są modyfikowane w celu zmodyfikowania właściwości **btnProtected**.
+
+4. Kliknij dwukrotnie przycisk **powiedz Hello** , aby dodać procedurę obsługi zdarzeń dla zdarzenia **kliknięcia** .
+
+5. Dodaj następujący wiersz kodu do programu obsługi zdarzeń:
+
+    ```vb
+    MessageBox.Show("Hello, World!")
+    ```
+
+    ```csharp
+    MessageBox.Show("Hello, World!");
+    ```
+
+## <a name="add-a-button-that-cannot-be-modified-by-inheritors-of-the-base-form"></a>Dodaj przycisk, którego nie można modyfikować przez dziedziczenie formularza podstawowego
+
+1. Przejdź do widoku projektu, klikając kartę **Form1. vb [projekt], Form1.cs [Design] lub Form1. JSL [Design]** nad edytorem kodu lub naciskając klawisz F7.
+
+2. Dodaj drugi przycisk i ustaw jego właściwości w następujący sposób:
+
+    - Ustaw właściwość **Text** na wartość"Pożegnanie".
+
+    - Ustaw właściwość **(Name)** na **btnPrivate**.
+
+    - Ustaw właściwość **Modyfikatory** na wartość **Private**. To sprawia, że dla formularzy dziedziczących z **formularza Form1** nie można modyfikować właściwości **btnPrivate**.
+
+3. Kliknij dwukrotnie przycisk "na **przykład** ", aby dodać procedurę obsługi zdarzeń dla zdarzenia **kliknięcia** . W procedurze zdarzenia umieść następujący wiersz kodu:
+
+    ```vb
+    MessageBox.Show("Goodbye!")
+    ```
+
+    ```csharp
+    MessageBox.Show("Goodbye!");
+    ```
+
+4. Z menu **kompilacja** wybierz kolejno opcje **Kompiluj BaseForm Library** , aby skompilować bibliotekę klas.
+
+     Po skompilowaniu biblioteki można utworzyć nowy projekt, który dziedziczy po właśnie utworzonym formularzu.
+
+## <a name="create-a-project-containing-a-form-that-inherits-from-the-base-form"></a>Utwórz projekt zawierający formularz, który dziedziczy z formularza podstawowego
+
+1. Z menu **plik** wybierz polecenie **Dodaj** , a następnie **Nowy projekt** , aby otworzyć okno dialogowe **Dodaj nowy projekt** .
+
+2. Utwórz aplikację Windows Formsową o `InheritanceTest`nazwie.
+
+## <a name="add-an-inherited-form"></a>Dodaj Dziedziczony formularz
+
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **InheritanceTest** , wybierz polecenie **Dodaj**, a następnie wybierz pozycję **nowy element**.
+
+2. W oknie dialogowym **Dodaj nowy element** wybierz kategorię **Windows Forms** (Jeśli masz listę kategorii), a następnie wybierz **Dziedziczony szablon formularza** .
+
+3. Pozostaw domyślną nazwę `Form2` , a następnie kliknij przycisk **Dodaj**.
+
+4. W oknie dialogowym **Selektor dziedziczenia** wybierz opcję **Form1** z projektu **BaseFormLibrary** jako formularz do dziedziczenia, a następnie kliknij przycisk **OK**.
+
+     Spowoduje to utworzenie formularza w projekcie **InheritanceTest** , który pochodzi z formularza w **BaseFormLibrary**.
+
+5. Otwórz Dziedziczony formularz (**Form2**) w projektancie, klikając go dwukrotnie, jeśli nie jest jeszcze otwarty.
+
+     W projektancie przyciski dziedziczone mają symbol (![Zrzut ekranu przedstawiający symbol dziedziczenia Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) w górnym rogu wskazujące, że są dziedziczone.
+
+6. Wybierz przycisk **powiedz Hello** i obserwuj uchwyty zmiany rozmiaru. Ponieważ ten przycisk jest chroniony, dziedziczenia można przenieść, zmienić jego rozmiar, zmienić jego podpis i wprowadzić inne modyfikacje.
+
+7. Wybierz prywatny przycisk "Pożegnanie" i zwróć uwagę, że nie ma dojść do zmiany rozmiaru. Ponadto w oknie **Właściwości** właściwości tego przycisku są wyszarzone, aby wskazać, że nie można ich modyfikować.
+
+8. Jeśli używasz wizualizacji C#:
+
+    1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **Form1** w projekcie **InheritanceTest** , a następnie wybierz polecenie **Usuń**. W wyświetlonym oknie komunikatu kliknij przycisk **OK** , aby potwierdzić usunięcie.
+
+    2. Otwórz plik program.cs i Zmień wiersz `Application.Run(new Form1());` na. `Application.Run(new Form2());`
+
+9. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **InheritanceTest** i wybierz pozycję **Ustaw jako projekt startowy**.
+
+10. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **InheritanceTest** i wybierz polecenie **Właściwości**.
+
+11. Na stronach właściwości **InheritanceTest** Ustaw **obiekt startowy** jako Dziedziczony formularz (**Form2**).
+
+12. Naciśnij klawisz **F5** , aby uruchomić aplikację, i obserwuj zachowanie dziedziczonego formularza.
+
+## <a name="next-steps"></a>Następne kroki
+
+Dziedziczenie dla kontrolek użytkownika działa w podobny sposób. Otwórz nowy projekt biblioteki klas i Dodaj kontrolkę użytkownika. Umieść w nim kontrolki elementów i skompiluj projekt. Otwórz inny projekt biblioteki klas i Dodaj odwołanie do skompilowanej biblioteki klas. Ponadto spróbuj dodać odziedziczony formant (za pomocą okna dialogowego **Dodaj nowe elementy** ) do projektu i przy użyciu **selektora dziedziczenia**. Dodaj kontrolkę użytkownika i Zmień `Inherits` instrukcję (`:` w języku wizualnym C#). Aby uzyskać więcej informacji, zobacz [jak: Dziedzicz Windows Forms](how-to-inherit-windows-forms.md).
+
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Dziedziczenie formularzy Windows](how-to-inherit-windows-forms.md)
+- [Instrukcje: Dziedzicz Windows Forms](how-to-inherit-windows-forms.md)
 - [Formularze Windows Forms — dziedziczenie wizualizacji](windows-forms-visual-inheritance.md)
 - [Windows Forms](../index.md)

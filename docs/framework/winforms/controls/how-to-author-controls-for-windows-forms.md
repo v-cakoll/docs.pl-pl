@@ -6,57 +6,56 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 8adc9644f987166729c43b79a6891960978341dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0804b9824b84a32bdd79c763031a3de4ffa54099
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612726"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039877"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Instrukcje: kontrolki autoryzacji dla formularzy systemu Windows
-Formant reprezentuje graficzny link między użytkownikiem i program. Kontrolki można podać i przetwarzania danych, akceptują dane wejściowe użytkownika, odpowiadanie na zdarzenia lub wykonywać dowolna liczba innych funkcji, które łączą się z użytkownikiem a aplikacją. Ponieważ formant jest zasadniczo składnika za pomocą interfejsu graficznego, może być każda funkcja, która jest składnikiem, również zapewnić interakcji z użytkownikiem. Formanty są tworzone do obsługi określonych celów i tworzenie formantów jest po prostu kolejne zadania programowania. Mając to na uwadze następujące kroki przedstawiają Przegląd kontroli procesu tworzenia. Linki udostępniają dodatkowe informacje na temat poszczególnych kroków.  
-  
+
+Kontrolka reprezentuje graficzny link między użytkownikiem a programem. Kontrolka może udostępniać lub przetwarzać dane, akceptować wprowadzanie danych przez użytkownika, odpowiadać na zdarzenia lub wykonywać dowolną liczbę innych funkcji, które łączą użytkownika i aplikację. Ponieważ kontrolka jest zasadniczo składnikiem interfejsu graficznego, może służyć dowolnej funkcji, która robi składnik, a także zapewnia interakcję z użytkownikiem. Formanty są tworzone w celu obsłużenia określonych celów, a formanty tworzenia są po prostu innym zadaniem programistycznym. Z tego względu poniższe kroki przedstawiają przegląd procesu tworzenia kontroli. Linki zawierają dodatkowe informacje dotyczące poszczególnych kroków.
+
 > [!NOTE]
->  Jeśli chcesz utworzyć formant niestandardowy do użycia w formularzach sieci Web, zobacz artykuł [tworzenie niestandardowe formanty serwera ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
->   
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-author-a-control"></a>Tworzenie formantu  
-  
-1. Należy określić co chcesz kontrolki do wykonania, co do część będzie odtwarzany w aplikacji. Dostępne są następujące czynniki do rozważenia:  
-  
-    - Jakiego rodzaju interfejsu graficznego potrzebujesz?  
-  
-    - Jakie interakcji użytkownika będzie obsługiwać ten formant?  
-  
-    - Funkcje, których potrzebujesz świadczą żadnych istniejących kontrolek?  
-  
-    - Możesz uzyskać funkcjonalność, czego potrzebujesz, łącząc kilka kontrolek Windows Forms  
-  
-2. Jeśli potrzebujesz model obiektów dla kontrolki określają, jak będą dystrybuowane w całym modelu obiektów funkcje i podzielić funkcje między formantem i wszystkich podobiektów. Model obiektu może być przydatne, planowania złożonych kontroli, czy chcesz zastosować kilka funkcji.  
-  
-3. Określanie typu formantu (na przykład, kontrolki użytkownika, formantu niestandardowego, odziedziczoną kontrolkę Windows Forms) należy. Aby uzyskać więcej informacji, zobacz [zalecenia dotyczące typu formantu](control-type-recommendations.md) i [różne typy kontrolek niestandardowych](varieties-of-custom-controls.md).  
-  
-4. Express funkcjonalność, jak właściwości, metod i zdarzeń formantu i jego podobiektów lub struktur pomocniczych i przypisz poziomy dostępu (na przykład w publicznych, chronionych i tak dalej).  
-  
-5. Jeśli potrzebujesz niestandardowego rysowania kontrolki, Dodaj kod dla niego. Aby uzyskać więcej informacji, zobacz [niestandardowe malowanie i renderowanie formantu](custom-control-painting-and-rendering.md).  
-  
-6. Jeśli formant dziedziczy z <xref:System.Windows.Forms.UserControl>, możesz przetestować jej zachowanie środowiska uruchomieniowego, tworząc projekt kontroli i uruchomiony w **UserControl — kontener testu**. Aby uzyskać więcej informacji, zobacz [jak: Testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
-  
-7. Można również testowanie i debugowanie kontrolki, tworząc nowy projekt, na przykład w przypadku aplikacji Windows i umieszczenie go w kontenerze. Ten proces jest przedstawiona jako część [instruktażu: Tworzenie formantu złożonego za pomocą Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md).  
-  
-8. W miarę dodawania każdej funkcji, należy dodać funkcje do swojego projektu testowego, aby korzystać z nowych funkcji.  
-  
-9. Powtórz udoskonalanie projektu.  
-  
-10. Tworzenie pakietów i wdrażanie formantu. Aby uzyskać więcej informacji, zobacz [Pierwsze spojrzenie na wdrażanie w programie Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components).  
-  
+> Jeśli chcesz utworzyć kontrolkę niestandardową do użycia w formularzach sieci Web, zobacz [Tworzenie niestandardowych kontrolek serwera ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).
+
+## <a name="to-author-a-control"></a>Aby utworzyć kontrolkę
+
+1. Określ, co ma być wykonywane przez formant, lub część, która będzie odtwarzana w aplikacji. Czynniki, które należy wziąć pod uwagę:
+
+    - Jakiego rodzaju interfejsu graficznego potrzebujesz?
+
+    - Jakie Interakcje użytkownika będą obsługiwane przez tę kontrolkę?
+
+    - Czy wymagane funkcje są dostępne w ramach istniejących kontrolek?
+
+    - Czy możesz uzyskać dostęp do potrzebnych funkcji, łącząc kilka Windows Forms formantów?
+
+2. Jeśli potrzebujesz modelu obiektowego dla kontrolki, określ, w jaki sposób funkcje będą dystrybuowane w całym modelu obiektów, i Podziel się funkcjonalnością między kontrolką a podobiektami. Model obiektu może być przydatny, jeśli planujesz kontrolę złożoną lub chcesz dołączyć kilka funkcji.
+
+3. Określ typ formantu (na przykład kontrolka użytkownika, kontrolka niestandardowa, dziedziczona Windows Forms kontrolki). Aby uzyskać szczegółowe informacje, zobacz [zalecenia dotyczące typu kontroli](control-type-recommendations.md) i różne [rodzaje kontrolek niestandardowych](varieties-of-custom-controls.md).
+
+4. Funkcje ekspresowe jako właściwości, metody i zdarzenia kontrolki i jej podobiektów lub struktur oddziałów, a także Przypisz odpowiednie poziomy dostępu (na przykład publiczne, chronione itd.).
+
+5. Jeśli potrzebujesz niestandardowego rysowania kontrolki, Dodaj do niej kod. Aby uzyskać szczegółowe informacje, zobacz [malowanie i renderowanie kontrolek niestandardowych](custom-control-painting-and-rendering.md).
+
+6. Jeśli formant dziedziczy z <xref:System.Windows.Forms.UserControl>, można przetestować jego zachowanie w czasie wykonywania przez skompilowanie projektu kontrolki i uruchomienie go w **kontenerze testów UserControl**. Aby uzyskać więcej informacji, zobacz [jak: Przetestuj zachowanie elementu UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)w czasie wykonywania.
+
+7. Możesz również testować i debugować kontrolkę, tworząc nowy projekt, taki jak aplikacja systemu Windows i umieszczając go w kontenerze. Ten proces jest przedstawiany jako część [przewodnika: Tworzenie złożonego formantu z Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md).
+
+8. Podczas dodawania każdej funkcji Dodaj funkcje do projektu testowego, aby skorzystać z nowych funkcji.
+
+9. Powtórz tę czynność, aby udoskonalić projekt.
+
+10. Spakuj i Wdróż swój formant. Aby uzyskać szczegółowe informacje, zobacz [pierwsze spojrzenie na wdrożenie w programie Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components).
+
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik: Tworzenie formantu złożonego za pomocą Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms za pomocą Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Instrukcje: Dziedziczenie z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Instrukcje: Dziedziczenie z klasy formantów](how-to-inherit-from-the-control-class.md)
-- [Instrukcje: Dziedzicz Windows istniejących formantów formularzy](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Instrukcje: Testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Przewodnik: Tworzenie złożonego formantu z Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Przewodnik: Dziedziczenie z kontrolki Windows Forms z Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Instrukcje: Dziedzicz z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Instrukcje: Dziedzicz z klasy kontrolki](how-to-inherit-from-the-control-class.md)
+- [Instrukcje: Dziedzicz z istniejących kontrolek Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Instrukcje: Testowanie zachowania elementu UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)

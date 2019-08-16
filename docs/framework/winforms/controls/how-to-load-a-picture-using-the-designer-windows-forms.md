@@ -8,33 +8,30 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: 1d95d5baafa42c7dea40933ba837b684d90b7b2b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 818bc63b5b3bea6c73804f716a72ba3cd1a62b4c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972371"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039679"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Instrukcje: Ładowanie obrazu przy użyciu narzędzia Projektant (Windows Forms)
 
 Za pomocą kontrolki Windows Forms <xref:System.Windows.Forms.PictureBox> można załadować i wyświetlić obraz w formularzu w czasie projektowania, <xref:System.Windows.Forms.PictureBox.Image%2A> ustawiając właściwość na prawidłowy obraz. W poniższej tabeli przedstawiono akceptowalne typy plików.
 
 |Typ|Rozszerzenie nazwy pliku|
-|----------|-------------------------|
+|---|---|
 |Mapy|.bmp|
 |Ikona|.ico|
 |GIF|.gif|
 |Metafile|.wmf|
 |JPEG|.jpg|
 
-> [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
-
 ## <a name="to-display-a-picture-at-design-time"></a>Aby wyświetlić obraz w czasie projektowania
 
 1. Narysuj <xref:System.Windows.Forms.PictureBox> kontrolkę w formularzu.
 
-2. Na okno właściwości wybierz <xref:System.Windows.Forms.PictureBox.Image%2A> właściwość, a następnie kliknij przycisk wielokropka, aby wyświetlić okno dialogowe **Otwórz** .
+2. W oknie **Właściwości** wybierz <xref:System.Windows.Forms.PictureBox.Image%2A> właściwość, a następnie wybierz przycisk wielokropka, aby wyświetlić okno dialogowe **Otwórz** .
 
 3. Jeśli szukasz określonego typu pliku (na przykład plików GIF), wybierz go w polu **Pliki typu** .
 
@@ -42,7 +39,7 @@ Za pomocą kontrolki Windows Forms <xref:System.Windows.Forms.PictureBox> można
 
 ## <a name="to-clear-the-picture-at-design-time"></a>Aby wyczyścić obraz w czasie projektowania
 
-1. W oknie **Właściwości** wybierz <xref:System.Windows.Forms.PictureBox.Image%2A> właściwość, a następnie kliknij prawym przyciskiem myszy mały obraz miniatury, który pojawia się po lewej stronie nazwy obiektu obrazu. Wybierz pozycję **Zresetuj**.
+1. W oknie **Właściwości** wybierz <xref:System.Windows.Forms.PictureBox.Image%2A> właściwość. Kliknij prawym przyciskiem myszy mały obraz miniatury, który pojawia się po lewej stronie nazwy obiektu obrazu, a następnie wybierz polecenie **Zresetuj**.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -8,46 +8,43 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: 14f225f5587379b3efa7b6dc2475f1b697ebb281
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 535827db660ab1113a25a01b7a0553a1c4414c74
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941144"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037786"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Instrukcje: dziedziczenie z klasy kontrolek
-Jeśli chcesz utworzyć formant całkowicie niestandardowy do użycia w formularzu Windows, możesz powinien dziedziczyć <xref:System.Windows.Forms.Control> klasy. Podczas dziedziczenie z <xref:System.Windows.Forms.Control> klasy wymaga wykonania więcej planowania i wdrażania go oferuje także funkcje największej gamy opcji. Gdy dziedziczenie z <xref:System.Windows.Forms.Control>, dziedziczą bardzo podstawowe funkcje, który sprawia, że formanty, które działają. Funkcje związane z <xref:System.Windows.Forms.Control> klasy obsługuje danych wejściowych użytkownika za pomocą klawiatury i myszy, definiuje granice i rozmiar formantu, zapewnia uchwytów okien i zapewnia Obsługa komunikatów i bezpieczeństwo. Zawierają wszelkie rysowania, czyli w tym przypadku rzeczywistego renderowania interfejsu graficznego kontrolki, nie jest włączyć wszystkie funkcje interakcji użytkownika. Należy podać wszystkie te aspekty poprzez kod niestandardowy.  
-  
-> [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-create-a-custom-control"></a>Aby utworzyć formant niestandardowy  
-  
-1. Utwórz nową **aplikacji Windows** lub **Biblioteka formantów Windows** projektu.  
-  
-2. Z **projektu** menu, wybierz **Dodaj klasę**.  
-  
-3. W **Dodaj nowy element** okno dialogowe, kliknij przycisk **kontrolkę niestandardową**.  
-  
-     Nowy formant niestandardowy zostanie dodany do projektu.  
-  
-4. Naciśnij klawisz F7, aby otworzyć **Edytor kodu** kontrolki niestandardowej.  
-  
-5. Znajdź <xref:System.Windows.Forms.Control.OnPaint%2A> metody, która będzie pusta, z wyjątkiem wywołanie <xref:System.Windows.Forms.Control.OnPaint%2A> metody klasy bazowej.  
-  
-6. Zmodyfikuj kod, aby zastosować niestandardowe rysowania, które kontrolki.  
-  
-     Informacje na temat pisania kodu w celu renderowania grafiki dla formantów, zobacz [niestandardowe malowanie i renderowanie formantu](custom-control-painting-and-rendering.md).  
-  
-7. Implementuje żadnych niestandardowych metod, właściwości lub zdarzeń, zawierające Twoją kontrolą.  
-  
-8. Zapisz i przetestuj formantu.  
-  
+Jeśli chcesz utworzyć pełną kontrolkę niestandardową do użycia w formularzu systemu Windows, należy dziedziczyć z <xref:System.Windows.Forms.Control> klasy. Chociaż dziedziczenie z <xref:System.Windows.Forms.Control> klasy wymaga wykonania większej liczby zaplanowanych i implementacji, zapewnia również największą gamę opcji. Podczas dziedziczenia z <xref:System.Windows.Forms.Control>, dziedziczysz bardzo podstawową funkcję, która sprawia, że formanty działają. Funkcja niezależna od <xref:System.Windows.Forms.Control> klasy obsługuje wprowadzanie danych przez użytkownika za pomocą klawiatury i myszy, definiuje granice i rozmiar kontrolki, udostępnia uchwyt systemu Windows i zapewnia obsługę komunikatów i zabezpieczenia. Nie zawiera żadnego malowania, co w tym przypadku jest rzeczywistym renderowaniem interfejsu graficznego formantu lub nie zawiera żadnych określonych funkcji interakcji użytkownika. Wszystkie te aspekty należy dostarczyć za poorednictwem niestandardowego kodu.
+
+## <a name="to-create-a-custom-control"></a>Aby utworzyć kontrolkę niestandardową
+
+1. Utwórz nową **aplikację systemu Windows** lub projekt **biblioteki formantów systemu Windows** .
+
+2. W menu **projekt** wybierz polecenie **Dodaj klasę**.
+
+3. W oknie dialogowym **Dodaj nowy element** kliknij przycisk **kontrolka**niestandardowa.
+
+     Do projektu zostanie dodany nowy formant niestandardowy.
+
+4. Naciśnij klawisz F7, aby otworzyć **Edytor kodu** dla kontrolki niestandardowej.
+
+5. Znajdź metodę, która będzie pusta, z wyjątkiem wywołania <xref:System.Windows.Forms.Control.OnPaint%2A> metody klasy bazowej. <xref:System.Windows.Forms.Control.OnPaint%2A>
+
+6. Zmodyfikuj kod w celu uwzględnienia dowolnego niestandardowego malowania dla kontrolki.
+
+     Aby uzyskać informacje na temat pisania kodu w celu renderowania grafiki dla kontrolek, zobacz [malowanie i renderowanie kontrolek niestandardowych](custom-control-painting-and-rendering.md).
+
+7. Zaimplementuj wszelkie niestandardowe metody, właściwości lub zdarzenia, które mają być dołączone przez formant.
+
+8. Zapisz i Przetestuj swój formant.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)
-- [Instrukcje: Dziedziczenie z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Instrukcje: Dziedzicz Windows istniejących formantów formularzy](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Instrukcje: Tworzenie kontrolek dla formularzy Windows Forms](how-to-author-controls-for-windows-forms.md)
-- [Rozwiązywanie problemów z odziedziczonymi programami obsługi zdarzeń w języku Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Instrukcje: Dziedzicz z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Instrukcje: Dziedzicz z istniejących kontrolek Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Instrukcje: Kontrolki autora dla Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Rozwiązywanie problemów z dziedziczonymi programami obsługi zdarzeń w Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [Opracowywanie kontrolek formularzy Windows Forms w czasie projektowania](developing-windows-forms-controls-at-design-time.md)

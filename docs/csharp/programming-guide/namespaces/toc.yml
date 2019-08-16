@@ -1,9 +1,7 @@
 - name: Namespaces
   href: index.md
   items:
-    - name: Używanie przestrzeni nazw
+    - name: Korzystanie z przestrzeni nazw
       href: using-namespaces.md
-    - name: 'Instrukcje: Użycie globalnych aliasów przestrzeni nazw'
-      href: how-to-use-the-global-namespace-alias.md
-    - name: 'Instrukcje: Użycie przestrzeni nazw typu My'
+    - name: 'Instrukcje: korzystanie z przestrzeni nazw typu My'
       href: how-to-use-the-my-namespace.md

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 96609264044e531bcc8671cb226a02fdc1b962b8
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 7ae19e48467bf5feca115c993c2299c1ecbaadc7
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796456"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566333"
 ---
 # <a name="lock-statement-c-reference"></a>Lock — instrukcjaC# (odwołanie)
 
@@ -54,7 +54,7 @@ Nie można użyć słowa kluczowego [await](await.md) w treści `lock` instrukcj
 Podczas synchronizowania dostępu do wątku z udostępnionym zasobem należy zablokować wystąpienie obiektu dedykowanego (na przykład `private readonly object balanceLock = new object();`) lub inne wystąpienie, które prawdopodobnie nie będzie używane jako obiekt blokady przez niepowiązane części kodu. Należy unikać używania tego samego wystąpienia obiektu blokady dla różnych udostępnionych zasobów, ponieważ może to spowodować zakleszczenie lub zablokowanie rywalizacji. W szczególności należy unikać używania następujących funkcji jako obiektów blokowania:
 
 - `this`, ponieważ mogą one być używane przez wywołujących jako blokadę.
-- <xref:System.Type>wystąpienia, ponieważ mogą być uzyskane przez operatora lub odbicie [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) .
+- <xref:System.Type>wystąpienia, ponieważ mogą być uzyskane przez operatora lub odbicie [typeof](../operators/type-testing-and-cast.md#typeof-operator) .
 - wystąpienia ciągów, w tym literały ciągów, ponieważ mogą być [](/dotnet/api/system.string.intern#remarks)internice.
 
 ## <a name="example"></a>Przykład

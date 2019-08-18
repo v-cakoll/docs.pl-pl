@@ -14,59 +14,59 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb055285af7365536f7e1ad7c7d9290e51be50db
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: fc4ff8f914f0e049a0fdf27b5008b1e39bc40116
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832868"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566782"
 ---
 # <a name="delay-signing-an-assembly"></a>Opóźnione podpisywanie zestawu
-Organizacja może mieć ściśle chronionej parę kluczy, że deweloperzy nie mają dostępu do codziennie. Klucz publiczny jest często dostępne, ale dostęp do klucza prywatnego jest ograniczony do tylko kilka osób. Podczas tworzenia zestawów o silnych nazwach, każdy zestaw ten zestaw docelowy o silnej nazwie odwołania zawiera token klucza publicznego, używać, aby zapewnić silnej nazwy zestawu docelowego. Wymaga to, czy klucz publiczny będą dostępne podczas procesu projektowania.  
+Organizacja może mieć dokładnie chronioną parę kluczy, do której deweloperzy nie mają dostępu codziennie. Klucz publiczny jest często dostępny, ale dostęp do klucza prywatnego jest ograniczony tylko do kilku osób. Podczas tworzenia zestawów o silnych nazwach każdy zestaw, który odwołuje się do zestawu o silnej nazwie, zawiera token klucza publicznego, który jest używany do nadawania silnej nazwy zestawu docelowego. Wymaga to, aby klucz publiczny był dostępny podczas procesu tworzenia.  
   
- Opóźnione lub częściowe podpisywanie w czasie kompilacji służy do rezerwowania miejsca w przenośny plik wykonywalny (PE) dla podpisu silnej nazwy, ale Odrocz rzeczywiste podpisywania do czasu na późniejszym etapie (zazwyczaj po prostu przed dostarczeniem zestawu).  
+ Możesz użyć opóźnionego lub częściowego podpisywania w czasie kompilacji, aby zarezerwować miejsce w przenośnym pliku wykonywalnym (PE) dla sygnatury silnej nazwy, ale odroczyć rzeczywiste podpisywanie do pewnego późniejszego etapu (zazwyczaj przed wysyłką zestawu).  
   
- Poniższe kroki przedstawiają procedurę opóźnione podpisywanie zestawu:  
+ Poniższe kroki przedstawiają proces opóźnienia podpisywania zestawu:  
   
-1. Uzyskaj część z kluczem publicznym pary kluczy od organizacji, która będzie zajmować się ostateczną podpisywania. Zazwyczaj ten klucz jest w formie pliku .snk, które mogą być tworzone za pomocą [narzędzie silnych nazw (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) dostarczane przez Windows Software Development Kit (SDK).  
+1. Uzyskaj część klucza publicznego pary kluczy od organizacji, która będzie podpisywać ostateczne. Zazwyczaj ten klucz jest w formie pliku. snk, który można utworzyć za pomocą [Narzędzia silnej nazwy (SN. exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) dostarczonego przez Windows SDK.  
   
-2. Dodawanie adnotacji do kodu źródłowego dla zestawu za pomocą dwóch atrybutów niestandardowych z <xref:System.Reflection>:  
+2. Dodaj adnotację do kodu źródłowego dla zestawu z dwoma atrybutami niestandardowymi z <xref:System.Reflection>:  
   
-    - <xref:System.Reflection.AssemblyKeyFileAttribute>, która przekazuje nazwę pliku zawierającego klucz publiczny jako parametr do jej konstruktora.  
+    - <xref:System.Reflection.AssemblyKeyFileAttribute>, który przekazuje nazwę pliku zawierającego klucz publiczny jako parametr do jego konstruktora.  
   
-    - <xref:System.Reflection.AssemblyDelaySignAttribute>, co oznacza, że opóźnienie podpisywania jest używany przez przekazanie **true** jako parametr do jej konstruktora. Na przykład:  
+    - <xref:System.Reflection.AssemblyDelaySignAttribute>, co oznacza, że jest używane podpisywanie opóźnień, przekazując **wartość true** jako parametr do jego konstruktora. Na przykład:  
   
          [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
          [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
          [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
-3. Kompilator wstawia klucz publiczny do manifestu zestawu i rezerwuje miejsce w pliku PE podpisu pełnej silnej nazwy. Rzeczywiste publicznego klucza musi być przechowywany, natomiast zestaw zaprojektowano tak, aby inne zestawy odwołujące się do tego zestawu można uzyskać klucz do przechowywania w odwołania do zestawu.  
+3. Kompilator wstawia klucz publiczny do manifestu zestawu i rezerwuje miejsce w pliku PE w celu uzyskania pełnej sygnatury silnej nazwy. Prawdziwy klucz publiczny musi być przechowywany podczas tworzenia zestawu, tak aby inne zestawy odwołujące się do tego zestawu mogły uzyskać klucz do przechowywania we własnym odwołaniu do zestawu.  
   
-4. Ponieważ zestaw nie ma podpisu prawidłową silną nazwę, należy wyłączyć weryfikację ten podpis. Można to zrobić za pomocą **— Vr** opcji narzędzie silnych nazw.  
+4. Ponieważ zestaw nie ma prawidłowego podpisu silnej nazwy, weryfikacja tej sygnatury musi być wyłączona. Można to zrobić za pomocą opcji **– VR** za pomocą narzędzia silnej nazwy.  
   
-     Poniższy przykład powoduje wyłączenie weryfikacji dla zestawu o nazwie `myAssembly.dll`.  
+     Poniższy przykład wyłącza weryfikację dla zestawu o nazwie `myAssembly.dll`.  
   
     ```  
     sn –Vr myAssembly.dll  
     ```  
   
-     Aby wyłączyć weryfikację na platformach gdzie nie można uruchomić narzędzie silnych nazw, takich jak mikroprocesory Advanced RISC Machine (ARM), należy użyć **— Vk** opcję, aby utworzyć plik rejestru. Importuj plik rejestru do rejestru na komputerze, w którym chcesz wyłączyć weryfikację. Poniższy przykład tworzy plik rejestru dla `myAssembly.dll`.  
+     Aby wyłączyć weryfikację na platformach, w których nie można uruchomić narzędzia silnej nazwy, na przykład mikroprocesorów Advanced RISC Machine (ARM), użyj opcji **– VK** , aby utworzyć plik rejestru. Zaimportuj plik rejestru do rejestru na komputerze, na którym chcesz wyłączyć weryfikację. Poniższy przykład tworzy plik rejestru dla `myAssembly.dll`.  
   
     ```  
     sn –Vk myRegFile.reg myAssembly.dll  
     ```  
   
-     Z oboma **— Vr** lub **— Vk** opcji, możesz opcjonalnie dołączyć plik .snk dla klucza podpisywania testów.  
+     Za pomocą opcji **– VR** lub **– VK** można opcjonalnie dołączyć plik. snk do podpisywania klucza testowego.  
   
     > [!WARNING]
-    > Nie należy polegać na silne nazwy dla zabezpieczeń. Zapewniają one tylko unikatową tożsamość.
+    > Nie należy polegać na silnych nazwach zabezpieczeń. Zapewniają one tylko unikatową tożsamość.
   
     > [!NOTE]
-    >  Jeśli używasz opóźnione podpisywanie podczas programowania przy użyciu programu Visual Studio na komputerze 64-bitowym i kompilowania zestawu dla **dowolny Procesor**, może być konieczne zastosowanie **- Vr** opcji dwa razy. (W programie Visual Studio, **dowolny Procesor** jest wartością **platformę docelową** Tworzenie właściwości, podczas kompilowania z wiersza polecenia jest domyślna.) Aby uruchomić aplikację z poziomu wiersza polecenia lub Eksploratora plików, należy użyć 64-bitową wersję [Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) do zastosowania **- Vr** opcji do zestawu. Aby załadować zestaw do programu Visual Studio w czasie projektowania (na przykład, jeśli zestaw zawiera składniki, które są używane przez inne zestawy w aplikacji), użyj wersji 32-bitowe narzędzie silnych nazw. Jest to spowodowane kompilator just-in-time (JIT) kompiluje zestaw 64-bitowego kodu macierzystego przy uruchamianiu z wiersza polecenia zestawu i 32-bitowego kodu natywnego, gdy zestaw jest ładowany do środowiska czasu projektowania.  
+    >  Jeśli używasz opóźnienia podpisywania podczas opracowywania w programie Visual Studio na komputerze 64-bitowym i kompilujesz zestaw dla **dowolnego procesora**, może być konieczne dwukrotne zastosowanie opcji **-VR** . (W programie Visual Studio **każdy procesor CPU** jest wartością właściwości kompilacji **docelowej platformy** ; podczas kompilowania z wiersza polecenia jest to wartość domyślna). Aby uruchomić aplikację z poziomu wiersza polecenia lub Eksploratora plików, użyj 64-bitowej wersji [SN. exe (Narzędzie silnej nazwy)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) , aby zastosować opcję **-VR** do zestawu. Aby załadować zestaw do programu Visual Studio w czasie projektowania (na przykład jeśli zestaw zawiera składniki, które są używane przez inne zestawy w aplikacji), użyj 32-bitowej wersji narzędzia silnej nazwy. Dzieje się tak, ponieważ kompilator just-in-Time (JIT) kompiluje zestaw do 64-bitowego kodu natywnego, gdy zestaw jest uruchamiany z wiersza polecenia i do 32-bitowy kod natywny, gdy zestaw jest ładowany do środowiska czasu projektowania.  
   
-5. Później, zwykle po prostu przed wysyłką przesyłasz podpisywania urzędu dla rzeczywistego podpisywania silnymi nazwami przy użyciu zestawu dla Twojej organizacji **– R** opcji narzędzie silnych nazw.  
+5. Później, zazwyczaj tuż przed wysyłką, przesyłasz zestaw do urzędu podpisywania w organizacji w celu zapewnienia rzeczywistego podpisywania silnej nazwy przy użyciu opcji **– R** z narzędziem silnej nazwy.  
   
-     Poniższy przykład podpisuje zestaw o nazwie `myAssembly.dll` z silną nazwą przy użyciu `sgKey.snk` pary kluczy.  
+     Poniższy przykład podpisuje zestaw `myAssembly.dll` o silnej nazwie `sgKey.snk` przy użyciu pary kluczy.  
   
     ```  
     sn -R myAssembly.dll sgKey.snk  
@@ -75,6 +75,6 @@ Organizacja może mieć ściśle chronionej parę kluczy, że deweloperzy nie ma
 ## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)
-- [Instrukcje: Tworzenie pary kluczy publiczny prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Instrukcje: Tworzenie pary kluczy publiczny-prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)

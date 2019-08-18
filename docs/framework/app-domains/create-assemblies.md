@@ -9,48 +9,48 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e544976b0b801b08af238b2aeb36b5611154379
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 314a94be140b392964951299fba2fed4ac7e6e68
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832899"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566792"
 ---
 # <a name="creating-assemblies"></a>Tworzenie zestawów
 
-Można utworzyć pojedynczy plik lub wieloplikowe zestawy w środowisku IDE, takich jak Visual Studio lub kompilatorów i narzędzi dostarczonych przez Windows Software Development Kit (SDK). Najprostsza zestaw jest pojedynczy plik o nazwie prostego, który jest ładowany do domeny pojedynczej aplikacji. Ten zestaw nie może być przywoływany przez inne zestawy poza katalogiem aplikacji i nie podlegają kontroli wersji. Aby odinstalować aplikację składają się z zestawu, po prostu usunąć katalogu, w którym znajduje się. W przypadku wielu programistów zestawu za pomocą tych funkcji jest wszystko, co jest potrzebne do wdrożenia aplikacji.
+Można tworzyć zestawy Jednoplikowe lub wieloplikowe za pomocą IDE, takie jak Visual Studio, lub kompilatory i narzędzia dostarczone przez Windows SDK. Najprostszym zestawem jest pojedynczy plik, który ma prostą nazwę i jest ładowany do pojedynczej domeny aplikacji. Ten zestaw nie może odwoływać się do innych zestawów poza katalogiem aplikacji i nie jest sprawdzany Sprawdzanie wersji. Aby odinstalować aplikację utworzoną z zestawu, wystarczy usunąć znajdujący się w niej katalog. W przypadku wielu deweloperów zestaw z tymi funkcjami jest wymagany do wdrożenia aplikacji.
 
-Możesz utworzyć zestaw wieloplikowy z kilku modułów kodu i pliki zasobów. Można również utworzyć zestaw, który może być współużytkowany przez wiele aplikacji. Zestaw współużytkowany musi mieć silną nazwę i można je wdrożyć w globalnej pamięci podręcznej.
+Zestaw wieloplikowy można utworzyć z kilku modułów kodu i plików zasobów. Możesz również utworzyć zestaw, który może być współużytkowany przez wiele aplikacji. Zestaw współużytkowany musi mieć silną nazwę i można go wdrożyć w globalnej pamięci podręcznej zestawów.
 
-Istnieje kilka opcji, gdy grupowanie modułów kodu i zasoby do zestawów, w zależności od następujących czynników:
+Istnieje kilka opcji grupowania modułów kodu i zasobów w zestawy, w zależności od następujących czynników:
 
 - Przechowywanie wersji
 
-     Moduły grupy, które powinny mieć te same informacje o wersji.
+     Grupuj moduły, które powinny mieć te same informacje o wersji.
 
 - wdrażania
 
-     Moduły kodu grupy i zasobów, które obsługują model wdrożenia.
+     Grupuj moduły kodu i zasoby, które obsługują model wdrażania.
 
-- Ponowne użycie
+- Było
 
-     Grupy modułów, jeśli one logicznie można ze sobą w celu niektóre. Na przykład zestaw składający się z typów i klas, rzadko używane dla programu obsługi można umieścić w tym samym zestawie. Ponadto typy, które ma być współużytkowany z wieloma aplikacjami powinny zostać utworzone do zestawu i zestawu powinna być podpisany silną nazwą.
+     Grupuj moduły, jeśli mogą być logicznie używane razem do pewnego celu. Na przykład zestaw składający się z typów i klas używanych rzadko do konserwacji programu można umieścić w tym samym zestawie. Ponadto typy, które mają być współużytkowane z wieloma aplikacjami, powinny być pogrupowane w zestaw, a zestaw powinien być podpisany za pomocą silnej nazwy.
 
 - Zabezpieczenia
 
-     Grupy modułów zawierających typy, które wymagają tych samych uprawnień zabezpieczeń.
+     Moduły grupy zawierające typy, które wymagają tych samych uprawnień zabezpieczeń.
 
-- Wyznaczanie zakresu
+- Zakresów
 
-     Grupy modułów zawierających typy, których widoczność powinno zostać ograniczone do tego samego zestawu.
+     Moduły grupy zawierające typy, których widoczność powinna być ograniczona do tego samego zestawu.
 
-Podczas udostępniania języka wspólnego zestawów środowiska uruchomieniowego do niezarządzanych aplikacji modelu COM, można wprowadzać uwagi. Aby uzyskać więcej informacji na temat pracy z kodem niezarządzanym, zobacz [udostępnianie składników .NET Framework modelowi COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md).
+Przed udostępnieniem zestawów środowiska uruchomieniowego języka wspólnego dla niezarządzanych aplikacji COM należy uwzględnić specjalne zagadnienia. Aby uzyskać więcej informacji na temat pracy z kodem niezarządzanym, zobacz [Udostępnianie składników .NET Framework do modelu COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md)
-- [Instrukcje: Kompilacja zestawów pojedynczego pliku](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)
-- [Instrukcje: Kompilacja zestawów wieloplikowych](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Instrukcje: Kompilowanie zestawu jednoplikowego](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)
+- [Instrukcje: Kompilowanie zestawu wieloplikowego](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Zestawy wieloplikowe](../../../docs/framework/app-domains/multifile-assemblies.md)

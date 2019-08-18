@@ -7,34 +7,34 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: c76f80273d37f838ca52efd3b8f8c028b76a4d30
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 49f4b5b4b3634df5e648b5208448d644168e9d19
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832683"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566723"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Mapowanie nazw algorytmów na klasy kryptografii
-Istnieją cztery sposoby deweloper może utworzyć obiekt kryptografii przy użyciu Windows Software Development Kit (SDK):  
+Istnieją cztery sposoby tworzenia obiektu kryptografii przez dewelopera przy użyciu Windows SDK:  
   
-- Utwórz obiekt przy użyciu **nowe** operatora.  
+- Utwórz obiekt za pomocą operatora **New** .  
   
-- Utwórz wystąpienie obiektu implementującego na algorytm kryptograficzny określonego przez wywołanie metody **Utwórz** metody abstrakcyjne klasy dla tego algorytmu.  
+- Utwórz obiekt implementujący określony algorytm kryptograficzny przez wywołanie metody **Create** dla tego algorytmu w klasie abstrakcyjnej.  
   
-- Utwórz wystąpienie obiektu implementującego na algorytm kryptograficzny określonego przez wywołanie metody <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metody.  
+- Utwórz obiekt implementujący określony algorytm kryptograficzny przez wywołanie <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metody.  
   
-- Utwórz obiekt, który implementuje klasa algorytmów kryptograficznych (takich jak symetrycznym szyfrem) przez wywołanie metody **Utwórz** metody abstrakcyjne klasy dla tego typu algorytmu (takie jak <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
+- Utwórz obiekt, który implementuje klasę algorytmów kryptograficznych (na przykład szyfr bloku symetrycznego) przez wywołanie metody **Create** w klasie abstrakcyjnej dla tego typu algorytmu (na przykład <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
   
- Na przykład załóżmy, że deweloper chce obliczenia skrótu SHA1 zestawu bajtów. <xref:System.Security.Cryptography> Przestrzeń nazw zawiera dwie implementacje algorytmu SHA1, co czysto zarządzaną implementację i jedną, która opakowuje interfejs CryptoAPI. Deweloper można wybrać do utworzenia wystąpienia określonej implementacji SHA1 (takie jak <xref:System.Security.Cryptography.SHA1Managed>) przez wywołanie metody **nowe** operatora. Jednak jeśli nie ma znaczenia, klasa, która ładuje środowisko uruchomieniowe języka wspólnego, tak długo, jak klasa implementuje algorytm wyznaczania wartości skrótu SHA1, deweloper można utworzyć obiektu przez wywołanie metody <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> metody. Ta metoda wywołuje **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")** , który musi zwrócić implementację algorytmu wyznaczania wartości skrótu SHA1.  
+ Załóżmy na przykład, że deweloper chce obliczyć Skrót SHA1 zestawu bajtów. <xref:System.Security.Cryptography> Przestrzeń nazw zawiera dwie implementacje algorytmu SHA1, jedną czysto zarządzaną implementację i jedną, która zawija interfejs CryptoAPI. Deweloper może zdecydować się na utworzenie wystąpienia określonej implementacji SHA1 (np <xref:System.Security.Cryptography.SHA1Managed>.) przez wywołanie operatora **New** . Jednakże jeśli nie ma znaczenia, które klasy są ładowane przez środowisko uruchomieniowe języka wspólnego, o ile Klasa implementuje algorytm skrótu SHA1, deweloper może utworzyć obiekt, wywołując <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> metodę. Ta metoda wywołuje metodę **System. Security. Cryptography. obiektu CryptoConfig. isfrom ("System. Security. Cryptography. SHA1")** , która musi zwracać implementację algorytmu wyznaczania wartości skrótu SHA1.  
   
- Deweloper można również wywołać **System.Security.Cryptography.CryptoConfig.CreateFromName("SHA1")** ponieważ domyślnie kryptografii Konfiguracja obejmuje krótkich nazw dla algorytmów dostarczane w programie .NET Framework.  
+ Deweloper może również wywołać metodę **System. Security. Cryptography. obiektu CryptoConfig. isfrom ("SHA1")** , ponieważ domyślnie konfiguracja kryptografii zawiera krótkie nazwy dla algorytmów dostarczonych w .NET Framework.  
   
- Jeśli jest używany algorytm wyznaczania wartości skrótu, który nie ma znaczenia, deweloper może wywołać <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> metody, która zwraca obiekt, który implementuje przekształcania wyznaczania wartości skrótu.  
+ Jeśli nie ma znaczenia, który algorytm wyznaczania wartości skrótu jest używany, programista może wywołać <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> metodę, która zwraca obiekt implementujący transformację mieszania.  
   
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>Mapowanie nazw algorytmów w plikach konfiguracji  
- Domyślnie środowisko wykonawcze zwraca <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> obiektu dla wszystkich, cztery scenariusze. Jednak administrator komputera można zmienić typu obiektu, zwracane metod w ostatnich dwóch scenariuszy. Aby to zrobić, należy zamapować algorytm przyjazną nazwę klasy, których chcesz użyć w pliku konfiguracji komputera (Machine.config).  
+ Domyślnie środowisko uruchomieniowe zwraca <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> obiekt dla wszystkich czterech scenariuszy. Jednak administrator komputera może zmienić typ obiektu, który zwracają metody z ostatnich dwóch scenariuszy. W tym celu należy zmapować przyjazną nazwę algorytmu na klasę, która ma być używana w pliku konfiguracyjnym komputera (Machine. config).  
   
- Poniższy przykład przedstawia sposób konfigurowania środowiska uruchomieniowego, aby **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")** , i  **System.Security.Cryptography.HashAlgorithm.Create** zwracają `MySHA1HashClass` obiektu.  
+ Poniższy przykład pokazuje, jak skonfigurować środowisko uruchomieniowe w taki sposób, aby **System. Security. Cryptography. SHA1. Create**, **System. Security. obiektu CryptoConfig. isfromname ("SHA1")** i **System. Security. Cryptography. algorytm. Create zwraca obiekt.** `MySHA1HashClass`  
   
 ```xml  
 <configuration>  
@@ -58,14 +58,14 @@ Istnieją cztery sposoby deweloper może utworzyć obiekt kryptografii przy uży
 </configuration>  
 ```  
   
- Możesz określić nazwę atrybutu w [< cryptoclass —\> elementu](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) (poprzedni przykład nazwy atrybutu `MySHA1Hash`). Wartość atrybutu w  **\<cryptoclass — >** element stanowi ciąg, który używa środowiska uruchomieniowego języka wspólnego, można znaleźć klasy. Można użyć dowolnego ciągu, który spełnia wymagania określone w [określanie w pełni kwalifikowanej nazwy typu](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).  
+ Możesz określić nazwę atrybutu w [\> < cryptoClass elementu](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) (w poprzednim przykładzie nazwa atrybutu `MySHA1Hash`). Wartość atrybutu w  **\<elemencie cryptoClass >** jest ciągiem, który jest wykorzystywany przez środowisko uruchomieniowe języka wspólnego do znajdowania klasy. Można użyć dowolnego ciągu, który spełnia wymagania określone w polu [Określanie w pełni kwalifikowanych nazw typów](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).  
   
- Wiele nazw algorytm można mapować do tej samej klasy. [ \<Nameentry — > element](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) mapuje klasy jeden algorytm przyjazną nazwę. **Nazwa** atrybut może być ciąg, który jest używany podczas wywoływania **System.Security.Cryptography.CryptoConfig.CreateFromName** metody lub nazwę klasy abstrakcyjnej kryptografii w <xref:System.Security.Cryptography> przestrzeni nazw. Wartość **klasy** atrybut jest nazwą atrybutu w  **\<cryptoclass — >** elementu.  
+ Wiele nazw algorytmów można zamapować na tę samą klasę. Element nameEntry > mapuje klasę na jedną przyjazną nazwę algorytmu. [ \<](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) Atrybut **name** może być ciągiem, który jest używany podczas wywoływania metody **System. Security. Cryptography. obiektu CryptoConfig.** isfromname lub nazwy <xref:System.Security.Cryptography> klasy abstrakcyjnej kryptografii w przestrzeni nazw. Wartość atrybutu **Class** to nazwa atrybutu w  **\<elemencie cryptoClass >** .  
   
 > [!NOTE]
->  Algorytm SHA1 można uzyskać przez wywołanie metody <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> lub **Security.CryptoConfig.CreateFromName("SHA1")** metody. Każda metoda gwarantuje tylko zwraca obiekt, który implementuje algorytm SHA1. Nie masz mapowania każdego przyjazna nazwa algorytmu do tej samej klasy w pliku konfiguracji.  
+>  Algorytm SHA1 można uzyskać, wywołując <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> metodę or metody **Security. obiektu CryptoConfig. setfrom ("SHA1")** . Każda metoda gwarantuje tylko, że zwraca obiekt, który implementuje algorytm SHA1. Nie ma potrzeby mapowania poszczególnych przyjaznych nazw algorytmów do tej samej klasy w pliku konfiguracji.  
   
- Aby uzyskać listę domyślnych nazw i klas mapowania ich na, zobacz <xref:System.Security.Cryptography.CryptoConfig>.  
+ Aby uzyskać listę domyślnych nazw i klas, do których są mapowane, zobacz <xref:System.Security.Cryptography.CryptoConfig>.  
   
 ## <a name="see-also"></a>Zobacz także
 

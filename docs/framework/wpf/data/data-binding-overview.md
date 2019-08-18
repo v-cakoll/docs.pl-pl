@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: e1fbb46c76fbc729818b6ff24b55c0d18f6b05df
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 44a35131273c6f191ab5da5bc1639d97bd961ff1
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400700"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567512"
 ---
 # <a name="data-binding-overview"></a>Przegląd Wiązanie danych
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]powiązanie danych zapewnia prosty i spójny sposób, w jaki aplikacje mogą być obecne i współpracujące z danymi. Elementy mogą być powiązane z danymi z różnych źródeł danych w postaci obiektów środowiska uruchomieniowego języka wspólnego (CLR) i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s takie jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.ItemsControl>s, takie <xref:System.Windows.Controls.ListBox> jak <xref:System.Windows.Controls.ListView> i, mają wbudowaną funkcję do włączania elastycznego stylu pojedynczych elementów danych lub kolekcji elementów danych. Widoki sortowania, filtrowania i grupowania mogą być generowane na podstawie danych.  
@@ -70,7 +70,7 @@ ms.locfileid: "68400700"
   
 - Chociaż nie jest określony na rysunku, należy zauważyć, że obiekt źródłowy powiązania nie jest ograniczony do niestandardowego obiektu CLR. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]powiązanie danych obsługuje dane w postaci obiektów CLR i [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Aby udostępnić przykłady, Źródło powiązania może być obiektem dowolnego <xref:System.Windows.UIElement>elementu listy, obiektem CLR skojarzonym z danymi ADO.NET lub usługami sieci Web lub elementem XmlNode, który [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] zawiera dane. Aby uzyskać więcej informacji, zobacz [Omówienie źródeł powiązań](binding-sources-overview.md).  
   
- Podczas odczytywania z innych [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] tematów ważne jest, aby pamiętać, że podczas ustanawiania powiązania, powiązanie celu powiązania *ze* źródłem powiązania. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Na przykład jeśli dane <xref:System.Windows.Controls.ListBox> podstawowe są wyświetlane przy użyciu powiązania danych <xref:System.Windows.Controls.ListBox> , można powiązać [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dane.  
+ Podczas odczytywania informacji w innych tematach zestawu SDK należy pamiętać, że podczas ustanawiania powiązania, powiązanie celu powiązania *ze* źródłem powiązań. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Na przykład jeśli dane <xref:System.Windows.Controls.ListBox> podstawowe są wyświetlane przy użyciu powiązania danych <xref:System.Windows.Controls.ListBox> , można powiązać [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dane.  
   
  Aby ustanowić powiązanie, należy użyć <xref:System.Windows.Data.Binding> obiektu. Pozostała część tego tematu omawia wiele koncepcji skojarzonych z i niektórych właściwości i użycia <xref:System.Windows.Data.Binding> obiektu.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "68400700"
 ### <a name="binding-and-bindingexpression"></a>Powiązywanie i BindingExpression  
  Przed zainstalowaniem innych funkcji i użycia powiązań danych warto wprowadzić <xref:System.Windows.Data.BindingExpression> klasę. Jak widać w poprzednich sekcjach, <xref:System.Windows.Data.Binding> Klasa jest klasą wysokiego poziomu dla deklaracji powiązania <xref:System.Windows.Data.Binding> ; Klasa zawiera wiele właściwości, które umożliwiają określenie charakterystyki powiązania. Klasa pokrewna <xref:System.Windows.Data.BindingExpression>,, jest obiektem źródłowym, który utrzymuje połączenie między źródłem a obiektem docelowym. Powiązanie zawiera wszystkie informacje, które mogą być współużytkowane przez kilka wyrażeń powiązań. A <xref:System.Windows.Data.BindingExpression> jest wyrażeniem wystąpienia, które nie może być współużytkowane i zawiera wszystkie informacje <xref:System.Windows.Data.Binding>o wystąpieniu.  
   
- Rozważmy na przykład następujące kwestie, w *których obiekt* jest wystąpieniem klasy *webdata*, *powiązanie* to obiektu źródłowego <xref:System.Windows.Data.Binding> *, a Klasa* obiektowa jest klasą zdefiniowaną, która zawiera właściwość ciągu o nazwie  *MyDataProperty*. Ten przykład wiąże zawartość tekstową elementu *webtext*, wystąpienie elementu <xref:System.Windows.Controls.TextBlock>, do *MyDataProperty*.  
+ Rozważmy na przykład następujące kwestie, w których obiekt jest wystąpieniem klasy webdata, *powiązanie* to obiektu źródłowego <xref:System.Windows.Data.Binding> , a Klasa obiektowa jest klasą zdefiniowaną, która zawiera właściwość ciągu o nazwie  *MyDataProperty*. Ten przykład wiąże zawartość tekstową elementu *webtext*, wystąpienie elementu <xref:System.Windows.Controls.TextBlock>, do *MyDataProperty*.  
   
  [!code-csharp[CodeOnlyBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
  [!code-vb[CodeOnlyBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  

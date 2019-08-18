@@ -3,16 +3,16 @@ title: Przegląd zestaw .NET Core SDK
 description: Dowiedz się więcej na temat zestaw .NET Core SDK, czyli zestawu bibliotek i narzędzi służących do tworzenia projektów platformy .NET Core.
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: 0231c08f780455c4956c044815a2e80cef4d827e
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: f4c4982bacaf58c1b8c7db6c5319bd314e89b7ed
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733392"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566242"
 ---
 # <a name="net-core-sdk-overview"></a>Przegląd zestaw .NET Core SDK
 
-.NET Core Software Development Kit (SDK) to zestaw bibliotek i narzędzi umożliwiających deweloperom tworzenie aplikacji i bibliotek platformy .NET Core. Zawiera następujące składniki, które są używane do kompilowania i uruchamiania aplikacji:
+Zestaw .NET Core SDK to zestaw bibliotek i narzędzi umożliwiających deweloperom tworzenie aplikacji i bibliotek platformy .NET Core. Zawiera następujące składniki, które są używane do kompilowania i uruchamiania aplikacji:
 
 - Narzędzia interfejs wiersza polecenia platformy .NET Core.
 - Biblioteki i środowisko uruchomieniowe platformy .NET Core.

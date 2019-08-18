@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: f1f37e61917e8331b06d91e6abebfe4ce3288e7c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: HT
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "67803444"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69564402"
 ---
 ### <a name="managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode"></a>Zarządzane klasy kryptograficzne nie zgłaszają wyjątku kryptografii w trybie FIPS
 

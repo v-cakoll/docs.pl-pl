@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 683d0a28fa151cf2116b4125dfb7a604605c7c4a
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: b68148b08cf6b5f980bc09e497e845558ae882fb
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972241"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567528"
 ---
 # <a name="wpf-partial-trust-security"></a>Zabezpieczenie częściowej relacji zaufania WPF
 <a name="introduction"></a>Ogólnie rzecz biorąc, aplikacje internetowe powinny być ograniczone przez bezpośredni dostęp do krytycznych zasobów systemowych, aby zapobiec złośliwym szkodom. Domyślnie języki skryptów HTML i po stronie klienta nie mogą uzyskać dostępu do krytycznych zasobów systemowych. Ponieważ aplikacje hostowane w przeglądarce Windows Presentation Foundation (WPF) mogą być uruchamiane z przeglądarki, powinny one być zgodne z podobnym zestawem ograniczeń. Aby wymusić te [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ograniczenia, należy zastosować zabezpieczenia dostępu kodu (CAS) i ClickOnce (zobacz temat [strategie zabezpieczeń WPF-platform Security](wpf-security-strategy-platform-security.md)). Domyślnie aplikacje hostowane w przeglądarce żądają zestawu uprawnień strefy Internetu, niezależnie od tego, czy są uruchamiane z Internetu, lokalnego intranetu, czy komputera lokalnego. Aplikacje działające z dowolnym elementem mniejszym niż pełny zestaw uprawnień są uznawane za działające z częściowym zaufaniem.  
@@ -50,7 +50,7 @@ ms.locfileid: "68972241"
 |Edytowanie|Sprawdzanie pisowni<br /><br /> RichTextBox<br /><br /> Obsługa przezroczystego tekstu i schowka<br /><br /> Wklej zainicjowany przez użytkownika<br /><br /> Kopiowanie wybranej zawartości|  
 |Formanty|Formanty ogólne|  
   
- Ta tabela obejmuje [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] funkcje na wysokim poziomie. Aby uzyskać bardziej szczegółowe informacje, zestaw Windows Software Development Kit (SDK) dokumentuje uprawnienia wymagane przez każdy element członkowski w [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]programie. Ponadto poniższe funkcje zawierają bardziej szczegółowe informacje dotyczące częściowego wykonywania zaufania, w tym zagadnienia specjalne.  
+ Ta tabela obejmuje [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] funkcje na wysokim poziomie. Aby uzyskać bardziej szczegółowe informacje, Windows SDK dokumentuje uprawnienia, które są wymagane przez każdy element [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]członkowski w programie. Ponadto poniższe funkcje zawierają bardziej szczegółowe informacje dotyczące częściowego wykonywania zaufania, w tym zagadnienia specjalne.  
   
 - [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](zobacz [Omówienie XAML (WPF)](./advanced/xaml-overview-wpf.md)).  
   

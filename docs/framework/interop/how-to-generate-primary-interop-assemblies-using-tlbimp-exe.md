@@ -8,62 +8,62 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b093f9bb633578cc0051cfca7b1362f8bf097d7
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 67b9b48587802b43e90a7f35ab8cbb3b2ee025b0
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662444"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567261"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Instrukcje: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe
 
 Istnieją dwa sposoby generowania podstawowego zestawu międzyoperacyjnego:
 
-- Za pomocą [wpisz Importer biblioteki (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) dostarczonych przez Windows Software Development Kit (SDK).
+- Przy użyciu [importera biblioteki typów (Tlbimp. exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) dostarczonego przez Windows SDK.
 
-  Najprostszy sposób do tworzenia podstawowych zestawów międzyoperacyjnych polega na użyciu [Tlbimp.exe (Importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Tlbimp.exe zawiera następujące mechanizmy:
+  Najbardziej prostym sposobem tworzenia podstawowych zestawów międzyoperacyjnych jest użycie [Tlbimp. exe (Importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Tlbimp. exe zapewnia następujące zabezpieczenia:
 
-  - Sprawdza, czy inne zarejestrowanych podstawowych zestawach międzyoperacyjnych, przed utworzeniem nowego zestawy międzyoperacyjne dla żadnych odwołań do biblioteki typu zagnieżdżonego.
+  - Sprawdza inne zarejestrowane podstawowe zestawy międzyoperacyjności przed utworzeniem nowych zestawów międzyoperacyjnych dla dowolnych odwołań do bibliotek typów zagnieżdżonych.
 
-  - Nie Emituj podstawowego zestawu międzyoperacyjnego, jeśli nie określisz kontenera lub nazwę pliku, aby zapewnić podstawowy zestaw międzyoperacyjny silnej nazwy.
+  - Nie można wyemitować podstawowego zestawu międzyoperacyjnego, jeśli nie określisz kontenera lub nazwy pliku w celu uzyskania silnej nazwy podstawowego zestawu międzyoperacyjnego.
 
-  - Nie można wyemitować podstawowy zestaw międzyoperacyjny, jeśli pominięto odwołania do zestawów zależnych.
+  - Nie można wyemitować podstawowego zestawu międzyoperacyjnego w przypadku pominięcia odwołań do zestawów zależnych.
 
-  - Nie Emituj podstawowy zestaw międzyoperacyjny, po dodaniu odwołania do zestawów zależnych, które nie są podstawowe zestawy międzyoperacyjne.
+  - Nie można wyemitować podstawowego zestawu międzyoperacyjnego w przypadku dodania odwołań do zestawów zależnych, które nie są zestawami podstawowych międzyoperacyjnych.
 
-- Ręczne tworzenie podstawowych zestawów międzyoperacyjnych w kodzie źródłowym przy użyciu języka, który jest zgodny z Common Language Specification (CLS), takich jak C#. Takie podejście jest przydatne, gdy biblioteki typów jest niedostępny.
+- Ręczne tworzenie podstawowych zestawów międzyoperacyjnych w kodzie źródłowym przy użyciu języka zgodnego z Common Language Specification (CLS), takiego jak C#. Takie podejście jest przydatne, gdy biblioteka typów jest niedostępna.
 
-Musisz mieć parę kluczy kryptograficznych, aby podpisać zestaw silną nazwą. Aby uzyskać więcej informacji, zobacz [tworzenia pary klucz](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).
+Aby podpisać zestaw za pomocą silnej nazwy, musisz mieć parę kluczy kryptograficznych. Aby uzyskać szczegółowe informacje, zobacz [Tworzenie pary kluczy](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).
 
-### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>Aby wygenerować podstawowego zestawu międzyoperacyjnego przy użyciu Tlbimp.exe
+### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>Aby wygenerować podstawowy zestaw międzyoperacyjny przy użyciu programu Tlbimp. exe
 
 1. W wierszu polecenia wpisz polecenie:
 
-    **tlbimp** *tlbfile* **/primary/KeyFile:** *filename* **/out:** *assemblyname*
+    **Tlbimp** *tlbfile* **/Primary/keyfile:** *Nazwa pliku* **/out:** *AssemblyName*
 
-    W tym poleceniu *tlbfile* to plik biblioteki typów modelu COM, zawierającą *filename* to nazwa kontenera lub pliku, który zawiera pary kluczy i *assemblyname* jest Nazwa zestawu, aby zalogować się przy użyciu silnej nazwy.
+    W tym poleceniu *tlbfile* jest plikiem zawierającym bibliotekę typów com, *filename* jest nazwą kontenera lub pliku, który zawiera parę kluczy, a *AssemblyName* jest nazwą zestawu do podpisania silną nazwą.
 
-Podstawowe zestawy międzyoperacyjne może odwoływać się tylko inne podstawowe zestawy międzyoperacyjne. Jeśli zestaw odwołuje się do typów w bibliotece typów modelu COM innych firm, należy uzyskać podstawowy zestaw międzyoperacyjny od wydawcy przed wygenerowaniem Twojego podstawowego zestawu międzyoperacyjnego. Jeśli jesteś wydawcą, należy wygenerować podstawowego zestawu międzyoperacyjnego dla zależnej biblioteki typów przed wygenerowaniem odwołujący się podstawowy zestaw międzyoperacyjny.
+Podstawowe zestawy międzyoperacyjności mogą odwoływać się tylko do innych podstawowych zestawów międzyoperacyjnych. Jeśli zestaw odwołuje się do typów z biblioteki typu COM innej firmy, należy uzyskać podstawowy zestaw międzyoperacyjny od wydawcy, aby można było wygenerować podstawowy zestaw międzyoperacyjny. Jeśli jesteś wydawcą, musisz wygenerować podstawowy zestaw międzyoperacyjny dla zależnej biblioteki typów przed wygenerowaniem podstawowego zestawu międzyoperacyjności.
 
-Zależne podstawowego zestawu międzyoperacyjnego z numerem wersji, która różni się od oryginalnej biblioteki typów nie jest stała się wykrywalna zainstalowany w bieżącym katalogu. Należy zarejestrować zależne podstawowy zestaw międzyoperacyjny w rejestrze systemu Windows lub użyj **/reference** opcji, należy upewnić się, że Tlbimp.exe znajdzie zależnej biblioteki DLL.
+Zależny podstawowy zestaw międzyoperacyjny z numerem wersji, który różni się od oryginalnej biblioteki typów, nie jest wykrywalny w przypadku instalacji w bieżącym katalogu. Należy zarejestrować zależny podstawowy zestaw międzyoperacyjny w rejestrze systemu Windows lub użyć opcji **/Reference** , aby upewnić się, że Tlbimp. exe odnajdzie ZALEŻNĄ bibliotekę DLL.
 
-Można również opakować wielu wersji biblioteki typów. Aby uzyskać instrukcje, zobacz [jak: OPAKOWYWANIE wielu wersji bibliotek typów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100)).
+Możesz również otoczyć wiele wersji biblioteki typów. Aby uzyskać instrukcje, [zobacz How to: Zawiń wiele wersji bibliotek](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100))typów.
 
 ## <a name="example"></a>Przykład
 
-Następujący przykład importuje biblioteki typów COM `LibUtil.tlb` i podpisuje zestaw `LibUtil.dll` silną nazwą przy użyciu pliku klucza `CompanyA.snk`. Pomijając nazwę określonej przestrzeni nazw, ten przykład generuje domyślny obszar nazw `LibUtil`.
+Poniższy przykład importuje bibliotekę `LibUtil.tlb` typów com i podpisuje zestaw `LibUtil.dll` za pomocą silnej nazwy przy użyciu pliku `CompanyA.snk`klucza. Pomijając konkretną nazwę przestrzeni nazw, ten przykład tworzy domyślną przestrzeń nazw, `LibUtil`.
 
 ```
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /out:LibUtil.dll
 ```
 
-Aby uzyskać bardziej opisową nazwę (przy użyciu *Nazwa_producenta*. *LibraryName* wskazówkami dotyczącymi nazewnictwa), poniższy przykład zastępuje domyślną nazwę pliku zestawu i przestrzeni nazw.
+Aby uzyskać bardziej opisową nazwę (przy użyciu *NazwaDostawcy*. *LibraryName* nazewnictwo, w poniższym przykładzie zastępuje domyślną nazwę pliku zestawu i nazwę przestrzeni nazw.
 
 ```
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /out:CompanyA.LibUtil.dll
 ```
 
-Następujący przykład importuje `MyLib.tlb`, która odwołuje się do `CompanyA.LibUtil.dll`, i podpisuje zestaw `CompanyB.MyLib.dll` silną nazwą przy użyciu pliku klucza `CompanyB.snk`. Przestrzeń nazw, `CompanyB.MyLib`, przesłania domyślną nazwę przestrzeni nazw.
+Poniższy przykład importuje `MyLib.tlb`, który odwołuje `CompanyA.LibUtil.dll`się i podpisuje `CompanyB.MyLib.dll` zestaw silną nazwą przy użyciu pliku `CompanyB.snk`klucza. Przestrzeń nazw, `CompanyB.MyLib`zastępuje domyślną nazwę przestrzeni nazw.
 
 ```
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: c40fab6dd480f31e53d2ce2487149c02b463bd87
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 763fdb442fa0037dafd51f89badd04436e24d254
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971209"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566832"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatory dostępu do elementówC# członkowskich (odwołanie)
 
@@ -147,7 +147,7 @@ Po wywołaniu [konstruktora](../../programming-guide/classes-and-structs/constru
 
 Należy również użyć nawiasów, aby określić kolejność, w której mają być oceniane operacje w wyrażeniu. Aby uzyskać więcej informacji, zobacz sekcję [Dodawanie nawiasów](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) w artykule [operatorzy](../../programming-guide/statements-expressions-operators/operators.md) . Aby uzyskać listę operatorów uporządkowanych według poziomu pierwszeństwa, zobacz [ C# operatory](index.md).
 
-[Wyrażenia rzutowania](type-testing-and-conversion-operators.md#cast-operator-), które wykonują jawne konwersje typów, również używają nawiasów.
+[Wyrażenia rzutowania](type-testing-and-cast.md#cast-operator-), które wykonują jawne konwersje typów, również używają nawiasów.
 
 ## <a name="operator-overloadability"></a>Przeciążanie operatora
 

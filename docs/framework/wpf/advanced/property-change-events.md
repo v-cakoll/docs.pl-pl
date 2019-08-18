@@ -13,18 +13,18 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: f8d0d5e65101ffda0edaaeabdea2870287ba0f1f
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 06056b492439531aa60becbb7bca250a439bfb68
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400843"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567424"
 ---
 # <a name="property-change-events"></a>Zdarzenia zmiany właściwości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]definiuje kilka zdarzeń, które są wywoływane w odpowiedzi na zmianę wartości właściwości. Często właściwość jest właściwością zależności. Wydarzenie jest czasami zdarzeniem kierowanym i czasami jest to standardowe zdarzenie środowiska uruchomieniowego języka wspólnego (CLR). Definicja zdarzenia różni się w zależności od scenariusza, ponieważ niektóre zmiany właściwości są bardziej odpowiednio kierowane przez drzewo elementów, podczas gdy inne zmiany właściwości są zwykle tylko dla obiektu, w którym zmieniono właściwość.  
   
 ## <a name="identifying-a-property-change-event"></a>Identyfikowanie zdarzenia zmiany właściwości  
- Nie wszystkie zdarzenia, które raportują zmianę właściwości, są jawnie identyfikowane jako zdarzenie zmiany właściwości, na podstawie wzorca podpisu lub wzorca nazewnictwa. Ogólnie rzecz biorąc, opis zdarzenia w [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] dokumentacji wskazuje, czy zdarzenie jest bezpośrednio powiązane ze zmianą wartości właściwości i zawiera odsyłacze między właściwością i zdarzeniem.  
+ Nie wszystkie zdarzenia, które raportują zmianę właściwości, są jawnie identyfikowane jako zdarzenie zmiany właściwości, na podstawie wzorca podpisu lub wzorca nazewnictwa. Ogólnie rzecz biorąc, opis zdarzenia w dokumentacji zestawu SDK wskazuje, czy zdarzenie jest bezpośrednio powiązane ze zmianą wartości właściwości i zawiera odsyłacze między właściwością i zdarzeniem.  
   
 ### <a name="routedpropertychanged-events"></a>RoutedPropertyChanged Events  
  Niektóre zdarzenia używają typu danych zdarzenia i delegatów, które są jawnie używane do zdarzeń zmiany właściwości. Typem danych zdarzenia jest <xref:System.Windows.RoutedPropertyChangedEventArgs%601>, a delegatem jest. <xref:System.Windows.RoutedPropertyChangedEventHandler%601> Dane zdarzenia i Delegaty mają parametr typu ogólnego, który służy do określania rzeczywistego typu właściwości zmiany podczas definiowania programu obsługi. Dane zdarzenia zawierają dwie właściwości, <xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A> a <xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>następnie, które następnie są przesyłane jako argument typu w danych zdarzenia.  

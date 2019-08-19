@@ -1,40 +1,40 @@
 ---
-title: 'Porady: bezpieczne multiemisji za pomocą dopasowywania do wzorca i jest i operatory'
-description: Dowiedz się użyć metod dopasowania do wzorca można bezpieczne rzutować zmienne do innego typu. Możesz użyć dopasowywania do wzorca, jak również jest oraz jako operatorów można bezpiecznie konwersji typów.
+title: 'Instrukcje: bezpieczne rzutowanie przy użyciu dopasowania wzorca i operatory is i AS'
+description: Dowiedz się, jak używać technik dopasowywania wzorców, aby bezpiecznie rzutować zmienne na inny typ. Możesz użyć dopasowania wzorca oraz operatorów is i AS, aby bezpiecznie skonwertować typy.
 ms.date: 09/05/2018
 helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 2e81628930afaca62a8614df8ca0f458238c23d6
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 764a69869b8a5b8f76e2f58aced51761af73e50e
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306353"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566285"
 ---
-# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Porady: bezpieczne multiemisji za pomocą dopasowywania do wzorca i jest i operatory
+# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Instrukcje: bezpieczne rzutowanie przy użyciu dopasowania wzorca i operatory is i AS
 
-Ponieważ obiekty są polimorficznych, jest możliwe dla zmiennej typu klasy bazowej, aby pomieścić pochodnej [typu](../programming-guide/types/index.md). Aby uzyskać dostęp do składowych wystąpienia typu pochodnego, konieczne jest [rzutowania](../programming-guide/types/casting-and-type-conversions.md) wartość do typu pochodnego. Rzutowanie tworzy jednak ryzyko zgłaszanie <xref:System.InvalidCastException>. C# zawiera [dopasowywania do wzorca](../pattern-matching.md) instrukcji, które wykonują rzutowania warunkowo, tylko wtedy, gdy zakończy się powodzeniem. C# oferuje także [jest](../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) i [jako](../language-reference/operators/type-testing-and-conversion-operators.md#as-operator) operatory, aby sprawdzić, czy wartość jest określonego typu.
+Ponieważ obiekty są polimorficzne, istnieje możliwość, aby zmienna typu klasy bazowej była przechowywana [typu](../programming-guide/types/index.md)pochodnego. Aby uzyskać dostęp do elementów członkowskich wystąpienia typu pochodnego, konieczne jest [rzutowanie](../programming-guide/types/casting-and-type-conversions.md) wartości z powrotem na typ pochodny. Jednak rzutowanie tworzy ryzyko wyrzucania <xref:System.InvalidCastException>. C#zawiera instrukcje [dopasowania wzorca](../pattern-matching.md) , które wykonują rzut warunkowy tylko wtedy, gdy powiedzie się. C#zawiera również operatory [is](../language-reference/operators/type-testing-and-cast.md#is-operator) i [as](../language-reference/operators/type-testing-and-cast.md#as-operator) do sprawdzenia, czy wartość jest określonego typu.
 
-Poniższy przykład demonstruje wzorzec dopasowywania `is` instrukcji. Zawiera metody testowania argumentu metody, aby ustalić, czy jest jednym z możliwych zestawów typów pochodnych:
+Poniższy kod demonstruje instrukcję dopasowania `is` do wzorca. Zawiera metody, które testują argument metody w celu ustalenia, czy jest to jeden z możliwych zestawów typów pochodnych:
 
 [!code-csharp[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
 
-W poprzednim przykładzie pokazano kilka funkcji Składnia dopasowania do wzorca. `if (a is Mammal m)` i `if (o is Mammal m)` instrukcje łączenia testu z przydziałem inicjowania. Przypisanie odbywa się tylko wtedy gdy test zakończy się pomyślnie. Zmienna `m` jest tylko w zakresie osadzonego `if` instrukcji, w którym został przypisany. Nie można uzyskać dostępu `m` dalej w tej samej metody. Wypróbuj go w oknie interaktywnym.
+Powyższy przykład ilustruje kilka cech składni dopasowania do wzorca. Instrukcje `if (a is Mammal m)` i`if (o is Mammal m)` łączą test z przypisaniem inicjalizacji. Przypisanie występuje tylko wtedy, gdy test zakończy się pomyślnie. Zmienna `m` jest tylko w zakresie w osadzonej `if` instrukcji, w której został przypisany. Nie można uzyskać `m` dostępu dalej w tej samej metodzie. Wypróbuj ją w oknie interaktywnym.
 
-Można również użyć tej samej składni do badania, jeśli [typu dopuszczającego wartość null](../programming-guide/nullable-types/index.md) ma wartość, jak pokazano w poniższym przykładowym kodzie:
+Można także użyć tej samej składni do testowania, jeśli [Typ wartości null](../programming-guide/nullable-types/index.md) ma wartość, jak pokazano w poniższym przykładowym kodzie:
 
 [!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 
-Poprzedni przykład pokazuje inne funkcje za pomocą konwersji dopasowywania do wzorca. Możesz przetestować zmienną deseń zerowy, sprawdzając specjalnie pod kątem `null` wartość. Gdy wartość zmiennej środowiska uruchomieniowego jest `null`, `is` instrukcji sprawdzania dla typu zawsze zwraca `false`. Dopasowanie wzorca `is` instrukcji nie dopuszcza typem wartościowym, takich jak `int?` lub `Nullable<int>`, ale możesz testować dowolny inny typ wartości.
+Powyższy przykład ilustruje inne funkcje dopasowania do wzorca do użycia z konwersjemi. Można testować zmienną dla wzorca o wartości null, sprawdzając odpowiednie `null` wartości. Gdy wartość środowiska uruchomieniowego zmiennej to `null` `is` , sprawdzanie instrukcji dla typu zawsze zwraca wartość `false`. Instrukcja dopasowania `is` wzorca nie zezwala na typ wartości null, `int?` np. lub `Nullable<int>`, ale można testować dla dowolnego innego typu wartości.
 
-W poprzednim przykładzie pokazano, jak użyć dopasowania wzorca `is` wyrażenia w `switch` instrukcji, w którym zmienna może być jednym z wielu różnych typów.
+Powyższy przykład pokazuje również, jak używać wyrażenia dopasowania `is` do wzorca `switch` w instrukcji, gdzie zmienna może być jednym z wielu różnych typów.
 
-Jeśli chcesz sprawdzić, czy zmienna jest danego typu, ale nie przypisać ją do nowej zmiennej, można użyć `is` i `as` operatorów dla typów odwołań i typy dopuszczające wartości null. Poniższy kod przedstawia sposób użycia `is` i `as` instrukcji, które były częścią języka C#, zanim dopasowywania do wzorca została wprowadzona, aby sprawdzić, czy zmienna jest danego typu:
+Jeśli chcesz sprawdzić, czy zmienna jest danym typem, ale nie jest przypisana do nowej zmiennej, można użyć `is` operatorów i `as` dla typów referencyjnych i typów dopuszczających wartość null. Poniższy kod pokazuje, `is` jak używać instrukcji i `as` , które były częścią C# języka przed wprowadzeniem dopasowania do wzorca w celu przetestowania, jeśli zmienna jest danego typu:
 
 [!code-csharp[testing variable types with the is and as statements](../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs#IsAndAs)]
 
-Jak widać, porównując ten kod z kodem dopasowania wzorca Składnia dopasowania do wzorca zapewnia bardziej niezawodne funkcje, łącząc testu i przypisania w pojedynczej instrukcji. Użyj wzorca dopasowania składni, jeśli to możliwe.
+Jak widać, porównując ten kod z kodem dopasowania wzorca, Składnia dopasowania wzorca zapewnia bardziej niezawodne funkcje, łącząc test i przypisanie w pojedynczej instrukcji. Jeśli to możliwe, użyj składni dopasowania wzorca.
 
-Możesz wypróbować te przykłady, patrząc na kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/safelycast). Można również pobrać przykłady [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/safelycast.zip).
+Możesz wypróbować te przykłady, przeglądając kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/safelycast). Możesz też pobrać przykłady [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/safelycast.zip).

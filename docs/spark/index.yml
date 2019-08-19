@@ -1,0 +1,33 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Dokumentacja platformy .NET dla Apache Spark
+metadata:
+  document_id: na
+  title: 'Dokumentacja platformy .NET dla Apache Spark — samouczki, dokumentacja interfejsu API'
+  meta.description: 'Learn how to use .NET for Apache Spark, the .NET bindings for Spark written on the Spark interop layer. You can process batches of data, real-time streams, machine learning, and ad-hoc query with Apache Spark anywhere you write .NET code.'
+  ms.prod: dotnet-spark
+  ms.topic: landing-page
+  ms.date: 05/17/2019
+  ms.author: mamccrea
+  author: mamccrea
+abstract:
+  description: 'Dowiedz się, jak używać platformy .NET do Apache Spark, powiązań platformy .NET dla platformy Spark zapisaną w warstwie międzyoperacyjności platformy Spark. Możesz przetwarzać partie danych, strumienie w czasie rzeczywistym, uczenie maszynowe i zapytania ad hoc przy użyciu Apache Spark każdego miejsca pisania kodu platformy .NET. Samouczki, przykłady kodu, dokumentacja interfejsu API i inne dokumenty przedstawiające, jak to zrobić.'
+sections:
+  - title: Samouczki krok po kroku
+    items:
+      - type: paragraph
+        text: 'Korzystaj z możliwości Apache Spark do aplikacji .NET:'
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/spark/tutorials/get-started">Wprowadzenie do platformy .NET dla Apache Spark</a>
+          - html: <a href="/dotnet/spark/tutorials/hdinsight-deployment">Wdrażanie aplikacji platformy .NET dla Apache Spark w usłudze Azure HDInsight</a>
+          - html: <a href="/dotnet/spark/tutorials/amazon-emr-spark-deployment">Wdrażanie aplikacji .NET dla Apache Spark w usłudze Amazon EMR Spark</a>
+          - html: <a href="/dotnet/spark/tutorials/databricks-deployment">Wdrażanie aplikacji platformy .NET dla Apache Spark w kostkach</a>
+  - title: Dokumentacja i zasoby
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/api/?view=spark-dotnet">Interfejs API platformy .NET dla Apache Spark</a>
+          - html: '<a href="https://github.com/dotnet/spark">.NET dla Apache Spark w centrum git</a>'

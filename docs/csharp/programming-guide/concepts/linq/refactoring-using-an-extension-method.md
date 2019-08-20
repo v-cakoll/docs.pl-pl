@@ -1,27 +1,27 @@
 ---
-title: Refaktoryzacja przy użyciu metody rozszerzenia (C#)
+title: Refaktoryzacja przy użyciu metody rozszerzającej (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 06c09b1c76e0c5287cc3bf96947b2ebf54337592
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2be848d6454abf0dd37a6974cff915a107336503
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487258"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591302"
 ---
-# <a name="refactoring-using-an-extension-method-c"></a>Refaktoryzacja przy użyciu metody rozszerzenia (C#)
-W tym przykładzie opiera się na poprzednim przykładzie [pobieranie tekstu akapitów (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), przez refaktoryzacji łączenia ciągów przy użyciu czystej funkcji, który jest implementowany jako metodę rozszerzenia.  
+# <a name="refactoring-using-an-extension-method-c"></a>Refaktoryzacja przy użyciu metody rozszerzającej (C#)
+Ten przykład kompiluje się w poprzednim przykładzie, [pobierając tekst akapitówC#()](./retrieving-the-text-of-the-paragraphs.md)przez refaktoryzację łączenia ciągów przy użyciu czystej funkcji, która jest implementowana jako Metoda rozszerzenia.  
   
- W poprzednim przykładzie użyto <xref:System.Linq.Enumerable.Aggregate%2A> standardowego operatora zapytania na łączenie wielu ciągów w jeden ciąg. Jednak jest bardziej wygodne do zapisania metodę rozszerzenia, aby to zrobić, ponieważ wynikowy zapytania mniejsze i bardziej proste.  
+ W poprzednim przykładzie użyto <xref:System.Linq.Enumerable.Aggregate%2A> standardowego operatora zapytania do łączenia wielu ciągów w jeden ciąg. Jednak bardziej wygodne jest zapisanie metody rozszerzającej, ponieważ wyniki zapytania są mniejsze i prostsze.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie przetwarza dokumentu WordprocessingML pobieranie akapitów, styl każdego akapitu, a tekst każdego akapitu. W tym przykładzie opiera się na poprzednich przykładach w tym samouczku.  
+ Ten przykład przetwarza dokument WordprocessingML, pobierając akapity, styl każdego akapitu i tekst każdego akapitu. Ten przykład kompiluje się zgodnie z poprzednimi przykładami w tym samouczku.  
   
  Przykład zawiera wiele przeciążeń `StringConcatenate` metody.  
   
- Można znaleźć instrukcje dotyczące tworzenia dokumentu źródłowego, w tym przykładzie w [tworzenie źródłowego dokumentu pakietu Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu można znaleźć w temacie [Tworzenie źródłowego dokumentu Office Open XMLC#()](./creating-the-source-office-open-xml-document.md).  
   
- W tym przykładzie użyto klasy z zestawu WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ W tym przykładzie zastosowano klasy z zestawu 'Windowsbase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -63,9 +63,9 @@ public static class LocalExtensions
 ```  
   
 ## <a name="example"></a>Przykład  
- Istnieją cztery przeciążenia `StringConcatenate` metody. Kilkoma przeciążeniami po prostu kolekcji ciągów i zwraca jeden ciąg. Innego przeciążenia metody może potrwać kolekcji dowolnego typu i delegata tego projektów z pojedynczego kolekcji na ciąg. Istnieją dwa więcej przeciążenia metody, które pozwalają na określenie ciągu separatora.  
+ Istnieją cztery przeciążenia `StringConcatenate` metody. Jedno Przeciążenie po prostu Pobiera kolekcję ciągów i zwraca jeden ciąg. Inne Przeciążenie może pobrać kolekcję dowolnego typu i delegata, który projektuje z pojedynczej kolekcji do ciągu. Istnieją dwa więcej przeciążenia, które umożliwiają określenie ciągu separatora.  
   
- W poniższym kodzie użyto wszystkie cztery przeciążenia.  
+ Poniższy kod używa wszystkich czterech przeciążeń.  
   
 ```csharp  
 string[] numbers = { "one", "two", "three" };  
@@ -88,7 +88,7 @@ one:two:three:
 ```  
   
 ## <a name="example"></a>Przykład  
- Teraz można zmodyfikować przykładu, aby korzystać z zalet nowej metody rozszerzenia:  
+ Teraz można zmodyfikować przykład, aby skorzystać z nowej metody rozszerzenia:  
   
 ```csharp  
 public static class LocalExtensions  
@@ -219,7 +219,7 @@ class Program
 }  
 ```  
   
- Ten przykład generuje następujące dane wyjściowe po zastosowaniu do dokumentu opisano w [tworzenie źródłowego dokumentu pakietu Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Ten przykład generuje następujące dane wyjściowe w przypadku zastosowania do dokumentu opisanego w temacie [Tworzenie źródłowego dokumentu Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -239,14 +239,14 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
- Należy pamiętać, że ta Refaktoryzacja jest wariant Refaktoryzacja do czystych funkcji. Następny temat przedstawiono koncepcję wyprowadzenie do czystych funkcji bardziej szczegółowo.  
+ Należy zauważyć, że Refaktoryzacja jest odmianą refaktoryzacji w czystej funkcji. W następnym temacie zawarto informacje na temat sposobu refaktoryzacji do czystych funkcji.  
   
 ## <a name="next-steps"></a>Następne kroki  
- W kolejnym przykładzie pokazano sposób Refaktoryzuj ten kod w inny sposób, przy użyciu czystej funkcji:  
+ W następnym przykładzie pokazano, jak refaktoryzacji ten kod w inny sposób przy użyciu czystych funkcji:  
   
 - [Refaktoryzacja przy użyciu czystej funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
-- [Refaktoryzacja do czystych funkcji (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Refaktoryzacja do czystych funkcji (C#)](./refactoring-into-pure-functions.md)

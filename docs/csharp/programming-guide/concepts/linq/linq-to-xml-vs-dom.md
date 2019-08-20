@@ -2,12 +2,12 @@
 title: LINQ to XML a DOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 65dff4dc1c2faa1cd17e640d0c1a0e1d2a514fbe
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 68d380873e71d767ddd60f8f9d0f4b82846d1371
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710017"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591768"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML a DOM (C#)
 W tej sekcji opisano niektóre kluczowe różnice [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] między programem a obecnym głównym interfejsem API programowania plików XML, W3C Document Object Model (dom).  
@@ -75,7 +75,7 @@ XElement contacts =
   
  Zwróć uwagę, że Wcięcie kodu w celu skonstruowania drzewa XML pokazuje strukturę bazowego kodu XML.  
   
- Aby uzyskać więcej informacji, zobacz [Tworzenie drzew XMLC#()](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md).  
+ Aby uzyskać więcej informacji, zobacz [Tworzenie drzew XMLC#()](./linq-to-xml-overview.md).  
   
 ## <a name="working-directly-with-xml-elements"></a>Praca bezpośrednio z elementami XML  
  Gdy program jest używany w języku XML, główny fokus jest zazwyczaj na elementach XML i prawdopodobnie na atrybutach. W [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]programie można bezpośrednio korzystać z elementów i atrybutów XML. Można na przykład wykonać następujące czynności:  
@@ -105,7 +105,7 @@ doc.AppendChild(name);
  Innym problemem z modelem DOM jest to, że nie pozwala na zmianę nazwy węzła. Zamiast tego należy utworzyć nowy węzeł i skopiować do niego wszystkie węzły podrzędne, tracąc oryginalną tożsamość węzła. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]pozwala uniknąć tego problemu, umożliwiając ustawienie <xref:System.Xml.Linq.XName> właściwości w węźle.  
   
 ## <a name="static-method-support-for-loading-xml"></a>Obsługa metody statycznej do ładowania pliku XML  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]umożliwia ładowanie XML przy użyciu metod statycznych zamiast metod instancji. Upraszcza to ładowanie i analizowanie. Aby uzyskać więcej informacji, zobacz [jak: Załaduj plik XML z plikuC#(](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]umożliwia ładowanie XML przy użyciu metod statycznych zamiast metod instancji. Upraszcza to ładowanie i analizowanie. Aby uzyskać więcej informacji, zobacz [jak: Załaduj plik XML z plikuC#(](./how-to-load-xml-from-a-file.md)).  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>Usuwanie obsługi dla konstrukcji DTD  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]bardziej upraszcza programowanie XML przez usunięcie obsługi jednostek i odwołań do jednostek. Zarządzanie jednostkami jest skomplikowane i rzadko jest używane. Usunięcie ich obsługi zwiększa wydajność i upraszcza interfejs programowania. Po wypełnieniu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] drzewa wszystkie jednostki DTD są rozwinięte.  
@@ -126,11 +126,11 @@ doc.AppendChild(name);
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapisuje biały znak jako <xref:System.Xml.Linq.XText> węzeł, zamiast mieć wyspecjalizowany <xref:System.Xml.XmlNodeType.Whitespace> typ węzła, jak dom.  
   
 ## <a name="support-for-annotations"></a>Obsługa adnotacji  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]elementy obsługują rozszerzalny zestaw adnotacji. Jest to przydatne do śledzenia różnych informacji o elemencie, takich jak informacje o schemacie, informacje o tym, czy element jest powiązany z interfejsem użytkownika, czy też innym rodzajem informacji specyficznych dla aplikacji. Aby uzyskać więcej informacji, zobacz [LINQ to XML adnotacje](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-annotations.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]elementy obsługują rozszerzalny zestaw adnotacji. Jest to przydatne do śledzenia różnych informacji o elemencie, takich jak informacje o schemacie, informacje o tym, czy element jest powiązany z interfejsem użytkownika, czy też innym rodzajem informacji specyficznych dla aplikacji. Aby uzyskać więcej informacji, zobacz [LINQ to XML adnotacje](./linq-to-xml-annotations.md).  
   
 ## <a name="support-for-schema-information"></a>Obsługa informacji o schemacie  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapewnia obsługę walidacji XSD za pomocą metod rozszerzających <xref:System.Xml.Schema?displayProperty=nameWithType> w przestrzeni nazw. Można sprawdzić, czy drzewo XML jest zgodne z XSD. Drzewo XML można wypełnić za pomocą sprawdzonych po walidacji schematu (PSVI). Aby uzyskać więcej informacji, zobacz [jak: Weryfikuj przy użyciu](../../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) XSD <xref:System.Xml.Schema.Extensions>i.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapewnia obsługę walidacji XSD za pomocą metod rozszerzających <xref:System.Xml.Schema?displayProperty=nameWithType> w przestrzeni nazw. Można sprawdzić, czy drzewo XML jest zgodne z XSD. Drzewo XML można wypełnić za pomocą sprawdzonych po walidacji schematu (PSVI). Aby uzyskać więcej informacji, zobacz [jak: Weryfikuj przy użyciu](./how-to-validate-using-xsd-linq-to-xml.md) XSD <xref:System.Xml.Schema.Extensions>i.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [Wprowadzenie (LINQ to XML)](./linq-to-xml-overview.md)

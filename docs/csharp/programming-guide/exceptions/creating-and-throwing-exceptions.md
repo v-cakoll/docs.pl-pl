@@ -1,5 +1,5 @@
 ---
-title: Tworzenie i zgłaszanie wyjątków - C# przewodnik programowania
+title: Tworzenie i zgłaszanie wyjątków C# — Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,67 +8,67 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: e569742943e121faeae340512544956b674da083
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 605a28f8f804c11a9a6636c7a17ec5782cc5a429
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595353"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590315"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Tworzenie i zgłaszanie wyjątków (Przewodnik programowania w języku C#)
-Wyjątki są używane do wskazania, że wystąpił błąd podczas uruchamiania programu. Obiekty wyjątków, które opisują błąd są tworzone a następnie *zgłoszony* z [throw](../../../csharp/language-reference/keywords/throw.md) — słowo kluczowe. Środowisko uruchomieniowe wyszukuje następnie najbardziej zgodne obsługi wyjątków.  
+Wyjątki są używane do wskazywania, że wystąpił błąd podczas uruchamiania programu. Obiekty wyjątków opisujące błąd są tworzone, a następnie *generowane* za pomocą słowa kluczowego [throw](../../language-reference/keywords/throw.md) . Środowisko uruchomieniowe następnie wyszukuje najbardziej zgodny program obsługi wyjątków.  
   
- Programiści powinien zgłaszać wyjątki, gdy dla jednego lub więcej z następujących warunków jest spełniony:  
+ Programiści powinni zgłosić wyjątki, gdy spełnione są co najmniej jeden z następujących warunków:  
   
-- Metoda nie może ukończyć jej zdefiniowane funkcje.  
+- Metoda nie może ukończyć zdefiniowanej funkcji.  
   
-     Na przykład, jeśli parametr do metody ma nieprawidłową wartość:  
+     Na przykład jeśli parametr do metody ma nieprawidłową wartość:  
   
      [!code-csharp[csProgGuideExceptions#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#12)]  
   
-- Nieodpowiednie do obiektu rozmowy, na podstawie stanu obiektu.  
+- Nieodpowiednie wywołanie do obiektu jest wykonywane na podstawie stanu obiektu.  
   
-     Przykładem może próbować zapis pliku tylko do odczytu. W przypadkach, gdy stan obiektu nie zezwala na operację, należy zgłaszać wystąpienie <xref:System.InvalidOperationException> lub obiektu oparte na typem pochodnym tej klasy. Jest to przykład metody, która zgłasza <xref:System.InvalidOperationException> obiektu:  
+     Przykładem może być próba zapisu w pliku tylko do odczytu. W przypadkach, w których stan obiektu nie zezwala na operację, zgłoś wystąpienie <xref:System.InvalidOperationException> obiektu lub obiekt na podstawie wartości pochodnych tej klasy. Jest to przykład metody, która zgłasza <xref:System.InvalidOperationException> obiekt:  
   
      [!code-csharp[csProgGuideExceptions#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#13)]  
   
-- Gdy argument do metody, powoduje wyjątek.  
+- Gdy argument metody powoduje wyjątek.  
   
-     W tym przypadku oryginalnego wyjątku powinien zostać przechwycony i <xref:System.ArgumentException> można utworzyć wystąpienia. Oryginalny wyjątek powinien zostać przekazany do konstruktora obiektu <xref:System.ArgumentException> jako <xref:System.Exception.InnerException%2A> parametru:  
+     W takim przypadku należy przechwycić oryginalny wyjątek i <xref:System.ArgumentException> utworzyć wystąpienie. Oryginalny wyjątek powinien zostać przesłany do konstruktora <xref:System.ArgumentException> <xref:System.Exception.InnerException%2A> jako parametr:  
   
      [!code-csharp[csProgGuideExceptions#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#14)]  
   
- Wyjątki zawiera właściwość o nazwie <xref:System.Exception.StackTrace%2A>. Ten ciąg zawiera nazwę metody na bieżący stos wywołań, wraz z pliku nazwa i numer wiersza gdzie dla każdej metody wystąpił wyjątek. A <xref:System.Exception.StackTrace%2A> obiekt zostanie utworzony automatycznie przez środowisko uruchomieniowe języka wspólnego (CLR) od momentu `throw` instrukcji, tak aby musi być zgłaszane wyjątki od punktu, w którym powinna zacząć się ślad stosu.  
+ Wyjątki zawierają właściwość o nazwie <xref:System.Exception.StackTrace%2A>. Ten ciąg zawiera nazwę metod w bieżącym stosie wywołań, wraz z nazwą pliku i numerem wiersza, dla których zgłoszono wyjątek dla każdej metody. Obiekt jest tworzony automatycznie przez środowisko uruchomieniowe języka wspólnego (CLR) z punktu `throw` instrukcji, aby wyjątki musiały zostać zgłoszone od punktu, w którym ma zostać rozpoczęte śledzenie stosu. <xref:System.Exception.StackTrace%2A>  
   
- Wszystkie wyjątki zawiera właściwość o nazwie <xref:System.Exception.Message%2A>. Ten ciąg powinna być równa wyjaśnienia przyczyn, dla wyjątku. Należy pamiętać, że informacje, które są wrażliwe na zabezpieczeń nie należy umieścić w treści wiadomości. Oprócz <xref:System.Exception.Message%2A>, <xref:System.ArgumentException> zawiera właściwość o nazwie <xref:System.ArgumentException.ParamName%2A> , należy ustawić nazwę argumentu, który spowodował zgłoszenie wyjątku. W przypadku metoda ustawiająca właściwości <xref:System.ArgumentException.ParamName%2A> powinna być równa `value`.  
+ Wszystkie wyjątki zawierają właściwość o nazwie <xref:System.Exception.Message%2A>. Ten ciąg powinien być ustawiony na wyjaśnienie przyczyny wyjątku. Należy pamiętać, że informacje, które są wrażliwe na zabezpieczenia, nie powinny być umieszczane w tekście komunikatu. Oprócz <xref:System.Exception.Message%2A> <xref:System.ArgumentException.ParamName%2A> , <xref:System.ArgumentException> zawiera właściwość o nazwie, która powinna być ustawiona na nazwę argumentu, który spowodował zgłoszenie wyjątku. W przypadku metody ustawiającej <xref:System.ArgumentException.ParamName%2A> właściwość powinna być ustawiona na. `value`  
   
- Publiczne i chronione metody należy zgłaszać wyjątki, zawsze wtedy, gdy ich nie można ukończyć ich zamierzonych funkcji. Klasy wyjątków, który jest generowany, powinien być bardziej konkretny od pozostałych wyjątków, dostępności, która pasuje do warunków błędów. Te wyjątki powinny być udokumentowane w ramach funkcji klasy i klas pochodnych lub aktualizacje do oryginalnej klasy powinien zachować takie samo zachowanie zgodności z poprzednimi wersjami.  
+ Metody publiczne i chronione powinny generować wyjątki, gdy nie mogą zakończyć ich zamierzonych funkcji. Zgłoszona Klasa wyjątku powinna być najbardziej szczegółowym dostępnym wyjątkiem, który pasuje do warunków błędu. Te wyjątki powinny być udokumentowane jako część funkcji klasy, a klasy pochodne lub aktualizacje oryginalnej klasy powinny zachować takie samo zachowanie w celu zapewnienia zgodności z poprzednimi wersjami.  
   
-## <a name="things-to-avoid-when-throwing-exceptions"></a>Czynności, aby uniknąć podczas zgłaszania wyjątków  
- Poniższa lista zawiera wskazówki, aby uniknąć podczas zgłaszania wyjątków:  
+## <a name="things-to-avoid-when-throwing-exceptions"></a>Rzeczy, które należy unikać podczas zgłaszania wyjątków  
+ Poniższa lista zawiera wskazówki, które należy unikać podczas zgłaszania wyjątków:  
   
-- Wyjątki nie powinny umożliwiające zmianę przepływu programu, w ramach wykonywania zwykłych. Wyjątków należy używać tylko do raportowania i obsługi błędów.  
+- Wyjątków nie należy używać do zmiany przepływu programu w ramach zwykłego wykonania. Wyjątki powinny być używane tylko do raportowania i obsługi warunków błędów.  
   
-- Wyjątki nie powinien być zwracany jako wartość zwracana lub parametr zamiast zgłaszane.  
+- Wyjątków nie należy zwracać jako wartości zwracanej lub parametru, a nie do zgłaszania.  
   
-- Nie zgłaszają wyjątków <xref:System.Exception?displayProperty=nameWithType>, <xref:System.SystemException?displayProperty=nameWithType>, <xref:System.NullReferenceException?displayProperty=nameWithType>, lub <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> celowo z kodu źródłowego.  
+- Nie <xref:System.Exception?displayProperty=nameWithType>zgłaszaj, <xref:System.SystemException?displayProperty=nameWithType>, <xref:System.NullReferenceException?displayProperty=nameWithType>lub <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> celowo z własnego kodu źródłowego.  
   
-- Nie należy tworzyć wyjątki, które mogą być generowane w trybie debugowania, ale nie tryb wydania. Aby zidentyfikować błędy czasu wykonywania w fazie opracowywania, należy użyć debugowania potwierdzenia.  
+- Nie należy tworzyć wyjątków, które mogą być zgłaszane w trybie debugowania, ale nie w trybie wydania. Aby zidentyfikować błędy czasu wykonywania w fazie opracowywania, należy zamiast tego użyć potwierdzenia debugowania.  
   
-## <a name="defining-exception-classes"></a>Definiowanie klasy wyjątków  
- Programy może zgłosić klasy wstępnie zdefiniowany wyjątek <xref:System> przestrzeni nazw (z wyjątkiem sytuacji, gdy wcześniej wspomniano), lub Utwórz własne klasy wyjątków, wynikające z <xref:System.Exception>. W klasach pochodnych należy zdefiniować co najmniej cztery konstruktory: jeden konstruktor bez parametrów, który ustawia właściwości wiadomości i jedną, która ustawia zarówno <xref:System.Exception.Message%2A> i <xref:System.Exception.InnerException%2A> właściwości. Czwarty Konstruktor jest używany do serializacji wyjątku. Nowe klasy wyjątku powinien być możliwy do serializacji. Na przykład:  
+## <a name="defining-exception-classes"></a>Definiowanie klas wyjątków  
+ Programy mogą zgłosić wstępnie zdefiniowaną klasę wyjątku w <xref:System> przestrzeni nazw (chyba że wcześniej zanotowano) lub utworzyć własne klasy wyjątków, wyprowadzając <xref:System.Exception>z. Klasy pochodne powinny definiować co najmniej cztery konstruktory: jeden konstruktor bez parametrów, taki, który ustawia właściwość Message, a drugi ustawia <xref:System.Exception.Message%2A> właściwości i. <xref:System.Exception.InnerException%2A> Czwarty Konstruktor jest używany do serializacji wyjątku. Nowe klasy wyjątków powinny być możliwe do serializacji. Na przykład:  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   
- Nowe właściwości powinny być dodane tylko do klasy wyjątku, gdy dane, które zapewniają przydaje się do rozpoznawania wyjątku. Jeśli zostaną dodane do klasy pochodnej wyjątek `ToString()` powinna zostać zastąpiona w celu zwracania informacji dodano.  
+ Nowe właściwości powinny być dodawane do klasy wyjątku tylko wtedy, gdy udostępniane dane są przydatne do rozpoznawania wyjątku. Jeśli do klasy wyjątku pochodnego zostaną dodane nowe właściwości, `ToString()` należy je zastąpić, aby zwracały dodane informacje.  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
 
-Aby uzyskać więcej informacji, zobacz [wyjątki](~/_csharplang/spec/exceptions.md) i [instrukcji "throw"](~/_csharplang/spec/statements.md#the-throw-statement) w [ C# specyfikacji języka](../../language-reference/language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [wyjątki](~/_csharplang/spec/exceptions.md) i [instrukcje throw](~/_csharplang/spec/statements.md#the-throw-statement) w [ C# specyfikacji języka](../../language-reference/language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Wyjątki i obsługa wyjątków](./index.md)
 - [Hierarchia wyjątków](../../../standard/exceptions/index.md)
-- [Obsługa wyjątków](../../../csharp/programming-guide/exceptions/exception-handling.md)
+- [Obsługa wyjątków](./exception-handling.md)

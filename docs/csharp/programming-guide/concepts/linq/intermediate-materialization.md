@@ -1,19 +1,19 @@
 ---
-title: Materializacja pośrednia (C#)
+title: Pośredni materializację (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: d83bbc5e3de992e9ad4d86d0f684e2dfc3a29411
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 273cd68b9714287f259e763c9b7c534aac1931e6
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484529"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592134"
 ---
-# <a name="intermediate-materialization-c"></a>Materializacja pośrednia (C#)
-Jeśli nie jesteś zachować ostrożność, w niektórych sytuacjach można znacząco zmienić profil pamięć i wydajność aplikacji, powodując przedwczesne materializacja kolekcji w zapytaniach. Niektóre standardowe operatory zapytań spowodować materializacja ich kolekcji źródłowej przed reaguje pojedynczy element. Na przykład <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> najpierw wykonuje iterację przez jego kolekcja całą źródłową, a następnie sortuje wszystkie elementy i wreszcie zwraca pierwszy element. To oznacza, że jest kosztowne uzyskać pierwszy element uporządkowaną kolekcję; Każdy element nie jest później kosztowne. Jest to logiczne: Nie można wysyłać dla tego operatora zapytania robić.  
+# <a name="intermediate-materialization-c"></a>Pośredni materializację (C#)
+Jeśli nie jest to dokładne, w niektórych sytuacjach można radykalnie zmienić profil pamięci i wydajności aplikacji, powodując przedwcześnie materializację kolekcji w zapytaniach. Niektóre standardowe operatory zapytań powodują materializację kolekcji źródłowej przed uzyskaniem pojedynczego elementu. Na przykład program <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> najpierw wykonuje iterację w całej kolekcji źródłowej, sortuje wszystkie elementy, a następnie zwraca pierwszy element. Oznacza to, że jest kosztowne uzyskanie pierwszego elementu kolekcji uporządkowanej; Każdy element nie jest kosztowny. Ma to sens: Wykonanie tej czynności przez operatora kwerendy może być niemożliwe.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład modyfikuje poprzedni przykład. `AppendString` Wywołania metody <xref:System.Linq.Enumerable.ToList%2A> przed iteracji w źródle. Powoduje to materializacja.  
+ Ten przykład zmienia poprzedni przykład. `AppendString` Metoda wywołuje<xref:System.Linq.Enumerable.ToList%2A> przed iteracją w źródle. Powoduje to materializację.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -80,12 +80,12 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- W tym przykładzie możesz zobaczyć, że wywołanie <xref:System.Linq.Enumerable.ToList%2A> powoduje, że `AppendString` wyliczyć całego źródła przed reaguje na pierwszy element. Źródło, gdyby dużą tablicę, znacznie zmieniłaby ten profil pamięci aplikacji.  
+ W tym przykładzie można zobaczyć, że wywołanie <xref:System.Linq.Enumerable.ToList%2A> powoduje `AppendString` Wyliczenie całego źródła przed uzyskaniem pierwszego elementu. Jeśli źródłem była duża tablica, znacznie zmienia profil pamięci aplikacji.  
   
- Standardowe operatory zapytań można również łączyć w łańcuch. Ostatnim temacie w tym samouczku przedstawiono to.  
+ Standardowe operatory zapytań można również łączyć ze sobą. Ten samouczek ilustruje ostatni temat w tym samouczku.  
   
-- [Łańcucha standardowych operatorów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
+- [Łączenie standardowych operatorów zapytań (C#)](./chaining-standard-query-operators-together.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Łączenie łańcuchowe zapytań (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Samouczek: Łączenie łańcuchowe zapytań (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

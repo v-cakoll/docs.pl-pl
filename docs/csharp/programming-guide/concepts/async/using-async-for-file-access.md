@@ -2,12 +2,12 @@
 title: Używanie Async na potrzeby dostępu doC#plików ()
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 6ca47157575ef4569a43f334dae4f99a1986a7ce
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: e6b0370049d9b9315de6a72d0e84c080aac12481
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330935"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595533"
 ---
 # <a name="using-async-for-file-access-c"></a>Używanie Async na potrzeby dostępu doC#plików ()
 Do uzyskiwania dostępu do plików można użyć funkcji asynchronicznej. Za pomocą funkcji asynchronicznej można wywołać metody asynchroniczne bez używania wywołań zwrotnych lub dzieląc kod w wielu metodach lub wyrażeniach lambda. Aby przeprowadzić synchroniczne asynchroniczne kod, wystarczy wywołać metodę asynchroniczną zamiast metody synchronicznej i dodać kilka słów kluczowych do kodu.  
@@ -75,10 +75,10 @@ Task theTask = sourceStream.WriteAsync(encodedText, 0, encodedText.Length);
 await theTask;  
 ```  
   
- Pierwsza instrukcja zwraca zadanie i powoduje uruchomienie przetwarzania plików. Druga instrukcja z Await powoduje, że metoda natychmiast zakończy działanie i zwróci inne zadanie. Po późniejszym zakończeniu przetwarzania plików wykonanie powraca do instrukcji, która następuje po oczekiwania. Aby uzyskać więcej informacji, zobacz [sterowanie przepływem w programachC#asynchronicznych ()](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ Pierwsza instrukcja zwraca zadanie i powoduje uruchomienie przetwarzania plików. Druga instrukcja z Await powoduje, że metoda natychmiast zakończy działanie i zwróci inne zadanie. Po późniejszym zakończeniu przetwarzania plików wykonanie powraca do instrukcji, która następuje po oczekiwania. Aby uzyskać więcej informacji, zobacz [sterowanie przepływem w programachC#asynchronicznych ()](./control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Odczytywanie tekstu  
- Poniższy przykład odczytuje tekst z pliku. Tekst jest buforowany i, w tym przypadku, umieszczony w <xref:System.Text.StringBuilder>. W przeciwieństwie do poprzedniego przykładu, obliczanie oczekiwania powoduje utworzenie wartości. <xref:System.IO.Stream.ReadAsync%2A> Metoda <xref:System.Threading.Tasks.Task> `Int32` zwraca >, więc Ocena await generuje wartość(`numRead`) po zakończeniu operacji. \< <xref:System.Int32> Aby uzyskać więcej informacji, zobacz [asynchroniczne typy zwracaneC#()](../../../../csharp/programming-guide/concepts/async/async-return-types.md).  
+ Poniższy przykład odczytuje tekst z pliku. Tekst jest buforowany i, w tym przypadku, umieszczony w <xref:System.Text.StringBuilder>. W przeciwieństwie do poprzedniego przykładu, obliczanie oczekiwania powoduje utworzenie wartości. <xref:System.IO.Stream.ReadAsync%2A> Metoda <xref:System.Threading.Tasks.Task> `Int32` zwraca >, więc Ocena await generuje wartość(`numRead`) po zakończeniu operacji. \< <xref:System.Int32> Aby uzyskać więcej informacji, zobacz [asynchroniczne typy zwracaneC#()](./async-return-types.md).  
   
 ```csharp  
 public async Task ProcessReadAsync()  
@@ -172,10 +172,10 @@ public async Task ProcessWriteMultAsync()
 }  
 ```  
   
- W przypadku korzystania <xref:System.IO.Stream.WriteAsync%2A> z <xref:System.IO.Stream.ReadAsync%2A> metod i można określić <xref:System.Threading.CancellationToken>, której można użyć do anulowania strumienia średniej operacji. Aby uzyskać więcej informacji, zobacz [dostrajanie aplikacji asynchronicznej (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) i [Anulowanie w zarządzanych wątkach](../../../../standard/threading/cancellation-in-managed-threads.md).  
+ W przypadku korzystania <xref:System.IO.Stream.WriteAsync%2A> z <xref:System.IO.Stream.ReadAsync%2A> metod i można określić <xref:System.Threading.CancellationToken>, której można użyć do anulowania strumienia średniej operacji. Aby uzyskać więcej informacji, zobacz [dostrajanie aplikacji asynchronicznej (C#)](./fine-tuning-your-async-application.md) i [Anulowanie w zarządzanych wątkach](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie asynchroniczne z Async i Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Asynchroniczne typy zwracane (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [Przepływ sterowania w programach asynchronicznychC#()](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [Programowanie asynchroniczne z Async i Await (C#)](./index.md)
+- [Asynchroniczne typy zwracane (C#)](./async-return-types.md)
+- [Przepływ sterowania w programach asynchronicznychC#()](./control-flow-in-async-programs.md)

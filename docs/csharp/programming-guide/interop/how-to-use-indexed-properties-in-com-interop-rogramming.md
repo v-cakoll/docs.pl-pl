@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użycie właściwości indeksowanych w programowaniu usługi Międzyoperacyjnej modelu COM - C# przewodnik programowania'
+title: 'Instrukcje: Korzystanie z właściwości indeksowanych w programowaniu międzyoperacyjnym modelu COM — C# Przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,47 +7,47 @@ helpviewer_keywords:
 - Office programming [C#], indexed properties
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
-ms.openlocfilehash: d2b992131bb5722b8a10ec4a71fc42602c98a12c
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 29132fa8d788f59178237be2c03adc1de4ac5c4f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347624"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589122"
 ---
-# <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>Instrukcje: Użycie właściwości indeksowanych w programowaniu usługi Międzyoperacyjnej modelu COM (C# Programming Guide)
-*Właściwości indeksowanych* poprawić sposób, w których COM właściwości, które mają parametry są używane w programowaniu w języku C#. Indeksowane właściwości pracy w połączeniu z innymi funkcjami w języku Visual C#, takich jak [argumentów nazwanych i opcjonalnych](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md), nowy typ ([dynamiczne](../../../csharp/language-reference/keywords/dynamic.md)), i [osadzonych informacji o typie](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md), Zwiększ programowania Microsoft Office.  
+# <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>Instrukcje: Korzystanie z właściwości indeksowanych w programowaniu międzyoperacyjnym modelu COM (C# Przewodnik programowania)
+*Właściwości indeksowane* ulepszają sposób, w jaki właściwości com, które mają parametry są C# używane w programowaniu. Właściwości indeksowane współpracują z innymi funkcjami w C#wizualizacji, takimi jak [argumenty nazwane i opcjonalne](../classes-and-structs/named-and-optional-arguments.md), nowy typ ([dynamiczny](../../language-reference/keywords/dynamic.md)) i [Informacje o typie osadzonym](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md), aby usprawnić programowanie Microsoft Office.  
   
- We wcześniejszych wersjach języka C#, są dostępne jako właściwości tylko wtedy, gdy metody `get` metoda nie ma parametrów i `set` metoda ma jeden i tylko jeden parametr wartości. Jednak nie wszystkie właściwości modelu COM spełniać te ograniczenia. Na przykład program Excel <xref:Microsoft.Office.Interop.Excel.Range.Range%2A> właściwość ma `get` metodę dostępu, która wymaga parametru Nazwa zakresu. W przeszłości ponieważ nie można uzyskać dostępu `Range` właściwości bezpośrednio, trzeba było używać `get_Range` metody zamiast tego, jak pokazano w poniższym przykładzie.  
+ We wcześniejszych wersjach programu C#metody są dostępne jako właściwości tylko wtedy, gdy `get` Metoda nie ma parametrów, a `set` Metoda ma jeden i tylko jeden parametr value. Jednak nie wszystkie właściwości COM spełniają te ograniczenia. Na przykład właściwość programu Excel <xref:Microsoft.Office.Interop.Excel.Range.Range%2A> `get` ma metodę dostępu, która wymaga parametru dla nazwy zakresu. W przeszłości, ponieważ nie można uzyskać dostępu `Range` do właściwości bezpośrednio, należy `get_Range` użyć metody zamiast tego, jak pokazano w poniższym przykładzie.  
   
  [!code-csharp[csProgGuideIndexedProperties#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#1)]  
   
- Właściwości indeksowane umożliwiają zamiast niego zapisu do następujących:  
+ Właściwości indeksowane umożliwiają napisanie następujących danych:  
   
  [!code-csharp[csProgGuideIndexedProperties#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#2)]  
   
 > [!NOTE]
->  W poprzednim przykładzie użyto również [opcjonalne argumenty](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md) funkcji, która pozwala na pominięcie `Type.Missing`.  
+>  W poprzednim przykładzie jest również stosowana funkcja [argumentów opcjonalnych](../classes-and-structs/named-and-optional-arguments.md) , która pozwala pominąć `Type.Missing`.  
   
- Podobnie jak wartość `Value` właściwość <xref:Microsoft.Office.Interop.Excel.Range> obiektu C# 3.0 i wcześniejszych, wymagane są dwa argumenty. Dostarcza jeden argument opcjonalny parametr określający typ wartości zakresu. Druga dostarcza wartość `Value` właściwości. Poniższe przykłady ilustrują tych metod. Ustawiają wartość komórki A1 do `Name`.
+ Podobnie, aby ustawić wartość `Value` właściwości <xref:Microsoft.Office.Interop.Excel.Range> obiektu w C# 3,0 i wcześniejszych, wymagane są dwa argumenty. Jeden dostarcza argument dla opcjonalnego parametru, który określa typ wartości zakresu. Pozostałe dostarczają wartość `Value` właściwości. Poniższe przykłady ilustrują te techniki. Obie wartości mają `Name`ustawioną wartość komórki a1.
   
  [!code-csharp[csProgGuideIndexedProperties#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#3)]  
   
- Właściwości indeksowane umożliwiają zamiast tego Zapisz poniższy kod.  
+ Właściwości indeksowane umożliwiają zapisanie w zamian poniższego kodu.  
   
  [!code-csharp[csProgGuideIndexedProperties#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#4)]  
   
- Nie można utworzyć właściwości indeksowanych samodzielnie. Ta funkcja obsługuje tylko użycie istniejącej właściwości indeksowanych.  
+ Nie można tworzyć własnych właściwości indeksowanych. Funkcja obsługuje tylko użycie istniejących właściwości indeksowanych.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia kompletny przykład. Aby uzyskać więcej informacji o tym, jak skonfigurować projekt, który uzyskuje dostęp do interfejsu API pakietu Office, zobacz [jak: Dostęp do obiektów międzyoperacyjności pakietu Office przy użyciu Visual C# funkcji](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
+ Poniższy kod przedstawia kompletny przykład. Aby uzyskać więcej informacji o konfigurowaniu projektu, który uzyskuje dostęp do interfejsu API pakietu Office [, zobacz How to: Dostęp do obiektów międzyoperacyjności pakietu C# Office](./how-to-access-office-onterop-objects.md)za pomocą funkcji wizualnych.  
   
  [!code-csharp[csProgGuideIndexedProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#5)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Argumenty nazwane i opcjonalne](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [Używanie typu dynamicznego](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [Instrukcje: Użycie argumentów nazwanych i opcjonalnych w programowaniu Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [Instrukcje: Dostęp do obiektów międzyoperacyjności pakietu Office przy użyciu Visual C# funkcji](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)
-- [Przewodnik: Programowanie Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
+- [Argumenty nazwane i opcjonalne](../classes-and-structs/named-and-optional-arguments.md)
+- [dynamic](../../language-reference/keywords/dynamic.md)
+- [Używanie typu dynamicznego](../types/using-type-dynamic.md)
+- [Instrukcje: Używanie argumentów nazwanych i opcjonalnych w programowaniu pakietu Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Instrukcje: Dostęp do obiektów międzyoperacyjności pakietu C# Office za pomocą funkcji wizualnych](./how-to-access-office-onterop-objects.md)
+- [Przewodnik: Programowanie Office](./walkthrough-office-programming.md)

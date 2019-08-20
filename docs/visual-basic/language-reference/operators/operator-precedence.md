@@ -14,103 +14,103 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: 95505fd593881ff27418c69550952d072b4e3949
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c420a34a18f9e8fb55411a062e6a47ab38e98978
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628871"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611494"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Kolejność wykonywania działań (Visual Basic)
-Po wystąpieniu kilka operacji w wyrażeniach, każda część jest obliczane i rozwiązane w określonej kolejności, o nazwie *pierwszeństwo operatorów*.  
-  
-## <a name="precedence-rules"></a>Reguły pierwszeństwa  
- Gdy wyrażeń zawiera operatory z więcej niż jednej kategorii, ocenia się je zgodnie z następującymi zasadami:  
-  
-- Operatory arytmetyczne i łączenia mają kolejność pierwszeństwa, opisane w poniższej sekcji, a wszystkie mają wyższy priorytet niż porównania, logiczne i bitowe operatory.  
-  
-- Wszystkie operatory porównania mają równe pierwszeństwo, a wszystkie mają wyższy priorytet niż operatory logiczne i bitowe, ale niższy priorytet niż operatory arytmetyczne i łączenia.  
-  
-- Operatory logiczne i bitowe mają kolejność pierwszeństwa, opisane w poniższej sekcji, a wszystkie mają niższy priorytet niż operacje arytmetyczne, łączenie i operatory porównania.  
-  
-- Operatory o równe pierwszeństwo, są obliczane od lewej do prawej w kolejności, w jakiej występują w wyrażeniu.  
-  
-## <a name="precedence-order"></a>Kolejność pierwszeństwa  
- Operatory są obliczane w następującej kolejności:  
-  
-### <a name="await-operator"></a>Await — Operator  
- Operator await  
-  
-### <a name="arithmetic-and-concatenation-operators"></a>Operacje arytmetyczne i Concatenation — operatory  
- Potęgowania (`^`)  
-  
- Jednoargumentowy tożsamości i negacji (`+`, `–`)  
-  
- Mnożenie i dzielenie zmiennoprzecinkowe (`*`, `/`)  
-  
- Dzielenie liczby całkowitej (`\`)  
-  
- Arytmetycznego modulo (`Mod`)  
-  
- Dodawanie i odejmowanie (`+`, `–`)  
-  
- Łączenie ciągów (`&`)  
-  
- Przesunięcie bitu arytmetyczne (`<<`, `>>`)  
-  
-### <a name="comparison-operators"></a>Operatory porównania  
- Wszystkie operatory porównania (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`... `Is`)  
-  
-### <a name="logical-and-bitwise-operators"></a>Operatory logiczne i bitowe  
- Negacja (`Not`)  
-  
- Razem (`And`, `AndAlso`)  
-  
- Włączne rozłączenia (`Or`, `OrElse`)  
-  
- Wyłączne rozłączenia (`Xor`)  
-  
-### <a name="comments"></a>Komentarze  
- `=` Operator jest tylko operator porównania, nie operator przypisania.  
-  
- Operator konkatenacji ciągów (`&`) nie jest operator arytmetyczny, ale w pierwszeństwo jest zgrupowany z operatorów arytmetycznych.  
-  
- `Is` i `IsNot` operatory są operatory porównania odwołanie do obiektu. Nie porównują wartości dwóch obiektów; Sprawdź ich tylko w celu określenia, czy dwie zmienne do obiektu odnoszą się do tego samego wystąpienia obiektu.  
-  
-## <a name="associativity"></a>Łączność  
- Gdy operatory równy priorytet pojawiają się razem w wyrażeniu, na przykład mnożenia i dzielenia, kompilator ocenia każdej operacji, jak je napotka od lewej do prawej. Ilustruje to poniższy przykład.  
-  
-```  
-Dim n1 As Integer = 96 / 8 / 4  
-Dim n2 As Integer = (96 / 8) / 4  
-Dim n3 As Integer = 96 / (8 / 4)  
-```  
-  
- Pierwsze wyrażenie daje w wyniku dzielenia 96 / 8 (co powoduje 12), a następnie dzielenia 12 / 4, co skutkuje trzy. Ponieważ kompilator ocenia operacjami dotyczącymi `n1` od lewej do prawej, ocena jest taka sama podczas tej kolejności jest wyraźnie wskazane dla `n2`. Zarówno `n1` i `n2` ma trzy wyniku. Z kolei `n3` ma wynik 48, ponieważ nawiasy wymuszają kompilator, aby ocenić 8 / 4 pierwszy.  
-  
- Ze względu na to zachowanie operatorów są określane jako *łączność do lewej strony* w języku Visual Basic.  
-  
-## <a name="overriding-precedence-and-associativity"></a>Zastępowanie pierwszeństwo i łączność  
- Aby wymusić niektórych części wyrażenie ma zostać obliczone przed pozostałymi, można użyć nawiasów. To można zastąpić, zarówno w kolejność pierwszeństwa, jak i kojarzenie po lewej stronie. Visual Basic zawsze wykonuje operacje, które są ujęte w nawiasy przed osób spoza. Jednak w obrębie nawiasów utrzymuje zwykłych pierwszeństwo i łączność, chyba że używasz nawiasów w nawiasach. Ilustruje to poniższy przykład.  
-  
-```  
-Dim a, b, c, d, e, f, g As Double  
-a = 8.0  
-b = 3.0  
-c = 4.0  
-d = 2.0  
-e = 1.0  
-f = a - b + c / d * e  
-' The preceding line sets f to 7.0. Because of natural operator   
-' precedence and associativity, it is exactly equivalent to the   
-' following line.  
-f = (a - b) + ((c / d) * e)  
-' The following line overrides the natural operator precedence   
-' and left associativity.  
-g = (a - (b + c)) / (d * e)  
-' The preceding line sets g to 0.5.  
-```  
-  
+Gdy w wyrażeniu wystąpią kilka operacji, każda część jest oceniana i rozwiązywana w wstępnie określonej kolejności o nazwie *pierwszeństwo operatorów*.
+
+## <a name="precedence-rules"></a>Reguły pierwszeństwa
+ Gdy wyrażenia zawierają operatory z więcej niż jednej kategorii, są oceniane zgodnie z następującymi regułami:
+
+- Operatory arytmetyczne i złączne mają kolejność pierwszeństwa opisaną w poniższej sekcji, a wszystkie mają wyższy priorytet niż operatory porównania, logicznego i bitowego.
+
+- Wszystkie operatory porównania mają równy priorytet, a wszystkie mają wyższy priorytet niż operatory logiczne i bitowe, ale mają niższy priorytet niż operatory arytmetyczne i łączenia.
+
+- Operatory logiczne i bitowe mają kolejność pierwszeństwa opisaną w poniższej sekcji, a wszystkie mają niższy priorytet niż operatory arytmetyczne, łączenia i porównywania.
+
+- Operatory o równym priorytecie są oceniane od lewej do prawej w kolejności, w jakiej występują w wyrażeniu.
+
+## <a name="precedence-order"></a>Kolejność pierwszeństwa
+ Operatory są oceniane w następującej kolejności:
+
+### <a name="await-operator"></a>Await — Operator
+ Kart
+
+### <a name="arithmetic-and-concatenation-operators"></a>Operatory arytmetyczne i łączenia
+ Potęgowanie (`^`)
+
+ Jednoargumentowa tożsamość i Negacja `–`(`+`,)
+
+ Mnożenie i dzielenie zmiennoprzecinkowe (`*`,) `/`
+
+ Dzielenie liczb całkowitych (`\`)
+
+ Arytmetyka modulo (`Mod`)
+
+ Dodawanie i odejmowanie (`+`,) `–`
+
+ Łączenie ciągów (`&`)
+
+ Przesunięcia bitów arytmetycznych `>>`(`<<`,)
+
+### <a name="comparison-operators"></a>Operatory porównania
+ Wszystkie operatory porównania (`=` `<>` `<`, `<=` ,`TypeOf`,,,,,,,... `>` `>=` `Is` `IsNot` `Like` `Is`)
+
+### <a name="logical-and-bitwise-operators"></a>Operatory logiczne i bitowe
+ Negacja (`Not`)
+
+ Połączenia (`And`, `AndAlso`)
+
+ Rozłączenie włączne `OrElse`(`Or`,)
+
+ Rozłączenie wyłączne (`Xor`)
+
+### <a name="comments"></a>Komentarze
+ `=` Operator jest tylko operatorem porównania równości, a nie operatorem przypisania.
+
+ Operator łączenia ciągów (`&`) nie jest operatorem arytmetycznym, ale z pierwszeństwem jest zgrupowany z operatorami arytmetycznymi.
+
+ Operatory i są operatorami porównania odwołań do `IsNot` obiektów. `Is` Nie porównują wartości dwóch obiektów; sprawdzają tylko, czy dwie zmienne obiektu odwołują się do tego samego wystąpienia obiektu.
+
+## <a name="associativity"></a>Łączność
+ Gdy operatory równego pierwszeństwa pojawiają się razem w wyrażeniu, na przykład mnożenia i dzielenia, kompilator oblicza każdą operację, gdy napotka ją od lewej do prawej. Ilustruje to poniższy przykład.
+
+```vb
+Dim n1 As Integer = 96 / 8 / 4
+Dim n2 As Integer = (96 / 8) / 4
+Dim n3 As Integer = 96 / (8 / 4)
+```
+
+ Pierwsze wyrażenie szacuje podział 96/8 (wyniki w 12), a następnie dział 12/4, który powoduje trzy. Ponieważ kompilator ocenia operacje `n1` od lewej do prawej, ocena jest taka sama, gdy ta kolejność jest jawnie wskazywana dla. `n2` Oba `n1` i`n2` mają wynik trzy. Z drugiej strony `n3` , ma wynik 48, ponieważ nawiasy wymuszają kompilator, aby najpierw oszacować 8/4.
+
+ Ze względu na to zachowanie operatory są określane jako pozostawiły skojarzenie w Visual Basic.
+
+## <a name="overriding-precedence-and-associativity"></a>Zastępowanie pierwszeństwa i łączność
+ Można użyć nawiasów, aby wymusić ocenę niektórych części wyrażenia przed innymi. Może to przesłaniać kolejność pierwszeństwa i lewo łączność. Visual Basic zawsze wykonuje operacje, które są ujęte w nawiasy przed tymi zewnętrznymi. Jednakże w obrębie nawiasów zachowuje zwykłe pierwszeństwo i łączność, chyba że w nawiasach są używane nawiasy. Ilustruje to poniższy przykład.
+
+```vb
+Dim a, b, c, d, e, f, g As Double
+a = 8.0
+b = 3.0
+c = 4.0
+d = 2.0
+e = 1.0
+f = a - b + c / d * e
+' The preceding line sets f to 7.0. Because of natural operator
+' precedence and associativity, it is exactly equivalent to the
+' following line.
+f = (a - b) + ((c / d) * e)
+' The following line overrides the natural operator precedence
+' and left associativity.
+g = (a - (b + c)) / (d * e)
+' The preceding line sets g to 0.5.
+```
+
 ## <a name="see-also"></a>Zobacz także
 
 - [=, operator](../../../visual-basic/language-reference/operators/assignment-operator.md)

@@ -2,12 +2,12 @@
 title: 'Instrukcje: Filtruj dla elementu opcjonalnego (C#)'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 9b2ee9bf0cbed5504b96937fb37cf98728a15335
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 403c331787df7eb538302df2ecc332a663e68d71
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710118"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593798"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>Instrukcje: Filtruj dla elementu opcjonalnego (C#)
 Czasami chcesz odfiltrować element, chociaż nie masz pewności, że istnieje w dokumencie XML. Wyszukiwanie powinno zostać wykonane, aby Jeśli określony element nie ma elementu podrzędnego, nie zostanie wyzwolony wyjątek odwołania o wartości null przez filtrowanie dla niego. W poniższym przykładzie `Child5` element nie `Type` ma elementu podrzędnego, ale zapytanie jest nadal wykonywane poprawnie.  
@@ -100,5 +100,5 @@ Child Four Text
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [Standardowe operatory zapytań — OmówienieC#()](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Operacje projekcjiC#()](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+- [Standardowe operatory zapytań — OmówienieC#()](./standard-query-operators-overview.md)
+- [Operacje projekcjiC#()](./projection-operations.md)

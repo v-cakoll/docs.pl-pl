@@ -1,47 +1,47 @@
 ---
-title: Elementy członkowskie — C# przewodnik programowania
+title: Członkowie — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: affe2752712bfd40516861abf84bdee11528168c
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 64df7d6be09ae670307fa1cf1d66dfdf8e78a7a6
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609489"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596416"
 ---
 # <a name="members-c-programming-guide"></a>Członkowie (Przewodnik programowania w języku C#)
 
-Klasy i struktury mają elementów członkowskich, które reprezentują ich danych i działania. Elementy członkowskie klasy obejmują wszystkie elementy członkowskie zadeklarowana w klasie, oraz wszystkie elementy członkowskie (z wyjątkiem konstruktorów i finalizatory) zadeklarowane dla wszystkich klas w hierarchii dziedziczenia. Prywatne składowe w klasach bazowych są dziedziczone, ale nie są dostępne z klas pochodnych.  
+Klasy i struktury mają składowe reprezentujące ich dane i zachowanie. Elementy członkowskie klasy obejmują wszystkie elementy członkowskie zadeklarowane w klasie oraz wszystkie elementy członkowskie (z wyjątkiem konstruktorów i finalizatorów) zadeklarowane we wszystkich klasach w hierarchii dziedziczenia. Prywatne składowe w klasach bazowych są dziedziczone, ale nie są dostępne z klas pochodnych.  
   
- W poniższej tabeli wymieniono rodzaje elementów członkowskich, który klasa lub struktura może zawierać:  
+ Poniższa tabela zawiera listę rodzajów elementów członkowskich, które może zawierać Klasa lub struktura:  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|[Pola](../../../csharp/programming-guide/classes-and-structs/fields.md)|Pola są zmiennych zadeklarowanych w zakresie klasy. Pole może być wbudowanego typu liczbowego lub wystąpienie innej klasy. Na przykład klasa kalendarza mogą mieć pola, które zawiera bieżącą datę.|  
-|[Stałe](../../../csharp/programming-guide/classes-and-structs/constants.md)|Stałe są pola, którego wartość jest ustawiana na czas kompilacji i nie można zmienić.|  
-|[Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)|Właściwości są metody klasy, które są dostępne, tak jakby pól dla tej klasy. Właściwość może zapewnić ochronę pola klasy uniemożliwić zmianę bez wiedzy obiektu.|  
-|[Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)|Metody zdefiniowania akcji, które można wykonywać klasy. Metody może przyjąć parametry, które zawierają dane wejściowe i może zwrócić danych wyjściowych za pomocą parametrów. Metody może również zwracać wartość bezpośrednio, bez korzystania z parametru.|  
-|[Zdarzenia](../../../csharp/programming-guide/events/index.md)|Zdarzenia udostępniają powiadomienia dotyczące zdarzenia, takie jak kliknięcia przycisków lub pomyślne zakończenie metody, do innych obiektów. Zdarzenia są zdefiniowane i wyzwalane za pomocą obiektów delegowanych.|  
-|[Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|Przeciążone operatory są traktowane jako elementy członkowskie typu. Gdy operator jest przeciążenia, zdefiniuj jako publicznej metody statycznej w typie. Aby uzyskać więcej informacji, zobacz [przeciążania operatora](../../../csharp/language-reference/operators/operator-overloading.md).|  
-|[Indeksatory](../../../csharp/programming-guide/indexers/index.md)|Indeksatory włączyć obiekt zostać pomyślnie zindeksowane w sposób podobny do tablic.|  
-|[Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)|Konstruktory są metodami, które są wywoływane podczas tworzenia obiektu. Są często używane do zainicjowania dane obiektu.|  
-|[Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)|Finalizatory są bardzo rzadko używane w języku C#. Są one metody, które są wywoływane przez silnika wykonania środowiska uruchomieniowego, gdy obiekt zostanie usunięty z pamięci. Zwykle służą one do upewnij się, wszystkie zasoby, które muszą zostać zwolnione, są odpowiednio obsługiwany.|  
-|[Zagnieżdżone typy](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|Zagnieżdżone typy są typy zadeklarowane wewnątrz innego typu. Zagnieżdżone typy są często używane do opisywania obiektów, które są używane tylko przez typy zawierające je.|  
+|[Pola](./fields.md)|Pola są zmiennymi zadeklarowanymi w zakresie klasy. Pole może być wbudowanym typem liczbowym lub wystąpieniem innej klasy. Na przykład Klasa kalendarza może mieć pole zawierające bieżącą datę.|  
+|[Stałe](./constants.md)|Stałe są polami, których wartość jest ustawiona w czasie kompilacji i nie można jej zmienić.|  
+|[Właściwości](./properties.md)|Właściwości są metodami klasy, które są dostępne, tak jakby były polami w tej klasie. Właściwość może zapewnić ochronę pola klasy, aby zachować jego zmianę bez znajomości obiektu.|  
+|[Metody](./methods.md)|Metody definiują akcje, które może wykonać Klasa. Metody mogą przyjmować parametry, które zapewniają dane wejściowe i mogą zwracać dane wyjściowe za poorednictwem parametrów. Metody mogą również zwracać wartość bezpośrednio, bez użycia parametru.|  
+|[Zdarzenia](../events/index.md)|Zdarzenia udostępniają powiadomienia o wystąpieniach, takie jak kliknięcia przycisków lub pomyślne zakończenie metody, do innych obiektów. Zdarzenia są definiowane i wyzwalane za pomocą delegatów.|  
+|[Operatory](../statements-expressions-operators/operators.md)|Przeciążone operatory są uznawane za składowe typu. Po przeciążeniu operatora należy go zdefiniować jako publiczną metodę statyczną w typie. Aby uzyskać więcej informacji, zobacz przeciążanie [operatora](../../language-reference/operators/operator-overloading.md).|  
+|[Indeksatory](../indexers/index.md)|Indeksatory umożliwiają indeksowanie obiektów w sposób podobny do tablic.|  
+|[Konstruktory](./constructors.md)|Konstruktory to metody, które są wywoływane, gdy obiekt jest tworzony po raz pierwszy. Są one często używane do inicjowania danych obiektu.|  
+|[Finalizatory](./destructors.md)|Finalizatory są używane bardzo rzadko w C#programie. Są to metody, które są wywoływane przez aparat wykonywania środowiska uruchomieniowego, gdy obiekt zostanie usunięty z pamięci. Są one zwykle używane do upewnienia się, że wszystkie zasoby, które muszą zostać wydane, są odpowiednio obsługiwane.|  
+|[Zagnieżdżone typy](./nested-types.md)|Typy zagnieżdżone są typami zadeklarowanymi w innym typie. Typy zagnieżdżone są często używane do opisywania obiektów, które są używane tylko przez typy, które je zawierają.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)
-- [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)
-- [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)
-- [Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)
-- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [Pola](../../../csharp/programming-guide/classes-and-structs/fields.md)
-- [Indeksatory](../../../csharp/programming-guide/indexers/index.md)
-- [Zdarzenia](../../../csharp/programming-guide/events/index.md)
-- [Zagnieżdżone typy](../../../csharp/programming-guide/classes-and-structs/nested-types.md)
-- [Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Klasy](./classes.md)
+- [Metody](./methods.md)
+- [Konstruktory](./constructors.md)
+- [Finalizatory](./destructors.md)
+- [Właściwości](./properties.md)
+- [Pola](./fields.md)
+- [Indeksatory](../indexers/index.md)
+- [Zdarzenia](../events/index.md)
+- [Zagnieżdżone typy](./nested-types.md)
+- [Operatory](../statements-expressions-operators/operators.md)

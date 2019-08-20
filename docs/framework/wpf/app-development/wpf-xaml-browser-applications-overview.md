@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: ebaa5c2f3a2e1770a50a401fb6771d8c5ad3ba63
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972230"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611474"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Przegląd Aplikacje przeglądarek WPF XAML
 <a name="introduction"></a>
@@ -52,7 +52,7 @@ ms.locfileid: "68972230"
 |Manifest aplikacji (manifest)|Zawiera metadane skojarzone z aplikacją i ma rozszerzenie. manifest.|  
 |Manifest wdrożenia (. XBAP)|Ten plik zawiera informacje używane w technologii ClickOnce do wdrażania aplikacji i ma rozszerzenie. XBAP.|  
   
- Wdrażasz aplikacje XBAP na serwerze sieci Web, na przykład [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] lub w nowszych wersjach. Nie trzeba instalować .NET Framework na serwerze sieci Web, ale trzeba zarejestrować [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] typy MIME (Multipurpose Internet Mail Extensions) i rozszerzenia nazw plików. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usług iis 5,0 i iis 6,0 do wdrażania aplikacji WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ Wdrażasz aplikacje XBAP na serwerze sieci Web, na przykład Microsoft Internet Information Services (IIS) w wersji 5,0 lub nowszej. Nie trzeba instalować .NET Framework na serwerze sieci Web, ale trzeba zarejestrować [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] typy MIME (Multipurpose Internet Mail Extensions) i rozszerzenia nazw plików. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usług iis 5,0 i iis 6,0 do wdrażania aplikacji WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
   
  Aby przygotować serwer XBAP do wdrożenia, skopiuj plik. exe i powiązane z nim manifesty do serwera sieci Web. Utwórz stronę HTML zawierającą hiperłącze, aby otworzyć manifest wdrożenia, który jest plikiem z rozszerzeniem. XBAP. Gdy użytkownik kliknie link do pliku. XBAP, ClickOnce automatycznie obsługuje Mechanics pobierania i uruchamiania aplikacji. Poniższy przykładowy kod pokazuje stronę HTML zawierającą hiperłącze wskazujące na aplikację XBAP.  
   

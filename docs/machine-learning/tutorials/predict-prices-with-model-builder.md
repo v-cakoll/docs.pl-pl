@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b4a08a9866bbc8816b57c95bdb22766bd1b07fdc
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331696"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611445"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Przewidywanie cen przy użyciu regresji z konstruktorem modelu
 
@@ -202,7 +202,6 @@ W niniejszym samouczku zawarto informacje na temat wykonywania następujących c
 Aby dowiedzieć się więcej na temat tematów wymienionych w tym samouczku, odwiedź następujące zasoby:
 
 - [Scenariusze konstruktora modelu](../automate-training-with-model-builder.md#scenarios)
-- [Formaty danych konstruktora modelu](../automate-training-with-model-builder.md#data-formats)
 - [Regression](../resources/glossary.md#regression)
 - [Metryki modelu regresji](../resources/metrics.md#metrics-for-regression)
 - [Zestaw danych podróży NYC TLC](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)

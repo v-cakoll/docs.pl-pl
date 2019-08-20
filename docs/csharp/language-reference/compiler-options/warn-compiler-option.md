@@ -1,5 +1,5 @@
 ---
-title: -warn (opcje kompilatora C#)
+title: -warn (C# opcje kompilatora)
 ms.date: 07/20/2015
 f1_keywords:
 - /warn
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 17dd992edbec5ce444b53ed42b2b486282618672
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b05e944a37e16fc1fcc422271be00c09a271a33
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662312"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602407"
 ---
-# <a name="-warn-c-compiler-options"></a>-warn (opcje kompilatora C#)
-**-Warn** opcja określa poziom ostrzeżeń dla kompilatora do wyświetlenia.  
+# <a name="-warn-c-compiler-options"></a>-warn (C# opcje kompilatora)
+Opcja **-warn** określa poziom ostrzeżeń dla kompilatora, który ma być wyświetlany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,35 +30,35 @@ ms.locfileid: "61662312"
   
 ## <a name="arguments"></a>Argumenty  
  `option`  
- Poziom ostrzeżeń, które mogą być wyświetlane dla kompilacji: Im niższy numer, Pokaż tylko ostrzeżenia o wysokiej ważności; tymi o wyższych numerach Pokaż więcej ostrzeżeń. Prawidłowe wartości to 0-4:  
+ Poziom ostrzeżeń, który ma być wyświetlany dla kompilacji: Niższe numery pokazują tylko ostrzeżenia o wysokiej ważności; wyższe liczby zawierają więcej ostrzeżeń. Prawidłowe wartości to 0-4:  
   
 |Poziom ostrzeżeń|Znaczenie|  
 |-------------------|-------------|  
-|0|Wyłącza emisji wszystkie komunikaty ostrzegawcze.|  
-|1|Wyświetla poważne ostrzeżenia.|  
-|2|Wyświetla ostrzeżenia poziomu 1 oraz pewnym ostrzeżenia mniej poważne, takie jak ostrzeżenia o ukrywaniu składowych klasy.|  
-|3|Wyświetla poziom ostrzeżeń 2 plus niektórych, ostrzeżenia mniej poważne, takie jak ostrzeżenia na temat wyrażeń, które zawsze przyjmowało `true` lub `false`.|  
-|4 (ustawienie domyślne)|Wyświetla wszystkie poziom ostrzeżeń 3. oraz ostrzeżenia informacyjne.|  
+|0|Wyłącza emisję wszystkich komunikatów ostrzegawczych.|  
+|1|Wyświetla poważne komunikaty ostrzegawcze.|  
+|2|Wyświetla ostrzeżenia poziomu 1 i pewne mniej surowe ostrzeżenia, takie jak ostrzeżenia dotyczące ukrywania elementów członkowskich klasy.|  
+|3|Wyświetla ostrzeżenia poziomu 2 oraz pewne mniej surowe ostrzeżenia, takie jak ostrzeżenia dotyczące wyrażeń, które zawsze są oceniane do `true` lub `false`.|  
+|4 (wartość domyślna)|Wyświetla wszystkie ostrzeżenia poziomu 3 i ostrzeżenia informacyjne.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać informacje na temat błędu lub ostrzeżenia, możesz wyszukać kod błędu w indeksie Pomocy. Aby uzyskać inny sposób uzyskać informacje na temat błędu lub ostrzeżenia, zobacz [błędy kompilatora C#](../../../csharp/language-reference/compiler-messages/index.md).  
+ Aby uzyskać informacje o błędzie lub ostrzeżeniu, można wyszukać kod błędu w indeksie pomocy. Aby uzyskać informacje dotyczące błędu lub ostrzeżenia, zobacz [ C# błędy kompilatora](../compiler-messages/index.md).  
   
- Użyj [- warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) na traktowanie wszystkich ostrzeżeń jako błędy. Użyj [- nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) można wyłączyć niektórych ostrzeżeń.  
+ Użyj opcji [-warnaserror —](./warnaserror-compiler-option.md) , aby traktować wszystkie ostrzeżenia jako błędy. Użyj [-nowarn](./nowarn-compiler-option.md) , aby wyłączyć niektóre ostrzeżenia.  
   
- **-w** jest krótka forma **-warn**.  
+ **-w** jest krótką formą **-warn**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1. Otwórz projekt **właściwości** strony.  
+1. Otwórz stronę **Właściwości** projektu.  
   
-2. Kliknij przycisk **kompilacji** stronę właściwości.  
+2. Kliknij stronę właściwości **kompilacja** .  
   
-3. Modyfikowanie **poziom ostrzeżeń** właściwości.  
+3. Zmodyfikuj właściwość **poziom ostrzeżeń** .  
   
- Aby uzyskać informacje na temat sposobu programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.  
+ Aby uzyskać informacje na temat sposobu, w jaki można programowo ustawić <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>tę opcję kompilatora, zobacz.  
   
 ## <a name="example"></a>Przykład  
- Skompilować `in.cs` i pozwolić kompilatorowi na tylko wyświetlania ostrzeżenia poziomu 1:  
+ Kompiluj `in.cs` i czy kompilator wyświetla tylko ostrzeżenia poziomu 1:  
   
 ```console  
 csc -warn:1 in.cs  
@@ -66,5 +66,5 @@ csc -warn:1 in.cs
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opcje kompilatora C#](./index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

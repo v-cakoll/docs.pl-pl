@@ -2,12 +2,12 @@
 title: Zachowywanie białych znaków podczas ładowania lub analizowania kodu XML
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: 263121468b3010884c14c9e593a857d01dc253ef
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: d015c21813df2224356bb49212fe282fa5372d03
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868816"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591550"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Zachowywanie białych znaków podczas ładowania lub analizowania kodu XML
 W tym temacie opisano sposób sterowania zachowaniem [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]białych znaków.  
@@ -16,7 +16,7 @@ W tym temacie opisano sposób sterowania zachowaniem [!INCLUDE[sqltecxlinq](~/in
   
  Inny typowy scenariusz polega na odczytaniu i zmodyfikowaniu kodu XML, który został już celowo wcięty. W żaden sposób nie trzeba zmieniać tego wcięcia. W [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]tym celu należy zachować biały znak podczas ładowania lub analizowania kodu XML i wyłączyć formatowanie podczas serializacji XML.  
   
- W tym temacie opisano zachowanie białych metod, które wypełniają drzewa XML. Aby uzyskać informacje o kontrolowaniu białego miejsca podczas serializacji drzew XML, zobacz [zachowywanie białych znaków podczas serializacji](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).  
+ W tym temacie opisano zachowanie białych metod, które wypełniają drzewa XML. Aby uzyskać informacje o kontrolowaniu białego miejsca podczas serializacji drzew XML, zobacz [zachowywanie białych znaków podczas serializacji](./preserving-white-space-while-serializing.md).  
   
 ## <a name="behavior-of-methods-that-populate-xml-trees"></a>Zachowanie metod, które wypełniają drzewa XML  
  Poniższe metody w <xref:System.Xml.Linq.XElement> klasach i <xref:System.Xml.Linq.XDocument> wypełniają drzewo XML. Można wypełnić drzewo XML z pliku, a <xref:System.IO.TextReader> <xref:System.Xml.XmlReader>, a lub ciągu:  

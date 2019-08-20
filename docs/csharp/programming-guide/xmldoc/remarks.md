@@ -1,5 +1,5 @@
 ---
-title: <remarks> - C# Przewodnik programowania
+title: <remarks> — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: b2e91b868c35773033418c796b7c43b08e87a28b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 822ca8feafe48402f8217c10ef37fcdb1576c27a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675874"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587751"
 ---
-# <a name="remarks-c-programming-guide"></a>\<Remarks > (C# Programming Guide)
+# <a name="remarks-c-programming-guide"></a>\<uwagi > (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -28,14 +28,14 @@ ms.locfileid: "61675874"
  Opis elementu członkowskiego.  
   
 ## <a name="remarks"></a>Uwagi  
- \<Uwagi > tag jest używany do dodawania informacji o typie, informacje uzupełniające określony za pomocą [ \<podsumowania >](../../../csharp/programming-guide/xmldoc/summary.md). Te informacje są wyświetlane w oknie przeglądarki obiektów.  
+ Tag uwagi > służy do dodawania informacji o typie, uzupełnienie informacji określonych za pomocą [ \<> podsumowania.](./summary.md) \< Te informacje są wyświetlane w oknie Przeglądarka obiektów.  
   
- Kompiluj przy użyciu [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) do Przetwarzaj komentarze dokumentacji do pliku.  
+ Kompiluj z [/doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideDocComments#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#9)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Zalecane tagi przeznaczone do komentarzy dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

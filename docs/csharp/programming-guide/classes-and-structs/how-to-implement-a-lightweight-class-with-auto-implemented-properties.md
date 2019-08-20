@@ -1,31 +1,31 @@
 ---
-title: 'Instrukcje: Implementowanie klasy Lightweight przy użyciu automatycznie implementowanych właściwości - C# przewodnik programowania'
+title: 'Instrukcje: Implementowanie klasy lekkiej z zaimplementowanymi właściwościami Przewodnik C# programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: f9884f353e58ff6119e3bc3b95aa55f0f60d0ad5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 4cbed8145487325d8b06882bbab843321a49d0d3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398495"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596905"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Instrukcje: Implementowanie klasy Lightweight przy użyciu automatycznie implementowanych właściwości (C# Programming Guide)
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Instrukcje: Implementowanie klasy lekkiej z zaimplementowanymi właściwościami (C# Przewodnik programowania)
 
-Ten przykład przedstawia sposób tworzenia niezmienne klasy lightweight, która służy tylko do hermetyzacji zbiór właściwości zaimplementowane automatycznie. Użyj ten rodzaj konstrukcji zamiast struktury, gdy należy użyć semantyki typu odwołania.
+Ten przykład przedstawia sposób tworzenia niezmiennej klasy lekkiej, która służy tylko do hermetyzacji zestawu właściwości, które są implementowane. Użyj tego rodzaju konstrukcji zamiast struktury, gdy musisz użyć semantyki typu odwołania.
 
-Właściwość niezmienne może wykonać na dwa sposoby:
-- Można zadeklarować [ustaw](../../../csharp/language-reference/keywords/set.md) dostępu jako [prywatnej](../../../csharp/language-reference/keywords/private.md).  Właściwość jest tylko do ustawienia w ramach typu, ale jest niezmienny do klientów.
+Można wprowadzić niemodyfikowalną właściwość na dwa sposoby:
+- Można zadeklarować metodę dostępu [Set](../../language-reference/keywords/set.md) jako [prywatną](../../language-reference/keywords/private.md).  Właściwość jest tylko settable w obrębie typu, ale jest niezmienna dla odbiorców.
 
-  Kiedy Deklarujesz prywatnej `set` dostępu, nie można używać inicjatora obiektu można zainicjować właściwości. Należy użyć konstruktora lub metody fabryki.
-- Można zadeklarować tylko [uzyskać](../../../csharp/language-reference/keywords/get.md) dostępu, co sprawia, że właściwość niezmienne wszędzie, z wyjątkiem w Konstruktorze typu.
+  W przypadku deklarowania prywatnej `set` metody dostępu nie można użyć inicjatora obiektów do zainicjowania właściwości. Musisz użyć konstruktora lub metody fabryki.
+- Można zadeklarować tylko metodę dostępu [Get](../../language-reference/keywords/get.md) , która sprawia, że właściwość jest niezmienna wszędzie z wyjątkiem konstruktora typu.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia dwa sposoby zaimplementowania niezmienialne klasy, która ma właściwości zaimplementowane automatycznie. Każdy sposób deklaruje jedna z właściwości za pomocą prywatnej `set` i jedna z właściwości z `get` tylko.  Najwyższej klasy używa konstruktora tylko do zainicjowania właściwości i klasy sekundę używa metody statyczne fabryka, która wywołuje konstruktora.
+Poniższy przykład przedstawia dwa sposoby implementacji niezmiennej klasy, która ma właściwości, które są implementowane. Każdy ze sposobów deklaruje jedną z właściwości z prywatną `set` i jedną z właściwości `get` tylko z.  Pierwsza klasa używa konstruktora tylko w celu zainicjowania właściwości, a druga Klasa używa metody fabryki statycznej, która wywołuje konstruktora.
 
 ```csharp
 // This class is immutable. After an object is created,
@@ -116,10 +116,10 @@ public class Program
 */
 ```
 
-Kompilator tworzy pola zapasowego dla każdej właściwości zaimplementowane automatycznie. Pola nie są dostępne bezpośrednio z kodu źródłowego.
+Kompilator tworzy pola kopii zapasowej dla każdej automatycznie zaimplementowanej właściwości. Pola są niedostępne bezpośrednio z kodu źródłowego.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [Inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Właściwości](./properties.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [Inicjatory obiektów i kolekcji](./object-and-collection-initializers.md)

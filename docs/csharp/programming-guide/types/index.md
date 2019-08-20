@@ -1,5 +1,5 @@
 ---
-title: Typy — C# przewodnik programowania
+title: Typy — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,95 +12,95 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 65a7fbb2ef8fd24e80b4ccf979a7f3fc7cf19934
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 422613a9016efb55c299f24c50cd2eec6c2c1069
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423642"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588402"
 ---
 # <a name="types-c-programming-guide"></a>Typy (Przewodnik programowania w języku C#)
 
 ## <a name="types-variables-and-values"></a>Typy, zmienne i wartości
 
-C# jest językiem jednoznacznym. Każda zmienna i stała ma typ, podobnie jak każde wyrażenie, którego wynikiem jest wartość. Każdy podpis metody Określa typ dla każdego parametru wejściowego oraz wartość zwracaną. Biblioteka klas .NET definiuje zestaw wbudowanych typów liczbowych, jak również bardziej złożonych typów, które reprezentują szeroką gamę konstrukcji logicznych, takich jak system plików, połączenia sieciowe, kolekcje i tablice obiektów i daty. Typowy program C# korzysta z typów z biblioteki klas, a także typy zdefiniowane przez użytkownika, które modelują koncepcje, które są specyficzne dla programu dziedziny problemu.
+C#jest językiem o jednoznacznie określonym typie. Każda zmienna i stała ma typ, tak jak każde wyrażenie, którego wynikiem jest wartość. Każdy podpis metody Określa typ dla każdego parametru wejściowego i dla zwracanej wartości. Biblioteka klas .NET definiuje zestaw wbudowanych typów liczbowych, a także bardziej złożonych typów, które reprezentują szeroką gamę konstrukcji logicznych, takich jak system plików, połączenia sieciowe, kolekcje i tablice obiektów oraz daty. Typowy C# program używa typów z biblioteki klas, a także typów zdefiniowanych przez użytkownika, które umożliwiają modelowanie koncepcji specyficznych dla domeny problemu programu.
 
-Informacje przechowywane w typie mogą być następujące:
+Informacje przechowywane w typie mogą obejmować następujące elementy:
 
-- Wymagającego zmiennej typu miejsca do magazynowania.
+- Miejsce do magazynowania, którego wymagana jest zmienna typu.
 
 - Wartości maksymalne i minimalne, które może reprezentować.
 
-- Członkowie (metody, pola, zdarzenia i tak dalej), które zawiera.
+- Elementy członkowskie (metody, pola, zdarzenia itd.), które zawiera.
 
-- Typ podstawowy, który dziedziczy.
+- Typ podstawowy, z którego dziedziczy.
 
-- Lokalizacja, w której w czasie wykonywania, w którym będzie można przydzielić pamięci dla zmiennych.
+- Lokalizacja, w której zostanie przypisana pamięć dla zmiennych w czasie wykonywania.
 
 - Rodzaje operacji, które są dozwolone.
 
-Kompilator używa informacji o typie, aby upewnić się, że wszystkie operacje, które są wykonywane w kodzie są *bezpieczny*. Na przykład, jeśli zadeklarować zmienną typu [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md), kompilator umożliwi dodatkowo użycia zmiennej operacjach dodawania i odejmowania. Jeśli próbujesz wykonać te same operacje na zmiennej typu [bool](../../../csharp/language-reference/keywords/bool.md), kompilator generuje błąd, jak pokazano w poniższym przykładzie:
+Kompilator używa informacji o typie, aby upewnić się, że wszystkie operacje wykonywane w kodzie są *bezpieczne*. Na przykład jeśli deklarujesz zmienną typu [int](../../language-reference/builtin-types/integral-numeric-types.md), kompilator pozwala używać zmiennej w operacjach dodawania i odejmowania. Jeśli spróbujesz wykonać te same operacje na zmiennej typu [bool](../../language-reference/keywords/bool.md), kompilator generuje błąd, jak pokazano w następującym przykładzie:
 
 [!code-csharp[csProgGuideTypes#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#42)]
 
 > [!NOTE]
-> Programiści C i C++, zwróć uwagę, że w języku C# [bool](../../../csharp/language-reference/keywords/bool.md) nie jest konwertowany na [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md).
+> C i C++ deweloperzy, Zauważ, że C#w, [bool](../../language-reference/keywords/bool.md) nie jest konwertowany na [int](../../language-reference/builtin-types/integral-numeric-types.md).
 
-Kompilator osadza informacje o typie pliku wykonywalnego jako metadane. Środowisko uruchomieniowe języka wspólnego (CLR) używa tych metadanych w czasie wykonywania do dalszego gwarantuje bezpieczeństwo typów, gdy przydziela i przejmuje pamięć.
+Kompilator osadza informacje o typie pliku wykonywalnego jako metadane. Środowisko uruchomieniowe języka wspólnego (CLR) używa tych metadanych w czasie wykonywania, aby zapewnić bezpieczeństwo typów podczas przydzielania i odzyskania pamięci.
 
 ### <a name="specifying-types-in-variable-declarations"></a>Określanie typów w deklaracjach zmiennych
 
-Kiedy Deklarujesz zmienną lub stałą w programie, należy określić jej typ lub użyć [var](../../../csharp/language-reference/keywords/var.md) — słowo kluczowe, aby umożliwić kompilatorowi wydedukować typ. Poniższy przykład pokazuje kilka deklaracji zmiennych, korzystających z wbudowanych typów liczbowych i złożonych typów zdefiniowanych przez użytkownika:
+W przypadku deklarowania zmiennej lub stałej w programie należy określić jej typ lub użyć słowa kluczowego [var](../../language-reference/keywords/var.md) , aby zezwolić kompilatorowi na wnioskowanie typu. W poniższym przykładzie przedstawiono niektóre deklaracje zmiennych, które używają wbudowanych typów liczbowych i złożonych typów zdefiniowanych przez użytkownika:
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
-Typy parametrów metody i wartości zwracane są określone w oznaczeniu metody. Następująca sygnatura przedstawia metodę, która wymaga [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) jako argument wejściowy i zwraca ciąg:
+Typy parametrów metod i zwracanych wartości są określone w podpisie metody. Następujący podpis przedstawia metodę, która wymaga [int](../../language-reference/builtin-types/integral-numeric-types.md) jako argumentu wejściowego i zwraca ciąg:
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 
-Po zadeklarowaniu zmiennej nie może być ponownie zadeklarowany z nowym typem i nie można przypisać wartość, która nie jest zgodna z deklarowanym typem. Na przykład nie można zadeklarować [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) a następnie przypisać jej wartości logicznej [true](../../../csharp/language-reference/keywords/true-literal.md). Jednakże wartości można przekonwertować do innych typów, na przykład gdy są one przypisane do nowych zmiennych lub przekazywane jako argumenty tej metody. A *konwersja typu* która nie powoduje utraty danych jest realizowane automatycznie przez kompilator. Wymaga konwersji, która może spowodować utratę danych *rzutowania* w kodzie źródłowym.
+Po zadeklarowaniu zmiennej nie można jej ponownie zadeklarować przy użyciu nowego typu i nie można przypisać do niej wartości, która nie jest zgodna z zadeklarowanym typem. Na przykład nie można zadeklarować elementu [int](../../language-reference/builtin-types/integral-numeric-types.md) , a następnie przypisać go do wartości logicznej [true](../../language-reference/keywords/true-literal.md). Jednak wartości mogą być konwertowane na inne typy, na przykład wtedy, gdy są przypisane do nowych zmiennych lub przekazane jako argumenty metody. *Konwersja typu* , która nie powoduje utraty danych, jest wykonywana automatycznie przez kompilator. Konwersja, która może spowodować utratę danych, wymaga *rzutowania* w kodzie źródłowym.
 
-Aby uzyskać więcej informacji, zobacz [Rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md).
+Aby uzyskać więcej informacji, zobacz [Rzutowanie i konwersje typów](./casting-and-type-conversions.md).
 
 ## <a name="built-in-types"></a>Typy wbudowane
 
-C# zawiera standardowy zestaw wbudowanych typów liczbowych do reprezentowania liczb całkowitych, pływające wartości punktów, wyrażenia logiczne, znaki tekstowe, wartości dziesiętne i innych typów danych. Dostępne są również wbudowane `string` i `object` typów. Są one dostępne do użycia w dowolnym programie C#. Aby uzyskać więcej informacji na temat wbudowanych typów, zobacz [tabele odwołań dla typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md).
+C#zawiera standardowy zestaw wbudowanych typów liczbowych reprezentujących liczby całkowite, wartości zmiennoprzecinkowe, wyrażenia logiczne, znaki tekstowe, wartości dziesiętne i inne typy danych. Istnieją także wbudowane `string` i `object` typy. Są one dostępne do użycia w dowolnym C# programie. Aby uzyskać więcej informacji na temat typów wbudowanych, zobacz [tabele odwołań dla typów wbudowanych](../../language-reference/keywords/built-in-types-table.md).
 
-## <a name="custom-types"></a>Niestandardowe typy
+## <a name="custom-types"></a>Typy niestandardowe
 
-Możesz użyć [struktury](../../../csharp/language-reference/keywords/struct.md), [klasy](../../../csharp/language-reference/keywords/class.md), [interfejsu](../../../csharp/language-reference/keywords/interface.md), i [wyliczenia](../../../csharp/language-reference/keywords/enum.md) konstrukcji do tworzenia własnych typach niestandardowych. Sama biblioteka klas .NET jest kolekcją typów niestandardowych dostarczonych przez firmę Microsoft, którego można używać we własnych aplikacjach. Domyślnie najczęściej używane typy w bibliotece klas są dostępne w dowolnym programie C#. Inne stają się dostępne tylko wtedy, gdy użytkownik jawnie doda odwołanie do zestawu, w której są zdefiniowane. Gdy kompilator będzie zawierać odwołanie do zestawu, można zadeklarować zmienne (i stałe) typy zadeklarowane w tym Zgromadzeniu w kodzie źródłowym. Aby uzyskać więcej informacji, zobacz [Biblioteka klas programu .NET](../../../standard/class-library-overview.md).
+Do tworzenia własnych typów niestandardowych służy konstrukcja [struct](../../language-reference/keywords/struct.md), [Class](../../language-reference/keywords/class.md), [Interface](../../language-reference/keywords/interface.md)i [enum](../../language-reference/keywords/enum.md) . Sama Biblioteka klas .NET jest kolekcją typów niestandardowych dostarczanych przez firmę Microsoft, których można używać w własnych aplikacjach. Domyślnie najczęściej używane typy w bibliotece klas są dostępne w dowolnym C# programie. Inne stają się dostępne tylko wtedy, gdy jawnie dodasz odwołanie do projektu do zestawu, w którym są zdefiniowane. Gdy kompilator ma odwołanie do zestawu, można zadeklarować zmienne (i stałe) typów zadeklarowanych w tym zestawie w kodzie źródłowym. Aby uzyskać więcej informacji, zobacz [Biblioteka klas .NET](../../../standard/class-library-overview.md).
 
-## <a name="the-common-type-system"></a>Wspólny System typów
+## <a name="the-common-type-system"></a>Wspólny system typów
 
-Jest to ważne, aby zrozumieć dwa podstawowe punkty o systemie typu na platformie .NET:
+Ważne jest, aby zrozumieć dwa podstawowe punkty o systemie typów w programie .NET:
 
-- Obsługuje zasady dziedziczenia. Typy mogą pochodzić od innych typów nazywanych *typy podstawowe*. Typ pochodny dziedziczy (z pewnymi ograniczeniami) metody, właściwości i inne elementy członkowskie typu podstawowego. Typ podstawowy z kolei może pochodzić od innego typu, w którym przypadku typ pochodny dziedziczy członków obu typów podstawowych w hierarchii dziedziczenia. Wszystkie typy, w tym wbudowane typy liczbowe, takie jak <xref:System.Int32?displayProperty=nameWithType> (— słowo kluczowe języka C#: [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)), pochodzi ostatecznie z jednego typu podstawowego, który jest <xref:System.Object?displayProperty=nameWithType> (— słowo kluczowe języka C#: [obiektu](../../../csharp/language-reference/keywords/object.md)). Ta ujednolicona hierarchia typu jest nazywany [Wspólny System typów](../../../standard/base-types/common-type-system.md) (CTS). Aby uzyskać więcej informacji dotyczących dziedziczenia w C#, zobacz [dziedziczenia](../../../csharp/programming-guide/classes-and-structs/inheritance.md).
+- Obsługuje zasady dziedziczenia. Typy mogą pochodzić od innych typów, nazywanych *typami podstawowymi*. Typ pochodny dziedziczy (z pewnymi ograniczeniami) metody, właściwości i inne elementy członkowskie typu podstawowego. Typ podstawowy może być pochodny od innego typu, w tym przypadku typ pochodny dziedziczy elementy członkowskie obu typów podstawowych w hierarchii dziedziczenia. Wszystkie typy, w tym wbudowane typy liczbowe, takie jak <xref:System.Int32?displayProperty=nameWithType> (C# słowo kluczowe: [int](../../language-reference/builtin-types/integral-numeric-types.md)), uzyskują ostatecznie z jednego typu podstawowego, który <xref:System.Object?displayProperty=nameWithType> jestC# (słowo kluczowe: [Object](../../language-reference/keywords/object.md)). Ta ujednolicona hierarchia typów jest nazywana [systemem common Type System](../../../standard/base-types/common-type-system.md) (CTS). Aby uzyskać więcej informacji na temat C#dziedziczenia w programie, zobacz [dziedziczenie](../classes-and-structs/inheritance.md).
 
-- Każdy typ w CTS jest zdefiniowany jako *typu wartości* lub *odwołania do typu*. Obejmuje to wszystkie niestandardowe typy w bibliotece klas programu .NET, a także typy własne zdefiniowane przez użytkownika. Typy, które są definiowane za pomocą [struktury](../../../csharp/language-reference/keywords/struct.md) — słowo kluczowe to typy wartości; wszystkie wbudowane typy liczbowe są `structs`. Typy, które są definiowane za pomocą [klasy](../../../csharp/language-reference/keywords/class.md) słów kluczowych to odwołanie do typów. Typy odwołań i typy wartości mają różne zasady czasu kompilacji i różny sposób w czasie wykonywania.
+- Każdy typ w CTS jest zdefiniowany jako *Typ wartości* lub *typ referencyjny*. Obejmuje to wszystkie niestandardowe typy w bibliotece klas .NET, a także własne typy zdefiniowane przez użytkownika. Typy zdefiniowane za pomocą słowa kluczowego [struct](../../language-reference/keywords/struct.md) są typami wartości; wszystkie wbudowane typy liczbowe są `structs`. Typy zdefiniowane za pomocą słowa kluczowego [Class](../../language-reference/keywords/class.md) to typy odwołań. Typy odwołań i typy wartości mają różne reguły czasu kompilacji i inne zachowanie w czasie wykonywania.
 
-Poniższa ilustracja przedstawia relację między typami wartości a typami odwołań w CTS.
+Na poniższej ilustracji przedstawiono relacje między typami wartości i typami odwołań w CTS.
 
-Na poniższej ilustracji przedstawiono typy wartości i odwołań w CTS:
+Na poniższej ilustracji przedstawiono typy wartości i typy odwołań w CTS:
 
-![Zrzut ekranu, że CTS przedstawia typy wartości i typy referencyjne.](./media/index/value-reference-types-common-type-system.png)
+![Zrzut ekranu pokazujący typy wartości i typy odwołań CTS.](./media/index/value-reference-types-common-type-system.png)
 
 > [!NOTE]
-> Widać, że najczęściej używane typy są zorganizowane w <xref:System> przestrzeni nazw. Jednakże przestrzeń nazw, w którym zawarty jest typ nie ma związku tego, czy jest to wartość typu lub typów referencyjnych.
+> Można zobaczyć, że najczęściej używane typy są zorganizowane w <xref:System> przestrzeni nazw. Jednak przestrzeń nazw, w której znajduje się typ, nie ma żadnego powiązania z tym, czy jest typem wartości czy typem referencyjnym.
 
 ### <a name="value-types"></a>Typy wartości
 
-Typy wartości wywodzą się z <xref:System.ValueType?displayProperty=nameWithType>, która jest pochodną <xref:System.Object?displayProperty=nameWithType>. Typy, które wynikają z <xref:System.ValueType?displayProperty=nameWithType> mają specjalne zachowanie w CLR. Zmienne typu wartości bezpośrednio zawierają swoje wartości, co oznacza, że pamięć jest alokowana wewnątrz niezależnie od kontekstu, ta zmienna została zgłoszona. Nie ma oddzielnej alokacji stosu lub wyrzucania elementów bezużytecznych dla zmiennych typu wartości.
+Typy wartości pochodne od <xref:System.ValueType?displayProperty=nameWithType>, które pochodzą od <xref:System.Object?displayProperty=nameWithType>. Typy, które pochodzą <xref:System.ValueType?displayProperty=nameWithType> z mają specjalne zachowanie w środowisku CLR. Zmienne typu wartości bezpośrednio zawierają swoje wartości, co oznacza, że pamięć jest alokowana w dowolnym kontekście, w którym jest zadeklarowana zmienna. Nie ma oddzielnego przydziału sterty lub wyrzucania elementów bezużytecznych dla zmiennych typu wartości.
 
-Istnieją dwie kategorie typów wartości: [struktury](../../../csharp/language-reference/keywords/struct.md) i [wyliczenia](../../../csharp/language-reference/keywords/enum.md).
+Istnieją dwie kategorie typów wartości: [struct](../../language-reference/keywords/struct.md) i [enum](../../language-reference/keywords/enum.md).
 
-Wbudowane typy liczbowe są strukturami i mają właściwości i metody, do których masz dostęp:
+Wbudowane typy liczbowe to struktury i mają właściwości i metody, do których można uzyskać dostęp:
 
 ```csharp
 // Static method on type byte.
 byte b = byte.MaxValue;
 ```
 
-Ale zadeklarować i przypisać do nich wartości, tak jakby były one proste typami-aggregacji:
+Ale deklaruję i przypisujesz wartości do nich, tak jakby były to proste typy nieagregujące:
 
 ```csharp
 byte num = 0xA;
@@ -108,56 +108,56 @@ int i = 5;
 char c = 'Z';
 ```
 
-Typy wartości są *zapieczętowanego*, oznacza to, na przykład, że nie możesz wywodzić typu z <xref:System.Int32?displayProperty=nameWithType>, i nie możesz definiować dziedziczenia struktury od dowolnego użytkownika klasy lub struktury, ponieważ struktura może dziedziczyć tylko z <xref:System.ValueType?displayProperty=nameWithType> . Jednakże struktura może zaimplementować jeden lub więcej interfejsów. Można rzutować typu struktury dowolny typ interfejsu, który implementuje; Powoduje to, że *pakowania* operację, aby opakować obiekt typu odwołania na stosie zarządzanym. Operacje na polach występują, gdy typ wartości są przekazywane do metody, która przyjmuje <xref:System.Object?displayProperty=nameWithType> lub dowolny typ jako parametr wejściowy interfejsu. Aby uzyskać więcej informacji, zobacz [opakowywanie i rozpakowywanie](../../../csharp/programming-guide/types/boxing-and-unboxing.md).
+Typy wartości są *zapieczętowane*, co oznacza, że na przykład nie można utworzyć typu z <xref:System.Int32?displayProperty=nameWithType>i nie można zdefiniować struktury do dziedziczenia z żadnej klasy lub struktury zdefiniowanej przez użytkownika, ponieważ struktura może dziedziczyć tylko z. <xref:System.ValueType?displayProperty=nameWithType> Jednak struktura może zaimplementować jeden lub więcej interfejsów. Typ struktury można rzutować na dowolny typ interfejsu, który implementuje; powoduje to, że operacja opakowywania otacza strukturę wewnątrz obiektu typu odwołania na zarządzanym stosie. Operacje pakowania są wykonywane w przypadku przekazania typu wartości do metody, która przyjmuje <xref:System.Object?displayProperty=nameWithType> lub dowolny typ interfejsu jako parametr wejściowy. Aby uzyskać więcej informacji, zobacz [opakowanie i rozpakowywanie](./boxing-and-unboxing.md).
 
-Możesz użyć [struktury](../../../csharp/language-reference/keywords/struct.md) — słowo kluczowe, aby utworzyć własne typy niestandardowych wartości. Typowo, struct jest używany jako kontener dla mniejszego zestawu powiązanych zmiennych, jak pokazano w poniższym przykładzie:
+Za pomocą słowa kluczowego [struct](../../language-reference/keywords/struct.md) można tworzyć własne niestandardowe typy wartości. Zazwyczaj struktura jest używana jako kontener dla małego zestawu powiązanych zmiennych, jak pokazano w następującym przykładzie:
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Aby uzyskać więcej informacji na temat struktur, zobacz [struktury](../../../csharp/programming-guide/classes-and-structs/structs.md). Aby uzyskać więcej informacji na temat typów wartości na platformie .NET, zobacz [typów wartości](../../../csharp/language-reference/keywords/value-types.md).
+Aby uzyskać więcej informacji na temat struktur, zobacz [struktury](../classes-and-structs/structs.md). Aby uzyskać więcej informacji na temat typów wartości w programie .NET, zobacz [typy wartości](../../language-reference/keywords/value-types.md).
 
-Inna Kategoria typu wartości jest [wyliczenia](../../../csharp/language-reference/keywords/enum.md). Wyliczenie definiuje zestaw nazwanych stałych liczbach całkowitych. Na przykład <xref:System.IO.FileMode?displayProperty=nameWithType> wyliczenia w bibliotece klas programu .NET zawiera zestaw nazwanych stałych liczb całkowitych, które określają, jak można otworzyć pliku. Jest on zdefiniowany jak pokazano w poniższym przykładzie:
+Druga kategoria typów wartości to [enum](../../language-reference/keywords/enum.md). Wyliczenie definiuje zestaw nazwanych stałych całkowitych. Na przykład <xref:System.IO.FileMode?displayProperty=nameWithType> Wyliczenie w bibliotece klas .NET zawiera zestaw nazwanych stałych liczb całkowitych, które określają, jak plik powinien być otwarty. Jest on zdefiniowany, jak pokazano w następującym przykładzie:
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
-`System.IO.FileMode.Create` Stała ma wartość 2. Jednak nazwa jest bardziej istotna dla ludzi czytających kod źródłowy i tego powodu lepiej jest używać wyliczenia zamiast stałej liczby literału. Aby uzyskać więcej informacji, zobacz <xref:System.IO.FileMode?displayProperty=nameWithType>.
+`System.IO.FileMode.Create` Stała ma wartość 2. Jednak nazwa jest znacznie bardziej zrozumiała dla ludzi odczytujących kod źródłowy. z tego powodu lepiej jest używać wyliczeń zamiast stałych liczb literałów. Aby uzyskać więcej informacji, zobacz <xref:System.IO.FileMode?displayProperty=nameWithType>.
 
-Wszystkie typy wyliczeniowe dziedziczą z <xref:System.Enum?displayProperty=nameWithType>, który dziedziczy z <xref:System.ValueType?displayProperty=nameWithType>. Wszystkie reguły, które dotyczą struktur stosuje się także do wyliczenia. Aby uzyskać więcej informacji na temat typów wyliczeń, zobacz [Typy wyliczeniowe](../../../csharp/programming-guide/enumeration-types.md).
+Wszystkie wyliczenia są dziedziczone z <xref:System.Enum?displayProperty=nameWithType>elementu, który dziedziczy <xref:System.ValueType?displayProperty=nameWithType>z. Wszystkie reguły, które mają zastosowanie do struktur, mają zastosowanie również do typów wyliczeniowych. Aby uzyskać więcej informacji na temat typów wyliczeniowych, zobacz [typy](../enumeration-types.md)wyliczeniowe.
 
 ### <a name="reference-types"></a>Typy odwołań
 
-Typ, który jest zdefiniowany jako [klasy](../../../csharp/language-reference/keywords/class.md), [delegować](../../../csharp/language-reference/keywords/delegate.md), tablicy, lub [interfejsu](../../../csharp/language-reference/keywords/interface.md) jest *odwołania do typu*. W czasie wykonywania, kiedy Deklarujesz zmienną typu odwołania, zmienna zawiera wartość [null](../../../csharp/language-reference/keywords/null.md) aż jawnie tworzone obiektu za pomocą [nowe](../../../csharp/language-reference/operators/new-operator.md) operatora, lub obiekt, który został gdzie indziej utworzone za pomocą `new`, jak pokazano w poniższym przykładzie:
+Typ, który jest zdefiniowany jako [Klasa](../../language-reference/keywords/class.md), [Delegat](../../language-reference/keywords/delegate.md), tablica lub [interfejs](../../language-reference/keywords/interface.md) , jest *typem referencyjnym*. W czasie wykonywania, gdy deklarujesz zmienną typu referencyjnego, zmienna zawiera wartość [null](../../language-reference/keywords/null.md) do momentu jawnego utworzenia obiektu za pomocą operatora [New](../../language-reference/operators/new-operator.md) lub przypisanie go do obiektu, który został utworzony w innym miejscu przy użyciu `new`, jako pokazano w następującym przykładzie:
 
 ```csharp
 MyClass mc = new MyClass();
 MyClass mc2 = mc;
 ```
 
-Interfejs musi być zainicjowany razem z obiektem klasy, która implementuje go. Jeśli `MyClass` implementuje `IMyInterface`, Utwórz wystąpienie `IMyInterface` jak pokazano w poniższym przykładzie:
+Interfejs musi być zainicjowany razem z obiektem klasy, który implementuje go. Jeśli `MyClass` implementuje `IMyInterface` ,`IMyInterface` należy utworzyć wystąpienie, tak jak pokazano w następującym przykładzie:
 
 ```csharp
 IMyInterface iface = new MyClass();
 ```
 
-Po utworzeniu obiektu pamięć jest alokowane na zarządzanym stosie, a zmienna zawiera tylko odwołanie do lokalizacji obiektu. Typy na zarządzanym stosie wymagają narzutu zarówno kiedy są alokowane oraz kiedy są odbierane przez funkcjonalność zarządzania pamięcią automatyczną CLR, który jest znany jako *wyrzucania elementów bezużytecznych*. Jednak wyrzucanie elementów bezużytecznych jest również bardzo dobrze zoptymalizowane i w większości scenariuszy nie powoduje problemów z wydajnością. Aby uzyskać więcej informacji dotyczących wyrzucania elementów bezużytecznych, zobacz [automatyczne zarządzanie pamięcią](../../../standard/automatic-memory-management.md).
+Po utworzeniu obiektu pamięć jest przydzielana na zarządzanym stosie, a zmienna zawiera tylko odwołanie do lokalizacji obiektu. Typy na stercie zarządzanej wymagają narzutu podczas przydzielania i kiedy są odzyskiwane przez funkcję automatycznego zarządzania pamięcią środowiska CLR, która jest znana jako wyrzucanie *elementów*bezużytecznych. Jednak wyrzucanie elementów bezużytecznych jest również wysoce zoptymalizowane i w większości scenariuszy nie tworzy problemu z wydajnością. Aby uzyskać więcej informacji dotyczących wyrzucania elementów bezużytecznych, zobacz [Automatyczne zarządzanie pamięcią](../../../standard/automatic-memory-management.md).
 
-Wszystkie tablice są typami odwołań, nawet jeśli ich elementy są typami wartości. Tablice niejawnie pochodzą od <xref:System.Array?displayProperty=nameWithType> klasy, ale deklarujes zje i używasz ich z uproszczoną skłądnią, która jest dostarczana przez C#, jak pokazano w poniższym przykładzie:
+Wszystkie tablice są typami odwołań, nawet jeśli ich elementy są typami wartości. Tablice niejawnie pochodzą od <xref:System.Array?displayProperty=nameWithType> klasy, ale deklarujemy i używają ich przy użyciu uproszczonej składni dostarczonej przez C#, jak pokazano w następującym przykładzie:
 
 [!code-csharp[csProgGuideTypes#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#45)]
 
-Typy odwołań w pełni obsługują dziedziczenie. Kiedy tworzysz klasę, możesz dziedziczyć od innego interfejsu lub klasy, która nie jest zdefiniowana jako [zapieczętowanego](../../../csharp/language-reference/keywords/sealed.md), a inne klasy mogą dziedziczyć od Twojej klasy i zastępować Twoje wirtualne metody. Aby uzyskać więcej informacji na temat tworzenia własnych klas, zobacz [klas i struktur](../../../csharp/programming-guide/classes-and-structs/index.md). Aby uzyskać więcej informacji dotyczących dziedziczenia i metod wirtualnych, zobacz [dziedziczenia](../../../csharp/programming-guide/classes-and-structs/inheritance.md).
+Typy odwołań w pełni obsługują dziedziczenie. Podczas tworzenia klasy można dziedziczyć z dowolnego innego interfejsu lub klasy, która nie jest zdefiniowana jako Sealed [](../../language-reference/keywords/sealed.md), a inne klasy mogą dziedziczyć z klasy i zastępować metody wirtualne. Aby uzyskać więcej informacji na temat tworzenia własnych klas, zobacz [klasy i struktury](../classes-and-structs/index.md). Aby uzyskać więcej informacji na temat dziedziczenia i metod [](../classes-and-structs/inheritance.md)wirtualnych, zobacz Dziedziczenie.
 
-## <a name="types-of-literal-values"></a>Typy wartości literałów
+## <a name="types-of-literal-values"></a>Typy wartości literału
 
-W języku C# wartości literału otrzymują typ z kompilatora. Możesz określić jak literał liczbowy powinien wpisana przez dołączenie litery na końcu numeru. Na przykład aby określić, że wartość 4,56 powinny być traktowane jako zmiennoprzecinkowa, dołączyć "f" lub "F" po liczbie: `4.56f`. Jeśli żadna litera nie zostanie dołączony, kompilator wywnioskuje typ dla literału. Aby uzyskać więcej informacji na temat tego, jakie typy można określić za pomocą literowych sufiksów, zobacz strony pomocy dla poszczególnych typów w [typów wartości](../../../csharp/language-reference/keywords/value-types.md).
+W C#programie wartości literałów otrzymują typ z kompilatora. Możesz określić sposób wpisywania literału liczbowego, dołączając literę do końca liczby. Na przykład, aby określić, że wartość 4,56 powinna być traktowana jako zmiennoprzecinkowa, należy dołączyć "f" lub "F" po liczbie `4.56f`:. Jeśli nie zostanie dołączona żadna litera, kompilator wykryje typ dla literału. Aby uzyskać więcej informacji na temat typów, które można określić za pomocą sufiksów liter, zobacz strony referencyjne dla poszczególnych typów w [typach wartości](../../language-reference/keywords/value-types.md).
 
-Ponieważ wpisywane są literały, a wszystkie typy ostatecznie pochodzą z <xref:System.Object?displayProperty=nameWithType>, można pisać i kompilować następujący kod:
+Ponieważ wpisywane są literały, a wszystkie typy ostatecznie pochodzą z <xref:System.Object?displayProperty=nameWithType>, można napisać i skompilować kod, taki jak:
 
 [!code-csharp[csProgGuideTypes#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#37)]
 
 ## <a name="generic-types"></a>Typy ogólne
 
-Typ może być zadeklarowany z co najmniej jeden *parametry typu* obsługujących jako symbolu zastępczego dla rzeczywistego typu ( *konkretne typu*), kod klienta zapewni podczas tworzenia wystąpienia typu. Typy takie są nazywane *typów ogólnych*. Na przykład typ .NET <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> ma jeden parametr typu, który zgodnie z Konwencją, otrzymuje nazwę *T*. Podczas tworzenia wystąpienia typu, należy określić typ obiektów, które zawierać będzie lista, przykładowo ciąg:
+Typ może być zadeklarowany z co najmniej jednym *parametrem typu* , który służy jako symbol zastępczy dla rzeczywistego typu ( *konkretny typ*), który będzie używany przez kod klienta podczas tworzenia wystąpienia typu. Takie typy są nazywane *typami ogólnymi*. Na przykład typ <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> .net ma jeden parametr typu, który zgodnie z Konwencją otrzymuje nazwę *T*. Podczas tworzenia wystąpienia typu należy określić typ obiektów, które będzie zawierać lista, na przykład ciąg:
 
 ```csharp
 List<string> stringList = new List<string>();
@@ -166,35 +166,35 @@ stringList.Add("String example");
 stringList.Add(4);
 ```
 
-Użyj parametru typu sprawia, że można ponownie użyć tej samej klasy do utrzymania jakiegokolwiek typu elementu, bez konieczno ści konwersji każdego elementu na [obiektu](../../../csharp/language-reference/keywords/object.md). Klasy ogólne kolekcji są nazywane *kolekcjami jednoznacznymi* ponieważ kompilator zna określony typ elementów kolekcji i może zgłosić błąd w czasie kompilacji, jeśli, na przykład spróbujesz dodać liczbę całkowitą do `stringList` obiekt w poprzednim przykładzie. Aby uzyskać więcej informacji, zobacz [ogólne](../../../csharp/programming-guide/generics/index.md).
+Użycie parametru typu umożliwia ponowne użycie tej samej klasy do przechowywania dowolnego typu elementu, bez konieczności konwertowania każdego elementu na [obiekt](../../language-reference/keywords/object.md). Klasy kolekcji generycznej są nazywane *kolekcjami z jednoznacznie* określonymi typami, ponieważ kompilator zna określony typ elementów kolekcji i może zgłosić błąd w czasie kompilacji, jeśli na przykład próbujesz dodać liczbę całkowitą do `stringList` obiektu w Poprzedni przykład. Aby uzyskać więcej informacji, zobacz [Ogólne](../generics/index.md).
 
-## <a name="implicit-types-anonymous-types-and-nullable-types"></a>Typy niejawne, anonimowe i typy dopuszczające wartości zerowe
+## <a name="implicit-types-anonymous-types-and-nullable-types"></a>Typy niejawne, typy anonimowe i Typy dopuszczające wartości null
 
-Jak wspomniano wcześniej, można niejawnie wpisać zmienną lokalną (ale nie elementy klas) za pomocą [var](../../../csharp/language-reference/keywords/var.md) — słowo kluczowe. Zmienna wciąż otrzymuje typ w czasie kompilacji, ale typ jest dostarczany przez kompilator. Aby uzyskać więcej informacji, zobacz [niejawnie wpisane zmienne lokalne](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).
+Jak wspomniano wcześniej, można niejawnie wpisać zmienną lokalną (ale nie składową klasy) za pomocą słowa kluczowego [var](../../language-reference/keywords/var.md) . Zmienna nadal otrzymuje typ w czasie kompilacji, ale typ jest dostarczany przez kompilator. Aby uzyskać więcej informacji, zobacz [niejawnie wpisane zmienne lokalne](../classes-and-structs/implicitly-typed-local-variables.md).
 
-W niektórych przypadkach jest wygodne, aby tworzyć nazwany typ dla prostych zestawów powiązanych wartości, które nie będą przechowywane lub przekazywane poza granice metody. Możesz utworzyć *typy anonimowe* do tego celu. Aby uzyskać więcej informacji, zobacz [typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).
+W niektórych przypadkach nie jest wygodne tworzenie nazwanego typu dla prostych zestawów powiązanych wartości, które nie mają być przechowywane ani przekazywane poza granicami metod. W tym celu można utworzyć *Typy anonimowe* . Aby uzyskać więcej informacji, zobacz [Typy anonimowe](../classes-and-structs/anonymous-types.md).
 
-Typy wartości zwykłych nie może mieć wartość [null](../../../csharp/language-reference/keywords/null.md). Można jednak utworzyć typy o wartości zerowalnej przez umieszczenie `?` po typie. Na przykład `int?` jest `int` typu, który może mieć również wartość [null](../../../csharp/language-reference/keywords/null.md). W CTS, typy null są wystąpieniami typu struktury ogólnej <xref:System.Nullable%601?displayProperty=nameWithType>. Typy dopuszczające wartości null są szczególnie przydatne podczas przekazywania danych do i z baz danych, w których wartości liczbowe mogą przyjąć wartości null. Aby uzyskać więcej informacji, zobacz [typów dopuszczających wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md).
+Typy wartości zwykłych nie mogą mieć wartości [null](../../language-reference/keywords/null.md). Można jednak utworzyć typy wartości null, umieszczając `?` je po typie. Na przykład `int?` `int` jest typem, który może mieć również wartość [null](../../language-reference/keywords/null.md). W przypadku CTS wartości null są wystąpieniami typu <xref:System.Nullable%601?displayProperty=nameWithType>struktury generycznej. Typy dopuszczające wartości null są szczególnie przydatne podczas przekazywania danych do i z baz danych, w których wartości liczbowe mogą mieć wartość null. Aby uzyskać więcej informacji, zobacz [Typy dopuszczające wartości null](../nullable-types/index.md).
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 Więcej informacji znajduje się w następujących tematach:
 
-- [Rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+- [Rzutowanie i konwersje typów](./casting-and-type-conversions.md)
 
-- [Konwersja boxing i konwersja unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+- [Konwersja boxing i konwersja unboxing](./boxing-and-unboxing.md)
 
-- [Używanie typu dynamicznego](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [Używanie typu dynamicznego](./using-type-dynamic.md)
 
-- [Typy wartości](../../../csharp/language-reference/keywords/value-types.md)
+- [Typy wartości](../../language-reference/keywords/value-types.md)
 
-- [Typy odwołań](../../../csharp/language-reference/keywords/reference-types.md)
+- [Typy odwołań](../../language-reference/keywords/reference-types.md)
 
-- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Klasy i struktury](../classes-and-structs/index.md)
 
-- [Typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [Typy anonimowe](../classes-and-structs/anonymous-types.md)
 
-- [Typy ogólne](../../../csharp/programming-guide/generics/index.md)
+- [Typy ogólne](../generics/index.md)
 
 ## <a name="c-language-specification"></a>Specyfikacja języka C#
 
@@ -202,7 +202,7 @@ Więcej informacji znajduje się w następujących tematach:
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Dokumentacja języka C#](../../language-reference/index.md)
+- [Przewodnik programowania w języku C#](../index.md)
 - [Konwersja typów danych XML](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [Typy całkowite](../../language-reference/builtin-types/integral-numeric-types.md)

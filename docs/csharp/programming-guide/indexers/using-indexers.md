@@ -1,22 +1,22 @@
 ---
-title: Przy użyciu indeksatorów - C# przewodnik programowania
+title: Korzystanie z indeksatorów C# — Przewodnik programowania
 ms.custom: seodec18
 ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 6b129177e6eb916982a27ba76aca517b0642344c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4411fe0ffe7dc136b4e74adeba3e5596af3aa1db
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61679807"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589426"
 ---
-# <a name="using-indexers-c-programming-guide"></a>Używanie indeksatorów (C# Programming Guide)
+# <a name="using-indexers-c-programming-guide"></a>Korzystanie z indeksatorówC# (Przewodnik programowania)
 
-Indeksatory są wygody składni, które umożliwiają tworzenie [klasy](../../../csharp/language-reference/keywords/class.md), [struktury](../../../csharp/language-reference/keywords/struct.md), lub [interfejsu](../../../csharp/language-reference/keywords/interface.md) że aplikacje klienckie mogą uzyskać dostęp, podobnie jak tablica. Indeksatory najczęściej są implementowane w typach, której głównym celem jest hermetyzacji wewnętrznej kolekcji lub tablicy. Załóżmy na przykład, posiadasz klasę `TempRecord` reprezentujący temperaturę w Fahrenheita zarejestrowanej w 10 różnych razy w okresie 24-godzinnym. Klasa zawiera tablicę `temps` typu `float[]` do przechowywania wartości temperatury. Wdrażając indeksatora w tej klasie, klienci mogą uzyskiwać dostęp temperatur w `TempRecord` wystąpienia jako `float temp = tr[4]` zamiast jako `float temp = tr.temps[4]`. Notacja indeksator nie tylko upraszcza składnię dla aplikacji klienckich; zapewnia także klasa i jej przeznaczenie bardziej intuicyjne innym deweloperom zrozumieć.  
+Indeksatory to wygoda składni, która umożliwia tworzenie [klasy](../../language-reference/keywords/class.md), [struktury](../../language-reference/keywords/struct.md)lub [interfejsu](../../language-reference/keywords/interface.md) , które aplikacje klienckie mogą uzyskiwać dostęp do samego siebie jako tablicy. Indeksatory są najczęściej implementowane w typach, których głównym celem jest hermetyzacja wewnętrznej kolekcji lub tablicy. Załóżmy na przykład, że masz klasę `TempRecord` , która reprezentuje temperaturę w numerze Fahrenheita w ciągu 10 różnych razy w okresie 24 godzin. Klasa zawiera tablicę `temps` typu `float[]` do przechowywania wartości temperatury. Implementując indeksator w tej klasie, klienci mogą uzyskać dostęp do temperatury w `TempRecord` wystąpieniu jako `float temp = tr[4]` zamiast `float temp = tr.temps[4]`. Notacja indeksatora nie tylko upraszcza składnię aplikacji klienckich; sprawia również, że Klasa i jej cel są bardziej intuicyjne dla innych deweloperów do zrozumienia.  
   
-Aby zadeklarować indeksatora w klasie lub strukturze, użyj [to](../../../csharp/language-reference/keywords/this.md) — słowo kluczowe, co ilustruje poniższy przykład:
+Aby zadeklarować indeksator dla klasy lub struktury, użyj słowa kluczowego [this](../../language-reference/keywords/this.md) , jak pokazano w poniższym przykładzie:
 
 ```csharp
 public int this[int index]    // Indexer declaration  
@@ -27,15 +27,15 @@ public int this[int index]    // Indexer declaration
 
 ## <a name="remarks"></a>Uwagi
 
-Typ indeksatora i typ parametrów musi być co najmniej tak samo dostępna jak indeksatora, sam. Aby uzyskać więcej informacji na temat poziomów ułatwień dostępu, zobacz [modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md).  
+Typ indeksatora i typ jego parametrów muszą być co najmniej tak samo samo jak indeksator. Aby uzyskać więcej informacji na temat poziomów ułatwień dostępu, zobacz [Modyfikatory dostępu](../../language-reference/keywords/access-modifiers.md).  
   
- Aby uzyskać więcej informacji o tym, jak korzystać z indeksatorów za pomocą interfejsu, zobacz [indeksatory interfejsu](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md).  
+ Aby uzyskać więcej informacji na temat używania indeksatorów z interfejsem, zobacz [indeksatory interfejsów](./indexers-in-interfaces.md).  
   
- Podpis indeksatora składa się z liczbę i typy parametrów formalnych. Nie zawiera typ indeksatora lub nazwy parametrów formalnych. Jeśli zadeklarujesz więcej niż jeden indeksatora w tej samej klasy muszą mieć różnych podpisów.  
+ Podpis indeksatora składa się z liczby i typów jego parametrów formalnych. Nie zawiera typu indeksatora ani nazw parametrów formalnych. Jeśli zadeklarujesz więcej niż jeden indeksator w tej samej klasie, muszą mieć różne podpisy.  
   
- Wartość będącą liczbą indeksator nie jest sklasyfikowany jako zmienna; w związku z tym, nie można przekazać wartość indeksatora jako [ref](../../../csharp/language-reference/keywords/ref.md) lub [się](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametru.  
+ Wartość indeksatora nie została sklasyfikowana jako zmienna; w związku z tym nie można przekazać wartości indeksatora jako parametru [ref](../../language-reference/keywords/ref.md) lub [out](../../language-reference/keywords/out-parameter-modifier.md) .  
   
- Aby zapewnić indeksatora o nazwie używanego w innych językach, należy użyć <xref:System.Runtime.CompilerServices.IndexerNameAttribute?displayProperty=nameWithType>, jak pokazano w poniższym przykładzie:  
+ Aby podać indeksator przy użyciu nazwy, która może być używana przez inne języki, <xref:System.Runtime.CompilerServices.IndexerNameAttribute?displayProperty=nameWithType>jak pokazano w poniższym przykładzie:  
 
 ```csharp
 [System.Runtime.CompilerServices.IndexerName("TheItem")]  
@@ -45,36 +45,36 @@ public int this[int index]   // Indexer declaration
 }  
 ```
 
-Ten indeksator będzie mieć taką nazwę `TheItem`. Nie udostępniają atrybut name czyniłyby `Item` nazwę domyślną.  
+Ten indeksator będzie miał nazwę `TheItem`. Niedostarczenie atrybutu Name spowoduje wprowadzenie `Item` nazwy domyślnej.  
   
 ## <a name="example-1"></a>Przykład 1  
   
-Poniższy przykład pokazuje sposób deklarowania pola tablicy prywatnej `temps`i indeksatora. Indeksator umożliwia bezpośredni dostęp do wystąpienia `tempRecord[i]`. Zamiast za pomocą indeksatora jest, aby zadeklarować tablicę jako [publicznych](../../../csharp/language-reference/keywords/public.md) elementu członkowskiego i uzyskiwać dostęp do swoich elementów członkowskich, `tempRecord.temps[i]`bezpośrednio.  
+Poniższy przykład pokazuje, jak zadeklarować pole tablicy prywatnej, `temps`i indeksator. Indeksator umożliwia bezpośredni dostęp do wystąpienia `tempRecord[i]`. Alternatywą dla korzystania z indeksatora jest zadeklarowanie tablicy jako [publicznego](../../language-reference/keywords/public.md) elementu członkowskiego i dostęp do jej członków `tempRecord.temps[i]`, bezpośrednio.  
   
- Należy zauważyć, że dostęp indeksatora jest sprawdzane, na przykład w `Console.Write` instrukcji [uzyskać](../../../csharp/language-reference/keywords/get.md) zostanie wywołana metoda dostępu. W związku z tym jeśli nie `get` istnieje dostępu, wystąpi błąd kompilacji.  
+ Należy zauważyć, że gdy jest oceniany dostęp indeksatora, na przykład w `Console.Write` instrukcji metoda dostępu [Get](../../language-reference/keywords/get.md) jest wywoływana. W związku z tym `get` , jeśli żadna metoda dostępu nie istnieje, wystąpi błąd w czasie kompilacji.  
   
  [!code-csharp[csProgGuideIndexers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#1)]  
   
 ## <a name="indexing-using-other-values"></a>Indeksowanie przy użyciu innych wartości
 
-C#Typ parametru indeksatora na liczbę całkowitą nie są ograniczone. Na przykład może być przydatne do ciągu za pomocą indeksatora. Takie indeksator może być realizowane przez wyszukiwanie ciągu w kolekcji i zwraca odpowiednią wartość. Jak mogą być przeciążone metody dostępu, string i integer wersje mogą współistnieć.  
+C#nie ogranicza typu parametru indeksatora do liczby całkowitej. Na przykład przydatne może być użycie ciągu z indeksatorem. Takie indeksatory mogą być implementowane przez wyszukanie ciągu w kolekcji i zwrócenie odpowiedniej wartości. W miarę jak metody dostępu mogą być przeciążone, wersje typu String i Integer mogą współistnieć.  
   
 ## <a name="example-2"></a>Przykład 2  
   
-Poniższy przykład deklaruje klasę, która przechowuje dni tygodnia. A `get` akcesor przyjmuje ciąg nazwy dnia i zwraca odpowiedniej liczby całkowitej. Na przykład "Niedziela" zwraca wartość 0, zwraca "Poniedziałek", 1 i tak dalej.  
+Poniższy przykład deklaruje klasę, w której są przechowywane dni tygodnia. `get` Metoda dostępu przyjmuje ciąg, nazwę dnia i zwraca odpowiednią liczbę całkowitą. Na przykład "Niedziela" zwraca 0, "poniedziałek" zwraca 1 itd.  
   
  [!code-csharp[csProgGuideIndexers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#2)]  
   
-## <a name="robust-programming"></a>Skuteczne programowanie
+## <a name="robust-programming"></a>Niezawodne programowanie
 
- Istnieją dwa główne sposoby, w których można zwiększyć bezpieczeństwo i niezawodność indeksatory:  
+ Istnieją dwa główne sposoby, w których można ulepszyć zabezpieczenia i niezawodność indeksatorów:  
   
-- Pamiętaj wprowadzić pewien rodzaj strategii obsługi błędów do obsługi prawdopodobieństwo kod klienta, przekazując wartość nieprawidłowy indeks. W pierwszym przykładzie we wcześniejszej części tego tematu klasa TempRecord udostępnia właściwości długości, która umożliwia kodu klienta, sprawdź dane wejściowe przed przekazaniem go do indeksatora. Można również wprowadzić kod wewnątrz samego indeksatora obsługi błędów. Pamiętaj dokumentów dla użytkowników ewentualne wyjątki, które generują wewnątrz metody dostępu indeksatora.  
+- Należy pamiętać o uwzględnieniu niektórych typów strategii obsługi błędów, aby obsłużyć prawdopodobieństwo przekazania kodu klienta w nieprawidłowej wartości indeksu. W pierwszym przykładzie wcześniej w tym temacie Klasa TempRecord zawiera właściwość length, która umożliwia zweryfikowanie danych wejściowych przed przekazaniem ich do indeksatora. Można również umieścić kod obsługi błędu wewnątrz indeksatora. Upewnij się, że dla użytkowników występują wyjątki, które można zgłosić w metodzie dostępu indeksatora.  
   
-- Zestawu dostępności [uzyskać](../../../csharp/language-reference/keywords/get.md) i [ustaw](../../../csharp/language-reference/keywords/set.md) metod dostępu do jako restrykcyjne uprawnienia, ponieważ jest uzasadnione. Jest to ważne w przypadku `set` dostępu, w szczególności. Aby uzyskać więcej informacji, zobacz [Ograniczanie dostępności metody dostępu](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
+- Ustaw dostępność metod dostępu [Get](../../language-reference/keywords/get.md) i [Set](../../language-reference/keywords/set.md) tak, aby były tak restrykcyjne, jak to uzasadnione. Jest to ważne w przypadku `set` metody dostępu w szczególności. Aby uzyskać więcej informacji, zobacz [ograniczanie dostępności metody](../classes-and-structs/restricting-accessor-accessibility.md)dostępu.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Indeksatory](../../../csharp/programming-guide/indexers/index.md)
-- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Indeksatory](./index.md)
+- [Właściwości](../classes-and-structs/properties.md)

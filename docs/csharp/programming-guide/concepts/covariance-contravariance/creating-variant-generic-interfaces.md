@@ -1,31 +1,31 @@
 ---
-title: Tworzenie interfejsów typu Variant (C#)
+title: Tworzenie interfejsów ogólnych typu VariantC#()
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: ad82ba27a98d27a18d9cff1e65ab929cd9d711a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ba72f28cd2ddd800f169387cc2c742159d4cb1b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668578"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595310"
 ---
-# <a name="creating-variant-generic-interfaces-c"></a>Tworzenie interfejsów typu Variant (C#)
+# <a name="creating-variant-generic-interfaces-c"></a>Tworzenie interfejsów ogólnych typu VariantC#()
 
-Możesz deklarować parametry typu ogólnego w interfejsach jako kowariantny lub kontrawariantny. *Kowariancja* umożliwia metod interfejsu do mają bardziej pochodne typy zwracane niż określone przez parametry typu ogólnego. *Kontrawariancja* umożliwia metod interfejsu mieć typy argumentów, które są mniej pochodnego niż określona przez parametry ogólne. Ogólny interfejs, który ma kowariantne i kontrawariantne parametry typu ogólnego jest nazywany *wariant*.
+Parametry typu ogólnego można zadeklarować w interfejsach jako współvariant lub kontrawariantne. *Kowariancja* umożliwia metodom interfejsu posiadanie bardziej pochodnych typów zwracanych niż te zdefiniowane przez parametry typu ogólnego. *Kontrawariancja* umożliwia metodom interfejsu posiadanie typów argumentów, które są mniej pochodne niż określone przez parametry ogólne. Ogólny interfejs, który ma parametry typu generycznego lub kontrawariantne, nazywa się *wariantem*.
 
 > [!NOTE]
-> .NET framework 4 wprowadzono wariancji obsługę kilka istniejących interfejsów ogólnych. Aby uzyskać listę interfejsów typu variant w programie .NET Framework, zobacz [wariancje w interfejsach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+> .NET Framework 4 wprowadziła obsługę wariancji dla kilku istniejących interfejsów ogólnych. Aby uzyskać listę interfejsów wariantów w .NET Framework, zobacz [Wariancja w interfejsachC#ogólnych ()](./variance-in-generic-interfaces.md).
 
-## <a name="declaring-variant-generic-interfaces"></a>Deklarujący interfejsów ogólnych typu Variant
+## <a name="declaring-variant-generic-interfaces"></a>Deklarowanie interfejsów ogólnych typu Variant
 
-Można zadeklarować interfejsów ogólnych typu variant, za pomocą `in` i `out` słowa kluczowe dla parametrów typu genetycznego.
+Można zadeklarować interfejsy ogólne wariantu przy użyciu `in` słów `out` kluczowych i dla parametrów typu ogólnego.
 
 > [!IMPORTANT]
-> `ref`, `in`, i `out` parametrów w języku C# nie może być typ variant. Typy wartości nie obsługują także wariancji.
+> `ref`, `in`, i `out` parametry w C# nie mogą być wariantem. Typy wartości nie obsługują również wariancji.
 
-Można zadeklarować parametru typu generycznego kowariantne przy użyciu `out` — słowo kluczowe. Kowariantnego typu musi spełniać następujące warunki:
+Za pomocą `out` słowa kluczowego można zadeklarować współwariant parametru typu ogólnego. Typ współwariantu musi spełniać następujące warunki:
 
-- Typ jest używany tylko jako zwracany typ metody interfejsu i nie jest używany jako typ argumentów metody. Jest to zilustrowane w poniższym przykładzie, w którym typ `R` jest zadeklarowany jako kowariantny.
+- Typ jest używany tylko jako typ zwracany metod interfejsu i nie jest używany jako typ argumentów metody. Jest to zilustrowane w poniższym przykładzie, w którym typ `R` jest zadeklarowany jako współvariant.
 
     ```csharp
     interface ICovariant<out R>
@@ -37,7 +37,7 @@ Można zadeklarować parametru typu generycznego kowariantne przy użyciu `out` 
     }
     ```
 
-    Istnieje jeden wyjątek od tej reguły. Jeśli Delegat ogólny kontrawariantny, jako parametru metody, można użyć typu co parametr typu ogólnego, dla delegata. Jest to zilustrowane przez typ `R` w poniższym przykładzie. Aby uzyskać więcej informacji, zobacz [wariancje w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) i [przy użyciu wariancji dla akcji delegatów ogólnych (C#) Func i](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+    Istnieje jeden wyjątek dla tej reguły. Jeśli masz delegata generycznego kontrawariantne jako parametr metody, możesz użyć typu jako parametru typu ogólnego dla delegata. Jest to zilustrowane przez typ `R` w poniższym przykładzie. Aby uzyskać więcej informacji, zobacz [Wariancja wC#delegatach ()](./variance-in-delegates.md) i [Korzystanie z wariancji dla delegatów () funkcji Func i Action (C#)](./using-variance-for-func-and-action-generic-delegates.md).
 
     ```csharp
     interface ICovariant<out R>
@@ -46,7 +46,7 @@ Można zadeklarować parametru typu generycznego kowariantne przy użyciu `out` 
     }
     ```
 
-- Typ nie jest używany jako ograniczenia typu ogólnego dla metod interfejsu. Jest to zilustrowane w poniższym kodzie.
+- Typ nie jest używany jako ograniczenie ogólne metod interfejsu. Jest to zilustrowane w poniższym kodzie.
 
     ```csharp
     interface ICovariant<out R>
@@ -58,7 +58,7 @@ Można zadeklarować parametru typu generycznego kowariantne przy użyciu `out` 
     }
     ```
 
-Można zadeklarować kontrawariantnego parametru typu ogólnego przy użyciu `in` — słowo kluczowe. Typ kontrawariantne może służyć jedynie jako typów argumentów metody, a nie typu zwracanego metody interfejsu. Można także kontrawariantnego typu dla ograniczenia ogólne. Poniższy kod przedstawia sposób deklarowania interfejsu kontrawariantnego i na użytek ograniczenie generyczne jednej z jego metod.
+Parametry typu ogólnego kontrawariantne można zadeklarować za pomocą `in` słowa kluczowego. Typ kontrawariantne może być używany tylko jako typ argumentów metody, a nie jako zwracany typ metod interfejsu. Typ kontrawariantne może być również używany dla ograniczeń ogólnych. Poniższy kod przedstawia sposób deklarowania interfejsu kontrawariantne i używania ograniczenia ogólnego dla jednej z jej metod.
 
 ```csharp
 interface IContravariant<in A>
@@ -70,7 +70,7 @@ interface IContravariant<in A>
 }
 ```
 
-Istnieje również możliwość obsługuje zarówno kowariancji i kontrawariancji w ten sam interfejs, ale dla parametrów innego typu, jak pokazano w poniższym przykładzie kodu.
+Istnieje również możliwość obsługi zarówno kowariancji, jak i kontrawariancja w tym samym interfejsie, ale dla różnych parametrów typu, jak pokazano w poniższym przykładzie kodu.
 
 ```csharp
 interface IVariant<out R, in A>
@@ -83,7 +83,7 @@ interface IVariant<out R, in A>
 
 ## <a name="implementing-variant-generic-interfaces"></a>Implementowanie interfejsów ogólnych typu Variant
 
-Możesz zaimplementować interfejsów ogólnych typu variant klas przy użyciu składni, która jest używana niezmienna interfejsów. Poniższy przykład kodu pokazuje sposób implementacji kowariantne interfejsu w klasie ogólnej.
+W klasach można zaimplementować interfejsy ogólne o zmiennej, korzystając z tej samej składni, która jest używana dla interfejsów niezmienna. Poniższy przykład kodu pokazuje, jak zaimplementować interfejs współvariant w klasie generycznej.
 
 ```csharp
 interface ICovariant<out R>
@@ -100,7 +100,7 @@ class SampleImplementation<R> : ICovariant<R>
 }
 ```
 
-Klasy, które implementują interfejsów typu variant są niezmienne. Rozważmy na przykład, poniższy kod.
+Klasy implementujące interfejsy Variant są niezmienne. Rozważmy na przykład poniższy kod.
 
 ```csharp
 // The interface is covariant.
@@ -116,7 +116,7 @@ SampleImplementation<Button> button = new SampleImplementation<Button>();
 
 ## <a name="extending-variant-generic-interfaces"></a>Rozszerzanie interfejsów ogólnych typu Variant
 
-Podczas rozszerzania typu variant interfejs ogólny, trzeba użyć `in` i `out` słów kluczowych, aby jawnie określić, czy interfejsu pochodnego obsługuje wariancji. Kompilator nie są rozpoznawane przez odchylenie od interfejsu, który jest rozszerzany. Na przykład należy wziąć pod uwagę następujące interfejsy.
+Po rozłączeniu uniwersalnego interfejsu wariantowego należy użyć `in` słów kluczowych i `out` , aby jawnie określić, czy interfejs pochodny obsługuje wariancję. Kompilator nie wywnioskuje wariancji z rozszerzanego interfejsu. Rozważmy na przykład następujące interfejsy.
 
 ```csharp
 interface ICovariant<out T> { }
@@ -124,9 +124,9 @@ interface IInvariant<T> : ICovariant<T> { }
 interface IExtCovariant<out T> : ICovariant<T> { }
 ```
 
-W `IInvariant<T>` interfejsu, parametr typu ogólnego `T` jest niezmienny, natomiast w `IExtCovariant<out T>` parametr typu jest kowariantny, mimo że oba interfejsy rozszerzyć ten sam interfejs. Ta sama zasada dotyczy kontrawariantne parametry typu ogólnego.
+W interfejsie parametr `T` typu generycznego jest niezmienny, natomiast w `IExtCovariant<out T>` parametrze typu jest współwariant, chociaż oba interfejsy rozszerzającą ten sam interfejs. `IInvariant<T>` Ta sama reguła jest stosowana do parametrów typu ogólnego kontrawariantne.
 
-Można utworzyć interfejsu, który rozszerza interfejs gdzie parametr typu ogólnego `T` jest kowariantny interfejs, w której jest kontrawariantny w rozszerzanie interfejsu parametr typu ogólnego i `T` jest niezmienny. Jest to zilustrowane w poniższym przykładzie kodu.
+Można utworzyć interfejs, który rozszerza zarówno interfejs, w którym parametr `T` typu generycznego to współwariant, jak i interfejs, w którym jest kontrawariantne, jeśli w rozszerzanym interfejsie parametr `T` typu generycznego jest niezmienny. Jest to zilustrowane w poniższym przykładzie kodu.
 
 ```csharp
 interface ICovariant<out T> { }
@@ -134,7 +134,7 @@ interface IContravariant<in T> { }
 interface IInvariant<T> : ICovariant<T>, IContravariant<T> { }
 ```
 
-Jednak jeśli parametr typu ogólnego `T` jest kowariantny zadeklarowana w ramach jednego interfejsu, nie można zadeklarować je kontrawariantnego w interfejsie rozszerzanie lub na odwrót. Jest to zilustrowane w poniższym przykładzie kodu.
+Jeśli jednak parametr `T` typu generycznego jest zadeklarowany jako współwariant w jednym interfejsie, nie można zadeklarować go kontrawariantne w interfejsie rozszerzającym lub na odwrót. Jest to zilustrowane w poniższym przykładzie kodu.
 
 ```csharp
 interface ICovariant<out T> { }
@@ -144,9 +144,9 @@ interface ICovariant<out T> { }
 
 ### <a name="avoiding-ambiguity"></a>Unikanie niejednoznaczności
 
-Podczas implementowania interfejsów ogólnych typu variant wariancji czasami może prowadzić do niejednoznaczności. Należy ich unikać.
+Podczas implementowania interfejsów ogólnych typu Variant WARIANCJA może czasami prowadzić do niejednoznaczności. Należy to uniknąć.
 
-Na przykład w przypadku zastosowania jawnie tego samego typu variant ogólny interfejs z parametrami typu rodzajowego różnych w jednej klasie, można utworzyć niejednoznaczności. Kompilator generuje błąd w takiej sytuacji, ale nie zostanie określony, zostanie wybrany co do implementacji interfejsu w czasie wykonywania. Może to prowadzić do subtelnych błędów w kodzie. Rozważmy następujący przykład kodu.
+Na przykład w przypadku jawnego zaimplementowania tego samego uniwersalnego interfejsu wariantu z różnymi parametrami typu ogólnego w jednej klasie można utworzyć niejednoznaczność. Kompilator nie generuje błędu w tym przypadku, ale nie jest określony, która implementacja interfejsu zostanie wybrana w czasie wykonywania. Może to prowadzić do delikatnych usterek w kodzie. Rozważmy następujący przykład kodu.
 
 ```csharp
 // Simple class hierarchy.
@@ -188,9 +188,9 @@ class Program
 }
 ```
 
-W tym przykładzie jest nieokreślona sposób, w jaki `pets.GetEnumerator` metoda wybiera między `Cat` i `Dog`. Może to spowodować problemy w kodzie.
+W tym przykładzie nie określono `pets.GetEnumerator` metody wybieranej między `Cat` i `Dog`. Może to spowodować problemy w kodzie.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wariancje w interfejsach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [Korzystanie z wariancji dla Func i akcji delegatów ogólnych (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Wariancja w interfejsachC#ogólnych ()](./variance-in-generic-interfaces.md)
+- [Korzystanie z wariancji dla delegatów dla funkcjiC#Func i Action ()](./using-variance-for-func-and-action-generic-delegates.md)

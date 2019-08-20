@@ -1,23 +1,23 @@
 ---
-title: Wyszukiwanie tekstu w dokumentach programu Word (C#)
+title: Znajdowanie tekstu w dokumentach programu WordC#()
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 9f81795c00c29da34bb5f229afb557eb89af6509
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 99a6bc2bb08af47ab725ef94ae8cd77d54cbad0a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487495"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594338"
 ---
-# <a name="finding-text-in-word-documents-c"></a>Wyszukiwanie tekstu w dokumentach programu Word (C#)
-Ten temat rozszerza poprzednich zapytań, aby zrobić coś, co jest użyteczne: Znajdź wszystkie wystąpienia ciągu w dokumencie.  
+# <a name="finding-text-in-word-documents-c"></a>Znajdowanie tekstu w dokumentach programu WordC#()
+Ten temat rozszerza poprzednie zapytania, aby wykonać coś użytecznego: Znajdź wszystkie wystąpienia ciągu w dokumencie.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie przetwarza dokument WordprocessingML, aby znaleźć wszystkie wystąpienia określonego fragmentu tekstu w dokumencie. Aby to zrobić, używamy kwerendę, która wyszukuje ciąg "Hello". W tym przykładzie opiera się na poprzednich przykładach w tym samouczku. Nowe zapytanie jest wywoływane w komentarzach, w poniższym kodzie.  
+ Ten przykład przetwarza dokument WordprocessingML, aby znaleźć wszystkie wystąpienia określonego fragmentu tekstu w dokumencie. W tym celu użyjemy zapytania, które odnajdzie ciąg "Hello". Ten przykład kompiluje się zgodnie z poprzednimi przykładami w tym samouczku. Nowe zapytanie jest wywoływane w komentarzach w poniższym kodzie.  
   
- Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego, w tym przykładzie, zobacz [tworzenie źródłowego dokumentu pakietu Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu, zobacz [Tworzenie źródłowego dokumentu Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
   
- W tym przykładzie użyto klasy znalezione w zestawie WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -172,7 +172,7 @@ StyleName:Code >        Console.WriteLine("Hello World");<
 StyleName:Code >Hello World<  
 ```  
   
- Oczywiście można zmodyfikować wyszukiwania, tak, aby wyszukiwania wierszy z konkretnego stylu. Następujące zapytanie znajdzie wszystkie puste wiersze, które mają styl kodu:  
+ Można oczywiście zmodyfikować wyszukiwanie, tak aby wyszukiwać wiersze o określonym stylu. Poniższe zapytanie znajduje wszystkie puste wiersze, które mają styl kodu:  
   
 ```csharp  
 public static class LocalExtensions  
@@ -318,17 +318,17 @@ class Program
 StyleName:Code ><  
 ```  
   
- Oczywiście w tym przykładzie można wzbogacić wiele sposobów. Na przykład moglibyśmy użyć wyrażeń regularnych do wyszukiwania tekstu, firma Microsoft może wykonać iterację pliki programu Word w określonym katalogu i tak dalej.  
+ Oczywiście ten przykład można rozszerzyć na wiele sposobów. Na przykład możemy używać wyrażeń regularnych do wyszukiwania tekstu, możemy przejść przez wszystkie pliki programu Word w określonym katalogu i tak dalej.  
   
- Należy pamiętać, że w tym przykładzie wykonuje około również tak, jakby zostały napisane w jednym zapytaniu. Ponieważ każda kwerenda jest implementowany w sposób z opóźnieniem, odroczone, każde zapytanie nie daje równoważne wyniki do czasu postanowiliśmy jest zapytanie. Aby uzyskać więcej informacji na temat wykonywania i obliczanie z opóźnieniem, zobacz [wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+ Należy zauważyć, że ten przykład wykonuje około, a także, jeśli został zapisany jako pojedyncze zapytanie. Ponieważ każde zapytanie jest zaimplementowane w opóźniony, odroczony sposób, każde zapytanie nie zwraca wyników, dopóki zapytanie nie zostanie powtórzone. Aby uzyskać więcej informacji na temat wykonywania i oceny z opóźnieniem, zobacz [odroczone wykonywanie i Ocena zC#opóźnieniem w LINQ to XML ()](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
 ## <a name="next-steps"></a>Następne kroki  
  Następna sekcja zawiera więcej informacji na temat dokumentów WordprocessingML:  
   
-- [Szczegóły pakietu Office otwieranie dokumentów WordprocessingML XML (C#)](../../../../csharp/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)  
+- [Szczegóły programu Office Open XML WordprocessingML DocumentsC#()](./wordprocessingml-document-with-styles.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
-- [Refaktoryzacja przy użyciu czystej funkcji (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
-- [Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Refaktoryzacja przy użyciu czystej funkcji (C#)](./refactoring-using-a-pure-function.md)
+- [Wykonywanie odroczone i Ocena z opóźnieniem w LINQ to XMLC#()](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

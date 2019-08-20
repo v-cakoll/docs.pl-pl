@@ -1,5 +1,5 @@
 ---
-title: -target (opcje kompilatora C#)
+title: -Target (C# opcje kompilatora)
 ms.date: 07/20/2015
 f1_keywords:
 - /target
@@ -9,45 +9,45 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: f29b656a3db08d35692e375fe2175ff75e510941
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0630639433aed4c8dfddbf0144e9802ed3f4ee73
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662429"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606449"
 ---
-# <a name="-target-c-compiler-options"></a>-target (opcje kompilatora C#)
-**-Target** — opcja kompilatora można określić w jednej z czterech form:  
+# <a name="-target-c-compiler-options"></a>-Target (C# opcje kompilatora)
+Opcja kompilatora **-Target** może być określona w jednej z czterech postaci:  
   
- [-target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
- Aby utworzyć plik .exe [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplikacji.  
+ [-target:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
+ Tworzenie pliku exe dla [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplikacji.  
   
- [-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md)  
- Aby utworzyć plik .exe.  
+ [-target:exe](./target-exe-compiler-option.md)  
+ Do utworzenia pliku. exe.  
   
- [-target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md)  
+ [-target:library](./target-library-compiler-option.md)  
  Aby utworzyć bibliotekę kodu.  
   
- [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)  
- Aby utworzyć moduł.  
+ [-target:module](./target-module-compiler-option.md)  
+ Do utworzenia modułu.  
   
- [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)  
- Aby utworzyć Windows program.  
+ [-target:winexe](./target-winexe-compiler-option.md)  
+ Do utworzenia programu systemu Windows.  
   
- [-target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
- Aby utworzyć plik pośredni .winmdobj.  
+ [-target:winmdobj](./target-winmdobj-compiler-option.md)  
+ Aby utworzyć pośredni plik. winmdobj.  
   
- Chyba że określisz **-target: module**, **-target** powoduje, że manifest zestawu .NET Framework, należy umieścić w pliku wyjściowego. Aby uzyskać więcej informacji, zobacz [zestawów w środowisko uruchomieniowe języka wspólnego](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) i [wspólne atrybuty](../../programming-guide/concepts/attributes/common-attributes.md).  
+ O ile nie określono **elementu-target: module**, **-Target** powoduje, że manifest zestawu .NET Framework zostanie umieszczony w pliku wyjściowym. Aby uzyskać więcej informacji, zobacz [zestawy w środowisku uruchomieniowym języka wspólnego](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) i [wspólnych atrybutach](../../programming-guide/concepts/attributes/common-attributes.md).  
   
- Manifest zestawu jest umieszczany w pierwszym pliku wyjściowego .exe w kompilacji lub w pierwszym pliku DLL, jeśli nie ma żadnego pliku wyjściowego .exe. Na przykład, w wierszu polecenia następujące manifestu zostaną umieszczone w `1.exe`:  
+ Manifest zestawu jest umieszczany w pierwszym pliku wyjściowym exe w kompilacji lub w pierwszej bibliotece DLL, jeśli nie ma pliku wyjściowego. exe. Na przykład w następującym wierszu polecenia manifest zostanie umieszczony w `1.exe`:  
   
 ```console  
 csc -out:1.exe t1.cs -out:2.netmodule t2.cs  
 ```  
   
- Kompilator tworzy tylko jeden manifest zestawu kompilacji. Informacje o wszystkich plikach w zestawieniu jest umieszczany w manifeście zestawu. Wszystkie pliki, z wyjątkiem tych utworzonych za pomocą wyjściowe **-target: module** może zawierać manifest zestawu. Podczas produkowania wiele plików wyjściowych w wierszu polecenia, można utworzyć tylko jedną manifestu dla aplikacji i musi przejść do pierwszego pliku wyjściowego, określone w wierszu polecenia. Niezależnie od tego, jakie pierwszy plik wyjściowy jest (**-target: exe**, **-target: winexe**, **-target: library** lub **-target: module**) wszystkie inne pliki wyjściowe utworzone w tej samej kompilacji musi być modułów (**-target: module**).  
+ Kompilator tworzy tylko jeden manifest zestawu na kompilację. Informacje o wszystkich plikach w kompilacji są umieszczane w manifeście zestawu. Wszystkie pliki wyjściowe z wyjątkiem plików utworzonych za pomocą **elementu-target: module** mogą zawierać manifest zestawu. W przypadku tworzenia wielu plików wyjściowych w wierszu polecenia można utworzyć tylko jeden manifest zestawu i musi on przejść do pierwszego pliku wyjściowego określonego w wierszu polecenia. Niezależnie od tego, jaki pierwszy plik wyjściowy jest ( **-target: exe**, **-target: winexe**, **-target: Library** lub **-target: module**), wszystkie inne pliki wyjściowe utworzone w tej samej kompilacji muszą być modułami ( **-target: module**).  
   
- Jeśli utworzysz zestaw, można wskazać, że całość lub część kodu jest zgodne ze specyfikacją CLS <xref:System.CLSCompliantAttribute> atrybutu.  
+ W przypadku utworzenia zestawu można wskazać, że całość lub część kodu jest zgodna ze specyfikacją CLS z <xref:System.CLSCompliantAttribute> atrybutem.  
   
 ```csharp  
 // target_clscompliant.cs  
@@ -60,10 +60,10 @@ public class TestClass
 }  
 ```  
   
- Aby uzyskać więcej informacji na temat programowego ustawiania tę opcję kompilatora, zobacz <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Aby uzyskać więcej informacji o tym, jak można programowo ustawić <xref:VSLangProj80.ProjectProperties3.OutputType%2A>tę opcję kompilatora, zobacz.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opcje kompilatora C#](./index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
-- [-subsystemversion (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
+- [-subsystemversion (C# opcje kompilatora)](./subsystemversion-compiler-option.md)

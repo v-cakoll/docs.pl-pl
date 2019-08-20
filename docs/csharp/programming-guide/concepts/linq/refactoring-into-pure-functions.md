@@ -2,35 +2,35 @@
 title: Refaktoryzacja do czystych funkcji (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 0ddf3eb937f0ff9ee6b0ce289d73be7640499ba4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d6e8657da0f7db06d2fdbe1231bdc48e1aa0f954
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483991"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591339"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refaktoryzacja do czystych funkcji (C#)
 
-Ważnym aspektem czystych przekształceń funkcjonalnych jest nauki refaktoryzacji kodu przy użyciu czystej funkcji.  
+Ważnym aspektem czystych transformacji funkcjonalnych jest uczenie się, jak kod refaktoryzacji przy użyciu czystych funkcji.  
   
 > [!NOTE]
->  Powszechne nazewnictwo w programowania funkcjonalnego jest Refaktoryzacja programach przy użyciu czystych funkcji. W języku Visual Basic i C++ to zgodne z korzystania z funkcji w odpowiednich języków. Jednak w języku C#, funkcje są wywoływane metody. Dla celów tej dyskusji czystej funkcji jest wdrażany jako metoda w języku C#.  
+>  Wspólna Nomenklatura w programowaniu funkcjonalnym polega na tym, że programy refaktoryzacji używają czystych funkcji. W Visual Basic i C++, jest to zgodne z użyciem funkcji w odpowiednich językach. Jednak w programie C#funkcje są nazywane metodami. Na potrzeby tej dyskusji czysta funkcja jest implementowana jako metoda w C#.  
   
- Jak wspomniano wcześniej w tej sekcji, czystej funkcji ma dwie właściwości przydatne:  
+ Jak wspomniano wcześniej w tej sekcji, czysta funkcja ma dwie przydatne cechy:  
   
-- Nie ma żadnych efektów ubocznych. Funkcja nie zmienia żadnych zmiennych lub danych dowolnego typu spoza tej funkcji.  
+- Nie ma żadnych efektów ubocznych. Funkcja nie zmienia żadnych zmiennych ani danych dowolnego typu poza funkcją.  
   
-- Jest ona zgodna. Biorąc pod uwagę ten sam zestaw danych wejściowych, która zawsze zwraca tę samą wartość w danych wyjściowych.  
+- Jest ona spójna. Mając ten sam zestaw danych wejściowych, zawsze zwróci tę samą wartość wyjściową.  
   
- Jednym ze sposobów przechodzenia do programowania funkcyjnego jest Przeprowadź refaktoryzację istniejącego kodu, aby wyeliminować niepotrzebne efekty uboczne i zależności zewnętrznych. W ten sposób można utworzyć wersji czystą funkcję istniejącego kodu.  
+ Jednym ze sposobów przejścia do programowania funkcjonalnego jest Refaktoryzacja istniejącego kodu w celu wyeliminowania zbędnych efektów ubocznych i zewnętrznych zależności. W ten sposób można utworzyć czystą wersję funkcji istniejącego kodu.  
   
- W tym temacie omówiono funkcja czystego jest i co nie jest. [Samouczka: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) samouczek przedstawia sposób modyfikowania dokumentu WordprocessingML i zawiera dwa przykłady jak Refaktoryzacja, przy użyciu czystej funkcji.  
+ W tym temacie omówiono czystą funkcję i jej znaczenie. [Samouczek: Manipulowanie zawartością w samouczku WordprocessingML DocumentC#(](./shape-of-wordprocessingml-documents.md) ) pokazuje, jak manipulować dokumentem WordprocessingML i zawiera dwa przykłady sposobu refaktoryzacji przy użyciu czystej funkcji.  
   
-## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminując skutki uboczne i zależności zewnętrznych  
- Poniższe przykłady porównać dwie funkcje — czyste i czystą funkcję.  
+## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminowanie efektów ubocznych i zależności zewnętrznych  
+ Poniższe przykłady różnią się dwoma nieczystymi funkcjami i czystą funkcją.  
   
-### <a name="non-pure-function-that-changes-a-class-member"></a>Czystej funkcji, która zmienia składowej klasy  
- W poniższym kodzie `HyphenatedConcat` funkcja nie jest funkcją czystego, ponieważ modyfikuje `aMember` element członkowski danych w klasie:  
+### <a name="non-pure-function-that-changes-a-class-member"></a>Nieczysta funkcja, która zmienia element członkowski klasy  
+ W poniższym kodzie `HyphenatedConcat` funkcja nie jest czystą funkcją, ponieważ `aMember` modyfikuje element członkowski danych w klasie:  
   
 ```csharp  
 public class Program  
@@ -56,10 +56,10 @@ public class Program
 StringOne-StringTwo  
 ```  
   
- Zwróć uwagę, że jej nie ma znaczenia tego, czy ma modyfikacji danych `public` lub `private` dostępu lub jest `static` elementu członkowskiego lub elementu członkowskiego wystąpienia. Czystą funkcję nie zmienia żadnych danych poza funkcją.  
+ Należy zauważyć, że nie ma znaczenia, czy modyfikowane `public` dane `private` mają `static` dostęp, czy też jest członkiem lub wystąpieniem. Czysta funkcja nie zmienia żadnych danych poza funkcją.  
   
-### <a name="non-pure-function-that-changes-an-argument"></a>Czystej funkcji, która zmienia argumentu  
- Ponadto, następująca wersja tej samej funkcji nie jest czysty ponieważ modyfikuje zawartość jako parametr `sb`.  
+### <a name="non-pure-function-that-changes-an-argument"></a>Nieczysta funkcja, która zmienia argument  
+ Ponadto następująca wersja tej samej funkcji nie jest czysta, ponieważ modyfikuje zawartość jej parametru, `sb`.  
   
 ```csharp  
 public class Program  
@@ -78,13 +78,13 @@ public class Program
 }  
 ```  
   
- Ta wersja programu daje takie same dane wyjściowe jako pierwsza wersja, ponieważ `HyphenatedConcat` funkcja została zmieniona wartość (stan) jako pierwszy parametr, wywołując <xref:System.Text.StringBuilder.Append%2A> funkcja elementu członkowskiego. Uwaga występowanie tej zmiany, pomimo faktu, `HyphenatedConcat` używa wywołań przez wartość parametru przekazywania.  
+ Ta wersja programu daje te same dane wyjściowe co pierwsza wersja, ponieważ `HyphenatedConcat` funkcja zmieniła wartość (stan) pierwszego parametru przez <xref:System.Text.StringBuilder.Append%2A> wywołanie funkcji członkowskiej. Należy zauważyć, że ta zmiana występuje pomimo tego `HyphenatedConcat` faktu, który używa przekazywania parametrów wywołania przez wartość.  
   
 > [!IMPORTANT]
->  Dla typów odwołań w przypadku przekazania parametr przez wartość, jej powoduje kopię odwołanie do obiektu przekazywana. Ta kopia jest nadal skojarzone z tymi samymi danymi wystąpienia jako odwołanie do oryginalnego (aż do zmiennej odwołania jest przypisany do nowego obiektu). Wywołanie przez odwołanie nie jest zawsze wymagane dla funkcji zmodyfikować parametr.  
+>  W przypadku typów referencyjnych, Jeśli przekażesz parametr według wartości, wynikiem jest kopia odwołania do obiektu, który jest przekazywany. Ta kopia jest nadal skojarzona z tymi samymi danymi wystąpienia co oryginalne odwołanie (do momentu przypisania zmiennej odniesienia do nowego obiektu). Wywołanie przez odwołanie nie musi być wymagane do zmodyfikowania parametru przez funkcję.  
   
-### <a name="pure-function"></a>Czystej funkcji  
-Ta następnej wersji programu przedstawia sposób implementowania `HyphenatedConcat` pełnią czystą funkcję.  
+### <a name="pure-function"></a>Czysta funkcja  
+Ta Następna wersja programu pokazuje, jak zaimplementować `HyphenatedConcat` funkcję jako czystą funkcję.  
   
 ```csharp  
 class Program  
@@ -103,16 +103,16 @@ class Program
 }  
 ```  
   
- Ponownie generuje ten sam wiersz danych wyjściowych w tej wersji: `StringOne-StringTwo`. Należy pamiętać, aby zachować wartość połączone, jest on przechowywany w zmiennej pośrednich `s2`.  
+ Ta wersja generuje ten sam wiersz danych wyjściowych: `StringOne-StringTwo`. Należy pamiętać, że aby zachować łączną wartość, jest ona przechowywana w zmiennej `s2`pośredniej.  
   
- Jedno podejście, które mogą być bardzo przydatne jest napisanie funkcje, które są lokalnie oczyścić zanieczyszczony (oznacza to, mogą zadeklarować i modyfikowanie zmiennych lokalnych), ale są globalnie czysty. Takie funkcje, ma wiele cech pożądane możliwości tworzenia, ale uniknąć niektórych bardziej zawiłe funkcjonalności idiomy programowania, takich jak konieczności rekursję, gdy prostej pętli może osiągnąć to samo.  
+ Jednym z metod, które może być bardzo przydatne, jest zapisanie funkcji, które są w sposób nieczysty (to oznacza, że deklarują i modyfikują zmienne lokalne), ale są globalnie czyste. Takie funkcje mają wiele pożądanych cech tworzenia, ale unikają niektórych bardziej zawiłeych idiomy programowania, takich jak korzystanie z rekursji, gdy pętla prosta osiągnie tę samą wartość.  
   
 ## <a name="standard-query-operators"></a>Standardowe operatory zapytań  
- Ważną cechą standardowych operatorów zapytań jest, że są implementowane jako czystych funkcji.  
+ Ważną cechą standardowych operatorów zapytań jest zaimplementowanie ich jako czystych funkcji.  
   
- Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — Przegląd (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań —C#omówienie ()](./standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do czystych przekształceń funkcjonalnych (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Programowanie funkcjonalne a Programowanie imperatywne (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Wprowadzenie do czystych transformacji funkcjonalnych (C#)](./introduction-to-pure-functional-transformations.md)
+- [Programowanie funkcjonalne a Programowanie bezwzględne (C#)](./functional-programming-vs-imperative-programming.md)

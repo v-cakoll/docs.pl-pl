@@ -1,5 +1,5 @@
 ---
-title: według słów kluczowych kontekstowych - C# odwołania
+title: według kontekstowego słowa C# kluczowego — odwołanie
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - by keyword [C#]
 ms.assetid: efe6f0e3-be40-4df2-a144-c7db968ae052
-ms.openlocfilehash: d8632c9fd722a7e9864628013e87b24d7e6633c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23daf2aaf5d9456c76c5b2ac889243b1ed31b077
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661974"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602226"
 ---
 # <a name="by-c-reference"></a>by (odwołanie w C#)
 
-Kontekstowe słowo kluczowe `by` jest używane w klauzuli `group` w wyrażeniu zapytania, co pozwala określić, w jaki sposób powinny zostać zgrupowane zwracane elementy. Aby uzyskać więcej informacji, zobacz artykuł [kluzula group](../../../csharp/language-reference/keywords/group-clause.md).
+Kontekstowe słowo kluczowe `by` jest używane w klauzuli `group` w wyrażeniu zapytania, co pozwala określić, w jaki sposób powinny zostać zgrupowane zwracane elementy. Aby uzyskać więcej informacji, zobacz artykuł [kluzula group](./group-clause.md).
 
 ## <a name="example"></a>Przykład
 
@@ -27,4 +27,4 @@ W poniższym przykładzie przedstawiono użycie kontekstowego słowa kluczowego 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Wyrażenia zapytania LINQ](../../programming-guide/linq-query-expressions/index.md)

@@ -1,5 +1,5 @@
 ---
-title: <example> - C# Przewodnik programowania
+title: <example> — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: 16b4e8d2d62c2930411bb61abd4d4b65ab7989fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e81a95102100d3b0f3fdc84cf2113abf6ae35351
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708213"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588129"
 ---
-# <a name="example-c-programming-guide"></a>\<przykład > (C# Programming Guide)
+# <a name="example-c-programming-guide"></a>\<przykład > (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -25,17 +25,17 @@ ms.locfileid: "61708213"
   
 ## <a name="parameters"></a>Parametry  
  `description`  
- Opis przykładowego kodu.  
+ Opis przykładu kodu.  
   
 ## <a name="remarks"></a>Uwagi  
- \<Przykład > należy określić przykładem przedstawiającym sposób użycia metody lub innego członka biblioteki. Często wiąże się to przy użyciu [ \<kodu >](../../../csharp/programming-guide/xmldoc/code.md) tagu.  
+ \<Przykładowy tag > pozwala określić przykład użycia metody lub innego elementu członkowskiego biblioteki. Zwykle obejmuje to użycie [ \<tagu Code >](./code.md) .  
   
- Kompiluj przy użyciu [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) do Przetwarzaj komentarze dokumentacji do pliku.  
+ Kompiluj z [/doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Zalecane tagi przeznaczone do komentarzy dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

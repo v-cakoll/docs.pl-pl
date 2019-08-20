@@ -1,48 +1,48 @@
 ---
-title: XDocument, klasa — Przegląd (C#)
+title: Klasa XDocument — OmówienieC#()
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
-ms.openlocfilehash: bf666a95cbb31a3ac808b5c10a37dffdaeed939f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: de49dc071d22dd77dddea29ca114663261e3edda
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483167"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590841"
 ---
-# <a name="xdocument-class-overview-c"></a>XDocument, klasa — Przegląd (C#)
-W tym temacie przedstawiono <xref:System.Xml.Linq.XDocument> klasy.  
+# <a name="xdocument-class-overview-c"></a>Klasa XDocument — OmówienieC#()
+Ten temat zawiera wprowadzenie <xref:System.Xml.Linq.XDocument> do klasy.  
   
-## <a name="overview-of-the-xdocument-class"></a>Omówienie XDocument, klasa  
- <xref:System.Xml.Linq.XDocument> Klasa zawiera informacje niezbędne do prawidłowy dokument XML. Dotyczy to również deklaracji XML, takich jak przetwarzanie instrukcji i komentarze.  
+## <a name="overview-of-the-xdocument-class"></a>Przegląd klasy XDocument  
+ <xref:System.Xml.Linq.XDocument> Klasa zawiera informacje niezbędne do prawidłowego dokumentu XML. Obejmuje to deklarację XML, instrukcje przetwarzania i komentarze.  
   
- Należy zauważyć, że trzeba utworzyć <xref:System.Xml.Linq.XDocument> obiekty, jeśli potrzebujesz określonej funkcje udostępniane przez <xref:System.Xml.Linq.XDocument> klasy. W wielu sytuacjach może współpracować bezpośrednio z <xref:System.Xml.Linq.XElement>. Praca bezpośrednio z <xref:System.Xml.Linq.XElement> jest prostsze modelu programowania.  
+ Należy pamiętać, że tylko należy utworzyć <xref:System.Xml.Linq.XDocument> obiekty, jeśli wymagane są konkretne funkcje dostarczone <xref:System.Xml.Linq.XDocument> przez klasę. W wielu przypadkach można bezpośrednio korzystać z <xref:System.Xml.Linq.XElement>programu. Praca bezpośrednio z <xref:System.Xml.Linq.XElement> programem to prostszy model programowania.  
   
- <xref:System.Xml.Linq.XDocument> pochodzi od klasy <xref:System.Xml.Linq.XContainer>. W związku z tym może zawierać węzłów podrzędnych. Jednak <xref:System.Xml.Linq.XDocument> obiekty mogą mieć tylko jeden element podrzędny <xref:System.Xml.Linq.XElement> węzła. Odzwierciedla standardu XML, że może istnieć tylko jeden element główny dokumentu XML.  
+ <xref:System.Xml.Linq.XDocument>pochodzi od <xref:System.Xml.Linq.XContainer>. W związku z tym może zawierać węzłów podrzędnych. Jednak obiekty mogą mieć tylko jeden węzeł podrzędny <xref:System.Xml.Linq.XElement>. <xref:System.Xml.Linq.XDocument> Odzwierciedla to standard XML, że w dokumencie XML może istnieć tylko jeden element główny.  
   
-## <a name="components-of-xdocument"></a>Składniki XDocument  
+## <a name="components-of-xdocument"></a>Składniki klasy XDocument  
  <xref:System.Xml.Linq.XDocument> Może zawierać następujące elementy:  
   
-- Jeden <xref:System.Xml.Linq.XDeclaration> obiektu. <xref:System.Xml.Linq.XDeclaration> można określić odpowiednie części deklaracji XML: Wersja XML, kodowania dokumentu, oraz czy dokument XML jest autonomicznym.  
+- Jeden <xref:System.Xml.Linq.XDeclaration> obiekt. <xref:System.Xml.Linq.XDeclaration>umożliwia określenie odpowiednich części deklaracji XML: wersji XML, kodowania dokumentu oraz tego, czy dokument XML jest autonomiczny.  
   
-- Jeden <xref:System.Xml.Linq.XElement> obiektu. Jest to węzeł główny dokumentu XML.  
+- Jeden <xref:System.Xml.Linq.XElement> obiekt. Jest to główny węzeł dokumentu XML.  
   
-- Dowolną liczbę <xref:System.Xml.Linq.XProcessingInstruction> obiektów. Instrukcja przetwarzania komunikuje się informacji do aplikacji, która przetwarza dane XML.  
+- Dowolna liczba <xref:System.Xml.Linq.XProcessingInstruction> obiektów. Instrukcja przetwarzania komunikuje informacje z aplikacją, która przetwarza kod XML.  
   
-- Dowolną liczbę <xref:System.Xml.Linq.XComment> obiektów. Komentarze będą powiązane z elementem głównym. <xref:System.Xml.Linq.XComment> Obiekt nie może być pierwszy argument na liście, ponieważ nie jest prawidłowy dla dokumentu XML, można uruchomić z komentarzem.  
+- Dowolna liczba <xref:System.Xml.Linq.XComment> obiektów. Komentarze będą elementy równorzędne z elementem głównym. <xref:System.Xml.Linq.XComment> Obiekt nie może być pierwszym argumentem na liście, ponieważ nie jest on prawidłowy dla dokumentu XML, aby można było zacząć od komentarza.  
   
-- Jeden <xref:System.Xml.Linq.XDocumentType> DTD.  
+- Jeden <xref:System.Xml.Linq.XDocumentType> dla DTD.  
   
- Podczas serializacji <xref:System.Xml.Linq.XDocument>, nawet jeśli `XDocument.Declaration` jest `null`, dane wyjściowe będą mieć deklaracji XML, jeśli moduł zapisujący `Writer.Settings.OmitXmlDeclaration` równa `false` (ustawienie domyślne).  
+ W przypadku serializacji elementu <xref:System.Xml.Linq.XDocument>, nawet jeśli `XDocument.Declaration` jest `null`, wynik będzie miał deklarację `false` XML, jeśli moduł zapisujący `Writer.Settings.OmitXmlDeclaration` ma ustawioną wartość (wartość domyślna).  
   
- Domyślnie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ustawia wersji "1.0" i ustawia kodowanie "utf-8".  
+ Domyślnie program [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ustawia wersję na "1,0" i ustawia kodowanie na "UTF-8".  
   
-## <a name="using-xelement-without-xdocument"></a>Za pomocą klasy XElement bez klasy XDocument  
- Jak wcześniej wspomniano, <xref:System.Xml.Linq.XElement> klasa jest klasą głównego w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] interfejs programowania. W wielu przypadkach, Twoja aplikacja nie będzie wymagać tworzenia dokumentu. Za pomocą <xref:System.Xml.Linq.XElement> klasy, można utworzyć drzewa XML, dodać inne drzew XML do niego, modyfikowanie drzewa XML i zapisz go.  
+## <a name="using-xelement-without-xdocument"></a>Korzystanie z XElement bez klasy XDocument  
+ Jak wspomniano wcześniej, <xref:System.Xml.Linq.XElement> Klasa jest klasą główną [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] w interfejsie programowania. W wielu przypadkach aplikacja nie będzie wymagać tworzenia dokumentu. Korzystając z <xref:System.Xml.Linq.XElement> klasy, można utworzyć drzewo XML, dodać do niego inne drzewa XML, zmodyfikować drzewo XML i zapisać.  
   
-## <a name="using-xdocument"></a>Za pomocą klasy XDocument  
- Do konstruowania <xref:System.Xml.Linq.XDocument>, użyj konstrukcja funkcjonalna tak samo, jak możesz zrobić, aby skonstruować <xref:System.Xml.Linq.XElement> obiektów.  
+## <a name="using-xdocument"></a>Przy użyciu metody XDocument  
+ Aby utworzyć <xref:System.Xml.Linq.XDocument>obiekt, użyj konstrukcji funkcjonalnej, tak jak w przypadku konstruowania <xref:System.Xml.Linq.XElement> obiektów.  
   
- Poniższy kod tworzy <xref:System.Xml.Linq.XDocument> obiekt i jego skojarzony zawarte obiekty.  
+ Poniższy kod tworzy obiekt i <xref:System.Xml.Linq.XDocument> powiązane z nim obiekty zawarte.  
   
 ```csharp  
 XDocument d = new XDocument(  
@@ -67,7 +67,7 @@ Console.WriteLine(d);
 d.Save("test.xml");  
 ```  
   
- Podczas badania test.xml pliku możesz uzyskać następujące wyniki:  
+ Podczas badania pliku test. XML otrzymujesz następujące dane wyjściowe:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -88,4 +88,4 @@ d.Save("test.xml");
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML — przegląd programowania (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [Omówienie programowania LINQ to XML (C#)](./linq-to-xml-overview.md)

@@ -1,16 +1,16 @@
 ---
-title: 'Instrukcje: Zapytanie o zduplikowane pliki w drzewie katalogu (LINQ) (C#)'
+title: 'Instrukcje: Zapytanie o zduplikowane pliki w drzewie katalogów (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: a4d7ece3c69db294437ac0ca41ed5b1a3307e524
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f9d045aa2e9cc11fdb4de202d03f76f85bac6500
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584339"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592880"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Instrukcje: Zapytanie o zduplikowane pliki w drzewie katalogu (LINQ) (C#)
-Czasami pliki, które mają taką samą nazwę mogą znajdować się w więcej niż jeden folder. Na przykład kilka folderów w folderze instalacyjnym programu Visual Studio mają pliku readme.htm. W tym przykładzie pokazano, jak utworzyć zapytanie dotyczące takich zduplikowane nazwy plików w folderze określonym katalogu głównym. Drugi przykład przedstawia sposób wysyłania kwerend do plików, których rozmiar i czas tworzenia również zgodna.  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Instrukcje: Zapytanie o zduplikowane pliki w drzewie katalogów (LINQ) (C#)
+Czasami pliki o tej samej nazwie mogą znajdować się w więcej niż jednym folderze. Na przykład w folderze instalacyjnym programu Visual Studio kilka folderów zawiera plik Readme. htm. Ten przykład pokazuje, jak wykonać zapytanie o takie zduplikowane nazwy plików w określonym folderze głównym. Drugi przykład pokazuje, jak wykonywać zapytania dotyczące plików, których rozmiar i czasy tworzenia są również zgodne.  
   
 ## <a name="example"></a>Przykład  
   
@@ -167,12 +167,12 @@ class QueryDuplicateFileNames
 }  
 ```  
   
- Pierwsze zapytanie używa klucza proste ustalenie dopasowania; znajduje to pliki, które mają taką samą nazwę, ale których zawartość może się różnić. Drugie zapytanie używa klucza złożonego do dopasowywania trzy właściwości <xref:System.IO.FileInfo> obiektu. To zapytanie jest znacznie bardziej prawdopodobne znaleźć pliki, które mają taką samą nazwę i zawartość podobne lub identyczne.  
+ Pierwsze zapytanie używa prostego klucza w celu określenia dopasowania; spowoduje to znalezienie plików o tej samej nazwie, ale których zawartość może się różnić. Drugie zapytanie używa klucza złożonego, aby dopasować się do trzech właściwości <xref:System.IO.FileInfo> obiektu. To zapytanie jest znacznie bardziej prawdopodobnie, aby znaleźć pliki o tej samej nazwie i podobnej lub identycznej zawartości.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie C# konsoli projekt aplikacji z `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
+ Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)

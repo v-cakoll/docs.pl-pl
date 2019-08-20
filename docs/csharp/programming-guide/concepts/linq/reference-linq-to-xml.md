@@ -2,23 +2,23 @@
 title: Odwołanie (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 815b45e2-3527-4dee-9986-b1277a693cde
-ms.openlocfilehash: f1233b77ede52cfafef41cadec3316673e9e7599
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: b33e1ddbecb6be46f2ee9b6ce043c12c345fcf21
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483874"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591273"
 ---
 # <a name="reference-linq-to-xml"></a>Odwołanie (LINQ to XML)
-Ten temat zawiera łącza do programu LINQ to XML tematy referencyjne.  
+Ten temat zawiera linki do tematów referencyjnych LINQ to XML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- Aby uzyskać dokumentację referencyjną dla klasy programu LINQ to XML, zobacz <xref:System.Xml.Linq>.  
+ Aby uzyskać dokumentację referencyjną dla klas LINQ to XML, <xref:System.Xml.Linq>Zobacz.  
   
- Dla odwołania do dokumentacji dla metody rozszerzenia, które pomagają zweryfikować drzew XML względem pliku XSD, zobacz <xref:System.Xml.Schema.Extensions?displayProperty=nameWithType>.  
+ Dokumentacja referencyjna dla metod rozszerzających, które pomagają w sprawdzeniu drzew XML względem pliku XSD, <xref:System.Xml.Schema.Extensions?displayProperty=nameWithType>znajduje się w temacie.  
   
- Aby uzyskać dokumentację referencyjną dla metody rozszerzenia, które umożliwiają ocenę kwerendy XPath dla drzewa XML, zobacz <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
+ Dokumentacja referencyjna dla metod rozszerzających, które umożliwiają ocenę zapytań XPath w drzewie XML, znajduje się w <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>temacie.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [LINQ to XML (C#)](./linq-to-xml-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: -langversion (opcje kompilatora C#)
+title: -langversion (C# opcje kompilatora)
 ms.date: 05/14/2018
 f1_keywords:
 - /langversion
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 030af5df222772b1e5a4d6f6946e59f4f2d1e1a9
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 5675099f66ec99c652ef95a5328f31c360e2dc59
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195800"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602830"
 ---
-# <a name="-langversion-c-compiler-options"></a>-langversion (opcje kompilatora C#)
+# <a name="-langversion-c-compiler-options"></a>-langversion (C# opcje kompilatora)
 
-Powoduje, że kompilator, aby zaakceptować składni, który znajduje się w wybranym specyfikacja języka C#.  
+Powoduje, że kompilator akceptuje tylko składnię, która jest zawarta w wybranej C# specyfikacji języka.  
   
 ## <a name="syntax"></a>Składnia  
 
@@ -32,34 +32,34 @@ Powoduje, że kompilator, aby zaakceptować składni, który znajduje się w wyb
   
 |Opcja|Znaczenie|  
 |------------|-------------|  
-|wersja zapoznawcza|Kompilator akceptuje wszystkie składni języka prawidłowy z najnowszej wersji (wersja zapoznawcza), który może obsługiwać.|
-|najnowsza|Kompilator akceptuje wszystkie składni języka prawidłowy z najnowszej wersji (w tym pomocnicze wersje), który może obsługiwać.|
-|latestMajor|Kompilator akceptuje wszystkie składni języka prawidłowy z najnowszej wersji głównej, która może obsługiwać.|
-|8.0|Kompilator akceptuje tylko w przypadku składni, która znajduje się w C# 8.0 lub niższą. <sup id="TCS80">[CS80](#FCS80)</sup>|
-|7.3|Kompilator akceptuje tylko w przypadku składni, która jest dostępna w języku C# 7.3 lub niższy <sup id="TCS73"> [CS73](#FCS73)</sup>|
-|7.2|Kompilator akceptuje składni, która jest dostępna w języku C# 7.2 lub niższą <sup id="TCS72"> [CS72](#FCS72)</sup>|
-|7.1|Kompilator akceptuje tylko w przypadku składni, która jest zawarty w języku C# 7.1 lub niższą <sup id="TCS71"> [CS71](#FCS71)</sup>|
-|7|Kompilator akceptuje tylko w przypadku składni, która jest zawarty w języku C# 7.0 lub niższą <sup id="TCS7"> [CS7](#FCS7)</sup>|
-|6|Kompilator akceptuje tylko w przypadku składni, która jest zawarty w języku C# 6.0 lub niższą <sup id="TCS6"> [CS6](#FCS6)</sup>|
-|5|Kompilator akceptuje tylko w przypadku składni, która jest dostępna w języku C# w wersji 5.0 lub niższe <sup id="TCS5"> [CS5](#FCS5)</sup>|
-|4|Kompilator akceptuje tylko w przypadku składni, która jest dostępna w języku C# 4.0 lub niższy <sup id="TCS4"> [CS4](#FCS4)</sup>|
-|3|Kompilator akceptuje tylko w przypadku składni, która jest zawarty w języku C# 3.0 lub niższą <sup id="TCS3"> [CS3](#FCS3)</sup>|
-|ISO-2|Kompilator akceptuje tylko w przypadku składni, która znajduje się w 23270:2006 ISO/IEC C# (2.0) <sup id="TISO2"> [ISO2](#FISO2)</sup>|
-|ISO-1|Kompilator akceptuje tylko składnię, który znajduje się w 23270:2003 ISO/IEC C# (1.0/1.2) <sup id="TISO1"> [ISO1](#FISO1)</sup>|  
+|wersja zapoznawcza|Kompilator akceptuje wszystkie prawidłowe składnie języka od najnowszej wersji zapoznawczej, którą może obsłużyć.|
+|najnowsza|Kompilator akceptuje całą poprawną składnię języka od najnowszej wersji (w tym wydań pomocniczych), którą może obsłużyć.|
+|latestMajor|Kompilator akceptuje wszystkie prawidłowe składnie języka od najnowszej wersji głównej, którą może obsłużyć.|
+|8.0|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 8,0 lub niższej. <sup id="TCS80">[CS80](#FCS80)</sup>|
+|7.3|Kompilator akceptuje tylko składnię zawartą w C# 7,3 lub niższej <sup id="TCS73">CS73</sup>|
+|7.2|Kompilator akceptuje tylko składnię zawartą w C# 7,2 lub niższej <sup id="TCS72">CS72</sup>|
+|7.1|Kompilator akceptuje tylko składnię zawartą w C# 7,1 lub niższej <sup id="TCS71">CS71</sup>|
+|7|Kompilator akceptuje tylko składnię zawartą w C# 7,0 lub niższej <sup id="TCS7">CS7</sup>|
+|6|Kompilator akceptuje tylko składnię zawartą w C# 6,0 lub niższej <sup id="TCS6">CS6</sup>|
+|5|Kompilator akceptuje tylko składnię zawartą w C# 5,0 lub niższej <sup id="TCS5">CS5</sup>|
+|4|Kompilator akceptuje tylko składnię zawartą w C# 4,0 lub niższej wersji programu <sup id="TCS4">CS4</sup>|
+|3|Kompilator akceptuje tylko składnię zawartą w C# 3,0 lub niższej <sup id="TCS3"></sup>|
+|ISO-2|Kompilator akceptuje tylko składnię zawartą w ISO/IEC 23270:2006 C# (2,0) <sup id="TISO2">ISO2</sup>|
+|ISO-1|Kompilator akceptuje tylko składnię zawartą w ISO/IEC 23270:2003 C# (1.0/1.2) <sup id="TISO1">ISO1</sup>|  
 
 ## <a name="remarks"></a>Uwagi
 
- Metadane odwołuje się aplikacja C# nie jest podlegają **- langversion** — opcja kompilatora.  
+ Metadane przywoływane C# przez aplikację nie podlegają opcji kompilatora **langversion** .  
   
- Ponieważ każda wersja kompilatora języka C# zawiera rozszerzenia do specyfikacji języka **- langversion** nie daje równoważne funkcje starszej wersji kompilatora.  
+ Ponieważ każda wersja C# kompilatora zawiera rozszerzenia specyfikacji języka, **-langversion** nie zapewnia równoważnej funkcjonalności starszej wersji kompilatora.  
 
- Ponadto podczas aktualizacji wersji języka C# zazwyczaj pokrywa się z głównymi wersjami .NET Framework, nową składnię i funkcje nie są zawsze związane z danej wersji określonym środowiskiem. Podczas gdy nowe funkcje wymagają zdecydowanie nowych aktualizacji kompilatora, która został wydany również obok wersji języka C#, każdą konkretną funkcję ma swój własny minimalny interfejs API platformy .NET lub wspólne wymagania środowiska uruchomieniowego języka, które mogą zezwolić na jego uruchomienie na struktur niskiego poziomu, umieszczając Pakiety NuGet lub inne biblioteki.
+ Ponadto, chociaż C# aktualizacje wersji zwykle pokrywają się z głównymi wersjami .NET Framework, Nowa składnia i funkcje nie muszą być powiązane z tą określoną wersją platformy. Nowe funkcje w nieskończoność wymagają nowej aktualizacji kompilatora, która jest również wydawana C# wraz z poprawką, każda konkretna funkcja ma własne wymagania dotyczące minimalnych interfejsów API platformy .NET lub środowiska uruchomieniowego języka wspólnego, które mogą umożliwić uruchomienie go na platformach o niższych wartościach przez łącznie z pakietami NuGet lub innymi bibliotekami.
   
- Niezależnie od tego, który **- langversion** ustawienie użycia, użyjesz bieżącą wersję środowiska uruchomieniowego języka wspólnego do utworzenia Twojego .exe lub .dll. Jedynym wyjątkiem jest przyjaznych zestawów i [- moduleassemblyname (C# — opcja kompilatora)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), które działają w ramach **- langversion: ISO-1**.  
+ Niezależnie od tego, które ustawienie jest używane, użyjesz bieżącej wersji środowiska uruchomieniowego języka wspólnego, aby utworzyć plik. exe lub. dll. Jedynym wyjątkiem są zestawy zaprzyjaźnione i [-moduleassemblyname —C# (opcja kompilatora)](./moduleassemblyname-compiler-option.md), które działają w **langversion: ISO-1**.  
 
- Aby poznać inne sposoby Określ wersję języka C#, zobacz [wybierz wersję języka C#](../configure-language-version.md) tematu.
+ Aby poznać inne sposoby określania wersji C# językowej, zobacz temat [Wybieranie wersji C# językowej](../configure-language-version.md) .
   
- Aby dowiedzieć się, jak programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>.  
+ Aby uzyskać informacje na temat sposobu, w jaki można programowo ustawić <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>tę opcję kompilatora, zobacz.  
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -70,24 +70,24 @@ Powoduje, że kompilator, aby zaakceptować składni, który znajduje się w wyb
 
 |Wersja|Łącze|Opis|
 |-------|----|-----------|
-|C# 7.0 lub nowszy||nie jest obecnie dostępna|
-|C# 6.0|[Link](../language-specification/index.md)|Wersja języka C# specyfikacji 6 - nieoficjalny wersja robocza: .NET Foundation|
-|C# 5.0|[Pobierz plik PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|Standard ECMA-334 5th Edition.|
-|C# 3.0|[Pobierz dokument](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|C#Wersja specyfikacji języka 3.0: Microsoft Corporation|
-|C# 2.0|[Pobierz plik PDF](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|Standard ECMA 334 w wersji 4.|
-|C# 1.2|[Pobierz dokument](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|C#Language Specification w wersji 1.2: Microsoft Corporation|
-|C# 1.0|[Pobierz dokument](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|C#Wersja specyfikacji języka 1.0: Microsoft Corporation|
+|C#7,0 i nowsze||obecnie niedostępne|
+|C#6,0|[Link](../language-specification/index.md)|C#Specyfikacja języka w wersji 6 — nieoficjalne wersje robocze: .NET Foundation|
+|C#5,0|[Pobierz plik PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|Standardowa ECMA-334, wersja 5|
+|C#3,0|[Pobierz dokument](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|C#Specyfikacja języka wersja 3,0: Microsoft Corporation|
+|C#2,0|[Pobierz plik PDF](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|Standard ECMA-334 czwarta|
+|C#1,2|[Pobierz dokument](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|C#Specyfikacja języka wersja 1,2: Microsoft Corporation|
+|C#1,0|[Pobierz dokument](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|C#Specyfikacja języka wersja 1,0: Microsoft Corporation|
 
-### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>Wersja minimalna kompilatora potrzebnych do obsługi wszystkie funkcje językowe
+### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>Minimalna wersja kompilatora wymagana do obsługi wszystkich funkcji języka
 
-[↩](#TCS80)<a name="FCS80">CS80</a>: Microsoft Visual Studio/Build Tools 2019, wersji 16 lub zestawu SDK programu .NET Core 3.0  
-[↩](#TCS73)<a name="FCS73">CS73</a>: Microsoft Visual Studio/Build Tools 2017 wersji 15.7  
-[↩](#TCS72)<a name="FCS72">CS72</a>: Microsoft Visual Studio/Build Tools 2017 w wersji 15.5  
-[↩](#TCS71)<a name="FCS71">CS71</a>: Microsoft Visual Studio/Build Tools 2017 w wersji 15.3  
-[↩](#TCS7)<a name="FCS7">CS7</a>: Microsoft Visual Studio/Build Tools 2017  
-[↩](#TCS6)<a name="FCS6">CS6</a>: Microsoft Visual Studio/Build Tools 2015  
-[↩](#TCS5)<a name="FCS5">CS5</a>: Microsoft Visual Studio/Build Tools w wersji 2012 lub powiązane kompilatora programu .NET Framework 4.5  
-[↩](#TCS4)<a name="FCS4">CS4</a>: Microsoft Visual Studio/Build Tools w wersji 2010 lub powiązane kompilatora programu .NET Framework 4.0  
-[↩](#TCS3)<a name="FCS3">CS3</a>: Microsoft Visual Studio/Build Tools w wersji 2008 lub powiązane kompilatora programu .NET Framework 3.5  
-[↩](#TISO2)<a name="FISO2">ISO2</a>: Microsoft Visual Studio/Build Tools w wersji 2005 lub powiązane kompilatora programu .NET Framework 2.0  
-[↩](#TISO1)<a name="FISO1">ISO1</a>: Microsoft Visual Studio/Build Tools .NET 2002 lub powiązane. Kompilator N Framework 1.0  
+[↩](#TCS80)<a name="FCS80">CS80</a>: Narzędzia Microsoft Visual Studio/Build Tools 2019, wersja 16 lub .NET Core 3,0 SDK  
+[↩](#TCS73)<a name="FCS73">CS73</a>: Microsoft Visual Studio/Build Tools 2017, wersja 15,7  
+[↩](#TCS72) <a name="FCS72">CS72</a>: Microsoft Visual Studio/Build Tools 2017, wersja 15,5  
+[↩](#TCS71)<a name="FCS71">CS71</a>: Microsoft Visual Studio/Build Tools 2017, wersja 15,3  
+[↩](#TCS7) <a name="FCS7">CS7</a>: Microsoft Visual Studio/Build Tools 2017  
+[↩](#TCS6) <a name="FCS6">CS6</a>: Microsoft Visual Studio/Build Tools 2015  
+[↩](#TCS5) <a name="FCS5">CS5</a>: Microsoft Visual Studio/Build Tools 2012 lub z pakietem .NET Framework 4,5  
+[↩](#TCS4) <a name="FCS4">CS4</a>: Microsoft Visual Studio/Build Tools 2010 lub z pakietem .NET Framework 4,0  
+[↩](#TCS3) <a name="FCS3">CS3</a>: Microsoft Visual Studio/Build Tools 2008 lub z pakietem .NET Framework 3,5  
+[↩](#TISO2)<a name="FISO2">ISO2</a>: Microsoft Visual Studio/Build Tools 2005 lub z pakietem .NET Framework 2,0  
+[↩](#TISO1)<a name="FISO1">ISO1</a>: Narzędzia Microsoft Visual Studio/Build Tools .NET 2002 lub powiązane z pakietem. N Framework 1,0 — kompilator  

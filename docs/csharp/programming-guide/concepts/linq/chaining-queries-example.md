@@ -1,19 +1,19 @@
 ---
-title: Przykład łączenia łańcuchowego zapytań (C#)
+title: Przykład łańcucha kwerend (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: 8685db7461a1ce97c7a9c0045ed842fa4ac1a1f6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 90c2ba1c9125114f9e26f4afeb3ff6373ff01d9c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486194"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594821"
 ---
-# <a name="chaining-queries-example-c"></a>Przykład łączenia łańcuchowego zapytań (C#)
-W tym przykładzie opiera się na poprzednim przykładzie i pokazuje, co się stanie po użytkownik łańcucha ze sobą dwa zapytania, oba Użyj wykonanie odroczone i obliczanie z opóźnieniem.  
+# <a name="chaining-queries-example-c"></a>Przykład łańcucha kwerend (C#)
+Ten przykład kompiluje się w poprzednim przykładzie i pokazuje, co się dzieje w przypadku łączenia dwóch zapytań, które używają odroczonego wykonania i oceny z opóźnieniem.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wprowadzono inną metodę rozszerzenia, `AppendString`, który dołącza określony ciąg na każdy ciąg znaków w kolekcji źródłowej, a następnie daje nowych parametrów.  
+ W tym przykładzie wprowadzono `AppendString`inną metodę rozszerzenia, która dołącza określony ciąg do każdego ciągu w kolekcji źródłowej, a następnie generuje nowe ciągi.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -78,14 +78,14 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- W tym przykładzie widać, że każda metoda rozszerzenia działa jedną na raz dla każdego elementu w kolekcji źródłowej.  
+ W tym przykładzie można zobaczyć, że każda metoda rozszerzająca działa pojedynczo dla każdego elementu w kolekcji źródłowej.  
   
- Czymś co powinno być jasne, w tym przykładzie jest, mimo że firma Microsoft ma połączone zapytań, które kolekcje, żadne kolekcje pośrednie są zmaterializowany. Zamiast tego każdy element jest przekazywany z jednej metody z opóźnieniem do następnego. Powoduje to dużo mniejsze zużycie pamięci niż podejście, które będą najpierw wykonać jedną tablicę ciągów, a następnie utwórz drugi tablicę ciągów, która został przekonwertowany na wielkie litery, a na koniec Utwórz trzeci tablicę ciągów, w którym każdy ciąg ma wykrzyknika Wskazuje dołączone do niego.  
+ Co powinno być jasne z tego przykładu, chociaż istnieją łańcuchowe zapytania, które przesyłają kolekcje, a żadne kolekcje pośrednie nie są przeznaczone do materiałów. Zamiast tego każdy element jest przesyłany z jednej metody opóźnionej do następnej. Powoduje to znacznie mniejszą ilość pamięci niż podejście, które najpierw przyjmuje jedną tablicę ciągów, a następnie tworzy drugą tablicę ciągów, które zostały przekonwertowane na wielkie litery, i na koniec tworzy trzecią tablicę ciągów, w których każdy ciąg ma wykrzyknik dołączone punkty.  
   
- Następny temat w tym samouczku przedstawiono materializacja pośrednia:  
+ W następnym temacie w tym samouczku przedstawiono materializację pośredni:  
   
-- [Materializacja pośrednia (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+- [Pośredni materializację (C#)](./intermediate-materialization.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Łączenie łańcuchowe zapytań (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Samouczek: Łączenie łańcuchowe zapytań (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

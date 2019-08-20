@@ -1,5 +1,5 @@
 ---
-title: wewnętrzne — C# odwołania
+title: C# odwołanie wewnętrzne
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 9cfbea03a305dd17c07f549901bc91be0e05b792
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 7d97b7b05645b02a31af848c97758c7a1f6423b9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661169"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602083"
 ---
 # <a name="internal-c-reference"></a>internal (odwołanie w C#)
-`internal` Słowo kluczowe jest [modyfikator dostępu](../../../csharp/language-reference/keywords/access-modifiers.md) dla typów i elementów członkowskich typu. 
+Słowo kluczowe jest modyfikatorem dostępu dla typów i elementów członkowskich typu. [](./access-modifiers.md) `internal` 
   
- > Ta strona obejmuje `internal` dostępu. `internal` — Słowo kluczowe jest również częścią [ `protected internal` ](./protected-internal.md) modyfikator dostępu.
+ > Ta strona dotyczy `internal` dostępu. Słowo kluczowe jest również częścią [`protected internal`](./protected-internal.md) modyfikatora dostępu. `internal`
   
-Typy wewnętrzne lub elementy członkowskie są dostępne tylko z poziomu plików w tym samym zestawie, jak w poniższym przykładzie:  
+Typy wewnętrzne lub składowe są dostępne tylko w plikach w tym samym zestawie, jak w poniższym przykładzie:  
   
 ```csharp  
 public class BaseClass   
@@ -30,16 +30,16 @@ public class BaseClass
 }  
 ```  
 
- Porównanie `internal` z innych modyfikatorów dostępu, zobacz [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md) i [modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Aby uzyskać porównanie `internal` z innymi modyfikatorami dostępu, zobacz [poziomy dostępności](./accessibility-levels.md) i Modyfikatory [dostępu](../../programming-guide/classes-and-structs/access-modifiers.md).  
   
- Aby uzyskać więcej informacji na temat zestawów, zobacz [zestawy na platformie .NET](../../../standard/assembly/index.md).  
+ Aby uzyskać więcej informacji o zestawach, zobacz [zestawy w programie .NET](../../../standard/assembly/index.md).  
   
- Typowym zastosowaniem dostępu wewnętrznego jest opracowywany oparty na komponentach, ponieważ umożliwia grupy składników do współpracy w sposób prywatne bez ujawniania w pozostałej części kodu aplikacji. Na przykład można dostarczyć umożliwiająca tworzenie graficznych interfejsów użytkownika `Control` i `Form` klas, które współpracują przy użyciu elementów członkowskich z dostępem do wewnętrznych. Ponieważ te elementy członkowskie są wewnętrzne, nie są one widoczne do kodu, który używa programu framework.  
+ Typowym zastosowaniem dostępu wewnętrznego jest w programowaniu opartym na składnikach, ponieważ umożliwia ono grupom współdziałanie w sposób prywatny bez ujawniania pozostałej części kodu aplikacji. Na przykład struktura do tworzenia graficznych interfejsów użytkownika mogłaby udostępniać `Control` klasy i `Form` współdziałać z użytkownikami z dostępem wewnętrznym. Ponieważ te składowe są wewnętrzne, nie są one widoczne dla kodu, który używa struktury.  
   
- Jest to błąd, aby odwoływać się do typu lub elementu członkowskiego z wewnętrznego dostępem spoza zestawu, w którym został zdefiniowany.  
+ Wystąpił błąd podczas odwoływania się do typu lub elementu członkowskiego z dostępem wewnętrznym poza zestawem, w ramach którego został zdefiniowany.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład zawiera dwa pliki `Assembly1.cs` i `Assembly1_a.cs`. Pierwszy plik zawiera wewnętrzny klasy bazowej `BaseClass`. W drugim pliku, próba utworzenia wystąpienia `BaseClass` powoduje wygenerowanie błędu.  
+ Ten przykład zawiera dwa pliki `Assembly1.cs` i. `Assembly1_a.cs` Pierwszy plik zawiera wewnętrzną klasę `BaseClass`bazową. W drugim pliku próba wystąpienia `BaseClass` spowoduje wystąpienie błędu.  
   
 ```csharp  
 // Assembly1.cs  
@@ -63,7 +63,7 @@ class TestAccess
 ```  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie należy użyć tych samych plików, które są używane w przykładzie 1 i zmienić poziom dostępności `BaseClass` do `public`. Również zmienić poziom dostępności elementu członkowskiego `intM` do `internal`. W takim przypadku można utworzyć wystąpienia klasy, ale nie masz dostępu do wewnętrznego elementu członkowskiego.  
+ W tym przykładzie należy użyć tych samych plików, które zostały użyte w przykładzie 1, i zmienić poziom `BaseClass` dostępności na. `public` Zmień również poziom dostępności elementu członkowskiego `intM` na. `internal` W takim przypadku można utworzyć wystąpienie klasy, ale nie można uzyskać dostępu do wewnętrznego elementu członkowskiego.  
   
 ```csharp  
 // Assembly2.cs  
@@ -89,16 +89,16 @@ public class TestAccess
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
 
-Aby uzyskać więcej informacji, zobacz [zadeklarowana dostępność](~/_csharplang/spec/basic-concepts.md#declared-accessibility) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [zadeklarowane ułatwienia dostępu](~/_csharplang/spec/basic-concepts.md#declared-accessibility) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
-- [Modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [Poziomy ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [private](../../../csharp/language-reference/keywords/private.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](./index.md)
+- [Modyfikatory dostępu](./access-modifiers.md)
+- [Poziomy ułatwień dostępu](./accessibility-levels.md)
+- [Modyfikatory](./modifiers.md)
+- [public](./public.md)
+- [private](./private.md)
+- [protected](./protected.md)

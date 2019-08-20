@@ -1,97 +1,97 @@
 ---
-title: Instrukcje — C# przewodnik programowania
+title: Instrukcje — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 78d40aa2069e56357f55f39c3b7479ee46d0342c
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 4c3421f7165a0b1a3d1c3678fe28334fd8632472
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422829"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588629"
 ---
 # <a name="statements-c-programming-guide"></a>Instrukcje (Przewodnik programowania w języku C#)
-Akcje, które przyjmuje programu są wyrażane w instrukcjach. Typowe akcje obejmują zadeklarowania zmiennych, przypisywania wartości, wywoływanie metod, zapętlenie przez kolekcje i gałęzi do jednej lub drugiej bloku kodu, w zależności od danego warunku. Kolejność, w którym wykonywane są instrukcje w programie nosi nazwę przepływu sterowania lub przepływem wykonania. Przepływ sterowania, mogą się różnić w każdym uruchomieniu programu, w zależności od tego, jak program reaguje na dane wejściowe, że będzie ona otrzymywać w czasie wykonywania.  
+Akcje podejmowane przez program są wyrażone w instrukcjach. Typowe akcje obejmują deklarowanie zmiennych, przypisywanie wartości, wywoływanie metod, zapętlenie za pomocą kolekcji i rozgałęzianie do jednego lub innego bloku kodu, w zależności od danego warunku. Kolejność, w której instrukcje są wykonywane w programie, nazywa się przepływem sterowania lub przepływu wykonania. Przepływ sterowania może się różnić przy każdym uruchomieniu programu, w zależności od tego, jak program reaguje na dane wejściowe w czasie wykonywania.  
   
- Użycie instrukcji może składać się z jednego wiersza kodu, który kończy się średnikiem lub serię instrukcji jeden wiersz w bloku. Blok instrukcji jest ujęty w {} nawiasy kwadratowe i mogą zawierać zagnieżdżonych bloków. Poniższy kod pokazuje dwa przykłady instrukcji jeden wiersz i blok instrukcji wielowierszowe:  
+ Instrukcja może składać się z jednego wiersza kodu, który jest kończący się średnikiem lub serii instrukcji jednowierszowych w bloku. Blok instrukcji jest ujęty w {} nawiasy klamrowe i może zawierać zagnieżdżone bloki. Poniższy kod przedstawia dwa przykłady instrukcji jednowierszowych i blok instrukcji wielowierszowej:  
   
  [!code-csharp[csProgGuideStatements#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#1)]  
   
-## <a name="types-of-statements"></a>Typów instrukcji  
- W poniższej tabeli wymieniono różne rodzaje instrukcji w języku C# i ich skojarzone słów kluczowych, za pomocą łącza do tematów, które zawierają więcej informacji:  
+## <a name="types-of-statements"></a>Typy instrukcji  
+ W poniższej tabeli wymieniono różne typy instrukcji w C# i skojarzonych z nimi słowa kluczowe, z linkami do tematów zawierających więcej informacji:  
   
-|Kategoria|Słowa kluczowe języka C# / informacje o|  
+|Kategoria|C#Słowa kluczowe/uwagi|  
 |--------------|---------------------------|  
-|[Instrukcje deklaracji](#declaration-statements)|Instrukcji deklaracji wprowadza nową zmienną lub stałą. Deklaracja zmiennej, można opcjonalnie przypisać wartość do zmiennej. W deklaracji stałej przydziału jest wymagana.|  
-|[Instrukcje wyrażeń](expressions.md)|Instrukcje wyrażeń, które obliczają wartość wartości muszą być przechowywane w zmiennej. Aby uzyskać więcej informacji, zobacz [instrukcje wyrażeń](#expression-statements).|  
-|Instrukcje wyboru|Instrukcje wyboru umożliwiają gałęzi do różnych sekcji kodu, w zależności od tego, co najmniej jeden określony warunek. Więcej informacji znajduje się w następujących tematach:<br /><br /> [Jeśli](../../../csharp/language-reference/keywords/if-else.md), [else](../../../csharp/language-reference/keywords/if-else.md), [Przełącz](../../../csharp/language-reference/keywords/switch.md), [case](../../../csharp/language-reference/keywords/switch.md)|  
-|Instrukcje iteracji|Iteracja — instrukcje umożliwiają jednoczesne kolekcji, takich jak tablice lub wykonać ten sam zestaw instrukcji wielokrotnie do momentu spełnienia określonego warunku. Więcej informacji znajduje się w następujących tematach:<br /><br /> [czy](../../../csharp/language-reference/keywords/do.md), [dla](../../../csharp/language-reference/keywords/for.md), [foreach](../../../csharp/language-reference/keywords/foreach-in.md), [w](../../../csharp/language-reference/keywords/foreach-in.md), [podczas](../../../csharp/language-reference/keywords/while.md)|  
-|Instrukcje skoku|Szybkie instrukcji transfer kontroli do innej części kodu. Więcej informacji znajduje się w następujących tematach:<br /><br /> [podział](../../../csharp/language-reference/keywords/break.md), [nadal](../../../csharp/language-reference/keywords/continue.md), [domyślne](../../../csharp/language-reference/keywords/switch.md), [przejdź do](../../../csharp/language-reference/keywords/goto.md), [zwracają](../../../csharp/language-reference/keywords/return.md), [yield](../../../csharp/language-reference/keywords/yield.md)|  
-|Instrukcje obsługi wyjątków|Instrukcje obsługi wyjątków umożliwia bezpieczne odzyskiwanie w wyjątkowych warunków, które występują w czasie wykonywania. Więcej informacji znajduje się w następujących tematach:<br /><br /> [throw](../../../csharp/language-reference/keywords/throw.md), [try-catch —](../../../csharp/language-reference/keywords/try-catch.md), [try-finally](../../../csharp/language-reference/keywords/try-finally.md), [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)|  
-|[Checked i unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)|Zaznaczone i niezaznaczone instrukcje umożliwiają określenie, czy wartości liczbowych operacji może spowodować przepełnienie, gdy wynik jest przechowywany w zmiennej, która jest zbyt mała do przechowywania wartości wynikowej. Aby uzyskać więcej informacji, zobacz [zaznaczone](../../../csharp/language-reference/keywords/checked.md) i [unchecked](../../../csharp/language-reference/keywords/unchecked.md).|  
-|`await` — Instrukcja|Po oznaczeniu metody z [async](../../../csharp/language-reference/keywords/async.md) modyfikator, można użyć [await](../../../csharp/language-reference/keywords/await.md) operatora w metodzie. Gdy kontrola osiąga `await` wyrażenia w metodzie asynchronicznej, sterowanie powraca do obiektu wywołującego, a postęp w metodzie jest wstrzymana, dopóki nie zakończy się oczekiwane zadanie. Kiedy zadanie zostanie ukończone, wykonanie można wznowić w metodzie.<br /><br /> Dla prostego przykładu, zobacz sekcję "Metod asynchronicznych" [metody](../../../csharp/programming-guide/classes-and-structs/methods.md). Aby uzyskać więcej informacji, zobacz [Asynchronous Programming with async i await](../../../csharp/programming-guide/concepts/async/index.md).|  
-|`yield return` — Instrukcja|Iterator wykonuje niestandardowych iteracji w kolekcji, takie jak listy lub tablicy. Używa iteratora [yield return](../../../csharp/language-reference/keywords/yield.md) instrukcja zwraca każdy element w danym momencie. Gdy `yield return` osiągnięciu instrukcji zapamiętanych bieżąca lokalizacja w kodzie. Wykonanie jest uruchamiane ponownie z tej lokalizacji, gdy iteratora jest wywoływana przy następnym.<br /><br /> Aby uzyskać więcej informacji, zobacz [Iteratory](../../../csharp/programming-guide/concepts/iterators.md).|  
-|`fixed` — Instrukcja|Fixed — instrukcja zapobiega przemieszczanie zmienną ruchome moduł odśmiecania pamięci. Aby uzyskać więcej informacji, zobacz [stałej](../../../csharp/language-reference/keywords/fixed-statement.md).|  
-|`lock` — Instrukcja|Instrukcji "lock" można ograniczyć dostęp do bloków kodu, aby tylko jeden wątek jednocześnie. Aby uzyskać więcej informacji, zobacz [blokady](../../../csharp/language-reference/keywords/lock-statement.md).|  
-|Labeled — instrukcje|Możesz nadać instrukcję etykietę, a następnie użyć [goto](../../../csharp/language-reference/keywords/goto.md) — słowo kluczowe, aby przejść do instrukcja labeled. (Zobacz przykład w poniższym wierszu).|  
-|[Pusta instrukcja](#the-empty-statement)|Pusta instrukcja składa się z pojedynczego średnikami. On nic nie robi i mogą być używane w miejscach, w której instrukcję jest wymagany, ale musi zostać wykonana żadna akcja.|  
+|[Deklaracje deklaracji](#declaration-statements)|Instrukcja deklaracji wprowadza nową zmienną lub stałą. Deklaracja zmiennej może opcjonalnie przypisać wartość do zmiennej. W deklaracji stałej jest wymagane przypisanie.|  
+|[Instrukcje wyrażeń](expressions.md)|Instrukcje wyrażenia, które obliczają wartość, muszą przechowywać wartość w zmiennej. Aby uzyskać więcej informacji, zobacz [instrukcje wyrażeń](#expression-statements).|  
+|Instrukcje wyboru|Instrukcje wyboru umożliwiają rozgałęzienie z różnymi sekcjami kodu, w zależności od jednego lub większej liczby określonych warunków. Więcej informacji znajduje się w następujących tematach:<br /><br /> [if](../../language-reference/keywords/if-else.md), [else](../../language-reference/keywords/if-else.md), [Switch](../../language-reference/keywords/switch.md), [Case](../../language-reference/keywords/switch.md)|  
+|Instrukcje iteracji|Instrukcje iteracji umożliwiają pętlę za pomocą kolekcji, takich jak tablice, lub wielokrotne wykonywanie tego samego zestawu instrukcji do czasu spełnienia określonego warunku. Więcej informacji znajduje się w następujących tematach:<br /><br /> [](../../language-reference/keywords/do.md)do, [dla](../../language-reference/keywords/for.md), [foreach](../../language-reference/keywords/foreach-in.md), [w](../../language-reference/keywords/foreach-in.md), [while](../../language-reference/keywords/while.md)|  
+|Instrukcje skoku|Przeskocz kontrolę transferu do innej sekcji kodu. Więcej informacji znajduje się w następujących tematach:<br /><br /> [Break](../../language-reference/keywords/break.md), [Continue](../../language-reference/keywords/continue.md), [default](../../language-reference/keywords/switch.md), [goto](../../language-reference/keywords/goto.md), [Return](../../language-reference/keywords/return.md), [Yield](../../language-reference/keywords/yield.md)|  
+|Instrukcje obsługi wyjątków|Instrukcje obsługi wyjątków umożliwiają bezpieczne odzyskiwanie z wyjątkowych warunków występujących w czasie wykonywania. Więcej informacji znajduje się w następujących tematach:<br /><br /> [throw](../../language-reference/keywords/throw.md), [try-catch](../../language-reference/keywords/try-catch.md), [try-finally](../../language-reference/keywords/try-finally.md), [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)|  
+|[Zaznaczone i niezaznaczone](../../language-reference/keywords/checked-and-unchecked.md)|Instrukcje sprawdzone i niesprawdzone umożliwiają określenie, czy operacje numeryczne mogą spowodować przepełnienie, gdy wynik jest przechowywany w zmiennej, która jest zbyt mała, aby pomieścić wynikową wartość. Aby uzyskać więcej informacji, zobacz [zaznaczone](../../language-reference/keywords/checked.md) i [niezaznaczone](../../language-reference/keywords/unchecked.md).|  
+|`await` Instrukcja|Jeśli oznaczesz metodę za pomocą modyfikatora [asynchronicznego](../../language-reference/keywords/async.md) , możesz użyć operatora [await](../../language-reference/keywords/await.md) w metodzie. Gdy kontrolka osiągnie `await` wyrażenie w metodzie asynchronicznej, sterowanie powraca do obiektu wywołującego, a postęp w metodzie jest zawieszony do momentu zakończenia zadania oczekiwania. Po zakończeniu zadania wykonywanie może zostać wznowione w metodzie.<br /><br /> Aby zapoznać się z prostym przykładem, zobacz sekcję "metody asynchroniczne" w temacie [metody](../classes-and-structs/methods.md). Aby uzyskać więcej informacji, zobacz [programowanie asynchroniczne z Async i await](../concepts/async/index.md).|  
+|`yield return` Instrukcja|Iterator wykonuje niestandardową iterację w kolekcji, na przykład listę lub tablicę. Iterator używa instrukcji [yield return](../../language-reference/keywords/yield.md) , aby zwrócić każdy element po jednym naraz. Po osiągnięciu `yield return` instrukcji zostanie zapamiętana bieżąca lokalizacja w kodzie. Wykonanie jest uruchamiane ponownie z tej lokalizacji, kiedy iterator jest wywoływana następnym razem.<br /><br /> Aby uzyskać więcej informacji, [](../concepts/iterators.md)zobacz Iteratory.|  
+|`fixed` Instrukcja|Stała instrukcja uniemożliwia ponowne lokalizowanie ruchomej zmiennej przez moduł wyrzucania elementów bezużytecznych. Aby uzyskać więcej informacji, zobacz [FIXED](../../language-reference/keywords/fixed-statement.md).|  
+|`lock` Instrukcja|Instrukcja lock umożliwia ograniczenie dostępu do bloków kodu tylko do jednego wątku naraz. Aby uzyskać więcej informacji, zobacz [Blokada](../../language-reference/keywords/lock-statement.md).|  
+|Instrukcje oznaczone|Możesz nadać instrukcji etykietę, a następnie użyć słowa kluczowego [goto](../../language-reference/keywords/goto.md) , aby przejść do instrukcji oznaczonej etykietą. (Zobacz przykład w następującym wierszu).|  
+|[Pusta instrukcja](#the-empty-statement)|Pusta instrukcja składa się z pojedynczego średnika. Nic nie robi i może być używane w miejscach, w których instrukcja jest wymagana, ale nie trzeba wykonywać żadnych czynności.|  
   
-## <a name="declaration-statements"></a>Instrukcje deklaracji
+## <a name="declaration-statements"></a>Deklaracje deklaracji
 
-Poniższy kod przedstawia przykłady deklaracji zmiennych z lub bez początkowego przydziału i deklaracji stałej z inicjalizacją niezbędne.
+Poniższy kod przedstawia przykłady deklaracji zmiennych z przypisaniem wstępnym i bez niego oraz stałą deklarację z wymaganą inicjalizacją.
 
  [!code-csharp[csProgGuideStatements#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#23)]
 
 ## <a name="expression-statements"></a>Instrukcje wyrażeń
 
-Poniższy kod przedstawia przykładowe instrukcje wyrażeń, łącznie z przypisania, utworzenie obiektu za pomocą przydziałów i wywołanie metody.
+Poniższy kod przedstawia przykłady instrukcji wyrażeń, w tym przypisanie, tworzenie obiektów z przypisaniem i wywoływanie metody.
 
  [!code-csharp[csProgGuideStatements#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#24)]
 
 ## <a name="the-empty-statement"></a>Pusta instrukcja
 
-W poniższych przykładach pokazano dwa zastosowania pustą instrukcję:
+W poniższych przykładach przedstawiono dwa zastosowania dla pustej instrukcji:
 
  [!code-csharp[csProgGuideStatements#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#25)]
 
 ## <a name="embedded-statements"></a>Osadzone instrukcje
 
- Niektóre instrukcje, w tym [czy](../../../csharp/language-reference/keywords/do.md), [podczas](../../../csharp/language-reference/keywords/while.md), [dla](../../../csharp/language-reference/keywords/for.md), i [foreach](../../../csharp/language-reference/keywords/foreach-in.md), zawsze mają osadzona instrukcja, który następuje po nich. To osadzona instrukcja może być pojedynczą instrukcję lub wiele instrukcji ujęta w {} nawiasów kwadratowych w bloku instrukcji. Osadzone instrukcje nawet jednego wiersza mogą być ujęte w {} nawiasy kwadratowe, jak pokazano w poniższym przykładzie:  
+ Niektóre instrukcje, w [](../../language-reference/keywords/do.md)tym do, [while](../../language-reference/keywords/while.md), [for](../../language-reference/keywords/for.md)i [foreach](../../language-reference/keywords/foreach-in.md), zawsze mają osadzoną instrukcję, która następuje po nich. Ta osadzona instrukcja może być pojedynczą instrukcją lub wieloma instrukcją {} ujętą w nawiasy kwadratowe bloku instrukcji. Nawet osadzone instrukcje jednowierszowe mogą być ujęte {} w nawiasy, jak pokazano w następującym przykładzie:  
   
  [!code-csharp[csProgGuideStatements#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#26)]  
   
- Osadzona instrukcja, która nie jest ujęty w {} nawiasy kwadratowe nie może być instrukcji deklaracji lub instrukcji oznaczonej etykietą. Jest to pokazane w poniższym przykładzie:  
+ Osadzona instrukcja, która nie jest ujęta w {} nawiasy kwadratowe nie może być instrukcją deklaracji ani instrukcją etykiety. Jest to pokazane w poniższym przykładzie:  
   
  [!code-csharp[csProgGuideStatements#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#27)]  
   
- W bloku, aby naprawić błąd, należy umieścić osadzona instrukcja:  
+ Umieść osadzoną instrukcję w bloku, aby naprawić błąd:  
   
  [!code-csharp[csProgGuideStatements#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#28)]  
   
-## <a name="nested-statement-blocks"></a>Zagnieżdżona instrukcja bloków  
- Może być zagnieżdżony bloków instrukcji, jak pokazano w poniższym kodzie:  
+## <a name="nested-statement-blocks"></a>Zagnieżdżone bloki instrukcji  
+ Bloki instrukcji mogą być zagnieżdżane, jak pokazano w poniższym kodzie:  
   
  [!code-csharp[csProgGuideStatements#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#29)]  
   
-## <a name="unreachable-statements"></a>Instrukcji jest nieosiągalny  
- Kompilator Określa, że przepływ sterowania nigdy nie może osiągnąć określonej instrukcji w żadnym, powoduje wygenerowanie ostrzeżenia CS0162, jak pokazano w poniższym przykładzie:  
+## <a name="unreachable-statements"></a>Nieosiągalne instrukcje  
+ Jeśli kompilator określi, że przepływ sterowania nigdy nie dociera do konkretnej instrukcji w jakichkolwiek okolicznościach, spowoduje to wygenerowanie ostrzeżenia CS0162, jak pokazano w następującym przykładzie:  
   
  [!code-csharp[csProgGuideStatements#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#22)]  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
   
-- [Słowa kluczowe instrukcji](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [Słowa kluczowe instrukcji](../../language-reference/keywords/statement-keywords.md)  
   
-- [Wyrażenia](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
+- [Wyrażenia](./expressions.md)  
   
-- [Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Operatory](./operators.md)  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Przewodnik programowania w języku C#](../index.md)

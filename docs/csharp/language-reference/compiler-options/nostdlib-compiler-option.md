@@ -1,5 +1,5 @@
 ---
-title: -nostdlib (opcje kompilatora C#)
+title: -nostdlib (C# opcje kompilatora)
 ms.date: 07/20/2015
 f1_keywords:
 - /nostdlib
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: cf87d8d2ac4531142288a8637f7fbeb9139382ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 486539d7abdc3e65847a0bc0e228b1b20a2b2c37
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662650"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602690"
 ---
-# <a name="-nostdlib-c-compiler-options"></a>-nostdlib (opcje kompilatora C#)
+# <a name="-nostdlib-c-compiler-options"></a>-nostdlib (C# opcje kompilatora)
 
-**-nostdlib** zapobiega Importuj biblioteki mscorlib.dll, która określa całą przestrzeń nazw System.
+**-nostdlib** uniemożliwia Import biblioteki mscorlib. dll, która definiuje całą przestrzeń nazw System.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,27 +27,27 @@ ms.locfileid: "61662650"
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj tej opcji, jeśli chcesz zdefiniować lub tworzyć własne systemową przestrzenią nazw i obiektów.
+Użyj tej opcji, jeśli chcesz zdefiniować lub utworzyć własną przestrzeń nazw systemu i obiekty.
 
-Jeśli nie określisz **- nostdlib**, aby biblioteka mscorlib.dll są importowane do programu (taka sama jak określanie **- nostdlib —**). Określanie **- nostdlib** jest taka sama jak określanie **- nostdlib +**.
+Jeśli nie określisz opcji **-nostdlib**, mscorlib. dll zostanie zaimportowany do programu (tak samo jak w przypadku określenia **-nostdlib-** ). Określenie **-nostdlib** jest taka sama jak w przypadku określenia **-nostdlib +** .
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Aby ustawić tę opcję kompilatora w programie Visual Studio
 
 > [!NOTE]
-> Poniższe instrukcje dotyczą programu Visual Studio 2015 (i wcześniejszych wersjach) tylko. **Nie odwołują się do biblioteki mscorlib.dll** właściwości kompilacji nie istnieje w programie Visual Studio 2017.
+> Poniższe instrukcje dotyczą tylko programu Visual Studio 2015 (i jego wcześniejszych wersji). W programie Visual Studio 2017 nie istnieje właściwość Build programu **mscorlib. dll** .
 
-1. Otwórz **właściwości** strony dla projektu.
+1. Otwórz stronę **Właściwości** dla projektu.
 
-2. Kliknij przycisk **kompilacji** stronę właściwości.
+2. Kliknij stronę właściwości **kompilacji** .
 
-3. Kliknij przycisk **zaawansowane** przycisku.
+3. Kliknij przycisk **Zaawansowane** .
 
-4. Modyfikowanie **nie odwołują się do biblioteki mscorlib.dll** właściwości.
+4. Zmodyfikuj właściwość nie Odwołuj się do **biblioteki mscorlib. dll** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-Aby uzyskać informacje na temat sposobu programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>.
+Aby uzyskać informacje na temat sposobu, w jaki można programowo ustawić <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>tę opcję kompilatora, zobacz.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opcje kompilatora C#](./index.md)

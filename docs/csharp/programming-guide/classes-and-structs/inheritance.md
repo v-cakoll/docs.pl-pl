@@ -1,5 +1,5 @@
 ---
-title: Dziedziczenie — C# przewodnik programowania
+title: Dziedziczenie C# — Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,52 +10,52 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 8f49118ebff8dcdfee45ce30de9b35437141e2bb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 1fc8303ad4d54bfd3255d725de486281cd09439e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398470"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596553"
 ---
 # <a name="inheritance-c-programming-guide"></a>Dziedziczenie (Przewodnik programowania w języku C#)
 
-Dziedziczenie, wraz z hermetyzacji i polimorfizmu, jest jednym z trzech właściwości głównej programowanie zorientowane obiektowo. Dziedziczenie umożliwia utworzenie nowej klasy, które ponownie używane, rozszerzanie i zmodyfikować zachowanie, która jest zdefiniowana w innych klas. Nosi nazwę klasy, której członkowie są dziedziczeni *klasy bazowej*, a klasa, która dziedziczy tych członków, jest nazywana *klasy pochodnej*. Klasa pochodna może mieć tylko jedną bezpośrednią klasą bazową. Dziedziczenie jest jednak przechodnie. Jeśli klasa c jest wyprowadzany z ClassB, a ClassB jest tworzony na podstawie ClassA, ClassC dziedziczy elementów członkowskich zadeklarowanych w ClassB i ClassA.  
+Dziedziczenie, wraz z hermetyzacją i polimorfizmem, jest jedną z trzech podstawowych cech programowania zorientowanego obiektowo. Dziedziczenie umożliwia tworzenie nowych klas, które będą używać, zwiększać i modyfikować zachowanie zdefiniowane w innych klasach. Klasa, której członkowie są dziedziczone jest nazywana *klasą bazową*, a Klasa, która dziedziczy tych członków, nosi nazwę *klasy pochodnej*. Klasa pochodna może mieć tylko jedną bezpośrednią klasę bazową. Dziedziczenie jest jednak przechodnie. Jeśli ClassC pochodzi z ClassB, a ClassB pochodzi od ClassA, ClassC dziedziczy składowe zadeklarowane w ClassB i ClassA.  
   
 > [!NOTE]
->  Struktury nie obsługują dziedziczenia, ale mogące implementować interfejsy. Więcej informacji znajdziesz w artykule [Interfejsy](../../../csharp/programming-guide/interfaces/index.md).  
+>  Struktury nie obsługują dziedziczenia, ale mogą implementować interfejsy. Więcej informacji znajdziesz w artykule [Interfejsy](../interfaces/index.md).  
   
- Model klasy pochodnej jest specjalizacją klasy bazowej. Na przykład, jeśli masz klasę bazową `Animal`, Niewykluczone, że jedna klasa pochodna, która nosi nazwę `Mammal` i innej klasy pochodnej, o nazwie `Reptile`. A `Mammal` jest `Animal`, a `Reptile` jest `Animal`, ale każda klasa pochodna reprezentuje różnych specjalizacji klasy bazowej.  
+ Koncepcyjnie Klasa pochodna jest specjalizacją klasy bazowej. Na przykład jeśli masz klasę `Animal`bazową, może istnieć jedna klasa pochodna o nazwie `Mammal` i innej klasie pochodnej o nazwie `Reptile`. A to a, `Reptile` i jest `Animal`, ale każda klasa pochodna reprezentuje różne specjalizacje klasy bazowej. `Mammal` `Animal`  
   
- Podczas definiowania klasy pochodzi z innej klasy pochodnej klasy niejawnie uzyskuje wszystkie elementy członkowskie klasy bazowej, z wyjątkiem jego konstruktorów i finalizatory. Kod w klasie bazowej dzięki temu można wykorzystywać klasy pochodnej bez konieczności jej ponownego wdrożenia. W klasie pochodnej można dodać więcej elementów członkowskich. W ten sposób Klasa pochodna rozszerza funkcjonalność klasy bazowej.  
+ Podczas definiowania klasy, która ma pochodzić z innej klasy, Klasa pochodna niejawnie uzyskuje wszystkie elementy członkowskie klasy bazowej, z wyjątkiem konstruktorów i finalizatorów. Klasa pochodna może w efekcie ponownie użyć kodu w klasie bazowej bez konieczności jego ponownego wdrożenia. W klasie pochodnej można dodać więcej elementów członkowskich. W ten sposób Klasa pochodna rozszerza funkcjonalność klasy bazowej.  
   
- Poniższa ilustracja przedstawia klasy `WorkItem` reprezentujący element pracy w niektórych procesów biznesowych. Podobnie jak wszystkie klasy pochodzi z <xref:System.Object?displayProperty=nameWithType> i dziedziczy jej metody. `WorkItem` dodaje pięciu członków własne. Obejmują one konstruktora, ponieważ konstruktory nie są dziedziczone. Klasa `ChangeRequest` dziedziczy `WorkItem` i reprezentuje określonego typu elementu roboczego. `ChangeRequest` dodaje dwa więcej elementów członkowskich do elementów członkowskich, które dziedziczy `WorkItem` i <xref:System.Object>. Jego należy dodać własną konstruktora, i dodaje także `originalItemID`. Właściwość `originalItemID` umożliwia `ChangeRequest` wystąpienia, które mają być skojarzone z oryginalnym `WorkItem` którego dotyczy żądanie zmiany.  
+ Na poniższej ilustracji przedstawiono klasę `WorkItem` , która reprezentuje element pracy w pewnym procesie biznesowym. Podobnie jak w przypadku wszystkich klas, <xref:System.Object?displayProperty=nameWithType> pochodzi z i dziedziczy wszystkie metody. `WorkItem`dodaje pięciu członków. Należą do nich Konstruktor, ponieważ konstruktory nie są dziedziczone. Klasa `ChangeRequest` dziedziczy z `WorkItem` i reprezentuje konkretny rodzaj elementu pracy. `ChangeRequest`dodaje dwóch więcej członków do członków, z `WorkItem` <xref:System.Object>których dziedziczy. Musi dodać własnego konstruktora, a także dodaje `originalItemID`. Umożliwia skojarzenie wystąpienia z oryginałem `WorkItem` , do którego ma zastosowanie żądanie zmiany. `ChangeRequest` `originalItemID`  
   
- ![Diagram przedstawiający dziedziczenia klas](./media/inheritance/class-inheritance-diagram.png)  
+ ![Diagram przedstawiający dziedziczenie klas](./media/inheritance/class-inheritance-diagram.png)  
   
- Poniższy przykład pokazuje, jak pokazano na poprzedniej ilustracji relacje klas są wyrażone w języku C#. W przykładzie przedstawiono również sposób `WorkItem` zastępuje metodę wirtualną <xref:System.Object.ToString%2A?displayProperty=nameWithType>oraz sposób, w jaki `ChangeRequest` klasa dziedziczy `WorkItem` implementacji metody.  
+ Poniższy przykład pokazuje, jak relacje klas pokazane na poprzedniej ilustracji są wyrażone w C#. W przykładzie pokazano również, `WorkItem` jak zastępuje metodę <xref:System.Object.ToString%2A?displayProperty=nameWithType>wirtualną oraz `WorkItem` sposób, w `ChangeRequest` jaki Klasa dziedziczy implementację metody.  
   
  [!code-csharp[csProgGuideInheritance#49](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#49)]  
   
-## <a name="abstract-and-virtual-methods"></a>Metody abstrakcyjne i wirtualnych  
- Kiedy klasę bazową deklaruje metodę jako [wirtualnego](../../../csharp/language-reference/keywords/virtual.md), klasa pochodna może [zastąpienia](../../../csharp/language-reference/keywords/override.md) metoda własną implementację. Jeśli klasa bazowa deklaruje element członkowski jako [abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md), że metoda musi zostać zastąpiona w dowolnym nieabstrakcyjnej klasie dziedziczącej bezpośrednio z tej klasy. Jeśli klasa pochodna sama jest abstrakcyjna dziedziczy członków abstrakcyjnych bez ich wdrażania. Abstrakcyjna i wirtualnych elementów członkowskich stanowią podstawę polimorfizm, czyli podstawowy drugiego charakterystyka programowanie zorientowane obiektowo. Aby uzyskać więcej informacji, zobacz [polimorfizm](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
+## <a name="abstract-and-virtual-methods"></a>Metody abstrakcyjne i wirtualne  
+ Gdy klasa bazowa deklaruje metodę jako [wirtualną](../../language-reference/keywords/virtual.md), Klasa pochodna może [zastąpić](../../language-reference/keywords/override.md) metodę własną implementacją. Jeśli klasa bazowa deklaruje element członkowski jako [abstrakcyjny](../../language-reference/keywords/abstract.md), ta metoda musi zostać zastąpiona w dowolnej klasie nieabstrakcyjnej, która bezpośrednio dziedziczy z tej klasy. Jeśli klasa pochodna jest abstrakcyjna, dziedziczy abstrakcyjne elementy członkowskie bez wdrażania ich. Abstrakcyjne i wirtualne elementy członkowskie są podstawą dla polimorfizmu, który jest drugą podstawową cechą programowania zorientowanego obiektowo. Aby uzyskać więcej informacji, zobacz [polimorfizm](./polymorphism.md).  
   
-## <a name="abstract-base-classes"></a>Abstrakcyjnych klas bazowych  
- Można zadeklarować klasy jako [abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md) Jeśli chcesz zapobiec bezpośredni wystąpienia przy użyciu [nowe](../../../csharp/language-reference/operators/new-operator.md) operatora. Jeśli to zrobisz, klasa może służyć tylko wtedy, gdy nowa klasa pochodzi od niego. Klasa abstrakcyjna może zawierać jeden lub więcej podpisy metod, że same są deklarowane jako abstrakcyjne. Te podpisy określania parametrów i zwracają wartość, ale nie mają implementacji (treści metody). Klasa abstrakcyjna nie musi zawierać członkami abstrakcyjnymi; Jednak jeśli klasa zawiera abstrakcyjną składową, sama klasa musi być zadeklarowany jako abstrakcyjny. Klasy pochodne, które nie są abstrakcyjne samodzielnie zapewniają implementację dla dowolnej metody abstrakcyjne z abstrakcyjną klasę bazową. Aby uzyskać więcej informacji, zobacz [abstrakcyjnych i zapieczętowanych klas i składowych klasy](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+## <a name="abstract-base-classes"></a>Abstrakcyjne klasy podstawowe  
+ Można zadeklarować klasę jako [abstrakcyjną](../../language-reference/keywords/abstract.md) , jeśli chcesz zapobiec bezpośredniemu tworzeniu wystąpienia przy użyciu operatora [New](../../language-reference/operators/new-operator.md) . Jeśli to zrobisz, Klasa może być używana tylko wtedy, gdy nowa klasa pochodzi od niej. Klasa abstrakcyjna może zawierać co najmniej jeden podpis metody, który sam jest zadeklarowany jako abstrakcyjny. Te podpisy określają parametry i wartość zwracaną, ale nie mają implementacji (treść metody). Klasa abstrakcyjna nie musi zawierać abstrakcyjnych elementów członkowskich; Jeśli jednak Klasa zawiera abstrakcyjną składową, sama klasa musi być zadeklarowana jako abstract. Klasy pochodne, które nie są abstrakcyjne, muszą dostarczać implementację dla wszelkich metod abstrakcyjnych z abstrakcyjnej klasy bazowej. Aby uzyskać więcej informacji, zobacz [klasy abstrakcyjne i zapieczętowane oraz składowe klas](./abstract-and-sealed-classes-and-class-members.md).  
   
 ## <a name="interfaces"></a>Interfejsy  
- *Interfejsu* jest typem referencyjnym, który przypomina nieco abstrakcyjną klasę bazową, która składa się z tylko członków abstrakcyjnych. Gdy klasa implementuje interfejs, musi zapewniać implementację, dla wszystkich członków interfejsu. Klasę można zaimplementować wiele interfejsów, mimo że może dziedziczyć tylko po jednej bezpośredniej klasie bazowej.  
+ *Interfejs* jest typem referencyjnym, który jest nieco podobny do abstrakcyjnej klasy bazowej, która składa się tylko z abstrakcyjnych elementów członkowskich. Gdy klasa implementuje interfejs, musi dostarczyć implementację dla wszystkich elementów członkowskich interfejsu. Klasa może zaimplementować wiele interfejsów, chociaż może dziedziczyć tylko z pojedynczej bezpośredniej klasy bazowej.  
   
- Interfejsy są używane do definiowania konkretne funkcje dla klas, które nie muszą być "to" relacji. Na przykład <xref:System.IEquatable%601?displayProperty=nameWithType> interfejsu może być implementowany przez dowolnej klasy lub struktury, która ma, aby włączyć kod klienta w celu ustalenia, czy dwa obiekty tego typu są równoważne (jednak typ definiuje równoważności). <xref:System.IEquatable%601> nie oznacza taki sam rodzaj "to" relacji istnieje między klasa bazowa i Klasa pochodna (na przykład `Mammal` jest `Animal`). Więcej informacji znajdziesz w artykule [Interfejsy](../../../csharp/programming-guide/interfaces/index.md).  
+ Interfejsy służą do definiowania określonych funkcji dla klas, które nie muszą mieć relacji "is". Na przykład <xref:System.IEquatable%601?displayProperty=nameWithType> interfejs może być zaimplementowany przez dowolną klasę lub strukturę, która musi umożliwić kod klienta, aby określić, czy dwa obiekty typu są równoważne (jednak typ definiuje równoważność). <xref:System.IEquatable%601>nie implikuje tego samego rodzaju relacji "is", która istnieje między klasą bazową a klasą pochodną (na przykład a `Mammal` `Animal`). Więcej informacji znajdziesz w artykule [Interfejsy](../interfaces/index.md).  
   
-## <a name="preventing-further-derivation"></a>Uniemożliwia dalsze tworzenie wartości pochodnych  
- Klasa może uniemożliwić dziedziczy z niego lub ze swoich elementów członkowskich, deklarując sam lub elementu członkowskiego jako innych klas [zapieczętowanego](../../../csharp/language-reference/keywords/sealed.md). Aby uzyskać więcej informacji, zobacz [abstrakcyjnych i zapieczętowanych klas i składowych klasy](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+## <a name="preventing-further-derivation"></a>Zapobieganie dalszemu wyprowadzaniu  
+ Klasa może uniemożliwić innym klasom dziedziczenie z niego lub z dowolnego elementu członkowskiego, deklarując siebie lub element członkowski jako [zapieczętowany](../../language-reference/keywords/sealed.md). Aby uzyskać więcej informacji, zobacz [klasy abstrakcyjne i zapieczętowane oraz składowe klas](./abstract-and-sealed-classes-and-class-members.md).  
   
-## <a name="derived-class-hiding-of-base-class-members"></a>Klasa pochodna ukrycie elementów członkowskich klasy podstawowej  
- Klasa pochodna można ukryć składowych klasy bazowej przez zadeklarowanie elementów członkowskich z taką samą nazwę i podpis. [Nowe](../../../csharp/language-reference/keywords/new-modifier.md) modyfikator może służyć do jawnie wskazywały elementu członkowskiego nie jest przeznaczony do zastąpienia podstawowego elementu członkowskiego. Korzystanie z [nowe](../../../csharp/language-reference/keywords/new-modifier.md) nie jest wymagane, ale ostrzeżenia kompilatora zostanie wygenerowany, jeśli [nowe](../../../csharp/language-reference/keywords/new-modifier.md) nie jest używany. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) i [, wiedząc, gdy użycie zastępowania i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
+## <a name="derived-class-hiding-of-base-class-members"></a>Ukrywanie klasy pochodnej elementów członkowskich klasy bazowej  
+ Klasa pochodna może ukryć składowe klasy bazowej, deklarując składowe o tej samej nazwie i podpisie. Przy użyciu [nowego](../../language-reference/keywords/new-modifier.md) modyfikatora można jawnie wskazać, że element członkowski nie jest przesłonięciem podstawowego elementu członkowskiego. Korzystanie z [nowych](../../language-reference/keywords/new-modifier.md) nie jest wymagane, ale jeśli [nowe](../../language-reference/keywords/new-modifier.md) nie zostanie użyte, zostanie wygenerowane Ostrzeżenie kompilatora. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji z zastępowaniem i nowymi słowami kluczowymi](./versioning-with-the-override-and-new-keywords.md) i [wiedzą, kiedy używać przesłonięć i nowych słów kluczowych](./knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [class](../../../csharp/language-reference/keywords/class.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Klasy i struktury](./index.md)
+- [class](../../language-reference/keywords/class.md)
+- [struct](../../language-reference/keywords/struct.md)

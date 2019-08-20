@@ -2,34 +2,34 @@
 title: Atrybuty wspólne (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: bb06fc72fc336df257c6b674d3eaa4fa47801da0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7988dad410c6e51869ec9d7e40d94e874443a5f8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603335"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595459"
 ---
 # <a name="common-attributes-c"></a>Atrybuty wspólne (C#)
-W tym temacie opisano atrybuty, które są najczęściej używane w programach języka C#.  
+W tym temacie opisano atrybuty, które są najczęściej używane w C# programach.  
   
 - [Atrybuty globalne](#Global)  
   
-- [Atrybut przestarzałe](#Obsolete)  
+- [Przestarzały atrybut](#Obsolete)  
   
-- [Atrybut Conditional](#Conditional)  
+- [Atrybut warunkowy](#Conditional)  
   
-- [Caller — atrybuty informacji](#CallerInfo)  
+- [Atrybuty informacji o wywołującym](#CallerInfo)  
   
-## <a name="Global"></a> Atrybuty globalne  
- Większość atrybuty są stosowane do elementów języka, takich jak klasy lub metody; Jednak niektóre atrybuty są globalne — odnoszą się do całego zestawu lub modułu. Na przykład <xref:System.Reflection.AssemblyVersionAttribute> atrybut może służyć do osadzania informacje o wersji w zespół, takich jak to:  
+## <a name="Global"></a>Atrybuty globalne  
+ Większość atrybutów stosuje się do określonych elementów języka, takich jak klasy lub metody; Jednak niektóre atrybuty są globalne — mają zastosowanie do całego zestawu lub modułu. Na przykład <xref:System.Reflection.AssemblyVersionAttribute> atrybut może służyć do osadzania informacji o wersji w zestawie, takich jak:  
   
 ```csharp  
 [assembly: AssemblyVersion("1.0.0.0")]  
 ```  
   
- Atrybuty globalne są wyświetlane w kodzie źródłowym po każdym najwyższego poziomu `using` dyrektyw i przed deklaracjami dowolnego typu, modułu lub przestrzeni nazw. Atrybuty globalne mogą być wyświetlane w wielu plikach źródłowych, ale pliki muszą być skompilowane w pojedynczej kompilacji przebiegu. W projektach C# atrybuty globalne są umieszczane w pliku AssemblyInfo.cs.  
+ Atrybuty globalne pojawiają się w kodzie źródłowym po dowolnych `using` dyrektywach najwyższego poziomu i przed dowolnymi deklaracjami typu, modułu lub przestrzeni nazw. Atrybuty globalne mogą pojawiać się w wielu plikach źródłowych, ale pliki muszą być kompilowane w jednym przebiegu kompilacji. W C# projektach atrybuty globalne są umieszczane w pliku AssemblyInfo.cs.  
   
- Atrybuty zestawu są wartości, które dostarczają informacje o zestawie. Można je podzielić na następujące kategorie:  
+ Atrybuty zestawu są wartościami, które zawierają informacje o zestawie. Należą do następujących kategorii:  
   
 - Atrybuty tożsamości zestawu  
   
@@ -38,42 +38,42 @@ W tym temacie opisano atrybuty, które są najczęściej używane w programach j
 - Atrybuty manifestu zestawu  
   
 ### <a name="assembly-identity-attributes"></a>Atrybuty tożsamości zestawu  
- Trzy atrybuty (silną nazwą, jeśli ma to zastosowanie) określają tożsamość zestawu: nazwę, wersję i kulturę. Te atrybuty tworzą pełną nazwę zestawu i są wymagane, gdy można się odwoływać w kodzie. Można ustawić wersję i kulturę przy użyciu atrybutów zestawu. Jednak nazwa ma wartość przez kompilator programu Visual Studio IDE w [informacje o zestawie — okno dialogowe](/visualstudio/ide/reference/assembly-information-dialog-box), lub Assembly Linker (Al.exe), po utworzeniu zestawu w oparciu o plik, który zawiera manifest zestawu. <xref:System.Reflection.AssemblyFlagsAttribute> Atrybut określa, czy wiele kopii zestawu mogą współistnieć.  
+ Trzy atrybuty (o silnej nazwie, jeśli ma zastosowanie) określają tożsamość zestawu: nazwę, wersję i kulturę. Te atrybuty tworzą pełną nazwę zestawu i są wymagane podczas odwoływania się do niego w kodzie. Możesz ustawić wersję zestawu i kulturę przy użyciu atrybutów. Jednak wartość nazwy jest ustawiana przez kompilator, środowisko IDE programu Visual Studio w [oknie dialogowym Informacje o zestawie](/visualstudio/ide/reference/assembly-information-dialog-box)lub konsolidator zestawu (Al. exe) podczas tworzenia zestawu, na podstawie pliku, który zawiera manifest zestawu. Ten <xref:System.Reflection.AssemblyFlagsAttribute> atrybut określa, czy wiele kopii zestawu może współistnieć.  
   
  W poniższej tabeli przedstawiono atrybuty tożsamości.  
   
 |Atrybut|Cel|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyName>|W pełni opisuje tożsamości zestawu.|  
+|<xref:System.Reflection.AssemblyName>|W pełni opisuje tożsamość zestawu.|  
 |<xref:System.Reflection.AssemblyVersionAttribute>|Określa wersję zestawu.|  
-|<xref:System.Reflection.AssemblyCultureAttribute>|Określa, które kultury obsługuje zestawu.|  
-|<xref:System.Reflection.AssemblyFlagsAttribute>|Określa, czy zestaw obsługuje wykonywanie side-by-side na tym samym komputerze, w tym samym procesie lub w tej samej domenie aplikacji.|  
+|<xref:System.Reflection.AssemblyCultureAttribute>|Określa kulturę obsługiwaną przez zestaw.|  
+|<xref:System.Reflection.AssemblyFlagsAttribute>|Określa, czy zestaw obsługuje wykonywanie równoczesne na tym samym komputerze, w tym samym procesie lub w tej samej domenie aplikacji.|  
   
 ### <a name="informational-attributes"></a>Atrybuty informacyjne  
- Aby zapewnić dodatkowe firmy lub informacje o produkcie dla zestawu, można użyć atrybuty informacyjne. W poniższej tabeli przedstawiono atrybuty informacyjne, zdefiniowane w <xref:System.Reflection?displayProperty=nameWithType> przestrzeni nazw.  
+ Można użyć atrybutów informacyjnych w celu podania dodatkowych informacji o firmie lub produkcie dla zestawu. W poniższej tabeli przedstawiono atrybuty informacyjne zdefiniowane w <xref:System.Reflection?displayProperty=nameWithType> przestrzeni nazw.  
   
 |Atrybut|Cel|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyProductAttribute>|Określa niestandardowy atrybut, który określa nazwę produktu w manifeście zestawu.|  
-|<xref:System.Reflection.AssemblyTrademarkAttribute>|Definiuje atrybutu niestandardowego, który określa znak towarowy manifestu zestawu.|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Określa niestandardowy atrybut, który określa informacjami o wersji dla manifestu zestawu.|  
-|<xref:System.Reflection.AssemblyCompanyAttribute>|Określa atrybut niestandardowy, który określa nazwę firmy na potrzeby manifestu zestawu.|  
-|<xref:System.Reflection.AssemblyCopyrightAttribute>|Określa niestandardowy atrybut, który określa prawa autorskiego manifestu zestawu.|  
-|<xref:System.Reflection.AssemblyFileVersionAttribute>|Instruuje kompilator, aby użyć numeru wersji określonej dla zasobu wersji pliku systemu Win32.|  
+|<xref:System.Reflection.AssemblyProductAttribute>|Definiuje niestandardowy atrybut, który określa nazwę produktu dla manifestu zestawu.|  
+|<xref:System.Reflection.AssemblyTrademarkAttribute>|Definiuje niestandardowy atrybut, który określa znak towarowy dla manifestu zestawu.|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Definiuje niestandardowy atrybut, który określa wersję informacyjną dla manifestu zestawu.|  
+|<xref:System.Reflection.AssemblyCompanyAttribute>|Definiuje niestandardowy atrybut, który określa nazwę firmy dla manifestu zestawu.|  
+|<xref:System.Reflection.AssemblyCopyrightAttribute>|Definiuje niestandardowy atrybut, który określa prawo autorskie dla manifestu zestawu.|  
+|<xref:System.Reflection.AssemblyFileVersionAttribute>|Instruuje kompilator, aby używał określonego numeru wersji dla zasobu wersji plików Win32.|  
 |<xref:System.CLSCompliantAttribute>|Wskazuje, czy zestaw jest zgodny z Common Language Specification (CLS).|  
   
 ### <a name="assembly-manifest-attributes"></a>Atrybuty manifestu zestawu  
- Można użyć atrybutów manifestu zestawu, aby podać informacje w manifeście zestawu. W tym tytuł, opis, domyślny alias i konfiguracji. W poniższej tabeli przedstawiono atrybuty manifestu zestawu zdefiniowanych w <xref:System.Reflection?displayProperty=nameWithType> przestrzeni nazw.  
+ Można użyć atrybutów manifestu zestawu, aby podać informacje w manifeście zestawu. Obejmuje to tytuł, opis, alias domyślny i konfigurację. W poniższej tabeli przedstawiono atrybuty manifestu zestawu zdefiniowane w <xref:System.Reflection?displayProperty=nameWithType> przestrzeni nazw.  
   
 |Atrybut|Cel|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyTitleAttribute>|Określa niestandardowy atrybut, który określa tytuł zestawu dla manifestu zestawu.|  
-|<xref:System.Reflection.AssemblyDescriptionAttribute>|Określa niestandardowy atrybut, który określa opis zestawu dla manifestu zestawu.|  
-|<xref:System.Reflection.AssemblyConfigurationAttribute>|Definiuje niestandardowy atrybut, który określa konfigurację zestawu (na przykład sprzedaży detalicznej lub debugowanie) w manifeście zestawu.|  
-|<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Określa przyjazną domyślny alias manifestu zestawu|  
+|<xref:System.Reflection.AssemblyTitleAttribute>|Definiuje niestandardowy atrybut, który określa tytuł zestawu dla manifestu zestawu.|  
+|<xref:System.Reflection.AssemblyDescriptionAttribute>|Definiuje niestandardowy atrybut, który określa opis zestawu dla manifestu zestawu.|  
+|<xref:System.Reflection.AssemblyConfigurationAttribute>|Definiuje niestandardowy atrybut, który określa konfigurację zestawu (na przykład detaliczną lub Debug) dla manifestu zestawu.|  
+|<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Definiuje przyjazny alias domyślny dla manifestu zestawu|  
   
-## <a name="Obsolete"></a> Atrybut przestarzałe  
- `Obsolete` Atrybut oznacza jednostka program jako taki, który nie jest już zalecany do użycia. Każde użycie jednostki oznaczony jako przestarzały później, spowoduje wygenerowanie ostrzeżenia lub błędu, w zależności od sposobu skonfigurowania atrybutu. Na przykład:  
+## <a name="Obsolete"></a>Przestarzały atrybut  
+ Ten `Obsolete` atrybut oznacza jednostkę programu, która nie jest już zalecana do użycia. Każde użycie jednostki oznaczonej jako przestarzałe spowoduje wygenerowanie ostrzeżenia lub błędu w zależności od sposobu skonfigurowania atrybutu. Na przykład:  
   
 ```csharp  
 [System.Obsolete("use class B")]  
@@ -89,9 +89,9 @@ class B
 }  
 ```  
   
- W tym przykładzie `Obsolete` atrybut jest stosowany do klasy `A` oraz metody `B.OldMethod`. Ponieważ drugi argument konstruktora atrybutu jest stosowane do `B.OldMethod` ustawiono `true`, ta metoda spowoduje błąd kompilatora, natomiast przy użyciu klasy `A` będzie po prostu wygenerować ostrzeżenie. Wywoływanie `B.NewMethod`, jednak generuje nie ostrzeżenia lub błędu.  
+ W tym przykładzie `Obsolete` atrybut jest stosowany do klasy `A` i metody `B.OldMethod`. Ponieważ drugi argument konstruktora atrybutu stosowany do `B.OldMethod` jest ustawiony na `true`, ta metoda spowoduje błąd kompilatora, podczas gdy użycie klasy `A` spowoduje po prostu wygenerowanie ostrzeżenia. Jednak `B.NewMethod`wywoływanie nie powoduje żadnych ostrzeżeń ani błędów.  
   
- Ciąg, podana jako pierwszy argument konstruktora atrybutu będą wyświetlane jako część ostrzeżenia lub błędu. Na przykład podczas korzystania z poprzednim definicje, poniższy kod generuje dwa ostrzeżenia i jeden błąd:  
+ Ciąg dostarczony jako pierwszy argument konstruktora atrybutu będzie wyświetlany jako część ostrzeżenia lub błędu. Na przykład jeśli używasz go z poprzednimi definicjami, poniższy kod generuje dwie ostrzeżenia i jeden błąd:  
   
 ```csharp  
 // Generates 2 warnings:  
@@ -105,16 +105,16 @@ b.NewMethod();
 // b.OldMethod();  
 ```  
   
- Dwa ostrzeżenia dla klasy `A` są generowane: jeden dla deklaracji odwołań do klas i jeden dla konstruktora klasy.  
+ Generowane są dwa ostrzeżenia `A` dla klasy: jeden dla deklaracji klasy Reference i jeden dla konstruktora klasy.  
   
- `Obsolete` Atrybut może być używana bez argumentów, ale tym wyjaśnienie, dlaczego elementu jest przestarzały i nie zamiast tego użyć zalecanych.  
+ Ten `Obsolete` atrybut może być używany bez argumentów, ale wraz z wyjaśnieniem dlaczego element jest przestarzały i czego należy używać.  
   
- `Obsolete` Atrybut jest atrybutem jednorazowego użytku i mogą być stosowane do każda jednostka, która umożliwia atrybutów. `Obsolete` jest aliasem <xref:System.ObsoleteAttribute>.  
+ Ten `Obsolete` atrybut jest atrybutem jednokrotnego użycia i może być stosowany do każdej jednostki, która zezwala na atrybuty. `Obsolete`jest aliasem dla <xref:System.ObsoleteAttribute>.  
   
-## <a name="Conditional"></a> Atrybut Conditional  
- `Conditional` Atrybutu sprawia, że wykonanie metody są zależne od identyfikatora przetwarzania wstępnego. `Conditional` Atrybut jest aliasem <xref:System.Diagnostics.ConditionalAttribute>i mogą być stosowane do metodę lub klasę atrybutów.  
+## <a name="Conditional"></a>Atrybut warunkowy  
+ Ten `Conditional` atrybut wykonuje metodę zależną od identyfikatora przetwarzania wstępnego. Atrybut jest alias dla <xref:System.Diagnostics.ConditionalAttribute>i może być zastosowany do metody lub klasy atrybutu. `Conditional`  
   
- W tym przykładzie `Conditional` zostanie zastosowany do metody, aby włączyć lub wyłączyć wyświetlanie informacji diagnostycznych programów:  
+ W tym przykładzie `Conditional` stosuje się do metody w celu włączenia lub wyłączenia wyświetlania informacji diagnostycznych specyficznych dla programu:  
   
 ```csharp  
 #define TRACE_ON  
@@ -140,9 +140,9 @@ public class ProgramClass
 }  
 ```  
   
- Jeśli `TRACE_ON` identyfikator nie jest zdefiniowany, będą wyświetlane żadne dane wyjściowe śledzenia.  
+ `TRACE_ON` Jeśli identyfikator nie jest zdefiniowany, nie będą wyświetlane dane wyjściowe śledzenia.  
   
- `Conditional` Atrybutu jest często używana z `DEBUG` identyfikator, aby włączyć śledzenie i rejestrowanie funkcji, wydajność debugowania kompilacji, ale nie w wersji kompilacji, podobnie do następującego:  
+ Ten `Conditional` atrybut jest często używany `DEBUG` z identyfikatorem, aby włączyć funkcje śledzenia i rejestrowania dla kompilacji debugowania, ale nie w kompilacjach wydania, takich jak:  
   
 ```csharp  
 [Conditional("DEBUG")]  
@@ -151,7 +151,7 @@ static void DebugMethod()
 }  
 ```  
   
- Gdy wywoływana jest metoda oznaczona jako warunkowe, obecności lub braku określonego symbolu przetwarzania wstępnego Określa, czy wywołanie jest włączone, czy pominięty. Jeśli zdefiniowano symbol wywołanie jest uwzględniany; w przeciwnym razie wywołanie zostanie pominięty. Za pomocą `Conditional` jest bardziej przejrzystą i bardziej eleganckim i mniej podatne na błędy zamiast otaczającej metody wewnątrz `#if…#endif` bloki następująco:  
+ Gdy wywoływana jest metoda oznaczona jako warunkowa, obecność lub brak określonego symbolu przetwarzania wstępnego określa, czy wywołanie jest dołączone czy pominięte. Jeśli symbol jest zdefiniowany, wywołanie jest dołączone; w przeciwnym razie wywołanie zostanie pominięte. Korzystanie `Conditional` z programu to przejrzysty, bardziej elegancki i mniej podatny na błędy alternatywa dla otaczających `#if…#endif` metod w blokach, takich jak:  
   
 ```csharp  
 #if DEBUG  
@@ -161,10 +161,10 @@ static void DebugMethod()
 #endif  
 ```  
   
- Metoda warunkowego musi być metodą w deklaracji klasy lub struktury i nie może mieć wartości zwracanej.  
+ Metoda warunkowa musi być metodą w deklaracji klasy lub struktury i nie może mieć wartości zwracanej.  
   
-### <a name="using-multiple-identifiers"></a>Przy użyciu wielu identyfikatorów  
- Jeśli metoda ma wiele `Conditional` atrybutów, wywołanie do metody jest dołączona, jeśli zdefiniowano co najmniej jeden z warunkowego symbole (innymi słowy, symbole są logicznie połączone ze sobą za pomocą operatora OR). W tym przykładzie obecności albo `A` lub `B` spowoduje wywołanie metody:  
+### <a name="using-multiple-identifiers"></a>Używanie wielu identyfikatorów  
+ Jeśli metoda ma wiele `Conditional` atrybutów, wywołanie metody jest uwzględnione, jeśli co najmniej jeden z symboli warunkowych jest zdefiniowany (innymi słowy, symbole są logicznie połączone ze sobą przy użyciu operatora OR). W tym przykładzie, obecność albo `A` `B` spowoduje wywołanie metody:  
   
 ```csharp  
 [Conditional("A"), Conditional("B")]  
@@ -174,7 +174,7 @@ static void DoIfAorB()
 }  
 ```  
   
- Aby osiągnąć ten efekt logicznie łączenia symbole za pomocą operatora AND, można zdefiniować serial metoda warunkowa. Na przykład, druga metoda poniżej będą wykonywane tylko wtedy, gdy oba `A` i `B` są zdefiniowane:  
+ Aby osiągnąć efekt logicznego łączenia symboli za pomocą operatora i, można zdefiniować metody warunkowe szeregowe. Na przykład druga metoda zostanie wykonana tylko wtedy, gdy obie `A` i `B` są zdefiniowane:  
   
 ```csharp
 [Conditional("A")]  
@@ -190,8 +190,8 @@ static void DoIfAandB()
 }  
 ```  
   
-### <a name="using-conditional-with-attribute-classes"></a>Używanie warunkowego z klas atrybutów  
- `Conditional` Atrybut można stosować do definicji klasy atrybutu. W tym przykładzie atrybut niestandardowy `Documentation` tylko doda informacje metadanych Jeśli DEBUG jest zdefiniowane.  
+### <a name="using-conditional-with-attribute-classes"></a>Używanie warunkowe z klasami atrybutów  
+ Ten `Conditional` atrybut może być również stosowany do definicji klasy atrybutu. W tym przykładzie atrybut `Documentation` niestandardowy będzie dodawać tylko informacje do metadanych w przypadku zdefiniowania debugowania.  
   
 ```csharp  
 [Conditional("DEBUG")]  
@@ -216,24 +216,24 @@ class SampleClass
 }  
 ```  
   
-## <a name="CallerInfo"></a> Caller — atrybuty informacji  
- Przy użyciu atrybutów informacji o obiekcie wywołującym można uzyskać informacje o obiekcie wywołującym metodę. Można uzyskać ścieżkę pliku kodu źródłowego, numer wiersza kodu źródłowego i nazwę elementu członkowskiego obiektu wywołującego.  
+## <a name="CallerInfo"></a>Atrybuty informacji o wywołującym  
+ Przy użyciu atrybutów informacji o obiekcie wywołującym można uzyskać informacje o obiekcie wywołującym metodę. Możesz uzyskać ścieżkę pliku kodu źródłowego, numer wiersza w kodzie źródłowym i nazwę elementu członkowskiego obiektu wywołującego.  
   
- Aby uzyskać informacje o wywołującym elementu członkowskiego, należy użyć atrybutów stosowanych do opcjonalnych parametrów. Każdy parametr opcjonalny określenie wartości domyślnej. W poniższej tabeli przedstawiono atrybuty informacji o obiekcie wywołującym, które są zdefiniowane w <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> przestrzeni nazw:  
+ Aby uzyskać informacje o obiekcie wywołującym elementu członkowskiego, należy użyć atrybutów, które są stosowane do parametrów opcjonalnych. Każdy opcjonalny parametr określa wartość domyślną. W poniższej tabeli wymieniono atrybuty informacji o wywołującym, które są <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> zdefiniowane w przestrzeni nazw:  
   
 |Atrybut|Opis|Typ|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Pełna ścieżka pliku źródłowego zawierającego obiekt wywołujący. Jest to ścieżka w czasie kompilacji.|`String`|  
-|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Numer wiersza w pliku źródłowym, w którym metoda jest wywoływana.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nazwa metody lub właściwości name obiektu wywołującego. Aby uzyskać więcej informacji, zobacz [informacje o wywołującym (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Numer wiersza w pliku źródłowym, z którego wywoływana jest metoda.|`Integer`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nazwa metody lub nazwa właściwości obiektu wywołującego. Aby uzyskać więcej informacji, zobacz [Informacje oC#wywołującym ()](../caller-information.md).|`String`|  
   
- Aby uzyskać więcej informacji na temat atrybutów informacji o obiekcie wywołującym zobacz [informacje o wywołującym (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).  
+ Aby uzyskać więcej informacji o atrybutach informacji o wywołującym, zobacz [Informacje o wywołującymC#()](../caller-information.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)
-- [Atrybuty](../../../../../docs/standard/attributes/index.md)
-- [Odbicie (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Przewodnik programowania w języku C#](../../index.md)
+- [Atrybuty](../../../../standard/attributes/index.md)
+- [OdbicieC#()](../reflection.md)
+- [Uzyskiwanie dostępu do atrybutów przyC#użyciu odbicia ()](./accessing-attributes-by-using-reflection.md)

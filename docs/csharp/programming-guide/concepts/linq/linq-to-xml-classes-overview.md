@@ -1,59 +1,59 @@
 ---
-title: LINQ to XML — Przegląd klas (C#)
+title: Przegląd klas LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: 6e7e25a0faa659dc362cf1184951c9e5fa49ca18
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 55be666fc0db0becb12ec8b525e7fc443536e1df
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484453"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591885"
 ---
-# <a name="linq-to-xml-classes-overview-c"></a>LINQ to XML — Przegląd klas (C#)
-Ten temat zawiera listę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] klas w <xref:System.Xml.Linq> przestrzeni nazw oraz krótki opis każdego z nich.  
+# <a name="linq-to-xml-classes-overview-c"></a>Przegląd klas LINQ to XML (C#)
+Ten temat zawiera listę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] klas <xref:System.Xml.Linq> w przestrzeni nazw oraz Krótki opis każdego z nich.  
   
-## <a name="linq-to-xml-classes"></a>LINQ to XML klasy  
+## <a name="linq-to-xml-classes"></a>Klasy LINQ to XML  
   
-### <a name="xattribute-class"></a>Klasy XAttribute  
- <xref:System.Xml.Linq.XAttribute> reprezentuje atrybut XML. Aby uzyskać szczegółowe informacje i przykłady, zobacz [XAttribute klasa — Przegląd (C#)](../../../../csharp/programming-guide/concepts/linq/xattribute-class-overview.md).  
+### <a name="xattribute-class"></a>Klasa XAttribute  
+ <xref:System.Xml.Linq.XAttribute>reprezentuje atrybut XML. Aby uzyskać szczegółowe informacje i przykłady, zobacz [XAttribute Class OverviewC#()](./xattribute-class-overview.md).  
   
-### <a name="xcdata-class"></a>XCData Class  
- <xref:System.Xml.Linq.XCData> reprezentuje węzeł tekstowy CDATA.  
+### <a name="xcdata-class"></a>Klasa XCData  
+ <xref:System.Xml.Linq.XCData>reprezentuje węzeł tekstu CDATA.  
   
 ### <a name="xcomment-class"></a>Klasa XComment  
- <xref:System.Xml.Linq.XComment> reprezentuje komentarz XML.  
+ <xref:System.Xml.Linq.XComment>Reprezentuje komentarz XML.  
   
 ### <a name="xcontainer-class"></a>Klasa XContainer  
- <xref:System.Xml.Linq.XContainer> jest abstrakcyjna klasa bazowa dla wszystkich węzłów, które mogą mieć węzłów podrzędnych. Następujące klasy pochodzić od <xref:System.Xml.Linq.XContainer> klasy:  
+ <xref:System.Xml.Linq.XContainer>jest abstrakcyjną klasą bazową dla wszystkich węzłów, które mogą mieć węzły podrzędne. Następujące klasy pochodzą od <xref:System.Xml.Linq.XContainer> klasy:  
   
 - <xref:System.Xml.Linq.XElement>  
   
 - <xref:System.Xml.Linq.XDocument>  
   
 ### <a name="xdeclaration-class"></a>Klasa XDeclaration  
- <xref:System.Xml.Linq.XDeclaration> reprezentuje deklaracji XML. Deklaracja XML jest używane do deklarowania wersji XML i kodowania dokumentu. Ponadto deklaracja XML określa, czy dokument XML jest autonomiczny. Dokument jest autonomiczna, czy nie deklaracje zewnętrzne znaczników w zewnętrznej definicji DTD lub w jednostce parametru zewnętrznych przywoływany w podzestawie wewnętrznym.  
+ <xref:System.Xml.Linq.XDeclaration>reprezentuje deklarację XML. Deklaracja XML jest używana do deklarowania wersji XML i kodowania dokumentu. Ponadto deklaracja XML określa, czy dokument XML jest autonomiczny. Jeśli dokument jest autonomiczny, nie ma żadnych deklaracji znaczników zewnętrznych, w zewnętrznym DTD lub w jednostce parametru zewnętrznego, do której odwołuje się podzbiór wewnętrzny.  
   
-### <a name="xdocument-class"></a>XDocument, klasa  
- <xref:System.Xml.Linq.XDocument> Reprezentuje dokumentu XML. Aby uzyskać szczegółowe informacje i przykłady, zobacz [Przegląd klasy XDocument (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md).  
+### <a name="xdocument-class"></a>Klasa XDocument  
+ <xref:System.Xml.Linq.XDocument>reprezentuje dokument XML. Aby uzyskać szczegółowe informacje i przykłady, zobacz [Klasa XDocument —C#omówienie ()](./xdocument-class-overview.md).  
   
-### <a name="xdocumenttype-class"></a>Klasa XDocumentType  
- <xref:System.Xml.Linq.XDocumentType> reprezentuje XML dokumentu Type Definition (DTD).  
+### <a name="xdocumenttype-class"></a>XDocumenttype — Klasa  
+ <xref:System.Xml.Linq.XDocumentType>reprezentuje definicję typu dokumentu XML (DTD).  
   
-### <a name="xelement-class"></a>Klasy XElement  
- <xref:System.Xml.Linq.XElement> Reprezentuje XML element. Aby uzyskać szczegółowe informacje i przykłady, zobacz [Przegląd klasy XElement (C#)](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md).  
+### <a name="xelement-class"></a>Klasa XElement  
+ <xref:System.Xml.Linq.XElement>reprezentuje element XML. Aby uzyskać szczegółowe informacje i przykłady, zobacz [XElement Class OverviewC#()](./xelement-class-overview.md).  
   
 ### <a name="xname-class"></a>Klasa XName  
- <xref:System.Xml.Linq.XName> reprezentuje nazwy elementów (<xref:System.Xml.Linq.XElement>) i atrybuty (<xref:System.Xml.Linq.XAttribute>). Aby uzyskać szczegółowe informacje i przykłady, zobacz [Przegląd klasy XDocument (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md).  
+ <xref:System.Xml.Linq.XName>reprezentuje nazwy elementów (<xref:System.Xml.Linq.XElement>) i atrybutów (<xref:System.Xml.Linq.XAttribute>). Aby uzyskać szczegółowe informacje i przykłady, zobacz [Klasa XDocument —C#omówienie ()](./xdocument-class-overview.md).  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zaprojektowaną do podejmowania nazwy XML jest tak proste, jak to możliwe. Z powodu ich złożoności nazwy XML są często uznawane za zaawansowanych tematów, w formacie XML. Można przypuszczać, że tę złożoność pochodzi spoza przestrzeni nazw, które deweloperzy regularnie używane w programowaniu, ale z prefiksy przestrzeni nazw. Prefiksy Namespace może być przydatne, aby zmniejszyć naciśnięć klawiszy wymagany podczas wprowadzania danych XML lub była łatwiejsza do odczytania XML. Jednak prefiksy są często po prostu skrót do usługi za pomocą pełnego przestrzeni nazw XML i nie są wymagane w większości przypadków. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] upraszcza nazw XML, rozwiązując wszystkie prefiksy do ich odpowiednich przestrzeni nazw XML. Prefiksy są dostępne, jeśli są wymagane, za pośrednictwem <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A> metody.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]został zaprojektowany tak, aby nazwy XML były tak proste, jak to możliwe. Ze względu na złożoność nazwy XML często są uważane za zaawansowaną temat w języku XML. Raczej, ta złożoność nie pochodzi z przestrzeni nazw, które deweloperzy wykorzystują regularnie w programowaniu, ale z prefiksów przestrzeni nazw. Prefiksy przestrzeni nazw mogą być przydatne, aby zmniejszyć liczbę naciśnięć klawiszy wymaganych podczas wprowadzania danych XML lub ułatwić odczytywanie kodu XML. Jednak prefiksy są często tylko skrótem do używania pełnej przestrzeni nazw XML i nie są wymagane w większości przypadków. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]upraszcza nazwy XML, rozwiązując wszystkie prefiksy do odpowiednich nazw XML. Prefiksy są dostępne, jeśli są wymagane przez <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A> metodę.  
   
- Jest to możliwe, jeśli to konieczne, aby kontrolka prefiksy przestrzeni nazw. W pewnych okolicznościach Jeśli pracujesz z innymi systemami XML, takich jak XSLT lub XAML, musisz kontrolowanie prefiksów przestrzeni nazw. Na przykład jeśli wyrażenie XPath, który używa prefiksy przestrzeni nazw i jest osadzony w arkusz stylów XSLT, należy się upewnić, że dokument XML jest serializowana z prefiksy przestrzeni nazw, które pasują do terminów używanych w wyrażenie XPath.  
+ W razie potrzeby można kontrolować prefiksy przestrzeni nazw. W niektórych sytuacjach, jeśli pracujesz z innymi systemami XML, takimi jak XSLT lub XAML, musisz kontrolować prefiksy przestrzeni nazw. Na przykład jeśli masz wyrażenie XPath używające prefiksów przestrzeni nazw i osadzone w arkuszu stylów XSLT, musisz upewnić się, że dokument XML jest serializowany z prefiksami przestrzeni nazw, które pasują do tych używanych w wyrażeniu XPath.  
   
 ### <a name="xnamespace-class"></a>Klasa XNamespace  
- <xref:System.Xml.Linq.XNamespace> reprezentuje obszar nazw dla <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XAttribute>. Przestrzenie nazw są składnikiem <xref:System.Xml.Linq.XName>.  
+ <xref:System.Xml.Linq.XNamespace>reprezentuje przestrzeń nazw dla <xref:System.Xml.Linq.XElement> lub. <xref:System.Xml.Linq.XAttribute> Przestrzenie nazw są składnikiem <xref:System.Xml.Linq.XName>.  
   
 ### <a name="xnode-class"></a>Klasa XNode  
- <xref:System.Xml.Linq.XNode> jest klasą abstrakcyjną, która reprezentuje węzły drzewa XML. Następujące klasy pochodzić od <xref:System.Xml.Linq.XNode> klasy:  
+ <xref:System.Xml.Linq.XNode>jest klasą abstrakcyjną, która reprezentuje węzły drzewa XML. Następujące klasy pochodzą od <xref:System.Xml.Linq.XNode> klasy:  
   
 - <xref:System.Xml.Linq.XText>  
   
@@ -65,27 +65,27 @@ Ten temat zawiera listę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] k
   
 - <xref:System.Xml.Linq.XDocumentType>  
   
-### <a name="xnodedocumentordercomparer-class"></a>XNodeDocumentOrderComparer Class  
- <xref:System.Xml.Linq.XNodeDocumentOrderComparer> oferuje funkcje, aby porównać węzłów w celu ich kolejności dokumentu.  
+### <a name="xnodedocumentordercomparer-class"></a>Klasa XNodeDocumentOrderComparer  
+ <xref:System.Xml.Linq.XNodeDocumentOrderComparer>oferuje funkcje do porównywania węzłów dla ich kolejności dokumentów.  
   
-### <a name="xnodeequalitycomparer-class"></a>XNodeEqualityComparer Class  
- <xref:System.Xml.Linq.XNodeEqualityComparer> oferuje funkcje, aby porównać węzłów na równoważność wartości.  
+### <a name="xnodeequalitycomparer-class"></a>Klasa XNodeEqualityComparer  
+ <xref:System.Xml.Linq.XNodeEqualityComparer>oferuje funkcje do porównywania węzłów pod kątem równości wartości.  
   
-### <a name="xobject-class"></a>XObject Class  
- <xref:System.Xml.Linq.XObject> jest abstrakcyjna klasa bazowa <xref:System.Xml.Linq.XNode> i <xref:System.Xml.Linq.XAttribute>. Zapewnia funkcje adnotacji i zdarzeń.  
+### <a name="xobject-class"></a>Klasa XObject  
+ <xref:System.Xml.Linq.XObject>jest abstrakcyjną klasą <xref:System.Xml.Linq.XNode> bazową <xref:System.Xml.Linq.XAttribute>i. Zapewnia funkcję adnotacji i zdarzeń.  
   
 ### <a name="xobjectchange-class"></a>Klasa XObjectChange  
- <xref:System.Xml.Linq.XObjectChange> Określa typ zdarzenia, gdy zdarzenie jest wywoływane dla <xref:System.Xml.Linq.XObject>.  
+ <xref:System.Xml.Linq.XObjectChange>Określa typ zdarzenia, gdy zdarzenie jest zgłaszane dla elementu <xref:System.Xml.Linq.XObject>.  
   
-### <a name="xobjectchangeeventargs-class"></a>XObjectChangeEventArgs Class  
- <xref:System.Xml.Linq.XObjectChangeEventArgs> udostępnia dane dla <xref:System.Xml.Linq.XObject.Changing> i <xref:System.Xml.Linq.XObject.Changed> zdarzenia.  
+### <a name="xobjectchangeeventargs-class"></a>Klasa XObjectChangeEventArgs  
+ <xref:System.Xml.Linq.XObjectChangeEventArgs>dostarcza dane dla <xref:System.Xml.Linq.XObject.Changing> zdarzeń i <xref:System.Xml.Linq.XObject.Changed> .  
   
 ### <a name="xprocessinginstruction-class"></a>Klasa XProcessingInstruction  
- <xref:System.Xml.Linq.XProcessingInstruction> reprezentuje instrukcji przetwarzania XML. Instrukcja przetwarzania komunikuje się informacji do aplikacji, która przetwarza dane XML.  
+ <xref:System.Xml.Linq.XProcessingInstruction>reprezentuje instrukcję przetwarzania XML. Instrukcja przetwarzania komunikuje informacje z aplikacją, która przetwarza kod XML.  
   
 ### <a name="xtext-class"></a>Klasa XText  
- <xref:System.Xml.Linq.XText> reprezentuje węzeł tekstowy. W większości przypadków nie trzeba używać tej klasy. Ta klasa służy przede wszystkim dla zawartości mieszanej.  
+ <xref:System.Xml.Linq.XText>reprezentuje węzeł tekstowy. W większości przypadków nie trzeba używać tej klasy. Ta klasa jest używana głównie do zawartości mieszanej.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML — przegląd programowania (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [Omówienie programowania LINQ to XML (C#)](./linq-to-xml-overview.md)

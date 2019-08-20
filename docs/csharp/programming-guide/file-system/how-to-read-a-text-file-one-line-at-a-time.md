@@ -6,15 +6,15 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 4e6c4cfce1b5e97f70040b318eb68ee78ee4a953
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75274d93ee29feb5f79dfc29c24109f25fd98a5c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595389"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589961"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Instrukcje: Odczytywanie pliku tekstowego po jednym wierszu (Visual C#)
-Ten przykład odczytuje zawartość pliku tekstowego, jeden wiersz w czasie, na ciąg za pośrednictwem `ReadLine` metody `StreamReader` klasy. Każdy wiersz tekstu jest przechowywany w ciągu `line` i wyświetlane na ekranie.  
+Ten przykład odczytuje zawartość pliku tekstowego, jeden wiersz naraz, do ciągu przy użyciu `ReadLine` metody `StreamReader` klasy. Każdy wiersz tekstu jest przechowywany w ciągu `line` i wyświetlany na ekranie.  
   
 ## <a name="example"></a>Przykład  
   
@@ -38,20 +38,20 @@ System.Console.ReadLine();
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Skopiuj kod i wklej go w `Main` metoda aplikacji konsoli.  
+ Skopiuj kod i wklej go do `Main` metody aplikacji konsolowej.  
   
- Zastąp `"c:\test.txt"` nazwą rzeczywistego pliku.  
+ Zamień `"c:\test.txt"` na rzeczywistą nazwę pliku.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
-- Plik nie istnieje.  
+- Plik może nie istnieć.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik `myFile.cs` może nie być plik źródłowy C#.  
+ Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik `myFile.cs` nie może być plikiem C# źródłowym.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [System plików i rejestr (C# Programming Guide)](../../../csharp/programming-guide/file-system/index.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [System plików i Rejestr (C# Przewodnik programowania)](./index.md)

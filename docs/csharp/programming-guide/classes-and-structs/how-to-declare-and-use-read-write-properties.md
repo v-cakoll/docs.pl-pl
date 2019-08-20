@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Deklarowanie i użycie właściwości odczyt/zapis - C# przewodnik programowania'
+title: 'Instrukcje: Deklarowanie i używanie właściwości odczytu zapisu C# — Przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,54 +9,54 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: b4dc9364e64f7ebfd495671b852b98d8f56c80b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 010c3d4c1ae976091b5382f00a982400746f6436
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646465"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596931"
 ---
-# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Instrukcje: Deklarowanie i użycie właściwości odczyt/zapis (C# Programming Guide)
-Właściwości zapewniają wygodne publiczne elementy członkowskie danych bez ryzyka związane z niechronionych, niekontrolowane i niezweryfikowanych dostęp do danych obiektu. Jest to realizowane za pośrednictwem *Akcesory*: specjalne metody, które przypisać i pobierania wartości z bazowego elementu danych. [Ustaw](../../../csharp/language-reference/keywords/set.md) dostępu umożliwia członkom danych można przypisać i [uzyskać](../../../csharp/language-reference/keywords/get.md) akcesor pobiera wartości elementów członkowskich danych.  
+# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Instrukcje: Deklarowanie i używanie właściwości odczytu zapisuC# (Przewodnik programowania)
+Właściwości zapewniają wygodę publicznych członków danych bez ryzyka związanego z niechronionym, niekontrolowanym i niezweryfikowanym dostępem do danych obiektu. Jest to realizowane za pośrednictwem metod *dostępu*: specjalne metody, które przypisują i pobierają wartości z bazowego elementu członkowskiego danych. Metoda dostępu [Set](../../language-reference/keywords/set.md) umożliwia składowe danych, a metoda dostępu [Get](../../language-reference/keywords/get.md) pobiera wartości elementu członkowskiego danych.  
   
- W tym przykładzie pokazano `Person` klasy, która ma dwie właściwości: `Name` (ciąg) i `Age` (int). Obie te właściwości zapewniają `get` i `set` metod dostępu, dzięki czemu są one traktowane jako właściwości odczytu/zapisu.  
+ Ten przykład pokazuje `Person` klasę, która ma dwie właściwości: `Name` (String) i `Age` (int). Obie właściwości zapewniają `get` i `set` metody dostępu, więc są uznawane za właściwości odczytu i zapisu.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideObjects#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#33)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- W poprzednim przykładzie `Name` i `Age` właściwości są [publicznych](../../../csharp/language-reference/keywords/public.md) i zawiera zarówno `get` i `set` metody dostępu. Umożliwia to dowolnego obiektu odczytywać i zapisywać te właściwości. Czasami jest pożądane, jednak do wykluczenia z jednej z metod dostępu. Pominięcie `set` dostępu, na przykład sprawia, że właściwość tylko do odczytu:  
+ W poprzednim `Name` przykładzie właściwości i `Age` są [publiczne](../../language-reference/keywords/public.md) i zawierają `get` `set` metodę dostępu a i. Dzięki temu każdy obiekt może odczytywać i zapisywać te właściwości. Jednak czasami pożądane jest wyłączenie jednego z metod dostępu. Z `set` pominięciem metody dostępu, na przykład, powoduje, że właściwość jest tylko do odczytu:  
   
  [!code-csharp[csProgGuideObjects#87](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#87)]  
   
- Alternatywnie można publicznie udostępnić jedną metodę dostępu, ale inne prywatnych lub chronionych. Aby uzyskać więcej informacji, zobacz [asymetrycznego dostępności metody dostępu](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
+ Alternatywnie można uwidocznić jeden akcesor publicznie, ale drugi prywatny lub chroniony. Aby uzyskać więcej informacji, zobacz [ułatwienia dostępu asymetryczny](./restricting-accessor-accessibility.md).  
   
- Po właściwości są deklarowane, mogą one używane tak, jakby były one pola klasy. Umożliwia to bardzo fizycznych składni, gdy zarówno pobierania i ustawiania wartości właściwości, tak jak w następujących instrukcji:  
+ Po zadeklarowaniu właściwości można ich używać tak, jakby były polami klasy. Pozwala to na bardzo naturalną składnię podczas pobierania i ustawiania wartości właściwości, jak w następujących instrukcjach:  
   
  [!code-csharp[csProgGuideObjects#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#35)]  
   
- Należy pamiętać, że we właściwości `set` typu specjalne `value` zmienna jest dostępna. Ta zmienna zawiera wartość, którą użytkownik określił, na przykład:  
+ Należy pamiętać, że w `set` metodzie właściwości `value` jest dostępna specjalna zmienna. Ta zmienna zawiera wartość określoną przez użytkownika, na przykład:  
   
  [!code-csharp[csProgGuideObjects#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#36)]  
   
- Zwróć uwagę, czysta składnia zwiększanie `Age` właściwość `Person` obiektu:  
+ Zwróć uwagę na czystą składnię zwiększającą `Age` Właściwość `Person` obiektu:  
   
  [!code-csharp[csProgGuideObjects#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#37)]  
   
- Jeśli jest to oddzielne `set` i `get` metody były używane do modelowania właściwości, równoważny kod może wyglądać następująco:  
+ Jeśli do `set` właściwości `get` modelu użyto oddzielnych metod i, odpowiedni kod może wyglądać następująco:  
   
 ```csharp  
 person.SetAge(person.GetAge() + 1);   
 ```  
   
- `ToString` Metoda zostanie przesłonięta w tym przykładzie:  
+ `ToString` Metoda została przesłonięta w tym przykładzie:  
   
  [!code-csharp[csProgGuideObjects#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#38)]  
   
- Należy zauważyć, że `ToString` jawnie nie jest używany w programie. Jest wywoływana, domyślnie `WriteLine` wywołania.  
+ Należy zauważyć `ToString` , że nie jest on jawnie używany w programie. Jest wywoływana domyślnie przez `WriteLine` wywołania.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Właściwości](./properties.md)
+- [Klasy i struktury](./index.md)

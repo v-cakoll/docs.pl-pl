@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 704af9aae23571abdb82ae851066e3c03dbe7161
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 4d0801cd81e00c84be278b44730058798b0acfa9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433543"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588193"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Typy wskaźników (Przewodnik programowania w języku C#)
 
@@ -25,7 +25,7 @@ Typ określony przed `*` typem wskaźnika jest nazywany **typem referent**. Tylk
 
 Typy wskaźnika nie dziedziczą z [obiektu](../../language-reference/keywords/object.md) i nie istnieją konwersje między typami wskaźnika i `object`. Ponadto wskaźniki nie są obsługiwane w przypadku opakowywania i rozpakowywania. Można jednak wykonywać konwersje między różnymi typami wskaźnika oraz między typami wskaźnika a typami całkowitymi.
 
-W przypadku deklarowania wielu wskaźników w jednej deklaracji gwiazdka (*) jest pisana razem tylko z typem podstawowym; nie jest używana jako prefiks każdej nazwy wskaźnika. Na przykład:
+W przypadku deklarowania wielu wskaźników w jednej deklaracji gwiazdka (*) jest pisana razem tylko z typem podstawowym; nie jest używana jako prefiks każdej nazwy wskaźnika. Przykład:
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -52,7 +52,7 @@ int* myVariable;
 
 Wyrażenie `*myVariable` `myVariable`oznacza `int` zmienną znalezioną w adresie zawartym w.
 
-Kilka przykładów wskaźników znajduje się w tematach [stałych instrukcja](../../language-reference/keywords/fixed-statement.md) i [konwersje wskaźnika](../../programming-guide/unsafe-code-pointers/pointer-conversions.md). Poniższy przykład używa `unsafe` słowa kluczowego `fixed` i instrukcji oraz pokazuje, jak zwiększyć wewnętrzny wskaźnik.  Ten kod można wkleić do funkcji Main aplikacji konsoli, aby go uruchomić. Te przykłady muszą zostać skompilowane przy użyciu [-](../../language-reference/compiler-options/unsafe-compiler-option.md) niebezpiecznego zestawu opcji kompilatora.
+Kilka przykładów wskaźników znajduje się w tematach [stałych instrukcja](../../language-reference/keywords/fixed-statement.md) i [konwersje wskaźnika](./pointer-conversions.md). Poniższy przykład używa `unsafe` słowa kluczowego `fixed` i instrukcji oraz pokazuje, jak zwiększyć wewnętrzny wskaźnik.  Ten kod można wkleić do funkcji Main aplikacji konsoli, aby go uruchomić. Te przykłady muszą zostać skompilowane przy użyciu [-](../../language-reference/compiler-options/unsafe-compiler-option.md) niebezpiecznego zestawu opcji kompilatora.
 
 [!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
 

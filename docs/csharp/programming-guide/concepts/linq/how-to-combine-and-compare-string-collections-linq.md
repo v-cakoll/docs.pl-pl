@@ -1,20 +1,20 @@
 ---
-title: 'Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)'
+title: 'Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ)C#()'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: cdddf0aaac4264ae70c89590ef61e7b1bbf4cb9b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3fe1f9dbac864f4eca8ea92f84c35d290ab14642
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585955"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594092"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)
-W tym przykładzie pokazano, jak można scalić plików, które zawierają wiersze tekstu, a następnie Sortuj wyniki. W szczególności pokazują sposób wykonywania prostych łączenia, Unii i część wspólną na dwa zestawy wierszy tekstu.  
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ)C#()
+Ten przykład pokazuje, jak scalać pliki zawierające wiersze tekstu, a następnie sortować wyniki. W związku z tym pokazuje, jak wykonać prostą metodę łączenia, Unii i przecięcia na dwóch zestawach wierszy tekstu.  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a>Aby skonfigurować projekt i plików tekstowych  
+### <a name="to-set-up-the-project-and-the-text-files"></a>Aby skonfigurować projekt i pliki tekstowe  
   
-1. Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names1.txt i zapisz go w folderze projektu:  
+1. Skopiuj te nazwy do pliku tekstowego o nazwie names1. txt i Zapisz go w folderze projektu:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ W tym przykładzie pokazano, jak można scalić plików, które zawierają wiers
     Garcia, Debra  
     ```  
   
-2. Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names2.txt i zapisz go w folderze projektu. Należy zauważyć, że te dwa pliki nazwy niektórych wspólnych.  
+2. Skopiuj te nazwy do pliku tekstowego o nazwie names2. txt i Zapisz go w folderze projektu. Należy pamiętać, że dwa pliki mają nazwy wspólne.  
   
     ```  
     Liu, Jinghao  
@@ -169,9 +169,9 @@ class MergeStrings
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie C# konsoli projekt aplikacji z `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
+ Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ i ciągi (C#)](./linq-and-strings.md)
+- [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)

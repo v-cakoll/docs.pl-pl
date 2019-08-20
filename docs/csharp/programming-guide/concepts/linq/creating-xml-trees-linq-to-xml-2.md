@@ -2,24 +2,24 @@
 title: Tworzenie drzew XML w języku C# (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 37970b58519f5ff28165b45ebc729cc0a7f447d3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a77171ebbc07e54f6988fb97aff197b4c6d31721
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487508"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594624"
 ---
-# <a name="creating-xml-trees-in-c-linq-to-xml"></a>Tworzenie drzew XML w języku C# (LINQ to XML)
-Ta sekcja zawiera informacje dotyczące tworzenia drzew XML w języku C#.  
+# <a name="creating-xml-trees-in-c-linq-to-xml"></a>Tworzenie drzew XML w C# (LINQ to XML)
+Ta sekcja zawiera informacje dotyczące tworzenia drzew XML w C#programie.  
   
- Informacji o używaniu wyników zapytania LINQ jako zawartość dla <xref:System.Xml.Linq.XElement>, zobacz [konstrukcja funkcjonalna (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Aby uzyskać informacje o używaniu wyników zapytań LINQ jako zawartości dla elementu <xref:System.Xml.Linq.XElement>, zobacz [funkcjonalne konstruowanie (LINQ to XML) (C#)](./functional-construction-linq-to-xml.md).  
   
 ## <a name="constructing-elements"></a>Konstruowanie elementów
- Podpisy <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XAttribute> konstruktory pozwalają przekazać zawartość elementu lub atrybutu jako argumenty do konstruktora. Ponieważ w jednym z konstruktorów przyjmuje zmienną liczbę argumentów, można przekazać dowolną liczbę elementów podrzędnych. Oczywiście każda z tych elementów podrzędnych może zawierać własne elementy podrzędne. Dla każdego elementu możesz dodać dowolną liczbę atrybutów.  
+ Sygnatury <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XAttribute> konstruktorów umożliwiają przekazanie zawartości elementu lub atrybutu jako argumenty do konstruktora. Ponieważ jeden z konstruktorów przyjmuje zmienną liczbę argumentów, można przekazać dowolną liczbę elementów podrzędnych. Oczywiście każdy z tych elementów podrzędnych może zawierać własne elementy podrzędne. Dla dowolnego elementu można dodać dowolną liczbę atrybutów.  
   
- Podczas dodawania <xref:System.Xml.Linq.XNode> (w tym <xref:System.Xml.Linq.XElement>) lub <xref:System.Xml.Linq.XAttribute> obiektów, jeśli nowa zawartość nie ma elementu nadrzędnego, obiekty, po prostu są dołączone do drzewa XML. Jeśli już nowej zawartości jest elementem nadrzędnym i jest częścią innego drzewa XML, nowej zawartości został sklonowany, a nowo sklonowanego zawartości jest dołączony do drzewa XML. Przykład ostatniego, w tym temacie przedstawia to.  
+ W przypadku <xref:System.Xml.Linq.XNode> dodawania ( <xref:System.Xml.Linq.XElement>w tym <xref:System.Xml.Linq.XAttribute> ) lub obiektów, jeśli nowa zawartość nie ma elementu nadrzędnego, obiekty są po prostu dołączone do drzewa XML. Jeśli nowa zawartość jest już nadrzędna i jest częścią innego drzewa XML, Nowa zawartość jest klonowana, a nowo sklonowana zawartość jest dołączona do drzewa XML. W ostatnim przykładzie w tym temacie pokazano, jak to zrobić.  
   
- Aby utworzyć `contacts` <xref:System.Xml.Linq.XElement>, można użyć następującego kodu:  
+ Aby utworzyć obiekt `contacts` <xref:System.Xml.Linq.XElement>, można użyć następującego kodu:  
   
 ```csharp  
 XElement contacts =  
@@ -37,33 +37,33 @@ XElement contacts =
     );  
 ```  
   
- Jeśli poprawnie, wcięcia kodu do konstruowania <xref:System.Xml.Linq.XElement> obiektów przypomina strukturę podstawowy kod XML.  
+ W przypadku poprawnego wcięcia kod do konstruowania <xref:System.Xml.Linq.XElement> obiektów ściśle przypomina strukturę bazowego kodu XML.  
   
-## <a name="xelement-constructors"></a>Konstruktory klasy XElement  
- <xref:System.Xml.Linq.XElement> Klasa używa następujących konstruktorów konstrukcja funkcjonalna. Należy pamiętać, że niektóre inne konstruktory <xref:System.Xml.Linq.XElement>, ale ponieważ nie są one używane do konstrukcja funkcjonalna są niewymienione w tym miejscu.  
+## <a name="xelement-constructors"></a>Konstruktory XElement  
+ <xref:System.Xml.Linq.XElement> Klasa używa następujących konstruktorów dla konstrukcji funkcjonalnej. Należy zauważyć, że istnieją inne konstruktory <xref:System.Xml.Linq.XElement>dla, ale ponieważ nie są one używane do konstruowania funkcjonalnego, nie są wyświetlane w tym miejscu.  
   
 |Konstruktor|Opis|  
 |-----------------|-----------------|  
-|`XElement(XName name, object content)`|Tworzy <xref:System.Xml.Linq.XElement>. `name` Parametr określa nazwę elementu; `content` określa zawartości elementu.|  
-|`XElement(XName name)`|Tworzy <xref:System.Xml.Linq.XElement> z jego <xref:System.Xml.Linq.XName> zainicjowany do określonej nazwy.|  
-|`XElement(XName name, params object[] content)`|Tworzy <xref:System.Xml.Linq.XElement> z jego <xref:System.Xml.Linq.XName> zainicjowany do określonej nazwy. Atrybuty i/lub elementy podrzędne są tworzone na podstawie zawartości listy parametrów.|  
+|`XElement(XName name, object content)`|<xref:System.Xml.Linq.XElement>Tworzy. `name` Parametr określa nazwę elementu; `content` określa zawartość elementu.|  
+|`XElement(XName name)`|Tworzy obiekt <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XName> z zainicjowanym do określonej nazwy.|  
+|`XElement(XName name, params object[] content)`|Tworzy obiekt <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XName> z zainicjowanym do określonej nazwy. Atrybuty i/lub elementy podrzędne są tworzone na podstawie zawartości listy parametrów.|  
   
- `content` Parametru jest niezwykle elastyczny. Obsługuje ona dowolnego typu obiektu, który jest prawidłowy element podrzędny <xref:System.Xml.Linq.XElement>. Następujące reguły stosuje się do różnych typów obiektów tego parametru:  
+ `content` Parametr jest niezwykle elastyczny. Obsługuje wszystkie typy obiektów, które są prawidłowymi elementami podrzędnymi <xref:System.Xml.Linq.XElement>. Następujące reguły mają zastosowanie do różnych typów obiektów przekazaną w tym parametrze:  
   
-- Ciąg jest dodawany jako zawartości tekstowej.  
+- Ciąg jest dodawany jako zawartość tekstowa.  
   
 - <xref:System.Xml.Linq.XElement> Jest dodawany jako element podrzędny.  
   
-- <xref:System.Xml.Linq.XAttribute> Jest dodawany jako atrybut.  
+- Element <xref:System.Xml.Linq.XAttribute> jest dodawany jako atrybut.  
   
-- <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment>, Lub <xref:System.Xml.Linq.XText> jest dodawany jako zawartość elementu podrzędnego.  
+- Element <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment>, lub<xref:System.Xml.Linq.XText> jest dodawany jako zawartość podrzędna.  
   
-- <xref:System.Collections.IEnumerable> Są wyliczane, a te zasady są stosowane cyklicznie z wynikami.  
+- Wyliczenie <xref:System.Collections.IEnumerable> jest wyliczane i reguły są stosowane cyklicznie do wyników.  
   
-- Dla dowolnego typu jego `ToString` wywoływana jest metoda, a wynik jest dodawany jako zawartości tekstowej.  
+- Dla każdego innego typu `ToString` Metoda jest wywoływana, a wynik jest dodawany jako zawartość tekstowa.  
   
 ### <a name="creating-an-xelement-with-content"></a>Tworzenie XElement z zawartością  
- Możesz utworzyć <xref:System.Xml.Linq.XElement> zawierający prostej zawartości z pojedynczym wywołaniu metody. Aby to zrobić, należy określić zawartość jako drugi parametr w następujący sposób:  
+ Można utworzyć obiekt <xref:System.Xml.Linq.XElement> zawierający prostą zawartość z pojedynczym wywołaniem metody. W tym celu określ zawartość jako drugi parametr w następujący sposób:  
   
 ```csharp  
 XElement n = new XElement("Customer", "Adventure Works");  
@@ -76,7 +76,7 @@ Console.WriteLine(n);
 <Customer>Adventure Works</Customer>  
 ```  
   
- Można przekazać obiekty dowolnego typu jako zawartości. Na przykład, poniższy kod tworzy element, który zawiera zmiennoprzecinkowy numer jako zawartość punktu:  
+ Każdy typ obiektu można przekazać jako zawartość. Na przykład poniższy kod tworzy element, który zawiera liczbę zmiennoprzecinkową jako zawartość:  
   
 ```csharp  
 XElement n = new XElement("Cost", 324.50);  
@@ -89,10 +89,10 @@ Console.WriteLine(n);
 <Cost>324.5</Cost>  
 ```  
   
- Zmiennoprzecinkowa numer jest zapakowany i przekazany do konstruktora. Spakowany liczba jest konwertowana na ciąg i używany jako zawartość elementu.  
+ Liczba zmiennoprzecinkowa jest opakowana i przenoszona do konstruktora. Numer opakowany jest konwertowany na ciąg i używany jako zawartość elementu.  
   
-### <a name="creating-an-xelement-with-a-child-element"></a>Tworzenie XElement za pomocą elementu podrzędnego  
- W przypadku przekazania wystąpienia <xref:System.Xml.Linq.XElement> klasy dla zawartości argumentu konstruktora tworzy element z element podrzędny:  
+### <a name="creating-an-xelement-with-a-child-element"></a>Tworzenie XElement z elementem podrzędnym  
+ Jeśli przekazujesz wystąpienie <xref:System.Xml.Linq.XElement> klasy dla argumentu Content, Konstruktor tworzy element z elementem podrzędnym:  
   
 ```csharp  
 XElement shippingUnit = new XElement("ShippingUnit",  
@@ -109,8 +109,8 @@ Console.WriteLine(shippingUnit);
 </ShippingUnit>  
 ```  
   
-### <a name="creating-an-xelement-with-multiple-child-elements"></a>Tworzenie XElement za pomocą wielu podrzędnych elementów  
- Można przekazać wiele <xref:System.Xml.Linq.XElement> obiektów dla zawartości. Każdy z <xref:System.Xml.Linq.XElement> obiektów jest dołączony jako element podrzędny.  
+### <a name="creating-an-xelement-with-multiple-child-elements"></a>Tworzenie XElement z wieloma elementami podrzędnymi  
+ Można przekazać wiele <xref:System.Xml.Linq.XElement> obiektów dla zawartości. <xref:System.Xml.Linq.XElement> Każdy obiekt jest dołączony jako element podrzędny.  
   
 ```csharp  
 XElement address = new XElement("Address",  
@@ -133,7 +133,7 @@ Console.WriteLine(address);
 </Address>  
 ```  
   
- Rozszerzając powyższego przykładu, można utworzyć całego drzewa XML w następujący sposób:  
+ Rozszerzając powyższy przykład, można utworzyć całe drzewo XML w następujący sposób:  
   
 ```csharp  
 XElement contacts =  
@@ -169,8 +169,8 @@ Console.WriteLine(contacts);
 </Contacts>  
 ```  
 
-### <a name="creating-an-xelement-with-an-xattribute"></a>Tworzenie XElement za pomocą XAttribute
- W przypadku przekazania wystąpienia <xref:System.Xml.Linq.XAttribute> klasy dla zawartości argumentu konstruktora tworzy element z atrybutem:
+### <a name="creating-an-xelement-with-an-xattribute"></a>Tworzenie XElement przy użyciu XAttribute
+ Jeśli przekazujesz wystąpienie <xref:System.Xml.Linq.XAttribute> klasy dla argumentu Content, Konstruktor tworzy element z atrybutem:
 
 ```csharp  
 XElement phone = new XElement("Phone",  
@@ -186,7 +186,7 @@ Console.WriteLine(phone);
 ```   
 
 ### <a name="creating-an-empty-element"></a>Tworzenie pustego elementu  
- Aby utworzyć pustą <xref:System.Xml.Linq.XElement>, żadnej zawartości nie są przekazywane do konstruktora. Poniższy przykład tworzy pustego elementu:  
+ Aby utworzyć pustą <xref:System.Xml.Linq.XElement>, nie należy przekazywać żadnej zawartości do konstruktora. Poniższy przykład tworzy pusty element:  
   
 ```csharp  
 XElement n = new XElement("Customer");  
@@ -199,10 +199,10 @@ Console.WriteLine(n);
 <Customer />  
 ```  
   
-### <a name="attaching-vs-cloning"></a>Dołączanie a klonowania  
- Jak wspomniano wcześniej, podczas dodawania <xref:System.Xml.Linq.XNode> (w tym <xref:System.Xml.Linq.XElement>) lub <xref:System.Xml.Linq.XAttribute> obiektów, jeśli nowa zawartość nie ma elementu nadrzędnego, obiekty, po prostu są dołączone do drzewa XML. Jeśli nowa zawartość jest elementem nadrzędnym, a jest częścią innego drzewa XML, Nowa zawartość zostanie sklonowany, a nowo sklonowanego zawartości jest dołączony do drzewa XML.  
+### <a name="attaching-vs-cloning"></a>Dołączanie a klonowanie  
+ Jak wspomniano wcześniej, podczas <xref:System.Xml.Linq.XNode> dodawania ( <xref:System.Xml.Linq.XElement>w tym <xref:System.Xml.Linq.XAttribute> ) lub obiektów, jeśli nowa zawartość nie ma elementu nadrzędnego, obiekty są po prostu dołączone do drzewa XML. Jeśli nowa zawartość jest już nadrzędna i jest częścią innego drzewa XML, Nowa zawartość jest klonowana, a nowo sklonowana zawartość jest dołączona do drzewa XML.  
 
-Poniższy przykład pokazuje zachowanie podczas dodawania elementu nadrzędnego w drzewie, a podczas dodawania elementu z elementu nadrzędnego na drzewo.
+Poniższy przykład ilustruje zachowanie po dodaniu elementu nadrzędnego do drzewa i po dodaniu elementu z elementem nadrzędnym do drzewa.
 
 ```csharp  
 // Create a tree with a child element.  
@@ -236,4 +236,4 @@ Console.WriteLine("Child2 was {0}",
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [Tworzenie drzew XML (C#)](./linq-to-xml-overview.md)

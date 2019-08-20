@@ -1,5 +1,5 @@
 ---
-title: '-target: exe (opcje kompilatora C#)'
+title: '-target: exe (C# opcje kompilatora)'
 ms.date: 07/20/2015
 f1_keywords:
 - /exe
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: 7d34a25fd614a209761714e1f4eff3042ca240c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6087a64bea5a59bfcfc5372f6a9d6eb8b9c940cb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662403"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606454"
 ---
-# <a name="-targetexe-c-compiler-options"></a>-target: exe (opcje kompilatora C#)
-**-Target: exe** opcja powoduje, że kompilator, aby utworzyć plik wykonywalny (EXE), aplikacji konsoli.  
+# <a name="-targetexe-c-compiler-options"></a>-target: exe (C# opcje kompilatora)
+Opcja **-target: exe** powoduje, że kompilator tworzy plik wykonywalny (exe), aplikację konsolową.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -25,28 +25,28 @@ ms.locfileid: "61662403"
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **-Target: exe** opcja w praktyce jest domyślnie. Zostanie utworzony plik wykonywalny z rozszerzeniem .exe.  
+ Opcja **-target: exe** domyślnie działa. Plik wykonywalny zostanie utworzony z rozszerzeniem. exe.  
   
- Użyj [-target: winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) do utworzenia pliku wykonywalnego programu Windows.  
+ USE [-target: winexe](./target-winexe-compiler-option.md) do utworzenia pliku wykonywalnego programu systemu Windows.  
   
- Chyba że określono inaczej, za pomocą [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) opcji Nazwa pliku wyjściowego przyjmuje nazwę pliku wejściowego, który zawiera [Main](../../../csharp/programming-guide/main-and-command-args/index.md) metody.  
+ O ile nie określono inaczej z opcją [-out](./out-compiler-option.md) , nazwa pliku wyjściowego przyjmuje nazwę pliku wejściowego, który zawiera metodę [Main](../../programming-guide/main-and-command-args/index.md) .  
   
- Po określeniu w wierszu polecenia, wszystkie pliki, aż do następnego **-out** lub **-target: module** opcji są używane do tworzenia pliku .exe  
+ W przypadku określenia w wierszu polecenia wszystkie pliki do następnej lub docelowej opcji **modułu** są używane do tworzenia pliku. exe  
   
- Jeden i tylko jeden **Main** metoda jest wymagany w plikach źródłowych kodu, które są kompilowane do pliku .exe. [-Głównego](../../../csharp/language-reference/compiler-options/main-compiler-option.md) — opcja kompilatora pozwala określić, która klasa zawiera **Main** metodę, w przypadkach, gdy kod ma więcej niż jednej klasy za pomocą **Main** metody.  
+ Jedna i tylko jedna metoda **Main** jest wymagana w plikach kodu źródłowego, które są kompilowane w pliku. exe. [-Main —](./main-compiler-option.md) opcja kompilatora pozwala określić, która Klasa zawiera metodę **Main** , w przypadkach, gdy kod zawiera więcej niż jedną klasę za pomocą metody **Main** .  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1. Otwórz projekt **właściwości** strony.  
+1. Otwórz stronę **Właściwości** projektu.  
   
-2. Kliknij przycisk **aplikacji** stronę właściwości.  
+2. Kliknij stronę właściwości **aplikacji** .  
   
-3. Modyfikowanie **typ danych wyjściowych** właściwości.  
+3. Zmodyfikuj właściwość **typu danych wyjściowych** .  
   
- Aby uzyskać informacje na temat sposobu programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Aby uzyskać informacje na temat sposobu, w jaki można programowo ustawić <xref:VSLangProj80.ProjectProperties3.OutputType%2A>tę opcję kompilatora, zobacz.  
   
 ## <a name="example"></a>Przykład  
- Każda z następujących wierszy polecenia zostanie skompilowany `in.cs`, tworzenie `in.exe`:  
+ Każdy z następujących wierszy poleceń zostanie skompilowany `in.cs`, tworzenie: `in.exe`  
   
 ```console  
 csc -target:exe in.cs  
@@ -55,5 +55,5 @@ csc in.cs
   
 ## <a name="see-also"></a>Zobacz także
 
-- [-target (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [-Target (C# opcje kompilatora)](./target-compiler-option.md)
+- [Opcje kompilatora C#](./index.md)

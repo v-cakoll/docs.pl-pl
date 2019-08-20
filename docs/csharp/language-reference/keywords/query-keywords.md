@@ -1,44 +1,44 @@
 ---
-title: Słowa kluczowe — zapytania C# odwołania
+title: Słowa kluczowe zapytania C# — odwołanie
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: dde621395f407cd64e047ddfe8c6539e976b3061
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ed931871e8abbfd9ff421a1307fb21c3490493fb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633021"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608456"
 ---
-# <a name="query-keywords-c-reference"></a>Słowa kluczowe zapytania (odwołanie w C#)
+# <a name="query-keywords-c-reference"></a>Słowa kluczowe zapytaniaC# (odwołanie)
 
-Ta sekcja zawiera kontekstowymi słowami kluczowymi, używać w wyrażeniach zapytań.
+Ta sekcja zawiera kontekstowe słowa kluczowe używane w wyrażeniach zapytań.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 |Klauzula|Opis|
 |------------|-----------------|
-|[from](from-clause.md)|Określa źródło danych i zmienną zakresu (podobnie jak zmienna iteracji).|
-|[gdzie](where-clause.md)|Filtry źródła elementy oparte na co najmniej jednego wyrażenia logiczne, rozdzielone i operatory logiczne AND ( `&&` lub <code>&#124;&#124;</code> ).|
-|[select](select-clause.md)|Określa typ i kształt, który będzie mieć elementy w zwracanej sekwencji, gdy zapytanie jest wykonywane.|
-|[Grupy](group-clause.md)|Wyniki zapytania grupy zgodnie z określoną wartością klucza.|
-|[into](into.md)|Zawiera identyfikator, który może służyć jako odwołanie do wyników sprzężenia, grupy lub klauzuli select.|
-|[orderby](orderby-clause.md)|Sortuje wyniki zapytania w kolejności rosnącej lub malejącej w oparciu o domyślny moduł porównujący dla typu elementu.|
-|[join](join-clause.md)|Łączy dwa źródła danych na podstawie porównania równości między dwoma określone kryteria dopasowania.|
-|[Let](let-clause.md)|Wprowadza zmienną zakresu do przechowywania wyników wyrażeń podrzędnych w wyrażeniu zapytania.|
-|[in](in.md)|Kontekstowe słowo kluczowe w [sprzężenia](join-clause.md) klauzuli.|
-|[on](on.md)|Kontekstowe słowo kluczowe w [sprzężenia](join-clause.md) klauzuli.|
-|[equals](equals.md)|Kontekstowe słowo kluczowe w [sprzężenia](join-clause.md) klauzuli.|
-|[by](by.md)|Kontekstowe słowo kluczowe w [grupy](group-clause.md) klauzuli.|
-|[ascending](ascending.md)|Kontekstowe słowo kluczowe w [orderby](orderby-clause.md) klauzuli.|
-|[descending](descending.md)|Kontekstowe słowo kluczowe w [orderby](orderby-clause.md) klauzuli.|
+|[from](from-clause.md)|Określa źródło danych i zmienną zakresu (podobnie jak Zmienna iteracji).|
+|[miejscu](where-clause.md)|Filtruje elementy źródłowe na podstawie jednego lub kilku wyrażeń logicznych oddzielonych operatorami logicznymi `&&` i <code>&#124;&#124;</code> i lub (lub).|
+|[zaznaczenia](select-clause.md)|Określa typ i kształt, które elementy w zwracanej sekwencji będą miały miejsce, gdy zapytanie zostanie wykonane.|
+|[Group](group-clause.md)|Grupuje wyniki zapytania zgodnie z określoną wartością klucza.|
+|[into](into.md)|Dostarcza identyfikator, który może być używany jako odwołanie do wyników klauzuli join, Group lub SELECT.|
+|[orderby](orderby-clause.md)|Sortuje wyniki zapytania w porządku rosnącym lub malejącym w oparciu o domyślną funkcję porównującą dla typu elementu.|
+|[join](join-clause.md)|Łączy dwa źródła danych na podstawie porównania równości między dwoma określonymi kryteriami dopasowywania.|
+|[wpuść](let-clause.md)|Wprowadza zmienną zakresu do przechowywania wyników podwyrażenia w wyrażeniu zapytania.|
+|[in](in.md)|Kontekstowe słowo kluczowe w klauzuli [Join](join-clause.md) .|
+|[on](on.md)|Kontekstowe słowo kluczowe w klauzuli [Join](join-clause.md) .|
+|[equals](equals.md)|Kontekstowe słowo kluczowe w klauzuli [Join](join-clause.md) .|
+|[by](by.md)|Kontekstowe słowo kluczowe w klauzuli [Group](group-clause.md) .|
+|[ascending](ascending.md)|Kontekstowe słowo kluczowe w klauzuli [OrderBy](orderby-clause.md) .|
+|[descending](descending.md)|Kontekstowe słowo kluczowe w klauzuli [OrderBy](orderby-clause.md) .|
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Słowa kluczowe języka C#](index.md)
-- [LINQ (Language-Integrated Query)](../../programming-guide/concepts/linq/index.md)
-- [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [Wprowadzenie do korzystania z LINQ w C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ (zapytanie zintegrowane z językiem)](../../programming-guide/concepts/linq/index.md)
+- [Wyrażenia zapytania LINQ](../../programming-guide/linq-query-expressions/index.md)
+- [Wprowadzenie do korzystania z LINQ w C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)

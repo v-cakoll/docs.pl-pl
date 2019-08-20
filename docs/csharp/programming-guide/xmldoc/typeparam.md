@@ -1,5 +1,5 @@
 ---
-title: <typeparam> - C# Przewodnik programowania
+title: <typeparam> — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: fc2c0ec29dd2652d48a6f941bec939bbd9aac8e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea48cf0cdfc2dc48ad29ab6219449f801739bc8f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675802"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587593"
 ---
-# <a name="typeparam-c-programming-guide"></a>\<typeparam > (C# Programming Guide)
+# <a name="typeparam-c-programming-guide"></a>\<typeparam > (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -24,25 +24,25 @@ ms.locfileid: "61675802"
   
 ## <a name="parameters"></a>Parametry  
  `name`  
- Nazwa parametru typu. Nazwę należy ująć w znaki podwójnego cudzysłowu ("").  
+ Nazwa parametru typu. Ujmij nazwę w znaki podwójnego cudzysłowu ("").  
   
  `description`  
  Opis parametru typu.  
   
 ## <a name="remarks"></a>Uwagi  
- `<typeparam>` Używany tag w komentarzu do deklaracji ogólnej typie lub metodzie do opisania parametrem typu. Dodaj tag dla każdego typu parametru typu ogólnego lub metody.  
+ `<typeparam>` Tag powinien być używany w komentarzu dla typu ogólnego lub deklaracji metody, aby opisać parametr typu. Dodaj tag dla każdego parametru typu ogólnego typu lub metody.  
   
- Aby uzyskać więcej informacji, zobacz [ogólne](../../../csharp/programming-guide/generics/index.md).  
+ Aby uzyskać więcej informacji, zobacz [Ogólne](../generics/index.md).  
   
- Tekst dla `<typeparam>` będą wyświetlane w technologii IntelliSense, [okna przeglądarki obiektów](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) kodu komentarza raport sieci web.  
+ Tekst dla `<typeparam>` tagu będzie wyświetlany w IntelliSense, raport sieci Web przeglądarka obiektówgo komentarza do kodu [okna](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) .  
   
- Kompiluj przy użyciu [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) do Przetwarzaj komentarze dokumentacji do pliku.  
+ Kompiluj z [/doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Zalecane tagi przeznaczone do komentarzy dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Dokumentacja języka C#](../../language-reference/index.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

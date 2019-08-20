@@ -1,41 +1,41 @@
 ---
-title: Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)
+title: Wykonywanie odroczone i Ocena z opóźnieniem w LINQ to XMLC#()
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: 1f68a6c7de943d4a38ad0e5777298368e1c4e554
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9cf28afb5b7b8b3047c8b1b21915ffe7409eb25e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487564"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594568"
 ---
-# <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)
-Operacje zapytań i osi są często stosowane do użycia odroczonego wykonania. W tym temacie opisano wymagania i zalety wykonanie odroczone i kilka kwestii dotyczących wdrażania.  
+# <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Wykonywanie odroczone i Ocena z opóźnieniem w LINQ to XMLC#()
+Operacje zapytań i osi często są implementowane w celu użycia odroczonego wykonania. W tym temacie opisano wymagania i zalety odroczonego wykonywania oraz niektóre zagadnienia dotyczące implementacji.  
   
 ## <a name="deferred-execution"></a>Wykonanie odroczone  
- Odroczone wykonania oznacza wyniku obliczenia wyrażenia jest opóźnione aż do jego *zrealizowany* faktycznie wymagana jest wartość. Wykonanie odroczone może znacznie zwiększyć wydajność, gdy masz do manipulowania kolekcji dużych ilości danych, szczególnie w programach, które zawierają szereg zapytań łańcuchowych lub manipulacje. W przypadku najlepszych odroczonego wykonania umożliwia jednej iteracji za pomocą kolekcji źródłowej.  
+ Wykonywanie odroczone oznacza, że Obliczanie wyrażenia jest opóźnione do momentu, gdy wartość rzeczywista jest wymagana. Wykonywanie odroczone może znacznie poprawić wydajność, gdy trzeba manipulować dużymi kolekcjami danych, szczególnie w programach, które zawierają serię zapytań lub manipulacji łańcucha. W najlepszym przypadku wykonywanie odroczone włącza tylko jedną iterację za pomocą kolekcji źródłowej.  
   
- Technologii LINQ wykorzystać rozbudowane odroczonego wykonania w przypadku członków podstawowych <xref:System.Linq?displayProperty=nameWithType> klas i metod rozszerzenia w różnych obszarach nazw LINQ, takich jak <xref:System.Xml.Linq.Extensions?displayProperty=nameWithType>.  
+ Technologie LINQ umożliwiają użycie odroczonego wykonania w obu elementach członkowskich klas podstawowych <xref:System.Linq?displayProperty=nameWithType> i w metodach rozszerzających w różnych przestrzeniach nazw LINQ, takich jak. <xref:System.Xml.Linq.Extensions?displayProperty=nameWithType>  
   
- Wykonanie odroczone jest obsługiwane bezpośrednio w języku C#, [uzyskanie](../../../../csharp/language-reference/keywords/yield.md) — słowo kluczowe (w postaci `yield-return` instrukcji) używanego w ramach blokiem iteratora. Takie iteratora musi zwracać kolekcję typu <xref:System.Collections.IEnumerator> lub <xref:System.Collections.Generic.IEnumerator%601> (lub typem pochodnym).  
+ Wykonywanie odroczone jest obsługiwane bezpośrednio w C# języku za pomocą słowa kluczowego [Yield](../../../language-reference/keywords/yield.md) (w `yield-return` formie instrukcji), gdy jest używana w bloku iteratora. Taki iterator musi zwracać kolekcję typu <xref:System.Collections.IEnumerator> lub <xref:System.Collections.Generic.IEnumerator%601> (lub typu pochodnego).  
   
-## <a name="eager-vs-lazy-evaluation"></a>Zapoznamy programu vs. Obliczanie z opóźnieniem  
- Podczas pisania metody, która implementuje odroczonym należy zdecydować, czy zaimplementować metodę, przy użyciu opóźnieniem lub eager oceny.  
+## <a name="eager-vs-lazy-evaluation"></a>Eager a Ocena z opóźnieniem  
+ Podczas pisania metody, która implementuje wykonywanie odroczone, należy również zdecydować, czy zaimplementować metodę przy użyciu oceny z opóźnieniem czy oceny eager.  
   
-- W *opóźnieniem*, jeden element z kolekcji źródłowej jest przetwarzany w każdym wywołaniu iteratora. Jest to typowy sposób, w którym są implementowane Iteratory.  
+- W *ocenie*z opóźnieniem pojedynczy element kolekcji źródłowej jest przetwarzany podczas każdego wywołania iteratora. Jest to typowy sposób implementacji iteratorów.  
   
-- W *eager oceny*, pierwsze wywołanie funkcji iteratora spowoduje całą kolekcję przetwarzany. Tymczasową kopię kolekcji źródłowej, mogą być także wymagane. Na przykład <xref:System.Linq.Enumerable.OrderBy%2A> metoda ma sortowania całą kolekcję przed zwróceniem pierwszego elementu.  
+- W *ocenie eager*pierwsze wywołanie iteratora spowoduje przetworzenie całej kolekcji. Może być również wymagana tymczasowa kopia kolekcji źródłowej. Na przykład <xref:System.Linq.Enumerable.OrderBy%2A> Metoda musi sortować całą kolekcję przed zwróceniem pierwszego elementu.  
   
- Obliczanie leniwe zwykle daje lepszą wydajność, ponieważ dystrybuuje obciążenie przetwarzania równomiernie w całej oceny kolekcji, a minimalizuje wykorzystanie danych tymczasowych. Oczywiście w przypadku niektórych operacji nie ma innych opcji niż celu zmaterializowania wyników pośrednich.  
+ Ocena z opóźnieniem zwykle zapewnia lepszą wydajność, ponieważ dystrybuuje przetwarzanie narzutowe równomiernie przez oszacowanie kolekcji i minimalizuje użycie danych tymczasowych. Oczywiście w przypadku niektórych operacji nie ma żadnej innej opcji, aby zmaterializowania wyniki pośrednie.  
   
 ## <a name="next-steps"></a>Następne kroki  
- Następny temat w tym samouczku przedstawiono odroczonego wykonania:  
+ Następny temat w tym samouczku ilustruje odroczone wykonywanie:  
   
-- [Przykład wykonania odroczonego (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [Przykład wykonania odroczonego (C#)](./deferred-execution-example.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Łączenie łańcuchowe zapytań (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
-- [Pojęcia i terminologia (Przekształcanie funkcjonalne) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
-- [Operacje agregacji (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)
-- [yield](../../../../csharp/language-reference/keywords/yield.md)
+- [Samouczek: Łączenie łańcuchowe zapytań (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Pojęcia i terminologia (przekształcenie funkcjonalne)C#()](./concepts-and-terminology-functional-transformation.md)
+- [Operacje agregacjiC#()](./aggregation-operations.md)
+- [yield](../../../language-reference/keywords/yield.md)

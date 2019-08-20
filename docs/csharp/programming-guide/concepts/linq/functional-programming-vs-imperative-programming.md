@@ -1,57 +1,57 @@
 ---
-title: Programowanie funkcjonalne a Programowanie imperatywne (C#)
+title: Programowanie funkcjonalne a Programowanie bezwzględne (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 2b6a53943ea2363869530ae773c19a52b5578b56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596706"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594314"
 ---
-# <a name="functional-programming-vs-imperative-programming-c"></a>Programowanie funkcjonalne a Programowanie imperatywne (C#)
-W tym temacie porównano i przeciwstawiono sobie programowania funkcjonalnego, przy użyciu bardziej tradycyjny imperatywnego (proceduralne).  
+# <a name="functional-programming-vs-imperative-programming-c"></a>Programowanie funkcjonalne a Programowanie bezwzględne (C#)
+W tym temacie porównano i kontrastuje programowanie funkcjonalne z bardziej tradycyjnym, niewzględnym (proceduralnym) programowaniem.  
   
 ## <a name="functional-programming-vs-imperative-programming"></a>Programowanie funkcjonalne a programowanie imperatywne  
- *Programowania funkcjonalnego* paradygmat jawnie został utworzony w celu obsługi czystego funkcjonalności służące do rozwiązywania problemów. Programowanie funkcjonalne jest formą *programowanie deklaratywne*. Z kolei większość mainstream języków, w tym zorientowane obiektowo (Obiektowo) języków programowania, takich jak C#, Visual Basic, C++ i Java, zostały zaprojektowane do obsługi przede wszystkim *imperatywne* (proceduralne).  
+ Model *programowania funkcjonalnego* został jawnie utworzony w celu obsługi czystego podejścia funkcjonalnego do rozwiązywania problemów. Programowanie funkcjonalne jest formą *programowania deklaratywnego*. W przeciwieństwie do tego większość najpopularniejszych języków, w tym języków programowania zorientowanego obiektowo ( C#OOP), C++takich jak, Visual Basic, i Java, została zaprojektowana tak, aby przede wszystkim wspierać bezwzględne (proceduralne) programowanie.  
   
- Przy użyciu podejścia imperatywnego Deweloper pisze kod, który opisano w ponoszenia szczegółowo czynności, które należy wykonać komputera w celu osiągnięcia tego celu. To jest czasami określane jako *konsolidatorze* programowania. Z kolei funkcjonalności podejścia polega na tworzenie problemu jako zbiór funkcji do wykonania. Należy zdefiniować dokładnie dane wejściowe do każdej funkcji i jakie każda funkcja zwraca. W poniższej tabeli opisano niektóre ogólne różnice między dwóm metodom.  
+ W przypadku, gdy jest to bezwzględne podejście, deweloper zapisuje kod opisujący szczegółowo szczegółowe czynności, które musi wykonać komputer, aby osiągnąć cel. Jest to czasami określane jako programowanie *algorytmów* . Z kolei podejście funkcjonalne obejmuje tworzenie problemów jako zestaw funkcji do wykonania. Należy dokładnie zdefiniować dane wejściowe dla każdej funkcji i co zwraca każda funkcja. W poniższej tabeli opisano niektóre ogólne różnice między tymi dwoma podejściami.  
   
-|Cechy|Podejścia imperatywnego|Podejście funkcjonalności|  
+|Charakterystyk|Bezwzględne podejście|Podejście funkcjonalne|  
 |--------------------|-------------------------|-------------------------|  
-|Fokus programisty|Jak wykonywać zadania (algorytmy) i jak śledzić zmiany w stanie.|Jakie informacje jest pożądane i przekształcenia, które są wymagane.|  
-|Zmiany stanu|Ważne.|Nieistniejąca.|  
+|Fokus programisty|Jak wykonywać zadania (algorytmy) i jak śledzić zmiany w stanie.|Jakie informacje są potrzebne i jakie przekształcenia są wymagane.|  
+|Zmiany stanu|Ważne.|Nie istnieje.|  
 |Kolejność wykonywania|Ważne.|Niska ważność.|  
-|Sterowanie przepływem podstawowego|Pętle, instrukcje warunkowe i wywołania funkcji (metoda).|Wywołań funkcji, w tym rekursji.|  
-|Manipulowanie podstawowej jednostki|Wystąpienia elementu struktury lub klasy.|Funkcje jako najwyższej jakości kolekcje obiektów i danych.|  
+|Podstawowe sterowanie przepływem|Pętle, warunkowe i wywołania funkcji (Metoda).|Wywołania funkcji, w tym rekursja.|  
+|Podstawowa jednostka manipulowania|Wystąpienia struktur lub klas.|Działa jako obiekty pierwszej klasy i kolekcje danych.|  
   
- Chociaż większość języków zostały zaprojektowane do obsługi określonych paradygmat programowania, wielu języków ogólne są wystarczająco elastyczny, aby obsługiwać wiele paradygmatów. Na przykład większość języków, które zawierają wskaźniki funkcji można wiarygodnie Obsługa programowania funkcjonalnego. Ponadto C# zawiera rozszerzenia językowe jawne do obsługi programowania funkcjonalnego, w tym wyrażeń lambda i wnioskowanie o typie. Technologia LINQ jest formą deklaratywne, funkcjonalne programowania.  
+ Chociaż większość języków została zaprojektowana do obsługi określonego modelu programowania, wiele języków ogólnych jest wystarczająco elastycznych, aby obsługiwało wiele odmian. Na przykład większość języków zawierających wskaźniki funkcji może służyć do credibly programowania funkcjonalnego. Ponadto program C# zawiera jawne rozszerzenia językowe do obsługi programowania funkcjonalnego, w tym wyrażenia lambda i wnioskowania o typie. Technologia LINQ jest formą deklaracyjnego programowania funkcjonalnego.  
   
-## <a name="functional-programming-using-xslt"></a>Programowanie za pomocą XSLT funkcjonalne  
- Wielu programistów XSLT znają czystego podejście funkcjonalności. Najbardziej efektywny sposób rozwijać arkusz stylów XSLT jest traktuje każdy szablon jako izolowanym, konfigurowalna transformacji. Kolejność wykonywania jest całkowicie wyłączyć wyróżniony. XSLT nie zezwala na efekty uboczne (z wyjątkiem, że anulowania zapewnianego element mechanizmy wykonuje kod proceduralny może prowadzić do efekty uboczne, których wynikiem zanieczyszczenie funkcjonalności). Jednak mimo że XSLT jest skutecznym narzędziem, niektóre jego właściwości nie są optymalne. Na przykład przedstawiając konstrukcje programowania w języku XML sprawia, że kod stosunkowo pełne i w związku z tym trudne w utrzymaniu. Ponadto duże poleganie na rekursji dla sterowanie przepływem może spowodować kod, który jest trudny do odczytania. Aby uzyskać więcej informacji na temat XSLT, zobacz [przekształcenia XSLT](../../../../standard/data/xml/xslt-transformations.md).  
+## <a name="functional-programming-using-xslt"></a>Programowanie funkcjonalne przy użyciu XSLT  
+ Wielu deweloperów XSLT potrafi poznać czyste podejście funkcjonalne. Najbardziej efektywnym sposobem na Tworzenie arkusza stylów XSLT jest traktowanie każdego szablonu jako odizolowanego, możliwego do redagowania transformacji. Kolejność wykonywania jest całkowicie niewyróżniona. XSLT nie zezwala na efekty uboczne (z wyjątkiem tego, że mechanizmy ucieczki do wykonywania kodu proceduralnego mogą wprowadzać efekty uboczne, które powodują, że nie jest to wynikiem funkcjonalności). Chociaż XSLT jest skutecznym narzędziem, niektóre jego cechy nie są optymalne. Na przykład, konstrukcje programistyczne w języku XML czynią kod stosunkowo pełny i dlatego trudno jest zachować. Ponadto duże zależności dotyczące rekursji dla sterowania przepływem mogą spowodować, że kod jest trudny do odczytania. Aby uzyskać więcej informacji na temat XSLT, zobacz [XSLT Transformations](../../../../standard/data/xml/xslt-transformations.md).  
   
- Jednak XSLT okazała się przy użyciu czystego funkcjonalności podejścia do przekształcania XML z jednego kształtu do innej wartości. Czysty funkcjonalności, programowanie za pomocą LINQ to XML przypomina na wiele sposobów XSLT. Jednak narzędzi programistycznych, wprowadzona w składniku LINQ to XML i języka C# umożliwiają pisanie czystych przekształceń funkcjonalnych, które są bardziej czytelny i łatwy w obsłudze niż XSLT.  
+ Jednak język XSLT udowadniał wartość użycia czystego podejścia funkcjonalnego do przekształcenia XML z jednego kształtu do drugiego. Czyste programowanie funkcjonalne przy użyciu LINQ to XML jest podobne do języka XSLT na wiele sposobów. Jednak konstrukcje programistyczne wprowadzone przez LINQ to XML i C# umożliwiają pisanie czystych transformacji funkcjonalnych, które są bardziej czytelne i konserwowane niż XSLT.  
   
-## <a name="advantages-of-pure-functions"></a>Korzyści wynikające z czystych funkcji  
- Głównym powodem zaimplementować przekształceń funkcjonalnych jako czystych funkcji jest konfigurowalna czy czystych funkcji: oznacza to, niezależna i bezstanowe. Te cechy Przenieś szereg korzyści, w tym następujące czynności:  
+## <a name="advantages-of-pure-functions"></a>Zalety czystych funkcji  
+ Podstawową przyczyną wdrożenia przekształceń funkcjonalnych jako czystych funkcji jest możliwość tworzenia czystych funkcji: to jest, samodzielne i bezstanowe. Te cechy obejmują szereg korzyści, w tym następujące:  
   
-- Zwiększenia czytelności i łatwości utrzymania. To ponieważ każda funkcja zaprojektowano w celu wykonania określonego zadania znajduje się jego argumenty. Funkcja nie zależą od dowolnego stanu zewnętrznego.  
+- Zwiększ czytelność i łatwość utrzymania. Jest to spowodowane tym, że każda funkcja została zaprojektowana w celu wykonania określonego zadania z uwzględnieniem argumentów. Funkcja nie polega na żadnym stanie zewnętrznym.  
   
-- Łatwiejsze opracowywanie reiterative. Ponieważ kod jest łatwiejszy do refaktoryzacji, zmiany projektu są często łatwiejsze do wdrożenia. Na przykład załóżmy, że skomplikowaną transformację zapisu, a następnie należy pamiętać, że jakiś kod jest powtarzany kilka razy w transformacji. Jeśli zrefaktoryzujesz przy użyciu czystej metody można wywołać czystego metodę momencie bez martwienia się o efekty uboczne.  
+- Łatwiejsza zmiana na rozwój. Ponieważ kod jest łatwiejszy do refaktoryzacji, zmiany w projekcie są często łatwiejsze do wdrożenia. Załóżmy na przykład, że napiszesz skomplikowaną transformację, a następnie dowiesz się, że jakiś kod jest powtórzony kilka razy w transformacji. Jeśli refaktoryzacja jest przeprowadzana za pomocą czystej metody, można wywołać czystą metodę w stanie bez obaw o skutki uboczne.  
   
-- Łatwiejsze testowanie i debugowanie. Ponieważ łatwiej można było przetestować czystych funkcji izolacji, można napisać kod testu, który wywołuje czystą funkcję typowe wartości, przypadki brzegowe prawidłowe i przypadki brzegowe nieprawidłowy.  
+- Łatwiejsze testowanie i debugowanie. Ze względu na to, że czyste funkcje mogą być łatwiejsze do przetestowania w izolacji, można napisać kod testu, który wywołuje czystą funkcję z typowymi wartościami, prawidłowymi przypadkami krawędzi i nieprawidłowymi przypadkami krawędzi.  
   
-## <a name="transitioning-for-oop-developers"></a>Przejście dla deweloperów Obiektowo  
- W tradycyjnym zorientowanym obiektowo (Obiektowo), większość programistów są przyzwyczajeni do programowania w stylu imperatywne/procedur. Aby przełączyć się do rozwoju w stylu funkcjonalności czystego, muszą oni wprowadzić przejścia w ich myślenia i ich podejście do programowania.  
+## <a name="transitioning-for-oop-developers"></a>Przechodzenie dla deweloperów OOP  
+ W tradycyjnych programowaniu zorientowanym obiektom (OOP) większość deweloperów jest przyzwyczajona do programowania w stylu bezwzględnym/proceduralnym. Aby przełączać się do programowania w czystym stylu funkcjonalnym, muszą one wprowadzać przejście w myśli i ich podejście do rozwoju.  
   
- Do rozwiązywania problemów, deweloperzy Obiektowo Projektuj hierarchie klasy skupić się na właściwe hermetyzacji i myślą w kategoriach kontraktów klasy. Zachowanie i stan wybierane są kluczowymi czynnikami, a podano funkcji języka, takich jak klasy, interfejsy, dziedziczenia i polimorfizmu, aby rozwiązać te problemy.  
+ Aby rozwiązać problemy, OOP programiści mogą projektować hierarchie klas, skupić się na poprawnym hermetyzacji i myśleć o kategoriach umów. Zachowanie i stan typów obiektów to najważniejsze, a funkcje językowe, takie jak klasy, interfejsy, dziedziczenie i polimorfizm, są dostarczane w celu rozwiązania tych problemów.  
   
- Z kolei programowania funkcjonalnego dochodzi do rozwiązywania problemów obliczeniowych w charakterze ćwiczenia podczas obliczania czystych przekształceń funkcjonalnych kolekcji danych. Programowanie funkcjonalne pozwala uniknąć stan i dane modyfikowalny i zamiast tego wyróżniane aplikacji funkcji.  
+ W przeciwieństwie do programowania funkcjonalnego podejścia do problemów obliczeniowych jako ćwiczenia w ocenie czystych, funkcjonalnych transformacji kolekcji danych. Programowanie funkcjonalne pozwala uniknąć stanu i modyfikowalnych danych, a zamiast tego kładzie nacisk na aplikacje funkcji.  
   
- Na szczęście języka C# nie wymaga pełnej przestępnym do programowania funkcyjnego ponieważ obsługuje ona zarówno imperatywną lub funkcjonalności metody programowania. Deweloper można wybrać, które rozwiązanie jest najbardziej odpowiednie dla danego scenariusza. W rzeczywistości programy często połączyć oba podejścia.  
+ Na szczęście C# nie wymaga pełnego przestępnu do programowania funkcjonalnego, ponieważ obsługuje zarówno podejścia funkcjonalne, jak i funkcjonalne. Deweloper może wybrać, które podejście jest najbardziej odpowiednie dla konkretnego scenariusza. W rzeczywistości programy często łączą oba podejścia.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do czystych przekształceń funkcjonalnych (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Wprowadzenie do czystych transformacji funkcjonalnych (C#)](./introduction-to-pure-functional-transformations.md)
 - [Przekształcenia XSLT](../../../../standard/data/xml/xslt-transformations.md)
-- [Refaktoryzacja do czystych funkcji (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Refaktoryzacja do czystych funkcji (C#)](./refactoring-into-pure-functions.md)

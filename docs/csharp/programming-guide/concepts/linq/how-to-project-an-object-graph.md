@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Projektowanie wykresu obiektu (C#)'
+title: 'Instrukcje: Tworzenie projektu grafu obiektówC#()'
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: 759db3800b02ee3f6e263b4d43374a9160703b2f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: dcfdd8cba95d729a1f9bda3adb4b5fd8690b724a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486577"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592989"
 ---
-# <a name="how-to-project-an-object-graph-c"></a>Instrukcje: Projektowanie wykresu obiektu (C#)
-W tym temacie pokazano, jak projekt lub wypełnić grafu obiektów z pliku XML.  
+# <a name="how-to-project-an-object-graph-c"></a>Instrukcje: Tworzenie projektu grafu obiektówC#()
+W tym temacie pokazano, jak projektować i wypełniać Graf obiektów z pliku XML.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod powoduje wypełnienie wykresu obiektu za pomocą `Address`, `PurchaseOrder`, i `PurchaseOrderItem` klasy z [przykładowy plik XML: Typowe zamówienie zakupu (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md) dokumentu XML.  
+ Poniższy kod wypełnia wykres `Address`obiektu przy użyciu klas, `PurchaseOrder`i `PurchaseOrderItem` z [przykładowego pliku XML: Typowy dokument XML zamówienia zakupu (](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) LINQ to XML).  
   
 ```csharp  
 class Address  
@@ -214,9 +214,9 @@ class Program {
 }  
 ```  
   
- W tym przykładzie wynikiem [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania są zwracane jako <xref:System.Collections.Generic.IEnumerable%601> z `PurchaseOrderItem`. Elementy w `PurchaseOrder` klasy są typu <xref:System.Collections.Generic.IEnumerable%601> z `PurchaseOrderItem`. Kod używa <xref:System.Linq.Enumerable.ToList%2A> metodę rozszerzenia, aby utworzyć <xref:System.Collections.Generic.List%601> kolekcji z wyników zapytania.  
+ W tym przykładzie wynik [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania jest zwracany <xref:System.Collections.Generic.IEnumerable%601> jako z `PurchaseOrderItem`. Elementy w `PurchaseOrder` klasie są <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`typu. Kod używa metody rozszerzającej, <xref:System.Linq.Enumerable.ToList%2A> aby <xref:System.Collections.Generic.List%601> utworzyć kolekcję na podstawie wyników zapytania.  
   
- Przykład generuje następujące wyniki:  
+ Przykład generuje następujące dane wyjściowe:  
   
 ```  
 PurchaseOrderNumber: 99503  

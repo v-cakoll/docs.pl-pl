@@ -1,21 +1,21 @@
 ---
-title: Korzystanie z wariancji w Delegatach (C#)
+title: Korzystanie z wariancji wC#delegatach ()
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 44a6153a9a1c0aa0aebb18710ea9e770fd4e57fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00e11d4ce755c8c75b73023fec14d95ebc96b4fe
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668968"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595261"
 ---
-# <a name="using-variance-in-delegates-c"></a>Korzystanie z wariancji w Delegatach (C#)
-Po przypisaniu metody z delegatem, *Kowariancja* i *kontrawariancja* zapewniają elastyczność dopasowanie typu delegata z podpis metody. Kowariancja zezwala na metodę, aby zwracany typ, który jest bardziej pochodnego niż zdefiniowanymi dla delegata. Kontrawariancja umożliwia metody, która ma typy parametrów, które są mniej pochodnego niż typ delegata.  
+# <a name="using-variance-in-delegates-c"></a>Korzystanie z wariancji wC#delegatach ()
+Podczas przypisywania metody do delegata, *Kowariancja* i *kontrawariancja* zapewniają elastyczność dla dopasowania typu delegata z sygnaturą metody. Kowariancja zezwala metodzie na typ zwracany, który jest bardziej pochodny niż zdefiniowany w delegatze. Kontrawariancja zezwala na metodę, która ma typy parametrów, które są mniej pochodne niż te w typie delegata.  
   
 ## <a name="example-1-covariance"></a>Przykład 1: Kowariancja  
   
 ### <a name="description"></a>Opis  
- W tym przykładzie pokazano, jak można używać delegatów za pomocą metod, które mają zwracane typy, które są uzyskiwane ze zwracanego typu w podpisie delegata. Typ danych zwracanych przez `DogsHandler` typu `Dogs`, która pochodzi od klasy `Mammals` typu, który jest zdefiniowany w delegacie.  
+ Ten przykład pokazuje, jak obiekty delegowane mogą być używane z metodami, które mają typy zwracane, które pochodzą z typu zwracanego w sygnaturze delegata. Typ danych zwracanych przez `DogsHandler` element jest typu `Dogs` `Mammals` , który pochodzi od typu, który jest zdefiniowany w delegacie.  
   
 ### <a name="code"></a>Kod  
   
@@ -51,7 +51,7 @@ class Program
 ## <a name="example-2-contravariance"></a>Przykład 2: Kontrawariancja  
   
 ### <a name="description"></a>Opis  
- W tym przykładzie pokazano, jak można używać delegatów za pomocą metody, które mają parametry typu, które typy podstawowe typu parametru podpis delegata. Za pomocą kontrawariancja możesz użyć jednego programu obsługi zdarzeń zamiast oddzielnych programów obsługi. Na przykład można utworzyć program obsługi zdarzeń, który akceptuje `EventArgs` parametr wejściowy i korzystać z niego przy użyciu `Button.MouseClick` zdarzenia, które wysyła `MouseEventArgs` typu jako parametru, a także z `TextBox.KeyDown` zdarzenia, które wysyła `KeyEventArgs` parametru.  
+ W tym przykładzie pokazano, jak można używać delegatów z metodami, które mają parametry typu, które są typami podstawowymi typu parametru podpisu delegata. Za pomocą kontrawariancja można użyć jednego programu obsługi zdarzeń zamiast oddzielnych programów obsługi. Można na przykład utworzyć procedurę obsługi zdarzeń, `EventArgs` która akceptuje parametr wejściowy, i użyć go `Button.MouseClick` ze zdarzeniem, które wysyła `MouseEventArgs` typ `TextBox.KeyDown` jako parametr, `KeyEventArgs` a także ze zdarzeniem, które wysyła parametr.  
   
 ### <a name="code"></a>Kod  
   
@@ -79,5 +79,5 @@ public Form1()
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wariancje w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [Korzystanie z wariancji dla Func i akcji delegatów ogólnych (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Wariancja w delegatach (C#)](./variance-in-delegates.md)
+- [Korzystanie z wariancji dla delegatów dla funkcjiC#Func i Action ()](./using-variance-for-func-and-action-generic-delegates.md)

@@ -1,5 +1,5 @@
 ---
-title: <list> - C# Przewodnik programowania
+title: <list> — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: 9ac1d749d18a9d02ce28f8cf600495f345ec0e89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aadb24c43d49acb3e71490efd156b14d9fc5f133
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708044"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587972"
 ---
-# <a name="list-c-programming-guide"></a>\<Lista > (C# Programming Guide)
+# <a name="list-c-programming-guide"></a>\<Lista > (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -38,24 +38,24 @@ ms.locfileid: "61708044"
   
 ## <a name="parameters"></a>Parametry  
  `term`  
- Termin, aby zdefiniować, które są definiowane w `description`.  
+ Termin do zdefiniowania, który zostanie zdefiniowany w `description`.  
   
  `description`  
- Element w punktora lub Lista numerowana lub definicji `term`.  
+ Element na liście punktowanej lub numerowanej lub definicji `term`.  
   
 ## <a name="remarks"></a>Uwagi  
- \<Listheader > Blokuj służy do definiowania wiersz nagłówka tabeli lub definicji listy. Podczas definiowania tabeli, wystarczy podać wpis termin w nagłówku.  
+ Blok \<> listheader służy do definiowania wiersza nagłówka tabeli lub listy definicji. Podczas definiowania tabeli należy podać tylko wpis dla terminu w nagłówku.  
   
- Każdy element na liście jest określony za pomocą \<elementu > bloku. Podczas tworzenia listy definicji, musisz podać obydwie wartości `term` i `description`. Jednak dla tabeli, listy punktowanej lub numerowanej, wystarczy podać wpis dla `description`.  
+ Każdy element na liście jest określany za pomocą \<bloku > elementu. Podczas tworzenia listy definicji należy określić zarówno `term` , jak i. `description` Jednak dla tabeli, listy punktowanej lub listy numerowanej wystarczy podać wpis dla `description`.  
   
- Masz tyle listy lub tabeli \<elementu > blokuje zgodnie z potrzebami.  
+ Lista lub tabela może zawierać dowolną liczbę \<bloków > w zależności od potrzeb.  
   
- Kompiluj przy użyciu [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) do Przetwarzaj komentarze dokumentacji do pliku.  
+ Kompiluj z [/doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Zalecane tagi przeznaczone do komentarzy dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

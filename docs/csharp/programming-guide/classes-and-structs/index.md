@@ -1,7 +1,7 @@
 ---
-title: Klasy i struktury - C# przewodnik programowania
+title: Klasy i struktury — C# Przewodnik programowania
 ms.custom: seodec18
-description: W tym artykule opisano korzystanie z klas i struktur (struktury) w języku C#.
+description: Opisuje użycie klas i struktur (struktur) w programie C#.
 ms.date: 01/17/2016
 helpviewer_keywords:
 - structs [C#], about structs
@@ -11,97 +11,97 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 9c26b8deb6036c13a9a61d8929b4cabba5f3ef67
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4565781dd6e30bd88c899a9c098c28e3fd5b3870
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584540"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596630"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Klasy i struktury (Przewodnik programowania w języku C#)
-Klasy i struktury są dwoma podstawowymi konstrukcjami wspólnego systemu typu W.NET Framework. Każdy jest zasadniczo strukturą danych, która hermetyzuje zestaw danych i zachowania, które należą ze sobą jako jednostki logicznej. Dane i zachowania są *członków* klasy lub struktury, i obejmują one metody, właściwości i zdarzenia i tak dalej, zgodnie z opisem w dalszej części tego tematu.  
+Klasy i struktury są dwoma podstawowymi konstrukcjami systemu wspólnego typu w .NET Framework. Każda z nich jest zasadniczo strukturą danych, która hermetyzuje zestaw danych i zachowań, które należą do jednostki logicznej. Dane i zachowania są *elementami członkowskimi* klasy lub struktury, a także zawierają metody, właściwości i zdarzenia itd., jak opisano w dalszej części tego tematu.  
   
- Deklaracja klasy lub struktury jest podobna do planu, który służy do utworzenia wystąpienia lub obiektów w czasie wykonywania. Po zdefiniowaniu klasy lub struktury o nazwie `Person`, `Person` jest nazwą typu. Jeśli zadeklarujesz i zainicjalizujesz zmienną `p` typu `Person`, `p` jest określany jako z obiektem lub wystąpieniem `Person`. Wiele wystąpień tego samego `Person` można utworzyć typu, a każde wystąpienie może mieć różne wartości we właściwościach i polach.  
+ Deklaracja klasy lub struktury jest taka sama jak plan, który jest używany do tworzenia wystąpień lub obiektów w czasie wykonywania. Jeśli zdefiniujesz klasę lub strukturę o nazwie `Person`, `Person` jest nazwą typu. Jeśli zadeklarujesz i zainicjujesz `p` zmienną `Person`typu `p` , `Person`mówi się, że jest obiektem lub wystąpieniem. Można utworzyć wiele wystąpień tego `Person` samego typu, a każde wystąpienie może mieć różne wartości w jego właściwościach i polach.  
   
- Klasa jest typem referencyjnym. Po utworzeniu obiektu klasy, zmienna do której przypisany jest obiekt zawiera tylko odwołanie do pamięci. Gdy odwołanie do obiektu jest przypisane do nowej zmiennej, Nowa zmienna odwołuje się do oryginalnego obiektu. Zmiany wprowadzone za pomocą jednej zmiennej są odzwierciedlane w innych zmiennych, ponieważ oba odnoszą się do tych samych danych.  
+ Klasa jest typem referencyjnym. Po utworzeniu obiektu klasy zmienna, do której przypisany jest obiekt, zawiera tylko odwołanie do tej pamięci. Gdy odwołanie do obiektu jest przypisane do nowej zmiennej, Nowa zmienna odwołuje się do oryginalnego obiektu. Zmiany wprowadzone za pomocą jednej zmiennej są odzwierciedlane w innej zmiennej, ponieważ odwołują się do tych samych danych.  
   
- Struktura jest typem wartości. Po utworzeniu struktury, zmienna, do którego jest przypisana struktura zawiera rzeczywiste dane struktury. Struktura jest przypisywana do nowej zmiennej, są kopiowane. Nowa zmienna i pierwotna zmienna zatem zawierają dwie oddzielne kopie tych samych danych. Zmiany wprowadzone w jednym egzemplarzu nie wpływają na drugi egzemplarz.  
+ Struktura jest typem wartości. Po utworzeniu struktury zmienna, do której jest przypisana struktura, zawiera rzeczywiste dane struktury. Gdy struktura jest przypisana do nowej zmiennej, zostanie ona skopiowana. Nowa zmienna i oryginalna zmienna w związku z tym zawierają dwie oddzielne kopie tych samych danych. Zmiany wprowadzone w jednej kopii nie mają wpływu na inną kopię.  
   
- Ogólnie rzecz biorąc klasy służą do modelowania bardziej złożonych zachowań lub dane, które jest przeznaczone do modyfikacji po utworzeniu obiektu klasy. Struktury najlepiej sprawdzają się w małych strukturach danych, które zawierają głównie dane, które nie są przeznaczone do modyfikacji po utworzeniu struktury.  
+ Ogólnie rzecz biorąc, klasy są używane do modelowania bardziej złożonej zachowań lub dane, które mają być modyfikowane po utworzeniu obiektu klasy. Struktury są najlepiej dostosowane do małych struktur danych, które zawierają głównie dane, które nie są przeznaczone do modyfikacji po utworzeniu struktury.  
   
- Aby uzyskać więcej informacji, zobacz [klasy](../../../csharp/programming-guide/classes-and-structs/classes.md), [obiektów](../../../csharp/programming-guide/classes-and-structs/objects.md), i [struktury](../../../csharp/programming-guide/classes-and-structs/structs.md).  
+ Aby uzyskać więcej informacji, zobacz [klasy](./classes.md), [obiekty](./objects.md)i [struktury](./structs.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie `CustomClass` w `ProgrammingGuide` przestrzeń nazw ma trzy elementy członkowskie: Konstruktor wystąpienia, właściwość o nazwie `Number`i metodę o nazwie `Multiply`. `Main` Method in Class metoda `Program` klasy tworzy wystąpienie (obiekt) `CustomClass`, oraz metody i właściwości obiektu są dostępne przy użyciu notacji z kropką.
+ W `CustomClass` poniższym przykładzie `ProgrammingGuide` w przestrzeni nazw znajdują się trzy elementy członkowskie: Konstruktor wystąpienia, właściwość o nazwie `Number`i metoda o nazwie. `Multiply` Metoda w klasie tworzy`CustomClass`wystąpienie (obiekt), a metoda i właściwość obiektu są dostępne przy użyciu notacji `Program`kropkowej. `Main`
   
  [!code-csharp[csProgGuideObjects#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/class1.cs#1)]  
   
-## <a name="encapsulation"></a>Hermetyzacja protokołu  
- *Hermetyzacja* czasami nazywa się pierwszym filarem lub zasadą programowania zorientowanego na obiekt. Zgodnie z zasadą hermetyzacji klasa lub Struktura można określić, jak każdy z jej członków jest dostępność do kodu poza klasą lub strukturą. Aby ograniczyć możliwość wystąpienia błędów kodowania lub złośliwego oprogramowania, metody i zmienne, które nie są przeznaczone do użycia z poza klasy lub zestawu mogą być ukrywane.  
+## <a name="encapsulation"></a>Encapsulation  
+ *Hermetyzacja* jest czasami określana jako pierwszy filar lub zasada programowania zorientowanego obiektowo. Zgodnie z zasadą hermetyzacji, Klasa lub struktura może określać, jak dostępne są poszczególne elementy członkowskie w kodzie poza klasą lub strukturą. Metody i zmienne, które nie są przeznaczone do użycia poza klasą lub zestawem, mogą być ukryte, aby ograniczyć liczbę błędów lub złośliwych luk w zabezpieczeniach.  
   
- Aby uzyskać więcej informacji na temat klas, zobacz [klasy](../../../csharp/programming-guide/classes-and-structs/classes.md) i [obiektów](../../../csharp/programming-guide/classes-and-structs/objects.md).  
+ Aby uzyskać więcej informacji na temat klas, zobacz [klasy](./classes.md) i [obiekty](./objects.md).  
   
 ### <a name="members"></a>Elementy członkowskie  
- Wszystkie metody, pola, stałe, właściwości i zdarzenia musi być zadeklarowana w ramach danego typu; są to tak zwane *członków* tego typu. W języku C# nie ma żadnych zmiennych globalnych ani metod w przeciwieństwie do innych języków. Nawet punktu wejścia programu `Main` metody musi być zadeklarowana w klasie lub strukturze. Poniższa lista zawiera wszystkie różne rodzaje elementów członkowskich, które może być zadeklarowana w klasie lub strukturze.  
+ Wszystkie metody, pola, stałe, właściwości i zdarzenia muszą być zadeklarowane w obrębie typu; są one nazywane *elementami członkowskimi* typu. W C#programie nie istnieją zmienne globalne ani metody, które są w innych językach. Nawet punkt wejścia programu, `Main` Metoda musi być zadeklarowana w obrębie klasy lub struktury. Poniższa lista zawiera wszystkie różne rodzaje elementów członkowskich, które mogą być zadeklarowane w klasie lub strukturze.  
   
-- [Pola](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [Pola](./fields.md)  
   
-- [Stałe](../../../csharp/programming-guide/classes-and-structs/constants.md)  
+- [Stałe](./constants.md)  
   
-- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Właściwości](./properties.md)  
   
-- [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Metody](./methods.md)  
   
-- [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Konstruktory](./constructors.md)  
   
-- [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
+- [Zdarzenia](../events/index.md)  
   
-- [Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Finalizatory](./destructors.md)  
   
-- [Indeksatory](../../../csharp/programming-guide/indexers/index.md)  
+- [Indeksatory](../indexers/index.md)  
   
-- [Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Operatory](../statements-expressions-operators/operators.md)  
   
-- [Zagnieżdżone typy](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+- [Zagnieżdżone typy](./nested-types.md)  
   
 ### <a name="accessibility"></a>Ułatwienia dostępu  
- Niektóre metody i właściwości mają być nazywane lub dostępne z kodu spoza klasy lub struktury, znanego jako *kod klienta*. Inne metody i właściwości mogą być tylko do użytku w samej klasie lub strukturze. Należy ograniczyć dostępność kodu, tak aby tylko kod zamierzonego klienta mógł go osiągnąć. Należy określić, jak przystępna typów i ich elementów członkowskich mają kod klienta za pomocą modyfikatorów dostępu [publicznych](../../../csharp/language-reference/keywords/public.md), [chronione](../../../csharp/language-reference/keywords/protected.md), [wewnętrzny](../../../csharp/language-reference/keywords/internal.md), [ chronionych wewnętrznych](../../../csharp/language-reference/keywords/protected-internal.md), [prywatnej](../../../csharp/language-reference/keywords/private.md) i [prywatny chroniony](../../../csharp/language-reference/keywords/private-protected.md). Wartość domyślna dostępu `private`. Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).   
+ Niektóre metody i właściwości mają być wywoływane lub dostępne z kodu poza klasą lub strukturą, znaną jako *kod klienta*. Inne metody i właściwości mogą być używane tylko w samej klasie lub strukturze. Ważne jest, aby ograniczyć dostępność kodu, tak aby można było uzyskać do niego tylko kod zamierzonego klienta. Możesz określić, jak dostępne typy i ich elementy członkowskie mają być kodem klienta przy użyciu modyfikatorów dostępu [Public](../../language-reference/keywords/public.md), [Protected](../../language-reference/keywords/protected.md), [Internal](../../language-reference/keywords/internal.md), [protected internal](../../language-reference/keywords/protected-internal.md), [Private](../../language-reference/keywords/private.md) i [Private](../../language-reference/keywords/private-protected.md). Domyślna dostępność to `private`. Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](./access-modifiers.md).  
   
 ### <a name="inheritance"></a>Dziedziczenie  
- Klasy (ale nie struktury) obsługują dziedziczenia. Klasa, która pochodzi z innej klasy ( *klasy bazowej*) automatycznie zawiera wszystkich publicznych, chronionych i wewnętrznych członków klasy podstawowej, z wyjątkiem jego konstruktorów i finalizatorów. Aby uzyskać więcej informacji, zobacz [dziedziczenia](../../../csharp/programming-guide/classes-and-structs/inheritance.md) i [polimorfizm](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
+ Klasy (ale nie struktury) obsługują koncepcję dziedziczenia. Klasa, która dziedziczy z innej klasy ( *Klasa bazowa*), automatycznie zawiera wszystkie publiczne, chronione i wewnętrzne elementy członkowskie klasy podstawowej, z wyjątkiem konstruktorów i finalizatorów. Aby uzyskać więcej informacji, [](./inheritance.md) zobacz Dziedziczenie i [polimorfizm](./polymorphism.md).  
   
- Klasy mogą być deklarowane jako [abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md), co oznacza, że co najmniej jeden z ich metod nie mają implementacji. Mimo że nie można bezpośrednio utworzyć wystąpienia klasy abstrakcyjnej, mogą one służyć jako klay bazowe dla innych klas, którym brakuje implementacji. Klasy mogą być także zadeklarowane jako [zapieczętowanego](../../../csharp/language-reference/keywords/sealed.md) aby dziedziczyły innych klas z nich. Aby uzyskać więcej informacji, zobacz [abstrakcyjnych i zapieczętowanych klas i składowych klasy](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Klasy mogą być deklarowane [](../../language-reference/keywords/abstract.md)jako abstrakcyjne, co oznacza, że co najmniej jedna z tych metod nie ma implementacji. Chociaż klasy abstrakcyjne nie mogą być tworzone bezpośrednio, mogą służyć jako klasy bazowe dla innych klas, które zapewniają brakującą implementację. Klasy mogą być również zadeklarowane jako [zapieczętowane](../../language-reference/keywords/sealed.md) , aby uniemożliwić innym klasom dziedziczenie z nich. Aby uzyskać więcej informacji, zobacz [klasy abstrakcyjne i zapieczętowane oraz składowe klas](./abstract-and-sealed-classes-and-class-members.md).  
   
 ### <a name="interfaces"></a>Interfejsy  
- Klasy i struktury mogą odziedziczyć wiele interfejsów. Dziedziczenie od interfejsu oznacza, że typ implementuje wszystkie metody, które są zdefiniowane w interfejsie. Więcej informacji znajdziesz w artykule [Interfejsy](../../../csharp/programming-guide/interfaces/index.md).  
+ Klasy i struktury mogą dziedziczyć wiele interfejsów. Aby dziedziczyć z interfejsu, oznacza, że typ implementuje wszystkie metody zdefiniowane w interfejsie. Więcej informacji znajdziesz w artykule [Interfejsy](../interfaces/index.md).  
   
 ### <a name="generic-types"></a>Typy ogólne  
- Klasy i struktury można zdefiniować co najmniej jeden parametr typu. Kod klienta dostarcza typu podczas tworzenia wystąpienia typu. Na przykład <xref:System.Collections.Generic.List%601> klasy w <xref:System.Collections.Generic> przestrzeń nazw została zdefiniowana za pomocą jednego parametru typu. Kod klienta tworzy instancję `List<string>` lub `List<int>` do określenia typu, który będzie przechowywać listę. Aby uzyskać więcej informacji, zobacz [ogólne](../../../csharp/programming-guide/generics/index.md).  
+ Klasy i struktury można definiować przy użyciu co najmniej jednego parametru typu. Kod klienta dostarcza typ podczas tworzenia wystąpienia typu. Na przykład <xref:System.Collections.Generic.List%601> Klasa <xref:System.Collections.Generic> w przestrzeni nazw jest zdefiniowana z jednym parametrem typu. Kod klienta tworzy wystąpienie `List<string>` obiektu lub `List<int>` , aby określić typ, który będzie przechowywany na liście. Aby uzyskać więcej informacji, zobacz [Ogólne](../generics/index.md).  
   
 ### <a name="static-types"></a>Typy statyczne  
- Klasy (ale nie struktury) mogą być deklarowane jako [statyczne](../../../csharp/language-reference/keywords/static.md). Klasa statyczna może zawierać tylko statyczne elementy członkowskie i nie można utworzyć wystąpienia za pomocą słowa kluczowego new. Jedna kopia klasy jest ładowany do pamięci podczas wczytywania programu, a jej elementy członkowskie są dostępne za pośrednictwem nazwy klasy. Zarówno klasy i struktury mogą zawierać elementy statyczne. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statyczne elementy członkowskie klasy](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ Klasy (ale nie struktury) mogą być deklarowane jako [statyczne](../../language-reference/keywords/static.md). Klasa statyczna może zawierać tylko statyczne elementy członkowskie i nie można utworzyć wystąpienia z nowym słowem kluczowym. Jedna kopia klasy jest ładowana do pamięci podczas ładowania programu, a jej elementy członkowskie są dostępne za pomocą nazwy klasy. Obie klasy i struktury mogą zawierać statyczne składowe. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statyczne elementy członkowskie klas](./static-classes-and-static-class-members.md).  
   
 ### <a name="nested-types"></a>Zagnieżdżone typy  
- Klasa lub struktura może być zagnieżdżona w innej klasie lub strukturze. Aby uzyskać więcej informacji, zobacz [Typy zagnieżdżone](../../../csharp/programming-guide/classes-and-structs/nested-types.md).  
+ Klasa lub struktura może być zagnieżdżona w innej klasie lub strukturze. Aby uzyskać więcej informacji, zobacz [Typy zagnieżdżone](./nested-types.md).  
   
 ### <a name="partial-types"></a>Typy częściowe  
- Można zdefiniować część klasy, struktury lub metody w jednym pliku kodu i drugą część w osobnym pliku kodu. Aby uzyskać więcej informacji, zobacz [klasy częściowe i metody](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  
+ Można zdefiniować część klasy, struktury lub metody w jednym pliku kodu i innej części w osobnym pliku kodu. Aby uzyskać więcej informacji, zobacz [częściowe klasy i metody](./partial-classes-and-methods.md).  
   
 ### <a name="object-initializers"></a>Inicjatory obiektów  
- Możesz można utworzyć wystąpienia i zainicjalizować klasy lub obiektów struct i kolekcji obiektów, bez jawnego wywołania ich konstruktora. Aby uzyskać więcej informacji, zobacz [inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ Można tworzyć wystąpienia i inicjować obiekty klasy lub struktury oraz kolekcje obiektów, bez jawnego wywołania konstruktora. Aby uzyskać więcej informacji, zobacz [Inicjatory obiektów i kolekcji](./object-and-collection-initializers.md).  
   
 ### <a name="anonymous-types"></a>Typy anonimowe  
- W sytuacjach, gdy nie jest wygodne lub niezbędne do utworzenia nazwanej klasy na przykład podczas wypełniania listy przy użyciu danych struktury, nie trzeba powtarzać lub przechodzić do innej metody, należy użyć typów anonimowych. Aby uzyskać więcej informacji, zobacz [typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ W sytuacjach, gdy nie jest to wygodne ani konieczne do utworzenia nazwanej klasy, na przykład podczas wypełniania listy strukturami danych, które nie muszą być utrwalane lub przekazywane do innej metody, używasz typów anonimowych. Aby uzyskać więcej informacji, zobacz [Typy anonimowe](./anonymous-types.md).  
   
 ### <a name="extension-methods"></a>Metody rozszerzeń  
- Możesz "rozszerzyć" klasy bez tworzenia klasy pochodnej poprzez utworzenie oddzielnego typu, którego metody mogą być wywoływane tak, jakby jakby należały do oryginalnego typu. Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
+ Można "zwiększyć" klasy bez tworzenia klasy pochodnej przez utworzenie oddzielnego typu, którego metody mogą być wywoływane tak, jakby należały do oryginalnego typu. Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](./extension-methods.md).  
   
 ### <a name="implicitly-typed-local-variables"></a>Jawnie wpisana zmienna lokalna  
- Wewnątrz metody klasy lub struktury można użyć niejawnego wpisywania w celu poinstruowania kompilatora do określenia poprawnego typu w czasie kompilacji. Aby uzyskać więcej informacji, zobacz [niejawnie wpisane zmienne lokalne](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+ W ramach metody klasy lub struktury można użyć niejawnego wpisywania, aby nakazać kompilatorowi określenie poprawnego typu w czasie kompilacji. Aby uzyskać więcej informacji, zobacz [niejawnie wpisane zmienne lokalne](./implicitly-typed-local-variables.md).  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Przewodnik programowania w języku C#](../index.md)

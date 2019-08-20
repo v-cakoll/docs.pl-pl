@@ -1,53 +1,53 @@
 ---
-title: Typy ogólne i odbicie - C# przewodnik programowania
+title: Typy ogólne i odbicie C# — Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 84583f96ab8493ff05a4e80dcc843eff1cc7a5ef
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 41948b7db7c816fd06efb35d156398527fbf72ae
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347584"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589627"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Typy ogólne i odbicie (Przewodnik programowania w języku C#)
-Ponieważ środowisko uruchomieniowe języka wspólnego (CLR) ma dostęp do informacji o typie ogólny w czasie wykonywania, można użyć odbicia, aby uzyskać informacje na temat typów ogólnych w taki sam sposób jak w przypadku typów innych niż ogólne. Aby uzyskać więcej informacji, zobacz [typy ogólne w czasie wykonywania](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
+Ponieważ środowisko uruchomieniowe języka wspólnego (CLR) ma dostęp do ogólnych informacji o typie w czasie wykonywania, można użyć odbicia w celu uzyskania informacji o typach ogólnych w taki sam sposób jak w przypadku typów innych niż ogólne. Aby uzyskać więcej informacji, zobacz [typy ogólne w czasie wykonywania](./generics-in-the-run-time.md).  
   
- W programie .NET Framework 2.0, kilka nowych elementów członkowskich są dodawane do <xref:System.Type> klasy, aby włączyć informacje środowiska wykonawczego dla typów ogólnych. Zobacz dokumentację na temat tych klas, aby uzyskać więcej informacji na temat korzystania z tych metod i właściwości. <xref:System.Reflection.Emit> Przestrzeń nazw zawiera także nowych elementów członkowskich, które obsługują elementy ogólne. Zobacz [jak: Definiowanie typu ogólnego przy użyciu odbicia emitować](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
+ W .NET Framework 2,0 kilka nowych członków jest dodawanych do <xref:System.Type> klasy w celu włączenia informacji w czasie wykonywania dla typów ogólnych. Zapoznaj się z dokumentacją dotyczącą tych klas, aby uzyskać więcej informacji na temat korzystania z tych metod i właściwości. <xref:System.Reflection.Emit> Przestrzeń nazw zawiera również nowych członków, którzy obsługują typy ogólne. Zobacz [How to: Zdefiniuj typ ogólny przy użyciu emisji](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)odbicia.  
   
- Aby uzyskać listę niezmiennych warunków dla terminów używanych w odbiciu rodzajowym, zobacz <xref:System.Type.IsGenericType%2A> uwagi dotyczące właściwości.  
+ Aby zapoznać się z listą warunków niewariantów dla terminów używanych w odbiciu ogólnym <xref:System.Type.IsGenericType%2A> , zobacz uwagi dotyczące właściwości.  
   
-|Nazwa elementu członkowskiego System.Type|Opis|  
+|Nazwa elementu członkowskiego system. Type|Opis|  
 |-----------------------------|-----------------|  
-|<xref:System.Type.IsGenericType%2A>|Zwraca wartość PRAWDA, jeśli typ ogólny.|  
-|<xref:System.Type.GetGenericArguments%2A>|Zwraca tablicę `Type` obiekty reprezentujące argumentów typu dostarczony skonstruowanego typu lub typu parametrów w definicji typu ogólnego.|  
-|<xref:System.Type.GetGenericTypeDefinition%2A>|Zwraca podstawową definicję typu ogólnego dla bieżącego typu skonstruowany.|  
-|<xref:System.Type.GetGenericParameterConstraints%2A>|Zwraca tablicę `Type` obiekty reprezentujące ograniczenia bieżącego ogólnego, parametr typu.|  
-|<xref:System.Type.ContainsGenericParameters%2A>|Zwraca wartość PRAWDA, jeśli typ, ani żadnego z otaczających typy lub metody zawiera parametry typu, dla których określonych typów nie został podany.|  
-|<xref:System.Type.GenericParameterAttributes%2A>|Pobiera kombinacji `GenericParameterAttributes` flagi opisujące specjalnych ograniczeń bieżący ogólny typ parametru.|  
-|<xref:System.Type.GenericParameterPosition%2A>|Aby uzyskać `Type` obiekt, który reprezentuje parametr typu, pobiera pozycja parametru typu na liście parametrów typu w definicji typu ogólnego lub definicję metody rodzajowej, zadeklarowany parametr typu.|  
-|<xref:System.Type.IsGenericParameter%2A>|Pobiera wartość wskazującą, czy bieżący `Type` reprezentuje parametr typu ogólnego definicji typu lub metody.|  
-|<xref:System.Type.IsGenericTypeDefinition%2A>|Pobiera wartość wskazującą, czy bieżący <xref:System.Type> reprezentuje definicji typu ogólnego, z którego można skonstruować innych typów ogólnych. Zwraca wartość PRAWDA, jeśli typ reprezentuje definicji typu ogólnego.|  
-|<xref:System.Type.DeclaringMethod%2A>|Zwraca metody rodzajowej, zdefiniowanego bieżący ogólny, parametr typu, lub wartość null, jeśli parametr typu nie został zdefiniowany przez metody rodzajowej.|  
-|<xref:System.Type.MakeGenericType%2A>|Zastępuje elementy tablicy typów jako parametrów typu w bieżącej definicji typu ogólnego, a następnie zwraca <xref:System.Type> obiekt reprezentujący wynikowy tworzony typu.|  
+|<xref:System.Type.IsGenericType%2A>|Zwraca wartość true, jeśli typ jest ogólny.|  
+|<xref:System.Type.GetGenericArguments%2A>|Zwraca tablicę `Type` obiektów reprezentujących argumenty typu dostarczone dla typu konstruowanego lub parametry typu definicji typu ogólnego.|  
+|<xref:System.Type.GetGenericTypeDefinition%2A>|Zwraca podstawową definicję typu ogólnego dla bieżącego konstruowanego typu.|  
+|<xref:System.Type.GetGenericParameterConstraints%2A>|Zwraca tablicę `Type` obiektów, która reprezentuje ograniczenia dotyczące bieżącego parametru typu ogólnego.|  
+|<xref:System.Type.ContainsGenericParameters%2A>|Zwraca wartość true, jeśli typ lub dowolny z zawartych w nim typów lub metod zawierają parametry typu, dla których nie dostarczono określonych typów.|  
+|<xref:System.Type.GenericParameterAttributes%2A>|Pobiera kombinację `GenericParameterAttributes` flag, które opisują specjalne ograniczenia bieżącego parametru typu ogólnego.|  
+|<xref:System.Type.GenericParameterPosition%2A>|W przypadku `Type` obiektu, który reprezentuje parametr typu, pobiera pozycję parametru typu z listy parametrów typu w definicji typu ogólnego lub definicji metody ogólnej, która deklaruje parametr typu.|  
+|<xref:System.Type.IsGenericParameter%2A>|Pobiera wartość wskazującą, czy bieżący `Type` reprezentuje parametr typu ogólnego lub definicji metody.|  
+|<xref:System.Type.IsGenericTypeDefinition%2A>|Pobiera wartość wskazującą, czy bieżący <xref:System.Type> reprezentuje definicję typu ogólnego, z której można utworzyć inne typy ogólne. Zwraca wartość true, jeśli typ reprezentuje definicję typu ogólnego.|  
+|<xref:System.Type.DeclaringMethod%2A>|Zwraca metodę rodzajową, która definiuje bieżący parametr typu ogólnego, lub wartość null, jeśli parametr typu nie został zdefiniowany przez metodę rodzajową.|  
+|<xref:System.Type.MakeGenericType%2A>|Zastępuje elementy tablicy typów dla parametrów typu bieżącej definicji typu ogólnego i zwraca <xref:System.Type> obiekt reprezentujący wynikowy typ skonstruowany.|  
   
- Ponadto członkowie <xref:System.Reflection.MethodInfo> klasy włączyć informacje czasu wykonywania dla metod ogólnych. Zobacz <xref:System.Reflection.MethodBase.IsGenericMethod%2A> uwagi dotyczące właściwości, aby uzyskać listę niezmiennych warunków dla terminów używanych na zastanowienie się nad metod ogólnych.  
+ Ponadto członkowie <xref:System.Reflection.MethodInfo> klasy włączają informacje w czasie wykonywania dla metod ogólnych. Zobacz uwagi dotyczące właściwości, aby zapoznać się z listą niezmiennej warunków używanych do odzwierciedlenia metod ogólnych. <xref:System.Reflection.MethodBase.IsGenericMethod%2A>  
   
 |System.Reflection.MemberInfo Member Name|Opis|  
 |----------------------------------------------|-----------------|  
-|<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Zwraca wartość PRAWDA, jeśli metoda jest ogólna.|  
-|<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Zwraca tablicę obiektów typu, reprezentujących argumenty typu metody ogólnej skonstruowany lub parametrów typu w definicji metody rodzajowej.|  
-|<xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A>|Zwraca podstawową definicję metody ogólnej przy użyciu bieżącej metody skonstruowany.|  
-|<xref:System.Reflection.MethodBase.ContainsGenericParameters%2A>|Zwraca wartość PRAWDA, jeśli metoda albo jej otaczającej typy zawierają wszystkie parametry typu, dla których nie zostały dostarczone określonych typów.|  
-|<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|Zwraca wartość true, jeśli bieżący <xref:System.Reflection.MethodInfo> reprezentuje definicję metody rodzajowej.|  
-|<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Zastępuje elementy tablicy typów dla parametrów typu bieżącej definicji metody rodzajowej, a następnie zwraca <xref:System.Reflection.MethodInfo> obiekt reprezentujący wynikowy tworzony metody.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Zwraca wartość true, jeśli metoda jest ogólna.|  
+|<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Zwraca tablicę typu obiektów, która reprezentuje argumenty typu konstruowanej metody ogólnej lub parametry typu definicji metody ogólnej.|  
+|<xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A>|Zwraca podstawową definicję metody ogólnej dla bieżącej metody skonstruowanej.|  
+|<xref:System.Reflection.MethodBase.ContainsGenericParameters%2A>|Zwraca wartość true, jeśli metoda lub dowolny z jej typów zawiera wszystkie parametry typu, dla których nie dostarczono określonych typów.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|Zwraca wartość true, jeśli <xref:System.Reflection.MethodInfo> bieżąca reprezentuje definicję metody ogólnej.|  
+|<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Zastępuje elementy tablicy typów dla parametrów typu bieżącej definicji metody ogólnej i zwraca <xref:System.Reflection.MethodInfo> obiekt reprezentujący wynikową metodę skonstruowaną.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Typy ogólne](../../../csharp/programming-guide/generics/index.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Typy ogólne](./index.md)
 - [Odbicie i typy ogólne](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
 - [Typy ogólne](~/docs/standard/generics/index.md)

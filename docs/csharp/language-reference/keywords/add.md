@@ -1,5 +1,5 @@
 ---
-title: Dodaj - C# odwołania
+title: Dodaj C# odwołanie
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - add event accessor [C#]
 ms.assetid: faf30b99-10e8-45cd-ab9a-57585d4d1d8d
-ms.openlocfilehash: 1f699e5729354d13bfbe29810bf2c4baf91d2382
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cf82e3d048e465d533e87dc639a13071b41544a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662130"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606044"
 ---
 # <a name="add-c-reference"></a>add (odwołanie w C#)
-`add` Kontekstowe słowo kluczowe jest używane do definiowania metody dostępu zdarzeń niestandardowych, które jest wywoływane, gdy kod klienta subskrybuje Twoja [zdarzeń](../../../csharp/language-reference/keywords/event.md). Jeśli podasz niestandardowe `add` dostępu, należy również podać [Usuń](../../../csharp/language-reference/keywords/remove.md) metody dostępu.  
+Kontekstowe słowo kluczowe jest używane do definiowania niestandardowego akcesora zdarzeń, który jest wywoływany, gdy kod klienta subskrybuje [zdarzenie.](./event.md) `add` W przypadku podania niestandardowej `add` metody dostępu należy również podać metodę dostępu [Usuń](./remove.md) .  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia zdarzenie, które zawiera niestandardowy `add` i [Usuń](../../../csharp/language-reference/keywords/remove.md) metod dostępu. Pełny przykład można znaleźć [jak:  Zdarzenia implementowania interfejsu](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).  
+ Poniższy przykład pokazuje zdarzenie, które ma metody dostępu `add` niestandardowe i [usuwania](./remove.md) . Pełny przykład można znaleźć w temacie [How to:  Implementuj zdarzenia](../../programming-guide/events/how-to-implement-interface-events.md)interfejsu.  
   
 [!code-csharp[csrefKeywordsContextual#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#15)]
   
- Zazwyczaj nie trzeba podać własne niestandardowych metod dostępu zdarzeń. Metody dostępu, które są automatycznie generowane przez kompilator przy deklarowaniu zdarzenie są wystarczające dla większości scenariuszy.  
+ Zazwyczaj nie trzeba podawać własnych niestandardowych metod dostępu do zdarzeń. Metody dostępu, które są generowane automatycznie przez kompilator podczas deklarowania zdarzenia, są wystarczające dla większości scenariuszy.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zdarzenia](../../../csharp/programming-guide/events/index.md)
+- [Zdarzenia](../../programming-guide/events/index.md)

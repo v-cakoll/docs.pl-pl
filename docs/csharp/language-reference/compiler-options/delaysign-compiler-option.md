@@ -1,5 +1,5 @@
 ---
-title: -delaysign (opcje kompilatora C#)
+title: -delaysign (C# opcje kompilatora)
 ms.date: 05/15/2018
 f1_keywords:
 - /delaysign
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 1d49733531507fc80165e034fde1969305cfd2e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae309a8de6c4691f0009e5beb8ac2adc8772805b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662949"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69603029"
 ---
-# <a name="-delaysign-c-compiler-options"></a>-delaysign (opcje kompilatora C#)
+# <a name="-delaysign-c-compiler-options"></a>-delaysign (C# opcje kompilatora)
 
-Ta opcja powoduje, że kompilator, aby zarezerwować miejsce, w pliku wyjściowym, tak aby później można dodać podpisu cyfrowego.
+Ta opcja powoduje, że kompilator rezerwuje miejsce w pliku wyjściowym, aby można było później dodać podpis cyfrowy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,29 +29,29 @@ Ta opcja powoduje, że kompilator, aby zarezerwować miejsce, w pliku wyjściowy
 
 `+` &#124; `-`
 
-Użyj **- delaysign —** Jeśli chcesz, aby podpisać zestaw całkowicie. Użyj **- delaysign +** Jeśli chcesz tylko umieścić klucz publiczny w zestawie. Wartość domyślna to **- delaysign —**.
+Użyj **-delaysign —** Jeśli chcesz użyć w pełni podpisanego zestawu. Użyj **-delaysign +** , jeśli chcesz umieścić klucz publiczny w zestawie. Wartość domyślna to **-delaysign-** .
 
 ## <a name="remarks"></a>Uwagi
 
-**- Delaysign** opcja nie ma wpływu, chyba że używana z [- keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) lub [- keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).
+Opcja **-delaysign** nie ma żadnego efektu, chyba że jest używana z atrybutem [-KeyFile](./keyfile-compiler-option.md) lub [-Container](./keycontainer-compiler-option.md).
 
-**- Delaysign** i **- publicsign** opcje wykluczają się wzajemnie.
+Opcje **-delaysign** i **-publicsign** wykluczają się wzajemnie.
 
-W przypadku żądania całkowicie podpisanego zestawu, kompilator tworzy skrót pliku który zawiera manifest (metadane zestawu) i podpisuje skrót przy użyciu klucza prywatnego. Ta operacja tworzy podpis cyfrowy, który jest przechowywany w pliku, który zawiera manifest. Gdy zestaw jest podpisany z opóźnieniem, kompilator nie obliczeniowe i przechowuj podpisu, ale rezerwuje miejsce w pliku, aby podpis mógł zostać dodany później.
+Po zażądaniu w pełni podpisanego zestawu, kompilator skrótów pliku, który zawiera manifest (metadane zestawu) i podpisuje ten skrót z kluczem prywatnym. Ta operacja tworzy podpis cyfrowy, który jest przechowywany w pliku, który zawiera manifest. Gdy zestaw jest podpisany z opóźnieniem, kompilator nie oblicza i nie przechowuje podpisu, ale rezerwuje miejsce w pliku, aby podpis mógł zostać dodany później.
 
-Na przykład za pomocą **- delaysign +** umożliwia testerowi umieszczenie zestawu w globalnej pamięci podręcznej. Po zakończeniu testowania można całkowicie podpisać zestaw, umieszczając klucza prywatnego w zestawie przy użyciu [Assembly Linker](../../../framework/tools/al-exe-assembly-linker.md) narzędzia.
+Na przykład przy użyciu polecenia **-delaysign +** umożliwia testerowi umieszczenie zestawu w globalnej pamięci podręcznej. Po przetestowaniu można w pełni podpisać zestaw, umieszczając klucz prywatny w zestawie przy użyciu narzędzia [konsolidatora zestawu](../../../framework/tools/al-exe-assembly-linker.md) .
 
-Aby uzyskać więcej informacji, zobacz [tworzenie i zestawy Using Strong-Named](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) i [opóźnienie podpisywania zestawu](../../../framework/app-domains/delay-sign-assembly.md).
+Aby uzyskać więcej informacji, zobacz [Tworzenie i używanie zestawów o silnych nazwach](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) oraz [opóźnienie podpisywania zestawu](../../../framework/app-domains/delay-sign-assembly.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz **właściwości** strony dla projektu.
-1. Modyfikowanie **opóźnienie logowania tylko** właściwości.
+1. Otwórz stronę **Właściwości** dla projektu.
+1. Zmodyfikuj właściwość **opóźnienia tylko do podpisywania** .
 
-Aby uzyskać informacje na temat sposobu programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.
+Aby uzyskać informacje na temat sposobu, w jaki można programowo ustawić <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>tę opcję kompilatora, zobacz.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcja - publicsign C#](publicsign-compiler-option.md)
+- [C#-publicsign — opcja](publicsign-compiler-option.md)
 - [Opcje kompilatora C#](index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

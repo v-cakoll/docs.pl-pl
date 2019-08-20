@@ -1,72 +1,72 @@
 ---
 title: Wprowadzenie do języka C# i systemu .NET Framework
-description: Poznaj podstawy języka C# i .NET. Zapoznaj się z omówieniem języka C# i ekosystemu .NET.
+description: Poznaj podstawy C# i .NET. Zapoznaj się z omówieniem C# języka i ekosystemu platformy .NET.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 361a6669d5d638bbb39bc646607cce212bbb3bfa
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 995362667ed0a203112744f03a036eabbcb784c8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504033"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608300"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Wprowadzenie do języka C# i systemu .NET Framework
 
-C#to elegancki i bezpieczny typowo język obiektowy, który umożliwia deweloperom tworzenie różnych bezpiecznych i niezawodnych aplikacji korzystających z programu .NET Framework. Służy C# do utworzenia klienta Windows aplikacji, usług sieci Web XML, rozpowszechnianych komponentów, aplikacji typu klient serwer, aplikacji baz danych i wielu, m.in. Wizualne C# zapewnia zaawansowany edytor kodu, dogodne Projektowanie interfejsu użytkownika, zintegrowany debugger i wiele innych narzędzi, aby ułatwić opracowywanie aplikacji opartych na C# języka i platformy .NET Framework.  
+C#to elegancki i bezpieczny dla typu język oparty na obiektach, który umożliwia deweloperom tworzenie różnorodnych bezpiecznych i niezawodnych aplikacji uruchamianych na .NET Framework. Za pomocą C# programu można tworzyć aplikacje klienckie systemu Windows, usługi sieci Web XML, składniki rozproszone, aplikacje klient-serwer, aplikacje baz danych i wiele innych. Wizualizacja C# zapewnia zaawansowany edytor kodu, wygodne projektanta interfejsu użytkownika, Zintegrowany debuger i wiele innych narzędzi ułatwiających tworzenie aplikacji na podstawie C# języka i .NET Framework.  
   
 > [!NOTE]
-> Dokumentacja języka Visual C# przyjęto założenie, iż zrozumienie podstawowych pojęć programowania. Jeśli jesteś kompletnym nowicjuszem, możesz chcieć zapoznaj się z Visual C# Express, który jest dostępny w sieci Web. Można również korzystać z książek i zasobów sieci Web o C#, aby uzyskać praktyczne umiejętności programowania.  
+> Dokumentacja wizualna C# założono, że znasz podstawowe pojęcia programistyczne. Jeśli jesteś kompletnym początkującym, warto zapoznać się z tematem C# Visual Express, który jest dostępny w sieci Web. Możesz również wykorzystać książki i zasoby sieci Web, C# aby poznać praktyczne umiejętności programistyczne.  
   
 ## <a name="c-language"></a>Język C#
 
- Składnia języka C# jest bardzo ekspresyjna, ale również jest proste i łatwe do opanowania. Nawias klamrowy składni języka C# będzie rozpoznawalny dla każdego, kto zna C, C++ lub Java. Deweloperzy, którzy nie znają żadnego z tych języków są zazwyczaj mogą rozpocząć produktywną pracę w języku C# w bardzo krótkim czasie. Składnia języka C# upraszcza wiele złożoności C++ i udostępnia zaawansowane funkcje, takie jak typy o wartości zerowalnej, wyliczeń, delegatów, wyrażeń lambda i bezpośredni dostęp do pamięci, które nie znajdują się w języku Java. C# obsługuje metody rodzajowe i typy, które zapewniają zwiększone bezpieczeństwo typu i wydajność oraz Iteratory, które umożliwiają implementacje klasy kolekcji do zdefiniowania iteracji niestandardowych zachowań, które są proste w użyciu przez kod klienta. [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażenia upewnij się, że wpisane pogrubieniem zapytanie staje się konstrukcją języka.  
+ C#Składnia jest wysoce wyraźna, ale jest również prosta i łatwa do uczenia się. Składnia C# nawiasów klamrowych jest natychmiast rozpoznawalna dla każdego znanego w języku C C++ lub Java. Deweloperzy, którzy znają którykolwiek z tych języków, zazwyczaj mogą zacząć pracować wydajnie w C# bardzo krótkim czasie. C#Składnia upraszcza wiele złożoności C++ i zapewnia zaawansowane funkcje, takie jak typy wartości null, wyliczenia, Delegaty, wyrażenia lambda i bezpośredni dostęp do pamięci, które nie znajdują się w języku Java. C#obsługuje metody generyczne i typy, które zapewniają zwiększone bezpieczeństwo typu i wydajność oraz Iteratory, które umożliwiają implementacje klas kolekcji w celu zdefiniowania niestandardowych zachowań iteracji, które są proste do użycia przez kod klienta. [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]wyrażenia czynią silnie wpisaną kwerendę klasą języka pierwszej klasy.  
   
- Jako język zorientowany na obiekt C# obsługuje pojęcia hermetyzacji, dziedziczenia i polimorfizmu. Wszystkie zmienne i metod, takich jak `Main` metody punktu wejścia aplikacji, są hermetyzowane w ramach definicji klasy. Klasy mogą dziedziczyć bezpośrednio z poziomu jednej klasy nadrzędnej, ale to może wprowadzić dowolną liczbę interfejsów. Metody, które zastępują metody wirtualne klasy nadrzędnej wymagają `override` słowa kluczowego jako sposobu uniknięcia przypadkowego przedefiniowania. W języku C# struktura przypomina klasy lightweight; jest typ przydzielanych ze stosów, które można implementować interfejsy, ale nie obsługuje dziedziczenia.  
+ Jako język zorientowany obiektowo program C# obsługuje koncepcje hermetyzacji, dziedziczenia i polimorfizmu. Wszystkie zmienne i metody, w tym `Main` Metoda, punkt wejścia aplikacji, są hermetyzowane w definicjach klas. Klasa może dziedziczyć bezpośrednio z jednej klasy nadrzędnej, ale może implementować dowolną liczbę interfejsów. Metody, które zastępują metody wirtualne w klasie nadrzędnej `override` , wymagają słowa kluczowego jako sposobu, aby uniknąć przypadkowej ponownej definicji. W C#programie struktura jest taka sama jak Klasa uproszczona; jest typem przydzielonym przez stos, który może implementować interfejsy, ale nie obsługuje dziedziczenia.  
   
- Oprócz tych podstawowych zasad zorientowane obiektowo C# ułatwia opracowanie składników oprogramowania za pośrednictwem kilku innowacyjnych konstrukcji językowych, takie jak następujące:  
+ Oprócz tych podstawowych zasad zorientowanych obiektowo program C# ułatwia tworzenie składników oprogramowania za pomocą kilku innowacyjnych konstrukcji językowych, w tym następujących:  
   
-- Hermetyzowane podpisów metody wywołanych *delegatów*, która umożliwia powiadomienia o zdarzeniach bezpiecznegop typu.  
+- Wyhermetyzowane sygnaturymetod o nazwie pełnomocnicy, które włączają powiadomienia o zdarzeniach bezpiecznych dla typów.  
   
-- Właściwości, które służą jako Akcesoria dla zmiennych prywatnego elementu członkowskiego.  
+- Właściwości, które stanowią metody dostępu do zmiennych prywatnych elementów członkowskich.  
   
-- Atrybuty, które zapewniają deklaracyjne metadane dotyczące typów w czasie wykonywania.  
+- Atrybuty, które zapewniają deklaratywne metadane dotyczące typów w czasie wykonywania.  
   
-- Komentarze wbudowanej dokumentacji XML.  
+- Komentarze do wbudowanej dokumentacji XML.  
   
-- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] między różnymi źródłami danych, która zapewnia wbudowane możliwości zapytania.  
+- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]zapewnia wbudowane możliwości zapytań w różnych źródłach danych.  
   
- Jeśli masz oddziałują na inne oprogramowanie Windows, takich jak obiekty COM lub natywnych bibliotek Win32 dll, można to zrobić w C# dzięki procesowi zwanemu "Interop". Usługa międzyoperacyjna umożliwia programom C# niemal wszystko, co można wykonać macierzysta aplikacja C++. C# obsługuje nawet wskazówki i pojęcie "niebezpieczny" kod dla tych przypadków, w których bezpośredni dostęp do pamięci jest absolutnie kluczowego znaczenia.  
+ Jeśli konieczne jest współdziałanie z innym oprogramowaniem systemu Windows, takim jak obiekty COM lub natywne biblioteki DLL Win32, C# można to zrobić za pomocą procesu o nazwie "międzyoperacyjna". Międzyoperacyjność umożliwia C# programom niemal wszystko, co C++ można zrobić w aplikacji natywnej. C#Program obsługuje również wskaźniki i koncepcję niebezpiecznego kodu dla tych przypadków, w których bezpośredni dostęp do pamięci jest absolutnie krytyczny.  
   
- Proces kompilacji C# jest prosty w porównaniu do C i C++ i bardziej elastyczny niż w języku Java. Brak ma osobnych plików nagłówka oraz wymagania można zadeklarować metody i typy w określonej kolejności. Plik źródłowy C# może zdefiniować dowolną liczbę klas, struktur, interfejsów i wydarzeń.  
+ Proces C# kompilacji jest prosty w porównaniu z C i C++ i bardziej elastyczny niż w języku Java. Nie ma oddzielnych plików nagłówkowych i nie ma potrzeby deklarowania metod i typów w określonej kolejności. Plik C# źródłowy może definiować dowolną liczbę klas, struktur, interfejsów i zdarzeń.  
   
- Poniżej przedstawiono dodatkowe zasoby C#:  
+ Poniżej znajdują się C# dodatkowe zasoby:  
   
-- Aby uzyskać obszerne ogólne wprowadzenie do języka, zobacz rozdział 1 [specyfikacji języka C#](../../csharp/language-reference/language-specification/index.md).  
+- Aby uzyskać dobre Ogólne wprowadzenie do języka, zobacz rozdział 1 [ C# specyfikacji języka](../language-reference/language-specification/index.md).  
   
-- Aby uzyskać szczegółowe informacje dotyczące konkretnych aspektów języka C#, zobacz [odwołanie w C#](../../csharp/language-reference/index.md).  
+- Aby uzyskać szczegółowe informacje na temat określonych aspektów C# języka, zobacz [ C# odwołanie](../language-reference/index.md).  
   
-- Aby uzyskać więcej informacji na temat [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], zobacz [LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md).  
+- Aby uzyskać więcej informacji [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]na temat, zobacz [LINQ (zapytanie zintegrowane z językiem)](../programming-guide/concepts/linq/index.md).  
 
 ## <a name="net-framework-platform-architecture"></a>Architektura platformy .NET Framework
 
- C#programy uruchamiane na platformie .NET Framework, integralny składnik systemu Windows, która zawiera wirtualne wykonanie systemu o nazwie środowisko uruchomieniowe języka wspólnego (CLR) i jednolity zbiór bibliotek klas. Środowisko CLR jest komercyjną implementacją przez firmę Microsoft common language infrastructure (CLI), międzynarodowego standardu, który jest podstawą tworzenia środowisk wykonywania i programistycznych w których języki i biblioteki współpracują ze sobą.  
+ C#programy są uruchamiane na .NET Framework, integralnym składniku systemu Windows, który zawiera wirtualny system wykonywania o nazwie środowisko uruchomieniowe języka wspólnego (CLR) i ujednolicony zestaw bibliotek klas. Środowisko CLR to komercyjna implementacja infrastruktury Common Language Infrastructure (CLI), która jest podstawą do tworzenia środowisk wykonawczych i programistycznych, w których Języki i biblioteki współpracują ze sobą.  
   
- Kod źródłowy napisany C# jest skompilowany w [pośredniego (IL) języka](../../standard/managed-code.md) który jest zgodny ze specyfikacją interfejsu wiersza polecenia. Kod IL i zasoby, takie jak mapy bitowe i ciągi znaków, są przechowywane na dysku w pliku wykonywalnym zwanym zestawem, zwykle z rozszerzeniem .exe lub .dll. Zestaw zawiera manifest, który zawiera informacje dotyczące typów, wersji, kultury i wymagania dotyczące zabezpieczeń zestawu.  
+ Kod źródłowy zapisany w C# programie jest kompilowany do [języka pośredniego (IL)](../../standard/managed-code.md) , który jest zgodny ze specyfikacją interfejsu wiersza polecenia. Kod IL i zasoby, takie jak mapy bitowe i ciągi, są przechowywane na dysku w pliku wykonywalnym nazywanym zestawem, zazwyczaj z rozszerzeniem exe lub dll. Zestaw zawiera manifest, który zawiera informacje o typach, wersji, kulturze i wymaganiach dotyczących zestawu.  
   
- Gdy wykonany zostaje program C#, zestaw jest ładowany do CLR, który może wykonać różne akcje w oparciu o informacje zawarte w manifeście. Następnie jeśli spełnione są wymagania bezpieczeństwa, CLR wykonuje dokładnie na czas (JIT) kompilacja, aby skonwertować kod IL do instrukcji maszyny macierzystej. Środowisko CLR oferuje również inne usługi związane z automatycznym wyrzucania elementów bezużytecznych, obsługa wyjątków i zarządzanie zasobami. Kod, który jest wykonywany przez środowisko CLR jest czasami określane jako "kod zarządzany" w przeciwieństwie do "Kod niezarządzanego" który jest skompilowany w macierzystym języku maszynowym, który jest przeznaczony dla określonego systemu. Poniższy diagram ilustruje relacje kompilacji i środowiska wykonawczego języka C# plików kodu źródłowego, biblioteki klas .NET Framework, zespołów i środowiska CLR.  
+ Gdy C# program jest wykonywany, zestaw jest ładowany do środowiska CLR, co może potrwać różne akcje na podstawie informacji zawartych w manifeście. Następnie, jeśli spełnione są wymagania dotyczące zabezpieczeń, środowisko CLR wykonuje kompilację just in Time (JIT), aby przekonwertować kod IL na instrukcje maszyny natywnej. Środowisko CLR udostępnia również inne usługi związane z automatycznym odzyskiwaniem pamięci, obsługą wyjątków i zarządzaniem zasobami. Kod, który jest wykonywany przez środowisko CLR, jest czasami określany jako "kod zarządzany", w przeciwieństwie do "kodu niezarządzanego", który jest kompilowany do macierzystego języka maszynowego, który jest przeznaczony dla określonego systemu. Na poniższym diagramie przedstawiono relacje czasu kompilacji i czasu wykonywania dla C# plików kodu źródłowego, .NET Framework biblioteki klas, zestawy i środowisko CLR.  
   
- ![Od C&#35; źródła kodu w celu wykonania maszyny](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
+ ![Z kodu&#35; źródłowego języka C do wykonywania maszynowego](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
- Współdziałanie języków jest kluczowym elementem programu .NET Framework. Ponieważ kod IL produkowany przez kompilator języka C# jest zgodny do wspólnych specyfikacji typu (CTS), kod IL generowany z C# mogą współdziałać z kodem, który został wygenerowany z wersji .NET, Visual Basic, Visual C++ lub ponad 20 innymi językami zgodnymi z CTS. Pojedynczy zestaw może zawierać wiele modułów napisanych w różnych językach .NET i typy mogą odwoływać się wzajemnie tak, jakby były one napisane w języku.  
+ Współdziałanie języków jest kluczową funkcją .NET Framework. Ponieważ kod IL tworzony przez C# kompilator jest zgodny ze specyfikacją Common Type Specification (CTS), kod IL wygenerowany z C# może współistnieć z kodem, który został wygenerowany na podstawie wersji .NET Visual Basic, Visual C++lub dowolnej z więcej niż 20 innych Języki zgodne z CTS. Pojedynczy zestaw może zawierać wiele modułów pisanych w różnych językach .NET, a typy mogą się odwoływać nawzajem, tak jakby były zapisywane w tym samym języku.  
   
- Oprócz wykonywania usług .NET Framework zawiera również rozbudowaną bibliotekę ponad 4000 klas zorganizowanych w przestrzenie nazw, które zapewniają szeroką gamę przydatnych funkcji związane z plików wejściowych i wyjściowych do manipulowania ciągami XML analizowanie kontrolek formularzy Windows Forms. Typowej C# aplikacja używa biblioteki klas .NET Framework często obsłużyć typowe obowiązku "hydrauliczne".  
+ Oprócz usług czasu wykonywania, .NET Framework również zawiera rozbudowana Biblioteka ponad 4000 klas zorganizowanych w przestrzenie nazw, które zapewniają szeroką gamę przydatnych funkcji dla wszystkich elementów od danych wejściowych i wyjściowych do manipulowania ciągami XML analizowanie do Windows Forms kontrolek. Typowa C# aplikacja używa biblioteki klas .NET Framework w szerokim stopniu do obsługi typowych zadań "wodociągów".  
   
- Aby uzyskać więcej informacji na temat programu .NET Framework, zobacz [Omówienie programu Microsoft .NET Framework](../../framework/get-started/overview.md).  
+ Aby uzyskać więcej informacji na temat .NET Framework, zobacz [Omówienie struktury Microsoft .NET](../../framework/get-started/overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [C#](../../csharp/index.md)
+- [C#](../index.md)
 - [Wprowadzenie do języków Visual C# i Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

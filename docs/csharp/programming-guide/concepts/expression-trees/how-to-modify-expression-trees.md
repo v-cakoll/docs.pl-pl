@@ -1,24 +1,24 @@
 ---
-title: 'Instrukcje: Modyfikowanie drzew wyrażeń (C#)'
+title: 'Instrukcje: Modyfikuj drzewa wyrażeń (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-ms.openlocfilehash: 26c00f3acc7ab44e74a81e346ab1c017d95d53b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7875cf1ccca8866cc87ebec80701ad77ad2bea2d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702883"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595058"
 ---
-# <a name="how-to-modify-expression-trees-c"></a>Instrukcje: Modyfikowanie drzew wyrażeń (C#)
-W tym temacie przedstawiono sposób modyfikowania drzewo wyrażenia. Drzewa wyrażeń są niezmienne, co oznacza, że nie można ich modyfikować bezpośrednio. Aby zmienić drzewo wyrażenia, należy utworzyć kopię istniejącej drzewa wyrażeń i podczas tworzenia kopii, wprowadź wymagane zmiany. Możesz użyć <xref:System.Linq.Expressions.ExpressionVisitor> klasy Przenoszenie istniejących drzewa wyrażeń i skopiuj każdy węzeł, który go wizyty.  
+# <a name="how-to-modify-expression-trees-c"></a>Instrukcje: Modyfikuj drzewa wyrażeń (C#)
+W tym temacie przedstawiono sposób modyfikowania drzewa wyrażenia. Drzewa wyrażeń są niezmienne, co oznacza, że nie można ich modyfikować bezpośrednio. Aby zmienić drzewo wyrażenia, należy utworzyć kopię istniejącego drzewa wyrażeń i utworzyć kopię, wprowadzić wymagane zmiany. Można użyć <xref:System.Linq.Expressions.ExpressionVisitor> klasy do przechodzenia istniejącego drzewa wyrażeń i kopiowania każdego z nich.  
   
-### <a name="to-modify-an-expression-tree"></a>Aby zmodyfikować drzewa wyrażeń  
+### <a name="to-modify-an-expression-tree"></a>Aby zmodyfikować drzewo wyrażenia  
   
-1. Utwórz nową **aplikację Konsolową** projektu.  
+1. Utwórz nowy projekt **aplikacji konsolowej** .  
   
-2. Dodaj `using` dyrektywy w pliku `System.Linq.Expressions` przestrzeni nazw.  
+2. Dodaj dyrektywę do pliku `System.Linq.Expressions` dla przestrzeni nazw. `using`  
   
-3. Dodaj `AndAlsoModifier` klasy do projektu.  
+3. `AndAlsoModifier` Dodaj klasę do projektu.  
   
     ```csharp  
     public class AndAlsoModifier : ExpressionVisitor  
@@ -44,11 +44,11 @@ W tym temacie przedstawiono sposób modyfikowania drzewo wyrażenia. Drzewa wyra
     }  
     ```  
   
-     Ta klasa dziedziczy <xref:System.Linq.Expressions.ExpressionVisitor> klasy i jest przeznaczone do modyfikowania wyrażeń, które reprezentują warunkowego `AND` operacji. Zmienia te operacje z warunkowego `AND` do warunkowego `OR`. Aby to zrobić, przesłonięć klasy <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> metody typu podstawowego, ponieważ warunkowego `AND` wyrażenia są reprezentowane jako wyrażenia binarnego. W `VisitBinary` metody, jeśli wyrażenie, który jest przekazywany do niego reprezentuje warunkowe `AND` operacji, kod tworzy nowe wyrażenie, które zawiera warunkową `OR` operator zamiast warunkową `AND` operator. Jeśli wyrażenie, które są przekazywane do `VisitBinary` nie reprezentuje warunkowe `AND` operacja, metoda odracza do implementacji klasy podstawowej. Metody klasy bazowej, węzły konstrukcji, które są podobne do drzew wyrażeń, które są przekazywane w, ale węzły mają ich drzew podrzędnych zastąpione drzew wyrażeń, które są generowane cyklicznie przez obiekt odwiedzający.  
+     Ta klasa dziedziczy <xref:System.Linq.Expressions.ExpressionVisitor> klasę i jest wyspecjalizowany do modyfikowania wyrażeń, które reprezentują `AND` operacje warunkowe. Zmienia te operacje z warunkowego `AND` na warunkowe. `OR` W tym celu Klasa zastępuje <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> metodę typu podstawowego, ponieważ wyrażenia warunkowe `AND` są reprezentowane jako wyrażenia binarne. W metodzie, jeśli wyrażenie, które jest przesyłane do niego reprezentuje operację warunkową `AND` , kod tworzy nowe wyrażenie zawierające operator warunkowy `OR` zamiast warunku `AND` `VisitBinary` zakład. Jeśli wyrażenie, które jest przesyłane do `VisitBinary` nie reprezentuje operacji warunkowej `AND` , metoda jest uwzględniana w implementacji klasy podstawowej. Metody klasy bazowej konstruują węzły, które są podobne do drzew wyrażeń, które są przenoszone, ale węzły mają swoje poddrzewa zamienione na drzewa wyrażeń, które są tworzone cyklicznie przez odwiedzających.  
   
-4. Dodaj `using` dyrektywy w pliku `System.Linq.Expressions` przestrzeni nazw.  
+4. Dodaj dyrektywę do pliku `System.Linq.Expressions` dla przestrzeni nazw. `using`  
   
-5. Dodaj kod, aby `Main` metody w pliku Program.cs, aby utworzyć drzewo wyrażeń i przekazać go do metody, będzie go zmodyfikować.  
+5. Dodaj kod do `Main` metody w pliku program.cs, aby utworzyć drzewo wyrażenia i przekazać go do metody, która zmodyfikuje ją.  
   
     ```csharp  
     Expression<Func<string, bool>> expr = name => name.Length > 10 && name.StartsWith("G");  
@@ -66,11 +66,11 @@ W tym temacie przedstawiono sposób modyfikowania drzewo wyrażenia. Drzewa wyra
     */  
     ```  
   
-     Ten kod tworzy wyrażenia zawierającego warunkowe `AND` operacji. Następnie tworzy wystąpienie `AndAlsoModifier` klasy i przekazuje wyrażenia do `Modify` metody tej klasy. Zarówno oryginał, jak i drzewa wyrażeń zmodyfikowane są zwrócone do wyświetlenia zmiany.  
+     Kod tworzy wyrażenie zawierające operację warunkową `AND` . Następnie tworzy wystąpienie `AndAlsoModifier` klasy i przekazuje wyrażenie `Modify` do metody tej klasy. Wszystkie oryginalne i zmodyfikowane drzewa wyrażeń są zwracane w celu wyświetlenia zmiany.  
   
-6. Skompilować i uruchomić aplikację.  
+6. Skompiluj i uruchom aplikację.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Wykonywanie drzew wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [Drzewa wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Instrukcje: Wykonywanie drzew wyrażeń (C#)](./how-to-execute-expression-trees.md)
+- [Drzewa wyrażeń (C#)](./index.md)

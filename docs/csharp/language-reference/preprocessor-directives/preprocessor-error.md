@@ -1,5 +1,5 @@
 ---
-title: '#Błąd — C# odwołania'
+title: '#błąd — C# odwołanie'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#error directive [C#]'
 ms.assetid: f2a7f3af-4cf9-4111-b369-70204d24b26b
-ms.openlocfilehash: 3aa31ce7e189684bd60c238905df3bcbd1818ed6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f18dbd007e80397b815256231a1d56e5ca50010e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660024"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608556"
 ---
 # <a name="error-c-reference"></a>#error (odwołanie w C#)
-`#error` Umożliwia wygenerowanie [CS1029](../compiler-messages/cs1029.md) błędach zdefiniowane przez użytkownika z określonych lokalizacji w kodzie. Na przykład:  
+`#error`umożliwia wygenerowanie [CS1029](../compiler-messages/cs1029.md) błędu zdefiniowanego przez użytkownika z określonej lokalizacji w kodzie. Przykład:  
   
 ```csharp
 #error Deprecated code in this method.  
@@ -24,7 +24,7 @@ ms.locfileid: "61660024"
 ## <a name="remarks"></a>Uwagi  
  Typowym zastosowaniem `#error` jest dyrektywa warunkowa.  
   
- Istnieje również możliwość wygenerowania ostrzeżenia zdefiniowanego przez użytkownika przy użyciu dyrektywy [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md).  
+ Istnieje również możliwość wygenerowania ostrzeżenia zdefiniowanego przez użytkownika przy użyciu dyrektywy [#warning](./preprocessor-warning.md).  
   
 ## <a name="example"></a>Przykład  
   
@@ -45,6 +45,6 @@ class MainClass
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Dyrektywy preprocesora C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Dyrektywy preprocesora C#](./index.md)

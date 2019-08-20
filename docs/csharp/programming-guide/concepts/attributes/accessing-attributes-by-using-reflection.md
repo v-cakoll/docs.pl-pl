@@ -1,35 +1,35 @@
 ---
-title: Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)
+title: Uzyskiwanie dostępu do atrybutów przyC#użyciu odbicia ()
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: f7c7b89be13022471f4e17bcb6ed9a90bcbc1c54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 990b6487e50bfb2d123c3871e5f85da063711d9e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668643"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595506"
 ---
-# <a name="accessing-attributes-by-using-reflection-c"></a>Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)
-Korzyści bez jakiś sposób pobierania tych informacji i działających na nim mogą być fakt, że można zdefiniować atrybutów niestandardowych i umieść je w kodzie źródłowym. Przy użyciu odbicia, możesz pobrać informacje, które zostało zdefiniowane przy użyciu atrybutów niestandardowych. Metoda klucza jest `GetCustomAttributes`, która zwraca tablicę obiektów, które są odpowiedników środowiska wykonawczego atrybuty kodu źródłowego. Ta metoda ma kilka przeciążone wersje. Aby uzyskać więcej informacji, zobacz <xref:System.Attribute>.  
+# <a name="accessing-attributes-by-using-reflection-c"></a>Uzyskiwanie dostępu do atrybutów przyC#użyciu odbicia ()
+Fakt, że można zdefiniować atrybuty niestandardowe i umieścić je w kodzie źródłowym, będzie miał małą wartość bez konieczności pobierania tych informacji i działania na nich. Za pomocą odbicia można pobrać informacje, które zostały zdefiniowane przy użyciu atrybutów niestandardowych. Kluczową metodą jest `GetCustomAttributes`, która zwraca tablicę obiektów, które są odpowiednikami w czasie wykonywania dla atrybutów kodu źródłowego. Ta metoda ma kilka przeciążonych wersji. Aby uzyskać więcej informacji, zobacz <xref:System.Attribute>.  
   
- Specyfikacja atrybutu, takie jak:  
+ Specyfikacja atrybutu, taka jak:  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
 class SampleClass  
 ```  
   
- jest równoważny to:  
+ jest koncepcyjnie równoważne:  
   
 ```csharp  
 Author anonymousAuthorObject = new Author("P. Ackerman");  
 anonymousAuthorObject.version = 1.1;  
 ```  
   
- Jednakże, kod nie jest wykonywany do momentu `SampleClass` jest wysyłane zapytanie dla atrybutów. Wywoływanie `GetCustomAttributes` na `SampleClass` powoduje, że `Author` obiekt skonstruowany i zainicjowany, tak jak powyżej. Jeśli klasa ma inne atrybuty, innych atrybutów obiektów są konstruowane podobnie. `GetCustomAttributes` następnie zwraca `Author` obiektów i innych atrybutów obiektów w tablicy. Następnie można wykonać iterację za pośrednictwem tej tablicy, określić, jakie atrybuty zostały zastosowane w oparciu o typ każdego elementu tablicy i wyodrębnianie informacji z obiektów atrybutu.  
+ Jednak kod nie jest wykonywany do momentu `SampleClass` zapytania o atrybuty. Wywołanie metody `GetCustomAttributes` powoduje`Author`, że obiekt ma być skonstruowany i zainicjowany jak powyżej. `SampleClass` Jeśli klasa ma inne atrybuty, inne obiekty atrybutów są konstruowane podobnie. `GetCustomAttributes`następnie zwraca `Author` obiekt i wszystkie inne obiekty atrybutu w tablicy. Następnie można wykonać iterację tej tablicy, określić, jakie atrybuty zostały zastosowane na podstawie typu każdego elementu tablicy, i wyodrębnić informacje z obiektów atrybutów.  
   
 ## <a name="example"></a>Przykład  
- Oto kompletny przykład. Atrybut niestandardowy jest zdefiniowane, stosowania do kilku jednostek i pobierane za pomocą odbicia.  
+ Oto kompletny przykład. Atrybut niestandardowy jest zdefiniowany, stosowany do kilku jednostek i pobierany za pośrednictwem odbicia.  
   
 ```csharp  
 // Multiuse attribute.  
@@ -117,8 +117,8 @@ class TestAuthorAttribute
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)
+- [Przewodnik programowania w języku C#](../../index.md)
 - [Pobieranie informacji przechowywanych w atrybutach](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
-- [Odbicie (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [Atrybuty (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [Tworzenie atrybutów niestandardowych (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [OdbicieC#()](../reflection.md)
+- [Atrybuty (C#)](./index.md)
+- [Tworzenie atrybutów niestandardowych (C#)](./creating-custom-attributes.md)

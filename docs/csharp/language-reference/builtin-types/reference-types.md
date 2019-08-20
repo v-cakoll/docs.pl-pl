@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: fcfe2dafe588dce57628bff63e3519f70d7a7725
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: a5a32fa0a98cda37d7f599b20ef2b507cadd730c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566257"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604214"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Wbudowane typy odwołań (C# odwołanie)
 
@@ -105,7 +105,7 @@ Console.WriteLine(a);
 > [!NOTE]
 > Kod `\udddd` ucieczki (gdzie `dddd` jest liczbą czterocyfrową) reprezentuje znak Unicode U +`dddd`. Są również rozpoznawane osiem cyfrowych kodów ucieczki `\Udddddddd`Unicode:.
 
-[Literały ciągu Verbatim](../tokens/verbatim.md) zaczynają `@` się od i są również ujęte w znaki podwójnego cudzysłowu. Przykład:
+[Literały ciągu Verbatim](../tokens/verbatim.md) zaczynają `@` się od i są również ujęte w znaki podwójnego cudzysłowu. Na przykład:
 
 ```csharp
 @"good morning"  // a string literal
@@ -172,7 +172,7 @@ Poniższy przykład używa `dynamic` w kilku deklaracjach. Metoda `Main` ta rów
 
 - [Dokumentacja języka C#](../index.md)
 - [Słowa kluczowe języka C#](../keywords/index.md)
-- [Zdarzenia](../../../csharp/programming-guide/events/index.md)
+- [Zdarzenia](../../programming-guide/events/index.md)
 - [Używanie typu dynamicznego](../../programming-guide/types/using-type-dynamic.md)
 - [Najlepsze rozwiązania dotyczące używania ciągów](../../../standard/base-types/best-practices-strings.md)
 - [Podstawowe operacje na ciągach](../../../standard/base-types/basic-string-operations.md)

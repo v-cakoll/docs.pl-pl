@@ -10,68 +10,72 @@ helpviewer_keywords:
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
 author: KrzysztofCwalina
-ms.openlocfilehash: f9fe3045d8bd8b4d625c5cd49bc18574ebb740de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 967692092186b81802a7ab635ea8fe4dbacd49ed
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026435"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611516"
 ---
 # <a name="exceptions-and-performance"></a>Wyjątki i wydajność
-Jednym problemem wspólnej związanym z wyjątków jest, że wyjątki są używane do kodu, który regularnie zakończy się niepowodzeniem, wydajność wdrożenia zostaną niedopuszczalne. Jest to prawidłowy niepożądane. Gdy członek zgłasza wyjątek, jego wydajność może być rzędów wolniej. Jednak jest możliwe uzyskanie wysoką wydajność podczas ściśle przestrzega wytycznych wyjątków, które nie zezwalają na używanie kodów błędów. Dwa wzorce opisane w tej sekcji sugerują sposoby wykonania tej czynności.  
-  
- **X DO NOT** używa kody błędów ze względu na problemy, czy wyjątki może negatywnie wpłynąć na wydajność.  
-  
- Aby zwiększyć wydajność, jest możliwe użycie wzorca Tester Doer lub wzorzec spróbuj analizy, opisane w dwóch następnych sekcjach.  
-  
-## <a name="tester-doer-pattern"></a>Wzorzec Tester Doer  
- Czasami można poprawić wydajność, elementu członkowskiego Zgłaszanie wyjątku w, dzieląc element członkowski do dwóch. Przyjrzyjmy się <xref:System.Collections.Generic.ICollection%601.Add%2A> metody <xref:System.Collections.Generic.ICollection%601> interfejsu.  
-  
-```  
-ICollection<int> numbers = ...   
-numbers.Add(1);  
-```  
-  
- Metoda `Add` zgłasza wyjątek, jeśli kolekcja jest tylko do odczytu. Może to być problem z wydajnością w scenariuszach, gdzie oczekiwano wywołania metody które często nie powiedzie się. Sposoby, aby rozwiązać ten problem jest do sprawdzenia, czy kolekcja jest zapisywalny, zanim spróbujesz dodać wartość.  
-  
-```  
-ICollection<int> numbers = ...   
-...  
-if(!numbers.IsReadOnly){  
-    numbers.Add(1);  
-}  
-```  
-  
- Element członkowski, używany do sprawdzania warunku, który w tym przykładzie jest to właściwość `IsReadOnly`, jest określany jako tester. Element członkowski, używany do wykonywania operacji potencjalnie zgłaszanie, `Add` metody w naszym przykładzie jest określany jako doer.  
-  
- **✓ CONSIDER** wzorzec Tester Doer dla elementów członkowskich, które zgłaszają wyjątki, może być wspólnych scenariuszy, aby uniknąć problemów z wydajnością związane z wyjątków.  
-  
-## <a name="try-parse-pattern"></a>Try-Parse wzorzec  
- W przypadku interfejsów API bardzo wrażliwego na wydajność należy użyć wzorca jeszcze szybciej niż wzorzec Tester Doer opisanego w poprzedniej sekcji. Wzorzec wymaga dostosowania nazwy elementu członkowskiego się dobrze zdefiniowanych testu zamierzone, Zapisz część semantyki elementu członkowskiego. Na przykład <xref:System.DateTime> definiuje <xref:System.DateTime.Parse%2A> metodę, która zgłasza wyjątek, jeśli podczas analizowania ciągu kończy się niepowodzeniem. Definiuje również odpowiedni <xref:System.DateTime.TryParse%2A> metodę, która próbuje zanalizować, ale zwraca wartość false w przypadku analizowania zakończy się niepowodzeniem i zwraca wynik pomyślnie analizy przy użyciu `out` parametru.  
-  
-```  
-public struct DateTime {  
-    public static DateTime Parse(string dateTime){   
-        ...   
-    }  
-    public static bool TryParse(string dateTime, out DateTime result){  
-        ...  
-    }  
-}  
-```  
-  
- Korzystając z tego wzorca, należy zdefiniować funkcje spróbuj w warunkach strict. Jeśli element członkowski nie powiedzie się z innego powodu niż spróbuj dobrze zdefiniowanych, elementu członkowskiego musi nadal wyjątku odpowiednie.  
-  
- **✓ CONSIDER** wzorzec spróbuj analizy dla elementów członkowskich, które zgłaszają wyjątki, może być wspólnych scenariuszy, aby uniknąć problemów z wydajnością związane z wyjątków.  
-  
- **✓ DO** Użyj prefiksu "Try" i wartość logiczną zwracanego typu dla metody implementacja tego wzorca.  
-  
- **✓ DO** Podaj elementu członkowskiego zgłaszanie wyjątków dla każdego elementu członkowskiego przy użyciu wzorca spróbuj analizy.  
-  
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
-  
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
-  
+Jeden typowy problem związany z wyjątkami polega na tym, że jeśli wyjątki są używane dla kodu, który rutynowie kończy się niepowodzeniem, wydajność implementacji będzie nieakceptowalna. Jest to prawidłowy problem. Gdy element członkowski zgłasza wyjątek, jego wydajność może być Rzędna wolniej. Istnieje jednak możliwość osiągnięcia odpowiedniej wydajności, ale ściśle przestrzeganie wytycznych dotyczących wyjątków, które nie zezwalają na używanie kodów błędów. Dwa wzorce opisane w tej sekcji sugerują sposoby wykonania tej czynności.
+
+ **X DO NOT** używa kody błędów ze względu na problemy, czy wyjątki może negatywnie wpłynąć na wydajność.
+
+ Aby zwiększyć wydajność, można użyć wzorca testera-DOER lub wzorca try-Parse, opisanego w następnych dwóch sekcjach.
+
+## <a name="tester-doer-pattern"></a>Tester — wzorzec DOER
+ Czasami można poprawić wydajność zgłaszanego przez wyjątek, dzieląc element członkowski na dwa. Przyjrzyjmy się <xref:System.Collections.Generic.ICollection%601.Add%2A> metodzie <xref:System.Collections.Generic.ICollection%601> interfejsu.
+
+```csharp
+ICollection<int> numbers = ...
+numbers.Add(1);
+```
+
+ Metoda `Add` zgłasza, czy kolekcja jest tylko do odczytu. Może to być problem z wydajnością w scenariuszach, w których wywoływanie metody często kończy się niepowodzeniem. Jednym ze sposobów, aby wyeliminować problem, jest przetestowanie, czy kolekcja jest zapisywalna przed podjęciem próby dodania wartości.
+
+```csharp
+ICollection<int> numbers = ...
+...
+if (!numbers.IsReadOnly)
+{
+    numbers.Add(1);
+}
+```
+
+ Element członkowski używany do testowania warunku, który w naszym przykładzie jest właściwością `IsReadOnly`, jest nazywany testerem. Element członkowski używany do wykonywania potencjalnie wyrzucania operacji, `Add` Metoda w naszym przykładzie, jest określany jako DOER.
+
+ **✓ CONSIDER** wzorzec Tester Doer dla elementów członkowskich, które zgłaszają wyjątki, może być wspólnych scenariuszy, aby uniknąć problemów z wydajnością związane z wyjątków.
+
+## <a name="try-parse-pattern"></a>Wzorzec try-Parse
+ W przypadku skrajnie wrażliwych na wydajność interfejsów API, jeszcze szybszym wzorcem niż wzorzec test-DOER opisany w poprzedniej sekcji. Wzorzec wywołuje zmianę nazwy elementu członkowskiego, aby uczynić dobrze zdefiniowanym przypadkiem testowym częścią semantyki elementu członkowskiego. Na przykład <xref:System.DateTime> <xref:System.DateTime.Parse%2A> definiuje metodę, która zgłasza wyjątek, jeśli analizowanie ciągu kończy się niepowodzeniem. Definiuje również odpowiadającą <xref:System.DateTime.TryParse%2A> metodę, która próbuje analizować, ale zwraca wartość false, jeśli analiza nie powiedzie się i zwraca wynik pomyślnej analizy `out` przy użyciu parametru.
+
+```csharp
+public struct DateTime
+{
+    public static DateTime Parse(string dateTime)
+    {
+        ...
+    }
+    public static bool TryParse(string dateTime, out DateTime result)
+    {
+        ...
+    }
+}
+```
+
+ W przypadku korzystania z tego wzorca ważne jest, aby zdefiniować funkcje try w rygorystycznych warunkach. Jeśli element członkowski nie powiedzie się z jakiegokolwiek powodu, który jest inny niż wyraźnie zdefiniowane, element członkowski musi nadal zgłosić odpowiedni wyjątek.
+
+ **✓ CONSIDER** wzorzec spróbuj analizy dla elementów członkowskich, które zgłaszają wyjątki, może być wspólnych scenariuszy, aby uniknąć problemów z wydajnością związane z wyjątków.
+
+ **✓ DO** Użyj prefiksu "Try" i wartość logiczną zwracanego typu dla metody implementacja tego wzorca.
+
+ **✓ DO** Podaj elementu członkowskiego zgłaszanie wyjątków dla każdego elementu członkowskiego przy użyciu wzorca spróbuj analizy.
+
+ *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
+
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: Konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku,](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 2. wydanie przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

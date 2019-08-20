@@ -1,5 +1,5 @@
 ---
-title: -win32manifest (opcje kompilatora C#)
+title: -WIN32MANIFEST (C# opcje kompilatora)
 ms.date: 07/20/2015
 f1_keywords:
 - /win32manifest
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-ms.openlocfilehash: 4cdab8c818cf3278c829e2486e89be32bb4ba277
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5fc8a89faaa7fac3413000afdf94b6a96b23ab6d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593048"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606263"
 ---
-# <a name="-win32manifest-c-compiler-options"></a>-win32manifest (opcje kompilatora C#)
-Użyj **-win32manifest** opcję, aby określić zdefiniowanych przez użytkownika aplikacji plik manifestu Win32 osadzanego do projektu przenośnych plików wykonywalnych (PE) pliku.  
+# <a name="-win32manifest-c-compiler-options"></a>-WIN32MANIFEST (C# opcje kompilatora)
+Użyj opcji **-WIN32MANIFEST** , aby określić zdefiniowany przez użytkownika plik manifestu aplikacji Win32, który ma zostać osadzony w przenośnym pliku wykonywalnym (PE) projektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,31 +26,31 @@ Użyj **-win32manifest** opcję, aby określić zdefiniowanych przez użytkownik
   
 ## <a name="arguments"></a>Argumenty  
  `filename`  
- Nazwę i lokalizację niestandardowego pliku manifestu.  
+ Nazwa i lokalizacja pliku manifestu niestandardowego.  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie kompilator Visual C# osadza manifest aplikacji, która określa wymagany poziom wykonywania programu "asInvoker". Tworzy manifest w tym samym folderze, w którym plik wykonywalny został opracowany, zwykle bin\Debug lub bin\Release folderu, gdy używasz programu Visual Studio. Jeśli chcesz podać niestandardowy manifest, na przykład aby określić wymagany poziom wykonywania "highestAvailable" lub "requireAdministrator", należy użyć tę opcję, aby określić nazwę pliku.  
+ Domyślnie kompilator wizualny C# osadzi manifest aplikacji, który określa żądany poziom wykonywania "jako Źródło". Tworzy manifest w tym samym folderze, w którym jest skompilowany plik wykonywalny, zazwyczaj folder bin\Debug lub bin\Release w przypadku korzystania z programu Visual Studio. Jeśli chcesz podać niestandardowy manifest, na przykład aby określić żądany poziom wykonywania "najwyższe dostępne" lub "wymaga administratora", Użyj tej opcji, aby określić nazwę pliku.  
   
 > [!NOTE]
->  Ta opcja i [-win32res (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) opcji wzajemnie się wykluczają. Jeśli spróbujesz użyć obu opcji w tym samym wierszu polecenia zostanie wyświetlony błąd kompilacji.  
+>  Ta opcja i opcja [-win32res — (C# opcje kompilatora)](./win32res-compiler-option.md) wzajemnie się wykluczają. Jeśli spróbujesz użyć obu opcji w tym samym wierszu polecenia, zostanie wyświetlony błąd kompilacji.  
   
- Aplikacja, która ma żadna aplikacja manifestu, który określa, że będzie wymagany poziom wykonywania pliku/rejestru wirtualizacji w ramach tej funkcji Kontrola konta użytkownika w programie Windows. Aby uzyskać więcej informacji, zobacz [Kontrola konta użytkownika](/windows/access-protection/user-account-control/user-account-control-overview).  
+ Aplikacja, która nie ma manifestu aplikacji, która określa żądany poziom wykonania, będzie podlegała wirtualizacji plików/rejestru w ramach funkcji kontroli konta użytkownika w systemie Windows. Aby uzyskać więcej informacji, zobacz [Kontrola konta użytkownika](/windows/access-protection/user-account-control/user-account-control-overview).  
   
- Twoja aplikacja będzie wirtualizacji, jeśli jest spełniony jeden z następujących warunków:  
+ Aplikacja będzie podlegać wirtualizacji, jeśli spełniony jest jeden z następujących warunków:  
   
-- Możesz użyć **-nowin32manifest** opcji nie są oferowane manifest na późniejszym etapie kompilacji lub jako część pliku Windows zasobów (.res) przy użyciu **-win32res** opcji.  
+- Użyj opcji **-nowin32manifest** i nie udostępniasz manifestu w późniejszym kroku kompilacji lub jako część pliku zasobów systemu Windows (. res) przy użyciu opcji **-win32res —** .  
   
-- Możesz podać niestandardowy manifest, który nie określa wymagany poziom wykonywania.  
+- Należy podać niestandardowy manifest, który nie określa żądanego poziomu wykonania.  
   
- Visual Studio tworzy domyślny plik .manifest i zapisuje go w katalogach debug i release, wraz z pliku wykonywalnego. Aby dodać niestandardowy manifest, tworząc go w dowolnym edytorze tekstów, a następnie dodanie go do projektu. Alternatywnie możesz kliknąć prawym przyciskiem myszy **projektu** ikonę **Eksploratora rozwiązań**, kliknij przycisk **Dodaj nowy element**, a następnie kliknij przycisk **Plikmanifestuaplikacji**. Po dodaniu nowego lub istniejącego pliku manifestu, pojawi się na **manifestu** listy rozwijanej. Aby uzyskać więcej informacji, zobacz [strona aplikacji, Projektant projektu (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  
+ Program Visual Studio tworzy domyślny plik. manifest i zapisuje go w katalogach debugowania i wydań obok pliku wykonywalnego. Można dodać manifest niestandardowy, tworząc jeden w dowolnym edytorze tekstu, a następnie dodając plik do projektu. Alternatywnie możesz kliknąć prawym przyciskiem myszy ikonę **projektu** w **Eksplorator rozwiązań**, kliknąć pozycję **Dodaj nowy element**, a następnie kliknąć pozycję **plik manifestu aplikacji**. Po dodaniu nowego lub istniejącego pliku manifestu zostanie on wyświetlony na liście rozwijanej **manifestu** . Aby uzyskać więcej informacji, zobacz [Strona aplikacji, Projektant projektuC#()](/visualstudio/ide/reference/application-page-project-designer-csharp).  
   
- Możesz podać w manifeście aplikacji jako niestandardowy krok po kompilacji lub jako część pliku zasobów Win32 przy użyciu [-nowin32manifest (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md) opcji. Jeśli chcesz, aby aplikacja ma być wirtualizacji plików i rejestru w systemie Windows Vista, należy użyć tej samej opcji. Uniemożliwi to kompilatora od utworzenia i osadzanie domyślny manifest w przenośny plik wykonywalny (PE).  
+ Można dostarczyć manifest aplikacji jako niestandardowy krok po kompilacji lub jako część pliku zasobów Win32 przy użyciu opcji [-nowin32manifest (C# opcje kompilatora)](./nowin32manifest-compiler-option.md) . Użyj tej samej opcji, jeśli chcesz, aby aplikacja podlegała wirtualizacji plików lub rejestru w systemie Windows Vista. Uniemożliwi to kompilatorowi utworzenie i osadzenie domyślnego manifestu w przenośnym pliku wykonywalnym (PE).  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia domyślny manifest, kompilator Visual C#, wstawia w Wykonywalnym.  
+ W poniższym przykładzie pokazano domyślny manifest wstawiany przez kompilator wizualny C# do środowiska PE.  
   
 > [!NOTE]
->  Kompilator Wstawia nazwę standardowej aplikacji "MyApplication.app" do pliku xml. To obejście, aby umożliwić aplikacji do uruchamiania w systemie Windows Server 2003 z dodatkiem Service Pack 3.  
+>  Kompilator wstawia w kodzie XML standardową nazwę aplikacji "moja aplikacja. aplikacja". Jest to obejście, aby umożliwić uruchamianie aplikacji w systemie Windows Server 2003 z dodatkiem Service Pack 3.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -68,6 +68,6 @@ Użyj **-win32manifest** opcję, aby określić zdefiniowanych przez użytkownik
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
-- [-nowin32manifest (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)
+- [Opcje kompilatora C#](./index.md)
+- [-nowin32manifest (C# opcje kompilatora)](./nowin32manifest-compiler-option.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

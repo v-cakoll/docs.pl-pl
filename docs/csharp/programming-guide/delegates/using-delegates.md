@@ -5,25 +5,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 1e77c994062c7ac9ee009bc0e12d39e530e8af80
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 6f4044591c2cd8d59970d8d2f6e65c51ce7498ff
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868837"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590561"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Używanie delegatów (Przewodnik programowania w języku C#)
-[Delegat](../../../csharp/language-reference/keywords/delegate.md) jest typem, który bezpiecznie hermetyzuje metodę, podobną do wskaźnika funkcji w C i C++. W przeciwieństwie do wskaźników funkcji języka C, Delegaty są zorientowane obiektowo, typu bezpieczne i bezpieczne. Typ delegata jest definiowany przy użyciu nazwy delegata. Poniższy przykład deklaruje delegata o `Del` nazwie, który może hermetyzować metodę, która pobiera [ciąg](../../../csharp/language-reference/keywords/string.md) jako argument i zwraca wartość [void](../../../csharp/language-reference/keywords/void.md):  
+[Delegat](../../language-reference/keywords/delegate.md) jest typem, który bezpiecznie hermetyzuje metodę, podobną do wskaźnika funkcji w C i C++. W przeciwieństwie do wskaźników funkcji języka C, Delegaty są zorientowane obiektowo, typu bezpieczne i bezpieczne. Typ delegata jest definiowany przy użyciu nazwy delegata. Poniższy przykład deklaruje delegata o `Del` nazwie, który może hermetyzować metodę, która pobiera [ciąg](../../language-reference/keywords/string.md) jako argument i zwraca wartość [void](../../language-reference/keywords/void.md):  
   
  [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]  
   
- Obiekt delegata jest zwykle tworzony przez podanie nazwy metody, która zostanie zawinięty przez delegata, lub za pomocą [funkcji anonimowej](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md). Po utworzeniu wystąpienia delegata wywołanie metody przesłane do delegata zostanie przesłane przez delegata do tej metody. Parametry przesłane do delegata przez obiekt wywołujący są przesyłane do metody, a wartość zwracana, jeśli istnieje, jest zwracana do obiektu wywołującego przez delegata. Jest to nazywane wywołaniem delegata. Obiekt delegowany skonkretyzowany może być wywoływany tak, jakby była metodą opakowaną. Przykład:  
+ Obiekt delegata jest zwykle tworzony przez podanie nazwy metody, która zostanie zawinięty przez delegata, lub za pomocą [funkcji anonimowej](../statements-expressions-operators/anonymous-functions.md). Po utworzeniu wystąpienia delegata wywołanie metody przesłane do delegata zostanie przesłane przez delegata do tej metody. Parametry przesłane do delegata przez obiekt wywołujący są przesyłane do metody, a wartość zwracana, jeśli istnieje, jest zwracana do obiektu wywołującego przez delegata. Jest to nazywane wywołaniem delegata. Obiekt delegowany skonkretyzowany może być wywoływany tak, jakby była metodą opakowaną. Na przykład:  
   
  [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
   
  [!code-csharp[csProgGuideDelegates#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#23)]  
   
- Typy delegatów są wyprowadzane <xref:System.Delegate> z klasy w .NET Framework. Typy delegatów są [zapieczętowane](../../../csharp/language-reference/keywords/sealed.md)— nie mogą być wyprowadzane z — i nie można utworzyć klas niestandardowych z <xref:System.Delegate>. Ponieważ delegat skonkretyzowany jest obiektem, może być przekazane jako parametr lub przypisany do właściwości. Dzięki temu Metoda akceptuje delegata jako parametr i Wywołaj delegata w późniejszym czasie. Jest to znane jako asynchroniczne wywołanie zwrotne i jest typową metodą powiadamiania obiektu wywołującego po zakończeniu długotrwałego procesu. Gdy delegat jest używany w ten sposób, kod korzystający z delegata nie potrzebuje żadnej znajomości implementacji używanej metody. Funkcje są podobne do interfejsów hermetyzacji.  
+ Typy delegatów są wyprowadzane <xref:System.Delegate> z klasy w .NET Framework. Typy delegatów są [zapieczętowane](../../language-reference/keywords/sealed.md)— nie mogą być wyprowadzane z — i nie można utworzyć klas niestandardowych z <xref:System.Delegate>. Ponieważ delegat skonkretyzowany jest obiektem, może być przekazane jako parametr lub przypisany do właściwości. Dzięki temu Metoda akceptuje delegata jako parametr i Wywołaj delegata w późniejszym czasie. Jest to znane jako asynchroniczne wywołanie zwrotne i jest typową metodą powiadamiania obiektu wywołującego po zakończeniu długotrwałego procesu. Gdy delegat jest używany w ten sposób, kod korzystający z delegata nie potrzebuje żadnej znajomości implementacji używanej metody. Funkcje są podobne do interfejsów hermetyzacji.  
   
  Innym typowym użyciem wywołań zwrotnych jest Definiowanie niestandardowej metody porównania i przekazywanie tego delegata do metody sortowania. Pozwala na to, aby kod obiektu wywołującego stał się częścią algorytmu sortowania. W poniższym przykładzie metoda używa `Del` typu jako parametru:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68868837"
   
  Wraz ze statycznym `DelegateMethod` pokazanym wcześniej mamy teraz trzy metody, które mogą być opakowane `Del` przez wystąpienie.  
   
- Delegat może wywołać więcej niż jedną metodę w przypadku wywołania. Nazywa się to multiemisją. Aby dodać dodatkową metodę do listy metod delegatów — Lista wywołań — wystarczy dodać dwa Delegaty przy użyciu operatora przypisania dodawania lub dodawania ("+" lub "+ ="). Na przykład:  
+ Delegat może wywołać więcej niż jedną metodę w przypadku wywołania. Nazywa się to multiemisją. Aby dodać dodatkową metodę do listy metod delegatów — Lista wywołań — wystarczy dodać dwa Delegaty przy użyciu operatora przypisania dodawania lub dodawania ("+" lub "+ ="). Przykład:  
   
  [!code-csharp[csProgGuideDelegates#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#27)]  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68868837"
   
  Delegaty z więcej niż jedną metodą na liście wywołań pochodzą z <xref:System.MulticastDelegate>, która jest `System.Delegate`podklasą klasy. Powyższy kod działa w obu przypadkach, ponieważ obie klasy `GetInvocationList`obsługują.  
   
- Delegaty multiemisji są szeroko używane w obsłudze zdarzeń. Obiekty źródłowe zdarzeń wysyłają powiadomienia o zdarzeniach do obiektów adresatów, które zostały zarejestrowane w celu otrzymania tego zdarzenia. Aby zarejestrować się na potrzeby zdarzenia, odbiorca tworzy metodę zaprojektowaną do obsługi zdarzenia, a następnie tworzy delegata dla tej metody i przekazuje delegata do źródła zdarzeń. Źródło wywołuje delegata, gdy wystąpi zdarzenie. Delegat następnie wywołuje metodę obsługi zdarzeń na odbiorcy, dostarczając dane zdarzenia. Typ delegata dla danego zdarzenia jest definiowany przez Źródło zdarzenia. Aby uzyskać więcej informacji, zobacz [zdarzenia](../../../csharp/programming-guide/events/index.md).  
+ Delegaty multiemisji są szeroko używane w obsłudze zdarzeń. Obiekty źródłowe zdarzeń wysyłają powiadomienia o zdarzeniach do obiektów adresatów, które zostały zarejestrowane w celu otrzymania tego zdarzenia. Aby zarejestrować się na potrzeby zdarzenia, odbiorca tworzy metodę zaprojektowaną do obsługi zdarzenia, a następnie tworzy delegata dla tej metody i przekazuje delegata do źródła zdarzeń. Źródło wywołuje delegata, gdy wystąpi zdarzenie. Delegat następnie wywołuje metodę obsługi zdarzeń na odbiorcy, dostarczając dane zdarzenia. Typ delegata dla danego zdarzenia jest definiowany przez Źródło zdarzenia. Aby uzyskać więcej informacji, zobacz [zdarzenia](../events/index.md).  
   
  Porównywanie delegatów dwóch różnych typów przypisanych w czasie kompilacji spowoduje błąd kompilacji. Jeśli wystąpienia delegatów są statycznie typu `System.Delegate`, porównywanie jest dozwolone, ale zwróci wartość false w czasie wykonywania. Na przykład:  
   
@@ -67,9 +67,9 @@ ms.locfileid: "68868837"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Delegaty](../../../csharp/programming-guide/delegates/index.md)
-- [Korzystanie z wariancji w delegatach](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)
-- [Wariancje w delegatach](../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [Korzystanie z wariancji dla delegatów ogólnych Func i Action](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
-- [Zdarzenia](../../../csharp/programming-guide/events/index.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Delegaty](./index.md)
+- [Korzystanie z wariancji w delegatach](../concepts/covariance-contravariance/using-variance-in-delegates.md)
+- [Wariancje w delegatach](../concepts/covariance-contravariance/variance-in-delegates.md)
+- [Korzystanie z wariancji dla delegatów ogólnych Func i Action](../concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Zdarzenia](../events/index.md)

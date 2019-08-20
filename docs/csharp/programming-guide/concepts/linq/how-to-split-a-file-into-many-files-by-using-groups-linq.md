@@ -1,20 +1,20 @@
 ---
-title: 'Instrukcje: Dzielenie pliku na kilka plików za pomocą grup (LINQ) (C#)'
+title: 'Instrukcje: Dzielenie pliku na wiele plików przy użyciu grup (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: f38cfebae17ea6db9df2445f71852f7f4e6f201f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 171d0aababfe4ff4ba5be4c8d307c917474671fc
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584366"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592381"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Instrukcje: Dzielenie pliku na kilka plików za pomocą grup (LINQ) (C#)
-Ten przykład przedstawia sposób Scalanie zawartości dwóch plików, a następnie utwórz zestaw nowych plików, które organizują dane w nowy sposób.  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Instrukcje: Dzielenie pliku na wiele plików przy użyciu grup (LINQ) (C#)
+Ten przykład pokazuje jeden ze sposobów, aby scalić zawartość dwóch plików, a następnie utworzyć zestaw nowych plików, które organizują dane w nowy sposób.  
   
 ### <a name="to-create-the-data-files"></a>Aby utworzyć pliki danych  
   
-1. Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names1.txt i zapisz go w folderze projektu:  
+1. Skopiuj te nazwy do pliku tekstowego o nazwie names1. txt i Zapisz go w folderze projektu:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ Ten przykład przedstawia sposób Scalanie zawartości dwóch plików, a następ
     Garcia, Debra  
     ```  
   
-2. Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names2.txt i zapisz go w folderze projektu: Należy zauważyć, że te dwa pliki nazwy niektórych wspólnych.  
+2. Skopiuj te nazwy do pliku tekstowego o nazwie names2. txt i Zapisz go w folderze projektu: Należy pamiętać, że dwa pliki mają nazwy wspólne.  
   
     ```  
     Liu, Jinghao  
@@ -122,13 +122,13 @@ class SplitWithGroups
  */  
 ```  
   
- Program zapisuje osobny plik dla każdej grupy, w tym samym folderze co pliki danych.  
+ Program zapisuje oddzielny plik dla każdej grupy w tym samym folderze co pliki danych.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Tworzenie C# konsoli projekt aplikacji z `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.
+Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ i ciągi (C#)](./linq-and-strings.md)
+- [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)

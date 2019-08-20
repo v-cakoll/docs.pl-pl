@@ -1,5 +1,5 @@
 ---
-title: -nowin32manifest (opcje kompilatora C#)
+title: -nowin32manifest (C# opcje kompilatora)
 ms.date: 07/20/2015
 f1_keywords:
 - /nowin32manifest
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -nowin32manifest compiler option [C#]
 - /nowin32manifest compiler option [C#]
 ms.assetid: 6f06365b-b87b-46a2-b187-b3bfeaf4862d
-ms.openlocfilehash: 357bc0dbe261a5d55b958fa0e8256920f050356d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8820410bfdbce2f9986605f37af4d14957471126
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662624"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602714"
 ---
-# <a name="-nowin32manifest-c-compiler-options"></a>-nowin32manifest (opcje kompilatora C#)
-Użyj **-nowin32manifest** opcję, aby poinstruować kompilator, nie można osadzić manifest dowolnej aplikacji w pliku wykonywalnego.  
+# <a name="-nowin32manifest-c-compiler-options"></a>-nowin32manifest (C# opcje kompilatora)
+Użyj opcji **-nowin32manifest** , aby nakazać kompilatorowi nie osadzenie żadnego manifestu aplikacji w pliku wykonywalnym.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -25,13 +25,13 @@ Użyj **-nowin32manifest** opcję, aby poinstruować kompilator, nie można osad
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy ta opcja jest używana, aplikacja będzie wirtualizacji w systemie Windows Vista, chyba że zapewniasz manifest aplikacji w pliku zasobów Win32 lub w późniejszym kroku kompilacji.  
+ Gdy ta opcja jest używana, aplikacja będzie podlegać wirtualizacji w systemie Windows Vista, o ile nie podajesz manifestu aplikacji w pliku zasobów Win32 lub w późniejszym kroku kompilacji.  
   
- W programie Visual Studio, należy ustawić tę opcję w **właściwość aplikacji** strony, wybierając **tworzenie aplikacji bez manifestu** opcji **manifestu** listy rozwijanej. Aby uzyskać więcej informacji, zobacz [strona aplikacji, Projektant projektu (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  
+ W programie Visual Studio Ustaw tę opcję na stronie **właściwości aplikacji** , wybierając opcję **Utwórz aplikację bez manifestu** na liście rozwijanej **manifestu** . Aby uzyskać więcej informacji, zobacz [Strona aplikacji, Projektant projektuC#()](/visualstudio/ide/reference/application-page-project-designer-csharp).  
   
- Aby uzyskać więcej informacji o tworzeniu manifestu, zobacz [-win32manifest (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).  
+ Aby uzyskać więcej informacji na temat tworzenia manifestu, zobacz [-C# WIN32MANIFEST (opcje kompilatora)](./win32manifest-compiler-option.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opcje kompilatora C#](./index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

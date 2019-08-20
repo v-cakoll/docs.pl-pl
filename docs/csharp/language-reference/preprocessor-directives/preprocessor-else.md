@@ -1,5 +1,5 @@
 ---
-title: '#else — C# odwołania'
+title: '#else- C# Reference'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - '#else directive [C#]'
 ms.assetid: 6a347322-cfa2-4a86-98f8-ddfa2cb7d4db
-ms.openlocfilehash: 67d3e6b8fc136e16fb0e307a9f8ceca494169bfc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6a514f71b3526b2ffe347cdd971b81907fb0aad
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61688998"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605717"
 ---
 # <a name="else-c-reference"></a>#else (odwołanie w C#)
-`#else` Umożliwia tworzenie złożonego dyrektywy warunkowej, tak, aby, jeśli żaden z wyrażeń w poprzednim [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) lub (opcjonalnie) [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) zwrócić dyrektywy `true`, kompilator ocenia wszystkie Kod między `#else` i kolejne `#endif`.  
+`#else`umożliwia utworzenie złożonej dyrektywy warunkowej, tak aby w przypadku braku wyrażeń w powyższym [#if](./preprocessor-if.md) lub (opcjonalnie) [#elif](./preprocessor-elif.md) dyrektywy nie były oceniane do `true`, kompilator oceni cały kod między `#else` i kolejne `#endif`.  
   
 ## <a name="remarks"></a>Uwagi  
- Następną dyrektywą preprocesora po [ musi być ](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)#endif`#else`. Aby zapoznać się z przykładem użycia dyrektywy [, zobacz ](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)#if`#else`.  
+ Następną dyrektywą preprocesora po [ musi być ](./preprocessor-endif.md)#endif`#else`. Aby zapoznać się z przykładem użycia dyrektywy [, zobacz ](./preprocessor-if.md)#if`#else`.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Dyrektywy preprocesora C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Dyrektywy preprocesora C#](./index.md)

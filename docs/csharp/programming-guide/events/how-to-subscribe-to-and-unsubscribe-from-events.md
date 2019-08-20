@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 777eb3be5cbefe0a136bf49f826ad67685a8456d
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 523045e990532f1475e1c4816c98d1af76daa92b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401081"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590400"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Instrukcje: Subskrybowanie i anulowanie subskrypcji zdarzeń (C# Przewodnik programowania)
 Zasubskrybujesz zdarzenie, które jest publikowane przez inną klasę, gdy chcesz napisać niestandardowy kod, który jest wywoływany, gdy zdarzenie jest zgłaszane. Na przykład można subskrybować `click` zdarzenie przycisku, aby aplikacja była przydatna, gdy użytkownik kliknie przycisk.  
@@ -83,7 +83,7 @@ Zasubskrybujesz zdarzenie, które jest publikowane przez inną klasę, gdy chces
     };  
     ```  
   
-     Należy pamiętać, że nie można łatwo anulować subskrypcji zdarzenia, jeśli użyto anonimowej funkcji do subskrybowania. Aby anulować subskrypcję w tym scenariuszu, należy wrócić do kodu, w którym subskrybujesz zdarzenie, zapisać metodę anonimową w zmiennej delegata, a następnie dodać delegata do zdarzenia. Ogólnie rzecz biorąc, firma Microsoft zaleca, aby nie używać funkcji anonimowych do subskrybowania zdarzeń, jeśli będzie konieczne anulowanie subskrypcji zdarzenia w pewnym momencie w kodzie. Aby uzyskać więcej informacji na temat funkcji anonimowych, zobacz [funkcje anonimowe](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
+     Należy pamiętać, że nie można łatwo anulować subskrypcji zdarzenia, jeśli użyto anonimowej funkcji do subskrybowania. Aby anulować subskrypcję w tym scenariuszu, należy wrócić do kodu, w którym subskrybujesz zdarzenie, zapisać metodę anonimową w zmiennej delegata, a następnie dodać delegata do zdarzenia. Ogólnie rzecz biorąc, firma Microsoft zaleca, aby nie używać funkcji anonimowych do subskrybowania zdarzeń, jeśli będzie konieczne anulowanie subskrypcji zdarzenia w pewnym momencie w kodzie. Aby uzyskać więcej informacji na temat funkcji anonimowych, zobacz [funkcje anonimowe](../statements-expressions-operators/anonymous-functions.md).  
   
 ## <a name="unsubscribing"></a>Anulowanie subskrypcji  
  Aby uniemożliwić wywoływanie programu obsługi zdarzeń po podniesieniu zdarzenia, Anuluj subskrypcję zdarzenia. Aby zapobiec przeciekom zasobów, należy anulować subskrypcję zdarzeń przed usunięciem obiektu subskrybenta. Dopóki nie subskrybujesz zdarzenia, delegat multiemisji, który opiera się na zdarzeniu w obiekcie do publikowania, ma odwołanie do delegata, który hermetyzuje procedurę obsługi zdarzeń subskrybenta. Tak długo, jak obiekt publikacji przechowuje to odwołanie, wyrzucanie elementów bezużytecznych nie usunie obiektu subskrybenta.  
@@ -100,8 +100,8 @@ Zasubskrybujesz zdarzenie, które jest publikowane przez inną klasę, gdy chces
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zdarzenia](../../../csharp/programming-guide/events/index.md)
-- [event](../../../csharp/language-reference/keywords/event.md)
-- [Instrukcje: Publikuj zdarzenia zgodne z wytycznymi .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [Zdarzenia](./index.md)
+- [event](../../language-reference/keywords/event.md)
+- [Instrukcje: Publikuj zdarzenia zgodne z wytycznymi .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [Operatory-and-=](../../language-reference/operators/subtraction-operator.md)
 - [Operatory + i + =](../../language-reference/operators/addition-operator.md)

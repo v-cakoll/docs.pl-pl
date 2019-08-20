@@ -1,50 +1,50 @@
 ---
-title: Wariancje w interfejsach (C#)
+title: Wariancja w interfejsachC#ogólnych ()
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 9cbbea35003e86e05d618f5e6000ba2788359cb0
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 12a8b58983256be0ca2b56ea6ed09e724e0814c8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539495"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595164"
 ---
-# <a name="variance-in-generic-interfaces-c"></a>Wariancje w interfejsach (C#)
+# <a name="variance-in-generic-interfaces-c"></a>Wariancja w interfejsachC#ogólnych ()
 
-.NET framework 4 wprowadzono wariancji obsługę kilka istniejących interfejsów ogólnych. Obsługa wariancja umożliwia niejawną konwersję klas, które implementują te interfejsy. 
+.NET Framework 4 wprowadziła obsługę wariancji dla kilku istniejących interfejsów ogólnych. Obsługa wariancji umożliwia niejawną konwersję klas implementujących te interfejsy. 
 
-Rozpoczęcie przeczytania artykułu z .NET Framework 4, następujące interfejsy są wariant:
+Gwiazdki z .NET Framework 4, następujące interfejsy są wariantem:
 
-- <xref:System.Collections.Generic.IEnumerable%601> (T jest kowariantny)
+- <xref:System.Collections.Generic.IEnumerable%601>(T jest współwariantem)
 
-- <xref:System.Collections.Generic.IEnumerator%601> (T jest kowariantny)
+- <xref:System.Collections.Generic.IEnumerator%601>(T jest współwariantem)
 
-- <xref:System.Linq.IQueryable%601> (T jest kowariantny)
+- <xref:System.Linq.IQueryable%601>(T jest współwariantem)
 
-- <xref:System.Linq.IGrouping%602> (`TKey` i `TElement` są kowariantne)
+- <xref:System.Linq.IGrouping%602>(`TKey` i`TElement` są współwariantowe)
 
-- <xref:System.Collections.Generic.IComparer%601> (T jest kontrawariantny)
+- <xref:System.Collections.Generic.IComparer%601>(T jest kontrawariantne)
 
-- <xref:System.Collections.Generic.IEqualityComparer%601> (T jest kontrawariantny)
+- <xref:System.Collections.Generic.IEqualityComparer%601>(T jest kontrawariantne)
 
-- <xref:System.IComparable%601> (T jest kontrawariantny)
+- <xref:System.IComparable%601>(T jest kontrawariantne)
 
-Począwszy od programu .NET Framework 4.5, następujące interfejsy są wariant:
+Począwszy od .NET Framework 4,5, następujące interfejsy są wariantem:
 
-- <xref:System.Collections.Generic.IReadOnlyList%601> (T jest kowariantny)
+- <xref:System.Collections.Generic.IReadOnlyList%601>(T jest współwariantem)
 
-- <xref:System.Collections.Generic.IReadOnlyCollection%601> (T jest kowariantny)
+- <xref:System.Collections.Generic.IReadOnlyCollection%601>(T jest współwariantem)
 
-Kowariancja zezwala na metodę, aby mieć zwracanego typu bardziej pochodnego niż określone przez parametr typu ogólnego interfejsu. Aby zilustrować funkcji KOWARIANCJA, należy wziąć pod uwagę te ogólne interfejsy: `IEnumerable<Object>` i `IEnumerable<String>`. `IEnumerable<String>` Interfejsu nie dziedziczy `IEnumerable<Object>` interfejsu. Jednak `String` typ dziedziczyć `Object` typu, a w niektórych przypadkach możesz chcieć przypisać obiekty te interfejsy do siebie nawzajem. Jest to pokazane w poniższym przykładzie kodu.
+Kowariancja zezwala metodzie na bardziej pochodny typ zwracany niż zdefiniowany przez parametr typu ogólnego interfejsu. Aby zilustrować funkcję kowariancji, należy wziąć pod uwagę następujące interfejsy ogólne `IEnumerable<Object>` : `IEnumerable<String>`i. `IEnumerable<String>` Interfejs nie`IEnumerable<Object>` dziedziczy interfejsu. `String` Jednak Typ`Object` dziedziczy typ, a w niektórych przypadkach może być konieczne przypisanie obiektów do tych interfejsów. Jest to pokazane w poniższym przykładzie kodu.
 
 ```csharp
 IEnumerable<String> strings = new List<String>();
 IEnumerable<Object> objects = strings;
 ```
 
-We wcześniejszych wersjach programu .NET Framework, ten kod powoduje błąd kompilacji w C# i, jeśli `Option Strict` jest włączona, w języku Visual Basic. Teraz możesz używać, ale `strings` zamiast `objects`, jak pokazano w poprzednim przykładzie, ponieważ <xref:System.Collections.Generic.IEnumerable%601> interfejsu jest kowariantny.
+We wcześniejszych wersjach .NET Framework ten kod powoduje błąd kompilacji w C# i, jeśli `Option Strict` znajduje się w Visual Basic. Ale teraz można użyć `strings` `objects`zamiast, jak pokazano w <xref:System.Collections.Generic.IEnumerable%601> poprzednim przykładzie, ponieważ interfejs jest współwariantem.
 
-Kontrawariancja umożliwia metodę, aby mieć typy argumentów, które są mniej pochodnego niż określona przez parametr ogólny interfejsu. Aby zilustrować kontrawariancja, załóżmy, że utworzono `BaseComparer` klasy do porównywania wystąpień `BaseClass` klasy. `BaseComparer` Klasy implementuje `IEqualityComparer<BaseClass>` interfejsu. Ponieważ <xref:System.Collections.Generic.IEqualityComparer%601> interfejs jest obecnie kontrawariantny, możesz użyć `BaseComparer` do porównywania wystąpień klas, które dziedziczą `BaseClass` klasy. Jest to pokazane w poniższym przykładzie kodu.
+Kontrawariancja umożliwia metodzie posiadanie typów argumentów, które są mniej pochodne niż określone przez parametr generyczny interfejsu. Aby zilustrować kontrawariancja, założono, że utworzono `BaseComparer` klasę, aby porównać wystąpienia `BaseClass` klasy. `BaseComparer` Klasa`IEqualityComparer<BaseClass>` implementuje interfejs. Ponieważ interfejs jest teraz kontrawariantne, można go użyć `BaseComparer` do porównania wystąpień klas, które dziedziczą `BaseClass` klasę. <xref:System.Collections.Generic.IEqualityComparer%601> Jest to pokazane w poniższym przykładzie kodu.
 
 ```csharp
 // Simple hierarchy of classes.
@@ -76,9 +76,9 @@ class Program
 }
 ```
 
-Aby uzyskać więcej przykładów, zobacz [przy użyciu wariancji w interfejsach dla kolekcji ogólnych (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).
+Aby uzyskać więcej przykładów, zobacz [Używanie wariancji w interfejsach dlaC#kolekcji ogólnych ()](./using-variance-in-interfaces-for-generic-collections.md).
 
-Wariancje w interfejsach jest obsługiwana tylko dla typów odwołania. Typy wartości nie obsługują wariancji. Na przykład `IEnumerable<int>` nie może być niejawnie konwertowane na `IEnumerable<object>`, ponieważ liczby całkowite są reprezentowane przez typ wartości.
+Wariancja w interfejsach ogólnych jest obsługiwana tylko w przypadku typów referencyjnych. Typy wartości nie obsługują wariancji. Na przykład `IEnumerable<int>` nie można konwertować niejawnie na `IEnumerable<object>`, ponieważ liczby całkowite są reprezentowane przez typ wartości.
 
 ```csharp
 IEnumerable<int> integers = new List<int>();
@@ -87,7 +87,7 @@ IEnumerable<int> integers = new List<int>();
 // IEnumerable<Object> objects = integers;
 ```
 
-Jest również pamiętać, że klasy, które implementują interfejsów typu variant, są nadal niezmienne. Na przykład mimo że <xref:System.Collections.Generic.List%601> implementuje interfejs kowariantne <xref:System.Collections.Generic.IEnumerable%601>, nie można niejawnie przekonwertować `List<String>` do `List<Object>`. Jest to zilustrowane w poniższym przykładzie kodu.
+Należy również pamiętać, że klasy, które implementują interfejsy wariantów, są nadal niezmienne. Na przykład, chociaż <xref:System.Collections.Generic.List%601> implementuje interfejs <xref:System.Collections.Generic.IEnumerable%601>współwariantu, nie można jawnie skonwertować `List<String>` do `List<Object>`. Jest to zilustrowane w poniższym przykładzie kodu.
 
 ```csharp
 // The following line generates a compiler error
@@ -100,7 +100,7 @@ IEnumerable<Object> listObjects = new List<String>();
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Korzystanie z wariancji w interfejsach dla kolekcji ogólnych (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
-- [Tworzenie interfejsów typu Variant (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
+- [Korzystanie z wariancji w interfejsach dlaC#kolekcji ogólnych ()](./using-variance-in-interfaces-for-generic-collections.md)
+- [Tworzenie interfejsów ogólnych typu VariantC#()](./creating-variant-generic-interfaces.md)
 - [Interfejsy ogólne](../../../../standard/generics/interfaces.md)
-- [Wariancje w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [Wariancja w delegatach (C#)](./variance-in-delegates.md)

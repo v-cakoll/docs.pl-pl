@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Łączenie zawartości niepodobnych plików (LINQ) (C#)'
+title: 'Instrukcje: Dołącz zawartość z niepodobnych plików (LINQ)C#()'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 14f9c9917aedbc0beeeddae789b835613d1badc8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585741"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593161"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Instrukcje: Łączenie zawartości niepodobnych plików (LINQ) (C#)
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Instrukcje: Dołącz zawartość z niepodobnych plików (LINQ)C#()
 
-W tym przykładzie pokazano, jak połączyć dane z dwóch plików rozdzielanych przecinkami, które mają wspólne wartość, która jest używana jako zgodnego klucza. Ta technika może być przydatne, jeśli trzeba połączyć dane z dwóch arkuszy kalkulacyjnych lub z arkusza kalkulacyjnego i z plikiem innego formatu, który ma do nowego pliku. Można zmodyfikować przykładu tak, aby pracować z dowolnym rodzajem tekstu ze strukturą.  
+Ten przykład pokazuje, jak połączyć dane z dwóch rozdzielanych przecinkami plików, które mają wspólną wartość używaną jako pasujący klucz. Ta technika może być przydatna, jeśli trzeba połączyć dane z dwóch arkuszy kalkulacyjnych lub z arkusza kalkulacyjnego oraz z pliku, który ma inny format, do nowego pliku. Możesz zmodyfikować przykład, aby współpracować z dowolnym rodzajem tekstu strukturalnego.  
   
 ## <a name="to-create-the-data-files"></a>Aby utworzyć pliki danych
   
-1. Skopiuj następujące wiersze do pliku o nazwie *scores.csv* i zapisz go do folderu projektu. Plik reprezentuje dane w arkuszu. Kolumna 1 jest Identyfikatorem Studenta, a kolumny od 2 do 5 są wyniki testów.  
+1. Skopiuj następujące wiersze do pliku o nazwie *Scores. csv* i Zapisz go w folderze projektu. Plik reprezentuje dane arkusza kalkulacyjnego. Kolumna 1 jest IDENTYFIKATORem studenta, a kolumny od 2 do 5 są wynikami testów.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ W tym przykładzie pokazano, jak połączyć dane z dwóch plików rozdzielanych
     122, 94, 92, 91, 91  
     ```  
   
-2. Skopiuj następujące wiersze do pliku o nazwie *names.csv* i zapisz go do folderu projektu. Plik reprezentuje arkusz kalkulacyjny zawierający identyfikatora dla uczniów, imię i nazwisko studenta  
+2. Skopiuj następujące wiersze do pliku o nazwie *Names. csv* i Zapisz go w folderze projektu. Ten plik reprezentuje arkusz kalkulacyjny zawierający nazwisko, imię i nazwisko ucznia.  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -126,5 +126,5 @@ Tucker, 94, 92, 91, 91
 
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ i ciągi (C#)](./linq-and-strings.md)
+- [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)

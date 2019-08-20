@@ -6,27 +6,27 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 1b80082d10ad9ee760a184f496793ad5c69202da
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "67802316"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588483"
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String> , którego wartością jest Text. Wewnętrznie tekst jest przechowywany jako sekwencyjna kolekcja <xref:System.Char> obiektów tylko do odczytu. Na końcu C# ciągu nie ma znaku zamykającego wartości null; w związku C# z tym ciąg może zawierać dowolną liczbę osadzonych znaków null (' \ 0 '). Właściwość ciągu reprezentuje `Char` liczbę obiektów, które zawiera, a nie liczbę znaków Unicode. <xref:System.String.Length%2A> Aby uzyskać dostęp do poszczególnych punktów kodu Unicode w ciągu, użyj <xref:System.Globalization.StringInfo> obiektu.  
   
 ## <a name="string-vs-systemstring"></a>ciąg a System.String  
- W programie C# <xref:System.String>słowo kluczowe jest aliasem dla. `string` W `String` związku z `string` tym i są równoważne i można użyć dowolnej preferowanej konwencji nazewnictwa. `String` Klasa zawiera wiele metod bezpiecznego tworzenia, manipulowania i porównywania ciągów. Ponadto C# język przeciążuje niektórych operatorów, aby uprościć Typowe operacje na ciągach. Aby uzyskać więcej informacji na temat słowa kluczowego, zobacz [ciąg](../../../csharp/language-reference/keywords/string.md). Aby uzyskać więcej informacji na temat typu i jego metod, <xref:System.String>Zobacz.  
+ W programie C# <xref:System.String>słowo kluczowe jest aliasem dla. `string` W `String` związku z `string` tym i są równoważne i można użyć dowolnej preferowanej konwencji nazewnictwa. `String` Klasa zawiera wiele metod bezpiecznego tworzenia, manipulowania i porównywania ciągów. Ponadto C# język przeciążuje niektórych operatorów, aby uprościć Typowe operacje na ciągach. Aby uzyskać więcej informacji na temat słowa kluczowego, zobacz [ciąg](../../language-reference/keywords/string.md). Aby uzyskać więcej informacji na temat typu i jego metod, <xref:System.String>Zobacz.  
   
 ## <a name="declaring-and-initializing-strings"></a>Deklarowanie i Inicjowanie ciągów  
  Można zadeklarować i zainicjować ciągi na różne sposoby, jak pokazano w następującym przykładzie:  
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- Należy zauważyć, że nie używasz operatora [New](../../../csharp/language-reference/operators/new-operator.md) do tworzenia obiektu String, chyba że podczas inicjowania ciągu z tablicą znaków.  
+ Należy zauważyć, że nie używasz operatora [New](../../language-reference/operators/new-operator.md) do tworzenia obiektu String, chyba że podczas inicjowania ciągu z tablicą znaków.  
   
- Zainicjuj ciąg z <xref:System.String.Empty> wartością stałą, aby utworzyć nowy <xref:System.String> obiekt, którego ciąg ma zerową długość. Literał ciągu reprezentujący ciąg o zerowej długości to "". Inicjując ciągi z <xref:System.String.Empty> wartością zamiast [wartości null](../../../csharp/language-reference/keywords/null.md), można zmniejszyć prawdopodobieństwo <xref:System.NullReferenceException> wystąpienia. Użyj metody statycznej <xref:System.String.IsNullOrEmpty%28System.String%29> , aby zweryfikować wartość ciągu przed próbą uzyskania do niego dostępu.  
+ Zainicjuj ciąg z <xref:System.String.Empty> wartością stałą, aby utworzyć nowy <xref:System.String> obiekt, którego ciąg ma zerową długość. Literał ciągu reprezentujący ciąg o zerowej długości to "". Inicjując ciągi z <xref:System.String.Empty> wartością zamiast [wartości null](../../language-reference/keywords/null.md), można zmniejszyć prawdopodobieństwo <xref:System.NullReferenceException> wystąpienia. Użyj metody statycznej <xref:System.String.IsNullOrEmpty%28System.String%29> , aby zweryfikować wartość ciągu przed próbą uzyskania do niego dostępu.  
   
 ## <a name="immutability-of-string-objects"></a>Niezmienności obiektów String  
  Obiekty String są *niezmienne*: nie można ich zmienić po ich utworzeniu. Wszystkie metody i C# operatory, które pojawiają się w celu zmodyfikowania ciągu faktycznie zwracają wyniki w nowym obiekcie ciągu. <xref:System.String> W poniższym przykładzie, gdy zawartość `s1` i `s2` są łączone w celu utworzenia jednego ciągu, dwa oryginalne ciągi nie są modyfikowane. `+=` Operator tworzy nowy ciąg, który zawiera łączną zawartość. Nowy obiekt jest przypisany do zmiennej `s1`, a oryginalny obiekt, który został przypisany do `s1` , jest uwalniany do wyrzucania elementów bezużytecznych, ponieważ żadna inna zmienna nie przechowuje odwołania do niego.  
@@ -125,7 +125,7 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Ciągi, metody rozszerzające i LINQ  
- Ponieważ typ implementuje <xref:System.Collections.Generic.IEnumerable%601>, można użyć metod <xref:System.Linq.Enumerable> rozszerzających zdefiniowanych w klasie w ciągach. <xref:System.String> Aby uniknąć bałaganu wizualnego, te metody są wykluczone z <xref:System.String> IntelliSense dla typu, ale są one dostępne. Można również użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeń zapytania dla ciągów. Aby uzyskać więcej informacji, zobacz [LINQ i ciągi](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  
+ Ponieważ typ implementuje <xref:System.Collections.Generic.IEnumerable%601>, można użyć metod <xref:System.Linq.Enumerable> rozszerzających zdefiniowanych w klasie w ciągach. <xref:System.String> Aby uniknąć bałaganu wizualnego, te metody są wykluczone z <xref:System.String> IntelliSense dla typu, ale są one dostępne. Można również użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeń zapytania dla ciągów. Aby uzyskać więcej informacji, zobacz [LINQ i ciągi](../concepts/linq/linq-and-strings.md).  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
@@ -136,12 +136,12 @@ string s = String.Empty;
 |[Instrukcje: Łączenie wielu ciągów](../../how-to/concatenate-multiple-strings.md)|Ilustruje różne sposoby sprzęgania wielu ciągów w jeden.|
 |[Instrukcje: Analizowanie ciągów za pomocą ciągu. Split](../../how-to/parse-strings-using-split.md)|Zawiera przykłady kodu, które ilustrują sposób użycia `String.Split` metody do analizowania ciągów.|  
 |[Instrukcje: Ciągi wyszukiwania](../../how-to/search-strings.md)|Wyjaśnia, jak używać wyszukiwania określonego tekstu lub wzorców w ciągach.|  
-|[Instrukcje: Określanie, czy ciąg reprezentuje wartość liczbową](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak bezpiecznie analizować ciąg, aby sprawdzić, czy ma prawidłową wartość liczbową.|  
+|[Instrukcje: Określanie, czy ciąg reprezentuje wartość liczbową](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak bezpiecznie analizować ciąg, aby sprawdzić, czy ma prawidłową wartość liczbową.|  
 |[Interpolacja ciągów](../../language-reference/tokens/interpolated.md)|Opisuje funkcję interpolacji ciągów, która zapewnia wygodną składnię do formatowania ciągów.|
-|[Podstawowe operacje na ciągach](../../../../docs/standard/base-types/basic-string-operations.md)|Zawiera łącza do tematów, które <xref:System.String?displayProperty=nameWithType> używają <xref:System.Text.StringBuilder?displayProperty=nameWithType> metod i do wykonywania podstawowych operacji na ciągach.|  
+|[Podstawowe operacje na ciągach](../../../standard/base-types/basic-string-operations.md)|Zawiera łącza do tematów, które <xref:System.String?displayProperty=nameWithType> używają <xref:System.Text.StringBuilder?displayProperty=nameWithType> metod i do wykonywania podstawowych operacji na ciągach.|  
 |[Analizowanie ciągów](../../../standard/base-types/parsing-strings.md)|W tym artykule opisano sposób konwertowania reprezentacji ciągów typów podstawowych na wystąpienia odpowiednich typów.|  
 |[Analizowanie ciągów daty i godziny w programie .NET](../../../standard/base-types/parsing-datetime.md)|Pokazuje, jak przekonwertować ciąg, taki jak "01/24/2008", na <xref:System.DateTime?displayProperty=nameWithType> obiekt.|  
-|[Porównywanie ciągów](../../../../docs/standard/base-types/comparing.md)|Zawiera informacje o sposobach porównywania ciągów i zawiera przykłady C# w i Visual Basic.|  
+|[Porównywanie ciągów](../../../standard/base-types/comparing.md)|Zawiera informacje o sposobach porównywania ciągów i zawiera przykłady C# w i Visual Basic.|  
 |[Używanie klasy StringBuilder](../../../standard/base-types/stringbuilder.md)|Opisuje sposób tworzenia i modyfikowania dynamicznych obiektów ciągów przy użyciu <xref:System.Text.StringBuilder> klasy.|  
-|[LINQ i ciągi](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Zawiera informacje o sposobach wykonywania różnych operacji na ciągach przy użyciu zapytań LINQ.|  
-|[Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)|Zawiera łącza do tematów, które wyjaśniają konstrukcje C#programistyczne w programie.|  
+|[LINQ i ciągi](../concepts/linq/linq-and-strings.md)|Zawiera informacje o sposobach wykonywania różnych operacji na ciągach przy użyciu zapytań LINQ.|  
+|[Przewodnik programowania w języku C#](../index.md)|Zawiera łącza do tematów, które wyjaśniają konstrukcje C#programistyczne w programie.|  

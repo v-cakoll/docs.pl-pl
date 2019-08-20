@@ -1,5 +1,5 @@
 ---
-title: -moduleassemblyname — (opcją kompilatora C#)
+title: -moduleassemblyname — (C# opcja kompilatora)
 ms.date: 07/20/2015
 f1_keywords:
 - /moduleassemblyname
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 9e4768b598f6046ffb7a0ac014d8594eac40309f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d57279128c0909ba3e62d55d596705cfde6be75c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593054"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606666"
 ---
-# <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname — (opcją kompilatora C#)
-Określa, których typy bez publicznego .netmodule mogą uzyskiwać dostęp do zestawu.  
+# <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname — (C# opcja kompilatora)
+Określa zestaw, którego typy niepubliczne a. module mogą uzyskać dostęp.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,27 +26,27 @@ Określa, których typy bez publicznego .netmodule mogą uzyskiwać dostęp do z
   
 ## <a name="arguments"></a>Argumenty  
  `assembly_name`  
- Nazwa zestawu, którego niepublicznych typy .netmodule mogą uzyskiwać dostęp.  
+ Nazwa zestawu, którego typy niepubliczne mogą uzyskać dostęp do modułu.  
   
 ## <a name="remarks"></a>Uwagi  
- **-moduleassemblyname** należy używać podczas tworzenia modułu .netmodule, a w przypadku, gdy są spełnione następujące warunki:  
+ **-moduleassemblyname —** należy używać podczas kompilowania modułu. sieci i, gdy są spełnione następujące warunki:  
   
-- .netmodule musi mieć dostęp do typów niepublicznych w istniejącego zestawu.  
+- Moduł. Webmusi mieć dostęp do niepublicznych typów w istniejącym zestawie.  
   
-- Znasz nazwę zestawu, do którego zostanie utworzona .netmodule.  
+- Znasz nazwę zestawu, do którego zostanie skompilowany moduł.  
   
-- Istniejący zestaw przyznał prawa dostępu do zestawu friend do zestawu, do którego zostanie utworzona .netmodule.  
+- Istniejący zestaw przydzieli znajomemu dostęp do zestawu, do którego zostanie skompilowany moduł.  
   
- Aby uzyskać więcej informacji na temat budowania .netmodule zobacz [-target: module (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
+ Aby uzyskać więcej informacji na temat tworzenia modułu., zobacz [-target: module (C# opcje kompilatora)](./target-module-compiler-option.md).  
   
- Aby uzyskać więcej informacji na temat przyjaznych zestawów, zobacz [przyjaznych zestawów](../../../standard/assembly/friend-assemblies.md).  
+ Aby uzyskać więcej informacji o znajomych zestawach, zobacz [zaprzyjaźnione zestawy](../../../standard/assembly/friend-assemblies.md).  
   
- Ta opcja nie jest dostępne z poziomu środowiska programistycznego; jest on dostępny tylko wtedy, podczas kompilowania z wiersza polecenia.  
+ Ta opcja jest niedostępna w środowisku programistycznym; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
   
- Ta opcja kompilatora jest niedostępna w programie Visual Studio i nie można zmienić programowo.  
+ Ta opcja kompilatora jest niedostępna w programie Visual Studio i nie można jej zmienić programowo.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład tworzy zestaw o prywatny typ i daje dostęp do zestawu friend do zestawu o nazwie csman_an_assembly.  
+ Ten przykład kompiluje zestaw z typem prywatnym i zapewnia znajomemu dostęp do zestawu o nazwie csman_an_assembly.  
   
 ```csharp  
 // moduleassemblyname_1.cs  
@@ -66,7 +66,7 @@ class An_Internal_Class
 ```  
   
 ## <a name="example"></a>Przykład  
- Ten przykład tworzy .netmodule, który uzyskuje dostęp do typu niepublicznych w moduleassemblyname_1.dll zestawu. Wiadomo, że tego modułu .netmodule zostanie skompilowany w zestawie o nazwie csman_an_assembly, można określić **- moduleassemblyname**, dzięki czemu netmodule można uzyskiwać dostęp do typów niepublicznych w zestawie, który przyznał przyjaznego zestawu dostęp do csman_an_assembly.  
+ Ten przykład tworzy moduł. Service, który uzyskuje dostęp do niepublicznego typu w zestawie moduleassemblyname_1. dll. Wiedząc, że ten moduł. module zostanie skompilowany w zestawie o nazwie csman_an_assembly, możemy określić wartość **-moduleassemblyname —** , umożliwiając modułowi. servicedostęp do niepublicznych typów w zestawie, który udzielił znajomemu dostęp do zestawu csman_an_ hamulc.  
   
 ```csharp  
 // moduleassemblyname_2.cs  
@@ -80,7 +80,7 @@ class B {
 ```  
   
 ## <a name="example"></a>Przykład  
- Ten przykładowy kod tworzy csman_an_assembly zestawu, odwołania do zestawu wcześniej skompilowana i .netmodule.  
+ Ten przykładowy kod kompiluje csman_an_assembly zestawu, który odwołuje się do wcześniej skompilowanego zestawu i modułu.  
   
 ```csharp  
 // csman_an_assembly.cs  
@@ -93,9 +93,9 @@ class A {
 }  
 ```  
   
-**An_Internal_Class.test o nazwie**
+**An_Internal_Class. test wywołany**
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opcje kompilatora C#](./index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

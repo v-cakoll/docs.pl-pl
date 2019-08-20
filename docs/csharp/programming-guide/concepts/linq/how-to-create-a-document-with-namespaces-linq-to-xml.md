@@ -2,12 +2,12 @@
 title: 'Instrukcje: Tworzenie dokumentu z przestrzeniami nazwC#() (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 9b9e81a131d4e17ce2d87dd3f511ed66e370d884
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 180dc5138f8f21b3e52e4a8b3cee4748cafdd0f5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710006"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593885"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Instrukcje: Tworzenie dokumentu z przestrzeniami nazwC#() (LINQ to XML)
 W tym temacie pokazano, jak tworzyć dokumenty z przestrzeniami nazw.  
@@ -123,7 +123,7 @@ Console.WriteLine(root);
   
  Takie podejście ma wpływ na wydajność. Za każdym razem, gdy przekazujesz ciąg, który zawiera rozwiniętą [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nazwę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], należy przeanalizować nazwę, znaleźć wykorzystaną przestrzeń nazw i znaleźć nazwę atomową. Ten proces pobiera czas procesora CPU. Jeśli wydajność jest ważna, warto zadeklarować obiekt i używać go <xref:System.Xml.Linq.XNamespace> jawnie.  
   
- Jeśli wydajność jest ważnym problemem, zobacz [pre-rozproszenie of XName Objects (LINQ to XML)C#(),](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md) Aby uzyskać więcej informacji  
+ Jeśli wydajność jest ważnym problemem, zobacz [pre-rozproszenie of XName Objects (LINQ to XML)C#(),](./pre-atomization-of-xname-objects-linq-to-xml.md) Aby uzyskać więcej informacji  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  

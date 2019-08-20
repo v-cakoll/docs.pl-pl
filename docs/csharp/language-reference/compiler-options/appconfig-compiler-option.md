@@ -1,5 +1,5 @@
 ---
-title: -appconfig (opcje kompilatora C#)
+title: -AppConfig (C# opcje kompilatora)
 ms.date: 07/20/2015
 f1_keywords:
 - /appconfig
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-ms.openlocfilehash: 102ed3977d56ace0dab63b1f066cc10a6fc5dfbf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd21231ea244de51612e62febd80af74c6adc87e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663066"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69603086"
 ---
-# <a name="-appconfig-c-compiler-options"></a>-appconfig (opcje kompilatora C#)
-**- Appconfig** — opcja kompilatora umożliwia określanie lokalizacji zestawu pliku konfiguracji aplikacji (app.config) do środowisko uruchomieniowe języka wspólnego (CLR) w czasie powiązania zestawu aplikacji C#.  
+# <a name="-appconfig-c-compiler-options"></a>-AppConfig (C# opcje kompilatora)
+Opcja kompilatora **-AppConfig** umożliwia C# aplikacji określenie lokalizacji pliku konfiguracji aplikacji (App. config) zestawu w środowisku uruchomieniowym języka wspólnego (CLR) w czasie powiązania zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,22 +26,22 @@ ms.locfileid: "61663066"
   
 ## <a name="arguments"></a>Argumenty  
  `file`  
- Wymagana. Plik konfiguracyjny aplikacji zawierający ustawienia powiązania zestawu.  
+ Wymagana. Plik konfiguracji aplikacji, który zawiera ustawienia powiązania zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
- Jednym z zastosowań **- appconfig** jest zaawansowane scenariusze, w których zestaw musi odwoływać się do wersji programu .NET Framework i .NET Framework dla Silverlight wersję szczególnym odniesieniem zespołu, w tym samym czasie. Na przykład projektant XAML, napisany w Windows Presentation Foundation (WPF) może być można odwoływać się do obu pulpicie WPF dla interfejsu użytkownika projektanta i podzbiór WPF, który jest dołączony do programu Silverlight. Tego samego zestawu projektanta ma dostęp do obu zestawów. Domyślnie oddzielne odwołania spowodują błąd kompilatora, ponieważ powiązanie zestawu widzi dwa zestawy jako równoważne.  
+ Jednym z zastosowań **-AppConfig** jest zaawansowane scenariusze, w których zestaw musi odwoływać się zarówno do wersji .NET Framework, jak i .NET Framework dla wersji Silverlight określonego zestawu odwołania w tym samym czasie. Na przykład Projektant XAML zapisany w Windows Presentation Foundation (WPF) może potrzebować odwoływać się zarówno do pulpitu WPF, interfejsu użytkownika projektanta, jak i podzbioru WPF, który jest dołączony do Silverlight. Ten sam zestaw projektanta ma dostęp do obu zestawów. Domyślnie oddzielne odwołania powodują wystąpienie błędu kompilatora, ponieważ powiązanie zestawu widzi dwa zestawy jako równoważne.  
   
- **- Appconfig** — opcja kompilatora umożliwia określenie lokalizacji pliku app.config, który wyłącza domyślne zachowanie za pomocą `<supportPortability>` tag, jak pokazano w poniższym przykładzie.  
+ Opcja kompilatora **-AppConfig** umożliwia określenie lokalizacji pliku App. config, który wyłącza zachowanie domyślne przy użyciu `<supportPortability>` znacznika, jak pokazano w poniższym przykładzie.  
   
  `<supportPortability PKT="7cec85d7bea7798e" enable="false"/>`  
   
- Kompilator przekazuje lokalizację pliku do logiki związanej z zestawem środowiska CLR.  
+ Kompilator przekazuje lokalizację pliku do logiki powiązania zestawu środowiska CLR.  
   
 > [!NOTE]
->  Jeśli używasz aparatu Microsoft Build Engine (MSBuild) do budowania aplikacji, możesz ustawić **- appconfig** — opcja kompilatora, dodając tag właściwości do pliku csproj. Aby użyć pliku app.config, który jest już ustawiony w projekcie, należy dodać tag właściwości `<UseAppConfigForCompiler>` do pliku csproj pliku i ustawić jej wartość na `true`. Aby określić plik app.config różnych, Dodaj tag właściwość `<AppConfigForCompiler>` i ustawić jej wartość na lokalizację pliku.  
+>  Jeśli używasz Microsoft Build Engine (MSBuild) do kompilowania aplikacji, możesz ustawić opcję kompilatora **-AppConfig** przez dodanie znacznika właściwości do pliku. csproj. Aby użyć pliku App. config, który jest już ustawiony w projekcie, Dodaj tag `<UseAppConfigForCompiler>` właściwości do pliku. csproj i ustaw jego wartość na. `true` Aby określić inny plik App. config, Dodaj tag `<AppConfigForCompiler>` właściwości i ustaw jego wartość na lokalizację pliku.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia plik app.config, który umożliwia aplikacjom odwołanie się do wdrożenia programu .NET Framework i .NET Framework do wdrożenia dodatku Silverlight dowolnego zestawu .NET Framework, która znajduje się w obu implementacjach. **- Appconfig** — opcja kompilatora Określa lokalizację tego pliku app.config.  
+ W poniższym przykładzie przedstawiono plik App. config, który umożliwia aplikacjom odwołującą się do implementacji .NET Framework i .NET Framework dla implementacji Silverlight dowolnego zestawu .NET Framework, który istnieje w obu implementacjach. Opcja kompilatora **-AppConfig** określa lokalizację pliku App. config.  
   
 ```xml  
 <configuration>  
@@ -56,5 +56,5 @@ ms.locfileid: "61663066"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [\<supportPortability> Element](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
-- [Opcje kompilatora C# w porządku alfabetycznym](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+- [\<Tag supportportability, element >](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
+- [Opcje kompilatora C# w porządku alfabetycznym](./listed-alphabetically.md)

@@ -1,39 +1,39 @@
 ---
-title: Indeksatory w interfejsach - C# przewodnik programowania
+title: Indeksatory w interfejsach C# — Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: f277758a10b045a6365adfe931ce95d64eb8e445
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cea8d157e89597ddf4633cf7f7d3df7044db9ec7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608575"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589442"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Indeksatory w interfejsach (Przewodnik programowania w języku C#)
-Można zadeklarować indeksatorów w [interfejsu](../../../csharp/language-reference/keywords/interface.md). Metody dostępu interfejsu indeksatorów różnią się od metod dostępu [klasy](../../../csharp/language-reference/keywords/class.md) indeksatorów w następujący sposób:  
+Indeksatory mogą być deklarowane w [interfejsie](../../language-reference/keywords/interface.md). Metody dostępu indeksatorów interfejsów różnią się od metod dostępu indeksatorów [klas](../../language-reference/keywords/class.md) w następujący sposób:  
   
-- Metody dostępu interfejsu należy używać modyfikatorów.  
+- Metody dostępu interfejsów nie używają modyfikatorów.  
   
-- Metody dostępu interfejsu nie ma treści.  
+- Metoda dostępu do interfejsu nie ma treści.  
   
- W związku z tym metody dostępu ma na celu wskazać indeksatora odczytu i zapisu, tylko do odczytu lub tylko do zapisu.  
+ W tym celu metoda dostępu wskazuje, czy indeksator jest tylko do odczytu i zapisu, tylko do odczytu, czy tylko do zapisu.  
   
- Oto przykład metody dostępu interfejsu indeksatora:  
+ Oto przykład metody dostępu indeksatora interfejsu:  
   
  [!code-csharp[csProgGuideIndexers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#3)]  
   
- Podpis indeksatora musi się różnić od podpisy innymi indeksatorami zadeklarowanych w tym samym interfejsie.  
+ Podpis indeksatora musi różnić się od sygnatur wszystkich innych indeksatorów zadeklarowanych w tym samym interfejsie.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak zaimplementować interfejs indeksatorów.  
+ Poniższy przykład pokazuje, jak zaimplementować indeksatory interfejsów.  
   
  [!code-csharp[csProgGuideIndexers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#4)]  
   
- W poprzednim przykładzie można użyć jawną implementacją członków przy użyciu w pełni kwalifikowana nazwa składowej interfejsu. Na przykład:  
+ W powyższym przykładzie można użyć jawnej implementacji elementu członkowskiego interfejsu przy użyciu w pełni kwalifikowanej nazwy elementu członkowskiego interfejsu. Na przykład:  
   
 ```  
 string ISomeInterface.this[int index]   
@@ -41,7 +41,7 @@ string ISomeInterface.this[int index]
 }   
 ```  
   
- Jednak w pełni kwalifikowana nazwa jest wymagane tylko aby uniknąć niejednoznaczności, implementując klasy jest więcej niż jeden interfejs, za pomocą tego samego podpisu indeksatora. Na przykład jeśli `Employee` klasa implementuje dwa interfejsy `ICitizen` i `IEmployee`, i dotyczą obu interfejsów mają taki sam podpis indeksatora, niezbędne jest jawną implementacją członków. Oznacza to, że następująca deklaracja indeksatora:  
+ Jednak w pełni kwalifikowana nazwa jest wymagana tylko wtedy, gdy klasa implementuje więcej niż jeden interfejs o tej samej sygnaturze indeksatora. Na przykład jeśli `Employee` Klasa implementuje dwa interfejsy `IEmployee`, `ICitizen` a oba interfejsy mają tę samą sygnaturę indeksatora, wymagana jest Jawna implementacja elementu członkowskiego interfejsu. Oznacza to, że następująca deklaracja indeksatora:  
   
 ```  
 string IEmployee.this[int index]   
@@ -49,7 +49,7 @@ string IEmployee.this[int index]
 }   
 ```  
   
- implementuje indeksatora na `IEmployee` interfejsu podczas następującą deklarację:  
+ implementuje indeksator w `IEmployee` interfejsie, podczas gdy następująca deklaracja:  
   
 ```  
 string ICitizen.this[int index]
@@ -57,11 +57,11 @@ string ICitizen.this[int index]
 }   
 ```  
   
- implementuje indeksatora na `ICitizen` interfejsu.  
+ implementuje indeksator w `ICitizen` interfejsie.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Indeksatory](../../../csharp/programming-guide/indexers/index.md)
-- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [Interfejsy](../../../csharp/programming-guide/interfaces/index.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Indeksatory](./index.md)
+- [Właściwości](../classes-and-structs/properties.md)
+- [Interfejsy](../interfaces/index.md)

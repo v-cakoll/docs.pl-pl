@@ -1,27 +1,27 @@
 ---
-title: 'Instrukcje: Wyszukiwanie elementów powiązanych (XPath-LINQ to XML) (C#)'
+title: 'Instrukcje: Znajdź elementy pokrewne (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: a4260012899527662638a037fa4616a7a0d6f875
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 63ecdc2bf3c3415c7355b1ac06c710d21accefec
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486741"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593394"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Instrukcje: Wyszukiwanie elementów powiązanych (XPath-LINQ to XML) (C#)
-W tym temacie pokazano, jak można pobrać elementu, wybierając na atrybut, który odwołuje się do wartości innego elementu.  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Instrukcje: Znajdź elementy pokrewne (XPath-LINQ to XML) (C#)
+W tym temacie pokazano, jak uzyskać element, wybierając atrybut, który jest określany przez wartość innego elementu.  
   
- Wyrażenie XPath jest:  
+ Wyrażenie XPath:  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wyszukuje 12 `Order` elementu, a następnie znalezienie klienta dla tej kolejności.  
+ Ten przykład znajduje dwunasty `Order` element, a następnie wyszukuje klienta dla tego zamówienia.  
   
- Należy pamiętać, że indeksowanie w liście .NET "zero" na podstawie. Indeksowanie w kolekcji węzłów w predykatu języka XPath jest "jeden" na podstawie. W tym przykładzie odzwierciedla tę różnicę.  
+ Należy zauważyć, że indeksowanie do listy w .NET jest oparte na "zero". Indeksowanie do kolekcji węzłów w predykacie XPath jest oparte na "jednej". Ten przykład odzwierciedla tę różnicę.  
   
- W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  

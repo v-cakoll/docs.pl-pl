@@ -1,5 +1,5 @@
 ---
-title: <c> - C# Przewodnik programowania
+title: <c>— C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - c C# XML tag
 - <c> C# XML tag
 ms.assetid: aad5b16e-a29e-445e-bd0d-eea0b138d7b2
-ms.openlocfilehash: f97e8a8f07b13e509516d13cb5181109f2340e0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c881b9ec577fb04381f9e10c7df8f9d0da44cd66
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708148"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588185"
 ---
-# <a name="c-c-programming-guide"></a>\<c > (C# Programming Guide)
+# <a name="c-c-programming-guide"></a>\<c > (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -27,17 +27,17 @@ ms.locfileid: "61708148"
   
 ## <a name="parameters"></a>Parametry  
  `text`  
- Tekst, który chcesz wskazać jako kod.  
+ Tekst, który ma być wskazywany jako kod.  
   
 ## <a name="remarks"></a>Uwagi  
- \<c > tag zapewnia sposób, aby wskazać, że tekst w opis powinien być oznaczony jako kod. Użyj [ \<kodu >](../../../csharp/programming-guide/xmldoc/code.md) aby wskazać wiele wierszy, jako kod.  
+ Tag \<c > umożliwia wskazanie, że tekst w opisie powinien być oznaczony jako kod. [ Użyj\<> kodu](./code.md) , aby wskazać wiele wierszy jako kod.  
   
- Kompiluj przy użyciu [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) do Przetwarzaj komentarze dokumentacji do pliku.  
+ Kompiluj z [/doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideDocComments#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#2)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Zalecane tagi przeznaczone do komentarzy dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

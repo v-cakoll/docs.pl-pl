@@ -1,5 +1,5 @@
 ---
-title: -out (opcje kompilatora C#)
+title: -out (C# opcje kompilatora)
 ms.date: 07/20/2015
 f1_keywords:
 - /out
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 0cb0b78396731a9b8e127430cd06a9e71812d4fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 51c66d6bc2064d8051415de2ac083da478355a99
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593037"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602596"
 ---
-# <a name="-out-c-compiler-options"></a>-out (opcje kompilatora C#)
-**-Out** opcja określa nazwę pliku wyjściowego.  
+# <a name="-out-c-compiler-options"></a>-out (C# opcje kompilatora)
+Opcja **-out** określa nazwę pliku wyjściowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,39 +26,39 @@ ms.locfileid: "64593037"
   
 ## <a name="arguments"></a>Argumenty  
  `filename`  
- Nazwa pliku wyjściowego, utworzony przez kompilator.  
+ Nazwa pliku wyjściowego utworzonego przez kompilator.  
   
 ## <a name="remarks"></a>Uwagi  
- W wierszu polecenia jest możliwość określenia wielu plików wyjściowych dla kompilacji. Kompilator spodziewa się znaleźć pliki kodu co najmniej jeden źródłowy zgodnie z **-out** opcji. Następnie wszystkich plikach kodu źródłowego zostanie skompilowany w określony przez to plik wyjściowy **-out** opcji.  
+ W wierszu polecenia można określić wiele plików wyjściowych dla kompilacji. Kompilator oczekuje na znalezienie co najmniej jednego pliku kodu źródłowego po opcji **-out** . Następnie wszystkie pliki kodu źródłowego zostaną skompilowane do pliku wyjściowego określonego przez tę opcję.  
   
- Podaj pełną nazwę i rozszerzenie pliku, który chcesz utworzyć.  
+ Określ pełną nazwę i rozszerzenie pliku, który chcesz utworzyć.  
   
  Jeśli nie określisz nazwy pliku wyjściowego:  
   
-- .Exe zajmie się jego nazwy w pliku kodu źródłowego, który zawiera **Main** metody.  
+- Plik. exe zajmie swoją nazwę z pliku kodu źródłowego, który zawiera metodę **Main** .  
   
-- Plik .dll lub moduł .netmodule potrwa nazwy z pierwszego pliku kodu źródłowego.  
+- Plik. dll lub. webmodule przyjmuje swoją nazwę z pierwszego pliku kodu źródłowego.  
   
- Plik kodu źródłowego, używana do kompilowania jednego pliku danych wyjściowych nie można użyć w tej samej kompilacji dla kompilacji inny plik danych wyjściowych.  
+ Plik kodu źródłowego używany do kompilowania jednego pliku wyjściowego nie może być używany w tej samej kompilacji dla kompilacji innego pliku wyjściowego.  
   
- Podczas produkowania wiele plików wyjściowych w kompilacji wiersza polecenia, pamiętać, że tylko jeden z plików wyjściowych może być zestaw, a określony tylko pierwszy plik wyjściowy (jawnie lub niejawnie za pomocą **-out**) może być zestaw .  
+ W przypadku tworzenia wielu plików wyjściowych w kompilacji wiersza polecenia należy pamiętać, że tylko jeden z plików wyjściowych może być zestawem i że tylko pierwszy plik wyjściowy określony (niejawnie lub jawnie w **trybie out**) może być zestawem.  
   
- Wszystkie moduły, utworzony jako część kompilacji stają się pliki skojarzone z dowolnego złożenia, również jest generowany w kompilacji. Użyj [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) Aby wyświetlić manifest zestawu, aby wyświetlić skojarzone pliki.  
+ Wszystkie moduły tworzone w ramach kompilacji stają się plikami skojarzonymi z dowolnym zestawem również w kompilacji. Użyj [Ildasm. exe](../../../framework/tools/ildasm-exe-il-disassembler.md) , aby wyświetlić manifest zestawu, aby wyświetlić skojarzone pliki.  
   
- Out — opcja kompilatora jest wymagana dla pliku exe jako obiekt docelowy zestaw przyjazny. Aby uzyskać więcej informacji, zobacz [przyjaznych zestawów](../../../standard/assembly/friend-assemblies.md).  
+ Opcja kompilatora-out jest wymagana, aby plik exe był elementem docelowym zestawu zaprzyjaźnionego. Aby uzyskać więcej informacji, zobacz [zaprzyjaźnione zestawy](../../../standard/assembly/friend-assemblies.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1. Otwórz projekt **właściwości** strony.  
+1. Otwórz stronę **Właściwości** projektu.  
   
-2. Kliknij przycisk **aplikacji** stronę właściwości.  
+2. Kliknij stronę właściwości **aplikacji** .  
   
-3. Modyfikowanie **nazwy zestawu** właściwości.  
+3. Zmodyfikuj właściwość **nazwy zestawu** .  
   
-     Aby programowo ustawić tę opcję kompilatora: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> jest tylko do odczytu właściwość, która jest określana przez połączenie typu projektu (exe, biblioteki i tak dalej) i nazwę zestawu. Modyfikowanie jedną lub obie te właściwości będą należy ustawić nazwę pliku wyjściowego.  
+     Aby programowo ustawić tę opcję kompilatora: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> jest to właściwość tylko do odczytu, która jest określana przez kombinację typu projektu (exe, biblioteka i tak dalej) i nazwę zestawu. Modyfikacja jednej lub obu tych właściwości będzie konieczna do ustawienia nazwy pliku wyjściowego.  
   
 ## <a name="example"></a>Przykład  
- Skompilować `t.cs` i utworzyć plik wyjściowy `t.exe`, a także kompilacji `t2.cs` i utworzyć plik wyjściowy modułu `mymodule.netmodule`:  
+ Kompiluj `t.cs` i twórz plik `t.exe`wyjściowy, a także Kompiluj `t2.cs` i twórz plik `mymodule.netmodule`wyjściowy modułu:  
   
 ```console  
 csc t.cs -out:mymodule.netmodule -target:module t2.cs  
@@ -66,6 +66,6 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opcje kompilatora C#](./index.md)
 - [Przyjazne zestawy](../../../standard/assembly/friend-assemblies.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

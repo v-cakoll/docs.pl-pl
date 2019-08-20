@@ -1,54 +1,54 @@
 ---
-title: New — modyfikator - C# odwołania
+title: nowy modyfikator- C# odwołanie
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 675369936b9f90620b03365104255a622855fa9f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: f62255be9c74a221836b23058bd48a835f38f629
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401783"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608630"
 ---
-# <a name="new-modifier-c-reference"></a>New — modyfikator (odwołanie w C#)
+# <a name="new-modifier-c-reference"></a>New — modyfikatorC# (odwołanie)
 
-Stosowania jako modyfikator deklaracji, `new` — słowo kluczowe jawnie ukrywa składową, która jest dziedziczona z klasy bazowej. Po ukryciu dziedziczonego członka, pochodna wersja członka zastępuje wersję klasy podstawowej. Chociaż można ukryć elementy członkowskie bez korzystania z `new` modyfikator, zostanie wyświetlone ostrzeżenie kompilatora. Jeśli używasz `new` Aby jawnie ukryć członka, powoduje to pominięcie ostrzeżenia.
+Gdy jest używany jako modyfikator deklaracji, `new` słowo kluczowe jawnie ukrywa element członkowski, który jest Dziedziczony z klasy bazowej. W przypadku ukrycia dziedziczonego elementu członkowskiego wersja pochodna elementu członkowskiego zastępuje wersję klasy bazowej. Chociaż można ukryć składowe bez użycia `new` modyfikatora, zostanie wyświetlone ostrzeżenie kompilatora. Jeśli używasz `new` , aby jawnie ukryć element członkowski, pomija to ostrzeżenie.
 
-Można również użyć `new` słowa kluczowego [utworzenia wystąpienia typu](../operators/new-operator.md) lub jako [ograniczenie typu ogólnego](../keywords/new-constraint.md).
+Możesz również użyć słowa kluczowego, `new` aby [utworzyć wystąpienie typu](../operators/new-operator.md) lub jako [ograniczenie typu ogólnego](./new-constraint.md).
 
-Do ukrywania odziedziczonej składowej, Zadeklaruj go w klasie pochodnej przy użyciu tej samej nazwy elementu członkowskiego i zmodyfikuj go za pomocą `new` — słowo kluczowe. Na przykład:
+Aby ukryć dziedziczonego elementu członkowskiego, zadeklaruj go w klasie pochodnej przy użyciu tej samej nazwy elementu członkowskiego i zmodyfikuj `new` go za pomocą słowa kluczowego. Na przykład:
 
 [!code-csharp[csrefKeywordsOperator#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#8)]
 
-W tym przykładzie `BaseC.Invoke` jest ukryta przez `DerivedC.Invoke`. Pole `x` pozostanie niezmienione, ponieważ nie jest ukryty przez podobną nazwę.
+W tym przykładzie `BaseC.Invoke` jest ukryta przez `DerivedC.Invoke`. Nie ma `x` to wpływ na pole, ponieważ nie jest ono ukryte przez podobną nazwę.
 
-Ukrywanie nazw poprzez dziedziczenie ma jedną z następujących form:
+Nazwa ukrywając przy użyciu dziedziczenia ma jedną z następujących form:
 
-- Ogólnie rzecz biorąc stała, pole, właściwość lub typ, który został wprowadzony w klasie lub strukturze ukrywa wszystkie składowe klasy podstawowej, które współdzielą jego nazwę. Istnieją przypadki specjalne. Na przykład, jeśli zadeklarujesz nowe pole o nazwie `N` typu, którego nie można wywołać i typ podstawowy deklaruje `N` jako metodę, nowe pole nie powoduje ukrycia podstawowej deklaracji w składni wywołania. Aby uzyskać więcej informacji, zobacz [wyszukanie członka](~/_csharplang/spec/expressions.md#member-lookup) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+- Ogólnie rzecz biorąc, stała, pole, właściwość lub typ, który jest wprowadzany w klasie lub strukturze ukrywa wszystkie elementy członkowskie klasy bazowej, które współdzielą swoją nazwę. Istnieją specjalne przypadki. Na przykład jeśli zadeklarujesz nowe pole o nazwie `N` , aby miało typ, który nie jest wywoływać, a typ podstawowy deklaruje `N` jako metodę, nowe pole nie ukrywa deklaracji bazowej w składni wywołania. Aby uzyskać więcej informacji, zobacz sekcję [odnośnik elementu](~/_csharplang/spec/expressions.md#member-lookup) Członkowskiego [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
-- Metoda wprowadzona w klasie lub strukturze ukrywa właściwości, pola i typy, które współużytkują tę nazwę w klasie bazowej. Ukrywa wszystkie metody klasy podstawowej, które mają taki sam podpis.
+- Metoda wprowadzona w klasie lub strukturze ukrywa właściwości, pola i typy, które współużytkują tę nazwę w klasie bazowej. Ukrywa także wszystkie metody klasy bazowej, które mają taki sam podpis.
 
-- Indeksator wprowadzony w klasie lub strukturze ukrywa wszystkie indeksatory klas podstawowych, które mają taki sam podpis.
+- Indeksator wprowadzony w klasie lub strukturze ukrywa wszystkie indeksatory klasy bazowej, które mają taki sam podpis.
 
-Jest to błąd, można użyć zarówno `new` i [zastąpienia](override.md) na tym samym użytkownikiem, ponieważ modyfikatorów mają znaczenie wzajemnie się wykluczają. `new` Modyfikator tworzy nowy element członkowski o takiej samej nazwie i powoduje, że oryginalny element członkowski będzie ukryty. `override` Modyfikator rozszerza implementację dla odziedziczonego członka.
+Jest to błąd do użycia `new` i przesłonięcia dla tego samego elementu członkowskiego, ponieważ dwa Modyfikatory mają wzajemnie wykluczające się znaczenie. [](override.md) `new` Modyfikator tworzy nowy element członkowski o tej samej nazwie i powoduje, że oryginalny element członkowski staje się ukryty. `override` Modyfikator rozszerza implementację dziedziczonego elementu członkowskiego.
 
-Za pomocą `new` modyfikatora w deklaracji, która nie ukrywa dziedziczonej składowej generuje ostrzeżenie.
+`new` Użycie modyfikatora w deklaracji, która nie ukrywa dziedziczonego elementu członkowskiego, generuje ostrzeżenie.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie klasę bazową `BaseC`i klasę pochodną `DerivedC`, użyj tej samej nazwy pola `x`, która ukrywa wartość odziedziczonego pola. W przykładzie pokazano użycie `new` modyfikator. Ilustruje też sposób dostępu do ukrytych członków klasy podstawowej za pomocą ich w pełni kwalifikowanych nazw.
+W tym przykładzie Klasa bazowa, `BaseC`, i `DerivedC`Klasa pochodna, używają tej samej nazwy `x`pola, która ukrywa wartość dziedziczonego pola. W przykładzie pokazano użycie `new` modyfikatora. Pokazano również, jak uzyskać dostęp do ukrytych elementów członkowskich klasy podstawowej przy użyciu ich w pełni kwalifikowanych nazw.
 
 [!code-csharp[csrefKeywordsOperator#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#9)]
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie klasa zagnieżdżona ukrywa klasę, która ma taką samą nazwę w klasie bazowej. W przykładzie pokazano sposób użycia `new` modyfikator, aby wyeliminować komunikat ostrzegawczy i instrukcje dostęp do członków ukrytej klasy za pomocą ich w pełni kwalifikowanych nazw.
+W tym przykładzie Klasa zagnieżdżona ukrywa klasę o tej samej nazwie w klasie bazowej. W przykładzie pokazano, `new` jak za pomocą modyfikatora wyeliminować komunikat ostrzegawczy i jak uzyskać dostęp do ukrytych elementów członkowskich klasy przy użyciu ich w pełni kwalifikowanych nazw.
 
 [!code-csharp[csrefKeywordsOperator#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#10)]
 
-Jeśli usuniesz `new` modyfikator, program się skompiluje i uruchamiania, ale otrzymasz następujące ostrzeżenie:
+Jeśli usuniesz `new` modyfikator, program będzie nadal kompilować i uruchamiać, ale otrzymasz następujące ostrzeżenie:
 
 ```text
 The keyword new is required on 'MyDerivedC.x' because it hides inherited member 'MyBaseC.x'.
@@ -56,7 +56,7 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [nowy modyfikator](~/_csharplang/spec/classes.md#the-new-modifier) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz sekcję [New modyfikator](~/_csharplang/spec/classes.md#the-new-modifier) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: -opcji refout (opcje kompilatora C#)
+title: -opcji refout (C# opcje kompilatora)
 ms.date: 08/08/2017
 f1_keywords:
 - /refout
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
-ms.openlocfilehash: 34f7b62c0d9a14c52dde0ddd4ac0d5c29a3b5b75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97cbf540527d0449387b71bb1d97df95b6a4aba4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662468"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602503"
 ---
-# <a name="-refout-c-compiler-options"></a>-opcji refout (opcje kompilatora C#)
+# <a name="-refout-c-compiler-options"></a>-opcji refout (C# opcje kompilatora)
 
-**- Opcji refout** opcja określa ścieżkę pliku, gdzie zestaw odwołania powinny być danych wyjściowych. Przekłada się to `metadataPeStream` w interfejsie API emisji. Ta opcja odnosi się do [ProduceReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) właściwość MSBuild projektu.
+Opcja **-opcji refout** określa ścieżkę pliku, w którym zestaw odniesienia powinien być wyjściowy. Powoduje to przetłumaczenie na `metadataPeStream` w interfejsie API emisji. Ta opcja odnosi się do właściwości Project [ProduceReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) programu MSBuild.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,25 +26,25 @@ ms.locfileid: "61662468"
 
 ## <a name="arguments"></a>Argumenty
 
- `filepath` Ścieżka pliku dla zestawu odwołania. Zazwyczaj powinien odpowiadać okresowi istnienia podstawowego zestawu. Zalecane Konwencji (używane przez program MSBuild) jest umieszczenie zestawu odwołania w "ref /" podfolder względem podstawowego zestawu.
+ `filepath`Ścieżka do zestawu referencyjnego. Zwykle powinna być zgodna z zestawem podstawowym. Zalecaną konwencją (używaną przez program MSBuild) jest umieszczenie zestawu odwołania w podfolderze "ref/" względem podstawowego zestawu.
 
 ## <a name="remarks"></a>Uwagi
 
-Zestawy zawierające tylko metadane mieć ich treść metody zastąpione za pomocą jednego `throw null` treści, ale dołączone wszystkie elementy członkowskie z wyjątkiem typów anonimowych. Przyczyna przy użyciu `throw null` treści (w przeciwieństwie do treści) jest tak, aby PEVerify można uruchomić i przekazać (dlatego sprawdzanie poprawności kompletność metadanych).
+Zestawy zawierające tylko metadane są zastępowane przez jedną `throw null` treść, ale obejmują wszystkie elementy członkowskie z wyjątkiem typów anonimowych. Powodem używania `throw null` treści (w przeciwieństwie do braku treści) jest to, że PEVerify może działać i kończyć się powodzeniem (w związku z tym sprawdzanie kompletności metadanych).
 
-Zestawy referencyjne zawierają poziomie zestawu `ReferenceAssembly` atrybutu. Ten atrybut może być określony w źródle (następnie kompilator nie będzie konieczne jej syntetyzowania). Z powodu tego atrybutu środowisk wykonawczych będzie odmawiał załadowania zestawy referencyjne do wykonania (ale nadal może być załadowany w trybie tylko do odbicia). Narzędzia, które odzwierciedlają na potrzeby zestawów, upewnij się, że są one ładowane odwołań do zestawów jako tylko do odbicia, w przeciwnym razie otrzymają błąd typeload ze środowiska wykonawczego.
+Zestawy referencyjne zawierają atrybut na poziomie `ReferenceAssembly` zestawu. Ten atrybut może być określony w źródle (a następnie kompilator nie będzie musiał przeprowadzić jego syntezy). Ze względu na ten atrybut środowiska uruchomieniowe będą odrzucać ładowanie zestawów odwołań do wykonania (ale nadal mogą być ładowane w trybie tylko odbicie). Narzędzia odzwierciedlające zestawy muszą mieć pewność, że ładują zestawy referencyjne jako tylko odbicie. w przeciwnym razie w środowisku uruchomieniowym wystąpi błąd typeload.
 
-Dodatkowo zestawy odwołań metadanych (prywatne składowe) należy usunąć z zestawów zawierających tylko metadane:
+Zestawy referencyjne usuwają metadane (prywatne składowe) z zestawów samych metadanych:
 
-- Zestaw odwołania ma tylko odwołania do to, czego potrzebuje na powierzchni interfejsu API. Rzeczywistych zestaw może mieć dodatkowe informacje związane z określonych implementacji. Na przykład odwołanie do zestawu dla `class C { private void M() { dynamic d = 1; ... } }` nie odwołuje się do wszystkich typów wymaganych do `dynamic`.
-- Prywatne funkcji elementów członkowskich (metody, właściwości i zdarzenia) są usuwane w przypadku, gdy ich usunięcia ciemniejsza nie ma wpływu na kompilację. W przypadku nie <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutów, zrób to samo dla wewnętrznej funkcji elementów członkowskich.
-- Jednak wszystkie typy (takie jak typy prywatny ani zagnieżdżony) są przechowywane w zestawach referencyjnych. Wszystkie atrybuty są utrzymywane (tymi nawet wewnętrznego).
-- Wszystkie metody wirtualne są zachowywane. Jawne implementacje interfejsu są zachowywane. Jawnie implementowane właściwości i zdarzenia są zachowywane, zgodnie z ich metod dostępu wirtualne (i w związku z tym są przechowywane).
-- Wszystkie pola struktury są zachowywane. (To jest kandydatem do wpisu — C# — 7.1 refinement)
+- Zestaw odniesienia zawiera odwołania do potrzebnych elementów interfejsu API. Rzeczywisty zestaw może zawierać dodatkowe odwołania dotyczące konkretnych implementacji. Na przykład zestaw odwołania dla `class C { private void M() { dynamic d = 1; ... } }` nie odwołuje się do żadnych typów wymaganych przez. `dynamic`
+- Prywatne funkcje — elementy członkowskie (metody, właściwości i zdarzenia) są usuwane w przypadkach, gdy ich usunięcie nie ma zauważalnego wpływu na kompilację. Jeśli nie ma żadnych <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutów, wykonaj te same czynności w przypadku wewnętrznych funkcji.
+- Ale wszystkie typy (w tym typy prywatne lub zagnieżdżone) są przechowywane w zestawach referencyjnych. Wszystkie atrybuty są zachowywane (nawet wewnętrznie).
+- Wszystkie metody wirtualne są zachowywane. Jawne implementacje interfejsu są zachowywane. Jawne zaimplementowane właściwości i zdarzenia są przechowywane, ponieważ ich metody dostępu są wirtualne (i dlatego są utrzymywane).
+- Wszystkie pola struktury są przechowywane. (Jest to kandydat dla uściślenia poC#--7,1)
 
-`-refout` i [ `-refonly` ](refonly-compiler-option.md) opcje wykluczają się wzajemnie.
+Opcje `-refout` [i`-refonly`](refonly-compiler-option.md) wzajemnie się wykluczają.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opcje kompilatora C#](./index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

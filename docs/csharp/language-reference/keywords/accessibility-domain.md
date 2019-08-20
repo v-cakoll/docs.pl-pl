@@ -1,24 +1,24 @@
 ---
-title: Domena dostępności - C# odwołania
+title: C# Informacje o domenie dostępności
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-ms.openlocfilehash: 529d256a553c4000c77bcd5096db1a4d943874ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 814aa8d3965674abe8bdb60b738cbeff93701ceb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662182"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606139"
 ---
 # <a name="accessibility-domain-c-reference"></a>Domena dostępności (odwołanie w C#)
-Domena dostępności członka Określa, w sekcjach programów, które mogą być przywoływane członka. Jeśli element członkowski jest zagnieżdżony w ramach innego typu, jego domeny dostępności jest określana przez oba [poziom dostępności](../../../csharp/language-reference/keywords/accessibility-levels.md) członka i domena dostępności typu zawierającego.  
+Domena dostępności elementu członkowskiego określa, w którym sekcji programu można odwoływać się do elementu członkowskiego. Jeśli element członkowski jest zagnieżdżony w innym typie, jego domena dostępności jest określana przez zarówno [poziom dostępności](./accessibility-levels.md) elementu członkowskiego, jak i domenę dostępności typu natychmiastowego.  
   
- Domena dostępności typu najwyższego poziomu jest co najmniej i tekstu programu project, która jest zadeklarowana w. Oznacza to, że domeny obejmuje wszystkie pliki źródłowe tego projektu. Domena dostępności typu zagnieżdżonego jest co najmniej tekstem typu, w którym jest zdeklarowana. Oznacza to, że domena jest treści typu, który obejmuje wszystkie typy zagnieżdżone. Domena dostępności typu zagnieżdżonego nigdy nie przekracza typu zawierającego. Te pojęcia zostały przedstawione w poniższym przykładzie.  
+ Domena dostępności typu najwyższego poziomu jest co najmniej tekstem programu w projekcie, w którym jest zadeklarowana. Oznacza to, że domena zawiera wszystkie pliki źródłowe tego projektu. Domena dostępności typu zagnieżdżonego jest co najmniej tekstem programu typu, w którym jest zadeklarowana. Oznacza to, że domena jest treścią typu, która obejmuje wszystkie typy zagnieżdżone. Domena dostępności typu zagnieżdżonego nigdy nie przekracza typu zawierającego. Te koncepcje przedstawiono w poniższym przykładzie.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład zawiera typ najwyższego poziomu, `T1`i dwie klasy zagnieżdżonych, `M1` i `M2`. Klasy zawierają pola, które mają różne możliwości dostępu do zadeklarowane. W `Main` metody komentarz poniżej każdej instrukcji, aby wskazać, domena dostępności każdego elementu członkowskiego. Należy zauważyć, że instrukcje, w których podejmowana jest próba odwołania członkowie niedostępni są ujęte w komentarz. Jeśli chcesz wyświetlić błędy kompilatora spowodowany przez utworzenie odwołań do elementu członkowskiego niedostępny, Usuń komentarze jednego naraz.  
+ Ten przykład zawiera typ najwyższego poziomu, `T1`i dwie `M1` klasy zagnieżdżone i `M2`. Klasy zawierają pola, które mają inne zadeklarowane podano. `Main` W metodzie komentarz jest zgodny z każdą instrukcją, aby wskazać domenę dostępności każdego elementu członkowskiego. Zwróć uwagę, że instrukcje, które próbują odwołać się do niedostępnych elementów członkowskich, są oznaczone jako komentarz. Jeśli chcesz zobaczyć błędy kompilatora spowodowane odwołaniem do niedostępnego elementu członkowskiego, Usuń Komentarze pojedynczo.  
   
 [!code-csharp[csrefKeywordsModifiers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#4)]
   
@@ -27,14 +27,14 @@ Domena dostępności członka Określa, w sekcjach programów, które mogą być
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
-- [Modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [Poziomy ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [Ograniczenia dotyczące używania poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
-- [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [private](../../../csharp/language-reference/keywords/private.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
-- [internal](../../../csharp/language-reference/keywords/internal.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](./index.md)
+- [Modyfikatory dostępu](./access-modifiers.md)
+- [Poziomy ułatwień dostępu](./accessibility-levels.md)
+- [Ograniczenia dotyczące używania poziomów ułatwień dostępu](./restrictions-on-using-accessibility-levels.md)
+- [Modyfikatory dostępu](../../programming-guide/classes-and-structs/access-modifiers.md)
+- [public](./public.md)
+- [private](./private.md)
+- [protected](./protected.md)
+- [internal](./internal.md)

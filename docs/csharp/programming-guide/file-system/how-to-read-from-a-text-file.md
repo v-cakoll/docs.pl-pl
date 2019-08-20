@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Odczyt z pliku tekstowego — C# przewodnik programowania'
+title: 'Instrukcje: Odczytaj z pliku tekstowego — C# Przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 236e730eaae0bc73c715e9b1c2c71d6c870d78e3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c424f7884dd7242152bda1b16943f6489194299f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608534"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589983"
 ---
-# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Instrukcje: Odczyt z pliku tekstowego (C# Programming Guide)
-Ten przykład odczytuje zawartość pliku tekstowego przy użyciu metod statycznych <xref:System.IO.File.ReadAllText%2A> i <xref:System.IO.File.ReadAllLines%2A> z <xref:System.IO.File?displayProperty=nameWithType> klasy.  
+# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Instrukcje: Odczytaj z pliku tekstowego (C# Przewodnik programowania)
+Ten przykład odczytuje zawartość pliku tekstowego przy użyciu metod <xref:System.IO.File.ReadAllText%2A> statycznych i <xref:System.IO.File.ReadAllLines%2A> z <xref:System.IO.File?displayProperty=nameWithType> klasy.  
   
- Aby uzyskać przykład, który używa <xref:System.IO.StreamReader>, zobacz [jak: Odczyt pliku jednego wiersza tekstu w danym momencie](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
+ Przykład użycia <xref:System.IO.StreamReader>programu można znaleźć w temacie [How to: Odczytaj plik tekstowy jeden wiersz jednocześnie](./how-to-read-a-text-file-one-line-at-a-time.md).  
   
 > [!NOTE]
->  Pliki, które są używane w tym przykładzie są tworzone w temacie [jak: Zapis do pliku tekstowego](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).  
+>  Pliki, które są używane w tym przykładzie, są tworzone w temacie [How to: Zapisz w pliku](./how-to-write-to-a-text-file.md)tekstowym.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csFilesandFolders#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#4)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Skopiuj kod i wklej go w aplikacji konsolowej C#.  
+ Skopiuj kod i wklej go do aplikacji C# konsolowej.  
   
- Jeśli nie używasz plików tekstowych z [jak: Zapis do pliku tekstowego](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md), Zastąp argument `ReadAllText` i `ReadAllLines` z odpowiednią ścieżkę i nazwę pliku na komputerze.  
+ Jeśli nie używasz plików tekstowych z [: Zapisz w pliku](./how-to-write-to-a-text-file.md)tekstowym, Zastąp argument do `ReadAllText` i `ReadAllLines` z odpowiednią ścieżką i nazwą pliku na komputerze.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
@@ -39,10 +39,10 @@ Ten przykład odczytuje zawartość pliku tekstowego przy użyciu metod statyczn
 - Plik nie istnieje lub nie istnieje w określonej lokalizacji. Sprawdź ścieżkę i pisownię nazwy pliku.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Nie należy polegać na nazwę pliku, aby określić zawartość pliku. Na przykład plik `myFile.cs` może nie być plik źródłowy C#.  
+ Nie należy polegać na nazwie pliku, aby ustalić zawartość pliku. Na przykład plik `myFile.cs` może nie być plikiem C# źródłowym.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [System plików i rejestr (C# Programming Guide)](../../../csharp/programming-guide/file-system/index.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [System plików i Rejestr (C# Przewodnik programowania)](./index.md)

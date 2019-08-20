@@ -1,38 +1,38 @@
 ---
-title: Wyjątki — generowane przez kompilator C# przewodnik programowania
+title: Wyjątki generowane przez kompilator — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-ms.openlocfilehash: 28e6ba0c20948aa769a1517c664db80b5beb6b68
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: d0e0a304c8f7d77e7ba5c89b643fc5658c458558
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398029"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590369"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>Wyjątki generowane przez kompilator (Przewodnik programowania w języku C#)
-Niektóre wyjątki są zgłaszane w automatycznie przez .NET Framework środowisko uruchomieniowe języka wspólnego (CLR), gdy podstawowe operacje kończą się niepowodzeniem. W poniższej tabeli wymieniono te wyjątki i ich warunków błędów.  
+Niektóre wyjątki są generowane automatycznie przez środowisko uruchomieniowe języka wspólnego (CLR) .NET Framework, gdy podstawowe operacje kończą się niepowodzeniem. Te wyjątki i ich warunki błędu są wymienione w poniższej tabeli.  
   
 |Wyjątek|Opis|  
 |---------------|-----------------|  
-|<xref:System.ArithmeticException>|Klasa bazowa dla wyjątków, które występują podczas operacje arytmetyczne, takie jak <xref:System.DivideByZeroException> i <xref:System.OverflowException>.|  
-|<xref:System.ArrayTypeMismatchException>|Element zgłaszany, gdy tablica nie można zapisać danego elementu, ponieważ rzeczywisty typ elementu jest niezgodny z rzeczywisty typ tablicy.|  
-|<xref:System.DivideByZeroException>|Element zgłaszany, gdy podejmowana jest próba dzielenia wartości całkowitej przez zero.|  
-|<xref:System.IndexOutOfRangeException>|Element zgłaszany, gdy podejmowana jest próba indeksu tablicy, gdy indeks jest mniejsza od zera lub poza granice tablicy.|  
-|<xref:System.InvalidCastException>|Element zgłaszany, gdy konwersja jawna z typu podstawowego interfejsu lub typu pochodnego nie powiedzie się w czasie wykonywania.|  
-|<xref:System.NullReferenceException>|Zgłaszany, gdy użytkownik podejmie próbę odwołują się do obiektu, którego wartością jest [null](../../../csharp/language-reference/keywords/null.md).|  
-|<xref:System.OutOfMemoryException>|Zgłaszany, gdy próba przydzielenia pamięci za pomocą [nowe](../../../csharp/language-reference/operators/new-operator.md) operator nie powiedzie się. Oznacza to, dostępna dla środowiska uruchomieniowego języka wspólnego pamięci została wyczerpana.|  
-|<xref:System.OverflowException>|Zgłaszany, gdy operacja arytmetyczna w `checked` przepełnienia kontekstu.|  
-|<xref:System.StackOverflowException>|Zgłaszany, gdy stos wykonywania wyczerpaniu przez zbyt wiele wywołań metod oczekujące; Wskazuje zazwyczaj bardzo szczegółowe lub nieskończoną rekursję.|  
-|<xref:System.TypeInitializationException>|Zgłaszany, gdy statyczny Konstruktor zgłasza wyjątek i zgodnego `catch` istnieje klauzuli catch go.|  
+|<xref:System.ArithmeticException>|Klasa bazowa dla wyjątków, które występują podczas operacji arytmetycznych, takich <xref:System.DivideByZeroException> jak <xref:System.OverflowException>i.|  
+|<xref:System.ArrayTypeMismatchException>|Zgłaszany, gdy tablica nie może przechowywać danego elementu, ponieważ rzeczywisty typ elementu jest niezgodny z rzeczywistym typem tablicy.|  
+|<xref:System.DivideByZeroException>|Zgłaszany, gdy podejmowana jest próba dzielenia wartości całkowitej przez zero.|  
+|<xref:System.IndexOutOfRangeException>|Zgłaszany, gdy podejmowana jest próba indeksowania tablicy, gdy indeks jest mniejszy od zera lub poza granicami tablicy.|  
+|<xref:System.InvalidCastException>|Zgłaszany, gdy jawna konwersja z typu podstawowego do interfejsu lub typu pochodnego kończy się niepowodzeniem w czasie wykonywania.|  
+|<xref:System.NullReferenceException>|Zgłaszany podczas próby odwołania się do obiektu, którego wartość jest [równa null](../../language-reference/keywords/null.md).|  
+|<xref:System.OutOfMemoryException>|Zgłaszany, gdy próba przydzielenia pamięci przy użyciu operatora [New](../../language-reference/operators/new-operator.md) zakończy się niepowodzeniem. Oznacza to wyczerpanie pamięci dostępnej dla środowiska uruchomieniowego języka wspólnego.|  
+|<xref:System.OverflowException>|Zgłaszane w przypadku przepełnienia operacji `checked` arytmetycznej w kontekście.|  
+|<xref:System.StackOverflowException>|Zgłaszany, gdy stos wykonywania został wyczerpany przez zbyt wiele oczekujących wywołań metod; zwykle wskazuje bardzo głęboką lub nieskończoną rekursję.|  
+|<xref:System.TypeInitializationException>|Zgłaszany, gdy Konstruktor statyczny zgłasza wyjątek i nie `catch` istnieje zgodna klauzula, aby ją przechwycić.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)
-- [Obsługa wyjątków](../../../csharp/programming-guide/exceptions/exception-handling.md)
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
-- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Wyjątki i obsługa wyjątków](./index.md)
+- [Obsługa wyjątków](./exception-handling.md)
+- [try-catch](../../language-reference/keywords/try-catch.md)
+- [try-finally](../../language-reference/keywords/try-finally.md)
+- [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)

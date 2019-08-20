@@ -1,5 +1,5 @@
 ---
-title: '#wiersz — C# odwołania'
+title: '#odwołanie do C# wiersza'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: f4e3c3edbe1d542f9bf5c984c403e0486a9da61b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4ac4fd3277fb53251e87321500d1b8007458037
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660050"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608534"
 ---
 # <a name="line-c-reference"></a>#line (odwołanie w C#)
 
-`#line` Umożliwia modyfikowanie kompilatora numerowanie wierszy i (opcjonalnie) danymi wyjścia nazwy pliku, błędów i ostrzeżeń.
+`#line`umożliwia zmodyfikowanie numeracji linii kompilatora oraz (opcjonalnie) dane wyjściowe nazwy pliku dla błędów i ostrzeżeń.
 
-Poniższy przykład pokazuje, jak zgłosić dwa ostrzeżenia skojarzony z numerami wierszy. `#line 200` Dyrektywy wymusza numer następny wiersz jako 200 (mimo że wartość domyślna to #6), a aż do następnej `#line` dyrektywy, nazwa_pliku będą raportowane jako "Specjalne". `#line default` Dyrektywy zwraca numerację do jego numerowanie domyślne, które zlicza wiersze, które zostały oznaczenie w poprzedniej dyrektywie.
+Poniższy przykład pokazuje, jak zgłosić dwa ostrzeżenia skojarzone z numerami wierszy. Dyrektywa wymusza numer następnego wiersza do 200 (mimo że wartość domyślna to #6), a do następnej `#line` dyrektywy nazwa pliku będzie raportowana jako "Specjalna". `#line 200` `#line default` Dyrektywa zwraca numery wierszy do domyślnej numeracji, która zlicza wiersze, które zostały zmienione przez poprzednią dyrektywę.
 
 ```csharp
 class MainClass
@@ -38,7 +38,7 @@ class MainClass
 }
 ```
 
-Kompilacja generuje następujące wyniki:
+Kompilacja generuje następujące dane wyjściowe:
 
 ```console
 Special(200,13): warning CS0168: The variable 'i' is declared but never used
@@ -83,6 +83,6 @@ class MainClass
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Dyrektywy preprocesora C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Dyrektywy preprocesora C#](./index.md)

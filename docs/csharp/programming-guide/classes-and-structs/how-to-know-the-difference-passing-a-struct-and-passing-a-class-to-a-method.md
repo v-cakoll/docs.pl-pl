@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Różnica między przekazywaniem struktury a przekazywaniem klasę odwołanie do metody - C# przewodnik programowania'
+title: 'Instrukcje: Zapoznaj się z różnicą między przekazywaniem struktury i przekazywaniem odwołania do klasy C# do przewodnika programowania metod'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,28 +7,28 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: 9664a3e5b5a68ae44bb129c9c550011683c81f16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 889e1f5719e094d02f0cc27256e1c430ffce0b8e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646361"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596787"
 ---
-# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Instrukcje: Różnica między przekazywaniem struktury a przekazywaniem odwołań do klas do metody (C# Programming Guide)
-W poniższym przykładzie pokazano, jak przekazywanie [struktury](../../../csharp/language-reference/keywords/struct.md) do metody różni się od przekazywanie [klasy](../../../csharp/language-reference/keywords/class.md) wystąpienia do metody. W tym przykładzie oba argumenty (wystąpienia struktury i klasy) są przekazywane przez wartość, a obie metody Zmień wartość pola jednego argumentu. Jednak wyniki z dwóch metod nie są takie same ponieważ przekazywana jest, jeśli przekazujesz struktury różni się od co to jest przekazywana, jeśli przekazujesz wystąpienia klasy.  
+# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Instrukcje: Zapoznaj się z różnicą między przekazywaniem struktury i przekazywaniem odwołania do klasyC# do metody (Przewodnik programowania)
+Poniższy przykład ilustruje sposób przekazywania [struktury](../../language-reference/keywords/struct.md) do metody różni się od przekazywania wystąpienia [klasy](../../language-reference/keywords/class.md) do metody. W przykładzie oba argumenty (wystąpienie struktury i klasy) są przekazane przez wartość, a obie te metody zmieniają wartość jednego pola argumentu. Jednak wyniki dwóch metod nie są takie same, ponieważ co jest przekazywane w przypadku przekazania struktury różni się od tego, co jest przekazywane podczas przekazywania wystąpienia klasy.  
   
- Ponieważ struktura jest [typu wartości](../../../csharp/language-reference/keywords/value-types.md), gdy użytkownik [przekazać wartość do struktury](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md) do metody, metody odbiera i przetwarza kopię argumentu struktury. Metoda nie ma dostępu do oryginalnej struktury w przypadku wywoływania metody i w związku z tym nie można go zmienić w dowolny sposób. Metoda można zmienić tylko kopii.  
+ Ponieważ struktura jest [typem wartości](../../language-reference/keywords/value-types.md), po przejściu [struktury przez wartość](./passing-value-type-parameters.md) do metody Metoda otrzymuje i działa na kopii argumentu struktury. Metoda nie ma dostępu do oryginalnej struktury w metodzie wywołującej i w związku z tym nie może zmienić jej w jakikolwiek sposób. Metoda może zmienić tylko kopię.  
   
- To wystąpienie klasy [odwołania do typu](../../../csharp/language-reference/keywords/reference-types.md), nie jest typem wartości. Gdy [typ odwołania jest przekazywany przez wartość](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md) do metody, metoda otrzymuje kopię odwołanie do wystąpienia klasy. Oznacza to, że metoda otrzymuje kopię adres obiektu, nie kopia samego wystąpienia. Adres jest wystąpienie klasy w przypadku wywoływania metody z parametrem w metodzie wywoływanej ma kopię adres i oba adresy odnoszą się do tego samego obiektu. Ponieważ parametr zawiera tylko kopię adres, wywoływanej metody nie można zmienić adres wystąpienia klasy w przypadku wywołania metody. Jednak wywoływanej metody umożliwia adres: dostęp do elementów członkowskich klasy, odwołujące się do oryginalnego adresu i kopiowania. Jeśli wywoływanej metody zmieni składowej klasy, zmienia się również oryginalnego wystąpienia klasy, w przypadku wywoływania metody  
+ Wystąpienie klasy jest [typem referencyjnym](../../language-reference/keywords/reference-types.md), a nie typem wartości. Gdy [typ referencyjny jest przekazywane przez wartość](./passing-reference-type-parameters.md) do metody, Metoda otrzymuje kopię odwołania do wystąpienia klasy. Oznacza to, że metoda otrzymuje kopię adresu wystąpienia, a nie kopię samego wystąpienia. Wystąpienie klasy w metodzie wywołującej ma adres, parametr w wywołanej metodzie ma kopię adresu, a oba adresy odwołują się do tego samego obiektu. Ponieważ parametr zawiera tylko kopię adresu, wywołana metoda nie może zmienić adresu wystąpienia klasy w metodzie wywołującej. Jednak wywołana metoda może używać adresu do uzyskiwania dostępu do elementów członkowskich klasy, które są zarówno oryginalnymi adresami, jak i odwołaniami kopiowania. Jeśli wywołana metoda zmienia element członkowski klasy, pierwotne wystąpienie klasy w metodzie wywołującej zmienia się również.  
   
- Poniższy przykład ilustruje różnicę. Wartość `willIChange` pola wystąpienia klasy zostanie zmieniony przez wywołanie metody `ClassTaker` ponieważ metoda używa adresu w parametrze można znaleźć określonego pola wystąpienia klasy. `willIChange` Pola struktury w przypadku wywołania metody nie jest zmieniany przez wywołanie metody `StructTaker` ponieważ wartość argumentu jest kopią struktury, nie kopia jego adres. `StructTaker` zmiany kopii i kopii zostaną utracone podczas wywołania `StructTaker` zostało zakończone.  
+ W danych wyjściowych w poniższym przykładzie pokazano różnicę. Wartość `willIChange` pola wystąpienia klasy jest zmieniana przez wywołanie metody `ClassTaker` , ponieważ metoda używa adresu w parametrze, aby znaleźć określone pole wystąpienia klasy. Pole struktury w metodzie wywołującej nie jest zmieniane przez wywołanie metody `StructTaker` , ponieważ wartość argumentu jest kopią samej struktury, a nie kopią jej adresu. `willIChange` `StructTaker`zmienia kopię, a kopia zostaje utracona po zakończeniu wywołania `StructTaker` .  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideObjects#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#32)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)
-- [Struktury](../../../csharp/programming-guide/classes-and-structs/structs.md)
-- [Przekazywanie parametrów](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Klasy](./classes.md)
+- [Struktury](./structs.md)
+- [Przekazywanie parametrów](./passing-parameters.md)

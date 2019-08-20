@@ -1,7 +1,7 @@
 ---
-title: this — słowo kluczowe - C# odwołania
+title: This — odwołanie C# do tego słowa kluczowego
 ms.custom: seodec18
-description: this — słowo kluczowe (odwołanie w C#)
+description: this — słowoC# kluczowe (odwołanie)
 ms.date: 07/20/2015
 f1_keywords:
 - this
@@ -9,23 +9,23 @@ f1_keywords:
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-ms.openlocfilehash: af39ba6e20fb1a7c9e1a356ef5015afd885dbbca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a3342e73fef3effd54f72e68283eb6085eef5b5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660583"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608443"
 ---
 # <a name="this-c-reference"></a>this (odwołanie w C#)
 
-`this` — Słowo kluczowe odwołuje się do bieżącego wystąpienia klasy, a także jest używane jako modyfikator pierwszy parametr metody rozszerzenia.
+`this` Słowo kluczowe odwołuje się do bieżącego wystąpienia klasy i jest również używane jako modyfikator pierwszego parametru metody rozszerzenia.
 
 > [!NOTE]
-> W tym artykule omówiono używanie `this` przy użyciu wystąpienia klasy. Aby uzyskać więcej informacji na temat jej użycia w metody rozszerzenia zobacz [metody rozszerzenia](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).
+> W tym artykule omówiono użycie `this` z wystąpieniami klas. Aby uzyskać więcej informacji o używaniu metod rozszerzających, zobacz [metody rozszerzenia](../../programming-guide/classes-and-structs/extension-methods.md).
 
-Poniżej znajdują się najczęstsze zastosowania usługi `this`:
+Poniżej przedstawiono typowe zastosowania `this`:
 
-- Aby zakwalifikować się elementy członkowskie ukrywane podobnych nazwach, na przykład:
+- Aby zakwalifikować członków ukrytych przy użyciu podobnych nazw, na przykład:
 
   [!code-csharp[csrefKeywordsAccess#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#4)]  
 
@@ -35,15 +35,15 @@ Poniżej znajdują się najczęstsze zastosowania usługi `this`:
   CalcTax(this);
   ```
 
-- Aby zadeklarować indeksatorów, na przykład:
+- Aby zadeklarować indeksatory, na przykład:
 
   [!code-csharp[csrefKeywordsAccess#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#5)]
 
-Statyczne funkcje Członkowskie, ponieważ istnieją na poziomie klasy, a nie jako część obiektu, nie masz `this` wskaźnika. Jest to błąd do odwoływania się do `this` w metodzie statycznej.
+Statyczne funkcje członkowskie, ponieważ istnieją na poziomie klasy, a nie jako część obiektu, nie mają `this` wskaźnika. Wystąpił błąd podczas odwoływania się `this` do w metodzie statycznej.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie `this` są używane do kwalifikowania `Employee` składowych, klasy `name` i `alias`, które są ukrywane o podobnych nazwach. Służy również przekazać obiekt do metody `CalcTax`, która należy do innej klasy.
+W tym przykładzie `this` jest używany do `Employee` kwalifikowania elementów członkowskich `name` klasy i `alias`, które są ukryte przez podobne nazwy. Jest on również używany do przekazywania obiektu do metody `CalcTax`, która należy do innej klasy.
 
 [!code-csharp[csrefKeywordsAccess#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#3)]
 

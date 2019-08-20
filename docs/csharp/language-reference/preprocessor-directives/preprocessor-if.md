@@ -1,5 +1,5 @@
 ---
-title: '#Jeśli dyrektywa preprocesora - C# odwołania'
+title: '#Jeśli dyrektywa preprocesora — C# odwołanie'
 ms.custom: seodec18
 ms.date: 06/30/2018
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 12ef0926665103e739ed4a8ee83ff895b439fffc
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d0297094fbb8098b706cb8c6338fa123afc0753b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300072"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605689"
 ---
 # <a name="if-c-reference"></a>#if (odwołanie w C#)
 
-Gdy kompilator języka C# napotka `#if` dyrektywy, a następnie po pewnym czasie przez [#endif](preprocessor-endif.md) dyrektywy, kompiluje kod między dyrektyw tylko wtedy, gdy zdefiniowano określonego symbolu. W przeciwieństwie do C i C++ nie można przypisać wartości numerycznej symbolu. Instrukcji #if w języku C# jest wartością logiczną, a tylko sprawdzenie, czy symbol został zdefiniowany lub nie. Na przykład:
+Gdy C# kompilator napotyka `#if` dyrektywę, a następnie [#endif](preprocessor-endif.md) dyrektywie, kompiluje kod między dyrektywami tylko wtedy, gdy określony symbol jest zdefiniowany. W przeciwieństwie do C++języka C i nie można przypisać wartości liczbowej do symbolu. Instrukcja #if w C# jest wartością logiczną i tylko testuje, czy symbol został zdefiniowany. Przykład:
 
 ```csharp
 #if DEBUG
@@ -24,31 +24,31 @@ Gdy kompilator języka C# napotka `#if` dyrektywy, a następnie po pewnym czasie
 #endif
 ```
 
-Można używać operatorów [ == ](../operators/equality-operators.md#equality-operator-) (równości) i [! =](../operators/equality-operators.md#inequality-operator-) (nierówność) tylko do testowania [true](../keywords/true-literal.md) lub [false](../keywords/false-literal.md). PRAWDA oznacza, że symbol jest zdefiniowany. Wykonywanie instrukcji `#if DEBUG` ma takie samo znaczenie jak `#if (DEBUG == true)`. Można używać operatorów [ && ](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (a) [ &#124; &#124; ](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (lub) i [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (nie) do oceny, czy zostały zdefiniowane wiele symboli. Można także grupować symboli i operatorów, za pomocą nawiasów.
+[==](../operators/equality-operators.md#equality-operator-) Można użyć operatorów (równość) i [! =](../operators/equality-operators.md#inequality-operator-) (nierówność) tylko do testowania [wartości true](../keywords/true-literal.md) lub [false](../keywords/false-literal.md). Prawda oznacza, że symbol jest zdefiniowany. Instrukcja `#if DEBUG` ma takie samo znaczenie jak `#if (DEBUG == true)`. Można użyć operatorów [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (i), [ &#124; ](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (lub), i [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (nie), aby sprawdzić, czy zdefiniowano wiele symboli. Można również grupować symbole i operatory za pomocą nawiasów.
 
 ## <a name="remarks"></a>Uwagi
 
-`#if`, wraz z [#else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md), i [#undef](preprocessor-undef.md) dyrektyw, umożliwia Dołącz lub Wyklucz kod oparty na istnienie jednego lub wielu symboli. Może to być przydatne podczas kompilowania kodu do kompilacji debugowania lub podczas kompilowania dla konkretnej konfiguracji.
+`#if`wraz z [#else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md)i [#undef](preprocessor-undef.md) umożliwiają uwzględnienie lub wykluczenie kodu na podstawie istnienia jednego lub kilku symboli. Może to być przydatne podczas kompilowania kodu dla kompilacji debugowania lub kompilowania dla określonej konfiguracji.
 
-Warunkowe dyrektywy zaczyna się od `#if` dyrektywy jawnie muszą być zakończone znakiem `#endif` dyrektywy.
+Dyrektywa warunkowa rozpoczynająca się `#if` od dyrektywy musi być jawnie zakończona `#endif` dyrektywą.
 
-`#define` pozwala zdefiniować symbol. Za pomocą symbolu wyrażenia są przekazywane do `#if` dyrektywy, wyrażenie ma wartość `true`.
+`#define`umożliwia zdefiniowanie symbolu. Używając symbolu jako wyrażenia przesłanego do `#if` dyrektywy, wyrażenie daje w `true`wyniku.
 
-Można również zdefiniować symbol za pomocą [— Zdefiniuj](../compiler-options/define-compiler-option.md) — opcja kompilatora. Aby anulować definicję symbolu, użyj dyrektywy [#undef](preprocessor-undef.md).
+Można również zdefiniować symbol z opcją [-define](../compiler-options/define-compiler-option.md) kompilatora. Aby anulować definicję symbolu, użyj dyrektywy [#undef](preprocessor-undef.md).
 
-Symbol, który zdefiniujesz z `-define` lub `#define` nie koliduje ze zmienną o takiej samej nazwie. Oznacza to, że nazwa zmiennej nie powinna być przekazywana do dyrektywy preprocesora i symbol może być oceniany tylko przez dyrektywy preprocesora.
+Symbol zdefiniowany za pomocą `-define` lub with `#define` nie powoduje konfliktu ze zmienną o tej samej nazwie. Oznacza to, że nazwa zmiennej nie powinna być przenoszona do dyrektywy preprocesora, a symbol może być oceniany tylko przez dyrektywę preprocesora.
 
-Zakres symbolu utworzonych za pomocą `#define` jest plikiem, w którym został zdefiniowany.
+Zakres symbolu utworzonego za pomocą `#define` to plik, w którym został zdefiniowany.
 
-System kompilacji jest również pamiętać o wstępnie zdefiniowanych symboli preprocesora reprezentująca różne [ustalać platformy docelowe](../../../standard/frameworks.md). Są one przydatne podczas tworzenia aplikacji przeznaczonych więcej niż jednej implementacji .NET lub wersji.
+System kompilacji jest również świadomy wstępnie zdefiniowanych symboli preprocesora, które reprezentują różne [Platformy docelowe](../../../standard/frameworks.md). Są one przydatne podczas tworzenia aplikacji, które mogą być ukierunkowane na więcej niż jedną implementację lub wersję platformy .NET.
 
 [!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
-Inne wstępnie zdefiniowane symbole obejmują stałe debugowania i śledzenia. Można zastąpić wartości ustawione dla projektu za pomocą `#define`. Symbol debugowania, na przykład, jest automatycznie ustawiana w zależności od właściwości konfiguracji kompilacji (w trybie "Debug" lub "Release").
+Inne wstępnie zdefiniowane symbole obejmują stałe debugowania i śledzenia. Można zastąpić wartości ustawione dla projektu przy użyciu `#define`. Symbol debugowania, na przykład, jest automatycznie ustawiany w zależności od właściwości konfiguracji kompilacji ("Debugowanie" lub "wersja").
 
 ## <a name="examples"></a>Przykłady
 
-Poniższy przykład pokazuje jak zdefiniować symbol test dla pliku, a następnie przetestować wartości symboli test i debugowania. Dane wyjściowe w tym przykładzie zależy od tego, czy projekt jest oparty na tryb konfiguracji Debug i Release.
+W poniższym przykładzie pokazano, jak zdefiniować symbol elementu WebTest dla pliku, a następnie przetestować wartości symboli TEST i DEBUG. Dane wyjściowe tego przykładu zależą od tego, czy projekt został skompilowany w trybie konfiguracji debugowania czy wydania.
 
 ```csharp
 #define MYTEST
@@ -70,7 +70,7 @@ public class MyClass
 }
 ```
 
-Poniższy przykład pokazuje, jak przetestować dla platform docelowych innej, aby można było używać nowszych interfejsów API, jeśli jest to możliwe:
+Poniższy przykład pokazuje, jak przeprowadzić test dla różnych platform docelowych, aby można było używać nowszych interfejsów API, gdy jest to możliwe:
 
 ```csharp
 public class MyClass
@@ -89,7 +89,7 @@ public class MyClass
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Dyrektywy preprocesora C#](index.md)
-- [Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Instrukcje: Kompiluj warunkowo z użyciem śledzenia i debugowania](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

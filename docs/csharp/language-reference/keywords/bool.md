@@ -1,5 +1,5 @@
 ---
-title: bool — słowo kluczowe - C# odwołania
+title: bool — słowo C# kluczowe-odwołanie
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,41 +8,41 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: a6aae34433ee6f5d141d95f0c434af1825e9bf4b
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 3e4e83b52cd6b275e68039693c774f6490f2b88f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424434"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606060"
 ---
 # <a name="bool-c-reference"></a>bool (odwołanie w C#)
 
-`bool` — Słowo kluczowe jest aliasem <xref:System.Boolean?displayProperty=nameWithType>. Służy do deklarowania zmiennych do przechowywania wartości logiczne: [true](true-literal.md) i [false](false-literal.md).
+Słowo kluczowe jest <xref:System.Boolean?displayProperty=nameWithType>aliasem. `bool` Służy do deklarowania zmiennych do przechowywania wartości logicznych: [true](true-literal.md) i [false](false-literal.md).
 
 > [!NOTE]
-> Użyj `bool?` typu, jeśli wymagana jest obsługa przechowywanymi w trzech logiki, na przykład podczas pracy z bazami danych, które obsługują przechowywanymi w trzech typu Boolean. Dla `bool?` argumentów operacji, wstępnie zdefiniowane `&` i `|` Operatorzy pomocy technicznej przechowywanymi w trzech logiki. Aby uzyskać więcej informacji, zobacz [Nullable logiczna operatorów logicznych](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) części [logiczna operatorów logicznych](../operators/boolean-logical-operators.md) artykułu.
+> Użyj tego `bool?` typu, jeśli potrzebujesz obsługi logiki trójwarstwowej, na przykład podczas pracy z bazami danych, które obsługują typ Boolean o wartości 3. W przypadku `&` `|` operandów wstępnie zdefiniowane operatory i obsługują logikę z trzema wartościami. `bool?` Aby uzyskać więcej informacji, zobacz sekcję [Operatory logiczne wartości null](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) w artykule [Operatory logiczne Boolean](../operators/boolean-logical-operators.md) .
 
 ## <a name="literals"></a>Literały
 
-Można przypisać wartość logiczną umożliwiającą `bool` zmiennej. Można także przypisać wyrażenie, które daje w wyniku `bool` do `bool` zmiennej.
+Do `bool` zmiennej można przypisać wartość logiczną. Można również przypisać wyrażenie, które daje `bool` w wyniku `bool` zmienną.
 
 [!code-csharp[csrefKeywordsTypes#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#1)]
 
-Wartość domyślna `bool` zmienna jest `false`. Wartość domyślna `bool?` zmienna jest `null`.
+Wartość `bool` domyślna zmiennej to `false`. Wartość `bool?` domyślna zmiennej to `null`.
 
 ## <a name="conversions"></a>Konwersje
 
-W języku C++, wartości typu `bool` można przekonwertować na wartość typu `int`; innymi słowy, `false` jest odpowiednikiem zero i `true` jest odpowiednikiem wartości niezerowych. W języku C# jest konwersja między `bool` typu a innymi typami danych. Na przykład następująca `if` instrukcja jest nieprawidłowa w języku C#:
+W C++programie wartość typu `bool` może zostać przekonwertowana na wartość typu `int`; innymi słowy, `false` jest równoznaczna z zerem i `true` jest odpowiednikiem wartości niezerowych. W C#programie nie ma konwersji między `bool` typem i innymi typami. Na przykład następująca `if` instrukcja jest nieprawidłowa w: C#
 
 [!code-csharp[csrefKeywordsTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#2)]
 
-Aby przetestować zmiennej typu `int`, trzeba jawnie porównania wartości, takich jak zero, w następujący sposób:
+Aby przetestować zmienną typu `int`, należy jawnie porównać ją z wartością, taką jak zero, w następujący sposób:
 
 [!code-csharp[csrefKeywordsTypes#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#3)]
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie Wprowadź znak przy użyciu klawiatury i program sprawdza, czy znak danych wejściowych jest literą. Jeśli jest literą, sprawdza, czy jest wielką czy małą literą. Te testy są wykonywane przy użyciu <xref:System.Char.IsLetter%2A>, i <xref:System.Char.IsLower%2A>, zarówno które zwrotu `bool` typu:
+W tym przykładzie wprowadzasz znak z klawiatury, a program sprawdza, czy znak wejściowy jest literą. Jeśli jest to litera, sprawdza, czy jest mała lub Wielka litera. Te testy są wykonywane z <xref:System.Char.IsLetter%2A>, i <xref:System.Char.IsLower%2A>, z których `bool` oba zwracają typ:
 
 [!code-csharp[csrefKeywordsTypes#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#4)]
 
@@ -52,10 +52,10 @@ W tym przykładzie Wprowadź znak przy użyciu klawiatury i program sprawdza, cz
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
-- [Typy całkowite](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
-- [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)
-- [Tabela niejawnych konwersji liczbowych](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-- [Tabela jawnych konwersji liczbowych](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](./index.md)
+- [Typy całkowite](../builtin-types/integral-numeric-types.md)
+- [Tabela typów wbudowanych](./built-in-types-table.md)
+- [Tabela niejawnych konwersji liczbowych](./implicit-numeric-conversions-table.md)
+- [Tabela jawnych konwersji liczbowych](./explicit-numeric-conversions-table.md)

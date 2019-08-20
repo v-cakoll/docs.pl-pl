@@ -1,18 +1,18 @@
 ---
-title: Wariancje w Delegatach (C#)
+title: Wariancja w delegatach (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 835b19b191bd3cb193bf4ba12d689b962c8603ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80062f755a6159c48ff595556db99b0ac067533a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598056"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595175"
 ---
-# <a name="variance-in-delegates-c"></a>Wariancje w Delegatach (C#)
-.NET framework 3.5 wprowadzono obsługę wariancji podpisów metod dopasowania z typów obiektów delegowanych w wszystkie obiekty delegowane w języku C#. Oznacza to, że można przypisać do deleguje nie tylko metody, które pasują do sygnatur, ale także metody, które zwracają więcej pochodne typy (korelacja) lub które przyjmują parametry, które mają mniej pochodne typy (kontrawariancja) niż określona przez typ delegata . Dotyczy to również delegatów ogólnych i nieogólnych.  
+# <a name="variance-in-delegates-c"></a>Wariancja w delegatach (C#)
+.NET Framework 3,5 wprowadzono obsługę wariancji dla pasujących sygnatur metod z typami delegatów we C#wszystkich delegatach w. Oznacza to, że można przypisać do delegatów nie tylko metod, które mają pasujące podpisy, ale również metody, które zwracają więcej typów pochodnych (Kowariancja) lub akceptują parametry, które mają mniej pochodne typy (kontrawariancja) niż określone przez typ delegata . Dotyczy to zarówno delegatów rodzajowych, jak i nieogólnych.  
   
- Na przykład rozważmy następujący kod, który ma dwie klasy i dwa delegaty: ogólnych i nieogólnych.  
+ Rozważmy na przykład poniższy kod, który ma dwie klasy i dwa Delegaty: generyczne i nieogólne.  
   
 ```csharp  
 public class First { }  
@@ -21,7 +21,7 @@ public delegate First SampleDelegate(Second a);
 public delegate R SampleGenericDelegate<A, R>(A a);  
 ```  
   
- Po utworzeniu delegatów `SampleDelegate` lub `SampleGenericDelegate<A, R>` typów, w jednej z następujących metod można przypisać do tych obiektów delegowanych.  
+ Podczas tworzenia delegatów `SampleDelegate` lub `SampleGenericDelegate<A, R>` typów można przypisać do tych delegatów jedną z następujących metod.  
   
 ```csharp  
 // Matching signature.  
@@ -42,7 +42,7 @@ public static Second AFirstRSecond(First first)
 { return new Second(); }  
 ```  
   
- Poniższy przykład kodu ilustruje niejawna konwersja między podpis metody i typu delegata.  
+ Poniższy przykład kodu ilustruje niejawną konwersję między sygnaturą metody a typem delegata.  
   
 ```csharp  
 // Assigning a method with a matching signature   
@@ -62,14 +62,14 @@ SampleGenericDelegate<Second, First> dGeneric = ASecondRFirst;
 SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;  
 ```  
   
- Aby uzyskać więcej przykładów, zobacz [przy użyciu wariancje w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) i [przy użyciu wariancji dla akcji delegatów ogólnych (C#) Func i](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ Aby uzyskać więcej przykładów, zobacz [Korzystanie z wariancjiC#w delegatach ()](./using-variance-in-delegates.md) i [Używanie wariancji dla delegatów funkcji Func i ActionC#()](./using-variance-for-func-and-action-generic-delegates.md).  
   
-## <a name="variance-in-generic-type-parameters"></a>Wariancji w parametrach typu ogólnego  
- W programie .NET Framework 4 lub nowszym można włączyć niejawna konwersja między elementem delegatów, dzięki czemu delegatów ogólnych, które mają różne typy określona przez parametry typu ogólnego mogą być przypisane do siebie nawzajem, jeśli typy są dziedziczone od siebie nawzajem, zgodnie z wymaganiami WARIANCJA.  
+## <a name="variance-in-generic-type-parameters"></a>Wariancja w parametrach typu ogólnego  
+ W .NET Framework 4 lub nowszej można włączyć niejawną konwersję między delegatami, tak aby generyczne Delegaty mające różne typy określone przez parametry typu generycznego można przypisać do siebie nawzajem, jeśli typy są dziedziczone od siebie, zgodnie z wymaganiami względem.  
   
- Aby włączyć niejawną konwersję, musisz jawnie deklarować parametrów ogólnych w delegatów jako kowariantnych lub kontrawariantnych przy użyciu `in` lub `out` — słowo kluczowe.  
+ Aby włączyć niejawną konwersję, należy jawnie zadeklarować parametry ogólne w delegatze jako współvariant lub kontrawariantne `in` za `out` pomocą słowa kluczowego or.  
   
- Poniższy przykład kodu pokazuje, jak utworzyć obiekt delegowany mający parametr kowariantnego typu ogólnego.  
+ Poniższy przykład kodu pokazuje, jak można utworzyć delegata, który ma parametr typu ogólnego.  
   
 ```csharp  
 // Type T is declared covariant by using the out keyword.  
@@ -85,9 +85,9 @@ public static void Test()
 }  
 ```  
   
- Jeśli używasz obsługują tylko odchylenia do dopasowania podpisy metod ze typy delegatów i nie używaj `in` i `out` słów kluczowych, może się okazać, że czasami można utworzyć wystąpienie obiektów delegowanych z wyrażenia lambda identyczne lub metody, ale nie jest możliwe Przypisz jednego delegata do innego.  
+ Jeśli używasz tylko wariancji do dopasowania sygnatur metod z typami delegatów i nie używaj `in` słów kluczowych i `out` , może się okazać, że czasami można utworzyć wystąpienia delegatów z identycznymi wyrażeniami lub metodami lambda, ale nie można Przypisz jednego delegata do innego.  
   
- W poniższym przykładzie kodu `SampleGenericDelegate<String>` nie może być jawnie konwertowane na `SampleGenericDelegate<Object>`, mimo że `String` dziedziczy `Object`. Możesz rozwiązać ten problem, oznaczając parametru ogólnego `T` z `out` — słowo kluczowe.  
+ W poniższym przykładzie `SampleGenericDelegate<String>` kodu nie można jawnie przekonwertować na `SampleGenericDelegate<Object>`, chociaż `String` dziedziczy `Object`. Ten problem można rozwiązać przez oznaczenie parametru `T` `out` generycznego słowem kluczowym.  
   
 ```csharp  
 public delegate T SampleGenericDelegate<T>();  
@@ -109,47 +109,47 @@ public static void Test()
 }  
 ```  
   
-### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>Parametry typu delegatów ogólnych, które mają typ Variant w .NET Framework  
- .NET framework 4 wprowadzono obsługę wariancji dla parametrów typu rodzajowego w kilku istniejących delegatów ogólnych:  
+### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>Delegaty ogólne, które mają parametry typu Variant w .NET Framework  
+ .NET Framework 4 wprowadził obsługę wariancji dla parametrów typu ogólnego w kilku istniejących delegatach ogólnych:  
   
-- `Action` delegaty z <xref:System> przestrzeni nazw, na przykład <xref:System.Action%601> i <xref:System.Action%602>  
+- `Action`deleguje z <xref:System> przestrzeni nazw, na przykład, <xref:System.Action%601> i<xref:System.Action%602>  
   
-- `Func` delegaty z <xref:System> przestrzeni nazw, na przykład <xref:System.Func%601> i <xref:System.Func%602>  
+- `Func`deleguje z <xref:System> przestrzeni nazw, na przykład, <xref:System.Func%601> i<xref:System.Func%602>  
   
-- <xref:System.Predicate%601> Delegowanie  
+- <xref:System.Predicate%601> Obiekt delegowany  
   
-- <xref:System.Comparison%601> Delegowanie  
+- <xref:System.Comparison%601> Obiekt delegowany  
   
-- <xref:System.Converter%602> Delegowanie  
+- <xref:System.Converter%602> Obiekt delegowany  
   
- Aby uzyskać więcej informacji i przykładów, zobacz [przy użyciu wariancji dla akcji delegatów ogólnych (C#) Func i](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ Aby uzyskać więcej informacji i przykładów, zobacz [Używanie wariancji dla delegatów ()C#funkcji Func i Action ()](./using-variance-for-func-and-action-generic-delegates.md).  
   
-### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Deklarowanie Wariantne parametry typu w delegatów ogólnych  
- Jeśli delegata ogólnego ma kowariantne i kontrawariantne parametry typu ogólnego, jego mogą być określane jako *variant Delegat ogólny*.  
+### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Deklarowanie parametrów typu Variant w delegatach generycznych  
+ Jeśli delegat generyczny ma parametry typu generycznego lub kontrawariantne, może być określany jako *Delegat generyczny elementu Variant*.  
   
- Można zadeklarować parametru typu generycznego kowariantne Delegat ogólny przy użyciu `out` — słowo kluczowe. Kowariantnego typu może służyć jedynie jako typ zwracany metody, a nie typu argumentów metody. Poniższy przykład kodu pokazuje sposób deklarowania kowariantne Delegat ogólny.  
+ Za pomocą `out` słowa kluczowego można zadeklarować współwariant parametru typu ogólnego w delegatze ogólnym. Typ współwariantu może być używany tylko jako zwracany typ metody, a nie jako typ argumentów metody. Poniższy przykład kodu pokazuje, jak zadeklarować delegata generycznego.  
   
 ```csharp  
 public delegate R DCovariant<out R>();  
 ```  
   
- Kontrawariantnego parametru typu ogólnego, Delegat ogólny może zadeklarować za pomocą `in` — słowo kluczowe. Typ kontrawariantne może służyć jedynie jako typów argumentów metody, a nie typem zwracanym metody. Poniższy przykład kodu pokazuje sposób deklarowania to delegat generyczny kontrawariantny.  
+ Parametr typu ogólnego kontrawariantne można zadeklarować w delegatze ogólnym za pomocą `in` słowa kluczowego. Typ kontrawariantne może być używany tylko jako typ argumentów metody, a nie jako zwracany typ metody. Poniższy przykład kodu pokazuje, jak zadeklarować delegata generycznego kontrawariantne.  
   
 ```csharp  
 public delegate void DContravariant<in A>(A a);  
 ```  
   
 > [!IMPORTANT]
->  `ref`, `in`, i `out` parametrów w języku C# nie można oznaczyć jako wariant.  
+>  `ref`, `in`, i `out` parametry w C# nie mogą być oznaczone jako VARIANT.  
   
- Istnieje również możliwość obsługi kowariancji i Wariancja w tym samym delegatów, ale w przypadku różnych typów parametrów. Jest to pokazane w poniższym przykładzie.  
+ Istnieje również możliwość obsługi zarówno wariancji, jak i kowariancji w tym samym delegatze, ale dla różnych parametrów typu. Pokazano to w poniższym przykładzie.  
   
 ```csharp  
 public delegate R DVariant<in A, out R>(A a);  
 ```  
   
-### <a name="instantiating-and-invoking-variant-generic-delegates"></a>Utworzenie wystąpienia i wywoływania wariantów ogólnych delegatów  
- Można utworzyć wystąpienia i wywoływać delegatów typu variant, tak samo, jak utworzyć wystąpienia i wywoływać delegatów niezmiennej. W poniższym przykładzie delegat jest tworzone przez wyrażenie lambda.  
+### <a name="instantiating-and-invoking-variant-generic-delegates"></a>Tworzenie wystąpień i wywoływanie delegatów ogólnych typu Variant  
+ Można tworzyć wystąpienia delegatów wariantów i wywoływać je tak samo jak w przypadku wystąpienia i wywoływać delegatów niezmiennej. W poniższym przykładzie obiekt delegowany jest tworzone przez wyrażenie lambda.  
   
 ```csharp  
 DVariant<String, String> dvariant = (String str) => str + " ";  
@@ -157,7 +157,7 @@ dvariant("test");
 ```  
   
 ### <a name="combining-variant-generic-delegates"></a>Łączenie delegatów ogólnych typu Variant  
- Nie należy łączyć wariantu delegatów. <xref:System.Delegate.Combine%2A> Metoda nie obsługuje konwersji typu variant delegata i oczekuje, że delegaty dokładnie tego samego typu. Może to prowadzić do wyjątku czasu wykonywania, podczas łączenia przy użyciu delegatów <xref:System.Delegate.Combine%2A> metody lub używając `+` operatora, jak pokazano w poniższym przykładzie kodu.  
+ Nie należy łączyć delegatów wariantów. <xref:System.Delegate.Combine%2A> Metoda nie obsługuje konwersji delegata typu Variant i oczekuje, że Delegaty mają być dokładnie tego samego typu. Może to prowadzić do wyjątku czasu wykonywania podczas łączenia delegatów za pomocą <xref:System.Delegate.Combine%2A> metody lub przy `+` użyciu operatora, jak pokazano w poniższym przykładzie kodu.  
   
 ```csharp  
 Action<object> actObj = x => Console.WriteLine("object: {0}", x);  
@@ -168,10 +168,10 @@ Action<string> actStr = x => Console.WriteLine("string: {0}", x);
 // Delegate.Combine(actStr, actObj);  
 ```  
   
-## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>Wariancji w parametrach typu ogólnego dla wartości i typy odwołań  
- Wariancja dla parametrów typu ogólnego jest obsługiwana tylko dla typów odwołania. Na przykład `DVariant<int>` nie może być niejawnie konwertowane na `DVariant<Object>` lub `DVariant<long>`, ponieważ liczba całkowita jest typem wartości.  
+## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>Wariancja w parametrach typu ogólnego dla typów wartości i odwołań  
+ WARIANCJA dla parametrów typu ogólnego jest obsługiwana tylko w przypadku typów referencyjnych. Na przykład `DVariant<int>` nie można konwertować niejawnie na `DVariant<Object>` lub `DVariant<long>`, ponieważ liczba całkowita jest typem wartości.  
   
- W poniższym przykładzie pokazano tej wariancji w typie ogólnym parametrów nie jest obsługiwana dla typów wartości.  
+ W poniższym przykładzie pokazano, że Wariancja w parametrach typu ogólnego nie jest obsługiwana w przypadku typów wartości.  
   
 ```csharp  
 // The type T is covariant.  
@@ -199,5 +199,5 @@ public static void Test()
 ## <a name="see-also"></a>Zobacz także
 
 - [Typy ogólne](~/docs/standard/generics/index.md)
-- [Korzystanie z wariancji dla Func i akcji delegatów ogólnych (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
-- [Instrukcje: Łączenie obiektów delegowanych (obiekty delegowane multiemisji)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+- [Korzystanie z wariancji dla delegatów dla funkcjiC#Func i Action ()](./using-variance-for-func-and-action-generic-delegates.md)
+- [Instrukcje: Łączenie delegatów (delegatów multiemisji)](../../delegates/how-to-combine-delegates-multicast-delegates.md)

@@ -1,59 +1,59 @@
 ---
-title: LINQ to XML — Przegląd osi (C#)
+title: Przegląd osi LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: 73587e0637e562ce4a35f9ec92a407928e0ad885
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b775a37869f0c8baa7d482475e301347cb77c538
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667486"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591924"
 ---
-# <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML — Przegląd osi (C#)
-Po drzewa XML utworzone lub ładowany dokument XML do drzewa XML można tworzyć zapytania, do znajdowania elementów i atrybutów i pobierania ich wartości. Pobieranie kolekcji za pomocą *metody osi*, nazywane również *osi*. Niektóre z osi są metody <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XDocument> klasy, które zwraca <xref:System.Collections.Generic.IEnumerable%601> kolekcji. Niektóre z osi są metody rozszerzające w <xref:System.Xml.Linq.Extensions> klasy. Osi, które są implementowane jako metody rozszerzenia działają w kolekcjach, a następnie zwracają kolekcje.  
+# <a name="linq-to-xml-axes-overview-c"></a>Przegląd osi LINQ to XML (C#)
+Po utworzeniu drzewa XML lub załadowaniu dokumentu XML do drzewa XML można wykonać zapytania do niego, aby znaleźć elementy i atrybuty i pobrać ich wartości. Kolekcje są pobierane za pomocą *metod osi*, nazywanych również *osiami*. Niektóre osie są metodami <xref:System.Xml.Linq.XElement> klasy i <xref:System.Xml.Linq.XDocument> , które zwracają <xref:System.Collections.Generic.IEnumerable%601> kolekcje. Niektóre osie są metodami rozszerzającymi w <xref:System.Xml.Linq.Extensions> klasie. Osie zaimplementowane jako metody rozszerzające działają na kolekcjach i zwracają kolekcje.  
   
- Zgodnie z opisem w [Przegląd klasy XElement](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md), <xref:System.Xml.Linq.XElement> obiekt reprezentuje węzeł pojedynczy element. Zawartość elementu może być złożonym procesem (czasami nazywany zawartość ze strukturą) lub może być prosty element. Prosty element może być pusta lub może zawierać wartość. Jeśli węzeł zawiera zawartość ze strukturą, można użyć różnych metod osi do pobrania wyliczenia elementów podrzędnych. Metody osi najczęściej używane są <xref:System.Xml.Linq.XContainer.Elements%2A> i <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
+ Zgodnie z opisem w temacie [klasy XElement](./xelement-class-overview.md), <xref:System.Xml.Linq.XElement> obiekt reprezentuje węzeł pojedynczego elementu. Zawartość elementu może być złożona (czasami nazywana zawartością strukturalną) lub może być elementem prostym. Prosty element może być pusty lub może zawierać wartość. Jeśli węzeł zawiera zawartość strukturalną, można użyć różnych metod osi do pobierania wyliczeń elementów podrzędnych. Najczęściej używane metody osi to <xref:System.Xml.Linq.XContainer.Elements%2A> i. <xref:System.Xml.Linq.XContainer.Descendants%2A>  
   
- Oprócz metody osi, które zwracają kolekcje, istnieją dwie metody więcej, które będzie najczęściej używany w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania. <xref:System.Xml.Linq.XContainer.Element%2A> Metoda zwraca pojedynczą <xref:System.Xml.Linq.XElement>. <xref:System.Xml.Linq.XElement.Attribute%2A> Metoda zwraca pojedynczą <xref:System.Xml.Linq.XAttribute>.  
+ Oprócz metod osi, które zwracają kolekcje, istnieją dwie metody, które są często używane w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytaniach. Metoda zwraca jeden <xref:System.Xml.Linq.XElement>. <xref:System.Xml.Linq.XContainer.Element%2A> Metoda zwraca jeden <xref:System.Xml.Linq.XAttribute>. <xref:System.Xml.Linq.XElement.Attribute%2A>  
   
- Do wielu celów [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania umożliwiają najbardziej wydajnymi procesorami zbadać drzewa, wyodrębnić z niej dane i przekształcić je. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kwerend działają na obiektach, które implementują <xref:System.Collections.Generic.IEnumerable%601>i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] osi powrotu <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> kolekcji, a <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XAttribute> kolekcji. Potrzebujesz tych kolekcji do wykonywania zapytań.  
+ W wielu celach [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania zapewniają najbardziej wydajny sposób badania drzewa, wyodrębniania danych z niego i przekształcania. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]zapytania działają na obiektach, <xref:System.Collections.Generic.IEnumerable%601>które implementują [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] , oraz <xref:System.Collections.Generic.IEnumerable%601> na <xref:System.Xml.Linq.XElement> osiach zwracających <xref:System.Collections.Generic.IEnumerable%601> kolekcje <xref:System.Xml.Linq.XAttribute> i kolekcje. Te kolekcje są potrzebne do wykonywania zapytań.  
   
- Oprócz metod osi, które pobierają kolekcji elementów i atrybutów istnieją metody osi, które pozwalają na Iterowanie drzewa bardzo szczegółowo. Na przykład zamiast zajmowanie się elementów i atrybutów, można pracować z węzłami drzewa. Węzły są bardziej precyzyjną stopień szczegółowości niż elementów i atrybutów. Podczas pracy z węzłów, można sprawdzić komentarze XML, węzły tekstowe przetwarzania instrukcji i nie tylko. Ta funkcja jest ważna, na przykład, aby osoba, która zapisuje do edytora tekstów i chce, aby zapisywać dokumenty w formacie XML. Jednak większość programistów XML są przede wszystkim elementów, atrybutów i ich wartości.  
+ Oprócz metod osi, które pobierają kolekcje elementów i atrybutów, istnieją metody osi, które umożliwiają iteracyjne przechodzenie między drzewa. Na przykład zamiast zajmowania się elementami i atrybutami można współpracować z węzłami drzewa. Węzły to bardziej szczegółowy poziom szczegółowości niż elementy i atrybuty. Podczas pracy z węzłami można analizować Komentarze XML, węzły tekstowe, instrukcje przetwarzania i nie tylko. Ta funkcja jest ważna, na przykład do osoby, która piszą Edytor tekstów i chce zapisywać dokumenty jako XML. Jednakże większość programistów XML dotyczy głównie elementów, atrybutów i ich wartości.  
   
-## <a name="methods-for-retrieving-a-collection-of-elements"></a>Metody do pobierania kolekcji elementów  
- Poniżej przedstawiono podsumowanie metod <xref:System.Xml.Linq.XElement> klasy (lub jej klasy bazowe), który chcesz wywołać w <xref:System.Xml.Linq.XElement> zwracać kolekcję elementów.  
+## <a name="methods-for-retrieving-a-collection-of-elements"></a>Metody pobierania kolekcji elementów  
+ Poniżej znajduje się podsumowanie metod <xref:System.Xml.Linq.XElement> klasy (lub jej klas podstawowych) wywoływanych <xref:System.Xml.Linq.XElement> w celu zwrócenia kolekcji elementów.  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|Zwraca <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> z elementów nadrzędnych tego elementu. Zwraca przeciążenia <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> z elementów nadrzędnych, które mają określony <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|Zwraca <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> z elementami podrzędnymi tego elementu. Zwraca przeciążenia <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> obiektów podrzędnych, które mają określony <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>|Zwraca <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> elementów podrzędnych tego elementu. Zwraca przeciążenia <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> elementów podrzędnych, które mają określony <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType>|Zwraca <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> elementów, które pochodzą od tego elementu. Zwraca przeciążenia <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> elementów po tym elemencie, które mają określony <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>|Zwraca <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> elementów, które występować przed tym elementem. Zwraca przeciążenia <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> elementów przed tego elementu, które mają określony <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=nameWithType>|Zwraca <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> ten element i jego elementów nadrzędnych. Zwraca przeciążenia <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> elementów, które mają określony <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType>|Zwraca <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> ten element i jego elementy podrzędne. Zwraca przeciążenia <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> elementów, które mają określony <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|<xref:System.Collections.Generic.IEnumerable%601> Zwracawartość<xref:System.Xml.Linq.XElement> elementu nadrzędnego tego elementu. Przeciążenie zwraca element <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement> nadrzędny, który ma określony <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|<xref:System.Collections.Generic.IEnumerable%601> Zwracawartość<xref:System.Xml.Linq.XElement> elementów podrzędnych tego elementu. Przeciążenie zwraca element <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement> podrzędny o określonej <xref:System.Xml.Linq.XName>wartości.|  
+|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>|<xref:System.Collections.Generic.IEnumerable%601> Zwracaz<xref:System.Xml.Linq.XElement> elementów podrzędnych tego elementu. Przeciążenie zwraca element <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement> podrzędny o określonej <xref:System.Xml.Linq.XName>wartości.|  
+|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType>|<xref:System.Collections.Generic.IEnumerable%601> Zwracazelementów,które<xref:System.Xml.Linq.XElement> są dostępne po elemencie. Przeciążenie zwraca <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement> część elementów po tym elemencie, który ma określony <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>|<xref:System.Collections.Generic.IEnumerable%601> Zwracazelementów,które<xref:System.Xml.Linq.XElement> są przed tym elementem. Przeciążenie zwraca <xref:System.Collections.Generic.IEnumerable%601> część <xref:System.Xml.Linq.XElement> elementów, zanim ten element ma określony <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=nameWithType>|<xref:System.Collections.Generic.IEnumerable%601> Zwracaztegoelementui<xref:System.Xml.Linq.XElement> jego elementy nadrzędne. Przeciążenie zwraca <xref:System.Collections.Generic.IEnumerable%601> liczbę <xref:System.Xml.Linq.XElement> elementów, które mają określony <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType>|<xref:System.Collections.Generic.IEnumerable%601> Zwracaztegoelementu<xref:System.Xml.Linq.XElement> i jego elementy podrzędne. Przeciążenie zwraca <xref:System.Collections.Generic.IEnumerable%601> liczbę <xref:System.Xml.Linq.XElement> elementów, które mają określony <xref:System.Xml.Linq.XName>.|  
   
 ## <a name="method-for-retrieving-a-single-element"></a>Metoda pobierania pojedynczego elementu  
- Poniższa metoda pobiera pojedynczy element podrzędny z <xref:System.Xml.Linq.XElement> obiektu.  
+ Poniższa metoda pobiera jeden element podrzędny z <xref:System.Xml.Linq.XElement> obiektu.  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|Zwraca pierwszy element podrzędny <xref:System.Xml.Linq.XElement> obiekt, który ma określony <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|Zwraca pierwszy obiekt podrzędny <xref:System.Xml.Linq.XElement> , który ma określony. <xref:System.Xml.Linq.XName>|  
   
-## <a name="method-for-retrieving-a-collection-of-attributes"></a>Metoda pobierania kolekcję atrybutów  
+## <a name="method-for-retrieving-a-collection-of-attributes"></a>Metoda pobierania kolekcji atrybutów  
  Poniższa metoda pobiera atrybuty z <xref:System.Xml.Linq.XElement> obiektu.  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|Zwraca <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XAttribute> wszystkich atrybutów.|  
+|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|<xref:System.Collections.Generic.IEnumerable%601> Zwraca<xref:System.Xml.Linq.XAttribute> spośród wszystkich atrybutów.|  
   
-## <a name="method-for-retrieving-a-single-attribute"></a>Metoda pobierania jeden atrybut  
+## <a name="method-for-retrieving-a-single-attribute"></a>Metoda pobierania pojedynczego atrybutu  
  Poniższa metoda pobiera jeden atrybut z <xref:System.Xml.Linq.XElement> obiektu.  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Zwraca <xref:System.Xml.Linq.XAttribute> ma określony <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Zwraca wartość <xref:System.Xml.Linq.XName>, która ma określony. <xref:System.Xml.Linq.XAttribute>|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ do XML osi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [Osie LINQ to XML (C#)](./linq-to-xml-axes.md)

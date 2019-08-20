@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Grupowanie plików według rozszerzenia (LINQ) (C#)'
+title: 'Instrukcje: Grupuj pliki według rozszerzenia (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: 0b8cb30396a93f5f878c091c4aad3cab9db3f2d4
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: aa3e428a4655bfcc0707e111da3ca6206a2b9596
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584299"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593252"
 ---
-# <a name="how-to-group-files-by-extension-linq-c"></a>Instrukcje: Grupowanie plików według rozszerzenia (LINQ) (C#)
-Ten przykład pokazuje, jak LINQ może służyć do wykonywania zaawansowanych grupowania i sortowania operacje na listach plików lub folderów. Pokazano również, jak stronicować danych wyjściowych w oknie konsoli przy użyciu <xref:System.Linq.Enumerable.Skip%2A> i <xref:System.Linq.Enumerable.Take%2A> metody.  
+# <a name="how-to-group-files-by-extension-linq-c"></a>Instrukcje: Grupuj pliki według rozszerzenia (LINQ) (C#)
+Ten przykład pokazuje, jak LINQ może służyć do wykonywania zaawansowanych operacji grupowania i sortowania na listach plików lub folderów. Przedstawiono w nim również sposób wyświetlania stron wyjściowych w oknie konsoli przy użyciu <xref:System.Linq.Enumerable.Skip%2A> metod <xref:System.Linq.Enumerable.Take%2A> i.  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie pokazuje, jak, według których chcesz pogrupować zawartość drzewa katalogów określonego rozszerzenia nazwy pliku.  
+ Poniższe zapytanie pokazuje, jak grupować zawartość określonego drzewa katalogów według rozszerzenia nazwy pliku.  
   
 ```csharp  
 class GroupByExtension  
@@ -102,12 +102,12 @@ class GroupByExtension
 }  
 ```  
   
- Dane wyjściowe z tego programu może być długi, w zależności od szczegółów lokalnego systemu plików i `startFolder` jest równa. Aby umożliwić wyświetlanie wszystkich wyników, w tym przykładzie przedstawiono sposób przeglądania wyników. Te same techniki można zastosować do aplikacji sieci Web i Windows. Należy zauważyć, że ponieważ kod strony elementów w grupie, zagnieżdżoną `foreach` pętli jest wymagana. Istnieje również logikę dodatkowe obliczenia bieżącej pozycji na liście i umożliwić użytkownikowi zatrzymać stronicowania i zakończyć program. W tym konkretnym przypadku kwerendy stronicowania jest wykonywany dla pamięci podręcznej wyników z oryginalnego zapytania. W innych kontekstach, takich jak LINQ to SQL takie pamięci podręcznej nie jest wymagana.  
+ Dane wyjściowe tego programu mogą być długie, w zależności od szczegółów lokalnego systemu plików i `startFolder` konfiguracji. Aby umożliwić wyświetlanie wszystkich wyników, ten przykład pokazuje, jak przechodzić przez wyniki. Te same techniki można stosować do aplikacji systemu Windows i sieci Web. Zauważ, że ponieważ strona kodowa zawiera elementy w grupie, wymagana jest `foreach` pętla zagnieżdżona. Istnieje również dodatkowa logika służąca do obliczania bieżącej pozycji na liście i umożliwia użytkownikowi zatrzymanie stronicowania i wyjście z programu. W tym konkretnym przypadku kwerenda stronicowania jest uruchamiana względem wyników z pamięci podręcznej z oryginalnego zapytania. W innych kontekstach, takich jak LINQ to SQL, takie buforowanie nie jest wymagane.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie C# konsoli projekt aplikacji z `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
+ Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)

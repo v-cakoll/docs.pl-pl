@@ -2,12 +2,12 @@
 title: 'Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 0bc212ab40bccf5612ef6dea85608c439d2105f4
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 08b4f936532b3ba3744ec31dc691b166e7ba7109
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012941"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594035"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (C#)
 Ten przykład pokazuje, jak wykonywać obliczenia zagregowane, takie jak sum, Average, min i Max w kolumnach pliku CSV. Przykładowe zasady, które są wyświetlane w tym miejscu, można zastosować do innych typów tekstu strukturalnego.  
@@ -163,5 +163,5 @@ class SumColumns
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ i ciągi (C#)](./linq-and-strings.md)
+- [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)

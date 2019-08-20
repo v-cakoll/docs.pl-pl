@@ -1,90 +1,90 @@
 ---
-title: Dostęp do modyfikatorów - C# przewodnik programowania
+title: Modyfikatory dostępu — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 6622612e927b800e1a4769c99df0e2fa7d99a33d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 8eda59a911e0a69936a69f2b04ba5fbf2023e8ff
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609648"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597202"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modyfikatory dostępu (Przewodnik programowania w języku C#)
-Wszystkie typy i elementy członkowskie typu ma poziom ułatwień dostępu, który kontroluje, czy mogą być używane z innym kodem w swoim zestawie lub innych zestawów. Następujące modyfikatory dostępu służy do określania dostępność typu lub elementu członkowskiego, gdy trzeba je zadeklarować:  
+Wszystkie typy i elementy członkowskie typu mają poziom dostępności, który kontroluje, czy mogą być używane z innego kodu w zestawie lub w innych zestawach. Można użyć następujących modyfikatorów dostępu, aby określić dostępność typu lub elementu członkowskiego podczas deklarowania:  
   
- [public](../../../csharp/language-reference/keywords/public.md)  
- Typ lub element członkowski może zostać oceniony przez inny kod, w tym samym zestawie lub w innym zestawie, który odwołuje się do niej. 
+ [public](../../language-reference/keywords/public.md)  
+ Do typu lub elementu członkowskiego można uzyskać dostęp za pomocą dowolnego innego kodu w tym samym zestawie lub innym zestawie, który odwołuje się do niego. 
   
- [private](../../../csharp/language-reference/keywords/private.md)  
- Typu lub element członkowski może zostać oceniony jedynie przez kod w tej samej klasie lub strukturze.  
+ [private](../../language-reference/keywords/private.md)  
+ Typ lub element członkowski można uzyskać dostęp tylko do kodu w tej samej klasie lub strukturze.  
   
- [protected](../../../csharp/language-reference/keywords/protected.md)  
- Typu lub element członkowski może zostać oceniony jedynie przez kod z tej samej klasy lub klasy, która jest pochodną klasy.  
- [internal](../../../csharp/language-reference/keywords/internal.md)  
- Typ lub element członkowski może zostać oceniony przez każdy kod z tego samego zestawu, ale nie z innego zestawu.  
+ [protected](../../language-reference/keywords/protected.md)  
+ Typ lub element członkowski można uzyskać dostęp tylko do kodu w tej samej klasie lub w klasie, która jest pochodną tej klasy.  
+ [internal](../../language-reference/keywords/internal.md)  
+ Do typu lub elementu członkowskiego można uzyskać dostęp za pomocą dowolnego kodu w tym samym zestawie, ale nie z innego zestawu.  
   
- [chronionych wewnętrznych](../../../csharp/language-reference/keywords/protected-internal.md) typu lub elementu członkowskiego jest możliwy przez każdy kod w zestawie, w którym jest zdeklarowana lub z poziomu klasy pochodnej w innym zestawie. 
+ [chroniona wewnętrzna](../../language-reference/keywords/protected-internal.md) Do typu lub elementu członkowskiego można uzyskać dostęp za pomocą dowolnego kodu w zestawie, w którym jest zadeklarowany, lub z klasy pochodnej w innym zestawie. 
 
- [prywatny chroniony](../../../csharp/language-reference/keywords/private-protected.md) typu lub elementu członkowskiego możliwy tylko w deklarowanym zestawie, przez kod w tej samej klasy lub typ, który jest tworzony na podstawie tej klasy.
+ [prywatne chronione](../../language-reference/keywords/private-protected.md) Typ lub element członkowski jest dostępny tylko w obrębie swojego zestawu deklarującego przez kod w tej samej klasie lub w typie, który jest pochodną tej klasy.
   
- Poniższe przykłady pokazują, jak określić modyfikatorów dostępu dla typów i elementów członkowskich:  
+ W poniższych przykładach pokazano, jak określić Modyfikatory dostępu dla typu i składowej:  
   
  [!code-csharp[csProgGuideObjects#72](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#72)]  
   
- Nie wszystkie modyfikatory dostępu mogą być używane przez wszystkie typy lub elementy członkowskie we wszystkich kontekstach, a w niektórych przypadkach dostępność składowej typu jest ograniczony przez dostępność jej typ zawierający. Poniższe sekcje zawierają więcej szczegółów na temat ułatwień dostępu.  
+ Nie wszystkie Modyfikatory dostępu mogą być używane przez wszystkie typy lub elementy członkowskie we wszystkich kontekstach, a w niektórych przypadkach dostępność elementu członkowskiego typu jest ograniczona przez dostępność typu zawierającego. Poniższe sekcje zawierają więcej informacji na temat ułatwień dostępu.  
   
-## <a name="class-and-struct-accessibility"></a>Klasy i struktury w ułatwienia dostępu  
- Klasy i struktury, które są zadeklarowane bezpośrednio w przestrzeni nazw (innymi słowy, które nie są zagnieżdżone w obrębie innych klas lub struktur) może być publiczny lub wewnętrzny. Wewnętrzny jest domyślnym, jeśli nie określono żadnych modyfikator dostępu.  
+## <a name="class-and-struct-accessibility"></a>Ułatwienia dostępu klasy i struktury  
+ Klasy i struktury, które są zadeklarowane bezpośrednio w przestrzeni nazw (innymi słowy, które nie są zagnieżdżone w innych klasach lub strukturach) mogą być publiczne lub wewnętrzne. Wewnętrzna jest wartością domyślną, jeśli nie określono modyfikatora dostępu.  
   
- Składowe struktury, w tym zagnieżdżonych klas i struktur, może być zadeklarowana jako publiczne, wewnętrzne lub prywatnych. Elementy członkowskie, w tym zagnieżdżonych klas i struktur klasy, może być publiczny, chronionych wewnętrznych, chronionych wewnętrznych prywatny chroniony lub prywatnych. Poziom dostępu do składowych klasy i składowe struktury, w tym zagnieżdżonych klas i struktur, jest domyślnie prywatny. Prywatne zagnieżdżone typy nie są dostępne z zewnątrz typu zawierającego.  
+ Elementy członkowskie struktury, w tym zagnieżdżone klasy i struktury, mogą być deklarowane jako publiczne, wewnętrzne lub prywatne. Elementy członkowskie klasy, w tym zagnieżdżone klasy i struktury, mogą być publiczne, chronione wewnętrznie, chronione, wewnętrzne, prywatne i prywatne. Poziom dostępu dla elementów członkowskich klasy i elementów członkowskich struktury, w tym zagnieżdżonych klas i struktur, jest domyślnie prywatny. Prywatne typy zagnieżdżone nie są dostępne spoza typu zawierającego.  
   
- Klasy pochodne nie może mieć większą dostępność niż typy podstawowe. Innymi słowy, nie może mieć klasę publiczną `B` pochodząca z klasą wewnętrzną `A`. Jeśli zezwolono na to, gdyż miałoby efekt podejmowanie `A` publiczne, ponieważ wszystkich chronionych i wewnętrznych członków `A` są dostępne w klasie pochodnej.  
+ Klasy pochodne nie mogą mieć większej dostępności niż ich typy podstawowe. Innymi słowy, nie można mieć klasy `B` publicznej, która pochodzi od klasy `A`wewnętrznej. Jeśli jest to dozwolone, miałoby to wpływ `A` na publiczną, ponieważ wszystkie chronione lub wewnętrzne `A` elementy członkowskie są dostępne z klasy pochodnej.  
   
- Można włączyć określonego innych zestawów, aby uzyskać dostęp do wewnętrznych typów, za pomocą parametru InternalsVisibleToAttribute. Aby uzyskać więcej informacji, zobacz [przyjaznych zestawów](../../../standard/assembly/friend-assemblies.md).  
+ Można włączyć określone inne zestawy, aby uzyskać dostęp do typów wewnętrznych przy użyciu InternalsVisibleToAttribute. Aby uzyskać więcej informacji, zobacz [zaprzyjaźnione zestawy](../../../standard/assembly/friend-assemblies.md).  
   
-## <a name="class-and-struct-member-accessibility"></a>Klasy i dostępność składowej struktury  
- Członkowie klas (w tym zagnieżdżone klasy i struktury) mogą być deklarowane ze wszystkimi sześć typów dostępu. Składowe struktury nie można zadeklarować jako chroniony, ponieważ struktury nie obsługują dziedziczenia.  
+## <a name="class-and-struct-member-accessibility"></a>Ułatwienia dostępu do elementów członkowskich klasy i struktury  
+ Elementy członkowskie klasy (w tym zagnieżdżone klasy i struktury) mogą być deklarowane przy użyciu dowolnego z sześciu typów dostępu. Elementy członkowskie struktury nie mogą być deklarowane jako chronione, ponieważ struktury nie obsługują dziedziczenia.  
   
- Zwykle ułatwień dostępu elementu członkowskiego nie jest większa niż ułatwień dostępu typu, który go zawiera. Jednak publicznej składowej klasy wewnętrznej może być dostępne spoza zestawu, czy element członkowski implementuje metody interfejsu zastępują metody wirtualne, które są zdefiniowane w klasie bazowej.  
+ Zwykle dostępność elementu członkowskiego nie jest większa niż dostępność typu, który go zawiera. Jednak publiczna składowa klasy wewnętrznej może być dostępna spoza zestawu, jeśli element członkowski implementuje metody interfejsu lub przesłania metody wirtualne, które są zdefiniowane w publicznej klasie bazowej.  
   
- Typ dowolnego elementu członkowskiego, który jest pola, właściwości lub zdarzenia musi być co najmniej tak samo dostępna jak ten element członkowski. Podobnie typ zwracany i typy parametrów, dowolnego elementu członkowskiego, który jest metoda, indeksator lub delegata musi być co najmniej tak samo dostępna jak ten element członkowski. Na przykład, nie może mieć publiczną metodę `M` zwracającego klasę `C` chyba że `C` również jest publiczny. Podobnie, nie może mieć właściwość chroniona typu `A` Jeśli `A` jest zadeklarowany jako prywatny.  
+ Typ dowolnego elementu członkowskiego, który jest polem, właściwością lub zdarzeniem, musi być co najmniej tak samo samo jak element członkowski. Analogicznie, typ zwracany i typy parametrów dowolnego elementu członkowskiego, który jest metody, indeksatora lub delegata, muszą być co najmniej tak samo samo jak element członkowski. Na przykład nie można mieć metody `M` publicznej, która zwraca klasę `C` , chyba że `C` jest również publiczna. Analogicznie, nie można mieć chronionej właściwości typu `A` , `A` jeśli jest zadeklarowana jako prywatna.  
   
- Operatory zdefiniowane przez użytkownika, zawsze musi być zadeklarowany jako publiczne ale statyczne. Aby uzyskać więcej informacji, zobacz [przeciążania operatora](../../../csharp/language-reference/operators/operator-overloading.md).  
+ Operatory zdefiniowane przez użytkownika muszą być zawsze deklarowane jako publiczne i statyczne. Aby uzyskać więcej informacji, zobacz przeciążanie [operatora](../../language-reference/operators/operator-overloading.md).  
   
- Finalizatory nie może mieć modyfikatorów dostępności.  
+ Finalizatory nie mogą mieć modyfikatorów dostępności.  
   
- Aby ustawić poziom dostępu dla elementu członkowskiego klasy lub struktury, Dodaj słowo kluczowe odpowiednie do deklaracji elementu członkowskiego, jak pokazano w poniższym przykładzie.  
+ Aby ustawić poziom dostępu dla elementu członkowskiego klasy lub struktury, Dodaj odpowiednie słowo kluczowe do deklaracji elementu członkowskiego, jak pokazano w poniższym przykładzie.  
   
  [!code-csharp[csProgGuideObjects#73](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#73)]  
   
 > [!NOTE]
->  Poziom chronionych wewnętrznych ułatwień dostępu oznacza, że nie chronionych i wewnętrznych, chronionych i wewnętrznych. Innymi słowy chronionych wewnętrznych elementu członkowskiego jest możliwy z dowolnej klasy w tym samym zestawie, łącznie z klas pochodnych. Aby ograniczyć dostępność do tylko klasy pochodne z tego samego zestawu, Zadeklaruj samej klasy wewnętrznej i zadeklarować składowych jako chroniony. Ponadto począwszy od C# 7.2, możesz użyć modyfikator dostępu prywatnego chronionych aby osiągnąć ten sam wynik nie jest potrzebne zapewnienie klasa zawierająca wewnętrzny.  
+>  Chroniony wewnętrzny poziom dostępności oznacza ochronę lub wewnętrzne, niechronione i wewnętrzne. Innymi słowy, dostęp do chronionej wewnętrznej składowej można uzyskać z dowolnej klasy w tym samym zestawie, łącznie z klasami pochodnymi. Aby ograniczyć dostępność tylko do klas pochodnych w tym samym zestawie, zadeklaruj samą klasę jako wewnętrzną i Zadeklaruj jej składowe jako chronione. Ponadto, począwszy od C# 7,2, można użyć modyfikatora Private Protected Access, aby osiągnąć ten sam wynik bez konieczności wypełniania klasy zawierającej.  
   
 ## <a name="other-types"></a>Inne typy  
- Interfejsy zadeklarowany bezpośrednio w przestrzeni nazw może być zadeklarowany jako publiczny lub wewnętrzny i, podobnie jak klasy i struktury, domyślnie dostęp do interfejsów. Elementy członkowskie interfejsu zawsze są publiczne, ponieważ interfejs ma na celu włączyć inne typy dostępu do klasy lub struktury. Brak modyfikatorów dostępu można zastosować do elementów członkowskich interfejsu.  
+ Interfejsy zadeklarowane bezpośrednio w przestrzeni nazw mogą być deklarowane jako publiczne lub wewnętrzne, podobnie jak klasy i struktury, interfejsy domyślnie mają dostęp wewnętrzny. Elementy członkowskie interfejsu są zawsze publiczne, ponieważ celem interfejsu jest umożliwienie innym typom dostępu do klasy lub struktury. Nie można zastosować modyfikatorów dostępu do elementów członkowskich interfejsu.  
   
- Elementy członkowskie wyliczenia zawsze są publiczne, a brak modyfikatorów dostępu mogą być stosowane.  
+ Elementy członkowskie wyliczenia są zawsze publiczne i nie można zastosować modyfikatorów dostępu.  
   
- Delegaty zachowują się jak klas i struktur. Domyślnie mają wewnętrzne dostępu podczas zadeklarowany bezpośrednio w ramach przestrzeni nazw i prywatny dostęp, gdy zagnieżdżony.  
+ Delegaty zachowują się jak klasy i struktury. Domyślnie mają oni dostęp wewnętrzny po zadeklarowaniu bezpośrednio w przestrzeni nazw i prywatnym dostępie w przypadku zagnieżdżenia.  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Interfejsy](../../../csharp/programming-guide/interfaces/index.md)
-- [private](../../../csharp/language-reference/keywords/private.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [internal](../../../csharp/language-reference/keywords/internal.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
-- [protected internal](../../../csharp/language-reference/keywords/protected-internal.md)
-- [private protected](../../../csharp/language-reference/keywords/private-protected.md)
-- [class](../../../csharp/language-reference/keywords/class.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [interface](../../../csharp/language-reference/keywords/interface.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Klasy i struktury](./index.md)
+- [Interfejsy](../interfaces/index.md)
+- [private](../../language-reference/keywords/private.md)
+- [public](../../language-reference/keywords/public.md)
+- [internal](../../language-reference/keywords/internal.md)
+- [protected](../../language-reference/keywords/protected.md)
+- [protected internal](../../language-reference/keywords/protected-internal.md)
+- [private protected](../../language-reference/keywords/private-protected.md)
+- [class](../../language-reference/keywords/class.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [interface](../../language-reference/keywords/interface.md)

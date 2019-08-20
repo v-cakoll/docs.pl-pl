@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Wyszukiwanie elementu głównego (XPath-LINQ to XML) (C#)'
+title: 'Instrukcje: Znajdź elementy podrzędne (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
-ms.openlocfilehash: 99f5f552935d6169537ccfbadff2a21396828e47
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8e9a2a1767f718d236682f0340a1f410a5cf70f6
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486773"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593419"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Instrukcje: Wyszukiwanie elementu głównego (XPath-LINQ to XML) (C#)
-W tym temacie pokazano, jak można pobrać elementów podrzędnych o określonej nazwie.  
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Instrukcje: Znajdź elementy podrzędne (XPath-LINQ to XML) (C#)
+W tym temacie pokazano, jak uzyskać elementy podrzędne o określonej nazwie.  
   
- Wyrażenie XPath jest `//Name`.  
+ Wyrażenie XPath ma `//Name`wartość.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wyszukuje wszystkie elementy podrzędne, o nazwie `Name`.  
+ Ten przykład umożliwia znalezienie wszystkich elementów podrzędnych `Name`o nazwie.  
   
- W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Wiele zamówień zakupu (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Wiele zamówień zakupu (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  

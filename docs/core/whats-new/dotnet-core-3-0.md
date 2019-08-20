@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 07/25/2019
-ms.openlocfilehash: f1fce2899e9e11b1007d6c270180b27a29eaa167
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 10e5dfdc873f8dcf9fec0da5f7f3561337033f40
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039435"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604250"
 ---
 # <a name="whats-new-in-net-core-30-preview-7"></a>Co nowego w programie .NET Core 3,0 (wersja zapoznawcza 7)
 
@@ -502,9 +502,11 @@ Można sprawdzać <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?di
 
 ## <a name="serialport-for-linux"></a>Klasy SerialPort dla systemu Linux
 
-Platforma .NET Core 3,0 <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> obsługuje system Linux.
+Program .NET Core 3,0 zapewnia podstawową pomoc <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> techniczną dla systemu Linux.
 
 Wcześniej platforma .NET Core jest obsługiwana `SerialPort` tylko w systemie Windows.
+
+Aby uzyskać więcej informacji o ograniczonej obsłudze portu szeregowego w systemie Linux, zobacz artykuł dotyczący usługi [GitHub #33146](https://github.com/dotnet/corefx/issues/33146).
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Limity pamięci Docker i cgroup
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 74cfc6a425e82014bbcf5093f52f476ff09db130
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: b43c692c8fd54ef1cbfac334b4986d8332462848
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796557"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596492"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumenty nazwane i opcjonalne (Przewodnik programowania w języku C#)
 C#4 wprowadza argumenty nazwane i opcjonalne. *Nazwane argumenty* umożliwiają określenie argumentu dla określonego parametru przez skojarzenie argumentu z nazwą parametru, a nie z pozycją parametru na liście parametrów. *Argumenty opcjonalne* umożliwiają pominięcie argumentów dla niektórych parametrów. Obie techniki mogą być używane z metodami, indeksatorami, konstruktorami i delegatami.  
@@ -70,9 +70,9 @@ C#4 wprowadza argumenty nazwane i opcjonalne. *Nazwane argumenty* umożliwiają 
   
 - wyrażenie stałe;  
   
-- wyrażenie formularza `new ValType()`, gdzie `ValType` jest typem wartości, na przykład [wyliczeniem](../../../csharp/language-reference/keywords/enum.md) lub [strukturą](../../../csharp/programming-guide/classes-and-structs/structs.md);  
+- wyrażenie formularza `new ValType()`, gdzie `ValType` jest typem wartości, na przykład [wyliczeniem](../../language-reference/keywords/enum.md) lub [strukturą](./structs.md);  
   
-- wyrażenie [domyślne (ValType)](../../../csharp/language-reference/operators/default.md), gdzie `ValType` jest typem wartości.  
+- wyrażenie [domyślne (ValType)](../../language-reference/operators/default.md), gdzie `ValType` jest typem wartości.  
   
  Parametry opcjonalne są definiowane na końcu listy parametrów po dowolnych wymaganych parametrach. Jeśli obiekt wywołujący zawiera argument dla dowolnego z parametrów opcjonalnych, musi podać argumenty dla wszystkich poprzedzających parametry opcjonalne. Luki rozdzielane przecinkami na liście argumentów nie są obsługiwane. Na przykład, w poniższym kodzie Metoda `ExampleMethod` wystąpienia jest zdefiniowana z jednym wymaganym i dwoma opcjonalnymi parametrami.  
   
@@ -113,7 +113,7 @@ C#4 wprowadza argumenty nazwane i opcjonalne. *Nazwane argumenty* umożliwiają 
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- Aby uzyskać więcej informacji i przykładów, [zobacz How to: Używanie argumentów nazwanych i opcjonalnych w](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) programowaniu [pakietu Office i instrukcje: Dostęp do obiektów międzyoperacyjności pakietu C# Office](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)za pomocą funkcji wizualnych.  
+ Aby uzyskać więcej informacji i przykładów, [zobacz How to: Używanie argumentów nazwanych i opcjonalnych w](./how-to-use-named-and-optional-arguments-in-office-programming.md) programowaniu [pakietu Office i instrukcje: Dostęp do obiektów międzyoperacyjności pakietu C# Office](../interop/how-to-access-office-onterop-objects.md)za pomocą funkcji wizualnych.  
   
 ## <a name="overload-resolution"></a>Rozpoznanie przeciążenia  
  Użycie argumentów nazwanych i opcjonalnych wpływa na rozpoznawanie przeciążenia w następujący sposób:  
@@ -129,7 +129,7 @@ C#4 wprowadza argumenty nazwane i opcjonalne. *Nazwane argumenty* umożliwiają 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Używanie argumentów nazwanych i opcjonalnych w programowaniu pakietu Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [Używanie typu dynamicznego](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [Używanie konstruktorów](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
-- [Używanie indeksatorów](../../../csharp/programming-guide/indexers/using-indexers.md)
+- [Instrukcje: Używanie argumentów nazwanych i opcjonalnych w programowaniu pakietu Office](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Używanie typu dynamicznego](../types/using-type-dynamic.md)
+- [Używanie konstruktorów](./using-constructors.md)
+- [Używanie indeksatorów](../indexers/using-indexers.md)

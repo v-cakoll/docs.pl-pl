@@ -1,5 +1,5 @@
 ---
-title: -help, -? (Opcje kompilatora C#)
+title: -help, -? (C# Opcje kompilatora)
 ms.date: 07/20/2015
 f1_keywords:
 - /?
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - /help compiler option [C#]
 - -? compiler option [C#]
 ms.assetid: 8d53f6ba-5c3b-4183-976e-9c0f26fd3680
-ms.openlocfilehash: d6759ec878f34ebd5031fb3465901412f8cbda05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbf4fd6fd13ee267dcbc80568577d5f8aa7d625e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662871"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602911"
 ---
-# <a name="-help---c-compiler-options"></a>-help, -? (Opcje kompilatora C#)
-Tę opcję, wysyła listę opcji kompilatora i krótki opis każdej z tych opcji do strumienia wyjściowego stdout.  
+# <a name="-help---c-compiler-options"></a>-help, -? (C# Opcje kompilatora)
+Ta opcja wysyła listę opcji kompilatora i Krótki opis każdej opcji, do stdout.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,11 +30,11 @@ Tę opcję, wysyła listę opcji kompilatora i krótki opis każdej z tych opcji
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli ta opcja jest uwzględniony w kompilacji, plik wyjściowy nie zostanie utworzony i kompilacja nie będzie miała miejsce.  
+ Jeśli ta opcja jest uwzględniona w kompilacji, żaden plik wyjściowy nie zostanie utworzony i żadna kompilacja nie zostanie wykonana.  
   
- Ta opcja kompilatora jest niedostępna w programie Visual Studio i nie można zmienić programowo.  
+ Ta opcja kompilatora jest niedostępna w programie Visual Studio i nie można jej zmienić programowo.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opcje kompilatora C#](./index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

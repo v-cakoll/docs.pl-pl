@@ -1,5 +1,5 @@
 ---
-title: '@ — C# Odwołania'
+title: '@- C# Reference'
 ms.custom: seodec18
 ms.date: 02/09/2017
 f1_keywords:
@@ -11,35 +11,35 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2302c2602411455c0f3f0371579fc9be200004d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2290c87f7d4d2ba8da122d4f5ddb9ea423852ec
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61659933"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608732"
 ---
-# <a name="-c-reference"></a>@ (Odwołanie w C#)
+# <a name="-c-reference"></a>@ (C# Odwołanie)
 
-`@` Znak specjalny służy jako identyfikator dosłownego wyrażenia. Mogą być używane w następujący sposób:
+Znak `@` specjalny służy jako identyfikator Verbatim. Może być używana w następujący sposób:
 
-1. Aby włączyć słowa kluczowe języka C#, aby można używać jako identyfikatorów. `@` Znak prefiksy element kodu, który kompilator ma interpretować jako identyfikator zamiast słowa kluczowego języka C#. W poniższym przykładzie użyto `@` znak definiują identyfikatora o nazwie `for` używającej w `for` pętli.
+1. Aby włączyć C# używanie słów kluczowych jako identyfikatorów. Znak prefiksu elementu kodu, który kompilator ma interpretować jako identyfikator zamiast C# słowa kluczowego. `@` Poniższy przykład używa `@` znaku do definiowania identyfikatora o nazwie `for` `for` , który używa w pętli.
 
    [!code-csharp[verbatim1](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#1)]
 
-1. Aby wskazać, że literał ciągu ma być interpretowany dosłownie. `@` Definiuje znak, w tym wystąpieniu *verbatim literału ciągu*. Proste sekwencje ucieczki (takich jak `"\\"` dla ukośnik odwrotny) szesnastkową sekwencje unikowe (takich jak `"\x0041"` a wielkie litery) i sekwencje unikowe Unicode (takich jak `"\u0041"` wielkie litery a) jest interpretowany dosłownie. Tylko sekwencja unikowa oferty (`""`) nie jest interpretowany dosłownie; generuje pojedynczy znak cudzysłowu. Ponadto w przypadku verbatim [ciągiem interpolowanym](interpolated.md) sekwencje unikowe nawiasu klamrowego (`{{` i `}}`) nie jest interpretowany dosłownie; produkują znaki pojedynczy nawias klamrowy. W poniższym przykładzie zdefiniowano dwie ścieżki identyczny plik za pomocą literału ciągu regularnych, a druga za pomocą literału ciągu verbatim. Jest to jedna z bardziej powszechne zastosowania verbatim literałów.
+1. Aby wskazać, że literał ciągu ma być interpretowany Verbatim. Znak w tym wystąpieniu definiuje *literał ciągu Verbatim.* `@` Proste sekwencje ucieczki ( `"\\"` takie jak dla ukośnika odwrotnego), szesnastkowe sekwencje ucieczki ( `"\x0041"` na przykład dla Wielkiej litery a) i sekwencje znaków Unicode ( `"\u0041"` na przykład dla Wielkiej litery a) są interpretowane dosłownie. Tylko sekwencja ucieczki oferty (`""`) nie jest interpretowana dosłownie; tworzy pojedynczy znak cudzysłowu. Ponadto w przypadku Verbatim [interpolowanego](interpolated.md) nawiasu klamrowego sekwencje ucieczki (`{{` i `}}`) nie są interpretowane dosłownie; tworzą one pojedyncze nawiasy klamrowe. W poniższym przykładzie zdefiniowano dwie identyczne ścieżki plików, jeden przy użyciu zwykłego literału ciągu, a drugi przy użyciu literału ciągu Verbatim. Jest to jeden z najczęściej używanych Verbatim literałów ciągów.
 
    [!code-csharp[verbatim2](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#2)]
 
-   Poniższy przykład ilustruje efekt Definiowanie regularne literału ciągu i ciąg verbatim literał, która zawiera sekwencje znaków identyczne.
+   Poniższy przykład ilustruje efekt definiowania zwykłego literału ciągu i literału ciągu Verbatim, który zawiera identyczne sekwencje znaków.
 
    [!code-csharp[verbatim3](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#3)]
 
-1. Aby umożliwić kompilatorowi rozróżnienie między atrybutami w przypadku konfliktu nazw. Atrybut jest klasa, która pochodzi od klasy <xref:System.Attribute>. Nazwa jej typu obejmują zazwyczaj sufiks **atrybutu**, mimo że kompilator nie wymusza tę Konwencję. Ten atrybut może odwoływać w kodzie przez jego pełna nazwa typu (na przykład `[InfoAttribute]` lub jego skróconą nazwę (na przykład `[Info]`). Jednak konflikt nazw występuje, jeśli dwa skrócone nazwy typu atrybutu są identyczne, i zawiera jedną nazwę typu **atrybut** sufiks, ale innych nie. Na przykład, poniższy kod nie zostanie skompilowany, ponieważ kompilator nie może określić czy `Info` lub `InfoAttribute` atrybut jest stosowany do `Example` klasy. Zobacz [CS1614](../compiler-messages/cs1614.md) Aby uzyskać więcej informacji.
+1. Aby umożliwić kompilatorowi rozróżnienie atrybutów w przypadkach konfliktu nazw. Atrybut jest klasą, która pochodzi od <xref:System.Attribute>. Nazwa typu zwykle zawiera **atrybut**sufiksu, chociaż kompilator nie wymusza tej Konwencji. Atrybut może następnie być przywoływany w kodzie według jego pełnej nazwy typu (na przykład `[InfoAttribute]` lub jego skróconej nazwy (na `[Info]`przykład). Jednak konflikt nazewnictwa występuje, jeśli dwa skrócone nazwy typów atrybutów są identyczne, a jedna nazwa typu zawiera sufiks **atrybutu** , ale drugi nie. Na przykład następujący kod nie zostanie skompilowany, ponieważ kompilator nie może określić, `Info` czy `Example` atrybut lub `InfoAttribute` jest stosowany do klasy. Aby uzyskać więcej informacji, zobacz [CS1614](../compiler-messages/cs1614.md) .
 
    [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim2.cs#1)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Znaki specjalne języka C#](../../../csharp/language-reference/tokens/index.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Znaki specjalne języka C#](./index.md)

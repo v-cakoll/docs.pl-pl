@@ -1,72 +1,72 @@
 ---
-title: Obiekty - C# przewodnik programowania
+title: Obiekty — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 1ba179c23d9b0e526cdc0dd436ca545377a0db81
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3319cfa6b98e3f4b9b8afa070c4784c03d2750ef
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398416"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596390"
 ---
 # <a name="objects-c-programming-guide"></a>Obiekty (Przewodnik programowania w języku C#)
-Definicja klasy lub struktury jest podobna do planu, który określa, co zrobić, typ. Obiekt jest zasadniczo bloku pamięci, która została przydzielona i skonfigurowane zgodnie z planu. Program może tworzyć wiele obiektów w tej samej klasy. Obiekty są również nazywane wystąpieniami i mogą być przechowywane w nazwanej zmiennej lub w tablicy lub kolekcji. Kod klienta jest kodem, który używa tych zmiennych w celu wywołania metod i uzyskiwać dostęp do właściwości publiczne obiektu. W języku zorientowane obiektowo takich jak C# typowego programu składa się z wielu obiektów interakcji dynamicznie.  
+Definicja klasy lub struktury jest taka sama jak w przypadku planu, który określa, jaki typ może być wykonywany. Obiekt jest w zasadzie blok pamięci, który został przydzielony i skonfigurowany zgodnie z planem. Program może utworzyć wiele obiektów tej samej klasy. Obiekty są również nazywane wystąpieniami i mogą być przechowywane w zmiennej nazwanej lub w tablicy lub kolekcji. Kod klienta to kod, który używa tych zmiennych do wywoływania metod i uzyskiwania dostępu do właściwości publicznych obiektu. W języku zorientowanym obiektowo, takim jak C#, typowy program składa się z wielu obiektów, które współpracują dynamicznie.  
   
 > [!NOTE]
-> Typy statyczne będą działały inaczej niż opisane tutaj. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statyczne elementy członkowskie klasy](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
+> Typy statyczne zachowują się inaczej niż opisane w tym miejscu. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statyczne elementy członkowskie klas](./static-classes-and-static-class-members.md).
   
-## <a name="struct-instances-vs-class-instances"></a>Struktura wystąpień programu vs. Wystąpienia klasy  
- Ponieważ klasy są typami odwołań, zmienna obiektu klasy zawiera odwołanie do adresu obiektu w zarządzanym stosie. Jeśli drugi obiekt tego samego typu, jest przypisany do pierwszego obiektu, obie zmienne odnoszą się do obiektu pod tym adresem. Ten punkt jest omówiona bardziej szczegółowo w dalszej części tego tematu.  
+## <a name="struct-instances-vs-class-instances"></a>Wystąpienia struktury a Wystąpienia klasy  
+ Ponieważ klasy są typami odwołań, zmienna obiektu klasy przechowuje odwołanie do adresu obiektu na zarządzanym stosie. Jeśli drugi obiekt tego samego typu jest przypisany do pierwszego obiektu, obie zmienne odwołują się do obiektu na tym adresie. Ten punkt jest omówiona bardziej szczegółowo w dalszej części tego tematu.  
   
- Wystąpienia klas są tworzone za pomocą [operatora new](../../../csharp/language-reference/operators/new-operator.md). W poniższym przykładzie `Person` jest typem i `person1` i `person 2` wystąpienia lub obiektów tego typu.  
+ Wystąpienia klas są tworzone przy użyciu [operatora new](../../language-reference/operators/new-operator.md). W poniższym przykładzie `Person` jest typem i `person1` i `person 2` są wystąpieniami lub obiektami tego typu.  
   
  [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
- Ponieważ struktury są typami wartości, zmienna obiektu struktura zawiera kopię całego obiektu. Można również tworzyć wystąpienia struktury za pomocą `new` operatora, ale nie jest wymagane, jak pokazano w poniższym przykładzie:  
+ Ponieważ struktury są typami wartości, zmienna obiektu struktury przechowuje kopię całego obiektu. Wystąpienia struktur można także utworzyć przy użyciu `new` operatora, ale nie jest to wymagane, jak pokazano w następującym przykładzie:  
   
  [!code-csharp[csProgGuideStatements#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#31)]  
   
- Pamięć dla obu `p1` i `p2` jest przydzielony na stosie wątku. Że pamięć jest odzyskana wraz z typu lub metody, w którym jest zdeklarowana. To jest jednym z powodów dlaczego struktury są kopiowane w przydziale. Z drugiej strony pamięci przydzielonej do wystąpienia klasy jest automatycznie odzyskiwanego (bezużyteczne) przez środowisko uruchomieniowe języka wspólnego, gdy wszystkie odwołania do obiektu zniknie z zakresu. Nie jest możliwe w sposób deterministyczny zniszczenie obiektu klasy, jak w przypadku języka C++. Aby uzyskać więcej informacji dotyczących wyrzucania elementów bezużytecznych w .NET Framework, zobacz [wyrzucania elementów bezużytecznych](../../../standard/garbage-collection/index.md).  
+ Pamięć dla obu `p1` i `p2` jest przypisana na stosie wątków. Ta pamięć jest odzyskiwana wraz z typem lub metodą, w której jest zadeklarowana. Jest to jedną z przyczyn, dlaczego struktury są kopiowane podczas przypisywania. Z kolei, pamięć przydzieloną dla wystąpienia klasy jest automatycznie odzyskiwana (nieelementy bezużyteczne) przez środowisko uruchomieniowe języka wspólnego, gdy wszystkie odwołania do obiektu zostały utracone poza zakresem. Nie można deterministycznie zniszczyć obiektu klasy, takiego jak można w C++. Aby uzyskać więcej informacji dotyczących wyrzucania elementów bezużytecznych w .NET Framework, zobacz [odzyskiwanie pamięci](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
-> Alokacji i dezalokacji pamięci na stosie zarządzanym jest wysoce zoptymalizowane pod kątem w środowisko uruchomieniowe języka wspólnego. W większości przypadków nie ma znaczące różnic w koszt wydajności związany z przydzielaniem wystąpienie klasy na stosie i przydzielanie wystąpienia struktury, na stosie.
+> Alokacja i cofanie alokacji pamięci na stercie zarządzanej jest wysoce zoptymalizowana w środowisku uruchomieniowym języka wspólnego. W większości przypadków nie ma znaczącej różnicy kosztu wydajności alokacji wystąpienia klasy na stercie i przydzielania wystąpienia struktury na stosie.
   
-## <a name="object-identity-vs-value-equality"></a>Vs tożsamości obiektu. Równość wartości  
- Podczas porównywania dwóch obiektów pod kątem równości, należy najpierw odróżnić czy chcesz wiedzieć, czy dwie zmienne reprezentują tego samego obiektu w pamięci, lub czy są równoważne wartości co najmniej jednego pola. Jeśli mają zamiar porównać wartości, należy rozważyć, czy obiekty są wystąpień typów wartości (struktury) lub typów referencyjnych (klas, obiektów delegowanych, tablice).  
+## <a name="object-identity-vs-value-equality"></a>Tożsamość obiektu a Równość wartości  
+ Porównując dwa obiekty pod kątem równości, należy najpierw rozróżnić, czy chcesz wiedzieć, czy dwie zmienne reprezentują ten sam obiekt w pamięci, czy też wartości co najmniej jednego z tych pól są równoważne. Jeśli zamierzasz porównywać wartości, należy wziąć pod uwagę, czy obiekty są wystąpieniami typów wartości (struktur) czy typy odwołań (klasy, delegatów, tablice).  
   
-- Aby ustalić, czy dwa wystąpienia klasy odnoszą się do tej samej lokalizacji w pamięci (co oznacza, że mają tę samą *tożsamości*), używa się statycznej <xref:System.Object.Equals%2A> metody. (<xref:System.Object?displayProperty=nameWithType> jest niejawne klasą bazową dla wszystkich typów wartości i typy odwołania, w tym klasy i struktury zdefiniowany przez użytkownika.)  
+- Aby określić, czy dwa wystąpienia klasy odwołują się do tej samej lokalizacji w pamięci (co oznacza, że mają tę samą *tożsamość*), <xref:System.Object.Equals%2A> Użyj metody statycznej. (<xref:System.Object?displayProperty=nameWithType> jest niejawną klasą bazową dla wszystkich typów wartości i typów referencyjnych, łącznie z strukturami i klasami zdefiniowanymi przez użytkownika).  
   
-- Aby określić, czy pola wystąpienia w dwa wystąpienia struktury mają te same wartości, należy użyć <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> metody. Ponieważ wszystkie struktury niejawnie dziedziczą z <xref:System.ValueType?displayProperty=nameWithType>, wywołać metodę bezpośrednio na obiekcie, jak pokazano w poniższym przykładzie:  
+- Aby określić, czy pola wystąpienia w dwóch wystąpieniach struktury mają te same wartości, użyj <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> metody. Ponieważ wszystkie struktury niejawnie dziedziczą <xref:System.ValueType?displayProperty=nameWithType>z, należy wywołać metodę bezpośrednio w obiekcie, jak pokazano w następującym przykładzie:  
   
  [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
- <xref:System.ValueType?displayProperty=nameWithType> Implementacji `Equals` używa odbicia, ponieważ muszą być możliwe ustalenie, jakie pola znajdują się w dowolnej struktury. Podczas tworzenia własnych struktur, Zastąp `Equals` metodę, aby zapewnić efektywne równości algorytm, który jest specyficzne dla danego typu.  
+ Implementacja używa odbicia, `Equals` ponieważ musi być w stanie określić, jakie pola znajdują się w dowolnej strukturze. <xref:System.ValueType?displayProperty=nameWithType> Podczas tworzenia własnych struktur Zastąp `Equals` metodę, aby zapewnić wydajny algorytm równości, który jest specyficzny dla danego typu.  
   
-- Aby ustalić, czy wartości pól w dwóch wystąpień klasy są takie same, można używać <xref:System.Object.Equals%2A> metody lub [== — operator](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-). Jednak je stosować wyłącznie wtedy jeśli klasa ma przesłonięcia lub przeciążone je do dostarczania niestandardowych definicji jakie "równości" oznacza dla obiektów tego typu. Klasa może być także implementować <xref:System.IEquatable%601> interfejsu lub <xref:System.Collections.Generic.IEqualityComparer%601> interfejsu. Oba interfejsy zawierają metody, które mogą służyć do testowania równość wartości. Podczas projektowania własnych klas zastąpienie `Equals`, upewnij się, że zgodnie z wytycznymi dotyczącymi określonych w [jak: Definiowanie równości wartości dla typu](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) i <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
+- Aby określić, czy wartości pól w dwóch wystąpieniach klasy są równe, może być możliwe użycie <xref:System.Object.Equals%2A> metody lub [operatora = =](../../language-reference/operators/equality-operators.md#equality-operator-). Jednak należy ich używać tylko wtedy, gdy klasa została zastąpiona lub przeciążona, aby zapewnić niestandardową definicję "Równość" dla obiektów tego typu. Klasa może również implementować <xref:System.IEquatable%601> Interfejs <xref:System.Collections.Generic.IEqualityComparer%601> lub interfejs. Oba interfejsy zapewniają metody, których można użyć do testowania równości wartości. Podczas projektowania własnych klas, które zastępują `Equals`, należy postępować zgodnie z wytycznymi opisanymi w [temacie How to: Zdefiniuj równość wartości dla typu](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md) i. <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  Informacje dodatkowe:  
   
-- [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Klasy](./classes.md)  
   
-- [Struktury](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Struktury](./structs.md)  
   
-- [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Konstruktory](./constructors.md)  
   
-- [Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Finalizatory](./destructors.md)  
   
-- [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
+- [Zdarzenia](../events/index.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [object](../../../csharp/language-reference/keywords/object.md)
-- [Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [class](../../../csharp/language-reference/keywords/class.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [new, operator](../../../csharp/language-reference/operators/new-operator.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [object](../../language-reference/keywords/object.md)
+- [Dziedziczenie](./inheritance.md)
+- [class](../../language-reference/keywords/class.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [new, operator](../../language-reference/operators/new-operator.md)
 - [System typu wspólnego](../../../standard/base-types/common-type-system.md)

@@ -1,27 +1,27 @@
 ---
-title: 'Instrukcje: Porównywanie zawartości dwóch folderów (LINQ) (C#)'
+title: 'Instrukcje: Porównaj zawartość dwóch folderów (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 5d944025d8d442bb80c492d1898487dff88c5bc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f9f592eebb94ea783cff3ae3bc76125a9df72dd7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585911"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594066"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Instrukcje: Porównywanie zawartości dwóch folderów (LINQ) (C#)
-W tym przykładzie przedstawiono trzy sposoby, aby porównać dwa listach plików:  
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Instrukcje: Porównaj zawartość dwóch folderów (LINQ) (C#)
+Ten przykład ilustruje trzy sposoby porównywania dwóch list plików:  
   
-- Przy użyciu zapytań dotyczących wartość logiczna określająca, czy plik dwóch list są identyczne.  
+- Za pomocą zapytania o wartość logiczną określającą, czy dwie listy plików są identyczne.  
   
-- Przy użyciu zapytań dotyczących wspólną do pobierania plików, które znajdują się w obu folderów.  
+- Wykonując zapytania dotyczące przecięcia do pobrania plików, które znajdują się w obu folderach.  
   
-- Przy użyciu zapytań dotyczących różnicy do pobierania plików, które znajdują się w jednym folderze, ale nie drugiej.  
+- Wykonując zapytania o różnicę zestawu, aby pobrać pliki znajdujące się w jednym folderze, ale nie w drugim.  
   
     > [!NOTE]
-    >  Techniki przedstawione w tym miejscu mogą być dostosowane do porównania sekwencje obiekty dowolnego typu.  
+    >  Techniki przedstawione w tym miejscu można dostosować do porównania sekwencji obiektów dowolnego typu.  
   
- `FileComparer` Klasy wyświetlane w tym miejscu przedstawiono sposób użycia klasy niestandardowej funkcji porównującej, wraz z standardowych operatorów zapytań. Klasa nie jest przeznaczona do użytku w rzeczywistych scenariuszach. Po prostu używa nazwy i długość w bajtach każdego pliku w celu określenia, czy zawartość każdego folderu są identyczne. W rzeczywistym scenariuszu należy modyfikować tego modułu porównującego do bardziej rygorystyczne sprawdzanie równości.  
+ W `FileComparer` poniższej klasie pokazano, jak używać niestandardowej klasy porównującej ze standardowymi operatorami zapytań. Klasa nie jest przeznaczona do użycia w rzeczywistych scenariuszach. Po prostu używa nazwy i długości w bajtach każdego pliku, aby określić, czy zawartość każdego folderu jest identyczna, czy nie. W rzeczywistym scenariuszu należy zmodyfikować tę funkcję porównującą w celu przeprowadzenia bardziej rygorystycznej kontroli równości.  
   
 ## <a name="example"></a>Przykład  
   
@@ -126,9 +126,9 @@ namespace QueryCompareTwoDirs
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie C# konsoli projekt aplikacji z `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
+ Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)

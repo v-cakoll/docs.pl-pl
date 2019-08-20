@@ -1,107 +1,107 @@
 ---
-title: Polimorfizm - C# przewodnik programowania
+title: Polimorfizm — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: a7cd450fbc2e0a5acd32675ab2c6b46dc2c92757
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: e71894e3674ed39dee129085d7ea7fb23a192f2b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398365"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596222"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfizm (Przewodnik programowania w języku C#)
-Polimorfizm często nazywa się trzeci filar programowanie zorientowane obiektowo, po hermetyzacji i dziedziczenia. Polimorfizm jest wyrazem greckim, co oznacza "wiele kształcie" i ma dwa różne aspekty:  
+Polimorfizm jest często określany jako trzeci filar programowania zorientowanego obiektowo po hermetyzacji i dziedziczeniu. Polimorfizm jest wyrazem greckim, który oznacza "wiele-kształt" i ma dwa odrębne aspekty:  
   
-- W czasie wykonywania obiektów klasy pochodne mogą być traktowane jako obiekty klasy bazowej, w miejscach takich jak parametry metody i kolekcje lub tablic. W takiej sytuacji deklarowany typ obiektu nie jest już taka sama jak jego typu run-time.  
+- W czasie wykonywania obiekty klasy pochodnej mogą być traktowane jako obiekty klasy bazowej w miejscach takich jak parametry metody i kolekcje lub tablice. W takim przypadku zadeklarowany typ obiektu nie jest już identyczny z typem jego czasu wykonywania.  
   
-- Klasy bazowe mogą definiować ani implementować [wirtualnego](../../../csharp/language-reference/keywords/virtual.md) *metody*, oraz klasy pochodne mogą [zastąpienia](../../../csharp/language-reference/keywords/override.md) je, co oznacza, że zapewniają one własne definicję i implementację. W czasie wykonywania gdy kod klienta wywołuje metodę, środowisko CLR odwołuje się do typu run-time obiektu, a wywołuje zastąpienie metod wirtualnych. Ten sposób w kodzie źródłowym wywołania metody w klasie bazowej i spowodować, że wersja klasy pochodnej metody do wykonania.  
+- Klasy bazowe mogą definiować i implementować *metody* [wirtualne](../../language-reference/keywords/virtual.md) , a klasy pochodne mogą je przesłonić, co oznacza, że zapewniają własne definicje i implementacje. [](../../language-reference/keywords/override.md) W czasie wykonywania, gdy kod klienta wywołuje metodę, środowisko CLR wyszukuje typ obiektu w czasie wykonywania i wywołuje przesłonięcie metody wirtualnej. W tym celu w kodzie źródłowym można wywołać metodę w klasie bazowej i spowodować, że ma zostać wykonana wersja klasy pochodnej.  
   
- Metody wirtualne umożliwiają pracować z grupami powiązanych obiektów w jednolity sposób. Na przykład załóżmy, że masz rysunku aplikacji, która umożliwia użytkownikowi tworzenie różne rodzaje kształtów na powierzchnię rysunku. Nie wiesz, w czasie kompilacji które określonych rodzajów kształtów spowoduje utworzenie użytkownika. Jednak aplikacja ma do śledzenia różnych typów kształty, które są tworzone i ma je zaktualizować w odpowiedzi na akcje myszy użytkownika. Polimorfizm można użyć, aby rozwiązać ten problem w dwa podstawowe kroki:  
+ Metody wirtualne umożliwiają współpracę z grupami powiązanych obiektów w jednolity sposób. Załóżmy na przykład, że masz aplikację do rysowania, która umożliwia użytkownikowi tworzenie różnych rodzajów kształtów na powierzchni rysunku. W czasie kompilacji, które są tworzone dla poszczególnych typów kształtów, użytkownik nie wie. Jednak aplikacja musi śledzić wszystkie różne typy tworzonych kształtów i musi je zaktualizować w odpowiedzi na akcje myszy wykonywane przez użytkownika. Można użyć polimorfizmu, aby rozwiązać ten problem w dwóch podstawowych krokach:  
   
-1. Tworzenie hierarchii klas, w którym każda klasa kształt pochodzi od klasy wspólną klasę bazową.  
+1. Utwórz hierarchię klas, w której każda klasa określonego kształtu pochodzi ze wspólnej klasy bazowej.  
   
-2. Użyj metody wirtualnej można wywołać metody odpowiedniej dla dowolnej klasy pochodnej za pomocą jednego wywołania metody klasy bazowej.  
+2. Użyj metody wirtualnej do wywołania odpowiedniej metody dla dowolnej klasy pochodnej za pomocą pojedynczego wywołania metody klasy bazowej.  
   
- Najpierw należy utworzyć klasę bazową, która wywołuje `Shape`i klas pochodnych, takich jak `Rectangle`, `Circle`, i `Triangle`. Nadaj `Shape` wywołuje metodę wirtualną klasy `Draw`, i zastąpienie go w każdej klasie pochodnej, aby narysować określonych kształtów, klasa reprezentuje. Utwórz `List<Shape>` obiektu i dodać do niego koła, trójkąt i prostokąt. Aby zaktualizować powierzchni do rysowania, użyj [foreach](../../../csharp/language-reference/keywords/foreach-in.md) pętli do iteracji przez listę i wywołania `Draw` metody na każdym `Shape` obiektu na liście. Mimo że każdy obiekt na liście ma zadeklarowany typ `Shape`, jest typu run-time (wersja przesłonięte metody w każdej klasie pochodnej), który zostanie wywołany.  
+ Najpierw Utwórz klasę bazową o nazwie `Shape`i klasy pochodne, takie jak `Rectangle`, `Circle`, i `Triangle`. Nadaj klasie metodę wirtualną o nazwie `Draw`i Przesłoń ją w każdej klasie pochodnej, aby narysować określony kształt, który reprezentuje Klasa. `Shape` `List<Shape>` Utwórz obiekt i Dodaj okrąg, Trójkąt i prostokąt do niego. Aby zaktualizować powierzchnię rysowania, użyj pętli [foreach](../../language-reference/keywords/foreach-in.md) , aby wykonać iterację listy i wywołać `Draw` metodę dla każdego `Shape` obiektu na liście. Mimo że każdy obiekt na liście ma zadeklarowany typ `Shape`, jest typem czasu wykonywania (zastąpioną wersją metody w każdej klasie pochodnej), która zostanie wywołana.  
   
  [!code-csharp[csProgGuideInheritance#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#50)]  
   
- W języku C# polimorficznych jest każdego typu, ponieważ dziedziczy wszystkie typy, w tym typy zdefiniowane przez użytkownika <xref:System.Object>.  
+ W C#programie każdy typ jest polimorficzny, ponieważ wszystkie typy, włącznie z typami zdefiniowanymi przez <xref:System.Object>użytkownika, dziedziczą z.  
   
-## <a name="polymorphism-overview"></a>Polimorfizm — omówienie  
+## <a name="polymorphism-overview"></a>Omówienie polimorfizmu  
   
 ### <a name="virtual-members"></a>Wirtualne składowe  
- Klasa pochodna dziedziczy z klasy bazowej, uzyskuje się wszystkie metody, pola, właściwości i zdarzeń klasy podstawowej. Projektant klasy pochodne mogą wybrać opcję  
+ Gdy Klasa pochodna dziedziczy z klasy bazowej, uzyskuje wszystkie metody, pola, właściwości i zdarzenia klasy bazowej. Projektant klasy pochodnej może wybrać, czy należy  
   
-- Przesłoń składowe wirtualnego w klasie bazowej  
+- Przesłoń wirtualne elementy członkowskie w klasie bazowej,  
   
-- dziedziczenie najbliższego metody klasy bazowej nie przesłanianie go  
+- Dziedzicz najbliższą metodę klasy bazowej bez jej przesłaniania  
   
-- Zdefiniuj nową metodę niewirtualną implementacji tych członków, którzy Ukryj implementacji klasy podstawowej  
+- Zdefiniuj nową niewirtualną implementację tych elementów członkowskich, które ukrywają implementacje klas podstawowych  
   
- Klasa pochodna można zastąpić składowej klasy bazowej, tylko wtedy, gdy składowej klasy bazowej jest zadeklarowany jako [wirtualnego](../../../csharp/language-reference/keywords/virtual.md) lub [abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md). Należy użyć pochodnej elementu członkowskiego [zastąpienia](../../../csharp/language-reference/keywords/override.md) — słowo kluczowe, aby jawnie wskazać, że metoda jest przeznaczona do wzięcia udziału w wywołaniu wirtualnego. Poniższy kod stanowi przykład:  
+ Klasa pochodna może przesłonić składową klasy bazowej tylko wtedy, gdy element członkowski klasy bazowej jest zadeklarowany jako [wirtualny](../../language-reference/keywords/virtual.md) lub [abstrakcyjny](../../language-reference/keywords/abstract.md). Pochodny element członkowski musi użyć słowa kluczowego [override](../../language-reference/keywords/override.md) , aby jawnie wskazać, że metoda ma uczestniczyć w wywołaniu wirtualnym. Poniższy kod zawiera przykład:  
   
  [!code-csharp[csProgGuideInheritance#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#20)]  
   
- Pola nie mogą być wirtualne; tylko metody, właściwości, zdarzeń i indeksatory mogą być wirtualne. Ten element członkowski w klasie pochodnej przeciążono wirtualna elementu członkowskiego, nosi nawet wtedy, gdy wystąpienie tej klasy jest uzyskiwany jako wystąpienia klasy bazowej. Poniższy kod stanowi przykład:  
+ Pola nie mogą być wirtualne; tylko metody, właściwości, zdarzenia i indeksatory mogą być wirtualne. Gdy Klasa pochodna przesłania wirtualną składową, ten element członkowski jest wywoływany nawet wtedy, gdy do wystąpienia tej klasy jest uzyskiwany dostęp jako wystąpienie klasy bazowej. Poniższy kod zawiera przykład:  
   
  [!code-csharp[csProgGuideInheritance#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#21)]  
   
- Włącz klasy pochodne, aby rozszerzyć klasę bazową, bez konieczności korzystania z implementacji klasy podstawowej metody, właściwości i metod wirtualnych. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md). Interfejs zapewnia innym sposobem zdefiniowania metody lub zestaw metod, których implementacja pozostanie w klasach pochodnych. Więcej informacji znajdziesz w artykule [Interfejsy](../../../csharp/programming-guide/interfaces/index.md).  
+ Metody wirtualne i właściwości umożliwiają klasom pochodnym poszerzanie klasy bazowej bez konieczności używania implementacji klasy bazowej metody. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji ze słowami kluczowymi override i New](./versioning-with-the-override-and-new-keywords.md). Interfejs zapewnia inny sposób definiowania metody lub zestawu metod, których implementacja pozostała do klas pochodnych. Więcej informacji znajdziesz w artykule [Interfejsy](../interfaces/index.md).  
   
-### <a name="hiding-base-class-members-with-new-members"></a>Ukrywanie składowych klasy bazowej dla nowych członków  
- Jeśli chcesz pochodnej elementów członkowskich mają taką samą nazwę jak element członkowski w klasie bazowej, ale chcesz, aby wziąć udział w wirtualnych wywołania on, możesz użyć [nowe](../../../csharp/language-reference/keywords/new-modifier.md) — słowo kluczowe. `new` — Słowo kluczowe jest umieszczany przed zwracanym typem składowej klasy, która jest zastępowany. Poniższy kod stanowi przykład:  
+### <a name="hiding-base-class-members-with-new-members"></a>Ukrywanie członków klasy bazowej przy użyciu nowych członków  
+ Jeśli element członkowski pochodna ma mieć taką samą nazwę jak element członkowski w klasie bazowej, ale nie chcesz, aby uczestniczył w wywołaniu wirtualnym, możesz użyć słowa kluczowego [New](../../language-reference/keywords/new-modifier.md) . `new` Słowo kluczowe jest umieszczane przed typem zwracanym elementu członkowskiego klasy, który jest zastępowany. Poniższy kod zawiera przykład:  
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   
- Nadal jest możliwy członków ukrytej klasy bazowej z poziomu kodu klienta przez rzutowanie wystąpienie klasy pochodnej do wystąpienia klasy bazowej. Na przykład:  
+ Do elementów członkowskich ukrytych klas podstawowych nadal można uzyskać dostęp z kodu klienta, Rzutowanie wystąpienia klasy pochodnej na wystąpienie klasy bazowej. Przykład:  
   
  [!code-csharp[csProgGuideInheritance#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#19)]  
   
-### <a name="preventing-derived-classes-from-overriding-virtual-members"></a>Uniemożliwia zastępowanie wirtualnych elementów członkowskich klas pochodnych  
- Wirtualne elementy członkowskie nadal wirtualnego przez czas nieokreślony, niezależnie od tego, jak wiele klas zostały zadeklarowane między wirtualna elementu członkowskiego i klasy, która pierwotnie zadeklarowała go. Jeśli klasy A deklaruje wirtualna elementu członkowskiego i klasy B pochodzi od A, a klasa C pochodzi od B, klasa C dziedziczy wirtualna elementu członkowskiego i włączono opcję, aby go zastąpić, niezależnie od tego, czy klasy B podana zastąpienia dla tego elementu członkowskiego. Poniższy kod stanowi przykład:  
+### <a name="preventing-derived-classes-from-overriding-virtual-members"></a>Uniemożliwianie klas pochodnych przed zastępowaniem wirtualnych elementów członkowskich  
+ Wirtualne elementy członkowskie pozostają na czas nieokreślony, niezależnie od tego, jak wiele klas zostało zadeklarowanych między wirtualną składową i klasą, która pierwotnie została zadeklarowana. Jeśli klasa A deklaruje wirtualną składową, a Klasa B pochodzi z, a Klasa C pochodzi od B, Klasa C dziedziczy do wirtualnego elementu członkowskiego i ma możliwość jego zastąpienia, niezależnie od tego, czy Klasa B deklaruje przesłonięcie dla tego elementu członkowskiego. Poniższy kod zawiera przykład:  
   
  [!code-csharp[csProgGuideInheritance#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#22)]  
   
- Klasy pochodnej można zatrzymać dziedziczenie wirtualne od zadeklarowania zastąpienia jako [zapieczętowanego](../../../csharp/language-reference/keywords/sealed.md). Wymaga to umieszczenie `sealed` — słowo kluczowe przed `override` — słowo kluczowe w deklaracji członka klasy. Poniższy kod stanowi przykład:  
+ Klasa pochodna może zatrzymać Dziedziczenie wirtualne, deklarując przesłonięcie jako [Sealed](../../language-reference/keywords/sealed.md). Wymaga to umieszczenia `sealed` słowa kluczowego `override` przed słowem kluczowym w deklaracji składowej klasy. Poniższy kod zawiera przykład:  
   
  [!code-csharp[csProgGuideInheritance#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#24)]  
   
- W poprzednim przykładzie, Metoda `DoWork` nie jest już wirtualnych do dowolnej klasie pochodnej C. Nadal jest wirtualna dla wystąpienia elementu C, nawet wtedy, gdy są one rzutowane na typ B lub typ metody zapieczętowane A. może być zastąpiony przez klasy pochodne przy użyciu `new` — słowo kluczowe, co ilustruje poniższy przykład:  
+ W poprzednim przykładzie metoda `DoWork` nie jest już wirtualna dla żadnej klasy pochodnej języka C. Nadal jest ona wirtualna dla wystąpień C, nawet jeśli są one rzutowane do typu B lub typu A. zapieczętowane metody mogą zostać zastąpione przez klasy pochodne za pomocą `new` słowa kluczowego, jak pokazano w poniższym przykładzie:  
   
  [!code-csharp[csProgGuideInheritance#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#25)]  
   
- W tym przypadku jeśli `DoWork` jest wywoływana w D przy użyciu zmiennej typu D, nowe `DoWork` jest wywoływana. Jeśli zmienna typu C, B i A umożliwia dostęp do wystąpienia D, wywołanie `DoWork` będzie zgodna z zasadami dziedziczenie wirtualne routingu wywołań do implementacji `DoWork` klasy C.  
+ W tym przypadku, jeśli `DoWork` jest wywoływana w D przy użyciu zmiennej typu d, Nowa `DoWork` jest wywoływana. Jeśli zmienna typu C, B lub a jest używana w celu uzyskania dostępu do wystąpienia D, wywołanie `DoWork` zostanie zgodne z regułami dziedziczenia wirtualnego, a następnie rozsyła te wywołania do `DoWork` implementacji klasy C.  
   
-### <a name="accessing-base-class-virtual-members-from-derived-classes"></a>Uzyskiwanie dostępu do wirtualnych elementów członkowskich klasy podstawowej w klasach pochodnych  
- Klasa pochodna, która została zastąpiona bądź przesłonięcia metody lub właściwości mogą nadal uzyskiwać dostęp do metody lub właściwości w klasie bazowej, przy użyciu `base` — słowo kluczowe. Poniższy kod stanowi przykład:  
+### <a name="accessing-base-class-virtual-members-from-derived-classes"></a>Uzyskiwanie dostępu do wirtualnych elementów członkowskich klasy podstawowej z klas pochodnych  
+ Klasa pochodna, która zastąpiła lub przesłonięta metodę lub właściwość, może nadal uzyskiwać dostęp do metody lub właściwości w `base` klasie podstawowej przy użyciu słowa kluczowego. Poniższy kod zawiera przykład:  
   
  [!code-csharp[csProgGuideInheritance#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#26)]  
   
- Aby uzyskać więcej informacji, zobacz [podstawowy](../../../csharp/language-reference/keywords/base.md).  
+ Aby uzyskać więcej informacji, zobacz temat [Base](../../language-reference/keywords/base.md).  
   
 > [!NOTE]
->  Zalecane jest, że wirtualne elementy członkowskie używać `base` wywoływały implementację klasy bazowej tego członka w ich własnych implementacji. Umożliwienie zachowanie klasy bazowej, występują umożliwia klasy pochodnej skoncentrować się na implementowanie zachowania specyficzne dla klasy pochodnej. Jeśli Implementacja klasy bazowej nie jest wywoływana, to do klasy pochodnej, aby ich zachowanie zgodne z zachowaniem klasy bazowej.  
+>  Zaleca się, aby wirtualne składowe `base` używały do wywoływania implementacji klasy bazowej tego elementu członkowskiego we własnej implementacji. Zezwolenie na zachowanie klasy bazowej umożliwia skoncentrowanie się na implementowaniu przez klasę pochodną zachowania związanego z klasą pochodną. Jeśli implementacja klasy bazowej nie jest wywoływana, jest do klasy pochodnej, aby ich zachowanie było zgodne z zachowaniem klasy bazowej.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
-- [Przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+- [Przechowywanie wersji przesłonięć i nowych słów kluczowych](./versioning-with-the-override-and-new-keywords.md)  
   
-- [Użycie przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+- [Użycie przesłonięć i nowych słów kluczowych](./knowing-when-to-use-override-and-new-keywords.md)  
   
-- [Instrukcje: Przesłanianie metody ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+- [Instrukcje: Zastąp metodę ToString](./how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [Klasy abstrakcyjne i zapieczętowane oraz elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
-- [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)
-- [Zdarzenia](../../../csharp/programming-guide/events/index.md)
-- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [Indeksatory](../../../csharp/programming-guide/indexers/index.md)
-- [Typy](../../../csharp/programming-guide/types/index.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Dziedziczenie](./inheritance.md)
+- [Klasy abstrakcyjne i zapieczętowane oraz elementy członkowskie klas](./abstract-and-sealed-classes-and-class-members.md)
+- [Metody](./methods.md)
+- [Zdarzenia](../events/index.md)
+- [Właściwości](./properties.md)
+- [Indeksatory](../indexers/index.md)
+- [Typy](../types/index.md)

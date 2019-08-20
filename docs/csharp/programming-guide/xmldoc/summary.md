@@ -1,5 +1,5 @@
 ---
-title: <summary> - C# Przewodnik programowania
+title: <summary> — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: 0e6408f1f45bb5f1406b4b1a7f6fe2cf543109e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a509c002bb6a55b4751712925ae7cc613911af2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675978"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587619"
 ---
-# <a name="summary-c-programming-guide"></a>\<Podsumowanie > (C# Programming Guide)
+# <a name="summary-c-programming-guide"></a>\<Podsumowanie > (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -28,16 +28,16 @@ ms.locfileid: "61675978"
  Podsumowanie obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- \<Podsumowania > tag powinien być używany do opisu typu lub składowej typu. Użyj [ \<Uwagi >](../../../csharp/programming-guide/xmldoc/remarks.md) można dodać dodatkowe informacje do opisu typu. Użyj [cref — atrybut](../../../csharp/programming-guide/xmldoc/cref-attribute.md) umożliwiające dokumentacji narzędzia, takie jak [DocFX](https://dotnet.github.io/docfx/) i [Sandcastle](https://github.com/EWSoftware/SHFB) do utworzenia wewnętrznego hiperlinki do stron dokumentacji dla elementów kodu.  
+ Tag \<> podsumowujący powinien służyć do opisywania typu lub elementu członkowskiego typu. [ Użyj\<uwag >](./remarks.md) , aby dodać informacje uzupełniające do opisu typu. Użyj [atrybutu cref](./cref-attribute.md) , aby włączyć narzędzia do dokumentacji, takie jak [DocFX](https://dotnet.github.io/docfx/) i [Sandcastle](https://github.com/EWSoftware/SHFB) , aby utworzyć wewnętrzne hiperłącza do stron dokumentacji dla elementów kodu.  
   
- Tekst dla \<podsumowania > tag to jedyne źródło informacji o typie w technologii IntelliSense i jest wyświetlany w oknie przeglądarki obiektów.  
+ Tekst dla \<tagu > podsumowującego jest jedynym źródłem informacji o typie w technologii IntelliSense i jest również wyświetlany w oknie Przeglądarka obiektów.  
   
- Kompiluj przy użyciu [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) do Przetwarzaj komentarze dokumentacji do pliku. Aby utworzyć dokumentację na podstawie pliku generowanych przez kompilator, można utworzyć narzędzie niestandardowe, lub użyj narzędzia takiego jak [DocFX](https://dotnet.github.io/docfx/) lub [Sandcastle](https://github.com/EWSoftware/SHFB).  
+ Kompiluj z [/doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku. Aby utworzyć ostateczną dokumentację opartą na pliku generowanym przez kompilator, można utworzyć niestandardowe narzędzie lub użyć narzędzia, takiego jak [DocFX](https://dotnet.github.io/docfx/) lub [Sandcastle](https://github.com/EWSoftware/SHFB).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideDocComments#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#12)]  
   
- Poprzedni przykład tworzy następującego pliku XML.  
+ W poprzednim przykładzie jest tworzony następujący plik XML.  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -63,11 +63,11 @@ ms.locfileid: "61675978"
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak wprowadzić `cref` odwołanie do typu ogólnego.  
+ Poniższy przykład pokazuje, `cref` jak utworzyć odwołanie do typu ogólnego.  
   
  [!code-csharp[csProgGuideDocComments#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#11)]  
   
- Poprzedni przykład tworzy następującego pliku XML.  
+ W poprzednim przykładzie jest tworzony następujący plik XML.  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -95,5 +95,5 @@ ms.locfileid: "61675978"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Zalecane tagi przeznaczone do komentarzy dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

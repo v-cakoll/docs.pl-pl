@@ -1,44 +1,44 @@
 ---
-title: Argumenty wiersza polecenia — C# przewodnik programowania
+title: Argumenty wiersza polecenia — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 8216e144dfcaeaf9b480d681ae91ce59832ae9e3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3264be0ae6159563ae19ac8aeb1bf3dc90ac68df
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877534"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588940"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumenty wiersza poleceń (Przewodnik programowania w języku C#)
-Możesz wysyłać argumenty do `Main` metoda definiując metodę na jeden z następujących sposobów:  
+Argumenty do `Main` metody można wysłać, definiując metodę w jeden z następujących sposobów:  
   
  [!code-csharp[csProgGuideMain#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#2)]  
   
  [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]  
   
 > [!NOTE]
->  Aby włączyć argumenty wiersza poleceń w `Main` metody w aplikacji Windows Forms, należy ręcznie zmodyfikować podpis `Main` w pliku program.cs. Kod wygenerowany przez projektanta Windows Forms tworzy `Main` bez parametru wejściowego. Można również użyć <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> lub <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> dostęp do argumentów wiersza polecenia z dowolnego punktu w konsoli lub aplikacji Windows.  
+>  Aby włączyć argumenty wiersza polecenia w `Main` metodzie w aplikacji Windows Forms, należy ręcznie zmodyfikować `Main` sygnaturę w program.cs. Kod wygenerowany przez projektanta Windows Forms tworzy `Main` bez parametru wejściowego. Można również użyć <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> lub <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> , aby uzyskać dostęp do argumentów wiersza polecenia z dowolnego punktu w konsoli lub aplikacji systemu Windows.  
   
- Wartość parametru `Main` metodą jest <xref:System.String> tablica reprezentująca argumenty wiersza polecenia. Zwykle określasz, czy argumenty istnieją testując `Length` właściwości, na przykład:  
+ Parametr `Main` metody<xref:System.String> jest tablicą, która reprezentuje argumenty wiersza polecenia. Zwykle określasz, czy argumenty istnieją przez testowanie `Length` właściwości, na przykład:  
   
  [!code-csharp[csProgGuideMain#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#4)]  
   
- Możesz również konwertować argumenty ciągu na typy liczbowe, za pomocą <xref:System.Convert> klasy lub `Parse` metody. Na przykład następująca instrukcja konwertuje `string` do `long` numeru przy użyciu <xref:System.Int64.Parse%2A> metody:  
+ Możesz również skonwertować argumenty ciągu na typy liczbowe przy użyciu <xref:System.Convert> klasy `Parse` lub metody. Na przykład następująca instrukcja konwertuje `string` `long` do liczby przy użyciu <xref:System.Int64.Parse%2A> metody:  
   
 ```  
 long num = Int64.Parse(args[0]);  
 ```  
   
- Istnieje również możliwość użycia typu C# `long`, którego aliasy `Int64`:  
+ Można również użyć C# typu `long`, który aliasuje: `Int64`  
   
 ```  
 long num = long.Parse(args[0]);  
 ```  
   
- Można również użyć `Convert` metody klasy `ToInt64` aby zrobić to samo:  
+ Można również użyć `Convert` metody `ToInt64` klasy, aby wykonać tę samą czynność:  
   
 ```  
 long num = Convert.ToInt64(s);  
@@ -47,38 +47,38 @@ long num = Convert.ToInt64(s);
  Aby uzyskać więcej informacji, zobacz <xref:System.Int64.Parse%2A> i <xref:System.Convert>.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać argumentów wiersza polecenia w aplikacji konsoli. Aplikacja przyjmuje jeden argument w czasie wykonywania, konwertuje argument na liczbę całkowitą i oblicza silnię liczby. Jeśli zostały dostarczone żadne argumenty, aplikacja wyświetli komunikat, który objaśnia poprawne użycie programu.  
+ Poniższy przykład pokazuje, jak używać argumentów wiersza polecenia w aplikacji konsolowej. Aplikacja przyjmuje jeden argument w czasie wykonywania, konwertuje argument na liczbę całkowitą i Oblicza silnię liczby. Jeśli nie podano żadnych argumentów, aplikacja wystawia komunikat z wyjaśnieniem prawidłowego użycia programu.  
   
  Aby skompilować i uruchomić aplikację z poziomu wiersza polecenia, wykonaj następujące kroki:  
   
-1. Wklej następujący kod do dowolnego edytora tekstów, a następnie zapisz plik jako plik tekstowy o nazwie `Factorial.cs`.  
+1. Wklej poniższy kod do dowolnego edytora tekstów, a następnie Zapisz plik jako plik tekstowy o nazwie `Factorial.cs`.  
   
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
-2. Z **Start** ekranu lub **Start** menu, Otwórz program Visual Studio **wiersz polecenia dla deweloperów** okna, a następnie przejdź do folderu, który zawiera plik, który został właśnie utworzony.  
+2. Na ekranie **startowym** lub w menu **start** Otwórz okno **wiersz polecenia dla deweloperów** programu Visual Studio, a następnie przejdź do folderu zawierającego plik, który został właśnie utworzony.  
   
 3. Wprowadź następujące polecenie, aby skompilować aplikację.  
   
      `csc Factorial.cs`  
   
-     Jeśli aplikacja nie ma żadnych błędów kompilacji, plik wykonywalny, który nosi nazwę `Factorial.exe` zostanie utworzony.  
+     Jeśli aplikacja nie ma błędów kompilacji, tworzony jest plik wykonywalny o nazwie `Factorial.exe` .  
   
 4. Wprowadź następujące polecenie, aby obliczyć silnię 3:  
   
      `Factorial 3`  
   
-5. Polecenie generuje dane wyjściowe: `The factorial of 3 is 6.`  
+5. To polecenie tworzy następujące dane wyjściowe:`The factorial of 3 is 6.`  
   
 > [!NOTE]
->  Podczas uruchamiania aplikacji w programie Visual Studio, można określić argumenty wiersza poleceń w [strona debugowania, Projektant projektu](/visualstudio/ide/reference/debug-page-project-designer).  
+>  Podczas uruchamiania aplikacji w programie Visual Studio, można określić argumenty wiersza polecenia na [stronie debugowania, Projektant projektu](/visualstudio/ide/reference/debug-page-project-designer).  
   
- Aby uzyskać więcej przykładów użycia argumentów wiersza polecenia, zobacz [jak: Tworzenie i używanie zestawów przy użyciu wiersza polecenia](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
+ Aby uzyskać więcej przykładów użycia argumentów wiersza polecenia, zobacz [How to: Tworzenie i używanie zestawów przy użyciu wiersza](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)polecenia.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Environment?displayProperty=nameWithType>
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Main() i argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [Instrukcje: Wyświetlanie argumentów wiersza poleceń](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Main() — zwracane wartości](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
-- [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Main() i argumenty wiersza polecenia](./index.md)
+- [Instrukcje: Wyświetlanie argumentów wiersza polecenia](./how-to-display-command-line-arguments.md)
+- [Main() — zwracane wartości](./main-return-values.md)
+- [Klasy](../classes-and-structs/classes.md)

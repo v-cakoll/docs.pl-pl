@@ -1,5 +1,5 @@
 ---
-title: -doc (opcje kompilatora C#)
+title: -doc (C# opcje kompilatora)
 ms.date: 07/20/2015
 f1_keywords:
 - FileProperties.BuildAction
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 7c8fc11c8799912ea6340940ccd254ae82519591
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e3abb868ff9c9418c7cc565ae667b8225ac9e6e4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591693"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69603039"
 ---
-# <a name="-doc-c-compiler-options"></a>-doc (opcje kompilatora C#)
-**-Doc** opcja służy do umieszczania komentarzy do dokumentacji w pliku XML.  
+# <a name="-doc-c-compiler-options"></a>-doc (C# opcje kompilatora)
+Opcja **-doc** umożliwia umieszczenie komentarzy do dokumentacji w pliku XML.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,37 +30,37 @@ ms.locfileid: "64591693"
   
 ## <a name="arguments"></a>Argumenty  
  `file`  
- Plik wyjściowy dla formatu XML, który jest wypełniana przy użyciu komentarzy w plikach kodu źródłowego, kompilacji.  
+ Plik wyjściowy dla XML, który jest wypełniony komentarzami w plikach kodu źródłowego kompilacji.  
   
 ## <a name="remarks"></a>Uwagi  
- W plikach kodu źródłowego komentarzy do dokumentacji, które poprzedzają poniżej można przetworzyć i dodawane do pliku XML:  
+ W plikach kodu źródłowego Komentarze do dokumentacji, które poprzedzają następujące elementy, mogą być przetwarzane i dodawane do pliku XML:  
   
-- Takie typy zdefiniowane przez użytkownika jako [klasy](../../../csharp/language-reference/keywords/class.md), [delegować](../../../csharp/language-reference/keywords/delegate.md), lub [interfejsu](../../../csharp/language-reference/keywords/interface.md)  
+- Takie typy zdefiniowane przez użytkownika jako [Klasa](../keywords/class.md), [Delegat](../keywords/delegate.md)lub [interfejs](../keywords/interface.md)  
   
-- Takich elementów członkowskich jako pole, [zdarzeń](../../../csharp/language-reference/keywords/event.md), [właściwość](../../../csharp/programming-guide/classes-and-structs/using-properties.md), lub metody  
+- Takie elementy członkowskie jak pole, [zdarzenie](../keywords/event.md), [Właściwość](../../programming-guide/classes-and-structs/using-properties.md)lub metoda  
   
- Pliku kodu źródłowego, który zawiera główny najpierw są kierowane do pliku XML.  
+ Plik kodu źródłowego, który zawiera główny, jest wyprowadzany jako pierwszy w formacie XML.  
   
- Aby użyć pliku XML wygenerowanego do użytku z programem [IntelliSense](/visualstudio/ide/using-intellisense) funkcji, umożliwić nazwę pliku w pliku XML, który być taka sama jak zestaw ma być obsługiwane, a następnie sprawdź, czy plik .xml znajduje się w tym samym katalogu co zestaw. W związku z tym gdy zestaw jest przywoływana w projekcie programu Visual Studio, pliku XML, który znajduje się także. Zobacz [podawania komentarzy do kodu](/visualstudio/ide/supplying-xml-code-comments) i uzyskać więcej informacji.  
+ Aby użyć wygenerowanego pliku XML do użycia z funkcją [IntelliSense](/visualstudio/ide/using-intellisense) , pozwól, aby nazwa pliku XML była taka sama jak zestaw, który ma być obsługiwany, a następnie upewnij się, że plik. XML znajduje się w tym samym katalogu, co zestaw. Z tego względu, gdy zestaw jest przywoływany w projekcie programu Visual Studio, można również znaleźć plik. XML. Zobacz [dostarczanie komentarzy do kodu](/visualstudio/ide/supplying-xml-code-comments) i aby uzyskać więcej informacji.  
   
- Jeśli kompilujesz z [-target: module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), `file` będzie zawierać \<zestawu > \< /Assembly > Znaczniki, określając nazwę pliku zawierającego manifest zestawu dla pliku danych wyjściowych Kompilacja.  
+ O ile nie kompilujesz [elementu with-target: module](./target-module-compiler-option.md), `file` program\<będzie zawierał \<zestaw >/Assembly > Tagi określające nazwę pliku zawierającego manifest zestawu dla pliku wyjściowego kompilacji.  
   
 > [!NOTE]
->  Doc — opcja ma zastosowanie do wszystkich wejściowych plików; lub, jeśli w ustawieniach projektu, wszystkie pliki w projekcie. Aby wyłączyć ostrzeżenia dotyczące komentarzy dokumentacji dla określonego pliku lub sekcji kodu, należy użyć [ostrzeżenie #pragma](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md).  
+>  Opcja-doc dotyczy wszystkich plików wejściowych; lub, jeśli jest ustawiony w ustawieniach projektu, wszystkie pliki w projekcie. Aby wyłączyć ostrzeżenia związane z komentarzami do dokumentacji dla określonego pliku lub sekcji kodu, użyj [#pragma ostrzeżenie](../preprocessor-directives/preprocessor-pragma-warning.md).  
   
- Zobacz [tagi zalecane dla komentarzy do dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md) sposobów generować dokumentację z komentarzy w kodzie.  
+ Zapoznaj się z [polecanymi tagami komentarzy do dokumentacji](../../programming-guide/xmldoc/recommended-tags-for-documentation-comments.md) , aby poznać sposoby generowania dokumentacji z komentarzy w kodzie.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1. Otwórz projekt **właściwości** strony.  
+1. Otwórz stronę **Właściwości** projektu.  
   
-2. Kliknij przycisk **kompilacji** kartę.  
+2. Kliknij kartę **kompilacja** .  
   
-3. Modyfikowanie **pliku dokumentacji XML** właściwości.  
+3. Zmodyfikuj właściwość **pliku dokumentacji XML** .  
   
- Aby uzyskać informacje na temat sposobu programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
+ Aby uzyskać informacje na temat sposobu, w jaki można programowo ustawić <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>tę opcję kompilatora, zobacz.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opcje kompilatora C#](./index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

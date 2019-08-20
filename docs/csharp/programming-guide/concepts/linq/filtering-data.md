@@ -2,31 +2,31 @@
 title: Filtrowanie danych (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: 61d80674fd858063e77749342a33d714e3a57c6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17d3a65b6042c9679a263eff0048f5360c4aa546
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668373"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594392"
 ---
 # <a name="filtering-data-c"></a>Filtrowanie danych (C#)
-Filtrowanie odnosi się do operacji ograniczyć zestaw wyników, aby zawiera tylko te elementy, które spełniają określony warunek. Jest również nazywany zaznaczenia.  
+Filtrowanie odwołuje się do operacji ograniczającej zestaw wyników tak, aby zawierała tylko te elementy, które spełniają określony warunek. Jest on również znany jako wybór.  
   
- Poniższa ilustracja przedstawia wyniki filtrowania sekwencji znaków. Predykat dla filtrowania operacji określa, że znak musi być "A".  
+ Na poniższej ilustracji przedstawiono wyniki filtrowania sekwencji znaków. Predykat dla operacji filtrowania określa, że znak musi mieć wartość "A".  
   
- ![Diagram przedstawiający filtrowanie operację LINQ](./media/filtering-data/linq-filter-operation.png)  
+ ![Diagram przedstawiający operację filtrowania LINQ](./media/filtering-data/linq-filter-operation.png)  
   
- Metody standardowego operatora zapytań, które wykonują wyboru są wymienione w poniższej sekcji.  
+ W poniższej sekcji przedstawiono standardowe metody operatorów zapytań, które wykonują zaznaczenie.  
   
 ## <a name="methods"></a>Metody  
   
-|Nazwa metody|Opis|Składnia wyrażeń zapytania języka C#|Więcej informacji|  
+|Nazwa metody|Opis|C#Składnia wyrażenia zapytania|Więcej informacji|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|OfType|Wybiera wartości, w zależności od ich możliwości, można rzutować do określonego typu.|Nie dotyczy.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|OfType|Wybiera wartości, w zależności od możliwości przerzutowania do określonego typu.|Nie dotyczy.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
 |Gdzie|Wybiera wartości, które są oparte na funkcji predykatu.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Przykład składni wyrażenia zapytania  
- W poniższym przykładzie użyto `where` klauzulę filtrującą dane z tablicy tych ciągów, które mają określonej długości.  
+ W poniższym przykładzie zastosowano `where` klauzulę do filtrowania z tablicy te ciągi mające określoną długość.  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -48,9 +48,9 @@ foreach (string str in query)
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Linq>
-- [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [where, klauzula](../../../../csharp/language-reference/keywords/where-clause.md)
-- [Instrukcje: Dynamiczne określanie filtrów predykatów w środowisku uruchomieniowym](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
-- [Instrukcje: Zapytanie dotyczące metadanych zestawu z odbiciem (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [Instrukcje: Zapytanie o pliki o określonym atrybucie lub nazwie (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [Instrukcje: Sortowanie lub filtrowanie danych tekstowych według dowolnego słowa lub pola (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Standardowe operatory zapytań — OmówienieC#()](./standard-query-operators-overview.md)
+- [where, klauzula](../../../language-reference/keywords/where-clause.md)
+- [Instrukcje: Dynamiczne określanie filtrów predykatu w czasie wykonywania](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [Instrukcje: Wykonywanie zapytania dotyczącego metadanych zestawu przy użyciu odbicia (C#LINQ) ()](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [Instrukcje: Zapytanie o pliki o określonym atrybucie lub nazwie (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [Instrukcje: Sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ)C#()](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

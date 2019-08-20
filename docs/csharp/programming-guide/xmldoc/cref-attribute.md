@@ -1,26 +1,26 @@
 ---
-title: cref — atrybut — C# Programming Guide
+title: cref — C# Podręcznik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: 332fd7499a9948bb9ab418a3ab8b6c40ad0bcb85
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d088e1fcd0a1d1910b1284909dccf7b7d7b1d479
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634812"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588168"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref — Atrybut (Przewodnik programowania w języku C#)
-`cref` Atrybut w tagu XML dokumentacji oznacza "odwołanie do kodu." Określa, że tekst zawarty wewnątrz tagu jest element kodu, takie jak typ, metody lub właściwości. Dokumentacja narzędzi, takich jak [DocFX](https://dotnet.github.io/docfx/) i [Sandcastle](https://github.com/EWSoftware/SHFB) użyj `cref` atrybuty do automatycznego generowania hiperłącza do strony, gdzie jest udokumentowany typu lub elementu członkowskiego.  
+`cref` Atrybut w tagu dokumentacji XML oznacza "odwołanie do kodu". Określa, że wewnętrznym tekstem znacznika jest element kodu, taki jak typ, metoda lub właściwość. Narzędzia do dokumentacji, takie jak [DocFX](https://dotnet.github.io/docfx/) i `cref` [Sandcastle](https://github.com/EWSoftware/SHFB) , używają atrybutów do automatycznego generowania hiperłączy do strony, na której jest udokumentowany typ lub element członkowski.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono `cref` atrybutów w [ \<zobacz >](../../../csharp/programming-guide/xmldoc/see.md) tagów.  
+ Poniższy przykład pokazuje `cref` atrybuty używane w [ \<Zobacz >](./see.md) Tagi.  
   
  [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]  
   
- Podczas kompilowania, program generuje następujący plik XML. Należy zauważyć, że `cref` atrybutu dla `GetZero` metody, na przykład przetransformowaniu przez kompilator, aby `"M:TestNamespace.TestClass.GetZero"`. Prefiks "M:" oznacza "method" i jest Konwencja, który jest rozpoznawany przez dokumentację narzędzia, takie jak DocFX i Sandcastle. Aby uzyskać pełną listę prefiksów, zobacz [przetwarzanie pliku XML](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).  
+ Po skompilowaniu program tworzy następujący plik XML. Zwróć uwagę, `cref` że atrybut `GetZero` metody, na przykład, został przekształcony przez kompilator na `"M:TestNamespace.TestClass.GetZero"`. Prefiks "M:" oznacza "metodę" i jest konwencją, która jest rozpoznawana przez narzędzia dokumentacji, takie jak DocFX i Sandcastle. Aby uzyskać pełną listę prefiksów, zobacz [przetwarzanie pliku XML](./processing-the-xml-file.md).  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -121,5 +121,5 @@ ms.locfileid: "65634812"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Komentarze dokumentacji XML](../../../csharp/programming-guide/xmldoc/index.md)
-- [Zalecane tagi przeznaczone do komentarzy dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Komentarze dokumentacji XML](./index.md)
+- [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

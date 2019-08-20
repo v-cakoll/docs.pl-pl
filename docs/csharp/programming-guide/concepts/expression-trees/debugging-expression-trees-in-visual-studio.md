@@ -1,46 +1,46 @@
 ---
-title: Debugowanie drzew w programie Visual Studio (C#)
+title: Debugowanie drzew wyrażeń w programie Visual StudioC#()
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 93b1b660181cd81c31055f5d30d43e535171bb55
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 19d00aaa99c7ef08e291337f38bf74a3beac12b0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195983"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595224"
 ---
-# <a name="debugging-expression-trees-in-visual-studio-c"></a>Debugowanie drzew w programie Visual Studio (C#)
-Można analizować struktury i zawartości drzew wyrażeń podczas debugowania aplikacji. Aby uzyskać szybki przegląd struktury drzewa wyrażeń, można użyć `DebugView` właściwość, która reprezentuje drzew wyrażeń [przy użyciu specjalnej składni](debugview-syntax.md). (Należy pamiętać, że `DebugView` jest dostępna tylko w trybie debugowania.)  
+# <a name="debugging-expression-trees-in-visual-studio-c"></a>Debugowanie drzew wyrażeń w programie Visual StudioC#()
+Można analizować strukturę i zawartość drzew wyrażeń podczas debugowania aplikacji. Aby uzyskać szybki przegląd struktury drzewa wyrażeń, można użyć `DebugView` właściwości, która reprezentuje drzewa wyrażeń [przy użyciu specjalnej składni](debugview-syntax.md). (Uwaga, `DebugView` która jest dostępna tylko w trybie debugowania).  
 
-![DebugView drzewa wyrażeń w debugerze programu Visual Studio](media/debugging-expression-trees-in-visual-studio/debugview.png)
+![DebugView drzewa wyrażenia w debugerze programu Visual Studio](media/debugging-expression-trees-in-visual-studio/debugview.png)
 
-Ponieważ `DebugView` jest ciągiem, możesz użyć [wbudowanego wizualizatora tekstu](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer) do wyświetlenia w wielu wierszach, wybierając **Wizualizator tekstu** z na ikonę szkła powiększającego obok `DebugView` Etykieta.
+Ponieważ `DebugView` jest ciągiem, można użyć [wbudowanego wizualizatora tekstu](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer) , aby wyświetlić go w wielu wierszach, wybierając **wizualizator tekstu** z ikony lupy obok `DebugView` etykiety.
 
- ![Wizualizator tekstu zastosowane do wyników "DebugView"](media/debugging-expression-trees-in-visual-studio/string_visualizer.png)
+ ![Wizualizator tekstu zastosowany do wyników elementu "DebugView"](media/debugging-expression-trees-in-visual-studio/string_visualizer.png)
 
-Alternatywnie, można zainstalować i używać [niestandardowego wizualizatora](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data) drzew wyrażeń, takie jak:
+Alternatywnie można zainstalować i używać wizualizatora [niestandardowego](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data) dla drzew wyrażeń, takich jak:
 
-* [Wyrażenia można odczytać](https://github.com/agileobjects/ReadableExpressions) ([licencją MIT](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md), która jest dostępna w [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers)), powoduje wyświetlenie drzewa wyrażeń jako C# kodu:
+* Możliwe do [odczytu wyrażenia](https://github.com/agileobjects/ReadableExpressions) ([Licencja mit](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md), dostępna w [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers)), renderuje drzewo wyrażenia jako C# kod:
 
-  ![Czytelny Wizualizator wyrażeń](media/debugging-expression-trees-in-visual-studio/readable_expressions_visualizer.png)
+  ![Wizualizator wyrażeń do odczytu](media/debugging-expression-trees-in-visual-studio/readable_expressions_visualizer.png)
 
-* [Wizualizatora drzewa wyrażenie](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([licencją MIT](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)), zawiera graficzne przedstawienie drzewa wyrażeń, a jej właściwości i obiektów związanych z:
+* [Wizualizator drzewa wyrażeń](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([Licencja mit](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)), udostępnia widok graficzny drzewa wyrażenia, jego właściwości i powiązane obiekty:
 
   ![Wizualizator ExpressionToString](media/debugging-expression-trees-in-visual-studio/expression_to_string_visualizer.png)
 
-### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Aby otworzyć wizualizatora drzewa wyrażeń  
+### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Aby otworzyć wizualizator dla drzewa wyrażenia  
   
-1. Kliknij ikonę lupy, która pojawia się obok drzewa wyrażeń w **DataTips**, **Obejrzyj** oknie **automatyczne** oknie lub **zmiennychlokalnych** okna.  
+1. Kliknij ikonę lupy, która pojawia się obok drzewa wyrażenia w **etykietkach**danych, oknie czujki, oknie autostarts lub w oknie **zmiennych lokalnych** .  
   
      Zostanie wyświetlona lista dostępnych wizualizatorów.: 
 
-      ![Wizualizatory otwierania w programie Visual Studio](media/debugging-expression-trees-in-visual-studio/expression_tree_visualizers.png)
+      ![Otwieranie wizualizatorów z programu Visual Studio](media/debugging-expression-trees-in-visual-studio/expression_tree_visualizers.png)
 
-2. Kliknij pozycję Wizualizator, którego chcesz użyć.  
+2. Kliknij wizualizator, którego chcesz użyć.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Drzewa wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Drzewa wyrażeń (C#)](./index.md)
 - [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 - [Tworzenie niestandardowych wizualizatorów](/visualstudio/debugger/create-custom-visualizers-of-data)
-- [`DebugView` Składnia](debugview-syntax.md)
+- [`DebugView`obowiązuje](debugview-syntax.md)

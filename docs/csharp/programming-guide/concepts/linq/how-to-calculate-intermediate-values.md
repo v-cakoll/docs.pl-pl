@@ -2,12 +2,12 @@
 title: 'Instrukcje: Oblicz wartości pośrednie (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: 6fb04e1222563e557172edad7953c4646adafefd
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 7b2dfc4e26fc7648cbd93b1e590079e4b105ad43
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710178"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594129"
 ---
 # <a name="how-to-calculate-intermediate-values-c"></a>Instrukcje: Oblicz wartości pośrednie (C#)
 Ten przykład pokazuje sposób obliczania wartości pośrednich, które mogą być używane do sortowania, filtrowania i wybierania.  
@@ -15,7 +15,7 @@ Ten przykład pokazuje sposób obliczania wartości pośrednich, które mogą by
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie zastosowano `Let` klauzulę.  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -42,7 +42,7 @@ foreach (decimal ex in extensions)
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe w przestrzeni nazw](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe w przestrzeni nazw](./sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  

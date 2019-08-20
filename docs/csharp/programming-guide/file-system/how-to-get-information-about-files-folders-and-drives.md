@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Pobierz informacje o plikach, folderach i dyskach - C# przewodnik programowania'
+title: 'Instrukcje: Uzyskaj informacje o plikach, folderach i dyskach — C# Przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: ecf07a11b92dccee888fb8113b6f3e2f333cf591
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 57c7811246dd1de3f009033403ec269082915c09
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595329"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590021"
 ---
-# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Instrukcje: Pobierz informacje o plikach, folderach i dyskach (C# Programming Guide)
-W .NET Framework uzyskujesz dostęp do informacji o systemie plików, przy użyciu następujących klas:  
+# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Instrukcje: Pobieranie informacji o plikach, folderach i dyskach (C# Przewodnik programowania)
+W .NET Framework można uzyskać dostęp do informacji o systemie plików przy użyciu następujących klas:  
   
 - <xref:System.IO.FileInfo?displayProperty=nameWithType>  
   
@@ -25,36 +25,36 @@ W .NET Framework uzyskujesz dostęp do informacji o systemie plików, przy użyc
   
 - <xref:System.IO.File?displayProperty=nameWithType>  
   
- <xref:System.IO.FileInfo> i <xref:System.IO.DirectoryInfo> klasy reprezentują pliku lub katalogu, a także zawierają właściwości, które udostępniają wiele atrybutów plików, które są obsługiwane przez system plików NTFS. Zawierają one również metody do otwierania, zamykanie, przenoszenie i usuwanie plików i folderów. Można utworzyć wystąpień tych klas, przekazując ciąg reprezentujący nazwę pliku, folderu lub dysku w Konstruktorze:  
+ Klasy <xref:System.IO.FileInfo> i<xref:System.IO.DirectoryInfo> reprezentują plik lub katalog i zawierają właściwości, które uwidaczniają wiele atrybutów plików, które są obsługiwane przez system plików NTFS. Zawierają również metody otwierania, zamykania, przechodzenia i usuwania plików i folderów. Wystąpienia tych klas można utworzyć, przekazując ciąg, który reprezentuje nazwę pliku, folderu lub dysku w konstruktorze:  
   
 ```csharp  
 System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");  
 ```  
   
- Możesz również uzyskać nazwy plików, folderów lub dyski za pomocą wywołania <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=nameWithType>, <xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=nameWithType>, i <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=nameWithType>.  
+ Można również uzyskać nazwy plików, folderów lub dysków przy użyciu wywołań do <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=nameWithType>, <xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=nameWithType>i <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=nameWithType>.  
   
- <xref:System.IO.Directory?displayProperty=nameWithType> i <xref:System.IO.File?displayProperty=nameWithType> klasy zapewniają statyczne metody do pobierania informacji na temat plików i katalogów.  
+ Klasy <xref:System.IO.Directory?displayProperty=nameWithType> i<xref:System.IO.File?displayProperty=nameWithType> zapewniają statyczne metody pobierania informacji o katalogach i plikach.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje różne sposoby, aby uzyskać dostęp do informacji o plikach i folderach.  
+ W poniższym przykładzie przedstawiono różne sposoby uzyskiwania dostępu do informacji o plikach i folderach.  
   
  [!code-csharp[csFilesandFolders#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#6)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Przetwarzanie ciągami ścieżki określonych przez użytkownika, należy również obsługiwać wyjątki dla następujących warunków:  
+ Podczas przetwarzania ciągów ścieżki określonych przez użytkownika należy również obsługiwać wyjątki dla następujących warunków:  
   
-- Nazwa pliku jest nieprawidłowo sformułowany. Na przykład zawiera nieprawidłowe znaki lub białych znaków.  
+- Nazwa pliku jest źle sformułowana. Na przykład zawiera nieprawidłowe znaki lub tylko odstęp.  
   
 - Nazwa pliku ma wartość null.  
   
-- Nazwa pliku jest większa niż zdefiniowana w systemie długość maksymalna.  
+- Nazwa pliku jest dłuższa niż zdefiniowana w systemie długość maksymalna.  
   
 - Nazwa pliku zawiera dwukropek (:).  
   
- Jeśli aplikacja nie ma wystarczających uprawnień do odczytu określonego pliku `Exists` metoda zwraca `false` niezależnie od tego, czy ścieżka istnieje; metody nie zgłasza wyjątku.  
+ Jeśli aplikacja nie ma wystarczających uprawnień do odczytu określonego pliku, `Exists` Metoda zwraca bez względu na to, czy ścieżka istnieje; metoda nie zgłasza `false` wyjątku.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [System plików i rejestr (C# Programming Guide)](../../../csharp/programming-guide/file-system/index.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [System plików i Rejestr (C# Przewodnik programowania)](./index.md)

@@ -2,18 +2,18 @@
 title: Wydajność zapytań łańcuchowych (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 1ccb7dfec57a4aeea8329456084ca99f5ca3124d
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: dfd7698d0bdd24a75458a581dfd42c3d21325e6f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689995"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591571"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Wydajność zapytań łańcuchowych (LINQ to XML) (C#)
 
-Jedną z najważniejszych zalet LINQ (i LINQ to XML) jest to, że zapytań łańcuchowych może wykonywać oraz pojedynczego zapytania większych i bardziej skomplikowane.
+Jedną z najważniejszych zalet LINQ (i LINQ to XML) jest to, że kwerendy łańcuchowe mogą wykonywać, a także pojedyncze, bardziej skomplikowane zapytania.
 
-Łańcuchowe zapytań jest zapytanie, które używa innego zapytania jako źródło. Na przykład w poniższym kodzie prosty `query2` ma `query1` jako źródło:
+Zapytanie łańcuchowe jest kwerendą, która używa innego zapytania jako źródła. Na przykład, w poniższym prostym kodzie, `query2` ma `query1` jako Źródło:
 
 ```csharp
 XElement root = new XElement("Root",
@@ -41,18 +41,18 @@ Ten przykład generuje następujące wyniki:
 4
 ```
 
-To zapytanie łańcuchowych zawiera ten sam profil wydajności jako iteracji przez listę połączoną.
+To zapytanie łańcuchowe zapewnia ten sam profil wydajności co iteracja w połączonej liście.
 
-- <xref:System.Xml.Linq.XContainer.Elements%2A> Osi jest zasadniczo ta sama wydajność co iteracji przez listę połączoną. <xref:System.Xml.Linq.XContainer.Elements%2A> jest implementowany jako iterator za pomocą odroczonego wykonania. Oznacza to, że robi jakąś pracę dodatkowo do iteracji w połączonej listy, takich jak obiekt iteratora do przydzielania i śledzeniu stanu wykonywania. Tę pracę można podzielić na dwie kategorie: prac, które odbywa się w czasie, o których iterator który jest skonfigurowany i czynności, które odbywa się podczas każdej iteracji. Praca Instalatora jest mały, stały ilość pracy i Praca wykonana podczas każdej iteracji jest proporcjonalna do liczby elementów w kolekcji źródłowej.
+- <xref:System.Xml.Linq.XContainer.Elements%2A> Oś ma zasadniczo taką samą wydajność jak iteracja w połączonej liście. <xref:System.Xml.Linq.XContainer.Elements%2A>jest zaimplementowany jako iterator z odroczonym wykonaniem. Oznacza to, że wykonuje kilka zadań oprócz iteracji przez połączoną listę, na przykład przydzielanie obiektu iteratora i śledzenie stanu wykonywania. Ta czynność może zostać podzielona na dwie kategorie: pracy, która jest wykonywana w chwili, gdy iterator jest skonfigurowany, i pracy, która jest wykonywana podczas każdej iteracji. Konfiguracja pracy jest małą, stałą ilością pracy i pracy wykonywanej podczas każdej iteracji jest proporcjonalna do liczby elementów w kolekcji źródłowej.
 
-- W `query1`, `where` klauzuli powoduje, że zapytanie, aby wywołać <xref:System.Linq.Enumerable.Where%2A> metody. Ta metoda jest również implementowana jako iterator. Praca Instalatora składa się z tworzenia wystąpienia delegata, który będzie odwoływać się do wyrażenia lambda oraz zwykłej instalacji dla iteratora. Z każdą iteracją delegat jest wywoływana, aby wykonać predykat. Praca Instalatora i pracy wykonanej w każdej iteracji jest podobny do pracy wykonanej podczas iteracji osi.
+- W programie `query1` <xref:System.Linq.Enumerable.Where%2A> klauzula powoduje wywołanie metody. `where` Ta metoda jest również zaimplementowana jako iterator. Konfiguracja zadań składa się z tworzenia wystąpienia delegata, który będzie odwoływać się do wyrażenia lambda oraz normalnej konfiguracji iteratora. Dla każdej iteracji delegat jest wywoływany, aby wykonać predykat. Konfiguracja pracy i pracy wykonanej podczas każdej iteracji jest podobna do wykonanej pracy podczas iteracji na osi.
 
-- W `query1`, klauzula select powoduje, że zapytanie, aby wywołać <xref:System.Linq.Enumerable.Select%2A> metody. Ta metoda ma ten sam profil wydajności jako <xref:System.Linq.Enumerable.Where%2A> metody.
+- W `query1`programie klauzula SELECT powoduje, że zapytanie <xref:System.Linq.Enumerable.Select%2A> wywołuje metodę. Ta metoda ma ten sam profil wydajności co <xref:System.Linq.Enumerable.Where%2A> Metoda.
 
-- W `query2`, zarówno `where` klauzuli i `select` klauzuli mieć ten sam profil wydajności, podobnie jak w `query1`.
+- W `query2`programie `select` obie klauzule i klauzula mają taki sam profil wydajności jak w `query1`. `where`
 
-Iteracja przez `query2` jest zatem bezpośrednio proporcjonalnie do liczby elementów w źródle pierwsze zapytanie, innymi słowy, liniowo. Odpowiedni przykład Visual Basic będą mieć ten sam profil wydajności.
+Iteracja w programie `query2` jest w związku z tym bezpośrednio proporcjonalna do liczby elementów w źródle pierwszego zapytania, czyli czasu liniowego. Odpowiadający przykład Visual Basic będzie miał ten sam profil wydajności.
 
-Aby uzyskać więcej informacji dotyczących iteratorów, zobacz [uzyskanie](../../../../csharp/language-reference/keywords/yield.md).
+Aby uzyskać więcej informacji na temat iteratorów, zobacz [Yield](../../../language-reference/keywords/yield.md).
 
-Aby uzyskać bardziej szczegółowy samouczek dotyczący Łączenie łańcuchowe zapytań, zobacz [samouczka: Łączenie łańcuchowe zapytań](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Aby zapoznać się z bardziej szczegółowym samouczkiem dotyczącym łączenia [zapytań, zobacz Samouczek: Łączenie łańcuchowe zapytań](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).

@@ -2,18 +2,18 @@
 title: 'Instrukcje: Sortuj elementy (C#)'
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: ac79690ce45f6875900418b39e0f5e86596dceff
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 074428413fa57d8f0e5ae94970c2aeeeb9e4cc7c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710054"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592458"
 ---
 # <a name="how-to-sort-elements-c"></a>Instrukcje: Sortuj elementy (C#)
 Ten przykład pokazuje, jak napisać zapytanie, które sortuje jego wyniki.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -41,7 +41,7 @@ foreach (decimal el in prices)
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe w przestrzeni nazw](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe w przestrzeni nazw](./sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  
@@ -69,4 +69,4 @@ foreach (decimal el in prices)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Sortowanie danych (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)
+- [Sortowanie danych (C#)](./sorting-data.md)

@@ -1,106 +1,106 @@
 ---
-title: Kompilacji wiersza polecenia przy użyciu csc.exe
+title: Kompilacja z wiersza polecenia za pomocą pliku CSC. exe
 ms.date: 04/19/2017
 helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 0ebc4fa3029e16c5ee89da7d9af8b89924b2c4dc
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 54306c79bc2856996925756ee4261fbe67692aea
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833364"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606980"
 ---
-# <a name="command-line-build-with-cscexe"></a>Kompilacji wiersza polecenia przy użyciu csc.exe
-Można wywołać kompilatora języka C#, wpisując nazwę jego pliku wykonywalnego (*csc.exe*) w wierszu polecenia.
+# <a name="command-line-build-with-cscexe"></a>Kompilacja z wiersza polecenia za pomocą pliku CSC. exe
+C# Kompilator można wywołać, wpisując nazwę pliku wykonywalnego (*CSC. exe*) w wierszu polecenia.
 
-Jeśli używasz **wiersz polecenia programisty dla programu Visual Studio** oknie wszystkie potrzebne zmienne środowiskowe są ustawiane dla Ciebie. Aby uzyskać informacje na temat sposobu dostęp do tego narzędzia, zobacz [wiersz polecenia programisty dla programu Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md) tematu. 
+W przypadku korzystania z okna **wiersz polecenia dla deweloperów dla programu Visual Studio** wszystkie wymagane zmienne środowiskowe są ustawiane dla Ciebie. Aby uzyskać informacje na temat sposobu uzyskiwania dostępu do tego narzędzia, zobacz temat [wiersz polecenia dla deweloperów for Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md) . 
 
-Jeśli używasz standardowego okna wiersza polecenia, należy dostosować swoją ścieżkę przed może wywołać *csc.exe* z wszelkie podkatalogi na tym komputerze. Należy również uruchomić *vsvars32.bat* można ustawić odpowiednie zmienne środowiskowe do obsługi kompilacji z wiersza polecenia. Aby uzyskać więcej informacji na temat *vsvars32.bat*, w tym instrukcje dotyczące sposobu Znajdź i uruchom go, zobacz [jak: Ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
+Jeśli używasz standardowego okna wiersza polecenia, musisz dostosować ścieżkę przed wywołaniem pliku *CSC. exe* z dowolnego podkatalogu na komputerze. Należy również uruchomić *vsvars32. bat* , aby ustawić odpowiednie zmienne środowiskowe do obsługi kompilacji w wierszu polecenia. Aby uzyskać więcej informacji na temat *vsvars32. bat*, w tym instrukcje dotyczące sposobu znajdowania i uruchamiania [, zobacz How to: Ustawianie zmiennych środowiskowych dla wiersza](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)polecenia programu Visual Studio.
 
-Jeśli pracujesz na komputerze, na którym zainstalowano tylko Windows Software Development Kit (SDK), możesz użyć C# kompilatora na **SDK Command Prompt**, które można otworzyć **Microsoft .NET Framework SDK**opcji menu.
+Jeśli pracujesz na komputerze, na którym jest tylko zestaw Windows Software Development Kit (SDK), możesz użyć C# kompilatora w **wierszu polecenia zestawu SDK**, który można otworzyć z poziomu opcji menu **Microsoft .NET Framework SDK** .
 
-Umożliwia także programu MSBuild do kompilowania programów C#, programowo. Aby uzyskać więcej informacji, zobacz [MSBuild](/visualstudio/msbuild/msbuild).
+Można również użyć programu MSBuild do programistycznego kompilowania C# programów. Aby uzyskać więcej informacji, zobacz [MSBuild](/visualstudio/msbuild/msbuild).
 
-*Csc.exe* pliku wykonywalnego zwykle znajduje się w Microsoft.NET\Framework\\ *\<wersji >* folderze *Windows* katalog. Lokalizacji może się różnić w zależności od dokładnej konfiguracji określonego komputera. Jeśli więcej niż jedna wersja programu .NET Framework jest zainstalowany na komputerze, znajdziesz wiele wersji tego pliku. Aby uzyskać więcej informacji na temat tych instalacji, zobacz [porady: Określanie, które wersje programu .NET Framework są zainstalowane](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+Plik wykonywalny *CSC. exe* zazwyczaj znajduje się w folderze Microsoft. NET\Framework\\ *\<w wersji >* w katalogu *systemu Windows* . Jego lokalizacja może się różnić w zależności od dokładnej konfiguracji określonego komputera. Jeśli na komputerze zainstalowano więcej niż jedną wersję .NET Framework, znajdziesz wiele wersji tego pliku. Aby uzyskać więcej informacji na temat takich instalacji, zobacz [How to: Określanie, które wersje .NET Framework są zainstalowane](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!TIP]
->  Gdy tworzysz projekt za pomocą środowiska IDE programu Visual Studio możesz wyświetlać **csc** polecenia i jego opcji kompilatora skojarzone w **dane wyjściowe** okna. Aby wyświetlić te informacje, postępuj zgodnie z instrukcjami [jak: Wyświetlanie, zapisywanie i konfigurowanie plików dziennika kompilacji](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) Aby zmienić poziom szczegółowości danych dziennika, aby **normalny** lub **szczegółowe**. Wyszukiwanie po ponownym skompilowaniu projektu **dane wyjściowe** okno **csc** można znaleźć wywołania kompilator języka C#.
+>  Podczas kompilowania projektu przy użyciu programu Visual Studio IDE, można wyświetlić polecenie **CSC** i skojarzone z nim opcje kompilatora w oknie **danych wyjściowych** . Aby wyświetlić te informacje, postępuj zgodnie z [instrukcjami w temacie How to: Wyświetlanie, zapisywanie i konfigurowanie plików](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) dziennika kompilacji, aby zmienić poziom szczegółowości danych dziennika na **normalny** lub **szczegółowy**. Po odbudowaniu projektu Przeszukaj okno **dane wyjściowe** dla **CSC** , aby znaleźć wywołanie C# kompilatora.
 
  **W tym temacie**
 
-- [Zasady składni wiersza polecenia](#rules-for-command-line-syntax-for-the-c-compiler)
+- [Reguły dla składni wiersza polecenia](#rules-for-command-line-syntax-for-the-c-compiler)
 
 - [Przykładowe wiersze poleceń](#sample-command-lines-for-the-c-compiler)
 
-- [Różnice między kompilatorem C# i danymi wyjściowymi kompilatora C++](#differences-between-c-compiler-and-c-compiler-output)
+- [Różnice między C# kompilatorem C++ a wyjściem kompilatora](#differences-between-c-compiler-and-c-compiler-output)
 
-## <a name="rules-for-command-line-syntax-for-the-c-compiler"></a>Zasady składni wiersza polecenia dla kompilatora C#
+## <a name="rules-for-command-line-syntax-for-the-c-compiler"></a>Reguły dla składni wiersza polecenia C# kompilatora
 
-Kompilator języka C# używa następujących reguł, gdy interpretuje argumenty podane w wierszu polecenia systemu operacyjnego:
+C# Kompilator używa następujących reguł, gdy interpretuje argumenty podane w wierszu polecenia systemu operacyjnego:
 
-- Argumenty są rozdzielone biały znak, który jest spacja lub tabulator.
+- Argumenty są rozdzielane znakami odstępu, który jest spacją lub tabulatorem.
 
-- Znak daszka (^) nie została rozpoznana jako znak ucieczki lub ogranicznik. Znak jest obsługiwany przez analizator składni wiersza polecenia w systemie operacyjnym, zanim zostanie przekazany do `argv` tablicy w programie.
+- Znak karetki (^) nie jest rozpoznawany jako znak ucieczki lub ogranicznik. Ten znak jest obsługiwany przez analizator wiersza polecenia w systemie operacyjnym przed przekazaniem go do `argv` tablicy w programie.
 
-- Ciąg ujęty w znaki podwójnego cudzysłowu ("string") jest interpretowany jako jeden argument, niezależnie od tego, biały znak znajdującą się wewnątrz. Ciąg w cudzysłowach można osadzać w argumencie.
+- Ciąg ujęty w znaki podwójnego cudzysłowu ("String") jest interpretowany jako pojedynczy argument, niezależnie od białego miejsca zawartego w. Ciąg w cudzysłowie może być osadzony w argumencie.
 
-- Podwójny cudzysłów poprzedzone znakiem ukośnika odwrotnego (\\") jest interpretowany jako znak literału podwójny cudzysłów (").
+- Podwójny cudzysłów poprzedzony ukośnikiem odwrotnym (\\") jest interpretowany jako literał podwójnego znaku cudzysłowu (").
 
-- Ukośników odwrotnych jest interpretowany dosłownie, chyba że bezpośrednio poprzedzać znak podwójnego cudzysłowu.
+- Ukośniki odwrotne są interpretowane dosłownie, chyba że od razu poprzedzają podwójny cudzysłów.
 
-- Jeśli parzysta liczba ukośników odwrotnych następuje podwójny cudzysłów, jednej kreski ułamkowej odwróconej jest umieszczany w `argv` tablicy dla każdej pary ukośników odwrotnych i podwójnego cudzysłowu jest interpretowany jako ogranicznik ciągu.
+- Jeśli parzysta liczba kresek ułamkowych jest poprzedzona znakiem podwójnego cudzysłowu, jeden ukośnik odwrotny jest `argv` umieszczany w tablicy dla każdej pary ukośników odwrotnych, a podwójny cudzysłów jest interpretowany jako ogranicznik ciągu.
 
-- Jeśli nieparzysta liczba ukośników odwrotnych następuje podwójny cudzysłów, jednej kreski ułamkowej odwróconej jest umieszczany w `argv` tablicy dla każdej pary ukośników odwrotnych i podwójnego cudzysłowu jest "poprzedzone znakiem zmiany znaczenia" przez pozostałe ukośnika odwrotnego. Powoduje to, że literał podwójny cudzysłów (") mają zostać dodane w `argv`.
+- Jeśli po parzystej liczbie ukośników odwrotnych następuje znak podwójnego cudzysłowu, jeden ukośnik odwrotny jest umieszczany w `argv` tablicy dla każdej pary ukośników odwrotnych, a podwójny cudzysłów jest "ucieczkd" przez resztę ukośnika odwrotnego. Powoduje to dodanie `argv`literału podwójnego cudzysłowu (") do elementu.
 
-## <a name="sample-command-lines-for-the-c-compiler"></a>Przykładowe wiersze poleceń dla kompilatora C#
+## <a name="sample-command-lines-for-the-c-compiler"></a>Przykładowe wiersze poleceń dla C# kompilatora
 
-- Kompiluje *File.cs* produkujących *File.exe*:
+- Kompiluje *File.Cser* tworzenia *pliku. exe*:
 
 ```console
 csc File.cs 
 ```
 
-- Kompiluje *File.cs* produkujących *File.dll*:
+- Kompiluje plik File.cs *. dll*:
 
 ```console
 csc -target:library File.cs
 ```
 
-- Kompiluje *File.cs* i tworzy *My.exe*:
+- Kompiluje *File.cs* i tworzy *My. exe*:
 
 ```console
 csc -out:My.exe File.cs
 ```
 
-- Kompiluje wszystkie pliki C# w bieżącym katalogu z włączonymi optymalizacjami i definiuje DEBUG symbol. Dane wyjściowe są *File2.exe*:
+- Kompiluje wszystkie C# pliki w bieżącym katalogu z włączonymi optymalizacjami i definiuje symbol debugowania. Dane wyjściowe to *plik2. exe*:
 
 ```console
 csc -define:DEBUG -optimize -out:File2.exe *.cs
 ```
 
-- Kompiluje wszystkie pliki C# w bieżącym katalogu, tworzenie wersji debugowania *File2.dll*. Brak logo i żadne ostrzeżenia nie są wyświetlane:
+- Kompiluje wszystkie C# pliki w bieżącym katalogu, które wytwarzają wersję debugową *plik2. dll*. Brak logo i nie są wyświetlane żadne ostrzeżenia:
 
 ```console
 csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
 ```
 
-- Kompiluje wszystkie pliki C# w bieżącym katalogu do *Something.xyz* (DLL):
+- Kompiluje wszystkie C# pliki w bieżącym katalogu na *coś. xyz* (Biblioteka DLL):
 
 ```console
 csc -target:library -out:Something.xyz *.cs
 ```
 
-## <a name="differences-between-c-compiler-and-c-compiler-output"></a>Różnice między kompilatorem C# i danymi wyjściowymi kompilatora C++
-Istnieją żaden obiekt ( *.obj*) pliki utworzone w wyniku wywołania kompilator języka C#; pliki wyjściowe są tworzone bezpośrednio. W efekcie kompilator języka C# nie jest konieczne konsolidatora.
+## <a name="differences-between-c-compiler-and-c-compiler-output"></a>Różnice między C# kompilatorem C++ a wyjściem kompilatora
+Nie ma plików obiektów ( *. obj*) utworzonych w wyniku wywołania C# kompilatora; pliki wyjściowe są tworzone bezpośrednio. W związku z tym C# kompilator nie potrzebuje konsolidatora.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Opcje kompilatora C# w porządku alfabetycznym](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
-- [Opcje kompilatora C# w rozbiciu na kategorie](../../../csharp/language-reference/compiler-options/listed-by-category.md)
-- [Main() i argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [Argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)
-- [Instrukcje: Wyświetlanie argumentów wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Main() — zwracane wartości](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+- [Opcje kompilatora C#](./index.md)
+- [Opcje kompilatora C# w porządku alfabetycznym](./listed-alphabetically.md)
+- [Opcje kompilatora C# w rozbiciu na kategorie](./listed-by-category.md)
+- [Main() i argumenty wiersza polecenia](../../programming-guide/main-and-command-args/index.md)
+- [Argumenty wiersza polecenia](../../programming-guide/main-and-command-args/command-line-arguments.md)
+- [Instrukcje: Wyświetlanie argumentów wiersza polecenia](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Main() — zwracane wartości](../../programming-guide/main-and-command-args/main-return-values.md)

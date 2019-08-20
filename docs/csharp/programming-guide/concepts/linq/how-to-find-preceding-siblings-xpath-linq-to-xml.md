@@ -1,27 +1,27 @@
 ---
-title: 'Instrukcje: Znajdowanie poprzednich elementów równorzędnych (XPath-LINQ to XML) (C#)'
+title: 'Instrukcje: Znajdź poprzednie elementy równorzędne (XPath-LINQ to XML)C#()'
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: 42663e1c90f7a7a829e858cfc8e20cdcb2ad2d36
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d47a2d72efd8891108999d5576da52eb2b6285b1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485452"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593436"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Instrukcje: Znajdowanie poprzednich elementów równorzędnych (XPath-LINQ to XML) (C#)
-W tym temacie porównano XPath `preceding-sibling` osi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] podrzędnych <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> osi.  
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Instrukcje: Znajdź poprzednie elementy równorzędne (XPath-LINQ to XML)C#()
+W tym temacie porównano `preceding-sibling` oś XPath [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] z osią <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> podrzędną.  
   
- Wyrażenie XPath jest:  
+ Wyrażenie XPath:  
   
  `preceding-sibling::*`  
   
- Należy pamiętać, że wyniki zarówno <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> i <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> znajdują się w kolejności dokumentu.  
+ Zwróć uwagę, że wyniki obu <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> i <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> są w kolejności dokumentu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład umożliwia znalezienie `FullAddress` elementu, a następnie pobierze poprzednich elementów przy użyciu `preceding-sibling` osi.  
+ Poniższy przykład umożliwia znalezienie `FullAddress` elementu, a następnie pobranie poprzednich elementów `preceding-sibling` przy użyciu osi.  
   
- W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  

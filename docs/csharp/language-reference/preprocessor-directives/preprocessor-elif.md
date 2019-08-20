@@ -1,5 +1,5 @@
 ---
-title: '#elif — C# odwołania'
+title: '#elif — C# odwołanie'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
-ms.openlocfilehash: 00a9298be6ecd6f5e775d930190ddb6e227e4711
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b04db4bd23a459043efec59b8ebf9d322defbcf7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660076"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608588"
 ---
 # <a name="elif-c-reference"></a>#elif (odwołanie w C#)
-Dyrektywa `#elif` umożliwia tworzenie złożonych dyrektyw warunkowych. Wyrażenie dyrektywy `#elif` zostanie oszacowane, jeśli żadne z wcześniejszych wyrażeń [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) ani (opcjonalnie) żadne z wcześniejszych wyrażeń `#elif` nie zwróci wyniku `true`. Jeżeli wyrażenie `#elif` zwraca w wyniku `true`, kompilator wykonuje cały kod między dyrektywą `#elif` a następną dyrektywą warunkową. Na przykład:  
+Dyrektywa `#elif` umożliwia tworzenie złożonych dyrektyw warunkowych. Wyrażenie dyrektywy `#elif` zostanie oszacowane, jeśli żadne z wcześniejszych wyrażeń [#if](./preprocessor-if.md) ani (opcjonalnie) żadne z wcześniejszych wyrażeń `#elif` nie zwróci wyniku `true`. Jeżeli wyrażenie `#elif` zwraca w wyniku `true`, kompilator wykonuje cały kod między dyrektywą `#elif` a następną dyrektywą warunkową. Na przykład:  
   
 ```csharp
 #define VC7  
@@ -27,7 +27,7 @@ Dyrektywa `#elif` umożliwia tworzenie złożonych dyrektyw warunkowych. Wyraże
 #endif  
 ```  
   
- Można używać operatorów `==` (równość), `!=` (nierówność), `&&` (oraz) `||` (lub), aby szacować wiele symboli. Można także grupować symbole i operatory za pomocą nawiasów. Można także grupować symboli i operatorów, za pomocą nawiasów.  
+ Można używać operatorów `==` (równość), `!=` (nierówność), `&&` (oraz) `||` (lub), aby szacować wiele symboli. Można także grupować symbole i operatory za pomocą nawiasów. Można również grupować symbole i operatory za pomocą nawiasów.  
   
 ## <a name="remarks"></a>Uwagi  
  Użycie `#elif` jest równoważne z użyciem:  
@@ -37,12 +37,12 @@ Dyrektywa `#elif` umożliwia tworzenie złożonych dyrektyw warunkowych. Wyraże
 #if  
 ```  
   
- Użycie dyrektywy `#elif` jest łatwiejsze, ponieważ każda dyrektywa `#if` wymaga dyrektywy [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), podczas gdy dyrektywa `#elif` może być używana bez odpowiadającej jej dyrektywy `#endif`.  
+ Użycie dyrektywy `#elif` jest łatwiejsze, ponieważ każda dyrektywa `#if` wymaga dyrektywy [#endif](./preprocessor-endif.md), podczas gdy dyrektywa `#elif` może być używana bez odpowiadającej jej dyrektywy `#endif`.  
   
- Aby zapoznać się z przykładem użycia dyrektywy [, zobacz ](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)#if`#elif`.  
+ Aby zapoznać się z przykładem użycia dyrektywy [, zobacz ](./preprocessor-if.md)#if`#elif`.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Dyrektywy preprocesora C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Dyrektywy preprocesora C#](./index.md)

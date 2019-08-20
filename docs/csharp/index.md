@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e820a4d08e938aaf21e4f57db63e6b4f1b5225a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744254"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608292"
 ---
 # <a name="c-guide"></a>Przewodnik po języku C#
 
@@ -35,11 +35,11 @@ Przewodnik zawiera kilka sekcji. Możesz je czytać po kolei lub przejść bezpo
 * [Wprowadzenie](getting-started/index.md)
   * W tej sekcji opisano, co należy zainstalować, aby używać środowiska deweloperskiego języka C# na preferowanej platformie. Poszczególne tematy wyjaśniają, jak utworzyć pierwszy program w języku C# na różnych obsługiwanych środowiskach.
 
-* [Wprowadzenie do C# samouczki](tutorials/intro-to-csharp/index.md)
+* [Wprowadzenie do C# samouczków](tutorials/intro-to-csharp/index.md)
   * Wprowadzenie do samouczków C# zawiera interaktywne samouczki przeznaczone dla nowych deweloperów. Pozwalają one na poznawanie i eksplorację języka w przeglądarce internetowej, za pomocą interfejsu konsolowego - Read-Eval-Print-Loop (REPL). Po zakończeniu interaktywnych lekcji możesz rozwijać swoje umiejętności programowania, powtarzając te zadania na swojej maszynie.
 
 * [Samouczki](tutorials/index.md)
-  * Ta sekcja zawiera szereg kompletnych scenariuszy z uwzględnieniem zarówno opisów, jak i kodu. Wskazuje, dlaczego niektóre idiomy są preferowane, które funkcje języka C# najlepiej działają w różnych sytuacjach, a także pokazuje referencyjne wdrożenia dla typowych zadań. Jeśli dowiesz się najlepiej, sprawdzając kod, należy uruchomić w tej sekcji. Możesz także pobrać cały kod i poeksperymentować z nim w swoim środowisku.
+  * Ta sekcja zawiera szereg kompletnych scenariuszy z uwzględnieniem zarówno opisów, jak i kodu. Wskazuje, dlaczego niektóre idiomy są preferowane, które funkcje języka C# najlepiej działają w różnych sytuacjach, a także pokazuje referencyjne wdrożenia dla typowych zadań. Jeśli wiesz, jak najlepiej, widzisz kod, Rozpocznij w tej sekcji. Możesz także pobrać cały kod i poeksperymentować z nim w swoim środowisku.
 
 * [Prezentacja języka C#](tour-of-csharp/index.md)
   * Ta sekcja zawiera ogólne omówienie języka. Opisuje ona elementy, z których składają się programy napisane w języku C#, a także pokazuje jego możliwości. Zawiera krótkie przykłady wszystkich elementów składni i tłumaczy najważniejsze zagadnienia dotyczące języka.
@@ -52,16 +52,16 @@ Przewodnik zawiera kilka sekcji. Możesz je czytać po kolei lub przejść bezpo
   * The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end-to-end scenarios, and links to other libraries with more examples using these APIs.
 -->
 
-* [Przewodnik programowania w języku C#](../csharp/programming-guide/index.md)
+* [Przewodnik programowania w języku C#](./programming-guide/index.md)
   * Informacje dotyczące sposobów korzystania z konstrukcji języka C# oraz praktyczne przykłady.
 
-* [Przewodniki](../csharp/walkthroughs.md)
+* [Przewodniki](./walkthroughs.md)
   * Zawiera linki do przewodników programowania, w których jest używany język C#, wraz z krótkimi ich opisami.
 
 * [Dokumentacja języka](language-reference/index.md)
   * Ta sekcja zawiera materiały referencyjne dotyczące C#. Pomaga zrozumieć składnię i semantykę języka. Zawiera również materiały dotyczące typów, operatorów, atrybutów, dyrektyw preprocesora, przełączników kompilatora, błędów i ostrzeżeń kompilacji.
 
-* [Specyfikacja języka C#](../csharp/language-reference/language-specification/index.md)
+* [C#Specyfikacja języka](./language-reference/language-specification/index.md)
   * To jest link do najnowszej wersji specyfikacji języka C#.
 
 ## <a name="see-also"></a>Zobacz także

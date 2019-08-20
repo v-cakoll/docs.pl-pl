@@ -1,5 +1,5 @@
 ---
-title: Const — słowo kluczowe - C# odwołania
+title: const — słowo C# kluczowe-odwołanie
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 7cf4fc52691565a850b4f34574828ad4e043998e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a2e4bb45d21708ea3971d2f5b784280b9d13d0d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661987"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605900"
 ---
 # <a name="const-c-reference"></a>const (odwołanie w C#)
 
-Możesz użyć `const` — słowo kluczowe, aby zadeklarować pole stałe lub stałą lokalną. Stałe pola i zmienne lokalne są zmienne i nie może być modyfikowany. Stałe może być liczb, wartości logicznych, ciągi lub odwołanie o wartości null. Nie należy tworzyć stałą do reprezentowania informacje, które chcą zmienić w dowolnym momencie. Na przykład nie używaj pole stałe do przechowywania ceny usługi, numer wersji produktu lub nazwa marki firmy. Te wartości mogą ulec zmianie, a ponieważ kompilatory propagację stałych, inny kod skompilowany przy użyciu bibliotek musi być ponownie kompilowane, aby zobaczyć zmiany. Zobacz też [tylko do odczytu](../../../csharp/language-reference/keywords/readonly.md) — słowo kluczowe. Na przykład:
+Użyj słowa kluczowego, `const` aby zadeklarować pole stałe lub stałą lokalną. Pola stałe i zmienne lokalne nie są zmiennymi i nie mogą być modyfikowane. Stałe mogą być liczbami, wartościami logicznymi, ciągami lub odwołaniem o wartości null. Nie należy tworzyć stałej do reprezentowania informacji, które można zmienić w dowolnym momencie. Na przykład nie należy używać pola stałego do przechowywania ceny usługi, numeru wersji produktu ani nazwy marki firmy. Te wartości mogą ulec zmianie z upływem czasu, a ponieważ kompilatory propagują stałe, inne kod skompilowane z bibliotekami będzie musiały zostać ponownie skompilowane w celu wyświetlenia zmian. Zobacz również słowo kluczowe [ReadOnly](./readonly.md) . Na przykład:
 
 ```csharp
 const int X = 0;
@@ -27,11 +27,11 @@ private const string ProductName = "Visual C#";
 
 ## <a name="remarks"></a>Uwagi
 
-Typ deklaracji stałej Określa typ elementów członkowskich, które wprowadza deklaracja. Inicjator stałą lokalne lub pola stałego musi być wyrażeniem stałym, które mogą być niejawnie konwertowane na typ docelowy.
+Typ deklaracji stałej określa typ elementów członkowskich, które wprowadza deklaracja. Inicjator stałego lokalnego lub stałego pola musi być wyrażeniem stałym, które może być niejawnie konwertowane na typ docelowy.
 
-Wyrażenie stałe jest wyrażeniem, które mogą zostać w pełni oszacowane w czasie kompilacji. Dlatego jedyne możliwe wartości dla stałych o typach odwołania to `string` i odwołanie o wartości null.
+Wyrażenie stałe jest wyrażeniem, które może być w pełni oceniane w czasie kompilacji. W związku z tym jedynymi możliwymi wartościami dla stałych typów `string` odwołań są i odwołania o wartości null.
 
-W deklaracji stałej można zadeklarować kilka stałych, takich jak:
+Deklaracja stałej może deklarować wiele stałych, takich jak:
 
 ```csharp
 public const double X = 1.0, Y = 2.0, Z = 3.0;
@@ -39,7 +39,7 @@ public const double X = 1.0, Y = 2.0, Z = 3.0;
 
 `static` Modyfikator nie jest dozwolony w deklaracji stałej.
 
-Stała może brać udział w wyrażeniu stałym, w następujący sposób:
+Stała może uczestniczyć w wyrażeniu stałym w następujący sposób:
 
 ```csharp
 public const int C1 = 5;
@@ -47,7 +47,7 @@ public const int C2 = C1 + 100;
 ```
 
 > [!NOTE]
-> [Tylko do odczytu](../../../csharp/language-reference/keywords/readonly.md) — słowo kluczowe różni się od `const` — słowo kluczowe. A `const` pola mogą być inicjowane tylko na deklarację pola. A `readonly` pola mogą być inicjowane w deklaracji lub w konstruktorze. W związku z tym `readonly` pola mogą mieć różne wartości w zależności od używanego konstruktora. Ponadto mimo że `const` pole jest stałą czasu kompilacji `readonly` pole może być używane dla stałych run-time, jak w tym wierszu: `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`
+> Słowo kluczowe [ReadOnly](./readonly.md) różni się `const` od słowa kluczowego. `const` Pole może być inicjowane tylko w deklaracji pola. `readonly` Pole może być inicjowane w deklaracji lub w konstruktorze. W `readonly` związku z tym pola mogą mieć różne wartości w zależności od użytego konstruktora. Ponadto mimo że `const` pole jest stałą czasu kompilacji `readonly` , pole może być używane dla stałych czasu wykonywania, jak w tym wierszu:`public static readonly uint l1 = (uint)DateTime.Now.Ticks;`
 
 ## <a name="example"></a>Przykład
 
@@ -55,7 +55,7 @@ public const int C2 = C1 + 100;
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie przedstawiono sposób użycia stałych jako zmiennych lokalnych.
+W tym przykładzie pokazano, jak używać stałych jako zmiennych lokalnych.
 
 [!code-csharp[csrefKeywordsModifiers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#6)]
 
@@ -65,8 +65,8 @@ W tym przykładzie przedstawiono sposób użycia stałych jako zmiennych lokalny
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
-- [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)
-- [readonly](../../../csharp/language-reference/keywords/readonly.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](./index.md)
+- [Modyfikatory](./modifiers.md)
+- [readonly](./readonly.md)

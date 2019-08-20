@@ -7,12 +7,12 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: 4d266584e1867a512e4b61e8839fe948aafb007f
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 078596dcbfd907be53cae2ab3e7dcaa9e311c3f4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363918"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588818"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Funkcje anonimoweC# (Przewodnik programowania)
 
@@ -34,7 +34,7 @@ Aby uzyskać więcej informacji, zobacz sekcję [wyrażenia funkcji anonimowej](
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje, wyrażenia i operatory](../../../csharp/programming-guide/statements-expressions-operators/index.md)
-- [Wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [Delegaty](../../../csharp/programming-guide/delegates/index.md)
+- [Instrukcje, wyrażenia i operatory](./index.md)
+- [Wyrażenia lambda](./lambda-expressions.md)
+- [Delegaty](../delegates/index.md)
 - [Drzewa wyrażeń (C#)](../concepts/expression-trees/index.md)

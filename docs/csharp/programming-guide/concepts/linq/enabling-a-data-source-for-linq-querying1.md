@@ -2,12 +2,12 @@
 title: Włączanie źródła danych do zapytań LINQ
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 54175195be69f743e57967338b252025f9f1f4ff
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: f7511b051577d94bb3d422e87699efdcff4058e1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868880"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594608"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Włączanie źródła danych do zapytań LINQ
 Istnieją różne sposoby, które należy [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wykonać, aby umożliwić odszukanie dowolnego źródła danych [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] we wzorcu. Źródłem danych może być między innymi struktura danych, usługi sieci Web, system plików lub baza danych. Wzorzec ułatwia klientom Wysyłanie zapytań do źródła danych, dla którego [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] włączono zapytania, ponieważ składnia i wzorzec zapytania nie są zmieniane. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Sposoby, w których [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] można rozszerzyć następujące źródła danych, to m.in.:  
@@ -44,5 +44,5 @@ Istnieją różne sposoby, które należy [!INCLUDE[vbteclinq](~/includes/vbtecl
 - <xref:System.Linq.IQueryable%601>
 - <xref:System.Collections.Generic.IEnumerable%601>
 - <xref:System.Linq.Enumerable>
-- [Standardowe operatory zapytań — OmówienieC#()](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [Standardowe operatory zapytań — OmówienieC#()](./standard-query-operators-overview.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)

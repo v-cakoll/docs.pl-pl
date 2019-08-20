@@ -1,5 +1,5 @@
 ---
-title: -nologo (opcje kompilatora C#)
+title: -nologo (C# opcje kompilatora)
 ms.date: 07/20/2015
 f1_keywords:
 - /nologo
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - banners, suppressing startup
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
-ms.openlocfilehash: 537091bc3865183d193e3728d8d07649e33c6ada
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84fc7f7448309a0800ea05f03f0c5039a6b4f807
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662663"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606660"
 ---
-# <a name="-nologo-c-compiler-options"></a>-nologo (opcje kompilatora C#)
-**- Nologo** opcja Pomija wyświetlanie transparentu logowania podczas uruchamiania kompilatora i wyświetlanie wiadomości informacyjnych podczas kompilacji.  
+# <a name="-nologo-c-compiler-options"></a>-nologo (C# opcje kompilatora)
+Opcja **-nologo** pomija wyświetlanie transparentu logowania podczas uruchamiania kompilatora i wyświetlania komunikatów informacyjnych podczas kompilacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,11 +26,11 @@ ms.locfileid: "61662663"
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Ta opcja nie jest dostępne z poziomu środowiska programistycznego; jest on dostępny tylko wtedy, podczas kompilowania z wiersza polecenia.  
+ Ta opcja jest niedostępna w środowisku programistycznym; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
   
- Ta opcja kompilatora jest niedostępna w programie Visual Studio i nie można zmienić programowo.  
+ Ta opcja kompilatora jest niedostępna w programie Visual Studio i nie można jej zmienić programowo.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opcje kompilatora C#](./index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

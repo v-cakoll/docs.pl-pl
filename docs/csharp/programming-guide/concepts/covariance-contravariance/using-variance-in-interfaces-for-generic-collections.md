@@ -1,23 +1,23 @@
 ---
-title: Korzystanie z wariancji w interfejsach dla kolekcji ogólnych (C#)
+title: Korzystanie z wariancji w interfejsach dlaC#kolekcji ogólnych ()
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: 6119d8756295606fc2ef66f5157e815b4d903659
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53aaf49ee0802c0d207e0b0a29661cee7c628b4d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702649"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595216"
 ---
-# <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Korzystanie z wariancji w interfejsach dla kolekcji ogólnych (C#)
-Kowariantne interfejs umożliwia jego metod zwrócić więcej typów pochodnych niż określone w interfejsie. Interfejs kontrawariantnego umożliwia jego metod akceptował parametry typu mniej pochodnego niż warunki określone w interfejsie.  
+# <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Korzystanie z wariancji w interfejsach dlaC#kolekcji ogólnych ()
+Interfejs współdzielny umożliwia metodom Zwracanie większej liczby typów pochodnych niż określone w interfejsie. Interfejs kontrawariantne umożliwia jej metodom akceptowanie parametrów o mniejszych typach pochodnych niż określone w interfejsie.  
   
- W programie .NET Framework 4, kilka istniejące interfejsy stało się kowariantne i kontrawariantne. Obejmują one <xref:System.Collections.Generic.IEnumerable%601> i <xref:System.IComparable%601>. Dzięki temu można ponownie użyć metody, które pracują z kolekcji ogólnych typów podstawowych dla kolekcji typów pochodnych.  
+ W .NET Framework 4, kilka istniejących interfejsów stał się współwariantem i kontrawariantne. Obejmują <xref:System.Collections.Generic.IEnumerable%601> one i <xref:System.IComparable%601>. Dzięki temu można ponownie użyć metod, które działają z ogólnymi kolekcjami typów podstawowych dla kolekcji typów pochodnych.  
   
- Aby uzyskać listę interfejsów typu variant w programie .NET Framework, zobacz [wariancje w interfejsach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
+ Aby uzyskać listę interfejsów wariantów w .NET Framework, zobacz WARIANCJA [w interfejsach ogólnych (C#)](./variance-in-generic-interfaces.md).  
   
 ## <a name="converting-generic-collections"></a>Konwertowanie kolekcji ogólnych  
- W poniższym przykładzie pokazano zalety obsługi Kowariancja w <xref:System.Collections.Generic.IEnumerable%601> interfejsu. `PrintFullName` Metoda przyjmuje zbiór `IEnumerable<Person>` typu jako parametru. Jednak można użyć ponownie go kolekcji `IEnumerable<Employee>` typu, ponieważ `Employee` dziedziczy `Person`.  
+ Poniższy przykład ilustruje zalety obsługi kowariancji w <xref:System.Collections.Generic.IEnumerable%601> interfejsie. Metoda akceptuje kolekcję `IEnumerable<Person>` typu jako parametr. `PrintFullName` Można jednak ponownie użyć go dla kolekcji typu, `IEnumerable<Employee>` ponieważ `Employee` dziedziczy `Person`.  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -55,7 +55,7 @@ class Program
 ```  
   
 ## <a name="comparing-generic-collections"></a>Porównywanie kolekcji ogólnych  
- W poniższym przykładzie pokazano zalety obsługi kontrawariancja w <xref:System.Collections.Generic.IComparer%601> interfejsu. `PersonComparer` Klasy implementuje `IComparer<Person>` interfejsu. Jednakże, można ponownie użyć tej klasy, aby porównać sekwencję obiektów `Employee` typu, ponieważ `Employee` dziedziczy `Person`.  
+ Poniższy przykład ilustruje zalety obsługi kontrawariancja w <xref:System.Collections.Generic.IComparer%601> interfejsie. `PersonComparer` Klasa`IComparer<Person>` implementuje interfejs. Można jednak ponownie użyć tej klasy do porównania sekwencji obiektów typu, `Employee` ponieważ `Employee` dziedziczy `Person`.  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -115,4 +115,4 @@ class Program
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wariancje w interfejsach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Wariancja w interfejsachC#ogólnych ()](./variance-in-generic-interfaces.md)

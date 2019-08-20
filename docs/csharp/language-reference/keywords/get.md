@@ -1,5 +1,5 @@
 ---
-title: Pobierz - C# odwołania
+title: get- C# Reference
 ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
@@ -8,26 +8,26 @@ f1_keywords:
 helpviewer_keywords:
 - get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
-ms.openlocfilehash: 280b818534238207f901e1dcd125e03f5ce1d1fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 783814a575e95fc9deb5c9cdef235a5636f5f529
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661597"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602146"
 ---
 # <a name="get-c-reference"></a>get (odwołanie w C#)
 
-`get` — Słowo kluczowe definiuje *akcesor* metoda we właściwości lub indeksatora, który zwraca wartość właściwości lub elementu indeksatora. Aby uzyskać więcej informacji, zobacz [właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md), [implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) i [indeksatory](../../../csharp/programming-guide/indexers/index.md).  
+Słowo kluczowe definiuje metodę dostępu we właściwości lub indeksatora, która zwraca wartość właściwości lub element indeksatora. `get` Aby uzyskać więcej informacji, zobacz [Właściwości](../../programming-guide/classes-and-structs/properties.md), [zaimplementowane właściwości](../../programming-guide/classes-and-structs/auto-implemented-properties.md) i [indeksatory](../../programming-guide/indexers/index.md).  
   
-W poniższym przykładzie zdefiniowano zarówno `get` i `set` akcesora dla właściwości o nazwie `Seconds`. Używa prywatnego pola o nazwie `_seconds` kopii wartości właściwości.  
+W poniższym przykładzie zdefiniowano `get` `set` metodę dostępu a i dla właściwości o nazwie `Seconds`. Używa pola prywatnego o nazwie `_seconds` do wstecz wartości właściwości.  
  
  [!code-csharp[get#1](../../../../samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]  
   
-Często `get` dostępu składa się z pojedynczej instrukcji, która nie zwraca wartości, tak jak w poprzednim przykładzie. Począwszy od języka C# 7.0, można zaimplementować `get` dostępu jako element członkowski wyrażeniem. Poniższy przykład implementuje interfejsy `get` i `set` dostępu jako elementy członkowskie z wyrażeniem.
+`get` Często metoda dostępu składa się z pojedynczej instrukcji, która zwraca wartość, tak jak w poprzednim przykładzie. Począwszy od C# 7,0, można zaimplementować `get` metodę dostępu jako element członkowski w postaci wyrażenia. W poniższym przykładzie zaimplementowane są `get` `set` i Akcesory jako elementy członkowskie z wyrażeniami.
 
  [!code-csharp[get#3](../../../../samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]   
  
-Dla prostych sytuacjach, w których właściwość `get` i `set` Akcesory wykonać żadna inna operacja niż ustawienie lub odczytywania wartości pola prywatnego zapasowy, możesz korzystać z zalet Obsługa właściwości zaimplementowane automatycznie w kompilatorze języka C#. Poniższy przykład implementuje `Hours` jako automatycznie implementowanej właściwości. 
+W przypadku prostych przypadków, w których właściwości `get` i `set` metody dostępu nie wykonują żadnej innej operacji niż ustawienie lub pobranie wartości w prywatnym polu zapasowym, można skorzystać z obsługi C# kompilatora w celu zaimplementowania. aœciwoœci. Poniższy przykład implementuje `Hours` jako właściwość, która jest implementowana. 
   
  [!code-csharp[get#2](../../../../samples/snippets/csharp/language-reference/keywords/get/get-2.cs)]  
   
@@ -37,7 +37,7 @@ Dla prostych sytuacjach, w których właściwość `get` i `set` Akcesory wykona
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
-- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](./index.md)
+- [Właściwości](../../programming-guide/classes-and-structs/properties.md)

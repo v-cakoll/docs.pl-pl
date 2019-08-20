@@ -2,31 +2,31 @@
 title: Grupowanie danych (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: a85babc43f673711fe1bdfa5cec1836a5073c785
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 15dafdb144ee9fd4184d4c8281d041e03161a16b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753913"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594206"
 ---
 # <a name="grouping-data-c"></a>Grupowanie danych (C#)
-Grupowanie odnosi się do operacji umieszczania danych do grup, tak aby elementów w każdej grupie udostępniać wspólny atrybut.  
+Grupowanie odwołuje się do operacji umieszczania danych w grupach, tak aby elementy w każdej grupie miały wspólny atrybut.  
   
- Poniższa ilustracja przedstawia wyniki grupowania sekwencji znaków. Klucz dla każdej grupy jest znakiem.  
+ Na poniższej ilustracji przedstawiono wyniki grupowania sekwencji znaków. Klucz dla każdej grupy jest znakiem.  
   
- ![Diagram przedstawiający operacji grupowania LINQ.](./media/grouping-data/linq-group-operation.png)  
+ ![Diagram przedstawiający operację grupowania LINQ.](./media/grouping-data/linq-group-operation.png)  
   
- Metody standardowego operatora zapytań, które grupują elementy danych są wymienione w poniższej sekcji.  
+ Standardowe metody operatorów zapytań, które grupują elementy danych, są wymienione w poniższej sekcji.  
   
 ## <a name="methods"></a>Metody  
   
-|Nazwa metody|Opis|Składnia wyrażeń zapytania języka C#|Więcej informacji|  
+|Nazwa metody|Opis|C#Składnia wyrażenia zapytania|Więcej informacji|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|GroupBy|Grupuje elementy, które współużytkują wspólny atrybut. Każda grupa jest reprezentowany przez <xref:System.Linq.IGrouping%602> obiektu.|`group … by`<br /><br /> —lub—<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
-|ToLookup|Wstawia elementy do <xref:System.Linq.Lookup%602> (Słownik jeden do wielu) na podstawie selektora kluczy funkcji.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|GroupBy|Grupuje elementy, które mają wspólny atrybut. Każda grupa jest reprezentowana przez <xref:System.Linq.IGrouping%602> obiekt.|`group … by`<br /><br /> —lub—<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|ToLookup|Wstawia elementy do <xref:System.Linq.Lookup%602> (słownik jeden-do-wielu) w oparciu o funkcję selektora kluczy.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Przykład składni wyrażenia zapytania  
- Poniższy przykład kodu wykorzystuje `group by` klauzuli grupy liczb całkowitych, na liście według tego, czy jest parzysta lub nieparzysta.  
+ Poniższy przykład kodu używa `group by` klauzuli do grupowania liczb całkowitych na liście zgodnie z tym, czy są one parzyste czy nieparzyste.  
   
 ```csharp  
 List<int> numbers = new List<int>() { 35, 44, 200, 84, 3987, 4, 199, 329, 446, 208 };  
@@ -62,10 +62,10 @@ foreach (var group in query)
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Linq>
-- [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [group, klauzula](../../../../csharp/language-reference/keywords/group-clause.md)
-- [Instrukcje: Tworzenie grup zagnieżdżonych](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)
-- [Instrukcje: Grupowanie plików według rozszerzenia (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [Instrukcje: Grupowanie wyników zapytania](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)
-- [Instrukcje: Wykonanie podzapytania w operacji grupowania](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
-- [Instrukcje: Dzielenie pliku na kilka plików za pomocą grup (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Standardowe operatory zapytań — OmówienieC#()](./standard-query-operators-overview.md)
+- [group, klauzula](../../../language-reference/keywords/group-clause.md)
+- [Instrukcje: Tworzenie grupy zagnieżdżonej](../../linq-query-expressions/how-to-create-a-nested-group.md)
+- [Instrukcje: Grupuj pliki według rozszerzenia (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
+- [Instrukcje: Grupuj wyniki zapytania](../../linq-query-expressions/how-to-group-query-results.md)
+- [Instrukcje: Wykonanie podzapytania w operacji grupowania](../../linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
+- [Instrukcje: Dzielenie pliku na wiele plików przy użyciu grup (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

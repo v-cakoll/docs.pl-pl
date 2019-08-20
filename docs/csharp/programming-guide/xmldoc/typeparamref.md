@@ -1,5 +1,5 @@
 ---
-title: <typeparamref> - C# Przewodnik programowania
+title: <typeparamref>— C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: a9b0b9dec09e891105336b3cf0088ed279386d13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f01df27b920dcf3011a51015c771d2da3b442c4c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706575"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587428"
 ---
-# <a name="typeparamref-c-programming-guide"></a>\<typeparamref > (C# Programming Guide)
+# <a name="typeparamref-c-programming-guide"></a>\<typeparamref > (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -24,19 +24,19 @@ ms.locfileid: "61706575"
   
 ## <a name="parameters"></a>Parametry  
  `name`  
- Nazwa parametru typu. Nazwę należy ująć w znaki podwójnego cudzysłowu ("").  
+ Nazwa parametru typu. Ujmij nazwę w znaki podwójnego cudzysłowu ("").  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji na temat parametrów typu w typach ogólnych i metod, zobacz [ogólne](../../../csharp/programming-guide/generics/index.md).  
+ Aby uzyskać więcej informacji na temat parametrów typu w typach ogólnych i metodach, zobacz [Generics](../generics/index.md).  
   
- Użyj tego tagu, aby umożliwić klientom pliku dokumentacji sformatować wyraz w jakiś sposób distinct, na przykład kursywą.  
+ Ten tag umożliwia użytkownikom pliku dokumentacji formatowanie wyrazu w niektórych odrębnych przypadkach, na przykład kursywą.  
   
- Kompiluj przy użyciu [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) do Przetwarzaj komentarze dokumentacji do pliku.  
+ Kompiluj z [/doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Zalecane tagi przeznaczone do komentarzy dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

@@ -1,52 +1,52 @@
 ---
-title: Dostęp do modyfikatorów - C# odwołania
+title: Modyfikatory dostępu — C# odwołanie
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: 587f1b03292db643d721e599ea93c39ba188117d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5568d79c4a13b7b0db5a46bb4ebb2168ea66a2c9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593012"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606094"
 ---
 # <a name="access-modifiers-c-reference"></a>Modyfikatory dostępu (odwołanie w C#)
-Modyfikatory dostępu są słowami kluczowymi, używany do określenia deklarowaną dostępność składowej lub typu. Ta sekcja wprowadza modyfikatory dostępu cztery:  
+Modyfikatory dostępu są słowami kluczowymi używanymi do określania zadeklarowanej dostępności elementu członkowskiego lub typu. W tej sekcji przedstawiono cztery Modyfikatory dostępu:  
   
 - `public`
 - `protected`
 - `internal`
 - `private`
   
- Następujące sześć poziomów ułatwień dostępu, można określić za pomocą modyfikatorów dostępu:  
+ Za pomocą modyfikatorów dostępu można określić następujące sześć poziomów dostępności:  
   
-- [`public`](public.md): Dostęp nie jest ograniczona.  
+- [`public`](public.md): Dostęp nie jest ograniczony.  
   
-- [`protected`](protected.md): Dostęp jest ograniczony do zawierający klasy lub typy pochodzące z klasy zawierającej.  
+- [`protected`](protected.md): Dostęp jest ograniczony do zawierającej klasy lub typów pochodzących od klasy zawierającej.  
   
 - [`internal`](internal.md): Dostęp jest ograniczony do bieżącego zestawu.  
   
-- [`protected internal`](protected-internal.md): Dostęp jest ograniczony do bieżącego zestawu lub typy pochodzące z klasy zawierającej.  
+- [`protected internal`](protected-internal.md): Dostęp jest ograniczony do bieżącego zestawu lub typów pochodzących od klasy zawierającej.  
   
 - [`private`](private.md): Dostęp jest ograniczony do typu zawierającego.  
 
-- [`private protected`](private-protected.md): Dostęp jest ograniczony do zawierający klasy lub typów pochodnych typu zawierającego klasy w bieżącym zestawie.  
+- [`private protected`](private-protected.md): Dostęp jest ograniczony do zawierającej klasy lub typów pochodzących od klasy zawierającej w bieżącym zestawie.  
   
- Ta sekcja wprowadza również następujące czynności:  
+ W tej sekcji wprowadzono również następujące elementy:  
   
-- [Poziomy ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md): Za pomocą modyfikatorów dostępu cztery do deklarowania sześciu poziomów ułatwień dostępu.  
+- [Poziomy ułatwień dostępu](./accessibility-levels.md): Użycie czterech modyfikatorów dostępu do deklarowania sześciu poziomów dostępności.  
   
-- [Domena dostępności](../../../csharp/language-reference/keywords/accessibility-domain.md): Określa, gdzie, w sekcjach program członka mogą być przywoływane.  
+- [Domena dostępności](./accessibility-domain.md): Określa, gdzie w sekcjach programu można odwoływać się do elementu członkowskiego.  
   
-- [Ograniczenia dotyczące używania poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): Podsumowanie ograniczenia dotyczące używania zadeklarowany poziomów ułatwień dostępu.  
+- [Ograniczenia dotyczące używania poziomów ułatwień dostępu](./restrictions-on-using-accessibility-levels.md): Podsumowanie ograniczeń dotyczących używania zadeklarowanych poziomów ułatwień dostępu.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
-- [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [Słowa kluczowe dostępu](../../../csharp/language-reference/keywords/access-keywords.md)
-- [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](./index.md)
+- [Modyfikatory dostępu](../../programming-guide/classes-and-structs/access-modifiers.md)
+- [Słowa kluczowe dostępu](./access-keywords.md)
+- [Modyfikatory](./modifiers.md)

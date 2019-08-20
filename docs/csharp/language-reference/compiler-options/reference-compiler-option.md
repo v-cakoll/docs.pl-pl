@@ -1,5 +1,5 @@
 ---
-title: — Odwołanie (opcje kompilatora C#)
+title: -Reference (C# opcje kompilatora)
 ms.date: 07/20/2015
 f1_keywords:
 - /reference
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: fbf93a87cede753ebd41c148f4fb4bb761846954
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 247fb222eaacdb5ee60df2dded3a857f0395eb34
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593086"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606571"
 ---
-# <a name="-reference-c-compiler-options"></a>— Odwołanie (opcje kompilatora C#)
-**— Dokumentacja** opcja powoduje, że kompilator, aby zaimportować [publicznych](../../../csharp/language-reference/keywords/public.md) wpisz informacje w określonym pliku do bieżącego projektu, dzięki czemu można odwoływać się do metadanych z określonych plików zestawów.  
+# <a name="-reference-c-compiler-options"></a>-Reference (C# opcje kompilatora)
+Opcja **-Reference** powoduje, że kompilator importuje informacje o typie [publicznym](../keywords/public.md) w określonym pliku do bieżącego projektu, co pozwala na odwoływanie się do metadanych z określonych plików zestawów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,47 +32,47 @@ ms.locfileid: "64593086"
   
 ## <a name="arguments"></a>Argumenty  
  `filename`  
- Nazwa pliku, który zawiera manifest zestawu. Aby zaimportować więcej niż jeden plik, należy dołączyć oddzielnego **— dokumentacja** opcji dla każdego pliku.  
+ Nazwa pliku, który zawiera manifest zestawu. Aby zaimportować więcej niż jeden plik, należy dołączyć osobną opcję **odwołania** dla każdego pliku.  
   
  `alias`  
- Prawidłowe identyfikatorem języka C#, która będzie reprezentować głównej przestrzeni nazw, który będzie zawierać wszystkie przestrzenie nazw w zestawie.  
+ Prawidłowy C# identyfikator, który będzie reprezentować główną przestrzeń nazw, która będzie zawierać wszystkie przestrzenie nazw w zestawie.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby zaimportować z więcej niż jeden plik, należy dołączyć **— dokumentacja** opcji dla każdego pliku.  
+ Aby zaimportować z więcej niż jednego pliku, należy dołączyć opcję **-odwołanie** dla każdego pliku.  
   
- Pliki, które należy zaimportować musi zawierać manifest; Plik wyjściowy muszą być skompilowane przy użyciu jednego z [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) opcji innych niż [-target: module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
+ Importowane pliki muszą zawierać manifest; plik wyjściowy musi być skompilowany za pomocą jednej z opcji [-Target](./target-compiler-option.md) [: module](./target-module-compiler-option.md).  
   
- **-r** jest krótka forma **— dokumentacja**.  
+ **-r** jest krótką formą **odwołania**.  
   
- Użyj [- addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) Importowanie metadanych z pliku wyjściowego, który nie zawiera manifest zestawu.  
+ Użyj polecenia [-addmodule](./addmodule-compiler-option.md) , aby zaimportować metadane z pliku wyjściowego, który nie zawiera manifestu zestawu.  
   
- Jeśli odwołujesz się zestaw (Assembly A), który odwołuje się do innego zestawu (Assembly B), konieczne będzie odwołanie do zestawu B jeśli:  
+ Jeśli odwołujesz się do zestawu (zestawu A), który odwołuje się do innego zestawu (zestawu B), należy odwołać się do zestawu B, jeśli:  
   
-- Typ używanej z zestawu A dziedziczy z typu lub implementuje interfejs z zestawu B.  
+- Typ używany z zestawu A dziedziczy po typie lub implementuje interfejs z zestawu B.  
   
-- Wywołuje się, pola, właściwości, zdarzenia lub metody, która ma typ zwracany lub typu parametru z zestawu B.  
+- Wywołujesz pole, właściwość, zdarzenie lub metodę, która ma typ zwracany lub typ parametru z zestawu B.  
   
- Użyj [-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) określić katalog, w którym znajduje się co najmniej jeden z odwołania do zestawów. **-Lib** temacie omówiono również katalogi, w których kompilator wyszukuje zestawy.  
+ Użyj [-lib](./lib-compiler-option.md) , aby określić katalog, w którym znajduje się co najmniej jedno odwołanie do zestawu. W temacie **-lib** omówiono również katalogi, w których Kompilator wyszukuje zestawy.  
   
- Kompilator rozpoznaje typu w zestawie, a nie w module, potrzebny zmuszeni do rozpoznania typu, co można zrobić, określając wystąpienie tego typu. Istnieją inne sposoby, aby rozwiązać nazwy typów w zestawie dla kompilatora: na przykład, jeśli możesz dziedziczyć z typu w zestawie, nazwa typu zostanie następnie być rozpoznawane przez kompilator.  
+ Aby kompilator rozpoznawał typ w zestawie, a nie w module, należy go wymusić, aby rozpoznać typ, który można wykonać przez zdefiniowanie wystąpienia typu. Istnieją inne sposoby rozwiązywania nazw typów w zestawie dla kompilatora: na przykład, jeśli dziedziczysz z typu w zestawie, nazwa typu zostanie rozpoznana przez kompilator.  
   
- Czasami zachodzi konieczność odwoływać się do dwóch różnych wersji jednego składnika, z poziomu jednego zestawu. Aby to zrobić, należy użyć alias suboption na **— dokumentacja** przełącznika dla każdego pliku w celu rozróżnienia między dwoma plikami. Ten alias będzie służyć jako kwalifikator nazwy składnika i zostanie rozwiązany do składnika w jeden z plików.  
+ Czasami konieczne jest odwołanie się do dwóch różnych wersji tego samego składnika z jednego zestawu. Aby to zrobić, użyj opcji alias w przełączniku **odwołania** dla każdego pliku, aby rozróżnić oba pliki. Ten alias będzie używany jako kwalifikator dla nazwy składnika i zostanie rozpoznany jako składnik w jednym z tych plików.  
   
- Csc pliku odpowiedzi (rsp), która odwołuje się do powszechnie stosowane zestawów .NET Framework, jest używany domyślnie. Użyj [- noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) , jeśli nie chcesz, aby kompilator korzystać csc.rsp.  
+ Domyślnie używany jest plik odpowiedzi CSC (. RSP), który odwołuje się do najczęściej używanych zestawów .NET Framework. Użyj [-noconfig](./noconfig-compiler-option.md) , jeśli nie chcesz, aby kompilator korzystał z CSC. rsp.  
   
 > [!NOTE]
-> W programie Visual Studio, należy użyć **Dodaj odwołanie** okno dialogowe. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie lub usuwanie odwołań za pomocą Menedżera odwołań](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Aby zapewnić zachowanie równoważne między dodawaniem odwołań za pomocą `-reference` i dodawaniem odwołań za pomocą **Dodaj odwołanie** okno dialogowe, zestaw **Osadź typy współdziałania** właściwość **False** dla zestawu, który dodajesz. **Wartość true,** jest wartością domyślną dla właściwości.  
+> W programie Visual Studio Użyj okna dialogowego **Dodaj odwołanie** . Aby uzyskać więcej informacji, zobacz [jak: Dodawanie lub usuwanie odwołań za pomocą Menedżera](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)odwołań. Aby zapewnić równoważne zachowanie między dodawaniem odwołań przy `-reference` użyciu i dodawaniu odwołań przy użyciu okna dialogowego **Dodaj odwołanie** , ustaw właściwość **Osadź typy** współdziałania na **wartość false** dla zestawu, który jest dodawany. Wartość **true** jest wartością domyślną właściwości.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie pokazano, jak używać [alias zewnętrzny](../../../csharp/language-reference/keywords/extern-alias.md) funkcji.  
+ Ten przykład pokazuje, jak używać funkcji [alias zewnętrzny](../keywords/extern-alias.md) .  
   
- Kompilowanie pliku źródłowego i zaimportować metadane z `grid.dll` i `grid20.dll`, które zostały skompilowane wcześniej. Dwa pliki dll zawiera różne wersje tego samego składnika, a następnie użyj dwóch **— dokumentacja** przy użyciu opcji alias do kompilowania pliku źródłowego. Opcje wyglądać następująco:  
+ Kompilowanie pliku źródłowego i Importowanie metadanych z `grid.dll` i `grid20.dll`, które zostały wcześniej skompilowane. Dwie biblioteki DLL zawierają oddzielne wersje tego samego składnika, a do kompilowania pliku źródłowego służą dwa **odwołania** z opcjami aliasów. Opcje wyglądają następująco:  
 
 ```console
 -reference:GridV1=grid.dll -reference:GridV2=grid20.dll  
 ```
   
- Powoduje to skonfigurowanie aliasów zewnętrznych `GridV1` i `GridV2`, używane w programie przez `extern` instrukcji:  
+ Powoduje to skonfigurowanie aliasów `GridV1` zewnętrznych i `GridV2`, które są używane w `extern` programie, za pomocą instrukcji:  
   
 ```csharp  
 extern alias GridV1;  
@@ -80,13 +80,13 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- Po zakończeniu tej operacji możesz zapoznać się z formant siatki z `grid.dll` przez dodanie przedrostka nazwę formantu `GridV1`, podobnie do następującego:  
+ Po wykonaniu tej czynności można odwołać się do formantu siatki z `grid.dll` , tworząc prefiks `GridV1`nazwy kontrolki, tak jak to:  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- Ponadto, możesz zapoznać się z formant siatki z `grid20.dll` przez dodanie przedrostka nazwę formantu `GridV2` następująco:  
+ Ponadto można odwołać się do formantu siatki z `grid20.dll` , tworząc prefiks nazwy kontrolki w `GridV2` następujący sposób:  
   
 ```csharp  
 GridV2::Grid   
@@ -94,5 +94,5 @@ GridV2::Grid
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opcje kompilatora C#](./index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

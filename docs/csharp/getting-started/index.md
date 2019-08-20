@@ -1,5 +1,5 @@
 ---
-title: Wprowadzenie — przewodnik po języku C#
+title: Wprowadzenie — C# Przewodnik
 description: Zapoznaj się z krótkimi samouczkami, dzięki którym szybko nauczysz się podstawowych pojęć z zakresu C# i tworzenia aplikacji .NET Core.
 helpviewer_keywords:
 - Visual C#, getting started
@@ -8,26 +8,26 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 0c97a5b843d27258f58d654d35420a262d5b741a
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ba5d2a9fb74b877c9b847343a9012ccb9624335e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062954"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604221"
 ---
-# <a name="get-started-with-c"></a>Rozpoczynanie pracy przy użyciu języka C\#
+# <a name="get-started-with-c"></a>Wprowadzenie do języka C\#
 
-Ta sekcja zawiera krótki, prosty samouczek, dzięki któremu szybko stworzysz aplikację przy użyciu języka C# i .NET Core. Znajdziesz tu tematy wprowadzające do Visual Studio 2017 i Visual Studio Code. Te artykuły przyjęto założenie, pewne doświadczenie w zakresie programowania. Jeśli jesteś nowym programistą, Wypróbuj nasz [wprowadzenie do C# ](../tutorials/intro-to-csharp/index.md) interaktywnych samouczków.
+Ta sekcja zawiera krótki, prosty samouczek, dzięki któremu szybko stworzysz aplikację przy użyciu języka C# i .NET Core. Znajdziesz tu tematy wprowadzające do Visual Studio 2017 i Visual Studio Code. W tych artykułach założono pewne środowisko programistyczne. Jeśli jesteś nowym sposobem programowania, wypróbuj nasze [wprowadzenie do C# ](../tutorials/intro-to-csharp/index.md) interaktywnych samouczków.
 
 Dostępne są następujące tematy:
 
-* [Wprowadzenie do języka C# i .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
+* [Wprowadzenie do C# języka i .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
 
-     Zawiera omówienie języka C# i .NET.
+     Zawiera omówienie C# języka i programu .NET.
 
 * [Tworzenie aplikacji Hello world w języku C# na platformie .NET Core w programie Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
 
-   Visual Studio 2017, najnowsza wersja programu Visual Studio umożliwia kodu, kompilowania, uruchamiania, debugowanie, profilowanie i Publikuj swoje aplikacje z zintegrowane środowisko projektowe dla Windows.
+   Program Visual Studio 2017, Najnowsza wersja programu Visual Studio, umożliwia wykonywanie kodu, kompilowanie, uruchamianie, debugowanie, profilowanie i publikowanie aplikacji z poziomu zintegrowanego środowiska projektowego dla systemu Windows.
 
    Temat ten umożliwi Ci utworzenie i uruchomienie prostej aplikacji Hello World, a następnie zmodyfikowanie jej do formy nieco bardziej interaktywnej. Kiedy już utworzysz i uruchomisz swoją aplikację, możesz też dowiedzieć się, jak ją [debugować](../../core/tutorials/debugging-with-visual-studio.md) oraz [opublikować](../../core/tutorials/publishing-with-visual-studio.md), tak aby można było ją uruchomić na dowolnej platformie obsługiwanej przez .NET Core.
 
@@ -43,18 +43,18 @@ Dostępne są następujące tematy:
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-* [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)
+* [Przewodnik programowania w języku C#](../programming-guide/index.md)
 
     Zawiera informacje o pojęciach programistycznych w C# oraz opisuje sposób wykonywania różnych zadań w tym języku.
 
-* [Dokumentacja języka C#](../../csharp/language-reference/index.md)
+* [Dokumentacja języka C#](../language-reference/index.md)
 
     Zawiera szczegółową dokumentację o słowach kluczowych, operatorach, dyrektywach preprocesora, opcjach kompilatora oraz błędach i ostrzeżeniach w czasie kompilacji.
 
-* [Przewodniki](../../csharp/walkthroughs.md)
+* [Przewodniki](../walkthroughs.md)
 
     Zawiera linki do przewodników programowania w języku C# wraz z krótkimi opisami poszczególnych przewodników.
 
 ## <a name="see-also"></a>Zobacz także
 
-- * [C#Tworzenie aplikacji przy użyciu programu Visual Studio](/visualstudio/get-started/csharp/)
+- * [C#Programowanie za pomocą programu Visual Studio](/visualstudio/get-started/csharp/)

@@ -2,42 +2,42 @@
 title: Konwertowanie typów danych (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 918a9fbfc523e62c7b4a5d915c28c00ea781d3e4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9e8b7726b94871a17a4be50a9b24d8b73abcf79c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597720"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594616"
 ---
 # <a name="converting-data-types-c"></a>Konwertowanie typów danych (C#)
-Metody konwersji zmienić typ danych wejściowych obiektów.  
+Metody konwersji zmieniają typ obiektów wejściowych.  
   
- Operacje konwersji w zapytaniach LINQ są przydatne w wielu różnych aplikacji. Poniżej przedstawiono kilka przykładów:  
+ Operacje konwersji w zapytaniach LINQ są przydatne w różnych aplikacjach. Poniżej przedstawiono kilka przykładów:  
   
-- <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> Metoda może służyć do ukrywanie niestandardowych implementacji standardowego operatora zapytania typu.  
+- <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> Metoda może służyć do ukrycia niestandardowej implementacji standardowego operatora zapytań.  
   
-- <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> Metoda może służyć do włączenia kolekcji zdefiniowanych na potrzeby zapytań LINQ.  
+- <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> Metoda może służyć do włączenia kolekcji niesparametryzowanej dla zapytań LINQ.  
   
-- <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>, I <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> metody może służyć do wymuszenia wykonanie zapytania bezpośredniego zamiast odracza ją do czasu wyliczenia zapytania.  
+- Metody <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>i mogąbyćużywanedowymuszenianatychmiastowegowykonaniazapytaniazamiastodliczeniagodomomentuwyliczeniazapytania.<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>  
   
 ## <a name="methods"></a>Metody  
- Poniższa tabela zawiera listę metod standardowych operatorów zapytań, które wykonują konwersje typów danych.  
+ W poniższej tabeli wymieniono standardowe metody operatorów zapytań, które wykonują konwersje typów danych.  
   
- Metody konwersji w tej tabeli, których nazwy rozpoczynają się od "Jako" Zmiana typu statycznego kolekcji źródłowej, ale nie wyliczyć. Typ metody, których nazwy rozpoczynają się od "Do wyliczania kolekcji źródłowej i umieść elementy w odpowiedniej kolekcji".  
+ Metody konwersji w tej tabeli, których nazwy zaczynają się od "As", zmieniają typ statyczny kolekcji źródłowej, ale nie są wyliczane. Metody, których nazwy zaczynają się od "do", wyliczają kolekcję źródłową i umieszczają elementy w odpowiednim typie kolekcji.  
   
-|Nazwa metody|Opis|Składnia wyrażeń zapytania języka C#|Więcej informacji|  
+|Nazwa metody|Opis|C#Składnia wyrażenia zapytania|Więcej informacji|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|AsEnumerable|Zwraca dane wejściowe wpisanych w formie <xref:System.Collections.Generic.IEnumerable%601>.|Nie dotyczy.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
-|AsQueryable|Konwertuje (ogólny) <xref:System.Collections.IEnumerable> do (ogólny) <xref:System.Linq.IQueryable>.|Nie dotyczy.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  
-|Rzutowanie|Rzutuje elementy kolekcji do określonego typu.|Można użyć zmiennej jawnie wpisanych zakresu. Na przykład:<br /><br /> `from string str in words`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|  
-|OfType|Służy do przefiltrowania wartości, w zależności od ich możliwości, można rzutować do określonego typu.|Nie dotyczy.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
-|ToArray|Konwertuje kolekcję na tablicę. Ta metoda wymusza wykonanie zapytania.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|  
-|ToDictionary|Umieszcza elementy do <xref:System.Collections.Generic.Dictionary%602> oparte na funkcji selektora kluczy. Ta metoda wymusza wykonanie zapytania.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|  
-|Tolist —|Konwertuje kolekcję do <xref:System.Collections.Generic.List%601>. Ta metoda wymusza wykonanie zapytania.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|  
-|ToLookup|Umieszcza elementy do <xref:System.Linq.Lookup%602> (Słownik jeden do wielu) na podstawie selektora kluczy funkcji. Ta metoda wymusza wykonanie zapytania.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|AsEnumerable|Zwraca dane wejściowe wpisane jako <xref:System.Collections.Generic.IEnumerable%601>.|Nie dotyczy.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
+|AsQueryable|Konwertuje (ogólne) <xref:System.Collections.IEnumerable> na (rodzajowy). <xref:System.Linq.IQueryable>|Nie dotyczy.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  
+|Rzutowanie|Rzutuje elementy kolekcji na określony typ.|Użyj jawnie wpisanej zmiennej zakresu. Na przykład:<br /><br /> `from string str in words`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|  
+|OfType|Filtruje wartości w zależności od ich zdolności do rzutowania do określonego typu.|Nie dotyczy.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|ToArray —|Konwertuje kolekcję na tablicę. Ta metoda wymusza wykonanie zapytania.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|  
+|ToDictionary|Umieszcza elementy w <xref:System.Collections.Generic.Dictionary%602> oparciu o funkcję selektora kluczy. Ta metoda wymusza wykonanie zapytania.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|  
+|ToList —|Konwertuje kolekcję na <xref:System.Collections.Generic.List%601>. Ta metoda wymusza wykonanie zapytania.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|  
+|ToLookup|Umieszcza elementy w <xref:System.Linq.Lookup%602> (słownik jeden-do-wielu) w oparciu o funkcję selektora kluczy. Ta metoda wymusza wykonanie zapytania.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Przykład składni wyrażenia zapytania  
- Poniższy przykład kodu używa zmiennej zakresu jawnie wpisane rzutowanie typu podtypem przed uzyskaniem dostępu do składowej, która jest dostępna tylko na podtypu.  
+ Poniższy przykład kodu używa zmiennej zakresu jawnie wpisanej do rzutowania typu na podtyp przed uzyskaniem dostępu do elementu członkowskiego, który jest dostępny tylko dla podtypu.  
   
 ```csharp  
 class Plant  
@@ -77,7 +77,7 @@ static void Cast()
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Linq>
-- [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [from, klauzula](../../../../csharp/language-reference/keywords/from-clause.md)
-- [Wyrażenia zapytań LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [Instrukcje: Zapytanie w ArrayList za pomocą LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [Standardowe operatory zapytań — OmówienieC#()](./standard-query-operators-overview.md)
+- [from, klauzula](../../../language-reference/keywords/from-clause.md)
+- [Wyrażenia zapytania LINQ](../../linq-query-expressions/index.md)
+- [Instrukcje: Kwerenda ArrayList za pomocą LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)

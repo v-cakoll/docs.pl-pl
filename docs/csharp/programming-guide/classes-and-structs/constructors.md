@@ -1,5 +1,5 @@
 ---
-title: Konstruktory — C# przewodnik programowania
+title: Konstruktory C# — Przewodnik programowania
 ms.custom: seodec18
 ms.date: 05/05/2017
 helpviewer_keywords:
@@ -7,60 +7,60 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 8c5d34e5350f3ca64753f1d07cabb40712c66b88
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: ea780fc983ed46c8a5ccb54ab618d1a0a2a928d1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398542"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597103"
 ---
 # <a name="constructors-c-programming-guide"></a>Konstruktorzy (Przewodnik programowania w języku C#)
 
-Zawsze, gdy [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md) jest utworzone, jego konstruktor jest wywoływany. Klasa lub struktura może mieć wiele konstruktorów, które przyjmują różne argumentów. Konstruktory Włącz programisty należy ustawić wartości domyślne, ograniczyć podczas tworzenia wystąpienia i napisać kod, który jest elastyczny i łatwy do odczytania. Aby uzyskać więcej informacji i przykładów, zobacz [korzystanie z konstruktorów](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) i [konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+Za każdym razem, gdy tworzona jest [Klasa](../../language-reference/keywords/class.md) lub [Struktura](../../language-reference/keywords/struct.md) , jego Konstruktor jest wywoływany. Klasa lub struktura może mieć wiele konstruktorów przyjmujących różne argumenty. Konstruktory umożliwiają programistom Ustawianie wartości domyślnych, ograniczenie tworzenia wystąpień i pisanie kodu, który jest elastyczny i łatwy do odczytania. Aby uzyskać więcej informacji i przykładów, zobacz [Używanie konstruktorów](./using-constructors.md) i [konstruktorów wystąpień](./instance-constructors.md).  
 
-## <a name="parameterless-constructors"></a>Konstruktorów bez parametrów
+## <a name="parameterless-constructors"></a>Konstruktory bez parametrów
   
-Jeśli nie podasz konstruktora dla klasy, C# tworzony jest jeden domyślny, który tworzy wystąpienie obiektu i ustawia zmienne składowe do wartości domyślnych, zgodnie z zaleceniami z [tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md). Jeśli nie podasz konstruktora dla Twojej struktury C# opiera się na *niejawnego konstruktora bez parametrów* automatycznie zainicjować każdego pola typu wartości do wartości domyślnej, zgodnie z zaleceniami z [wartości domyślne Tabela](../../../csharp/language-reference/keywords/default-values-table.md). Aby uzyskać więcej informacji i przykładów, zobacz [konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+Jeśli nie podano konstruktora dla klasy, program C# tworzy jedną, domyślnie, tworząc wystąpienie obiektu i ustawia zmienne Członkowskie na wartości domyślne, jak wymieniono w [tabeli wartości domyślnych](../../language-reference/keywords/default-values-table.md). Jeśli nie podano konstruktora dla struktury, zależy on C# od niejawnego *konstruktora bez parametrów* , aby automatycznie inicjować każde pole typu wartości jako wartość domyślną, jak wymieniono w [tabeli wartości domyślnych](../../language-reference/keywords/default-values-table.md). Aby uzyskać więcej informacji i przykładów, zobacz [konstruktory wystąpień](./instance-constructors.md).  
 
 ## <a name="constructor-syntax"></a>Składnia konstruktora
 
-Konstruktor jest metodą, którego nazwa jest taka sama jak nazwa ich typu. Jego podpis metody zawiera tylko nazwy metody i jego listy parametrów; nie ma typ zwracany. W poniższym przykładzie pokazano konstruktora dla klasy o nazwie `Person`.
+Konstruktor jest metodą, której nazwa jest taka sama jak nazwa jej typu. Podpis metody zawiera tylko nazwę metody i jej listę parametrów; nie zawiera typu zwracanego. Poniższy przykład pokazuje konstruktora dla klasy o nazwie `Person`.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#1)]  
 
-Jeśli Konstruktor można zaimplementować jako pojedynczej instrukcji, można użyć [definicja treści wyrażenia](../statements-expressions-operators/expression-bodied-members.md). W poniższym przykładzie zdefiniowano `Location` klasy, której Konstruktor ma jeden ciąg parametr o nazwie *nazwa*. Definicja treści wyrażenia przypisuje argument `locationName` pola.
+Jeśli Konstruktor można zaimplementować jako pojedynczą instrukcję, można użyć [definicji treści wyrażenia](../statements-expressions-operators/expression-bodied-members.md). W poniższym przykładzie zdefiniowano `Location` klasę, której Konstruktor ma jeden parametr ciągu o nazwie *name*. Definicja treści wyrażenia przypisuje argument do `locationName` pola.
 
 [!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
 ## <a name="static-constructors"></a>Konstruktory statyczne
 
-Poprzednie przykłady ma wszystkie konstruktory pokazywane wystąpienie, które tworzą nowy obiekt. Klasa lub struktura może być również statyczny Konstruktor inicjuje statyczne elementy członkowskie tego typu.  Konstruktory statyczne są bez parametrów. Jeśli nie podasz statyczny Konstruktor zainicjować pola statyczne C# kompilator inicjalizuje pól statycznych, aby przywrócić wartości domyślne, zgodnie z zaleceniami z [tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md).
+W poprzednich przykładach są wyświetlane konstruktory wystąpień, które tworzą nowy obiekt. Klasa lub struktura może również mieć Konstruktor statyczny, który inicjuje statyczne elementy członkowskie typu.  Konstruktory statyczne są bezparametryczne. Jeśli nie podano statycznego konstruktora do zainicjowania pól statycznych, C# kompilator inicjuje statyczne pola do ich wartości domyślnej, jak wymieniono w [tabeli wartości domyślnych](../../language-reference/keywords/default-values-table.md).
 
-W poniższym przykładzie użyto statycznego konstruktora zainicjować pole statyczne.
+Poniższy przykład używa konstruktora statycznego, aby zainicjować pole statyczne.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
 
-Można również zdefiniować Konstruktor statyczny przy użyciu definicji treści wyrażenia, co ilustruje poniższy przykład. 
+Można również zdefiniować statyczny Konstruktor z definicją treści wyrażenia, jak pokazano w poniższym przykładzie. 
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
 
-Aby uzyskać więcej informacji i przykładów, zobacz [konstruktorów statycznych](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
+Aby uzyskać więcej informacji i przykładów, zobacz [statyczne konstruktory](./static-constructors.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Używanie konstruktorów](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+ [Używanie konstruktorów](./using-constructors.md)  
   
- [Konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)  
+ [Konstruktory wystąpień](./instance-constructors.md)  
   
- [Konstruktory prywatne](../../../csharp/programming-guide/classes-and-structs/private-constructors.md)  
+ [Konstruktory prywatne](./private-constructors.md)  
   
- [Konstruktory statyczne](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
+ [Konstruktory statyczne](./static-constructors.md)  
   
- [Instrukcje: Zapisywanie konstruktora kopiującego](../../../csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md)  
+ [Instrukcje: Napisz Konstruktor kopiujący](./how-to-write-a-copy-constructor.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)
-- [static](../../../csharp/language-reference/keywords/static.md)
-- [Dlaczego są inicjatory uruchamiane w kolejności przeciwnej jako konstruktory? Część 1](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Klasy i struktury](./index.md)
+- [Finalizatory](./destructors.md)
+- [static](../../language-reference/keywords/static.md)
+- [Dlaczego inicjatory są uruchamiane w kolejności odwrotnej jako konstruktory? Część 1](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)

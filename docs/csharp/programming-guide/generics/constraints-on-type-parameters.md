@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: f09f93f27aa4f50cfb7e09b9d6d4f98f22e1ac9a
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 4f0277ef5883a238cf2579d2d9ea956bc06061e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433556"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589877"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Ograniczenia dotyczące parametrów typu (C# Przewodnik programowania)
 
@@ -113,7 +113,7 @@ Można go użyć, jak pokazano w poniższym przykładzie, aby utworzyć Wyliczen
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Collections.Generic>
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/index.md)
-- [Klasy ogólne](../../../csharp/programming-guide/generics/generic-classes.md)
-- [new, ograniczenie](../../../csharp/language-reference/keywords/new-constraint.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Wprowadzenie do typów ogólnych](./index.md)
+- [Klasy ogólne](./generic-classes.md)
+- [new, ograniczenie](../../language-reference/keywords/new-constraint.md)

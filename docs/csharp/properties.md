@@ -1,95 +1,95 @@
 ---
 title: Właściwości
-description: Dowiedz się więcej o C# właściwości, które zawierają funkcje sprawdzania poprawności, obliczonych wartości, obliczanie z opóźnieniem i zmienić właściwości powiadomienia.
+description: Dowiedz C# się więcej na temat właściwości, takich jak funkcje sprawdzania poprawności, obliczone wartości, oceny z opóźnieniem i zmiany właściwości.
 ms.date: 04/25/2018
-ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6638ae74516d7546882c8a380eed9b03ff3d18e9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878279"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587401"
 ---
 # <a name="properties"></a>Właściwości
 
-Właściwości są obywatelami pierwszej klasy w C#. Język definiuje składnia, która umożliwia programistom pisanie kodu, który dokładnie odzwierciedla ich celem projektu.
+Właściwości są obywatelami pierwszej klasy C#w. Język definiuje składnię, która umożliwia deweloperom pisanie kodu, który dokładnie wyraża zamiar projektowania.
 
-Właściwości zachowują się jak pola, gdy są one używane.
-Jednak w przeciwieństwie do pola, właściwości są implementowane za pomocą metody dostępu, które definiują instrukcje wykonania, gdy właściwość jest dostępny lub przypisane.
+Właściwości zachowują się jak pola, gdy są dostępne.
+Jednak, w przeciwieństwie do pól, właściwości są implementowane przy użyciu metod dostępu definiujących instrukcje wykonywane podczas uzyskiwania dostępu do właściwości lub do przypisywania.
 
 ## <a name="property-syntax"></a>Składnia właściwości
 
-Składnia właściwości jest naturalnym rozszerzeniem pola. Pole definiuje lokalizację magazynu:
+Składnia właściwości jest naturalnym rozszerzeniem pól. Pole definiuje lokalizację magazynu:
 
 [!code-csharp[Person class with public fields](../../samples/snippets/csharp/properties/Person.cs#1)]
 
-Definicja właściwości zawiera deklaracje dla `get` i `set` metodę dostępu, która pobiera i przypisuje wartość tej właściwości:
+Definicja właściwości zawiera deklaracje dla `get` metody dostępu i `set` , która pobiera i przypisuje wartość tej właściwości:
 
 [!code-csharp[Person class with public properties](../../samples/snippets/csharp/properties/Person.cs#2)]
 
-Składnia powyżej jest *auto-właściwości* składni. Kompilator generuje lokalizację magazynu dla pola, które tworzy kopię zapasową właściwości. Kompilator implementuje również treści `get` i `set` metod dostępu.
+Pokazana powyżej składnia jest składnią *Właściwości autoproperty* . Kompilator generuje lokalizację magazynu dla pola, które tworzy kopię zapasową właściwości. Kompilator implementuje także treść `get` metod dostępu i. `set`
 
-Czasami musisz zainicjować właściwość, która ma wartość inną niż domyślna dla tego typu.  C#Umożliwia, ustawiając wartość po zamykającego nawiasu klamrowego dla właściwości. Lepiej wartość początkową dla `FirstName` właściwość, aby być ciągiem pustym zamiast `null`. Określ, jak pokazano poniżej:
+Czasami trzeba zainicjować właściwość jako wartość inną niż domyślna dla tego typu.  C#umożliwia ustawienie wartości po zamykającym nawiasie klamrowym dla właściwości. Możesz preferować wartość `FirstName` początkową właściwości jako pusty ciąg, `null`a nie. Należy określić, jak pokazano poniżej:
 
 [!code-csharp[Person class with properties and initializer](../../samples/snippets/csharp/properties/Person.cs#3)]
 
-Inicjowanie określonych jest najbardziej przydatne do właściwości tylko do odczytu, jak zobaczysz w dalszej części tego artykułu.
+Konkretna Inicjalizacja jest najbardziej przydatna w przypadku właściwości tylko do odczytu, ponieważ zobaczysz w dalszej części tego artykułu.
 
-Można również definiować magazynu samodzielnie, jak pokazano poniżej:
+Możesz również zdefiniować magazyn samodzielnie, jak pokazano poniżej:
 
 [!code-csharp[Person class with properties and backing field](../../samples/snippets/csharp/properties/Person.cs#4)]
 
-Jeśli implementacja właściwości jest pojedyncze wyrażenie, możesz użyć *elementy członkowskie z wyrażeniem* dla metody pobierającej lub ustawiającej:
+Gdy implementacja właściwości jest pojedynczym wyrażeniem, można użyć *składowych wyrażeń* dla metody pobierającej lub setter:
 
 [!code-csharp[Person class with properties and expression bodied getters and setters](../../samples/snippets/csharp/properties/Person.cs#5)]
 
-To uproszczoną składnię będzie używany, gdy to stosowne, w tym artykule.
+Ta uproszczona składnia zostanie użyta, jeśli ma to zastosowanie w tym artykule.
 
-Definicja właściwości przedstawionych powyżej jest właściwością odczytu i zapisu. Zwróć uwagę, słowo kluczowe `value` w metodzie dostępu set. `set` Akcesor zawsze ma jeden parametr o nazwie `value`. `get` Dostępu musi zwracać wartość, która jest konwertowany na typ właściwości (`string` w tym przykładzie).
+Pokazana powyżej Definicja właściwości jest właściwością do odczytu i zapisu. Zwróć uwagę na `value` słowo kluczowe w metodzie dostępu set. Metoda dostępu zawsze ma jeden parametr o nazwie `value`. `set` Metoda dostępu musi zwracać wartość, która jest możliwa do przekonwertowania na typ właściwości (`string` w tym przykładzie). `get`
 
-To podstawy składni. Istnieje wiele różnych odmiany, które obsługują szereg idiomy innego projektu. Umożliwia Eksplorowanie i Dowiedz się opcje składnię dla każdego.
+Jest to podstawy składni. Istnieje wiele różnych wariantów, które obsługują różne idiomy projektowe. Eksplorujmy i poznaję opcje składni dla każdej z nich.
 
 ## <a name="scenarios"></a>Scenariusze
 
-Powyższe przykłady wykazało, że jeden z najprostszym przypadków definicji właściwości: właściwości odczytu / zapisu o nie nastąpi sprawdzanie poprawności. Pisząc kod chcesz w `get` i `set` metod dostępu, możesz utworzyć wiele różnych scenariuszy.
+Powyższe przykłady pokazują jeden z najprostszych przypadków definicji właściwości: właściwość do odczytu i zapisu bez sprawdzania poprawności. Pisząc odpowiedni kod w `get` metodzie dostępu i `set` , można utworzyć wiele różnych scenariuszy.
 
 ### <a name="validation"></a>Walidacja
 
-Można wpisać kod w `set` metody dostępu, upewnij się, że wartości, reprezentowane przez właściwość zawsze prawidłowe. Na przykład, załóżmy, że jedna reguła dla `Person` klasa jest, że nazwa nie może być puste lub biały znak. Czy zapisać, w następujący sposób:
+Można napisać kod w `set` metodzie dostępu, aby upewnić się, że wartości reprezentowane przez właściwość są zawsze prawidłowe. Załóżmy na przykład, że jedna reguła dla `Person` klasy jest, że nazwa nie może być pusta ani zawierać białych znaków. Należy napisać następujący sposób:
 
 [!code-csharp[Validating property setters](../../samples/snippets/csharp/properties/Person.cs#6)]
 
-Poprzedni przykład można uprościć za pomocą`throw` wyrażenia w ramach sprawdzania poprawności metody ustawiającej właściwość:
+Poprzedni przykład można uprościć za pomocą`throw` wyrażenia w ramach walidacji metody ustawiającej właściwość:
 
 [!code-csharp[Validating property setters](../../samples/snippets/csharp/properties/Person.cs#7)]
 
-W powyższym przykładzie wymusza, zasada, że imię nie może być pusta lub biały znak. Jeśli Deweloper zapisuje
+Powyższy przykład wymusza zasadę, że imię nie może być puste ani zawierać białych znaków. Jeśli projektant zapisuje
 
 ```csharp
 hero.FirstName = "";
 ```
 
-Przypisanie zgłasza `ArgumentException`. Ponieważ dostępu set z właściwość musi zwracać typ void, możesz zgłaszać błędy w metody dostępu set, zostanie zgłoszony wyjątek.
+To przypisanie zgłasza `ArgumentException`. Ponieważ akcesor zestawu właściwości musi mieć typ zwracany void, raportowane są błędy w metodzie dostępu zestawu przez wyrzucanie wyjątku.
 
-Możesz rozszerzyć ten tej samej składni, aby wszystkie potrzebne w tym scenariuszu. Możesz sprawdzić relacje między różnymi właściwościami lub przeprowadzić walidacji względem żadnych warunków zewnętrznych. Dowolne, prawidłowe C# są prawidłowe w metoda dostępu do właściwości.
+Tę samą składnię można zwiększyć do wszystkiego potrzebnego w danym scenariuszu. Można sprawdzić relacje między różnymi właściwościami lub sprawdzić poprawność warunków zewnętrznych. Wszystkie prawidłowe C# instrukcje są prawidłowe w metodzie dostępu do właściwości.
 
-### <a name="read-only"></a>tylko do odczytu
+### <a name="read-only"></a>Tylko do odczytu
 
-Do tej pory wszystkie definicje właściwości przejrzanych są publiczne metody dostępu właściwości odczytu/zapisu. To nie jedyne prawidłowe ułatwień dostępu dla właściwości.
-Można utworzyć właściwości tylko do odczytu, lub oferowanie różnej dostępności zestawu i pobieranie metod dostępu. Załóżmy, że Twoje `Person` klasy należy włączyć tylko zmiana wartości `FirstName` właściwości z innych metod w tej klasie. Można nadać metody dostępu set `private` ułatwień dostępu, zamiast `public`:
+Do tego momentu wszystkie przejrzane definicje właściwości są właściwościami odczytu i zapisu z publicznymi dostępem. To nie jest jedyna prawidłowa dostępność dla właściwości.
+Można tworzyć właściwości tylko do odczytu lub dawać różne ułatwienia dostępu dla zestawu i uzyskać dostęp. Załóżmy, że `Person` Klasa powinna włączać tylko zmianę wartości `FirstName` właściwości z innych metod w tej klasie. Możliwe jest przyznanie dostępu do `private` zestawu akcesora `public`zamiast:
 
 [!code-csharp[Using a private setter for a publicly readonly property](../../samples/snippets/csharp/properties/Person.cs#8)]
 
-Teraz `FirstName` właściwości są dostępne z dowolnego kodu, ale można przypisać tylko z innym kodem `Person` klasy.
+Teraz można uzyskać dostęp do `Person` właściwościzdowolnegokodu,alemożnagoprzypisaćtylkozinnegokoduwklasie.`FirstName`
 
-Można dodać żadnych modyfikator dostępu ograniczające albo zestaw lub uzyskaj metod dostępu. Wszelkie modyfikator dostępu, które można umieścić na poszczególne metody dostępu musi być bardziej ograniczone niż modyfikator dostępu dla definicji właściwości. Powyżej jest legalna ponieważ `FirstName` właściwość `public`, ale metody dostępu set `private`. Nie można zadeklarować `private` właściwość o `public` metody dostępu. Deklaracje właściwości mogą być także zadeklarowane `protected`, `internal`, `protected internal`, lub nawet `private`.
+Dowolny modyfikator dostępu można dodać do zestawu lub uzyskać dostęp. Każdy modyfikator dostępu umieszczony na pojedynczym akcesorze musi być bardziej ograniczony niż modyfikator dostępu w definicji właściwości. Powyższe jest dozwolone, ponieważ `FirstName` właściwość jest `public`, ale metoda dostępu set ma `private`wartość. Nie można zadeklarować `private` właściwości `public` z akcesorem. Deklaracje właściwości można również deklarować `protected`, `internal`, `protected internal`, lub, nawet `private`.
 
-Jest również dozwolone umieść modyfikator bardziej restrykcyjne na `get` metody dostępu. Na przykład można mieć `public` właściwości, ograniczając jednocześnie `get` metody dostępu `private`. Ten scenariusz rzadko odbywa się w praktyce.
+Istnieje również możliwość umieszczenia modyfikatora bardziej restrykcyjnego w `get` metodzie dostępu. Na przykład możesz mieć `public` właściwość, ale `get` ograniczyć metodę dostępu do `private`. Ten scenariusz jest rzadko realizowany w sposób praktyczny.
 
-Można również ograniczyć modyfikacje właściwości, tak że można ustawić tylko w konstruktorze lub inicjatorze właściwości. Możesz zmodyfikować `Person` klasy, więc w następujący sposób:
+Można również ograniczyć modyfikacje właściwości, aby można było ustawić je tylko w konstruktorze lub inicjatorze właściwości. Można zmodyfikować `Person` klasę w następujący sposób:
 
 [!code-csharp[A readonly auto implemented property](../../samples/snippets/csharp/properties/Person.cs#9)]
 
-Ta funkcja jest najczęściej używana do inicjowania kolekcji, które są widoczne jako właściwości tylko do odczytu:
+Ta funkcja jest najczęściej używana do inicjowania kolekcji, które są udostępniane jako właściwości tylko do odczytu:
 
 ```csharp
 public class Measurements
@@ -98,54 +98,54 @@ public class Measurements
 }
 ```
 
-### <a name="computed-properties"></a>Obliczone właściwości
+### <a name="computed-properties"></a>Właściwości obliczane
 
-Właściwość nie trzeba zwrócić wartość pola elementu członkowskiego. Można utworzyć właściwości, które zwracają obliczoną wartością. Możemy rozwinąć `Person` obiekt do zwrotu pełną nazwę, obliczana przez złączenie imiona i nazwiska:
+Właściwość nie musi po prostu zwracać wartości pola elementu członkowskiego. Można utworzyć właściwości, które zwracają obliczoną wartość. Rozwińmy `Person` obiekt, aby zwrócić pełną nazwę obliczoną przez połączenie imion i nazwisk:
 
 [!code-csharp[A computed property](../../samples/snippets/csharp/properties/Person.cs#10)]
 
-Przykład powyżej używa [Interpolacja ciągów](../csharp/language-reference/tokens/interpolated.md) funkcję, aby utworzyć sformatowany ciąg, aby uzyskać pełną nazwę.
+Powyższy przykład używa funkcji [interpolacji ciągów](./language-reference/tokens/interpolated.md) , aby utworzyć sformatowany ciąg dla pełnej nazwy.
 
-Można również użyć *wyrażeniem składowej*, który zapewnia bardziej zwięzły sposób tworzenia obliczone `FullName` właściwości:
+Można również użyć *elementu członkowskiego*z wyrażeniem, który zapewnia bardziej zwięzły sposób tworzenia właściwości obliczanej `FullName` :
 
 [!code-csharp[A computed property using an expression bodied member](../../samples/snippets/csharp/properties/Person.cs#11)]
 
-*Elementy członkowskie z wyrażeniem* użyj *wyrażenia lambda* Składnia służąca do definiowania metod, które zawierać pojedyncze wyrażenie. W tym miejscu to wyrażenie zwraca pełną nazwę obiektu osoba.
+Składowe w postaci *wyrażeń* , używają składni *wyrażenia lambda* do definiowania metod, które zawierają pojedyncze wyrażenie. To wyrażenie zwraca pełną nazwę obiektu osoby.
 
-### <a name="cached-evaluated-properties"></a>Właściwości ocenianą pamięci podręcznej
+### <a name="cached-evaluated-properties"></a>Właściwości obliczone w pamięci podręcznej
 
-Możesz mieszać koncepcji obliczona właściwość z magazynu i utworzyć *buforowane szacowanych*.  Na przykład, można zaktualizować `FullName` właściwość tak, aby tylko formatowanie ciągów wystąpiły po raz pierwszy uzyskano go:
+Można zmieszać koncepcję obliczonej właściwości z magazynem i utworzyć buforowaną *Właściwość*.  Na przykład możesz zaktualizować `FullName` Właściwość tak, aby formatowanie ciągu było nastąpiło tylko podczas pierwszego dostępu:
 
 [!code-csharp[Caching the value of a computed property](../../samples/snippets/csharp/properties/Person.cs#12)]
 
-Powyższy kod zawiera usterkę, mimo że. Jeśli kod aktualizuje wartość jednej `FirstName` lub `LastName` właściwość, wcześniej ocenianą `fullName` pole jest nieprawidłowe. Możesz zmodyfikować `set` metod dostępu `FirstName` i `LastName` właściwość tak, aby `fullName` pole jest obliczane ponownie:
+Powyższy kod zawiera usterkę. Jeśli kod aktualizuje wartość `FirstName` właściwości lub `LastName` , poprzednio oceniane `fullName` pole jest nieprawidłowe. Modyfikujesz `set` metody dostępu `FirstName` `LastName` właściwości`fullName` i, aby pole zostało obliczone ponownie:
 
 [!code-csharp[Invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#13)]
 
-Daje w wyniku tej wersji ostatecznej `FullName` właściwości tylko wtedy, gdy jest to wymagane.
-Jeśli poprzednio obliczonej wersji jest prawidłowy, jest używany. Jeśli inna zmiana stanu unieważnia wcześniej obliczeniowe wersji, zostaną obliczone go ponownie. Deweloperzy korzystający z tej klasy nie trzeba wiedzieć, szczegółowe informacje o implementacji. Żadna z tych wewnętrznych zmian wpływa na korzystanie z obiektu osoby. To jest powód klucza do używania właściwości do udostępnienia danych elementów członkowskich obiektu.
+Ta wersja końcowa oblicza Właściwość `FullName` tylko w razie konieczności.
+Jeśli wcześniejsza wersja obliczeniowa jest prawidłowa, jest używana. Jeśli inna zmiana stanu unieważnia wcześniej obliczoną wersję, zostanie ona obliczona ponownie. Deweloperzy korzystający z tej klasy nie muszą znać szczegółów implementacji. Żadna z tych zmian wewnętrznych nie ma wpływu na korzystanie z obiektu osoba. Jest to kluczowa przyczyna użycia właściwości, aby uwidocznić elementy członkowskie danych obiektu.
 
-### <a name="attaching-attributes-to-auto-implemented-properties"></a>Trwa dołączanie atrybutów, które mają automatycznie implementowanych właściwości
+### <a name="attaching-attributes-to-auto-implemented-properties"></a>Dołączanie atrybutów do właściwości, które zostały zaimplementowane.
 
-Począwszy od C# 7.3, atrybuty pól mogą być dołączane do pola pomocniczego wygenerowanego przez kompilator automatycznie implementowane właściwości. Na przykład, należy wziąć pod uwagę poprawkę do `Person` klasę, która dodaje całkowitą liczbą unikatowych `Id` właściwości.
-Piszesz`Id` właściwości przy użyciu automatycznie implementowanych właściwości, ale projekt, nie wywołuje potrzeby utrwalania `Id` właściwości. <xref:System.NonSerializedAttribute> Mogą być dołączane tylko do pól, a nie właściwości. Możesz dołączyć <xref:System.NonSerializedAttribute> na pole zapasowe dla `Id` właściwości przy użyciu `field:` Specyfikator atrybutu, jak pokazano w poniższym przykładzie:
+Począwszy od C# 7,3, atrybuty pola mogą być dołączane do pola zapasowego wygenerowanego przez kompilator we właściwościach, które są implementowane automatycznie. Na przykład rozważmy poprawkę `Person` klasy, która dodaje unikatową Właściwość Integer. `Id`
+Należy napisać`Id` właściwość przy użyciu właściwości, która jest zaimplementowana, ale projekt nie wywołuje się w celu utrwalenia `Id` właściwości. Może <xref:System.NonSerializedAttribute> być tylko dołączone do pól, a nie właściwości. Można dołączyć <xref:System.NonSerializedAttribute> do pola `Id` zapasowego właściwości przy użyciu `field:` specyfikatora dla atrybutu, jak pokazano w następującym przykładzie:
 
 [!code-csharp[Attaching attributes to a backing field](../../samples/snippets/csharp/properties/Person.cs#14)]
 
-Ta metoda działa w przypadku każdego atrybutu, który można dołączyć do pola pomocniczego na automatycznie implementowane właściwości.
+Ta technika działa dla dowolnego atrybutu dołączanego do pola zapasowego we właściwości, która jest automatycznie implementowana.
 
-### <a name="implementing-inotifypropertychanged"></a>Implementing INotifyPropertyChanged
+### <a name="implementing-inotifypropertychanged"></a>Implementowanie INotifyPropertyChanged
 
-Końcowe scenariusz, w których trzeba napisać kod w metodzie dostępu właściwości służy do obsługi <xref:System.ComponentModel.INotifyPropertyChanged> interfejs używany do powiadamiania klientów powiązania danych, których wartość została zmieniona. Po zmianie wartości właściwości, wywołuje obiekt <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged?displayProperty=nameWithType> zdarzenie, aby wskazać zmianę. Dane, tworzenie powiązań bibliotek, z kolei zaktualizować wyświetlanych elementów w oparciu o zmiany. Poniższy kod pokazuje, jak możesz również zaimplementować `INotifyPropertyChanged` dla `FirstName` właściwości tej klasy osoby.
+Ostatnim scenariuszem, w którym należy napisać kod w metodzie dostępu do właściwości, jest <xref:System.ComponentModel.INotifyPropertyChanged> obsługa interfejsu używanego do powiadamiania klientów powiązań danych o zmianie wartości. Gdy wartość właściwości zostanie zmieniona, obiekt zgłasza <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged?displayProperty=nameWithType> zdarzenie, aby wskazać zmianę. Biblioteki powiązań danych z kolei aktualizują elementy wyświetlane na podstawie tej zmiany. Poniższy kod przedstawia sposób implementacji `INotifyPropertyChanged` `FirstName` dla właściwości tej klasy osoby.
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-`?.` Operator jest nazywany *operatora warunkowego wartości null*. Sprawdza odwołanie o wartości null ewaluacją po prawej stronie operatora. Wynik końcowy jest to, że w przypadku subskrybentów do `PropertyChanged` zdarzeń, kod, aby wygenerować zdarzenie nie jest wykonywany. Będzie ona zgłaszają `NullReferenceException` bez to sprawdzać w takiej sytuacji. Aby uzyskać więcej informacji, zobacz [`events`](events-overview.md). W tym przykładzie użyto również nowe `nameof` operatora konwersji z symboli nazwy właściwości na jego reprezentację tekstową.
-Za pomocą `nameof` można zmniejszyć liczbę błędów, w którym błędnie wpisano nazwę właściwości.
+Operator jest nazywany operatorem *warunkowym o wartości null.* `?.` Sprawdza odwołanie o wartości null przed dokonaniem oceny prawego boku operatora. Wynikiem tego jest to, że jeśli nie ma subskrybentów `PropertyChanged` zdarzenia, kod służący do podniesienia poziomu zdarzenia nie zostanie wykonany. W takim przypadku może `NullReferenceException` zgłosić się bez tego zaewidencjonowania. Aby uzyskać więcej informacji, zobacz [`events`](events-overview.md). Ten przykład używa także operatora new `nameof` do konwersji z symbolu nazwy właściwości na jego reprezentację tekstową.
+Korzystanie `nameof` z programu może zmniejszyć liczbę błędów w przypadku błędnego wpisania nazwy właściwości.
 
-Implementowanie ponownie <xref:System.ComponentModel.INotifyPropertyChanged> jest przykładem przypadek, w którym można wpisać kod w swojej metody dostępu na potrzeby scenariuszy należy.
+Z tego względu implementacja <xref:System.ComponentModel.INotifyPropertyChanged> jest przykładem przypadku, w którym można napisać kod w metodzie dostępu do obsługi potrzebnych scenariuszy.
 
-## <a name="summing-up"></a>Podsumowanie
+## <a name="summing-up"></a>Sumowanie
 
-Właściwości są formą inteligentne pola w klasie lub obiektu. Z poza nim, są wyświetlane takie jak pola obiektu. Jednak właściwości można zaimplementować przy użyciu pełnej paletę C# funkcji.
-Możesz podać sprawdzania poprawności, różnej dostępności, obliczanie z opóźnieniem lub wszelkie wymagania potrzebnych dla swoich scenariuszy.
+Właściwości są formą pól inteligentnych w klasie lub obiekcie. Z zewnątrz obiektu, są wyświetlane jak pola w obiekcie. Jednak właściwości można zaimplementować przy użyciu pełnej palety C# funkcji.
+Możesz zapewnić weryfikację, różne dostępność, ocenę z opóźnieniem lub dowolne wymagania, których wymagają Twoje scenariusze.

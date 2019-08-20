@@ -1,23 +1,23 @@
 ---
-title: Klasy — C# przewodnik programowania
+title: Klasy — C# Przewodnik programowania
 ms.custom: seodec18
-description: Dowiedz się więcej o typach klasy i jak je utworzyć
+description: Dowiedz się więcej o typach klas i sposobach ich tworzenia
 ms.date: 08/21/2018
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: ad19099242a3bedbb7283219dfd7733db13231ec
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 193446ff98edce3b7c078c6eeba07cf9acdadaf0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398589"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597176"
 ---
 # <a name="classes-c-programming-guide"></a>Klasy (Przewodnik programowania w języku C#)
 
 ## <a name="reference-types"></a>Typy odwołań  
-Typ, który jest zdefiniowany jako [klasy](../../../csharp/language-reference/keywords/class.md) jest *odwołania do typu*. W czasie wykonywania, kiedy Deklarujesz zmienną typu odwołania, zmienna zawiera wartość [null](../../../csharp/language-reference/keywords/null.md) aż jawnie tworzone jest wystąpienie klasy za pomocą [nowe](../../../csharp/language-reference/operators/new-operator.md) operatora, lub obiekt niezgodny typ, który mógł zostać utworzony w innych miejscach, jak pokazano w poniższym przykładzie:
+Typ, który jest zdefiniowany jako [Klasa](../../language-reference/keywords/class.md) , jest *typem referencyjnym*. W czasie wykonywania, gdy deklarujesz zmienną typu referencyjnego, zmienna zawiera wartość [null](../../language-reference/keywords/null.md) , dopóki nie utworzysz jawnie instancji klasy przy użyciu operatora [New](../../language-reference/operators/new-operator.md) , lub przypiszesz jej obiekt typu zgodnego, który mógł zostać utworzony w innym miejscu, jak pokazano w następującym przykładzie:
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -27,11 +27,11 @@ MyClass mc = new MyClass();
 MyClass mc2 = mc;
 ```
 
-Po utworzeniu obiektu wystarczającej ilości pamięć jest alokowane na zarządzanym stosie dla tego określonego obiektu, a zmienna zawiera tylko odwołanie do lokalizacji obiektu wymienionych. Typy na zarządzanym stosie wymagają narzutu zarówno kiedy są alokowane oraz kiedy są odbierane przez funkcjonalność zarządzania pamięcią automatyczną CLR, który jest znany jako *wyrzucania elementów bezużytecznych*. Jednak wyrzucanie elementów bezużytecznych jest również bardzo dobrze zoptymalizowane i w większości scenariuszy nie powoduje problemów z wydajnością. Aby uzyskać więcej informacji dotyczących wyrzucania elementów bezużytecznych, zobacz [pamięcią automatyczną zarządzania i wyrzucania elementów kolekcji](../../../standard/garbage-collection/gc.md).  
+Gdy obiekt zostanie utworzony, wystarczająca ilość pamięci jest przydzielana na zarządzanym stosie dla tego konkretnego obiektu, a zmienna zawiera tylko odwołanie do lokalizacji wymienionego obiektu. Typy na stercie zarządzanej wymagają narzutu podczas przydzielania i kiedy są odzyskiwane przez funkcję automatycznego zarządzania pamięcią środowiska CLR, która jest znana jako wyrzucanie *elementów*bezużytecznych. Jednak wyrzucanie elementów bezużytecznych jest również wysoce zoptymalizowane i w większości scenariuszy nie tworzy problemu z wydajnością. Aby uzyskać więcej informacji dotyczących wyrzucania elementów bezużytecznych, zobacz [Automatyczne zarządzanie pamięcią i odzyskiwanie elementów](../../../standard/garbage-collection/gc.md)bezużytecznych  
   
 ## <a name="declaring-classes"></a>Deklarowanie klas
 
- Klasy są deklarowane przy użyciu [klasy](../../../csharp/language-reference/keywords/class.md) — słowo kluczowe, a następnie za pomocą unikatowego identyfikatora, jak pokazano w poniższym przykładzie:
+ Klasy są deklarowane za pomocą słowa kluczowego [Class](../../language-reference/keywords/class.md) , po którym następuje unikatowy identyfikator, jak pokazano w następującym przykładzie:
 
  ```csharp
 //[access modifier] - [class] - [identifier]
@@ -41,38 +41,38 @@ Po utworzeniu obiektu wystarczającej ilości pamięć jest alokowane na zarząd
  }
 ```
 
- `class` — Słowo kluczowe jest poprzedzony przez poziom dostępu. Ponieważ [publicznych](../../language-reference/keywords/public.md) jest używany w tym przypadku każdy może utworzyć wystąpienia tej klasy. Następuje nazwa klasy `class` — słowo kluczowe. Nazwa klasy musi być prawidłową C# [nazwa identyfikatora](../inside-a-program/identifier-names.md). W pozostałej części definicji jest treści klasy, gdzie są zdefiniowane zachowanie i dane. Pola, właściwości, metody i zdarzenia dla klasy, są nazywane zbiorczo *elementy członkowskie klasy*.  
+ `class` Słowo kluczowe jest poprzedzone poziomem dostępu. Ponieważ w tym przypadku jest używany [publiczny](../../language-reference/keywords/public.md) , każdy może utworzyć wystąpienia tej klasy. Nazwa klasy jest zgodna ze `class` słowem kluczowym. Nazwa klasy musi być prawidłową C# [nazwą identyfikatora](../inside-a-program/identifier-names.md). Pozostała część definicji jest treścią klasy, w której zdefiniowane jest zachowanie i dane. Pola, właściwości, metody i zdarzenia w klasie są zbiorczo nazywane *elementami członkowskimi klas*.  
   
 ## <a name="creating-objects"></a>Tworzenie obiektów
 
-Chociaż czasami są używane zamiennie, klasy i obiektu są różne. Klasa określa typ obiektu, ale nie jest sam obiekt. Obiekt jest jednostką konkretnych na podstawie klasy i jest czasami określane jako wystąpienia klasy.  
+Chociaż są czasami używane zamiennie, Klasa i obiekt są różne. Klasa definiuje typ obiektu, ale nie jest on samym obiektem. Obiekt jest konkretną jednostką opartą na klasie i jest czasami określany jako wystąpienie klasy.  
   
- Obiekty mogą być tworzone za pomocą [nowe](../../language-reference/operators/new-operator.md) — słowo kluczowe następuje nazwa klasy, która obiekt będzie zależeć od, podobnie do następującego:  
+ Obiekty mogą być tworzone za pomocą [nowego](../../language-reference/operators/new-operator.md) słowa kluczowego, po którym następuje nazwa klasy, na której będzie oparty obiekt, na przykład:  
 
  ```csharp
  Customer object1 = new Customer();
  ```
 
- Po utworzeniu wystąpienia klasy odwołania do obiektu jest przekazywany do programisty należy. W poprzednim przykładzie `object1` jest odwołaniem do obiektu, który jest oparty na `Customer`. Ta dokumentacja odnosi się do nowego obiektu, ale nie zawiera danych obiektu. W rzeczywistości można utworzyć odwołanie do obiektu, bez tworzenia obiektu w ogóle:  
+ Po utworzeniu wystąpienia klasy odwołanie do obiektu jest przesyłane z powrotem do programisty. W poprzednim przykładzie, `object1` jest odwołaniem do obiektu, który jest oparty na. `Customer` To odwołanie odnosi się do nowego obiektu, ale nie zawiera samych danych obiektu. W rzeczywistości można utworzyć odwołanie do obiektu bez tworzenia obiektu w ogóle:  
  
 ```csharp
  Customer object2;
 ```
  
- Nie zaleca się utworzenie odwołania do obiektu taką jak ta, które nie odwołują się do obiektu, ponieważ próbuje uzyskać dostęp do obiektu poprzez odniesienie zakończy się niepowodzeniem w czasie wykonywania. Jednak takie odwołanie może się do odwoływania się do obiektu, albo przez utworzenie nowego obiektu, albo, przypisując go do istniejącego obiektu, takie jak to:  
+ Nie zalecamy tworzenia odwołań do obiektów, takich jak te, które nie odwołują się do obiektu, ponieważ próba uzyskania dostępu do obiektu za pomocą takiego odwołania zakończy się niepowodzeniem w czasie wykonywania. Takie odwołanie można jednak wykonać, aby odwołać się do obiektu, tworząc nowy obiekt lub przez przypisanie go do istniejącego obiektu, takiego jak:  
 
  ```csharp
  Customer object3 = new Customer();
  Customer object4 = object3;
 ```
   
- Ten kod tworzy dwa odwołania do obiektu odnoszą się do tego samego obiektu. W związku z tym, zmiany wprowadzone w obiekcie za pośrednictwem `object3` są odzwierciedlane w kolejnych zastosowań `object4`. Ponieważ obiekty, które są oparte na klasach są określane przez odwołanie, klas są określane jako typy odwołań.  
+ Ten kod tworzy dwa odwołania do obiektów, które odwołują się do tego samego obiektu. W związku z `object3` `object4`tym wszelkie zmiany wprowadzone w obiekcie zostaną odzwierciedlone w kolejnych zastosowaniach. Ponieważ obiekty, które są oparte na klasach są określane przez odwołanie, klasy są znane jako typy referencyjne.  
   
 ## <a name="class-inheritance"></a>Dziedziczenie klas  
 
-Klasy w pełni obsługiwać *dziedziczenia*, podstawowe charakterystyka programowanie zorientowane obiektowo. Kiedy tworzysz klasę, możesz dziedziczyć od innego interfejsu lub klasy, która nie jest zdefiniowana jako [zapieczętowanego](../../../csharp/language-reference/keywords/sealed.md), a inne klasy mogą dziedziczyć od Twojej klasy i zastępują metody wirtualne klasy.
+Klasy w pełniobsługują dziedziczenie, podstawową cechą programowania zorientowanego obiektowo. Podczas tworzenia klasy można dziedziczyć z dowolnego innego interfejsu lub klasy, która nie jest zdefiniowana jako Sealed [](../../language-reference/keywords/sealed.md), a inne klasy mogą dziedziczyć z klasy i zastępować metody wirtualne klas.
 
-Dziedziczenie odbywa się za pomocą *pochodnym*, która oznacza, że klasa jest zadeklarowana za pomocą *klasy bazowej* z którego dziedziczy dane i zachowania. Klasa podstawowa jest określona przez dołączenie dwukropek i nazwę klasy bazowej, po nazwie klasy pochodnej, takich jak to:  
+Dziedziczenie jest realizowane przy użyciu wartości *pochodnych*, co oznacza, że Klasa jest zadeklarowana przy użyciu *klasy bazowej* , z której dziedziczy dane i zachowanie. Klasa bazowa jest określana przez dołączenie dwukropka i nazwy klasy bazowej następującej po nazwie klasy pochodnej, w następujący sposób:  
 
  ```csharp
  public class Manager : Employee
@@ -82,17 +82,17 @@ Dziedziczenie odbywa się za pomocą *pochodnym*, która oznacza, że klasa jest
  }
  ```
 
-Klasa deklaruje klasę bazową, dziedziczy wszystkich członków klasy podstawowej, z wyjątkiem konstruktorów. Aby uzyskać więcej informacji, zobacz [dziedziczenia](inheritance.md).
+Gdy Klasa deklaruje klasę bazową, dziedziczy wszystkich elementów członkowskich klasy podstawowej, z wyjątkiem konstruktorów. Aby uzyskać więcej informacji, [](inheritance.md)Zobacz dziedziczenie.
   
-W przeciwieństwie do języka C++ klasy w języku C# tylko bezpośrednio może dziedziczyć z jednej klasy bazowej. Jednak ponieważ sam podstawowej klasy mogą dziedziczyć z innej klasy, klasy mogą pośrednio dziedziczyć wielu klas bazowych. Ponadto klasy można bezpośrednio zaimplementować więcej niż jednego interfejsu. Więcej informacji znajdziesz w artykule [Interfejsy](../interfaces/index.md).  
+W przeciwieństwie C++do, Klasa C# w może dziedziczyć bezpośrednio z jednej klasy bazowej. Jednak ponieważ klasa bazowa może sama dziedziczyć z innej klasy, Klasa może pośrednio dziedziczyć wiele klas bazowych. Ponadto Klasa może bezpośrednio zaimplementować więcej niż jeden interfejs. Więcej informacji znajdziesz w artykule [Interfejsy](../interfaces/index.md).  
   
-Klasy mogą być deklarowane [abstrakcyjne](../../language-reference/keywords/abstract.md). Abstrakcyjna klasa zawiera metody abstrakcyjne, które mają definicji podpisu, ale nie implementacji. Nie można utworzyć wystąpienia klasy abstrakcyjnej. One należy używać tylko przez klasy pochodne, które implementują metody abstrakcyjne. Z drugiej strony [zapieczętowanego](../../language-reference/keywords/sealed.md) klasy nie zezwala na innych klas dziedziczyć po nim. Aby uzyskać więcej informacji, zobacz [abstrakcyjnych i zapieczętowanych klas i składowych klasy](abstract-and-sealed-classes-and-class-members.md).  
+Klasa może być zadeklarowana jako [abstract](../../language-reference/keywords/abstract.md). Klasa abstrakcyjna zawiera metody abstrakcyjne z definicją podpisu, ale bez implementacji. Nie można utworzyć wystąpienia klas abstrakcyjnych. Mogą one być używane tylko przez klasy pochodne, które implementują metody abstrakcyjne. Z kolei Klasa [zapieczętowana](../../language-reference/keywords/sealed.md) nie zezwala innym klasom na ich wyprowadzanie. Aby uzyskać więcej informacji, zobacz [klasy abstrakcyjne i zapieczętowane oraz składowe klas](abstract-and-sealed-classes-and-class-members.md).  
   
-Definicje klas może zostać podzielony między plikami z innego źródła. Aby uzyskać więcej informacji, zobacz [klasy częściowe i metody](partial-classes-and-methods.md).  
+Definicje klas można podzielić między różne pliki źródłowe. Aby uzyskać więcej informacji, zobacz [częściowe klasy i metody](partial-classes-and-methods.md).  
   
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie zdefiniowano Klasa publiczna, która zawiera [automatycznie implementowana właściwość](auto-implemented-properties.md), metody i specjalnych metodę o nazwie konstruktora. Aby uzyskać więcej informacji, zobacz [właściwości](properties.md), [metody](methods.md), i [konstruktory](constructors.md) tematów. Wystąpienia klasy następnie są tworzone za pomocą `new` — słowo kluczowe.  
+W poniższym przykładzie zdefiniowano klasę publiczną, która zawiera [Właściwość](auto-implemented-properties.md), czyli metodę i specjalną metodę o nazwie Konstruktor. Aby uzyskać więcej informacji, zobacz temat [Właściwości](properties.md), [metody](methods.md)i [konstruktory](constructors.md) . Wystąpienia klasy są następnie tworzone za pomocą `new` słowa kluczowego.  
   
 [!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
   

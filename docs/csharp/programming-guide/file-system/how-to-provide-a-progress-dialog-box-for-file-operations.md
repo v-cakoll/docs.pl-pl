@@ -1,37 +1,37 @@
 ---
-title: 'Instrukcje: Dostarczanie okna dialogowego postępu dla operacji na plikach — C# przewodnik programowania'
+title: 'Instrukcje: Udostępnianie okna dialogowego postępu dla operacji na plikach — C# Przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: 882e4ea71331fe0513f3be71c371bbc0f714b44f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 028e779f3cd8a17f162a79791b0c84abae14cf44
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61975210"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590047"
 ---
-# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Instrukcje: Dostarczanie okna dialogowego postępu dla operacji na plikach (C# Programming Guide)
-Można zapewnić standardowe okno dialogowe, które wyświetla postęp w operacjach plików w Windows, jeśli używasz <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> method in Class metoda <xref:Microsoft.VisualBasic?displayProperty=nameWithType> przestrzeni nazw.  
+# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Instrukcje: Udostępnianie okna dialogowego postępu dla operacji na plikach (C# Przewodnik programowania)
+Możesz podać standardowe okno dialogowe, które pokazuje postęp operacji na plikach w systemie Windows, jeśli używasz <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> metody <xref:Microsoft.VisualBasic?displayProperty=nameWithType> z przestrzeni nazw.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-add-a-reference-in-visual-studio"></a>Aby dodać odwołanie w Visual Studio  
+### <a name="to-add-a-reference-in-visual-studio"></a>Aby dodać odwołanie w programie Visual Studio  
   
-1. Na pasku menu wybierz **projektu**, **Dodaj odwołanie**.  
+1. Na pasku menu wybierz **projekt**, **Dodaj odwołanie**.  
   
-     **Menadżer odwołań** pojawi się okno dialogowe.  
+     Zostanie wyświetlone okno dialogowe **Menedżer odwołań** .  
   
-2. W **zestawy** obszaru, wybierz **Framework** Jeśli nie została jeszcze wybrana.  
+2. W obszarze **zestawy** wybierz pozycję **Struktura** , jeśli nie została jeszcze wybrana.  
   
-3. Na liście nazw, wybierz **Microsoft.VisualBasic** pole wyboru, a następnie wybierz **OK** przycisk, aby zamknąć okno dialogowe.  
+3. Na liście nazw zaznacz pole wyboru **Microsoft. VisualBasic** , a następnie wybierz przycisk **OK** , aby zamknąć okno dialogowe.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kopiuje katalog który `sourcePath` określa do katalogu, `destinationPath` określa. Ten kod zapewnia standardowe okno dialogowe, pokazuje szacowany pozostały czas przed zakończeniem operacji.  
+ Poniższy kod kopiuje katalog `sourcePath` określany w katalogu, który `destinationPath` określa. Ten kod udostępnia również standardowe okno dialogowe, które pokazuje szacowany czas pozostały do zakończenia operacji.  
   
  [!code-csharp[csFilesandFolders#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#11)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [System plików i rejestr (C# Programming Guide)](../../../csharp/programming-guide/file-system/index.md)
+- [System plików i Rejestr (C# Przewodnik programowania)](./index.md)

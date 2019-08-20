@@ -1,42 +1,42 @@
 ---
-title: Zalecane tagi przeznaczone do komentarzy dokumentacji - C# przewodnik programowania
+title: Zalecane Tagi dla komentarzy do dokumentacji C# — Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: 07594d70b92e2075c3d5aba605eab23d766faed6
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 4506402c85096ae0ae11b28ad03646c7fa215e5a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052748"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587815"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Znaczniki zalecane dla komentarzy do dokumentacji (Przewodnik programowania w języku C#)
-Kompilator języka C# przetwarza komentarze dokumentacji w kodzie i sformatuje je jako kod XML w pliku o nazwie określonej w **/doc** opcji wiersza polecenia. Aby utworzyć dokumentację na podstawie pliku generowanych przez kompilator, można utworzyć narzędzie niestandardowe, lub użyj narzędzia takiego jak [DocFX](https://dotnet.github.io/docfx/) lub [Sandcastle](https://github.com/EWSoftware/SHFB).  
+Kompilator przetwarza komentarze dokumentacji w kodzie i formatuje je jako XML w pliku, którego nazwa została określona w opcji wiersza polecenia **/doc.** C# Aby utworzyć ostateczną dokumentację opartą na pliku generowanym przez kompilator, można utworzyć niestandardowe narzędzie lub użyć narzędzia, takiego jak [DocFX](https://dotnet.github.io/docfx/) lub [Sandcastle](https://github.com/EWSoftware/SHFB).  
   
- Tagi są przetwarzane na kodzie konstrukcji, takich jak typy i elementy członkowskie typu.  
+ Tagi są przetwarzane na konstrukcjach kodu, takich jak typy i elementy członkowskie typu.  
   
 > [!NOTE]
->  Komentarze dokumentacji nie można zastosować do przestrzeni nazw.  
+>  Komentarzy do dokumentacji nie można zastosować do przestrzeni nazw.  
   
- Kompilator przetworzy dowolnymi tagami, które jest prawidłowym kodem XML. Następujące znaczniki oferuje powszechnie używanych w dokumentacji użytkownika.  
+ Kompilator będzie przetwarzać dowolny tag, który jest prawidłowym kodem XML. Poniższe Tagi zapewniają ogólnie używane funkcje w dokumentacji użytkownika.  
   
 ## <a name="tags"></a>Znaczniki  
   
 ||||  
 |---|---|---|  
-|[\<c>](../../../csharp/programming-guide/xmldoc/code-inline.md)|[\<para>](../../../csharp/programming-guide/xmldoc/para.md)|[\<see>](../../../csharp/programming-guide/xmldoc/see.md)*|  
-|[\<code>](../../../csharp/programming-guide/xmldoc/code.md)|[\<param>](../../../csharp/programming-guide/xmldoc/param.md)*|[\<seealso>](../../../csharp/programming-guide/xmldoc/seealso.md)*|  
-|[\<przykład >](../../../csharp/programming-guide/xmldoc/example.md)|[\<paramref>](../../../csharp/programming-guide/xmldoc/paramref.md)|[\<summary>](../../../csharp/programming-guide/xmldoc/summary.md)|  
-|[\<wyjątku >](../../../csharp/programming-guide/xmldoc/exception.md)*|[\<permission>](../../../csharp/programming-guide/xmldoc/permission.md)*|[\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)*|  
-|[\<include>](../../../csharp/programming-guide/xmldoc/include.md)*|[\<Remarks >](../../../csharp/programming-guide/xmldoc/remarks.md)|[\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)|  
-|[\<list>](../../../csharp/programming-guide/xmldoc/list.md)|[\<returns>](../../../csharp/programming-guide/xmldoc/returns.md)|[\<value>](../../../csharp/programming-guide/xmldoc/value.md)|  
+|[\<c>](./code-inline.md)|[\<> para](./para.md)|[\<see>](./see.md)*|  
+|[\<> kodu](./code.md)|[\<> param](./param.md)*|[\<seealso>](./seealso.md)*|  
+|[\<przykład >](./example.md)|[\<paramref >](./paramref.md)|[\<summary>](./summary.md)|  
+|[\<> wyjątku](./exception.md)*|[\<> uprawnień](./permission.md)*|[\<typeparam >](./typeparam.md)*|  
+|[\<Uwzględnij >](./include.md)*|[\<uwagi >](./remarks.md)|[\<typeparamref >](./typeparamref.md)|  
+|[\<list>](./list.md)|[\<returns>](./returns.md)|[\<value>](./value.md)|  
   
- (* oznacza, że kompilator sprawdza składnię.)  
+ (* wskazuje, że kompilator weryfikuje składnię).  
   
- Nawiasy są wyświetlane w tekście komentarza do dokumentacji, użyć kodu HTML `<` i `>` czyli `&lt;` i `&gt;` odpowiednio. To kodowanie pokazano w poniższym przykładzie:
+ Jeśli chcesz, aby w tekście komentarza do dokumentacji pojawiły się nawiasy kątowe, użyj kodowania `<` HTML `>` i, `&lt;` które `&gt;` jest odpowiednio. To kodowanie pokazano w następującym przykładzie:
   
 ```csharp  
 /// <summary>
@@ -46,6 +46,6 @@ Kompilator języka C# przetwarza komentarze dokumentacji w kodzie i sformatuje j
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [/ doc (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [Komentarze dokumentacji XML](../../../csharp/programming-guide/xmldoc/index.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [/doc (C# opcje kompilatora)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [Komentarze dokumentacji XML](./index.md)

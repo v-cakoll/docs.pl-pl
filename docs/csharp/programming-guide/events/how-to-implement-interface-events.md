@@ -1,24 +1,24 @@
 ---
-title: 'Instrukcje: Zdarzenia implementowania interfejsu - C# przewodnik programowania'
+title: 'Instrukcje: Implementowanie zdarzeń interfejsu C# — Przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: dfd0602ef92f9b0f84a8e1434ef834a328d60f03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 574ea9927a22c24c356d84652fd29692c519247b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710904"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590507"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>Instrukcje: Zdarzenia implementowania interfejsu (C# Programming Guide)
-[Interfejsu](../../../csharp/language-reference/keywords/interface.md) można zadeklarować [zdarzeń](../../../csharp/language-reference/keywords/event.md). Poniższy przykład pokazuje, jak zdarzenia implementowania interfejsu w klasie. Zasadniczo reguły są takie same, jak podczas implementowania metody interfejsu dowolnej właściwości.  
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>Instrukcje: Implementuj zdarzenia interfejsu (C# Przewodnik programowania)
+[Interfejs](../../language-reference/keywords/interface.md) może zadeklarować [zdarzenie](../../language-reference/keywords/event.md). Poniższy przykład pokazuje, jak zaimplementować zdarzenia interfejsu w klasie. Zasadniczo reguły są takie same, jak w przypadku implementowania dowolnej metody interfejsu lub właściwości.  
   
-## <a name="to-implement-interface-events-in-a-class"></a>Aby zaimplementować interfejs zdarzenia w klasie  
+## <a name="to-implement-interface-events-in-a-class"></a>Aby zaimplementować zdarzenia interfejsu w klasie  
   
-Zadeklarować zdarzenia w klasie, a następnie wywołaj je w odpowiednich obszarów.  
+Zadeklaruj zdarzenie w klasie, a następnie Wywołaj je w odpowiednich obszarach.  
   
 ```csharp
 namespace ImplementInterfaceEvents  
@@ -52,16 +52,16 @@ namespace ImplementInterfaceEvents
 ```  
   
 ## <a name="example"></a>Przykład  
-Poniższy przykład pokazuje, jak obsługiwać mniej znane sytuacji, w którym klasa dziedziczy z dwóch lub więcej interfejsów, a każdy interfejs posiada zdarzenie o takiej samej nazwie. W takiej sytuacji należy podać jawnej implementacji interfejsu dla co najmniej jednego zdarzenia. Podczas pisania jawnej implementacji interfejsu zdarzenia musi także napisać `add` i `remove` metod dostępu zdarzeń. Zwykle są one udostępniane przez kompilator, ale w tym przypadku kompilator nie może dostarczyć je.  
+Poniższy przykład pokazuje, jak obsłużyć mniej typowe sytuacje, w których Klasa dziedziczy z co najmniej dwóch interfejsów, a każdy interfejs ma zdarzenie o tej samej nazwie. W takiej sytuacji należy podać jawną implementację interfejsu dla co najmniej jednego zdarzenia. Podczas pisania jawnej implementacji interfejsu dla zdarzenia należy również napisać `add` metody dostępu do zdarzeń i. `remove` Zwykle są one dostarczane przez kompilator, ale w tym przypadku kompilator nie może ich udostępnić.  
   
-Podając własne metody dostępu, można określić, czy dwa zdarzenia są reprezentowane przez te same zdarzenia w klasie lub różnych zdarzeń. Na przykład jeśli zdarzenia powinien być wywoływany w różnym czasie zgodnie ze specyfikacją interfejsu, można skojarzyć każde zdarzenie z oddzielnych implementacją w klasie. W poniższym przykładzie subskrybentów określenie `OnDraw` otrzymają przez rzutowanie odwołanie kształtu do każdego zdarzenia `IShape` lub `IDrawingObject`.  
+Dostarczając własne metody dostępu, można określić, czy dwa zdarzenia są reprezentowane przez to samo zdarzenie w klasie, czy przez różne zdarzenia. Na przykład jeśli zdarzenia powinny być zgłaszane w różnych terminach zgodnie ze specyfikacją interfejsu, można skojarzyć każde zdarzenie z oddzielną implementacją w klasie. W poniższym przykładzie Subskrybenci określają, które `OnDraw` zdarzenie będzie odbierane przez wyrzucanie odwołania kształtu do `IShape` `IDrawingObject`albo.  
   
  [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Zdarzenia](../../../csharp/programming-guide/events/index.md)
-- [Delegaty](../../../csharp/programming-guide/delegates/index.md)
-- [Implementacja interfejsu jawnego](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)
-- [Instrukcje: Wywoływanie zdarzeń klasy podstawowej w klasach pochodnych](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Zdarzenia](./index.md)
+- [Delegaty](../delegates/index.md)
+- [Implementacja interfejsu jawnego](../interfaces/explicit-interface-implementation.md)
+- [Instrukcje: Wywołaj zdarzenia klasy podstawowej w klasach pochodnych](./how-to-raise-base-class-events-in-derived-classes.md)

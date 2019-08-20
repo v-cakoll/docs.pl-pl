@@ -1,42 +1,42 @@
 ---
-title: Implementacja interfejsu jawnego - C# przewodnik programowania
+title: Implementacja interfejsu jawnego C# — Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: 75b031773f8ac34b04f68ec01b12cd9263413bc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 498c45ff1c5837f5dcb0d4a80d0e3bb249abd694
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680080"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589216"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>Implementacja interfejsu jawnego (Przewodnik programowania w języku C#)
-Jeśli [klasy](../../../csharp/language-reference/keywords/class.md) implementuje dwa interfejsy, które zawierają element członkowski o tym samym podpisie, a następnie wykonywania tego elementu członkowskiego w klasie spowoduje, że oba interfejsy do użycia tego elementu członkowskiego jako ich implementacji. W poniższym przykładzie, wszystkie wywołania do `Paint` wywołania tej samej metody.  
+Jeśli [Klasa](../../language-reference/keywords/class.md) implementuje dwa interfejsy, które zawierają element członkowski o tym samym podpisie, a następnie wdrożenie tego elementu członkowskiego w klasie spowoduje, że oba interfejsy używają tego elementu członkowskiego jako ich implementacji. W poniższym przykładzie wszystkie wywołania do `Paint` wywołania tej samej metody.  
   
  [!code-csharp[csProgGuideInheritance#39](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#39)]  
   
- Jeśli dwa [interfejsu](../../../csharp/language-reference/keywords/interface.md) elementy członkowskie nie wykonuj tę samą funkcję, jednak może to spowodować niepoprawne implementację jeden lub oba interfejsy. Można jawnie implementować składowej interfejsu — tworzenie składowej klasy, która jest wywoływana tylko za pośrednictwem interfejsu i specyficzne dla tego interfejsu. Jest to realizowane za pomocą nazw składowej klasy o nazwie interfejsu i kropką. Na przykład:  
+ Jeśli dwa elementy członkowskie [interfejsu](../../language-reference/keywords/interface.md) nie wykonują tej samej funkcji, może to jednak prowadzić do niepoprawnej implementacji jednego lub obu interfejsów. Istnieje możliwość jawnej implementacji elementu członkowskiego interfejsu — tworzenie składowej klasy, która jest wywoływana tylko przez interfejs i jest specyficzna dla tego interfejsu. Jest to realizowane przez nazywanie składowej klasy nazwą interfejsu i kropką. Na przykład:  
   
  [!code-csharp[csProgGuideInheritance#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#40)]  
   
- Składowa klasy `IControl.Paint` jest dostępna tylko `IControl` interfejsu, a `ISurface.Paint` jest dostępna tylko `ISurface`. Zarówno implementacje metod są niezależne i nie będzie dostępny bezpośrednio w klasie. Na przykład:  
+ Element członkowski `IControl.Paint` klasy jest dostępny tylko `IControl` za pomocą interfejsu i `ISurface.Paint` jest dostępny tylko za pomocą `ISurface`. Obie implementacje metod są oddzielone, a żaden z nich nie jest dostępny bezpośrednio w klasie. Na przykład:  
   
  [!code-csharp[csProgGuideInheritance#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#41)]  
   
- Jawna implementacja jest również używany do rozpoznawania przypadki, w której dwa interfejsy zadeklarować inne elementy członkowskie o takiej samej nazwie, takie jak właściwości i metody:  
+ Jawna implementacja służy również do rozwiązywania przypadków, gdy dwa interfejsy deklarują różne elementy członkowskie o tej samej nazwie, takie jak właściwość i Metoda:  
   
  [!code-csharp[csProgGuideInheritance#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#42)]  
   
- Aby zaimplementować obu interfejsów, klasa ma używać jawnych implementacji P właściwości lub metody P i / lub, aby uniknąć błąd kompilatora. Na przykład:  
+ Aby zaimplementować oba interfejsy, Klasa musi używać jawnej implementacji dla właściwości P, lub metody P lub obu, aby uniknąć błędu kompilatora. Na przykład:  
   
  [!code-csharp[csProgGuideInheritance#43](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#43)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Interfejsy](../../../csharp/programming-guide/interfaces/index.md)
-- [Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Klasy i struktury](../classes-and-structs/index.md)
+- [Interfejsy](./index.md)
+- [Dziedziczenie](../classes-and-structs/inheritance.md)

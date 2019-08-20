@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: bccc22f5362b22540dadf08e6b21a07cbc578327
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 1608cd7b888a67af3ccb98b16323e74a9c5ad4a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433866"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608408"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where — Ograniczenie typu ogólnego (odwołanie w C#)
 
@@ -55,9 +55,9 @@ Zauważ, że składnia opisująca ograniczenia parametru typu dla delegatów jes
 
 [!code-csharp[where constraints with generic methods](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#8)]
 
-Aby uzyskać informacje na temat delegatów ogólnych, zobacz [Delegaty ogólne](../../../csharp/programming-guide/generics/generic-delegates.md).
+Aby uzyskać informacje na temat delegatów ogólnych, zobacz [Delegaty ogólne](../../programming-guide/generics/generic-delegates.md).
 
-Aby uzyskać szczegółowe informacje na temat składni i użycia ograniczeń, zobacz [ograniczenia dotyczące parametrów typu](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).
+Aby uzyskać szczegółowe informacje na temat składni i użycia ograniczeń, zobacz [ograniczenia dotyczące parametrów typu](../../programming-guide/generics/constraints-on-type-parameters.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
@@ -65,8 +65,8 @@ Aby uzyskać szczegółowe informacje na temat składni i użycia ograniczeń, z
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/index.md)
-- [new, ograniczenie](../../../csharp/language-reference/keywords/new-constraint.md)
-- [Ograniczenia dotyczące parametrów typu](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Wprowadzenie do typów ogólnych](../../programming-guide/generics/index.md)
+- [new, ograniczenie](./new-constraint.md)
+- [Ograniczenia dotyczące parametrów typu](../../programming-guide/generics/constraints-on-type-parameters.md)

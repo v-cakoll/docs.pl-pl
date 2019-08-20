@@ -1,21 +1,21 @@
 ---
-title: Korzystanie z wariancji dla Func i akcji delegatów ogólnych (C#)
+title: Korzystanie z wariancji dla delegatów dla funkcjiC#Func i Action ()
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: f517eea07588bb01ef903c8311126eab872bd735
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e2c5c80c54ff6788653f63a5bda85598e73824c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668552"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595235"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Korzystanie z wariancji dla Func i akcji delegatów ogólnych (C#)
-Te przykłady przedstawiają sposób zastosowania kowariancji i kontrawariancji w `Func` i `Action` delegatów ogólnych, które umożliwiają wielokrotne użycie metod i zapewniają większą elastyczność w kodzie.  
+# <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Korzystanie z wariancji dla delegatów dla funkcjiC#Func i Action ()
+W poniższych przykładach pokazano, jak używać kowariancji i kontrawariancja `Func` w `Action` i delegatów ogólnych, aby umożliwić ponowne użycie metod i zapewnić większą elastyczność w kodzie.  
   
- Aby uzyskać więcej informacji dotyczących kowariancji i kontrawariancji, zobacz [wariancje w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
+ Aby uzyskać więcej informacji na temat kowariancji i kontrawariancja, zobacz [WARIANCJAC#w delegatach ()](./variance-in-delegates.md).  
   
-## <a name="using-delegates-with-covariant-type-parameters"></a>Używanie delegatów z Kowariantnymi parametrami typu  
- W poniższym przykładzie pokazano zalety obsługi Kowariancja w ogólnej `Func` delegatów. `FindByTitle` Metoda przyjmuje parametr `String` typu i zwraca obiekt `Employee` typu. Jednak można przypisać tę metodę w celu `Func<String, Person>` delegata, ponieważ `Employee` dziedziczy `Person`.  
+## <a name="using-delegates-with-covariant-type-parameters"></a>Używanie delegatów z parametrami typu współwariantowego  
+ Poniższy przykład ilustruje zalety obsługi kowariancji w delegatach ogólnych `Func` . Metoda przyjmuje parametr `String` typu i `Employee` zwraca obiekt typu. `FindByTitle` Można jednak przypisać tę metodę do `Func<String, Person>` delegata, ponieważ `Employee` dziedziczy `Person`.  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -48,8 +48,8 @@ class Program
 }  
 ```  
   
-## <a name="using-delegates-with-contravariant-type-parameters"></a>Używanie delegatów z parametrami kontrawariantnego typu  
- W poniższym przykładzie pokazano zalety obsługi kontrawariancja w ogólnej `Action` delegatów. `AddToContacts` Metoda przyjmuje parametr `Person` typu. Jednak można przypisać tę metodę w celu `Action<Employee>` delegata, ponieważ `Employee` dziedziczy `Person`.  
+## <a name="using-delegates-with-contravariant-type-parameters"></a>Korzystanie z delegatów z parametrami typu kontrawariantne  
+ Poniższy przykład ilustruje zalety obsługi kontrawariancja w delegatach ogólnych `Action` . Metoda przyjmuje parametr `Person`typu. `AddToContacts` Można jednak przypisać tę metodę do `Action<Employee>` delegata, ponieważ `Employee` dziedziczy `Person`.  
   
 ```csharp  
 public class Person { }  
@@ -83,5 +83,5 @@ class Program
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kowariancja i Kontrawariancja (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
+- [Kowariancja i kontrawariancja (C#)](./index.md)
 - [Typy ogólne](~/docs/standard/generics/index.md)

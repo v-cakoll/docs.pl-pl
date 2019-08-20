@@ -1,75 +1,75 @@
 ---
-title: Klasy ogólne — C# przewodnik programowania
+title: Klasy ogólne — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: cc2beb78cc6594a3de594b50c1c45d23b30966f6
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 6eb4df4489f4b377c68c5d49d1bf0bb01b835e85
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423486"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589767"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Klasy ogólne (Przewodnik programowania w języku C#)
-Klasy ogólne hermetyzować operacje, które nie są specyficzne dla określonego typu danych. Jest najbardziej popularnym zastosowaniem klas ogólnych kolekcji, takich jak połączonej listy, tabele zbędnych danych, stosów, kolejek, drzewa i tak dalej. Operacje, takie jak dodawanie i usuwanie elementów z kolekcji są wykonywane w zasadzie taki sam sposób niezależnie od rodzaju przechowywanych danych.  
+Klasy ogólne hermetyzują operacje, które nie są specyficzne dla określonego typu danych. Najbardziej typowym zastosowaniem klas ogólnych jest kolekcje, takie jak listy połączone, tabele skrótów, stosy, kolejki, drzewa i tak dalej. Operacje, takie jak dodawanie i usuwanie elementów z kolekcji, są wykonywane w taki sam sposób, niezależnie od typu przechowywanych danych.  
   
- W przypadku większości scenariuszy, które wymagają klasy kolekcji Zalecanym podejściem jest użycie jednego z dostarczanych w bibliotece klas programu .NET. Aby uzyskać więcej informacji o korzystaniu z tych klas, zobacz [kolekcje ogólne w .NET](../../../standard/generics/collections.md).  
+ W przypadku większości scenariuszy, które wymagają klas kolekcji, Zalecanym podejściem jest użycie tych, które znajdują się w bibliotece klas .NET. Aby uzyskać więcej informacji o korzystaniu z tych klas, zobacz [kolekcje ogólne w programie .NET](../../../standard/generics/collections.md).  
   
- Zazwyczaj tworzony klasy ogólne, począwszy od konkretnego istniejącej klasy, a zmiany typów w parametrach typu jeden do czasu osiągnięcia optymalną proporcję generalizacji i użyteczności tworzonych rozwiązań. Podczas tworzenia własnych klas ogólnych, istotne zagadnienia są następujące:  
+ Zazwyczaj tworzysz klasy generyczne, rozpoczynając od istniejącej konkretnej klasy i zmieniając typy na parametry typu jeden na raz, aż osiągniesz optymalny bilans generalizacji i użyteczności. Podczas tworzenia własnych klas ogólnych ważne są następujące zagadnienia:  
   
-- Typy, które można uogólnić do parametrów typu.  
+- Które typy są uogólniać do parametrów typu.  
   
-     Jako regułę, większą liczbę typów, które można zdefiniować parametry, bardziej elastyczne i wielokrotnego użytku staje się kodu. Zbyt dużo Generalizacja można jednak utworzyć kod, który jest trudny innym deweloperom do odczytu lub zrozumieć.  
+     Im więcej typów, które można Sparametryzuj, tym bardziej elastyczne i wielokrotne użycie kodu stanie się. Jednak zbyt wiele generalizacji może utworzyć kod, który jest trudny do odczytania lub zrozumienia dla innych deweloperów.  
   
-- Jakie ograniczenia, jeśli istnieją, aby zastosować do parametrów typu (zobacz [ograniczenia dotyczące parametrów typu](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)).  
+- Jakie ograniczenia (jeśli istnieją) mają być stosowane do parametrów typu (zobacz [ograniczenia dotyczące parametrów typu](./constraints-on-type-parameters.md)).  
   
-     Rozsądną regułą polega na zastosowaniu maksymalna ograniczenia możliwości, które pozwoli obsługiwać typy, które muszą obsługiwać. Na przykład jeśli wiesz, że Twoje klasy generycznej jest przeznaczony do użytku tylko w przypadku typów referencyjnych, mają zastosowanie ograniczenia klasy. Uniemożliwi niezamierzone korzystanie z klasy z typami wartości i umożliwi przy użyciu `as` operatora na `T`i sprawdź, czy dla wartości null.  
+     Dobrą regułą jest zastosowanie maksymalnych ograniczeń, które nadal będą obsługiwać typy, które należy obsłużyć. Na przykład jeśli wiesz, że Klasa generyczna jest przeznaczona do użycia tylko z typami referencyjnymi, Zastosuj ograniczenie klasy. Uniemożliwi to niezamierzone użycie klasy z typami wartości i umożliwi użycie `as` operatora na `T`i sprawdzenie wartości null.  
   
-- Określa, czy uwzględnić ogólne zachowanie podstawowych klas i podklas.  
+- Czy należy wziąć pod uwagę ogólne zachowanie w klasach bazowych i podklasach.  
   
-     Ponieważ klas ogólnych może służyć jako klay bazowe, tym samym zagadnienia dotyczące projektowania zgłosić się tutaj podobnie jak w przypadku nieogólnej klasy. Zobacz reguły o dziedziczy z klasy bazowej ogólne w dalszej części tego tematu.  
+     Ponieważ klasy generyczne mogą działać jako klasy bazowe, te same zagadnienia dotyczące projektowania są stosowane w tym miejscu, jak w przypadku klas innych niż ogólne. Zapoznaj się z regułami dotyczącymi dziedziczenia z generycznych klas podstawowych w dalszej części tego tematu.  
   
-- Określa, czy zaimplementować jeden lub więcej interfejsów ogólnych.  
+- Czy zaimplementować co najmniej jeden interfejs generyczny.  
   
-     Na przykład w przypadku projektowania klasę, która będzie służyć do tworzenia elementów w kolekcji na podstawie typów ogólnych, może być konieczne takich jak implementować interfejsu <xref:System.IComparable%601> gdzie `T` jest typem klasy.  
+     Na przykład w przypadku projektowania klasy, która będzie używana do tworzenia elementów w kolekcji generycznej, może być konieczne zaimplementowanie interfejsu, takiego jak <xref:System.IComparable%601> gdzie `T` jest typem klasy.  
   
- Na przykład prosty klasy ogólnej zobacz [wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/index.md).  
+ Aby zapoznać się z przykładem prostej klasy generycznej, zobacz [wprowadzenie do typów ogólnych](./index.md).  
   
- Reguły dotyczące parametrów typu i ograniczenia dotyczą kilka zachowanie klasy generycznej, szczególnie w odniesieniu do dziedziczenia i elementów członkowskich ułatwień dostępu. Przed kontynuowaniem należy poznać niektóre terminy. Dla klasy ogólnej `Node<T>,` kod klienta może odwoływać się do klasy albo poprzez określenie argument typ, Utwórz zamknięte skonstruowanego typu (`Node<int>`). Alternatywnie można pozostawić, parametr typu nie zostanie podany, na przykład po określeniu rodzajowego klasy podstawowej, aby utworzyć otwartą skonstruowany typ (`Node<T>`). Klasy ogólne może dziedziczyć z konkretnej, zamknięte zbudowane lub Otwórz skonstruowanych klasach bazowych:  
+ Reguły dotyczące parametrów typu i ograniczeń mają różne konsekwencje dla zachowania klasy ogólnej, szczególnie dotyczące dziedziczenia i dostępności elementów członkowskich. Przed kontynuowaniem należy zrozumieć pewne warunki. Dla kodu klienta klasy `Node<T>,` generycznej może odwoływać się do klasy przez określenie argumentu typu, aby utworzyć zamknięty typ skonstruowany (`Node<int>`). Alternatywnie można pozostawić parametr typu nieokreślony, na przykład podczas określania generycznej klasy podstawowej, aby utworzyć otwarty typ skonstruowany (`Node<T>`). Klasy generyczne mogą dziedziczyć z konkretnych, zamkniętych skonstruowanych lub otwartych klas bazowych:  
   
  [!code-csharp[csProgGuideGenerics#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#16)]  
   
- Innymi słowy, betonu inne niż ogólne, klasy mogą dziedziczyć z zamknięty skonstruowanych klasach bazowych, ale nie otwieranie skonstruowany klasy lub parametry typu, ponieważ nie ma żadnego sposobu, w czasie wykonywania w przypadku kodu klienta podać argument typu wymagane do utworzenia wystąpienia Klasa bazowa.  
+ Nieogólne, innymi słowy, klasy mogą dziedziczyć po zamkniętych skonstruowanych klasach bazowych, ale nie z otwartych klas skonstruowanych lub parametrów typu, ponieważ w czasie wykonywania dla kodu klienta nie ma żadnego sposobu na dostarczenie argumentu typu wymaganego do wystąpienia Klasa bazowa.  
   
  [!code-csharp[csProgGuideGenerics#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#17)]  
   
- Klasy ogólne, które dziedziczą z Otwórz typy utworzone, musisz podać argumenty typu parametrów typu klasy bazowej, które nie są współdzielone przez klasy dziedziczącej, jak pokazano w poniższym kodzie:  
+ Klasy generyczne dziedziczące od typów typu "Opened" muszą dostarczać argumenty typu dla wszystkich parametrów klasy bazowej, które nie są współużytkowane przez klasę dziedziczenia, jak pokazano w poniższym kodzie:  
   
  [!code-csharp[csProgGuideGenerics#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#18)]  
   
- Klasy ogólne, które dziedziczą z Otwórz typy utworzone musi określić ograniczeń, które są podzbiorem, lub w sposób sugerujący ograniczenia dotyczące typu podstawowego:  
+ Klasy generyczne dziedziczące z typów typu "Open skonstruowane" muszą określać ograniczenia, które są nadzbiorem lub implikują ograniczenia dotyczące typu podstawowego:  
   
  [!code-csharp[csProgGuideGenerics#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#19)]  
   
- Typy ogólne można użyć wielu parametrów typu i ograniczenia, w następujący sposób:  
+ Typy ogólne mogą używać wielu parametrów typu i ograniczeń w następujący sposób:  
   
  [!code-csharp[csProgGuideGenerics#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#20)]  
   
- Otwórz typy utworzone skonstruowany i zamknięte może służyć jako parametry metody:  
+ Jako parametry metody można użyć otwartych i zamkniętych typów skonstruowanych:  
   
  [!code-csharp[csProgGuideGenerics#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#21)]  
   
- Jeśli ogólne klasy implementuje interfejs, wszystkie wystąpienia tej klasy może być rzutowany tego interfejsu.  
+ Jeśli Klasa ogólna implementuje interfejs, wszystkie wystąpienia tej klasy mogą być rzutowane do tego interfejsu.  
   
- Klasy ogólne są niezmienne. Innymi słowy Jeśli określono parametr wejściowy `List<BaseClass>`, otrzymasz błąd kompilacji, jeśli zostanie podjęta próba zapewniają `List<DerivedClass>`.  
+ Klasy generyczne są niezmienne. Innymi słowy, jeśli parametr wejściowy określa `List<BaseClass>`, zostanie wyświetlony błąd czasu kompilacji, jeśli spróbujesz `List<DerivedClass>`podać.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Collections.Generic>
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Typy ogólne](../../../csharp/programming-guide/generics/index.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Typy ogólne](./index.md)
 - [Zapisywanie stanu modułów wyliczających](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)
-- [Układanki dziedziczenia część pierwsza](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)
+- [Dziedziczenie, część jedna](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)

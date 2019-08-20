@@ -1,5 +1,5 @@
 ---
-title: Klasy statyczne i statyczni członkowie klas - C# przewodnik programowania
+title: Klasy statyczne i statyczne elementy członkowskie klas C# — Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 11cbe6600a75b2db6174841790aa69efdf5da035
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 841965becd6c4998692b83d5c64521f7c3e1b227
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398291"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596134"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Klasy statyczne i statyczni członkowie klas (Przewodnik programowania w języku C#)
 
-A [statyczne](../../../csharp/language-reference/keywords/static.md) klasy jest zasadniczo taki sam jak niestatycznych klas, ale ma jedną różnicą: nie można utworzyć wystąpienia klasy statycznej. Innymi słowy, nie można użyć [nowe](../../../csharp/language-reference/operators/new-operator.md) operatora, aby utworzyć zmienną typu klasy. Ponieważ nie ma żadnej zmiennej wystąpienia, uzyskujesz dostęp do członków klasy statycznej za pomocą sama nazwa klasy. Na przykład jeśli masz statyczna klasy, która jest o nazwie `UtilityClass` zawierający publicznej statycznej metody o nazwie `MethodA`, należy wywołać metodę, jak pokazano w poniższym przykładzie:  
+Klasa [statyczna](../../language-reference/keywords/static.md) jest zasadniczo taka sama jak Klasa niestatyczna, ale istnieje jedna różnica: nie można utworzyć wystąpienia klasy statycznej. Innymi słowy, nie można użyć operatora [New](../../language-reference/operators/new-operator.md) , aby utworzyć zmienną typu klasy. Ponieważ nie istnieje zmienna wystąpienia, dostęp do elementów członkowskich klasy statycznej można uzyskać przy użyciu samej nazwy klasy. Na przykład jeśli masz klasę statyczną o nazwie `UtilityClass` , która ma publiczną metodę statyczną o nazwie `MethodA`, wywoływana jest metoda, jak pokazano w następującym przykładzie:  
   
 ```csharp  
 UtilityClass.MethodA();  
 ```  
   
- Klasa statyczna może służyć jako wygodny kontenera dla zestawów metod, które po prostu działają na parametry wejściowe i nie trzeba pobrać lub ustawić wszystkie pola wystąpienia wewnętrznego. Na przykład w bibliotece w klas programu .NET Framework, statycznej <xref:System.Math?displayProperty=nameWithType> klasa zawiera metody, które wykonują operacje matematyczne, bez konieczności zapisanie lub pobranie danych, który jest unikatowy dla konkretnego wystąpienia <xref:System.Math> klasy. Oznacza to należy zastosować składowych klasy, określając nazwę klasy i nazwę metody, jak pokazano w poniższym przykładzie.  
+ Klasa statyczna może być używana jako wygodny kontener dla zestawów metod, które po prostu działają w parametrach wejściowych i nie muszą pobierać ani ustawiać żadnych pól wystąpienia wewnętrznego. Na przykład w bibliotece klas .NET Framework Klasa statyczna <xref:System.Math?displayProperty=nameWithType> zawiera metody, które wykonują operacje matematyczne, bez konieczności przechowywania lub pobierania danych, które są unikatowe dla określonego wystąpienia <xref:System.Math> klasy. Oznacza to, że należy zastosować elementy członkowskie klasy, określając nazwę klasy i nazwę metody, jak pokazano w poniższym przykładzie.  
   
 ```csharp  
 double dub = -3.14;  
@@ -38,10 +38,10 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 // 3  
 ```  
   
- Podobnie jak w przypadku wszystkich typów klasy, informacje o typie dla klasy statycznej jest ładowany przez program .NET Framework środowisko uruchomieniowe języka wspólnego (CLR), po załadowaniu program, który odwołuje się do klasy. Program nie można określić dokładnie, gdy klasa jest ładowany. Jednak jest gwarantowane do załadowania i jego pola zainicjowane i jego statyczny Konstruktor wywołuje się, zanim po raz pierwszy w programie odwołuje się do klasy. Statyczny Konstruktor jest wywoływany tylko jeden raz, a Klasa statyczna pozostaje w pamięci dla okresu istnienia domeny aplikacji, w której znajduje się program.  
+ Podobnie jak w przypadku wszystkich typów klas, informacje o typie klasy statycznej są ładowane przez .NET Framework środowiska uruchomieniowego języka wspólnego (CLR) podczas ładowania programu, który odwołuje się do klasy. Program nie może określić dokładnie, gdy Klasa jest załadowana. Jednak zagwarantowane jest załadowanie i zainicjowanie jego pól oraz jego konstruktora statycznego wywołanego przed odwołaniem do klasy po raz pierwszy w programie. Konstruktor statyczny jest wywoływany tylko jednokrotnie, a Klasa statyczna pozostaje w pamięci przez okres istnienia domeny aplikacji, w której znajduje się program.  
   
 > [!NOTE]
->  Aby utworzyć klasę niestatyczna, która zezwala na tylko jedno wystąpienie sam ma zostać utworzony, zobacz [wdrażanie pojedynczego wystąpienia w języku C#](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29).  
+>  Aby utworzyć niestatyczną klasę, która umożliwia utworzenie tylko jednego wystąpienia, zobacz Implementowanie pojedynczych elementów [w C# ](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29).  
   
  Poniższa lista zawiera główne funkcje klasy statycznej:  
   
@@ -51,49 +51,49 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
 - Jest zapieczętowany.  
   
-- Nie może zawierać [konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+- Nie może zawierać [konstruktorów wystąpień](./instance-constructors.md).  
   
- Tworzenie klasy statycznej jest więc zasadniczo takie same, jak podczas tworzenia klasy, która zawiera tylko statyczne elementy członkowskie i Konstruktor prywatny. Konstruktor prywatny zapobiega uruchamianiu klasy. Zaletą używania klasy statycznej jest, że kompilator można sprawdzić, aby upewnić się, że nie składowych wystąpienia przypadkowo są dodawane. Kompilator gwarantuje, że nie można utworzyć wystąpienia tej klasy.  
+ Tworzenie klasy statycznej jest tak samo samo jak w przypadku tworzenia klasy, która zawiera tylko statyczne elementy członkowskie i Konstruktor prywatny. Konstruktor prywatny uniemożliwia utworzenie wystąpienia klasy. Zaletą używania klasy statycznej jest to, że kompilator może sprawdzić, czy żaden element członkowski wystąpienia nie został przypadkowo dodany. Kompilator gwarantuje, że wystąpienia tej klasy nie mogą zostać utworzone.  
   
- Klasy statyczne są zapieczętowane i nie może być dziedziczona. Nie można dziedziczyć wszystkie klasy, z wyjątkiem <xref:System.Object>. Klasy statyczne nie mogą zawierać konstruktora wystąpień; może jednak zawierać Konstruktor statyczny. Jeśli klasa zawiera statyczne elementy członkowskie, które wymagają inicjalizacji nietrywialnymi niestatycznych klas także zdefiniować Konstruktor statyczny. Aby uzyskać więcej informacji, zobacz [konstruktorów statycznych](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
+ Klasy statyczne są zapieczętowane i w związku z tym nie można ich dziedziczyć. Nie mogą dziedziczyć z żadnej klasy <xref:System.Object>z wyjątkiem. Klasy statyczne nie mogą zawierać konstruktora wystąpień; jednak mogą zawierać statyczny Konstruktor. Klasy niestatyczne powinny także definiować Konstruktor statyczny, jeśli Klasa zawiera statyczne składowe, które wymagają inicjalizacji nieuproszczonej. Aby uzyskać więcej informacji, zobacz [statyczne konstruktory](./static-constructors.md).  
   
 ## <a name="example"></a>Przykład  
- Oto przykład klasy statycznej, która zawiera dwie metody, które konwertują temperaturę w stopniach Celsjusza do f i Fahrenheita do c:  
+ Oto przykład klasy statycznej zawierającej dwie metody, które konwertują temperaturę z Celsjusza na Fahrenheita i od Fahrenheita do c:  
   
  [!code-csharp[csProgGuideObjects#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#31)]  
   
 ## <a name="static-members"></a>Statyczne elementy członkowskie  
- Klasy statyczne nie może zawierać metody statyczne, pola, właściwości lub zdarzenia. Statyczny element członkowski jest wywoływane w klasie, nawet wtedy, gdy utworzono żadnego wystąpienia klasy. Statyczny element członkowski zawsze odbywa się przy użyciu nazwy klasy, a nie nazwę wystąpienia. Istnieje tylko jedna kopia statyczny element członkowski, niezależnie od tego, jak wiele wystąpień klasy są tworzone. Statyczne metody i właściwości nie można uzyskać dostępu niestatycznego pola i zdarzenia w ich typem zawierającym i nie można uzyskać dostępu do zmiennej wystąpienia dowolnego obiektu, chyba że jawnie przekazany parametr metody.  
+ Klasa niestatyczna może zawierać statyczne metody, pola, właściwości lub zdarzenia. Statyczny element członkowski jest wywoływany na klasie nawet wtedy, gdy nie utworzono żadnego wystąpienia klasy. Statyczny element członkowski jest zawsze używany przez nazwę klasy, a nie nazwę wystąpienia. Istnieje tylko jedna kopia statycznej składowej, niezależnie od tego, ile wystąpień klasy zostały utworzone. Metody i właściwości statyczne nie mogą uzyskać dostępu do niestatycznych pól i zdarzeń w ich typie zawierającym i nie mogą uzyskać dostępu do zmiennej wystąpienia dowolnego obiektu, chyba że jest on jawnie przekazywać w parametrze metody.  
   
- Jest bardziej typowego do deklarowania niestatycznych klas z niektórych statycznych elementów członkowskich, niż zadeklarowanie całej klasy jako statyczny. Najczęstsze zastosowania dwóch pól statycznych są zapewnienie liczbę obiektów, które zostały utworzone lub do przechowywania wartości, które muszą być współużytkowane przez wszystkie wystąpienia.  
+ Bardziej typowym jest zadeklarowanie niestatycznej klasy z pewnymi statycznymi składowymi, niż w celu deklarowania całej klasy jako statycznej. Dwa typowe zastosowania pól statycznych mają na celu zachowanie liczby obiektów, które zostały utworzone, lub do przechowywania wartości, które muszą być współużytkowane przez wszystkie wystąpienia.  
   
- Metody statyczne mogą być przeciążone, ale nie ich nadpisano, ponieważ należą do klasy, a nie do dowolnego wystąpienia klasy.  
+ Metody statyczne mogą być przeciążone, ale nie przesłaniane, ponieważ należą do klasy, a nie do żadnego wystąpienia klasy.  
   
- Mimo że pole nie może być zadeklarowana jako `static const`, [const](../../../csharp/language-reference/keywords/const.md) pole jest zasadniczo statyczne w jego zachowanie. Należy do typu, a nie do wystąpienia typu. W związku z tym, const pola są dostępne, korzystając z tych samych `ClassName.MemberName` notacji, który służy do pola statyczne. Żadne wystąpienie obiektu jest wymagana.  
+ Chociaż nie można zadeklarować pola jako `static const`, pole [const](../../language-reference/keywords/const.md) jest zasadniczo statyczne w zachowaniu. Należy do typu, nie do wystąpienia typu. W związku z tym można uzyskać dostęp do pól const przy `ClassName.MemberName` użyciu tej samej notacji, która jest używana dla pól statycznych. Nie jest wymagane żadne wystąpienie obiektu.  
   
- C# nie obsługuje statyczne zmienne lokalne (zmienne, które są zadeklarowane w zakresie metody).  
+ C#Program nie obsługuje statycznych zmiennych lokalnych (zmiennych, które są zadeklarowane w zakresie metody).  
   
- Deklarowanie statyczni członkowie klas za pomocą `static` — słowo kluczowe przed zwracanym typem elementu członkowskiego, jak pokazano w poniższym przykładzie:  
+ Elementy członkowskie klasy statycznej deklaruje się `static` za pomocą słowa kluczowego przed typem zwracanym elementu członkowskiego, jak pokazano w następującym przykładzie:  
   
  [!code-csharp[csProgGuideObjects#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#29)]  
   
- Statyczne elementy członkowskie są inicjowane przed statyczny element członkowski jest dostępny po raz pierwszy, a także przed statyczny Konstruktor, jeśli istnieje, zostanie wywołana. Aby uzyskać dostęp do składowej klasy statycznej, użyj nazwy klasy zamiast nazwy zmiennej do określenia lokalizacji elementu członkowskiego, jak pokazano w poniższym przykładzie:  
+ Statyczne składowe są inicjowane przed uzyskaniem dostępu do statycznego elementu członkowskiego po raz pierwszy i przed konstruktorem statycznym, jeśli istnieje. Aby uzyskać dostęp do statycznej składowej klasy, użyj nazwy klasy zamiast nazwy zmiennej, aby określić lokalizację elementu członkowskiego, jak pokazano w następującym przykładzie:  
   
  [!code-csharp[csProgGuideObjects#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#30)]  
   
- Jeśli klasa zawiera pola statyczne, należy podać statyczny Konstruktor, który inicjuje je, gdy klasa jest ładowany.  
+ Jeśli Klasa zawiera pola statyczne, podaj statyczny Konstruktor, który inicjuje je podczas ładowania klasy.  
   
- Wywołanie metody statycznej generuje instrukcją call w języka Microsoft intermediate language (MSIL), natomiast generuje wywołanie metody wystąpienia `callvirt` instrukcji, co sprawdza również dla odwołuje się obiekt z wartością null. Jednak w większości przypadków różnicy wydajności między tymi dwoma nie ma znaczenia.  
+ Wywołanie metody statycznej generuje instrukcję wywołania w języku pośrednim firmy Microsoft (MSIL), podczas gdy wywołanie metody instancji generuje `callvirt` instrukcję, która również sprawdza odwołania do obiektów o wartości null. Jednak większość czasu różnica między wydajnością nie jest istotna.  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
 
-Aby uzyskać więcej informacji, zobacz [klas statycznych](~/_csharplang/spec/classes.md#static-classes) i [statyczna i wystąpienia elementów członkowskich](~/_csharplang/spec/classes.md#static-and-instance-members) w [ C# specyfikacji języka](../../language-reference/language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [klasy statyczne](~/_csharplang/spec/classes.md#static-classes) i [elementy członkowskie statyczne i wystąpienia](~/_csharplang/spec/classes.md#static-and-instance-members) w [ C# specyfikacji języka](../../language-reference/language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [static](../../../csharp/language-reference/keywords/static.md)
-- [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)
-- [class](../../../csharp/language-reference/keywords/class.md)
-- [Konstruktory statyczne](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)
-- [Konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [static](../../language-reference/keywords/static.md)
+- [Klasy](./classes.md)
+- [class](../../language-reference/keywords/class.md)
+- [Konstruktory statyczne](./static-constructors.md)
+- [Konstruktory wystąpień](./instance-constructors.md)

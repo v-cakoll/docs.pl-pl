@@ -1,44 +1,44 @@
 ---
-title: Main() — zwracane wartości - C# przewodnik programowania
+title: Main () zwracane wartości — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: ea6f93e52ade91e61bdfcbc35aeb56de9101e80f
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 1be04f98a4dec1317c485c7e482568cfe48ea9bf
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878929"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588879"
 ---
-# <a name="main-return-values-c-programming-guide"></a>Main() — zwracane wartości (C# Programming Guide)
+# <a name="main-return-values-c-programming-guide"></a>Main () — zwracane wartościC# (Przewodnik programowania)
 
-`Main` Metoda może zwracać `void`:
+Metoda może zwracać `void`: `Main`
 
  [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
-Może również zwracać `int`:
+Może również zwrócić `int`:
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-Jeśli wartość zwracana z `Main` nie jest używany, zwracając `void` umożliwia nieco prostsze kodu. Jednak zwracanie całkowitą Włącza program do komunikowania się informacje o stanie do innych programów lub skryptów, które wywołują pliku wykonywalnego. Wartość zwrotną z elementu `Main` jest traktowany jako kod zakończenia procesu. Jeśli `void` jest zwracana z `Main` kod wyjścia jest niejawnie `0`. W poniższym przykładzie pokazano, jak wartość zwracana z `Main` można uzyskać dostęp.
+Jeśli wartość zwracana z `Main` nie jest używana, zwracający `void` umożliwia nieznacznie łatwiejszy kod. Jednak zwrócenie liczby całkowitej umożliwia programowi przekazywanie informacji o stanie do innych programów lub skryptów, które wywołują plik wykonywalny. Wartość zwracana z `Main` jest traktowana jako kod zakończenia procesu. Jeśli `void` jest zwracana z `Main` kodu zakończenia, będzie niejawnie `0`. Poniższy przykład pokazuje, w jaki sposób `Main` można uzyskać dostęp do zwracanej wartości.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie użyto [platformy .NET Core](../../../core/index.md) narzędzi wiersza polecenia. Jeśli jesteś zaznajomiony z narzędzi wiersza polecenia platformy .NET Core, informacje na temat ich w tym [temacie wprowadzenie Get](../../../core/tutorials/using-with-xplat-cli.md).
+Ten przykład używa narzędzi wiersza polecenia [platformy .NET Core](../../../core/index.md) . Jeśli nie znasz narzędzi wiersza polecenia platformy .NET Core, możesz zapoznać się z nimi w [temacie](../../../core/tutorials/using-with-xplat-cli.md)wprowadzenie.
 
-Modyfikowanie `Main` method in Class metoda *program.cs* w następujący sposób:
+Zmodyfikuj metodę w program.cs w następujący sposób: `Main`
 
  [!code-csharp[csProgGuideMain#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#14)]
 
-Gdy program jest wykonywana w Windows, wszelkie wartość zwracana z `Main` funkcji jest przechowywana w zmiennej środowiskowej. Ta zmienna środowiskowa można pobrać przy użyciu `ERRORLEVEL` z pliku wsadowego lub `$LastExitCode` za pomocą programu powershell.
+Gdy program jest wykonywany w systemie Windows, wszelkie wartości zwrócone przez `Main` funkcję są przechowywane w zmiennej środowiskowej. Tę zmienną środowiskową można pobrać przy `ERRORLEVEL` użyciu pliku wsadowego lub `$LastExitCode` z programu PowerShell.
 
-Możesz tworzyć aplikacji przy użyciu [wiersz polecenia dotnet](../../../core/tools/dotnet.md) `dotnet build` polecenia.
+Aplikację można skompilować przy użyciu polecenia [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build` .
 
-Następnie należy utworzyć skrypt programu Powershell, aby uruchomić aplikację i wyświetlić wyniki. Wklej następujący kod do pliku tekstowego i zapisz go jako `test.ps1` w folderze, który zawiera projekt. Uruchom skrypt programu powershell, wpisując `test.ps1` w wierszu polecenia programu powershell.
+Następnie utwórz skrypt programu PowerShell, aby uruchomić aplikację i wyświetlić wynik. Wklej następujący kod do pliku tekstowego i Zapisz go jako `test.ps1` folder zawierający projekt. Uruchom skrypt programu PowerShell, wpisując `test.ps1` w wierszu polecenia programu PowerShell.
 
-Ponieważ kod zwraca zero, plik wsadowy zakomunikuje sukces. Jednak w przypadku zmiany MainReturnValTest.cs zwracają wartość różna od zera i ponownie skompilować program późniejszego wykonania skryptu programu powershell zgłosi błąd.
+Ponieważ kod zwraca zero, plik wsadowy będzie zgłaszał powodzenie. Jeśli jednak zmienisz MainReturnValTest.cs w taki sposób, aby zwracał wartość różną od zera, a następnie ponownie skompilujesz program, kolejne wykonanie skryptu programu PowerShell zgłosi błąd.
 
 ```powershell
 dotnet run
@@ -58,9 +58,9 @@ Execution succeeded
 Return value = 0
 ```
 
-## <a name="async-main-return-values"></a>Wartości zwracane Async Main
+## <a name="async-main-return-values"></a>Asynchroniczne główne wartości zwracane
 
-Async Main zwraca wartości powodują standardowy kod niezbędne w przypadku wywoływania metod asynchronicznych `Main` kod wygenerowany przez kompilator. Wcześniej należy zapisać tej konstrukcji, aby wywołać kodu asynchronicznego i upewnij się, że program został uruchomiony, aż do zakończenia operacji asynchronicznej:
+Asynchroniczne główne wartości zwracane umożliwiają przenoszenie kodu standardowego niezbędnego do wywołania metod asynchronicznych w programie `Main` do kodu wygenerowanego przez kompilator. Wcześniej należy napisać tę konstrukcję, aby wywołać kod asynchroniczny i upewnić się, że program został uruchomiony do momentu ukończenia operacji asynchronicznej:
 
 ```csharp
 public static void Main()
@@ -75,27 +75,27 @@ private static async Task<int> AsyncConsoleWork()
 }
 ```
 
-Teraz to może być zastąpiony:
+Teraz można je zastąpić:
 
 [!code-csharp[AsyncMain](../../../../samples/snippets/csharp/main-arguments/program.cs#AsyncMain)]
 
-Korzystać z nowej składni jest, czy kompilator generuje zawsze prawidłowego kodu.
+Zaletą nowej składni jest to, że kompilator zawsze generuje poprawny kod.
 
-## <a name="compiler-generated-code"></a>Kodu wygenerowanego przez kompilator
+## <a name="compiler-generated-code"></a>Kod wygenerowany przez kompilator
 
-Gdy zwraca punkt wejścia aplikacji `Task` lub `Task<int>`, kompilator generuje nowy punkt wejścia, który wywołuje metody punktu wejścia, które są zadeklarowane w kodzie aplikacji. Przy założeniu, że ten punkt wejścia jest nazywany `$GeneratedMain`, kompilator generuje następujący kod dla tych punktów wejścia:
+Gdy punkt wejścia aplikacji zwraca `Task` lub `Task<int>`, kompilator generuje nowy punkt wejścia, który wywołuje metodę punktu wejścia zadeklarowaną w kodzie aplikacji. Przy założeniu, że ten punkt `$GeneratedMain`wejścia jest wywoływany, kompilator generuje następujący kod dla tych punktów wejścia:
 
-- `static Task Main()` wyniki w kompilatorze emitowania odpowiednik `private static void $GeneratedMain() => Main().GetAwaiter().GetResult();`
-- `static Task Main(string[])` wyniki w kompilatorze emitowania odpowiednik `private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
-- `static Task<int> Main()` wyniki w kompilatorze emitowania odpowiednik `private static int $GeneratedMain() => Main().GetAwaiter().GetResult();`
-- `static Task<int> Main(string[])` wyniki w kompilatorze emitowania odpowiednik `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
+- `static Task Main()`powoduje, że kompilator emituje odpowiednik`private static void $GeneratedMain() => Main().GetAwaiter().GetResult();`
+- `static Task Main(string[])`powoduje, że kompilator emituje odpowiednik`private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
+- `static Task<int> Main()`powoduje, że kompilator emituje odpowiednik`private static int $GeneratedMain() => Main().GetAwaiter().GetResult();`
+- `static Task<int> Main(string[])`powoduje, że kompilator emituje odpowiednik`private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
 
 > [!NOTE]
->Jeśli używane przykłady `async` modyfikator na `Main` metody, kompilator może wygenerować tego samego kodu.
+>Jeśli przykłady użyto `async` modyfikatora `Main` metody, kompilator wygeneruje ten sam kod.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Przewodnik programowania w języku C#](../index.md)
 - [Dokumentacja języka C#](../index.md)
 - [Main() i argumenty wiersza polecenia](index.md)
-- [Instrukcje: Wyświetlanie argumentów wiersza poleceń](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Instrukcje: Wyświetlanie argumentów wiersza polecenia](./how-to-display-command-line-arguments.md)

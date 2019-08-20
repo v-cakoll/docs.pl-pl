@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zapis do pliku tekstowego — C# przewodnik programowania'
+title: 'Instrukcje: Zapisz w pliku tekstowym — C# Przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: e3fa0eb12c9259629ff8151ff2d057f2744e9e36
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d08fe23f2dbfe46c0a58084b05610dfe7db3dda9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595631"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589920"
 ---
-# <a name="how-to-write-to-a-text-file-c-programming-guide"></a><span data-ttu-id="dd299-102">Instrukcje: Zapis do pliku tekstowego (C# Programming Guide)</span><span class="sxs-lookup"><span data-stu-id="dd299-102">How to: Write to a Text File (C# Programming Guide)</span></span>
-<span data-ttu-id="dd299-103">W poniższych przykładach pokazano różne sposoby zapisywania tekstu w pliku.</span><span class="sxs-lookup"><span data-stu-id="dd299-103">These examples show various ways to write text to a file.</span></span> <span data-ttu-id="dd299-104">Pierwszych dwóch przykładach użyto metody statycznej wygody na <xref:System.IO.File?displayProperty=nameWithType> klasę umożliwiającą zapisanie każdy element dowolnego `IEnumerable<string>` i ciąg do pliku tekstowego.</span><span class="sxs-lookup"><span data-stu-id="dd299-104">The first two examples use static convenience methods on the <xref:System.IO.File?displayProperty=nameWithType> class to write each element of any `IEnumerable<string>` and a string to a text file.</span></span> <span data-ttu-id="dd299-105">Przykład 3 pokazuje, jak dodać tekst do pliku, gdy trzeba osobno przetworzyć każdy wiersz zapisać do pliku.</span><span class="sxs-lookup"><span data-stu-id="dd299-105">Example 3 shows how to add text to a file when you have to process each line individually as you write to the file.</span></span> <span data-ttu-id="dd299-106">W przykładach 1 – 3 zastępowana cała istniejąca zawartość w pliku, ale w przykładzie 4 pokazano, jak dołączyć tekst do istniejącego pliku.</span><span class="sxs-lookup"><span data-stu-id="dd299-106">Examples 1-3 overwrite all existing content in the file, but example 4 shows you how to append text to an existing file.</span></span>  
+# <a name="how-to-write-to-a-text-file-c-programming-guide"></a><span data-ttu-id="6c0b5-102">Instrukcje: Zapisz w pliku tekstowym (C# Przewodnik programowania)</span><span class="sxs-lookup"><span data-stu-id="6c0b5-102">How to: Write to a Text File (C# Programming Guide)</span></span>
+<span data-ttu-id="6c0b5-103">W poniższych przykładach pokazano różne sposoby zapisywania tekstu w pliku.</span><span class="sxs-lookup"><span data-stu-id="6c0b5-103">These examples show various ways to write text to a file.</span></span> <span data-ttu-id="6c0b5-104">Pierwsze dwa przykłady używają statycznych metod dogodnych na <xref:System.IO.File?displayProperty=nameWithType> klasie, aby napisać każdy element dowolnego `IEnumerable<string>` i ciągu do pliku tekstowego.</span><span class="sxs-lookup"><span data-stu-id="6c0b5-104">The first two examples use static convenience methods on the <xref:System.IO.File?displayProperty=nameWithType> class to write each element of any `IEnumerable<string>` and a string to a text file.</span></span> <span data-ttu-id="6c0b5-105">Przykład 3 pokazuje, jak dodać tekst do pliku, gdy trzeba przetwarzać każdy wiersz indywidualnie podczas zapisu w pliku.</span><span class="sxs-lookup"><span data-stu-id="6c0b5-105">Example 3 shows how to add text to a file when you have to process each line individually as you write to the file.</span></span> <span data-ttu-id="6c0b5-106">Przykłady 1-3 Zastąp całą istniejącą zawartość pliku, ale przykład 4 pokazuje, jak dołączyć tekst do istniejącego pliku.</span><span class="sxs-lookup"><span data-stu-id="6c0b5-106">Examples 1-3 overwrite all existing content in the file, but example 4 shows you how to append text to an existing file.</span></span>  
   
- <span data-ttu-id="dd299-107">Wszystkie te przykłady zapisują literały ciągów znaków do plików.</span><span class="sxs-lookup"><span data-stu-id="dd299-107">These examples all write string literals to files.</span></span> <span data-ttu-id="dd299-108">Aby sformatować tekst zapisany do pliku, należy użyć <xref:System.String.Format%2A> metody lub C# [Interpolacja ciągów](../../../csharp/language-reference/tokens/interpolated.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="dd299-108">If you want to format text written to a file, use the <xref:System.String.Format%2A> method or C# [string interpolation](../../../csharp/language-reference/tokens/interpolated.md) feature.</span></span>  
+ <span data-ttu-id="6c0b5-107">Te przykłady umożliwiają zapisanie literałów ciągu do plików.</span><span class="sxs-lookup"><span data-stu-id="6c0b5-107">These examples all write string literals to files.</span></span> <span data-ttu-id="6c0b5-108">Jeśli chcesz sformatować tekst zapisany w pliku, użyj <xref:System.String.Format%2A> funkcji interpolacji metody lub C# [ciągu](../../language-reference/tokens/interpolated.md) .</span><span class="sxs-lookup"><span data-stu-id="6c0b5-108">If you want to format text written to a file, use the <xref:System.String.Format%2A> method or C# [string interpolation](../../language-reference/tokens/interpolated.md) feature.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dd299-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="dd299-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="6c0b5-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="6c0b5-109">Example</span></span>  
  [!code-csharp[csFilesandFolders#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#3)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="dd299-110">Niezawodne programowanie</span><span class="sxs-lookup"><span data-stu-id="dd299-110">Robust Programming</span></span>  
- <span data-ttu-id="dd299-111">Następujące warunki mogą spowodować wyjątek:</span><span class="sxs-lookup"><span data-stu-id="dd299-111">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="6c0b5-110">Niezawodne programowanie</span><span class="sxs-lookup"><span data-stu-id="6c0b5-110">Robust Programming</span></span>  
+ <span data-ttu-id="6c0b5-111">Następujące warunki mogą spowodować wyjątek:</span><span class="sxs-lookup"><span data-stu-id="6c0b5-111">The following conditions may cause an exception:</span></span>  
   
-- <span data-ttu-id="dd299-112">Plik istnieje i jest tylko do odczytu.</span><span class="sxs-lookup"><span data-stu-id="dd299-112">The file exists and is read-only.</span></span>  
+- <span data-ttu-id="6c0b5-112">Plik istnieje i jest tylko do odczytu.</span><span class="sxs-lookup"><span data-stu-id="6c0b5-112">The file exists and is read-only.</span></span>  
   
-- <span data-ttu-id="dd299-113">Nazwa ścieżki może być za długa.</span><span class="sxs-lookup"><span data-stu-id="dd299-113">The path name may be too long.</span></span>  
+- <span data-ttu-id="6c0b5-113">Nazwa ścieżki może być za długa.</span><span class="sxs-lookup"><span data-stu-id="6c0b5-113">The path name may be too long.</span></span>  
   
-- <span data-ttu-id="dd299-114">Dysk może być zapełniony.</span><span class="sxs-lookup"><span data-stu-id="dd299-114">The disk may be full.</span></span>  
+- <span data-ttu-id="6c0b5-114">Dysk może być zapełniony.</span><span class="sxs-lookup"><span data-stu-id="6c0b5-114">The disk may be full.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd299-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="dd299-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c0b5-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6c0b5-115">See also</span></span>
 
-- [<span data-ttu-id="dd299-116">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="dd299-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="dd299-117">System plików i rejestr (C# Programming Guide)</span><span class="sxs-lookup"><span data-stu-id="dd299-117">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)
-- [<span data-ttu-id="dd299-118">Przykład: Zapisywanie kolekcji do przechowywania danych aplikacji</span><span class="sxs-lookup"><span data-stu-id="dd299-118">Sample: Save a collection to Application Storage</span></span>](https://code.msdn.microsoft.com/CSWinStoreAppSaveCollection-bed5d6e6)
+- [<span data-ttu-id="6c0b5-116">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="6c0b5-116">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="6c0b5-117">System plików i Rejestr (C# Przewodnik programowania)</span><span class="sxs-lookup"><span data-stu-id="6c0b5-117">File System and the Registry (C# Programming Guide)</span></span>](./index.md)
+- [<span data-ttu-id="6c0b5-118">Northwind Zapisywanie kolekcji w magazynie aplikacji</span><span class="sxs-lookup"><span data-stu-id="6c0b5-118">Sample: Save a collection to Application Storage</span></span>](https://code.msdn.microsoft.com/CSWinStoreAppSaveCollection-bed5d6e6)

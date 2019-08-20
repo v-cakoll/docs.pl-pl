@@ -2,19 +2,19 @@
 title: 'Przykładowy plik XSD: klienci i zamówienia'
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: 56ebc33b0c0be3204029a49123bd56fe8da18d03
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 15c510e8c450f0952de14f9eb2272143e4ae0b2d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868699"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591149"
 ---
-# <a name="sample-xsd-file-customers-and-orders"></a><span data-ttu-id="651ec-102">Przykładowy plik XSD: klienci i zamówienia</span><span class="sxs-lookup"><span data-stu-id="651ec-102">Sample XSD File: Customers and Orders</span></span>
-<span data-ttu-id="651ec-103">Następujący plik XSD jest używany w różnych przykładach w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="651ec-103">The following XSD file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="651ec-104">Ten plik zawiera definicję schematu dla [przykładowego pliku XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="651ec-104">This file contains a schema definition for the [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span> <span data-ttu-id="651ec-105">Schemat `xs:key` używa `Order` i `xs:keyref` funkcji `Customer` `CustomerID` XSD, aby określić, że atrybutelementujestkluczemiabyustanowićrelacjęmiędzyelementemwkażdymelemenciea`CustomerID` atrybut w każdym `Customer`elemencie. `CustomerID`</span><span class="sxs-lookup"><span data-stu-id="651ec-105">The schema uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
+# <a name="sample-xsd-file-customers-and-orders"></a><span data-ttu-id="46baa-102">Przykładowy plik XSD: klienci i zamówienia</span><span class="sxs-lookup"><span data-stu-id="46baa-102">Sample XSD File: Customers and Orders</span></span>
+<span data-ttu-id="46baa-103">Następujący plik XSD jest używany w różnych przykładach w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="46baa-103">The following XSD file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="46baa-104">Ten plik zawiera definicję schematu dla [przykładowego pliku XML: Klienci i zamówienia (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="46baa-104">This file contains a schema definition for the [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span> <span data-ttu-id="46baa-105">Schemat `xs:key` używa `Order` i `xs:keyref` funkcji `Customer` `CustomerID` XSD, aby określić, że atrybutelementujestkluczemiabyustanowićrelacjęmiędzyelementemwkażdymelemenciea`CustomerID` atrybut w każdym `Customer`elemencie. `CustomerID`</span><span class="sxs-lookup"><span data-stu-id="46baa-105">The schema uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
   
- <span data-ttu-id="651ec-106">Przykład pisania zapytań LINQ wykorzystujących tę relację `Join` można znaleźć w temacie [How to: Dołącz dwie kolekcje (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="651ec-106">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="46baa-106">Przykład pisania zapytań LINQ wykorzystujących tę relację `Join` można znaleźć w temacie [How to: Dołącz dwie kolekcje (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="46baa-106">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).</span></span>  
   
-## <a name="customersordersxsd"></a><span data-ttu-id="651ec-107">CustomersOrders. xsd</span><span class="sxs-lookup"><span data-stu-id="651ec-107">CustomersOrders.xsd</span></span>  
+## <a name="customersordersxsd"></a><span data-ttu-id="46baa-107">CustomersOrders. xsd</span><span class="sxs-lookup"><span data-stu-id="46baa-107">CustomersOrders.xsd</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

@@ -2,31 +2,31 @@
 title: Filtrowanie danych (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: 61d80674fd858063e77749342a33d714e3a57c6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17d3a65b6042c9679a263eff0048f5360c4aa546
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668373"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594392"
 ---
-# <a name="filtering-data-c"></a><span data-ttu-id="d5763-102">Filtrowanie danych (C#)</span><span class="sxs-lookup"><span data-stu-id="d5763-102">Filtering Data (C#)</span></span>
-<span data-ttu-id="d5763-103">Filtrowanie odnosi się do operacji ograniczyć zestaw wyników, aby zawiera tylko te elementy, które spełniają określony warunek.</span><span class="sxs-lookup"><span data-stu-id="d5763-103">Filtering refers to the operation of restricting the result set to contain only those elements that satisfy a specified condition.</span></span> <span data-ttu-id="d5763-104">Jest również nazywany zaznaczenia.</span><span class="sxs-lookup"><span data-stu-id="d5763-104">It is also known as selection.</span></span>  
+# <a name="filtering-data-c"></a><span data-ttu-id="bfe8d-102">Filtrowanie danych (C#)</span><span class="sxs-lookup"><span data-stu-id="bfe8d-102">Filtering Data (C#)</span></span>
+<span data-ttu-id="bfe8d-103">Filtrowanie odwołuje się do operacji ograniczającej zestaw wyników tak, aby zawierała tylko te elementy, które spełniają określony warunek.</span><span class="sxs-lookup"><span data-stu-id="bfe8d-103">Filtering refers to the operation of restricting the result set to contain only those elements that satisfy a specified condition.</span></span> <span data-ttu-id="bfe8d-104">Jest on również znany jako wybór.</span><span class="sxs-lookup"><span data-stu-id="bfe8d-104">It is also known as selection.</span></span>  
   
- <span data-ttu-id="d5763-105">Poniższa ilustracja przedstawia wyniki filtrowania sekwencji znaków.</span><span class="sxs-lookup"><span data-stu-id="d5763-105">The following illustration shows the results of filtering a sequence of characters.</span></span> <span data-ttu-id="d5763-106">Predykat dla filtrowania operacji określa, że znak musi być "A".</span><span class="sxs-lookup"><span data-stu-id="d5763-106">The predicate for the filtering operation specifies that the character must be 'A'.</span></span>  
+ <span data-ttu-id="bfe8d-105">Na poniższej ilustracji przedstawiono wyniki filtrowania sekwencji znaków.</span><span class="sxs-lookup"><span data-stu-id="bfe8d-105">The following illustration shows the results of filtering a sequence of characters.</span></span> <span data-ttu-id="bfe8d-106">Predykat dla operacji filtrowania określa, że znak musi mieć wartość "A".</span><span class="sxs-lookup"><span data-stu-id="bfe8d-106">The predicate for the filtering operation specifies that the character must be 'A'.</span></span>  
   
- ![Diagram przedstawiający filtrowanie operację LINQ](./media/filtering-data/linq-filter-operation.png)  
+ ![Diagram przedstawiający operację filtrowania LINQ](./media/filtering-data/linq-filter-operation.png)  
   
- <span data-ttu-id="d5763-108">Metody standardowego operatora zapytań, które wykonują wyboru są wymienione w poniższej sekcji.</span><span class="sxs-lookup"><span data-stu-id="d5763-108">The standard query operator methods that perform selection are listed in the following section.</span></span>  
+ <span data-ttu-id="bfe8d-108">W poniższej sekcji przedstawiono standardowe metody operatorów zapytań, które wykonują zaznaczenie.</span><span class="sxs-lookup"><span data-stu-id="bfe8d-108">The standard query operator methods that perform selection are listed in the following section.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="d5763-109">Metody</span><span class="sxs-lookup"><span data-stu-id="d5763-109">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="bfe8d-109">Metody</span><span class="sxs-lookup"><span data-stu-id="bfe8d-109">Methods</span></span>  
   
-|<span data-ttu-id="d5763-110">Nazwa metody</span><span class="sxs-lookup"><span data-stu-id="d5763-110">Method Name</span></span>|<span data-ttu-id="d5763-111">Opis</span><span class="sxs-lookup"><span data-stu-id="d5763-111">Description</span></span>|<span data-ttu-id="d5763-112">Składnia wyrażeń zapytania języka C#</span><span class="sxs-lookup"><span data-stu-id="d5763-112">C# Query Expression Syntax</span></span>|<span data-ttu-id="d5763-113">Więcej informacji</span><span class="sxs-lookup"><span data-stu-id="d5763-113">More Information</span></span>|  
+|<span data-ttu-id="bfe8d-110">Nazwa metody</span><span class="sxs-lookup"><span data-stu-id="bfe8d-110">Method Name</span></span>|<span data-ttu-id="bfe8d-111">Opis</span><span class="sxs-lookup"><span data-stu-id="bfe8d-111">Description</span></span>|<span data-ttu-id="bfe8d-112">C#Składnia wyrażenia zapytania</span><span class="sxs-lookup"><span data-stu-id="bfe8d-112">C# Query Expression Syntax</span></span>|<span data-ttu-id="bfe8d-113">Więcej informacji</span><span class="sxs-lookup"><span data-stu-id="bfe8d-113">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|<span data-ttu-id="d5763-114">OfType</span><span class="sxs-lookup"><span data-stu-id="d5763-114">OfType</span></span>|<span data-ttu-id="d5763-115">Wybiera wartości, w zależności od ich możliwości, można rzutować do określonego typu.</span><span class="sxs-lookup"><span data-stu-id="d5763-115">Selects values, depending on their ability to be cast to a specified type.</span></span>|<span data-ttu-id="d5763-116">Nie dotyczy.</span><span class="sxs-lookup"><span data-stu-id="d5763-116">Not applicable.</span></span>|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="d5763-117">Gdzie</span><span class="sxs-lookup"><span data-stu-id="d5763-117">Where</span></span>|<span data-ttu-id="d5763-118">Wybiera wartości, które są oparte na funkcji predykatu.</span><span class="sxs-lookup"><span data-stu-id="d5763-118">Selects values that are based on a predicate function.</span></span>|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="bfe8d-114">OfType</span><span class="sxs-lookup"><span data-stu-id="bfe8d-114">OfType</span></span>|<span data-ttu-id="bfe8d-115">Wybiera wartości, w zależności od możliwości przerzutowania do określonego typu.</span><span class="sxs-lookup"><span data-stu-id="bfe8d-115">Selects values, depending on their ability to be cast to a specified type.</span></span>|<span data-ttu-id="bfe8d-116">Nie dotyczy.</span><span class="sxs-lookup"><span data-stu-id="bfe8d-116">Not applicable.</span></span>|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="bfe8d-117">Gdzie</span><span class="sxs-lookup"><span data-stu-id="bfe8d-117">Where</span></span>|<span data-ttu-id="bfe8d-118">Wybiera wartości, które są oparte na funkcji predykatu.</span><span class="sxs-lookup"><span data-stu-id="bfe8d-118">Selects values that are based on a predicate function.</span></span>|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a><span data-ttu-id="d5763-119">Przykład składni wyrażenia zapytania</span><span class="sxs-lookup"><span data-stu-id="d5763-119">Query Expression Syntax Example</span></span>  
- <span data-ttu-id="d5763-120">W poniższym przykładzie użyto `where` klauzulę filtrującą dane z tablicy tych ciągów, które mają określonej długości.</span><span class="sxs-lookup"><span data-stu-id="d5763-120">The following example uses the `where` clause to filter from an array those strings that have a specific length.</span></span>  
+## <a name="query-expression-syntax-example"></a><span data-ttu-id="bfe8d-119">Przykład składni wyrażenia zapytania</span><span class="sxs-lookup"><span data-stu-id="bfe8d-119">Query Expression Syntax Example</span></span>  
+ <span data-ttu-id="bfe8d-120">W poniższym przykładzie zastosowano `where` klauzulę do filtrowania z tablicy te ciągi mające określoną długość.</span><span class="sxs-lookup"><span data-stu-id="bfe8d-120">The following example uses the `where` clause to filter from an array those strings that have a specific length.</span></span>  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -45,12 +45,12 @@ foreach (string str in query)
 */  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d5763-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d5763-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bfe8d-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bfe8d-121">See also</span></span>
 
 - <xref:System.Linq>
-- [<span data-ttu-id="d5763-122">Omówienie operatorów standardowej kwerendy (C#)</span><span class="sxs-lookup"><span data-stu-id="d5763-122">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="d5763-123">where, klauzula</span><span class="sxs-lookup"><span data-stu-id="d5763-123">where clause</span></span>](../../../../csharp/language-reference/keywords/where-clause.md)
-- [<span data-ttu-id="d5763-124">Instrukcje: Dynamiczne określanie filtrów predykatów w środowisku uruchomieniowym</span><span class="sxs-lookup"><span data-stu-id="d5763-124">How to: Dynamically Specify Predicate Filters at Runtime</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
-- [<span data-ttu-id="d5763-125">Instrukcje: Zapytanie dotyczące metadanych zestawu z odbiciem (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d5763-125">How to: Query An Assembly's Metadata with Reflection (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [<span data-ttu-id="d5763-126">Instrukcje: Zapytanie o pliki o określonym atrybucie lub nazwie (C#)</span><span class="sxs-lookup"><span data-stu-id="d5763-126">How to: Query for Files with a Specified Attribute or Name (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [<span data-ttu-id="d5763-127">Instrukcje: Sortowanie lub filtrowanie danych tekstowych według dowolnego słowa lub pola (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d5763-127">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [<span data-ttu-id="bfe8d-122">Standardowe operatory zapytań — OmówienieC#()</span><span class="sxs-lookup"><span data-stu-id="bfe8d-122">Standard Query Operators Overview (C#)</span></span>](./standard-query-operators-overview.md)
+- [<span data-ttu-id="bfe8d-123">where, klauzula</span><span class="sxs-lookup"><span data-stu-id="bfe8d-123">where clause</span></span>](../../../language-reference/keywords/where-clause.md)
+- [<span data-ttu-id="bfe8d-124">Instrukcje: Dynamiczne określanie filtrów predykatu w czasie wykonywania</span><span class="sxs-lookup"><span data-stu-id="bfe8d-124">How to: Dynamically Specify Predicate Filters at Runtime</span></span>](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [<span data-ttu-id="bfe8d-125">Instrukcje: Wykonywanie zapytania dotyczącego metadanych zestawu przy użyciu odbicia (C#LINQ) ()</span><span class="sxs-lookup"><span data-stu-id="bfe8d-125">How to: Query An Assembly's Metadata with Reflection (LINQ) (C#)</span></span>](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [<span data-ttu-id="bfe8d-126">Instrukcje: Zapytanie o pliki o określonym atrybucie lub nazwie (C#)</span><span class="sxs-lookup"><span data-stu-id="bfe8d-126">How to: Query for Files with a Specified Attribute or Name (C#)</span></span>](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [<span data-ttu-id="bfe8d-127">Instrukcje: Sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ)C#()</span><span class="sxs-lookup"><span data-stu-id="bfe8d-127">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (C#)</span></span>](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

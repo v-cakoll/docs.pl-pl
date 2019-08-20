@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Pobieranie płytkiej wartości elementu (C#)'
+title: 'Instrukcje: Pobieranie skróconej wartości elementu (C#)'
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 570f9837d04352fb291f0b79f85fb9d7f68ff09d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2b37cc19e2ec5149589131497b36ad381900336b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485039"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592514"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a><span data-ttu-id="8a1de-102">Instrukcje: Pobieranie płytkiej wartości elementu (C#)</span><span class="sxs-lookup"><span data-stu-id="8a1de-102">How to: Retrieve the Shallow Value of an Element (C#)</span></span>
-<span data-ttu-id="8a1de-103">W tym temacie przedstawiono sposób pobieranie płytkiej wartości elementu.</span><span class="sxs-lookup"><span data-stu-id="8a1de-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="8a1de-104">Płytkiej wartości jest wartość określonego elementu, w przeciwieństwie do głębokiego wartość, która zawiera wartości wszystkie elementy potomne połączonych w jeden ciąg.</span><span class="sxs-lookup"><span data-stu-id="8a1de-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a><span data-ttu-id="7c7e8-102">Instrukcje: Pobieranie skróconej wartości elementu (C#)</span><span class="sxs-lookup"><span data-stu-id="7c7e8-102">How to: Retrieve the Shallow Value of an Element (C#)</span></span>
+<span data-ttu-id="7c7e8-103">W tym temacie pokazano, jak uzyskać skróconą wartość elementu.</span><span class="sxs-lookup"><span data-stu-id="7c7e8-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="7c7e8-104">Wartość płytki to wartość tylko określonego elementu, a nie wartość Szczegółowa, która obejmuje wartości wszystkich elementów potomnych połączonych w jeden ciąg.</span><span class="sxs-lookup"><span data-stu-id="7c7e8-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  
   
- <span data-ttu-id="8a1de-105">Podczas pobierania wartości elementu przy użyciu obu rzutowania lub <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> właściwości pobrania głębokiego wartości.</span><span class="sxs-lookup"><span data-stu-id="8a1de-105">When you retrieve an element value by using either casting or the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property, you retrieve the deep value.</span></span> <span data-ttu-id="8a1de-106">Aby pobieranie płytkiej wartości, można użyć `ShallowValue` metodę rozszerzenia, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="8a1de-106">To retrieve the shallow value, you can use the `ShallowValue` extension method, as shown in the following example.</span></span> <span data-ttu-id="8a1de-107">Trwa pobieranie płytkiej wartości jest przydatne w przypadku, gdy chcesz wybrać elementy, na podstawie ich zawartości.</span><span class="sxs-lookup"><span data-stu-id="8a1de-107">Retrieving the shallow value is useful when you want to select elements based on their content.</span></span>  
+ <span data-ttu-id="7c7e8-105">Po pobraniu wartości elementu przy użyciu funkcji rzutowania lub <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> właściwości, pobierana jest wartość Szczegółowa.</span><span class="sxs-lookup"><span data-stu-id="7c7e8-105">When you retrieve an element value by using either casting or the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property, you retrieve the deep value.</span></span> <span data-ttu-id="7c7e8-106">Aby pobrać wartość płytki, można użyć `ShallowValue` metody rozszerzenia, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="7c7e8-106">To retrieve the shallow value, you can use the `ShallowValue` extension method, as shown in the following example.</span></span> <span data-ttu-id="7c7e8-107">Pobieranie skróconej wartości jest przydatne, gdy chcesz wybrać elementy na podstawie ich zawartości.</span><span class="sxs-lookup"><span data-stu-id="7c7e8-107">Retrieving the shallow value is useful when you want to select elements based on their content.</span></span>  
   
- <span data-ttu-id="8a1de-108">Poniższy przykład deklaruje metodę rozszerzenia, która pobiera płytkiej wartości elementu.</span><span class="sxs-lookup"><span data-stu-id="8a1de-108">The following example declares an extension method that retrieves the shallow value of an element.</span></span> <span data-ttu-id="8a1de-109">Następnie używa metody rozszerzenia w zapytaniu, aby wyświetlić listę wszystkich elementów, które zawierają obliczoną wartość.</span><span class="sxs-lookup"><span data-stu-id="8a1de-109">It then uses the extension method in a query to list all elements that contain a calculated value.</span></span>  
+ <span data-ttu-id="7c7e8-108">Poniższy przykład deklaruje metodę rozszerzenia, która pobiera płytki wartość elementu.</span><span class="sxs-lookup"><span data-stu-id="7c7e8-108">The following example declares an extension method that retrieves the shallow value of an element.</span></span> <span data-ttu-id="7c7e8-109">Następnie używa metody rozszerzającej w zapytaniu, aby wyświetlić listę wszystkich elementów, które zawierają obliczoną wartość.</span><span class="sxs-lookup"><span data-stu-id="7c7e8-109">It then uses the extension method in a query to list all elements that contain a calculated value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8a1de-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="8a1de-110">Example</span></span>  
- <span data-ttu-id="8a1de-111">W następującym pliku tekstowym Report.xml, jest źródłem w tym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="8a1de-111">The following text file, Report.xml, is the source for this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="7c7e8-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="7c7e8-110">Example</span></span>  
+ <span data-ttu-id="7c7e8-111">Następujący plik tekstowy, Report. XML, jest źródłem dla tego przykładu.</span><span class="sxs-lookup"><span data-stu-id="7c7e8-111">The following text file, Report.xml, is the source for this example.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -70,7 +70,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="8a1de-112">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="8a1de-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="7c7e8-112">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="7c7e8-112">This example produces the following output:</span></span>  
   
 ```  
 Column  Name="CustomerId"   =Customer.CustomerId.Heading  
@@ -79,6 +79,6 @@ Column  Name="CustomerId"   =Customer.CustomerId
 Column  Name="Name"         =Customer.Name  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8a1de-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8a1de-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7c7e8-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7c7e8-113">See also</span></span>
 
-- [<span data-ttu-id="8a1de-114">LINQ do XML osi (C#)</span><span class="sxs-lookup"><span data-stu-id="8a1de-114">LINQ to XML Axes (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)
+- [<span data-ttu-id="7c7e8-114">Osie LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="7c7e8-114">LINQ to XML Axes (C#)</span></span>](./linq-to-xml-axes-overview.md)

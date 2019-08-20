@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Tworzenie hierarchii przy użyciu grupowania (C#)'
+title: 'Instrukcje: Utwórz hierarchię przy użyciuC#grupowania ()'
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: 685c8ad1360ba2959dc81632ae084b935bd37c47
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 7d9a58e5b36d6096c156f458c8ba700e04fd8eca
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485844"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593851"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="21da9-102">Instrukcje: Tworzenie hierarchii przy użyciu grupowania (C#)</span><span class="sxs-lookup"><span data-stu-id="21da9-102">How to: Create Hierarchy Using Grouping (C#)</span></span>
-<span data-ttu-id="21da9-103">W tym przykładzie przedstawiono sposób grupowania danych, a następnie wygeneruj XML, w oparciu o grupowania.</span><span class="sxs-lookup"><span data-stu-id="21da9-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
+# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="249cd-102">Instrukcje: Utwórz hierarchię przy użyciuC#grupowania ()</span><span class="sxs-lookup"><span data-stu-id="249cd-102">How to: Create Hierarchy Using Grouping (C#)</span></span>
+<span data-ttu-id="249cd-103">Ten przykład pokazuje, jak grupować dane, a następnie generować XML na podstawie grupowania.</span><span class="sxs-lookup"><span data-stu-id="249cd-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="21da9-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="21da9-104">Example</span></span>  
- <span data-ttu-id="21da9-105">Pierwszy to przykład grupuje dane według kategorii, następnie generuje nowy plik XML, w którym hierarchię XML odzwierciedla grupowania.</span><span class="sxs-lookup"><span data-stu-id="21da9-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
+## <a name="example"></a><span data-ttu-id="249cd-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="249cd-104">Example</span></span>  
+ <span data-ttu-id="249cd-105">Ten przykład najpierw grupuje dane według kategorii, a następnie generuje nowy plik XML, w którym hierarchia XML odzwierciedla grupowanie.</span><span class="sxs-lookup"><span data-stu-id="249cd-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
   
- <span data-ttu-id="21da9-106">W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="21da9-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="249cd-106">W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="249cd-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -35,7 +35,7 @@ var newData =
 Console.WriteLine(newData);  
 ```  
   
- <span data-ttu-id="21da9-107">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="21da9-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="249cd-107">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="249cd-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  

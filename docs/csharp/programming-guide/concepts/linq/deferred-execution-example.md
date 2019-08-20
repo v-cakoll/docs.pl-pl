@@ -2,18 +2,18 @@
 title: Przykład wykonania odroczonego (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: c9ac87cf2b2af4114e5a20c211b4a6b3f7fced6b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a934645d0d7ad807e1524031ca3f023f7b11c5b4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486108"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594546"
 ---
-# <a name="deferred-execution-example-c"></a><span data-ttu-id="308d5-102">Przykład wykonania odroczonego (C#)</span><span class="sxs-lookup"><span data-stu-id="308d5-102">Deferred Execution Example (C#)</span></span>
-<span data-ttu-id="308d5-103">W tym temacie przedstawiono sposób odroczonego wykonania i obliczanie z opóźnieniem wpływa na wykonywanie Twojego zapytaniach składnika LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="308d5-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
+# <a name="deferred-execution-example-c"></a><span data-ttu-id="17076-102">Przykład wykonania odroczonego (C#)</span><span class="sxs-lookup"><span data-stu-id="17076-102">Deferred Execution Example (C#)</span></span>
+<span data-ttu-id="17076-103">W tym temacie pokazano, w jaki sposób odroczone wykonywanie i Ocena z opóźnieniem wpływają na wykonywanie zapytań LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="17076-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="308d5-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="308d5-104">Example</span></span>  
- <span data-ttu-id="308d5-105">Poniższy przykład pokazuje kolejność wykonywania, korzystając z metody rozszerzenia, która używa odroczonego wykonania.</span><span class="sxs-lookup"><span data-stu-id="308d5-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="308d5-106">Przykład deklaruje tablicę trzy ciągi.</span><span class="sxs-lookup"><span data-stu-id="308d5-106">The example declares an array of three strings.</span></span> <span data-ttu-id="308d5-107">Następnie wykonuje iterację przez zbiorze zwróconym przez `ConvertCollectionToUpperCase`.</span><span class="sxs-lookup"><span data-stu-id="308d5-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
+## <a name="example"></a><span data-ttu-id="17076-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="17076-104">Example</span></span>  
+ <span data-ttu-id="17076-105">Poniższy przykład pokazuje kolejność wykonywania przy użyciu metody rozszerzenia, która korzysta z odroczonego wykonania.</span><span class="sxs-lookup"><span data-stu-id="17076-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="17076-106">Przykład deklaruje tablicę trzech ciągów.</span><span class="sxs-lookup"><span data-stu-id="17076-106">The example declares an array of three strings.</span></span> <span data-ttu-id="17076-107">Następnie wykonuje iterację w kolekcji zwróconej przez `ConvertCollectionToUpperCase`.</span><span class="sxs-lookup"><span data-stu-id="17076-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -44,7 +44,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="308d5-108">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="308d5-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="17076-108">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="17076-108">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source abc  
@@ -55,14 +55,14 @@ ToUpper: source ghi
 Main: str GHI  
 ```  
   
- <span data-ttu-id="308d5-109">Należy zauważyć, że podczas iteracji w kolekcji zwróconej przez `ConvertCollectionToUpperCase`, każdy element jest pobierana z tablicy ciągów źródłowych i przekonwertowane na wielkie litery przed następnego elementu jest pobierana z tablicy ciągów źródła.</span><span class="sxs-lookup"><span data-stu-id="308d5-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
+ <span data-ttu-id="17076-109">Należy zauważyć, że podczas iteracji kolekcji zwróconej `ConvertCollectionToUpperCase`przez, każdy element jest pobierany z tablicy ciągów źródłowych i konwertowany na wielkie przed pobraniem następnego elementu z tablicy ciągów źródłowych.</span><span class="sxs-lookup"><span data-stu-id="17076-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
   
- <span data-ttu-id="308d5-110">Widać, że całej tablicy ciągów nie jest konwertowana na wielkie litery, przetworzenia każdego elementu w kolekcji zwrócone `foreach` pętli w `Main`.</span><span class="sxs-lookup"><span data-stu-id="308d5-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
+ <span data-ttu-id="17076-110">Można zobaczyć, że cała tablica ciągów nie jest konwertowana na wielkie przed każdym elementem w zwróconej kolekcji w `foreach` pętli w. `Main`</span><span class="sxs-lookup"><span data-stu-id="17076-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
   
- <span data-ttu-id="308d5-111">Następny temat w tym samouczku przedstawiono łańcucha zapytań razem:</span><span class="sxs-lookup"><span data-stu-id="308d5-111">The next topic in this tutorial illustrates chaining queries together:</span></span>  
+ <span data-ttu-id="17076-111">W następnym temacie w tym samouczku przedstawiono Łączenie łańcuchowe zapytań:</span><span class="sxs-lookup"><span data-stu-id="17076-111">The next topic in this tutorial illustrates chaining queries together:</span></span>  
   
-- [<span data-ttu-id="308d5-112">Przykład łączenia łańcuchowego zapytań (C#)</span><span class="sxs-lookup"><span data-stu-id="308d5-112">Chaining Queries Example (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
+- [<span data-ttu-id="17076-112">Przykład łańcucha kwerend (C#)</span><span class="sxs-lookup"><span data-stu-id="17076-112">Chaining Queries Example (C#)</span></span>](./chaining-queries-example.md)  
   
-## <a name="see-also"></a><span data-ttu-id="308d5-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="308d5-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17076-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="17076-113">See also</span></span>
 
-- [<span data-ttu-id="308d5-114">Samouczek: Łączenie łańcuchowe zapytań (C#)</span><span class="sxs-lookup"><span data-stu-id="308d5-114">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [<span data-ttu-id="17076-114">Samouczek: Łączenie łańcuchowe zapytań (C#)</span><span class="sxs-lookup"><span data-stu-id="17076-114">Tutorial: Chaining Queries Together (C#)</span></span>](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

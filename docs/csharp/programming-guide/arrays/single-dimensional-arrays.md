@@ -1,66 +1,66 @@
 ---
-title: Tablice jednowymiarowe - C# przewodnik programowania
+title: Tablice jednowymiarowe — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: d221cb9071a2c58f9d7068d5a43dd3a750ba716b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 17c384ec327d4a80ed614dce6254baa5bfb2e960
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398558"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597313"
 ---
-# <a name="single-dimensional-arrays-c-programming-guide"></a><span data-ttu-id="b6e92-102">Tablice jednowymiarowe (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="b6e92-102">Single-Dimensional Arrays (C# Programming Guide)</span></span>
+# <a name="single-dimensional-arrays-c-programming-guide"></a><span data-ttu-id="21db0-102">Tablice jednowymiarowe (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="21db0-102">Single-Dimensional Arrays (C# Programming Guide)</span></span>
 
-<span data-ttu-id="b6e92-103">Można zadeklarować tablicy jednowymiarowej pięciu liczb całkowitych, jak pokazano w poniższym przykładzie:</span><span class="sxs-lookup"><span data-stu-id="b6e92-103">You can declare a single-dimensional array of five integers as shown in the following example:</span></span>  
+<span data-ttu-id="21db0-103">Można zadeklarować jednowymiarową tablicę składającą się z pięciu liczb całkowitych, jak pokazano w następującym przykładzie:</span><span class="sxs-lookup"><span data-stu-id="21db0-103">You can declare a single-dimensional array of five integers as shown in the following example:</span></span>  
   
  [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
   
- <span data-ttu-id="b6e92-104">Ta tablica zawiera elementy z `array[0]` do `array[4]`.</span><span class="sxs-lookup"><span data-stu-id="b6e92-104">This array contains the elements from `array[0]` to `array[4]`.</span></span> <span data-ttu-id="b6e92-105">[Nowe](../../../csharp/language-reference/operators/new-operator.md) operator jest używany do utworzenia tablicy i Inicjowanie elementów tablicy, do wartości domyślnych.</span><span class="sxs-lookup"><span data-stu-id="b6e92-105">The [new](../../../csharp/language-reference/operators/new-operator.md) operator is used to create the array and initialize the array elements to their default values.</span></span> <span data-ttu-id="b6e92-106">W tym przykładzie wszystkie elementy tablicy są inicjowane od zera.</span><span class="sxs-lookup"><span data-stu-id="b6e92-106">In this example, all the array elements are initialized to zero.</span></span>  
+ <span data-ttu-id="21db0-104">Ta tablica zawiera elementy z `array[0]` elementu do. `array[4]`</span><span class="sxs-lookup"><span data-stu-id="21db0-104">This array contains the elements from `array[0]` to `array[4]`.</span></span> <span data-ttu-id="21db0-105">Operator [New](../../language-reference/operators/new-operator.md) jest używany do tworzenia tablicy i inicjowania elementów tablicy do ich wartości domyślnych.</span><span class="sxs-lookup"><span data-stu-id="21db0-105">The [new](../../language-reference/operators/new-operator.md) operator is used to create the array and initialize the array elements to their default values.</span></span> <span data-ttu-id="21db0-106">W tym przykładzie wszystkie elementy tablicy są inicjowane do zera.</span><span class="sxs-lookup"><span data-stu-id="21db0-106">In this example, all the array elements are initialized to zero.</span></span>  
   
- <span data-ttu-id="b6e92-107">Tablica, która przechowuje elementami typu ciąg może być zadeklarowana w taki sam sposób.</span><span class="sxs-lookup"><span data-stu-id="b6e92-107">An array that stores string elements can be declared in the same way.</span></span> <span data-ttu-id="b6e92-108">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="b6e92-108">For example:</span></span>  
+ <span data-ttu-id="21db0-107">Tablica, która przechowuje elementy ciągu, może być zadeklarowana w ten sam sposób.</span><span class="sxs-lookup"><span data-stu-id="21db0-107">An array that stores string elements can be declared in the same way.</span></span> <span data-ttu-id="21db0-108">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="21db0-108">For example:</span></span>  
   
  [!code-csharp[csProgGuideArrays#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#5)]  
   
-## <a name="array-initialization"></a><span data-ttu-id="b6e92-109">Inicjowanie tablicy</span><span class="sxs-lookup"><span data-stu-id="b6e92-109">Array Initialization</span></span>
+## <a name="array-initialization"></a><span data-ttu-id="21db0-109">Inicjowanie tablicy</span><span class="sxs-lookup"><span data-stu-id="21db0-109">Array Initialization</span></span>
 
- <span data-ttu-id="b6e92-110">Istnieje możliwość zainicjowania tablicy po zgłoszeniu, w którym to przypadku specyfikator długości nie jest potrzebna, ponieważ jest już podana przez liczbę elementów listy inicjowania.</span><span class="sxs-lookup"><span data-stu-id="b6e92-110">It is possible to initialize an array upon declaration, in which case, the length specifier is not needed because it is already supplied by the number of elements in the initialization list.</span></span> <span data-ttu-id="b6e92-111">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="b6e92-111">For example:</span></span>  
+ <span data-ttu-id="21db0-110">Możliwe jest zainicjowanie tablicy przy użyciu deklaracji, w takim przypadku specyfikator długości nie jest wymagany, ponieważ jest już dostarczany przez liczbę elementów na liście inicjalizacji.</span><span class="sxs-lookup"><span data-stu-id="21db0-110">It is possible to initialize an array upon declaration, in which case, the length specifier is not needed because it is already supplied by the number of elements in the initialization list.</span></span> <span data-ttu-id="21db0-111">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="21db0-111">For example:</span></span>  
   
  [!code-csharp[csProgGuideArrays#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#6)]  
   
- <span data-ttu-id="b6e92-112">Tablica ciągów mogą być inicjowane w taki sam sposób.</span><span class="sxs-lookup"><span data-stu-id="b6e92-112">A string array can be initialized in the same way.</span></span> <span data-ttu-id="b6e92-113">Poniżej przedstawiono deklaracją tablicy ciągów gdzie każdy element tablicy jest inicjowany przez nazwę dnia:</span><span class="sxs-lookup"><span data-stu-id="b6e92-113">The following is a declaration of a string array where each array element is initialized by a name of a day:</span></span>  
+ <span data-ttu-id="21db0-112">Tablicę ciągów można zainicjować w taki sam sposób.</span><span class="sxs-lookup"><span data-stu-id="21db0-112">A string array can be initialized in the same way.</span></span> <span data-ttu-id="21db0-113">Poniżej znajduje się deklaracja tablicy ciągów, w której każdy element tablicy jest inicjowany przez nazwę dnia:</span><span class="sxs-lookup"><span data-stu-id="21db0-113">The following is a declaration of a string array where each array element is initialized by a name of a day:</span></span>  
  
  ```csharp
  string[] weekDays = new string[] { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
  ```
   
- <span data-ttu-id="b6e92-114">Podczas inicjowania tablicy po deklaracji, można użyć następujących skrótów klawiaturowych:</span><span class="sxs-lookup"><span data-stu-id="b6e92-114">When you initialize an array upon declaration, you can use the following shortcuts:</span></span>  
+ <span data-ttu-id="21db0-114">Po zainicjowaniu tablicy po zgłoszeniu można użyć następujących skrótów:</span><span class="sxs-lookup"><span data-stu-id="21db0-114">When you initialize an array upon declaration, you can use the following shortcuts:</span></span>  
   
  [!code-csharp[csProgGuideArrays#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#8)]  
   
- <span data-ttu-id="b6e92-115">Można zadeklarować zmiennej tablicy bez inicjowania, ale muszą używać `new` operator podczas przypisywania tablicy do tej zmiennej.</span><span class="sxs-lookup"><span data-stu-id="b6e92-115">It is possible to declare an array variable without initialization, but you must use the `new` operator when you assign an array to this variable.</span></span> <span data-ttu-id="b6e92-116">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="b6e92-116">For example:</span></span>  
+ <span data-ttu-id="21db0-115">Istnieje możliwość zadeklarować zmienną tablicową bez inicjalizacji, ale należy użyć `new` operatora, gdy przypiszesz tablicę do tej zmiennej.</span><span class="sxs-lookup"><span data-stu-id="21db0-115">It is possible to declare an array variable without initialization, but you must use the `new` operator when you assign an array to this variable.</span></span> <span data-ttu-id="21db0-116">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="21db0-116">For example:</span></span>  
   
  [!code-csharp[csProgGuideArrays#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#9)]  
   
- <span data-ttu-id="b6e92-117">C# 3.0 wprowadzono niejawnie wpisane tablice.</span><span class="sxs-lookup"><span data-stu-id="b6e92-117">C# 3.0 introduces implicitly typed arrays.</span></span> <span data-ttu-id="b6e92-118">Aby uzyskać więcej informacji, zobacz [niejawnie wpisane tablice](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).</span><span class="sxs-lookup"><span data-stu-id="b6e92-118">For more information, see [Implicitly Typed Arrays](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).</span></span>  
+ <span data-ttu-id="21db0-117">C#3,0 wprowadza niejawnie wpisane tablice.</span><span class="sxs-lookup"><span data-stu-id="21db0-117">C# 3.0 introduces implicitly typed arrays.</span></span> <span data-ttu-id="21db0-118">Aby uzyskać więcej informacji, zobacz [niejawnie wpisane tablice](./implicitly-typed-arrays.md).</span><span class="sxs-lookup"><span data-stu-id="21db0-118">For more information, see [Implicitly Typed Arrays](./implicitly-typed-arrays.md).</span></span>  
   
-## <a name="value-type-and-reference-type-arrays"></a><span data-ttu-id="b6e92-119">Typ wartości i tablicami typu odwołania</span><span class="sxs-lookup"><span data-stu-id="b6e92-119">Value Type and Reference Type Arrays</span></span>
+## <a name="value-type-and-reference-type-arrays"></a><span data-ttu-id="21db0-119">Typ wartości i tablice typów referencyjnych</span><span class="sxs-lookup"><span data-stu-id="21db0-119">Value Type and Reference Type Arrays</span></span>
 
- <span data-ttu-id="b6e92-120">Rozważmy następującą deklarację tablicy:</span><span class="sxs-lookup"><span data-stu-id="b6e92-120">Consider the following array declaration:</span></span>  
+ <span data-ttu-id="21db0-120">Rozważmy następującą deklarację tablicy:</span><span class="sxs-lookup"><span data-stu-id="21db0-120">Consider the following array declaration:</span></span>  
   
  [!code-csharp[csProgGuideArrays#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#10)]  
   
- <span data-ttu-id="b6e92-121">Wynikiem tej instrukcji jest zależna od tego, czy `SomeType` jest typem wartości lub typem referencyjnym.</span><span class="sxs-lookup"><span data-stu-id="b6e92-121">The result of this statement depends on whether `SomeType` is a value type or a reference type.</span></span> <span data-ttu-id="b6e92-122">Jeśli jest to typ wartości, instrukcja tworzy tablicę 10 elementów, z których każdy ma typ `SomeType`.</span><span class="sxs-lookup"><span data-stu-id="b6e92-122">If it is a value type, the statement creates an array of 10 elements, each of which has the type `SomeType`.</span></span> <span data-ttu-id="b6e92-123">Jeśli `SomeType` jest typem referencyjnym instrukcja tworzy tablicę o 10 elementów, z których każdy jest zainicjowany na odwołanie o wartości null.</span><span class="sxs-lookup"><span data-stu-id="b6e92-123">If `SomeType` is a reference type, the statement creates an array of 10 elements, each of which is initialized to a null reference.</span></span>  
+ <span data-ttu-id="21db0-121">Wynik tej instrukcji zależy od tego, czy `SomeType` jest typem wartości czy typem referencyjnym.</span><span class="sxs-lookup"><span data-stu-id="21db0-121">The result of this statement depends on whether `SomeType` is a value type or a reference type.</span></span> <span data-ttu-id="21db0-122">Jeśli jest to typ wartości, instrukcja tworzy tablicę zawierającą 10 elementów, z których każdy ma typ `SomeType`.</span><span class="sxs-lookup"><span data-stu-id="21db0-122">If it is a value type, the statement creates an array of 10 elements, each of which has the type `SomeType`.</span></span> <span data-ttu-id="21db0-123">Jeśli `SomeType` jest typem referencyjnym, instrukcja tworzy tablicę zawierającą 10 elementów, z których każdy jest zainicjowany do odwołania o wartości null.</span><span class="sxs-lookup"><span data-stu-id="21db0-123">If `SomeType` is a reference type, the statement creates an array of 10 elements, each of which is initialized to a null reference.</span></span>  
   
- <span data-ttu-id="b6e92-124">Aby uzyskać więcej informacji dotyczących typów wartości i typami odwołania, zobacz [typy](../../../csharp/language-reference/keywords/types.md).</span><span class="sxs-lookup"><span data-stu-id="b6e92-124">For more information about value types and reference types, see [Types](../../../csharp/language-reference/keywords/types.md).</span></span>  
+ <span data-ttu-id="21db0-124">Aby uzyskać więcej informacji na temat typów wartości i typów referencyjnych, zobacz [Types](../../language-reference/keywords/types.md).</span><span class="sxs-lookup"><span data-stu-id="21db0-124">For more information about value types and reference types, see [Types](../../language-reference/keywords/types.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6e92-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b6e92-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21db0-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="21db0-125">See also</span></span>
 
 - <xref:System.Array>
-- [<span data-ttu-id="b6e92-126">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="b6e92-126">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="b6e92-127">Tablice</span><span class="sxs-lookup"><span data-stu-id="b6e92-127">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)
-- [<span data-ttu-id="b6e92-128">Tablice wielowymiarowe</span><span class="sxs-lookup"><span data-stu-id="b6e92-128">Multidimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
-- [<span data-ttu-id="b6e92-129">Tablice nieregularne</span><span class="sxs-lookup"><span data-stu-id="b6e92-129">Jagged Arrays</span></span>](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+- [<span data-ttu-id="21db0-126">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="21db0-126">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="21db0-127">Tablice</span><span class="sxs-lookup"><span data-stu-id="21db0-127">Arrays</span></span>](./index.md)
+- [<span data-ttu-id="21db0-128">Tablice wielowymiarowe</span><span class="sxs-lookup"><span data-stu-id="21db0-128">Multidimensional Arrays</span></span>](./multidimensional-arrays.md)
+- [<span data-ttu-id="21db0-129">Tablice nieregularne</span><span class="sxs-lookup"><span data-stu-id="21db0-129">Jagged Arrays</span></span>](./jagged-arrays.md)

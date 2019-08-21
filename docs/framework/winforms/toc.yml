@@ -35,8 +35,6 @@
           items:
             - name: 'Instrukcje: Reagowanie na zmiany schematu czcionek w aplikacji Windows Forms'
               href: how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md
-            - name: Wyłączanie świadomości DPI w programie Visual Studio
-              href: disable-dpi-awareness-visual-studio.md
         - name: Obsługa wysokiej rozdzielczości w formularzach Windows Forms
           href: high-dpi-support-in-windows-forms.md
     - name: Zmienianie wyglądu formularzy systemu Windows

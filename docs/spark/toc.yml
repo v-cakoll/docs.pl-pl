@@ -15,6 +15,10 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Wdrażanie w usłudze Databricks
       href: tutorials/databricks-deployment.md
+- name: Przewodniki z instrukcjami
+  items:
+    - name: Debugowanie aplikacji
+      href: how-to-guides/debug.md
 - name: Tematy pomocy
   items:
     - name: Odwołanie do biblioteki API

@@ -9,23 +9,23 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: d5766b76f18dce441cb260887a753dcf64642a6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 815e1c26a328d986f91992a1e67e438a563ffea6
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674236"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663888"
 ---
-# <a name="assemblyidentity-element-for-runtime"></a><span data-ttu-id="6e63f-102">\<assemblyIdentity >, Element dla \<runtime ></span><span class="sxs-lookup"><span data-stu-id="6e63f-102">\<assemblyIdentity> Element for \<runtime></span></span>
-<span data-ttu-id="6e63f-103">Zawiera informacje identyfikujące zestaw.</span><span class="sxs-lookup"><span data-stu-id="6e63f-103">Contains identifying information about the assembly.</span></span>  
+# <a name="assemblyidentity-element-for-runtime"></a><span data-ttu-id="7d566-102">\<assemblyIdentity element > dla \<> środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="7d566-102">\<assemblyIdentity> Element for \<runtime></span></span>
+<span data-ttu-id="7d566-103">Zawiera informacje identyfikacyjne zestawu.</span><span class="sxs-lookup"><span data-stu-id="7d566-103">Contains identifying information about the assembly.</span></span>  
   
- <span data-ttu-id="6e63f-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="6e63f-104">\<configuration></span></span>  
-<span data-ttu-id="6e63f-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="6e63f-105">\<runtime></span></span>  
-<span data-ttu-id="6e63f-106">\<assemblybinding — ></span><span class="sxs-lookup"><span data-stu-id="6e63f-106">\<assemblyBinding></span></span>  
-<span data-ttu-id="6e63f-107">\<dependentAssembly></span><span class="sxs-lookup"><span data-stu-id="6e63f-107">\<dependentAssembly></span></span>  
-<span data-ttu-id="6e63f-108">\<assemblyIdentity></span><span class="sxs-lookup"><span data-stu-id="6e63f-108">\<assemblyIdentity></span></span>  
+ <span data-ttu-id="7d566-104">\<> konfiguracji</span><span class="sxs-lookup"><span data-stu-id="7d566-104">\<configuration></span></span>  
+<span data-ttu-id="7d566-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="7d566-105">\<runtime></span></span>  
+<span data-ttu-id="7d566-106">\<> zestawubinding</span><span class="sxs-lookup"><span data-stu-id="7d566-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="7d566-107">\<> dependentAssembly</span><span class="sxs-lookup"><span data-stu-id="7d566-107">\<dependentAssembly></span></span>  
+<span data-ttu-id="7d566-108">\<assemblyIdentity></span><span class="sxs-lookup"><span data-stu-id="7d566-108">\<assemblyIdentity></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6e63f-109">Składnia</span><span class="sxs-lookup"><span data-stu-id="6e63f-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7d566-109">Składnia</span><span class="sxs-lookup"><span data-stu-id="7d566-109">Syntax</span></span>  
   
 ```xml  
    <assemblyIdentity    
@@ -34,45 +34,45 @@ publicKeyToken="public key token"
 culture="assembly culture"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6e63f-110">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="6e63f-110">Attributes and Elements</span></span>  
- <span data-ttu-id="6e63f-111">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="6e63f-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7d566-110">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="7d566-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="7d566-111">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="7d566-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6e63f-112">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="6e63f-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7d566-112">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="7d566-112">Attributes</span></span>  
   
-|<span data-ttu-id="6e63f-113">Atrybut</span><span class="sxs-lookup"><span data-stu-id="6e63f-113">Attribute</span></span>|<span data-ttu-id="6e63f-114">Opis</span><span class="sxs-lookup"><span data-stu-id="6e63f-114">Description</span></span>|  
+|<span data-ttu-id="7d566-113">Atrybut</span><span class="sxs-lookup"><span data-stu-id="7d566-113">Attribute</span></span>|<span data-ttu-id="7d566-114">Opis</span><span class="sxs-lookup"><span data-stu-id="7d566-114">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|<span data-ttu-id="6e63f-115">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="6e63f-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="6e63f-116">Nazwa zestawu</span><span class="sxs-lookup"><span data-stu-id="6e63f-116">The name of the assembly</span></span>|  
-|`culture`|<span data-ttu-id="6e63f-117">Atrybut opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="6e63f-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="6e63f-118">Ciąg, który określa język i kraj/region, zestawu.</span><span class="sxs-lookup"><span data-stu-id="6e63f-118">A string that specifies the language and country/region of the assembly.</span></span>|  
-|`publicKeyToken`|<span data-ttu-id="6e63f-119">Atrybut opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="6e63f-119">Optional attribute.</span></span><br /><br /> <span data-ttu-id="6e63f-120">Wartość szesnastkowa, która określa silną nazwę zestawu.</span><span class="sxs-lookup"><span data-stu-id="6e63f-120">A hexadecimal value that specifies the strong name of the assembly.</span></span>|  
-|`processorArchitecture`|<span data-ttu-id="6e63f-121">Atrybut opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="6e63f-121">Optional attribute.</span></span><br /><br /> <span data-ttu-id="6e63f-122">Jedna z wartości "x86", "amd64", "msil" lub "ia64", określając architekturę procesora dla zestawu, który zawiera kod specyficzny dla procesora.</span><span class="sxs-lookup"><span data-stu-id="6e63f-122">One of the values "x86", "amd64", "msil", or "ia64", specifying the processor architecture for an assembly that contains processor-specific code.</span></span> <span data-ttu-id="6e63f-123">Wartości nie jest rozróżniana wielkość liter.</span><span class="sxs-lookup"><span data-stu-id="6e63f-123">The values are not case-sensitive.</span></span> <span data-ttu-id="6e63f-124">Jeśli ten atrybut zostanie przypisany jakąkolwiek inną wartość, całą `<assemblyIdentity>` element jest ignorowany.</span><span class="sxs-lookup"><span data-stu-id="6e63f-124">If the attribute is assigned any other value, the entire `<assemblyIdentity>` element is ignored.</span></span> <span data-ttu-id="6e63f-125">Zobacz <xref:System.Reflection.ProcessorArchitecture>.</span><span class="sxs-lookup"><span data-stu-id="6e63f-125">See <xref:System.Reflection.ProcessorArchitecture>.</span></span>|  
+|`name`|<span data-ttu-id="7d566-115">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="7d566-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="7d566-116">Nazwa zestawu</span><span class="sxs-lookup"><span data-stu-id="7d566-116">The name of the assembly</span></span>|  
+|`culture`|<span data-ttu-id="7d566-117">Atrybut opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="7d566-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="7d566-118">Ciąg określający język i kraj/region zestawu.</span><span class="sxs-lookup"><span data-stu-id="7d566-118">A string that specifies the language and country/region of the assembly.</span></span>|  
+|`publicKeyToken`|<span data-ttu-id="7d566-119">Atrybut opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="7d566-119">Optional attribute.</span></span><br /><br /> <span data-ttu-id="7d566-120">Wartość szesnastkowa, która określa silną nazwę zestawu.</span><span class="sxs-lookup"><span data-stu-id="7d566-120">A hexadecimal value that specifies the strong name of the assembly.</span></span>|  
+|`processorArchitecture`|<span data-ttu-id="7d566-121">Atrybut opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="7d566-121">Optional attribute.</span></span><br /><br /> <span data-ttu-id="7d566-122">Jedna z wartości "x86", "amd64", "MSIL" lub "ia64", określająca architekturę procesora dla zestawu, który zawiera kod specyficzny dla procesora.</span><span class="sxs-lookup"><span data-stu-id="7d566-122">One of the values "x86", "amd64", "msil", or "ia64", specifying the processor architecture for an assembly that contains processor-specific code.</span></span> <span data-ttu-id="7d566-123">W wartościach nie jest rozróżniana wielkość liter.</span><span class="sxs-lookup"><span data-stu-id="7d566-123">The values are not case-sensitive.</span></span> <span data-ttu-id="7d566-124">Jeśli atrybut jest przypisany dowolną inną wartość, cały `<assemblyIdentity>` element jest ignorowany.</span><span class="sxs-lookup"><span data-stu-id="7d566-124">If the attribute is assigned any other value, the entire `<assemblyIdentity>` element is ignored.</span></span> <span data-ttu-id="7d566-125">Zobacz <xref:System.Reflection.ProcessorArchitecture>.</span><span class="sxs-lookup"><span data-stu-id="7d566-125">See <xref:System.Reflection.ProcessorArchitecture>.</span></span>|  
   
-## <a name="processorarchitecture-attribute"></a><span data-ttu-id="6e63f-126">Atrybutu processorArchitecture</span><span class="sxs-lookup"><span data-stu-id="6e63f-126">processorArchitecture Attribute</span></span>  
+## <a name="processorarchitecture-attribute"></a><span data-ttu-id="7d566-126">processorArchitecture — atrybut</span><span class="sxs-lookup"><span data-stu-id="7d566-126">processorArchitecture Attribute</span></span>  
   
-|<span data-ttu-id="6e63f-127">Wartość</span><span class="sxs-lookup"><span data-stu-id="6e63f-127">Value</span></span>|<span data-ttu-id="6e63f-128">Opis</span><span class="sxs-lookup"><span data-stu-id="6e63f-128">Description</span></span>|  
+|<span data-ttu-id="7d566-127">Wartość</span><span class="sxs-lookup"><span data-stu-id="7d566-127">Value</span></span>|<span data-ttu-id="7d566-128">Opis</span><span class="sxs-lookup"><span data-stu-id="7d566-128">Description</span></span>|  
 |-----------|-----------------|  
-|`amd64`|<span data-ttu-id="6e63f-129">AMD tylko architektura x86-64.</span><span class="sxs-lookup"><span data-stu-id="6e63f-129">AMD x86-64 architecture only.</span></span>|  
-|`ia64`|<span data-ttu-id="6e63f-130">Tylko architekturę Intel Itanium.</span><span class="sxs-lookup"><span data-stu-id="6e63f-130">Intel Itanium architecture only.</span></span>|  
-|`msil`|<span data-ttu-id="6e63f-131">Neutralne pod kątem procesor i bity na słowo.</span><span class="sxs-lookup"><span data-stu-id="6e63f-131">Neutral with respect to processor and bits-per-word.</span></span>|  
-|`x86`|<span data-ttu-id="6e63f-132">X86 32-bitowy procesor, albo natywne lub Windows w środowisku Windows (WOW) na platformie 64-bitowej.</span><span class="sxs-lookup"><span data-stu-id="6e63f-132">A 32-bit x86 processor, either native or in the Windows on Windows (WOW) environment on a 64-bit platform.</span></span>|  
+|`amd64`|<span data-ttu-id="7d566-129">Tylko architektura AMD x86-64.</span><span class="sxs-lookup"><span data-stu-id="7d566-129">AMD x86-64 architecture only.</span></span>|  
+|`ia64`|<span data-ttu-id="7d566-130">Tylko architektura procesorów Intel Itanium.</span><span class="sxs-lookup"><span data-stu-id="7d566-130">Intel Itanium architecture only.</span></span>|  
+|`msil`|<span data-ttu-id="7d566-131">Neutralna w odniesieniu do procesora i bitów na słowo.</span><span class="sxs-lookup"><span data-stu-id="7d566-131">Neutral with respect to processor and bits-per-word.</span></span>|  
+|`x86`|<span data-ttu-id="7d566-132">32-bitowy procesor x86 — natywny lub w środowisku Windows on Windows (WOW) na platformie 64-bitowej.</span><span class="sxs-lookup"><span data-stu-id="7d566-132">A 32-bit x86 processor, either native or in the Windows on Windows (WOW) environment on a 64-bit platform.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="6e63f-133">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="6e63f-133">Child Elements</span></span>  
- <span data-ttu-id="6e63f-134">Brak.</span><span class="sxs-lookup"><span data-stu-id="6e63f-134">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7d566-133">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="7d566-133">Child Elements</span></span>  
+ <span data-ttu-id="7d566-134">Brak.</span><span class="sxs-lookup"><span data-stu-id="7d566-134">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="6e63f-135">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="6e63f-135">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7d566-135">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="7d566-135">Parent Elements</span></span>  
   
-|<span data-ttu-id="6e63f-136">Element</span><span class="sxs-lookup"><span data-stu-id="6e63f-136">Element</span></span>|<span data-ttu-id="6e63f-137">Opis</span><span class="sxs-lookup"><span data-stu-id="6e63f-137">Description</span></span>|  
+|<span data-ttu-id="7d566-136">Element</span><span class="sxs-lookup"><span data-stu-id="7d566-136">Element</span></span>|<span data-ttu-id="7d566-137">Opis</span><span class="sxs-lookup"><span data-stu-id="7d566-137">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyBinding`|<span data-ttu-id="6e63f-138">Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.</span><span class="sxs-lookup"><span data-stu-id="6e63f-138">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
-|`configuration`|<span data-ttu-id="6e63f-139">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="6e63f-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`dependentAssembly`|<span data-ttu-id="6e63f-140">Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu.</span><span class="sxs-lookup"><span data-stu-id="6e63f-140">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="6e63f-141">Użyj jednej `<dependentAssembly>` elementu dla każdego zestawu.</span><span class="sxs-lookup"><span data-stu-id="6e63f-141">Use one `<dependentAssembly>` element for each assembly.</span></span>|  
-|`runtime`|<span data-ttu-id="6e63f-142">Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="6e63f-142">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="7d566-138">Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.</span><span class="sxs-lookup"><span data-stu-id="7d566-138">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="7d566-139">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7d566-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`dependentAssembly`|<span data-ttu-id="7d566-140">Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu.</span><span class="sxs-lookup"><span data-stu-id="7d566-140">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="7d566-141">Użyj jednego `<dependentAssembly>` elementu dla każdego zestawu.</span><span class="sxs-lookup"><span data-stu-id="7d566-141">Use one `<dependentAssembly>` element for each assembly.</span></span>|  
+|`runtime`|<span data-ttu-id="7d566-142">Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="7d566-142">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6e63f-143">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6e63f-143">Remarks</span></span>  
- <span data-ttu-id="6e63f-144">Każdy  **\<dependentAssembly >** elementu musi mieć jeden  **\<assemblyIdentity >** elementu podrzędnego.</span><span class="sxs-lookup"><span data-stu-id="6e63f-144">Every **\<dependentAssembly>** element must have one **\<assemblyIdentity>** child element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7d566-143">Uwagi</span><span class="sxs-lookup"><span data-stu-id="7d566-143">Remarks</span></span>  
+ <span data-ttu-id="7d566-144">**Każde\<elementy > elementu dependentAssembly** muszą mieć jeden  **\<element podrzędny assemblyIdentity >** .</span><span class="sxs-lookup"><span data-stu-id="7d566-144">Every **\<dependentAssembly>** element must have one **\<assemblyIdentity>** child element.</span></span>  
   
- <span data-ttu-id="6e63f-145">Jeśli `processorArchitecture` jest obecny, atrybut `<assemblyIdentity>` element ma zastosowanie tylko do zestawu z odpowiedniej architektury procesora.</span><span class="sxs-lookup"><span data-stu-id="6e63f-145">If the `processorArchitecture` attribute is present, the `<assemblyIdentity>` element applies only to the assembly with the corresponding processor architecture.</span></span> <span data-ttu-id="6e63f-146">Jeśli `processorArchitecture` nie jest obecny, atrybut `<assemblyIdentity>` elementu można zastosować do zestawu za pomocą dowolnej architektury procesora.</span><span class="sxs-lookup"><span data-stu-id="6e63f-146">If the `processorArchitecture` attribute is not present, the `<assemblyIdentity>` element can apply to an assembly with any processor architecture.</span></span>  
+ <span data-ttu-id="7d566-145">Jeśli atrybut jest obecny, element ma zastosowanie tylko do zestawu z odpowiednią architekturą procesora. `<assemblyIdentity>` `processorArchitecture`</span><span class="sxs-lookup"><span data-stu-id="7d566-145">If the `processorArchitecture` attribute is present, the `<assemblyIdentity>` element applies only to the assembly with the corresponding processor architecture.</span></span> <span data-ttu-id="7d566-146">Jeśli atrybut nie istnieje, element może być stosowany do zestawu z dowolną architekturą procesora. `<assemblyIdentity>` `processorArchitecture`</span><span class="sxs-lookup"><span data-stu-id="7d566-146">If the `processorArchitecture` attribute is not present, the `<assemblyIdentity>` element can apply to an assembly with any processor architecture.</span></span>  
   
- <span data-ttu-id="6e63f-147">Poniższy przykład pokazuje plik konfiguracji dla dwóch zestawów o takiej samej nazwie, przeznaczone na platformę dwóch różnych dwóch architektury procesora, a której wersji ma nie została zachowana synchronizację. Gdy aplikacja wykonuje na x86 platformy pierwszy `<assemblyIdentity>` element ma zastosowanie i innych jest ignorowana.</span><span class="sxs-lookup"><span data-stu-id="6e63f-147">The following example shows a configuration file for two assemblies with the same name that target two different two processor architectures, and whose versions have not been maintained in synch. When the application executes on the x86 platform the first `<assemblyIdentity>` element applies and the other is ignored.</span></span> <span data-ttu-id="6e63f-148">Jeśli aplikacja jest wykonywana na platformie innej niż x86 lub ia64, obie są ignorowane.</span><span class="sxs-lookup"><span data-stu-id="6e63f-148">If the application executes on a platform other than x86 or ia64, both are ignored.</span></span>  
+ <span data-ttu-id="7d566-147">W poniższym przykładzie przedstawiono plik konfiguracyjny dla dwóch zestawów o tej samej nazwie, który jest przeznaczony dla dwóch różnych architektur procesora, a których wersje nie zostały zachowane w synchronizacji. Gdy aplikacja jest wykonywana na platformie x86, stosuje się `<assemblyIdentity>` pierwszy element, a drugi jest ignorowany.</span><span class="sxs-lookup"><span data-stu-id="7d566-147">The following example shows a configuration file for two assemblies with the same name that target two different two processor architectures, and whose versions have not been maintained in synch. When the application executes on the x86 platform the first `<assemblyIdentity>` element applies and the other is ignored.</span></span> <span data-ttu-id="7d566-148">Jeśli aplikacja jest uruchamiana na platformie innej niż x86 lub ia64, obie te wartości są ignorowane.</span><span class="sxs-lookup"><span data-stu-id="7d566-148">If the application executes on a platform other than x86 or ia64, both are ignored.</span></span>  
   
 ```xml  
 <configuration>  
@@ -99,10 +99,10 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- <span data-ttu-id="6e63f-149">Jeśli plik konfiguracji zawiera `<assemblyIdentity>` element bez `processorArchitecture` atrybutu i nie zawiera element, który odpowiada platformie elementu bez `processorArchitecture` atrybut jest używany.</span><span class="sxs-lookup"><span data-stu-id="6e63f-149">If a configuration file contains an `<assemblyIdentity>` element with no `processorArchitecture` attribute, and does not contain an element that matches the platform, the element without the `processorArchitecture` attribute is used.</span></span>  
+ <span data-ttu-id="7d566-149">Jeśli plik konfiguracji zawiera `<assemblyIdentity>` element `processorArchitecture` bez atrybutu i nie zawiera elementu, który jest zgodny z platformą `processorArchitecture` , element bez atrybutu jest używany.</span><span class="sxs-lookup"><span data-stu-id="7d566-149">If a configuration file contains an `<assemblyIdentity>` element with no `processorArchitecture` attribute, and does not contain an element that matches the platform, the element without the `processorArchitecture` attribute is used.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6e63f-150">Przykład</span><span class="sxs-lookup"><span data-stu-id="6e63f-150">Example</span></span>  
- <span data-ttu-id="6e63f-151">Poniższy przykład pokazuje, jak zapewnić informacje o zestawie.</span><span class="sxs-lookup"><span data-stu-id="6e63f-151">The following example shows how to provide information about an assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="7d566-150">Przykład</span><span class="sxs-lookup"><span data-stu-id="7d566-150">Example</span></span>  
+ <span data-ttu-id="7d566-151">Poniższy przykład pokazuje, jak podać informacje o zestawie.</span><span class="sxs-lookup"><span data-stu-id="7d566-151">The following example shows how to provide information about an assembly.</span></span>  
   
 ```xml  
 <configuration>  
@@ -119,8 +119,8 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6e63f-152">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6e63f-152">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d566-152">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7d566-152">See also</span></span>
 
-- [<span data-ttu-id="6e63f-153">Schemat ustawień środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="6e63f-153">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="6e63f-154">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="6e63f-154">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="6e63f-155">Przekierowywanie wersji zestawu</span><span class="sxs-lookup"><span data-stu-id="6e63f-155">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [<span data-ttu-id="7d566-153">Schemat ustawień środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="7d566-153">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="7d566-154">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="7d566-154">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="7d566-155">Przekierowywanie wersji zestawu</span><span class="sxs-lookup"><span data-stu-id="7d566-155">Redirecting Assembly Versions</span></span>](../../redirect-assembly-versions.md)

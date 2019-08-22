@@ -8,21 +8,21 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: af290e4b9258a08425a15e297ff538502edea916
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a3d0b182acad2351ed095934ca97c6194d344fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674431"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659135"
 ---
-# <a name="requestcaching-element-network-settings"></a><span data-ttu-id="3938c-102">\<requestCaching — >, Element (ustawienia sieci)</span><span class="sxs-lookup"><span data-stu-id="3938c-102">\<requestCaching> Element (Network Settings)</span></span>
-<span data-ttu-id="3938c-103">Określa mechanizm buforowania żądań sieci.</span><span class="sxs-lookup"><span data-stu-id="3938c-103">Controls the caching mechanism for network requests.</span></span>  
+# <a name="requestcaching-element-network-settings"></a><span data-ttu-id="f148e-102">\<requestCaching >, element (Ustawienia sieci)</span><span class="sxs-lookup"><span data-stu-id="f148e-102">\<requestCaching> Element (Network Settings)</span></span>
+<span data-ttu-id="f148e-103">Kontroluje mechanizm buforowania dla żądań sieci.</span><span class="sxs-lookup"><span data-stu-id="f148e-103">Controls the caching mechanism for network requests.</span></span>  
   
- <span data-ttu-id="3938c-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="3938c-104">\<configuration></span></span>  
-<span data-ttu-id="3938c-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="3938c-105">\<system.net></span></span>  
-<span data-ttu-id="3938c-106">\<requestCaching></span><span class="sxs-lookup"><span data-stu-id="3938c-106">\<requestCaching></span></span>  
+ <span data-ttu-id="f148e-104">\<> konfiguracji</span><span class="sxs-lookup"><span data-stu-id="f148e-104">\<configuration></span></span>  
+<span data-ttu-id="f148e-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="f148e-105">\<system.net></span></span>  
+<span data-ttu-id="f148e-106">\<requestCaching ></span><span class="sxs-lookup"><span data-stu-id="f148e-106">\<requestCaching></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3938c-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="3938c-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f148e-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="f148e-107">Syntax</span></span>  
   
 ```xml  
 <requestCaching  
@@ -35,46 +35,46 @@ ms.locfileid: "61674431"
 </requestCaching>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="3938c-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="3938c-108">Attributes and Elements</span></span>  
- <span data-ttu-id="3938c-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="3938c-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f148e-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="f148e-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="f148e-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="f148e-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="3938c-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="3938c-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f148e-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="f148e-110">Attributes</span></span>  
   
-|<span data-ttu-id="3938c-111">Atrybut</span><span class="sxs-lookup"><span data-stu-id="3938c-111">Attribute</span></span>|<span data-ttu-id="3938c-112">Opis</span><span class="sxs-lookup"><span data-stu-id="3938c-112">Description</span></span>|  
+|<span data-ttu-id="f148e-111">Atrybut</span><span class="sxs-lookup"><span data-stu-id="f148e-111">Attribute</span></span>|<span data-ttu-id="f148e-112">Opis</span><span class="sxs-lookup"><span data-stu-id="f148e-112">Description</span></span>|  
 |---------------|-----------------|  
-|`isPrivateCache`|<span data-ttu-id="3938c-113">Określa, czy pamięć podręczna zapewnia izolację między informacji o różnych użytkowników.</span><span class="sxs-lookup"><span data-stu-id="3938c-113">Specifies whether the cache provides isolation between the information of different users.</span></span> <span data-ttu-id="3938c-114">Wartość domyślna to `true`.</span><span class="sxs-lookup"><span data-stu-id="3938c-114">The default value is `true`.</span></span> <span data-ttu-id="3938c-115">Ta wartość powinna być `false` dla aplikacji warstwy środkowej.</span><span class="sxs-lookup"><span data-stu-id="3938c-115">This value should be `false` for middle tier applications.</span></span>|  
-|`disableAllCaching`|<span data-ttu-id="3938c-116">Określa, że buforowanie jest wyłączone dla wszystkich odpowiedzi z sieci Web i nie może być zastąpiona programowo.</span><span class="sxs-lookup"><span data-stu-id="3938c-116">Specifies that caching is disabled for all Web responses, and cannot be overridden programmatically.</span></span>|  
-|`defaultPolicyLevel`|<span data-ttu-id="3938c-117">Jedna z wartości w <xref:System.Net.Cache.RequestCacheLevel> wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="3938c-117">One of the values in the <xref:System.Net.Cache.RequestCacheLevel> enumeration.</span></span> <span data-ttu-id="3938c-118">Wartość domyślna to `BypassCache`.</span><span class="sxs-lookup"><span data-stu-id="3938c-118">The default value is `BypassCache`.</span></span>|  
-|`unspecifiedMaximumAge`|<span data-ttu-id="3938c-119">Określa domyślny czas, po którym zawartość jest oznaczona jako wygasła.</span><span class="sxs-lookup"><span data-stu-id="3938c-119">Specifies the default time after which content is marked as expired.</span></span>|  
+|`isPrivateCache`|<span data-ttu-id="f148e-113">Określa, czy pamięć podręczna zapewnia izolację między informacjami różnych użytkowników.</span><span class="sxs-lookup"><span data-stu-id="f148e-113">Specifies whether the cache provides isolation between the information of different users.</span></span> <span data-ttu-id="f148e-114">Wartość domyślna to `true`.</span><span class="sxs-lookup"><span data-stu-id="f148e-114">The default value is `true`.</span></span> <span data-ttu-id="f148e-115">Ta wartość powinna być `false` dla aplikacji warstwy środkowej.</span><span class="sxs-lookup"><span data-stu-id="f148e-115">This value should be `false` for middle tier applications.</span></span>|  
+|`disableAllCaching`|<span data-ttu-id="f148e-116">Określa, że buforowanie jest wyłączone dla wszystkich odpowiedzi sieci Web i nie może zostać przesłonięte programowo.</span><span class="sxs-lookup"><span data-stu-id="f148e-116">Specifies that caching is disabled for all Web responses, and cannot be overridden programmatically.</span></span>|  
+|`defaultPolicyLevel`|<span data-ttu-id="f148e-117">Jedna z wartości w <xref:System.Net.Cache.RequestCacheLevel> wyliczeniu.</span><span class="sxs-lookup"><span data-stu-id="f148e-117">One of the values in the <xref:System.Net.Cache.RequestCacheLevel> enumeration.</span></span> <span data-ttu-id="f148e-118">Wartość domyślna to `BypassCache`.</span><span class="sxs-lookup"><span data-stu-id="f148e-118">The default value is `BypassCache`.</span></span>|  
+|`unspecifiedMaximumAge`|<span data-ttu-id="f148e-119">Określa domyślny czas, po którym zawartość jest oznaczona jako wygasła.</span><span class="sxs-lookup"><span data-stu-id="f148e-119">Specifies the default time after which content is marked as expired.</span></span>|  
   
-## <a name="policylevel-attribute"></a><span data-ttu-id="3938c-120">policyLevel atrybutu</span><span class="sxs-lookup"><span data-stu-id="3938c-120">policyLevel Attribute</span></span>  
+## <a name="policylevel-attribute"></a><span data-ttu-id="f148e-120">policyLevel — atrybut</span><span class="sxs-lookup"><span data-stu-id="f148e-120">policyLevel Attribute</span></span>  
   
-|<span data-ttu-id="3938c-121">Wartość</span><span class="sxs-lookup"><span data-stu-id="3938c-121">Value</span></span>|<span data-ttu-id="3938c-122">Opis</span><span class="sxs-lookup"><span data-stu-id="3938c-122">Description</span></span>|  
+|<span data-ttu-id="f148e-121">Wartość</span><span class="sxs-lookup"><span data-stu-id="f148e-121">Value</span></span>|<span data-ttu-id="f148e-122">Opis</span><span class="sxs-lookup"><span data-stu-id="f148e-122">Description</span></span>|  
 |-----------|-----------------|  
-|`Default`|<span data-ttu-id="3938c-123">Zwraca buforowane zasobu, jeśli zasób jest świeże, długość zawartości jest dokładne i wygaśnięcia, modyfikowanie i atrybuty długość zawartości znajdują się.</span><span class="sxs-lookup"><span data-stu-id="3938c-123">Returns the cached resource if the resource is fresh, the content length is accurate, and the expiration, modification, and content length attributes are present.</span></span>|  
-|`BypassCache`|<span data-ttu-id="3938c-124">Zwraca zasobu z serwera.</span><span class="sxs-lookup"><span data-stu-id="3938c-124">Returns the resource from the server.</span></span>|  
-|`CacheOnly`|<span data-ttu-id="3938c-125">Zwraca buforowane zasobu, jeśli długość zawartości jest obecna, a także odpowiada rozmiarowi wpisu.</span><span class="sxs-lookup"><span data-stu-id="3938c-125">Returns the cached resource if the content length is present and matches the entry size.</span></span>|  
-|`CacheIfAvailable`|<span data-ttu-id="3938c-126">Zwraca buforowane zasobu, jeśli długość zawartości jest dostarczany i odpowiada rozmiarowi wejścia; w przeciwnym razie zasób zostanie pobrana z serwera i jest zwracany do obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="3938c-126">Returns the cached resource if the content length is provided and matches the entry size; otherwise, the resource is downloaded from the server and is returned to the caller.</span></span>|  
-|`Revalidate`|<span data-ttu-id="3938c-127">Zwraca buforowane zasobu, jeśli sygnatury czasowej zasobów pamięci podręcznej jest taka sama jak sygnatura czasowa zasobu na serwerze; w przeciwnym razie zasób zostanie pobrana z serwera, przechowywane w pamięci podręcznej i jest zwracany do obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="3938c-127">Returns the cached resource if the timestamp of the cached resource is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, stored in the cache, and is returned to the caller.</span></span>|  
-|`Reload`|<span data-ttu-id="3938c-128">Pobiera zasób z serwera, jest on przechowywany w pamięci podręcznej i zwraca zasobu do obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="3938c-128">Downloads the resource from the server, stores it in the cache, and returns the resource to the caller.</span></span>|  
-|`NoCacheNoStore`|<span data-ttu-id="3938c-129">Jeśli istnieje zasób pamięci podręcznej, został usunięty.</span><span class="sxs-lookup"><span data-stu-id="3938c-129">If a cached resource exists, it is deleted.</span></span> <span data-ttu-id="3938c-130">Zasób jest pobierane z serwera i jest zwracany do obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="3938c-130">The resource is downloaded from the server and is returned to the caller.</span></span>|  
-|`Revalidate`|<span data-ttu-id="3938c-131">Spełnia żądanie przy użyciu pamięci podręcznej kopię zasobu, jeśli sygnatura czasowa jest taka sama jak sygnatura czasowa zasobu na serwerze; w przeciwnym razie zasób zostanie pobrana z serwera, przedstawione do obiektu wywołującego i jest przechowywany w pamięci podręcznej</span><span class="sxs-lookup"><span data-stu-id="3938c-131">Satisfies a request by using the cached copy of the resource if the timestamp is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, presented to the caller, and is stored in the cache,</span></span>|  
+|`Default`|<span data-ttu-id="f148e-123">Zwraca buforowany zasób, jeśli zasób jest świeży, długość zawartości jest dokładna i atrybuty daty wygaśnięcia, modyfikacji i długości zawartości są obecne.</span><span class="sxs-lookup"><span data-stu-id="f148e-123">Returns the cached resource if the resource is fresh, the content length is accurate, and the expiration, modification, and content length attributes are present.</span></span>|  
+|`BypassCache`|<span data-ttu-id="f148e-124">Zwraca zasób z serwera.</span><span class="sxs-lookup"><span data-stu-id="f148e-124">Returns the resource from the server.</span></span>|  
+|`CacheOnly`|<span data-ttu-id="f148e-125">Zwraca buforowany zasób, jeśli długość zawartości jest obecna i jest zgodna z rozmiarem wpisu.</span><span class="sxs-lookup"><span data-stu-id="f148e-125">Returns the cached resource if the content length is present and matches the entry size.</span></span>|  
+|`CacheIfAvailable`|<span data-ttu-id="f148e-126">Zwraca buforowany zasób, jeśli długość zawartości jest podana i jest zgodna z rozmiarem wpisu; w przeciwnym razie zasób jest pobierany z serwera i zwracany do obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="f148e-126">Returns the cached resource if the content length is provided and matches the entry size; otherwise, the resource is downloaded from the server and is returned to the caller.</span></span>|  
+|`Revalidate`|<span data-ttu-id="f148e-127">Zwraca buforowany zasób, jeśli sygnatura czasowa zasobu w pamięci podręcznej jest taka sama jak sygnatura czasowa zasobu na serwerze; w przeciwnym razie zasób jest pobierany z serwera, przechowywany w pamięci podręcznej i zwracany do obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="f148e-127">Returns the cached resource if the timestamp of the cached resource is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, stored in the cache, and is returned to the caller.</span></span>|  
+|`Reload`|<span data-ttu-id="f148e-128">Pobiera zasób z serwera, zapisuje go w pamięci podręcznej i zwraca zasób do obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="f148e-128">Downloads the resource from the server, stores it in the cache, and returns the resource to the caller.</span></span>|  
+|`NoCacheNoStore`|<span data-ttu-id="f148e-129">Jeśli istnieje zasób w pamięci podręcznej, zostanie on usunięty.</span><span class="sxs-lookup"><span data-stu-id="f148e-129">If a cached resource exists, it is deleted.</span></span> <span data-ttu-id="f148e-130">Zasób jest pobierany z serwera i zwracany do obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="f148e-130">The resource is downloaded from the server and is returned to the caller.</span></span>|  
+|`Revalidate`|<span data-ttu-id="f148e-131">Program spełnia żądanie przy użyciu buforowanej kopii zasobu, jeśli sygnatura czasowa jest taka sama jak sygnatura czasowa zasobu na serwerze; w przeciwnym razie zasób zostanie pobrany z serwera, który jest prezentowany obiektowi wywołującemu, i jest przechowywany w pamięci podręcznej,</span><span class="sxs-lookup"><span data-stu-id="f148e-131">Satisfies a request by using the cached copy of the resource if the timestamp is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, presented to the caller, and is stored in the cache,</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="3938c-132">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="3938c-132">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f148e-132">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="f148e-132">Child Elements</span></span>  
   
-|<span data-ttu-id="3938c-133">Element</span><span class="sxs-lookup"><span data-stu-id="3938c-133">Element</span></span>|<span data-ttu-id="3938c-134">Opis</span><span class="sxs-lookup"><span data-stu-id="3938c-134">Description</span></span>|  
+|<span data-ttu-id="f148e-133">Element</span><span class="sxs-lookup"><span data-stu-id="f148e-133">Element</span></span>|<span data-ttu-id="f148e-134">Opis</span><span class="sxs-lookup"><span data-stu-id="f148e-134">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="3938c-135">defaultHttpCachePolicy</span><span class="sxs-lookup"><span data-stu-id="3938c-135">defaultHttpCachePolicy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|<span data-ttu-id="3938c-136">Element opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="3938c-136">Optional element.</span></span><br /><br /> <span data-ttu-id="3938c-137">Opisuje, czy buforowanie HTTP jest aktywny i w tym artykule opisano domyślne zasady buforowania.</span><span class="sxs-lookup"><span data-stu-id="3938c-137">Describes whether HTTP caching is active and describes the default caching policy.</span></span>|  
-|[<span data-ttu-id="3938c-138">\<defaultFtpCachePolicy> Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="3938c-138">\<defaultFtpCachePolicy> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|<span data-ttu-id="3938c-139">Element opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="3938c-139">Optional element.</span></span><br /><br /> <span data-ttu-id="3938c-140">Opisuje, czy buforowanie FTP jest aktywny i w tym artykule opisano domyślne zasady buforowania.</span><span class="sxs-lookup"><span data-stu-id="3938c-140">Describes whether FTP caching is active and describes the default caching policy.</span></span>|  
+|[<span data-ttu-id="f148e-135">defaultHttpCachePolicy</span><span class="sxs-lookup"><span data-stu-id="f148e-135">defaultHttpCachePolicy</span></span>](defaulthttpcachepolicy-element-network-settings.md)|<span data-ttu-id="f148e-136">Element opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="f148e-136">Optional element.</span></span><br /><br /> <span data-ttu-id="f148e-137">Opisuje, czy buforowanie HTTP jest aktywne i opisuje domyślne zasady buforowania.</span><span class="sxs-lookup"><span data-stu-id="f148e-137">Describes whether HTTP caching is active and describes the default caching policy.</span></span>|  
+|[<span data-ttu-id="f148e-138">\<defaultFtpCachePolicy >, element (Ustawienia sieci)</span><span class="sxs-lookup"><span data-stu-id="f148e-138">\<defaultFtpCachePolicy> Element (Network Settings)</span></span>](defaultftpcachepolicy-element-network-settings.md)|<span data-ttu-id="f148e-139">Element opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="f148e-139">Optional element.</span></span><br /><br /> <span data-ttu-id="f148e-140">Opisuje, czy buforowanie FTP jest aktywne i opisuje domyślne zasady buforowania.</span><span class="sxs-lookup"><span data-stu-id="f148e-140">Describes whether FTP caching is active and describes the default caching policy.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="3938c-141">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="3938c-141">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f148e-141">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="f148e-141">Parent Elements</span></span>  
   
-|<span data-ttu-id="3938c-142">Element</span><span class="sxs-lookup"><span data-stu-id="3938c-142">Element</span></span>|<span data-ttu-id="3938c-143">Opis</span><span class="sxs-lookup"><span data-stu-id="3938c-143">Description</span></span>|  
+|<span data-ttu-id="f148e-142">Element</span><span class="sxs-lookup"><span data-stu-id="f148e-142">Element</span></span>|<span data-ttu-id="f148e-143">Opis</span><span class="sxs-lookup"><span data-stu-id="f148e-143">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="3938c-144">system.net</span><span class="sxs-lookup"><span data-stu-id="3938c-144">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="3938c-145">Zawiera ustawienia, które określają, jak .NET Framework łączy się z siecią.</span><span class="sxs-lookup"><span data-stu-id="3938c-145">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="f148e-144">system.net</span><span class="sxs-lookup"><span data-stu-id="f148e-144">system.net</span></span>](system-net-element-network-settings.md)|<span data-ttu-id="f148e-145">Zawiera ustawienia, które określają, w jaki sposób .NET Framework nawiązuje połączenie z siecią.</span><span class="sxs-lookup"><span data-stu-id="f148e-145">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="3938c-146">Przykład</span><span class="sxs-lookup"><span data-stu-id="3938c-146">Example</span></span>  
- <span data-ttu-id="3938c-147">Poniższy przykład pokazuje, jak wyłączyć buforowaniu.</span><span class="sxs-lookup"><span data-stu-id="3938c-147">The following example shows how to disable all caching.</span></span>  
+## <a name="example"></a><span data-ttu-id="f148e-146">Przykład</span><span class="sxs-lookup"><span data-stu-id="f148e-146">Example</span></span>  
+ <span data-ttu-id="f148e-147">Poniższy przykład pokazuje, jak wyłączyć wszystkie buforowanie.</span><span class="sxs-lookup"><span data-stu-id="f148e-147">The following example shows how to disable all caching.</span></span>  
   
 ```xml  
 <configuration>  
@@ -86,7 +86,7 @@ ms.locfileid: "61674431"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3938c-148">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3938c-148">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f148e-148">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f148e-148">See also</span></span>
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
-- [<span data-ttu-id="3938c-149">Schemat ustawień sieci</span><span class="sxs-lookup"><span data-stu-id="3938c-149">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="f148e-149">Schemat ustawień sieci</span><span class="sxs-lookup"><span data-stu-id="f148e-149">Network Settings Schema</span></span>](index.md)

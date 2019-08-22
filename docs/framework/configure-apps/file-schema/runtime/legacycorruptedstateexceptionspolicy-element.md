@@ -7,67 +7,67 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6191ee2169a85725f0367763874e60c0ceb1d7a4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2715548a40579375cebbdd5fb9003738a42ff714
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489435"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663652"
 ---
-# <a name="legacycorruptedstateexceptionspolicy-element"></a><span data-ttu-id="a7ef7-102">\<legacyCorruptedStateExceptionsPolicy> Element</span><span class="sxs-lookup"><span data-stu-id="a7ef7-102">\<legacyCorruptedStateExceptionsPolicy> Element</span></span>
-<span data-ttu-id="a7ef7-103">Określa, czy środowisko uruchomieniowe języka wspólnego umożliwia kodu zarządzanego wykryć naruszenia zasad dostępu i inne wyjątki uszkodzony.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-103">Specifies whether the common language runtime allows managed code to catch access violations and other corrupted state exceptions.</span></span>  
+# <a name="legacycorruptedstateexceptionspolicy-element"></a><span data-ttu-id="9ce6d-102">\<legacyCorruptedStateExceptionsPolicy> Element</span><span class="sxs-lookup"><span data-stu-id="9ce6d-102">\<legacyCorruptedStateExceptionsPolicy> Element</span></span>
+<span data-ttu-id="9ce6d-103">Określa, czy środowisko uruchomieniowe języka wspólnego umożliwia kodowi zarządzanemu przechwytywanie naruszeń dostępu i innych wyjątków uszkodzonych Stanów.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-103">Specifies whether the common language runtime allows managed code to catch access violations and other corrupted state exceptions.</span></span>  
   
- <span data-ttu-id="a7ef7-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="a7ef7-104">\<configuration></span></span>  
-<span data-ttu-id="a7ef7-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="a7ef7-105">\<runtime></span></span>  
-<span data-ttu-id="a7ef7-106">\<legacyCorruptedStateExceptionsPolicy></span><span class="sxs-lookup"><span data-stu-id="a7ef7-106">\<legacyCorruptedStateExceptionsPolicy></span></span>  
+ <span data-ttu-id="9ce6d-104">\<> konfiguracji</span><span class="sxs-lookup"><span data-stu-id="9ce6d-104">\<configuration></span></span>  
+<span data-ttu-id="9ce6d-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="9ce6d-105">\<runtime></span></span>  
+<span data-ttu-id="9ce6d-106">\<legacyCorruptedStateExceptionsPolicy></span><span class="sxs-lookup"><span data-stu-id="9ce6d-106">\<legacyCorruptedStateExceptionsPolicy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a7ef7-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="a7ef7-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9ce6d-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="9ce6d-107">Syntax</span></span>  
   
 ```xml  
 <legacyCorruptedStateExceptionsPolicy enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="a7ef7-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="a7ef7-108">Attributes and Elements</span></span>  
- <span data-ttu-id="a7ef7-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="9ce6d-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="9ce6d-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="9ce6d-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="a7ef7-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="a7ef7-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="9ce6d-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="9ce6d-110">Attributes</span></span>  
   
-|<span data-ttu-id="a7ef7-111">Atrybut</span><span class="sxs-lookup"><span data-stu-id="a7ef7-111">Attribute</span></span>|<span data-ttu-id="a7ef7-112">Opis</span><span class="sxs-lookup"><span data-stu-id="a7ef7-112">Description</span></span>|  
+|<span data-ttu-id="9ce6d-111">Atrybut</span><span class="sxs-lookup"><span data-stu-id="9ce6d-111">Attribute</span></span>|<span data-ttu-id="9ce6d-112">Opis</span><span class="sxs-lookup"><span data-stu-id="9ce6d-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="a7ef7-113">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="a7ef7-114">Określa, że aplikacja będzie przechwytywać uszkodzenia stan wyjątku awarie, takie jak naruszenia zasad dostępu.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-114">Specifies that the application will catch corrupting state exception failures such as access violations.</span></span>|  
+|`enabled`|<span data-ttu-id="9ce6d-113">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="9ce6d-114">Określa, że aplikacja będzie przechwytywać błędy wyjątku stanu, takie jak naruszenia zasad dostępu.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-114">Specifies that the application will catch corrupting state exception failures such as access violations.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="a7ef7-115">Atrybut włączony</span><span class="sxs-lookup"><span data-stu-id="a7ef7-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="9ce6d-115">Atrybut włączony</span><span class="sxs-lookup"><span data-stu-id="9ce6d-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="a7ef7-116">Wartość</span><span class="sxs-lookup"><span data-stu-id="a7ef7-116">Value</span></span>|<span data-ttu-id="a7ef7-117">Opis</span><span class="sxs-lookup"><span data-stu-id="a7ef7-117">Description</span></span>|  
+|<span data-ttu-id="9ce6d-116">Wartość</span><span class="sxs-lookup"><span data-stu-id="9ce6d-116">Value</span></span>|<span data-ttu-id="9ce6d-117">Opis</span><span class="sxs-lookup"><span data-stu-id="9ce6d-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="a7ef7-118">Aplikacja nie będzie przechwytywać uszkodzenia stan wyjątku awarie, takie jak naruszenia zasad dostępu.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-118">The application will not catch corrupting state exception failures such as access violations.</span></span> <span data-ttu-id="a7ef7-119">Domyślnie włączone.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="a7ef7-120">Aplikacja będzie przechwytywać uszkodzenia stan wyjątku awarie, takie jak naruszenia zasad dostępu.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-120">The application will catch corrupting state exception failures such as access violations.</span></span>|  
+|`false`|<span data-ttu-id="9ce6d-118">Aplikacja nie będzie przechwytywać uszkodzonych błędów wyjątku stanu, takich jak naruszenia zasad dostępu.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-118">The application will not catch corrupting state exception failures such as access violations.</span></span> <span data-ttu-id="9ce6d-119">Domyślnie włączone.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="9ce6d-120">Aplikacja będzie przechwycić błędy wyjątku stanu, takie jak naruszenia zasad dostępu.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-120">The application will catch corrupting state exception failures such as access violations.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="a7ef7-121">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="a7ef7-121">Child Elements</span></span>  
- <span data-ttu-id="a7ef7-122">Brak.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="9ce6d-121">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="9ce6d-121">Child Elements</span></span>  
+ <span data-ttu-id="9ce6d-122">Brak.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="a7ef7-123">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="a7ef7-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="9ce6d-123">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="9ce6d-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="a7ef7-124">Element</span><span class="sxs-lookup"><span data-stu-id="a7ef7-124">Element</span></span>|<span data-ttu-id="a7ef7-125">Opis</span><span class="sxs-lookup"><span data-stu-id="a7ef7-125">Description</span></span>|  
+|<span data-ttu-id="9ce6d-124">Element</span><span class="sxs-lookup"><span data-stu-id="9ce6d-124">Element</span></span>|<span data-ttu-id="9ce6d-125">Opis</span><span class="sxs-lookup"><span data-stu-id="9ce6d-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="a7ef7-126">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="a7ef7-127">Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="9ce6d-126">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="9ce6d-127">Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a7ef7-128">Uwagi</span><span class="sxs-lookup"><span data-stu-id="a7ef7-128">Remarks</span></span>  
- <span data-ttu-id="a7ef7-129">W .NET Framework w wersji 3.5 i starszych środowisko uruchomieniowe języka wspólnego mogą przechwytywać wyjątków, które zostały zgłoszone przez Państwa uszkodzony procesu kodu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-129">In the .NET Framework version 3.5 and earlier, the common language runtime allowed managed code to catch exceptions that were raised by corrupted process states.</span></span> <span data-ttu-id="a7ef7-130">Naruszenie zasad dostępu znajduje się przykład tego typu wyjątku.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-130">An access violation is an example of this type of exception.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9ce6d-128">Uwagi</span><span class="sxs-lookup"><span data-stu-id="9ce6d-128">Remarks</span></span>  
+ <span data-ttu-id="9ce6d-129">W .NET Framework w wersji 3,5 i starszych środowisko uruchomieniowe języka wspólnego może przechwytywać wyjątki, które zostały zgłoszone przez uszkodzone Stany procesów.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-129">In the .NET Framework version 3.5 and earlier, the common language runtime allowed managed code to catch exceptions that were raised by corrupted process states.</span></span> <span data-ttu-id="9ce6d-130">Naruszenie zasad dostępu jest przykładem tego typu wyjątku.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-130">An access violation is an example of this type of exception.</span></span>  
   
- <span data-ttu-id="a7ef7-131">Począwszy od programu .NET Framework 4, kod zarządzany nie jest już przechwytuje tego rodzaju wyjątków w `catch` bloków.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-131">Starting with the .NET Framework 4, managed code no longer catches these types of exceptions in `catch` blocks.</span></span> <span data-ttu-id="a7ef7-132">Można jednak zastąpić tę zmianę i obsługa z obsługą wyjątków uszkodzony na dwa sposoby:</span><span class="sxs-lookup"><span data-stu-id="a7ef7-132">However, you can override this change and maintain the handling of corrupted state exceptions in two ways:</span></span>  
+ <span data-ttu-id="9ce6d-131">Począwszy od .NET Framework 4, kod zarządzany nie przechwytuje już tych typów wyjątków w `catch` blokach.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-131">Starting with the .NET Framework 4, managed code no longer catches these types of exceptions in `catch` blocks.</span></span> <span data-ttu-id="9ce6d-132">Można jednak zastąpić tę zmianę i zachować obsługę wyjątków uszkodzonych Stanów na dwa sposoby:</span><span class="sxs-lookup"><span data-stu-id="9ce6d-132">However, you can override this change and maintain the handling of corrupted state exceptions in two ways:</span></span>  
   
-- <span data-ttu-id="a7ef7-133">Ustaw `<legacyCorruptedStateExceptionsPolicy>` elementu `enabled` atrybutu `true`.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-133">Set the `<legacyCorruptedStateExceptionsPolicy>` element's `enabled` attribute to `true`.</span></span> <span data-ttu-id="a7ef7-134">To ustawienie konfiguracji jest zastosowany processwide i ma wpływ na wszystkie metody.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-134">This configuration setting is applied processwide and affects all methods.</span></span>  
+- <span data-ttu-id="9ce6d-133">`<legacyCorruptedStateExceptionsPolicy>` Ustaw atrybut`enabled` elementu na `true`.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-133">Set the `<legacyCorruptedStateExceptionsPolicy>` element's `enabled` attribute to `true`.</span></span> <span data-ttu-id="9ce6d-134">To ustawienie konfiguracji jest stosowane processwide i ma wpływ na wszystkie metody.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-134">This configuration setting is applied processwide and affects all methods.</span></span>  
   
- <span data-ttu-id="a7ef7-135">—lub—</span><span class="sxs-lookup"><span data-stu-id="a7ef7-135">-or-</span></span>  
+ <span data-ttu-id="9ce6d-135">—lub—</span><span class="sxs-lookup"><span data-stu-id="9ce6d-135">-or-</span></span>  
   
-- <span data-ttu-id="a7ef7-136">Zastosuj <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> atrybutu do metody, która zawiera wyjątki `catch` bloku.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-136">Apply the <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> attribute to the method that contains the exceptions `catch` block.</span></span>  
+- <span data-ttu-id="9ce6d-136">Zastosuj atrybut do metody, która zawiera blok wyjątków `catch`. <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="9ce6d-136">Apply the <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> attribute to the method that contains the exceptions `catch` block.</span></span>  
   
- <span data-ttu-id="a7ef7-137">Ten element konfiguracji jest dostępny tylko w programie .NET Framework 4 lub nowszej.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-137">This configuration element is available only in the .NET Framework 4 and later.</span></span>  
+ <span data-ttu-id="9ce6d-137">Ten element konfiguracji jest dostępny tylko w .NET Framework 4 i nowszych.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-137">This configuration element is available only in the .NET Framework 4 and later.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a7ef7-138">Przykład</span><span class="sxs-lookup"><span data-stu-id="a7ef7-138">Example</span></span>  
- <span data-ttu-id="a7ef7-139">Jak określić, że aplikacja powinna powrócić do zachowania przed programu .NET Framework 4 i przechwytywać wszystkie błędny stan wyjątku błędów można znaleźć w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="a7ef7-139">The following example shows how to specify that the application should revert to the behavior before the .NET Framework 4, and catch all corrupting state exception failures.</span></span>  
+## <a name="example"></a><span data-ttu-id="9ce6d-138">Przykład</span><span class="sxs-lookup"><span data-stu-id="9ce6d-138">Example</span></span>  
+ <span data-ttu-id="9ce6d-139">Poniższy przykład pokazuje, jak określić, że aplikacja ma zostać przywrócona do zachowania przed .NET Framework 4 i przechwycić wszystkie błędy wyjątków spowodowanych uszkodzeniem stanu.</span><span class="sxs-lookup"><span data-stu-id="9ce6d-139">The following example shows how to specify that the application should revert to the behavior before the .NET Framework 4, and catch all corrupting state exception failures.</span></span>  
   
 ```xml  
 <configuration>  
@@ -77,8 +77,8 @@ ms.locfileid: "66489435"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a7ef7-140">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a7ef7-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ce6d-140">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9ce6d-140">See also</span></span>
 
 - <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>
-- [<span data-ttu-id="a7ef7-141">Schemat ustawień środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="a7ef7-141">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="a7ef7-142">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="a7ef7-142">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="9ce6d-141">Schemat ustawień środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="9ce6d-141">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="9ce6d-142">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="9ce6d-142">Configuration File Schema</span></span>](../index.md)

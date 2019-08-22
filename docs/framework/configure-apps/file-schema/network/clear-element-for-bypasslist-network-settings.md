@@ -10,17 +10,17 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 7499d15f1d57887ffc3e78b83ed686c0c0f46cf4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5305d9aed09b6c4d1ad4201e5e08e007a14c7c0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674639"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664185"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<Wyczyść >, Element dla bypasslist (ustawienia sieci)
-Czyści listę obejścia serwera proxy.  
+# <a name="clear-element-for-bypasslist-network-settings"></a>\<Wyczyść element > dla BypassList (Ustawienia sieci)
+Czyści listę pomijania proxy.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.net>  
 \<defaultProxy>  
 \<bypasslist>  
@@ -45,16 +45,16 @@ Czyści listę obejścia serwera proxy.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.|  
+|[bypasslist](bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.|  
   
 ## <a name="remarks"></a>Uwagi  
- `clear` Element czyści wszystkie wpisy z listy obejścia.  
+ `clear` Element czyści wszystkie wpisy z listy pomijania.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
+ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład czyści listę obejścia, a następnie dodaje dwa adresy do listy pomijania. Pierwszy pomija serwera proxy dla wszystkich serwerów w domenie contoso.com. drugi pomija serwera proxy dla wszystkich serwerom rozpoczyna się których adresy IP 192.168.  
+ Poniższy przykład czyści listę pomijania, a następnie dodaje dwa adresy do listy pomijania. Najpierw pomija serwer proxy dla wszystkich serwerów w domenie contoso.com; drugi pomija serwer proxy dla wszystkich serwerów, których adres IP rozpoczyna się od 192,168.  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ Czyści listę obejścia serwera proxy.
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

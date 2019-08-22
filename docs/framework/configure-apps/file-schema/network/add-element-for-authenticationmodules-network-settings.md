@@ -10,19 +10,19 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: a46e6af97f37974805812fb0d19801d618eee4d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d72371921a85ff5a68dd9017f0fe8cf5d28557dd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705158"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664238"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<Dodaj >, Element dla authenticationModules (ustawienia sieci)
+# <a name="add-element-for-authenticationmodules-network-settings"></a>\<Dodaj element > dla authenticationModules (Ustawienia sieci)
 Dodaje moduł uwierzytelniania do aplikacji.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.net>  
-\<authenticationModules>  
+\<authenticationModules >  
 \<add>  
   
 ## <a name="syntax"></a>Składnia  
@@ -40,7 +40,7 @@ Dodaje moduł uwierzytelniania do aplikacji.
   
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
-|`type`|W pełni kwalifikowana nazwa typu (wskazywanym przez <xref:System.Type.FullName%2A> właściwości) i nazwy zestawu (wskazywanym przez <xref:System.Reflection.Assembly.FullName%2A> właściwości), oddzielone przecinkami.|  
+|`type`|W pełni kwalifikowana nazwa typu (wskazywana przez <xref:System.Type.FullName%2A> Właściwość) i nazwa zestawu (wskazywanym <xref:System.Reflection.Assembly.FullName%2A> przez właściwość) oddzielone przecinkami.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -49,18 +49,18 @@ Dodaje moduł uwierzytelniania do aplikacji.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań w sieci.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
- `add` Elementu dodaje moduł uwierzytelniania na końcu listy modułów uwierzytelniania zarejestrowane. Moduły uwierzytelniania są wywoływane w kolejności, w jakiej zostały dodane do listy.  
+ `add` Element dodaje moduł uwierzytelniania na końcu listy zarejestrowanych modułów uwierzytelniania. Moduły uwierzytelniania są wywoływane w kolejności, w jakiej zostały dodane do listy.  
   
- Wartość `type` atrybut powinien być prawidłową nazwą typu i odpowiedniej nazwy zestawu, oddzielając wartości przecinkami.  
+ Wartość `type` atrybutu powinna być prawidłową nazwą typu i odpowiadającą jej nazwą zestawu, rozdzieloną przecinkami.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
+ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład umożliwia domyślne moduły uwierzytelniania. Należy zastąpić wartości wersji i PublicKeyToken poprawne wartości dla określonego modułu.  
+ W poniższym przykładzie są włączane domyślne moduły uwierzytelniania. Należy zastąpić wartości wersji i PublicKeyToken wartościami prawidłowymi dla określonego modułu.  
   
 ```xml  
 <configuration>  
@@ -85,4 +85,4 @@ Dodaje moduł uwierzytelniania do aplikacji.
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

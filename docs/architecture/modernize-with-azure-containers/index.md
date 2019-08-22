@@ -2,12 +2,12 @@
 title: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows (wersja 2)
 description: Dowiedz się, jak Podnieś i przenieść istniejące aplikacje do chmury platformy Azure i kontenerów z tą książką elektroniczną.
 ms.date: 04/28/2018
-ms.openlocfilehash: 4e632fcfbb8904a9def3fdad992286055c5df4f0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ab2b58441af7aed6a8cd868751339b555a345565
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68677076"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660853"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows (wersja 2)
 
@@ -201,4 +201,4 @@ Te przykładowe aplikacje mają drugą wersję, z nowoczesnym kodem i które są
 Ten przewodnik został zapisany, aby ułatwić zrozumienie opcji ulepszania i modernizacji istniejących aplikacji sieci Web platformy .NET. Przewodnik i powiązane przykładowe aplikacje są rozwijane. Chętnie poznamy Twoją opinię! Jeśli masz komentarze dotyczące tego, jak ten przewodnik może być bardziej przydatny, wyślij je [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)do programu.
 
 >[!div class="step-by-step"]
->[Next](lift-and-shift-existing-apps-azure-iaas.md)
+>[Next](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->

@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c2ed46e1d26d829fbe832e44efb40844ae7d56f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba74907e2f6fc2ca14e12a24113fa7654c9b967e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592713"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663799"
 ---
-# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures> Element
-Określa, czy należy wyłączyć buforowanie powiązania błędy, które występują, ponieważ zestaw nie został odnaleziony przez sondowanie.  
+# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures, element >
+Określa, czy należy wyłączyć buforowanie niepowodzeń powiązań, które wystąpiły, ponieważ nie można odnaleźć zestawu przez sondowanie.  
   
- \<Konfiguracja > Element  
-\<środowisko uruchomieniowe > Element  
-\<disableCachingBindingFailures>  
+ \<> elementu konfiguracji  
+\<Element > środowiska uruchomieniowego  
+\<disableCachingBindingFailures >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,14 +39,14 @@ Określa, czy należy wyłączyć buforowanie powiązania błędy, które wystę
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|Włączone|Atrybut wymagany.<br /><br /> Określa, czy należy wyłączyć buforowanie powiązania błędy, które występują, ponieważ zestaw nie został odnaleziony przez sondowanie.|  
+|dostępny|Atrybut wymagany.<br /><br /> Określa, czy należy wyłączyć buforowanie niepowodzeń powiązań, które wystąpiły, ponieważ nie można odnaleźć zestawu przez sondowanie.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|0|Nie należy wyłączać buforowanie powiązania błędy, które występują, ponieważ zestaw nie został odnaleziony przez sondowanie. Jest to domyślne zachowanie powiązania, począwszy od programu .NET Framework w wersji 2.0.|  
-|1|Wyłącz buforowanie powiązania błędy, które występują, ponieważ zestaw nie został odnaleziony przez sondowanie. To ustawienie zostanie przywrócony zachowanie wiązania programu .NET Framework w wersji 1.1.|  
+|0|Nie należy wyłączać buforowania niepowodzeń powiązań, ponieważ zestaw nie został odnaleziony przez sondowanie. Jest to domyślne zachowanie dotyczące powiązań rozpoczynające się od .NET Framework w wersji 2,0.|  
+|1|Wyłącz buforowanie niepowodzeń powiązań, ponieważ zestaw nie został odnaleziony przez sondowanie. To ustawienie przywraca zachowanie powiązania .NET Framework w wersji 1,1.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -59,18 +59,18 @@ Określa, czy należy wyłączyć buforowanie powiązania błędy, które wystę
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Począwszy od programu .NET Framework w wersji 2.0, domyślne zachowanie ładowania zestawów jest wszystkie powiązania i podczas ładowania błędów w pamięci podręcznej. Oznacza to jeśli próba załadowania zestawu zakończy się niepowodzeniem, kolejne żądania do tego samego zestawu obciążenia nie natychmiast, bez próby zlokalizowania zestawu. Ten element wyłącza tego domyślne zachowanie dla powiązania błędy, które występują, ponieważ nie można odnaleźć zestawu w ścieżce badania. Te błędy throw <xref:System.IO.FileNotFoundException>.  
+ Począwszy od .NET Framework w wersji 2,0, domyślnym zachowaniem ładowania zestawów jest buforowanie wszystkich błędów powiązań i ładowania. Oznacza to, że jeśli próba załadowania zestawu nie powiedzie się, kolejne żądania załadowania tego samego zestawu kończą się niepowodzeniem, bez próby zlokalizowania zestawu. Ten element wyłącza zachowanie domyślne dla niepowodzeń powiązań, które występują, ponieważ nie można odnaleźć zestawu w ścieżce sondowania. Te błędy są <xref:System.IO.FileNotFoundException>wyrzucane.  
   
- Niektóre wiązania błędów ładowania nie dotyczy tego elementu i zawsze są buforowane. Te błędy występują, ponieważ zestaw został znaleziony, ale nie można go załadować. Rzuć <xref:System.BadImageFormatException> lub <xref:System.IO.FileLoadException>. Poniższa lista zawiera kilka przykładów tych błędów.  
+ Ten element nie ma wpływ na pewne błędy powiązań i ładowania i są zawsze buforowane. Te błędy występują, ponieważ zestaw został znaleziony, ale nie można go załadować. Zgłaszają <xref:System.IO.FileLoadException>lub. <xref:System.BadImageFormatException> Poniższa lista zawiera kilka przykładów takich niepowodzeń.  
   
-- Jeśli użytkownik podejmie próbę załadowania pliku nie jest prawidłowym zestawem, kolejne próby załadowania zestawu zakończy się niepowodzeniem, nawet wtedy, gdy nieprawidłowego pliku zostaje zastąpiona opcją poprawny zestaw.  
+- Jeśli próba załadowania pliku nie jest prawidłowym zestawem, kolejne próby załadowania zestawu zakończą się niepowodzeniem, nawet jeśli zły plik zostanie zastąpiony właściwym zestawem.  
   
-- Jeśli użytkownik podejmie próbę załadowania zestawu, który jest zablokowany przez system plików, kolejne próby załadowania zestawu zakończy się niepowodzeniem nawet po opublikowaniu zestawu w systemie plików.  
+- W przypadku próby załadowania zestawu, który jest zablokowany przez system plików, kolejne próby załadowania zestawu zakończą się niepowodzeniem nawet po wydaniu zestawu przez system plików.  
   
-- Co najmniej wersji zestawu, który próbujesz załadować znajduje się w ścieżce badania, ale określonej wersji, którego zażądano nie znajduje się wśród nich, kolejne próby załadowania tej wersji zakończy się niepowodzeniem nawet wtedy, gdy poprawnej wersji jest przenoszony do badania ścieżki.  
+- Jeśli co najmniej jedna wersja zestawu, który próbujesz załadować, znajduje się w ścieżce sondowania, ale określona wersja, której żądasz, nie należy do nich, kolejne próby załadowania tej wersji będą kończyć się niepowodzeniem, nawet jeśli poprawna wersja zostanie przeniesiona do ścieżki sondowania.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak wyłączyć buforowanie niepowodzenia powiązań zestawów, które występują, ponieważ zestaw nie został odnaleziony przez sondowanie.  
+ Poniższy przykład pokazuje, jak wyłączyć buforowanie niepowodzeń powiązań zestawów, które występują, ponieważ nie znaleziono zestawu przez sondowanie.  
   
 ```xml  
 <configuration>  
@@ -82,6 +82,6 @@ Określa, czy należy wyłączyć buforowanie powiązania błędy, które wystę
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../deployment/how-the-runtime-locates-assemblies.md)

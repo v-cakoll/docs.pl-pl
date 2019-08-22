@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15156eaf883fc9ec162e0a85525564d49522b01d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 859e8a12421ea92aa48c54317e052683eb8e83f8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592666"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663484"
 ---
 # <a name="relativebindforresources-element"></a>\<relativeBindForResources> Element
-Optymalizuje sondy dla zestawów satelickich.  
+Optymalizuje sondę dla zestawów satelickich.  
   
- \<Konfiguracja > Element  
-\<środowisko uruchomieniowe > Element  
+ \<> elementu konfiguracji  
+\<Element > środowiska uruchomieniowego  
 \<relativeBindForResources> Element  
   
 ## <a name="syntax"></a>Składnia  
@@ -35,14 +35,14 @@ Optymalizuje sondy dla zestawów satelickich.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe języka wspólnego optymalizuje sondy dla zestawów satelickich.|  
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe języka wspólnego optymalizuje sondę dla zestawów satelickich.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`false`|Środowisko wykonawcze nie optymalizuje sondy dla zestawów satelickich. Jest to wartość domyślna.|  
-|`true`|Środowisko uruchomieniowe optymalizuje sondy dla zestawów satelickich.|  
+|`false`|Środowisko uruchomieniowe nie optymalizuje sondy dla zestawów satelickich. Jest to wartość domyślna.|  
+|`true`|Środowisko uruchomieniowe optymalizuje sondę dla zestawów satelickich.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -55,24 +55,24 @@ Optymalizuje sondy dla zestawów satelickich.
 |`runtime`|Zawiera informacje dotyczące opcji inicjowania środowiska uruchomieniowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ogólnie rzecz biorąc, Menedżer zasobów sondy dla zasobów, zgodnie z opisem w [Packaging and Deploying Resources](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) tematu. Oznacza to, że po sondy usługi Resource Manager dla konkretnej wersji zlokalizowanych zasobów, jego może Szukaj w globalnej pamięci podręcznej, poszukaj w folderze kodu aplikacji — zapytania bazowego, Instalator Windows specyficzne dla kultury zestawy satelickie i podnieść <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzeń. `<relativeBindForResources>` Element optymalizuje sposób, w którym Menedżer zasobów sondy dla zestawów satelickich. Go może poprawić wydajność podczas sondowania dla zasobów w następujących warunkach:  
+ Ogólnie rzecz biorąc, Menedżer zasobów sondy dla zasobów, zgodnie z opisem w temacie [pakowanie i wdrażanie zasobów](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) . Oznacza to, że podczas Menedżer zasobów sond dla konkretnej zlokalizowanej wersji zasobu może on wyglądać w globalnej pamięci podręcznej zestawów, wyszukać w folderze specyficznym dla kultury w bazie kodu aplikacji, Instalator Windows zapytań dla zestawów satelickich i podnieść <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenie. `<relativeBindForResources>` Element optymalizuje sposób, w jaki Menedżer zasobów sondy dla zestawów satelickich. Może zwiększyć wydajność podczas sondowania zasobów w następujących warunkach:  
   
-- Podczas wdrażania w tej samej lokalizacji co zestawu kodu w zestawie satelickim. Innymi słowy Jeśli zestaw kodu jest zainstalowany w globalnej pamięci podręcznej, zestawy satelickie należy także zainstalować istnieje. Jeśli zestaw kodu jest zainstalowana w bazie kodu aplikacji, zestawy satelickie musi również zainstalowany w folderze specyficzne dla kultury bazy kodu.  
+- Gdy zestaw satelicki zostanie wdrożony w tej samej lokalizacji co zestaw kodu. Innymi słowy, jeśli zestaw kodu jest zainstalowany w globalnej pamięci podręcznej zestawów, należy również zainstalować w tym miejscu zestawy satelickie. Jeśli zestaw kodu jest zainstalowany w bazie kodu aplikacji, zestawy satelickie muszą być również zainstalowane w folderze specyficznym dla kultury w bazie kodu.  
   
-- Gdy Instalator Windows nie jest używana lub jest tylko rzadko używane do instalowania zestawów satelickich na żądanie.  
+- Gdy Instalator Windows nie jest używany lub jest używany rzadko w przypadku instalacji zestawów satelitarnych na żądanie.  
   
-- Gdy kod aplikacji nie obsługuje <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzeń.  
+- Gdy kod aplikacji nie <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> obsługuje zdarzenia.  
   
- Ustawienie `enabled` atrybutu `<relativeBindForResources>` elementu `true` optymalizuje sondy usługi Resource Manager dla zestawów satelickich w następujący sposób:  
+ `enabled` Ustawienie atrybutu `<relativeBindForResources>` elementu w celu `true` optymalizacji sondy Menedżer zasobów dla zestawów satelickich w następujący sposób:  
   
-- Lokalizacja zestawu kodu nadrzędnego używa do sondowania dla zestawu satelickiego.  
+- Używa lokalizacji zestawu kodu nadrzędnego do sondowania dla zestawu satelickiego.  
   
-- Nie odpytuje Instalatora Windows dla zestawów satelickich.  
+- Nie bada Instalator Windows dla zestawów satelickich.  
   
-- Zgłaszaj <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzeń.  
+- Nie zgłasza <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenia.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Opakowanie i wdrażanie zasobów](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Opakowanie i wdrażanie zasobów](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)

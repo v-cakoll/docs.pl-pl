@@ -9,18 +9,18 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: b5825efcc613689e73fb56b6695fe7c75ff09136
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a06daa0b2aa5374c9959cbbe778d62856819a40e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674197"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663865"
 ---
 # <a name="codebase-element"></a>\<codeBase> Element
 
-Określa, gdzie znaleźć zestawu środowisko uruchomieniowe języka wspólnego.
+Określa, gdzie środowisko uruchomieniowe języka wspólnego może znaleźć zestaw.
 
-\<configuration> \<runtime> \<assemblyBinding> \<dependentAssembly> \<codeBase>
+\<Configuration > \<Runtime > \<assemblyBinding > \<dependentAssembly > \<codebase >
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,14 +38,14 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|`href`|Atrybut wymagany.<br /><br /> Określa adres URL, których środowisko uruchomieniowe można znaleźć określonej wersji zestawu.|
-|`version`|Atrybut wymagany.<br /><br /> Określa wersję zestawu, który dotyczy bazy kodu. Format numeru wersji zestawu to *główna.pomocnicza.kompilacja.poprawka*.|
+|`href`|Atrybut wymagany.<br /><br /> Określa adres URL, pod którym środowisko uruchomieniowe może znaleźć określoną wersję zestawu.|
+|`version`|Atrybut wymagany.<br /><br /> Określa wersję zestawu, którego dotyczy baza kodu. Format numeru wersji zestawu to *główna. pomocnicza. kompilacja. poprawka*.|
 
-## <a name="version-attribute"></a>Wersja atrybutu
+## <a name="version-attribute"></a>Atrybut wersji
 
 |Wartość|Opis|
 |-----------|-----------------|
-|Prawidłowe wartości dla każdej części numer wersji to od 0 do 65535.|Nie dotyczy.|
+|Prawidłowe wartości dla każdej części numeru wersji to 0 – 65535.|Nie dotyczy.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -55,22 +55,22 @@ Brak.
 
 |Element|Opis|
 |-------------|-----------------|
-|`buildproviders`|Definiuje kolekcję dostawców kompilacji używana do kompilowania plików zasobów niestandardowych. Może mieć dowolną liczbę dostawców kompilacji.|
-|`compilation`|Konfiguruje wszystkie ustawienia kompilacji używane przez program ASP.NET.|
+|`buildproviders`|Definiuje kolekcję dostawców kompilacji używanych do kompilowania niestandardowych plików zasobów. Możesz mieć dowolną liczbę dostawców kompilacji.|
+|`compilation`|Konfiguruje wszystkie ustawienia kompilacji, które są używane przez ASP.NET.|
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|
-|`System.web`|Określa element root dla sekcji konfiguracyjnej platformy ASP.NET.|
+|`System.web`|Określa element główny dla sekcji konfiguracji ASP.NET.|
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj środowiska uruchomieniowego  **\<codeBase >** ustawienia w pliku konfiguracji komputera lub plik zasad wydawcy, plik również przekierować wersji zestawu. Pliki konfiguracyjne aplikacji może mieć ustawienie kodu bez przekierowywanie wersji zestawu. Po ustaleniu, jakiego zestawu należy użyć, środowisko uruchomieniowe ma zastosowanie z ustawieniem kodu z pliku, który określa wersja. Jeśli codebase nie jest zaznaczone, środowisko uruchomieniowe sondy dla zestawu w zwykły sposób.
+Aby środowisko uruchomieniowe korzystało z  **\<bazy kodu >** w pliku konfiguracyjnym komputera lub w pliku zasad wydawcy, plik musi również przekierować wersję zestawu. Pliki konfiguracji aplikacji mogą mieć ustawienie bazy kodu bez przekierowywania wersji zestawu. Po ustaleniu, która wersja zestawu ma być używana, środowisko uruchomieniowe stosuje ustawienie bazy kodu z pliku, który określa wersję. Jeśli nie jest wskazana baza kodu, sondy środowiska uruchomieniowego dla zestawu w zwykły sposób.
 
-Jeśli zestaw ma silną nazwą, ustawienie kodu może być dowolnym miejscu na lokalny intranet lub Internetem. Jeśli zestaw jest zestaw prywatny, ustawienie codebase musi być ścieżką względną wobec katalogu aplikacji.
+Jeśli zestaw ma silną nazwę, ustawienie codebase może znajdować się w dowolnym miejscu w lokalnym intranecie lub w Internecie. Jeśli zestaw jest zestawem prywatnym, ustawienie bazy kodu musi być ścieżką względną do katalogu aplikacji.
 
-Na zestawy bez silnej nazwy, wersji jest ignorowany, a moduł ładujący używa pierwszego pojawienia się \<codebase > wewnątrz \<dependentAssembly >. Jeśli istnieje wpis w pliku konfiguracyjnym aplikacji, który przekierowuje powiązanie do innego zestawu, przekierowywanie będą miały pierwszeństwo, nawet wtedy, gdy wersja zestawu nie odpowiada na żądania powiązania.
+W przypadku zestawów bez silnej nazwy wersja jest ignorowana, a moduł ładujący używa pierwszego \<wyglądu kodu bazowej \<> wewnątrz dependentAssembly >. Jeśli w pliku konfiguracyjnym aplikacji znajduje się wpis służący do przekierowywania powiązań do innego zestawu, przekierowania będzie miało pierwszeństwo, nawet jeśli wersja zestawu nie jest zgodna z żądaniem powiązania.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak określić, gdzie środowisko uruchomieniowe można znaleźć zestawu.
+Poniższy przykład pokazuje, jak określić, gdzie środowisko uruchomieniowe może znaleźć zestaw.
 
 ```xml
 <configuration>
@@ -90,7 +90,7 @@ Poniższy przykład pokazuje, jak określić, gdzie środowisko uruchomieniowe m
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Określanie lokalizacji zestawu](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)
+- [Określanie lokalizacji zestawu](../../specify-assembly-location.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../deployment/how-the-runtime-locates-assemblies.md)

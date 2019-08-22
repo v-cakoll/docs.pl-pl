@@ -8,17 +8,17 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: 54fb68ab0bf8aa2665d70391350c626131ccb4bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8ea08cbd76e60a3665703bc50924dd94500cd87
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674509"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659331"
 ---
-# <a name="mailsettings-element-network-settings"></a>\<mailSettings — >, Element (ustawienia sieci)
+# <a name="mailsettings-element-network-settings"></a>\<mailSettings >, element (Ustawienia sieci)
 Konfiguruje opcje wysyłania poczty.  
 
-\<Konfiguracja >  
+\<> konfiguracji  
 \<system.net>  
 \<mailSettings>  
   
@@ -40,16 +40,16 @@ Konfiguruje opcje wysyłania poczty.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|[\<SMTP >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Służy do konfigurowania opcji prostego protokołu transportowego poczty.|  
+|[\<> SMTP — element (Ustawienia sieci)](smtp-element-network-settings.md)|Konfiguruje opcje protokołu Simple Mail Transport.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[\<przestrzeni nazw system.Net >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Zawiera ustawienia, które określają, jak .NET Framework łączy się z siecią.|  
+|[\<System .net >, element (Ustawienia sieci)](system-net-element-network-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework nawiązuje połączenie z siecią.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład określa odpowiednie parametry SMTP do wysyłania wiadomości e-mail przy użyciu poświadczeń domyślnych sieci.  
+ W poniższym przykładzie określono odpowiednie parametry SMTP do wysyłania wiadomości e-mail przy użyciu domyślnych poświadczeń sieciowych.  
   
 ```xml  
 <configuration>  
@@ -70,4 +70,4 @@ Konfiguruje opcje wysyłania poczty.
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Net.Mail.SmtpClient>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

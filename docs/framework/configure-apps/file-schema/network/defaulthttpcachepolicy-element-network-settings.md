@@ -8,19 +8,19 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 20d9b92ca2bbffd6b98b8641e5cef5e567cb84cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1dd31884a072d16ed004c0b49be61e8cee399787
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705132"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664153"
 ---
-# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaulthttpcachepolicy — >, Element (ustawienia sieci)
-Opisuje, czy buforowanie HTTP jest aktywny i w tym artykule opisano domyślne zasady buforowania.  
+# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy >, element (Ustawienia sieci)
+Opisuje, czy buforowanie HTTP jest aktywne i opisuje domyślne zasady buforowania.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.net>  
-\<requestCaching>  
+\<requestCaching >  
 \<defaultHttpCachePolicy>  
   
 ## <a name="syntax"></a>Składnia  
@@ -41,10 +41,10 @@ Opisuje, czy buforowanie HTTP jest aktywny i w tym artykule opisano domyślne za
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`maximumAge`|Określa maksymalny czas, zanim obiektu w pamięci podręcznej, jest ona oznaczona jako wygasła.|  
-|`maximumStale`|Określa maksymalny czas późniejsza niż godzina świeżości obliczaną przed obiektu w pamięci podręcznej, jest ona oznaczona jako wygasła.|  
-|`minimumFresh`|Określa minimalny czas dla obiektu w pamięci podręcznej do być traktowany jako świeży.|  
-|`policyLevel`|Określa, czy zasady buforowania jest automatycznie, czy pomijana jest pamięć podręczna. Wartość domyślna to `BypassCache`.|  
+|`maximumAge`|Określa maksymalny przedział czasu, po którym obiekt w pamięci podręcznej zostanie oznaczony jako wygasły.|  
+|`maximumStale`|Określa maksymalny czas poprzedzający obliczony czas Aktualności przed oznaczeniem obiektu w pamięci podręcznej jako wygasły.|  
+|`minimumFresh`|Określa minimalny czas do uwzględnienia w pamięci podręcznej.|  
+|`policyLevel`|Określa, czy zasady buforowania są wykonywane automatycznie, czy pamięć podręczna jest pomijana. Wartość domyślna to `BypassCache`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -53,18 +53,18 @@ Opisuje, czy buforowanie HTTP jest aktywny i w tym artykule opisano domyślne za
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Określa mechanizm buforowania żądań sieci.|  
+|[requestCaching](requestcaching-element-network-settings.md)|Kontroluje mechanizm buforowania dla żądań sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość `policyLevel` atrybut ma wartość `BypassCache` lub `Default`.  
+ Wartość `policyLevel` atrybutu `BypassCache` jest`Default`albo.  
   
- Wartości `maximumAge`, `maximumStale`, i `minimumFresh` elementy są albo jawne przedział czasu mający godziny formatu *d*. *hh*:*mm*:*ss* (dni, godziny, minuty i sekundy), lub stałe `minValue` lub `maxValue`, odpowiednio.  
+ Wartości dla `maximumAge`elementów, `maximumStale`i `minimumFresh` są jawnym przedziałem czasu o formacie *d*. *HH*:*mm*:*SS* (dni, godziny, minuty i sekundy) albo stałe `minValue` lub `maxValue`, zgodnie z potrzebami.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
+ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak określić minimalny czas od nowa, sześć godzin przez czas maksymalny wiek dwóch dni i maksymalny czas stałe wynoszące cztery godziny.  
+ Poniższy przykład pokazuje, jak określić minimalny czas trwania sześciu godzin, maksymalny czas trwania okresu ważności wynoszący dwa dni i maksymalny czas nieodświeżony wynoszący 4 godziny.  
   
 ```xml  
 <configuration>  
@@ -85,4 +85,4 @@ Opisuje, czy buforowanie HTTP jest aktywny i w tym artykule opisano domyślne za
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

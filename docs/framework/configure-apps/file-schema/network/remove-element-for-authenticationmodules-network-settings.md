@@ -10,19 +10,19 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 0eb3ef7db422d5cbbe70bd5633798b8d3787452d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f923ce73760fa42a2c435d346f9d1097a5ed82f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705041"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664051"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<Usuń >, Element dla authenticationModules (ustawienia sieci)
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<Usuń element > dla authenticationModules (Ustawienia sieci)
 Usuwa moduł uwierzytelniania z aplikacji.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.net>  
-\<authenticationModules>  
+\<authenticationModules >  
 \<remove>  
   
 ## <a name="syntax"></a>Składnia  
@@ -49,18 +49,18 @@ Usuwa moduł uwierzytelniania z aplikacji.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań w sieci.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
- `remove` Elementu usuwa moduły uwierzytelniania, które zostały wcześniej zdefiniowane w pliku konfiguracji lub wyższego poziomu w hierarchii konfiguracji.  
+ `remove` Element usuwa moduły uwierzytelniania zdefiniowane wcześniej w pliku konfiguracyjnym lub na wyższym poziomie w hierarchii konfiguracji.  
   
- Wartość `type` atrybut powinien być prawidłową nazwą klasy.  
+ Wartość `type` atrybutu powinna być prawidłową nazwą klasy.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
+ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład usuwa moduł usługi uwierzytelniania.  
+ Poniższy przykład usuwa moduł uwierzytelniania.  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ Usuwa moduł uwierzytelniania z aplikacji.
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

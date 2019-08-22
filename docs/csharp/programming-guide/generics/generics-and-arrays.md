@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], arrays
 - arrays [C#], generics
 ms.assetid: 7d956536-3851-41b5-94ad-3e7c0a5fe485
-ms.openlocfilehash: f5b82d470f728129fc76851bc2708e20085d5326
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: fee66cf7bd0ab3c051ea67acc323efa02a21a017
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589678"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659791"
 ---
 # <a name="generics-and-arrays-c-programming-guide"></a>Typy ogólne i tablice (Przewodnik programowania w języku C#)
 W C# 2,0 i nowszych tablicach jednowymiarowych, które mają dolną granicę zero, <xref:System.Collections.Generic.IList%601>są implementowane automatycznie. Dzięki temu można tworzyć metody ogólne, które mogą używać tego samego kodu do iterowania za pomocą tablic i innych typów kolekcji. Ta technika jest szczególnie przydatna w przypadku odczytywania danych w kolekcjach. Nie można użyć interfejsu do dodawania lub usuwania elementów z tablicy. <xref:System.Collections.Generic.IList%601> Wyjątek zostanie wygenerowany w przypadku próby wywołania <xref:System.Collections.Generic.IList%601> metody, takiej jak <xref:System.Collections.Generic.IList%601.RemoveAt%2A> w przypadku tablicy w tym kontekście.  
@@ -26,4 +26,4 @@ W C# 2,0 i nowszych tablicach jednowymiarowych, które mają dolną granicę zer
 - [Przewodnik programowania w języku C#](../index.md)
 - [Typy ogólne](./index.md)
 - [Tablice](../arrays/index.md)
-- [Typy ogólne](~/docs/standard/generics/index.md)
+- [Typy ogólne](../../../standard/generics/index.md)

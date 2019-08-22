@@ -8,17 +8,17 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: a459fee557285935c383dcfaf512c8a8a9aea570
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2e31dee4f5aff2bf6cedf5c4e9ca235695b0a53
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674376"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659099"
 ---
-# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory >, Element (ustawienia sieci)
-Konfiguruje katalog lokalny dla serwera transportu protokołu SMTP (Simple Mail).  
+# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory >, element (Ustawienia sieci)
+Konfiguruje katalog lokalny dla serwera SMTP (Simple Mail Transport Protocol).  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.net>  
 \<mailSettings>  
 \<smtp>  
@@ -39,7 +39,7 @@ Konfiguruje katalog lokalny dla serwera transportu protokołu SMTP (Simple Mail)
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|Katalog, w których aplikacje zapisać wiadomość e-mail do późniejszego przetwarzania przez serwer SMTP.|  
+|`pickupDirectoryLocation`|Katalog, w którym aplikacje zapisują wiadomości e-mail w celu późniejszego przetworzenia przez serwer SMTP.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -48,13 +48,13 @@ Konfiguruje katalog lokalny dla serwera transportu protokołu SMTP (Simple Mail)
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<SMTP >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Konfiguruje opcje wysyłania poczty transportu protokołu SMTP (Simple Mail).|  
+|[\<> SMTP — element (Ustawienia sieci)](smtp-element-network-settings.md)|Konfiguruje opcje wysyłania poczty SMTP (Simple Mail Transport Protocol).|  
   
 ## <a name="remarks"></a>Uwagi  
- `specifiedPickupDirectory` Atrybut Ustawia katalog oszczędzić wiadomości e-mail do przetworzenia przez serwer SMTP w aplikacji.  
+ Ten `specifiedPickupDirectory` atrybut określa katalog, w którym aplikacje zapisują wiadomości e-mail, które mają być przetwarzane przez serwer SMTP.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie określono c:\maildrop jako katalog podnoszenia poczty.  
+ Poniższy przykład określa c:\maildrop jako katalog podnoszenia poczty.  
   
 ```xml  
 <configuration>  
@@ -75,4 +75,4 @@ Konfiguruje katalog lokalny dla serwera transportu protokołu SMTP (Simple Mail)
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

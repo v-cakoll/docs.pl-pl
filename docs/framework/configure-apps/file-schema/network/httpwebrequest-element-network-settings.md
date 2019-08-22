@@ -8,17 +8,17 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: 722b2f726c9085f6dee6bad82044da3011b98702
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de5672e5c6762b1e0742e717a3d499a4f93ee8ec
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674548"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659341"
 ---
-# <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest >, Element (ustawienia sieci)
+# <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest >, element (Ustawienia sieci)
 Dostosowuje parametry żądania sieci Web.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.net>  
 \<settings>  
 \<httpWebRequest>  
@@ -41,10 +41,10 @@ Dostosowuje parametry żądania sieci Web.
   
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
-|`maximumResponseHeadersLength`|Określa maksymalną długość nagłówka żądania, w kilobajtach. Wartość domyślna to 64. Wartość -1 wskazuje, że nie mają limitu rozmiaru zostaną nałożone na nagłówki odpowiedzi.|  
-|`maximumErrorResponseLength`|Określa maksymalną długość odpowiedź na błąd, w kilobajtach. Wartość domyślna to 64. Wartość -1 wskazuje, że nie mają limitu rozmiaru zostaną nałożone na odpowiedzi na błąd.|  
-|`maximumUnauthorizedUploadLength`|Określa maksymalną długość przekazywania w odpowiedzi na błąd dotyczący nieautoryzowanego dostępu kodu, w bajtach. Wartość domyślna to -1. Wartość -1 wskazuje, że nie mają limitu rozmiaru zostaną nałożone na przekazywanie.|  
-|`useUnsafeHeaderParsing`|Określa, czy włączone jest niebezpieczne nagłówka podczas analizowania. Wartość domyślna to `false`.|  
+|`maximumResponseHeadersLength`|Określa maksymalną długość nagłówka odpowiedzi w kilobajtach. Wartość domyślna to 64. Wartość-1 oznacza, że w nagłówkach odpowiedzi nie zostanie wprowadzony limit rozmiaru.|  
+|`maximumErrorResponseLength`|Określa maksymalną długość odpowiedzi na błąd w kilobajtach. Wartość domyślna to 64. Wartość-1 oznacza, że w odpowiedzi na błąd nie zostanie wprowadzony limit rozmiaru.|  
+|`maximumUnauthorizedUploadLength`|Określa maksymalną długość przekazywania w odpowiedzi na nieautoryzowany kod błędu w bajtach. Wartość domyślna to-1. Wartość-1 oznacza, że żaden limit rozmiaru nie zostanie nałożony na przekazywanie.|  
+|`useUnsafeHeaderParsing`|Określa, czy jest włączone analizowanie niebezpiecznego nagłówka. Wartość domyślna to `false`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -53,16 +53,16 @@ Dostosowuje parametry żądania sieci Web.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[Ustawienia](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguruje opcje sieciowe podstawowe dla <xref:System.Net> przestrzeni nazw.|  
+|[Ustawienia](settings-element-network-settings.md)|Konfiguruje podstawowe opcje sieci dla <xref:System.Net> przestrzeni nazw.|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie program .NET Framework ściśle wymusza dokumencie RFC 2616 podczas analizowania identyfikatora URI. Niektóre odpowiedzi serwera może zawierać znaków kontrolnych w zabronionej pól, które spowoduje, że <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> metodę, aby zgłosić <xref:System.Net.WebException>. Jeśli **useUnsafeHeaderParsing** ustawiono **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> nie zgłosi wyjątku w tym przypadku; jednakże, Twoja aplikacja będzie narażony na kilka rodzajów ataków analizy identyfikatora URI. Najlepszym rozwiązaniem jest zmiana serwera, tak aby odpowiedź nie zawiera znaków kontrolnych.  
+ Domyślnie .NET Framework ściśle wymusza analizowanie identyfikatorów URI w dokumencie RFC 2616. Niektóre odpowiedzi serwera mogą zawierać znaki kontrolne w zabronionych polach, co spowoduje <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> , że metoda <xref:System.Net.WebException>wygeneruje. Jeśli **UseUnsafeHeaderParsing** ma **wartość true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> program nie będzie zgłaszany w tym przypadku, jednak aplikacja będzie narażona na kilka form ataków dotyczących analizy identyfikatorów URI. Najlepszym rozwiązaniem jest zmiana serwera tak, aby odpowiedź nie zawierała znaków kontrolnych.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
+ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak określić większego niż normalny nagłówka maksymalną długość.  
+ Poniższy przykład pokazuje, jak określić większą niż normalną maksymalną długość nagłówka.  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ Dostosowuje parametry żądania sieci Web.
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

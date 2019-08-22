@@ -9,43 +9,43 @@ helpviewer_keywords:
 - pipeline processing
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ada6003cd6d1cd19036c42a3d0d976e18568f3a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: fbfd091c821f59febfc8c7a203334454e7b59c12
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833969"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666424"
 ---
-# <a name="memory--and-span-related-types"></a>Powiązana z pamięcią i zakresu typów
+# <a name="memory--and-span-related-types"></a>Typy związane z pamięcią i zakresem
 
-Począwszy od platformy .NET Core 2.1 .NET zawiera wiele powiązanych typów, które reprezentują ciągłe, silnie typizowane region dowolnego pamięci. Należą do nich następujące elementy:
+Począwszy od platformy .NET Core 2,1, .NET zawiera wiele powiązanych typów, które reprezentują ciągły, silnie określony region wolnej pamięci. Należą do nich następujące elementy:
 
-- <xref:System.Span%601?displayProperty=nameWithType>, typ, który umożliwia dostęp do niego ciągły region pamięci. A <xref:System.Span%601> wystąpienia może być wspierany przez tablicę typu `T`, <xref:System.String>, bufor przydzielony za pomocą [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md), lub wskaźnika do niezarządzanej pamięci. Ponieważ ma ona zostać przydzielone na stosie, ma kilku ograniczeniom. Na przykład pole w klasie nie może być typu <xref:System.Span%601>, ani zakresu można używać w operacji asynchronicznych.
+- <xref:System.Span%601?displayProperty=nameWithType>, typ, który jest używany w celu uzyskania dostępu do ciągłego regionu pamięci. Wystąpienie może być obsługiwane przez tablicę typu `T`, a <xref:System.String>, bufor alokowany z [stackalloc](../../csharp/language-reference/operators/stackalloc.md)lub wskaźnik do pamięci niezarządzanej. <xref:System.Span%601> Ponieważ musi być przypisana na stosie, ma wiele ograniczeń. Na przykład pole w klasie nie może być typu <xref:System.Span%601>, ani nie może być używane w operacjach asynchronicznych.
 
-- <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, wersja niezmienne <xref:System.Span%601> struktury.
+- <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, niezmienna wersja <xref:System.Span%601> struktury.
 
-- <xref:System.Memory%601?displayProperty=nameWithType>, dla niego ciągły region pamięci przydzielonej na zarządzanym stosie, a nie na stosie. A <xref:System.Memory%601> wystąpienia może być wspierany przez tablicę typu `T` lub <xref:System.String>. Ponieważ mogą być przechowywane w zarządzanym stosie <xref:System.Memory%601> nie ma żadnego ograniczenia <xref:System.Span%601>.
+- <xref:System.Memory%601?displayProperty=nameWithType>, ciągły region pamięci przydzielony na stercie zarządzanym, a nie na stosie. Wystąpienie może być obsługiwane przez tablicę typu `T` lub <xref:System.String>. <xref:System.Memory%601> Ponieważ może być przechowywana na stercie zarządzanym, <xref:System.Memory%601> nie ma żadnych <xref:System.Span%601>ograniczeń.
 
-- <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>, wersja niezmienne <xref:System.Memory%601> struktury.
+- <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>, niezmienna wersja <xref:System.Memory%601> struktury.
 
-- <xref:System.Buffers.MemoryPool%601?displayProperty=nameWithType>, który przydziela silnie typizowane bloki pamięci w puli pamięci do elementu owner. <xref:System.Buffers.IMemoryOwner%601> wystąpienia, wypożyczone z puli, wywołując <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType> i zwalnia z powrotem do puli, wywołując <xref:System.Buffers.MemoryPool%601.Dispose?displayProperty=nameWithType>.
+- <xref:System.Buffers.MemoryPool%601?displayProperty=nameWithType>, która przydziela jednoznacznie wpisane bloki pamięci z puli pamięci do właściciela. <xref:System.Buffers.IMemoryOwner%601>wystąpienia mogą być wydzierżawione z puli, wywołując <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType> i wywołując z powrotem do puli <xref:System.Buffers.MemoryPool%601.Dispose?displayProperty=nameWithType>przez wywołanie.
 
-- <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>, który reprezentuje właściciela bloku pamięci i kontroluje jego Zarządzanie okresem istnienia.
+- <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>, który reprezentuje właściciela bloku pamięci i kontroluje jego okres istnienia.
 
-- <xref:System.Buffers.MemoryManager%601>, abstrakcyjna klasa bazowa, która może być używany do zastępowania wdrożenia <xref:System.Memory%601> tak, aby <xref:System.Memory%601> był zabezpieczony za pomocą dodatkowych typów, takich jak bezpieczne dojścia. <xref:System.Buffers.MemoryManager%601> jest przeznaczony dla zaawansowanych scenariuszy.
+- <xref:System.Buffers.MemoryManager%601>abstrakcyjna klasa bazowa, która może służyć do zastępowania implementacji <xref:System.Memory%601> , która <xref:System.Memory%601> może być wykonywana przez dodatkowe typy, takie jak bezpieczne dojścia. <xref:System.Buffers.MemoryManager%601>jest przeznaczony dla zaawansowanych scenariuszy.
 
-- <xref:System.ArraySegment%601>, otoki dla określonej liczby elementów tablicy, zaczynając od określonego indeksu.
+- <xref:System.ArraySegment%601>, otoka dla określonej liczby elementów tablicy, zaczynając od określonego indeksu.
 
-- <xref:System.MemoryExtensions?displayProperty=nameWithType>, Kolekcja metody rozszerzenia dla konwersji ciągów, tablic i segmentów tablicy do <xref:System.Memory%601> bloków.
+- <xref:System.MemoryExtensions?displayProperty=nameWithType>, kolekcja metod rozszerzających do przekonwertowania ciągów, tablic i segmentów <xref:System.Memory%601> tablicowych.
 
 > [!NOTE]
-> Dla starszych środowisk <xref:System.Span%601> i <xref:System.Memory%601> są dostępne w [pakietu System.Memory NuGet](https://www.nuget.org/packages/System.Memory/).
+> W przypadku wcześniejszych platform <xref:System.Span%601> i <xref:System.Memory%601> są dostępne w [pakiecie NuGet system. Memory](https://www.nuget.org/packages/System.Memory/).
 
-Aby uzyskać więcej informacji, zobacz <xref:System.Buffers?displayProperty=nameWithType> przestrzeni nazw.
+Aby uzyskać więcej informacji, zobacz <xref:System.Buffers?displayProperty=nameWithType> przestrzeń nazw.
 
-## <a name="working-with-memory-and-span"></a>Praca z pamięci i zakresu
+## <a name="working-with-memory-and-span"></a>Praca z pamięcią i zakresem
 
-Ponieważ typy powiązana z pamięcią i zakresu zwykle są używane do przechowywania danych w potoku przetwarzania, jest ważne, że deweloperzy postępuj zgodnie z zestaw najlepszych rozwiązań, korzystając z <xref:System.Span%601>, <xref:System.Memory%601>i typów pokrewnych. Następujące najlepsze rozwiązania są udokumentowane w artykule [pamięci\<T > i zakres\<T > wytyczne dotyczące użycia](memory-t-usage-guidelines.md).
+Ponieważ typy związane z pamięcią i zakresem są zwykle używane do przechowywania danych w potoku przetwarzania, ważne jest, aby deweloperzy przestrzegali zestawu najlepszych rozwiązań w przypadku używania <xref:System.Span%601>, <xref:System.Memory%601>i powiązanych typów. Te najlepsze rozwiązania opisano w temacie [pamięć\<t > i obejmują\<> Wskazówki dotyczące użycia](memory-t-usage-guidelines.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: 4c1116c088c12ad3859714c8d75704d0156c12f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f99c5b0dc7eab57d4e3e86f49dbbb3228c7b7d8b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705145"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664218"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>\<Dodaj >, Element dla webRequestModules (ustawienia sieci)
+# <a name="add-element-for-webrequestmodules-network-settings"></a>\<Dodaj element > dla webRequestModules (Ustawienia sieci)
 Dodaje niestandardowy moduł żądania sieci Web do aplikacji.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.net>  
 \<webRequestModules>  
 \<add>  
@@ -41,8 +41,8 @@ Dodaje niestandardowy moduł żądania sieci Web do aplikacji.
   
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
-|`prefix`|Prefiks identyfikatora URI dla żądań obsługiwanych przez ten moduł żądania sieci Web.|  
-|`type`|W pełni kwalifikowana nazwa typu (wskazywanym przez <xref:System.Type.FullName%2A> właściwości) i nazwy zestawu (wskazywanym przez <xref:System.Reflection.Assembly.FullName%2A> właściwości), oddzielone przecinkami, który implementuje ten moduł żądania sieci Web.|  
+|`prefix`|Prefiks identyfikatora URI dla żądań obsłużonych przez ten moduł żądania sieci Web.|  
+|`type`|W pełni kwalifikowana nazwa typu (wskazywana przez <xref:System.Type.FullName%2A> Właściwość) i nazwa zestawu (wskazywanym <xref:System.Reflection.Assembly.FullName%2A> przez właściwość) oddzielona przecinkem, który implementuje ten moduł żądania sieci Web.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -51,22 +51,22 @@ Dodaje niestandardowy moduł żądania sieci Web do aplikacji.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Określa moduły do użycia na żądanie informacji z hostów w sieci.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Określa moduły, które mają być używane do żądania informacji z hostów sieciowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- `prefix` Atrybut definiuje prefiks identyfikatora URI, który używa określonego modułu żądania sieci Web. Moduły żądania sieci Web zwykle są rejestrowane do obsługi określonego protokołu, na przykład HTTP lub FTP, ale można zarejestrować do obsługi żądań do określonego serwera lub na serwerze.  
+ Ten `prefix` atrybut definiuje prefiks identyfikatora URI, który używa określonego modułu żądania sieci Web. Moduły żądania sieci Web są zwykle zarejestrowane w celu obsługi określonego protokołu, takiego jak HTTP lub FTP, ale mogą być zarejestrowane w celu obsługi żądania do określonego serwera lub ścieżki na serwerze.  
   
- Moduł żądania sieci Web jest tworzony podczas dopasowywania prefiks identyfikatora URI jest przekazywany do <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> metody.  
+ Moduł żądania sieci Web jest tworzony, gdy do <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> metody jest przesyłany prefiks zgodny z identyfikatorem URI.  
   
- Wartość `prefix` atrybut powinien być wiodące znaki prawidłowym identyfikatorem URI. Na przykład `http` lub `http://www.contoso.com`.
+ Wartość `prefix` atrybutu powinna być wiodącymi znakami prawidłowego identyfikatora URI. Na przykład `http` lub `http://www.contoso.com`.
   
- Wartość `type` atrybut powinien być prawidłową nazwą typu i odpowiedniej nazwy zestawu, oddzielając wartości przecinkami.
+ Wartość `type` atrybutu powinna być prawidłową nazwą typu i odpowiadającą jej nazwą zestawu, rozdzieloną przecinkami.
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
+ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład rejestruje niestandardowego modułu żądania sieci Web do obsługi protokołu HTTP. Należy zastąpić wartości wersji i PublicKeyToken poprawne wartości dla określonego modułu.  
+ Poniższy przykład rejestruje niestandardowy moduł żądania sieci Web dla protokołu HTTP. Należy zastąpić wartości wersji i PublicKeyToken wartościami prawidłowymi dla określonego modułu.  
   
 ```xml  
 <configuration>  
@@ -84,4 +84,4 @@ Dodaje niestandardowy moduł żądania sieci Web do aplikacji.
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Net.WebRequest>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

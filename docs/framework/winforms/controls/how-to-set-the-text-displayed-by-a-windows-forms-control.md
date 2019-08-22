@@ -1,6 +1,6 @@
 ---
 title: 'Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę formularzy systemu Windows'
-ms.date: 03/30/2017
+ms.date: 08/20/2019
 dev_langs:
 - csharp
 - vb
@@ -21,58 +21,69 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 59570af89e6236e3c13866d45dc5361d52b84274
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 887aa5ec9b97770903cd87459d6df5adc3f7ddf0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013091"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666154"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę formularzy systemu Windows
-Kontrolek formularzy Windows Forms jest zazwyczaj wyświetlane jakiś tekst, który jest powiązany z podstawową funkcją kontroli. Na przykład <xref:System.Windows.Forms.Button> kontroli zwykle zawiera nagłówek wskazującą, jakie działania będą wykonywane po kliknięciu przycisku. Dla wszystkich kontrolek, możesz ustawić lub zwróć tekst przy użyciu <xref:System.Windows.Forms.Control.Text%2A> właściwości. Czcionkę można zmienić za pomocą <xref:System.Windows.Forms.Control.Font%2A> właściwości. Można również ustawić tekst za pomocą projektanta.  Zobacz też [jak: Tworzenie klawiszy dostępu dla Windows Forms przy użyciu narzędzia Projektant formantów](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [jak: Ustawianie tekstu wyświetlanego przez Windows Forms przy użyciu narzędzia Projektant](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [jak: Ustawianie obrazu wyświetlanego przez Windows Forms przy użyciu narzędzia Projektant](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
-  
-### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>Aby ustawić tekst wyświetlany przez kontrolkę programowe  
-  
-1. Ustaw <xref:System.Windows.Forms.Control.Text%2A> właściwości na ciąg.  
-  
-     Aby utworzyć klucz dostępu podkreślony obejmuje handlowe "i" (&) przed literą, która będzie klucz dostępu.  
-  
-2. Ustaw <xref:System.Windows.Forms.Control.Font%2A> właściwość do obiektu typu <xref:System.Drawing.Font>.  
-  
-    ```vb  
-    Button1.Text = "Click here to save changes"  
-    Button1.Font = New Font("Arial", 10, FontStyle.Bold, GraphicsUnit.Point)  
-    ```  
-  
-    ```csharp  
-    button1.Text = "Click here to save changes";  
-    button1.Font = new Font("Arial", 10, FontStyle.Bold,  
-       GraphicsUnit.Point);  
-    ```  
-  
-    ```cpp  
-    button1->Text = "Click here to save changes";  
-    button1->Font = new System::Drawing::Font("Arial",  
-       10, FontStyle::Bold, GraphicsUnit::Point);  
-    ```  
-  
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Instrukcje: Ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms
+
+Kontrolki Windows Forms zwykle wyświetlają tekst, który jest powiązany z podstawową funkcją formantu. Na przykład <xref:System.Windows.Forms.Button> kontrolka zazwyczaj wyświetla podpis wskazujący, jaka akcja zostanie wykonana po kliknięciu przycisku. Dla wszystkich kontrolek można ustawić lub zwrócić tekst przy użyciu <xref:System.Windows.Forms.Control.Text%2A> właściwości. Można zmienić czcionkę przy użyciu <xref:System.Windows.Forms.Control.Font%2A> właściwości.
+
+Możesz również ustawić tekst za pomocą [projektanta](#designer).
+
+## <a name="programmatic"></a>Program
+
+1. <xref:System.Windows.Forms.Control.Text%2A> Ustaw właściwość na ciąg.
+
+   Aby utworzyć podkreślony klucz dostępu, program zawiera znak handlowego "i" (&) przed literą, która będzie kluczem dostępu.
+
+2. Ustaw właściwość na obiekt typu <xref:System.Drawing.Font>. <xref:System.Windows.Forms.Control.Font%2A>
+
+    ```vb
+    Button1.Text = "Click here to save changes"
+    Button1.Font = New Font("Arial", 10, FontStyle.Bold, GraphicsUnit.Point)
+    ```
+
+    ```csharp
+    button1.Text = "Click here to save changes";
+    button1.Font = new Font("Arial", 10, FontStyle.Bold, GraphicsUnit.Point);
+    ```
+
+    ```cpp
+    button1->Text = "Click here to save changes";
+    button1->Font = new System::Drawing::Font("Arial", 10, FontStyle::Bold, GraphicsUnit::Point);
+    ```
+
     > [!NOTE]
-    >  Aby wyświetlić znaki specjalne w elementach interfejsu użytkownika, które będą zwykle je interpretować, takich jak elementy menu, można użyć znaku ucieczki. Na przykład, następujący wiersz kodu ustawia element menu tekstu do odczytania "& teraz do czegoś zupełnie inny":  
-  
-    ```vb  
-    MPMenuItem.Text = "&& Now For Something Completely Different"  
-    ```  
-  
-    ```csharp  
-    mpMenuItem.Text = "&& Now For Something Completely Different";  
-    ```  
-  
-    ```cpp  
-    mpMenuItem->Text = "&& Now For Something Completely Different";  
-    ```  
-  
+    > Możesz użyć znaku ucieczki, aby wyświetlić specjalny znak w elementach interfejsu użytkownika, które zwykle interpretują je inaczej, takich jak elementy menu. Na przykład poniższy wiersz kodu ustawia tekst elementu menu do odczytania "& teraz dla czegoś zupełnie innego":
+
+    ```vb
+    MPMenuItem.Text = "&& Now For Something Completely Different"
+    ```
+
+    ```csharp
+    mpMenuItem.Text = "&& Now For Something Completely Different";
+    ```
+
+    ```cpp
+    mpMenuItem->Text = "&& Now For Something Completely Different";
+    ```
+
+## <a name="designer"></a>Projektant
+
+1. W oknie **Właściwości** w programie Visual Studio ustaw właściwość **Text** kontrolki na odpowiedni ciąg.
+
+   Aby utworzyć podkreślony klawisz skrótu, program zawiera znak handlowego "i" (&) przed literą, która będzie klawiszem skrótu.
+
+2. W oknie **Właściwości** wybierz przycisk wielokropka (![przycisk wielokropka (...) w okno właściwości programu Visual Studio](./media/visual-studio-ellipsis-button.png)) obok właściwości **Font** .
+
+   W oknie dialogowym Czcionka standardowa wybierz czcionkę, styl czcionki, rozmiar, efekty (na przykład przekreślenie lub podkreślenie) i skrypt, którego chcesz użyć.
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [Instrukcje: Tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Instrukcje: Odpowiadanie na kliknięcia przycisków formularzy Windows](how-to-respond-to-windows-forms-button-clicks.md)
+- [Instrukcje: Tworzenie kluczy dostępu dla kontrolek Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Instrukcje: Odpowiadanie na kliknięcia przycisku Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

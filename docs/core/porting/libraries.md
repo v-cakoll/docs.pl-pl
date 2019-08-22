@@ -1,136 +1,136 @@
 ---
-title: Port bibliotek platformy .NET Core
-description: Dowiedz się, jak przenieść projekty bibliotek z programu .NET Framework i .NET Core.
+title: Biblioteki portów do programu .NET Core
+description: Dowiedz się, jak przenieść projekty biblioteki z .NET Framework do programu .NET Core.
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663157"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660701"
 ---
-# <a name="port-net-framework-libraries-to-net-core"></a>Port biblioteki .NET Framework i .NET Core
+# <a name="port-net-framework-libraries-to-net-core"></a>Porty .NET Framework biblioteki do programu .NET Core
 
-Dowiedz się, jak przenieść kod biblioteki .NET Framework i .NET Core, aby uruchomić dla wielu platform i Rozszerz zasięg aplikacji, które go używają.
+Dowiedz się, jak przenieść kod biblioteki .NET Framework do programu .NET Core, aby uruchamiać Międzyplatformowe i rozszerzać zasięg aplikacji, które go używają.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-W tym artykule założono, że możesz:
+W tym artykule przyjęto założenie, że:
 
-- Program Visual Studio 2017 r. lub nowszej.
-  - .NET core nie jest obsługiwane we wcześniejszych wersjach programu Visual Studio
-- Zrozumienie [zalecane przenoszenie procesu](index.md).
-- Problem został rozwiązany w jakichkolwiek problemów z [zależności innych firm](third-party-deps.md).
+- Używa programu Visual Studio 2017 lub nowszego.
+  - Platforma .NET Core nie jest obsługiwana we wcześniejszych wersjach programu Visual Studio
+- Zapoznaj się z [zalecanym procesem przenoszenia](index.md).
+- Rozwiązano wszelkie problemy związane [](third-party-deps.md)z zależnościami innych firm.
 
-Należy również zapoznać się z zawartością w następujących tematach:
+Należy również zapoznać się z treścią następujących tematów:
 
-[.NET standard](../../standard/net-standard.md)\
-W tym temacie opisano formalną specyfikację interfejsów API platformy .NET, które mają być dostępne na wszystkich implementacji .NET.
+[.NET Standard](../../standard/net-standard.md)\
+W tym temacie opisano formalne specyfikacje interfejsów API platformy .NET, które mają być dostępne we wszystkich implementacjach platformy .NET.
 
-[Pakiety, Metapakiety i struktury](~/docs/core/packages.md)   
-W tym artykule omówiono sposób platformy .NET Core definiuje używa pakietów i sposobu pakietów informacje prasowe kod działający na wiele implementacji .NET.
+[Pakiety, aplikacje i struktury](../packages.md)   
+W tym artykule omówiono sposób definiowania i używania pakietów przez platformę .NET Core oraz sposób obsługi kodu działającego w wielu implementacjach platformy .NET.
 
-[Tworzenie bibliotek za pomocą narzędzi międzyplatformowych](~/docs/core/tutorials/libraries.md)   
-W tym temacie wyjaśniono, jak napisać biblioteki dla platformy .NET przy użyciu narzędzi interfejsu wiersza polecenia dla wielu platform.
+[Tworzenie bibliotek przy użyciu narzędzi międzyplatformowych](../tutorials/libraries.md)   
+W tym temacie wyjaśniono, jak pisać biblioteki dla platformy .NET przy użyciu międzyplatformowych narzędzi interfejsu wiersza polecenia.
 
-[Dodatki do *csproj* formatu dla platformy .NET Core](~/docs/core/tools/csproj.md)   
-W tym artykule opisano zmiany, które zostały dodane do pliku projektu w ramach przejścia *csproj* i MSBuild.
+[Dodatki do formatu *csproj* dla platformy .NET Core](../tools/csproj.md)   
+W tym artykule opisano zmiany, które zostały dodane do pliku projektu w ramach przenoszenia do *csproj* i MSBuild.
 
-[Eksportowanie do programu .NET Core — analizowanie zależności innych firm](~/docs/core/porting/third-party-deps.md)   
-W tym temacie omówiono przenośność zależności innych firm i co można zrobić podczas zależności pakietów NuGet nie zostanie uruchomiona na platformie .NET Core.
+[Przenoszenie do platformy .NET Core — analizowanie zależności innych firm](third-party-deps.md)   
+W tym temacie omówiono przenośność zależności innych firm i czynności, które należy wykonać, gdy zależność pakietu NuGet nie jest uruchamiana na platformie .NET Core.
 
-## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>Trwa przekierowywanie do .NET Framework 4.7.2 kodu .NET Framework
+## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>Przekieruj kod .NET Framework do .NET Framework 4.7.2
 
-Jeśli Twój kod nie jest przeznaczony dla .NET Framework 4.7.2, zalecane jest przekierowanie do .NET Framework 4.7.2. Zapewnia to dostępność najnowszych alternatywy interfejsu API w sytuacjach, w którym .NET Standard nie obsługuje istniejących interfejsów API.
+Jeśli Twój kod nie jest celem .NET Framework 4.7.2, zalecamy przekierowanie do .NET Framework 4.7.2. Zapewnia to dostępność najnowszych alternatywnych rozwiązań API dla przypadków, w których .NET Standard nie obsługuje istniejących interfejsów API.
 
-Dla każdego z projektów w programie Visual Studio, dla których chcesz port, wykonaj następujące czynności:
+Dla każdego projektu w programie Visual Studio należy wykonać następujące czynności:
 
-1. Kliknij prawym przyciskiem myszy projekt i wybierz pozycję **właściwości**.
-1. W **platformę docelową** listy rozwijanej wybierz **.NET Framework 4.7.2**.
-1. Ponowna kompilacja projektów.
+1. Kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Właściwości**.
+1. Na liście rozwijanej **platforma** docelowa wybierz pozycję **.NET Framework 4.7.2**.
+1. Ponowne Kompilowanie projektów.
 
-Ponieważ teraz Twoje projekty ukierunkowane na .NET Framework 4.7.2, korzystać z tej wersji programu .NET Framework jako podstawa dla przenoszenie kodu.
+Ponieważ projekty są teraz docelowe .NET Framework 4.7.2, Użyj tej wersji .NET Framework jako podstawy do przenoszenia kodu.
 
-## <a name="determining-the-portability-of-your-code"></a>Określanie przenośność kodu
+## <a name="determining-the-portability-of-your-code"></a>Określanie przenośności kodu
 
-Następnym krokiem jest, aby uruchomić analizator przenośności interfejsu API (ApiPort), aby wygenerować raport przenoszenia do analizy.
+Następnym krokiem jest uruchomienie analizatora przenośności interfejsu API (ApiPort) w celu wygenerowania raportu przenośności na potrzeby analizy.
 
-Upewnij się, że rozumiesz [analizator przenośności interfejsu API (ApiPort)](../../standard/analyzers/portability-analyzer.md) i jak można wygenerować raporty przenośność przeznaczonych dla platformy .NET Core. Jak to zrobić tym prawdopodobnie różni się w zależności od potrzeb i gustom osobistych. Poniżej przedstawiono kilka różnych metod. Może się okazać samodzielnie mieszanie kroki tych metod w zależności od struktury kodu.
+Upewnij się, że rozumiesz [analizatora przenośności interfejsu API (ApiPort)](../../standard/analyzers/portability-analyzer.md) i jak generować raporty dotyczące przenośności dla platformy .NET Core. Jak to możliwe, może się to różnić w zależności od potrzeb i zasmaków osobistych. Poniżej przedstawiono kilka różnych metod. W zależności od tego, jak kod jest strukturalny, możesz się doejść do mieszania kroków tych metod.
 
-### <a name="dealing-primarily-with-the-compiler"></a>Zajmowanie się przede wszystkim kompilator
+### <a name="dealing-primarily-with-the-compiler"></a>Postępowanie głównie z kompilatorem
 
-Takie podejście może być najlepsze dla małych projektów lub projektów, które nie używają wielu interfejsów API programu .NET Framework. To podejście jest proste:
+Takie podejście może być najlepszym rozwiązaniem dla małych projektów lub projektów, które nie używają wielu .NET Framework interfejsów API. Podejście jest proste:
 
-1. Opcjonalnie możesz uruchomić ApiPort nad projektem. Po uruchomieniu ApiPort, należy uzyskać wiedzę raportu na problemy, które będą potrzebne do adresu.
-1. Skopiuj cały kod do nowego projektu platformy .NET Core.
-1. Podczas odwoływania się do raportu przenośność (jeśli jest generowane), należy rozwiązać błędy kompilatora do momentu, w pełni kompiluje projekt.
+1. Opcjonalnie Uruchom ApiPort w projekcie. W przypadku uruchomienia ApiPort należy uzyskać informacje z raportu dotyczące problemów, które trzeba rozwiązać.
+1. Kopiuj cały kod do nowego projektu .NET Core.
+1. W odniesieniu do raportu przenośności (jeśli został wygenerowany) Rozwiązuj błędy kompilatora do momentu całkowitego skompilowania projektu.
 
-Mimo że takie podejście jest bez struktury, skoncentrowane na kodzie podejście często prowadzi do szybkiego rozwiązywania problemów i może być najlepszym rozwiązaniem dla mniejszych projektów lub biblioteki. Projekt, który zawiera tylko modeli danych może być idealne kandydatem do tej metody.
+Chociaż takie podejście jest pozbawione struktury, podejście ukierunkowane na kod często prowadzi do szybkiego rozwiązywania problemów i może być najlepszym rozwiązaniem dla mniejszych projektów lub bibliotek. Projekt, który zawiera tylko modele danych, może być idealnym kandydatem do tego podejścia.
 
-### <a name="staying-on-the-net-framework-until-portability-issues-are-resolved"></a>Dokonywanie aktualizacji na .NET Framework, dopóki nie zostaną rozwiązane problemy
+### <a name="staying-on-the-net-framework-until-portability-issues-are-resolved"></a>W .NET Framework do momentu rozwiązania problemów z przenośnością
 
-Takie podejście może być najlepiej, jeśli chcesz mieć kod, który kompiluje podczas całego procesu. To podejście jest następująca:
-
-1. Uruchom ApiPort w projekcie.
-1. Rozwiązywanie problemów z za pomocą różnych interfejsów API, które są zgodne.
-1. Zwróć uwagę na obszary, gdzie masz możliwości używana zamiast bezpośredniego.
-1. Powtórz wcześniejsze kroki dla wszystkich projektów, które jest przenoszenie, dopóki nie masz pewność, że każdy jest gotowa do skopiowania za pośrednictwem do nowego projektu platformy .NET Core.
-1. Skopiuj kod do nowego projektu platformy .NET Core.
-1. Pozwolimy na opracowanie wszelkie problemy, w którym zauważyć że zamiast bezpośredniego nie istnieje.
-
-To podejście dokładnej jest bardziej ustrukturyzowane niż po prostu praca się błędy kompilatora, ale jest nadal stosunkowo skoncentrowane na kodzie i ma tę zaletę zawsze masz kod, który kompiluje. Sposób rozwiązania niektórych problemów, które nie może zostać zlikwidowane przez tylko przy użyciu innego interfejsu API może być różny. Może się okazać konieczne tworzenie bardziej kompleksowe planowanie dla niektórych projektów, które jest objęte dalej podejście.
-
-### <a name="developing-a-comprehensive-plan-of-attack"></a>Tworzenie kompleksowego planu ataku
-
-Takie podejście może być najlepszym rozwiązaniem dla większych i bardziej złożonych projektów, gdzie całkowicie zdebugować niektóre obszary kodu lub restrukturyzacji kod może być konieczna Obsługa platformy .NET Core. To podejście jest następująca:
+Takie podejście może być najlepszym rozwiązaniem, jeśli wolisz mieć kod, który kompiluje się podczas całego procesu. Podejście jest następujące:
 
 1. Uruchom ApiPort w projekcie.
-1. Dowiedz się, gdzie każdy typ nieprzenośne służy i jak to ma wpływ na ogólną przenoszenia.
-   - Zrozumienie natury tych typów. Są one niewielka liczba, ale używany często? Są one duże wiele, ale używanych rzadko? Ich użycie jest skoncentrowany, czy są rozmieszczone w całym kodzie?
-   - Jest łatwy do izolowania kod, który nie jest przenośny, umożliwiając poradzenie sobie z tym bardziej efektywnie?
-   - Czy musisz wykonać refaktoryzację kodu?
-   - Dla tych typów, które nie są przenośne są alternatywne interfejsy API, które wykonania tego samego zadania? Na przykład jeśli używasz <xref:System.Net.WebClient> klasy, można używać <xref:System.Net.Http.HttpClient> klasy zamiast tego.
-   - Istnieją różne przenośnych interfejsów API do wykonania zadania, nawet jeśli nie jest zamiennikiem? Na przykład jeśli używasz <xref:System.Xml.Schema.XmlSchema> można przeanalizować kodu XML, ale nie wymagają XML odnajdywania schematów, można użyć <xref:System.Xml.Linq> interfejsów API i implementowanie analizy samodzielnie zamiast polegania na interfejs API.
-1. W przypadku zestawów, które są trudne do portu jest warte pozostawiania je w programie .NET Framework, teraz? Poniżej przedstawiono niektóre kwestie, należy wziąć pod uwagę:
-   - Niektóre funkcje mogą mieć w bibliotece, która jest niezgodna z platformą .NET Core, ponieważ zbyt intensywnie korzysta się z funkcji .NET Framework lub specyficzne dla Windows. Jest warte pozostawiając tę funkcję teraz i zwalnianie wersji platformy .NET Core, biblioteki za pomocą funkcji tymczasowo do momentu zasoby są dostępne do portu funkcji?
-   - Refaktoryzacja może pomóc?
-1. Jest to uzasadnione do zapisania Twojej własnej implementacji niedostępny w .NET Framework API?
-   Można rozważyć kopiowanie, modyfikowanie i wykorzystaniu kodu z [źródła programu .NET Framework odwołanie](https://github.com/Microsoft/referencesource). Odwołanie do kodu źródłowego jest licencjonowane w ramach [licencją MIT](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt), więc trzeba znaczące użytkownicy mogą korzystać ze źródłem jako podstawy własnego kodu. Pamiętaj tylko prawidłowo atrybutu firmy Microsoft w swoim kodzie.
-1. Powtórz tę procedurę, zgodnie z potrzebami w różnych projektach.
+1. Rozwiązywanie problemów przy użyciu różnych interfejsów API, które są przenośne.
+1. Zanotuj wszystkie obszary, w których nie można użyć bezpośredniej alternatywy.
+1. Powtórz poprzednie kroki dla wszystkich projektów, które są używane, dopóki nie masz pewności, że wszystkie są gotowe do skopiowania do nowego projektu .NET Core.
+1. Skopiuj kod do nowego projektu .NET Core.
+1. Wykorzystaj wszelkie problemy, w których zauważono, że bezpośrednia alternatywa nie istnieje.
+
+To staranne podejście jest bardziej strukturalne niż zwykłe wykonywanie błędów kompilatora, ale nadal jest relatywnie ukierunkowane na kod i ma korzyść, która kompiluje kod. Sposób rozwiązywania niektórych problemów, których nie można rozwiązać przy użyciu innego interfejsu API, różni się znacznie. Może się okazać, że konieczne jest opracowanie bardziej kompleksowego planu dla niektórych projektów, który jest objęty kolejnym podejściem.
+
+### <a name="developing-a-comprehensive-plan-of-attack"></a>Opracowywanie kompleksowego planu ataków
+
+Takie podejście może być najlepszym rozwiązaniem w przypadku większych i bardziej złożonych projektów, w przypadku których kod restrukturyzacji lub całkowite ponowne zapisanie niektórych obszarów kodu mogą być niezbędne do obsługi platformy .NET Core. Podejście jest następujące:
+
+1. Uruchom ApiPort w projekcie.
+1. Informacje o tym, gdzie jest używany każdy typ nieprzenośny i jak ma to wpływ na ogólną przenośność.
+   - Zrozumienie charakteru tych typów. Czy są one małe w liczbie, ale używane często? Czy są one duże w liczbie, ale używane rzadko? Czy ich użycie jest skoncentrowane lub czy jest rozłożone w całym kodzie?
+   - Czy łatwo jest izolować kod, który nie jest przenośny, aby można było go bardziej efektywnie rozwiązać?
+   - Czy musisz ponownie wykonać swój kod?
+   - Czy dla tych typów, które nie są przenośne, są alternatywne interfejsy API, które spełniają to samo zadanie? Na przykład jeśli korzystasz z <xref:System.Net.WebClient> klasy, możesz zamiast tego <xref:System.Net.Http.HttpClient> użyć klasy.
+   - Czy istnieją różne przenośne interfejsy API dostępne do wykonania zadania, nawet jeśli nie jest to zamiennik? Na przykład jeśli <xref:System.Xml.Schema.XmlSchema> używasz programu do analizowania kodu XML, ale nie wymagasz odnajdywania schematu XML, <xref:System.Xml.Linq> możesz używać interfejsów API i implementować analizę, zamiast korzystać z interfejsu API.
+1. Jeśli masz zestawy, które są trudne do portów, czy warto teraz pozostawić je na .NET Framework? Oto kilka kwestii, które należy wziąć pod uwagę:
+   - W bibliotece mogą działać pewne funkcje, które są niezgodne z platformą .NET Core, ponieważ opierają się one zbyt mocno na .NET Framework lub funkcjach specyficznych dla systemu Windows. Czy ta funkcja jest powarta w tym momencie, i tymczasowo zwalniasz wersję biblioteki platformy .NET Core z mniejszą funkcjonalnością do momentu dostępności zasobów do przenoszenia funkcji?
+   - Czy chcesz uzyskać pomoc dotyczącą refaktoryzacji?
+1. Czy warto napisać własną implementację niedostępnego interfejsu API .NET Framework?
+   Można rozważyć możliwość kopiowania, modyfikowania i używania kodu ze [źródła odwołania .NET Framework](https://github.com/Microsoft/referencesource). Kod źródłowy odwołania jest licencjonowany w ramach [licencji MIT](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt), więc masz znaczną swobodę używania źródła jako podstawy dla własnego kodu. Upewnij się, że poprawnie pokoduje firmę Microsoft w kodzie.
+1. Powtórz ten proces zgodnie z wymaganiami dla różnych projektów.
  
-Faza analizy może zająć trochę czasu, w zależności od rozmiaru bazy kodu. W perspektywie długoterminowej poświęcania czasu na tym etapie, aby dokładnie zrozumieć, w zakresie zmian i aby opracować plan zwykle oszczędza czas, szczególnie w przypadku złożonych bazy kodu.
+Faza analizy może zająć trochę czasu w zależności od rozmiaru bazy kodu. Czas wydatków w tej fazie w celu dokładnego zrozumienia zakresu zmian, które są potrzebne, i opracowania planu zwykle oszczędza czas w długim przebiegu, szczególnie jeśli masz złożoną bazę kodu.
 
-Plan może obejmować wprowadzeniu istotnych zmian do Twojej bazy kodu podczas nadal przeznaczone dla .NET Framework 4.7.2, dzięki czemu to nieco bardziej ustrukturyzowane podejście poprzedniego. Jak obniżyć dotyczące wykonywania planu zależy od kodu.
+Twój plan może polegać na wprowadzeniu znaczących zmian w bazie kodu, gdy nadal są dostępne .NET Framework 4.7.2, co sprawia, że jest to bardziej strukturalna wersja poprzedniego podejścia. Informacje o wykonywaniu planu są zależne od bazy kodu.
 
 ### <a name="mixing-approaches"></a>Mieszanie metod
 
-Istnieje prawdopodobieństwo, że będziesz mieszać powyższych podejść w poszczególnych projektów. Należy wykonać, co najodpowiedniejszy dla Ciebie i Twojej bazy kodu.
+Istnieje duże podejście do powyższego podejścia dla poszczególnych projektów. Należy to zrobić najlepiej dla Ciebie i dla bazy kodu.
 
 ## <a name="porting-your-tests"></a>Przenoszenie testów
 
-Najlepszym sposobem upewnij się, że wszystko działa, gdy zostały przeniesione kodu jest do testowania kodu, jak przenieść go do platformy .NET Core. Aby to zrobić, należy użyć struktura testowania, który kompiluje i uruchamia testy dla platformy .NET Core. Obecnie masz trzy opcje:
+Najlepszym sposobem, aby upewnić się, że wszystko działa, gdy Port został przetestowany w celu przetestowania kodu podczas jego portów do .NET Core. W tym celu należy użyć platformy testowania, która kompiluje i uruchamia testy dla platformy .NET Core. Obecnie są dostępne trzy opcje:
 
 - [xUnit](https://xunit.github.io/)
   * [Wprowadzenie](https://xunit.github.io/docs/getting-started-dotnet-core.html)
-  * [Narzędzie, aby przekonwertować Projekt narzędzia MSTest, xUnit](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
+  * [Narzędzie do konwersji projektu MSTest na xUnit](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
   * [Wprowadzenie](https://github.com/nunit/docs/wiki/Installation)
-  * [Migrowanie z MSTest do NUnit wpis w blogu](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
+  * [Wpis w blogu dotyczący migracji z MSTest do NUnit](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
 ## <a name="recommended-approach-to-porting"></a>Zalecane podejście do przenoszenia
 
-Ostatecznie przenoszenia nakład pracy zależy od intensywnie struktury kodu .NET Framework. Dobrym sposobem na porcie kodu jest przede wszystkim *podstawowy* biblioteki to podstawowe składniki kodu. Może to być modeli danych lub niektóre podstawowe klasy i metody, używanych przez wszystkie inne elementy bezpośrednio lub pośrednio.
+W rezultacie nakłady pracy związane z przenoszeniem są zależne od tego, jak kod .NET Framework ma strukturę. Dobrym sposobem na port kodu jest rozpoczęcie od *podstaw* biblioteki, które są podstawowymi składnikami kodu. Mogą to być modele danych lub inne klasy podstawowe i metody, które pozostałe używają bezpośrednio lub pośrednio.
 
-1. Port projektu testowego, który testuje warstwy biblioteki, które są aktualnie przenoszenie.
-1. Skopiuj podstawowy biblioteki do nowego projektu platformy .NET Core i wybierz wersję programu .NET Standard chcesz obsługiwać.
-1. Wprowadź wszelkie zmiany, konieczne kod do skompilowania. Większość tego mogą wymagać Dodawanie zależności pakietów NuGet, aby Twoje *csproj* pliku.
-1. Uruchom testy i wprowadzić wymagane poprawki.
-1. Wybierz kolejna warstwa kodu do portu i powtórz wcześniejsze kroki.
+1. Port projektu testowego, który testuje warstwę biblioteki aktualnie przeznaczoną do przenoszenia.
+1. Skopiuj bazę biblioteki do nowego projektu .NET Core i wybierz wersję .NET Standard, która ma być obsługiwana.
+1. Wprowadź wszelkie zmiany potrzebne do uzyskania kodu do skompilowania. Większość może wymagać dodania zależności pakietów NuGet do pliku *csproj* .
+1. Uruchom testy i wprowadź wszelkie potrzebne zmiany.
+1. Wybierz następną warstwę kodu do przełączenia, a następnie powtórz poprzednie kroki.
 
-Jeśli rozpoczynać podstawowej biblioteki i przenieść na zewnątrz od podstawy i testowania każdej warstwy, zgodnie z potrzebami przenoszenie jest systematyczne procesu, gdy problemy są izolowane do jednej warstwy kodu w czasie.
+Jeśli zaczynasz od podstawowej biblioteki i przeniesiesz ją na zewnątrz i przetestujesz każdą warstwę w razie potrzeby, port jest procesem systematycznym, w którym problemy są izolowane od jednej warstwy kodu naraz.
 
 >[!div class="step-by-step"]
 >[Next](project-structure.md)

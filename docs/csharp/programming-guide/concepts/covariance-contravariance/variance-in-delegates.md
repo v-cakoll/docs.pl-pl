@@ -2,12 +2,12 @@
 title: Wariancja w delegatach (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 80062f755a6159c48ff595556db99b0ac067533a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0a77c4abe8f2540e4b3b33d2cf99a20c3c2fa942
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595175"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659939"
 ---
 # <a name="variance-in-delegates-c"></a>Wariancja w delegatach (C#)
 .NET Framework 3,5 wprowadzono obsługę wariancji dla pasujących sygnatur metod z typami delegatów we C#wszystkich delegatach w. Oznacza to, że można przypisać do delegatów nie tylko metod, które mają pasujące podpisy, ale również metody, które zwracają więcej typów pochodnych (Kowariancja) lub akceptują parametry, które mają mniej pochodne typy (kontrawariancja) niż określone przez typ delegata . Dotyczy to zarówno delegatów rodzajowych, jak i nieogólnych.  
@@ -198,6 +198,6 @@ public static void Test()
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy ogólne](~/docs/standard/generics/index.md)
+- [Typy ogólne](../../../../standard/generics/index.md)
 - [Korzystanie z wariancji dla delegatów dla funkcjiC#Func i Action ()](./using-variance-for-func-and-action-generic-delegates.md)
 - [Instrukcje: Łączenie delegatów (delegatów multiemisji)](../../delegates/how-to-combine-delegates-multicast-delegates.md)

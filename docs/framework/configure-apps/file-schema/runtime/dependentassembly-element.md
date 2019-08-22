@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac83a0b27a965721dabe1bdf2e05afbdc9b9c961
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bf1a15ff27f4390f1985a2d2730b1acfcaab2c1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704781"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663830"
 ---
-# <a name="dependentassembly-element"></a>\<dependentAssembly> Element
-Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. Użyj jednej `dependentAssembly` elementu dla każdego zestawu.  
+# <a name="dependentassembly-element"></a>\<Elementy > dependentAssembly
+Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. Użyj jednego `dependentAssembly` elementu dla każdego zestawu.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<runtime>  
-\<assemblybinding — >  
-\<dependentAssembly>  
+\<> zestawubinding  
+\<> dependentAssembly  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,10 +43,10 @@ Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. U�
   
 |Element|Opis|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Zawiera informacje identyfikujące zestaw. Ten element musi być uwzględniony w każdym `dependentAssembly` elementu.|  
-|`codeBase`|Określa, gdzie środowisko uruchomieniowe można znaleźć zestaw współużytkowany, jeśli nie jest zainstalowany na komputerze.|  
+|`assemblyIdentity`|Zawiera informacje identyfikacyjne zestawu. Ten element musi być uwzględniony w `dependentAssembly` każdym elemencie.|  
+|`codeBase`|Określa, gdzie środowisko uruchomieniowe może znaleźć zestaw współużytkowany, jeśli nie jest zainstalowany na komputerze.|  
 |`bindingRedirect`|Przekierowuje jedną wersję zestawu do innej.|  
-|`publisherPolicy`|Określa, czy środowisko uruchomieniowe mają zastosowanie zasady wydawcy dla tego zestawu.|  
+|`publisherPolicy`|Określa, czy środowisko uruchomieniowe stosuje zasady wydawcy dla tego zestawu.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -57,7 +57,7 @@ Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. U�
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak do hermetyzacji informacji o zestawie dla dwóch zestawów.  
+ Poniższy przykład pokazuje, jak hermetyzować informacje o zestawie dla dwóch zestawów.  
   
 ```xml  
 <configuration>  
@@ -82,6 +82,6 @@ Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. U�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Przekierowywanie wersji zestawu](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)
+- [Przekierowywanie wersji zestawu](../../redirect-assembly-versions.md)

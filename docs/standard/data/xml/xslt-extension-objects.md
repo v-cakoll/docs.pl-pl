@@ -5,38 +5,38 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2efe31ce8ece241bdfeb95687c5496c7ba0fd626
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73afa1880bac5db7f8e28070afa878e70d263bd5
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615304"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666500"
 ---
 # <a name="xslt-extension-objects"></a>Obiekty rozszerzeń XSLT
-Obiekty rozszerzeń są używane do rozszerzania funkcji arkuszy stylów. Obiekty rozszerzeń są obsługiwane przez <xref:System.Xml.Xsl.XsltArgumentList> klasy.  
+Obiekty rozszerzeń służą do rozszerzania funkcjonalności arkuszy stylów. Obiekty rozszerzeń są obsługiwane przez <xref:System.Xml.Xsl.XsltArgumentList> klasę.  
   
- Poniżej przedstawiono zalety korzystania z obiektu rozszerzenia zamiast osadzonych skryptów:  
+ Poniżej przedstawiono zalety użycia obiektu rozszerzenia zamiast skryptu osadzonego:  
   
-- Zapewnia lepszą hermetyzacji i ponowne użycie klas.  
+- Zapewnia lepszą hermetyzację i ponowne użycie klas.  
   
-- Umożliwia arkusze stylów była mniejsza i będzie łatwiejszy w utrzymaniu.  
+- Zezwala na mniejsze i łatwiejsze w obsłudze arkusze stylów.  
   
- Obiekty rozszerzeń XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> metody. Kwalifikowana nazwa i identyfikator URI przestrzeni nazw są skojarzone z obiektu rozszerzenia, w tym czasie.  
+ Obiekty rozszerzeń XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> obiektu <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> za pomocą metody. Kwalifikowana nazwa i identyfikator URI przestrzeni nazw są skojarzone z obiektem rozszerzenia w tym czasie.  
   
 > [!NOTE]
->  Zestaw uprawnień FullTrust jest wymagane do wywołania <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> metody. Aby uzyskać więcej informacji, zobacz [zabezpieczenia dostępu kodu](../../../../docs/framework/misc/code-access-security.md) i [nazwanych zestawów uprawnień](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
+>  Zestaw uprawnień FullTrust jest wymagany do wywołania <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> metody. Aby uzyskać więcej informacji, zobacz [zabezpieczenia dostępu kodu](../../../../docs/framework/misc/code-access-security.md) i [nazwane zestawy uprawnień](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
- Typy danych zwróciło obiekty rozszerzeń są jedną z czterech podstawowych XPath typy danych `number`, `string`, `Boolean`, i `node set`.  
+ Typy danych zwracane z obiektów rozszerzeń to jeden z czterech `number`podstawowych typów danych XPath `Boolean`, `string`,, i `node set`.  
   
- Wszystkie metody, która jest zdefiniowana za pomocą `params` — słowo kluczowe, które dopuszcza nieokreślonej liczby parametrów do przekazania, nie jest obsługiwana przez <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Arkuszy stylów XSLT, które wykorzystują wszelkie metody zdefiniowane przy użyciu `params` — słowo kluczowe nie będą działać poprawnie. Aby uzyskać więcej informacji, zobacz [params](~/docs/csharp/language-reference/keywords/params.md).  
+ Każda metoda, która jest zdefiniowana za `params` pomocą słowa kluczowego, umożliwiająca nieokreśloną liczbę parametrów do przesłania, nie jest obecnie obsługiwana <xref:System.Xml.Xsl.XslCompiledTransform> przez klasę. Arkusze stylów XSLT używające dowolnej metody zdefiniowanej za `params` pomocą słowa kluczowego nie będą działały prawidłowo. Aby uzyskać szczegółowe informacje, zobacz [params](../../../csharp/language-reference/keywords/params.md).  
   
-### <a name="to-use-an-xslt-extension-object"></a>Używanie obiektu rozszerzenia XSLT  
+### <a name="to-use-an-xslt-extension-object"></a>Aby użyć obiektu rozszerzenia XSLT  
   
-1. Tworzenie <xref:System.Xml.Xsl.XsltArgumentList> obiektu i dodać za pomocą obiektu rozszerzenia <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> metody.  
+1. Utwórz obiekt i Dodaj obiekt rozszerzenia za pomocą <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> metody. <xref:System.Xml.Xsl.XsltArgumentList>  
   
-2. Wywołanie obiektu rozszerzenia z arkusza stylów.  
+2. Wywołaj obiekt rozszerzenia z arkusza stylów.  
   
-3. Przekaż <xref:System.Xml.Xsl.XsltArgumentList> obiekt <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
+3. <xref:System.Xml.Xsl.XsltArgumentList> Przekaż obiekt<xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> do metody.  
   
 ## <a name="see-also"></a>Zobacz także
 

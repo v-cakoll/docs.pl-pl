@@ -9,12 +9,12 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: 5de7645ecbf2123df849046a152643cd629b4898
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 49e93f12bebbf409e6b3a06634556b9103c85f44
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038234"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666201"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Instrukcje: określanie ikony dla przycisku ToolBar przy użyciu narzędzia Projektant
 
@@ -24,7 +24,6 @@ ms.locfileid: "69038234"
 <xref:System.Windows.Forms.ToolBar>przyciski mogą wyświetlać w nich ikony umożliwiające łatwą identyfikację użytkowników. Jest to realizowane poprzez dodanie obrazów do <xref:System.Windows.Forms.ImageList> składnika i skojarzenie go <xref:System.Windows.Forms.ToolBar> z kontrolką.
 
 Poniższa procedura wymaga projektu **aplikacji systemu Windows** z formularzem zawierającym <xref:System.Windows.Forms.ToolBar> formant i <xref:System.Windows.Forms.ImageList> składnik. Aby uzyskać informacje na temat konfigurowania takiego projektu, zobacz [How to: Utwórz projekt](/visualstudio/ide/step-1-create-a-windows-forms-application-project) aplikacji Windows Forms i [instrukcje: Dodaj formanty do Windows Forms](how-to-add-controls-to-windows-forms.md).
-
 
 ### <a name="to-set-an-icon-for-a-toolbar-button-at-design-time"></a>Aby ustawić ikonę dla przycisku paska narzędzi w czasie projektowania
 

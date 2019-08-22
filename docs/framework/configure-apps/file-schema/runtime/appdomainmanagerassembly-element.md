@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff8c91680a0c3049fa9bc2f7e9c1bf3f654a19b9
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3a293af73fde5ee72ba02c7e6613e9c57eae1b9b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487772"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658949"
 ---
-# <a name="appdomainmanagerassembly-element"></a>\<appdomainmanagerassembly — > Element
-Określa zestaw, który zapewnia Menedżer domeny aplikacji dla domyślnej domeny aplikacji w procesie.  
+# <a name="appdomainmanagerassembly-element"></a>\<appDomainManagerAssembly, element >
+Określa zestaw, który udostępnia Menedżer domeny aplikacji dla domyślnej domeny aplikacji w procesie.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<runtime>  
-\<appDomainManagerAssembly>  
+\<appDomainManagerAssembly >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,7 +35,7 @@ Określa zestaw, który zapewnia Menedżer domeny aplikacji dla domyślnej domen
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`value`|Atrybut wymagany. Określa nazwę wyświetlaną zestawu, który zapewnia Menedżer domeny aplikacji dla domyślnej domeny aplikacji w procesie.|  
+|`value`|Atrybut wymagany. Określa nazwę wyświetlaną zestawu, który udostępnia Menedżer domeny aplikacji dla domyślnej domeny aplikacji w procesie.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -48,20 +48,20 @@ Określa zestaw, który zapewnia Menedżer domeny aplikacji dla domyślnej domen
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aby określić typ Menedżer domeny aplikacji, należy określić zarówno ten element i [ \<appdomainmanagertype — >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md) elementu. Jedną z tych elementów nie zostanie określony, druga jest ignorowana.  
+ Aby określić typ Menedżera domeny aplikacji, należy określić zarówno ten element, jak i [ \<element appDomainManagerType >](appdomainmanagertype-element.md) . Jeśli jeden z tych elementów nie zostanie określony, drugi zostanie zignorowany.  
   
- Po załadowaniu domyślnej domeny aplikacji <xref:System.TypeLoadException> jest generowany, jeśli określony zestaw nie istnieje, lub jeśli zestaw nie zawiera typu określonego przez [ \<appdomainmanagertype — >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md) element; oraz Proces ten ulegnie awarii rozpocząć. Jeśli zestaw zostanie znaleziony, ale informacje o wersji jest niezgodna, <xref:System.IO.FileLoadException> zgłaszany.  
+ Podczas ładowania domyślnej domeny aplikacji jest zgłaszany <xref:System.TypeLoadException> , jeśli określony zestaw nie istnieje lub jeśli zestaw nie zawiera typu określonego [ \<przez appDomainManagerType element >](appdomainmanagertype-element.md) ; a proces kończy się niepowodzeniem Start. Jeśli zestaw zostanie znaleziony, ale informacje o wersji nie są zgodne, <xref:System.IO.FileLoadException> zgłaszany jest wyjątek.  
   
- Kiedy określasz typ Menedżera domeny aplikacji dla domyślnej domeny aplikacji, innych domenach aplikacji, utworzone na podstawie domyślnej domeny aplikacji dziedziczą typ Menedżera domeny aplikacji. Użyj <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> i <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> właściwości, aby określić typ Menedżera domeny w innej aplikacji dla nowej domeny aplikacji.  
+ W przypadku określenia typu Menedżera domeny aplikacji dla domyślnej domeny aplikacji inne domeny aplikacji utworzone na podstawie domyślnej domeny aplikacji dziedziczą typ Menedżera domeny aplikacji. Użyj właściwości <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> i, aby określić inny typ Menedżera domeny aplikacji dla nowej domeny aplikacji. <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>  
   
- Określanie typu Menedżer domeny aplikacji wymaga aplikacja miała pełne zaufanie. (Na przykład aplikację działającą na pulpicie ma pełne zaufanie). Jeśli aplikacja nie ma pełne zaufanie <xref:System.TypeLoadException> zgłaszany.  
+ Określenie typu Menedżera domeny aplikacji wymaga, aby aplikacja miała pełne zaufanie. (Na przykład aplikacja uruchomiona na pulpicie ma pełne zaufanie). Jeśli aplikacja nie ma pełnego zaufania, <xref:System.TypeLoadException> jest zgłaszany.  
   
- Format nazwy wyświetlanej zestawu, zobacz <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> właściwości.  
+ Aby uzyskać format nazwy wyświetlanej zestawu, zapoznaj się <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> z właściwością.  
   
- Ten element konfiguracji jest dostępny tylko w programie .NET Framework 4 lub nowszej.  
+ Ten element konfiguracji jest dostępny tylko w .NET Framework 4 i nowszych.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak określić, że Menedżer domeny aplikacji dla domyślnej domeny aplikacji procesu jest `MyMgr` wpisać `AdMgrExample` zestawu.  
+ Poniższy przykład pokazuje, jak określić, że Menedżer domeny aplikacji dla domyślnej domeny aplikacji procesu jest `MyMgr` typem `AdMgrExample` w zestawie.  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ Określa zestaw, który zapewnia Menedżer domeny aplikacji dla domyślnej domen
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<appDomainManagerType> Element](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [SetAppDomainManagerType, metoda](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)
+- [\<appDomainManagerType, element >](appdomainmanagertype-element.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)
+- [SetAppDomainManagerType, metoda](../../../unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

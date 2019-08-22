@@ -8,17 +8,16 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: fa6881614725ddf7628ddc484a9a4130bb23bc77
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 12b506e859579a0755c2e9842e792c59968c94a8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040226"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666754"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Przewodnik: Tworzenie kontrolki złożonej za pomocą języka Visual C\#
 
 Kontrolki złożone zapewniają metodę, za pomocą której można tworzyć i ponownie używać niestandardowych interfejsów graficznych. Formant złożony jest zasadniczo składnikiem z reprezentacją wizualną. W związku z tym może składać się z co najmniej jednego Windows Forms kontrolek, składników lub bloków kodu, który może zwiększyć funkcjonalność, sprawdzając dane wejściowe użytkownika, modyfikując właściwości wyświetlania lub wykonując inne zadania wymagane przez autora. Kontrolki złożone mogą być umieszczane na Windows Forms w taki sam sposób jak w przypadku innych kontrolek. W pierwszej części tego przewodnika utworzysz prostą kontrolkę złożoną o nazwie `ctlClock`. W drugiej części przewodnika rozszerzono funkcjonalność programu `ctlClock` przez dziedziczenie.
-
 
 ## <a name="creating-the-project"></a>Tworzenie projektu
 

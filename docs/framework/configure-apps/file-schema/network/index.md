@@ -12,34 +12,34 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-ms.openlocfilehash: 71d945e6046a8648a812de939f197429bc695808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f5d762a2b688bebcb7c027be6c639b6d64c069d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674535"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664107"
 ---
 # <a name="network-settings-schema"></a>Schemat ustawień sieci
-Ustawienia sieci Określ, jak .NET Framework łączy się z Internetem. W poniższej tabeli opisano funkcję każdego elementu podrzędnego konfiguracji, w obszarze [ \<przestrzeni nazw system.Net >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md).  
+Ustawienia sieci określają, w jaki sposób .NET Framework nawiązuje połączenie z Internetem. W poniższej tabeli opisano funkcję każdego podrzędnego elementu konfiguracji w ramach [ \<elementu System .net > (ustawienia sieciowe)](system-net-element-network-settings.md).  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<authenticationModules >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań internetowych.|  
-|[\<connectionManagement >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Określa maksymalną liczbę połączeń na hostach w Internecie.|  
-|[\<defaultProxy — >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Określa serwer proxy dla żądań HTTP w Internecie.|  
-|[\<mailSettings — >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Zawiera ustawienia dla opcje wysyłania poczty.|  
-|[\<requestCaching — >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Określa mechanizm buforowania żądań sieci.|  
-|[\<webRequestModules >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Określa moduły używane do żądania informacji z hostów w Internecie.|  
+|[\<authenticationModules >, element (Ustawienia sieci)](authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań internetowych.|  
+|[\<connectionManagement >, element (Ustawienia sieci)](connectionmanagement-element-network-settings.md)|Określa maksymalną liczbę połączeń z hostami internetowymi.|  
+|[\<defaultProxy >, element (Ustawienia sieci)](defaultproxy-element-network-settings.md)|Określa serwer proxy używany przez żądania HTTP do Internetu.|  
+|[\<mailSettings >, element (Ustawienia sieci)](mailsettings-element-network-settings.md)|Zawiera ustawienia dla opcji wysyłania poczty.|  
+|[\<requestCaching >, element (Ustawienia sieci)](requestcaching-element-network-settings.md)|Kontroluje mechanizm buforowania dla żądań sieci.|  
+|[\<webRequestModules >, element (Ustawienia sieci)](webrequestmodules-element-network-settings.md)|Określa moduły używane do żądania informacji z hostów internetowych.|  
   
- Ustawienia identyfikatorów URI Określ, jak .NET Framework obsługuje adresy URL wyrażone za pomocą uniform resource identifier (URI). W poniższej tabeli opisano funkcję każdego elementu podrzędnego konfiguracji, w obszarze [ \<Uri >, Element (ustawienia identyfikatora Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md).  
+ Ustawienia identyfikatora URI określają, w jaki sposób .NET Framework obsługuje adresy sieci Web wyrażone przy użyciu Uniform Resource Identifier (URI). W poniższej tabeli opisano funkcję każdego podrzędnego elementu konfiguracji w ramach [ \<identyfikatora URI > element (ustawienia identyfikatora URI)](uri-element-uri-settings.md).  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<IDN >, Element (ustawienia identyfikatora Uri)](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|Określa, jeśli analizy Zinternacjonalizowanych nazw domen (IDN) są stosowane do nazw domen.|  
-|[\<iriParsing >, Element (ustawienia identyfikatora Uri)](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|Określa, jeśli analizy międzynarodowego identyfikatora zasobów (IRI) są stosowane do <xref:System.Uri> , czy powinna być stosowana IRI podczas analizowania reguły.|  
-|[\<schemeSettings >, Element (ustawienia identyfikatora Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Określa, jak <xref:System.Uri> będzie być analizowana pod kątem określonych systemów.|  
+|[\<> IDN — element (ustawienia identyfikatora URI)](idn-element-uri-settings.md)|Określa, czy do nazw domen są stosowane analizowanie międzynarodowych nazw domen (IDN).|  
+|[\<iriParsing >, element (ustawienia identyfikatora URI)](iriparsing-element-uri-settings.md)|Określa <xref:System.Uri> , czy do i czy należy zastosować analizę IRI (International Resource Identifier).|  
+|[\<schemeSettings >, element (ustawienia identyfikatora URI)](schemesettings-element-uri-settings.md)|Określa, w <xref:System.Uri> jaki sposób będzie analizowana dla określonych schematów.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Konfigurowanie aplikacji internetowych](../../../../../docs/framework/network-programming/configuring-internet-applications.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Konfigurowanie aplikacji internetowych](../../../network-programming/configuring-internet-applications.md)
+- [Schemat pliku konfiguracji](../index.md)

@@ -2,20 +2,20 @@
 title: <add> dla <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 03bf1bbb8156e4722d987e171d9034747ac6bb61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53af01a519c244376b262db1f6515a438dcc554f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701206"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663372"
 ---
-# <a name="add-of-backuplist"></a>\<Dodaj > z \<backupList >
-Reprezentuje element konfiguracji, który definiuje element kopii zapasowej punktu końcowego.  
+# <a name="add-of-backuplist"></a>\<Dodawanie > \<backupList >
+Reprezentuje element konfiguracji, który definiuje kopię zapasową elementu punktu końcowego.  
   
  \<system.serviceModel>  
-\<Routing >  
-\<backupLists>  
-\<backupList>  
+\<> routingu  
+\<backupLists >  
+\<backupList >  
 \<add>  
   
 ## <a name="syntax"></a>Składnia  
@@ -30,9 +30,6 @@ Reprezentuje element konfiguracji, który definiuje element kopii zapasowej punk
 </routing>
 ```  
   
-```csharp  
-```  
-  
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
  W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
@@ -40,7 +37,7 @@ Reprezentuje element konfiguracji, który definiuje element kopii zapasowej punk
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|nazwa|Ciąg, który określa nazwę punktu końcowego, tworzenia kopii zapasowej.|  
+|nazwa|Ciąg określający nazwę punktu końcowego kopii zapasowej.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -49,7 +46,7 @@ Reprezentuje element konfiguracji, który definiuje element kopii zapasowej punk
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Zawiera listę punktów końcowych, które chcesz, aby usługa routingu do użycia w przypadku, gdy nie można nawiązać połączenia z podstawowego punktu końcowego.|  
+|[\<> routingu](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Zawiera listę punktów końcowych, które mają być używane przez usługę routingu w przypadku, gdy podstawowy punkt końcowy nie zostanie osiągnięty.|  
   
 ## <a name="see-also"></a>Zobacz także
 

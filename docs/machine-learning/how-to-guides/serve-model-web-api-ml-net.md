@@ -1,69 +1,69 @@
 ---
-title: Wdrażanie modelu w interfejsie API sieci Web platformy ASP.NET Core
-description: Obsługiwać model uczenia maszynowego analizy tonacji strukturze ML.NET w Internecie przy użyciu interfejsu API sieci Web programu ASP.NET Core
-ms.date: 05/03/2019
+title: Wdrażanie modelu w ASP.NET Core Web API
+description: Obsługiwanie modelu uczenia maszynowego w usłudze ML.NET tonacji Analysis za pośrednictwem Internetu przy użyciu interfejsu Web API ASP.NET Core
+ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: f8b8f74f752aeb243d4a2987929bd28ddc5f7d5a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e1dcc719738a2beb3e63463245d4721c5298cf85
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641083"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666661"
 ---
-# <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Wdrażanie modelu w interfejsie API sieci Web platformy ASP.NET Core
+# <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Wdrażanie modelu w ASP.NET Core Web API
 
-Dowiedz się, jak obsługiwać wstępnie przeszkolonych strukturze ML.NET modelu uczenia maszynowego w sieci web przy użyciu interfejsu API sieci Web programu ASP.NET Core. Obsługuje model za pośrednictwem interfejsu API sieci web umożliwia prognozy przy użyciu standardowych metod HTTP.
+Dowiedz się, jak obsłużyć wstępnie szkolony model uczenia maszynowego ML.NET w sieci Web przy użyciu ASP.NET Core internetowego interfejsu API. Obsługa modelu przez internetowy interfejs API umożliwia prognozowanie za pośrednictwem standardowych metod HTTP.
 
 > [!NOTE]
-> `PredictionEnginePool` rozszerzenie usługi jest obecnie w wersji zapoznawczej.
+> `PredictionEnginePool`rozszerzenie usługi jest obecnie w wersji zapoznawczej.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- [Visual Studio 2017 15.6 lub nowszym](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowanym obciążeniem "Programowanie dla wielu platform .NET Core".
-- Program PowerShell.
-- Wstępnie uczonego modelu. Użyj [samouczek analizy tonacji w strukturze ML.NET](../tutorials/sentiment-analysis.md) do stworzenia własnego modelu lub pobrać [modelu uczenia maszynowego analizy tonacji wstępnie przeszkolonych](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
+- [Program Visual Studio 2017 15,6 lub nowszy](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowanym obciążeniem "Programowanie dla wielu platform" platformy .NET Core.
+- Narzędzia.
+- Model wstępnie szkolony. Użyj [samouczka analiza tonacji ml.NET](../tutorials/sentiment-analysis.md) , aby skompilować własny model lub pobrać ten [wstępnie szkolony model uczenia maszynowego analizy tonacji](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
 
-## <a name="create-aspnet-core-web-api-project"></a>Utwórz projekt internetowego interfejsu API platformy ASP.NET Core
+## <a name="create-aspnet-core-web-api-project"></a>Tworzenie projektu interfejsu API sieci Web ASP.NET Core
 
-1. Otwórz program Visual Studio 2017. Wybierz **Plik > Nowy > Projekt** z paska menu. W oknie dialogowym Nowy projekt, wybierz **Visual C#**  węzła następuje **Web** węzła. Następnie wybierz pozycję **aplikacji sieci Web programu ASP.NET Core** szablonu projektu. W **nazwa** pole tekstowe, wpisz "SentimentAnalysisWebAPI", a następnie wybierz **OK** przycisku.
+1. Otwórz program Visual Studio 2017. Wybierz pozycję **plik > nowy > projekt** na pasku menu. W oknie dialogowym Nowy projekt wybierz węzeł **wizualizacji C#**  , a następnie węzeł **sieci Web** . Następnie wybierz szablon projektu **aplikacji sieci Web ASP.NET Core** . W polu tekstowym **Nazwa** wpisz "SentimentAnalysisWebAPI", a następnie wybierz przycisk **OK** .
 
-1. W oknie, które są wyświetlane różne typy projektów programu ASP.NET Core, wybierz **API** a następnie wybierz **OK** przycisku.
+1. W oknie, w którym są wyświetlane różne typy projektów ASP.NET Core, wybierz pozycję **interfejs API** i wybierz przycisk **OK** .
 
-1. Utwórz katalog o nazwie *MLModels* w projekcie do zapisywania maszyny wstępnie skompilowanych plików modeli uczenia:
+1. Utwórz katalog o nazwie *MLModels* w projekcie, aby zapisać wstępnie utworzone pliki modelu uczenia maszynowego:
 
-    W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy nad projektem i wybierz polecenie Dodaj > Nowy Folder. Wpisz "MLModels", a następnie naciśnij klawisz Enter.
+    W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie Dodaj > nowy folder. Wpisz "MLModels" i naciśnij klawisz ENTER.
 
-1. Zainstaluj **pakietu NuGet Microsoft.ML**:
+1. Zainstaluj **pakiet NuGet Microsoft.ml**:
 
-    W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę przeglądania, wyszukaj **Microsoft.ML**, a następnie wybierz pakiet z listy i kliknij przycisk Zainstaluj. Wybierz **OK** znajdujący się na **podgląd zmian** okna dialogowego, a następnie wybierz **akceptuję** znajdujący się na okno dialogowe akceptacja licencji, jeśli akceptujesz postanowienia licencyjne pakiety wymienione.
+    W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę Przeglądaj, Wyszukaj pozycję **Microsoft.ml**, wybierz ten pakiet z listy, a następnie wybierz przycisk Instaluj. Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie wybierz przycisk Akceptuję w oknie dialogowym akceptacji licencji, jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
 
-1. Zainstaluj **pakietu Nuget Microsoft.Extensions.ML**:
+1. Zainstaluj **pakiet Nuget Microsoft.Extensions.ml**:
 
-    W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę przeglądania, wyszukaj **Microsoft.Extensions.ML**, a następnie wybierz pakiet z listy i kliknij przycisk Zainstaluj. Wybierz **OK** znajdujący się na **podgląd zmian** okna dialogowego, a następnie wybierz **akceptuję** znajdujący się na okno dialogowe akceptacja licencji, jeśli akceptujesz postanowienia licencyjne pakiety wymienione.
+    W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę Przeglądaj, Wyszukaj pozycję **Microsoft.Extensions.ml**, wybierz ten pakiet z listy, a następnie wybierz przycisk Instaluj. Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie wybierz przycisk Akceptuję w oknie dialogowym akceptacji licencji, jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
 
-### <a name="add-model-to-aspnet-core-web-api-project"></a>Dodawanie modelu do projektu internetowego interfejsu API platformy ASP.NET Core
+### <a name="add-model-to-aspnet-core-web-api-project"></a>Dodaj model do projektu interfejsu API sieci Web ASP.NET Core
 
-1. Skopiuj wstępnie skompilowanych model *MLModels* katalogu
-1. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy plik zip modelu i wybierz polecenie Właściwości. W obszarze Zaawansowane Zmień wartość kopii do katalogu wyjściowego do skopiowania, jeśli nowszy.
+1. Skopiuj wstępnie utworzony model do katalogu *MLModels*
+1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy plik zip modelu i wybierz polecenie Właściwości. W obszarze Zaawansowane Zmień wartość opcji Kopiuj do katalogu wyjściowego na Kopiuj, jeśli nowszy.
 
 ## <a name="create-data-models"></a>Tworzenie modeli danych
 
-Musisz utworzyć niektóre klasy dla danych wejściowych i prognozy. Dodaj nową klasę do projektu:
+Należy utworzyć klasy dla danych wejściowych i prognoz. Dodaj nową klasę do projektu:
 
-1. Utwórz katalog o nazwie *DataModels* w projekcie, aby zapisać modeli danych:
+1. Utwórz katalog o nazwie datamodels w projekcie, aby zapisać modele danych:
 
-    W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy nad projektem i wybierz polecenie Dodaj > Nowy Folder. Wpisz "DataModels", a następnie kliknij przycisk **Enter**.
+    W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie Dodaj > nowy folder. Wpisz "datamodels" i naciśnij klawisz **Enter**.
 
-2. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy *DataModels* katalogu, a następnie wybierz pozycję Dodaj > Nowy element.
-3. W **Dodaj nowy element** okno dialogowe, wybierz opcję **klasy** i zmień **nazwa** pole *SentimentData.cs*. Następnie wybierz **Dodaj** przycisku. *SentimentData.cs* plik zostanie otwarty w edytorze kodu. Dodaj następujące za pomocą instrukcji na górze *SentimentData.cs*:
+2. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy katalog datamodels, a następnie wybierz pozycję Dodaj > nowy element.
+3. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **Klasa** i zmień wartość pola **Nazwa** na *SentimentData.cs*. Następnie wybierz przycisk **Dodaj** . Plik *SentimentData.cs* zostanie otwarty w edytorze kodu. Dodaj następującą instrukcję using na początku *SentimentData.cs*:
 
     ```csharp
     using Microsoft.ML.Data;
     ```
     
-    Usuń istniejącą definicję klasy i Dodaj następujący kod do **SentimentData.cs** pliku:
+    Usuń istniejącą definicję klasy i Dodaj następujący kod do pliku **SentimentData.cs** :
     
     ```csharp
     public class SentimentData
@@ -77,14 +77,14 @@ Musisz utworzyć niektóre klasy dla danych wejściowych i prognozy. Dodaj nową
     }
     ```
 
-4. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy *DataModels* katalogu, a następnie wybierz **Dodaj > Nowy element**.
-5. W **Dodaj nowy element** okno dialogowe, wybierz opcję **klasy** i zmień **nazwa** pole *SentimentPrediction.cs*. Następnie wybierz przycisk Dodaj. *SentimentPrediction.cs* plik zostanie otwarty w edytorze kodu. Dodaj następujące za pomocą instrukcji na górze *SentimentPrediction.cs*:
+4. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy katalog datamodels, a następnie wybierz pozycję **Dodaj > nowy element**.
+5. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **Klasa** i zmień wartość pola **Nazwa** na *SentimentPrediction.cs*. Następnie wybierz przycisk Dodaj. Plik *SentimentPrediction.cs* zostanie otwarty w edytorze kodu. Dodaj następującą instrukcję using na początku *SentimentPrediction.cs*:
 
     ```csharp
     using Microsoft.ML.Data;
     ```
     
-    Usuń istniejącą definicję klasy i Dodaj następujący kod do *SentimentPrediction.cs* pliku:
+    Usuń istniejącą definicję klasy i Dodaj następujący kod do pliku *SentimentPrediction.cs* :
     
     ```csharp
     public class SentimentPrediction : SentimentData
@@ -99,15 +99,15 @@ Musisz utworzyć niektóre klasy dla danych wejściowych i prognozy. Dodaj nową
     }
     ```
 
-    `SentimentPrediction` dziedziczy `SentimentData`. Dzięki temu łatwiej zobaczyć oryginalne dane w `SentimentText` właściwości oraz dane wyjściowe generowane przez model. 
+    `SentimentPrediction`dziedziczy z `SentimentData`. Dzięki temu można łatwiej zobaczyć oryginalne dane we `SentimentText` właściwości wraz z danymi wyjściowymi generowanymi przez model. 
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>Zarejestruj PredictionEnginePool do użycia w aplikacji
 
-Do pojedynczego prognozowania, należy użyć [ `PredictionEngine` ](xref:Microsoft.ML.PredictionEngine%602). Aby można było używać [ `PredictionEngine` ](xref:Microsoft.ML.PredictionEngine%602) w aplikacji należy go utworzyć, gdy jest to konieczne. W takim przypadku najlepszym rozwiązaniem należy wziąć pod uwagę jest iniekcji zależności.
+Aby wykonać pojedyncze prognozowanie, użyj [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Aby można było używać [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) w aplikacji, należy ją utworzyć w razie potrzeby. W takim przypadku najlepszym rozwiązaniem jest wstrzyknięcie zależności.
 
-Kliknięcie następującego łącza zawiera więcej informacji, jeśli chcesz dowiedzieć się więcej na temat [wstrzykiwanie zależności w programie ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
+Poniższy link zawiera więcej informacji, aby dowiedzieć się więcej o [iniekcji zależności w ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
 
-1. Otwórz *Startup.cs* klasę i dodaj następujące za pomocą instrukcji na górze pliku:
+1. Otwórz klasę *Startup.cs* i Dodaj następującą instrukcję using na początku pliku:
 
     ```csharp
     using Microsoft.AspNetCore.Builder;
@@ -119,7 +119,7 @@ Kliknięcie następującego łącza zawiera więcej informacji, jeśli chcesz do
     using SentimentAnalysisWebAPI.DataModels;
     ```
 
-2. Dodaj następujący kod do *ConfigureServices* metody:
+2. Dodaj następujący kod do metody *ConfigureServices* :
 
     ```csharp
     public void ConfigureServices(IServiceCollection services)
@@ -130,18 +130,18 @@ Kliknięcie następującego łącza zawiera więcej informacji, jeśli chcesz do
     }
     ```
 
-Na wysokim poziomie ten kod inicjalizuje obiektami i usługami, automatycznie, gdy jest to wymagane przez aplikację, nie trzeba to zrobić ręcznie.
+Na wysokim poziomie ten kod inicjuje obiekty i usługi automatycznie, gdy jest to wymagane przez aplikację, a nie trzeba jej wykonać ręcznie.
 
 > [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nie jest metodą o bezpiecznych wątkach. Zwiększona wydajność i bezpieczeństwo wątków, użyj `PredictionEnginePool` usługa, która tworzy [ `ObjectPool` ](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) z `PredictionEngine` obiekty do użytku aplikacji. Przeczytaj następujący wpis w blogu, aby dowiedzieć się więcej o [tworzenia i używania `PredictionEngine` obiektu pul w programie ASP.NET Core](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/).  
+> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)nie jest bezpieczny wątkowo. Aby zwiększyć wydajność i bezpieczeństwo wątków, użyj `PredictionEnginePool` usługi, która [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) tworzy `PredictionEngine` obiekty do użycia w aplikacji. Przeczytaj następujący wpis w blogu, aby dowiedzieć się więcej na temat [tworzenia i używania `PredictionEngine` pul obiektów w ASP.NET Core](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/).  
 
-## <a name="create-predict-controller"></a>Tworzenie kontrolera Predict
+## <a name="create-predict-controller"></a>Utwórz kontroler predykcyjny
 
-Do przetwarzania przychodzących żądań HTTP, należy utworzyć kontroler.
+Aby przetwarzać przychodzące żądania HTTP, Utwórz kontroler.
 
-1. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy *kontrolerów* katalogu, a następnie wybierz **Dodaj > kontrolera**.
-1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **pusty Kontroler interfejsu API** i wybierz **Dodaj**.
-1. Zmiana monitu **nazwy kontrolera** pole *PredictController.cs*. Następnie wybierz przycisk Dodaj. *PredictController.cs* plik zostanie otwarty w edytorze kodu. Dodaj następujące za pomocą instrukcji na górze *PredictController.cs*:
+1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy katalog controllers, a następnie wybierz pozycję **Dodaj kontroler >** .
+1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **kontroler interfejsu API puste** i wybierz pozycję **Dodaj**.
+1. W oknie monitu Zmień **nazwę kontrolera** na *PredictController.cs*. Następnie wybierz przycisk Dodaj. Plik *PredictController.cs* zostanie otwarty w edytorze kodu. Dodaj następującą instrukcję using na początku *PredictController.cs*:
 
     ```csharp
     using System;
@@ -150,7 +150,7 @@ Do przetwarzania przychodzących żądań HTTP, należy utworzyć kontroler.
     using SentimentAnalysisWebAPI.DataModels;
     ```
 
-    Usuń istniejącą definicję klasy i Dodaj następujący kod do *PredictController.cs* pliku:
+    Usuń istniejącą definicję klasy i Dodaj następujący kod do pliku *PredictController.cs* :
     
     ```csharp
     public class PredictController : ControllerBase
@@ -179,26 +179,26 @@ Do przetwarzania przychodzących żądań HTTP, należy utworzyć kontroler.
     }
     ```
 
-Ten kod przypisuje `PredictionEnginePool` przez przekazanie jej do konstruktora kontrolera, którego można uzyskać za pomocą iniekcji zależności. Następnie `Predict` kontrolera `Post` metoda używa `PredictionEnginePool` do tworzenia prognoz i zwracają wyniki do użytkownika, jeśli to się powiedzie.
+Ten kod przypisuje `PredictionEnginePool` przez przekazanie go do konstruktora kontrolera, który uzyskuje się za pośrednictwem iniekcji zależności. `Predict` Następnie Metoda`Post` kontrolera używa `PredictionEnginePool` do tworzenia prognoz i zwracania wyników z powrotem do użytkownika, jeśli to się powiedzie.
 
-## <a name="test-web-api-locally"></a>Test internetowy interfejs API lokalnie
+## <a name="test-web-api-locally"></a>Testowanie lokalnego interfejsu API sieci Web
 
-Po skonfigurowaniu jest wszystko, nadszedł czas na przetestowanie aplikacji.
+Po skonfigurowaniu wszystkiego czas na przetestowanie aplikacji.
 
 1. Uruchom aplikację.
-1. Otwórz program Powershell, a następnie wprowadź poniższy kod, gdzie jest to port aplikacja nasłuchuje na.
+1. Otwórz program PowerShell i wprowadź następujący kod, gdzie PORT jest portem, na którym nasłuchuje aplikacja.
 
     ```powershell
-    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
+    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{SentimentText="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
     ```
 
-    Jeśli to się powiedzie, dane wyjściowe powinny wyglądać podobnie do poniższy tekst:
+    Jeśli to się powiedzie, dane wyjściowe powinny wyglądać podobnie do poniższego tekstu:
     
     ```powershell
     Negative
     ```
 
-Gratulacje! Zostały pomyślnie obsłużone model do przewidywania przyszłych zdarzeń za pośrednictwem Internetu przy użyciu interfejsu API sieci Web programu ASP.NET Core.
+Gratulacje! Udało Ci się pomyślnie obsłużyć model, aby przekonywać prognoz przez Internet przy użyciu ASP.NET Core internetowego interfejsu API.
 
 ## <a name="next-steps"></a>Następne kroki
 

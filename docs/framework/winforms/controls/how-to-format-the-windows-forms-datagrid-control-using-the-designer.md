@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: d6e31d55ab271376501064c3aa9a9ce38c14063d
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039734"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666162"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Instrukcje: formatowanie kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant
 
@@ -34,7 +34,6 @@ Istnieją trzy podstawowe aspekty formatowania <xref:System.Windows.Forms.DataGr
 Jako pierwszy krok formatowania siatki danych można ustawić właściwości <xref:System.Windows.Forms.DataGrid> samej siebie. Opcje tego koloru i formatu stanowią podstawę, z której można wprowadzać zmiany w zależności od wyświetlanych tabel i kolumn danych.
 
 Poniższa procedura wymaga projektu **aplikacji systemu Windows** z formularzem zawierającym <xref:System.Windows.Forms.DataGrid> kontrolkę. Aby uzyskać informacje na temat konfigurowania takiego projektu, zobacz [How to: Utwórz projekt](/visualstudio/ide/step-1-create-a-windows-forms-application-project) aplikacji Windows Forms i [instrukcje: Dodaj formanty do Windows Forms](how-to-add-controls-to-windows-forms.md). W programie Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> formant domyślnie nie znajduje się w **przyborniku** . Aby uzyskać więcej informacji, zobacz [jak: Dodaj elementy do przybornika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).
-
 
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>Aby określić styl domyślny dla kontrolki DataGrid
 

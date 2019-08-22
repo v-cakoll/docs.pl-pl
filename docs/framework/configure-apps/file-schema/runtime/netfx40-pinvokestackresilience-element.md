@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 318473d2913d62404c58b9d3681800ae22a9ecbf
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: cf97cc1ec544c7cf640c43b1b45760fca8cffe89
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689853"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663553"
 ---
-# <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience> Element
+# <a name="netfx40_pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience, element >
 
-Określa, czy środowisko wykonawcze automatycznie poprawki nieprawidłowa platforma wywołania deklaracje w czasie wykonywania, kosztem wolniejsze przejścia między zarządzane, a kod niezarządzany.
+Określa, czy środowisko uruchomieniowe automatycznie naprawia nieprawidłowe deklaracje wywołania platformy w czasie wykonywania, kosztem wolniejszych przejść między zarządzanym i niezarządzanym kodem.
 
-\<Konfiguracja > \
-\<runtime>\
-\<NetFx40_PInvokeStackResilience>
+\<> konfiguracji \
+\<> środowiska uruchomieniowego \
+\<NetFx40_PInvokeStackResilience >
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,14 +36,14 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe wykryje nieprawidłowa platforma wywołuje deklaracje i automatycznie naprawia stosu w czasie wykonywania na platformach 32-bitowych.|
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe wykrywa nieprawidłowe deklaracje wywołania platformy i automatycznie naprawia stos w czasie wykonywania na platformach 32-bitowych.|
 
 ## <a name="enabled-attribute"></a>Atrybut włączony
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`0`|Środowisko wykonawcze używa szybciej międzyoperacyjnego marshaling architektury wprowadzone w programie .NET Framework 4, która nie może wykryć i wywołania platformy niepoprawne poprawki deklaracji. Domyślnie włączone.|
-|`1`|Przejść wolniejsze używa środowiska uruchomieniowego, Wykryj i napraw nieprawidłowe platformy, które wywołuje deklaracji.|
+|`0`|Środowisko uruchomieniowe używa szybszej architektury organizowania międzyoperacyjnego wprowadzonej w .NET Framework 4, która nie wykrywa i nie naprawia niepoprawnych deklaracji wywołania platformy. Domyślnie włączone.|
+|`1`|Środowisko uruchomieniowe używa wolniejszych przejść, które wykrywają i rozwiązują nieprawidłowe deklaracje wywołania platformy.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -58,21 +58,21 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-Ten element pozwala na szybsze marshaling międzyoperacyjny dla odporności na błędy czasu wykonywania względem platformy nieprawidłowe wywołanie deklaracji.
+Ten element umożliwia wymianę między nieprawidłowymi deklaracjami wywołania platformy w celu uzyskania odporności w czasie wykonywania.
 
-Począwszy od programu .NET Framework 4, usprawnione architektury marshaling międzyoperacyjny zapewnia zwiększenie wydajności istotne dla przejścia z kodu zarządzanego do kodu niezarządzanego. We wcześniejszych wersjach programu .NET Framework organizowania warstwy wykrył nieprawidłowe wywołania deklaracje na platformach 32-bitowych i platformy automatycznie naprawić stosu. Nowa architektura organizowania eliminuje ten krok. W wyniku przejścia są bardzo szybko, ale platforma nieprawidłowe wywołanie deklaracji może spowodować awarię programu.
+Począwszy od .NET Framework 4, ulepszona architektura organizowania międzyoperacyjności zapewnia znaczącą poprawę wydajności dla przejść z kodu zarządzanego do kodu niezarządzanego. We wcześniejszych wersjach .NET Framework warstwa marshaler wykryła nieprawidłowe deklaracje wywołania platformy na 32-bitowych platformach i automatycznie naprawi stos. Nowa architektura organizowania eliminuje ten krok. W związku z tym przejścia są bardzo szybkie, ale nieprawidłowa deklaracja wywołania platformy może spowodować błąd programu.
 
-Aby ułatwić wykrywanie nieprawidłowe deklaracje podczas tworzenia środowiska debugowania programu Visual Studio została ulepszona. [PInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) zarządzanego Asystenta debugowania (MDA) powiadamia o niepoprawne platformy deklaracji wywołania, gdy aplikacja jest uruchomiona w debugerze.
+Aby ułatwić wykrywanie niepoprawnych deklaracji podczas opracowywania, udoskonalono środowisko debugowania programu Visual Studio. Asystent debugowania zarządzanego [pInvokeStackImbalance](../../../debug-trace-profile/pinvokestackimbalance-mda.md) (MDA) powiadamia o nieprawidłowej deklaracji wywołania platformy, gdy aplikacja jest uruchomiona z dołączonym debugerem.
 
-Dla których aplikacja używa składników, że nie można ponownie skompilować i że ma nieprawidłowe wywołanie platformy deklaracji, można użyć scenariuszy `NetFx40_PInvokeStackResilience` elementu. Dodanie tego elementu do pliku konfiguracyjnego aplikacji za pomocą `enabled="1"` zdecyduje się w trybie zgodności z zachowaniem wcześniejszych wersjach programu .NET Framework, kosztem wolniejsze przejścia. Zestawy, które zostały skompilowane dla wcześniejszych wersji programu .NET Framework są automatycznie wyłączony w tym trybie zgodności, a ten element nie jest konieczne.
+Aby rozwiązać scenariusze, w których aplikacja używa składników, których nie można ponownie skompilować, i które mają nieprawidłowe deklaracje wywołania platformy, można `NetFx40_PInvokeStackResilience` użyć elementu. Dodanie tego elementu do pliku konfiguracji aplikacji z opcją `enabled="1"` załączanie do trybu zgodności z zachowaniem wcześniejszych wersji .NET Framework, kosztem wolniejszych przejść. Zestawy, które zostały skompilowane pod kątem wcześniejszych wersji .NET Framework są automatycznie zaznaczane w tym trybie zgodności i nie potrzebują tego elementu.
 
 ## <a name="configuration-file"></a>Plik konfiguracji
 
-Ten element może być użyty tylko w pliku konfiguracyjnym aplikacji.
+Tego elementu można używać tylko w pliku konfiguracji aplikacji.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak skorzystać z większą odporność względem niepoprawne deklaracje dla aplikacji, kosztem wolniejsze przejścia między wywołania platformy kodu zarządzanego i niezarządzanego.
+Poniższy przykład pokazuje, jak zrezygnować z zwiększonej elastyczności względem nieprawidłowych deklaracji wywołania platformy dla aplikacji, kosztem wolniejszych przejść między kodem zarządzanym i niezarządzanym.
 
 ```xml
 <configuration>
@@ -84,6 +84,6 @@ W poniższym przykładzie pokazano, jak skorzystać z większą odporność wzgl
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)
+- [pInvokeStackImbalance](../../../debug-trace-profile/pinvokestackimbalance-mda.md)

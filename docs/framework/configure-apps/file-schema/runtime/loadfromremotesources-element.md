@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7568129f30267b212737ec8aa688cf882e19bbff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8e8663bf9d119007eb7d3771d16d55b1aa54856
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704599"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663606"
 ---
-# <a name="loadfromremotesources-element"></a>\<loadfromremotesources — > element
-Określa, czy zestawy, ładowane z zdalnych źródeł może być przyznany pełnego zaufania w programie .NET Framework 4 i nowszych.
+# <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources, element >
+Określa, czy zestawy ładowane ze źródeł zdalnych powinny mieć przyznane pełne zaufanie w .NET Framework 4 i nowszych.
   
 > [!NOTE]
->  Jeśli były kierowane do tego artykułu, ze względu na komunikat o błędzie na liście błędów projektu programu Visual Studio lub błąd kompilacji, zobacz [jak: Użyj zestawu z sieci Web w programie Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
+>  Jeśli nastąpiło przekierowanie do tego artykułu z powodu komunikatu o błędzie na liście błędów projektu programu Visual Studio lub błędu kompilacji, zobacz [How to: Użyj zestawu z sieci Web w programie Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<runtime>  
 \<loadFromRemoteSources>  
   
@@ -38,14 +38,14 @@ Określa, czy zestawy, ładowane z zdalnych źródeł może być przyznany pełn
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy zestaw, który jest ładowany ze źródła zdalnego należy przyznać pełne zaufanie.|  
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy zestaw, który jest ładowany ze źródła zdalnego, powinien mieć przyznane pełne zaufanie.|  
   
-## <a name="enabled-attribute"></a>Atrybut włączony  
+## <a name="enabled-attribute"></a>włączony atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`false`|Nie przyznawaj pełnego zaufania do aplikacji ze zdalnego źródła. Domyślnie włączone.|  
-|`true`|Przyznać pełne zaufanie do aplikacji ze zdalnego źródła.|  
+|`false`|Nie należy przyznawać pełnego zaufania do aplikacji ze źródeł zdalnych. Domyślnie włączone.|  
+|`true`|Przyznaj pełne zaufanie do aplikacji ze źródeł zdalnych.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -59,9 +59,9 @@ Określa, czy zestawy, ładowane z zdalnych źródeł może być przyznany pełn
   
 ## <a name="remarks"></a>Uwagi
 
-W .NET Framework 3.5 i wcześniejszymi wersjami Jeśli zestaw jest ładowany z lokalizacji zdalnej, kod w zestawie jest uruchamiany w częściowej relacji zaufania z zestaw uprawnień, który zależy od strefy, z której jest ładowany. Na przykład jeśli zestaw jest ładowany z witryny sieci Web, go jest ładowany do strefy Internet i przyznane Internet zestaw uprawnień. Innymi słowy wykonuje w piaskownicy Internet.
+W .NET Framework 3,5 i starszych wersjach, Jeśli ładujesz zestaw z lokalizacji zdalnej, kod w zestawie jest uruchamiany w częściowej relacji zaufania z zestawem uprawnień, który zależy od strefy, z której jest załadowana. Na przykład, Jeśli ładujesz zestaw z witryny sieci Web, zostanie on załadowany do strefy Internet i przyznany zestaw uprawnień internetowych. Innymi słowy, jest wykonywana w piaskownicy internetowej.
 
-Począwszy od programu .NET Framework 4, zasady zabezpieczenia dostępu kodu jest wyłączona, a zestawy są ładowane w trybie pełnego zaufania. Zazwyczaj, to czy przyznać pełne zaufanie do zestawy, ładowane z <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> metodę, która wcześniej była piaskownicy. Aby temu zapobiec, możliwość uruchamiania kodu w zestawy, ładowane ze źródła zdalnego jest domyślnie wyłączona. Domyślnie, jeśli użytkownik podejmie próbę załadowania zestawu zdalnego <xref:System.IO.FileLoadException> z komunikatem o wyjątku, jak jest generowany, następujące czynności:
+Począwszy od .NET Framework 4, zasady zabezpieczeń dostępu kodu (CAS) są wyłączone, a zestawy są ładowane w trybie pełnego zaufania. Zwykle pozwala to na pełne zaufanie do zestawów ładowanych przy użyciu <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> metody, która wcześniej była w trybie piaskownicy. Aby tego uniknąć, możliwość uruchamiania kodu w zestawach załadowanych ze zdalnego źródła jest domyślnie wyłączona. Domyślnie, jeśli próbujesz załadować zestaw zdalny, <xref:System.IO.FileLoadException> zostanie zgłoszony komunikat o wyjątku podobny do następującego:
 
 ```text
 System.IO.FileNotFoundException: Could not load file or assembly 'file:assem.dll' or one of its dependencies. Operation is not supported. 
@@ -72,40 +72,40 @@ to be sandboxed in previous versions of the .NET Framework. This release of the 
 so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. 
 ```
 
-Aby załadować zestaw i wykonywanie kodu, należy:
+Aby załadować zestaw i wykonać jego kod, musisz:
 
-- Jawnie utworzyć piaskownicy dla zestawu (zobacz [jak: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
+- Jawnie Utwórz piaskownicę dla zestawu (zobacz [How to: Uruchom częściowo zaufany kod w piaskownicy](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
 
-- Uruchom kod zestawu w trybie pełnego zaufania. Możesz to zrobić, konfigurując `<loadFromRemoteSources>` elementu. Dzięki temu można określić, że zestawy, które działają w częściowej relacji zaufania we wcześniejszych wersjach programu .NET Framework jest teraz uruchomione w trybie pełnego zaufania w .NET Framework 4 i nowszych wersjach.
+- Uruchom kod zestawu w trybie pełnego zaufania. W tym celu należy skonfigurować `<loadFromRemoteSources>` element. Pozwala określić, że zestawy, które działają w częściowej relacji zaufania we wcześniejszych wersjach .NET Framework, są teraz uruchamiane w trybie pełnego zaufania w .NET Framework 4 i nowszych wersjach.
 
 > [!IMPORTANT]
-> Jeśli zestaw nie jest uruchamiany w trybie pełnego zaufania, ten element konfiguracji nie jest ustawiony. Zamiast tego utworzyć piaskownicy <xref:System.AppDomain> w którym można załadować zestawu.
+> Jeśli zestaw nie powinien działać w trybie pełnego zaufania, nie ustawiaj tego elementu konfiguracji. Zamiast tego należy utworzyć piaskownicę <xref:System.AppDomain> , w której ma zostać załadowany zestaw.
 
-`enabled` Atrybutu dla `<loadFromRemoteSources>` element jest efektywne tylko wtedy, gdy zabezpieczenia dostępu kodu (CAS) jest wyłączony. Domyślnie urzędy certyfikacji zasad jest wyłączona w .NET Framework 4 i nowszych wersjach. Jeśli ustawisz `enabled` do `true`, zdalne zespoły są udzielane pełne zaufanie.
+`enabled` Atrybut`<loadFromRemoteSources>` dla elementu jest obowiązujący tylko wtedy, gdy zabezpieczenia dostępu kodu (CAS) są wyłączone. Domyślnie zasady CAS są wyłączone w .NET Framework 4 i nowszych wersjach. Jeśli ustawisz `enabled` `true`opcję, zdalne zestawy mają przyznane pełne zaufanie.
 
-Jeśli `enabled` nie jest ustawiony na `true`, <xref:System.IO.FileLoadException> jest zgłaszany w ramach jednej z następujących warunków:
+Jeśli `enabled` parametr nie jest ustawiony `true`na, <xref:System.IO.FileLoadException> zwracany jest następujący warunek:
 
-- Zachowanie piaskownicy bieżącej domeny różni się od jego zachowanie w programie .NET Framework 3.5. Wymaga to urzędów certyfikacji zasad jest wyłączona, a bieżąca domena nie należy go w trybie piaskownicy.
+- Zachowanie w piaskownicy bieżącej domeny różni się od zachowania w .NET Framework 3,5. Wymaga to wyłączenia zasad CAS i bieżącej domeny nie należy do piaskownicy.
 
-- Nie jest ładowany zestaw `MyComputer` strefy.
+- Ładowany zestaw nie `MyComputer` należy do strefy.
 
-Ustawienie `<loadFromRemoteSources>` elementu `true` zapobiega ten wyjątek z zgłaszane. Pozwala określić, że nie polegasz na środowisko uruchomieniowe języka wspólnego do izolowanego załadowanych zestawów dla zabezpieczeń i mogą być dozwolone do wykonania w pełne zaufanie.
+Ustawianie elementu `<loadFromRemoteSources>` , aby `true` zapobiec zgłaszaniu tego wyjątku. Pozwala to określić, że nie korzystasz z aparatu plików wykonywalnych języka wspólnego do piaskownicy załadowanych zestawów pod kątem zabezpieczeń, i że mogą one być wykonywane w trybie pełnego zaufania.
 
 ## <a name="notes"></a>Uwagi
 
-- W .NET Framework 4.5 i nowsze wersje zestawy w udziałach sieci lokalnej są uruchamiane w trybie pełnego zaufania domyślnie; nie trzeba włączyć `<loadFromRemoteSources>` elementu.
+- W .NET Framework 4,5 i nowszych wersjach zestawy w lokalnych udziałach sieciowych są domyślnie uruchamiane w trybie pełnego zaufania; nie musisz włączać `<loadFromRemoteSources>` elementu.
 
-- Jeśli wniosek został skopiowany z sieci web, jego zostanie oflagowana przez Windows jako aplikacji sieci web, nawet wtedy, gdy znajduje się na komputerze lokalnym. Oznaczenie tego można zmienić, zmieniając jego właściwości pliku, lub możesz użyć `<loadFromRemoteSources>` elementu, aby przyznać zestawu pełne zaufanie. Alternatywnie, można użyć <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> metodę, aby załadować zestaw lokalnego, który system operacyjny został oznaczony jako załadowaniu z sieci web.
+- Jeśli aplikacja została skopiowana z sieci Web, jest oflagowana przez system Windows jako aplikacja sieci Web, nawet jeśli znajduje się na komputerze lokalnym. Można zmienić to oznaczenie, zmieniając jego właściwości pliku, lub można użyć `<loadFromRemoteSources>` elementu, aby nadać zestawowi pełne zaufanie. Alternatywnie można użyć <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> metody do załadowania lokalnego zestawu, który został oflagowany przez system operacyjny jako załadowany z sieci Web.
 
-- Możesz otrzymać <xref:System.IO.FileLoadException> w aplikacji, która działa w aplikacji Windows Virtual PC. Może to nastąpić podczas próby załadowania pliku z połączonych folderów na komputerze hostingu. Może również wystąpić podczas próby załadowania pliku z folderem połączone za pośrednictwem [usług pulpitu zdalnego](https://go.microsoft.com/fwlink/?LinkId=182775) (usług terminalowych). Aby zapobiec wyjątek, ustaw `enabled` do `true`.
+- Użytkownik może uzyskać dostęp <xref:System.IO.FileLoadException> do aplikacji działającej w aplikacji na komputerze wirtualnym z systemem Windows. Taka sytuacja może wystąpić podczas próby załadowania pliku z folderów połączonych na komputerze hostującym. Może również wystąpić podczas próby załadowania pliku z folderu połączonego za pośrednictwem [usługi pulpitu zdalnego](https://go.microsoft.com/fwlink/?LinkId=182775) (usługi terminalowe). Aby uniknąć wyjątku, ustaw `enabled` jako. `true`
 
 ## <a name="configuration-file"></a>Plik konfiguracji
 
-Ten element jest zwykle używana w pliku konfiguracyjnym aplikacji, ale mogą być używane w inne pliki konfiguracji, w zależności od kontekstu. Aby uzyskać więcej informacji, zobacz artykuł [więcej niejawne korzysta z urzędów certyfikacji zasad: loadfromremotesources —](https://go.microsoft.com/fwlink/p/?LinkId=266839) w blogu dotyczącym zabezpieczeń .NET.  
+Ten element jest zazwyczaj używany w pliku konfiguracyjnym aplikacji, ale może być używany w innych plikach konfiguracji w zależności od kontekstu. Aby uzyskać więcej informacji, zobacz artykuł [bardziej niejawne zastosowania zasad CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839) w blogu dotyczącym zabezpieczeń programu .NET.  
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak udzielić pełnym zaufaniu zestawy, ładowane z zdalnych źródeł.
+Poniższy przykład pokazuje, jak udzielić pełnego zaufania do zestawów ładowanych ze źródeł zdalnych.
 
 ```xml
 <configuration>  
@@ -117,8 +117,8 @@ Poniższy przykład pokazuje, jak udzielić pełnym zaufaniu zestawy, ładowane 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Więcej niejawne zastosowania zasady CAS: loadfromremotesources —](https://go.microsoft.com/fwlink/p/?LinkId=266839)
-- [Instrukcje: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Bardziej niejawne zastosowania zasad CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
+- [Instrukcje: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

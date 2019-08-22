@@ -8,87 +8,81 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 09427bfc836f40ca9c7aa76f4904bfe7083bf8dc
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: bc5f5e2d8808c0a60df721bf2c0ed76b45ef49a0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211233"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666260"
 ---
-# <a name="walkthrough-assign-wpf-content-on-windows-forms-at-design-time"></a>Przewodnik: Przypisywanie zawartości WPF na formularzach Windows Forms w czasie projektowania
+# <a name="walkthrough-assign-wpf-content-on-windows-forms-at-design-time"></a>Przewodnik: Przypisywanie zawartości WPF na Windows Forms w czasie projektowania
 
-W tym instruktażu dowiesz się, jak wybrać typy kontrolek Windows Presentation Foundation (WPF), które mają być wyświetlane w formularzu. Możesz wybrać wszystkie typy kontrolek WPF, które są zawarte w projekcie.
-
-W tym przewodniku należy wykonać następujące zadania:
-
-- Utwórz projekt.
-
-- Tworzenie typów formantów WPF.
-
-- Wybierz kontrolek WPF.
+W tym artykule pokazano, jak wybrać typy formantów Windows Presentation Foundation (WPF), które mają być wyświetlane w formularzu. Można wybrać dowolne typy formantów WPF, które są uwzględnione w projekcie.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
+Aby ukończyć ten przewodnik, potrzebujesz programu Visual Studio.
 
 ## <a name="create-the-project"></a>Utwórz projekt
 
-Otwórz program Visual Studio i Utwórz nowy projekt Windows Forms aplikacji w Visual Basic lub Visual C# o nazwie `SelectingWpfContent`.
+Otwórz program Visual Studio i Utwórz nowy projekt aplikacji Windows Forms w Visual Basic lub C# wizualizacji `SelectingWpfContent`o nazwie.
 
 > [!NOTE]
-> Gdy hosting zawartości WPF, obsługiwane są tylko C# i projektach języka Visual Basic.
+> W przypadku hostowania zawartości WPF C# obsługiwane są tylko projekty i Visual Basic.
 
 ## <a name="create-the-wpf-control-types"></a>Tworzenie typów formantów WPF
 
-Po dodaniu typów formantów WPF do projektu, można umieścić je w różnych <xref:System.Windows.Forms.Integration.ElementHost> kontrolki.
+Po dodaniu typów formantów WPF do projektu można hostować je w różnych <xref:System.Windows.Forms.Integration.ElementHost> kontrolkach.
 
-## <a name="create-wpf-control-types"></a>Tworzenie typów formantów WPF
+1. Dodaj nowy projekt WPF <xref:System.Windows.Controls.UserControl> do rozwiązania. Użyj domyślnej nazwy dla typu formantu, `UserControl1.xaml`. Aby uzyskać więcej informacji, [zobacz Przewodnik: Tworzenie nowej zawartości WPF na Windows Forms w czasie](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)projektowania.
 
-1. Dodaj nowe WPF <xref:System.Windows.Controls.UserControl> projektu do rozwiązania. Użyj domyślnej nazwy dla kontrolek typu `UserControl1.xaml`. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie nowej zawartości WPF na formularzach Windows Forms w czasie projektowania](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
+2. W widok Projekt upewnij się, że `UserControl1` jest zaznaczone.
 
-2. W widoku Projekt, upewnij się, że `UserControl1` jest zaznaczone. Aby uzyskać więcej informacji, zobacz [jak: Wybierz i Przesuń elementy na powierzchni projektowej](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).
+3. W oknie **Właściwości** ustaw wartość <xref:System.Windows.FrameworkElement.Width%2A> właściwości i <xref:System.Windows.FrameworkElement.Height%2A> na **200**.
 
-3. W **właściwości** okna, ustaw wartość <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> właściwości `200`.
+4. Dodaj kontrolkę <xref:System.Windows.Controls.UserControl> do i <xref:System.Windows.Controls.TextBox.Text%2A> ustaw wartość właściwości na **hostowaną zawartość**. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>
 
-4. Dodaj <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> kontrolę <xref:System.Windows.Controls.UserControl> i ustaw wartość <xref:System.Windows.Controls.TextBox.Text%2A> właściwości **hostowanej zawartości**.
+5. Dodaj drugi WPF <xref:System.Windows.Controls.UserControl> do projektu. Użyj domyślnej nazwy dla typu formantu, `UserControl2.xaml`.
 
-5. Dodaj drugi WPF <xref:System.Windows.Controls.UserControl> do projektu. Użyj domyślnej nazwy dla kontrolek typu `UserControl2.xaml`.
+6. W oknie **Właściwości** ustaw wartość <xref:System.Windows.FrameworkElement.Width%2A> właściwości i <xref:System.Windows.FrameworkElement.Height%2A> na **200**.
 
-6. W **właściwości** okna, ustaw wartość <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> właściwości `200`.
+7. Dodaj kontrolkę <xref:System.Windows.Controls.UserControl> do i <xref:System.Windows.Controls.TextBox.Text%2A> ustaw wartość właściwości na **hostowaną zawartość 2**. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>
 
-7. Dodaj <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> kontrolę <xref:System.Windows.Controls.UserControl> i ustaw wartość <xref:System.Windows.Controls.TextBox.Text%2A> właściwości **hostowanej zawartości 2**.
+   > [!NOTE]
+   > Ogólnie rzecz biorąc, należy hostować bardziej zaawansowaną zawartość WPF. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> Kontrolka jest używana w tym miejscu tylko do celów informacyjnych.
 
- **Uwaga** ogólnie rzecz biorąc, należy obsługiwać bardziej złożone zawartości WPF. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> Kontroli jest tu używany wyłącznie w celach opisowy.
+8. Skompiluj projekt.
 
-1. Skompiluj projekt.
+## <a name="select-wpf-controls"></a>Wybieranie formantów WPF
 
-## <a name="select-wpf-controls"></a>Wybierz kontrolki WPF
+Można przypisać inną zawartość WPF do <xref:System.Windows.Forms.Integration.ElementHost> kontrolki, która jest już hostem zawartości.
 
-Można przypisać różne zawartości WPF na <xref:System.Windows.Forms.Integration.ElementHost> formant, który jest już hosting zawartości.
+1. Otwórz `Form1` w Projektant formularzy systemu Windows.
 
-1. Otwórz `Form1` w programie Windows Forms Designer.
+2. W **przyborniku**kliknij `UserControl1` dwukrotnie, aby utworzyć wystąpienie elementu `UserControl1` w formularzu.
 
-2. W **przybornika**, kliknij dwukrotnie `UserControl1` do utworzenia wystąpienia `UserControl1` w formularzu.
+   Wystąpienie `UserControl1` jest hostowane w nowym <xref:System.Windows.Forms.Integration.ElementHost> formancie o nazwie `elementHost1`.
 
-     Wystąpienie `UserControl1` znajduje się w nowym <xref:System.Windows.Forms.Integration.ElementHost> formantu o nazwie `elementHost1`.
+3. W panelu tagów inteligentnych dla programu `elementHost1`Otwórz listę rozwijaną **Wybierz hostowaną zawartość** .
 
-3. W panelu tagi inteligentne dla `elementHost1`, otwórz **zaznacz hostowana zawartość** listy rozwijanej.
+4. W polu listy rozwijanej wybierz pozycję **UserControl2** .
 
-4. Wybierz **UserControl2** w polu listy rozwijanej.
+   Kontrolka teraz obsługuje wystąpienie `UserControl2` typu. `elementHost1`
 
-     `elementHost1` Kontroli teraz udostępnia wystąpienie `UserControl2` typu.
+5. W oknie **Właściwości** upewnij się, że <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> właściwość jest ustawiona na **UserControl2**.
 
-5. W **właściwości** okna, upewnij się, że <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> właściwość jest ustawiona na **UserControl2**.
+6. Z **przybornika**w grupie współdziałanie **WPF** przeciągnij <xref:System.Windows.Forms.Integration.ElementHost> kontrolkę na formularz.
 
-6. Z **przybornika**w **współdziałanie WPF** grupy, przeciągnij <xref:System.Windows.Forms.Integration.ElementHost> formant na formularzu.
+   Domyślna nazwa nowej kontrolki to `elementHost2`.
 
-     Domyślna nazwa dla nowego formantu to `elementHost2`.
+7. W panelu tagów inteligentnych dla programu `elementHost2`Otwórz listę rozwijaną **Wybierz hostowaną zawartość** .
 
-7. W panelu tagi inteligentne dla `elementHost2`, otwórz **zaznacz hostowana zawartość** listy rozwijanej.
+8. Wybierz pozycję **UserControl1** z listy rozwijanej.
 
-8. Wybierz **UserControl1** z listy rozwijanej.
-
-9. `elementHost2` Kontroli teraz udostępnia wystąpienie `UserControl1` typu.
+9. Kontrolka teraz obsługuje wystąpienie `UserControl1` typu. `elementHost2`
 
 ## <a name="see-also"></a>Zobacz także
 

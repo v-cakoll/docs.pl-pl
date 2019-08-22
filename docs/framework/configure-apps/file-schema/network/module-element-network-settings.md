@@ -8,20 +8,20 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 0d108f2350d82666e3dc24f0f6854fe64ea4755f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 851a63b41dfb5d3b4058e1373148f48d47d9d6ae
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674493"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664066"
 ---
-# <a name="module-element-network-settings"></a>\<Moduł >, Element (ustawienia sieci)
-Dodaje nowy moduł serwera proxy aplikacji.  
+# <a name="module-element-network-settings"></a>\<module > element (Ustawienia sieci)
+Dodaje nowy moduł proxy do aplikacji.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.net>  
 \<defaultProxy>  
-\<module>  
+\<> modułu  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,7 +38,7 @@ Dodaje nowy moduł serwera proxy aplikacji.
   
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
-|`type`|W pełni kwalifikowana nazwa typu (wskazywanym przez <xref:System.Type.FullName%2A> właściwości) i nazwy zestawu (wskazywanym przez <xref:System.Reflection.Assembly.FullName%2A> właściwości), oddzielone przecinkami, który implementuje serwera proxy.|  
+|`type`|W pełni kwalifikowana nazwa typu (wskazywana przez <xref:System.Type.FullName%2A> Właściwość) i nazwa zestawu (wskazywanym <xref:System.Reflection.Assembly.FullName%2A> przez właściwość) oddzielone przecinkami, które implementują serwer proxy.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -47,18 +47,18 @@ Dodaje nowy moduł serwera proxy aplikacji.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Umożliwia skonfigurowanie serwera proxy protokołu HTTP (Hypertext Transfer).|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|Konfiguruje serwer proxy protokołu HTTP (Hypertext Transfer Protocol).|  
   
 ## <a name="remarks"></a>Uwagi  
- `module` Element rejestruje klasy serwera proxy, które implementują <xref:System.Net.IWebProxy> interfejsu. Po zarejestrowaniu klasy proxy `module` może służyć do żądania informacji za pośrednictwem obsługiwanych serwera proxy.  
+ Element rejestruje klasy proxy, które <xref:System.Net.IWebProxy> implementują interfejs. `module` Po zarejestrowaniu klasy `module` proxy może służyć do żądania informacji za pomocą obsługiwanego serwera proxy.  
   
- Wartość `type` atrybut powinien mieć nazwę klasy, modułu i nazwą z jej odpowiednie dynamiczne łącze biblioteki (DLL).  
+ Wartość `type` atrybutu powinna być nazwą klasy modułu i nazwą odpowiadającą jej biblioteką dołączaną dynamicznie (dll).  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
+ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład rejestruje klasę niestandardowego serwera proxy.  
+ Poniższy przykład rejestruje niestandardową klasę proxy.  
   
 ```xml  
 <configuration>  
@@ -75,4 +75,4 @@ Dodaje nowy moduł serwera proxy aplikacji.
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Net.IWebProxy?displayProperty=nameWithType>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

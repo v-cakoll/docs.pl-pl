@@ -10,48 +10,48 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3450908cadff453df79ab8fcf10285c25dfa50a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cece075bc16a175265377b9714598f19452886c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973410"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666390"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Równoległość danych (Biblioteka zadań równoległych)
-*Równoległość danych* odwołuje się do scenariuszy, w których ten sam jest przeprowadzane jednocześnie (równolegle w) w przypadku elementów w kolekcji źródłowej lub tablicy. W danych operacji równoległych kolekcja źródłowa jest podzielona na partycje, tak aby wiele wątków może jednocześnie działać w różnych segmentach.  
+*Równoległość danych* odwołuje się do scenariuszy, w których ta sama operacja jest wykonywana współbieżnie (czyli równolegle) dla elementów w kolekcji źródłowej lub tablicy. W operacjach Parallel Data kolekcja źródłowa jest partycjonowana tak, aby wiele wątków mogło działać jednocześnie na różnych segmentach.  
   
- Biblioteka zadań równoległych (TPL) obsługuje równoległości danych za pośrednictwem <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> klasy. Ta klasa udostępnia oparte na metodzie równoległych wdrożeń [dla](~/docs/csharp/language-reference/keywords/for.md) i [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) pętli (`For` i `For Each` w języku Visual Basic). Możesz napisać logikę pętli <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> lub <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> pętli, na ile należy napisać pętla Sekwencyjna. Nie masz do tworzenia wątków lub kolejki elementów roboczych. W pętlach podstawowych nie masz podjęcie blokad. Biblioteka TPL obsługuje całą pracę niskiego poziomu dla Ciebie. Aby uzyskać szczegółowe informacje dotyczące korzystania z <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, Pobierz dokument [wzorce programowania równoległego: Rozumienie i stosowanie równoległych wzorców z programu .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222). Poniższy przykład kodu pokazuje prosty `foreach` pętli i odpowiadającą jej równoległych.  
+ Biblioteka zadań równoległych (TPL) obsługuje równoległość danych za pomocą <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> klasy. Ta klasa zapewnia oparte na metodzie równoległe implementacje pętli [for](../../csharp/language-reference/keywords/for.md) i`For` [foreach](../../csharp/language-reference/keywords/foreach-in.md) (oraz `For Each` w Visual Basic). Można napisać logikę pętli dla <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> pętli lub <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> , podobnie jak napisać pętla sekwencyjna. Nie trzeba tworzyć wątków ani elementów roboczych kolejki. W przypadku pętli podstawowych nie trzeba podejmować blokad. TPL obsługuje wszystkie zadania niskiego poziomu. Aby uzyskać szczegółowe informacje na temat korzystania z <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, Pobierz wzorce dokumentu [dla programowania równoległego: Zrozumienie i stosowanie równoległych wzorców z .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222). Poniższy przykład kodu pokazuje prostą `foreach` pętlę i jej równoległą równoważność.  
   
 > [!NOTE]
->  Ta dokumentacja używa wyrażeń lambda do definiowania delegatów w TPL. Jeśli nie znasz wyrażeń lambda w języku C# lub Visual Basic, zobacz [wyrażeń Lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+>  Ta dokumentacja używa wyrażeń lambda do definiowania delegatów w TPL. Jeśli nie znasz wyrażeń lambda w C# lub Visual Basic, zobacz [wyrażenia lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
  [!code-csharp[TPL#20](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl/cs/tpl.cs#20)]
  [!code-vb[TPL#20](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl/vb/tpl_vb.vb#20)]  
   
- Podczas równoległego pętli przebiegów, partycje TPL źródła danych, aby pętli może jednocześnie działać na wiele części. Za kulisami harmonogram zadań partycje zadania, w zależności od zasobów systemowych i obciążenia. Jeśli to możliwe, harmonogram dystrybuuje między wiele wątków i procesorów, jeśli obciążenie stanie się niezrównoważone.  
+ Po uruchomieniu pętli równoległej TPL partycjuje źródło danych, dzięki czemu pętla może działać na wielu częściach jednocześnie. W tle Harmonogram zadań partycjonowania zadania na podstawie zasobów systemowych i obciążeń. Gdy to możliwe, usługa Scheduler dystrybuuje pracę między wieloma wątkami i procesorami, jeśli obciążenie zostanie niezrównoważone.  
   
 > [!NOTE]
->  Można też podać swój własny niestandardowy partycjoner lub harmonogramu. Aby uzyskać więcej informacji, zobacz [niestandardowe Partycjonery dla PLINQ i TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) i [harmonogramów zadań](xref:System.Threading.Tasks.TaskScheduler).  
+>  Możesz również dostarczyć własnych niestandardowych partycji lub harmonogramów. Aby uzyskać więcej informacji, zobacz [niestandardowe partycje dla PLINQ i TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) i [harmonogramów zadań](xref:System.Threading.Tasks.TaskScheduler).  
   
- Zarówno <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> metody ma kilka przeciążeń umożliwiające, możesz zatrzymać lub przerwać wykonywanie pętli, monitorować stan pętli w innych wątkach, zarządzania stanem lokalnej wątku, finalize obiektów lokalnych wątków, kontrolować stopień współbieżności, i tak dalej. Typy pomocnika, które włączają te funkcje obejmują <xref:System.Threading.Tasks.ParallelLoopState>, <xref:System.Threading.Tasks.ParallelOptions>, <xref:System.Threading.Tasks.ParallelLoopResult>, <xref:System.Threading.CancellationToken>, i <xref:System.Threading.CancellationTokenSource>.  
+ Obie metody <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> i mają kilka przeciążeń, które umożliwiają zatrzymanie lub przerwanie wykonywania pętli, monitorowanie stanu pętli w innych wątkach, zachowanie stanu wątku-Local, Finalizowanie obiektów lokalnych wątków, kontrolowanie stopnia współbieżności, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i tak dalej. Typy pomocników, które umożliwiają włączenie tej <xref:System.Threading.Tasks.ParallelLoopState>funkcji <xref:System.Threading.Tasks.ParallelOptions> <xref:System.Threading.Tasks.ParallelLoopResult>, obejmują <xref:System.Threading.CancellationToken>,, <xref:System.Threading.CancellationTokenSource>,, i.  
   
- Aby uzyskać więcej informacji, zobacz [wzorce programowania równoległego: Rozumienie i stosowanie równoległych wzorców z programu .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222).  
+ Aby uzyskać więcej informacji, [zobacz wzorce programowania równoległego: Zrozumienie i stosowanie równoległych wzorców z .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222).  
   
- Równoległość danych przy użyciu składni zaznacza deklaratywne lub typu kwerendy jest obsługiwana przez program PLINQ. Aby uzyskać więcej informacji, zobacz [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ Równoległość danych przy użyciu deklaratywnej lub podobnej do zapytania składnia jest obsługiwana przez PLINQ. Aby uzyskać więcej informacji, zobacz [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Instrukcje: Zapisywanie prostej pętli Parallel.For](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)|W tym artykule opisano sposób pisania <xref:System.Threading.Tasks.Parallel.For%2A> pętli za pośrednictwem tablicy lub można indeksować <xref:System.Collections.Generic.IEnumerable%601> źródła kolekcji.|  
-|[Instrukcje: Zapisywanie prostej pętli Parallel.ForEach](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|W tym artykule opisano sposób pisania <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli nad <xref:System.Collections.Generic.IEnumerable%601> źródła kolekcji.|  
-|[Instrukcje: Zatrzymywanie lub przerywanie równoległej pętli for](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100))|W tym artykule opisano sposób zatrzymać lub przerwać pętlę równoległą tak, aby wszystkie wątki są informowane o akcji.|  
-|[Instrukcje: Zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|W tym artykule opisano sposób pisania <xref:System.Threading.Tasks.Parallel.For%2A> pętli, w którym każdy wątek przechowuje prywatna zmienna, która nie jest widoczny dla innych wątków i jak zsynchronizować wyniki ze wszystkich wątków, po zakończeniu pętli.|  
-|[Instrukcje: Zapisywanie pętli Parallel.ForEach ze zmiennymi lokalnymi partycji](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)|W tym artykule opisano sposób pisania <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli, w którym każdy wątek przechowuje prywatna zmienna, która nie jest widoczny dla innych wątków i jak zsynchronizować wyniki ze wszystkich wątków, po zakończeniu pętli.|  
-|[Instrukcje: Anulowanie pętli Parallel.For lub ForEach](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|Opis sposobu anulowania pętlę równoległą przy użyciu <xref:System.Threading.CancellationToken?displayProperty=nameWithType>|  
-|[Instrukcje: Przyspieszanie małych jednostek pętli](../../../docs/standard/parallel-programming/how-to-speed-up-small-loop-bodies.md)|Opisano jeden ze sposobów, aby przyspieszyć wykonywanie, gdy ciało pętli jest bardzo mały.|  
-|[Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Zawiera omówienie Biblioteka zadań równoległych.|  
-|[Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)|Wprowadza programowania równoległego w .NET Framework.|  
+|[Instrukcje: Napisz prostą równoległą pętlę. for](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)|Opisuje, <xref:System.Threading.Tasks.Parallel.For%2A> w jaki sposób napisać pętlę w dowolnej tablicy <xref:System.Collections.Generic.IEnumerable%601> źródłowej lub indeksowanej kolekcji.|  
+|[Instrukcje: Napisz prostą pętlę Parallel. ForEach](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|Opisuje sposób pisania <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli <xref:System.Collections.Generic.IEnumerable%601> w kolekcji źródłowej.|  
+|[Instrukcje: Zatrzymaj lub Przerwij ze równoległej pętli for](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100))|Opisuje, jak zatrzymać lub przerwać pętlę równoległą, aby wszystkie wątki były poinformowane o akcji.|  
+|[Instrukcje: Napisz Parallel. for — pętla ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|Opisuje, w jaki sposób <xref:System.Threading.Tasks.Parallel.For%2A> napisać pętlę, w której każdy wątek utrzymuje zmienną prywatną, która nie jest widoczna dla żadnych innych wątków i jak synchronizować wyniki ze wszystkich wątków po zakończeniu pętli.|  
+|[Instrukcje: Napisz równoległą pętlę. ForEach ze zmiennymi lokalnymi partycji](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)|Opisuje, w jaki sposób <xref:System.Threading.Tasks.Parallel.ForEach%2A> napisać pętlę, w której każdy wątek utrzymuje zmienną prywatną, która nie jest widoczna dla żadnych innych wątków i jak synchronizować wyniki ze wszystkich wątków po zakończeniu pętli.|  
+|[Instrukcje: Anuluj pętlę Parallel. for lub ForEach](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|Opisuje sposób anulowania pętli równoległej za pomocą<xref:System.Threading.CancellationToken?displayProperty=nameWithType>|  
+|[Instrukcje: Przyspieszanie małych jednostek pętli](../../../docs/standard/parallel-programming/how-to-speed-up-small-loop-bodies.md)|Opisuje jeden ze sposobów przyspieszenia wykonywania, gdy treść pętli jest bardzo mała.|  
+|[Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Zawiera omówienie biblioteki zadań równoległych.|  
+|[Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)|Wprowadza programowanie równoległe w .NET Framework.|  
   
 ## <a name="see-also"></a>Zobacz także
 

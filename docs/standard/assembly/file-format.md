@@ -1,38 +1,38 @@
 ---
 title: Format pliku zestawu .NET
-description: Dowiedz się więcej o formacie pliku zestawu .NET, który jest używany do opisywania i zawierać aplikacji .NET i bibliotek.
+description: Dowiedz się więcej o formacie pliku zestawu platformy .NET, który jest używany do opisywania i zawierania aplikacji i bibliotek platformy .NET.
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 0bde31a004b1952be488569f89cfd3b129c82771
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ef5d459195bea752ec5380f2853d8011cb189aa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627954"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666633"
 ---
 # <a name="net-assembly-file-format"></a>Format pliku zestawu .NET
 
-.NET definiuje format pliku binarnego — "assembly" — służy do w pełni opisują, a także zawierać programy platformy .NET. Zestawy są używane programy, a także wszelkie zależne biblioteki. .NET program mogą być wykonywane jako jeden lub więcej zestawów z nie innych wymaganych artefaktów, poza odpowiedniej implementacji .NET. Natywne zależności, w tym systemie operacyjnym interfejsów API, są oddzielne zastrzeżenia i nie znajdują się w ciągu formatu zestawu .NET, chociaż są czasami określane w formacie (na przykład WinRT).
+Platforma .NET definiuje format pliku binarnego — "zestaw" — używany do pełnego opisywania i zawiera programy .NET. Zestawy są używane na potrzeby programów, a także do wszystkich bibliotek zależnych. Program .NET można wykonać jako jeden lub więcej zestawów bez żadnych innych wymaganych artefaktów, poza odpowiednią implementacją platformy .NET. Natywne zależności, w tym interfejsy API systemu operacyjnego, są oddzielnymi problemami i nie są zawarte w formacie zestawu .NET, chociaż są czasami opisane w tym formacie (na przykład WinRT).
 
-> Każdy składnik interfejsu wiersza polecenia niesie ze sobą metadanych dla deklaracji, implementacji i określonego odwołania do tego składnika. Dlatego metadane specyficzne dla danego składnika jest określany jako metadane składnika i Wynikowy składnik jest nazywany można samoopisujące — ECMA 335 I.9.1, składniki i zestawy.
+> Każdy składnik interfejsu wiersza polecenia przenosi metadane dla deklaracji, implementacji i odwołań specyficznych dla tego składnika. W związku z tym metadane specyficzne dla składnika są określane jako metadane składników, a składnik uzyskany jest uważany za własny opis — od ECMA 335 I. 9.1 składników i zestawów.
 
-Format jest w pełni określony i standaryzowane jako [ECMA-335](https://www.ecma-international.org/publications/standards/Ecma-335.htm). Wszystkie środowiska uruchomieniowe i Kompilatory języka .NET, użyj tego formatu. Obecność udokumentowane i rzadko aktualizowane format binarny został głównych korzyści (prawdopodobnie wymaganie) współdziałania. Format ostatniej aktualizacji w sposób merytorycznych w 2005 r. (.NET 2.0), aby pomieścić typy ogólne i architektury procesora.
+Format jest w pełni określony i znormalizowany jako [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm). Wszystkie kompilatory i środowiska uruchomieniowe platformy .NET używają tego formatu. Obecność udokumentowanego i rzadko aktualizowanego formatu binarnego jest ważnym korzyścią (raczej wymaganie) dla współdziałania. Format został ostatnio zaktualizowany w sposób istotny w 2005 (.NET 2,0) w celu uwzględnienia ogólnych i architektury procesora.
 
-Format jest niezainteresowana Procesora i systemu operacyjnego. Został on użyty w ramach implementacji platformy .NET, przeznaczonych na wiele procesorów i mikroukłady. Sam format ma dziedzictwa Windows, ale jest implementable w dowolnym systemie operacyjnym. Prawdopodobnie największy wybór współdziałania w ramach systemu operacyjnego jest, że większość wartości są przechowywane w formacie little-endian. Nie ma określonych koligacji do rozmiaru wskaźnika maszyny (na przykład 32-bitowy, 64-bitowy).
+Format to procesor CPU i OS-niezależny od. Jest ona używana jako część implementacji platformy .NET, które są przeznaczone dla wielu układów i procesorów. Chociaż sam format ma dziedzictwo systemu Windows, można go zaimplementować w dowolnym systemie operacyjnym. Raczej najbardziej znaczący wybór dla interoperacyjności systemu operacyjnego polega na tym, że większość wartości jest przechowywanych w formacie little-endian. Nie ma konkretnej koligacji z rozmiarem wskaźnika maszyny (na przykład 32-bitowym, 64-bitowym).
 
-Format zestawu .NET jest również bardzo opisowe informacje o strukturze dany program lub biblioteki. Opisano w nim wewnętrznych składników zestawu, w szczególności: odwołania do zestawów i typów zdefiniowanych oraz ich struktury wewnętrznej. Narzędzia i interfejsy API może odczytywać i przetwarzać te informacje do wyświetlania lub podjąć decyzje dotyczące programowego.
+Format zestawu .NET jest również bardzo opisową strukturą danego programu lub biblioteki. Opisuje wewnętrzne składniki zestawu, w tym: odwołania do zestawów i typy zdefiniowane oraz ich struktura wewnętrzna. Narzędzia lub interfejsy API mogą odczytywać i przetwarzać te informacje w celu wyświetlania lub podejmowania decyzji programistycznych.
 
 ## <a name="format"></a>Format
 
-Format binarny platformy .NET jest oparty na Windows [pliku PE](https://en.wikipedia.org/wiki/Portable_Executable) formatu. W rzeczywistości biblioteki klas platformy .NET są zgodność Windows PEs i pojawiają się na pierwszy rzut oka Windows biblioteki dołączane dynamicznie (dll) lub aplikacji plików wykonywalnych (exe). Jest to bardzo przydatne cecha w Windows, w którym można udają natywnych plików binarnych z pliku wykonywalnego i otrzymujesz niektóre z tych samych traktowania (na przykład ładowania systemu operacyjnego, narzędzia PE).
+Format binarny platformy .NET jest oparty na formacie [pliku Windows PE](https://en.wikipedia.org/wiki/Portable_Executable) . W rzeczywistości biblioteki klas platformy .NET są zgodne z modułami MFC systemu Windows i pojawiają się na pierwszy rzut oka jako biblioteki dołączane dynamicznie (dll) systemu Windows lub pliki wykonywalne aplikacji (exe). Jest to bardzo przydatna cecha w systemie Windows, w której mogą one być maskowane jako natywne pliki binarne plików wykonywalnych i uzyskać niektóre z tych samych traktowania (na przykład ładowania systemu operacyjnego, narzędzi PE).
 
-![Zestaw nagłówków](../media/assembly-format/assembly-headers.png)
+![Nagłówki zestawów](../media/assembly-format/assembly-headers.png)
 
-Zestaw nagłówków z ECMA 335 II.25.1, struktura formatu plików środowiska uruchomieniowego.
+Nagłówki zestawów z ECMA 335 II. 25.1, struktura formatu pliku środowiska uruchomieniowego.
 
 ## <a name="processing-the-assemblies"></a>Przetwarzanie zestawów
 
-Istnieje możliwość zapisu do procesu zestawów narzędzi lub interfejsów API. Informacje o zestawie umożliwia podejmowanie decyzji programowe w czasie wykonywania, ponownego tworzenia zestawów, zapewniając interfejsu API funkcji IntelliSense w edytorze i generowanie dokumentacji. <xref:System.Reflection?displayProperty=nameWithType> i [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) są dobrym przykładem narzędzia, które są często używane w tym celu.
+Istnieje możliwość pisania narzędzi lub interfejsów API do przetwarzania zestawów. Informacje o zestawie umożliwiają podejmowanie decyzji programistycznych w czasie wykonywania, ponowne pisanie zestawów, dostarczanie interfejsu API IntelliSense w edytorze i generowanie dokumentacji. <xref:System.Reflection?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType>, i [mono. Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) są dobrymi przykładami narzędzi, które są często używane do tego celu.

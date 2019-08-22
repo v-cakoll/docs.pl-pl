@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29932eb27bcd13876ea6982982e67341edb8e0de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c8f8744d3ef1ca30eb05a4c8c3290d8a514714b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674080"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663512"
 ---
 # <a name="publisherpolicy-element"></a>\<publisherPolicy> Element
-Określa, czy środowisko uruchomieniowe mają zastosowanie zasady wydawcy.  
+Określa, czy środowisko uruchomieniowe stosuje zasady wydawcy.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<runtime>  
-\<assemblybinding — >  
-\<dependentAssembly>  
+\<> zestawubinding  
+\<> dependentAssembly  
 \<publisherPolicy>  
   
 ## <a name="syntax"></a>Składnia  
@@ -41,14 +41,14 @@ Określa, czy środowisko uruchomieniowe mają zastosowanie zasady wydawcy.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`apply`|Określa, czy zastosować zasad wydawcy.|  
+|`apply`|Określa, czy mają być stosowane zasady wydawcy.|  
   
 ## <a name="apply-attribute"></a>Zastosuj atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`yes`|Zastosowanie zasad wydawcy. To jest ustawienie domyślne.|  
-|`no`|Nie ma zastosowania zasad wydawcy.|  
+|`yes`|Stosuje zasady wydawcy. To jest ustawienie domyślne.|  
+|`no`|Nie stosuje zasad wydawcy.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -61,14 +61,14 @@ Określa, czy środowisko uruchomieniowe mają zastosowanie zasady wydawcy.
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli dostawcy składników udostępnia nową wersję zestawu, dostawcy mogą być zasad wydawcy, dzięki czemu aplikacje, które używają starej wersji teraz używać nowej wersji. Aby określić, czy do zastosowania zasad wydawcy dla określonego zestawu, należy umieścić  **\<publisherPolicy >** element  **\<dependentAssembly >** elementu.  
+ Gdy dostawca składnika zwalnia nową wersję zestawu, dostawca może uwzględnić zasady wydawcy, aby aplikacje używające starej wersji używały teraz nowej wersji. Aby określić, czy zastosować zasady wydawcy dla określonego zestawu, umieść  **\<element publisherPolicy Apply >** w  **\<elemencie dependentAssembly >** .  
   
- Ustawieniem domyślnym dla **zastosować** atrybut jest **tak**. Ustawienie **zastosować** atrybutu **nie** zastępuje wszystkie poprzednie **tak** ustawienia zestawu.  
+ Ustawieniem domyślnym dla atrybutu **apply** jest **tak**. Ustawienie atrybutu **Zastosuj** do **nie** zastępuje żadnych poprzednich ustawień **tak** dla zestawu.  
   
- Uprawnienie jest wymagane dla aplikacji, aby jawnie Ignoruj przy użyciu zasad wydawcy [ \<zastosować publisherPolicy = "no" / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) elementu w pliku konfiguracyjnym aplikacji. To uprawnienie jest przydzielane przez ustawienie <xref:System.Security.Permissions.SecurityPermissionFlag> flagą <xref:System.Security.Permissions.SecurityPermission>. Aby uzyskać więcej informacji, zobacz [uprawnienie zabezpieczeń przekierowania powiązania zestawu](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
+ Uprawnienie jest wymagane, aby aplikacja jawnie ignorował zasady wydawcy przy użyciu [ \<elementu publisherPolicy Apply Apply = "No"/>](publisherpolicy-element.md) w pliku konfiguracyjnym aplikacji. Uprawnienie jest udzielane przez ustawienie <xref:System.Security.Permissions.SecurityPermissionFlag> flagi <xref:System.Security.Permissions.SecurityPermission>na. Aby uzyskać więcej informacji, zobacz [uprawnienia zabezpieczeń przekierowania powiązania zestawu](../../assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład powoduje wyłączenie zasad wydawcy dla zestawu, `myAssembly`.  
+ Poniższy przykład powoduje wyłączenie zasad wydawcy dla zestawu `myAssembly`.  
   
 ```xml  
 <configuration>  
@@ -87,7 +87,7 @@ Określa, czy środowisko uruchomieniowe mają zastosowanie zasady wydawcy.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Przekierowywanie wersji zestawu](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [Przekierowywanie wersji zestawu](../../redirect-assembly-versions.md)

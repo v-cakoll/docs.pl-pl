@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: e5069dd46a31a65f65a17d750b685d82762e3d11
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 4d7a49633599aabc96153e4793e50c1a4d6d092d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038206"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666219"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Instrukcje: dodawanie przycisków do kontrolki ToolBar przy użyciu narzędzia Projektant
 
@@ -23,7 +23,6 @@ ms.locfileid: "69038206"
 Integralną częścią <xref:System.Windows.Forms.ToolBar> kontrolki są przyciski dodawane do niego. Mogą one służyć do zapewnienia łatwego dostępu do poleceń menu lub, Alternatywnie, można umieścić w innym obszarze interfejsu użytkownika aplikacji, aby udostępnić użytkownikom polecenia, które nie są dostępne w strukturze menu.
 
 Poniższa procedura wymaga projektu **aplikacji systemu Windows** z formularzem zawierającym <xref:System.Windows.Forms.ToolBar> kontrolkę. Aby uzyskać informacje na temat konfigurowania takiego projektu, zobacz [How to: Utwórz projekt](/visualstudio/ide/step-1-create-a-windows-forms-application-project) aplikacji Windows Forms i [instrukcje: Dodaj formanty do Windows Forms](how-to-add-controls-to-windows-forms.md).
-
 
 ### <a name="to-add-buttons-at-design-time"></a>Aby dodać przyciski w czasie projektowania
 

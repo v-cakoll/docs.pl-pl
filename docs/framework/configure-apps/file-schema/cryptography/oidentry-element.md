@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: c686d2b99ad66aec753a356b09fa3c7151193808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 013994e36c4c63410a753967cbac92c38783ae62
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674756"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659588"
 ---
-# <a name="oidentry-element"></a>\<oidEntry> Element
-Mapuje ASN.1 identyfikator obiektu (OID) przyjazną nazwę.  
+# <a name="oidentry-element"></a>\<oidEntry, element >
+Mapuje identyfikator obiektu ASN. 1 (OID) na przyjazną nazwę.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<mscorlib>  
 \<cryptographySettings>  
 \<oidMap>  
-\<oidEntry>  
+\<oidEntry >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,8 +37,8 @@ Mapuje ASN.1 identyfikator obiektu (OID) przyjazną nazwę.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**OID**|Atrybut wymagany.<br /><br /> Określa identyfikator OID ASN.1 odpowiadający algorytm implementowane przez klasy.|  
-|**Nazwa**|Atrybut wymagany.<br /><br /> Określa wartość dla **nazwa** atrybutu w [ \<nameentry — >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) tagu.|  
+|**OID**|Atrybut wymagany.<br /><br /> Określa identyfikator OID ASN. 1 odpowiadający algorytmowi zaimplementowanemu przez klasę.|  
+|**name**|Atrybut wymagany.<br /><br /> Określa wartość atrybutu **name** w [ \<tagu > nameEntry](nameentry-element.md) .|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -48,15 +48,15 @@ Mapuje ASN.1 identyfikator obiektu (OID) przyjazną nazwę.
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`cryptographySettings`|Zawiera ustawienia szyfrowania.|  
-|`mscorlib`|Zawiera `cryptographySettings` elementu.|  
-|`oidMap`|Zawiera mapowania identyfikatora (OID) obiektów ASN.1 do klas.|  
+|`cryptographySettings`|Zawiera ustawienia kryptografii.|  
+|`mscorlib`|`cryptographySettings` Zawiera element.|  
+|`oidMap`|Zawiera mapowania identyfikatorów obiektów ASN. 1 (OID) do klas.|  
   
 ## <a name="remarks"></a>Uwagi  
- Identyfikatory obiektów ASN.1 zidentyfikować algorytmów w niektórych formatach kryptograficznych. Mapowanie identyfikatorów obiektów na przyjazne nazwy dla algorytmów, który chcesz zidentyfikować.  
+ Identyfikatory obiektu ASN. 1 identyfikują algorytmy w niektórych formatach kryptograficznych. Mapuj identyfikatory obiektów na przyjazne nazwy dla algorytmów, które chcesz zidentyfikować.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać  **\<oidentry — >** element do mapy identyfikator obiektu algorytmu wyznaczania wartości skrótu RIPEMD 160 implementacji tego algorytmu wyznaczania wartości skrótu.  
+ Poniższy przykład pokazuje,  **\<** jak używać elementu oidEntry > do mapowania identyfikatora obiektu dla algorytmu wyznaczania wartości skrótu RIPEMD-160 do implementacji algorytmu wyznaczania wartości skrótu.  
   
 ```xml  
 <configuration>  
@@ -80,8 +80,8 @@ Mapuje ASN.1 identyfikator obiektu (OID) przyjazną nazwę.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Schemat ustawień kryptografii](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Schemat pliku konfiguracji](../index.md)
+- [Schemat ustawień kryptografii](index.md)
 - [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)
-- [Konfigurowanie klas kryptografii](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Mapowanie identyfikatorów obiektów na algorytmy kryptografii](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [Konfigurowanie klas kryptografii](../../configure-cryptography-classes.md)
+- [Mapowanie identyfikatorów obiektów na algorytmy kryptografii](../../map-object-identifiers-to-cryptography-algorithms.md)

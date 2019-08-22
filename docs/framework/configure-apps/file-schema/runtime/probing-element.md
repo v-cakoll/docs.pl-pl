@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9402c9f28c123affb7b90fc189484bb1fd43db46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704612"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663520"
 ---
-# <a name="probing-element"></a>\<probing> Element
-Określa podkatalogi podstawowej aplikacji dla środowiska uruchomieniowego języka wspólnego wyszukiwania podczas ładowania zestawów.  
+# <a name="probing-element"></a>\<> elementu do sondowania
+Określa podkatalogi bazy aplikacji dla środowiska uruchomieniowego języka wspólnego do przeszukania podczas ładowania zestawów.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<runtime>  
-\<assemblybinding — >  
-\<sondowanie >  
+\<> zestawubinding  
+\<> sondowania  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,7 +39,7 @@ Określa podkatalogi podstawowej aplikacji dla środowiska uruchomieniowego jęz
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`privatePath`|Atrybut wymagany.<br /><br /> Określa podkatalogi katalogu podstawowego aplikacji, który może zawierać zestawów. Powinny one być poszczególnych podkatalogach średnikiem.|  
+|`privatePath`|Atrybut wymagany.<br /><br /> Określa podkatalogi katalogu podstawowego aplikacji, który może zawierać zestawy. Rozdziel każdy podkatalog średnikami.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -53,7 +53,7 @@ Określa podkatalogi podstawowej aplikacji dla środowiska uruchomieniowego jęz
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak określić podkatalogów podstawowej aplikacji, które środowisko wykonawcze powinno poszukać zestawów.  
+ Poniższy przykład pokazuje, jak określić podkatalogi bazy aplikacji środowisko uruchomieniowe powinno wyszukiwać zestawy.  
   
 ```xml  
 <configuration>  
@@ -67,7 +67,7 @@ Określa podkatalogi podstawowej aplikacji dla środowiska uruchomieniowego jęz
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Określanie lokalizacji zestawu](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)
+- [Określanie lokalizacji zestawu](../../specify-assembly-location.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../deployment/how-the-runtime-locates-assemblies.md)

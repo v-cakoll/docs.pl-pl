@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c96d5aea150c0dbb55889e9fc26417e7803a155
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a1923e70143ea2a158447eccdb35d347fe4f51ea
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487662"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663772"
 ---
-# <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager> Element
-Określa, czy należy wyłączyć zachowanie domyślne, które jest, aby zezwolić na host środowiska uruchomieniowego w celu zastąpienia ustawień konfiguracji domeny aplikacji.  
+# <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager, element >
+Określa, czy domyślne zachowanie, które umożliwia hostowi środowiska uruchomieniowego przesłonięcie ustawień konfiguracji dla domeny aplikacji, jest wyłączone.  
   
- \<Konfiguracja > Element  
-\<środowisko uruchomieniowe > Element  
+ \<> elementu konfiguracji  
+\<Element > środowiska uruchomieniowego  
 \<disableFusionUpdatesFromADManager>  
   
 ## <a name="syntax"></a>Składnia  
@@ -34,14 +34,14 @@ Określa, czy należy wyłączyć zachowanie domyślne, które jest, aby zezwoli
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|Włączone|Atrybut wymagany.<br /><br /> Określa, czy należy wyłączyć domyślne możliwość przesłaniania ustawień Fusion.|  
+|dostępny|Atrybut wymagany.<br /><br /> Określa, czy domyślna możliwość przesłonięcia ustawień Fusion jest wyłączona.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|0|Nie należy wyłączać możliwość przesłaniania ustawień Fusion. Jest to domyślne zachowanie, począwszy od programu .NET Framework 4.|  
-|1|Wyłącz możliwość zastąpienia ustawień Fusion. Spowoduje to przywrócenie zachowania wcześniejszych wersji programu .NET Framework.|  
+|0|Nie należy wyłączać możliwości przesłonięcia ustawień Fusion. Jest to zachowanie domyślne, zaczynając od .NET Framework 4.|  
+|1|Wyłącz możliwość przesłonięcia ustawień Fusion. Spowoduje to przywrócenie zachowania wcześniejszych wersji .NET Framework.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -54,18 +54,18 @@ Określa, czy należy wyłączyć zachowanie domyślne, które jest, aby zezwoli
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Począwszy od programu .NET Framework 4, zachowanie domyślne jest umożliwienie <xref:System.AppDomainManager> obiekt, aby zastąpić ustawienia konfiguracji za pomocą <xref:System.AppDomainSetup.ConfigurationFile%2A> właściwości lub <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metody <xref:System.AppDomainSetup> obiektu, który jest przekazywany do implementacji z <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> metodę, w swojej podklasą <xref:System.AppDomainManager>. Dla domyślnej domeny aplikacji ustawienia, które można zmienić zastąpienia ustawień, które zostały określone w pliku konfiguracyjnym aplikacji. W przypadku innych domen aplikacji zastępują ustawienia konfiguracji, które zostały przekazane do <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> lub <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> metody.  
+ Począwszy od .NET Framework 4 <xref:System.AppDomainManager> , domyślnym zachowaniem jest umożliwienie obiektowi przesłania ustawień konfiguracji przy <xref:System.AppDomainSetup.ConfigurationFile%2A> użyciu właściwości <xref:System.AppDomainSetup> lub <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metody obiektu, który jest przesyłany do implementacji metody w podklasach <xref:System.AppDomainManager>. <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> W przypadku domyślnej domeny aplikacji zmiany ustawień zastępują ustawienia, które zostały określone przez plik konfiguracyjny aplikacji. W przypadku innych domen aplikacji zastępują one ustawienia konfiguracji, które zostały przesłane do <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> metody <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> lub.  
   
- Możesz przekazać nowe informacje o konfiguracji, lub przekazać wartości null (`Nothing` w języku Visual Basic), aby wyeliminować informacje o konfiguracji, która została przekazana.  
+ Można przekazać nowe informacje konfiguracyjne lub przekazać wartość null (`Nothing` w Visual Basic), aby wyeliminować przekazane informacje o konfiguracji.  
   
- Nie przekazuj informacje o konfiguracji zarówno <xref:System.AppDomainSetup.ConfigurationFile%2A> właściwości i <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metody. W przypadku przekazania informacji o konfiguracji na wartość oba, informacje są przekazywane do <xref:System.AppDomainSetup.ConfigurationFile%2A> właściwość jest ignorowana, ponieważ <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metoda zastępuje informacje o konfiguracji z pliku konfiguracji aplikacji. Jeśli używasz <xref:System.AppDomainSetup.ConfigurationFile%2A> właściwości, można przekazać wartości null (`Nothing` w języku Visual Basic) do <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metodę, aby wyeliminować wszelkie bajtów konfiguracji, które zostały określone w wywołaniu <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> lub <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> metody.  
+ Nie przekazuj informacji o konfiguracji do <xref:System.AppDomainSetup.ConfigurationFile%2A> właściwości <xref:System.AppDomainSetup.SetConfigurationBytes%2A> i metody. W przypadku przekazania informacji o konfiguracji do obu tych informacji przekazywane do <xref:System.AppDomainSetup.ConfigurationFile%2A> właściwości zostanie zignorowane, <xref:System.AppDomainSetup.SetConfigurationBytes%2A> ponieważ metoda przesłania informacje o konfiguracji z pliku konfiguracyjnego aplikacji. <xref:System.AppDomainSetup.ConfigurationFile%2A> W przypadku użycia właściwości można przekazać wartość null ( <xref:System.AppDomainSetup.SetConfigurationBytes%2A> `Nothing` w Visual Basic) do metody, aby wyeliminować wszystkie bajty konfiguracyjne <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> , które zostały określone w wywołaniu metody lub <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> .  
   
- Oprócz informacji o konfiguracji, można zmienić następujące ustawienia na <xref:System.AppDomainSetup> obiekt, który jest przekazywany do implementacji <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> metoda: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>, <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A> , <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, <xref:System.AppDomainSetup.DynamicBase%2A>, <xref:System.AppDomainSetup.LoaderOptimization%2A>, <xref:System.AppDomainSetup.PrivateBinPath%2A>, <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>, i <xref:System.AppDomainSetup.ShadowCopyFiles%2A>.  
+ Oprócz informacji o konfiguracji można zmienić następujące <xref:System.AppDomainSetup> ustawienia w obiekcie, który jest przesyłany do implementacji <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> <xref:System.AppDomainSetup.ApplicationBase%2A> <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>metody:, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>,, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A> , <xref:System.AppDomainSetup.DisallowCodeDownload%2A> ,<xref:System.AppDomainSetup.DisallowPublisherPolicy%2A> ,,<xref:System.AppDomainSetup.ShadowCopyFiles%2A>,, ,<xref:System.AppDomainSetup.ShadowCopyDirectories%2A>i. <xref:System.AppDomainSetup.DynamicBase%2A> <xref:System.AppDomainSetup.LoaderOptimization%2A> <xref:System.AppDomainSetup.PrivateBinPath%2A> <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>  
   
- Jako alternatywa dla użycia `<disableFusionUpdatesFromADManager>` elementu, możesz wyłączyć to zachowanie domyślne, tworząc ustawienie rejestru lub przez ustawienie zmiennej środowiskowej. W rejestrze Utwórz wartość DWORD o nazwie `COMPLUS_disableFusionUpdatesFromADManager` w obszarze `HKCU\Software\Microsoft\.NETFramework` lub `HKLM\Software\Microsoft\.NETFramework`, a następnie ustaw wartość na 1. W wierszu polecenia, należy ustawić zmienną środowiskową `COMPLUS_disableFusionUpdatesFromADManager` 1.  
+ Alternatywą wobec korzystania z `<disableFusionUpdatesFromADManager>` elementu jest wyłączenie domyślnego zachowania przez utworzenie ustawienia rejestru lub ustawienie zmiennej środowiskowej. W rejestrze utwórz wartość DWORD o nazwie `COMPLUS_disableFusionUpdatesFromADManager` w obszarze `HKCU\Software\Microsoft\.NETFramework` lub `HKLM\Software\Microsoft\.NETFramework`, a następnie ustaw wartość 1. W wierszu polecenia Ustaw wartość zmiennej `COMPLUS_disableFusionUpdatesFromADManager` środowiskowej na 1.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak wyłączyć możliwość zastąpienia ustawień łączenia za pomocą `<disableFusionUpdatesFromADManager>` elementu.  
+ Poniższy przykład pokazuje, jak wyłączyć możliwość zastąpienia ustawień Fusion przy użyciu `<disableFusionUpdatesFromADManager>` elementu.  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ Określa, czy należy wyłączyć zachowanie domyślne, które jest, aby zezwoli
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../deployment/how-the-runtime-locates-assemblies.md)

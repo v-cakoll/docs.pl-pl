@@ -14,18 +14,18 @@ helpviewer_keywords:
 - OnRender method [WPF], overriding
 - Panel control [WPF], overriding OnRender method
 ms.assetid: 57397834-a085-4e36-90ab-416fad98f341
-ms.openlocfilehash: c4539847368c1a5789e99ec92106d17077ed5943
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23c3353e130585ed83726816a467ca73f6aa9152
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770841"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666714"
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>Instrukcje: Zastępowanie metody OnRender panelu
-Ten przykład przedstawia sposób przesłonięcia <xref:System.Windows.Controls.Panel.OnRender%2A> metody <xref:System.Windows.Controls.Panel> celu stosowanie efektów niestandardowych graficznego elementu układu.  
+Ten przykład pokazuje, <xref:System.Windows.Controls.Panel.OnRender%2A> jak zastąpić <xref:System.Windows.Controls.Panel> metodę w celu dodania niestandardowych efektów graficznych do elementu układu.  
   
 ## <a name="example"></a>Przykład  
- Użyj <xref:System.Windows.Controls.Panel.OnRender%2A> metody, aby można było dodać efekty graficzne do elementu renderowanego panelu. Na przykład służy tej metody można dodać obramowanie niestandardowe lub efekty w tle. A <xref:System.Windows.Media.DrawingContext> obiekt jest przekazywany jako argument, który udostępnia metody do rysowania kształtów, tekstu, obrazów lub wideo. W rezultacie ta metoda jest przydatna do dostosowywania obiektów panel.  
+ Użyj metody <xref:System.Windows.Controls.Panel.OnRender%2A> , aby dodać efekty graficzne do renderowanego elementu panelu. Na przykład można użyć tej metody, aby dodać obramowanie niestandardowe lub efekty tła. <xref:System.Windows.Media.DrawingContext> Obiekt jest przekazaniem jako argument, który zapewnia metody rysowania kształtów, tekstu, obrazów lub filmów wideo. W związku z tym ta metoda jest przydatna do dostosowywania obiektu panelu.  
   
  [!code-csharp[LightWeightCustomPanel#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LightWeightCustomPanel/CSharp/OffsetPanel.cs#1)]
  [!code-vb[LightWeightCustomPanel#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LightWeightCustomPanel/visualbasic/offsetpanel.vb#1)]  
@@ -34,5 +34,4 @@ Ten przykład przedstawia sposób przesłonięcia <xref:System.Windows.Controls.
 
 - <xref:System.Windows.Controls.Panel>
 - [Panele — omówienie](panels-overview.md)
-- [Przykładowe niestandardowe panelu promieniowego](https://go.microsoft.com/fwlink/?LinkID=159982)
 - [Tematy z instrukcjami](panel-how-to-topics.md)

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: d5766b76f18dce441cb260887a753dcf64642a6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 815e1c26a328d986f91992a1e67e438a563ffea6
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674236"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663888"
 ---
-# <a name="assemblyidentity-element-for-runtime"></a>\<assemblyIdentity >, Element dla \<runtime >
-Zawiera informacje identyfikujące zestaw.  
+# <a name="assemblyidentity-element-for-runtime"></a>\<assemblyIdentity element > dla \<> środowiska uruchomieniowego
+Zawiera informacje identyfikacyjne zestawu.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<runtime>  
-\<assemblybinding — >  
-\<dependentAssembly>  
+\<> zestawubinding  
+\<> dependentAssembly  
 \<assemblyIdentity>  
   
 ## <a name="syntax"></a>Składnia  
@@ -42,18 +42,18 @@ culture="assembly culture"/>
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |`name`|Atrybut wymagany.<br /><br /> Nazwa zestawu|  
-|`culture`|Atrybut opcjonalny.<br /><br /> Ciąg, który określa język i kraj/region, zestawu.|  
+|`culture`|Atrybut opcjonalny.<br /><br /> Ciąg określający język i kraj/region zestawu.|  
 |`publicKeyToken`|Atrybut opcjonalny.<br /><br /> Wartość szesnastkowa, która określa silną nazwę zestawu.|  
-|`processorArchitecture`|Atrybut opcjonalny.<br /><br /> Jedna z wartości "x86", "amd64", "msil" lub "ia64", określając architekturę procesora dla zestawu, który zawiera kod specyficzny dla procesora. Wartości nie jest rozróżniana wielkość liter. Jeśli ten atrybut zostanie przypisany jakąkolwiek inną wartość, całą `<assemblyIdentity>` element jest ignorowany. Zobacz <xref:System.Reflection.ProcessorArchitecture>.|  
+|`processorArchitecture`|Atrybut opcjonalny.<br /><br /> Jedna z wartości "x86", "amd64", "MSIL" lub "ia64", określająca architekturę procesora dla zestawu, który zawiera kod specyficzny dla procesora. W wartościach nie jest rozróżniana wielkość liter. Jeśli atrybut jest przypisany dowolną inną wartość, cały `<assemblyIdentity>` element jest ignorowany. Zobacz <xref:System.Reflection.ProcessorArchitecture>.|  
   
-## <a name="processorarchitecture-attribute"></a>Atrybutu processorArchitecture  
+## <a name="processorarchitecture-attribute"></a>processorArchitecture — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`amd64`|AMD tylko architektura x86-64.|  
-|`ia64`|Tylko architekturę Intel Itanium.|  
-|`msil`|Neutralne pod kątem procesor i bity na słowo.|  
-|`x86`|X86 32-bitowy procesor, albo natywne lub Windows w środowisku Windows (WOW) na platformie 64-bitowej.|  
+|`amd64`|Tylko architektura AMD x86-64.|  
+|`ia64`|Tylko architektura procesorów Intel Itanium.|  
+|`msil`|Neutralna w odniesieniu do procesora i bitów na słowo.|  
+|`x86`|32-bitowy procesor x86 — natywny lub w środowisku Windows on Windows (WOW) na platformie 64-bitowej.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -64,15 +64,15 @@ culture="assembly culture"/>
 |-------------|-----------------|  
 |`assemblyBinding`|Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`dependentAssembly`|Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. Użyj jednej `<dependentAssembly>` elementu dla każdego zestawu.|  
+|`dependentAssembly`|Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. Użyj jednego `<dependentAssembly>` elementu dla każdego zestawu.|  
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Każdy  **\<dependentAssembly >** elementu musi mieć jeden  **\<assemblyIdentity >** elementu podrzędnego.  
+ **Każde\<elementy > elementu dependentAssembly** muszą mieć jeden  **\<element podrzędny assemblyIdentity >** .  
   
- Jeśli `processorArchitecture` jest obecny, atrybut `<assemblyIdentity>` element ma zastosowanie tylko do zestawu z odpowiedniej architektury procesora. Jeśli `processorArchitecture` nie jest obecny, atrybut `<assemblyIdentity>` elementu można zastosować do zestawu za pomocą dowolnej architektury procesora.  
+ Jeśli atrybut jest obecny, element ma zastosowanie tylko do zestawu z odpowiednią architekturą procesora. `<assemblyIdentity>` `processorArchitecture` Jeśli atrybut nie istnieje, element może być stosowany do zestawu z dowolną architekturą procesora. `<assemblyIdentity>` `processorArchitecture`  
   
- Poniższy przykład pokazuje plik konfiguracji dla dwóch zestawów o takiej samej nazwie, przeznaczone na platformę dwóch różnych dwóch architektury procesora, a której wersji ma nie została zachowana synchronizację. Gdy aplikacja wykonuje na x86 platformy pierwszy `<assemblyIdentity>` element ma zastosowanie i innych jest ignorowana. Jeśli aplikacja jest wykonywana na platformie innej niż x86 lub ia64, obie są ignorowane.  
+ W poniższym przykładzie przedstawiono plik konfiguracyjny dla dwóch zestawów o tej samej nazwie, który jest przeznaczony dla dwóch różnych architektur procesora, a których wersje nie zostały zachowane w synchronizacji. Gdy aplikacja jest wykonywana na platformie x86, stosuje się `<assemblyIdentity>` pierwszy element, a drugi jest ignorowany. Jeśli aplikacja jest uruchamiana na platformie innej niż x86 lub ia64, obie te wartości są ignorowane.  
   
 ```xml  
 <configuration>  
@@ -99,10 +99,10 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- Jeśli plik konfiguracji zawiera `<assemblyIdentity>` element bez `processorArchitecture` atrybutu i nie zawiera element, który odpowiada platformie elementu bez `processorArchitecture` atrybut jest używany.  
+ Jeśli plik konfiguracji zawiera `<assemblyIdentity>` element `processorArchitecture` bez atrybutu i nie zawiera elementu, który jest zgodny z platformą `processorArchitecture` , element bez atrybutu jest używany.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak zapewnić informacje o zestawie.  
+ Poniższy przykład pokazuje, jak podać informacje o zestawie.  
   
 ```xml  
 <configuration>  
@@ -121,6 +121,6 @@ culture="assembly culture"/>
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Przekierowywanie wersji zestawu](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)
+- [Przekierowywanie wersji zestawu](../../redirect-assembly-versions.md)

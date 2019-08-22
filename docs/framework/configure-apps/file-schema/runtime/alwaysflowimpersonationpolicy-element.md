@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec411039363cfb118fee06dff88daf50bbc97a86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b42c141362d99090db922d3a6b429f05592130cd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704937"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659014"
 ---
 # <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy> Element
-Określa, że tożsamość Windows zawsze odbywa się za pośrednictwem punkty asynchroniczne, niezależnie od tego, jak zostało wykonane personifikacji.  
+Określa, że tożsamość systemu Windows jest zawsze przepływów między punktami asynchronicznymi, niezależnie od tego, jak personifikacja została wykonana.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<runtime>  
 \<alwaysFlowImpersonationPolicy>  
   
@@ -38,14 +38,14 @@ Określa, że tożsamość Windows zawsze odbywa się za pośrednictwem punkty a
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`enabled`|Atrybut wymagany.<br /><br /> Wskazuje, czy tożsamość Windows odbywa się za pośrednictwem punkty asynchroniczne.|  
+|`enabled`|Atrybut wymagany.<br /><br /> Wskazuje, czy tożsamość systemu Windows jest przesyłana między punkty asynchroniczne.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`false`|Windows tożsamości nie przepływać przez punkty asynchroniczne, chyba że personifikacji odbywa się za pośrednictwem zarządzanych metod, takich jak <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>. Domyślnie włączone.|  
-|`true`|Tożsamość Windows zawsze odbywa się za pośrednictwem punkty asynchroniczne, niezależnie od tego, jak zostało wykonane personifikacji.|  
+|`false`|Tożsamość systemu Windows nie jest przepływa między punktami asynchronicznymi, chyba że personifikacja jest wykonywana za <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>pomocą metod zarządzanych, takich jak. Domyślnie włączone.|  
+|`true`|Tożsamość systemu Windows jest zawsze przepływów między punktami asynchronicznymi, niezależnie od tego, jak personifikacja została wykonana.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -58,24 +58,24 @@ Określa, że tożsamość Windows zawsze odbywa się za pośrednictwem punkty a
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- W wersjach programu .NET Framework 1.0 i 1.1 tożsamości Windows nie przepływać przez punkty asynchroniczne. W programie .NET Framework 2.0, Brak <xref:System.Threading.ExecutionContext> obiekt, który zawiera informacje o aktualnie wykonywany wątek i przepływy go przez punkty asynchroniczne w domenie aplikacji. <xref:System.Security.Principal.WindowsIdentity> Także przepływy jako część informacji, który przepływa przez punkty asynchroniczne, pod warunkiem personifikacji został osiągnięty przy użyciu zarządzane metody takie jak <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> a nie za pomocą innych środków, takich jak platforma wywołania do metod macierzystych. Ten element jest używany do określenia, czy tożsamość Windows przepływać przez punkty asynchroniczne, niezależnie od tego, jak została osiągnięta personifikacji.  
+ W .NET Framework wersje 1,0 i 1,1 tożsamość systemu Windows nie jest przesyłana między punktami asynchronicznymi. W .NET Framework w wersji 2,0 istnieje <xref:System.Threading.ExecutionContext> obiekt, który zawiera informacje o aktualnie wykonywanym wątku i przepływa przez punkty asynchroniczne w domenie aplikacji. Również przepływy jako część informacji przesyłanych przez punkty asynchroniczne, pod warunkiem, że personifikacja została osiągnięta przy użyciu metod <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> zarządzanych, takich jak, a nie za pośrednictwem innych, takich jak wywołanie platformy do metod natywnych. <xref:System.Security.Principal.WindowsIdentity> Ten element służy do określenia, że tożsamość systemu Windows jest przesyłana w punktach asynchronicznych, niezależnie od sposobu uzyskania personifikacji.  
   
- Możesz zmienić to zachowanie domyślne na dwa inne sposoby:  
+ To zachowanie domyślne można zmienić na dwa sposoby:  
   
-1. W kodzie zarządzanym na zasadzie na wątek.  
+1. W kodzie zarządzanym dla poszczególnych wątków.  
   
-     Można pominąć przepływu na podstawie na wątek, modyfikując <xref:System.Threading.ExecutionContext> i <xref:System.Security.SecurityContext> ustawienia za pomocą <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>, lub <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> metody.  
+     Przepływ można pominąć dla <xref:System.Threading.ExecutionContext> każdego wątku, modyfikując ustawienia i <xref:System.Security.SecurityContext> przy użyciu <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>metody, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>, lub <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> .  
   
-2. W wywołaniu do niezarządzanego interfejsu hostingu załadować środowisko uruchomieniowe języka wspólnego (CLR).  
+2. W wywołaniu interfejsu hostingu niezarządzanego w celu załadowania środowiska uruchomieniowego języka wspólnego (CLR).  
   
-     Jeśli niezarządzane hostingu interfejsu (zamiast prostego pliku wykonywalnego zarządzane) jest używana do ładowania CLR, można określić Flaga specjalna, w wywołaniu [corbindtoruntimeex — funkcja](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) funkcji. Aby włączyć tryb zgodności dla całego procesu, należy ustawić `flags` parametr [corbindtoruntimeex — funkcja](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) do `STARTUP_ALWAYSFLOW_IMPERSONATION`.  
+     Jeśli do załadowania środowiska CLR jest używany niezarządzany interfejs hostingu (zamiast prostego zarządzanego pliku wykonywalnego), można określić specjalną flagę w wywołaniu funkcji [funkcji CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md) . Aby włączyć tryb zgodności dla całego procesu, należy ustawić `flags` parametr dla [funkcji CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md) na. `STARTUP_ALWAYSFLOW_IMPERSONATION`  
   
 ## <a name="configuration-file"></a>Plik konfiguracji  
- W aplikacji .NET Framework ten element może być użyty tylko w pliku konfiguracyjnym aplikacji.  
+ W aplikacji .NET Framework ten element może być używany tylko w pliku konfiguracji aplikacji.  
   
- Dla aplikacji ASP.NET można skonfigurować przepływ personifikacji w znaleziono w pliku konfigurację aspnet.config \<Windows Folder > \Microsoft.NET\Framework\vx.x.xxxx katalogu.  
+ W przypadku aplikacji ASP.NET przepływ personifikacji można skonfigurować w pliku aspnet. config znajdującym się w \<folderze systemu Windows > katalogu \Microsoft.NET\Framework\vx.x.xxxx.  
   
- ASP.NET domyślnie wyłącza przepływ personifikacji w pliku konfigurację aspnet.config przy użyciu następujących ustawień konfiguracji:  
+ Domyślnie ASP.NET powoduje wyłączenie przepływu personifikacji w pliku aspnet. config przy użyciu następujących ustawień konfiguracji:  
   
 ```xml
 <configuration>  
@@ -86,7 +86,7 @@ Określa, że tożsamość Windows zawsze odbywa się za pośrednictwem punkty a
 </configuration>  
 ```  
   
- W programie ASP.NET: Jeśli chcesz umożliwić przepływ personifikacji zamiast tego trzeba jawnie użyć następujących ustawień konfiguracji:  
+ W ASP.NET, jeśli chcesz zezwolić na przepływ personifikacji, musisz jawnie użyć następujących ustawień konfiguracji:  
   
 ```xml  
 <configuration>  
@@ -98,7 +98,7 @@ Określa, że tożsamość Windows zawsze odbywa się za pośrednictwem punkty a
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak określić, że tożsamość Windows odbywa się za pośrednictwem punkty asynchroniczne, nawet wtedy, gdy personifikacji odbywa się za pośrednictwem oznacza, że inne niż zarządzanych metod.  
+ Poniższy przykład pokazuje, jak określić, że tożsamość systemu Windows jest realizowana w punktach asynchronicznych, nawet jeśli Personifikacja jest realizowana za pośrednictwem środków innych niż metody zarządzane.  
   
 ```xml  
 <configuration>  
@@ -110,6 +110,6 @@ Określa, że tożsamość Windows zawsze odbywa się za pośrednictwem punkty a
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<legacyImpersonationPolicy> Element](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)
+- [\<legacyImpersonationPolicy, element >](legacyimpersonationpolicy-element.md)

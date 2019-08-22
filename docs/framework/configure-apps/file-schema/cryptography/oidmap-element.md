@@ -8,17 +8,17 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e01cdd942237141b8ef35495d3b74d6b2282a865
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705171"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664255"
 ---
-# <a name="oidmap-element"></a>\<oidMap> Element
-Zawiera mapowania identyfikatora (OID) obiektów ASN.1 do klas.  
+# <a name="oidmap-element"></a>\<oidMap, element >
+Zawiera mapowania identyfikatorów obiektów ASN. 1 (OID) do klas.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<mscorlib>  
 \<cryptographySettings>  
 \<oidMap>  
@@ -40,18 +40,18 @@ Zawiera mapowania identyfikatora (OID) obiektów ASN.1 do klas.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<oidEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Mapuje ASN.1 OID przyjazną nazwę.|  
+|[\<oidEntry>](oidentry-element.md)|Mapuje identyfikator OID ASN. 1 na przyjazną nazwę.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`cryptographySettings`|Zawiera ustawienia szyfrowania.|  
-|`mscorlib`|Zawiera `cryptographySettings` elementu.|  
+|`cryptographySettings`|Zawiera ustawienia kryptografii.|  
+|`mscorlib`|`cryptographySettings` Zawiera element.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać  **\<oidmap — >** element zawiera mapowanie identyfikatora OID dla algorytmu wyznaczania wartości skrótu RIPEMD 160 implementacji tego algorytmu wyznaczania wartości skrótu.  
+ Poniższy przykład pokazuje,  **\<** jak używać elementu oidMap >, aby zawierać mapowanie identyfikatora OID dla algorytmu wyznaczania wartości skrótu RIPEMD-160 do implementacji algorytmu wyznaczania wartości skrótu.  
   
 ```xml  
 <configuration>  
@@ -75,8 +75,8 @@ Zawiera mapowania identyfikatora (OID) obiektów ASN.1 do klas.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Schemat ustawień kryptografii](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Schemat pliku konfiguracji](../index.md)
+- [Schemat ustawień kryptografii](index.md)
 - [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)
-- [Konfigurowanie klas kryptografii](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Mapowanie identyfikatorów obiektów na algorytmy kryptografii](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [Konfigurowanie klas kryptografii](../../configure-cryptography-classes.md)
+- [Mapowanie identyfikatorów obiektów na algorytmy kryptografii](../../map-object-identifiers-to-cryptography-algorithms.md)

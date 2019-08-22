@@ -9,144 +9,132 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: a8f690438136450cb12dbcf5e17ddfcca617457e
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 7858ffd708c78d6397d533f613ccc2ea78d6cbed
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211444"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658521"
 ---
-# <a name="walkthrough-arrange-wpf-content-on-windows-forms-at-design-time"></a>Przewodnik: Rozmieszczanie zawartości WPF na formularzach Windows Forms w czasie projektowania
+# <a name="walkthrough-arrange-wpf-content-on-windows-forms-at-design-time"></a>Przewodnik: Rozmieszczanie zawartości WPF na Windows Forms w czasie projektowania
 
-W tym instruktażu przedstawiono sposób korzystania z funkcji układu formularzy Windows, takich jak Zakotwiczanie i linii przyciągania, aby rozmieścić formanty Windows Presentation Foundation (WPF).
-
-W tym przewodniku należy wykonać następujące zadania:
-
-- Utwórz projekt.
-
-- Tworzenie formantu WPF.
-
-- Host formantów WPF w panelu układu.
-
-- Linii przyciągania użycia do wyrównania kontrolek WPF.
-
-- Zakotwiczenie i dokowanie kontrolek WPF.
+W tym artykule pokazano, jak używać funkcji układu Windows Forms, takich jak kotwice i linii wyrównania, aby rozmieścić kontrolki Windows Presentation Foundation (WPF).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
+Aby ukończyć ten przewodnik, potrzebujesz programu Visual Studio.
 
 ## <a name="create-the-project"></a>Utwórz projekt
 
-Otwórz program Visual Studio i Utwórz nowy projekt Windows Forms aplikacji w Visual Basic lub Visual C# o nazwie `ArrangeElementHost`.
+Otwórz program Visual Studio i Utwórz nowy projekt aplikacji Windows Forms w Visual Basic lub C# wizualizacji `ArrangeElementHost`o nazwie.
 
 > [!NOTE]
-> Gdy hosting zawartości WPF, obsługiwane są tylko C# i projektach języka Visual Basic.
+> W przypadku hostowania zawartości WPF C# obsługiwane są tylko projekty i Visual Basic.
 
 ## <a name="create-the-wpf-control"></a>Tworzenie kontrolki WPF
 
-Po dodaniu kontrolki WPF do projektu, można rozmieścić je na formularzu.
+Po dodaniu kontrolki WPF do projektu można ją rozmieścić w formularzu.
 
-1. Dodaj nowe WPF <xref:System.Windows.Controls.UserControl> do projektu. Użyj domyślnej nazwy dla kontrolek typu `UserControl1.xaml`. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie nowej zawartości WPF na formularzach Windows Forms w czasie projektowania](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
+1. Dodaj nową WPF <xref:System.Windows.Controls.UserControl> do projektu. Użyj domyślnej nazwy dla typu formantu, `UserControl1.xaml`. Aby uzyskać więcej informacji, [zobacz Przewodnik: Tworzenie nowej zawartości WPF na Windows Forms w czasie](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)projektowania.
 
-2. W widoku Projekt, upewnij się, że `UserControl1` jest zaznaczone. Aby uzyskać więcej informacji, zobacz [jak: Wybierz i Przesuń elementy na powierzchni projektowej](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).
+2. W widok Projekt upewnij się, że `UserControl1` jest zaznaczone.
 
-3. W **właściwości** okna, ustaw wartość <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> właściwości `200`.
+3. W oknie **Właściwości** ustaw wartość <xref:System.Windows.FrameworkElement.Width%2A> właściwości i <xref:System.Windows.FrameworkElement.Height%2A> na **200**.
 
-4. Ustaw wartość <xref:System.Windows.Controls.Control.Background%2A> właściwość `Blue`.
+4. Ustaw wartość <xref:System.Windows.Controls.Control.Background%2A> właściwości na niebieską.
 
 5. Skompiluj projekt.
 
-## <a name="hosting-wpf-controls-in-a-layout-panel"></a>Hosting kontrolek WPF w panelu układu
- Umożliwia kontrolek WPF w panele układów w taki sam sposób, jak używać innych kontrolek Windows Forms.
+## <a name="host-wpf-controls-in-a-layout-panel"></a>Hostowanie formantów WPF w panelu układu
 
-#### <a name="to-host-wpf-controls-in-a-layout-panel"></a>Host formantów WPF w panelu układu
+W panelach układów można używać formantów WPF w taki sam sposób, jak w przypadku innych kontrolek Windows Forms.
 
-1. Otwórz `Form1` w programie Windows Forms Designer.
+1. Otwórz `Form1` w Projektant formularzy systemu Windows.
 
-2. W **przybornika**, przeciągnij <xref:System.Windows.Forms.TableLayoutPanel> formant na formularzu.
+2. W **przyborniku**przeciągnij <xref:System.Windows.Forms.TableLayoutPanel> kontrolkę na formularz.
 
-3. Na <xref:System.Windows.Forms.TableLayoutPanel> kontrolki panelu tagi inteligentne, wybierz **Usuń ostatni wiersz**.
+3. Na panelu tagu inteligentnego kontrolkiwybierzpozycjęUsuńostatni<xref:System.Windows.Forms.TableLayoutPanel> wiersz.
 
-4. Zmień rozmiar <xref:System.Windows.Forms.TableLayoutPanel> kontrolki większych szerokość i wysokość.
+4. Zmień rozmiar <xref:System.Windows.Forms.TableLayoutPanel> kontrolki na większą szerokość i wysokość.
 
-5. W **przybornika**, kliknij dwukrotnie `UserControl1` do utworzenia wystąpienia `UserControl1` w pierwszej komórki z <xref:System.Windows.Forms.TableLayoutPanel> kontroli.
+5. W **przyborniku**kliknij `UserControl1` dwukrotnie, aby utworzyć wystąpienie elementu `UserControl1` w pierwszej komórce <xref:System.Windows.Forms.TableLayoutPanel> formantu.
 
-     Wystąpienie `UserControl1` znajduje się w nowym <xref:System.Windows.Forms.Integration.ElementHost> formantu o nazwie `elementHost1`.
+   Wystąpienie `UserControl1` jest hostowane w nowym <xref:System.Windows.Forms.Integration.ElementHost> formancie o nazwie `elementHost1`.
 
-6. W **przybornika**, kliknij dwukrotnie `UserControl1` Aby utworzyć inną instancję w drugiej komórce <xref:System.Windows.Forms.TableLayoutPanel> kontroli.
+6. W **przyborniku**kliknij `UserControl1` dwukrotnie, aby utworzyć inne wystąpienie w <xref:System.Windows.Forms.TableLayoutPanel> drugiej komórce formantu.
 
-7. W **konspekt dokumentu** wybierz `tableLayoutPanel1`. Aby uzyskać więcej informacji, zobacz [okno konspektu dokumentu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/46xf4h0w(v=vs.100)#using-the-document-outline-window-for-silverlight-and-wpf).
+7. W oknie **Konspekt dokumentu** wybierz opcję `tableLayoutPanel1`.
 
-8. W **właściwości** okna, ustaw wartość <xref:System.Windows.Forms.Control.Padding%2A> właściwość `10, 10, 10, 10`.
+8. W oknie **Właściwości** ustaw wartość <xref:System.Windows.Forms.Control.Padding%2A> właściwości na **10, 10, 10, 10**.
 
-     Zarówno <xref:System.Windows.Forms.Integration.ElementHost> formanty są dopasowane do do nowego układu.
+   Oba <xref:System.Windows.Forms.Integration.ElementHost> kontrolki są zmieniane w celu dopasowania do nowego układu.
 
-## <a name="using-snaplines-to-align-wpf-controls"></a>Aby wyrównać formanty WPF za pomocą linii przyciągania
- Linii przyciągania umożliwiają łatwe wyrównanie kontrolek w formularzu. Za pomocą linii przyciągania do wyrównania Twoich kontrolek WPF. Aby uzyskać więcej informacji, zobacz [instruktażu: Rozmieszczanie formantów Windows Forms za pomocą linii przyciągania](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).
+## <a name="use-snaplines-to-align-wpf-controls"></a>Użyj linii wyrównania do wyrównania formantów WPF
 
-#### <a name="to-use-snaplines-to-align-wpf-controls"></a>Wyrównaj WPF za pomocą linii przyciągania kontrolki
+Linii wyrównania umożliwia łatwe wyrównywanie kontrolek w formularzu. Możesz użyć linii wyrównania, aby również wyrównać formanty WPF. Aby uzyskać więcej informacji, [zobacz Przewodnik: Rozmieszczanie kontrolek na Windows Forms](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)przy użyciu linii wyrównania.
 
-1. Z **przybornika**, przeciągnij wystąpienie `UserControl1` na formularz i umieść go w miejsce poniżej <xref:System.Windows.Forms.TableLayoutPanel> kontroli.
+1. Z **przybornika**przeciągnij wystąpienie do `UserControl1` formularza i umieść je w miejscu pod <xref:System.Windows.Forms.TableLayoutPanel> kontrolką.
 
-     Wystąpienie `UserControl1` znajduje się w nowym <xref:System.Windows.Forms.Integration.ElementHost> formantu o nazwie `elementHost3`.
+   Wystąpienie `UserControl1` jest hostowane w nowym <xref:System.Windows.Forms.Integration.ElementHost> formancie o nazwie `elementHost3`.
 
-2. Za pomocą linii przyciągania, Wyrównaj do lewej krawędzi `elementHost3` lewej krawędzi <xref:System.Windows.Forms.TableLayoutPanel> kontroli.
+2. Przy użyciu linii wyrównania, Wyrównaj lewą krawędź `elementHost3` z lewej <xref:System.Windows.Forms.TableLayoutPanel> krawędzią kontrolki.
 
-3. Za pomocą linii przyciągania, rozmiar `elementHost3` mają taką samą szerokość jako <xref:System.Windows.Forms.TableLayoutPanel> kontroli.
+3. Przy użyciu linii wyrównania, `elementHost3` rozmiar do tej samej szerokości <xref:System.Windows.Forms.TableLayoutPanel> jak kontrolka.
 
-4. Przenieś `elementHost3` kierunku <xref:System.Windows.Forms.TableLayoutPanel> kontrolować aż snapline — Centrum pojawi się między formantami.
+4. Poruszanie `elementHost3` się <xref:System.Windows.Forms.TableLayoutPanel> w kierunku kontroli do momentu pojawienia się środkowego snapline między kontrolkami.
 
-5. W **właściwości** okna, ustaw wartość właściwości marginesów `20, 20, 20, 20`.
+5. W oknie **Właściwości** ustaw wartość właściwości Margin na **20, 20, 20, 20**.
 
-6. Przenieś `elementHost3` opuszczenie <xref:System.Windows.Forms.TableLayoutPanel> kontrolować aż snapline — Centrum pojawi się ponownie. Snapline — Centrum wskazuje teraz margines 20.
+6. Przesuń z powrotem z kontrolki do momentu, gdy zostanie wyświetlone okno Center snapline. <xref:System.Windows.Forms.TableLayoutPanel> `elementHost3` Centrum snapline teraz wskazuje margines 20.
 
-7. Przenieś `elementHost3` z prawej strony, do momentu jego lewej krawędzi jest wyrównywany do lewej krawędzi `elementHost1`.
+7. Przejście `elementHost3` w prawo do momentu, aż jego lewa krawędź zostanie wyrównana do lewej `elementHost1`krawędzi.
 
-8. Zmień szerokość `elementHost3` do momentu jego prawej krawędzi wyrównuje do prawej krawędzi `elementHost2`.
+8. Zmień szerokość `elementHost3` do wyrównania `elementHost2`do prawej krawędzi.
 
-## <a name="anchoring-and-docking-wpf-controls"></a>Zakotwiczanie i dokowanie kontrolek WPF
- Kontrolki WPF w serwisie formularza ma, które ten sam Zakotwiczanie i dokowanie zachowanie, jak inne kontrolki Windows Forms.
+## <a name="anchor-and-dock-wpf-controls"></a>Zakotwiczenie i dokowanie formantów WPF
 
-#### <a name="to-anchor-and-dock-wpf-controls"></a>Aby zakotwiczenie i dokowanie kontrolek WPF
+Kontrolka WPF hostowana w formularzu ma takie samo zachowanie dotyczące zakotwiczania i dokowania jak inne kontrolki Windows Forms.
 
-1. Wybierz `elementHost1`.
+1. Wybierz `elementHost1`opcję.
 
-2. W **właściwości** oknie <xref:System.Windows.Forms.Control.Anchor%2A> właściwości **górnej, dolnej, lewe, prawe**.
+2. W oknie **Właściwości** Ustaw <xref:System.Windows.Forms.Control.Anchor%2A> właściwość na **Top, Bottom, Left, Right**.
 
-3. Zmień rozmiar <xref:System.Windows.Forms.TableLayoutPanel> kontrolki o większym rozmiarze.
+3. Zmień rozmiar <xref:System.Windows.Forms.TableLayoutPanel> kontrolki na większy.
 
-     `elementHost1` Kontrolować zmiany rozmiaru w celu wypełnienia komórki.
+   Zmienia `elementHost1` rozmiar kontrolki w celu wypełnienia komórki.
 
-4. Wybierz `elementHost2`.
+4. Wybierz `elementHost2`opcję.
 
-5. W **właściwości** okna, ustaw wartość <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>.
+5. W oknie **Właściwości** ustaw wartość <xref:System.Windows.Forms.Control.Dock%2A> właściwości na <xref:System.Windows.Forms.DockStyle.Fill>.
 
-     `elementHost2` Kontrolować zmiany rozmiaru w celu wypełnienia komórki.
+   Zmienia `elementHost2` rozmiar kontrolki w celu wypełnienia komórki.
 
-6. Wybierz <xref:System.Windows.Forms.TableLayoutPanel> kontroli.
+6. <xref:System.Windows.Forms.TableLayoutPanel> Zaznacz kontrolkę.
 
-7. Ustaw wartość jego <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Top>.
+7. Ustaw wartość <xref:System.Windows.Forms.Control.Dock%2A> właściwości na <xref:System.Windows.Forms.DockStyle.Top>.
 
-8. Wybierz `elementHost3`.
+8. Wybierz `elementHost3`opcję.
 
-9. Ustaw wartość jego <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>.
+9. Ustaw wartość <xref:System.Windows.Forms.Control.Dock%2A> właściwości na <xref:System.Windows.Forms.DockStyle.Fill>.
 
-     `elementHost3` Kontrolować zmiany rozmiaru w celu wypełnienia pozostałego miejsca w formularzu.
+   Zmienia `elementHost3` rozmiar kontrolki w celu wypełnienia pozostałego miejsca w formularzu.
 
 10. Zmień rozmiar formularza.
 
-     Wszystkie trzy <xref:System.Windows.Forms.Integration.ElementHost> odpowiednio zmień rozmiar kontrolki.
+    Wszystkie trzy <xref:System.Windows.Forms.Integration.ElementHost> kontrolki odpowiednio zmieniają rozmiar.
 
-     Aby uzyskać więcej informacji, zobacz [jak: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).
+    Aby uzyskać więcej informacji, zobacz [jak: Zakotwiczenie i dokowanie formantów podrzędnych w formancie](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)TableLayoutPanel.
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Instrukcje: Wyrównywanie formantu z krawędziami formularzy w czasie projektowania](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Instrukcje: Wyrównywanie kontrolki do krawędzi formularzy w czasie projektowania](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [Przewodnik: Rozmieszczanie kontrolek na Windows Forms przy użyciu linii wyrównania](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Migracja i współdziałanie](../../wpf/advanced/migration-and-interoperability.md)
 - [Korzystanie z kontrolek WPF](using-wpf-controls.md)
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

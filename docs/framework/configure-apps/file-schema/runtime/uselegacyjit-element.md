@@ -4,18 +4,18 @@ ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a467599084f01b1a48c95c5e25fb1f869156dffa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d79479d1836963fcbdaaf8d40bfc3648b88c4a3
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673891"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663411"
 ---
 # <a name="uselegacyjit-element"></a>\<useLegacyJit> Element
 
-Określa, czy środowisko uruchomieniowe języka wspólnego używa starszej wersji 64-bitowy kompilator JIT dla kompilacji just in time.  
+Określa, czy środowisko uruchomieniowe języka wspólnego korzysta ze starszego 64-bitowego kompilatora JIT dla kompilacji just in Time.  
   
-\<Konfiguracja >  
+\<> konfiguracji  
 \<runtime>  
 \<useLegacyJit>
   
@@ -25,7 +25,7 @@ Określa, czy środowisko uruchomieniowe języka wspólnego używa starszej wers
 <useLegacyJit enabled=0|1 />
 ```
 
-Nazwa elementu `useLegacyJit` jest uwzględniana wielkość liter.
+Nazwa `useLegacyJit` elementu uwzględnia wielkość liter.
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy
 
@@ -35,14 +35,14 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
   
 | Atrybut | Opis                                                                                   |  
 | --------- | --------------------------------------------------------------------------------------------- |  
-| `enabled` | Atrybut wymagany.<br><br>Określa, czy środowisko wykonawcze używa starszej wersji 64-bitowego kompilatora JIT. |  
+| `enabled` | Atrybut wymagany.<br><br>Określa, czy środowisko uruchomieniowe używa starszego 64-bitowego kompilatora JIT. |  
   
-### <a name="enabled-attribute"></a>Atrybut włączony  
+### <a name="enabled-attribute"></a>włączony atrybut  
   
 | Wartość | Opis                                                                                                         |  
 | ----- | ------------------------------------------------------------------------------------------------------------------- |  
-| 0     | Środowisko uruchomieniowe języka wspólnego używa nowego 64-bitowy kompilator JIT zawarte w .NET Framework 4.6 lub nowszy. |  
-| 1     | Środowisko uruchomieniowe języka wspólnego używa starszej 64-bitowego kompilatora JIT.                                                     |  
+| 0     | Środowisko uruchomieniowe języka wspólnego używa nowego kompilatora 64-bitowego JIT zawartego w .NET Framework 4,6 i nowszych wersjach. |  
+| 1     | Środowisko uruchomieniowe języka wspólnego używa starszego 64-bitowego kompilatora JIT.                                                     |  
   
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -57,32 +57,32 @@ Brak
   
 ## <a name="remarks"></a>Uwagi  
 
-Począwszy od programu .NET Framework 4.6, środowisko uruchomieniowe języka wspólnego nowy, 64-bitowego kompilatora dla kompilacji just in Time (JIT) domyślnie używa. W niektórych przypadkach może to spowodować różnice w zachowaniu w kodzie aplikacji, która została skompilowana JIT w poprzedniej wersji 64-bitowego kompilatora JIT. Ustawiając `enabled` atrybutu `<useLegacyJit>` elementu `1`, można wyłączyć nowego 64-bitowy kompilator JIT i zamiast tego Kompilowanie aplikacji za pomocą starszej wersji 64-bitowego kompilatora JIT.  
+Począwszy od .NET Framework 4,6, środowisko uruchomieniowe języka wspólnego używa nowego kompilatora 64-bitowego dla kompilacji just-in-Time (JIT) domyślnie. W niektórych przypadkach może to skutkować różnicą w zachowaniu kodu aplikacji, który był skompilowany przez poprzednią wersję 64-bitowego kompilatora JIT. Ustawiając `enabled` atrybut `<useLegacyJit>` elementu na`1`, można wyłączyć nowy kompilator 64-bitowy JIT, a zamiast tego skompilować aplikację przy użyciu starszego, 64-bitowego kompilatora JIT.  
   
 > [!NOTE]
-> `<useLegacyJit>` Elementu dotyczy tylko kompilacja JIT w 64-bitowych. Kompilacja z 32-bitowy kompilator JIT pozostaje bez zmian.  
+> `<useLegacyJit>` Element ma wpływ tylko na 64-bitową kompilację JIT. Kompilacja z 32-bitowym kompilatorem JIT nie ma żadnych zmian.  
   
-Zamiast korzystać z ustawień pliku konfiguracji, należy włączyć starszej wersji 64-bitowy kompilator JIT, które na dwa inne sposoby:  
+Zamiast korzystać z ustawienia pliku konfiguracji, można włączyć starszy 64-bitowy kompilator JIT na dwa sposoby:  
   
-- Ustawienie zmiennej środowiskowej
+- Ustawianie zmiennej środowiskowej
 
-  Ustaw `COMPLUS_useLegacyJit` zmiennej środowiskowej, aby albo `0` (Użyj nowego 64-bitowy kompilator JIT) lub `1` (Użyj starszych 64-bitowy kompilator JIT):
+  Ustaw zmienną `0` `1` środowiskową na wartość (Użyj nowego kompilatora 64-bitowego JIT) lub (Użyj starszego, 64-bitowego kompilatora JIT): `COMPLUS_useLegacyJit`
   
   ```  
   COMPLUS_useLegacyJit=0|1  
   ```  
   
-  Zmienna środowiskowa została *zakresu globalnego*, co oznacza, że ma to wpływ na wszystkie aplikacje są uruchamiane na maszynie. Jeśli ustawiona, jego może zostać przesłonięta przez ustawienie pliku konfiguracji aplikacji. Zmienna środowiskowa nie jest rozróżniana wielkość liter.
+  Zmienna środowiskowa ma *zakres globalny*, co oznacza, że ma wpływ na wszystkie aplikacje działające na komputerze. Jeśli ta opcja jest ustawiona, może być zastąpiona przez ustawienie pliku konfiguracji aplikacji. W nazwie zmiennej środowiskowej nie jest rozróżniana wielkość liter.
   
 - Dodawanie klucza rejestru
 
-  Włącz starsze 64-bitowy kompilator JIT, dodając `REG_DWORD` wartość albo `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` lub `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` klucza w rejestrze. Wartość o nazwie `useLegacyJit`. Jeśli wartość wynosi 0, jest używany nowy kompilator. Jeśli wartość wynosi 1, starszego 64-bitowy kompilator JIT jest włączona. Nazwa wartości rejestru nie jest rozróżniana wielkość liter.
+  Można włączyć starszy kompilator 64-bitowy JIT, dodając `REG_DWORD` wartość do `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` lub `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` klucz w rejestrze. Wartość jest nazywana `useLegacyJit`. Jeśli wartość jest równa 0, używany jest nowy kompilator. Jeśli wartość wynosi 1, jest włączony starszy 64-bitowy kompilator JIT. W nazwie wartości rejestru nie jest rozróżniana wielkość liter.
   
-  Dodaj wartość do `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` klucza ma wpływ na wszystkie aplikacje uruchomione na komputerze. Dodaj wartość do `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` klucza ma wpływ na wszystkie aplikacje uruchomione przez bieżącego użytkownika. Jeśli maszyna jest skonfigurowana z wieloma kontami użytkowników, tylko aplikacje uruchomione przez bieżącego użytkownika jest narażony, chyba, że wartość jest dodawana do kluczy rejestru, jak również do innych użytkowników. Dodawanie `<useLegacyJit>` element do pliku konfiguracji zastępuje ustawienia rejestru, jeśli są one obecne.  
+  Dodanie wartości do `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` klucza ma wpływ na wszystkie aplikacje uruchomione na komputerze. Dodanie wartości do `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` klucza ma wpływ na wszystkie aplikacje uruchamiane przez bieżącego użytkownika. Jeśli komputer jest skonfigurowany z wieloma kontami użytkowników, będzie to miało wpływ tylko na aplikacje uruchamiane przez bieżącego użytkownika, chyba że wartość zostanie dodana do kluczy rejestru dla innych użytkowników. `<useLegacyJit>` Dodanie elementu do pliku konfiguracji zastępuje ustawienia rejestru, jeśli są obecne.  
   
 ## <a name="example"></a>Przykład  
 
-Następujący plik konfiguracji powoduje wyłączenie kompilacji za pomocą nowego 64-bitowy kompilator JIT i zamiast tego używa starszej wersji 64-bitowego kompilatora JIT.  
+Następujący plik konfiguracji wyłącza kompilację z nowym 64-bitowym kompilatorem JIT, a zamiast tego używa starszego, 64-bitowego kompilatora JIT.  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -95,6 +95,6 @@ Następujący plik konfiguracji powoduje wyłączenie kompilacji za pomocą nowe
   
 ## <a name="see-also"></a>Zobacz także
 
-- [\<środowisko uruchomieniowe > Element](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
-- [\<Konfiguracja > Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
-- [Środki zaradcze: Nowy kompilator JIT 64-bitowych](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)
+- [\<Element > środowiska uruchomieniowego](runtime-element.md)
+- [\<> elementu konfiguracji](../configuration-element.md)
+- [Środki zaradcze Nowy 64-bitowy kompilator JIT](../../../migration-guide/mitigation-new-64-bit-jit-compiler.md)

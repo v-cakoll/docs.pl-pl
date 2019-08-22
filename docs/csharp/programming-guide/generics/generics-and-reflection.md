@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 41948b7db7c816fd06efb35d156398527fbf72ae
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: be4b72414af8e5a18145330f5c44ae9a79a567cb
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589627"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659891"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Typy ogólne i odbicie (Przewodnik programowania w języku C#)
 Ponieważ środowisko uruchomieniowe języka wspólnego (CLR) ma dostęp do ogólnych informacji o typie w czasie wykonywania, można użyć odbicia w celu uzyskania informacji o typach ogólnych w taki sam sposób jak w przypadku typów innych niż ogólne. Aby uzyskać więcej informacji, zobacz [typy ogólne w czasie wykonywania](./generics-in-the-run-time.md).  
@@ -50,4 +50,4 @@ Ponieważ środowisko uruchomieniowe języka wspólnego (CLR) ma dostęp do ogó
 - [Przewodnik programowania w języku C#](../index.md)
 - [Typy ogólne](./index.md)
 - [Odbicie i typy ogólne](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
-- [Typy ogólne](~/docs/standard/generics/index.md)
+- [Typy ogólne](../../../standard/generics/index.md)

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-ms.openlocfilehash: 34753d538ff37ac4ae621f653d47ac92ac6749a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80eea3373e2f4b7e45ebeb31dd6552ea02c109e1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705379"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659728"
 ---
 # <a name="compiler-element"></a>\<compiler> Element
 
-Określa atrybuty kompilatora konfiguracji dostawcy języka.
+Określa atrybuty konfiguracji kompilatora dla dostawcy języka.
 
-\<Konfiguracja elementu > \<system.CodeDom — Element > \<kompilatory Element > \<kompilatora > Element
+\<element konfiguracji > \<element System. CodeDom > \<element kompilatorów > \<element > kompilatora
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,41 +43,41 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|`compilerOptions`|Atrybut opcjonalny.<br /><br /> Określa dodatkowe argumenty kompilatora specyficzne dla kompilacji. Wartości `compilerOptions` atrybut zwykle są wymienione w temacie opcje kompilatora dla kompilatora.|
-|`extension`|Atrybut wymagany.<br /><br /> Zawiera rozdzieloną średnikami listę rozszerzeń nazw plików używane przez pliki źródłowe dla dostawcy języka. Na przykład ".cs".|
-|`language`|Atrybut wymagany.<br /><br /> Zawiera rozdzieloną średnikami listę nazw języków obsługiwanych przez dostawcę języka. Na przykład "c#; cs; csharp".|
-|`type`|Atrybut wymagany.<br /><br /> Określa nazwę typu dostawcy języka, łącznie z nazwą zestawu zawierającego implementację dostawcy. Nazwa typu musi spełniać wymagania zdefiniowane w [określanie w pełni kwalifikowanej nazwy typu](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|
-|`warningLevel`|Atrybut opcjonalny.<br /><br /> Określa domyślny poziom ostrzeżeń kompilatora; Określa poziom, który dostawca języka traktuje jako błędy ostrzeżenia kompilacji.|
+|`compilerOptions`|Atrybut opcjonalny.<br /><br /> Określa dodatkowe argumenty specyficzne dla kompilatora dla kompilacji. Wartości `compilerOptions` atrybutu są zwykle wymienione w temacie Opcje kompilatora dla kompilatora.|
+|`extension`|Atrybut wymagany.<br /><br /> Zawiera rozdzieloną średnikami listę rozszerzeń nazw plików używanych przez pliki źródłowe dla dostawcy języka. Na przykład ". cs".|
+|`language`|Atrybut wymagany.<br /><br /> Zawiera rozdzieloną średnikami listę nazw języków obsługiwanych przez dostawcę języka. Na przykład "c#; CS; CSharp".|
+|`type`|Atrybut wymagany.<br /><br /> Określa nazwę typu dostawcy języka, łącznie z nazwą zestawu zawierającego implementację dostawcy. Nazwa typu musi spełniać wymagania zdefiniowane w ramach [określania w pełni kwalifikowanych nazw typów](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|
+|`warningLevel`|Atrybut opcjonalny.<br /><br /> Określa domyślny poziom ostrzeżeń kompilatora; Określa poziom, na którym dostawca języka traktuje ostrzeżenia kompilacji jako błędy.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
 |Element|Opis|
 |-------------|-----------------|
-|[\<providerOption> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/provideroption-element.md)|Określa atrybuty wersji kompilatora dla dostawcy języka.|
+|[\<providerOption, element >](provideroption-element.md)|Określa atrybuty wersji kompilatora dla dostawcy języka.|
 
 ### <a name="parent-elements"></a>Elementy nadrzędne
 
 |Element|Opis|
 |-------------|-----------------|
-|[\<Konfiguracja > Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|
-|[\<system.codedom> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Określa ustawienia konfiguracyjne kompilatora dla dostępnych dostawców języka.|
-|[\<compilers> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Kontener dla elementów konfiguracji, kompilator; zawiera zero lub więcej `<compiler>` elementów.|
+|[\<> elementu konfiguracji](../configuration-element.md)|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|
+|[\<Element System. CodeDom >](system-codedom-element.md)|Określa ustawienia konfiguracji kompilatora dla dostępnych dostawców języka.|
+|[\<kompilatory > element](compilers-element.md)|Kontener dla elementów konfiguracji kompilatora; zawiera zero lub więcej `<compiler>` elementów.|
 
 ## <a name="remarks"></a>Uwagi
 
-Każdy `<compiler>` element określa atrybuty kompilatora konfiguracji dla dostawcy określonego języka. Dostawca rozszerza <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> klasy dla określonego języka; `<compiler>` element definiuje kompilatora i ustawienia generator kodu dla dostawcy języka.
+Każdy `<compiler>` element określa atrybuty konfiguracji kompilatora dla określonego dostawcy języka. Dostawca rozszerza <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> klasę dla określonego języka `<compiler>` ; element definiuje ustawienia kompilatora i generatora kodu dla dostawcy języka.
 
-.NET Framework definiuje ustawienia kompilatora początkowe w pliku konfiguracji komputera (Machine.config). Deweloperom i dostawcom kompilatora umożliwia dodanie ustawienia konfiguracji dla nowego <xref:System.CodeDom.Compiler.CodeDomProvider> implementacji. Użyj <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> metody, można programowo wyliczyć języka ustawienia konfiguracji dostawcy i kompilator na komputerze.
+.NET Framework definiuje początkowe ustawienia kompilatora w pliku konfiguracji komputera (Machine. config). Deweloperzy i dostawcy kompilatora mogą dodać ustawienia konfiguracji dla nowej <xref:System.CodeDom.Compiler.CodeDomProvider> implementacji. Użyj metody <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> , aby programowo wyliczyć dostawcę języka i ustawienia konfiguracji kompilatora na komputerze.
 
-Elementy kompilatora w pliku konfiguracji sieci Web lub aplikacji można uzupełnić lub przesłonić ustawienia w pliku konfiguracji komputera. Jeśli więcej niż jedna implementacja dostawcy jest skonfigurowany dla tej samej nazwy języka lub to samo rozszerzenie pliku, ostatniej pasującej konfiguracji zastępuje wszystkie poprzednie dostawców skonfigurowanych dla tego rozszerzenia nazwy lub plik języka.
+Elementy kompilatora w pliku konfiguracyjnym aplikacji lub sieci Web mogą uzupełniać lub zastępować ustawienia w pliku konfiguracji komputera. Jeśli skonfigurowano więcej niż jedną implementację dostawcy dla tej samej nazwy języka lub tego samego rozszerzenia pliku, Ostatnia zgodna konfiguracja zastępuje wszelkich wcześniej skonfigurowanych dostawców dla tej nazwy języka lub rozszerzenia pliku.
 
 ## <a name="configuration-file"></a>Plik konfiguracji
 
-Ten element może być użyty w pliku konfiguracji komputera i pliku konfiguracji aplikacji.
+Ten element może być używany w pliku konfiguracji komputera i w pliku konfiguracji aplikacji.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano element kompilatora typowej konfiguracji:
+Poniższy przykład ilustruje typowy element konfiguracji kompilatora:
 
 ```xml
 <configuration>
@@ -101,7 +101,7 @@ W poniższym przykładzie pokazano element kompilatora typowej konfiguracji:
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<compilers> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
-- [Określanie w pełni kwalifikowanych nazw typów](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
-- [Kompilator Element kompilatorów dla kompilacji (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))
+- [Schemat pliku konfiguracji](../index.md)
+- [\<kompilatory > element](compilers-element.md)
+- [Określanie w pełni kwalifikowanych nazw typów](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)
+- [Element kompilatora dla kompilatorów dla kompilacji (Schemat ustawień ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

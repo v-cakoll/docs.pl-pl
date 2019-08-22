@@ -8,30 +8,23 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: 889e81053d4e2264755468446a4e1681216ae22e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: e3fb6e42270cc0a530646b656470ec99fcfc7f1f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040373"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666243"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>Przewodnik: Utwórz nową zawartość WPF na Windows Forms w czasie projektowania
 
 W tym artykule pokazano, jak utworzyć formant Windows Presentation Foundation (WPF) do użycia w aplikacjach opartych na Windows Forms.
 
-W tym instruktażu wykonasz następujące zadania:
-
-- Utwórz projekt.
-
-- Utwórz nową kontrolkę WPF.
-
-- Dodaj nową kontrolkę WPF do formularza systemu Windows. Kontrolka WPF jest hostowana w <xref:System.Windows.Forms.Integration.ElementHost> kontrolce.
-
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
-
-- Visual Studio
+Aby ukończyć ten przewodnik, potrzebujesz programu Visual Studio.
 
 ## <a name="create-the-project"></a>Utwórz projekt
 
@@ -51,17 +44,17 @@ Aby utworzyć nową kontrolkę WPF:
 
 1. W **Eksplorator rozwiązań**Dodaj nowy projekt **biblioteki formantów użytkownika WPF (.NET Framework)** do rozwiązania. Użyj domyślnej nazwy biblioteki `WpfControlLibrary1`kontrolek. Domyślna nazwa kontrolki to `UserControl1.xaml`.
 
-     Dodanie nowej kontrolki ma następujące skutki:
+   Dodanie nowej kontrolki ma następujące skutki:
 
-    - Plik UserControl1. XAML został dodany.
+   - Plik UserControl1. XAML został dodany.
 
-    - Dodano plik UserControl1.xaml.cs lub UserControl1. XAML. vb. Ten plik zawiera kod związany z obsługą zdarzeń oraz inne implementacje.
+   - Dodano plik UserControl1.xaml.cs (lub UserControl1. XAML. vb). Ten plik zawiera kod związany z obsługą zdarzeń oraz inne implementacje.
 
-    - Dodano odwołania do zestawów WPF.
+   - Dodano odwołania do zestawów WPF.
 
-    - Plik UserControl1. XAML zostanie otwarty w [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)].
+   - Plik UserControl1. XAML zostanie otwarty w projektancie WPF dla programu Visual Studio.
 
-2. W widok Projekt upewnij się, że `UserControl1` jest zaznaczone. Aby uzyskać więcej informacji, zobacz [jak: Wybierz i przenieś elementy na Powierzchnia projektowa](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).
+2. W widok Projekt upewnij się, że `UserControl1` jest zaznaczone.
 
 3. W oknie **Właściwości** ustaw wartość <xref:System.Windows.FrameworkElement.Width%2A> właściwości i <xref:System.Windows.FrameworkElement.Height%2A> na **200**.
 
@@ -69,8 +62,8 @@ Aby utworzyć nową kontrolkę WPF:
 
 5. W oknie **Właściwości** ustaw wartość <xref:System.Windows.Controls.TextBox.Text%2A> właściwości na **hostowana zawartość**.
 
-    > [!NOTE]
-    > Ogólnie rzecz biorąc, należy hostować bardziej zaawansowaną zawartość WPF. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> Kontrolka jest używana w tym miejscu tylko do celów informacyjnych.
+   > [!NOTE]
+   > Ogólnie rzecz biorąc, należy hostować bardziej zaawansowaną zawartość WPF. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> Kontrolka jest używana w tym miejscu tylko do celów informacyjnych.
 
 6. Skompiluj projekt.
 

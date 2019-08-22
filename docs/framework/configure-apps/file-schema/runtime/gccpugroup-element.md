@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1251f286a4e6168ef1d18b05288e0c5f353ad828
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 197ab9dbc1ec85bf8961f60bb26496eab788e63f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689882"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663700"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup> Element
 
-Określa, czy wyrzucanie elementów bezużytecznych obsługuje wiele grup CPU.
+Określa, czy wyrzucanie elementów bezużytecznych obsługuje wiele grup procesorów.
 
-\<Konfiguracja > \
-\<runtime>\
+\<> konfiguracji \
+\<> środowiska uruchomieniowego \
 \<GCCpuGroup>
 
 ## <a name="syntax"></a>Składnia
@@ -37,14 +37,14 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy wyrzucanie elementów bezużytecznych obsługuje wiele grup CPU.|
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy wyrzucanie elementów bezużytecznych obsługuje wiele grup procesorów.|
 
 ## <a name="enabled-attribute"></a>Atrybut włączony
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`false`|Wyrzucanie elementów bezużytecznych nie obsługuje wiele grup CPU. Domyślnie włączone.|
-|`true`|Wyrzucanie elementów bezużytecznych obsługuje wiele grup CPU, jeśli serwer wyrzucania elementów bezużytecznych jest włączona.|
+|`false`|Wyrzucanie elementów bezużytecznych nie obsługuje wielu grup procesorów. Domyślnie włączone.|
+|`true`|Wyrzucanie elementów bezużytecznych obsługuje wiele grup procesorów, jeśli jest włączone odzyskiwanie pamięci serwera.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -59,14 +59,14 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-Kiedy komputer posiada wiele grup CPU i serwer wyrzucania elementów bezużytecznych jest włączona (zobacz [ \<gcserver — >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) element), włączenie tego elementu rozszerza wyrzucania elementów bezużytecznych we wszystkich grupach CPU i przyjmuje wszystkich rdzeni do konto podczas tworzenia i równoważenie stosów.
+Jeśli na komputerze jest włączona wiele grup CPU i wyrzucanie elementów bezużytecznych serwera (zobacz [ \<gcServer >](gcserver-element.md) element), włączenie tego elementu rozszerza wyrzucanie elementów bezużytecznych we wszystkich grupach CPU i pobiera wszystkie rdzenie podczas tworzenia i Zrównoważ sterty.
 
 > [!NOTE]
-> Ten element ma zastosowanie tylko do wątków wyrzucania elementów bezużytecznych. Aby włączyć środowisko uruchomieniowe do dystrybucji wątki użytkownika we wszystkich grupach procesorów, należy również włączyć [ \<Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) elementu.
+> Ten element ma zastosowanie tylko do wątków wyrzucania elementów bezużytecznych. Aby umożliwić środowisko uruchomieniowe dystrybuowanie wątków użytkownika między wszystkimi grupami CPU, należy również włączyć [ \<element > Thread_UseAllCpuGroups](thread-useallcpugroups-element.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak włączyć wyrzucania elementów bezużytecznych dla wielu grup procesorów.
+Poniższy przykład pokazuje, jak włączyć odzyskiwanie pamięci dla wielu grup procesorów.
 
 ```xml
 <configuration>
@@ -79,7 +79,7 @@ Poniższy przykład pokazuje, jak włączyć wyrzucania elementów bezużyteczny
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)
 - [Aby wyłączyć współbieżne wyrzucanie elementów bezużytecznych](gcconcurrent-element.md#to-disable-background-garbage-collection)
-- [Wyrzucanie elementów bezużytecznych stacji roboczych i serwera](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+- [Stacja robocza i odzyskiwanie pamięci serwera](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

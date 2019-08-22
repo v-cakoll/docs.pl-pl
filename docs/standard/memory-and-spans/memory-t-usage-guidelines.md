@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 171f6fd5a8b55d2e96a90a90d011a8166be6759d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68362906"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666413"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Wytyczne\<dotyczące użycia pamięci t\<> i zakresu t >
 
@@ -78,7 +78,7 @@ W przypadku, gdy [właściciele, odbiorcy i](#owners-consumers-and-lifetime-mana
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
-Możemy również napisać ten przykład z [`using`](~/docs/csharp/language-reference/keywords/using-statement.md):
+Możemy również napisać ten przykład z [`using`](../../csharp/language-reference/keywords/using-statement.md):
 
 [!code-csharp[ownership-using](~/samples/snippets/standard/buffers/memory-t/owner-using/owner-using.cs)]
 
@@ -138,7 +138,7 @@ W rzeczywistości, Jeśli połączymy tę regułę i #1 reguł, możemy jeszcze 
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-Metoda działa teraz z niemal każdym typem bufora urojonym: `T[]`, magazynem przydzielonym z stackalloc i tak dalej. [](~/docs/csharp/language-reference/operators/stackalloc.md) `DisplayBufferToConsole` Możesz nawet przekazać bezpośrednio do <xref:System.String> programu!
+Metoda działa teraz z niemal każdym typem bufora urojonym: `T[]`, magazynem przydzielonym z stackalloc i tak dalej. [](../../csharp/language-reference/operators/stackalloc.md) `DisplayBufferToConsole` Możesz nawet przekazać bezpośrednio do <xref:System.String> programu!
 
 **#3 reguły: Jeśli metoda akceptuje pamięć\<t > i zwraca `void`, nie można używać wystąpienia pamięci\<t > po powrocie metody.**
 
@@ -246,7 +246,7 @@ Każdy składnik, który przenosi własność <xref:System.Buffers.IMemoryOwner%
 
 **#9 reguły: W przypadku pakowania synchronicznej metody p/Invoke interfejs API powinien akceptować zakres\<T > jako parametr.**
 
-Zgodnie z regułą #1, <xref:System.Span%601> jest zazwyczaj prawidłowym typem używanym do synchronicznych interfejsów API. Można przypiąć <xref:System.Span%601> wystąpienia [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) za pomocą słowa kluczowego, jak w poniższym przykładzie.
+Zgodnie z regułą #1, <xref:System.Span%601> jest zazwyczaj prawidłowym typem używanym do synchronicznych interfejsów API. Można przypiąć <xref:System.Span%601> wystąpienia [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) za pomocą słowa kluczowego, jak w poniższym przykładzie.
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -286,7 +286,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 
 **#10 reguły: W przypadku zawijania asynchronicznej metody p/Invoke interfejs API powinien akceptować pamięć\<T > jako parametr.**
 
-Ponieważ nie można użyć [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) słowa kluczowego w operacjach asynchronicznych, należy <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> użyć metody <xref:System.Memory%601> , aby przypiąć wystąpienia, niezależnie od rodzaju ciągłej pamięci reprezentowanej przez wystąpienie. Poniższy przykład pokazuje, jak używać tego interfejsu API do wykonywania asynchronicznego wywołania p/Invoke.
+Ponieważ nie można użyć [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) słowa kluczowego w operacjach asynchronicznych, należy <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> użyć metody <xref:System.Memory%601> , aby przypiąć wystąpienia, niezależnie od rodzaju ciągłej pamięci reprezentowanej przez wystąpienie. Poniższy przykład pokazuje, jak używać tego interfejsu API do wykonywania asynchronicznego wywołania p/Invoke.
 
 ```csharp
 using System.Runtime.InteropServices;

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 1b5f7406f995a86f0a192dbf3249c067dff570ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac9405fdc6123a5a1352de06f94fefb6d7d4014b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674405"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659122"
 ---
-# <a name="smtp-element-network-settings"></a>\<SMTP >, Element (ustawienia sieci)
-Konfiguruje format dostarczania, metodę dostarczania i z adresu do wysyłania wiadomości e-mail.  
+# <a name="smtp-element-network-settings"></a>\<> SMTP — element (Ustawienia sieci)
+Konfiguruje format dostarczania, metodę dostarczania i adres nadawcy wiadomości e-mail.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.net>  
 \<mailSettings>  
 \<smtp>  
@@ -42,25 +42,25 @@ Konfiguruje format dostarczania, metodę dostarczania i z adresu do wysyłania w
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`deliveryFormat`|Określa format dostarczania wychodzących wiadomości e-mail. Dopuszczalne wartości to SevenBit i międzynarodowe.|  
-|`deliveryMethod`|Określa metodę dostarczania wiadomości e-mail. Dopuszczalne wartości to sieć, PickupDirectoryFromIis i SpecifiedPickupDirectory.|  
-|`from`|Określa adres początkowy dla wychodzących wiadomości e-mail.|  
+|`deliveryFormat`|Określa format dostarczania wychodzących wiadomości e-mail. Akceptowalne wartości to SevenBit i International.|  
+|`deliveryMethod`|Określa metodę dostarczania wiadomości e-mail. Dopuszczalne wartości to Network, PickupDirectoryFromIis i SpecifiedPickupDirectory.|  
+|`from`|Określa adres od dla wychodzących wiadomości e-mail.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|Konfiguruje katalog lokalny dla serwera transportu protokołu SMTP (Simple Mail).|  
-|`network`|Konfiguruje opcje sieciowe dla zewnętrznego serwera SMTP.|  
+|`specifiedPickupDirectory`|Konfiguruje katalog lokalny dla serwera SMTP (Simple Mail Transport Protocol).|  
+|`network`|Konfiguruje opcje sieci dla zewnętrznego serwera SMTP.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[\<mailSettings — >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Konfiguruje opcje wysyłania poczty.|  
+|[\<mailSettings >, element (Ustawienia sieci)](mailsettings-element-network-settings.md)|Konfiguruje opcje wysyłania poczty.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład określa odpowiednie parametry SMTP do wysyłania wiadomości e-mail przy użyciu poświadczeń domyślnych sieci.  
+ W poniższym przykładzie określono odpowiednie parametry SMTP do wysyłania wiadomości e-mail przy użyciu domyślnych poświadczeń sieciowych.  
   
 ```xml  
 <configuration>  
@@ -84,4 +84,4 @@ Konfiguruje format dostarczania, metodę dostarczania i z adresu do wysyłania w
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpDeliveryFormat>
 - <xref:System.Net.Mail.SmtpDeliveryMethod>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

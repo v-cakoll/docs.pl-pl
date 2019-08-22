@@ -10,17 +10,17 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 904c8e23f7a09a975a6f3b9322ed6bc4148d9ba4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd8790efa14018817c9e51e688b17c22d31d482f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674671"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659571"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<Dodaj >, Element dla bypasslist (ustawienia sieci)
-Dodaje adres IP lub nazwę DNS do listy pomijania proxy.  
+# <a name="add-element-for-bypasslist-network-settings"></a>\<Dodaj element > dla BypassList (Ustawienia sieci)
+Dodaje adres IP lub nazwę DNS do listy obejścia serwera proxy.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.net>  
 \<defaultProxy>  
 \<bypasslist>  
@@ -41,7 +41,7 @@ Dodaje adres IP lub nazwę DNS do listy pomijania proxy.
   
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
-|**address**|Wyrażenie regularne, zawierająca opis, adres IP lub nazwę DNS.|  
+|**address**|Wyrażenie regularne opisujące adres IP lub nazwę DNS.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -50,22 +50,22 @@ Dodaje adres IP lub nazwę DNS do listy pomijania proxy.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.|  
+|[bypasslist](bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.|  
   
 ## <a name="remarks"></a>Uwagi  
- `add` Wstawia element wyrażeń regularnych, opisujący adresy IP lub nazwy serwera DNS do listy adresów, które pomijają serwer proxy.  
+ `add` Element wstawia wyrażenia regularne opisujące adresy IP lub nazwy serwerów DNS do listy adresów, które pomijają serwer proxy.  
   
- Wartość `address` atrybut powinien być wyrażenie regularne, które opisuje zestaw adresów IP lub nazw hostów.  
+ Wartość `address` atrybutu powinna być wyrażeniem regularnym opisującym zestaw adresów IP lub nazw hostów.  
   
- Należy zachować ostrożność podczas określania wyrażenia regularnego dla tego elementu. Wyrażenie regularne "[a-z] +\\.contoso\\.com" dopasowań dowolnego hosta w domenie contoso.com, ale również pasuje do dowolnego hosta w domenie contoso.com.cpandl.com. Aby dopasować tylko na hoście w domenie contoso.com, użyj elementu zakotwiczenia ("$"): "[a-z] +\\.contoso\\.com$".  
+ Należy zachować ostrożność podczas określania wyrażenia regularnego dla tego elementu. Wyrażenie regularne "[a-z] +\\. contoso\\. com" dopasowuje dowolny host w domenie contoso.com, ale również jest zgodny z dowolnym hostem w domenie contoso.com.cpandl.com. Aby dopasować tylko hosta w domenie contoso.com, użyj kotwicy ("$"): "[a-z] +\\. contoso\\. com $".  
   
- Aby uzyskać więcej informacji na temat wyrażeń regularnych Zobacz. [Wyrażeń regularnych programu .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Aby uzyskać więcej informacji na temat wyrażeń regularnych, zobacz. [.NET Framework wyrażeń regularnych](../../../../../docs/standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
+ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład dodaje dwa adresy do listy pomijania. Pierwszy pomija serwera proxy dla wszystkich serwerów w domenie contoso.com. drugi pomija serwera proxy dla wszystkich serwerom rozpoczyna się których adresy IP 192.168.  
+ Poniższy przykład dodaje dwa adresy do listy pomijania. Najpierw pomija serwer proxy dla wszystkich serwerów w domenie contoso.com; drugi pomija serwer proxy dla wszystkich serwerów, których adres IP rozpoczyna się od 192,168.  
   
 ```xml  
 <configuration>  
@@ -83,4 +83,4 @@ Dodaje adres IP lub nazwę DNS do listy pomijania proxy.
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

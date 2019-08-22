@@ -10,19 +10,19 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 3a046fd386536b29ea2dcad5660c65c08b7e4478
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 608c591b910252dd60950bf2aa7565d6df04d5fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705275"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664230"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<Dodaj >, Element dla connectionManagement (ustawienia sieci)
-Dodaje adres IP lub nazwę DNS na liście zarządzania połączenia.  
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<Dodaj element > dla connectionManagement (Ustawienia sieci)
+Dodaje adres IP lub nazwę DNS do listy zarządzania połączeniami.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.net>  
-\<connectionManagement>  
+\<connectionManagement >  
 \<add>  
   
 ## <a name="syntax"></a>Składnia  
@@ -41,8 +41,8 @@ Dodaje adres IP lub nazwę DNS na liście zarządzania połączenia.
   
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
-|`address`|Ciąg opisujący adresu IP lub nazwy DNS.|  
-|`maxconnection`|Maksymalna liczba dozwolonych połączeń z serwerem. Jeśli nie zostanie podany, wartość domyślna to 2.|  
+|`address`|Ciąg opisujący adres IP lub nazwę DNS.|  
+|`maxconnection`|Maksymalna liczba połączeń dozwolonych dla serwera. Jeśli nie zostanie podany, wartość domyślna to 2.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -51,18 +51,18 @@ Dodaje adres IP lub nazwę DNS na liście zarządzania połączenia.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Określa maksymalną liczbę połączeń z hostem sieci.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Określa maksymalną liczbę połączeń z hostem sieciowym.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość `address` atrybut powinien być gwiazdki, aby pokazać wszystkie połączenia lub ciąg w postaci `<schema>://<idn_hostname>[:<port>]`.  
+ Wartość `address` atrybutu powinna być gwiazdką wskazującą wszystkie połączenia lub ciąg formularza `<schema>://<idn_hostname>[:<port>]`.  
   
- Jeśli identyfikator URI przekazywany do żadnych interfejsów API protokołu HTTP zawiera Unicode, zostaną przekonwertowane nazwę wewnętrznie za pomocą <xref:System.Uri.DnsSafeHost%2A> której może zwrócić ciąg punicode (zachowanie zależy od bieżącej konfiguracji IDN).  
+ Jeśli identyfikator URI przesłany do dowolnego interfejsu API protokołu HTTP zawiera Unicode, nazwa zostanie przekonwertowane <xref:System.Uri.DnsSafeHost%2A> wewnętrznie przy użyciu, co może zwrócić ciąg punicode (zachowanie zależne od bieżącej konfiguracji IDN).  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
+ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład umożliwia skonfigurowanie aplikacji na używanie cztery połączenia z serwerem `www.contoso.com` i dwóch połączeń na inne serwery.  
+ Poniższy przykład służy do konfigurowania aplikacji do korzystania z czterech połączeń z serwerem `www.contoso.com` i dwóch połączeń z innymi serwerami.  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ Dodaje adres IP lub nazwę DNS na liście zarządzania połączenia.
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

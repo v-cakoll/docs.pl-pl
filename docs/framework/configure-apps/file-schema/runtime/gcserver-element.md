@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5df7ab070cc0a40f4e2f3d0545c5bc40ccb07f4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 61b4076a72dbc17ffc800a1a8d37a22d1435e02b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378033"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663679"
 ---
-# <a name="gcserver-element"></a>\<gcServer> Element
-Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia wyrzucanie elementów bezużytecznych serwera.  
+# <a name="gcserver-element"></a>\<gcServer, element >
+Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia odzyskiwanie pamięci serwera.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<runtime>  
 \<gcServer>  
   
@@ -38,14 +38,14 @@ Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia wyrzucanie
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe jest uruchamiany serwer wyrzucania elementów bezużytecznych.|  
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe uruchamia odzyskiwanie pamięci serwera.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`false`|Nie jest uruchamiany serwer wyrzucania elementów bezużytecznych. Domyślnie włączone.|  
-|`true`|Uruchamia serwer wyrzucania elementów bezużytecznych.|  
+|`false`|Nie uruchamia odzyskiwania pamięci serwera. Domyślnie włączone.|  
+|`true`|Uruchamia odzyskiwanie pamięci serwera.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -58,17 +58,17 @@ Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia wyrzucanie
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko uruchomieniowe języka wspólnego (CLR) obsługuje dwa typy operacji wyrzucania elementów bezużytecznych: wyrzucanie elementów bezużytecznych, który jest dostępny we wszystkich systemach, i wyrzucanie elementów bezużytecznych serwera, który jest dostępny w systemach wieloprocesorowych. Możesz użyć `<gcServer>` wykonuje element, aby kontrolować typ wyrzucania elementów bezużytecznych środowiska CLR. Użyj <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> właściwości w celu określenia, czy włączono serwer wyrzucania elementów bezużytecznych.  
+ Środowisko uruchomieniowe języka wspólnego (CLR) obsługuje dwa typy wyrzucania elementów bezużytecznych: odzyskiwanie pamięci stacji roboczej, które jest dostępne we wszystkich systemach i wyrzucanie elementów bezużytecznych serwera, które jest dostępne w systemach wieloprocesorowych. Za pomocą `<gcServer>` elementu można kontrolować typ wyrzucania elementów bezużytecznych wykonywanych przez środowisko CLR. Użyj właściwości <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> , aby określić, czy jest włączone odzyskiwanie pamięci serwera.  
   
- W przypadku komputerów z jednym procesorem wyrzucanie elementów bezużytecznych stacji roboczej domyślne powinny być najszybszą opcję. Dwa procesory komputerów można stacji roboczej lub serwera. Wyrzucanie elementów bezużytecznych serwera powinien być najszybszą opcję dla więcej niż dwóch procesorów.  
+ W przypadku komputerów z jednym procesorem domyślna opcja wyrzucania elementów bezużytecznych stacji roboczej powinna być najszybszą opcją. Stacja robocza lub serwer może być używana w przypadku komputerów dwuprocesorowych. Wyrzucanie elementów bezużytecznych serwera powinno być najszybszą opcją dla więcej niż dwóch procesorów.  
   
- Ten element może być używany tylko w pliku konfiguracyjnym aplikacji; jest on ignorowany, jeśli znajduje się w pliku konfiguracji komputera.  
+ Tego elementu można używać tylko w pliku konfiguracji aplikacji; jest on ignorowany, jeśli znajduje się w pliku konfiguracji komputera.  
   
 > [!NOTE]
->  W .NET Framework 4 i starszych wersjach współbieżne wyrzucanie elementów bezużytecznych nie jest dostępna, gdy serwer wyrzucania elementów bezużytecznych jest włączona. Począwszy od programu .NET Framework 4.5, wyrzucanie elementów bezużytecznych serwera jest współbieżnych. Aby użyć serwera niewspółbieżnym wyrzucaniem elementów bezużytecznych, ustaw `<gcServer>` elementu `true` i [ \<gcconcurrent — > element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) do `false`.  
+>  W .NET Framework 4 i starszych wersjach współbieżne wyrzucanie elementów bezużytecznych nie jest dostępne po włączeniu odzyskiwania pamięci serwera. Począwszy od .NET Framework 4,5, wyrzucanie elementów bezużytecznych serwera jest współbieżne. Aby użyć niewspółbieżnego wyrzucania elementów bezużytecznych serwera `true` , ustaw `<gcServer>` element na i [ \<gcConcurrent > elementu.](gcconcurrent-element.md) `false`  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład umożliwia wyrzucanie elementów bezużytecznych serwera.  
+ Poniższy przykład umożliwia wyrzucanie elementów bezużytecznych na serwerze.  
   
 ```xml  
 <configuration>  
@@ -81,6 +81,6 @@ Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia wyrzucanie
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)
 - [Aby wyłączyć współbieżne wyrzucanie elementów bezużytecznych](gcconcurrent-element.md#to-disable-background-garbage-collection)

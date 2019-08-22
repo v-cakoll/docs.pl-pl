@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: 36d174beea58ff96674bd873bfbcb8be89591669
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ff44f0251936d51b4e396c37c53322efa110227
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674561"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659421"
 ---
-# <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy> Element (Network Settings)
-Opisuje, czy buforowanie FTP jest aktywny i w tym artykule opisano domyślne zasady buforowania.  
+# <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy >, element (Ustawienia sieci)
+Opisuje, czy buforowanie FTP jest aktywne i opisuje domyślne zasady buforowania.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.net>  
-\<requestCaching>  
+\<requestCaching >  
 \<defaultFtpCachePolicy>  
   
 ## <a name="syntax"></a>Składnia  
@@ -38,20 +38,20 @@ Opisuje, czy buforowanie FTP jest aktywny i w tym artykule opisano domyślne zas
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`policyLevel`|Określa, FTP, zasady buforowania. Wartość domyślna to `Default`.|  
+|`policyLevel`|Określa zasady buforowania FTP. Wartość domyślna to `Default`.|  
   
-## <a name="policylevel-attribute"></a>policyLevel atrybutu  
+## <a name="policylevel-attribute"></a>policyLevel — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`Default`|Zwraca buforowane zasobu, jeśli zasób jest świeże, długość zawartości jest dokładne i wygaśnięcia, modyfikowanie i atrybuty długość zawartości znajdują się.|  
-|`BypassCache`|Zwraca zasobu z serwera.|  
-|`CacheOnly`|Zwraca buforowane zasobu, jeśli długość zawartości jest obecna, a także odpowiada rozmiarowi wpisu.|  
-|`CacheIfAvailable`|Zwraca buforowane zasobu, jeśli długość zawartości jest dostarczany i odpowiada rozmiarowi wejścia; w przeciwnym razie zasób zostanie pobrana z serwera i jest zwracany do obiektu wywołującego.|  
-|`Revalidate`|Zwraca buforowane zasobu, jeśli sygnatury czasowej zasobów pamięci podręcznej jest taka sama jak sygnatura czasowa zasobu na serwerze; w przeciwnym razie zasób jest pobierane z serwera, przechowywane w pamięci podręcznej i zwracany do wywołującego.|  
-|`Reload`|Pobiera zasób z serwera, jest on przechowywany w pamięci podręcznej i zwraca zasobu do obiektu wywołującego.|  
-|`NoCacheNoStore`|Jeśli istnieje zasób pamięci podręcznej, został usunięty. Zasób jest pobierane z serwera i jest zwracany do obiektu wywołującego.|  
-|`Revalidate`|Spełnia żądanie przy użyciu pamięci podręcznej kopię zasobu, jeśli sygnatura czasowa jest taka sama jak sygnatura czasowa zasobu na serwerze; w przeciwnym razie zasób jest pobierane z serwera, przedstawione do obiektu wywołującego i przechowywane w pamięci podręcznej.|  
+|`Default`|Zwraca buforowany zasób, jeśli zasób jest świeży, długość zawartości jest dokładna i atrybuty daty wygaśnięcia, modyfikacji i długości zawartości są obecne.|  
+|`BypassCache`|Zwraca zasób z serwera.|  
+|`CacheOnly`|Zwraca buforowany zasób, jeśli długość zawartości jest obecna i jest zgodna z rozmiarem wpisu.|  
+|`CacheIfAvailable`|Zwraca buforowany zasób, jeśli długość zawartości jest podana i jest zgodna z rozmiarem wpisu; w przeciwnym razie zasób jest pobierany z serwera i zwracany do obiektu wywołującego.|  
+|`Revalidate`|Zwraca buforowany zasób, jeśli sygnatura czasowa zasobu w pamięci podręcznej jest taka sama jak sygnatura czasowa zasobu na serwerze; w przeciwnym razie zasób zostanie pobrany z serwera, zapisany w pamięci podręcznej i zwrócony do obiektu wywołującego.|  
+|`Reload`|Pobiera zasób z serwera, zapisuje go w pamięci podręcznej i zwraca zasób do obiektu wywołującego.|  
+|`NoCacheNoStore`|Jeśli istnieje zasób w pamięci podręcznej, zostanie on usunięty. Zasób jest pobierany z serwera i zwracany do obiektu wywołującego.|  
+|`Revalidate`|Program spełnia żądanie przy użyciu buforowanej kopii zasobu, jeśli sygnatura czasowa jest taka sama jak sygnatura czasowa zasobu na serwerze; w przeciwnym razie zasób zostanie pobrany z serwera, który jest przedstawiony dla obiektu wywołującego i zapisany w pamięci podręcznej.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -60,12 +60,12 @@ Opisuje, czy buforowanie FTP jest aktywny i w tym artykule opisano domyślne zas
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Określa mechanizm buforowania żądań sieci.|  
+|[requestCaching](requestcaching-element-network-settings.md)|Kontroluje mechanizm buforowania dla żądań sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak określić zasady buforowania FTP `NoCacheNoStore`.  
+ Poniższy przykład pokazuje, jak określić zasady `NoCacheNoStore`buforowania FTP.  
   
 ```xml  
 <configuration>  
@@ -84,4 +84,4 @@ Opisuje, czy buforowanie FTP jest aktywny i w tym artykule opisano domyślne zas
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

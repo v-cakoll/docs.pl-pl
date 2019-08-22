@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bcde1bbb5419de2c363b422c327d55c2ce9eea1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a62bd3507c14e42798c903ae51edb0187e666c8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607310"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663765"
 ---
-# <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment> Element
-Określa, czy data i godzina metod analizowania użyć skorygowany zbiór reguł do analizowania ciągów daty, które zawierają dzień, miesiąc, godzinę i oznaczenie AM/PM.  
+# <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment, element >
+Określa, czy metody analizowania dat i godzin używają dopasowanego zestawu reguł do analizowania ciągów dat zawierających dzień, miesiąc, godzinę i oznaczenie AM/PM.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
  \<runtime>  
-\<EnableAmPmParseAdjustment>  
+\<EnableAmPmParseAdjustment >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,14 +31,14 @@ Określa, czy data i godzina metod analizowania użyć skorygowany zbiór reguł
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy data i godzina metod analizowania użyć skorygowany zbiór reguł do analizowania ciągów daty, które zawierają tylko dnia, miesiąca, godzinę i oznaczenie AM/PM.|  
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy metody analizowania dat i godzin używają skorygowanego zestawu reguł do analizowania ciągów dat, które zawierają tylko oznaczenie Day, month, Hour i AM/PM.|  
   
 ### <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|0|Data i godzina metod analizowania reguły nie są używane skorygowany do analizowania ciągów daty, które zawierają tylko dnia, miesiąca, godzinę i oznaczenie AM/PM.|  
-|1|Data i godzina metod analizowania na użytek reguły skorygowany analizowanie ciągów daty, które zawierają tylko dnia, miesiąca, godzinę i oznaczenie AM/PM.|  
+|0|Metody analizowania dat i godzin nie używają skorygowanych reguł do analizowania ciągów dat, które zawierają tylko oznaczenie Day, month, Hour i AM/PM.|  
+|1|Metody analizowania dat i godzin używają skorygowanych reguł do analizowania ciągów dat, które zawierają tylko oznaczenie Day, month, Hour i AM/PM.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -51,7 +51,7 @@ Określa, czy data i godzina metod analizowania użyć skorygowany zbiór reguł
 |`runtime`|Zawiera informacje dotyczące opcji inicjowania środowiska uruchomieniowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- `<EnableAmPmParseAdjustment>` Element kontroluje sposób przeanalizować ciąg daty, która zawiera liczbową wartość dnia i miesiąca, a następnie godzinę i oznaczenie AM/PM (na przykład "6 4/10 AM") w następujących metod:  
+ `<EnableAmPmParseAdjustment>` Element kontroluje, jak następujące metody analizują ciąg daty, który zawiera numeryczny dzień i miesiąc, po którym następuje godzina i oznaczenie AM/PM (na przykład "4/10 6 AM"):  
   
 - <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
@@ -63,25 +63,25 @@ Określa, czy data i godzina metod analizowania użyć skorygowany zbiór reguł
   
 - <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType>  
   
- Wpływają na nie inne wzorce.  
+ Nie ma to znaczenia dla innych wzorców.  
   
- `<EnableAmPmParseAdjustment>` Element nie ma wpływu <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, i <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> metody.  
+ <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType> <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> Element nie ma wpływu <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>na metody,, i. `<EnableAmPmParseAdjustment>`  
   
 > [!IMPORTANT]
->  .NET Core i .NET Native skorygowany AM/PM reguły analizy składni są domyślnie włączone.  
+>  W przypadku platformy .NET Core i .NET Native dostosowane reguły analizowania AM/PM są domyślnie włączone.  
   
- Jeśli nie włączono analizy reguła korekty, pierwszą cyfrą ciąg jest interpretowany jako godzinę 12-godzinnym, a pozostała część ciągu, oprócz oznaczenia AM/PM jest ignorowany. Data i godzina zwracany przez metodę analizowania składa się z bieżącą datę i godzinę dnia, o której wyodrębnione z ciągu daty.  
+ Jeśli reguła dopasowania analizy nie jest włączona, Pierwsza cyfra ciągu jest interpretowana jako godzina zegara 12-godzinnego, a pozostała część ciągu z wyjątkiem oznaczenia AM/PM jest ignorowana. Data i godzina zwrócone przez metodę analizy składa się z bieżącej daty i godziny wyekstrahowanej z ciągu daty.  
   
- Po włączeniu analizy reguła korekty analizy metody interpretacji dzień i miesiąc jako należące do bieżącego roku i interpretować czasie, co godzinę 12-godzinnym.  
+ Jeśli reguła dopasowywania analizy jest włączona, metoda analizy interpretuje dzień i miesiąc jako należące do bieżącego roku i interpretuje czas jako godzinę zegara 12-godzinnego.  
   
- W poniższej tabeli przedstawiono różnice w <xref:System.DateTime> wartość przy <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> metoda służy do analizowania ciągu "" 4/10 6 AM"za pomocą `<EnableAmPmParseAdjustment>` elementu `enabled` właściwość ustawioną na"0"lub"1". Przyjęto założenie, że dzisiaj jest 5 stycznia 2017 r. i wyświetla datę tak, jakby jest formatowana przy użyciu ciągu formatu "G" określonej kultury.  
+ W poniższej tabeli <xref:System.DateTime> przedstawiono różnice w wartości, <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> gdy metoda jest używana do analizowania ciągu "" `<EnableAmPmParseAdjustment>` 4/10 6 am `enabled` "z właściwością elementu ustawioną na wartość" 0 "lub" 1 ". Przyjęto założenie, że dzisiejszą datą jest 5 stycznia 2017 i wyświetla datę tak, jakby była sformatowana przy użyciu ciągu formatu "G" określonego kultury.  
   
 |Nazwa kultury|enabled="0"|enabled="1"|  
 |------------------|------------------|------------------|  
-|en-US|2017-1-5 4:00:00 AM|2017-10/4 6:00:00 AM|  
+|en-US|1/5/2017 4:00:00 AM|4/10/2017 6:00:00 AM|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [\<środowisko uruchomieniowe > Element](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
-- [\<Konfiguracja > Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
+- [\<Element > środowiska uruchomieniowego](runtime-element.md)
+- [\<> elementu konfiguracji](../configuration-element.md)

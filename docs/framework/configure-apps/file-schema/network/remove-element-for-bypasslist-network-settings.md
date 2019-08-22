@@ -10,21 +10,21 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: a04cca3e57af5cc422776c5b2444a140e86f98b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fd8de9af00aa861d92c8c201ef89545e108c790
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674470"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659238"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<Usuń >, Element dla bypasslist (ustawienia sieci)
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<Usuń element > dla BypassList (Ustawienia sieci)
 
-Usuwa adres IP lub nazwa DNS z listy obejścia serwera proxy.
+Usuwa adres IP lub nazwę DNS z listy obejścia serwera proxy.
 
-\<Konfiguracja > \
+\<> konfiguracji \
 \<system.net>\
 \<defaultProxy>\
-\<bypasslist>\
+\<BypassList > \
 \<remove>
 
 ## <a name="syntax"></a>Składnia
@@ -43,7 +43,7 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |**Atrybut**|**Opis**|
 |-------------------|---------------------|
-|`address`|Wyrażenie regularne, zawierająca opis, adres IP lub nazwę DNS.|
+|`address`|Wyrażenie regularne opisujące adres IP lub nazwę DNS.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -53,23 +53,23 @@ Brak.
 
 |**Element**|**Opis**|
 |-----------------|---------------------|
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.|
+|[bypasslist](bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.|
 
 ## <a name="remarks"></a>Uwagi
 
-`remove` Elementu usuwa wyrażeń regularnych, opisujący adresy IP lub nazwy serwera DNS z listy adresów, które pomijają serwer proxy. Adresy zostały zdefiniowane wcześniej w pliku konfiguracji lub wyższego poziomu w hierarchii konfiguracji.
+`remove` Element usuwa wyrażenia regularne opisujące adresy IP lub nazwy serwerów DNS z listy adresów, które pomijają serwer proxy. Adresy zostały zdefiniowane wcześniej w pliku konfiguracyjnym lub na wyższym poziomie w hierarchii konfiguracji.
 
-Wartość `address` atrybut powinien być wyrażenie regularne, które opisuje zestaw adresów IP lub nazw hostów.
+Wartość `address` atrybutu powinna być wyrażeniem regularnym opisującym zestaw adresów IP lub nazw hostów.
 
-Aby uzyskać więcej informacji na temat wyrażeń regularnych Zobacz. [Wyrażeń regularnych programu .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).
+Aby uzyskać więcej informacji na temat wyrażeń regularnych, zobacz. [.NET Framework wyrażeń regularnych](../../../../../docs/standard/base-types/regular-expressions.md).
 
 ## <a name="configuration-files"></a>Pliki konfiguracji
 
-Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).
+Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład usuwa wszelkie poprzednią definicję dla domeny adventure works.com, a następnie dodaje domeny contoso.com do listy pomijania.
+Poniższy przykład usuwa wszystkie poprzednie definicje domeny adventure-works.com, a następnie dodaje domenę contoso.com do listy pomijania.
 
 ```xml
 <configuration>
@@ -87,4 +87,4 @@ Poniższy przykład usuwa wszelkie poprzednią definicję dla domeny adventure w
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

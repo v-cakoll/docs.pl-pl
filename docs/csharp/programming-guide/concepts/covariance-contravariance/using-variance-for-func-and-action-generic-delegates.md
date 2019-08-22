@@ -2,12 +2,12 @@
 title: Korzystanie z wariancji dla delegatów dla funkcjiC#Func i Action ()
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: 2e2c5c80c54ff6788653f63a5bda85598e73824c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bbfc41fb8ab3e7d800f1eb03098e02056e694872
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595235"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659910"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Korzystanie z wariancji dla delegatów dla funkcjiC#Func i Action ()
 W poniższych przykładach pokazano, jak używać kowariancji i kontrawariancja `Func` w `Action` i delegatów ogólnych, aby umożliwić ponowne użycie metod i zapewnić większą elastyczność w kodzie.  
@@ -84,4 +84,4 @@ class Program
 ## <a name="see-also"></a>Zobacz także
 
 - [Kowariancja i kontrawariancja (C#)](./index.md)
-- [Typy ogólne](~/docs/standard/generics/index.md)
+- [Typy ogólne](../../../../standard/generics/index.md)

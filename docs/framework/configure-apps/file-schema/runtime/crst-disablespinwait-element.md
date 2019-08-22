@@ -1,5 +1,5 @@
 ---
-title: element < Crst_DisableSpinWait >
+title: < element > Crst_DisableSpinWait
 ms.date: 04/18/2019
 f1_keywords:
 - Crst_DisableSpinWait
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f89f0558c11e229fef2ca3cd619e3c033f12c858
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a52dd671f1fbf6fda5bdc92c0935784181eb4b03
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754676"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663841"
 ---
-# <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait > element
+# <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait, element >
 
-Określa, czy wyłączyć pokrętła — oczekiwanie na sekcję krytyczną rywalizacją.  
+Określa, czy należy wyłączyć funkcję "oczekiwanie" podczas oczekiwania na sekcję krytyczną.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<runtime>  
 \<Crst_DisableSpinWait >  
   
@@ -36,14 +36,14 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**Włączone**|Określa, czy pokrętła — oczekiwanie na sekcje krytyczne, gdy są one rywalizacją jest wyłączona.|  
+|**dostępny**|Określa, czy oczekiwanie na przejście na sekcje krytyczne, gdy są one z nimi związane, jest wyłączone.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|1|Wyłącz pokrętła oczekiwania, gdy nie można pobrać sekcję krytyczną.|  
-|0|Nie należy wyłączać pokrętła oczekiwania, gdy sekcję krytyczną, nie można pobrać. Jest to wartość domyślna.|  
+|1|Wyłączenie pokrętła — oczekiwanie, jeśli nie można uzyskać sekcji krytycznej.|  
+|0|Nie należy wyłączać elementu "oczekiwanie", jeśli nie można uzyskać sekcji krytycznej. Jest to wartość domyślna.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -53,11 +53,11 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`runtime`|Zawiera informacje o różnych ustawień konfiguracji środowiska uruchomieniowego.|  
+|`runtime`|Zawiera informacje o różnych ustawieniach konfiguracji środowiska uruchomieniowego.|  
   
 ## <a name="example"></a>Przykład  
 
-Poniższy przykład wyłącza pokrętła waiting, w sekcji krytycznych, gdy z rywalizacją.  
+W poniższym przykładzie jest wyłączone obracanie w sekcji o kluczowym znaczeniu.  
   
 ```xml  
 <configuration>  
@@ -69,5 +69,5 @@ Poniższy przykład wyłącza pokrętła waiting, w sekcji krytycznych, gdy z ry
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)

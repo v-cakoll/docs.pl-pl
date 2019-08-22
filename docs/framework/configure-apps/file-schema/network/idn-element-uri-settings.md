@@ -2,22 +2,22 @@
 title: <idn>, element (ustawienia identyfikatora URI)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 369decf8551c76293ca513b8a3e58b4142a74773
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5fe2eafee702be96bfdca80a06af4a040d9ef0f6
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592760"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664120"
 ---
-# <a name="idn-element-uri-settings"></a>\<IDN >, Element (ustawienia identyfikatora Uri)
-Określa, jeśli analizy Zinternacjonalizowanych nazw domen (IDN) są stosowane do nazwy domeny.  
+# <a name="idn-element-uri-settings"></a>\<> IDN — element (ustawienia identyfikatora URI)
+Określa, czy do nazwy domeny jest stosowane analizowanie międzynarodowych nazw domen (IDN).  
   
 ## <a name="schema-hierarchy"></a>Hierarchia schematu  
- [\<Konfiguracja > Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<> elementu konfiguracji](../configuration-element.md)  
   
- [\<Identyfikator URI >, Element (ustawienia identyfikatora Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<Identyfikator URI > element (ustawienia identyfikatora URI)](uri-element-uri-settings.md)  
   
- [\<idn>](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
+ [\<> IDN](idn-element-uri-settings.md)  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,7 +34,7 @@ Określa, jeśli analizy Zinternacjonalizowanych nazw domen (IDN) są stosowane 
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|`enabled`|Określa, czy analizy Zinternacjonalizowanych nazw domen (IDN) jest stosowany do nazwy domeny wartość domyślna to Brak.|  
+|`enabled`|Określa, czy do nazwy domeny jest stosowane analizowanie międzynarodowych nazw domen (IDN), wartość domyślna to None.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -43,44 +43,44 @@ Określa, jeśli analizy Zinternacjonalizowanych nazw domen (IDN) są stosowane 
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[Identyfikator URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Zawiera ustawienia, które określają, jak .NET Framework obsługuje adresy URL wyrażone za pomocą uniform resource identifier (URI).|  
+|[uri](uri-element-uri-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework obsługuje adresy sieci Web wyrażone przy użyciu Uniform Resource Identifier (URI).|  
   
 ## <a name="remarks"></a>Uwagi  
- Istniejące <xref:System.Uri> klasy został rozszerzony w .NET Framework 3.5. 3.0 z dodatkiem SP1 i 2.0 z dodatkiem SP1 z obsługą międzynarodowych identyfikatorów zasobów (IRI) i międzynarodowych nazw domen (IDN). Bieżący użytkownicy nie będą widzieć wszelkie zmiany w zachowaniu .NET Framework 2.0, chyba że umożliwiają one specjalnie IRI i IDN pomocy technicznej. Dzięki temu zgodność aplikacji z wcześniejszych wersji programu .NET Framework.  
+ Istniejąca <xref:System.Uri> Klasa została rozszerzona w .NET Framework 3,5. 3,0 SP1 i 2,0 SP1 z obsługą międzynarodowych identyfikatorów zasobów (IRI) i międzynarodowych nazw domen (IDN). Bieżąca użytkownicy nie będą widzieć żadnych zmian w zachowaniu .NET Framework 2,0, o ile nie włączą one obsługi IRI i IDN. Zapewnia to zgodność aplikacji z wcześniejszymi wersjami .NET Framework.  
   
  Aby włączyć obsługę IRI, wymagane są następujące dwie zmiany:  
   
-1. Dodaj następujący wiersz do pliku machine.config w katalogu .NET Framework 2.0  
+1. Dodaj następujący wiersz do pliku Machine. config w katalogu .NET Framework 2,0  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2. Określić, czy analizy Zinternacjonalizowanych nazw domen (IDN) stosowane do nazwy domeny i czy powinny być stosowane IRI podczas analizowania reguły. Można to zrobić w pliku machine.config lub w pliku app.config.  
+2. Określ, czy do nazwy domeny mają być stosowane analizy międzynarodowej nazwy domeny (IDN) i czy mają być stosowane reguły analizy IRI. Tę czynność można wykonać w pliku Machine. config lub w oknie App. config.  
   
- Istnieją trzy możliwe wartości IDN w zależności od serwerów DNS, które są używane:  
+ Istnieją trzy możliwe wartości IDN w zależności od używanych serwerów DNS:  
   
-- IDN, włączone = All  
+- włączono IDN = wszystkie  
   
-     Ta wartość spowoduje przekonwertowanie wszystkie nazwy domen, Unicode na ich odpowiedniki Punycode (nazwy IDN).  
+     Ta wartość spowoduje przekonwertowanie dowolnych nazw domen Unicode na ich odpowiedniki formacie Punycode (nazwy IDN).  
   
-- IDN, włączone = AllExceptIntranet  
+- włączono IDN = AllExceptIntranet  
   
-     Ta wartość będzie przekonwertować wszystkie nazwy domeny Unicode nie w lokalnej sieci Intranet w celu użyj odpowiedników Punycode (nazwy IDN). W tym przypadku do obsługi międzynarodowe nazwy w lokalnym intranecie, serwerów DNS, które są używane dla dostępu z intranetu powinien obsługiwać rozpoznawanie nazw Unicode.  
+     Ta wartość spowoduje przekonwertowanie wszystkich nazw domen Unicode, które nie są w lokalnym intranecie, aby użyć odpowiedników formacie Punycode (nazw IDN). W takim przypadku, aby obsługiwać nazwy międzynarodowe w lokalnym intranecie, serwery DNS, które są używane do sieci intranet, powinny obsługiwać rozpoznawanie nazw Unicode.  
   
-- IDN, włączone = None  
+- włączono obsługę IDN = brak  
   
-     Ta wartość nie zostanie przekonwertować wszystkie nazwy domen Unicode, aby użyć Punycode. Jest to wartość domyślna, która jest zgodna z zachowaniem .NET Framework 2.0.  
+     Ta wartość nie spowoduje konwersji nazw domen Unicode w celu użycia formacie Punycode. Jest to wartość domyślna, która jest zgodna z zachowaniem .NET Framework 2,0.  
   
- Włączanie IDN, spowoduje przekonwertowanie wszystkich etykiet Unicode w nazwie domeny na ich odpowiedniki Punycode. Nazwy Punycode zawierać tylko znaki ASCII i zawsze rozpoczynają się prefiksem xn —. Przyczyną tego jest do obsługi istniejących serwerów DNS w Internecie, ponieważ większość serwery DNS obsługują tylko znaki ASCII (zobacz RFC 3940).  
+ Włączenie IDN spowoduje przekonwertowanie wszystkich etykiet Unicode w nazwie domeny na ich odpowiedniki formacie Punycode. Nazwy formacie Punycode zawierają tylko znaki ASCII i zawsze zaczynają się od Xn--prefix. Przyczyną tego problemu jest obsługa istniejących serwerów DNS w Internecie, ponieważ większość serwerów DNS obsługuje tylko znaki ASCII (patrz dokument RFC 3940).  
   
 ### <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
+ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- W poniższym przykładzie pokazano konfigurację posługują się <xref:System.Uri> klasy w celu obsługi analizowania IRI i nazwy IDN.  
+ W poniższym przykładzie przedstawiono konfigurację używaną przez <xref:System.Uri> klasę do obsługi analizy IRI i nazw IDN.  
   
 ### <a name="code"></a>Kod  
   
@@ -97,4 +97,4 @@ Określa, jeśli analizy Zinternacjonalizowanych nazw domen (IDN) są stosowane 
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

@@ -28,70 +28,70 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4f59bdb0537ab6ce404ed0623c40f9f3b31598d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 32a4f4f3735c8952cf1458c63655eb56a82fd18f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766825"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666434"
 ---
 # <a name="generics-in-net"></a>Typy ogólne w .NET
 
-<a name="top"></a> Typy ogólne pozwalają dostosować metody, klasy, struktury lub interfejsu na typ dokładne dane, które działają. Na przykład, zamiast <xref:System.Collections.Hashtable> klasy, co pozwala klucze i wartości dowolnego typu, możesz użyć <xref:System.Collections.Generic.Dictionary%602> ogólne klasy, a następnie określ typ dozwolone dla klucza i typ, dozwolone wartości. Wśród zalety typów ogólnych są zwiększone kodu możliwość ponownego wykorzystania i bezpieczeństwo.  
+<a name="top"></a>Typy ogólne umożliwiają dostosowanie metody, klasy, struktury lub interfejsu do precyzyjnego typu danych, na którym działa. Na przykład zamiast używać <xref:System.Collections.Hashtable> klasy, która umożliwia określenie kluczy i wartości dowolnego typu, można <xref:System.Collections.Generic.Dictionary%602> użyć klasy generycznej i określić typ dozwolony dla klucza i typ dozwolony dla tej wartości. Korzyści płynące z typów ogólnych to zwiększone wykorzystanie kodu i bezpieczeństwo typów.  
   
- Ten temat zawiera przegląd typów ogólnych w programie .NET i podsumowanie typów ani metod ogólnych. Ten temat zawiera następujące sekcje:  
+ Ten temat zawiera omówienie typów ogólnych w programie .NET oraz podsumowania rodzajów lub metod ogólnych. Ten temat zawiera następujące sekcje:  
   
-- [Definiowanie i korzystanie z typów ogólnych](#defining_and_using_generics)  
+- [Definiowanie i używanie typów ogólnych](#defining_and_using_generics)  
   
-- [Terminologia typów ogólnych](#generics_terminology)  
+- [Terminologia ogólna](#generics_terminology)  
   
-- [Biblioteka klas i obsługa języków](#class_library_and_language_support)  
+- [Obsługa biblioteki klas i języka](#class_library_and_language_support)  
   
-- [Zagnieżdżone typy i typy ogólne](#nested_types_and_generics)  
+- [Typy zagnieżdżone i generyczne](#nested_types_and_generics)  
   
 - [Tematy pokrewne](#related_topics)  
   
 - [Dokumentacja](#reference)  
   
 <a name="defining_and_using_generics"></a>   
-## <a name="defining-and-using-generics"></a>Definiowanie i korzystanie z typów ogólnych  
- Typy ogólne są klasy, struktury, interfejsy i metody, które mają symboli zastępczych (parametry typu) dla jednego lub kilku typów, które mogą przechowywać lub używać. Klasy ogólne kolekcji użyć parametru typu jako symbol zastępczy dla typów obiektów, które przechowuje; Parametry typu są traktowane jako typy jej pola i typy parametrów jego metod. Jego parametru typu może użyć metody rodzajowej, jako typ wartości zwracanej lub typ jednego z jego parametrów formalnych. Poniższy kod przedstawia definicję klasy ogólnej proste.  
+## <a name="defining-and-using-generics"></a>Definiowanie i używanie typów ogólnych  
+ Typy ogólne to klasy, struktury, interfejsy i metody, które mają symbole zastępcze (parametry typu) dla jednego lub kilku typów, które są przez nie przechowywane lub używane. Klasa kolekcji generycznej może używać parametru typu jako symbolu zastępczego dla typu obiektów, które przechowuje; parametry typu są wyświetlane jako typy pól i typy parametrów jego metod. Metoda generyczna może używać swojego parametru typu jako typu wartości zwracanej lub jako typ jednego z jego parametrów formalnych. Poniższy kod ilustruje prostą definicję klasy ogólnej.  
   
  [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)]
  [!code-csharp[Conceptual.Generics.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#2)]
  [!code-vb[Conceptual.Generics.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#2)]  
   
- Podczas tworzenia wystąpienia klasy generycznej, należy określić rzeczywiste typy podstawiane dla parametrów typu. Spowoduje to utworzenie nowej klasy ogólnej, określane jako klasę ogólną skonstruowany przy użyciu wybranych typów zastępowane wszędzie, które są wyświetlane parametry typu. Wynik jest klasą bezpieczny, dostosowane do wybranego typu, tak jak pokazano w poniższym kodzie.  
+ Podczas tworzenia wystąpienia klasy generycznej należy określić rzeczywiste typy, które mają zostać zastąpione dla parametrów typu. Powoduje to ustanowienie nowej klasy generycznej, nazywanej klasą ogólną, z wybranymi typami, które zastępują wszędzie, że wyświetlane są parametry typu. Wynik jest bezpieczną klasą, która jest dostosowywana do wybranego typu, jak ilustruje poniższy kod.  
   
  [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)]
  [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)]
  [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
   
 <a name="generics_terminology"></a>   
-### <a name="generics-terminology"></a>Terminologia typów ogólnych  
- Poniższe terminy są używane w celu omówienia ich typy ogólne w .NET:  
+### <a name="generics-terminology"></a>Terminologia ogólna  
+ Poniższe terminy są używane do omówienia typów ogólnych w programie .NET:  
   
-- A *definicji typu ogólnego* klasy, struktury lub deklaracji interfejsu, który działa jako szablon przy użyciu symboli zastępczych dla typów, które mogą zawierać, lub użyć. Na przykład <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> klasy może zawierać dwa typy: klucze i wartości. Ponieważ tylko szablon, który znajduje się w definicji typu ogólnego, nie można utworzyć wystąpienia klasy, struktury lub interfejsu, który jest definicja typu ogólnego.  
+- *Definicja typu ogólnego* jest deklaracją klasy, struktury lub interfejsu, która działa jako szablon, z symbolami zastępczymi dla typów, które mogą zawierać lub używać. Na przykład <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> Klasa może zawierać dwa typy: klucze i wartości. Ponieważ definicja typu ogólnego jest tylko szablonem, nie można tworzyć wystąpień klasy, struktury lub interfejsu, który jest definicją typu ogólnego.  
   
-- *Parametry typu ogólnego*, lub *parametry typu*, jest symboli zastępczych w ogólne definicji typu lub metody. <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> Typu ogólnego ma dwa parametry typu `TKey` i `TValue`, reprezentujące typy wartości i kluczy.  
+- *Parametry typu ogólnego*lub *parametry typu*są symbolami zastępczymi w definicji typu ogólnego lub metody. Typ ogólny ma dwa parametry typu `TValue`, `TKey` który reprezentuje typy jego kluczy i wartości. <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>  
   
-- A *skonstruowany typ rodzajowy*, lub *skonstruowany typ*, jest wynikiem Określanie typów dla parametrów typu genetycznego definicji typu ogólnego.  
+- *Skonstruowany typ ogólny*lub *skonstruowany*jest wynikiem określenia typów dla parametrów typu ogólnego definicji typu ogólnego.  
   
-- A *argument typu ogólnego* jest dowolny typ, który zostanie zastąpiony dla parametru typu ogólnego.  
+- *Argument typu ogólnego* jest dowolnego typu, który jest zastępowany dla parametru typu ogólnego.  
   
-- Ogólny termin *typu ogólnego* zawiera typy utworzone i definicji typu ogólnego.  
+- Ogólny *Typ* ogólnego terminu obejmuje zarówno typy skonstruowane, jak i definicje typów ogólnych.  
   
-- *Kowariancja* i *kontrawariancja* typu rodzajowego parametry umożliwiają korzystanie skonstruowany typów ogólnych, w której argumenty typu są bardziej pochodnego (korelacja) lub mniej pochodnego (kontrawariancja) niż docelowy skonstruowany Typ. Kowariancja i kontrawariancja są nazywane zbiorczo *wariancji*. Aby uzyskać więcej informacji, zobacz [kowariancji i kontrawariancji](../../../docs/standard/generics/covariance-and-contravariance.md).  
+- *Kowariancja* i *kontrawariancja* parametrów typu ogólnego umożliwiają używanie skonstruowanych typów ogólnych, których argumenty typu są bardziej pochodne (Kowariancja) lub mniej pochodne (kontrawariancja) niż docelowy typ skonstruowany. Kowariancja i kontrawariancja są określane zbiorczo jako *WARIANCJA*. Aby uzyskać więcej informacji, zobacz [Kowariancja i kontrawariancja](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
-- *Ograniczenia* obowiązują limity dotyczące parametrów typu ogólnego. Na przykład może ograniczać parametr typu dla typów, które implementują <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> ogólny interfejs, aby upewnić się, czy wystąpienia typu, może zostać określona. Możesz również ograniczyć parametrów typu do typów, które mają konkretnej klasy podstawowej, która ma konstruktora bez parametrów lub są typy odwołań i typy wartości. Użytkownicy typ ogólny nie może zastąpić argumentów typu, które nie spełniają ograniczeń.  
+- *Ograniczenia* są ograniczone do parametrów typu ogólnego. Można na przykład ograniczyć parametr typu do typów <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementujących interfejs ogólny, aby mieć pewność, że wystąpienia typu mogą być uporządkowane. Można również ograniczyć parametry typu do typów, które mają konkretną klasę bazową, które mają konstruktora bez parametrów lub które są typami referencyjnymi lub typami wartości. Użytkownicy typu ogólnego nie mogą wystawiać argumentów typu, które nie spełniają ograniczeń.  
   
-- A *definicję metody ogólnej* jest metodą o dwie listy parametrów: lista parametrów typu genetycznego oraz listę parametrów formalnych. Parametry typu mogą być wyświetlane jako zwracany typ lub typy parametrów formalnych, co ilustruje poniższy kod.  
+- *Ogólna definicja metody* jest metodą z dwoma listami parametrów: listą parametrów typu ogólnego i listą parametrów formalnych. Parametry typu mogą występować jako zwracany typ lub jako typy parametrów formalnych, jak pokazano w poniższym kodzie.  
   
  [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)]
  [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)]
  [!code-vb[Conceptual.Generics.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#4)]  
   
- Metody ogólne mogą być wyświetlane na ogólny lub nierodzajowymi typami. Należy zauważyć, że metoda nie jest ogólna, po prostu, ponieważ należy on do typu ogólnego lub nawet w przypadku, ponieważ ma ona parametrów formalnych których typy są parametrom typu otaczającego. Metoda jest ogólna tylko wtedy, gdy ma ona własną lista parametrów typu. W poniższym kodzie, tylko metoda `G` ogólnego.  
+ Metody generyczne mogą występować w typach generycznych lub nierodzajowych. Należy pamiętać, że metoda nie jest rodzajowa, tylko ponieważ należy do typu ogólnego, lub nawet ponieważ ma formalne parametry, których typy są parametrami ogólnymi typu otaczającego. Metoda jest generyczna tylko wtedy, gdy ma własną listę parametrów typu. W poniższym kodzie tylko Metoda `G` jest ogólna.  
   
  [!code-cpp[Conceptual.Generics.Overview#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#5)]
  [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)]
@@ -100,61 +100,61 @@ ms.locfileid: "67766825"
  [Powrót do początku](#top)  
   
 <a name="advantages_limitations"></a>   
-## <a name="advantages-and-disadvantages-of-generics"></a>Wady i zalety typów ogólnych  
- Istnieje wiele zalet, używając kolekcji ogólnych i delegatach:  
+## <a name="advantages-and-disadvantages-of-generics"></a>Zalety i wady typów ogólnych  
+ Istnieje wiele zalet używania ogólnych kolekcji i delegatów:  
   
-- Bezpieczeństwo typów. Typy ogólne przesunięcie obciążenia bezpieczeństwo typów ze strony użytkownika do kompilatora. Nie ma potrzeby pisania kodu do testowania na prawidłowy typ danych, ponieważ jest wymuszone w czasie kompilacji. Zostały zredukowane potrzebę rzutowanie typów i możliwość wystąpienia błędów czasu wykonywania.  
+- Bezpieczeństwo typu. Typy ogólne przesuwają obciążenie typu bezpieczeństwo od użytkownika do kompilatora. Nie ma potrzeby pisania kodu do przetestowania pod kątem poprawnego typu danych, ponieważ jest wymuszany w czasie kompilacji. Konieczne jest zmniejszenie liczby operacji rzutowania typów i możliwości błędów czasu wykonywania.  
   
-- Mniej kodu i kodu łatwiej jest użyć ponownie. Nie ma potrzeby aby dziedziczyć z typu podstawowego, a także Przesłoń składowe. Na przykład <xref:System.Collections.Generic.LinkedList%601> jest gotowy do bezpośredniego użycia. Na przykład można utworzyć połączonej listy ciągów z następującą deklarację zmiennej:  
+- Mniej kod i kod są łatwiej ponownie używane. Nie ma potrzeby dziedziczenia z typu podstawowego i przesłonięcia elementów członkowskich. Na przykład, <xref:System.Collections.Generic.LinkedList%601> jest gotowy do natychmiastowego użycia. Na przykład można utworzyć połączoną listę ciągów z następującą deklaracją zmiennej:  
   
      [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]
      [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]
      [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
   
-- Lepsza wydajność. Typy generyczne kolekcji ogólnie poprawienia do przechowywania i manipulowanie typów wartości, ponieważ nie ma potrzeby na polu typów wartości.  
+- Lepsza wydajność. Ogólne typy kolekcji są zwykle wykonywane lepiej w przypadku przechowywania i manipulowania typami wartości, ponieważ nie ma potrzeby umieszczania typów wartości.  
   
-- Delegaci ogólni Włącz wywołania zwrotne bezpieczny, bez konieczności tworzenia delegata wielu klas. Na przykład <xref:System.Predicate%601> Delegat ogólny umożliwia tworzenie metody, która implementuje własne kryteria wyszukiwania dla danego typu i metodę za pomocą metody <xref:System.Array> wpisz na przykład <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>, i <xref:System.Array.FindAll%2A> .  
+- Delegaty ogólne włączają bezpieczne dla typów wywołania zwrotne bez konieczności tworzenia wielu klas delegatów. Na <xref:System.Predicate%601> przykład Delegat ogólny umożliwia utworzenie metody implementującej własne kryteria wyszukiwania dla określonego typu i użycie metody z <xref:System.Array> metodami typu, takimi jak <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>, i <xref:System.Array.FindAll%2A> .  
   
-- Typy ogólne Usprawnij dynamicznie generowanego kodu. Kiedy używasz typów ogólnych z dynamicznie generowanego kodu, nie trzeba wygenerować typu. Powoduje to zwiększenie liczby scenariuszy, w których można użyć uproszczone metod dynamicznych, zamiast generować całe zestawy. Aby uzyskać więcej informacji, zobacz [jak: Definiowanie i wykonywanie metod dynamicznych](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) i <xref:System.Reflection.Emit.DynamicMethod>.  
+- Typy ogólne upraszczają dynamicznie generowany kod. W przypadku używania typów ogólnych z dynamicznie generowanym kodem nie trzeba generować tego typu. Zwiększa to liczbę scenariuszy, w których można użyć uproszczonych metod dynamicznych zamiast generowania całych zestawów. Aby uzyskać więcej informacji, zobacz [jak: Definiowanie i wykonywanie metod](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) dynamicznych i. <xref:System.Reflection.Emit.DynamicMethod>  
   
- Poniżej przedstawiono niektóre ograniczenia typów ogólnych:  
+ Poniżej przedstawiono niektóre ograniczenia dotyczące typów ogólnych:  
   
-- Typy rodzajowe mogą pochodzić z większości klas podstawowych, takich jak <xref:System.MarshalByRefObject> (i ograniczenia może służyć do wymagają, że parametry typu ogólnego pochodzić od klasy bazowej, takie jak <xref:System.MarshalByRefObject>). Jednak .NET Framework nie obsługuje typów ogólnych związane z kontekstem. Typ ogólny, mogą pochodzić z <xref:System.ContextBoundObject>, ale próba utworzenia instancji tego typu powoduje, że <xref:System.TypeLoadException>.  
+- Typy ogólne mogą pochodzić z większości klas bazowych, takich jak <xref:System.MarshalByRefObject> (i ograniczenia mogą służyć do wymagania, aby parametry typu ogólnego pochodzą z klas podstawowych, <xref:System.MarshalByRefObject>takich jak). Jednak .NET Framework nie obsługuje typów ogólnych powiązanych z kontekstem. Typ ogólny może pochodzić od <xref:System.ContextBoundObject>, ale próba utworzenia wystąpienia tego typu <xref:System.TypeLoadException>powoduje wystąpienie.  
   
-- Wyliczenia nie może mieć parametrów typu genetycznego. Wyliczenie może być ogólny tylko przy okazji (ponieważ na przykład, że zostało zagnieżdżone w typie ogólnym, która jest zdefiniowana za pomocą języka Visual Basic, C# lub C++). Aby uzyskać więcej informacji, zobacz "Wyliczenia" w [Wspólny System typów](../../../docs/standard/base-types/common-type-system.md).  
+- Wyliczenia nie mogą mieć parametrów typu ogólnego. Wyliczenie może być ogólne tylko zdarzenia (na przykład ponieważ jest zagnieżdżone w typie ogólnym, który jest definiowany przy użyciu Visual Basic, C#lub C++). Aby uzyskać więcej informacji, zobacz "wyliczenia" w [systemie Common Type System](../../../docs/standard/base-types/common-type-system.md).  
   
-- Uproszczone metody dynamiczne nie mogą być ogólne.  
+- Lekkie metody dynamiczne nie mogą być ogólne.  
   
-- W języku Visual Basic, C# i C++ zagnieżdżony typ, który jest ujęty w typie podstawowym nie można utworzyć wystąpienia, chyba że typy zostały przypisane do wszystkich typów otaczającej parametrów typu. Innym sposobem powiedzenia, to jest w odbiciu, zagnieżdżony typ, który jest zdefiniowany w tych językach zawiera parametry typu wszystkie jego typy otaczającej. Dzięki temu parametrów typu w otaczającej typów do użycia także w definicjach składowej typu zagnieżdżonego. Aby uzyskać więcej informacji, zobacz "Zagnieżdżone typy" w <xref:System.Type.MakeGenericType%2A>.  
+- W Visual Basic, C#i C++, nie można utworzyć wystąpienia typu zagnieżdżonego, który jest ujęty w typ ogólny, chyba że typy zostały przypisane do parametrów typu wszystkich typów otaczających. Innym sposobem wymawiania tego jest to, że w odbiciu zagnieżdżony typ, który jest zdefiniowany przy użyciu tych języków, zawiera parametry typu dla wszystkich typów otaczających. Pozwala to na używanie parametrów typu otaczających typów, które mają być używane w definicjach elementów członkowskich typu zagnieżdżonego. Aby uzyskać więcej informacji, zobacz "typy zagnieżdżone" <xref:System.Type.MakeGenericType%2A>w temacie.  
   
     > [!NOTE]
-    >  Zagnieżdżony typ, który jest zdefiniowany przez emitowanie kodu w zestawie dynamicznym lub za pomocą [Ilasm.exe (asembler IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) zawierają parametry typu otaczającego; nie jest wymagane, jeśli go nie ma ich parametrów typu nie są w zakresie klasy zagnieżdżonej.  
+    >  Zagnieżdżony typ, który jest definiowany przez emitowanie kodu w zestawie dynamicznym lub przy użyciu [Ilasm. exe (ASEMBLER Il)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) , nie jest wymagany do uwzględnienia parametrów typu otaczających je typów; Jednakże, jeśli nie zawiera ich, parametry typu nie znajdują się w zakresie klasy zagnieżdżonej.  
   
-     Aby uzyskać więcej informacji, zobacz "Zagnieżdżone typy" w <xref:System.Type.MakeGenericType%2A>.  
+     Aby uzyskać więcej informacji, zobacz "typy zagnieżdżone" <xref:System.Type.MakeGenericType%2A>w temacie.  
   
  [Powrót do początku](#top)  
   
 <a name="class_library_and_language_support"></a>   
-## <a name="class-library-and-language-support"></a>Biblioteka klas i obsługa języków  
- .NET oferuje pewną liczbę klasy kolekcji rodzajowej w następujących przestrzeni nazw:  
+## <a name="class-library-and-language-support"></a>Obsługa biblioteki klas i języka  
+ Platforma .NET udostępnia szereg klas ogólnych kolekcji w następujących obszarach nazw:  
   
-- <xref:System.Collections.Generic> Przestrzeń nazw zawiera większość typów kolekcji ogólnej, dostarczone przez platformy .NET, takich jak <xref:System.Collections.Generic.List%601> i <xref:System.Collections.Generic.Dictionary%602> klas ogólnych.  
+- Przestrzeń nazw zawiera większość ogólnych typów kolekcji dostarczonych przez platformę .NET, takich <xref:System.Collections.Generic.List%601> jak i <xref:System.Collections.Generic.Dictionary%602> klasy ogólne. <xref:System.Collections.Generic>  
   
-- <xref:System.Collections.ObjectModel> Przestrzeń nazw zawiera dodatkowe rodzajowych typów kolekcji, takie jak <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> klasy ogólnej, które są przydatne w wypadku ujawniania modele obiektów użytkowników klas.  
+- Przestrzeń nazw zawiera dodatkowe typy kolekcji ogólnych, takie <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> jak Klasa generyczna, które są przydatne do udostępniania modeli obiektów użytkownikom klas. <xref:System.Collections.ObjectModel>  
   
- Interfejsy ogólne dotyczące implementowania porównania sortowania i równości znajdują się w <xref:System> przestrzeni nazw, wraz z ogólnymi typami delegatów obsługi zdarzeń, konwersji i predykaty wyszukiwania.  
+ Interfejsy ogólne do implementowania porównywania sortowania i równości są dostępne <xref:System> w przestrzeni nazw oraz z ogólnymi typami delegatów dla programów obsługi zdarzeń, konwersji i predykatów wyszukiwania.  
   
- Dodano obsługę typów ogólnych <xref:System.Reflection> przestrzeni nazw do badania typy ogólne i metody rodzajowe <xref:System.Reflection.Emit> dla emitowanie dynamicznych zestawów, które zawierają typy ogólne i metody i <xref:System.CodeDom> do generowania wykresów źródła które obejmują typy ogólne.  
+ Obsługa typów ogólnych została dodana do <xref:System.Reflection> przestrzeni nazw służących do badania typu ogólnego i metod ogólnych w celu <xref:System.Reflection.Emit> emitowania zestawów dynamicznych zawierających typy ogólne i metody oraz do <xref:System.CodeDom> generowania wykresów źródłowych obejmują one typy ogólne.  
   
- Środowisko uruchomieniowe języka wspólnego udostępnia nowe rozkazów i prefiksy do obsługi typów ogólnych w języka Microsoft intermediate language (MSIL), w tym <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>, i <xref:System.Reflection.Emit.OpCodes.Readonly>.  
+ Środowisko uruchomieniowe języka wspólnego udostępnia nowe opcode i prefiksy do obsługi typów ogólnych w języku pośrednim firmy Microsoft (MSIL <xref:System.Reflection.Emit.OpCodes.Stelem>) <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>w <xref:System.Reflection.Emit.OpCodes.Constrained>tym, <xref:System.Reflection.Emit.OpCodes.Readonly>,,, i.  
   
- Visual C++, C# i Visual Basic wszystkich zapewniają pełną obsługę definiowania i za pomocą typów ogólnych. Aby uzyskać więcej informacji na temat obsługi języków, zobacz [typów ogólnych w Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md), [wprowadzenie do typów ogólnych](~/docs/csharp/programming-guide/generics/index.md), i [Przegląd typów ogólnych w Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp).  
+ C++Wizualizacja C#, i Visual Basic wszystkie zapewniają pełną obsługę definiowania i używania typów ogólnych. Aby uzyskać więcej informacji na temat obsługi języków, zobacz [typy ogólne w Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [wprowadzenie do rodzajów ogólnych](../../csharp/programming-guide/generics/index.md)i [Omówienie typów ogólnych w C++wizualizacji ](/cpp/windows/overview-of-generics-in-visual-cpp).  
   
  [Powrót do początku](#top)  
   
 <a name="nested_types_and_generics"></a>   
-## <a name="nested-types-and-generics"></a>Zagnieżdżone typy i typy ogólne  
- Typ, który jest zagnieżdżony w typie ogólnym może zależeć od parametrów typu ogólnego typu otaczającego. Środowisko uruchomieniowe języka wspólnego uwzględnia zagnieżdżonych typów do być rodzajowe, nawet jeśli nie mają parametrów typu rodzajowego, własnych. Podczas tworzenia wystąpienia typu zagnieżdżonego, należy określić argumentów typu dla wszystkich otaczających typów ogólnych.  
+## <a name="nested-types-and-generics"></a>Typy zagnieżdżone i generyczne  
+ Typ, który jest zagnieżdżony w typie ogólnym, może zależeć od parametrów typu otaczającego typu ogólnego. Środowisko uruchomieniowe języka wspólnego traktuje zagnieżdżone typy jako ogólne, nawet jeśli nie mają własnych parametrów typu ogólnego. Podczas tworzenia wystąpienia typu zagnieżdżonego należy określić argumenty typu dla wszystkich typów ogólnych.  
   
  [Powrót do początku](#top)  
   
@@ -163,16 +163,16 @@ ms.locfileid: "67766825"
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Kolekcje ogólne w .NET](../../../docs/standard/generics/collections.md)|W tym artykule opisano klasy kolekcji rodzajowej i inne typy ogólne w .NET.|  
-|[Delegaci ogólni do manipulowania tablicami i listami](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|W tym artykule opisano delegaci ogólni do konwersji, predykaty wyszukiwania i akcje do wykonania w przypadku elementów tablicy lub kolekcji.|  
-|[Interfejsy ogólne](../../../docs/standard/generics/interfaces.md)|W tym artykule opisano ogólne interfejsy, które udostępniają funkcje wspólne dla rodziny typów ogólnych.|  
-|[Kowariancja i kontrawariancja](../../../docs/standard/generics/covariance-and-contravariance.md)|W tym artykule opisano kowariancji i kontrawariancji w parametrach typu ogólnego.|  
-|[Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)|Zawiera podsumowanie informacji o właściwości i scenariusze użycia typów kolekcji na platformie .NET, w tym typów ogólnych.|  
-|[Kiedy należy używać kolekcji ogólnych](../../../docs/standard/collections/when-to-use-generic-collections.md)|W tym artykule opisano ogólne zasady ustalania, kiedy należy używać rodzajowych typów kolekcji.|  
-|[Instrukcje: Definiowanie typu ogólnego przy użyciu odbicia emisji](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Wyjaśnia, jak można wygenerować zestawów dynamicznych, które obejmują typy ogólne i metody.|  
-|[Typy ogólne w Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Opis funkcji ogólne dla użytkowników programu Visual Basic, w tym tematów zawierających porady dotyczące korzystania z i definiowania typów ogólnych.|  
-|[Wprowadzenie do typów ogólnych](~/docs/csharp/programming-guide/generics/index.md)|Zawiera omówienie definiowanie i używanie typów ogólnych dla użytkowników języka C#.|  
-|[Przegląd typów ogólnych w Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Opis funkcji ogólne dla użytkowników języka C++, włącznie z różnicami między typy ogólne i szablony.|  
+|[Kolekcje ogólne w .NET](../../../docs/standard/generics/collections.md)|Opisuje ogólne klasy kolekcji i inne typy ogólne w programie .NET.|  
+|[Delegaci ogólni do manipulowania tablicami i listami](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Zawiera opis ogólnych delegatów dla konwersji, predykatów wyszukiwania i akcji, które mają być podejmowane w elementach tablicy lub kolekcji.|  
+|[Interfejsy ogólne](../../../docs/standard/generics/interfaces.md)|Opisuje ogólne interfejsy, które udostępniają typowe funkcje w różnych rodzinach typów ogólnych.|  
+|[Kowariancja i kontrawariancja](../../../docs/standard/generics/covariance-and-contravariance.md)|Opisuje kowariancję i kontrawariancja w parametrach typu ogólnego.|  
+|[Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)|Zawiera podsumowanie informacji o charakterystyce i scenariuszach użycia typów kolekcji w programie .NET, w tym typów ogólnych.|  
+|[Kiedy należy używać kolekcji ogólnych](../../../docs/standard/collections/when-to-use-generic-collections.md)|Opisuje ogólne reguły określania, kiedy należy używać typów kolekcji generycznej.|  
+|[Instrukcje: Definiowanie typu ogólnego przy użyciu emisji odbicia](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Wyjaśnia, jak generować dynamiczne zestawy, które zawierają typy ogólne i metody.|  
+|[Typy ogólne w Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|Opisuje funkcję generyczną dla Visual Basic użytkowników, w tym Tematy porad dotyczących używania i definiowania typów ogólnych.|  
+|[Wprowadzenie do typów ogólnych](../../csharp/programming-guide/generics/index.md)|Zawiera omówienie definiowania typów ogólnych dla C# użytkowników i korzystania z nich.|  
+|[Przegląd typów ogólnych w Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Zawiera opis funkcji ogólnych dla C++ użytkowników, w tym różnice między rodzajami i szablonami.|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Tematy pomocy  

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 1aa182ced462e5fc90b22019aaf424d400bb4fd5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629664"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666764"
 ---
 # <a name="layout"></a>Układ
-W [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] tym temacie opisano system układu. Zrozumienie, w jaki sposób i kiedy nastąpi Obliczanie układu, jest [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]niezbędne do tworzenia interfejsów użytkownika w programie.  
+W tym temacie opisano system układu Windows Presentation Foundation (WPF). Zrozumienie, w jaki sposób i kiedy nastąpi Obliczanie układu, jest niezbędne do tworzenia interfejsów użytkownika w WPF.  
   
  Ten temat zawiera następujące sekcje:  
   
@@ -37,7 +37,7 @@ W [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>Pola związane z elementem  
- Gdy zastanawiasz się nad [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]układem w, ważne jest, aby zrozumieć pole ograniczenia, które otacza wszystkie elementy. Każdy <xref:System.Windows.FrameworkElement> zużyty przez system układu może być uważany za prostokąt, który jest wbudowany w układ. <xref:System.Windows.Controls.Primitives.LayoutInformation> Klasa zwraca granice alokacji układu elementu lub gniazda. Rozmiar prostokąta jest określany przez obliczenie dostępnego miejsca na ekranie, rozmiaru wszelkich ograniczeń, właściwości specyficznych dla układu (takich jak margines i uzupełnienie) oraz indywidualnego zachowania elementu nadrzędnego <xref:System.Windows.Controls.Panel> . Przetwarzanie tych danych, system układu może obliczyć położenie wszystkich elementów podrzędnych określonego <xref:System.Windows.Controls.Panel>. Należy pamiętać, że cechy ustalania rozmiarów zdefiniowane w elemencie nadrzędnym, takie jak <xref:System.Windows.Controls.Border>, wpływają na jego elementy podrzędne.  
+ Gdy zastanawiasz się nad układem w WPF, ważne jest, aby zrozumieć pole ograniczenia otaczające wszystkie elementy. Każdy <xref:System.Windows.FrameworkElement> zużyty przez system układu może być uważany za prostokąt, który jest wbudowany w układ. <xref:System.Windows.Controls.Primitives.LayoutInformation> Klasa zwraca granice alokacji układu elementu lub gniazda. Rozmiar prostokąta jest określany przez obliczenie dostępnego miejsca na ekranie, rozmiaru wszelkich ograniczeń, właściwości specyficznych dla układu (takich jak margines i uzupełnienie) oraz indywidualnego zachowania elementu nadrzędnego <xref:System.Windows.Controls.Panel> . Przetwarzanie tych danych, system układu może obliczyć położenie wszystkich elementów podrzędnych określonego <xref:System.Windows.Controls.Panel>. Należy pamiętać, że cechy ustalania rozmiarów zdefiniowane w elemencie nadrzędnym, takie jak <xref:System.Windows.Controls.Border>, wpływają na jego elementy podrzędne.  
   
  Na poniższej ilustracji przedstawiono prosty układ.  
   
@@ -101,7 +101,7 @@ W [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## <a name="panel-elements-and-custom-layout-behaviors"></a>Elementy panelu i niestandardowe zachowania układu  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]obejmuje grupę elementów pochodzących od <xref:System.Windows.Controls.Panel>. Te <xref:System.Windows.Controls.Panel> elementy umożliwiają włączenie wielu złożonych układów. Na przykład elementy stosujące można łatwo osiągnąć przy użyciu <xref:System.Windows.Controls.StackPanel> elementu, a bardziej skomplikowane i swobodne układy przepływów są możliwe przy <xref:System.Windows.Controls.Canvas>użyciu.  
+WPF obejmuje grupę elementów pochodzących od <xref:System.Windows.Controls.Panel>. Te <xref:System.Windows.Controls.Panel> elementy umożliwiają włączenie wielu złożonych układów. Na przykład elementy stosujące można łatwo osiągnąć przy użyciu <xref:System.Windows.Controls.StackPanel> elementu, a bardziej skomplikowane i swobodne układy przepływów są możliwe przy <xref:System.Windows.Controls.Canvas>użyciu.  
   
  Poniższa tabela zawiera podsumowanie dostępnych elementów układu <xref:System.Windows.Controls.Panel> .  
   
@@ -114,7 +114,7 @@ W [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 |<xref:System.Windows.Controls.VirtualizingPanel>|Zapewnia strukturę dla elementów <xref:System.Windows.Controls.Panel> , które współużytkują ich podrzędną kolekcję danych. Jest to Klasa abstrakcyjna.|  
 |<xref:System.Windows.Controls.WrapPanel>|Położenie elementów podrzędnych w kolejności od lewej do prawej, przerwanie zawartości do następnego wiersza na krawędzi pola zawierającego. Kolejne porządkowanie odbywa się sekwencyjnie od góry do dołu lub od prawej do lewej, w zależności od wartości <xref:System.Windows.Controls.WrapPanel.Orientation%2A> właściwości.|  
   
- W przypadku aplikacji, które wymagają układu, który nie jest możliwy przy użyciu żadnego ze <xref:System.Windows.Controls.Panel> wstępnie zdefiniowanych elementów, niestandardowe zachowania układu można osiągnąć przez dziedziczenie <xref:System.Windows.Controls.Panel> z i zastępowanie <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> <xref:System.Windows.FrameworkElement.MeasureOverride%2A> metod i. Aby zapoznać się z przykładem, zobacz [niestandardowy Panel promieniowy](https://go.microsoft.com/fwlink/?LinkID=159982).  
+ W przypadku aplikacji, które wymagają układu, który nie jest możliwy przy użyciu żadnego ze <xref:System.Windows.Controls.Panel> wstępnie zdefiniowanych elementów, niestandardowe zachowania układu można osiągnąć przez dziedziczenie <xref:System.Windows.Controls.Panel> z i zastępowanie <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> <xref:System.Windows.FrameworkElement.MeasureOverride%2A> metod i.  
   
 <a name="LayoutSystem_Performance"></a>   
 ## <a name="layout-performance-considerations"></a>Zagadnienia dotyczące wydajności układu  
@@ -138,7 +138,7 @@ W [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
 <a name="LayoutSystem_LayoutRounding"></a>   
 ## <a name="sub-pixel-rendering-and-layout-rounding"></a>Renderowanie w pikselach i zaokrąglenie układu  
- System [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafiki używa jednostek niezależnych od urządzenia, aby umożliwić Rozwiązywanie problemów i niezależność urządzeń. Każdy niezależny piksel urządzenia automatycznie skaluje się przy użyciu systemu kropek na cal (dpi). Zapewnia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] to aplikacjom odpowiednie skalowanie dla różnych ustawień DPI i sprawia, że aplikacja automatycznie rozpoznaje wartość dpi.  
+ System grafiki WPF używa jednostek niezależnych od urządzenia, aby umożliwić Rozwiązywanie problemów i niezależność urządzeń. Każdy niezależny piksel urządzenia automatycznie skaluje się przy użyciu systemu kropek na cal (dpi). Zapewnia to aplikacjom WPF odpowiednie skalowanie dla różnych ustawień DPI i sprawia, że aplikacja automatycznie rozpoznaje wartość dpi.  
   
  Jednak ta niezależna wartość DPI może tworzyć nieregularne renderowanie krawędzi z powodu wygładzania. Te artefakty, zazwyczaj widziane jako rozmyte lub częściowo przezroczyste, mogą wystąpić, gdy lokalizacja krawędzi znajduje się w środku piksela urządzenia, a nie między pikselami urządzeń. Układ układu umożliwia dostosowanie tego elementu przy użyciu zaokrąglania układu. Zaokrąglanie układu polega na tym, że system układu zaokrągla wszystkie wartości niecałkowitych pikseli podczas przebiegu układu.  
   
@@ -146,7 +146,7 @@ W [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Co dalej  
- Zrozumienie sposobu mierzenia i rozmieszczania elementów jest pierwszym krokiem w zrozumieniu układu. Aby uzyskać więcej informacji na temat <xref:System.Windows.Controls.Panel> dostępnych elementów, zobacz [Omówienie paneli](../controls/panels-overview.md). Aby lepiej zrozumieć różne właściwości pozycjonowania, które mogą mieć wpływ na układ, zobacz [wyrównanie, marginesy i](alignment-margins-and-padding-overview.md)dopełnienie. Aby zapoznać się z przykładem <xref:System.Windows.Controls.Panel> elementu niestandardowego, zobacz [niestandardowy Panel promieniowy](https://go.microsoft.com/fwlink/?LinkID=159982). Gdy wszystko będzie gotowe do umieszczenia wszystkich w lekkiej aplikacji, zobacz [Przewodnik: Moja pierwsza aplikacja](../getting-started/walkthrough-my-first-wpf-desktop-application.md)klasyczna WPF.  
+ Zrozumienie sposobu mierzenia i rozmieszczania elementów jest pierwszym krokiem w zrozumieniu układu. Aby uzyskać więcej informacji na temat <xref:System.Windows.Controls.Panel> dostępnych elementów, zobacz [Omówienie paneli](../controls/panels-overview.md). Aby lepiej zrozumieć różne właściwości pozycjonowania, które mogą mieć wpływ na układ, zobacz [wyrównanie, marginesy i](alignment-margins-and-padding-overview.md)dopełnienie. Gdy wszystko będzie gotowe do umieszczenia wszystkich w lekkiej aplikacji, zobacz [Przewodnik: Moja pierwsza aplikacja](../getting-started/walkthrough-my-first-wpf-desktop-application.md)klasyczna WPF.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e265fd1de6047cd53b0f8d1c20c8a9e87b3e813
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 2bd74460c7d5d077686c723936d140b07ac21dd0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689669"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663394"
 ---
-# <a name="timespanlegacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode> Element
+# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode> Element
 
-Określa, czy środowisko uruchomieniowe pozwala zachować starsze zachowanie w operacjach przy użyciu formatowania <xref:System.TimeSpan?displayProperty=nameWithType> wartości.
+Określa, czy środowisko uruchomieniowe zachowuje starsze zachowanie w operacjach <xref:System.TimeSpan?displayProperty=nameWithType> formatowania z wartościami.
 
-\<Konfiguracja > \
-\<runtime>\
+\<> konfiguracji \
+\<> środowiska uruchomieniowego \
 \<TimeSpan_LegacyFormatMode>
 
 ## <a name="syntax"></a>Składnia
@@ -40,14 +40,14 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko wykonawcze używa starszego formatowania działania z <xref:System.TimeSpan?displayProperty=nameWithType> wartości.|
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe korzysta ze starszego zachowania formatowania z <xref:System.TimeSpan?displayProperty=nameWithType> wartościami.|
 
 ## <a name="enabled-attribute"></a>Atrybut włączony
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`false`|Środowisko wykonawcze nie przywrócić starsze zachowanie formatowania.|
-|`true`|Środowisko uruchomieniowe przywraca starsze zachowanie formatowania.|
+|`false`|Środowisko uruchomieniowe nie przywraca starszego zachowania formatowania.|
+|`true`|Środowisko uruchomieniowe przywraca starsze zachowanie podczas formatowania.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -62,32 +62,32 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-Począwszy od programu .NET Framework 4, <xref:System.TimeSpan?displayProperty=nameWithType> struktury implementuje <xref:System.IFormattable> interfejsu i obsługuje formatowanie operacji za pomocą ciągów formatu standardowego i niestandardowego. Jeśli metoda analizowania napotka specyfikator nieobsługiwany format lub ciąg formatu, zgłasza <xref:System.FormatException>.
+Począwszy od .NET Framework 4, <xref:System.TimeSpan?displayProperty=nameWithType> struktura <xref:System.IFormattable> implementuje interfejs i obsługuje operacje formatowania przy użyciu standardowych i niestandardowych ciągów formatu. Jeśli metoda analizy napotka nieobsługiwany specyfikator formatu lub ciąg formatu, zgłasza <xref:System.FormatException>.
 
-W poprzednich wersjach programu .NET Framework <xref:System.TimeSpan> struktury nie implementuje <xref:System.IFormattable> i nie obsługują ciągi formatu. Jednak wielu deweloperów przez pomyłkę przyjąć, że <xref:System.TimeSpan> obsługiwać zestaw ciągów formatu i używać ich w [operacji formatowania złożonego](../../../../../docs/standard/base-types/composite-formatting.md) za pomocą metod, takich jak <xref:System.String.Format%2A?displayProperty=nameWithType>. Normalnie Jeśli typ implementuje <xref:System.IFormattable> i obsługuje formatowanie ciągów, wywołania do metod formatowania z nieobsługiwany format ciągów zazwyczaj generują <xref:System.FormatException>. Jednak ponieważ <xref:System.TimeSpan> nie zaimplementował <xref:System.IFormattable>, środowisko uruchomieniowe ignorowane w formacie ciągu i zamiast tego wywołuje <xref:System.TimeSpan.ToString?displayProperty=nameWithType> metody. Oznacza to, że chociaż ciągi formatu nie miało wpływu na operacji formatowania, ich obecność nie powoduje <xref:System.FormatException>.
+W poprzednich wersjach .NET Framework <xref:System.TimeSpan> struktura nie została zaimplementowana <xref:System.IFormattable> i nie obsługuje ciągów formatu. Jednak w przypadku wielu programistów założono, że program <xref:System.TimeSpan> obsługiwał zestaw ciągów formatu i użył ich w [operacjach formatowania złożonego](../../../../../docs/standard/base-types/composite-formatting.md) z metodami takimi <xref:System.String.Format%2A?displayProperty=nameWithType>jak. Zwykle, jeśli typ implementuje <xref:System.IFormattable> i obsługuje ciągi formatowania, wywołania metod formatowania z nieobsługiwanymi ciągami formatu zwykle <xref:System.FormatException>generują. Jednak ponieważ <xref:System.TimeSpan> nie została zaimplementowana <xref:System.IFormattable>, środowisko uruchomieniowe zignorował <xref:System.TimeSpan.ToString?displayProperty=nameWithType> ciąg formatu i zamiast niego nazywa metodę. Oznacza to, że chociaż ciągi formatu nie miały wpływu na operację formatowania, ich obecność nie spowodowało <xref:System.FormatException>.
 
-W przypadkach, w których starszego kodu przekazuje formatowania, metoda i nieprawidłowy ciąg formatu złożonego, a ten kod nie może być ponownie kompilowane, można użyć `<TimeSpan_LegacyFormatMode>` elementu do przywrócenia starszej wersji <xref:System.TimeSpan> zachowanie. Po ustawieniu `enabled` atrybutu tego elementu `true`, metoda powoduje wywołanie w celu formatowania złożonego <xref:System.TimeSpan.ToString?displayProperty=nameWithType> zamiast <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, a <xref:System.FormatException> nie jest zgłaszany.
+W przypadkach, w których starszy kod przekazuje metodę formatowania złożonego i nieprawidłowy ciąg formatu, a ten kod nie może zostać ponownie skompilowany, można użyć `<TimeSpan_LegacyFormatMode>` elementu, aby przywrócić starsze <xref:System.TimeSpan> zachowanie. Po `enabled` ustawieniu atrybutu tego elementu na `true`, Metoda formatowania złożonego <xref:System.TimeSpan.ToString?displayProperty=nameWithType> powoduje wywołanie zamiast <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>i <xref:System.FormatException> nie jest generowane.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład tworzy wystąpienie <xref:System.TimeSpan> obiektu i próbuje sformatować je za pomocą <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> metody przy użyciu nieobsługiwanego standardowym ciągiem formatującym.
+Poniższy przykład tworzy wystąpienie <xref:System.TimeSpan> obiektu i próbuje sformatować go <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> za pomocą metody przy użyciu nieobsługiwanego ciągu formatu standardowego.
 
 [!code-csharp[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/timespan.breakingchanges/cs/legacyformatmode1.cs#1)]
 [!code-vb[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/timespan.breakingchanges/vb/legacyformatmode1.vb#1)]
 
-Po uruchomieniu tego przykładu w .NET Framework 3.5 lub starszą wersję, wyświetla następujące dane wyjściowe:
+Po uruchomieniu przykładu w .NET Framework 3,5 lub we wcześniejszej wersji zostaną wyświetlone następujące dane wyjściowe:
 
 ```
 12:30:45
 ```
 
-To znacznie różni się od dane wyjściowe po uruchomieniu przykładu w .NET Framework 4 lub nowszej wersji:
+Różni się to od danych wyjściowych w przypadku uruchomienia przykładu w .NET Framework 4 lub jego nowszej wersji:
 
 ```
 Invalid Format
 ```
 
-Jednak jeśli dodasz następujący plik konfiguracji do omawianego w przykładzie katalogu, a następnie uruchomisz przykład na .NET Framework 4 lub nowszej wersji, dane wyjściowe jest taka sama jak wytworzonego przez w przykładzie, gdy jest on uruchamiany w .NET Framework 3.5.
+Jeśli jednak dodasz następujący plik konfiguracji do katalogu przykładu, a następnie uruchomisz przykład w .NET Framework 4 lub nowszej wersji, dane wyjściowe są identyczne z tym, które zostały utworzone przez przykład w przypadku uruchomienia na .NET Framework 3,5.
 
 ```xml
 <?xml version ="1.0"?>
@@ -100,5 +100,5 @@ Jednak jeśli dodasz następujący plik konfiguracji do omawianego w przykładzi
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)

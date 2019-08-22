@@ -1,24 +1,26 @@
 ---
-ms.openlocfilehash: 0c8a16936173b1e599d018d81432ca6b73c08e53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 246dbeed69fbd54c2c52bce2414363ddc9c62204
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607352"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658437"
 ---
-# <a name="net-docs"></a>.NET Docs
+# <a name="net-docs"></a>Dokumentacja platformy .NET
 
-To repozytorium zawiera dokumentacji koncepcyjnego dla platformy .NET. [Witrynie dokumentacji .NET](https://docs.microsoft.com/dotnet) składa się z wieloma repozytoriami, oprócz tego:
+To repozytorium zawiera dokumentację koncepcyjną dla platformy .NET. [Witryna dokumentacji programu .NET](https://docs.microsoft.com/dotnet) została utworzona na podstawie wielu repozytoriów, a także do tego:
 
-- [Przykłady kodu i fragmentów kodu](https://github.com/dotnet/samples)
+- [Przykłady i fragmenty kodu](https://github.com/dotnet/samples)
 - [Dokumentacja interfejsu API](https://github.com/dotnet/dotnet-api-docs)
-- [Odwołanie do zestawu SDK platformy kompilatora .NET](https://github.com/dotnet/roslyn-api-docs)
+- [Dokumentacja zestawu SDK .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs)
 
-Zagadnienia i zadania dla wszystkich trzech tych repozytoriów są śledzone w tym miejscu. Mamy duże społeczności przy użyciu tych zasobów. Ułatwiamy naszych wszelkich starań, aby reagować na problemy w odpowiednim czasie. Możesz dowiedzieć się więcej o naszych procedury dotyczące klasyfikacji i rozwiązywanie problemów z naszych [problemy z zasadami](issues-policy.md) tematu.
+Informacje o problemach i zadaniach dla wszystkich oprócz repozytorium odwołań API są śledzone w tym miejscu. Mamy dużą społeczność używające tych zasobów. Nasz najlepszy nakład na reagowanie na problemy w odpowiednim czasie. Więcej informacji na temat procedur klasyfikowania i rozwiązywania problemów znajduje się w temacie [zasady problemów](issues-policy.md) .
 
-Chętnie poznamy wkładów, aby pomóc nam w ulepszeniu ukończenia dokumentacji platformy .NET. Aby współtworzyć, zobacz [projektów dla platformy .NET, uczestnicy społeczności](https://github.com/dotnet/docs/projects/35) zapoznać się z pomysłami. [Współtworzenia przewodnik](CONTRIBUTING.md) zawiera instrukcje na procedurach używamy. Lub sprawdź [listę problemów](https://github.com/dotnet/docs/issues) zadań, które Cię interesują.
+Zapraszamy do poprawienia i zakończenia dokumentacji platformy .NET. Aby współtworzyć, zapoznaj się z tematem [projekty współpracowników platformy .NET dla społeczności](https://github.com/dotnet/docs/projects/35) . [Przewodnik](CONTRIBUTING.md) współautora zawiera instrukcje dotyczące procedur, których używamy. Lub zapoznaj się z [listą problemów](https://github.com/dotnet/docs/issues) , aby zapoznać się z interesującymi Cię zadaniami. 
 
-Przewidujemy, że [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) i [Unity](https://docs.unity3d.com/Manual/index.html) spowoduje również użycie tej dokumentacji.
+Jeśli interesuje Cię pomoc w migrowaniu istniejącego kodu, który jest przeznaczony dla .NET Framework z [galerii kodu](https://code.msdn.microsoft.com) do aplikacji .NET Core przechowywanych w naszym [repozytorium przykładów](https://github.com/dotnet/samples) i do pobrania z [przeglądarki przykładów](https://docs.microsoft.com/samples/browse), zobacz [galerię kodu. projekt migracji](https://github.com/dotnet/docs/projects/88) . 
 
-Ten projekt przyjęła Kodeks postępowania definicją Przymierzem współautorem, aby wyjaśnić, oczekiwane zachowanie w naszej społeczności.
-Aby uzyskać więcej informacji, zobacz [.NET Foundation Kodeks postępowania](https://dotnetfoundation.org/code-of-conduct).
+Przewidujemy, że platformy [Xamarin](https://docs.microsoft.com/xamarin), [mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) i [Unity](https://docs.unity3d.com/Manual/index.html) również będą korzystać z tej dokumentacji.
+
+W tym projekcie przyjęto Kodeks postępowania zdefiniowany przez współautor Pakt, aby wyjaśnić oczekiwane zachowanie w naszej społeczności.
+Aby uzyskać więcej informacji, zobacz Kodeks [postępowania w programie .NET Foundation](https://dotnetfoundation.org/code-of-conduct).

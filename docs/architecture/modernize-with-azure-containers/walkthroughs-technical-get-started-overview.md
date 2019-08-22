@@ -2,12 +2,12 @@
 title: Omówienie przewodników i wprowadzającej dokumentacji technicznej
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Przewodniki i przegląd wprowadzenie techniczne
 ms.date: 04/28/2018
-ms.openlocfilehash: 81f7d9fbf596a23b83e2dc9251788b33a8817e16
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676884"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660885"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Omówienie przewodników i wprowadzającej dokumentacji technicznej
 
@@ -308,4 +308,4 @@ Więcej szczegółowych informacji na ten temat znajduje się w witrynie GitHub 
 
 > [!div class="step-by-step"]
 > [Poprzedni](modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)Następny
-> [](conclusions.md)
+> [](conclusions.md) <!-- Next Chapter -->

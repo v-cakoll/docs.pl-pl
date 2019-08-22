@@ -1,6 +1,6 @@
 ---
 title: Korzystanie z biblioteki .NET Standard w programie Visual Studio 2017
-description: Tworzenie aplikacji .NET Core, która wywołuje członków innego biblioteki klas w programie Visual Studio 2017.
+description: Tworzenie aplikacji .NET Core, która wywołuje elementy członkowskie innej biblioteki klas z programem Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/05/2018
@@ -8,100 +8,100 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7689d45b341dbe9dbfae40beec3a7663e2bd0366
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a7ab9e8f148eaab8250a7cb10c7d38d2f70e4cd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647726"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660577"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Korzystanie z biblioteki .NET Standard w programie Visual Studio 2017
 
-Po utworzeniu biblioteki klas .NET Standard, wykonując kroki opisane w [tworzenia biblioteki klas C# za pomocą programu .NET Core w programie Visual Studio 2017](./library-with-visual-studio.md) lub [Tworzenie biblioteki klas w języku Visual Basic z platformą .NET Core w programie Visual Studio 2017 ](vb-library-with-visual-studio.md), przetestowane w [testowanie biblioteki klas w języku .NET Core w programie Visual Studio 2017](testing-library-with-visual-studio.md), a wbudowane wersji biblioteki, następnym krokiem jest być udostępniana dla kodu wywołującego. Można to zrobić na dwa sposoby:
+Po utworzeniu biblioteki klas .NET Standard, wykonując kroki opisane w sekcji Kompilowanie [biblioteki C# klas przy użyciu platformy .NET Core w programie Visual Studio 2017](./library-with-visual-studio.md) lub [Kompilowanie biblioteki klas Visual Basic przy użyciu platformy .net core w programie Visual Studio 2017](vb-library-with-visual-studio.md), przetestowano ją w [ Testowanie biblioteki klas przy użyciu platformy .NET Core w programie Visual Studio 2017](testing-library-with-visual-studio.md)i skompilowanej wersji biblioteki, następnym krokiem jest udostępnienie jej dla obiektów wywołujących. Można to zrobić na dwa sposoby:
 
-* Jeśli biblioteka będzie używany przez jedno rozwiązanie (na przykład, jeśli jest on składnikiem w jednej aplikacji duże), możesz dołączyć go jako projekt w rozwiązaniu.
+* Jeśli biblioteka będzie używana przez pojedyncze rozwiązanie (na przykład w przypadku składnika w pojedynczej dużej aplikacji), można dołączyć go jako projekt w rozwiązaniu.
 
-* Jeśli biblioteka będzie ogólnie dostępna, można rozprowadzić ją jako pakiet NuGet.
+* Jeśli biblioteka będzie ogólnie dostępna, możesz ją rozpowszechnić jako pakiet NuGet.
 
-## <a name="including-a-library-as-a-project-in-a-solution"></a>W tym bibliotekę jako projekt w rozwiązaniu
+## <a name="including-a-library-as-a-project-in-a-solution"></a>Dołączanie biblioteki jako projektu w rozwiązaniu
 
-Tak, jak testy jednostkowe są zawarte w tym samym rozwiązaniu jako biblioteki klas, można umieścić aplikację w ramach tego rozwiązania. Na przykład można użyć biblioteki klas w aplikacji konsoli, który monituje użytkownika o podanie ciągu i raporty, czy jego pierwszy znak jest wielką literą:
+Podobnie jak w przypadku testów jednostkowych w tym samym rozwiązaniu co Biblioteka klas, możesz dołączyć aplikację jako część tego rozwiązania. Można na przykład użyć biblioteki klas w aplikacji konsolowej, która wyświetla użytkownikowi komunikat, aby wprowadzić ciąg i określić, czy jego pierwszy znak jest pisany wielkimi literami:
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
-1. Otwórz `ClassLibraryProjects` rozwiązanie utworzone w [tworzenia biblioteki klas C# za pomocą programu .NET Core w programie Visual Studio 2017](./library-with-visual-studio.md) tematu. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **ClassLibraryProjects** rozwiązań i wybierz pozycję **Dodaj** > **nowy projekt** z menu kontekstowe.
+1. Otwórz rozwiązanie utworzone w sekcji Kompilowanie [biblioteki C# klas przy użyciu programu .NET Core w programie Visual Studio 2017.](./library-with-visual-studio.md) `ClassLibraryProjects` W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy rozwiązanie **ClassLibraryProjects** i wybierz polecenie **Dodaj** > **Nowy projekt** z menu kontekstowego.
 
-1. W **Dodaj nowy projekt** okna dialogowego, rozwiń węzeł **Visual C#** a następnie wybierz węzeł **platformy .NET Core** węzła następuje **Aplikacja konsoli (.NET Core)** szablon projektu. W **nazwa** pole tekstowe, wpisz "Pokaz", a następnie wybierz **OK** przycisku.
+1. W oknie dialogowym **Dodaj nowy projekt** rozwiń węzeł **wizualizacji C#**  i wybierz węzeł **.NET Core** , a następnie szablon projektu **aplikacja konsoli (.NET Core)** . W polu tekstowym **Nazwa** wpisz "pokaz" i wybierz przycisk **OK** .
 
-   ![Visual Studio Dodaj nowy projekt okno dialogowe-C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
+   ![Okno dialogowe Dodawanie nowego projektu w programie Visual Studio —C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **pokaz** projektu, a następnie wybierz **Ustaw jako projekt startowy** w menu kontekstowym.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt pokazu i wybierz polecenie **Ustaw jako projekt startowy** w menu kontekstowym.
 
-   ![Visual Studio projektu menu kontekstowego można ustawić projekt startowy-C#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
+   ![Menu kontekstowe projektu programu Visual Studio do ustawiania projektu startowego —C#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. Początkowo projektu nie ma dostępu do biblioteki klas. Aby umożliwić go do wywoływania metody w bibliotece klasy, należy utworzyć odwołanie do biblioteki klas. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy `ShowCase` projektu **zależności** a następnie wybierz węzeł **Dodaj odwołanie**.
+1. Początkowo projekt nie ma dostępu do biblioteki klas. Aby zezwolić na wywoływanie metod w bibliotece klas, należy utworzyć odwołanie do biblioteki klas. W **Eksplorator rozwiązań**kliknij prawym przyciskiem `ShowCase` myszy węzeł **zależności** projektu i wybierz polecenie **Dodaj odwołanie**.
 
-   ![Projektu programu Visual Studio Dodaj odwołanie do menu kontekstowego-C#](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
+   ![Menu kontekstowe dodawania odwołania w projekcie programu Visual Studio —C#](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
-1. W **Menadżer odwołań** okno dialogowe, wybierz opcję **StringLibrary**, projekt biblioteki klas, a następnie wybierz **OK** przycisku.
+1. W oknie dialogowym **Menedżer odwołań** wybierz pozycję **StringLibrary**, projekt biblioteki klas, a następnie wybierz przycisk **OK** .
 
-   ![Zarządzanie Visual Studio odwołuje się do okna dialogowego —C#](./media/consuming-library-with-visual-studio/manage-project-references.png)
+   ![Okno dialogowe zarządzania odwołaniami w programie Visual Studio —C#](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
-1. W oknie kodu *Program.cs* pliku, Zastąp cały kod następującym kodem:
+1. W oknie kod dla pliku *program.cs* Zastąp cały kod następującym kodem:
 
    [!CODE-csharp[UsingClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
 
-   Kod używa `row` zmiennej do utrzymywania licznika liczby wierszy danych zapisanych w oknie konsoli. Zawsze, gdy jest mniejsza niż 25, kod Czyści okno konsoli i zostanie wyświetlony komunikat dla użytkownika.
+   Kod używa `row` zmiennej do obsługi liczby wierszy danych zapisywana w oknie konsoli. Za każdym razem, gdy jest większy lub równy 25, kod czyści okno konsoli i wyświetla komunikat dla użytkownika.
 
-   Monituje użytkownika o podanie ciągu. Oznacza to, czy ciąg rozpoczyna się od wielkiej litery. Gdy użytkownik naciśnie klawisz Enter, bez konieczności wprowadzania ciągu, kończy działanie aplikacji i zamyka okno konsoli.
+   Program poprosi użytkownika o wprowadzenie ciągu. Wskazuje, czy ciąg rozpoczyna się od wielkiej litery. Jeśli użytkownik naciśnie klawisz ENTER bez wpisywania ciągu, aplikacja zostanie przerwana, a okno konsoli zostanie zamknięte.
 
-1. W razie potrzeby zmień narzędzi do kompilowania **debugowania** wersji `ShowCase` projektu. Skompilować i uruchomić program, wybierając zieloną strzałkę na **pokaz** przycisku.
+1. W razie potrzeby zmień pasek narzędzi w celu skompilowania wersji `ShowCase` **debugowania** projektu. Skompiluj i uruchom program, wybierając zieloną strzałkę na przycisku **Pokaz** .
 
-   ![Przycisk debugowania przedstawiający narzędzi projektu programu Visual Studio —C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+   ![Pasek narzędzi projektu programu Visual Studio z widocznym przyciskiem DebugujC#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
-1. Otwórz `ClassLibraryProjects` rozwiązanie utworzone w [tworzenia klasy biblioteki w języku Visual Basic i .NET Core w programie Visual Studio 2017](vb-library-with-visual-studio.md) tematu. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **ClassLibraryProjects** rozwiązań i wybierz pozycję **Dodaj** > **nowy projekt** z menu kontekstowe.
+1. Otwórz rozwiązanie utworzone w sekcji [Tworzenie biblioteki klas z Visual Basic i .NET Core w programie Visual Studio 2017.](vb-library-with-visual-studio.md) `ClassLibraryProjects` W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy rozwiązanie **ClassLibraryProjects** i wybierz polecenie **Dodaj** > **Nowy projekt** z menu kontekstowego.
 
-1. W **Dodaj nowy projekt** okna dialogowego, rozwiń węzeł **języka Visual Basic** a następnie wybierz węzeł **platformy .NET Core** węzła następuje **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** pole tekstowe, wpisz "Pokaz", a następnie wybierz **OK** przycisku.
+1. W oknie dialogowym **Dodaj nowy projekt** rozwiń węzeł **Visual Basic** i wybierz węzeł **.NET Core** , a następnie szablon projektu **aplikacja konsoli (.NET Core)** . W polu tekstowym **Nazwa** wpisz "pokaz" i wybierz przycisk **OK** .
 
-   ![Visual Studio Dodaj okno dialogowe Nowy projekt - Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
+   ![Okno dialogowe Dodawanie nowego projektu w programie Visual Studio — Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **pokaz** projektu, a następnie wybierz **Ustaw jako projekt startowy** w menu kontekstowym. 
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt pokazu i wybierz polecenie **Ustaw jako projekt startowy** w menu kontekstowym. 
 
-   ![Visual Studio projektu menu kontekstowego można ustawić projekt startowy - Visual Basic](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
+   ![Menu kontekstowe projektu programu Visual Studio, aby ustawić projekt startowy — Visual Basic](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. Początkowo projektu nie ma dostępu do biblioteki klas. Aby umożliwić go do wywoływania metody w bibliotece klasy, należy utworzyć odwołanie do biblioteki klas. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy `ShowCase` projektu **zależności** a następnie wybierz węzeł **Dodaj odwołanie**.
+1. Początkowo projekt nie ma dostępu do biblioteki klas. Aby zezwolić na wywoływanie metod w bibliotece klas, należy utworzyć odwołanie do biblioteki klas. W **Eksplorator rozwiązań**kliknij prawym przyciskiem `ShowCase` myszy węzeł **zależności** projektu i wybierz polecenie **Dodaj odwołanie**.
 
-   ![Projektu programu Visual Studio Dodaj odwołanie do menu kontekstowego - Visual Basic](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
+   ![Menu kontekstowe dodawania odwołania do projektu programu Visual Studio — Visual Basic](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
-1. W **Menadżer odwołań** okno dialogowe, wybierz opcję **StringLibrary**, projekt biblioteki klas, a następnie wybierz **OK** przycisku.
+1. W oknie dialogowym **Menedżer odwołań** wybierz pozycję **StringLibrary**, projekt biblioteki klas, a następnie wybierz przycisk **OK** .
 
-   ![Zarządzanie Visual Studio odwołuje się do okna dialogowego - Visual Basic](./media/consuming-library-with-visual-studio/manage-project-references.png)
+   ![Okno dialogowe Zarządzanie odwołaniami w programie Visual Studio — Visual Basic](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
-1. W oknie kodu *Program.vb* pliku, Zastąp cały kod następującym kodem:
+1. W oknie kod dla pliku *program. vb* Zastąp cały kod następującym kodem:
 
     [!CODE-vb[UsingClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
 
-   Kod używa `row` zmiennej do utrzymywania licznika liczby wierszy danych zapisanych w oknie konsoli. Zawsze, gdy jest mniejsza niż 25, kod Czyści okno konsoli i zostanie wyświetlony komunikat dla użytkownika.
+   Kod używa `row` zmiennej do obsługi liczby wierszy danych zapisywana w oknie konsoli. Za każdym razem, gdy jest większy lub równy 25, kod czyści okno konsoli i wyświetla komunikat dla użytkownika.
 
-   Monituje użytkownika o podanie ciągu. Oznacza to, czy ciąg rozpoczyna się od wielkiej litery. Gdy użytkownik naciśnie klawisz Enter, bez konieczności wprowadzania ciągu, kończy działanie aplikacji i zamyka okno konsoli.
+   Program poprosi użytkownika o wprowadzenie ciągu. Wskazuje, czy ciąg rozpoczyna się od wielkiej litery. Jeśli użytkownik naciśnie klawisz ENTER bez wpisywania ciągu, aplikacja zostanie przerwana, a okno konsoli zostanie zamknięte.
 
-1. W razie potrzeby zmień narzędzi do kompilowania **debugowania** wersji `ShowCase` projektu. Skompilować i uruchomić program, wybierając zieloną strzałkę na **pokaz** przycisku.
+1. W razie potrzeby zmień pasek narzędzi w celu skompilowania wersji `ShowCase` **debugowania** projektu. Skompiluj i uruchom program, wybierając zieloną strzałkę na przycisku **Pokaz** .
 
-   ![Debugowanie na pasku narzędzi - Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+   ![Debuguj na pasku narzędzi-Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 ---
 
-Możesz debugować i publikować aplikacji, która korzysta z tej biblioteki, wykonując kroki opisane w [debugowanie aplikacji Hello World w programie Visual Studio 2017](debugging-with-visual-studio.md) i [publikowanie aplikacji Hello World z programem Visual Studio 2017](publishing-with-visual-studio.md).
+Można debugować i publikować aplikację, która korzysta z tej biblioteki, wykonując czynności opisane w sekcji [debugowanie aplikacji Hello World za pomocą programu Visual studio 2017](debugging-with-visual-studio.md) i [publikowanie aplikacji Hello World przy użyciu programu Visual Studio 2017](publishing-with-visual-studio.md).
 
-## <a name="distributing-the-library-in-a-nuget-package"></a>Dystrybucja biblioteki w pakiecie NuGet
+## <a name="distributing-the-library-in-a-nuget-package"></a>Dystrybuowanie biblioteki w pakiecie NuGet
 
-Można udostępnić biblioteki klas powszechnie przez opublikowanie go jako pakiet NuGet. Program Visual Studio nie obsługuje tworzenia pakietów NuGet. Aby utworzyć, należy użyć [ `dotnet` narzędzia wiersza polecenia](../../core/tools/dotnet.md):
+Bibliotekę klas można udostępnić publicznie, publikując ją jako pakiet NuGet. Program Visual Studio nie obsługuje tworzenia pakietów NuGet. Aby go utworzyć, użyj [ `dotnet` narzędzia wiersza polecenia](../tools/dotnet.md):
 
-1. Otwórz okno konsoli. Na przykład w **Zadaj mi dowolne pytanie** tekstu pola na pasku zadań Windows, należy wprowadzić `Command Prompt` (lub `cmd` w skrócie) i Otwórz okno konsoli wybierając **wiersza polecenia** aplikacji klasycznej lub jeśli została wybrana w wynikach wyszukiwania, naciskając klawisz Enter.
+1. Otwórz okno konsoli. Na przykład w polu tekstowym **pytaj mnie coś** na pasku zadań systemu Windows wpisz `Command Prompt` (lub `cmd` for Short), a następnie otwórz okno konsoli, wybierając **polecenie Wiersz polecenia** aplikacji klasycznej lub naciskając klawisz ENTER, jeśli jest zaznaczone w polu wyszukiwania. uzyskane.
 
-1. Przejdź do katalogu projektu biblioteki. O ile nie został ponownie skonfigurowany lokalizacji pliku typowe, jest on *2017\Projects\ClassLibraryProjects\StringLibrary Documents\Visual Studio* katalogu. Katalog zawiera kod źródłowy i plik projektu *StringLibrary.csproj*.
+1. Przejdź do katalogu projektu biblioteki. O ile nie skonfigurowano ponownie typowej lokalizacji pliku, znajduje się ona w katalogu *Documents\Visual Studio 2017 \ Projects\ClassLibraryProjects\StringLibrary* . Katalog zawiera kod źródłowy i plik projektu, *StringLibrary. csproj*.
 
-1. Należy wydać polecenie `dotnet pack --no-build`. `dotnet` Narzędzie generuje pakiet z *.nupkg* rozszerzenia.
+1. Wydaj polecenie `dotnet pack --no-build`. Narzędzie generuje pakiet z rozszerzeniem *. nupkg.* `dotnet`
 
    > [!TIP]
-   > Jeśli katalog, który zawiera *dotnet.exe* jest nie w ŚCIEŻCE, można znaleźć lokalizacji, wprowadzając `where dotnet.exe` w oknie konsoli.
+   > Jeśli katalog zawierający program *dotnet. exe* nie znajduje się w ścieżce, można znaleźć jego lokalizację, wprowadzając `where dotnet.exe` ją w oknie konsoli.
 
-Aby uzyskać więcej informacji na temat tworzenia pakietów NuGet, zobacz [jak utworzyć pakiet NuGet za pomocą wielu narzędzi platformy](../../core/deploying/creating-nuget-packages.md).
+Aby uzyskać więcej informacji na temat tworzenia pakietów NuGet, zobacz [jak utworzyć pakiet NuGet za pomocą narzędzi](../deploying/creating-nuget-packages.md)międzyplatformowych.

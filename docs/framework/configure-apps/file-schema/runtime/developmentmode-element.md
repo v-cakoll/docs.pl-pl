@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7c7f866cdbcd39194d61a3db821bf973b4e057e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704768"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663815"
 ---
-# <a name="developmentmode-element"></a>\<developmentMode> Element
+# <a name="developmentmode-element"></a>\<Element > developmentmode
 Określa, czy środowisko uruchomieniowe wyszukuje zestawy w katalogach określonych przez zmienną środowiskową DEVPATH.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<runtime>  
-\<developmentMode>  
+\<> developmentmode  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,12 +40,12 @@ Określa, czy środowisko uruchomieniowe wyszukuje zestawy w katalogach określo
 |---------------|-----------------|  
 |**developerInstallation**|Określa, czy środowisko uruchomieniowe wyszukuje zestawy w katalogach określonych przez zmienną środowiskową DEVPATH.|  
   
-## <a name="developerinstallation-attribute"></a>developerInstallation atrybutu  
+## <a name="developerinstallation-attribute"></a>developerInstallation — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |**true**|Wyszukuje zestawy w katalogach określonych przez zmienną środowiskową DEVPATH.|  
-|**false**|Wyszukuje zestawy w katalogach określonych przez zmienną środowiskową DEVPATH. Jest to opcja domyślna|  
+|**false**|Nie wyszukuje zestawów w katalogach określonych przez zmienną środowiskową DEVPATH. Jest to wartość domyślna|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -58,10 +58,10 @@ Określa, czy środowisko uruchomieniowe wyszukuje zestawy w katalogach określo
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj tego ustawienia w czasie projektowania. Środowisko wykonawcze nie sprawdza obecności wersje zestawów o silnych nazwach, znaleziono w DEVPATH. Po prostu używa pierwszego zestawu, który odnajdzie.  
+ Tego ustawienia należy używać tylko w czasie projektowania. Środowisko uruchomieniowe nie sprawdza wersji w zestawach o silnej nazwie znalezionych w DEVPATH. Po prostu używa pierwszego zestawu, który znajdzie.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak spowodować, że środowisko uruchomieniowe do przeszukania pod kątem zestawów w katalogach określonych przez zmienną środowiskową DEVPATH.  
+ Poniższy przykład pokazuje, jak spowodować, że środowisko uruchomieniowe wyszukuje zestawy w katalogach określonych przez zmienną środowiskową DEVPATH.  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,6 @@ Określa, czy środowisko uruchomieniowe wyszukuje zestawy w katalogach określo
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Instrukcje: Lokalizowanie zestawów za pomocą DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)
+- [Instrukcje: Lokalizowanie zestawów za pomocą DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)

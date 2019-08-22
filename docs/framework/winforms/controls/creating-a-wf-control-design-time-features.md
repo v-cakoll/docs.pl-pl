@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 733f22c122dd6acdad41371419375e55e977c016
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c8d04725a576c9e24a4b7d4aec1251516a8c544c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039929"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666229"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Przewodnik: tworzenie kontrolki formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio
 
@@ -62,7 +62,6 @@ Po zakończeniu formant niestandardowy będzie wyglądać podobnie do poniższeg
 ![Aplikacja wyświetlająca Neon z tekstem i przyciskami uruchamiania i zatrzymywania.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
 Aby zapoznać się z pełną listą [kodu, zobacz How to: Utwórz formant Windows Forms, który korzysta z funkcji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))czasu projektowania.
-
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 

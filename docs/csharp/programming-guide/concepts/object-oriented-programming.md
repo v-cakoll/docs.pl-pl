@@ -2,12 +2,12 @@
 title: Programowanie zorientowane obiektowo (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: e277e24c1f345a8bbb6640e210a7ee30862169be
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 50b38833582ebe46836ccfab4e1ebeb98b53a96e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590779"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659869"
 ---
 # <a name="object-oriented-programming-c"></a>Programowanie zorientowane obiektowo (C#)
 
@@ -410,7 +410,7 @@ sampleObject.Field = "Sample string";
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Typy ogólne](~/docs/standard/generics/index.md)
+- [Typy ogólne](../../../standard/generics/index.md)
 
 - [Typy ogólne](../generics/index.md)
 

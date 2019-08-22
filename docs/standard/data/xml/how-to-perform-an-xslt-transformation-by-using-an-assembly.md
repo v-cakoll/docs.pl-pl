@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 596ea34dce17d21a151007cad3ebb0ccb615d136
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4bf0669b94f925052ad5f139cce049018ce7da4f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590416"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666529"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Instrukcje: Wykonywanie przekształcenia XSLT przy użyciu zestawu
-Kompilator XSLT (xsltc.exe) kompiluje arkuszy stylów XSLT i generuje zestaw. Zestaw można przekazać bezpośrednio do <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> metody.  
+Kompilator XSLT (xsltc. exe) kompiluje arkusze stylów XSLT i generuje zestaw. Zestaw można przesłać bezpośrednio do <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> metody.  
   
-### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>Aby skopiować pliki XML i XSLT na komputerze lokalnym  
+### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>Aby skopiować pliki XML i XSLT na komputer lokalny  
   
-- Skopiuj plik XSLT do komputera lokalnego i nadaj mu nazwę Transform.xsl.  
+- Skopiuj plik XSLT na komputer lokalny i nadaj mu nazwę Transform. xsl.  
   
     ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -87,7 +87,7 @@ Kompilator XSLT (xsltc.exe) kompiluje arkuszy stylów XSLT i generuje zestaw. Ze
     </xsl:stylesheet>  
     ```  
   
-- Skopiuj plik XML do komputera lokalnego i nadaj mu nazwę `books.xml`.  
+- Skopiuj plik XML na komputer lokalny i nadaj mu `books.xml`nazwę.  
   
     ```xml  
     <?xml version="1.0"?>  
@@ -130,31 +130,31 @@ Kompilator XSLT (xsltc.exe) kompiluje arkuszy stylów XSLT i generuje zestaw. Ze
     </catalog>  
     ```  
   
-### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>Aby skompilować arkusz stylów za pomocą skryptu włączone.  
+### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>Aby skompilować arkusz stylów z włączonym skryptem.  
   
-1. Wykonując następujące polecenie z wiersza polecenia tworzy dwa zestawy o nazwie `Transform.dll` i `Transform_Script1.dll` (jest to zachowanie domyślne. O ile nie określono inaczej, nazwa klasy i zestawu domyślnie używa nazwy arkusza stylów głównym):  
+1. Wykonanie następującego polecenia w wierszu polecenia powoduje utworzenie dwóch zestawów o `Transform.dll` nazwach `Transform_Script1.dll` i (jest to zachowanie domyślne. O ile nie określono inaczej, nazwa klasy i zestawu domyślnie jest nazwą arkusza stylów głównych):  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
     ```  
   
- Następujące polecenie jawnie ustawia nazwę klasy transformacji:  
+ Następujące polecenie jawnie ustawia nazwę klasy do przekształcenia:  
   
 ```  
 xsltc /settings:script+ /class:Transform Transform.xsl  
 ```  
   
-### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>Aby uwzględnić skompilowanego zestawu jako odwołania, podczas kompilowania kodu.  
+### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>W celu uwzględnienia skompilowanego zestawu jako odwołania podczas kompilowania kodu.  
   
-1. W programie Visual Studio może zawierać zestaw, przez dodanie odwołania w Eksploratorze rozwiązań lub z wiersza polecenia.  
+1. Możesz dołączyć zestaw w programie Visual Studio, dodając odwołanie w Eksplorator rozwiązań lub z wiersza polecenia.  
   
-2. W wierszu polecenia przy użyciu języka C# należy użyć następującego polecenia:  
+2. W wierszu polecenia w programie C#należy użyć następujących poleceń:  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-3. W wierszu polecenia za pomocą Visual Basic należy użyć następującego polecenia  
+3. Dla wiersza polecenia z Visual Basic Użyj następujących poleceń:  
   
     ```  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
@@ -162,12 +162,12 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>Aby użyć skompilowanego zestawu w kodzie.  
   
-1. Poniższy przykład pokazuje, jak wykonać transformację XSLT przy użyciu arkusza stylów skompilowanego.  
+1. Poniższy przykład pokazuje, jak wykonać transformację XSLT przy użyciu skompilowanego arkusza stylów.  
   
  [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
  [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
   
- Dynamiczne łącze do zestawu skompilowanego, Zastąp  
+ Aby dynamicznie połączyć się z skompilowanym zestawem, Zastąp  
   
 ```  
 xslt.Load(typeof(Transform))  
@@ -179,11 +179,11 @@ xslt.Load(typeof(Transform))
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
 ```  
   
- w powyższym przykładzie. Aby uzyskać więcej informacji na temat metody Assembly.Load zobacz <xref:System.Reflection.Assembly.Load%2A>  
+ w powyższym przykładzie. Aby uzyskać więcej informacji na temat metody Assembly. Load, zobacz<xref:System.Reflection.Assembly.Load%2A>  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - [Kompilator XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
 - [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Kompilacja za pomocą wiersza polecenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [Kompilacja za pomocą wiersza polecenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

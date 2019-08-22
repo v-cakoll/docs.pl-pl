@@ -7,38 +7,39 @@ helpviewer_keywords:
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-ms.openlocfilehash: 0f3367deaaec04744a3f812d7f2d08047d7eb588
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: dfe5244e0c5b61fdf6d940dd16d8c280f013b12c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211391"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666178"
 ---
-# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>Instrukcje: Kopiowanie i wklejanie kontrolki ElementHost w czasie projektowania
+# <a name="how-to-copy-and-paste-an-elementhost-control"></a>Instrukcje: Kopiowanie i wklejanie kontrolki ElementHost
 
-Ta procedura pokazuje, jak kopiowanie kontrolki Windows Presentation Foundation (WPF) w formularzu Windows w programie Visual Studio.
+Ta procedura pokazuje, jak skopiować formant Windows Presentation Foundation (WPF) w formularzu systemu Windows w programie Visual Studio.
 
-## <a name="copy-and-paste-an-elementhost-control-at-design-time"></a>Kopiowanie i wklejanie formantu ElementHost w czasie projektowania
+1. W programie Visual Studio Dodaj nową WPF <xref:System.Windows.Controls.UserControl> do projektu Windows Forms. Użyj domyślnej nazwy dla typu formantu, `UserControl1.xaml`. Aby uzyskać więcej informacji, [zobacz Przewodnik: Tworzenie nowej zawartości WPF na Windows Forms w czasie](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)projektowania.
 
-1. Dodaj nowe WPF <xref:System.Windows.Controls.UserControl> do projektu Windows Forms. Użyj domyślnej nazwy dla kontrolek typu `UserControl1.xaml`. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie nowej zawartości WPF na formularzach Windows Forms w czasie projektowania](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
+2. W oknie **Właściwości** ustaw wartość <xref:System.Windows.FrameworkElement.Width%2A> właściwości `UserControl1` i <xref:System.Windows.FrameworkElement.Height%2A> na **200**.
 
-2. W **właściwości** okna, ustaw wartość <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> właściwości `UserControl1` do `200`.
-
-3. Ustaw wartość <xref:System.Windows.Controls.Control.Background%2A> właściwość `Blue`.
+3. Ustaw wartość <xref:System.Windows.Controls.Control.Background%2A> właściwości na niebieską.
 
 4. Skompiluj projekt.
 
-5. Otwórz `Form1` w programie Windows Forms Designer.
+5. Otwórz `Form1` w Projektant formularzy systemu Windows.
 
-6. Z **przybornika**, przeciągnij wystąpienie `UserControl1` na formularz.
+6. Z **przybornika**przeciągnij wystąpienie `UserControl1` na formularz.
 
-   Wystąpienie `UserControl1` znajduje się w nowym <xref:System.Windows.Forms.Integration.ElementHost> formantu o nazwie `elementHost1`.
+   Wystąpienie `UserControl1` jest hostowane w nowym <xref:System.Windows.Forms.Integration.ElementHost> formancie o nazwie `elementHost1`.
 
-7. Za pomocą `elementHost1` zaznaczone, naciśnij klawisze CTRL + C, aby skopiować go do Schowka.
+7. Po wybraniu naciśnij klawisz **Ctrl**+C, aby skopiować go do Schowka. `elementHost1`
 
-8. Naciśnij klawisze CTRL + V, aby wkleić skopiowanych formantu do formularza.
+8. Naciśnij klawisz **Ctrl**+, aby wkleić skopiowany formant do formularza.
 
-   Nowy <xref:System.Windows.Forms.Integration.ElementHost> formantu o nazwie `elementHost2` jest tworzony w formularzu.
+   W formularzu <xref:System.Windows.Forms.Integration.ElementHost> zostanie utworzona `elementHost2` Nowa kontrolka o nazwie.
 
 ## <a name="see-also"></a>Zobacz także
 

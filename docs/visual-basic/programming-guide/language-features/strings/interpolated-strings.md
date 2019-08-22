@@ -1,24 +1,24 @@
 ---
 title: Ciągi interpolowane (Visual Basic)
 ms.date: 10/31/2017
-ms.openlocfilehash: 408f3232258b3b4c7fe6ec160149f8ac70b84b03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b9dd055154c86da370a984a465ed412f1fd9908c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024563"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666950"
 ---
-# <a name="interpolated-strings-visual-basic-reference"></a>Ciągi interpolowane (odwołanie w Visual Basic)
+# <a name="interpolated-strings-visual-basic-reference"></a>Ciągi interpolowane (odwołanie Visual Basic)
 
-Używane do konstruowania ciągów.  Ciąg interpolowany wygląda jak ciąg szablonu, który zawiera *wyrażeń interpolowanych*.  Ciąg interpolowany zwraca ciąg, który zastępuje wyrażenia interpolowane, które zawiera ich reprezentacji ciągu. Ta funkcja jest dostępna w języku Visual Basic, 14 i nowszych wersjach.
+Używane do konstruowania ciągów.  Ciąg interpolowany wygląda jak ciąg szablonu, który zawiera *interpolowane wyrażenia*.  Ciąg interpolowany zwraca ciąg, który zastępuje interpolowane wyrażenia, które zawiera z ich reprezentacją ciągu. Ta funkcja jest dostępna w wersji Visual Basic 14 i nowszych.
 
-Argumenty ciągu interpolowanego są łatwiejsze do zrozumienia niż [ciąg formatu złożonego](../../../../standard/base-types/composite-formatting.md#composite-format-string).  Na przykład ciąg interpolowany
+Argumenty interpolowanego ciągu są łatwiejsze do zrozumienia niż [ciąg formatu złożonego](../../../../standard/base-types/composite-formatting.md#composite-format-string).  Na przykład ciąg interpolowany
 
 ```vb
 Console.WriteLine($"Name = {name}, hours = {hours:hh}")
 ```
 
-zawiera dwa wyrażenia interpolowane "{name}" i "{godzin: hh}". Ciąg formatu złożonego równoważne jest następujący:
+zawiera dwa wyrażenia interpolowane "{name}" i "{hours: gg}". Równoważny ciąg formatu złożonego to:
 
 ```vb
 Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours);
@@ -32,18 +32,18 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 gdzie:
 
-- *szerokość pola* jest liczbą całkowitą ze znakiem, który określa liczbę znaków w polu. Jeśli jest dodatnią, pole jest wyrównany do prawej; Jeśli jest negatywny, wyrównane do lewej.
+- *pole-Width* jest ze znakiem liczby całkowitej, która wskazuje liczbę znaków w polu. Jeśli wartość jest dodatnia, pole jest wyrównane do prawej; w przypadku wartości ujemnych wyrównanych do lewej.
 
-- *Ciąg formatu* jest ciągiem formatu odpowiedniego dla typu formatowanego obiektu. Na przykład w przypadku <xref:System.DateTime> wartości, może to być [ciąg formatu standardowego daty i godziny](~/docs/standard/base-types/standard-date-and-time-format-strings.md) takich jak "D" lub "d".
+- *ciąg formatu* jest ciągiem formatu odpowiednim dla typu formatowanego obiektu. Na przykład dla <xref:System.DateTime> wartości może to być [standardowy ciąg formatu daty i godziny](../../../../standard/base-types/standard-date-and-time-format-strings.md) , taki jak "d" lub "d".
 
 > [!IMPORTANT]
-> Nie może mieć dowolny biały obszar między `$` i `"` którego początkowe ciągu. To powoduje wystąpienie błędu kompilatora.
+> Nie można mieć żadnego odstępu między `$` `"` i, który uruchamia ciąg. Powoduje to błąd kompilatora.
 
-Można użyć ciągu interpolowanego dowolnym można użyć literału ciągu.  Ciąg interpolowany jest oceniany każdorazowo, gdy wykonuje kod za pomocą ciągu interpolowanym. Dzięki temu można oddzielić definicję i oceny w ciągu interpolowanym.
+Możesz użyć ciągu interpolowanego wszędzie tam, gdzie można użyć literału ciągu.  Ciąg interpolowany jest oceniany za każdym razem, gdy wykonywany jest kod z ciągiem interpolowanym. Pozwala to na oddzielenie definicji i oceny ciągu interpolowanego.
 
-Aby uwzględnić nawias klamrowy ("{" lub "}") w ciągu interpolowanym, użyj dwa nawiasy klamrowe, "{{" lub "}}".  Zobacz sekcję konwersje niejawne, aby uzyskać więcej informacji.
+Aby dołączyć nawias klamrowy ("{" lub "}") w ciągu interpolowanym, użyj dwóch nawiasów klamrowych "{{" lub "}}".  Aby uzyskać więcej informacji, zobacz sekcję konwersje niejawne.
 
-Jeśli ciąg interpolowany zawiera inne znaki przy użyciu specjalnego znaczenia w ciągu interpolowanym, takie jak znak cudzysłowu ("), dwukropek (:) lub przecinka (,), należy wyjściowym je czy występują one w tekst dosłowny, powinny one zostać włączone w wyrażeniu rozdzielone nawiasy, jeśli są one elementy języka zawarte w wyrażeniu interpolowanym. Poniższy przykład zmienia znaczenie znaków cudzysłowu, aby je uwzględnić w ciągu wynikowym i używa nawiasów do ograniczania wyrażenie `(age == 1 ? "" : "s")` tak, że po dwukropku nie jest interpretowany jako początek ciągu formatu.
+Jeśli ciąg interpolowany zawiera inne znaki o specjalnym znaczeniu w ciągu interpolowanym, takim jak cudzysłów ("), dwukropek (:) lub przecinek (,), powinny być wyprowadzane w przypadku wystąpienia tekstu w postaci literału lub powinny być zawarte w wyrażeniu ograniczonym przez nawiasy, jeśli są elementami języka zawartymi w wyrażeniu interpolowanym. Poniższy przykład wyprowadza znaki cudzysłowu, aby uwzględnić je w ciągu wynikowym, i używa nawiasów, aby rozdzielić wyrażenie `(age == 1 ? "" : "s")` tak, aby dwukropek nie był interpretowany jako początkowy ciąg formatu.
 
 [!code-vb[interpolated-strings](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings4.vb)]
 
@@ -51,29 +51,29 @@ Jeśli ciąg interpolowany zawiera inne znaki przy użyciu specjalnego znaczenia
 
 Istnieją trzy niejawne konwersje typów z ciągu interpolowanego:
 
-1. Konwersja ciągu interpolowanego do <xref:System.String>. Poniższy przykład zwraca ciąg, którego wyrażenia ciągu interpolowanego zostały zastąpione ich reprezentacji ciągu. Na przykład:
+1. Konwersja ciągu interpolowanego na <xref:System.String>. Poniższy przykład zwraca ciąg, którego interpolowane wyrażenia ciągu zostały zastąpione ich reprezentacją ciągu. Na przykład:
 
    [!code-vb[interpolated-strings1](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings1.vb)]
 
-   Jest to końcowy wynik interpretacji ciągu. Wszystkie wystąpienia podwójne nawiasy klamrowe ("{{" i "}}") są konwertowane na Pojedynczy nawias klamrowy.
+   Jest to ostateczny wynik interpretacji ciągu. Wszystkie wystąpienia podwójnych nawiasów klamrowych ("{{" i "}}") są konwertowane na pojedynczy nawias klamrowy.
 
-2. Konwersja ciągu interpolowanego do <xref:System.IFormattable> zmiennej, która umożliwia tworzenie wielu wyników ciągi z zawartością specyficzne dla kultury z jednej <xref:System.IFormattable> wystąpienia. Jest to przydatne, w tym takich zadań jak poprawne formaty liczb i dat dla poszczególnych kultur.  Wszystkie wystąpienia podwójne nawiasy klamrowe ("{{" i "}}") pozostają podwójne nawiasy klamrowe do momentu sformatować ciąg przez wywołanie metody jawnie lub niejawnie <xref:System.Object.ToString> metody.  Wszystkie wyrażenia interpolacji zawarte są konwertowane na {0}, {1}i tak dalej.
+2. Konwersja ciągu interpolowanego na <xref:System.IFormattable> zmienną, która umożliwia tworzenie wielu ciągów wynikowych z zawartością specyficzną dla kultury z jednego <xref:System.IFormattable> wystąpienia. Jest to przydatne do uwzględniania takich elementów jak poprawne formaty liczbowe i daty dla poszczególnych kultur.  Wszystkie wystąpienia podwójnych nawiasów klamrowych ("{{" i "}}") pozostają jako podwójne nawiasy klamrowe do momentu formatowania ciągu przez jawne lub niejawne wywołanie <xref:System.Object.ToString> metody.  Wszystkie zawarte wyrażenia interpolacji są konwertowane na {0}, {1}, i tak dalej.
 
-   W poniższym przykładzie użyto odbicia, aby wyświetlić elementy członkowskie, a także wartości pola i właściwości <xref:System.IFormattable> zmiennej, która jest tworzona na podstawie ciągu interpolowanym. Przekazuje także <xref:System.IFormattable> zmienną <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> metody.
+   Poniższy przykład używa odbicia, aby wyświetlić elementy członkowskie, a także wartości <xref:System.IFormattable> pól i właściwości zmiennej, która jest tworzona na podstawie interpolowanego ciągu. Przekazuje <xref:System.IFormattable> również zmienną <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> do metody.
 
    [!code-vb[interpolated-strings2](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings2.vb)]
 
-   Należy pamiętać, że ciągu interpolowanego może być kontrolowane tylko przy użyciu odbicia. Jeśli zostanie on przekazany do ciągu formatowania metody, takie jak <xref:System.Console.WriteLine(System.String)>, jego elementami formatu są rozwiązywane i zwracany ciąg wyniku.
+   Należy zauważyć, że ciąg interpolowany może być sprawdzany tylko przy użyciu odbicia. Jeśli zostanie przekazana do metody formatowania ciągu, na przykład <xref:System.Console.WriteLine(System.String)>, jego elementy formatu są rozwiązane i zwracany jest ciąg wynikowy.
 
-3. Konwersja ciągu interpolowanego do <xref:System.FormattableString> zmienna, która reprezentuje ciąg formatu złożonego. Inspekcja ciąg formatu złożonego i sposób renderowania w wyniku ciągu może na przykład pomóc w ochronie przed atakami iniekcji w przypadku kompilowania zapytania. A <xref:System.FormattableString> obejmowały:
+3. Konwersja ciągu interpolowanego na <xref:System.FormattableString> zmienną, która reprezentuje ciąg formatu złożonego. Sprawdzanie ciągu formatu złożonego i sposób renderowania jako ciąg wynikowy może na przykład ułatwić ochronę przed atakami polegającymi na iniekcji w przypadku tworzenia zapytania. Obejmuje <xref:System.FormattableString> również:
 
-      - A <xref:System.FormattableString.ToString> przeciążenia, które tworzy ciąg wyniku <xref:System.Globalization.CultureInfo.CurrentCulture>.
+      - Przeciążenie generujące ciąg wynikowy <xref:System.Globalization.CultureInfo.CurrentCulture>dla. <xref:System.FormattableString.ToString>
 
-      - A <xref:System.FormattableString.Invariant%2A> metodę, która tworzy ciąg <xref:System.Globalization.CultureInfo.InvariantCulture>.
+      - Metoda, która tworzy ciąg <xref:System.Globalization.CultureInfo.InvariantCulture>dla elementu. <xref:System.FormattableString.Invariant%2A>
 
-      - A <xref:System.FormattableString.ToString(System.IFormatProvider)> metodę, która daje ciąg wynikowy dla określonej kultury.
+      - <xref:System.FormattableString.ToString(System.IFormatProvider)> Metoda, która tworzy ciąg wynikowy dla określonej kultury.
 
-    Wszystkie wystąpienia podwójne nawiasy klamrowe ("{{" i "}}") pozostają podwójne nawiasy klamrowe do momentu formatowania.  Wszystkie wyrażenia interpolacji zawarte są konwertowane na {0}, {1}i tak dalej.
+    Wszystkie wystąpienia podwójnych nawiasów klamrowych ("{{" i "}}") pozostają jako podwójne nawiasy klamrowe, dopóki nie sformatujesz.  Wszystkie zawarte wyrażenia interpolacji są konwertowane na {0}, {1}, i tak dalej.
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]
 

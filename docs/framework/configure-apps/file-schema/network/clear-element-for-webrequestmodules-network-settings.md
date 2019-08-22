@@ -10,17 +10,17 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 5dea238629b282776cb45f7b388e655fa557d084
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e175c70bd4932d6a8f9428e8cd9159a47df52558
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674600"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659429"
 ---
-# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<Wyczyść >, Element dla webRequestModules (ustawienia sieci)
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<Wyczyść element > dla webRequestModules (Ustawienia sieci)
 Usuwa wszystkie zarejestrowane moduły żądania sieci Web z aplikacji.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.net>  
 \<webRequestModules>  
 \<clear>  
@@ -44,16 +44,16 @@ Usuwa wszystkie zarejestrowane moduły żądania sieci Web z aplikacji.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Określa moduły do użycia na żądanie informacji z hostów w sieci.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Określa moduły, które mają być używane do żądania informacji z hostów sieciowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- `clear` Elementu usuwa wszystkie zarejestrowane moduły żądania sieci Web, które zostały wcześniej zdefiniowane w pliku konfiguracji lub wyższego poziomu w hierarchii konfiguracji.  
+ `clear` Element usuwa wszystkie zarejestrowane moduły żądania sieci Web, które zostały zdefiniowane wcześniej w pliku konfiguracyjnym lub na wyższym poziomie w hierarchii konfiguracji.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
+ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład czyści wszystkie moduły żądania sieci Web, a następnie rejestruje moduł żądania sieci Web do obsługi protokołu HTTP.  
+ Poniższy przykład czyści wszystkie moduły żądania sieci Web, a następnie rejestruje moduł żądania sieci Web dla protokołu HTTP.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ Usuwa wszystkie zarejestrowane moduły żądania sieci Web z aplikacji.
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Net.WebRequest>
-- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](index.md)

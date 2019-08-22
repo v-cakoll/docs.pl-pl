@@ -5,15 +5,15 @@ helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-ms.openlocfilehash: 053e2776153489dfdd61547fdc039980646ae697
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9b126cee83bc8109606d915ea48549beea970c9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704729"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663476"
 ---
 # <a name="remove-element-for-namedcaches"></a>\<remove> Element for \<namedCaches>
-Usuwa wpis nazwaną pamięć podręczną z `namedCaches` kolekcji w pamięci podręcznej.  
+Usuwa wpis nazwanej pamięci podręcznej z `namedCaches` kolekcji dla pamięci podręcznej.  
   
  \<system.runtime.caching>  
 \<memoryCache>  
@@ -45,11 +45,11 @@ Usuwa wpis nazwaną pamięć podręczną z `namedCaches` kolekcji w pamięci pod
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Zawiera kolekcję ustawień konfiguracji dla nazwanego <xref:System.Runtime.Caching.MemoryCache> wystąpień.|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|Zawiera kolekcję ustawień konfiguracji dla nazwanych <xref:System.Runtime.Caching.MemoryCache> wystąpień.|  
   
 ## <a name="remarks"></a>Uwagi  
- `remove` Usuwa element `namedCache` wpis z kolekcji nazwaną pamięć podręczną dla pamięci podręcznej.  
+ `remove` Element`namedCache` usuwa wpis z kolekcji nazwanych pamięci podręcznej dla pamięci podręcznej.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [\<namedCaches >, Element (ustawienia pamięci podręcznej)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches >, element (ustawienia pamięci podręcznej)](namedcaches-element-cache-settings.md)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-ms.openlocfilehash: b0487ba5025557f07d9991f911cd71a677a04e2c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fd6668a551663470a97b07ff131710dbe92a91f5
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423377"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659033"
 ---
 # <a name="add-element-for-namedcaches"></a>\<add> Element for \<namedCaches>
-Dodaje `namedCache` wpis `namedCaches` kolekcji w pamięci podręcznej.  
+`namedCache` Dodaje wpis`namedCaches` do kolekcji dla pamięci podręcznej pamięci.  
   
  \<system.runtime.caching>  
 \<memoryCache>  
@@ -39,10 +39,10 @@ Dodaje `namedCache` wpis `namedCaches` kolekcji w pamięci podręcznej.
   
 |Atrybut|Opis|  
 |-|-|  
-|`CacheMemoryLimitMegabytes`|Wartość całkowitą, która określa maksymalny dozwolony rozmiar (w megabajtach), wystąpienie <xref:System.Runtime.Caching.MemoryCache> może zwiększyć się. Wartość domyślna to 0, co oznacza, że <xref:System.Runtime.Caching.MemoryCache> domyślnie są używane algorytmy heurystyczne automatyczne określanie rozmiaru tej klasy.|  
+|`CacheMemoryLimitMegabytes`|Wartość całkowita określająca maksymalny dozwolony rozmiar (w megabajtach), do którego wystąpienie <xref:System.Runtime.Caching.MemoryCache> może się rozwijać. Wartość domyślna to 0, co oznacza, że <xref:System.Runtime.Caching.MemoryCache> algorytmy autowymiarowania klasy są używane domyślnie.|  
 |`Name`|Nazwa pamięci podręcznej.|  
-|`PhysicalMemoryLimitPercentage`|Wartość całkowitą pomiędzy 0 a 100 określającą maksymalną wartość procentową fizycznie zainstalowanym komputerze pamięci, które mogą być używane przez pamięć podręczną. Wartość domyślna to 0, co oznacza, że <xref:System.Runtime.Caching.MemoryCache> domyślnie są używane algorytmy heurystyczne automatyczne określanie rozmiaru tej klasy.|  
-|`PollingInterval`|Wartość, która wskazuje przedział czasu, po upływie którego implementacja pamięci podręcznej porównuje bieżące obciążenie pamięci limitów bezwzględne i opartych na procentach pamięci, które są ustawione na wystąpienie pamięci podręcznej. Ta wartość jest wprowadzana w formacie "Gg".|  
+|`PhysicalMemoryLimitPercentage`|Wartość całkowita z zakresu od 0 do 100, która określa maksymalną wartość procentową fizycznie zainstalowanej pamięci komputera, która może być używana przez pamięć podręczną. Wartość domyślna to 0, co oznacza, że <xref:System.Runtime.Caching.MemoryCache> algorytmy autowymiarowania klasy są używane domyślnie.|  
+|`PollingInterval`|Wartość, która wskazuje przedział czasu, po upływie którego implementacja pamięci podręcznej porównuje bieżące obciążenie pamięci z limitami pamięci bezwzględnej i procentową ustawioną dla wystąpienia pamięci podręcznej. Ta wartość jest wprowadzana w formacie "gg: MM: SS".|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  `None`  
@@ -51,13 +51,13 @@ Dodaje `namedCache` wpis `namedCaches` kolekcji w pamięci podręcznej.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Zawiera kolekcję ustawień konfiguracji dla nazwanego <xref:System.Runtime.Caching.MemoryCache> wystąpień.|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|Zawiera kolekcję ustawień konfiguracji dla nazwanych <xref:System.Runtime.Caching.MemoryCache> wystąpień.|  
   
 ## <a name="remarks"></a>Uwagi  
- `add` Elementu dodaje wpis do `namedCaches` kolekcji w pamięci podręcznej. Możesz użyć [wyczyść](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md) element przed użyciem `add` elementu, aby mieć pewność, że nie istnieją żadne inne nazwane pamięci podręczne w kolekcji. Ten element może służyć w pliku machine.config i w pliku Web.config.  
+ Element dodaje wpis `namedCaches` do kolekcji dla pamięci podręcznej pamięci. `add` Można użyć elementu [Clear](clear-element-for-namedcaches.md) przed użyciem `add` elementu, aby mieć pewność, że w kolekcji nie ma innych nazwanych pamięci podręcznych. Ten element może być używany w pliku Machine. config i w pliku Web. config.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje jak zdefiniować ustawienia dla domyślnej `namedCache` wpis `namedCaches` kolekcji w pamięci podręcznej.  
+ Poniższy przykład pokazuje, jak zdefiniować ustawienia domyślnego `namedCache` wpisu `namedCaches` do kolekcji dla pamięci podręcznej.  
   
 ```xml  
 <configuration>  
@@ -78,4 +78,4 @@ Dodaje `namedCache` wpis `namedCaches` kolekcji w pamięci podręcznej.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [\<namedCaches >, Element (ustawienia pamięci podręcznej)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches >, element (ustawienia pamięci podręcznej)](namedcaches-element-cache-settings.md)

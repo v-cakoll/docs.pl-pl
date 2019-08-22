@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 53faf31c8dd3be1606c491e95594c4aae5aedf98
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 6d7d867b7c9e83b68589e046565bfb0199692f5f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039669"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658513"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Instrukcje: ustawianie domyślnych stylów komórek i formatów danych dla kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 
@@ -23,7 +23,6 @@ Aby uzyskać więcej informacji na temat stylów komórek, zobacz [style komóre
 Możesz również ustawić style przy użyciu <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> właściwości, aby wpływać na wszystkie wiersze, które zostaną dodane do kontrolki. Aby uzyskać więcej informacji na temat szablonu wiersza, [zobacz How to: Użyj szablonu wiersza do dostosowania wierszy w kontrolce](use-the-row-template-to-customize-rows-in-the-datagrid.md)DataGridView Windows Forms.
 
 Poniższe procedury wymagają projektu **aplikacji systemu Windows** z formularzem zawierającym <xref:System.Windows.Forms.DataGridView> kontrolkę. Aby uzyskać informacje na temat konfigurowania takiego projektu, zobacz [How to: Utwórz projekt](/visualstudio/ide/step-1-create-a-windows-forms-application-project) aplikacji Windows Forms i [instrukcje: Dodaj formanty do Windows Forms](how-to-add-controls-to-windows-forms.md).
-
 
 ### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>Aby ustawić domyślne style dla wszystkich komórek w kontrolce
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6191ee2169a85725f0367763874e60c0ceb1d7a4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2715548a40579375cebbdd5fb9003738a42ff714
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489435"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663652"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy> Element
-Określa, czy środowisko uruchomieniowe języka wspólnego umożliwia kodu zarządzanego wykryć naruszenia zasad dostępu i inne wyjątki uszkodzony.  
+Określa, czy środowisko uruchomieniowe języka wspólnego umożliwia kodowi zarządzanemu przechwytywanie naruszeń dostępu i innych wyjątków uszkodzonych Stanów.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<runtime>  
 \<legacyCorruptedStateExceptionsPolicy>  
   
@@ -34,14 +34,14 @@ Określa, czy środowisko uruchomieniowe języka wspólnego umożliwia kodu zarz
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, że aplikacja będzie przechwytywać uszkodzenia stan wyjątku awarie, takie jak naruszenia zasad dostępu.|  
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, że aplikacja będzie przechwytywać błędy wyjątku stanu, takie jak naruszenia zasad dostępu.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`false`|Aplikacja nie będzie przechwytywać uszkodzenia stan wyjątku awarie, takie jak naruszenia zasad dostępu. Domyślnie włączone.|  
-|`true`|Aplikacja będzie przechwytywać uszkodzenia stan wyjątku awarie, takie jak naruszenia zasad dostępu.|  
+|`false`|Aplikacja nie będzie przechwytywać uszkodzonych błędów wyjątku stanu, takich jak naruszenia zasad dostępu. Domyślnie włączone.|  
+|`true`|Aplikacja będzie przechwycić błędy wyjątku stanu, takie jak naruszenia zasad dostępu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -54,20 +54,20 @@ Określa, czy środowisko uruchomieniowe języka wspólnego umożliwia kodu zarz
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- W .NET Framework w wersji 3.5 i starszych środowisko uruchomieniowe języka wspólnego mogą przechwytywać wyjątków, które zostały zgłoszone przez Państwa uszkodzony procesu kodu zarządzanego. Naruszenie zasad dostępu znajduje się przykład tego typu wyjątku.  
+ W .NET Framework w wersji 3,5 i starszych środowisko uruchomieniowe języka wspólnego może przechwytywać wyjątki, które zostały zgłoszone przez uszkodzone Stany procesów. Naruszenie zasad dostępu jest przykładem tego typu wyjątku.  
   
- Począwszy od programu .NET Framework 4, kod zarządzany nie jest już przechwytuje tego rodzaju wyjątków w `catch` bloków. Można jednak zastąpić tę zmianę i obsługa z obsługą wyjątków uszkodzony na dwa sposoby:  
+ Począwszy od .NET Framework 4, kod zarządzany nie przechwytuje już tych typów wyjątków w `catch` blokach. Można jednak zastąpić tę zmianę i zachować obsługę wyjątków uszkodzonych Stanów na dwa sposoby:  
   
-- Ustaw `<legacyCorruptedStateExceptionsPolicy>` elementu `enabled` atrybutu `true`. To ustawienie konfiguracji jest zastosowany processwide i ma wpływ na wszystkie metody.  
+- `<legacyCorruptedStateExceptionsPolicy>` Ustaw atrybut`enabled` elementu na `true`. To ustawienie konfiguracji jest stosowane processwide i ma wpływ na wszystkie metody.  
   
  —lub—  
   
-- Zastosuj <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> atrybutu do metody, która zawiera wyjątki `catch` bloku.  
+- Zastosuj atrybut do metody, która zawiera blok wyjątków `catch`. <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>  
   
- Ten element konfiguracji jest dostępny tylko w programie .NET Framework 4 lub nowszej.  
+ Ten element konfiguracji jest dostępny tylko w .NET Framework 4 i nowszych.  
   
 ## <a name="example"></a>Przykład  
- Jak określić, że aplikacja powinna powrócić do zachowania przed programu .NET Framework 4 i przechwytywać wszystkie błędny stan wyjątku błędów można znaleźć w poniższym przykładzie.  
+ Poniższy przykład pokazuje, jak określić, że aplikacja ma zostać przywrócona do zachowania przed .NET Framework 4 i przechwycić wszystkie błędy wyjątków spowodowanych uszkodzeniem stanu.  
   
 ```xml  
 <configuration>  
@@ -80,5 +80,5 @@ Określa, czy środowisko uruchomieniowe języka wspólnego umożliwia kodu zarz
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)

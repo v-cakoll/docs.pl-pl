@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5bfa5449ece1b24d4f47fe3e77e36b26bbe430c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 881862b6b81ace1c1923b2a22d2fbe54d939d84e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689843"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663570"
 ---
-# <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy> Element
+# <a name="netfx40_legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy> Element
 
-Określa, czy środowisko wykonawcze używa starszego kodu zasady zabezpieczeń dostępu (CAS).
+Określa, czy środowisko uruchomieniowe korzysta ze starszych zasad zabezpieczeń dostępu kodu (CAS).
 
-\<Konfiguracja > \
-\<runtime>\
+\<> konfiguracji \
+\<> środowiska uruchomieniowego \
 \<NetFx40_LegacySecurityPolicy>
 
 ## <a name="syntax"></a>Składnia
@@ -37,14 +37,14 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko wykonawcze używa starsza zasada CAS.|
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe używa starszych zasad CAS.|
 
 ## <a name="enabled-attribute"></a>Atrybut włączony
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`false`|Środowisko wykonawcze nie używa starsza zasada CAS. Domyślnie włączone.|
-|`true`|Środowisko wykonawcze używa starsza zasada CAS.|
+|`false`|Środowisko uruchomieniowe nie używa starszych zasad CAS. Domyślnie włączone.|
+|`true`|Środowisko uruchomieniowe używa starszych zasad CAS.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -59,28 +59,28 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-W .NET Framework w wersji 3.5 i wcześniejszymi wersjami urzędy certyfikacji zasad jest zawsze w obiekcie. W programie .NET Framework 4 można włączyć zasady CAS.
+W .NET Framework wersja 3,5 i wcześniejsze wersje zasady CAS są zawsze włączone. W .NET Framework 4 należy włączyć zasady CAS.
 
-Urzędy certyfikacji zasad jest specyficzny dla wersji. Zasady niestandardowe urzędów certyfikacji, które istnieją we wcześniejszych wersjach programu .NET Framework musi obowiązywać w programie .NET Framework 4.
+Zasady CAS są specyficzne dla wersji. Zasady niestandardowych urzędów certyfikacji, które istnieją we wcześniejszych wersjach .NET Framework muszą zostać określone w .NET Framework 4.
 
-Stosowanie `<NetFx40_LegacySecurityPolicy>` element do zestawu .NET Framework 4 nie wpływa na [kod o przezroczystym poziomie bezpieczeństwa](../../../../../docs/framework/misc/security-transparent-code.md); nadal mają zastosowanie zasady przejrzystości.
+Zastosowanie elementu do zestawu .NET Framework 4 nie wpływa na kod przezroczysty dla bezpieczeństwa; nadal obowiązują reguły przezroczystości. [](../../../misc/security-transparent-code.md) `<NetFx40_LegacySecurityPolicy>`
 
 > [!IMPORTANT]
-> Stosowanie `<NetFx40_LegacySecurityPolicy>` elementu może spowodować istotnie poprawiającą wydajność dla zestawów obrazu natywnego, utworzone przez [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) nie są zainstalowane w [globalnej pamięci podręcznej zestawów ](../../../../../docs/framework/app-domains/gac.md). Spadek wydajności jest spowodowany brakiem możliwości środowiska uruchomieniowego ładować zestawy jako obrazy natywne, jeśli ten atrybut jest stosowany, co spowoduje ich załadowanych zespołów jako just-in-time.
+> Zastosowanie elementu może spowodować znaczny wpływ na wydajność zestawów obrazów natywnych utworzonych przez [Generator obrazu natywnego (Ngen. exe)](../../../tools/ngen-exe-native-image-generator.md) , które nie są zainstalowane w [globalnej pamięci podręcznej zestawów.](../../../app-domains/gac.md) `<NetFx40_LegacySecurityPolicy>` Spadek wydajności jest spowodowany przez niezdolność środowiska uruchomieniowego do załadowania zestawów jako obrazów natywnych podczas stosowania atrybutu, co spowoduje ich załadowanie jako zestawów just in Time.
 
 > [!NOTE]
-> Jeśli określisz docelowego .NET Framework w wersji starszej niż .NET Framework 4 w ustawieniach projektu dla projektu programu Visual Studio, urzędów certyfikacji, zasady zostaną włączone, w tym wszystkie niestandardowe zasady urzędów certyfikacji, wskazana dla danej wersji. Jednak nie można używać nowych typów programu .NET Framework 4 i elementów członkowskich. Można również określić przy użyciu wcześniejszej wersji programu .NET Framework [ \<supportedRuntime > element](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) w schemat ustawień uruchamiania w swojej [pliku konfiguracji aplikacji](../../../../../docs/framework/configure-apps/index.md).
+> Jeśli określisz wersję docelową .NET Framework, która jest wcześniejsza niż .NET Framework 4 w ustawieniach projektu dla projektu programu Visual Studio, zostaną włączone zasady CAS, w tym wszelkie niestandardowe zasady dotyczące urzędów certyfikacji określone dla tej wersji. Nie będzie jednak można używać nowych typów i elementów członkowskich .NET Framework 4. Możesz również określić wcześniejszą wersję .NET Framework przy użyciu [ \<elementu > supportedRuntime](../startup/supportedruntime-element.md) w schemacie ustawień uruchamiania w [pliku konfiguracyjnym aplikacji](../../index.md).
 
 > [!NOTE]
-> Składni plików konfiguracji jest uwzględniana wielkość liter. Należy użyć składni, zgodnie z postanowieniami w sekcjach składnię i przykład.
+> W składni pliku konfiguracji jest rozróżniana wielkość liter. Należy użyć składni podanej w sekcjach składnia i przykład.
 
 ## <a name="configuration-file"></a>Plik konfiguracji
 
-Ten element może być użyty tylko w pliku konfiguracyjnym aplikacji.
+Tego elementu można używać tylko w pliku konfiguracji aplikacji.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia sposób Włącz starszą zasadę dla aplikacji.
+Poniższy przykład pokazuje, jak włączyć zasady starszych urzędów certyfikacji dla aplikacji.
 
 ```xml
 <configuration>
@@ -92,5 +92,5 @@ Poniższy przykład przedstawia sposób Włącz starszą zasadę dla aplikacji.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)

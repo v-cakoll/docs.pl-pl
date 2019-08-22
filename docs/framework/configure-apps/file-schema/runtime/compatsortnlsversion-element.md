@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b426eaaa2dab4d54ea4c82483c079428f3bfac57
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 0ebc4bf703bc22b642b0950fd60471342a615a5c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689907"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663853"
 ---
-# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > Element
+# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion, element >
 Określa, że środowisko uruchomieniowe ma używać starszych kolejności sortowania podczas porównywania ciągów.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<runtime>  
-\<CompatSortNLSVersion > Element  
+\<CompatSortNLSVersion, element >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,7 +44,7 @@ Określa, że środowisko uruchomieniowe ma używać starszych kolejności sorto
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|4096|Identyfikator ustawień regionalnych reprezentujący alternatywną kolejność sortowania. W tym przypadku 4096 reprezentuje kolejność sortowania programu .NET Framework 3.5 i wcześniejszymi wersjami.|  
+|4096|Identyfikator ustawień regionalnych reprezentujący alternatywną kolejność sortowania. W tym przypadku 4096 reprezentuje porządek sortowania .NET Framework 3,5 i starszych wersji.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -57,32 +57,32 @@ Określa, że środowisko uruchomieniowe ma używać starszych kolejności sorto
 |`runtime`|Zawiera informacje dotyczące opcji inicjowania środowiska uruchomieniowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ponieważ porównania ciągów, sortowanie i operacje dotyczące wielkości znaków wykonywane przez <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> klasy w .NET Framework 4 są zgodne ze standardem Unicode 5.1. wyniki metod porównujących takich jak <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> i <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> może różnić się od poprzednie wersje programu .NET Framework. Jeśli aplikacja jest zależna od starszego zachowania, można przywrócić porównywania ciągów i sortowania reguł używanych w .NET Framework 3.5 i starszych wersjach, umieszczając `<CompatSortNLSVersion>` elementu w pliku konfiguracyjnym aplikacji.  
+ Ponieważ operacje porównywania ciągów, sortowania i wielkości liter wykonywane przez <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> klasę w .NET Framework 4 są zgodne ze standardem Unicode 5,1, wyniki metod porównywania ciągów, takie jak <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> i <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> mogą się różnić od poprzednie wersje .NET Framework. Jeśli aplikacja jest zależna od zachowania starszej wersji, można przywrócić porównanie ciągów i reguły sortowania używane w .NET Framework 3,5 i wcześniejszych wersjach przez dołączenie `<CompatSortNLSVersion>` elementu w pliku konfiguracyjnym aplikacji.  
   
 > [!IMPORTANT]
 >  Przywrócenie starszych reguł porównywania ciągów i sortowania powoduje też, że w systemie lokalnym musi być dostępna dołączana dynamicznie biblioteka sort00001000.dll.  
   
- Można również użyć reguł sortowania i porównywania ciągów starszej wersji w określonej domenie aplikacji, przekazując ciąg "NetFx40_Legacy20SortingBehavior", do <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> metody tworzenia domeny aplikacji.  
+ Można również użyć starszych reguł sortowania i porównywania ciągów w określonej domenie aplikacji, przekazując ciąg "NetFx40_Legacy20SortingBehavior" do <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> metody podczas tworzenia domeny aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy dwie <xref:System.String> obiektów i wywołuje <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> metody w celu porównania ich przy użyciu konwencji bieżącej kultury.  
+ Poniższy przykład tworzy wystąpienie dwóch <xref:System.String> obiektów i <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> wywołuje metodę w celu porównania ich przy użyciu Konwencji bieżącej kultury.  
   
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- Po uruchomieniu tego przykładu w .NET Framework 4, wyświetla następujące dane wyjściowe.  
+ Po uruchomieniu przykładu na .NET Framework 4 zostanie wyświetlone następujące dane wyjściowe.  
   
 ```  
 sta follows a in the sort order.  
 ```  
   
- To różni się całkowicie z danych wyjściowych, który jest wyświetlany po uruchomieniu przykładu w .NET Framework 3.5.  
+ Jest to zupełnie inne niż dane wyjściowe, które są wyświetlane po uruchomieniu przykładu na .NET Framework 3,5.  
   
 ```  
 sta equals a in the sort order.  
 ```  
   
- Jeśli jednak dodasz następujący plik konfiguracji do omawianego w przykładzie katalogu, a następnie uruchomisz przykład na .NET Framework 4, dane wyjściowe jest taka sama jak wytworzonego przez przykład, gdy jest on uruchamiany w .NET Framework 3.5.  
+ Jeśli jednak dodasz następujący plik konfiguracji do katalogu przykładu, a następnie uruchomisz przykład na .NET Framework 4, dane wyjściowe są identyczne z tym, które zostały utworzone przez przykład w przypadku uruchomienia na .NET Framework 3,5.  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -95,5 +95,5 @@ sta equals a in the sort order.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)

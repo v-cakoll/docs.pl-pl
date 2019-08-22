@@ -2,12 +2,12 @@
 title: Podnieś i Przenieś istniejące aplikacje .NET do usługi Azure IaaS (infrastruktura chmury — gotowe)
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows.
 ms.date: 04/28/2018
-ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e25ddbf9b6e62c264f3f4d4580d7df3553d262ea
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68677052"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660739"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Podnieś i Przenieś istniejące aplikacje .NET do usługi Azure IaaS (infrastruktura chmury — gotowe)
 
@@ -15,7 +15,7 @@ ms.locfileid: "68677052"
 
 Przed przystąpieniem do migrowania istniejących aplikacji do platformy Azure infrastruktura jako usługa (IaaS), ważne jest przeanalizowanie przyczyn, dla których chcesz migrować bezpośrednio do IaaS na platformie Azure. Scenariusz na tym poziomie operacji modernizacji zasadniczo ma rozpocząć korzystanie z maszyn wirtualnych w chmurze, zamiast korzystać z bieżącej infrastruktury lokalnej.
 
-Innym punktem do przeanalizowania *jest to* , że warto przeprowadzić migrację do czystego IaaS chmury, zamiast dodawać bardziej zaawansowane usługi zarządzane na platformie Azure. Określ, które przypadki mogą wymagać IaaS w pierwszym miejscu.
+Innym punktem do przeanalizowania jest to, że warto przeprowadzić migrację do czystego IaaS chmury, zamiast dodawać bardziej zaawansowane usługi zarządzane na platformie Azure. Określ, które przypadki mogą wymagać IaaS w pierwszym miejscu.
 
 Rysunek 2-1. pozycje infrastruktury chmurowej — gotowe aplikacje na poziomach dojrzałości modernizacji:
 
@@ -107,4 +107,4 @@ Rysunek 2-3 przedstawia wykonywanie wielu migracji maszyn wirtualnych przy użyc
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)Następny
->[](migrate-your-relational-databases-to-azure.md)
+>[](migrate-your-relational-databases-to-azure.md) <!-- Next Chapter -->

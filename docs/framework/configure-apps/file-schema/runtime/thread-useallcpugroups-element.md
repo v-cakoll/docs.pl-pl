@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9758e009e012c8af5f5f7bd19dcd21f34b8c7d96
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: e9ee6bdb7094ea2bc9e283e331c0f6ad9b68e4f9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689735"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663424"
 ---
-# <a name="threaduseallcpugroups-element"></a>\<Thread_UseAllCpuGroups> Element
+# <a name="thread_useallcpugroups-element"></a>\<Thread_UseAllCpuGroups> Element
 
-Określa, czy środowisko uruchomieniowe rozprowadza wątki zarządzane we wszystkich grupach CPU.
+Określa, czy środowisko uruchomieniowe dystrybuuje wątki zarządzane we wszystkich grupach procesora.
 
-\<Konfiguracja > \
-\<runtime>\
+\<> konfiguracji \
+\<> środowiska uruchomieniowego \
 \<Thread_UseAllCpuGroups>
 
 ## <a name="syntax"></a>Składnia
@@ -34,14 +34,14 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe rozprowadza wątki zarządzane we wszystkich grupach CPU.|
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe dystrybuuje wątki zarządzane we wszystkich grupach procesora.|
 
 ## <a name="enabled-attribute"></a>Atrybut włączony
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`false`|Środowisko uruchomieniowe nie rozkłada zarządzanych wątków w obrębie wielu grup CPU. Domyślnie włączone.|
-|`true`|Środowisko uruchomieniowe rozprowadza wątki zarządzane WE wiele grup CPU, jeśli komputer ma wiele grup CPU i [ \<gccpugroup — >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) element jest włączony.|
+|`false`|Środowisko uruchomieniowe nie dystrybuuje zarządzanych wątków w wielu grupach procesorów. Domyślnie włączone.|
+|`true`|Środowisko uruchomieniowe dystrybuuje wątki zarządzane między wiele grup CPU, jeśli komputer ma wiele grup CPU i [ \<GCCpuGroup element >](gccpugroup-element.md) jest włączony.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -56,7 +56,7 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-Kiedy komputer posiada wiele grup CPU, włączenie tego elementu powoduje dystrybucję zarządzanych wątków we wszystkich grupach CPU środowisko uruchomieniowe. Aby użyć tej funkcji, należy również włączyć [ \<gccpugroup — >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) element, który rozszerza wyrzucania elementów bezużytecznych na wszystkich grupach CPU i uwzględnia wszystkich rdzeni podczas tworzenia i równoważenie stosów. Włączanie [ \<gccpugroup — >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) element wymaga Włączanie [ \<gcserver — >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elementu. Jeśli te elementy nie są włączone, umożliwiając `<Thread_UseAllCpuGroups>` element nie ma wpływu.
+Gdy komputer ma wiele grup CPU, włączenie tego elementu powoduje, że środowisko uruchomieniowe dystrybuuje wątki zarządzane we wszystkich grupach procesora. Aby użyć tej funkcji, należy również włączyć [ \<GCCpuGroup >](gccpugroup-element.md) , który rozszerza odzyskiwanie pamięci do wszystkich grup CPU i pobiera wszystkie rdzenie w przypadku tworzenia i równoważenia sterty. Włączenie elementu > [ GCCpuGroupwymagawłączeniaelementugcServer>.\<](gcserver-element.md) [ \<](gccpugroup-element.md) Jeśli te elementy nie są włączone, włączenie `<Thread_UseAllCpuGroups>` elementu nie ma żadnego wpływu.
 
 ## <a name="example"></a>Przykład
 
@@ -74,6 +74,6 @@ Poniższy przykład pokazuje, jak włączyć obsługę wielu grup procesorów.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<GCCpuGroup> Element](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)
+- [\<GCCpuGroup> Element](gccpugroup-element.md)

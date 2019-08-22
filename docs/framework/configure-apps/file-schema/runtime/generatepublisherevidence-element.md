@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a0861436ca727d63cdae58e3222826bf6414610
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: caec297f8d0f6febad5cf46adb0a2658960c6bb1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489446"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663672"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> Element
-Określa, czy środowisko uruchomieniowe tworzy <xref:System.Security.Policy.Publisher> dowodów dla zabezpieczeń dostępu kodu (CAS).  
+Określa, czy środowisko uruchomieniowe tworzy <xref:System.Security.Policy.Publisher> dowód dla zabezpieczeń dostępu kodu (CAS).  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<runtime>  
 \<generatePublisherEvidence>  
   
@@ -35,14 +35,14 @@ Określa, czy środowisko uruchomieniowe tworzy <xref:System.Security.Policy.Pub
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe tworzy <xref:System.Security.Policy.Publisher> dowodów.|  
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe tworzy <xref:System.Security.Policy.Publisher> dowód.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`false`|Nie powoduje utworzenia <xref:System.Security.Policy.Publisher> dowodów.|  
-|`true`|Tworzy <xref:System.Security.Policy.Publisher> dowodów. Domyślnie włączone.|  
+|`false`|Nie tworzy <xref:System.Security.Policy.Publisher> dowodów.|  
+|`true`|Tworzy <xref:System.Security.Policy.Publisher> dowód. Domyślnie włączone.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -57,18 +57,18 @@ Określa, czy środowisko uruchomieniowe tworzy <xref:System.Security.Policy.Pub
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  W programie .NET Framework 4 i nowsze ten element nie ma wpływu na krótszy czas ładowania zestawu. Aby uzyskać więcej informacji, zobacz sekcję "Uproszczenia zasad zabezpieczeń" w [zmiany zabezpieczeń](../../../../../docs/framework/security/security-changes.md).  
+>  W .NET Framework 4 i nowszych ten element nie ma wpływu na czasy ładowania zestawu. Aby uzyskać więcej informacji, zobacz sekcję "uproszczenie zasad zabezpieczeń" w temacie [zmiany zabezpieczeń](../../../security/security-changes.md).  
   
- Środowisko uruchomieniowe języka wspólnego (CLR) próbuje zweryfikować podpisu Authenticode w czasie ładowania, aby utworzyć <xref:System.Security.Policy.Publisher> dowodu dla zestawu. Jednak domyślnie większość aplikacji nie ma potrzeby <xref:System.Security.Policy.Publisher> dowodów. Standardowe zasady CAS nie zależą od <xref:System.Security.Policy.PublisherMembershipCondition>. Należy unikać koszt uruchamiania niepotrzebnych związany z weryfikacji podpisu wydawcy, chyba że aplikacja wykonuje na komputerze za pomocą zasad niestandardowych urzędów certyfikacji lub zamierzający spełniają wymagania dla <xref:System.Security.Permissions.PublisherIdentityPermission> w środowisku częściowego zaufania. (Wymagania dotyczące uprawnień tożsamości zawsze powiedzie się w środowisku pełnego zaufania).  
+ Środowisko uruchomieniowe języka wspólnego (CLR) próbuje zweryfikować podpis Authenticode w czasie ładowania, aby <xref:System.Security.Policy.Publisher> utworzyć dowód dla zestawu. Jednak domyślnie większość aplikacji nie potrzebuje <xref:System.Security.Policy.Publisher> dowodu. Standardowe zasady CAS nie bazują na <xref:System.Security.Policy.PublisherMembershipCondition>. Należy unikać niepotrzebnego kosztu uruchomienia związanego z weryfikacją podpisu wydawcy, chyba że aplikacja jest wykonywana na komputerze z niestandardowymi zasadami CAS lub nie spełnia wymagań dotyczących <xref:System.Security.Permissions.PublisherIdentityPermission> w środowisku częściowego zaufania. (Wymagania dotyczące uprawnień tożsamości zawsze powiodło się w środowisku pełnego zaufania).  
   
 > [!NOTE]
->  Firma Microsoft zaleca, usługi, użyj `<generatePublisherEvidence>` element, aby zwiększyć wydajność uruchamiania.  Przy użyciu tego elementu może również pomóc uniknąć opóźnień, które mogą powodować upływu limitu czasu i anulowania uruchomienia usługi.  
+>  Zalecamy, aby usługi korzystały `<generatePublisherEvidence>` z elementu, aby zwiększyć wydajność uruchamiania.  Za pomocą tego elementu można także uniknąć opóźnień, które mogą spowodować przekroczenie limitu czasu i anulowanie uruchamiania usługi.  
   
 ## <a name="configuration-file"></a>Plik konfiguracji  
- Ten element może być użyty tylko w pliku konfiguracyjnym aplikacji.  
+ Tego elementu można używać tylko w pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać `<generatePublisherEvidence>` elementu, aby wyłączyć sprawdzanie urzędów certyfikacji zasad wydawcy dla aplikacji.  
+ Poniższy przykład pokazuje, jak użyć elementu, `<generatePublisherEvidence>` aby wyłączyć sprawdzanie zasad wydawcy CAS dla aplikacji.  
   
 ```xml  
 <configuration>  
@@ -80,5 +80,5 @@ Określa, czy środowisko uruchomieniowe tworzy <xref:System.Security.Policy.Pub
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat ustawień środowiska uruchomieniowego](index.md)
+- [Schemat pliku konfiguracji](../index.md)

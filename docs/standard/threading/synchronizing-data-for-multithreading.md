@@ -9,70 +9,70 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c83e7abbd9f9425fab70325f7a77abb0f672bd15
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1e558d86fd4e012a6b88e0bcd05d58ecddc6cc20
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638764"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666268"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Synchronizowanie danych na potrzeby wielowątkowości
 
-Gdy wiele wątków może wykonywać wywołania do właściwości i metody pojedynczy obiekt, ważne jest, można zsynchronizować te wywołania. W przeciwnym razie jeden wątek może spowodować zakłócenie działania innego wątku, a obiekt może pozostać w nieprawidłowym stanie. Klasy, której członkami są chronione przed przerw w zasilaniu nazywa się metodą o bezpiecznych wątkach.  
+Gdy wiele wątków może wykonywać wywołania do właściwości i metod pojedynczego obiektu, ma krytyczne znaczenie, aby te wywołania były synchronizowane. W przeciwnym razie jeden wątek może przerwać działanie innego wątku, a obiekt może pozostać w nieprawidłowym stanie. Klasa, której członkowie są chronieni przed takimi zakłóceniami, jest nazywana wątkowo bezpiecznym.  
   
-.NET zawiera kilka strategii do synchronizowania dostępu do wystąpienia i statyczne elementy członkowskie:  
+Platforma .NET udostępnia kilka strategii do synchronizowania dostępu do wystąpienia i statycznych elementów członkowskich:  
   
-- Regiony kodu zsynchronizowane. Możesz użyć <xref:System.Threading.Monitor> klasy lub kompilatora pomocy technicznej dla tej klasy zsynchronizować tylko Blokuj kod, który ich potrzebuje, poprawa wydajności.  
+- Zsynchronizowane regiony kodu. Możesz użyć <xref:System.Threading.Monitor> obsługi klasy lub kompilatora dla tej klasy, aby synchronizować tylko blok kodu, który go potrzebuje, zwiększając wydajność.  
   
-- Ręcznej synchronizacji. Można użyć dla obiektów synchronizacji zawartym w bibliotece klas programu .NET. Zobacz [Przegląd podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md), który zawiera omówienie <xref:System.Threading.Monitor> klasy.  
+- Ręczna synchronizacja. Możesz użyć obiektów synchronizacji dostarczonych przez bibliotekę klas .NET. Zobacz [Omówienie elementów pierwotnych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md), które obejmują dyskusję <xref:System.Threading.Monitor> klasy.  
   
-- Konteksty zsynchronizowane. W przypadku aplikacji .NET Framework i środowisku Xamarin, można użyć <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> Aby włączyć synchronizację prostego, automatyczne dla <xref:System.ContextBoundObject> obiektów.  
+- Synchronizowane konteksty. W przypadku aplikacji .NET Framework i Xamarin można użyć programu <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> , aby włączyć prostą, automatyczną <xref:System.ContextBoundObject> synchronizację obiektów.  
   
-- Klasy kolekcji w <xref:System.Collections.Concurrent?displayProperty=nameWithType> przestrzeni nazw. Te klasy oferują synchronizowane wbudowane Dodawanie i usuwanie operacji. Aby uzyskać więcej informacji, zobacz [kolekcje obsługujące wielowątkowość](../../../docs/standard/collections/thread-safe/index.md).  
+- Klasy kolekcji w <xref:System.Collections.Concurrent?displayProperty=nameWithType> przestrzeni nazw. Te klasy zapewniają wbudowaną synchronizację operacji dodawania i usuwania. Aby uzyskać więcej informacji, zobacz [kolekcje bezpieczne dla wątków](../../../docs/standard/collections/thread-safe/index.md).  
   
- Środowisko uruchomieniowe języka wspólnego udostępnia model wątku, w którym klasy można podzielić na wiele kategorii, które mogą być synchronizowane na różne sposoby w zależności od wymagań. W poniższej tabeli przedstawiono, jakie pomoc techniczna synchronizacji jest dostępna dla pola i metody z kategorią danego synchronizacji.  
+ Środowisko uruchomieniowe języka wspólnego udostępnia model wątku, w którym klasy mieszczą się w różnych kategoriach, które można synchronizować na różne sposoby, w zależności od wymagań. W poniższej tabeli przedstawiono obsługę synchronizacji dla pól i metod z daną kategorią synchronizacji.  
   
-|Kategoria|Globalne pola|Pola statyczne|Metody statyczne|Pola wystąpienia|Metody wystąpienia|Bloki kodu określonych|  
+|Kategoria|Pola globalne|Pola statyczne|Metody statyczne|Pola wystąpienia|Metody wystąpień|Określone bloki kodu|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |Brak synchronizacji|Nie|Nie|Nie|Nie|Nie|Nie|  
-|Kontekst zsynchronizowane|Nie|Nie|Nie|Yes|Yes|Nie|  
-|Regiony kodu zsynchronizowane|Nie|Nie|Tylko wtedy, gdy zaznaczone|Nie|Tylko wtedy, gdy zaznaczone|Tylko wtedy, gdy zaznaczone|  
-|Ręcznej synchronizacji|Ręcznie|Ręcznie|Ręcznie|Ręcznie|Ręcznie|Ręcznie|  
+|Zsynchronizowany kontekst|Nie|Nie|Nie|Yes|Yes|Nie|  
+|Zsynchronizowane regiony kodu|Nie|Nie|Tylko wtedy, gdy oznaczono|Nie|Tylko wtedy, gdy oznaczono|Tylko wtedy, gdy oznaczono|  
+|Synchronizacja ręczna|Ręcznie|Ręcznie|Ręcznie|Ręcznie|Ręcznie|Ręcznie|  
   
 ## <a name="no-synchronization"></a>Brak synchronizacji  
- Jest to wartość domyślna dla obiektów. Wątek może uzyskać dostęp do dowolnej metody pól w dowolnym momencie. Tylko jeden wątek jednocześnie powinien uzyskać dostęp do tych obiektów.  
+ Jest to wartość domyślna dla obiektów. Dowolny wątek może uzyskać dostęp do dowolnej metody lub pola w dowolnym momencie. Tylko jeden wątek jednocześnie powinien uzyskać dostęp do tych obiektów.  
   
-## <a name="manual-synchronization"></a>Ręcznej synchronizacji  
- Biblioteka klas .NET oferuje pewną liczbę klas synchronizacji wątków. Zobacz [Przegląd elementów podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+## <a name="manual-synchronization"></a>Synchronizacja ręczna  
+ Biblioteka klas .NET udostępnia wiele klas do synchronizowania wątków. Zobacz [Omówienie elementów pierwotnych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
-## <a name="synchronized-code-regions"></a>Regiony kodu zsynchronizowane  
- Możesz użyć <xref:System.Threading.Monitor> klasy lub słowem kluczowym kompilatora, aby zsynchronizować bloki kodu, wystąpienia metod i metod statycznych. Nie jest obsługiwane dla zsynchronizowanej pola statyczne.  
+## <a name="synchronized-code-regions"></a>Zsynchronizowane regiony kodu  
+ Można użyć <xref:System.Threading.Monitor> klasy lub słowa kluczowego kompilatora do synchronizowania bloków kodu, metod wystąpień i metod statycznych. Nie ma obsługi zsynchronizowanych pól statycznych.  
   
- Visual Basic i C# obsługują znakowanie bloki kodu ze słowem kluczowym konkretnego języka `lock` instrukcji w języku C# lub `SyncLock` instrukcji w języku Visual Basic. Gdy kod jest wykonywany przez wątek, podejmowana jest próba uzyskania blokady. Jeśli blokada nabyła została już przez inny wątek, bloków wątku, dopóki blokada staje się dostępna. Jeśli wątek kończy działanie zsynchronizowane bloku kodu, blokada jest zwalniana, niezależnie od tego, jak wątek zamyka blok.  
+ Oba Visual Basic i C# obsługują oznaczenie bloków kodu z określonym słowem kluczowym języka, `lock` C# `SyncLock` instrukcję w lub instrukcji w Visual Basic. Gdy kod jest wykonywany przez wątek, podejmowana jest próba uzyskania blokady. Jeśli blokada została już uzyskana przez inny wątek, bloki wątku do momentu udostępnienia blokady staną się dostępne. Gdy wątek opuszcza zsynchronizowany blok kodu, blokada zostaje wydana, niezależnie od tego, jak wątek opuszcza blok.  
   
 > [!NOTE]
->  `lock` i `SyncLock` instrukcje są implementowane za pomocą <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> i <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>, więc inne metody <xref:System.Threading.Monitor> mogą być używane w połączeniu z nimi w ramach zsynchronizowane regionu.  
+>  <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> <xref:System.Threading.Monitor> Instrukcje i są`SyncLock` implementowane za pomocą i, dlatego inne metody można używać w połączeniu z nimi w zsynchronizowanym regionie. `lock`  
   
- Można również dekoracji metody z <xref:System.Runtime.CompilerServices.MethodImplAttribute> o wartości <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType>, który ma ten sam efekt jak użycie <xref:System.Threading.Monitor> lub słowa kluczowe kompilatora do zablokowania całej treści metody.  
+ Możesz również dekorować metodę z <xref:System.Runtime.CompilerServices.MethodImplAttribute> <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType>wartością, która ma taki sam skutek jak użycie <xref:System.Threading.Monitor> lub jeden z słów kluczowych kompilatora, aby zablokować całą treść metody.  
   
- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> można podzielić wątku z blokowaniem operacje, takie jak oczekiwanie na dostęp do synchronizowanych obszar kodu. **Thread.Interrupt** również służy do dzielenia wątków poza operacje, takie jak <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.  
+ <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>może służyć do przerwania wątku poza operacje blokowania, takie jak oczekiwanie na dostęp do synchronizowanego regionu kodu. **Wątek. Interrupt** jest również używany do przerwania wątków, takich jak <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
->  Nie blokuj typu — oznacza to, `typeof(MyType)` w języku C# `GetType(MyType)` w języku Visual Basic lub `MyType::typeid` języka C++ — w celu ochrony `static` metody (`Shared` metod w języku Visual Basic). Zamiast tego użyj prywatnego obiektu statycznego. Podobnie, nie używaj `this` w języku C# (`Me` w języku Visual Basic) do metod wystąpienia blokady. Zamiast tego użyj prywatnego obiektu. Klasy lub wystąpienia mogą być zablokowane przez kod inny niż własny, powodując zakleszczenia lub problemy z wydajnością.  
+>  Nie blokuj typu — `typeof(MyType)` to znaczy, w C#, `GetType(MyType)` w Visual Basic lub `MyType::typeid` w programie C++ — w celu ochrony `static` metod (`Shared` metod w Visual Basic). Zamiast tego użyj prywatnego obiektu statycznego. Podobnie nie należy używać `this` programu w programie`Me` C# (w Visual Basic) do blokowania metod wystąpienia. Zamiast tego użyj obiektu prywatnego. Klasę lub wystąpienie można zablokować za pomocą kodu innego niż własny, potencjalnie powodującego zakleszczenie lub problemy z wydajnością.  
   
 ### <a name="compiler-support"></a>Obsługa kompilatora  
- Visual Basic i C# obsługuje słowem kluczowym języka, który używa <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> i <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> można zablokować obiektu. Obsługa języka Visual Basic [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) instrukcję C# obsługuje [blokady](~/docs/csharp/language-reference/keywords/lock-statement.md) instrukcji.  
+ Obie Visual Basic i C# obsługują słowo kluczowe języka, które <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> używa <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> i do blokowania obiektu. Visual Basic obsługuje instrukcję [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) ; C# obsługuje instrukcję [Lock](../../csharp/language-reference/keywords/lock-statement.md) .  
   
- W obu przypadkach, jeśli wyjątek jest zgłaszany w kodzie należy go zablokować, blokadę uzyskaną przez **blokady** lub **SyncLock** zwolnieniu automatycznie. Kompilatory C# i Visual Basic emisji **spróbuj**/**na koniec** zablokować za pomocą **Monitor.Enter** na początku try, i **Monitor.Exit**  w **na koniec** bloku. Jeśli wyjątek jest generowany wewnątrz **blokady** lub **SyncLock** bloku, **na koniec** uruchamia program obsługi pozwala wykonać pracę oczyszczania.  
+ W obu przypadkach, jeśli wyjątek jest zgłaszany w bloku kodu, blokada uzyskana przez blokadę lub **SyncLock** jest automatycznie wydawana. Kompilatory C# i Visual Basic emitują blok **try**/**finally** z **monitorem. Wprowadź** na początku try, a **monitor. Exit** w bloku **finally** . Jeśli w bloku **blokady** lub **SyncLock** zostanie zgłoszony wyjątek, program obsługi **finally** zostanie uruchomiony w celu umożliwienia wykonania wszelkich operacji oczyszczania.  
   
-## <a name="synchronized-context"></a>Kontekst zsynchronizowane  
+## <a name="synchronized-context"></a>Zsynchronizowany kontekst  
  
-W programie .NET Framework i środowisku Xamarin tylko aplikacji, można użyć <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> na dowolnym <xref:System.ContextBoundObject> zsynchronizować wszystkie wystąpienia metod i pól. Wszystkie obiekty w tej samej domenie kontekstu udostępnianie tego samego blokady. Wiele wątków może uzyskiwać dostęp do metod i pól, ale tylko jednego wątku jest dozwolona w dowolnym momencie.  
+Tylko w aplikacjach .NET Framework i Xamarin, można użyć <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> na dowolnym <xref:System.ContextBoundObject> , aby zsynchronizować wszystkie metody wystąpień i pola. Wszystkie obiekty w tej samej domenie kontekstu mają tę samą blokadę. Wiele wątków może uzyskać dostęp do metod i pól, ale tylko jeden wątek jest dozwolony w dowolnym momencie.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [Wątki i wątkowość](../../../docs/standard/threading/threads-and-threading.md)
 - [Przegląd elementów podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
-- [SyncLock, instrukcja](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
-- [lock, instrukcja](~/docs/csharp/language-reference/keywords/lock-statement.md)
+- [SyncLock, instrukcja](../../visual-basic/language-reference/statements/synclock-statement.md)
+- [lock, instrukcja](../../csharp/language-reference/keywords/lock-statement.md)

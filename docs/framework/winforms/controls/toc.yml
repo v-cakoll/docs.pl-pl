@@ -47,22 +47,17 @@
           href: how-to-add-activex-controls-to-windows-forms.md
         - name: Uwagi odnośnie do hostowania kontrolki ActiveX na formularzu systemu Windows
           href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
-    - name: Etykietowanie pojedynczych formantów formularzy systemu Windows i określanie skrótów dla nich
-      href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
+    - name: Oznaczanie kontrolek etykietami i udostępnianie skrótów
       items:
-        - name: 'Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy systemu Windows'
+        - name: Omówienie
+          href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
+        - name: Tworzenie klawiszy dostępu dla kontrolek
           href: how-to-create-access-keys-for-windows-forms-controls.md
-        - name: 'Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy systemu Windows przy użyciu narzędzia Projektant'
-          href: how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md
-        - name: 'Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę formularzy systemu Windows'
+        - name: Ustawianie tekstu wyświetlanego przez kontrolkę
           href: how-to-set-the-text-displayed-by-a-windows-forms-control.md
-        - name: 'Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę formularzy systemu Windows przy użyciu narzędzia Projektant'
-          href: how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md
-        - name: 'Instrukcje: ustawianie obrazu wyświetlanego przez kontrolkę formularzy systemu Windows'
+        - name: Ustawianie obrazu wyświetlanego przez kontrolkę
           href: how-to-set-the-image-displayed-by-a-windows-forms-control.md
-        - name: 'Instrukcje: ustawianie obrazu wyświetlanego przez kontrolkę formularzy systemu Windows przy użyciu narzędzia Projektant'
-          href: how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md
-        - name: Podawanie informacji o ułatwieniach dostępu dotyczących formantów w formularzu systemu Windows
+        - name: Podawanie informacji o ułatwieniach dostępu dla kontrolek
           href: providing-accessibility-information-for-controls-on-a-windows-form.md
     - name: Formanty do użycia w formularzach systemu Windows
       href: controls-to-use-on-windows-forms.md

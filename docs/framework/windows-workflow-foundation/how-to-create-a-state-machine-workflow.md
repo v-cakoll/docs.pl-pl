@@ -5,73 +5,73 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 84d2355a78c7d33bf712baf158f28861e59e75d1
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3f1c1beda7519a113ea15c5fed84bcb017afae12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881937"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962349"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Instrukcje: Tworzenie przepływu pracy automatu stanów
-Przepływy pracy można skonstruować z wbudowanych działań, a także z działań niestandardowych. Ten temat prowadzi przez proces tworzenia przepływu pracy, który używa zarówno wbudowanych działań, takich jak <xref:System.Activities.Statements.StateMachine> działanie i działań niestandardowych z poprzedniego [jak: Utwórz działanie](how-to-create-an-activity.md) tematu. Przepływ pracy modeli gra odgadnięcia liczb.  
+Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z działań niestandardowych. W tym temacie przedstawiono procedurę tworzenia przepływu pracy, który używa zarówno wbudowanych działań, jak <xref:System.Activities.Statements.StateMachine> działania, jak i działań niestandardowych, z poprzednich [metod: Utwórz temat działania](how-to-create-an-activity.md) . Przepływ pracy modeluje grę z liczbą odgadnąć.  
   
 > [!NOTE]
->  Każdy temat samouczka Wprowadzenie zależy od poprzednich tematach. Aby ukończyć ten temat, najpierw musisz zakończyć [jak: Utwórz działanie](how-to-create-an-activity.md).  
+> Każdy temat w samouczku Wprowadzenie zależy od poprzednich tematów. Aby ukończyć ten temat, należy najpierw wykonać [następujące czynności: Utwórz działanie](how-to-create-an-activity.md).  
   
 > [!NOTE]
->  Aby pobrać pełną wersję tego samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](https://go.microsoft.com/fwlink/?LinkID=248976).  
+> Aby pobrać kompletną wersję samouczka, zobacz [Windows Workflow Foundation (WF45) — samouczek wprowadzenie](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ### <a name="to-create-the-workflow"></a>Aby utworzyć przepływ pracy  
   
-1. Kliknij prawym przyciskiem myszy **NumberGuessWorkflowActivities** w **Eksploratora rozwiązań** i wybierz **Dodaj**, **nowy element**.  
+1. Kliknij prawym przyciskiem myszy pozycję **NumberGuessWorkflowActivities** w **Eksplorator rozwiązań** a następnie wybierz pozycję **Dodaj**, **nowy element**.  
   
-2. W **zainstalowane**, **wspólne elementy** węzeł **przepływu pracy**. Wybierz **działania** z **przepływu pracy** listy.  
+2. W węźle **zainstalowane**, **wspólne elementy** wybierz pozycję **przepływ pracy**. Wybierz **działanie** z listy **przepływów pracy** .  
   
-3. Typ `StateMachineNumberGuessWorkflow` do **nazwa** pole, a następnie kliknij przycisk **Dodaj**.  
+3. Wpisz `StateMachineNumberGuessWorkflow` tekst w polu **Nazwa** , a następnie kliknij przycisk **Dodaj**.  
   
-4. Przeciągnij **StateMachine** działanie z **automatu stanów** części **przybornika** i upuść je na **Upuść działanie tutaj** etykiety na przepływ pracy powierzchni projektowej.  
+4. Przeciągnij działanie **StateMachine** z sekcji **stan automatu** przybornika i upuść je na etykiecie **działania upuść** na powierzchni projektowej przepływu pracy.  
   
-### <a name="to-create-the-workflow-variables-and-arguments"></a>Aby utworzyć zmienne przepływu pracy i argumenty  
+### <a name="to-create-the-workflow-variables-and-arguments"></a>Aby utworzyć zmienne i argumenty przepływu pracy  
   
-1. Kliknij dwukrotnie **StateMachineNumberGuessWorkflow.xaml** w **Eksploratora rozwiązań** do wyświetlania w Projektancie przepływu pracy, jeśli nie jest wyświetlany.  
+1. Kliknij dwukrotnie pozycję **StateMachineNumberGuessWorkflow. XAML** w **Eksplorator rozwiązań** , aby wyświetlić przepływ pracy w projektancie, jeśli nie jest on jeszcze wyświetlany.  
   
-2. Kliknij przycisk **argumenty** w lewym dolnym rogu projektanta przepływów pracy, aby wyświetlić **argumenty** okienka.  
+2. Kliknij pozycję **argumenty** w lewej dolnej części projektanta przepływu pracy, aby wyświetlić okienko **argumenty** .  
   
-3. Kliknij przycisk **utworzenia argumentu**.  
+3. Kliknij przycisk **Utwórz argument**.  
   
-4. Typ `MaxNumber` do **nazwa** wybierz opcję **w** z **kierunek** listy rozwijanej wybierz **Int32** z **Typ argumentu** listy rozwijanej, a następnie naciśnij klawisz ENTER, aby zapisać argumentu.  
+4. Wpisz `MaxNumber` **w** polu **Nazwa** , wybierz z listy rozwijanej **kierunek** , wybierz **Int32** z listy rozwijanej **Typ argumentu** , a następnie naciśnij klawisz ENTER, aby zapisać argument.  
   
-5. Kliknij przycisk **utworzenia argumentu**.  
+5. Kliknij przycisk **Utwórz argument**.  
   
-6. Typ `Turns` do **nazwa** pole, które jest pod nowo dodanym `MaxNumber` argument, wybierz opcję **się** z **kierunek** listy rozwijanej, wybierz opcję  **Int32** z **typ argumentu** listy rozwijanej, a następnie naciśnij klawisz ENTER.  
+6. Wpisz `Turns` w polu **Nazwa** , który znajduje się poniżej nowo dodanego `MaxNumber` argumentu , wybierz pozycję z listy rozwijanej **kierunek** , wybierz pozycję **Int32** z listy rozwijanej **Typ argumentu** , a następnie naciśnij klawisz ENTER.  
   
-7. Kliknij przycisk **argumenty** w lewym dolnym rogu projektanta działań, aby zamknąć **argumenty** okienka.  
+7. Kliknij pozycję **argumenty** w lewym dolnym rogu projektanta działań, aby zamknąć okienko **argumenty** .  
   
-8. Kliknij przycisk **zmienne** w lewym dolnym rogu projektanta przepływów pracy, aby wyświetlić **zmienne** okienka.  
+8. Kliknij przycisk **zmienne** w lewej dolnej części projektanta przepływu pracy, aby wyświetlić okienko **zmienne** .  
   
-9. Kliknij przycisk **utworzyć zmienną**.  
+9. Kliknij pozycję **Utwórz zmienną**.  
   
     > [!TIP]
-    >  Jeśli nie **Tworzenie zmiennej** zostanie wyświetlone okno, kliknij przycisk <xref:System.Activities.Statements.StateMachine> działania na powierzchni projektanta przepływu pracy, aby go zaznaczyć.  
+    >  Jeśli nie zostanie wyświetlone pole **Utwórz zmienną** , kliknij <xref:System.Activities.Statements.StateMachine> działanie na powierzchni projektanta przepływu pracy, aby je wybrać.  
   
-10. Typ `Guess` do **nazwa** wybierz opcję **Int32** z **typ zmiennej** listy rozwijanej, a następnie naciśnij klawisz ENTER, aby zapisać zmienną.  
+10. Wpisz `Guess` w polu **Nazwa** , wybierz wartość **Int32** z listy rozwijanej **Typ zmiennej** , a następnie naciśnij klawisz ENTER, aby zapisać zmienną.  
   
-11. Kliknij przycisk **utworzyć zmienną**.  
+11. Kliknij pozycję **Utwórz zmienną**.  
   
-12. Typ `Target` do **nazwa** wybierz opcję **Int32** z **typ zmiennej** listy rozwijanej, a następnie naciśnij klawisz ENTER, aby zapisać zmienną.  
+12. Wpisz `Target` w polu **Nazwa** , wybierz wartość **Int32** z listy rozwijanej **Typ zmiennej** , a następnie naciśnij klawisz ENTER, aby zapisać zmienną.  
   
-13. Kliknij przycisk **zmienne** w lewym dolnym rogu projektanta działań, aby zamknąć **zmienne** okienka.  
+13. Kliknij pozycję **zmienne** w lewej dolnej części okna projektanta działań, aby zamknąć okienko **zmienne** .  
   
 ### <a name="to-add-the-workflow-activities"></a>Aby dodać działania przepływu pracy  
   
-1. Kliknij przycisk **stan1** aby go zaznaczyć. W **okno właściwości**, zmień **DisplayName** do `Initialize Target`.  
+1. Kliknij pozycję **State1** , aby ją zaznaczyć. W **oknie właściwości**Zmień wartość parametru **DisplayName** na `Initialize Target`.  
   
     > [!TIP]
-    >  Jeśli **okno właściwości** nie jest wyświetlany, wybierz opcję **okno właściwości** z **widoku** menu.  
+    >  Jeśli **okno właściwości** nie jest wyświetlane, wybierz pozycję **okno właściwości** w menu **Widok** .  
   
-2. Kliknij dwukrotnie nowo zmienionej nazwie **zainicjować docelowej** stanu w Projektancie przepływu pracy, aby ją rozwinąć.  
+2. Kliknij dwukrotnie nowo zmieniono nazwę stanu **docelowego inicjalizacji** w Projektancie przepływu pracy, aby go rozwinąć.  
   
-3. Przeciągnij **przypisać** działanie z **podstawowych** części **przybornika** i upuść je na **wpis** sekcja stanu. Typ `Target` do **do** pole i następującego wyrażenia do **wprowadź wyrażenie języka C#** lub **wprowadź wyrażenie VB** pole.  
+3. Przeciągnij działanie **Przypisz** z sekcji elementy **pierwotne** w przyborniku i upuść je w sekcji **wpis** stanu. Wpisz `Target` w polu **do** i poniższe wyrażenie w polu  **C# wprowadź wyrażenie** lub **wprowadź wyrażenie w języku VB** .  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -82,17 +82,17 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
     ```  
   
     > [!TIP]
-    >  Jeśli **przybornika** nie zostanie wyświetlone okno, wybierz **przybornika** z **widoku** menu.  
+    >  Jeśli okno **Przybornik** nie jest wyświetlane, wybierz pozycję **Przybornik** z menu **Widok** .  
   
-4. Wróć do ogólnych stanu widoku maszyny w Projektancie przepływu pracy, klikając **StateMachine** w obszarze nawigacji wyświetlane w górnej części projektanta przepływów pracy.  
+4. Wróć do widoku ogólnego automatu stanów w Projektancie przepływów pracy, klikając pozycję **StateMachine** w obszarze odsyłanie w górnej części projektanta przepływu pracy.  
   
-5. Przeciągnij **stanu** działanie z **automatu stanów** części **przybornika** w Projektancie przepływu pracy i zatrzymaj wskaźnik myszy nad **zainicjować docelowej** stanu. Należy pamiętać, że cztery trójkąty pojawi się wokół **zainicjować docelowej** stan, gdy nowy stan to nad nim. Upuść nowy stan na trójkąt, który znajduje się bezpośrednio pod **zainicjować docelowej** stanu. To umieszcza nowy stan do przepływu pracy i tworzy przejście z **zainicjować docelowej** stanu do nowego stanu.  
+5. Przeciągnij działanie **stanu** z sekcji **stan komputera** przybornika do projektanta przepływów pracy i umieść je na stanie inicjalizacji **docelowej** . Należy zauważyć, że cztery Trójkąty będą widoczne wokół stanu **inicjowania elementu docelowego** , gdy nowy stan jest na nim. Upuść nowy stan w trójkącie, który znajduje się bezpośrednio poniżej stanu **inicjalizacji docelowej** . Spowoduje to umieszczenie nowego stanu w przepływie pracy i utworzenie przejścia z stanu **inicjowania docelowego** do nowego stanu.  
   
-6. Kliknij przycisk **stan1** aby ją wybrać, zmienić **DisplayName** do `Enter Guess`, a następnie kliknij dwukrotnie ikonę stanu w Projektancie przepływu pracy, aby ją rozwinąć.  
+6. Kliknij pozycję **State1** , aby ją zaznaczyć, Zmień wartość `Enter Guess`parametru **DisplayName** na, a następnie kliknij dwukrotnie stan w Projektancie przepływu pracy, aby go rozwinąć.  
   
-7. Przeciągnij **WriteLine** działanie z **podstawowych** części **przybornika** i upuść je na **wpis** sekcja stanu.  
+7. Przeciągnij działanie **WriteLine** z sekcji elementy **pierwotne** w przyborniku i upuść je do sekcji **wejście** stanu.  
   
-8. Wpisz następujące wyrażenie do **tekstu** okno właściwości z **WriteLine**.  
+8. Wpisz następujące wyrażenie w polu właściwości **Text** **WriteLine**.  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -102,23 +102,23 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
     "Please enter a number between 1 and " + MaxNumber  
     ```  
   
-9. Przeciągnij **przypisać** działanie z **podstawowych** części **przybornika** i upuścić **zakończenia** sekcja stanu.  
+9. Przeciągnij działanie **Przypisz** z sekcji elementy **pierwotne** w przyborniku i upuść je na sekcję **wyjście** stanu.  
   
-10. Typ `Turns` do **do** pole i `Turns + 1` do **wprowadź wyrażenie języka C#** lub **wprowadź wyrażenie VB** pole.  
+10. Wpisz `Turns` w polu **do** i `Turns + 1` w polu **wprowadź C# wyrażenie** lub wprowadź wyrażenie w **języku VB** .  
   
-11. Wróć do ogólnych stanu widoku maszyny w Projektancie przepływu pracy, klikając **StateMachine** w obszarze nawigacji wyświetlane w górnej części projektanta przepływów pracy.  
+11. Wróć do widoku ogólnego automatu stanów w Projektancie przepływów pracy, klikając pozycję **StateMachine** w obszarze odsyłanie w górnej części projektanta przepływu pracy.  
   
-12. Przeciągnij **FinalState** działanie z **automatu stanów** części **przybornika**, Zatrzymaj wskaźnik myszy nad **wprowadź odgadnięcia** stanu i upuść go na trójkąt, który pojawia się po prawej stronie **wprowadź odgadnięcia** stanu, tak aby tworzone przejścia między **wprowadź odgadnięcia** i **FinalState**.  
+12. Przeciągnij działanie **FinalState** z sekcji **stan automatu** **przybornika**, umieść kursor nad odpowiednim stanem , a następnie upuść je do trójkąta, który pojawia się po prawej stronie w obszarze **wprowadzanie** stanu odgadnięcia, aby przejść utworzono między argumentami **Enter** i **FinalState**.  
   
-13. Domyślna nazwa przejścia to **T2**. Kliknij przycisk przejścia w Projektancie przepływu pracy, aby go zaznaczyć, a następnie ustaw jego **DisplayName** do **odgadnięcia poprawne**. Następnie kliknij i zaznacz **FinalState**i przeciągnij go do prawej strony, aby miejsca dla nazwy pełne przejście do wyświetlenia bez nałożenie jedną z dwóch stanów. Spowoduje to ułatwić wykonaj pozostałe kroki w tym samouczku.  
+13. Domyślną nazwą przejścia jest **T2**. Kliknij przejście w Projektancie przepływu pracy, aby je zaznaczyć, a następnie ustaw jego **Właściwość DisplayName** na wartość **odgadnięcia poprawne**. Następnie kliknij i wybierz **FinalState**i przeciągnij go w prawo, aby zapewnić, że istnieje pomieszczenie dla nazwy pełnego przejścia, które ma być wyświetlane bez nakładania jednego z tych dwóch stanów. Ułatwi to ukończenie pozostałych kroków samouczka.  
   
-14. Kliknij dwukrotnie nowo zmienionej nazwie **odgadnięcia poprawne** przejścia w Projektancie przepływu pracy, aby ją rozwinąć.  
+14. Kliknij dwukrotnie nowo zmieniono nazwę **odgadnięcia odpowiednie** przejście w Projektancie przepływu pracy, aby je rozwinąć.  
   
-15. Przeciągnij **readint —** działanie z **NumberGuessWorkflowActivities** części **przybornika** i upuść je **wyzwalacza** sekcji przejścia.  
+15. Przeciągnij działanie **ReadInt** z sekcji **NumberGuessWorkflowActivities** w przyborniku i upuść je w sekcji **wyzwalacz** przejścia.  
   
-16. W **okno właściwości** dla **readint —** działania, typ `"EnterGuess"` wraz z cudzysłowami do **Nazwa_zakładki** pole wartości właściwości i typ `Guess`do **wynik** pole wartości właściwości  
+16. W **oknie właściwości** działania **ReadInt** `"EnterGuess"` , wpisz w tym cudzysłowy w polu wartość właściwości **zakładkaname** , a następnie wpisz `Guess` w polu wartość właściwości **wynik** .  
   
-17. Wpisz następujące wyrażenie do **odgadnięcia poprawne** firmy przejścia **warunek** pole wartości właściwości.  
+17. Wpisz następujące wyrażenie w polu wartość właściwości **warunek** poprawnego przejścia.  
   
     ```vb  
     Guess = Target  
@@ -128,22 +128,22 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
     Guess == Target  
     ```  
   
-18. Wróć do ogólnych stanu widoku maszyny w Projektancie przepływu pracy, klikając **StateMachine** w obszarze nawigacji wyświetlane w górnej części projektanta przepływów pracy.  
+18. Wróć do widoku ogólnego automatu stanów w Projektancie przepływów pracy, klikając pozycję **StateMachine** w obszarze odsyłanie w górnej części projektanta przepływu pracy.  
   
     > [!NOTE]
-    >  Przejście występuje po odebraniu zdarzenia wyzwalacza i <xref:System.Activities.Statements.Transition.Condition%2A>, jeśli jest obecny, daje w wyniku `True`. Dla tego przejścia Jeśli użytkownika `Guess` odpowiada losowo generowany `Target`, kontrola przechodzi do, a następnie **FinalState** i ukończeniu przepływu pracy.  
+    > Przejście następuje po odebraniu zdarzenia wyzwalacza i <xref:System.Activities.Statements.Transition.Condition%2A>, jeśli jest obecny, ma `True`wartość. W przypadku tego przejścia, jeśli użytkownik jest `Guess` zgodny z losowo generowanym `Target`, wówczas kontrola przeszedł do **FinalState** i zakończy przepływ pracy.  
   
-19. W zależności od tego, czy wynik jest poprawny, przepływu pracy należy przejść do **FinalState** lub z powrotem do **wprowadź odgadnięcia** stanu dla innej próby. Zarówno przejścia udostępnianie tego samego wyzwalacza oczekiwania przez dopasowanie użytkownika do odebrania za pośrednictwem **readint —** działania. Jest to udostępniony przejścia. Do tworzenia udostępnionych przejść, kliknij przycisk koła, który wskazuje początek **odgadnięcia poprawne** przejścia i przeciągnij go do żądanego stanu. W tym przypadku przejście jest samodzielnej przejścia, więc przeciągnij punkt początkowy **odgadnięcia poprawne** przejścia i upuść go z powrotem na dolnej części **wprowadź odgadnięcia** stanu. Po utworzeniu przejścia, wybierz ją w Projektancie przepływów pracy i ustaw jego **DisplayName** właściwości **odgadnięcia niepoprawne**.  
-  
-    > [!NOTE]
-    >  Udostępnione przejścia można również utworzyć z w Projektancie przejścia, klikając **Dodaj udostępnionych przejść wyzwalaczy** w dolnej części projektanta przejścia, a następnie wybierając stanu wybraną docelową z  **Stany połączyć** listy rozwijanej.  
+19. W zależności od tego, czy wartość odgadnięcia jest poprawna, przepływ pracy powinien przejść do **FinalState** lub z powrotem do stanu **wprowadzenia** dla innej próby. Oba przejścia mają ten sam wyzwalacz, który oczekuje na odebranie użytkownika za pośrednictwem działania **ReadInt** . Jest to nazywane przechodzeniem udostępnionym. Aby utworzyć wspólne przejście, kliknij okrąg, który wskazuje początek poprawnego przejścia i przeciągnij go do żądanego stanu. W takim przypadku przejście jest przechodzeniem samodzielnym, dlatego przeciągnij punkt początkowy przypuszczalnie i upuść go ponownie w dolnej części zmiany stanu. Po utworzeniu przejścia wybierz je w Projektancie przepływów pracy i ustaw właściwość **DisplayName** na **nieprawidłowe**.  
   
     > [!NOTE]
-    >  Należy pamiętać, że jeśli <xref:System.Activities.Statements.Transition.Condition%2A> przejścia daje w wyniku `false` (lub zwrócić wszystkie warunki przejścia udostępnionego wyzwalacza `false`), nie nastąpi przejście, i będą wszystkie wyzwalacze dla wszystkich przejść ze stanu zaplanowane ponownie. W tym samouczku ta sytuacja nie może się zdarzyć, ze względu na sposób warunki są skonfigurowane (mamy określonych akcji dla tego, czy wynik jest prawidłowy lub nieprawidłowy).  
+    > Współużytkowane przejścia można także utworzyć z poziomu projektanta przejścia, klikając pozycję **Dodaj przechodzenie wyzwalacza udostępnionego** u dołu projektanta przejścia, a następnie wybierając żądany stan docelowy z **dostępnych Stanów do połączenia** Lista rozwijana.  
   
-20. Kliknij dwukrotnie **odgadnięcia niepoprawne** przejścia w Projektancie przepływu pracy, aby ją rozwinąć. Należy pamiętać, że **wyzwalacza** jest już ustawione w taki sam **readint —** działania, który został użyty przez **odgadnięcia poprawne** przejścia.  
+    > [!NOTE]
+    > Należy zauważyć, że <xref:System.Activities.Statements.Transition.Condition%2A> Jeśli przechodzenie jest szacowane do `false` (lub wszystkie warunki przejścia wyzwalacza udostępnionego jest oceniane do `false`), przejście nie zostanie wykonane, a wszystkie wyzwalacze dla wszystkich przejść ze stanu będą zmienił. W tym samouczku ta sytuacja nie może wystąpić ze względu na sposób skonfigurowania warunków (istnieją określone akcje dotyczące tego, czy wartość dopuszczalna jest poprawna czy niepoprawna).  
   
-21. Wpisz następujące wyrażenie do **warunek** pole wartości właściwości.  
+20. Kliknij dwukrotnie **nieprawidłowe** przejście w Projektancie przepływu pracy, aby je rozwinąć. Należy zauważyć, że **wyzwalacz** jest już ustawiony na to samo działanie **ReadInt** , które było używane przez odpowiednie przechodzenie.  
+  
+21. Wpisz następujące wyrażenie w polu wartość właściwości **warunek** .  
   
     ```vb  
     Guess <> Target  
@@ -153,39 +153,39 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
     Guess != Target  
     ```  
   
-22. Przeciągnij **Jeśli** działanie z **przepływ sterowania** części **przybornika** i upuść je **akcji** sekcji przejścia.  
+22. Przeciągnij działanie **if** z sekcji **przepływ sterowania** w przyborniku i upuść je w sekcji **akcji** przejścia.  
   
-23. Wpisz następujące wyrażenie do **Jeśli** działania **warunek** pole wartości właściwości.  
+23. Wpisz następujące wyrażenie w polu wartość właściwości **warunek** działania **if** .  
   
     ```
     Guess < Target  
     ```  
   
-24. Przeciągnij dwa **WriteLine** działania z **podstawowych** części **przybornika** i upuścić je tak, aby jeden **następnie** sekcji **Jeśli** działania i jeden znajduje się w **Else** sekcji.  
+24. Przeciągnij dwie działania **WriteLine** z sekcji elementy **pierwotne** w **przyborniku** i upuść je tak, aby były w sekcji **then** działania **if** , a jeden z nich znajduje się w sekcji **else** .  
   
-25. Kliknij przycisk **WriteLine** działania w **następnie** sekcji, aby go zaznaczyć, a następnie wpisz następujące wyrażenie do **tekstu** pole wartości właściwości.  
+25. Kliknij działanie **WriteLine** w sekcji Then, aby je zaznaczyć, a **następnie** wpisz następujące wyrażenie w polu wartość właściwości **Text** .  
   
     ```
     "Your guess is too low."  
     ```  
   
-26. Kliknij przycisk **WriteLine** działania w **Else** sekcji, aby go zaznaczyć, a następnie wpisz następujące wyrażenie do **tekstu** pole wartości właściwości.  
+26. Kliknij działanie **WriteLine** w sekcji **else** , aby je zaznaczyć, a następnie wpisz następujące wyrażenie w polu wartość właściwości **Text** .  
   
     ```
     "Your guess is too high."  
     ```  
   
-27. Wróć do ogólnych stanu widoku maszyny w Projektancie przepływu pracy, klikając **StateMachine** w obszarze nawigacji wyświetlane w górnej części projektanta przepływów pracy.  
+27. Wróć do widoku ogólnego automatu stanów w Projektancie przepływów pracy, klikając pozycję **StateMachine** w obszarze odsyłanie w górnej części projektanta przepływu pracy.  
   
      Poniższy przykład ilustruje ukończony przepływ pracy.  
   
-     ![Ilustracja przedstawiająca przepływ pracy automatu stanu ukończenia.](./media/how-to-create-a-state-machine-workflow/complete-state-machine-workflow.jpg)  
+     ![Ilustracja przedstawiająca ukończony przepływ pracy automatu Stanów.](./media/how-to-create-a-state-machine-workflow/complete-state-machine-workflow.jpg)  
   
-### <a name="to-build-the-workflow"></a>Tworzenie przepływu pracy  
+### <a name="to-build-the-workflow"></a>Aby skompilować przepływ pracy  
   
-1. Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
+1. Naciśnij kombinację klawiszy CTRL + SHIFT + B, aby skompilować rozwiązanie.  
   
-     Aby uzyskać instrukcje na temat sposobu uruchamiania przepływu pracy, zobacz następny temat, [jak: Uruchamianie przepływu pracy](how-to-run-a-workflow.md). Jeśli wykonano już [jak: Uruchamianie przepływu pracy](how-to-run-a-workflow.md) kroku przy użyciu innego stylu przepływu pracy, a chcesz uruchomić go za pomocą przepływu pracy stanu komputera z tego kroku, przejdź do sekcji [Aby skompilować i uruchomić aplikację](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) części [jak: Uruchamianie przepływu pracy](how-to-run-a-workflow.md).  
+     Instrukcje dotyczące sposobu uruchamiania przepływu pracy można znaleźć w następnym temacie, [jak: Uruchom przepływ pracy](how-to-run-a-workflow.md). Jeśli zostały już wykonane [następujące instrukcje: Uruchom krok przepływu](how-to-run-a-workflow.md) pracy z innym stylem przepływu pracy i chcę uruchomić go za pomocą przepływu pracy automatu Stanów z tego kroku, przejdź do tematu, [ [Aby skompilować i uruchomić aplikację](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) w temacie How to: Uruchom przepływ pracy](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -194,5 +194,5 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
 - [Programowanie w programie Windows Workflow Foundation](programming.md)
 - [Projektowanie przepływów pracy](designing-workflows.md)
 - [Wprowadzenie — samouczek](getting-started-tutorial.md)
-- [Instrukcje: Utwórz działanie](how-to-create-an-activity.md)
+- [Instrukcje: Tworzenie działania](how-to-create-an-activity.md)
 - [Instrukcje: Uruchamianie przepływu pracy](how-to-run-a-workflow.md)

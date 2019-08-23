@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 93924638fabe9a46af39006130d4f07de2ad0541
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8cf0f57caad41da0a29b935029731260154a2dc7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590481"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924025"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Instrukcje: Publikuj zdarzenia zgodne z wytycznymi .NET Framework (C# Przewodnik programowania)
 Poniższa procedura pokazuje, jak dodać zdarzenia, które obserwują standardowy wzorzec .NET Framework do klas i struktur. Wszystkie zdarzenia w bibliotece klas .NET Framework są oparte na <xref:System.EventHandler> delegatze, który jest zdefiniowany w następujący sposób:  
@@ -20,7 +20,7 @@ public delegate void EventHandler(object sender, EventArgs e);
 ```  
   
 > [!NOTE]
->  W .NET Framework 2,0 wprowadzono ogólną wersję tego delegata <xref:System.EventHandler%601>. W poniższych przykładach pokazano, jak używać obu wersji.  
+> W .NET Framework 2,0 wprowadzono ogólną wersję tego delegata <xref:System.EventHandler%601>. W poniższych przykładach pokazano, jak używać obu wersji.  
   
  Chociaż zdarzenia w zdefiniowanych klasach mogą opierać się na dowolnym prawidłowym typie delegata, nawet delegatów zwracających wartość, zazwyczaj zaleca się oparcie zdarzeń na wzorcu .NET Framework przy użyciu <xref:System.EventHandler>, jak pokazano w poniższym przykładzie.  
   

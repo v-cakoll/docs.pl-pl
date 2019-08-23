@@ -1,16 +1,16 @@
 ---
-title: OD (jednostka SQL)
+title: OD (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 69a6af868ace384a63d08d705c395b58a173ca8e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 77e22a64310959f66af14137f312b225d42fe56f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662168"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950368"
 ---
-# <a name="from-entity-sql"></a>OD (jednostka SQL)
-Określa kolekcję używane w [wybierz](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instrukcji.  
+# <a name="from-entity-sql"></a>OD (Entity SQL)
+Określa kolekcję używaną w instrukcjach [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -20,133 +20,133 @@ FROM expression [ ,...n ] as C
   
 ## <a name="arguments"></a>Argumenty  
  `expression`  
- Dowolne wyrażenie prawidłowe zapytanie, które daje kolekcję do użycia jako źródło w `SELECT` instrukcji.  
+ Każde prawidłowe wyrażenie zapytania, które zwraca kolekcję do użycia jako źródło w `SELECT` instrukcji.  
   
 ## <a name="remarks"></a>Uwagi  
- A `FROM` klauzula jest rozdzielaną przecinkami listę co najmniej jeden `FROM` elementów w klauzuli. `FROM` Klauzuli może służyć do określania jednego lub kilku źródeł dla `SELECT` instrukcji. Najprostsza forma `FROM` klauzula jest wyrażenie jednego zapytania, które identyfikuje kolekcję i alias używany jako źródło w `SELECT` instrukcji, jak pokazano w poniższym przykładzie:  
+ Klauzula jest rozdzielaną przecinkami listą `FROM` elementów klauzuli. `FROM` Klauzula może służyć do określenia co najmniej jednego źródła `SELECT` dla instrukcji. `FROM` Najprostsza forma `FROM` klauzuli to pojedyncze wyrażenie zapytania, które identyfikuje kolekcję i alias używany jako źródło `SELECT` w instrukcji, jak pokazano w następującym przykładzie:  
   
  `FROM C as c`  
   
-## <a name="from-clause-items"></a>Z elementów — klauzula  
- Każdy `FROM` element klauzuli odwołuje się do kolekcji źródłowej, w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje następujące klasy `FROM` elementy klauzuli: proste `FROM` elementy klauzuli `JOIN FROM` elementy klauzuli i `APPLY FROM` elementów w klauzuli. Każda z tych `FROM` elementy klauzula jest opisany bardziej szczegółowo w poniższych sekcjach.  
+## <a name="from-clause-items"></a>Elementy klauzuli FROM  
+ Każdy `FROM` element klauzuli odwołuje się do kolekcji źródłowej [!INCLUDE[esql](../../../../../../includes/esql-md.md)] w zapytaniu. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obsługuje następujące klasy `FROM` elementów klauzuli: proste `FROM` elementy klauzuli, `JOIN FROM` elementy klauzuli i `APPLY FROM` klauzule. Każdy z tych `FROM` elementów klauzuli został opisany bardziej szczegółowo w poniższych sekcjach.  
   
 ### <a name="simple-from-clause-item"></a>Prosty element klauzuli FROM  
- Najprostsze `FROM` element klauzuli jest pojedyncze wyrażenie określające kolekcji i alias. Wyrażenie można po prostu zestaw jednostek lub podzapytania lub innego wyrażenia, który jest typem kolekcji. Oto przykład:  
+ Element klauzuli `FROM` najprostsza jest pojedynczym wyrażeniem, które identyfikuje kolekcję i alias. Wyrażenie może po prostu być zestawem jednostek lub podzapytaniem albo innym wyrażeniem, które jest typem kolekcji. Oto przykład:  
   
 ```  
 LOB.Customers as c  
 ```  
   
- Specyfikacja aliasu jest opcjonalne. Alternatywne specyfikacji powyżej element klauzuli from może być następująca:  
+ Specyfikacja aliasu jest opcjonalna. Alternatywna Specyfikacja powyższego elementu klauzuli FROM może być następująca:  
   
 ```  
 LOB.Customers  
 ```  
   
- Jeśli brak aliasu jest określony, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] spróbuje go wygenerować alias oparte na wyrażeniu kolekcji.  
+ Jeśli alias nie zostanie określony, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] program podejmie próbę wygenerowania aliasu na podstawie wyrażenia kolekcji.  
   
-### <a name="join-from-clause-item"></a>Dołącz element klauzuli FROM  
- A `JOIN FROM` element klauzuli reprezentuje sprzężenia między dwoma `FROM` elementów w klauzuli. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Obsługa wielu sprzężeń wewnętrznych, po lewej stronie i prawe sprzężenia zewnętrzne, filtrami czasowymi i klauzule full outer JOIN. Wszystkie te sprzężeń są obsługiwane w podobny sposób, że są one obsługiwane w języku Transact-SQL. Tak jak w języku Transact-SQL, dwa `FROM` klauzuli elementy zaangażowany w `JOIN` muszą być niezależne. Oznacza to nie może zostać skorelowane. A `CROSS APPLY` lub `OUTER APPLY` może służyć w tych przypadkach.  
+### <a name="join-from-clause-item"></a>Element klauzuli JOIN  
+ Element klauzuli reprezentuje sprzężenie między dwoma `FROM` elementami klauzuli. `JOIN FROM` [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obsługuje sprzężenia krzyżowe, sprzężenia wewnętrzne, sprzężenia zewnętrzne Left i Right oraz pełne sprzężenia zewnętrzne. Wszystkie te sprzężenia są obsługiwane podobne do sposobu, w jaki są obsługiwane w języku Transact-SQL. Podobnie jak w języku Transact-SQL, `FROM` dwie klauzule `JOIN` muszą być niezależne. Oznacza to, że nie mogą być skorelowane. A `CROSS APPLY` lub`OUTER APPLY` może być używany w takich przypadkach.  
   
 #### <a name="cross-joins"></a>Sprzężenia krzyżowe  
- A `CROSS JOIN` zapytania wyrażenie powoduje formułuje iloczyn kartezjański dwie kolekcje, jak pokazano w poniższym przykładzie:  
+ Wyrażenie `CROSS JOIN` zapytania generuje produkt kartezjańskiego dwóch kolekcji, jak pokazano w następującym przykładzie:  
   
  `FROM C AS c CROSS JOIN D as d`  
   
 #### <a name="inner-joins"></a>Sprzężenia wewnętrzne  
- `INNER JOIN` Tworzy ograniczone formułuje iloczyn kartezjański dwie kolekcje, jak pokazano w poniższym przykładzie:  
+ `INNER JOIN` Tworzy ograniczony produkt kartezjańskiego dla dwóch kolekcji, jak pokazano w następującym przykładzie:  
   
  `FROM C AS c [INNER] JOIN D AS d ON e`  
   
- Poprzednie wyrażenie zapytania przetwarza kombinacji każdy element kolekcji po lewej stronie porównywane każdy element kolekcji o tym, gdzie po prawej stronie `ON` warunek jest prawdziwy. Jeśli nie `ON` jest określony warunek, `INNER JOIN` jest degenerowana do `CROSS JOIN`.  
+ Poprzednie wyrażenie zapytania przetwarza kombinację każdego elementu kolekcji po lewej stronie dla każdego elementu kolekcji po prawej stronie, gdzie `ON` warunek ma wartość true. Jeśli warunek `ON` nie zostanie określony `INNER JOIN` , degeneruje do `CROSS JOIN`.  
   
-#### <a name="left-outer-joins-and-right-outer-joins"></a>LEFT lewych sprzężeń zewnętrznych i prawe sprzężenia zewnętrzne  
- `OUTER JOIN` Zapytania wyrażenie powoduje ograniczone formułuje iloczyn kartezjański dwie kolekcje, jak pokazano w poniższym przykładzie:  
+#### <a name="left-outer-joins-and-right-outer-joins"></a>Lewe sprzężenia zewnętrzne i prawe sprzężenia zewnętrzne  
+ Wyrażenie `OUTER JOIN` zapytania tworzy ograniczony produkt kartezjańskiego dla dwóch kolekcji, jak pokazano w następującym przykładzie:  
   
  `FROM C AS c LEFT OUTER JOIN D AS d ON e`  
   
- Poprzednie wyrażenie zapytania przetwarza kombinacji każdy element kolekcji po lewej stronie porównywane każdy element kolekcji o tym, gdzie po prawej stronie `ON` warunek jest prawdziwy. Jeśli `ON` warunek jest fałszywy, wyrażenie nadal przetwarza jedno wystąpienie elementu po lewej stronie porównywane elementu po prawej stronie przy użyciu wartość null.  
+ Poprzednie wyrażenie zapytania przetwarza kombinację każdego elementu kolekcji po lewej stronie dla każdego elementu kolekcji po prawej stronie, gdzie `ON` warunek ma wartość true. `ON` Jeśli warunek ma wartość false, wyrażenie nadal przetwarza pojedyncze wystąpienie elementu w lewej parze z elementem po prawej stronie, z wartością null.  
   
- A `RIGHT OUTER JOIN` mogą być wyrażone w podobny sposób.  
+ A `RIGHT OUTER JOIN` może być wyrażona w podobny sposób.  
   
-#### <a name="full-outer-joins"></a>Sprzężenia pełne zewnętrzne  
- Jawnie `FULL OUTER JOIN` tworzy ograniczone formułuje iloczyn kartezjański dwie kolekcje, jak pokazano w poniższym przykładzie:  
+#### <a name="full-outer-joins"></a>Pełne sprzężenia zewnętrzne  
+ Jawne `FULL OUTER JOIN` tworzy ograniczony produkt kartezjańskiego dla dwóch kolekcji, jak pokazano w następującym przykładzie:  
   
  `FROM C AS c FULL OUTER JOIN D AS d ON e`  
   
- Poprzednie wyrażenie zapytania przetwarza kombinacji każdy element kolekcji po lewej stronie porównywane każdy element kolekcji o tym, gdzie po prawej stronie `ON` warunek jest prawdziwy. Jeśli `ON` warunek jest fałszywy, wyrażenie nadal przetwarza jedno wystąpienie elementu po lewej stronie porównywane elementu po prawej stronie przy użyciu wartość null. Przetwarza jedno wystąpienie elementu po prawej stronie porównywane elementu po lewej stronie, za pomocą wartość null.  
+ Poprzednie wyrażenie zapytania przetwarza kombinację każdego elementu kolekcji po lewej stronie dla każdego elementu kolekcji po prawej stronie, gdzie `ON` warunek ma wartość true. `ON` Jeśli warunek ma wartość false, wyrażenie nadal przetwarza jedno wystąpienie elementu w lewej parze względem elementu po prawej stronie, z wartością null. Przetwarza także jedno wystąpienie elementu w prawej parze względem elementu po lewej stronie, z wartością null.  
   
 > [!NOTE]
->  Aby zachować zgodność z SQL-92 w języku Transact-SQL — słowo kluczowe zewnętrzne jest opcjonalne. W związku z tym `LEFT JOIN`, `RIGHT JOIN`, i `FULL JOIN` są synonimy `LEFT OUTER JOIN`, `RIGHT OUTER JOIN`, i `FULL OUTER JOIN`.  
+> Aby zachować zgodność z SQL-92, w języku Transact-SQL słowo kluczowe OUTER jest opcjonalne. `FULL JOIN` `RIGHT OUTER JOIN` `LEFT OUTER JOIN` `FULL OUTER JOIN`W związku z tym,, i są synonimami dla,, i. `LEFT JOIN` `RIGHT JOIN`  
   
-### <a name="apply-clause-item"></a>Zastosuj element klauzuli  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje dwa rodzaje z `APPLY`: `CROSS APPLY` i `OUTER APPLY`.  
+### <a name="apply-clause-item"></a>APPLY — element klauzuli  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obsługuje dwa rodzaje `APPLY`: `CROSS APPLY` i `OUTER APPLY`.  
   
- A `CROSS APPLY` generuje unikatowy parowanie każdego elementu kolekcji po lewej stronie, z elementem kolekcji utworzone przez obliczenie wyrażenia po prawej stronie. Za pomocą `CROSS APPLY`, wyrażenie po prawej stronie jest funkcjonalnie zależny od elementu po lewej stronie, jak pokazano w poniższym przykładzie skojarzonej kolekcji:  
+ A `CROSS APPLY` tworzy unikatową parowanie każdego elementu kolekcji po lewej stronie z elementem kolekcji utworzonej przez obliczenie wyrażenia po prawej stronie. `CROSS APPLY`Wyrażenie po prawej stronie jest funkcjonalnie zależne od elementu po lewej stronie, jak pokazano w następującym przykładzie skojarzonej kolekcji:  
   
  `SELECT c, f FROM C AS c CROSS APPLY c.Assoc AS f`  
   
- Zachowanie `CROSS APPLY` jest podobna do listy dołączania. Jeśli po prawej stronie wyrażenie ma pustą kolekcję, `CROSS APPLY` tworzy nie skojarzenie tego wystąpienia elementu po lewej stronie.  
+ Zachowanie `CROSS APPLY` jest podobne do listy sprzężenia. Jeśli wyrażenie po prawej stronie zwraca pustą kolekcję, `CROSS APPLY` nie tworzy żadnych par dla tego wystąpienia elementu po lewej stronie.  
   
- `OUTER APPLY` Przypomina `CROSS APPLY`, z wyjątkiem parowanie nadal jest generowany, nawet wtedy, gdy po prawej stronie wyrażenie ma pustą kolekcję. Oto przykład `OUTER APPLY`:  
+ `OUTER APPLY` Przypomina`CROSS APPLY`, z wyjątkiem tego, że parowanie jest nadal generowane nawet wtedy, gdy wyrażenie po prawej stronie oblicza pustą kolekcję. Oto przykład `OUTER APPLY`:  
   
  `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`  
   
 > [!NOTE]
->  W odróżnieniu od w języku Transact-SQL, nie ma potrzeby kroku jawne unnest w [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+> W przeciwieństwie do języka Transact-SQL nie ma potrzeby jawnego kroku unnesting w [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 > [!NOTE]
->  `CROSS` i `OUTER APPLY` operatory zostały wprowadzone w programie SQL Server 2005. W niektórych przypadkach potoku zapytania może powodować generowanie języka Transact-SQL, który zawiera `CROSS APPLY` i/lub `OUTER APPLY` operatorów. Ponieważ niektórzy dostawcy wewnętrznej bazy danych, w tym programu SQL Server w wersjach starszych niż SQL Server 2005 nie obsługują tych operatorów, takich zapytań nie można wykonać na tych dostawców wewnętrznej bazy danych.  
+> `CROSS`Operatory `OUTER APPLY` i zostały wprowadzone w SQL Server 2005. W niektórych przypadkach potok zapytania może generować Transact-SQL, które zawierają `CROSS APPLY` operatory i/lub. `OUTER APPLY` Ponieważ niektórzy dostawcy zaplecza, w tym wersje SQL Server wcześniejsze niż SQL Server 2005, nie obsługują tych operatorów, takie zapytania nie mogą być wykonywane w tych dostawcach zaplecza.  
 >   
->  Niektóre typowe scenariusze, które mogą prowadzić do występowania `CROSS APPLY` i/lub `OUTER APPLY` operatory w zapytaniu dane wyjściowe są następujące: skorelowane podzapytanie za pomocą stronicowania; AnyElement za pośrednictwem skorelowane podzapytanie lub kolekcję produkowane przez nawigacji; LINQ zapytania używające grupowanie metod, które akceptują selektor elementu; zapytanie, w którym `CROSS APPLY` lub `OUTER APPLY` są jawnie określone, zapytania, które zawiera `DEREF` skonstruować za pośrednictwem `REF` konstruowania.  
+>  Niektóre typowe scenariusze, które mogą prowadzić do obecności `CROSS APPLY` i/lub `OUTER APPLY` operatorów w zapytaniu wyjściowym są następujące: skorelowane podzapytanie ze stronicowaniem; AnyElement za pomocą skorelowanego podzapytania lub kolekcji utworzonej przez nawigację; Zapytania LINQ używające metod grupowania, które akceptują selektor elementu; zapytanie, które `CROSS APPLY` jest jawnie określone `OUTER APPLY` lub jest zapytania, które `REF` ma `DEREF` konstrukcję w konstrukcji.  
   
-## <a name="multiple-collections-in-the-from-clause"></a>Wieloma kolekcjami w FROM — klauzula  
- `FROM` Klauzula może zawierać więcej niż jedną kolekcję, oddzielonych przecinkami. W takich przypadkach kolekcje są uznawane za mają zostać połączone ze sobą. Należy traktować je jako sposób n sprzężenia KRZYŻOWEGO.  
+## <a name="multiple-collections-in-the-from-clause"></a>Wiele kolekcji w klauzuli FROM  
+ `FROM` Klauzula może zawierać więcej niż jedną kolekcję oddzieloną przecinkami. W takich przypadkach przyjmuje się, że kolekcje są połączone ze sobą. Zastanów się nad nimi jako SPRZĘŻENIem KRZYŻowym.  
   
- W poniższym przykładzie `C` i `D` są kolekcjami niezależne, ale `c.Names` jest zależny od `C`.  
+ W poniższym przykładzie `C` i `D` są niezależnymi kolekcjami `C`, `c.Names` ale jest zależne od.  
   
 ```  
 FROM C AS c, D AS d, c.Names AS e  
 ```  
   
- Poprzedni przykład jest logicznie równoważne do poniższego przykładu:  
+ Poprzedni przykład jest logicznym odpowiednikiem poniższego przykładu:  
   
  `FROM (C AS c JOIN D AS d) CROSS APPLY c.Names AS e`  
   
 ## <a name="left-correlation"></a>Lewa korelacja  
- Elementy w `FROM` klauzuli mogą odwoływać się do elementów określone w klauzulach wcześniej. W poniższym przykładzie `C` i `D` są kolekcjami niezależne, ale `c.Names` jest zależny od `C`:  
+ Elementy w `FROM` klauzuli mogą odwoływać się do elementów określonych w klauzulach wcześniejszych. W poniższym przykładzie `C` i `D` są niezależnymi kolekcjami `C`, `c.Names` ale jest zależne od:  
   
 ```  
 from C as c, D as d, c.Names as e  
 ```  
   
- To jest logicznie równoważne:  
+ Jest to logicznie równoważne z:  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  
 ```  
   
-## <a name="semantics"></a>Semantyka  
- Logicznie kolekcji w `FROM` klauzuli będą traktowani jako część `n`— sprzężenie sposób krzyżowe (z wyjątkiem w przypadku 1-sposób cross join). Aliasy w `FROM` klauzuli są przetwarzane od lewej do prawej i są dodawane do bieżącego zakresu do późniejszego wykorzystania. `FROM` Klauzuli założono, że generuje multiset wierszy. Będzie istniało jedno pole dla każdego elementu w `FROM` klauzula, która reprezentuje pojedynczy element z tego elementu kolekcji.  
+## <a name="semantics"></a>Semantyki  
+ Logicznie kolekcje w `FROM` klauzuli są zakładane jako część `n`sprzężenia krzyżowego (z wyjątkiem w przypadku 1-kierunkowego sprzężenia krzyżowego). Aliasy w `FROM` klauzuli są przetwarzane od lewej do prawej i są dodawane do bieżącego zakresu w celu późniejszego odwołania. Przyjęto, `FROM` że klauzula tworzy zestaw wielokrotny wierszy. Dla każdego elementu w `FROM` klauzuli, który reprezentuje pojedynczy element z tego elementu kolekcji, będzie jedno pole.  
   
- `FROM` Klauzuli logicznie tworzy zestaw wielokrotny wiersze typu wiersza (c, d, e) gdzie pola c, d i e są rozpatrywane typu elementu `C`, `D`, i `c.Names`.  
+ Klauzula logicznie tworzy zestaw wielokrotny wierszy typu Row (c, d, e), gdzie pola c, d i e są zakładane jako `C`typ elementu, `D`, i `c.Names`. `FROM`  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wprowadzono alias dla każdego prostej `FROM` element klauzuli w zakresie. Na przykład w następujących poleceń w klauzuli fragment, nazwy wprowadzone do zakresu są c, d i e.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]wprowadza alias dla każdego elementu prostej `FROM` klauzuli w zakresie. Na przykład, w poniższym fragmencie kodu klauzuli, nazwy wprowadzone do zakresu to c, d i e.  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  
 ```  
   
- W [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (w przeciwieństwie do języka Transact-SQL) `FROM` klauzuli tylko wprowadza aliasów do zakresu. Wszystkie odwołania do tych kolekcji kolumn (właściwości) musi być kwalifikowana z aliasem.  
+ W [!INCLUDE[esql](../../../../../../includes/esql-md.md)] programie (w przeciwieństwie do języka Transact- `FROM` SQL) klauzula wprowadza tylko aliasy do zakresu. Wszystkie odwołania do kolumn (właściwości) tych kolekcji muszą być kwalifikowane przy użyciu aliasu.  
   
-## <a name="pulling-up-keys-from-nested-queries"></a>Ściąganie klucze z zapytań zagnieżdżonej  
- Niektórych rodzajów zapytań, które wymagają ściąganie klucze z zapytań zagnieżdżonej nie są obsługiwane. Na przykład następujące zapytanie jest prawidłowy:  
+## <a name="pulling-up-keys-from-nested-queries"></a>Ściąganie kluczy z zagnieżdżonych zapytań  
+ Niektóre typy zapytań, które wymagają ściągania kluczy z zapytania zagnieżdżonego, nie są obsługiwane. Na przykład następujące zapytanie jest prawidłowe:  
   
 ```  
 select c.Orders from Customers as c   
 ```  
   
- Jednakże następujące zapytanie jest nieprawidłowe, ponieważ zapytanie zagnieżdżone nie ma żadnych kluczy:  
+ Jednak następujące zapytanie jest nieprawidłowe, ponieważ zapytanie zagnieżdżone nie ma żadnych kluczy:  
   
 ```  
 select {1} from {2, 3}  

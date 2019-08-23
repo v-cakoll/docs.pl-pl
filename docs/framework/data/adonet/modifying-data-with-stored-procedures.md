@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: 7dfd4f07ba0a0473975d87c7cd166635473344a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebf5c61010a6f658d846ed435ea3a7d18d0d3832
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772102"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934438"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>Modyfikowanie danych za pomocą procedur składowanych
-Procedury składowane może akceptować dane jako parametry wejściowe i mogą zwracać dane jako parametry wyjściowe, zestawów danych lub zwracanych wartości. Poniższy przykład ilustruje sposób ADO.NET wysyła i odbiera dane wejściowe parametrów wyjściowych parametry i zwracane wartości. Przykład Wstawia nowy rekord w tabeli, w których kolumna klucza podstawowego jest kolumną tożsamości w bazie danych programu SQL Server.  
+Procedury składowane mogą akceptować dane jako parametry wejściowe i mogą zwracać dane jako parametry wyjściowe, zestawy wyników lub wartości zwracane. W poniższym przykładzie pokazano, jak ADO.NET wysyła i odbiera parametry wejściowe, parametry wyjściowe oraz wartości zwracane. Przykład wstawia nowy rekord do tabeli, w której kolumna klucza podstawowego jest kolumną tożsamości w bazie danych SQL Server.  
   
 > [!NOTE]
->  Jeśli używasz procedur składowanych serwera SQL Server, aby edytować lub usunąć dane za pomocą <xref:System.Data.SqlClient.SqlDataAdapter>, upewnij się, że nie używasz SET NOCOUNT ON w definicji procedury składowanej. Powoduje to, że liczba zmodyfikowanych wierszy zwracane jako zera, które `DataAdapter` interpretuje jako konflikt współbieżności. W takim przypadku <xref:System.Data.DBConcurrencyException> zostanie zgłoszony.  
+> Jeśli używasz SQL Server procedur składowanych do edytowania lub usuwania danych przy użyciu programu <xref:System.Data.SqlClient.SqlDataAdapter>, upewnij się, że w definicji procedury składowanej nie używasz opcji SET NOCOUNT on. Powoduje to, że liczba zwracanych wierszy jest równa zero, `DataAdapter` która interpretuje jako konflikt współbieżności. W takim przypadku <xref:System.Data.DBConcurrencyException> zostanie zgłoszone zdarzenie.  
   
 ## <a name="example"></a>Przykład  
- W przykładzie użyto następującą procedurę składowaną, aby wstawić nową kategorię do **Northwind** **kategorie** tabeli. Procedura składowana przyjmuje wartość **CategoryName** kolumny jako parametr wejściowy oraz zastosowania SCOPE_IDENTITY() funkcji do pobrania nowej wartości pola tożsamości **CategoryID**i zwróć Parametr wyjściowy. Używa instrukcji RETURN @@ROWCOUNT funkcja zwraca liczby wierszy wstawionych.  
+ Przykład używa następującej procedury składowanej, aby wstawić nową kategorię do tabeli kategorii **Northwind** . Procedura składowana przyjmuje wartość w kolumnie **CategoryName** jako parametr wejściowy i używa funkcji SCOPE_IDENTITY (), aby pobrać nową wartość pola tożsamości, **IDkategorii**i zwrócić go w parametrze wyjściowym. Instrukcja return używa funkcji @@ROWCOUNT , aby zwrócić liczbę wstawionych wierszy.  
   
 ```sql
 CREATE PROCEDURE dbo.InsertCategory  
@@ -31,10 +31,10 @@ SET @Identity = SCOPE_IDENTITY()
 RETURN @@ROWCOUNT  
 ```  
   
- Poniższy przykład kodu wykorzystuje `InsertCategory` powyżej jako źródła dla procedury składowanej <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> z <xref:System.Data.SqlClient.SqlDataAdapter>. `@Identity` Parametru wyjściowego zostaną odzwierciedlone w <xref:System.Data.DataSet> po rekord został wstawiony do bazy danych podczas `Update` metoda <xref:System.Data.SqlClient.SqlDataAdapter> jest wywoływana. Ten kod pobiera również wartość zwracaną.  
+ Poniższy przykład kodu używa `InsertCategory` procedury składowanej pokazanej powyżej jako źródła <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> dla elementu <xref:System.Data.SqlClient.SqlDataAdapter>. Parametr wyjściowy zostanie odzwierciedlony <xref:System.Data.DataSet> w po wstawieniu rekordu `Update` do bazy danych, <xref:System.Data.SqlClient.SqlDataAdapter> gdy wywoływana jest metoda obiektu. `@Identity` Kod pobiera również wartość zwracaną.  
   
 > [!NOTE]
->  Korzystając z <xref:System.Data.OleDb.OleDbDataAdapter>, należy tak określić parametry, z <xref:System.Data.ParameterDirection> z **ReturnValue** przed innych parametrów.  
+> Podczas używania <xref:System.Data.OleDb.OleDbDataAdapter>, należy określić parametry <xref:System.Data.ParameterDirection> z **ReturnValue** przed innymi parametrami.  
   
  [!code-csharp[DataWorks SqlClient.SprocIdentityReturn#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.SprocIdentityReturn/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.SprocIdentityReturn#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.SprocIdentityReturn/VB/source.vb#1)]  
@@ -44,4 +44,4 @@ RETURN @@ROWCOUNT
 - [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Wykonywanie polecenia](../../../../docs/framework/data/adonet/executing-a-command.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

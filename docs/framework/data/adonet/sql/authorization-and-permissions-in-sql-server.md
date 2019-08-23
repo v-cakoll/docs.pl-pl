@@ -2,61 +2,61 @@
 title: Autoryzacja i uprawnienia w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 35aa26ed1afb0006802b703fa0fa3a6076f03ddf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66bf347543641808cc463d8035223fcf59b08231
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649565"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918095"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autoryzacja i uprawnienia w programie SQL Server
-Podczas tworzenia obiektów bazy danych, należy jawnie udzielić uprawnień, aby udostępnić je użytkownikom. Każdy obiekt zabezpieczany ma uprawnienia, które mogą być przyznane podmiot zabezpieczeń za pomocą instrukcji uprawnień.  
+Podczas tworzenia obiektów bazy danych należy jawnie udzielić uprawnień, aby były dostępne dla użytkowników. Każdy zabezpieczany obiekt ma uprawnienia, które mogą zostać przyznane podmiotowi zabezpieczeń przy użyciu instrukcji uprawnień.  
   
-## <a name="the-principle-of-least-privilege"></a>Zasadę najmniejszych uprawnień  
- Projektowanie aplikacji przy użyciu podejścia użytkownika najmniej uprzywilejowane konto (LUA) stanowi ważną część strategii obronienia, szczegółowe przeciwdziałanie zagrożenia bezpieczeństwa. Podejście LUA temu, postępuj zgodnie z zasadą najniższych uprawnień użytkowników i zawsze Zaloguj się przy użyciu kont z ograniczonymi uprawnieniami. Zadania administracyjne są rozbite przy użyciu ról stałej i użytkowania `sysadmin` stałej roli serwera jest znacznie ograniczone.  
+## <a name="the-principle-of-least-privilege"></a>Zasada najniższych uprawnień  
+ Opracowywanie aplikacji przy użyciu podejścia z najniższymi uprawnieniami konta użytkownika (LUA) to ważna część obrony, szczegółowej strategii dotyczącej liczników zagrożeń zabezpieczeń. Podejście LUA gwarantuje, że użytkownicy będą przestrzegać zasad najniższych uprawnień i zawsze logować się z ograniczonymi kontami użytkowników. Zadania administracyjne są rozbite przy użyciu stałych ról serwera, a korzystanie z `sysadmin` stałej roli serwera jest poważnie ograniczone.  
   
- Zawsze postępuj zgodnie z zasadą najniższych uprawnień, podczas nadawania uprawnień do bazy danych użytkowników. Przyznaj najniższe uprawnienia niezbędne do użytkownika lub roli do wykonywania danego zadania.  
+ Zawsze stosuj zasadę najniższych uprawnień podczas udzielania uprawnień użytkownikom bazy danych. Przyznaj użytkownikowi lub roli minimalne uprawnienia wymagane do wykonania danego zadania.  
   
 > [!IMPORTANT]
->  Tworzenie i testowanie aplikacji przy użyciu podejścia LUA dodaje stopień trudności z procesu opracowywania. Jest to łatwiejsze do tworzenia obiektów i napisać kod, gdy są zalogowani jako właściciel bazy danych lub administratorem systemu, niż konto LUA. Jednak tworzenie aplikacji przy użyciu konta o wysokim poziomie uprawnień można zaciemniania wpływu o ograniczonej funkcjonalności, gdy najniższych uprawnieniach użytkownicy próbują uruchomić aplikację, która wymaga podniesionych uprawnień, aby działać poprawnie. Udzielanie uprawnień nadmiernego użytkownikom, aby ponownie pobrać utraty funkcji można pozostawić aplikację na ataki. Projektowanie, tworzenie i testowanie aplikacji przy użyciu konta LUA wymusza wolą podejście do planowania zabezpieczeń, które eliminuje nieprzyjemnych niespodzianek i możliwość przesłania do udzielania podwyższonego poziomu uprawnień jako szybkiej poprawki. Identyfikator logowania programu SQL Server można użyć do testowania, nawet jeśli Twoja aplikacja jest przeznaczona do wdrożenia przy użyciu uwierzytelniania Windows.  
+> Opracowywanie i testowanie aplikacji przy użyciu podejścia LUA powoduje dodanie stopnia trudności w procesie opracowywania. Łatwiej jest tworzyć obiekty i pisać kod podczas logowania jako administrator systemu lub właściciel bazy danych niż przy użyciu konta LUA. Aplikacje korzystające z wysoce uprzywilejowanego konta mogą jednak zasłaniać wpływ ograniczonej funkcjonalności w przypadku próby uruchomienia aplikacji wymagającej podwyższonego poziomu uprawnień w celu poprawnego działania. Przyznawanie nadmiernych uprawnień użytkownikom w celu ponownego uzyskania utraconych funkcji może spowodować, że aplikacja będzie narażona na ataki. Projektowanie, opracowywanie i testowanie aplikacji zalogowanej przy użyciu konta LUA wymusza podejście do planowania zabezpieczeń, które eliminuje nieprzyjemne nieprzyjemny i Temptation, aby udzielić podwyższonych uprawnień jako szybkiej poprawki. Możesz użyć SQL Server logowania do testowania, nawet jeśli aplikacja jest przeznaczona do wdrożenia przy użyciu uwierzytelniania systemu Windows.  
   
-## <a name="role-based-permissions"></a>Uprawnienia opartej na rolach  
- Udzielanie uprawnień do ról, a nie do użytkowników upraszcza administrowanie zabezpieczeniami. Zestawy uprawnień, które są przypisane do ról są dziedziczone przez wszystkie elementy członkowskie roli. Łatwiej dodawać i usuwać użytkowników z roli, niż jest to, aby ponownie utworzyć oddzielne uprawnienia ustawia dla poszczególnych użytkowników. Role mogą być zagnieżdżone; jednak zbyt wiele poziomów zagnieżdżenia może obniżyć wydajność. Możesz również dodać użytkowników do ról stałej bazy danych, aby uprościć przypisywanie uprawnień.  
+## <a name="role-based-permissions"></a>Uprawnienia oparte na rolach  
+ Przyznanie uprawnień rolom, a nie użytkownikom, upraszcza administrację zabezpieczeniami. Zestawy uprawnień przypisane do ról są dziedziczone przez wszystkich członków roli. Łatwiej jest dodawać i usuwać użytkowników z roli niż w przypadku ponownego tworzenia oddzielnych zestawów uprawnień dla poszczególnych użytkowników. Role mogą być zagnieżdżane; jednak zbyt wiele poziomów zagnieżdżenia może obniżyć wydajność. Możesz również dodać użytkowników do stałych ról bazy danych, aby uprościć przypisywanie uprawnień.  
   
- Można przyznać uprawnienia na poziomie schematu. Użytkownicy automatycznie dziedziczą uprawnienia na wszystkich nowych obiektów utworzonych w schemacie; nie musisz udzielić uprawnień w miarę tworzenia nowych obiektów.  
+ Można udzielić uprawnień na poziomie schematu. Użytkownicy automatycznie dziedziczą uprawnienia do wszystkich nowych obiektów utworzonych w schemacie. nie trzeba przyznawać uprawnień w miarę tworzenia nowych obiektów.  
   
-## <a name="permissions-through-procedural-code"></a>Uprawnienia za pomocą kod proceduralny  
- Zawieranie dostęp do danych za pośrednictwem modułów, takie jak procedur przechowywanych i funkcji zdefiniowanych przez użytkownika zapewnia dodatkową warstwę ochrony wokół aplikacji. Aby uniemożliwić użytkownikom bezpośrednie interakcje z obiektów bazy danych, przyznając uprawnienia tylko do procedur przechowywanych i funkcji podczas odmawianie uprawnień do obiektów podstawowych, takich jak tabele. Program SQL Server osiąga to za pomocą łańcucha własności.  
+## <a name="permissions-through-procedural-code"></a>Uprawnienia poprzez kod proceduralny  
+ Hermetyzowanie dostępu do danych za poorednictwem modułów, takich jak procedury składowane i funkcje zdefiniowane przez użytkownika, zapewnia dodatkową warstwę ochrony aplikacji. Można uniemożliwić użytkownikom bezpośrednią współpracę z obiektami bazy danych przez przyznanie uprawnień tylko do procedur składowanych lub funkcji przy odmowie uprawnień do obiektów bazowych, takich jak tabele. SQL Server osiąga to przez tworzenie łańcucha własności.  
   
-## <a name="permission-statements"></a>Instrukcje uprawnień  
- Trzy instrukcje języka Transact-SQL w uprawnienia są opisane w poniższej tabeli.  
+## <a name="permission-statements"></a>Instrukcje dotyczące uprawnień  
+ W poniższej tabeli opisano trzy instrukcje dotyczące uprawnień języka Transact-SQL.  
   
-|Uprawnienia — instrukcja|Opis|  
+|Oświadczenie dotyczące uprawnień|Opis|  
 |--------------------------|-----------------|  
-|PRZYDZIAŁ|Udziela uprawnienia.|  
-|ODWOŁYWANIE|Odwołuje uprawnienia. Jest to domyślny stan nowego obiektu. Uprawnienie odwołane dla użytkownika lub rolę nadal może być dziedziczona z innych grup lub ról, którym przypisano podmiot zabezpieczeń.|  
-|DENY|ODMÓW odwołuje uprawnienia, tak aby nie może być dziedziczona. Odmowa ma pierwszeństwo przed wszystkie uprawnienia, z wyjątkiem ODMÓW nie ma zastosowania do obiektów właściciele i członkowie `sysadmin`. Odmowa uprawnień do obiektu do `public` roli jest możliwy wszyscy użytkownicy i role z wyjątkiem właścicieli obiektów i `sysadmin` elementów członkowskich.|  
+|DAWAĆ|Przyznaje uprawnienia.|  
+|ODWOŁANIA|Odwołuje uprawnienie. Jest to domyślny stan nowego obiektu. Uprawnienie odwołane od użytkownika lub roli można nadal dziedziczyć z innych grup lub ról, do których jest przypisany podmiot zabezpieczeń.|  
+|POZBAWIĆ|Odmów unieważnia uprawnienia, aby nie można było dziedziczyć. Odmów ma pierwszeństwo przed wszystkimi uprawnieniami, z wyjątkiem Odmów nie ma zastosowania do właścicieli obiektów lub `sysadmin`członków. Jeśli odmówisz uprawnień do obiektu do roli `public` , odmówiono wszystkim użytkownikom i rolom, z wyjątkiem właścicieli obiektów i `sysadmin` członków.|  
   
-- Wykonywanie instrukcji GRANT można przypisać uprawnienia do grupy lub roli, które mogą być dziedziczone przez użytkowników bazy danych. Jednak instrukcji DENY ma pierwszeństwo przed wszystkie inne instrukcje uprawnień. W związku z tym, użytkownik, który odmówiono uprawnień nie może dziedziczyć po jego innej roli.  
+- Instrukcja GRANT może przypisywać uprawnienia do grupy lub roli, które mogą być dziedziczone przez użytkowników bazy danych. Jednakże instrukcja DENY ma pierwszeństwo przed wszystkimi innymi instrukcjami uprawnień. W związku z tym użytkownik, który odmówił uprawnienia, nie może dziedziczyć go z innej roli.  
   
 > [!NOTE]
->  Elementy członkowskie `sysadmin` stałej roli i obiekt właścicieli nie odmówiono uprawnień.  
+> Członkom `sysadmin` stałej roli serwera i właścicieli obiektów nie można odmówić uprawnień.  
   
 ## <a name="ownership-chains"></a>Łańcuchy własności  
- Program SQL Server gwarantuje, że tylko jednostek, które zostały udzielone uprawnienia dostępu do obiektów. Gdy wielu obiektów bazy danych uzyskują dostęp do siebie nawzajem, kolejność jest określana jako łańcuch. Gdy program SQL Server jest kierowany łącza w łańcuchu, ocenia uprawnień inaczej niż po jego zostały uzyskiwania dostępu do każdego elementu oddzielnie. Gdy obiekt jest dostępny za pośrednictwem łańcuch, programu SQL Server najpierw porównuje właściciela obiektu do właściciela obiekt wywołujący (poprzedniej konsolidacji w łańcuchu). Jeśli oba obiekty mają tego samego właściciela, uprawnienia do przywoływanego obiektu nie są sprawdzane. Zawsze, gdy obiekt uzyskuje dostęp do innego obiektu, który ma innego właściciela, łańcucha własności jest uszkodzona i programu SQL Server, należy zaznaczyć kontekstu zabezpieczeń obiektu wywołującego.  
+ SQL Server zapewnia, że tylko podmioty zabezpieczeń, którym udzielono uprawnień, mogą uzyskiwać dostęp do obiektów. Gdy wiele obiektów bazy danych uzyskuje dostęp nawzajem, sekwencja jest znana jako łańcuch. Gdy SQL Server przechodzą linki w łańcuchu, szacuje uprawnienia inaczej niż w przypadku uzyskiwania dostępu do poszczególnych elementów osobno. Gdy dostęp do obiektu odbywa się za pomocą łańcucha, SQL Server najpierw porównuje właściciela obiektu z właścicielem obiektu wywołującego (poprzedni link w łańcuchu). Jeśli oba obiekty mają tego samego właściciela, uprawnienia do obiektu, do którego się odwoływano, nie są sprawdzane. Za każdym razem, gdy obiekt uzyskuje dostęp do innego obiektu, który ma innego właściciela, łańcuch własności jest przerwany i SQL Server musi sprawdzić kontekst zabezpieczeń obiektu wywołującego.  
   
-## <a name="procedural-code-and-ownership-chaining"></a>Kod proceduralny działań i tworzenie łańcuchów własności  
- Załóżmy, że użytkownik otrzymuje uprawnienia do wykonywania dotyczące procedury przechowywanej, która wybiera dane z tabeli. Jeśli procedura składowana i tabeli mają tego samego właściciela, użytkownik nie musi mieć wszystkie uprawnienia w tabeli i może nawet odmówiono uprawnień. Jednak jeśli procedura składowana a tabelą mieć różnych właścicieli, programu SQL Server należy sprawdzić uprawnienia użytkownika w tabeli przed zezwoleniem na dostęp do danych.  
+## <a name="procedural-code-and-ownership-chaining"></a>Kod proceduralny i tworzenie łańcucha własności  
+ Załóżmy, że użytkownik ma przyznane uprawnienia do wykonywania w procedurze składowanej, która wybiera dane z tabeli. Jeśli procedura składowana i tabela mają tego samego właściciela, użytkownik nie musi mieć uprawnień do tabeli i może nawet odmówić uprawnień. Jeśli jednak procedura składowana i tabela mają różnych właścicieli, SQL Server musi sprawdzić uprawnienia użytkownika w tabeli przed zezwoleniem na dostęp do danych.  
   
 > [!NOTE]
->  Tworzenie łańcucha własności nie ma zastosowania w przypadku dynamicznych instrukcji SQL. Aby wywołać procedurę, która wykonuje instrukcję SQL, obiekt wywołujący musi mieć uprawnienia na tabelach źródłowych, narażając aplikacji do ataku polegającego na iniekcji SQL. SQL Server udostępnia nowe mechanizmy, takie jak personifikacji i podpisywania modułów za pomocą certyfikatów, które nie wymagają przyznawanie uprawnień do tabel podstawowych. Mogą one także używane przy użyciu procedur składowanych CLR.  
+> Tworzenie łańcucha własności nie ma zastosowania w przypadku dynamicznych instrukcji SQL. Aby wywołać procedurę, która wykonuje instrukcję SQL, obiekt wywołujący musi mieć przyznane uprawnienia do odpowiednich tabel, pozostawiając aplikacji narażonych na ataki z iniekcją SQL. SQL Server udostępnia nowe mechanizmy, takie jak personifikacja i moduły podpisywania z certyfikatami, które nie wymagają przyznawania uprawnień w tabelach bazowych. Mogą one być również używane z procedurami składowanymi CLR.  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
- Aby uzyskać więcej informacji zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji, zobacz następujące zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Uprawnienia](/sql/relational-databases/security/permissions-database-engine)|Zawiera tematy, zawierająca opis uprawnienia hierarchii, widoków wykazu i uprawnienia stałe role serwera i bazy danych.|
+|[Uprawnienia](/sql/relational-databases/security/permissions-database-engine)|Zawiera tematy opisujące hierarchię uprawnień, widoki wykazu i uprawnienia stałych ról serwera i bazy danych.|
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -65,4 +65,4 @@ Podczas tworzenia obiektów bazy danych, należy jawnie udzielić uprawnień, ab
 - [Uwierzytelnianie w programie SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [Serwer i role bazy danych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
 - [Własność i oddzielenie schematu użytkownika w programie SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

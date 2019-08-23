@@ -6,105 +6,99 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: 6263d7777becc1042cf477503c7f68af29fa7f4c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7ba338a2eeb222dc8c807bc3a2bb4d1baf7de39d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125214"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912009"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu DataItem
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
   
- Ten temat zawiera informacje na temat [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] pomocy technicznej dla kontrolek typu DataItem. W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] typu formantu to zestaw warunków, które kontrolki muszą spełnić, aby można było używać <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> właściwości. Warunki obejmują konkretne wskazówki dotyczące [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struktury drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wartości właściwości i wzorce kontrolki.  
+ Ten temat zawiera informacje o [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] obsłudze typu formantu elementu danych. W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] typie formantu jest zestaw warunków, które formant musi spełniać, aby można było <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> użyć właściwości. Warunki obejmują określone wytyczne dotyczące [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struktury drzewa, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wartości właściwości i wzorców formantów.  
   
- Wpis na liście kontaktów jest przykładem kontrolki elementu danych. Kontrolki elementu danych zawiera informacje, który ma znaczenie dla użytkownika końcowego. Jest bardziej skomplikowane niż element prostej listy, ponieważ zawiera ona bogatsze informacje.  
+ Wpis na liście kontaktów to przykład kontrolki elementu danych. Kontrolka elementu danych zawiera informacje, które są istotne dla użytkownika końcowego. Jest to bardziej skomplikowane niż prosta pozycja listy, ponieważ zawiera bogatsze informacje.  
   
- Poniższe sekcje definiują wymagane [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struktury, właściwości, wzorców kontrolek i zdarzeń dla kontrolek typu DataItem drzewa. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Wymagania mają zastosowanie do wszystkich danych kontrolki elementu czy [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], lub [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ W poniższych sekcjach opisano wymaganą [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] strukturę drzewa, właściwości, wzorce formantów i zdarzenia dla typu formantu elementu danych. Wymagania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] stosują się do wszystkich kontrolek elementów danych [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]niezależnie od [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]tego, czy,, czy.  
   
-<a name="Required_UI_Automation_Tree_Structure"></a>   
-## <a name="required-ui-automation-tree-structure"></a>Struktura drzewa automatyzacji interfejsu użytkownika wymagane  
- Poniższa tabela przedstawia kontroli i widok zawartości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewo, które odnoszą się do elementu danych steruje i w tym artykule opisano, jakie mogą być zawarte w każdym widoku. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa, zobacz [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+## <a name="required-ui-automation-tree-structure"></a>Wymagana struktura drzewa automatyzacji interfejsu użytkownika  
+ W poniższej tabeli przedstawiono widok kontrolki i widok [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zawartości drzewa, które odnoszą się do kontrolek elementów danych i opisano, co może być zawarte w poszczególnych widokach. Aby uzyskać więcej informacji na [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] temat drzewa, zobacz [Omówienie drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Drzewo — widoku kontrolnym|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Drzewo — Widok zawartości|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Widok kontrolki drzewa|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Drzewo — widok zawartości|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|Element danych<br /><br /> -Różni się (0 lub więcej; mogą być zorganizowane w hierarchii)|Element danych<br /><br /> -Różni się (0 lub więcej; mogą być zorganizowane w hierarchii)|  
+|Elementu<br /><br /> — Różne (0 lub więcej; mogą być uporządkowane w hierarchii)|Elementu<br /><br /> — Różne (0 lub więcej; mogą być uporządkowane w hierarchii)|  
   
- Element elementu danych w siatce danych można hostować różnych obiektów, w tym kolejną warstwę elementy danych lub siatki określone elementy, takie jak tekst, obrazy lub edycji wzbogaconej. Jeśli element element danych ma rolę określonego obiektu, element powinny zostać ujawnione jako określonego typu; na przykład ListItem typ formantu elementu można wybierać danych w siatce.  
+ Element element danych w siatce danych może obsługiwać wiele obiektów, w tym inną warstwę elementów danych lub konkretne elementy siatki, takie jak tekst, obrazy lub kontrolki edycji. Jeśli element danych ma określoną rolę obiektu, element powinien być uwidoczniony jako określony typ kontroli; na przykład typ kontrolki elementu listy dla elementów danych, które można wybrać w siatce.  
   
-<a name="Required_UI_Automation_Properties"></a>   
-## <a name="required-ui-automation-properties"></a>Właściwości automatyzacji interfejsu użytkownika wymagane  
- W poniższej tabeli wymieniono właściwości, których wartość lub definicji jest szczególnie istotne kontrolki elementu danych. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości, zobacz [właściwości automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+## <a name="required-ui-automation-properties"></a>Wymagane właściwości automatyzacji interfejsu użytkownika  
+ Poniższa tabela zawiera listę właściwości, których wartość lub definicja jest szczególnie istotna dla kontrolek elementu danych. Aby uzyskać więcej informacji [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] na temat właściwości, zobacz [właściwości automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
 |Właściwość|Wartość|Uwagi|  
 |--------------|-----------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Zobacz uwagi.|Wartość tej właściwości musi być unikatowa wśród wszystkich kontrolek w aplikacji.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Zobacz uwagi.|Najbardziej zewnętrznej prostokąt, który zawiera całą kontrolkę.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Zobacz uwagi.|Obsługiwane w przypadku prostokąt otaczający. W przeciwnym razie każdy punkt, w ramach prostokąt otaczający jest możesz klikać i wykonywać specjalne testowania trafień, zastąpić i zapewnienia elementu do kliknięcia.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Element danych|Ta wartość jest taka sama dla wszystkich platform tworzenia interfejsu użytkownika.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Prawda|Kontrolki elementu danych musi być zawsze zawartości.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Prawda|Kontrolki elementu danych musi być zawsze formantu.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Zobacz uwagi.|Formant może otrzymywać fokus klawiatury, musi obsługiwać tę właściwość.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemStatusProperty>|Zobacz uwagi.|Jeśli kontrolka zawiera stan, która jest aktualizowana dynamicznie, a następnie ta właściwość musi być obsługiwana, dzięki czemu technologii pomocniczej, które mogą odbierać aktualizacje po zmianie stanu elementu.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemTypeProperty>|Zobacz uwagi.|Jest to wartość ciągu, który umożliwia przekazywanie danych do użytkownika końcowego obiektu źródłowego, który reprezentuje element. Przykładami są "Pliku multimedialnego" lub "Skontaktuj się z".|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Kontrolki elementu danych nie ma etykiety tekst statyczny.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"element danych"|Zlokalizowany ciąg odpowiadający typu formantu elementu danych.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Zobacz uwagi.|Kontrolki elementu danych jest zawsze zawiera element tekst podstawowy, który odnosi się do użytkownika skojarzyć jako najbardziej semantycznego identyfikatora dla elementu.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Zobacz uwagi.|Wartość tej właściwości musi być unikatowa dla wszystkich kontrolek w aplikacji.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Zobacz uwagi.|Najbardziej zewnętrzny prostokąt, który zawiera cały formant.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Zobacz uwagi.|Obsługiwane, jeśli istnieje prostokąt ograniczający. Jeśli nie każdy punkt wewnątrz prostokąta ograniczenia jest klikany, a będziesz wykonywał wyspecjalizowane Testy trafień, a następnie przesłonić i udostępnić punkt kliknięcia.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Elementu|Ta wartość jest taka sama dla wszystkich platform interfejsu użytkownika.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Prawda|Formant elementu danych musi zawsze mieć wartość Content.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Prawda|Formant elementu danych musi być zawsze kontrolką.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Zobacz uwagi.|Jeśli formant może odbierać fokus klawiatury, musi obsługiwać tę właściwość.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemStatusProperty>|Zobacz uwagi.|Jeśli formant zawiera stan, który jest aktualizowany dynamicznie, ta właściwość musi być obsługiwana, aby technologia pomocnicza mogła otrzymywać aktualizacje po zmianie stanu elementu.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemTypeProperty>|Zobacz uwagi.|Jest to wartość ciągu, która przekazuje użytkownikowi końcowemu obiekt, który reprezentuje element. Przykłady to "plik multimedialny" lub "kontakt".|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Kontrolki elementów danych nie mają statycznej etykiety tekstowej.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"element danych"|Zlokalizowany ciąg odpowiadający typowi formantu elementu danych.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Zobacz uwagi.|Kontrolka element danych zawsze zawiera podstawowy element tekstowy, który odnosi się do tego, co użytkownik może skojarzyć jako największą semantykę dla elementu.|  
   
-<a name="_Required_UI_Automation_Control_Patterns"></a>   
-## <a name="required-ui-automation-control-patterns"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika wymagane  
- W poniższej tabeli wymieniono [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] kontrolować wzorców, wymagane są obsługiwane przez wszystkie kontrolki elementu danych. Aby uzyskać więcej informacji na temat wzorców kontrolek, zobacz [Przegląd wzorców kontrolki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+## <a name="required-ui-automation-control-patterns"></a>Wymagane wzorce kontrolek automatyzacji interfejsu użytkownika  
+ Poniższa tabela zawiera listę [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] wzorców formantów wymaganych do obsługi przez wszystkie kontrolki elementów danych. Aby uzyskać więcej informacji na temat wzorców kontrolek, zobacz [Omówienie wzorców kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
-|— Wzorzec kontrolki|Pomoc techniczna|Uwagi|  
+|Wzorzec kontrolki|Pomoc techniczna|Uwagi|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Zależy od|Jeśli element danych można można rozwijać i zwijać by pokazać lub ukryć informacje, wzorzec Rozwiń Zwiń muszą być obsługiwane.|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Zależy od|Elementy danych będzie obsługiwać wzorzec elementu siatki, gdy kolekcja elementów danych jest dostępna w kontenerze, który może być przestrzennie nawigować pozycji na pozycję.|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Zależy od|Wszystkie elementy danych obsługuje możliwość być przewijane w widoku przy użyciu wzorca element przewijania, gdy ich kontenera danych ma więcej elementów niż można zmieścić na ekranie.|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Yes|Wszystkie elementy danych musi obsługiwać wzorzec SelectionItem sygnalizującego, kiedy element jest zaznaczony.|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Zależy od|Jeśli element danych znajduje się w obrębie typu formantu siatki danych będzie ona obsługiwać tego wzorca.|  
-|<xref:System.Windows.Automation.Provider.IToggleProvider>|Zależy od|Jeśli element danych zawiera stan, który jest cyklom za pośrednictwem.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|Zależy od|Jeśli tekst podstawowy element danych jest edytowalna wzorca wartości muszą być obsługiwane.|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Zależy od|Jeśli element danych może być rozwinięty lub zwinięty w celu pokazywania i ukrywania informacji, musi być obsługiwany wzorzec rozwijania zwijanie.|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Zależy od|Elementy danych będą obsługiwać wzorzec elementu siatki, gdy kolekcja elementów danych jest dostępna w obrębie kontenera, w którym można przechodzić do elementów.|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Zależy od|Wszystkie elementy danych obsługują możliwość przewijania do widoku z wzorcem elementu przewijania, gdy ich kontener danych zawiera więcej elementów niż można zmieścić na ekranie.|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Tak|Wszystkie elementy danych muszą obsługiwać wzorzec elementu zaznaczenia, aby wskazać, kiedy element jest zaznaczony.|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Zależy od|Jeśli element danych jest zawarty w typie kontrolki siatki danych, będzie obsługiwał ten wzorzec.|  
+|<xref:System.Windows.Automation.Provider.IToggleProvider>|Zależy od|Jeśli element danych zawiera stan, który może być przetworzony przez.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|Zależy od|Jeśli podstawowy tekst elementu danych jest edytowalny, wzorzec wartości musi być obsługiwany.|  
   
-<a name="Working_with_Data_Items_in_Large_Lists"></a>   
-## <a name="working-with-data-items-in-large-lists"></a>Praca z elementami danych w dużych listach  
- Duże listy są często danych zwirtualizowane w ramach [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] struktur ułatwiających wydajności. Z tego powodu nie można użyć klienta automatyzacji interfejsu użytkownika [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] funkcji zapytania scrape zawartość pełne drzewo w taki sam sposób, że jest to możliwe w innych kontenerach elementu. Klient powinien przewinąć element w widoku (lub rozwiń kontrolki aby pokazać wszystkie opcje cenne) przed uzyskaniem dostępu do pełnego zestawu danych z elementu danych.  
+## <a name="working-with-data-items-in-large-lists"></a>Praca z elementami danych na dużych listach  
+ Duże listy są często danymi zwirtualizowanymi w [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ramach struktur, aby pomóc w wydajności. Z tego powodu klient automatyzacji interfejsu użytkownika nie może użyć [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] funkcji zapytania, aby wyrównać zawartość pełnego drzewa w taki sam sposób, jak w przypadku innych kontenerów elementów. Klient powinien przewinąć element do widoku (lub rozwinąć kontrolkę, aby wyświetlić wszystkie cenne opcje) przed uzyskaniem dostępu do pełnego zestawu informacji z elementu danych.  
   
- Podczas wywoływania `SetFocus` na [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element do elementu danych [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] przypadek zwróci pomyślnie i spowodować, że fokus, należy ustawić na edycję w poddrzewie elementu danych.  
+ Gdy wywoływana `SetFocus` [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] jest pozycja elementu danych, [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] sprawa zwróci się pomyślnie i spowoduje, że fokus zostanie ustawiony na edycję w poddrzewie elementu danych.  
   
-<a name="Required_UI_Automation_Events"></a>   
-## <a name="required-ui-automation-events"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika wymagane  
- W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane są obsługiwane przez wszystkie kontrolki elementu danych. Aby uzyskać więcej informacji o zdarzeniach zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
+## <a name="required-ui-automation-events"></a>Wymagane zdarzenia automatyzacji interfejsu użytkownika  
+ Poniższa tabela zawiera listę [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzeń wymaganych do obsługi przez wszystkie kontrolki elementów danych. Aby uzyskać więcej informacji na temat zdarzeń, zobacz [Omówienie zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Pomoc techniczna|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Wydarzen|Pomoc techniczna|Uwagi|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Wymagane|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> Zdarzenie zmiany właściwości.|Wymagane|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> Zdarzenie zmiany właściwości.|Wymagane|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> Zdarzenie zmiany właściwości.|Wymagane|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> Zdarzenie zmiany właściwości.|Wymagane|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>zdarzenie zmiany właściwości.|Wymagane|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>zdarzenie zmiany właściwości.|Wymagane|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>zdarzenie zmiany właściwości.|Wymagane|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>zdarzenie zmiany właściwości.|Wymagane|Brak|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Wymagane|Brak|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Zależy od|Brak|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> Zdarzenie zmiany właściwości.|Zależy od|Brak|  
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty>zdarzenie zmiany właściwości.|Zależy od|Brak|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Wymagane|Brak|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Wymagane|Brak|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Wymagane|Brak|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> Zdarzenie zmiany właściwości.|Zależy od|Brak|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> Zdarzenie zmiany właściwości.|Zależy od|Brak|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>zdarzenie zmiany właściwości.|Zależy od|Brak|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty>zdarzenie zmiany właściwości.|Zależy od|Brak|  
   
-<a name="Data_Item_Control_Type_Example"></a>   
-## <a name="dataitem-control-type-example"></a>Przykład typu formantu elementu danych  
- Na poniższym obrazie przedstawiono typu formantu elementu danych w kontrolce widok listy z obsługą rozbudowane informacje dla kolumn.  
+## <a name="dataitem-control-type-example"></a>Przykład typu kontrolki danych  
+ Na poniższej ilustracji przedstawiono typ formantu elementu danych w kontrolce widok listy z obsługą zaawansowanych informacji dla kolumn.  
   
- ![Graficzne kontrolki widok listy z dwoma elementami danych](../../../docs/framework/ui-automation/media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
+ ![Ilustracja przedstawiająca kontrolkę widoku listy z dwoma elementami danych](../../../docs/framework/ui-automation/media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
   
- Kontrolki i widok zawartości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewo, które odnoszą się do kontrolki elementu danych jest wyświetlana poniżej. Wzorce kontrolki dla każdego elementu automatyzacji są wyświetlane w nawiasach. Grupa "Contoso" jest również częścią siatki kontrolki hosta w siatce danych.  
+ Poniżej zostanie wyświetlony widok kontrolki i widok [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zawartości drzewa, które odnoszą się do kontrolki elementu danych. Wzorce kontrolki dla każdego elementu automatyzacji są wyświetlane w nawiasach. Grupa "contoso" jest również częścią siatki kontrolki hosta siatki danych.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Drzewo — widoku kontrolnym|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Drzewo — Widok zawartości|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Widok kontrolki drzewa|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Drzewo — widok zawartości|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|-Grupy "Contoso" (tabeli i siatki)<br />— DataItem "kont Receivable.doc" (TableItem, GridItem — SelectionItem dla, wywołaj)<br />-Image "Kont Receivable.doc"<br />-Edytować "Name" (TableItem, GridItem —, wartość "Kont Receivable.doc")<br />-Edytować "Data modyfikacji" (wartość TableItem, GridItem —, "8/25/2006 3:29 PM")<br />-Edytować "Rozmiar" (wartość GridItem —, TableItem, "11.0 KB)<br />— DataItem "kont Payable.doc" (TableItem, GridItem — SelectionItem dla, wywołaj)<br />-   ...|-Grupy "Contoso" (tabeli i siatki)<br />— DataItem "kont Receivable.doc" (TableItem, GridItem — SelectionItem dla, wywołaj)<br />-Image "Kont Receivable.doc"<br />-Edytować "Name" (TableItem, GridItem —, wartość "Kont Receivable.doc")<br />-Edytować "Data modyfikacji" (wartość TableItem, GridItem —, "8/25/2006 3:29 PM")<br />-Edytować "Rozmiar" (wartość GridItem —, TableItem, "11.0 KB)<br />— DataItem "kont Payable.doc" (TableItem, GridItem — SelectionItem dla, wywołaj)<br />-   …|  
+|-Group "contoso" (tabela, siatka)<br />-Elementu-elementu "Accounts. doc" (TableItem, GridItem, SelectionItem dla, Invoke)<br />-Image "Accounts. doc"<br />-Edit "name" (TableItem, GridItem, Value "Accounts. doc")<br />-Edytuj "Data modyfikacji" (TableItem, GridItem, wartość "8/25/2006 3:29 PM")<br />-Edit "size" (GridItem, TableItem, Value "11,0 KB)<br />-Elementu-elementu "Accounts. doc" (TableItem, GridItem, SelectionItem dla, Invoke)<br />-   ...|-Group "contoso" (tabela, siatka)<br />-Elementu-elementu "Accounts. doc" (TableItem, GridItem, SelectionItem dla, Invoke)<br />-Image "Accounts. doc"<br />-Edit "name" (TableItem, GridItem, Value "Accounts. doc")<br />-Edytuj "Data modyfikacji" (TableItem, GridItem, wartość "8/25/2006 3:29 PM")<br />-Edit "size" (GridItem, TableItem, Value "11,0 KB)<br />-Elementu-elementu "Accounts. doc" (TableItem, GridItem, SelectionItem dla, Invoke)<br />-   …|  
   
- Jeśli siatki reprezentuje listę elementów możliwych do wybrania, odpowiednie elementy interfejsu użytkownika można ujawnić z typem kontroli wyszczególnij zamiast typu formantu elementu danych. W poprzednim przykładzie można zwiększyć, udostępnianie je jako typy kontroli wyszczególnij, ponieważ ten typ obsługuje już wzorca kontrolki SelectionItem dla elementów DataItem ("Kont Receivable.doc" i "Kont Payable.doc") w grupie ("Contoso").  
+ Jeśli siatka reprezentuje listę elementów możliwej do wyboru, odpowiednie elementy interfejsu użytkownika mogą być uwidocznione przy użyciu typu kontrolki ListItem zamiast typu kontrolki danych. W poprzednim przykładzie elementy elementu danych ("Accounts. doc" i "Accounts. doc") w grupie ("contoso") można ulepszyć przez udostępnienie ich jako typy kontrolek typu ListItem, ponieważ ten typ już obsługuje wzorzec formantu SelectionItem dla.  
   
 ## <a name="see-also"></a>Zobacz także
 

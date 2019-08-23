@@ -5,18 +5,18 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dce5984882e48c3e62efc44ef00b6256d9eb64e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704300"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919526"
 ---
-# <a name="client"></a>\<client>
-`client` Element definiuje listę punktów końcowych, które klient może połączyć się z.  
+# <a name="client"></a>\<> klienta
+`client` Element definiuje listę punktów końcowych, z którymi klient może się połączyć.  
   
  \<system.ServiceModel>  
-\<client>  
+\<> klienta  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,19 +41,19 @@ ms.locfileid: "61704300"
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<punkt końcowy >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Zawiera kolekcję elementów punktu końcowego, które określają punktów końcowych, które ten klient może połączyć się z.|  
-|[\<metadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Zawiera ustawienia dla przetwarzania metadanych.|  
+|[\<> punktu końcowego](endpoint-of-client.md)|Zawiera kolekcję elementów punktu końcowego, które określają punkty końcowe, z którymi ten klient może się połączyć.|  
+|[\<> metadanych](metadata.md)|Zawiera ustawienia dotyczące przetwarzania metadanych.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|Element główny wszystkich elementów konfiguracji usługi Windows Communication Foundation (WCF).|  
+|[\<system.serviceModel>](system-servicemodel.md)|Element główny wszystkich elementów konfiguracji Windows Communication Foundation (WCF).|  
   
 ## <a name="remarks"></a>Uwagi  
- `client` Sekcji definiuje listę punktów końcowych, które klient może nawiązać połączenia. Każdy punkt końcowy na liście w sekcji klienta definiuje swój własny powiązania, zachowanie i umowy. Jest unikatowo identyfikowana przez kombinację `name` i `contract` atrybutów. Określa kod klienta `name` połączyć się z punktem końcowym usługi, który implementuje klienta. Jeśli `name` atrybut zostanie pominięty, punkt końcowy działa jako domyślny punkt końcowy dla kontraktu go implementuje.  
+ `client` Sekcja definiuje listę punktów końcowych, z którymi klient może się połączyć. Każdy punkt końcowy wymieniony w sekcji Client definiuje własne powiązanie, zachowanie i kontrakt. Jest unikatowo identyfikowana przez kombinację `name` atrybutów i. `contract` Kod klienta określa, `name` aby połączyć się z punktem końcowym usługi, którą implementuje klient. `name` Jeśli atrybut zostanie pominięty, punkt końcowy działa jako domyślny punkt końcowy dla wdrażanego kontraktu.  
   
- Ponadto w tej sekcji określa również ustawienia dla przetwarzania metadanych.  
+ Ponadto ta sekcja określa również ustawienia przetwarzania metadanych.  
   
 ## <a name="example"></a>Przykład  
   
@@ -76,5 +76,5 @@ ms.locfileid: "61704300"
 
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
-- [Konfiguracja klienta programu WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [Klienci](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [Konfiguracja klienta programu WCF](../../../wcf/feature-details/client-configuration.md)
+- [Klienci](../../../wcf/feature-details/clients.md)

@@ -9,54 +9,54 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: b2bfe253011e24e6792fc60221d05fd60555e87c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 309cd891fd2d764314060e49a401bd1d8f7b8d32
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627049"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963263"
 ---
 # <a name="data-contract-versioning"></a>Przechowywanie wersji kontraktów danych
-W miarę ewolucji aplikacje, również może być konieczne zmiany danych umów dotyczących użycia usług. W tym temacie opisano sposób wersji kontraktów danych. W tym temacie opisano mechanizmy obsługi wersji kontraktu danych. Pełny przegląd i wskazówki wersji przetestowanego rozwiązania ze szczegółami, zobacz [najlepsze rozwiązania: Przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+W miarę rozwoju aplikacji może być również konieczna zmiana kontraktów danych używanych przez usługi. W tym temacie wyjaśniono, jak wersje umów dotyczących danych. W tym temacie opisano mechanizmy obsługi wersji kontraktu danych. Aby zapoznać się z kompletnymi wskazówkami dotyczącymi wersji, zobacz [najlepsze rozwiązania: Przechowywanie wersji](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)kontraktu danych.  
   
-## <a name="breaking-vs-nonbreaking-changes"></a>Przerywanie programu vs. Zmiany nierozdzielający  
- Zmiany kontraktu danych można przerwanie lub nierozdzielające. Po zmianie w sposób nierozdzielający kontraktu danych aplikacji przy użyciu starszej wersji kontrakt może komunikować się z aplikacją przy użyciu nowszej wersji i aplikacji przy użyciu nowszej wersji kontrakt może komunikować się z aplikacją przy użyciu starszej wersji. Z drugiej strony istotną zmianę blokuje komunikację w jednym lub w obu kierunkach.  
+## <a name="breaking-vs-nonbreaking-changes"></a>Przerwanie a Nieprzerwane zmiany  
+ Zmiany w kontrakcie danych mogą być przerywane lub nieprzerwane. Po zmianie kontraktu danych w sposób nieprzerwany aplikacja używająca starszej wersji kontraktu może komunikować się z aplikacją przy użyciu nowszej wersji, a aplikacja korzystająca z nowszej wersji kontraktu może komunikować się z aplikacją przy użyciu starszej wersji. Z drugiej strony, nieprzerwana zmiana uniemożliwia komunikację w jednym lub obu kierunkach.  
   
- Wszelkie zmiany do typu, które nie wpływają na sposób jest wysłanych i odebranych są nieprzerywającymi działania aplikacji. Takie zmiany nie należy zmieniać kontraktu danych, typ podstawowy. Na przykład możesz można zmienić nazwę pola w taki sposób, nierozdzielający Jeśli następnie ustawisz <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> nazwę starszej wersji. Poniższy kod przedstawia wersję 1 kontraktu danych.  
+ Wszelkie zmiany typu, który nie ma wpływu na sposób jego przesyłania i odbierania, nie są przerywane. Takie zmiany nie zmieniają kontraktu danych, tylko typ podstawowy. Na przykład można zmienić nazwę pola w sposób niepodzielony, jeśli następnie ustawisz <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> Właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> na nazwę starszej wersji. Poniższy kod przedstawia wersję 1 kontraktu danych.  
   
  [!code-csharp[C_DataContractVersioning#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractversioning/cs/source.cs#1)]
  [!code-vb[C_DataContractVersioning#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractversioning/vb/source.vb#1)]  
   
- Poniższy kod pokazuje zmiany nieprzerywającymi działania aplikacji.  
+ Poniższy kod przedstawia nieprzerwaną zmianę.  
   
  [!code-csharp[C_DataContractVersioning#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractversioning/cs/source.cs#2)]
  [!code-vb[C_DataContractVersioning#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractversioning/vb/source.vb#2)]  
   
- Niektóre zmiany modyfikują przesyłane dane, ale może lub nie mogą być istotne. Zawsze są istotne następujące zmiany:  
+ Niektóre zmiany modyfikują przesyłane dane, ale mogą lub nie mogą być przerywane. Następujące zmiany są zawsze przerywane:  
   
-- Zmiana <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> lub <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> wartość kontraktu danych.  
+- Zmiana wartości <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>lubkontraktudanych. <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
   
-- Zmiana kolejności elementów członkowskich danych za pomocą <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute>.  
+- Zmiana kolejności elementów członkowskich danych przy użyciu <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwości. <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
-- Zmiana nazwy składowej danych.  
+- Zmiana nazwy elementu członkowskiego danych.  
   
-- Zmiana kontraktu danych składowej danych. Na przykład zmieniając typ element członkowski danych z liczbą całkowitą na ciąg lub typem za pomocą kontraktu danych o nazwie "Klient" do typu kontraktu danych o nazwie "Person".  
+- Zmiana kontraktu danych elementu członkowskiego danych. Na przykład zmiana typu elementu członkowskiego danych z liczby całkowitej na ciąg lub z typu z kontraktem danych o nazwie "Customer" na typ z kontraktem danych o nazwie "Person".  
   
  Możliwe są również następujące zmiany.  
   
 ## <a name="adding-and-removing-data-members"></a>Dodawanie i usuwanie elementów członkowskich danych  
- W większości przypadków dodając lub usuwając element członkowski danych nie jest istotną zmianę, chyba że wymagają ważności ścisłego schematu (Sprawdzanie poprawności względem schematu stare nowych wystąpień).  
+ W większości przypadków dodanie lub usunięcie elementu członkowskiego danych nie jest istotną zmianą, chyba że wymagana jest ścisła ważność schematu (nowe wystąpienia są weryfikowane względem starego schematu).  
   
- Gdy typ o dodatkowe pola jest przeprowadzona na typ z brakujące pole, dodatkowe informacje są ignorowane. (Może to być również przechowywane w celach Pełna zgodnooć wersji; Aby uzyskać więcej informacji, zobacz [kontrakty danych zgodne](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)).  
+ Gdy typ z dodatkowym polem jest deserializowany do typu z brakującym polem, dodatkowe informacje są ignorowane. (Mogą być również przechowywane w celach okrężnych; Aby uzyskać więcej informacji, zobacz Kontrakty [danych zgodne z](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)przekazaniem).  
   
- Gdy typ o brakujące pole jest przeprowadzona na typ o dodatkowe pola, dodatkowe pole pozostanie ustawiony na wartość domyślną, zwykle zero lub `null`. (Wartość domyślna może zostać zmieniona; Aby uzyskać więcej informacji, zobacz [wywołania zwrotne serializacji z tolerancją dla wersji](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).)  
+ Gdy typ z brakującym polem jest deserializowany do typu z dodatkowym polem, dodatkowe pole ma wartość domyślną, zazwyczaj zero lub `null`. (Wartość domyślna może zostać zmieniona. Aby uzyskać więcej informacji, zobacz [wywołania zwrotne serializacji](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)odpornej na wersje).  
   
- Na przykład, można użyć `CarV1` klasy na komputerze klienckim i `CarV2` klasy na usługi lub mogą używać `CarV1` klasy usługi i `CarV2` klasy na komputerze klienckim.  
+ `CarV1` Na przykład można użyć klasy na kliencie `CarV2` i klasy w usłudze `CarV1` lub można użyć klasy w usłudze i `CarV2` klasie na kliencie.  
   
  [!code-csharp[C_DataContractVersioning#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractversioning/cs/source.cs#3)]
  [!code-vb[C_DataContractVersioning#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractversioning/vb/source.vb#3)]  
   
- Punkt końcowy w wersji 2 można pomyślnie wysyłać dane do punktu końcowego w wersji 1. Serializacji wersję 2 `Car` kontraktu danych daje XML, podobny do następującego.  
+ Punkt końcowy w wersji 2 może pomyślnie wysyłać dane do punktu końcowego w wersji 1. Serializowanie wersji 2 `Car` kontraktu danych daje kod XML podobny do poniższego.  
   
 ```xml  
 <Car>  
@@ -65,9 +65,9 @@ W miarę ewolucji aplikacje, również może być konieczne zmiany danych umów 
 </Car>  
 ```  
   
- Aparat deserializacji V1 nie znajdzie dopasowania element członkowski danych dla `HorsePower` pola i odrzuca te dane.  
+ Aparat deserializacji w wersji 1 nie znalazł zgodnego elementu członkowskiego danych dla `HorsePower` tego pola i odrzuca te dane.  
   
- Ponadto punktu końcowego w wersji 1 umożliwia wysyłanie danych do punktu końcowego w wersji 2. Serializacji wersję 1 `Car` kontraktu danych daje XML, podobny do następującego.  
+ Ponadto punkt końcowy w wersji 1 może wysyłać dane do punktu końcowego w wersji 2. Serializowanie wersji 1 `Car` kontraktu danych daje kod XML podobny do poniższego.  
   
 ```xml  
 <Car>  
@@ -75,45 +75,45 @@ W miarę ewolucji aplikacje, również może być konieczne zmiany danych umów 
 </Car>  
 ```  
   
- Deserializator w wersji 2 nie wiedzieli, czego można ustawić `HorsePower` pola, ponieważ nie ma pasującego danych przychodzących pliku XML. Zamiast tego pola jest równa wartości domyślnej 0.  
+ Deserializator wersji 2 nie wie, do czego `HorsePower` służy pole, ponieważ nie ma żadnych pasujących danych w przychodzącym formacie XML. Zamiast tego pole jest ustawione na wartość domyślną 0.  
   
-## <a name="required-data-members"></a>Wymaganych składowych danych  
- Element członkowski danych może być oznaczony jako są wymagane przez ustawienie <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> do `true`. Jeśli jest to wymagane, że podczas deserializacji brakuje danych, wyjątek jest generowany zamiast ustawiać element członkowski danych do wartości domyślnej.  
+## <a name="required-data-members"></a>Wymagane składowe danych  
+ Składowa danych może być oznaczona jako wymagana przez ustawienie <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> właściwości <xref:System.Runtime.Serialization.DataMemberAttribute> do `true`. Jeśli podczas deserializacji brakuje wymaganych danych, zostanie zgłoszony wyjątek zamiast ustawiania elementu członkowskiego danych do jego wartości domyślnej.  
   
- Dodawanie element członkowski danych wymagane jest zmianą przerywającą. Oznacza to nowszego typu mogą nadal być wysyłane do punktów końcowych przy użyciu starszych typu, ale nie odwrotnie. Usuwanie element członkowski danych, która została oznaczona jako wymagana w dowolnej wcześniejszej wersji jest również istotną zmianę.  
+ Dodawanie wymaganego elementu członkowskiego danych jest istotną zmianą. Oznacza to, że nowszy typ można nadal wysyłać do punktów końcowych ze starszym typem, ale nie w inny sposób. Usunięcie elementu członkowskiego danych, który został oznaczony jako wymagany w dowolnej starszej wersji, jest również istotną zmianą.  
   
- Zmiana <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> wartość właściwości z `true` do `false` nie jest istotne, ale zmiana z `false` do `true` mogą być istotne, gdy wszystkie wcześniejsze wersje tego typu nie ma składowej danych, które w danym.  
+ `false` `true` `false` Zmiana wartości `true` właściwości z na na nie jest przerywana, ale zmiana jej z na wartość może zostać przerwana, jeśli żadna wcześniejsza wersja tego typu nie ma podanego elementu członkowskiego danych. <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
   
 > [!NOTE]
->  Mimo że <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> właściwość jest ustawiona na `true`, przychodzących danych może mieć wartości null lub zerową i typ musi być przygotowana do obsługi tej możliwości. Nie używaj <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> jako mechanizmu zabezpieczeń, aby zapewnić ochronę przed dane przychodzące są nieprawidłowe.  
+> `true`Mimo że <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> właściwość jest ustawiona na, dane przychodzące mogą mieć wartość null lub zero, a typ musi być przygotowany do obsługi tej możliwości. Nie należy używać <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> jako mechanizmu zabezpieczeń, aby chronić przed nieprawidłowymi danymi przychodzącymi.  
   
-## <a name="omitted-default-values"></a>Wartości domyślne pominięty  
- Jest możliwe (ale nie jest to zalecane) można ustawić `EmitDefaultValue` właściwości w atrybucie DataMemberAttribute na `false`, zgodnie z opisem w [domyślne wartości elementów członkowskich danych](../../../../docs/framework/wcf/feature-details/data-member-default-values.md). Jeśli to ustawienie jest `false`, składowa danych nie będzie emitowany, jeśli jest ustawiona na wartość domyślną (zazwyczaj wartość null lub zero). To nie jest zgodny z wymaganych składowych danych w różnych wersjach na dwa sposoby:  
+## <a name="omitted-default-values"></a>Pominięte wartości domyślne  
+ Jest możliwe (choć niezalecane), aby ustawić `EmitDefaultValue` właściwość atrybutu DataMemberAttribute na `false`, zgodnie z opisem w wartościach [domyślnych elementu członkowskiego danych](../../../../docs/framework/wcf/feature-details/data-member-default-values.md). Jeśli to ustawienie ma `false`wartość, element członkowski danych nie zostanie wyemitowany, jeśli zostanie ustawiona na jego wartości domyślne (zazwyczaj wartość null lub zero). Jest to niezgodne z wymaganymi elementami członkowskimi danych w różnych wersjach na dwa sposoby:  
   
-- Kontrakt danych element członkowski danych, który jest wymagany w jednej wersji nie może odbierać domyślne (wartość null lub zero) danych z innej wersji, w którym element członkowski danych ma `EmitDefaultValue` równa `false`.  
+- Kontrakt danych z elementem członkowskim danych, który jest wymagany w jednej wersji, nie może odbierać wartości domyślnych (null lub zero) z innej wersji, w której element członkowski `EmitDefaultValue` danych ma `false`ustawioną wartość.  
   
-- Element członkowski danych wymagane, który ma `EmitDefaultValue` równa `false` nie można używać do wykonywania serializacji domyślnej (wartość null lub zero) wartość, ale mogą odbierać wartość przy deserializacji. Spowoduje to utworzenie problemu Pełna zgodnooć wersji (dane mogą być odczytywane w, ale następnie nie może być zapisany tych samych danych). W związku z tym jeśli `IsRequired` jest `true` i `EmitDefaultValue` jest `false` w jednej wersji tej samej kombinacji stosuje się do wszystkich innych wersji taki sposób, że nie ma wersji kontraktu danych może wyprodukować wartość, która nie spowoduje komunikację dwustronną.  
+- Wymagany element członkowski danych, który `EmitDefaultValue` ma `false` ustawioną wartość, nie może zostać użyty do serializacji jego wartości domyślnej (null lub zero), ale może otrzymać taką wartość przy deserializacji. Powoduje to utworzenie problemu okrężnego (dane mogą zostać odczytane, ale te same dane nie mogą być zapisywane). W związku z `IsRequired` tym `true` , jeśli `false` jest i `EmitDefaultValue` znajduje się w jednej wersji, ta sama kombinacja powinna mieć zastosowanie do wszystkich innych wersji, tak że żadna wersja kontraktu danych nie będzie mogła utworzyć wartości, która nie powoduje rundy.  
   
 ## <a name="schema-considerations"></a>Zagadnienia dotyczące schematu  
- Objaśnienia dotyczące schematu, które są generowane dla typów kontraktu danych, zobacz [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+ Aby dowiedzieć się, jakie schematy są generowane dla typów kontraktu danych, zobacz temat [Informacje o schemacie kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
- Schemat WCF tworzy dla typy kontraktu danych sprawia, że nie postanowienia dotyczące wersji. Oznacza to, że schemat wyeksportowane z wersji typu zawiera tylko tych elementów członkowskich danych w tej wersji. Implementowanie <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu nie zmienia schemat dla typu.  
+ Schemat WCF dla typów kontraktu danych nie ma żadnych przepisów dotyczących przechowywania wersji. Oznacza to, że schemat wyeksportowany z określonej wersji typu zawiera tylko te składowe danych, które znajdują się w tej wersji. <xref:System.Runtime.Serialization.IExtensibleDataObject> Implementacja interfejsu nie powoduje zmiany schematu dla typu.  
   
- Elementy członkowskie danych są eksportowane do schematu jako elementy opcjonalne, domyślnie. Oznacza to, że `minOccurs` (atrybut XML), wartość jest równa 0. Elementy członkowskie danych wymagane są eksportowane z `minOccurs` ustawiona na 1.  
+ Elementy członkowskie danych są domyślnie eksportowane do schematu jako elementy opcjonalne. Oznacza to, `minOccurs` że wartość (atrybut XML) jest ustawiona na 0. Wymagane składowe danych zostały wyeksportowane z `minOccurs` ustawioną na 1.  
   
- Wiele zmian uważane za nierozdzielających faktycznie są istotne, jeśli wymagana jest postępowania zgodnie ze schematem. W powyższym przykładzie `CarV1` wystąpienia z po prostu z `Model` elementu może przeprowadzić walidacji względem `CarV2` schematu (która ma zarówno `Model` i `Horsepower`, oba są opcjonalne, ale). Jednakże, odwrotna sytuacja nie jest wartość true: `CarV2` wystąpienia będą się kończyć niepowodzeniem weryfikacji względem `CarV1` schematu.  
+ Wiele zmian uważanych za nieprzerwanie jest w rzeczywistości przerywane, jeśli wymagane jest ścisłe przestrzeganie schematu. W poprzednim `CarV1` przykładzie wystąpienie z `CarV2` `Model` tylko elementem zostanie zweryfikowane względem schematu (które ma zarówno `Model` i `Horsepower`, ale oba są opcjonalne). Jednak odwrócenie nie jest prawdziwe: `CarV2` wystąpienie nie może sprawdzić poprawności `CarV1` względem schematu.  
   
- Pełna zgodnooć wersji także pociąga za sobą pewne dodatkowe zagadnienia. Aby uzyskać więcej informacji, zobacz sekcję "Uwagi dotyczące schematu" w [kontrakty danych zgodne](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Dwukrotne wyzwolenie obejmuje również pewne dodatkowe zagadnienia. Aby uzyskać więcej informacji, zobacz sekcję "zagadnienia dotyczące schematu" w [umowach dotyczących danych przesyłanych dalej](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
-### <a name="other-permitted-changes"></a>Dozwolone inne zmiany  
- Implementowanie <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu według regionów powoduje zmianę nieprzerywającymi działania aplikacji. Jednak obsługa Pełna zgodnooć wersji nie istnieje dla wersji typu wcześniejszymi niż wersja, w którym <xref:System.Runtime.Serialization.IExtensibleDataObject> została zaimplementowana. Aby uzyskać więcej informacji, zobacz [kontrakty danych zgodne](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+### <a name="other-permitted-changes"></a>Inne dozwolone zmiany  
+ <xref:System.Runtime.Serialization.IExtensibleDataObject> Implementacja interfejsu jest zmianą nierozdzielającą. Niemniej jednak pomoc techniczna przy użyciu rundy nie istnieje dla wersji typu przed wersją, w której <xref:System.Runtime.Serialization.IExtensibleDataObject> została zaimplementowana. Aby uzyskać więcej informacji, zobacz [Kontrakty danych zgodne z przekazywaniem dalej](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="enumerations"></a>Wyliczenia  
- Dodawanie lub usuwanie elementu członkowskiego wyliczenia jest zmianą przerywającą. Zmiana nazwy elementu członkowskiego wyliczenia jest istotne, chyba że jego nazwa kontraktu jest taki sam jak stara wersja przechowywane przy użyciu `EnumMemberAttribute` atrybutu. Aby uzyskać więcej informacji, zobacz [Typy wyliczeniowe w kontraktach danych](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Dodawanie lub usuwanie elementu członkowskiego wyliczenia jest istotną zmianą. Zmiana nazwy elementu członkowskiego wyliczenia jest przerywana, chyba że jego nazwa kontraktu jest taka sama jak w starej wersji przy użyciu `EnumMemberAttribute` atrybutu. Aby uzyskać więcej informacji, zobacz [typy wyliczeniowe w kontraktach danych](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Kolekcje  
- Większość zmian kolekcji nieprzerywającymi działania aplikacji, ponieważ większość typów kolekcji czy zamienne ze sobą w modelu kontraktu danych. Jednak dokonywanie kolekcję noncustomized dostosowany lub odwrotnie jest zmianą przerywającą. Ponadto zmiana ustawień dostosowywania kolekcji jest zmianą przerywającą; oznacza to zmiana jego nazwy kontraktu danych i przestrzeni nazw, powtarzające się nazwy elementu, nazwa elementu klucza i wartości nazwy elementu. Aby uzyskać więcej informacji na temat dostosowywania kolekcji zobacz [typy kolekcji w kontraktach danych](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
-Oczywiście zmiana kontraktu danych treści kolekcji (np. zmiana na liście liczb całkowitych na listę ciągów) jest zmianą przerywającą.  
+ Większość zmian kolekcji jest nieprzerwana, ponieważ większość typów kolekcji są zamienne ze sobą w modelu kontraktu danych. Jednak niestandardowa kolekcja jest dostosowywana lub na odwrót jest istotną zmianą. Ponadto zmiana ustawień dostosowywania kolekcji jest istotną zmianą. oznacza to, że zmiana nazwy kontraktu danych i przestrzeni nazw, powtarzająca się nazwa elementu, nazwa elementu klucza i nazwa elementu wartości. Aby uzyskać więcej informacji na temat dostosowywania kolekcji, zobacz [typy kolekcji w kontraktach danych](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+Naturalnie zmiana kontraktu danych kolekcji (na przykład zmiana listy liczb całkowitych na listę ciągów) jest istotną zmianą.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -126,7 +126,7 @@ Oczywiście zmiana kontraktu danych treści kolekcji (np. zmiana na liście licz
 - <xref:System.Runtime.Serialization.SerializationException>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - [Wywołania zwrotne serializacji z tolerancją dla wersji](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
-- [Najlepsze rozwiązania: Przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Najlepsze rozwiązania: Przechowywanie wersji kontraktu danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
 - [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Równoważność kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Kontrakty danych zgodne z nowszymi wersjami](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

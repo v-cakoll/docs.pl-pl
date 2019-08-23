@@ -10,73 +10,73 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca7f3a8d9ee840fc8c1c8a8efdadf8da033241f1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 689ee44980a4a41b6d46ed9b68306c1b08c49586
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377466"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960064"
 ---
 # <a name="exceptions-in-managed-threads"></a>Wyjątki w zarządzanych wątkach
-Począwszy od programu .NET Framework w wersji 2.0 środowisko uruchomieniowe języka wspólnego pozwala najbardziej nieobsługiwanych wyjątków w wątkach, aby kontynuować naturalnie. W większości przypadków oznacza to, że nieobsługiwany wyjątek powoduje zamknięcie aplikacji.  
+Począwszy od .NET Framework w wersji 2,0, środowisko uruchomieniowe języka wspólnego pozwala na wykonywanie większości nieobsługiwanych wyjątków w wątkach. W większości przypadków, nieobsłużony wyjątek powoduje przerwanie działania aplikacji.  
   
 > [!NOTE]
->  Jest to znaczące zmiany z wersji systemu .NET Framework 1.0 i 1.1, która zawiera backstop dla wielu nieobsłużonych wyjątków — na przykład nieobsłużonych wyjątków z wątków z puli wątków. Zobacz [zmiany z wcześniejszych wersji](#ChangeFromPreviousVersions) w dalszej części tego tematu.  
+> Jest to znacząca zmiana z .NET Framework wersje 1,0 i 1,1, które zapewniają przetrzymywanie dla wielu nieobsłużonych wyjątków — na przykład Nieobsłużone wyjątki w wątkach puli wątków. Zobacz [zmiana z poprzednich wersji](#ChangeFromPreviousVersions) w dalszej części tego tematu.  
   
- Środowisko uruchomieniowe języka wspólnego zawiera wyjątki backstop na pewnych nieobsłużony, które są używane do sterowania przepływem programu:  
+ Środowisko uruchomieniowe języka wspólnego zapewnia Nieobsłużone wyjątki, które są używane do sterowania przepływem programu:  
   
-- A <xref:System.Threading.ThreadAbortException> jest zgłaszany w wątku, ponieważ <xref:System.Threading.Thread.Abort%2A> została wywołana.  
+- Element <xref:System.Threading.ThreadAbortException> jest generowany w wątku, ponieważ <xref:System.Threading.Thread.Abort%2A> został wywołany.  
   
-- <xref:System.AppDomainUnloadedException> Jest zgłaszany w wątku, ponieważ Trwa zwalnianie domeny aplikacji, w którym wykonywany jest wątek.  
+- <xref:System.AppDomainUnloadedException> Jest zgłaszany w wątku, ponieważ trwa zwalnianie domeny aplikacji, w której wykonywany jest wątek.  
   
-- Środowisko uruchomieniowe języka wspólnego lub procesu hosta kończy wątku, zgłaszając wyjątek wewnętrzny.  
+- Środowisko uruchomieniowe języka wspólnego lub proces hosta przerywa wątek przez wygenerowanie wewnętrznego wyjątku.  
   
- Jeśli dowolny z tych wyjątków nieobsługiwanego w wątkach, utworzone przez środowisko uruchomieniowe języka wspólnego wątek kończy się wyjątek, ale środowisko uruchomieniowe języka wspólnego nie zezwala na wyjątek kontynuować.  
+ Jeśli którykolwiek z tych wyjątków nie jest obsługiwany w wątkach utworzonych przez środowisko uruchomieniowe języka wspólnego, wyjątek kończy działanie wątku, ale środowisko uruchomieniowe języka wspólnego nie zezwala na dalsze dalsze dalsze działanie.  
   
- Jeśli te wyjątki są nieobsługiwane w głównym wątku, lub w wątkach, które wprowadzono środowisko uruchomieniowe z kodem niezarządzanym pochodzą normalnie, co spowoduje przerwanie aplikacji.  
+ Jeśli te wyjątki są nieobsługiwane w wątku głównym lub w wątkach, które zostały wprowadzone w środowisku uruchomieniowym z kodu niezarządzanego, zwykle działają normalnie, co spowoduje zakończenie działania aplikacji.  
   
 > [!NOTE]
->  Istnieje możliwość dla środowiska uruchomieniowego do zgłoszenia nieobsługiwany wyjątek, zanim dowolnego kodu zarządzanego miała szansę, aby zainstalować program obsługi wyjątku. Mimo że kod zarządzany miał możliwość obsługi takiego wyjątku, wyjątek może przejść w sposób naturalny.  
+> Jest możliwe, aby środowisko uruchomieniowe zgłosiło nieobsłużony wyjątek, zanim kod zarządzany miał szansę na zainstalowanie programu obsługi wyjątków. Chociaż kod zarządzany nie był w stanie obsłużyć takiego wyjątku, wyjątek można przeprowadzić w naturalny sposób.  
   
-## <a name="exposing-threading-problems-during-development"></a>Udostępnianie wątkowości problemy podczas programowania  
- Jeśli wątki mogą zakończyć się niepowodzeniem w trybie dyskretnym, bez przerywania aplikacji poważnych problemów programowania przejść niewykryte. Jest to konkretnych problemów dla usług i innych aplikacji uruchamianych przez dłuższy czas. Ponieważ wątki kończyć się niepowodzeniem, stan programu stopniowo ulegnie uszkodzeniu. Limitu może obniżyć wydajność aplikacji lub aplikacja może przestać odpowiadać.  
+## <a name="exposing-threading-problems-during-development"></a>Uwidacznianie problemów wielowątkowości podczas opracowywania  
+ Gdy wątki mogą kończyć się niepowodzeniem w trybie dyskretnym, bez przerywania działania aplikacji, nie wykryto poważnych problemów programistycznych. Jest to konkretny problem dotyczący usług i innych aplikacji uruchamianych przez Rozszerzone okresy. Gdy wątki zakończą się niepowodzeniem, stan programu stopniowo ulega uszkodzeniu. Wydajność aplikacji może być gorsza lub aplikacja może przestać odpowiadać.  
   
- Zezwolenie nieobsługiwanych wyjątków w wątkach, aby kontynuować naturalnie, aż do zakończenia programu, system operacyjny udostępnia takie problemy podczas tworzenia i testowania aplikacji. Raporty o błędach programu zakończenia obsługi debugowania.  
+ Zezwalanie na Nieobsłużone wyjątki w wątkach w sposób naturalny, dopóki system operacyjny nie zakończy działania programu, ujawnia takie problemy podczas tworzenia i testowania. Raporty o błędach programu obsługują debugowanie.  
   
 <a name="ChangeFromPreviousVersions"></a>   
-## <a name="change-from-previous-versions"></a>Zmiana z poprzednich wersji  
- Najbardziej znacząca zmiana dotyczy tylko zarządzanych wątków. W wersjach programu .NET Framework 1.0 i 1.1 środowisko uruchomieniowe języka wspólnego dostarcza backstop dla nieobsłużonych wyjątków w następujących sytuacjach:  
+## <a name="change-from-previous-versions"></a>Zmień z poprzednich wersji  
+ Najbardziej znaczące zmiany odnoszą się do zarządzanych wątków. W .NET Framework wersje 1,0 i 1,1 środowisko uruchomieniowe języka wspólnego zapewnia Nieobsłużone wyjątki w następujących sytuacjach:  
   
-- Brak coś takiego jak nieobsługiwany wyjątek w wątku z puli wątków. Gdy zadanie zgłasza wyjątek, który nie obsługuje, środowisko uruchomieniowe Wyświetla ślad stosu wyjątku do konsoli, a następnie zwraca wątku do puli wątków.  
+- Nie ma takiego znaczenia jako nieobsłużonego wyjątku w wątku puli wątków. Gdy zadanie zgłasza wyjątek, który nie jest obsługiwany, środowisko uruchomieniowe drukuje ślad stosu wyjątku do konsoli programu, a następnie zwraca wątek do puli wątków.  
   
-- Brak coś takiego nieobsługiwany wyjątek w wątku utworzonych za pomocą <xref:System.Threading.Thread.Start%2A> metody <xref:System.Threading.Thread> klasy. Gdy kod działający na takich wątków zgłasza wyjątek, który nie obsługuje, środowisko uruchomieniowe Wyświetla ślad stosu wyjątku do konsoli i bez problemu zmieniała kończy wątku.  
+- Nie ma takiego znaczenia jako nieobsłużony wyjątek w wątku utworzonym za pomocą <xref:System.Threading.Thread.Start%2A> metody <xref:System.Threading.Thread> klasy. Gdy kod uruchomiony w takim wątku zgłasza wyjątek, który nie jest obsługiwany, środowisko uruchomieniowe drukuje ślad stosu wyjątku do konsoli programu, a następnie przerywa działanie wątku.  
   
-- Brak coś takiego jak nieobsługiwany wyjątek w wątku finalizatora. Gdy finalizator zgłasza wyjątek, który nie obsługuje, środowisko uruchomieniowe Wyświetla ślad stosu wyjątku do konsoli, a następnie umożliwia wątek finalizatora ponownie uruchomić finalizatorów.  
+- Nie ma takiego znaczenia jako nieobsłużonego wyjątku w wątku finalizatora. Gdy finalizator zgłasza wyjątek, który nie jest obsługiwany, środowisko uruchomieniowe drukuje ślad stosu wyjątku do konsoli programu, a następnie zezwoli wątekowi finalizatora na wznowienie działania finalizatorów.  
   
- Stan pierwszego planu i tła wątków zarządzanych nie wpływa na to zachowanie.  
+ Stan pierwszego planu lub tła wątku zarządzanego nie ma wpływu na to zachowanie.  
   
- Dla nieobsłużonych wyjątków w wątkach, pochodzących z kodem niezarządzanym różnica jest bardziej subtelny. Okno dialogowe dołączania JIT środowiska uruchomieniowego zastępuje okno dialogowe systemu operacyjnego dla wyjątków zarządzanych lub natywnych wyjątków w wątkach, które zostały przekazane za pośrednictwem kodu natywnego. Proces kończy się we wszystkich przypadkach.  
+ W przypadku nieobsłużonych wyjątków w wątkach pochodzących z kodu niezarządzanego różnica jest bardziej subtelna. Okno dialogowe do dołączania JIT środowiska uruchomieniowego zastępują okno dialogowe systemu operacyjnego dla wyjątków zarządzanych lub natywnych wyjątków w wątkach, które przechodzą przez kod natywny. Proces kończy się we wszystkich przypadkach.  
   
 ### <a name="migrating-code"></a>Migrowanie kodu  
- Ogólnie rzecz biorąc zmiana udostępni wcześniej nierozpoznany problemów programowania, aby ich. W niektórych przypadkach jednak programistów wprowadzić jakieś zalet backstop środowiska uruchomieniowego, na przykład zakończyć wątków. W zależności od sytuacji powinni rozważyć jedną z następujących strategii migracji:  
+ Ogólnie rzecz biorąc, zmiana ta spowoduje ujawnienie wcześniej nierozpoznanych problemów programistycznych, dzięki czemu mogą one zostać naprawione. Jednak w niektórych przypadkach programiści mogą korzystać z funkcji przerwania w czasie wykonywania, na przykład do kończenia wątków. W zależności od sytuacji należy wziąć pod uwagę jedną z następujących strategii migracji:  
   
-- Restrukturyzacja kodu, dzięki czemu wątek kończy działanie bez problemu zmieniała po odebraniu sygnału.  
+- Restrukturyzacja kodu, dzięki czemu wątek zostanie bezproblemowo zakończony po odebraniu sygnału.  
   
-- Użyj <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> metodę, aby przerwać wątku.  
+- Użyj metody <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> , aby przerwać wątek.  
   
-- Wątek musi zostać zatrzymana, aby kontynuować zakończenia procesu, aby wątek wątku w tle, aby było automatycznie przerywane na zakończenie procesu.  
+- Jeśli wątek musi zostać zatrzymany, aby zakończyć proces, należy wykonać wątek jako wątek w tle, dzięki czemu zostanie on automatycznie przerwany po zakończeniu procesu.  
   
- We wszystkich przypadkach strategii powinien być zgodny z wytycznymi projektowania dla wyjątków. Zobacz [projektowania wskazówki dotyczące wyjątków](../../../docs/standard/design-guidelines/exceptions.md).  
+ We wszystkich przypadkach strategia powinna być zgodna z zaleceniami dotyczącymi projektowania wyjątków. Zobacz [wskazówki dotyczące projektowania wyjątków](../../../docs/standard/design-guidelines/exceptions.md).  
   
-### <a name="application-compatibility-flag"></a>Flagi zgodności aplikacji  
- Jako tymczasowy zgodności, Administratorzy mogą umieszczać flagę zgodności w `<runtime>` sekcję pliku konfiguracji aplikacji. Powoduje to, że środowisko uruchomieniowe języka wspólnego powraca do zachowania w wersjach 1.0 i 1.1.  
+### <a name="application-compatibility-flag"></a>Flaga zgodności aplikacji  
+ Jako tymczasową miarę zgodności Administratorzy mogą umieścić flagę zgodności w `<runtime>` sekcji pliku konfiguracyjnego aplikacji. Powoduje to, że środowisko uruchomieniowe języka wspólnego przywraca zachowanie wersji 1,0 i 1,1.  
   
 ```xml  
 <legacyUnhandledExceptionPolicy enabled="1"/>  
 ```  
   
 ## <a name="host-override"></a>Zastąpienie hosta  
- W .NET Framework w wersji 2.0, można użyć niezarządzany host [iclrpolicymanager —](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) interfejsu API hostingu, aby zastąpić domyślne nieobsługiwane wyjątki od zasad środowiska uruchomieniowego języka wspólnego. [Iclrpolicymanager::setunhandledexceptionpolicy —](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) funkcja jest używana do ustawiania zasad dla nieobsłużonych wyjątków.  
+ W .NET Framework w wersji 2,0 Host niezarządzany może użyć interfejsu [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) w interfejsie API hostingu, aby zastąpić domyślne zasady nieobsłużonego wyjątku środowiska uruchomieniowego języka wspólnego. Funkcja [ICLRPolicyManager:: SetUnhandledExceptionPolicy —](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) służy do ustawiania zasad dla nieobsłużonych wyjątków.  
   
 ## <a name="see-also"></a>Zobacz także
 

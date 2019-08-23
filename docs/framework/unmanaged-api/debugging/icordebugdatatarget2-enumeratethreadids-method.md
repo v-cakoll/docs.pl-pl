@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: af02460f-2a45-496e-bc4e-a1ac4f80fe11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 848929901e91164bdccda5c1e77069364452a782
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1dc5f8b7fa308bdb0fb270c11e044244839a7b47
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750251"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910289"
 ---
 # <a name="icordebugdatatarget2enumeratethreadids-method"></a>Metoda ICorDebugDataTarget2::EnumerateThreadIDs
-Zwraca listę aktywnych wątków identyfikatorów.  
+Zwraca listę aktywnych identyfikatorów wątków.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,25 +26,25 @@ HRESULT EnumerateThreadIDs(
   
 ## <a name="parameters"></a>Parametry  
  cThreadIDs  
- [in] Maksymalna liczba wątków, których identyfikatory, które mogą być zwrócone.  
+ podczas Maksymalna liczba wątków, których identyfikatory można zwrócić.  
   
  pcThreadIds  
- [out] Wskaźnik do `ULONG32` oznacza to, rzeczywista liczba wątków identyfikatory zapisywane do `pThreadIds` tablicy.  
+ określoną Wskaźnik `ULONG32` wskazujący rzeczywistą liczbę identyfikatorów wątków zapisaną `pThreadIds` w tablicy.  
   
  pThreadIDs  
- Tablica identyfikatorów wątku.  
+ Tablica identyfikatorów wątków.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md). **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md). **Nagłówek:** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

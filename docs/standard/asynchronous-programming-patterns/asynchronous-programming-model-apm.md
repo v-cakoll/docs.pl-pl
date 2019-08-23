@@ -13,57 +13,57 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16e500a645df2b58fb2d2fd402120556922d1800
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3c03a6dadae98d75b06b96bb3cde67db4747b8c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628929"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950868"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Model programowania asynchronicznego (APM)
-Operacja asynchroniczna, która używa <xref:System.IAsyncResult> wzorzec projektowy jest implementowany jako dwie metody o nazwie `BeginOperationName` i `EndOperationName` , rozpoczęcia i zakończenia operacji asynchronicznej *OperationName* odpowiednio. Na przykład <xref:System.IO.FileStream> klasa udostępnia <xref:System.IO.FileStream.BeginRead%2A> i <xref:System.IO.FileStream.EndRead%2A> metody do asynchronicznego odczytu bajtów z pliku. Te metody wdrożenia to wersja asynchroniczna elementu <xref:System.IO.FileStream.Read%2A> metody.  
+Asynchroniczna operacja, która używa <xref:System.IAsyncResult> wzorca projektowego, jest implementowana jako `BeginOperationName` dwie `EndOperationName` metody o nazwie i, która rozpoczyna i kończy odpowiednio *operację* asynchroniczną. Na przykład <xref:System.IO.FileStream> Klasa <xref:System.IO.FileStream.BeginRead%2A> zawiera metody i <xref:System.IO.FileStream.EndRead%2A> , aby asynchronicznie odczytywać bajty z pliku. Te metody implementują wersję <xref:System.IO.FileStream.Read%2A> asynchroniczną metody.  
   
 > [!NOTE]
->  Począwszy od programu .NET Framework 4 w bibliotece zadań równoległych przewiduje nowy model programowania asynchronicznego i równoległego. Aby uzyskać więcej informacji, zobacz [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) i [opartego na zadaniach asynchronicznej wzorca (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)).  
+> Począwszy od .NET Framework 4, Biblioteka zadań równoległych udostępnia nowy model dla programowania asynchronicznego i równoległego. Aby uzyskać więcej informacji, zobacz [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) i [wzorzec asynchroniczny oparty na zadaniach (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)).  
   
- Po wywołaniu `BeginOperationName`, aplikacja może kontynuować wykonywania instrukcji na wątku wywołania, gdy operacja asynchroniczna odbywa się w innym wątku. Dla każdego wywołania `BeginOperationName`, aplikacja powinna również wywołać `EndOperationName` można pobrać wyniki operacji.  
+ Po wywołaniu `BeginOperationName`aplikacja może kontynuować wykonywanie instrukcji w wątku wywołującym, gdy operacja asynchroniczna odbywa się w innym wątku. Dla każdego wywołania do `BeginOperationName`, aplikacja powinna również wywołać `EndOperationName` , aby uzyskać wyniki operacji.  
   
-## <a name="beginning-an-asynchronous-operation"></a>Rozpoczynanie operacji asynchronicznych  
- `BeginOperationName` Metoda rozpoczyna operację asynchroniczną *OperationName* i zwraca obiekt, który implementuje <xref:System.IAsyncResult> interfejsu. <xref:System.IAsyncResult> obiekty są przechowywane informacje o operacji asynchronicznej. W poniższej tabeli przedstawiono informacje o operacji asynchronicznej.  
+## <a name="beginning-an-asynchronous-operation"></a>Rozpoczynanie operacji asynchronicznej  
+ Metoda rozpoczyna wykonywanie operacji asynchronicznej i zwraca <xref:System.IAsyncResult> obiekt, który implementuje interfejs. `BeginOperationName` <xref:System.IAsyncResult>obiekty przechowują informacje o operacji asynchronicznej. W poniższej tabeli przedstawiono informacje na temat operacji asynchronicznej.  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|<xref:System.IAsyncResult.AsyncState%2A>|Opcjonalne obiekt specyficzne dla aplikacji, który zawiera informacje o operacji asynchronicznej.|  
-|<xref:System.IAsyncResult.AsyncWaitHandle%2A>|Element <xref:System.Threading.WaitHandle> można zablokować wykonywanie aplikacji do momentu ukończenia operacji asynchronicznej.|  
-|<xref:System.IAsyncResult.CompletedSynchronously%2A>|Wartość, która wskazuje, czy operacja asynchroniczna została zakończona na wątek używany do wywoływania `BeginOperationName` zamiast kończenie na osobnym <xref:System.Threading.ThreadPool> wątku.|  
-|<xref:System.IAsyncResult.IsCompleted%2A>|Wartość, która wskazuje, czy operacja asynchroniczna została zakończona.|  
+|<xref:System.IAsyncResult.AsyncState%2A>|Opcjonalny obiekt specyficzny dla aplikacji, który zawiera informacje o operacji asynchronicznej.|  
+|<xref:System.IAsyncResult.AsyncWaitHandle%2A>|<xref:System.Threading.WaitHandle> , Który może służyć do blokowania wykonywania aplikacji do momentu zakończenia operacji asynchronicznej.|  
+|<xref:System.IAsyncResult.CompletedSynchronously%2A>|Wartość wskazująca, czy operacja asynchroniczna została zakończona na wątku używanym do `BeginOperationName` wywoływania zamiast wykonywania w osobnym <xref:System.Threading.ThreadPool> wątku.|  
+|<xref:System.IAsyncResult.IsCompleted%2A>|Wartość wskazująca, czy operacja asynchroniczna została ukończona.|  
   
- A `BeginOperationName` metoda przyjmuje parametry zadeklarowane w podpisie to wersja synchroniczna metody, które są przekazywane przez wartość lub przez odwołanie. Dowolne parametry wyjściowe nie są częścią `BeginOperationName` podpis metody. `BeginOperationName` Podpis metody zawiera także dwie dodatkowe parametry. Pierwsze zachowanie definiuje <xref:System.AsyncCallback> delegata, który odwołuje się do metody, która jest wywoływana po zakończeniu operacji asynchronicznej. Można określić obiekt wywołujący `null` (`Nothing` w języku Visual Basic) jeżeli chcesz metody wywoływane po zakończeniu operacji. Drugi dodatkowy parametr znajduje obiekt zdefiniowany przez użytkownika. Ten obiekt może służyć do przekazywania informacji o stanie specyficzne dla aplikacji do metody wywoływane, gdy operacja asynchroniczna. Jeśli `BeginOperationName` metoda przyjmuje dodatkowych parametrów określonych operacji, takich jak tablica bajtów do przechowywania bajtów odczytanych z pliku, <xref:System.AsyncCallback> i obiektu stanu aplikacji są ostatnimi parametrami w `BeginOperationName` podpis metody.  
+ `BeginOperationName` Metoda przyjmuje wszystkie parametry zadeklarowane w sygnaturze synchronicznej wersji metody, która jest przenoszona przez wartość lub przez odwołanie. Wszystkie parametry out nie są częścią `BeginOperationName` sygnatury metody. Sygnatura `BeginOperationName` metody również zawiera dwa dodatkowe parametry. Pierwszy z nich definiuje <xref:System.AsyncCallback> delegata, który odwołuje się do metody, która jest wywoływana po zakończeniu operacji asynchronicznej. Obiekt wywołujący może `null` określić`Nothing` (w Visual Basic), jeśli nie ma metody wywoływanej po zakończeniu operacji. Drugi dodatkowy parametr jest obiektem zdefiniowanym przez użytkownika. Ten obiekt może służyć do przekazywania informacji o stanie specyficznym dla aplikacji do metody wywoływanej po zakończeniu operacji asynchronicznej. Jeśli metoda przyjmuje dodatkowe parametry specyficzne dla operacji, takie jak tablica bajtowa do przechowywania bajtów odczytanych z pliku <xref:System.AsyncCallback> , obiekt stanu aplikacji jest ostatnim parametrem w `BeginOperationName` podpisie metody. `BeginOperationName`  
   
- `BeginOperationName` Zwraca kontroli do wywołanego wątku od razu. Jeśli `BeginOperationName` metoda zgłasza wyjątek wyjątków, wyjątki są zgłaszane, przed rozpoczęciem operacji asynchronicznej. Jeśli `BeginOperationName` metoda zgłasza wyjątki, metody wywołania zwrotnego nie jest wywoływany.  
+ `BeginOperationName`zwraca bezpośrednio formant do wywołującego wątku. `BeginOperationName` Jeśli metoda zgłasza wyjątki, wyjątki są zgłaszane przed rozpoczęciem operacji asynchronicznej. `BeginOperationName` Jeśli metoda zgłasza wyjątki, metoda wywołania zwrotnego nie jest wywoływana.  
   
-## <a name="ending-an-asynchronous-operation"></a>Zakończenie operacji asynchronicznej  
- `EndOperationName` Metoda kończy się operacja asynchroniczna *OperationName*. Wartość zwracana przez `EndOperationName` metoda jest ten sam typ zwracany przez jej synchronicznego odpowiednika i jest specyficzne dla operacji asynchronicznej. Na przykład <xref:System.IO.FileStream.EndRead%2A> metoda zwraca liczbę bajtów odczytanych z <xref:System.IO.FileStream> i <xref:System.Net.Dns.EndGetHostByName%2A> metoda zwraca <xref:System.Net.IPHostEntry> obiekt, który zawiera informacje o komputerze hosta. `EndOperationName` Metoda przyjmuje żadnego lub ref parametry zadeklarowane w podpisie to wersja synchroniczna metody. Oprócz parametrów z metody synchronicznej `EndOperationName` metoda obejmuje także <xref:System.IAsyncResult> parametru. Obiekty wywołujące muszą przekazywać wystąpienie zwrócone przez wywołanie odpowiedniej `BeginOperationName`.  
+## <a name="ending-an-asynchronous-operation"></a>Kończenie operacji asynchronicznej  
+ Metoda spowoduje zakończenie operacji asynchronicznej. `EndOperationName` Wartość `EndOperationName` zwracana metody jest tego samego typu zwracanego przez jego odpowiednik synchroniczny i jest specyficzna dla operacji asynchronicznej. Na przykład <xref:System.IO.FileStream.EndRead%2A> Metoda zwraca liczbę bajtów odczytanych <xref:System.IO.FileStream> z <xref:System.Net.IPHostEntry> i, a <xref:System.Net.Dns.EndGetHostByName%2A> Metoda zwraca obiekt, który zawiera informacje o komputerze hosta. `EndOperationName` Metoda przyjmuje wszystkie parametry out lub ref zadeklarowane w sygnaturze synchronicznej wersji metody. Oprócz parametrów z metody synchronicznej, `EndOperationName` Metoda <xref:System.IAsyncResult> zawiera również parametr. Obiekty wywołujące muszą przekazać wystąpienie zwrócone przez odpowiednie wywołanie do `BeginOperationName`.  
   
- Jeśli operacja asynchroniczna jest reprezentowane przez <xref:System.IAsyncResult> obiektu nie zostało zakończone, kiedy `EndOperationName` jest wywoływana, `EndOperationName` blokuje wątek wywołujący, aż do zakończenia operacji asynchronicznej. Wyjątki generowane przez operację asynchroniczną są generowane przez `EndOperationName` metody. Efekt wywoływania `EndOperationName` metoda wiele razy z takimi samymi <xref:System.IAsyncResult> nie został zdefiniowany. Podobnie wywołanie `EndOperationName` metody z <xref:System.IAsyncResult> który nie został zwrócony przez Begin powiązane, metoda również nie zdefiniowano.  
-  
-> [!NOTE]
->  W obu scenariuszach niezdefiniowane implementacji należy wziąć pod uwagę zgłaszanie <xref:System.InvalidOperationException>.  
+ Jeśli operacja asynchroniczna reprezentowana przez <xref:System.IAsyncResult> obiekt nie została ukończona, gdy `EndOperationName` jest wywoływana `EndOperationName` , blokuje wątek wywołujący do momentu ukończenia operacji asynchronicznej. Wyjątki zgłoszone przez operację asynchroniczną są generowane `EndOperationName` przez metodę. Efekt wywołania `EndOperationName` metody wiele razy z tą samą <xref:System.IAsyncResult> nie jest zdefiniowany. Podobnie wywołanie `EndOperationName` metody <xref:System.IAsyncResult> z, która nie została zwrócona przez powiązaną metodę Begin, nie jest również zdefiniowane.  
   
 > [!NOTE]
->  Implementacje tym wzorcu projektowym należy powiadomić obiekt wywołujący, zakończenia operacji asynchronicznej, ustawiając <xref:System.IAsyncResult.IsCompleted%2A> na wartość true, wywołanie metody asynchroniczne wywołanie zwrotne (jeśli został określony) i sygnalizowanie <xref:System.IAsyncResult.AsyncWaitHandle%2A>.  
+> Dla każdego z niezdefiniowanych scenariuszy implementujących należy rozważyć Przerzucanie <xref:System.InvalidOperationException>.  
   
- Deweloperzy aplikacji mają kilka uzasadnienie wyboru tych elementów do uzyskiwania dostępu do wyników operacji asynchronicznej. Odpowiedni wybór zależy od tego, czy aplikacja ma instrukcje, które mogą być wykonywane podczas kończenia operacji. Jeśli aplikacja nie może wykonać żadnych dodatkowych działań, dopóki nie odbierze wyniki operacji asynchronicznej, aplikację należy zablokować, dopóki wyniki są dostępne. Aby zablokować dopiero po zakończeniu operacji asynchronicznej, można użyć jednej z następujących metod:  
+> [!NOTE]
+> Implementujący ten Wzorzec projektowy powinien poinformować wywołującego, że operacja asynchroniczna została zakończona <xref:System.IAsyncResult.IsCompleted%2A> przez ustawienie wartości true, wywołanie asynchronicznej metody wywołania zwrotnego (jeśli została określona) i <xref:System.IAsyncResult.AsyncWaitHandle%2A>sygnalizowanie.  
   
-- Wywołaj `EndOperationName` z wątku głównego aplikacji, blokowanie wykonania aplikacji do momentu operacji zostało zakończone. Na przykład, który ilustruje tej techniki, zobacz [blokowanie wykonywania aplikacji poprzez zakończenie operacji asynchronicznej](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
+ Deweloperzy aplikacji mają kilka opcji projektowania do uzyskiwania dostępu do wyników operacji asynchronicznej. Prawidłowy wybór zależy od tego, czy aplikacja zawiera instrukcje, które mogą być wykonywane, gdy operacja zostanie ukończona. Jeśli aplikacja nie może wykonać żadnej dodatkowej pracy, dopóki nie odbierze wyników operacji asynchronicznej, aplikacja musi zablokować, dopóki wyniki nie będą dostępne. Aby zablokować do momentu zakończenia operacji asynchronicznej, można użyć jednej z następujących metod:  
   
-- Użyj <xref:System.IAsyncResult.AsyncWaitHandle%2A> do bloku aplikacji wykonanie dopiero po zakończeniu co najmniej jednej operacji. Na przykład, który ilustruje tej techniki, zobacz [blokowania aplikacji wykonywania za pomocą właściwości AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
+- Wywołaj `EndOperationName` z głównego wątku aplikacji, blokując wykonywanie aplikacji do momentu ukończenia operacji. Przykład ilustrujący tę technikę można znaleźć w temacie [blokowanie wykonywania aplikacji przez zakończenie operacji asynchronicznej](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
   
- Aplikacje, które nie muszą blokować podczas kończenia operacji asynchronicznej może użyć jednej z następujących metod:  
+- Użyj, <xref:System.IAsyncResult.AsyncWaitHandle%2A> aby zablokować wykonywanie aplikacji, dopóki nie zostanie ukończona co najmniej jedna operacja. Przykład ilustrujący tę technikę można znaleźć w temacie [blokowanie wykonywania aplikacji przy użyciu AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
   
-- Sondowanie dotyczące stanu ukończenia operacji, sprawdzając <xref:System.IAsyncResult.IsCompleted%2A> właściwość okresowo i wywoływania `EndOperationName` po zakończeniu operacji. Na przykład, który ilustruje tej techniki, zobacz [sondowanie stanu operacji asynchronicznej](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
+ Aplikacje, które nie muszą blokować podczas kończenia operacji asynchronicznej, mogą korzystać z jednej z następujących metod:  
   
-- Użyj <xref:System.AsyncCallback> delegata, aby określić metodę do wywołania po ukończeniu operacji. Na przykład, który ilustruje tej techniki, zobacz [używanie delegata AsyncCallback do kończenia operacji asynchronicznej](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
+- Sondowanie stanu ukończenia operacji przez sprawdzenie <xref:System.IAsyncResult.IsCompleted%2A> właściwości okresowo i wywołanie `EndOperationName` po zakończeniu operacji. Przykład ilustrujący tę technikę można znaleźć w temacie [sondowanie stanu operacji asynchronicznej](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
+  
+- <xref:System.AsyncCallback> Użyj delegata, aby określić metodę, która ma być wywoływana po zakończeniu operacji. Aby zapoznać się z przykładem, który ilustruje tę technikę, zobacz [Używanie delegata AsyncCallback do kończenia operacji asynchronicznej](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,24 +1,24 @@
 ---
-title: 'Instrukcje: Przeanalizować składni ciągu (Visual Basic)'
+title: 'Instrukcje: Analizuj ciąg (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: 815e94b3b41c2c0cc1d18d598307ab292919bea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b97ce93c1018ec48649ab8b259d5f1a07109b9fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942600"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956382"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>Instrukcje: Przeanalizować składni ciągu (Visual Basic)
-W tym temacie przedstawiono sposób tworzenia drzewa XML w C#.  
+# <a name="how-to-parse-a-string-visual-basic"></a>Instrukcje: Analizuj ciąg (Visual Basic)
+W tym temacie pokazano, jak utworzyć drzewo XML w C#.  
   
 ## <a name="example"></a>Przykład  
- Ciąg w języku Visual Basic można analizować za pomocą `XElement.Parse` metody. Jednak jest bardziej wydajne, aby użyć literałów XML, jak pokazano w poniższym kodzie, ponieważ literały XML nie borykają się z tym samym spadku wydajności jako analizowanie kodu XML z ciągu.  
+ Można przeanalizować ciąg w Visual Basic przy użyciu `XElement.Parse` metody. Jednak bardziej wydajne jest użycie literałów XML, jak pokazano w poniższym kodzie, ponieważ literały XML nie cierpią od tych samych kar za wydajność, co analizowanie XML z ciągu.  
   
- Przy użyciu literałów XML, można po prostu skopiować i wkleić kod XML do programu Visual Basic.  
+ Za pomocą literałów XML, można po prostu skopiować i wkleić kod XML do programu Visual Basic.  
   
 > [!NOTE]
->  Analizowanie tekstu lub podczas ładowania dokumentu XML z pliku tekstowego jest mniej wydajne niż konstrukcja funkcjonalna. Jeśli są inicjowanie drzewa XML z kodu, zajmuje mniej czasu procesora, aby użyć konstrukcja funkcjonalna, niż można przeanalizować tekstu.  
+> Analizowanie tekstu lub ładowanie dokumentu XML z pliku tekstowego jest mniej wydajne niż konstrukcja funkcjonalna. Jeśli inicjujesz drzewo XML od kodu, trwa mniej czasu procesora, aby użyć konstrukcji funkcjonalnej niż w celu przeanalizowania tekstu.  
   
 ```vb  
 Dim contacts as XElement = _  

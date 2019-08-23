@@ -2,35 +2,35 @@
 title: Aktywacja usługi MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 43d6cde7a9342b57933cd3e7475bd4412da86d92
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 7cf6a4663f96c9e960b11cbbfe29b492e89405f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487554"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930412"
 ---
 # <a name="msmq-activation"></a>Aktywacja usługi MSMQ
-Niniejszy przykład pokazuje, jak hostować aplikacje w Windows Process Activation Service (WAS), które są odczytywane z kolejki komunikatów. W tym przykładzie użyto `netMsmqBinding` i opiera się na [komunikacji dwustronny](../../../../docs/framework/wcf/samples/two-way-communication.md) próbki. Usługa jest w tym przypadku aplikacji hostowanej w sieci Web w języku klienta i jest samodzielnie hostowana w konsoli, aby obserwować stan zamówienia zakupu przesłane dane wyjściowe.  
+Ten przykład pokazuje, jak hostować aplikacje w usłudze aktywacji procesów systemu Windows (WAS) odczytywane z kolejki komunikatów. Ten przykład używa `netMsmqBinding` i jest oparty na dwukierunkowej próbce [komunikacji](../../../../docs/framework/wcf/samples/two-way-communication.md) . Usługa w tym przypadku jest aplikacją hostowaną w sieci Web, a klient jest samoobsługowy i wyprowadza do konsoli, aby obserwować stan przesłanych zamówień zakupu.  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 > [!NOTE]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich usług WCF i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie WCF i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Windows Process Activation Service (WAS), przy użyciu nowego procesu aktywacji mechanizmu [!INCLUDE[lserver](../../../../includes/lserver-md.md)], zapewnia funkcje podobne do usług IIS, które były wcześniej dostępne tylko dla aplikacji opartych na protokole HTTP dla aplikacji, które używają protokołów innych niż HTTP. Windows Communication Foundation (WCF) używa interfejsu karty odbiornika do komunikowania się żądania aktywacji, które są odbierane za pośrednictwem protokołów innych niż HTTP obsługiwane przez architekturę WCF, takie jak TCP, potoków nazwanych i usługi MSMQ. Funkcje do odbierania żądań za pośrednictwem protokołów innych niż HTTP jest hostowana przez zarządzane usługi Windows SMSvcHost.exe.  
+ Usługa aktywacji procesów systemu Windows (was) — nowy mechanizm aktywacji procesów dla [!INCLUDE[lserver](../../../../includes/lserver-md.md)]programu, zapewnia funkcje podobne do usług IIS, które wcześniej były dostępne tylko dla aplikacji opartych na protokole HTTP, do aplikacji korzystających z protokołów innych niż http. Windows Communication Foundation (WCF) używa interfejsu adaptera odbiornika do przekazywania żądań aktywacji odbieranych za pośrednictwem protokołów innych niż HTTP obsługiwanych przez funkcję WCF, takich jak TCP, nazwane potoki i MSMQ. Funkcja otrzymywania żądań za pośrednictwem protokołów innych niż HTTP jest hostowana przez zarządzane usługi systemu Windows działające w SMSvcHost. exe.  
   
- Usługa Net.Msmq odbiornika Adapter (NetMsmqActivator) aktywuje umieszczonych w kolejce aplikacje oparte na komunikaty w kolejce.  
+ Usługa adaptera odbiornika NET. msmq (NetMsmqActivator) aktywuje aplikacje znajdujące się w kolejce na podstawie komunikatów w kolejce.  
   
- Klient wysyła zamówienia zakupu usługi z zakresu transakcji. Ta usługa odbiera zamówień w ramach transakcji i przetwarza je. Usługa następnie ponownie wywołuje klienta z stan zamówienia. Ułatwianie dwukierunkowej komunikacji klienta i usługi użyj kolejki, aby umieścić zakupów i stanu zamówienia.  
+ Klient wysyła zamówienia zakupu do usługi z zakresu transakcji. Usługa otrzymuje zamówienia w transakcji i przetwarza je. Następnie usługa wywołuje klienta przy użyciu stanu zamówienia. Aby ułatwić komunikację dwukierunkową, klient i usługa używają kolejek do dodawania do kolejki zamówień zakupu i stanu zamówienia.  
   
- Kontrakt usługi `IOrderProcessor` definiuje operacje usługi jednokierunkowej, współpracujących z usługi kolejkowania wiadomości. Operacja usługi używa odpowiedzi punktu końcowego do wysyłania stanów zlecenia do klienta. Adres punktu końcowego odpowiedzi jest identyfikatorem URI, kolejki, używane do wysyłania stan zamówienia klienta. Kolejność przetwarzania aplikacji implementuje ten kontrakt.  
+ Kontrakt `IOrderProcessor` usługi definiuje jednokierunkowe operacje usługi, które działają z kolejkowanie. Operacja usługi używa punktu końcowego odpowiedzi do wysyłania do klienta stanu zamówienia. Adres punktu końcowego odpowiedzi to identyfikator URI kolejki użytej do wysłania stanu zamówienia z powrotem do klienta. Aplikacja do przetwarzania zamówień implementuje ten kontrakt.  
   
 ```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -42,7 +42,7 @@ public interface IOrderProcessor
 }  
 ```  
   
- Kontrakt odpowiedź do wysłania raportowanie stanu zamówienia jest określony przez klienta. Klient implementuje ten kontrakt stan zamówienia. Usługa używa wygenerowanego klienta ten kontrakt do odesłania stan zamówienia do klienta.  
+ Kontrakt odpowiedzi, do którego ma zostać wysłana stan zamówienia, jest określany przez klienta. Klient implementuje kontrakt stanu zamówienia. Usługa używa wygenerowanego klienta tego kontraktu do wysyłania stanu zamówienia z powrotem do klienta.  
   
 ```csharp  
 [ServiceContract]  
@@ -53,9 +53,9 @@ public interface IOrderStatus
 }  
 ```  
   
- Operacja usługi przetworzy to zamówienie zakupu przesłane. <xref:System.ServiceModel.OperationBehaviorAttribute> Jest stosowany do operacji usługi, aby określić automatycznej rejestracji w transakcji, która jest używana do odbierania wiadomości z kolejki i automatycznego uzupełniania transakcji po zakończeniu operacji usługi. `Orders` Klasa hermetyzuje funkcjonalność przetwarzania zamówienia. W tym przypadku dodaje zamówienia zakupu w słowniku. Operacja usługi zarejestrowany w transakcji jest dostępna dla operacji w `Orders` klasy.  
+ Operacja usługi przetwarza przesłane zamówienie zakupu. <xref:System.ServiceModel.OperationBehaviorAttribute> Jest stosowana do operacji usługi, aby określić automatyczną rejestrację w transakcji, która jest używana do odbierania komunikatu z kolejki i automatycznego uzupełniania transakcji po zakończeniu operacji usługi. `Orders` Klasa hermetyzuje funkcje przetwarzania zamówień. W takim przypadku dodaje zamówienie zakupu do słownika. Transakcja, w której rejestrowana jest operacja usługi, jest dostępna dla operacji w `Orders` klasie.  
   
- Operacja usługi, oprócz przetwarzania zamówienia zakupu przesłanych odpowiedzi do klienta o stanie zamówienia.  
+ Operacja usługi, oprócz przetwarzania przesłanego zamówienia zakupu, odpowiada klientowi na informacje o stanie zamówienia.  
   
 ```csharp  
 public class OrderProcessorService : IOrderProcessor  
@@ -80,28 +80,28 @@ public class OrderProcessorService : IOrderProcessor
 }
 ```  
   
- Klient powiązania do użycia jest określony, przy użyciu pliku konfiguracji.  
+ Powiązanie klienta do użycia jest określone przy użyciu pliku konfiguracji.  
   
- Nazwa kolejki usługi MSMQ jest określona w sekcji appSettings pliku konfiguracji. Punkt końcowy usługi jest zdefiniowany w sekcji System.serviceModel pliku konfiguracji.  
+ Nazwa kolejki MSMQ jest określona w sekcji appSettings w pliku konfiguracji. Punkt końcowy usługi jest zdefiniowany w sekcji System. serviceModel w pliku konfiguracji.  
   
 > [!NOTE]
->  Adres nazwy i punkt końcowy kolejki usługi MSMQ Użyj nieco Konwencji adresowania. Nazwa kolejki usługi MSMQ używa pojedynczego znaku kropki (.) dla komputera lokalnego i separatory ukośnik odwrotny w ścieżce. Adres punktu końcowego WCF określa net.msmq: schemat, używane "localhost" na komputerze lokalnym i korzysta z ukośników w ścieżce. Aby zapoznać się z kolejki znajdującej się na komputerze zdalnym, zastąp "." i "localhost" do nazwy komputera zdalnego.  
+> Nazwa kolejki MSMQ i adres punktu końcowego używają nieco różnych konwencji adresowania. Nazwa kolejki MSMQ używa kropki (.) dla komputera lokalnego i separatorów ukośników odwrotnych. Adres punktu końcowego programu WCF określa obiekt net. MSMQ: schemat, używa "localhost" dla komputera lokalnego i używa ukośników w ścieżce. Aby odczytać z kolejki hostowanej na komputerze zdalnym, Zastąp ciąg "." i "localhost" nazwą komputera zdalnego.  
   
- Plik .svc o nazwie klasy jest używana do hostowania kodu usługi WAS.  
+ Plik. svc o nazwie klasy jest używany do hostowania kodu usługi w programie.  
   
- Sam plik Service.svc zawiera dyrektywy do tworzenia `OrderProcessorService`.  
+ Sam plik Service. svc zawiera dyrektywę służącą do utworzenia `OrderProcessorService`.  
   
 ```svc
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>  
 ```  
   
- Plik Service.svc zawiera również dyrektywę zestawu, aby upewnić się, że System.Transactions.dll zostanie załadowana.  
+ Plik Service. svc zawiera także dyrektywę zestawu, aby upewnić się, że system. Transactions. dll jest załadowany.  
   
 ```svc  
 <%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>  
 ```  
   
- Klient tworzy zakres transakcji. Komunikacja z usługą odbywa się w zakresie transakcji, co powoduje powinien być traktowany jako pojedynczej Atomowej jednostki, której wszystkie komunikaty sukces lub niepowodzenie. Transakcja została zatwierdzona przez wywołanie metody `Complete` w zakresie transakcji.  
+ Klient tworzy zakres transakcji. Komunikacja z usługą odbywa się w zakresie transakcji, powodując, że jest ona traktowana jako jednostka niepodzielna, w której wszystkie komunikaty kończą się powodzeniem lub niepowodzeniem. Transakcja jest zatwierdzona przez wywołanie `Complete` zakresu transakcji.  
   
 ```csharp  
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))  
@@ -156,7 +156,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     }  
 ```  
   
- Kod klienta implementuje `IOrderStatus` umowę odbierać stan zamówienia z usługi. W tym przypadku wyświetla się stan zamówienia.  
+ Kod klienta implementuje `IOrderStatus` kontrakt, aby otrzymać stan zamówienia z usługi. W takim przypadku drukuje stan zamówienia.  
   
 ```csharp  
 [ServiceBehavior]  
@@ -172,7 +172,7 @@ public class OrderStatusService : IOrderStatus
 }  
 ```  
   
- Kolejkę stanu zamówienia jest tworzony w `Main` metody. Konfiguracja klienta obejmuje konfigurację usługi stanu zamówienia do hostowania usługi stanu zamówienia, jak pokazano w poniższym Przykładowa konfiguracja.  
+ Kolejka stanu zamówienia jest tworzona w `Main` metodzie. Konfiguracja klienta zawiera konfigurację usługi stanu zamówienia do hostowania usługi stanu zamówienia, jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
 <appSettings>  
@@ -204,52 +204,52 @@ public class OrderStatusService : IOrderStatus
   </system.serviceModel>  
 ```  
   
- Po uruchomieniu przykładu, działania klienta i usługi są wyświetlane w serwera i klienta okna konsoli. Możesz zobaczyć serwer odbiera komunikaty z klienta. Naciśnij klawisz ENTER w oknie konsoli, każdej do zamykania serwera i klienta.  
+ Po uruchomieniu przykładu działania klienta i usługi są wyświetlane zarówno w systemie Windows, jak i w konsoli klienta. Można zobaczyć, że serwer odbiera komunikaty od klienta. Naciśnij klawisz ENTER w każdym oknie konsoli, aby zamknąć serwer i klienta.  
   
- Klient Wyświetla informacje o stanie zamówienia, które zostały przesłane przez serwer:  
+ Klient wyświetla informacje o stanie zamówienia wysyłane przez serwer:  
   
 ```console  
 Press <ENTER> to terminate client.  
 Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, zainstalowanie usług IIS 7.0, ponieważ jest on wymagany do aktywacji WAS.  
+1. Upewnij się, że usługi IIS 7,0 są zainstalowane, ponieważ są wymagane do aktywacji.  
   
-2. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Ponadto należy zainstalować składniki Aktywacja bez HTTP programu WCF:  
+2. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Ponadto należy zainstalować składniki aktywacji inne niż HTTP programu WCF:  
   
-    1. Z **Start** menu, wybierz **Panelu sterowania**.  
+    1. Z menu **Start** wybierz pozycję **Panel sterowania**.  
   
     2. Wybierz **programy i funkcje**.  
   
-    3. Kliknij przycisk **Włącz lub wyłącz funkcje Windows**.  
+    3. Kliknij pozycję **Włącz lub wyłącz funkcje systemu Windows**.  
   
-    4. W obszarze **Podsumowanie funkcji**, kliknij przycisk **Dodaj funkcje**.  
+    4. W obszarze **Podsumowanie funkcji**kliknij pozycję **Dodaj funkcje**.  
   
-    5. Rozwiń **Microsoft .NET Framework 3.0** węzła i wyboru **Aktywacja bez HTTP programu Windows Communication Foundation** funkcji.  
+    5. Rozwiń węzeł **Microsoft .NET Framework 3,0** i Sprawdź funkcję **aktywacji Windows Communication Foundation niehttp** .  
   
-3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Uruchom klienta, wykonując client.exe z okna poleceń. To tworzy kolejkę i wysyła komunikat do niego. Pozostaw kliencie z uruchomioną Aby sprawdzić działanie usługi, odczytywanie wiadomości  
+4. Uruchom klienta programu, wykonując polecenie Client. exe z okna polecenia. Spowoduje to utworzenie kolejki i wysłanie do niej komunikatu. Pozostaw uruchomiony klient, aby zobaczyć wynik usługi odczytującej komunikat  
   
-5. Domyślnie usługę Aktywacja usługi MSMQ jest uruchamiana jako usługa sieciowa. W związku z tym, kolejki, która jest używana do aktywowania aplikacji musi mieć odbieranie i Wybieranie uprawnień dla usługi sieci. To można dodać za pomocą programu MMC usługi kolejkowania komunikatów:  
+5. Domyślnie usługa aktywacji usługi MSMQ działa jako usługa sieciowa. W związku z tym Kolejka służąca do aktywowania aplikacji musi mieć uprawnienia do odbierania i wglądu w usługę sieciową. Można to dodać przy użyciu programu MMC usługi kolejkowania komunikatów:  
   
-    1. Z **Start** menu, kliknij przycisk **Uruchom**, a następnie wpisz `Compmgmt.msc` i naciśnij klawisz ENTER.  
+    1. W menu **Start** kliknij polecenie **Uruchom**, a następnie wpisz `Compmgmt.msc` i naciśnij klawisz ENTER.  
   
-    2. W obszarze **usługi i aplikacje**, rozwiń węzeł **usługi kolejkowania komunikatów**.  
+    2. W obszarze **usługi i aplikacje**rozwiń węzeł **kolejkowanie komunikatów**.  
   
-    3. Kliknij przycisk **kolejki prywatne**.  
+    3. Kliknij pozycję **kolejki prywatne**.  
   
-    4. Kliknij prawym przyciskiem myszy kolejki (servicemodelsamples/Service.svc), a następnie wybierz **właściwości**.  
+    4. Kliknij prawym przyciskiem myszy kolejkę (ServiceModelSamples/Service. svc) i wybierz polecenie **Właściwości**.  
   
-    5. Na **zabezpieczeń** kliknij pozycję **Dodaj** zapewniają wgląd i otrzymać uprawnienie do usługi sieciowej.  
+    5. Na karcie **zabezpieczenia** kliknij pozycję **Dodaj** i Udziel uprawnień wglądu i Odbierz do usługi sieciowej.  
   
-6. Skonfiguruj Windows Process Activation Service (WAS) do obsługi aktywacji usługi MSMQ.  
+6. Skonfiguruj usługę aktywacji procesów systemu Windows (WAS) do obsługi aktywacji usługi MSMQ.  
   
-     Dla wygody poniższe kroki są implementowane w pliku wsadowym, o nazwie AddMsmqSiteBinding.cmd znajduje się w katalogu próbki.  
+     Jako wygoda, następujące kroki są zaimplementowane w pliku wsadowym o nazwie AddMsmqSiteBinding. cmd znajdującym się w katalogu przykładowym.  
   
-    1. Aby zapewnić obsługę aktywacji net.msmq, domyślna witryna sieci Web musi zostać powiązana z protokołem net.msmq. Można to zrobić za pomocą appcmd.exe, który jest instalowany z zestawem narzędzi zarządzania usług IIS 7.0. Z wiersza polecenia o podniesionych uprawnień (administrator) uruchom następujące polecenie.  
+    1. Aby można było obsługiwać aktywację net. MSMQ, domyślna witryna sieci Web musi być najpierw powiązana z protokołem net. MSMQ. Można to zrobić za pomocą programu Appcmd. exe, który jest instalowany przy użyciu zestawu narzędzi do zarządzania usługami IIS 7,0. W wierszu polecenia z podwyższonym poziomem uprawnień (Administrator) Uruchom następujące polecenie.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -257,59 +257,59 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         ```  
   
         > [!NOTE]
-        >  To polecenie jest pojedynczy wiersz tekstu.  
+        >  To polecenie jest pojedynczym wierszem tekstu.  
   
-         To polecenie dodaje powiązanie witryny net.msmq do domyślnej witryny sieci Web.  
+         To polecenie dodaje powiązanie witryny net. MSMQ do domyślnej witryny sieci Web.  
   
-    2. Mimo że wszystkie aplikacje w ramach lokacji mają wspólne powiązanie net.msmq, każdej aplikacji można włączyć obsługę net.msmq indywidualnie. Aby włączyć net.msmq aplikacji /servicemodelsamples, uruchom następujące polecenie z wiersza polecenia z podwyższonym poziomem uprawnień.  
+    2. Mimo że wszystkie aplikacje w lokacji współdzielą wspólne powiązanie net. MSMQ, każda aplikacja może włączyć obsługę usługi net. MSMQ osobno. Aby włączyć usługę net. msmq dla aplikacji/servicemodelsamples, uruchom następujące polecenie w wierszu polecenia z podwyższonym poziomem uprawnień.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.msmq  
         ```  
   
         > [!NOTE]
-        >  To polecenie jest pojedynczy wiersz tekstu.  
+        >  To polecenie jest pojedynczym wierszem tekstu.  
   
-         To polecenie włącza aplikację /servicemodelsamples można uzyskać za pomocą `http://localhost/servicemodelsamples` i `net.msmq://localhost/servicemodelsamples`.
+         To polecenie umożliwia dostęp do aplikacji/servicemodelsamples przy użyciu `http://localhost/servicemodelsamples` i. `net.msmq://localhost/servicemodelsamples`
   
-7. Jeśli użytkownik nie zostało zrobione wcześniej, upewnij się, że włączono usługę Aktywacja usługi MSMQ. Z **Start** menu, kliknij przycisk **Uruchom**i wpisz `Services.msc`. Wyszukaj listę usług dla **Net.Msmq nasłuchujący**. Kliknij prawym przyciskiem myszy i wybierz **właściwości**. Ustaw **uruchamiana** do **automatyczne**, kliknij przycisk **Zastosuj** i kliknij przycisk **Start** przycisku. Ten krok tylko musi odbywać się jeden raz przed pierwsze użycie usługi Net.Msmq nasłuchujący.  
+7. Jeśli nie zostało to wcześniej zrobione, upewnij się, że usługa aktywacji MSMQ jest włączona. W menu **Start** kliknij polecenie **Uruchom**, a następnie wpisz `Services.msc`. Przeszukaj listę usług dla **karty odbiornika NET. MSMQ**. Kliknij prawym przyciskiem myszy i wybierz pozycję **Właściwości**. Ustaw **Typ uruchamiania** na **automatyczny**, kliknij przycisk **Zastosuj** , a następnie kliknij przycisk **Uruchom** . Ten krok należy wykonać tylko raz przed pierwszym użyciem usługi adaptera odbiornika NET. MSMQ.  
   
-8. Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Ponadto można zmienić kodu na komputerze klienckim, który przesyła zamówienia zakupu w celu odzwierciedlenia nazwy komputera w identyfikatorze URI kolejki podczas przesyłania zamówienia zakupu. Użyj następującego kodu:  
+8. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Ponadto należy zmienić kod na kliencie, który przesyła zamówienie zakupu w celu odzwierciedlenia nazwy komputera w identyfikatorze URI kolejki podczas przesyłania zamówienia zakupu. Użyj następującego kodu:  
   
     ```csharp  
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");  
     ```  
   
-9. Usuń powiązanie witryny net.msmq, dodane dla tego przykładu.  
+9. Usuń powiązanie witryny net. MSMQ dodane do tego przykładu.  
   
-     Dla wygody poniższe kroki są implementowane w pliku wsadowym, o nazwie RemoveMsmqSiteBinding.cmd znajduje się w katalogu próbki:  
+     Jako wygoda, następujące kroki są zaimplementowane w pliku wsadowym o nazwie RemoveMsmqSiteBinding. cmd, który znajduje się w przykładowym katalogu:  
   
-    1. Usuń net.msmq z listy włączone protokoły, uruchamiając następujące polecenie z wiersza polecenia z podwyższonym poziomem uprawnień.  
+    1. Usuń usługę net. MSMQ z listy włączonych protokołów, uruchamiając następujące polecenie w wierszu polecenia z podwyższonym poziomem uprawnień.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http  
         ```  
   
         > [!NOTE]
-        >  To polecenie jest pojedynczy wiersz tekstu.  
+        >  To polecenie jest pojedynczym wierszem tekstu.  
   
-    2. Usuń powiązanie witryny net.msmq, uruchamiając następujące polecenie z wiersza polecenia z podwyższonym poziomem uprawnień.  
+    2. Usuń powiązanie witryny net. MSMQ, uruchamiając następujące polecenie w wierszu polecenia z podwyższonym poziomem uprawnień.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.msmq',bindingInformation='localhost']  
         ```  
   
         > [!NOTE]
-        >  To polecenie jest pojedynczy wiersz tekstu.  
+        >  To polecenie jest pojedynczym wierszem tekstu.  
   
     > [!WARNING]
-    >  Uruchamianie pliku wsadowego spowoduje zresetowanie domyślna pula aplikacji do uruchamiania przy użyciu platformy .NET Framework w wersji 2.0.  
+    >  Uruchomienie pliku wsadowego spowoduje zresetowanie tej opcji do uruchamiania przy użyciu .NET Framework w wersji 2,0.  
   
- Domyślnie `netMsmqBinding` powiązania transportu, zabezpieczeń jest włączone. Dwie właściwości `MsmqAuthenticationMode` i `MsmqProtectionLevel`, wspólnie określić typ zabezpieczeń transportu. Domyślny tryb uwierzytelniania jest ustawiony na `Windows` i poziom ochrony jest ustawiony na `Sign`. Dla usługi MSMQ zapewniać uwierzytelnianie i funkcji podpisywania należy do domeny. Po uruchomieniu tego przykładu na komputerze, który nie jest częścią domeny jest Odebrano następujący błąd: "Użytkownika wewnętrznego kolejkowania certyfikatu nie istnieje".  
+ Domyślnie w przypadku `netMsmqBinding` transportu powiązań jest włączone zabezpieczenia. Dwie właściwości, `MsmqAuthenticationMode` a `MsmqProtectionLevel`także określają typ zabezpieczenia transportu. Domyślnie tryb uwierzytelniania jest ustawiony na `Windows` , a poziom ochrony jest ustawiony na. `Sign` Aby usługa MSMQ zapewniała funkcję uwierzytelniania i podpisywania, musi być częścią domeny. W przypadku uruchomienia tego przykładu na komputerze, który nie jest częścią domeny, zostanie wyświetlony następujący komunikat o błędzie: "Wewnętrzny certyfikat usługi kolejkowania komunikatów użytkownika nie istnieje".  
   
-### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Do uruchomienia przykładu na komputer przyłączony do grupy roboczej  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Aby uruchomić przykład na komputerze przyłączonym do grupy roboczej  
   
-1. Jeśli komputer nie jest częścią domeny, należy wyłączyć zabezpieczenia transportu przez ustawienie poziomu uwierzytelniania w trybie i ochrony None, jak pokazano w poniższym Przykładowa konfiguracja.  
+1. Jeśli komputer nie jest częścią domeny, Wyłącz zabezpieczenia transportu, ustawiając tryb uwierzytelniania i poziom ochrony na brak, jak pokazano w poniższej konfiguracji przykładowej.  
   
     ```xml  
     <bindings>  
@@ -321,30 +321,30 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     </bindings>  
     ```  
   
-2. Przed uruchomieniem próbki, należy zmienić konfigurację serwera i klienta.  
+2. Przed uruchomieniem przykładu Zmień konfigurację na serwerze i kliencie.  
   
     > [!NOTE]
-    >  Ustawienie `security mode` do `None` jest odpowiednikiem ustawienia `MsmqAuthenticationMode`, `MsmqProtectionLevel` i `Message` security `None`.  
+    >  `security mode` Ustawienieodpowiada`MsmqProtectionLevel` ustawieniu i`MsmqAuthenticationMode` zabezpieczeniana`None`. `None` `Message`  
   
-3. Aby włączyć aktywacji na komputerze, który został przyłączony do grupy roboczej, zarówno usługa aktywacji, jak i proces roboczy musi być uruchamiane z określonego konta użytkownika (musi być takie same dla obu) i kolejki musi mieć listy kontroli dostępu dla konta określonego użytkownika.  
+3. Aby włączyć aktywację na komputerze przyłączonym do grupy roboczej, należy uruchomić zarówno usługę aktywacji, jak i proces roboczy przy użyciu określonego konta użytkownika (musi być taka sama dla obu), a kolejka musi mieć listy ACL dla określonego konta użytkownika.  
   
-     Aby zmienić tożsamość, która działa procesu roboczego:  
+     Aby zmienić tożsamość, w której uruchamiany jest proces roboczy:  
   
-    1. Uruchom Inetmgr.exe.  
+    1. Uruchom plik inetmgr. exe.  
   
-    2. W obszarze **pul aplikacji**, kliknij prawym przyciskiem myszy **puli AppPool** (zazwyczaj **DefaultAppPool**) i wybierz polecenie **ustawienia domyślne puli aplikacji...** .  
+    2. W obszarze **Pule aplikacji**kliknij prawym przyciskiem myszy pozycję **puli aplikacji** (zazwyczaj **Domyślna pula**aplikacji), a następnie wybierz pozycję **Ustaw wartości domyślne puli.**  
   
-    3. Zmień właściwości tożsamości do używania konta określonego użytkownika.  
+    3. Zmień właściwości tożsamości, aby użyć określonego konta użytkownika.  
   
-     Aby zmienić tożsamość, która jest uruchamiana usługa aktywacji:  
+     Aby zmienić tożsamość, w której działa usługa aktywacji:  
   
-    1. Uruchom aplikację Services.msc.  
+    1. Uruchom Services. msc.  
   
-    2. Kliknij prawym przyciskiem myszy **karty Net.MsmqListener**i wybierz polecenie **właściwości**.  
+    2. Kliknij prawym przyciskiem myszy **kartę net. MsmqListener**, a następnie wybierz polecenie **Właściwości**.  
   
-4. Zmień konto w **logowania** kartę.  
+4. Zmień konto na karcie **Logowanie** .  
   
-5. W grupie roboczej należy również uruchomić usługę przy użyciu tokenu bez ograniczeń. Aby to zrobić, uruchom następujące polecenie w oknie polecenia:  
+5. W grupie roboczej usługa musi również działać przy użyciu nieograniczonego tokenu. Aby to zrobić, uruchom następujące polecenie w oknie polecenia:  
   
     ```console  
     sc sidtype netmsmqactivator unrestricted  
@@ -352,4 +352,4 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykłady trwałości i hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Przykłady hostingu i trwałości usługi AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cf997c8ff13e0a6a4664ea3b538ac0def1baacf
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: da01d0dac2e67d6c0131a2b5965472bbd19213fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663625"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927326"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy, element >
 Określa, że tożsamość systemu Windows nie przepływa między punktami asynchronicznymi, niezależnie od ustawień przepływu dla kontekstu wykonywania w bieżącym wątku.  
@@ -63,7 +63,7 @@ Określa, że tożsamość systemu Windows nie przepływa między punktami async
  Począwszy od .NET Framework 2,0, można użyć `<legacyImpersonationPolicy>` elementu, aby określić, że <xref:System.Security.Principal.WindowsIdentity> nie przepływa w punktach asynchronicznych.  
   
 > [!NOTE]
->  Środowisko uruchomieniowe języka wspólnego (CLR) ma świadomość operacji personifikacji wykonywanych przy użyciu tylko kodu zarządzanego, a nie personifikacji wykonanej poza kodem zarządzanym, na przykład za pośrednictwem wywołania platformy do kodu niezarządzanego lub bezpośrednie wywołania do funkcji Win32. Tylko obiekty <xref:System.Security.Principal.WindowsIdentity> zarządzane mogą przepływać przez punkty asynchroniczne, `alwaysFlowImpersonationPolicy` chyba że element został ustawiony na wartość true`<alwaysFlowImpersonationPolicy enabled="true"/>`(). `alwaysFlowImpersonationPolicy` Ustawienie elementu na wartość true określa, że tożsamość systemu Windows jest zawsze przepływana w punktach asynchronicznych, niezależnie od tego, jak personifikacja została wykonana. Aby uzyskać więcej informacji na temat przepływu niezarządzanej personifikacji w punktach asynchronicznych, zobacz [ \<alwaysFlowImpersonationPolicy > elementu](alwaysflowimpersonationpolicy-element.md).  
+> Środowisko uruchomieniowe języka wspólnego (CLR) ma świadomość operacji personifikacji wykonywanych przy użyciu tylko kodu zarządzanego, a nie personifikacji wykonanej poza kodem zarządzanym, na przykład za pośrednictwem wywołania platformy do kodu niezarządzanego lub bezpośrednie wywołania do funkcji Win32. Tylko obiekty <xref:System.Security.Principal.WindowsIdentity> zarządzane mogą przepływać przez punkty asynchroniczne, `alwaysFlowImpersonationPolicy` chyba że element został ustawiony na wartość true`<alwaysFlowImpersonationPolicy enabled="true"/>`(). `alwaysFlowImpersonationPolicy` Ustawienie elementu na wartość true określa, że tożsamość systemu Windows jest zawsze przepływana w punktach asynchronicznych, niezależnie od tego, jak personifikacja została wykonana. Aby uzyskać więcej informacji na temat przepływu niezarządzanej personifikacji w punktach asynchronicznych, zobacz [ \<alwaysFlowImpersonationPolicy > elementu](alwaysflowimpersonationpolicy-element.md).  
   
  To zachowanie domyślne można zmienić na dwa sposoby:  
   

@@ -2,87 +2,87 @@
 title: Przykład integracji elementu SystemWebRouting
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: a9f9dc871b92b8cd689234c79b09c98e38a2848d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 032be700beaa38ed6c08ed1940aab558b2106591
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650987"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964480"
 ---
 # <a name="systemwebrouting-integration-sample"></a>Przykład integracji elementu SystemWebRouting
-W tym przykładzie przedstawiono warstwy obsługi integracji z klas w <xref:System.Web.Routing> przestrzeni nazw. Klasy w <xref:System.Web.Routing> przestrzeni nazw Zezwalaj aplikacji na używanie adresów URL, które nie odpowiadają bezpośrednio zasób fizyczny. Przy użyciu routingu w sieci Web umożliwia deweloperom tworzenie wirtualnych adresów dla protokołu HTTP, które następnie są mapowane z powrotem na rzeczywiste usługi WCF. Jest to przydatne, gdy usługa WCF muszą być obsługiwane bez konieczności fizyczny plik lub zasób lub usług muszą być dostępne z adresami URL, które nie zawierają plików, takich jak HTML lub .aspx. W tym przykładzie pokazano, jak wykorzystywać <xref:System.Web.Routing.RouteTable> klasy w celu utworzenia identyfikatorów URI wirtualnych mapowane na uruchamianie usługi zdefiniowane w pliku global.asax. 
+Ten przykład pokazuje integrację warstwy hostingu z klasami w <xref:System.Web.Routing> przestrzeni nazw. Klasy w <xref:System.Web.Routing> przestrzeni nazw umożliwiają aplikacji korzystanie z adresów URL, które nie są bezpośrednio zgodne z zasobem fizycznym. Użycie routingu sieci Web umożliwia deweloperom tworzenie adresów wirtualnych dla protokołu HTTP, które następnie są mapowane z powrotem do rzeczywistych usług WCF. Jest to przydatne w przypadku, gdy usługa WCF musi być hostowana bez konieczności fizycznego pliku lub zasobu, lub w przypadku uzyskiwania dostępu do usług za pomocą adresów URL, które nie zawierają plików takich jak. html czy. aspx. Ten przykład pokazuje, <xref:System.Web.Routing.RouteTable> jak używać klasy do tworzenia wirtualnych identyfikatorów URI, które mapują na uruchamianie usług zdefiniowanych w Global. asax. 
 
 > [!NOTE]
->  Klasy w <xref:System.Web.Routing> przestrzeni nazw jest prawidłowe tylko dla usług hostowanych za pośrednictwem protokołu HTTP.  
+> Klasy w <xref:System.Web.Routing> przestrzeni nazw działają tylko dla usług hostowanych za pośrednictwem protokołu HTTP.  
   
-W tym przykładzie użyto usługi WCF, aby utworzyć dwa źródła danych RSS: `movies` kanału informacyjnego i `channels` źródła danych. Adresy URL, aby aktywować usługi nie zawiera rozszerzenia i są zarejestrowane w usłudze `Application_Start` metody `Global` klasą pochodną <xref:System.Web.HttpApplication> klasy.  
+Ten przykład używa programu WCF do tworzenia dwóch źródeł danych RSS `movies` : źródła danych `channels` i źródła danych. Adresy URL do aktywowania usług nie zawierają rozszerzenia i są zarejestrowane w `Application_Start` metodzie `Global` klasy pochodzącej od <xref:System.Web.HttpApplication> klasy.  
   
 > [!NOTE]
->  Ten przykład działa tylko w Internet informacji Services (IIS) 7.0 i nowsze, jako usług IIS 6.0 używa innej metody do obsługi adresów URL bez rozszerzenia.  
+> Ten przykład działa tylko w Internet Information Services (IIS) 7,0 i nowszych, ponieważ usługi IIS 6,0 używają innej metody obsługi adresów URL bez rozszerzenia.  
 
-#### <a name="to-download-this-sample"></a>Aby pobrać w tym przykładzie
+#### <a name="to-download-this-sample"></a>Aby pobrać ten przykład
   
-W tym przykładzie może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+Ten przykład może już być zainstalowany na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+ Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1. Za pomocą programu Visual Studio, otwórz plik WebRoutingIntegration.sln.  
+1. Korzystając z programu Visual Studio, Otwórz plik WebRoutingIntegration. sln.  
   
-2. Aby uruchomić rozwiązanie i uruchomić serwera wdrożeniowego sieci Web, naciśnij klawisz F5.  
+2. Aby uruchomić rozwiązanie i uruchomić serwer Web Development, naciśnij klawisz F5.  
   
-     Pojawi się listę katalogów we próbki. Należy pamiętać, że nie istnieją żadne pliki z rozszerzeniem nazwy pliku .svc.  
+     Zostanie wyświetlona lista katalogów dla przykładu. Należy zauważyć, że nie ma plików z rozszerzeniem SVC.  
   
-3. Na pasku adresu Dodaj `movies` do adresu URL, tak że odczytuje `http://localhost:[port]/movies` i naciśnij klawisz ENTER.  
+3. Na pasku adresu Dodaj `movies` do adresu URL, aby `http://localhost:[port]/movies` odczytywać i naciskać klawisz ENTER.  
   
-     Kanał informacyjny filmy zostanie wyświetlona w przeglądarce.  
+     W przeglądarce pojawi się źródło filmów.  
   
-4. Na pasku adresu Dodaj `channels` do adresu URL, więc to odczyty `http://localhost:[port]/channels` i naciśnij klawisz ENTER.  
+4. Na pasku adresu Dodaj `channels` do adresu URL, więc jest to odczyt `http://localhost:[port]/channels` i naciśnięcie klawisza ENTER.  
   
-     Źródło strumieniowe kanały zostanie wyświetlona w przeglądarce.  
+     Kanał informacyjny kanału pojawia się w przeglądarce.  
   
 5. Zamknij przeglądarkę sieci Web, naciskając klawisze ALT + F4.  
   
-     Jeśli nie zakończył serwera wdrożeniowego programu, kliknij prawym przyciskiem myszy ikonę w obszarze powiadomień, a następnie wybierz **zatrzymać**.  
+     Jeśli serwer programistyczny nie został zakończony, kliknij prawym przyciskiem myszy ikonę obszaru powiadomień i wybierz polecenie **Zatrzymaj**.  
   
-#### <a name="to-use-this-sample-when-hosted-in-iis"></a>Aby użyć tego przykładu, w przypadku hostowania w usługach IIS  
+#### <a name="to-use-this-sample-when-hosted-in-iis"></a>Aby użyć tego przykładu, gdy jest hostowany w usługach IIS  
   
-1. Za pomocą programu Visual Studio, otwórz plik WebRoutingIntegration.sln.  
+1. Korzystając z programu Visual Studio, Otwórz plik WebRoutingIntegration. sln.  
   
 2. Skompiluj projekt, naciskając klawisze CTRL + SHIFT + B.  
   
-3. Utwórz aplikację sieci Web w Menedżerze usług Internet Information Services (IIS).  
+3. Utwórz aplikację sieci Web w Menedżerze Internet Information Services (IIS).  
   
-    1. Kliknij prawym przyciskiem myszy w Menedżerze usług IIS **domyślna witryna sieci Web** i wybierz **Dodawanie aplikacji**.  
+    1. W Menedżerze usług IIS kliknij prawym przyciskiem myszy pozycję **Domyślna witryna sieci Web** i wybierz polecenie **Dodaj aplikację**.  
   
-    2. Aby uzyskać **alias**, wpisz `WebRoutingIntegration`.  
+    2. Dla **aliasu**wpisz w `WebRoutingIntegration`.  
   
-    3. Aby uzyskać **ścieżkę fizyczną**, wybierz folder usługi w projekcie.  
+    3. W polu **Ścieżka fizyczna**wybierz folder usługi wewnątrz projektu.  
   
     4. Naciśnij klawisz **OK**.  
   
-4. Uruchom aplikację, klikając prawym przyciskiem myszy aplikację sieci Web i wybierając polecenie **Zarządzanie aplikacją** i następnie **Przeglądaj**.  
+4. Uruchom aplikację, klikając prawym przyciskiem myszy aplikację sieci Web i wybierając pozycję **Zarządzaj aplikacją** , a następnie pozycję **Przeglądaj**.  
   
-5. Na pasku adresu Dodaj `movies` do adresu URL, więc to odczyty `http://localhost:[port]/movies` i naciśnij klawisz ENTER.  
+5. Na pasku adresu Dodaj `movies` do adresu URL, więc jest to odczyt `http://localhost:[port]/movies` i naciśnięcie klawisza ENTER.  
   
-     Kanał informacyjny filmy zostanie wyświetlona w przeglądarce.  
+     W przeglądarce pojawi się źródło filmów.  
   
-6. Na pasku adresu Dodaj `channels` do adresu URL, więc to odczyty `http://localhost:[port]/channels` i naciśnij klawisz ENTER.  
+6. Na pasku adresu Dodaj `channels` do adresu URL, więc jest to odczyt `http://localhost:[port]/channels` i naciśnięcie klawisza ENTER.  
   
-     Źródło strumieniowe kanały zostanie wyświetlona w przeglądarce.  
+     Kanał informacyjny kanału pojawia się w przeglądarce.  
   
 7. Zamknij przeglądarkę sieci Web, naciskając klawisze ALT + F4.  
   
- Niniejszy przykład pokazuje, w warstwie hostingu jest w stanie tworzenie z klasami <xref:System.Web.Routing> przestrzeni nazw w przypadku routingu żądań usług obsługiwanych za pośrednictwem protokołu HTTP.  
+ Ten przykład pokazuje, że warstwa hostingu może tworzyć klasy w <xref:System.Web.Routing> przestrzeni nazw na potrzeby routingu żądań usług hostowanych za pośrednictwem protokołu HTTP.  
   
 > [!NOTE]
->  Należy zaktualizować wersję puli aplikacji domyślnej, aby [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] Jeśli jest ustawiony do wersji 2.  
+> Domyślną wersję puli aplikacji należy zaktualizować do [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] wersji 2.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykłady trwałości i hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Przykłady hostingu i trwałości usługi AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

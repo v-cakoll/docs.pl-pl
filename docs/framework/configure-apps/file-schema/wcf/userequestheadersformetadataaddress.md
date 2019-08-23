@@ -2,20 +2,20 @@
 title: <useRequestHeadersForMetadataAddress>
 ms.date: 03/30/2017
 ms.assetid: 679f0eae-f353-44d1-b42d-a9e247509774
-ms.openlocfilehash: 969461d0e5bdc9f8c49b7a019a6000af5af77eec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84310d4ae5e04e76e4484f4fc606c9896239c776
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788729"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940551"
 ---
 # <a name="userequestheadersformetadataaddress"></a>\<useRequestHeadersForMetadataAddress>
-Umożliwia pobieranie informacji o adresie metadanych z nagłówków żądań wiadomości.  
+Umożliwia pobieranie informacji o adresie metadanych z nagłówków komunikatów żądania.  
   
 \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<useRequestHeadersForMetadataAddress>  
   
 ## <a name="syntax"></a>Składnia  
@@ -39,13 +39,13 @@ Umożliwia pobieranie informacji o adresie metadanych z nagłówków żądań wi
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<defaultPorts>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Kolekcja portów domyślnych Wyświetla domyślne punktów końcowe komunikacji, które nasłuchuje aplikacja kliencka.|  
+|[\<defaultPorts>](defaultports.md)|Kolekcja portów domyślnych wyświetla domyślne punkty końcowe komunikacji, do których nasłuchuje aplikacja kliencka.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
+|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
   
 ## <a name="see-also"></a>Zobacz także
 

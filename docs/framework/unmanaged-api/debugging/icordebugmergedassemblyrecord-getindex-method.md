@@ -1,18 +1,18 @@
 ---
-title: ICorDebugMergedAssemblyRecord::GetIndex Method
+title: 'ICorDebugMergedAssemblyRecord:: getIndex — Metoda'
 ms.date: 03/30/2017
 ms.assetid: 98701444-b9bc-4978-9548-89ac3394147d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c869c829acbfb9b0281537c7355229acbf2c5a7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ca304b90cee291ef86e225c2b0691631833e53a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752725"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917948"
 ---
-# <a name="icordebugmergedassemblyrecordgetindex-method"></a>ICorDebugMergedAssemblyRecord::GetIndex Method
-Pobiera indeks prefiks zestawu.  
+# <a name="icordebugmergedassemblyrecordgetindex-method"></a>ICorDebugMergedAssemblyRecord:: getIndex — Metoda
+Pobiera indeks prefiksu zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,22 +24,22 @@ HRESULT GetIndex(
   
 ## <a name="parameters"></a>Parametry  
  `pIndex`  
- [out] Wskaźnik do indeksu prefiks.  
+ określoną Wskaźnik do indeksu prefiksu.  
   
 ## <a name="remarks"></a>Uwagi  
- Indeks prefiks jest używany aby zapobiec kolizjom nazw w nazwach typów scalonych metadanych.  
+ Indeks prefiksu służy do zapobiegania kolizjom nazw w scalonych nazwach typów metadanych.  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

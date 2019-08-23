@@ -2,33 +2,33 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: f771886192e85cc7e34f0ace4fd95ca04bdb89c9
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: aad89924b371d9d5032f32f29aac83fae445f253
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881485"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959778"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
-W przykładzie pokazano sposób tworzenia powiązania, który jest przeznaczony do obsługi transmisji strumieniowej scenariuszy stosowania transportu HTTP.  
+W przykładzie pokazano, jak utworzyć powiązanie, które jest przeznaczone do obsługi scenariuszy przesyłania strumieniowego, gdy używany jest transport HTTP.  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Binding\WSStreamedHttpBinding`  
   
- Dostępne są następujące kroki, aby utworzyć i skonfigurować nowe powiązanie standardowe.  
+ Poniżej przedstawiono procedurę tworzenia i konfigurowania nowego powiązania standardowego.  
   
-1. Utwórz nowe powiązanie standardowe  
+1. Tworzenie nowego powiązania standardowego  
   
-     Powiązania w standardowych w Windows Communication Foundation (WCF), takie jak basicHttpBinding i netTcpBinding Konfigurowanie transportów podstawowych i stosu kanału do określonych wymagań. W tym przykładzie `WSStreamedHttpBinding` konfiguruje stosu kanału do obsługi przesyłania strumieniowego. Domyślnie WS-Security i niezawodną obsługę komunikatów nie są dodawane do stosu kanału, ponieważ obie funkcje nie są obsługiwane przez przesyłania strumieniowego. Nowe powiązanie jest zaimplementowana w klasie `WSStreamedHttpBinding` który pochodzi od klasy <xref:System.ServiceModel.Channels.Binding>. `WSStreamedHttpBinding` Zawiera następujące elementy powiązania: <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, i <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Klasa oferuje `CreateBindingElements()` metodę, aby skonfigurować wynikowy stosu powiązania, jak pokazano w poniższym przykładowym kodzie.  
+     Standardowe powiązania w Windows Communication Foundation (WCF), takie jak basicHttpBinding i netTcpBinding, konfigurują podstawowe transporty i stos kanałów dla określonych wymagań. W tym przykładzie `WSStreamedHttpBinding` konfiguruje stos kanałów do obsługi przesyłania strumieniowego. Domyślnie usługa WS-Security i niezawodna obsługa komunikatów nie są dodawane do stosu kanałów, ponieważ obie funkcje nie są obsługiwane przez przesyłanie strumieniowe. Nowe powiązanie jest zaimplementowane w klasie `WSStreamedHttpBinding` , która pochodzi od. <xref:System.ServiceModel.Channels.Binding> <xref:System.ServiceModel.Channels.HttpTransportBindingElement> <xref:System.ServiceModel.Channels.HttpsTransportBindingElement> <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>Zawiera następujące elementy powiązania:,,, i <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. `WSStreamedHttpBinding` Klasa udostępnia `CreateBindingElements()` metodę konfigurowania wynikowego stosu powiązań, jak pokazano w poniższym przykładowym kodzie.  
   
     ```  
     public override BindingElementCollection CreateBindingElements()  
@@ -50,9 +50,9 @@ W przykładzie pokazano sposób tworzenia powiązania, który jest przeznaczony 
     }  
     ```  
   
-2. Dodanie obsługi konfiguracji  
+2. Dodawanie obsługi konfiguracji  
   
-     Aby uwidocznić transportu za pomocą konfiguracji próbki implementuje dwóch klas więcej —`WSStreamedHttpBindingConfigurationElement` i `WSStreamedHttpBindingSection`. Klasa `WSStreamedHttpBindingSection` jest <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> który uwidacznia `WSStreamedHttpBinding` systemu konfiguracji usługi WCF. Duża część wykonania jest delegowane do `WSStreamedHttpBindingConfigurationElement`, która jest pochodną <xref:System.ServiceModel.Configuration.StandardBindingElement>. Klasa `WSStreamedHttpBindingConfigurationElement` ma właściwości, które odnoszą się do właściwości `WSStreamedHttpBinding`i funkcje, aby mapować każdy element konfiguracji do powiązania.  
+     Aby uwidocznić transport poprzez konfigurację, przykład implementuje dwie więcej klas —`WSStreamedHttpBindingConfigurationElement` i `WSStreamedHttpBindingSection`. Klasa `WSStreamedHttpBindingSection` jest<xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> uwidaczniana`WSStreamedHttpBinding` dla systemu konfiguracji WCF. Zbiorcza implementacja jest delegowana do `WSStreamedHttpBindingConfigurationElement`, który pochodzi od. <xref:System.ServiceModel.Configuration.StandardBindingElement> Klasa `WSStreamedHttpBindingConfigurationElement` ma właściwości `WSStreamedHttpBinding`, które odpowiadają właściwościom, i funkcje do mapowania każdego elementu konfiguracji do powiązania.  
   
      Zarejestruj program obsługi przy użyciu systemu konfiguracji, dodając następującą sekcję do pliku konfiguracji usługi.  
   
@@ -68,7 +68,7 @@ W przykładzie pokazano sposób tworzenia powiązania, który jest przeznaczony 
     </configuration>  
     ```  
   
-     Program obsługi mogą następnie odwoływać się w sekcji Konfiguracja modelu serviceModel.  
+     Do programu obsługi można odwoływać się z sekcji konfiguracji serviceModel.  
   
     ```xml  
     <configuration>  
@@ -84,26 +84,26 @@ W przykładzie pokazano sposób tworzenia powiązania, który jest przeznaczony 
     </configuration>  
     ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Instalowanie programu ASP.NET 4.0, używając następującego polecenia.  
+1. Zainstaluj ASP.NET 4,0 przy użyciu następującego polecenia.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Upewnij się, że wykonano czynności opisane w [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Upewnij się, że wykonano kroki opisane w [temacie Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 3. Upewnij się, że wykonano [instrukcje instalacji certyfikatu serwera Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
   
-4. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-5. Do uruchomienia przykładu w konfiguracji między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5. Aby uruchomić przykład w konfiguracji między maszynami, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-6. Kiedy wyświetli się okno klienta, wpisz "Przykład.txt". "Kopiuj z przykład.txt" powinien znajdować się w katalogu.  
+6. Po wyświetleniu okna klienta wpisz "Sample. txt". W katalogu powinna znajdować się "kopia przykładowa. txt".  
   
-## <a name="the-wsstreamedhttpbinding-sample-service"></a>Usługa WSStreamedHttpBinding próbki  
- Usługa próbki, która używa `WSStreamedHttpBinding` znajduje się w podkatalogu usługi. Implementacja `OperationContract` używa `MemoryStream` można najpierw pobrać wszystkie dane w przychodzącym strumieniu przed zwróceniem `MemoryStream`. Próbka jest hostowana usługa Internet Information Services (IIS).  
+## <a name="the-wsstreamedhttpbinding-sample-service"></a>Przykładowa usługa WSStreamedHttpBinding  
+ Przykładowa usługa, która `WSStreamedHttpBinding` używa programu, znajduje się w podkatalogu usługi. Implementacja programu `OperationContract` używa programu, `MemoryStream` aby najpierw pobrać wszystkie dane ze strumienia `MemoryStream`przychodzącego przed zwróceniem. Przykładowa usługa jest hostowana przez Internet Information Services (IIS).  
   
 ```  
 [ServiceContract]  
@@ -133,8 +133,8 @@ public class StreamedEchoService : IStreamedEchoService
 }  
 ```  
   
-## <a name="the-wsstreamedhttpbinding-sample-client"></a>Klient WSStreamedHttpBinding próbki  
- Klient, który służy do interakcji z usługą przy użyciu `WSStreamedHttpBinding` znajduje się w podkatalogu klienta. Ponieważ certyfikat używany w tym przykładzie jest utworzone za pomocą Makecert.exe certyfikat testowy, alert zabezpieczeń zawiera przy próbie uzyskania dostępu do adresu HTTPS w przeglądarce, takich jak https://localhost/servicemodelsamples/service.svc. Aby zezwolić na klienta platformy WCF do pracy z certyfikatem testowym w miejscu, dodano dodatkowy kod klienta dla pomijania alertu zabezpieczeń. Kod i towarzyszące klasy nie są wymagane, podczas korzystania z certyfikatów w środowisku produkcyjnym.  
+## <a name="the-wsstreamedhttpbinding-sample-client"></a>Przykładowy klient WSStreamedHttpBinding  
+ Klient, który jest używany do współpracy z usługą za pomocą `WSStreamedHttpBinding` programu, znajduje się w podkatalogu klienta. Ponieważ certyfikat używany w tym przykładzie jest certyfikatem testowym utworzonym przy użyciu programu Makecert. exe, podczas próby uzyskania dostępu do adresu HTTPS w przeglądarce, takiego jak https://localhost/servicemodelsamples/service.svc. Aby umożliwić klientowi WCF współpracuję z certyfikatem testowym, do klienta został dodany dodatkowy kod, aby pominąć alert zabezpieczeń. Kod i towarzysząca Klasa nie są wymagane w przypadku korzystania z certyfikatów produkcyjnych.  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   

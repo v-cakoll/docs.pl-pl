@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f38f9a3ebd88e0a5abb7a6bc8cb4026dc7d0f068
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21da325ee58df65ac449464f8292f2ba94d99338
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736937"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943296"
 ---
-# <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a><span data-ttu-id="babae-102">ICorDebugProcess2::GetReferenceValueFromGCHandle — Metoda</span><span class="sxs-lookup"><span data-stu-id="babae-102">ICorDebugProcess2::GetReferenceValueFromGCHandle Method</span></span>
-<span data-ttu-id="babae-103">Pobiera wskaźnik odwołania do określonego obiektu zarządzanego, który ma obsługiwać wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="babae-103">Gets a reference pointer to the specified managed object that has a garbage collection handle.</span></span>  
+# <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a><span data-ttu-id="43f36-102">ICorDebugProcess2::GetReferenceValueFromGCHandle — Metoda</span><span class="sxs-lookup"><span data-stu-id="43f36-102">ICorDebugProcess2::GetReferenceValueFromGCHandle Method</span></span>
+<span data-ttu-id="43f36-103">Pobiera wskaźnik odwołania do określonego obiektu zarządzanego, który ma dojście do wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="43f36-103">Gets a reference pointer to the specified managed object that has a garbage collection handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="babae-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="babae-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="43f36-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="43f36-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetReferenceValueFromGCHandle (  
@@ -36,26 +36,26 @@ HRESULT GetReferenceValueFromGCHandle (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="babae-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="babae-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="43f36-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="43f36-105">Parameters</span></span>  
  `handle`  
- <span data-ttu-id="babae-106">[in] Wskaźnik do obiektu zarządzanego, który ma dojścia kolekcji wyrzucania elementów.</span><span class="sxs-lookup"><span data-stu-id="babae-106">[in] A pointer to a managed object that has a garbage collection handle.</span></span> <span data-ttu-id="babae-107">Ta wartość jest <xref:System.IntPtr> obiektu i może zostać pobrana z <xref:System.Runtime.InteropServices.GCHandle> obiektu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="babae-107">This value is a <xref:System.IntPtr> object and can be retrieved from the <xref:System.Runtime.InteropServices.GCHandle> for the managed object.</span></span>  
+ <span data-ttu-id="43f36-106">podczas Wskaźnik do zarządzanego obiektu, który ma dojście do wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="43f36-106">[in] A pointer to a managed object that has a garbage collection handle.</span></span> <span data-ttu-id="43f36-107">Ta wartość jest <xref:System.IntPtr> obiektem i można ją pobrać <xref:System.Runtime.InteropServices.GCHandle> z elementu dla obiektu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="43f36-107">This value is a <xref:System.IntPtr> object and can be retrieved from the <xref:System.Runtime.InteropServices.GCHandle> for the managed object.</span></span>  
   
  `pOutValue`  
- <span data-ttu-id="babae-108">[out] Wskaźnik na adres obiektu ICorDebugReferenceValue, który reprezentuje odwołanie do określonego obiektu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="babae-108">[out] A pointer to the address of an ICorDebugReferenceValue object that represents a reference to the specified managed object.</span></span>  
+ <span data-ttu-id="43f36-108">określoną Wskaźnik do adresu obiektu ICorDebugReferenceValue, który reprezentuje odwołanie do określonego obiektu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="43f36-108">[out] A pointer to the address of an ICorDebugReferenceValue object that represents a reference to the specified managed object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="babae-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="babae-109">Remarks</span></span>  
- <span data-ttu-id="babae-110">Nie należy mylić wartości zwracane odwołanie o wartości odniesienia kolekcji wyrzucania elementów.</span><span class="sxs-lookup"><span data-stu-id="babae-110">Do not confuse the returned reference value with a garbage collection reference value.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="43f36-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="43f36-109">Remarks</span></span>  
+ <span data-ttu-id="43f36-110">Nie należy mylić zwróconej wartości odniesienia z wartością referencyjną wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="43f36-110">Do not confuse the returned reference value with a garbage collection reference value.</span></span>  
   
- <span data-ttu-id="babae-111">Zwracane odwołanie zachowuje się jak normalne odwołania.</span><span class="sxs-lookup"><span data-stu-id="babae-111">The returned reference behaves like a normal reference.</span></span> <span data-ttu-id="babae-112">Jest ona wyłączona, gdy punkt przerwania jest kontynuowane wykonywanie kodu.</span><span class="sxs-lookup"><span data-stu-id="babae-112">It is disabled when code execution continues after a breakpoint.</span></span> <span data-ttu-id="babae-113">Okres istnienia wartość odwołania nie dotyczy okresu istnienia obiektu docelowego.</span><span class="sxs-lookup"><span data-stu-id="babae-113">The lifetime of the target object is not affected by the lifetime of the reference value.</span></span>  
+ <span data-ttu-id="43f36-111">Zwrócone odwołanie zachowuje się jak normalne odwołanie.</span><span class="sxs-lookup"><span data-stu-id="43f36-111">The returned reference behaves like a normal reference.</span></span> <span data-ttu-id="43f36-112">Jest ono wyłączone, gdy wykonanie kodu jest kontynuowane po punkcie przerwania.</span><span class="sxs-lookup"><span data-stu-id="43f36-112">It is disabled when code execution continues after a breakpoint.</span></span> <span data-ttu-id="43f36-113">Okres istnienia obiektu docelowego nie ma wpływ na czas istnienia wartości referencyjnej.</span><span class="sxs-lookup"><span data-stu-id="43f36-113">The lifetime of the target object is not affected by the lifetime of the reference value.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="babae-114">`GetReferenceValueFromGCHandle` Metoda nie sprawdza poprawności dojścia.</span><span class="sxs-lookup"><span data-stu-id="babae-114">The `GetReferenceValueFromGCHandle` method does not validate the handle.</span></span> <span data-ttu-id="babae-115">W związku z tym `GetReferenceValueFromGCHandle` metoda może potencjalnie uszkodzić debugera i kod debugowany, jeśli zostanie przekazana nieprawidłowego dojścia.</span><span class="sxs-lookup"><span data-stu-id="babae-115">Therefore, the `GetReferenceValueFromGCHandle` method can potentially corrupt both the debugger and the code being debugged if an invalid handle is passed.</span></span>  
+> <span data-ttu-id="43f36-114">`GetReferenceValueFromGCHandle` Metoda nie sprawdza poprawności dojścia.</span><span class="sxs-lookup"><span data-stu-id="43f36-114">The `GetReferenceValueFromGCHandle` method does not validate the handle.</span></span> <span data-ttu-id="43f36-115">W `GetReferenceValueFromGCHandle` związku z tym, Metoda może potencjalnie uszkodzić debuger i kod debugowany w przypadku przekazanie nieprawidłowego dojścia.</span><span class="sxs-lookup"><span data-stu-id="43f36-115">Therefore, the `GetReferenceValueFromGCHandle` method can potentially corrupt both the debugger and the code being debugged if an invalid handle is passed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="babae-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="babae-116">Requirements</span></span>  
- <span data-ttu-id="babae-117">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="babae-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="43f36-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="43f36-116">Requirements</span></span>  
+ <span data-ttu-id="43f36-117">**Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="43f36-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="babae-118">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="babae-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="43f36-118">**Nagłówki** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="43f36-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="babae-119">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="babae-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="43f36-119">**Biblioteki** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="43f36-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="babae-120">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="babae-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="43f36-120">**.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="43f36-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 348c51507006fecfe756cb17fd0d6242617577d7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b046a5fcd514dde84e2f0f8c22ee23529ee906e2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750219"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911469"
 ---
-# <a name="icordebugdatatarget2getimagelocation-method"></a><span data-ttu-id="5433e-102">Metoda ICorDebugDataTarget2::GetImageLocation</span><span class="sxs-lookup"><span data-stu-id="5433e-102">ICorDebugDataTarget2::GetImageLocation Method</span></span>
-<span data-ttu-id="5433e-103">Zwraca ścieżkę modułu z adresu podstawowego modułu.</span><span class="sxs-lookup"><span data-stu-id="5433e-103">Returns the path of a module from the module's base address.</span></span>  
+# <a name="icordebugdatatarget2getimagelocation-method"></a><span data-ttu-id="427a1-102">Metoda ICorDebugDataTarget2::GetImageLocation</span><span class="sxs-lookup"><span data-stu-id="427a1-102">ICorDebugDataTarget2::GetImageLocation Method</span></span>
+<span data-ttu-id="427a1-103">Zwraca ścieżkę modułu z adresu podstawowego modułu.</span><span class="sxs-lookup"><span data-stu-id="427a1-103">Returns the path of a module from the module's base address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5433e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="5433e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="427a1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="427a1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,  
@@ -24,34 +24,34 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5433e-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="5433e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="427a1-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="427a1-105">Parameters</span></span>  
  `baseAddress`  
- <span data-ttu-id="5433e-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) wartość, która reprezentuje adres bazowy modułu.</span><span class="sxs-lookup"><span data-stu-id="5433e-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) value that represents the module's base address.</span></span>  
+ <span data-ttu-id="427a1-106">podczas Wartość [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) , która reprezentuje adres podstawowy modułu.</span><span class="sxs-lookup"><span data-stu-id="427a1-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) value that represents the module's base address.</span></span>  
   
  `cchName`  
- <span data-ttu-id="5433e-107">[in] Liczba znaków w buforze, który ma otrzymać ścieżka modułu.</span><span class="sxs-lookup"><span data-stu-id="5433e-107">[in] The number of characters in the buffer that is to receive the module path.</span></span>  
+ <span data-ttu-id="427a1-107">podczas Liczba znaków w buforze, która ma otrzymać ścieżkę modułu.</span><span class="sxs-lookup"><span data-stu-id="427a1-107">[in] The number of characters in the buffer that is to receive the module path.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="5433e-108">[out] Wskaźnik do liczby znaków zapisanych na `szName` buforu.</span><span class="sxs-lookup"><span data-stu-id="5433e-108">[out] A pointer to the number of characters written to the `szName` buffer.</span></span>  
+ <span data-ttu-id="427a1-108">określoną Wskaźnik do liczby znaków zapisanych w `szName` buforze.</span><span class="sxs-lookup"><span data-stu-id="427a1-108">[out] A pointer to the number of characters written to the `szName` buffer.</span></span>  
   
  `szName`  
- <span data-ttu-id="5433e-109">[out] Ścieżka do modułu.</span><span class="sxs-lookup"><span data-stu-id="5433e-109">[out] The path of the module.</span></span>  
+ <span data-ttu-id="427a1-109">określoną Ścieżka modułu.</span><span class="sxs-lookup"><span data-stu-id="427a1-109">[out] The path of the module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5433e-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="5433e-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="427a1-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="427a1-110">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5433e-111">Ta metoda jest tylko dostępne z architekturą .NET Native.</span><span class="sxs-lookup"><span data-stu-id="5433e-111">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="427a1-111">Ta metoda jest dostępna tylko z .NET Native.</span><span class="sxs-lookup"><span data-stu-id="427a1-111">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5433e-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5433e-112">Requirements</span></span>  
- <span data-ttu-id="5433e-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5433e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="427a1-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="427a1-112">Requirements</span></span>  
+ <span data-ttu-id="427a1-113">**Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="427a1-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5433e-114">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5433e-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="427a1-114">**Nagłówki** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="427a1-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5433e-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5433e-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="427a1-115">**Biblioteki** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="427a1-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5433e-116">**Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5433e-116">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="427a1-116">**.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="427a1-116">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5433e-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5433e-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="427a1-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="427a1-117">See also</span></span>
 
-- [<span data-ttu-id="5433e-118">ICorDebugDataTarget2, interfejs</span><span class="sxs-lookup"><span data-stu-id="5433e-118">ICorDebugDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [<span data-ttu-id="5433e-119">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="5433e-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="427a1-118">ICorDebugDataTarget2, interfejs</span><span class="sxs-lookup"><span data-stu-id="427a1-118">ICorDebugDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
+- [<span data-ttu-id="427a1-119">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="427a1-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -2,19 +2,19 @@
 title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: ed55701e45d8580e37cf4776de6b9c5241e0548c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34ba198de33ae4aa1882d13f74bd2d538999a0c9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673481"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919786"
 ---
-# <a name="bindingextensions"></a><span data-ttu-id="0ad0b-101">\<bindingExtensions ></span><span class="sxs-lookup"><span data-stu-id="0ad0b-101">\<bindingExtensions></span></span>
-<span data-ttu-id="0ad0b-102">Ta sekcja umożliwia korzystanie z powiązania zdefiniowanego przez użytkownika z maszyny lub pliku konfiguracji aplikacji.</span><span class="sxs-lookup"><span data-stu-id="0ad0b-102">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="0ad0b-103">Można dodać powiązania zdefiniowanego przez użytkownika do tej kolekcji przy użyciu `add` — słowo kluczowe i ustawienie `type` atrybut elementu do powiązania zdefiniowanego przez użytkownika, także `name` atrybutu nazwy użytkownika zdefiniowanych powiązań.</span><span class="sxs-lookup"><span data-stu-id="0ad0b-103">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  
+# <a name="bindingextensions"></a><span data-ttu-id="bd0cc-101">\<bindingExtensions ></span><span class="sxs-lookup"><span data-stu-id="bd0cc-101">\<bindingExtensions></span></span>
+<span data-ttu-id="bd0cc-102">Ta sekcja umożliwia użycie zdefiniowanego przez użytkownika powiązania z pliku konfiguracji komputera lub aplikacji.</span><span class="sxs-lookup"><span data-stu-id="bd0cc-102">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="bd0cc-103">Można dodać powiązanie zdefiniowane przez użytkownika do tej kolekcji przy użyciu `add` słowa kluczowego i `type` ustawić atrybut elementu na powiązanie zdefiniowane przez użytkownika `name` , a także atrybut nazwy wiązania zdefiniowanej przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="bd0cc-103">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  
   
- <span data-ttu-id="0ad0b-104">Powiązanie rozszerzenia umożliwiają użytkownikowi utworzenie powiązań zdefiniowanych przez użytkownika jako część konfiguracji punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="0ad0b-104">Binding extensions enable the user to create user-defined bindings for use as part an endpoint configuration.</span></span> <span data-ttu-id="0ad0b-105">Programowe rozszerzenie powiązania jest typu, który implementuje klasa abstrakcyjna <xref:System.ServiceModel.Channels.Binding>.</span><span class="sxs-lookup"><span data-stu-id="0ad0b-105">Programmatically, a binding extension is a type that implements the abstract class <xref:System.ServiceModel.Channels.Binding>.</span></span>  
+ <span data-ttu-id="bd0cc-104">Rozszerzenia powiązań umożliwiają użytkownikowi tworzenie powiązań zdefiniowanych przez użytkownika do użycia jako część konfiguracji punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="bd0cc-104">Binding extensions enable the user to create user-defined bindings for use as part an endpoint configuration.</span></span> <span data-ttu-id="bd0cc-105">Programowe rozszerzenie powiązania jest typem, który implementuje klasę <xref:System.ServiceModel.Channels.Binding>abstrakcyjną.</span><span class="sxs-lookup"><span data-stu-id="bd0cc-105">Programmatically, a binding extension is a type that implements the abstract class <xref:System.ServiceModel.Channels.Binding>.</span></span>  
   
- <span data-ttu-id="0ad0b-106">W poniższym przykładzie użyto `add` elementu, jak również `name` atrybutu, aby dodać rozszerzenie powiązania `bindingElementExtensions` sekcję pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="0ad0b-106">The following example uses the `add` element, as well as the `name` attribute to add a binding extension to the `bindingElementExtensions` section of the configuration file.</span></span>  
+ <span data-ttu-id="bd0cc-106">Poniższy przykład używa `add` elementu, a także `name` atrybutu, aby dodać rozszerzenie powiązania do `bindingElementExtensions` sekcji pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="bd0cc-106">The following example uses the `add` element, as well as the `name` attribute to add a binding extension to the `bindingElementExtensions` section of the configuration file.</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -28,9 +28,9 @@ ms.locfileid: "61673481"
 </system.serviceModel>
 ```  
   
- <span data-ttu-id="0ad0b-107">Aby dodać możliwości konfiguracji do elementu, użytkownik musi napisać i Zarejestruj `bindingSection` elementu.</span><span class="sxs-lookup"><span data-stu-id="0ad0b-107">To add configuration abilities to the element, the user needs to write and register a `bindingSection` element.</span></span> <span data-ttu-id="0ad0b-108">Aby uzyskać więcej informacji na temat tego, zobacz <xref:System.Configuration> dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="0ad0b-108">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
+ <span data-ttu-id="bd0cc-107">Aby dodać możliwości konfiguracji do elementu, użytkownik musi napisać i zarejestrować `bindingSection` element.</span><span class="sxs-lookup"><span data-stu-id="bd0cc-107">To add configuration abilities to the element, the user needs to write and register a `bindingSection` element.</span></span> <span data-ttu-id="bd0cc-108">Aby uzyskać więcej informacji na ten temat, <xref:System.Configuration> zapoznaj się z dokumentacją.</span><span class="sxs-lookup"><span data-stu-id="bd0cc-108">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
   
- <span data-ttu-id="0ad0b-109">Po zdefiniowaniu elementu i jego typ Konfiguracja rozszerzenia może służyć jako część punktu końcowego jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="0ad0b-109">After the element and its configuration type are defined, the extension can be used as part of an endpoint as shown in the following example.</span></span>  
+ <span data-ttu-id="bd0cc-109">Po zdefiniowaniu elementu i jego typu konfiguracji rozszerzenie może być używane jako część punktu końcowego, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="bd0cc-109">After the element and its configuration type are defined, the extension can be used as part of an endpoint as shown in the following example.</span></span>  
   
 ```xml  
 <services>
@@ -41,6 +41,6 @@ ms.locfileid: "61673481"
 </services>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0ad0b-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0ad0b-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bd0cc-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bd0cc-110">See also</span></span>
 
-- [<span data-ttu-id="0ad0b-111">Rozszerzanie powiązań</span><span class="sxs-lookup"><span data-stu-id="0ad0b-111">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="bd0cc-111">Rozszerzanie powiązań</span><span class="sxs-lookup"><span data-stu-id="bd0cc-111">Extending Bindings</span></span>](../../../wcf/extending/extending-bindings.md)

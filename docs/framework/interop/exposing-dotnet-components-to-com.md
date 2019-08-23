@@ -8,22 +8,22 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1879f5b5aa2fbe6b0e51f9b38fca3af1f4c0cedf
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 48d550a526336cf3e9de9cb53a16ddcf86f3af5d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971754"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946516"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Udostępnianie składników .NET Framework modelowi COM
 
 Pisanie typu .NET i używanie tego typu z kodu niezarządzanego to odrębne działania dla deweloperów. W tej sekcji opisano kilka wskazówek dotyczących pisania kodu zarządzanego, który współdziała z klientami COM:
 
-- [Kwalifikowanie typów .NET do](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)międzyoperacyjności.
+- [Kwalifikowanie typów .NET do](../../standard/native-interop/qualify-net-types-for-interoperation.md)międzyoperacyjności.
 
      Wszystkie typy zarządzane, metody, właściwości, pola i zdarzenia, które mają zostać ujawnione w modelu COM, muszą być publiczne. Typy muszą mieć publiczny Konstruktor bez parametrów, który jest jedynym konstruktorem, który może być wywoływany przez COM.
 
-- [Stosowanie atrybutów](../../../docs/standard/native-interop/apply-interop-attributes.md)międzyoperacyjnych.
+- [Stosowanie atrybutów](../../standard/native-interop/apply-interop-attributes.md)międzyoperacyjnych.
 
      Atrybuty niestandardowe w kodzie zarządzanym mogą wzmocnić współdziałanie składnika.
 

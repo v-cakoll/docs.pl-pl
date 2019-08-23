@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed8525cad7dd56fe026070786b0f0cf51c0fec2d
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 3134477198f0cd4c821bea456450e98cc73c6ad2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363972"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957471"
 ---
 # <a name="registration-free-com-interop"></a>Współdziałanie z modelem COM bez rejestrowania
 Niezależna od rejestracji międzyoperacyjność modelu COM aktywuje składnik bez używania rejestru systemu Windows do przechowywania informacji o zestawie. Zamiast rejestrować składnik na komputerze podczas wdrażania, można tworzyć pliki manifestu w stylu Win32 w czasie projektowania, które zawierają informacje o powiązaniu i aktywacji. Te pliki manifestu, a nie klucze rejestru, kierują aktywację obiektu.  
@@ -52,7 +52,7 @@ Niezależna od rejestracji międzyoperacyjność modelu COM aktywuje składnik b
      Aktywacja bez rejestracji jest opcjonalna dla składników COM zainstalowanych w systemie Windows XP. Aby uzyskać szczegółowe instrukcje dotyczące dodawania zestawu równoległego do aplikacji, zobacz [używanie zestawów równoległych](/windows/desktop/SbsCs/using-side-by-side-assemblies).  
   
     > [!NOTE]
-    >  Wykonywanie równoczesne jest funkcją .NET Framework, która umożliwia obsługę wielu wersji środowiska uruchomieniowego oraz wielu wersji aplikacji i składników, które używają wersji środowiska uruchomieniowego, do uruchamiania na tym samym komputerze w tym samym czasie. Wykonywanie równoczesne i zestawy równoległe są różnymi mechanizmami zapewniania funkcji równoległych.  
+    > Wykonywanie równoczesne jest funkcją .NET Framework, która umożliwia obsługę wielu wersji środowiska uruchomieniowego oraz wielu wersji aplikacji i składników, które używają wersji środowiska uruchomieniowego, do uruchamiania na tym samym komputerze w tym samym czasie. Wykonywanie równoczesne i zestawy równoległe są różnymi mechanizmami zapewniania funkcji równoległych.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: 1434a859e4c4203aca44b491f139c30b9145c8e9
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b0cccefc9ceb186a5278cc4cabbab58944bf44d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877070"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961784"
 ---
 # <a name="default-nettcpbinding"></a>Domyślny element NetTcpBinding
-Ten przykład demonstruje użycie <xref:System.ServiceModel.NetTcpBinding> powiązania. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora. W tym przykładzie usługa jest samodzielnie hostowana. Klient i usługa są aplikacji konsoli.  
+Ten przykład ilustruje użycie <xref:System.ServiceModel.NetTcpBinding> powiązania. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje usługę kalkulatora. W tym przykładzie usługa jest samodzielna. Klientem i usługą są aplikacje konsolowe.  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- Powiązanie jest określona w plikach konfiguracji klienta i usługi. Typ powiązania jest określona w `binding` atrybutu [ \<punktu końcowego >](../../configure-apps/file-schema/wcf/endpoint-element.md) elementu, jak pokazano w poniższym Przykładowa konfiguracja.  
+ Powiązanie jest określone w plikach konfiguracji klienta i usługi. Typ powiązania jest określony w `binding` atrybucie [ \<elementu punktu końcowego >](../../configure-apps/file-schema/wcf/endpoint-element.md) , jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
 <endpoint address=""  
@@ -34,7 +34,7 @@ Ten przykład demonstruje użycie <xref:System.ServiceModel.NetTcpBinding> powi�
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Poprzedni przykład pokazuje, jak skonfigurować punkt końcowy do użycia `netTcpBinding` powiązanie z ustawieniami domyślnymi. Jeśli chcesz skonfigurować `netTcpBinding` powiązania i zmienić niektóre z jego ustawień jest niezbędne do definiowania konfiguracji powiązania. Punkt końcowy musi odwoływać się Konfiguracja powiązania według nazw z `bindingConfiguration` atrybutu. W tym przykładzie ma nazwę konfiguracji powiązania `Binding1` i jest definiowany, jak pokazano w poniższym Przykładowa konfiguracja.  
+ Poprzedni przykład pokazuje, jak skonfigurować punkt końcowy do używania `netTcpBinding` powiązania z ustawieniami domyślnymi. Jeśli chcesz skonfigurować `netTcpBinding` powiązanie i zmienić niektóre z jego ustawień, musisz zdefiniować konfigurację powiązania. Punkt końcowy musi odwoływać się do konfiguracji powiązania za pomocą `bindingConfiguration` nazwy z atrybutem. W tym przykładzie Konfiguracja powiązania ma nazwę `Binding1` i jest zdefiniowana, jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
 <services>  
@@ -81,7 +81,7 @@ Ten przykład demonstruje użycie <xref:System.ServiceModel.NetTcpBinding> powi�
 </bindings>  
 ```  
   
- Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -92,22 +92,22 @@ Divide(22,7) = 3.14285714285714
 Press ENTER to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Instalowanie programu ASP.NET 4.0, używając następującego polecenia.  
+1. Zainstaluj ASP.NET 4,0 przy użyciu następującego polecenia.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Ponieważ serwer jest samodzielnie hostowana, należy określić tożsamość w pliku App.config klienta do uruchomienia przykładu w konfiguracji między komputerami.  
+    >  Ponieważ serwer jest samoobsługowy, należy określić tożsamość w pliku App. config klienta, aby uruchomić przykład w konfiguracji dla wielu maszyn.  
   
     ```xml  
     <client>  

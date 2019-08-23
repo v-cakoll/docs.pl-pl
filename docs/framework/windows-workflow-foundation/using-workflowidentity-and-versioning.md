@@ -2,35 +2,35 @@
 title: Używanie obiektu WorkflowIdentity i wersjonowanie
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: f7e66d1827c5224ab97faeceaedc6ec0532a1923
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6b769224edcd9dfc51879c2c99e061a0e3f77e8d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661212"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958391"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Używanie obiektu WorkflowIdentity i wersjonowanie
 
-<xref:System.Activities.WorkflowIdentity> Umożliwia dla przepływu pracy deweloperów aplikacji, aby skojarzyć nazwę i <xref:System.Version> przy użyciu definicji przepływu pracy i te informacje, które ma zostać skojarzony z istniejącym wystąpieniem przepływu pracy. Informacje o tożsamości może służyć przez deweloperów aplikacji przepływu pracy można obsługiwać scenariusze takie jak side-by-side wykonywanie wielu wersji definicji przepływu pracy i zapewnia podstawę dla innych funkcji, takich jak aktualizacja dynamiczna. W tym temacie przedstawiono jako omówienie sposobu użycia <xref:System.Activities.WorkflowIdentity> z <xref:System.Activities.WorkflowApplication> hostingu. Aby uzyskać informacji na temat wykonywania side-by-side definicji przepływu pracy w usłudze przepływu pracy, zobacz [równoległe przechowywanie wersji w klasie WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Aby uzyskać informacji na temat aktualizacji dynamicznej, zobacz [aktualizacji dynamicznej](dynamic-update.md).
+<xref:System.Activities.WorkflowIdentity>umożliwia deweloperom aplikacji przepływu pracy kojarzenie nazw i <xref:System.Version> z definicją przepływu pracy oraz dla tych informacji, które mają być skojarzone z utrwalonym wystąpieniem przepływu pracy. Te informacje o tożsamości mogą być używane przez deweloperów aplikacji przepływu pracy do włączania scenariuszy, takich jak wykonywanie równoczesne wielu wersji definicji przepływu pracy i udostępniają one podstawę do innych funkcji, takich jak aktualizacja dynamiczna. Ten temat zawiera omówienie korzystania <xref:System.Activities.WorkflowIdentity> z programu z <xref:System.Activities.WorkflowApplication> obsługą programu. Aby uzyskać informacje na temat wykonywania operacji równoległych w definicjach przepływu pracy w usłudze przepływu pracy, zobacz [obok siebie przechowywanie wersji obok siebie w obszarze WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Aby uzyskać informacje na temat aktualizacji dynamicznej, zobacz [Aktualizacja dynamiczna](dynamic-update.md).
 
 ## <a name="in-this-topic"></a>W tym temacie:
 
-- [Za pomocą obiektu WorkflowIdentity](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)
+- [Korzystanie z właściwości WorkflowIdentity](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)
 
-  - [Wykonanie Side-by-side przy użyciu obiektu WorkflowIdentity](using-workflowidentity-and-versioning.md#SxS)
+  - [Wykonywanie równoczesne przy użyciu właściwości WorkflowIdentity](using-workflowidentity-and-versioning.md#SxS)
 
-- [Uaktualnianie platformy .NET Framework 4 trwałości baz danych w celu obsługi wersji przepływu pracy](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)
+- [Uaktualnianie baz danych trwałości .NET Framework 4 w celu obsługi wersji przepływu pracy](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)
 
   - [Aby uaktualnić schemat bazy danych](using-workflowidentity-and-versioning.md#ToUpgrade)
 
-## <a name="UsingWorkflowIdentity"></a> Za pomocą obiektu WorkflowIdentity
+## <a name="UsingWorkflowIdentity"></a>Korzystanie z właściwości WorkflowIdentity
 
-Aby użyć <xref:System.Activities.WorkflowIdentity>, Utwórz wystąpienie, jest skonfigurowana i skojarz ją z <xref:System.Activities.WorkflowApplication> wystąpienia. A <xref:System.Activities.WorkflowIdentity> wystąpienie zawiera trzy identyfikujące informacje. <xref:System.Activities.WorkflowIdentity.Name%2A> i <xref:System.Activities.WorkflowIdentity.Version%2A> zawiera nazwy i <xref:System.Version> i są wymagane, i <xref:System.Activities.WorkflowIdentity.Package%2A> jest opcjonalna i może służyć do określenia dodatkowych ciąg zawierający informacje, takie jak nazwa zestawu lub inne żądane informacje. A <xref:System.Activities.WorkflowIdentity> są unikatowe, jeśli dowolny z jego trzy właściwości różnią się od innego <xref:System.Activities.WorkflowIdentity>.
+Aby użyć <xref:System.Activities.WorkflowIdentity>, Utwórz wystąpienie, skonfiguruj je i skojarz <xref:System.Activities.WorkflowApplication> z wystąpieniem. <xref:System.Activities.WorkflowIdentity> Wystąpienie zawiera trzy tożsamości informacji. <xref:System.Activities.WorkflowIdentity.Name%2A>i <xref:System.Activities.WorkflowIdentity.Version%2A> zawiera nazwę <xref:System.Version> i <xref:System.Activities.WorkflowIdentity.Package%2A> i są wymagane i jest opcjonalne i może służyć do określenia dodatkowego ciągu zawierającego informacje takie jak nazwa zestawu lub inne żądane informacje. Jest <xref:System.Activities.WorkflowIdentity> unikatowa, jeśli którykolwiek z jego trzech właściwości różni się od <xref:System.Activities.WorkflowIdentity>innego.
 
 > [!IMPORTANT]
-> Element <xref:System.Activities.WorkflowIdentity> nie może zawierać wszelkie identyfikowalne dane osobowe (PII). Informacje o <xref:System.Activities.WorkflowIdentity> użyty do utworzenia wystąpienia jest emitowany do żadnych skonfigurowanych śledzenia cyklu życia usługi w wielu różnych punktach działania w czasie wykonywania. WF śledzenia nie ma żadnych mechanizmu, aby ukryć dane osobowe (poufne dane użytkowników). W związku z tym <xref:System.Activities.WorkflowIdentity> wystąpienia nie powinna zawierać wszystkie dane osobowe, ponieważ będzie emitowane przez środowisko uruchomieniowe w rekordy śledzenia i mogą być widoczne dla każda osoba mająca dostęp do wyświetlania rekordów śledzenia.
+> A <xref:System.Activities.WorkflowIdentity> nie powinna zawierać żadnych informacji umożliwiających identyfikację użytkownika. Informacje o <xref:System.Activities.WorkflowIdentity> użytym do utworzenia wystąpienia są emitowane do wszelkich skonfigurowanych usług śledzenia w kilku różnych punktach cyklu życia działania przez środowisko uruchomieniowe. Śledzenie WF nie ma żadnego mechanizmu ukrywania danych osobowych (poufne dane użytkownika). W związku z tym wystąpienieniepowinnozawieraćżadnychdanychosobowych,ponieważbędzieemitowaneprzezśrodowiskouruchomieniowewceluśledzeniarekordówimożebyćwidocznedlakażdego,ktomadostępdowyświetlaniarekordówśledzenia.<xref:System.Activities.WorkflowIdentity>
 
-W poniższym przykładzie <xref:System.Activities.WorkflowIdentity> skojarzonego z wystąpieniem przepływu pracy utworzony za pomocą `MortgageWorkflow` definicji przepływu pracy.
+W poniższym przykładzie <xref:System.Activities.WorkflowIdentity> jest tworzona i skojarzona z wystąpieniem przepływu pracy utworzonego `MortgageWorkflow` przy użyciu definicji przepływu pracy.
 
 ```csharp
 WorkflowIdentity identityV1 = new WorkflowIdentity
@@ -48,7 +48,7 @@ ConfigureWorkflowApplication(wfApp);
 wfApp.Run();
 ```
 
-Podczas ponownego ładowania i wznawianie przepływu pracy, <xref:System.Activities.WorkflowIdentity> skonfigurowanego do dopasowania <xref:System.Activities.WorkflowIdentity> utrwalonych przepływu pracy można użyć wystąpienia.
+Po ponownym załadowaniu i wznowieniu przepływu pracy <xref:System.Activities.WorkflowIdentity> , który jest skonfigurowany do <xref:System.Activities.WorkflowIdentity> dopasowania do wystąpienia utrwalonego przepływu pracy, musi być używany.
 
 ```csharp
 WorkflowApplication wfApp = new WorkflowApplication(new MortgageWorkflow(), identityV1);
@@ -62,7 +62,7 @@ wfApp.Load(instanceId);
 // Resume the workflow...
 ```
 
-Jeśli <xref:System.Activities.WorkflowIdentity> używany, gdy ponownie załadować wystąpienia przepływu pracy nie odpowiada utrwalonych <xref:System.Activities.WorkflowIdentity>, <xref:System.Activities.VersionMismatchException> zgłaszany. W poniższym przykładzie jest podejmowana próba załadowania `MortgageWorkflow` wystąpienia, który został zachowany w poprzednim przykładzie. Ta próba załadowania zostało nawiązane za pomocą <xref:System.Activities.WorkflowIdentity> skonfigurowany do nowszej wersji hipoteczny przepływu pracy, który nie pasuje do utrwalonego wystąpienia.
+Jeśli używany podczas ponownego ładowania wystąpienia przepływu pracy nie <xref:System.Activities.VersionMismatchException> jest zgodny z utrwalonym <xref:System.Activities.WorkflowIdentity>, zostanie zgłoszony. <xref:System.Activities.WorkflowIdentity> W poniższym przykładzie podjęto próbę `MortgageWorkflow` załadowania wystąpienia, które było utrwalone w poprzednim przykładzie. Ta próba załadowania została wykonana przy <xref:System.Activities.WorkflowIdentity> użyciu skonfigurowanej dla nowszej wersji przepływu pracy hipotecznej, która nie jest zgodna z utrwalonym wystąpieniem.
 
 ```csharp
 WorkflowApplication wfApp = new WorkflowApplication(new MortgageWorkflow_v2(), identityV2);
@@ -76,22 +76,22 @@ wfApp.Load(instanceId);
 // Resume the workflow...
 ```
 
-Po poprzednim kodzie jest wykonywana, sprawdzanie poniżej <xref:System.Activities.VersionMismatchException> zgłaszany.
+Gdy poprzedni kod jest wykonywany, zgłaszane są następujące <xref:System.Activities.VersionMismatchException> elementy.
 
 ```
 The WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') of the loaded instance does not match the WorkflowIdentity ('MortgageWorkflow v2; Version=2.0.0.0') of the provided workflow definition. The instance can be loaded using a different definition, or updated using Dynamic Update.
 ```
 
-### <a name="SxS"></a> Wykonanie Side-by-side przy użyciu obiektu WorkflowIdentity
+### <a name="SxS"></a>Wykonywanie równoczesne przy użyciu właściwości WorkflowIdentity
 
-<xref:System.Activities.WorkflowIdentity> może służyć do ułatwienia wykonywania wielu wersji przepływu pracy side-by-side. Jeden typowy scenariusz jest zmiana wymagań biznesowych w przepływie pracy długoterminowych. Wiele wystąpień przepływu pracy może być uruchomiony podczas wdrażania zaktualizowanej wersji. Aplikacja hosta można skonfigurować do użycia definicji przepływu pracy zaktualizowane podczas uruchamiania nowych wystąpień i jest odpowiedzialny za aplikacji hosta w celu umożliwienia definicji przepływu pracy prawidłowe w przypadku wznawiania wystąpień. <xref:System.Activities.WorkflowIdentity> może służyć do identyfikowania i dostarczyć pasujących definicji przepływu pracy, gdy wznowienie wystąpienia przepływu pracy.
+<xref:System.Activities.WorkflowIdentity>może służyć do ułatwienia wykonywania wielu wersji przepływu pracy obok siebie. Jednym z typowych scenariuszy jest zmiana wymagań firmy na długotrwały przepływ pracy. Podczas wdrażania zaktualizowanej wersji można uruchomić wiele wystąpień przepływu pracy. Aplikacja hosta może być skonfigurowana do używania zaktualizowanej definicji przepływu pracy podczas uruchamiania nowych wystąpień i jest odpowiedzialna za aplikację hosta, aby zapewnić prawidłową definicję przepływu pracy podczas wznawiania wystąpień. <xref:System.Activities.WorkflowIdentity>może służyć do identyfikowania i dostarczania pasującej definicji przepływu pracy podczas wznawiania wystąpień przepływu pracy.
 
-Aby pobrać <xref:System.Activities.WorkflowIdentity> z istniejącym wystąpieniem przepływu pracy, <xref:System.Activities.WorkflowApplication.GetInstance%2A> metoda jest używana. <xref:System.Activities.WorkflowApplication.GetInstance%2A> Metoda przyjmuje <xref:System.Activities.WorkflowApplication.Id%2A> z istniejącym wystąpieniem przepływu pracy i <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> , zawierający utrwalonego wystąpienia, a funkcja zwraca <xref:System.Activities.WorkflowApplicationInstance>. A <xref:System.Activities.WorkflowApplicationInstance> zawiera informacje o istniejącym wystąpieniem przepływu pracy, w tym związanych z nią <xref:System.Activities.WorkflowIdentity>. To skojarzone <xref:System.Activities.WorkflowIdentity> może służyć przez hosta do dostarczania definicji poprawne przepływu pracy podczas ładowania i wznawianie działania wystąpienia przepływu pracy.
+Aby można było <xref:System.Activities.WorkflowIdentity> pobrać wystąpienie utrwalonego przepływu pracy <xref:System.Activities.WorkflowApplication.GetInstance%2A> , metoda jest używana. Metoda przyjmuje wystąpienie utrwalonego <xref:System.Activities.WorkflowApplicationInstance>przepływu pracy i zawierawystąpienieutrwalaneizwracawartość.<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> <xref:System.Activities.WorkflowApplication.Id%2A> <xref:System.Activities.WorkflowApplication.GetInstance%2A> A <xref:System.Activities.WorkflowApplicationInstance> zawiera informacje o utrwalonym wystąpieniu przepływu pracy, w tym <xref:System.Activities.WorkflowIdentity>jego skojarzone. Ta skojarzona <xref:System.Activities.WorkflowIdentity> może być używana przez hosta w celu dostarczenia prawidłowej definicji przepływu pracy podczas ładowania i wznawiania wystąpienia przepływu pracy.
 
 > [!NOTE]
-> Wartość null <xref:System.Activities.WorkflowIdentity> jest prawidłowy i może służyć przez hosta do mapy wystąpień, które zostały utrwalone bez skojarzonych <xref:System.Activities.WorkflowIdentity> do definicji prawidłowego przepływu pracy. Ten scenariusz może wystąpić, gdy aplikacja przepływu pracy nie został początkowo zapisany z wersji przepływu pracy lub gdy aplikacja jest uaktualniany z [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Aby uzyskać więcej informacji, zobacz [uaktualnianie .NET Framework 4 trwałości baz danych do przechowywania wersji przepływu pracy obsługi](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
+> Wartość null <xref:System.Activities.WorkflowIdentity> jest prawidłowa i może być używana przez hosta w celu mapowania wystąpień, które zostały utrwalone bez skojarzonych <xref:System.Activities.WorkflowIdentity> z prawidłową definicją przepływu pracy. Ten scenariusz może wystąpić, gdy aplikacja przepływu pracy nie została początkowo zapisywana przy użyciu wersji przepływu pracy lub gdy aplikacja jest uaktualniana z programu [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Aby uzyskać więcej informacji, zobacz [uaktualnianie baz danych trwałości .NET Framework 4 w celu zapewnienia obsługi wersji przepływu pracy](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
 
-W poniższym przykładzie `Dictionary<WorkflowIdentity, Activity>` służy do kojarzenia <xref:System.Activities.WorkflowIdentity> wystąpień przy użyciu ich pasujących definicji przepływu pracy i przepływu pracy została uruchomiona przy użyciu `MortgageWorkflow` definicji przepływu pracy, który jest skojarzony z `identityV1` <xref:System.Activities.WorkflowIdentity>.
+W poniższym przykładzie `Dictionary<WorkflowIdentity, Activity>` jest używany do kojarzenia <xref:System.Activities.WorkflowIdentity> wystąpień z pasującymi definicjami przepływów pracy, a `MortgageWorkflow` przepływ pracy jest uruchamiany przy użyciu definicji `identityV1` przepływu pracy, która jest skojarzona z <xref:System.Activities.WorkflowIdentity>.
 
 ```csharp
 WorkflowIdentity identityV1 = new WorkflowIdentity
@@ -119,10 +119,10 @@ ConfigureWorkflowApplication(wfApp);
 wfApp.Run();
 ```
 
-W poniższym przykładzie, informacje o istniejącym wystąpieniem przepływu pracy z poprzedniego przykładu jest pobierany przez wywołanie <xref:System.Activities.WorkflowApplication.GetInstance%2A>i utrwalonych <xref:System.Activities.WorkflowIdentity> informacje są używane do pobierania zgodnych definicji przepływu pracy. Te informacje są używane do konfigurowania <xref:System.Activities.WorkflowApplication>, a następnie załadowaniu przepływu pracy. Należy pamiętać, że ponieważ <xref:System.Activities.WorkflowApplication.Load%2A> przeciążenia przyjmującego <xref:System.Activities.WorkflowApplicationInstance> jest używany, <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> który został skonfigurowany na <xref:System.Activities.WorkflowApplicationInstance> jest używany przez <xref:System.Activities.WorkflowApplication> i dlatego jego <xref:System.Activities.WorkflowApplication.InstanceStore%2A> właściwości nie musi być skonfigurowany.
+W poniższym przykładzie informacje o utrwalonym wystąpieniu przepływu pracy z poprzedniego przykładu są pobierane przez wywołanie <xref:System.Activities.WorkflowApplication.GetInstance%2A>, a utrwalone <xref:System.Activities.WorkflowIdentity> informacje są używane do pobierania pasującej definicji przepływu pracy. Te informacje służą do konfigurowania <xref:System.Activities.WorkflowApplication>, a następnie ładowania przepływu pracy. Należy zauważyć, że <xref:System.Activities.WorkflowApplication.Load%2A> ponieważ Przeciążenie, które <xref:System.Activities.WorkflowApplicationInstance> pobiera, jest używane <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> , który <xref:System.Activities.WorkflowApplication> został skonfigurowany na <xref:System.Activities.WorkflowApplicationInstance> , jest używany przez i dlatego jego <xref:System.Activities.WorkflowApplication.InstanceStore%2A> właściwości nie trzeba konfigurować.
 
 > [!NOTE]
->  Jeśli <xref:System.Activities.WorkflowApplication.InstanceStore%2A> właściwość jest ustawiona, musi być ona równa o takiej samej <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> wystąpienia używanego przez <xref:System.Activities.WorkflowApplicationInstance> — w przeciwnym razie <xref:System.ArgumentException> zostanie zgłoszony następujący komunikat o błędzie: `The instance is configured with a different InstanceStore than this WorkflowApplication.`.
+> `The instance is configured with a different InstanceStore than this WorkflowApplication.` <xref:System.ArgumentException> <xref:System.Activities.WorkflowApplicationInstance> <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Jeśli właściwość jest ustawiona, musi być ustawiona z tym samym wystąpieniem, które jest używane przez lub w przeciwnym razie zostanie wygenerowany z następującym komunikatem:. <xref:System.Activities.WorkflowApplication.InstanceStore%2A>
 
 ```csharp
 // Get the WorkflowApplicationInstance of the desired workflow from the specified
@@ -144,26 +144,26 @@ wfApp.Load(instance);
 // Resume the workflow...
 ```
 
-## <a name="UpdatingWF4PersistenceDatabases"></a> Uaktualnianie platformy .NET Framework 4 trwałości baz danych w celu obsługi wersji przepływu pracy
+## <a name="UpdatingWF4PersistenceDatabases"></a>Uaktualnianie baz danych trwałości .NET Framework 4 w celu obsługi wersji przepływu pracy
 
-Skrypt bazy danych SqlWorkflowInstanceStoreSchemaUpgrade.sql znajduje się do uaktualnienia bazy danych trwałości utworzone za pomocą [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] bazy danych skryptów. Ten skrypt aktualizacji bazy danych do obsługi nowych funkcji przechowywania wersji, wprowadzone w programie .NET Framework 4.5. Wszystkie wystąpienia przepływu pracy utrwalonych w bazach danych są podane wartości wersji domyślnych, a następnie mogą brać udział w realizacji side-by-side i aktualizacji dynamicznej.
+Do uaktualniania baz danych trwałości utworzonych przy użyciu [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] skryptów bazy danych jest dostępny skrypt usługi SqlWorkflowInstanceStoreSchemaUpgrade. SQL. Ten skrypt aktualizuje bazy danych programu w celu obsługi nowych możliwości przechowywania wersji wprowadzonych w .NET Framework 4,5. Wszystkie wystąpienia utrwalonych przepływów pracy w bazach danych otrzymują domyślne wartości wersji, a następnie mogą uczestniczyć w wykonywaniu równoczesnym i aktualizacji dynamicznej.
 
-Jeśli aplikacja przepływu pracy programu .NET Framework 4.5 próbuje wszystkie operacje trwałości korzystać z nowych funkcji przechowywania wersji dla bazy danych trwałości, który nie został uaktualniony przy użyciu dostarczonego skryptu <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> zgłaszany jest komunikat podobny do następujący komunikat.
+Jeśli aplikacja przepływu pracy .NET Framework 4,5 próbuje wykonać wszystkie operacje trwałości korzystające z nowych funkcji przechowywania wersji w bazie danych trwałości, która nie została uaktualniona przy użyciu dostarczonego skryptu, <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> zgłaszany jest komunikat podobny do następujący komunikat.
 
 ```
 The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' cannot be run against this database version.  Please upgrade the database to '4.5.0.0'.
 ```
 
-### <a name="ToUpgrade"></a> Aby uaktualnić schemat bazy danych
+### <a name="ToUpgrade"></a>Aby uaktualnić schemat bazy danych
 
-1. Otwórz program SQL Server Management Studio i połącz się z serwera bazy danych trwałości, na przykład **. \SQLEXPRESS**.
+1. Otwórz SQL Server Management Studio i nawiąż połączenie z serwerem bazy danych trwałości, na przykład **.\SQLEXPRESS**.
 
-2. Wybierz **Otwórz**, **pliku** z **pliku** menu. Przejdź do następującego folderu: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`
+2. Wybierz polecenie **Otwórz**, **plik** z menu **plik** . Przejdź do następującego folderu:`C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`
 
-3. Wybierz **SqlWorkflowInstanceStoreSchemaUpgrade.sql** i kliknij przycisk **Otwórz**.
+3. Wybierz **SqlWorkflowInstanceStoreSchemaUpgrade. SQL** , a następnie kliknij przycisk **Otwórz**.
 
-4. Wybierz nazwę bazy danych trwałości w **baz danych dostępności** listy rozwijanej.
+4. Wybierz nazwę bazy danych trwałości z listy rozwijanej **dostępne bazy danych** .
 
-5. Wybierz **Execute** z **zapytania** menu.
+5. Wybierz polecenie **Execute** z menu **zapytanie** .
 
-Po wykonaniu kwerendy schemat bazy danych jest uaktualniany, a jeśli to konieczne, można wyświetlić domyślną tożsamość przepływ pracy został przypisany do wystąpienia utrwalonych przepływu pracy. Rozwiń węzeł bazy danych trwałości w **baz danych** węźle **Eksplorator obiektów**, a następnie rozwiń węzeł **widoków** węzła. Kliknij prawym przyciskiem myszy **System.Activities.DurableInstancing.Instances** i wybierz polecenie **zaznacz 1000 pierwszych wierszy**. Przewiń do końca kolumn i należy pamiętać, że sześciu dodatkowe kolumny do widoku: **IdentityName**, **IdentityPackage**, **kompilacji**, **głównych**, **pomocnicza**, i **poprawki**. Utrwalonych przepływów pracy będzie mieć wartość **NULL** dla tych pól, reprezentujący identyfikator przepływu pracy o wartości null.
+Po zakończeniu wykonywania zapytania schemat bazy danych zostanie uaktualniony i w razie potrzeby można wyświetlić domyślną tożsamość przepływu pracy przypisaną do wystąpień utrwalonych przepływów pracy. Rozwiń swoją bazę danych trwałości w węźle **bazy danych** **Eksplorator obiektów**, a następnie rozwiń węzeł **widoki** . Kliknij prawym przyciskiem myszy pozycję **System. Activities. DurableInstancing. instances** i wybierz **pozycję Wybierz pierwsze 1000 wierszy**. Przewiń do końca kolumn i zwróć uwagę, że do widoku dodano sześć dodatkowych kolumn: **IdentityName**, **IdentityPackage**, **Build**, **główna**, **pomocnicza**i **poprawka**. Wszystkie utrwalone przepływy pracy będą mieć wartość **null** dla tych pól reprezentujących pustą tożsamość przepływu pracy.

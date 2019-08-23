@@ -8,57 +8,57 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: b63d94789d081ce7337b5f9c2abca3f7d9e99eeb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38c7742f3e4691f29490e73b05616754415eac58
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775722"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953904"
 ---
 # <a name="use-caching-in-ui-automation"></a>Używanie buforowania w automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
   
- W tej sekcji przedstawiono sposób implementacji buforowania <xref:System.Windows.Automation.AutomationElement> wzorców właściwości i kontroli.  
+ W tej sekcji pokazano, jak zaimplementować buforowanie <xref:System.Windows.Automation.AutomationElement> właściwości i wzorców kontrolek.  
   
 ### <a name="activate-a-cache-request"></a>Aktywuj żądanie pamięci podręcznej  
   
 1. Utwórz <xref:System.Windows.Automation.CacheRequest>.  
   
-2. Określ właściwości i wzorców do pamięci podręcznej przy użyciu <xref:System.Windows.Automation.CacheRequest.Add%2A>.  
+2. Określ właściwości i wzorce do buforowania przy użyciu <xref:System.Windows.Automation.CacheRequest.Add%2A>programu.  
   
-3. Określanie zakresu buforowania, ustawiając <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> właściwości.  
+3. Określ zakres buforowania przez ustawienie <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> właściwości.  
   
-4. Określ widoku poddrzewo, ustawiając <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A> właściwości.  
+4. Określ widok poddrzewa przez ustawienie <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A> właściwości.  
   
-5. Ustaw <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> właściwość <xref:System.Windows.Automation.AutomationElementMode.None> Jeśli chcesz zwiększyć wydajność przez nie będą pobierane pełną dokumentację do obiektów. (Umożliwi to niemożliwe, można pobrać bieżących wartości z tych obiektów.)  
+5. Ustaw właściwość na <xref:System.Windows.Automation.AutomationElementMode.None> , jeśli chcesz zwiększyć wydajność, nie pobierając pełnych odwołań do obiektów. <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> (Spowoduje to niemożliwe pobranie bieżących wartości z tych obiektów).  
   
-6. Aktywuj żądanie przy użyciu <xref:System.Windows.Automation.CacheRequest.Activate%2A> w ramach `using` bloku (`Using` w Microsoft Visual Basic .NET).  
+6. Aktywuj żądanie przy użyciu <xref:System.Windows.Automation.CacheRequest.Activate%2A> `using` bloku (`Using` w programie Microsoft Visual Basic .NET).  
   
- Po uzyskaniu <xref:System.Windows.Automation.AutomationElement> obiektów lub jeśli zasubskrybujesz zdarzenia, dezaktywowanie żądania za pomocą <xref:System.Windows.Automation.CacheRequest.Pop%2A> (Jeśli <xref:System.Windows.Automation.CacheRequest.Push%2A> użyto) lub usuwając obiekt utworzony przez <xref:System.Windows.Automation.CacheRequest.Activate%2A>. (Użyj <xref:System.Windows.Automation.CacheRequest.Activate%2A> w `using` bloku (`Using` w Microsoft Visual Basic .NET).  
+ Po uzyskaniu <xref:System.Windows.Automation.AutomationElement> obiektów lub zasubskrybowaniu zdarzeń, Dezaktywuj żądanie przy <xref:System.Windows.Automation.CacheRequest.Pop%2A> użyciu ( <xref:System.Windows.Automation.CacheRequest.Push%2A> jeśli zostało użyte) lub przez odtworzenie obiektu utworzonego <xref:System.Windows.Automation.CacheRequest.Activate%2A>przez. (Użyj <xref:System.Windows.Automation.CacheRequest.Activate%2A> `using` w bloku (`Using` w programie Microsoft Visual Basic .NET).  
   
-### <a name="cache-automationelement-properties"></a>Właściwości obiektu AutomationElement pamięci podręcznej  
+### <a name="cache-automationelement-properties"></a>Właściwości automatyzacji  
   
-1. Podczas <xref:System.Windows.Automation.CacheRequest> jest aktywny, Uzyskaj <xref:System.Windows.Automation.AutomationElement> obiektów przy użyciu <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> lub <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; lub uzyskać <xref:System.Windows.Automation.AutomationElement> jako źródło zdarzenia, który został zarejestrowany, kiedy <xref:System.Windows.Automation.CacheRequest> była aktywna. (Można również tworzyć pamięć podręczną, przekazując <xref:System.Windows.Automation.CacheRequest> GetUpdatedCache lub jednego z <xref:System.Windows.Automation.TreeWalker> metody.)  
+1. <xref:System.Windows.Automation.AutomationElement.FindAll%2A> <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> <xref:System.Windows.Automation.CacheRequest> Gdy jest aktywny, należy uzyskać <xref:System.Windows.Automation.AutomationElement> obiekty za pomocą lub; albo uzyskać <xref:System.Windows.Automation.AutomationElement> jako źródło zdarzenia, które zostało zarejestrowane, gdy był aktywny. <xref:System.Windows.Automation.CacheRequest> (Możesz również utworzyć pamięć podręczną, przechodząc <xref:System.Windows.Automation.CacheRequest> do GetUpdatedCache lub jednej <xref:System.Windows.Automation.TreeWalker> z metod).  
   
-2. Użyj <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A> lub pobrać właściwości z <xref:System.Windows.Automation.AutomationElement.Cached%2A> właściwość <xref:System.Windows.Automation.AutomationElement>.  
+2. Użyj <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A> lub Pobierz Właściwość <xref:System.Windows.Automation.AutomationElement.Cached%2A> z właściwości <xref:System.Windows.Automation.AutomationElement>.  
   
-### <a name="obtain-cached-patterns-and-their-properties"></a>Uzyskaj wzorce pamięci podręcznej i ich właściwości  
+### <a name="obtain-cached-patterns-and-their-properties"></a>Uzyskiwanie buforowanych wzorców i ich właściwości  
   
-1. Podczas <xref:System.Windows.Automation.CacheRequest> jest aktywny, Uzyskaj <xref:System.Windows.Automation.AutomationElement> obiektów przy użyciu <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> lub <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; lub uzyskać <xref:System.Windows.Automation.AutomationElement> jako źródło zdarzenia, który został zarejestrowany, kiedy <xref:System.Windows.Automation.CacheRequest> była aktywna. (Można również tworzyć pamięć podręczną, przekazując <xref:System.Windows.Automation.CacheRequest> GetUpdatedCache lub jednego z <xref:System.Windows.Automation.TreeWalker> metody.)  
+1. <xref:System.Windows.Automation.AutomationElement.FindAll%2A> <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> <xref:System.Windows.Automation.CacheRequest> Gdy jest aktywny, należy uzyskać <xref:System.Windows.Automation.AutomationElement> obiekty za pomocą lub; albo uzyskać <xref:System.Windows.Automation.AutomationElement> jako źródło zdarzenia, które zostało zarejestrowane, gdy był aktywny. <xref:System.Windows.Automation.CacheRequest> (Możesz również utworzyć pamięć podręczną, przechodząc <xref:System.Windows.Automation.CacheRequest> do GetUpdatedCache lub jednej <xref:System.Windows.Automation.TreeWalker> z metod).  
   
-2. Użyj <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> lub <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> można pobrać wzorzec pamięci podręcznej.  
+2. Użyj <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> lub<xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> , aby pobrać buforowany wzorzec.  
   
-3. Do pobierania wartości właściwości z `Cached` właściwości wzorca kontrolki.  
+3. Pobiera wartości właściwości z `Cached` właściwości wzorca kontrolki.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod przedstawia różne aspekty buforowania, przy użyciu <xref:System.Windows.Automation.CacheRequest.Activate%2A> aktywować <xref:System.Windows.Automation.CacheRequest>.  
+ Poniższy przykład kodu przedstawia różne aspekty buforowania przy użyciu narzędzia <xref:System.Windows.Automation.CacheRequest.Activate%2A> do <xref:System.Windows.Automation.CacheRequest>aktywacji.  
   
  [!code-csharp[UIAClient_snip#107](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#107)]
  [!code-vb[UIAClient_snip#107](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#107)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod przedstawia różne aspekty buforowania, przy użyciu <xref:System.Windows.Automation.CacheRequest.Push%2A> aktywować <xref:System.Windows.Automation.CacheRequest>. Z wyjątkiem po użytkownik chce zagnieździć żądań pamięci podręcznej, to lepiej jest używać <xref:System.Windows.Automation.CacheRequest.Activate%2A>.  
+ Poniższy przykład kodu przedstawia różne aspekty buforowania przy użyciu narzędzia <xref:System.Windows.Automation.CacheRequest.Push%2A> do <xref:System.Windows.Automation.CacheRequest>aktywacji. W przypadku zamiaru zagnieżdżenia żądań pamięci podręcznej najlepiej jest używać <xref:System.Windows.Automation.CacheRequest.Activate%2A>.  
   
  [!code-csharp[UIAClient_snip#108](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#108)]
  [!code-vb[UIAClient_snip#108](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#108)]  

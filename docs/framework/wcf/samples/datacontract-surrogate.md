@@ -2,20 +2,20 @@
 title: DataContract — surogat
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: a56fbcabfacf146142f7b0c0623325cc8e69c29a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 436c5778487e6cd272ba3a873be9d243a427db97
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990421"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953486"
 ---
 # <a name="datacontract-surrogate"></a>DataContract — surogat
-Niniejszy przykład pokazuje, jak procesy takie jak serializacji, deserializacji, schemat eksportu i importu schematu można dostosować za pomocą kontraktu danych zastępczych klas. W tym przykładzie pokazano, jak używać zastępczy w ramach scenariusza klienta i serwera, gdzie dane są serializacji i przesyłane między klientem usługi Windows Communication Foundation (WCF) i usługi.  
+Ten przykład pokazuje, jak procesy, takie jak serializacji, deserializacji, eksportu schematu i importowania schematu, można dostosować przy użyciu klasy zastępczej kontraktu danych. Ten przykład pokazuje, jak używać surogatu w scenariuszu klienta i serwera, w którym dane są serializowane i przesyłane między klientem a usługą Windows Communication Foundation (WCF).  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- W przykładzie użyto następujących kontraktu usługi:  
+ W przykładzie zastosowano następujący kontrakt usługi:  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -30,9 +30,9 @@ public interface IPersonnelDataService
 }  
 ```  
   
- `AddEmployee` Operacji umożliwia użytkownikom dodawanie danych dotyczących nowych pracowników i `GetEmployee` operacja obsługuje wyszukiwanie pracowników na podstawie nazwy.  
+ Dzięki `AddEmployee` tej operacji użytkownicy mogą dodawać dane dotyczące nowych pracowników `GetEmployee` , a operacja obsługuje wyszukiwanie pracowników na podstawie nazwy.  
   
- Te operacje przy użyciu następującego typu danych:  
+ Te operacje używają następującego typu danych:  
   
 ```  
 [DataContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -49,7 +49,7 @@ class Employee
 }  
 ```  
   
- W `Employee` typu `Person` klasy (pokazano w poniższym przykładowym kodzie) nie może być serializowany przez <xref:System.Runtime.Serialization.DataContractSerializer> , ponieważ nie jest klasą kontraktu prawidłowe dane.  
+ W typie nie można <xref:System.Runtime.Serialization.DataContractSerializer> serializować klasy(pokazanejwnastępującymprzykładowymkodzie),ponieważniejestonaprawidłowąklasą`Person` `Employee` kontraktu danych.  
   
 ```  
 public class Person  
@@ -64,11 +64,11 @@ public class Person
 }  
 ```  
   
- Można zastosować <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu `Person` klasy, ale nie zawsze jest możliwe. Na przykład `Person` klasy można zdefiniować w oddzielnym zestawie, nad którym masz żadnej kontroli.  
+ Można zastosować <xref:System.Runtime.Serialization.DataContractAttribute> atrybut `Person` do klasy, ale nie zawsze jest to możliwe. Na przykład `Person` Klasa może być zdefiniowana w osobnym zestawie, w którym nie ma kontroli.  
   
- Biorąc pod uwagę to ograniczenie jest jednym ze sposobów, aby serializować `Person` ma zastąpić inną klasę, która jest oznaczona za pomocą klasy <xref:System.Runtime.Serialization.DataContractAttribute> i skopiuj niezbędne dane do nowej klasy. Celem jest zapewnienie `Person` klasy są traktowane jako DataContract do <xref:System.Runtime.Serialization.DataContractSerializer>. Należy pamiętać, że jest jednym ze sposobów serializacji kontrakt danych innych klas.  
+ Uwzględniając to ograniczenie, jeden ze sposobów serializacji `Person` klasy jest zastępowany inną klasą, która jest <xref:System.Runtime.Serialization.DataContractAttribute> oznaczona i kopiuje dane do nowej klasy. Celem jest to, aby `Person` Klasa była wyświetlana jako element DataContract <xref:System.Runtime.Serialization.DataContractSerializer>do. Należy zauważyć, że jest to jeden ze sposobów serializacji klas kontraktu nie będących danymi.  
   
- Przykład logicznie zastępuje `Person` klasy z inną klasę o nazwie `PersonSurrogated`.  
+ Przykład logicznie zastępuje `Person` klasę inną klasą o nazwie `PersonSurrogated`.  
   
 ```  
 [DataContract(Name="Person", Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -85,9 +85,9 @@ public class PersonSurrogated
 }  
 ```  
   
- Zastępczy kontraktu danych jest wykorzystywana do osiągania ta zastępowania. Zastępczy kontraktu danych, to klasa, która implementuje <xref:System.Runtime.Serialization.IDataContractSurrogate>. W tym przykładzie `AllowNonSerializableTypesSurrogate` klasa implementuje ten interfejs.  
+ Surogat kontraktu danych służy do osiągnięcia tego zastąpienia. Surogat kontraktu danych jest klasą implementującą <xref:System.Runtime.Serialization.IDataContractSurrogate>. W tym przykładzie `AllowNonSerializableTypesSurrogate` Klasa implementuje ten interfejs.  
   
- W implementacji interfejsu pierwsze zadanie jest ustanowienie mapowanie typu `Person` do `PersonSurrogated`. Jest to używane zarówno w czasie serializacji, a także w czasie eksportu schematu. To mapowanie jest osiągane poprzez implementację <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29> metody.  
+ W implementacji interfejsu pierwsze zadanie polega na ustanowieniu mapowania typu z `Person` do. `PersonSurrogated` Ta opcja jest używana zarówno w czasie serializacji, jak i w czasie eksportowania schematu. To mapowanie jest osiągane przez implementację <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29> metody.  
   
 ```  
 public Type GetDataContractType(Type type)  
@@ -100,7 +100,7 @@ public Type GetDataContractType(Type type)
 }  
 ```  
   
- <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29> Mapy metoda `Person` wystąpienia do `PersonSurrogated` wystąpienia podczas serializacji, jak pokazano w poniższym przykładowym kodzie.  
+ Metoda mapuje wystąpienie do `PersonSurrogated` wystąpienia podczas serializacji, jak pokazano w poniższym przykładowym kodzie. `Person` <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29>  
   
 ```  
 public object GetObjectToSerialize(object obj, Type targetType)  
@@ -118,7 +118,7 @@ public object GetObjectToSerialize(object obj, Type targetType)
 }  
 ```  
   
- <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> Metoda zapewnia mapowania odwrotnego do deserializacji, jak pokazano w poniższym przykładowym kodzie.  
+ <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> Metoda zapewnia mapowanie odwrotne dla deserializacji, jak pokazano w poniższym przykładowym kodzie.  
   
 ```  
 public object GetDeserializedObject(object obj,   
@@ -137,7 +137,7 @@ Type targetType)
 }  
 ```  
   
- Aby zamapować `PersonSurrogated` kontraktu danych do istniejących `Person` klasy podczas importowania schematu, implementuje przykładowe <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29> metodzie, jak pokazano w poniższym przykładowym kodzie.  
+ Aby zmapować `PersonSurrogated` kontrakt danych do istniejącej `Person` klasy podczas importowania schematu <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29> , przykład implementuje metodę, jak pokazano w poniższym przykładowym kodzie.  
   
 ```  
 public Type GetReferencedTypeOnImport(string typeName,   
@@ -156,7 +156,7 @@ typeNamespace.Equals("http://schemas.datacontract.org/2004/07/DCSurrogateSample"
 }  
 ```  
   
- Następujący przykładowy kod kończy wykonania <xref:System.Runtime.Serialization.IDataContractSurrogate> interfejsu.  
+ Następujący przykładowy kod uzupełnia implementację <xref:System.Runtime.Serialization.IDataContractSurrogate> interfejsu.  
   
 ```  
 public System.CodeDom.CodeTypeDeclaration ProcessImportedType(  
@@ -184,11 +184,11 @@ public void GetKnownCustomDataTypes(
 }  
 ```  
   
- W tym przykładzie surogatu jest włączone w modelu ServiceModel przez atrybut o nazwie `AllowNonSerializableTypesAttribute`. Deweloperzy należy zastosować ten atrybut na ich kontraktu usługi, jak pokazano na `IPersonnelDataService` powyżej kontraktu usługi. Ten atrybut implementuje `IContractBehavior` i konfiguruje zastępczy na operacje w jej `ApplyClientBehavior` i `ApplyDispatchBehavior` metody.  
+ W tym przykładzie Surogat jest włączony w ServiceModel przez atrybut o nazwie `AllowNonSerializableTypesAttribute`. Deweloperzy będą musieli zastosować ten atrybut zgodnie z umową usługi, jak pokazano w `IPersonnelDataService` powyższym kontrakcie usługi. Ten atrybut implementuje `IContractBehavior` i konfiguruje Surogat w operacjach `ApplyClientBehavior` i `ApplyDispatchBehavior` metodach.  
   
- Ten atrybut nie jest konieczne w tym przypadku - służy w celach demonstracyjnych, w tym przykładzie. Użytkowników można również włączyć zastępczy, ręcznie dodając podobny `IContractBehavior`, `IEndpointBehavior` lub `IOperationBehavior` za pomocą kodu lub konfiguracji.  
+ Ten atrybut nie jest konieczny w tym przypadku — jest używany do celów demonstracyjnych w tym przykładzie. Użytkownicy mogą alternatywnie włączyć Surogat, `IContractBehavior` `IEndpointBehavior` ręcznie dodając podobny lub `IOperationBehavior` wykorzystując kod lub korzystając z konfiguracji.  
   
- `IContractBehavior` Implementacji szuka operacji korzystających z DataContract przez sprawdzenie, czy mają one `DataContractSerializerOperationBehavior` zarejestrowany. Jeśli tak jest, ustawia `DataContractSurrogate` właściwość tego zachowania. Poniższy przykład kodu pokazuje, jak to zrobić. Ustawienie to zachowanie operacji surogatu włączy ją do serializacji i deserializacji.  
+ Implementacja szuka operacji, które używają obiektu DataContract, sprawdzając, czy `DataContractSerializerOperationBehavior` mają zarejestrowane. `IContractBehavior` Jeśli tak, ustawia `DataContractSurrogate` właściwość dla tego zachowania. Poniższy przykładowy kod przedstawia, jak to zrobić. Ustawienie surogatu dla tego zachowania operacji umożliwia jego serializacji i deserializacji.  
   
 ```  
 public void ApplyClientBehavior(ContractDescription description, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime proxy)  
@@ -218,9 +218,9 @@ private static void ApplyDataContractSurrogate(OperationDescription description)
 }  
 ```  
   
- Dodatkowe kroki konieczne do wykonania, monit o podłączenie zastępczy do użycia podczas generowania metadanych. Jeden mechanizm, w tym celu jest zapewnienie `IWsdlExportExtension` czyli w tym przykładzie przedstawiono. Innym sposobem jest zmodyfikowanie `WsdlExporter` bezpośrednio.  
+ Aby podłączyć Surogat do użycia podczas generowania metadanych, należy podjąć dodatkowe czynności. Jednym z mechanizmów, `IWsdlExportExtension` które należy wykonać, jest dostarczenie tego, co ilustruje ten przykład. Innym sposobem jest `WsdlExporter` bezpośrednie zmodyfikowanie.  
   
- `AllowNonSerializableTypesAttribute` Atrybutu implementuje `IWsdlExportExtension` i `IContractBehavior`. Rozszerzenie może być `IContractBehavior` lub `IEndpointBehavior` w tym przypadku. Jego `IWsdlExportExtension.ExportContract` implementacji metody umożliwia surogatu przez dodanie jej do `XsdDataContractExporter` używane podczas generowania schematu DataContract. Poniższy fragment kodu pokazuje, jak to zrobić.  
+ Atrybut implementuje `IWsdlExportExtension` i`IContractBehavior`. `AllowNonSerializableTypesAttribute` Rozszerzenie może być `IContractBehavior` `IEndpointBehavior` albo w tym przypadku. Jego `IWsdlExportExtension.ExportContract` implementacja metody umożliwia Surogat przez dodanie go `XsdDataContractExporter` do użycia podczas generowania schematu dla obiektu DataContract. Poniższy fragment kodu przedstawia, jak to zrobić.  
   
 ```  
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
@@ -247,24 +247,24 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 }  
 ```  
   
- Po uruchomieniu przykładu, gdy klient wywołuje AddEmployee następuje wywołanie GetEmployee, aby sprawdzić, jeśli pierwsze wywołanie zakończyło się pomyślnie. Wynik żądania operacji GetEmployee jest wyświetlany w oknie konsoli klienta. Operacja GetEmployee musi przeprowadzić udany przyrost znajdowanie pracownika i Drukuj "znaleziono".  
+ Po uruchomieniu przykładu klient wywołuje polecenie AddEmployee, a następnie wywołanie GetEmployee, aby sprawdzić, czy pierwsze wywołanie zakończyło się pomyślnie. W oknie konsoli klienta zostanie wyświetlony wynik żądania operacji GetEmployee. Operacja GetEmployee musi się powieść, aby znaleźć pracownika i wydrukować "znaleziono".  
   
 > [!NOTE]
->  Niniejszy przykład pokazuje, jak podłączyć surogatu serializacja, deserializacji a Generowanie metadanych. Jak monit o podłączenie substytut dla generowania kodu z metadanych, nie są wyświetlane. Aby zobaczyć przykładowy sposób zastępczy mogą być używane do generowania kodu klienta, zobacz [niestandardowa publikacja WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md) próbki.  
+> Ten przykład pokazuje, jak podłączyć Surogat do serializacji, deserializacji i generowania metadanych. Nie pokazuje, jak podłączyć Surogat do generowania kodu z metadanych. Aby zobaczyć przykład sposobu użycia surogatu w celu podłączenia do generowania kodu klienta, zobacz przykład [niestandardowej publikacji WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md) .  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby skompilować wersji języka C# rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# wydanie rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  

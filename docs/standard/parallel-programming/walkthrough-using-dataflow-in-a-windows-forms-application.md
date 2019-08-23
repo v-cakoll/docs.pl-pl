@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4dc433b83fd086a1e3e165a85b6bfe64b781f45b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: dbe5b5db580e06bfd3e5723addd404eae7950e6c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666339"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946350"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Przewodnik: Korzystanie z przepływu danych w aplikacji Windows Forms
 W tym dokumencie przedstawiono sposób tworzenia sieci bloków przepływu danych, które wykonują przetwarzanie obrazów w aplikacji Windows Forms.  
@@ -82,7 +82,7 @@ W tym dokumencie przedstawiono sposób tworzenia sieci bloków przepływu danych
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  C# Wersja`CreateCompositeBitmap` metody używa wskaźników w celu zapewnienia <xref:System.Drawing.Bitmap?displayProperty=nameWithType> wydajnego przetwarzania obiektów. W związku z tym należy włączyć opcję Zezwalaj na niebezpieczny **kod** w projekcie, aby można było [](../../csharp/language-reference/keywords/unsafe.md) użyć słowa kluczowego unsafe. Aby uzyskać więcej informacji na temat włączania niebezpiecznego kodu C# w projekcie wizualizacji, zobacz [stronę Kompilacja,C#Projektant projektu ()](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+    > C# Wersja`CreateCompositeBitmap` metody używa wskaźników w celu zapewnienia <xref:System.Drawing.Bitmap?displayProperty=nameWithType> wydajnego przetwarzania obiektów. W związku z tym należy włączyć opcję Zezwalaj na niebezpieczny **kod** w projekcie, aby można było [](../../csharp/language-reference/keywords/unsafe.md) użyć słowa kluczowego unsafe. Aby uzyskać więcej informacji na temat włączania niebezpiecznego kodu C# w projekcie wizualizacji, zobacz [stronę Kompilacja,C#Projektant projektu ()](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
  W poniższej tabeli opisano elementy członkowskie sieci.  
   

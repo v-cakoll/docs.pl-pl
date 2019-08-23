@@ -2,20 +2,20 @@
 title: <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: 725d4ee5-bd46-4f0e-9c20-30ba75d6eb2c
-ms.openlocfilehash: 4d7fdfb1cccb14f03d11864f1939cb578c79880a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 462a06e5a773310b6364838ae2ebc14da0a2ee1b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704118"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925891"
 ---
 # <a name="defaultports"></a>\<defaultPorts>
-Kolekcja portów domyślnych Wyświetla domyślne punktów końcowe komunikacji, które nasłuchuje aplikacja kliencka.  
+Kolekcja portów domyślnych wyświetla domyślne punkty końcowe komunikacji, do których nasłuchuje aplikacja kliencka.  
   
 \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<useRequestHeadersForMetadataAddress>  
 \<defaultPorts>  
   
@@ -40,13 +40,13 @@ Kolekcja portów domyślnych Wyświetla domyślne punktów końcowe komunikacji,
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Dodaj > z \<defaultPorts >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-defaultports.md)|Domyślny punkt końcowy komunikacji, aplikacja kliencka nasłuchuje.|  
+|[\<Dodawanie > \<defaultPorts >](add-of-defaultports.md)|Domyślny punkt końcowy komunikacji, do którego nasłuchuje aplikacja kliencka.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<useRequestHeadersForMetadataAddress>](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|Lista domyślnych portów.|  
+|[\<useRequestHeadersForMetadataAddress>](userequestheadersformetadataaddress.md)|Lista domyślnych portów.|  
   
 ## <a name="see-also"></a>Zobacz także
 

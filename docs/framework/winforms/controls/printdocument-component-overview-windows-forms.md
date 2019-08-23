@@ -7,26 +7,26 @@ helpviewer_keywords:
 - PrintDocument component [Windows Forms], about PrintDocument component
 - printing [Windows Forms], PrintDocument component
 ms.assetid: b59b4b60-dce5-42ca-8421-3a54a2f7bab0
-ms.openlocfilehash: 96bca5d96722098f76059c58c32b3fea0ff78cd2
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 16a7f3a34ccb280f7bf91c52e29b20edc22130b9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211727"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928993"
 ---
 # <a name="printdocument-component-overview-windows-forms"></a>PrintDocument — Informacje o składniku (Formularze systemu Windows)
 
-Formularze Windows [PrintDocument](printdocument-component-windows-forms.md) składnik jest używany do ustawiania właściwości, które opisują, jakie do drukowania i możliwość drukowania dokumentu w aplikacji systemu Windows. Mogą być używane w połączeniu z [PrintDialog](printdialog-component-windows-forms.md) składnik, aby mieć kontrolę nad wszystkimi aspektami drukowanie dokumentów.
+Windows Forms składnik [PrintDocument](printdocument-component-windows-forms.md) służy do ustawiania właściwości, które opisują, co należy wydrukować, oraz możliwość drukowania dokumentu w aplikacjach opartych na systemie Windows. Może być używany w połączeniu ze składnikiem [PrintDialog](printdialog-component-windows-forms.md) , aby mieć kontrolę nad wszystkimi aspektami drukowania dokumentów.
 
-## <a name="working-with-the-printdocument-component"></a>Praca z PrintDocument — składnik
+## <a name="working-with-the-printdocument-component"></a>Praca ze składnikiem PrintDocument
 
-Dwa główne scenariusze, które obejmują <xref:System.Drawing.Printing.PrintDocument> składnik to:
+Dwa główne scenariusze obejmujące <xref:System.Drawing.Printing.PrintDocument> składnik to:
 
-- Proste zadania drukowania, takich jak drukowanie plik tekstowy indywidualnych. W takim przypadku należy dodać <xref:System.Drawing.Printing.PrintDocument> składnika do formularza Windows, a następnie dodaj logikę programistyczną, które inicjuje drukowanie do pliku w <xref:System.Drawing.Printing.PrintDocument.PrintPage> programu obsługi zdarzeń. Logikę programistyczną powinien kulminacyjny z <xref:System.Drawing.Printing.PrintDocument.Print%2A> metoda spowoduje wydrukowanie dokumentu. Ta metoda wysyła <xref:System.Drawing.Graphics> zawartego w obiektu <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> właściwość <xref:System.Drawing.Printing.PrintPageEventArgs> klasy do drukarki. Na przykład, który pokazuje, jak drukowanie dokumentu tekstowego przy użyciu <xref:System.Drawing.Printing.PrintDocument> składników, zobacz [jak: Podglądu wydruku w formularzach Windows Forms](../advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md).
+- Proste zadania drukowania, takie jak drukowanie pojedynczego pliku tekstowego. W takim przypadku należy dodać <xref:System.Drawing.Printing.PrintDocument> składnik do formularza systemu Windows, a następnie dodać logikę programowania, która drukuje plik <xref:System.Drawing.Printing.PrintDocument.PrintPage> w programie obsługi zdarzeń. Logika programowania powinna skutkują z <xref:System.Drawing.Printing.PrintDocument.Print%2A> metodą drukowania dokumentu. Ta metoda wysyła <xref:System.Drawing.Graphics> obiekt znajdujący się <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> we właściwości <xref:System.Drawing.Printing.PrintPageEventArgs> klasy do drukarki. Przykład pokazujący sposób drukowania dokumentu tekstowego przy użyciu <xref:System.Drawing.Printing.PrintDocument> składnika można znaleźć w temacie [How to: Drukowanie wielostronicowego pliku tekstowego w Windows Forms](../advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md).
 
-- Bardziej złożone zadania drukowania, takich jak sytuacji, w których warto ponowne wykorzystanie logiki drukowania, które zostały napisane. W takim przypadku będzie pochodzić z nowym składnikiem <xref:System.Drawing.Printing.PrintDocument> składnika i zastąpienie (zobacz [zastępuje](~/docs/visual-basic/language-reference/modifiers/overrides.md) dla języka Visual Basic lub [zastąpienia](~/docs/csharp/language-reference/keywords/override.md) dla C#) <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzeń.
+- Bardziej złożone zadania drukowania, takie jak sytuacja, w której chcesz ponownie użyć zapisaną logikę drukowania. <xref:System.Drawing.Printing.PrintDocument> W takim przypadku należy utworzyć nowy składnik ze składnika i przesłonić (zobacz [zastąpienia](../../../visual-basic/language-reference/modifiers/overrides.md) dla Visual Basic lub przesłonięcia dla C#) <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzenia. [](../../../csharp/language-reference/keywords/override.md)
 
-Gdy zostanie dodany do formularza, <xref:System.Drawing.Printing.PrintDocument> składnika, który pojawia się na pasku w dolnej części projektanta Windows Forms w programie Visual Studio.
+Po dodaniu go do formularza <xref:System.Drawing.Printing.PrintDocument> składnik pojawia się w zasobniku u dołu Projektant formularzy systemu Windows w programie Visual Studio.
 
 ## <a name="see-also"></a>Zobacz także
 

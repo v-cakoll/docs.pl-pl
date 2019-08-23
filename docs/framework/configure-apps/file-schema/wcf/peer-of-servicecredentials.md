@@ -2,22 +2,22 @@
 title: <peer> dla <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: d726ab460141b1e373a1cabf770b8958f50319eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50415cb9b35d2a2053efa3313a415de518b7e36e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783399"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933777"
 ---
-# <a name="peer-of-servicecredentials"></a>\<elementu równorzędnego > z \<serviceCredentials >
+# <a name="peer-of-servicecredentials"></a>\<> elementów równorzędnych w \<usłudze ServiceCredentials >
 Określa bieżące poświadczenia dla węzła równorzędnego.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<serviceCredentials>  
-\<peer>  
+\<> elementów równorzędnych  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,7 +30,7 @@ Określa bieżące poświadczenia dla węzła równorzędnego.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
  Brak.  
@@ -39,15 +39,15 @@ Określa bieżące poświadczenia dla węzła równorzędnego.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<certyfikat >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|Określa certyfikat X.509 do podpisywania i szyfrowanie wiadomości usługi peer-to-peer. .|  
-|[\<messageSenderAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication.md)|Określa opcje uwierzytelnienia dla nadawców wiadomości.|  
-|[\<peerAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication.md)|Określa opcje uwierzytelniania dla elementów równorzędnych usługi.|  
+|[\<> certyfikatów](certificate-of-peer.md)|Określa certyfikat X. 509 używany do podpisywania i szyfrowania komunikatów dla usług peer-to-peer. .|  
+|[\<messageSenderAuthentication>](messagesenderauthentication.md)|Określa opcje uwierzytelniania dla nadawców wiadomości.|  
+|[\<peerAuthentication >](peerauthentication.md)|Określa opcje uwierzytelniania dla usług równorzędnych.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Określa poświadczenie do użycia w uwierzytelnianiu usługi i ustawień dotyczących walidacji poświadczeń klienta.|  
+|[\<serviceCredentials>](servicecredentials.md)|Określa poświadczenie, które ma być używane w uwierzytelnianiu usługi i ustawień związanych z walidacją poświadczeń klienta.|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -55,8 +55,8 @@ Określa bieżące poświadczenia dla węzła równorzędnego.
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.Peer%2A>
 - <xref:System.ServiceModel.Description.ServiceCredentials.Peer%2A>
 - <xref:System.ServiceModel.Security.PeerCredential>
-- [Sieci równorzędne](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [Uwierzytelnianie wiadomości z kanału równorzędnego](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Kanał elementu równorzędnego uwierzytelniania niestandardowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
-- [Zabezpieczanie aplikacji kanałów równorzędnych](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Sieci równorzędne](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [Uwierzytelnianie komunikatów kanału równorzędnego](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Uwierzytelnianie niestandardowe kanału równorzędnego](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Zabezpieczanie aplikacji kanałów równorzędnych](../../../wcf/feature-details/securing-peer-channel-applications.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)

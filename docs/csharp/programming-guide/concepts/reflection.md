@@ -2,12 +2,12 @@
 title: OdbicieC#()
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: 0828e59f74ac0c7575df2cea531caa0d42a2dd96
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9b4322d83ad43cd3e49647df49c15bb5c917e1be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590770"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924090"
 ---
 # <a name="reflection-c"></a>OdbicieC#()
 Odbicie zawiera obiekty (typu <xref:System.Type>) opisujące zestawy, moduły i typy. Możesz użyć odbicia, aby dynamicznie utworzyć wystąpienie typu, powiązać typ z istniejącym obiektem lub uzyskać typ z istniejącego obiektu i wywołać jego metody lub uzyskać dostęp do jego pól i właściwości. Jeśli używasz atrybutów w kodzie, odbicie umożliwia uzyskanie dostępu do nich. Aby uzyskać więcej informacji, zobacz [atrybuty](../../../standard/attributes/index.md).  
@@ -38,7 +38,7 @@ System.Console.WriteLine(info);
  `mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089`  
   
 > [!NOTE]
->  C# Słowa kluczowe `protected` i`internal` nie mają znaczenia w Il i nie są używane w interfejsach API odbicia. Odpowiednie warunki w IL są *rodziną* i *zestawem*. Aby zidentyfikować `internal` metodę przy użyciu odbicia, <xref:System.Reflection.MethodBase.IsAssembly%2A> należy użyć właściwości. Aby zidentyfikować `protected internal` metodę, <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A>Użyj.  
+> C# Słowa kluczowe `protected` i`internal` nie mają znaczenia w Il i nie są używane w interfejsach API odbicia. Odpowiednie warunki w IL są *rodziną* i *zestawem*. Aby zidentyfikować `internal` metodę przy użyciu odbicia, <xref:System.Reflection.MethodBase.IsAssembly%2A> należy użyć właściwości. Aby zidentyfikować `protected internal` metodę, <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A>Użyj.  
   
 ## <a name="reflection-overview"></a>Przegląd odbicia  
  Odbicie jest przydatne w następujących sytuacjach:  

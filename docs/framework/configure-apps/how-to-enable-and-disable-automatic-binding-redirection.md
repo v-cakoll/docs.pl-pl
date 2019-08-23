@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: d914310559403fba2f1fe8e4a60469ec3a867c24
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733441"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913034"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Instrukcje: Włączanie i wyłączanie automatycznego przekierowania powiązań
 
@@ -91,15 +91,15 @@ Aby dodać przekierowania powiązań do pliku **Web. config** :
 
 1. W programie Visual Studio skompiluj aplikację i sprawdź, czy występują ostrzeżenia kompilacji.
 
-   ![Ostrzeżenie kompilacji dla konfliktów odwołań do zestawu](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
+   ![Ostrzeżenie kompilacji dla konfliktów odwołań do zestawu](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
 2. Jeśli występują konflikty powiązań zestawów, zostanie wyświetlone ostrzeżenie. Kliknij dwukrotnie ostrzeżenie lub wybierz ostrzeżenie i naciśnij klawisz **Enter**.
 
    Zostanie wyświetlone okno dialogowe, które umożliwia automatyczne dodanie niezbędnych przekierowań powiązań do źródłowego pliku **Web. config** .
 
-   ![Okno dialogowe uprawnień przekierowywania powiązań](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
+   ![Okno dialogowe uprawnień przekierowywania powiązań](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
 ## <a name="see-also"></a>Zobacz także
 
-- [\<bindingRedirect> Element](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
-- [Przekierowywanie wersji zestawu](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [\<bindingRedirect> Element](./file-schema/runtime/bindingredirect-element.md)
+- [Przekierowywanie wersji zestawu](redirect-assembly-versions.md)

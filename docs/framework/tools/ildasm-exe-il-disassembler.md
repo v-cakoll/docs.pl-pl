@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567308"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912491"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Dezasembler IL)
 
@@ -53,7 +53,7 @@ Następujące dodatkowe opcje są dostępne dla plików *exe*, *dll*i *winmd* .
 |**/linenum**|Dołącza odwołania do oryginalnych wierszy źródłowych.|
 |**/nobar**|Pomija wyskakujące okienko ze wskaźnikiem postępu dezasemblera.|
 |**/noca**|Pomija wyjście niestandardowych atrybutów.|
-|**/Project**|Wyświetla metadane, tak jak pojawiają się one w kodzie zarządzanym, a nie w sposób pojawiający się w środowisko wykonawcze systemu Windows macierzystym. Jeśli `PEfilename` nie jest plikiem metadanych systemu Windows (*winmd*), ta opcja nie ma żadnego wpływu. Zobacz [.NET Framework obsługa aplikacji do sklepu Windows i środowisko wykonawcze systemu Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/Project**|Wyświetla metadane, tak jak pojawiają się one w kodzie zarządzanym, a nie w sposób pojawiający się w środowisko wykonawcze systemu Windows macierzystym. Jeśli `PEfilename` nie jest plikiem metadanych systemu Windows (*winmd*), ta opcja nie ma żadnego wpływu. Zobacz [.NET Framework obsługa aplikacji do sklepu Windows i środowisko wykonawcze systemu Windows](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Dezasembluje tylko typy publiczne i elementy członkowskie. Odpowiednik **/Visibility: pub**.|
 |**/quoteallnames**|Umieszcza wszystkie nazwy w pojedynczym cudzysłowie.|
 |**/raweh**|Wyświetla klauzule obsługi błędów w pierwotnej formie.|
@@ -188,5 +188,5 @@ Typ zagnieżdżony musi być poprzedzony klasą zawierającą i oddzielony od ni
 
 - [Narzędzia](../../../docs/framework/tools/index.md)
 - [Ilasm.exe (asembler IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Proces zarządzanego wykonania](../../../docs/standard/managed-execution-process.md)
+- [Proces zarządzanego wykonania](../../standard/managed-execution-process.md)
 - [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -1,5 +1,5 @@
 ---
-title: Praca z danymi binarnymi (WCF Data Services)
+title: Praca z danymi binarnymi (Usługi danych programu WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,63 +8,63 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 428f12c90d646b1c08cdeaf48467efc2ce53859a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa64308593656ccd6e89684a18de13e7c64343fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660258"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930019"
 ---
-# <a name="working-with-binary-data-wcf-data-services"></a>Praca z danymi binarnymi (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteka klienta umożliwia pobieranie i aktualizację danych binarnych pochodzących ze [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych w jednym z następujących sposobów:  
+# <a name="working-with-binary-data-wcf-data-services"></a>Praca z danymi binarnymi (Usługi danych programu WCF)
+Biblioteka klienta umożliwia pobieranie i aktualizowanie danych binarnych [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] z kanału informacyjnego w jeden z następujących sposobów: [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]  
   
-- Jako typ pierwotny właściwość jednostki. Jest to zalecana metoda do pracy z danymi binarnymi małych obiektów, które można łatwo załadować do pamięci. W tym przypadku właściwość binarna jest właściwość jednostki udostępnianych przez model danych i usługi danych serializuje dane binarne jako binarne XML zakodowany base-64 w komunikacie odpowiedzi.  
+- Jako właściwość typu pierwotnego jednostki. Jest to zalecana metoda pracy z małymi obiektami danych binarnych, które można łatwo załadować do pamięci. W tym przypadku Właściwość Binary jest właściwością jednostki uwidocznioną przez model danych, a usługa danych serializować dane binarne jako plik binarny z kodowaniem Base-64 w komunikacie odpowiedzi.  
   
-- Jako strumień osobny zasób binarny. Jest to zalecana metoda uzyskiwania dostępu do oraz zmiana dane dużych obiektów binarnych (BLOB), który może reprezentować fotografii, wideo lub dowolnego typu dane binarne zakodowane.  
+- Jako oddzielny strumień zasobów binarnych. Jest to zalecana metoda do uzyskiwania dostępu do danych binarnych dużych obiektów (BLOB), które mogą reprezentować zdjęcia, wideo lub dowolnego innego typu binarne dane zakodowane.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implementuje, przesyłanie strumieniowe danych binarnych przy użyciu protokołu HTTP, zgodnie z definicją w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Dane binarne ten mechanizm jest traktowany jako zasób nośnika, który jest oddzielony od ale powiązanych z jednostką, która nosi nazwę wpisu łącza nośnika. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]implementuje przesyłanie strumieniowe danych binarnych przy użyciu protokołu HTTP, jak [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]zdefiniowano w. W tym mechanizmie dane binarne są traktowane jako zasób multimedialny, który jest oddzielony od, ale związany z jednostką, która jest nazywana wpisem multimediów. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   
 > [!TIP]
->  Aby uzyskać przykład krok po kroku dotyczące tworzenia aplikacji klienckiej Windows Presentation Foundation (WPF), która pobiera pliki obrazów binarnych z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługa, która przechowuje zdjęcia, zobacz wpis [danych przesyłania strumieniowego dostawcy serii-Part usług 2: Uzyskiwanie dostępu do Stream zasobu multimediów od klienta](https://go.microsoft.com/fwlink/?LinkId=201637). Aby pobrać przykładowy kod dla usługi danych strumienia zdjęć polecane wpis w blogu, zobacz [przesyłanie strumieniowe zdjęć dane usług — przykład](https://go.microsoft.com/fwlink/?LinkId=198988) w galerii kodu MSDN.  
+>  Aby zapoznać się z przykładem krok po kroku, jak utworzyć aplikację kliencką Windows Presentation Foundation (WPF), która pobiera pliki obrazów binarnych [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] z usługi, w której są przechowywane Zdjęcia [, zobacz Data Services seria dostawcy przesyłania strumieniowego 2: Uzyskiwanie dostępu do strumienia zasobów multimediów z](https://go.microsoft.com/fwlink/?LinkId=201637)klienta programu. Aby pobrać przykładowy kod dla oferty usługi przesyłania strumieniowego strumienia w blogu, zobacz [przykład przesyłania strumieniowego usługi danych zdjęć](https://go.microsoft.com/fwlink/?LinkId=198988) w witrynie MSDN Gallery.  
   
 ## <a name="entity-metadata"></a>Metadane jednostki  
- Jednostki, która ma powiązane multimediów strumieniowych zasobu jest wskazywane WE metadanych usługi danych przez `HasStream` zastosowany do typu jednostki, która jest nośnika wpisu łącza nośnika. W poniższym przykładzie `PhotoInfo` jednostka jest wpisu łącza nośnika, zawierającej powiązanych zasobów nośników, wskazywanym przez `HasStream` atrybutu.  
+ Jednostka, która ma powiązany strumień zasobów multimediów, jest wskazywany w metadanych usługi danych przez `HasStream` atrybut zastosowany do typu jednostki, który jest wpisem linku do nośnika. W poniższym przykładzie `PhotoInfo` jednostką jest wpis linku do nośnika z powiązanym zasobem multimedialnym wskazywanym `HasStream` przez atrybut.  
   
  [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]  
   
- Pozostałe przykłady w tym temacie pokazano, jak dostępu i zmiany strumień zasobu multimediów. Pełny przykład sposobu korzystania z multimediów strumieniowych zasobów w aplikacji klienckiej .NET Framework za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienta, zobacz wpis [uzyskiwania dostępu do Stream zasobu multimediów od klienta](https://go.microsoft.com/fwlink/?LinkID=201637).  
+ Pozostałe przykłady w tym temacie pokazują, jak uzyskać dostęp do strumienia zasobów multimediów i zmienić go. Aby zapoznać się z kompletnym przykładem użycia strumienia zasobów multimediów w .NET Framework aplikacji klienckiej przy użyciu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienta, zobacz temat Wysyłanie dostępu do [strumienia zasobów multimediów z klienta](https://go.microsoft.com/fwlink/?LinkID=201637).  
   
-## <a name="accessing-the-binary-resource-stream"></a>Uzyskiwanie dostępu do Stream zasób binarny  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteki klienta dostarcza metod dostępu do strumieni zasób binarny z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie danych usługi. Podczas pobierania zasobu multimediów, możesz użyć identyfikatora URI zasobu multimediów, lub można uzyskać strumień binarny zawiera same dane zasobu multimediów. Możesz również przekazać dane do zasobu multimediów jako strumień binarny.  
+## <a name="accessing-the-binary-resource-stream"></a>Uzyskiwanie dostępu do strumienia zasobów binarnych  
+ Biblioteka kliencka zawiera metody uzyskiwania dostępu do strumieni zasobów binarnych [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]z usługi danych opartych na usłudze. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Podczas pobierania zasobu multimedialnego można użyć identyfikatora URI zasobu multimedialnego lub uzyskać strumień binarny, który zawiera same dane zasobów multimedialnych. Możesz również przekazać dane zasobów multimedialnych jako strumień binarny.  
   
 > [!TIP]
->  Aby uzyskać przykład krok po kroku dotyczące tworzenia aplikacji klienckiej Windows Presentation Foundation (WPF), która pobiera pliki obrazów binarnych z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługa, która przechowuje zdjęcia, zobacz wpis [danych przesyłania strumieniowego dostawcy serii-Part usług 2: Uzyskiwanie dostępu do Stream zasobu multimediów od klienta](https://go.microsoft.com/fwlink/?LinkId=201637). Aby pobrać przykładowy kod dla usługi danych strumienia zdjęć polecane wpis w blogu, zobacz [przesyłanie strumieniowe zdjęć dane usług — przykład](https://go.microsoft.com/fwlink/?LinkId=198988) w galerii kodu MSDN.  
+>  Aby zapoznać się z przykładem krok po kroku, jak utworzyć aplikację kliencką Windows Presentation Foundation (WPF), która pobiera pliki obrazów binarnych [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] z usługi, w której są przechowywane Zdjęcia [, zobacz Data Services seria dostawcy przesyłania strumieniowego 2: Uzyskiwanie dostępu do strumienia zasobów multimediów z](https://go.microsoft.com/fwlink/?LinkId=201637)klienta programu. Aby pobrać przykładowy kod dla oferty usługi przesyłania strumieniowego strumienia w blogu, zobacz [przykład przesyłania strumieniowego usługi danych zdjęć](https://go.microsoft.com/fwlink/?LinkId=198988) w witrynie MSDN Gallery.  
   
-### <a name="getting-the-uri-of-the-binary-stream"></a>Uzyskiwanie identyfikatora URI binarne Stream  
- Podczas pobierania niektórych rodzajów zasobów nośników, takich jak obrazy i inne pliki multimedialne, często jest łatwiejszy w użyciu identyfikator URI zasobu multimediów w Twojej aplikacji, niż Obsługa sam strumień danych binarnych. Aby uzyskać identyfikator URI skojarzony z danym wpisu łącza nośnika strumienia zasobu, należy wywołać <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> metody <xref:System.Data.Services.Client.DataServiceContext> wystąpienie, które służy do śledzenia jednostki. Poniższy przykład pokazuje sposób wywoływania <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> metodę, aby uzyskać identyfikator URI multimediów strumieniowych zasobu, który jest używany do tworzenia nowego obrazu na komputerze klienckim:  
+### <a name="getting-the-uri-of-the-binary-stream"></a>Pobieranie identyfikatora URI strumienia binarnego  
+ Podczas pobierania niektórych typów zasobów multimedialnych, takich jak obrazy i inne pliki multimedialne, często łatwiej jest używać identyfikatora URI zasobu multimedialnego w aplikacji niż obsługa samego strumienia danych binarnych. Aby uzyskać identyfikator URI strumienia zasobów skojarzonego z wpisem "Udostępnij multimedia link", należy wywołać <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> metodę <xref:System.Data.Services.Client.DataServiceContext> w wystąpieniu, które śledzi jednostkę. Poniższy przykład pokazuje, jak wywołać metodę, <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> Aby uzyskać identyfikator URI strumienia zasobów multimediów używanego do tworzenia nowego obrazu na kliencie:  
   
  [!code-csharp[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_client/cs/photowindow.xaml.cs#getreadstreamuri)]
  [!code-vb[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_client/vb/photowindow.xaml.vb#getreadstreamuri)]  
   
-### <a name="downloading-the-binary-resource-stream"></a>Pobieranie Stream zasób binarny  
- Podczas pobierania strumienia binarnego, należy wywołać <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> metody <xref:System.Data.Services.Client.DataServiceContext> wystąpienie, które służy do śledzenia wpisu łącza nośnika. Ta metoda wysyła żądanie do usługi danych, która zwraca <xref:System.Data.Services.Client.DataServiceStreamResponse> obiektu, który zawiera odwołanie do strumienia, który zawiera zasób. Użyj tej metody, gdy aplikacja wymaga zasób binarny jako <xref:System.IO.Stream>. Poniższy przykład pokazuje sposób wywoływania <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> metodę, która pobierze strumień, który jest używany do tworzenia nowego obrazu na komputerze klienckim:  
+### <a name="downloading-the-binary-resource-stream"></a>Pobieranie strumienia zasobów binarnych  
+ Podczas pobierania strumienia zasobów binarnych należy wywołać <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> metodę <xref:System.Data.Services.Client.DataServiceContext> w wystąpieniu, które śledzi wpis linku do nośnika. Ta metoda wysyła żądanie do usługi danych, która zwraca <xref:System.Data.Services.Client.DataServiceStreamResponse> obiekt, który zawiera odwołanie do strumienia zawierającego zasób. Tej metody należy użyć, gdy aplikacja wymaga zasobu binarnego jako <xref:System.IO.Stream>. Poniższy przykład pokazuje, <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> jak wywołać metodę, aby pobrać strumień, który jest używany do tworzenia nowego obrazu na kliencie:  
   
  [!code-csharp[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_streaming_client/cs/customerphotowindow.xaml.cs#getreadstreamclient)]
  [!code-vb[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_streaming_client/vb/customerphotowindow.xaml.vb#getreadstreamclient)]  
   
 > [!NOTE]
->  Nagłówek Content-Length w komunikacie odpowiedzi, który zawiera pary binarne nie jest ustawiony przez usługę danych. Ta wartość może nie odzwierciedlać rzeczywiste długość strumienia danych binarnych.  
+> Nagłówek Content-Length w komunikacie odpowiedzi zawierającym parę binarną nie jest ustawiony przez usługę danych. Ta wartość nie może odzwierciedlać rzeczywistej długości strumienia danych binarnych.  
   
-### <a name="uploading-a-media-resource-as-a-stream"></a>Przekazywania zasobu multimediów jako Stream  
- Aby wstawić lub zaktualizować zasobu multimediów, należy wywołać <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> metody <xref:System.Data.Services.Client.DataServiceContext> wystąpienie, które służy do śledzenia jednostki. Ta metoda wysyła żądanie do usługi danych, która zawiera zasób nośnika odczytany ze strumienia podane. Poniższy przykład pokazuje sposób wywoływania <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> metodę, aby wysłać obrazu do usługi danych:  
+### <a name="uploading-a-media-resource-as-a-stream"></a>Przekazywanie zasobu multimedialnego jako strumienia  
+ Aby wstawić lub zaktualizować zasób multimedialny, wywołaj <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> metodę <xref:System.Data.Services.Client.DataServiceContext> w wystąpieniu, które śledzi jednostkę. Ta metoda wysyła żądanie do usługi danych zawierającej zasób nośnika odczytany z podanego strumienia. Poniższy przykład pokazuje, <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> jak wywołać metodę w celu wysłania obrazu do usługi danych:  
   
  [!code-csharp[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_client/cs/photodetailswindow.xaml.cs#setsavestream)]
  [!code-vb[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_client/vb/photodetailswindow.xaml.vb#setsavestream)]  
   
- W tym przykładzie <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> metoda jest wywoływana przez podanie wartości `true` dla `closeStream` parametru. Gwarantuje to, że <xref:System.Data.Services.Client.DataServiceContext> zamyka strumień przekazane dane binarne do usługi danych.  
+ W tym przykładzie <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> Metoda jest wywoływana przez dostarczenie `true` wartości `closeStream` parametru. Gwarantuje to, że <xref:System.Data.Services.Client.DataServiceContext> zamknięcie strumienia po danych binarnych zostanie przekazane do usługi danych.  
   
 > [!NOTE]
->  Gdy wywołujesz <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>, strumienia nie są wysyłane do usługi danych, dopóki <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> jest wywoływana.  
+> Po wywołaniu <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>, strumień nie jest wysyłany do usługi danych do momentu <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> wywołania.  
   
 ## <a name="see-also"></a>Zobacz także
 

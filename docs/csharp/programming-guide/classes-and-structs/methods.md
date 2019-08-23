@@ -6,24 +6,24 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 7255d4a2c57ea9e0469174cfe139a4ab54d62372
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6e7a1dfc739278eecfa8582bb0a9f8938c561acf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596399"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924458"
 ---
 # <a name="methods-c-programming-guide"></a>Metody (Przewodnik programowania w języku C#)
 Metoda jest blokiem kodu, który zawiera serie instrukcji. Program powoduje wykonanie instrukcji przez wywołanie metody i określenie wszelkich wymaganych argumentów metody. W C#programie Każda wykonana instrukcja jest wykonywana w kontekście metody. Metoda Main jest punktem wejścia dla każdej C# aplikacji i jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), gdy program jest uruchomiony.  
   
 > [!NOTE]
->  W tym temacie omówiono nazwane metody. Aby uzyskać informacje na temat funkcji anonimowych, zobacz [funkcje anonimowe](../statements-expressions-operators/anonymous-functions.md).  
+> W tym temacie omówiono nazwane metody. Aby uzyskać informacje na temat funkcji anonimowych, zobacz [funkcje anonimowe](../statements-expressions-operators/anonymous-functions.md).  
   
 ## <a name="method-signatures"></a>Sygnatury metod  
  Metody są zadeklarowane w [klasie](../../language-reference/keywords/class.md) lub [strukturze](../../language-reference/keywords/struct.md) przez określenie poziomu dostępu, takiego jak `public` lub `private`, Modyfikatory opcjonalne, takie `abstract` jak `sealed`lub, wartość zwracana, nazwa metody i wszystkie parametry metody . Te części razem są sygnaturą metody.  
   
 > [!NOTE]
->  Zwracany typ metody nie jest częścią podpisu metody do celów przeciążania metody. Jednakże jest częścią podpisu metody podczas określania zgodności między delegatem a metodą, do której wskazuje.  
+> Zwracany typ metody nie jest częścią podpisu metody do celów przeciążania metody. Jednakże jest częścią podpisu metody podczas określania zgodności między delegatem a metodą, do której wskazuje.  
   
  Parametry metody są ujęte w nawiasy i są rozdzielone przecinkami. Puste nawiasy wskazują, że metoda nie wymaga żadnych parametrów. Ta klasa zawiera cztery metody:  
   
@@ -116,7 +116,7 @@ public static void FillMatrix(int[,] matrix)
  Jeśli oznaczesz metodę za pomocą modyfikatora [asynchronicznego](../../language-reference/keywords/async.md) , możesz użyć operatora [await](../../language-reference/keywords/await.md) w metodzie. Gdy kontrolka osiągnie wyrażenie await w metodzie asynchronicznej, sterowanie powraca do obiektu wywołującego, a postęp w metodzie jest zawieszony do momentu zakończenia zadania oczekiwania. Po zakończeniu zadania wykonywanie może zostać wznowione w metodzie.  
   
 > [!NOTE]
->  Metoda asynchroniczna wraca do obiektu wywołującego, gdy napotka on pierwszy oczekujący obiekt, który nie został jeszcze ukończony lub otrzymuje koniec metody asynchronicznej, zależnie od tego, co się dzieje.  
+> Metoda asynchroniczna wraca do obiektu wywołującego, gdy napotka on pierwszy oczekujący obiekt, który nie został jeszcze ukończony lub otrzymuje koniec metody asynchronicznej, zależnie od tego, co się dzieje.  
   
  Metoda asynchroniczna może mieć zwracany typ <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>lub void. Typ zwracany void jest używany głównie do definiowania programów obsługi zdarzeń, gdzie wymagany jest zwracany typ void. Metoda asynchroniczna zwracająca typ void nie może być oczekiwana, a obiekt wywołujący metodę void nie może przechwytywać wyjątków, które metoda zgłasza.  
   

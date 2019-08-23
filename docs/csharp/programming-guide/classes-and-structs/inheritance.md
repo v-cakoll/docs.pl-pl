@@ -10,19 +10,19 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 1fc8303ad4d54bfd3255d725de486281cd09439e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3211a4741eb56ad9e138a848e52fabbc1d3daaeb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596553"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924470"
 ---
 # <a name="inheritance-c-programming-guide"></a>Dziedziczenie (Przewodnik programowania w języku C#)
 
 Dziedziczenie, wraz z hermetyzacją i polimorfizmem, jest jedną z trzech podstawowych cech programowania zorientowanego obiektowo. Dziedziczenie umożliwia tworzenie nowych klas, które będą używać, zwiększać i modyfikować zachowanie zdefiniowane w innych klasach. Klasa, której członkowie są dziedziczone jest nazywana *klasą bazową*, a Klasa, która dziedziczy tych członków, nosi nazwę *klasy pochodnej*. Klasa pochodna może mieć tylko jedną bezpośrednią klasę bazową. Dziedziczenie jest jednak przechodnie. Jeśli ClassC pochodzi z ClassB, a ClassB pochodzi od ClassA, ClassC dziedziczy składowe zadeklarowane w ClassB i ClassA.  
   
 > [!NOTE]
->  Struktury nie obsługują dziedziczenia, ale mogą implementować interfejsy. Więcej informacji znajdziesz w artykule [Interfejsy](../interfaces/index.md).  
+> Struktury nie obsługują dziedziczenia, ale mogą implementować interfejsy. Więcej informacji znajdziesz w artykule [Interfejsy](../interfaces/index.md).  
   
  Koncepcyjnie Klasa pochodna jest specjalizacją klasy bazowej. Na przykład jeśli masz klasę `Animal`bazową, może istnieć jedna klasa pochodna o nazwie `Mammal` i innej klasie pochodnej o nazwie `Reptile`. A to a, `Reptile` i jest `Animal`, ale każda klasa pochodna reprezentuje różne specjalizacje klasy bazowej. `Mammal` `Animal`  
   

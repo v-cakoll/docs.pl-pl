@@ -8,31 +8,31 @@ helpviewer_keywords:
 - lines [WPF], connected (see polylines)
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-ms.openlocfilehash: 4f55ecc206be0ef4947923047e796c36131c70ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb5220082989a9d0a22c4998bb79c0a196067e7e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003213"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934964"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Instrukcje: Rysowanie wielokąta przy użyciu elementu wielokątnego
-W tym przykładzie pokazano, jak narysować wielokąt, czyli serię połączone linie przy użyciu <xref:System.Windows.Shapes.Polyline> elementu.  
+Ten przykład pokazuje, jak narysować linię łamaną, która jest serią połączonych linii przy użyciu <xref:System.Windows.Shapes.Polyline> elementu.  
   
- Aby narysować wielokąt, należy utworzyć <xref:System.Windows.Shapes.Polyline> element i użyj jej <xref:System.Windows.Shapes.Polyline.Points%2A> właściwości w celu określenia wierzchołków kształtu. Na koniec użyj <xref:System.Windows.Shapes.Shape.Stroke%2A> i <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> właściwości opisujących linii łamanej konspektu, ponieważ wiersz bez pociągnięcia jest niewidoczne.  
+ Aby narysować linię łamaną, Utwórz <xref:System.Windows.Shapes.Polyline> element i użyj jego <xref:System.Windows.Shapes.Polyline.Points%2A> właściwości, aby określić wierzchołki kształtu. Na koniec Użyj <xref:System.Windows.Shapes.Shape.Stroke%2A> właściwości i <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> , aby opisać kontur linii łamanej, ponieważ linia bez pociągnięcia jest niewidoczna.  
   
 > [!NOTE]
->  Ponieważ <xref:System.Windows.Shapes.Polyline> element nie jest kształt zamknięty <xref:System.Windows.Shapes.Shape.Fill%2A> właściwości nie obowiązuje, nawet wtedy, gdy zamkniesz celowo kontur figury. Aby utworzyć kształt zamknięty przy użyciu <xref:System.Windows.Shapes.Shape.Fill%2A>, użyj <xref:System.Windows.Shapes.Polygon> elementu.  
+> Ponieważ element nie jest zamkniętym kształtem <xref:System.Windows.Shapes.Shape.Fill%2A> , właściwość nie ma żadnego efektu, nawet jeśli odcelowo zamknie konspekt kształtu. <xref:System.Windows.Shapes.Polyline> Aby utworzyć zamknięty kształt z <xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Polygon> Użyj elementu.  
   
- Poniższy przykład pobiera dwa <xref:System.Windows.Shapes.Polyline> elementy wewnątrz <xref:System.Windows.Controls.Canvas>.  
+ Poniższy przykład rysuje dwa <xref:System.Windows.Shapes.Polyline> elementy <xref:System.Windows.Controls.Canvas>wewnątrz.  
   
 ## <a name="example"></a>Przykład  
- W [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], prawidłowej składni dla punktów znajduje się lista rozdzielonych przecinkami x - i współrzędne y pary rozdzielonych spacjami.  
+ W [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]programie prawidłowa składnia dla punktów to rozdzielana spacjami lista par współrzędnych x i y oddzielanych przecinkami.  
   
  [!code-xaml[drawingwithshapeelements#PolylineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polylineexample.xaml#polylineexample1)]  
   
- Mimo że w tym przykładzie użyto <xref:System.Windows.Controls.Canvas> aby zawierają łamane, można użyć elementów linii łamanej (i wszystkie inne elementy kształtu) ze wszystkimi <xref:System.Windows.Controls.Panel> lub <xref:System.Windows.Controls.Control> , która obsługuje zawartość nietekstową.  
+ Mimo że w tym przykładzie <xref:System.Windows.Controls.Canvas> używa się, aby zawierać linie łamane, można użyć elementów łamaną (i wszystkich innych elementów kształtu) z dowolnym <xref:System.Windows.Controls.Panel> lub <xref:System.Windows.Controls.Control> obsługującym zawartość nietekstową.  
   
- W tym przykładzie jest częścią większego przykładu; Aby uzyskać pełny przykład, zobacz [przykładowe elementy kształtu](https://go.microsoft.com/fwlink/?LinkID=160037).  
+ Ten przykład jest częścią większego przykładu; Aby uzyskać pełną próbkę, zobacz [Przykładowe elementy Shape](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ## <a name="see-also"></a>Zobacz także
 

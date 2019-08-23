@@ -5,69 +5,69 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 5d812ae9b5fd0a796588d3366b8546ef84c982c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50887acefdd5d0feaf9d0885e9ee842f44f0ef65
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877360"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915056"
 ---
 # <a name="group-elements-in-a-sequence"></a>Grupowanie elementów w sekwencji
-<xref:System.Linq.Enumerable.GroupBy%2A> Operator grupuje elementy sekwencji. W poniższych przykładach używane bazy danych Northwind.  
+<xref:System.Linq.Enumerable.GroupBy%2A> Operator Grupuje elementy sekwencji. W poniższych przykładach użyto bazy danych Northwind.  
   
 > [!NOTE]
->  Kolumna wartości null <xref:System.Linq.Enumerable.GroupBy%2A> zapytania czasami może zgłosić <xref:System.InvalidOperationException>. Aby uzyskać więcej informacji, zobacz sekcję "GroupBy InvalidOperationException" [Rozwiązywanie problemów](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+> Wartości pustej kolumny <xref:System.Linq.Enumerable.GroupBy%2A> w zapytaniach mogą <xref:System.InvalidOperationException>czasami zgłosić. Aby uzyskać więcej informacji, zobacz sekcję "GroupBy InvalidOperationException" w temacie [Rozwiązywanie problemów](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
 ## <a name="example"></a>Przykład  
- Następujące przykładowe partycje `Products` przez `CategoryID`.  
+ Poniższy przykład partycjonowania `Products` przez `CategoryID`.  
   
  [!code-csharp[DLinqQueryExamples#27](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#27)]
  [!code-vb[DLinqQueryExamples#27](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#27)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto <xref:System.Linq.Enumerable.Max%2A> można znaleźć maksymalna cena dla każdego `CategoryID`.  
+ Poniższy przykład używa <xref:System.Linq.Enumerable.Max%2A> , aby znaleźć maksymalną cenę jednostkową dla każdej `CategoryID`z nich.  
   
  [!code-csharp[DLinqQueryExamples#28](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#28)]
  [!code-vb[DLinqQueryExamples#28](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#28)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto średnia do obliczenia średniej `UnitPrice` dla każdego `CategoryID`.  
+ W poniższym przykładzie zastosowano średnią, aby `UnitPrice` znaleźć średnią dla każdej z nich. `CategoryID`  
   
  [!code-csharp[DLinqQueryExamples#29](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#29)]
  [!code-vb[DLinqQueryExamples#29](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#29)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto <xref:System.Linq.Queryable.Sum%2A> można znaleźć suma `UnitPrice` dla każdego `CategoryID`.  
+ Poniższy przykład używa <xref:System.Linq.Queryable.Sum%2A> , aby znaleźć sumę `UnitPrice` dla każdej z `CategoryID`nich.  
   
  [!code-csharp[DLinqQueryExamples#30](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#30)]
  [!code-vb[DLinqQueryExamples#30](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#30)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto <xref:System.Linq.Queryable.Count%2A> przerywane, aby znaleźć numer `Products` w każdym `CategoryID`.  
+ Poniższy przykład używa <xref:System.Linq.Queryable.Count%2A> , aby znaleźć liczbę `Products` wycofanych w każdym z nich `CategoryID`.  
   
  [!code-csharp[DLinqQueryExamples#31](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#31)]
  [!code-vb[DLinqQueryExamples#31](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#31)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto następujących `where` klauzulę, aby znaleźć wszystkie kategorie, które mają co najmniej 10 produktów.  
+ W poniższym przykładzie zastosowano następującą `where` klauzulę, aby znaleźć wszystkie kategorie, które mają co najmniej 10 produktów.  
   
  [!code-csharp[DLinqQueryExamples#32](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#32)]
  [!code-vb[DLinqQueryExamples#32](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#32)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład grup produktów według `CategoryID` i `SupplierID`.  
+ Poniższy przykład grupuje produkty według `CategoryID` i `SupplierID`.  
   
  [!code-csharp[DLinqQueryExamples#33](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#33)]
  [!code-vb[DLinqQueryExamples#33](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#33)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zwraca dwie sekwencje produktów. Pierwszy sekwencja zawiera produkty z cena jednostkowa mniejszą lub równą 10. Drugiej sekwencji zawiera produkty z ceną jednostki jest większa niż 10.  
+ Poniższy przykład zwraca dwie sekwencje produktów. Pierwsza sekwencja zawiera produkty z ceną jednostkową mniejszą lub równą 10. Druga sekwencja zawiera produkty z ceną jednostkową większą niż 10.  
   
  [!code-csharp[DLinqQueryExamples#34](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#34)]
  [!code-vb[DLinqQueryExamples#34](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#34)]  
   
 ## <a name="example"></a>Przykład  
- <xref:System.Linq.Queryable.GroupBy%2A> Operator może zająć tylko jeden argument klucza. Jeśli potrzebujesz grupować według więcej niż jeden klucz, należy utworzyć typ anonimowy, jak w poniższym przykładzie:  
+ <xref:System.Linq.Queryable.GroupBy%2A> Operator może przyjmować tylko jeden argument klucza. Jeśli zachodzi potrzeba pogrupowania przez więcej niż jeden klucz, należy utworzyć typ anonimowy, jak w poniższym przykładzie:  
   
  [!code-csharp[DLinqQueryExamples#35](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#35)]
  [!code-vb[DLinqQueryExamples#35](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#35)]  

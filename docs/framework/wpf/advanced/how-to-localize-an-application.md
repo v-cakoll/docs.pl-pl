@@ -9,18 +9,18 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 4d7271e792c96dd896d73a52a31ad136acc19e26
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b3ad3d0c3223d5baf937ca22fd48d46a80979aac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666789"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913673"
 ---
 # <a name="how-to-localize-an-application"></a>Instrukcje: Lokalizowanie aplikacji
 W tym samouczku wyjaśniono, jak utworzyć zlokalizowaną aplikację przy użyciu narzędzia LocBaml.  
   
 > [!NOTE]
->  Narzędzie LocBaml nie jest aplikacją przygotowaną do produkcji. Jest on prezentowany jako przykład, który używa niektórych interfejsów API lokalizacji i ilustruje sposób pisania narzędzia lokalizacji.  
+> Narzędzie LocBaml nie jest aplikacją przygotowaną do produkcji. Jest on prezentowany jako przykład, który używa niektórych interfejsów API lokalizacji i ilustruje sposób pisania narzędzia lokalizacji.  
   
 <a name="Introduction"></a>   
 ## <a name="overview"></a>Omówienie  
@@ -28,9 +28,9 @@ W tym samouczku wyjaśniono, jak utworzyć zlokalizowaną aplikację przy użyci
   
 <a name="Requirements"></a>   
 ## <a name="requirements"></a>Wymagania  
- W trakcie tej dyskusji zostanie użyty [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], który jest kompilatorem uruchamianym z wiersza polecenia.  
+ W trakcie tej dyskusji będziesz używać aparatu Microsoft Build Engine (MSBuild), który jest kompilatorem uruchamianym z wiersza polecenia.  
   
- Ponadto zostanie nadana instrukcja użycia pliku projektu. Aby uzyskać instrukcje dotyczące używania [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] i plików projektu, zobacz Kompilowanie [i wdrażanie](../app-development/building-and-deploying-wpf-applications.md).  
+ Ponadto zostanie nadana instrukcja użycia pliku projektu. Aby uzyskać instrukcje dotyczące używania programu MSBuild i plików projektu, zobacz [Kompilowanie i wdrażanie](../app-development/building-and-deploying-wpf-applications.md).  
   
  We wszystkich przykładach w tym omówieniu użyto języka en-US (angielski-US) jako kultury. Dzięki temu można wykonać kroki przykładów bez instalowania innego języka.  
   
@@ -40,7 +40,7 @@ W tym samouczku wyjaśniono, jak utworzyć zlokalizowaną aplikację przy użyci
   
 1. Utwórz aplikację w punkcie, w którym chcesz rozpocząć lokalizację.  
   
-2. Określ język programistyczny w pliku projektu, tak [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] aby generował główny zestaw i zestaw satelicki (plik z rozszerzeniem. resources. dll) zawierający zasoby języka neutralnego. Plik projektu w przykładzie HelloApp jest HelloApp. csproj. W tym pliku znajdziesz następujący język programowania:  
+2. Określ język programistyczny w pliku projektu, tak aby MSBuild generował zestaw główny i zestaw satelicki (plik z rozszerzeniem. resources. dll) zawierający zasoby języka neutralnego. Plik projektu w przykładzie HelloApp jest HelloApp. csproj. W tym pliku znajdziesz następujący język programowania:  
   
      `<UICulture>en-US</UICulture>`  
   
@@ -108,7 +108,7 @@ W tym samouczku wyjaśniono, jak utworzyć zlokalizowaną aplikację przy użyci
     - **pełne** Wyświetla informacje o trybie informacji pełnej.  
   
     > [!NOTE]
-    >  Jeśli potrzebujesz listy opcji podczas uruchamiania narzędzia, wpisz **LocBaml. exe** i naciśnij klawisz ENTER.  
+    > Jeśli potrzebujesz listy opcji podczas uruchamiania narzędzia, wpisz **LocBaml. exe** i naciśnij klawisz ENTER.  
   
 <a name="parse_dll"></a>   
 ## <a name="use-locbaml-to-parse-a-file"></a>Analizowanie pliku przy użyciu LocBaml  
@@ -121,7 +121,7 @@ W tym samouczku wyjaśniono, jak utworzyć zlokalizowaną aplikację przy użyci
      **LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**  
   
     > [!NOTE]
-    >  Jeśli plik wejściowy HelloApp. resources. dll nie znajduje się w tym samym katalogu, co LocBaml. exe Przenieś jeden z tych plików, tak aby oba pliki były w tym samym katalogu.  
+    > Jeśli plik wejściowy HelloApp. resources. dll nie znajduje się w tym samym katalogu, co LocBaml. exe Przenieś jeden z tych plików, tak aby oba pliki były w tym samym katalogu.  
   
 3. Po uruchomieniu LocBaml do analizowania plików dane wyjściowe składają się z siedmiu pól rozdzielonych przecinkami (pliki CSV) lub tabulatorami (pliki. txt). Poniżej przedstawiono przeanalizowany plik CSV dla HelloApp. resources. dll:
 
@@ -172,7 +172,7 @@ W tym samouczku wyjaśniono, jak utworzyć zlokalizowaną aplikację przy użyci
      **LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**  
   
     > [!NOTE]
-    >  Jeśli plik wejściowy, Hello. csv, nie znajduje się w tym samym katalogu co plik wykonywalny, LocBaml. exe, Przenieś jeden z tych plików, tak aby oba pliki były w tym samym katalogu.  
+    > Jeśli plik wejściowy, Hello. csv, nie znajduje się w tym samym katalogu co plik wykonywalny, LocBaml. exe, Przenieś jeden z tych plików, tak aby oba pliki były w tym samym katalogu.  
   
 2. Zastąp stary plik HelloApp. resources. dll w katalogu C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll nowo utworzonym plikiem HelloApp. resources. dll.  
   

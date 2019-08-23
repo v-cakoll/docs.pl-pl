@@ -14,26 +14,26 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 920a93894cc126f85bc6b618efbe6e9cedea4881
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bac24c2dd622ea780408e902d08708ac09561044
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666433"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922726"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Instrukcje: wiązanie kontrolki DataGrid formularzy systemu Windows ze źródłem danych
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Formant zastępuje i dodaje funkcję <xref:System.Windows.Forms.DataGrid> do <xref:System.Windows.Forms.DataGrid> kontrolki; jednak kontrolka jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli wybierzesz opcję. <xref:System.Windows.Forms.DataGridView> Aby uzyskać więcej informacji, zobacz [różnice między kontrolkami DataGridView i DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Formularze Windows <xref:System.Windows.Forms.DataGrid> kontroli jest specjalnie przeznaczona do wyświetlania informacji ze źródła danych. Powiązywanie formantu w czasie wykonywania, wywołując <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metody. Choć można wyświetlać dane z różnych źródeł danych, najbardziej typowe źródła są zestawy danych i widokami danych.  
+ Formant Windows Forms <xref:System.Windows.Forms.DataGrid> jest specjalnie zaprojektowany do wyświetlania informacji ze źródła danych. Można powiązać formant w czasie wykonywania, wywołując <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodę. Mimo że można wyświetlać dane z różnych źródeł danych, najbardziej typowe źródła to zestawy danych i ich widoki.  
   
-### <a name="to-data-bind-the-datagrid-control-programmatically"></a>Do wiązania danych w formancie DataGrid programowe  
+### <a name="to-data-bind-the-datagrid-control-programmatically"></a>W celu programowego powiązania formantu DataGrid z danymi  
   
-1. Pisz kod, aby wypełnić dataset.  
+1. Napisz kod, aby wypełnić zestaw danych.  
   
-     W przypadku zestawu danych lub widoku danych, na podstawie tabeli zestawu danych źródła danych należy dodać kod do formularza, aby wypełnić dataset.  
+     Jeśli źródłem danych jest zestaw danych lub widok danych oparty na tabeli zestawu danych, Dodaj kod do formularza, aby wypełnić zestaw danych.  
   
-     Dokładne kod, który możesz użyć zależy od tego, gdzie zestaw danych jest wprowadzenie danych. Jeśli trwa wypełnianie zestawu danych bezpośrednio z bazy danych, zazwyczaj wywołujesz `Fill` metody w obrębie adaptera danych, jak w poniższym przykładzie, który wypełnia zestaw danych o nazwie `DsCategories1`:  
+     Dokładny kod, którego używasz, zależy od tego, gdzie zestaw danych pobiera dane. Jeśli zestaw danych jest wypełniany bezpośrednio z bazy danych, zazwyczaj wywoływana jest `Fill` Metoda adaptera danych, tak jak w poniższym przykładzie, który wypełnia zestaw danych o nazwie: `DsCategories1`  
   
     ```vb  
     sqlDataAdapter1.Fill(DsCategories1)  
@@ -47,7 +47,7 @@ ms.locfileid: "61666433"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-     Jeśli zestaw danych jest wypełniany z usługi sieci Web XML, zwykle tworzysz wystąpienia usługi w kodzie, a następnie wywołać jedną z jego metod, aby zwrócić zestaw danych. Zestaw danych z usługi sieci Web XML jest następnie Scal do lokalnego zestawu danych. W poniższym przykładzie pokazano, jak utworzyć wystąpienie usługi XML sieci Web o nazwie `CategoriesService`, wywoływanie jej `GetCategories` metoda i scalanie Wynikowy zestaw danych do lokalnego zestawu danych o nazwie `DsCategories1`:  
+     Jeśli zestaw danych jest wypełniany z poziomu usługi sieci Web XML, zazwyczaj tworzysz wystąpienie usługi w kodzie, a następnie Wywołaj jedną z jej metod, aby zwrócić zestaw danych. Następnie należy scalić zestaw danych z usługi sieci Web XML do lokalnego zestawu danych. W poniższym przykładzie pokazano, jak utworzyć wystąpienie usługi sieci Web XML o nazwie `CategoriesService`, `GetCategories` wywołać metodę i scalić zestaw danych w lokalnym zestawie danych o nazwie `DsCategories1`:  
   
     ```vb  
     Dim ws As New MyProject.localhost.CategoriesService()  
@@ -68,12 +68,12 @@ ms.locfileid: "61666433"
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2. Wywołaj <xref:System.Windows.Forms.DataGrid> kontrolki <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metody przekazanie jej w źródle danych i element członkowski danych. Jeśli jest konieczne jawne przekazywanie element członkowski danych, należy przekazać pusty ciąg.  
+2. Wywołaj <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodę kontrolki,przekazującjądoźródładanychielementuczłonkowskiegodanych.<xref:System.Windows.Forms.DataGrid> Jeśli nie musisz jawnie przekazać elementu członkowskiego danych, Przekaż pusty ciąg.  
   
     > [!NOTE]
-    >  Siatki są wiązane po raz pierwszy, można ustawić formantu <xref:System.Windows.Forms.DataGrid.DataSource%2A> i <xref:System.Windows.Forms.DataGrid.DataMember%2A> właściwości. Jednak nie można zresetować te właściwości, gdy zostały ustawione. Dlatego zalecane jest, aby zawsze używać <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metody.  
+    > Jeśli powiążesz siatkę po raz pierwszy, możesz ustawić kontrolkę <xref:System.Windows.Forms.DataGrid.DataSource%2A> i <xref:System.Windows.Forms.DataGrid.DataMember%2A> jej właściwości. Nie można jednak resetować tych właściwości po ich ustawieniu. Dlatego zaleca się, aby zawsze używać <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metody.  
   
-     W poniższym przykładzie pokazano, jak można programowo powiązać tabelę Klienci w zestawie danych o nazwie `DsCustomers1`:  
+     Poniższy przykład pokazuje, jak można programowo powiązać z tabelą Customers w zestawie danych o nazwie `DsCustomers1`:  
   
     ```vb  
     DataGrid1.SetDataBinding(DsCustomers1, "Customers")  
@@ -87,7 +87,7 @@ ms.locfileid: "61666433"
     dataGrid1->SetDataBinding(dsCustomers1, "Customers");  
     ```  
   
-     Jeśli klienci jest tylko tabela w zestawie danych, można też powiążesz siatki w ten sposób:  
+     Jeśli tabela Customers jest jedyną tabelą w zestawie danych, możesz alternatywnie powiązać siatkę w następujący sposób:  
   
     ```vb  
     DataGrid1.SetDataBinding(DsCustomers1, "")  
@@ -101,11 +101,11 @@ ms.locfileid: "61666433"
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3. (Opcjonalnie) Dodaj style odpowiedniej tabeli i kolumn do siatki. Jeśli nie ma żadnych style tabeli, tabeli, zostanie wyświetlony, ale z minimalnym formatowania i widoczne dla wszystkich kolumn.  
+3. Obowiązkowe Dodaj odpowiednie style tabeli i Style kolumn do siatki. Jeśli nie ma żadnych stylów tabeli, zostanie wyświetlona tabela, ale z minimalnym formatowaniem i wszystkimi kolumnami widocznymi.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [DataGrid, kontrolka — omówienie](datagrid-control-overview-windows-forms.md)
-- [Instrukcje: Dodawanie tabel i kolumn do kontrolki DataGrid formularzy Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Instrukcje: Dodawanie tabel i kolumn do kontrolki DataGrid Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid, kontrolka](datagrid-control-windows-forms.md)
 - [Wiązanie danych formularzy Windows Forms](../windows-forms-data-binding.md)

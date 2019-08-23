@@ -5,47 +5,47 @@ ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: e0ff3fe98fcd9ced0063d2bec85928504ea19bab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 618abc8e681a6f43a1054d0ca2cec2fbdec853f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743187"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943566"
 ---
 # <a name="how-to-map-inheritance-hierarchies"></a>Instrukcje: Mapowanie hierarchii dziedziczenia
-Aby zaimplementować mapowanie dziedziczenia w [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)], należy określić atrybuty i właściwości atrybutów w klasie głównego hierarchii dziedziczenia zgodnie z opisem w poniższych krokach. Deweloperzy korzystający z programu Visual Studio umożliwia Object Relational Designer: mapowanie hierarchii dziedziczenia. Zobacz [jak: Skonfigurować dziedziczenie za pomocą Projektanta obiektów relacyjnych](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).  
+Aby zaimplementować mapowanie dziedziczenia [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]w programie, należy określić atrybuty i właściwości atrybutów w klasie głównej hierarchii dziedziczenia zgodnie z opisem w poniższych krokach. Deweloperzy korzystający z programu Visual Studio mogą mapować hierarchie dziedziczenia przy użyciu Object Relational Designer. Zobacz [How to: Skonfiguruj dziedziczenie przy użyciu narzędzia O/R](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)Designer.  
   
 > [!NOTE]
->  Na podklasy są wymagane nie atrybuty specjalne lub właściwości. Szczególnie Pamiętaj, że podklasy nie mają <xref:System.Data.Linq.Mapping.TableAttribute> atrybutu.  
+> Dla podklas nie są wymagane żadne specjalne atrybuty ani właściwości. Należy zwrócić uwagę na <xref:System.Data.Linq.Mapping.TableAttribute> to, że podklasy nie mają atrybutu.  
   
-### <a name="to-map-an-inheritance-hierarchy"></a>Aby zamapować Hierarchia dziedziczenia  
+### <a name="to-map-an-inheritance-hierarchy"></a>Aby zmapować hierarchię dziedziczenia  
   
-1. Dodaj <xref:System.Data.Linq.Mapping.TableAttribute> do katalogu głównego klasy atrybutu.  
+1. <xref:System.Data.Linq.Mapping.TableAttribute> Dodaj atrybut do klasy głównej.  
   
-2. Również do klasy głównej, należy dodać <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> atrybutu dla każdej klasy, struktury hierarchii.  
+2. Także do klasy głównej, Dodaj <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> atrybut dla każdej klasy w strukturze hierarchii.  
   
-3. Dla każdego <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> atrybutu, zdefiniuj <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> właściwości.  
+3. Dla każdego <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> atrybutu <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> Zdefiniuj właściwość.  
   
-     Ta właściwość zawiera wartość, która pojawia się w tabeli bazy danych w <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> kolumny, aby wskazać, która klasa lub podklasę tego wiersza danych należy do.  
+     Ta właściwość zawiera wartość, która pojawia się w tabeli bazy danych w <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> kolumnie, aby wskazać klasę lub podklasę, do której należy ten wiersz danych.  
   
-4. Dla każdego <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> atrybutu, należy również dodać <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A> właściwości.  
+4. Dla każdego <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> atrybutu, należy również <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A> dodać właściwość.  
   
-     Ta właściwość zawiera wartość, która określa, która klasa lub podklasy oznacza wartość klucza.  
+     Ta właściwość zawiera wartość określającą klasę lub podklasę wartość klucza.  
   
-5. Tylko na jednym z <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> atrybuty, dodawania <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A> właściwości.  
+5. Tylko jeden z <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> atrybutów, <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A> Dodaj właściwość.  
   
-     Ta właściwość służy do wyznaczenia *rezerwowego* mapowania, gdy wartość dyskryminatora z tabeli bazy danych nie pasuje do żadnego <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> wartość w mapowaniach dziedziczenia.  
+     Ta właściwość służy do wyznaczania mapowania *rezerwowego* , gdy wartość rozróżniacza z tabeli bazy danych nie <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> jest zgodna z żadną wartością w mapowaniu dziedziczenia.  
   
-6. Dodaj <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu.  
+6. <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> Dodaj Właściwość<xref:System.Data.Linq.Mapping.ColumnAttribute> dla atrybutu.  
   
-     Tej właściwości oznacza, że jest to kolumna, która przechowuje <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> wartość.  
+     Ta właściwość oznacza, że jest to kolumna, która zawiera <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> wartość.  
   
 ## <a name="example"></a>Przykład  
   
 > [!NOTE]
->  Jeśli używasz programu Visual Studio, można użyć Object Relational Designer, aby skonfigurować dziedziczenie. Zobacz [jak: Konfigurowanie dziedziczenia za pomocą narzędzia Object Relational Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)  
+> Jeśli używasz programu Visual Studio, możesz użyć Object Relational Designer, aby skonfigurować dziedziczenie. Zobacz [How to: Konfigurowanie dziedziczenia za pomocą narzędzia Object Relational Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)  
   
- W poniższym przykładzie kodu `Vehicle` jest zdefiniowany jako Klasa główna i poprzednie kroki zostały wdrożone do opisania hierarchia [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
+ W poniższym przykładzie `Vehicle` kodu jest zdefiniowany jako Klasa główna, a poprzednie kroki zostały zaimplementowane w celu opisania hierarchii dla programu [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
   
  [!code-csharp[DLinqCustomize#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#4)]
  [!code-vb[DLinqCustomize#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#4)]  
@@ -53,4 +53,4 @@ Aby zaimplementować mapowanie dziedziczenia w [!INCLUDE[vbteclinq](../../../../
 ## <a name="see-also"></a>Zobacz także
 
 - [Obsługa dziedziczenia](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)
-- [Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Instrukcje: Dostosowywanie klas jednostek przy użyciu edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

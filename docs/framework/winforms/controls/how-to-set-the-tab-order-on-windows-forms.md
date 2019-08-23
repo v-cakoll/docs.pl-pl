@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 5559a3a3e4e62ce9e620de23feef3cbfa0ab8f60
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 0a6cd8b16148d28049549b241b568966239b9b01
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039852"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923613"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Instrukcje: ustawianie kolejności tabulacji na formularzach systemu Windows
 Kolejność tabulacji to kolejność, w której użytkownik przenosi fokus z jednej kontrolki do innej przez wciśnięcie klawisza TAB. Każdy formularz ma własną kolejność tabulacji. Domyślnie kolejność tabulacji jest taka sama jak kolejność, w której zostały utworzone formanty. Numeracja kolejności tabulacji rozpoczyna się od zera.
@@ -29,12 +29,12 @@ Kolejność tabulacji to kolejność, w której użytkownik przenosi fokus z jed
 2. Klikaj kontrolki sekwencyjnie, aby ustalić kolejność tabulacji.
 
     > [!NOTE]
-    >  Dla kontrolki w kolejności tabulacji można ustawić dowolną wartość większą lub równą 0. W przypadku występowania duplikatów porządek osi z dwóch kontrolek jest oceniany, a kontrolka na górze jest z tabulacją na pierwszy. (Kolejność z jest wizualną warstwą formantów w formularzu wzdłuż osi z [głębokość]). Porządek osi z określa, które kontrolki znajdują się przed innymi kontrolkami. Aby uzyskać więcej informacji na temat porządku osi z, zobacz [warstwowanie obiektów na Windows Forms](how-to-layer-objects-on-windows-forms.md).
+    > Dla kontrolki w kolejności tabulacji można ustawić dowolną wartość większą lub równą 0. W przypadku występowania duplikatów porządek osi z dwóch kontrolek jest oceniany, a kontrolka na górze jest z tabulacją na pierwszy. (Kolejność z jest wizualną warstwą formantów w formularzu wzdłuż osi z [głębokość]). Porządek osi z określa, które kontrolki znajdują się przed innymi kontrolkami. Aby uzyskać więcej informacji na temat porządku osi z, zobacz [warstwowanie obiektów na Windows Forms](how-to-layer-objects-on-windows-forms.md).
 
 3. Po zakończeniu kliknij pozycję **kolejność tabulacji** w menu **Widok** , aby pozostawić tryb kolejności tabulacji.
 
     > [!NOTE]
-    >  Kontrolki, które nie mogą uzyskać fokusu, a także wyłączone i niewidoczne kontrolki, <xref:System.Windows.Forms.Control.TabIndex%2A> nie mają właściwości i nie są uwzględnione w kolejności tabulacji. Gdy użytkownik naciśnie klawisz TAB, te kontrolki są pomijane.
+    > Kontrolki, które nie mogą uzyskać fokusu, a także wyłączone i niewidoczne kontrolki, <xref:System.Windows.Forms.Control.TabIndex%2A> nie mają właściwości i nie są uwzględnione w kolejności tabulacji. Gdy użytkownik naciśnie klawisz TAB, te kontrolki są pomijane.
 
  Alternatywnie można ustawić kolejność tabulacji w okno właściwości przy użyciu <xref:System.Windows.Forms.Control.TabIndex%2A> właściwości. <xref:System.Windows.Forms.Control.TabIndex%2A> Właściwość kontrolki określa miejsce, w którym jest umieszczony w kolejności tabulacji. Domyślnie pierwszy rysowany formant ma <xref:System.Windows.Forms.Control.TabIndex%2A> wartość 0, a druga <xref:System.Windows.Forms.Control.TabIndex%2A> — od 1 itd.
 
@@ -49,7 +49,7 @@ Kolejność tabulacji to kolejność, w której użytkownik przenosi fokus z jed
      Formant, którego <xref:System.Windows.Forms.Control.TabStop%2A> właściwość została ustawiona tak, `false` aby nadal utrzymuje swoją pozycję w kolejności tabulacji, nawet jeśli formant zostanie pominięty podczas przechodzenia przez kontrolki za pomocą klawisza Tab.
 
     > [!NOTE]
-    >  Grupa przycisków radiowych ma jeden tabulator w czasie wykonywania. Wybrany przycisk (czyli <xref:System.Windows.Forms.RadioButton.Checked%2A> przycisk z właściwością ustawioną na `true`) ma <xref:System.Windows.Forms.Control.TabStop%2A> ustawioną właściwość automatycznie <xref:System.Windows.Forms.Control.TabStop%2A> na `true`, a pozostałe przyciski mają ustawioną `false`właściwość. Aby uzyskać więcej informacji na <xref:System.Windows.Forms.RadioButton> temat formantów grupowania, zobacz [grupowanie Windows Forms formantów RadioButton do działania jako zestaw](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
+    > Grupa przycisków radiowych ma jeden tabulator w czasie wykonywania. Wybrany przycisk (czyli <xref:System.Windows.Forms.RadioButton.Checked%2A> przycisk z właściwością ustawioną na `true`) ma <xref:System.Windows.Forms.Control.TabStop%2A> ustawioną właściwość automatycznie <xref:System.Windows.Forms.Control.TabStop%2A> na `true`, a pozostałe przyciski mają ustawioną `false`właściwość. Aby uzyskać więcej informacji na <xref:System.Windows.Forms.RadioButton> temat formantów grupowania, zobacz [grupowanie Windows Forms formantów RadioButton do działania jako zestaw](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
 
 ## <a name="see-also"></a>Zobacz także
 

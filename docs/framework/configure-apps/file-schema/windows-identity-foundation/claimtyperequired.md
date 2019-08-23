@@ -3,15 +3,15 @@ title: <claimTypeRequired>
 ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
-ms.openlocfilehash: eafaf253e27db632f17acfce4445a07d18b109aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85f3954514fa8b532311b1fbfc34f32ebefa4099
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778459"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942831"
 ---
 # <a name="claimtyperequired"></a>\<claimTypeRequired>
-Określa zestaw wymagane oświadczenia przychodzące tokeny zabezpieczeń.  
+Określa zestaw wymaganych oświadczeń dla przychodzących tokenów zabezpieczających.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -38,10 +38,10 @@ Określa zestaw wymagane oświadczenia przychodzące tokeny zabezpieczeń.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<claimType>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|Określa pojedynczy opcjonalne lub wymagane oświadczenia przychodzące tokeny zabezpieczające.|  
+|[\<claimType>](claimtype.md)|Określa jedno opcjonalne lub wymagane żądanie dla przychodzących tokenów zabezpieczających.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usługi.|
+|[\<identityConfiguration>](identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usług.|

@@ -1,5 +1,5 @@
 ---
-title: Schemat pliku konfiguracji dla programu .NET Framework
+title: Schemat pliku konfiguracji dla .NET Framework
 ms.date: 05/01/2017
 helpviewer_keywords:
 - .NET Framework application configuration, configuration schema
@@ -21,64 +21,64 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-ms.openlocfilehash: 6ebb6487136bff567c57143e3000a20270c1f87e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3b5518b4b86c2e6f47825d552f49579c5ac0a6d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705288"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921019"
 ---
-# <a name="configuration-file-schema-for-the-net-framework"></a>Schemat pliku konfiguracji dla programu .NET Framework
+# <a name="configuration-file-schema-for-the-net-framework"></a>Schemat pliku konfiguracji dla .NET Framework
 
-Pliki konfiguracyjne są standardowymi plikami XML, które służy do zmiany ustawień i ustawienia zasad dla aplikacji. Schemat konfiguracji .NET Framework składa się z elementów, w której można w plikach konfiguracyjnych do sterowania zachowaniem aplikacji. Spis treści dla tej sekcji odzwierciedla hierarchię schematów dla uruchamiania, środowisko uruchomieniowe, sieci i innych rodzajów ustawień konfiguracji.
+Pliki konfiguracji to standardowe pliki XML, których można użyć do zmiany ustawień i ustawienia zasad dla aplikacji. Schemat konfiguracji .NET Framework składa się z elementów, których można użyć w plikach konfiguracji w celu sterowania zachowaniem aplikacji. Spis treści tej sekcji odzwierciedla hierarchię schematu dla uruchamiania, środowiska uruchomieniowego, sieci i innych typów ustawień konfiguracji.
 
-Aby uzyskać informacje o typach, formatu i lokalizacji plików konfiguracji, zobacz artykuł [konfigurowania aplikacji](~/docs/framework/configure-apps/index.md). Zapoznaj się z danymi XML, jeśli chcesz bezpośrednio edytować pliki konfiguracyjne.
+Informacje o typach, formatach i lokalizacji plików konfiguracji znajdują się w artykule [Konfigurowanie aplikacji](../index.md). Zapoznaj się z plikiem XML, jeśli chcesz bezpośrednio edytować pliki konfiguracji.
 
 > [!IMPORTANT]
-> Znaczniki i atrybuty w plikach konfiguracji XML jest rozróżniana wielkość liter.
+> W przypadku tagów i atrybutów XML w plikach konfiguracji rozróżniana jest wielkość liter.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[**\<Konfiguracja >** elementu](~/docs/framework/configure-apps/file-schema/configuration-element.md) w tym artykule opisano `<configuration>` element, który jest elementem najwyższego poziomu dla wszystkich plików konfiguracyjnych.
+[ **> elementukonfiguracji\<** ](configuration-element.md) `<configuration>` Opisuje element, który jest elementem najwyższego poziomu dla wszystkich plików konfiguracji.
 
-[**\<assemblybinding — >** elementu](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) określa politykę powiązania zestawu na poziomie konfiguracji.
+[zestawbinding > element określa zasady powiązań zestawu na poziomie konfiguracji.  **\<** ](assemblybinding-element-for-configuration.md)
 
-[**\<linkedconfiguration — >** elementu](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) określa wymagający uwzględnienia plik konfiguracji.
+[linkedConfiguration > element Określa plik konfiguracji, który ma zostać uwzględniony.  **\<** ](linkedconfiguration-element.md)
 
-[Schemat ustawień uruchamiania](~/docs/framework/configure-apps/file-schema/startup/index.md) w tym artykule opisano elementy określające, która wersja środowiska uruchomieniowego języka wspólnego do użycia.
+[Schemat ustawień uruchamiania](./startup/index.md) Opisuje elementy, które określają, która wersja środowiska uruchomieniowego języka wspólnego ma być używana.
 
-[Schemat ustawień środowiska uruchomieniowego](~/docs/framework/configure-apps/file-schema/runtime/index.md) w tym artykule opisano elementy, które konfigurują zachowanie zestawu powiązania i środowiska wykonawczego.
+[Schemat ustawień środowiska uruchomieniowego](./runtime/index.md) Opisuje elementy, które konfigurują powiązanie zestawu i zachowanie środowiska uruchomieniowego.
 
-[Schemat ustawień sieci](~/docs/framework/configure-apps/file-schema/network/index.md) opisano elementy, które określają, jak .NET Framework łączy się z Internetem.
+[Schemat ustawień sieciowych](./network/index.md) Opisuje elementy, które określają, w jaki sposób .NET Framework nawiązuje połączenie z Internetem.
 
-[Schemat ustawień kryptografii](~/docs/framework/configure-apps/file-schema/cryptography/index.md) opisano elementy, które mapują przyjazne nazwy algorytmu na klasy, które implementują algorytmy kryptograficzne.
+[Schemat ustawień kryptografii](./cryptography/index.md) Opisuje elementy, które mapują przyjazne nazwy algorytmów na klasy implementujące algorytmy kryptografii.
 
-[Schemat sekcji konfiguracji](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) opisano elementy używane do tworzenia i korzystanie z sekcji konfiguracji dla ustawień niestandardowych.
+[Schemat sekcji konfiguracji](configuration-sections-schema.md) Opisuje elementy używane do tworzenia i używania sekcji konfiguracyjnych ustawień niestandardowych.
 
-[Debugowanie schemat ustawień śledzenia i](~/docs/framework/configure-apps/file-schema/trace-debug/index.md) opisano elementy, które określają przełączniki śledzenia i detektory.
+[Schemat ustawień śledzenia i debugowania](./trace-debug/index.md) Opisuje elementy, które określają przełączniki śledzenia i odbiorniki.
 
-[Schemat ustawień dostawcy języka kompilatora i](~/docs/framework/configure-apps/file-schema/compiler/index.md) opisano elementy, które określają konfigurację kompilatora dla dostępnych dostawców języka.
+[Schemat ustawień kompilatora i dostawcy języka](./compiler/index.md) Opisuje elementy, które określają konfigurację kompilatora dla dostępnych dostawców języka.
 
-[Schemat ustawień aplikacji](~/docs/framework/configure-apps/file-schema/application-settings-schema.md) opisano elementy, które umożliwiają aplikacji Windows Forms i ASP.NET w do przechowywania i pobierania ustawień o zakresie aplikacji i zakresie użytkownika.
+[Schemat ustawień aplikacji](application-settings-schema.md) Opisuje elementy, które umożliwiają aplikacji Windows Forms lub ASP.NET przechowywanie i pobieranie ustawień zakresu aplikacji i zakresu użytkownika.
 
-[Schemat ustawień aplikacji](~/docs/framework/configure-apps/file-schema/appsettings/index.md) zawiera ustawienia aplikacji niestandardowych, takich jak ścieżki do plików, adresy URL usługi sieci Web XML lub inne informacje konfiguracji niestandardowej dla aplikacji.
+[Schemat ustawień aplikacji](./appsettings/index.md) Zawiera niestandardowe ustawienia aplikacji, takie jak ścieżki plików, adresy URL usług sieci Web XML lub inne niestandardowe informacje o konfiguracji dla aplikacji.
 
-[Schemat ustawień internetowych](~/docs/framework/configure-apps/file-schema/web/index.md) wszystkie elementy w schemacie ustawień sieci Web zawierają elementy umożliwiające konfigurację działania programu ASP.NET z aplikacją hosta, takich jak usługi IIS. Używane w *Aspnet.config* plików.
+[Schemat ustawień sieci Web](./web/index.md) Wszystkie elementy w schemacie ustawień sieci Web, w tym elementy służące do konfigurowania sposobu działania programu ASP.NET z aplikacją hosta, taką jak usługi IIS. Używany w plikach *ASPNET. config* .
 
-[Schemat konfiguracji programu Windows Forms](winforms/index.md) wszystkie elementy w sekcji Konfiguracja aplikacji Windows Forms, która zawiera dostosowania, takie jak obsługa rozdzielczości DPI wielu monitorów i wysoka.
+[Schemat konfiguracji Windows Forms](winforms/index.md) Wszystkie elementy w sekcji Konfiguracja aplikacji Windows Forms, w tym takie dostosowania, jak obsługa wielomonitorów i wysokiej rozdzielczości DPI.
 
-[Schemat konfiguracji programu WCF](~/docs/framework/configure-apps/file-schema/wcf/index.md) wszystkie elementy, które umożliwiają konfigurowanie aplikacji usługi i klienta WCF.
+[Schemat konfiguracji WCF](./wcf/index.md) Wszystkie elementy, które umożliwiają skonfigurowanie usługi WCF i aplikacji klienckich.
 
-[Składnia dyrektywy programu WCF](~/docs/framework/configure-apps/file-schema/wcf-directive/index.md) w tym artykule opisano `@ServiceHost` dyrektywy, który definiuje atrybuty specyficzne dla strony, używane przez kompilator .svc.
+[Składnia dyrektywy WCF](./wcf-directive/index.md) `@ServiceHost` Opisuje dyrektywę, która definiuje atrybuty specyficzne dla strony używane przez kompilator SVC.
 
-[Schemat konfiguracji programu WIF](windows-identity-foundation/index.md) wszystkie elementy schematu konfiguracji Windows Identity Foundation (WIF).
+[Schemat konfiguracji WIF](windows-identity-foundation/index.md) Wszystkie elementy schematu konfiguracji Windows Identity Foundation (WIF).
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Schemat ustawień komunikacji zdalnej](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) w tym artykule opisano elementy, które konfigurują aplikacje klienckie i serwerowe, które implementują komunikację zdalną.
+[Schemat ustawień komunikacji zdalnej](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) Opisuje elementy, które konfigurują aplikacje klienta i serwera, które implementują komunikację zdalną.
 
-[ASP.NET Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) opisano elementy, które kontrolują zachowanie aplikacji sieci Web ASP.NET.
+[Schemat ustawień ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) Opisuje elementy kontrolujące zachowanie aplikacji sieci Web ASP.NET.
 
-[Schemat ustawień usługi w sieci Web](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) opisano elementy, które kontrolują zachowanie swoich klientów i usług sieci Web platformy ASP.NET.
+[Schemat ustawień usług sieci Web](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) Opisuje elementy kontrolujące zachowanie usług sieci Web ASP.NET i ich klientów.
 
-[Konfigurowanie aplikacji programu .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100)) opisano, jak skonfigurować zabezpieczenia, zmontować zestaw i komunikacji zdalnej w programie .NET Framework.
+[Konfigurowanie aplikacji .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100)) Opisuje sposób konfigurowania zabezpieczeń, powiązań zestawów i komunikacji zdalnej w .NET Framework.

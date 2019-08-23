@@ -8,20 +8,20 @@ dev_langs:
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e02dd304893e4d9354144c5b412dfd145161c6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2fc0846b3f3801d64ee3bf1f1dc4b347034ad38
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026981"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939564"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>Wybieranie węzłów za pomocą nawigacji XPath
-XML Document Object Model (DOM) zawiera metody, które pozwalają na korzystanie z nawigacji z XML Path Language (XPath) do zapytania w modelu DOM. Można odnaleźć węzła jednej, określonej lub aby znaleźć wszystkie węzły, które spełniają pewne kryteria, można użyć języka XPath.  
+Document Object Model XML (DOM) zawiera metody umożliwiające użycie nawigacji języka ścieżki XML (XPath) do wykonywania zapytań dotyczących informacji w modelu DOM. Możesz użyć XPath, aby znaleźć pojedynczy, konkretny węzeł lub znaleźć wszystkie węzły, które pasują do niektórych kryteriów.  
   
-## <a name="xpath-select-methods"></a>Metody Wybierz wyrażenie XPath  
- Klasy modelu DOM zapewniają dwie metody elementu XPath: <xref:System.Xml.XmlNode.SelectSingleNode%2A> metody i <xref:System.Xml.XmlNode.SelectNodes%2A> metody. <xref:System.Xml.XmlNode.SelectSingleNode%2A> Metoda zwraca pierwszy węzeł, który pasuje do kryteriów wyboru. <xref:System.Xml.XmlNode.SelectNodes%2A> Metoda zwraca <xref:System.Xml.XmlNodeList> zawierający pasujące węzły.  
+## <a name="xpath-select-methods"></a>Metody Select XPath  
+ Klasy dom zapewniają dwie metody wyboru XPath: <xref:System.Xml.XmlNode.SelectSingleNode%2A> metodę <xref:System.Xml.XmlNode.SelectNodes%2A> i metodę. <xref:System.Xml.XmlNode.SelectSingleNode%2A> Metoda zwraca pierwszy węzeł, który pasuje do kryteriów wyboru. Metoda zwraca obiekt <xref:System.Xml.XmlNodeList> , który zawiera pasujące węzły. <xref:System.Xml.XmlNode.SelectNodes%2A>  
   
- W poniższym przykładzie użyto <xref:System.Xml.XmlNode.SelectSingleNode%2A> metody, zaznacz pierwszą pozycję `book` węzła, w którym nazwisko autora spełnia określone kryteria. Plik bookstore.xml, (która znajduje się na końcu tego tematu) jest używany jako plik wejściowy.  
+ W poniższym przykładzie zastosowano <xref:System.Xml.XmlNode.SelectSingleNode%2A> metodę, aby wybrać pierwszy `book` węzeł, w którym nazwisko autora spełnia określone kryteria. Plik księgarni. XML (który znajduje się na końcu tego tematu) jest używany jako plik wejściowy.  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -56,7 +56,7 @@ XmlNode node = root.SelectSingleNode(
 Console.WriteLine(node.InnerXml);  
 ```  
   
- W następnym przykładzie użyto <xref:System.Xml.XmlNode.SelectNodes%2A> metodę, aby zaznaczyć wszystkie węzły książki, w których cena jest większy niż określony. Dziesięć procent następnie zmniejszono programowo w ceny dla każdej książki z wybranej listy. Na koniec zaktualizowany plik jest zapisywany do konsoli. Plik bookstore.xml, (która znajduje się na końcu tego tematu) jest używany jako plik wejściowy.  
+ W następnym przykładzie używa się <xref:System.Xml.XmlNode.SelectNodes%2A> metody, aby wybrać wszystkie węzły książek, w których cena jest większa niż określona wartość. Cena dla każdej książki na wybranej liście jest następnie programowo zmniejszona o dziesięć procent. Na koniec zaktualizowany plik jest zapisywana w konsoli programu. Plik księgarni. XML (który znajduje się na końcu tego tematu) jest używany jako plik wejściowy.  
   
 ```vb  
 ' Load the document and set the root element.  
@@ -108,7 +108,7 @@ foreach (XmlNode book in nodeList)
 doc.Save(Console.Out);  
 ```  
   
- Powyższe przykłady uruchom zapytanie XPath w element dokumentu. Ustawienie punkt początkowy dla wyrażenia XPath zapytania ustawia węzła kontekstu, który jest punktem wyjścia dla kwerendy XPath. Jeśli nie chcesz rozpocząć od element dokumentu, ale chcesz rozpocząć od pierwszego elementu podrzędnego elementu dokumentu, możesz programować instrukcji select w następujący sposób:  
+ Powyższe przykłady rozpoczynają kwerendę XPath w elemencie dokumentu. Ustawienie punktu początkowego dla zapytania XPath ustawia węzeł kontekstu, który jest punktem początkowym zapytania XPath. Jeśli nie chcesz zacząć od elementu dokumentu, ale chcesz zacząć od pierwszego obiektu podrzędnego elementu dokumentu, możesz kod instrukcji SELECT w następujący sposób:  
   
 ```vb  
 doc.DocumentElement.FirstChild.SelectNodes(. . . )  
@@ -118,19 +118,19 @@ doc.DocumentElement.FirstChild.SelectNodes(. . . )
 this doc.DocumentElement.FirstChild.SelectNodes(. . .);  
 ```  
   
- Wszystkie <xref:System.Xml.XmlNodeList> obiekty są synchronizowane z podstawowej dokumentu. W związku z tym jeśli iteracji przez listę węzłów, a następnie zmodyfikuj wartość węzła, węzeł zostaje również zaktualizowany w dokumencie, z której pochodzi. Powiadomienie w poprzednim przykładzie, gdy węzeł zostanie zmodyfikowany w wybranym <xref:System.Xml.XmlNodeList> dokumentu podstawowego jest modyfikowana również.  
+ Wszystkie <xref:System.Xml.XmlNodeList> obiekty są synchronizowane z dokumentem źródłowym. W związku z tym, jeśli przeprowadzisz iterację listy węzłów i zmodyfikujesz wartość węzła, ten węzeł zostanie również zaktualizowany w dokumencie, z którego pochodzi. Zwróć uwagę, że w poprzednim przykładzie modyfikowany jest również węzeł w wybranym <xref:System.Xml.XmlNodeList> dokumencie źródłowym.  
   
 > [!NOTE]
->  Po zmodyfikowaniu dokumentu podstawowego, zalecane jest ponowne uruchomienie wyboru. Jeśli węzeł zmodyfikowane jest taki, który może spowodować, że węzeł, który ma zostać dodany do listy węzłów, gdy nie był wcześniej lub teraz spowoduje usunięcie z listy węzłów, ma żadnej gwarancji, że listy węzłów jest prawidłowo wprowadzony.  
+> Po zmodyfikowaniu dokumentu bazowego zaleca się ponowne uruchomienie SELECT. Jeśli zmodyfikowany węzeł to taki, który może spowodować dodanie węzła do listy węzłów, gdy nie był wcześniej, lub spowoduje usunięcie go z listy węzłów, nie ma gwarancji, że lista węzłów jest teraz dokładna.  
   
-## <a name="namespaces-in-xpath-expressions"></a>Przestrzenie nazw w wyrażeniach języka XPath  
- Wyrażenia XPath mogą obejmować obszary nazw. Rozpoznawanie Namespace jest obsługiwane przy użyciu <xref:System.Xml.XmlNamespaceManager>. Jeśli wyrażenie XPath zawiera prefiks, pary prefiksu i obszaru nazw. identyfikator URI musi zostać dodany do <xref:System.Xml.XmlNamespaceManager>i <xref:System.Xml.XmlNamespaceManager> jest przekazywany do <xref:System.Xml.XmlNode.SelectNodes%28System.String%2CSystem.Xml.XmlNamespaceManager%29> lub <xref:System.Xml.XmlNode.SelectSingleNode%28System.String%2CSystem.Xml.XmlNamespaceManager%29> metody. Należy zauważyć, że powyższe przykłady kodu, użyj <xref:System.Xml.XmlNamespaceManager> można rozpoznać przestrzeni nazw dokumentu bookstore.xml.  
+## <a name="namespaces-in-xpath-expressions"></a>Przestrzenie nazw w wyrażeniach XPath  
+ Wyrażenia XPath mogą zawierać przestrzenie nazw. Rozpoznawanie przestrzeni nazw jest obsługiwane przy <xref:System.Xml.XmlNamespaceManager>użyciu. Jeśli wyrażenie XPath zawiera prefiks, para identyfikatorów <xref:System.Xml.XmlNamespaceManager>URI prefiksu i przestrzeni nazw musi zostać dodana do <xref:System.Xml.XmlNamespaceManager> i jest przenoszona do <xref:System.Xml.XmlNode.SelectNodes%28System.String%2CSystem.Xml.XmlNamespaceManager%29> metody lub <xref:System.Xml.XmlNode.SelectSingleNode%28System.String%2CSystem.Xml.XmlNamespaceManager%29> . Zwróć uwagę, że przykłady kodu używają <xref:System.Xml.XmlNamespaceManager> do rozpoznawania przestrzeni nazw dokumentu księgarni. XML.  
   
 > [!NOTE]
->  Jeśli wyrażenie XPath nie zawiera prefiksu, zakłada się, że przestrzeń nazw identyfikator (URI) jest pusta przestrzeń nazw. Jeśli dane XML zawiera domyślny obszar nazw, nadal należy dodać prefiksu i identyfikator URI przestrzeni nazw do <xref:System.Xml.XmlNamespaceManager>; w przeciwnym razie zostanie wybrany żadnych węzłów.  
+> Jeśli wyrażenie XPath nie zawiera prefiksu, zakłada się, że przestrzeń nazw Uniform Resource Identifier (URI) jest pustą przestrzenią nazw. Jeśli plik XML zawiera domyślną przestrzeń nazw, nadal trzeba dodać prefiks i identyfikator URI przestrzeni nazw do <xref:System.Xml.XmlNamespaceManager>; w przeciwnym razie nie zostaną wybrane węzły.  
   
 #### <a name="input-file"></a>Plik wejściowy  
- Poniżej znajduje się plik bookstore.xml, która jest używana jako plik wejściowy w przykładach w tym temacie:  
+ Poniżej znajduje się plik księgarni. XML, który jest używany jako plik wejściowy w przykładach w tym temacie:  
   
 ```xml  
 <?xml version='1.0'?>  

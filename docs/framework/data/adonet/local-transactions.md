@@ -5,44 +5,44 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: f686c20a9afd981405e32854fcc594abac78c85c
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a0cb72913c10712ece188a782095b93f98cdc0b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882028"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955759"
 ---
 # <a name="local-transactions"></a>Transakcje lokalne
-Transakcje w ADO.NET są używane, gdy chcesz powiązać ze sobą wiele zadań, tak, aby są wykonywane jako pojedyncza jednostka pracy. Na przykład załóżmy, że aplikacja wykonuje dwa zadania. Najpierw aktualizuje tabelę z informacjami o kolejności. Po drugie aktualizuje tabelę, która zawiera informacje dotyczące spisu, obciążenie elementy uporządkowane. Zadanie nie powiedzie się, zarówno aktualizacje zostaną wycofane.  
+Transakcje w programie ADO.NET są używane, gdy chcesz powiązać wiele zadań w taki sposób, aby wykonywały one jako pojedynczą jednostkę pracy. Załóżmy na przykład, że aplikacja wykonuje dwa zadania. Najpierw aktualizuje tabelę z informacjami o zamówieniu. Następnie aktualizuje tabelę zawierającą informacje o zapasach, co oznacza, że elementy są uporządkowane. Jeśli jedno z zadań nie powiedzie się, obie aktualizacje zostaną wycofane.  
   
 ## <a name="determining-the-transaction-type"></a>Określanie typu transakcji  
- Transakcja jest uważana za lokalnej transakcji, jednofazowy transakcji i obsługiwane przez bazę danych bezpośrednio. Transakcja jest uważana za transakcję rozproszoną, kiedy są koordynowany przez monitor transakcji i używa mechanizmów odporne na uszkodzenia (na przykład dwufazowego) do rozpoznawania transakcji.  
+ Transakcja jest traktowana jako transakcja lokalna, gdy jest to transakcja jednoetapowa i jest obsługiwana bezpośrednio przez bazę danych. Transakcja jest traktowana jako transakcja rozproszona, gdy jest koordynowana przez Monitor transakcji i używa mechanizmów awaryjnych (takich jak zatwierdzenie dwufazowe) do rozpoznawania transakcji.  
   
- Każdy z dostawcy danych .NET Framework ma swój własny `Transaction` obiektu do wykonywania transakcji lokalnych. Jeśli potrzebujesz transakcji wykonywanych w bazie danych programu SQL Server, wybierz <xref:System.Data.SqlClient> transakcji. W przypadku transakcji bazy danych Oracle, użyj <xref:System.Data.OracleClient> dostawcy. Ponadto, istnieje <xref:System.Data.Common.DbTransaction> klasę, która jest dostępna dla zapisywania kod niezależny od dostawcy, który wymaga transakcji.  
-  
-> [!NOTE]
-> Transakcje są najbardziej efektywne, gdy są one wykonywane na serwerze. Jeśli pracujesz z bazą danych programu SQL Server, który sprawia, że zwiększone użycie jawnego transakcji, należy rozważyć, zapisując je jako procedur przechowywanych, za pomocą instrukcji języka Transact-SQL BEGIN TRANSACTION.
-  
-## <a name="performing-a-transaction-using-a-single-connection"></a>Wykonywanie transakcji za pomocą pojedynczego połączenia  
- W ADO.NET, możesz kontrolować transakcje `Connection` obiektu. Możesz zainicjować lokalnej transakcji przy użyciu `BeginTransaction` metody. Po rozpoczęciu transakcji można zarejestrować polecenia w ramach transakcji przy użyciu `Transaction` właściwość `Command` obiektu. Można następnie Zatwierdź lub wycofać zmiany dokonane w źródle danych, w oparciu o powodzeniu lub niepowodzeniu składniki transakcji.  
+ Każdy dostawca danych .NET Framework ma własny `Transaction` obiekt do wykonywania transakcji lokalnych. Jeśli potrzebujesz transakcji do wykonania w bazie danych SQL Server, wybierz <xref:System.Data.SqlClient> transakcję. W przypadku transakcji Oracle Użyj <xref:System.Data.OracleClient> dostawcy. Ponadto istnieje <xref:System.Data.Common.DbTransaction> Klasa, która jest dostępna do pisania kodu niezależnego od dostawcy, który wymaga transakcji.  
   
 > [!NOTE]
->  `EnlistDistributedTransaction` Nie należy używać metody dla lokalnych transakcji.  
+> Transakcje są najbardziej wydajne, gdy są wykonywane na serwerze. Jeśli pracujesz z SQL Server bazą danych, która wykonuje szerokie użycie jawnych transakcji, rozważ zapisanie ich jako procedur składowanych przy użyciu instrukcji języka Transact-SQL BEGIN TRANSACTION.
   
- Zakres transakcji jest ograniczony do połączenia. Poniższy przykład wykonuje transakcji jawnej, który składa się z dwóch oddzielnych poleceń w `try` bloku. Polecenie zostanie wykonane instrukcji INSERT w tabeli Production.ScrapReason w przykładowej bazie AdventureWorks programu SQL Server, które są zatwierdzone, jeśli żadne wyjątki są zgłaszane. Kod w `catch` bloku powoduje wycofanie transakcji, jeśli zostanie zgłoszony wyjątek. Jeśli transakcja została przerwana lub połączenie jest zamknięte przed ukończeniem transakcji, jego zostanie automatycznie wycofana.  
+## <a name="performing-a-transaction-using-a-single-connection"></a>Wykonywanie transakcji przy użyciu jednego połączenia  
+ W programie ADO.NET można kontrolować transakcje z `Connection` obiektem. Możesz zainicjować transakcję lokalną za pomocą `BeginTransaction` metody. Po rozpoczęciu transakcji można zarejestrować polecenie w tej transakcji z `Transaction` właściwością `Command` obiektu. Następnie możesz zatwierdzić lub cofnąć modyfikacje wprowadzone w źródle danych na podstawie sukcesu lub niepowodzenia składników transakcji.  
+  
+> [!NOTE]
+> `EnlistDistributedTransaction` Metoda nie powinna być używana dla transakcji lokalnej.  
+  
+ Zakres transakcji jest ograniczony do połączenia. Poniższy przykład wykonuje jawną transakcję, która składa się z dwóch oddzielnych `try` poleceń w bloku. Polecenia Execute instrukcji INSERT odnoszą się do tabeli Product. ScrapReason w przykładowej bazie danych AdventureWorks SQL Server, które są zatwierdzone w przypadku niezgłaszania wyjątków. Kod w `catch` bloku Wycofuje transakcję w przypadku zgłoszenia wyjątku. Jeśli transakcja została przerwana lub połączenie zostanie zamknięte przed ukończeniem transakcji, zostanie automatycznie wycofane.  
   
 ## <a name="example"></a>Przykład  
- Wykonaj następujące kroki do wykonania transakcji.  
+ Wykonaj następujące kroki, aby wykonać transakcję.  
   
-1. Wywołaj <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> metody <xref:System.Data.SqlClient.SqlConnection> obiektu do oznaczania początku transakcji. <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> Metoda zwraca odwołanie do transakcji. Ta dokumentacja jest przypisany do <xref:System.Data.SqlClient.SqlCommand> obiektów, które są zarejestrowane w transakcji.  
+1. Wywołaj <xref:System.Data.SqlClient.SqlConnection> metodę obiektu, aby oznaczyć początek transakcji. <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> Metoda zwraca odwołanie do transakcji. To odwołanie jest przypisane do <xref:System.Data.SqlClient.SqlCommand> obiektów, które są zarejestrowane w transakcji.  
   
-2. Przypisz `Transaction` obiekt <xref:System.Data.SqlClient.SqlCommand.Transaction%2A> właściwość <xref:System.Data.SqlClient.SqlCommand> do wykonania. Jeśli polecenie jest wykonywane przy połączeniu z aktywnej transakcji, a `Transaction` obiekt nie został przypisany do `Transaction` właściwość `Command` obiektu, jest zgłaszany wyjątek.  
+2. Przypisz obiekt do właściwości, <xref:System.Data.SqlClient.SqlCommand> która ma zostać wykonana. <xref:System.Data.SqlClient.SqlCommand.Transaction%2A> `Transaction` Jeśli polecenie jest wykonywane w ramach połączenia z aktywną transakcją, a `Transaction` obiekt nie został przypisany `Transaction` do właściwości `Command` obiektu, zostanie zgłoszony wyjątek.  
   
 3. Wykonaj wymagane polecenia.  
   
-4. Wywołaj <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> metody <xref:System.Data.SqlClient.SqlTransaction> obiektu do zrealizowania transakcji, lub zadzwoń <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> metodę, aby zakończyć transakcji. Jeśli połączenie jest zamknięte lub usunięty przed albo <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> lub <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> metody zostały wykonane, transakcja zostanie wycofana.  
+4. Wywołaj <xref:System.Data.SqlClient.SqlTransaction> <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> metodę obiektu, aby zakończyć transakcję, lub wywołaj metodę, aby zakończyć transakcję. <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> Jeśli połączenie jest zamknięte lub zlikwidowane przed <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> wykonaniem metody lub <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> , transakcja zostanie wycofana.  
   
- Poniższy przykład kodu demonstruje logiki transakcyjnej ADO.NET przy użyciu programu Microsoft SQL Server.  
+ Poniższy przykład kodu demonstruje logikę transakcyjną przy użyciu ADO.NET z Microsoft SQL Server.  
   
  [!code-csharp[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  
@@ -52,4 +52,4 @@ Transakcje w ADO.NET są używane, gdy chcesz powiązać ze sobą wiele zadań, 
 - [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Transakcje rozproszone](../../../../docs/framework/data/adonet/distributed-transactions.md)
 - [Integracja System.Transactions z programem SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

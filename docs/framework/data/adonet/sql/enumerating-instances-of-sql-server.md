@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: d6d76d677bcf7dfa7df632bde8de76401a46db05
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 304387197c7c6ca31d76ce429cd1516be27ba7b9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661891"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938173"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Wyliczanie wystąpień programu SQL Server (ADO.NET)
-Program SQL Server zezwala na aplikacji, aby znaleźć wystąpień programu SQL Server w ramach bieżącej sieci. <xref:System.Data.Sql.SqlDataSourceEnumerator> Klasa udostępnia te informacje do deweloperów aplikacji, zapewniając <xref:System.Data.DataTable> zawierające informacje dotyczące wszystkich serwerów widoczne. Ta wartość zwrócona tabela zawiera listę wystąpień serwera dostępne w sieci, z którą jest zgodne z listą udostępniany, gdy użytkownik próbuje utworzyć nowe połączenie, a następnie rozwija listy rozwijanej zawierające wszystkie dostępne serwery na **połączenia Właściwości** okno dialogowe. Wyniki wyświetlane nie zawsze są pełne.  
+SQL Server zezwala aplikacjom na Znajdowanie SQL Server wystąpień w bieżącej sieci. Klasa ujawnia te informacje deweloperowi aplikacji, <xref:System.Data.DataTable> dostarczając zawierające informacje o wszystkich widocznych serwerach. <xref:System.Data.Sql.SqlDataSourceEnumerator> Zwracana tabela zawiera listę wystąpień serwera dostępnych w sieci, które pasują do listy udostępnionej, gdy użytkownik próbuje utworzyć nowe połączenie, a następnie rozwija listę rozwijaną zawierającą wszystkie dostępne serwery we **właściwościach połączenia.** okno dialogowe. Wyświetlane wyniki nie zawsze są kompletne.  
   
 > [!NOTE]
->  W przypadku większości usług Windows jest najlepsze do uruchamiania usługi SQL Browser przy najniższe możliwe uprawnienia. Zobacz dokumentację SQL Server — książki Online, aby uzyskać więcej informacji na temat usługi SQL Browser, a także jak zarządzać jego zachowanie.  
+> Podobnie jak w przypadku większości usług systemu Windows, najlepszym rozwiązaniem jest uruchomienie usługi SQL Browser z najniższymi możliwymi uprawnieniami. Więcej informacji na temat usługi SQL Browser można znaleźć w dokumentacji SQL Server Books Online oraz jak zarządzać jej zachowaniem.  
   
 ## <a name="retrieving-an-enumerator-instance"></a>Pobieranie wystąpienia modułu wyliczającego  
- Aby można było pobrać Tabela zawierająca informacje na temat dostępnych wystąpień programu SQL Server, należy najpierw pobrać moduł wyliczający przy użyciu udostępnionych/statyczne <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A> właściwości:  
+ Aby można było pobrać tabelę zawierającą informacje o dostępnych wystąpieniach SQL Server, należy najpierw pobrać moduł wyliczający przy użyciu właściwości Shared/static <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A> :  
   
 ```vb  
 Dim instance As System.Data.Sql.SqlDataSourceEnumerator = _  
@@ -31,7 +31,7 @@ System.Data.Sql.SqlDataSourceEnumerator instance =
    System.Data.Sql.SqlDataSourceEnumerator.Instance  
 ```  
   
- Po pobraniu wystąpień statycznych, można wywołać <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> metody, która zwraca <xref:System.Data.DataTable> zawierający informacje o dostępnych serwerów:  
+ Po pobraniu wystąpienia statycznego można wywołać <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> metodę, która <xref:System.Data.DataTable> zwraca zawierające informacje o dostępnych serwerach:  
   
 ```vb  
 Dim dataTable As System.Data.DataTable = instance.GetDataSources()  
@@ -41,27 +41,27 @@ Dim dataTable As System.Data.DataTable = instance.GetDataSources()
 System.Data.DataTable dataTable = instance.GetDataSources();  
 ```  
   
- Tabela zwrócony z wywołania metody które zawiera następujące kolumny, które zawierają `string` wartości:  
+ Tabela zwrócona przez wywołanie metody zawiera następujące kolumny, z których wszystkie zawierają `string` wartości:  
   
 |Kolumna|Opis|  
 |------------|-----------------|  
 |**ServerName**|Nazwa serwera.|  
-|**InstanceName**|Nazwa wystąpienia serwera. Pole puste, jeśli serwer działa jako domyślnego wystąpienia.|  
-|**IsClustered**|Wskazuje, czy serwer jest częścią klastra.|  
-|**Wersja**|Wersja serwera. Na przykład:<br /><br /> -9.00.x (SQL Server 2005)<br />-   10.0.xx (SQL Server 2008)<br />-10.50.x (SQL Server 2008 R2)<br />-   11.0.xx (SQL Server 2012)|  
+|**InstanceName**|Nazwa wystąpienia serwera. Puste, jeśli serwer działa jako wystąpienie domyślne.|  
+|**Isclusterd**|Wskazuje, czy serwer jest częścią klastra.|  
+|**Wersja**|Wersja serwera programu. Przykład:<br /><br /> -9.00. x (SQL Server 2005)<br />-10.0. XX (SQL Server 2008)<br />-10.50. x (SQL Server 2008 R2)<br />-11.0. XX (SQL Server 2012)|  
   
-## <a name="enumeration-limitations"></a>Wyliczenie ograniczeń  
- Wszystkie dostępne serwery mogą lub nie mogą być wyświetlane. Lista może się różnić w zależności od czynników, takich jak przekroczenia limitu czasu i siecią ruchu. Może to spowodować, że na liście, aby różniłaby się w dwóch kolejnych wywołań. Zostaną wyświetlone tylko serwery w tej samej sieci. Pakietów emisji zazwyczaj nie przechodzą przez routery, dlatego nie może zostać wyświetlony serwer, na liście, ale będzie stabilny przez wywołania.  
+## <a name="enumeration-limitations"></a>Ograniczenia wyliczania  
+ Wszystkie dostępne serwery mogą lub nie mogą być wymienione na liście. Lista może się różnić w zależności od takich czynników, jak limity czasu i ruch sieciowy. Może to spowodować, że lista będzie się różnić między dwoma kolejnymi wywołaniami. Zostaną wyświetlone tylko serwery w tej samej sieci. Pakiety emisji zwykle nie przechodzą na routery, co oznacza, że nie widzisz serwera na liście, ale będzie on stabilny dla wywołań.  
   
- Wymienione serwery może być lub może nie mieć dodatkowe informacje takie jak `IsClustered` i wersji. To zależy od tego, jak zostały pobrane listy. Serwery wymienione za pośrednictwem usługa przeglądarki SQL Server ma więcej szczegółów niż występujące za pomocą infrastruktury Windows, który wyświetla tylko nazwę.  
+ Wymienione serwery mogą lub nie mieć dodatkowych informacji, takich jak `IsClustered` i wersja. Jest to zależne od tego, jak uzyskano listę. Serwery wymienione za pomocą usługi SQL Server Browser będą miały więcej szczegółów niż te, które znajdują się w infrastrukturze systemu Windows, która będzie zawierać tylko nazwę.  
   
 > [!NOTE]
->  Wyliczenie Server jest dostępna tylko podczas uruchamiania w pełni zaufanym. W środowisku z częściowo zaufanych zestawów nie będzie go obsługują, nawet jeśli mają one <xref:System.Data.SqlClient.SqlClientPermission> uprawnień zabezpieczeń dostępu kodu (CAS).  
+> Wyliczenie serwera jest dostępne tylko w przypadku uruchamiania w trybie pełnego zaufania. Zestawy działające w środowisku częściowo zaufanym nie będą mogły ich używać nawet wtedy, gdy mają <xref:System.Data.SqlClient.SqlClientPermission> uprawnienie zabezpieczeń dostępu kodu (CAS).  
   
- Program SQL Server zawiera informacje dotyczące <xref:System.Data.Sql.SqlDataSourceEnumerator> przy użyciu usługi zewnętrznej Windows o nazwie SQL Browser. Ta usługa jest domyślnie włączona, ale administratorzy mogą ją wyłączyć lub wyłączyć tę funkcję ukrywanie wystąpienia serwera do tej klasy.  
+ SQL Server zawiera informacje dotyczące <xref:System.Data.Sql.SqlDataSourceEnumerator> korzystania z zewnętrznej usługi systemu Windows o nazwie SQL Browser. Ta usługa jest domyślnie włączona, ale Administratorzy mogą ją wyłączyć lub wyłączyć, co sprawia, że wystąpienie serwera jest niewidoczne dla tej klasy.  
   
 ## <a name="example"></a>Przykład  
- Następującej aplikacji konsoli pobiera informacje o wszystkich widoczne wystąpienia programu SQL Server i wyświetla informacje w oknie konsoli.  
+ Następująca aplikacja konsolowa pobiera informacje o wszystkich widocznych wystąpieniach SQL Server i wyświetla informacje w oknie konsoli.  
   
 ```vb  
 Imports System.Data.Sql  
@@ -127,4 +127,4 @@ class Program
 ## <a name="see-also"></a>Zobacz także
 
 - [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

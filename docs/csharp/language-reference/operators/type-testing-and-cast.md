@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 6966d0b7a4f8a96bddb17ce2017fd53fc07ae922
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 62186409fdc1abb2275af535be3ae939a1e63323
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69572331"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922281"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>Operatory testowania typu i rzutowania (C# odwołanie)
 
@@ -115,7 +115,7 @@ Aby uzyskać informacje na temat obsługiwanych konwersji jawnych, zobacz sekcj�
 
 Należy również użyć nawiasów do [wywołania metody lub wywołania delegata](member-access-operators.md#invocation-operator-).
 
-Innym zastosowaniem nawiasów jest określenie kolejności, w której mają być oceniane operacje w wyrażeniu. Aby uzyskać więcej informacji, zobacz sekcję [Dodawanie nawiasów](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) w artykule [operatorzy](../../programming-guide/statements-expressions-operators/operators.md) . Aby uzyskać listę operatorów uporządkowanych według poziomu pierwszeństwa, zobacz [ C# operatory](index.md).
+Innym zastosowaniem nawiasów jest dostosowanie kolejności, w której mają być oceniane operacje w wyrażeniu. Aby uzyskać więcej informacji, zobacz [ C# operatory](index.md).
 
 ## <a name="typeof-operator"></a>typeof — Operator
 

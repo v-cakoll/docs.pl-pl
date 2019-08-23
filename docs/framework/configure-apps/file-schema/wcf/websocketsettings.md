@@ -2,19 +2,19 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 1101d021f3c7436c4f45a22a48e50f6d1553f753
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c9dbec13dd0d71ba1b92ea971d067540013b6f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769749"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940321"
 ---
 # <a name="websocketsettings"></a>\<webSocketSettings>
-Element konfiguracji, służy do określania ustawień gniazda sieci Web.  
+Element konfiguracji służący do określania ustawień gniazda sieci Web.  
   
 \<system.ServiceModel>  
-\<powiązania >  
-\<netHttpBinding>  
+\<> powiązań  
+\<> protokołu HttpBinding  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,21 +41,21 @@ Element konfiguracji, służy do określania ustawień gniazda sieci Web.
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |createNotificationOnConnection|Określa, czy powiadomienie jest wysyłane po nawiązaniu połączenia.|  
-|disablePayloadMasking|Określa, czy maskowania gniazda sieci Web jest wyłączona.|  
-|keepAliveInterval|Określa interwał utrzymywania aktywności Zachowaj.|  
-|maxPendingConnections|Określa maksymalną liczbę połączeń, oczekiwanie na wysłanie w usłudze.|  
-|receiveBufferSize|Określa rozmiar buforów odbioru.|  
+|disablePayloadMasking|Określa, czy maskowanie gniazda sieci Web jest wyłączone.|  
+|keepAliveInterval|Określa interwał utrzymywania aktywności.|  
+|maxPendingConnections|Określa maksymalną liczbę połączeń oczekujących na wysłanie usługi.|  
+|receiveBufferSize|Określa rozmiar buforu odbioru.|  
 |sendBufferSize|Określa rozmiar buforu wysyłania.|  
 |subProtocol|Określa podprotokół gniazda sieci Web.|  
-|transportUsage|Określa, kiedy należy używać gniazda sieci Web.|  
+|transportUsage|Określa, kiedy należy używać gniazd sieci Web.|  
   
-## <a name="transportusage-attribute"></a>transportUsage atrybutu  
+## <a name="transportusage-attribute"></a>transportUsage — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|WhenDuplex|Gdy kontrakt jest dupleksowy, należy użyć protokołu gniazda sieci Web.|  
-|zawsze|Zawsze używaj protokołu gniazda sieci Web, niezależnie od tego kontraktu.|  
-|nigdy nie|Nigdy nie używaj protokołu Websocket.|  
+|WhenDuplex|Użyj protokołu gniazda sieci Web, gdy kontrakt jest w trybie dupleksu.|  
+|zawsze|Zawsze używaj protokołu gniazda internetowego niezależnie od kontraktu.|  
+|nigdy nie|Nigdy nie używaj protokołu gniazda sieci Web.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -64,10 +64,10 @@ Element konfiguracji, służy do określania ustawień gniazda sieci Web.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|\<netHttpBinding>|Określa elementu NetHttpBinding|  
+|\<> protokołu HttpBinding|Określa protokół HttpBinding|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać \<webSocketSettings > element.  
+ Poniższy przykład pokazuje, \<jak używać elementu webSocketSettings >.  
   
 ```xml  
 <netHttpBinding>
@@ -90,7 +90,7 @@ Element konfiguracji, służy do określania ustawień gniazda sieci Web.
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<> powiązania](../../../misc/binding.md)

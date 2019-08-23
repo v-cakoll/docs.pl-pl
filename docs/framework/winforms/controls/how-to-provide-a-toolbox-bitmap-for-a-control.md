@@ -9,21 +9,21 @@ helpviewer_keywords:
 - custom controls [Windows Forms], Toolbox bitmaps
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
-ms.openlocfilehash: 7c26e00acd4278ced53ad29c748ac076e0215a23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 428af7e4396fde8ac29046d73adda95dbe2182f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913214"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910469"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Instrukcje: dostarczanie mapy bitowej przybornika dla kontrolki
-Jeśli chcesz mieć specjalną ikonę kontrolki są wyświetlane w **przybornika**, należy określić określonego obrazu, za pomocą <xref:System.Drawing.ToolboxBitmapAttribute>. Ta klasa jest *atrybutu*, specjalny rodzaj klasy, można dołączyć do innych klas. Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty Przegląd (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) dla języka Visual Basic lub [atrybuty (C#)](../../../csharp/programming-guide/concepts/attributes/index.md) dla języka C#.  
+Jeśli chcesz mieć specjalną ikonę kontrolki w przyborniku, możesz określićkonkretny obraz przy użyciu <xref:System.Drawing.ToolboxBitmapAttribute>. Ta klasa jest *atrybutem*, specjalnym rodzajem klasy, którą można dołączyć do innych klas. Aby uzyskać więcej informacji na temat atrybutów, zobacz [Omówienie atrybutów (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) dla Visual Basic lub [atrybutówC#()](../../../csharp/programming-guide/concepts/attributes/index.md) dla. C#  
   
- Za pomocą <xref:System.Drawing.ToolboxBitmapAttribute>, można określić ciąg, który określa ścieżkę i nazwę pliku mapy bitowej 16 na 16 pikseli. Ta mapa bitowa pojawi się obok kontrolki podczas dodawania do **przybornika**. Można również określić <xref:System.Type>, w którym to przypadku mapy bitowej skojarzony z danym typem jest ładowany. Jeśli określisz zarówno <xref:System.Type> i ciąg, formant wyszukuje zasób obrazu o nazwie określonej przez parametr ciągu w zestawie z typem określonym przez <xref:System.Type> parametru.  
+ Przy użyciu <xref:System.Drawing.ToolboxBitmapAttribute>, można określić ciąg, który wskazuje ścieżkę i nazwę pliku dla mapy bitowej 16 x 16 pikseli. Ta mapa bitowa pojawia się obok formantu po dodaniu do **przybornika**. Można również określić <xref:System.Type>, w którym przypadku zostanie załadowana Mapa bitowa skojarzona z tym typem. Jeśli określono zarówno <xref:System.Type> ciąg a, jak i, formant wyszukuje zasób obrazu o nazwie określonej przez parametr ciągu w zestawie zawierający typ określony <xref:System.Type> przez parametr.  
   
-### <a name="to-specify-a-toolbox-bitmap-for-your-control"></a>Aby określić mapy bitowej przybornika dla kontrolki  
+### <a name="to-specify-a-toolbox-bitmap-for-your-control"></a>Aby określić mapę bitową przybornika dla kontrolki  
   
-1. Dodaj <xref:System.Drawing.ToolboxBitmapAttribute> do deklaracji klasy kontrolki przed `Class` — słowo kluczowe w języku visual Basic oraz nad deklaracją klasy dla języka Visual C#.  
+1. Dodaj do deklaracji klasy kontrolki `Class` przed słowem kluczowym dla języka Visual Basic i powyżej deklaracji klasy dla wizualizacji C# <xref:System.Drawing.ToolboxBitmapAttribute>  
   
     ```vb  
     ' Specifies the bitmap associated with the Button type.  
@@ -58,15 +58,15 @@ Jeśli chcesz mieć specjalną ikonę kontrolki są wyświetlane w **przybornika
     }  
     ```  
   
-2. Skompiluj ponownie projekt.  
+2. Ponownie skompiluj projekt.  
   
     > [!NOTE]
-    >  Nie ma mapy bitowej przybornika dla kontrolki wygenerowany automatycznie i składników. Aby wyświetlić mapę bitową, należy ponownie załadować formantu za pomocą **wybierz elementy przybornika** okno dialogowe. Aby uzyskać więcej informacji, zobacz [instruktażu: Automatyczne zapełnianie przybornika składnikami niestandardowymi](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+    > Mapa bitowa nie jest wyświetlana w przyborniku dla automatycznie generowanych kontrolek i składników. Aby wyświetlić mapę bitową, Załaduj ponownie formant przy użyciu okna dialogowego **Wybierz elementy przybornika** . Aby uzyskać więcej informacji, [zobacz Przewodnik: Automatyczne wypełnianie przybornika składnikami](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)niestandardowymi.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Drawing.ToolboxBitmapAttribute>
 - [Przewodnik: Automatyczne zapełnianie przybornika składnikami niestandardowymi](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
 - [Opracowywanie kontrolek formularzy Windows Forms w czasie projektowania](developing-windows-forms-controls-at-design-time.md)
-- [Omówienie atrybuty (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Omówienie atrybutów (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [Atrybuty (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)

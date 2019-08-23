@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: 8b47c43e897004a6c7eb3d2f8b2a2b9bb625e158
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 9fe53ed4d677f5604911c02d0426ed1b567d51e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400835"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917322"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Klasy XAML i niestandardowe dla WPF
 Język XAML zgodnie z implementacją w strukturach środowiska uruchomieniowego języka wspólnego (CLR) obsługuje możliwość definiowania niestandardowej klasy lub struktury w dowolnym języku środowiska uruchomieniowego języka wspólnego (CLR), a następnie uzyskiwania dostępu do tej klasy przy użyciu znacznika XAML. Można użyć kombinacji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]typów i typów niestandardowych w tym samym pliku znaczników, zazwyczaj przez mapowanie typów niestandardowych na prefiks przestrzeni nazw XAML. W tym temacie omówiono wymagania, które Klasa niestandardowa musi spełniać, aby można było używać ich jako elementu XAML.  
@@ -69,7 +69,7 @@ Język XAML zgodnie z implementacją w strukturach środowiska uruchomieniowego 
  Aby można było używać go jako zdarzenia CLR, zdarzenie musi być uwidocznione jako zdarzenie publiczne dla klasy, która obsługuje Konstruktor bez parametrów lub klasy abstrakcyjnej, w której można uzyskać dostęp do tego zdarzenia w klasach pochodnych. Aby można było używać wygodnie jako zdarzenia kierowanego, zdarzenie CLR powinno implementować jawne `add` i `remove` metody, które dodają i usuwają programy obsługi dla sygnatury zdarzeń CLR i przekazują <xref:System.Windows.UIElement.AddHandler%2A> te procedury obsługi <xref:System.Windows.UIElement.RemoveHandler%2A> do i form. Te metody umożliwiają dodanie lub usunięcie programów obsługi do magazynu obsługi zdarzeń kierowanych na wystąpienie, do którego jest dołączone zdarzenie.  
   
 > [!NOTE]
->  Można zarejestrować procedury obsługi bezpośrednio dla zdarzeń kierowanych przy użyciu <xref:System.Windows.UIElement.AddHandler%2A>i celowo nie definiować zdarzenia CLR, które ujawnia zdarzenie kierowane. Nie jest to ogólnie zalecane, ponieważ zdarzenie nie będzie włączać składni atrybutu XAML w celu dołączania obsługi, a klasa będąca wynikiem będzie oferować mniej przezroczysty widok XAML możliwości tego typu.  
+> Można zarejestrować procedury obsługi bezpośrednio dla zdarzeń kierowanych przy użyciu <xref:System.Windows.UIElement.AddHandler%2A>i celowo nie definiować zdarzenia CLR, które ujawnia zdarzenie kierowane. Nie jest to ogólnie zalecane, ponieważ zdarzenie nie będzie włączać składni atrybutu XAML w celu dołączania obsługi, a klasa będąca wynikiem będzie oferować mniej przezroczysty widok XAML możliwości tego typu.  
   
 <a name="Collection_Properties"></a>   
 ## <a name="writing-collection-properties"></a>Zapisywanie właściwości kolekcji  
@@ -92,7 +92,7 @@ Język XAML zgodnie z implementacją w strukturach środowiska uruchomieniowego 
  Każdy z tych typów w środowisku CLR ma `Add` metodę, która jest używana przez procesor XAML do dodawania elementów do źródłowej kolekcji podczas tworzenia grafu obiektów.  
   
 > [!NOTE]
->  Ogólne `List` i `Dictionary` interfejsy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (<xref:System.Collections.Generic.IList%601> i )niesąobsługiwanenapotrzebywykrywaniakolekcjiprzezprocesorXAML.<xref:System.Collections.Generic.IDictionary%602> Można jednak użyć <xref:System.Collections.Generic.List%601> klasy jako klasy bazowej, ponieważ implementuje <xref:System.Collections.IList> ona bezpośrednio lub <xref:System.Collections.Generic.Dictionary%602> jako klasę bazową, ponieważ implementuje <xref:System.Collections.IDictionary> ją bezpośrednio.  
+> Ogólne `List` i `Dictionary` interfejsy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (<xref:System.Collections.Generic.IList%601> i )niesąobsługiwanenapotrzebywykrywaniakolekcjiprzezprocesorXAML.<xref:System.Collections.Generic.IDictionary%602> Można jednak użyć <xref:System.Collections.Generic.List%601> klasy jako klasy bazowej, ponieważ implementuje <xref:System.Collections.IList> ona bezpośrednio lub <xref:System.Collections.Generic.Dictionary%602> jako klasę bazową, ponieważ implementuje <xref:System.Collections.IDictionary> ją bezpośrednio.  
   
  Podczas deklarowania właściwości pobierającej kolekcję należy zachować ostrożność, jak ta wartość właściwości jest inicjowana w nowych wystąpieniach typu. Jeśli właściwość nie jest wdrażana jako właściwość zależności, właściwość Użyj pola zapasowego, które wywołuje Konstruktor typów kolekcji, jest odpowiedni. Jeśli właściwość jest właściwością zależności, może być konieczne zainicjowanie właściwości kolekcji jako części domyślnego konstruktora typów. Wynika to z faktu, że właściwość dependency przyjmuje swoją wartość domyślną z metadanych, a zwykle nie chcesz, aby początkowa wartość właściwości kolekcji była statyczną, udostępnioną kolekcją. Dla każdego wystąpienia typu zawierającego istnieje wystąpienie kolekcji. Aby uzyskać więcej informacji, zobacz [niestandardowe właściwości zależności](custom-dependency-properties.md).  
   

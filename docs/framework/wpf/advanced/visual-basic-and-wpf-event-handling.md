@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 4ff006099dd2fa706cb575eec18e135d6e74ad46
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 8407958ec76be7e402025ece57371e67581e5291
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972317"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942129"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Obsługa zdarzeń Visual Basic oraz WPF
 W przypadku języka Microsoft Visual Basic .NET w konkretnym przypadku można użyć słowa kluczowego `Handles` specyficznego dla języka, aby skojarzyć programy obsługi zdarzeń z wystąpieniami, zamiast dołączać obsługi zdarzeń <xref:System.Windows.UIElement.AddHandler%2A> z atrybutami lub za pomocą metody. Jednak technika dołączania programów obsługi do wystąpień ma pewne ograniczenia, `Handles` ponieważ składnia nie może obsługiwać niektórych określonych funkcji zdarzeń [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kierowanych w systemie zdarzeń. `Handles`  
@@ -34,13 +34,13 @@ W przypadku języka Microsoft Visual Basic .NET w konkretnym przypadku można u�
  `Handles`nie można dołączyć programów obsługi, które są wywoływane dla zdarzeń, które są już oznaczone jako obsługiwane. Zamiast tego należy użyć kodu i wywołać `handledEventsToo` <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>Przeciążenie.  
   
 > [!NOTE]
->  Nie należy używać `Handles` składni w Visual Basic kodzie podczas określania programu obsługi zdarzeń dla tego samego zdarzenia w języku XAML. W takim przypadku program obsługi zdarzeń jest wywoływany dwukrotnie.  
+> Nie należy używać `Handles` składni w Visual Basic kodzie podczas określania programu obsługi zdarzeń dla tego samego zdarzenia w języku XAML. W takim przypadku program obsługi zdarzeń jest wywoływany dwukrotnie.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>Jak WPF implementuje funkcje "Handles"  
  `WithEvents` <xref:System.Windows.FrameworkContentElement.Name%2A> `Friend` [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Po skompilowaniu strony plik pośredni deklaruje odwołania do każdego elementu na stronie, który ma ustawioną właściwość (lub x:Nameą [dyrektywę](../../xaml-services/x-name-directive.md) ). Każde nazwane wystąpienie jest potencjalnie elementem, który można przypisać do programu obsługi przez `Handles`.  
   
 > [!NOTE]
->  W [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]programie technologia IntelliSense może pokazać, które elementy są dostępne `Handles` dla odwołania na stronie. Jednak może to potrwać jeden przebieg kompilacji, aby plik pośredni mógł wypełnić wszystkie `Friends` odwołania.  
+> W [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]programie technologia IntelliSense może pokazać, które elementy są dostępne `Handles` dla odwołania na stronie. Jednak może to potrwać jeden przebieg kompilacji, aby plik pośredni mógł wypełnić wszystkie `Friends` odwołania.  
   
 ## <a name="see-also"></a>Zobacz także
 

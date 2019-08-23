@@ -9,38 +9,38 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: 3dd40efe27687b048984c4592db0d3787d061eeb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 918cbba30cbb997a1f029a250adbdc4ed6310299
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402320"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951058"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Instrukcje: Personifikowanie klienta w usłudze
-Personifikowanie klienta usługi Windows Communication Foundation (WCF) umożliwia usługi w celu wykonywania zadań w imieniu klienta. Dla akcji z zastrzeżeniem dostępu kontrolki listy (ACL) sprawdza, takich jak dostęp do katalogów i plików na maszynie lub dostęp do bazy danych programu SQL Server, sprawdź listy ACL jest względem konta użytkownika klienta. W tym temacie przedstawiono podstawowe kroki wymagane do włączenia klienta w domenie Windows ustawić poziom personifikacji klienta. Dla pracy na przykład, zobacz [Personifikowanie klienta](../../../docs/framework/wcf/samples/impersonating-the-client.md). Aby uzyskać więcej informacji na temat personifikację klienta, zobacz [delegowanie i personifikacja](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+Personifikowanie klienta w usłudze Windows Communication Foundation (WCF) umożliwia usłudze wykonywanie akcji w imieniu klienta. W przypadku akcji podlegających testom listy kontroli dostępu (ACL), takich jak dostęp do katalogów i plików na komputerze lub dostęp do bazy danych SQL Server, sprawdzanie listy ACL jest związane z kontem użytkownika klienta. W tym temacie przedstawiono podstawowe kroki wymagane do włączenia klienta w domenie systemu Windows w celu ustawienia poziomu personifikacji klienta. Aby zapoznać się z przykładem, zobacz [Personifikowanie klienta](../../../docs/framework/wcf/samples/impersonating-the-client.md). Aby uzyskać więcej informacji na temat personifikacji klientów, zobacz [delegowanie i personifikacja](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 > [!NOTE]
->  Gdy klienta i usługi są uruchomione na tym samym komputerze, a klient jest uruchomiony w ramach konta system (czyli `Local System` lub `Network Service`), nie można spersonifikować klienta, po nawiązaniu bezpiecznej sesji przy użyciu stanowych tokenów kontekstu zabezpieczeń. Aplikacja WinForms lub konsoli zwykle jest uruchamiany aktualnie zalogowanego konta, tak aby konta mogą personalizacji domyślnie. Jednak jeśli klient znajduje się na stronie ASP.NET i tej stronie znajduje się w usługach IIS 6.0 lub usług IIS 7.0, a następnie klienta, należy uruchomić w obszarze `Network Service` konto domyślne. Domyślnie wszystkie powiązania dostarczane przez system, które obsługują bezpiecznej sesji używają bezstanowe tokenu kontekstu zabezpieczeń. Jednakże jeśli klient znajduje się na stronie ASP.NET i bezpieczne sesje z tokenami usługi stanowej kontekstu zabezpieczeń są używane, nie można spersonifikować klienta. Aby uzyskać więcej informacji na temat tokeny stanowych kontekstu zabezpieczeń w ramach bezpiecznej sesji zobacz [jak: Utwórz kontekst zabezpieczeń tokenu dla bezpiecznej sesji](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+> Gdy klient i usługa są uruchomione na tym samym komputerze, a klient jest uruchomiony przy użyciu konta systemowego ( `Local System` czyli lub `Network Service`), nie można spersonifikować klienta w przypadku ustanowienia bezpiecznej sesji z tokenami kontekstu zabezpieczeń stanowych. Kontrolki WinForm lub Aplikacja konsolowa są zwykle uruchamiane w ramach aktualnie zalogowanego konta, dzięki czemu konto może być domyślnie personifikowane. Jeśli jednak klient jest stroną ASP.NET, a ta strona jest hostowana w usługach IIS 6,0 lub IIS 7,0, klient domyślnie uruchamia się w ramach `Network Service` konta. Wszystkie powiązania dostarczone przez system obsługujące bezpieczne sesje domyślnie korzystają z tokenu bezstanowego kontekstu zabezpieczeń. Jeśli jednak klient jest stroną ASP.NET i są używane bezpieczne sesje z tokenami kontekstu zabezpieczeń stanowe, nie można spersonifikować klienta. Aby uzyskać więcej informacji o korzystaniu z tokenów kontekstu zabezpieczeń stanowych w [bezpiecznej sesji, zobacz How to: Utwórz token kontekstu zabezpieczeń dla bezpiecznej sesji](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
-### <a name="to-enable-impersonation-of-a-client-from-a-cached-windows-token-on-a-service"></a>Aby włączyć personifikację klienta z pamięci podręcznej tokenu Windows w usłudze  
+### <a name="to-enable-impersonation-of-a-client-from-a-cached-windows-token-on-a-service"></a>Aby włączyć personifikację klienta z poziomu buforowanego tokenu systemu Windows w usłudze  
   
-1. Utwórz usługę. Samouczek, część tej procedury podstawowe, zobacz [Samouczek wprowadzający](../../../docs/framework/wcf/getting-started-tutorial.md).  
+1. Utwórz usługę. Aby zapoznać się z samouczkiem dotyczącym tej podstawowej procedury, zobacz [samouczek wprowadzenie](../../../docs/framework/wcf/getting-started-tutorial.md).  
   
-2. Użyj powiązania, który korzysta z uwierzytelniania Windows i tworzy sesję, takich jak <xref:System.ServiceModel.NetTcpBinding> lub <xref:System.ServiceModel.WSHttpBinding>.  
+2. Użyj powiązania, które używa uwierzytelniania systemu Windows i tworzy sesję, taką jak <xref:System.ServiceModel.NetTcpBinding> lub <xref:System.ServiceModel.WSHttpBinding>.  
   
-3. Podczas tworzenia implementacji interfejsu usługi należy zastosować <xref:System.ServiceModel.OperationBehaviorAttribute> klas do metody, która wymaga Personifikowanie klienta. Ustaw <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> właściwość <xref:System.ServiceModel.ImpersonationOption.Required>.  
+3. Podczas tworzenia implementacji interfejsu usługi należy zastosować <xref:System.ServiceModel.OperationBehaviorAttribute> klasę do metody wymagającej personifikacji klienta. Ustaw <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> właściwość <xref:System.ServiceModel.ImpersonationOption.Required>.  
   
      [!code-csharp[c_SimpleImpersonation#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_simpleimpersonation/cs/source.cs#2)]
      [!code-vb[c_SimpleImpersonation#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#2)]  
   
-### <a name="to-set-the-allowed-impersonation-level-on-the-client"></a>Aby ustawić poziom personifikacji dozwolonych na komputerze klienckim  
+### <a name="to-set-the-allowed-impersonation-level-on-the-client"></a>Aby ustawić dozwolony poziom personifikacji na kliencie  
   
-1. Tworzenie kodu klienta usługi przy użyciu [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Aby uzyskać więcej informacji, zobacz [uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).  
+1. Utwórz kod klienta usługi przy użyciu [Narzędzia metadanych ServiceModel (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).  
   
-2. Po utworzeniu klienta WCF, należy ustawić <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> właściwość <xref:System.ServiceModel.Security.WindowsClientCredential> klasy do jednego z <xref:System.Security.Principal.TokenImpersonationLevel> wartości wyliczenia.  
+2. Po utworzeniu klienta WCF należy ustawić <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> Właściwość <xref:System.ServiceModel.Security.WindowsClientCredential> <xref:System.Security.Principal.TokenImpersonationLevel> klasy na jedną z wartości wyliczenia.  
   
     > [!NOTE]
-    >  Do użycia <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>, wynegocjowanym uwierzytelnianie Kerberos (nazywane czasem *wielu gałęzi* lub *wieloetapowego* protokołu Kerberos) musi być używana. Aby uzyskać opis sposobu implementacji, zobacz [najlepsze rozwiązania dotyczące zabezpieczeń](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
+    > Aby można <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>było używać negocjowanego uwierzytelniania Kerberos (czasami nazywanego wieloetapowym lub wieloetapowym Kerberos). Aby uzyskać opis sposobu wdrażania tego rozwiązania, zobacz [najlepsze rozwiązania w zakresie zabezpieczeń](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
   
      [!code-csharp[c_SimpleImpersonation#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_simpleimpersonation/cs/source.cs#1)]
      [!code-vb[c_SimpleImpersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#1)]  

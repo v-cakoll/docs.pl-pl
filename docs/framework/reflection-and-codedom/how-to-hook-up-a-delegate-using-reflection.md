@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c3fa2238976df9f570fad9eb6947790565a4b0c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364068"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935711"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Instrukcje: Podłączanie delegata za pomocą odbicia
-W przypadku używania odbicia do ładowania i uruchamiania zestawów nie można użyć funkcji języka, takich C# `+=` jak operator lub Visual Basic [AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) , aby podłączyć zdarzenia. W poniższych procedurach pokazano, jak podłączyć istniejącą metodę do zdarzenia, pobierając wszystkie niezbędne typy poprzez odbicie i jak utworzyć metodę dynamiczną przy użyciu emisji odbicia i podłączyć ją do zdarzenia.  
+W przypadku używania odbicia do ładowania i uruchamiania zestawów nie można użyć funkcji języka, takich C# `+=` jak operator lub Visual Basic [AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md) , aby podłączyć zdarzenia. W poniższych procedurach pokazano, jak podłączyć istniejącą metodę do zdarzenia, pobierając wszystkie niezbędne typy poprzez odbicie i jak utworzyć metodę dynamiczną przy użyciu emisji odbicia i podłączyć ją do zdarzenia.  
   
 > [!NOTE]
->  Aby móc podłączyć delegata obsługi zdarzeń, zobacz przykład kodu dla <xref:System.Reflection.EventInfo.AddEventHandler%2A> metody <xref:System.Reflection.EventInfo> klasy.  
+> Aby móc podłączyć delegata obsługi zdarzeń, zobacz przykład kodu dla <xref:System.Reflection.EventInfo.AddEventHandler%2A> metody <xref:System.Reflection.EventInfo> klasy.  
   
 ### <a name="to-hook-up-a-delegate-using-reflection"></a>Aby podłączyć delegata przy użyciu odbicia  
   
@@ -57,7 +57,7 @@ W przypadku używania odbicia do ładowania i uruchamiania zestawów nie można 
      [!code-csharp[HookUpDelegate#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#7)]
      [!code-vb[HookUpDelegate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#7)]  
   
-6. Pobierz metodę `add` dostępu i Wywołaj ją, aby podłączyć zdarzenie. Wszystkie zdarzenia mają `add` akcesor `remove` i metodę dostępu, która jest ukryta przez składnię języków wysokiego poziomu. Na przykład C# używa `+=` operatora, aby podłączyć zdarzenia, a Visual Basic używa [instrukcji AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md). Poniższy kod pobiera `add` metodę dostępu <xref:System.Windows.Forms.Control.Click> dla zdarzenia i wywołuje ją z późnym wiązaniem, przekazując w wystąpieniu delegata. Argumenty muszą być przekazane jako tablica.  
+6. Pobierz metodę `add` dostępu i Wywołaj ją, aby podłączyć zdarzenie. Wszystkie zdarzenia mają `add` akcesor `remove` i metodę dostępu, która jest ukryta przez składnię języków wysokiego poziomu. Na przykład C# używa `+=` operatora, aby podłączyć zdarzenia, a Visual Basic używa [instrukcji AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md). Poniższy kod pobiera `add` metodę dostępu <xref:System.Windows.Forms.Control.Click> dla zdarzenia i wywołuje ją z późnym wiązaniem, przekazując w wystąpieniu delegata. Argumenty muszą być przekazane jako tablica.  
   
      [!code-cpp[HookUpDelegate#8](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#8)]
      [!code-csharp[HookUpDelegate#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#8)]

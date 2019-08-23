@@ -6,47 +6,47 @@ helpviewer_keywords:
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-ms.openlocfilehash: dadce167de31ad033e5e062c57f1d735af75648d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 22bb78040b023a59fd46f0a2be45659d6d7220b8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626019"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914513"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>Implementacja wzorca kontrolki przewijania automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
   
- W tym temacie przedstawiono wskazówki i konwencje dotyczące implementowania <xref:System.Windows.Automation.Provider.IScrollProvider>, wraz z informacjami dotyczącymi zdarzeń i właściwości. Łącza do dodatkowe informacje są wyświetlane na końcu tego tematu.  
+ W tym temacie przedstawiono wskazówki i konwencje <xref:System.Windows.Automation.Provider.IScrollProvider>dotyczące wdrażania, w tym informacje o zdarzeniach i właściwościach. Linki do dodatkowych odwołań znajdują się na końcu tematu.  
   
- <xref:System.Windows.Automation.ScrollPattern> — Wzorzec kontrolki jest używana do obsługi formant, który działa jako kontener przewijany dla kolekcji obiektów podrzędnych. Kontrolki nie jest wymagana do używania pasków przewijania na potrzeby obsługi funkcji przewijania, mimo że często robi.  
+ Wzorzec <xref:System.Windows.Automation.ScrollPattern> kontrolki służy do obsługi formantu, który działa jako kontener przewijalny dla kolekcji obiektów podrzędnych. Kontrolka nie jest wymagana do obsługi funkcji przewijania przy użyciu pasków przewijania, chociaż często jest to możliwe.  
   
- ![Formant przewijania, bez pasków przewijania. ](../../../docs/framework/ui-automation/media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
-Przykład formant przewijania, który nie korzysta z pasków przewijania  
+ ![Kontrolka przewijania bez pasków przewijania.](../../../docs/framework/ui-automation/media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
+Przykład kontrolki przewijania, która nie używa pasków przewijania  
   
- Przykłady formantów, które implementują tę kontrolkę, zobacz [kontroli wzorzec mapowania dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ Przykłady formantów implementujących ten formant można znaleźć w temacie [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
- Jeśli implementacja wzorca kontrolki przewijania, należy zwrócić uwagę następujących wytycznych i konwencje:  
+## <a name="implementation-guidelines-and-conventions"></a>Wytyczne i konwencje dotyczące implementacji  
+ Podczas implementowania wzorca kontrolki przewijania należy zwrócić uwagę na następujące wytyczne i konwencje:  
   
-- Elementy podrzędne tego formantu musi implementować <xref:System.Windows.Automation.Provider.IScrollItemProvider>.  
+- Elementy podrzędne tego formantu muszą implementować <xref:System.Windows.Automation.Provider.IScrollItemProvider>.  
   
-- Paski przewijania w kontrolce kontenera nie obsługują <xref:System.Windows.Automation.ScrollPattern> — wzorzec kontrolki. Muszą obsługiwać <xref:System.Windows.Automation.RangeValuePattern> kontrolki wzorca.  
+- Paski przewijania kontrolki kontenera nie obsługują <xref:System.Windows.Automation.ScrollPattern> wzorca kontrolki. Muszą one obsługiwać <xref:System.Windows.Automation.RangeValuePattern> wzorzec kontrolki.  
   
-- Podczas przewijania jest mierzona w procentach, wszystkie wartości lub ilości związane z przewiń ukończenia muszą być znormalizowane do zakresu od 0 do 100.  
+- Gdy przewijanie jest mierzone w wartościach procentowych, wszystkie wartości lub kwoty związane ze stopniami przewijania muszą być znormalizowane do zakresu od 0 do 100.  
   
-- <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> i <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> są niezależne od <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>.  
+- <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>i <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> są niezależne <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>od.  
   
-- Jeśli <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>  =  `false` następnie <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> powinien być ustawiony na 100% i <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> powinna być równa <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Podobnie jeśli <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty>  =  `false` następnie <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> powinien być ustawiony na 100 procent i <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> powinna być równa <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Dzięki temu automatyzacji interfejsu użytkownika klienta do korzystania z tych wartości właściwości w ramach <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> metoda unikając [wyścigu](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) jeśli kierunek klienta nie jest zainteresowany przewijanie staje się aktywowany.  
+- Jeśli <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>  =  <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> następnie powinna być ustawiona na 100% i powinna być ustawiona na <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. `false` <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> Podobnie, jeśli <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty>  =  <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>wartość powinna byćrówna100%ipowinnabyćustawionanawartość.<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> `false` Dzięki temu klient automatyzacji interfejsu użytkownika może używać tych wartości właściwości w metodzie, <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> unikając [sytuacji wyścigu](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) , jeśli kierunek, w którym klient nie jest interesujący, zostanie aktywowany.  
   
-- <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> jest specyficzne dla ustawień regionalnych. Ustawienie HorizontalScrollPercent = 100,0 należy ustawić położenie przewijania formantu do równowartości pozycji po prawej stronie dla języków, takich jak angielski, które są odczytywane od lewej do prawej. Alternatywnie dla języków, takich jak arabski, który odczytywany po prawej do lewej, ustawienie HorizontalScrollPercent = 100,0 należy ustawić lokalizację przewiń do pierwszej pozycji.  
+- <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>jest specyficzne dla ustawień regionalnych. Ustawienie HorizontalScrollPercent = 100,0 musi ustawić lokalizację przewijania kontrolki na odpowiednik jej pozycji z prawej strony dla języków takich jak angielski, które odczytają od lewej do prawej. Alternatywnie, w przypadku języków takich jak arabski, które odczytują od prawej do lewej, Ustawienie HorizontalScrollPercent = 100,0 musi ustawiać lokalizację przewijania do pozycji z lewej strony.  
   
 <a name="Required_Members_for_IScrollProvider"></a>   
-## <a name="required-members-for-iscrollprovider"></a>Wymagane elementy IScrollProvider  
- Poniższe właściwości i metod wymaganych do implementowania <xref:System.Windows.Automation.Provider.IScrollProvider>.  
+## <a name="required-members-for-iscrollprovider"></a>Wymagane elementy członkowskie dla IScrollProvider  
+ Następujące właściwości i metody są wymagane do zaimplementowania <xref:System.Windows.Automation.Provider.IScrollProvider>.  
   
-|Wymagany|Typ elementu członkowskiego|Uwagi|  
+|Wymagany element członkowski|Typ elementu członkowskiego|Uwagi|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|Właściwość|Brak|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|Właściwość|Brak|  
@@ -57,18 +57,18 @@ Przykład formant przewijania, który nie korzysta z pasków przewijania
 |<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|Metoda|Brak|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|Metoda|Brak|  
   
- Ten wzorzec formantu nie ma żadnych skojarzonych zdarzeń.  
+ Ten wzorzec kontrolki nie ma skojarzonych zdarzeń.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Wyjątki  
- Dostawcy należy zgłaszać następujące wyjątki.  
+ Dostawcy muszą zgłosić następujące wyjątki.  
   
 |Typ wyjątku|Warunek|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> zgłasza ten wyjątek, jeśli kontrolka obsługuje <xref:System.Windows.Automation.ScrollAmount.SmallIncrement> wartości wyłącznie na poziomą lub pionową przewijania, ale <xref:System.Windows.Automation.ScrollAmount.LargeIncrement> wartość jest przekazywana.|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> zgłasza ten wyjątek, gdy wartość, która nie można przekonwertować na wartość o podwójnej precyzji jest przekazywany w.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> zgłasza ten wyjątek, gdy jest przekazywana wartość większą niż 100 lub mniejszą od 0 (z wyjątkiem -1, który jest odpowiednikiem <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>).|  
-|<xref:System.InvalidOperationException>|Zarówno <xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> i <xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> generują ten wyjątek, gdy podejmowana jest próba przewijanie w nieobsługiwany kierunek.|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>zgłasza ten wyjątek, Jeśli kontrolka <xref:System.Windows.Automation.ScrollAmount.SmallIncrement> obsługuje wartości wyłącznie dla przewijania poziomego lub pionowego <xref:System.Windows.Automation.ScrollAmount.LargeIncrement> , ale wartość jest przenoszona.|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>zgłasza ten wyjątek, gdy wartość, której nie można przekonwertować na Double, jest przenoszona.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>zgłasza ten wyjątek, gdy wartość większa niż 100 lub mniejsza od 0 jest przenoszona (z wyjątkiem-1, który jest <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>odpowiednikiem).|  
+|<xref:System.InvalidOperationException>|Oba <xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> te <xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> wyjątki i generują ten wyjątek, gdy podejmowana jest próba przewijania w nieobsługiwanym kierunku.|  
   
 ## <a name="see-also"></a>Zobacz także
 

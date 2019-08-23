@@ -7,19 +7,19 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-ms.openlocfilehash: d7500620aed1165ff365fee8529230ba252dbc4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fcd5cbe63a323a7509f5ff8c615364295c244d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673813"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920544"
 ---
-# <a name="add-element-for-switches"></a>\<Dodaj >, Element dla \<przełączników >
-Określa poziom, którego ustawiono przełącznikiem śledzenia.  
+# <a name="add-element-for-switches"></a>\<Dodaj element > dla \<przełączników >
+Określa poziom, w którym jest ustawiony przełącznik śledzenia.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.diagnostics>  
-\<przełączniki >  
+\<Przełączniki >  
 \<add>  
   
 ## <a name="syntax"></a>Składnia  
@@ -36,7 +36,7 @@ Określa poziom, którego ustawiono przełącznikiem śledzenia.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**Nazwa**|Atrybut wymagany.<br /><br /> Określa nazwę przełącznika. Wartość tego atrybutu odnosi się do *displayName* parametr, który jest przekazywany do konstruktora przełącznika.|  
+|**name**|Atrybut wymagany.<br /><br /> Określa nazwę przełącznika. Wartość tego atrybutu odpowiada parametrowi *DisplayName* , który jest przesyłany do konstruktora przełącznika.|  
 |**value**|Atrybut wymagany.<br /><br /> Określa poziom przełącznika.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -47,14 +47,14 @@ Określa poziom, którego ustawiono przełącznikiem śledzenia.
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`switches`|Zawiera przełączniki śledzenia i poziomu, gdzie są ustawione przełączniki śledzenia.|  
-|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.|  
+|`switches`|Zawiera przełączniki śledzenia i poziom, w którym są ustawione przełączniki śledzenia.|  
+|`system.diagnostics`|Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aby zmienić poziom o przełącznikiem śledzenia, należy umieścić go w pliku konfiguracji. Jeśli przełącznik <xref:System.Diagnostics.BooleanSwitch>, możesz je włączyć lub wyłączyć. Jeśli przełącznik <xref:System.Diagnostics.TraceSwitch>można przypisać różne poziomy, aby określić typy śledzenia i debugowania komunikaty wyjściowe aplikacji.  
+ Możesz zmienić poziom przełącznika śledzenia, umieszczając go w pliku konfiguracji. Jeśli przełącznik jest <xref:System.Diagnostics.BooleanSwitch>, możesz go włączyć i wyłączyć. Jeśli przełącznik jest <xref:System.Diagnostics.TraceSwitch>, można przypisać do niego różne poziomy, aby określić typy komunikatów śledzenia lub debugowania, które są wyprowadzane przez aplikację.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać  **\<Dodaj >** element, aby ustawić `General` przełącznikiem śledzenia do <xref:System.Diagnostics.TraceLevel> poziomu i włączyć `Data` przełącznikiem logiczna śledzenia.  
+ Poniższy przykład pokazuje, jak <xref:System.Diagnostics.TraceLevel> używać `Data` `General`  **\<elementu > Dodaj** , aby ustawić przełącznik śledzenia na poziomie i włączyć przełącznik logiczny śledzenia.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ Określa poziom, którego ustawiono przełącznikiem śledzenia.
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
-- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Schemat ustawień śledzenia i debugowania](index.md)

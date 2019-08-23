@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 49f4b5b4b3634df5e648b5208448d644168e9d19
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 513000169504473aa6dd46feaca214f58502ffd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566723"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912869"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Mapowanie nazw algorytmów na klasy kryptografii
 Istnieją cztery sposoby tworzenia obiektu kryptografii przez dewelopera przy użyciu Windows SDK:  
@@ -58,16 +58,16 @@ Istnieją cztery sposoby tworzenia obiektu kryptografii przez dewelopera przy u�
 </configuration>  
 ```  
   
- Możesz określić nazwę atrybutu w [\> < cryptoClass elementu](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) (w poprzednim przykładzie nazwa atrybutu `MySHA1Hash`). Wartość atrybutu w  **\<elemencie cryptoClass >** jest ciągiem, który jest wykorzystywany przez środowisko uruchomieniowe języka wspólnego do znajdowania klasy. Można użyć dowolnego ciągu, który spełnia wymagania określone w polu [Określanie w pełni kwalifikowanych nazw typów](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).  
+ Możesz określić nazwę atrybutu w [\> < cryptoClass elementu](./file-schema/cryptography/cryptoclass-element.md) (w poprzednim przykładzie nazwa atrybutu `MySHA1Hash`). Wartość atrybutu w  **\<elemencie cryptoClass >** jest ciągiem, który jest wykorzystywany przez środowisko uruchomieniowe języka wspólnego do znajdowania klasy. Można użyć dowolnego ciągu, który spełnia wymagania określone w polu [Określanie w pełni kwalifikowanych nazw typów](../reflection-and-codedom/specifying-fully-qualified-type-names.md).  
   
- Wiele nazw algorytmów można zamapować na tę samą klasę. Element nameEntry > mapuje klasę na jedną przyjazną nazwę algorytmu. [ \<](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) Atrybut **name** może być ciągiem, który jest używany podczas wywoływania metody **System. Security. Cryptography. obiektu CryptoConfig.** isfromname lub nazwy <xref:System.Security.Cryptography> klasy abstrakcyjnej kryptografii w przestrzeni nazw. Wartość atrybutu **Class** to nazwa atrybutu w  **\<elemencie cryptoClass >** .  
+ Wiele nazw algorytmów można zamapować na tę samą klasę. Element nameEntry > mapuje klasę na jedną przyjazną nazwę algorytmu. [ \<](./file-schema/cryptography/nameentry-element.md) Atrybut **name** może być ciągiem, który jest używany podczas wywoływania metody **System. Security. Cryptography. obiektu CryptoConfig.** isfromname lub nazwy <xref:System.Security.Cryptography> klasy abstrakcyjnej kryptografii w przestrzeni nazw. Wartość atrybutu **Class** to nazwa atrybutu w  **\<elemencie cryptoClass >** .  
   
 > [!NOTE]
->  Algorytm SHA1 można uzyskać, wywołując <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> metodę or metody **Security. obiektu CryptoConfig. setfrom ("SHA1")** . Każda metoda gwarantuje tylko, że zwraca obiekt, który implementuje algorytm SHA1. Nie ma potrzeby mapowania poszczególnych przyjaznych nazw algorytmów do tej samej klasy w pliku konfiguracji.  
+> Algorytm SHA1 można uzyskać, wywołując <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> metodę or metody **Security. obiektu CryptoConfig. setfrom ("SHA1")** . Każda metoda gwarantuje tylko, że zwraca obiekt, który implementuje algorytm SHA1. Nie ma potrzeby mapowania poszczególnych przyjaznych nazw algorytmów do tej samej klasy w pliku konfiguracji.  
   
  Aby uzyskać listę domyślnych nazw i klas, do których są mapowane, zobacz <xref:System.Security.Cryptography.CryptoConfig>.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)
-- [Konfigurowanie klas kryptografii](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Usługi kryptograficzne](../../standard/security/cryptographic-services.md)
+- [Konfigurowanie klas kryptografii](configure-cryptography-classes.md)

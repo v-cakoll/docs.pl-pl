@@ -6,18 +6,18 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 86ac3f7d8f49f4817f725aa9a9aa68045285e826
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ec48b9ff5a9ebe352bf0361b9e52ee0fb48576a8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590004"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923978"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Instrukcje: Wykonaj iterację drzewa katalogów (C# Przewodnik programowania)
 Fraza "Iterowanie drzewa katalogów" oznacza, że uzyskuje dostęp do każdego pliku w każdym zagnieżdżonym podkatalogu w określonym folderze głównym, na dowolną głębokość. Nie trzeba otwierać każdego pliku. Można po prostu pobrać nazwę pliku lub podkatalogu jako `string`lub można pobrać dodatkowe informacje w postaci <xref:System.IO.FileInfo?displayProperty=nameWithType> obiektu lub <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> .  
   
 > [!NOTE]
->  W systemie Windows terminy "katalog" i "folder" są używane zamiennie. Większość dokumentacji i tekstu interfejsu użytkownika używa terminu "folder", ale Biblioteka klas .NET Framework używa terminu "Directory".  
+> W systemie Windows terminy "katalog" i "folder" są używane zamiennie. Większość dokumentacji i tekstu interfejsu użytkownika używa terminu "folder", ale Biblioteka klas .NET Framework używa terminu "Directory".  
   
  W najprostszym przypadku, w którym wiadomo, że masz uprawnienia dostępu do wszystkich katalogów w określonym katalogu głównym, możesz użyć `System.IO.SearchOption.AllDirectories` flagi. Ta flaga zwraca wszystkie zagnieżdżone podkatalogi zgodne z określonym wzorcem. Poniższy przykład pokazuje, jak używać tej flagi.  
   
@@ -34,7 +34,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Jeśli trzeba wykonać różne operacje na plikach i folderach, można modularyzacji te przykłady przez refaktoryzację operacji do oddzielnych funkcji, które można wywołać za pomocą pojedynczego delegata.  
   
 > [!NOTE]
->  Systemy plików NTFS mogą zawierać *punkty ponownej analizy* w postaci *punktów połączenia*, *linków symbolicznych*i *twardych linków*. Metody .NET Framework, takie jak <xref:System.IO.DirectoryInfo.GetFiles%2A> i <xref:System.IO.DirectoryInfo.GetDirectories%2A> , nie zwracają żadnych podkatalogów w punkcie ponownej analizy. To zachowanie chroni przed ryzykiem wprowadzenia do pętli nieskończonej, gdy dwa punkty ponownej analizy odnoszą się do siebie. Ogólnie rzecz biorąc, należy zachować szczególną ostrożność podczas postępowania z punktami ponownej analizy, aby upewnić się, że nie można przypadkowo modyfikować ani usuwać plików. Jeśli potrzebujesz precyzyjnej kontroli nad punktami ponownej analizy, użyj wywołania platformy lub kodu natywnego, aby bezpośrednio wywołać odpowiednie metody systemu plików Win32.  
+> Systemy plików NTFS mogą zawierać *punkty ponownej analizy* w postaci *punktów połączenia*, *linków symbolicznych*i *twardych linków*. Metody .NET Framework, takie jak <xref:System.IO.DirectoryInfo.GetFiles%2A> i <xref:System.IO.DirectoryInfo.GetDirectories%2A> , nie zwracają żadnych podkatalogów w punkcie ponownej analizy. To zachowanie chroni przed ryzykiem wprowadzenia do pętli nieskończonej, gdy dwa punkty ponownej analizy odnoszą się do siebie. Ogólnie rzecz biorąc, należy zachować szczególną ostrożność podczas postępowania z punktami ponownej analizy, aby upewnić się, że nie można przypadkowo modyfikować ani usuwać plików. Jeśli potrzebujesz precyzyjnej kontroli nad punktami ponownej analizy, użyj wywołania platformy lub kodu natywnego, aby bezpośrednio wywołać odpowiednie metody systemu plików Win32.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak przeprowadzić drzewo katalogów za pomocą rekursji. Podejście cykliczne to elegancki, ale może powodować wyjątek przepełnienia stosu, jeśli drzewo katalogów jest duże i głęboko zagnieżdżone.  

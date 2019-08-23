@@ -1,16 +1,16 @@
 ---
-title: <extensions> Sekcja
+title: <extensions>Paragraf
 ms.date: 03/30/2017
 ms.assetid: 53a59fb6-dede-47ec-9384-b3c2e8f0c1fa
-ms.openlocfilehash: 0f77f621bbf9bbef00b206ef43a174f6f69364d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c8b5fe6eef1863ee3f02cb761a3aac61406e446
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673007"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918969"
 ---
-# <a name="extensions-section"></a>\<Rozszerzenia > sekcji
-Ta sekcja konfiguracji zawiera Kolekcja rozszerzeń, które umożliwiają użytkownikowi utworzenie powiązań zdefiniowanych przez użytkownika, zachowania i inne aspekty rozszerzeń.  
+# <a name="extensions-section"></a>\<sekcja > rozszerzeń
+Ta sekcja konfiguracji zawiera kolekcję rozszerzeń, które umożliwiają użytkownikowi tworzenie powiązań zdefiniowanych przez użytkownika, zachowań i innych aspektów rozszerzeń.  
   
 \<system.ServiceModel>  
   
@@ -41,13 +41,13 @@ Ta sekcja konfiguracji zawiera Kolekcja rozszerzeń, które umożliwiają użytk
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<behaviorExtensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)|Ta sekcja zawiera elementy podrzędne, które określają zachowanie rozszerzeń, które umożliwiają użytkownikowi dostosowywanie zachowania usługi lub punktu końcowego.|  
-|[\<bindingElementExtensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md)|Ta sekcja umożliwia zastosowanie elementu niestandardowego powiązania z maszyny lub pliku konfiguracji aplikacji.|  
-|[\<bindingExtensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindingextensions.md)|Ta sekcja zawiera elementy podrzędne, określających rozszerzeń powiązania, które umożliwiają użytkownikowi dostosowywanie powiązania.|  
-|[\<endpointExtensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointextensions.md)|Ta sekcja zawiera elementy podrzędne, które rejestruje standardowych punktów końcowych.|  
+|[\<behaviorExtensions >](behaviorextensions.md)|Ta sekcja zawiera elementy podrzędne, które określają rozszerzenia zachowań, które umożliwiają użytkownikowi dostosowanie zachowań usługi lub punktów końcowych.|  
+|[\<bindingElementExtensions >](bindingelementextensions.md)|Ta sekcja umożliwia korzystanie z niestandardowego elementu powiązania z pliku konfiguracji komputera lub aplikacji.|  
+|[\<bindingExtensions >](bindingextensions.md)|Ta sekcja zawiera elementy podrzędne, które określają rozszerzenia powiązań, które umożliwiają użytkownikowi dostosowanie powiązań.|  
+|[\<endpointExtensions >](endpointextensions.md)|Ta sekcja zawiera elementy podrzędne, które rejestrują standardowe punkty końcowe.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|System.ServiceModel|Element główny wszystkich elementów konfiguracji programu WCF.|
+|System.ServiceModel|Element główny wszystkich elementów konfiguracji WCF.|

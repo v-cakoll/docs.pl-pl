@@ -2,19 +2,19 @@
 title: <userPrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-ms.openlocfilehash: 9e7b845d39495dba1d1a19af95faf308b8b8c0fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 423a3249a9298675517f0cff08566c3735fa35f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769814"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940511"
 ---
 # <a name="userprincipalname"></a>\<userPrincipalName>
-Określa główną nazwę użytkownika (UPN) usługi uwierzytelniania przez klienta.  
+Określa główną nazwę użytkownika (UPN) usługi do uwierzytelnienia przez klienta.  
   
- Aby uzyskać więcej informacji na temat ustawiania nazwy UPN, zobacz [uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Aby uzyskać więcej informacji na temat ustawiania nazwy UPN, zobacz [tożsamość usługi i uwierzytelnianie](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
-\<identity>  
+\<> tożsamości  
 \<userPrincipalName>  
   
 ## <a name="syntax"></a>Składnia  
@@ -24,13 +24,13 @@ Określa główną nazwę użytkownika (UPN) usługi uwierzytelniania przez klie
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|value|Nazwa konta użytkownika (czasami określane jako nazwa loginu użytkownika) i nazwa domeny identyfikującej domenę, w którym znajduje się konto użytkownika. Jest to standardowy używana do logowania do domeny Windows. Format to: someone@example.com (podobnie jak adres e-mail).|  
+|value|Nazwa konta użytkownika (czasem określana jako nazwa logowania użytkownika) i nazwa domeny identyfikującej domenę, w której znajduje się konto użytkownika. Jest to standardowe użycie logowania do domeny systemu Windows. Format to: someone@example.com (jak w przypadku adresu e-mail).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -39,13 +39,13 @@ Określa główną nazwę użytkownika (UPN) usługi uwierzytelniania przez klie
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Określa tożsamość usługi, aby zostać uwierzytelnionym przez klienta.|  
+|[\<> tożsamości](identity.md)|Określa tożsamość usługi do uwierzytelnienia przez klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
- Bezpieczne klienta Windows Communication Foundation (WCF), który nawiązuje połączenie z punktem końcowym o tej tożsamości używa nazwy UPN, podczas przeprowadzania uwierzytelniania SSPI z punktem końcowym.  
+ Bezpieczny Windows Communication Foundation (WCF), który nawiązuje połączenie z punktem końcowym z tą tożsamością używa nazwy UPN podczas uwierzytelniania SSPI przy użyciu punktu końcowego.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod konfiguracji określa nazwy UPN usługi, aby zostać uwierzytelnionym przez klienta.  
+ Poniższy kod konfiguracji określa nazwę UPN usługi do uwierzytelnienia przez klienta.  
   
 ```xml  
 <identity>
@@ -59,5 +59,5 @@ Określa główną nazwę użytkownika (UPN) usługi uwierzytelniania przez klie
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.UpnEndpointIdentity>
-- [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Uwierzytelnianie i tożsamość usług](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<> tożsamości](identity.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: f9ea4acfc7ba86d3424bb11af0de685651f99c61
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ad928fb223ce22c65bb86a78c7d4cd006651a2d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796756"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950756"
 ---
 # <a name="pack-uris-in-wpf"></a>Pakuj URI w WPF
 
@@ -85,7 +85,7 @@ W poniższych sekcjach opisano sposób tworzenia pakietów [!INCLUDE[TLA2#tla_ur
 
 ## <a name="resource-file-pack-uris"></a>Identyfikatory URI pakietu plików zasobów
 
-Pliki zasobów są konfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` elementy i są kompilowane do zestawów. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]obsługuje konstruowanie pakietu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , który może służyć do identyfikowania plików zasobów, które są kompilowane do zestawu lokalnego lub kompilowane do zestawu, do którego odwołuje się zestaw lokalny.
+Pliki zasobów są konfigurowane jako elementy `Resource` programu MSBuild i są kompilowane do zestawów. WPF obsługuje konstruowanie identyfikatorów URI pakietów, których można użyć do identyfikowania plików zasobów, które są kompilowane do zestawu lokalnego lub kompilowane do zestawu, do którego odwołuje się zestaw lokalny.
 
 <a name="Local_Assembly_Resource_File"></a>
 
@@ -186,9 +186,9 @@ W poniższym przykładzie przedstawiono pakiet [!INCLUDE[TLA2#tla_uri](../../../
 
 ## <a name="page-files"></a>Pliki stronicowania
 
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]pliki, które są skonfigurowane [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] jako `Page` elementy, są kompilowane do zestawów w taki sam sposób jak pliki zasobów. W związku z [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` tym elementy można zidentyfikować przy użyciu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] pakietu dla plików zasobów.
+Pliki XAML, które są skonfigurowane jako `Page` elementy programu MSBuild, są kompilowane do zestawów w taki sam sposób jak pliki zasobów. W związku z tym `Page` elementy MSBuild można zidentyfikować przy użyciu identyfikatorów URI pakietów dla plików zasobów.
 
-Typy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plików, które są powszechnie skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementy, mają jeden z następujących jako element główny:
+Typy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plików, które są powszechnie skonfigurowane jako elementy programu`Page` MSBuild, mają jeden z następujących elementów jako ich element główny:
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 

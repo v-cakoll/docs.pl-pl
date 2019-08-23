@@ -12,28 +12,28 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: a868632d6868e6a82c4fa135444279b8ef4dc7af
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 87ad4c957ac5b99438684d398a0c5ad7d126c406
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301412"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925044"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Instrukcje: dodawanie do lub usuwanie z kolekcji kontrolek w czasie wykonywania
-Typowe zadania podczas tworzenia aplikacji są dodawanie formantów do i usuwanie kontrolek z dowolną kontrolkę kontenera na formularzach (takie jak <xref:System.Windows.Forms.Panel> lub <xref:System.Windows.Forms.GroupBox> formantu lub nawet formularza). W czasie projektowania formanty można przeciągać bezpośrednio okno panel lub grupę. W czasie wykonywania, obsługa tych formantów `Controls` kolekcji, która przechowuje informacje o kontrolki są umieszczane na nich.  
+Typowe zadania związane z tworzeniem aplikacji to dodawanie kontrolek do i usuwanie kontrolek z dowolnych kontrolek kontenera w <xref:System.Windows.Forms.Panel> formularzach (takich jak lub <xref:System.Windows.Forms.GroupBox> kontrolka, a nawet do samego formularza). W czasie projektowania formanty mogą być przeciągane bezpośrednio do panelu lub pola grupy. W czasie wykonywania te kontrolki utrzymują `Controls` kolekcję, która śledzi umieszczanie na nich formantów.  
   
 > [!NOTE]
->  Poniższy przykładowy kod stosuje się do żadnego formantu, który przechowuje kolekcję zawarte w niej kontrolki.  
+> Poniższy przykład kodu ma zastosowanie do każdej kontrolki, która zachowuje kolekcję kontrolek.  
   
-### <a name="to-add-a-control-to-a-collection-programmatically"></a>Aby programowo dodać formant do kolekcji  
+### <a name="to-add-a-control-to-a-collection-programmatically"></a>Aby programowo dodać kontrolkę do kolekcji  
   
-1. Utwórz wystąpienie kontrolki, które mają zostać dodane.  
+1. Utwórz wystąpienie kontrolki, która ma zostać dodana.  
   
-2. Ustaw właściwości nowego formantu.  
+2. Ustaw właściwości nowej kontrolki.  
   
-3. Dodać formant do `Controls` kolekcji do kontrolki nadrzędnej.  
+3. Dodaj kontrolkę do `Controls` kolekcji kontrolki nadrzędnej.  
   
-     Poniższy przykład kodu pokazuje, jak utworzyć wystąpienie <xref:System.Windows.Forms.Button> kontroli. Wymaga formularza z <xref:System.Windows.Forms.Panel> kontroli i że trwa tworzenie metody obsługi zdarzeń dla przycisku, `NewPanelButton_Click`, już istnieje.  
+     Poniższy przykład kodu pokazuje, jak utworzyć wystąpienie <xref:System.Windows.Forms.Button> kontrolki. Wymaga formularza z <xref:System.Windows.Forms.Panel> kontrolką i że metoda obsługi zdarzeń dla `NewPanelButton_Click`tworzonego przycisku już istnieje.  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -64,13 +64,13 @@ Typowe zadania podczas tworzenia aplikacji są dodawanie formantów do i usuwani
     }  
     ```  
   
-### <a name="to-remove-controls-from-a-collection-programmatically"></a>Aby programowo usunąć formanty z kolekcji  
+### <a name="to-remove-controls-from-a-collection-programmatically"></a>Aby programowo usunąć kontrolki z kolekcji  
   
-1. Usuń obsługi zdarzenia ze zdarzenia. W języku Visual Basic należy używać [RemoveHandler — instrukcja](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) — słowo kluczowe; w C#, użyj [-= — operator](~/docs/csharp/language-reference/operators/subtraction-operator.md).  
+1. Usuń procedurę obsługi zdarzeń ze zdarzenia. W Visual Basic, użyj słowa kluczowego [RemoveHandler instrukcji](../../../visual-basic/language-reference/statements/removehandler-statement.md) ; w C#programie Użyj [operatora-=](../../../csharp/language-reference/operators/subtraction-operator.md).  
   
-2. Użyj `Remove` metodę, aby usunąć żądanego formant na panelu `Controls` kolekcji.  
+2. Użyj metody, aby usunąć żądany formant z `Controls` kolekcji panelu. `Remove`  
   
-3. Wywołaj <xref:System.Windows.Forms.Control.Dispose%2A> metodę, aby zwolnić wszystkie zasoby, które są używane przez kontrolkę.  
+3. Wywołaj <xref:System.Windows.Forms.Control.Dispose%2A> metodę, aby zwolnić wszystkie zasoby używane przez formant.  
   
     ```vb  
     Public Sub RemoveControl()  

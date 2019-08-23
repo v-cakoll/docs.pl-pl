@@ -2,15 +2,15 @@
 title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 589bae5d1f91e0424eb19cee62fe758aa7846191
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63cef2b85aa57b5c1c0e0add1794ebedc73d96c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772336"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933050"
 ---
 # <a name="nettcp"></a>\<net.tcp>
-Określa ustawienia konfiguracji sieci. TCP usługi udostępniania portów, która umożliwia wielu procesom współużytkowanie tego samego portu TCP.  
+Określa ustawienia konfiguracji dla sieci. Usługa udostępniania portów TCP, która umożliwia wielu procesom współużytkowanie tego samego portu TCP.  
   
  \<system.serviceModel.activation>  
 \<net.tcp>  
@@ -52,29 +52,29 @@ Określa ustawienia konfiguracji sieci. TCP usługi udostępniania portów, któ
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`listenBacklog`|Liczba całkowita określająca maksymalną liczbę oczekujących połączeń, które są akceptowane z udostępnionego połączenia, ale jeszcze nie są wysyłane do usługi Windows Communication Foundation (WCF). Wartość domyślna wynosi 10.|  
-|`maxPendingAccepts`|Liczba całkowita określająca maksymalną liczbę oczekujących współbieżnych wątków na punkcie końcowym nasłuchiwania dla usługi udostępniania. Wartość domyślna to 2.|  
-|`MaxPendingConnections`|Maksymalna liczba połączeń, które mogą mieć odbiornika, oczekuje na zatwierdzenie przez aplikację. Po przekroczeniu tej wartości limitu przydziału na nowe połączenia przychodzące są odrzucane zamiast oczekuje na zatwierdzenie. Połączenie funkcji, takich jak zabezpieczenia komunikatów może spowodować klienta otworzyć więcej niż jedno połączenie. Administratorzy usługi należy uwzględnić w przypadku tych dodatkowych połączeń, podczas ustawiania tej wartości limitu przydziału. Wartość domyślna wynosi 10.|  
-|`receiveTimeout`|Element <xref:System.TimeSpan> , który określa limit czasu dla odczytu danych z ramek i wykonania przekazania połączenia z połączeń podkreślonych. Wartość domyślna to "00: 00:10".|  
-|`teredoEnabled`|Wartość logiczna wskazująca, czy port udostępnianej usługi używa usługi Microsoft Teredo aby nasłuchiwać portów TCP w imieniu usług WCF. Wartość domyślna to `false`.|  
+|`listenBacklog`|Liczba całkowita określająca maksymalną liczbę oczekujących połączeń, które są akceptowane z udostępnionego połączenia, ale nie są jeszcze wysyłane do usług Windows Communication Foundation (WCF). Wartość domyślna to 10.|  
+|`maxPendingAccepts`|Liczba całkowita określająca maksymalną liczbę oczekujących współbieżnych wątków w punkcie końcowym nasłuchiwania dla usługi udostępniania. Wartość domyślna to 2.|  
+|`MaxPendingConnections`|Maksymalna liczba połączeń, które odbiornik może oczekiwać na akceptację przez aplikację. Po przekroczeniu tej wartości przydziału nowe połączenia przychodzące są usuwane, a nie czekają na ich zaakceptowanie. Funkcje połączeń, takie jak zabezpieczenia komunikatów, mogą spowodować otwarcie więcej niż jednego połączenia przez klienta. Administratorzy usługi powinni uwzględnić te dodatkowe połączenia podczas ustawiania wartości tego przydziału. Wartość domyślna to 10.|  
+|`receiveTimeout`|Wartość <xref:System.TimeSpan> określająca limit czasu odczytu danych ramek i wykonywania operacji wysyłania połączenia z podkreśleń. Wartość domyślna to "00:00:10".|  
+|`teredoEnabled`|Wartość logiczna wskazująca, czy usługa udostępniania portów używa usługi Microsoft Teredo do nasłuchiwania na portach TCP w imieniu usług WCF. Wartość domyślna to `false`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Kolekcja elementów konfiguracji, które zawierają `securityIdentifier` atrybutu, aby określić konta użytkowników dla procesów, które prowadzą hosting usług WCF i przyznano im dostęp do połączenia z usługą udostępniania.|  
+|[\<allowAccounts>](allowaccounts.md)|Kolekcja elementów konfiguracji, które zawierają `securityIdentifier` atrybut służący do określania kont użytkowników dla procesów, które obsługują usługi WCF i mają dostęp do połączenia z usługą udostępniania.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Zawiera ustawienia konfiguracji dla procesu odbiornika SMSvcHost.exe.|  
+|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|Zawiera ustawienia konfiguracji dla procesu odbiornika SMSvcHost. exe.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji na temat współużytkowania portów, zobacz [współużytkowania portów Net.TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md). Aby dowiedzieć się, jak skonfigurować port udostępnianej usługi, zobacz [konfigurowania usługi udostępniania portów Net.TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
+ Aby uzyskać więcej informacji na temat udostępniania portów, zobacz [net. TCP — Udostępnianie portów](../../../wcf/feature-details/net-tcp-port-sharing.md). Aby dowiedzieć się, jak skonfigurować usługę udostępniania portów, zobacz [Konfigurowanie usługi udostępniania portów Net. TCP](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>
-- [Współużytkowanie portów w składniku Net.TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [Konfigurowanie usługi współużytkowania portów Net.TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+- [Współużytkowanie portów w składniku Net.TCP](../../../wcf/feature-details/net-tcp-port-sharing.md)
+- [Konfigurowanie usługi współużytkowania portów Net.TCP](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

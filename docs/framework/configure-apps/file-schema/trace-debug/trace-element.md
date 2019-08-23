@@ -10,19 +10,19 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 5faf352dce2a459a999b3cf54209f6bd9793bde0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd90d271591a47849b3f70aea50cbe909b6fd613
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673800"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920411"
 ---
-# <a name="trace-element"></a>\<trace> Element
-Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunikatów śledzenia.  
+# <a name="trace-element"></a>\<Element > śledzenia
+Zawiera detektory, które zbierają, przechowują i rozsyłają komunikaty śledzenia.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.diagnostics>  
-\<trace>  
+\<> śledzenia  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,39 +39,39 @@ Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunika
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`autoflush`|Atrybut opcjonalny.<br /><br /> Określa, czy obiekty nasłuchujące śledzenia automatycznie opróżniania buforu wyjściowego po każdej operacji zapisu.|  
-|`indentsize`|Atrybut opcjonalny.<br /><br /> Określa liczbę spacji wcięcia.|  
-|`useGlobalLock`|Atrybut opcjonalny.<br /><br /> Wskazuje, czy należy użyć globalnego blokady.|  
+|`autoflush`|Atrybut opcjonalny.<br /><br /> Określa, czy odbiorniki śledzenia automatycznie opróżniają bufor wyjściowy po każdej operacji zapisu.|  
+|`indentsize`|Atrybut opcjonalny.<br /><br /> Określa liczbę spacji do wcięcia.|  
+|`useGlobalLock`|Atrybut opcjonalny.<br /><br /> Wskazuje, czy globalna blokada powinna być używana.|  
   
-## <a name="autoflush-attribute"></a>AutoFlush atrybutu  
+## <a name="autoflush-attribute"></a>AutoFlush — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`false`|Nie opróżnia automatycznie bufor wyjściowy. Domyślnie włączone.|  
+|`false`|Nie opróżnia bufora wyjściowego. Domyślnie włączone.|  
 |`true`|Automatycznie opróżnia bufor wyjściowy.|  
   
 ## <a name="usegloballock-attribute"></a>useGlobalLock Attribute  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`false`|Nie używa globalnej blokady, jeśli odbiornik jest bezpieczny wątkowo; w przeciwnym razie używa globalnego blokady.|  
-|`true`|Używa globalnych blokady niezależnie od tego, czy odbiornik jest bezpieczny dla wątków. Domyślnie włączone.|  
+|`false`|Nie używa blokady globalnej, jeśli odbiornik jest bezpieczny wątkowo; w przeciwnym razie używa blokady globalnej.|  
+|`true`|Używa blokady globalnej niezależnie od tego, czy odbiornik jest bezpieczny wątkowo. Domyślnie włączone.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Określa odbiornik, który zbiera, magazynów i przekazuje komunikaty.|  
+|[\<> odbiorników](listeners-element-for-trace.md)|Określa odbiornik, który zbiera, przechowuje i kieruje komunikaty.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.|  
+|`system.diagnostics`|Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać `<trace>` elementu do dodania odbiornika `MyListener` do `Listeners` kolekcji. `MyListener` Tworzy plik o nazwie `MyListener.log` i zapisuje dane wyjściowe do pliku. `useGlobalLock` Ma ustawioną wartość atrybutu `false`, co powoduje, że globalne blokady nie powinna być używana, jeśli odbiornik śledzenia jest bezpieczny dla wątków. `autoflush` Ma ustawioną wartość atrybutu `true`, co powoduje, że odbiornik śledzenia można zapisać do pliku, niezależnie od tego, czy <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> metoda jest wywoływana. `indentsize` Atrybut jest ustawiony na wartość 0 (zero), co powoduje, że odbiornika wcięcia zero miejsca do magazynowania podczas <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> metoda jest wywoływana.  
+ Poniższy przykład pokazuje, jak użyć elementu, `<trace>` aby dodać odbiornik `MyListener` do `Listeners` kolekcji. `MyListener`tworzy plik o nazwie `MyListener.log` i zapisuje dane wyjściowe do pliku. Atrybut jest ustawiony na `false`, co powoduje, że globalna blokada nie zostanie użyta, jeśli odbiornik śledzenia jest bezpieczny wątkowo. `useGlobalLock` Atrybut jest ustawiony na `true`, co powoduje, że odbiornik śledzenia ma zapisywać do pliku bez względu na <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> to, czy metoda jest wywoływana. `autoflush` Atrybut jest ustawiony na 0 (zero), co powoduje, że odbiornik ma wcięcie zerowej spacji, <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> gdy wywoływana jest metoda. `indentsize`  
   
 ```xml  
 <configuration>  
@@ -91,4 +91,4 @@ Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunika
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Schemat ustawień śledzenia i debugowania](index.md)

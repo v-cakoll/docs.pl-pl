@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
-ms.openlocfilehash: 131562e9ee0fbfde8c94f580bcb6d452918f42ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b98c5e6ea49695015eb566ca2176b23c5260017a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037586"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928714"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>Instrukcje: Pobieranie informacji jako tylko do odczytu
-Jeśli nie zamierzasz zmienić dane, możesz zwiększyć wydajność zapytań przez wyszukiwanie wyników tylko do odczytu.  
+Jeśli nie zamierzasz zmieniać danych, możesz zwiększyć wydajność zapytań, wyszukując wyniki tylko do odczytu.  
   
- Implementowanie przetwarzania tylko do odczytu, ustawiając <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> do `false`.  
+ Przetwarzanie w trybie tylko do odczytu jest implementowane `false`przez ustawienie <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> do.  
   
 > [!NOTE]
->  Gdy <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> ustawiono `false`, <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> niejawnie ustawiono `false`.  
+> Gdy <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> jest ustawiona na `false`, <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> jest niejawnie ustawiona `false`na.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod pobiera kolekcję tylko do odczytu dat zatrudnienia pracownika.  
+ Poniższy kod pobiera kolekcję dat zatrudnienia pracowników w trybie tylko do odczytu.  
   
  [!code-csharp[DLinqQuerying#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#2)]
  [!code-vb[DLinqQuerying#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#2)]  

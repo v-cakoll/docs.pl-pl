@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 363410baea1706211acaa639f1704e91230723a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62760cb9fe5832ee018ebdebf6275ea61691c738
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592732"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927802"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Praca z zestawami i globalną pamięcią podręczną zestawów
-Jeśli zestaw ma być współużytkowany przez kilka aplikacji, można go zainstalować w globalnej pamięci podręcznej zestawów. Każdy komputer z zainstalowanym środowiskiem uruchomieniowym języka wspólnego posiada tę pamięć podręczną kodu dla całego komputera. Global assembly cache przechowuje zestawy specjalnie na potrzeby być współużytkowane przez wiele aplikacji na komputerze. Aby zestaw można było zainstalować w globalnej pamięci podręcznej zestawów, musi mieć silną nazwę.  
+Jeśli zestaw ma być współużytkowany przez kilka aplikacji, można go zainstalować w globalnej pamięci podręcznej zestawów. Każdy komputer z zainstalowanym środowiskiem uruchomieniowym języka wspólnego posiada tę pamięć podręczną kodu dla całego komputera. Globalna pamięć podręczna zestawów przechowuje zestawy specjalnie wyznaczonych do współużytkowania przez kilka aplikacji na komputerze. Aby zestaw można było zainstalować w globalnej pamięci podręcznej zestawów, musi mieć silną nazwę.  
   
 > [!NOTE]
->  Zestawy umieszczone w globalnej pamięci podręcznej zestawów muszą mieć taką samą nazwę zestawu i pliku (bez rozszerzenia pliku). Na przykład zestaw o nazwie myAssembly musi mieć nazwę pliku myAssembly.exe lub myAssembly.dll.  
+> Zestawy umieszczone w globalnej pamięci podręcznej zestawów muszą mieć taką samą nazwę zestawu i pliku (bez rozszerzenia pliku). Na przykład zestaw o nazwie myAssembly musi mieć nazwę pliku myAssembly.exe lub myAssembly.dll.  
   
  Udostępnianie zestawów poprzez instalowanie ich w globalnej pamięci podręcznej zestawów należy stosować tylko w razie potrzeby. Ogólna wytyczna stanowi, iż zależności zestawów powinny pozostawać poufne, a zestawy należy umieszczać w katalogu aplikacji, chyba że współużytkowanie zestawu jest wyraźnie wymagane. Ponadto nie trzeba instalować zestawów w globalnej pamięci podręcznej zestawów, aby je udostępnić usłudze międzyoperacyjnej modelu COM lub kodowi niezarządzanemu.  
   
@@ -33,9 +33,9 @@ Jeśli zestaw ma być współużytkowany przez kilka aplikacji, można go zainst
   
 - Bezpieczeństwo plików.  
   
-     Administratorzy często chronią główny katalog systemowy przy użyciu listy kontroli dostępu (ACL), która decyduje o uprawnieniach zapisu i wykonywania. Ponieważ globalna pamięć podręczna zestawów jest instalowana w głównym katalogu systemowym, dziedziczy listę kontroli dostępu tego katalogu. Zaleca się, że tylko użytkownicy z uprawnieniami administratora mogła usunąć pliki z globalnej pamięci podręcznej.  
+     Administratorzy często chronią główny katalog systemowy przy użyciu listy kontroli dostępu (ACL), która decyduje o uprawnieniach zapisu i wykonywania. Ponieważ globalna pamięć podręczna zestawów jest instalowana w głównym katalogu systemowym, dziedziczy listę kontroli dostępu tego katalogu. Zaleca się, aby tylko użytkownicy z uprawnieniami administratora mogli usuwać pliki z globalnej pamięci podręcznej zestawów.  
   
-- Przechowywanie wersji obok siebie.  
+- Przechowywanie wersji równoległych.  
   
      W globalnej pamięci podręcznej zestawów można przechowywać wiele kopii zestawów o takiej samej nazwie, ale różnych informacjach o wersji.  
   
@@ -46,14 +46,14 @@ Jeśli zestaw ma być współużytkowany przez kilka aplikacji, można go zainst
  Istnieją też scenariusze, w których nie należy jawnie instalować zestawów w globalnej pamięci podręcznej zestawów. Umieszczenie w tej pamięci jednego z zestawów tworzących aplikację sprawi, że nie będzie już można zreplikować ani zainstalować aplikacji przy użyciu polecenia XCOPY kopiującego katalog aplikacji. W takim przypadku należy również przenieść zestaw do globalnej pamięci podręcznej zestawów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Instalowanie zestawu w globalnej pamięci podręcznej](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+ [Instrukcje: Instalowanie zestawu w globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
  Opis sposobów instalowania zestawu w globalnej pamięci podręcznej zestawów.  
   
- [Instrukcje: Wyświetlanie zawartości globalnej pamięci podręcznej](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
- Opis sposobu użycia [Gacutil.exe (Global Assembly Cache Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) do wyświetlania zawartości globalnej pamięci podręcznej.  
+ [Instrukcje: Wyświetlanie zawartości globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+ Wyjaśnia, jak używać programu [Gacutil. exe (Global Assembly Cache Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) do wyświetlania zawartości globalnej pamięci podręcznej zestawów.  
   
- [Instrukcje: Usuwanie zestawu z globalnej pamięci podręcznej](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
- Opis sposobu użycia [Gacutil.exe (Global Assembly Cache Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) można usunąć zestawu z globalnej pamięci podręcznej.  
+ [Instrukcje: Usuwanie zestawu z globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+ Wyjaśnia, jak używać programu [Gacutil. exe (Global Assembly Cache Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) do usuwania zestawu z globalnej pamięci podręcznej zestawów.  
   
  [Używanie obsługiwanych składników z pamięcią Global Assembly Cache](../../../docs/framework/app-domains/use-serviced-components-with-the-gac.md)  
  Wyjaśnienie, dlaczego obsługiwane składniki (zarządzanie składniki modelu COM+) należy umieszczać w globalnej pamięci podręcznej zestawów.  
@@ -65,8 +65,8 @@ Jeśli zestaw ma być współużytkowany przez kilka aplikacji, można go zainst
  [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
  Opis globalnej pamięci podręcznej zestawów.  
   
- [Instrukcje: Wyświetlanie zawartości zestawu](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- Opis sposobu użycia [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Aby wyświetlić informacje o Microsoft intermediate language (MSIL) w zestawie.  
+ [Instrukcje: Wyświetl zawartość zestawu](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ Wyjaśnia, jak używać programu [Ildasm. exe (Il dezasembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) do wyświetlania informacji o języku pośrednim (MSIL) firmy Microsoft w zestawie.  
   
  [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  Wyjaśnienie, jak środowisko uruchomieniowe języka wspólnego lokalizuje i ładuje zestawy składające się na aplikację.  

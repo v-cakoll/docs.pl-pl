@@ -2,40 +2,40 @@
 title: Mechanizmy rozpoznawania elementów równorzędnych
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: de19e08c1c001076c56e26020584d17079f1a45f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0547bb37b03235c61f43cec365551438f7931ad1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038704"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909913"
 ---
 # <a name="peer-resolvers"></a>Mechanizmy rozpoznawania elementów równorzędnych
-Aby można było nawiązać siatki, węzeł równorzędny wymaga adresów IP innych węzłów. Adresy IP są pobierane, kontaktując się z usługi rozpoznawania nazw, która przyjmuje identyfikator siatki i zwraca listę adresów odpowiadającego do węzłów zarejestrowanych za pomocą tego identyfikatora określonej siatki. Mechanizm rozpoznawania przechowuje listę zarejestrowanych adresów, które tworzy się przez każdy węzeł w siatce, rejestracji w usłudze.  
+Aby można było połączyć się z siatką, węzeł równorzędny wymaga adresów IP innych węzłów. Adresy IP można uzyskać, kontaktując się z usługą rozpoznawania nazw, która pobiera identyfikator sieci i zwraca listę adresów odpowiadającą węzłom zarejestrowanym w określonym IDENTYFIKATORze sieci. Mechanizm rozwiązywania konfliktów zachowuje listę zarejestrowanych adresów tworzonych przez każdy węzeł sieci w rejestrze w usłudze.  
   
- Można określić za pośrednictwem której usługi PeerResolver `Resolver` właściwość <xref:System.ServiceModel.NetPeerTcpBinding>.  
+ Możesz określić, która usługa konkretna elementu PeerResolver ma być używana przez `Resolver` właściwość. <xref:System.ServiceModel.NetPeerTcpBinding>  
   
-## <a name="supported-peer-resolvers"></a>Mechanizmy rozpoznawania elementów równorzędnych obsługiwane  
- Kanał elementu równorzędnego obsługuje dwa rodzaje mechanizmów rozpoznawania: Protokół Instrumentacji zarządzania Windows (PNRP, Peer Name Resolution Protocol), niestandardowym programem rozpoznawania nazw usługi i.  
+## <a name="supported-peer-resolvers"></a>Obsługiwane rozpoznawania elementów równorzędnych  
+ Kanał równorzędny obsługuje dwa typy resolverów: Protokół rozpoznawania nazw równorzędnych (PNRP) i niestandardowe usługi programu rozpoznawania nazw.  
   
- Domyślnie kanał elementu równorzędnego korzysta z usługi rozpoznawania nazw równorzędnych PNRP odnajdywania elementów równorzędnych i sąsiadów w siatce. W przypadku sytuacji/platform gdzie PNRP jest niedostępna lub jest to możliwe Windows Communication Foundation (WCF) udostępnia usługę odnajdywania alternatywne, oparte na serwerze - <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Można także jawnie w celu zdefiniowania niestandardowego mechanizmu usługi przez napisanie klasę, która implementuje <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> interfejsu.  
+ Domyślnie kanał równorzędny używa usługi rozpoznawania równorzędnego PNRP do odnajdywania elementów równorzędnych i sąsiadów w sieci. W przypadku sytuacji/platform, w których usługa PNRP jest niedostępna lub jest nieosiągalna, Windows Communication Foundation (WCF) stanowi alternatywną <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>, opartą na serwerze usługę odnajdywania —. Możesz również jawnie zdefiniować niestandardową usługę programu rozpoznawania nazw, pisząc klasę, <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> która implementuje interfejs.  
   
-### <a name="peer-name-resolution-protocol-pnrp"></a>Protokołu rozpoznawania nazw równorzędnych (PNRP)  
- Protokół PNRP, domyślny mechanizm dla [!INCLUDE[wv](../../../../includes/wv-md.md)], to rozproszona, bez użycia serwera usługi rozpoznawania nazw. Protokół PNRP pozwala także na [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] , instalując pakiet zaawansowane sieci. Wszyscy klienci dwóch uruchomiona ta sama wersja PNRP można zlokalizować sobie nawzajem przy użyciu tego protokołu, pod warunkiem spełniają określone warunki (takie jak brak pośrednicząca zapora firmy). Należy pamiętać, że wersja PNRP współpracującym z [!INCLUDE[wv](../../../../includes/wv-md.md)] jest nowsza niż wersja zawarte w pakiecie zaawansowane sieci. Sprawdź Microsoft Download Center dla aktualizacji PNRP dla [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)].  
+### <a name="peer-name-resolution-protocol-pnrp"></a>Protokół rozpoznawania nazw równorzędnych (PNRP)  
+ Protokół PNRP, domyślny program rozpoznawania [!INCLUDE[wv](../../../../includes/wv-md.md)]nazw dla programu, to dystrybuowana, bezserwerowa usługa rozpoznawania nazw. Protokołu PNRP można używać również w [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] przypadku instalowania pakietu zaawansowanej sieci. Każdy klient z uruchomioną tą samą wersją protokołu PNRP może zlokalizować siebie nawzajem, pod warunkiem, że spełniają określone warunki (na przykład brak interwencji firmowej zapory). Należy zauważyć, że wersja protokołu PNRP dostarczana [!INCLUDE[wv](../../../../includes/wv-md.md)] z programem jest nowsza niż wersja zawarta w zaawansowanym pakiecie sieciowym. Zapoznaj się z centrum pobierania Microsoft, aby uzyskać [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]aktualizacje protokołu PNRP dla programu.  
   
-### <a name="custom-resolver-services"></a>Custom Resolver Services  
- Gdy usługa PNRP jest niedostępna lub mają pełną kontrolę nad kształtowaniem siatki, można użyć usługa niestandardowych, na serwerze programu rozpoznawania nazw. Można jawnie zdefiniować tę usługę, pisząc klasy programu rozpoznawania nazw Implementowanie <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> interfejs lub przy użyciu implementacji domyślnej skrzynkach odbiorczych, <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>.  
+### <a name="custom-resolver-services"></a>Niestandardowe usługi rozpoznawania nazw  
+ Gdy usługa PNRP jest niedostępna lub chcesz uzyskać pełną kontrolę nad kształtami siatki, możesz użyć niestandardowej, opartej na serwerze usługi rozpoznawania nazw. Tę usługę można jawnie zdefiniować, pisząc klasę resolvera implementującą <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> interfejs lub używając domyślnej <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>implementacji w miejscu.  
   
- W obszarze Domyślna implementacja usługi rejestracje klienta tracą ważność po upływie określonego czasu, jeśli klient nie powoduje odświeżenia jawnie rejestracji. Klienci korzystający z usługi rozpoznawania nazw muszą znać górną granicę opóźnieniem klient serwer w celu pomyślnie Odśwież rejestracje w czasie. Obejmuje to, wybierając odpowiednie odświeżania limitu czasu (`RefreshInterval`) na usługi rozpoznawania nazw. (Aby uzyskać więcej informacji, zobacz [wewnątrz CustomPeerResolverService: Rejestracje klienta](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md).)  
+ W ramach domyślnej implementacji usługi rejestracje klientów wygasają po upływie określonego czasu, jeśli klient nie odświeża jawnie rejestracji. Klienci korzystający z usługi rozpoznawania nazw muszą znać górną granicę opóźnienia na serwerze klienta, aby pomyślnie odświeżać rejestracje w czasie. Obejmuje to wybranie odpowiedniego czasu odświeżania (`RefreshInterval`) w usłudze rozpoznawania nazw. (Aby uzyskać więcej informacji, [Zobacz wewnątrz Szczegóły usługi CustomPeerResolverService: Rejestracje klienta)](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md).  
   
- Moduł zapisujący aplikacji należy również skonfigurować zabezpieczenia połączeń między klientami a usługą niestandardowym programem rozpoznawania nazw. Może to zrobić przy użyciu ustawień zabezpieczeń na <xref:System.ServiceModel.NetTcpBinding> , aby klienci korzystali do kontaktowania się z usługi rozpoznawania nazw. Należy określić poświadczenia (jeśli jest używany) na `ChannelFactory` użyty do utworzenia kanału równorzędnego. Te poświadczenia są przekazywane do `ChannelFactory` używany do tworzenia kanałów na niestandardowym programem rozpoznawania nazw.  
+ Moduł zapisujący aplikacji musi również rozważyć zabezpieczenie połączenia między klientami a usługą niestandardowego programu rozpoznawania nazw. Można to zrobić za pomocą ustawień zabezpieczeń na <xref:System.ServiceModel.NetTcpBinding> klientach programu, aby skontaktować się z usługą rozpoznawania nazw. Należy określić poświadczenia (jeśli są używane) na `ChannelFactory` potrzeby tworzenia kanału równorzędnego. Te poświadczenia są przesyłane do `ChannelFactory` użycia w celu utworzenia kanałów dla niestandardowego programu rozpoznawania nazw.  
   
 > [!NOTE]
->  Korzystając z sieci lokalnej i natychmiast z niestandardowym programem rozpoznawania nazw, zdecydowanie zalecane jest, za pomocą lub obsługa sieci połączenia lokalnego lub nieplanowane zastosowań logikę, która wybiera pojedynczy adres połączenia lokalnego do użycia podczas łączenia. Zapobiega to niezgodności potencjalnie spowodowane przez komputery z wieloma adresami połączenia lokalnego. Zgodnie z tym kanał elementu równorzędnego obsługuje tylko, używając pojedynczy adres połączenia lokalnego w dowolnym momencie. Użytkownik może określić tego adresu za pomocą `ListenIpAddress` właściwość <xref:System.ServiceModel.NetPeerTcpBinding>.  
+> W przypadku korzystania z lokalnych i nieobsługiwanych sieci z niestandardowym programem rozpoznawania nazw zdecydowanie zaleca się, aby aplikacje używające lub obsłużenia sieci lokalne lub nieplanowane nie obejmowały logiki, która wybiera pojedynczy adres lokalny łącza, który ma być używany podczas nawiązywania połączenia. Zapobiega to ewentualnemu niepomyleniu, który może być spowodowany przez komputery z wieloma adresami lokalnymi linków. W związku z tym kanał równorzędny obsługuje tylko używanie pojedynczego adresu lokalnego łącza w dowolnym momencie. Możesz określić ten adres przy użyciu `ListenIpAddress` właściwości <xref:System.ServiceModel.NetPeerTcpBinding>w.  
   
- Implementacji niestandardowego mechanizmu demonstracyjne, zobacz [elementu równorzędnego kanału niestandardowego elementu równorzędnego programu rozpoznawania nazw](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
+ Aby zapoznać się z zaimplementowaniem niestandardowego programu rozpoznawania nazw, zobacz temat [niestandardowy element równorzędny peer Channel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Usługi custompeerresolverservice: Rejestracje klienta](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+ [Wewnątrz Szczegóły usługi CustomPeerResolverService: Rejestracje klientów](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

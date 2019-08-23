@@ -2,71 +2,71 @@
 title: 'Optymistyczna współbieżność: Omówienie'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: a6e654ea1ae199cb086e9377454d05e6eaa03ad6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a61d4c5b35f3797539fe845045b8a959b0351350
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609966"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938631"
 ---
 # <a name="optimistic-concurrency-overview"></a>Optymistyczna współbieżność: Omówienie
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje mechanizmu kontroli optymistycznej współbieżności. W poniższej tabeli opisano terminy, które dotyczą optymistycznej współbieżności w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dokumentacji:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]obsługuje optymistyczną kontrolę współbieżności. W poniższej tabeli opisano terminy, które dotyczą optymistycznej współbieżności [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] w dokumentacji:  
   
-|Warunki|Opis|  
+|Odsetk|Opis|  
 |-----------|-----------------|  
-|współbieżność|Sytuacja, w którym dwóch lub większej liczby użytkowników, w tym samym czasie próby zaktualizowania wiersza w tabeli o tej samej bazy danych.|  
-|konflikt współbieżności|Sytuacja, w dwóch lub większej liczby użytkowników, w tym samym czasie spróbuj przesłać wartościami będącymi w konflikcie, na co najmniej jedna kolumna wiersza.|  
-|formant współbieżności|Technika, używany do rozwiązywania konfliktów współbieżności.|  
-|Mechanizmu kontroli optymistycznej współbieżności|Technika, która najpierw sprawdza, czy inne transakcje zostały zmienione wartości w wierszu przed pozwalające zmiany do przesłania.<br /><br /> Porównaj z *mechanizm kontroli pesymistycznej współbieżności*, która blokuje rekord w celu uniknięcia konfliktów współbieżności.<br /><br /> *Optymistyczna* kontroli więc jest określona, ponieważ uwzględniane szanse jedna transakcja nie zakłócają innej, aby być mało prawdopodobne.|  
-|Rozwiązywanie konfliktów|Proces odświeżania powodującego konflikt elementu przez zapytanie do bazy danych ponownie, a następnie Uzgadnianie różnic.<br /><br /> Po odświeżeniu obiektu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] śledzenie zmian zawiera następujące dane:<br /><br /> — Sprawdź wartości pierwotnie pobrany z bazy danych i używany do aktualizacji.<br />-Nowej bazy danych wartości z kolejnych zapytań.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] następnie ustala, czy obiekt jest w konflikcie, (oznacza to, czy co najmniej jeden z jego wartości składowych uległa zmianie). Jeśli obiekt jest w konflikcie, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obok Określa, które z jej elementów członkowskich są w konflikcie.<br /><br /> Konflikt dowolnego elementu członkowskiego, który [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] odnajduje zostanie dodany do listy konfliktów.|  
+|współbieżność|Sytuacja, w której co najmniej dwóch użytkowników w tym samym czasie próbuje zaktualizować ten sam wiersz bazy danych.|  
+|konflikt współbieżności|Sytuacja, w której dwóch lub więcej użytkowników w tym samym czasie próbuje przesłać wartości powodujące konflikt do jednej lub kilku kolumn w wierszu.|  
+|formant współbieżności|Technika służąca do rozwiązywania konfliktów współbieżności.|  
+|Optymistyczna kontrola współbieżności|Technika, która najpierw sprawdza, czy inne transakcje zmieniły wartości w wierszu przed umożliwieniem przesłania zmian.<br /><br /> Różni się od *pesymistycznej kontroli współbieżności*, która blokuje rekord, aby uniknąć konfliktów współbieżności.<br /><br /> Kontrola optymistyczna jest w ten sposób uznawana, ponieważ uwzględnia szanse jednej transakcji zakłócające, że jest to mało prawdopodobne.|  
+|Rozwiązywanie konfliktów|Proces odświeżania elementu powodującego konflikt przez ponowne wykonywanie zapytania względem bazy danych, a następnie Uzgadnianie różnic.<br /><br /> Po odświeżeniu obiektu narzędzie do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] śledzenia zmian zawiera następujące dane:<br /><br /> — Wartości początkowo pobrane z bazy danych i używane do sprawdzania aktualizacji.<br />— Nowe wartości bazy danych z kolejnego zapytania.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]następnie decyduje o tym, czy obiekt jest w konflikcie (czyli czy co najmniej jedna jego wartość członkowska została zmieniona). Jeśli obiekt jest w konflikcie, następnie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] należy określić, który z jego elementów członkowskich jest w konflikcie.<br /><br /> Wszelkie konflikty elementów [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Członkowskich, które są odnajdywane, zostaną dodane do listy konfliktów.|  
   
- W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektów *konflikt optymistycznej współbieżności* występuje, gdy są spełnione oba poniższe warunki:  
+ W modelu obiektów występuje *konflikt optymistycznej współbieżności* , gdy spełniony jest oba z następujących warunków: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]  
   
-- Klient próbuje przesłać zmiany w bazie danych.  
+- Klient próbuje przesłać zmiany do bazy danych.  
   
-- Co najmniej jednej wartości sprawdzania aktualizacji zostały zaktualizowane w bazie danych od klienta ostatniego odczytu je.  
+- Co najmniej jedna wartość sprawdzania aktualizacji została zaktualizowana w bazie danych od czasu ostatniego odczytu przez klienta.  
   
- Rozwiązanie tego konfliktu zawiera odnajdywanie, które elementy członkowskie obiektu są w konflikcie, a następnie decydując, co chcesz zrobić na jego temat.  
+ Rozwiązanie tego konfliktu obejmuje odnajdywanie, które elementy członkowskie obiektu są w konflikcie, a następnie decydowanie o tym, co chcesz zrobić.  
   
 > [!NOTE]
->  Tylko członkowie zamapowany jako <xref:System.Data.Linq.Mapping.UpdateCheck.Always> lub <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> uczestniczyć w kontroli optymistycznej współbieżności. Nie jest sprawdzane dla składowe oznaczone <xref:System.Data.Linq.Mapping.UpdateCheck.Never>. Aby uzyskać więcej informacji, zobacz <xref:System.Data.Linq.Mapping.UpdateCheck>.  
+> Tylko członkowie zamapowane <xref:System.Data.Linq.Mapping.UpdateCheck.Always> jako <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> lub uczestniczą w sprawdzaniu współbieżności optymistycznej. Nie jest wykonywane żadne sprawdzenie dla elementów <xref:System.Data.Linq.Mapping.UpdateCheck.Never>członkowskich oznaczonych. Aby uzyskać więcej informacji, zobacz <xref:System.Data.Linq.Mapping.UpdateCheck>.  
   
 ## <a name="example"></a>Przykład  
- Na przykład w poniższym scenariuszu użytkownik User1 rozpoczyna się przygotować aktualizacji przy użyciu kwerend bazy danych na podstawie wiersza. Użytkownik1 odbiera wierszy z wartościami Alfreds, Maria i sprzedaż.  
+ Na przykład w poniższym scenariuszu Użytkownik1 rozpocznie się przygotowywanie aktualizacji przez przeszukiwanie wiersza w bazie danych. Użytkownik1 odbiera wiersz o wartościach Alfreds, Maria i Sales.  
   
- Użytkownik1 chce zmienić wartość kolumny Menedżera Alfred i wartość kolumnę działu marketingu. Zanim użytkownik User1 mogą przesyłać tych zmian, Użytkownik2 zostało przesłane zmiany w bazie danych. Teraz Joanna i wartość kolumny działu do usługi zmieniono wartość kolumny Asystenta ustawień.  
+ Użytkownik1 chce zmienić wartość kolumny Manager na Alfred i wartość kolumny działu na marketing. Zanim Użytkownik1 będzie mógł przesłać te zmiany, nastąpiło przesłanie zmian do bazy danych. W związku z tym teraz wartość kolumny asystenta została zmieniona na Mary i wartość kolumny dział na usługa.  
   
- Teraz Użytkownik1 próbuje przesłać zmiany, przesyłanie nie powiedzie się i <xref:System.Data.Linq.ChangeConflictException> wyjątku. Dzieje się tak, ponieważ wartości bazy danych dla kolumny Asystenta ustawień i działu nie te, które były one oczekiwane. Członkowie reprezentujący kolumny Asystenta ustawień i działu są w konflikcie. W poniższej tabeli przedstawiono tę sytuację.  
+ Gdy Użytkownik1 podejmie teraz próbę przesłania zmian, przesłanie nie powiedzie się i <xref:System.Data.Linq.ChangeConflictException> zostanie zgłoszony wyjątek. Ten wynik występuje, ponieważ wartości bazy danych dla kolumny asystenta i działu nie są oczekiwane. Elementy członkowskie reprezentujące kolumny asystenta i działu są w konflikcie. Poniższa tabela zawiera podsumowanie sytuacji.  
   
-||maszyny wirtualnej|Asystenta ustawień|Dział|  
+||maszyny wirtualnej|Pomocnik|Dział|  
 |------|-------------|---------------|----------------|  
-|Oryginalny stan|Alfreds|Maria|Sprzedaż|  
-|User1|Alfred||Marketing|  
-|User2||Mary|Usługa|  
+|Stan pierwotny|Alfreds|Maria|Sprzedaż|  
+|Użytkownik1|Alfred||Marketing|  
+|Użytkownik2||Anna|Usługa|  
   
- Można rozwiązać konflikty takich na różne sposoby. Aby uzyskać więcej informacji, zobacz [jak: Zarządzanie konfliktami zmian](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ Można rozwiązać konflikty, takie jak na różne sposoby. Aby uzyskać więcej informacji, zobacz [jak: Zarządzanie konfliktami](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)zmian.  
   
-## <a name="conflict-detection-and-resolution-checklist"></a>Wykrywanie konfliktów i listę kontrolną rozwiązania  
- Można wykrywać i rozwiązywać konflikty na dowolnym poziomie szczegółowości. W skrajnej jeden, można rozwiązać wszystkie konflikty w jeden z trzech sposobów (zobacz <xref:System.Data.Linq.RefreshMode>) bez dodatkowego rozważenia. Y. można wyznaczyć określoną akcję dla każdego typu konfliktu na każdy element członkowski w konflikcie.  
+## <a name="conflict-detection-and-resolution-checklist"></a>Lista kontrolna wykrywania i rozwiązywania konfliktów  
+ Możesz wykrywać i rozwiązywać konflikty na dowolnym poziomie szczegółowości. Z jednej najwyższej klasy można rozwiązać wszystkie konflikty na jeden z trzech sposobów (zobacz <xref:System.Data.Linq.RefreshMode>) bez dodatkowych zagadnień. Z drugiej najwyższej klasy można wyznaczyć określoną akcję dla każdego typu konfliktu dla każdego elementu członkowskiego powodującego konflikt.  
   
-- Określ lub Popraw <xref:System.Data.Linq.Mapping.UpdateCheck> opcje w modelu obiektu.  
+- Określ lub skoryguj <xref:System.Data.Linq.Mapping.UpdateCheck> opcje w modelu obiektów.  
   
-     Aby uzyskać więcej informacji, zobacz [jak: Określ, które elementy członkowskie są sprawdzane pod kątem konfliktów współbieżności](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).  
+     Aby uzyskać więcej informacji, zobacz [jak: Określ, które elementy członkowskie są testowane pod](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)kątem konfliktów współbieżności.  
   
-- W bloku try/catch wywołania do <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, określić, w którym momencie wyjątki zostanie wygenerowany.  
+- W bloku try/catch wywołania do <xref:System.Data.Linq.DataContext.SubmitChanges%2A>Określ, w którym punkcie mają być zgłaszane wyjątki.  
   
-     Aby uzyskać więcej informacji, zobacz [jak: Określ są zgłaszane wyjątki współbieżności podczas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
+     Aby uzyskać więcej informacji, zobacz [jak: Określ, kiedy są zgłaszane](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)wyjątki współbieżności.  
   
-- Określić ilość szczegółów konfliktu, które mają zostać pobrane i w związku z tym zawiera kod w swojej bloku try/catch.  
+- Określ, ile szczegółów konfliktów chcesz pobrać, i odpowiednio Dołącz kod w bloku try/catch.  
   
-     Aby uzyskać więcej informacji, zobacz [jak: Pobieranie informacji o konflikcie jednostki](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) i [jak: Pobieranie informacji o konflikcie elementu członkowskiego](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).  
+     Aby uzyskać więcej informacji, zobacz [jak: Pobierz informacje o](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) konflikcie jednostki [i instrukcje: Pobierz informacje o](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)konflikcie elementu członkowskiego.  
   
-- Uwzględnić w swojej `try` / `catch` kodu, jak chcesz rozwiązać konflikty różnych odkryjesz.  
+- Uwzględnij w `try` /kodziesposób, wjakichceszrozwiązaćróżneodnajdywanekonflikty.`catch`  
   
-     Aby uzyskać więcej informacji, zobacz [jak: Rozwiązywanie konfliktów, zachowując wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [jak: Rozwiązywanie konfliktów, zastępując wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), i [jak: Rozwiązywanie konfliktów, scalając wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).  
+     Aby uzyskać więcej informacji, zobacz [jak: Rozwiązywanie konfliktów przez zachowywanie wartości](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)bazy [danych, jak: Rozwiąż konflikty, zastępując wartości](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)bazy danych i [instrukcje: Rozwiązywanie konfliktów przez scalanie z](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)wartościami bazy danych.  
   
-## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>LINQ do typów SQL, które obsługują wykrywania konfliktów i rozwiązania  
- Klasy i funkcje do obsługi Rozwiązywanie konfliktów w optymistycznej współbieżności w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obejmują następujące elementy:  
+## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>Typy LINQ to SQL obsługujące wykrywanie i rozwiązywanie konfliktów  
+ Klasy i funkcje do obsługi rozwiązywania konfliktów w optymistycznej współbieżności w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] programie obejmują następujące elementy:  
   
 - <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
   

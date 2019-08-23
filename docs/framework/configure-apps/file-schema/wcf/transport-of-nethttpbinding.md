@@ -2,21 +2,21 @@
 title: <transport> dla <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 44e334c3313f93a23ca7df15ba377c5568a92397
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9f784329081f6a18560991378a4527c731f4d31
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788378"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934710"
 ---
-# <a name="transport-of-nethttpbinding"></a>\<transport > z \<netHttpBinding >
-Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu HTTP.  
+# <a name="transport-of-nethttpbinding"></a>\<> \<transportu > protokołu HttpBinding
+Definiuje właściwości kontrolujące parametry uwierzytelniania dla transportu HTTP.  
   
 \<system.serviceModel>  
-\<powiązania >  
-\<netHttpBinding>  
-\<Powiązanie >  
-\<security>  
+\<> powiązań  
+\<> protokołu HttpBinding  
+\<> powiązania  
+\<> zabezpieczeń  
 \<transport>  
   
 ## <a name="syntax"></a>Składnia  
@@ -46,32 +46,32 @@ Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu 
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|clientCredentialType|-Określa typ poświadczenia do użycia podczas przeprowadzania uwierzytelniania klienta przy użyciu uwierzytelniania HTTP.  Wartość domyślna to `None`. Ten atrybut jest typu <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|proxyCredentialType|-Określa typ poświadczenia do użycia podczas przeprowadzania uwierzytelniania klienta z w obrębie domeny przy użyciu serwera proxy za pośrednictwem protokołu HTTP. Ten atrybut jest stosowane tylko wtedy, gdy `mode` atrybutu elementu nadrzędnego `security` element jest `Transport` lub `TransportCredentialsOnly`. Ten atrybut jest typu <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|obszar|Ciąg, który określa obszar, który jest używany przez schemat uwierzytelniania HTTP digest lub uwierzytelnianie podstawowe. Wartość domyślna to ciąg pusty.|  
-|policyEnforcement|To wyliczenie Określa, kiedy <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> powinny być wymuszane.<br /><br /> 1.  Nigdy nie — zasady nigdy nie są wymuszane (ochrony rozszerzonej jest wyłączone).<br />2.  WhenSupported — zasady są wymuszane tylko wtedy, gdy klient obsługuje ochrony rozszerzonej.<br />3.  Zawsze — zasady zawsze są wymuszane. Klienci, którzy nie obsługują ochrony rozszerzonej zakończy się niepowodzeniem do uwierzytelniania.|  
-|protectionScenario|To wyliczenie Określa scenariusz ochrony wymuszane przez zasady.|  
+|clientCredentialType|-Określa typ poświadczeń, które mają być używane podczas uwierzytelniania klienta przy użyciu uwierzytelniania HTTP.  Wartość domyślna to `None`. Ten atrybut jest typu <xref:System.ServiceModel.HttpClientCredentialType>.|  
+|proxyCredentialType|-Określa typ poświadczeń, które mają być używane podczas uwierzytelniania klienta w domenie przy użyciu serwera proxy za pośrednictwem protokołu HTTP. Ten atrybut jest stosowany tylko wtedy, `mode` gdy atrybut elementu nadrzędnego `security` to `Transport` or `TransportCredentialsOnly`. Ten atrybut jest typu <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|obszarów|Ciąg określający obszar, który jest używany przez schemat uwierzytelniania HTTP na potrzeby uwierzytelniania szyfrowanego lub podstawowego. Wartość domyślna to pusty ciąg.|  
+|policyEnforcement|To Wyliczenie określa, <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> Kiedy należy wymusić.<br /><br /> 1.  Nigdy — zasady nigdy nie są wymuszane (ochrona rozszerzona jest wyłączona).<br />2.  WhenSupported — zasady są wymuszane tylko wtedy, gdy klient obsługuje ochronę rozszerzoną.<br />3.  Zawsze — zasady są zawsze wymuszane. Klienci, którzy nie obsługują rozszerzonej ochrony, nie będą uwierzytelniani.|  
+|protectionScenario|To Wyliczenie określa scenariusz ochrony wymuszany przez zasady.|  
   
-## <a name="clientcredentialtype-attribute"></a>właściwości ClientCredentialType o wartości atrybutu  
-  
-|Wartość|Opis|  
-|-----------|-----------------|  
-|Brak|Komunikaty nie są zabezpieczane podczas przesyłania.|  
-|Podstawowy|Określa uwierzytelnianie podstawowe.|  
-|Podsumowanie|Określa uwierzytelnianie szyfrowane.|  
-|Ntlm|Określa uwierzytelniania NTLM, jeśli jest to możliwe, a w przypadku niepowodzenia uwierzytelniania Windows.|  
-|Windows|Określa, czy zintegrowane uwierzytelnianie Windows|  
-  
-## <a name="proxycredentialtype-attribute"></a>proxyCredentialType atrybutu  
+## <a name="clientcredentialtype-attribute"></a>clientCredentialtype — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Brak|— Liczba komunikatów nie są zabezpieczane podczas przesyłania.|  
-|Podstawowy|Określa uwierzytelnianie podstawowe, zgodnie z definicją w dokumencie RFC 2617 — uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane.|  
-|Podsumowanie|Określa uwierzytelniania szyfrowanego, zgodnie z definicją w dokumencie RFC 2617 — uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane.|  
-|Ntlm|Określa uwierzytelniania NTLM, jeśli jest to możliwe, a w przypadku niepowodzenia uwierzytelniania Windows.|  
-|Windows|Określa, czy zintegrowane uwierzytelnianie Windows|  
-|Certyfikat|Wykonuje uwierzytelnianie klienta przy użyciu certyfikatu. Ta opcja działa tylko wtedy, gdy `Mode` atrybutu elementu nadrzędnego `security` elementu jest ustawiona na Transport i nie będzie działać, jeśli jest ustawiona wartość TransportCredentialOnly.|  
+|Brak|Komunikaty nie są zabezpieczane podczas transferu.|  
+|Podstawowy|Określa podstawowe uwierzytelnianie.|  
+|Szyfrowane|Określa uwierzytelnianie szyfrowane.|  
+|NTLM|Określa uwierzytelnianie NTLM, jeśli jest to możliwe, a uwierzytelnianie systemu Windows kończy się niepowodzeniem.|  
+|Windows|Określa zintegrowane uwierzytelnianie systemu Windows.|  
+  
+## <a name="proxycredentialtype-attribute"></a>proxyCredentialType — atrybut  
+  
+|Wartość|Opis|  
+|-----------|-----------------|  
+|Brak|-Komunikaty nie są zabezpieczane podczas transferu.|  
+|Podstawowy|Określa uwierzytelnianie podstawowe zgodnie z definicją w dokumencie RFC 2617 — uwierzytelnianie HTTP: Uwierzytelnianie podstawowe i szyfrowane.|  
+|Szyfrowane|Określa uwierzytelnianie szyfrowane zgodnie z definicją w dokumencie RFC 2617 — uwierzytelnianie HTTP: Uwierzytelnianie podstawowe i szyfrowane.|  
+|NTLM|Określa uwierzytelnianie NTLM, jeśli jest to możliwe, a uwierzytelnianie systemu Windows kończy się niepowodzeniem.|  
+|Windows|Określa zintegrowane uwierzytelnianie systemu Windows.|  
+|Certyfikatu|Wykonuje uwierzytelnianie klienta przy użyciu certyfikatu. Ta opcja działa tylko wtedy, `Mode` gdy atrybut elementu nadrzędnego `security` jest ustawiony na transport i nie będzie działać, jeśli zostanie ustawiony na wartość TransportCredentialOnly.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -80,10 +80,10 @@ Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|Definiuje funkcje bezpieczeństwa umożliwiające [ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md).|  
+|[\<> zabezpieczeń](security-of-nethttpbinding.md)|Definiuje możliwości zabezpieczeń dla [ \<protokołu HttpBinding >](nethttpbinding.md).|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje użycie protokołu SSL z zabezpieczeń transportu dla wiązania podstawowe. Domyślnie podstawowe powiązanie obsługuje komunikację HTTP.  
+ Poniższy przykład ilustruje użycie zabezpieczeń transportu SSL z powiązaniem podstawowym. Domyślnie podstawowe powiązanie obsługuje komunikację HTTP.  
   
 ```xml  
 <system.serviceModel>
@@ -122,8 +122,8 @@ Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu 
 - <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
 - <xref:System.ServiceModel.HttpTransportSecurity>
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<> powiązania](../../../misc/binding.md)

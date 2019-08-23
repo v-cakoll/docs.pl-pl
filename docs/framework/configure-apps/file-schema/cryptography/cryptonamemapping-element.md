@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-ms.openlocfilehash: c2652ac73c1d55f09a1f8511603003dc6d7291f9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 87b24595f5013ad3b981256fd97bc758863c600b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659645"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921099"
 ---
 # <a name="cryptonamemapping-element"></a>\<cryptoNameMapping> Element
 Zawiera mapowania klas do przyjaznych nazw.  
@@ -78,5 +78,5 @@ Zawiera mapowania klas do przyjaznych nazw.
 
 - [Schemat pliku konfiguracji](../index.md)
 - [Schemat ustawień kryptografii](index.md)
-- [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)
+- [Usługi kryptograficzne](../../../../standard/security/cryptographic-services.md)
 - [Konfigurowanie klas kryptografii](../../configure-cryptography-classes.md)

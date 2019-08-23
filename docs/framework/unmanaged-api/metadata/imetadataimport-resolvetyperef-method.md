@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb8c232e63d1f3066737ff755d5911c185abe6fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f323e91e60c9735a51e955eaab6673ca167f294d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755370"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951877"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef — Metoda
-Rozpoznaje <xref:System.Type> reprezentowany przez określony token TypeRef odwołania.  
+<xref:System.Type> Rozwiązuje odwołanie reprezentowane przez określony token elementu TypeRef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,34 +40,34 @@ HRESULT ResolveTypeRef (
   
 ## <a name="parameters"></a>Parametry  
  `tr`  
- [in] Token TypeRef metadanych do zwrócenia informacji o typie odwołania.  
+ podczas Token metadanych elementu TypeRef, który ma zwracać informacje o typie, do którego się odwołuje.  
   
  `riid`  
- [in] IID interfejsu do zwrócenia w `ppIScope`. Zazwyczaj powinien to być IID_IMetaDataImport.  
+ podczas Identyfikator IID interfejsu do zwrócenia `ppIScope`. Zwykle jest to IID_IMetaDataImport.  
   
  `ppIScope`  
- [out] Interfejs do zakresu modułu, w którym zdefiniowano typ odwołania.  
+ określoną Interfejs do zakresu modułu, w którym jest zdefiniowany typ, do którego istnieje odwołanie.  
   
  `ptd`  
- [out] Wskaźnik do TypeDef token, który reprezentuje typ odwołania.  
+ określoną Wskaźnik do tokenu TypeDef, który reprezentuje przywoływany typ.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!IMPORTANT]
->  Nie należy używać tej metody, jeśli wiele domen aplikacji są ładowane. Metoda respektują granice domen aplikacji. Jeśli wiele wersji zestawu zostaną załadowane i zawierają ten sam typ o tej samej przestrzeni nazw, metoda zwraca zakres modułu pierwszego typu, które znajdzie.  
+> Nie należy używać tej metody w przypadku ładowania wielu domen aplikacji. Metoda nie uwzględnia granic domeny aplikacji. Jeśli wiele wersji zestawu jest załadowanych i zawierają ten sam typ z tą samą przestrzenią nazw, metoda zwraca zakres modułu pierwszego znalezionego typu.  
   
- `ResolveTypeRef` Metoda wyszukiwania dla definicji typu w innych modułach. Jeśli zostanie znaleziony w definicji typu, `ResolveTypeRef` zwraca interfejs do tego zakresu modułu, a także token element TypeDef dla typu.  
+ `ResolveTypeRef` Metoda wyszukuje definicję typu w innych modułach. Jeśli zostanie znaleziona definicja typu, `ResolveTypeRef` zwraca interfejs do tego zakresu modułu, a także token typedef dla tego typu.  
   
- Jeśli odniesienie typu, które mają zostać rozwiązane, ma zakres rozpoznawania elementu AssemblyRef, `ResolveTypeRef` metoda szuka dopasowania tylko w przypadku zakresów metadanych, które już zostały otwarte przy użyciu wywołań albo [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)metody lub [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) metody. Jest to spowodowane `ResolveTypeRef` nie może ustalić z tylko zakres elementu AssemblyRef miejsce na dysku lub w globalnej pamięci podręcznej zestawu przechowywania.  
+ Jeśli odwołanie do typu, które ma zostać rozpoznane, ma zakres rozwiązań elementu AssemblyRef `ResolveTypeRef` , Metoda wyszukuje dopasowanie tylko w zakresach metadanych, które zostały już otwarte z wywołaniami metody [IMetaDataDispenser:: OpenScope —](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) lub [ IMetaDataDispenser:: OpenScopeOnMemory —](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) , metoda. Wynika to z `ResolveTypeRef` faktu, że program nie może ustalić tylko zakresu elementu AssemblyRef, gdzie na dysku lub w pamięci podręcznej zestawów globalnych jest przechowywany zestaw.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Nagłówki** Cor. h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

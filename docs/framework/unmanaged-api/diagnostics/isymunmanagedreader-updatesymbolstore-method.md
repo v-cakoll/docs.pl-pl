@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cfc4507557102e19d95f1b746b3a76a231882d7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d84d4fccb2cb4e500f07f6bfbfb93b8c7b81f5d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736743"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939009"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore — Metoda
-Aktualizuje istniejący magazyn symboli w magazynie symboli delta. Ta metoda jest używana w scenariuszach edit-and-continue można zaktualizować magazynu symboli, aby dopasować różnic do oryginalnego przenośny plik wykonywalny (PE).  
+Aktualizuje istniejący magazyn symboli przy użyciu magazynu symboli różnicowych. Ta metoda jest używana w scenariuszach Edytuj i Kontynuuj, aby zaktualizować magazyn symboli tak, aby pasował do różnic w oryginalnym przenośnym pliku wykonywalnym (PE).  
   
 > [!NOTE]
->  Należy określić tylko jeden z `filename` lub `pIStream` parametrów, nie obydwa. Jeśli `filename` określono magazynu symboli, które zostaną zaktualizowane przy użyciu symboli w tym pliku. Jeśli `pIStream` określono magazynu zostaną zaktualizowane przy użyciu danych z <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> Należy określić tylko jeden z `filename` parametrów lub `pIStream` , ale nie oba. Jeśli `filename` jest określony, magazyn symboli zostanie zaktualizowany przy użyciu symboli w tym pliku. Jeśli `pIStream` jest określony, magazyn zostanie zaktualizowany o dane <xref:System.Runtime.InteropServices.ComTypes.IStream>z.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,16 +40,16 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="parameters"></a>Parametry  
  `filename`  
- [in] Nazwa pliku który zawiera magazyn symboli.  
+ podczas Nazwa pliku, który zawiera magazyn symboli.  
   
  `pIStream`  
- [in] Strumień pliku używana jako alternatywa `filename` parametru.  
+ podczas Strumień pliku używany jako alternatywa dla `filename` parametru.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie, E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Nagłówki** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

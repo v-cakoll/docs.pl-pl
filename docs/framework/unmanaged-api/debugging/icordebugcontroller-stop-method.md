@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83bb52f7f2035605914e2fe72ce2daf78de5bc1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 363d8f7d8cf960fb23210225c4545f73d597d663
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749903"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912846"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop — Metoda
-Wykonuje wspólne stop we wszystkich wątkach, na których uruchomiono kod zarządzany w procesie.  
+Wykonuje przerwanie w ramach wszystkich wątków, które uruchamiają kod zarządzany w procesie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,20 +40,20 @@ HRESULT Stop (
  Nie używany.  
   
 ## <a name="remarks"></a>Uwagi  
- `Stop` wykonuje kod zatrzymania współpracy na wszystkie wątki uruchomione zarządzanych w procesie. Podczas sesji debugowania tylko do zarządzanych niezarządzanych wątków może kontynuować działanie (ale będą blokowane podczas próby wywołania kodu zarządzanego). Podczas debugowania międzyoperacyjnego sesji również zostaną zatrzymane niezarządzanych wątków. `dwTimeoutIgnored` Wartość aktualnie jest ignorowany i traktowany jako NIESKOŃCZONE (-1). Jeśli współpracy stop zakończy się niepowodzeniem z powodu zakleszczenia, wszystkie wątki są wstrzymywane i E_TIMEOUT jest zwracana.  
+ `Stop`wykonuje przerwanie w ramach wszystkich wątków uruchamiających kod zarządzany w procesie. W trakcie sesji debugowania tylko zarządzanej wątki niezarządzane mogą nadal działać (ale będą blokowane podczas próby wywołania kodu zarządzanego). W trakcie sesji debugowania międzyoperacyjności wątki niezarządzane również zostaną zatrzymane. `dwTimeoutIgnored` Wartość jest obecnie ignorowana i traktowana jako nieskończona (-1). Jeśli z powodu zakleszczenia nie powiedzie się, wszystkie wątki są zawieszone i zwracany jest E_TIMEOUT.  
   
 > [!NOTE]
->  `Stop` jest tylko synchroniczne metody w interfejsie API debugowania. Gdy `Stop` zwraca wartość S_OK, proces został zatrzymany. Nie wywołania zwrotnego otrzymuje o ogranicznika. Debuger musi wywołać [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) umożliwia wznowienie procesu.  
+> `Stop`jest jedyną metodą synchroniczną w interfejsie API debugowania. Gdy `Stop` zwraca S_OK, proces jest zatrzymany. Nie podano wywołania zwrotnego, aby powiadomić detektory zatrzymania. Debuger musi wywołać [ICorDebugController:: Kontynuuj](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) , aby umożliwić wznowienie procesu.  
   
- Debuger obsługuje licznika zatrzymania. Gdy licznik zbliża się do zera, jest wznawiany kontrolera. Każde wywołanie `Stop` lub każdego wysłane wywołanie zwrotne zwiększa wartość licznika. Każde wywołanie `ICorDebugController::Continue` zmniejsza wartość licznika.  
+ Debuger zachowuje licznik zatrzymania. Gdy licznik spadnie do zera, kontroler zostanie wznowiony. Każde wywołanie `Stop` lub każde wywoływane wywołanie zwrotne zwiększa licznik. Każde wywołanie `ICorDebugController::Continue` zmniejsza licznik.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także

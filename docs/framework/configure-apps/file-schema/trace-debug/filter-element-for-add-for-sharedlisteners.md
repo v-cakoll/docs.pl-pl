@@ -1,5 +1,5 @@
 ---
-title: <filter> Element <add> dla <sharedListeners>
+title: <filter>Element dla <add> elementu<sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 2bef729f179b41509d3c0381b26e38e364dbf86b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 571a3add232f3e4f9747040dc104b85e8cc3085e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673722"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920511"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<Filtr >, Element dla \<Dodaj > dla \<sharedListeners >
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<Filtr > elementu do \<dodania > dla \<sharedListeners >
 Dodaje filtr do odbiornika w `sharedListeners` kolekcji.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.diagnostics>  
-\<sharedListeners > Element  
+\<sharedListeners, element >  
 \<add>  
 \<Filtr >  
   
@@ -40,8 +40,8 @@ Dodaje filtr do odbiornika w `sharedListeners` kolekcji.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**type**|Atrybut wymagany.<br /><br /> Określa typ filtru. Można użyć tylko pełną nazwę tego typu (w formacie <xref:System.Type.FullName%2A?displayProperty=nameWithType> właściwości), lub można użyć w pełni kwalifikowana nazwa typu w tym informacje o zestawie (w formacie <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> właściwości). Aby uzyskać informacje dotyczące tworzenia w pełni kwalifikowaną nazwę typu, zobacz [określanie w pełni kwalifikowanej nazwy typu](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|**initializeData**|Atrybut opcjonalny.<br /><br /> Ciąg przekazany do konstruktora dla określonej klasy.|  
+|**type**|Atrybut wymagany.<br /><br /> Określa typ filtru. Można użyć tylko pełnej nazwy typu (w formacie <xref:System.Type.FullName%2A?displayProperty=nameWithType> właściwości) lub użyć w pełni kwalifikowanej nazwy typu, w tym informacji o zestawie (w formacie <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> właściwości). Aby uzyskać informacje na temat tworzenia w pełni kwalifikowanej nazwy typu, zobacz [Określanie w pełni kwalifikowanych nazw typów](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**initializeData**|Atrybut opcjonalny.<br /><br /> Ciąg przesłany do konstruktora dla określonej klasy.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -51,17 +51,17 @@ Dodaje filtr do odbiornika w `sharedListeners` kolekcji.
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.|  
-|`sharedListeners`|Kolekcja obiektów nasłuchujących dowolnego źródła i elementu śledzenia można odwoływać się do.|  
-|`add`|Dodaje odbiornik do **sharedListeners** kolekcji.|  
+|`system.diagnostics`|Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.|  
+|`sharedListeners`|Kolekcja detektorów, które mogą odwoływać się do każdego elementu źródłowego lub śledzenia.|  
+|`add`|Dodaje odbiornik do kolekcji **sharedListeners** .|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli odbiornik jest zdefiniowany w `<add>` elementu `<sharedListeners>` elementu filtru dla tego odbiornika powinien być zdefiniowany w `<filter>` element, który jest elementem podrzędnym `<add>` elementu.  
+ Jeśli odbiornik jest zdefiniowany `<add>` w elemencie `<sharedListeners>` elementu, filtr dla tego odbiornika `<filter>` powinien być zdefiniowany w elemencie, który jest elementem podrzędnym `<add>` elementu.  
   
- Ten element może być użyty w pliku konfiguracji komputera (Machine.config) i pliku konfiguracji aplikacji.  
+ Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać `<filter>` elementu Dodawanie filtru do odbiornika śledzenia `console` w `sharedListeners` kolekcji.  
+ Poniższy przykład pokazuje, `<filter>` jak za pomocą elementu dodać filtr do odbiornika `console` śledzenia w `sharedListeners` kolekcji.  
   
 ```xml  
 <configuration>  
@@ -90,4 +90,4 @@ Dodaje filtr do odbiornika w `sharedListeners` kolekcji.
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceSource>
-- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Schemat ustawień śledzenia i debugowania](index.md)

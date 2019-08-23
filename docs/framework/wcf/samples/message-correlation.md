@@ -2,21 +2,21 @@
 title: Korelacja komunikatów
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 630afb728726fb81bbefa2f2cd34b9481b788f6f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f476e94ec3229ee7f5433d54d286165d108e5e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663415"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930750"
 ---
 # <a name="message-correlation"></a>Korelacja komunikatów
-Niniejszy przykład pokazuje, jak aplikacja usługi kolejkowania komunikatów (MSMQ) można wysłać wiadomości usługi MSMQ do usługi Windows Communication Foundation (WCF) i jak można skorelować wiadomości między nadawcą i odbiorcą aplikacji w przypadku żądań/odpowiedzi. W tym przykładzie użyto powiązania msmqIntegrationBinding. Usługa jest w tym przypadku aplikacji konsoli Self-Hosted aby możliwe było zaobserwować, że usługa, która odbiera wiadomości w kolejce. k  
+Ten przykład pokazuje, jak aplikacja usługi kolejkowania komunikatów (MSMQ) może wysyłać komunikat usługi MSMQ do usługi Windows Communication Foundation (WCF) oraz jak można skorelować komunikaty między aplikacjami nadawcy i odbiorcy w scenariuszu żądania/odpowiedzi. Ten przykład używa powiązania msmqIntegrationBinding. Usługa w tym przypadku jest samoobsługową aplikacją konsolową, która umożliwia obserwowanie usługi, która odbiera wiadomości w kolejce. k  
   
- Usługa przetwarza wiadomości odebrane od nadawcy i wysyła odpowiedź do nadawcy. Nadawca jest odpowiedzi, Odebrano żądanie, pierwotnie wysłany. `MessageID` i `CorrelationID` właściwości wiadomości są używane do korelacji komunikatów żądań i odpowiedzi.  
+ Usługa przetwarza komunikat odebrany od nadawcy i wysyła komunikat odpowiedzi z powrotem do nadawcy. Nadawca skorelowanie odpowiedzi otrzymanej na żądanie wysłane pierwotnie. Właściwości `MessageID` i`CorrelationID` komunikatu są używane do skorelowania komunikatów żądania i odpowiedzi.  
   
- `IOrderProcessor` Kontrakt usługi określa operację usługi jednokierunkowej, który jest odpowiedni do użycia z usługą kolejkowania. Wiadomości usługi MSMQ nie ma nagłówek akcji, więc nie jest możliwe do mapowania różnych wiadomości usługi MSMQ kontrakty operacji automatycznie. W związku z tym może istnieć tylko jeden kontrakt operacji w tym przypadku. Jeśli chcesz zdefiniować więcej operacji kontraktów w usłudze, aplikacja musi udostępniać co który nagłówek w usłudze MSMQ komunikatu (na przykład, etykietę lub correlationID) może służyć do określania, który kontrakt operacji na wysłanie informacji. 
+ Kontrakt `IOrderProcessor` usługi definiuje jednokierunkową operację usługi, która jest odpowiednia do użycia z kolejkami. Komunikat usługi MSMQ nie zawiera nagłówka akcji, więc nie jest możliwe automatyczne Mapowanie komunikatów usługi MSMQ do kontraktów operacji. W związku z tym w tym przypadku może istnieć tylko jeden kontrakt operacji. Jeśli chcesz zdefiniować więcej kontraktów operacji w usłudze, aplikacja musi podać informacje dotyczące tego, w którym nagłówku wiadomości MSMQ (na przykład etykieta lub identyfikator korelacji) można użyć do określenia, który kontrakt operacji ma zostać przesłany. 
   
- Wiadomości usługi MSMQ nie zawiera również informacje, które nagłówki są zamapowane na różne parametry kontrakt operacji. W związku z tym może istnieć tylko jeden parametr w kontrakt operacji. Parametr jest typu <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, który zawiera podstawowe wiadomości usługi MSMQ. Typ "T" w elemencie `MsmqMessage<T>` klasa reprezentuje dane, które jest serializowana w treści wiadomości usługi MSMQ. W tym przykładzie `PurchaseOrder` typ jest serializowana w treści wiadomości usługi MSMQ.  
+ Komunikat MSMQ nie zawiera również informacji o tym, które nagłówki są mapowane na różne parametry kontraktu operacji. W związku z tym w kontrakcie operacji może istnieć tylko jeden parametr. Parametr jest typu <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, który zawiera źródłowy komunikat MSMQ. Typ "T" w `MsmqMessage<T>` klasie reprezentuje dane, które są serializowane w treści wiadomości MSMQ. W tym przykładzie `PurchaseOrder` typ jest serializowany do treści wiadomości MSMQ.  
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -28,7 +28,7 @@ public interface IOrderProcessor
 }
 ```
 
- Operacja usługi przetworzy to zamówienie zakupu i wyświetla zawartość zamówienia zakupu i jego stan w oknie konsoli usługi. <xref:System.ServiceModel.OperationBehaviorAttribute> Konfiguruje operacji można zarejestrować w transakcji z kolejki i do oznaczania transakcji ukończone po powrocie z operacji. `PurchaseOrder` Zawiera szczegóły zamówienia, które muszą zostać przetworzone przez usługę.
+ Operacja usługi przetwarza zamówienie zakupu i wyświetla zawartość zamówienia zakupu oraz jego stan w oknie konsoli usługi. <xref:System.ServiceModel.OperationBehaviorAttribute> Konfiguruje operację do rejestracji w transakcji z kolejką i oznacza, że transakcja została ukończona, gdy operacja zwróci wartość. `PurchaseOrder` Zawiera szczegółowe informacje o zamówieniach, które muszą zostać przetworzone przez usługę.
 
 ```csharp
 // Service class that implements the service contract.
@@ -65,9 +65,9 @@ public class OrderProcessorService : IOrderProcessor
 }
 ```
 
- Usługa używa niestandardowego klienta `OrderResponseClient` do wysyłania wiadomości usługi MSMQ do kolejki. Ponieważ aplikacja, która odbiera i przetwarza komunikat jest aplikacją usługi MSMQ, a nie aplikacji WCF, istnieje nie niejawne Umowa serwisowa między dwiema aplikacjami. Dlatego nie można utworzyć serwera proxy, korzystając z narzędzia Svcutil.exe w tym scenariuszu.
+ Usługa używa klienta `OrderResponseClient` niestandardowego do wysyłania wiadomości MSMQ do kolejki. Ponieważ aplikacja, która odbiera i przetwarza komunikat, jest aplikacją usługi MSMQ, a nie aplikacją WCF, nie istnieje niejawna Umowa serwisowa między tymi dwiema aplikacjami. Dlatego nie można utworzyć serwera proxy za pomocą narzędzia Svcutil. exe w tym scenariuszu.
 
- Niestandardowy serwer proxy jest zasadniczo taki sam dla wszystkich aplikacji WCF, które używają `msmqIntegrationBinding` powiązania do wysyłania wiadomości. W przeciwieństwie do innych serwerów proxy nie obejmuje szereg operacji usługi. Jest tylko operacja komunikatu przesyłania.
+ Niestandardowy serwer proxy jest zasadniczo taki sam dla wszystkich aplikacji WCF, które używają `msmqIntegrationBinding` powiązania do wysyłania komunikatów. W przeciwieństwie do innych serwerów proxy, nie obejmuje zakresu operacji usługi. Jest to tylko operacja przesyłania wiadomości.
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -99,7 +99,7 @@ public partial class OrderResponseClient : System.ServiceModel.ClientBase<IOrder
 }
 ```
 
- Usługa jest samodzielnie hostowana. Korzystając z transport integracji usługi MSMQ, kolejki, używane musi zostać utworzona wcześniej. Można to zrobić ręcznie lub za pomocą kodu. W tym przykładzie Usługa zawiera <xref:System.Messaging> kod do sprawdzania istnienia kolejki i utwórz ją, jeśli to konieczne. Nazwa kolejki jest do odczytu z pliku konfiguracji.
+ Usługa jest samodzielna. W przypadku korzystania z transportu integracji usługi MSMQ użyta Kolejka musi zostać utworzona z góry. Można to zrobić ręcznie lub przy użyciu kodu. W tym przykładzie usługa zawiera <xref:System.Messaging> kod służący do sprawdzania istnienia kolejki i tworzenia jej w razie potrzeby. Nazwa kolejki jest odczytywana z pliku konfiguracji.
 
 ```csharp
 public static void Main()
@@ -125,7 +125,7 @@ public static void Main()
 }
 ```
 
- Kolejki usługi MSMQ, do którego są wysyłane żądania zamówień jest określona w sekcji appSettings pliku konfiguracji. Punkty końcowe klienta i usługi są zdefiniowane w sekcji system.serviceModel pliku konfiguracji. Określ zarówno `msmqIntegrationbinding` powiązania.
+ Kolejka MSMQ, do której wysyłane są żądania zamówienia, jest określona w sekcji appSettings w pliku konfiguracji. Punkty końcowe klienta i usługi są zdefiniowane w sekcji System. serviceModel w pliku konfiguracji. Oba określają `msmqIntegrationbinding` powiązanie.
 
 ```xml
 <appSettings>
@@ -164,7 +164,7 @@ public static void Main()
 </system.serviceModel>
 ```
 
- Aplikacja kliencka używa <xref:System.Messaging> do wysyłania komunikatu trwały i transakcyjnych w kolejce. Treść wiadomości zawiera zamówienia zakupu.
+ Aplikacja kliencka używa <xref:System.Messaging> programu w celu wysyłania trwałych i transakcyjnych komunikatów do kolejki. Treść wiadomości zawiera zamówienie zakupu.
 
 ```csharp
 static void PlaceOrder()
@@ -210,10 +210,10 @@ static void PlaceOrder()
 }
 ```
 
- Kolejki usługi MSMQ, z którego są odbierane odpowiedzi w kolejności jest określona w sekcji appSettings pliku konfiguracji, jak pokazano w poniższym Przykładowa konfiguracja.
+ Kolejka MSMQ, z której są odbierane odpowiedzi Orders, została określona w sekcji appSettings w pliku konfiguracji, jak pokazano w poniższej konfiguracji przykładowej.
 
 > [!NOTE]
->  Nazwa kolejki używa pojedynczego znaku kropki (.) dla komputera lokalnego i separatory ukośnik odwrotny w ścieżce. Adres punktu końcowego WCF Określa schemat msmq.formatname i używane "localhost" na komputerze lokalnym. Nazwa formatu poprawnie sformułowany następuje msmq.formatname w identyfikatorze URI, zgodnie z wytycznymi usługi MSMQ.
+> Nazwa kolejki używa kropki (.) dla komputera lokalnego i separatorów ukośników odwrotnych. Adres punktu końcowego WCF określa schemat MSMQ. formatname i używa "localhost" dla komputera lokalnego. Poprawnie sformułowana nazwa formatu jest zgodna z nazwą MSMQ. formatname w identyfikatorze URI zgodnie z wytycznymi dotyczącymi usługi MSMQ.
 
 ```xml
 <appSettings>
@@ -221,7 +221,7 @@ static void PlaceOrder()
 </appSettings>
 ```
 
- Zapisuje aplikacji klienta `messageID` kolejności komunikatu żądania, który wysyła do usługi i czeka na odpowiedź z usługi. Po nadejściu kolejki odpowiedzi klienta korelowany z komunikatem o kolejności wysyłane, za pomocą `correlationID` właściwości komunikatu, która zawiera `messageID` zamówienia komunikat, który klient wysłany do usługi.
+ Aplikacja kliencka zapisuje `messageID` komunikat żądania zamówienia wysyłany do usługi i czeka na odpowiedź z usługi. Po nadejściu odpowiedzi w kolejce klient korelacji z komunikatem o zamówieniu, który został wysłany przy `correlationID` użyciu właściwości komunikatu, `messageID` zawierającego komunikat o kolejności, który został pierwotnie Wysłany przez klienta do usługi.
 
 ```csharp
 static void DisplayOrderStatus()
@@ -264,55 +264,55 @@ static void DisplayOrderStatus()
 }
 ```
 
- Po uruchomieniu przykładu, działania klienta i usługi są wyświetlane w oknach konsoli usługi i klienta. Można wyświetlić wiadomości odbierania usługi z klienta i wysyła odpowiedź z powrotem do klienta. Klient jest wyświetlany odpowiedzi otrzymanych z usługi. Naciśnij klawisz ENTER każdego okna konsoli, aby zamknąć usługę i klienta.
+ Po uruchomieniu przykładu działania klienta i usługi są wyświetlane zarówno w systemie, jak i w oknach konsoli klienta. Można zobaczyć, że usługa odbiera komunikaty od klienta i wysyła odpowiedź z powrotem do klienta. Klient wyświetla odpowiedź odebraną z usługi. Naciśnij klawisz ENTER w każdym oknie konsoli, aby zamknąć usługę i klienta.
 
 > [!NOTE]
->  Ten przykładowy skrypt wymaga instalacji z usługi kolejkowania komunikatów (MSMQ). Zapoznaj się z instrukcjami instalacji usługi MSMQ w sekcji Zobacz też.
+> Ten przykład wymaga instalacji usługi kolejkowania komunikatów (MSMQ). Zapoznaj się z instrukcjami dotyczącymi instalacji usługi MSMQ w sekcji Zobacz też.
 
 ### <a name="to-setup-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.
+2. Jeśli usługa jest uruchamiana po raz pierwszy, sprawdzi, czy kolejka jest obecna. Jeśli kolejka nie istnieje, usługa utworzy ją. Aby utworzyć kolejkę, można najpierw uruchomić tę usługę lub utworzyć ją za pośrednictwem Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w systemie Windows 2008.
 
-    1. Otwórz Menedżera serwera w programie Visual Studio 2012.
+    1. Otwórz Menedżer serwera w programie Visual Studio 2012.
 
-    2. Rozwiń **funkcji** kartę.
+    2. Rozwiń kartę **funkcje** .
 
-    3. Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.
+    3. Kliknij prawym przyciskiem myszy pozycję **prywatne kolejki komunikatów**, a następnie wybierz kolejno pozycje **Nowa**i **prywatne**.
 
-    4. Sprawdź **transakcyjna** pole.
+    4. Zaznacz pole **transakcyjne** .
 
     5. Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.
 
-3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4. Do uruchomienia przykładu w konfiguracji o jednym komputerze, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Aby uruchomić przykład w konfiguracji pojedynczego komputera, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
-### <a name="to-run-the-sample-across-computers"></a>Do uruchomienia przykładu na komputerach
+### <a name="to-run-the-sample-across-computers"></a>Aby uruchomić przykład na wielu komputerach
 
-1. Skopiuj pliki programu usługi z folderu \service\bin\ w folderze specyficzny dla języka na komputerze usługi.
+1. Skopiuj pliki programu Service Files z folderu \service\bin\, w obszarze folder specyficzny dla języka, do komputera usługi.
 
-2. Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerze klienckim.
+2. Skopiuj pliki programu klienckiego z folderu \client\bin\, w obszarze folder specyficzny dla języka, do komputera klienckiego.
 
-3. W pliku Client.exe.config zmienić orderQueueName do określenia nazwy komputera usługi zamiast ".".
+3. W pliku Client. exe. config zmień orderQueueName, aby określić nazwę komputera usługi zamiast ".".
 
-4. W pliku Service.exe.config, Zmień adres punktu końcowego klienta, aby określić nazwę komputera klienta, a nie ".".
+4. W pliku Service. exe. config zmień adres punktu końcowego klienta, aby określić nazwę komputera klienckiego zamiast ".".
 
-5. Na komputerze usługi Service.exe należy uruchomić z wiersza polecenia.
+5. Na komputerze usługi Uruchom polecenie Service. exe z wiersza polecenia.
 
-6. Na komputerze klienckim należy uruchomić Client.exe z poziomu wiersza polecenia.
+6. Na komputerze klienckim uruchom program Client. exe z wiersza polecenia.
 
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Usługa kolejkowania komunikatów](https://go.microsoft.com/fwlink/?LinkId=94968)
+- [Kolejkowanie komunikatów](https://go.microsoft.com/fwlink/?LinkId=94968)

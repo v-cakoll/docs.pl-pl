@@ -2,20 +2,20 @@
 title: <serviceTimeouts>
 ms.date: 03/30/2017
 ms.assetid: ada536cf-97dc-4cd7-89ec-ed1466c1c557
-ms.openlocfilehash: 5c2f0ef7ad509eb5d6c686802c3fe5a75ea1a258
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1792fec4f86c9ac31107c043b976cfafcfa4c13
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758096"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937094"
 ---
 # <a name="servicetimeouts"></a>\<serviceTimeouts>
-Określa limit czasu usługi.  
+Określa limit czasu dla usługi.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<serviceTimeouts>  
   
 ## <a name="syntax"></a>Składnia  
@@ -34,7 +34,7 @@ Określa limit czasu usługi.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`transactionTimeout`|A <xref:System.TimeSpan> wartość, która określa przedział czasu transakcji musi przepływać od klienta do serwera. Wartość domyślna to "00: 00:00".|  
+|`transactionTimeout`|<xref:System.TimeSpan> Wartość, która określa przedział czasu, przez który transakcja musi przepływać z klienta do serwera. Wartość domyślna to "00:00:00".|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -43,7 +43,7 @@ Określa limit czasu usługi.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
+|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: a4ad928c479c971e5cf7191b95a3ed4d80bb1e57
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6188af0ffea699899212e4bcf20b7c19f68858b4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592213"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924334"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Wprowadzenie do kwerend LINQ (C#)
 *Zapytanie* jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są zwykle wyrażane w wyspecjalizowanym języku zapytań. Różne języki zostały opracowane z upływem czasu dla różnych typów źródeł danych, na przykład SQL dla relacyjnych baz danych i XQuery dla XML. W związku z tym deweloperzy musieli poznać nowy język zapytań dla każdego typu źródła danych lub formatu danych, które muszą być obsługiwane przez program. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]upraszcza tę sytuację, oferując spójny model do pracy z danymi w różnych rodzajach źródeł danych i formatach. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] W zapytaniu zawsze pracujesz z obiektami. Te same podstawowe wzorce kodowania służą do wykonywania zapytań i przekształcania danych w dokumentach XML, baz danych SQL, ADO.NET, kolekcjach platformy .NET i innych formatach, dla [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] których dostawca jest dostępny.  
@@ -56,7 +56,7 @@ IQueryable<Customer> custQuery =
  Aby uzyskać więcej informacji o sposobach tworzenia określonych typów źródeł danych, zapoznaj się z dokumentacją dla [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] różnych dostawców. Podstawowa reguła jest jednak bardzo prosta: [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] źródłem danych jest dowolny obiekt obsługujący interfejs ogólny <xref:System.Collections.Generic.IEnumerable%601> lub interfejs, który dziedziczy z niego.  
   
 > [!NOTE]
->  Typy takie jak <xref:System.Collections.ArrayList> obsługujące interfejs nieogólny <xref:System.Collections.IEnumerable> mogą [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] również służyć jako źródło danych. Aby uzyskać więcej informacji, zobacz [jak: Zbadaj ArrayList za pomocą LINQC#(](./how-to-query-an-arraylist-with-linq.md)).  
+> Typy takie jak <xref:System.Collections.ArrayList> obsługujące interfejs nieogólny <xref:System.Collections.IEnumerable> mogą [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] również służyć jako źródło danych. Aby uzyskać więcej informacji, zobacz [jak: Zbadaj ArrayList za pomocą LINQC#(](./how-to-query-an-arraylist-with-linq.md)).  
   
 ## <a name="query"></a>Zapytanie  
  Zapytanie określa, jakie informacje mają być pobierane ze źródła danych lub źródeł. Opcjonalnie zapytanie określa również, jak te informacje powinny być sortowane, grupowane i ukształtowane przed zwróceniem. Zapytanie jest przechowywane w zmiennej zapytania i inicjowane z wyrażeniem zapytania. Aby ułatwić Pisanie zapytań, C# wprowadzono nową składnię zapytania.  
@@ -64,7 +64,7 @@ IQueryable<Customer> custQuery =
  Zapytanie w poprzednim przykładzie zwraca wszystkie liczby parzyste z tablicy liczb całkowitych. Wyrażenie zapytania zawiera trzy klauzule: `from`, `where` i `select`. (Jeśli znasz program SQL, zobaczysz, że kolejność klauzul została odwrócona z kolejności w języku SQL). Klauzula określa źródło danych `where` , klauzula stosuje filtr, a `select` klauzula określa typ zwracanych elementów. `from` Te i inne klauzule zapytań są szczegółowo omówione w sekcji [wyrażenia zapytania LINQ](../../linq-query-expressions/index.md) . Na razie istotnym punktem jest to, że [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]w programie zmienna zapytania nie przyjmuje żadnej akcji i nie zwraca żadnych danych. Po prostu przechowuje informacje, które są wymagane do wygenerowania wyników, gdy zapytanie jest wykonywane w późniejszym momencie. Aby uzyskać więcej informacji o tym, jak zapytania są konstruowane w tle, zobacz [standardowe operatory zapytańC#— omówienie ()](./standard-query-operators-overview.md).  
   
 > [!NOTE]
->  Zapytania można również wyrazić przy użyciu składni metody. Aby uzyskać więcej informacji, zobacz [składnia zapytań i składnia metod w LINQ](./query-syntax-and-method-syntax-in-linq.md).  
+> Zapytania można również wyrazić przy użyciu składni metody. Aby uzyskać więcej informacji, zobacz [składnia zapytań i składnia metod w LINQ](./query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="query-execution"></a>Wykonywanie zapytania  
   

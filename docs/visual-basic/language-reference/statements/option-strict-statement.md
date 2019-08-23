@@ -1,5 +1,5 @@
 ---
-title: Option Strict — instrukcja (Visual Basic)
+title: Option Strict — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Strict
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: f911090bdf9b6f5aedaf540d8732b6ea0701fd78
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8466cb0672ccf26717d012bdebb7363f31ebb08
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582800"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912269"
 ---
 # <a name="option-strict-statement"></a>Option Strict — Instrukcja
-Ogranicza niejawne konwersje typów danych można tylko konwersje rozszerzające nie zezwalają na późne wiązanie i nie zezwalają na niejawnego wpisywania, które spowodowało, że `Object` typu.  
+Ogranicza niejawne konwersje typów danych tylko w celu poszerzenia konwersji, nie zezwala na późne wiązanie i uniemożliwia niejawne wpisywanie `Object` w wyniku typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,39 +31,39 @@ Option Strict { On | Off }
   
 |Termin|Definicja|  
 |---|---|  
-|`On`|Opcjonalna. Włącza `Option Strict` sprawdzania.|  
-|`Off`|Opcjonalna. Wyłącza `Option Strict` sprawdzania.|  
+|`On`|Opcjonalna. Włącza `Option Strict` sprawdzanie.|  
+|`Off`|Opcjonalny. Wyłącza `Option Strict` sprawdzanie.|  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy `Option Strict On` lub `Option Strict` pojawia się w pliku, następujące warunki spowodować błąd kompilacji:  
+ Gdy `Option Strict On` lub`Option Strict` pojawia się w pliku, następujące warunki powodują błąd czasu kompilacji:  
   
 - Niejawne konwersje zawężające  
   
-- Późne powiązania  
+- Późne wiązanie  
   
-- Niejawnego wpisywania, które spowodowało, że `Object` typu  
+- Niejawne wpisanie, które `Object` powoduje wystąpienie typu  
   
 > [!NOTE]
->  W konfiguracji ostrzeżeń, które można ustawić na [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), dostępne są trzy ustawienia, które odnoszą się do trzech warunków, które powodują błąd kompilacji. Aby uzyskać informacje o sposobie używania tych ustawień, zobacz [do ustawienia konfiguracje ostrzeżenie w środowisku IDE](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) w dalszej części tego tematu.  
+> W konfiguracjach ostrzeżeń, które można ustawić na [stronie kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), istnieją trzy ustawienia odpowiadające trzem warunkom, które powodują błąd w czasie kompilacji. Informacje o sposobach korzystania z tych ustawień znajdują [się w sekcji Aby ustawić konfiguracje ostrzeżeń w środowisku IDE](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) w dalszej części tego tematu.  
   
- `Option Strict Off` Instrukcji wyłącza błąd i ostrzeżenie sprawdzania pod kątem wszystkich trzech warunków, nawet jeśli określone skojarzone ustawienia IDE, aby włączyć te błędy lub ostrzeżenia. `Option Strict On` Instrukcji włącza błędów i ostrzeżeń sprawdzania pod kątem wszystkich trzech warunków, nawet jeśli określone skojarzone ustawienia IDE, aby wyłączyć te błędy lub ostrzeżenia.  
+ `Option Strict Off` Instrukcja wyłącza błąd i sprawdzanie ostrzeżenia dla wszystkich trzech warunków, nawet jeśli skojarzone ustawienia IDE określają, czy te błędy lub ostrzeżenia mają zostać włączone. `Option Strict On` Instrukcja włącza kontrolę błędów i ostrzeżeń dla wszystkich trzech warunków, nawet jeśli skojarzone ustawienia IDE określają, aby wyłączyć te błędy lub ostrzeżenia.  
   
- Jeśli używane, `Option Strict` instrukcja musi występować przed wszystkimi instrukcjami kod w pliku.  
+ Jeśli jest `Option Strict` używana, instrukcja musi znajdować się przed innymi instrukcjami kodu w pliku.  
   
- Po ustawieniu `Option Strict` do `On`, Visual Basic sprawdza, czy typy danych są określone dla wszystkich elementów programowania. Typy danych mogą być jawnie określone lub określone za pomocą wnioskowanie o typie lokalnym. Określanie typów danych dla wszystkich elementów programowania jest zalecane, z następujących powodów:  
+ Po ustawieniu `Option Strict` na `On`, Visual Basic sprawdza, czy typy danych są określone dla wszystkich elementów programistycznych. Typy danych można określić jawnie lub określić za pomocą wnioskowania typu lokalnego. Zaleca się określenie typów danych dla wszystkich elementów programistycznych, z następujących powodów:  
   
-- Umożliwia obsługę funkcji IntelliSense dla zmiennych i parametrów. Dzięki temu można zobaczyć ich właściwości i inne elementy członkowskie podczas pisania kodu.  
+- Umożliwia obsługę technologii IntelliSense dla zmiennych i parametrów. Dzięki temu można zobaczyć swoje właściwości i innych członków podczas wpisywania kodu.  
   
-- Umożliwia kompilatorowi wykonywanie sprawdzania typu. Kontrola typów pomoże Ci znaleźć instrukcje, które może zakończyć się niepowodzeniem w czasie wykonywania z powodu błędów konwersji typu. Określa on wywołania metod obiektów, które nie obsługują tych metod.  
+- Umożliwia kompilatorowi wykonywanie kontroli typu. Sprawdzanie typu ułatwia znalezienie instrukcji, które mogą zakończyć się niepowodzeniem w czasie wykonywania z powodu błędów konwersji typu. Identyfikuje także wywołania metod dla obiektów, które nie obsługują tych metod.  
   
-- Przyspiesza wykonywanie kodu. Co dzieje się, jeśli nie określisz typ danych dla elementu programistycznego, kompilator Visual Basic przypisuje mu `Object` typu. Skompilowany kod może być konieczne konwersji do i z powrotem między `Object` a innymi typami danych, które powoduje zmniejszenie wydajności.  
+- Przyspiesza wykonywanie kodu. Jedną z przyczyn tego problemu jest to, że jeśli nie określisz typu danych dla elementu programistycznego, kompilator Visual Basic przypisze `Object` ten typ. Skompilowany kod może wymagać konwersji z powrotem między `Object` i innych typów danych, co zmniejsza wydajność.  
   
-## <a name="implicit-narrowing-conversion-errors"></a>Niejawne błędy konwersji zawężającej  
- Niejawne błędy konwersji zawężającej wystąpić, gdy jest konwersja typu danych niejawne, który jest konwersją zawężającą.  
+## <a name="implicit-narrowing-conversion-errors"></a>Niejawne Zawężanie błędów konwersji  
+ Niejawne Zawężanie błędów konwersji występuje, gdy istnieje niejawna konwersja typu danych, która jest konwersją zawęża.  
   
- Język Visual Basic można przekonwertować wiele typów danych na inne typy danych. Może wystąpić utrata danych, gdy wartość jednego typu danych jest konwertowany na typ danych, który ma mniejszą dokładność lub mniejszą pojemność. Błąd czasu wykonywania występuje, jeśli konwersja zawężająca zakończy się niepowodzeniem. `Option Strict` zapewnia kompilacji powiadomienia o tych konwersji zawężających, dzięki czemu można uniknąć. Aby uzyskać więcej informacji, zobacz [Konwersje jawne i niejawne](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) i [rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Visual Basic można skonwertować wiele typów danych na inne typy danych. Utrata danych może wystąpić, gdy wartość jednego typu danych jest konwertowana na typ danych o mniejszej dokładności lub mniejszej pojemności. Błąd czasu wykonywania występuje, gdy taka konwersja nie powiedzie się. `Option Strict`zapewnia powiadomienie w czasie kompilacji tych konwersji zawężających, aby można je było uniknąć. Aby uzyskać więcej informacji, zobacz [konwersje niejawne i jawne](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) oraz [rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
- Konwersje, które mogą powodować błędy zawierają niejawne konwersje, które występują w wyrażeniach. Więcej informacji znajduje się w następujących tematach:  
+ Konwersje, które mogą spowodować błędy, zawierają niejawne konwersje występujące w wyrażeniach. Więcej informacji znajduje się w następujących tematach:  
   
 - [+, operator](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
@@ -71,81 +71,81 @@ Option Strict { On | Off }
   
 - [\ — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
-- [/ = — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+- [Operator/= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
 - [Char, typ danych](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
- Podczas łączenia ciągów za pomocą [& — Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md), wszystkie konwersje do ciągów są uznawane za się rozszerzenia. Dzięki takiej konwersji nie generują niejawne błąd konwersji zawężających, nawet jeśli `Option Strict` znajduje się na.  
+ Podczas łączenia ciągów przy użyciu [operatora &](../../../visual-basic/language-reference/operators/concatenation-operator.md)wszystkie konwersje do ciągów są uznawane za rozszerzające. W związku z tym konwersje nie generują niejawnego zawężanego błędu `Option Strict` konwersji, nawet jeśli jest włączony.  
   
- Po wywołaniu metody, która ma argument, który ma typ danych różni się od odpowiedniego parametru konwersji zawężającej powoduje błąd w czasie kompilacji, jeśli `Option Strict` znajduje się na. Aby uniknąć tego błędu kompilacji, należy za pomocą konwersji rozszerzającej lub jawną konwersję.  
+ Gdy wywoływana jest metoda, która ma argument, który ma typ danych różny od odpowiedniego parametru, konwersja zawęża powoduje błąd czasu kompilacji, jeśli `Option Strict` jest on włączony. Można uniknąć błędów czasu kompilacji przy użyciu konwersji rozszerzającej lub jawnej konwersji.  
   
- Niejawne błędy konwersji zawężającej są pomijane w czasie kompilacji w przypadku konwersji z typu elementów w `For Each…Next` kolekcję, aby zmienna sterująca pętli. Dzieje się tak nawet wtedy, gdy `Option Strict` znajduje się na. Aby uzyskać więcej informacji, zobacz sekcję "Konwersje zawężające" w [For Each... Następna instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+ Niejawne Zawężanie błędów konwersji jest pomijane w czasie kompilacji w przypadku konwersji z elementów `For Each…Next` w kolekcji do zmiennej kontroli pętli. Dzieje się tak nawet `Option Strict` wtedy, gdy jest on włączony. Aby uzyskać więcej informacji, zobacz sekcję "Konwersje wąskie" w [dla każdego... Next — instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
-## <a name="late-binding-errors"></a>Późne wiązanie błędy  
- Obiekt jest rozpoznanie późnego wiązania, gdy jest ona przypisana do właściwości lub metody w zmiennej, która jest zadeklarowana jako typ `Object`. Aby uzyskać więcej informacji, zobacz [wczesnego a późne wiązanie](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
+## <a name="late-binding-errors"></a>Błędy późnego wiązania  
+ Obiekt jest późnie powiązany, gdy jest przypisany do właściwości lub metody zmiennej, która jest zadeklarowana jako typu `Object`. Aby uzyskać więcej informacji, zobacz [wczesne i późne wiązanie](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
   
-## <a name="implicit-object-type-errors"></a>Błędy typu obiektu niejawne  
- Niejawne obiektu typu błędy występują, gdy odpowiedni typ nie może być wywnioskowane dla zadeklarowanej zmiennej, więc typ `Object` została wywnioskowana. To przede wszystkim występuje, gdy używasz `Dim` instrukcję, aby zadeklarować zmienną bez użycia `As` klauzuli i `Option Infer` jest wyłączona. Aby uzyskać więcej informacji, zobacz [Option Infer — instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md) i [specyfikacja języka Visual Basic](../../../visual-basic/reference/language-specification/index.md).  
+## <a name="implicit-object-type-errors"></a>Niejawne błędy typu obiektu  
+ Niejawne błędy typu obiektu występują, gdy odpowiedni typ nie może zostać wywnioskowany dla zadeklarowanej zmiennej, więc `Object` typ jest wywnioskowany. Dzieje się tak głównie w przypadku używania `Dim` instrukcji w celu deklarowania zmiennej bez `As` użycia klauzuli i `Option Infer` jest wyłączona. Aby uzyskać więcej informacji, zobacz temat [opcja wnioskowanie](../../../visual-basic/language-reference/statements/option-infer-statement.md) i [Specyfikacja języka Visual Basic](../../../visual-basic/reference/language-specification/index.md).  
   
- Parametry metody `As` klauzula jest opcjonalny Jeśli `Option Strict` jest wyłączona. Jednak jeśli korzysta z żadnych jeden parametr `As` klauzuli, wszystkie one musisz ją wykorzystać. Jeśli `Option Strict` jest włączona, `As` klauzula jest wymagana dla każdej definicji parametru.  
+ W przypadku parametrów metody `As` klauzula jest opcjonalna, jeśli `Option Strict` jest wyłączona. Jeśli jednak którykolwiek z parametrów używa `As` klauzuli, wszystkie muszą z niej korzystać. Jeśli `Option Strict` jest włączona `As` , klauzula jest wymagana dla każdej definicji parametru.  
   
- Jeśli zmienna jest zadeklarowana bez użycia `As` klauzuli i ustaw ją na `Nothing`, zmienna posiada typ `Object`. Błąd kompilacji nie występuje w tym przypadku podczas `Option Strict` znajduje się na i `Option Infer` znajduje się na. Na przykład `Dim something = Nothing`.  
+ Jeśli deklarujesz zmienną bez użycia `As` klauzuli i ustawisz ją na `Nothing`, `Object`zmienna ma typ. W takim przypadku nie występuje błąd czasu kompilacji, gdy `Option Strict` jest on włączony `Option Infer` i jest włączony. Przykładem jest `Dim something = Nothing`.  
   
-### <a name="default-data-types-and-values"></a>Dane domyślne typy i wartości  
+### <a name="default-data-types-and-values"></a>Domyślne typy danych i wartości  
  W poniższej tabeli opisano wyniki różnych kombinacji określania typu danych i inicjatora w [instrukcji Dim](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
-|Określony typ danych?|Inicjatora określona?|Przykład|Wynik|  
+|Określono typ danych?|Określono inicjator?|Przykład|Wynik|  
 |---|---|---|---|  
-|Nie|Nie|`Dim qty`|Jeśli `Option Strict` jest wyłączone (domyślnie), zmienna jest ustawiana `Nothing`.<br /><br /> Jeśli `Option Strict` jest włączona, wystąpi błąd kompilacji.|  
-|Nie|Tak|`Dim qty = 5`|Jeśli `Option Infer` znajduje się na (ustawienie domyślne), zmienna przyjmuje dane typu inicjatora. Zobacz [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Jeśli `Option Infer` jest wyłączona i `Option Strict` jest wyłączone, zmienna ma typ danych `Object`.<br /><br /> Jeśli `Option Infer` jest wyłączona i `Option Strict` jest włączona, wystąpi błąd kompilacji.|  
-|Tak|Nie|`Dim qty As Integer`|Zmienna jest ustawiana na wartość domyślną dla typu danych. Aby uzyskać więcej informacji, zobacz [instrukcji Dim](../../../visual-basic/language-reference/statements/dim-statement.md).|  
-|Tak|Tak|`Dim qty  As Integer = 5`|Jeśli typ danych Inicjator nie jest konwertowany na określony typ danych, wystąpi błąd kompilacji.|  
+|Nie|Nie|`Dim qty`|Jeśli `Option Strict` jest wyłączone (wartość domyślna), zmienna jest ustawiona na `Nothing`.<br /><br /> Jeśli `Option Strict` jest włączona, wystąpi błąd w czasie kompilacji.|  
+|Nie|Tak|`Dim qty = 5`|Jeśli `Option Infer` jest włączone (wartość domyślna), zmienna Pobiera typ danych inicjatora. Zobacz [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Jeśli `Option Infer` jest wyłączona i `Option Strict` jest wyłączona, zmienna `Object`Pobiera typ danych.<br /><br /> Jeśli `Option Infer` jest wyłączona i `Option Strict` jest włączona, wystąpi błąd w czasie kompilacji.|  
+|Tak|Nie|`Dim qty As Integer`|Zmienna jest inicjowana do wartości domyślnej dla typu danych. Aby uzyskać więcej informacji, zobacz [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).|  
+|Tak|Tak|`Dim qty  As Integer = 5`|Jeśli typ danych inicjatora nie zostanie przekonwertowany na określony typ danych, wystąpi błąd w czasie kompilacji.|  
   
-## <a name="when-an-option-strict-statement-is-not-present"></a>Jeśli nie jest obecny Option Strict — instrukcja  
- Jeśli kod źródłowy nie zawiera `Option Strict` instrukcji **opcja strict** ustawienie [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) jest używany. **Kompiluj stronę** ma ustawienia, które zapewniają dodatkową kontrolę nad warunki, które generuje błąd.  
+## <a name="when-an-option-strict-statement-is-not-present"></a>Gdy nie ma instrukcji Option Strict  
+ Jeśli kod źródłowy nie zawiera `Option Strict` instrukcji, zostanie użyta opcja ustawienie **Strict** na [stronie kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . **Strona kompilacja** zawiera ustawienia, które zapewniają dodatkową kontrolę nad warunkami, które generują błąd.  
   
- Jeśli używasz kompilatora wiersza polecenia, możesz użyć [/optionstrict —](../../../visual-basic/reference/command-line-compiler/optionstrict.md) opcję kompilatora, aby określić ustawienie `Option Strict`.  
+ Jeśli używasz kompilatora wiersza polecenia, możesz użyć opcji kompilatora [/optionstrict —](../../../visual-basic/reference/command-line-compiler/optionstrict.md) , aby określić ustawienie dla `Option Strict`.  
   
-### <a name="to-set-option-strict-in-the-ide"></a>Aby ustawić Option Strict w środowisku IDE  
+### <a name="to-set-option-strict-in-the-ide"></a>Aby ustawić ustawienie Option Strict w środowisku IDE  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1. W **Eksploratora rozwiązań**, wybierz projekt. Na **projektu** menu, kliknij przycisk **właściwości**.  
+1. W **Eksplorator rozwiązań**wybierz projekt. W menu **projekt** kliknij polecenie **Właściwości**.  
   
-2. Na **skompilować** kartę, należy ustawić wartość w **Option Strict** pole.  
+2. Na karcie **Kompilowanie** ustaw wartość w polu **Option Strict** .  
   
-### <a name="conditions"></a> Aby ustawić konfiguracje ostrzeżenie w środowisku IDE  
- Kiedy używasz [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) zamiast `Option Strict` instrukcji, masz dodatkową kontrolę nad warunki, które generują błędy. **Konfiguracje ostrzeżenie** części **kompilowania strony** ma ustawienia, które odnoszą się do trzech warunków, które powodują błąd kompilacji podczas `Option Strict` znajduje się na. Te ustawienia są następujące:  
+### <a name="conditions"></a>Aby ustawić konfiguracje ostrzeżeń w IDE  
+ Gdy używasz [strony Kompilacja, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) zamiast `Option Strict` instrukcji, masz dodatkową kontrolę nad warunkami, które generują błędy. Sekcja **konfiguracje ostrzeżeń** **strony kompilowania** zawiera ustawienia, które odpowiadają trzem warunkom, które powodują wystąpienie błędu kompilacji, gdy `Option Strict` jest włączony. Poniżej przedstawiono następujące ustawienia:  
   
 - **Niejawna konwersja**  
   
-- **Rozpoznanie późnego wiązania; Wywołanie może się nie powieść w czasie wykonywania**  
+- **Późne wiązanie; Wywołanie może zakończyć się niepowodzeniem w czasie wykonywania**  
   
-- **Niejawne typu; założono, że obiekt**  
+- **Niejawny typ; przyjęto obiekt**  
   
- Po ustawieniu **Option Strict** do **na**, wszystkie trzy ustawienia konfiguracji tych ostrzeżeń są ustawione na **błąd**. Po ustawieniu **Option Strict** do **poza**, wszystkie trzy ustawienia są ustawione na **Brak**.  
+ Jeśli ustawisz **opcję Strict** to **on**, wszystkie trzy z tych ustawień konfiguracyjnych ostrzeżeń mają ustawioną wartość **błąd**. Ustawienie **opcji Strict** to **off**powoduje, że wszystkie trzy ustawienia mają wartość **none**.  
   
- Można zmienić indywidualnie każdy ostrzeżenie ustawienia konfiguracji **Brak**, **ostrzeżenie**, lub **błąd**. Jeśli wszystkie trzy ustawienia konfiguracji ostrzeżenia są ustawione na **błąd**, `On` pojawia się w `Option strict` pole. Jeśli wszystkie trzy **Brak**, `Off` pojawia się w tym polu. Dla dowolnej kombinacji tych ustawień **(niestandardowy)** pojawia się.  
+ Można indywidualnie zmienić każde ustawienie konfiguracji ostrzegawczej na **none**, **Warning**lub **Error**. Jeśli wszystkie trzy ustawienia konfiguracji ostrzeżeń mają ustawionąwartość błąd `On` , pojawi się `Option strict` w polu. Jeśli wszystkie trzy z nich sąustawione na `Off` brak, pojawia się w tym polu. Dla każdej innej kombinacji tych ustawień pojawia się **(niestandardowe)** .  
   
-### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>Aby skonfigurować ustawienie Option Strict domyślne dla nowych projektów  
- Podczas tworzenia projektu, **Option Strict** ustawienie **skompilować** karta jest ustawiona na **Option Strict** w **opcje** okno dialogowe.  
+### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>Aby ustawić ustawienie opcji Stricted Default dla nowych projektów  
+ Podczas tworzenia projektu ustawienie **opcji Strict** na karcie kompilowania jest ustawione na wartość ustawienia **Strict** w oknie dialogowym **Opcje** .  
   
- Aby ustawić `Option Strict` w tym oknie na **narzędzia** menu, kliknij przycisk **opcje**. W **opcje** okna dialogowego rozwiń **projekty i rozwiązania**, a następnie kliknij przycisk **ustawienia domyślne VB**. Ustawieniem domyślnym początkowej w **ustawienia domyślne VB** jest `Off`.  
+ Aby ustawić `Option Strict` w tym oknie dialogowym, w menu **Narzędzia** kliknij polecenie **Opcje**. W oknie dialogowym **Opcje** rozwiń węzeł **projekty i rozwiązania**, a następnie kliknij pozycję **Ustawienia domyślne w języku VB**. Początkowe domyślne ustawienie w **języku VB** domyślnie ma `Off`wartość.  
   
-### <a name="to-set-option-strict-on-the-command-line"></a>Aby ustawić Option Strict, w wierszu polecenia  
- Obejmują [/optionstrict —](../../../visual-basic/reference/command-line-compiler/optionstrict.md) w — opcja kompilatora **vbc** polecenia.  
+### <a name="to-set-option-strict-on-the-command-line"></a>Aby ustawić Option Strict w wierszu polecenia  
+ Dołącz opcję kompilatora [/optionstrict —](../../../visual-basic/reference/command-line-compiler/optionstrict.md) do polecenia **VBC** .  
   
 ## <a name="example"></a>Przykład  
- W poniższych przykładach pokazano błędy w czasie kompilowania spowodowany niejawnej konwersji typów, które są konwersji zawężających. Odnosi się do tej kategorii błędów **niejawna konwersja** warunku na **Kompiluj stronę**.  
+ W poniższych przykładach przedstawiono błędy czasu kompilowania spowodowane przez niejawne konwersje typów, które są zawężające konwersje. Ta kategoria błędów odpowiada warunkowi niejawnej **konwersji** na **stronie kompilowania**.  
   
  [!code-vb[VbVbalrStatements#161](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#161)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład ilustruje błąd kompilacji, spowodowane późnym wiązaniu. Odnosi się do tej kategorii błędów **najpóźniejsze powiązanie; wywołanie może się nie powieść w czasie wykonywania** warunku na **Kompiluj stronę**.  
+ Poniższy przykład demonstruje błąd czasu kompilacji spowodowany późnym wiązaniem. Ta kategoria błędów odnosi się do **późnego wiązania; wywołanie może zakończyć się niepowodzeniem w czasie wykonywania** na **stronie kompilacji**.  
   
  [!code-vb[VbVbalrStatements#162](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#162)]  
   
 ## <a name="example"></a>Przykład  
- W poniższych przykładach pokazano błędów spowodowanych przez zmienne, które są zadeklarowane z typem niejawne `Object`. Odnosi się do tej kategorii błędów **niejawnego typu; założono, że obiekt** warunku na **Kompiluj stronę**.  
+ W poniższych przykładach przedstawiono błędy spowodowane przez zmienne, które są zadeklarowane z niejawnym typem `Object`. Ta kategoria błędów odpowiada typowi niejawnemu **; obiekt przyjmuje** warunek na **stronie kompilowania**.  
   
  [!code-vb[VbVbalrStatements#163](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#163)]  
   

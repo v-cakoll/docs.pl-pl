@@ -8,38 +8,38 @@ dev_langs:
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d47fa4d4ef7a55182dd27aa6f64542fec1fa99c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40d7ef11dde882d99c21fe541c2689c52a634edf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776041"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915950"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Kompilacja schematu a klasa XmlSchemaCollection
-**Użyciu klasy XmlSchemaCollection** pamięci podręcznej lub biblioteki, gdzie danych XML (XDR) i schematu XML schematów języka (XSD) definicji mogą być przechowywane i zweryfikowane. **Użyciu klasy XmlSchemaCollection** zwiększa wydajność, buforowanie schematów w pamięci, a nie dostępu do nich z pliku lub adres URL.  
+XmlSchemaCollection jest pamięcią podręczną lub biblioteką, w której można przechowywać i sprawdzać dane XML (XDR) oraz schematy języka definicji schematu XML (XSD). Obiekt XmlSchemaCollection zwiększa wydajność przez buforowanie schematów w pamięci zamiast uzyskiwania do nich dostępu z pliku lub adresu URL.  
   
 > [!NOTE]
->  Mimo że **użyciu klasy XmlSchemaCollection** klasa przechowuje schematy XDR i schematów XML, wszystkie metody i właściwości, która przyjmuje i zwraca **XmlSchema** obiekt obsługuje tylko schematów XML.  
+> Chociaż Klasa XmlSchemaCollection przechowuje zarówno schematy XDR, jak i schematy XML, każda metoda i właściwość, która pobiera lub zwraca obiekt **XmlSchema** , obsługuje tylko schematy XML.  
   
 > [!IMPORTANT]
->  <xref:System.Xml.Schema.XmlSchemaCollection> Klasa jest obecnie przestarzały i został zastąpiony <xref:System.Xml.Schema.XmlSchemaSet> klasy. Aby uzyskać więcej informacji na temat <xref:System.Xml.Schema.XmlSchemaSet> , zobacz klasę [klasa XmlSchemaSet na potrzeby kompilacji schematu](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+> Klasa jest obecnie przestarzała i została zastąpiona <xref:System.Xml.Schema.XmlSchemaSet> klasą. <xref:System.Xml.Schema.XmlSchemaCollection> Aby uzyskać więcej informacji na <xref:System.Xml.Schema.XmlSchemaSet> temat klasy, zobacz zestaw [XmlSchemaSet dla kompilacji schematu](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
 ## <a name="add-schemas-to-the-collection"></a>Dodaj schematy do kolekcji  
- Schematy są załadowane do kolekcji przy użyciu **Dodaj** metody **użyciu klasy XmlSchemaCollection**, co jest skojarzony z identyfikatora URI obszaru nazw schematu. Dla schematów XML identyfikator URI przestrzeni nazw będzie zazwyczaj docelowego obszaru nazw dla schematu. Schematy XDR, aby uzyskać identyfikator URI przestrzeni nazw jest przestrzeń nazw określona, jeśli schemat został dodany do kolekcji.  
+ Schematy są ładowane do kolekcji za pomocą metody **Add** klasy XmlSchemaCollection, w której schemat jest SKOJARZONY z identyfikatorem URI przestrzeni nazw. W przypadku schematów XML identyfikator URI przestrzeni nazw będzie zazwyczaj docelowym obszarem nazw dla schematu. W przypadku schematów XDR identyfikator URI przestrzeni nazw jest przestrzenią nazw określoną, gdy schemat został dodany do kolekcji.  
   
-## <a name="check-for-a-schema-in-the-collection"></a>Sprawdź, czy schemat w kolekcji  
- Można sprawdzić, czy schemat jest w kolekcji przy użyciu **zawiera** metody. **Zawiera** metoda przyjmuje albo **XmlSchema** obiektu (dla tylko schematy XML) lub ciąg reprezentujący identyfikator URI przestrzeni nazw skojarzone ze schematem (dla schematów XML, schematy i XDR).  
+## <a name="check-for-a-schema-in-the-collection"></a>Wyszukaj schemat w kolekcji  
+ Możesz sprawdzić, czy schemat znajduje się w kolekcji przy użyciu metody **Contains** . Metoda **Contains** pobiera obiekt **XML** (tylko schematy XML) lub ciąg reprezentujący identyfikator URI przestrzeni nazw skojarzony ze schematem (dla schematów XML i schematów XDR).  
   
-## <a name="retrieve-a-schema-from-the-collection"></a>Pobieranie schematu z kolekcji  
- Można pobrać schematu z kolekcji za pomocą **elementu** właściwości. **Elementu** właściwość przyjmuje ciąg reprezentujący przestrzeń nazw identyfikator URI skojarzony ze schematem, zwykle jego docelowego obszaru nazw i zwraca **XmlSchema** obiektu. **Elementu** właściwość dotyczy tylko schematów XML. Wartość zwracana jest zawsze odwołanie o wartości null dla schematów XDR, ponieważ nie mają model obiektów, które jest dostępne.  
+## <a name="retrieve-a-schema-from-the-collection"></a>Pobierz schemat z kolekcji  
+ Schemat z kolekcji można pobrać przy użyciu właściwości **Item** . Właściwość **Item** przyjmuje ciąg reprezentujący identyfikator URI przestrzeni nazw skojarzony ze schematem, zazwyczaj jego przestrzeń nazw Target i zwraca obiekt **XmlSchema** . Właściwość **Item** ma zastosowanie tylko do schematów XML. Wartość zwracana jest zawsze odwołaniem null dla schematów XDR, ponieważ nie ma dostępnego modelu obiektów.  
   
-## <a name="validate-xml-documents-using-xmlschemacollection"></a>Sprawdź poprawność dokumentów XML za pomocą użyciu klasy XmlSchemaCollection  
- Sprawdzanie poprawności XML wystąpienie dokumentu za pomocą **użyciu klasy XmlSchemaCollection** , tworząc **użyciu klasy XmlSchemaCollection** obiektu, dodając swoje schematy do kolekcji i ustawienie **schematów**  właściwość **elementu XmlValidatingReader** można przypisać utworzony **użyciu klasy XmlSchemaCollection** do **elementu XmlValidatingReader**.  
+## <a name="validate-xml-documents-using-xmlschemacollection"></a>Sprawdzanie poprawności dokumentów XML przy użyciu elementu XmlSchemaCollection  
+ Można sprawdzić poprawność dokumentu wystąpienia XML za pomocą XmlSchemaCollection, tworząc obiekt XmlSchemaCollection, dodając schematy do kolekcji i ustawiając właściwość **schematy** w **XmlValidatingReader** na Przypisz utworzoną wartość XmlSchemaCollection do **XmlValidatingReader**.  
   
-### <a name="improved-performance"></a>Lepsza wydajność  
- Jest to zalecane, Jeśli zatwierdzasz więcej niż jeden dokument względem tego samego schematu, że używasz **użyciu klasy XmlSchemaCollection** ponieważ zapewnia lepszą wydajność, buforując schematów w pamięci.  
+### <a name="improved-performance"></a>Zwiększona wydajność  
+ Zaleca się, aby w przypadku sprawdzania poprawności więcej niż jednego dokumentu w tym samym schemacie używać elementu XmlSchemaCollection, ponieważ zapewnia lepszą wydajność przez buforowanie schematów w pamięci.  
   
- Poniższy przykład kodu tworzy **użyciu klasy XmlSchemaCollection** obiektu, schematy są dodawane do kolekcji i ustawia **schematów** właściwości.  
+ Poniższy przykład kodu tworzy obiekt XmlSchemaCollection, dodaje schematy do kolekcji i ustawia właściwość **schematy** .  
   
 ```vb  
 Dim tr as XmlTextReader = new XmlTextReader("Books.xml")  

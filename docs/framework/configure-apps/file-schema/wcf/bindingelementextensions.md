@@ -2,19 +2,19 @@
 title: <bindingElementExtensions>
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: 775f93f319c136a29a32ffaa1dfabc12ee081b29
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c323a65ace332d2ecd1e03330dddbe7ca17ff5bd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700998"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926367"
 ---
 # <a name="bindingelementextensions"></a>\<bindingElementExtensions >
-Ta sekcja umożliwia zastosowanie elementu niestandardowego powiązania z maszyny lub pliku konfiguracji aplikacji. Można dodać element niestandardowego powiązania z tą kolekcją, za pomocą `add` — słowo kluczowe i ustawienie `type` atrybutu elementu, który ma rozszerzenie elementu powiązania, jak również `name` atrybutu do elementu niestandardowego powiązania.  
+Ta sekcja umożliwia korzystanie z niestandardowego elementu powiązania z pliku konfiguracji komputera lub aplikacji. Można dodać niestandardowy element powiązania do tej kolekcji przy użyciu `add` słowa kluczowego i `type` ustawić atrybut elementu na rozszerzenie elementu powiązania `name` , a także atrybut elementu niestandardowego powiązania.  
   
- Powiązanie rozszerzenia umożliwiają użytkownikowi utworzenie powiązań zdefiniowanych przez użytkownika elementy do użycia jako część niestandardowego powiązania. Programowe rozszerzenie powiązania jest typu, który implementuje klasa abstrakcyjna <xref:System.ServiceModel.Channels.BindingElement>. W pliku konfiguracyjnym `bindingElementExtensions` sekcji jest używana do definiowania elementu rozszerzenia.  
+ Rozszerzenia powiązań umożliwiają użytkownikowi tworzenie elementów powiązania zdefiniowanych przez użytkownika do użycia w ramach powiązań niestandardowych. Programowe rozszerzenie powiązania jest typem, który implementuje klasę <xref:System.ServiceModel.Channels.BindingElement>abstrakcyjną. W pliku `bindingElementExtensions` konfiguracji sekcja służy do definiowania elementu rozszerzenia.  
   
- W poniższym przykładzie użyto `add` elementu, jak również `name` atrybutu, aby dodać rozszerzenie powiązania `bindingElementExtensions` sekcję pliku konfiguracji.  
+ Poniższy przykład używa `add` elementu, a także `name` atrybutu, aby dodać rozszerzenie powiązania do `bindingElementExtensions` sekcji pliku konfiguracji.  
   
 ```xml  
 <system.serviceModel>
@@ -28,9 +28,9 @@ Ta sekcja umożliwia zastosowanie elementu niestandardowego powiązania z maszyn
 </system.serviceModel>
 ```  
   
- Aby dodać możliwości konfiguracji do elementu, użytkownik musi napisać i Zarejestruj `bindingElementExtensionSection` elementu. Aby uzyskać więcej informacji na temat tego, zobacz <xref:System.Configuration> dokumentacji.  
+ Aby dodać możliwości konfiguracji do elementu, użytkownik musi napisać i zarejestrować `bindingElementExtensionSection` element. Aby uzyskać więcej informacji na ten temat, <xref:System.Configuration> zapoznaj się z dokumentacją.  
   
- Po zdefiniowaniu elementu i jego typ Konfiguracja rozszerzenia może służyć jako część niestandardowego powiązania jak pokazano w poniższym przykładzie.  
+ Po zdefiniowaniu elementu i jego typu konfiguracji rozszerzenie może być używane jako część niestandardowego powiązania, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <customBinding>
@@ -46,4 +46,4 @@ Ta sekcja umożliwia zastosowanie elementu niestandardowego powiązania z maszyn
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>
-- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)

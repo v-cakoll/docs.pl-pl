@@ -2,19 +2,19 @@
 title: <filterTables>
 ms.date: 03/30/2017
 ms.assetid: 41f1ac35-f559-473a-b2c3-8cc83a6a3831
-ms.openlocfilehash: c49c7cf3a196595556c2bf1b4ed4365bfe1e4cbf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0a344aa69085d50087eefc746236bc8ceacadaa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704248"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918855"
 ---
-# <a name="filtertables"></a>\<filterTables>
-Reprezentuje sekcję konfiguracji określającą tabele routingu, które zawierają mapowania między filtrami i docelowymi punktami końcowymi do wysłania wiadomości, gdy filtr dopasowuje wartość.  
+# <a name="filtertables"></a>\<filterTables >
+Reprezentuje sekcję konfiguracji definiującą tabele routingu, które zawierają mapowania między filtrami routingu i docelowymi punktami końcowymi, do których mają być wysyłane komunikaty, gdy filtr jest zgodny.  
   
  \<system.serviceModel>  
-\<Routing >  
-\<routingTables>  
+\<> routingu  
+\<routingTables >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,13 +43,13 @@ Reprezentuje sekcję konfiguracji określającą tabele routingu, które zawiera
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Filtry >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Tabele routingu, które zawierają mapowania między filtrami i docelowymi punktami końcowymi, aby wysyłać komunikaty do kiedy filtr dopasowuje wartość.|  
+|[\<Filtry >](filters-of-routing.md)|Tabela routingu, która zawiera mapowania między filtrami routingu i docelowymi punktami końcowymi do wysyłania komunikatów, gdy filtr jest zgodny.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Sekcja konfiguracji, zawierający filtrów routingu i tabele routingu.|  
+|[\<> routingu](routing.md)|Sekcja konfiguracji, która zawiera filtry routingu i tabele routingu.|  
   
 ## <a name="see-also"></a>Zobacz także
 

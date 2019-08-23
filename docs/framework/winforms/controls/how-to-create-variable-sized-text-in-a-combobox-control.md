@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: 1fa9b04063d8f606f674cc54190dad5a669adbeb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c0dc40f6cac0af1f88e72089865caa3a17fcf2a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666418"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914745"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Instrukcje: tworzenie tekstu o zmiennym rozmiarze w kontrolce ComboBox
-W tym przykładzie przedstawiono rysowanie niestandardowego tekstu w <xref:System.Windows.Forms.ComboBox> kontroli. Jeśli element spełnia określone kryteria, jest rysowane w większej czcionki i włączone czerwony.  
+Ten przykład ilustruje niestandardowy rysunek tekstu w <xref:System.Windows.Forms.ComboBox> kontrolce. Gdy element spełnia określone kryteria, jest rysowany przy użyciu większej czcionki i kolor czerwony.  
   
 ## <a name="example"></a>Przykład  
   
@@ -58,14 +58,14 @@ End Sub
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Formularz Windows.  
+- Formularz systemu Windows.  
   
-- A <xref:System.Windows.Forms.ComboBox> formantu o nazwie `ListBox1` z trzema elementami w <xref:System.Windows.Forms.ComboBox.Items%2A> właściwości. W tym przykładzie trzy elementy są nazywane `"One", Two", and Three"`. <xref:System.Windows.Forms.ComboBox.DrawMode%2A> Właściwość `ComboBox1` musi być równa <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.  
+- Kontrolka o `ListBox1` nazwie<xref:System.Windows.Forms.ComboBox.Items%2A> z trzema elementami we właściwości. <xref:System.Windows.Forms.ComboBox> W tym przykładzie trzy elementy mają nazwę `"One", Two", and Three"`. Właściwość musi być ustawiona na <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>wartość. `ComboBox1` <xref:System.Windows.Forms.ComboBox.DrawMode%2A>  
   
     > [!NOTE]
-    >  Ta metoda ma również zastosowanie do <xref:System.Windows.Forms.ListBox> kontroli — można zastąpić <xref:System.Windows.Forms.ListBox> dla <xref:System.Windows.Forms.ComboBox>.  
+    > Ta technika ma również zastosowanie do <xref:System.Windows.Forms.ListBox> kontrolki — można <xref:System.Windows.Forms.ListBox> zastąpić dla <xref:System.Windows.Forms.ComboBox>.  
   
-- Odwołuje się do <xref:System.Windows.Forms?displayProperty=nameWithType> i <xref:System.Drawing?displayProperty=nameWithType> przestrzeni nazw.  
+- Odwołania do <xref:System.Windows.Forms?displayProperty=nameWithType> przestrzeni nazw <xref:System.Drawing?displayProperty=nameWithType> i.  
   
 ## <a name="see-also"></a>Zobacz także
 

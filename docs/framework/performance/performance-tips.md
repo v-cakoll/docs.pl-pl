@@ -9,41 +9,41 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f020e50cfe53c2b6ba134308ed6587876ca21a42
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c4177faca86fab9934f1cae57f02f8e42a2ae0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616296"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943378"
 ---
 # <a name="net-performance-tips"></a>Wskazówki dotyczące wydajności .NET
-Termin *wydajności* zazwyczaj odnosi się do szybkości wykonywania programu. Czasami możesz zwiększyć szybkość realizacji przez następujących podstawowych reguł w kodzie źródłowym. W niektórych programach jest ważne, aby dokładnie sprawdzić kod i użyć profilerów, aby upewnić się, że działa tak szybko, jak to możliwe. W innych programach nie trzeba wykonywać takiej optymalizacji, ponieważ kod działa zadowalająco szybko, jak jest pisany. W tym artykule wymieniono niektóre typowe obszary, w których może to spowodować obniżenie wydajności i wskazówki dotyczące poprawiania go, a także łącza do tematów wyższą wydajność. Aby uzyskać więcej informacji na temat planowania i dokonywania jej pomiarów wydajności, zobacz [wydajności](../../../docs/framework/performance/index.md)  
+Termin *wydajność* zwykle odnosi się do szybkości wykonywania programu. Czasami można zwiększyć szybkość wykonywania, wykonując pewne podstawowe reguły w kodzie źródłowym. W niektórych programach ważne jest dokładne badanie kodu i używanie narzędzi do uruchamiania, aby upewnić się, że działa tak szybko, jak to możliwe. W innych programach nie trzeba wykonywać takich optymalizacji, ponieważ kod jest uruchamiany zadowalająco szybko, gdy zostanie zapisany. W tym artykule wymieniono niektóre typowe obszary, w których wydajność może pogorszyć się, a także linki do dodatkowych tematów dotyczących wydajności. Aby uzyskać więcej informacji na temat planowania i mierzenia wydajności, zobacz [wydajność](../../../docs/framework/performance/index.md)  
   
 ## <a name="boxing-and-unboxing"></a>Opakowywanie i rozpakowywanie  
- Najlepiej jest unikać stosowania wartości typów w sytuacjach, w którym musi być zapakowany dużą liczbę razy, na przykład w kolekcji nieogólnej klasy takie jak <xref:System.Collections.ArrayList?displayProperty=nameWithType>. Możesz uniknąć pakowania typów wartości używając kolekcji ogólnych, takich jak <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Opakowywanie i rozpakowywanie są obciążającymi procesami. Gdy typ wartości jest zapakowany, należy utworzyć zupełnie nowy obiekt. Może to potrwać maksymalnie 20 razy dłużej niż proste przypisywanie odwołania. Podczas rozpakowywania, proces rzutowania może zająć cztery razy przypisania. Aby uzyskać więcej informacji, zobacz [opakowywanie i rozpakowywanie](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md).  
+ Najlepszym rozwiązaniem jest unikanie używania typów wartości w sytuacjach, gdy muszą one być opakowane dużą liczbę razy, na przykład w klasach kolekcji innych niż ogólne, <xref:System.Collections.ArrayList?displayProperty=nameWithType>takich jak. Można uniknąć pakowania typów wartości przy użyciu kolekcji ogólnych, takich jak <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Opakowanie i rozpakowywanie są w sposób obliczeniowy kosztowny. Gdy typ wartości jest opakowany, należy utworzyć zupełnie nowy obiekt. Może to potrwać do 20 razy więcej niż proste przypisanie odwołania. Podczas rozpakowywania proces rzutowania może trwać czterokrotnie tak długo, jak przypisanie. Aby uzyskać więcej informacji, zobacz [opakowanie i rozpakowywanie](../../csharp/programming-guide/types/boxing-and-unboxing.md).  
   
 ## <a name="strings"></a>Ciągi  
- Podczas łączenia dużej liczby zmiennych typu string, na przykład w pętli, użyj <xref:System.Text.StringBuilder?displayProperty=nameWithType> zamiast C# [+ — operator](~/docs/csharp/language-reference/operators/addition-operator.md) lub Visual Basic [Concatenation — operatory](~/docs/visual-basic/language-reference/operators/concatenation-operators.md). Aby uzyskać więcej informacji, zobacz [jak: Łączenie wielu ciągów](../../csharp/how-to/concatenate-multiple-strings.md) i [Concatenation — operatory w języku Visual Basic](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
+ Podczas łączenia dużej liczby zmiennych ciągów, na przykład w ścisłej pętli, użyj <xref:System.Text.StringBuilder?displayProperty=nameWithType> zamiast [](../../csharp/language-reference/operators/addition-operator.md) C# operatora + lub Visual Basic [operatorów łączenia](../../visual-basic/language-reference/operators/concatenation-operators.md). Aby uzyskać więcej informacji, zobacz [jak: Połącz wiele ciągów](../../csharp/how-to/concatenate-multiple-strings.md) i [operatorów łączenia w Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
   
 ## <a name="destructors"></a>Destruktory  
- Nie można używać pustych destruktorów. Gdy klasa zawiera destruktor, zapis jest tworzony w kolejce Finalize. Po wywołaniu destruktora moduł odśmiecania pamięci jest wywoływana, aby przetworzyć kolejkę. Jeśli destruktor jest pusty, po prostu powoduje to spadek wydajności. Aby uzyskać więcej informacji, zobacz [destruktory](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) i [okres istnienia obiektów: Jak obiekty są tworzone i niszczone](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+ Puste destruktory nie powinny być używane. Gdy Klasa zawiera destruktor, w kolejce Finalize zostanie utworzony wpis. Gdy destruktor jest wywoływany, Moduł wyrzucania elementów bezużytecznych jest wywoływany w celu przetworzenia kolejki. Jeśli destruktor jest pusty, to po prostu powoduje utratę wydajności. Aby uzyskać więcej informacji, [](../../csharp/programming-guide/classes-and-structs/destructors.md) zobacz Destruktory [i czas istnienia obiektu: Jak obiekty są tworzone i niszczone](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
 ## <a name="other-resources"></a>Inne zasoby  
   
-- [Szybsze pisanie kodu zarządzanego: Znaj koszt](https://go.microsoft.com/fwlink/?LinkId=99294)  
+- [Szybsze pisanie kodu zarządzanego: Informacje o kosztach](https://go.microsoft.com/fwlink/?LinkId=99294)  
   
-- [Pisanie wysokiej wydajności aplikacji zarządzanych: A Primer](https://go.microsoft.com/fwlink/?LinkId=99295)  
+- [Pisanie aplikacji zarządzanych o wysokiej wydajności: Podstawowa](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
-- [Podstawy modułu odśmiecania pamięci i wskazówki dotyczące wydajności](https://go.microsoft.com/fwlink/?LinkId=99296)  
+- [Podstawy modułu wyrzucania elementów bezużytecznych i wskazówki dotyczące wydajności](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
-- [I porady dotyczące wydajności w aplikacjach platformy .NET](https://go.microsoft.com/fwlink/?LinkId=99297)  
+- [Porady i wskazówki dotyczące wydajności w aplikacjach .NET](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
-- [Informacje o technologii Rico Mariani wydajności](https://go.microsoft.com/fwlink/?LinkId=115679)  
+- [Mariani wydajność smakowite kąski](https://go.microsoft.com/fwlink/?LinkId=115679)  
 
-- [Blog Morrison zaliczko](https://blogs.msdn.microsoft.com/vancem/)
+- [Blog Vance Morrison](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Wydajność](../../../docs/framework/performance/index.md)
-- [Przewodnik programowania w języku Visual Basic](../../visual-basic/programming-guide/index.md)
+- [Przewodnik programowania Visual Basic](../../visual-basic/programming-guide/index.md)
 - [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)

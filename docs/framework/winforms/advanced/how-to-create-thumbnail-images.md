@@ -8,47 +8,47 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 275041372bd5e7da5dd0b32dc0a3d70a38bd0dcd
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 786a92d99f5e7a0c27f502efa9a5fe617ac4d4d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063769"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923753"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Instrukcje: Tworzenie obrazów miniatur
-Obraz miniatury jest mały wersję obrazu. Możesz utworzyć obraz miniatury, przez wywołanie metody <xref:System.Drawing.Image.GetThumbnailImage%2A> metody <xref:System.Drawing.Image> obiektu.  
+Obraz miniatury jest małą wersją obrazu. Można utworzyć miniaturę obrazu, wywołując <xref:System.Drawing.Image.GetThumbnailImage%2A> metodę <xref:System.Drawing.Image> obiektu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy <xref:System.Drawing.Image> obiekt z pliku JPG. Oryginalny obraz ma 640 pikseli szerokości i wysokości 479 pikseli. Ten kod tworzy obraz miniatury, który ma 100 pikseli szerokości i wysokości 100 pikseli.  
+ Poniższy przykład konstruuje <xref:System.Drawing.Image> obiekt z pliku jpg. Oryginalny obraz ma szerokość 640 pikseli i wysokość 479 pikseli. Kod tworzy obraz miniatury o szerokości 100 pikseli i wysokości 100 pikseli.  
   
- Poniższa ilustracja przedstawia się miniaturę:  
+ Na poniższej ilustracji przedstawiono obraz miniatury:  
   
- ![Zrzut ekranu pokazujący miniaturę danych wyjściowych.](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
+ ![Zrzut ekranu przedstawiający miniaturę danych wyjściowych.](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
   
 > [!NOTE]
->  W tym przykładzie metody wywołania zwrotnego jest zadeklarowana, ale nigdy używane. To obsługuje wszystkie wersje interfejsu GDI +.  
+> W tym przykładzie metoda wywołania zwrotnego jest zadeklarowana, ale nigdy nie jest używana. Obsługuje to wszystkie wersje interfejsu GDI+.  
   
  [!code-csharp[System.Drawing.WorkingWithImages#71](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.WorkingWithImages#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń. Aby uruchomić przykład, wykonaj następujące kroki:  
+ Poprzedni przykład jest przeznaczony do użycia z Windows Forms i wymaga <xref:System.Windows.Forms.PaintEventArgs> `e`, który <xref:System.Windows.Forms.Control.Paint> jest parametrem programu obsługi zdarzeń. Aby uruchomić ten przykład, wykonaj następujące kroki:  
   
-1. Tworzenie nowej aplikacji Windows Forms.  
+1. Utwórz nową aplikację Windows Forms.  
   
 2. Dodaj przykładowy kod do formularza.  
   
-3. Utwórz procedurę obsługi w formularzu <xref:System.Windows.Forms.Control.Paint> zdarzeń  
+3. Utwórz procedurę obsługi dla <xref:System.Windows.Forms.Control.Paint> zdarzenia formularza  
   
-4. W <xref:System.Windows.Forms.Control.Paint> program obsługi, wywołanie `GetThumbnail` metody i przekazać `e` dla <xref:System.Windows.Forms.PaintEventArgs>.  
+4. W programie `GetThumbnail` `e` obsługi Wywołaj metodę i przekaż <xref:System.Windows.Forms.PaintEventArgs>polecenie. <xref:System.Windows.Forms.Control.Paint>  
   
-5. Znajdź plik obrazu, który ma się miniaturę.  
+5. Znajdź plik obrazu, dla którego chcesz utworzyć miniaturę.  
   
-6. W `GetThumbnail` metody, określ ścieżkę i nazwę obrazu pliku.  
+6. `GetThumbnail` W metodzie określ ścieżkę i nazwę pliku do obrazu.  
   
 7. Naciśnij klawisz F5, aby uruchomić przykład.  
   
-     W formularzu pojawi się miniaturę 100 x 100.  
+     Obraz miniatury 100 według 100 pojawia się w formularzu.  
   
 ## <a name="see-also"></a>Zobacz także
 

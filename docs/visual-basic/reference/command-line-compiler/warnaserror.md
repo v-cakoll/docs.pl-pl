@@ -6,15 +6,15 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: c06326a250fba0de2f63e13672b4fffbfa8a07f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4382ec8feda2df1e83fd2fdc509abb66984e501f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796178"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937255"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror — (Visual Basic)
-Powoduje, że kompilator o konieczności potraktowania pierwsze wystąpienie ostrzeżenie jako błąd.  
+Powoduje, że kompilator traktuje pierwsze wystąpienie ostrzeżenia jako błąd.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,36 +26,36 @@ Powoduje, że kompilator o konieczności potraktowania pierwsze wystąpienie ost
   
 |Termin|Definicja|  
 |---|---|  
-|+ &#124; -|Opcjonalna. Domyślnie `-warnaserror-` jest obowiązywały; ostrzeżenia nie uniemożliwiają kompilator tworzenia pliku wyjściowego. `-warnaserror` Opcja, która jest taka sama jak `-warnaserror+`, powoduje, że ostrzeżenia są traktowane jako błędy.|  
-|`numberList`|Opcjonalna. Rozdzielana przecinkami lista identyfikatora ostrzeżenie liczby, do którego `-warnaserror` opcja ma zastosowanie. Jeśli jest określony żaden identyfikator ostrzeżenia, `-warnaserror` opcja ma zastosowanie do wszystkich ostrzeżeń.|  
+|+ &#124; -|Opcjonalny. Domyślnie program `-warnaserror-` jest w efekcie. ostrzeżenia nie uniemożliwiają kompilatorowi tworzenia pliku wyjściowego. Opcja, która jest taka sama jak `-warnaserror+`, powoduje, że ostrzeżenia są traktowane jako błędy. `-warnaserror`|  
+|`numberList`|Opcjonalna. Rozdzielana przecinkami lista numerów identyfikacyjnych ostrzeżeń, do których zostanie `-warnaserror` zastosowana opcja. Jeśli nie określono identyfikatora ostrzeżenia, `-warnaserror` opcja ma zastosowanie do wszystkich ostrzeżeń.|  
   
 ## <a name="remarks"></a>Uwagi  
- `-warnaserror` Opcja traktuje wszystkie ostrzeżenia jako błędy. Komunikaty, które zazwyczaj będzie zgłaszane jako ostrzeżenia zamiast tego są zgłaszane jako błędy. Kompilator raporty kolejnych wystąpień tego samego ostrzeżenie jako ostrzeżenia.  
+ `-warnaserror` Opcja traktuje wszystkie ostrzeżenia jako błędy. Wszystkie komunikaty, które zwykle są raportowane jako ostrzeżenia, są raportowane jako błędy. Kompilator raportuje kolejne wystąpienia tego samego ostrzeżenia co ostrzeżenia.  
   
- Domyślnie `-warnaserror-` obowiązują, co powoduje, że ostrzeżenia informacyjne tylko do. `-warnaserror` Opcja, która jest taka sama jak `-warnaserror+`, powoduje, że ostrzeżenia są traktowane jako błędy.  
+ Domyślnie `-warnaserror-` obowiązuje, co powoduje, że ostrzeżenia są tylko informacyjne. Opcja, która jest taka sama jak `-warnaserror+`, powoduje, że ostrzeżenia są traktowane jako błędy. `-warnaserror`  
   
- Jeśli chcesz tylko kilka określone ostrzeżenia są traktowane jako błędy, można określić przecinkami lista numerów ostrzeżeń do traktowania jako błędy.  
+ Jeśli chcesz, aby tylko kilka określonych ostrzeżeń była traktowana jak błędy, możesz określić rozdzieloną przecinkami listę numerów ostrzeżeń, które mają być traktowane jako błędy.  
   
 > [!NOTE]
->  `-warnaserror` Opcji nie kontroluje sposób wyświetlania ostrzeżenia. Użyj [- nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) opcję, aby wyłączyć ostrzeżenia.  
+> `-warnaserror` Opcja nie kontroluje sposobu wyświetlania ostrzeżeń. Użyj opcji [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) , aby wyłączyć ostrzeżenia.  
   
-|Aby ustawić - warnaserror — na traktowanie wszystkich ostrzeżeń jako błędy w środowisku IDE programu Visual Studio|  
+|Aby ustawić-warnaserror — wszystkie ostrzeżenia jako błędy w środowisku IDE programu Visual Studio|  
 |---|  
-|1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**. <br />2.  Kliknij przycisk **skompilować** kartę.<br />3.  Upewnij się, że **Wyłącz wszystkie ostrzeżenia** pole wyboru jest zaznaczone.<br />4.  Sprawdź **traktowanie wszystkich ostrzeżeń jako błędy** pole wyboru.|  
+|1.  Zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2.  Kliknij kartę **kompilacja** .<br />3.  Upewnij się, że pole wyboru **Wyłącz wszystkie ostrzeżenia** nie jest zaznaczone.<br />4.  Zaznacz pole wyboru **Traktuj wszystkie ostrzeżenia jako błędy** .|  
   
-|Aby ustawić - warnaserror Traktuj szczególne ostrzeżenia jako błędy w środowisku IDE programu Visual Studio|  
+|Aby ustawić-warnaserror — do traktowania określonych ostrzeżeń jako błędów w środowisku IDE programu Visual Studio|  
 |---|  
-|1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.<br />2.  Kliknij przycisk **skompilować** kartę.<br />3.  Upewnij się, że **Wyłącz wszystkie ostrzeżenia** pole wyboru jest zaznaczone.<br />4.  Upewnij się, że **traktowanie wszystkich ostrzeżeń jako błędy** pole wyboru jest zaznaczone.<br />5.  Wybierz **błąd** z **powiadomień** kolumny sąsiadujące ostrzeżenie, że powinny być traktowane jako błąd.|  
+|1.  Zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**.<br />2.  Kliknij kartę **kompilacja** .<br />3.  Upewnij się, że pole wyboru **Wyłącz wszystkie ostrzeżenia** nie jest zaznaczone.<br />4.  Upewnij się, że pole wyboru **Traktuj wszystkie ostrzeżenia jako błędy** nie jest zaznaczone.<br />5.  Wybierz **błąd** z kolumny **powiadomień** sąsiadującej z ostrzeżeniem, które ma być traktowane jako błąd.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `In.vb` i instruuje kompilator, aby wyświetlić błąd dla pierwszego wystąpienia każde ostrzeżenie znajdzie.  
+ Poniższy kod kompiluje `In.vb` i kieruje kompilator w celu wyświetlenia błędu pierwszego wystąpienia każdego ostrzeżenia, które znajdzie.  
   
 ```console
 vbc -warnaserror in.vb  
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `T2.vb` i traktuje ostrzeżenia dla nieużywane zmienne lokalne (42024) jako błąd.  
+ Poniższy kod kompiluje `T2.vb` i traktuje tylko Ostrzeżenie dla nieużywanych zmiennych lokalnych (42024) jako błąd.  
   
 ```console
 vbc -warnaserror:42024 t2.vb  
@@ -63,6 +63,6 @@ vbc -warnaserror:42024 t2.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Konfigurowanie ostrzeżeń w kodzie Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)

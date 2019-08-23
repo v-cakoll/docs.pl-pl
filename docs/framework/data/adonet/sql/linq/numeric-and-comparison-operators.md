@@ -2,54 +2,54 @@
 title: Operatory numeryczne i porównania
 ms.date: 03/30/2017
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
-ms.openlocfilehash: b29f78a13d6d0313e0ad29754f6d13ac08be1092
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff54856a66ad5e9c0362c013f8df5f1147055cd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783139"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915710"
 ---
 # <a name="numeric-and-comparison-operators"></a>Operatory numeryczne i porównania
 
-Operatory arytmetyczne i porównanie działają w oczekiwany sposób w środowisko uruchomieniowe języka wspólnego (CLR) z wyjątkiem sytuacji, w następujący sposób:
+Operatory arytmetyczne i porównania działają zgodnie z oczekiwaniami w środowisku uruchomieniowym języka wspólnego (CLR), z wyjątkiem następujących:
 
-- SQL nie obsługuje operator modulo na liczby zmiennoprzecinkowe.
+- SQL nie obsługuje operatora modulo w liczbie zmiennoprzecinkowej.
 
-- SQL nie obsługuje arytmetyki niezaznaczone.
+- SQL nie obsługuje niesprawdzonej arytmetycznej.
 
-- Operatory inkrementacji i dekrementacji spowodować efekty uboczne, gdy będziesz ich używać w wyrażeniach, które nie mogą być replikowane w języku SQL i w związku z tym, nie obsługują.
+- Operatory zwiększania i zmniejszania powodują skutki uboczne, gdy są używane w wyrażeniach, które nie mogą być replikowane w języku SQL, dlatego nie są obsługiwane.
 
-## <a name="supported-operators"></a>Operatory obsługiwane
+## <a name="supported-operators"></a>Obsługiwane operatory
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje następujące operatory.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]obsługuje następujące operatory.
 
-- Podstawowe operatory arytmetyczne:
+- Operatory arytmetyczne w warstwie Podstawowa:
 
   - `+`
 
-  - `-` (odejmowanie)
+  - `-`odejmowania
 
   - `*`
 
   - `/`
 
-  - Dzielenie liczby całkowitej w języku Visual Basic (`\`)
+  - Visual Basic dzielenia liczb całkowitych (`\`)
 
-  - `%` (Visual Basic `Mod`)
+  - `%`(Visual Basic `Mod`)
 
   - `<<`
 
   - `>>`
 
-  - `-` (negacja Jednoargumentowa)
+  - `-`(Negacja Jednoargumentowa)
 
-- Operatory porównania podstawowe:
+- Podstawowe operatory porównania:
 
-  - Visual Basic `=` i C# `==`
+  - Visual Basic `=` i C#`==`
 
-  - Visual Basic `<>` i C# `!=`
+  - Visual Basic `<>` i C#`!=`
 
-  - Visual Basic `Is/IsNot`
+  - Visual Basic`Is/IsNot`
 
   - `<`
 
@@ -62,5 +62,5 @@ Operatory arytmetyczne i porównanie działają w oczekiwany sposób w środowis
 ## <a name="see-also"></a>Zobacz także
 
 - [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
-- [Operatory języka C#](../../../../../../docs/csharp/language-reference/operators/index.md)
+- [Operatory języka C#](../../../../../csharp/language-reference/operators/index.md)
 - [Operatory](../../../../../visual-basic/language-reference/operators/index.md)

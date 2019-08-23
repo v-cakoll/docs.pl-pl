@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: a59ff4c956724c614342f0ee4c0622a67f1c25e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5481a9bce01e84ce4f078335c8cd15a747a3c51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054968"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917216"
 ---
 # <a name="is-operator-visual-basic"></a>Is — Operator (Visual Basic)
 Porównuje dwie zmienne odwołań do obiektów.  
@@ -27,34 +27,34 @@ result = object1 Is object2
   
 ## <a name="parts"></a>Części  
  `result`  
- Wymagana. Wszelkie `Boolean` wartość.  
+ Wymagany. Dowolna `Boolean` wartość.  
   
  `object1`  
- Wymagana. Wszelkie `Object` nazwy.  
+ Wymagany. Dowolna `Object` nazwa.  
   
  `object2`  
- Wymagana. Wszelkie `Object` nazwy.  
+ Wymagane. Dowolna `Object` nazwa.  
   
 ## <a name="remarks"></a>Uwagi  
- `Is` Określa operator, jeśli dwa odwołania do obiektu odnoszą się do tego samego obiektu. Jednak nie wykonuje porównania wartości. Jeśli `object1` i `object2` odnoszą się do dokładnie tego samego wystąpienia obiektu `result` jest `True`; Jeśli nie, `result` jest `False`.  
+ `Is` Operator określa, czy dwa odwołania do obiektów odwołują się do tego samego obiektu. Jednak nie wykonuje porównania wartości. Jeśli `object1` i `True` `result` `result` `False`oba odnoszą się do dokładnie tego samego wystąpienia obiektu, to; jeśli nie, to. `object2`  
   
- `Is` można również za pomocą `TypeOf` — słowo kluczowe, aby `TypeOf`... `Is` wyrażenie, które sprawdza, czy zmienna obiektu jest zgodny z typem danych.  
+ `Is`można go również użyć ze słowem kluczowym `TypeOf` , `TypeOf`aby utworzyć... `Is` wyrażenie, które sprawdza, czy zmienna obiektu jest zgodna z typem danych.  
   
 > [!NOTE]
->  `Is` — Słowo kluczowe jest również używany w [wybierz... Case — instrukcja](../../../visual-basic/language-reference/statements/select-case-statement.md).  
+> `Is` Słowo kluczowe jest również używane w [SELECT... Case — instrukcja](../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `Is` operatora porównania pary odwołania do obiektu. Wyniki są przypisane do `Boolean` wartość reprezentującą informację, czy dwa obiekty są identyczne.  
+ Poniższy przykład używa `Is` operatora do porównywania par odwołań do obiektów. Wyniki są przypisane do `Boolean` wartości reprezentującej, czy dwa obiekty są identyczne.  
   
  [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
- Jak pokazano w powyższym przykładzie, można użyć `Is` operatora, aby przetestować zarówno z wczesnym wiązaniem i rozpoznanie późnego wiązania obiektów.  
+ Jak pokazano w powyższym przykładzie, można użyć `Is` operatora do przetestowania zarówno obiektów wczesnych, jak i późnych powiązań.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [TypeOf, operator](../../../visual-basic/language-reference/operators/typeof-operator.md)
 - [IsNot, operator](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Operatory porównania w języku Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operatory porównania w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

@@ -2,85 +2,85 @@
 title: Szablony programu Visual Studio na potrzeby programu WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 2e192e671d37e096e4199b295d4f533194ab89b6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f7eb9ef5175c41a3378201f2f25f1fd914aef55
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613231"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916788"
 ---
 # <a name="wcf-visual-studio-templates"></a>Szablony programu Visual Studio na potrzeby programu WCF
-Szablony programu Visual Studio Windows Communication Foundation (WCF) są wstępnie zdefiniowane szablony projektów i elementów, które w programie Visual Studio umożliwia szybkie tworzenie usług WCF i otaczającego aplikacji.  
+Windows Communication Foundation (WCF) szablony programu Visual Studio są wstępnie zdefiniowanymi szablonami projektu i elementów, których można użyć w programie Visual Studio, aby szybko tworzyć usługi WCF i otaczające aplikacje.  
   
-## <a name="using-the-wcf-templates"></a>Za pomocą szablonów usługi WCF  
- Szablony programu Visual Studio WCF stanowią strukturę podstawowe klasy do tworzenia aplikacji usługi. W szczególności te szablony zapewniają podstawowe definicje dla kontraktu usługi, kontraktu danych, usługi wdrażania i konfiguracji. Można użyć tych szablonów, aby utworzyć prostą usługę za pomocą minimalnej ilości kodu interakcji, a także blok konstrukcyjny dla bardziej zaawansowanych usług.  
+## <a name="using-the-wcf-templates"></a>Korzystanie z szablonów WCF  
+ Szablony Visual Studio programu WCF zapewniają podstawową strukturę klasy do tworzenia usług. Szablony te zawierają podstawowe definicje kontraktu usług, kontraktu danych, implementacji usługi i konfiguracji. Za pomocą tych szablonów można utworzyć prostą usługę z minimalnym interakcją kodu, a także blok konstrukcyjny dla bardziej zaawansowanych usług.  
   
 ### <a name="wcf-service-library-project-template"></a>Szablon projektu biblioteki usługi WCF  
- Szablon projektu biblioteki usługi WCF jest dostępna w okno dialogowe Nowy projekt w obszarze **Visual C# \WCF** i **Visual Basic\WCF**.  
+ Szablon projektu biblioteki usług WCF jest dostępny w oknie dialogowym Nowy projekt w obszarze **Visual C#\WCF** i **Visual Basic\WCF**.  
   
- Podczas tworzenia nowego projektu przy użyciu **usługi WCF** szablon nowego projektu automatycznie uwzględnia następujące trzy pliki:  
+ Podczas tworzenia nowego projektu przy użyciu szablonu **usługi WCF** nowy projekt automatycznie zawiera następujące trzy pliki:  
   
-- Plik kontraktu usługi (IService1.cs lub IService1.vb). Plik kontraktu usługi jest interfejs, który został zastosowany atrybuty usługi WCF. Ten plik zawiera definicję prostą usługę, aby pokazać sposób definiowania usługi oraz operacje oparte o parametry i przykładowych kontraktu danych proste. Jest to domyślny plik wyświetlany w edytorze kodu, po utworzeniu projektu usługi WCF.  
+- Plik kontraktu usługi (IService1.cs lub IService1. vb). Plik kontraktu usługi jest interfejsem, który ma zastosowane atrybuty usługi WCF. Ten plik zawiera definicję prostej usługi, która pokazuje, jak definiować usługi, i zawiera operacje oparte na parametrach oraz prostej umowie dotyczącej danych. Jest to domyślny plik wyświetlany w edytorze kodu po utworzeniu projektu usługi WCF.  
   
-- Plik implementacji usługi (Service1.cs lub Service1.vb). Plik implementacji usługi implementuje kontrakt zdefiniowany w pliku kontraktu usługi.  
+- Plik implementacji usługi (Service1.cs lub Service1. vb). Plik implementacji usługi implementuje kontrakt zdefiniowany w pliku kontraktu usługi.  
   
-- Plik konfiguracji aplikacji (App.config). Plik konfiguracyjny zawiera podstawowe elementy modelu usług WCF za pomocą bezpiecznego powiązania protokołu HTTP. Ponadto zawiera punkt końcowy usługi i umożliwia wymiany metadanych.  
+- Plik konfiguracji aplikacji (App. config). Plik konfiguracji zawiera podstawowe elementy modelu usługi WCF z bezpiecznym powiązaniem HTTP. Zawiera również punkt końcowy usługi i umożliwia wymianę metadanych.  
   
 > [!NOTE]
->  Program Visual Studio jest skonfigurowana do rozpoznać pliku App.config jako plik konfiguracyjny dla projektu, po uruchomieniu przy użyciu [Host usługi WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), która jest domyślna konfiguracja. Jeśli na serwerze biblioteki usługi w pliku wykonywalnym, należy przenieść kod konfiguracji do pliku konfiguracyjnego pliku wykonywalnego, jak pliki konfiguracji dla bibliotek DLL nie są prawidłowe.  
+> Program Visual Studio jest skonfigurowany do rozpoznawania pliku App. config jako plik konfiguracji projektu, gdy jest uruchamiany przy użyciu [hosta usługi WCF (WcfSvcHost. exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), który jest domyślną konfiguracją. Jeśli Biblioteka usług jest hostowana w pliku wykonywalnym, należy przenieść kod konfiguracji do pliku konfiguracyjnego pliku wykonywalnego, ponieważ pliki konfiguracji bibliotek DLL są nieprawidłowe.  
   
-### <a name="wcf-service-application-template"></a>Szablon aplikacja usługi WCF  
- Szablon aplikacja usługi WCF jest dostępny w oknie dialogowym Nowy projekt w obszarze **Visual C# \WCF** i **Visual Basic\WCF**.  
+### <a name="wcf-service-application-template"></a>Szablon aplikacji usługi WCF  
+ Szablon aplikacji usługi WCF jest dostępny w oknie dialogowym Nowy projekt w obszarze **Visual C#\WCF** i **Visual Basic\WCF**.  
   
- Podczas tworzenia nowego projektu przy użyciu **usługi aplikacji sieci Web WCF** szablonu projektu obejmuje cztery następujące pliki:  
+ Podczas tworzenia nowego projektu przy użyciu szablonu **usługi aplikacji sieci Web programu WCF** projekt zawiera następujące cztery pliki:  
   
-- Host usługi plików (plik service1.svc).  
+- Plik hosta usługi (Service1. svc).  
   
-- Plik kontraktu usługi (IService1.cs lub IService1.vb).  
+- Plik kontraktu usługi (IService1.cs lub IService1. vb).  
   
-- Plik implementacji usługi (Service1.svc.cs lub Service1.svc.vb).  
+- Plik implementacji usługi (Service1.svc.cs lub Service1. svc. vb).  
   
-- Plik konfiguracji sieci Web (Web.config).  
+- Plik konfiguracji sieci Web (Web. config).  
   
- Szablon automatycznie tworzy witrynę sieci Web (do wdrożenia dla katalogu wirtualnego) i hostuje usługę w nim.  
+ Szablon automatycznie tworzy witrynę sieci Web (do wdrożenia w katalogu wirtualnym) i hostuje w niej usługę.  
   
 ### <a name="wcf-web-site-template"></a>Szablon witryny sieci Web WCF  
- Szablon witryny sieci Web WCF jest dostępny w oknie dialogowym Nowy projekt w obszarze **Visual C# \Web Site\WCF usługi** i **usługi Site\WCF Basic\Web Visual**. Tworzy te same pliki jako szablon aplikacja usługi WCF, ale organizuje je tak, jakby był to witryna sieci web ASP.NET. App_Code oraz App_Data foldery będą tworzone.  
+ Szablon witryny sieci Web WCF jest dostępny w oknie dialogowym Nowy projekt w obszarze **Visual C#\Serwer sieci Site\WCF Service** i **Visual Basic\Web Site\WCF Service**. Spowoduje to utworzenie takich samych plików jak szablon aplikacji usługi WCF, ale organizuje je tak, jakby była witryną sieci Web ASP.NET. Tworzone są foldery App_Code i App_Data.  
   
-### <a name="wcf-service-item-template"></a>Szablon elementu Usługa WCF  
- Szablon elementu Usługa WCF jest szablon niestandardowy, który zapewnia szybki sposób nad dodaniem usług WCF do istniejących projektów programu Visual Studio.  
+### <a name="wcf-service-item-template"></a>Szablon elementu usługi WCF  
+ Szablon elementu usługi WCF jest szablonem niestandardowym, który umożliwia szybkie dodawanie usług WCF do istniejących projektów programu Visual Studio.  
   
- Aby użyć tego szablonu, przejdź do **Eksploratora rozwiązań** okienku kliknij prawym przyciskiem myszy nazwę projektu, wskaż opcję **Dodaj**, a następnie kliknij przycisk **nowy element** można uruchomić **Dodaj nowe Element** okno dialogowe.  
+ Aby użyć tego szablonu, przejdź do okienka **Eksplorator rozwiązań** , kliknij prawym przyciskiem myszy nazwę projektu, wskaż polecenie **Dodaj**, a następnie kliknij przycisk **nowy element** , aby uruchomić okno dialogowe **Dodaj nowy element** .  
   
- Pliki interfejsu i implementacji usługi są umieszczane w folderze głównym projektu.  
+ Interfejs usługi i pliki implementacji są umieszczane w folderze głównym projektu.  
   
- Szablon próbuje scalić sekcji konfiguracji nową usługę, która istniejący plik konfiguracyjny, jeśli są one niezgodne typy.  
+ Szablon podejmuje próbę scalenia sekcji konfiguracji nowej usługi z istniejącym plikiem konfiguracji, jeśli są one zgodne z typami.  
   
- Pliku hosta usługi (plik service1.svc) jest tworzona, jeśli istniejący projekt jest projektem sieci Web.  
+ Plik hosta usługi (Service1. svc) jest również tworzony, jeśli istniejący projekt jest projektem sieci Web.  
   
-### <a name="wcf-wf-service-project-and-item-template"></a>Projekt programu WF usługi WCF i szablon elementu.  
- Te szablony tworzą usług WCF tego hosta usługi przepływu pracy, który jest przepływ pracy, który można uzyskać dostęp, takich jak usługi sieci web. Istnieje osobnymi szablonami XAML i imperatywnego modelach programowania. Korzystanie z szablonów, można utworzyć przepływ pracy automatu Sekwencyjna lub stanu. Aby uzyskać więcej informacji na temat tego rodzaju przepływu pracy, zobacz [jak: Tworzenie przepływu pracy](../windows-workflow-foundation/how-to-create-a-workflow.md). Aby uzyskać więcej informacji na temat tworzenia projektów przepływu pracy, zobacz [tworzenie starszej wersji projektów przepływu pracy](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+### <a name="wcf-wf-service-project-and-item-template"></a>Projekt usługi WCF WF i szablon elementu.  
+ Te szablony tworzą usługi WCF obsługujące usługę przepływu pracy, która jest przepływem pracy, który można uzyskać dostęp do usługi sieci Web. Istnieją osobne szablony dla języka XAML lub bezwzględnych modeli programistycznych. Za pomocą szablonów można utworzyć sekwencyjny przepływ pracy automatu lub stanu. Aby uzyskać więcej informacji na temat tego typu przepływu pracy [, zobacz How to: Utwórz przepływ pracy](../windows-workflow-foundation/how-to-create-a-workflow.md). Aby uzyskać więcej informacji na temat tworzenia projektów przepływu pracy, zobacz [Tworzenie starszych projektów przepływu pracy](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
- Projektanta Visual Studio jest bardziej reaktywny, gdy typ XOML, przepływy pracy są używane zamiast tego kodu na podstawie tych. XOML przepływu pracy jest domyślny typ przepływu pracy, który ma zostać utworzony.  
+ Program Visual Studio Designer jest bardziej reagujący, gdy są używane przepływy pracy typu XOML zamiast kodu. Przepływ pracy XOML jest domyślnym typem przepływu pracy, który ma zostać utworzony.  
   
-### <a name="wcf-syndication-service-library-template"></a>Szablon Biblioteka usługi syndykacji WCF  
- Ten szablon umożliwia udostępnianie Twoje źródło danych w formacie takich jak usługi WCF. Aby uzyskać więcej informacji, zobacz [syndykacja programu WCF](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
+### <a name="wcf-syndication-service-library-template"></a>Szablon biblioteki usługi zespalania programu WCF  
+ Ten szablon umożliwia udostępnienie kanału informacyjnego w formacie RSS lub ATOM jako usługi WCF. Aby uzyskać więcej informacji, zobacz temat [zespalanie WCF](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
   
 #### <a name="changing-the-address-of-the-feed"></a>Zmiana adresu kanału informacyjnego  
- Szablon syndykacji używa programu Internet Explorer podczas wykonywania. Po kliknięciu prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** w programie Visual Studio, wybierz **właściwości**, a następnie wybierz **debugowania** kartę, aby sprawdzić adres domyślny szablon. Program Internet Explorer próbuje otworzyć źródło danych pod tym adresem.  
+ Szablon zespalania używa programu Internet Explorer podczas wykonywania. Po kliknięciu prawym przyciskiem myszy projektu w **Eksploratorze rozwiązań** w programie Visual Studio wybierz pozycję **Właściwości**, a następnie wybierz kartę **debugowanie** i sprawdź, czy jest wyświetlany domyślny adres szablonu. Program Internet Explorer podejmie próbę otwarcia kanału informacyjnego pod tym adresem.  
   
- Jeśli zmienisz adres Twoje źródło danych, należy zmienić adres w **debugowania** kartę. Jeśli nie zrobisz, program Internet Explorer próbuje Otwórz źródło danych pod domyślnym adresem i zakończyć się niepowodzeniem.  
+ W przypadku zmiany adresu kanału informacyjnego należy również zmienić adres na karcie **debugowanie** . Jeśli tego nie zrobisz, program Internet Explorer podejmie próbę otwarcia źródła danych przy użyciu adresu domyślnego i niepowodzeniem.  
   
-### <a name="ajax-enabled-wcf-service-item-template"></a>Szablon elementu Usługa WCF z włączoną technologii AJAX  
- Ten szablon przedstawia kontrolka AJAX jako usługa WCF. Aby uzyskać więcej informacji na temat kontrolek AJAX, zobacz [dokumentacji dotyczącej kontroli AJAX](https://go.microsoft.com/fwlink/?LinkId=96717).  
+### <a name="ajax-enabled-wcf-service-item-template"></a>Szablon elementu usługi WCF z włączoną obsługą technologii AJAX  
+ Ten szablon udostępnia kontrolkę AJAX jako usługę WCF. Aby uzyskać więcej informacji na temat kontrolek AJAX, zobacz [dokumentację kontroli AJAX](https://go.microsoft.com/fwlink/?LinkId=96717).  
   
-### <a name="silverlight-enabled-wcf-service-item-template"></a>Szablon elementu Usługa WCF z włączoną obsługą technologii Silverlight  
- Ten szablon tworzy usługi sieci Web, który dostarcza dane do klienta Silverlight lub frontonu. Szablon można dodać do witryny sieci Web lub sieci Web projektu aplikacji do tworzenia usługi WCF, który zawiera kod usługi i konfigurację, która obsługuje komunikację z klientem programu Silverlight. Następnie można użyć **Dodaj odwołanie do usługi** Dodaj usługi Serwer proxy klienta do klienta w celu wymiany danych między klientem programu Silverlight i usługi WCF z włączoną obsługą technologii Silverlight.  
+### <a name="silverlight-enabled-wcf-service-item-template"></a>Szablon elementu usługi WCF z włączonym dodatkiem Silverlight  
+ Ten szablon służy do tworzenia usługi sieci Web, która dostarcza dane do klienta Silverlight lub frontonu. Szablon można dodać do witryny sieci Web lub projektu aplikacji sieci Web w celu utworzenia usługi WCF, która zawiera kod i konfigurację usługi, która obsługuje komunikację z klientem Silverlight. Następnie można użyć **Dodaj odwołanie do usługi** , aby dodać klienta serwera proxy usługi do klienta i wymiany danych między klientem Silverlight a usługą WCF obsługującą program Silverlight.  
   
- Aby uzyskać dostęp do tego szablonu, kliknij prawym przyciskiem myszy projekt aplikacji witryny sieci Web lub sieci Web w **Eksploratora rozwiązań**, kliknij przycisk **Dodaj nowy element**i kliknij przycisk **usługi WCF obsługującej program Silverlight**.  
+ Aby uzyskać dostęp do tego szablonu, kliknij prawym przyciskiem myszy witrynę sieci Web lub projekt aplikacji sieci Web w **Eksplorator rozwiązań**, kliknij przycisk **Dodaj nowy element**, a następnie kliknij pozycję **usługa WCF z włączoną obsługą Silverlight**.  
   
 > [!NOTE]
->  Usługa WCF obsługująca program Silverlight przedstawia `basicHttpBinding` punktu końcowego bez włączania wszelkich ustawień zabezpieczeń. W związku z tym można uzyskać informacji na temat usługi przez wszystkich klientów łączących się z tej usługi. Komunikatów wymienianych między usługą i klienta również nie jest podpisana lub zaszyfrowana. Aby zabezpieczyć punkt końcowy prawidłowo, należy użyć uwierzytelniania platformy ASP.NET, HTTPS lub innych mechanizmów.  
+> Usługa WCF obsługująca program Silverlight uwidacznia `basicHttpBinding` punkt końcowy bez włączania żadnych ustawień zabezpieczeń. W związku z tym informacje o usłudze mogą zostać uzyskane przez wszystkich klientów, którzy łączą się z tą usługą. Komunikaty wymieniane między usługą a klientem również nie są podpisane ani zaszyfrowane. Aby prawidłowo zabezpieczyć punkt końcowy, należy użyć uwierzytelniania ASP.NET, protokołu HTTPS lub innych mechanizmów.  
   
 ## <a name="see-also"></a>Zobacz także
 

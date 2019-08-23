@@ -10,27 +10,27 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 9d7a21ee686b0c6faa05f68f13eccc6a39d49164
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27d65c07f0a6ec4a25d057e2c16a8b59933bb8fd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011076"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925113"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>Instrukcje: dodawanie paneli do kontrolki StatusBar
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip> i <xref:System.Windows.Forms.ToolStripStatusLabel> kontrolki Zastąp i dodawania funkcjonalności do <xref:System.Windows.Forms.StatusBar> i <xref:System.Windows.Forms.StatusBarPanel> kontroluje; jednak <xref:System.Windows.Forms.StatusBar> i <xref:System.Windows.Forms.StatusBarPanel> kontrolek zostaną zachowane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli możesz Wybierz.  
+> <xref:System.Windows.Forms.StatusBarPanel> <xref:System.Windows.Forms.StatusBarPanel> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBar> Formanty i zastępują i dodają funkcje do kontrolek i, natomiast kontrolki i są zachowywane w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości. <xref:System.Windows.Forms.StatusStrip> <xref:System.Windows.Forms.ToolStripStatusLabel> następnie.  
   
- Obszarowi w ramach [StatusBar, kontrolka](statusbar-control-windows-forms.md) kontrola składa się z wystąpienia elementu <xref:System.Windows.Forms.StatusBarPanel> klasy. Dodaje się je za pośrednictwem dodatki do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> klasy.  
+ Obszar programowalny w kontrolce [kontrolki StatusBar](statusbar-control-windows-forms.md) składa się z <xref:System.Windows.Forms.StatusBarPanel> wystąpień klasy. Są one dodawane za pomocą dodatków do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> klasy.  
   
-### <a name="to-add-panels-to-a-status-bar"></a>Dodawanie paneli do paska stanu  
+### <a name="to-add-panels-to-a-status-bar"></a>Aby dodać panele do paska stanu  
   
-1. W procedurze tworzenia paneli paska stanu przez dodanie ich do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Określ ustawienia właściwości dla poszczególnych paneli przy użyciu jej indeksu przekazany przez <xref:System.Windows.Forms.StatusBar.Panels%2A> właściwości.  
+1. W procedurze Utwórz panele paska stanu, dodając je do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Określ ustawienia właściwości dla poszczególnych paneli przy użyciu indeksu przekazaną <xref:System.Windows.Forms.StatusBar.Panels%2A> przez właściwość.  
   
-     W poniższym przykładzie kodu ścieżkę zestawu dla lokalizacji ikony jest **Moje dokumenty** folderu. Ta lokalizacja jest używana, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać tego folderu. Wybranie tej lokalizacji również umożliwia użytkownikom z poziomami dostępu minimalny system bezpiecznego uruchamiania aplikacji. Poniższy przykład wymaga formularza z <xref:System.Windows.Forms.StatusBar> formant został już dodany.  
+     W poniższym przykładzie kodu ścieżką ustawioną dla lokalizacji ikony jest folder **Moje dokumenty** . Ta lokalizacja jest używana, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać ten folder. Wybranie tej lokalizacji pozwala również użytkownikom z minimalnymi poziomami dostępu do systemu w celu bezpiecznego uruchomienia aplikacji. Poniższy przykład wymaga, aby formularz z <xref:System.Windows.Forms.StatusBar> kontrolką został już dodany.  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> Jest kolekcją liczony od zera, więc kod powinien kontynuować odpowiednio.  
+    > <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> Jest kolekcją zero, więc kod powinien być odpowiednio odpowiedni.  
   
     ```vb  
     Public Sub CreateStatusBarPanels()  
@@ -126,6 +126,6 @@ ms.locfileid: "62011076"
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [Okno dialogowe Edytor kolekcji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
 - [Instrukcje: Ustawianie rozmiaru paneli paska stanu](how-to-set-the-size-of-status-bar-panels.md)
-- [Przewodnik: Aktualizowanie informacji na pasku stanu w czasie wykonywania](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Instrukcje: Określanie, które panelu w formancie StatusBar formularzy Windows został kliknięty](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Przewodnik: Aktualizowanie informacji o pasku stanu w czasie wykonywania](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Instrukcje: Określ, który panel w Windows Forms kontrolce StatusBar został kliknięty](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar, kontrolka — omówienie](statusbar-control-overview-windows-forms.md)

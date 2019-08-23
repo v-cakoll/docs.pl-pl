@@ -6,36 +6,36 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 61324bbc5ea07dd19e23589bfc90f9ea44a6b331
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c2567b6abd42ae725b4786eb111e411f7328154e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880187"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939802"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Instrukcje: używanie dostawcy członkostwa platformy ASP.NET
-Dostawcy członkostwa platformy ASP.NET jest funkcją, która umożliwia deweloperom tworzenie witryn sieci Web, które umożliwiają użytkownikom tworzenie unikatowych użytkowników kombinacji nazwy i hasła platformy ASP.NET. Za pomocą tej funkcji każdy użytkownik może ustanowić konto w witrynie i logowanie za wyłączny dostęp do witryn i usług. Jest to w przeciwieństwie do zabezpieczeń Windows, która wymaga od użytkowników mają konta w domenie Windows. Zamiast tego można użyć każdemu użytkownikowi, który dostarcza swoje poświadczenia (kombinacja nazwy i hasła użytkownika), lokacji i jej usługi.  
+Dostawca członkostwa ASP.NET to funkcja, która umożliwia deweloperom ASP.NET tworzenie witryn sieci Web, które umożliwiają użytkownikom tworzenie unikatowych kombinacji nazw użytkowników i haseł. Korzystając z tej funkcji, każdy użytkownik może nawiązać konto z witryną i zalogować się w celu uzyskania wyłącznego dostępu do lokacji i jej usług. Jest to w przeciwieństwie do zabezpieczeń systemu Windows, co wymaga, aby użytkownicy mieli konta w domenie systemu Windows. Zamiast tego każdy użytkownik, który dostarcza swoje poświadczenia (kombinacja nazwy użytkownika/hasła) może korzystać z witryny i jej usług.  
   
- Dla przykładowej aplikacji, zobacz [Dostawca członkostwa i ról](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Aby dowiedzieć się, jak za pomocą funkcji dostawcy ról ASP.NET, zobacz [jak: Używanie dostawcy ról ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
+ Aby zapoznać się z przykładową aplikacją, zobacz [członkostwo i dostawca ról](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Aby uzyskać informacje o korzystaniu z funkcji dostawcy roli ASP.NET [, zobacz How to: Używanie dostawcy roli ASP.NET z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
- Funkcja członkostwa wymaga, korzystanie z bazy danych programu SQL Server do przechowywania informacji o użytkowniku. Funkcja obejmuje również metody monit z pytaniem użytkownicy, którzy zapomni swojego hasła.  
+ Funkcja członkostwa wymaga użycia bazy danych SQL Server do przechowywania informacji o użytkowniku. Ta funkcja zawiera również metody wyświetlania monitu z pytaniem dla użytkowników, którzy zapominali swoje hasła.  
   
- Windows Communication Foundation (WCF) deweloperom korzystać z zalet tych funkcji ze względów bezpieczeństwa. Po zintegrowaniu aplikacji WCF, użytkownicy muszą podać kombinacja nazwy i hasła użytkownika do aplikacji klienta programu WCF. Aby transferu danych do usługi WCF, należy użyć powiązania, które obsługuje poświadczenia nazwy i hasła użytkownika, takie jak <xref:System.ServiceModel.WSHttpBinding> (w konfiguracji [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) i Ustaw typ poświadczeń do klienta`UserName`. W usłudze zabezpieczeń WCF uwierzytelnia użytkownika, w oparciu o nazwę użytkownika i hasło, a także przypisuje rolę określoną przez rolę programu ASP.NET.  
+ Deweloperzy Windows Communication Foundation (WCF) mogą korzystać z tych funkcji ze względów bezpieczeństwa. Po zintegrowaniu z aplikacją WCF użytkownicy muszą podać kombinację nazwy użytkownika i hasła do aplikacji klienckiej WCF. Aby przesłać dane do usługi WCF, użyj powiązania, które obsługuje poświadczenia nazwy użytkownika/hasła, takie jak <xref:System.ServiceModel.WSHttpBinding> (w konfiguracji `UserName` [ \<, WSHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) i ustaw typ poświadczeń klienta na. W usłudze zabezpieczenia WCF uwierzytelniają użytkownika na podstawie nazwy użytkownika i hasła, a także przypisuje rolę określoną przez rolę ASP.NET.  
   
 > [!NOTE]
->  Usługi WCF nie udostępnia metody służące do wypełniania bazy danych przy użyciu kombinacji nazwy i hasła użytkownika lub inne informacje o użytkowniku.  
+> Funkcja WCF nie dostarcza metod do wypełniania bazy danych za pomocą kombinacji nazwy użytkownika/hasła lub innych informacji o użytkowniku.  
   
-### <a name="to-configure-the-membership-provider"></a>Aby skonfigurować dostawcy członkostwa  
+### <a name="to-configure-the-membership-provider"></a>Aby skonfigurować dostawcę członkostwa  
   
-1. W pliku Web.config w obszarze <`system.web`> element, Utwórz <`membership`> element.  
+1. W pliku Web. config w elemencie <`system.web`> Utwórz element > <.`membership`  
   
-2. W obszarze `<membership>` elementu, Utwórz `<providers>` elementu.  
+2. W obszarze `<providers>` elementu Utwórz element. `<membership>`  
   
-3. Jako element podrzędny <`providers`> elementu Dodawanie `<clear />` element, aby opróżnić kolekcja dostawców.  
+3. Jako element podrzędny do <`providers`>, `<clear />` Dodaj element, aby opróżnić kolekcję dostawców.  
   
-4. W obszarze `<clear />` elementu, Utwórz <`add`> element z następującymi atrybutami Ustaw odpowiednie wartości: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, i `passwordFormat`. `name` Atrybut jest używany później jako wartość w pliku konfiguracji. Poniższy przykład ustawia ją na `SqlMembershipProvider`.  
+4. `type` `name``add` `connectionStringName` `enablePasswordReset` `applicationName` `requiresQuestionAndAnswer` `enablePasswordRetrieval`W obszarze elementuUtwórz<element>znastępującymiatrybutamiustawionyminaodpowiedniewartości:,,,,,`<clear />` , `requiresUniqueEmail`i .`passwordFormat` Ten `name` atrybut jest używany później jako wartość w pliku konfiguracji. W poniższym przykładzie jest `SqlMembershipProvider`ustawiana wartość.  
   
-     Sekcja konfiguracji można znaleźć w poniższym przykładzie.  
+     W poniższym przykładzie przedstawiono sekcję Konfiguracja.  
   
     ```xml  
     <!-- Configure the Sql Membership Provider -->  
@@ -56,17 +56,17 @@ Dostawcy członkostwa platformy ASP.NET jest funkcją, która umożliwia dewelop
     </membership>  
     ```  
   
-### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>Aby skonfigurować zabezpieczenia usługi do akceptowania kombinacja nazwy i hasła użytkownika  
+### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>Aby skonfigurować zabezpieczenia usługi do akceptowania kombinacji nazwy użytkownika/hasła  
   
-1. W pliku konfiguracji w obszarze [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementu Dodawanie [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elementu.  
+1. W pliku konfiguracji, w obszarze [ \<system. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , Dodaj [ \<element > powiązania](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) .  
   
-2. Dodaj [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) do sekcji wiązania. Aby uzyskać więcej informacji na temat tworzenia elementu powiązania WCF zobacz [jak: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2. Dodaj > WSHttpBinding do sekcji powiązań. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) Aby uzyskać więcej informacji na temat tworzenia elementu powiązania WCF, [zobacz How to: Określ powiązanie usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 3. Ustaw atrybut `mode` elementu `<security>` na `Message`.  
   
-4. Ustaw `clientCredentialType` atrybut <`message`> elementu `UserName`. Określa, że pary nazwa/hasło użytkownika będzie służyć jako poświadczeń klienta.  
+4. Ustaw atrybut <`message`> elementu `UserName`. `clientCredentialType` Oznacza to, że para nazwa użytkownika/hasło zostanie użyta jako poświadczenia klienta.  
   
-     Poniższy przykład pokazuje kod konfiguracji dla wiązania.  
+     Poniższy przykład pokazuje kod konfiguracji dla powiązania.  
   
     ```xml  
     <system.serviceModel>  
@@ -83,24 +83,24 @@ Dostawcy członkostwa platformy ASP.NET jest funkcją, która umożliwia dewelop
     </system.serviceModel>  
     ```  
   
-### <a name="to-configure-a-service-to-use-the-membership-provider"></a>Aby skonfigurować usługę do używania dostawcy członkostwa  
+### <a name="to-configure-a-service-to-use-the-membership-provider"></a>Aby skonfigurować usługę do korzystania z dostawcy członkostwa  
   
-1. Jako element podrzędny `<system.serviceModel>` elementu Dodawanie [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) — element  
+1. Jako element podrzędny do `<system.serviceModel>` elementu [ \<Dodaj > zachowań](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu  
   
-2. Dodaj [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) do <`behaviors`> element.  
+2. Dodaj > serviceBehaviors do <`behaviors`> elementu. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)  
   
-3. Dodaj [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) i ustaw `name` atrybutu do odpowiedniej wartości.  
+3. `name` [ Dodaj\<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) i ustaw odpowiednią wartość atrybutu.  
   
-4. Dodaj [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) do <`behavior`> element.  
+4. Dodaj >`behavior`ServiceCredentials do < > elementu. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)  
   
-5. Dodaj [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) do `<serviceCredentials>` elementu.  
+5. Dodaj [> userNameAuthentication do elementu. \<](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) `<serviceCredentials>`  
   
-6. Ustaw `userNamePasswordValidationMode` atrybutu `MembershipProvider`.  
+6. Ustaw atrybut na `MembershipProvider`. `userNamePasswordValidationMode`  
   
     > [!IMPORTANT]
-    >  Jeśli `userNamePasswordValidationMode` wartość nie jest ustawiona, usługi WCF korzysta z uwierzytelniania Windows zamiast dostawcy członkostwa platformy ASP.NET.  
+    >  `userNamePasswordValidationMode` Jeśli wartość nie jest ustawiona, WCF używa uwierzytelniania systemu Windows zamiast dostawcy członkostwa ASP.NET.  
   
-7. Ustaw `membershipProviderName` atrybutu Nazwa dostawcy (określone podczas dodawania dostawcy w pierwszej procedurze w tym temacie). W poniższym przykładzie przedstawiono `<serviceCredentials>` fragmentu do tego punktu.  
+7. `membershipProviderName` Ustaw atrybut na nazwę dostawcy (określony podczas dodawania dostawcy w pierwszej procedurze w tym temacie). Poniższy przykład pokazuje `<serviceCredentials>` fragment tego punktu.  
   
     ```xml  
     <behaviors>  
@@ -117,7 +117,7 @@ Dostawcy członkostwa platformy ASP.NET jest funkcją, która umożliwia dewelop
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod pokazuje konfigurację to usługa, która używa funkcji członkostwa ASP.  
+ Poniższy kod przedstawia konfigurację usługi korzystającej z funkcji członkostwa ASP.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -156,5 +156,5 @@ Dostawcy członkostwa platformy ASP.NET jest funkcją, która umożliwia dewelop
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Używanie dostawcy ról ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Instrukcje: Używanie dostawcy roli ASP.NET z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
 - [Dostawca członkostwa i ról](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)

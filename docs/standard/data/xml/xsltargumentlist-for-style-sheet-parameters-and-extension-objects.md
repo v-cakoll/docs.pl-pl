@@ -8,56 +8,56 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c9a3b43f81f00a7b6a3a0b3a8e1c102aafe0c0e
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 9d08399933f37c4110639bf1f4a81f222dd597b4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170944"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910323"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Klasa XsltArgumentList — parametry arkusza stylów i obiekty rozszerzeń
-<xref:System.Xml.Xsl.XsltArgumentList> Klasa zawiera rozszerzalny język arkusza stylów dla parametrów przekształcenia (XSLT) i obiekty rozszerzeń XSLT. Przy przekazywaniu do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody te parametry i rozszerzenie obiekty mogą być wywoływane z arkuszy stylów.  
+<xref:System.Xml.Xsl.XsltArgumentList> Klasa zawiera Extensible Stylesheet Language dla parametrów Transformations (XSLT) i obiektów rozszerzeń XSLT. Po przekazaniu <xref:System.Xml.Xsl.XslTransform.Transform%2A> do metody te parametry i obiekty rozszerzeń mogą być wywoływane z arkuszy stylów.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> i <xref:System.Xml.Xsl.XsltArgumentList> klasy są przestarzałe w programie .NET Framework 2.0. Można wykonywać przekształcenia XSLT przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
+> Klasy <xref:System.Xml.Xsl.XslTransform> i<xref:System.Xml.Xsl.XsltArgumentList> są przestarzałe w .NET Framework 2,0. Przekształcenia XSLT można wykonywać przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- <xref:System.Xml.Xsl.XsltArgumentList> Klasa zawiera parametry XSLT i obiekty rozszerzeń XSLT. Przy przekazywaniu do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody te parametry i rozszerzenie obiekty mogą być wywoływane z arkuszy stylów.  
+ <xref:System.Xml.Xsl.XsltArgumentList> Klasa zawiera parametry XSLT i obiekty rozszerzeń XSLT. Po przekazaniu <xref:System.Xml.Xsl.XslTransform.Transform%2A> do metody te parametry i obiekty rozszerzeń mogą być wywoływane z arkuszy stylów.  
   
- Poniżej przedstawiono zalety przekazywania obiektu, a nie przy użyciu osadzonych skryptów:  
+ Poniżej przedstawiono zalety przekazywania obiektów zamiast używać osadzonego skryptu:  
   
-- Zapewnia lepszą hermetyzacji i ponowne użycie klas.  
+- Zapewnia lepszą hermetyzację i ponowne użycie klas.  
   
-- Umożliwia arkusze stylów była mniejsza i będzie łatwiejszy w utrzymaniu.  
+- Zezwala na mniejsze i łatwiejsze w obsłudze arkusze stylów.  
   
-- Program obsługuje wywoływania metod w klasach należące do przestrzeni nazw, innym niż te zdefiniowane w zestawie obsługiwanych <xref:System> przestrzeni nazw.  
+- Obsługuje metody wywoływania w klasach należących do przestrzeni nazw innych niż te zdefiniowane w ramach <xref:System> zestawu obsługiwanych przestrzeni nazw.  
   
-- Obsługuje przekazywanie fragmenty drzewa wynik do arkusza stylów z użyciem <xref:System.Xml.XPath.XPathNodeIterator>.  
+- Obsługuje przekazywanie fragmentów drzewa wyników do arkusza stylów przy użyciu <xref:System.Xml.XPath.XPathNodeIterator>.  
   
 ## <a name="xslt-style-sheet-parameters"></a>Parametry arkusza stylów XSLT  
- Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metody. Kwalifikowana nazwa i identyfikator (URI nazw) są skojarzone z obiektem parametrów w tym czasie.  
+ Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metody using. Kwalifikowana nazwa i przestrzeń nazw Uniform Resource Identifier (URI) są skojarzone z obiektem parametru w tym czasie.  
   
- Obiekt parametr powinien odpowiadać typowi World Wide Web Consortium (W3C). W poniższej tabeli przedstawiono odpowiednie typy W3C równoważnymi klasami .NET Framework (typ) i czy typ W3C jest typu XML Path Language (XPath) lub XSLT.  
+ Obiekt parametru powinien odpowiadać typowi organizacja World Wide Web Consortium (W3C). W poniższej tabeli przedstawiono odpowiednie typy W3C, równoważne klasy .NET Framework (typ) i określające, czy typem W3C jest typ języka ścieżki XML (XPath) czy typ XSLT.  
   
-|Typ W3C|Odpowiednik klasy .NET Framework (typ)|Wyrażenie XPath typu lub XSLT|  
+|Typ W3C|Równoważna Klasa .NET Framework (typ)|Typ XPath lub typ XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  
 |String|System.String|XPath|  
 |Boolean|System.Boolean|XPath|  
 |Wartość liczbowa|System.Double|XPath|  
-|Wynikowego fragmentu drzewa|System.Xml.XPath.XPathNavigator|XSLT|  
+|Fragment drzewa wyników|System.Xml.XPath.XPathNavigator|XSLT|  
 |Zestaw węzłów|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Jeśli obiekt parametr nie jest jedną z powyższych klas, jest zmuszony do Double lub ciąg, zgodnie z potrzebami. Typy Int16, UInt16, Int32, UInt32, Int64, UInt64, pojedynczego i dziesiętnych będą obowiązkowo przenoszone na wartość o podwójnej precyzji. Wszystkie pozostałe typy będą obowiązkowo przenoszone na ciąg przy użyciu `ToString` metody.  
+ Jeśli obiekt parametru nie jest jedną z powyższych klas, wymuszony jest podwójny lub ciąg, zgodnie z potrzebami. Wartości Int16, UInt16, Int32, UInt32, Int64, UInt64, Single i Decimal są wymuszane jako Double. Wszystkie inne typy są wymuszane jako ciąg za pomocą `ToString` metody.  
   
 #### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>Aby użyć parametru XSLT, użytkownik musi wykonać następujące czynności:  
   
-1. Tworzenie <xref:System.Xml.Xsl.XsltArgumentList> i dodawanie obiektów przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
+1. Utwórz i Dodaj obiekty przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. <xref:System.Xml.Xsl.XsltArgumentList>  
   
-2. Parametry wywołań z arkusza stylów.  
+2. Wywołaj parametry z arkusza stylów.  
   
-3. Przekaż <xref:System.Xml.Xsl.XsltArgumentList> do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody.  
+3. <xref:System.Xml.Xsl.XsltArgumentList> Przekaż<xref:System.Xml.Xsl.XslTransform.Transform%2A> do metody.  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie użyto <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metodę, aby utworzyć parametr do przechowywania daty obliczony rabat. Data rabatu jest obliczana za 20 dni od daty zamówienia.  
+ W poniższym przykładzie zastosowano <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metodę, aby utworzyć parametr do przechowywania obliczonej daty rabatu. Data rabatu jest obliczana na 20 dni od daty zamówienia.  
   
 ```vb  
 Imports System  
@@ -156,7 +156,7 @@ public class Sample
 </order>  
 ```  
   
- discount.xsl  
+ Discount. xsl  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
@@ -181,24 +181,24 @@ public class Sample
 ```  
   
 ## <a name="xslt-extension-objects"></a>Obiekty rozszerzeń XSLT  
- Obiekty rozszerzeń XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> metody. Kwalifikowana nazwa i identyfikator URI przestrzeni nazw są skojarzone z obiektu rozszerzenia, w tym czasie.  
+ Obiekty rozszerzeń XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> metody using. Kwalifikowana nazwa i identyfikator URI przestrzeni nazw są skojarzone z obiektem rozszerzenia w tym czasie.  
   
- Po dodaniu obiektu, obiekt wywołujący <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> musi być w pełni zaufany w zasadach zabezpieczeń. Obiekt wywołujący jest częściowo zaufany, dodanie zakończy się niepowodzeniem.  
+ Po dodaniu obiektu obiekt wywołujący <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> musi być w pełni zaufany w zasadach zabezpieczeń. Jeśli obiekt wywołujący jest częściowo zaufany, dodanie nie powiedzie się.  
   
- Chociaż obiekt zostanie dodany pomyślnie, nie gwarantuje to, że wykonanie zakończą się pomyślnie. Gdy <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoda jest wywoływana, uprawnienia są obliczane względem dowodów przy zachowaniu <xref:System.Xml.Xsl.XslTransform.Load%2A> czasu i że zestaw uprawnień jest przypisany do procesu cały przekształcenia. Jeśli rozszerzenie obiektu próbuje zainicjować akcję, która wymaga uprawnień nie można odnaleźć w zestawie, jest zgłaszany wyjątek.  
+ Mimo że obiekt został pomyślnie dodany, nie gwarantuje to, że wykonywanie zakończy się pomyślnie. Gdy metoda jest wywoływana, uprawnienia są obliczane na podstawie dowodów dostarczonych w <xref:System.Xml.Xsl.XslTransform.Load%2A> czasie, a zestaw uprawnień jest przypisany do całego procesu transformacji. <xref:System.Xml.Xsl.XslTransform.Transform%2A> Jeśli obiekt rozszerzenia próbuje zainicjować akcję, która wymaga uprawnień nieznalezionych w zestawie, zgłaszany jest wyjątek.  
   
- Typy danych zwróciło obiekty rozszerzeń są zestawu obejmującego cztery typy danych podstawowych XPath w numer, ciąg, wartość logiczna i węzła zestawu.  
+ Typy danych zwracane z obiektów rozszerzeń to jeden z czterech podstawowych typów danych XPath o liczbie, ciągu, wartości logicznej i zestawie węzłów.  
   
 #### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>Aby użyć obiektu rozszerzenia XSLT, użytkownik musi wykonać następujące czynności:  
   
-1. Tworzenie <xref:System.Xml.Xsl.XsltArgumentList> i dodać za pomocą obiektu rozszerzenia <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
+1. Utwórz i Dodaj obiekt rozszerzenia przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. <xref:System.Xml.Xsl.XsltArgumentList>  
   
-2. Wywołanie obiektu rozszerzenia z arkusza stylów.  
+2. Wywołaj obiekt rozszerzenia z arkusza stylów.  
   
-3. Przekaż <xref:System.Xml.Xsl.XsltArgumentList> do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody.  
+3. <xref:System.Xml.Xsl.XsltArgumentList> Przekaż<xref:System.Xml.Xsl.XslTransform.Transform%2A> do metody.  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie obliczany obwód koła, biorąc pod uwagę jego usługi radius.  
+ Poniższy przykład oblicza obwód okręgu, w którym znajduje się jego promień.  
   
 ```vb  
 Imports System  
@@ -322,7 +322,7 @@ public class Sample
 </data>    
 ```  
   
- Circle.xsl  
+ Circle. xsl  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  

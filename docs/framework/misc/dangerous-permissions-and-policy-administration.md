@@ -10,34 +10,34 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 17a596d9fc223dc53268ae9c91f7d02357b0a9b8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f79fd3e0678fc0bba0d3074904f9ce9460fc6c20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489977"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910930"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Niebezpieczne uprawnienia i administrowanie zasadami
-Niektóre operacje chronionych, dla których program .NET Framework oferuje uprawnienia jest potencjalnie pozwolić system zabezpieczeń obejść. Niebezpieczne uprawnienia należy podać tylko zaufanego kodu, a następnie tylko gdy jest to konieczne. Istnieje zazwyczaj nie chroniącej przed złośliwym kodem, w przypadku przyznania uprawnienia.  
+Kilka operacji chronionych, dla których .NET Framework zapewnia uprawnienia, mogą potencjalnie pozwolić na obejście systemu zabezpieczeń. Te niebezpieczne uprawnienia powinny być przyznawane tylko do wiarygodnego kodu, a następnie tylko w razie potrzeby. W przypadku przyznania tych uprawnień zwykle nie ma obrony przed złośliwym kodem.  
   
 > [!NOTE]
->  W programie .NET Framework 4 są istotne zmiany w modelu zabezpieczeń .NET Framework i terminologię. Aby uzyskać więcej informacji o tych zmianach, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
+> W .NET Framework 4 wprowadzono ważne zmiany w modelu zabezpieczeń .NET Framework i terminologii. Aby uzyskać więcej informacji o tych zmianach, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
   
- Niebezpieczne uprawnienia są opisane w poniższej tabeli.  
+ W poniższej tabeli objaśniono niebezpieczne uprawnienia.  
   
 |Uprawnienie|Potencjalne ryzyko|  
 |----------------|--------------------|  
 |<xref:System.Security.Permissions.SecurityPermission>||  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>|Umożliwia kodowi zarządzanemu wywoływania kod niezarządzany, który często jest niebezpieczne.|  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.SkipVerification>|Bez weryfikacji kod można zrobić wszystko.|  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence>|Dowód unieważniany można oszukania zasady zabezpieczeń.|  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy>|Możliwość modyfikowania zasad zabezpieczeń, można wyłączyć zabezpieczeń.|  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter>|Korzystanie z serializacji mogą omijać mechanizmów ułatwień dostępu. Aby uzyskać więcej informacji, zobacz [zabezpieczenia i serializacja](../../../docs/framework/misc/security-and-serialization.md).|  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal>|Możliwość ustawiania bieżący podmiot zabezpieczeń może wymuszać opartej na rolach zabezpieczeń.|  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.ControlThread>|Manipulowanie wątków jest niebezpieczne ze względu na stan zabezpieczeń skojarzone z wątków.|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>|Umożliwia kodowi zarządzanemu Wywoływanie kodu niezarządzanego, który jest często niebezpieczny.|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.SkipVerification>|Bez weryfikacji kod może wykonać dowolne czynności.|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence>|Unieważnione dowody mogą mieć oszustwa zasady zabezpieczeń.|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy>|Możliwość modyfikowania zasad zabezpieczeń może wyłączyć zabezpieczenia.|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter>|Użycie serializacji może obejść mechanizmy ułatwień dostępu. Aby uzyskać szczegółowe informacje, zobacz [zabezpieczenia i Serializacja](../../../docs/framework/misc/security-and-serialization.md).|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal>|Możliwość ustawienia bieżącego podmiotu zabezpieczeń może wypróbować zabezpieczenia oparte na rolach.|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.ControlThread>|Manipulowanie wątkami jest niebezpieczne ze względu na stan zabezpieczeń skojarzony z wątkami.|  
 |<xref:System.Security.Permissions.ReflectionPermission>||  
-|<xref:System.MemberAccessException>|Można użyć prywatnych elementów członkowskich do pokonania mechanizmów ułatwień dostępu.|  
+|<xref:System.MemberAccessException>|Może używać prywatnych elementów członkowskich do pokonania mechanizmów ułatwień dostępu.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Wytyczne dotyczące bezpiecznego programowania](../../standard/security/secure-coding-guidelines.md)

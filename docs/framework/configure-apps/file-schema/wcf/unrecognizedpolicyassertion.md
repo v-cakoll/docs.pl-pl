@@ -2,20 +2,20 @@
 title: <unrecognizedPolicyAssertion>
 ms.date: 03/30/2017
 ms.assetid: 043c3c8f-f263-4ac7-a1af-945d03413f0b
-ms.openlocfilehash: 9de33512f4240dffdd9e549a49f3daf106418258
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f57465e6ce0f1fd7887f4adb90ec25d505efbdc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769866"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941084"
 ---
 # <a name="unrecognizedpolicyassertion"></a>\<unrecognizedPolicyAssertion>
-Reprezentuje element powiązania, który określa asercję zasad. Ten element nie ma atrybutu i ma jako pustego przełącznika.  
+Reprezentuje element powiązania, który określa potwierdzenie zasad. Ten element nie ma atrybutu i jest obecny jako pusty przełącznik.  
   
  \<system.serviceModel>  
-\<powiązania >  
+\<> powiązań  
 \<customBinding>  
-\<Powiązanie >  
+\<> powiązania  
 \<unrecognizedPolicyAssertion>  
   
 ## <a name="syntax"></a>Składnia  
@@ -40,12 +40,12 @@ Reprezentuje element powiązania, który określa asercję zasad. Ten element ni
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie funkcje powiązania niestandardowego powiązania.|  
+|[\<> powiązania](../../../misc/binding.md)|Definiuje wszystkie możliwości powiązań niestandardowego powiązania.|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

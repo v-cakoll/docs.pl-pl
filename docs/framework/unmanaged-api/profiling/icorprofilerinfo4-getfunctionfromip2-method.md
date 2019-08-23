@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7281f1aa0da417eba618b748ac68ba1fefb4907d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c133338ec0edac19f49d435df41e3081c486f51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780850"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948462"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 — Metoda
-Mapuje wskaźnik instrukcji kodu zarządzanego do wersji ponownie skompilowana JIT funkcji.  
+Mapuje wskaźnik zarządzanej instrukcji kodu do wersji funkcji ponownie skompilowanej przez JIT.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,28 +38,28 @@ HRESULT GetFunctionFromIP2(
   
 ## <a name="parameters"></a>Parametry  
  `ip`  
- [in] Wskaźnik instrukcji w kodzie zarządzanym.  
+ podczas Wskaźnik instrukcji w kodzie zarządzanym.  
   
  `pFunctionId`  
- [out] Identyfikator funkcji.  
+ określoną Identyfikator funkcji.  
   
  `pReJitId`  
- [out] Tożsamość ponownie skompilowana JIT wersję funkcji.  
+ określoną Tożsamość funkcji ponownie skompilowanej w trybie JIT.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetFunctionFromIP2` jest podobny do `GetFunctionFromIP`, chyba że otrzymuje identyfikator ponownie skompilowana JIT, zamiast Identyfikatora funkcji, funkcji, która zawiera określony adres IP.  
+ `GetFunctionFromIP2`jest podobny do `GetFunctionFromIP`, z tą różnicą, że pobiera identyfikator JIT-ponownie skompilowany zamiast identyfikatora funkcji funkcji, która zawiera określony adres IP.  
   
 > [!NOTE]
->  `GetFunctionFromIP2` Możesz wyzwolić wyrzucania elementów bezużytecznych, natomiast `GetFunctionFromIP` nie będzie.  Aby uzyskać więcej informacji, zobacz [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
+> `GetFunctionFromIP2`może wyzwolić wyrzucanie elementów `GetFunctionFromIP` bezużytecznych, natomiast nie będzie.  Aby uzyskać więcej informacji, zobacz [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówki** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

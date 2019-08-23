@@ -7,33 +7,33 @@ helpviewer_keywords:
 - toolbars [Windows Forms], about toolbars
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-ms.openlocfilehash: 7b39c8e3dca88e968b43ba5ff14794e2e77247d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7c19783963bb315a0356979797c6f4d4e3b9e08
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009550"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929593"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>ToolBar — Informacje o formancie [Formularze systemu Windows]
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.ToolBar> kontrolować; jednak <xref:System.Windows.Forms.ToolBar> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.  
+> Formant zastępuje i dodaje funkcję <xref:System.Windows.Forms.ToolBar> do <xref:System.Windows.Forms.ToolBar> kontrolki; jednak kontrolka jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli wybierzesz opcję. <xref:System.Windows.Forms.ToolStrip>  
   
- Formularze Windows <xref:System.Windows.Forms.ToolBar> formant jest używany w formularzach jako pasek sterowania, który wyświetla wiersz w rozwijanych menu i przycisków mapy bitowej, który aktywować poleceń. W związku z tym klikając przycisk paska narzędzi może być równoważne polecenie menu. Można skonfigurować przyciski są wyświetlane i zachowują się jak przyciski, menu rozwijane lub separatorów. Zazwyczaj pasek narzędzi zawiera przyciski i menu, które odpowiadają elementom struktury menu aplikacji, zapewniając szybki dostęp do aplikacji z najczęściej używanych funkcji i poleceń.  
+ Formant Windows Forms <xref:System.Windows.Forms.ToolBar> jest używany w formularzach jako pasek sterowania, który wyświetla wiersz menu rozwijanego i przyciski mapy bitowej, które uaktywniają polecenia. W ten sposób kliknięcie przycisku paska narzędzi może być równoznaczne z wybraniem polecenia menu. Przyciski można skonfigurować tak, aby były wyświetlane i zachowywać się jako pozycje, menu rozwijane lub separatory. Zazwyczaj pasek narzędzi zawiera przyciski i menu odpowiadające elementom w strukturze menu aplikacji, zapewniając szybki dostęp do najczęściej używanych funkcji i poleceń aplikacji.  
   
 ## <a name="working-with-the-toolbar-control"></a>Praca z formantem paska narzędzi  
- A <xref:System.Windows.Forms.ToolBar> formant jest zwykle "zadokowany" wzdłuż górnej części okna nadrzędnego, ale może być zadokowane także na dowolnej stronie okna. Pasek narzędzi można wyświetlać etykietek narzędzi, gdy użytkownik wskaże wskaźnik myszy na przycisku paska narzędzi. Etykietka narzędzia jest niewielkie okno podręczne, stanowiącą zwięzły opis przycisku lub menu Cel. Aby wyświetlić etykietki narzędzi, <xref:System.Windows.Forms.ToolBar.ShowToolTips%2A> właściwość musi być równa `true`.  
+ <xref:System.Windows.Forms.ToolBar> Kontrolka jest zwykle "zadokowana" w górnej części okna nadrzędnego, ale może być również zadokowana do dowolnej strony okna. Pasek narzędzi może wyświetlać etykietki narzędzia, gdy użytkownik wskaże wskaźnik myszy na przycisku paska narzędzi. Etykietka narzędzia jest małym okienkiem podręcznym, która zwięźle opisuje przycisk lub menu. Aby wyświetlić etykietki narzędzi, <xref:System.Windows.Forms.ToolBar.ShowToolTips%2A> właściwość musi być ustawiona na `true`.  
   
 > [!NOTE]
->  Niektóre aplikacje są wyposażone w formantów bardzo podobne do paska narzędzi, które mają możliwość "float" nad oknem aplikacji i można zmieniać pozycji. Kontrolki Windows Forms z paska narzędzi nie jest w stanie umożliwia wykonywanie tych czynności.  
+> Niektóre aplikacje są kontrolkami podobnymi do paska narzędzi, który ma możliwość "float" nad oknem aplikacji i jest zmieniany. Kontrolka paska narzędzi Windows Forms nie może wykonać tych czynności.  
   
- Gdy <xref:System.Windows.Forms.ToolBar.Appearance%2A> właściwość jest ustawiona na <xref:System.Windows.Forms.ToolBarAppearance>, przyciski paska narzędzi są wyświetlane podniesione i trójwymiarowych. Możesz ustawić <xref:System.Windows.Forms.ToolBar.Appearance%2A> właściwości paska narzędzi, aby <xref:System.Windows.Forms.ToolBarAppearance> aby dać płaski wygląd paska narzędzi i jej przyciski. Gdy wskaźnik myszy porusza się nad przyciskiem prostego, wyglądu przycisku zmienia trójwymiarowej. Przyciski paska narzędzi można podzielić na logiczne grupy za pomocą separatorów. Separator znajduje się przycisk paska narzędzi <xref:System.Windows.Forms.ToolBarButton.Style%2A> właściwością <xref:System.Windows.Forms.ToolBarButtonStyle>. Będzie ono wyświetlane jako puste miejsce na pasku narzędzi. Gdy pasek narzędzi znajdują się płaski wygląd, przycisk separatory pojawiają się jako wiersze, a nie spacje między przyciskami.  
+ Gdy właściwość jest ustawiona na <xref:System.Windows.Forms.ToolBarAppearance>, przyciski paska narzędzi są wywoływane i trójwymiarowe. <xref:System.Windows.Forms.ToolBar.Appearance%2A> Można ustawić <xref:System.Windows.Forms.ToolBar.Appearance%2A> Właściwość paska narzędzi, aby <xref:System.Windows.Forms.ToolBarAppearance> nadać pasek narzędzi i jego przyciski płaski wygląd. Gdy wskaźnik myszy zostanie przesunięty nad płaskim przyciskiem, wygląd przycisku zmieni się na trójwymiarowy. Przyciski paska narzędzi można podzielić na grupy logiczne przy użyciu separatorów. Separatorem jest przycisk paska narzędzi z <xref:System.Windows.Forms.ToolBarButton.Style%2A> właściwością ustawioną na. <xref:System.Windows.Forms.ToolBarButtonStyle> Pojawia się jako puste miejsce na pasku narzędzi. Gdy pasek narzędzi ma płaski wygląd, separatory przycisków są wyświetlane jako linie zamiast spacji między przyciskami.  
   
- <xref:System.Windows.Forms.ToolBar> Kontroli pozwala na tworzenie pasków narzędzi, dodając <xref:System.Windows.Forms.Button> obiekty do <xref:System.Windows.Forms.ToolBar.Buttons%2A> kolekcji. Edytor kolekcji można użyć, aby dodać przyciski do <xref:System.Windows.Forms.ToolBar> formantu; każdy <xref:System.Windows.Forms.Button> obiektu powinien mieć tekst lub obraz, który został przypisany, chociaż można przypisać obu. Obraz, który jest dostarczany przez skojarzony [ImageList](imagelist-component-windows-forms.md) składnika. W czasie wykonywania, można dodawać i usuwać przycisków z <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> przy użyciu <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> i <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> metody. Program przycisków <xref:System.Windows.Forms.ToolBar>, Dodaj kod, aby <xref:System.Windows.Forms.ToolBar.ButtonClick> zdarzenia <xref:System.Windows.Forms.ToolBar>przy użyciu <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> właściwość <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> klasę, aby określić, której przycisk został kliknięty.  
+ Kontrolka umożliwia tworzenie pasków narzędzi przez dodanie <xref:System.Windows.Forms.Button> obiektów do <xref:System.Windows.Forms.ToolBar.Buttons%2A> kolekcji. <xref:System.Windows.Forms.ToolBar> Za pomocą edytora kolekcji można dodawać przyciski do <xref:System.Windows.Forms.ToolBar> kontrolki; każdy <xref:System.Windows.Forms.Button> obiekt powinien mieć przypisany tekst lub obraz, chociaż można przypisać oba elementy. Obraz jest dostarczany przez skojarzony składnik [ImageList](imagelist-component-windows-forms.md) . W czasie wykonywania można dodawać lub usuwać przyciski <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> przy użyciu metod i <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> . Aby <xref:System.Windows.Forms.ToolBar>programować przyciski obiektu, Dodaj kod <xref:System.Windows.Forms.ToolBar> <xref:System.Windows.Forms.ToolBar.ButtonClick> do zdarzeń obiektu, używając <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> właściwości <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> klasy w celu określenia, który przycisk został kliknięty.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.ToolBar>
 - [ToolBar, kontrolka](toolbar-control-windows-forms.md)
-- [Instrukcje: Dodawanie przycisków do formantu ToolBar](how-to-add-buttons-to-a-toolbar-control.md)
-- [Instrukcje: Określanie ikony dla przycisku kontrolki ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Instrukcje: Wyzwalacz zdarzenia Menu dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Instrukcje: Dodawanie przycisków do kontrolki paska narzędzi](how-to-add-buttons-to-a-toolbar-control.md)
+- [Instrukcje: Zdefiniuj ikonę dla przycisku paska narzędzi](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Instrukcje: Zdarzenia menu wyzwalacza dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)

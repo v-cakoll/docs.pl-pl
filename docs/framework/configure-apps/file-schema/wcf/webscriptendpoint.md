@@ -2,18 +2,18 @@
 title: <webScriptEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 85cb5ecf-351b-45f3-aa29-aa2e4b64bcdd
-ms.openlocfilehash: 9619c27c8c6d41250eeaeccabebe611e94b7d874
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc69029d9830fd12df5a4070f11847fadf4c60bb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769736"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940408"
 ---
 # <a name="webscriptendpoint"></a>\<webScriptEndpoint>
-Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) powiązania, który automatycznie dodaje [ \<enableWebScript >](../../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) zachowanie. Używanie tego punktu końcowego, gdy tworzysz usługę, która jest wywoływana z poziomu aplikacji ASP.NET AJAX.  
+Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym [ \<](webhttpbinding.md) powiązaniem WebHttpBinding > [ \<](enablewebscript.md) , które automatycznie dodaje zachowanie > enableWebScript. Użyj tego punktu końcowego podczas pisania usługi, która jest wywoływana z aplikacji ASP.NET AJAX.  
   
 \<system.ServiceModel>  
-\<standardEndpoints>  
+\<standardEndpoints >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,7 +34,7 @@ Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym [ \<web
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|webEndpointType|Ciąg, który określa typ punktu końcowego.|  
+|webEndpointType|Ciąg określający typ punktu końcowego.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -43,7 +43,7 @@ Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym [ \<web
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Zbiór standardowych punktów końcowych, które są wstępnie zdefiniowane punkty końcowe z jedną lub więcej z ich właściwości (adres, powiązanie, kontrakt) stałe.|  
+|[\<standardEndpoints >](standardendpoints.md)|Kolekcja standardowych punktów końcowych, które są wstępnie zdefiniowanymi punktami końcowymi z co najmniej jedną z jej właściwości (adres, powiązanie, kontrakt).|  
   
 ## <a name="see-also"></a>Zobacz także
 

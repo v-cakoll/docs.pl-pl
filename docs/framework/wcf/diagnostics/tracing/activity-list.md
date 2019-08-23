@@ -2,56 +2,56 @@
 title: Lista działań
 ms.date: 03/30/2017
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-ms.openlocfilehash: f96aab037e86b05096df7ffc82a0be3f6cce1ad2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d048dc9851a3b07b6c7457de95f2c752b0ffa964
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998039"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933580"
 ---
 # <a name="activity-list"></a>Lista działań
-Ten temat zawiera listę wszystkich działań, które są zdefiniowane przez Windows Communication Foundation (WCF).  
+W tym temacie wymieniono wszystkie działania zdefiniowane przez Windows Communication Foundation (WCF).  
   
 > [!NOTE]
->  Działania można również zdefiniować programowo, aby śledzenie użytkowników grupy. Aby uzyskać więcej informacji, zobacz [emitowanie danych śledzenia User-Code](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+> Możesz również programowo definiować działania, aby grupować ślady użytkowników. Aby uzyskać więcej informacji, zobacz [emitowanie śladów kodu użytkownika](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
   
-## <a name="servicemodel-activities"></a>Działania elementu ServiceModel  
- W poniższej tabeli wymieniono wszystkie działania dla scenariuszy użycia głównych.  
+## <a name="servicemodel-activities"></a>Działania ServiceModel  
+ W poniższej tabeli wymieniono wszystkie działania dotyczące głównych scenariuszy użycia.  
   
 |Etykieta|Nazwa działania|Typ działania|Opis|  
 |-----------|-------------------|-------------------|-----------------|  
-|A, M|Działanie otoczenia|N/d (to nie są kontrolowane przez ServiceModel)|Działanie, którego identyfikator jest ustawione w protokole TLS przed wszelkie wywołania do kodu modelu ServiceModel (po stronie klienta lub po stronie serwera).<br /><br /> Przykład: Gdzie open nosi nazwę klienta WCF lub serviceHost.open działanie zostanie wywołane.|  
-|B|Konstrukcja<br /><br /> Obiekt ChannelFactory. ContractType: "[Type]".|Konstrukcja||  
-|C|Otwarcie<br /><br /> [ClientBase&#124;ChannelFactory]. ContractType: "[Type]".|Otwarcie||  
-|I|Close [ClientBase&#124;ChannelFactory]. ContractType: "[Type]".|Zamknięcie||  
-|M|Construct ServiceHost. Typ ServiceType: "[Type]".|Konstrukcja||  
-|N|Open ServiceHost. Typ ServiceType: "[Type]".|Otwarcie||  
-|Z|Zamknij ServiceHost. Typ ServiceType: "[Type]".|Zamknięcie||  
-|O|Posłuchaj, w [address].|ListenAt|To i następnego działania są specyficzne dla transportu. Działania ListenAt reprezentuje zawartość, który jest mapowany do adresu, na którym nasłuchuje odbiornik kanału w. W przypadku usługi MSMQ jest on samej kolejki, ponieważ kolejka jest mapowany na jeden adres. To działanie nasłuchuje połączeń przychodzących w przypadku transportu nawiązaniem połączenia, dla wiadomości usługi MSMQ w przypadku usługi MSMQ. To działanie jest tworzony podczas ServiceHost.Open() i zawiera ślady związane z tworzenia i usuwania odbiornik, jak również przeniesienie się dla wszystkich działań ReceiveBytes.|  
-|P|Odbieranie bajtów w połączeniu [address]. Odbieranie wiadomości usługi MSMQ.|ReceiveBytes|W przypadku tego działania przetwarzania danych, który ostatecznie zostanie wyświetlony komunikat z usługi WCF. Przychodzące bajty jest oczekiwany w przypadku transportu ukierunkowane na połączenia lub protokołu http. Dla protokołu TCP/potoków okres istnienia tego działania jest okres istnienia połączenia, jest tworzona, gdy połączenie zostanie utworzony. Dla protokołu http okres istnienia komunikatu żądania i nie jest tworzone, gdy komunikat jest wysyłany. To działanie zawiera ślady dotyczące tworzenia i usuwania połączenia, jeśli ma to zastosowanie, a także przenosi się do wszystkich działań przetwarzania komunikatu (obiekt).<br /><br /> W przypadku usługi MSMQ jest działanie gdzie wiadomości usługi MSMQ są pobierane.|  
-|Q|Przetwórz komunikat [liczba]. (Uwaga: [numer] jest monotonicznie rosnący wartość, która rozpoczyna się od 1).|ProcessMessage|Przetwarzanie wiadomości przychodzących. To działanie uruchamia się po otrzymaniu wszystkich danych (w bajtach, wiadomości usługi MSMQ) w celu utworzenia obiektu komunikatów WCF. Ślady w ramach tego działania zajmuje się przetwarzanie nagłówka.<br /><br /> Po wiadomości, które mogą być wysyłane do utworzonego działania ServiceHost ProcessAction przełączy się po wyszukaniu odpowiedniego identyfikatora działania|  
-|D, S|Przetwarzaj akcję "[action]".|ProcessAction|Odbieranie komunikatów za pomocą stosu transportu/Security/RM do wysyłania wiadomości do kodu użytkownika na, proces w odwrotnej kolejności niż kolejność przy wysyłaniu.<br /><br /> Na serwerze to działanie używa propagowana. identyfikator działania, jeśli jest wysyłany w nagłówku komunikatu za pośrednictwem "Propagacja działania"; w przeciwnym razie jest tworzony nowy identyfikator GUID.<br /><br /> Komunikat odpowiedzi dla kontraktów "żądanie/odpowiedź" również są przetwarzane w tym działaniu.|  
-|T|Wykonaj [IContract.Operation].|ExecuteUserCode|Po wysłaniu po stronie usługi, należy wykonać kod użytkownika. To działanie zapewnia granicę, aby odróżnić ServiceHost kodu z kodu użytkownika.|  
+|A, M|Działanie otoczenia|Nie dotyczy (to nie jest kontrolowane przez ServiceModel)|Działanie, którego identyfikator jest ustawiony w protokole TLS przed dowolnymi wywołaniami kodu ServiceModel (po stronie klienta lub po stronie serwera).<br /><br /> Przykład: Działanie, w którym jest wywoływana funkcja Otwórz na kliencie WCF lub ServiceHost. Open jest wywoływana.|  
+|B|Konstrukcja<br /><br /> Endpoint. ContractType: ' [Type] '.|Konstrukcja||  
+|C|Otwarcie<br /><br /> [ClientBase&#124;ChannelFactory]. ContractType: ' [Type] '.|Otwarcie||  
+|I|Zamknij [element&#124;ChannelFactory elementu ClientBase]. ContractType: ' [Type] '.|Zamknięcie||  
+|M|Konstruowanie ServiceHost. ServiceType: "[Type]".|Konstrukcja||  
+|N|Otwórz element ServiceHost. ServiceType: "[Type]".|Otwarcie||  
+|Z|Zamknij element ServiceHost. ServiceType: "[Type]".|Zamknięcie||  
+|O|Nasłuchiwanie na "[address]".|ListenAt|To i następne działanie są specyficzne dla transportu. Działanie ListenAt reprezentuje zawartość, która jest mapowana na adres, w którym odbiornik kanału nasłuchuje. W przypadku usługi MSMQ jest to kolejka, ponieważ kolejka mapuje na jeden adres. To działanie nasłuchuje połączeń przychodzących w przypadku transportów ukierunkowanych na połączenia w przypadku komunikatów usługi MSMQ w przypadku usługi MSMQ. To działanie jest tworzone podczas działania ServiceHost. Open () i zawiera ślady związane z tworzeniem i usuwaniem odbiornika, a także transferem do wszystkich działań ReceiveBytes.|  
+|P|Odbieraj bajty na połączeniu "[address]". Odbierz komunikat usługi MSMQ.|ReceiveBytes|W tym działaniu dane, które ostatecznie otrzymają komunikat WCF, są przetwarzane. Przychodzące bajty są oczekiwane w przypadku transportu zorientowanego na połączenia lub http. W przypadku protokołu TCP/nazwanego potoku okres istnienia tego działania to okres istnienia połączenia, który jest tworzony podczas tworzenia połączenia. W przypadku protokołu HTTP jest okres istnienia żądania komunikatu i jest tworzony podczas wysyłania wiadomości. To działanie zawiera ślady związane z tworzeniem i usuwaniem połączenia, jeśli ma zastosowanie, a także transferem do wszystkich działań przetwarzania komunikatów (obiektów).<br /><br /> W przypadku usługi MSMQ jest to działanie, w którym zostanie pobrany komunikat usługi MSMQ.|  
+|Q|Komunikat procesu [Number]. (Uwaga: [Number] to monotonicznie rosnąca wartość, która zaczyna się od 1).|ProcessMessage|Przetwórz komunikat przychodzący. To działanie jest uruchamiane, gdy zostaną odebrane wszystkie dane (bajty, komunikaty MSMQ) w celu utworzenia obiektu wiadomości WCF. Ślady w ramach tego działania dotyczą przetwarzania nagłówków.<br /><br /> Po utworzeniu komunikatu, który może zostać wysłany, działanie ProcessAction ServiceHost zostanie przełączone do po wyszukaniu odpowiedniego identyfikatora działania.|  
+|D, S|Przetwarzaj akcję "[Action]".|ProcessAction|Przetwórz komunikat przy użyciu stosu Transport/Security/RM w celu wysłania wiadomości do kodu użytkownika przy odbiorze i w odwrotnej kolejności przy wysyłaniu.<br /><br /> Na serwerze to działanie używa propagowanego identyfikatora działania, jeśli jest wysyłany w nagłówku wiadomości za pośrednictwem "propagacji aktywności"; w przeciwnym razie zostanie utworzony nowy identyfikator GUID.<br /><br /> Komunikat odpowiedzi dla kontraktów żądania/odpowiedzi jest również przetwarzany w ramach tego działania.|  
+|T|Wykonanie operacji "[IContract. Operation]".|ExecuteUserCode|Po stronie usługi wykonaj kod użytkownika. To działanie zapewnia granicę odróżnić kodu ServiceHost z kodu dostarczonego przez użytkownika.|  
   
 ## <a name="security-activities"></a>Działania dotyczące zabezpieczeń  
- Poniższa tabela zawiera listę wszystkich działań związanych z zabezpieczeniami.  
+ W poniższej tabeli wymieniono wszystkie działania związane z zabezpieczeniami.  
   
 |Nazwa działania|Typ działania|Opis|  
 |-------------------|-------------------|-----------------|  
-|Konfigurowanie bezpiecznej sesji|SetupSecurity|Istnieje tylko na stronie klienta. Zawiera wszystkie RST * / SCT wymienia do uwierzytelniania i ustawienia kontekstu zabezpieczeń. Jeśli `propagateActivity` = `true`, to działanie jest scalany z usługi odpowiedniego procesu akcji RST\*/SCT działań.|  
-|Zamknij bezpiecznej sesji|SetupSecurity|Występuje po stronie klienta. Zawiera wymiany komunikatów anulowania zamknięcia bezpiecznej sesji. Jeśli `propagateActivity` = `true`, to działanie jest scalany z działania procesu "Anuluj" z usługi.|  
+|Skonfiguruj bezpieczną sesję|SetupSecurity|Istnieje tylko po stronie klienta. Zawiera wszystkie wartości RST */SCT na potrzeby uwierzytelniania i ustawiania kontekstu zabezpieczeń. Jeśli `propagateActivity` =\*to działanie zostanie scalone z odpowiadającą jej akcją procesu, RST/SCT działania. `true`|  
+|Zamknij bezpieczną sesję|SetupSecurity|Istnieje po stronie klienta. Zawiera komunikat o anulowaniu wymiany wiadomości na potrzeby zamykania bezpiecznej sesji. Jeśli `propagateActivity` todziałaniezostanie`true`scalone z akcją procesu "Anuluj" z usługi. =|  
   
- W poniższej tabeli wymieniono wszystkie działania związane z modelu COM +.  
+ W poniższej tabeli wymieniono wszystkie działania związane z modelem COM+.  
   
 |Nazwa działania|Typ działania|Opis|  
 |-------------------|-------------------|-----------------|  
-|Tworzenie wystąpienia modelu COM +|TransferToCOMPlus|1 wystąpienie działania dla każdego modelu COM + wywołują z kodu programu WCF|  
-|Wykonaj modelu COM + \<operacji >|TransferToCOMPlus|1 wystąpienie działania dla każdego modelu COM + wywołują z kodu programu WCF|  
+|Utwórz wystąpienie modelu COM+|TransferToCOMPlus|1 wystąpienie działania dla każdego wywołania modelu COM+ z kodu WCF|  
+|Wykonaj > \<operacji com+|TransferToCOMPlus|1 wystąpienie działania dla każdego wywołania modelu COM+ z kodu WCF|  
   
 ## <a name="wmi-activities"></a>Działania usługi WMI  
- Poniższa tabela zawiera listę wszystkich działań związanych z usługą WMI.  
+ W poniższej tabeli wymieniono wszystkie działania związane z usługą WMI.  
   
 |Nazwa działania|Typ działania|Opis|  
 |-------------------|-------------------|-----------------|  
-|Pobierz WMI|WMIGetObject|Użytkownik pobiera dane z usługi WMI.|  
-|Umieść WMI|WmiPutInstance|Użytkownik jest aktualizowanie danych za pomocą usługi WMI.|
+|Pobieranie usługi WMI|WMIGetObject|Użytkownik pobiera dane z usługi WMI.|  
+|Usługa WMI Put|WmiPutInstance|Użytkownik aktualizuje dane za pomocą usługi WMI.|

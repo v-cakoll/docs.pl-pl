@@ -1,28 +1,28 @@
 ---
-title: <state> w WCF — <workflowInstanceQuery>
+title: <state>programu WCF,<workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99387a8f60e96beb2ec7706d9abf4bb6ae84b868
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757966"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938205"
 ---
-# <a name="state-of-wcf-workflowinstancequery"></a>\<Stan > w WCF — \<workflowInstanceQuery >
+# <a name="state-of-wcf-workflowinstancequery"></a>\<> stanu WCF, \<workflowInstanceQuery >
 Reprezentuje kolekcję subskrybowanego stanów z wystąpienia śledzonych przepływu pracy podczas tworzenia rekordów śledzenia.  
   
- Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz [profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ Aby uzyskać więcej informacji o śledzeniu zapytań profilowych, zobacz [śledzenie profilów](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
 \<Śledzenie >  
-\<profiles>  
+\<> profilów  
 \<trackingProfile>  
 \<przepływ pracy >  
 \<workflowInstanceQueries>  
 \<workflowInstanceQuery>  
 \<Stany >  
-\<state>  
+\<> stanu  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -68,7 +68,7 @@ Brak.
 
 Zwracane rekordy są filtrowane według stanów w tej kolekcji.  
   
-Stan możliwe wartości są opisane w poniższej tabeli:
+Możliwe wartości stanu są opisane w poniższej tabeli:
   
 |Stan|Opis|  
 |-----------|-----------------|  
@@ -105,5 +105,5 @@ Następująca konfiguracja subskrybuje przepływu rekordów dla śledzenia na po
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Kontrola i śledzenie przepływu pracy](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profile śledzenia](../../../windows-workflow-foundation/tracking-profiles.md)

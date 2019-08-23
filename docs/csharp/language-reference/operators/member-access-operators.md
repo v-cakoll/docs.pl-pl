@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 763fdb442fa0037dafd51f89badd04436e24d254
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 5ff5e68fbce320076e6d18e9e139b418a15bba77
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566832"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924641"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatory dostępu do elementówC# członkowskich (odwołanie)
 
@@ -145,7 +145,7 @@ Po wywołaniu [konstruktora](../../programming-guide/classes-and-structs/constru
 
 ### <a name="other-usages-of-"></a>Inne użycie ()
 
-Należy również użyć nawiasów, aby określić kolejność, w której mają być oceniane operacje w wyrażeniu. Aby uzyskać więcej informacji, zobacz sekcję [Dodawanie nawiasów](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) w artykule [operatorzy](../../programming-guide/statements-expressions-operators/operators.md) . Aby uzyskać listę operatorów uporządkowanych według poziomu pierwszeństwa, zobacz [ C# operatory](index.md).
+Należy również użyć nawiasów, aby dostosować kolejność, w której mają być oceniane operacje w wyrażeniu. Aby uzyskać więcej informacji, zobacz [ C# operatory](index.md).
 
 [Wyrażenia rzutowania](type-testing-and-cast.md#cast-operator-), które wykonują jawne konwersje typów, również używają nawiasów.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: e3abb868ff9c9418c7cc565ae667b8225ac9e6e4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 21605b30867d7be0b906b431253c183e655bea82
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69603039"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922484"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C# opcje kompilatora)
 Opcja **-doc** umożliwia umieszczenie komentarzy do dokumentacji w pliku XML.  
@@ -46,7 +46,7 @@ Opcja **-doc** umożliwia umieszczenie komentarzy do dokumentacji w pliku XML.
  O ile nie kompilujesz [elementu with-target: module](./target-module-compiler-option.md), `file` program\<będzie zawierał \<zestaw >/Assembly > Tagi określające nazwę pliku zawierającego manifest zestawu dla pliku wyjściowego kompilacji.  
   
 > [!NOTE]
->  Opcja-doc dotyczy wszystkich plików wejściowych; lub, jeśli jest ustawiony w ustawieniach projektu, wszystkie pliki w projekcie. Aby wyłączyć ostrzeżenia związane z komentarzami do dokumentacji dla określonego pliku lub sekcji kodu, użyj [#pragma ostrzeżenie](../preprocessor-directives/preprocessor-pragma-warning.md).  
+> Opcja-doc dotyczy wszystkich plików wejściowych; lub, jeśli jest ustawiony w ustawieniach projektu, wszystkie pliki w projekcie. Aby wyłączyć ostrzeżenia związane z komentarzami do dokumentacji dla określonego pliku lub sekcji kodu, użyj [#pragma ostrzeżenie](../preprocessor-directives/preprocessor-pragma-warning.md).  
   
  Zapoznaj się z [polecanymi tagami komentarzy do dokumentacji](../../programming-guide/xmldoc/recommended-tags-for-documentation-comments.md) , aby poznać sposoby generowania dokumentacji z komentarzy w kodzie.  
   

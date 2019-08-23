@@ -2,41 +2,41 @@
 title: Zgodność platformy ASP.NET
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 01329769b74c8a5841b5a2024d3ed674c108be1c
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: a718b3f3bcbfd4bc2b74a14ba8f20cd8c335877f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487669"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925277"
 ---
 # <a name="aspnet-compatibility"></a>Zgodność platformy ASP.NET
-Niniejszy przykład pokazuje, jak włączyć tryb zgodności ASP.NET w Windows Communication Foundation (WCF). Usługi działające w zgodność platformy ASP.NET, tryb uczestniczą w pełni potoku platformy ASP.NET w aplikacji i ułatwia korzystanie z funkcji programu ASP.NET, takich jak plik lub adres URL autoryzacji, stan sesji i <xref:System.Web.HttpContext> klasy. <xref:System.Web.HttpContext> Klasy zezwala na dostęp do plików cookie, sesje i inne funkcje platformy ASP.NET. Ten tryb wymaga powiązania użyj transportu HTTP i usługi muszą być hostowane w usługach IIS.  
+Ten przykład pokazuje, jak włączyć tryb zgodności ASP.NET w Windows Communication Foundation (WCF). Usługi działające w trybie zgodności ASP.NET uczestniczą w pełni w potoku aplikacji ASP.NET i mogą korzystać z funkcji ASP.NET, takich jak autoryzacja plików/adresów URL, <xref:System.Web.HttpContext> stan sesji i Klasa. <xref:System.Web.HttpContext> Klasa umożliwia dostęp do plików cookie, sesji i innych funkcji ASP.NET. Ten tryb wymaga, aby powiązania korzystały z transportu HTTP i sama usługa musi być hostowana w usługach IIS.  
   
- W tym przykładzie klient to aplikacja konsoli (plik wykonywalny), a usługa jest hostowana w Internet Information Services (IIS).  
+ W tym przykładzie klient jest aplikacją konsolową (plik wykonywalny), a usługa jest hostowana w Internet Information Services (IIS).  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące konfiguracji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura konfiguracji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
-Ten przykładowy skrypt wymaga [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] puli aplikacji, aby można było uruchomić. Aby utworzyć nową pulę aplikacji lub zmodyfikować domyślnej puli aplikacji, wykonaj następujące kroki.  
+Aby można było uruchomić [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] ten przykład, wymagana jest pula aplikacji. Aby utworzyć nową pulę aplikacji lub zmodyfikować domyślną pulę aplikacji, wykonaj następujące kroki.  
 
-1. Otwórz **Panel sterowania**.  Otwórz **narzędzia administracyjne** apletu w obszarze **System i zabezpieczenia** nagłówka. Otwórz **Internet Information Services (IIS) Manager** apletu.  
+1. Otwórz **Panel sterowania**.  Otwórz aplet **Narzędzia administracyjne** w nagłówku **system i zabezpieczenia** . Otwórz aplet **menedżer Internet Information Services (IIS)** .  
 
-2. Rozwiń węzeł treeview w **połączeń** okienka. Wybierz **pul aplikacji** węzła.  
+2. Rozwiń element TreeView w okienku **połączenia** . Wybierz węzeł **Pule aplikacji** .  
 
-3. Do ustawiania domyślnej puli aplikacji do użycia [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (która może powodować problemów niezgodność z istniejących witryn), kliknij prawym przyciskiem myszy **DefaultAppPool** elementu listy, a następnie wybierz pozycję **podstawowych ustawień...** . Ustaw **.Net Framework w wersji** rozwijanego do **.Net Framework v4.0.30128** (lub nowsza).  
+3. Aby ustawić domyślną pulę aplikacji, która ma [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] być używana (co może spowodować problemy ze zgodnością z istniejącymi lokacjami), kliknij prawym przyciskiem myszy element listy z opcją **Domyślna** i wybierz pozycję **Ustawienia podstawowe.** . Ustaw ściąganie **wersji programu .NET Framework** w **programie .NET Framework v 4.0.30128** (lub nowszym).  
 
-4. Aby utworzyć nową pulę aplikacji, która używa [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (w celu zachowania zgodności dla innych aplikacji), kliknij prawym przyciskiem myszy **pul aplikacji** a następnie wybierz węzeł **Dodawanie puli aplikacji...** . Nadaj nazwę nowej puli aplikacji, a następnie ustaw **.Net Framework w wersji** rozwijanego do **.Net Framework v4.0.30128** (lub nowsza). Po instalujący kroki poniżej, kliknij prawym przyciskiem myszy **ServiceModelSamples** aplikacji i wybierz **Zarządzanie aplikacją**, **ustawienia zaawansowane...** . Ustaw **puli aplikacji** do nowej puli aplikacji.  
+4. Aby utworzyć nową pulę aplikacji używaną [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] przez program (w celu zachowania zgodności z innymi aplikacjami), kliknij prawym przyciskiem myszy węzeł **Pule aplikacji** i wybierz polecenie **Dodaj pulę aplikacji.** . Nadaj nazwę nowej puli aplikacji, a następnie ustaw opcję ściągania **wersji programu .NET Framework** w **programie .NET Framework v 4.0.30128** (lub nowszym). Po uruchomieniu poniższych kroków instalacji kliknij prawym przyciskiem myszy aplikację **servicemodelsamples** i wybierz pozycję **Zarządzaj aplikacją**, **Ustawienia zaawansowane...** . Ustaw **pulę aplikacji** na nową pulę aplikacji.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\ASPNetCompatibility`  
   
- Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje usługę kalkulatora. `ICalculator` Kontraktu została zmodyfikowana jako `ICalculatorSession` kontraktu zezwolić na zestaw operacji wykonywanych przy jednoczesnym zachowaniu wynik uruchomionych.  
+ Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje usługę kalkulatora. Umowa została zmodyfikowana `ICalculatorSession` jako kontrakt, aby zezwolić na wykonywanie zestawu operacji przy zachowaniu uruchomionego wyniku. `ICalculator`  
   
 ```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -57,14 +57,14 @@ public interface ICalculatorSession
 }  
 ```  
   
- Usługa zapewnia stanu, korzystanie z funkcji dla każdego klienta, jak wiele operacji usługi są wywoływane w celu wykonywania obliczeń. Klient może pobrać bieżący wynik, wywołując `Result` i wyczyścić wynik, który ma wartość zero, wywołując `Clear`.  
+ Usługa zachowuje stan przy użyciu funkcji dla każdego klienta, jako że wiele operacji usługi jest wywoływanych w celu wykonania obliczeń. Klient może pobrać bieżący wynik, wywołując `Result` i może wyczyścić wynik do zera przez wywołanie metody. `Clear`  
   
- Usługa używa sesji programu ASP.NET, aby przechować wynik dla każdej sesji klienta. Dzięki temu usługa do obsługi uruchomionych wyników dla każdego klienta w wielu wywołań do usługi.  
+ Usługa używa sesji ASP.NET do przechowywania wyników dla każdej sesji klienta. Dzięki temu usługa może zachować wynik działania dla każdego klienta w wielu wywołaniach do usługi.  
   
 > [!NOTE]
-> Stan sesji programu ASP.NET i WCF sesji są bardzo różnych rzeczy. Zobacz [sesji](../../../../docs/framework/wcf/samples/session.md) szczegółowe informacje dotyczące sesji usługi WCF.
+> Stan sesji ASP.NET i sesje WCF są bardzo różne. Aby uzyskać szczegółowe informacje na temat sesji WCF, zobacz temat [sesja](../../../../docs/framework/wcf/samples/session.md) .
   
- Usługa ma zależność obsługi stanu sesji platformy ASP.NET i wymaga tryb zgodności ASP.NET, aby działo poprawnie. Te wymagania są wyrażone w sposób deklaratywny, stosując `AspNetCompatibilityRequirements` atrybutu.  
+ Usługa ma zależność Intimate na stanie sesji ASP.NET i wymaga trybu zgodności ASP.NET w celu poprawnego działania. Te wymagania są wyrażane w sposób deklaratywny `AspNetCompatibilityRequirements` przez zastosowanie atrybutu.  
   
 ```csharp  
 [AspNetCompatibilityRequirements(RequirementsMode =  
@@ -110,23 +110,23 @@ public class CalculatorService : ICalculatorSession
 }  
 ```
   
- Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
   
 ```console
 0, + 100, - 50, * 17.65, / 2 = 441.25  
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Pamiętaj, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Po rozwiązaniu została skompilowana, uruchom Setup.bat jest, aby skonfigurować aplikację ServiceModelSamples w usługach IIS 7.0. Katalog ServiceModelSamples teraz powinna zostać wyświetlona jako aplikację IIS 7.0.  
+3. Po skompilowaniu rozwiązania Uruchom polecenie Setup. bat, aby skonfigurować aplikację ServiceModelSamples w usługach IIS 7,0. Katalog ServiceModelSamples powinien teraz pojawić się jako aplikacja usług IIS 7,0.  
   
-4. Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykłady trwałości i hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Przykłady hostingu i trwałości usługi AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

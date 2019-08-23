@@ -2,39 +2,39 @@
 title: Schemat konfiguracji programu WCF
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: baea1e49bce10054530afa5b6f282023d5ceb981
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d7b4cbad1876888e7a22a92bdb28a17b880e159
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755814"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925392"
 ---
 # <a name="wcf-configuration-schema"></a>Schemat konfiguracji programu WCF
-Windows Communication Foundation (WCF), elementy konfiguracji umożliwiają skonfigurowanie aplikacji usługi i klienta WCF. Możesz użyć [narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) pozwala tworzyć i modyfikować pliki konfiguracyjne dla klientów i usług. Ponieważ pliki konfiguracyjne są w formacie XML, należy zapoznać z danymi XML, jeśli chcesz ręcznie edytować za pomocą edytora tekstów. W przeciwnym razie może wystąpić problemy, takie jak unfound tagu elementu XML lub atrybut. Wynika to z tagów elementu XML i atrybutów jest rozróżniana wielkość liter.  
+Elementy konfiguracji programu Windows Communication Foundation (WCF) umożliwiają skonfigurowanie usług i aplikacji klienckich platformy WCF. Aby tworzyć i modyfikować pliki konfiguracji dla klientów i usług, można użyć [Narzędzia Edytora konfiguracji (SvcConfigEditor. exe)](../../../wcf/configuration-editor-tool-svcconfigeditor-exe.md) . Ponieważ pliki konfiguracji są sformatowane jako XML, należy zapoznać się z kodem XML, aby ręcznie edytować je za pomocą edytora tekstu. W przeciwnym razie może wystąpić problemy, takie jak unfound tagu elementu XML lub atrybut. Wynika to z tagów elementu XML i atrybutów jest rozróżniana wielkość liter.  
   
- System konfiguracji usługi WCF opiera się na <xref:System.Configuration> przestrzeni nazw. W związku z tym, można korzystać ze standardowych funkcji dostarczonych przez <xref:System.Configuration> przestrzeni nazw, takie jak konfiguracja, blokowanie, szyfrowania i scalania, aby zwiększyć bezpieczeństwo aplikacji i jego konfiguracji. Aby uzyskać więcej informacji dotyczących tych pojęć zobacz następujące tematy.  
+ System konfiguracji WCF jest oparty na <xref:System.Configuration> przestrzeni nazw. W związku z tym możesz użyć wszystkich funkcji standardowych dostępnych <xref:System.Configuration> w przestrzeni nazw, takich jak blokowanie konfiguracji, szyfrowanie i scalanie, aby zwiększyć bezpieczeństwo aplikacji i jej konfiguracji. Aby uzyskać więcej informacji na temat tych pojęć, zobacz następujące tematy.  
   
  [Szyfrowanie informacji o konfiguracji](https://go.microsoft.com/fwlink/?LinkId=95337)  
   
  [Blokowanie ustawień konfiguracji](https://go.microsoft.com/fwlink/?LinkId=95338)  
   
- W tej sekcji opisano wszystkie możliwe wartości dla każdego elementu konfiguracji i sposób jej interakcji z innymi elementami konfiguracji usługi WCF. Poniższe mapy ilustruje schemat konfiguracji programu WCF:  
+ W tej sekcji opisano wszystkie możliwe wartości poszczególnych elementów konfiguracji oraz sposób współdziałania z innymi elementami konfiguracji WCF. Poniższa mapa ilustruje Schemat konfiguracji programu WCF:  
   
- ![Diagram przedstawiający schemat konfiguracji programu WCF.](./media/index/windows-communication-foundation-configuration-schema.gif)  
+ ![Diagram przedstawiający Schemat konfiguracji programu WCF.](./media/index/windows-communication-foundation-configuration-schema.gif)  
   
 > [!CAUTION]
->  Należy chronić WCF sekcji konfiguracyjnych w plikach konfiguracji aplikacji (app.config) przy użyciu odpowiednich kontroli dostępu zawiera listę (ACL) aby zapobiec wszelkie potencjalne zagrożenia bezpieczeństwa.  Na przykład należy upewnić się, że odpowiednie osoby mogą uzyskać dostęp lub zmodyfikować ustawienia zabezpieczeń na powiązania aplikacji lub usługi w modelu części pliku konfiguracji dla usługi.  
+>  Należy chronić sekcje konfiguracyjne programu WCF w plikach konfiguracji aplikacji (App. config) za pomocą odpowiednich list Access Control (ACL), aby zapobiec potencjalnym zagrożeniom bezpieczeństwa.  Należy na przykład upewnić się, że tylko odpowiednie osoby mają dostęp do ustawień zabezpieczeń powiązań aplikacji lub je modyfikować, a także w sekcji model usługi w pliku konfiguracji usługi.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
+ [\<system.serviceModel>](system-servicemodel.md)  
  Opisuje `ServiceModel` elementu.  
   
- [\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)  
- Konfiguruje narzędzia SMSvcHost.exe.  
+ [\<system.serviceModel.activation>](system-servicemodel-activation.md)  
+ Konfiguruje narzędzie SMSvcHost. exe.  
   
- [\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
- Element najwyższego poziomu dla opcji ustawienia, korzystając z serializatory takich jak <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ [\<system.runtime.serialization>](system-runtime-serialization.md)  
+ Element najwyższego poziomu służący do ustawiania opcji przy użyciu serializatorów, <xref:System.Runtime.Serialization.DataContractSerializer>takich jak.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Konfigurowanie aplikacji programu Windows Communication Foundation](../../../wcf/configuring-services.md)  
- W tym artykule opisano sposób konfigurowania usługi WCF i klientów.
+ [Konfigurowanie aplikacji Windows Communication Foundation](../../../wcf/configuring-services.md)  
+ Opisuje sposób konfigurowania usług i klientów programu WCF.

@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 07/25/2019
-ms.openlocfilehash: 10e5dfdc873f8dcf9fec0da5f7f3561337033f40
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.date: 08/21/2019
+ms.openlocfilehash: 5f9d7026b270a010d2ba5d4b1165728a100ab6ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69604250"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922564"
 ---
-# <a name="whats-new-in-net-core-30-preview-7"></a>Co nowego w programie .NET Core 3,0 (wersja zapoznawcza 7)
+# <a name="whats-new-in-net-core-30-preview-8"></a>Co nowego w programie .NET Core 3,0 (wersja zapoznawcza 8)
 
-W tym artykule opisano nowości w programie .NET Core 3,0 (w wersji zapoznawczej 7). Jednym z największych ulepszeń jest obsługa aplikacji klasycznych systemu Windows (tylko system Windows). Korzystając z pulpitu systemu Windows składnika zestawu SDK platformy .NET Core 3,0, można przenieść aplikacje Windows Forms i Windows Presentation Foundation (WPF). Aby można było wyczyścić, składnik pulpitu systemu Windows jest obsługiwany i uwzględniany w systemie Windows. Aby uzyskać więcej informacji, zobacz sekcję [pulpitu systemu Windows](#windows-desktop) w dalszej części tego artykułu.
+W tym artykule opisano nowości w programie .NET Core 3,0 (w wersji zapoznawczej 8). Jednym z największych ulepszeń jest obsługa aplikacji klasycznych systemu Windows (tylko system Windows). Korzystając z pulpitu systemu Windows składnika zestawu SDK platformy .NET Core 3,0, można przenieść aplikacje Windows Forms i Windows Presentation Foundation (WPF). Aby można było wyczyścić, składnik pulpitu systemu Windows jest obsługiwany i uwzględniany w systemie Windows. Aby uzyskać więcej informacji, zobacz sekcję [pulpitu systemu Windows](#windows-desktop) w dalszej części tego artykułu.
 
 Program .NET Core 3,0 dodaje obsługę C# 8,0. Zdecydowanie zaleca się użycie [najnowszej wersji programu Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)lub Visual Studio Code z rozszerzeniem OmniSharp.
 
-[Pobierz i zacznij korzystać z platformy .NET Core 3,0 w wersji zapoznawczej 7](https://aka.ms/netcore3download) teraz w systemach Windows, Mac i Linux.
+[Pobierz i zacznij korzystać z programu .NET Core 3,0 Preview 8](https://aka.ms/netcore3download) teraz w systemie Windows, MacOS lub Linux.
 
 Aby uzyskać więcej informacji na temat każdej wersji zapoznawczej, zobacz następujące powiadomienia:
 
+- [Anons programu .NET Core 3,0 Preview 8](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [Anons programu .NET Core 3,0 w wersji zapoznawczej 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [Anons programu .NET Core 3,0 w wersji 6](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [Anons programu .NET Core 3,0 Preview 5](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
@@ -34,7 +35,9 @@ Aby uzyskać więcej informacji na temat każdej wersji zapoznawczej, zobacz nas
 
 ## <a name="production-supported-preview"></a>Wersja zapoznawcza obsługiwanej produkcji
 
-Program .NET Core Preview 7 jest uznawany za gotowy do produkcji przez firmę Microsoft i jest w pełni obsługiwany. Począwszy od wersji zapoznawczej 7, wersje będą skoncentrowane na polerowaniu platformy .NET Core 3,0 zamiast dodawania nowych funkcji. Aby uzyskać więcej informacji na temat zmian w wersji zapoznawczej 7, zapoznaj się z ogłoszeniem w [wersji zapoznawczej 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/).
+Program .NET Core Preview 8 jest uznawany za gotowy do produkcji przez firmę Microsoft i jest w pełni obsługiwany. Począwszy od wersji zapoznawczej 7, wersje będą skoncentrowane na polerowaniu platformy .NET Core 3,0 zamiast dodawania nowych funkcji. Aby uzyskać więcej informacji na temat zmian w wersji zapoznawczej 8, zobacz [ogłoszenie w wersji zapoznawczej 8](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/).
+
+Jeśli używasz starszej wersji zapoznawczej, musisz przejść do wersji zapoznawczej 8, aby kontynuować obsługę "go na żywo".
 
 ## <a name="net-core-sdk-windows-installer"></a>Zestaw .NET Core SDK Instalator Windows
 
@@ -52,11 +55,11 @@ Mimo że program .NET Core 3,0 obsługuje **.NET Standard 2,1**, szablon `dotnet
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
- 
+
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
- 
+
 </Project>
 ```
 
@@ -91,7 +94,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ## <a name="net-platform-dependent-intrinsics"></a>Elementy wewnętrzne zależne od platformy .NET
 
-Dodano interfejsy API, które umożliwiają dostęp do pewnych instrukcji procesora CPU zorientowanych na wydajność, takich jak **SIMD** lub **bitowe zestawy instrukcji manipulowania** . Te instrukcje mogą pomóc w osiągnięciu znaczących ulepszeń wydajności w niektórych scenariuszach, takich jak wydajne przetwarzanie danych. 
+Dodano interfejsy API, które umożliwiają dostęp do pewnych instrukcji procesora CPU zorientowanych na wydajność, takich jak **SIMD** lub **bitowe zestawy instrukcji manipulowania** . Te instrukcje mogą pomóc w osiągnięciu znaczących ulepszeń wydajności w niektórych scenariuszach, takich jak wydajne przetwarzanie danych.
 
 W odpowiednich przypadkach biblioteki .NET zaczęły korzystać z tych instrukcji w celu zwiększenia wydajności.
 
@@ -103,8 +106,8 @@ Platforma .NET Core teraz domyślnie kompiluje [pliki wykonywalne zależne od pl
 
 W `dotnet build` trakcie `dotnet publish`lub, tworzony jest plik wykonywalny zgodny ze środowiskiem i platformą używanego zestawu SDK. Można oczekiwać, że te same elementy wykonywalne są takie same jak w przypadku innych natywnych plików wykonywalnych, takich jak:
 
-* Możesz kliknąć dwukrotnie plik wykonywalny.
-* Aplikację można uruchomić z poziomu wiersza polecenia bezpośrednio, na przykład `myapp.exe` w systemie Windows `./myapp` , w systemie Linux i macOS.
+- Możesz kliknąć dwukrotnie plik wykonywalny.
+- Aplikację można uruchomić z poziomu wiersza polecenia bezpośrednio, na przykład `myapp.exe` w systemie Windows `./myapp` , w systemie Linux i macOS.
 
 ## <a name="single-file-executables"></a>Pliki wykonywalne pojedynczego pliku
 
@@ -297,11 +300,11 @@ Aplikacje .NET Core Windows Forms mogą ustawiać tryb wysokiej rozdzielczości 
 
 Możliwe `highDpiMode` wartości wyrażone <xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType> przez wyliczenie są następujące:
 
-* `DpiUnaware`
-* `SystemAware`
-* `PerMonitor`
-* `PerMonitorV2`
-* `DpiUnawareGdiScaled`
+- `DpiUnaware`
+- `SystemAware`
+- `PerMonitor`
+- `PerMonitorV2`
+- `DpiUnawareGdiScaled`
 
 Aby uzyskać więcej informacji na temat trybów wysokiej rozdzielczości DPI, zobacz [Tworzenie aplikacji klasycznych o wysokiej rozdzielczości DPI w systemie Windows](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).
 
@@ -335,7 +338,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 {
     await foreach (var result in GetResultsAsync())
     {
-        if (result > 20) yield return result; 
+        if (result > 20) yield return result;
     }
 }
 ```
@@ -350,31 +353,31 @@ Interfejsy API zmiennoprzecinkowe są aktualizowane w celu zapewnienia zgodnośc
 
 Poprawki dotyczące analizowania i formatowania obejmują:
 
-* Poprawnie Analizuj i Zaokrąglij dane wejściowe o dowolnej długości.
-* Prawidłowo Przeanalizuj i sformatuj ujemną wartość zero.
-* Poprawne analizowanie `Infinity` i `NaN` wykonywanie kontroli bez uwzględniania wielkości liter i Zezwalanie na opcjonalne poprzednie `+` , jeśli ma to zastosowanie.
+- Poprawnie Analizuj i Zaokrąglij dane wejściowe o dowolnej długości.
+- Prawidłowo Przeanalizuj i sformatuj ujemną wartość zero.
+- Poprawne analizowanie `Infinity` i `NaN` wykonywanie kontroli bez uwzględniania wielkości liter i Zezwalanie na opcjonalne poprzednie `+` , jeśli ma to zastosowanie.
 
 Nowe <xref:System.Math?displayProperty=nameWithType> interfejsy API obejmują:
 
-* <xref:System.Math.BitIncrement(System.Double)>lub<xref:System.Math.BitDecrement(System.Double)>\
+- <xref:System.Math.BitIncrement(System.Double)>lub<xref:System.Math.BitDecrement(System.Double)>\
 Odnosi się do `nextUp` operacji `nextDown` i IEEE. Zwracają one najmniejszą liczbę zmiennoprzecinkową, która porównuje większe lub mniejsze niż dane wejściowe (odpowiednio). Na przykład `Math.BitIncrement(0.0)` zwrócimy `double.Epsilon`.
 
-* <xref:System.Math.MaxMagnitude(System.Double,System.Double)>lub<xref:System.Math.MinMagnitude(System.Double,System.Double)>\
+- <xref:System.Math.MaxMagnitude(System.Double,System.Double)>lub<xref:System.Math.MinMagnitude(System.Double,System.Double)>\
 Odnosi się do `maxNumMag` operacji `minNumMag` i IEEE, zwracają wartość, która jest większa lub mniejsza o wielkości dwóch danych wejściowych (odpowiednio). Na przykład `Math.MaxMagnitude(2.0, -3.0)` zwrócimy `-3.0`.
 
-* <xref:System.Math.ILogB(System.Double)>\
+- <xref:System.Math.ILogB(System.Double)>\
 Odnosi się do `logB` operacji IEEE, która zwraca wartość całkowitą, zwraca integralny dziennik Base-2 parametru wejściowego. Ta metoda jest efektywnie taka sama jak `floor(log2(x))`, ale została wykonana z minimalnym błędem zaokrąglania.
 
-* <xref:System.Math.ScaleB(System.Double,System.Int32)>\
+- <xref:System.Math.ScaleB(System.Double,System.Int32)>\
 Odnosi się do `scaleB` operacji IEEE, która przyjmuje wartość całkowitą, która zwraca efektywność `x * pow(2, n)`, ale jest wykonywana z minimalnym błędem zaokrąglania.
 
-* <xref:System.Math.Log2(System.Double)>\
+- <xref:System.Math.Log2(System.Double)>\
 Odpowiada operacji `log2` IEEE, Zwraca logarytm o podstawie 2. Minimalizuje błąd zaokrąglania.
 
-* <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
+- <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
 Odnosi się do `fma` operacji IEEE, dlatego wykonuje odrzucane mnożenie dodawania. Oznacza to, `(x * y) + z` że jest to jedna operacja, a tym samym Minimalizacja błędu zaokrąglania. Przykładem może być `FusedMultiplyAdd(1e308, 2.0, -1e308)` zwracana wartość `1e308`. Regularne `(1e308 * 2.0) - 1e308` zwroty `double.PositiveInfinity`.
 
-* <xref:System.Math.CopySign(System.Double,System.Double)>\
+- <xref:System.Math.CopySign(System.Double,System.Double)>\
 Odpowiada operacji `x`IEEE, zwraca wartość, `y`ale ze znakiem. `copySign`
 
 ## <a name="fast-built-in-json-support"></a>Szybka Wbudowana obsługa JSON
@@ -453,8 +456,8 @@ W wielu przypadkach podczas tworzenia aplikacji chcesz użyć nieszyfrowanego po
 
 Platforma .NET Core wykorzystuje teraz zalety [protokołu TLS 1,3 w OpenSSL 1.1.1](https://www.openssl.org/blog/blog/2018/09/11/release111/), gdy jest on dostępny w danym środowisku. Z protokołem TLS 1,3:
 
-* Czas połączenia jest ulepszony ze zredukowanymi przedziałami rundy między klientem i serwerem.
-* Ulepszone zabezpieczenia spowodowane usuwaniem różnych przestarzałych i niezabezpieczonych algorytmów kryptograficznych.
+- Czas połączenia jest ulepszony ze zredukowanymi przedziałami rundy między klientem i serwerem.
+- Ulepszone zabezpieczenia spowodowane usuwaniem różnych przestarzałych i niezabezpieczonych algorytmów kryptograficznych.
 
 Jeśli jest dostępny, program .NET Core 3,0 używa **OpenSSL 1.1.1**, **OpenSSL 1.1.0**lub **OpenSSL 1.0.2** w systemie Linux. Gdy **OpenSSL 1.1.1** jest dostępny, oba <xref:System.Net.Security.SslStream?displayProperty=nameWithType> typy <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> i używają **protokołu TLS 1,3** (przy założeniu, że zarówno klient, jak i serwer obsługują **protokół TLS 1,3**).
 
@@ -479,20 +482,20 @@ Program .NET Core 3,0 obsługuje importowanie i eksportowanie asymetrycznych klu
 
 Wszystkie typy kluczy, takie jak *RSA*, *DSA*, *ECDSA*i *ECDiffieHellman*, obsługują następujące formaty:
 
-* **Klucz publiczny**
-  * SubjectPublicKeyInfo X. 509
+- **Klucz publiczny**
+  - SubjectPublicKeyInfo X. 509
 
-* **Klucz prywatny**
-  * PrivateKeyInfo PKCS # 8
-  * EncryptedPrivateKeyInfo PKCS # 8
+- **Klucz prywatny**
+  - PrivateKeyInfo PKCS # 8
+  - EncryptedPrivateKeyInfo PKCS # 8
 
 Klucze RSA obsługują również:
 
-* **Klucz publiczny**
-  * RSAPublicKey PKCS # 1
+- **Klucz publiczny**
+  - RSAPublicKey PKCS # 1
 
-* **Klucz prywatny**
-  * RSAPrivateKey PKCS # 1
+- **Klucz prywatny**
+  - RSAPrivateKey PKCS # 1
 
 Metody eksportowania generują dane binarne kodowane algorytmem DER, a metody importowe oczekują na to samo. Jeśli klucz jest przechowywany w formacie PEM przyjaznym dla tekstu, wywołujący będzie musiał odkodować zawartość przed wywołaniem metody Import.
 
@@ -512,9 +515,9 @@ Aby uzyskać więcej informacji o ograniczonej obsłudze portu szeregowego w sys
 
 Począwszy od wersji zapoznawczej 3, uruchomienie programu .NET Core 3,0 w systemie Linux z rozwiązaniem Docker działa lepiej z limitami pamięci cgroup. Uruchamianie kontenera Docker z limitami pamięci, na przykład z `docker run -m`, zmienia sposób działania programu .NET Core.
 
-* Domyślny rozmiar sterty modułu wyrzucania elementów bezużytecznych (GC): maksymalnie 20 MB lub 75% limitu pamięci w kontenerze.
-* Rozmiar jawny można ustawić jako liczbę bezwzględną lub procent limitu cgroup.
-* Minimalny zarezerwowany rozmiar segmentu na stos GC to 16 MB. Ten rozmiar zmniejsza liczbę stert, które są tworzone na maszynach.
+- Domyślny rozmiar sterty modułu wyrzucania elementów bezużytecznych (GC): maksymalnie 20 MB lub 75% limitu pamięci w kontenerze.
+- Rozmiar jawny można ustawić jako liczbę bezwzględną lub procent limitu cgroup.
+- Minimalny zarezerwowany rozmiar segmentu na stos GC to 16 MB. Ten rozmiar zmniejsza liczbę stert, które są tworzone na maszynach.
 
 ## <a name="smaller-garbage-collection-heap-sizes"></a>Mniejsze rozmiary sterty wyrzucania elementów bezużytecznych
 
@@ -530,8 +533,8 @@ Moduł wyrzucania elementów bezużytecznych można teraz skonfigurować przy u�
 
 Do programu NuGet zostały wydane dwa pakiety, których można użyć do programowania interfejsu GPIO:
 
-* [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
-* [IoT. Device. bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
+- [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
+- [IoT. Device. bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
 Pakiety GPIO obejmują interfejsy API dla urządzeń z interfejsem *GPIO*, *SPI*, *I2C*i *PWM* . Pakiet powiązań IoT obejmuje powiązania urządzeń. Aby uzyskać więcej informacji, zobacz [repozytorium GitHub](https://github.com/dotnet/iot/blob/master/src/devices/).
 

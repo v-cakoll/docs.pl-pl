@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 2f4c62ff551ac66c4b7192a4e978db0a9f443f3f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4368bd57718f52816d4efad39932bcc0959b67a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613698"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951300"
 ---
 # <a name="wcf-performance-counters"></a>Liczniki wydajności programu WCF
-Windows Communication Foundation (WCF) zawiera duży zestaw liczników wydajności, aby ułatwić mierzyć wydajność aplikacji.  
+Windows Communication Foundation (WCF) zawiera duży zestaw liczników wydajności, które ułatwiają pomiar wydajności aplikacji.  
   
 ## <a name="enabling-performance-counters"></a>Włączanie liczników wydajności  
- Liczniki wydajności dla usługi WCF można włączyć za pomocą pliku konfiguracji app.config usługi WCF w następujący sposób:  
+ Liczniki wydajności dla usługi WCF można włączyć za pomocą pliku konfiguracji App. config usługi WCF w następujący sposób:  
   
 ```xml  
 <configuration>  
@@ -25,19 +25,19 @@ Windows Communication Foundation (WCF) zawiera duży zestaw liczników wydajnoś
 </configuration>  
 ```  
   
- `performanceCounters` Atrybut można ustawić tak, aby włączyć liczniki wydajności dla określonego typu. Prawidłowe wartości to:  
+ `performanceCounters` Atrybut można ustawić, aby włączyć określony typ liczników wydajności. Prawidłowe wartości to  
   
-- Wszystkie: Wszystkie liczniki kategorii (ServiceModelService i ServiceModelEndpoint ServiceModelOperation) są włączone.  
+- Całą Wszystkie liczniki kategorii (ServiceModelService, ServiceModelEndpoint i ServiceModelOperation) są włączone.  
   
-- ServiceOnly: Tylko liczniki kategorii ServiceModelService są włączone. Jest to wartość domyślna.  
+- Tylko Service: Włączone są tylko liczniki kategorii ServiceModelService. Jest to wartość domyślna.  
   
-- Wyłączone: Liczniki wydajności modelu ServiceModel * są wyłączone.  
+- Logowanie Element ServiceModel * liczniki wydajności są wyłączone.  
   
- Jeśli chcesz włączyć liczniki wydajności dla wszystkich aplikacji WCF, ustawienia konfiguracji można umieścić w pliku Machine.config.  Zobacz **zwiększenie rozmiaru pamięci dla liczników wydajności** sekcji poniżej, aby uzyskać więcej informacji na temat konfigurowania wystarczającą ilość pamięci dla liczników wydajności na komputerze.  
+ Jeśli chcesz włączyć liczniki wydajności dla wszystkich aplikacji WCF, możesz umieścić ustawienia konfiguracji w pliku Machine. config.  Więcej informacji na temat konfigurowania wystarczającej ilości pamięci dla liczników wydajności na komputerze znajduje się w sekcji **zwiększanie rozmiaru pamięci dla liczników wydajności** .  
   
- Jeśli używasz usługi WCF punkty rozszerzeń, takich jak invokers operacji niestandardowej, powinny również wysyłać liczniki wydajności. Jest to spowodowane w przypadku zaimplementowania punktu rozszerzalności WCF, mogą nie są już emitowane dane licznika wydajności warstwy standardowa w domyślnej ścieżce. Jeśli obsługa licznika wydajności ręczne nie jest zaimplementowane, może być niewidoczna dane licznika wydajności, których oczekujesz.  
+ W przypadku używania punktów rozszerzalności WCF, takich jak niestandardowe wywołania operacji, należy również emitować własne liczniki wydajności. Wynika to z faktu, że w przypadku zaimplementowania punktu rozszerzalności usługa WCF nie będzie już emitować standardowych danych licznika wydajności w ścieżce domyślnej. Jeśli nie zostanie wdrożona ręczna obsługa licznika wydajności, może nie być widoczne oczekiwane dane licznika wydajności.  
   
- Można również włączyć liczniki wydajności w kodzie w następujący sposób,  
+ Liczniki wydajności można również włączyć w kodzie w następujący sposób:  
   
 ```  
 using System.Configuration;  
@@ -51,80 +51,80 @@ config.Save();
 ```  
   
 ## <a name="viewing-performance-data"></a>Wyświetlanie danych wydajności  
- Aby wyświetlić dane przechwycone przez liczniki wydajności, można użyć Monitora wydajności (Perfmon.exe), który jest dostarczany z Windows. Możesz uruchomić to narzędzie, przechodząc do **Start**i kliknij przycisk **Uruchom** i typ `perfmon.exe` w oknie dialogowym.  
+ Aby wyświetlić dane przechwycone przez liczniki wydajności, można użyć Monitora wydajności (Perfmon. exe), który jest dostarczany z systemem Windows. Można uruchomić to narzędzie, przechodząc do **menu Start**, a następnie klikając polecenie `perfmon.exe` Uruchom i wpisz w oknie dialogowym.  
   
 > [!NOTE]
->  Wystąpienia liczników wydajności mogą zostać zwolnione, zanim ostatnie komunikaty są przetwarzane przez dyspozytora punktu końcowego. Może to spowodować, że dane wydajności nie przechwycone kilka komunikatów.  
+> Wystąpienia licznika wydajności mogą zostać wydane przed przetworzeniem ostatnich komunikatów przez dyspozytora punktów końcowych. Może to spowodować, że dane wydajności nie zostaną przechwycone przez kilka komunikatów.  
   
-## <a name="increasing-memory-size-for-performance-counters"></a>Zwiększenie rozmiaru pamięci dla liczników wydajności  
- Usługi WCF używa oddzielnych pamięci współużytkowanej dla jego kategorii licznika wydajności.  
+## <a name="increasing-memory-size-for-performance-counters"></a>Zwiększanie rozmiaru pamięci dla liczników wydajności  
+ Usługa WCF używa oddzielnej pamięci współdzielonej dla jej kategorii liczników wydajności.  
   
- Domyślnie oddzielne Pamięć współużytkowana jest równa kwartału ogólnych parametrów liczników pamięci. Domyślny ogólnych parametrów liczników pamięci to 524,288 bajtów. Trzy kategorie liczników wydajności programu WCF więc domyślny rozmiar około 128KB. W zależności od charakterystyki środowiska uruchomieniowego aplikacji WCF na komputerze, mogą się wyczerpać pamięci licznika wydajności. W takim przypadku WCF zapisuje błąd w dzienniku zdarzeń aplikacji. Zawartość błąd stwierdza, że licznika wydajności, który nie został załadowany, a wpis zawiera wyjątek "System.InvalidOperationException: Widok pliku liczników niestandardowych jest za mało pamięci." Jeśli śledzenie jest włączone na poziomie błędu, śledzona jest również tego błędu. Jeśli wyczerpaniu pamięci licznika wydajności w dalszym ciągu uruchamiać aplikacje programu WCF za pomocą liczników wydajności, włączone może spowodować obniżenie wydajności. Jeśli jesteś administratorem na komputerze, należy skonfigurować ją przydzielić wystarczającej ilości pamięci do obsługi maksymalną liczbę liczników wydajności, które może znajdować się w dowolnym momencie.  
+ Domyślnie dla oddzielnej pamięci współdzielonej jest ustawiony kwartał rozmiaru globalnej pamięci licznika wydajności. Domyślna globalna pamięć licznika wydajności to 524 288 bajtów. W związku z tym trzy kategorie liczników wydajności programu WCF mają domyślny rozmiar około 128 KB każdego z nich. W zależności od charakterystyk środowiska uruchomieniowego aplikacji WCF na komputerze można wyczerpaniu pamięci licznika wydajności. W takim przypadku usługa WCF zapisuje błąd w dzienniku zdarzeń aplikacji. Zawartość błędów wskazuje, że licznik wydajności nie został załadowany, a wpis zawiera wyjątek "System. InvalidOperationException: Za mało pamięci w widoku pliku liczników niestandardowych ". Jeśli śledzenie jest włączone na poziomie błędu, ten błąd jest również śledzony. W przypadku wyczerpania pamięci licznika wydajności kontynuowanie uruchamiania aplikacji programu WCF z włączonymi licznikami wydajności może skutkować obniżeniem wydajności. Jeśli jesteś administratorem maszyny, skonfiguruj ją w celu przydzielenia wystarczającej ilości pamięci, aby obsługiwać maksymalną liczbę liczników wydajności, które mogą istnieć w dowolnym momencie.  
   
- Można zmienić ilość pamięci licznika wydajności dla kategorii WCF w rejestrze. Aby to zrobić, należy dodać nową wartość DWORD o nazwie `FileMappingSize` do trzech następujących lokalizacji i ustaw ją na żądaną wartość w bajtach. Tak, aby te zmiany są wykonywane w życie, należy ponownie uruchomić maszynę.  
+ Można zmienić ilość pamięci licznika wydajności dla kategorii WCF w rejestrze. Aby to zrobić, należy dodać nową wartość DWORD o nazwie `FileMappingSize` do trzech następujących lokalizacji i ustawić ją na żądaną wartość w bajtach. Uruchom ponownie maszynę, aby zmiany zostały wprowadzone.  
   
 - HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
 - HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
   
-- HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0 \ wydajność  
   
- Gdy dużą liczbę obiektów (na przykład ServiceHost) będą usuwane, ale oczekujące na zebranych elementów bezużytecznych `PrivateBytes` licznika wydajności będą rejestrować się wyjątkowo dużą liczbą. Aby rozwiązać ten problem, możesz dodać własne liczniki specyficzne dla aplikacji, lub użyj `performanceCounters` atrybutu, aby włączyć liczniki tylko poziomu usługi.  
+ Gdy duża liczba obiektów (na przykład ServiceHost) jest usuwana, ale oczekiwanie na ich odtworzenie jako elementy bezużyteczne `PrivateBytes` , licznik wydajności spowoduje zarejestrowanie nietypowo dużej liczby. Aby rozwiązać ten problem, można dodać własne liczniki specyficzne dla aplikacji lub użyć `performanceCounters` atrybutu w celu włączenia tylko liczników na poziomie usług.  
   
 ## <a name="types-of-performance-counters"></a>Typy liczników wydajności  
- Liczniki wydajności są ograniczone do trzech różnych poziomach: Usługa punktu końcowego i operacji.  
+ Liczniki wydajności są objęte zakresem trzech różnych poziomów: Usługa, punkt końcowy i operacja.  
   
- WMI umożliwia pobieranie nazwy wystąpienia licznika wydajności. Na przykład  
+ Za pomocą usługi WMI można pobrać nazwę wystąpienia licznika wydajności. Na przykład  
   
-- Nazwa wystąpienia licznika usługi można uzyskać za pomocą usługi WMI [usługi](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) właściwość "CounterInstanceName" instancji.  
+- Nazwę wystąpienia licznika usługi można uzyskać za pomocą właściwości "CounterInstanceName" wystąpienia [usługi](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) WMI.  
   
-- Nazwa wystąpienia licznika punktu końcowego można uzyskać za pomocą usługi WMI [punktu końcowego](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) właściwość "CounterInstanceName" instancji.  
+- Nazwę wystąpienia licznika punktu końcowego można uzyskać za pomocą właściwości "CounterInstanceName" wystąpienia [punktu końcowego](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) usługi WMI.  
   
-- Nazwa wystąpienia licznika operacji można uzyskać za pomocą usługi WMI [punktu końcowego](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) metodę "GetOperationCounterInstanceName" instancji.  
+- Nazwę wystąpienia licznika operacji można uzyskać za pomocą metody "GetOperationCounterInstanceName" wystąpienia [punktu końcowego](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) usługi WMI.  
   
- Aby uzyskać więcej informacji na temat usługi WMI, zobacz [przy użyciu Instrumentacji zarządzania Windows Diagnostics](../../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Aby uzyskać więcej informacji na temat usługi WMI, zobacz [używanie Instrumentacja zarządzania Windows do diagnostyki](../../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
 ### <a name="service-performance-counters"></a>Liczniki wydajności usługi  
- Liczniki wydajności usługi zmierzyć zachowanie usługi jako całość i może służyć do diagnozowania wydajności całą usługę. Można go znaleźć w `ServiceModelService 4.0.0.0` obiekt wydajności podczas wyświetlania przy użyciu Monitora wydajności. Wystąpienia są nazywane przy użyciu następującego wzorca:  
+ Liczniki wydajności usługi mierzą zachowanie usługi jako całość i mogą służyć do diagnozowania wydajności całej usługi. Można je znaleźć w `ServiceModelService 4.0.0.0` obiekcie wydajności podczas wyświetlania z monitorem wydajności. Wystąpienia są nazwane przy użyciu następującego wzorca:  
   
 ```  
 ServiceName@ServiceBaseAddress  
 ```  
   
- Licznik w zakresie usługi jest agregowana od licznika w kolekcji punktów końcowych.  
+ Licznik w zakresie usługi jest agregowany z licznika w kolekcji punktów końcowych.  
   
- Liczniki wydajności do tworzenia wystąpienia usług są zwiększane, gdy zostanie utworzony nowy obiekt InstanceContext. Należy pamiętać o tym, czy nowy obiekt InstanceContext został utworzony, nawet gdy — Aktywacja komunikat o błędzie (z istniejącą usługę) lub podczas nawiązywania połączenia z wystąpieniem z jednej sesji, zakończyć sesję i ponownego połączenia z innej sesji.  
+ Liczniki wydajności dla tworzenia wystąpień usług są zwiększane, gdy tworzony jest nowy obiekt InstanceContext. Należy pamiętać, że tworzony jest nowy element InstanceContext, nawet jeśli otrzymujesz komunikat Nieaktywowany (z istniejącą usługą) lub po nawiązaniu połączenia z wystąpieniem z jednej sesji, zakończyć sesję, a następnie ponownie nawiązać połączenie z innej sesji.  
   
-### <a name="endpoint-performance-counters"></a>Liczniki wydajności w punkcie końcowym  
- Liczniki wydajności w punkcie końcowym umożliwiają wyszukiwanie danych w czasie wykonywania odbicia, jak punkt końcowy jest akceptowanie komunikatów. Można go znaleźć w `ServiceModelEndpoint 4.0.0.0` obiekt wydajności podczas przeglądania, korzystanie z Monitora wydajności. Wystąpienia są nazywane przy użyciu następującego wzorca:  
+### <a name="endpoint-performance-counters"></a>Liczniki wydajności punktu końcowego  
+ Liczniki wydajności punktu końcowego umożliwiają przeglądanie danych odzwierciedlających, w jaki sposób punkt końcowy akceptuje komunikaty. Można je znaleźć w `ServiceModelEndpoint 4.0.0.0` obiekcie wydajności podczas przeglądania przy użyciu Monitora wydajności. Wystąpienia są nazwane przy użyciu następującego wzorca:  
   
 ```  
 (ServiceName).(ContractName)@(endpoint listener address)  
 ```  
   
- Dane są podobne do są zbierane dla poszczególnych działań, ale tylko jest agregowana dla punktu końcowego.  
+ Dane są podobne do tego, co jest zbierane dla poszczególnych operacji, ale są agregowane w całym punkcie końcowym.  
   
- Licznik w zakresie punktu końcowego są agregowane z liczników w to kolekcja operacji.  
+ Licznik w zakresie punktu końcowego jest agregowany z liczników w kolekcji operacji.  
   
 > [!NOTE]
->  Jeśli dwa punkty końcowe mają identyczne nazwy i adresy, są mapowane do tego samego wystąpienia licznika.  
+> Jeśli dwa punkty końcowe mają identyczne nazwy i adresy kontraktu, są mapowane na to samo wystąpienie licznika.  
   
 ### <a name="operation-performance-counters"></a>Liczniki wydajności operacji  
- Liczniki wydajności operacji znajdują się w obszarze `ServiceModelOperation 4.0.0.0` obiekt wydajności podczas wyświetlania przy użyciu Monitora wydajności. Każda operacja ma poszczególnych wystąpień. Oznacza to jeśli danego kontraktu operacje 10, 10 wystąpień licznika operacji skojarzonych z tej Umowy. Wystąpienia obiektu są nazywane przy użyciu następującego wzorca:  
+ Liczniki wydajności operacji są dostępne w `ServiceModelOperation 4.0.0.0` obiekcie wydajności podczas wyświetlania z monitorem wydajności. Każda operacja ma pojedyncze wystąpienie. Oznacza to, że jeśli dany kontrakt zawiera 10 operacji, do tego kontraktu są skojarzone 10 wystąpień liczników operacji. Wystąpienia obiektów są nazwane przy użyciu następującego wzorca:  
   
 ```  
 (ServiceName).(ContractName).(OperationName)@(first endpoint listener address)  
 ```  
   
- Ten licznik umożliwia pomiar sposobu używania wywołania i jak dobrze działa operacja.  
+ Ten licznik umożliwia pomiar sposobu użycia wywołania oraz sposobu wykonywania operacji.  
   
- Liczniki są widoczne w wielu zakresach, danych zebranych z wyższym zakresie są agregowane z danymi z niższe zakresy. Na przykład `Calls` w punkcie końcowym reprezentuje sumę wszystkich wywołań operacji w ramach punktu końcowego; `Calls` powinna być usługa reprezentuje sumę wszystkich wywołań do wszystkich punktów końcowych w ramach usługi.  
+ Gdy liczniki są widoczne w wielu zakresach, dane zbierane z wyższego zakresu są agregowane przy użyciu danych z niższych zakresów. Na przykład `Calls` punkt końcowy reprezentuje sumę wszystkich wywołań operacji w punkcie końcowym; `Calls` w ramach usługi reprezentuje sumę wszystkich wywołań wszystkich punktów końcowych w ramach usługi.  
   
 > [!NOTE]
->  Jeśli masz nazwy zduplikowanych operacji na kontrakt, tylko otrzymasz jednego wystąpienia liczników dla obu operacji.  
+> Jeśli na kontrakcie istnieją zduplikowane nazwy operacji, tylko jeden z nich jest odbierany dla obu operacji.  
   
-## <a name="programming-the-wcf-performance-counters"></a>Programowanie liczniki wydajności programu WCF  
- Kilka plików są instalowane w folderze instalacji zestawu SDK, tak aby programowy dostęp liczniki wydajności programu WCF. Te pliki są wymienione w następujący sposób.  
+## <a name="programming-the-wcf-performance-counters"></a>Programowanie liczników wydajności programu WCF  
+ Kilka plików jest zainstalowanych w folderze instalacyjnym zestawu SDK, dzięki czemu można programowo uzyskać dostęp do liczników wydajności programu WCF. Te pliki są wymienione w poniższej kolejności.  
   
 - _ServiceModelEndpointPerfCounters.vrg  
   
@@ -136,7 +136,7 @@ ServiceName@ServiceBaseAddress
   
 - _TransactionBridgePerfCounters.vrg  
   
- Aby uzyskać więcej informacji na temat sposobu programowego dostępu do liczników, zobacz [Architektura programowania licznika wydajności](https://go.microsoft.com/fwlink/?LinkId=95179).  
+ Aby uzyskać więcej informacji na temat programistycznego uzyskiwania dostępu do liczników, zobacz [Architektura programowania liczników wydajności](https://go.microsoft.com/fwlink/?LinkId=95179).  
   
 ## <a name="see-also"></a>Zobacz także
 

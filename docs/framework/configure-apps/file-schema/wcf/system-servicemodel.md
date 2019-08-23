@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: c176f7f470cc65bb135e5f92935102e09c7e8485
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fa6916437bb569029efe270ba8296703d89c539
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758447"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938917"
 ---
 # <a name="systemservicemodel"></a>\<system.serviceModel>
-Ta sekcja konfiguracji zawiera wszystkie elementy konfiguracyjne ServiceModel Windows Communication Foundation (WCF).  
+Ta sekcja konfiguracji zawiera wszystkie elementy konfiguracji programu Windows Communication Foundation (WCF).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -61,41 +61,41 @@ Ta sekcja konfiguracji zawiera wszystkie elementy konfiguracyjne ServiceModel Wi
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowania >](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)|Ta sekcja definiuje dwie kolekcje elementów podrzędnych o nazwie `endpointBehaviors` i `serviceBehaviors`.  Każdej kolekcji definiuje zachowanie elementy używane przez punkty końcowe i usługi, odpowiednio. Każdy element zachowanie jest określony przez jego unikatowy `name` atrybutu.|  
-|[\<powiązania >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Ta sekcja przetrzymuje kolekcję powiązań standardowych i niestandardowych. Każdy wpis jest określony przez jego unikatowy `name`. Usługi używają powiązania, łącząc je za pomocą `name`.|  
-|[\<Klient >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|Ta sekcja zawiera listę punktów końcowych, których klient używa do łączenia się z usługą.|  
-|[\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|Ta sekcja definiuje kontrakty COM włączone dla usługi WCF i COM interop.|  
-|[\<commonBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|W tej sekcji można zdefiniować tylko w pliku machine.config. Definiuje dwie kolekcje elementów podrzędnych o nazwie `endpointBehaviors` i `serviceBehaviors`.  Każdej kolekcji definiuje zachowanie elementy używane przez wszystkie punkty końcowe WCF i usługi na maszynie, odpowiednio.  Jeśli to zachowanie jest zdefiniowany w obu `<commonBehaviors>` i `<behaviors>` sekcje zachowanie w \<zachowania > sekcji otrzymuje preferencji.|  
-|[\<Diagnostyka >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|Ta sekcja zawiera ustawienia dla funkcji diagnostyki platformy WCF. Użytkownik mogą włączać i wyłączać śledzenia, liczniki wydajności i dostawcy WMI i można dodać niestandardowy komunikat filtrów.|  
-|[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|Ta sekcja zawiera Kolekcja rozszerzeń, które umożliwiają użytkownikowi utworzenie powiązań zdefiniowanych przez użytkownika, zachowania i inne aspekty rozszerzeń.|  
-|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Ta sekcja definiuje zestaw domyślnego mapowania protokołu pomiędzy schematami protokołu transportu (np. http, net.tcp, net.pipe, itp.) i powiązaniami WCF.|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Ta sekcja definiuje zestaw filtrów routingu, które określają typ obiektu programu Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> używanego podczas oceniania wiadomości przychodzących, jak również routingu definiujące miejsce docelowe punktów końcowych, aby wysyłać komunikaty do kiedy tabele Filtr dopasowuje wartość.|  
-|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Ta sekcja definiuje typ usługi, którą Środowisko hostingu środowiskowego dla danego transportu. Jeśli w tej sekcji jest pusta, używany jest domyślny typ.|  
-|[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|Sekcja zawiera kolekcję usług. Dla każdej usługi zdefiniowane w zestawie, ten element zawiera `service` element określający ustawienia usługi.|  
-|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Ta sekcja definiuje zbiór standardowych punktów końcowych, które są do ponownego użycia wstępnie skonfigurowanymi punktami końcowymi. Standardowy punkt końcowy będzie mieć jeden lub więcej adresów, powiązania i atrybuty kontraktu ustawiona na wartość stałą. Na przykład punkt końcowy odnajdywania kontrakt jest stała. Standardowe punkty końcowe umożliwia również rozszerzenie punkt końcowy usługi z nowymi właściwościami podobne do definiowania powiązań niestandardowych.|
-|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/wcf/tracking-of-wcf.md)|Ta sekcja definiuje ustawienia śledzenia dla usługi przepływu pracy.|
+|[\<> zachowań](behaviors.md)|Ta sekcja definiuje dwie kolekcje podrzędne o `endpointBehaviors` nazwach i `serviceBehaviors`.  Każda kolekcja definiuje elementy zachowań używane odpowiednio przez punkty końcowe i usługi. Każdy element zachowanie jest określony przez jego unikatowy `name` atrybutu.|  
+|[\<> powiązań](bindings.md)|Ta sekcja zawiera kolekcję powiązań standardowych i niestandardowych. Każdy wpis jest identyfikowany przez jego `name`unikatowy. Usługi używają powiązań przez łączenie ich przy użyciu `name`.|  
+|[\<> klienta](client.md)|Ta sekcja zawiera listę punktów końcowych używanych przez klienta do nawiązywania połączenia z usługą.|  
+|[\<comContracts>](comcontracts.md)|Ta sekcja zawiera definicje umów COM włączonych dla usług WCF i współdziałania z modelem COM.|  
+|[\<commonBehaviors >](commonbehaviors.md)|Tę sekcję można zdefiniować tylko w pliku Machine. config. Definiuje dwie kolekcje podrzędne o `endpointBehaviors` nazwach `serviceBehaviors`i.  Każda kolekcja definiuje elementy zachowań używane przez wszystkie punkty końcowe i usługi WCF odpowiednio na maszynie.  Jeśli zachowanie jest zdefiniowane w obu `<commonBehaviors>` `<behaviors>` sekcjach \<, zachowanie w sekcji zachowań > ma pierwszeństwo.|  
+|[\<> diagnostyki](diagnostics.md)|Ta sekcja zawiera ustawienia funkcji diagnostyki WCF. Użytkownik może włączyć/wyłączyć śledzenie, liczniki wydajności i dostawcę WMI, a także może dodawać niestandardowe filtry komunikatów.|  
+|[\<> rozszerzeń](extensions-section.md)|Ta sekcja zawiera kolekcję rozszerzeń, które umożliwiają użytkownikowi tworzenie powiązań zdefiniowanych przez użytkownika, zachowań i innych aspektów rozszerzeń.|  
+|[\<protocolMapping >](protocolmapping.md)|Ta sekcja definiuje zestaw domyślnego mapowania protokołów między schematami protokołu transportowego (np. http, net. TCP, net. pipe itp.) i powiązania WCF.|  
+|[\<> routingu](routing.md)|Ta sekcja definiuje zestaw filtrów routingu, które określają typ Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> , który ma być używany podczas oceniania wiadomości przychodzących, a także tabele routingu definiujące docelowe punkty końcowe do wysyłania komunikatów, gdy filtruje dopasowania.|  
+|[\<serviceHostingEnvironment>](servicehostingenvironment.md)|W tej sekcji zdefiniowano typ tworzenia wystąpień środowiska hostingu usługi dla określonego transportu. Jeśli ta sekcja jest pusta, używany jest typ domyślny.|  
+|[\<> usług](services.md)|Sekcja zawiera kolekcję usług. Dla każdej usługi zdefiniowanej w zestawie ten element zawiera `service` element określający ustawienia dla usługi.|  
+|[\<standardEndpoints >](standardendpoints.md)|Ta sekcja definiuje zbiór standardowych punktów końcowych, które są wstępnie skonfigurowanymi punktami końcowymi wielokrotnego użytku. Standardowy punkt końcowy będzie miał co najmniej jeden atrybut Address, Binding i Contract ustawiony na wartość stałą. Na przykład w punkcie końcowym odnajdywania kontrakt jest ustalony. Możesz również użyć standardowych punktów końcowych, aby zwiększyć punkt końcowy usługi z nowymi właściwościami podobnymi do definiowania powiązań niestandardowych.|
+|[\<Śledzenie >](tracking-of-wcf.md)|W tej sekcji zdefiniowano ustawienia śledzenia dla usługi przepływu pracy.|
 
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|\<Konfiguracja >|Element główny dla wszystkich elementów konfiguracji w PLiku konfiguracji PLatformy .NET.|  
+|\<> konfiguracji|Element główny dla wszystkich elementów konfiguracji w PLiku konfiguracji PLatformy .NET.|  
   
 ## <a name="remarks"></a>Uwagi  
- Usługi WCF nie powoduje dodania elementów konfiguracji w sekcjach dotyczących innych produktów.  
+ Funkcja WCF nie dodaje elementów do sekcji konfiguracji innych produktów.  
   
- Usługi WCF są zdefiniowane w `services` sekcję pliku konfiguracji. Zestaw może zawierać dowolną liczbę usług. Każda usługa ma swoje własne `service` sekcji konfiguracji. Sekcji i jego zawartości definiowanie kontraktu usługi, zachowanie i punktów końcowych określonej usługi.  
+ Usługi WCF są zdefiniowane w `services` sekcji pliku konfiguracji. Zestaw może zawierać dowolną liczbę usług. Każda usługa ma swoją własną `service` sekcję konfiguracyjną. Sekcja i jej zawartość definiują kontrakt usługi, zachowanie i punkty końcowe określonej usługi.  
   
- Tylko usługi `name` atrybut jest wymagany.  Domyślnie, nazwa usługi w tym artykule opisano podstawowy typ środowiska CLR, używany do implementowania usługi; jednak Właściwość ConfigurationName może ulec zmianie po <xref:System.ServiceModel.ServiceContractAttribute> Aby przesłonić wymaganie typu CLR.  
+ Wymagany jest tylko `name` atrybut usługi.  Domyślnie nazwa usługi opisuje źródłowy typ CLR używany do implementowania usługi. można jednak zmienić właściwość ConfigurationName w <xref:System.ServiceModel.ServiceContractAttribute> celu zastąpienia wymagania dotyczącego typu CLR.  
   
- `behaviorConfiguration` Atrybut jest opcjonalny. Identyfikuje zachowanie usługi, używanych przez usługę. Zachowanie określone przez atrybut ten należy połączyć zachowanie usługi zdefiniowane w zakresie tego samego pliku konfiguracji (tj. tego samego pliku lub pliku nadrzędnego).  
+ `behaviorConfiguration` Atrybut jest opcjonalny. Identyfikuje zachowanie usługi używane przez usługę. Zachowanie określone przez ten atrybut musi łączyć się z zachowaniem usługi zdefiniowanym w zakresie tego samego pliku konfiguracji (tj. tym samym lub plikiem nadrzędnym).  
   
- Każda usługa udostępnia jedną lub więcej punktów końcowych zdefiniowanych w `endpoint` elementu. Każdy punkt końcowy ma swój własny adres i powiązanie. Wszystkie powiązania używane w pliku konfiguracyjnym musi być zdefiniowany w zakresie pliku.  
+ Każda usługa ujawnia jeden lub więcej punktów końcowych zdefiniowanych `endpoint` w elemencie. Każdy punkt końcowy ma własny adres i powiązanie. Wszystkie powiązania używane w pliku konfiguracji muszą być zdefiniowane w zakresie pliku.  
   
- Powiązania są połączone z punktów końcowych za pomocą kombinacji atrybutów `name` i `bindingConfiguration`. `binding` Atrybut definiuje, w której sekcji zdefiniowano powiązania. `bindingConfiguration` Atrybut definiuje, które skonfigurowanego powiązania w ramach sekcji powiązania jest używany. Sekcja powiązania można zdefiniować kilka skonfigurowanego powiązania.  
+ Powiązania są połączone z punktami końcowymi przez kombinację `name` atrybutów `bindingConfiguration`i. `binding` Atrybut określa, w którym sekcji jest zdefiniowane powiązanie. `bindingConfiguration` Atrybut definiuje skonfigurowane powiązanie w sekcji powiązania. Sekcja powiązania może definiować kilka skonfigurowanych powiązań.  
   
 ## <a name="example"></a>Przykład  
- To jest przykładowy plik konfiguracji usługi WCF.  
+ Jest to przykład pliku konfiguracji WCF.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>

@@ -1,5 +1,5 @@
 ---
-title: <remove> Element <listeners> dla <trace>
+title: <remove>Element dla <listeners> elementu<trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: adf00394bc0bfe808836e74214003cd2078204e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c5c9efb8a22d26ea5d4467f9628af5935d6dbad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673683"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920474"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<Usuń >, Element dla \<odbiorników > dla \<śledzenia >
-Usuwa odbiornik z **odbiorników** kolekcji.  
+# <a name="remove-element-for-listeners-for-trace"></a>\<Usuń element > dla \<odbiorników \<> śledzenia >
+Usuwa odbiornik z kolekcji **odbiorników** .  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.diagnostics>  
-\<trace>  
-\<listeners>  
+\<> śledzenia  
+\<> odbiorników  
 \<remove>  
   
 ## <a name="syntax"></a>Składnia  
@@ -36,7 +36,7 @@ Usuwa odbiornik z **odbiorników** kolekcji.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**Nazwa**|Atrybut wymagany.<br /><br /> Nazwa odbiornika do usunięcia z **odbiorników** kolekcji.|  
+|**name**|Atrybut wymagany.<br /><br /> Nazwa odbiornika, który ma zostać usunięty z kolekcji **odbiorników** .|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -46,17 +46,17 @@ Usuwa odbiornik z **odbiorników** kolekcji.
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`listeners`|Określa odbiornik, który zbiera, magazynów i przekazuje komunikaty. Odbiorniki bezpośrednie dane wyjściowe śledzenia do odpowiedniego obiektu docelowego.|  
-|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.|  
-|`trace`|Konfiguruje usługę śledzenia programu ASP.NET.|  
+|`listeners`|Określa odbiornik, który zbiera, przechowuje i kieruje komunikaty. Odbiorniki kierują dane wyjściowe śledzenia do odpowiedniego obiektu docelowego.|  
+|`system.diagnostics`|Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.|  
+|`trace`|Konfiguruje usługę śledzenia ASP.NET.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Usuwanie <xref:System.Diagnostics.DefaultTraceListener> z `Listeners` kolekcji zmienia zachowanie <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, i <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> metody. Wywoływanie `Assert` lub `Fail` metoda zwykle nie powoduje wyświetlanie okna komunikatu, ale nie zostanie wyświetlone okno komunikatu, jeśli <xref:System.Diagnostics.DefaultTraceListener> nie znajduje się w `Listeners` kolekcji.  
+> <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>Usunięcie <xref:System.Diagnostics.DefaultTraceListener> <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>z kolekcji powoduje zmianę zachowania metod,, i<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> . `Listeners` Wywołanie metody `Fail` <xref:System.Diagnostics.DefaultTraceListener> lub zwykle powoduje wyświetlenie okna komunikatu, ale okno komunikatu nie jest wyświetlane, jeśli nie znajduje się w `Listeners` kolekcji. `Assert`  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak usunąć odbiornik śledzenia domyślnego z śledzenia **odbiorników** kolekcji.  
+ Poniższy przykład pokazuje, jak usunąć domyślny odbiornik śledzenia z kolekcji detektorów śledzenia .  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ Usuwa odbiornik z **odbiorników** kolekcji.
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Schemat ustawień śledzenia i debugowania](index.md)

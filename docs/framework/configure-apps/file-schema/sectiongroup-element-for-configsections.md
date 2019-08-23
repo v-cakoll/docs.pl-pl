@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 750708483f9680745eef4531d86fa7ecaa329f51
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4e28e8ccea1090e6a5704b541e09dc11681278ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301194"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920654"
 ---
-# <a name="sectiongroup-element-for-configsections"></a>\<sectionGroup >, element dla \<configSections >
+# <a name="sectiongroup-element-for-configsections"></a>\<Element > sekcji dla \<configSections >
 
-Definiuje obszar nazw dla sekcji konfiguracji.
+Definiuje przestrzeń nazw dla sekcji konfiguracyjnych.
 
-[ **\<Konfiguracja >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+[ **\<> konfiguracji**](configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup>**
 
 ## <a name="syntax"></a>Składnia
@@ -36,27 +36,27 @@ Definiuje obszar nazw dla sekcji konfiguracji.
 
 |           | Opis |
 | --------- | ----------- |
-| **name**  | Atrybut wymagany.<br><br>Określa nazwę grupy sekcji, który jest definiowany. |
+| **name**  | Atrybut wymagany.<br><br>Określa nazwę definiowanej grupy sekcji. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Zawiera deklaracje sekcji i przestrzeni nazw konfiguracji. |
+| [configSections, element >  **\<** ](configsections-element-for-configuration.md) | Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<sekcja >** ](~/docs/framework/configure-apps/file-schema/section-element.md) | Zawiera deklarację sekcji konfiguracji. |
+| [ **\<sekcja >** ](section-element.md) | Zawiera deklarację sekcji konfiguracyjnej. |
 
 ## <a name="remarks"></a>Uwagi
 
-Deklarowanie grupy sekcji tworzy tag kontenera dla sekcji konfiguracji i gwarantuje, że nie istnieją żadne konflikty nazewnictwa z sekcji konfiguracji zdefiniowane przez kogoś innego. Można zagnieżdżać  **\<sectionGroup >** elementów wewnątrz siebie nawzajem.
+Deklarowanie grupy sekcji tworzy tag kontenera dla sekcji konfiguracyjnych i zapewnia, że nie występują konflikty nazw z sekcjami konfiguracji zdefiniowanymi przez kogoś innego. Można zagnieżdżać  **\<elementy >** w obrębie siebie.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób deklarowania grupy sekcji i zadeklarować sekcje w obrębie grupy sekcji:
+Poniższy przykład pokazuje, jak zadeklarować grupę sekcji i zadeklarować sekcje w grupie sekcji:
 
 ```xml
 <configuration>
@@ -76,8 +76,8 @@ Poniższy przykład pokazuje sposób deklarowania grupy sekcji i zadeklarować s
 
 ## <a name="configuration-file"></a>Plik konfiguracji
 
-Ten element może być użyty w pliku konfiguracyjnym aplikacji, plik konfiguracji komputera (*Machine.config*), a *Web.config* pliki, które nie są na poziomie katalogu aplikacji.
+Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schemat pliku konfiguracji dla .NET Framework](index.md)

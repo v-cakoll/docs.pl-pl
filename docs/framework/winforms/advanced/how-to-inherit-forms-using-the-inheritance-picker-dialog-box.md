@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 9382f1bf890fb5a886cf547d9b1e9b3031c12eb6
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 6fdd1e72e4256db30d9fb6a3b560c3d538435c79
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039989"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931880"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker"></a>Instrukcje: Dziedzicz formularze przy użyciu selektora dziedziczenia
 
@@ -57,7 +57,7 @@ Najprostszym sposobem na dziedziczenie formularza lub innego obiektu jest użyci
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Inherits, instrukcja](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
-- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [Inherits, instrukcja](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [using](../../../csharp/language-reference/keywords/using.md)
 - [Efekty modyfikowania wyglądu formularza podstawowego](effects-of-modifying-base-form-appearance.md)
 - [Formularze Windows Forms — dziedziczenie wizualizacji](windows-forms-visual-inheritance.md)

@@ -1,20 +1,20 @@
 ---
-title: -win32manifest (Visual Basic)
+title: -WIN32MANIFEST (Visual Basic)
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /win32manifest compiler option [Visual Basic]
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: 15fe62457ed11ffcd08a1db3aa8be57080f22869
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6eb9d50a3ecd80acb0349f1ba315d9cf8ccc6dc2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774780"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937237"
 ---
-# <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
-Identyfikuje użytkownika aplikacji plik manifestu Win32 osadzanego do projektu przenośnych plików wykonywalnych (PE) pliku.  
+# <a name="-win32manifest-visual-basic"></a>-WIN32MANIFEST (Visual Basic)
+Identyfikuje zdefiniowany przez użytkownika plik manifestu aplikacji Win32, który ma zostać osadzony w przenośnym pliku wykonywalnym (PE) projektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,31 +26,31 @@ Identyfikuje użytkownika aplikacji plik manifestu Win32 osadzanego do projektu 
   
 |Termin|Definicja|  
 |---|---|  
-|`fileName`|Ścieżka niestandardowego pliku manifestu.|  
+|`fileName`|Ścieżka pliku manifestu niestandardowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie kompilator języka Visual Basic osadza manifest aplikacji, która określa wymagany poziom wykonywania programu asInvoker. Tworzy manifest w tym samym folderze, w którym plik wykonywalny został opracowany, zwykle bin\Debug lub bin\Release folderu, gdy używasz programu Visual Studio. Jeśli chcesz podać niestandardowy manifest, na przykład aby określić wymagany poziom wykonywania highestAvailable lub requireAdministrator, należy użyć tę opcję, aby określić nazwę pliku.  
+ Domyślnie kompilator Visual Basic osadza manifest aplikacji, który określa żądany poziom wykonywania jako źródło. Tworzy manifest w tym samym folderze, w którym plik wykonywalny jest kompilowany, zazwyczaj folder bin\Debug lub bin\Release w przypadku korzystania z programu Visual Studio. Jeśli chcesz podać niestandardowy manifest, na przykład aby określić żądany poziom wykonywania najwyższe dostępne lub wymaga administratora, Użyj tej opcji, aby określić nazwę pliku.  
   
 > [!NOTE]
->  Ta opcja i [-win32resource —](../../../visual-basic/reference/command-line-compiler/win32resource.md) opcji wzajemnie się wykluczają. Jeśli spróbujesz użyć obu opcji w tym samym wierszu polecenia, zostanie wyświetlony błąd kompilacji.  
+> Ta opcja i opcja [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) wykluczają się wzajemnie. Jeśli spróbujesz użyć obu opcji w tym samym wierszu polecenia, zostanie wyświetlony błąd kompilacji.  
   
- Aplikacja, która ma żadna aplikacja manifestu, który określa, że będzie wymagany poziom wykonywania pliku/rejestru wirtualizacji w ramach funkcji kontroli konta użytkownika w Windows Vista. Aby uzyskać więcej informacji na temat wirtualizacji, zobacz [wdrażania ClickOnce w systemie Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).  
+ Aplikacja, która nie ma manifestu aplikacji, która określa żądany poziom wykonania, będzie podlegała wirtualizacji plików/rejestru w ramach funkcji kontroli konta użytkownika w systemie Windows Vista. Aby uzyskać więcej informacji na temat wirtualizacji, zobacz [wdrażanie ClickOnce w systemie Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).  
   
- Twoja aplikacja będzie wirtualizacji, jeśli jest spełniony jeden z następujących warunków:  
+ Aplikacja będzie podlegać wirtualizacji, jeśli spełniony jest jeden z następujących warunków:  
   
-1. Możesz użyć `-nowin32manifest` opcji nie są oferowane manifest na późniejszym etapie kompilacji lub jako część pliku Windows zasobów (.res) przy użyciu `-win32resource` opcji.  
+1. Użyj `-nowin32manifest` opcji i nie udostępniaj manifestu w późniejszym kroku kompilacji lub jako część pliku zasobów systemu Windows (. res) przy `-win32resource` użyciu opcji.  
   
-2. Możesz podać niestandardowy manifest, który nie określa wymagany poziom wykonywania.  
+2. Należy podać niestandardowy manifest, który nie określa żądanego poziomu wykonania.  
   
- Visual Studio tworzy domyślny plik .manifest i zapisuje go w katalogach debug i release, wraz z pliku wykonywalnego. Możesz wyświetlić lub edytować plik app.manifest domyślny, klikając **ustawienia funkcji Kontrola konta użytkownika widoku** na **aplikacji** kartę w Projektancie projektu. Aby uzyskać więcej informacji, zobacz [strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Program Visual Studio tworzy domyślny plik. manifest i zapisuje go w katalogach debugowania i wydań obok pliku wykonywalnego. Możesz wyświetlić lub edytować domyślny plik aplikacji. manifest, klikając pozycję **Wyświetl ustawienia kontroli konta użytkownika** na karcie **aplikacja** w projektancie projektu. Aby uzyskać więcej informacji, zobacz [Strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
- Możesz podać w manifeście aplikacji jako niestandardowy krok po kompilacji lub jako część pliku zasobów Win32 przy użyciu `-nowin32manifest` opcji. Jeśli chcesz, aby aplikacja ma być wirtualizacji plików i rejestru w systemie Windows Vista, należy użyć tej samej opcji. Uniemożliwi to kompilatora od utworzenia i osadzanie manifestu domyślnej w pliku PE.  
+ Można dostarczyć manifest aplikacji jako niestandardowy krok po kompilacji lub jako część pliku zasobów Win32 przy użyciu `-nowin32manifest` opcji. Użyj tej samej opcji, jeśli chcesz, aby aplikacja podlegała wirtualizacji plików lub rejestru w systemie Windows Vista. Uniemożliwi to kompilatorowi utworzenie i osadzenie domyślnego manifestu w pliku PE.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia domyślny manifest, kompilator Visual Basic wstawia do PE.  
+ Poniższy przykład pokazuje domyślny manifest, który kompilator Visual Basic wstawia do PE.  
   
 > [!NOTE]
->  Kompilator Wstawia nazwę standardowej aplikacji MyApplication.app do manifestu XML. To obejście, aby umożliwić aplikacji do uruchamiania w systemie Windows Server 2003 z dodatkiem Service Pack 3.  
+> Kompilator wstawia standardową nazwę aplikacji aplikacja. app do manifestu XML. Jest to obejście, aby umożliwić uruchamianie aplikacji w systemie Windows Server 2003 z dodatkiem Service Pack 3.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -68,5 +68,5 @@ Identyfikuje użytkownika aplikacji plik manifestu Win32 osadzanego do projektu 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-nowin32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)

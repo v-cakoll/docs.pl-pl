@@ -2,22 +2,22 @@
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 43415d9eac5e61f42006aecb3248dec9811eb3e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12369f1053638583a3864fab396869d0e7045732
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758135"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918678"
 ---
-# <a name="transactedbatching"></a>\<transactedBatching>
+# <a name="transactedbatching"></a>\<transactedBatching >
 
-Określa, czy transakcja tworzenia plików wsadowych jest obsługiwana dla operacji odbioru.
+Określa, czy przetwarzanie wsadowe transakcji jest obsługiwane dla operacji odbioru.
 
 \<system.ServiceModel>\
 \<zachowania > \
 \<endpointBehaviors>\
 \<zachowanie > \
-\<transactedBatching>
+\<transactedBatching >
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,7 +33,7 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|`maxBatchSize`|Liczba całkowita określająca maksymalną liczbę operacji pobrania, które można zebrać razem w jednej transakcji. Wartość domyślna to 0.|
+|`maxBatchSize`|Liczba całkowita określająca maksymalną liczbę operacji odbioru, które mogą być przetwarzane wsadowo w jednej transakcji. Wartość domyślna to 0.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -43,15 +43,15 @@ Brak.
 
 |Element|Opis|
 |-------------|-----------------|
-|[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie punktu końcowego.|
+|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zachowanie punktu końcowego.|
 
 ## <a name="remarks"></a>Uwagi
 
-Transportu, który jest skonfigurowany z transakcją dzielenia na partie prób partii kilka otrzymują operacji w jednej transakcji. W ten sposób stosunkowo wysokie koszty tworzenia transakcji i zatwierdzania w każdej odbierania jest unikać operacji.
+Transport, który jest skonfigurowany z przetwarzaniem wsadowym transakcji, próbuje wsadowo wykonać kilka operacji odbioru w jednej transakcji. Dzięki temu można uniknąć stosunkowo wysokiego kosztu tworzenia transakcji i zatwierdzania jej w każdej operacji odbierania.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak dodanie transakcyjne zachowania łączenia we wsady do usługi w pliku konfiguracji.
+Poniższy przykład pokazuje, jak dodać działanie transakcyjnego przetwarzania wsadowego do usługi w pliku konfiguracji.
 
 ```xml
 <system.serviceModel>

@@ -7,143 +7,143 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 0c19aa7200cfc938a1de7b788a58ba18f76634d9
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 671e650a494d314ec1da1957eaae91e2d1811213
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881477"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952838"
 ---
 # <a name="using-sessions"></a>Korzystanie z sesji
-W aplikacjach Windows Communication Foundation (WCF) *sesji* koreluje grupę wiadomości do konwersacji. Sesje WCF różnią się od obiektu sesji dostępna w aplikacjach ASP.NET, obsługują różne zachowania i są kontrolowane na różne sposoby. W tym temacie opisano funkcje umożliwiające w sesji programu WCF aplikacji i sposobu ich używania.  
+W aplikacjach Windows Communication Foundation (WCF) *sesja* korelacji grupy komunikatów w konwersacji. Sesje WCF są inne niż w przypadku obiektów sesji dostępnych w aplikacjach ASP.NET, obsługują różne zachowania i są kontrolowane na różne sposoby. W tym temacie opisano funkcje, które są włączane przez sesje w aplikacjach WCF i jak z nich korzystać.  
   
-## <a name="sessions-in-windows-communication-foundation-applications"></a>Sesje w aplikacjach programu Windows Communication Foundation  
- Gdy kontrakt usługi określa, że wymaga sesji, kontrakt ten jest określenie, że wszystkie wywołania (czyli bazowego wymianę komunikatów, które obsługują wywołania) musi być częścią tej samej konwersacji. Jeśli kontrakt Określa, że zezwala na sesji, ale nie wymaga jednego, klienci mogą łączyć się i albo ustanowienia sesji lub nie ustanowienia sesji. Jeśli sesja zakończy się, a jeśli tak, to a wiadomość jest wysyłana za pośrednictwem tego samego kanału, który jest zwracany wyjątek.  
+## <a name="sessions-in-windows-communication-foundation-applications"></a>Sesje w Windows Communication Foundation aplikacji  
+ Gdy kontrakt usługi określa, że wymaga sesji, ten kontrakt Określa, że wszystkie wywołania (czyli podstawowe wymiany komunikatów, które obsługują wywołania) muszą być częścią tej samej konwersacji. Jeśli kontrakt Określa, że zezwala na sesje, ale go nie wymaga, klienci mogą nawiązywać połączenia i ustanawiać sesję lub nie ustanawiają sesji. Jeśli sesja zostanie zakończona i zostanie wysłany komunikat za pośrednictwem tego samego kanału, zgłaszany jest wyjątek.  
   
- Sesje WCF oferują następujące funkcje koncepcyjny główne:  
+ Sesje WCF mają następujące główne funkcje koncepcyjne:  
   
-- Jawnie są inicjowane i został przerwany przez aplikacji wywołującej (klient WCF).  
+- Są one jawnie inicjowane i kończone przez aplikację wywołującą (klienta WCF).  
   
-- Wiadomości dostarczone w trakcie sesji są przetwarzane w kolejności, w której zostały odebrane.  
+- Komunikaty dostarczane podczas sesji są przetwarzane w kolejności, w jakiej zostały odebrane.  
   
-- Sesje skorelowania grupę wiadomości w konwersacji. Możliwe są różne rodzaje korelacji. Na przykład jeden kanał oparte na sesji mogą mieć związek komunikaty na podstawie sieci udostępnionego połączenia podczas inną drogą oparte na sesji mogą mieć związek wiadomości według znaczników udostępnionych w treści komunikatu. Funkcje, które mogą być uzyskane z sesji zależą od rodzaju korelacji.  
+- Sesje są skorelowane z grupą komunikatów w konwersacji. Możliwe są różne typy korelacji. Na przykład jeden kanał oparty na sesji może skorelować komunikaty na podstawie udostępnionego połączenia sieciowego, podczas gdy inny kanał oparty na sesji może skorelować komunikaty na podstawie tagu udostępnionego w treści komunikatu. Funkcje, które mogą pochodzić z sesji, zależą od charakteru korelacji.  
   
-- Brak nie magazynu ogólnych danych skojarzonych z sesją usługi WCF.  
+- Brak ogólnego magazynu danych skojarzonego z sesją WCF.  
   
- Jeśli znasz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> funkcje i klasy w aplikacjach ASP.NET udostępnia, można zauważyć następujące różnice między tego rodzaju sesji i sesje WCF:  
+ W przypadku znajomości <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> klasy w aplikacjach ASP.NET i udostępnianej przez nią funkcji, można zauważyć następujące różnice między tym rodzajem sesji a sesjami programu WCF:  
   
-- ASP.NET sesje są zawsze inicjowanych przez serwer.  
+- Sesje ASP.NET są zawsze inicjowane przez serwer.  
   
 - Sesje ASP.NET są niejawnie nieuporządkowane.  
   
-- Sesji programu ASP.NET udostępniają mechanizm magazynu danych ogólnych dla żądań.  
+- Sesje ASP.NET zapewniają ogólny mechanizm magazynowania danych między żądaniami.  
   
  W tym temacie opisano:  
   
-- Wykonanie domyślnie podczas korzystania z powiązań oparte na sesji w warstwy modelu usług.  
+- Domyślne zachowanie wykonywania w przypadku korzystania z powiązań opartych na sesji w warstwie modelu usług.  
   
-- Typy funkcji zapewniających powiązaniami WCF opartego na sesji, dostarczane przez system.  
+- Typy funkcji, które zapewnia oparty na sesji WCF, powiązania dostarczone przez system.  
   
-- Jak utworzyć kontraktu, który deklaruje wymóg sesji.  
+- Jak utworzyć kontrakt, który deklaruje wymaganie sesji.  
   
-- Jak zrozumieć i kontrolować utworzenia i zakończenia sesji oraz relacje sesji do wystąpienia usługi.  
+- Jak zrozumieć i kontrolować tworzenie i zakończenie sesji oraz relacje między sesją a wystąpieniem usługi.  
   
-## <a name="default-execution-behavior-using-sessions"></a>Domyślne wykonywania zachowanie przy użyciu sesji  
- Nosi nazwę powiązania, które podejmuje próbę zainicjowania sesji *oparte na sesji* powiązania. Określ kontraktów usług, że wymagają, zezwolić lub odmówić powiązania oparte na sesji, ustawiając <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> właściwość interfejsu kontraktu usługi (lub klasy) do jednego z <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> wartości wyliczenia. Domyślnie wartość tej właściwości jest <xref:System.ServiceModel.SessionMode.Allowed>, oznacza to, że jeśli klient używa powiązanie oparte na sesji z implementacji usługi WCF, usługa ustanawia i używa podanej sesji.  
+## <a name="default-execution-behavior-using-sessions"></a>Domyślne zachowanie wykonywania przy użyciu sesji  
+ Powiązanie, które próbuje zainicjować sesję, nazywa się powiązaniem *opartym na sesji* . Kontrakty usługi określają, że wymagają, zezwalają lub odrzucają powiązania oparte na sesji przez <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> ustawienie właściwości w interfejsie lub klasie kontraktu usługi na jedną <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> z wartości wyliczenia. Domyślnie wartość tej właściwości to <xref:System.ServiceModel.SessionMode.Allowed>, co oznacza, że jeśli klient używa powiązań opartych na sesji z implementacją usługi WCF, usługa ustanawia i używa udostępnionej sesji.  
   
- Gdy usługa WCF akceptuje sesji klienta, są domyślnie włączone następujące funkcje:  
+ Gdy usługa WCF akceptuje sesję klienta, domyślnie włączone są następujące funkcje:  
   
-1. Wszystkie wywołania między obiektem platformy WCF klienta są obsługiwane przez tego samego wystąpienia usługi.  
+1. Wszystkie wywołania między obiektem klienta WCF są obsługiwane przez to samo wystąpienie usługi.  
   
 2. Różne powiązania oparte na sesji zapewniają dodatkowe funkcje.  
   
-## <a name="system-provided-session-types"></a>Sesja dostarczane przez system typów  
- Powiązanie oparte na sesji obsługuje domyślne skojarzenie wystąpienia usługi w określonej sesji. Jednak różnych powiązania oparte na sesji obsługują różne funkcje oprócz włączenia oparte na sesji kontroli wystąpień opisany wcześniej.  
+## <a name="system-provided-session-types"></a>Typy sesji dostarczone przez system  
+ Powiązanie oparte na sesji obsługuje domyślne skojarzenie wystąpienia usługi z określoną sesją. Jednak różne powiązania oparte na sesji obsługują różne funkcje oprócz włączania opisanej wcześniej kontrolki dotyczącej wystąpienia opartego na sesji.  
   
- Usługi WCF zawiera następujące typy zachowanie aplikacji opartych na sesji:  
+ Funkcja WCF udostępnia następujące typy zachowań aplikacji opartych na sesji:  
   
-- <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> Obsługuje oparty na zabezpieczeniach sesje, w których obu końcach komunikacji uzgodnionych określonej bezpiecznej konwersacji. Aby uzyskać więcej informacji, zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md). Na przykład <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> powiązania, który zawiera obsługę zarówno dla sesji bezpieczeństwa i sesje niezawodne, domyślnie używa tylko bezpiecznej sesji, który szyfruje i podpisuje cyfrowo wiadomości.  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> Obsługuje sesje oparte na zabezpieczeniach, w których oba punkty końcowe komunikacji zgadzają się z określoną bezpieczną konwersacją. Aby uzyskać więcej informacji, zobacz [Zabezpieczanie usług](../../../docs/framework/wcf/securing-services.md). Na przykład <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> powiązanie, które zawiera obsługę zarówno dla sesji zabezpieczeń, jak i sesji niezawodnych, domyślnie używa tylko bezpiecznej sesji, która szyfruje i cyfrowo podpisuje wiadomości.  
   
-- <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> Powiązanie obsługuje opartego na protokole IP sesji, aby upewnić się, że wszystkie komunikaty są powiązane przez połączenie na poziomie gniazd.  
+- <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> Powiązanie obsługuje sesje oparte na protokole TCP/IP, aby upewnić się, że wszystkie komunikaty są skorelowane przez połączenie na poziomie gniazda.  
   
-- <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> Element, który implementuje specyfikacji WS-ReliableMessaging, zapewnia obsługę dotyczące sesji niezawodnych, w których można skonfigurować wiadomości, aby być dostarczane w kolejności i dokładnie raz, zapewniając komunikaty są odbierane, nawet wtedy, gdy wiadomości przesyłane w wielu węzłach podczas rozmowy. Aby uzyskać więcej informacji, zobacz [sesje niezawodnej](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+- <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> Element, który implementuje specyfikację WS-ReliableMessaging, zapewnia obsługę niezawodnych sesji w celu skonfigurowania ich do dostarczania w kolejności i dokładnie raz, co zapewnia otrzymywanie komunikatów nawet w przypadku przesyłania komunikatów między wieloma węzłami w trakcie konwersacji. Aby uzyskać więcej informacji, zobacz [niezawodne sesje](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
-- <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> Powiązanie obsługuje sesje datagram usługi MSMQ. Aby uzyskać więcej informacji, zobacz [kolejki programu WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+- <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> Powiązanie zawiera sesje datagramu usługi MSMQ. Aby uzyskać więcej informacji, zobacz [kolejki w programie WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
- Ustawienie <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> właściwość nie określa typ sesji wymaga umowy, tylko jeden wymagane przez dział it.  
+ <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> Ustawienie właściwości nie określa typu sesji wymaganej przez umowę.  
   
-## <a name="creating-a-contract-that-requires-a-session"></a>Tworzenie kontraktu, który wymaga sesji  
- Tworzenie kontraktu, który wymaga sesję stwierdza, że grupy działań, które deklaruje kontraktu usługi musi wszystkie można wykonać w obrębie tej samej sesji i że wiadomości musi być dostarczane w kolejności. Do potwierdzenia poziom obsługi sesji, która wymaga kontraktu usługi, należy ustawić <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> właściwości na interfejsu kontraktu usługi lub klasy wartości <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> wyliczeniu, aby określić, czy kontrakt:  
+## <a name="creating-a-contract-that-requires-a-session"></a>Tworzenie kontraktu wymagającego sesji  
+ Utworzenie kontraktu wymagającego podania stanu sesji, że Grupa operacji deklarujących kontrakt usługi musi być wykonywana w ramach tej samej sesji, a komunikaty muszą zostać dostarczone w pożądanej kolejności. Aby zapewnić obsługę sesji wymaganej przez kontrakt usługi, ustaw <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> właściwość w interfejsie lub klasie kontraktu usługi na wartość <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> wyliczenia, aby określić, czy kontrakt:  
   
 - Wymaga sesji.  
   
-- Umożliwia klienta w celu ustanowienia sesji.  
+- Zezwala klientowi na ustanawianie sesji.  
   
 - Zabrania sesji.  
   
- Ustawienie <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> właściwości nie, jednak określić typ oparte na sesji zachowania kontrakt wymaga. Informuje WCF, aby upewnić się, w czasie wykonywania, skonfigurowane powiązanie (który tworzy kanał komunikacyjny) usługa, nie jest ani można ustanowić sesji podczas wdrażania usługi. Ponownie powiązanie może spełnić tego wymogu przy użyciu dowolnego typu na podstawie sesji zachowanie go wybierze — zabezpieczeń, transport, niezawodne lub kombinację. Dokładne zachowanie zależy <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> wybranej wartości. Jeśli skonfigurowanego powiązania usługi nie jest zgodny z wartością <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>, zgłaszany jest wyjątek. Powiązania i kanałów mogą tworzyć, że sesji pomocy technicznej są określane jako oparte na sesji.  
+ <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> Ustawienie właściwości nie określa jednak typu zachowania, którego wymaga kontrakt. Powoduje to, że program WCF sprawdza w czasie wykonywania, że skonfigurowane powiązanie (które tworzy kanał komunikacyjny) dla usługi, nie lub może ustanowić sesję podczas implementowania usługi. Po ponownym rozwiązaniu można spełnić to wymaganie przy użyciu dowolnego typu zachowań opartych na sesji, które wybiera — zabezpieczenia, transport, niezawodne lub kilka kombinacji. Dokładne zachowanie zależy <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> od wybranej wartości. Jeśli skonfigurowane powiązanie usługi nie jest zgodne z wartością <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>, zostanie zgłoszony wyjątek. Powiązania i kanały tworzone przez siebie do sesji obsługi są określane jako oparte na sesji.  
   
- Następujące kontrakt usługi określa, że wszystkie operacje w `ICalculatorSession` muszą być wymieniane w ramach sesji. Brak operacji zwraca wartość do obiektu wywołującego, z wyjątkiem `Equals` metody. Jednak `Equals` metoda nie przyjmuje żadnych parametrów i dlatego może zwracać tylko wartość niezerową w ramach sesji, w którym danych został już przekazany do innych operacji. Ten kontrakt wymaga elementu session działać prawidłowo. Bez sesję skojarzone z określonego klienta wystąpienie usługi nie ma możliwości, wiedząc, jakie dane poprzedniego wysłał tego klienta.  
+ Następujący kontrakt usługi określa, że wszystkie operacje w `ICalculatorSession` ramach programu muszą być wymieniane w ramach sesji. Żadna z operacji nie zwraca wartości do obiektu wywołującego, z `Equals` wyjątkiem metody. `Equals` Jednak metoda nie przyjmuje żadnych parametrów i dlatego może zwracać wartość różną od zera w sesji, w której dane zostały już przesłane do innych operacji. Ten kontrakt wymaga poprawnego działania sesji. Bez sesji skojarzonej z określonym klientem wystąpienie usługi nie ma wpływu na to, jakie poprzednie dane wysłał ten klient.  
   
  [!code-csharp[S_Service_Session#1](../../../samples/snippets/csharp/VS_Snippets_CFX/s_service_session/cs/service.cs#1)]
  [!code-vb[S_Service_Session#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_service_session/vb/service.vb#1)]  
   
- Jeśli usługa umożliwia sesję, następnie sesji jest nawiązane i używane, jeśli klient inicjuje w przeciwnym razie sesja nie zostanie nawiązane.  
+ Jeśli usługa zezwala na sesję, sesja zostanie nawiązana i użyta, jeśli klient ją zainicjuje. w przeciwnym razie nie zostanie ustanowiona żadna sesja.  
   
-## <a name="sessions-and-service-instances"></a>Sesje i wystąpień usługi  
- Jeśli używasz domyślnego wystąpień zachowanie programu WCF, wszystkie wywołania między obiektem klienta platformy WCF są obsługiwane przez tego samego wystąpienia usługi. W związku z tym na poziomie aplikacji, można traktować sesji co włączenie zachowanie aplikacji, podobnie jak zachowanie połączenia lokalnego. Na przykład podczas tworzenia obiektu lokalnego:  
+## <a name="sessions-and-service-instances"></a>Sesje i wystąpienia usługi  
+ W przypadku korzystania z domyślnego zachowania podczas wystąpienia programu WCF wszystkie wywołania między obiektem klienta WCF są obsługiwane przez to samo wystąpienie usługi. W związku z tym na poziomie aplikacji można myśleć o sesji, co umożliwia zachowanie aplikacji podobnej do zachowania połączenia lokalnego. Na przykład podczas tworzenia obiektu lokalnego:  
   
-- Konstruktor jest wywoływana.  
+- Konstruktor jest wywoływany.  
   
-- Wszystkie kolejne wywołania odwołanie do obiektu klienta programu WCF są przetwarzane przez tego samego wystąpienia obiektu.  
+- Wszystkie kolejne wywołania w odwołaniu do obiektu klienta WCF są przetwarzane przez to samo wystąpienie obiektu.  
   
-- Destruktor jest wywoływany, kiedy niszczony jest odwołanie do obiektu.  
+- Destruktor jest wywoływany, gdy odwołanie do obiektu jest niszczone.  
   
- Sesje Włącz zachowanie podobne między klientami i usługami, tak długo, jak domyślne zachowanie wystąpienia usługi jest używana. Jeśli kontraktu usługi wymaga lub obsługuje sesji, co najmniej jednej operacji kontraktu może być oznaczona jako inicjowania lub zakończenia sesji, ustawiając <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A> i <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A> właściwości.  
+ Sesje umożliwiają podobne zachowanie między klientami i usługami, o ile jest używane domyślne zachowanie wystąpienia usługi. Jeśli kontrakt usługi wymaga lub obsługuje sesje, co najmniej jedna operacja kontraktu może być oznaczona jako inicjująca lub kończąca sesję przez ustawienie <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A> właściwości i. <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>  
   
- *Inicjowanie operacji* te, które musi zostać wywołana jako pierwszą operacją nowej sesji. Inicjowanie inne niż operacje można wywołać tylko wtedy, gdy została wywołana co najmniej jedną operację inicjujący. W związku z tym można utworzyć typu konstruktora sesji usługi przez zadeklarowanie zainicjować operacji projektowane w celu wejściowego od klientów odpowiednie do stanu sprzed wystąpienia usługi. (Stan jest skojarzony z sesji, jednak a nie obiekt usługi).  
+ *Operacje inicjujące* to te, które muszą być wywoływane jako pierwsza operacja nowej sesji. Operacje nieinicjujące mogą być wywoływane tylko po wywołaniu co najmniej jednej operacji inicjującej. W związku z tym można utworzyć rodzaj konstruktora sesji dla swojej usługi, deklarując operacje inicjowania, które umożliwiają przejęcie danych z klientów odpowiednich do początku wystąpienia usługi. (Stan jest skojarzony z sesją, ale nie z obiektem usługi).  
   
- *Kończenie operacji*, z drugiej strony, to te, które musi zostać wywołana jako ostatni komunikat w istniejącej sesji. W przypadku domyślnej WCF jest odtwarzana obiekt usługi i jej kontekstu po zamknięciu sesji, z którą została skojarzona usługa. W związku z tym, można utworzyć rodzaj destruktor przez zadeklarowanie powodujący zakończenie operacji przeznaczony do wykonywania funkcji, które są odpowiednie do końca wystąpienia usługi.  
+ *Przerywanie operacji*, jest to te, które muszą być wywoływane jako ostatni komunikat w istniejącej sesji. W przypadku domyślnego przypadku usługa WCF odtwarza obiekt usługi i jego kontekst po zamknięciu sesji, z którą usługa została skojarzona. W związku z tym można utworzyć Rodzaj destruktora, deklarując operacje kończące, które umożliwiają wykonanie funkcji odpowiedniej dla końca wystąpienia usługi.  
   
 > [!NOTE]
->  Domyślne zachowanie nosi podobieństwo do lokalnego konstruktory i destruktory, ale jest tylko bardzo podobne. Inicjowanie powodujący zakończenie działania i/lub w tym samym czasie, może być żadnej operacji usługi WCF. Ponadto w przypadku domyślnej Inicjowanie operacji można wywołać dowolną liczbę razy w dowolnej kolejności. nie dodatkowych sesji są tworzone, gdy sesja zostanie ustanowione i skojarzone z wystąpieniem, chyba że jawnie kontrolować okres istnienia wystąpienia usługi (przez operacje <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> obiektu). Na koniec stanu jest skojarzony z sesji, a nie obiekt usługi.  
+> Chociaż domyślne zachowanie nosi podobieństwo do lokalnych konstruktorów i destruktorów, jest to tylko podobieństwo. Każda operacja usługi WCF może być operacją inicjującą lub kończącą lub jednocześnie. Ponadto w przypadku domyślnego przypadku operacje inicjujące mogą być wywoływane dowolną liczbę razy w dowolnej kolejności; Po ustanowieniu sesji i skojarzeniu jej z wystąpieniem nie są tworzone żadne dodatkowe sesje, chyba że jawnie kontrolujesz okres istnienia wystąpienia usługi (przez manipulowanie <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> obiektem). Na koniec stan jest skojarzony z sesją, a nie z obiektem usługi.  
   
- Na przykład `ICalculatorSession` używane w poprzednim przykładzie kontrakt wymaga elementu czy klienta platformy WCF obiektu pierwsze wywołanie `Clear` operacji przed wszystkie inne czynności i który sesji z tym obiektem klienta WCF należy zakończyć, gdy wywołuje `Equals` operacji. Poniższy przykład kodu pokazuje kontraktu, który wymusza te wymagania. `Clear` musi zostać wywołane najpierw zainicjowania sesji, i że sesja zakończy się, kiedy `Equals` jest wywoływana.  
+ Na przykład `ICalculatorSession` kontrakt użyty w poprzednim przykładzie wymaga, aby obiekt klienta WCF najpierw `Clear` wywoływał operację przed żadną inną operacją i że sesja z tym obiektem klienta WCF powinna zakończyć się po wywołaniu `Equals` operacja. Poniższy przykład kodu przedstawia kontrakt, który wymusza te wymagania. `Clear`musi być wywoływana jako pierwsza, aby zainicjować sesję, a sesja zostanie zakończona `Equals` , gdy jest wywoływana.  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
   
- Usługi nie są uruchamiane sesje z klientami. W aplikacjach klienckich usługi WCF bezpośrednią relację między istnieje okres istnienia kanału oparte na sesji i okres istnienia sesji sam. Jako takie klienci utworzyć nowej sesji, tworząc nowe kanały oparte na sesji i zatrzymywania istniejące sesje, zamykając bezpiecznie kanały oparte na sesji. Klient uruchamia sesję z punktem końcowym usługi, wywołując jedną z następujących czynności:  
+ Usługi nie uruchamiają sesji z klientami programu. W aplikacjach klienckich WCF istnieje relacja bezpośrednia między okresem istnienia kanału opartego na sesji i okresem istnienia sesji. W związku z tym klienci tworzą nowe sesje przez utworzenie nowych kanałów opartych na sesji i rozbicie istniejących sesji przez zamknięcie kanałów opartych na sesji. Klient uruchamia sesję z punktem końcowym usługi, wywołując jedną z następujących czynności:  
   
-- <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> w kanale zwracany przez wywołanie <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
+- <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>na kanale zwróconym przez wywołanie metody <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
-- <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> w obiekcie klienta WCF, generowane przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+- <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>w obiekcie klienta WCF wygenerowanym przez [Narzędzie do przesyłania metadanych programu ServiceModel (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
-- Zainicjować operacji na dowolnego typu obiektu klienta WCF (domyślnie, wszystkie operacje są Inicjowanie). Po wywołaniu pierwszą operacją obiektu klienta programu WCF automatycznie zostanie otwarty kanał i inicjuje sesję.  
+- Operacja inicjująca dla każdego typu obiektu klienta WCF (domyślnie wszystkie operacje są inicjowane). Po wywołaniu pierwszej operacji obiekt klienta WCF automatycznie otwiera kanał i inicjuje sesję.  
   
- Zazwyczaj klient kończy sesję, korzystając z punktu końcowego usługi, wywołując jedną z następujących czynności:  
+ Zwykle klient zamyka sesję z punktem końcowym usługi, wywołując jedną z następujących czynności:  
   
-- <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> w kanale zwracany przez wywołanie <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
+- <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>na kanale zwróconym przez wywołanie metody <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
-- <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> w obiekcie klienta WCF, generowane przez Svcutil.exe.  
+- <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>w obiekcie klienta WCF wygenerowanym przez Svcutil. exe.  
   
-- Trwa przerywanie działania operacji dla dowolnego typu obiektu klienta programu WCF (domyślnie są Kończenie żadnych operacji; kontrakt należy jawnie określić powodujący zakończenie działania). Po wywołaniu pierwszą operacją obiektu klienta programu WCF automatycznie zostanie otwarty kanał i inicjuje sesję.  
+- Operacja przerywania dla każdego typu obiektu klienta WCF (domyślnie nie kończy się żadna operacja; kontrakt musi jawnie określić operację kończącą). Po wywołaniu pierwszej operacji obiekt klienta WCF automatycznie otwiera kanał i inicjuje sesję.  
   
- Aby uzyskać przykłady, zobacz [jak: Tworzenie usługi, wymaga sesji](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) , jak również [domyślne zachowanie usługi](../../../docs/framework/wcf/samples/default-service-behavior.md) i [Instancing](../../../docs/framework/wcf/samples/instancing.md) przykłady.  
+ Aby zapoznać się z [przykładami, zobacz How to: Utwórz usługę wymagającą sesji](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) oraz [domyślne zachowanie usługi](../../../docs/framework/wcf/samples/default-service-behavior.md) i przykłady tworzenia [wystąpień](../../../docs/framework/wcf/samples/instancing.md) .  
   
- Aby uzyskać więcej informacji na temat klientów i sesji, zobacz [uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Więcej informacji o klientach i sesjach znajduje się w temacie [Uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
-## <a name="sessions-interact-with-instancecontext-settings"></a>Sesje wchodzić w interakcje przy użyciu typu InstanceContext ustawień  
- Brak interakcji między <xref:System.ServiceModel.SessionMode> wyliczenia w Umowie oraz <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> właściwość, która kontroluje skojarzenie między kanałów i obiektów określonej usługi. Aby uzyskać więcej informacji, zobacz [sesji, Instancing i współbieżności](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
+## <a name="sessions-interact-with-instancecontext-settings"></a>Sesje współpracują z ustawieniami InstanceContext  
+ Istnieje interakcja między <xref:System.ServiceModel.SessionMode> wyliczeniem w kontrakcie <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> i właściwością, która kontroluje skojarzenie między kanałami i określonymi obiektami usługi. Aby uzyskać więcej informacji, zobacz [sesje, Tworzenie wystąpień i współbieżność](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
   
-### <a name="sharing-instancecontext-objects"></a>Udostępnianie obiektów typu InstanceContext  
- Można również sterować określające kanał oparte na sesji lub wywołanie jest skojarzone z którym <xref:System.ServiceModel.InstanceContext> obiektu, wykonując tego skojarzenia, samodzielnie. 
+### <a name="sharing-instancecontext-objects"></a>Udostępnianie obiektów InstanceContext  
+ Można również kontrolować, który kanał lub połączenie oparte na sesji jest skojarzone z <xref:System.ServiceModel.InstanceContext> tym obiektem przez wykonanie tego skojarzenia samodzielnie. 
   
-## <a name="sessions-and-streaming"></a>Sesje i przesyłania strumieniowego  
- W przypadku dużych ilości danych do przesłania strumieniowego tryb transferu programu WCF jest możliwe alternatywa domyślne zachowanie buforowania i przetwarzanie komunikatów w pamięci w całości. Podczas przesyłania strumieniowego wywołania z powiązaniem oparte na sesji, może wystąpić nieoczekiwane zachowanie. Wszystkie wywołania przesyłania strumieniowego są nawiązywane przy użyciu jednego kanału (kanał datagram), który nie obsługuje sesji, nawet jeśli powiązania, używany jest skonfigurowany do używania sesji. Jeśli wielu klientów wywołań przesyłania strumieniowego do tego samego obiektu usługi za pośrednictwem powiązania oparte na sesji i tryb współbieżności obiekt usługi jest ustawiony na jednym i jego wystąpienie kontekstu tryb jest ustawiony na `PerSession`, wywołania musi przechodzić przez kanał datagram, a tym samym tylko jedno wywołanie są przetwarzane w danym momencie. Co najmniej jeden klient może następnie limit czasu. Można obejść ten problem, ustawiając obiektu usługi `InstanceContextMode` do `PerCall` lub współbieżności do wielu.  
+## <a name="sessions-and-streaming"></a>Sesje i przesyłanie strumieniowe  
+ W przypadku transferu dużej ilości danych, tryb transferu przesyłania strumieniowego w programie WCF jest możliwym rozwiązaniem alternatywnym dla domyślnego zachowania buforowania i przetwarzania komunikatów w pamięci. Podczas przesyłania strumieniowego do wywołań opartych na sesji może wystąpić nieoczekiwane zachowanie. Wszystkie wywołania przesyłania strumieniowego są realizowane za pośrednictwem pojedynczego kanału (kanału datagramu), który nie obsługuje sesji, nawet jeśli używane powiązanie jest skonfigurowane do korzystania z sesji. Jeśli wielu klientów przesyła strumieniowo wywołania do tego samego obiektu usługi za pośrednictwem powiązań opartych na sesji, a tryb współbieżności obiektu usługi jest ustawiony na Single, a jego tryb kontekstu wystąpienia `PerSession`jest ustawiony na, wszystkie wywołania muszą przechodzić przez kanał datagramu i tak dalej. tylko jedno wywołanie jest przetwarzane jednocześnie. Co najmniej jeden klient może przekroczyć limit czasu. Ten problem można obejść, konfigurując obiekt `InstanceContextMode` `PerCall` usługi lub współbieżność do wielu.  
   
 > [!NOTE]
->  MaxConcurrentSessions w tym przypadku przyniosło żadnego skutku, ponieważ istnieje tylko jeden "sesja".  
+> MaxConcurrentSessions nie ma wpływu w tym przypadku, ponieważ jest dostępna tylko jedna "sesja".  
   
 ## <a name="see-also"></a>Zobacz także
 

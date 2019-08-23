@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7310d70aa695043a935f9bd74af8e8475eda73d4
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 3670803ff20351fd9ff6892a0cef48b9caa70199
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170878"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939525"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Obsługa funkcji msxsl:node-set()
-`msxsl:node-set` Funkcja umożliwia konwertowanie wynikowego fragmentu drzewa w zestawie węzłów. Węzeł wynikowy ustawić opcji zawsze zawiera jeden węzeł i węzeł główny drzewa.  
+`msxsl:node-set` Funkcja umożliwia konwertowanie fragmentu drzewa wynikowego na zestaw węzłów. Zestaw węzłów powstających zawsze zawiera pojedynczy węzeł i jest węzłem głównym drzewa.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w programie .NET Framework 2.0. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
+> <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w .NET Framework 2,0. Można wykonać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- `msxsl:node-set` Funkcja umożliwia konwertowanie wynikowego fragmentu drzewa w zestawie węzłów. Węzeł wynikowy ustawić opcji zawsze zawiera jeden węzeł i węzeł główny drzewa.  
+ `msxsl:node-set` Funkcja umożliwia konwertowanie fragmentu drzewa wynikowego na zestaw węzłów. Zestaw węzłów powstających zawsze zawiera pojedynczy węzeł i jest węzłem głównym drzewa.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie `$var` to zmienna, która jest węzeł drzewa w arkuszu stylów. Dla każdej instrukcji w połączeniu z `node-set` funkcja zezwala użytkownikowi na iterację w tym węźle drzewa jako zestaw węzłów.  
+ W poniższym przykładzie `$var` jest to zmienna, która jest drzewem węzła w arkuszu stylów. Instrukcja for-each łączona z `node-set` funkcją pozwala użytkownikowi na iterację tego drzewa węzłów jako zestawu węzłów.  
   
 ## <a name="nodesetxsl"></a>nodeset.xsl  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67170878"
 ```  
   
 ## <a name="output"></a>Dane wyjściowe  
- Dane wyjściowe transformacji  
+ Dane wyjściowe transformacji to  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

@@ -2,20 +2,20 @@
 title: <secureConversationAuthentication> dla <serviceCredential>
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
-ms.openlocfilehash: f35392b91d047c46e65ce433ef544b86cf6c88c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61034c2c66a6d8e27a87ec5380aa7297247eb31e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670615"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935838"
 ---
-# <a name="secureconversationauthentication-of-servicecredential"></a>\<secureConversationAuthentication > z \<serviceCredential >
-Określa ustawienia dla usługi bezpiecznej konwersacji.  
+# <a name="secureconversationauthentication-of-servicecredential"></a>\<secureConversationAuthentication > \<> servicecredential
+Określa ustawienia usługi bezpiecznej konwersacji.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<serviceCredentials>  
 \<secureConversationAuthentication>  
   
@@ -32,7 +32,7 @@ Określa ustawienia dla usługi bezpiecznej konwersacji.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`securityStateEncoderType`|Ciąg określający typ <xref:System.ServiceModel.Security.SecurityStateEncoder> ma być używany.|  
+|`securityStateEncoderType`|Ciąg określający typ <xref:System.ServiceModel.Security.SecurityStateEncoder> , który ma być używany.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -41,10 +41,10 @@ Określa ustawienia dla usługi bezpiecznej konwersacji.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Określa poświadczenie do użycia w uwierzytelnianiu usługi i ustawień dotyczących walidacji poświadczeń klienta.|  
+|[\<serviceCredentials>](servicecredentials.md)|Określa poświadczenie, które ma być używane w uwierzytelnianiu usługi i ustawień związanych z walidacją poświadczeń klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element konfiguracji umożliwia określenie listy znanych oświadczenia dla tokenu kontekstu zabezpieczeń (SCT) serializacji plików cookie, a także koder do zakodowania i ochronę informacji z plików cookie. Aby uzyskać więcej informacji na temat SCT, zobacz <xref:System.ServiceModel.Security.SecureConversationServiceCredential>.  
+ Użyj tego elementu konfiguracji, aby określić listę znanych typów roszczeń dla serializacji plików cookie kontekstu zabezpieczeń (SCT), a także kodera do kodowania i zabezpieczania informacji plików cookie. Aby uzyskać więcej informacji na temat SCT <xref:System.ServiceModel.Security.SecureConversationServiceCredential>, zobacz.  
   
 ## <a name="see-also"></a>Zobacz także
 

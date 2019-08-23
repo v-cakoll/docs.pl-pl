@@ -9,28 +9,28 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-ms.openlocfilehash: 17ce930a91d2eb3626e92898e00e67be4741cf56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 18c3b300d4e32cee06208caecb7166b73ae1c565
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913111"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915036"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Instrukcje: zmienianie rozmiaru kontrolek na formularzach systemu Windows
-Możesz zmienić rozmiar poszczególnych formantów, a rozmiar można zmieniać wiele formantów tego samego lub innego rodzaju, takich jak <xref:System.Windows.Forms.Button> i <xref:System.Windows.Forms.GroupBox> kontrolki.  
+Można zmienić rozmiar poszczególnych kontrolek i można zmienić rozmiar wielu kontrolek tego samego lub różnych rodzajów, takich <xref:System.Windows.Forms.Button> jak <xref:System.Windows.Forms.GroupBox> i kontrolek.  
   
 ### <a name="to-resize-a-control"></a>Aby zmienić rozmiar kontrolki  
   
-1. Kliknij formant, który można zmienić jego rozmiaru i przeciągnij jeden z uchwytów osiem zmiany rozmiaru.  
+1. Kliknij formant, który ma zostać zmieniony, i przeciągnij jeden z ośmiu uchwytów zmiany rozmiaru.  
   
     > [!NOTE]
-    >  Wybierz kontrolkę i klawiszy strzałek, przytrzymując naciśnięty klawisz SHIFT, aby zmienić rozmiar formantu o jeden piksel w danym momencie. Naciśnij klawisz strzałki w dół lub w prawo, przytrzymując naciśnięty klawisz SHIFT i CTRL kluczy zmiany rozmiaru w większych przyrostach.  
+    > Zaznacz kontrolkę i naciśnij klawisze strzałek, przytrzymując klawisz SHIFT, aby zmienić rozmiar kontrolki o jeden piksel w danym momencie. Naciskaj klawisze strzałek w dół lub Strzałka w prawo, przytrzymując wciśnięty klawisz SHIFT i CTRL, aby zmienić rozmiar kontrolki w dużych przyrostach.  
   
-### <a name="to-resize-multiple-controls-on-a-form"></a>Aby zmienić rozmiar wielu formantów w formularzu  
+### <a name="to-resize-multiple-controls-on-a-form"></a>Aby zmienić rozmiar wielu kontrolek w formularzu  
   
-1. Naciśnij i przytrzymaj klawisz CTRL lub SHIFT i zaznacz formanty, które chcesz zmienić. Rozmiar pierwszą kontrolkę, którą wybierzesz jest używana do innych kontrolek.  
+1. Przytrzymaj wciśnięty klawisz CTRL lub SHIFT i wybierz kontrolki, dla których chcesz zmienić rozmiar. Rozmiar pierwszej kontrolki wybieranej jest używany dla innych kontrolek.  
   
-2. Na **Format** menu, wybierz **Wyrównaj rozmiar**i wybierz jedną z czterech opcji. Pierwsze trzy polecenia Zmień wymiary formantów, aby dopasować wybrany pierwszy formant.  
+2. W menu **Format** wybierz opcję **Wyrównaj rozmiar**i wybierz jedną z czterech opcji. Pierwsze trzy polecenia zmieniają wymiary formantów, aby były zgodne z pierwszą wybraną kontrolką.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -39,4 +39,4 @@ Możesz zmienić rozmiar poszczególnych formantów, a rozmiar można zmieniać 
 - [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
 - [Kontrolki formularzy Windows Forms według funkcji](windows-forms-controls-by-function.md)
-- [Instrukcje: Zmiana rozmiaru formularzy Windows przy użyciu narzędzia Projektant](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))
+- [Instrukcje: Zmiana rozmiaru Windows Forms przy użyciu narzędzia Projektant](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

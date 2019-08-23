@@ -3,22 +3,22 @@ title: <nameClaimType>
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: 5202e162a7eb5fc4e36d6a6c0a2c18af48872a69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47366c5bb2bd9228268fce3ae6e1fb5ad457dab1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791602"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942618"
 ---
-# <a name="nameclaimtype"></a>\<nameClaimType>
-Ustawia typ oświadczenia, który określa <xref:System.Security.Principal.IIdentity.Name%2A> właściwości. Typ oświadczenia jest używany do wyszukiwania <xref:System.Security.Claims.Claim> w kolekcji <xref:System.Security.Claims.ClaimsIdentity> obiektów zwróconych przez <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> metody tego programu obsługi tokenów. Zgodne oświadczenie jest następnie wartość jako nazwa <xref:System.Security.Principal.IIdentity> wygenerowany na podstawie tego programu obsługi tokenów.  
+# <a name="nameclaimtype"></a>\<nameClaimType >
+Ustawia typ zgłoszenia, który określa <xref:System.Security.Principal.IIdentity.Name%2A> właściwość. Typ zgłoszenia służy do wyszukiwania <xref:System.Security.Claims.Claim> w <xref:System.Security.Claims.ClaimsIdentity> kolekcji obiektów zwracanych przez <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> metodę tego programu obsługi tokenów. Wartość zgodnego żądania jest następnie ustawiana jako nazwa <xref:System.Security.Principal.IIdentity> wygenerowanej na podstawie tej procedury obsługi tokenu.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
 \<add>  
 \<samlSecurityTokenRequirement>  
-\<nameClaimType>  
+\<nameClaimType >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,7 +44,7 @@ Ustawia typ oświadczenia, który określa <xref:System.Security.Principal.IIden
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|value|Ciąg określający URI, który reprezentuje typ oświadczenia, oświadczenia do użycia dla <xref:System.Security.Principal.IIdentity.Name%2A> właściwości. Wymagana.|  
+|value|Ciąg określający identyfikator URI, który reprezentuje typ zgłoszenia do użycia dla <xref:System.Security.Principal.IIdentity.Name%2A> właściwości. Wymagany.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -53,10 +53,10 @@ Ustawia typ oświadczenia, który określa <xref:System.Security.Principal.IIden
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<samlSecurityTokenRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|Udostępnia konfigurację dla <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> klasy <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> klasy lub klasy pochodnej z jednego z tych klas.|  
+|[\<samlSecurityTokenRequirement>](samlsecuritytokenrequirement.md)|Zapewnia konfigurację <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> klasy <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> , klasy lub klasy pochodnej jednej z tych klas.|  
   
 ## <a name="remarks"></a>Uwagi  
- `<nameClaimType>` Ustawia element <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> właściwości podczas <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> obiekt jest inicjowany z konfiguracji.  
+ Element ustawia właściwość, <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> gdy <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> obiekt jest inicjowany z konfiguracji. `<nameClaimType>`  
   
 ## <a name="example"></a>Przykład  
   

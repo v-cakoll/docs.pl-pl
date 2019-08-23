@@ -1,23 +1,23 @@
 ---
-title: <bookmarkResumptionQuery> w WCF
+title: <bookmarkResumptionQuery>programu WCF
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 38c87cefc49821b03d119299ef60e3fbbad21d7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee8457645a0b54e21ef27c2891ebea97d6cc547b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704391"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926356"
 ---
-# <a name="bookmarkresumptionquery-of-wcf"></a>\<bookmarkResumptionQuery > w WCF
+# <a name="bookmarkresumptionquery-of-wcf"></a>\<bookmarkResumptionQuery > WCF
 
 Reprezentuje zapytanie, które jest używane do śledzenia wznowienie zakładki w ramach wystąpienie przepływu pracy. Zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania zakładki wznowienie rekordów.  
   
-Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz [profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+Aby uzyskać więcej informacji o śledzeniu zapytań profilowych, zobacz [śledzenie profilów](../../../windows-workflow-foundation/tracking-profiles.md)
   
 \<system.serviceModel>  
 \<Śledzenie >  
-\<profiles>  
+\<> profilów  
 \<trackingProfile>  
 \<przepływ pracy >  
 \<bookmarkResumptionQueries>  
@@ -57,11 +57,11 @@ Brak.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<bookmarkResumptionQueries>](bookmarkresumptionqueries-of-wcf.md)|Reprezentuje kolekcję zapytań, które są używane do śledzenia wznowienie zakładki w ramach wystąpienie przepływu pracy.|  
+|[\<bookmarkResumptionQueries >](bookmarkresumptionqueries-of-wcf.md)|Reprezentuje kolekcję zapytań, które są używane do śledzenia wznowienie zakładki w ramach wystąpienie przepływu pracy.|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
-- [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Kontrola i śledzenie przepływu pracy](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profile śledzenia](../../../windows-workflow-foundation/tracking-profiles.md)

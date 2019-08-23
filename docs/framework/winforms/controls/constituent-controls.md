@@ -9,15 +9,15 @@ helpviewer_keywords:
 - constituent controls [Windows Forms]
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
-ms.openlocfilehash: 76a5a4f9b02a71616d247a1bb0f03cc0aec1d70d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 522a1012fc7bdd54860b0538064ee073f7a761f7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956078"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918427"
 ---
 # <a name="constituent-controls"></a>Formanty składników
-Formanty, które tworzą kontrolkę użytkownika lub *formanty składników* są określane jako, są stosunkowo mało Jeśli chodzi o renderowania grafiki niestandardowych. Wszystkie kontrolki Windows Forms obsługiwać własne renderowania za pośrednictwem ich własnych <xref:System.Windows.Forms.Control.OnPaint%2A> metody. Ponieważ ta metoda jest chroniona, nie jest dostępna dla deweloperów, a więc nie można zablokować wykonywanie, gdy kontrolka jest malowane. Nie oznacza to, jednak, że nie można dodać kod, aby wpłynąć na wygląd kontrolek składowych. Dodatkowe renderowania można osiągnąć przez dodanie obsługi zdarzeń. Załóżmy, że zostały tworzenia <xref:System.Windows.Forms.UserControl> za pomocą przycisku o nazwie `MyButton`. Jeśli chcieliby mieć dodatkowe renderowania poza została podana przez <xref:System.Web.UI.WebControls.Button>, można dodać kod do formantu użytkownika podobnego do następującego:  
+Kontrolki, które składają się na kontrolkę użytkownika lub kontrolki składowe w miarę ich określania, są stosunkowo elastyczne, gdy nastąpi do niestandardowego renderowania grafiki. Wszystkie kontrolki Windows Forms obsługują własne renderowanie za ich <xref:System.Windows.Forms.Control.OnPaint%2A> własnymi metodami. Ponieważ ta metoda jest chroniona, nie jest dostępna dla deweloperów i w związku z tym nie można jej wykonać po narysowaniu kontrolki. Nie oznacza to jednak, że nie można dodać kodu, aby mieć wpływ na wygląd kontrolek składników. Dodatkowe renderowanie można wykonać, dodając procedurę obsługi zdarzeń. Załóżmy na przykład, że tworzysz obiekt <xref:System.Windows.Forms.UserControl> z przyciskiem o nazwie. `MyButton` Jeśli chcesz mieć dodatkowe renderowanie wykraczające poza to <xref:System.Web.UI.WebControls.Button>, co zostało dostarczone przez, Dodaj kod do kontrolki użytkownika podobny do poniższego:  
   
 ```vb  
 Public Sub MyPaint(ByVal sender as Object, e as PaintEventArgs) Handles _  
@@ -39,9 +39,9 @@ System.Windows.Forms.PaintEventArgs e)
 ```  
   
 > [!NOTE]
->  Niektóre formy Windows pod kontrolą, takich jak <xref:System.Windows.Forms.TextBox>, są rysowane bezpośrednio przez Windows. W tych przypadkach <xref:System.Windows.Forms.Control.OnPaint%2A> nigdy nie zostanie wywołana metoda, a zatem powyższy przykład nigdy nie zostaną wywołane.  
+> Niektóre kontrolki Windows Forms, takie <xref:System.Windows.Forms.TextBox>jak, są rysowane bezpośrednio przez system Windows. W tych przypadkach <xref:System.Windows.Forms.Control.OnPaint%2A> Metoda nie jest nigdy wywoływana i w rezultacie powyższego przykładu nigdy nie zostanie wywołana.  
   
- Spowoduje to utworzenie metodę, która wykonuje każdym `MyButton.Paint` wykonuje zdarzeń, a tym samym dodaje dodatkowe graficzną reprezentację do formantu. Należy pamiętać, że nie uniemożliwia wykonanie `MyButton.OnPaint`, i dlatego wszystkie malowania zazwyczaj wykonywane przez przycisk będzie nadal można wykonać oprócz Twojego niestandardowego rysowania. Aby uzyskać szczegółowe informacje o technologii GDI + i niestandardowe renderowanie, zobacz [tworzenie graficzne obrazów za pomocą GDI +](../advanced/how-to-create-graphics-objects-for-drawing.md). Jeśli chcesz mieć unikatowe reprezentacja kontroli nad swoje najlepszy plan działania jest utworzenie odziedziczoną kontrolkę, do pisania kodu niestandardowego renderowania dla niego. Aby uzyskać więcej informacji, zobacz [kontrolki User-Drawn](user-drawn-controls.md).  
+ Tworzy to metodę, która jest wykonywana za każdym `MyButton.Paint` razem, gdy zdarzenie zostanie wykonane, w związku z tym dodając do formantu dodatkową graficzną reprezentację. Należy zauważyć, że nie uniemożliwia to wykonywania `MyButton.OnPaint`i w ten sposób wszystkie malowania zwykle wykonywane przez przycisk nadal będą wykonywane obok niestandardowego malowania. Aby uzyskać szczegółowe informacje na temat technologii GDI+ i renderowania niestandardowego, zobacz [Tworzenie graficznych obrazów przy użyciu interfejsu GDI+](../advanced/how-to-create-graphics-objects-for-drawing.md). Jeśli chcesz mieć unikatową reprezentację formantu, najlepszym sposobem działania jest utworzenie dziedziczonej kontrolki i zapisanie niestandardowego kodu renderowania dla niego. Aby uzyskać szczegółowe informacje, zobacz [Formanty rysowane przez użytkownika](user-drawn-controls.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

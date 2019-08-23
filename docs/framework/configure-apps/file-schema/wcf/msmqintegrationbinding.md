@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 4960740af9637a1743dc86965d7831b76828e58a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52f488bfc77cbe6c0942c0e38c0201fa8d7d2d9c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772440"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928891"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding>
-Definiuje powiązanie, które dostarcza obsługę kolejki poprzez wiadomości routingu za pomocą usługi MSMQ.  
+Definiuje powiązanie, które zapewnia obsługę kolejkowania przez kierowanie komunikatów za pośrednictwem usługi MSMQ.  
   
  \<system.ServiceModel>  
-\<powiązania >  
+\<> powiązań  
 msmqIntegrationBinding  
   
 ## <a name="syntax"></a>Składnia  
@@ -46,56 +46,56 @@ msmqIntegrationBinding
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|closeTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na zakończenie operacji zamknięcia. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
-|customDeadLetterQueue|Identyfikator URI, który zawiera lokalizację kolejki utraconych wiadomości dla aplikacji, gdzie umieszcza komunikaty wygasły lub mają niepowodzeniem transferu lub dostarczania.<br /><br /> Kolejka utraconych wiadomości jest kolejką na Menedżer kolejki wysyłania aplikacji dla wygasłe wiadomości, które nie powiodły się do dostarczenia.<br /><br /> Identyfikator URI, który jest określony przez <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> musi używać schematu net.msmq.|  
-|deadLetterQueue|A <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>.value określania typu kolejki utraconych wiadomości, aby użyć, jeśli istnieje<br /><br /> Kolejka utraconych wiadomości jest to lokalizacja, w wiadomości, które nie powiodły się dostarczane do aplikacji zostanie przeniesiona.<br /><br /> Komunikaty, które wymagają gwarancji exactlyOnce (czyli `exactlyOnce` ma ustawioną wartość atrybutu `true`), ten atrybut jest domyślnie systemowe kolejki utraconych wiadomości transakcyjnych w usłudze MSMQ.<br /><br /> Komunikaty, które wymagają żadnych zapewnień, ten atrybut są domyślnie `null`.|  
-|trwałe|Wartość logiczna wskazująca, czy komunikat jest trwałe lub nietrwała w kolejce. Trwały komunikat przeżyje awarii menedżera kolejki, a komunikat volatile nie. Volatile komunikaty są przydatne, jeśli aplikacje wymagają mniejsze opóźnienia, które mogą tolerować okazjonalne utracone wiadomości. Jeśli `exactlyOnce` ma ustawioną wartość atrybutu `true`, komunikaty muszą być trwałe. Wartość domyślna to `true`.|  
-|exactlyOnce|Wartość logiczna wskazująca, czy każdy komunikat zostanie dostarczony tylko raz. Nadawca będą powiadamiani dostarczania błędów. Gdy `durable` jest `false`, ten atrybut jest ignorowany i wiadomości są przekazywane bez zapewnienia dostarczania. Wartość domyślna to `true`. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>.|  
-|maxReceivedMessageSize|Dodatnia liczba całkowita określająca maksymalny rozmiar komunikatu, w bajtach, włącznie z nagłówkami, który jest przetwarzany przez to wiązanie. Nadawca wiadomości przekroczenie tego limitu zostanie wyświetlony błąd protokołu SOAP. Należy określić odbiorcę porzuca wiadomość i tworzy wpis zdarzenia w dzienniku śledzenia. Wartość domyślna to 65536. Powiązana rozmiar komunikatu ma to ograniczyć narażenie na ataki przeprowadzenie ataku typu "odmowa usługi" (DoS).|  
-|maxRetryCycles|Liczba całkowita, która wskazuje liczbę ponownych prób cyklów używane przez funkcję wykrywania poison komunikatu. Komunikat staje się zarządzanie skażonymi komunikatami, gdy zakończy się niepowodzeniem ze wszystkich prób dostarczenia wszystkich cykli. Wartość domyślna to 2. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|nazwa|Ciąg, który zawiera nazwę konfiguracji powiązania. Wartość ta powinna być unikatowy, ponieważ jest używany jako identyfikator dla wiązania. Począwszy od [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], powiązania i zachowania nie muszą mieć nazwę. Aby uzyskać więcej informacji o domyślnej konfiguracji i powiązania pustego oraz zachowań, zobacz [uproszczona konfiguracja](../../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
-|openTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na zakończenie operacji Otwórz. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
-|receiveErrorHandling|A <xref:System.ServiceModel.ReceiveErrorHandling> wartość, która określa sposób obsługi poison i nondispatchable wiadomości.|  
-|receiveRetryCount|Liczba całkowita określająca maksymalną liczbę ponownych prób natychmiastowego podjąć Menedżer kolejki w przypadku niepowodzenia przesyłania komunikatów z kolejki aplikacji do aplikacji.<br /><br /> Jeśli zostanie osiągnięta maksymalna liczba prób dostarczenia komunikatu nie jest dostępna przez aplikację, wiadomości są wysyłane w kolejce ponawiania prób dla ponowne dostarczenie w późniejszym czasie. Ilość czasu przed przeniesieniem do kolejki wysyłania komunikatu jest kontrolowany przez `retryCycleDelay`. Jeśli ponawiania cykli zasięg `maxRetryCycles` wartości, a następnie albo wysłać wiadomości do kolejki komunikatów poison lub negatywnego potwierdzenia są wysyłane do nadawcy.|  
-|receiveTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na ukończenie operacji odbierania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:10:00.|  
-|receiveContextEnabled|Wartość logiczna określająca, jeśli wyświetlony kontekstu przetwarzanie komunikatów w kolejkach jest włączone. Gdy jest ono ustawione na `true`usługi "wgląd" wiadomość w kolejce rozpoczęcie przetwarzania go i, jeśli nic się nie uda, zgłaszany jest wyjątek pozostaje w kolejce. Usługi można również "zablokować" wiadomości, aby ponowić próbę przetwarzania w dowolnym momencie w czasie. Elementu ReceiveContext udostępnia mechanizm "kończenie" komunikat po przetworzeniu, dzięki czemu może ono zostać usunięte z kolejki. Komunikaty są nie jest już kolejek odczytu i ponownie zapis za pośrednictwem sieci, a poszczególne komunikaty nie są odbijania między wystąpieniami innej usługi podczas przetwarzania.|  
-|retryCycleDelay|Wartość przedziału czasu, który określa czas opóźnienia między cykle przy próbie dostarczenia komunikatu, którego nie można dostarczyć natychmiast. Wartość określa tylko minimalny czas oczekiwania, ponieważ rzeczywisty czas może być dłużej. Wartość domyślna to 00:30:00. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.|  
-|sendTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na ukończenie operacji wysyłania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
-|serializationFormat|Określa format używany do serializacji w treści wiadomości. Ten atrybut jest typu <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
-|timeToLive|Wartość przedziału czasu, który określa, jak długo komunikaty są prawidłowe, zanim wygasną i umieścić w kolejce wiadomości utraconych. Wartość domyślna to 1.00:00:00.<br /><br /> Ten atrybut jest ustawiony, aby upewnić się, że komunikaty zależne od czasu nie staną się przestarzałe zanim zostaną one przetworzone przez aplikacje odbierające. Komunikat w kolejce, który nie jest używane przez aplikację odbierającą w określonym przedziale czasu jest nazywany wygasnąć. Wygasłe komunikaty są wysyłane do kolejki specjalne o nazwie Kolejka utraconych wiadomości. Lokalizacja kolejkę z utraconymi została ustawiona za pomocą `DeadLetterQueue` atrybut lub odpowiednie domyślne na podstawie gwarancji.|  
-|useMsmqTracing|Wartość logiczna określająca, czy komunikaty przetwarzane przez to powiązanie powinny być śledzone. Wartość domyślna to `false`. Po włączeniu funkcji śledzenia komunikatów raportów tworzonych i wysyłanych do kolejki raportu za każdym razem wiadomości pozostawia lub dociera do komputera usługi kolejkowania komunikatów.|  
-|useSourceJournal|Wartość logiczna, która określa kopie komunikatów przetwarzanych przez to powiązanie powinny być przechowywane w dzienniku źródłowego. Wartość domyślna to `false`.<br /><br /> Umieszczonych w kolejce aplikacji, których chcesz prowadzić rejestr, wiadomości, które pozostało w kolejce wychodzącej komputera można skopiować komunikaty do kolejki dziennika. Gdy wiadomość pozostawia kolejek wychodzących i potwierdzenia otrzymania, czy wiadomość została odebrana na komputerze docelowym, kopia wiadomości są przechowywane w kolejce dziennika systemu komputera wysyłającego.|  
+|closeTimeout|<xref:System.TimeSpan> Wartość określająca interwał czasu podanego do ukończenia operacji zamknięcia. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
+|customDeadLetterQueue|Identyfikator URI, który zawiera lokalizację kolejki utraconych wiadomości dla aplikacji, w której znajdują się komunikaty, które wygasły lub które nie zostały przesłane.<br /><br /> Kolejka utraconych wiadomości jest kolejką w Menedżerze kolejek aplikacji wysyłającej dla wygasłych komunikatów, których dostarczenie nie powiodło się.<br /><br /> Identyfikator URI określony przez <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> musi używać schematu net. MSMQ.|  
+|deadLetterQueue|A <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>. wartość określająca typ używanej kolejki utraconych wiadomości, jeśli istnieje<br /><br /> Kolejka utraconych wiadomości to lokalizacja, w której zostaną przesłane komunikaty, które nie zostały dostarczone do aplikacji.<br /><br /> W przypadku komunikatów, które wymagają gwarancji exactlyOnce (tj. `exactlyOnce` atrybut jest ustawiony na `true`), ten atrybut domyślnie jest kolejką utraconych wiadomości transakcyjnych w całej systemie w usłudze MSMQ.<br /><br /> W przypadku wiadomości, które nie wymagają żadnych gwarancji, ten atrybut `null`domyślnie przyjmuje wartość.|  
+|durable|Wartość logiczna wskazująca, czy komunikat jest trwały, czy nietrwały w kolejce. Trwały komunikat przeżyje awarię Menedżera kolejki, podczas gdy nietrwały komunikat nie jest. Komunikaty nietrwałe są przydatne, gdy aplikacje wymagają mniejszych opóźnień i mogą tolerować sporadycznie utracone komunikaty. Jeśli atrybut jest ustawiony na `true`, komunikaty muszą być trwałe. `exactlyOnce` Wartość domyślna to `true`.|  
+|exactlyOnce|Wartość logiczna wskazująca, czy każdy komunikat jest dostarczany tylko raz. Nadawca zostanie powiadomiony o błędach dostawy. Gdy `durable` jest`false`, ten atrybut jest ignorowany i komunikaty są przesyłane bez gwarancji dostarczania. Wartość domyślna to `true`. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>.|  
+|maxReceivedMessageSize|Dodatnia liczba całkowita, która określa maksymalny rozmiar komunikatu (w bajtach, włącznie z nagłówkami) przetwarzanych przez to powiązanie. Nadawca komunikatu przekraczającego ten limit otrzyma błąd protokołu SOAP. Odbiorca odrzuca komunikat i tworzy wpis zdarzenia w dzienniku śledzenia. Wartość domyślna to 65536. Ta wartość związana z rozmiarem komunikatu jest przeznaczona do ograniczania narażenia na ataki typu "odmowa usługi" (DoS).|  
+|maxRetryCycles|Liczba całkowita, która wskazuje liczbę ponownych prób używanych przez funkcję wykrywania skażonych komunikatów. Komunikat jest skażony komunikatem, gdy nie powiedzie się wszystkie próby dostarczenia wszystkich cykli. Wartość domyślna to 2. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
+|nazwa|Ciąg zawierający nazwę konfiguracji powiązania. Ta wartość powinna być unikatowa, ponieważ jest używana jako identyfikacja dla powiązania. Począwszy od [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], powiązania i zachowania nie muszą mieć nazwy. Aby uzyskać więcej informacji na temat konfiguracji domyślnej i powiązań pustego i zachowań, zobacz [Uproszczona konfiguracja](../../../wcf/simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|openTimeout|<xref:System.TimeSpan> Wartość, która określa przedział czasu podanego na zakończenie operacji otwarcia. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
+|receiveErrorHandling|<xref:System.ServiceModel.ReceiveErrorHandling> Wartość określająca sposób obsługi komunikatów trujących i niewysyłających.|  
+|receiveRetryCount|Liczba całkowita określająca maksymalną liczbę natychmiastowych ponownych prób, która powinna zostać podjęta przez Menedżera kolejki, jeśli transmisja komunikatu z kolejki aplikacji do aplikacji zakończy się niepowodzeniem.<br /><br /> Jeśli zostanie osiągnięta maksymalna liczba prób dostarczenia, a wiadomość nie jest używana przez aplikację, komunikat jest wysyłany do kolejki ponownych prób w celu ponownego dostarczenia w późniejszym czasie. Czas, po którym komunikat jest przesyłany z powrotem do kolejki wysyłania jest kontrolowany przez `retryCycleDelay`. Jeśli cykle ponawiania `maxRetryCycles` docierają do wartości, komunikat jest wysyłany do kolejki trujących komunikatów lub zostanie wysłane potwierdzenie negatywne do nadawcy.|  
+|receiveTimeout|<xref:System.TimeSpan> Wartość określająca interwał czasu podanego do ukończenia operacji odbioru. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:10:00.|  
+|receiveContextEnabled|Wartość logiczna określająca, czy jest włączony kontekst odbioru dla komunikatów przetwarzanych w kolejkach. Gdy ta wartość jest ustawiona `true`na, usługa może "wgląd" w kolejkę wiadomości, aby rozpocząć przetwarzanie, i, jeśli coś się nie dzieje i zostanie zgłoszony wyjątek, pozostaje w kolejce. Usługi mogą również "blokować" komunikaty, aby ponowić próbę przetwarzania w późniejszym czasie. Element ReceiveContext oferuje mechanizm "uzupełniania" komunikatu po przetworzeniu, aby można go było usunąć z kolejki. Komunikaty nie są już odczytywane i zapisywane w kolejkach za pośrednictwem sieci, a poszczególne komunikaty nie przeodbijają się w różnych wystąpieniach usługi podczas przetwarzania.|  
+|retryCycleDelay|Wartość TimeSpan określająca czas opóźnienia między kolejnymi próbami dostarczenia komunikatu, którego nie można było dostarczyć natychmiast. Wartość definiuje tylko minimalny czas oczekiwania, ponieważ rzeczywisty czas oczekiwania może być dłuższy. Wartość domyślna to 00:30:00. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.|  
+|sendTimeout|<xref:System.TimeSpan> Wartość określająca interwał czasu podanego do ukończenia operacji wysyłania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
+|serializationFormat|Definiuje format używany do serializacji treści komunikatu. Ten atrybut jest typu <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
+|timeToLive|Wartość TimeSpan określająca czas ważności komunikatów przed ich wygaśnięciem i umieszczona w kolejce utraconych wiadomości. Wartość domyślna to 1,00:00:00.<br /><br /> Ten atrybut jest ustawiony w celu zapewnienia, że komunikaty zależne od czasu nie stają się nieodświeżone przed przetworzeniem przez aplikacje do odebrania. Wiadomość w kolejce, która nie jest używana przez aplikację otrzymującą w określonym przedziale czasu, jest uznawana za wygasłą. Wygasłe komunikaty są wysyłane do kolejki specjalnej zwanej kolejką utraconych wiadomości. Lokalizacja kolejki utraconych wiadomości jest ustawiana z `DeadLetterQueue` atrybutem lub z odpowiednim ustawieniem domyślnym w oparciu o gwarancje.|  
+|useMsmqTracing|Wartość logiczna określająca, czy komunikaty przetwarzane przez to powiązanie powinny być śledzone. Wartość domyślna to `false`. Gdy śledzenie jest włączone, wiadomości raportów są tworzone i wysyłane do kolejki raportu za każdym razem, gdy komunikat opuszcza lub dociera do komputera usługi kolejkowania komunikatów.|  
+|useSourceJournal|Wartość logiczna określająca kopie komunikatów przetwarzanych przez to powiązanie powinny być przechowywane w dzienniku źródłowym. Wartość domyślna to `false`.<br /><br /> W kolejce aplikacje, które chcą zachować rekord komunikatów, które zostały pozostawione przez kolejkę wychodzącą komputera, mogą kopiować komunikaty do kolejki dziennika. Gdy wiadomość opuszcza kolejkę wychodzącą i otrzyma potwierdzenie odebrania komunikatu na komputerze docelowym, kopia komunikatu jest przechowywana w kolejce dziennika systemowego komputera wysyłającego.|  
   
-## <a name="serializationformat-attribute"></a>{serializationFormat} Atrybut  
+## <a name="serializationformat-attribute"></a>{serializationFormat} Przypisane  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |Xml|XML format|  
 |plików binarnych|Format binarny|  
-|ActiveX|ActiveX format|  
-|ByteArray|Serializuje obiekt jako tablicę bajtów.|  
-|Strumień|Treść jest formatowana jako strumienia|  
+|ActiveX|Format ActiveX|  
+|ByteArray|Serializacja obiektu do tablicy bajtów.|  
+|Strumień|Treść sformatowana jako strumień|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-msmqintegrationbinding.md)|Definiuje ustawienia zabezpieczeń dla wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
+|[\<> zabezpieczeń](security-of-msmqintegrationbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<powiązania >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Ten element przetrzymuje kolekcję powiązań standardowych i niestandardowych.|  
+|[\<> powiązań](bindings.md)|Ten element zawiera kolekcję powiązań standardowych i niestandardowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element powiązania może służyć do włączenia aplikacji Windows Communication Foundation (WCF) wysyłać i odbierać komunikaty z istniejącej aplikacji usługi MSMQ, które używają COM, natywnych interfejsów API usługi MSMQ lub typów zdefiniowanych w <xref:System.Messaging?displayProperty=nameWithType> przestrzeni nazw użytkownik można użyć tego elementu konfiguracji, aby określić metody rozwiązania kolejki transferu gwarancje, czy komunikaty muszą być trwale przechowywane i jak chronione i uwierzytelnione komunikaty. Aby uzyskać więcej informacji, zobacz [jak: Wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami usługi kolejkowania komunikatów](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
+ Ten element powiązania może służyć do włączania aplikacji Windows Communication Foundation (WCF) do wysyłania komunikatów do i odbierania komunikatów z istniejących aplikacji usługi MSMQ, które korzystają z natywnych interfejsów API com, MSMQ lub typów zdefiniowanych <xref:System.Messaging?displayProperty=nameWithType> w przestrzeni nazw. można użyć tego elementu konfiguracji, aby określić sposoby adresowania kolejki, gwarancje transferu, czy komunikaty muszą być trwale przechowywane, oraz sposób ochrony i uwierzytelniania komunikatów. Aby uzyskać więcej informacji, zobacz [jak: Wymiana komunikatów z punktami końcowymi WCF i aplikacjami](../../../wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)usługi kolejkowania komunikatów.  
   
 ## <a name="example"></a>Przykład  
   
@@ -134,8 +134,8 @@ msmqIntegrationBinding
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
-- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Kolejki programu WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [\<> powiązania](../../../misc/binding.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [Kolejki programu WCF](../../../wcf/feature-details/queues-in-wcf.md)

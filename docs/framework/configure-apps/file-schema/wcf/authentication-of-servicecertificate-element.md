@@ -1,24 +1,24 @@
 ---
-title: <authentication> z <serviceCertificate> — Element
+title: <authentication><serviceCertificate> elementu
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: b96d53312d672eebd67de82f69cd9a0a2b5bd22e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d770ba1f9a0a18c927b3a4bf6d4141286e3a380c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704469"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919982"
 ---
-# <a name="authentication-of-servicecertificate-element"></a>\<Uwierzytelnianie > z \<serviceCertificate > Element
+# <a name="authentication-of-servicecertificate-element"></a>\<> \<uwierzytelniania elementu > serviceCertificate
 Określa ustawienia używane przez serwer proxy klienta do uwierzytelniania certyfikatów usługi, które są uzyskiwane przy użyciu negocjacji SSL/TLS.  
   
  \<system.ServiceModel>  
-\<zachowania >  
-sekcja endpointBehaviors  
-\<zachowanie >  
+\<> zachowań  
+Sekcja endpointBehaviors  
+\<> zachowania  
 \<clientCredentials>  
-\<serviceCertificate>  
-\<authentication>  
+\<> serviceCertificate  
+\<> uwierzytelniania  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,40 +30,40 @@ sekcja endpointBehaviors
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|customCertificateValidatorType|ciąg. Typ i zestaw używany do walidacji typu niestandardowego.|  
-|certificateValidationMode|Określa jeden z trzech trybów używanych do walidacji poświadczenia. Jeśli ustawiono `Custom`, a następnie customCertificateValidator musi również zostać dostarczony. Wartość domyślna to `ChainTrust`.|  
-|revocationMode|Jeden z trybów użytych do sprawdzenia odwołanych list certyfikatów (CRL). Wartość domyślna to `Online`.|  
-|trustedStoreLocation|Jedną z dwóch lokalizacji magazynu systemu: `LocalMachine` lub `CurrentUser`. Ta wartość jest używana, gdy certyfikat usługi jest negocjowane do klienta. Sprawdzanie poprawności jest wykonywane względem **zaufane osoby** są przechowywane w lokalizacji określonego magazynu. Wartość domyślna to `CurrentUser`.|  
+|customCertificateValidatorType|Parametry. Typ i zestaw używany do walidacji typu niestandardowego.|  
+|certificateValidationMode|Określa jeden z trzech trybów używanych do walidacji poświadczeń. Jeśli jest ustawiona `Custom`na, należy również podać CustomCertificateValidator. Wartość domyślna to `ChainTrust`.|  
+|odwołaniemode|Jeden z trybów użytych do sprawdzenia odwołanych list certyfikatów (CRL). Wartość domyślna to `Online`.|  
+|trustedStoreLocation|Jedna z dwóch lokalizacji magazynu systemowego: `LocalMachine` lub `CurrentUser`. Ta wartość jest używana podczas negocjowania certyfikatu usługi z klientem. Sprawdzanie poprawności jest wykonywane względem magazynu **osób zaufanych** w określonej lokalizacji magazynu. Wartość domyślna to `CurrentUser`.|  
   
-## <a name="customcertificatevalidator-attribute"></a>customCertificateValidator Attribute  
-  
-|Wartość|Opis|  
-|-----------|-----------------|  
-|String|Określa nazwę typu i zestawu i inne dane, używana do znajdowania typu.|  
-  
-## <a name="certificatevalidationmode-attribute"></a>tryb certificateValidationMode atrybutu  
+## <a name="customcertificatevalidator-attribute"></a>customCertificateValidator — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Jeden z następujących wartości: Brak zaufania elementów równorzędnych, ChainTrust, PeerOrChainTrust, niestandardowe.<br /><br /> Aby uzyskać więcej informacji, zobacz [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|String|Określa nazwę typu i zestaw oraz inne dane używane do znajdowania typu.|  
   
-## <a name="revocationmode-attribute"></a>revocationMode atrybutu  
-  
-|Wartość|Opis|  
-|-----------|-----------------|  
-|Wyliczenie|Jeden z następujących wartości: NoCheck, Online, Offline.<br /><br /> Aby uzyskać więcej informacji, zobacz [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
-  
-## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation atrybutu  
+## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Jeden z następujących wartości: LocalMachine lub CurrentUser. Wartość domyślna to CurrentUser. Jeśli aplikacja kliencka jest uruchomiona w ramach konta systemowego, następnie certyfikat jest zazwyczaj w obszarze LocalMachine. Jeśli aplikacja kliencka jest uruchomiona w ramach konta użytkownika, następnie certyfikat znajduje się zwykle w CurrentUser.|  
+|Wyliczenie|Jedna z następujących wartości: None, zaufania elementów równorzędnych, ChainTrust, PeerOrChainTrust, Custom.<br /><br /> Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md).|  
+  
+## <a name="revocationmode-attribute"></a>Atrybut odwołania  
+  
+|Wartość|Opis|  
+|-----------|-----------------|  
+|Wyliczenie|Jedna z następujących wartości: NOCHECK, online, offline.<br /><br /> Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md).|  
+  
+## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation — atrybut  
+  
+|Wartość|Opis|  
+|-----------|-----------------|  
+|Wyliczenie|Jedna z następujących wartości: LocalMachine lub CurrentUser. Wartość domyślna to CurrentUser. Jeśli aplikacja kliencka jest uruchomiona na koncie systemowym, certyfikat jest zwykle w obszarze LocalMachine. Jeśli aplikacja kliencka jest uruchomiona w ramach konta użytkownika, certyfikat zazwyczaj znajduje się w CurrentUser.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -72,15 +72,15 @@ sekcja endpointBehaviors
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Określa certyfikat używany podczas uwierzytelniania usługi dla klienta.|  
+|[\<> serviceCertificate](servicecertificate-of-clientcredentials-element.md)|Określa certyfikat, który ma być używany podczas uwierzytelniania usługi dla klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
- `certificateValidationMode` Atrybut ten element konfiguracji określa poziom zaufania, używany do uwierzytelniania certyfikatów. Domyślnie ustawiono poziom `ChainTrust`, która określa, że każdy certyfikat musi zostać znaleziony w hierarchii końcówce zaufanego urzędu certyfikacji w górnej części łańcucha certyfikatów. Jest to najbezpieczniejsza opcja Tryb. Można również ustawić wartość, `PeerOrChainTrust`, która określa, że własnym wystawionych certyfikatów (relacja zaufania elementów równorzędnych) są akceptowane oraz certyfikaty, które znajdują się w zaufanym łańcuchem. Ta wartość jest używana podczas opracowywania i debugowania klientów i usług, ponieważ własnym wystawionych certyfikatów nie należy zakupić od zaufanego urzędu. Podczas wdrażania klienta, użyj `ChainTrust` jest wartość. Można również ustawić wartość, `Custom` lub `None`. Aby użyć `Custom` wartości, należy także ustawić `customCertificateValidator` atrybutu do zestawu i typ używany do weryfikacji certyfikatu. Aby utworzyć własny niestandardowy moduł sprawdzania poprawności, musi dziedziczyć z klasy abstrakcyjnej X509CertificateValidator. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ `certificateValidationMode` Atrybut tego elementu konfiguracji określa poziom zaufania używany do uwierzytelniania certyfikatów. Domyślnie poziom jest ustawiony na `ChainTrust`, który określa, że każdy certyfikat musi znajdować się w hierarchii certyfikatów kończących się zaufanym urzędem certyfikacji w górnej części łańcucha. Jest to najbardziej bezpieczny tryb. Można również ustawić wartość na `PeerOrChainTrust`, która określa, że certyfikaty samodzielne (relacja równorzędna) są akceptowane, a także certyfikaty, które znajdują się w zaufanym łańcuchu. Ta wartość jest używana podczas tworzenia i debugowania klientów i usług, ponieważ certyfikaty wystawione przez siebie nie muszą zostać zakupione z zaufanego urzędu. Podczas wdrażania klienta należy zamiast tego użyć `ChainTrust` wartości. Możesz również ustawić wartość na `Custom` lub. `None` Aby użyć `Custom` wartości, należy również `customCertificateValidator` ustawić atrybut na zestaw i typ używany do walidacji certyfikatu. Aby utworzyć własny niestandardowy moduł sprawdzania poprawności, należy dziedziczyć z klasy abstrakcyjnej X509CertificateValidator. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji](../../../wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)certyfikatów.  
   
- `revocationMode` Atrybut określa, jak certyfikaty są sprawdzane pod kątem odwołań. Wartość domyślna to `online` co oznacza, że certyfikaty będą automatycznie sprawdzane dla odwołania. Aby uzyskać więcej informacji, zobacz [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Ten `revocationMode` atrybut określa, jak certyfikaty są sprawdzane pod kątem odwołania. Wartość domyślna `online` wskazuje, że certyfikaty będą sprawdzane automatycznie w celu odwołania. Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład wykonuje dwa zadania. Najpierw Określa certyfikat usługi dla klienta do użycia podczas komunikowania się z punktami końcowymi, których nazwa domeny jest `www.contoso.com` za pośrednictwem protokołu HTTP. Po drugie określa wartości odwołania tryb i magazynem lokalizację używane podczas uwierzytelniania.  
+ Poniższy przykład wykonuje dwa zadania. Najpierw określa certyfikat usługi, który ma być używany przez klienta podczas komunikowania się z punktami końcowymi, których nazwa domeny znajduje się `www.contoso.com` za pośrednictwem protokołu HTTP. Po drugie określa tryb odwołania i lokalizację magazynu używane podczas uwierzytelniania.  
   
 ```xml  
 <serviceCertificate>
@@ -106,9 +106,9 @@ sekcja endpointBehaviors
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.Authentication%2A>
 - <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication>
-- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Instrukcje: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
-- [\<Uwierzytelnianie >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
-- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Zachowania zabezpieczeń](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md)
+- [Instrukcje: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów](../../../wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [\<> uwierzytelniania](authentication-of-clientcertificate-element.md)
+- [Zabezpieczanie klientów](../../../wcf/securing-clients.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)

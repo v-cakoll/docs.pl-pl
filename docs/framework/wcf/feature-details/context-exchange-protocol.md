@@ -2,44 +2,44 @@
 title: Protokół wymiany kontekstu
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: cb6e52b5622316cfaa9c56b26c3aac6764c71cca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19780cccc74f8c3615dc844e47be7613ca5f8bc1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651109"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911204"
 ---
 # <a name="context-exchange-protocol"></a>Protokół wymiany kontekstu
-W tej sekcji opisano protokół wymiany kontekstu, które są wprowadzone w programie Windows Communication Foundation (WCF) w wersji .NET Framework w wersji 3.5. Ten protokół umożliwia kanału klienta akceptować kontekst dostarczonych przez usługę i zastosować je do wszystkich kolejnych żądań wysyłanych za pośrednictwem tego samego wystąpienia kanału klienta usługi. Implementacja protokół wymiany kontekstu, można użyć jednej z dwóch następujących mechanizmów propagowanie kontekstu między serwerem a klientem: Pliki cookie protokołu HTTP lub nagłówek SOAP.  
+W tej sekcji opisano protokół wymiany kontekstu wprowadzony w Windows Communication Foundation (WCF) Release .NET Framework wersja 3,5. Ten protokół umożliwia kanałowi klienta akceptowanie kontekstu dostarczonego przez usługę i zastosowanie go do wszystkich kolejnych żądań wysyłanych przez to samo wystąpienie kanału klienta. Implementacja protokołu wymiany kontekstu może używać jednego z następujących dwóch mechanizmów do propagowania kontekstu między serwerem a klientem: Pliki cookie protokołu HTTP lub nagłówek protokołu SOAP.  
   
- Protokół wymiany kontekstu jest zaimplementowana w niestandardowym kanale warstwy. Kanał komunikuje się kontekstu do i z warstwy aplikacji przy użyciu <xref:System.ServiceModel.Channels.ContextMessageProperty> właściwości. Dla transmisji między punktami końcowymi wartość kontekstu jest serializowana jako nagłówek SOAP w warstwie kanału albo konwertowana do lub z właściwości komunikatu, które reprezentują żądania HTTP i odpowiedzi. W tym ostatnim przypadku oczekuje się, że jeden z niższych warstwach kanału konwertuje właściwości komunikatów żądań i odpowiedzi HTTP do i z plików cookie protokołu HTTP, odpowiednio. Wybór mechanizm używany do wymiany kontekstu jest wykonywane przy użyciu <xref:System.ServiceModel.Channels.ContextExchangeMechanism> właściwość <xref:System.ServiceModel.Channels.ContextBindingElement>. Prawidłowe wartości to `HttpCookie` lub `SoapHeader`.  
+ Protokół wymiany kontekstu jest implementowany w niestandardowej warstwie kanału. Kanał komunikuje kontekst z i z warstwy aplikacji przy użyciu <xref:System.ServiceModel.Channels.ContextMessageProperty> właściwości. W przypadku przesyłania między punktami końcowymi wartość kontekstu jest serializowana jako nagłówek protokołu SOAP w warstwie kanału lub konwertowana na lub z właściwości wiadomości reprezentujących żądanie HTTP i odpowiedź. W tym drugim przypadku oczekuje się, że jedna z warstw źródłowych kanałów konwertuje właściwości żądania HTTP i komunikatu odpowiedzi na i z plików cookie protokołu HTTP. Wybór mechanizmu służącego do wymiany kontekstu odbywa się przy użyciu <xref:System.ServiceModel.Channels.ContextExchangeMechanism> właściwości <xref:System.ServiceModel.Channels.ContextBindingElement>w. Prawidłowe wartości to `HttpCookie` lub `SoapHeader`.  
   
- Na komputerze klienckim, wystąpienie kanału może działać w dwóch trybach zgodnie z ustawieniami właściwości kanału <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>.  
+ Na kliencie wystąpienie kanału może działać w dwóch trybach na podstawie ustawień właściwości <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>kanału.  
   
-## <a name="mode-1-channel-context-management"></a>Tryb 1: Kanał zarządzania kontekstem  
- Jest to domyślny tryb gdzie <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> ustawiono `true`. W tym trybie kanał kontekstu zarządza kontekstu i zapisuje w jego okres istnienia pamięci podręcznej kontekstu. Z kanału za pomocą właściwości kanału można pobrać kontekstu `IContextManager` przez wywołanie metody `GetContext` metody. Kanał można również wstępnie zainicjowana przy użyciu określonego kontekstu przed otwierana, wywołując `SetContext` metody właściwości kanału. Gdy kanał jest inicjowany z kontekstem nie można zresetować.  
+## <a name="mode-1-channel-context-management"></a>Tryb 1: Zarządzanie kontekstem kanału  
+ Jest to domyślny tryb, w <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> którym `true`ustawiono. W tym trybie kanał kontekstu zarządza kontekstem i buforuje kontekst w trakcie okresu istnienia. Kontekst można pobrać ze swojej właściwości `IContextManager` kanału za pośrednictwem kanału, `GetContext` wywołując metodę. Kanał może być również wstępnie zainicjowany przy użyciu określonego kontekstu przed otwarciem przez wywołanie `SetContext` metody we właściwości kanału. Po zainicjowaniu kanału z kontekstem nie można go zresetować.  
   
- Oto lista invariants w tym trybie:  
+ Poniżej znajduje się lista nieodmian w tym trybie:  
   
-- Dowolne próba zresetowania przy użyciu kontekstu `SetContext` po zgłasza otwarty kanał <xref:System.InvalidOperationException>.  
+- Każda próba zresetowania kontekstu przy użyciu `SetContext` po otwarciu kanału <xref:System.InvalidOperationException>zgłasza.  
   
-- Dowolne próba wysłania kontekstu przy użyciu <xref:System.ServiceModel.Channels.ContextMessageProperty> w wychodzących wiadomościach zgłasza <xref:System.InvalidOperationException>.  
+- Wszystkie próby wysłania kontekstu przy użyciu <xref:System.ServiceModel.Channels.ContextMessageProperty> w wiadomości wychodzącej <xref:System.InvalidOperationException>zgłaszają.  
   
-- Gdy wiadomość zostaje odebrana od serwera przy użyciu określonego kontekstu, gdy kanał został już zainicjowany przy użyciu określonego kontekstu, powoduje to <xref:System.ServiceModel.ProtocolException>.  
+- Jeśli wiadomość zostanie odebrana z serwera z określonym kontekstem, gdy kanał został już zainicjowany z określonym kontekstem, spowoduje <xref:System.ServiceModel.ProtocolException>to.  
   
     > [!NOTE]
-    >  Jest otrzymywać początkowej kontekstu z serwera, tylko wtedy, gdy kanał zostanie otwarty bez żadnego kontekstu ustawiony w sposób jawny.  
+    > Należy uzyskać początkowy kontekst z serwera tylko wtedy, gdy kanał jest otwarty bez jawnie określonego kontekstu.  
   
-- <xref:System.ServiceModel.Channels.ContextMessageProperty> Na przychodzący komunikat jest zawsze wartość null.  
+- <xref:System.ServiceModel.Channels.ContextMessageProperty> Komunikat przychodzący ma zawsze wartość null.  
   
 ## <a name="mode-2-application-context-management"></a>Tryb 2: Zarządzanie kontekstem aplikacji  
- Jest to tryb podczas <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> ustawiono `false`. W tym trybie kanał kontekstu nie zarządza kontekstu. Odpowiada za aplikację do pobrania, zarządzania i zastosować kontekst za pomocą <xref:System.ServiceModel.Channels.ContextMessageProperty>. Dowolne próba wywołania `GetContext` lub `SetContext` skutkuje <xref:System.InvalidOperationException>.  
+ Jest to tryb, gdy <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> jest ustawiony na `false`. W tym trybie kanał kontekstu nie zarządza kontekstem. Jest on odpowiedzialny za pobieranie, zarządzanie i stosowanie kontekstu przy użyciu <xref:System.ServiceModel.Channels.ContextMessageProperty>. Każda próba wywołania `GetContext` lub `SetContext` wyniku w <xref:System.InvalidOperationException>.  
   
- Niezależnie od tego trybu jest wybierany fabryki kanałów klienta obsługuje <xref:System.ServiceModel.Channels.IRequestChannel>, <xref:System.ServiceModel.Channels.IRequestSessionChannel>, i <xref:System.ServiceModel.Channels.IDuplexSessionChannel> komunikatu wzorców programu exchange.  
+ Niezależnie od tego, który tryb jest wybierany przez fabrykę <xref:System.ServiceModel.Channels.IRequestSessionChannel>kanałów klienta <xref:System.ServiceModel.Channels.IDuplexSessionChannel> obsługuje <xref:System.ServiceModel.Channels.IRequestChannel>, oraz wzorce wymiany komunikatów.  
   
- W usłudze jest odpowiedzialny za kontekstu dostarczonych przez klienta na komunikaty przychodzące do konwertowania wystąpienia kanału <xref:System.ServiceModel.Channels.ContextMessageProperty>. Właściwość wiadomości mogą następnie dostęp do warstwy aplikacji lub innych kanałów dalsze się w stosie wywołań. Kanały usługi również zezwolić na użycie warstwy aplikacji, aby określić nową wartość kontekstu do jest propagowany z powrotem do klienta przez dołączenie <xref:System.ServiceModel.Channels.ContextMessageProperty> komunikat odpowiedzi. Ta właściwość jest konwertowana na nagłówek SOAP lub pliku cookie HTTP, który zawiera kontekst, który zależy od konfiguracji powiązania. Usługa obsługuje odbiornika kanału <xref:System.ServiceModel.Channels.IReplyChannel>, <xref:System.ServiceModel.Channels.IReplySessionChannel>, i <xref:System.ServiceModel.Channels.IReplySessionChannel> komunikatu wzorców programu exchange.  
+ W usłudze wystąpienie kanału jest odpowiedzialne za konwertowanie kontekstu dostarczonego przez klienta na komunikaty przychodzące do <xref:System.ServiceModel.Channels.ContextMessageProperty>. Do właściwości komunikatu można następnie uzyskać dostęp za pomocą warstwy aplikacji lub innych kanałów w dalszej kolejności w stosie wywołań. Kanały usług umożliwiają także określenie nowej wartości kontekstu, która ma być propagowana do klienta przez dołączenie <xref:System.ServiceModel.Channels.ContextMessageProperty> do komunikatu odpowiedzi. Ta właściwość jest konwertowana na nagłówek protokołu SOAP lub plik cookie HTTP zawierający kontekst, który zależy od konfiguracji powiązania. Odbiornik kanału usługi obsługuje <xref:System.ServiceModel.Channels.IReplyChannel>wzorce wymiany komunikatów, <xref:System.ServiceModel.Channels.IReplySessionChannel> <xref:System.ServiceModel.Channels.IReplySessionChannel>i.  
   
- Protokół wymiany kontekstu wprowadzono nowy `wsc:Context` nagłówek SOAP reprezentujący informacje o kontekście podczas plików cookie protokołu HTTP nie są używane do propagowania kontekstu. Schemat nagłówka kontekst zezwala na dowolną liczbę elementów podrzędnych, każdy z klucza typu ciąg i zawartość ciągu. Oto przykład nagłówka kontekstu.  
+ Protokół wymiany kontekstu wprowadza nowy `wsc:Context` nagłówek protokołu SOAP do reprezentowania informacji kontekstowych, gdy pliki cookie protokołu HTTP nie są używane do propagowania kontekstu. Schemat nagłówka kontekstu umożliwia dowolną liczbę elementów podrzędnych, z których każdy ma klucz ciągu i zawartość ciągu. Poniżej znajduje się przykład nagłówka kontekstu.  
   
  `<Context xmlns="http://schemas.microsoft.com/ws/2006/05/context">`  
   
@@ -47,13 +47,13 @@ W tej sekcji opisano protokół wymiany kontekstu, które są wprowadzone w prog
   
  `</Context>`  
   
- W `HttpCookie` trybu plików cookie są ustawiane przy użyciu `SetCookie` nagłówka. Nazwa pliku cookie jest `WscContext`. Wartość pliku cookie jest Base64 kodowanie `wsc:Context` nagłówka. Ta wartość jest ujęty w cudzysłów.  
+ W trybie `HttpCookie` w przypadku pliki cookie są ustawiane `SetCookie` przy użyciu nagłówka. Nazwa pliku cookie to `WscContext`. Wartość pliku cookie jest kodowaniem `wsc:Context` Base64 nagłówka. Ta wartość jest ujęta w cudzysłów.  
   
- Wartość kontekstu muszą być chronione przed modyfikacjami, podczas przesyłania z tego samego powodu nagłówków WS-Addressing są chronione — nagłówek służy do określania miejsca możesz wysyłać żądania do usługi. `wsc:Context` Nagłówek w związku z tym jest wymagany cyfrowo podpisane lub podpisane i szyfrowane na poziomie protokołu SOAP lub transportu, gdy powiązanie oferuje możliwości ochrony wiadomości. W przypadku używania plików cookie protokołu HTTP do propagowania kontekstu one powinny być chronione za pomocą zabezpieczeń transportu.  
+ Wartość kontekstu musi być chroniona przed modyfikacją podczas przesyłania. z tego samego powodu nagłówki WS-Addressing są chronione — nagłówek służy do określania, gdzie należy wysłać żądanie do usługi. W `wsc:Context` związku z tym nagłówek musi być cyfrowo podpisany lub podpisany i zaszyfrowany na poziomie protokołu SOAP lub transportu, gdy powiązanie oferuje funkcję ochrony wiadomości. Gdy pliki cookie protokołu HTTP są używane do propagowania kontekstu, powinny być chronione przy użyciu zabezpieczeń transportu.  
   
- Punkty końcowe usługi, które wymagają obsługi protokół wymiany kontekstu można tworzyć i jawne w opublikowanych zasad. Dwa nowe asercji zasad zostały wprowadzone do reprezentowania potrzebę klient obsługuje protokół wymiany kontekstu na poziomie protokołu SOAP lub włączyć obsługę plików cookie protokołu HTTP. Generowanie tych potwierdzenia do zasad w usłudze jest kontrolowany przez wartość <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> właściwości w następujący sposób:  
+ Punkty końcowe usługi, które wymagają obsługi protokołu wymiany kontekstu, mogą jawnie wprowadzać je w opublikowane zasady. Wprowadzono dwa nowe potwierdzenia zasad reprezentujące wymaganie, aby klient obsługiwał protokół wymiany kontekstu na poziomie protokołu SOAP lub włączyć obsługę plików cookie protokołu HTTP. Generowanie tych potwierdzeń w zasadach w usłudze jest kontrolowane przez wartość <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> właściwości w następujący sposób:  
   
-- Aby uzyskać <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>, generowany jest potwierdzenie następujących:  
+- Dla <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>programu generowane jest następujące potwierdzenie:  
   
     ```xml  
     <IncludeContext   
@@ -61,7 +61,7 @@ W tej sekcji opisano protokół wymiany kontekstu, które są wprowadzone w prog
     protectionLevel="Sign" />  
     ```  
   
-- Aby uzyskać <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>, generowany jest potwierdzenie następujących:  
+- Dla <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>programu generowane jest następujące potwierdzenie:  
   
     ```xml  
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  

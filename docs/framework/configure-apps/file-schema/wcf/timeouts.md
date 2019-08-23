@@ -2,19 +2,19 @@
 title: <timeOuts>
 ms.date: 03/30/2017
 ms.assetid: 7fccd436-b326-48ec-8de1-c16817a09e0d
-ms.openlocfilehash: b6ae5faa2dd2ffef9669a0245a75227b0f669cf7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b159488efa2a80a9dea625e4c6dfe2f215dfc457
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758226"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939186"
 ---
 # <a name="timeouts"></a>\<timeOuts>
-Reprezentuje element konfiguracji, który określa przedział czasu dozwolony usługi hosta na otwarcie lub zamknięcie.  
+Reprezentuje element konfiguracji, który określa przedział czasu dozwolony na otwarcie lub zamknięcie hosta usługi.  
   
  \<system.ServiceModel>  
-\<client>  
-\<punkt końcowy >  
+\<> klienta  
+\<> punktu końcowego  
 \<host>  
 \<timeOuts>  
   
@@ -32,8 +32,8 @@ Reprezentuje element konfiguracji, który określa przedział czasu dozwolony us
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`closeTimeout`|A <xref:System.TimeSpan> wartość, która określa przedział czasu dozwolony na zamknięcie usługi hosta.|  
-|`openTimeout`|A <xref:System.TimeSpan> wartość, która określa okres czasu dozwolony dla otwarcie usługi hosta.|  
+|`closeTimeout`|<xref:System.TimeSpan> Wartość, która określa przedział czasu, jaki może być zamknięty dla hosta usługi.|  
+|`openTimeout`|<xref:System.TimeSpan> Wartość, która określa przedział czasu, jaki może otworzyć Host usługi.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -42,10 +42,10 @@ Reprezentuje element konfiguracji, który określa przedział czasu dozwolony us
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Element konfiguracji, który określa ustawienia dla usługi hosta.|  
+|[\<host>](host.md)|Element konfiguracji, który określa ustawienia dla hosta usługi.|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
-- [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [Hosting](../../../wcf/feature-details/hosting.md)

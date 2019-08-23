@@ -8,30 +8,30 @@ helpviewer_keywords:
 - adorners [WPF], binding to children of Panels
 - Panel control [WPF], binding adorners to children
 ms.assetid: 4cc9b972-b472-4e5c-bdf3-3702d7fbb1f5
-ms.openlocfilehash: 746f197a5132934f94a678dc3b5e2a1f65eb93bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 739ccaa0273e66c4650c35217a1156d64336dbbb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019025"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923523"
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a>Instrukcje: Powiązywanie elementów podrzędnych panelu
-W tym przykładzie pokazano, jak programowo powiązać moduł definiowania układu z element podrzędny określonego <xref:System.Windows.Controls.Panel>.  
+W tym przykładzie pokazano, jak programowo powiązać moduł definiowania układu z elementami podrzędnymi określonego <xref:System.Windows.Controls.Panel>.  
   
 ## <a name="example"></a>Przykład  
- Aby powiązać moduł definiowania układu z elementami podrzędnymi <xref:System.Windows.Controls.Panel>, wykonaj następujące kroki:  
+ Aby powiązać moduł definiowania układu z elementami podrzędnymi programu <xref:System.Windows.Controls.Panel>, wykonaj następujące kroki:  
   
-1. Zadeklaruj nowy <xref:System.Windows.Documents.AdornerLayer> obiektu, a następnie wywołać `static` <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> metody do znalezienia warstwy moduł definiowania układu dla elementu, którego elementy podrzędne, które mają być powiązany.  
+1. Zadeklaruj nowy <xref:System.Windows.Documents.AdornerLayer> obiekt i `static` <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> Wywołaj metodę, aby znaleźć warstwę modułu definiowania układu dla elementu, którego elementy podrzędne mają być podłączane.  
   
-2. Wyliczyć elementy podrzędne elementu nadrzędnego, a wywołanie <xref:System.Windows.Documents.AdornerLayer.Add%2A> metodę, aby powiązać moduł definiowania układu z każdego elementu podrzędnego.  
+2. Wylicz elementy podrzędne elementu nadrzędnego i Wywołaj <xref:System.Windows.Documents.AdornerLayer.Add%2A> metodę, aby powiązać moduł definiowania układu z każdym elementem podrzędnym.  
   
- Poniższy przykład tworzy powiązanie SimpleCircleAdorner (pokazany powyżej), z elementami podrzędnymi <xref:System.Windows.Controls.StackPanel> o nazwie *myStackPanel*.  
+ Poniższy przykład wiąże element SimpleCircleAdorner (pokazany powyżej) z elementem <xref:System.Windows.Controls.StackPanel> podrzędnym o nazwie *myStackPanel*.  
   
  [!code-csharp[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornchildren)]
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 > [!NOTE]
->  Za pomocą [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] powiązać moduł definiowania układu z innego elementu nie jest obecnie obsługiwane.  
+> Używanie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] do powiązania modułu definiowania układu z innym elementem nie jest obecnie obsługiwane.  
   
 ## <a name="see-also"></a>Zobacz także
 

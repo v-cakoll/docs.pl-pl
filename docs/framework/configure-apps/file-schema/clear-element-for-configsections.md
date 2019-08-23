@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: e79def513637937262d00b0edb1b0f7676fd120b
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: c06fca8b83638fb47bedb21863cb9b200cd211f3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300805"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927729"
 ---
-# <a name="clear-element-for-configsections"></a>\<Wyczyść >, element dla \<configSections >
+# <a name="clear-element-for-configsections"></a>\<Wyczyść element > dla \<configSections >
 
-Czyści wszystkie wcześniej zdefiniowanego sekcje i grupy sekcji.
+Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji.
 
-[ **\<Konfiguracja >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+[ **\<> konfiguracji**](configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>Składnia
@@ -40,7 +40,7 @@ Czyści wszystkie wcześniej zdefiniowanego sekcje i grupy sekcji.
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Zawiera deklaracje sekcji i przestrzeni nazw konfiguracji. |
+| [configSections, element >  **\<** ](configsections-element-for-configuration.md) | Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
@@ -48,13 +48,13 @@ Brak
 
 ## <a name="remarks"></a>Uwagi
 
-**\<Wyczyść >** elementu usuwa wszystkie sekcje i grup sekcji z Twojej aplikacji, które zostały wcześniej zdefiniowane w bieżącym pliku konfiguracji lub wyższego poziomu w hierarchii plików konfiguracji.
+Element **Clear > usuwa wszystkie sekcje i grupy sekcji z aplikacji, które zostały zdefiniowane wcześniej w bieżącym pliku konfiguracyjnym lub na wyższym poziomie w hierarchii plików konfiguracji. \<**
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie definiuje plik konfiguracji i pliku konfiguracji aplikacji i przedstawia sposób użycia  **\<Wyczyść >** elementu w pliku konfiguracyjnym aplikacji, aby wyczyścić wcześniej zdefiniowane w sekcji plik konfiguracji komputera.
+W tym przykładzie zdefiniowano plik konfiguracji komputera i plik konfiguracji aplikacji oraz pokazano,  **\<** jak używać elementu Clear > w pliku konfiguracyjnym aplikacji, aby wyczyścić sekcje wcześniej zdefiniowane w konfiguracji maszyny rozszerzeniem.
 
-Poniższy kod pliku konfiguracji maszyny deklaruje dwie sekcje  **\<sampleSection >** i  **\<anotherSampleSection >** , które są odczytywane przed zastosowaniem plik konfiguracji:
+Następujący kod pliku konfiguracji komputera deklaruje dwie sekcje,  **\<sampleSection >** i  **\<anotherSampleSection >** , które są odczytywane przed plikiem konfiguracji aplikacji:
 
 ```xml
 <!-- Machine.config file -->
@@ -71,7 +71,7 @@ Poniższy kod pliku konfiguracji maszyny deklaruje dwie sekcje  **\<sampleSectio
 </configuration>
 ```
 
-Poniższy kod pliku konfiguracji aplikacji czyści wszystkie wcześniej zadeklarowanej sekcje. Aplikacja nie może używać lub pobrać ustawień albo sekcje, które zostały zadeklarowane w pliku konfiguracji komputera. Jednak można użyć ustawień z  **\<anotherSection >** ponieważ pochodzi on po  **\<Wyczyść >** elementu.
+Poniższy kod pliku konfiguracji aplikacji czyści wszystkie wcześniej zadeklarowane sekcje. Aplikacja nie może używać lub pobrać ustawień w żadnej z sekcji zadeklarowanych w pliku konfiguracji maszyny. Może jednak używać ustawień z  **\<anotherSection >**  **\<** , ponieważ znajduje się po elemencie Clear >.
 
 ```xml
 <!-- Application configuration file -->
@@ -89,8 +89,8 @@ Poniższy kod pliku konfiguracji aplikacji czyści wszystkie wcześniej zadeklar
 
 ## <a name="configuration-file"></a>Plik konfiguracji
 
-Ten element może być użyty w pliku konfiguracyjnym aplikacji, plik konfiguracji komputera (*Machine.config*), a *Web.config* pliki, które nie są na poziomie katalogu aplikacji.
+Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schemat pliku konfiguracji dla .NET Framework](index.md)

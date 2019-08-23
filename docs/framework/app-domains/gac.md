@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37c6e87ea50f3978bb896c7896a41b2faa9798bc
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: e5b99597a857f4c7926f783a6531f44fdb1fb7bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566969"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921585"
 ---
 # <a name="global-assembly-cache"></a>Global Assembly Cache
 Każdy komputer, na którym jest zainstalowany środowisko uruchomieniowe języka wspólnego, ma pamięć podręczną kodu całego komputera o nazwie globalna pamięć podręczna zestawów. Globalna pamięć podręczna zestawów przechowuje zestawy specjalnie wyznaczonych do współużytkowania przez kilka aplikacji na komputerze.  
@@ -25,7 +25,7 @@ Każdy komputer, na którym jest zainstalowany środowisko uruchomieniowe język
  Zestawy należy udostępniać, instalując je w globalnej pamięci podręcznej zestawów tylko wtedy, gdy jest to konieczne. Ogólnie rzecz biorąc, Zachowaj zależności zestawów jako prywatne i lokalizowanie zestawów w katalogu aplikacji, o ile udostępnianie zestawu nie jest jawnie wymagane. Ponadto nie trzeba instalować zestawów w globalnej pamięci podręcznej zestawów, aby umożliwić ich dostęp do międzyoperacyjności modelu COM lub kodu niezarządzanego.  
   
 > [!NOTE]
->  Istnieją scenariusze, w których jawnie nie trzeba instalować zestawu w globalnej pamięci podręcznej zestawów. W przypadku umieszczenia jednego z zestawów, które tworzą aplikację w globalnej pamięci podręcznej zestawów, nie można już replikować ani instalować aplikacji przy użyciu polecenia **xcopy** w celu skopiowania katalogu aplikacji. Należy również przenieść zestaw w globalnej pamięci podręcznej zestawów.  
+> Istnieją scenariusze, w których jawnie nie trzeba instalować zestawu w globalnej pamięci podręcznej zestawów. W przypadku umieszczenia jednego z zestawów, które tworzą aplikację w globalnej pamięci podręcznej zestawów, nie można już replikować ani instalować aplikacji przy użyciu polecenia **xcopy** w celu skopiowania katalogu aplikacji. Należy również przenieść zestaw w globalnej pamięci podręcznej zestawów.  
   
  Istnieją dwa sposoby wdrożenia zestawu w globalnej pamięci podręcznej zestawów:  
   
@@ -34,7 +34,7 @@ Każdy komputer, na którym jest zainstalowany środowisko uruchomieniowe język
 - Użyj narzędzia deweloperskiego o nazwie [globalne narzędzie pamięci podręcznej zestawów (Gacutil. exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)dostarczonego przez Windows SDK.  
   
     > [!NOTE]
-    >  W scenariuszach wdrażania należy użyć Instalator Windows, aby zainstalować zestawy w globalnej pamięci podręcznej zestawów. Narzędzia globalnej pamięci podręcznej zestawów można używać tylko w scenariuszach deweloperskich, ponieważ nie zapewnia to zliczania odwołań do zestawów i innych funkcji dostępnych podczas korzystania z Instalator Windows.  
+    > W scenariuszach wdrażania należy użyć Instalator Windows, aby zainstalować zestawy w globalnej pamięci podręcznej zestawów. Narzędzia globalnej pamięci podręcznej zestawów można używać tylko w scenariuszach deweloperskich, ponieważ nie zapewnia to zliczania odwołań do zestawów i innych funkcji dostępnych podczas korzystania z Instalator Windows.  
   
  Począwszy od .NET Framework 4, domyślną lokalizacją globalnej pamięci podręcznej zestawów jest **%windir%\Microsoft.NET\assembly**. We wcześniejszych wersjach .NET Framework domyślną lokalizacją jest **%windir%\assembly**.  
   

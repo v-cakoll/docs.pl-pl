@@ -2,20 +2,20 @@
 title: <behavior> dla <endpointBehaviors>
 ms.date: 03/30/2017
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
-ms.openlocfilehash: 34306f99f2343c987700e964aaa9800aa3f488fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f14e80798a9b088508f23d718c8b386286ad65a3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673553"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919839"
 ---
-# <a name="behavior-of-endpointbehaviors"></a>\<zachowanie > z \<endpointBehaviors >
-`behavior` Element zawiera kolekcję ustawień zachowania dla punktu końcowego. Każde działanie jest indeksowane według jego `name`. Punkty końcowe można połączyć każdego zachowanie za pośrednictwem tej nazwy. Począwszy od [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], powiązania i zachowania nie muszą mieć nazwę. Aby uzyskać więcej informacji o domyślnej konfiguracji i powiązania pustego oraz zachowań, zobacz [uproszczona konfiguracja](../../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+# <a name="behavior-of-endpointbehaviors"></a>\<zachowanie > \<endpointBehaviors >
+`behavior` Element zawiera kolekcję ustawień zachowania punktu końcowego. Każde działanie jest indeksowane według jego `name`. Punkty końcowe mogą łączyć się z każdym zachowaniem przy użyciu tej nazwy. Począwszy od [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], powiązania i zachowania nie muszą mieć nazwy. Aby uzyskać więcej informacji na temat konfiguracji domyślnej i powiązań pustego i zachowań, zobacz [Uproszczona konfiguracja](../../../wcf/simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<endpointBehaviors>  
-\<zachowanie >  
+\<> zachowania  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,27 +36,27 @@ ms.locfileid: "61673553"
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|nazwa|Unikatowy ciąg, który zawiera nazwę konfiguracji zachowanie. Ta wartość jest ciągiem zdefiniowanej przez użytkownika, który musi być unikatowy, ponieważ działa jako ciąg identyfikacyjny dla elementu. Począwszy od [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], powiązania i zachowania nie muszą mieć nazwę. Aby uzyskać więcej informacji o domyślnej konfiguracji i powiązania pustego oraz zachowań, zobacz [uproszczona konfiguracja](../../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|nazwa|Unikatowy ciąg, który zawiera nazwę konfiguracji zachowanie. Ta wartość jest ciągiem zdefiniowanej przez użytkownika, który musi być unikatowy, ponieważ działa jako ciąg identyfikacyjny dla elementu. Począwszy od [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], powiązania i zachowania nie muszą mieć nazwy. Aby uzyskać więcej informacji na temat konfiguracji domyślnej i powiązań pustego i zachowań, zobacz [Uproszczona konfiguracja](../../../wcf/simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Określa poświadczenia używane do uwierzytelniania klienta do usługi.|  
-|[\<callbackDebug>](../../../../../docs/framework/configure-apps/file-schema/wcf/callbackdebug.md)|Określa usługę debugowania dla obiektu wywołania zwrotnego Windows Communication Foundation (WCF).|  
-|[\<callbackTimeouts>](../../../../../docs/framework/configure-apps/file-schema/wcf/callbacktimeouts.md)|Określa limit czasu wywołania zwrotnego klienta.|  
-|[\<clientVia>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientvia.md)|Określa, że powinno zająć trasy wiadomości.|  
-|[\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer.md)|Zawiera dane konfiguracyjne dla elementu DataContractSerializer.|  
-|[\<dispatcherSynchronization>](../../../../../docs/framework/configure-apps/file-schema/wcf/dispatchersynchronization.md)|Określa zachowanie punktu końcowego, które włącza usługę wysłać odpowiedzi asynchronicznie.|  
-|[\<enableWebScript >](../../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md)|Włącza zachowanie punktu końcowego, który pozwala na korzystanie z usługi z ASP.NET AJAX stron sieci web. Zachowanie należy używać tylko w połączeniu z oboma \<webHttpBinding > Powiązanie standardowe lub \<webMessageEncoding > element powiązania.|  
-|[\<endpointDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|Określa różne ustawienia odkrywania dla punktu końcowego, takie jak jego wykrywalność, zakresy i wszystkich jego rozszerzenia niestandardowe dla jego metadanych.|  
-|[\<soapProcessing>](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md)|Definiuje zachowanie punktu końcowego klienta, które są używane do organizowania wiadomości między typami inne powiązanie i wersje komunikatów.|  
-|[\<synchronousReceive >](../../../../../docs/framework/configure-apps/file-schema/wcf/synchronousreceive-element.md)|Określa zachowanie w czasie wykonywania do odbierania wiadomości w aplikacji usługi lub klienta. Nie ma żadnych atrybutów lub elementów podrzędnych.|  
-|[\<transactedBatching>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactedbatching.md)|Określa, czy transakcja tworzenia plików wsadowych jest obsługiwana dla operacji odbioru.|  
-|[\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)|Określa WebHttpBehavior w punkcie końcowym za pośrednictwem konfiguracji. To zachowanie, gdy jest używana w połączeniu z \<webHttpBinding > Powiązanie standardowe, umożliwia modelu programowania w sieci Web dla usługi WCF.|  
+|[\<clientCredentials>](clientcredentials.md)|Określa poświadczenia używane do uwierzytelniania klienta w usłudze.|  
+|[\<callbackDebug>](callbackdebug.md)|Określa debugowanie usługi dla obiektu wywołania zwrotnego Windows Communication Foundation (WCF).|  
+|[\<callbackTimeouts>](callbacktimeouts.md)|Określa limit czasu dla wywołania zwrotnego klienta.|  
+|[\<clientVia >](clientvia.md)|Określa trasę, którą powinien wykonać wiadomość.|  
+|[\<dataContractSerializer>](datacontractserializer.md)|Zawiera dane konfiguracyjne dla elementu DataContractSerializer.|  
+|[\<dispatcherSynchronization>](dispatchersynchronization.md)|Określa zachowanie punktu końcowego, które umożliwia usłudze wysyłanie odpowiedzi asynchronicznie.|  
+|[\<enableWebScript >](enablewebscript.md)|Włącza zachowanie punktu końcowego, który umożliwia korzystanie z usługi z ASP.NET AJAX stron sieci Web. Zachowanie powinno być używane tylko w połączeniu ze \<standardowym powiązaniem WebHttpBinding > \<lub elementem powiązania > webMessageEncoding.|  
+|[\<endpointDiscovery >](endpointdiscovery.md)|Określa różne ustawienia odnajdywania dla punktu końcowego, takie jak jego wykrywalność, zakresy i wszelkie niestandardowe rozszerzenia do swoich metadanych.|  
+|[\<soapProcessing >](soapprocessing.md)|Definiuje zachowanie punktu końcowego klienta używane do organizowania komunikatów między różnymi typami powiązań i wersjami komunikatów.|  
+|[\<synchronousReceive >](synchronousreceive-element.md)|Określa zachowanie w czasie wykonywania w przypadku otrzymywania wiadomości w usłudze lub aplikacji klienckiej. Nie ma żadnych atrybutów ani elementów podrzędnych.|  
+|[\<transactedBatching >](transactedbatching.md)|Określa, czy przetwarzanie wsadowe transakcji jest obsługiwane dla operacji odbioru.|  
+|[\<webHttp>](webhttp.md)|Określa WebHttpBehavior w punkcie końcowym za pomocą konfiguracji. Takie zachowanie, gdy jest \<używane w połączeniu z standardowym powiązaniem WebHttpBinding >, włącza model programowania sieci Web dla usługi WCF.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<endpointBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)|Kolekcja elementów zachowanie punktu końcowego.|
+|[\<endpointBehaviors >](endpointbehaviors.md)|Kolekcja elementów zachowania punktu końcowego.|

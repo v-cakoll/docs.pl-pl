@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f559bf603605873f1b9155e9a96cb367e5420343
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907998"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941684"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Zagnieżdżone struktury sterujące (Visual Basic)
-Instrukcje kontroli wewnątrz innych instrukcji sterowania można umieścić na przykład `If...Then...Else` blokowania w ramach `For...Next` pętli. Instrukcją sterowania, umieszczone wewnątrz innej instrukcji sterowania jest nazywany *zagnieżdżonych*.  
+Można umieścić instrukcje sterujące wewnątrz innych instrukcji sterowania, na przykład `If...Then...Else` blok `For...Next` w pętli. Instrukcja sterująca umieszczona wewnątrz innej instrukcji sterującej jest określana jako *zagnieżdżona*.  
   
-## <a name="nesting-levels"></a>Poziomów zagnieżdżenia  
- Mogą być zagnieżdżone struktury sterujące w języku Visual Basic na dowolną liczbę poziomów. Jest to powszechną praktyką, aby zagnieżdżone struktury przez wcięcia treść każdej z nich był bardziej czytelny. Edytor środowiska (IDE) zintegrowanego rozwoju wykonuje to automatycznie.  
+## <a name="nesting-levels"></a>Poziomy zagnieżdżania  
+ Struktury formantów w Visual Basic mogą być zagnieżdżane do tylu poziomów. Powszechną zaletą jest bardziej czytelność zagnieżdżonych struktur przez wcięcie treści każdej z nich. Edytor zintegrowanego środowiska programistycznego (IDE) automatycznie robi to.  
   
- W poniższym przykładzie procedury `sumRows` dodaje razem dodatnią elementy każdy wiersz macierzy.  
+ W poniższym przykładzie procedura `sumRows` dodaje razem elementy dodatnie każdego wiersza macierzy.  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- W powyższym przykładzie pierwsze `Next` instrukcji zamyka wewnętrzny `For` pętli, a ostatni `Next` instrukcji zamyka zewnętrzny `For` pętli.  
+ W poprzednim przykładzie `Next` Pierwsza instrukcja zamyka pętlę wewnętrzną `For` , a Ostatnia `Next` instrukcja zamyka pętlę zewnętrzną `For` .  
   
- Podobnie, w zagnieżdżonych `If` instrukcji `End If` instrukcji automatyczne stosowanie do najbliższej przed `If` instrukcji. Zagnieżdżone `Do` pętli działają w podobny sposób, przy użyciu najbardziej wewnętrzną funkcją `Loop` instrukcji dopasowania najbardziej wewnętrzną funkcją `Do` instrukcji.  
+ Podobnie, w instrukcjach `If` zagnieżdżonych `End If` instrukcje są automatycznie stosowane do najbliższej `If` wcześniejszej instrukcji. Pętle zagnieżdżone `Do` działają w podobny sposób, przy użyciu najbardziej `Loop` wewnętrznej instrukcji pasującej `Do` do najbardziej wewnętrznej instrukcji.  
   
 > [!NOTE]
->  Dla wielu struktur sterowania po kliknięciu słowem kluczowym wszystkich słów kluczowych w strukturze, zostały wyróżnione. Na przykład po kliknięciu `If` w `If...Then...Else` budowy, wszystkie wystąpienia elementu `If`, `Then`, `ElseIf`, `Else`, i `End If` w konstrukcji są wyróżnione. Aby przejść do następnego lub poprzedniego wyróżnionego słów kluczowych, naciśnij klawisz Strzałka CTRL + SHIFT + Strzałka w dół lub CTRL + SHIFT + Strzałka w górę Strzałka.  
+> W przypadku wielu struktur kontroli po kliknięciu słowa kluczowego, zostaną wyróżnione wszystkie słowa kluczowe w strukturze. `If` Na przykład po kliknięciu `If...Then...Else` w konstrukcji `Then` `End If` wszystkie wystąpienia elementów `If`, ,,iwkonstrukcjisąwyróżnione.`Else` `ElseIf` Aby przejść do następnego lub poprzedniego wyróżnionego słowa kluczowego, naciśnij klawisze CTRL + SHIFT + Strzałka w dół lub CTRL + SHIFT + Strzałka w górę.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Różne rodzaje struktur sterujących zagnieżdżania  
- Można zagnieżdżać jednego rodzaju strukturze kontroli w ramach innego rodzaju. W poniższym przykładzie użyto `With` block wewnątrz `For Each` pętli i zagnieżdżone `If` blokuje wewnątrz `With` bloku.  
+## <a name="nesting-different-kinds-of-control-structures"></a>Zagnieżdżanie różnych rodzajów struktur kontroli  
+ Można zagnieżdżać jeden rodzaj struktury kontroli w innym rodzaju. Poniższy przykład używa `With` bloku `For Each` wewnątrz `If` pętli`With` i zagnieżdżonych bloków wewnątrz bloku.  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -64,12 +64,12 @@ For Each ctl As System.Windows.Forms.Control In Me.Controls
 Next ctl  
 ```  
   
-## <a name="overlapping-control-structures"></a>Nakładające się struktury sterujące  
- Nie może nakładać się struktur sterujących. Oznacza to, dowolnej struktury zagnieżdżonej musi być całkowicie zawarty w ramach następnego najbardziej wewnętrznej struktury. Na przykład, poniższy rozmieszczenie jest nieprawidłowy ponieważ `For` pętli kończy się przed wewnętrzny `With` kończy blok.  
+## <a name="overlapping-control-structures"></a>Nakładające się struktury kontroli  
+ Nie można nakładać się na struktury formantów. Oznacza to, że jakakolwiek struktura zagnieżdżona musi być całkowicie zawarta w obrębie następnej wewnętrznej struktury. Na przykład następujące rozmieszczenie jest nieprawidłowe, `For` ponieważ pętla kończy się przed zakończeniem wewnętrznego `With` bloku.  
   
- ![Diagram przedstawia przykład nieprawidłowego zagnieżdżenia.](./media/nested-control-structures/example-invalid-nesting.gif) 
+ ![Diagram przedstawiający przykład nieprawidłowego zagnieżdżania.](./media/nested-control-structures/example-invalid-nesting.gif) 
   
- Kompilator Visual Basic wykrywa takie nakładających się struktury sterujące i sygnalizuje błąd kompilacji.  
+ Kompilator Visual Basic wykrywa te nakładające się struktury kontroli i sygnalizuje błąd czasu kompilacji.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -9,132 +9,132 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: b2ef3c3dbbfbcef08f58c47948f76cb2c238b48a
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: d1fd626921cd17987770ced822be104fb2a42906
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238531"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937502"
 ---
 # <a name="freezable-objects-overview"></a>Przegląd Obiekty Freezable
-W tym temacie opisano, jak skutecznie używać i Utwórz <xref:System.Windows.Freezable> obiektów, które zapewniają funkcje specjalne, które mogą pomóc zwiększyć wydajność aplikacji. Przykładami obiektów freezable pędzle, pióra, przekształcenia, geometrii i animacji.  
+W tym temacie opisano sposób efektywnego używania i <xref:System.Windows.Freezable> tworzenia obiektów, które zapewniają specjalne funkcje, które mogą pomóc w zwiększeniu wydajności aplikacji. Przykłady obiektów Freezable obejmują pędzle, pióra, przekształcenia, geometrie i animacje.  
   
 <a name="whatisafreezable"></a>   
 ## <a name="what-is-a-freezable"></a>Co to jest Freezable?  
- A <xref:System.Windows.Freezable> to specjalny typ obiektu, który ma dwa stany: odblokowany i zablokowane. Jeśli są, <xref:System.Windows.Freezable> wydaje się zachowują się jak każdego innego obiektu. Jeśli zamrożone, <xref:System.Windows.Freezable> nie może być modyfikowany.  
+ A <xref:System.Windows.Freezable> jest specjalnym typem obiektu, który ma dwa stany: Niezamrożone i zamrożone. Gdy nie zamrożone <xref:System.Windows.Freezable> , wydaje się, że zachowuje się tak jak każdy inny obiekt. Po zamrożoniu <xref:System.Windows.Freezable> nie można już modyfikować.  
   
- A <xref:System.Windows.Freezable> zapewnia <xref:System.Windows.Freezable.Changed> zdarzenie, aby powiadomić obserwatorów wszelkie modyfikacje obiektu. Zamrażanie <xref:System.Windows.Freezable> może zwiększyć jej wydajność, ponieważ nie jest już konieczne dokonywania zasobów powiadomień o zmianach. Zamrożone <xref:System.Windows.Freezable> również mogą być współużytkowane przez wątków podczas odblokowanej <xref:System.Windows.Freezable> nie.  
+ <xref:System.Windows.Freezable> A<xref:System.Windows.Freezable.Changed> zawiera zdarzenie, aby powiadomić obserwatorów o wszelkich modyfikacjach obiektu. Zamrażanie <xref:System.Windows.Freezable> a może poprawić wydajność, ponieważ nie musi już poświęcać zasobów na powiadomienia o zmianach. Zamrożone <xref:System.Windows.Freezable> może być również współużytkowane przez wątki, podczas <xref:System.Windows.Freezable> gdy nie można zablokować.  
   
- Mimo że <xref:System.Windows.Freezable> klasa ma wiele aplikacji, najbardziej <xref:System.Windows.Freezable> obiekty w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] są powiązane z podsystem grafiki.  
+ Chociaż Klasa ma wiele aplikacji, większość <xref:System.Windows.Freezable> obiektów w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jest związanych z podsystemem graficznym. <xref:System.Windows.Freezable>  
   
- <xref:System.Windows.Freezable> Klas sprawia, że łatwiej używać niektórych obiektów systemowych grafiki i może zwiększyć wydajność aplikacji. Przykłady typów, które dziedziczą z <xref:System.Windows.Freezable> obejmują <xref:System.Windows.Media.Brush>, <xref:System.Windows.Media.Transform>, i <xref:System.Windows.Media.Geometry> klasy. Ponieważ zawierają one niezarządzane zasoby, system musi monitorować te obiekty do modyfikacji, a następnie zaktualizować ich odpowiednie zasoby niezarządzane, gdy brak zmian do oryginalnego obiektu. Nawet wtedy, gdy rzeczywiście nie zmodyfikować obiektu systemowego grafiki, system nadal poświęcić kilka jej zasobów monitorowania obiektu, w przypadku, gdy została zmieniona.  
+ <xref:System.Windows.Freezable> Klasa ułatwia korzystanie z pewnych obiektów systemu grafiki i pozwala zwiększyć wydajność aplikacji. Przykłady typów, które dziedziczą <xref:System.Windows.Freezable> z <xref:System.Windows.Media.Brush>, obejmują <xref:System.Windows.Media.Transform>klasy, <xref:System.Windows.Media.Geometry> i. Ponieważ zawierają one niezarządzane zasoby, system musi monitorować te obiekty do modyfikacji, a następnie aktualizować odpowiednie zasoby niezarządzane w przypadku zmiany oryginalnego obiektu. Nawet jeśli nie modyfikujesz obiektu systemowego Graphics, system musi nadal spędzać niektóre z zasobów monitorujących obiekt, w przypadku jego zmiany.  
   
- Załóżmy na przykład, możesz utworzyć <xref:System.Windows.Media.SolidColorBrush> Pędzel i użyć go do rysowania tła przycisku.  
+ Załóżmy na przykład, że tworzysz <xref:System.Windows.Media.SolidColorBrush> pędzel i używasz go do rysowania tła przycisku.  
   
  [!code-csharp[freezablesample_procedural#FrozenExamplePart1](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart1)]
  [!code-vb[freezablesample_procedural#FrozenExamplePart1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart1)]  
   
- Po wyrenderowaniu przycisku [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] podsystem grafiki korzysta z informacji podanych namalować grupy pikseli, aby utworzyć wyglądu przycisku. Mimo że pędzel pełnego koloru jest używany do opisywania, jak przycisk powinien malowane, pełny kolor pędzla faktycznie nie malowania. Szybkie i niskiego poziomu obiektów dla przycisku i Pędzel wygenerowany przez system grafiki i jest tych obiektów, które faktycznie są wyświetlane na ekranie.  
+ Gdy przycisk jest renderowany, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] podsystem graficzny używa dostarczonych informacji do malowania grupy pikseli w celu utworzenia wyglądu przycisku. Mimo że używasz pełnego pędzla kolorów do opisywania, w jaki sposób przycisk powinien być namalowany, Pędzel pełnego koloru nie jest w rzeczywistości używany do malowania. System grafiki generuje szybkie i niskiego poziomu obiekty dla przycisku i pędzla. są to obiekty, które faktycznie pojawiają się na ekranie.  
   
- W przypadku modyfikowania pędzel tych obiektów niskiego poziomu musi zostać wygenerowane ponownie. Klasa freezable jest o tym, co umożliwia pędzel jego odpowiednimi obiektami wygenerowane, niskiego poziomu znajdować i aktualizować je, gdy zmienia się. Ta możliwość jest włączona, Pędzel jest określane jako "odblokowanej".  
+ W przypadku zmodyfikowania pędzla należy ponownie wygenerować te obiekty niskiego poziomu. Klasa Freezable to co daje pędzlowi możliwość znalezienia odpowiednich, wygenerowanych obiektów niskiego poziomu i zaktualizowania ich w momencie zmiany. Gdy ta możliwość jest włączona, Pędzel jest określany jako "Niezamrożone".  
   
- Freezable <xref:System.Windows.Freezable.Freeze%2A> metoda umożliwia wyłączenie tę możliwość samoaktualizacji. Aby pędzla stają się "zamrożoną" lub niemodyfikowalnych, można użyć tej metody.  
+ <xref:System.Windows.Freezable.Freeze%2A> Metoda Freezable umożliwia wyłączenie tej możliwości samoaktualizacji. Możesz użyć tej metody, aby pędzel stał się "zablokowany" lub nie można go modyfikować.  
   
 > [!NOTE]
->  Nie każdy obiekt Freezable może być zablokowany. Aby uniknąć zgłaszania <xref:System.InvalidOperationException>, sprawdź wartość obiektu Freezable <xref:System.Windows.Freezable.CanFreeze%2A> właściwości w celu określenia, czy może być zablokowany przed podjęciem próby go zablokować.  
+> Nie każdy obiekt Freezable można zablokować. Aby uniknąć zgłaszania <xref:System.InvalidOperationException>, sprawdź wartość <xref:System.Windows.Freezable.CanFreeze%2A> właściwości obiektu Freezable, aby ustalić, czy można ją zamrozić przed próbą jej wstrzymania.  
   
  [!code-csharp[freezablesample_procedural#FrozenExamplePart2](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart2)]
  [!code-vb[freezablesample_procedural#FrozenExamplePart2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart2)]  
   
- W przypadku nie trzeba modyfikować freezable zawiesza się go zapewnia korzyści w wydajności. Jeśli masz zamiar zablokować pędzla, w tym przykładzie systemu grafiki nie jest już należałoby monitorowania zmian. System grafiki można również ustawić inne optymalizacje, ponieważ wie, że pędzel nie ulegnie zmianie.  
+ Gdy nie musisz już modyfikować Freezable, zamrażanie zapewnia korzyści z wydajności. W przypadku zablokowania pędzla w tym przykładzie system grafiki nie musi już monitorować go pod kątem zmian. System grafiki może również wykonywać inne optymalizacje, ponieważ wie, że pędzel nie ulegnie zmianie.  
   
 > [!NOTE]
->  Dla wygody obiektów freezable pozostają odblokowanej, chyba że je jawnie zablokować.  
+> Dla wygody Obiekty Freezable pozostają Niezamrożone, chyba że zostaną jawnie zablokowane.  
   
 <a name="frozenfreezables"></a>   
-## <a name="using-freezables"></a>Przy użyciu obiektów Freezable  
- Za pomocą odblokowanej freezable jest jak przy użyciu innego typu obiektu. W poniższym przykładzie kolor <xref:System.Windows.Media.SolidColorBrush> zostaje zmieniony z żółtym na czerwony, gdy jest używany do rysowania tła przycisku. System grafiki działa w tle automatycznie zmienić przycisk z żółty czerwony przy następnym odświeżeniu ekranu.  
+## <a name="using-freezables"></a>Korzystanie z obiektów Freezable platformie  
+ Użycie niezablokowanego Freezable przypomina użycie dowolnego innego typu obiektu. W poniższym przykładzie kolor <xref:System.Windows.Media.SolidColorBrush> obiektu jest zmieniany z żółtego na czerwony, gdy jest używany do rysowania tła przycisku. System grafiki działa w tle, aby automatycznie zmienić przycisk z żółtego na czerwony, przy następnym odświeżeniu ekranu.  
   
  [!code-csharp[freezablesample_procedural#UnFrozenExampleShort](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#unfrozenexampleshort)]
  [!code-vb[freezablesample_procedural#UnFrozenExampleShort](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#unfrozenexampleshort)]  
   
-### <a name="freezing-a-freezable"></a>Zamrażanie Freezable  
- Aby <xref:System.Windows.Freezable> wywołania niemodyfikowalnych, jego <xref:System.Windows.Freezable.Freeze%2A> metody. Zablokowanie obiekt, który zawiera obiekty freezable te obiekty są również zablokowane. Na przykład, jeśli zablokowanie <xref:System.Windows.Media.PathGeometry>, dane i segmentów zawiera będzie zbyt zamrożone.  
+### <a name="freezing-a-freezable"></a>Zamrażanie elementu Freezable  
+ Aby nie modyfikować, należy <xref:System.Windows.Freezable.Freeze%2A> wywołać metodę. <xref:System.Windows.Freezable> Po zablokowaniu obiektu, który zawiera obiekty Freezable, te obiekty również są zamrożone. Na przykład w przypadku zablokowania <xref:System.Windows.Media.PathGeometry>, cyfry i segmenty, które zawiera, byłyby zablokowane.  
   
- Freezable **nie** nelze zmrazit w przypadku spełnienia dowolnego z następujących czynności:  
+ **Nie** można zamrozić elementu Freezable, jeśli którykolwiek z następujących warunków jest spełniony:  
   
-- Ma ona animowane lub powiązania danych właściwości.  
+- Ma właściwości animowane lub powiązane z danymi.  
   
-- Zawiera właściwości ustawione przez zasób dynamiczny. (Zobacz [zasoby XAML](xaml-resources.md) Aby uzyskać więcej informacji o zasobach dynamicznych.)  
+- Ma właściwości ustawione przez zasób dynamiczny. (Zobacz [zasoby XAML](xaml-resources.md) , aby uzyskać więcej informacji na temat zasobów dynamicznych).  
   
-- Zawiera on <xref:System.Windows.Freezable> obiekty podrzędne, które nie mogą być zablokowane.  
+- Zawiera <xref:System.Windows.Freezable> obiekty podrzędne, które nie mogą być zamrożone.  
   
- Jeśli te warunki mają wartość false, a nie zamierzasz zmodyfikować <xref:System.Windows.Freezable>, wówczas powinien zablokowaniu, opisanych wcześniej korzyści wydajności.  
+ Jeśli te warunki mają wartość FAŁSZ i nie zamierzasz modyfikować <xref:System.Windows.Freezable>, należy zamrozić go, aby uzyskać korzyści wynikające z wydajności opisane wcześniej.  
   
- Gdy wywołujesz freezable <xref:System.Windows.Freezable.Freeze%2A> metody, nie może być modyfikowany. Próby zmodyfikowania zamrożonych obiektów powoduje, że <xref:System.InvalidOperationException> zostanie wygenerowany. Poniższy kod zgłasza wyjątek, ponieważ próby zmodyfikowania pędzla, po jest zablokowane.  
+ Po wywołaniu <xref:System.Windows.Freezable.Freeze%2A> metody Freezable nie można już jej modyfikować. Próba modyfikacji zamrożonego obiektu powoduje, że <xref:System.InvalidOperationException> zostanie zgłoszony. Poniższy kod zgłasza wyjątek, ponieważ próbujemy zmodyfikować pędzel po jego zamrożoniu.  
   
  [!code-csharp[freezablesample_procedural#ExceptionExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#exceptionexample)]
  [!code-vb[freezablesample_procedural#ExceptionExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#exceptionexample)]  
   
- Aby uniknąć zgłaszania tego wyjątku, można użyć <xref:System.Windows.Freezable.IsFrozen%2A> metodę pozwala ustalić czy <xref:System.Windows.Freezable> jest zablokowane.  
+ Aby uniknąć zgłaszania tego wyjątku, można użyć <xref:System.Windows.Freezable.IsFrozen%2A> metody, aby określić, <xref:System.Windows.Freezable> czy jest zablokowany.  
   
  [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
  [!code-vb[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]  
   
- W poprzednim przykładzie kodu, można modyfikować kopii zamrożonych obiektów przy użyciu <xref:System.Windows.Freezable.Clone%2A> metody. W następnej sekcji omówiono klonowanie bardziej szczegółowo.  
+ W poprzednim przykładzie kodu, modyfikowalna kopia została wykonana z zamrożonego obiektu za pomocą <xref:System.Windows.Freezable.Clone%2A> metody. W następnej sekcji omówiono klonowanie bardziej szczegółowo.  
   
- **Uwaga** ponieważ zamrożone freezable nie można animować, system animacji automatycznie utworzy modyfikowalne klony zamrożone <xref:System.Windows.Freezable> obiekty podczas próby animować je za pomocą <xref:System.Windows.Media.Animation.Storyboard>. Aby wyeliminować wydajności, obciążenie jest spowodowane przez klonowanie, pozostaw obiektu są, jeśli zamierzasz jej animować. Aby uzyskać więcej informacji na temat Animowanie za pomocą scenorysów, zobacz [Przegląd Scenorysy](../graphics-multimedia/storyboards-overview.md).  
+ **Uwaga** Ponieważ zamrożony Freezable nie może być animowany, system animacji automatycznie utworzy modyfikowalne klony <xref:System.Windows.Freezable> zablokowanych obiektów podczas próby animowania ich <xref:System.Windows.Media.Animation.Storyboard>przy użyciu. Aby wyeliminować narzuty wydajności wynikające z klonowania, pozostaw obiekt niezamrożony, jeśli zamierzasz go animować. Aby uzyskać więcej informacji na temat animacji przy użyciu scenorysów, zobacz [Omówienie scenorysów](../graphics-multimedia/storyboards-overview.md).  
   
-### <a name="freezing-from-markup"></a>Zamrażanie z kodu znaczników  
- Aby zablokować <xref:System.Windows.Freezable> obiekt zadeklarowany w znaczniku, możesz użyć `PresentationOptions:Freeze` atrybutu. W poniższym przykładzie <xref:System.Windows.Media.SolidColorBrush> jest zadeklarowany jako zasobu strony i zablokowane. Ustawianie tła przycisku jest użyty.  
+### <a name="freezing-from-markup"></a>Zamrażanie z adjustacji  
+ Aby zablokować <xref:System.Windows.Freezable> obiekt zadeklarowany w znacznikach, należy `PresentationOptions:Freeze` użyć atrybutu. W poniższym przykładzie <xref:System.Windows.Media.SolidColorBrush> jest zadeklarowana jako zasób strony i zamrożona. Jest on następnie używany do ustawiania tła przycisku.  
   
  [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
   
- Aby użyć `Freeze` atrybutu, musisz dokonać mapowania na przestrzeń nazw opcje prezentacji: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`. `PresentationOptions` to zalecana prefiks dla mapowania tej przestrzeni nazw:  
+ Aby użyć `Freeze` atrybutu, należy zmapować do obszaru nazw opcji prezentacji: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`. `PresentationOptions`jest zalecanym prefiksem do mapowania tej przestrzeni nazw:  
   
 ```  
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"   
 ```  
   
- Ponieważ nie wszystkie czytelnicy XAML rozpoznaje tego atrybutu, zalecane jest użycie [mc: Ignorable — atrybut](mc-ignorable-attribute.md) do oznaczania `Presentation:Freeze` atrybutu jako ignorable:  
+ Ponieważ nie wszyscy czytelnicy XAML rozpoznają ten atrybut, zaleca się użycie [atrybutu MC:](mc-ignorable-attribute.md) , który można zignorować, aby oznaczyć `Presentation:Freeze` atrybut jako ignorowany:  
   
 ```  
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
 mc:Ignorable="PresentationOptions"  
 ```  
   
- Aby uzyskać więcej informacji, zobacz [mc: Ignorable — atrybut](mc-ignorable-attribute.md) strony.  
+ Aby uzyskać więcej informacji, zobacz stronę z [atrybutem MC: ignorowany](mc-ignorable-attribute.md) .  
   
-### <a name="unfreezing-a-freezable"></a>"Unfreezing" Freezable  
- Raz zamrożone, <xref:System.Windows.Freezable> nigdy nie mogą zostać zmodyfikowane lub są; jednak można utworzyć klon odblokowanej przy użyciu <xref:System.Windows.Freezable.Clone%2A> lub <xref:System.Windows.Freezable.CloneCurrentValue%2A> metody.  
+### <a name="unfreezing-a-freezable"></a>"Odmrożenie" a Freezable  
+ Po zamrożoniu <xref:System.Windows.Freezable> nie można nigdy modyfikować ani odmrozić. można jednak utworzyć niezablokowany klon <xref:System.Windows.Freezable.Clone%2A> przy użyciu metody lub <xref:System.Windows.Freezable.CloneCurrentValue%2A> .  
   
- W poniższym przykładzie ustawiono tło przycisku pędzlem i pędzla ten jest następnie zamrożony. Kopia odblokowanej składa się z pomocą pędzla <xref:System.Windows.Freezable.Clone%2A> metody. Klon jest zmodyfikowany i pozwala zmienić tło przycisku z żółty czerwony.  
+ W poniższym przykładzie tło przycisku jest ustawione przy użyciu pędzla, a następnie Pędzel jest zablokowany. Niezablokowana kopia pędzla przy użyciu <xref:System.Windows.Freezable.Clone%2A> metody. Klon jest modyfikowany i używany do zmiany tła przycisku z żółtego na czerwony.  
   
  [!code-csharp[freezablesample_procedural#CloneExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#cloneexample)]
  [!code-vb[freezablesample_procedural#CloneExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#cloneexample)]  
   
 > [!NOTE]
->  Niezależnie od tego, w której możesz użyć metody klonowania, animacji, nigdy nie są kopiowane do nowego <xref:System.Windows.Freezable>.  
+> Niezależnie od używanej metody klonowania animacje nigdy nie są kopiowane do nowego <xref:System.Windows.Freezable>.  
   
- <xref:System.Windows.Freezable.Clone%2A> i <xref:System.Windows.Freezable.CloneCurrentValue%2A> metody uzyskanie kopii głębokiego freezable. Jeśli freezable zawiera inne mrożone obiekty freezable, są również sklonować i wprowadzone można modyfikować. Na przykład, jeśli zamrożone klonowania <xref:System.Windows.Media.PathGeometry> charakteryzowanych można modyfikować, dane i zawiera segmentów są również kopiowane i wprowadzone można modyfikować.  
+ Metody <xref:System.Windows.Freezable.Clone%2A> i<xref:System.Windows.Freezable.CloneCurrentValue%2A> wytwarzają głębokie kopie Freezable. Jeśli Freezable zawiera inne zamrożone Obiekty Freezable, są one również klonowane i modyfikowane. Na przykład w przypadku klonowania zamrożonego <xref:System.Windows.Media.PathGeometry> w celu zmodyfikowania tego elementu dane i segmenty, które zawiera, są również kopiowane i modyfikowane.  
   
 <a name="createyourownfreezableclass"></a>   
-## <a name="creating-your-own-freezable-class"></a>Tworzenie klasy Freezable  
- Klasa, która pochodzi od klasy <xref:System.Windows.Freezable> uzyskuje się następujące funkcje.  
+## <a name="creating-your-own-freezable-class"></a>Tworzenie własnej klasy Freezable  
+ Klasa, która powodzi <xref:System.Windows.Freezable> się od, uzyskuje następujące funkcje.  
   
-- Stany specjalne: tylko do odczytu (zamrożona) i stanie zapisywalnym.  
+- Specjalne Stany: tylko do odczytu (zamrożony) i zapisywalny.  
   
-- Bezpieczeństwo wątków: zamrożone <xref:System.Windows.Freezable> udostępniona w wielu wątkach.  
+- Bezpieczeństwo wątków: zamrożone <xref:System.Windows.Freezable> mogą być współużytkowane przez wątki.  
   
-- Powiadomienie o zmianie szczegółowe: W odróżnieniu od innych <xref:System.Windows.DependencyObject>s, obiekty Freezable zapewniają powiadomienia o zmianie po zmianie wartości właściwości podrzędnych.  
+- Szczegółowe powiadomienie o zmianie: W przeciwieństwie <xref:System.Windows.DependencyObject>do innych, Obiekty Freezable zapewniają powiadomienia o zmianach w przypadku zmiany wartości właściwości podrzędnych.  
   
-- Klonowanie proste: Freezable klasy zaimplementował już kilka metod, które tworzą klony głębokiego.  
+- Łatwe Klonowanie: Klasa Freezable już wdrożyła kilka metod, które tworzą głębokie klony.  
   
- A <xref:System.Windows.Freezable> jest typem <xref:System.Windows.DependencyObject>i w związku z tym korzysta z systemu właściwości zależności. Właściwości klasy nie muszą być właściwościami zależności, ale przy użyciu właściwości zależności zmniejsza ilość kodu, który trzeba napisać, ponieważ <xref:System.Windows.Freezable> klasy został zaprojektowany przy użyciu właściwości zależności na uwadze. Aby uzyskać więcej informacji na temat systemu właściwość zależności zobacz [Przegląd właściwości zależności](dependency-properties-overview.md).  
+ A <xref:System.Windows.Freezable> jest<xref:System.Windows.DependencyObject>typem, i w związku z tym używa systemu właściwości zależności. Właściwości klasy nie muszą być właściwościami zależności, ale użycie właściwości zależności spowoduje zmniejszenie ilości kodu, który trzeba napisać, ponieważ <xref:System.Windows.Freezable> Klasa została zaprojektowana z uwzględnieniem właściwości zależności. Aby uzyskać więcej informacji na temat systemu właściwości zależności, zobacz [Omówienie właściwości zależności](dependency-properties-overview.md).  
   
- Każdy <xref:System.Windows.Freezable> zastąpić podklasy <xref:System.Windows.Freezable.CreateInstanceCore%2A> metody. Jeśli klasa używa właściwości zależności dla wszystkich swoich danych, jesteś gotowy.  
+ Każda <xref:System.Windows.Freezable> podklasa musi <xref:System.Windows.Freezable.CreateInstanceCore%2A> zastąpić metodę. Jeśli Klasa używa właściwości zależności dla wszystkich danych, zostanie zakończona.  
   
- Jeśli klasa zawiera elementy członkowskie danych właściwości bez zależności, należy również zastąpić następujące metody:  
+ Jeśli Klasa zawiera elementy członkowskie danych niezależności, należy również zastąpić następujące metody:  
   
 - <xref:System.Windows.Freezable.CloneCore%2A>  
   
@@ -146,20 +146,20 @@ mc:Ignorable="PresentationOptions"
   
 - <xref:System.Windows.Freezable.FreezeCore%2A>  
   
- Należy również zgodna z poniższymi regułami do uzyskiwania dostępu i zapisywanie do elementów członkowskich danych, które nie są właściwości zależności:  
+ Należy również przestrzegać następujących reguł dostępu i zapisu do elementów członkowskich danych, które nie są właściwościami zależności:  
   
-- Na początku dowolnego interfejsu API, który odczytuje elementy członkowskie danych właściwości bez zależności, należy wywołać <xref:System.Windows.Freezable.ReadPreamble%2A> metody.  
+- Na początku dowolnego interfejsu API, który odczytuje elementy członkowskie danych niezależności, wywołaj <xref:System.Windows.Freezable.ReadPreamble%2A> metodę.  
   
-- Na początku dowolnego interfejsu API, który zapisuje elementy członkowskie danych właściwości bez zależności, należy wywołać <xref:System.Windows.Freezable.WritePreamble%2A> metody. (Gdy została wywołana <xref:System.Windows.Freezable.WritePreamble%2A> w interfejsie API, nie potrzebujesz do wywoływania dodatkowych <xref:System.Windows.Freezable.ReadPreamble%2A> Jeśli przeczytaj również elementy członkowskie danych właściwości innych zależności.)  
+- Na początku dowolnego interfejsu API, który zapisuje elementy członkowskie danych właściwości niezależności, wywołaj <xref:System.Windows.Freezable.WritePreamble%2A> metodę. (Po wywołaniu <xref:System.Windows.Freezable.WritePreamble%2A> w interfejsie API nie trzeba wykonywać dodatkowych <xref:System.Windows.Freezable.ReadPreamble%2A> wywołań w przypadku odczytywania także elementów członkowskich danych niezależności).  
   
-- Wywołaj <xref:System.Windows.Freezable.WritePostscript%2A> metoda przed wyjściem metody modyfikujące właściwość zależności innych składowych danych.  
+- Wywołaj <xref:System.Windows.Freezable.WritePostscript%2A> metodę przed wyjściem z metod, które zapisują do elementów członkowskich danych niezależnych.  
   
- Jeśli klasa zawiera składowe danych inną niż właściwość zależności, które są <xref:System.Windows.DependencyObject> obiektów, musisz również wywołać <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> metody po każdej zmianie jedną z dostępnych wartości, nawet wtedy, gdy element członkowski jest ustawienie na `null`.  
+ Jeśli Klasa zawiera niezależne składowe danych, które są <xref:System.Windows.DependencyObject> obiektami, należy również wywołać metodę za <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> każdym razem, gdy zmieniasz jedną z jej wartości, nawet jeśli tworzysz element członkowski `null`.  
   
 > [!NOTE]
->  Bardzo ważne, Rozpocznij każdy <xref:System.Windows.Freezable> zastąpić wywołaniem implementację podstawową metody.  
+> Bardzo ważne jest, aby rozpocząć każdą <xref:System.Windows.Freezable> metodę przesłonięcia z wywołaniem podstawowej implementacji.  
   
- Na przykład niestandardowy <xref:System.Windows.Freezable> klasy, zobacz [przykład animacji niestandardowej](https://go.microsoft.com/fwlink/?LinkID=159981).  
+ Przykład klasy niestandardowej <xref:System.Windows.Freezable> można znaleźć w [przykładowej animacji niestandardowej](https://go.microsoft.com/fwlink/?LinkID=159981).  
   
 ## <a name="see-also"></a>Zobacz także
 

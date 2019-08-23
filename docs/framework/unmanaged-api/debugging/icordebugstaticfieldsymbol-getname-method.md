@@ -1,17 +1,17 @@
 ---
-title: ICorDebugStaticFieldSymbol::GetName Method
+title: 'ICorDebugStaticFieldSymbol:: GetName — Metoda'
 ms.date: 03/30/2017
 ms.assetid: e2be4af2-15d1-4e6a-8b68-1d78c93294a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01281e09533ba7196d3fa3e57c463636cfb0dd77
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2187a205b41388d191ad4f06db6d6caa86971e13
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760834"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913415"
 ---
-# <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol::GetName Method
+# <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol:: GetName — Metoda
 Pobiera nazwę pola statycznego.  
   
 ## <a name="syntax"></a>Składnia  
@@ -26,27 +26,27 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametry  
  `cchName`  
- [in] Liczba znaków w `szName` buforu.  
+ podczas Liczba znaków w `szName` buforze.  
   
  `pcchName`  
- [out] Wskaźnik do liczby znaków rzeczywiście zapisanych na `szName` buforu.  
+ określoną Wskaźnik do liczby znaków rzeczywiście zapisywana `szName` w buforze.  
   
  `szName`  
- [out] Tablica znaków, który przechowuje nazwę zwracanego.  
+ określoną Tablica znaków przechowująca zwróconą nazwę.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

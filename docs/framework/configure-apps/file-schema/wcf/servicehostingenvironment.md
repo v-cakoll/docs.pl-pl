@@ -2,18 +2,18 @@
 title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: 16dacee89576b4ede0f2f80255ba8a0dcbc8c0dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b81c9f3c4260f415f057cd74b6f113d88f635978
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610187"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936292"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
-Ten element definiuje typ, który usługę hostingu środowiskowego dla danego transportu. Jeśli ten element jest pusta, używany jest domyślny typ. Ten element należy używać tylko w aplikacji lub pliki konfiguracji na poziomie maszyny.  
+Ten element definiuje typ tworzenia wystąpień środowiska hostingu usługi dla określonego transportu. Jeśli ten element jest pusty, używany jest typ domyślny. Tego elementu można używać tylko w plikach konfiguracji na poziomie aplikacji lub komputera.  
   
  \<system.ServiceModel>  
-\<ServiceHostingEnvironment>  
+\<ServiceHostingEnvironment >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,46 +42,46 @@ Ten element definiuje typ, który usługę hostingu środowiskowego dla danego t
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|Wartość logiczna wskazująca, czy tryb zgodności ASP.NET został włączony dla bieżącej aplikacji. Wartość domyślna to `false`.<br /><br /> Jeśli ten atrybut jest równa `true`żądania do usług Windows Communication Foundation (WCF) przepływać za pośrednictwem potoku HTTP platformy ASP.NET i komunikacji za pośrednictwem protokołów innych niż HTTP jest zabronione. Aby uzyskać więcej informacji, zobacz [usługi WCF i platforma ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
-|minFreeMemoryPercentageToActivateService|Liczba całkowita, która określa minimalną ilość wolnej pamięci, która powinna być dostępna w systemie, w celu aktywowania usługi WCF. **Uwaga:**  Określanie tego atrybutu, wraz z częściowej relacji zaufania w pliku web.config, usługi WCF spowoduje <xref:System.Security.SecurityException> uruchamiania usługi.|  
-|multipleSiteBindingsEnabled|Wartość logiczna określająca, czy włączone jest wiele powiązań usług IIS dla każdej witryny.<br /><br /> Usługi IIS składa się z witryn sieci web, które są kontenerami dla katalogów wirtualnych zawierających aplikacje wirtualne. Aplikacja w lokacji jest możliwy za pośrednictwem jednego lub więcej powiązań usług IIS. Powiązania usługi IIS zawiera dwa rodzaje informacji: Protokół powiązania i informacje o powiązaniu. Protokół powiązania definiuje schemat, przez który dane są przesyłane, a informacje o powiązaniu informacji używanych do uzyskiwania dostępu do witryny. Przykładem Protokół powiązania mogą być protokołu HTTP, a informacje o powiązaniu może zawierać adres IP, portu, nagłówek hosta, itp.<br /><br /> Program IIS obsługuje Określanie wielu powiązań usług IIS dla witryny, co skutkuje wielu adresów bazowych na schemat. Jednak usługi Windows Communication Foundation (WCF) hostowanej przez witrynę umożliwia powiązanie, aby tylko jedna baseAddress każdego schematu.<br /><br /> Aby włączyć wiele powiązań dla każdej witryny usług IIS dla usługi Windows Communication Foundation (WCF), ustaw ten atrybut na `true`. Należy zauważyć, że wiele powiązania witryny jest obsługiwany tylko w przypadku protokołu HTTP. Adres punktów końcowych w pliku konfiguracyjnym musi być pełny identyfikator URI.|  
+|aspNetCompatibilityEnabled|Wartość logiczna wskazująca, czy tryb zgodności ASP.NET został włączony dla bieżącej aplikacji. Wartość domyślna to `false`.<br /><br /> Gdy ten atrybut jest ustawiony na `true`, żądania do Windows Communication Foundation (WCF) usługi przepływu za pośrednictwem potoku HTTP ASP.NET, a komunikacja za pośrednictwem protokołów innych niż HTTP jest zabronione. Aby uzyskać więcej informacji, zobacz [usługi WCF i ASP.NET](../../../wcf/feature-details/wcf-services-and-aspnet.md).|  
+|minFreeMemoryPercentageToActivateService|Liczba całkowita określająca minimalną ilość wolnej pamięci, która powinna być dostępna dla systemu, zanim będzie można aktywować usługę WCF. **Ostrzeżenie**  Określenie tego atrybutu wraz z częściowym zaufaniem w pliku Web. config usługi WCF spowoduje, że <xref:System.Security.SecurityException> usługa zostanie uruchomiona.|  
+|multipleSiteBindingsEnabled|Wartość logiczna określająca, czy włączono wiele powiązań usług IIS dla każdej witryny.<br /><br /> Usługi IIS składają się z witryn sieci Web, które są kontenerami dla aplikacji wirtualnych zawierających katalogi wirtualne. Dostęp do aplikacji w lokacji można uzyskać za pomocą jednego lub kilku powiązań usług IIS. Powiązanie usług IIS zawiera dwie informacje: powiązania dotyczące protokołu i powiązania. Protokół powiązania definiuje schemat, w którym odbywa się komunikacja, a informacje o powiązaniu są informacjami używanymi do uzyskiwania dostępu do witryny. Przykładem protokołu powiązania może być HTTP, natomiast informacje o powiązaniu mogą zawierać adres IP, port, nagłówek hosta itp.<br /><br /> Usługi IIS obsługują Określanie wielu powiązań usług IIS dla każdej witryny, co daje w wyniku wiele adresów bazowych na schemat. Jednak usługa Windows Communication Foundation (WCF) hostowana w ramach lokacji umożliwia powiązanie z tylko jedną baseAddress na schemat.<br /><br /> Aby włączyć wiele powiązań usług IIS dla każdej witryny dla usługi Windows Communication Foundation (WCF), ustaw ten atrybut `true`na. Zauważ, że wiele powiązań witryny jest obsługiwana tylko dla protokołu HTTP. Adres punktów końcowych w pliku konfiguracji musi być kompletnym identyfikatorem URI.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Kolekcja elementów konfiguracji, które określają, filtrów prefiks dla adres podstawowy, używany przez hosta usługi.|  
-|[\<serviceActivations>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|Sekcja konfiguracji, który opisuje ustawienia aktywacji.|  
-|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Kolekcja elementów konfiguracji, które identyfikują typ danego transportu.|  
+|[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|Kolekcja elementów konfiguracji, które określają filtry prefiksu dla adresów bazowych używanych przez hosta usługi.|  
+|[\<> ServiceActivations](serviceactivations.md)|Sekcja konfiguracji opisująca ustawienia aktywacji.|  
+|[\<transportConfigurationTypes>](transportconfigurationtypes.md)|Kolekcja elementów konfiguracji, które identyfikują typ określonego transportu.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|serviceModel|Element główny wszystkich elementów konfiguracji usługi Windows Communication Foundation (WCF).|  
+|Modelu|Element główny wszystkich elementów konfiguracji Windows Communication Foundation (WCF).|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie wykonywania side-by-side za pomocą platformy ASP.NET w hostowanej domen aplikacji (AppDomain) usług WCF. Mimo że program WCF i platformy ASP.NET mogą współistnieć w tej samej domenie aplikacji, usługi WCF żądania nie są przetwarzane przez potok HTTP platformy ASP.NET domyślnie. W rezultacie kilka elementów w aplikacji platformy ASP.NET nie są dostępne do usług WCF. Należą do nich  
+ Domyślnie usługi WCF działają równolegle z ASP.NET w domenach hostowanych aplikacji (AppDomain). Mimo że WCF i ASP.NET mogą współistnieć w tej samej domenie aplikacji, domyślnie żądania WCF nie są przetwarzane przez potok HTTP ASP.NET. W związku z tym niektóre elementy platformy aplikacji ASP.NET nie są dostępne dla usług WCF. Obejmują one  
   
-- ASP.NET, plik lub adres URL autoryzacji  
+- ASP.NET autoryzacja plików/adresów URL  
   
-- Personifikacji aplikacji ASP.NET  
+- Personifikacja ASP.NET  
   
-- Stan sesji na podstawie plików cookie  
+- Stan sesji na podstawie pliku cookie  
   
-- HttpContext.Current  
+- HttpContext. Current  
   
-- Rozszerzalność potoku za pomocą niestandardowych HttpModule  
+- Rozszerzalność potoku za pomocą niestandardowego modułu HttpModule  
   
- Jeśli usług WCF muszą działać w kontekście platformy ASP.NET i komunikować się tylko za pośrednictwem protokołu HTTP, można użyć tryb zgodności ASP.NET dla usługi WCF. Ten tryb jest włączona podczas `aspNetCompatibilityEnabled` ma ustawioną wartość atrybutu `true` na poziomie aplikacji. Implementacji usługi należy zadeklarować możliwość uruchamiania w trybie zgodności za pomocą <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> klasy. Po włączeniu trybu zgodności  
+ Jeśli usługi WCF muszą działać w kontekście ASP.NET i komunikować się tylko za pośrednictwem protokołu HTTP, można użyć trybu zgodności ASP.NET programu WCF. Ten tryb jest włączony, `aspNetCompatibilityEnabled` gdy atrybut jest ustawiony na `true` na poziomie aplikacji. Implementacje usług muszą deklarować możliwość uruchamiania w trybie zgodności przy użyciu <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> klasy. Gdy tryb zgodności jest włączony,  
   
-- Autoryzacji programu ASP.NET, plik lub adres URL jest wymuszana przed autoryzacji usługi WCF. Decyzja o autoryzacji opiera się na poziomie transportu tożsamości żądania. Tożsamości na poziomie wiadomości są ignorowane.  
+- ASP.NET autoryzacja plików/adresów URL jest wymuszana przed autoryzacją WCF. Decyzja o autoryzacji jest oparta na tożsamości na poziomie transportu żądania. Tożsamości na poziomie komunikatu są ignorowane.  
   
-- Rozpocznij operacji usługi WCF do wykonania w kontekście personifikacji platformy ASP.NET. Jeśli personifikacji aplikacji ASP.NET i WCF personifikacji są włączone dla określonej usługi, stosuje kontekstu personifikacji WCF.  
+- Operacje usługi WCF zaczynają działać w kontekście personifikacji ASP.NET. W przypadku włączenia zarówno personifikacji ASP.NET, jak i personifikacji WCF dla określonej usługi stosuje się kontekst personifikacji WCF.  
   
-- HttpContext.Current można używać na kod usługi WCF i usługi mają zablokowaną możliwość uwidaczniania punktów końcowych protokołu HTTP.  
+- Element HttpContext. Current może być używany z kodu usługi WCF, a usługi nie mogą uwidaczniać punktów końcowych innych niż HTTP.  
   
-- Usługi WCF żądania są przetwarzane przez potoku ASP.NET. Elementy HttpModule, które zostały skonfigurowane do działania na przychodzące żądania może również przetwarzanie żądań usługi WCF. Obejmują one składniki platformy ASP.NET (np. <xref:System.Web.SessionState.SessionStateModule>), a także moduły niestandardowe innych firm.  
+- Żądania WCF są przetwarzane przez potok ASP.NET. Elementy HttpModules, które zostały skonfigurowane do działania na żądania przychodzące mogą również przetwarzać żądania WCF. Mogą one obejmować składniki platformy ASP.NET (np. <xref:System.Web.SessionState.SessionStateModule>), a także niestandardowe moduły innych firm.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu pokazuje, jak włączyć tryb zgodności ASP.  
@@ -96,5 +96,5 @@ Ten element definiuje typ, który usługę hostingu środowiskowego dla danego t
 
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)
-- [Usługi WCF i platforma ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [Hosting](../../../wcf/feature-details/hosting.md)
+- [Usługi WCF i platforma ASP.NET](../../../wcf/feature-details/wcf-services-and-aspnet.md)

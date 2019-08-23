@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ceae33501330719a27e2d0015c21249dca62d551
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 2ddec748dc400418c21bfa8fab6fd2735d74af6d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566856"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941784"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Sposoby lokalizowania zestawów przez środowisko uruchomieniowe
 Aby pomyślnie wdrożyć aplikację .NET Framework, należy zrozumieć, jak środowisko uruchomieniowe języka wspólnego lokalizuje i tworzy powiązania z zestawami tworzącymi aplikację. Domyślnie środowisko uruchomieniowe próbuje powiązać z dokładną wersją zestawu, z którym została skompilowana aplikacja. To zachowanie domyślne można przesłonić przez ustawienia pliku konfiguracji.  
@@ -24,7 +24,7 @@ Aby pomyślnie wdrożyć aplikację .NET Framework, należy zrozumieć, jak śro
  Środowisko uruchomieniowe języka wspólnego wykonuje kilka czynności podczas próby zlokalizowania zestawu i rozpoznania odwołania do zestawu. Każdy krok został wyjaśniony w poniższych sekcjach. Termin sondowania jest często używany podczas opisywania, jak środowisko uruchomieniowe lokalizuje zestawy. odwołuje się do zestawu algorytmów heurystycznych używanych do lokalizowania zestawu na podstawie jego nazwy i kultury.  
   
 > [!NOTE]
->  Informacje o powiązaniu można wyświetlić w pliku dziennika za pomocą [przeglądarki dzienników powiązań zestawu (Fuslogvw. exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), która znajduje się w Windows SDK.  
+> Informacje o powiązaniu można wyświetlić w pliku dziennika za pomocą [przeglądarki dzienników powiązań zestawu (Fuslogvw. exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), która znajduje się w Windows SDK.  
   
 ## <a name="initiating-the-bind"></a>Inicjowanie powiązania  
  Proces lokalizowania i wiązania z zestawem rozpoczyna się, gdy środowisko uruchomieniowe próbuje rozpoznać odwołanie do innego zestawu. To odwołanie może być statyczne lub dynamiczne. Kompilator rejestruje statyczne odwołania w metadanych manifestu zestawu w czasie kompilacji. Dynamiczne odwołania są konstruowane na bieżąco w wyniku wywoływania różnych metod, takich jak <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  
@@ -36,7 +36,7 @@ Aby pomyślnie wdrożyć aplikację .NET Framework, należy zrozumieć, jak śro
  Na koniec można wykonać dynamiczne odwołanie przy użyciu metody, takiej jak <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> i podać tylko częściowe informacje. Możesz następnie zakwalifikować odwołanie [ \<](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) przy użyciu elementu qualifyAssembly > w pliku konfiguracyjnym aplikacji. Ten element umożliwia podanie pełnych informacji referencyjnych (nazwy, wersji, kultury i, jeśli ma zastosowanie, tokenu klucza publicznego) w pliku konfiguracyjnym aplikacji zamiast w kodzie. Tej metody należy użyć, jeśli chcesz w pełni kwalifikować odwołanie do zestawu poza katalogiem aplikacji, lub jeśli chcesz odwołać się do zestawu w globalnej pamięci podręcznej zestawów, ale potrzebujesz wygody do określania pełnego odwołania w plik konfiguracji zamiast w kodzie.  
   
 > [!NOTE]
->  Tego typu częściowego odwołania nie należy używać z zestawami, które są współużytkowane przez kilka aplikacji. Ponieważ ustawienia konfiguracji są stosowane dla aplikacji, a nie na zestaw, zestaw współużytkowany korzystający z tego typu częściowego odwołania będzie wymagał, aby każda aplikacja używająca zestawu udostępnionego mogła uzyskać informacje kwalifikujące w pliku konfiguracji.  
+> Tego typu częściowego odwołania nie należy używać z zestawami, które są współużytkowane przez kilka aplikacji. Ponieważ ustawienia konfiguracji są stosowane dla aplikacji, a nie na zestaw, zestaw współużytkowany korzystający z tego typu częściowego odwołania będzie wymagał, aby każda aplikacja używająca zestawu udostępnionego mogła uzyskać informacje kwalifikujące w pliku konfiguracji.  
   
  Środowisko uruchomieniowe używa następujących kroków, aby rozwiązać odwołanie do zestawu:  
   
@@ -45,7 +45,7 @@ Aby pomyślnie wdrożyć aplikację .NET Framework, należy zrozumieć, jak śro
 2. [Sprawdza, czy nazwa zestawu została powiązana z przed](#step2) i, jeśli tak, używa poprzednio załadowanego zestawu. Jeśli poprzednie żądanie załadowania zestawu nie powiodło się, żądanie kończy się natychmiast bez próby załadowania zestawu.  
   
     > [!NOTE]
-    >  Buforowanie niepowodzeń powiązań zestawów jest nowe w .NET Framework w wersji 2,0.  
+    > Buforowanie niepowodzeń powiązań zestawów jest nowe w .NET Framework w wersji 2,0.  
   
 3. [Sprawdza globalną pamięć podręczną zestawów](#step3). Jeśli zestaw zostanie tam znaleziony, środowisko uruchomieniowe użyje tego zestawu.  
   
@@ -73,7 +73,7 @@ Aby pomyślnie wdrożyć aplikację .NET Framework, należy zrozumieć, jak śro
  Te pliki są zgodne z tą samą składnią i zawierają takie informacje, jak przekierowania powiązań, lokalizacja kodu i tryby powiązań dla konkretnych zestawów. Każdy plik konfiguracyjny może zawierać [ \<element > zestawubinding](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) , który przekierowuje proces powiązania. [ Elementy\<](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) [ \<podrzędne elementu assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) zawierają element dependentAssembly >. Elementy podrzędne [ \<](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) [ elementudependentAssembly\<](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)> zawierają elementu > [ assemblyIdentity,elementu>bindingRedirectikodubazowej>elementu\<](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment) [ \< ](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md).  
   
 > [!NOTE]
->  Informacje o konfiguracji znajdują się w trzech plikach konfiguracji; nie wszystkie elementy są prawidłowe we wszystkich plikach konfiguracyjnych. Na przykład tryb powiązania i informacje o ścieżce prywatnej mogą znajdować się tylko w pliku konfiguracji aplikacji. Aby uzyskać pełną listę informacji zawartych w każdym pliku, zobacz [Konfigurowanie aplikacji przy użyciu plików konfiguracyjnych](../../../docs/framework/configure-apps/index.md).  
+> Informacje o konfiguracji znajdują się w trzech plikach konfiguracji; nie wszystkie elementy są prawidłowe we wszystkich plikach konfiguracyjnych. Na przykład tryb powiązania i informacje o ścieżce prywatnej mogą znajdować się tylko w pliku konfiguracji aplikacji. Aby uzyskać pełną listę informacji zawartych w każdym pliku, zobacz [Konfigurowanie aplikacji przy użyciu plików konfiguracyjnych](../../../docs/framework/configure-apps/index.md).  
   
 ### <a name="application-configuration-file"></a>Plik konfiguracji aplikacji  
  Najpierw środowisko uruchomieniowe języka wspólnego sprawdza plik konfiguracji aplikacji, aby uzyskać informacje, które zastępują informacje o wersji przechowywane w manifeście zestawu wywołującego. Plik konfiguracji aplikacji można wdrożyć przy użyciu aplikacji, ale nie jest to wymagane do wykonywania aplikacji. Zazwyczaj pobieranie tego pliku jest prawie chwilowe, ale w sytuacjach, gdy baza aplikacji znajduje się na komputerze zdalnym, na przykład w scenariuszu opartym na sieci Web w programie Internet Explorer, należy pobrać plik konfiguracyjny.  
@@ -123,7 +123,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  `compatkey.dat`jest plikiem klucza o silnej nazwie. To polecenie tworzy zestaw o silnej nazwie, który można umieścić w globalnej pamięci podręcznej zestawów.  
   
 > [!NOTE]
->  Zasady wydawcy mają wpływ na wszystkie aplikacje korzystające ze współużytkowanego składnika.  
+> Zasady wydawcy mają wpływ na wszystkie aplikacje korzystające ze współużytkowanego składnika.  
   
  Plik konfiguracji zasad wydawcy zastępuje informacje o wersji, które pochodzą z aplikacji (czyli z manifestu zestawu lub z pliku konfiguracyjnego aplikacji). Jeśli w pliku konfiguracji aplikacji nie ma żadnej instrukcji w celu przekierowania wersji określonej w manifeście zestawu, plik zasad wydawcy zastępuje wersję określoną w manifeście zestawu. Jeśli jednak w pliku konfiguracyjnym aplikacji znajduje się instrukcja przekierowania, zasady wydawcy zastępują tę wersję zamiast określonej w manifeście.  
   
@@ -144,7 +144,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Jeśli poprzednie żądanie dotyczące zestawu nie powiodło się, kolejne żądania dla zestawu nie powiodły się natychmiast, bez próby załadowania zestawu. Począwszy od .NET Framework w wersji 2,0, są buforowane błędy powiązań zestawu, a buforowane informacje są używane do określenia, czy próbować załadować zestaw.  
   
 > [!NOTE]
->  Aby przywrócić zachowanie .NET Framework wersjami 1,0 i 1,1, które nie zawierały błędów powiązań pamięci podręcznej, Uwzględnij [ \<element disableCachingBindingFailures >](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) w pliku konfiguracji.  
+> Aby przywrócić zachowanie .NET Framework wersjami 1,0 i 1,1, które nie zawierały błędów powiązań pamięci podręcznej, Uwzględnij [ \<element disableCachingBindingFailures >](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) w pliku konfiguracji.  
   
 <a name="step3"></a>   
 ## <a name="step-3-checking-the-global-assembly-cache"></a>Krok 3. Sprawdzanie globalnej pamięci podręcznej zestawów  
@@ -159,7 +159,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 2. Środowisko uruchomieniowe następnie sondy dla przywoływanego zestawu przy użyciu reguł określonych w dalszej części tej sekcji.  
   
 > [!NOTE]
->  Jeśli masz wiele wersji zestawu w katalogu i chcesz odwołać się do określonej wersji tego zestawu, musisz użyć `privatePath` [ \<bazowej >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elementu zamiast atrybutu [ \<sondowania >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elementu. Jeśli używasz [ \<elementu > sondowania](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) , środowisko uruchomieniowe przestanie sondowania podczas pierwszego znalezienia zestawu zgodnego z prostą nazwą zestawu, niezależnie od tego, czy jest to poprawny odpowiednik, czy nie. Jeśli jest to poprawny odpowiednik, ten zestaw jest używany. Jeśli nie jest to poprawna zgodność, sondowanie zakończy się niepowodzeniem.  
+> Jeśli masz wiele wersji zestawu w katalogu i chcesz odwołać się do określonej wersji tego zestawu, musisz użyć `privatePath` [ \<bazowej >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elementu zamiast atrybutu [ \<sondowania >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elementu. Jeśli używasz [ \<elementu > sondowania](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) , środowisko uruchomieniowe przestanie sondowania podczas pierwszego znalezienia zestawu zgodnego z prostą nazwą zestawu, niezależnie od tego, czy jest to poprawny odpowiednik, czy nie. Jeśli jest to poprawny odpowiednik, ten zestaw jest używany. Jeśli nie jest to poprawna zgodność, sondowanie zakończy się niepowodzeniem.  
   
 ### <a name="locating-the-assembly-through-codebases"></a>Lokalizowanie zestawu za pomocą baz kodu  
  Informacje o ścieżce bazowej można podać przy użyciu [ \<kodu bazowej >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) w pliku konfiguracyjnym. Ta baza kodu jest zawsze sprawdzana, zanim środowisko uruchomieniowe próbuje sondować przywoływany zestaw. Jeśli plik zasad wydawcy zawierający ostateczną wersję przekierowania również zawiera [ \<](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) bazową > element, który [ \<](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) jest podbazową > element jest tym, który jest używany. Na przykład, jeśli plik konfiguracyjny aplikacji określa [ \<bazę kodu >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) , a plik zasad wydawcy, który zastępuje [ \<](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) informacje o aplikacji, również określa element bazowej >, użyto bazy kodu > w pliku zasad wydawcy. [ \<](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)  
@@ -167,7 +167,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Jeśli żadne dopasowanie nie zostanie znalezione w lokalizacji określonej przez [ \<>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) element, żądanie powiązania zakończy się niepowodzeniem i nie są podejmowane żadne dalsze kroki. Jeśli środowisko uruchomieniowe określa, że zestaw pasuje do kryteriów zestawu wywołującego, używa tego zestawu. Gdy plik określony przez daną [ \<bazę kodu >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) element jest ładowany, środowisko uruchomieniowe sprawdzi, czy nazwa, wersja, kultura i klucz publiczny są zgodne z odwołaniem do zestawu wywołującego.  
   
 > [!NOTE]
->  Zestawy, do których istnieją odwołania poza katalogiem głównym aplikacji, muszą mieć silne nazwy i muszą być zainstalowane w globalnej pamięci podręcznej zestawów lub określone przy użyciu [ \<bazowej >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elementu.  
+> Zestawy, do których istnieją odwołania poza katalogiem głównym aplikacji, muszą mieć silne nazwy i muszą być zainstalowane w globalnej pamięci podręcznej zestawów lub określone przy użyciu [ \<bazowej >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elementu.  
   
 ### <a name="locating-the-assembly-through-probing"></a>Lokalizowanie zestawu za pomocą sondowania  
  Jeśli w pliku konfiguracyjnym aplikacji nie [ \<ma kodu bazowej >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) , sondy środowiska uruchomieniowego dla zestawu przy użyciu czterech kryteriów:  

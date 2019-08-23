@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69cc2459f1944c8101be9c58b1462217ee7ac78f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629568"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915420"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importer kontrolki ActiveX formularzy systemu Windows)
 Importer formantów ActiveX konwertuje definicje typów w bibliotece typów modelu COM dla formantu ActiveX na formant programu Windows Forms.  
@@ -49,7 +49,7 @@ aximp [options]{file.dll | file.ocx}
 |`/nologo`|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
 |`/out:`*Nazwa pliku*|Określa nazwę zestawu, który ma zostać utworzony.|  
 |`/publickey:`*Nazwa pliku*|Podpisuje formant o silnej nazwie przy użyciu klucza publicznego znajdującego się w pliku określonym przez *nazwę pliku*.|  
-|`/rcw:`*Nazwa pliku*|Używa określonej wywoływalnej otoki czasu wykonywania, zamiast generować nową. Można określić wiele wystąpień. Dla ścieżek względnych jest używany bieżący katalog. Aby uzyskać więcej informacji, zobacz [otoka wywoływana w środowisku uruchomieniowym](../../../docs/standard/native-interop/runtime-callable-wrapper.md).|  
+|`/rcw:`*Nazwa pliku*|Używa określonej wywoływalnej otoki czasu wykonywania, zamiast generować nową. Można określić wiele wystąpień. Dla ścieżek względnych jest używany bieżący katalog. Aby uzyskać więcej informacji, zobacz [otoka wywoływana w środowisku uruchomieniowym](../../standard/native-interop/runtime-callable-wrapper.md).|  
 |`/silent`|Pomija wyświetlanie komunikatów o sukcesie.|  
 |`/source`|Generuje kod źródłowy w języku C# dla otoki programu Windows Forms.|  
 |`/verbose`|Określa tryb pełny; wyświetla dodatkowe informacje o postępie.|  
@@ -62,7 +62,7 @@ aximp [options]{file.dll | file.ocx}
  Windows Forms proxy dla formantów ActiveX (gdzie AX oznacza kontrolki ActiveX): *Identyfikator ProgID*. dll systemu AX  
   
 > [!NOTE]
->  Jeśli nazwa składowej formantu ActiveX pasuje do nazwy zdefiniowanej w programie .NET Framework, program Aximp.exe poprzedzi nazwę składowej prefiksem „Ctl”, gdy będzie tworzyć klasę pochodną AxHost. Na przykład jeśli formant ActiveX ma składową o nazwie Layout, jej nazwa w klasie pochodnej AxHost zostanie zmieniona na CtlLayout, ponieważ zdarzenie Layout jest zdefiniowane w programie .NET Framework.  
+> Jeśli nazwa składowej formantu ActiveX pasuje do nazwy zdefiniowanej w programie .NET Framework, program Aximp.exe poprzedzi nazwę składowej prefiksem „Ctl”, gdy będzie tworzyć klasę pochodną AxHost. Na przykład jeśli formant ActiveX ma składową o nazwie Layout, jej nazwa w klasie pochodnej AxHost zostanie zmieniona na CtlLayout, ponieważ zdarzenie Layout jest zdefiniowane w programie .NET Framework.  
   
  Te wygenerowane pliki można przeanalizować za pomocą narzędzi, takich jak [Ildasm. exe (Il dezasembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 3b410bcf609aca2cb201042247b8768f243ac93a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: eeba54ebd63b26a50c8c01a2478e847b3e660a3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629746"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937691"
 ---
 # <a name="drawing-formatted-text"></a>Rysowanie formatowanego tekstu
 Ten temat zawiera omówienie funkcji <xref:System.Windows.Media.FormattedText> obiektu. Ten obiekt zawiera formant niskiego poziomu służący do rysowania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] tekstu w aplikacjach.  
@@ -26,7 +26,7 @@ Ten temat zawiera omówienie funkcji <xref:System.Windows.Media.FormattedText> o
  ![Tekst wyświetlany przy użyciu obiektu FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)  
   
 > [!NOTE]
->  W przypadku tych deweloperów Migrowanie [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] z interfejsu API tabela w sekcji [migracji Win32](#win32_migration) zawiera listę [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] flag DrawText i przybliżony odpowiednik w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+> W przypadku tych deweloperów Migrowanie [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] z interfejsu API tabela w sekcji [migracji Win32](#win32_migration) zawiera listę [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] flag DrawText i przybliżony odpowiednik w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ### <a name="reasons-for-using-formatted-text"></a>Przyczyny używania tekstu sformatowanego  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zawiera wiele kontrolek do rysowania tekstu na ekranie. Każdy formant jest przeznaczony dla innego scenariusza i ma własną listę funkcji i ograniczeń. Ogólnie rzecz biorąc, <xref:System.Windows.Controls.TextBlock> element powinien być używany, gdy wymagana jest obsługa tekstu ograniczonego, na przykład krótkie zdanie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]w. <xref:System.Windows.Controls.Label>może być używany, gdy wymagana jest minimalna obsługa tekstu. Aby uzyskać więcej informacji, zobacz [dokumenty w WPF](documents-in-wpf.md).  

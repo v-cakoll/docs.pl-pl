@@ -8,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 130cc68906be433afc906cfb22759f4ae3dba447
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5b135fee12ac5b78b41a657f2eb458ea104143fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589460"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923933"
 ---
 # <a name="indexers-c-programming-guide"></a>Indeksatory (Przewodnik programowania w języku C#)
 
@@ -24,7 +24,7 @@ Indeksatory umożliwiają indeksowanie wystąpień klasy lub struktury tak samo 
  [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
 > [!NOTE]
->  Aby uzyskać więcej przykładów, zobacz sekcję [pokrewne](./index.md#BKMK_RelatedSections).  
+> Aby uzyskać więcej przykładów, zobacz sekcję [pokrewne](./index.md#BKMK_RelatedSections).  
   
 ## <a name="expression-body-definitions"></a>Definicje treści wyrażenia  
  

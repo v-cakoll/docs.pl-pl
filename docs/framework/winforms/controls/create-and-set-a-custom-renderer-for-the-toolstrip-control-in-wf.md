@@ -10,26 +10,26 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-ms.openlocfilehash: ca1a7444c029632f83b1600e5855a13c83777594
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c354ace3a7d3ce43f549dd1295a85fbee004eb22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772908"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929738"
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>Instrukcje: tworzenie i ustawienie niestandardowego modułu renderowania dla kontrolki ToolStrip w formularzach systemu Windows
-<xref:System.Windows.Forms.ToolStrip> kontrolki daj pomocy technicznej łatwe do kompozycje i style. Można osiągnąć zupełnie niestandardowy wygląd i zachowanie (wygląd i działanie), ustawiając opcję <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> właściwości lub <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> właściwości do niestandardowego modułu renderowania.  
+<xref:System.Windows.Forms.ToolStrip>kontrolki zapewniają łatwą obsługę motywów i stylów. Możesz uzyskać całkowicie niestandardowy wygląd i zachowanie (wygląd i działanie), ustawiając <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> Właściwość <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> lub właściwość na niestandardowy moduł renderujący.  
   
- Programy renderujące można przypisać do poszczególnych osób <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ContextMenuStrip>, lub <xref:System.Windows.Forms.StatusStrip> kontroli, lub użyć <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> mają wpływ na wszystkie obiekty, ustawiając właściwość <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> właściwość <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>.  
+ Można przypisać moduły <xref:System.Windows.Forms.ToolStrip>renderowania do poszczególnych osób <xref:System.Windows.Forms.ContextMenuStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> lub <xref:System.Windows.Forms.StatusStrip> kontrolki, lub użyć właściwości, aby wpływać na wszystkie obiekty przez ustawienie <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> właściwości na <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> Zwraca <xref:System.Windows.Forms.ToolStripRenderMode.Custom> tylko wtedy, gdy wartość <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> nie `null`.  
+> <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>zwraca <xref:System.Windows.Forms.ToolStripRenderMode.Custom> tylko wtedy, gdy <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> wartość nie `null`jest.  
   
-### <a name="to-create-a-custom-renderer"></a>Aby utworzyć niestandardowego modułu renderowania  
+### <a name="to-create-a-custom-renderer"></a>Aby utworzyć niestandardowy moduł renderujący  
   
-1. Rozszerzanie <xref:System.Windows.Forms.ToolStripRenderer> klasy.  
+1. <xref:System.Windows.Forms.ToolStripRenderer> Rozwiń klasę.  
   
-2. Implementuj żądane niestandardowe renderowanie przez zastąpienie odpowiednie *na...* elementy członkowskie  
+2. Zaimplementuj żądane renderowanie niestandardowe przez zastępowanie właściwych *w...* elementy członkowskie  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -57,9 +57,9 @@ ms.locfileid: "61772908"
     }  
     ```  
   
-### <a name="to-set-the-custom-renderer-to-be-the-current-renderer"></a>Aby ustawić niestandardowego modułu renderowania do bieżącego programu renderującego  
+### <a name="to-set-the-custom-renderer-to-be-the-current-renderer"></a>Aby ustawić moduł renderowania niestandardowego jako bieżący moduł renderowania  
   
-1. Aby ustawić niestandardowego modułu renderowania dla jednego <xref:System.Windows.Forms.ToolStrip>ustaw <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> właściwości do niestandardowego modułu renderowania.  
+1. Aby ustawić niestandardowy moduł renderujący dla <xref:System.Windows.Forms.ToolStrip>jednego, <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> ustaw właściwość na niestandardowy moduł renderowania.  
   
     ```vb  
     toolStrip1.Renderer = New RedTextRenderer()  
@@ -69,7 +69,7 @@ ms.locfileid: "61772908"
     toolStrip1.Renderer = new RedTextRenderer();  
     ```  
   
-2. Lub ustawienie niestandardowego modułu renderowania dla wszystkich <xref:System.Windows.Forms.ToolStrip> klasy zawarte w Twojej aplikacji: Ustaw <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> właściwości do niestandardowego modułu renderowania, a zestaw <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> właściwość <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.  
+2. Lub w celu ustawienia modułu renderowania niestandardowego dla <xref:System.Windows.Forms.ToolStrip> wszystkich klas zawartych w aplikacji: Ustaw właściwość na moduł renderowania niestandardowego i <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> ustaw właściwość na <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>. <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>  
   
     ```vb  
     toolStrip1.RenderMode = ToolStripRenderMode.ManagerRenderMode  

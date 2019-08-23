@@ -5,20 +5,20 @@ ms.technology: dotnet-standard
 ms.assetid: 369850e9-004a-45d2-b5c3-5060d9135adb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 70b22dbc3facdf0e36dea64074fc8284b9b18a67
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 6a967ffe5db0b8b08adacff9085c7573867f21a4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170905"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910364"
 ---
 # <a name="xslt-transformations-over-different-stores"></a>Przekształcenia XSLT w różnych magazynach
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w programie .NET Framework 2.0. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
+> <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w .NET Framework 2,0. Można wykonać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- ADO.NET i klasy XML w programie .NET Framework udostępniają jednolity model programowania w celu dostępu do danych. Tych danych jest reprezentowany jako danych XML, który jest tekst rozdzielany według tagów, oraz dane relacyjne, czyli tabelach składających się z wierszy i kolumn. Kod XML w .NET Framework odczytuje dane XML z dowolny strumień danych do drzewa węzła XML Document Object Model (DOM), w którym dane są dostępne programowo, a ADO.NET zapewnia sposób uzyskiwania dostępu i manipulowania danymi relacyjnymi w ramach <xref:System.Data.DataSet> obiektu.  
+ Klasy ADO.NET i XML w .NET Framework zapewniają ujednolicony model programowania do uzyskiwania dostępu do danych. Te dane są reprezentowane jako dane XML, które są tekstem rozdzielanym przez Tagi i dane relacyjne, które są tabelami zawierającymi wiersze i kolumny. Kod XML w .NET Framework odczytuje dane XML z dowolnego strumienia danych do drzew drzewa XML Document Object Model (dom), w których dane mogą być programistycznie dostępne, podczas gdy ADO.NET zapewnia metodę dostępu i manipulowania danymi relacyjnymi <xref:System.Data.DataSet> w obiekcie.  
   
- Modelu DOM języka XML zapewnia dostęp do danych w dokumentach XML i dodatkowych klas do odczytu, zapisu i nawigacja w dokumentach XML. Te klasy są obsługiwane w <xref:System.Xml> przestrzeni nazw, który również łączy modelu DOM języka XML przy użyciu usługi dostępu do danych, które są dostarczane przez ADO.NET. <xref:System.Xml.XmlDataDocument> Zapewnia relacyjnych dostęp do danych. <xref:System.Xml.XmlDataDocument> Mapuje XML w relacyjnej bazie danych w ADO.NET <xref:System.Data.DataSet>. Dowolnej aplikacji opartej na programie .NET Framework, można użyć klas w <xref:System.Xml> przestrzeń nazw w celu uzyskiwania dostępu i manipulowania dokumentów XML i dla danych relacyjnych w <xref:System.Xml.XmlDataDocument>. Ta implementacja obsługuje architektury n warstwowa zbierania i dystrybucji danych. Aby uzyskać więcej informacji, zobacz [Integracja XML z danymi relacyjnymi i ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md).  
+ DOM XML zapewnia dostęp do danych w dokumentach XML i dodatkowych klasach do odczytu, zapisu i nawigowania w dokumentach XML. Te klasy są obsługiwane w <xref:System.Xml> przestrzeni nazw, co również łączy XML dom z usługami dostępu do danych udostępnionymi przez ADO.NET. <xref:System.Xml.XmlDataDocument> Zapewnia dostęp relacyjny do danych. Mapowanie XML na dane relacyjne w ADO.NET <xref:System.Data.DataSet>. <xref:System.Xml.XmlDataDocument> Wszystkie aplikacje oparte na .NET Framework mogą używać klas w <xref:System.Xml> przestrzeni nazw do uzyskiwania dostępu do dokumentów XML i danych relacyjnych <xref:System.Xml.XmlDataDocument>w programie oraz manipulowania nimi. Ta implementacja obsługuje architektury n-warstwowe na potrzeby zbierania i dystrybuowania danych. Aby uzyskać więcej informacji, zobacz temat [Integracja XML z danymi relacyjnymi i ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - history [WPF], navigating forward
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
-ms.openlocfilehash: 85d3562246170901d83d6314caec5747d52fb9a0
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 76a78debdce14123cc465ac9abf4db906fe0a2df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817966"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961353"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Instrukcje: Poruszanie się w przód i wstecz w historii nawigacji
 Ten przykład ilustruje sposób nawigowania do przodu lub z powrotem do wpisów w historii nawigacji.  
@@ -40,4 +40,4 @@ Ten przykład ilustruje sposób nawigowania do przodu lub z powrotem do wpisów 
  **CanGoForward**, **GoForward**, **CanGoBack**i **GoBack** są implementowane przez <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, i <xref:System.Windows.Navigation.NavigationService>.  
   
 > [!NOTE]
->  Jeśli wywołasz **GoForward**i nie ma żadnych wpisów w historii przeglądania do przodu lub jeśli wywołasz **GoBack**i nie ma żadnych wpisów w <xref:System.InvalidOperationException> historii nawigacji wstecznej, zostanie zgłoszony.
+> Jeśli wywołasz **GoForward**i nie ma żadnych wpisów w historii przeglądania do przodu lub jeśli wywołasz **GoBack**i nie ma żadnych wpisów w <xref:System.InvalidOperationException> historii nawigacji wstecznej, zostanie zgłoszony.

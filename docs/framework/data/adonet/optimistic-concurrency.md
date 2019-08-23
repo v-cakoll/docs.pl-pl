@@ -5,73 +5,73 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: f2fc69867ae1659a342161b00dfd91852441fa5b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37641056f2f3110685c24266d2612845ffbf0b3d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772011"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929241"
 ---
 # <a name="optimistic-concurrency"></a>Optymistyczna współbieżność
-W środowisku wielodostępnym, istnieją dwa modele aktualizacji danych w bazie danych: optymistycznej współbieżności i pesymistycznej współbieżności. <xref:System.Data.DataSet> Obiektu jest przeznaczona do zachęcać do stosowania funkcji optymistycznej współbieżności dla długotrwałych działań, takich jak dane usług zdalnych i wchodzenie w interakcje z danymi.  
+W środowisku wielodostępnym istnieją dwa modele aktualizowania danych w bazie danych: optymistyczne współbieżność i pesymistyczne współbieżności. <xref:System.Data.DataSet> Obiekt został zaprojektowany, aby zachęcić do korzystania z optymistycznej współbieżności dla długotrwałych działań, takich jak dane dotyczące komunikacji zdalnej i manipulowania danymi.  
   
- Współbieżność pesymistyczna polega na blokowanie wierszy w źródle danych, aby uniemożliwić innym użytkownikom modyfikowanie danych w sposób, który ma wpływ na bieżącego użytkownika. Pesymistyczne modelu gdy użytkownik wykona akcję, która powoduje, że blokady do zastosowania, inni użytkownicy nie można wykonać akcje, które spowodowałoby to konflikt z blokadą do momentu właściciel blokady zwalnia go. Ten model jest używany głównie w środowiskach, w której jest mocno rywalizacji o danych, tak, aby koszty ochrony danych przy użyciu blokady jest mniejsza niż koszt wycofywanie transakcji, jeśli występują konflikty współbieżności.  
+ Współbieżność pesymistyczna polega na zablokowaniu wierszy w źródle danych, aby uniemożliwić innym użytkownikom modyfikowanie danych w taki sposób, który ma wpływ na bieżącego użytkownika. W modelu pesymistycznym, gdy użytkownik wykonuje akcję, która powoduje stosowanie blokady, inni użytkownicy nie mogą wykonać akcji, które mogłyby spowodować konflikt z blokadą do momentu jego zwolnienia przez właściciela. Ten model jest używany głównie w środowiskach, w których istnieje intensywna rywalizacja o dane, dzięki czemu koszt ochrony danych z blokadami jest niższy niż koszt wycofywania transakcji w przypadku wystąpienia konfliktów współbieżności.  
   
- W związku z tym w modelu pesymistycznej współbieżności, użytkownik, który aktualizuje wiersz ustanawia blokadę. Dopóki użytkownik nie ma Zakończono aktualizację i ogólnie blokady, nikt inny nie można zmienić tego wiersza. Współbieżność pesymistyczna z tego powodu najlepiej jest implementowane, gdy czasy blokady będą krótki, tak jak programowe przetwarzania rekordów. Współbieżność pesymistyczna nie jest to skalowalne rozwiązanie, gdy użytkownicy są wchodzenie w interakcje z danymi i powodują, że rekordy zostanie zablokowane przez stosunkowo dużej ilości okresy.  
+ W związku z tym w modelu współbieżności pesymistycznej użytkownik, który aktualizuje wiersz, ustanawia blokadę. Do momentu zakończenia aktualizacji przez użytkownika i zwolnienia blokady nikt inny nie będzie mógł zmienić tego wiersza. Z tego powodu Współbieżność pesymistyczna jest najlepszym zaimplementowana, gdy czasy blokowania będą krótkie, jak programowe przetwarzanie rekordów. Współbieżność pesymistyczna nie jest skalowalna, gdy użytkownicy pracują z danymi i powodują, że rekordy są blokowane przez stosunkowo długi czas.  
   
 > [!NOTE]
->  Jeśli trzeba zaktualizować wiele wierszy w tej samej operacji, następnie utworzenie transakcji jest bardziej skalowalna opcji niż przy użyciu pesymistycznego blokowania.  
+> Jeśli musisz zaktualizować wiele wierszy w tej samej operacji, tworzenie transakcji jest bardziej skalowalne, niż przy użyciu pesymistycznego blokowania.  
   
- Z drugiej strony Użytkownicy, którzy używaj optymistycznej współbieżności nie Blokuj wiersz podczas jej odczytywania. Gdy użytkownik chce, aby zaktualizować wiersza, aplikacji należy określić, czy inny użytkownik zmienił wiersza, ponieważ została ona odczytana. Optymistyczna współbieżność jest zazwyczaj używane w środowiskach z niskim rywalizacji o zasoby danych. Optymistyczna współbieżność zwiększa wydajność, ponieważ wymagana jest nie blokowania rekordów i blokowanie rekordów wymaga dodatkowych zasobów serwera. Ponadto w celu utrzymania blokady rekordu, trwałe połączenie z serwerem bazy danych jest wymagana. Ponieważ nie jest w przypadku modelu optymistycznej współbieżności, połączenia z serwerem są bezpłatne do obsługi większej liczby klientów w krótszym czasie.  
+ Z kolei użytkownicy korzystający z optymistycznej współbieżności nie blokują wiersza podczas odczytu. Gdy użytkownik chce zaktualizować wiersz, aplikacja musi określić, czy inny użytkownik zmienił wiersz od czasu odczytu. Współbieżność optymistyczna jest zwykle używana w środowiskach z niską rywalizacją dla danych. Optymistyczna współbieżność zwiększa wydajność, ponieważ nie jest wymagane blokowanie rekordów, a blokowanie rekordów wymaga dodatkowych zasobów serwera. Ponadto w celu utrzymania blokad rekordów wymagane jest trwałe połączenie z serwerem bazy danych. Ponieważ nie jest to przypadek optymistyczny model współbieżności, połączenia z serwerem są bezpłatne, aby zapewnić większą liczbę klientów w krótszym czasie.  
   
- W modelu optymistycznej współbieżności naruszenie uznaje się miała miejsce, jeśli po użytkownik otrzymuje wartość z bazy danych, inny użytkownik modyfikuje wartość, zanim pierwszy użytkownik próbował go zmodyfikować. Jak serwer rozpoznaje Naruszenie współbieżności najlepiej jest wyświetlany przy pierwszym opisujące w poniższym przykładzie.  
+ W modelu współbieżności optymistycznej uważa się, że wystąpiło naruszenie, jeśli po odebraniu przez użytkownika wartości z bazy danych inny użytkownik zmodyfikuje wartość przed próbą zmodyfikowania jej przez pierwszego użytkownika. Jak serwer rozpoznaje naruszenie współbieżności najlepiej ilustruje poniższy przykład.  
   
- Poniższe tabele postępuj zgodnie z przykładem optymistycznej współbieżności.  
+ W poniższych tabelach przedstawiono przykład optymistycznej współbieżności.  
   
- O 1:00 Użytkownik1 odczytuje wiersz z bazy danych z następującymi wartościami:  
+ O godzinie 1:00, Użytkownik1 odczytuje wiersz z bazy danych o następujących wartościach:  
   
  **CustID nazwisko imię**  
   
- 101 Bob Smith  
+ 101 Kowalski Roberta  
   
 |Nazwa kolumny|Oryginalna wartość|Bieżąca wartość|Wartość w bazie danych|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
-|LastName|Nowak|Nowak|Nowak|  
+|LastName|Nazwisk|Nazwisk|Nazwisk|  
 |FirstName|Bob|Bob|Bob|  
   
- 1 o godzinie: 01 Użytkownik2 odczytuje w tym samym wierszu.  
+ O godzinie 1:01, 13:00 odczytuje ten sam wiersz.  
   
- 1 o godzinie: 03, zmienia się Użytkownik2 **FirstName** z "Bob" do "Robert" i aktualizuje bazę danych.  
+ O godzinie 1:03 – 13:00 zmiany **FirstName** od "Roberta" do "Robert" i aktualizuje bazę danych.  
   
 |Nazwa kolumny|Oryginalna wartość|Bieżąca wartość|Wartość w bazie danych|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
-|LastName|Nowak|Nowak|Nowak|  
+|LastName|Nazwisk|Nazwisk|Nazwisk|  
 |FirstName|Bob|Robert|Bob|  
   
- Aktualizacja zakończy się pomyślnie, ponieważ oryginalne wartości, które ma Użytkownik2 pasuje do wartości w bazie danych w czasie aktualizacji.  
+ Aktualizacja powiedzie się, ponieważ wartości w bazie danych w czasie aktualizacji pasują do oryginalnych wartości, które mają wartość od.  
   
- 1 o godzinie: 05 Użytkownik1 zmiany "Bob" imię "James" i podejmuje próbę zaktualizowania wiersza w tabeli.  
+ O godzinie 1:05, Użytkownik1 zmieni imię "Roberta" na "Kuba" i spróbuje zaktualizować wiersz.  
   
 |Nazwa kolumny|Oryginalna wartość|Bieżąca wartość|Wartość w bazie danych|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
-|LastName|Nowak|Nowak|Nowak|  
-|FirstName|Bob|James|Robert|  
+|LastName|Nazwisk|Nazwisk|Nazwisk|  
+|FirstName|Bob|Tomasz|Robert|  
   
- W tym momencie użytkownik User1 napotyka naruszenie optymistycznej współbieżności, ponieważ wartość w bazie danych ("Robert") nie jest zgodna z oryginalnej wartości, że użytkownik User1 oczekiwała ("Bob"). Naruszenie współbieżności po prostu informuje o tym, że aktualizacja nie powiodła się. Teraz decyzja należy zastąpić zmiany dostarczonych przez Użytkownik2 ze zmianami, dostarczone przez użytkownika Użytkownik1 lub Anuluj zmiany przy użyciu konta użytkownik1.  
+ W tym momencie Użytkownik1 napotyka optymistyczne naruszenie współbieżności, ponieważ wartość w bazie danych ("Robert") nie jest już zgodna z oryginalną wartością oczekiwaną przez Użytkownik1 ("Robert"). Naruszenie współbieżności pozwala stwierdzić, że aktualizacja nie powiodła się. Należy teraz podjąć decyzję, czy zastąpić zmiany wprowadzone przez użytkownika, wprowadzając zmiany podane przez Użytkownik1, lub aby anulować zmiany przez Użytkownik1.  
   
-## <a name="testing-for-optimistic-concurrency-violations"></a>Testowanie pod kątem naruszeń optymistycznej współbieżności  
- Istnieje kilka technik testowania dla naruszenia optymistycznej współbieżności. Jeden polega na tym kolumnę sygnatur czasowych w tabeli. Bazy danych zwykle zapewniają funkcje sygnatury czasowej, który może służyć do identyfikowania Data i godzina, kiedy rekord był ostatnio aktualizowany. Ta technika kolumnę sygnatur czasowych znajduje się w definicji tabeli. Zawsze wtedy, gdy rekord zostanie zaktualizowany, sygnatura czasowa jest aktualizowana w celu odzwierciedlenia bieżącej daty i godziny. W teście naruszeń optymistycznej współbieżności kolumnę sygnatur czasowych, jest zwracany za pomocą dowolnego zapytania zawartość tabeli. Próba aktualizacji wartości sygnatur czasowych w bazie danych jest porównywany oryginalna wartość sygnatury czasowej znajdujących się w wierszu zmodyfikowane. Jeśli są zgodne, wykonywania aktualizacji, a kolumny sygnatur czasowych zostanie zaktualizowany bieżący czas w celu uwzględnienia aktualizacji. Jeśli nie są zgodne, wystąpiło naruszenie optymistycznej współbieżności.  
+## <a name="testing-for-optimistic-concurrency-violations"></a>Testowanie dla optymistycznych naruszeń współbieżności  
+ Istnieje kilka technik testowania dla optymistycznego naruszenia współbieżności. Jeden z nich obejmuje dołączenie kolumny timestamp do tabeli. Bazy danych często zapewniają funkcję sygnatur czasowych, która może służyć do identyfikowania daty i godziny ostatniej aktualizacji rekordu. Korzystając z tej techniki, w definicji tabeli jest dołączona kolumna sygnatur czasowych. Za każdym razem, gdy rekord zostanie zaktualizowany, sygnatura czasowa jest aktualizowana w celu odzwierciedlenia bieżącej daty i godziny. W teście dla optymistycznych naruszeń współbieżności kolumna sygnatury czasowej jest zwracana z dowolnego zapytania o zawartość tabeli. Po próbie aktualizacji wartość sygnatury czasowej w bazie danych jest porównywana z oryginalną wartością sygnatury czasowej zawartej w zmodyfikowanym wierszu. Jeśli są one zgodne, aktualizacja jest wykonywana, a kolumna sygnatury czasowej zostaje zaktualizowana o bieżący czas, aby odzwierciedlić aktualizację. Jeśli nie są zgodne, nastąpiło jednooptymistyczne naruszenie współbieżności.  
   
- Inna technika testowanie pod kątem naruszenie optymistycznej współbieżności jest Sprawdź, czy wszystkie oryginalne wartości kolumn w wierszu nadal odpowiadają tych dostępnych w bazie danych. Na przykład należy wziąć pod uwagę następujące zapytanie:  
+ Inna technika testowania dla optymistycznego naruszenia współbieżności polega na sprawdzeniu, czy wszystkie oryginalne wartości kolumn w wierszu nadal pasują do nazw znalezionych w bazie danych. Rozważmy na przykład następujące zapytanie:  
   
 ```  
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- Do testowania naruszenie optymistycznej współbieżności podczas aktualizowania wiersza w **Tabela1**, czy wystawiać następującą instrukcję aktualizacji:  
+ Aby sprawdzić optymistyczne naruszenie współbieżności podczas aktualizowania wiersza w tabeli **Tabela1**, należy wydać następującą instrukcję AKTUALIZUJĄCĄ:  
   
 ```  
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -82,28 +82,28 @@ WHERE Col1 = @OldCol1Value AND
       Col3 = @OldCol3Value  
 ```  
   
- Tak długo, jak oryginalne wartości odpowiadają wartościom w bazie danych, aktualizacja jest wykonywana. W przypadku modyfikowania wartość aktualizacji nie będą modyfikować wiersza, ponieważ klauzula WHERE nie znajdzie dopasowania.  
+ Tak długo, jak oryginalne wartości pasują do wartości w bazie danych, jest przeprowadzana aktualizacja. Jeśli wartość została zmodyfikowana, aktualizacja nie zmodyfikuje wiersza, ponieważ klauzula WHERE nie znajdzie dopasowania.  
   
- Należy pamiętać, że zalecane jest zawsze zwracać unikatowe wartości klucza podstawowego w zapytaniu. W przeciwnym razie poprzednich instrukcji UPDATE może być aktualizowana więcej niż jeden wiersz, który może nie być zgodne z zamiarami użytkownika.  
+ Należy zauważyć, że zaleca się zawsze zwrócenie unikatowej wartości klucza podstawowego do zapytania. W przeciwnym razie Poprzednia instrukcja UPDATE może zaktualizować więcej niż jeden wiersz, co może nie być Twoim zamiarem.  
   
- Kolumny w źródle danych dopuszcza wartości null, może być konieczne rozszerzenie usługi klauzuli WHERE, aby wyszukać pasujące odwołanie o wartości null w Twojej lokalnej tabeli, a w źródle danych. Na przykład następującą instrukcję aktualizacji sprawdza, czy odwołanie o wartości null w wierszu lokalne nadal odpowiada odwołanie o wartości null w źródle danych, lub że wartość w lokalnych wierszu nadal odpowiada wartości w źródle danych.  
+ Jeśli kolumna w źródle danych dopuszcza wartości null, może być konieczne przeciągnięcie klauzuli WHERE, aby sprawdzić pasujące odwołanie o wartości null w lokalnej tabeli i w źródle danych. Na przykład następująca instrukcja UPDATE sprawdza, czy odwołanie o wartości null w wierszu lokalnym nadal pasuje do odwołania o wartości null w źródle danych lub czy wartość w wierszu lokalnym nadal pasuje do wartości w źródle danych.  
   
 ```  
 UPDATE Table1 Set Col1 = @NewVal1  
   WHERE (@OldVal1 IS NULL AND Col1 IS NULL) OR Col1 = @OldVal1  
 ```  
   
- Można również zastosować mniej restrykcyjne uprawnienia kryteria, korzystając z modelu optymistycznej współbieżności. Na przykład za pomocą tylko kolumny klucza podstawowego w klauzuli WHERE powoduje, że dane zostaną zastąpione, niezależnie od tego, czy inne kolumny zostały zaktualizowane od czasu ostatniego zapytania. Klauzula WHERE można również zastosować tylko do określonych kolumn skutkuje danych zostaną zastąpione, chyba że niektóre pola zostały zaktualizowane od czasu ostatniego wykonano.  
+ Można również zastosować mniej restrykcyjne kryteria przy użyciu optymistycznego modelu współbieżności. Na przykład użycie tylko kolumn klucza podstawowego w klauzuli WHERE powoduje zastąpienie danych bez względu na to, czy inne kolumny zostały zaktualizowane od czasu ostatniego zapytania. Można również zastosować klauzulę WHERE tylko do określonych kolumn, co spowoduje zastąpienie danych, chyba że określone pola zostały zaktualizowane od czasu ostatniego zapytania.  
   
-### <a name="the-dataadapterrowupdated-event"></a>Zdarzenie DataAdapter.RowUpdated  
- **RowUpdated** zdarzenia <xref:System.Data.Common.DataAdapter> obiekt może być używany w połączeniu z technik opisanych wcześniej, aby powiadomienie do aplikacji naruszeń optymistycznej współbieżności. **RowUpdated** występuje po każdej próby zaktualizowania **zmodyfikowane** wiersz z tabeli **zestawu danych**. Dzięki temu można dodać kodu specjalnej obsługi, w tym przetwarzanie, gdy wystąpi wyjątek, dodawania niestandardowej informacji o błędzie, dodanie logiki ponawiania prób i tak dalej. <xref:System.Data.Common.RowUpdatedEventArgs> Zwraca obiekt **RecordsAffected** Właściwość zawierająca liczby wierszy na polecenie określonej aktualizacji dla zmodyfikowanych wierszy w tabeli. Ustawiając polecenia update do testowania optymistycznej współbieżności **RecordsAffected** właściwości co w efekcie zwróci wartość 0, jeśli nastąpiło naruszenie zasad optymistycznej współbieżności, ponieważ żadne rekordy nie zostały zaktualizowane. Jeśli jest to możliwe, jest zgłaszany wyjątek. **RowUpdated** zdarzenie pozwala na obsługę tego wystąpienia i uniknąć wyjątek, ustawiając odpowiednią **RowUpdatedEventArgs.Status** wartości, takich jak  **UpdateStatus.SkipCurrentRow**. Aby uzyskać więcej informacji na temat **RowUpdated** zdarzeń, zobacz [Obsługa zdarzeń elementu DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+### <a name="the-dataadapterrowupdated-event"></a>Zdarzenie DataAdapter. RowUpdated  
+ Zdarzenie<xref:System.Data.Common.DataAdapter> **RowUpdated** obiektu może być używane w połączeniu z opisanymi wcześniej technikami w celu dostarczenia powiadomienia do aplikacji optymistyczne naruszenia współbieżności. **RowUpdated** występuje po każdej próbie zaktualizowania **zmodyfikowanego** wiersza z **zestawu danych**. Dzięki temu można dodać specjalny kod obsługi, w tym przetwarzanie w przypadku wystąpienia wyjątku, dodanie niestandardowych informacji o błędzie, dodanie logiki ponawiania i tak dalej. Obiekt zwraca Właściwość RecordsAffected zawierającą liczbę wierszy, na które miało wpływ określone polecenie Update dla zmodyfikowanego wiersza w tabeli. <xref:System.Data.Common.RowUpdatedEventArgs> Ustawiając polecenie Update do testowania optymistycznej współbieżności, właściwość **RecordsAffected** będzie w efekcie zwracać wartość 0 w przypadku wystąpienia naruszenia optymistycznej współbieżności, ponieważ żadne rekordy nie zostały zaktualizowane. W takim przypadku zostanie zgłoszony wyjątek. Zdarzenie **RowUpdated** umożliwia obsługę tego wystąpienia i uniknięcie wyjątku przez ustawienie odpowiedniej wartości **RowUpdatedEventArgs. status** , takiej jak **UpdateStatus. SkipCurrentRow**. Aby uzyskać więcej informacji o zdarzeniu **RowUpdated** , zobacz [Obsługa zdarzeń DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
- Opcjonalnie możesz ustawić **DataAdapter.ContinueUpdateOnError** do **true**, przed wywołaniem **aktualizacji**i reagować na informacje o błędzie, przechowywane w **RowError** właściwości określonego wiersza, kiedy **aktualizacji** zostało zakończone. Aby uzyskać więcej informacji, zobacz [informacje o błędzie wiersza](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
+ Opcjonalnie można ustawić **Właściwość DataAdapter. ContinueUpdateOnError** na **wartość true**, przed wywołaniem funkcji **Update**, a następnie odpowiedzieć na informacje o błędzie przechowywane we właściwości **RowError** określonego wiersza po zakończeniu **aktualizacji** . Aby uzyskać więcej informacji, zobacz [wiersz informacje o błędzie](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
   
 ## <a name="optimistic-concurrency-example"></a>Przykład optymistycznej współbieżności  
- Poniżej przedstawiono prosty przykład, który ustawia **elementu UpdateCommand** z **DataAdapter** do testowania optymistycznej współbieżności, a następnie używa **RowUpdated** zdarzeń do testowania naruszenia optymistycznej współbieżności. W przypadku naruszenia optymistycznej współbieżności, aplikacja ustawia **RowError** wiersza, który aktualizacji został wystawiony dla, aby odzwierciedlić naruszenie optymistycznej współbieżności.  
+ Poniżej przedstawiono prosty przykład, który ustawia element **UpdateCommand** elementu **DataAdapter** do testowania optymistycznej współbieżności, a następnie używa zdarzenia **RowUpdated** do testowania optymistycznych naruszeń współbieżności. Po napotkaniu optymistycznego naruszenia współbieżności aplikacja ustawia **RowError** wiersza, dla którego aktualizacja została wystawiona, aby odzwierciedlał optymistyczne naruszenie współbieżności.  
   
- Należy zauważyć, że wartości parametrów przekazanych do klauzuli WHERE polecenia UPDATE są mapowane na **oryginalnego** wartościami odpowiednimi kolumnami.  
+ Należy zauważyć, że wartości parametrów przesyłane do klauzuli WHERE polecenia UPDATE są mapowane na **oryginalne** wartości odpowiednich kolumn.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -212,4 +212,4 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
 - [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Informacje o błędzie wiersza](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
 - [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,21 +2,21 @@
 title: <security> dla <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 6348bc6f6c0d3a9656fbe57bf71f531d1287a949
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be5ebacec466caf8d8a77bf552f42da1861e77a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670485"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936627"
 ---
-# <a name="security-of-netpeerbinding"></a>\<Zabezpieczenia > z \<netPeerBinding >
-Definiuje ustawienia zabezpieczeń [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), takie jak typ uwierzytelniania używany i zabezpieczenia używany do transportu wiadomości.  
+# <a name="security-of-netpeerbinding"></a>\<> \<zabezpieczeń elementu webpeerbinding >
+Definiuje ustawienia [ \<zabezpieczeń > NetPeerTcpBinding](netpeertcpbinding.md), włącznie z typem używanego uwierzytelniania i zabezpieczeniami używanymi do transportu wiadomości.  
   
  \<system.ServiceModel>  
-\<powiązania >  
+\<> powiązań  
 \<netPeerBinding>  
-\<Powiązanie >  
-\<security>  
+\<> powiązania  
+\<> zabezpieczeń  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,37 +31,37 @@ Definiuje ustawienia zabezpieczeń [ \<netPeerTcpBinding >](../../../../../docs/
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|tryb|Opcjonalna. Określa typ zabezpieczeń używanych przez elementy równorzędne skonfigurowany tym wiązaniem. Wartość domyślna to `Message`. Ten atrybut jest typu <xref:System.ServiceModel.SecurityMode>.|  
+|tryb|Opcjonalny. Określa typ zabezpieczeń używanych przez elementy równorzędne skonfigurowane przy użyciu tego powiązania. Wartość domyślna to `Message`. Ten atrybut jest typu <xref:System.ServiceModel.SecurityMode>.|  
   
-## <a name="mode-attribute"></a>Tryb atrybutu  
+## <a name="mode-attribute"></a>Atrybut Mode  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Komunikat|Zabezpieczenia protokołu SOAP zapewnia uwierzytelnianie, integralności i poufności.|  
+|Message|Zabezpieczenia protokołu SOAP zapewniają uwierzytelnianie, integralność i poufność.|  
 |Brak|Zabezpieczenia są wyłączone.|  
-|Transport|Zabezpieczenia przy użyciu protokołu HTTPS.|  
-|TransportWithMessageCredential|Protokół HTTPS zapewnia uwierzytelnianie i poufności. Komunikaty protokołu SOAP zawierają typy zaawansowane poświadczeń.|  
+|Transportu|Zabezpieczenia są udostępniane przy użyciu protokołu HTTPS.|  
+|TransportWithMessageCredential|Protokół HTTPS zapewnia uwierzytelnianie i poufność. Komunikaty protokołu SOAP zapewniają zaawansowane typy poświadczeń.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netpeertcpbinding.md)|Definiuje typ transportu dla zabezpieczonych wiadomości wysłanych przez elementy równorzędne skonfigurowany tym wiązaniem. Ten element jest typu <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
+|[\<> transportu](transport-of-netpeertcpbinding.md)|Definiuje typ transportu dla zabezpieczonych komunikatów wysyłanych przez elementy równorzędne skonfigurowane przy użyciu tego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie możliwości wiązania [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
+|[\<> powiązania](../../../misc/binding.md)|Definiuje wszystkie możliwości [ \<powiązań NetPeerTcpBinding >](netpeertcpbinding.md).|  
   
 ## <a name="remarks"></a>Uwagi  
- Zabezpieczeń może być albo lub transportu specyficzne dla wiadomości.  
+ Zabezpieczenia mogą dotyczyć zarówno komunikatów, jak i związanych z transportem.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -69,9 +69,9 @@ Definiuje ustawienia zabezpieczeń [ \<netPeerTcpBinding >](../../../../../docs/
 - <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Security%2A>
 - <xref:System.ServiceModel.PeerSecuritySettings>
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Wybieranie typu poświadczeń](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Wybieranie typu poświadczeń](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<> powiązania](../../../misc/binding.md)

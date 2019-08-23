@@ -1,25 +1,25 @@
 ---
-title: <add> z <scopedCertificates> — Element
+title: <add><scopedCertificates> elementu
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: 06a624d0146745581dfe907d044d1f7d3b857902
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9756d37527fcf888cad930b24677ae8e6a2c8fba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673871"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920053"
 ---
-# <a name="add-of-scopedcertificates-element"></a>\<Dodaj > z \<scopedCertificates > Element
-Dodaje certyfikat X.509 do kolekcji certyfikatów będących w zakresie.  
+# <a name="add-of-scopedcertificates-element"></a>\<Dodaj > \<elementu scopedCertificates >
+Dodaje certyfikat X. 509 do kolekcji certyfikatów z zakresem.  
   
  \<system.ServiceModel>  
-\<zachowania >  
-sekcja endpointBehaviors  
-\<zachowanie >  
+\<> zachowań  
+Sekcja endpointBehaviors  
+\<> zachowania  
 \<clientCredentials>  
-\<serviceCertificate>  
+\<> serviceCertificate  
 \<scopedCertificates>  
-\<Dodaj >, element dla \<scopedCertificates >  
+\<Dodaj element > dla \<scopedCertificates >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,41 +32,41 @@ sekcja endpointBehaviors
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|targetUri|ciąg. Określa identyfikator URI usługi skojarzony z certyfikatem.|  
-|findValue|ciąg. Wartość do wyszukania.|  
-|x509FindType|Wyliczenie. Jedno z pól certyfikatu do wyszukiwania.|  
-|storeLocation|Wyliczenie. Jednym z dwóch lokalizacji przechowywania do wyszukiwania.|  
-|storeName|Wyliczenie. Jednym z systemów magazynowania do wyszukiwania.|  
+|targetUri|Parametry. Określa identyfikator URI usługi skojarzonej z certyfikatem.|  
+|findValue|Parametry. Wartość do wyszukania.|  
+|x509FindType|Licznik. Jedno z pól certyfikatów do przeszukania.|  
+|storeLocation|Licznik. Jedna z dwóch lokalizacji przechowywania do przeszukania.|  
+|storeName|Licznik. Jeden z magazynów systemu do przeszukania.|  
   
-## <a name="findvalue-attribute"></a>findValue atrybutu  
-  
-|Wartość|Opis|  
-|-----------|-----------------|  
-|String|Wartość zależy od pola (określony przez atrybut X509FindType) wyszukiwany. Na przykład jeśli wyszukiwanie odcisku palca, wartość musi być ciągiem liczb szesnastkowych.|  
-  
-## <a name="x509findtype-attribute"></a>x509FindType Attribute  
+## <a name="findvalue-attribute"></a>findValue — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Wartości: FindByThumbprint FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|String|Wartość jest zależna od pola (określonego przez atrybut X509FindType), który jest przeszukiwany. Na przykład, jeśli szukasz odcisku palca, wartość musi być ciągiem liczb szesnastkowych.|  
   
-## <a name="storelocation-attribute"></a>storeLocation atrybutu  
+## <a name="x509findtype-attribute"></a>x509FindType — atrybut  
+  
+|Wartość|Opis|  
+|-----------|-----------------|  
+|Wyliczenie|Dostępne są następujące wartości: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+  
+## <a name="storelocation-attribute"></a>storeLocation — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |Wyliczenie|CurrentUser lub LocalMachine.|  
   
-## <a name="storename-attribute"></a>storeName atrybutu  
+## <a name="storename-attribute"></a>storeName — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Wartości: Książka adresowa, AuthRoot, urząd certyfikacji, niedozwolone mojej, główny, TrustedPeople i TrustedPublisher.|  
+|Wyliczenie|Dostępne są następujące wartości: AddressBook, AuthRoot, urząd certyfikacji, niedozwolone, my, root, TrustedPeople i TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -75,17 +75,17 @@ sekcja endpointBehaviors
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<scopedCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|Reprezentuje kolekcję certyfikatów X.509 dostarczonych przez określone usługi (w zakresie) do uwierzytelniania.|  
+|[\<scopedCertificates >](scopedcertificates-element.md)|Reprezentuje kolekcję certyfikatów X. 509 dostarczonych przez określone usługi (w zakresie) do uwierzytelniania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element umożliwia klienta skonfigurować certyfikat usługi do użycia na podstawie adresu URL usługi, którym się komunikuje. Jest to szczególnie przydatne w wystawionych tokenów scenariuszach, gdzie klienta może się komunikować z wielu usług (service zakończenia także usługach tokenów zabezpieczeń pośrednie). Dla powiązań, które korzystają z zabezpieczeń komunikatów opartego na certyfikatach ten certyfikat jest używany do szyfrowania komunikatów do usługi, a powinien być używany przez usługę do podpisywania odpowiedzi do klienta.  
+ Ten element umożliwia klientowi skonfigurowanie certyfikatu usługi do użycia na podstawie adresu URL usługi, z którą się komunikuje. Jest to szczególnie przydatne w scenariuszach wystawionych tokenów, w których klient może komunikować się z wieloma usługami (usługą końcową oraz usługami tokenów zabezpieczających). W przypadku powiązań korzystających z zabezpieczeń komunikatów opartych na certyfikatach ten certyfikat jest używany do szyfrowania komunikatów do usługi i powinien być używany przez usługę do podpisywania odpowiedzi do klienta.  
   
- Jeśli powiązanie wymaga certyfikatu dla usługi i nie określonego certyfikatu dla usługi, którą można odnaleźć adresu URL w ScopedCertificates, jest używany certyfikat domyślny.  
+ Jeśli powiązanie wymaga certyfikatu dla usługi i nie zostanie znaleziony konkretny certyfikat dla adresu URL usługi w ScopedCertificates, zostanie użyty certyfikat domyślny.  
   
- Aby uzyskać więcej informacji, zobacz sekcję "O zakresie certyfikatów" [jak: Tworzenie klienta federacyjnego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
+ Aby uzyskać więcej informacji, zobacz sekcję ["certyfikaty w zakresie", w jaki sposób: Utwórz klienta](../../../wcf/feature-details/how-to-create-a-federated-client.md)federacyjnego.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład dodaje certyfikat X.509 kolekcji.  
+ Poniższy przykład dodaje do kolekcji certyfikat X. 509.  
   
 ```xml  
 <behaviors>
@@ -114,7 +114,7 @@ sekcja endpointBehaviors
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
-- [Instrukcje: Tworzenie klienta federacyjnego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Instrukcje: Tworzenie klienta federacyjnego](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md)
+- [Zabezpieczanie klientów](../../../wcf/securing-clients.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)

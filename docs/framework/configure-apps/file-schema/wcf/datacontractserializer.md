@@ -2,20 +2,20 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 8ba16d9cc30b07d3e6b0924e6013ec01443867d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8814a48df8933cf08db78e397c24d42f2da26026
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704131"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919229"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
-Zawierająca dane konfiguracyjne <xref:System.Runtime.Serialization.DataContractSerializer>.  
+Zawiera dane konfiguracji dla programu <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<endpointBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<dataContractSerializer>  
   
 ## <a name="syntax"></a>Składnia  
@@ -32,8 +32,8 @@ Zawierająca dane konfiguracyjne <xref:System.Runtime.Serialization.DataContract
   
 |Element|Opis|  
 |-------------|-----------------|  
-|ignoreExtensionDataObject|Wartość logiczna określająca, czy ignorować dane dostarczane przez punkt końcowy, po jego serializowany lub deserializowany.|  
-|maxItemsInObjectGraph|Liczba całkowita określająca maksymalną liczbę elementów do serializacji lub deserializacji.|  
+|ignoreExtensionDataObject|Wartość logiczna określająca, czy ignorować dane dostarczane przez punkt końcowy, gdy jest on serializowany lub deserializowany.|  
+|maxItemsInObjectGraph|Liczba całkowita, która określa maksymalną liczbę elementów do serializacji lub deserializacji.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -42,18 +42,18 @@ Zawierająca dane konfiguracyjne <xref:System.Runtime.Serialization.DataContract
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie punktu końcowego.|  
+|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zachowanie punktu końcowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Zobacz <xref:System.Runtime.Serialization.DataContractSerializer> dokumentacji, aby uzyskać więcej informacji na temat znanych typów.  
+ Zapoznaj <xref:System.Runtime.Serialization.DataContractSerializer> się z dokumentacją, aby uzyskać więcej informacji na temat znanych typów.  
   
 > [!CAUTION]
->  `<dataContractSerializer>` Zachowanie elementu (jeśli istnieje) zawsze powinna być wyświetlana przed `<enableWebScript>` zachowania elementu w pliku konfiguracji. W przeciwnym razie wynikowe zachowanie jest niezdefiniowane.  
+>  Element Behavior (jeśli istnieje) powinien zawsze występować `<enableWebScript>` przed elementem Behavior w pliku konfiguracji. `<dataContractSerializer>` W przeciwnym razie zachowanie nie jest zdefiniowane.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.ServiceModel.Configuration.DataContractSerializerElement>
-- [Znane typy kontraktów danych](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [Transfer i serializacja danych](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+- [Znane typy kontraktów danych](../../../wcf/feature-details/data-contract-known-types.md)
+- [Transfer i serializacja danych](../../../wcf/feature-details/data-transfer-and-serialization.md)

@@ -2,20 +2,20 @@
 title: <workflowRuntime>
 ms.date: 03/30/2017
 ms.assetid: 304c70fa-78d1-4d0f-b89f-0ca23d734c6f
-ms.openlocfilehash: db5e1083c07d4e204eb19eaae9257ed44439132e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0cd04f66cc4b73eb5f1c43bd6c8dc9189dfceff1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673150"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915213"
 ---
 # <a name="workflowruntime"></a>\<workflowRuntime>
-Określa ustawienia dla wystąpienia <xref:System.Workflow.Runtime.WorkflowRuntime> do hostingu opartego o przepływ pracy usług Windows Communication Foundation (WCF).  
+Określa ustawienia dla wystąpienia programu <xref:System.Workflow.Runtime.WorkflowRuntime> do hostowania usług Windows Communication Foundation opartych na przepływie pracy (WCF).  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<workflowRuntime>  
   
 ## <a name="syntax"></a>Składnia  
@@ -42,26 +42,26 @@ Określa ustawienia dla wystąpienia <xref:System.Workflow.Runtime.WorkflowRunti
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|cachedInstanceExpiration|Opcjonalny <xref:System.TimeSpan> wartość, która określa maksymalny czas pobytu wystąpienia przepływu pracy w pamięci w stanie bezczynności, zanim go jest wyładowania lub przerwania. Jeśli ma workflowruntime `PersistenceService` który wykonuje unloadOnIdle, ten atrybut zostanie zignorowany.|  
-|enablePerformanceCounters|Opcjonalna wartość logiczna określająca, czy liczniki wydajności są włączone. Liczniki wydajności zawierają informacje na temat różne statystyki związane z przepływu pracy, ale powodują spadek wydajności podczas uruchamiania aparatu wykonawczego przepływów pracy i wystąpienia przepływu pracy są uruchomione. Wartość domyślna to `true`.|  
-|nazwa|Ciąg zawierający nazwę aparatu wykonawczego przepływów pracy. Nazwa jest używana w danych wyjściowych, aby odróżnić to środowisko wykonawcze od innych środowisk wykonawczych, które mogą być uruchomione w systemie, na przykład liczniki wydajności.<br /><br /> Wartość domyślna to ciąg pusty.|  
-|validateOnCreate|Opcjonalna wartość logiczna określająca, czy Walidacja definicji przepływu pracy nastąpi przy otwarciu WorkflowServiceHost.  Jeśli ten atrybut jest równa `true`, walidacji przepływu pracy jest wykonywana w każdym `WorkflowServiceHost.Open` jest wywoływana. Jeśli zostaną znalezione błędy sprawdzania poprawności, <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> , zostanie zgłoszony błąd.<br /><br /> Jeśli ta właściwość jest równa `false`, nastąpi nie nastąpi sprawdzanie poprawności definicji przepływu pracy.<br /><br /> Wartość domyślna tej właściwości to `true`.|  
+|cachedInstanceExpiration|Opcjonalna <xref:System.TimeSpan> wartość, która określa maksymalny czas trwania wystąpienia przepływu pracy w pamięci w stanie bezczynności, zanim zostanie wymuszone zwolnione lub przerwane. Jeśli element WorkflowRuntime ma `PersistenceService` unloadOnIdle, ten atrybut jest ignorowany.|  
+|enablePerformanceCounters|Opcjonalna wartość logiczna określająca, czy liczniki wydajności są włączone. Liczniki wydajności dostarczają informacji na temat różnych statystyk związanych z przepływem pracy, ale powodują spadek wydajności, gdy uruchamiany jest aparat środowiska uruchomieniowego przepływu pracy i kiedy wystąpienia przepływu pracy są uruchomione. Wartość domyślna to `true`.|  
+|nazwa|Ciąg zawierający nazwę aparatu środowiska uruchomieniowego przepływu pracy. Nazwa jest używana w danych wyjściowych w celu odróżnienia tego środowiska uruchomieniowego od innych środowisk uruchomieniowych, które mogą być uruchomione w systemie, na przykład w licznikach wydajności.<br /><br /> Wartość domyślna to pusty ciąg.|  
+|validateOnCreate|Opcjonalna wartość logiczna określająca, czy Walidacja definicji przepływu pracy nastąpi po otwarciu obiektu WorkflowServiceHost.  Gdy ten atrybut jest ustawiony na `true`, sprawdzanie poprawności przepływu pracy jest wykonywane za `WorkflowServiceHost.Open` każdym razem, gdy jest wywoływana. Jeśli zostaną znalezione błędy walidacji, <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> zostanie zgłoszony błąd.<br /><br /> Gdy ta właściwość jest ustawiona na `false`, nie będzie wykonywane Walidacja definicji przepływu pracy.<br /><br /> Wartość domyślna tej właściwości to `true`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|commonParameters|Kolekcja wspólnych parametrów używane przez usługi. Ta kolekcja zwykle będzie zawierać parametry połączenia bazy danych, które mogą być współużytkowane przez trwałych usług.|  
-|usługi|Kolekcja usług, które zostaną dodane do <xref:System.Workflow.Runtime.WorkflowRuntime> aparatu. Elementy są typu <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  Usługi określone w kolekcji zostanie zainicjowany przez aparatu wykonawczego przepływów pracy i dodane do swoich usług przy odpowiednim <xref:System.Workflow.Runtime.WorkflowRuntime> wywoływany jest Konstruktor. W związku z tym usług określonych w kolekcji, należy wykonać niektóre zasady sposobu podpisy ich konstruktory. Aby uzyskać więcej informacji, zobacz <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.|  
+|commonParameters|Kolekcja typowych parametrów używanych przez usługi. Ta kolekcja zazwyczaj obejmuje parametry połączenia z bazą danych, które mogą być współużytkowane przez trwałe usługi.|  
+|usługi|Kolekcja usług, które zostaną dodane do <xref:System.Workflow.Runtime.WorkflowRuntime> aparatu. Elementy są typu <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  Usługi określone w kolekcji zostaną zainicjowane przez aparat środowiska uruchomieniowego przepływu pracy i dodawane do swoich usług, gdy zostanie wywołany odpowiedni <xref:System.Workflow.Runtime.WorkflowRuntime> Konstruktor. W związku z tym usługi określone w kolekcji muszą przestrzegać pewnych zasad dotyczących podpisów ich konstruktorów. Aby uzyskać więcej informacji, zobacz <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
+|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji na temat korzystania z pliku konfiguracji w celu sterowania zachowaniem <xref:System.Workflow.Runtime.WorkflowRuntime> obiekt aplikacji hosta Windows Workflow Foundation, zobacz [pliki konfiguracji przepływu pracy](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
+ Aby uzyskać więcej informacji na temat używania pliku konfiguracji do sterowania zachowaniem <xref:System.Workflow.Runtime.WorkflowRuntime> obiektu Windows Workflow Foundation aplikacji hosta, zobacz [pliki konfiguracji przepływu pracy](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
   
 ## <a name="example"></a>Przykład  
   

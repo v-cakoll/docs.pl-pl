@@ -2,22 +2,22 @@
 title: <defaultCertificate>, element
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: c94531d10b7c0ef5ca0ee1f2d5683d0a259a2537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93410e815a156f91db1962f05fb1aa6baca7f955
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644464"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919264"
 ---
-# <a name="defaultcertificate-element"></a>\<defaultCertificate> Element
-Określa certyfikat X.509, który ma być używany gdy usługa lub STS nie zapewnia go poprzez protokół negocjacji.  
+# <a name="defaultcertificate-element"></a>\<defaultCertificate, element >
+Określa certyfikat X. 509, który ma być używany, gdy usługa lub STS nie zapewnia go za pośrednictwem protokołu negocjacji.  
   
  \<system.ServiceModel>  
-\<zachowania >  
-sekcja endpointBehaviors  
-\<zachowanie >  
+\<> zachowań  
+Sekcja endpointBehaviors  
+\<> zachowania  
 \<clientCredentials>  
-\<serviceCertificate>  
+\<> serviceCertificate  
 \<defaultCertificate>  
   
 ## <a name="syntax"></a>Składnia  
@@ -30,40 +30,40 @@ sekcja endpointBehaviors
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|findValue|ciąg. Wartość do wyszukania.|  
-|x509FindType|Wyliczenie. Jedno z pól certyfikatu do wyszukiwania.|  
-|storeLocation|Wyliczenie. Jedną z dwóch systemów przechowywania lokalizacji do przeszukania.|  
-|storeName|Wyliczenie. Jednym z systemów magazynowania do wyszukiwania.|  
+|findValue|Parametry. Wartość do wyszukania.|  
+|x509FindType|Licznik. Jedno z pól certyfikatów do przeszukania.|  
+|storeLocation|Licznik. Jedna z dwóch lokalizacji magazynu systemowego do przeszukania.|  
+|storeName|Licznik. Jeden z magazynów systemu do przeszukania.|  
   
-## <a name="findvalue-attribute"></a>findValue atrybutu  
-  
-|Wartość|Opis|  
-|-----------|-----------------|  
-|String|Wartość zależy od pola (określony przez atrybut X509FindType) wyszukiwany. Na przykład jeśli wyszukiwanie odcisku palca, wartość musi być ciągiem liczb szesnastkowych.|  
-  
-## <a name="x509findtype-attribute"></a>x509FindType Attribute  
+## <a name="findvalue-attribute"></a>findValue — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Wartości: FindByThumbprint FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|String|Wartość jest zależna od pola (określonego przez atrybut X509FindType), który jest przeszukiwany. Na przykład, jeśli szukasz odcisku palca, wartość musi być ciągiem liczb szesnastkowych.|  
   
-## <a name="storelocation-attribute"></a>storeLocation atrybutu  
+## <a name="x509findtype-attribute"></a>x509FindType — atrybut  
+  
+|Wartość|Opis|  
+|-----------|-----------------|  
+|Wyliczenie|Dostępne są następujące wartości: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+  
+## <a name="storelocation-attribute"></a>storeLocation — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |Wyliczenie|CurrentUser lub LocalMachine.|  
   
-## <a name="storename-attribute"></a>storeName atrybutu  
+## <a name="storename-attribute"></a>storeName — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Wartości: Książka adresowa, AuthRoot, urząd certyfikacji, niedozwolone mojej, główny, TrustedPeople i TrustedPublisher.|  
+|Wyliczenie|Dostępne są następujące wartości: AddressBook, AuthRoot, urząd certyfikacji, niedozwolone, my, root, TrustedPeople i TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -72,13 +72,13 @@ sekcja endpointBehaviors
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Określa certyfikat używany podczas uwierzytelniania usługi dla klienta.|  
+|[\<> serviceCertificate](servicecertificate-of-clientcredentials-element.md)|Określa certyfikat, który ma być używany podczas uwierzytelniania usługi dla klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
- Dla powiązań, które korzystają z zabezpieczeń komunikatów opartego na certyfikatach certyfikatu określonego przez ten element konfiguracji jest używany do szyfrowania komunikatów do usługi i powinien być używany przez usługę do podpisywania odpowiedzi do klienta. Przechowuje jeden certyfikat, który ma być używany, gdy żaden certyfikat nie jest określona przez usługę.  
+ W przypadku powiązań korzystających z zabezpieczeń komunikatów opartych na certyfikatach certyfikat określony przez ten element konfiguracji jest używany do szyfrowania komunikatów do usługi i powinien być używany przez usługę do podpisywania odpowiedzi do klienta. Przechowuje on pojedynczy certyfikat, który będzie używany w przypadku braku certyfikatu określonego przez usługę.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie określono certyfikat do użycia dla punktów końcowych, którego identyfikator URI rozpoczyna się od `http://www.contoso.com` i certyfikat do użycia dla wszystkich innych punktów końcowych, które nie wykonują negocjacji certyfikatu.  
+ W poniższym przykładzie określono certyfikat używany dla punktów końcowych, których identyfikator URI `http://www.contoso.com` zaczyna się od i certyfikat używany dla wszystkich innych punktów końcowych, które nie wykonują negocjacji certyfikatów.  
   
 ```xml  
 <serviceCertificate>
@@ -103,7 +103,7 @@ sekcja endpointBehaviors
 - <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>
-- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [\<Uwierzytelnianie >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
-- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md)
+- [\<> uwierzytelniania](authentication-of-clientcertificate-element.md)
+- [Zabezpieczanie klientów](../../../wcf/securing-clients.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)

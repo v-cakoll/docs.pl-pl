@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 8eda59a911e0a69936a69f2b04ba5fbf2023e8ff
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 266ece1e63bf6d32bf59406dbc72a9e6bd92eb45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597202"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924552"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modyfikatory dostępu (Przewodnik programowania w języku C#)
 Wszystkie typy i elementy członkowskie typu mają poziom dostępności, który kontroluje, czy mogą być używane z innego kodu w zestawie lub w innych zestawach. Można użyć następujących modyfikatorów dostępu, aby określić dostępność typu lub elementu członkowskiego podczas deklarowania:  
@@ -62,7 +62,7 @@ Wszystkie typy i elementy członkowskie typu mają poziom dostępności, który 
  [!code-csharp[csProgGuideObjects#73](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#73)]  
   
 > [!NOTE]
->  Chroniony wewnętrzny poziom dostępności oznacza ochronę lub wewnętrzne, niechronione i wewnętrzne. Innymi słowy, dostęp do chronionej wewnętrznej składowej można uzyskać z dowolnej klasy w tym samym zestawie, łącznie z klasami pochodnymi. Aby ograniczyć dostępność tylko do klas pochodnych w tym samym zestawie, zadeklaruj samą klasę jako wewnętrzną i Zadeklaruj jej składowe jako chronione. Ponadto, począwszy od C# 7,2, można użyć modyfikatora Private Protected Access, aby osiągnąć ten sam wynik bez konieczności wypełniania klasy zawierającej.  
+> Chroniony wewnętrzny poziom dostępności oznacza ochronę lub wewnętrzne, niechronione i wewnętrzne. Innymi słowy, dostęp do chronionej wewnętrznej składowej można uzyskać z dowolnej klasy w tym samym zestawie, łącznie z klasami pochodnymi. Aby ograniczyć dostępność tylko do klas pochodnych w tym samym zestawie, zadeklaruj samą klasę jako wewnętrzną i Zadeklaruj jej składowe jako chronione. Ponadto, począwszy od C# 7,2, można użyć modyfikatora Private Protected Access, aby osiągnąć ten sam wynik bez konieczności wypełniania klasy zawierającej.  
   
 ## <a name="other-types"></a>Inne typy  
  Interfejsy zadeklarowane bezpośrednio w przestrzeni nazw mogą być deklarowane jako publiczne lub wewnętrzne, podobnie jak klasy i struktury, interfejsy domyślnie mają dostęp wewnętrzny. Elementy członkowskie interfejsu są zawsze publiczne, ponieważ celem interfejsu jest umożliwienie innym typom dostępu do klasy lub struktury. Nie można zastosować modyfikatorów dostępu do elementów członkowskich interfejsu.  

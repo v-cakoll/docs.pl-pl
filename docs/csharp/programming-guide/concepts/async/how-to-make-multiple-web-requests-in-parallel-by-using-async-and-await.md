@@ -2,12 +2,12 @@
 title: 'Instrukcje: Równoległe wykonywanie wielu żądań sieci Web za pomocą Async i awaitC#()'
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 75425764ff9ce4f97aac147ced4c57bf1a10714b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: edba5ed5026c16ca1f1b09e8504ecfdf408ae5ef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595568"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922003"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Instrukcje: Równoległe wykonywanie wielu żądań sieci Web za pomocą Async i awaitC#()
 W metodzie asynchronicznej zadania są uruchamiane, gdy są tworzone. Operator [await](../../../language-reference/keywords/await.md) jest stosowany do zadania w punkcie metody, w którym przetwarzanie nie może być kontynuowane do momentu zakończenia zadania. Często zadanie jest oczekiwane zaraz po jego utworzeniu, tak jak pokazano w poniższym przykładzie.  
@@ -35,7 +35,7 @@ var result = await myTask;
  Poniższy program uruchamia trzy asynchroniczne pobieranie w sieci Web, a następnie czeka na ich kolejność, w jakiej są wywoływane. Zwróć uwagę, że po uruchomieniu programu zadania nie zawsze kończą się w kolejności, w której zostały utworzone i oczekujące. Zaczynają one działać, gdy są tworzone, i co najmniej jedno zadanie może zakończyć się, zanim metoda osiągnie wyrażenie await.  
   
 > [!NOTE]
->  Aby ukończyć ten projekt, na komputerze musi być zainstalowany program Visual Studio 2012 lub nowszy oraz .NET Framework 4,5 lub nowszy.  
+> Aby ukończyć ten projekt, na komputerze musi być zainstalowany program Visual Studio 2012 lub nowszy oraz .NET Framework 4,5 lub nowszy.  
   
  Aby uzyskać inny przykład, który uruchamia wiele zadań w tym samym czasie [, zobacz How to: Rozwiń Przewodnik asynchroniczny za pomocą polecenia Task. WhenAllC#(](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)).  
   

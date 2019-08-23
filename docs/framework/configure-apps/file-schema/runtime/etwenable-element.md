@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f24e9a06137744dbc97d5f34cda7ad6eab873700
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3510cbf0a63a8031669bb7a819a8b3c7321aaea4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663740"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920763"
 ---
 # <a name="etwenable-element"></a>\<etwEnable, element >
 Określa, czy włączyć śledzenie zdarzeń systemu Windows (ETW) dla zdarzeń środowiska uruchomieniowego języka wspólnego.  
@@ -57,7 +57,7 @@ Określa, czy włączyć śledzenie zdarzeń systemu Windows (ETW) dla zdarzeń 
  Począwszy od systemu Windows Vista, funkcja ETW jest domyślnie włączona. Użyj tego elementu, aby wyłączyć funkcję ETW dla aplikacji. We wcześniejszych wersjach systemu Windows Użyj tego elementu, aby włączyć funkcję ETW dla aplikacji.  
   
 > [!NOTE]
->  Funkcję ETW można włączyć lub wyłączyć globalnie na serwerze przy użyciu ustawienia rejestru. Zobacz [kontrolowanie rejestrowania .NET Framework](../../../performance/controlling-logging.md).  
+> Funkcję ETW można włączyć lub wyłączyć globalnie na serwerze przy użyciu ustawienia rejestru. Zobacz [kontrolowanie rejestrowania .NET Framework](../../../performance/controlling-logging.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak włączyć śledzenie ETW dla aplikacji.  

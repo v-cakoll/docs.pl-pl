@@ -37,59 +37,59 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-ms.openlocfilehash: 46a65972a1ea96435002ff6956bc2837c07b0e57
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 57f6caa00806f4874cb8070805e8b6784ec82e40
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913109"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956803"
 ---
 # <a name="data-type-summary-visual-basic"></a>Typ danych — Podsumowanie (Visual Basic)
-W poniższej tabeli przedstawiono typy danych Visual Basic, ich obsługi popularnych typów środowiska wykonawczego dla języka, ich nominalnych alokacji i ich zakresami wartości.  
+W poniższej tabeli przedstawiono typy danych Visual Basic, ich obsługę typów środowiska uruchomieniowego języka wspólnego, ich nominalna alokacja magazynu oraz ich zakresów wartości.  
   
-|Typ języka Visual Basic|Wspólna struktura typu środowiska uruchomieniowego języka|Nominalnych alokacji|Zakres wartości|  
+|Typ Visual Basic|Struktura typów środowiska uruchomieniowego języka wspólnego|Nominalna alokacja magazynu|Zakres wartości|  
 |-----------------------|--------------------------------------------|--------------------------------|-----------------|  
 |[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|Zależy od implementacji platformy|`True` lub `False`|  
 |[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|1 bajt|od 0 do 255 (bez znaku)|  
-|[CHAR](../../../visual-basic/language-reference/data-types/char-data-type.md) (pojedynczy znak)|<xref:System.Char>|2 bajty|od 0 do 65535 (bez znaku)|  
-|[Data](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|8 bajtów|0:00:00 (północ), 1 stycznia 0001 do 11:59:59 PM 31 grudnia 9999 r|  
-|[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|16 bajtów|od 0 do +/-79,228,162,514,264,337,593,543,950,335 (+/-7,9... E + 28) <sup>†</sup> bez punktu dziesiętnego; od 0 do +/-7.9228162514264337593543950335 28 miejsc z prawej strony separatora dziesiętnego;<br /><br /> najmniejsza wartość różną od zera jest +/-0,0000000000000000000000000001 (+/-1E-28) <sup>†</sup>|  
-|[Podwójne](../../../visual-basic/language-reference/data-types/double-data-type.md) (podwójnej precyzji zmiennoprzecinkowego)|<xref:System.Double>|8 bajtów|-1.79769313486231570E + 308 do - 4.94065645841246544E-324 <sup>†</sup> dla wartości ujemnych;<br /><br /> 4.94065645841246544E-324 za pośrednictwem 1.79769313486231570E + 308 <sup>†</sup> dla wartości dodatnich|  
-|[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 bajty|-2,147,483,648 do 2 147 483 647 (z podpisem)|  
-|[Długi](../../../visual-basic/language-reference/data-types/long-data-type.md) (liczba całkowita typu long)|<xref:System.Int64>|8 bajtów|-9,223,372,036,854,775,808 za pośrednictwem 9,223,372,036,854,775,807 (9.2... E + 18 <sup>†</sup>) (z podpisem)|  
-|[Obiekt](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (klasa)|4 bajty na platformie 32-bitowej<br /><br /> 8 bajtów na platformie 64-bitowej|Dowolny typ mogą być przechowywane w zmiennej typu `Object`|  
-|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 bajt|od -128 do 127 (z podpisem)|  
-|[Krótki](../../../visual-basic/language-reference/data-types/short-data-type.md) (krótka liczba całkowita)|<xref:System.Int16>|2 bajty|-32 768 za pośrednictwem 32 767 znaków (z podpisem)|  
-|[Pojedynczy](../../../visual-basic/language-reference/data-types/single-data-type.md) (pojedynczej precyzji zmiennoprzecinkowego)|<xref:System.Single>|4 bajty|-3.4028235E + 38-do - 1, 401298E-45 <sup>†</sup> dla wartości ujemnych;<br /><br /> 1, 401298E-45 za pośrednictwem 3.4028235E + 38 <sup>†</sup> dla wartości dodatnich|  
-|[Ciąg](../../../visual-basic/language-reference/data-types/string-data-type.md) (zmiennej długości)|<xref:System.String> (klasa)|Zależy od implementacji platformy|0 na około 2 mld znaki Unicode|  
+|[Znak](../../../visual-basic/language-reference/data-types/char-data-type.md) (pojedynczy znak)|<xref:System.Char>|2 bajty|od 0 do 65535 (bez znaku)|  
+|[Data](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|8 bajtów|0:00:00 (północ) 1 stycznia 0001 do 11:59:59 PM w dniu 31 grudnia 9999|  
+|[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|16 bajtów|od 0 do +/-79228162514264337593543950335 (+/-7.9...E + 28) <sup>†</sup> bez punktu dziesiętnego; od 0 do +/-7.9228162514264337593543950335 z 28 miejscami po prawej stronie wartości dziesiętnej;<br /><br /> najmniejsza liczba różna od zera to +/-0,0000000000000000000000000001 (+/-1E-28) <sup>†</sup>|  
+|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) (zmiennoprzecinkowe o podwójnej precyzji)|<xref:System.Double>|8 bajtów|-1.79769313486231570 e + 308 do-4.94065645841246544 E-324 <sup>†</sup> dla wartości ujemnych;<br /><br /> 4.94065645841246544 e-324 za pośrednictwem 1.79769313486231570 E + 308 <sup>†</sup> dla wartości dodatnich|  
+|[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 bajty|-2 147 483 648 do 2 147 483 647 (podpisane)|  
+|Liczba [długa](../../../visual-basic/language-reference/data-types/long-data-type.md) (Long Integer)|<xref:System.Int64>|8 bajtów|-zakresu od do 9 223 372 036 854 775 807 (9.2... E + 18 <sup>†</sup>) (podpisane)|  
+|[Obiekt](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object>określonej|4 bajty na 32-bitowej platformie<br /><br /> 8 bajtów na 64-bitowej platformie|Każdy typ może być przechowywany w zmiennej typu`Object`|  
+|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 bajt|-128 do 127 (podpisane)|  
+|[Krótki](../../../visual-basic/language-reference/data-types/short-data-type.md) (krótka liczba całkowita)|<xref:System.Int16>|2 bajty|-32 768 do 32 767 (podpisane)|  
+|[Jeden](../../../visual-basic/language-reference/data-types/single-data-type.md) (zmiennoprzecinkowe pojedynczej precyzji)|<xref:System.Single>|4 bajty|-3.4028235 e + 38 za pośrednictwem-1.401298 E-45 <sup>†</sup> dla wartości ujemnych;<br /><br /> 1.401298 e-45 za pośrednictwem 3.4028235 E + 38 <sup>†</sup> dla wartości dodatnich|  
+|[Ciąg](../../../visual-basic/language-reference/data-types/string-data-type.md) (zmienna długość)|<xref:System.String>określonej|Zależy od implementacji platformy|od 0 do około 2 000 000 000 znaków Unicode|  
 |[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 bajty|od 0 do 4 294 967 295 (bez znaku)|  
-|[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 bajtów|od 0 do 18,446,744,073,709,551,615 (1.8... E + 19 <sup>†</sup>) (bez znaku)|  
-|[Zdefiniowane przez użytkownika](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (struktury)|(dziedziczy <xref:System.ValueType>)|Zależy od implementacji platformy|Każdy element członkowski struktury ma zakres określany przez jego typu danych i jest niezależna od zakresów innych członków|  
+|[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 bajtów|od 0 do 18446744073709551615 są (1.8... E + 19 <sup>†</sup>) (bez znaku)|  
+|[Zdefiniowane przez użytkownika](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) XML|(dziedziczy z <xref:System.ValueType>)|Zależy od implementacji platformy|Każdy element członkowski struktury ma zakres określony przez jego typ danych i niezależny od zakresów innych elementów członkowskich|  
 |[UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16>|2 bajty|od 0 do 65 535 (bez znaku)|  
   
- <sup>†</sup> w *notacji wykładniczej*, "E", który odwołuje się do potęgą liczby 10. Dlatego 3.56E + 2 oznacza 3.56 x 10<sup>2</sup> lub 356 i 3.56E-2 oznacza 3.56 / 10<sup>2</sup> lub 0.0356.  
+ <sup>†</sup> W *notacji wykładniczej*"E" odnosi się do potęgi 10. So 3.56 E + 2 oznacza 3,56 x 10<sup>2</sup> lub 356 i 3.56 e-2 oznacza 3,56/10<sup>2</sup> lub 0,0356.  
   
 > [!NOTE]
->  W przypadku ciągów, które zawierają tekst, użyj <xref:Microsoft.VisualBasic.Strings.StrConv%2A> funkcji konwersji z formatu tekstowego na inny.  
+> W przypadku ciągów zawierających tekst Użyj <xref:Microsoft.VisualBasic.Strings.StrConv%2A> funkcji do konwersji z jednego formatu tekstowego na inny.  
   
- Oprócz określenia typu danych w instrukcji deklaracji, możesz wymusić typ danych niektórych elementów programowania przy użyciu znaku typu. Zobacz [wpisz znaków](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
+ Oprócz określania typu danych w instrukcji deklaracji, można wymusić typ danych niektórych elementów programistycznych przy użyciu znaku typu. Zobacz [znaki typu](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
   
 ## <a name="memory-consumption"></a>Użycie pamięci  
- Kiedy Deklarujesz na typ danych podstawowych, nie jest bezpiecznie przyjąć założenie, że użycie pamięci jest taka sama jak jego nominalnych alokacji. Jest to spowodowane następujące kwestie:  
+ W przypadku deklarowania typu danych podstawowych nie jest bezpieczne, aby założyć, że jego użycie pamięci jest takie samo jak jego nominalna alokacja pamięci masowej. Jest to spowodowane następującymi kwestiami:  
   
-- **Przypisanie magazynu.** Środowisko uruchomieniowe języka wspólnego można przypisać pamięci masowej, na podstawie bieżącej właściwości platformy, na którym jest wykonywany aplikacji. Jeśli pamięć jest prawie pełna, jego może pakietu zadeklarowanych elementów tak blisko siebie jak to możliwe. W innych przypadkach go może być dostosowanie ich adresów pamięci do naturalnych ograniczeń sprzętowych w celu zoptymalizowania wydajności.  
+- **Przypisanie magazynu.** Środowisko uruchomieniowe języka wspólnego może przypisywać magazyn na podstawie bieżących cech platformy, na których jest wykonywana aplikacja. Jeśli pamięć jest prawie pełna, może spakować zadeklarowane elementy tak blisko siebie, jak to możliwe. W innych przypadkach jego adresy pamięci mogą być wyrównane do naturalnych granic sprzętu w celu zoptymalizowania wydajności.  
   
-- **Szerokość platformy.** Przypisanie magazynu na platformie 64-bitowej różni się od przypisania na platformie 32-bitowej.  
+- **Szerokość platformy.** Przypisanie magazynu na platformę 64-bitową różni się od przypisywania na platformę 32-bitową.  
   
 ### <a name="composite-data-types"></a>Złożone typy danych  
- To samo odnosi się do każdego członka złożonego typu danych, takie jak struktury lub tablicy. Nie można polegać na po prostu zsumowanie nominalnych alokacji elementów członkowskich typu. Ponadto istnieją inne zagadnienia, takie jak następujące:  
+ Te same zagadnienia dotyczą każdego elementu członkowskiego złożonego typu danych, takiego jak struktura lub tablica. Nie można polegać na prostu przy dodawaniu nominalnych alokacji magazynów elementów członkowskich typu. Ponadto istnieją inne zagadnienia, takie jak następujące:  
   
-- **Koszty.** Niektóre typy złożone mają wymagania dodatkowej pamięci. Na przykład tablica używa dodatkową pamięć, macierz, sama, a także dla każdego wymiaru. Na platformie 32-bitowy to obciążenie jest obecnie 12 bajtów plus 8 bajtów dla każdego wymiaru. Na platformie 64-bitowej podwaja się to wymaganie.  
+- **Zwiększenie.** Niektóre typy złożone mają dodatkowe wymagania dotyczące pamięci. Na przykład tablica używa dodatkowej pamięci dla samej tablicy, a także dla każdego wymiaru. Na platformie 32-bitowej ten koszt jest obecnie 12-bajtowy plus 8 bajtów dla każdego wymiaru. Na platformie 64-bitowej ten wymóg jest podwójny.  
   
-- **Układ magazynu.** Nie można bezpiecznie przyjąć, że kolejność przechowywania w pamięci jest taka sama jak kolejność zgłoszenia. Jeszcze nie może wprowadzać założeń dotyczących bajtowe wyrównanie, takie jak 2-bajtowych i 4-bajtowych granic. Jeśli definiujesz klasy lub struktury, a należy kontrolować układ magazynu z jej członków, można zastosować <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybutu klasy lub struktury.  
+- **Układ magazynu.** Nie można bezpiecznie założyć, że kolejność przechowywania w pamięci jest taka sama jak kolejność deklaracji. Nie można nawet wprowadzić założeń dotyczących wyrównania bajtów, takich jak granica 2-bajtowe lub 4-bajtowe. W przypadku definiowania klasy lub struktury i należy kontrolować układ magazynu swoich elementów członkowskich, można zastosować <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybut do klasy lub struktury.  
   
-### <a name="object-overhead"></a>Obciążenie obiektu  
- `Object` Odwołujące się do żadnych danych podstawowych lub złożonego typu używa 4 bajtów oprócz danych znajdujących się na typ danych.  
+### <a name="object-overhead"></a>Narzut na obiekt  
+ `Object` Odwołanie do dowolnego podstawowego lub złożonego typu danych powoduje użycie 4 bajtów oprócz danych zawartych w typie danych.  
   
 ## <a name="see-also"></a>Zobacz także
 

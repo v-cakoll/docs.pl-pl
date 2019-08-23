@@ -5,18 +5,18 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 114b9a6db7b41c5aac24bcd1badcf5f5b4b2fb08
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: bedfaef9a3d0cc81641006d254926f7bf9861c10
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796269"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930210"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Formanty do użycia w formularzach systemu Windows
 Poniżej znajduje się alfabetyczna lista formantów i składników, które mogą być używane w Windows Forms. Oprócz formantów Windows Forms pokrytych w tej sekcji, można dodać kontrolki ActiveX i niestandardowe do Windows Forms. Jeśli nie znajdziesz potrzebnej kontrolki w tym miejscu, możesz również utworzyć własne. Aby uzyskać szczegółowe informacje, zobacz [Opracowywanie formantów Windows Forms w czasie projektowania](developing-windows-forms-controls-at-design-time.md). Aby uzyskać więcej informacji na temat wybierania potrzebnej kontrolki, zobacz [Windows Forms formantów według funkcji](windows-forms-controls-by-function.md).  
   
 > [!NOTE]
->  Formanty Visual Basic są oparte na klasach dostarczonych przez .NET Framework.  
+> Formanty Visual Basic są oparte na klasach dostarczonych przez .NET Framework.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Kontrolki formularzy Windows Forms według funkcji](windows-forms-controls-by-function.md)  

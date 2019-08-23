@@ -9,15 +9,15 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 637a1d4b7a523feb2fc8da10a0c18e68774c480a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d92b0d08daf660880b648875c67c3b78069143d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586695"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924858"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource — (Visual Basic)
-Tworzy łącze do zarządzanego zasobem.  
+Tworzy łącze do zarządzanego zasobu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,27 +29,27 @@ Tworzy łącze do zarządzanego zasobem.
   
 ## <a name="arguments"></a>Argumenty  
  `filename`  
- Wymagana. Plik zasobów, aby utworzyć łącze do zestawu. Jeśli nazwa pliku zawiera spację, nazwę należy ująć w znaki cudzysłowu ("").  
+ Wymagane. Plik zasobu, który ma zostać połączony z zestawem. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów ("").  
   
  `identifier`  
- Opcjonalna. Nazwa logiczna zasobu. Nazwa która jest używana do ładowania zasobów. Wartość domyślna to nazwa pliku. Opcjonalnie można określić, czy plik jest publicznych lub prywatnych w manifeście zestawu, na przykład: `-linkres:filename.res,myname.res,public`. Domyślnie `filename` jest publiczna w zestawie.  
+ Opcjonalna. Nazwa logiczna zasobu. Nazwa, która jest używana do ładowania zasobu. Wartość domyślna to nazwa pliku. Opcjonalnie można określić, czy plik jest publiczny, czy prywatny w manifeście zestawu, na przykład: `-linkres:filename.res,myname.res,public`. Domyślnie `filename` jest on publiczny w zestawie.  
   
 ## <a name="remarks"></a>Uwagi  
- `-linkresource` Opcja nie jest możliwe osadzanie pliku zasobów w pliku wyjściowym; użyj `-resource` opcję, aby to zrobić.  
+ Opcja nie osadza pliku zasobów w pliku wyjściowym; Użyj opcji, `-resource` aby to zrobić. `-linkresource`  
   
- `-linkresource` Opcja wymaga jednej z `-target` opcji innych niż `-target:module`.  
+ Opcja wymaga jednej `-target` z opcji innych niż `-target:module`. `-linkresource`  
   
- Jeśli `filename` jest plikiem zasobów .NET Framework, utworzonym na przykład przez [Resgen.exe (Generator pliku zasobów)](../../../framework/tools/resgen-exe-resource-file-generator.md) lub w środowisku deweloperskim, jest dostępny za pomocą elementów członkowskich w <xref:System.Resources> przestrzeni nazw. (Aby uzyskać więcej informacji, zobacz <xref:System.Resources.ResourceManager>.) Dostęp do wszystkich innych zasobów w czasie wykonywania, użyj metody, które zaczynają się od `GetManifestResource` w <xref:System.Reflection.Assembly> klasy.  
+ Jeśli `filename` jest .NET Framework utworzony plik zasobów, na przykład przez [Resgen. exe (Generator plików zasobów)](../../../framework/tools/resgen-exe-resource-file-generator.md) lub w środowisku deweloperskim, dostęp do niego można uzyskać <xref:System.Resources> za pomocą elementów członkowskich w przestrzeni nazw. (Aby uzyskać więcej informacji, <xref:System.Resources.ResourceManager>Zobacz.) Aby uzyskać dostęp do wszystkich innych zasobów w czasie wykonywania, należy użyć metod, `GetManifestResource` które zaczynają <xref:System.Reflection.Assembly> się od klasy.  
   
- Nazwa pliku może być dowolnym formacie pliku. Na przykład można wprowadzić natywną DLL częścią zestawu, dzięki czemu mogą być zainstalowane w globalnej pamięci podręcznej i dostępne z kodu zarządzanego w zestawie.  
+ Nazwa pliku może być dowolnym formatem pliku. Można na przykład utworzyć natywną bibliotekę DLL zestawu, tak aby można ją było zainstalować w globalnej pamięci podręcznej zestawów i uzyskać do niej dostęp z kodu zarządzanego w zestawie.  
   
- Krótkiej formy `-linkresource` jest `-linkres`.  
+ Krótka forma `-linkresource` to `-linkres`.  
   
 > [!NOTE]
->  `-linkresource` Opcja nie jest dostępna z poziomu środowiska projektowego programu Visual Studio; jest dostępna tylko podczas kompilacji z wiersza polecenia.  
+> Ta `-linkresource` opcja jest niedostępna w środowisku deweloperskim programu Visual Studio. jest ona dostępna tylko podczas kompilowania z wiersza polecenia.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `in.vb` i łącza do pliku zasobów `rf.resource`.  
+ Poniższy kod kompiluje `in.vb` i łączy się z plikiem `rf.resource`zasobów.  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  
@@ -57,7 +57,7 @@ vbc -linkresource:rf.resource in.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-zasobów (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

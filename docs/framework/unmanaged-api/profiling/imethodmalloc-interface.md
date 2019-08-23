@@ -16,36 +16,36 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee825da1f3f0fd72a3b47b48783f0f344af99b65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c67ce15175f8667139f99cec1ed17531eab473e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969816"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935646"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc — Interfejs
-Udostępnia metodę można przydzielić pamięci dla nowej treści funkcji Microsoft intermediate language (MSIL).  
+Udostępnia metodę przydzielania pamięci dla nowej treści funkcji języka pośredniego (MSIL) firmy Microsoft.  
   
 > [!NOTE]
->  `IMethodMalloc` Interfejs jest alokatora pamięci proste. Można przydzielić pamięci, ale nie można go bezpłatnie.  
+> `IMethodMalloc` Interfejs jest prostym alokatorem pamięci. Umożliwia przydzielanie pamięci, ale nie zwalnia.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Alloc, metoda](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Próbuje przydzielić określonej ilości pamięci dla nowej treści funkcji MSIL.|  
+|[Alloc, metoda](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Próbuje przydzielić określoną ilość pamięci dla nowej treści funkcji MSIL.|  
   
 ## <a name="remarks"></a>Uwagi  
- Każdy alokatora jest specyficzny dla modułu i gwarantuje, że treści funkcji będzie przesunięciem dodatnią od podstawy modułu. Pamięć od podstawy modułu mogą być cenne, alokator powinien być używany do przydzielania pamięci tylko w przypadku treści funkcji.  
+ Każdy Alokator jest specyficzny dla modułu i gwarantuje, że treść funkcji będzie naliczona pozytywnie od podstawy modułu. Pamięć powyżej podstawy modułu może być cenna, więc Alokator powinien być używany do przydzielania pamięci tylko dla treści funkcji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówki** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

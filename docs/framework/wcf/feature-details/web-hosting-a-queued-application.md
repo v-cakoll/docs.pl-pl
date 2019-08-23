@@ -2,44 +2,44 @@
 title: Sieć Web hostująca aplikację zakolejkowaną
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: c8584f78b6b31bc95e088b424122a9cf77a17f27
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 36c35fe0590ad9fc728641313d4175a432d7ccaa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402280"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951577"
 ---
 # <a name="web-hosting-a-queued-application"></a>Sieć Web hostująca aplikację zakolejkowaną
-Windows Process Activation Service (WAS) zarządza aktywacji i okresem istnienia procesów roboczych, które zawierają aplikacji zawierających usługi Windows Communication Foundation (WCF). Model procesów WAS stanowi uogólnienie modelu procesów usług IIS 6.0 serwera HTTP przez usunięcie zależności od protokołu HTTP. Dzięki temu usługi WCF do użycia protokołów HTTP i protokołów innych niż HTTP, na przykład net.msmq i msmq.formatname w środowisku macierzystym, który obsługuje aktywację w oparciu o wiadomości i oferuje możliwość hostowania wielu aplikacji na danym komputerze.  
+Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacją i okresem istnienia procesów roboczych, które zawierają aplikacje obsługujące usługi Windows Communication Foundation (WCF). Proces WAS przetwarza model procesów usług IIS 6,0 dla serwera HTTP, usuwając zależność od protokołu HTTP. Dzięki temu usługi WCF mogą korzystać zarówno z protokołu HTTP, jak i protokołów innych niż HTTP, takich jak net. MSMQ i MSMQ. formatname, w środowisku hostingu obsługującym aktywację opartą na komunikatach i oferuje możliwość hostowania dużej liczby aplikacji na danym komputerze.  
   
- ZOSTAŁ obejmuje usługę aktywacji usługi kolejkowania komunikatów (MSMQ), który aktywuje umieszczonych w kolejce aplikacji, gdy jeden lub więcej komunikatów są umieszczane w jednej z kolejek używanych przez aplikację. Aktywacja usługi MSMQ jest usługą NT, która zostanie automatycznie uruchomiony domyślnie.  
+ Obejmuje usługę aktywacji usługi kolejkowania komunikatów (MSMQ), która aktywuje aplikację w kolejce, gdy co najmniej jeden komunikat znajduje się w jednej z kolejek używanych przez aplikację. Usługa aktywacji usługi MSMQ to usługa NT, która domyślnie jest uruchamiana automatycznie.  
   
- Aby dowiedzieć się więcej o WAS i jego korzyści, zobacz [Hosting w usłudze aktywacji procesów Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). Aby uzyskać więcej informacji na temat usługi MSMQ, zobacz [omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md).
+ Aby uzyskać więcej informacji o usłudze WAS i jej korzyściach, zobacz [hosting w usłudze aktywacji procesów systemu Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). Aby uzyskać więcej informacji na temat usługi MSMQ, zobacz [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md).
   
-## <a name="queue-addressing-in-was"></a>Kolejka adresowania w WAS  
- BYŁO, że aplikacje mają adresy identyfikator (URI). Adresy aplikacji mają dwie części: podstawowy prefiks identyfikatora URI i adres specyficzne dla aplikacji, względna (ścieżka). Te dwie części Obejmij zewnętrzny adres aplikację, jeśli połączone razem. Podstawowy prefiks identyfikatora URI jest tworzony z powiązania witryny i jest używany dla wszystkich aplikacji w ramach lokacji, na przykład "net.msmq://localhost", "msmq.formatname://localhost" lub "NET.TCP://localhost". Adresy aplikacji następnie są tworzone, wykonując fragmenty ścieżki specyficzne dla aplikacji (takich jak "/ applicationOne") i dołączanie ich do podstawowego identyfikatora URI jako prefiksu przyjeździe do biura pełny identyfikator URI aplikacji, na przykład "net.msmq://localhost/applicationOne".  
+## <a name="queue-addressing-in-was"></a>Adresowanie kolejki w zostało  
+ Aplikacje mają adresy Uniform Resource Identifier (URI). Adresy aplikacji mają dwie części: podstawowy prefiks identyfikatora URI i specyficzny dla aplikacji adres względny (ścieżka). Te dwie części zapewniają adres zewnętrzny dla aplikacji, gdy jest sprzężony razem. Podstawowy prefiks identyfikatora URI jest konstruowany z powiązania witryny i jest używany dla wszystkich aplikacji w lokacji, na przykład "net. MSMQ://localhost", "MSMQ. formatname://localhost", lub "net. TCP://localhost". Następnie adresy aplikacji są tworzone przez pobranie fragmentów ścieżek specyficznych dla aplikacji (takich jak "/applicationOne") i dołączenie ich do podstawowego prefiksu URI w celu uzyskania pełnego identyfikatora URI aplikacji, na przykład "net. MSMQ://localhost/applicationOne".  
   
- Aktywacja usługi MSMQ używa identyfikator URI aplikacji w celu dopasowania usługę Aktywacja usługi MSMQ należy monitorować komunikaty kolejki. Po uruchomieniu usługi Aktywacja usługi MSMQ wylicza wszystkich kolejek publicznych i prywatnych na komputerze jest skonfigurowany do otrzymywać i monitoruje ich dla wiadomości. Co 10 minut, usługę Aktywacja usługi MSMQ Odświeża listę kolejek do monitorowania. Po znalezieniu komunikatu w kolejce usługi aktywacji jest zgodna z nazwą kolejki do identyfikator URI aplikacji najdłuższy zgodny dla powiązania net.msmq i aktywuje aplikację.  
-  
-> [!NOTE]
->  Aplikacja aktywowanego muszą być zgodne (najdłuższe) prefiks nazwy kolejki.  
-  
- Na przykład nazwa kolejki jest: msmqWebHost/orderProcessing/service.svc. Jeśli aplikacja 1 ma /msmqWebHost/orderProcessing katalogu wirtualnego, za pomocą service.svc pod nim, a 2 aplikacji ma /msmqWebHost katalogu wirtualnego, za pomocą orderProcessing.svc pod nim, jest aktywowana aplikacja 1. Jeśli aplikacja 1 zostanie usunięty, 2 aplikacja została aktywowana.  
+ Usługa aktywacji usługi MSMQ używa identyfikatora URI aplikacji w celu dopasowania do kolejki, którą usługa aktywacji MSMQ musi monitorować w poszukiwaniu komunikatów. Po uruchomieniu usługa aktywacji usługi MSMQ wylicza wszystkie kolejki publiczne i prywatne na komputerze, który jest skonfigurowany do odbierania z i monitoruje je pod kątem komunikatów. Co 10 minut usługa aktywacji MSMQ odświeża listę kolejek do monitorowania. Po znalezieniu komunikatu w kolejce usługa aktywacji dopasowuje nazwę kolejki do najdłuższego zgodnego identyfikatora URI aplikacji dla powiązania net. MSMQ i aktywuje aplikację.  
   
 > [!NOTE]
->  Podczas tworzenia kolejki komunikaty wysyłane do niej nie zostanie aktywowany aplikacji, dopóki usługa aktywacji usługi MSMQ odświeża Lista kolejek, który jest co najwyżej 10 minut od chwili, gdy kolejka została utworzona. Ponowne uruchamianie usługi aktywacji odświeża na liście kolejki.  
+> Aktywowana aplikacja musi być zgodna z prefiksem nazwy kolejki (najdłuższym dopasowaniem).  
+  
+ Na przykład nazwa kolejki to: msmqWebHost/orderProcessing/Service. svc. Jeśli aplikacja 1 ma katalog wirtualny/msmqWebHost/orderProcessing z usługą. svc w tym obszarze, a aplikacja 2 ma katalog wirtualny/msmqWebHost z orderProcessing. svc w tym obszarze, aktywowano aplikację 1. Jeśli aplikacja 1 zostanie usunięta, zostanie uaktywniona aplikacja 2.  
+  
+> [!NOTE]
+> Po utworzeniu kolejki wszystkie wysyłane do niej wiadomości nie uaktywniają aplikacji do momentu odświeżenia listy kolejek przez usługę aktywacji usługi MSMQ, czyli maksymalnie 10 minut od momentu utworzenia kolejki. Ponowne uruchomienie usługi aktywacji spowoduje odświeżenie listy kolejek.  
   
 ### <a name="the-effect-of-private-and-public-queues-on-addressing"></a>Wpływ kolejek prywatnych i publicznych na adresowanie  
- Aktywacja usługi MSMQ nie rozróżnia monitorowania kolejki prywatnej i publicznej. W efekcie nie mogą mieć kolejek publicznych i prywatnych o takiej samej nazwie. Jeśli to zrobisz, aplikacji hostowanej w sieci Web może aktywować odczytu przy użyciu dowolnego z kolejki.  
+ Usługa aktywacji usługi MSMQ nie rozróżnia monitorowania kolejek prywatnych i publicznych. W związku z tym nie można mieć kolejek publicznych i prywatnych o tej samej nazwie. W takim przypadku aplikacja hostowana w sieci Web może uzyskać aktywację z jednej z kolejek.  
   
-### <a name="queue-configuration-for-activation"></a>Konfiguracja kolejki w celu aktywacji  
- Aktywacja usługi MSMQ działa jako usługa sieciowa. To usługa, która monitoruje kolejki jednak aktywować aplikacje. Na zakończenie jego aktywowania aplikacji z kolejki kolejki należy podać dostępu Usługa sieciowa do wglądu dla wiadomości w listy kontroli dostępu (ACL).  
+### <a name="queue-configuration-for-activation"></a>Konfiguracja kolejki na potrzeby aktywacji  
+ Usługa aktywacji usługi MSMQ działa jako usługa sieciowa. Jest to usługa, która monitoruje kolejki w celu aktywowania aplikacji. Aby można było aktywować aplikacje z kolejki, kolejka musi zapewnić dostęp usługi sieciowej do wglądu w komunikaty na liście kontroli dostępu (ACL).  
   
-### <a name="poison-messaging"></a>Obsługa zanieczyszczonych komunikatów  
- Zarządzanie skażonymi komunikatami, obsługa w programie WCF jest obsługiwany przez kanał, który nie tylko wykrywa, czy komunikat jest intoksykowane, ale wybiera dyspozycji, na podstawie konfiguracji użytkownika. W rezultacie ma jedną wiadomość w kolejce. Aplikacja sieci Web hostowanych przerywa kolejnych godzin i wiadomość zostanie przeniesiona do kolejki ponownych prób. W momencie z ustawieniem opóźnienie cyklu ponawiania wiadomość zostanie przeniesiona z kolejki ponownych prób do kolejki głównej aby spróbować ponownie. Jednak wymaga to zwrócony jako aktywny. Jeśli aplikacja jest poddawane recyklingowi, WAS, następnie wiadomości pozostaje w kolejce ponownych prób do momentu inny komunikat dociera do kolejki głównej, aby aktywować aplikację zakolejkowaną. W takim przypadku obejście jest powrót komunikat ręcznie z kolejki ponownych prób do kolejki głównej, aby ponownie aktywować aplikację.  
+### <a name="poison-messaging"></a>Trująca obsługa komunikatów  
+ Obsługa skażonych komunikatów w programie WCF jest obsługiwana przez kanał, który nie tylko wykrywa, że komunikat jest trujący, ale wybiera dyspozycję opartą na konfiguracji użytkownika. W związku z tym w kolejce znajduje się jeden komunikat. Aplikacja hostowana w sieci Web przerywa pracę po kolejnych godzinach, a komunikat jest przenoszony do kolejki ponawiania prób. W punkcie podyktowanym opóźnieniem cyklu ponawiania komunikat jest przenoszony z kolejki ponownych prób do kolejki głównej, aby spróbować ponownie. Jednak wymaga to aktywności kanału znajdującego się w kolejce. Jeśli aplikacja jest odtwarzana przez program, wówczas komunikat pozostaje w kolejce ponownych prób do momentu, aż inny komunikat zostanie umieszczony w kolejce głównej w celu aktywowania aplikacji znajdującej się w kolejce. Obejście w tym przypadku polega na przeniesieniu komunikatu ręcznie z kolejki ponownych prób z powrotem do kolejki głównej w celu ponownego aktywowania aplikacji.  
   
-### <a name="subqueue-and-system-queue-caveat"></a>Kolejki podrzędnej i zastrzeżenie System kolejki:  
- Aplikacja usługi hostowanej WAS nie można aktywować oparte na komunikatów w kolejce systemu, takich jak kolejki utraconych wiadomości całego systemu lub kolejki podrzędnej, takie jak zarządzanie skażonymi kolejki podrzędnej. Jest to ograniczenie dla tej wersji produktu.  
+### <a name="subqueue-and-system-queue-caveat"></a>Przeciwkolejka i przeciwsystemowe zastrzeżenie  
+ Nie można aktywować aplikacji hostowanej na podstawie komunikatów w kolejce systemowej, takich jak Kolejka utraconych wiadomości w całej systemie, lub podkolejki, takie jak podkolejki trujące. Jest to ograniczenie dla tej wersji produktu.  
   
 ## <a name="see-also"></a>Zobacz także
 

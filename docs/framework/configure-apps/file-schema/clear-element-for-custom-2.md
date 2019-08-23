@@ -1,5 +1,5 @@
 ---
-title: <clear> element dla NameValueSectionHandler i DictionarySectionHandler
+title: <clear>element dla NameValueSectionHandler i DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: e5ab12150c5200dc346e950541443d5286f739c8
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: fbb689db4abc5d59729d9a4d9807a02a0983d40b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301248"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927713"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Wyczyść >, element dla NameValueSectionHandler i DictionarySectionHandler
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Wyczyść element > dla NameValueSectionHandler i DictionarySectionHandler
 
-Czyści wszystkie wcześniej zdefiniowane ustawienia w sekcji.
+Czyści wszystkie poprzednio zdefiniowane ustawienia w sekcji.
 
-[ **\<Konfiguracja >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+[ **\<> konfiguracji**](configuration-element.md)   
+&nbsp;&nbsp;[ **\<sekcjaname >** ](custom-element-2.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>Składnia
@@ -38,7 +38,7 @@ Brak
 
 |     | Opis |
 | --- | ------------|
-| [ **\<parametrami sectionName >** — Element](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Definiuje ustawienia powiązane z sekcji konfiguracji niestandardowej, korzystających z <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler> klasy. |
+| [sekcjaname > element  **\<** ](custom-element-2.md) | Definiuje ustawienia niestandardowych sekcji konfiguracji, które używają <xref:System.Configuration.NameValueSectionHandler> klas i. <xref:System.Configuration.DictionarySectionHandler> |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
@@ -46,13 +46,13 @@ Brak
 
 ## <a name="remarks"></a>Uwagi
 
-Możesz użyć  **\<Wyczyść >** elementu do usunięcia wszystkich ustawień z poziomu aplikacji, które zostały zdefiniowane na wyższym poziomie w hierarchii plików konfiguracji.
+Można użyć elementu  **\<Clear >** , aby usunąć wszystkie ustawienia z aplikacji, które zostały zdefiniowane na wyższym poziomie w hierarchii plików konfiguracji.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie definiuje plik konfiguracji i pliku konfiguracji aplikacji i przedstawia sposób użycia  **\<Wyczyść >** elementu w pliku konfiguracyjnym aplikacji, aby wyczyścić wcześniej zdefiniowane w sekcji plik konfiguracji komputera.
+W tym przykładzie zdefiniowano plik konfiguracji komputera i plik konfiguracji aplikacji oraz pokazano,  **\<** jak używać elementu Clear > w pliku konfiguracyjnym aplikacji, aby wyczyścić sekcje wcześniej zdefiniowane w konfiguracji maszyny rozszerzeniem.
 
-Poniższy kod pliku konfiguracji maszyny deklaruje sekcji  **\<mySection >** :
+Następujący kod pliku konfiguracji komputera deklaruje sekcję  **\<>** :
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ Poniższy kod pliku konfiguracji maszyny deklaruje sekcji  **\<mySection >** :
 </configuration>
 ```
 
-Poniższy kod pliku konfiguracji aplikacji spowoduje usunięcie wszystkich ustawień z  **\<mySection >** . Aplikacja nie może pobrać dowolne z ustawień, które zostały zadeklarowane w w  **\<mySection >** sekcję pliku konfiguracji komputera.
+Następujący kod pliku konfiguracji aplikacji usuwa wszystkie ustawienia z  **\<sekcji >** . Aplikacja nie może pobrać z ustawień, które zostały zadeklarowane w sekcji  **\<>** w pliku konfiguracji maszyny.
 
 ```xml
 <!-- Application configuration file -->
@@ -80,8 +80,8 @@ Poniższy kod pliku konfiguracji aplikacji spowoduje usunięcie wszystkich ustaw
 
 ## <a name="configuration-file"></a>Plik konfiguracji
 
-Ten element może być użyty w pliku konfiguracyjnym aplikacji, plik konfiguracji komputera (*Machine.config*), a *Web.config* pliki, które nie są na poziomie katalogu aplikacji.
+Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schemat pliku konfiguracji dla .NET Framework](index.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 722e028311530336749d259207c681ac3f9a0f34
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c07f058eb081fa1c9e0a3756959570d1ba9e47f6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597054"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924517"
 ---
 # <a name="fields-c-programming-guide"></a>Pola (Przewodnik programowania w języku C#)
 *Pole* jest zmienną dowolnego typu, który jest zadeklarowany bezpośrednio w [klasie](../../language-reference/keywords/class.md) lub [strukturze](../../language-reference/keywords/struct.md). Pola są *elementami członkowskimi* typu zawierającego.  
@@ -21,11 +21,11 @@ ms.locfileid: "69597054"
   
  Pola zwykle przechowują dane, które muszą być dostępne dla więcej niż jednej metody klasy i muszą być przechowywane dłużej niż okres istnienia dowolnej pojedynczej metody. Na przykład Klasa, która reprezentuje datę kalendarza, może mieć trzy pola całkowite: jeden dla miesiąca, jeden dla danego dnia i jeden dla roku. Zmienne, które nie są używane poza zakresem pojedynczej metody, powinny być deklarowane jako *zmienne lokalne* w samej treści metody.  
   
- Pola są zadeklarowane w bloku klasy przez określenie poziomu dostępu pola, po którym następuje typ pola, po którym następuje nazwa pola. Przykład:  
+ Pola są zadeklarowane w bloku klasy przez określenie poziomu dostępu pola, po którym następuje typ pola, po którym następuje nazwa pola. Na przykład:  
   
  [!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]  
   
- Aby uzyskać dostęp do pola w obiekcie, Dodaj kropkę po nazwie obiektu, a następnie nazwę pola, jak w `objectname.fieldname`. Na przykład:  
+ Aby uzyskać dostęp do pola w obiekcie, Dodaj kropkę po nazwie obiektu, a następnie nazwę pola, jak w `objectname.fieldname`. Przykład:  
   
  [!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]  
   
@@ -36,7 +36,7 @@ ms.locfileid: "69597054"
  Pola są inicjowane natychmiast przed wywołaniem konstruktora dla wystąpienia obiektu. Jeśli Konstruktor przypisze wartość pola, spowoduje to zastąpienie dowolnej wartości podaną podczas deklaracji pola. Aby uzyskać więcej informacji, zobacz [Używanie konstruktorów](./using-constructors.md).  
   
 > [!NOTE]
->  Inicjator pola nie może odwoływać się do innych pól wystąpień.  
+> Inicjator pola nie może odwoływać się do innych pól wystąpień.  
   
  Pola mogą być oznaczone jako [publiczne](../../language-reference/keywords/public.md), [prywatne](../../language-reference/keywords/private.md), [chronione](../../language-reference/keywords/protected.md), [wewnętrzne](../../language-reference/keywords/internal.md), [chronione wewnętrznie](../../language-reference/keywords/protected-internal.md) lub [chronione prywatnie](../../language-reference/keywords/private-protected.md). Te Modyfikatory dostępu definiują sposób, w jaki użytkownicy klasy mogą uzyskać dostęp do pól. Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](./access-modifiers.md).  
   

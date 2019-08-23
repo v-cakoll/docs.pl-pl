@@ -2,43 +2,43 @@
 title: Operacje kopiowania masowego w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: e538e48400d955a0013a12dbf2d10f1f96c3ddfe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: efa13eb1633fce3b59040ef8da79dba0f6ea81d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649548"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918061"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Operacje kopiowania masowego w programie SQL Server
-Microsoft SQL Server zawiera popularne narzędzia wiersza polecenia o nazwie **bcp** dla szybko zbiorcze kopiowanie dużych plików do tabel lub widoków w bazach danych programu SQL Server. <xref:System.Data.SqlClient.SqlBulkCopy> Klasy umożliwia pisanie kodu zarządzanego rozwiązania, które zapewniają podobne funkcje. Istnieją inne sposoby, aby załadować dane do tabeli programu SQL Server (na przykład instrukcji INSERT), ale <xref:System.Data.SqlClient.SqlBulkCopy> oferuje zalety istotnie poprawiającą wydajność, nad nimi.  
+Microsoft SQL Server obejmuje popularne narzędzie wiersza polecenia o nazwie **BCP** , aby szybko skopiować duże pliki do tabel lub widoków w bazach danych SQL Server. <xref:System.Data.SqlClient.SqlBulkCopy> Klasa umożliwia pisanie rozwiązań kodu zarządzanego, które zapewniają podobną funkcjonalność. Istnieją inne sposoby ładowania danych do tabeli SQL Server (na przykład instrukcje INSERT), ale <xref:System.Data.SqlClient.SqlBulkCopy> oferują one znaczącą wydajność.  
   
- <xref:System.Data.SqlClient.SqlBulkCopy> Klasa może być używana w celu zapisania danych tylko do tabel programu SQL Server. Jednak źródła danych nie jest ograniczony do programu SQL Server; Dowolne źródło danych może służyć, tak długo, jak długo dane mogą być ładowane do <xref:System.Data.DataTable> wystąpienia lub odczytu z <xref:System.Data.IDataReader> wystąpienia.  
+ <xref:System.Data.SqlClient.SqlBulkCopy> Klasa może służyć do zapisywania danych tylko w tabelach SQL Server. Ale źródło danych nie jest ograniczone do SQL Server; można użyć dowolnego źródła danych, o ile dane mogą zostać załadowane do <xref:System.Data.DataTable> wystąpienia lub odczytane <xref:System.Data.IDataReader> za pomocą wystąpienia.  
   
- Za pomocą <xref:System.Data.SqlClient.SqlBulkCopy> klasy, można wykonać:  
+ Korzystając z <xref:System.Data.SqlClient.SqlBulkCopy> klasy, można wykonać następujące polecenie:  
   
-- Pojedynczej zbiorczej operacji kopiowania  
+- Pojedyncza operacja kopiowania zbiorczego  
   
 - Wiele operacji kopiowania zbiorczego  
   
-- Operacji kopiowania zbiorczego, w ramach transakcji  
+- Operacja kopiowania zbiorczego w ramach transakcji  
   
 > [!NOTE]
->  Korzystając z .NET Framework w wersji 1.1 lub wcześniejszej (który nie obsługuje <xref:System.Data.SqlClient.SqlBulkCopy> klasy), SQL Server Transact-SQL można wykonywać **BULK INSERT** przy użyciu instrukcji <xref:System.Data.SqlClient.SqlCommand> obiektu.  
+> W przypadku używania .NET Framework w wersji 1,1 lub starszej (która nie <xref:System.Data.SqlClient.SqlBulkCopy> obsługuje klasy) można wykonać SQL Server instrukcji języka Transact-SQL **BULK INSERT** przy użyciu <xref:System.Data.SqlClient.SqlCommand> obiektu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Konfiguracja przykładu kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)  
- W tym artykule opisano z tabelami używanymi w przykładach kopiowania zbiorczego i zawiera skrypty SQL do tworzenia tabel w bazie AdventureWorks.  
+ Opisuje tabele używane w przykładowych kopiach zbiorczych i udostępnia skrypty SQL do tworzenia tabel w bazie danych AdventureWorks.  
   
  [Pojedyncze operacje kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/single-bulk-copy-operations.md)  
- W tym artykule opisano sposób wykonywania pojedynczej zbiorczej kopię danych do wystąpienia programu SQL Server używa <xref:System.Data.SqlClient.SqlBulkCopy> klasy i sposobu wykonywania operacji kopiowania zbiorczego za pomocą instrukcji języka Transact-SQL i <xref:System.Data.SqlClient.SqlCommand> klasy.  
+ Opisuje, jak wykonać pojedynczą zbiorczą kopię danych w wystąpieniu SQL Server przy użyciu <xref:System.Data.SqlClient.SqlBulkCopy> klasy i jak wykonać operację kopiowania zbiorczego za pomocą instrukcji języka Transact-SQL <xref:System.Data.SqlClient.SqlCommand> i klasy.  
   
  [Wiele operacji kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/multiple-bulk-copy-operations.md)  
- W tym artykule opisano sposób wykonywania wiele operacji kopiowania zbiorczego danych do wystąpienia programu SQL Server przy użyciu <xref:System.Data.SqlClient.SqlBulkCopy> klasy.  
+ Opisuje sposób wykonywania wielu operacji zbiorczych kopiowania danych do wystąpienia SQL Server przy użyciu <xref:System.Data.SqlClient.SqlBulkCopy> klasy.  
   
  [Transakcja i operacje kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)  
- W tym artykule opisano sposób wykonywania operacji kopiowania zbiorczego, w ramach transakcji, w tym sposobu zatwierdzania lub wycofywania transakcji.  
+ Opisuje sposób wykonywania operacji kopiowania zbiorczego w ramach transakcji, w tym metody zatwierdzania lub wycofywania transakcji.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

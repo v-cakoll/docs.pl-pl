@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a62199563c620156885c941204207b185834beb4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30500e8ea55f8298b9a980e34dc611b58a51bdcc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752147"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916400"
 ---
-# <a name="corprfjitcache-enumeration"></a>COR_PRF_JIT_CACHE — Wyliczenie
-Wskazuje wynik wyszukiwania funkcję pamięci podręcznej.  
+# <a name="cor_prf_jit_cache-enumeration"></a>COR_PRF_JIT_CACHE — Wyliczenie
+Wskazuje wynik funkcji wyszukiwania w pamięci podręcznej.  
   
 > [!NOTE]
->  `COR_PRF_CACHED_FUNCTION_FOUND` ma wartość zero, więc `COR_PRF_JIT_CACHE` nie można użyć jako logiczna zastępczy.  
+> `COR_PRF_CACHED_FUNCTION_FOUND`ma wartość zero, więc `COR_PRF_JIT_CACHE` nie może być używana jako surogat wartości logicznej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,17 +42,17 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|Nie można odnaleźć funkcji.|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|Nie znaleziono funkcji wyszukiwania.|  
+|`COR_PRF_FUNCTION_FOUND`|Wyszukiwanie odnalazło funkcję.|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|Wyszukiwanie nie znalazło funkcji.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówki** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

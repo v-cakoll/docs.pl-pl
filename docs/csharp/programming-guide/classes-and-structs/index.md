@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 4565781dd6e30bd88c899a9c098c28e3fd5b3870
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c0b7e52cbbf0b49dee3598239f96e113ba929a80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596630"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922255"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Klasy i struktury (Przewodnik programowania w języku C#)
 Klasy i struktury są dwoma podstawowymi konstrukcjami systemu wspólnego typu w .NET Framework. Każda z nich jest zasadniczo strukturą danych, która hermetyzuje zestaw danych i zachowań, które należą do jednostki logicznej. Dane i zachowania są *elementami członkowskimi* klasy lub struktury, a także zawierają metody, właściwości i zdarzenia itd., jak opisano w dalszej części tego tematu.  
@@ -60,7 +60,7 @@ Klasy i struktury są dwoma podstawowymi konstrukcjami systemu wspólnego typu w
   
 - [Indeksatory](../indexers/index.md)  
   
-- [Operatory](../statements-expressions-operators/operators.md)  
+- [Operatory](../../language-reference/operators/index.md)  
   
 - [Zagnieżdżone typy](./nested-types.md)  
   

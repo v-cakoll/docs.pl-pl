@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: bf94f090-5265-4112-8e57-5b4e20e070d0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f21ea449cf30bd9c07b7ae9b382877ce18f102d9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c818b196f3252138f2a9c601b04f1d7a6727bc6b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736416"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912740"
 ---
 # <a name="icordebugprocess6markdebuggerattached-method"></a>Metoda ICorDebugProcess6::MarkDebuggerAttached
-Zmienia stan wewnętrzny debugee tak, aby <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> zwraca metody w bibliotece klas programu .NET Framework `true`.  
+Zmienia wewnętrzny stan debugee, tak aby <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> Metoda w bibliotece klas .NET Framework zwracana. `true`  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,30 +24,30 @@ HRESULT MarkDebuggerAttached(
   
 ## <a name="parameters"></a>Parametry  
  `fIsAttached`  
- `true` Jeśli <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> metody powinny wskazywać, że jest dołączony debuger; `false` inaczej.  
+ `true`<xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> Jeśli metoda powinna wskazywać, że debuger jest dołączony; `false` w przeciwnym razie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Metoda może zwracać wartości wymienione w poniższej tabeli.  
   
 |Wartość zwracana|Opis|  
 |------------------|-----------------|  
-|`S_OK`|Pomyślnie zaktualizowano debugowany program.|  
-|`CORDBG_E_MODULE_NOT_LOADED`|Zestaw, który zawiera <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> metoda nie jest załadowany lub inny błąd, takie jak Brak metadanych uniemożliwia jej rozpoznawane.<br /><br /> Ten błąd jest najczęściej i niegroźne. Należy wywołać metodę ponownie, gdy załadować dodatkowe zestawy.|  
-|Inne niepowodzenia `HRESULT` wartości.|Inne wartości, które mogą wskazywać nieprawidłowo funkcjonującego debugera lub składniki kompilatora.|  
+|`S_OK`|Pomyślnie Zaktualizowano debugowanego obiektu.|  
+|`CORDBG_E_MODULE_NOT_LOADED`|Zestaw, który zawiera <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> metodę, nie został załadowany lub jakiś inny błąd, taki jak brakujące metadane, uniemożliwia jego rozpoznanie.<br /><br /> Ten błąd jest typowy i niegroźny. Należy wywołać metodę ponownie, gdy dodatkowe zestawy są ładowane.|  
+|Inne błędne `HRESULT` wartości.|Inne wartości najkorzystnie wskazują debuger błędna lub składniki kompilatora.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

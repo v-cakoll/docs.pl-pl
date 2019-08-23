@@ -12,203 +12,203 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 124641ed32dc2ea953202dbc6a73ee066a6c4a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5cdd2f5538be0e39b5dd3a378825ccf81f314c03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602522"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916280"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Przewodnik: Tworzenie aplikacji kryptograficznej
-W tym instruktażu pokazano, jak szyfrowanie i odszyfrowywanie zawartości. Przykłady kodu są przeznaczone dla aplikacji Windows Forms. Ta aplikacja nie przedstawiono tu scenariusze ze świata rzeczywistego, takich jak za pomocą kart inteligentnych. Zamiast tego przedstawiono podstawowe informacje dotyczące szyfrowania i odszyfrowywania.  
+W tym instruktażu pokazano, jak szyfrować i odszyfrowywać zawartość. Przykłady kodu są przeznaczone dla aplikacji Windows Forms. Ta aplikacja nie pokazuje rzeczywistych scenariuszy, takich jak korzystanie z kart inteligentnych. Zamiast tego pokazuje podstawowe informacje dotyczące szyfrowania i odszyfrowywania.  
   
- W tym instruktażu wykorzystano poniższe wskazówki dotyczące szyfrowania:  
+ W tym instruktażu zastosowano następujące wytyczne dotyczące szyfrowania:  
   
-- Użyj <xref:System.Security.Cryptography.RijndaelManaged> klasy algorytm symetryczny, do szyfrowania i odszyfrowywania danych za pomocą jego automatycznie generowanych <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> i <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>.  
+- Użyj klasy, algorytmu symetrycznego, aby szyfrować i odszyfrowywać dane przy użyciu automatycznie wygenerowanego <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A>i. <xref:System.Security.Cryptography.RijndaelManaged>  
   
-- Użyj <xref:System.Security.Cryptography.RSACryptoServiceProvider>, algorytmu asymetrycznego, do szyfrowania i odszyfrowywania klawisz, aby dane zaszyfrowane przy <xref:System.Security.Cryptography.RijndaelManaged>. Asymetryczne algorytmy najlepiej sprawdzają się dla mniejszych ilości danych, takich jak klucz.  
+- Użyj algorytmu asymetrycznego, aby szyfrować i odszyfrowywać klucz do danych szyfrowanych przez <xref:System.Security.Cryptography.RijndaelManaged>program. <xref:System.Security.Cryptography.RSACryptoServiceProvider> Algorytmy asymetryczne najlepiej używać w przypadku mniejszych ilości danych, takich jak klucz.  
   
     > [!NOTE]
-    >  Aby chronić dane na komputerze, zamiast wymieniać zaszyfrowaną zawartość innym osobom, należy rozważyć użycie <xref:System.Security.Cryptography.ProtectedData> lub <xref:System.Security.Cryptography.ProtectedMemory> klasy.  
+    > Jeśli chcesz chronić dane na komputerze zamiast wymieniać zaszyfrowaną zawartość z innymi osobami, rozważ użycie <xref:System.Security.Cryptography.ProtectedData> klas lub. <xref:System.Security.Cryptography.ProtectedMemory>  
   
- Poniższa tabela zawiera podsumowanie zadania kryptograficzne w tym temacie.  
+ Poniższa tabela zawiera podsumowanie zadań kryptograficznych w tym temacie.  
   
 |Zadanie|Opis|  
 |----------|-----------------|  
-|Tworzenie aplikacji Windows Forms|Wyświetla listę formantów, które są wymagane do uruchomienia aplikacji.|  
-|Deklarowanie obiektów globalnych|Deklaruje ciągu zmiennych ścieżek <xref:System.Security.Cryptography.CspParameters>i <xref:System.Security.Cryptography.RSACryptoServiceProvider> mają globalne kontekstu <xref:System.Windows.Forms.Form> klasy.|  
-|Tworzenie klucza asymetrycznego|Tworzy asymetrycznego publicznych i prywatnych parę klucz-wartość i przypisuje mu nazwę kontenera kluczy.|  
-|Szyfrowanie pliku|Wyświetlane jest okno dialogowe, aby wybrać plik do szyfrowania i szyfruje pliku.|  
-|Odszyfrowywanie pliku|Wyświetlane jest okno dialogowe, aby wybrać plik zaszyfrowany do odszyfrowywania i odszyfrowuje pliku.|  
-|Pobieranie klucza prywatnego|Pobiera pary kluczy pełną nazwę kontenera kluczy.|  
-|Eksportowanie klucza publicznego|Zapisuje klucz w pliku XML przy użyciu tylko publiczne parametrów.|  
+|Tworzenie aplikacji Windows Forms|Wyświetla listę kontrolek, które są wymagane do uruchomienia aplikacji.|  
+|Deklarowanie obiektów globalnych|Deklaruje zmienne ścieżki ciągów, <xref:System.Security.Cryptography.CspParameters> <xref:System.Security.Cryptography.RSACryptoServiceProvider> i i ma kontekst <xref:System.Windows.Forms.Form> globalny klasy.|  
+|Tworzenie klucza asymetrycznego|Tworzy asymetryczną parę wartości klucza publicznego i prywatnego i przypisuje mu nazwę kontenera kluczy.|  
+|Szyfrowanie pliku|Wyświetla okno dialogowe, w którym można wybrać plik do szyfrowania i szyfruje plik.|  
+|Odszyfrowywanie pliku|Wyświetla okno dialogowe, w którym można wybrać zaszyfrowany plik do odszyfrowania i odszyfrować plik.|  
+|Pobieranie klucza prywatnego|Pobiera pełną parę kluczy przy użyciu nazwy kontenera kluczy.|  
+|Eksportowanie klucza publicznego|Zapisuje klucz do pliku XML tylko z parametrami publicznymi.|  
 |Importowanie klucza publicznego|Ładuje klucz z pliku XML do kontenera kluczy.|  
-|Testowanie aplikacji|Zawiera listę procedur do testowania tej aplikacji.|  
+|Testowanie aplikacji|Wyświetla listę procedur testowania tej aplikacji.|  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
-- Odwołuje się do <xref:System.IO> i <xref:System.Security.Cryptography> przestrzeni nazw.  
+- Odwołania do <xref:System.IO> przestrzeni nazw <xref:System.Security.Cryptography> i.  
   
 ## <a name="creating-a-windows-forms-application"></a>Tworzenie aplikacji Windows Forms  
- Większość przykładów kodu w tym przewodniku są przeznaczone do można programy obsługi zdarzeń dla przycisku kontrolki. W poniższej tabeli wymieniono kontrole wymagane dla przykładowej aplikacji i ich wymagane nazwy zgodne z przykładami kodu.  
+ Większość przykładów kodu w tym instruktażu została zaprojektowana jako programy obsługi zdarzeń dla kontrolek Button. Poniższa tabela zawiera listę formantów wymaganych dla przykładowej aplikacji i ich wymaganych nazw w celu dopasowania do przykładów kodu.  
   
-|formant|Nazwa|Właściwość Text (zgodnie z potrzebami)|  
+|formant|Nazwa|Właściwość Text (zgodnie z wymaganiami)|  
 |-------------|----------|---------------------------------|  
-|<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Szyfrowanie pliku|  
-|<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Odszyfrowywanie pliku|  
-|<xref:System.Windows.Forms.Button>|`buttonCreateAsmKeys`|Tworzenie kluczy|  
-|<xref:System.Windows.Forms.Button>|`buttonExportPublicKey`|Wyeksportuj klucz publiczny|  
+|<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Szyfruj plik|  
+|<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Odszyfruj plik|  
+|<xref:System.Windows.Forms.Button>|`buttonCreateAsmKeys`|Utwórz klucze|  
+|<xref:System.Windows.Forms.Button>|`buttonExportPublicKey`|Eksportuj klucz publiczny|  
 |<xref:System.Windows.Forms.Button>|`buttonImportPublicKey`|Importuj klucz publiczny|  
 |<xref:System.Windows.Forms.Button>|`buttonGetPrivateKey`|Pobierz klucz prywatny|  
 |<xref:System.Windows.Forms.Label>|`label1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog2`||  
   
- Kliknij dwukrotnie przycisków w Projektancie Visual Studio do tworzenia swoich programów obsługi zdarzeń.  
+ Kliknij dwukrotnie przyciski w projektancie programu Visual Studio, aby utworzyć obsługę zdarzeń.  
   
 ## <a name="declaring-global-objects"></a>Deklarowanie obiektów globalnych  
- Dodaj następujący kod do formularza konstruktora. Edytowanie zmiennych ciągu dla Twojego środowiska i swoich preferencji.  
+ Dodaj następujący kod do konstruktora formularza. Edytuj zmienne ciągów dla środowiska i preferencji.  
   
  [!code-csharp[CryptoWalkThru#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#1)]
  [!code-vb[CryptoWalkThru#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#1)]  
   
 ## <a name="creating-an-asymmetric-key"></a>Tworzenie klucza asymetrycznego  
- To zadanie tworzy klucza asymetrycznego, któremu szyfruje i odszyfrowuje <xref:System.Security.Cryptography.RijndaelManaged> klucza. Ten klucz został użyty do zaszyfrowania zawartości, i wyświetla nazwę kontenera kluczy na formant etykiety.  
+ To zadanie tworzy klucz asymetryczny, który szyfruje i odszyfrowuje <xref:System.Security.Cryptography.RijndaelManaged> klucz. Ten klucz został użyty do zaszyfrowania zawartości i wyświetla nazwę kontenera kluczy w kontrolce etykieta.  
   
- Dodaj następujący kod jako `Click` program obsługi zdarzeń dla `Create Keys` przycisku (`buttonCreateAsmKeys_Click`).  
+ Dodaj następujący kod jako `Click` procedurę obsługi zdarzeń `Create Keys` dla przycisku (`buttonCreateAsmKeys_Click`).  
   
  [!code-csharp[CryptoWalkThru#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#2)]
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>Szyfrowanie pliku  
- To zadanie polega na dwa sposoby: metoda obsługi zdarzeń dla `Encrypt File` przycisku (`buttonEncryptFile_Click`) i `EncryptFile` metody. Pierwsza metoda wyświetlane jest okno dialogowe wybierania plik i przekazuje nazwę pliku do drugiej metody, która wykonuje szyfrowanie.  
+ To zadanie obejmuje dwie metody: metoda obsługi zdarzeń dla `Encrypt File` przycisku (`buttonEncryptFile_Click`) i `EncryptFile` metody. Pierwsza metoda wyświetla okno dialogowe, w którym można wybrać plik i przekazuje nazwę pliku do drugiej metody, która wykonuje szyfrowanie.  
   
- Zaszyfrowaną zawartość, klucza i IV są zapisywane do jednego <xref:System.IO.FileStream>, który jest nazywany pakietu szyfrowania.  
+ Zaszyfrowana zawartość, klucz i IV są zapisywane na jednym <xref:System.IO.FileStream>, który jest nazywany Pakietem szyfrowania.  
   
  `EncryptFile` Metoda wykonuje następujące czynności:  
   
-1. Tworzy <xref:System.Security.Cryptography.RijndaelManaged> algorytm symetryczny zawartość.  
+1. Tworzy algorytm <xref:System.Security.Cryptography.RijndaelManaged> symetryczny do szyfrowania zawartości.  
   
-2. Tworzy <xref:System.Security.Cryptography.RSACryptoServiceProvider> obiektu do zaszyfrowania <xref:System.Security.Cryptography.RijndaelManaged> klucza.  
+2. Tworzy obiekt służący do <xref:System.Security.Cryptography.RijndaelManaged> szyfrowania klucza. <xref:System.Security.Cryptography.RSACryptoServiceProvider>  
   
-3. Używa <xref:System.Security.Cryptography.CryptoStream> obiektu do odczytu i szyfrowania <xref:System.IO.FileStream> pliku źródłowego w blokach bajtów do miejsca docelowego <xref:System.IO.FileStream> obiektu dla zaszyfrowanego pliku.  
+3. Używa obiektu do odczytu i <xref:System.IO.FileStream> szyfrowania pliku źródłowego w blokach bajtów do obiektu docelowego <xref:System.IO.FileStream> dla zaszyfrowanego pliku. <xref:System.Security.Cryptography.CryptoStream>  
   
-4. Określa długość zaszyfrowanego klucza i IV i tworzy tablice typu byte ich wartości długości.  
+4. Określa długość zaszyfrowanego klucza i IV i tworzy tablicę bajtową wartości ich długości.  
   
-5. Zapisuje klucz, IV i ich wartości długości zaszyfrowany pakiet.  
+5. Zapisuje wartości key, IV i ich długości do zaszyfrowanego pakietu.  
   
- Pakietu szyfrowania posługuje się następującym formatem:  
+ Pakiet szyfrowania używa następującego formatu:  
   
-- Długość klucza, bajty 0 – 3  
+- Długość klucza, bajty 0-3  
   
-- Długość IV, w bajtach 4 – 7  
+- Długość IV, bajtów 4-7  
   
 - Zaszyfrowany klucz  
   
 - IV  
   
-- Zaszyfrowanego tekstu  
+- Szyfrowanie tekstu  
   
- Długości klucza i IV służy do określenia punktów początkowej i długości wszystkich części pakietu szyfrowania, które następnie mogą być używane do odszyfrowywania pliku.  
+ Możesz użyć długości klucza i IV, aby określić punkty początkowe i długości wszystkich części pakietu szyfrującego, które mogą być następnie użyte do odszyfrowania pliku.  
   
- Dodaj następujący kod jako `Click` program obsługi zdarzeń dla `Encrypt File` przycisku (`buttonEncryptFile_Click`).  
+ Dodaj następujący kod jako `Click` procedurę obsługi zdarzeń `Encrypt File` dla przycisku (`buttonEncryptFile_Click`).  
   
  [!code-csharp[CryptoWalkThru#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#3)]
  [!code-vb[CryptoWalkThru#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#3)]  
   
- Dodaj następujący kod `EncryptFile` metody do formularza.  
+ Dodaj następującą `EncryptFile` metodę do formularza.  
   
  [!code-csharp[CryptoWalkThru#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#5)]
  [!code-vb[CryptoWalkThru#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#5)]  
   
 ## <a name="decrypting-a-file"></a>Odszyfrowywanie pliku  
- To zadanie obejmuje dwie metody, metody obsługi zdarzeń dla `Decrypt File` przycisku (`buttonDecryptFile_Click`), a `DecryptFile` metody. Pierwsza metoda wyświetlane jest okno dialogowe wybierania plik i przekazuje jego nazwa pliku do drugiej metody, która wykonuje odszyfrowywania.  
+ To zadanie obejmuje dwie metody, metodę obsługi zdarzeń dla `Decrypt File` przycisku (`buttonDecryptFile_Click`) i `DecryptFile` metodę. Pierwsza metoda wyświetla okno dialogowe, w którym można wybrać plik i przekazuje jego nazwę pliku do drugiej metody, która wykonuje odszyfrowywanie.  
   
  `Decrypt` Metoda wykonuje następujące czynności:  
   
-1. Tworzy <xref:System.Security.Cryptography.RijndaelManaged> algorytm symetryczny do odszyfrowania zawartości.  
+1. Tworzy algorytm <xref:System.Security.Cryptography.RijndaelManaged> symetryczny służący do odszyfrowywania zawartości.  
   
-2. Odczytuje pierwsze 8 bajtów z <xref:System.IO.FileStream> pakietu zaszyfrowane w tablice bajtów w celu uzyskania długości zaszyfrowanego klucza i IV.  
+2. Odczytuje pierwsze osiem bajtów <xref:System.IO.FileStream> zaszyfrowanego pakietu do tablic bajtów w celu uzyskania długości zaszyfrowanego klucza i IV.  
   
-3. Wyodrębnia klucz i IV z pakietu szyfrowania do tablice typu byte.  
+3. Wyodrębnia klucz i IV z pakietu szyfrowania do tablic bajtowych.  
   
-4. Tworzy <xref:System.Security.Cryptography.RSACryptoServiceProvider> obiektu do odszyfrowania <xref:System.Security.Cryptography.RijndaelManaged> klucza.  
+4. Tworzy obiekt do odszyfrowania <xref:System.Security.Cryptography.RijndaelManaged>klucza. <xref:System.Security.Cryptography.RSACryptoServiceProvider>  
   
-5. Używa <xref:System.Security.Cryptography.CryptoStream> obiektu do odczytu i odszyfrować części tekstowej szyfrowania <xref:System.IO.FileStream> szyfrowanie pakietów, w blokach bajtów w <xref:System.IO.FileStream> obiekt odszyfrowanego pliku. Po jej zakończeniu odszyfrowywania został ukończony.  
+5. Używa obiektu do odczytywania i odszyfrowywania sekcji <xref:System.IO.FileStream> szyfrowania tekstu pakietu szyfrowania w blokach bajtów do <xref:System.IO.FileStream> obiektu w odszyfrowanym pliku. <xref:System.Security.Cryptography.CryptoStream> Po zakończeniu odszyfrowywania zostanie zakończone.  
   
- Dodaj następujący kod jako `Click` program obsługi zdarzeń dla `Decrypt File` przycisku.  
+ Dodaj następujący kod jako `Click` procedurę obsługi zdarzeń `Decrypt File` dla przycisku.  
   
  [!code-csharp[CryptoWalkThru#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#4)]
  [!code-vb[CryptoWalkThru#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#4)]  
   
- Dodaj następujący kod `DecryptFile` metody do formularza.  
+ Dodaj następującą `DecryptFile` metodę do formularza.  
   
  [!code-csharp[CryptoWalkThru#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#6)]
  [!code-vb[CryptoWalkThru#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#6)]  
   
 ## <a name="exporting-a-public-key"></a>Eksportowanie klucza publicznego  
- To zadanie powoduje zapisanie klucza utworzonego na podstawie `Create Keys` przycisku do pliku. Eksportuje ona tylko publiczne parametrów.  
+ To zadanie służy do zapisywania klucza utworzonego przez `Create Keys` przycisk do pliku. Eksportuje tylko parametry publiczne.  
   
- To zadanie symuluje scenariusza Alicja, zapewniając Bob jej klucz publiczny, tak, aby on szyfrowania plików dla jej. ADAM i innym osobom mający ten klucz nie będzie ich odszyfrować, ponieważ nie mają pary pełnej kluczy prywatnych parametrami.  
+ To zadanie symuluje scenariusz dla Alicja przekazującej Roberta swój klucz publiczny, aby mógł szyfrować pliki. Osoby, które mają ten klucz publiczny, nie będą w stanie odszyfrować, ponieważ nie mają pełnej pary kluczy z parametrami prywatnymi.  
   
- Dodaj następujący kod jako `Click` program obsługi zdarzeń dla `Export Public Key` przycisku (`buttonExportPublicKey_Click`).  
+ Dodaj następujący kod jako `Click` procedurę obsługi zdarzeń `Export Public Key` dla przycisku (`buttonExportPublicKey_Click`).  
   
  [!code-csharp[CryptoWalkThru#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#8)]
  [!code-vb[CryptoWalkThru#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#8)]  
   
 ## <a name="importing-a-public-key"></a>Importowanie klucza publicznego  
- To zadanie ładowania klucza z parametrami tylko publiczne tworzony przez `Export Public Key` znajdujący się i ustawia go jako nazwę kontenera kluczy.  
+ To zadanie ładuje klucz z tylko parametrami publicznymi, utworzonym przez `Export Public Key` przycisk i ustawia go jako nazwę kontenera kluczy.  
   
- To zadanie symuluje scenariusza Bob ładowania klucza Alicji parametrami tylko publiczne, więc on szyfrowania plików dla jej.  
+ To zadanie symuluje scenariusz ładowania klucza Alicja z tylko parametrami publicznymi, dzięki czemu może zaszyfrować pliki.  
   
- Dodaj następujący kod jako `Click` program obsługi zdarzeń dla `Import Public Key` przycisku (`buttonImportPublicKey_Click`).  
+ Dodaj następujący kod jako `Click` procedurę obsługi zdarzeń `Import Public Key` dla przycisku (`buttonImportPublicKey_Click`).  
   
  [!code-csharp[CryptoWalkThru#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#9)]
  [!code-vb[CryptoWalkThru#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#9)]  
   
 ## <a name="getting-a-private-key"></a>Pobieranie klucza prywatnego  
- To zadanie ustawia nazwę kontenera kluczy, nazwę klucza utworzonego za pomocą `Create Keys` przycisku. Kontener kluczy będzie zawierać pary pełnej kluczy prywatnych parametrami.  
+ To zadanie ustawia nazwę kontenera kluczy na nazwę klucza utworzonego za pomocą `Create Keys` przycisku. Kontener kluczy będzie zawierać pełną parę kluczy z parametrami prywatnymi.  
   
- To zadanie symuluje scenariusza Alicji przy użyciu swojego klucza prywatnego do odszyfrowania zaszyfrowanych przez Boba plików.  
+ To zadanie symuluje scenariusz Alicja przy użyciu klucza prywatnego w celu odszyfrowania plików zaszyfrowanych przez Robert.  
   
- Dodaj następujący kod jako `Click` program obsługi zdarzeń dla `Get Private Key` przycisku (`buttonGetPrivateKey_Click`).  
+ Dodaj następujący kod jako `Click` procedurę obsługi zdarzeń `Get Private Key` dla przycisku (`buttonGetPrivateKey_Click`).  
   
  [!code-csharp[CryptoWalkThru#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#7)]
  [!code-vb[CryptoWalkThru#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#7)]  
   
 ## <a name="testing-the-application"></a>Testowanie aplikacji  
- Po skonstruowaniu aplikacji, należy wykonać następujące scenariusze testowania.  
+ Po skompilowaniu aplikacji wykonaj następujące scenariusze testowania.  
   
-#### <a name="to-create-keys-encrypt-and-decrypt"></a>Aby utworzyć klucze, szyfrowania i odszyfrowywania  
+#### <a name="to-create-keys-encrypt-and-decrypt"></a>Aby utworzyć klucze, szyfrowanie i odszyfrowywanie  
   
-1. Kliknij przycisk `Create Keys` przycisku. Etykieta Wyświetla nazwę klucza i wskazuje, że jest parą kluczy pełnej.  
+1. `Create Keys` Kliknij przycisk. Etykieta Wyświetla nazwę klucza i pokazuje, że jest to pełna para kluczy.  
   
-2. Kliknij przycisk `Export Public Key` przycisku. Należy pamiętać, że eksportowanie parametrów klucza publicznego nie zmienia bieżącego klucza.  
+2. `Export Public Key` Kliknij przycisk. Należy zauważyć, że eksportowanie parametrów klucza publicznego nie zmienia bieżącego klucza.  
   
-3. Kliknij przycisk `Encrypt File` przycisku i wybierz plik.  
+3. `Encrypt File` Kliknij przycisk i wybierz plik.  
   
-4. Kliknij przycisk `Decrypt File` i wybierz plik, po prostu szyfrowane.  
+4. `Decrypt File` Kliknij przycisk i wybierz plik, który został zaszyfrowany.  
   
-5. Zapoznaj się z plikiem, po prostu odszyfrować.  
+5. Zapoznaj się z odszyfrowaniem pliku.  
   
-6. Zamknij aplikację i uruchom ponownie, aby przetestować pobieranie utrwalonych kontenerów kluczy w kolejnym scenariuszu.  
+6. Zamknij aplikację i uruchom ją ponownie, aby przetestować pobieranie utrwalonych kontenerów kluczy w następnym scenariuszu.  
   
 #### <a name="to-encrypt-using-the-public-key"></a>Aby zaszyfrować przy użyciu klucza publicznego  
   
-1. Kliknij przycisk `Import Public Key` przycisku. Etykieta Wyświetla nazwę klucza i pokazuje, że nie jest publiczny wyłącznie.  
+1. `Import Public Key` Kliknij przycisk. Etykieta Wyświetla nazwę klucza i pokazuje, że jest tylko publiczna.  
   
-2. Kliknij przycisk `Encrypt File` przycisku i wybierz plik.  
+2. `Encrypt File` Kliknij przycisk i wybierz plik.  
   
-3. Kliknij przycisk `Decrypt File` i wybierz plik, po prostu szyfrowane. To zakończy się niepowodzeniem, ponieważ konieczne jest posiadanie klucza prywatnego do odszyfrowania.  
+3. `Decrypt File` Kliknij przycisk i wybierz plik, który został zaszyfrowany. Nie powiedzie się, ponieważ musisz mieć klucz prywatny do odszyfrowania.  
   
- Ten scenariusz pokazuje, posiadające klucza publicznego do szyfrowania plików dla innej osoby. Zazwyczaj tej osobie umożliwiają tylko klucz publiczny i wstrzymania klucza prywatnego do odszyfrowania.  
+ W tym scenariuszu przedstawiono tylko klucz publiczny do szyfrowania pliku dla innej osoby. Zwykle osoba ta może uzyskać tylko klucz publiczny i wstrzymać klucz prywatny do odszyfrowania.  
   
-#### <a name="to-decrypt-using-the-private-key"></a>Aby odszyfrować, używając klucza prywatnego  
+#### <a name="to-decrypt-using-the-private-key"></a>Aby odszyfrować przy użyciu klucza prywatnego  
   
-1. Kliknij przycisk `Get Private Key` przycisku. Etykieta Wyświetla nazwę klucza i pokazuje, czy jest to pary kluczy pełnej.  
+1. `Get Private Key` Kliknij przycisk. Etykieta Wyświetla nazwę klucza i pokazuje, czy jest to pełna para kluczy.  
   
-2. Kliknij przycisk `Decrypt File` i wybierz plik, po prostu szyfrowane. To powiedzie się, ponieważ masz pary pełnej kluczy do odszyfrowania.  
+2. `Decrypt File` Kliknij przycisk i wybierz plik, który został zaszyfrowany. Ta operacja zakończy się pomyślnie, ponieważ masz pełną parę kluczy do odszyfrowania.  
   
 ## <a name="see-also"></a>Zobacz także
 

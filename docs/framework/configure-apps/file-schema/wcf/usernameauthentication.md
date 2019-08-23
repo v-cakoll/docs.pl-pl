@@ -2,20 +2,20 @@
 title: <userNameAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: 5a4cf8d429198b889f2bb362294ba3841c814b26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 399158632d5c17a35ded02691ba35a231e6cdc6e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788703"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940532"
 ---
 # <a name="usernameauthentication"></a>\<userNameAuthentication>
-Określa poświadczenia usługi, w oparciu o nazwę użytkownika i hasło.  
+Określa poświadczenia usługi na podstawie nazwy użytkownika i hasła.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<serviceCredentials>  
 \<userNameAuthentication>  
   
@@ -38,13 +38,13 @@ Określa poświadczenia usługi, w oparciu o nazwę użytkownika i hasło.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`cacheLogonTokenLifetime`|Element <xref:System.TimeSpan> , który określa maksymalną długość czasu, jest buforowany token. Wartość domyślna to 00:15:00.|  
+|`cacheLogonTokenLifetime`|A <xref:System.TimeSpan> , która określa maksymalny czas buforowania tokenu. Wartość domyślna to 00:15:00.|  
 |`cacheLogonTokens`|Wartość logiczna określająca, czy tokeny logowania są buforowane. Wartość domyślna to `false`.|  
-|`customUserNamePasswordValidatorType`|Ciąg, który określa typ modułu weryfikacji hasła niestandardowej nazwy użytkownika do użycia. Wartość domyślna to ciąg pusty.|  
-|`includeWindowsGroups`|Wartość logiczna określająca, czy grupy Windows znajdują się w kontekście zabezpieczeń. Wartość domyślna to `true`.<br /><br /> Ustawienie tego atrybutu na `true` ma wpływ na wydajność, ponieważ powoduje ona wystąpił błąd rozszerzania grupy pełnej. Ustaw tę właściwość na `false` Jeśli potrzebujesz nawiązać listy grup należy użytkownik.|  
-|`maxCacheLogonTokens`|Liczba całkowita określająca maksymalną liczbę tokenów logowania do pamięci podręcznej. Ta wartość powinna być większa niż zero. Wartość domyślna to 128.|  
-|`membershipProviderName`|Gdy `clientCredentialType` ma ustawioną wartość atrybutu powiązania `username`, nazwa użytkownika jest mapowany do konta Windows. Można zastąpić to zachowanie za pomocą tego atrybutu jest ciąg zawierający nazwę <xref:System.Web.Security.MembershipProvider> wartość, która zawiera odpowiednie hasło mechanizmu sprawdzania poprawności.|  
-|`userNamePasswordValidationMode`|Określa sposób, w których nazwy użytkownika hasło jest weryfikowane. Prawidłowe wartości to:<br /><br /> — Windows<br />-MembershipProvider<br />— Niestandardowa<br /><br /> Wartość domyślna to Windows. Ten atrybut jest typu <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>.|  
+|`customUserNamePasswordValidatorType`|Ciąg określający typ niestandardowego modułu weryfikacji hasła użytkownika, który ma być używany. Wartość domyślna to pusty ciąg.|  
+|`includeWindowsGroups`|Wartość logiczna określająca, czy grupy systemu Windows znajdują się w kontekście zabezpieczeń. Wartość domyślna to `true`.<br /><br /> Ustawienie tego atrybutu na `true` ma wpływ na wydajność, ponieważ skutkuje rozwinięciem całej grupy. Ustaw tę właściwość na `false` , jeśli nie ma potrzeby ustanawiania listy grup, do których należy użytkownik.|  
+|`maxCacheLogonTokens`|Liczba całkowita określająca maksymalną liczbę tokenów logowania do buforowania. Ta wartość powinna być większa niż zero. Wartość domyślna to 128.|  
+|`membershipProviderName`|Gdy atrybut powiązania jest ustawiony na `username`, nazwa użytkownika jest mapowana na konta systemu Windows. `clientCredentialType` Można przesłonić to zachowanie przy użyciu tego atrybutu, który jest ciągiem zawierającym nazwę <xref:System.Web.Security.MembershipProvider> wartości, która zapewnia odpowiedni mechanizm walidacji hasła.|  
+|`userNamePasswordValidationMode`|Określa sposób sprawdzania poprawności hasła nazwy użytkownika. Prawidłowe wartości to:<br /><br /> — System Windows<br />- MembershipProvider<br />-Niestandardowe<br /><br /> Wartość domyślna to Windows. Ten atrybut jest typu <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -53,12 +53,12 @@ Określa poświadczenia usługi, w oparciu o nazwę użytkownika i hasło.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Określa poświadczenie do użycia w uwierzytelnianiu usługi i sprawdzanie poprawności poświadczeń klienta powiązane ustawienia.|  
+|[\<serviceCredentials>](servicecredentials.md)|Określa poświadczenie, które ma być używane w uwierzytelnianiu usługi oraz ustawienia powiązane z walidacją poświadczeń klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli żaden z powiązania używane przez usługę jest skonfigurowany do uwierzytelniania opartego na nazwie/hasło użytkownika, atrybuty dla tego elementu są ignorowane. Obejmują one `customUserNamePasswordValidatorType`, `includeWindowsGroups`, `membershipProviderName`, i `userNamePasswordValidationMode`.  
+ Jeśli żaden z powiązań używanych przez usługę nie jest skonfigurowany do uwierzytelniania opartego na nazwie użytkownika/hasła, atrybuty tego elementu są ignorowane. Należą `customUserNamePasswordValidatorType`do nich `includeWindowsGroups`, `membershipProviderName`,, `userNamePasswordValidationMode`i.  
   
- Jeśli żaden z powiązania używane przez usługę jest skonfigurowany do używania uwierzytelniania Windows dla nazwy użytkownika i hasła, ustawienia związane z buforowaniem tokeny logowania są ignorowane. Obejmują one `cacheLogonTokenLifetime`, `cacheLogonTokens`, i `maxCacheLogonTokens`.  
+ Jeśli żaden z powiązań używanych przez usługę nie jest skonfigurowany do korzystania z uwierzytelniania systemu Windows dla nazwy użytkownika/hasła, ustawienia związane z buforowaniem tokenów logowania są ignorowane. Należą do `cacheLogonTokenLifetime`nich, `cacheLogonTokens`i. `maxCacheLogonTokens`  
   
 ## <a name="see-also"></a>Zobacz także
 

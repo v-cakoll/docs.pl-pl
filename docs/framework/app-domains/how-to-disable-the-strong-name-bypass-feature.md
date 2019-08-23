@@ -7,36 +7,36 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20b482ee94446ffa863697d8c25276658a4bb122
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7484e67202c430df6ec2d4bea9cff5a850720ff5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593614"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921560"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Instrukcje: Wyłączanie funkcji pomijania silnej nazwy
-Począwszy od wersji programu .NET Framework 3.5 z dodatkiem Service Pack 1 (SP1), podpisy silnej nazwy nie są weryfikowane, gdy zestaw jest ładowany do pełnego zaufania <xref:System.AppDomain> obiektu, takie jak domyślny <xref:System.AppDomain> dla `MyComputer` strefy. Jest to określane jako silnej nazwy pomijania funkcji. W pełni zaufanym środowisku, zażąda dla <xref:System.Security.Permissions.StrongNameIdentityPermission> zawsze kończą się pomyślnie dla podpisanej zestawów pełnego zaufania, niezależnie od ich podpisu. Jedynym ograniczeniem jest to, że zestaw musi być w pełni zaufany, ponieważ jej strefy jest w pełni zaufany. Ponieważ silnej nazwy nie jest czynnikiem decydującym w tych warunkach, nie ma powodu dla niego ma zostać zweryfikowana. Pomijanie sprawdzania poprawności podpisy silnej nazwy oferuje znaczne ulepszenia wydajności.  
+Począwszy od wersji 3,5 .NET Framework programu Service Pack 1 (SP1), sygnatury silnej nazwy nie są sprawdzane, gdy zestaw jest ładowany do obiektu pełnego <xref:System.AppDomain> zaufania, takiego jak domyślny <xref:System.AppDomain> dla `MyComputer` strefy. Jest to nazywane funkcją pomijania silnej nazwy. W środowisku z pełnym zaufaniem wymagania dotyczące <xref:System.Security.Permissions.StrongNameIdentityPermission> zawsze powiodło się w przypadku podpisanych, pełnego zaufania zestawów niezależnie od ich sygnatury. Jedynym ograniczeniem jest to, że zestaw musi być w pełni zaufany, ponieważ jego strefa jest w pełni zaufana. Ponieważ silna nazwa nie jest czynnikiem decydującym w tych warunkach, nie ma powodów, dla których nie można jej zweryfikować. Pomijanie sprawdzania poprawności sygnatur silnych nazw zapewnia znaczną poprawę wydajności.  
   
- Funkcja pomijania ma zastosowanie do dowolnego złożenia pełnego zaufania, który jest nie podpisywane z opóźnieniem i który jest ładowany do dowolnego pełnego zaufania <xref:System.AppDomain> z katalogu określonego przez jego <xref:System.AppDomainSetup.ApplicationBase%2A> właściwości.  
+ Funkcja Bypass ma zastosowanie do dowolnego zestawu pełnego zaufania, który nie jest podpisany z opóźnieniem i który jest ładowany do dowolnego pełnego zaufania <xref:System.AppDomain> z katalogu określonego przez jego <xref:System.AppDomainSetup.ApplicationBase%2A> właściwość.  
   
- Możesz przesłonić funkcji pomijania dla wszystkich aplikacji na komputerze, ustawiając wartość klucza rejestru. Ustawienie dla pojedynczej aplikacji można zastąpić za pomocą pliku konfiguracji aplikacji. Nie można przywrócić funkcji pomijania dla pojedynczej aplikacji, jeśli została ona wyłączona przy użyciu klucza rejestru.  
+ Można zastąpić funkcję pomijania dla wszystkich aplikacji na komputerze przez ustawienie wartości klucza rejestru. Można zastąpić ustawienie pojedynczej aplikacji przy użyciu pliku konfiguracyjnego aplikacji. Nie można przywrócić funkcji pomijania dla pojedynczej aplikacji, jeśli została ona wyłączona przez klucz rejestru.  
   
- Podczas zastąpienia funkcji pomijania silnej nazwy są weryfikowane tylko pod kątem poprawności; nie jest zaznaczone dla <xref:System.Security.Permissions.StrongNameIdentityPermission>. Jeśli chcesz potwierdzić określonej silnej nazwy, musisz wykonać sprawdzanie oddzielnie.  
+ Gdy zastąpisz funkcję pomijania, silna nazwa jest weryfikowana tylko pod kątem poprawności; nie jest ona sprawdzana dla <xref:System.Security.Permissions.StrongNameIdentityPermission>. Jeśli chcesz potwierdzić konkretną silną nazwę, musisz wykonać to sprawdzenie oddzielnie.  
   
 > [!IMPORTANT]
->  Możliwość wymuszenia Weryfikacja silnej nazwy zależy od klucz rejestru zgodnie z opisem w poniższej procedurze. Jeśli aplikacja jest uruchomiona w ramach konta, które nie ma uprawnień listę kontroli dostępu (ACL) kontroli dostępu, dostęp do tego klucza rejestru, to ustawienie jest nieskuteczne. Upewnij się, że prawa listy ACL są skonfigurowane dla tego klucza, aby mogły zostać odczytane dla wszystkich zestawów.  
+> Możliwość wymuszenia weryfikacji silnej nazwy zależy od klucza rejestru, zgodnie z opisem w poniższej procedurze. Jeśli aplikacja jest uruchomiona w ramach konta, które nie ma uprawnień do uzyskiwania dostępu do tego klucza rejestru na liście kontroli dostępu (ACL), to ustawienie jest nieskuteczne. Musisz się upewnić, że dla tego klucza są skonfigurowane uprawnienia ACL, aby można było je odczytać dla wszystkich zestawów.  
   
-### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>Aby wyłączyć silnej nazwy pomijania funkcji dla wszystkich aplikacji  
+### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>Aby wyłączyć funkcję pomijania silnej nazwy dla wszystkich aplikacji  
   
-- Na komputerach 32-bitowych w rejestrze systemowym utworzyć wpis typu DWORD o wartości 0, o nazwie `AllowStrongNameBypass` w obszarze HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Klucz NETFramework.  
+- Na komputerach 32-bitowych w rejestrze systemowym Utwórz wpis DWORD o wartości 0 o nazwie `AllowStrongNameBypass` HKEY_LOCAL_MACHINE\Software\Microsoft.\\ Klucz NETFramework.  
   
-- Na komputerach 64-bitowych w rejestrze systemowym utworzyć wpis typu DWORD o wartości 0, o nazwie `AllowStrongNameBypass` w obszarze HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework i HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. Klucze NETFramework.  
+- Na komputerach 64-bitowych w rejestrze systemowym Utwórz wpis DWORD o wartości 0 o nazwie `AllowStrongNameBypass` HKEY_LOCAL_MACHINE\Software\Microsoft.\\ NETFramework i HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. Klucze NETFramework.  
   
-### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>Aby wyłączyć silnej nazwy pomijania funkcji dla pojedynczej aplikacji  
+### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>Aby wyłączyć funkcję pomijania silnej nazwy dla pojedynczej aplikacji  
   
 1. Otwórz lub Utwórz plik konfiguracji aplikacji.  
   
-     Aby uzyskać więcej informacji na temat tego pliku, zobacz sekcję pliki konfiguracyjne aplikacji w [konfigurowania aplikacji](../../../docs/framework/configure-apps/index.md).  
+     Aby uzyskać więcej informacji na temat tego pliku, zapoznaj się z sekcją pliki konfiguracyjne aplikacji w artykule [Konfigurowanie aplikacji](../../../docs/framework/configure-apps/index.md).  
   
 2. Dodaj następujący wpis:  
   
@@ -48,10 +48,10 @@ Począwszy od wersji programu .NET Framework 3.5 z dodatkiem Service Pack 1 (SP1
     </configuration>  
     ```  
   
- Można przywrócić funkcji pomijania dla aplikacji, usuwając ustawienie pliku konfiguracji lub przez ustawienie atrybutu na wartość "true".  
+ Można przywrócić funkcję pomijania dla aplikacji przez usunięcie ustawienia pliku konfiguracji lub przez ustawienie atrybutu na wartość "true".  
   
 > [!NOTE]
->  Weryfikacja silnej nazwy włączać i wyłączać dla aplikacji, można włączyć tylko wtedy, gdy funkcja pomijania jest włączona na komputerze. Jeśli funkcja pomijania zostało wyłączone dla komputera, silne nazwy są Walidowane dla wszystkich aplikacji i nie można pominąć sprawdzanie poprawności dla pojedynczej aplikacji.  
+> Można włączać i wyłączać sprawdzanie silnej nazwy dla aplikacji tylko wtedy, gdy Funkcja pomijania jest włączona dla komputera. Jeśli funkcja pomijania została wyłączona dla komputera, silne nazwy są weryfikowane dla wszystkich aplikacji i nie można pominąć walidacji dla pojedynczej aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
 

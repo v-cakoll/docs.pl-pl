@@ -2,16 +2,16 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 60ce3cdfd7c78d152c71cdd652532cc96a6be296
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b6f26c7b9e9d02b3ff20b53f42b09d671699ea5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673189"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919390"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
-Zapewnia użytkownikowi pełną kontrolę nad stosem obsługi wiadomości.
+Zapewnia pełną kontrolę nad stosem obsługi komunikatów dla użytkownika.
 
 \<system.serviceModel>\
 \<powiązania > \
@@ -174,43 +174,43 @@ Zapewnia użytkownikowi pełną kontrolę nad stosem obsługi wiadomości.
 
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy
 
-W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne
+W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.
 
 ### <a name="attributes"></a>Atrybuty
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|closeTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na zakończenie operacji zamknięcia. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|
-|nazwa|Ciąg, który zawiera nazwę konfiguracji powiązania. Ta wartość jest ciągu zdefiniowany przez użytkownika, który działa jako ciąg identyfikacyjny dla niestandardowego powiązania. Począwszy od [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], powiązania i zachowania nie muszą mieć nazwę. Aby uzyskać więcej informacji o domyślnej konfiguracji i powiązania pustego oraz zachowań, zobacz [uproszczona konfiguracja](../../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|
-|openTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na zakończenie operacji Otwórz. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|
-|receiveTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na ukończenie operacji odbierania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|
-|sendTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na ukończenie operacji wysyłania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|
+|closeTimeout|<xref:System.TimeSpan> Wartość określająca interwał czasu podanego do ukończenia operacji zamknięcia. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|
+|nazwa|Ciąg zawierający nazwę konfiguracji powiązania. Ta wartość jest ciągiem zdefiniowanym przez użytkownika, który działa jako ciąg identyfikacyjny dla niestandardowego powiązania. Począwszy od [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], powiązania i zachowania nie muszą mieć nazwy. Aby uzyskać więcej informacji na temat konfiguracji domyślnej i powiązań pustego i zachowań, zobacz [Uproszczona konfiguracja](../../../wcf/simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|
+|openTimeout|<xref:System.TimeSpan> Wartość, która określa przedział czasu podanego na zakończenie operacji otwarcia. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|
+|receiveTimeout|<xref:System.TimeSpan> Wartość określająca interwał czasu podanego do ukończenia operacji odbioru. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|
+|sendTimeout|<xref:System.TimeSpan> Wartość określająca interwał czasu podanego do ukończenia operacji wysyłania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
 |Element|Opis|
 |-------------|-----------------|
-|[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Określa dwukierunkowej wiadomości do niestandardowego powiązania. Jest używany przy użyciu transportu, które nie zezwalają na komunikację dwukierunkowego natywnie, na przykład HTTP. TCP, z drugiej strony, natywnie umożliwia dwukierunkowe komunikacji i nie wymaga użycia tego elementu powiązania usługi można wysłać wiadomości zwrotnie do klienta.<br /><br /> Klient musi ujawniać adres korespondencyjny upewnić się, skontaktuj się z pomocą i nawiązania połączenia. Ten adres klienta są dostarczane przez `ClientBaseAddress` atrybutu.<br /><br /> Ten element jest typu <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
-|[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Określa nazwę elementu równorzędnego protokołu Instrumentacji zarządzania Windows (PNRP, Peer Name Resolution Protocol) program rozpoznawania nazw. Ten element jest typu <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
-|[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|Określa ustawienie dla WS-Reliable Messaging. Gdy ten element jest dodawany do niestandardowego powiązania, dokładnie obsługuje wynikowy kanału — gdy gwarancje dostarczenia. Ten element jest typu <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Określa opcje zabezpieczeń niestandardowego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.SecurityElement>.|
-|[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|Określa ustawienia zabezpieczeń dla powiązania strumienia SSL. Ten element jest typu <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
-|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Określa, że powiązanie obsługuje przepływu transakcji i protokół, który będzie używany przez `transactionProtocol` atrybutu. Ten element jest typu <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
-|[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Określa opcje do przesyłania strumieniowego zabezpieczeń niestandardowego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|
+|[\<compositeDuplex>](compositeduplex.md)|Określa komunikat dwukierunkowy dla niestandardowego powiązania. Jest on używany z transportami, które nie zezwalają na natywną komunikację bezstronną, na przykład HTTP. Protokół TCP, w przeciwieństwie, umożliwia natywną komunikację bezstronną i nie wymaga użycia tego elementu powiązania dla usługi do wysyłania komunikatów z powrotem do klienta.<br /><br /> Klient musi uwidocznić adres usługi, aby nawiązać kontakt i nawiązać połączenie. Ten adres klienta jest dostarczany przez `ClientBaseAddress` atrybut.<br /><br /> Ten element jest typu <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
+|[\<pnrpPeerResolver>](pnrppeerresolver.md)|Określa program rozpoznawania nazw elementów równorzędnych protokołu PNRP (Peer Name Resolution Protocol). Ten element jest typu <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
+|[\<reliableSession>](reliablesession.md)|Określa ustawienie dla obsługi komunikatów w usłudze WS-niezawodny. Gdy ten element zostanie dodany do niestandardowego powiązania, otrzymany kanał może obsługiwać tylko jednokrotne gwarancje dostarczania. Ten element jest typu <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
+|[\<> zabezpieczeń](security-of-custombinding.md)|Określa opcje zabezpieczeń niestandardowego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.SecurityElement>.|
+|[\<sslStreamSecurity>](sslstreamsecurity.md)|Określa ustawienia zabezpieczeń dla powiązania strumienia SSL. Ten element jest typu <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
+|[\<transactionFlow >](transactionflow.md)|Określa, że powiązanie obsługuje przepływ transakcji, oraz protokołu, który ma być używany przez `transactionProtocol` atrybut. Ten element jest typu <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
+|[\<windowsStreamSecurity>](windowsstreamsecurity.md)|Określa opcje zabezpieczeń przesyłania strumieniowego dla niestandardowego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|
 
 ### <a name="parent-elements"></a>Elementy nadrzędne
 
 |Element|Opis|
 |-------------|-----------------|
-|powiązania|Zawiera wszystkie powiązania dla aplikacji Windows Communication Foundation.|
+|powiązania|Zawiera wszystkie powiązania dla Windows Communication Foundation aplikacji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Powiązania niestandardowe zapewniają pełną kontrolę nad stosem obsługi wiadomości usługi WCF. Moje Dodawanie elementów konfiguracji dla konkretnych jednostek można tworzyć specjalne powiązania dostosowanych do potrzeb. Na przykład użytkownik może łączyć `httpsTransport` sekcji `reliableSession` sekcji i `security` sekcję, aby utworzyć niezawodną i bezpieczną protokołu https na podstawie powiązania.
+Niestandardowe powiązania zapewniają pełną kontrolę nad stosem obsługi komunikatów WCF. Można utworzyć specjalne powiązania dostosowane, dodając elementy konfiguracji dla określonych jednostek. Na przykład użytkownik może połączyć `httpsTransport` sekcję, sekcję i `security` sekcję `reliableSession` , aby utworzyć niezawodne i bezpieczne powiązanie https.
 
-Powiązanie poszczególnych definiuje stosu wiadomości, określając elementów konfiguracji dla elementów stosu w kolejności, w jakiej znajdują się na stosie. Każdy element definiuje i konfiguruje jeden element stosu. W każdym niestandardowego powiązania musi istnieć jeden i tylko jeden element transportu. Bez tego elementu stosem obsługi wiadomości jest niekompletna.
+Pojedyncze powiązanie definiuje stos komunikatów przez określenie elementów konfiguracji dla elementów stosu w kolejności, w jakiej występują na stosie. Każdy element definiuje i konfiguruje jeden element stosu. W każdym powiązaniu niestandardowym musi istnieć jeden i tylko jeden element transportu. Bez tego elementu stos komunikatów jest niekompletny.
 
-Kolejność wyświetlania elementów w stosie ma znaczenie, ponieważ jest on kolejność, w której operacje są stosowane do wiadomości. Zalecana kolejność elementów stosu jest następująca:
+Kolejność, w której elementy pojawiają się w kwestiach stosu, ponieważ jest to kolejność, w której operacje są stosowane do wiadomości. Zalecana kolejność elementów stosu jest następująca:
 
 1. Transakcje (opcjonalnie)
 
@@ -218,19 +218,19 @@ Kolejność wyświetlania elementów w stosie ma znaczenie, ponieważ jest on ko
 
 3. Zabezpieczenia (opcjonalnie)
 
-4. Transport
+4. Transportu
 
 5. Koder (opcjonalnie)
 
-Użyj niestandardowego powiązania, gdy jedno z powiązań dostarczanych przez system nie spełnia wymagania dotyczące usługi. Powiązanie niestandardowe może służyć, na przykład, aby umożliwić użycie nowego transportu lub Nowa usługa encoder w punkcie końcowym usługi.
+Użyj niestandardowego powiązania, gdy jedno z powiązań dostarczonych przez system nie spełnia wymagań usługi. Można na przykład użyć niestandardowego powiązania, aby umożliwić korzystanie z nowego lub nowego kodera w punkcie końcowym usługi.
 
-Powiązanie niestandardowe jest konstruowany przy użyciu jednej z <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> z kolekcji elementów, które są "skumulowany" w określonej kolejności wiązania:
+Niestandardowe powiązanie jest konstruowane przy użyciu jednej z <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> kolekcji elementów powiązania, które są "ułożone" w określonej kolejności:
 
-- U góry to opcjonalna <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> umożliwiająca przepływu transakcji.
+- U góry jest opcjonalne <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> , które umożliwia przepływ transakcji.
 
-- Następnie to opcjonalna <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> zapewniający sesji i kolejność mechanizmu, zgodnie z definicją w specyfikacji WS-ReliableMessaging. Pojęcie to sesji mogą przechodzić pośredników SOAP i mechanizm transportu.
+- Następnie jest opcjonalne <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> , które udostępnia mechanizm sesji i kolejności, zgodnie z definicją w specyfikacji WS-ReliableMessaging. To pojęcie sesji może przekroczyć pośredniki SOAP i transportu.
 
-- Następnym ekranem jest elementu powiązania zabezpieczeń opcjonalne, która zapewnia funkcje zabezpieczeń, takich jak autoryzacja, uwierzytelnianie, ochrony i poufności. Następujące elementy powiązania zabezpieczeń są dostarczane przez Windows Communication Foundation (WCF):
+- Dalej jest opcjonalny element powiązania zabezpieczeń, który zapewnia funkcje zabezpieczeń, takie jak autoryzacja, uwierzytelnianie, ochrona i poufność. Następujące elementy powiązań zabezpieczeń są udostępniane przez Windows Communication Foundation (WCF):
 
   - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 
@@ -240,11 +240,11 @@ Powiązanie niestandardowe jest konstruowany przy użyciu jednej z <xref:System.
 
   - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 
-- Następnie opcjonalne wzorce wiadomości są określone przez powiązanie elementów:
+- Następnie są opcjonalne wzorce komunikatów określone przez elementy powiązania:
 
 - <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>
 
-- Następnie są uaktualnienia opcjonalne transportu/pomocników elementy powiązania:
+- Poniżej przedstawiono opcjonalne elementy powiązania uaktualnienia/pomocnika transportu:
 
   - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
 
@@ -252,7 +252,7 @@ Powiązanie niestandardowe jest konstruowany przy użyciu jednej z <xref:System.
 
   - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
 
-- Następnym ekranem jest element powiązania z kodowania komunikatu wymagane. Możesz użyć własnego transportu lub użyj jednej z następującym komunikatem kodowanie powiązań:
+- Następnie jest wymagany element powiązania kodowania komunikatów. Możesz użyć własnego transportu lub użyć jednego z następujących powiązań kodowania komunikatów:
 
   - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 
@@ -260,7 +260,7 @@ Powiązanie niestandardowe jest konstruowany przy użyciu jednej z <xref:System.
 
   - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
-- W dolnej części jest element wymagany transportu. Można używać własnego transportu lub użyj jednego z dostarczonych przez Windows Communication Foundation (WCF) elementów powiązania transportu:
+- U dołu jest wymagany element transportu. Możesz użyć własnego transportu lub użyć jednego z elementów powiązania transportowego dostarczonych przez Windows Communication Foundation (WCF):
 
   - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
@@ -276,21 +276,21 @@ Powiązanie niestandardowe jest konstruowany przy użyciu jednej z <xref:System.
 
   - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
 
-Poniższa tabela podsumowuje opcje dla każdej warstwy.
+Poniższa tabela zawiera podsumowanie opcji dla każdej warstwy.
 
 |Warstwa|Opcje|Wymagane|
 |-----------|-------------|--------------|
 |Przepływ transakcji|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Nie|
 |Niezawodność|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Nie|
-|Zabezpieczenia|Symetryczne, asymetryczne i Transport niskiego poziomu|Nie|
+|Zabezpieczenia|Symetryczne, asymetryczne, na poziomie transportu|Nie|
 |Zmiana kształtu|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|Nie|
-|Transport uaktualnień|Strumień protokołu SSL, strumienia Windows elementu równorzędnego programu rozpoznawania nazw|Nie|
-|Kodowanie|Tekst, Binary MTOM, niestandardowe|Tak|
-|Transport|Odmian HTTP, HTTPS, TCP i nazwane potoki usługi MSMQ, niestandardowe|Tak|
+|Uaktualnienia transportu|Strumień SSL, strumień systemu Windows, program rozpoznawania elementów równorzędnych|Nie|
+|Kodowanie|Tekst, dane binarne, MTOM, niestandardowe|Tak|
+|Transportu|TCP, nazwane potoki, HTTP, HTTPS, typy usługi MSMQ, niestandardowe|Tak|
 
-Ponadto można zdefiniować własne elementy powiązania i wstawione między dowolnymi poprzedniej warstwy zdefiniowanej przez użytkownika.
+Ponadto można definiować własne elementy powiązania i wstawiać je między wszystkimi wcześniej zdefiniowanymi warstwami.
 
-Aby uzyskać informacje dotyczące sposobu używania niestandardowego powiązania, aby zmodyfikować powiązania dostarczane przez system, zobacz [jak: Dostosuj powiązania dostarczane przez System](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).
+Aby uzyskać informacje na temat sposobu użycia niestandardowego powiązania do modyfikacji powiązania dostarczonego przez system, zobacz [How to: Dostosuj powiązanie](../../../wcf/extending/how-to-customize-a-system-provided-binding.md)dostarczone przez system.
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -298,11 +298,11 @@ Aby uzyskać informacje dotyczące sposobu używania niestandardowego powiązani
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.Configuration.BindingsSection>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [customBinding — Element](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<> powiązania](../../../misc/binding.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
+- [CustomBinding — element](custombinding.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)

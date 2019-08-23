@@ -8,75 +8,75 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 617f1da8f9b5b26ddfb2910ac0c06a6898d8ab6e
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: d3d1658b47d2cda344e2ec1fe7b48c929005563b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170928"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912047"
 ---
-# <a name="xslt-stylesheet-scripting-using-msxslscript"></a>XSLT skryptów przy użyciu arkusza stylów \<msxsl: script >
-<xref:System.Xml.Xsl.XslTransform> Klasa obsługuje osadzonych skryptów przy użyciu `script` elementu.  
+# <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Obsługa skryptów arkusza stylów \<XSLT przy użyciu msxsl: > skryptu
+Klasa obsługuje osadzone skrypty `script` przy użyciu elementu. <xref:System.Xml.Xsl.XslTransform>  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w programie .NET Framework 2.0. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
+> <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w .NET Framework 2,0. Można wykonać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- <xref:System.Xml.Xsl.XslTransform> Klasa obsługuje osadzonych skryptów przy użyciu `script` elementu. Po załadowaniu arkusza stylów, wszystkie funkcje zdefiniowane są kompilowane do języka Microsoft intermediate language (MSIL), są opakowane w definicji klasy i w wyniku mają bez utraty wydajności.  
+ Klasa obsługuje osadzone skrypty `script` przy użyciu elementu. <xref:System.Xml.Xsl.XslTransform> Po załadowaniu arkusza stylów wszystkie zdefiniowane funkcje są kompilowane do języka pośredniego firmy Microsoft (MSIL) przez zawinięte w definicji klasy i nie mają utraty wydajności w wyniku.  
   
- `<msxsl:script>` Jest zdefiniowany element poniżej:  
+ `<msxsl:script>` Element jest zdefiniowany poniżej:  
   
 ```xml  
 <msxsl:script language = "language-name" implements-prefix = "prefix of user namespace"> </msxsl:script>  
 ```  
   
- gdzie `msxsl` jest prefiks, który jest powiązany z przestrzeni nazw `urn:schemas-microsoft-com:xslt`.  
+ gdzie `msxsl` jest prefiksem powiązanym z `urn:schemas-microsoft-com:xslt`przestrzenią nazw.  
   
- `language` Atrybut nie jest wymagany, ale jeśli zostanie określony, jego wartość musi być jedną z następujących czynności: C#, VB, JScript, JavaScript, VisualBasic, or CSharp. Jeśli nie zostanie określona, język domyślnie JScript. `language-name` Nie jest rozróżniana wielkość liter, więc "JavaScript" i "javascript" są równoważne.  
+ `language` Atrybut nie jest obowiązkowy, ale jeśli jest określony, jego wartość musi być jedną z następujących: C#, VB, JScript, JavaScript, VisualBasic lub CSharp. Jeśli nie zostanie określony, język jest wartością domyślną języka JScript. Nie `language-name` jest rozróżniana wielkość liter, dlatego "JavaScript" i "JavaScript" są równoważne.  
   
- `implements-prefix` Atrybut jest wymagany. Ten atrybut służy do deklarację przestrzeni nazw i skojarzyć go z bloku skryptu. Wartość tego atrybutu jest prefiks, który reprezentuje obszar nazw. Ta przestrzeń nazw można zdefiniować gdzieś w arkuszu stylów.  
+ Ten `implements-prefix` atrybut jest obowiązkowy. Ten atrybut służy do deklarowania przestrzeni nazw i kojarzenia jej z blokiem skryptu. Wartość tego atrybutu jest prefiks, który reprezentuje obszar nazw. Ta przestrzeń nazw może być zdefiniowana gdzieś w arkuszu stylów.  
   
- Ponieważ `msxsl:script` element należy do przestrzeni nazw `urn:schemas-microsoft-com:xslt`, arkusz stylów może zawierać deklaracji przestrzeni nazw `xmlns:msxsl=urn:schemas-microsoft-com:xslt`.  
+ Ponieważ element należy do przestrzeni nazw `urn:schemas-microsoft-com:xslt`, arkusz stylów musi zawierać deklarację `xmlns:msxsl=urn:schemas-microsoft-com:xslt`przestrzeni nazw. `msxsl:script`  
   
- Jeśli obiekt wywołujący skryptu nie ma <xref:System.Security.Permissions.SecurityPermissionFlag> uprawnienie, dostępu, a następnie skrypt w arkuszu stylów nigdy nie zostanie skompilowany i wywołania <xref:System.Xml.Xsl.XslTransform.Load%2A> zakończy się niepowodzeniem.  
+ Jeśli obiekt wywołujący skrypt nie ma <xref:System.Security.Permissions.SecurityPermissionFlag> uprawnień dostępu, wówczas skrypt w arkuszu stylów nigdy nie zostanie skompilowany i wywołanie do <xref:System.Xml.Xsl.XslTransform.Load%2A> nie powiedzie się.  
   
- Jeśli obiekt wywołujący ma `UnmanagedCode` kompiluje skrypt uprawnienia, ale operacje, które są dozwolone są zależne od dowodów, która jest dostarczana w czasie ładowania.  
+ Jeśli obiekt wywołujący `UnmanagedCode` ma uprawnienie, skrypt kompiluje, ale dozwolone operacje są zależne od dowodów dostarczonych w czasie ładowania.  
   
- Jeśli używasz jednego z <xref:System.Xml.Xsl.XslTransform.Load%2A> metod, które przyjmują <xref:System.Xml.XmlReader> lub <xref:System.Xml.XPath.XPathNavigator> można załadować arkusza stylów, należy użyć <xref:System.Xml.Xsl.XslTransform.Load%2A> przeciążenia przyjmującego <xref:System.Security.Policy.Evidence> parametru jako jeden z argumentów. Aby przedstawić dowód na to, wywołujący musi mieć <xref:System.Security.Permissions.SecurityPermissionFlag> uprawnień, aby dostarczyć `Evidence` dla zestawu skryptów. Jeśli obiekt wywołujący nie ma tego uprawnienia, a następnie mogą oni ustawić `Evidence` parametr `null`. Powoduje to, że <xref:System.Xml.Xsl.XslTransform.Load%2A> funkcję, aby zakończyć się niepowodzeniem, jeśli znajdzie skryptu. `ControlEvidence` Uprawnienie jest uznawany za bardzo zaawansowane uprawnienia, które powinny być przyznawane tylko do wysoce zaufanym kodem.  
+ Jeśli używasz <xref:System.Xml.Xsl.XslTransform.Load%2A> jednej z metod, które <xref:System.Xml.XmlReader> pobierają lub <xref:System.Xml.XPath.XPathNavigator> ładują arkusz <xref:System.Xml.Xsl.XslTransform.Load%2A> stylów, <xref:System.Security.Policy.Evidence> musisz użyć przeciążenia, które przyjmuje parametr jako jeden z argumentów. Aby zapewnić dowód, obiekt wywołujący musi <xref:System.Security.Permissions.SecurityPermissionFlag> mieć uprawnienia do `Evidence` dostawy zestawu skryptu. Jeśli obiekt wywołujący nie ma tego uprawnienia, można ustawić `Evidence` parametr na. `null` Powoduje to, <xref:System.Xml.Xsl.XslTransform.Load%2A> że funkcja kończy się niepowodzeniem, jeśli znajdzie skrypt. `ControlEvidence` Uprawnienie jest uznawane za bardzo zaawansowane uprawnienia, które powinny być przyznawane tylko do wysoce zaufanego kodu.  
   
- Aby uzyskać dowód z zestawu, należy użyć `this.GetType().Assembly.Evidence`. Aby uzyskać dowód z jednolite zasobów identyfikator (URI), użyj `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
+ Aby uzyskać dowody z Twojego zestawu, użyj `this.GetType().Assembly.Evidence`. Aby uzyskać dowód z Uniform Resource Identifier (URI), użyj `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Jeśli używasz <xref:System.Xml.Xsl.XslTransform.Load%2A> metod, które przyjmują <xref:System.Xml.XmlResolver> , ale nie `Evidence`, wartością domyślną pełnego zaufania strefie zabezpieczeń dla zestawu. Aby uzyskać więcej informacji, zobacz <xref:System.Security.SecurityZone> i [nazwanych zestawów uprawnień](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
+ W przypadku korzystania <xref:System.Xml.Xsl.XslTransform.Load%2A> z metod, które <xref:System.Xml.XmlResolver> pobierają `Evidence`, ale nie, Strefa zabezpieczeń dla zestawu domyślnie ma wartość pełne zaufanie. Aby uzyskać więcej informacji, <xref:System.Security.SecurityZone> Zobacz i [nazwane zestawy uprawnień](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
- Funkcje mogą być zadeklarowane w obrębie `msxsl:script` elementu. W poniższej tabeli przedstawiono przestrzenie nazw, które są obsługiwane przez domyślny. Można użyć klas spoza listy obszarów nazw. Jednak te klasy musi być w pełni kwalifikowana.  
+ Funkcje mogą być deklarowane w `msxsl:script` obrębie elementu. W poniższej tabeli przedstawiono przestrzenie nazw, które są obsługiwane domyślnie. Można używać klas poza wymienionymi obszarami nazw. Jednak te klasy muszą być w pełni kwalifikowane.  
   
-|Domyślne obszary nazw|Opis|  
+|Domyślne przestrzenie nazw|Opis|  
 |------------------------|-----------------|  
-|System|Klasa systemu.|  
+|System|Klasy systemowej.|  
 |System.Collection|Klasy kolekcji.|  
-|System.Text|Klasy tekstu.|  
+|System.Text|Klasy tekstowe.|  
 |System.Text.RegularExpressions|Klasy wyrażeń regularnych.|  
 |System.Xml|Podstawowe klasy XML.|  
 |System.Xml.Xsl|Klasy XSLT.|  
-|System.Xml.XPath|Klasy XML Path Language (XPath).|  
-|Microsoft.VisualBasic|Klasy dla skryptów programu Microsoft Visual Basic.|  
+|System.Xml.XPath|Klasy języka XML Path Language (XPath).|  
+|Microsoft.VisualBasic|Klasy dla skryptów Visual Basic firmy Microsoft.|  
   
- Gdy funkcja jest zadeklarowana, znajduje się w bloku skryptu. Arkusze stylów może zawierać wiele Bloki skryptu, każdy niezależnego innych. Oznacza to, że jeśli wykonujesz wewnątrz bloku skryptu, nie można wywołać funkcję zdefiniowaną w innego bloku skryptu, o ile nie jest zadeklarowany ma ten sam język skryptów i tej samej przestrzeni nazw. Ponieważ każdy blok skryptu może znajdować się w jego własnej języka i bloku jest analizowany zgodnie z regułami gramatyki tego analizatora języka, należy użyć składni poprawne dla języka w użyciu. Na przykład, jeśli jesteś w bloku skryptu C#, wówczas jest błąd za pomocą węzła komentarz XML `<!-- an XML comment -->` w bloku.  
+ Gdy funkcja jest zadeklarowana, jest zawarta w bloku skryptu. Arkusze stylów mogą zawierać wiele bloków skryptu, z których każda działa niezależnie od siebie. Oznacza to, że jeśli wykonujesz wewnątrz bloku skryptu, nie można wywołać funkcji, która została zdefiniowana w innym bloku skryptu, chyba że jest zadeklarowana jako ma tę samą przestrzeń nazw i ten sam język skryptowy. Ponieważ każdy blok skryptu może znajdować się w własnym języku, a blok jest analizowany zgodnie z regułami gramatyki tego parsera języka, należy użyć poprawnej składni dla używanego języka. Na przykład, jeśli jesteś w bloku C# skryptu, jest to błąd, aby użyć węzła `<!-- an XML comment -->` komentarza XML w bloku.  
   
- Podanych argumentów i wartości zwracane definicją funkcji skryptu musi być jednym z typów XPath World Wide Web Consortium (W3C) lub XSLT. W poniższej tabeli przedstawiono odpowiednie typy W3C równoważne .NET Framework klas (typ) i czy W3C, wpisz to wyrażenie XPath typu lub XSLT.  
+ Podane argumenty i zwracane wartości zdefiniowane przez funkcje skryptów muszą być jednym z typów XPath lub XSLT organizacja World Wide Web Consortium (W3C). W poniższej tabeli przedstawiono odpowiednie typy W3C, równoważne klasy .NET Framework (typ) i określające, czy typ W3C jest typem XPath czy XSLT.  
   
-|Typ|Równoważne .NET Framework klasy (typ)|Wyrażenie XPath typu lub XSLT|  
+|Typ|Równoważna Klasa .NET Framework (typ)|Typ XPath lub typ XSLT|  
 |----------|----------------------------------------------|-----------------------------|  
 |String|System.String|XPath|  
 |Boolean|System.Boolean|XPath|  
 |Wartość liczbowa|System.Double|XPath|  
-|Wynikowego fragmentu drzewa|System.Xml.XPath.XPathNavigator|XSLT|  
+|Fragment drzewa wyników|System.Xml.XPath.XPathNavigator|XSLT|  
 |Zestaw węzłów|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Jeśli funkcja skryptu korzysta z jednego z następujących typów liczbowych: Int16, UInt16, Int32, UInt32, Int64, UInt64, jednego lub dziesiętnej, jest zmuszony do dwukrotnie, która mapuje do typu number W3C XPath. Wszystkie pozostałe typy będą obowiązkowo przenoszone na ciąg przez wywołanie metody `ToString` metody.  
+ Jeśli funkcja skryptu używa jednego z następujących typów liczbowych: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single lub decimal, są one wymuszane jako podwójne, które mapują do typu W3C XPath. Wszystkie inne typy są wymuszane jako ciąg przez wywołanie `ToString` metody.  
   
- Jeśli funkcja skryptu korzysta z typu innego niż wymienione powyżej lub jeśli funkcja nie kompiluje się kiedy arkusza stylów jest ładowany do <xref:System.Xml.Xsl.XslTransform> obiektu, jest zgłaszany wyjątek.  
+ Jeśli funkcja skryptu używa typu innego niż wymienione powyżej, lub jeśli funkcja nie kompiluje się, gdy arkusz stylów jest ładowany do <xref:System.Xml.Xsl.XslTransform> obiektu, zgłaszany jest wyjątek.  
   
- Korzystając z `msxsl:script` elementu, zdecydowanie zaleca się że skryptu, niezależnie od języka, można umieścić w sekcji CDATA. Na przykład następujący kody XML pokazuje szablonu sekcji CDATA, w którym znajduje się kod.  
+ W przypadku korzystania `msxsl:script` z elementu zdecydowanie zaleca się, aby skrypt niezależnie od języka został umieszczony wewnątrz sekcji CDATA. Na przykład, poniższy kod XML pokazuje szablon sekcji CDATA, w której umieszczony jest swój plik.  
   
 ```xml  
 <msxsl:script implements-prefix='yourprefix' language='CSharp'>  
@@ -86,7 +86,7 @@ ms.locfileid: "67170928"
 </msxsl:script>  
 ```  
   
- Wysoce zalecane jest aby cała zawartość skryptu były umieszczane w sekcji CDATA, ponieważ operatory, identyfikatory lub ograniczniki dla danego języka ma potencjał jest błędnie zinterpretowana jako XML. Poniższy przykład pokazuje użycie operatora logicznego AND w skrypcie.  
+ Zdecydowanie zaleca się, aby cała zawartość skryptu była umieszczana w sekcji CDATA, ponieważ operatory, identyfikatory lub ograniczniki danego języka mają potencjalną interpretację jako XML. W poniższym przykładzie pokazano użycie operatora logicznego AND w skrypcie.  
   
 ```xml  
 <msxsl:script implements-prefix='yourprefix' language='CSharp'>  
@@ -98,10 +98,10 @@ ms.locfileid: "67170928"
 </msxsl:script>  
 ```  
   
- Zgłasza wyjątek, ponieważ takie znaki nie będą miały zmienione znaczenie. Dokument jest ładowany w formacie XML, a nie szczególne traktowanie jest stosowany do tekstu między `msxsl:script` tagi elementów.  
+ Zgłasza wyjątek, ponieważ znaki handlowe nie są wyprowadzane. Dokument jest ładowany jako XML i nie jest stosowane żadne specjalne traktowanie do tekstu między `msxsl:script` tagami elementów.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto osadzonych skryptów do obliczania obwód koła, biorąc pod uwagę jego usługi radius.  
+ W poniższym przykładzie zastosowano osadzony skrypt do obliczenia obwodu okręgu, który ma swój promień.  
   
 ```vb  
 Imports System  

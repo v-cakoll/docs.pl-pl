@@ -10,27 +10,27 @@ helpviewer_keywords:
 - documents [WPF], manipulating row groups through RowGroups property
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
-ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 195920af64888bd3671b45befc0fe4cde463ae7b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768475"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913558"
 ---
 # <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>Instrukcje: Zarządzanie grupami wierszy tabeli za pomocą właściwości RowGroups
-W tym przykładzie przedstawiono niektóre typowe operacje, które mogą być wykonywane na grupami wierszy tabeli za <xref:System.Windows.Documents.Table.RowGroups%2A> właściwości.  
+W tym przykładzie przedstawiono niektóre z bardziej typowych operacji, które mogą być wykonywane w grupach wierszy tabeli za pomocą <xref:System.Windows.Documents.Table.RowGroups%2A> właściwości.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy nową tabelę, a następnie używa <xref:System.Windows.Documents.TableRowGroupCollection.Add%2A> metodę, aby dodać kolumny w tabeli <xref:System.Windows.Documents.Table.RowGroups%2A> kolekcji.  
+ Poniższy przykład tworzy nową tabelę, a następnie używa <xref:System.Windows.Documents.TableRowGroupCollection.Add%2A> metody do dodawania kolumn do <xref:System.Windows.Documents.Table.RowGroups%2A> kolekcji tabeli.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Add](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_add)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Add](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_add)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład Wstawia nowy <xref:System.Windows.Documents.TableRowGroup>.  Nowa kolumna zostanie wstawiony na pozycji indeksu 0, dzięki czemu nowe pierwszy wiersz w tabeli.  
+ Poniższy przykład wstawia nowy <xref:System.Windows.Documents.TableRowGroup>.  Nowa kolumna zostanie wstawiona przy pozycji indeksu 0, co oznacza, że jest to nowa pierwsza grupa wierszy w tabeli.  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.TableRowGroupCollection> Kolekcja używa standardowych indeksowania zaczynającego się od zera.  
+> <xref:System.Windows.Documents.TableRowGroupCollection> Kolekcja używa standardowego indeksowania opartego na zero.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Insert](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_insert)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Insert](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_insert)]  
@@ -42,49 +42,49 @@ W tym przykładzie przedstawiono niektóre typowe operacje, które mogą być wy
  [!code-vb[TableSnippets2#_Table_RowGroups_AddRows](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_addrows)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład uzyskuje dostęp do niektórych właściwości dowolnych wierszy w pierwszej grupy wierszy w tabeli.  
+ Poniższy przykład uzyskuje dostęp do niektórych arbitralnych właściwości wierszy w pierwszej grupie wierszy w tabeli.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_ManipRows](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_maniprows)]
  [!code-vb[TableSnippets2#_Table_RowGroups_ManipRows](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_maniprows)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład dodaje wielu komórek do określonego <xref:System.Windows.Documents.TableRow> (określony przez indeks) w tabeli.  
+ Poniższy przykład dodaje kilka komórek do określonego <xref:System.Windows.Documents.TableRow> (określony przez indeks) w tabeli.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_AddCells](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_addcells)]
  [!code-vb[TableSnippets2#_Table_RowGroups_AddCells](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_addcells)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład dostęp do niektórych dowolnych metod i właściwości na komórki z pierwszego wiersza w pierwszej grupie wierszy.  
+ W poniższym przykładzie są dostępne dowolne metody i właściwości w komórkach pierwszego wiersza w pierwszej grupie wierszy.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_ManipCells](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_manipcells)]
  [!code-vb[TableSnippets2#_Table_RowGroups_ManipCells](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_manipcells)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zwraca liczbę <xref:System.Windows.Documents.TableRowGroup> elementy pracujących w tabeli.  
+ Poniższy przykład zwraca liczbę <xref:System.Windows.Documents.TableRowGroup> elementów hostowanych przez tabelę.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Count](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_count)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Count](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_count)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład usuwa grupę określonego wiersza przez odwołanie.  
+ Poniższy przykład usuwa konkretną grupę wierszy według odwołania.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_DelRef](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_delref)]
  [!code-vb[TableSnippets2#_Table_RowGroups_DelRef](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_delref)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład usuwa grupę określonego wiersza za pomocą indeksu.  
+ Poniższy przykład usuwa konkretną grupę wierszy według indeksu.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_DelIndex](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_delindex)]
  [!code-vb[TableSnippets2#_Table_RowGroups_DelIndex](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_delindex)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład usuwa wszystkich grup wierszy z kolekcji grup wierszy tabeli.  
+ Poniższy przykład usuwa wszystkie grupy wierszy z kolekcji grupy wierszy w tabeli.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Clear](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_clear)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Clear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_clear)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Zarządzaj przepływem elementów zawartości za pomocą właściwości Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [Instrukcje: Manipulowanie przepływem elementów zawartości za pomocą właściwości Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
 - [Zarządzanie parametrem FlowDocument przez właściwość Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Zarządzanie kolumnami tabeli za pomocą właściwości Columns](how-to-manipulate-table-columns-through-the-columns-property.md)

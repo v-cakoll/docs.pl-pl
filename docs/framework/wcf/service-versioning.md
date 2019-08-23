@@ -2,135 +2,135 @@
 title: Przechowywanie wersji usługi
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 6b72558be4a367505ff18f10406785bc21fddd2c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3cb01531c594df5262963567438b47cbbed58a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606002"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923016"
 ---
 # <a name="service-versioning"></a>Przechowywanie wersji usługi
-Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia usługi (i punktów końcowych, które udostępniają) może być konieczne zostanie zmieniony z różnych powodów, takich jak zmieniających się potrzeb biznesowych, wymagań dotyczących technologii informacji, lub inne rozwiązania problemy. Każda zmiana wprowadza nową wersję usługi. W tym temacie wyjaśniono, jak należy wziąć pod uwagę przechowywanie wersji w Windows Communication Foundation (WCF).  
+Po wdrożeniu wstępnym i potencjalnie kilka razy w okresie istnienia usługi (i punkty końcowe, które ujawniają) mogą wymagać zmiany z różnych powodów, takich jak zmiana potrzeb firmy, wymagania dotyczące technologii informatycznych lub inne rozwiązanie luk. Każda zmiana wprowadza nową wersję usługi. W tym temacie wyjaśniono, jak rozważyć przechowywanie wersji w programie Windows Communication Foundation (WCF).  
   
-## <a name="four-categories-of-service-changes"></a>Cztery kategorie zmianami w usłudze  
- Zmiany usług, które mogą być wymagane, można podzielić na cztery kategorie:  
+## <a name="four-categories-of-service-changes"></a>Cztery kategorie zmian usługi  
+ Zmiany w usługach, które mogą być wymagane, mogą być klasyfikowane do czterech kategorii:  
   
-- Zmiany umowy: Na przykład operacji, które mogą być dodawane lub element danych w komunikacie może być dodane lub zmienione.  
+- Zmiany kontraktu: Na przykład może zostać dodana operacja lub element danych w komunikacie może zostać dodany lub zmieniony.  
   
-- Zmian adresów: Na przykład usługa zostaje przeniesiony do innej lokalizacji, gdzie punkty końcowe mają nowe adresy.  
+- Zmiany adresów: Na przykład usługa przechodzi do innej lokalizacji, gdzie punkty końcowe mają nowe adresy.  
   
-- Powiązanie zmiany: Na przykład zmienia mechanizmu zabezpieczeń lub zmienić jego ustawienia.  
+- Zmiany powiązań: Na przykład mechanizm zabezpieczeń zmienia się lub jego ustawienia zmienią się.  
   
-- Zmiany w implementacji: Na przykład, gdy implementację metody wewnętrznego zmiany.  
+- Zmiany implementacji: Na przykład podczas zmiany wewnętrznej implementacji metody.  
   
- Niektóre z tych zmian są nazywane "złamanie", a inne są "nierozdzielające." Zmiana jest *nierozdzielający* Jeśli wszystkie komunikaty, które mogłyby zostały przetworzone pomyślnie w poprzedniej wersji pomyślnie przetworzonych w nowej wersji. Każda zmiana, który nie spełnia warunku jest *istotne* zmiany.  
+ Niektóre z tych zmian są nazywane "uszkodzeniem", a inne to "nieprzerywanie". Zmiana jest nieprzerwana, jeśli wszystkie komunikaty, które zostały pomyślnie przetworzone w poprzedniej wersji, zostały pomyślnie przetworzone w nowej wersji. Wszelkie zmiany, które nie spełniają tego kryterium, są istotną zmianą.  
   
-## <a name="service-orientation-and-versioning"></a>Orientacja usługi i przechowywania wersji  
- Jedną z założenia orientacji usługi to usług i klientów autonomicznego (lub niezależnych). Między innymi oznacza to, że deweloperzy usług nie można zakładać, kontrolowania lub nawet wiedzieć o wszystkich klientów usługi. Pozwala to wyeliminować możliwość ponownego kompilowania lub wdrażania wszystkich klientów w przypadku wersji zmiany usługi. W tym temacie przyjęto założenie, usługa działa zgodnie z tym główną i dlatego musi być zmienione lub "kontrolą wersji", niezależnie od swoich klientów.  
+## <a name="service-orientation-and-versioning"></a>Orientacja i przechowywanie wersji usługi  
+ Jedną z założeniaych usług jest to, że usługi i klienci są autonomiczni (lub niezależnie). Oznacza to, że deweloperzy usług nie mogą założyć, że mogą oni kontrolować lub nawet wiedzieć o wszystkich klientach usługi. Eliminuje to możliwość odbudowy i ponownego wdrożenia wszystkich klientów w przypadku zmiany wersji usługi. W tym temacie przyjęto założenie, że usługa jest zgodna z tym cechą i dlatego należy ją zmienić lub "w wersji" niezależnie od jej klientów.  
   
- W przypadkach, gdy jest nieoczekiwany i nie można uniknąć istotnej zmiany mogą wybrać aplikację Ignoruj ten główną i wymagają, aby klienci można odbudować i ponownego wdrożenia nowej wersji usługi.  
+ W przypadkach, gdy istotna zmiana jest nieoczekiwana i nie można jej uniknąć, aplikacja może zrezygnować z tej cechą i wymagać ponownego skompilowania i wdrożenia klientów przy użyciu nowej wersji usługi.  
   
-## <a name="contract-versioning"></a>Przechowywanie wersji kontraktów  
- Kontrakty używany przez klienta musi być taka sama jak kontraktu używanego przez usługę; tylko muszą być zgodne.  
+## <a name="contract-versioning"></a>Przechowywanie wersji kontraktu  
+ Kontrakty używane przez klienta nie muszą być takie same, jak kontrakt używany przez usługę; muszą one być zgodne.  
   
- Dla kontraktów usług zgodności można dodawać nowe operacje oznacza, że udostępniane przez usługę, ale istniejące operacje nie może być usunięte lub zmienione semantycznie.  
+ W przypadku kontraktów dotyczących usług zgodność oznacza nowe operacje udostępniane przez usługę, ale nie można ich usunąć ani zmienić semantycznie.  
   
- W przypadku kontraktów danych zgodność oznacza nowego typu schematu, który można dodać definicji, ale w istotne sposoby nie można zmienić istniejące definicje typu schematu. Istotne zmiany może obejmować usunięcie elementów członkowskich danych lub incompatibly zmianie jego typu danych. Ta funkcja umożliwia usłudze niektóre latitude podczas zmieniania wersji swoich umów bez przerywania klientów. W dwóch następnych sekcjach opisano nieprzerywającymi działania aplikacji i istotne zmiany, które może przyjąć dane usług WCF i umowy o świadczenie usług.  
+ W przypadku kontraktów dotyczących danych zgodność oznacza nowe definicje typów schematów, ale nie można zmienić istniejących definicji typów schematów na różne sposoby. Istotne zmiany mogą obejmować usunięcie elementów członkowskich danych lub zmianę ich typu danych incompatibly. Ta funkcja umożliwia korzystanie z usługi w niektórych systemach Latitude w przypadku zmiany wersji jej umów bez przerywania klientów. W następnych dwóch sekcjach objaśniono nieprzerwane i istotne zmiany, które można wprowadzać w ramach kontraktów dotyczących danych i usług WCF.  
   
 ## <a name="data-contract-versioning"></a>Przechowywanie wersji kontraktów danych  
- W tej sekcji omówiono zarządzanie wersjami danych, korzystając z <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.DataContractAttribute> klasy.  
+ Ta sekcja zajmuje się przechowywaniem wersji danych przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer> klas <xref:System.Runtime.Serialization.DataContractAttribute> i.  
   
-### <a name="strict-versioning"></a>Przechowywanie wersji Strict  
- W wielu scenariuszach podczas zmiany wersji jest to problem dla deweloperów usługi ma kontrolę nad klientów i w związku z tym nie może wprowadzać założeń dotyczących jak będzie reagować na zmiany w komunikacie lub schemat XML. W takich przypadkach musisz gwarantować, że nowe wiadomości zostanie przeprowadzona Weryfikacja względem schematu stare dwóch powodów:  
+### <a name="strict-versioning"></a>Dokładne przechowywanie wersji  
+ W wielu scenariuszach, gdy zmiana wersji jest problemem, Deweloper usługi nie ma kontroli nad klientami i w związku z tym nie może tworzyć założeń dotyczących sposobu reagowania na zmiany w kodzie XML lub schemacie wiadomości. W takich przypadkach należy zagwarantować, że nowe wiadomości będą weryfikowane względem starego schematu, z dwóch powodów:  
   
-- Starych klientów opracowano przy założeniu, że schemat nie ulegnie zmianie. One może zakończyć się niepowodzeniem do przetwarzania komunikatów, które nigdy nie zostały zaprojektowane dla.  
+- Stary klient został opracowany z założeniem, że schemat nie ulegnie zmianie. Mogą oni nie przetwarzać komunikatów, które nigdy nie zostały zaprojektowane.  
   
-- Stary klientów mogą wykonać sprawdzanie poprawności schematu rzeczywiste względem schematu stare przed próbą nawet przetwarzania komunikatów.  
+- Stary klient może przeprowadzić rzeczywistą weryfikację schematu względem starego schematu przed próbą przetworzenia komunikatów.  
   
- W takich scenariuszach zaleca traktować istniejących kontraktów danych jako niezmienialny i tworzenie nowych, unikatowych XML kwalifikowane nazwy. Deweloper usługi będzie następnie dodać nowych metod do istniejącej umowy serwisowej lub tworzenie nowego kontraktu usługi przy użyciu metody, które używają nowego kontraktu danych.  
+ Zalecanym podejściem w takich scenariuszach jest traktowanie istniejących kontraktów danych jako niezmienne i tworzenie nowych przy użyciu unikatowych kwalifikowanych nazw XML. Deweloper usługi następnie doda nowe metody do istniejącego kontraktu usługi lub utworzy nowy kontrakt usługi z metodami korzystającymi z nowego kontraktu danych.  
   
- Często będzie przypadek, który deweloper usługi musi zapisać niektóre logiki biznesowej, które należy uruchomić we wszystkich wersjach kontraktu danych oraz kod specyficzny dla wersji business dla każdej wersji kontraktu danych. Dodatku na końcu tego tematu opisano, jak interfejsów można spełnić te wymagania.  
+ Często zdarza się, że deweloper usługi musi napisać pewną logikę biznesową, która powinna być uruchamiana w ramach wszystkich wersji kontraktu danych oraz kodu biznesowego specyficznego dla wersji dla każdej wersji kontraktu danych. Dodatek na końcu tego tematu wyjaśnia, jak interfejsy mogą być używane do zaspokajania tego zapotrzebowania.  
   
-### <a name="lax-versioning"></a>Przechowywanie wersji łagodnymi  
- W wielu inne scenariusze dla deweloperów usługi można zapewnić przy założeniu, że dodawanie elementu członkowskiego nowy, opcjonalny kontraktu danych nie spowoduje uszkodzenie istniejących klientów. Wymaga to deweloper usługi zbadać, czy istniejący klienci nie wykonuje sprawdzanie poprawności schematu i że Ignoruj ich elementy członkowskie danych nieznany. W tych scenariuszach jest to możliwe, należy korzystać z funkcji kontraktu danych do dodawania nowych elementów członkowskich w sposób nieprzerywającymi działania aplikacji. Dla deweloperów usługi ułatwia to założenie bez obaw, jeśli funkcje kontraktu danych pod kątem przechowywania wersji zostały już użyte w pierwszej wersji usługi.  
+### <a name="lax-versioning"></a>Przechowywanie wersji swobodny  
+ W wielu innych scenariuszach deweloperzy usług mogą wprowadzić założenie, że dodanie nowego, opcjonalnego elementu członkowskiego do kontraktu danych nie spowoduje przerwania istniejących klientów. Wymaga to, aby deweloper usług mógł zbadać, czy istniejący klienci nie wykonują walidacji schematu i ignorują nieznane elementy członkowskie danych. W tych scenariuszach można korzystać z funkcji kontraktu danych w celu dodawania nowych członków w sposób niepodzielony. Deweloper usługi może wprowadzić to założenie z pewnością, jeśli funkcje kontraktu danych dotyczące wersji zostały już użyte dla pierwszej wersji usługi.  
   
- Usługi WCF, usług sieci Web ASP.NET i wiele innych sieci Web usługi pomocy technicznej stosy *łagodnymi versioning*: oznacza to, mogą nie zgłaszać wyjątków dla nowych członków nieznany danych odebranych danych.  
+ Usługi WCF, ASP.NET Web Services i wiele innych stosów usługi sieci Web obsługują *przechowywanie wersji swobodny*: oznacza to, że nie generują one wyjątków dla nowych nieznanych elementów członkowskich danych w odebranych danych.  
   
- To proste przez pomyłkę podejrzewać, że dodawanie nowego elementu członkowskiego nie będę powodować istniejących klientów. Jeśli nie wiesz, że wszyscy klienci mogą obsługiwać łagodnymi przechowywania wersji, zaleca się użyć wskazówki wersji strict i traktować dane umów jako niezmienialny.  
+ Jest to łatwe w użyciu, gdyż dodanie nowego elementu członkowskiego nie spowoduje przerwania istniejących klientów. Jeśli nie masz pewności, że wszyscy klienci mogą obsługiwać przechowywanie wersji swobodny, zalecenie polega na użyciu ścisłych wytycznych dotyczących wersji i traktuje Kontrakty danych jako niezmienne.  
   
- Aby uzyskać szczegółowe wskazówki dotyczące łagodnymi i ograniczeniami przechowywanie wersji kontraktów danych, zobacz [najlepsze rozwiązania: Przechowywanie wersji kontraktów danych](../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+ Aby uzyskać szczegółowe wytyczne dotyczące swobodny i ścisłej wersji umów dotyczących danych, zobacz [najlepsze rozwiązania: Przechowywanie wersji](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)kontraktu danych.  
   
-### <a name="distinguishing-between-data-contract-and-net-types"></a>Rozróżniania kontraktu danych i typów .NET  
- .NET klasy lub struktury może być przekazywany jako kontraktu danych, stosując <xref:System.Runtime.Serialization.DataContractAttribute> do klasy atrybutu. Typ architektury .NET i jej prognozy kontraktu danych to dwa odrębne jest ważna. Istnieje możliwość mają różne typy .NET o tej samej projekcji kontraktu danych. Różnica ta jest szczególnie przydatna w umożliwia zmianę typu .NET, przy zachowaniu umowy prognozowanych danych, w tym samym zachowuje zgodność z istniejącymi klientami, nawet w sensie ograniczeniami Word. Istnieją dwie rzeczy, które należy zawsze zachować wykonywania tego rozróżnienia między kontraktu danych i typ .NET:  
+### <a name="distinguishing-between-data-contract-and-net-types"></a>Rozróżnianie między kontraktem danych i typami .NET  
+ Klasy lub struktury platformy .NET mogą być rzutowane jako kontrakt danych przez zastosowanie <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu do klasy. Projekty typu .NET i jego Kontrakty danych są dwa odrębne zagadnienia. Istnieje możliwość, że istnieje wiele typów .NET z tą samą projekcją kontraktu danych. To rozróżnienie jest szczególnie przydatne w przypadku, gdy pozwala na zmianę typu .NET przy zachowaniu prognozowanych kontraktów danych, dzięki czemu zapewnia to zgodność z istniejącymi klientami nawet w ścisłym znaczeniu tego wyrazu. Istnieją dwie rzeczy, które zawsze należy wykonać, aby zachować rozróżnienie między typem .NET i umową dotyczącą danych:  
   
-- Określ <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> i <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>. Należy zawsze podać nazwę i przestrzeń nazw usługi kontraktu danych, aby zapobiec nazwę danego typu .NET i przestrzeni nazw przed przypadkowym w kontrakcie. Dzięki temu, jeśli później zdecydujesz się zmienić z obszaru nazw .NET lub wpisz nazwę, kontrakt usługi danych pozostaje taki sam.  
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> Określ i .<xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> Należy zawsze określić nazwę i przestrzeń nazw kontraktu danych, aby zapobiec ujawnieniu nazwy i przestrzeni nazw typu .NET w kontrakcie. W ten sposób w przypadku późniejszej zmiany przestrzeni nazw lub nazwy typu platformy .NET kontrakt danych pozostaje taki sam.  
   
-- Określ <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>. Należy zawsze podać nazwę usługi składowych danych, aby uniemożliwić spowodują ujawnienie w kontrakcie nazwę użytkownika platformy .NET. Dzięki temu, jeśli później zdecydujesz się zmienić nazwę elementu członkowskiego .NET, usługi kontraktu danych pozostaje taki sam.  
+- Określ <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>. Należy zawsze określić nazwę członków danych, aby zapobiec ujawnieniu nazwy członka platformy .NET w kontrakcie. W ten sposób w przypadku późniejszej zmiany nazwy platformy .NET elementu członkowskiego kontrakt danych pozostaje taki sam.  
   
-### <a name="changing-or-removing-members"></a>Zmienianie lub usuwanie członków  
- Zmienianie nazwy lub typu danych elementu członkowskiego lub usuwanie elementów członkowskich danych jest istotną zmianę, nawet wtedy, gdy łagodnymi versioning jest dozwolone. Jeśli jest to konieczne, należy utworzyć nowego kontraktu danych.  
+### <a name="changing-or-removing-members"></a>Zmiana lub usuwanie członków  
+ Zmiana nazwy lub typu danych elementu członkowskiego lub usunięcie elementów członkowskich danych jest istotną zmianą, nawet jeśli dozwolone jest przechowywanie wersji swobodny. Jeśli jest to konieczne, Utwórz nowy kontrakt danych.  
   
- W przypadku zgodności usługi o wysokiej ważności, może wziąć pod uwagę ignorowanie nieużywanych danych członków w kodzie i pozostawić bez zmian. Jeśli są dzielenie element członkowski danych do wielu członków, można rozważyć opuszczania istniejącego elementu członkowskiego w miejscu jako właściwość może wykonać wymagane rozdzielenie i ponowne agregacji w przypadku klientów niskiego poziomu (liczba klientów, które nie zostały uaktualnione do najnowszej wersji).  
+ Jeśli zgodność usługi ma wysoką ważność, można rozważyć zignorowanie nieużywanych elementów członkowskich danych w kodzie i pozostawienie ich na miejscu. W przypadku dzielenia elementu członkowskiego danych na wielu członków warto rozważyć opuszczenie istniejącego elementu członkowskiego w miejscu jako właściwość, która może wykonać wymagane dzielenie i ponowne agregowanie dla klientów niższego poziomu (klientów, którzy nie zostali uaktualnioni do najnowszej wersji).  
   
- Podobnie zmiany nazwy lub przestrzeni nazw kontraktu danych są istotne zmiany.  
+ Podobnie zmiany nazwy lub przestrzeni nazw kontraktu danych są istotne.  
   
-### <a name="round-trips-of-unknown-data"></a>Rund nieznane dane  
- W niektórych scenariuszach istnieje potrzeba "obustronne" Nieznany dane pochodzące z danych elementy członkowskie dodane w nowej wersji. Na przykład "versionNew" usługa wysyła dane za pomocą niektórych nowo dodane elementy członkowskie do klienta "versionOld". Klient ignoruje nowo dodanych elementów członkowskich, podczas przetwarzania komunikatu, ale umożliwia ponowne wysłanie tych samych danych, w tym nowo dodanych elementów członkowskich, wróć do usługi versionNew. Typowy scenariusz, w tym jest aktualizacji danych, gdzie dane są pobierane z usługi, zmienione i zwrócony.  
+### <a name="round-trips-of-unknown-data"></a>Rundy nieznanych danych  
+ W niektórych scenariuszach istnieje potrzeba "rundy", które pochodzą z elementów członkowskich dodanych w nowej wersji. Na przykład usługa "versionNew" wysyła dane z nowo dodanych członków do klienta "versionOld". Klient ignoruje nowo dodane elementy członkowskie podczas przetwarzania komunikatu, ale ponownie wysyła te same dane, w tym nowo dodane elementy członkowskie, z powrotem do usługi versionNew. Typowym scenariuszem jest aktualizacja danych, w której dane są pobierane z usługi, zmienione i zwracane.  
   
- Aby włączyć Pełna zgodnooć wersji dla określonego typu, musi implementować typ <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu. Interfejs zawiera jedną właściwość <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> zwracającego <xref:System.Runtime.Serialization.ExtensionDataObject> typu. Właściwość jest używana do przechowywania wszelkich danych z przyszłych wersji kontraktu danych, który jest nieznany do bieżącej wersji. Dane te są nieprzezroczyste dla klienta, ale w przypadku wystąpienia jest serializowana, zawartość <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> właściwości są zapisywane z użyciem usług rest danych kontraktu składowych danych.  
+ Aby włączyć funkcję okrężną dla określonego typu, typ musi implementować <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejs. Interfejs zawiera jedną właściwość, <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> która <xref:System.Runtime.Serialization.ExtensionDataObject> zwraca typ. Właściwość służy do przechowywania danych z przyszłych wersji kontraktu danych, który jest nieznany dla bieżącej wersji. Te dane są nieprzezroczyste dla klienta, ale gdy wystąpienie jest serializowane, zawartość <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> właściwości jest zapisywana z pozostałymi danymi członków kontraktu danych.  
   
- Zalecane jest, czy wszystkich typów implementować ten interfejs w celu uwzględnienia nowych i nieznany przyszłych członków.  
+ Zaleca się, aby wszystkie typy implementują ten interfejs w celu uwzględnienia nowych i nieznanych przyszłych członków.  
   
 ### <a name="data-contract-libraries"></a>Biblioteki kontraktu danych  
- Może to być bibliotek kontraktów danych, gdy kontrakt jest opublikowana w centralnym repozytorium i konsultantów usługi i typ wdrożenia i udostępnić kontraktów danych z tego repozytorium. W takim przypadku gdy opublikujesz umowy dotyczącej danych do repozytorium masz żadnej kontroli nad tym kto tworzy typy, które ją implementują. W związku z tym, nie można zmodyfikować umowy po opublikowaniu, renderowanie na efektywne niezmienne.  
+ Mogą istnieć biblioteki kontraktów danych, w których kontrakt jest publikowany w centralnym repozytorium, a implementacje usług i typów implementują i uwidaczniają Kontrakty danych z tego repozytorium. W takim przypadku po opublikowaniu kontraktu danych w repozytorium nie ma kontroli nad tym, kto tworzy typy implementujące go. W tym celu nie można modyfikować kontraktu po jego opublikowaniu, dlatego renderowanie go efektywnie jest niezmienne.  
   
 ### <a name="when-using-the-xmlserializer"></a>Przy użyciu elementu XmlSerializer  
- Te same zasady przechowywania wersji stosowane podczas korzystania z <xref:System.Xml.Serialization.XmlSerializer> klasy. Gdy wymagana jest ścisłym przechowywania wersji, Traktuj kontraktów danych jako niezmienialny i tworzenie nowych kontraktów danych przy użyciu nazwy kwalifikowanej, unikatową nowych wersji. Gdy masz pewność, że łagodnymi przechowywanie wersji może służyć, mogą dodawać nowych członków do serializacji w nowych wersji, ale nie zmieniać lub Usuń istniejących elementów członkowskich.  
+ Te same zasady przechowywania wersji są stosowane podczas korzystania <xref:System.Xml.Serialization.XmlSerializer> z klasy. Gdy wymagane jest dokładne przechowywanie wersji, Traktuj Kontrakty danych jako niezmienne i Utwórz nowe kontrakty danych z unikatowymi, kwalifikowanymi nazwami dla nowych wersji. Jeśli masz pewność, że można użyć wersji swobodny, możesz dodać nowych możliwych do serializacji członków w nowych wersjach, ale nie zmieniać ani usuwać istniejących członków.  
   
 > [!NOTE]
->  <xref:System.Xml.Serialization.XmlSerializer> Używa <xref:System.Xml.Serialization.XmlAnyElementAttribute> i <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> atrybuty do obsługi Pełna zgodnooć wersji nieznany danych.  
+> Używa atrybutów i<xref:System.Xml.Serialization.XmlAnyAttributeAttribute>, aby zapewnić obsługę rundy nieznanych danych. <xref:System.Xml.Serialization.XmlAnyElementAttribute> <xref:System.Xml.Serialization.XmlSerializer>  
   
-## <a name="message-contract-versioning"></a>Przechowywanie wersji kontraktów komunikatu  
- Wytyczne dotyczące przechowywanie wersji kontraktów komunikatu są bardzo podobne do przechowywanie wersji kontraktów danych. Jeśli wymagana jest ścisłym przechowywania wersji, należy nie zmienić Twoje treści wiadomości, ale zamiast tego utworzyć nowego kontraktu komunikatu, unikatową nazwą kwalifikowaną. Jeśli znasz służy łagodnymi przechowywania wersji, możesz dodać nowe części treści wiadomości, ale nie zmienić lub usunąć istniejące. Te wskazówki dotyczą zarówno na komputerze i opakowane kontrakty komunikatów.  
+## <a name="message-contract-versioning"></a>Przechowywanie wersji kontraktu komunikatów  
+ Wskazówki dotyczące przechowywania wersji kontraktu są bardzo podobne do wersji umów dotyczących danych. Jeśli jest wymagana ścisła wersja, nie należy zmieniać treści wiadomości, ale zamiast tego utworzyć nowy kontrakt wiadomości z unikatową kwalifikowaną nazwą. Jeśli wiesz, że możesz użyć wersji swobodny, możesz dodać nowe części treści wiadomości, ale nie zmieniać ani usuwać istniejących. Te wskazówki dotyczą umów dotyczących komunikatów zarówno od zera, jak i opakowanych.  
   
- Zawsze można dodawać nagłówki wiadomości, nawet jeśli strict wersji jest używany. Flaga MustUnderstand może mieć wpływ na przechowywanie wersji. Ogólnie rzecz biorąc model przechowywania wersji dla nagłówków w programie WCF jest, jak opisano w specyfikacji protokołu SOAP.  
+ Nagłówki wiadomości można zawsze dodawać nawet wtedy, gdy jest używana funkcja dokładnej wersji. Flaga MustUnderstand może wpłynąć na przechowywanie wersji. Ogólnie rzecz biorąc, model przechowywania wersji dla nagłówków w programie WCF jest opisany w specyfikacji protokołu SOAP.  
   
-## <a name="service-contract-versioning"></a>Przechowywanie wersji kontraktów usług  
- Podobnie jak przechowywanie wersji kontraktów danych, przechowywanie wersji kontraktów usługi obejmuje również dodawanie, zmienianie i usuwanie operacji.  
+## <a name="service-contract-versioning"></a>Przechowywanie wersji kontraktu usług  
+ Podobnie jak w przypadku wersji kontraktu danych, wersja kontraktu usług obejmuje także dodawanie, zmienianie i usuwanie operacji.  
   
-### <a name="specifying-name-namespace-and-action"></a>Określanie nazwy, Namespace i akcji  
- Domyślnie nazwa kontraktu usługi jest nazwą interfejsu. Jego domyślnej przestrzeni nazw "http://tempuri.org", i akcji każdej operacji "http://tempuri.org/contractname/methodname". Zalecane jest, że jawnie określisz nazwę i przestrzeń nazw dla kontraktu usługi i akcję dla każdej operacji należy unikać "http://tempuri.org" i uniemożliwić nazwy interfejsu i metoda spowodują ujawnienie w kontrakcie usługi.  
+### <a name="specifying-name-namespace-and-action"></a>Określanie nazwy, przestrzeni nazw i akcji  
+ Domyślnie nazwą kontraktu usługi jest nazwa interfejsu. Jego domyślna przestrzeń nazw to http://tempuri.org"", a każda akcja operacji to "http://tempuri.org/contractname/methodname". Zaleca się jawnie określić nazwę i obszar nazw dla kontraktu usługi oraz akcję dla każdej operacji, aby uniknąć używania "http://tempuri.org" i aby zapobiec ujawnieniu nazw interfejsów i metod w kontrakcie usługi.  
   
-### <a name="adding-parameters-and-operations"></a>Dodawanie parametrów i operacje  
- Dodawanie operacji usług udostępnianych przez usługę jest nierozdzielający zmiany, ponieważ istniejący klienci nie muszą być zajmującym się te nowe operacje.  
+### <a name="adding-parameters-and-operations"></a>Dodawanie parametrów i operacji  
+ Dodawanie operacji usługi ujawnionych przez usługę to zmiana nieprzerwana, ponieważ istniejący klienci nie muszą być zainteresowani tymi nowymi operacjami.  
   
 > [!NOTE]
->  Dodawanie operacji do kontraktu dwustronnego wywołania zwrotnego jest zmianą przerywającą.  
+> Dodawanie operacji do wielostronnego kontraktu wywołania zwrotnego jest istotną zmianą.  
   
-### <a name="changing-operation-parameter-or-return-types"></a>Zmiana parametru operacji lub typów zwracanych  
- Zmiana parametr lub zwracane typy ogólnie jest istotną zmianę, chyba, że nowy typ implementuje ten sam kontrakt danych implementowana przez typ stary. Aby wprowadzić zmiany, Dodaj nową operację do umowy serwisowej lub zdefiniowanie nowego kontraktu usługi.  
+### <a name="changing-operation-parameter-or-return-types"></a>Zmienianie parametru operacji lub zwracanych typów  
+ Zmienianie parametrów lub typów zwracanych zazwyczaj jest istotną zmianą, chyba że nowy typ implementuje ten sam kontrakt danych zaimplementowany przez stary typ. Aby wprowadzić taką zmianę, Dodaj nową operację do kontraktu usługi lub Zdefiniuj nowy kontrakt usługi.  
   
-### <a name="removing-operations"></a>Operacje usuwania  
- Usuwanie operacji jest również istotną zmianę. Aby wprowadzić zmiany, zdefiniowanie nowego kontraktu usługi i ujawnisz go na nowy punkt końcowy.  
+### <a name="removing-operations"></a>Usuwanie operacji  
+ Usuwanie operacji jest również istotną zmianą. Aby wprowadzić taką zmianę, należy zdefiniować nowy kontrakt usługi i udostępnić go w nowym punkcie końcowym.  
   
 ### <a name="fault-contracts"></a>Kontrakty błędów  
- <xref:System.ServiceModel.FaultContractAttribute> Atrybut umożliwia deweloperom kontraktu usługi, podaj informacje o błędach, które mogą być zwracane z operacji kontraktu.  
+ Ten <xref:System.ServiceModel.FaultContractAttribute> atrybut umożliwia deweloperowi kontraktu usługi Określanie informacji o błędach, które mogą być zwracane z operacji kontraktu.  
   
- Lista błędów, które opisano w kontrakcie usługi nie jest uważany za wyczerpujący. W dowolnym momencie operacja może zwrócić błędy, które nie zostały opisane w zmiana kontraktu. W związku z tym zmiana zestawu błędów opisanych w umowie nie jest uważany za istotne. Na przykład dodać do umowy przy użyciu nowych odporności <xref:System.ServiceModel.FaultContractAttribute> lub usunięcie istniejącej usterki z umowy.  
+ Lista błędów opisanych w kontrakcie usługi nie jest uważana za wyczerpującą. W dowolnym momencie operacja może zwracać błędy, które nie zostały opisane w jego kontrakcie. W związku z tym zmiana zestawu błędów opisanych w kontrakcie nie jest uważana za przerywanie. Na przykład dodanie nowego błędu do kontraktu przy użyciu <xref:System.ServiceModel.FaultContractAttribute> lub usunięcie istniejącego błędu z kontraktu.  
   
-### <a name="service-contract-libraries"></a>Biblioteki kontraktu usługi  
- Organizacje mogą mieć bibliotek zamówień, gdy kontrakt jest opublikowana w centralnym repozytorium i konsultantów usługi wdrożenie umów z tego repozytorium. W tym przypadku gdy opublikujesz umowy serwisowej do repozytorium masz żadnej kontroli nad tym kto tworzy usług, które ją implementują. W związku z tym nie możesz modyfikować kontraktu usługi, po opublikowaniu renderowaniem go skutecznie niezmienne. Usługi WCF obsługuje dziedziczenie kontraktów, która może służyć do tworzenia nowego kontraktu, który rozszerza istniejących umów. Aby użyć tej funkcji, zdefiniuj nowy interfejs kontraktu usługi, która dziedziczy interfejs starego kontraktu usługi, a następnie dodaj metody nowego interfejsu. Następnie zmienić usługa, która implementuje ten kontrakt starego wdrożenia nowego kontraktu i zmieniać definicji punktu końcowego "versionOld", aby użyć nowego kontraktu. Dla klientów "versionOld" punktu końcowego będą nadal wyświetlane jako uwidaczniającą kontraktu "versionOld"; dla klientów "versionNew" punktu końcowego pojawi się do udostępnienia kontraktu "versionNew".  
+### <a name="service-contract-libraries"></a>Biblioteki kontraktu usług  
+ Organizacje mogą mieć biblioteki kontraktów, w których kontrakt jest publikowany w centralnym repozytorium i realizatorów usług implementujących umowy z tego repozytorium. W takim przypadku podczas publikowania kontraktu usługi do repozytorium nie ma kontroli nad tym, kto tworzy usługi implementujące ją. W związku z tym nie można modyfikować kontraktu usługi po opublikowaniu, ponieważ nie jest on efektywnie modyfikowany. Program WCF obsługuje dziedziczenie kontraktu, którego można użyć do utworzenia nowego kontraktu, który rozszerza istniejące kontrakty. Aby użyć tej funkcji, Zdefiniuj nowy interfejs kontraktu usługi, który dziedziczy po starym interfejsie kontraktu usługi, a następnie Dodaj metody do nowego interfejsu. Następnie należy zmienić usługę implementującą stary kontrakt w celu zaimplementowania nowego kontraktu i zmienić definicję punktu końcowego "versionOld" w taki sposób, aby korzystała z nowego kontraktu. Na klientach "versionOld" punkt końcowy będzie nadal wyświetlany jako Uwidacznianie kontraktu "versionOld"; na klientach "versionNew" zostanie wyświetlony punkt końcowy, który udostępni kontrakt "versionNew".  
   
-## <a name="address-and-binding-versioning"></a>Adres i powiązanie przechowywania wersji  
- Zmiany adresu punktu końcowego i powiązania są istotne zmiany, chyba, że klienci są w stanie dynamicznie odnajdywania nowy adres punktu końcowego lub powiązania. Jeden mechanizm implementowania ta funkcja jest za pomocą rejestru Universal opis odnajdywania i integracja (UDDI) i wzorzec wywołania UDDI, gdzie klient próbuje nawiązać połączenia z punktem końcowym i, w przypadku awarii zapytanie UDDI dobrze znane Rejestr bieżący punkt końcowy metadanych. Klient używa następnie adres i powiązanie z tych metadanych do komunikowania się z punktem końcowym. Jeśli ta komunikacja zakończy się powodzeniem, klient buforuje informacje dotyczące adresów i powiązania do użycia w przyszłości.  
+## <a name="address-and-binding-versioning"></a>Przechowywanie wersji adresu i powiązania  
+ Zmiany adresu i powiązania punktu końcowego są przerywane, chyba że klienci będą mogli dynamicznie odnajdywać nowy adres lub powiązanie punktu końcowego. Jednym z mechanizmów implementowania tej funkcji jest użycie rejestru Universal Discovery Description and Integration (UDDI) i wzorca wywołania usług UDDI, w którym klient próbuje komunikować się z punktem końcowym, a w przypadku niepowodzenia wysyła zapytania do dobrze znanych usług UDDI Rejestr dla bieżących metadanych punktu końcowego. Klient używa następnie adresu i powiązania z tych metadanych do komunikowania się z punktem końcowym. Jeśli ta komunikacja powiedzie się, Klient buforuje adres i informacje o powiązaniu do użytku w przyszłości.  
   
-## <a name="routing-service-and-versioning"></a>Usługa routingu oraz zarządzanie ich wersjami  
- Jeśli zmiany wprowadzone do usługi są istotne zmiany i muszą mieć co najmniej dwóch różnych wersjach usługi uruchomionej jednocześnie służy usługa routingu WCF do przesyłania wiadomości do wystąpienia odpowiednią usługę. Usługa routingu WCF używa routingu opartego na zawartości, innymi słowy, używa informacji w wiadomości, aby określić miejsce do rozsyłania wiadomości. Aby uzyskać więcej informacji na temat usługi routingu WCF, zobacz [usługa routingu](../../../docs/framework/wcf/feature-details/routing-service.md). Aby uzyskać przykład sposobu użycia usługi routingu WCF pod kątem przechowywania wersji usługi, zobacz [How to: Przechowywanie wersji usługi](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+## <a name="routing-service-and-versioning"></a>Usługa routingu i przechowywanie wersji  
+ Jeśli zmiany wprowadzone do usługi są istotne i należy mieć co najmniej dwie różne wersje usługi uruchomionej jednocześnie, można użyć usługi routingu WCF do kierowania komunikatów do odpowiedniego wystąpienia usługi. Usługa routingu WCF używa routingu opartego na zawartości, innymi słowy używa informacji w komunikacie, aby określić, gdzie należy skierować komunikat. Aby uzyskać więcej informacji na temat usługi routingu WCF, zobacz [Usługa routingu](../../../docs/framework/wcf/feature-details/routing-service.md). Przykład korzystania z usługi routingu WCF w celu przechowywania wersji usług — zobacz [How to: Przechowywanie wersji](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)usługi.  
   
 ## <a name="appendix"></a>Dodatek  
- Wskazówki wersji kontraktu ogólne dane razie strict versioning jest traktować kontraktów danych jako niezmienialny i tworzenie nowych, gdy są wymagane zmiany. Nowa klasa musi zostać utworzona dla każdego nowego kontraktu danych, tak wymagany jest mechanizm pozwala uniknąć uruchomić istniejący kod, który został napisany pod względem stare dane kontraktu klasy i ponowne zapisywanie adresów pod względem nowej klasy kontraktu danych.  
+ Ogólne wskazówki dotyczące obsługi wersji kontraktu danych, gdy jest wymagana ścisła wersja, to traktowanie umów danych jako niezmienne i tworzenie nowych, gdy wymagane są zmiany. Należy utworzyć nową klasę dla każdego nowego kontraktu danych, więc mechanizm jest potrzebny, aby uniknąć konieczności podawania istniejącego kodu, który został napisany w rozumieniu starej klasy kontraktu danych i ponownie napisać go pod względem nowej klasy kontraktu danych.  
   
- Jeden taki mechanizm jest zdefiniowanie członków każdej umowy danych oraz pisania kodu wewnętrznej implementacji pod względem interfejsów, a nie klasy kontraktu danych, które implementują interfejsy za pomocą interfejsów. W poniższym kodzie dla wersji 1 usługi pokazano `IPurchaseOrderV1` interfejsu i `PurchaseOrderV1`:  
+ Jednym z tych mechanizmów jest użycie interfejsów do definiowania elementów członkowskich każdego kontraktu danych i zapis wewnętrzny kod implementacji pod względem interfejsów, a nie klas kontraktów danych, które implementują interfejsy. Poniższy kod dla wersji 1 usługi zawiera `IPurchaseOrderV1` Interfejs `PurchaseOrderV1`i:  
   
 ```  
 public interface IPurchaseOrderV1  
@@ -151,7 +151,7 @@ public class PurchaseOrderV1 : IPurchaseOrderV1
 }  
 ```  
   
- Podczas operacji kontraktu usługi powinny być zapisane w `PurchaseOrderV1`, logiki biznesowej rzeczywiste byłaby w kategoriach `IPurchaseOrderV1`. Następnie, w wersji 2 będzie istnieć nową `IPurchaseOrderV2` interfejsu i nową `PurchaseOrderV2` klasy, jak pokazano w poniższym kodzie:  
+ Mimo że operacje kontraktu usługi są zapisywane w warunkach `PurchaseOrderV1`, rzeczywista logika biznesowa będzie w `IPurchaseOrderV1`warunkach. Następnie w wersji 2 może istnieć nowy `IPurchaseOrderV2` interfejs i Nowa `PurchaseOrderV2` Klasa, jak pokazano w poniższym kodzie:  
   
 ```  
 public interface IPurchaseOrderV2  
@@ -173,7 +173,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
 }  
 ```  
   
- Kontrakt usługi zostałaby zaktualizowana w celu uwzględnienia nowych operacji, które są zapisywane w `PurchaseOrderV2`. Istniejącej logiki biznesowej, zapisane pod względem `IPurchaseOrderV1` będzie w dalszym ciągu działać w przypadku `PurchaseOrderV2` i nowej logiki biznesowej, który wymaga `OrderDate` właściwości powinny być zapisane w `IPurchaseOrderV2`.  
+ Kontrakt usługi zostanie zaktualizowany w taki sposób, aby obejmował nowe operacje, które są zapisywane `PurchaseOrderV2`w warunkach. Istniejąca logika biznesowa, `IPurchaseOrderV1` która jest zapisywana w `PurchaseOrderV2` warunkach, będzie kontynuowała pracę dla `OrderDate` i nową logikę biznesową, `IPurchaseOrderV2`która wymaga, aby właściwość była zapisywana w warunkach.  
   
 ## <a name="see-also"></a>Zobacz także
 

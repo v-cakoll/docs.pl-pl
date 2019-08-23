@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 6494a154b9b4bd5bf29fc0e2fbd0b4e5e84550ff
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c05e849705f851b51a362d3a1d1d3f81a9eaf0e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364166"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923597"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Rozwiązywanie problemów związanych z formantami oraz autoryzacją elementów
 W tym temacie wymieniono następujące typowe problemy występujące podczas opracowywania składników i kontrolek. Aby uzyskać więcej informacji, zobacz [programowanie ze składnikami](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -34,7 +34,7 @@ W tym temacie wymieniono następujące typowe problemy występujące podczas opr
 - Ikona składnika nie jest wyświetlana w przyborniku  
   
 ## <a name="cannot-add-control-to-toolbox"></a>Nie można dodać kontrolki do przybornika  
- Aby dodać kontrolkę niestandardową utworzoną w innym projekcie lub kontrolce innej firmy do przybornika, należy to zrobić ręcznie. Jeśli bieżący projekt zawiera kontrolkę lub składnik, powinien być automatycznie wyświetlany w **przyborniku** . Aby uzyskać więcej informacji, [zobacz Przewodnik: Automatyczne wypełnianie przybornika składnikami](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)niestandardowymi.  
+ Aby dodać kontrolkę niestandardową utworzoną w innym projekcie lub kontrolce innej firmy do przybornika, należy tozrobić ręcznie. Jeśli bieżący projekt zawiera kontrolkę lub składnik, powinien być automatycznie wyświetlany w **przyborniku** . Aby uzyskać więcej informacji, [zobacz Przewodnik: Automatyczne wypełnianie przybornika składnikami](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)niestandardowymi.  
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>Aby dodać kontrolkę do przybornika  
   
@@ -96,7 +96,7 @@ W tym temacie wymieniono następujące typowe problemy występujące podczas opr
  Aby uzyskać więcej informacji na temat debugowania, zobacz [debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) i [Przewodnik: Debugowanie niestandardowych kontrolek Windows Forms w czasie](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)projektowania.  
   
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>Zdarzenie jest zgłaszane dwa razy w dziedziczonej kontrolce lub składniku  
- Prawdopodobnie jest to spowodowane zduplikowaną `Handles` klauzulą. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z dziedziczonymi programami obsługi zdarzeń w Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
+ Prawdopodobnie jest to spowodowane zduplikowaną `Handles` klauzulą. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z dziedziczonymi programami obsługi zdarzeń w Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
 ## <a name="design-time-error-failed-to-create-component-component-name"></a>Błąd czasu projektowania: "Nie można utworzyć składnika" Nazwa składnika ""  
  Składnik lub formant muszą dostarczać Konstruktor bez parametrów z parametrami. Gdy środowisko projektowe tworzy wystąpienie składnika lub formantu, nie podejmuje próby dostarczenia żadnych parametrów do przeciążenia konstruktorów przyjmujących parametry.  

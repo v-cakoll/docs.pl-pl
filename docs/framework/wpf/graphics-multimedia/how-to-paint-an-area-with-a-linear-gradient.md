@@ -6,46 +6,46 @@ helpviewer_keywords:
 - brushes [WPF], painting with linear gradients
 - painting [WPF], with linear gradients
 ms.assetid: 00e0cd04-48c0-4ec5-850e-d321beb37a34
-ms.openlocfilehash: c48ff13811d784ecc7042b73b964a9e6f2d42a34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92c9ccd846dbbce043d13e6ba82b9fa8e72fa8b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921918"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916164"
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>Instrukcje: Malowanie obszaru gradientem liniowym
-W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.LinearGradientBrush> klasy Maluj obszar gradientem liniowym. W poniższym przykładzie <xref:System.Windows.Shapes.Shape.Fill%2A> z <xref:System.Windows.Shapes.Rectangle> jest malowany przechodzi z żółtym kolor czerwony, niebieski do Limonowozielony Ukośny gradient liniowy.  
+Ten przykład pokazuje, <xref:System.Windows.Media.LinearGradientBrush> jak używać klasy do malowania obszaru gradientem liniowym. W poniższym przykładzie <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle> kolor jest malowany ukośnym gradientem liniowym, który przechodzi z żółtego do czerwonego do zielonego na zielony.  
   
 ## <a name="example"></a>Przykład  
  [!code-xaml[GradientBrushExamples_snip#DiagonalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#DiagonalGradient1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#diagonalgradient1csharp)]  
   
- Poniższa ilustracja przedstawia gradientu utworzony w poprzednim przykładzie.  
+ Na poniższej ilustracji przedstawiono gradient utworzony w poprzednim przykładzie.  
   
- ![Po przekątnej gradientu liniowego](./media/graphicsmm-diagonallgb.jpg "graphicsmm_DiagonalLGB")  
+ ![Gradient liniowy ukośny](./media/graphicsmm-diagonallgb.jpg "graphicsmm_DiagonalLGB")  
   
- Aby utworzyć poziomego gradientu liniowego, zmienić <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> z <xref:System.Windows.Media.LinearGradientBrush> do (0,0.5) i (1,0.5). W poniższym przykładzie <xref:System.Windows.Shapes.Rectangle> jest malowany poziomego gradientu liniowego.  
+ Aby utworzyć poziomy gradient liniowy, Zmień wartości <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> <xref:System.Windows.Media.LinearGradientBrush> z do (0, 0,5) i (1, 0,5). W poniższym przykładzie <xref:System.Windows.Shapes.Rectangle> jest malowany poziom gradientu liniowego.  
   
  [!code-xaml[GradientBrushExamples_snip#HorizontalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#HorizontalGradient1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#horizontalgradient1csharp)]  
   
- Poniższa ilustracja przedstawia gradientu utworzony w poprzednim przykładzie.  
+ Na poniższej ilustracji przedstawiono gradient utworzony w poprzednim przykładzie.  
   
  ![Poziomy gradient liniowy](./media/graphicsmm-horizontallgb.jpg "graphicsmm_HorizontalLGB")  
   
- Aby utworzyć pionowe gradientu liniowego, zmienić <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> z <xref:System.Windows.Media.LinearGradientBrush> do (0.5,0) i (0.5,1). W poniższym przykładzie <xref:System.Windows.Shapes.Rectangle> jest malowane pionowy gradientem liniowym.  
+ Aby utworzyć pionowy gradient liniowy, Zmień <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> wartości <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush> do (0,5, 0) i (0,5, 1). W poniższym przykładzie <xref:System.Windows.Shapes.Rectangle> jest malowany pionowym gradientem liniowym.  
   
  [!code-xaml[GradientBrushExamples_snip#VerticalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#verticalgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#VerticalGradient1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#verticalgradient1csharp)]  
   
- Poniższa ilustracja przedstawia gradientu utworzony w poprzednim przykładzie.  
+ Na poniższej ilustracji przedstawiono gradient utworzony w poprzednim przykładzie.  
   
  ![Gradient liniowy pionowy](./media/graphicsmm-verticallgb.jpg "graphicsmm_VerticalLGB")  
   
 > [!NOTE]
->  Przykłady w tym temacie na użytek w układzie współrzędnych domyślne ustawienie punktach i punktów końcowych. System współrzędnych domyślne są określane względem obwiedni: 0 oznacza wartość 0 procent obwiedni, a wartość 1 oznacza 100 procent obwiedni. Ten układ współrzędnych można zmienić, określając <xref:System.Windows.Media.GradientBrush.MappingMode%2A> właściwości na wartość <xref:System.Windows.Media.BrushMappingMode.Absolute?displayProperty=nameWithType>. Bezwzględnych współrzędnych jest względem obwiedni. Wartości są interpretowane bezpośrednio w przestrzeni lokalnej.  
+> Przykłady w tym temacie używają domyślnego układu współrzędnych do ustawiania punktów początkowych i punktów końcowych. Domyślny system współrzędnych jest względny w stosunku do pola ograniczenia: wartość 0 oznacza 0 procent obwiedni, a 1 wskazuje 100 procent obwiedni. Można zmienić ten system współrzędnych przez ustawienie <xref:System.Windows.Media.GradientBrush.MappingMode%2A> właściwości na wartość. <xref:System.Windows.Media.BrushMappingMode.Absolute?displayProperty=nameWithType> Bezwzględny układ współrzędnych nie należy do obwiedni. Wartości są interpretowane bezpośrednio w miejscu lokalnym.  
   
- Aby uzyskać więcej przykładów, zobacz [przykład pędzle](https://go.microsoft.com/fwlink/?LinkID=159973). Aby uzyskać więcej informacji na temat gradientów oraz inne rodzaje pędzle, zobacz [malowanie jednolitymi kolorami i gradientami — Przegląd](painting-with-solid-colors-and-gradients-overview.md).
+ Aby uzyskać więcej przykładów, zobacz [przykłady pędzli](https://go.microsoft.com/fwlink/?LinkID=159973). Aby uzyskać więcej informacji o gradientach i innych typach pędzli, zobacz [malowanie przy użyciu pełnych kolorów i gradientów przegląd](painting-with-solid-colors-and-gradients-overview.md).

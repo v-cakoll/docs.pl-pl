@@ -2,12 +2,12 @@
 title: Anuluj pozostałe zadania asynchroniczne po zakończeniu jednego (C#)
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: 5237d82506da5e304a8f265feab7d7f3beaa45b0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 81aed54d4854ad505971fbf85cf9a080a7c392d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595689"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922015"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Anuluj pozostałe zadania asynchroniczne po zakończeniu jednego (C#)
 Za pomocą <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> metody razem <xref:System.Threading.CancellationToken>z, można anulować wszystkie pozostałe zadania po zakończeniu jednego zadania. `WhenAny` Metoda przyjmuje argument, który jest kolekcją zadań. Metoda uruchamia wszystkie zadania i zwraca pojedyncze zadanie. Pojedyncze zadanie zostanie ukończone, gdy dowolne zadanie w kolekcji zostanie zakończone.  
@@ -15,7 +15,7 @@ Za pomocą <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWith
  W tym przykładzie pokazano, jak używać tokenu anulowania w połączeniu z `WhenAny` do pierwszego zadania, aby zakończyć z kolekcji zadań i anulować pozostałe zadania. Każde zadanie pobiera zawartość witryny sieci Web. W przykładzie jest wyświetlana długość zawartości pierwszego pobrania, która zostanie zakończona, a pozostałe pliki do pobrania zostaną anulowane.  
   
 > [!NOTE]
->  Aby uruchomić przykłady, musisz mieć zainstalowany na komputerze program Visual Studio 2012 lub nowszy oraz .NET Framework 4,5 lub nowszy.  
+> Aby uruchomić przykłady, musisz mieć zainstalowany na komputerze program Visual Studio 2012 lub nowszy oraz .NET Framework 4,5 lub nowszy.  
   
 ## <a name="downloading-the-example"></a>Pobieranie przykładu  
  Możesz pobrać kompletny projekt Windows Presentation Foundation (WPF) z [próbki asynchronicznej: Dostosuj aplikację](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) , a następnie wykonaj poniższe kroki.  

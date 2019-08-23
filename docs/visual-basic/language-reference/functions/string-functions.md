@@ -4,80 +4,80 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 645d19219481d22ade90f44aaecb62471eb915d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f6203fd6ae69315e7efaaa3c17bb4132bd175d8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802004"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930858"
 ---
 # <a name="string-functions-visual-basic"></a>Funkcje ciągów (Visual Basic)
-W poniższej tabeli wymieniono funkcje, które zapewnia Visual Basic możliwość wyszukiwania ciągów i manipulowania nimi.  
+W poniższej tabeli wymieniono funkcje, które Visual Basic zapewniają wyszukiwanie ciągów i manipulowanie nimi.  
   
-|Metoda .NET framework|Opis|  
+|.NET Framework, Metoda|Opis|  
 |---------------------------|-----------------|  
-|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Zwraca `Integer` reprezentującą kod znaku odpowiadający znakowi.|  
-|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Zwraca znak skojarzony z określonym kodem znaku.|  
-|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Zwraca tablicę wartości nieujemnych zawierającą podzbiór `String` tablica opartym na określonych kryteriach filtru.|  
-|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Zwraca ciąg sformatowany zgodnie z instrukcjami zawartymi w formacie `String` wyrażenia.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Zwraca wyrażenie sformatowane jako wartość walutowa używająca symbolu waluty zdefiniowanego w Panelu sterowania systemu.|  
+|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|`Integer` Zwraca wartość reprezentującą kod znaku odpowiadający znakowi.|  
+|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Zwraca znak skojarzony z podanym kodem znaku.|  
+|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Zwraca tablicę opartą na zero, zawierającą podzbiór `String` tablicy na podstawie określonych kryteriów filtrowania.|  
+|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Zwraca ciąg sformatowany zgodnie z instrukcjami zawartymi w wyrażeniu formatu `String` .|  
+|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Zwraca wyrażenie sformatowane jako wartość walutowa przy użyciu symbolu waluty zdefiniowanego w panelu sterowania systemem.|  
 |<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Zwraca wyrażenie ciągu reprezentujące wartość daty/godziny.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Zwraca wyrażenie sformatowane do postaci liczby.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|Zwraca wyrażenie sformatowane jako wartość procentowa (tzn. pomnożona przez 100) ze znakiem % na końcu.|  
-|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|Zwraca liczbę całkowitą określającą początkowe położenie pierwszego wystąpienia jednego ciągu w innym.|  
-|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|Zwraca pozycję pierwszego wystąpienia jednego ciągu w innym, licząc od prawej strony ciągu.|  
-|<xref:Microsoft.VisualBasic.Strings.Join%2A>|Zwraca ciąg powstały z połączenia kilku podciągów zawartych w tablicy.|  
+|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Zwraca wyrażenie sformatowane jako liczba.|  
+|<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|Zwraca wyrażenie sformatowane jako wartość procentowa (czyli pomnożona przez 100) z końcowym znakiem%.|  
+|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|Zwraca liczbę całkowitą określającą pozycję początkową pierwszego wystąpienia jednego ciągu w innym.|  
+|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|Zwraca pozycję pierwszego wystąpienia jednego ciągu w innym, rozpoczynając od prawej strony ciągu.|  
+|<xref:Microsoft.VisualBasic.Strings.Join%2A>|Zwraca ciąg utworzony przez przyłączenie kilku podciągów zawartych w tablicy.|  
 |<xref:Microsoft.VisualBasic.Strings.LCase%2A>|Zwraca ciąg lub znak przekonwertowany na małe litery.|  
 |<xref:Microsoft.VisualBasic.Strings.Left%2A>|Zwraca ciąg zawierający określoną liczbę znaków z lewej strony ciągu.|  
-|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Zwraca liczbę całkowitą, która zawiera liczbę znaków w ciągu.|  
-|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Zwraca ciąg wyrównany do lewej zawierający podany ciąg skorygowany do zadanej długości.|  
-|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Zwraca ciąg zawierającą kopię określonego ciągu bez spacji wiodących.|  
+|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Zwraca liczbę całkowitą, która zawiera numer znaków w ciągu.|  
+|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Zwraca ciąg wyrównany do lewej zawierający określony ciąg dostosowany do określonej długości.|  
+|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Zwraca ciąg zawierający kopię określonego ciągu bez spacji wiodących.|  
 |<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Zwraca ciąg zawierający określoną liczbę znaków z ciągu.|  
-|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Zwraca wartość typu ciąg, w którym określony podciąg został zastąpiony innym podciągiem określoną liczbę razy.|  
+|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Zwraca ciąg, w którym określony podciąg został zamieniony na inny podciąg określoną liczbę razy.|  
 |<xref:Microsoft.VisualBasic.Strings.Right%2A>|Zwraca ciąg zawierający określoną liczbę znaków z prawej strony ciągu.|  
-|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Zwraca ciąg wyrównany do prawej zawierający podany ciąg skorygowany do zadanej długości.|  
-|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Zwraca ciąg zawierającą kopię określonego ciągu bez spacji.|  
-|<xref:Microsoft.VisualBasic.Strings.Space%2A>|Zwraca ciąg składający się z określonej liczby spacji.|  
-|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Zwraca nieujemną jednowymiarową tablicę zawierającą określoną liczbę podciągów.|  
-|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Zwraca wartość -1, 0 lub 1, w oparciu o wyniki porównania ciągów.|  
-|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Zwraca ciąg przekonwertowany WE wskazany.|  
-|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Zwraca ciąg lub obiekt składający się z określonego znaku powtórzone określoną liczbę razy.|  
-|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Zwraca ciąg, w którym kolejność znaków określonego ciągu została odwrócona.|  
-|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Zwraca ciąg zawierającą kopię określonego ciągu bez spacji wiodących i końcowych.|  
+|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Zwraca ciąg wyrównany do prawej zawierający określony ciąg dostosowany do określonej długości.|  
+|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Zwraca ciąg zawierający kopię określonego ciągu bez spacji końcowych.|  
+|<xref:Microsoft.VisualBasic.Strings.Space%2A>|Zwraca ciąg zawierający podaną liczbę spacji.|  
+|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Zwraca tablicę jednowymiarową (od zera) zawierającą określoną liczbę podciągów.|  
+|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Zwraca wartość-1, 0 lub 1, na podstawie wyniku porównania ciągów.|  
+|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Zwraca ciąg przekonwertowany jako określony.|  
+|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Zwraca ciąg lub obiekt składający się z określonego znaku Powtórzonego określoną liczbę razy.|  
+|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Zwraca ciąg, w którym kolejność znaków określonego ciągu jest odwrócona.|  
+|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Zwraca ciąg zawierający kopię określonego ciągu bez spacji wiodących i końcowych.|  
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Zwraca ciąg lub znak zawierający określony ciąg przekonwertowany na wielkie litery.|  
   
- Możesz użyć [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) instrukcję, aby określić, czy ciągi są porównywane, przy użyciu tekstu bez uwzględniania wielkości liter sortowania kolejności określane przez ustawienia regionalne systemu (`Text`) lub przez wewnętrzne binarne reprezentacje znaków () `Binary`). Domyślna metoda porównania tekstu jest `Binary`.  
+ Możesz użyć instrukcji [Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) , aby określić, czy ciągi są porównywane przy użyciu kolejności sortowania tekstu nieuwzględniającego wielkości liter, określonego przez ustawienia regionalne systemu`Text`() lub wewnętrzne reprezentacje binarne znaków (`Binary`). Domyślną metodą porównywania tekstu jest `Binary`.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `UCase` funkcja zwraca wersję z wielkimi literami ciągu.  
+ Ten przykład używa funkcji `UCase` , aby zwrócić wielką wersję ciągu.  
   
  [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `LTrim` funkcję, aby odjąć wiodące spacje oraz `RTrim` funkcji końcowe spacje od zmiennej ciągu. Używa ona `Trim` funkcję, aby rozłożyć oba rodzaje miejsca do magazynowania.  
+ Ten przykład używa funkcji `LTrim` , aby rozdzielić wiodące spacje i funkcję, `RTrim` aby rozdzielić spacje ze zmiennej ciągu. Używa funkcji, `Trim` aby rozdzielić oba typy spacji.  
   
  [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `Mid` funkcja zwraca określoną liczbę znaków z ciągu.  
+ W tym przykładzie `Mid` funkcja Zwraca określoną liczbę znaków z ciągu.  
   
  [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `Len` aby wrócić liczbę znaków w ciągu.  
+ Ten przykład używa `Len` do zwracania liczby znaków w ciągu.  
   
  [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `InStr` funkcję, aby wrócić położenie pierwszego wystąpienia jednego ciągu w innym.  
+ Ten przykład używa funkcji `InStr` , aby zwrócić pozycję pierwszego wystąpienia jednego ciągu w innym.  
   
  [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Przykład  
- Ten przykład pokazuje różne przypadki użycia `Format` funkcji do formatowania wartości przy użyciu zarówno `String` formatów i formatów zdefiniowanych przez użytkownika. Dla separatora daty (`/`), separatora godziny (`:`) oraz wskaźników AM/PM (`t` i `tt`), rzeczywiste formatowanie wyniku wyświetlanego w systemie zależy od ustawień regionalnych w kodzie. Gdy godziny i daty są wyświetlane w środowisku programistycznym, krótki format czasu i krótki format daty kodu są używane.  
+ W tym przykładzie pokazano różne zastosowania `Format` funkcji do formatowania wartości `String` przy użyciu formatów i formatów zdefiniowanych przez użytkownika. W przypadku separatora daty`/`(), separatora`:`czasu () i wskaźników am/pm (`t` i `tt`) rzeczywiste sformatowane dane wyjściowe wyświetlane przez system są zależne od ustawień regionalnych, których używa kod. Gdy godziny i daty są wyświetlane w środowisku deweloperskim, używany jest format krótki czas i krótki format daty dla ustawień regionalnych.  
   
 > [!NOTE]
->  Dla ustawień regionalnych, które używają zegara 24-godzinnego, wskaźniki AM/PM (`t` i `tt`) nie będą niczego wyświetlać.  
+> Dla ustawień regionalnych, które używają zegara 24-godzinnego, wskaźniki am/pm (`t` i `tt`) nie wyświetlają niczego.  
   
  [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   

@@ -12,15 +12,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 059e823110686a2b939c9664fa5b67e4041c3486
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6fa8de1a561e59e00d5bd9e78172d78b417aeff0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740313"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951964"
 ---
 # <a name="cordebugcodeinvokekind-enumeration"></a>Wyliczenie CorDebugCodeInvokeKind
-W tym artykule opisano, jak eksportowanych funkcji wywołuje kod zarządzany.  
+Opisuje sposób, w jaki wyeksportowana funkcja wywołuje kod zarządzany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,24 +37,24 @@ typedef enum CorDebugCodeInvokeKind
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`CODE_INVOKE_KIND_NONE`|Jeśli żadnego kodu zarządzanego wywoływaną przez tę metodę, ma znajdować się później przez jawne zdarzenia lub punkty przerwania.<br /><br /> --lub--<br /><br /> Możemy po prostu pominąć część kodu zarządzanego, które wywołuje ta metoda, ponieważ nie istnieje łatwy sposób można zatrzymać na nim.<br /><br /> --lub--<br /><br /> Metoda nigdy nie mogą wywoływać kodu zarządzanego.|  
-|`CODE_INVOKE_KIND_RETURN`|Ta metoda wywoła kodu zarządzanego za pomocą instrukcji return. Przechodzenie krok po kroku, powinien pojawić się w następnym kodu zarządzanego.|  
-|`CODE_INVOKE_KIND_TAILCALL`|Ta metoda wywoła kodu zarządzanego za pośrednictwem wywołania tail. Przechodzenie z jednego i Krokowe przechodzenie przez dowolny instrukcje wywołanie powinno pojawić się w kodu zarządzanego.|  
+|`CODE_INVOKE_KIND_NONE`|Jeśli jakikolwiek kod zarządzany jest wywoływany przez tę metodę, będzie musiał znajdować się w nim jawne zdarzenia lub punkty przerwania.<br /><br /> --lub--<br /><br /> Możemy po prostu zrezygnować z kodu zarządzanego ta metoda wywołuje, ponieważ nie ma prostego sposobu na jej zatrzymanie.<br /><br /> --lub--<br /><br /> Metoda może nigdy nie wywołać kodu zarządzanego.|  
+|`CODE_INVOKE_KIND_RETURN`|Ta metoda wywoła kod zarządzany za pośrednictwem instrukcji return. Należy wzważyć przy następnym zarządzanym kodzie.|  
+|`CODE_INVOKE_KIND_TAILCALL`|Ta metoda wywoła kod zarządzany za pośrednictwem wywołania tail. Wykonywanie pojedynczych instrukcji wywołania i przechodzenie do nich powinno dotrzeć do kodu zarządzanego.|  
   
 ## <a name="remarks"></a>Uwagi  
- To wyliczenie jest używane przez [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) metodę w celu udostępnienia informacji na temat krokowe wykonywanie kodu zarządzanego.  
+ To wyliczenie jest używane przez metodę [Metoda ICorDebugProcess6:: GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) w celu uzyskania informacji na temat wykonywania kroków w kodzie zarządzanym.  
   
 > [!NOTE]
->  To wyliczenie jest przeznaczona do użytku w .NET Native tylko w scenariuszach debugowania.  
+> To wyliczenie jest przeznaczone do użycia tylko w scenariuszach debugowania .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

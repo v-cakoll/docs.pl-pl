@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: f8b426dc0e1e180afbfccce50d3b45774991a572
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 594ba4f289012e775e93acba98056b60bdd94cbd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301349"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927745"
 ---
-# <a name="add-element-for-appsettings"></a>\<Dodaj >, element dla \<appSettings >
+# <a name="add-element-for-appsettings"></a>\<Dodaj > element dla \<AppSettings >
 
-Dodaje ustawienia aplikacji niestandardowych.
+Dodaje niestandardowe ustawienie aplikacji.
 
-[ **\<Konfiguracja >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+[ **\<> konfiguracji**](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
 
 ## <a name="syntax"></a>Składnia
@@ -36,14 +36,14 @@ Dodaje ustawienia aplikacji niestandardowych.
 
 |           | Opis |
 | --------- | ----------- |
-| **Klucz**   | Atrybut wymagany.<br><br>Określa nazwę klucz do dodania. |
-| **value** | Atrybut wymagany.<br><br>Określa wartość klucz do dodania. |
+| **Klucz**   | Atrybut wymagany.<br><br>Określa nazwę klucza do dodania. |
+| **value** | Atrybut wymagany.<br><br>Określa wartość klucza do dodania. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Zawiera ustawienia aplikacji niestandardowych, takich jak ścieżki do plików, adresy URL usługi sieci Web XML lub inne informacje konfiguracji niestandardowej dla aplikacji. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Zawiera niestandardowe ustawienia aplikacji, takie jak ścieżki plików, adresy URL usług sieci Web XML lub inne niestandardowe informacje o konfiguracji dla aplikacji. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
@@ -51,7 +51,7 @@ Brak
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak dodać ustawienie Konfiguracja niestandardowa nazwa aplikacji:
+Poniższy przykład pokazuje, jak dodać niestandardowe ustawienie konfiguracji dla nazwy aplikacji:
 
 ```xml
 <appSettings>
@@ -59,7 +59,7 @@ Poniższy przykład pokazuje, jak dodać ustawienie Konfiguracja niestandardowa 
 </appSettings>
 ```
 
-W poniższym przykładzie użyto `<add>` elementu, aby zdefiniować dwa ustawienia zgodności w aplikacji ASP.NET:
+Poniższy przykład używa elementu, `<add>` aby zdefiniować dwa ustawienia zgodności w aplikacji ASP.NET:
 
 ```xml
 <appSettings>
@@ -70,4 +70,4 @@ W poniższym przykładzie użyto `<add>` elementu, aby zdefiniować dwa ustawien
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schemat pliku konfiguracji dla .NET Framework](../index.md)

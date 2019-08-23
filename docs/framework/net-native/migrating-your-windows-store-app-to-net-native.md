@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c830b7097d12017348d8669071ec6d7c122bfe44
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: ac21e8aa67eabcb3e837cb5eca02d1145b765946
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68364077"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941736"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native
 
@@ -55,7 +55,7 @@ ms.locfileid: "68364077"
 
 Na przykład powiązanie danych wymaga, aby aplikacja mogła mapować nazwy właściwości do funkcji. W programie .NET dla aplikacji do sklepu Windows środowisko uruchomieniowe języka wspólnego automatycznie używa odbicia w celu zapewnienia tej możliwości dla typów zarządzanych i publicznie dostępnych typów natywnych. W .NET Native kompilator automatycznie zawiera metadane dla typów, do których są powiązane dane.
 
-Kompilator .NET Native może również obsługiwać powszechnie używane typy ogólne, takie jak <xref:System.Collections.Generic.List%601> i <xref:System.Collections.Generic.Dictionary%602>, które działają bez konieczności stosowania jakichkolwiek wskazówek lub dyrektyw. [Dynamiczne](~/docs/csharp/language-reference/keywords/dynamic.md) słowo kluczowe jest również obsługiwane w ramach pewnych limitów.
+Kompilator .NET Native może również obsługiwać powszechnie używane typy ogólne, takie jak <xref:System.Collections.Generic.List%601> i <xref:System.Collections.Generic.Dictionary%602>, które działają bez konieczności stosowania jakichkolwiek wskazówek lub dyrektyw. [Dynamiczne](../../csharp/language-reference/keywords/dynamic.md) słowo kluczowe jest również obsługiwane w ramach pewnych limitów.
 
 > [!NOTE]
 > Należy dokładnie przetestować wszystkie dynamiczne ścieżki kodu podczas przenoszenia aplikacji do .NET Native.
@@ -129,7 +129,7 @@ W poniższych sekcjach zamieszczono listę nieobsługiwanych scenariuszy i inter
 
 - Dynamiczne tworzenie tablic wielowymiarowych nie jest obsługiwane. Takie tablice są zwykle tworzone przez wywołanie przeciążenia <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> metody zawierającej `lengths` parametr lub przez wywołanie <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> metody.
 
-- Tablice wielowymiarowe, które mają co najmniej cztery wymiary, nie są obsługiwane. oznacza to, że <xref:System.Array.Rank%2A?displayProperty=nameWithType> ich wartość właściwości jest równa co najmniej cztery. Zamiast tego używaj [tablic nieregularnych](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (tablicowych tablic). Na przykład `array[x,y,z]` jest nieprawidłowa, ale `array[x][y][z]` nie jest.
+- Tablice wielowymiarowe, które mają co najmniej cztery wymiary, nie są obsługiwane. oznacza to, że <xref:System.Array.Rank%2A?displayProperty=nameWithType> ich wartość właściwości jest równa co najmniej cztery. Zamiast tego używaj [tablic nieregularnych](../../csharp/programming-guide/arrays/jagged-arrays.md) (tablicowych tablic). Na przykład `array[x,y,z]` jest nieprawidłowa, ale `array[x][y][z]` nie jest.
 
 - WARIANCJA dla tablic wielowymiarowych nie jest obsługiwana i <xref:System.InvalidCastException> powoduje wyjątek w czasie wykonywania.
 
@@ -668,4 +668,4 @@ Włączanie .NET Native w bibliotece testów jednostkowych dla projektu aplikacj
 - [Wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Omówienie programu .NET dla aplikacji do sklepu Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
-- [Obsługa programu .NET Framework dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Obsługa programu .NET Framework dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

@@ -5,22 +5,22 @@ ms.technology: dotnet-standard
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 308725ecc139d3c95ddff6bdf2d75746750673ce
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: a5c2fb203a1a6975d2b30e47528b15a9005a2583
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170853"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916024"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>Dane wejściowe obiektu XmlDataDocument klasy XslTransform
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w programie .NET Framework 2.0. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
+> <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w .NET Framework 2,0. Można wykonać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- Microsoft .NET Framework implementuje Model obiektu dokumentu (DOM) XML, aby zapewnić dostęp do danych w dokumentach XML i dodatkowych klas do odczytu, zapisu i nawigacja w dokumentach XML. <xref:System.Xml.XmlDataDocument>Znajdujące się w <xref:System.Xml> przestrzeni nazw, zapewnia możliwość zsynchronizować z danymi relacyjnymi w relacyjnych dostęp do danych <xref:System.Data.DataSet>. Jednocześnie można wyświetlać i manipulowania XML ze strukturą za pośrednictwem relacyjnych reprezentacja <xref:System.Data.DataSet> i umożliwiają manipulowanie XML lub częściową strukturą, za pośrednictwem modelu DOM reprezentacja <xref:System.Xml.XmlDataDocument>. <xref:System.Xml.XmlDataDocument> w związku z tym przekracza granice XML i relacyjnych podejść.  
+ Microsoft .NET Framework implementuje Document Object Model XML (DOM), aby zapewnić dostęp do danych w dokumentach XML i dodatkowych klasach do odczytu, zapisu i nawigowania w dokumentach XML. Program, który znajduje <xref:System.Xml> się w przestrzeni nazw, zapewnia relacyjny dostęp do danych z możliwością synchronizowania z danymi relacyjnymi w <xref:System.Data.DataSet>. <xref:System.Xml.XmlDataDocument> Możesz jednocześnie wyświetlać strukturalny kod XML i manipulować nim za pomocą relacyjnej <xref:System.Data.DataSet> reprezentacji lub manipulować częściowo strukturalnym kodem XML za pomocą reprezentacji <xref:System.Xml.XmlDataDocument>modelu DOM. W <xref:System.Xml.XmlDataDocument> związku z tym przecina granice XML i relacyjne światy.  
   
- Jeśli dane są przechowywane w strukturze relacyjnej, ma być użyty jako wejście do transformacji XSLT można załadować danych relacyjnych w <xref:System.Data.DataSet> i powiąż ją z <xref:System.Xml.XmlDataDocument>. <xref:System.Xml.XPath.XPathNavigator>, Dane wejściowe <xref:System.Xml.Xsl.XslTransform>, jest wdrażana w <xref:System.Xml.XmlDataDocument> za pośrednictwem <xref:System.Xml.XPath.IXPathNavigable> interfejsu. Wykonując opartego na danych relacyjnych, załadowanie go do <xref:System.Data.DataSet>i za pomocą synchronizacji w ramach <xref:System.Xml.XmlDataDocument>, dane relacyjne mogą teraz zawierać przekształcenia XSLT na nich wykonane.  
+ Jeśli dane są przechowywane w strukturze relacyjnej i chcesz, aby były wprowadzane do transformacji XSLT, można załadować dane relacyjne do <xref:System.Data.DataSet> i skojarzyć je <xref:System.Xml.XmlDataDocument>z. , Dane wejściowe <xref:System.Xml.Xsl.XslTransform>do <xref:System.Xml.XmlDataDocument> , są<xref:System.Xml.XPath.IXPathNavigable> implementowane przez interfejs. <xref:System.Xml.XPath.XPathNavigator> Pobierając dane relacyjne, ładując je do <xref:System.Data.DataSet>i korzystając z synchronizacji <xref:System.Xml.XmlDataDocument>w ramach, dane relacyjne mogą teraz mieć przekształcenia XSLT wykonywane na nim.  
   
- Aby uzyskać więcej informacji na temat stosowania transformacji na dane relacyjne zobacz [stosowanie przekształcenia XSLT do zestawu danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md).  
+ Aby uzyskać więcej informacji na temat stosowania transformacji do danych relacyjnych, zobacz [stosowanie transformacji XSLT do zestawu danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

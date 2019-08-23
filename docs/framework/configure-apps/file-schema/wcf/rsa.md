@@ -2,18 +2,18 @@
 title: <rsa>
 ms.date: 03/30/2017
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
-ms.openlocfilehash: 0e307069bd3a98153cc66147ba7bcf511cf13a8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd8e5ab11a7c019a8fe967f1c14b88a922a16c33
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670663"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934735"
 ---
-# <a name="rsa"></a>\<rsa>
-Bezpieczny klient WCF łączący punkt końcowy o tej tożsamości weryfikuje czy wnioski przedstawione przez serwer zawierają roszczenia, który zawiera klucz publiczny RSA użyta do skonstruowania tej tożsamości.  
+# <a name="rsa"></a>\<> RSA
+Bezpieczny klient WCF, który nawiązuje połączenie z punktem końcowym z tą tożsamością, sprawdza, czy oświadczenia przedstawione przez serwer zawierają oświadczenie zawierające klucz publiczny RSA użyty do skonstruowania tej tożsamości.  
   
- \<identity>  
-\<rsa>  
+ \<> tożsamości  
+\<> RSA  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -22,13 +22,13 @@ Bezpieczny klient WCF łączący punkt końcowy o tej tożsamości weryfikuje cz
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|value|Opcjonalny ciąg. Wartość klucza publicznego RSA porównana z na komputerze klienckim.|  
+|value|Opcjonalny ciąg. Wartość klucza publicznego RSA do porównania z klientem programu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -37,15 +37,15 @@ Bezpieczny klient WCF łączący punkt końcowy o tej tożsamości weryfikuje cz
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Określa tożsamość usługi, aby zostać uwierzytelnionym przez klienta.|  
+|[\<> tożsamości](identity.md)|Określa tożsamość usługi do uwierzytelnienia przez klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
- Sprawdzanie RSA umożliwia takie ograniczenie uwierzytelniania do pojedynczego certyfikatu na podstawie jego klucza RSA lub wygenerowane swoją własną wartością klucza RSA. Ten umożliwia bardziej rygorystyczne uwierzytelnianie określonego klucza RSA kosztem usługi nie jest już współpracuje z istniejącymi klientami, zmiana wartości klucza RSA.  
+ Sprawdzanie RSA umożliwia ograniczenie uwierzytelniania do pojedynczego certyfikatu na podstawie jego klucza RSA lub wygenerowanie własnej wartości klucza RSA. Pozwala to na bardziej rygorystyczne uwierzytelnianie określonego klucza RSA kosztem usługi nie działa już z istniejącymi klientami, jeśli wartość klucza RSA zostanie zmieniona.  
   
- Aby uzyskać więcej informacji o weryfikacji usługi do klienta za pomocą tożsamości, zobacz [uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Aby uzyskać więcej informacji o używaniu tożsamości do sprawdzania poprawności usługi dla klienta, zobacz [tożsamość usługi i uwierzytelnianie](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod konfiguracji określa wartość klucza publicznego certyfikatu X.509, który jest używany do uwierzytelniania serwera.  
+ Poniższy kod konfiguracji określa wartość klucza publicznego certyfikatu X. 509, który jest używany do uwierzytelniania serwera.  
   
 ```xml  
 <identity>
@@ -59,5 +59,5 @@ Bezpieczny klient WCF łączący punkt końcowy o tej tożsamości weryfikuje cz
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.RsaEndpointIdentity>
-- [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Uwierzytelnianie i tożsamość usług](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<> tożsamości](identity.md)

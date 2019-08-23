@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: abfb91c61ef72bfc1626b4cc4dcea42b75e2ab35
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: cb54ef372e6da551b95f1edf61e3844b9dcba4c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040241"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950040"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Przewodnik: tworzenie kontrolki złożonej za pomocą Visual Basic
 Kontrolki złożone zapewniają metodę, za pomocą której można tworzyć i ponownie używać niestandardowych interfejsów graficznych. Formant złożony jest zasadniczo składnikiem z reprezentacją wizualną. W związku z tym może składać się z co najmniej jednego Windows Forms kontrolek, składników lub bloków kodu, który może zwiększyć funkcjonalność, sprawdzając dane wejściowe użytkownika, modyfikując właściwości wyświetlania lub wykonując inne zadania wymagane przez autora. Kontrolki złożone mogą być umieszczane na Windows Forms w taki sam sposób jak w przypadku innych kontrolek. W pierwszej części tego przewodnika utworzysz prostą kontrolkę złożoną o nazwie `ctlClock`. W drugiej części przewodnika rozszerzono funkcjonalność programu `ctlClock` przez dziedziczenie.
@@ -37,7 +37,7 @@ Kontrolki złożone zapewniają metodę, za pomocą której można tworzyć i po
 3. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy **UserControl1. vb**, a następnie kliknij polecenie **Zmień nazwę**. Zmień nazwę pliku na `ctlClock.vb`. Kliknij przycisk **tak** po wyświetleniu monitu, jeśli chcesz zmienić nazwy wszystkich odwołań do elementu kodu "UserControl1".
 
     > [!NOTE]
-    >  Domyślnie formant złożony dziedziczy z <xref:System.Windows.Forms.UserControl> klasy dostarczonej przez system. <xref:System.Windows.Forms.UserControl> Klasa zawiera funkcje wymagane przez wszystkie kontrolki złożone i implementuje standardowe metody i właściwości.
+    > Domyślnie formant złożony dziedziczy z <xref:System.Windows.Forms.UserControl> klasy dostarczonej przez system. <xref:System.Windows.Forms.UserControl> Klasa zawiera funkcje wymagane przez wszystkie kontrolki złożone i implementuje standardowe metody i właściwości.
 
 4. W menu **plik** kliknij polecenie **Zapisz wszystko** , aby zapisać projekt.
 
@@ -184,7 +184,7 @@ Kontrolki złożone zapewniają metodę, za pomocą której można tworzyć i po
 5. W Eksplorator rozwiązań Przeglądaj bieżące projekty.
 
     > [!NOTE]
-    >  Plik o nazwie **ctlAlarmClock. vb** został dodany do bieżącego projektu.
+    > Plik o nazwie **ctlAlarmClock. vb** został dodany do bieżącego projektu.
 
 ### <a name="adding-the-alarm-properties"></a>Dodawanie właściwości alarmu
  Właściwości są dodawane do dziedziczonej kontrolki w taki sam sposób, w jaki są dodawane do kontrolki złożonej. Teraz użyj składni deklaracji właściwości, aby dodać dwie właściwości do kontrolki: `AlarmTime`, w której będzie przechowywana wartość daty i godziny, w której ma się pojawić alarm, i `AlarmSet`wskazująca, czy alarm jest ustawiony.
@@ -230,10 +230,10 @@ Kontrolki złożone zapewniają metodę, za pomocą której można tworzyć i po
 2. Kliknij `lblDisplay` (część wyświetlania kontrolki) i Wyświetl okno właściwości.
 
     > [!NOTE]
-    >  Wszystkie właściwości są wyświetlane, są wygaszone. Oznacza to, że te właściwości są natywne `lblDisplay` i nie można ich modyfikować ani uzyskać do nich dostępu w okno właściwości. Domyślnie formanty zawarte w kontrolce złożonej są `Private`, a ich właściwości nie są dostępne w żaden sposób.
+    > Wszystkie właściwości są wyświetlane, są wygaszone. Oznacza to, że te właściwości są natywne `lblDisplay` i nie można ich modyfikować ani uzyskać do nich dostępu w okno właściwości. Domyślnie formanty zawarte w kontrolce złożonej są `Private`, a ich właściwości nie są dostępne w żaden sposób.
 
     > [!NOTE]
-    >  Jeśli chcesz, aby inni użytkownicy formantu złożonego mieli dostęp do jego wewnętrznych formantów, zadeklaruj je jako `Public` lub `Protected`. Umożliwi to Ustawianie i modyfikowanie właściwości kontrolek zawartych w kontrolce złożonej przy użyciu odpowiedniego kodu.
+    > Jeśli chcesz, aby inni użytkownicy formantu złożonego mieli dostęp do jego wewnętrznych formantów, zadeklaruj je jako `Public` lub `Protected`. Umożliwi to Ustawianie i modyfikowanie właściwości kontrolek zawartych w kontrolce złożonej przy użyciu odpowiedniego kodu.
 
 3. <xref:System.Windows.Forms.Label> Dodaj kontrolkę do kontrolki złożonej.
 
@@ -298,7 +298,7 @@ Kontrolki złożone zapewniają metodę, za pomocą której można tworzyć i po
      Dodanie tego kodu wykonuje kilka zadań. `Overrides` Instrukcja kieruje formant do użycia tej metody zamiast metody, która była dziedziczona z kontrolki podstawowej. Gdy ta metoda jest wywoływana, wywołuje metodę, która zastąpi przez wywoływanie `MyBase.Timer1_Tick` instrukcji, co zapewnia, że wszystkie funkcje wbudowane w pierwotnej kontrolce są odtwarzane w tym formancie. Następnie uruchamia dodatkowy kod w celu uwzględnienia funkcji alarmu. Migająca kontrolka etykieta zostanie wyświetlona, gdy wystąpi alarm, i słychać dźwięk dźwiękowy.
 
     > [!NOTE]
-    >  Ponieważ przesłaniasz dziedziczonego programu obsługi zdarzeń, nie trzeba określać zdarzenia za pomocą `Handles` słowa kluczowego. Zdarzenie zostało już podłączane. Wszystkie zastępowanie są implementacją programu obsługi.
+    > Ponieważ przesłaniasz dziedziczonego programu obsługi zdarzeń, nie trzeba określać zdarzenia za pomocą `Handles` słowa kluczowego. Zdarzenie zostało już podłączane. Wszystkie zastępowanie są implementacją programu obsługi.
 
      Kontrola zegara alarmu jest niemal ukończona. Jedyną czynnością, która pozostanie, jest zaimplementowanie sposobu jej wyłączenia. W tym celu należy dodać kod do `lblAlarm_Click` metody.
 

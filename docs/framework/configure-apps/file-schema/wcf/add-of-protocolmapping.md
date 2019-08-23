@@ -2,15 +2,15 @@
 title: <add> dla <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: 85d09c920de2ca1ab4971551ff98ea58c4492f44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df69b5f8a79489b722c1074f118b9c6f6e8e363d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704495"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926669"
 ---
-# <a name="add-of-protocolmapping"></a>\<Dodaj > z \<protocolMapping >
-Reprezentuje domyślne mapowanie protokołu pomiędzy schematem protokołu transportu (np. http, net.tcp, net.pipe, itp.) a powiązaniem Windows Communication Foundation (WCF). Podczas tworzenia domyślne punkty końcowe w czasie wykonywania, WCF analizuje skonfigurowanego mapowania i decyduje o tym, na które powiązania do użycia dla określonego na podstawie adresu.  
+# <a name="add-of-protocolmapping"></a>\<Dodawanie > \<protocolMapping >
+Reprezentuje domyślne mapowanie protokołu między schematem protokołu transportowego (np. http, net. TCP, net. pipe itp.) i powiązaniem Windows Communication Foundation (WCF). Podczas tworzenia domyślnych punktów końcowych w środowisku uruchomieniowym środowisko WCF przegląda skonfigurowane mapowania i decyduje o tym, które powiązanie ma być używane dla określonego adresu.  
   
  \<system.serviceModel>  
 \<protocolMapping >  
@@ -33,9 +33,9 @@ Reprezentuje domyślne mapowanie protokołu pomiędzy schematem protokołu trans
   
 |Element|Opis|  
 |-------------|-----------------|  
-|powiązanie|Ciąg określający typ powiązania stosowanego dla punktu końcowego podczas domyślnego tworzenia punktu końcowego.|  
-|bindingConfiguration|Ciąg określający nazwę sekcji konfiguracji powiązania można odwoływać się.|  
-|schemat|Schematem protokołu transportu, która ma być używany dla domyślnego punktu końcowego.|  
+|powiązanie|Ciąg określający typ powiązania, które ma być używane dla punktu końcowego podczas domyślnego tworzenia punktu końcowego.|  
+|bindingConfiguration|Ciąg określający nazwę sekcji konfiguracji powiązania, do której ma zostać utworzone odwołanie.|  
+|schemat|Schemat protokołu transportowego, który ma być używany dla domyślnego punktu końcowego.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -44,10 +44,10 @@ Reprezentuje domyślne mapowanie protokołu pomiędzy schematem protokołu trans
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Reprezentuje sekcję konfiguracji do definiowania domyślnego mapowania protokołu pomiędzy schematami protokołu transportu (np. http, net.tcp, net.pipe, itp.) i powiązania Windows Communication Foundation (WCF).|  
+|[\<protocolMapping >](protocolmapping.md)|Reprezentuje sekcję konfiguracji definiującą domyślne mapowania protokołów między schematami protokołu transportowego (np. http, net. TCP, net. pipe itp.) i powiązaniami Windows Communication Foundation (WCF).|  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie konfiguracji zawiera domyślne mapowanie protokołu w pliku machine.config. Możesz przesłonić to domyślne mapowanie na poziomie komputera przez zmodyfikowanie pliku machine.config. Lub jeśli chcesz tylko jej zastąpienie w zakresie aplikacji, można zastąpić w tej sekcji w pliku konfiguracyjnym aplikacji i zmienić mapowanie schematów pojedynczy protokół.  
+ Poniższy przykład konfiguracji przedstawia domyślne mapowanie protokołu w pliku Machine. config. To mapowanie domyślne można zastąpić na poziomie komputera, modyfikując plik Machine. config. Lub jeśli chcesz, aby przesłonić ją tylko w ramach zakresu aplikacji, możesz zastąpić tę sekcję w pliku konfiguracji aplikacji i zmienić mapowanie poszczególnych schematów protokołu.  
   
 ```xml  
 <protocolMapping>

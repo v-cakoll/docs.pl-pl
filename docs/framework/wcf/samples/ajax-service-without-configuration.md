@@ -2,22 +2,22 @@
 title: Usługa AJAX bez konfiguracji
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-ms.openlocfilehash: f5ebc952fcc6c2ca4c7272a90dc1929d4b4a0eae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24f07193b955e2b4877ac2e9302a7be0cd879676
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002823"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913342"
 ---
 # <a name="ajax-service-without-configuration"></a>Usługa AJAX bez konfiguracji
-W tym przykładzie pokazano, jak używać usług Windows Communication Foundation (WCF) do tworzenia podstawowej usługi ASP.NET asynchronicznych w języku JavaScript i XML (technologia AJAX) (usługa, której będziesz mieć dostęp przy użyciu kodu JavaScript w kliencie przeglądarki sieci Web), bez używania konfiguracji Ustawienia. Usługa używa specjalnej składni w pliku SVC, można automatycznie włączyć punkt końcowy interfejsu AJAX.  
+Ten przykład pokazuje, jak używać programu Windows Communication Foundation (WCF) do tworzenia podstawowej usługi ASP.NET asynchronicznej języka JavaScript i XML (AJAX) (usługi, do której można uzyskać dostęp za pomocą kodu JavaScript z klienta przeglądarki sieci Web) bez użycia żadnej konfiguracji Ustawienia. Usługa używa specjalnej składni w pliku SVC, aby automatycznie włączyć punkt końcowy AJAX.  
   
- Obsługa technologii AJAX w programie WCF jest zoptymalizowany do użytku z programem ASP.NET AJAX za pośrednictwem `ScriptManager` kontroli. Przykład przy użyciu usługi WCF przy użyciu rozszerzeń ASP.NET AJAX, zobacz [przykłady Ajax](ajax.md).  
+ Obsługa technologii AJAX w programie WCF jest zoptymalizowana pod kątem użycia z `ScriptManager` ASP.NET AJAX przez formant. Aby zapoznać się z przykładem użycia programu WCF z ASP.NET AJAX, zobacz [przykłady AJAX](ajax.md).  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Ten przykład tworzy po AJAX Service przy użyciu protokołu HTTP POST. Zgodnie z opisem w [podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) przykładzie <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> służy do obsługi usługi.  
+ Ten przykład kompiluje się w usłudze AJAX przy użyciu protokołu HTTP POST. Zgodnie z opisem <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> w [podstawowym przykładzie usługi AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) jest używany do hostowania usługi.  
 
 ```svc
 <%ServiceHost  
@@ -28,27 +28,27 @@ W tym przykładzie pokazano, jak używać usług Windows Communication Foundatio
 %>  
 ```
 
- <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> automatycznie dodaje <xref:System.ServiceModel.Description.WebScriptEndpoint> do usługi. Jeśli żadne zmiany konfiguracji potrzebne do endpoint, `<system.ServiceModel>` sekcji można całkowicie usunięte z pliku Web.config dla usługi. Plik Web.config zawiera kilka ustawień platformy ASP.NET, które są używane przez ConfigFreeClientPage.aspx. Jeśli uprzednio nie tak, udało się usunąć cały plik Web.config.  
+ <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>automatycznie dodaje <xref:System.ServiceModel.Description.WebScriptEndpoint> do usługi. Jeśli nie trzeba wprowadzać zmian w konfiguracji punktu końcowego, `<system.ServiceModel>` sekcja może zostać całkowicie usunięta z pliku Web. config dla usługi. Plik Web. config zawiera kilka ustawień ASP.NET, które są używane przez ConfigFreeClientPage. aspx. Jeśli tak się nie dzieje, można usunąć cały plik Web. config.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ConfigFreeAjaxService`  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonać instrukcje instalacji [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że instrukcje instalacji zostały wykonane w [procedurze jednorazowej konfiguracji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Skompiluj rozwiązanie ConfigFreeAjaxService.sln, zgodnie z opisem w [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Skompiluj rozwiązanie ConfigFreeAjaxService. sln zgodnie z opisem w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Przejdź do `http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx` (nie należy otwierać ConfigFreeClientPage.aspx w przeglądarce z katalogu projektu).  
+3. Przejdź do `http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx` (nie otwieraj ConfigFreeClientPage. aspx w przeglądarce z katalogu projektu).  
   
 > [!NOTE]
->  Podczas uruchamiania tego przykładu, upewnij się, że uwierzytelnianie anonimowe i uwierzytelnianie Windows nie są włączone jednocześnie dla folderu ServiceModelSamples w usługach IIS. Jeśli tak jest rzeczywiście, Wyłącz uwierzytelnianie Windows. Po uruchomieniu przykładu, włączyć uwierzytelnianie Windows, a następnie uruchom "polecenie iisreset".  
+> Podczas uruchamiania tego przykładu upewnij się, że uwierzytelnianie anonimowe i uwierzytelnianie systemu Windows nie są włączone równocześnie dla folderu ServiceModelSamples w usługach IIS. W takim przypadku należy wyłączyć uwierzytelnianie systemu Windows. Po uruchomieniu przykładu Włącz uwierzytelnianie systemu Windows i uruchom polecenie "iisreset".  
   
 ## <a name="see-also"></a>Zobacz także
 

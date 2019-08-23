@@ -17,19 +17,19 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 32a2a99d5f71cb500dca467433f138a893d01e5b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58c9e0846e09774d8c97089016086ecddd2d17ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796822"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938401"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Używanie asynchronicznego gniazda serwera
-Server asynchronicznego gniazda używają modelu programowania asynchronicznego środowiska .NET Framework do przetwarzania żądania usługi sieci. <xref:System.Net.Sockets.Socket> Klasy postępuje zgodnie ze standardowym .NET Framework asynchroniczny wzorzec nazewnictwa; na przykład synchronicznego <xref:System.Net.Sockets.Socket.Accept%2A> metody odpowiada asynchroniczną <xref:System.Net.Sockets.Socket.BeginAccept%2A> i <xref:System.Net.Sockets.Socket.EndAccept%2A> metody.  
+Asynchroniczne gniazda serwera używają .NET Framework asynchronicznego modelu programowania do przetwarzania żądań obsługi sieci. Klasa <xref:System.Net.Sockets.Socket> jest zgodna ze standardowym wzorcem nazewnictwa asynchronicznego .NET Framework, na przykład <xref:System.Net.Sockets.Socket.Accept%2A> metoda synchroniczna odnosi się <xref:System.Net.Sockets.Socket.BeginAccept%2A> do <xref:System.Net.Sockets.Socket.EndAccept%2A> metod asynchronicznych i.  
   
- Asynchronicznego gniazda serwera wymaga metodę, aby zacząć akceptować żądań połączeń od sieci, metody wywołania zwrotnego do obsługi żądań połączenia i zacząć odbierać dane z sieci i metody wywołania zwrotnego do końca odbiera dane. Wszystkie te metody zostały omówione w tej sekcji.  
+ Asynchroniczne gniazdo serwera wymaga metody do rozpoczęcia akceptowania żądań połączenia z sieci, metody wywołania zwrotnego do obsługi żądań połączeń i rozpoczęcia odbierania danych z sieci oraz metody wywołania zwrotnego, która ma kończyć pobieranie danych. Wszystkie te metody zostały omówione w dalszej części tej sekcji.  
   
- W poniższym przykładzie, aby rozpocząć, akceptując żądania połączenia z siecią, Metoda `StartListening` inicjuje **gniazda** , a następnie używa **BeginAccept** zacznij akceptować nowe metody połączenia. Akceptuj metody wywołania zwrotnego jest wywoływana, gdy zostanie odebrane żądanie nowego połączenia gniazda. Odpowiada za pobieranie **gniazda** wystąpienia, która będzie obsługiwać połączenia oraz przekazywanie, **gniazda** wyłączony do wątku, który będzie przetwarzał żądanie. Implementuje metody wywołania zwrotnego Akceptuj <xref:System.AsyncCallback> delegować; zwraca wartość typu void i przyjmuje jeden parametr typu <xref:System.IAsyncResult>. Poniższy przykład jest powłoka Akceptuj metody wywołania zwrotnego.  
+ W poniższym przykładzie, aby rozpocząć akceptowanie żądań połączeń z sieci, Metoda `StartListening` inicjuje **gniazdo** , a następnie używa metody **BeginAccept** w celu rozpoczęcia przyjmowania nowych połączeń. Metoda akceptowania wywołania zwrotnego jest wywoływana, gdy w gnieździe zostanie odebrane nowe żądanie połączenia. Jest on odpowiedzialny za pobieranie wystąpienia **gniazda** , które będzie obsługiwać połączenie i przekazanie tego **gniazda** do wątku, który będzie przetwarzać żądanie. Metoda akceptowania wywołania zwrotnego <xref:System.AsyncCallback> implementuje delegata; zwraca wartość void i przyjmuje jeden parametr typu. <xref:System.IAsyncResult> Poniższy przykład to powłoka metody akceptowania wywołania zwrotnego.  
   
 ```vb  
 Sub AcceptCallback(ar As IAsyncResult)  
@@ -44,7 +44,7 @@ void AcceptCallback(IAsyncResult ar)
 }  
 ```  
   
- **BeginAccept** metoda przyjmuje dwa parametry **AsyncCallback** delegat, który wskazuje na metody wywołania zwrotnego Akceptuj i obiekt, który jest używany do przekazywania informacji o stanie do metody wywołania zwrotnego. W poniższym przykładzie nasłuchiwania **gniazda** jest przekazywany do metody wywołania zwrotnego za pośrednictwem *stanu* parametru. Ten przykład tworzy **AsyncCallback** delegata i rozpoczyna się akceptować połączenia z siecią.  
+ Metoda **BeginAccept** przyjmuje dwa parametry, delegat elementu **AsyncCallback** wskazujący na metodę Accept wywołania zwrotnego i obiekt, który jest używany do przekazywania informacji o stanie do metody wywołania zwrotnego. W poniższym przykładzie **gniazdo** nasłuchiwania jest przesyłane do metody wywołania zwrotnego za pomocą parametru *State* . Ten przykład tworzy delegata **AsyncCallback** i zaczyna akceptować połączenia z sieci.  
   
 ```vb  
 listener.BeginAccept( _  
@@ -56,9 +56,9 @@ listener.BeginAccept( _
 listener.BeginAccept(new AsyncCallback(SocketListener.AcceptCallback), listener);  
 ```  
   
- Asynchronicznego gniazda używają wątków z puli wątków systemu do przetwarzania połączenia przychodzące. Jeden wątek jest odpowiedzialny za akceptowanie połączeń, inny wątek jest używana do obsługi każdego połączenia przychodzące i inny wątek jest odpowiedzialna za odbieranie danych z połączenia. Mogą to być tym samym wątku, w zależności od tego, który wątek jest przypisywany przez puli wątków. W poniższym przykładzie <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> klasy zawiesza wykonywanie wątku głównego i sygnalizuje, można kontynuować wykonywania.  
+ Gniazda asynchroniczne używają wątków z puli wątków systemowych do przetwarzania połączeń przychodzących. Jeden wątek jest odpowiedzialny za akceptowanie połączeń, drugi wątek jest używany do obsługi każdego połączenia przychodzącego, a drugi wątek jest odpowiedzialny za odbieranie danych z połączenia. Może to być ten sam wątek, w zależności od tego, który wątek jest przypisywany przez pulę wątków. W poniższym przykładzie <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> Klasa wstrzymuje wykonywanie głównego wątku i sygnalizuje, kiedy wykonywanie może być kontynuowane.  
   
- Poniższy przykład przedstawia metodę asynchroniczną, która tworzy asynchronicznego gniazda TCP/IP na komputerze lokalnym i zaczyna akceptować połączenia. Przyjęto założenie, że dostępna jest globalna **ManualResetEvent** o nazwie `allDone`, że metoda jest składową klasy o nazwie `SocketListener`, i metodę wywołania zwrotnego o nazwie `AcceptCallback` jest zdefiniowana.  
+ Poniższy przykład przedstawia metodę asynchroniczną, która tworzy asynchroniczne gniazdo TCP/IP na komputerze lokalnym i rozpoczyna akceptowanie połączeń. Przyjęto założenie, że istnieje globalna `allDone`ManualResetEvent o nazwie, która jest elementem członkowskim klasy o nazwie `SocketListener`i że określono metodę wywołania zwrotnego `AcceptCallback` o nazwie.  
   
 ```vb  
 Public Sub StartListening()  
@@ -125,7 +125,7 @@ public void StartListening()
 }  
 ```  
   
- Metoda wywołania zwrotnego Akceptuj (`AcceptCallback` w powyższym przykładzie) odpowiada za sygnalizowanie wątku głównego aplikacji, aby kontynuować przetwarzanie, podczas nawiązywania połączenia z klientem i uruchamianie asynchronicznego odczytu danych z klienta. Poniższy przykład jest pierwszą częścią implementacji `AcceptCallback` metody. Ta sekcja metody sygnały w wątku głównym aplikacji, aby kontynuować przetwarzanie i nawiązuje połączenie z klientem. Przyjęto założenie, globalną **ManualResetEvent** o nazwie `allDone`.  
+ Metoda akceptowania wywołania zwrotnego (`AcceptCallback` w poprzednim przykładzie) jest odpowiedzialna za sygnalizowanie wątku głównego aplikacji w celu kontynuowania przetwarzania, ustanowienia połączenia z klientem i uruchomienia asynchronicznego odczytu danych z klienta. Poniższy przykład jest pierwszą częścią implementacji `AcceptCallback` metody. Ta sekcja metody informuje główny wątek aplikacji, aby kontynuować przetwarzanie i ustanawia połączenie z klientem. Przyjęto założenie , że `allDone`Global ManualResetEvent o nazwie.  
   
 ```vb  
 Public Sub AcceptCallback(ar As IAsyncResult)  
@@ -150,7 +150,7 @@ public void AcceptCallback(IAsyncResult ar)
 }  
 ```  
   
- Odczytywanie danych z gniazda klienta wymaga obiektu stanu, który przekazuje wartości między wywołania asynchroniczne. Poniższy przykład implementuje obiektu stanu do odbierania ciąg przez klienta zdalnego. Zawiera on pola dla gniazda klienta, bufor danych do odbierania danych, a <xref:System.Text.StringBuilder> tworzenia ciągu danych wysyłany przez klienta. Wprowadzenie do tych pól w obiekcie stanu umożliwia ich wartości, które mają być zachowane w wielu wywołań do odczytywania danych z gniazda klienta.  
+ Odczytywanie danych z gniazda klienta wymaga obiektu stanu, który przekazuje wartości między wywołaniami asynchronicznymi. Poniższy przykład implementuje obiekt stanu do odbioru ciągu z klienta zdalnego. Zawiera pola dla gniazda klienta, bufor danych służący do odbioru danych oraz <xref:System.Text.StringBuilder> do tworzenia ciągów danych wysyłanych przez klienta. Umieszczenie tych pól w obiekcie State pozwala zachować ich wartości między wieloma wywołaniami odczytu danych z gniazda klienta.  
   
 ```vb  
 Public Class StateObject  
@@ -171,9 +171,9 @@ public class StateObject
 }  
 ```  
   
- W sekcji `AcceptCallback` metodę, która zacznie otrzymywać dane z gniazda klienta najpierw inicjuje wystąpienie `StateObject` klasy, a następnie wywołania <xref:System.Net.Sockets.Socket.BeginReceive%2A> metodę, aby rozpocząć odczyt danych z gniazda klienta asynchronicznie.  
+ Sekcja `AcceptCallback` metody, która rozpoczyna pobieranie danych z gniazda klienta, najpierw Inicjuje wystąpienie `StateObject` <xref:System.Net.Sockets.Socket.BeginReceive%2A> klasy, a następnie wywołuje metodę, aby rozpocząć odczytywanie danych z gniazda klienta asynchronicznie.  
   
- W poniższym przykładzie pokazano pełne `AcceptCallback` metody. Przyjęto założenie, że dostępna jest globalna **ManualResetEvent** o nazwie `allDone,` , `StateObject` klasa jest zdefiniowana, a `ReadCallback` metoda jest zdefiniowana w klasie o nazwie `SocketListener`.  
+ Poniższy przykład przedstawia metodę Complete `AcceptCallback` . Przyjęto założenie, że istnieje globalna `allDone,` ManualResetEvent o `StateObject` nazwie, że `ReadCallback` Klasa jest zdefiniowana i że metoda jest zdefiniowana w klasie o `SocketListener`nazwie.  
   
 ```vb  
 Public Shared Sub AcceptCallback(ar As IAsyncResult)  
@@ -210,9 +210,9 @@ public static void AcceptCallback(IAsyncResult ar)
 }  
 ```  
   
- Ostatnią metodę, która musi zostać wdrożone dla asynchronicznego gniazda serwera jest metoda odczytu wywołania zwrotnego, która zwraca dane wysyłane przez klienta. Podobnie jak metody wywołania zwrotnego accept, metody wywołania zwrotnego odczytu jest **AsyncCallback** delegować. Ta metoda odczytuje bajtów co najmniej jeden z gniazda klienta do bufora danych, a następnie wywołuje **BeginReceive** metoda ponownie do czasu dane wysyłane przez klienta zostało zakończone. Gdy cały komunikat został odczytany z klientem, ciąg jest wyświetlany w konsoli i gniazda serwera obsługi połączenie z klientem zostało zamknięte.  
+ Ostatnia metoda, która musi być zaimplementowana dla asynchronicznego serwera gniazd, to metoda wywołania zwrotnego odczytu, która zwraca dane wysyłane przez klienta. Podobnie jak Metoda akceptowania wywołania zwrotnego, Metoda odczytu wywołania zwrotnego jest delegatem **AsyncCallback** . Ta metoda odczytuje jeden lub więcej bajtów z gniazda klienta do bufora danych, a następnie ponownie wywołuje metodę **BeginReceive** do momentu ukończenia danych wysyłanych przez klienta. Po odczytaniu całego komunikatu z klienta ciąg jest wyświetlany w konsoli programu, a gniazdo serwera obsługujące połączenie z klientem jest zamknięte.  
   
- Następujące przykładowe implementuje `ReadCallback` metody. Założono, że `StateObject` klasa jest zdefiniowana.  
+ Poniższy przykład implementuje `ReadCallback` metodę. Przyjęto założenie `StateObject` , że Klasa jest zdefiniowana.  
   
 ```vb  
 Public Shared Sub ReadCallback(ar As IAsyncResult)  
@@ -272,5 +272,5 @@ public static void ReadCallback(IAsyncResult ar)
 
 - [Używanie synchronicznego gniazda serwera](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [Przykład asynchronicznego gniazda serwera](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
-- [Wątkowość](../../../docs/standard/threading/index.md)
+- [Wątkowość](../../standard/threading/index.md)
 - [Nasłuchiwanie przy użyciu gniazd](../../../docs/framework/network-programming/listening-with-sockets.md)

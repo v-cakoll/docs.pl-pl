@@ -10,30 +10,30 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: 9efccc220bb27706448ae555db8958afb0ccd9fa
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 8252906de9a574f49617609a4cb08a1e8aa6a992
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053607"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929005"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Instrukcje: wyświetlanie podglądu wydruku w aplikacjach formularzy Windows
-Możesz użyć <xref:System.Windows.Forms.PrintPreviewDialog> sterowania, aby użytkownicy mogli wyświetlić dokument, często, zanim zostanie do wydrukowania.  
+Możesz użyć <xref:System.Windows.Forms.PrintPreviewDialog> kontrolki, aby umożliwić użytkownikom wyświetlanie dokumentu, często przed jego wydrukowaniem.  
   
- Aby to zrobić, należy określić wystąpienie <xref:System.Drawing.Printing.PrintDocument> klasy; jest to dokument do wydrukowania. Aby uzyskać więcej informacji na temat przy użyciu podglądu wydruku z <xref:System.Drawing.Printing.PrintDocument> składników, zobacz [jak: Drukowanie w formularzach Windows Forms przy użyciu podglądu wydruku](../advanced/how-to-print-in-windows-forms-using-print-preview.md).  
+ W tym celu należy określić wystąpienie <xref:System.Drawing.Printing.PrintDocument> klasy; jest to dokument do wydrukowania. Aby uzyskać więcej informacji na temat korzystania z podglądu <xref:System.Drawing.Printing.PrintDocument> wydruku ze składnikiem, zobacz [How to: Drukowanie w Windows Forms przy użyciu podglądu](../advanced/how-to-print-in-windows-forms-using-print-preview.md)wydruku.  
   
 > [!NOTE]
->  Aby użyć <xref:System.Windows.Forms.PrintPreviewDialog> kontroli w czasie wykonywania, użytkownicy muszą mieć zainstalowany na komputerze, lokalnie lub za pośrednictwem sieci, drukarki, jest częściowo sposób, w jaki <xref:System.Windows.Forms.PrintPreviewDialog> składnika określa wygląd dokumentu po wydrukowaniu.  
+> Aby można było <xref:System.Windows.Forms.PrintPreviewDialog> korzystać z kontrolki w czasie wykonywania, użytkownicy muszą mieć zainstalowaną na komputerze lokalnie lub za pomocą sieci, ponieważ jest to część określająca <xref:System.Windows.Forms.PrintPreviewDialog> sposób, w jaki ten dokument będzie wyglądał po wydrukowaniu.  
   
- <xref:System.Windows.Forms.PrintPreviewDialog> Kontrolować używa <xref:System.Drawing.Printing.PrinterSettings> klasy. Ponadto <xref:System.Windows.Forms.PrintPreviewDialog> kontrolować używa <xref:System.Drawing.Printing.PageSettings> klasy, podobnie jak <xref:System.Windows.Forms.PrintPreviewDialog> składników. Drukuj dokument określone w <xref:System.Windows.Forms.PrintPreviewDialog> kontrolki <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> właściwość odwołuje się do obu wystąpień <xref:System.Drawing.Printing.PrinterSettings> i <xref:System.Drawing.Printing.PageSettings> klasy i te, które są używane do renderowania dokumentu w oknie podglądu.  
+ Kontrolka<xref:System.Drawing.Printing.PrinterSettings>używaklasy. <xref:System.Windows.Forms.PrintPreviewDialog> Ponadto kontrolka <xref:System.Drawing.Printing.PageSettings> używa<xref:System.Windows.Forms.PrintPreviewDialog> klasy, tak jak składnik. <xref:System.Windows.Forms.PrintPreviewDialog> <xref:System.Windows.Forms.PrintPreviewDialog> Dokument wydruku określony we <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> właściwości kontrolki odwołuje się <xref:System.Drawing.Printing.PrinterSettings> do wystąpień obu klas i <xref:System.Drawing.Printing.PageSettings> i służy do renderowania dokumentu w oknie podglądu.  
   
-### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>Aby wyświetlić strony za pomocą printpreviewdialog — formant  
+### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>Aby wyświetlić strony przy użyciu kontrolki PrintPreviewDialog  
   
-- Użyj <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metodę, aby wyświetlić okno dialogowe, określając <xref:System.Drawing.Printing.PrintDocument> do użycia.  
+- Użyj metody, aby wyświetlić okno dialogowe, <xref:System.Drawing.Printing.PrintDocument> określając do użycia. <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>  
   
-     W poniższym przykładzie kodu <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Click> programu obsługi zdarzeń otwaiera wystąpienia programu <xref:System.Windows.Forms.PrintPreviewDialog> kontroli. Drukuj dokument jest określona w <xref:System.Windows.Forms.PrintDialog.Document%2A> właściwości. W poniższym przykładzie jest określony żaden dokument drukowania.  
+     W poniższym przykładzie <xref:System.Windows.Forms.Button> kodu procedura obsługi <xref:System.Windows.Forms.Control.Click> zdarzeń kontrolki <xref:System.Windows.Forms.PrintPreviewDialog> otwiera wystąpienie kontrolki. Dokument drukowania jest określony we <xref:System.Windows.Forms.PrintDialog.Document%2A> właściwości. W poniższym przykładzie nie określono dokumentu drukowania.  
   
-     Przykład wymaga, że formularz ma <xref:System.Windows.Forms.Button> kontroli <xref:System.Drawing.Printing.PrintDocument> składnika o nazwie `myDocument`, a <xref:System.Windows.Forms.PrintPreviewDialog> kontroli.  
+     Przykład wymaga, aby formularz <xref:System.Windows.Forms.Button> miał kontrolkę <xref:System.Drawing.Printing.PrintDocument> , <xref:System.Windows.Forms.PrintPreviewDialog> składnik o nazwie `myDocument`i kontrolkę.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -70,7 +70,7 @@ Możesz użyć <xref:System.Windows.Forms.PrintPreviewDialog> sterowania, aby u�
        }  
     ```  
   
-     (Visual C#, Visual C++) Umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Wizualizacja C#, C++wizualizacja) Umieść poniższy kod w Konstruktorze formularza, aby zarejestrować procedurę obsługi zdarzeń.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

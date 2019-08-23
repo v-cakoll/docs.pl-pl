@@ -7,60 +7,60 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170520"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911116"
 ---
 # <a name="in-process-side-by-side-execution"></a>Wykonywanie równoczesne i wewnątrzprocesowe
-Począwszy od programu .NET Framework 4, możesz użyć w trakcie side-by-side hostingu do uruchamiania wielu wersji środowiska uruchomieniowego języka wspólnego (CLR) w ramach jednego procesu. Domyślnie zarządzane składniki COM, uruchom z .NET Framework w wersji, które zostały skompilowane, niezależnie od wersji programu .NET Framework, który jest ładowany do procesu.  
+Począwszy od .NET Framework 4, można użyć w procesie równoczesnego hostowania do uruchamiania wielu wersji środowiska uruchomieniowego języka wspólnego (CLR) w ramach jednego procesu. Domyślnie zarządzane składniki COM są uruchamiane z .NET Framework wersją, z którą zostały skompilowane, niezależnie od wersji .NET Framework, która jest ładowana dla tego procesu.  
   
 ## <a name="background"></a>Tło  
- .NET Framework zawsze ma pod warunkiem side-by-side hostowania dotycząca aplikacje kodu zarządzanego, ale przed .NET Framework 4 nie zapewniają tej funkcji dla składników COM zarządzanych. W przeszłości zarządzanych składników COM, które zostały załadowane do procesu został uruchomiony z wersją środowiska uruchomieniowego, który został już załadowany lub z najnowszej zainstalowanej wersji programu .NET Framework. Jeśli ta wersja nie jest zgodny ze składnikiem COM, składnik może zakończyć się niepowodzeniem.  
+ .NET Framework zawsze udostępnia hosting równoczesny dla aplikacji z kodem zarządzanym, ale przed .NET Framework 4, nie zapewniał on funkcji zarządzanych składników COM. W przeszłości zarządzane składniki COM, które zostały załadowane do procesu, działały z wersją środowiska uruchomieniowego, które zostało już załadowane lub z najnowszą zainstalowaną wersją .NET Framework. Jeśli ta wersja nie jest zgodna ze składnikiem COM, składnik ten nie powiedzie się.  
   
- .NET Framework 4 zawiera nowe podejście do hostingu side-by-side, które gwarantuje, że następujące czynności:  
+ .NET Framework 4 zawiera nowe podejście do hostingu równoczesnego, które zapewnia następujące działania:  
   
-- Instalowanie nowej wersji programu .NET Framework nie ma wpływu na istniejące aplikacje.  
+- Zainstalowanie nowej wersji .NET Framework nie ma wpływu na istniejące aplikacje.  
   
-- Aplikacje są uruchamiane z wersją programu .NET Framework, które zostały skompilowane. Używają nowej wersji programu .NET Framework, chyba że wyraźnie kierowany Aby to zrobić. Jednak jest łatwiej aplikacji do przejścia do korzystania z nowej wersji programu .NET Framework.  
+- Aplikacje działają w porównaniu z wersją .NET Framework, z którą zostały skompilowane. Nie używają nowej wersji .NET Framework, chyba że jest to wyraźnie ukierunkowane. Jest to jednak łatwiejsze w aplikacjach do przechodzenia do korzystania z nowej wersji .NET Framework.  
   
-## <a name="effects-on-users-and-developers"></a>Wpływ na użytkowników i deweloperów  
+## <a name="effects-on-users-and-developers"></a>Efekty dla użytkowników i deweloperów  
   
-- **Użytkownicy końcowi i Administratorzy systemu**. Ci użytkownicy mogą teraz mają większą pewność, że przy instalacji nowej wersji środowiska uruchomieniowego, niezależnie od siebie lub za pomocą aplikacji, nie będzie mieć żadnego wpływu na swoich komputerach. Istniejące aplikacje, będą w dalszym ciągu działać tak jak przed.  
+- **Użytkownicy końcowi i Administratorzy systemu**. Ci użytkownicy mogą teraz mieć większą pewność, że podczas instalowania nowej wersji środowiska uruchomieniowego niezależnie lub z aplikacją nie będą mieć wpływu na komputery. Istniejące aplikacje będą nadal działać tak jak wcześniej.  
   
-- **Deweloperzy aplikacji**. Hosting Side-by-side prawie nie ma wpływu na deweloperów aplikacji. Domyślnie aplikacje zawsze uruchamiana w wersji programu .NET Framework, w których zostały zbudowane; to nie została zmieniona. Jednakże, deweloperzy mogą zmienić to zachowanie i skierować aplikację do uruchamiania w nowszej wersji programu .NET Framework (zobacz [Scenariusz 2](#scenarios)).  
+- **Deweloperzy aplikacji**. Hosting równoległy nie ma prawie żadnego wpływu na deweloperów aplikacji. Domyślnie aplikacje są zawsze uruchamiane w porównaniu z wersją .NET Framework, w których zostały skompilowane; Ta zmiana nie została zmieniona. Deweloperzy mogą jednak zastąpić to zachowanie i skierować aplikację do uruchamiania w nowszej wersji .NET Framework (patrz [Scenariusz 2](#scenarios)).  
   
-- **Deweloperów bibliotek i konsumentów**. Side-by-side hostingu nie rozwiązuje problemy ze zgodnością napotykane przez deweloperów biblioteki. Biblioteka, która jest ładowane bezpośrednio przez aplikację — za pośrednictwem bezpośredniego odwołania lub <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> wywołania — będzie później nadal używać środowiska uruchomieniowego <xref:System.AppDomain> jest ładowany. Należy przetestować bibliotek względem wszystkich wersji programu .NET Framework, które mają być obsługiwane. Jeśli aplikacja jest skompilowana przy użyciu środowiska uruchomieniowego .NET Framework 4, ale zawiera bibliotekę, który został zbudowany przy użyciu starszych środowiska uruchomieniowego, tej biblioteki będzie używać .NET Framework 4 środowisko uruchomieniowe także. Jednak jeśli masz aplikację, która została skompilowana przy użyciu starszych środowisko uruchomieniowe i Biblioteka, który został zbudowany przy użyciu programu .NET Framework 4, należy wymusić aplikacji również używać programu .NET Framework 4 (zobacz [Scenariusz 3](#scenarios)).  
+- **Deweloperzy biblioteki i konsumenci**. Hosting równoległy nie rozwiązuje problemów ze zgodnością, które są używane przez deweloperów biblioteki. Biblioteka, która jest bezpośrednio ładowana przez aplikację — albo za pośrednictwem bezpośredniego odwołania lub <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> wywołania — kontynuuje używanie środowiska uruchomieniowego, <xref:System.AppDomain> który jest ładowany do. Należy przetestować biblioteki dla wszystkich wersji .NET Framework, które mają być obsługiwane. Jeśli aplikacja jest kompilowana przy użyciu środowiska uruchomieniowego .NET Framework 4, ale zawiera bibliotekę, która została skompilowana przy użyciu wcześniejszego środowiska uruchomieniowego, biblioteka będzie używać środowiska uruchomieniowego .NET Framework 4. Jeśli jednak masz aplikację, która została skompilowana przy użyciu wcześniejszego środowiska uruchomieniowego i biblioteki, która została skompilowana przy użyciu .NET Framework 4, musisz wymusić, aby aplikacja korzystała również z .NET Framework 4 (patrz [Scenariusz 3](#scenarios)).  
   
-- **Zarządzane Deweloperzy składników COM**. W przeszłości składniki COM zarządzane automatycznie została uruchomiona przy użyciu najnowszej wersji środowiska uruchomieniowego zainstalowanego na komputerze. Można teraz wykonać składników modelu COM z wersją środowiska uruchomieniowego, które zostały skompilowane.  
+- **Zarządzani Deweloperzy składników modelu COM**. W przeszłości zarządzane składniki COM zostały automatycznie uruchomione przy użyciu najnowszej wersji środowiska uruchomieniowego zainstalowanej na komputerze. Teraz można wykonywać składniki COM względem wersji środowiska uruchomieniowego, które zostały skompilowane przy użyciu programu.  
   
-     Jak pokazano w poniższej tabeli, składników, które zostały utworzone przy użyciu platformy .NET Framework w wersji 1.1, można uruchomić równolegle składniki w wersji 4, ale nie działają one w wersji 2.0, 3.0 lub 3.5 składników, ponieważ side-by-side hostingu nie jest dostępny dla osób wersje.  
+     Zgodnie z poniższą tabelą składniki, które zostały skompilowane przy użyciu .NET Framework w wersji 1,1 mogą działać obok składników w wersji 4, ale nie mogą być uruchamiane z wersjami 2,0, 3,0 lub 3,5, ponieważ nie są dostępne wersje.  
   
     |Wersja programu .NET Framework|1.1|2.0 - 3.5|4|  
     |----------------------------|---------|----------------|-------|  
-    |1.1|Nie dotyczy|Nie|Yes|  
+    |1.1|Nie dotyczy|Nie|Tak|  
     |2.0 - 3.5|Nie|Nie dotyczy|Tak|  
-    |4|Yes|Tak|Nie dotyczy|  
+    |4|Tak|Tak|Nie dotyczy|  
   
 > [!NOTE]
->  Wersje programu .NET framework 3.0 i 3.5 są tworzone przyrostowo w wersji 2.0 i nie trzeba uruchamiać równolegle. Te założenia mają taką samą wersję.  
+> .NET Framework wersje 3,0 i 3,5 są kompilowane przyrostowo w wersji 2,0 i nie muszą być uruchamiane obok siebie. Są one w tej samej wersji.  
   
 <a name="scenarios"></a>   
-## <a name="common-side-by-side-hosting-scenarios"></a>Typowe scenariusze Side-by-Side hostingu  
+## <a name="common-side-by-side-hosting-scenarios"></a>Typowe scenariusze hostingu równoczesnego  
   
-- **Scenariusz 1:** Aplikacji natywnej używającej składniki COM, utworzone w starszych wersjach programu .NET Framework.  
+- **Scenariusz 1:** Aplikacja natywna, która korzysta ze składników COM utworzonych przy użyciu wcześniejszych wersji .NET Framework.  
   
-     Zainstalowane wersje programu .NET framework: .NET Framework 4 i wszystkich innych wersji systemu .NET Framework używanego przez składniki COM.  
+     Zainstalowane wersje .NET Framework: .NET Framework 4 i wszystkie pozostałe wersje .NET Framework używane przez składniki COM.  
   
-     Co należy zrobić: W tym scenariuszu nic nie rób. Składniki COM będą uruchamiane przy użyciu wersji programu .NET Framework zostały zarejestrowane w usłudze.  
+     Co należy zrobić: W tym scenariuszu nic nie rób. Składniki COM będą działać z wersją .NET Framework, w których zostały zarejestrowane.  
   
-- **Scenariusz 2**: Zarządzana aplikacja skompilowana przy użyciu platformy .NET Framework 2.0 z dodatkiem SP1, który chcesz Uruchom z .NET Framework 2.0, ale są gotowi do uruchamiania na .NET Framework 4 nie jest w wersji 2.0.  
+- **Scenariusz 2**: Aplikacja zarządzana utworzona przy użyciu .NET Framework 2,0 SP1, która ma być uruchamiana z .NET Framework 2,0, ale chce działać na .NET Framework 4, jeśli wersja 2,0 nie jest obecna.  
   
-     Zainstalowane wersje programu .NET framework: Wcześniejszej wersji programu .NET Framework i .NET Framework 4.  
+     Zainstalowane wersje .NET Framework: Starsza wersja .NET Framework i .NET Framework 4.  
   
-     Co należy zrobić: W [pliku konfiguracji aplikacji](../../../docs/framework/configure-apps/index.md) w katalogu aplikacji za pomocą [ \<uruchamiania > element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) i [ \<supportedRuntime > element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) ustawione w następujący sposób:  
+     Co należy zrobić: W [pliku konfiguracji aplikacji](../../../docs/framework/configure-apps/index.md) w katalogu aplikacji użyj [ \<elementu >](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) [ \<Start i zestawu elementów > supportedRuntime](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) w następujący sposób:  
   
     ```xml  
     <configuration>  
@@ -71,11 +71,11 @@ Począwszy od programu .NET Framework 4, możesz użyć w trakcie side-by-side h
     </configuration>  
     ```  
   
-- **Scenariusz 3:** Aplikacji natywnej używającej składniki COM, utworzone w starszych wersjach programu .NET Framework, która ma zostać uruchomiony za pomocą programu .NET Framework 4.  
+- **Scenariusz 3:** Aplikacja natywna korzystająca ze składników COM utworzonych przy użyciu wcześniejszych wersji .NET Framework, które mają być uruchamiane z .NET Framework 4.  
   
-     Zainstalowane wersje programu .NET framework: .NET Framework 4.  
+     Zainstalowane wersje .NET Framework: .NET Framework 4.  
   
-     Co należy zrobić: W pliku konfiguracyjnym aplikacji w katalogu aplikacji, należy użyć `<startup>` element z `useLegacyV2RuntimeActivationPolicy` ustawioną wartość atrybutu `true` i `<supportedRuntime>` element jest ustawiony w następujący sposób:  
+     Co należy zrobić: W pliku `<startup>` konfiguracyjnym aplikacji w katalogu aplikacji użyj elementu `useLegacyV2RuntimeActivationPolicy` z `<supportedRuntime>` atrybutem ustawionym na `true` i element set w następujący sposób:  
   
     ```xml  
     <configuration>  
@@ -86,9 +86,9 @@ Począwszy od programu .NET Framework 4, możesz użyć w trakcie side-by-side h
     ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano niezarządzany host COM, działającego zarządzanego składnika COM za pomocą wersji programu .NET Framework, który składnik był skompilowany do użycia.  
+ Poniższy przykład ilustruje niezarządzany host COM, na którym działa zarządzany składnik COM przy użyciu wersji .NET Framework, do której składnik został skompilowany.  
   
- Aby uruchomić poniższy przykład, skompiluj i zarejestruj poniższe zarządzanego składnika COM za pomocą programu .NET Framework 3.5. Można zarejestrować składnika, na **projektu** menu, kliknij przycisk **właściwości**, kliknij przycisk **kompilacji** , a następnie wybierz pozycję **Zarejestruj dla współdziałania COM**pole wyboru.  
+ Aby uruchomić Poniższy przykład, skompiluj i zarejestruj następujący zarządzany składnik COM przy użyciu .NET Framework 3,5. Aby zarejestrować składnik, w menu **projekt** kliknij polecenie **Właściwości**, kliknij kartę **kompilacja** , a następnie zaznacz pole wyboru **Zarejestruj dla międzyoperacyjności modelu COM** .  
   
 ```csharp
 using System;  
@@ -113,7 +113,7 @@ namespace BasicComObject
 }  
 ```  
   
- Skompiluj następujący niezarządzanej aplikacji C++, które uaktywnia się obiekt COM, który jest tworzony w poprzednim przykładzie.  
+ Skompiluj następującą niezarządzaną C++ aplikację, która aktywuje obiekt com, który został utworzony w poprzednim przykładzie.  
   
 ```cpp
 #include "stdafx.h"  
@@ -175,5 +175,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>Zobacz także
 
-- [\<Uruchamianie > Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<> uruchomienia — element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
+- [\<supportedRuntime, element >](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

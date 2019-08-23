@@ -2,95 +2,95 @@
 title: Wybieranie platformy wymiany komunikatów
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 2d39164944207d73fdfe418a30326fb40462db72
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 518a21ef34d52ef4b70871ba8bad7876374dd319
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664910"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951861"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Wybieranie platformy wymiany komunikatów
-Pierwszym krokiem podczas pisania niestandardowych transportu jest podjęcie decyzji, które *wiadomości programu exchange wzorców* (lub MEPs) są wymagane dla kanału, tworzysz. W tym temacie opisano dostępne opcje, a w tym artykule omówiono różne wymagania. Jest to pierwsze zadanie na liście zadań tworzenia kanału, opisanego w [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Pierwszym krokiem w przypadku tworzenia niestandardowego transportu jest podjęcie decyzji, które *wzorce wymiany komunikatów* (lub MEPs) są wymagane dla opracowywanego kanału. W tym temacie opisano dostępne opcje i omówiono różne wymagania. Jest to pierwsze zadanie na liście zadań opracowywania kanału opisane w temacie [Tworzenie kanałów](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
-## <a name="six-message-exchange-patterns"></a>Sześć wzorców wymiany komunikatów  
+## <a name="six-message-exchange-patterns"></a>Wzorce wymiany komunikatów 6  
  Istnieją trzy MEPs do wyboru:  
   
-- Datagramów (<xref:System.ServiceModel.Channels.IInputChannel> i <xref:System.ServiceModel.Channels.IOutputChannel>)  
+- Datagram (<xref:System.ServiceModel.Channels.IInputChannel> i <xref:System.ServiceModel.Channels.IOutputChannel>)  
   
-     Korzystając z datagram MEP, klient wysyła komunikat przy użyciu *zostanie wyzwolony i zapomnij* programu exchange. Element zostanie wyzwolony i zapomnij programu exchange to taki, który wymaga potwierdzenia out-of-band skutecznej. Komunikat może zostać utracone podczas przesyłania i nigdy nie dotrzeć do usługi. Jeśli operacja wysyłania zakończy się pomyślnie po stronie klienta, nie gwarantuje to, że zdalny punkt końcowy otrzymał komunikat. Datagram jest elementem konstrukcyjnym podstawowych do obsługi komunikatów, możesz tworzyć własne protokołów na jego podstawie — w tym protokoły niezawodne i bezpieczne protokoły. Implementowanie kanały datagram klientów <xref:System.ServiceModel.Channels.IOutputChannel> implementuje interfejs i usługi kanały datagram <xref:System.ServiceModel.Channels.IInputChannel> interfejsu.  
+     W przypadku korzystania z unikatowy MEP datagramu klient wysyła komunikat przy użyciu *ognia i zapomni* wymianę. Usługa Fire i zapomnij wymiany jest taka, która wymaga potwierdzenia pomyślnego dostarczenia poza pasmem. Komunikat może zostać utracony podczas przesyłania i nigdy nie docierał do usługi. Jeśli operacja wysyłania zostanie zakończona pomyślnie na końcu klienta, nie gwarantuje to, że zdalny punkt końcowy odebrał komunikat. Datagram jest podstawowym blokiem konstrukcyjnym do obsługi komunikatów, ponieważ można tworzyć własne protokoły na jego podstawie — w tym niezawodne protokoły i bezpieczne protokoły. Kanały datagramów klienta <xref:System.ServiceModel.Channels.IOutputChannel> implementują interfejs i kanały datadatagramu usługi <xref:System.ServiceModel.Channels.IInputChannel> implementują interfejsy.  
   
-- Odpowiedź na żądanie (<xref:System.ServiceModel.Channels.IRequestChannel> i <xref:System.ServiceModel.Channels.IReplyChannel>)  
+- Żądanie-odpowiedź (<xref:System.ServiceModel.Channels.IRequestChannel> i <xref:System.ServiceModel.Channels.IReplyChannel>)  
   
-     W tym MEP wiadomość jest wysyłana i odpowiedzi. Wzorzec składa się z pary odpowiedź na żądanie. Odpowiedź na żądanie wywołania przykłady zdalnych wywołań procedur (RPC) i przeglądarka GET żądań. Ten wzorzec jest nazywany również półdupleks. W tym MEP zaimplementuj kanały klientów <xref:System.ServiceModel.Channels.IRequestChannel> i zaimplementować usługi kanały <xref:System.ServiceModel.Channels.IReplyChannel>.  
+     W tym unikatowy MEP komunikat jest wysyłany, a odpowiedź zostanie odebrana. Wzorzec składa się z par żądanie-odpowiedź. Przykłady wywołań żądania-odpowiedź to zdalne wywołania procedury (RPC) i żądania GET przeglądarki. Ten wzorzec jest również znany jako półdupleks. W tym unikatowy MEP zaimplementowano kanały <xref:System.ServiceModel.Channels.IRequestChannel> klienta i zaimplementowano <xref:System.ServiceModel.Channels.IReplyChannel>kanały usług.  
   
 - Duplex (<xref:System.ServiceModel.Channels.IDuplexChannel>)  
   
-     Dwukierunkowe MEP umożliwia dowolną liczbę wiadomości wysłane przez klienta i odbieranie w dowolnej kolejności. Dwukierunkowego MEP przypomina rozmowy telefonicznej, gdzie każdy wyraz mowy jest komunikat. Obie strony może wysyłać i odbierać w tym MEP, interfejs implementowany przez kanały klient internetowy i usługa jest <xref:System.ServiceModel.Channels.IDuplexChannel>.  
+     UNIKATOWY MEP dupleks umożliwia wysyłanie dowolnej liczby komunikatów przez klienta i odbieranie ich w dowolnej kolejności. UNIKATOWY MEP dupleks jest taka sama jak rozmowa telefoniczna, gdzie każdy wypowiadany wyraz jest komunikatem. Ponieważ obie strony mogą wysyłać i odbierać dane w tym unikatowy MEP, interfejs zaimplementowany przez klienta i kanały usług to <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
- ![Wybieranie platformy wymiany komunikatów](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
-Trzy wzorce podstawowe wiadomości programu exchange. Od góry do dołu: datagram, odpowiedź na żądanie i dupleks.  
+ ![Wybieranie wzorca wymiany komunikatów](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
+Trzy podstawowe wzorce wymiany komunikatów. Od góry do dołu: datagram, żądanie-odpowiedź i dupleks.  
   
- Każda z tych MEPs może również obsługiwać *sesje*. Sesję (i stosowania <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> typu <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) jest skorelowane wszystkie komunikaty wysłane i odebrane w kanale. Wzorzec odpowiedź na żądanie jest sesję komunikat dwóch autonomicznych, jak żądania i odpowiedzi są powiązane. Z kolei wzorzec odpowiedź na żądanie, który obsługuje sesji oznacza, że wszystkie pary żądanie/odpowiedź, w tym kanale są powiązane ze sobą. Daje w sumie sześć MEPs do wyboru:  
+ Każdy z tych MEPs może również obsługiwać *sesje*. Sesja (i implementacja <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> typu <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) umożliwia skorelowanie wszystkich komunikatów wysłanych i odebranych w kanale. Wzorzec żądanie-odpowiedź jest autonomiczną sesją dwustronicową, ponieważ żądanie i odpowiedź są skorelowane. Z kolei wzorzec żądanie-odpowiedź, który obsługuje sesje, oznacza, że wszystkie pary żądanie/odpowiedź w tym kanale są skorelowane ze sobą. Zapewnia to sześć MEPs do wyboru:  
   
-- Datagram  
+- Odebran  
   
-- Odpowiedź na żądanie  
+- Żądanie-odpowiedź  
   
 - Dupleks  
   
 - Datagram z sesjami  
   
-- Odpowiedź na żądanie z sesji  
+- Żądanie-odpowiedź z sesjami  
   
-- Komunikacja dwukierunkowa z sesjami  
+- Dupleks z sesjami  
   
 > [!NOTE]
->  Dla transportu UDP datagram, jest tylko MEP, która jest obsługiwana, ponieważ UDP jest pożar i zapomnij protokołu.  
+> W przypadku transportu UDP jedyną obsługiwaną unikatowy MEPą jest datagram, ponieważ protokół UDP jest z natury i zapomnij.  
   
-## <a name="sessions-and-sessionful-channels"></a>Sesje i Sessionful kanałów  
- W sieci world istnieją połączeniowy protokołów (na przykład, TCP) i protokoły bez połączenia (na przykład, UDP). Usługi WCF używa sesji termin oznacza abstrakcji logiczne podobne do połączenia. Przekroczono WCF protokoły są podobne do połączeniowy protokołów sieciowych i Bezsesyjne WCF protokoły są podobne do protokołów sieciowych bez połączenia.  
+## <a name="sessions-and-sessionful-channels"></a>Sesje i kanały sesji  
+ W świecie sieci dostępne są protokoły zorientowane na połączenia (na przykład TCP) i protokoły bez połączenia (na przykład UDP). Funkcja WCF używa sesji do oznaczania logicznego abstrakcji. Protokoły WCF w sesji są podobne do protokołów sieciowych zorientowanych na połączenia, a protokoły WCF bez sesji są podobne do protokołów sieciowych bez połączenia.  
   
- W modelu obiektu kanału każdej sesji logicznej manifesty jako wystąpienie kanału sesji. W związku z tym każdej nowej sesji utworzone przez klienta i zaakceptowane w usłudze odnosi się do nowego kanału sesji na każdej stronie. Na poniższym diagramie przedstawiono, w górnej części, struktura Bezsesyjne kanały, a w dolnej części, struktura zamykania kanałów.  
+ W modelu obiektu kanału każdy manifest sesji logicznej jest wystąpieniem kanału sesji. W związku z tym każda nowa sesja utworzona przez klienta i zaakceptowana w usłudze odnosi się do nowego kanału sesji na każdej stronie. Na poniższym diagramie pokazano, w górnej części, struktura kanałów bezsesyjnych i na dole, struktura kanałów sesji.  
   
- ![Wybieranie platformy wymiany komunikatów](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
+ ![Wybieranie wzorca wymiany komunikatów](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
   
- Klient tworzy nowego kanału sesji i wysyła komunikat. Na stronie usługi odbiornika kanałów odbiera ten komunikat i wykrywa, czy należy on do nowej sesji więc tworzy nowego kanału sesji i przekazuje go do aplikacji (w odpowiedzi do aplikacji podczas wywoływania AcceptChannel odbiornik kanału). Następnie aplikacja otrzymuje tę wiadomość, a wszystkie kolejne komunikaty wysłane w jednej sesji przez tego samego kanału sesji.  
+ Klient tworzy nowy kanał sesji i wysyła komunikat. Po stronie usługi odbiornik kanału otrzymuje ten komunikat i wykryje, że należy on do nowej sesji, aby utworzyć nowy kanał sesji i skontaktować się z nim do aplikacji (w odpowiedzi na aplikację wywołującą AcceptChannel na odbiorniku kanału). Następnie aplikacja odbiera ten komunikat i wszystkie kolejne komunikaty wysyłane w ramach tej samej sesji za pośrednictwem tego samego kanału sesji.  
   
- Innym kliencie (lub tego samego klienta) tworzy nowe sessionful i wysyła komunikat. Odbiornik kanału wykrywa ten komunikat jest w nowej sesji i tworzy nowy kanał sesji, a ten proces jest powtarzany.  
+ Inny klient (lub ten sam Klient) tworzy nową sesję i wysyła komunikat. Odbiornik kanału wykrywa, że ten komunikat jest w nowej sesji i tworzy nowy kanał sesji, a proces powtarza się.  
   
- Bez sesji istnieje korelacja kanałów i sesji. W związku z tym odbiornik kanału tworzy tylko jeden kanał, za pomocą którego wszystkie odebrane komunikaty są dostarczane do aplikacji. Nie ma również kolejność, ponieważ nie istnieje żadna sesja, w którym należy utrzymywać kolejność komunikatów. Górna część poprzedniego rysunku przedstawiono Bezsesyjne wiadomości programu exchange.  
+ Bez sesji nie ma korelacji między kanałami i sesjami. W związku z tym odbiornik kanału tworzy tylko jeden kanał, za pośrednictwem którego wszystkie odebrane komunikaty są dostarczane do aplikacji. Nie ma również kolejności komunikatów, ponieważ nie ma sesji, w której ma być zachowana kolejność komunikatów. W górnej części poprzedniej ilustracji przedstawiono wymianę komunikatów bezsesyjnych.  
   
-## <a name="starting-and-terminating-sessions"></a>Uruchamianie i kończenie sesji  
- Sesje są uruchamiane na komputerze klienckim, po prostu tworząc nowy kanał sesji. Są one uruchamiane w usłudze podczas usługa odbiera komunikat, który został wysłany w nowej sesji. Podobnie sesje są kończone przez zamknięcie lub przerywanie kanału sesji.  
+## <a name="starting-and-terminating-sessions"></a>Uruchamianie i przerywanie sesji  
+ Sesje są uruchamiane na kliencie przez po prostu utworzenie nowego kanału sesji. Są one uruchamiane w usłudze, gdy usługa otrzymuje komunikat wysłany w nowej sesji. Podobnie sesje są kończone przez zamknięcie lub przerwanie kanału sesji.  
   
- Wyjątkiem jest <xref:System.ServiceModel.Channels.IDuplexSessionChannel> używany do wysyłania i odbierania wiadomości we wzorcu dupleksowy, sesji komunikacji. Istnieje możliwość, obok będzie chcesz zatrzymać wysyłanie komunikatów, ale nadal odbierać komunikaty w związku z tym, za pomocą <xref:System.ServiceModel.Channels.IDuplexSessionChannel> istnieje mechanizm, który umożliwia zamknięcie wyjście sesji wskazujący, nie będzie wysyłać więcej wiadomości, ale zachować ją danych wejściowych otwarte, dzięki czemu możesz w dalszym ciągu otrzymywać wiadomości.  
+ Wyjątkiem jest <xref:System.ServiceModel.Channels.IDuplexSessionChannel> to, który jest używany do wysyłania i otrzymywania wiadomości w postaci dwustronnego, wzorca komunikacji z sesją. Istnieje możliwość, że jedna strona będzie zatrzymywać wysyłanie komunikatów, ale nadal otrzymuje komunikaty, w związku <xref:System.ServiceModel.Channels.IDuplexSessionChannel> z czym jest mechanizm, który umożliwia zamknięcie sesji wyjściowej wskazującej, że nie wyśle więcej komunikatów, ale utrzymuje sesję wejściową otwarte, co pozwoli na kontynuowanie odbierania wiadomości.  
   
- Ogólnie rzecz biorąc sesje zostaną zamknięte po stronie wychodzących i nie po stronie przychodzących. Oznacza to kanałów sesji danych wyjściowych może zostać zamknięty, a tym samym nie pozostawia żadnych śladów zakończenie sesji. Zamknięcie kanału w danych wyjściowych Przekroczono powoduje, że odpowiednie zamykania kanału wejściowego do zwrócenia wartości null do wywoływania aplikacji <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> na <xref:System.ServiceModel.Channels.IDuplexSessionChannel>.  
+ Ogólnie rzecz biorąc, sesje są zamknięte po stronie wychodzącej, a nie na stronie przychodzącej. Oznacza to, że kanały wyjściowe sesji można zamknąć, co oznacza całkowite zakończenie sesji. Zamknięcie kanału wyjściowego sesji powoduje, że odpowiedni kanał wejściowy sesji zwraca wartość null do aplikacji wywołującej <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.IDuplexSessionChannel>na.  
   
- Jednak zamykania kanałów danych wejściowych nie powinien zostać zamknięty, chyba że <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> na <xref:System.ServiceModel.Channels.IDuplexSessionChannel> zwraca wartość null, wskazując, że sesja jest już zamknięty. Jeśli <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> na <xref:System.ServiceModel.Channels.IDuplexSessionChannel> ma nie zwrócił wartość null, zamykanie sesji kanał wejściowy może zgłosić wyjątek, ponieważ może zostać wyświetlony nieoczekiwane komunikaty podczas zamykania. Jeśli odbiorca chce zakończyć sesję przed nadawcy, powinny wywoływać <xref:System.ServiceModel.ICommunicationObject.Abort%2A> nagle w kanale danych wejściowych, który kończy sesję.  
+ Jednak kanały wejściowe sesji nie powinny być zamknięte, chyba <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> że <xref:System.ServiceModel.Channels.IDuplexSessionChannel> na zwraca wartość null, wskazując, że sesja jest już zamknięta. <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> Jeśli<xref:System.ServiceModel.Channels.IDuplexSessionChannel> na serwerze nie zwrócono wartości null, zamknięcie kanału wejściowego sesji może zgłosić wyjątek, ponieważ może on otrzymywać nieoczekiwane komunikaty podczas zamykania. Jeśli odbiorca chce zakończyć sesję przed wykonaniem nadawcy, powinien wywołać <xref:System.ServiceModel.ICommunicationObject.Abort%2A> kanał wejściowy, który nagle kończy sesję.  
   
-## <a name="writing-sessionful-channels"></a>Zapisywanie Sessionful kanałów  
- Jako autor kanału sesji istnieje kilka rzeczy, które kanał należy wykonać, aby zapewnić sesji. Na stronie wysyłania kanał musi:  
+## <a name="writing-sessionful-channels"></a>Zapisywanie kanałów sesji  
+ Jako autor kanału sesji, istnieje kilka rzeczy, które musi wykonać kanał, aby zapewnić sesje. Na stronie wysyłanie kanał musi:  
   
-- Dla każdego nowego kanału utworzenie nowej sesji i skojarz go z identyfikatorem nowej sesji, który jest unikatowy ciąg. Lub uzyskać nową sesję z kanału sesji poniżej w stosie.  
+- Dla każdego nowego kanału Utwórz nową sesję i skojarz ją z nowym identyfikatorem sesji, który jest unikatowym ciągiem. Lub Uzyskaj nową sesję z kanału sesji poniżej użytkownika w stosie.  
   
-- Dla każdej wiadomości wysyłane za pomocą tego kanału Jeśli kanał utworzony sesji (w przeciwieństwie do uzyskania go z warstwy poniżej), należy skojarzyć wiadomości z sesją. Dla protokołu kanałów zazwyczaj jest to wykonywane przez dodanie nagłówka SOAP. Kanały transportu na zwykle odbywa się przez utworzenie nowego połączenia transportu lub dodawanie informacji o sesji protokołu ramek.  
+- Dla każdego komunikatu wysyłanego za pomocą tego kanału, jeśli Kanał utworzył sesję (w przeciwieństwie do uzyskania jej z warstwy poniżej), należy skojarzyć komunikat z sesją. W przypadku kanałów protokołu zwykle odbywa się to przez dodanie nagłówka SOAP. W przypadku kanałów transportowych zwykle odbywa się to przez utworzenie nowego połączenia transportowego lub dodanie informacji o sesji do protokołu ramek.  
   
-- Dla każdej wiadomości wysyłane za pomocą tego kanału musisz podać gwarancją dostarczania wymienionych powyżej. Jeśli polegasz na kanale poniżej musisz podać sesji przez kanał udostępni również gwarancją dostarczania. Jeśli udostępniasz sesji samodzielnie, należy zaimplementować te gwarancje w ramach usługi protokołu. Ogólnie rzecz biorąc Jeśli piszesz kanału protokołu, który przyjmuje WCF po obu stronach może wymagają warstwy transportowej TCP lub kanał niezawodna obsługa komunikatów i zależą od jednego zapewnienie sesji.  
+- Dla każdej wiadomości wysyłanej przy użyciu tego kanału należy podać gwarancje dostarczenia wymienione powyżej. Jeśli korzystasz z kanału poniżej, aby zapewnić sesję, ten kanał zapewni również gwarancje dostarczenia. Jeśli sesja jest dostarczana samodzielnie, należy zaimplementować te gwarancje jako część protokołu. Ogólnie rzecz biorąc, jeśli piszesz kanał protokołu, który przyjmuje WCF na obu stronach, może być konieczne przetransport TCP lub kanał niezawodnej obsługi komunikatów i poleganie na jednym z nich w celu zapewnienia sesji.  
   
-- Gdy <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> jest wywoływana na kanale, wykonują pracę niezbędne zamknąć sesję przy użyciu określonego limitu czasu lub domyślny. Może to być proste co wywołanie metody <xref:System.ServiceModel.ICommunicationObject.Close%2A> na kanale poniżej możesz (jeśli jest to po prostu sesji są uzyskiwane z niego) lub wysyłania komunikatu protokołu SOAP specjalne lub zamyka połączenie transportu.  
+- Gdy <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> jest wywoływana w kanale, należy wykonać niezbędne czynności, aby zamknąć sesję przy użyciu określonego limitu czasu lub wartości domyślnej. Może to być równie proste, jak <xref:System.ServiceModel.ICommunicationObject.Close%2A> wywołanie w kanale poniżej (Jeśli właśnie uzyskano sesję) lub wysłanie specjalnego komunikatu protokołu SOAP lub zamknięcie połączenia transportowego.  
   
-- Gdy <xref:System.ServiceModel.ICommunicationObject.Abort%2A> jest wywoływana na kanale, zakończyć sesję nagle bez wykonywania operacji We/Wy. To może oznaczać, że czynności lub mogą spowodować przerwanie połączenia sieciowego lub innego zasobu.  
+- Gdy <xref:System.ServiceModel.ICommunicationObject.Abort%2A> jest wywoływana w kanale, Przerwij sesję w nieoczekiwany sposób bez wykonywania operacji we/wy. Może to oznaczać, że nic się nie dzieje, lub może dotyczyć przerwania połączenia sieciowego lub innego zasobu.  
   
- Po stronie odbierającej kanał musi:  
+ Na stronie odbierającej Twój kanał musi:  
   
-- Dla każdego komunikatu przychodzącego odbiornika kanałów musi wykryć sesji, do której należy. Jeśli jest to pierwszy komunikat w sesji, odbiornik kanału, należy utworzyć nowy kanał i przywrócić go z wywołania <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType>. W przeciwnym razie odbiornika kanałów musi znaleźć istniejącego kanału, który odnosi się do sesji i dostarczenia komunikatu za pośrednictwem tego kanału.  
+- Dla każdego komunikatu przychodzącego odbiornik kanału musi wykryć sesję, do której należy. Jeśli jest to pierwszy komunikat w sesji, odbiornik kanału musi utworzyć nowy kanał i zwrócić go z wywołania do <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType>. W przeciwnym razie odbiornik kanału musi znaleźć istniejący kanał odpowiadający sesji i dostarczyć komunikat za pośrednictwem tego kanału.  
   
-- Jeśli kanał jest zapewnienie sesji (wraz z gwarancją dostarczania wymagane) stronie odbierającej może być konieczne wykonywać niektórych akcji, takich jak zmienić kolejność komunikatów lub wysyłać potwierdzenia.  
+- Jeśli kanał udostępnia sesję (wraz z wymaganymi gwarancjami dostarczania), strona odbierająca może być wymagana do wykonania niektórych akcji, takich jak zmiana kolejności komunikatów lub wysyłanie potwierdzeń.  
   
-- Gdy <xref:System.ServiceModel.ICommunicationObject.Close%2A> jest wywoływana na kanale, wykonują pracę niezbędne zamknąć sesję, określony limit czasu lub domyślny. Może to spowodować wyjątki Jeśli kanał odbiera komunikat podczas oczekiwania na limit czasu zamknięcia wygaśnie. To, ponieważ kanał będzie w stanie zamknięcia po odebraniu wiadomości, dzięki czemu będzie ona zgłaszają.  
+- Gdy <xref:System.ServiceModel.ICommunicationObject.Close%2A> jest wywoływana w kanale, należy wykonać niezbędne czynności, aby zamknąć sesję albo określony limit czasu, albo wartość domyślną. Może to powodować wyjątki, jeśli kanał odbiera komunikat podczas oczekiwania na wygaśnięcie limitu czasu zamykania. Dzieje się tak, ponieważ kanał będzie znajdował się w stanie zamykającym, gdy odbierze komunikat, który mógłby zgłosić.  
   
-- Gdy <xref:System.ServiceModel.ICommunicationObject.Abort%2A> jest wywoływana na kanale, zakończyć sesję nagle bez wykonywania operacji We/Wy. Ponownie to może oznaczać, że czynności lub mogą spowodować przerwanie połączenia sieciowego lub innego zasobu.  
+- Gdy <xref:System.ServiceModel.ICommunicationObject.Abort%2A> jest wywoływana w kanale, Przerwij sesję w nieoczekiwany sposób bez wykonywania operacji we/wy. Może to oznaczać, że nic się nie dzieje, lub może pociągać za sobą przerwanie połączenia sieciowego lub innego zasobu.  
   
 ## <a name="see-also"></a>Zobacz także
 

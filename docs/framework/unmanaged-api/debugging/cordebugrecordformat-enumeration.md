@@ -12,15 +12,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: adb13688791cd7d8f467780da1895d4f9fe6e990
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6ed7d25593f9dd5d5d01f8c06024dcf8acfcfea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739648"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916473"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>Wyliczenie CorDebugRecordFormat
-W tym artykule opisano format danych w tablicy bajtowej, zawierający informacje o zdarzeniu debugowania natywnych wyjątku.  
+Opisuje format danych w tablicy bajtów, który zawiera informacje na temat natywnego zdarzenia debugowania wyjątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,23 +35,23 @@ typedef enum CorDebugRecordFormat {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`FORMAT_WINDOWS_EXCEPTIONRECORD32`|Dane jest rekordem wyjątku Windows 32-bitowych.|  
-|`FORMAT_WINDOWS_EXCEPTIONRECORD64`|Dane jest rekordem wyjątku Windows 64-bitowych.|  
+|`FORMAT_WINDOWS_EXCEPTIONRECORD32`|Dane to 32-bitowy rekord wyjątku systemu Windows.|  
+|`FORMAT_WINDOWS_EXCEPTIONRECORD64`|Dane to 64-bitowy rekord wyjątku systemu Windows.|  
   
 ## <a name="remarks"></a>Uwagi  
- Członek `CorDebugRecordFormat` wyliczenia jest przekazywany do [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) metodę w celu wskazania format tablicę bajtów w jego `pRecord` argumentu.  
+ Element członkowski `CorDebugRecordFormat` wyliczenia jest przesyłany do metody [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) w celu wskazania formatu tablicy `pRecord` bajtów w argumencie.  
   
 > [!NOTE]
->  To wyliczenie jest przeznaczona do użytku w .NET Native tylko w scenariuszach debugowania.  
+> To wyliczenie jest przeznaczone do użycia tylko w scenariuszach debugowania .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

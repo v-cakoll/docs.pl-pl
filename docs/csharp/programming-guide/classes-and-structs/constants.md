@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: d179c1b8717f4247ce745104db2d0bb4faefb8ab
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7da86a8999f6cc36a7b71f70fd92a363673824b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597108"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924530"
 ---
 # <a name="constants-c-programming-guide"></a>Stałe (Przewodnik programowania w języku C#)
 Stałe są niezmienne wartości, które są znane w czasie kompilacji i nie zmieniają się w okresie istnienia programu. Stałe są zadeklarowane za pomocą modyfikatora [const](../../language-reference/keywords/const.md) . Tylko typy C# wbudowane (z wyjątkiem <xref:System.Object?displayProperty=nameWithType>) mogą być zadeklarowane jako. `const` Aby uzyskać listę typów wbudowanych, zobacz [tabela typy wbudowane](../../language-reference/keywords/built-in-types-table.md). Typy zdefiniowane przez użytkownika, w tym klasy, struktury i tablice, nie mogą być `const`. Użyj modyfikatora [tylko do odczytu](../../language-reference/keywords/readonly.md) , aby utworzyć klasę, strukturę lub tablicę, która jest inicjowana jednokrotnie w czasie wykonywania (na przykład w konstruktorze) i nie można jej zmienić.  
@@ -27,7 +27,7 @@ Stałe są niezmienne wartości, które są znane w czasie kompilacji i nie zmie
  W tym przykładzie stała `months` jest zawsze 12 i nie może być zmieniana nawet przez samą klasę. W rzeczywistości, gdy kompilator napotyka stały identyfikator w C# kodzie źródłowym (na przykład `months`), zastępuje wartość literału bezpośrednio do kodu języka pośredniego (IL), który tworzy. Ze względu na to, że żaden adres zmiennej nie jest skojarzony ze `const` stałą w czasie wykonywania, pola nie mogą być przesyłane przez odwołanie i nie mogą występować jako l-wartość w wyrażeniu.  
   
 > [!NOTE]
->  Należy zachować ostrożność w przypadku odwoływania się do wartości stałych zdefiniowanych w innym kodzie, takim jak dll. Jeśli nowa wersja biblioteki DLL definiuje nową wartość dla stałej, program będzie nadal przechowywać starą wartość literału, dopóki nie zostanie ponownie skompilowana względem nowej wersji.  
+> Należy zachować ostrożność w przypadku odwoływania się do wartości stałych zdefiniowanych w innym kodzie, takim jak dll. Jeśli nowa wersja biblioteki DLL definiuje nową wartość dla stałej, program będzie nadal przechowywać starą wartość literału, dopóki nie zostanie ponownie skompilowana względem nowej wersji.  
   
  Można jednocześnie zadeklarować wiele stałych tego samego typu, na przykład:  
   

@@ -7,32 +7,32 @@ helpviewer_keywords:
 - animation [WPF], basic animation
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
-ms.openlocfilehash: 56522ee5bd4391e43c261558b2fa622234c9ea3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 812217a2905671567271687b974a435dd85cea47
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008788"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930084"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>Instrukcje: Kontrolowanie animacji z użyciem elementów od, do i przez
-"Od/do/przez" lub "podstawowa Animacja" tworzy przejście między dwiema wartościami target (zobacz [Przegląd animacja](animation-overview.md) wprowadzenie do różnych rodzajów animacji). Aby ustawić wartości docelowe podstawowa Animacja, użyj jej <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwości.  W poniższej tabeli przedstawiono sposób, w jaki <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwości, które mogą być używane razem lub oddzielnie, aby ustalić docelowy animacji wartości.  
+"Od/do/przez" lub "podstawowa animacja" tworzy przejście między dwiema wartościami docelowymi (zobacz [Omówienie animacji](animation-overview.md) dla wprowadzenia do różnych typów animacji). Aby ustawić wartości docelowe animacji podstawowej, użyj <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>właściwości, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> .  W poniższej tabeli zestawiono <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, jak właściwości, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> mogą być używane razem lub oddzielnie, aby określić wartości docelowe animacji.  
   
-|Określono właściwości|Wynikowe zachowania|  
+|Określone właściwości|Zachowanie rezultatowe|  
 |--------------------------|------------------------|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>|W miarę animacji z wartość określoną przez <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwości do podstawowej wartości właściwości, jest animowany lub poprzedniej animacji danych wyjściowych wartość, w zależności od sposobu skonfigurowania poprzedniej animacji.|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> i <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|W miarę animacji z wartość określoną przez <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwości na wartość określoną przez <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> właściwości.|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|W miarę animacji z wartość określoną przez <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwości na wartość określoną przez sumę <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwości.|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|Animacja w miarę od wartości bazowej animowany właściwości lub poprzedniej animacji danych wyjściowych wartość na wartość określoną przez <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> właściwości.|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|W miarę animacji z podstawową wartość właściwości jest animowany lub poprzedniej animacji danych wyjściowych wartość sumę wartości i wartość określoną przez <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwości.|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>|Animacja postępuje z wartości określonej przez <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwość do wartości podstawowej animowanej właściwości lub poprzedniej wartości wyjściowej animacji, w zależności od sposobu skonfigurowania poprzedniej animacji.|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> i <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|Animacja postępuje z wartości określonej przez <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwość do wartości określonej <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> przez właściwość.|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|Animacja postępuje z wartości określonej przez <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwość do wartości określonej przez sumę <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwości i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> .|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|Animacja postępuje z wartości podstawowej animowanej właściwości lub poprzedniej wartości wyjściowej animacji do wartości określonej przez <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> właściwość.|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|Animacja postępuje z wartości podstawowej animowanej właściwości lub poprzedniej wartości wyjściowej animacji do sumy tej wartości i wartości określonej przez <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwość.|  
   
 > [!NOTE]
->  Nie należy ustawiać zarówno <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> właściwości i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwość w tej samej animacji.  
+> Nie ustawiaj <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> właściwości <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> i właściwości dla tej samej animacji.  
   
- Aby skorzystać z innych metod interpolacji lub animować między więcej niż dwóch wartości docelowych, należy użyć animacji klatek kluczowych. Zobacz [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md) Aby uzyskać więcej informacji.  
+ Aby użyć innych metod interpolacji lub animować między więcej niż dwoma wartościami docelowymi, należy użyć animacji klatek kluczowych. Aby uzyskać więcej informacji, zobacz [Omówienie animacji klatek kluczowych](key-frame-animations-overview.md) .  
   
- Aby dowiedzieć się, jak stosowanie wielu animacji do pojedynczej właściwości, zobacz [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md).  
+ Aby uzyskać informacje o stosowaniu wielu animacji do pojedynczej właściwości, zobacz [animacje kluczowych klatek — Omówienie](key-frame-animations-overview.md).  
   
- W poniższym przykładzie pokazano różne efekty ustawienia <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>, i <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwości animacji.  
+ W poniższym przykładzie przedstawiono różne efekty ustawienia <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>i <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwości animacji.  
   
 ## <a name="example"></a>Przykład  
  [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
@@ -41,4 +41,4 @@ ms.locfileid: "62008788"
 
 - [Animacja — przegląd](animation-overview.md)
 - [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
-- [Od, do i przez przykład wartości docelowej animacji](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Przykładowe wartości docelowe od, do i według animacji](https://go.microsoft.com/fwlink/?LinkID=159988)

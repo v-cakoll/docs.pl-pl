@@ -2,22 +2,22 @@
 title: <serviceCertificate> dla <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-ms.openlocfilehash: 086b700b94198aa36e61289178ebbed75d33da98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36a228da262095bfe05d66c6d44ac73ba0ca401b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670316"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936314"
 ---
-# <a name="servicecertificate-of-servicecredentials"></a>\<serviceCertificate > z \<serviceCredentials >
-Określ certyfikat X.509, który będzie używany do uwierzytelniania usługi dla klientów używających trybu zabezpieczenia wiadomości.  
+# <a name="servicecertificate-of-servicecredentials"></a>\<> \<serviceCertificate >
+Określ certyfikat X. 509, który zostanie użyty do uwierzytelnienia usługi dla klientów korzystających z trybu zabezpieczeń wiadomości.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<serviceCredentials>  
-\<serviceCertificate>  
+\<> serviceCertificate  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,10 +35,10 @@ Określ certyfikat X.509, który będzie używany do uwierzytelniania usługi dl
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`findValue`|Ciąg, który zawiera wartość do wyszukania w magazynie certyfikatów X.509. Typ zawartych w atrybucie musi spełniać wymagania określonego X509FindType. Wartość domyślna to ciąg pusty.|  
-|`storeLocation`|Określa lokalizację magazynu certyfikatu X.509, używanego przez klienta na potrzeby weryfikacji certyfikatu serwera względem. Prawidłowe wartości są następujące:<br /><br /> -LocalMachine: Magazyn certyfikatów przypisany do komputera lokalnego.<br />-CurrentUser: Magazyn certyfikatów przypisany do bieżącego użytkownika.<br /><br /> Wartość domyślna to LocalMachine.|  
-|`storeName`|Określa nazwę magazynu certyfikatu X.509 do otwarcia. Prawidłowe wartości są następujące:<br /><br /> — Książka adresowa: Magazyn certyfikatów dla innych użytkowników.<br />-AuthRoot: Magazyn certyfikatów dla urzędów certyfikacji innych firm (CAs).<br />-CertificatAuthority: Magazyn certyfikatów dla pośrednie urzędy certyfikacji (CA).<br />-Niedozwolone: Magazyn certyfikatów dla odwołanych certyfikatów.<br />-Mój: Magazyn certyfikatów dla certyfikatów osobistych.<br />-Katalog główny: Magazyn certyfikatów zaufanych głównych urzędów certyfikacji (CA).<br />-TrustedPeople: Magazyn certyfikatów dla bezpośrednio zaufanych osób i zasobów.<br />-TrustedPublisher: Magazyn certyfikatów dla bezpośrednio zaufanych wydawców.<br /><br /> Wartość domyślna to Mój.|  
-|`x509FindType`|Określa typ wyszukania X.509 w celu wykonania. Prawidłowe wartości są następujące:<br /><br /> -FindByThumbprint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> Typ zawarty w `findValue` atrybut musi spełniać wymagania określonego X509FindType.<br /><br /> Wartość domyślna to FindBySubjectDistinguishedName.|  
+|`findValue`|Ciąg, który zawiera wartość do wyszukania w magazynie certyfikatów X. 509. Typ zawarty w atrybucie musi spełniać wymagania określone X509FindType. Wartość domyślna to pusty ciąg.|  
+|`storeLocation`|Określa lokalizację magazynu certyfikatu X. 509, którego klient używa do weryfikacji certyfikatu serwera. Prawidłowe wartości to:<br /><br /> -LocalMachine: Magazyn certyfikatów przypisany do komputera lokalnego.<br />-CurrentUser: Magazyn certyfikatów przypisany do bieżącego użytkownika.<br /><br /> Wartość domyślna to LocalMachine.|  
+|`storeName`|Określa nazwę magazynu certyfikatu X. 509 do otwarcia. Prawidłowe wartości to:<br /><br /> - AddressBook: Magazyn certyfikatów dla innych użytkowników.<br />AuthRoot Magazyn certyfikatów dla urzędów certyfikacji innych firm (CAs).<br />- CertificatAuthority: Magazyn certyfikatów dla pośrednich urzędów certyfikacji (CA).<br />Niedozwolone Magazyn certyfikatów dla odwołanych certyfikatów.<br />Komputer Magazyn certyfikatów dla certyfikatów osobistych.<br />Pierwiastek Magazyn certyfikatów dla zaufanych głównych urzędów certyfikacji (CA).<br />TrustedPeople Magazyn certyfikatów dla bezpośrednio zaufanych osób i zasobów.<br />- TrustedPublisher: Magazyn certyfikatów dla bezpośrednio zaufanych wydawców.<br /><br /> Wartość domyślna to my.|  
+|`x509FindType`|Określa typ wyszukiwania X. 509, który ma zostać wykonany. Prawidłowe wartości to:<br /><br /> - FindByThumbprint<br />- FindBySubjectName<br />- FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />- FindBySerialNumber<br />- FindByTimeValid<br />- FindByTimeNotYetValid<br />- FindByTemplateName<br />- FindByApplicationPolicy<br />- FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />- FindBySubjectKeyIdentifier<br /><br /> Typ zawarty w `findValue` atrybucie musi spełniać wymagania określone X509FindType.<br /><br /> Wartość domyślna to FindBySubjectDistinguishedName.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -47,12 +47,12 @@ Określ certyfikat X.509, który będzie używany do uwierzytelniania usługi dl
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Określa poświadczenie do użycia w uwierzytelnianiu usługi i sprawdzanie poprawności poświadczeń klienta powiązane ustawienia.|  
+|[\<serviceCredentials>](servicecredentials.md)|Określa poświadczenie, które ma być używane w uwierzytelnianiu usługi oraz ustawienia powiązane z walidacją poświadczeń klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj tego elementu, aby określić certyfikat X.509, który będzie używany do uwierzytelniania usługi dla klientów używających trybu zabezpieczenia wiadomości. Jeśli używasz certyfikatu, który będzie okresowo odnawiać jego odcisk palca zostanie zmieniona. W takim przypadku użyj nazwy tematu jako `x509FindType` ponieważ certyfikat może zostać wydany ponownie o takiej samej nazwie podmiotu.  
+ Użyj tego elementu, aby określić certyfikat X. 509, który zostanie użyty do uwierzytelnienia usługi dla klientów korzystających z trybu zabezpieczeń wiadomości. Jeśli używasz certyfikatu, który będzie okresowo odnawiany, jego odcisk palca zmieni się. W takim przypadku należy użyć nazwy podmiotu jako `x509FindType` ponieważ certyfikat można wydać ponownie z tą samą nazwą podmiotu.  
   
- Aby uzyskać więcej informacji na temat za pomocą elementu zobacz [jak: Określanie wartości poświadczeń klienta](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Aby uzyskać więcej informacji na temat korzystania z elementu [, zobacz How to: Określ wartości](../../../wcf/how-to-specify-client-credential-values.md)poświadczeń klienta.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -60,5 +60,5 @@ Określ certyfikat X.509, który będzie używany do uwierzytelniania usługi dl
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>
-- [Instrukcje: Określanie wartości poświadczeń klienta](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
-- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Instrukcje: Określ wartości poświadczeń klienta](../../../wcf/how-to-specify-client-credential-values.md)
+- [Zachowania zabezpieczeń](../../../wcf/feature-details/security-behaviors-in-wcf.md)

@@ -8,74 +8,74 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30e013d39d403bef5fe060fd1c64dc435de5be06
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 531e8f576dcbe0fc272c61a57a689d993fb03445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347392"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927898"
 ---
 # <a name="shadow-copying-assemblies"></a>Kopiowanie zestawów w tle
-Kopiowanie zestawów umożliwia, które są używane w domenie aplikacji, należy zaktualizować bez rozładowywania domeny aplikacji w tle. Jest to szczególnie przydatne w przypadku aplikacji, które muszą być dostępne w sposób ciągły, takich jak witryny programu ASP.NET.  
+Kopiowanie w tle umożliwia aktualizowanie zestawów, które są używane w domenie aplikacji, aby można było je aktualizować bez wyładowywania domeny aplikacji. Jest to szczególnie przydatne w przypadku aplikacji, które muszą być stale dostępne, takich jak Lokacje ASP.NET.  
   
 > [!IMPORTANT]
->  Kopiowanie w tle nie jest obsługiwane w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.  
+> Kopiowanie w tle nie jest obsługiwane [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] w aplikacjach.  
   
- Środowisko uruchomieniowe języka wspólnego blokuje plik zestawu, gdy zestaw jest ładowany, więc nie można zaktualizować pliku, dopóki nie zostanie zwolniony zestawu. Jedynym sposobem, aby zwolnić zestaw z domeny aplikacji jest rozładowywania domeny aplikacji, dzięki czemu w normalnych warunkach, dopóki wszystkie domeny aplikacji, które korzystają z zestawu nie można zaktualizować na dysku zostały usunięte.  
+ Środowisko uruchomieniowe języka wspólnego blokuje plik zestawu podczas ładowania zestawu, więc nie można zaktualizować pliku do momentu, gdy zestaw nie zostanie zwolniony. Jedynym sposobem zwolnienia zestawu z domeny aplikacji jest zwolnienie domeny aplikacji, więc w normalnych warunkach nie można zaktualizować zestawu na dysku do momentu, gdy wszystkie domeny aplikacji korzystające z niego nie zostały zwolnione.  
   
- Gdy domeny aplikacji jest skonfigurowany do plików kopii w tle, zestawów w ścieżce aplikacji są kopiowany do innej lokalizacji i załadować z tej lokalizacji. Kopia jest zablokowany, ale oryginalny plik zestawu jest odblokowana i może zostać zaktualizowany.  
+ Gdy domena aplikacji jest skonfigurowana do kopiowania plików w tle, zestawy ze ścieżki aplikacji są kopiowane do innej lokalizacji i ładowane z tej lokalizacji. Kopia jest zablokowana, ale oryginalny plik zestawu jest odblokowany i można go zaktualizować.  
   
 > [!IMPORTANT]
->  Tylko zestawy, które mogą być kopiowane w tle są te, przechowywane w katalogu aplikacji lub jego podkatalogów określonego przez <xref:System.AppDomainSetup.ApplicationBase%2A> i <xref:System.AppDomainSetup.PrivateBinPath%2A> właściwości, gdy jest skonfigurowana w domenie aplikacji. Zestawów przechowywanej w globalnej pamięci podręcznej nie są kopiowane w tle.  
+> Jedyne zestawy, które mogą być kopiowane w tle, są przechowywane w katalogu aplikacji lub jego podkatalogach, określone przez <xref:System.AppDomainSetup.ApplicationBase%2A> właściwości <xref:System.AppDomainSetup.PrivateBinPath%2A> i podczas konfigurowania domeny aplikacji. Zestawy przechowywane w globalnej pamięci podręcznej zestawów nie są kopiowane w tle.  
   
  Ten artykuł zawiera następujące sekcje:  
   
-- [Włączanie i kopiowania w tle za pomocą](#EnablingAndUsing) w tym artykule opisano podstawowe zastosowanie i opcje, które są dostępne dla kopiowania w tle.  
+- W przypadku [włączania i używania kopiowania w tle](#EnablingAndUsing) opisano podstawowe użycie i opcje, które są dostępne do kopiowania w tle.  
   
-- [Startowa wydajność](#StartupPerformance) w tym artykule opisano zmiany, które zostały wprowadzone w tle kopiowanie w .NET Framework 4, aby zwiększyć wydajność uruchamiania i jak przywrócić działanie wcześniejszych wersji.  
+- [Wydajność uruchamiania](#StartupPerformance) zawiera opis zmian wprowadzonych w funkcji kopiowania w tle w .NET Framework 4 w celu zwiększenia wydajności uruchamiania oraz przywracania wcześniejszych wersji.  
   
-- [Metody przestarzałe](#ObsoleteMethods) opisano zmiany, które zostały wprowadzone do właściwości i metod, które kontrolują kopiowania w tle w programie .NET Framework 2.0.  
+- [Przestarzałe metody](#ObsoleteMethods) opisują zmiany wprowadzone we właściwościach i metodach kontrolujących kopiowanie w tle w .NET Framework 2,0.  
   
 <a name="EnablingAndUsing"></a>   
 ## <a name="enabling-and-using-shadow-copying"></a>Włączanie i korzystanie z kopiowania w tle  
- Można użyć właściwości <xref:System.AppDomainSetup> klasy w następujący sposób, aby skonfigurować domenę aplikacji do kopiowania w tle:  
+ Aby skonfigurować domenę aplikacji do kopiowania w <xref:System.AppDomainSetup> tle, można użyć właściwości klasy w następujący sposób:  
   
-- Kopiowanie, ustawiając w tle Włącz <xref:System.AppDomainSetup.ShadowCopyFiles%2A> właściwości do wartości ciągu `"true"`.  
+- Włącz kopiowanie w tle przez ustawienie <xref:System.AppDomainSetup.ShadowCopyFiles%2A> właściwości na wartość `"true"`ciągu.  
   
-     Domyślnie to ustawienie powoduje, że wszystkie zestawy ścieżka aplikacji, które mają być kopiowane do pamięci podręcznej pobierania, przed załadowaniem. Jest tej samej pamięci podręcznej, obsługiwane przez środowisko uruchomieniowe języka wspólnego do przechowywania plików pobranych z innych komputerów i środowiska uruchomieniowego języka wspólnego automatycznie usuwa pliki, gdy nie są już potrzebne.  
+     Domyślnie to ustawienie powoduje, że wszystkie zestawy w ścieżce aplikacji mają być kopiowane do pamięci podręcznej pobierania przed ich załadowaniem. Jest to ta sama pamięć podręczna obsługiwana przez środowisko uruchomieniowe języka wspólnego do przechowywania plików pobranych z innych komputerów, a środowisko uruchomieniowe języka wspólnego automatycznie usuwa pliki, gdy nie są już potrzebne.  
   
-- Opcjonalnie ustaw niestandardową lokalizację plików kopie w tle za pomocą <xref:System.AppDomainSetup.CachePath%2A> właściwości i <xref:System.AppDomainSetup.ApplicationName%2A> właściwości.  
+- Opcjonalnie można ustawić lokalizację niestandardową dla skopiowanych plików w <xref:System.AppDomainSetup.CachePath%2A> tle przy użyciu <xref:System.AppDomainSetup.ApplicationName%2A> właściwości i właściwości.  
   
-     Podstawowa ścieżka lokalizacji jest tworzona przez złączenie <xref:System.AppDomainSetup.ApplicationName%2A> właściwość <xref:System.AppDomainSetup.CachePath%2A> właściwość jako podkatalogu. Zestawy są kopiowane do podkatalogów tej ścieżki, aby sama ścieżka podstawowa nie w tle.  
-  
-    > [!NOTE]
-    >  Jeśli <xref:System.AppDomainSetup.ApplicationName%2A> nie ustawiono właściwości <xref:System.AppDomainSetup.CachePath%2A> właściwość jest ignorowana, a pamięć podręczna pobierania jest używana. Jest zgłaszany żaden wyjątek.  
-  
-     Jeśli określisz niestandardową lokalizację, jest odpowiedzialny za czyszczenie katalogów i skopiować pliki, gdy nie są już potrzebne. Nie są automatycznie usuwane.  
-  
-     Istnieje kilka powodów dlaczego warto ustawić niestandardową lokalizację plików kopie w tle. Można ustawić niestandardową lokalizację plików kopie w tle, jeśli aplikacja generuje dużą liczbę kopii. Pamięć podręczna pobierania jest ograniczona przez rozmiar, a nie przez okres istnienia, więc jest możliwe, że środowisko uruchomieniowe języka wspólnego podejmie próbę usunięcia pliku, który jest używany. Kolejny powód, aby ustawić niestandardową lokalizację jest, gdy użytkownicy korzystający z aplikacji nie mieć dostęp do zapisu na lokalizację katalogu, w której środowisko uruchomieniowe języka wspólnego używa pamięci podręcznej pobierania.  
-  
-- Opcjonalnie ogranicz zestawy, które są kopie w tle woluminów przy użyciu <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> właściwości.  
-  
-     Po włączeniu kopiowania w tle dla domeny aplikacji, wartość domyślna to do skopiowania wszystkich zestawów w ścieżce aplikacji — czyli w katalogi określone przez <xref:System.AppDomainSetup.ApplicationBase%2A> i <xref:System.AppDomainSetup.PrivateBinPath%2A> właściwości. Można ograniczyć kopiowanie do wybranych katalogów, tworząc ciąg, który zawiera tylko te katalogi, które chcesz umieścić w kopii w tle i przypisywanie ciąg <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> właściwości. Katalogi należy oddzielić średnikami. Tylko zestawy, które są kopiowane w tle są pokazane w wybranych katalogów.  
+     Ścieżka bazowa dla lokalizacji jest tworzona przez połączenie <xref:System.AppDomainSetup.ApplicationName%2A> właściwości <xref:System.AppDomainSetup.CachePath%2A> z właściwością jako podkatalogiem. Zestawy są kopiowane w tle do podkatalogów tej ścieżki, a nie do samej ścieżki podstawowej.  
   
     > [!NOTE]
-    >  Jeśli nie przypiszesz ciąg <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> właściwości, lub jeśli ta właściwość jest ustawiona na `null`, wszystkie zestawy w katalogi określone przez <xref:System.AppDomainSetup.ApplicationBase%2A> i <xref:System.AppDomainSetup.PrivateBinPath%2A> właściwości są kopie w tle.  
+    > Jeśli właściwość nie jest ustawiona <xref:System.AppDomainSetup.CachePath%2A> , właściwość zostanie zignorowana, a zostanie użyta pamięć podręczna pobierania. <xref:System.AppDomainSetup.ApplicationName%2A> Nie zgłoszono żadnego wyjątku.  
+  
+     Jeśli określisz lokalizację niestandardową, użytkownik jest odpowiedzialny za czyszczenie katalogów i skopiowanych plików, gdy nie są już potrzebne. Nie są usuwane automatycznie.  
+  
+     Istnieje kilka przyczyn, dla których warto ustawić lokalizację niestandardową dla skopiowanych plików w tle. Możesz chcieć ustawić lokalizację niestandardową dla skopiowanych plików w tle, jeśli aplikacja generuje dużą liczbę kopii. Pamięć podręczna pobierania jest ograniczona rozmiarem, a nie przez okres istnienia, więc jest możliwe, że środowisko uruchomieniowe języka wspólnego podejmie próbę usunięcia pliku, który jest nadal używany. Kolejną przyczyną ustawienia niestandardowej lokalizacji jest to, że użytkownicy korzystający z aplikacji nie mają dostępu do zapisu w lokalizacji katalogu używanej przez środowisko uruchomieniowe języka wspólnego na potrzeby pamięci podręcznej pobierania.  
+  
+- Opcjonalnie Ogranicz zestawy, które są kopiowane w tle przy użyciu <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> właściwości.  
+  
+     Po włączeniu kopiowania w tle dla domeny aplikacji domyślną wartością jest skopiowanie wszystkich zestawów w ścieżce aplikacji — czyli w katalogach określonych przez <xref:System.AppDomainSetup.ApplicationBase%2A> i <xref:System.AppDomainSetup.PrivateBinPath%2A> właściwości. Można ograniczyć kopiowanie do wybranych katalogów, tworząc ciąg zawierający tylko te katalogi, które mają być kopiowane w tle, i przypisując ciąg do <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> właściwości. Oddziel katalogi średnikami. Jedynymi zestawami, które są kopiowane w tle, są te, które znajdują się w wybranych katalogach.  
+  
+    > [!NOTE]
+    > Jeśli nie przypiszesz ciągu <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> do właściwości lub jeśli ustawisz tę właściwość na `null`, wszystkie zestawy w katalogach określonych przez <xref:System.AppDomainSetup.ApplicationBase%2A> i <xref:System.AppDomainSetup.PrivateBinPath%2A> właściwości są skopiowane w tle.  
   
     > [!IMPORTANT]
-    >  Ścieżek katalogów nie mogą zawierać średnikami, ponieważ znajduje się znak ogranicznika. Nie ma żadnych znak ucieczki dla średnikami.  
+    >  Ścieżki katalogów nie mogą zawierać średników, ponieważ średnik jest znakiem ogranicznika. Brak znaku ucieczki dla średników.  
   
 <a name="StartupPerformance"></a>   
 ## <a name="startup-performance"></a>Startowa wydajność  
- Po uruchomieniu domeny aplikacji, która używa kopiowania w tle występuje opóźnienie podczas zestawów w katalogu aplikacji są kopiowane do katalogu kopii w tle lub zweryfikować, czy są już w tej lokalizacji. Przed .NET Framework 4 wszystkie zestawy zostały skopiowane do katalogu tymczasowego. Każdy zestaw został otwarty, aby sprawdzić nazwę zestawu, a została zweryfikowana silnej nazwy. Każdy zestaw została sprawdzona czy miał został zaktualizowany niedawno kopiowania w katalogu kopii w tle. Jeśli tak, został skopiowany do katalogu kopii w tle. Na koniec tymczasowej kopii zostały odrzucone.  
+ Gdy domena aplikacji, która korzysta z kopiowania w tle, rozpocznie się, występuje opóźnienie, a zestawy w katalogu aplikacji są kopiowane do katalogu kopii w tle lub zweryfikowane, jeśli znajdują się już w tej lokalizacji. Przed .NET Framework 4 wszystkie zestawy zostały skopiowane do katalogu tymczasowego. Każdy zestaw został otwarty w celu zweryfikowania nazwy zestawu i zweryfikowania silnej nazwy. Każdy zestaw został sprawdzony, aby sprawdzić, czy został on ostatnio zaktualizowany niż kopia w katalogu kopii w tle. Jeśli tak, zostało ono skopiowane do katalogu kopii w tle. Na koniec kopie tymczasowe zostały odrzucone.  
   
- Począwszy od programu .NET Framework 4, domyślne zachowanie uruchamiania jest bezpośrednio porównanie pliku daty i czasu każdego zestawu w katalogu aplikacji z datą pliku oraz czasu kopiowania w katalogu kopii w tle. Jeśli zestaw został zaktualizowany, jest kopiowany przy użyciu tej samej procedury jak w starszych wersjach programu .NET Framework; w przeciwnym razie kopia w katalogu kopii w tle jest ładowany.  
+ Począwszy od .NET Framework 4, domyślnym zachowaniem uruchamiania jest bezpośrednie porównanie daty i godziny pliku każdego zestawu w katalogu aplikacji z datą i godziną kopiowania w katalogu kopii w tle. Jeśli zestaw został zaktualizowany, jest kopiowany przy użyciu tej samej procedury jak we wcześniejszych wersjach .NET Framework; w przeciwnym razie zostanie załadowana kopia w katalogu kopii w tle.  
   
- Wynikowy wzrost wydajności jest największy dla aplikacji, w których zestawy nie zmieniają się często, a zmiany są zazwyczaj występuje w mały podzbiór zestawów. Większość zestawów w zmiany aplikacji są często nowe zachowanie może spowodować regresji wydajności. Można przywrócić zachowanie uruchamiania z poprzednich wersji programu .NET Framework, dodając [ \<shadowCopyVerifyByTimestamp > element](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) do pliku konfiguracji z `enabled="false"`.  
+ Wynikowe zwiększenie wydajności jest największe dla aplikacji, w których zestawy nie zmieniają się często, a zmiany zwykle występują w małym podzestawie zestawów. Jeśli większość zestawów w aplikacji często zmienia się, nowe domyślne zachowanie może spowodować regresję wydajności. Można przywrócić zachowanie uruchamiania poprzednich wersji .NET Framework przez dodanie [ \<elementu shadowCopyVerifyByTimestamp >](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) do pliku konfiguracji, z `enabled="false"`.  
   
 <a name="ObsoleteMethods"></a>   
 ## <a name="obsolete-methods"></a>Metody przestarzałe  
- <xref:System.AppDomain> Klasa ma kilka metod, takich jak <xref:System.AppDomain.SetShadowCopyFiles%2A> i <xref:System.AppDomain.ClearShadowCopyPath%2A>, który może służyć do kontrolowania kopiowania w tle na domenę aplikacji, ale te zostały oznaczone jako przestarzałe w programie .NET Framework w wersji 2.0. Zalecanym sposobem konfigurowanie domeny aplikacji, w przypadku kopiowania w tle jest użycie właściwości <xref:System.AppDomainSetup> klasy.  
+ Klasa ma kilka metod, takich jak <xref:System.AppDomain.SetShadowCopyFiles%2A> i <xref:System.AppDomain.ClearShadowCopyPath%2A>, które mogą służyć do kontrolowania kopiowania w tle w domenie aplikacji, ale zostały oznaczone jako przestarzałe w .NET Framework w wersji 2,0. <xref:System.AppDomain> Zalecanym sposobem skonfigurowania domeny aplikacji do kopiowania w tle jest użycie właściwości <xref:System.AppDomainSetup> klasy.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -83,4 +83,4 @@ Kopiowanie zestawów umożliwia, które są używane w domenie aplikacji, należ
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [\<shadowCopyVerifyByTimestamp > Element](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [\<shadowCopyVerifyByTimestamp, element >](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

@@ -2,20 +2,20 @@
 title: <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-ms.openlocfilehash: 7506cce61966a4a4650ff591cd6106dfd4a33b67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb7c699612ef12aae39aaeadaf170d0e8f2553cd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670368"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936446"
 ---
-# <a name="serviceactivations"></a>\<serviceActivations>
+# <a name="serviceactivations"></a>\<> ServiceActivations
 
-Element konfiguracji, który pozwala Tobie dodać ustawienia, które definiują ustawienia aktywacji usług wirtualnych mapowane odpowiadają typom usług Windows Communication Foundation (WCF). Dzięki temu można aktywować usługi hostowane w WAS / IIS bez pliku .svc.
+Element konfiguracji, który pozwala dodać ustawienia, które definiują ustawienia aktywacji usług wirtualnych, które są mapowane na typy usług Windows Communication Foundation (WCF). Dzięki temu można aktywować usługi hostowane w usłudze WAS lub IIS bez pliku SVC.
 
 \<system.ServiceModel>\
-\<serviceHostingEnvironment>\
-\<serviceActivations>
+\<serviceHostingEnvironment > \
+\<> ServiceActivations
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,17 +40,17 @@ Brak.
 
 |Element|Opis|
 |-------------|-----------------|
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-serviceactivations.md)|Dodaje element konfiguracji, który określa aktywacji aplikacji usługi.|
+|[\<add>](add-of-serviceactivations.md)|Dodaje element konfiguracji, który określa aktywację aplikacji usługi.|
 
 ### <a name="parent-elements"></a>Elementy nadrzędne
 
 |Element|Opis|
 |-------------|-----------------|
-|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Definiuje typ, który usługę hostingu środowiskowego dla danego transportu.|
+|[\<serviceHostingEnvironment>](servicehostingenvironment.md)|Definiuje typ tworzenia wystąpień środowiska hostingu usługi dla określonego transportu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Poniższy przykład pokazuje, jak skonfigurować ustawienia aktywacji w pliku web.config.
+Poniższy przykład pokazuje, jak skonfigurować ustawienia aktywacji w pliku Web. config.
 
 ```xml
 <configuration>
@@ -64,11 +64,11 @@ Poniższy przykład pokazuje, jak skonfigurować ustawienia aktywacji w pliku we
 </configuration>
 ```
 
-Za pomocą tej konfiguracji, możesz aktywować GreetingService bez użycia pliku .svc.
+Korzystając z tej konfiguracji, można aktywować GreetingService bez użycia pliku SVC.
 
-Należy pamiętać, że `<serviceHostingEnvironment>` jest konfiguracji na poziomie aplikacji. Musisz umieszczać `web.config` zawierający konfigurację w katalogu głównym aplikacji wirtualnej. Ponadto `serviceHostingEnvironment` to sekcja dziedziczne machineToApplication. Jeśli zarejestrujesz jednej usługi w katalogu głównym maszyny do każdej usługi w aplikacji będą dziedziczyć tę usługę.
+Należy pamiętać `<serviceHostingEnvironment>` , że jest to konfiguracja poziomu aplikacji. Należy umieścić `web.config` zawiera konfigurację w katalogu głównym aplikacji wirtualnej. Ponadto `serviceHostingEnvironment` jest sekcją dziedziczną machineToApplication. Po zarejestrowaniu pojedynczej usługi w katalogu głównym maszyny każda usługa w aplikacji będzie dziedziczyć tę usługę.
 
-Aktywacja oparta na konfiguracji obsługuje aktywacji za pośrednictwem protokołu http i innych niż http. Wymaga rozszerzenia w relativeAddress, czyli .svc xoml oraz .xamlx. Własne rozszerzenia można zamapować na buildProviders wie, który następnie umożliwi Aktywuj usługę za pośrednictwem dowolnego rozszerzenia. Po konfliktu `<serviceActivations>` sekcji zastępuje .svc rejestracji.
+Aktywacja oparta na konfiguracji obsługuje aktywację za pośrednictwem protokołu HTTP i innego niż http. Wymaga rozszerzeń w relativeAddress (SVC, xoml lub. xamlx). Możesz zmapować własne rozszerzenia na buildProviders, które następnie umożliwią aktywację usługi w dowolnym rozszerzeniu. W `<serviceActivations>` przypadku konfliktu sekcja zastępuje rejestracje SVC.
 
 ## <a name="see-also"></a>Zobacz także
 

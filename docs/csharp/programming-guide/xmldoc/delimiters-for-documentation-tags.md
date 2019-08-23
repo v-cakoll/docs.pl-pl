@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: 88ad2519382c06aec2c8b1488c380fac47d5f1a2
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c8d20284b7ef2e06fb987f94f05cbe1dde1dc431
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588146"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928068"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Ograniczniki znaczników dokumentacji (Przewodnik programowania w języku C#)
 Użycie komentarzy w dokumencie XML wymaga ograniczników wskazujących kompilatorowi, w którym rozpoczyna się i kończą komentarz dokumentacji. Do tagów dokumentacji XML można używać następujących rodzajów ograniczników:  
@@ -21,7 +21,7 @@ Użycie komentarzy w dokumencie XML wymaga ograniczników wskazujących kompilat
  Ogranicznik pojedynczej linii. Jest to formularz, który jest wyświetlany w przykładach dokumentacji i używany przez szablony C# projektu wizualnego. Jeśli występuje znak spacji po ograniczniku, ten znak nie jest uwzględniany w danych wyjściowych XML.  
   
 > [!NOTE]
->  Środowisko IDE programu Visual Studio ma funkcję o nazwie edytowanie komentarzy inteligentnych, która automatycznie \<wstawia > podsumowania i \<Tagi >/Summary i przenosi kursor w tych `///` tagach po wpisaniu ogranicznika w edytorze kodu . Tę funkcję można włączać lub wyłączać w [oknie dialogowym Opcje](/visualstudio/ide/reference/options-text-editor-csharp-advanced).  
+> Środowisko IDE programu Visual Studio ma funkcję o nazwie edytowanie komentarzy inteligentnych, która automatycznie \<wstawia > podsumowania i \<Tagi >/Summary i przenosi kursor w tych `///` tagach po wpisaniu ogranicznika w edytorze kodu . Tę funkcję można włączać lub wyłączać w [oknie dialogowym Opcje](/visualstudio/ide/reference/options-text-editor-csharp-advanced).  
   
  `/** */`  
  Ograniczniki wielowierszowe.  

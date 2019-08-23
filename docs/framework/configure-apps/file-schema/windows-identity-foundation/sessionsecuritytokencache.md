@@ -3,19 +3,19 @@ title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: 5c68fe618f965f364a3716c3bc65de5e165b12ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9be3bf980c3756678d26d8652271113d4daaba43
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793799"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943710"
 ---
 # <a name="sessionsecuritytokencache"></a>\<sessionSecurityTokenCache>
-Rejestruje pamięci podręcznej dla sesji tokenów z usługi lub kolekcji programu obsługi tokenów zabezpieczeń.  
+Rejestruje pamięć podręczną tokenów sesji za pomocą usługi lub kolekcji obsługi tokenów zabezpieczających.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<caches>  
+\<pamięć podręczna >  
 \<sessionSecurityTokenCache>  
   
 ## <a name="syntax"></a>Składnia  
@@ -38,7 +38,7 @@ Rejestruje pamięci podręcznej dla sesji tokenów z usługi lub kolekcji progra
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— typ|Typ, który pochodzi od klasy <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> klasy.|  
+|— typ|Typ, który pochodzi od <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> klasy.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -47,10 +47,10 @@ Rejestruje pamięci podręcznej dla sesji tokenów z usługi lub kolekcji progra
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Rejestruje pamięci podręcznych, używane przez usługę lub kolekcji programu obsługi tokenów zabezpieczeń.|  
+|[\<pamięć podręczna >](caches.md)|Rejestruje pamięci podręczne używane przez usługę lub kolekcję programu obsługi tokenów zabezpieczających.|  
   
 ## <a name="example"></a>Przykład  
- Następujący kody XML pokazuje konfiguracji niestandardowej pamięci podręcznej do przechowywania tokenów zabezpieczających sesji (<xref:System.IdentityModel.Tokens.SessionSecurityToken>). Konfiguracja jest pobierana z `ClaimsAwareWebFarm` próbki. Aby uzyskać więcej informacji na temat tego przykładu, zobacz [Indeks przykładów kodu programu WIF](../../../../../docs/framework/security/wif-code-sample-index.md).  
+ W poniższym kodzie XML przedstawiono konfigurację niestandardowej pamięci podręcznej dla tokenów zabezpieczających<xref:System.IdentityModel.Tokens.SessionSecurityToken>sesji (). Konfiguracja jest pobierana z `ClaimsAwareWebFarm` przykładu. Aby uzyskać więcej informacji na temat tego przykładu, zobacz [indeks przykładowego kodu WIF](../../../security/wif-code-sample-index.md).  
   
 ```xml  
 <caches>  

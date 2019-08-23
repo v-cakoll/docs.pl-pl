@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: dd59c09185eab003274614dcc30393b060e6b7c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 342583cdbf6a1501f1bc70c6a9be5d7009c390eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904478"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940255"
 ---
 # <a name="how-to-control-how-much-related-data-is-retrieved"></a>Instrukcje: Kontrolowanie, ile jest pobieranych powiązanych danych
-Użyj <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> metodę, aby określić, które dane powiązane z głównym docelowej mają zostać pobrane w tym samym czasie. Na przykład, jeśli wiesz, konieczne będą informacje dotyczące zamówień klientów, można użyć <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> aby upewnić się, że informacje o kolejności są pobierane w tym samym czasie jako informacje o kliencie. To podejście powoduje tylko jeden podróży do bazy danych dla obu zestawów informacji.  
+<xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> Użyj metody, aby określić, które dane związane z głównym miejscem docelowym powinny być pobierane w tym samym czasie. Jeśli na przykład wiesz, że potrzebujesz informacji o zamówieniach klientów, możesz użyć <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> programu, aby upewnić się, że informacje o zamówieniach są pobierane w tym samym czasie co informacje o kliencie. To podejście powoduje tylko jedną podróż do bazy danych dla obu zestawów informacji.  
   
 > [!NOTE]
->  Możesz pobrać dane związane z głównym celem zapytania, pobierając obejmujących wiele produktów jako jeden duży projekcji, takie jak pobieranie zamówień, gdy skierowane do klientów. Jednak to podejście ma często wady. Na przykład, wyniki są po prostu projekcje i nie jednostki, które można zmienić i utrwalone przez [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. A może pobieranie dużej ilości danych, która nie ma potrzeby.  
+> Dane związane z głównym celem zapytania można pobrać, pobierając jeden z wielu produktów, takich jak pobieranie zamówień w przypadku docelowych klientów. Ale takie podejście często ma wady. Na przykład wyniki są tylko projekcjami, a nie jednostkami, które mogą być zmieniane i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]utrwalane przez program. Możesz też pobrać wiele niepotrzebnych danych.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie wszystkie `Orders` dla wszystkich `Customers` kto znajdują się w Londynie są pobierane, gdy zapytanie jest wykonywane. Dzięki temu usługa następujących po sobie dostęp do `Orders` właściwość `Customer` obiektu nie wyzwalają nowej kwerendy bazy danych.  
+ W poniższym przykładzie wszystkie `Orders` dla `Customers` wszystkich osób, które znajdują się w Londynie, są pobierane po wykonaniu zapytania. W efekcie dostęp do `Orders` właściwości `Customer` na obiekcie nie wyzwala nowej kwerendy bazy danych.  
   
  [!code-csharp[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.dataloadoptions/cs/program.cs#2)]
  [!code-vb[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#2)]  

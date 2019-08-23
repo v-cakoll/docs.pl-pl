@@ -9,49 +9,49 @@ helpviewer_keywords:
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: cd836f9ebd4d22ad6542c1fadc204b1ea67d1c26
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d02f9f952c0ca7651d27571111a2d29f3d1130fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300779"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921299"
 ---
 # <a name="app-settings-schema"></a>Schemat ustawień aplikacji
 
-Zawiera ustawienia aplikacji niestandardowych, takich jak ścieżki do plików, adresy URL usługi sieci Web XML lub inne informacje konfiguracji niestandardowej dla aplikacji.
+Zawiera niestandardowe ustawienia aplikacji, takie jak ścieżki plików, adresy URL usług sieci Web XML lub inne niestandardowe informacje o konfiguracji dla aplikacji.
 
-[ **\<Konfiguracja >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md)
+[ **\<> konfiguracji**](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](add-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](remove-element-for-appsettings.md)
 
 | Element | Opis |
 | ------- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Zawiera  **\<Dodaj >** ,  **\<Wyczyść >** , i  **\<Usuń >** tagów, aby kontrolować ustawienia aplikacji. Ma opcjonalny **pliku** atrybutu. |
-| [ **\<add>** ](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Definiuje ustawienie. Element podrzędny elementu  **\<appSettings >** . Wymaga **klucz** i **wartość** atrybutów. |
-| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Czyści wszystkie ustawienia. Element podrzędny elementu  **\<appSettings >** . nie ma żadnych atrybutów. |
-| [ **\<remove>** ](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Usuwa ustawienie. Element podrzędny elementu  **\<appSettings >** . Wymaga **klucz** atrybutu. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | **Zawiera\<Dodaj >** ,  **\<Wyczyść >** i  **\<Usuń Tagi >** w celu kontrolowania ustawień aplikacji. Ma opcjonalny atrybut **pliku** . |
+| [ **\<add>** ](add-element-for-appsettings.md) | Definiuje ustawienie. Element podrzędny **> appSettings.\<** Wymaga atrybutów **klucza** i **wartości** . |
+| [ **\<clear>** ](clear-element-for-appsettings.md) | Czyści wszystkie ustawienia. Element podrzędny **> appSettings.\<** Nie ma atrybutów. |
+| [ **\<remove>** ](remove-element-for-appsettings.md) | Usuwa ustawienie. Element podrzędny **> appSettings.\<** Wymaga atrybutu **klucza** . |
 
-## <a name="appsettings-element"></a>\<appSettings > element
+## <a name="appsettings-element"></a>\<appSettings, > element
 
-Ten element zawiera  **\<Dodaj >** ,  **\<Wyczyść >** , i  **\<Usuń >** tagów, aby kontrolować ustawienia aplikacji. Definiuje on opcjonalny atrybut **pliku**.
+Ten element zawiera  **\<Dodawanie >** ,  **\<czyszczenie >** i  **\<Usuwanie tagów >** w celu kontrolowania ustawień aplikacji. Definiuje opcjonalny atrybut dla **pliku**.
 
-## <a name="add-element"></a>\<Dodaj > element
+## <a name="add-element"></a>\<Dodaj element >
 
-Ustawienia niestandardowych aplikacji jako pary nazwa/wartość są dodawane do kolekcji ustawień aplikacji. Definiuje atrybuty **klucz** i **wartość**.
+Dodaje niestandardowe ustawienie aplikacji jako parę nazwa/wartość do kolekcji ustawień aplikacji. Definiuje atrybuty **klucza** i **wartości**.
 
-## <a name="clear-element"></a>\<Wyczyść > element
+## <a name="clear-element"></a>\<Wyczyść element >
 
-Usuwa wszystkie odwołania do ustawień dziedziczonych niestandardowych aplikacji i umożliwia tylko odwołań, które są dodawane przez  **\<Dodaj >** elementy następujące  **\<Wyczyść >** element. Definiuje żadnych atrybutów.
+Usuwa wszystkie odwołania do dziedziczonych ustawień aplikacji niestandardowych i zezwala tylko na odwołania, które są dodawane przez  **\<Dodawanie >** elementów po  **\<elemencie Clear >** . Nie definiuje żadnych atrybutów.
 
-## <a name="remove-element"></a>\<Usuń > element
+## <a name="remove-element"></a>\<Usuń element >
 
-Usuwa odwołanie do ustawienia dziedziczone niestandardową aplikację z kolekcji ustawień aplikacji. Definiuje atrybut **klucz**.
+Usuwa odwołanie do dziedziczonego ustawienia aplikacji niestandardowej z kolekcji ustawień aplikacji. Definiuje atrybut dla **klucza**.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje plik ustawień aplikacji zewnętrznej (*custom.config*) definiuje ustawienia aplikacji niestandardowej:
+W poniższym przykładzie przedstawiono zewnętrzny plik ustawień aplikacji (*Custom. config*) definiujący niestandardowe ustawienie aplikacji:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -60,7 +60,7 @@ Poniższy przykład pokazuje plik ustawień aplikacji zewnętrznej (*custom.conf
 </appSettings>
 ```
 
-Poniższy przykład przedstawia plik konfiguracji aplikacji, który wykorzystuje ustawienie w pliku ustawień zewnętrznych, a następnie ustawia ustawienie aplikacji własnych:
+Poniższy przykład przedstawia plik konfiguracji aplikacji, który używa ustawienia w pliku ustawień zewnętrznych i ustawia własne ustawienie aplikacji:
 
 ```xml
 <configuration>
@@ -72,5 +72,5 @@ Poniższy przykład przedstawia plik konfiguracji aplikacji, który wykorzystuje
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd ustawień aplikacji](~/docs/framework/winforms/advanced/application-settings-overview.md)
-- [Architektura ustawień aplikacji](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Przegląd ustawień aplikacji](../../../winforms/advanced/application-settings-overview.md)
+- [Architektura ustawień aplikacji](../../../winforms/advanced/application-settings-architecture.md)

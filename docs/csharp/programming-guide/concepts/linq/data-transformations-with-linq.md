@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 5ed45580819ff037a3258eada767dd400b9d9e51
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f042042f36e373ec05e8f0f15c14027463653578
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594719"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924319"
 ---
 # <a name="data-transformations-with-linq-c"></a>Przekształcanie danych za pomocą LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]nie tylko pobiera dane. Jest to również zaawansowane narzędzie do przekształcania danych. Za pomocą [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania można użyć sekwencji źródłowej jako danych wejściowych i zmodyfikować ją na wiele sposobów, aby utworzyć nową sekwencję wyjściową. Można zmodyfikować samą sekwencję bez modyfikowania samych elementów przez sortowanie i grupowanie. Jednak prawdopodobnie najbardziej wydajną funkcją [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytań jest możliwość tworzenia nowych typów. Jest to realizowane w klauzuli [SELECT](../../../language-reference/keywords/select-clause.md) . Na przykład należy wykonać następujące zadania:  
@@ -93,7 +93,7 @@ ms.locfileid: "69594719"
  Sekwencja wyjściowa może nie zawierać żadnych elementów ani właściwości elementów z sekwencji źródłowej. Wyjście może zamiast tego być sekwencją wartości, które są obliczane przy użyciu elementów źródłowych jako argumentów wejściowych. Następujące proste zapytanie, gdy jest wykonywane, wyprowadza sekwencję ciągów, których wartości reprezentują obliczenia na podstawie sekwencji źródłowej elementów typu `double`.  
   
 > [!NOTE]
->  Metody wywołujące w wyrażeniach zapytań nie są obsługiwane, jeśli zapytanie zostanie przetłumaczone na inną domenę. Na przykład nie można wywołać metody zwykłej C# w [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] , ponieważ SQL Server nie ma kontekstu dla tego elementu. Można jednak mapować procedury składowane na metody i wywoływać je. Aby uzyskać więcej informacji, zobacz [procedury składowane](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
+> Metody wywołujące w wyrażeniach zapytań nie są obsługiwane, jeśli zapytanie zostanie przetłumaczone na inną domenę. Na przykład nie można wywołać metody zwykłej C# w [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] , ponieważ SQL Server nie ma kontekstu dla tego elementu. Można jednak mapować procedury składowane na metody i wywoływać je. Aby uzyskać więcej informacji, zobacz [procedury składowane](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
   
  [!code-csharp[CsLINQGettingStarted#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#10)]  
   

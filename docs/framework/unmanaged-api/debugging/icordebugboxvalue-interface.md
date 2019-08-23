@@ -16,36 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a9a647a9c77a3c1f82ae3691e2a5e5b2f544cad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c21e5bb70815fa54d1b458894ca33becde204758
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645412"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912919"
 ---
 # <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue, interfejs
 
-Podklasa klasy "ICorDebugHeapValue", który reprezentuje spakowany obiekt klasy wartości.  
+Podklasa elementu "ICorDebugHeapValue" reprezentująca obiekt klasy wartości w ramce.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetObject, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Pobiera wskaźnik interfejsu do spakowanej wystąpienia "ICorDebugObjectValue".|  
+|[GetObject, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Pobiera wskaźnik interfejsu do zapakowanego wystąpienia "ICorDebugObjectValue".|  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
+> Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

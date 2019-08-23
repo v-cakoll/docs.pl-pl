@@ -2,19 +2,19 @@
 title: Refaktoryzacja do czystych funkcji (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: d6e8657da0f7db06d2fdbe1231bdc48e1aa0f954
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 453b128ecaea62fd58c54bfb383091f65a082370
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591339"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924191"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refaktoryzacja do czystych funkcji (C#)
 
 Ważnym aspektem czystych transformacji funkcjonalnych jest uczenie się, jak kod refaktoryzacji przy użyciu czystych funkcji.  
   
 > [!NOTE]
->  Wspólna Nomenklatura w programowaniu funkcjonalnym polega na tym, że programy refaktoryzacji używają czystych funkcji. W Visual Basic i C++, jest to zgodne z użyciem funkcji w odpowiednich językach. Jednak w programie C#funkcje są nazywane metodami. Na potrzeby tej dyskusji czysta funkcja jest implementowana jako metoda w C#.  
+> Wspólna Nomenklatura w programowaniu funkcjonalnym polega na tym, że programy refaktoryzacji używają czystych funkcji. W Visual Basic i C++, jest to zgodne z użyciem funkcji w odpowiednich językach. Jednak w programie C#funkcje są nazywane metodami. Na potrzeby tej dyskusji czysta funkcja jest implementowana jako metoda w C#.  
   
  Jak wspomniano wcześniej w tej sekcji, czysta funkcja ma dwie przydatne cechy:  
   
@@ -81,7 +81,7 @@ public class Program
  Ta wersja programu daje te same dane wyjściowe co pierwsza wersja, ponieważ `HyphenatedConcat` funkcja zmieniła wartość (stan) pierwszego parametru przez <xref:System.Text.StringBuilder.Append%2A> wywołanie funkcji członkowskiej. Należy zauważyć, że ta zmiana występuje pomimo tego `HyphenatedConcat` faktu, który używa przekazywania parametrów wywołania przez wartość.  
   
 > [!IMPORTANT]
->  W przypadku typów referencyjnych, Jeśli przekażesz parametr według wartości, wynikiem jest kopia odwołania do obiektu, który jest przekazywany. Ta kopia jest nadal skojarzona z tymi samymi danymi wystąpienia co oryginalne odwołanie (do momentu przypisania zmiennej odniesienia do nowego obiektu). Wywołanie przez odwołanie nie musi być wymagane do zmodyfikowania parametru przez funkcję.  
+> W przypadku typów referencyjnych, Jeśli przekażesz parametr według wartości, wynikiem jest kopia odwołania do obiektu, który jest przekazywany. Ta kopia jest nadal skojarzona z tymi samymi danymi wystąpienia co oryginalne odwołanie (do momentu przypisania zmiennej odniesienia do nowego obiektu). Wywołanie przez odwołanie nie musi być wymagane do zmodyfikowania parametru przez funkcję.  
   
 ### <a name="pure-function"></a>Czysta funkcja  
 Ta Następna wersja programu pokazuje, jak zaimplementować `HyphenatedConcat` funkcję jako czystą funkcję.  

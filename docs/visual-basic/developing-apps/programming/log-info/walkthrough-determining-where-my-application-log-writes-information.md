@@ -1,5 +1,5 @@
 ---
-title: Ustalanie, gdzie My.Application.Log zapisuje informacje (Visual Basic)
+title: Ustalanie, gdzie my. Application. Log zapisuje informacje (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Log object, output location
@@ -9,59 +9,59 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 895c49fb1fde56a1c9bf8b3a0ecf9de4f29f9972
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 305c29e33f6cd421f39004e09d27c75b02ba8354
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591214"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912555"
 ---
-# <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Przewodnik: Ustalanie, gdzie My.Application.Log zapisuje informacje (Visual Basic)
+# <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Przewodnik: Ustalanie, gdzie my. Application. Log zapisuje informacje (Visual Basic)
 
-`My.Application.Log` Obiektu można zapisać informacji do kilku odbiorniki logu. Odbiorniki logu są konfigurowane przez plik konfiguracji komputera i może zostać przesłonięta przez plik konfiguracji aplikacji. W tym temacie opisano domyślne ustawienia i jak określić ustawienia aplikacji.
+`My.Application.Log` Obiekt może zapisywać informacje w kilku detektorach dzienników. Odbiorniki dzienników są konfigurowane przez plik konfiguracji komputera i mogą zostać zastąpione przez plik konfiguracyjny aplikacji. W tym temacie opisano ustawienia domyślne i sposób określania ustawień aplikacji.
 
-Aby uzyskać więcej informacji na temat domyślnych lokalizacji danych wyjściowych, zobacz [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
+Aby uzyskać więcej informacji na temat domyślnych lokalizacji wyjściowych, zobacz [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
 
-### <a name="to-determine-the-listeners-for-myapplicationlog"></a>Aby określić odbiorników dla obiektu My.Application.Log
+### <a name="to-determine-the-listeners-for-myapplicationlog"></a>Aby określić odbiorniki my. Application. log
 
-1. Zlokalizuj plik konfiguracji zestawu. Tworzysz zestawu, można przejść do pliku app.config w programie Visual Studio z **Eksploratora rozwiązań**. W przeciwnym razie nazwa pliku konfiguracji jest dołączona za pomocą "config" Nazwa zestawu i znajduje się w tym samym katalogu co zestaw.
+1. Zlokalizuj plik konfiguracji zestawu. Jeśli tworzysz zestaw, możesz uzyskać dostęp do pliku App. config w programie Visual Studio z **Eksplorator rozwiązań**. W przeciwnym razie nazwa pliku konfiguracji jest dołączona do zestawu ". config" i znajduje się w tym samym katalogu, w którym znajduje się zestaw.
 
     > [!NOTE]
-    >  Nie każdy zestaw ma plik konfiguracji.
+    > Nie każdy zestaw ma plik konfiguracji.
 
-    Plik konfiguracji jest plik XML.
+    Plik konfiguracji jest plikiem XML.
 
-2. Znajdź `<listeners>` sekcji w `<source>` sekcji z `name` atrybutu "DefaultSource" znajdujący się w `<sources>` sekcji. `<sources>` Sekcji znajduje się w `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.
+2. Znajdź sekcję w sekcji z `name` atrybutem "DefaultSource", który znajduje się w sekcji.`<sources>` `<source>` `<listeners>` Sekcja znajduje się `<system.diagnostics>` w sekcji w sekcji najwyższego poziomu `<configuration>`. `<sources>`
 
-    Jeśli nie istnieją następujące sekcje, a następnie skonfigurować w pliku konfiguracji komputera `My.Application.Log` dziennika odbiorników. W poniższych krokach opisano sposób określania definiuje plik konfiguracji komputera:
+    Jeśli te sekcje nie istnieją, plik konfiguracji komputera może skonfigurować `My.Application.Log` odbiorniki dzienników. W poniższych krokach opisano sposób określania konfiguracji komputera:
 
-    1. Zlokalizuj plik machine.config komputera. Zazwyczaj znajduje się on w *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* katalogu, gdzie `SystemRoot` to nazwa katalogu systemu operacyjnego i `frameworkVersion` jest wersja programu .NET Framework.
+    1. Zlokalizuj plik Machine. config komputera. Zazwyczaj znajduje się on w katalogu *systemroot\Microsoft.NET\Framework\frameworkVersion\CONFIG* , gdzie `SystemRoot` jest katalogiem systemu operacyjnego i `frameworkVersion` jest wersją .NET Framework.
 
-        Ustawienia w pliku machine.config mogą zostać zastąpione przez plik konfiguracji aplikacji.
+        Ustawienia w pliku Machine. config mogą zostać zastąpione przez plik konfiguracyjny aplikacji.
 
-        Jeśli nie istnieją opcjonalne elementy wymienione poniżej, można je utworzyć.
+        Jeśli opcjonalne elementy wymienione poniżej nie istnieją, można je utworzyć.
 
-    2. Znajdź `<listeners>` sekcji w `<source>` sekcji z `name` atrybutu "DefaultSource" w `<sources>` sekcji w `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.
+    2. `name` `<sources>` `<system.diagnostics>` `<configuration>` Znajdź sekcję w`<source>` sekcji z atrybutem "DefaultSource" w sekcji, w sekcji, w sekcji najwyższego poziomu. `<listeners>`
 
-        Jeśli te sekcje nie istnieje, a następnie `My.Application.Log` ma odbiorniki logu domyślne.
+        Jeśli te sekcje nie istnieją, `My.Application.Log` mają tylko domyślne odbiorniki dzienników.
 
-3. Znajdź <`add>` elementów w <`listeners>` sekcji.
+3. Znajdź <`add>` elementy w sekcji <`listeners>` .
 
-     Te elementy Dodaj odbiorniki logu o nazwie, aby `My.Application.Log` źródła.
+     Te elementy dodają nazwane odbiorniki dzienników `My.Application.Log` do źródła.
 
-4. Znajdź `<add>` elementy o nazwach odbiorniki logu w `<sharedListeners>` sekcji w `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.
+4. W sekcji najwyższego poziomu `<sharedListeners>` `<system.diagnostics>` `<configuration>` Znajdź elementy z nazwami odbiorników dziennika w sekcji. `<add>`
 
-5. Dla wielu typów współdzielonych detektorów dane inicjowania odbiornika zawiera opis gdzie odbiornik kieruje dane:
+5. W przypadku wielu typów udostępnionych odbiorników dane inicjujące odbiornika zawierają opis, gdzie odbiornik kieruje dane:
 
-    - A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> odbiornika zapisuje do pliku dziennika, jak opisano we wprowadzeniu.
+    - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> Odbiornik zapisuje dane w dzienniku plików zgodnie z opisem we wprowadzeniu.
 
-    - A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> odbiornika zapisuje informacje w dzienniku zdarzeń komputera, które są określone przez `initializeData` parametru. Aby wyświetlić dziennik zdarzeń, można użyć **Eksploratora serwera** lub **Podgląd zdarzeń Windows**. Aby uzyskać więcej informacji, zobacz [zdarzenia ETW w programie .NET Framework](../../../../framework/performance/etw-events.md).
+    - Odbiornik zapisuje informacje do dziennika zdarzeń komputera określonego `initializeData` przez parametr. <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> Aby wyświetlić dziennik zdarzeń, można użyć **Eksplorator serwera** lub **Podgląd zdarzeń systemu Windows**. Aby uzyskać więcej informacji, zobacz [zdarzenia ETW w .NET Framework](../../../../framework/performance/etw-events.md).
 
-    - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> i <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> odbiorników zapis do pliku określonego w `initializeData` parametru.
+    - I odbiorniki zapisują w pliku określonym w `initializeData` parametrze. <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>
 
-    - A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> odbiornika zapisuje konsoli wiersza polecenia.
+    - <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> Odbiornik zapisuje dane w konsoli wiersza polecenia.
 
-    - Uzyskać informacji o tym, gdzie innych rodzajów odbiorniki logu wpisać informacje zapoznaj się dokumentacją tego typu.
+    - Aby uzyskać informacje o tym, gdzie inne typy odbiorników dzienników zapisują informacje, zapoznaj się z dokumentacją tego typu.
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -73,8 +73,8 @@ Aby uzyskać więcej informacji na temat domyślnych lokalizacji danych wyjścio
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics>
 - [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Instrukcje: Rejestruje wyjątki](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Instrukcje: Zapisywanie wiadomości rejestru](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Przewodnik: Zmienianie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Instrukcje: Wyjątki dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Instrukcje: Zapisuj komunikaty dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Przewodnik: Zmienianie, gdzie my. Application. Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
 - [Zdarzenia ETW w programie .NET Framework](../../../../framework/performance/etw-events.md)
-- [Rozwiązywanie problemów: Odbiorniki logu](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+- [Rozwiązywanie problemów: Odbiorniki dzienników](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)

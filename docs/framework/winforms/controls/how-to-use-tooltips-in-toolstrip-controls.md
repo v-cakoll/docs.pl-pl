@@ -6,34 +6,34 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding tooltips
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
-ms.openlocfilehash: b009d19ed949edbd52ec02252ba1e2271e4cb738
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3f383b6cccba7825637ea65a0e13280b91b406c9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750560"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939732"
 ---
 # <a name="how-to-use-tooltips-in-toolstrip-controls"></a>Instrukcje: użycie elementu ToolTips w kontrolkach ToolStrip
-Możesz wyświetlić <xref:System.Windows.Forms.ToolTip> dla <xref:System.Windows.Forms.ToolStrip> kontrolkę, która przez ustawienie jego <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> właściwość `true`.  
+Możesz <xref:System.Windows.Forms.ToolTip> wyświetlić odpowiedni <xref:System.Windows.Forms.ToolStrip> formant, ustawiając <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> właściwość kontrolki na `true`.  
   
 ### <a name="to-display-a-tooltip"></a>Aby wyświetlić etykietkę narzędzia  
   
-- Ustaw <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> właściwości formantu, aby `true`.  
+- Ustaw właściwość formantu na `true`. <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>  
   
-     Wartość domyślna <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A?displayProperty=nameWithType> jest `true`i wartość domyślną <xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A?displayProperty=nameWithType> i <xref:System.Windows.Forms.StatusStrip.ShowItemToolTips%2A?displayProperty=nameWithType> jest `false`.  
+     Wartość <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A?displayProperty=nameWithType> domyślna to `true`, <xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A?displayProperty=nameWithType> a wartość <xref:System.Windows.Forms.StatusStrip.ShowItemToolTips%2A?displayProperty=nameWithType> domyślna to .`false`  
   
-### <a name="to-use-the-tooltiptext-property-for-the-tooltip-text-of-a-toolstripbutton"></a>Aby użyć właściwości ToolTipText element ToolStripButton tekst etykietki narzędzia  
+### <a name="to-use-the-tooltiptext-property-for-the-tooltip-text-of-a-toolstripbutton"></a>Aby użyć właściwości ToolTipText dla tekstu etykietki narzędzia element ToolStripButton  
   
-1. Ustaw <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> właściwości przycisku `true`.  
+1. Ustaw właściwość przycisku na `true`. <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>  
   
-2. Ustaw <xref:System.Windows.Forms.ToolStripButton.AutoToolTip%2A?displayProperty=nameWithType> właściwości przycisku `false`.  
+2. Ustaw właściwość przycisku na `false`. <xref:System.Windows.Forms.ToolStripButton.AutoToolTip%2A?displayProperty=nameWithType>  
   
-     `AutoToolTip` Właściwość `true` domyślnie <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripDropDownButton>, i <xref:System.Windows.Forms.ToolStripSplitButton>.  
+     `AutoToolTip` Właściwość jest `true` domyślnie dla <xref:System.Windows.Forms.ToolStripButton>, i<xref:System.Windows.Forms.ToolStripDropDownButton>. <xref:System.Windows.Forms.ToolStripSplitButton>  
   
-     A <xref:System.Windows.Forms.ToolStripButton> używa jej `Text` właściwość <xref:System.Windows.Forms.ToolTip> tekst domyślnie. Użyj tej procedury, aby wyświetlić niestandardowy tekst w <xref:System.Windows.Forms.ToolStripButton> <xref:System.Windows.Forms.ToolTip>.  
+     A <xref:System.Windows.Forms.ToolStripButton> domyślnie używa `Text` swojej właściwości dla <xref:System.Windows.Forms.ToolTip> tekstu. Użyj tej procedury, aby wyświetlić niestandardowy tekst w <xref:System.Windows.Forms.ToolStripButton>. <xref:System.Windows.Forms.ToolTip>  
   
 > [!NOTE]
->  Jeśli ustawisz <xref:System.Windows.Forms.ToolStripItemDisplayStyle> do <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None> lub <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Image>, nie jest wyświetlany tekst na przycisku, ale nadal pojawi się etykietka narzędzia.  
+> Jeśli ustawisz <xref:System.Windows.Forms.ToolStripItemDisplayStyle> <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None> opcję lub <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Image>, na przycisku nie będzie wyświetlany tekst, ale etykietka narzędzia nadal pojawia się.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: f96124f7d97e733b1f0e2559320ce2e09ba5ff21
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 97888a77dfc731be591d5f0284e87f45ef7dc437
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039959"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930171"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami systemu Windows przy użyciu narzędzia Projektant
 Poniższa procedura umożliwia utworzenie wielookienkowego interfejsu użytkownika, który jest podobny do tego, który jest używany w programie Microsoft Outlook, z listą **folderów** , okienkiem **wiadomości** i okienkiem **podglądu** . To rozwiązanie jest uzyskiwane głównie przez dokowanie kontrolek za pomocą formularza.
@@ -39,7 +39,7 @@ Poniższa procedura umożliwia utworzenie wielookienkowego interfejsu użytkowni
      W tym momencie naciśnij klawisz F5, aby uruchomić aplikację, a w formularzu zostanie wyświetlony interfejs użytkownika z trzema częścią, podobny do tego w programie Microsoft Outlook.
 
     > [!NOTE]
-    >  Po umieszczeniu wskaźnika myszy nad dowolnym rozdzielaczem w <xref:System.Windows.Forms.SplitContainer> kontrolkach można zmienić rozmiar wewnętrznych wymiarów.
+    > Po umieszczeniu wskaźnika myszy nad dowolnym rozdzielaczem w <xref:System.Windows.Forms.SplitContainer> kontrolkach można zmienić rozmiar wewnętrznych wymiarów.
 
 Na tym etapie opracowywania aplikacji przygotowano zaawansowany interfejs użytkownika. Następnym krokiem jest przechodzenie między programowaniem aplikacji, na przykład przez połączenie <xref:System.Windows.Forms.TreeView> kontrolki i <xref:System.Windows.Forms.ListView> kontrolek z pewnym rodzajem źródła danych. Aby uzyskać więcej informacji na temat łączenia formantów z danymi, zobacz [powiązanie danych i Windows Forms](../data-binding-and-windows-forms.md).
 

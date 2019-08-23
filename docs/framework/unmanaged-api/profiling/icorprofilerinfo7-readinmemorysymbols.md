@@ -12,17 +12,17 @@ api_type:
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a878ccf94fb4f6d67daa3a4dd42fcf98faf34a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95b463b23c230d620d746e48da49d75238ef2cb7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748642"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955375"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
-[Obsługiwane w programie .NET Framework 4.6.1 i nowszych wersjach]  
+[Obsługiwane w .NET Framework 4.6.1 i nowszych wersjach]  
   
- Odczytuje bajtów ze strumienia symboli w pamięci.  
+ Odczytuje bajty z strumienia symboli w pamięci.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,39 +38,39 @@ HRESULT ReadInMemorySymbols(
   
 ## <a name="parameters"></a>Parametry  
  `moduleId`  
- [in] Identyfikator modułu, zawierająca strumień w pamięci.  
+ podczas Identyfikator modułu zawierającego strumień znajdujący się w pamięci.  
   
  `symbolsReadOffset`  
- [in] Przesunięcie w strumieniu w pamięci, w którym ma zostać rozpoczęte odczytywanie bajtów.  
+ podczas Przesunięcie w strumieniu w pamięci, od którego ma zostać rozpoczęte odczytywanie bajtów.  
   
  `pSymbolBytes`  
- [out] Wskaźnik do buforu, do którego zostaną skopiowane dane. Rozmiar buforu powinien mieć `countSymbolBytes` dostępnego miejsca.  
+ określoną Wskaźnik do buforu, do którego zostaną skopiowane dane. Bufor powinien mieć `countSymbolBytes` dostępne miejsce.  
   
  `countSymbolBytes`  
- [in] Liczba bajtów do skopiowania.  
+ podczas Liczba bajtów do skopiowania.  
   
  `pCountSymbolBytesRead`  
- [out] Gdy metoda zwróci wartość, zawiera rzeczywista liczba odczytanych bajtów.  
+ określoną Gdy metoda zwraca, zawiera rzeczywistą liczbę odczytanych bajtów.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK`, jeśli zostały wczytane niezerową liczbę bajtów.  
+ `S_OK`, jeśli odczytano różną od zera liczbę bajtów.  
   
  `CORPROF_E_MODULE_IS_DYNAMIC`, jeśli moduł został utworzony przy użyciu <xref:System.Reflection.Emit>.  
   
 ## <a name="remarks"></a>Uwagi  
- `ReadInMemorySymbols` Metoda podejmuje próbę odczytu `countSymbolBytes` danych, rozpoczynając od przesunięcia `symbolsReadOffset` w strumieniu w pamięci. Dane są kopiowane do `pSymbolBytes`, które powinny mieć `countSymbolBytes` dostępnego miejsca.     `pCountSymbolsBytesRead` zawiera rzeczywista liczba bajtów odczytanych, który może być mniejsza niż `countSymbolBytes` Jeśli osiągnięty zostanie koniec strumienia.  
+ Metoda próbuje odczytać `countSymbolBytes` dane, zaczynając od przesunięcia `symbolsReadOffset` w strumieniu znajdującym się w pamięci. `ReadInMemorySymbols` Dane są kopiowane do, `pSymbolBytes`w przypadku których oczekuje się, `countSymbolBytes` że dostępne jest miejsce.     `pCountSymbolsBytesRead`zawiera rzeczywistą liczbę odczytanych bajtów, która może być mniejsza `countSymbolBytes` niż Jeśli osiągnięto koniec strumienia.  
   
 > [!NOTE]
->  Bieżąca implementacja nie obsługuje Reflection.Emit. Jeśli moduł został utworzony przy użyciu Reflection.Emit, metoda zwraca `CORPROF_E_MODULE_IS_DYNAMIC`.  
+> Bieżąca implementacja nie obsługuje odbicia. emisji. Jeśli moduł został utworzony przy użyciu odbicia. Emituj, metoda zwraca `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówki** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

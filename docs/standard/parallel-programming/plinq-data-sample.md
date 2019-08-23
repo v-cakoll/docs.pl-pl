@@ -10,30 +10,30 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666628"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946453"
 ---
 # <a name="plinq-data-sample"></a>Próbka danych PLINQ
-W tym przykładzie zawiera przykładowe dane w formacie CSV, wraz z metod, które przetwarzają je do kolekcji w pamięci dla klientów, produkty, zamówień i szczegóły zamówienia. Do dalszych eksperymentów z PLINQ, Wklej przykłady kodu z niektórych innych tematów, jak kod w tym temacie i wywołać go z `Main` metody. Umożliwia także te dane za pomocą zapytań PLINQ.  
+Ten przykład zawiera przykładowe dane w formacie CSV, a także metody, które przekształcają je na kolekcje klientów, produkty, zamówienia i szczegóły zamówienia. Aby dodatkowo eksperymentować z PLINQ, możesz wkleić przykłady kodu z niektórych innych tematów do kodu w tym temacie i wywoływać go z `Main` metody. Możesz również używać tych danych przy użyciu własnych zapytań PLINQ.  
   
- Dane reprezentuje podzbiór bazy danych Northwind. 50 (50), rekordy klientów są uwzględnione, ale nie wszystkie pola. Dołączono podzestaw wierszy z zamówień i odpowiadające im dane Order_Detail dla każdego klienta. Wszystkie produkty są uwzględniane.  
+ Dane przedstawiają podzestaw bazy danych Northwind. 50 (50) rekordy klientów są uwzględniane, ale nie wszystkie pola. Uwzględniono podzestaw wierszy z zamówień i odpowiadające im dane Order_Detail dla każdego klienta. Wszystkie produkty są dołączone.  
   
 > [!NOTE]
->  Zestaw danych nie jest wystarczająco duży, aby wykazać, że PLINQ jest szybsza niż LINQ do obiektów dla zapytań, które zawierają tylko podstawowe `where` i `select` klauzul. Aby obserwować, zwiększa szybkość w przypadku małych zestawów danych, takich jak to, należy użyć zapytań, które zawierają obliczeniowo kosztowne operacje dla każdego elementu w zestawie danych.  
+> Zestaw danych nie jest wystarczająco duży, aby pokazać, że PLINQ jest szybsze niż LINQ to Objects dla zapytań, które zawierają `where` tylko `select` klauzule podstawowe i. Aby obsłużyć szybkość rośnie w przypadku małych zestawów danych, takich jak to, należy użyć zapytań, które zawierają obliczenia kosztownych operacji dla każdego elementu w zestawie danych.  
   
-### <a name="to-set-up-this-sample"></a>Aby skonfigurować w tym przykładzie  
+### <a name="to-set-up-this-sample"></a>Aby skonfigurować ten przykład  
   
-1. Utwórz projekt aplikacji konsoli Visual Basic lub Visual C#.  
+1. Utwórz projekt aplikacji Visual Basic lub C# konsoli wizualnej.  
   
-2. Zastąp zawartość Module1.vb lub Program.cs przy użyciu kodu, który obejmuje następujące kroki.  
+2. Zastąp zawartość Module1. vb lub Program.cs przy użyciu kodu, który następuje po wykonaniu tych kroków.  
   
-3. Na **projektu** menu, kliknij przycisk **Dodaj nowy element**. Wybierz **plik tekstowy** a następnie kliknij przycisk **OK**. Skopiuj dane w tym temacie, a następnie wklej go w nowy plik tekstowy. Na **pliku** menu, kliknij przycisk **Zapisz**, nadaj plikowi Plinqdata.csv, a następnie zapisz go w folderze, który zawiera pliki kodu źródłowego.  
+3. W menu **projekt** kliknij polecenie **Dodaj nowy element**. Wybierz pozycję **plik tekstowy** , a następnie kliknij przycisk **OK**. Skopiuj dane z tego tematu, a następnie wklej je w nowym pliku tekstowym. W menu **plik** kliknij polecenie **Zapisz**, Nazwij plik Plinqdata. csv, a następnie zapisz go w folderze zawierającym pliki kodu źródłowego.  
   
-4. Naciśnij klawisz F5, aby zweryfikować, że projekt kompiluje i działa poprawnie. Następujące dane wyjściowe powinna być wyświetlana w oknie konsoli.  
+4. Naciśnij klawisz F5, aby sprawdzić, czy projekt jest poprawnie kompilowany i uruchamiany. Poniższe dane wyjściowe powinny być wyświetlane w oknie konsoli.  
   
     ```  
     Customer count: 50  

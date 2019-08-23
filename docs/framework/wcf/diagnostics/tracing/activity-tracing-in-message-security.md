@@ -2,55 +2,55 @@
 title: Śledzenie działania w ramach zabezpieczeń komunikatów
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
-ms.openlocfilehash: 65b2842c57da8e17c7280a2becd755ba2aae8364
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb8a4c6782cc52de393eacc2458e216d0f069866
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656454"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933514"
 ---
 # <a name="activity-tracing-in-message-security"></a>Śledzenie działania w ramach zabezpieczeń komunikatów
-W tym temacie opisano śledzenie aktywności dla przetwarzania zabezpieczeń, co się stanie w następujące trzy etapy.  
+W tym temacie opisano śledzenie działań na potrzeby przetwarzania zabezpieczeń, które odbywa się w następujących trzech fazach.  
   
-- Negocjowanie/SCT programu exchange. Może to nastąpić transportu (przez dane binarne exchange) lub warstwy komunikat (za pośrednictwem wymiany komunikatów protokołu SOAP).  
+- Negocjowanie/SCT Exchange. Może się to zdarzyć w przypadku późniejszego transportu (za pomocą wymiany danych binarnych) lub warstwy wiadomości (za pomocą wymiany komunikatów protokołu SOAP).  
   
-- Komunikat operacji szyfrowania i odszyfrowywania, za pomocą uwierzytelniania i weryfikacji podpisu. Ślady są wyświetlane w działaniu, otoczenia, zazwyczaj "Action procesu".  
+- Szyfrowanie/odszyfrowywanie komunikatu z weryfikacją podpisu i uwierzytelnianiem. Ślady są wyświetlane w działaniu otoczenia, zazwyczaj "Akcja procesu".  
   
-- Autoryzacja i weryfikacji. Można to zrobić, lokalnie lub gdy komunikacja między punktami końcowymi.  
+- Autoryzacja i weryfikacja. Może się to zdarzyć lokalnie lub podczas komunikacji między punktami końcowymi.  
   
-## <a name="negotiationsct-exchange"></a>Negocjowanie/SCT programu exchange  
- W fazie exchange negocjowania/SCT tworzone są dwa typy działań na komputerze klienckim: "Konfigurowanie Secure sesja" i "Close bezpiecznej sesji." "Konfigurowanie Secure sesji" obejmuje śladów RST/RSTR/SCT wymianę komunikatów, gdy "Zamknij sesję Secure" zawiera dane śledzenia dla komunikatu Anuluj.  
+## <a name="negotiationsct-exchange"></a>Negocjowanie/wymiana z SCT  
+ W fazie wymiany negocjacji/SCT na kliencie tworzone są dwa typy działań: "Skonfiguruj bezpieczną sesję" i "Zamknij bezpieczną sesję". "Skonfiguruj bezpieczną sesję" obejmuje ślady dla wymiany komunikatów RST/RSTR/SCT, natomiast polecenie "Zamknij bezpieczną sesję" obejmuje ślady dla wiadomości Anuluj.  
   
- Na serwerze każdego żądanie/nietypizowana odpowiedź dla RST/RSTR/SCT pojawia się w swoje własne działania. Jeśli `propagateActivity` = `true` na serwer i klienta, mają taki sam identyfikator działania na serwerze i pojawiają się razem w "Ustawienia zabezpieczenia sesji" podczas wyświetlania za pośrednictwem przeglądarki danych śledzenia usługi.  
+ Na serwerze każde żądanie/odpowiedź dla RST/RSTR/SCT pojawia się w jego własnej aktywności. Jeśli `propagateActivity` zarównoserwer,`true` jak i klient, działania na serwerze mają ten sam identyfikator i pojawiają się razem w oknie "bezpieczna sesja" podczas wyświetlania za pomocą przeglądarki śledzenia usługi. =  
   
- Ten model śledzenia działania jest prawidłowy dla użytkownika nazwy i hasła, uwierzytelnianie oparte na certyfikatach oraz uwierzytelnianie NTLM.  
+ Ten model śledzenia aktywności jest prawidłowy dla uwierzytelniania nazwy użytkownika/hasła, uwierzytelniania certyfikatów i uwierzytelniania NTLM.  
   
- W poniższej tabeli wymieniono działania i ślady negocjacje i SCT programu exchange.  
+ W poniższej tabeli wymieniono działania i ślady dotyczące negocjacji oraz wymiany SCT.  
   
-||Czas, kiedy się stanie, negocjowania/SCT programu exchange|Kategoria Activities|ślady|  
+||Czas, w którym odbywa się negocjowanie/nawiązywanie wymiany z SCT|Kategoria Activities|Ścieżki|  
 |-|-------------------------------------------------|----------------|------------|  
-|Zabezpieczenia transportu<br /><br /> (HTTPS, SSL)|Na pierwszy komunikat odebrany.|Ślady są emitowane w działaniu otoczenia.|-Ślady Exchange<br />-Należy zabezpieczyć kanał nawiązane<br />-Udostępnić klucze tajne uzyskany.|  
-|Warstwa zabezpieczoną wiadomość<br /><br /> (WSHTTP)|Na pierwszy komunikat odebrany.|Na komputerze klienckim:<br /><br /> -"Instalatora bezpiecznej sesji" poza "Action procesu" ten pierwszy komunikat dla każdego żądanie/nietypizowana odpowiedź dla RST/RSTR/SCT.<br />-"Bezpiecznej sesji Zamknij" w wymianie ANULOWANIA, poza "działanie Zamknij serwer Proxy". To działanie może się zdarzyć z niektórych innych otoczenia działania, w zależności od tego, po zamknięciu bezpiecznej sesji.<br /><br /> Na serwerze:<br /><br /> — Jedno działanie "Proces Action" dla każdego żądanie/nietypizowana odpowiedź dla RST/SCT/anulować na serwerze. Jeśli `propagateActivity` = `true`RST/RSTR/SCT działań są scalane z "Ustaw się sesja zabezpieczeń" i Anuluj jest scalany z "Zamknij" działanie od klienta.<br /><br /> Istnieją dwa etapy "Ustaw się zabezpieczyć sesji":<br /><br /> 1.  Negocjowanie uwierzytelniania. Jest to opcjonalne, jeśli klient ma już prawidłowe poświadczenia. Ta faza może odbywać się przez bezpiecznym transportem, albo przez wymianę komunikatów. W tym ostatnim przypadku może się zdarzyć wymiany RST/RSTR 1 lub 2. Dla tych wymian dane śledzenia są emitowane w nowe działania żądanie/nietypizowana odpowiedź wcześniej zaprojektowana.<br />2.  Zabezpiecz ustanawiania sesji (SCT), w którym jeden exchange RST/RSTR się stanie, w tym miejscu. Ma takie same działania otoczenia, zgodnie z wcześniejszym opisem.|-Ślady Exchange<br />-Należy zabezpieczyć kanał nawiązane<br />-Udostępnić klucze tajne uzyskany.|  
+|Bezpieczny transport<br /><br /> (HTTPS, SSL)|Po odebraniu pierwszego komunikatu.|Ślady są emitowane w działaniu otoczenia.|— Ślady programu Exchange<br />-Nawiązano bezpieczny kanał<br />— Otrzymane wpisy tajne są udostępniane.|  
+|Warstwa komunikatów zabezpieczonych<br /><br /> (WSHTTP)|Po odebraniu pierwszego komunikatu.|Na kliencie:<br /><br /> -"Skonfiguruj bezpieczną sesję" z "akcją procesu" dla tego pierwszego komunikatu dla każdego żądania/odpowiedzi dla RST/RSTR/SCT.<br />-"Zamknij bezpieczną sesję" dla elementu CANCEL Exchange wychodzącego z działania "Zamknij serwer proxy". To działanie może wystąpić z innego otoczenia, w zależności od tego, kiedy jest zamykana bezpieczna sesja.<br /><br /> Na serwerze programu:<br /><br /> -Jedno działanie "Akcja procesowa" dla każdego żądania/odpowiedzi dla RST/SCT/Anuluj na serwerze. W `propagateActivity`przypadku, gdy = `true`działania RST/RSTR/SCT są scalane z usługą "Skonfiguruj sesję zabezpieczeń", a przycisk Anuluj zostanie scalony z działaniem "Zamknij" z klienta.<br /><br /> Dla opcji "Skonfiguruj bezpieczną sesję" Istnieją dwa etapy:<br /><br /> 1.  Negocjowanie uwierzytelniania. Jest to opcjonalne, jeśli klient ma już odpowiednie poświadczenia. Tę fazę można wykonać za poorednictwem bezpiecznego transportu lub wymian komunikatów. W tym drugim przypadku mogą wystąpić 1 lub 2 RSTR. W przypadku tych wymian ślady są emitowane w nowych działaniach żądania/odpowiedzi zgodnie z założeniami.<br />2.  Ustanawianie bezpiecznej sesji (SCT), w której w tym miejscu występuje jeden serwer RSTR. Ma to takie same działania otoczenia jak opisane wcześniej.|— Ślady programu Exchange<br />-Nawiązano bezpieczny kanał<br />— Otrzymane wpisy tajne są udostępniane.|  
   
 > [!NOTE]
->  W trybie mieszanym zabezpieczeń negocjacji uwierzytelnianie odbywa się w binarnym wymiany, ale SCT odbywa się w wymianie wiadomości. W trybie transportu czystego negocjacji odbywa się tylko w przypadku transportu bez dodatkowych działań.  
+> W trybie zabezpieczeń mieszanym uwierzytelnianie negocjacji odbywa się w wymianach binarnych, ale w wymianie komunikatów jest to polecenie SCT. W trybie czysty transport negocjacje odbywają się tylko w transporcie bez dodatkowych działań.  
   
-## <a name="message-encryption-and-decryption"></a>Komunikat, szyfrowania i odszyfrowywania  
- Poniższa tabela zawiera listę działań i danych śledzenia dla operacji szyfrowania i odszyfrowywania wiadomości, a także uwierzytelniania sygnatury.  
+## <a name="message-encryption-and-decryption"></a>Szyfrowanie i odszyfrowywanie komunikatów  
+ Poniższa tabela zawiera listę działań i śladów związanych z szyfrowaniem/odszyfrowywaniem komunikatów oraz uwierzytelnianiem sygnatury.  
   
-||Zabezpieczenia transportu<br /><br /> (HTTPS, SSL) i zabezpieczanie warstwy wiadomości<br /><br /> (WSHTTP)|  
+||Bezpieczny transport<br /><br /> (HTTPS, SSL) i bezpieczna warstwa komunikatów<br /><br /> (WSHTTP)|  
 |-|---------------------------------------------------------------------------------|  
-|Czas, kiedy również podpisu uwierzytelnianie odbywa się komunikatu szyfrowania i odszyfrowywania|Na odebranego komunikatu|  
+|Czas, w którym następuje szyfrowanie i odszyfrowywanie wiadomości, a także uwierzytelnianie podpisu|Po odebraniu komunikatu|  
 |Kategoria Activities|Ślady są emitowane w działaniu ProcessAction na kliencie i serwerze.|  
-|ślady|-sendSecurityHeader (nadawcy):<br />— Logowanie komunikat<br />-Szyfrowania danych na żądanie<br />-receiveSecurityHeader (odbiorca):<br />— Weryfikowanie podpisu<br />-Odszyfrowywania danych odpowiedzi<br />— Uwierzytelnianie|  
+|Ścieżki|-sendSecurityHeader (nadawca):<br />-Podpisz wiadomość<br />-Szyfruj dane żądania<br />-receiveSecurityHeader (odbiornik):<br />-Weryfikuj podpis<br />-Odszyfruj dane odpowiedzi<br />-Uwierzytelnianie|  
   
 > [!NOTE]
->  W trybie transportu czystego szyfrowania i odszyfrowywania wiadomości odbywa się tylko w przypadku transportu bez dodatkowych działań.  
+> W trybie czystego transportu szyfrowanie lub odszyfrowywanie komunikatów odbywa się tylko w transporcie bez dodatkowych działań.  
   
 ## <a name="authorization-and-verification"></a>Autoryzacja i weryfikacja  
- W poniższej tabeli wymieniono działania i ślady na potrzeby autoryzacji.  
+ Poniższa tabela zawiera listę działań i śladów na potrzeby autoryzacji.  
   
-||Czas, kiedy się dzieje autoryzacji|Kategoria Activities|ślady|  
+||Czas trwania autoryzacji|Kategoria Activities|Ścieżki|  
 |-|-------------------------------------|----------------|------------|  
-|Lokalne (ustawienie domyślne)|Po wiadomości jest odszyfrowywany na serwerze|Ślady są emitowane w działaniu ProcessAction na serwerze.|Użytkownik autoryzowany.|  
-|Zdalne|Po wiadomości jest odszyfrowywany na serwerze|Ślady są emitowane w nowe działanie wywoływane przez działanie ProcessAction.|Użytkownik autoryzowany.|
+|Lokalna (domyślnie)|Po odszyfrowaniu komunikatu na serwerze|Ślady są emitowane w działaniu ProcessAction na serwerze.|Użytkownik autoryzowany.|  
+|Zdalne|Po odszyfrowaniu komunikatu na serwerze|Ślady są emitowane w nowym działaniu wywoływanym przez działanie ProcessAction.|Użytkownik autoryzowany.|

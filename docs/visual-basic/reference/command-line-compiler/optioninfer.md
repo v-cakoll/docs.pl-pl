@@ -1,5 +1,5 @@
 ---
-title: -optioninfer —
+title: -optioninfer
 ms.date: 07/20/2015
 f1_keywords:
 - -optioninfer
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: f1dcc03a67880727893e55c13d65a804586b3f56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4848dec148bc528e7a30940643e3364f1bb5f805
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788924"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939202"
 ---
-# <a name="-optioninfer"></a>-optioninfer —
-Umożliwia użycie wnioskowania o typie lokalnym w deklaracjach zmiennych.  
+# <a name="-optioninfer"></a>-optioninfer
+Umożliwia korzystanie z wnioskowania o typie lokalnym w deklaracjach zmiennych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -28,22 +28,22 @@ Umożliwia użycie wnioskowania o typie lokalnym w deklaracjach zmiennych.
   
 |Termin|Definicja|  
 |---|---|  
-|`+` &#124; `-`|Opcjonalna. Określ `-optioninfer+` włączyć wnioskowanie o typie lokalnym, lub `-optioninfer-` do jego blokowania. `-optioninfer` Opcji bez wartości określone, jest taka sama jak `-optioninfer+`. Wartość domyślna, gdy `-optioninfer` nie ma przełącznika jest również `-optioninfer+`. Wartość domyślna jest ustawiana w pliku odpowiedzi Vbc.rsp.|  
+|`+` &#124; `-`|Opcjonalna. Określ `-optioninfer+` , aby włączyć wnioskowanie o typie lokalnym `-optioninfer-` lub je zablokować. Opcja bez określonej wartości jest taka sama jak `-optioninfer+`. `-optioninfer` Wartość domyślna, gdy przełącznik `-optioninfer` nie jest obecny, jest również `-optioninfer+`. Wartość domyślna jest ustawiana w pliku odpowiedzi VBC. rsp.|  
   
 > [!NOTE]
->  Możesz użyć `-noconfig` opcję, aby zachować ustawienia domyślne wewnętrznych kompilatora, zamiast określone w vbc.rsp. Domyślna wartość kompilatora dla tej opcji jest `-optioninfer-`.  
+> Można użyć `-noconfig` opcji, aby zachować wewnętrzne wartości domyślne kompilatora zamiast opcji określonych w vbc. rsp. Wartość domyślna kompilatora dla tej opcji to `-optioninfer-`.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli plik kodu źródłowego zawiera [Option Infer — instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md), zastępuje instrukcji `-optioninfer` Ustawienia kompilatora wiersza polecenia.  
+ Jeśli plik kodu źródłowego zawiera [instrukcję opcji wnioskowania](../../../visual-basic/language-reference/statements/option-infer-statement.md), instrukcja zastępuje `-optioninfer` ustawienie kompilatora wiersza polecenia.  
   
-### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Aby ustawić - optioninfer — w środowisku IDE programu Visual Studio  
+### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Aby ustawić-optioninfer w środowisku IDE programu Visual Studio  
   
-1. Wybierz projekt w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.  
+1. Wybierz projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**.  
   
-2. Na **skompilować** Zmień wartość w **Option infer** pole.  
+2. Na karcie **kompilacja** Zmień wartość w polu wnioskowanie o **opcji** .  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `test.vb` z włączoną wnioskowanie o typie lokalnym.  
+ Poniższy kod kompiluje `test.vb` z włączonym wnioskem o typie lokalnym.  
   
 ```console
 vbc -optioninfer+ test.vb  
@@ -51,7 +51,7 @@ vbc -optioninfer+ test.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)

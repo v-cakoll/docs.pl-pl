@@ -9,28 +9,28 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: 720172e9fcb13837b527d72176a35d366d83c948
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 273d32927582f4467a92cd3b8f87e699c1f167d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612828"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922781"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Instrukcje: stosowanie atrybutów w kontrolkach formularzy systemu Windows
-Do tworzenia składników i formantów, które nawiązują prawidłową interakcję z środowiska projektowania i poprawnego wykonania w czasie wykonywania, należy poprawnie zastosować atrybutów do klas i składowych.  
+Aby opracować składniki i formanty współdziałające prawidłowo ze środowiskiem projektowym i działać prawidłowo w czasie wykonywania, należy prawidłowo zastosować atrybuty do klas i elementów członkowskich.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu demonstruje sposób używania kilka atrybutów w formancie niestandardowym. Kontrolka pokazuje prosty rejestrować. Gdy kontrolka jest powiązana ze źródłem danych, wyświetla wartości wysyłane przez źródło danych w <xref:System.Windows.Forms.DataGridView> kontroli. Jeśli wartość przekracza wartość określoną przez `Threshold` właściwości `ThresholdExceeded` zdarzenie jest wywoływane.  
+ Poniższy przykład kodu demonstruje, jak używać kilku atrybutów w kontrolce niestandardowej. Kontrolka pokazuje prostą funkcję rejestrowania. Gdy formant jest powiązany ze źródłem danych, wyświetla wartości wysyłane przez źródło danych w <xref:System.Windows.Forms.DataGridView> kontrolce. Jeśli wartość przekroczy wartość określoną przez `Threshold` Właściwość `ThresholdExceeded` , zdarzenie jest zgłaszane.  
   
- `AttributesDemoControl` Dzienniki wartościami `LogEntry` klasy. `LogEntry` Klasa jest klasą szablonu, który oznacza, że jest ona parametryzowane na typ, który rejestruje. Na przykład jeśli `AttributesDemoControl` jest rejestrowanie wartości typu `float`, każdy `LogEntry` wystąpienie jest zadeklarowana i używane w następujący sposób.  
+ `AttributesDemoControl` Rejestruje wartości zklasą`LogEntry` . `LogEntry` Klasa jest klasą szablonu, co oznacza, że jest sparametryzowane dla typu, który rejestruje. Na przykład, jeśli `AttributesDemoControl` rejestruje wartości typu `float`, każde `LogEntry` wystąpienie jest zadeklarowane i używane w następujący sposób.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/form1.cs#110)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/form1.vb#110)]  
   
 > [!NOTE]
->  Ponieważ `LogEntry` jest sparametryzowane według dowolnego typu go używać odbicia do działania na typ parametru. Dla funkcji próg do pracy z typem parametru `T` musi implementować <xref:System.IComparable> interfejsu.  
+> Ponieważ `LogEntry` jest sparametryzowane przez dowolny typ, musi używać odbicia do działania na typie parametru. Aby funkcja progu działała, typ `T` parametru musi <xref:System.IComparable> implementować interfejs.  
   
- Formularz, który jest hostem `AttributesDemoControl` okresowo wysyła zapytanie licznika wydajności. Każda wartość jest spakowany w `LogEntry` odpowiedniego typu i dodany do formularza <xref:System.Windows.Forms.BindingSource>. `AttributesDemoControl` Otrzymuje wartość za pomocą jego powiązania danych i wyświetla wartości w <xref:System.Windows.Forms.DataGridView> kontroli.  
+ Formularz, który `AttributesDemoControl` okresowo kieruje zapytania do licznika wydajności. Każda wartość jest opakowana `LogEntry` do odpowiedniego typu i dodawana do <xref:System.Windows.Forms.BindingSource>formularza. Odbiera wartość za pomocą powiązania danych i wyświetla wartość <xref:System.Windows.Forms.DataGridView> w kontrolce. `AttributesDemoControl`  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#1)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#1)]  
@@ -38,34 +38,34 @@ Do tworzenia składników i formantów, które nawiązują prawidłową interakc
  [!code-csharp[System.ComponentModel.AttributesDemoControl#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/form1.cs#100)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/form1.vb#100)]  
   
- Pierwszy przykład kodu jest `AttributesDemoControl` implementacji. Drugi przykład kodu demonstruje formularz, który używa `AttributesDemoControl`.  
+ Pierwszym przykładem kodu jest `AttributesDemoControl` implementacja. Drugi przykład kodu demonstruje formularz, który używa `AttributesDemoControl`.  
   
-## <a name="class-level-attributes"></a>Atrybuty klasy  
- Niektóre atrybuty są stosowane na poziomie klasy. Poniższy przykład kodu pokazuje atrybuty, które są często stosowane do formantu Windows Forms.  
+## <a name="class-level-attributes"></a>Atrybuty na poziomie klasy  
+ Niektóre atrybuty są stosowane na poziomie klasy. Poniższy przykład kodu pokazuje atrybuty, które są powszechnie stosowane do formantu Windows Forms.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#20)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#20)]  
   
-### <a name="typeconverter-attribute"></a>TypeConverter Attribute  
- <xref:System.ComponentModel.TypeConverterAttribute> jest inny atrybut poziomie klasy często używane. Poniższy przykład kodu pokazuje jego stosowanie `LogEntry` klasy. W tym przykładzie przedstawiono również implementację <xref:System.ComponentModel.TypeConverter> dla `LogEntry` typu, o nazwie `LogEntryTypeConverter`.  
+### <a name="typeconverter-attribute"></a>TypeConverter — atrybut  
+ <xref:System.ComponentModel.TypeConverterAttribute>jest innym powszechnie używanym atrybutem na poziomie klasy. Poniższy przykład kodu pokazuje jego użycie dla `LogEntry` klasy. Ten przykład pokazuje również implementację <xref:System.ComponentModel.TypeConverter> `LogEntry` dla typu o nazwie `LogEntryTypeConverter`.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#5)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#5)]  
   
-## <a name="member-level-attributes"></a>Atrybuty na poziomie członka  
- Niektóre atrybuty są stosowane na poziomie elementu członkowskiego. W poniższych przykładach kodu pokazano niektóre atrybuty, które są często stosowane do właściwości kontrolek formularzy Windows Forms.  
+## <a name="member-level-attributes"></a>Atrybuty na poziomie elementu członkowskiego  
+ Niektóre atrybuty są stosowane na poziomie elementu członkowskiego. Poniższe przykłady kodu pokazują pewne atrybuty, które są powszechnie stosowane do właściwości kontrolek Windows Forms.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#21)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#21)]  
   
-### <a name="ambientvalue-attribute"></a>AmbientValue Attribute  
- W poniższym przykładzie pokazano <xref:System.ComponentModel.AmbientValueAttribute> i zawiera kod, który obsługuje wchodzi w interakcję z środowisko projektowania. Ta interakcja jest nazywany *otoczenie*.  
+### <a name="ambientvalue-attribute"></a>AmbientValue — atrybut  
+ Poniższy przykład demonstruje <xref:System.ComponentModel.AmbientValueAttribute> i pokazuje kod, który obsługuje interakcje ze środowiskiem projektowym. Ta interakcja jest nazywana *Ambience*.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#23)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#23)]  
   
 ### <a name="databinding-attributes"></a>Atrybuty wiązania danych  
- Poniższy przykład pokazuje implementację złożone powiązanie danych. Klasa poziomie <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>, jak pokazano wcześniej, określa `DataSource` i `DataMember` właściwości mają zostać użyte do wiązania danych. <xref:System.ComponentModel.AttributeProviderAttribute> Określa typ, do którego `DataSource` właściwość zostanie z nim powiązane.  
+ W poniższych przykładach przedstawiono implementację złożonego powiązania danych. Pokazany wcześniej poziom <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>klasy, `DataSource` określa właściwości i `DataMember` , które mają być używane do wiązania danych. Określa typ, do `DataSource` którego zostanie powiązana właściwość. <xref:System.ComponentModel.AttributeProviderAttribute>  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#25)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#25)]  
@@ -75,7 +75,7 @@ Do tworzenia składników i formantów, które nawiązują prawidłową interakc
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
-- Formularz, który jest hostem `AttributesDemoControl` wymaga odwołania do `AttributesDemoControl` zestawu w celu kompilacji.  
+- Formularz `AttributesDemoControl` obsługujący wymaga odwołania `AttributesDemoControl` do zestawu, aby można było go skompilować.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -83,4 +83,4 @@ Do tworzenia składników i formantów, które nawiązują prawidłową interakc
 - <xref:System.Windows.Forms.DataGridView>
 - [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)
 - [Atrybuty w kontrolkach formularzy Windows Forms](attributes-in-windows-forms-controls.md)
-- [Instrukcje: Serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
+- [Instrukcje: Serializacja kolekcji typów standardowych z za pomocą DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))

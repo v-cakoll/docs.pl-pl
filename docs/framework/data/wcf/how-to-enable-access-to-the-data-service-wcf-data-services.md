@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zapewnianie dostępu do usługi danych (WCF Data Services)'
+title: 'Instrukcje: Włącz dostęp do usługi danych (Usługi danych programu WCF)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,29 +7,29 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
-ms.openlocfilehash: 260d127107d1ccf1263f4efddd59da9e34306436
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 82b2ec9313c6e0d4b9fa05862209a3ea838f31fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645655"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918622"
 ---
-# <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Instrukcje: Zapewnianie dostępu do usługi danych (WCF Data Services)
-W [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], należy jawnie zezwolić na dostęp do zasobów, które są udostępniane przez usługę danych. Oznacza to, że po utworzeniu nowej usługi danych, należy nadal jawnie określić, dostęp do poszczególnych zasobów jako zestawy jednostek. W tym temacie przedstawiono sposób włączania odczytu i zapisu do pięciu jednostki zestawy w usługi danych Northwind, który jest tworzony po ukończeniu [Szybki Start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Ponieważ <xref:System.Data.Services.EntitySetRights> wyliczenia jest definiowana za pomocą <xref:System.FlagsAttribute>, można użyć logicznych lub operatora, aby określić wiele uprawnień dla pojedynczej jednostki.  
+# <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Instrukcje: Włącz dostęp do usługi danych (Usługi danych programu WCF)
+W [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]programie należy jawnie udzielić dostępu do zasobów, które są udostępniane przez usługę danych. Oznacza to, że po utworzeniu nowej usługi danych nadal trzeba jawnie zapewnić dostęp do poszczególnych zasobów jako zestawy jednostek. W tym temacie pokazano, jak włączyć dostęp do odczytu i zapisu do pięciu zestawów jednostek w usłudze danych Northwind, która została utworzona po zakończeniu przewodnika [Szybki Start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Ponieważ Wyliczenie jest zdefiniowane przy <xref:System.FlagsAttribute>użyciu, można użyć operatora logicznego OR do określenia wielu uprawnień dla pojedynczego zestawu jednostek. <xref:System.Data.Services.EntitySetRights>  
   
 > [!NOTE]
->  Każdy klient, który może uzyskiwać dostęp do aplikacji ASP.NET również dostęp do zasobów udostępnianych przez usługę danych. W środowisku produkcyjnym usługi danych Aby uniemożliwić nieautoryzowany dostęp do zasobów, należy także zabezpieczyć samej aplikacji. Aby uzyskać więcej informacji, zobacz [zabezpieczania witryn sieci Web platformy ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
+> Każdy klient, który może uzyskać dostęp do aplikacji ASP.NET, może również uzyskać dostęp do zasobów udostępnianych przez usługę danych. W przypadku usługi danych produkcyjnych aby zapobiec nieautoryzowanemu dostępowi do zasobów, należy również zabezpieczyć samą aplikację. Aby uzyskać więcej informacji, zobacz [Zabezpieczanie witryn sieci Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
   
-### <a name="to-enable-access-to-the-data-service"></a>Aby umożliwić dostęp do usługi danych  
+### <a name="to-enable-access-to-the-data-service"></a>Aby włączyć dostęp do usługi danych  
   
-- W kodzie dla usługi danych, Zastąp kod symbolu zastępczego `InitializeService` funkcji następującym kodem:  
+- W kodzie usługi danych Zastąp symbol zastępczy w `InitializeService` funkcji następującymi elementami:  
   
      [!code-csharp[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#allreadconfig)]
      [!code-vb[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#allreadconfig)]  
   
-     Dzięki temu klienci do odczytu i zapisu do `Orders` i `Order_Details` zestawów jednostek i dostęp tylko do odczytu do `Customers` zestawy jednostek.  
+     Dzięki temu klienci mają dostęp do odczytu i zapisu do `Orders` zestawów jednostek oraz `Order_Details` dostęp tylko do odczytu do `Customers` zestawów jednostek.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Tworzenie usługi danych WCF działającej na serwerze IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)
+- [Instrukcje: Tworzenie usługi danych programu WCF uruchomionej w usługach IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)
 - [Konfigurowanie usługi danych](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)

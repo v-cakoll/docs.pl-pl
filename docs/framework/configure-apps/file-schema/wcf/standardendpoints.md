@@ -2,15 +2,15 @@
 title: <standardEndpoints>
 ms.date: 03/30/2017
 ms.assetid: d62153d7-a6e6-462a-a784-cca61e9c2ba1
-ms.openlocfilehash: 66b86647689ea2ca39ae2f569d275aff1f48cba5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f40353d36464c2e759bf2058b244cb854b19806c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757979"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930787"
 ---
-# <a name="standardendpoints"></a>\<standardEndpoints>
-Ta sekcja konfiguracji umożliwia zdefiniowanie kolekcji standardowych punktów końcowych, które są do ponownego użycia wstępnie skonfigurowanymi punktami końcowymi. Standardowy punkt końcowy będzie mieć jeden lub więcej adresów, powiązania i atrybuty kontraktu ustawiona na wartość stałą. Na przykład punkt końcowy odnajdywania kontrakt jest stała. Standardowe punkty końcowe umożliwia również rozszerzenie punkt końcowy usługi z nowymi właściwościami podobne do definiowania powiązań niestandardowych.  
+# <a name="standardendpoints"></a>\<standardEndpoints >
+Ta sekcja konfiguracji umożliwia zdefiniowanie kolekcji standardowych punktów końcowych, które są wstępnie skonfigurowanymi punktami końcowymi wielokrotnego użytku. Standardowy punkt końcowy będzie miał co najmniej jeden atrybut Address, Binding i Contract ustawiony na wartość stałą. Na przykład w punkcie końcowym odnajdywania kontrakt jest ustalony. Możesz również użyć standardowych punktów końcowych, aby zwiększyć punkt końcowy usługi z nowymi właściwościami podobnymi do definiowania powiązań niestandardowych.  
   
  \<system.ServiceModel>  
   
@@ -33,22 +33,22 @@ Ta sekcja konfiguracji umożliwia zdefiniowanie kolekcji standardowych punktów 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<announcementEndpoint >](announcementendpoint.md)|Definiuje standardowy punkt końcowy ze stałym kontraktem zawiadomieniowym. Usługa może opcjonalnie ogłaszają jego dostępność, wysyłając anonse online i offline, po otwarciu lub zamknięciu odpowiednio. Usługa Windows Communication Foundation (WCF) określa punkty końcowe anonsu w [ \<serviceDiscovery >](servicediscovery.md) elementu i używa AnnouncementClient przeprowadzić anonsów. Klient chcą nasłuchiwanie anonsu z innej usługi faktycznie działa jako usługa WCF; dlatego musisz skonfigurować punkty końcowe anonsu dla tego klienta w [ \<usługi >](services.md) sekcji.|  
-|[\<discoveryEndpoint>](discoveryendpoint.md)|Definiuje standardowy punkt końcowy ze stałym kontraktem odkrywania. Po dodaniu do konfiguracji usługi, określa, gdzie nasłuchiwać komunikatów odnajdywania. Po dodaniu do konfiguracji klienta określa, gdzie wysyłać zapytania odnajdywania.|  
-|[\<dynamicEndpoint>](dynamicendpoint.md)|Ten element konfiguracji definiuje standardowy punkt końcowy, który zawiera informacje, aby umożliwić aplikacji funkcjonowanie jako program kliencki, który można znaleźć adres punktu końcowego dynamicznie w czasie wykonywania.|  
-|[\<mexEndpoint>](mexendpoint.md)|Definiuje standardowy punkt końcowy ze stałym kontraktem IMetadataExchange. Ponieważ wszystkie punkty końcowe wymiany metadanych określić IMetadataExchange jako ich kontraktu, możesz użyć tego standardowego punktu, zamiast definiować po jednym dla siebie.|  
-|[\<udpAnnouncementEndpoint>](udpannouncementendpoint.md)|Definiuje standardowy punkt końcowy, który jest używany przez usługi do wysłania komunikatów Anons z powiązania protokołu UDP. Ma stały kontraktu i obsługuje dwie wersje odnajdywania. Ponadto ma stałym powiązaniem UDP oraz domyślną wartość adresu określonych w specyfikacji WS-Discovery (WS-Discovery kwietnia 2005 lub w wersji 1.1 protokołu WS-Discovery). Możesz określić adres multiemisji na potrzeby wysyłania i odbierania wiadomości anonsów.|  
-|[\<udpDiscoveryEndpoint>](udpdiscoveryendpoint.md)|Definiuje standardowy punkt końcowy, który jest wstępnie konfigurowany dla operacji odnajdowania za pośrednictwem protokołu UDP powiązania multiemisji. Ten punkt końcowy ma stały kontraktu i obsługuje dwie wersje protokołu WS Discovery. Ponadto ma stały powiązanie protokołu UDP oraz domyślny adres określonych w specyfikacji WS-Discovery (WS-Discovery kwietnia 2005 lub w wersji 1.1 protokołu WS-Discovery).|  
-|[\<webHttpEndpoint>](webhttpendpoint.md)|Definiuje standardowy punkt końcowy ze stałym [ \<webHttpBinding >](webhttpbinding.md) powiązania, który automatycznie dodaje [ \<webHttp >](webhttp.md) zachowanie. Używanie tego punktu końcowego podczas pisania usługi REST.|  
-|[\<webScriptEndpoint>](webscriptendpoint.md)|Definiuje standardowy punkt końcowy ze stałym [ \<webHttpBinding >](webhttpbinding.md) powiązania, który automatycznie dodaje [ \<enableWebScript >](enablewebscript.md) zachowanie. Używanie tego punktu końcowego, gdy tworzysz usługę, która jest wywoływana z poziomu aplikacji ASP.NET AJAX.|  
-|[\<workflowControlEndpoint>](workflowcontrolendpoint.md)|Definiuje standardowy punkt końcowy do kontroli wykonania wystąpień przepływu pracy (Tworzenie, uruchamianie, wstrzymywanie, zakończenia itp).|  
+|[\<announcementEndpoint >](announcementendpoint.md)|Definiuje standardowy punkt końcowy ze stałym kontraktem anonsu. Usługa może opcjonalnie ogłaszać swoją dostępność, wysyłając wiadomość w trybie online i w trybie offline, gdy zostanie ona otwarta lub ZAMKNIĘTA odpowiednio. Usługa Windows Communication Foundation (WCF) określa punkty końcowe anonsu w [ \<elemencie servicediscovery >](servicediscovery.md) i używa AnnouncementClient do wykonywania anonsów. Klient, który chce nasłuchiwać anonsu z innej usługi, działa jako usługa WCF. w tym celu należy skonfigurować punkty końcowe anonsu dla tego klienta w [ \<sekcji > usług](services.md) .|  
+|[\<discoveryEndpoint >](discoveryendpoint.md)|Definiuje standardowy punkt końcowy ze stałym kontraktem odnajdowania. Po dodaniu do konfiguracji usługi określa miejsce nasłuchiwania komunikatów odnajdowania. Po dodaniu do konfiguracji klienta określa, gdzie mają być wysyłane zapytania odnajdywania.|  
+|[\<dynamicEndpoint >](dynamicendpoint.md)|Ten element konfiguracji definiuje standardowy punkt końcowy, który zawiera informacje umożliwiające aplikacji działanie jako program kliencki, który może znaleźć adres punktu końcowego dynamicznie w czasie wykonywania.|  
+|[\<mexEndpoint>](mexendpoint.md)|Definiuje standardowy punkt końcowy ze stałym kontraktem kontraktem IMetadataExchange. Ponieważ wszystkie punkty końcowe wymiany metadanych określają kontraktem IMetadataExchange jako kontrakt, można użyć tego standardowego punktu zamiast definiować go dla siebie.|  
+|[\<udpAnnouncementEndpoint >](udpannouncementendpoint.md)|Definiuje standardowy punkt końcowy, który jest używany przez usługi do wysyłania komunikatów anonsu za pośrednictwem powiązania UDP. Ma ona ustaloną umowę i obsługuje dwie wersje odnajdywania. Oprócz tego ma stałe powiązanie UDP i domyślną wartość adresu określoną w specyfikacjach WS-Discovery (WS-Discovery Kwiecień 2005 lub WS-Discovery w wersji 1,1). Można określić adres multiemisji, który będzie używany do wysyłania i otrzymywania komunikatów anonsu.|  
+|[\<udpDiscoveryEndpoint >](udpdiscoveryendpoint.md)|Definiuje standardowy punkt końcowy, który jest wstępnie skonfigurowany dla operacji odnajdywania za pośrednictwem powiązania multiemisji UDP. Ten punkt końcowy ma stały kontrakt i obsługuje dwie wersje protokołu WS-Discovery. Ponadto ma stałe powiązanie UDP i domyślny adres określony w specyfikacjach WS-Discovery (WS-Discovery Kwiecień 2005 lub WS-Discovery V 1.1).|  
+|[\<webHttpEndpoint>](webhttpendpoint.md)|Definiuje standardowy punkt końcowy ze stałym [ \<](webhttpbinding.md) powiązaniem WebHttpBinding > [ \<](webhttp.md) , które automatycznie dodaje zachowanie > sieci Webhttp. Użyj tego punktu końcowego podczas pisania usługi REST.|  
+|[\<webScriptEndpoint>](webscriptendpoint.md)|Definiuje standardowy punkt końcowy ze stałym [ \<](webhttpbinding.md) powiązaniem WebHttpBinding > [ \<](enablewebscript.md) , które automatycznie dodaje zachowanie > enableWebScript. Użyj tego punktu końcowego podczas pisania usługi, która jest wywoływana z aplikacji ASP.NET AJAX.|  
+|[\<workflowControlEndpoint >](workflowcontrolendpoint.md)|Definiuje standardowy punkt końcowy do kontroli wykonania wystąpień przepływu pracy (tworzenie, uruchamianie, wstrzymywanie, przerywanie itp.).|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|\<system.ServiceModel>|Element główny wszystkich elementów konfiguracji programu WCF.|  
+|\<system.ServiceModel>|Element główny wszystkich elementów konfiguracji WCF.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Standardowe punkty końcowe](../../../../../docs/framework/wcf/feature-details/standard-endpoints.md)
+- [Standardowe punkty końcowe](../../../wcf/feature-details/standard-endpoints.md)

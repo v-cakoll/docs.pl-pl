@@ -11,21 +11,21 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingSource component
 - BindingSource component [Windows Forms], examples
 ms.assetid: 1aae11fc-6fb2-4cb9-b3d0-e0638fe77ef0
-ms.openlocfilehash: 94c7b304dd8b909d60ef6b25f828524594caf886
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 59522791408eb9c8cabf97a62be2049aeb17f864
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592816"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935349"
 ---
 # <a name="how-to-customize-item-addition-with-the-windows-forms-bindingsource"></a>Instrukcje: dostosowywanie dodawania elementu przy użyciu kontrolki BindingSource formularzy systemu Windows
-Kiedy używasz <xref:System.Windows.Forms.BindingSource> składnika, aby powiązać formant programu Windows Forms ze źródłem danych może okazać się konieczne dostosowanie tworzenia nowych elementów. <xref:System.Windows.Forms.BindingSource> Ze składników zgłasza to prosta, zapewniając <xref:System.Windows.Forms.BindingSource.AddingNew> zdarzenie, które zazwyczaj jest inicjowane, gdy formant związany potrzebne do utworzenia nowego elementu. Procedury obsługi zdarzenia może zapewnić dowolne niestandardowe zachowanie jest wymagana (na przykład, wywołanie metody usługi sieci Web lub wprowadzenie nowego obiektu z fabryki klas).  
+Gdy używasz <xref:System.Windows.Forms.BindingSource> składnika, aby powiązać formant Windows Forms ze źródłem danych, może się okazać, że konieczne jest dostosowanie tworzenia nowych elementów. Składnik ten zapewnia prostą, <xref:System.Windows.Forms.BindingSource.AddingNew> dostarczając zdarzenie, które jest zwykle wywoływane, gdy kontrolka powiązania musi utworzyć nowy element. <xref:System.Windows.Forms.BindingSource> Program obsługi zdarzeń może zapewnić, że wymagane jest zachowanie niestandardowe (na przykład wywołanie metody w usłudze sieci Web lub pobranie nowego obiektu z fabryki klas).  
   
 > [!NOTE]
->  Gdy element zostanie dodany do obsługi <xref:System.Windows.Forms.BindingSource.AddingNew> zdarzeń, nie można anulować dodawanie.  
+> Gdy element zostanie dodany przez obsługę <xref:System.Windows.Forms.BindingSource.AddingNew> zdarzenia, Dodawanie nie może być anulowane.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje jak powiązać <xref:System.Windows.Forms.DataGridView> kontrolki fabryki klas przy użyciu <xref:System.Windows.Forms.BindingSource> składnika. Kiedy użytkownik kliknie <xref:System.Windows.Forms.DataGridView> kontrolki nowy wiersz <xref:System.Windows.Forms.BindingSource.AddingNew> zdarzenie jest wywoływane. Program obsługi zdarzeń tworzy nową `DemoCustomer` obiektu, który jest przypisany do <xref:System.ComponentModel.AddingNewEventArgs.NewObject%2A?displayProperty=nameWithType> właściwości. Powoduje to, że nowe `DemoCustomer` obiektów, które mają zostać dodane do <xref:System.Windows.Forms.BindingSource> listy składnika i mają być wyświetlane w nowym wierszu <xref:System.Windows.Forms.DataGridView> kontroli.  
+ Poniższy przykład ilustruje sposób powiązania <xref:System.Windows.Forms.DataGridView> kontrolki z fabryką klas przy <xref:System.Windows.Forms.BindingSource> użyciu składnika. Gdy użytkownik kliknie <xref:System.Windows.Forms.DataGridView> nowy wiersz kontrolki <xref:System.Windows.Forms.BindingSource.AddingNew> , zdarzenie jest zgłaszane. Program obsługi zdarzeń tworzy nowy `DemoCustomer` obiekt, który jest przypisany <xref:System.ComponentModel.AddingNewEventArgs.NewObject%2A?displayProperty=nameWithType> do właściwości. Powoduje to, że `DemoCustomer` nowy obiekt zostanie dodany <xref:System.Windows.Forms.BindingSource> do listy składników i zostanie wyświetlony w nowym wierszu <xref:System.Windows.Forms.DataGridView> formantu.  
   
  [!code-cpp[System.Windows.Forms.DataConnector.AddingNew#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/CPP/form1.cpp#1)]
  [!code-csharp[System.Windows.Forms.DataConnector.AddingNew#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/CS/form1.cs#1)]
@@ -34,7 +34,7 @@ Kiedy używasz <xref:System.Windows.Forms.BindingSource> składnika, aby powiąz
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów systemu, dane systemowe i System.Drawing oraz przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów system, system. Data, system. Drawing i system. Windows. Forms.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -42,4 +42,4 @@ Kiedy używasz <xref:System.Windows.Forms.BindingSource> składnika, aby powiąz
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource, składnik](bindingsource-component.md)
-- [Instrukcje: Powiązanie z typem formantu Windows Forms](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Instrukcje: Powiąż formant Windows Forms z typem](how-to-bind-a-windows-forms-control-to-a-type.md)

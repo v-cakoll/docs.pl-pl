@@ -2,18 +2,18 @@
 title: <certificateReference> Aby uzyskać <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: 3b7779ac00c2fca6300c12ac18ff2d5f6b868424
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49c731b2637c15e0b968d8c2523c51c8e138e7bf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704339"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926167"
 ---
-# <a name="certificatereference-for-identity"></a>\<certificateReference > dla \<identity >
-Określa ustawienia dla walidacji certyfikatu X.509. Bezpieczne klienta Windows Communication Foundation (WCF), który nawiązuje połączenie z punktem końcowym o tej tożsamości weryfikuje czy wnioski przedstawione przez serwer zawierają roszczenia tożsamość użyta do skonstruowania tej tożsamości.  
+# <a name="certificatereference-for-identity"></a>\<certificateReference > dla \<tożsamości >
+Określa ustawienia dla walidacji certyfikatu X. 509. Bezpieczny Windows Communication Foundation (WCF), który nawiązuje połączenie z punktem końcowym z tą tożsamością, sprawdza, czy oświadczenia przedstawione przez serwer zawierają oświadczenie tożsamości użyte do skonstruowania tej tożsamości.  
   
- \<identity>  
-\<certificateReference>  
+ \<> tożsamości  
+\<certificateReference >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,11 +33,11 @@ Określa ustawienia dla walidacji certyfikatu X.509. Bezpieczne klienta Windows 
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|findValue|Określa wartość do wyszukania w magazynie certyfikatów X.509. Typ zawarte w tym atrybucie musi spełniać wymagania określonego `X509FindType` wartość. Wartość domyślna to ciąg pusty.|  
-|isChainIncluded|Wartość logiczna określająca, jeśli sprawdzanie poprawności jest wykonywane przy użyciu łańcucha certyfikatów.|  
-|storeLocation|Określa lokalizację magazynu certyfikatów, który klient może używać na potrzeby weryfikacji certyfikatu serwera.<br /><br /> Prawidłowe wartości są następujące:<br /><br /> -LocalMachine: Magazyn certyfikatów, przypisany do komputera lokalnego.<br />-CurrentUser: Magazyn certyfikatów, przypisany do bieżącego użytkownika.<br /><br /> Wartością domyślną jest komputer lokalny.<br /><br /> Ten atrybut jest typu <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
-|storeName|Określa nazwę magazynu certyfikatu X.509 do otwarcia.<br /><br /> Prawidłowe wartości są następujące:<br /><br /> — Książka adresowa: Magazyn certyfikatów dla innych użytkowników.<br />-AuthRoot: Magazyn certyfikatów dla urzędów certyfikacji innych firm (CAs).<br />-Urząd certyfikacji: Magazyn certyfikatów dla pośrednich urzędów certyfikacji.<br />-Niedozwolone: Magazyn certyfikatów dla odwołanych certyfikatów.<br />-Mój: Magazyn certyfikatów dla certyfikatów osobistych.<br />-Katalog główny: Magazyn certyfikatów zaufanych głównych urzędów certyfikacji.<br />-TrustedPeople: Magazyn certyfikatów dla bezpośrednio zaufanych osób i zasobów.<br />-TrustedPublisher: Magazyn certyfikatów dla bezpośrednio zaufanych wydawców.<br /><br /> Wartość domyślna to Mój.<br /><br /> Ten atrybut jest typu <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
-|X509FindType|Określa typ wyszukania X.509 w celu wykonania. Typ zawarty w `findValue` atrybut musi spełniać wymagania określonego X509FindType.<br /><br /> Prawidłowe wartości są następujące:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> Wartość domyślna to FindBySubjectDistinguishedName.<br /><br /> Ten atrybut jest typu <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
+|findValue|Określa wartość do wyszukania w magazynie certyfikatów X. 509. Typ zawarty w tym atrybucie musi spełniać wymagania określonej `X509FindType` wartości. Wartość domyślna to pusty ciąg.|  
+|isChainIncluded|Wartość logiczna określająca, czy Walidacja jest wykonana przy użyciu łańcucha certyfikatów.|  
+|storeLocation|Określa lokalizację magazynu certyfikatów, którego może użyć klient do zweryfikowania certyfikatu serwera.<br /><br /> Prawidłowe wartości to:<br /><br /> LocalMachine Magazyn certyfikatów przypisany do komputera lokalnego.<br />CurrentUser Magazyn certyfikatów przypisany do bieżącego użytkownika.<br /><br /> Wartość domyślna to LocalMachine.<br /><br /> Ten atrybut jest typu <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
+|storeName|Określa nazwę magazynu certyfikatu X. 509 do otwarcia.<br /><br /> Prawidłowe wartości to:<br /><br /> - AddressBook: Magazyn certyfikatów dla innych użytkowników.<br />AuthRoot Magazyn certyfikatów dla urzędów certyfikacji innych firm (CAs).<br />Urząd certyfikacji Magazyn certyfikatów dla pośrednich urzędów certyfikacji.<br />Niedozwolone Magazyn certyfikatów dla odwołanych certyfikatów.<br />Komputer Magazyn certyfikatów dla certyfikatów osobistych.<br />Pierwiastek Magazyn certyfikatów dla zaufanych głównych urzędów certyfikacji.<br />TrustedPeople Magazyn certyfikatów dla bezpośrednio zaufanych osób i zasobów.<br />- TrustedPublisher: Magazyn certyfikatów dla bezpośrednio zaufanych wydawców.<br /><br /> Wartość domyślna to my.<br /><br /> Ten atrybut jest typu <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
+|X509FindType|Określa typ wyszukiwania X. 509, który ma zostać wykonany. Typ zawarty w `findValue` atrybucie musi spełniać wymagania określone X509FindType.<br /><br /> Prawidłowe wartości to:<br /><br /> - FindByThumbPrint<br />- FindBySubjectName<br />- FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />- FindBySerialNumber<br />- FindByTimeValid<br />- FindByTimeNotYetValid<br />- FindByTemplateName<br />- FindByApplicationPolicy<br />- FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />- FindBySubjectKeyIdentifier<br /><br /> Wartość domyślna to FindBySubjectDistinguishedName.<br /><br /> Ten atrybut jest typu <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -46,7 +46,7 @@ Określa ustawienia dla walidacji certyfikatu X.509. Bezpieczne klienta Windows 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Określa ustawienia, które umożliwiają uwierzytelnianie punktu końcowego przez inne punkty końcowe, wymiana wiadomości z nim.|  
+|[\<> tożsamości](identity.md)|Określa ustawienia, które umożliwiają uwierzytelnianie punktu końcowego przez inne punkty końcowe wymieniające z nim komunikaty.|  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29766636cd151744d25cf66deb60cd2e066e1b32
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7188c516d3d0a5192251697ec743e9d41f8d9072
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775781"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913742"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes — Wyliczenie
-Określa zasady, które ma być używany podczas wyszukiwania dla czytnika symboli. Te stałe są używane przez [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) i [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) metody.  
+Określa zasady, które mają być używane podczas wyszukiwania czytnika symboli. Te stałe są używane przez metody [ISymUnmanagedBinder2:: GetReaderForFile2 —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) i [ISymUnmanagedBinder3:: GetReaderFromCallback —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) .  
   
 > [!IMPORTANT]
->  Jest to zagrożenie bezpieczeństwa, aby otworzyć plik bazy danych (PDB) programu z niezaufanego źródła.  
+> Jest to zagrożenie bezpieczeństwa, aby otworzyć plik bazy danych programu (PDB) z niezaufanego źródła.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,13 +45,13 @@ typedef enum CorSymSearchPolicyAttributes
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|Wysyła zapytanie do rejestru dla ścieżki wyszukiwania symboli.|  
+|`AllowRegistryAccess`|Wysyła zapytanie do rejestru pod kątem ścieżek wyszukiwania symboli.|  
 |`AllowSymbolServerAccess`|Uzyskuje dostęp do serwera symboli.|  
-|`AllowOriginalPathAccess`|Wyszukuje w ścieżce określonej w katalogu debugowania.|  
-|`AllowReferencePathAccess`|Wyszukiwanie pliku PDB w miejscu, w którym się plik .exe.|  
+|`AllowOriginalPathAccess`|Przeszukuje ścieżkę określoną w katalogu debugowania.|  
+|`AllowReferencePathAccess`|Wyszukuje PDB w miejscu, gdzie plik. exe jest.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Nagłówki** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

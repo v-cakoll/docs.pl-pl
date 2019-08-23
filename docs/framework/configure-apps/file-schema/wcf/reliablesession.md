@@ -2,20 +2,20 @@
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 324c46d88d084605dc2b873c65d2a7e7c7a2c4fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 548c4884ecd2f4b9a71fcc9d6647a9e258b183c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783152"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934249"
 ---
 # <a name="reliablesession"></a>\<reliableSession >
-Definiuje ustawienie dla WS-Reliable Messaging. Gdy ten element jest dodawany do niestandardowego powiązania, dokładnie obsługuje wynikowy kanału — gdy gwarancje dostarczenia.  
+Definiuje ustawienie dla obsługi komunikatów w usłudze WS-niezawodny. Gdy ten element zostanie dodany do niestandardowego powiązania, otrzymany kanał może obsługiwać tylko jednokrotne gwarancje dostarczania.  
   
  \<system.serviceModel>  
-\<powiązania >  
+\<> powiązań  
 \<customBinding>  
-\<Powiązanie >  
+\<> powiązania  
 \<reliableSession >  
   
 ## <a name="syntax"></a>Składnia  
@@ -38,14 +38,14 @@ Definiuje ustawienie dla WS-Reliable Messaging. Gdy ten element jest dodawany do
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|acknowledgementInterval|Element <xref:System.TimeSpan> zawierający maksymalny interwał kanał przechodzi do oczekiwania na wysłanie potwierdzenia dla wiadomości otrzymanych do tego punktu. Wartość domyślna to 00:00:0.2.|  
-|flowControlEnabled|Wartość logiczna wskazująca, czy Zaawansowane sterowanie przepływem, implementacja specyficzna dla Microsoft sterowanie przepływem dla protokołu WS-Reliable messaging jest aktywowana. Wartość domyślna to `true`.|  
-|Limit czasu nieaktywności|Element <xref:System.TimeSpan> , który określa maksymalny czas, przez który kanał umożliwi innemu uczestnikowi komunikacji nie na niewysyłanie komunikatów przed spowodowaniem błędu kanału. Wartość domyślna to 00:10:00.<br /><br /> Działań w kanale jest zdefiniowany jako odbieranie aplikacji lub infrastruktury komunikatów. Ta właściwość określa maksymalną ilość czasu, aby utrzymać aktywność sesji nieaktywne. Za pomocą działania nie przeszedł przez dłuższy czas, sesja zostanie przerwany przez infrastruktury i usterek kanału. **Uwaga:**  Nie jest wymagane dla aplikacji, które okresowo wysyłają komunikaty, aby utrzymać aktywność połączenia.|  
-|maxPendingChannels|Liczba całkowita określająca maksymalną liczbę kanałów oczekujących na akceptację detektora. Ta wartość powinna należeć do zakresu od 1 do 16384 (włącznie). Wartość domyślna to 4.<br /><br /> Kanały oczekują od tego, kiedy są oczekuje na zatwierdzenie. Po osiągnięciu tego limitu tworzone są kanałów. Zamiast ich umieszczeniem oczekujące tryb dopóki ta liczba zbliża się w dół (akceptując oczekujące kanałów). Jest to limit dla fabryki.<br /><br /> Po osiągnięciu progu i zdalna aplikacja próbuje utworzyć nowy niezawodnej sesji, żądanie zostanie odrzucone i otwórz operacji, która zostanie wyświetlony monit tej usterki. To ograniczenie nie dotyczy liczby oczekujących wychodzących kanałów.|  
-|maxRetryCount|Liczba całkowita określająca maksymalną liczbę razy niezawodny kanał podejmuje próbę przesłania wiadomości przez nie otrzymano potwierdzenia, poprzez wywoływanie metody Send dla kanału źródłowego.<br /><br /> Ta wartość powinna być większa od zera. Wartość domyślna to 8.<br /><br /> Ta wartość powinna być liczbą całkowitą większą niż zero. Jeśli potwierdzenie nie zostanie odebrany po ostatnim retransmisji, błędy kanału.<br /><br /> Komunikat jest uważany za przesłane, jeśli jego dostarczenia u odbiorcy została potwierdzona przez odbiorcę.<br /><br /> Jeśli nie otrzymano potwierdzenia w ramach określoną ilość czasu dla wiadomości, które zostały przekazane, infrastruktury automatycznie ponownie wysyła wiadomości. Infrastruktura próbuje ponownie wysłać wiadomość do co najwyżej liczba określona przez tę właściwość. Jeśli potwierdzenie nie zostanie odebrany po ostatnim retransmisji, błędy kanału.<br /><br /> Infrastruktury używa wykładniczego wycofywania algorytmu do określenia, kiedy ponowne przesłanie, oparte na obliczanej Średni czas błądzenia. Czas początkowo rozpoczyna się od 1 sekundy przed retransmisji i podwajając opóźnienie w każdej próby, co powoduje przekazanie między pierwszej próby transmisji i ostatnia próba retransmisji około 8,5 minut. Podczas pierwszej próby retransmisji jest dostosowywany zgodnie z obliczony czas błądzenia i wynikowy stretch czas, przez który te próby podjęcia zmienia się odpowiednio. Dzięki temu czas retransmisji dynamicznie dostosowywana do zmiennych warunkach sieciowych.|  
-|maxTransferWindowSize|Liczba całkowita określająca maksymalny rozmiar buforu. Prawidłowe wartości to od 1 do 4096 (włącznie).<br /><br /> Na komputerze klienckim ten atrybut określa maksymalny rozmiar buforu używany przez niezawodny kanał do przechowywania wiadomości nie została jeszcze potwierdzona przez odbiorcę. Jednostka limitu przydziału jest wiadomość. Jeśli bufor jest pełna, są blokowane dalszych operacji WYSYŁANIA.<br /><br /> Na odbiornik ten atrybut określa maksymalny rozmiar buforu używany przez kanał do przechowywania wiadomości przychodzących, które jeszcze nie zostało wysłane do aplikacji. Jeśli bufor jest pełna, dalsze komunikaty dyskretnie są odrzucane przez odbiornik i wymagają retransmisji przez klienta.|  
-|uporządkowany|Wartość logiczna określająca, czy komunikaty dotrą do celu w kolejności wysłania. Jeśli to ustawienie jest `false`, komunikaty mogą pojawić się poza kolejnością. Wartość domyślna to `true`.|  
-|ReliableMessagingVersion|Prawidłowa wartość z <xref:System.ServiceModel.ReliableMessagingVersion> określająca wersję WS-ReliableMessaging ma być używany.|  
+|acknowledgementInterval|A <xref:System.TimeSpan> , który zawiera maksymalny czas oczekiwania kanału na wysłanie potwierdzenia dla wiadomości otrzymanych do tego punktu. Wartość domyślna to 00:00:0,2.|  
+|flowControlEnabled|Wartość logiczna wskazująca, czy jest uaktywniana Zaawansowana kontrola przepływów — implementacja sterowania przepływem dla usługi WS-niezawodny. Wartość domyślna to `true`.|  
+|inactivityTimeout|<xref:System.TimeSpan> Określa maksymalny czas, przez który kanał będzie zezwalał innej stronie komunikacyjnej, aby nie wysyłał żadnych komunikatów przed awarią kanału. Wartość domyślna to 00:10:00.<br /><br /> Działanie w kanale jest zdefiniowane jako otrzymywanie komunikatów aplikacji lub infrastruktury. Ta właściwość określa maksymalny czas utrzymywania aktywnej sesji. Jeśli dłuższy czas upłynie bez aktywności, sesja zostanie przerwana przez infrastrukturę i błędy kanałów. **Uwaga:**  Nie jest konieczne, aby aplikacja okresowo wysyłał komunikaty w celu utrzymania aktywności połączenia.|  
+|maxPendingChannels|Liczba całkowita określająca maksymalną liczbę kanałów, które mogą oczekiwać na zaakceptowanie odbiornika. Ta wartość powinna należeć do zakresu od 1 do 16384 włącznie. Wartość domyślna to 4.<br /><br /> Kanały oczekują na zatwierdzenie. Po osiągnięciu tego limitu nie są tworzone żadne kanały. Zamiast tego są one umieszczane w trybie oczekiwania, dopóki ta liczba nie przejdzie w dół (akceptując kanały oczekujące). Jest to limit dla poszczególnych fabryk.<br /><br /> Po osiągnięciu progu, gdy aplikacja zdalna podejmie próbę nawiązania nowej niezawodnej sesji, żądanie zostanie odrzucone i zostanie otwarta operacja, która monituje o te błędy. Ten limit nie ma zastosowania do liczby oczekujących kanałów wychodzących.|  
+|maxRetryCount|Liczba całkowita określająca maksymalną liczbę prób ponownego przesłania przez niezawodny kanał komunikatu, dla którego nie otrzymano potwierdzenia, przez wywołanie metody send w kanale źródłowym.<br /><br /> Ta wartość powinna być większa od zera. Wartość domyślna to 8.<br /><br /> Ta wartość powinna być liczbą całkowitą większą od zera. Jeśli potwierdzenie nie zostanie odebrane po ostatniej ponownej transmisji, wystąpią błędy kanałów.<br /><br /> Wiadomość jest uznawana za przetransferowaną, jeśli jej dostarczenie w odbiorcy zostało potwierdzone przez adresata.<br /><br /> Jeśli potwierdzenie nie zostało odebrane w określonym czasie przez komunikat, który został przesłany, infrastruktura automatycznie ponownie przesyła komunikat. Infrastruktura próbuje ponownie wysłać komunikat przez maksymalnie liczbę razy określony przez tę właściwość. Jeśli potwierdzenie nie zostanie odebrane po ostatniej ponownej transmisji, wystąpią błędy kanałów.<br /><br /> Infrastruktura używa algorytmu wycofywania wykładniczego, aby określić, kiedy należy ponownie przesłać, w oparciu o obliczony średni czas błądzenia. Czas początkowo rozpoczyna się o 1 sekundę przed ponownym przesłaniem i Podwajanie opóźnienia przy każdej próbie, co powoduje około 8,5 minut przekazywania między pierwszą próbą transmisji a ostatnią ponowną transmisją. Czas pierwszej próby ponownej transmisji jest dostosowywany zgodnie z obliczonym czasem błądzenia i wynikowym rozciągnięciem czasu, który podejmuje te próby. Umożliwia to czas ponownej transmisji, który dynamicznie dostosowuje się do różnych warunków sieciowych.|  
+|maxTransferWindowSize|Liczba całkowita określająca maksymalny rozmiar buforu. Prawidłowe wartości to od 1 do 4096 włącznie.<br /><br /> Ten atrybut określa maksymalny rozmiar buforu używany przez niezawodny kanał do przechowywania komunikatów, które nie zostały jeszcze potwierdzone przez odbiornik. Jednostka przydziału jest komunikatem. Jeśli bufor jest pełny, dalsze operacje wysyłania są blokowane.<br /><br /> W odniesieniu do odbiorcy ten atrybut definiuje maksymalny rozmiar buforu używany przez kanał do przechowywania przychodzących komunikatów, które nie zostały jeszcze wysłane do aplikacji. Jeśli bufor jest pełny, dalsze komunikaty są dyskretnie usuwane przez odbiornik i wymagają ponownej transmisji przez klienta.|  
+|uporządkowany|Wartość logiczna określająca, czy komunikaty są gwarantowane w kolejności, w jakiej zostały wysłane. Jeśli to ustawienie ma `false`wartość, komunikaty mogą dotrzeć poza kolejnością. Wartość domyślna to `true`.|  
+|ReliableMessagingVersion określająca|Prawidłowa wartość <xref:System.ServiceModel.ReliableMessagingVersion> określająca, czy wersja protokołu WS-ReliableMessaging ma być używana.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -54,17 +54,17 @@ Definiuje ustawienie dla WS-Reliable Messaging. Gdy ten element jest dodawany do
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie funkcje powiązania niestandardowego powiązania.|  
+|[\<> powiązania](../../../misc/binding.md)|Definiuje wszystkie możliwości powiązań niestandardowego powiązania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Niezawodne sesje oferują funkcje dla niezawodna obsługa komunikatów i sesji. Niezawodna obsługa komunikatów ponawia próbę komunikacji w przypadku niepowodzenia i umożliwia gwarancje dostarczenia, np. w kolejności przybycia komunikaty, aby określić. Sesje zarządzania stanem dla klientów między wywołaniami. Ten element udostępnia również opcjonalnie dostarczanie uporządkowanych komunikatów. Ta sesja zaimplementowano mogą przechodzić pośredników SOAP i mechanizm transportu.  
+ Niezawodne sesje zapewniają funkcje niezawodnej obsługi komunikatów i sesji. Niezawodna komunikacja w celu komunikacji przy niepowodzeń i pozwala na określenie gwarancji dostarczania, takich jak wysyłanie komunikatów. Sesje utrzymują stan dla klientów między wywołaniami. Ten element również opcjonalnie udostępnia uporządkowane dostarczanie komunikatów. Ta zaimplementowana sesja może przekroczyć pośredniki SOAP i transportu.  
   
- Każdy element powiązania reprezentuje krok przetwarzania podczas wysyłania lub odbierania komunikatów. W czasie wykonywania elementy powiązania tworzenie fabryki kanałów i odbiorników, które są niezbędne do utworzenia przychodzących i wychodzących stosów kanału wymagane do wysyłania i odbierania komunikatów. `reliableSession` Zapewnia opcjonalne warstwę stosu, który można utworzyć niezawodnej sesji między punktami końcowymi i skonfiguruj zachowanie tej sesji.  
+ Każdy element powiązania reprezentuje etap przetwarzania podczas wysyłania lub otrzymywania wiadomości. W czasie wykonywania elementy powiązania tworzą fabryki kanałów i odbiorniki, które są niezbędne do tworzenia stosów kanałów wychodzących i przychodzących wymaganych do wysyłania i odbierania wiadomości. `reliableSession` Zapewnia opcjonalną warstwę w stosie, która może nawiązywać niezawodne sesje między punktami końcowymi i skonfigurować zachowanie tej sesji.  
   
- Aby uzyskać więcej informacji, zobacz [sesje niezawodnej](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+ Aby uzyskać więcej informacji, zobacz [niezawodne sesje](../../../wcf/feature-details/reliable-sessions.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak skonfigurować powiązania niestandardowego z różnymi transportu i komunikat kodowania elementów, szczególnie umożliwiające niezawodne sesje, które przechowuje stan klienta i określa gwarancje dostarczenia w określonej kolejności. Ta funkcja jest konfigurowana w plikach konfiguracji aplikacji dla klienta i usługi. Pokaż przykład konfiguracji usługi.  
+ Poniższy przykład ilustruje sposób konfigurowania powiązania niestandardowego z różnymi elementami transportu i transportem komunikatów, szczególnie w przypadku włączania niezawodnych sesji, które utrzymują stan klienta i określa gwarancje dostarczania w kolejności. Ta funkcja jest konfigurowana w plikach konfiguracji aplikacji dla klienta i usługi. W przykładzie przedstawiono konfigurację usługi.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>
@@ -124,8 +124,8 @@ Definiuje ustawienie dla WS-Reliable Messaging. Gdy ten element jest dodawany do
 - <xref:System.ServiceModel.Configuration.ReliableSessionElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
-- [Niezawodne sesje](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Niezawodne sesje](../../../wcf/feature-details/reliable-sessions.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

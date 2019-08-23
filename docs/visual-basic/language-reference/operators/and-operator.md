@@ -13,15 +13,15 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-ms.openlocfilehash: 7e25f25677fa684427bdaf00cea73916ffbad655
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1802d3a7018b1b6190ff5601eba055e16e62371
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608362"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913170"
 ---
 # <a name="and-operator-visual-basic"></a>And — Operator (Visual Basic)
-Wykonuje logiczną na dwóch `Boolean` wyrażeń lub koniunkcję bitową na dwóch wyrażeń liczbowych.  
+Wykonuje logiczną koniunkcję w dwóch `Boolean` wyrażeniach lub bitowego połączenia dwóch wyrażeń liczbowych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,16 +31,16 @@ result = expression1 And expression2
   
 ## <a name="parts"></a>Części  
  `result`  
- Wymagana. Wszelkie `Boolean` lub wyrażenia liczbowego. Dla porównania logiczna `result` jest logicznego połączenia dwóch `Boolean` wartości. W przypadku operacji bitowej `result` jest wartość liczbowa reprezentująca koniunkcję bitową na dwóch wzorców bitowych liczbowych.  
+ Wymagana. Wyrażenie `Boolean` dowolne lub liczbowe. W przypadku porównania `result` logicznego jest koniunkcja logiczna dwóch `Boolean` wartości. W przypadku operacji `result` bitowych jest wartością liczbową reprezentującą bitowe połączenia dwóch wzorców bitowych liczb.  
   
  `expression1`  
- Wymagana. Wszelkie `Boolean` lub wyrażenia liczbowego.  
+ Wymagana. Wyrażenie `Boolean` dowolne lub liczbowe.  
   
  `expression2`  
- Wymagana. Wszelkie `Boolean` lub wyrażenia liczbowego.  
+ Wymagany. Wyrażenie `Boolean` dowolne lub liczbowe.  
   
 ## <a name="remarks"></a>Uwagi  
- Dla porównania logiczna `result` jest `True` przypadku i tylko wtedy, gdy oba `expression1` i `expression2` zwrócić `True`. W poniższej tabeli przedstawiono sposób `result` jest określana.  
+ `result` W przypadku porównania wartości logicznych `True` jest if i tylko wtedy `expression1` , `expression2` gdy oba `True`i są oceniane do. W poniższej tabeli przedstawiono sposób `result` określania.  
   
 |Jeśli `expression1` jest|I `expression2` jest|Wartość `result` jest|  
 |-------------------------|--------------------------|------------------------------|  
@@ -50,11 +50,11 @@ result = expression1 And expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
->  Wartość logiczna porównania `And` operator zawsze ocenia oba wyrażenia, które może obejmować wywołania procedury. [AndAlso Operator](../../../visual-basic/language-reference/operators/andalso-operator.md) wykonuje *zwarcie*, co oznacza, że jeśli `expression1` jest `False`, następnie `expression2` nie jest oceniany.  
+> W porównaniu `And` wartości logicznej operator zawsze oblicza oba wyrażenia, które mogą obejmować wykonywanie wywołań procedur. [Operator AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md) wykonuje *krótkie obwody*, co oznacza, że `expression1` jeśli jest `False`, `expression2` to nie jest oceniane.  
   
- Gdy jest stosowany do wartości liczbowych `And` operator wykonuje porównanie bitowe identycznie pozycjonowane bitów w dwóch wyrażeń liczbowych i ustawia bit w odpowiednich `result` zgodnie z poniższą tabelą.  
+ W przypadku zastosowania do wartości `And` numerycznych operator wykonuje bitowe porównanie identycznie rozłożonych bitów w dwóch wyrażeniach liczbowych i ustawia odpowiedni bit w `result` zależności od poniższej tabeli.  
   
-|Jeśli bit w `expression1` jest|I bitu w `expression2` jest|Bit w `result` jest|  
+|Jeśli bit w `expression1` jest|I bit w `expression2` jest|Bit w `result` jest|  
 |--------------------------------|---------------------------------|----------------------------|  
 |1|1|1|  
 |1|0|0|  
@@ -62,34 +62,34 @@ result = expression1 And expression2
 |0|0|0|  
   
 > [!NOTE]
->  Operatory logiczne i bitowe ma niższy priorytet niż inne operatory arytmetyczne i relacyjnych, wszystkie operacje bitowe powinna zostać ujęta w nawiasy, aby zapewnić dokładne wyniki.  
+> Ponieważ operatory logiczne i bitowe mają niższy priorytet niż inne operatory arytmetyczne i relacyjne, każda operacja bitowa powinna być ujęta w nawiasy, aby zapewnić dokładne wyniki.  
   
 ## <a name="data-types"></a>Typy danych  
- Jeśli argumenty operacji składać się z jednego `Boolean` wyrażenie i jedno wyrażenie liczbowe języka Visual Basic konwertuje `Boolean` wyrażenia jest wartość liczbowa (-1 dla `True` i od 0 do `False`) i wykonuje bitową operację.  
+ Jeśli operandy składają się z jednego `Boolean` wyrażenia i jednego wyrażenia liczbowego, Visual Basic `Boolean` konwertuje wyrażenie na wartość liczbową (– 1 dla `True` i 0 dla `False`) i wykonuje operację bitową.  
   
- Dla porównania Boolean, typ danych wyniku jest `Boolean`. Porównanie bitowe, typ danych wynik jest typu liczbowego, odpowiednie dla typów danych `expression1` i `expression2`. Znajdują się w tabeli "Relacyjnych i alternatywy bitowej porównania" [typów danych z wyników operatora](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ W przypadku porównania wartości logicznych typem danych wyniku jest `Boolean`. W przypadku porównania bitowego typem danych wynik jest typ liczbowy odpowiedni dla typów `expression1` danych i. `expression2` Zobacz tabelę "porównania relacyjne i bitowe" w [typach danych wyników operatora](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
 > [!NOTE]
->  `And` Operator może być *przeciążone*, co oznacza, że klasy lub struktury można ponownie zdefiniować jej zachowanie, gdy argument operacji ma typ tej klasy lub struktury. Jeśli kod używa tego operatora dla klasy lub struktury, upewnij się, że rozumiesz jej zachowanie zmieniony. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> Operator może być przeciążony, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. `And` Jeśli Twój kod używa tego operatora dla takiej klasy lub struktury, pamiętaj o tym, aby zrozumieć jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `And` operator przeprowadzić logicznego połączenia dwóch wyrażeń. Wynik jest `Boolean` wartość wskazującą, czy oba wyrażenia są `True`.  
+ Poniższy przykład używa `And` operatora do wykonywania logicznego połączenia dwóch wyrażeń. Wynik jest `Boolean` wartością, która reprezentuje, czy oba wyrażenia są `True`.  
   
  [!code-vb[VbVbalrOperators#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#22)]  
   
- Poprzedni przykład generuje wyniki `True` i `False`, odpowiednio.  
+ Powyższy przykład daje wyniki `True` odpowiednio i. `False`  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `And` operatora, aby wykonać połączenie logiczne na poszczególnych bity dwóch wyrażeń liczbowych. Bit we wzorcu wynik jest ustawiona, jeśli odpowiednich bitów w operandy są ustawione na 1.  
+ Poniższy przykład używa `And` operatora do wykonywania logicznego połączenia na poszczególnych bitach dwóch wyrażeń liczbowych. Bit w wzorcu wyniku jest ustawiany, jeśli odpowiadające im bity w operandach są ustawione na 1.  
   
  [!code-vb[VbVbalrOperators#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#23)]  
   
- Poprzedni przykład generuje wyniki, 8, 2 i 0, odpowiednio.  
+ Poprzedni przykład daje wyniki odpowiednio 8, 2 i 0.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Operatory logiczne/bitowe (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
-- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [AndAlso, operator](../../../visual-basic/language-reference/operators/andalso-operator.md)
 - [Operatory logiczne i bitowe w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

@@ -1,45 +1,45 @@
 ---
-title: Ograniczenia dotyczące używania ułatwień dostępu poziomy - C# odwołania
+title: Ograniczenia dotyczące używania poziomów ułatwień C# dostępu — dokumentacja
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 3a5915d23fea02a031cedd9063018fffbdc34180
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 13adfbb96cea2c192b84931b529bf92fd2b50116
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633772"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922329"
 ---
-# <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Ograniczenia dotyczące używania poziomów ułatwień dostępu (odwołanie w C#)
+# <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Ograniczenia dotyczące używania poziomów ułatwieńC# dostępu (odwołanie)
 
-Po określeniu typu w deklaracji, sprawdź, czy poziom dostępności tego typu jest zależne od poziomu dostępności elementu członkowskiego lub innego typu. Na przykład bezpośredniej klasy podstawowej musi być co najmniej tak samo dostępna jak klasy pochodnej. Następujące deklaracje spowodują błąd kompilatora, ponieważ klasa bazowa `BaseClass` jest mniej dostępny niż `MyClass`:
+Po określeniu typu w deklaracji Sprawdź, czy poziom dostępności tego typu jest zależny od poziomu dostępności elementu członkowskiego lub innego typu. Na przykład bezpośrednia klasa bazowa musi być co najmniej równa dostępności jako Klasa pochodna. Następujące deklaracje powodują wystąpienie błędu kompilatora, ponieważ Klasa `BaseClass` bazowa jest mniej dostępna niż: `MyClass`
 
 ```csharp
 class BaseClass {...}
 public class MyClass: BaseClass {...} // Error
 ```
 
-W poniższej tabeli podsumowano ograniczenia dotyczące poziomów deklarowana dostępność metody.
+Poniższa tabela zawiera podsumowanie ograniczeń dotyczących deklarowanych poziomów dostępności.
 
 |Kontekst|Uwagi|
 |-------------|-------------|
-|[Klasy](../../programming-guide/classes-and-structs/classes.md)|Bezpośrednie klasy bazowej typu klasy musi być co najmniej tak samo dostępna jak samego typu klasy.|
-|[Interfejsy](../../programming-guide/interfaces/index.md)|Jawne interfejsy podstawowe typu interfejsu, musi być co najmniej tak samo dostępna jak samego typu interfejsu.|
-|[Delegaty](../../programming-guide/delegates/index.md)|Typ zwracany i typy parametrów typu delegowanego musi być co najmniej tak samo dostępna jak samego typu delegata.|
-|[Stałe](../../programming-guide/classes-and-structs/constants.md)|Typ stałej musi być co najmniej tak samo dostępna jak stała się.|
-|[Pola](../../programming-guide/classes-and-structs/fields.md)|Typ pola musi być co najmniej tak samo dostępna jak samo pole.|
-|[Metody](../../programming-guide/classes-and-structs/methods.md)|Typ zwracany i typy parametrów metody muszą być co najmniej tak samo dostępna jak sama metoda.|
-|[Właściwości](../../programming-guide/classes-and-structs/properties.md)|Typ właściwości musi być co najmniej tak samo dostępna jak samej właściwości.|
-|[Zdarzenia](../../programming-guide/events/index.md)|Typ zdarzenia musi być co najmniej tak samo dostępna jak samego zdarzenia.|
-|[Indeksatory](../../programming-guide/indexers/index.md)|Typ i parametrów typów indeksatora musi być co najmniej tak samo dostępna jak indeksatora, sam.|
-|[Operatory](../../programming-guide/statements-expressions-operators/operators.md)|Typ zwracany i typy parametrów operatora musi być co najmniej tak samo dostępna jak operator sam.|
-|[Konstruktory](../../programming-guide/classes-and-structs/constructors.md)|Typy parametrów konstruktora musi być co najmniej tak samo dostępna jak sam Konstruktor.|
+|[Klasy](../../programming-guide/classes-and-structs/classes.md)|Bezpośrednia klasa bazowa typu klasy musi być co najmniej równa dostępności jako samego typu klasy.|
+|[Interfejsy](../../programming-guide/interfaces/index.md)|Jawne interfejsy podstawowe typu interfejsu muszą być co najmniej takie same jak typ interfejsu.|
+|[Delegaty](../../programming-guide/delegates/index.md)|Typ zwracany i typy parametrów typu delegata muszą być co najmniej tak samo jak typ delegata.|
+|[Stałe](../../programming-guide/classes-and-structs/constants.md)|Typ stałej musi być co najmniej tak samo jak jako stała.|
+|[Pola](../../programming-guide/classes-and-structs/fields.md)|Typ pola musi być co najmniej tak samo jak w przypadku samego pola.|
+|[Metody](../../programming-guide/classes-and-structs/methods.md)|Typ zwracany i typy parametrów metody muszą być co najmniej tak samo samo jak metoda.|
+|[Właściwości](../../programming-guide/classes-and-structs/properties.md)|Typ właściwości musi być co najmniej taki sam jak wartość właściwości.|
+|[Zdarzenia](../../programming-guide/events/index.md)|Typ zdarzenia musi być co najmniej tak samo jak w przypadku samego zdarzenia.|
+|[Indeksatory](../../programming-guide/indexers/index.md)|Typ i typy parametrów indeksatora muszą być co najmniej tak samo dostępne jak indeksator.|
+|[Operatory](../operators/index.md)|Typ zwracany i typy parametrów operatora muszą być co najmniej takie same jak dla samego operatora.|
+|[Konstruktory](../../programming-guide/classes-and-structs/constructors.md)|Typy parametrów konstruktora muszą być co najmniej tak samo samo jak Konstruktor.|
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład zawiera błędne deklaracje różnych typów. Komentarz po każdym deklaracji wskazuje błąd kompilatora oczekiwane.
+Poniższy przykład zawiera błędne deklaracje różnych typów. Komentarz po każdej deklaracji wskazuje oczekiwany błąd kompilatora.
 
 ```csharp
 // Restrictions on Using Accessibility Levels

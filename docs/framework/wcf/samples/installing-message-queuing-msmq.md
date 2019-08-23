@@ -2,65 +2,65 @@
 title: Instalowanie usługi kolejkowania komunikatów (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 813de350c3fd32bb4698384d6b770af8a0913739
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 42e66029f8538877ded424f72cb6c829444d1ee0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648345"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935994"
 ---
 # <a name="installing-message-queuing-msmq"></a>Instalowanie usługi kolejkowania komunikatów (MSMQ)
-Poniższe procedury pokazują, jak zainstalować usłudze MSMQ 4.0 i wersji 3.0.  
+W poniższych procedurach pokazano, jak zainstalować usługę kolejkowania komunikatów 4,0 i kolejkowanie komunikatów 3,0.  
   
 > [!NOTE]
->  Komunikatów usługi kolejkowania 4.0 nie jest dostępna w [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
+> Usługa kolejkowania komunikatów 4,0 nie jest dostępna w [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
   
-#### <a name="to-install-message-queuing-40-on-windows-server-2008-or-windows-server-2008-r2"></a>Aby zainstalować usłudze MSMQ 4.0 w systemie Windows Server 2008 lub Windows Server 2008 R2  
+#### <a name="to-install-message-queuing-40-on-windows-server-2008-or-windows-server-2008-r2"></a>Aby zainstalować usługę kolejkowania komunikatów 4,0 w systemie Windows Server 2008 lub Windows Server 2008 R2  
   
-1. W Menedżerze serwera kliknij **funkcji**.  
+1. W Menedżer serwera kliknij pozycję **funkcje**.  
   
-2. W okienku po prawej stronie w obszarze **Podsumowanie funkcji**, kliknij przycisk **Dodaj funkcje**.  
+2. W okienku po prawej stronie w obszarze **Podsumowanie funkcji**kliknij pozycję **Dodaj funkcje**.  
   
-3. W oknie wynikowy rozwiń **usługi kolejkowania komunikatów**.  
+3. W oknie wyników rozwiń węzeł **kolejkowanie komunikatów**.  
   
-4. Rozwiń **usługi kolejkowania komunikatów**.  
+4. Rozwiń węzeł **usługi kolejkowania komunikatów**.  
   
-5. Kliknij przycisk **integracji z usługami katalogu** (komputery przyłączone do domeny), a następnie kliknij przycisk **obsługi protokołu HTTP**.  
+5. Kliknij pozycję **Integracja usług katalogowych** (w przypadku komputerów przyłączonych do domeny), a następnie kliknij pozycję **Obsługa protokołu HTTP**.  
   
-6. Kliknij przycisk **dalej**, następnie kliknij przycisk **zainstalować**.  
+6. Kliknij przycisk **dalej**, a następnie kliknij przycisk **Instaluj**.  
   
-#### <a name="to-install-message-queuing-40-on-windows-7-or-windows-vista"></a>Aby zainstalować usłudze MSMQ 4.0 na Windows 7 lub Windows Vista  
+#### <a name="to-install-message-queuing-40-on-windows-7-or-windows-vista"></a>Aby zainstalować usługę kolejkowania komunikatów 4,0 w systemie Windows 7 lub Windows Vista  
   
 1. Otwórz **Panel sterowania**.  
   
-2. Kliknij przycisk **programy** a następnie w obszarze **programy i funkcje**, kliknij przycisk **Włącz lub wyłącz funkcje Windows**.  
+2. Kliknij pozycję **programy** , a następnie w obszarze **programy i funkcje**kliknij pozycję **Włącz lub wyłącz funkcje systemu Windows**.  
   
-3. Rozwiń węzeł serwera Microsoft kolejki komunikatów (MSMQ), rozwiń Microsoft kolejki komunikatów (MSMQ) Server Core, a następnie zaznacz pola wyboru dla następujących funkcji usługi kolejkowania komunikatów do zainstalowania:  
+3. Rozwiń węzeł serwer usługi Microsoft Message Queue (MSMQ), rozwiń węzeł serwer usługi kolejkowania komunikatów (MSMQ) firmy Microsoft, a następnie zaznacz pola wyboru dla następujących funkcji usługi kolejkowania komunikatów, które mają zostać zainstalowane:  
   
-    - Usługa MSMQ domeny integracji usług Active Directory (na komputery przyłączone do domeny).  
+    - Integracja z usługą MSMQ Active Directory Domain Services (dla komputerów przyłączonych do domeny).  
   
-    - Obsługa protokołu HTTP usługi MSMQ.  
+    - Obsługa protokołu HTTP w usłudze MSMQ.  
   
 4. Kliknij przycisk **OK**.  
   
-5. Jeśli zostanie wyświetlony monit o ponowne uruchomienie komputera, kliknij przycisk **OK** do ukończenia instalacji.  
+5. Jeśli zostanie wyświetlony monit o ponowne uruchomienie komputera, kliknij przycisk **OK** , aby zakończyć instalację.  
   
-#### <a name="to-install-message-queuing-30-on-windows-xp-and-windows-server-2003"></a>Aby zainstalować 3.0 usługi kolejkowania komunikatów na Windows XP i Windows Server 2003  
+#### <a name="to-install-message-queuing-30-on-windows-xp-and-windows-server-2003"></a>Aby zainstalować usługę kolejkowania komunikatów 3,0 w systemach Windows XP i Windows Server 2003  
   
 1. Otwórz **Panel sterowania**.  
   
-2. Kliknij przycisk **Dodaj/Usuń programy** a następnie kliknij przycisk **dodać składniki Windows**.  
+2. Kliknij przycisk **Dodaj Usuń programy** , a następnie kliknij przycisk **Dodaj składniki systemu Windows**.  
   
-3. Wybierz usługę kolejkowania komunikatów, a następnie kliknij przycisk **szczegóły**.  
+3. Wybierz pozycję Kolejkowanie komunikatów i kliknij pozycję **szczegóły**.  
   
     > [!NOTE]
-    >  Jeśli używasz [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], wybierz serwer aplikacji na dostęp do usługi kolejkowania komunikatów.  
+    >  Jeśli używasz programu, wybierz opcję serwer aplikacji, aby uzyskać dostęp do usługi kolejkowania komunikatów. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]  
   
-4. Upewnij się, że opcja, obsługa protokołu HTTP w usłudze MSMQ jest wybierane na stronie szczegółów.  
+4. Upewnij się, że opcja obsługa protokołu HTTP usługi MSMQ została wybrana na stronie szczegółów.  
   
-5. Kliknij przycisk **OK** zamknąć stronę szczegółów, a następnie kliknij przycisk **dalej**. Ukończ instalację.  
+5. Kliknij przycisk **OK** , aby zamknąć stronę szczegóły, a następnie kliknij przycisk **dalej**. Ukończ instalację.  
   
-6. Jeśli zostanie wyświetlony monit o ponowne uruchomienie komputera, kliknij przycisk **OK** do ukończenia instalacji.  
+6. Jeśli zostanie wyświetlony monit o ponowne uruchomienie komputera, kliknij przycisk **OK** , aby zakończyć instalację.  
   
 ## <a name="see-also"></a>Zobacz także
 

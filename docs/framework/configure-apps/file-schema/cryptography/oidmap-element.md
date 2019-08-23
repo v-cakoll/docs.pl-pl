@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: e01cdd942237141b8ef35495d3b74d6b2282a865
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d2929167f5a7de96a868cd1ac884d2203d09dfb6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664255"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927531"
 ---
 # <a name="oidmap-element"></a>\<oidMap, element >
 Zawiera mapowania identyfikatorów obiektów ASN. 1 (OID) do klas.  
@@ -77,6 +77,6 @@ Zawiera mapowania identyfikatorów obiektów ASN. 1 (OID) do klas.
 
 - [Schemat pliku konfiguracji](../index.md)
 - [Schemat ustawień kryptografii](index.md)
-- [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)
+- [Usługi kryptograficzne](../../../../standard/security/cryptographic-services.md)
 - [Konfigurowanie klas kryptografii](../../configure-cryptography-classes.md)
 - [Mapowanie identyfikatorów obiektów na algorytmy kryptografii](../../map-object-identifiers-to-cryptography-algorithms.md)

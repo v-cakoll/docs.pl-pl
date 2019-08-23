@@ -2,21 +2,21 @@
 title: <enableWebScript>
 ms.date: 03/30/2017
 ms.assetid: 9c7e96e1-af70-4e6e-ac5c-d67929dddbaa
-ms.openlocfilehash: b2cdd29cda7f82ce555b0f6c1a963567b41ff81b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 123f58ee3d77bf605db21fa0d9537b3196d56468
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673254"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919111"
 ---
-# <a name="enablewebscript"></a>\<enableWebScript>
-Ten element włącza zachowanie punktu końcowego, który pozwala na korzystanie z usługi z ASP.NET AJAX stron sieci web.  
+# <a name="enablewebscript"></a>\<enableWebScript >
+Ten element włącza zachowanie punktu końcowego, który umożliwia korzystanie z usługi z ASP.NET AJAX stron sieci Web.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<endpointBehaviors>  
-\<zachowanie >  
-\<enableWebScript>  
+\<> zachowania  
+\<enableWebScript >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,14 +37,14 @@ Ten element włącza zachowanie punktu końcowego, który pozwala na korzystanie
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zestaw zachowań punktu końcowego.|  
+|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zestaw zachowań punktów końcowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- To zachowanie należy używać tylko w połączeniu z oboma [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) Powiązanie standardowe lub [ \<webMessageEncoding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webmessageencoding.md) element powiązania.  Aby uzyskać więcej informacji na temat tego zachowania, zobacz <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>.  
+ Tego zachowania należy używać tylko w połączeniu z [ \<](webhttpbinding.md) elementem WebHttpBinding > [ \<](webmessageencoding.md) powiązanie standardowe lub webMessageEncoding > powiązania.  Aby uzyskać więcej informacji na temat tego zachowania <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>, zobacz.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Configuration.WebScriptEnablingElement>
 - <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>
-- [Obsługa integracji AJAX i notacji JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
-- [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)
+- [Obsługa integracji AJAX i notacji JSON](../../../wcf/feature-details/ajax-integration-and-json-support.md)
+- [\<webHttp>](webhttp.md)

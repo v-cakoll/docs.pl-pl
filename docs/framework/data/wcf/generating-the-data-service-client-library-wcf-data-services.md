@@ -1,40 +1,40 @@
 ---
-title: Generowanie biblioteki klienta usługi danych (WCF Data Services)
+title: Generowanie biblioteki klienta usługi danych (Usługi danych programu WCF)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - client applications, WCF Data Services
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: bf0a74bd010a188f38cf1a2088a449d97405fa0f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 14ea550715c1b224945137f123eed3b53e56cead
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626385"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918642"
 ---
-# <a name="generating-the-data-service-client-library-wcf-data-services"></a>Generowanie biblioteki klienta usługi danych (WCF Data Services)
-Usługi danych, który implementuje [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] może zwrócić dokument metadanych usług, który opisuje model danych udostępnianych przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych. Aby uzyskać więcej informacji, zobacz [OData: Dokument metadanych usługi](https://go.microsoft.com/fwlink/?LinkId=186070). Możesz użyć **Dodaj odwołanie do usługi** w programie Visual Studio można dodać odwołania do okna dialogowego [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie usługi. Kiedy używać tego narzędzia można dodać odwołania do metadanych zwróconych przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w projekcie klienta, wykonuje następujące czynności:  
+# <a name="generating-the-data-service-client-library-wcf-data-services"></a>Generowanie biblioteki klienta usługi danych (Usługi danych programu WCF)
+Usługa danych implementująca [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] może zwrócić dokument metadanych usługi, który opisuje model danych uwidoczniony [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] przez kanał informacyjny. Aby uzyskać więcej informacji, [zobacz OData: Dokument](https://go.microsoft.com/fwlink/?LinkId=186070)metadanych usługi. Możesz użyć okna dialogowego **Dodaj odwołanie do usługi** w programie Visual Studio, aby dodać odwołanie do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]usługi opartej na usłudze. W przypadku użycia tego narzędzia do dodania odwołania do metadanych zwracanych przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródło danych w projekcie klienta wykonywane są następujące akcje:  
   
-- Żądanie dokumentu metadanych usługi z usługi danych, a następnie interpretuje zwróconych metadanych.  
+- Żąda dokumentu metadanych usługi z usługi danych i interpretuje zwrócone metadane.  
   
     > [!NOTE]
-    >  Zwróconych metadanych znajduje się w projekcie klienta jako pliku edmx. Nie można otworzyć tego pliku edmx przy użyciu projektanta modelu Entity Data Model, ponieważ nie ma taki sam format pliku edmx używane przez program Entity Framework. Ten plik metadanych można wyświetlić za pomocą edytora XML lub dowolnego edytora tekstów. Aby uzyskać więcej informacji, zobacz [ \[MC EDMX\]: Model Entity Data Model do formatu pakietu usług danych](https://go.microsoft.com/fwlink/?LinkID=178833) specyfikacji  
+    > Zwrócone metadane są przechowywane w projekcie klienta jako plik. edmx. Nie można otworzyć tego pliku edmx przy użyciu projektanta Entity Data Model, ponieważ nie ma on tego samego formatu pliku. edmx, który jest używany przez Entity Framework. Ten plik metadanych można wyświetlić za pomocą edytora XML lub dowolnego edytora tekstu. Aby uzyskać więcej informacji, zobacz [ \[MC-edmx\]: Entity Data Model specyfikacji formatu](https://go.microsoft.com/fwlink/?LinkID=178833) pakowania Data Services  
   
-- Generuje reprezentację usługi jako klasa kontenera jednostki, która dziedziczy <xref:System.Data.Services.Client.DataServiceContext>. Ta klasa kontenera jednostki wygenerowanego przypomina kontener jednostek, które generują narzędzia modelu Entity Data Model. Aby uzyskać więcej informacji, zobacz [obiektu usługi — omówienie (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)).  
+- Generuje reprezentację usługi jako klasę kontenera jednostek, która dziedziczy z <xref:System.Data.Services.Client.DataServiceContext>. Ta klasa kontenerów jednostek jest podobna do kontenera jednostek wygenerowanego przez narzędzia Entity Data Model. Aby uzyskać więcej informacji, zobacz temat [usługi obiektów — omówienie (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)).  
   
-- Generuje klasy danych dla typów modelu danych, które wykryje w metadanych usługi.  
+- Generuje klasy danych dla typów modeli danych odnajdywanych w metadanych usługi.  
   
-- Dodanie odwołania do `System.Data.Services.Client` zestawu do projektu.  
+- Dodaje odwołanie do `System.Data.Services.Client` zestawu do projektu.  
   
- Aby uzyskać więcej informacji, zobacz [jak: Dodaj odwołanie do usługi danych](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Dodaj odwołanie](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)do usługi danych.  
   
- Klas usługi danych klienta mogą być też generowane przy użyciu [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) narzędzia w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [jak: Ręczne Generowanie klas usługi danych klienta](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
+ Klasy usługi danych klienta mogą być również generowane za pomocą narzędzia [DataSvcUtil. exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [jak: Generuj ręcznie klasy](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)usługi danych klienta.  
   
 ## <a name="client-data-type-mapping"></a>Mapowanie typu danych klienta  
- Kiedy używasz **Dodaj odwołanie do usługi** okna dialogowego w programie Visual Studio lub `DataSvcUtil.exe` narzędzie do generowania klasy danych klienta, które są oparte na [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kanału informacyjnego, typów danych programu .NET Framework są mapowane na typy pierwotne z modelu danych w następujący sposób:  
+ W przypadku korzystania z okna dialogowego **Dodaj odwołanie do usługi** w programie Visual Studio `DataSvcUtil.exe` lub narzędzia do generowania klas danych klienta, które [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] są oparte na źródle danych, typy danych .NET Framework są mapowane na typy pierwotne z modelu dane w następujący sposób:  
   
-|Typ modelu danych|Typ danych .NET framework|  
+|Typ modelu danych|Typ danych .NET Framework|  
 |---------------------|------------------------------|  
 |`Edm.Binary`|<xref:System.Byte>`[]`|  
 |`Edm.Boolean`|<xref:System.Boolean>|  
@@ -50,7 +50,7 @@ Usługi danych, który implementuje [!INCLUDE[ssODataFull](../../../../includes/
 |`Edm.Single`|<xref:System.Single>|  
 |`Edm.String`|<xref:System.String>|  
   
- Aby uzyskać więcej informacji, zobacz [OData: Pierwotne typy danych](https://go.microsoft.com/fwlink/?LinkId=186072).  
+ Aby uzyskać więcej informacji, [zobacz OData: Typy](https://go.microsoft.com/fwlink/?LinkId=186072)danych pierwotnych.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -9,29 +9,29 @@ helpviewer_keywords:
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7831e383a3048523909b79ac5a4706f3c1c48371
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: affdbb357cac14f258822591c3817c93ce6077f8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969315"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915901"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>Optymalizacja udostępnionej usługi hostingu sieci Web
-Jeśli jesteś administratorem serwera, który jest współużytkowany przez kilka małych witryn sieci Web hostingu, można zoptymalizować wydajność i zwiększyć wydajność witryny, dodając następujące `gcTrimCommitOnLowMemory` ustawienie `runtime` węzeł w pliku konfigurację Aspnet.config na platformie .NET katalog:  
+Jeśli jesteś administratorem serwera, który jest udostępniany przez hosting kilku małych witryn sieci Web, możesz zoptymalizować wydajność i zwiększyć pojemność lokacji, dodając następujące `gcTrimCommitOnLowMemory` ustawienie `runtime` do węzła w pliku aspnet. config w środowisku .NET katalogi  
   
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
   
 > [!NOTE]
->  To ustawienie jest zalecane tylko dla udostępnionych w sieci Web w scenariuszach hostingu.  
+> To ustawienie jest zalecane tylko w scenariuszach hostingu w sieci Web.  
   
- Ponieważ moduł odśmiecania pamięci zachowuje pamięć dla przyszłej alokacji, może być jej przydzielonych miejsc, więcej niż ściśle potrzebne. Można zmniejszyć tego miejsca, aby pomieścić godziny po duże obciążenie pamięci systemowej. Zmniejszenie tego przydzielone miejsce zapewnia lepszą wydajność i rozwija zdolności do hostowania więcej witryn.  
+ Ponieważ moduł wyrzucania elementów bezużytecznych zachowuje pamięć dla przyszłych przydziałów, jego zatwierdzone miejsce może być większe niż to, co jest absolutnie wymagane. Można zmniejszyć to miejsce do czasu, gdy występuje duże obciążenie pamięci systemowej. Zmniejszenie ilości tego zajmowanego miejsca zwiększa wydajność i zwiększa możliwości hostowania większej liczby lokacji.  
   
- Gdy `gcTrimCommitOnLowMemory` ustawienie jest włączone, moduł zbierający elementy bezużyteczne ocenia obciążenia pamięci systemu i przechodzi trybie przycinania, gdy obciążenie osiągnie 90%. Dopóki obciążenie spadnie poniżej 85%, obsługuje tryb przycinania.  
+ Gdy to `gcTrimCommitOnLowMemory` ustawienie jest włączone, moduł zbierający elementy bezużyteczne szacuje obciążenie pamięci systemowej i przechodzi do trybu przycinania, gdy obciążenie osiągnie 90%. Utrzymuje tryb przycinania do momentu spadku obciążenia poniżej 85%.  
   
- Gdy warunki na to pozwalają, wyrzucanie elementów bezużytecznych może zdecydować, że `gcTrimCommitOnLowMemory` ustawienie nie zostanie pomocy bieżącej aplikacji i go zignorować.  
+ Gdy warunki zezwalają, Moduł wyrzucania elementów bezużytecznych może zdecydować, że to `gcTrimCommitOnLowMemory` ustawienie nie będzie pomocne dla bieżącej aplikacji i nie zostanie zignorowane.  
   
 ## <a name="example"></a>Przykład  
- Poniższy fragment XML przedstawiono sposób włączania `gcTrimCommitOnLowMemory` ustawienie. Wielokropek wskazywać inne ustawienia, które będą miały `runtime` węzła.  
+ Poniższy fragment kodu XML pokazuje, `gcTrimCommitOnLowMemory` jak włączyć ustawienie. Elipsy wskazują inne ustawienia, które mogą znajdować `runtime` się w węźle.  
   
 ```xml  
 <?xml version="1.0" encoding="UTF-8"?>  

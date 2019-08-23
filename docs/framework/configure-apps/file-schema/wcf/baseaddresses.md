@@ -2,19 +2,19 @@
 title: <baseAddresses>
 ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
-ms.openlocfilehash: 7d0afd638e9a311b69ff47b6789d5fde093945ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 059ea4e637ab906d1fde9807a73ac8341f81c574
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673527"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926421"
 ---
 # <a name="baseaddresses"></a>\<baseAddresses>
-Reprezentuje kolekcję `baseAddress` elementy, które są adresami podstawowymi dla usługi hosta w środowisku. Jeśli adres podstawowy jest obecny, można skonfigurować punkty końcowe z adresami określany względem adresu podstawowego.  
+Reprezentuje kolekcję `baseAddress` elementów, które są adresami podstawowymi dla hosta usługi w środowisku własnym. W przypadku obecności adresu podstawowego punkty końcowe można skonfigurować przy użyciu adresów względnych dla adresu podstawowego.  
   
  \<system.ServiceModel>  
-\<client>  
-\<punkt końcowy >  
+\<> klienta  
+\<> punktu końcowego  
 \<host>  
 \<baseAddresses>  
   
@@ -39,17 +39,17 @@ Reprezentuje kolekcję `baseAddress` elementy, które są adresami podstawowymi 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddresses.md)|Element konfiguracji określający adres podstawowy, używany przez hosta usługi.|  
+|[\<add>](add-of-baseaddresses.md)|Element konfiguracji, który określa adresy podstawowe używane przez hosta usługi.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Element konfiguracji, który określa ustawienia dla usługi hosta.|  
+|[\<host>](host.md)|Element konfiguracji, który określa ustawienia dla hosta usługi.|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
 - <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>
-- [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [Hosting](../../../wcf/feature-details/hosting.md)

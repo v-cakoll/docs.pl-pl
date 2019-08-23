@@ -2,20 +2,20 @@
 title: <compositeDuplex>
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-ms.openlocfilehash: 1e5ecc2b937aa0cdb159a6cbd1222fe6d4af79fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e79b3e1aeecc52bf41ae759dc15ebf1c8211beb2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704183"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926069"
 ---
 # <a name="compositeduplex"></a>\<compositeDuplex>
-Definiuje element powiązania, który jest używany, gdy klient musi ujawniać punkt końcowy usługi by wysłać wiadomości do klienta.  
+Definiuje element powiązania, który jest używany, gdy klient musi uwidocznić punkt końcowy dla usługi w celu wysłania komunikatów z powrotem do klienta.  
   
  \<system.serviceModel>  
-\<powiązania >  
+\<> powiązań  
 \<customBinding>  
-\<Powiązanie >  
+\<> powiązania  
 \<compositeDuplex>  
   
 ## <a name="syntax"></a>Składnia  
@@ -31,7 +31,7 @@ Definiuje element powiązania, który jest używany, gdy klient musi ujawniać p
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|clientBaseAddress|Identyfikator URI, który ustawia adres kanału zwrotnego w tryb dupleks. Usługa używa tego adresu, skontaktuj się z pomocą i nawiąż połączenie z klientem.<br /><br /> Jeśli ten atrybut nie jest ustawiony, domyślnego adresu "`full qualified name+default port\TemporaryIndigoAddress\guid`" jest generowany. Wartość domyślna to `null`.|  
+|clientBaseAddress|Identyfikator URI, który ustawia adres kanału zwrotnego w trybie dupleksu. Usługa używa tego adresu do nawiązywania kontaktu i nawiązania połączenia z klientem.<br /><br /> Jeśli ten atrybut nie jest ustawiony, zostanie wygenerowany domyślny adres`full qualified name+default port\TemporaryIndigoAddress\guid`"". Wartość domyślna to `null`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -40,12 +40,12 @@ Definiuje element powiązania, który jest używany, gdy klient musi ujawniać p
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie funkcje powiązania niestandardowego powiązania.|  
+|[\<> powiązania](../../../misc/binding.md)|Definiuje wszystkie możliwości powiązań niestandardowego powiązania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element konfiguracji jest używany z transportów, które nie zezwalają na komunikację dwukierunkowego natywnie, na przykład HTTP. TCP, z drugiej strony, natywnie umożliwia dwukierunkowe komunikacji i nie wymaga użycia tego elementu powiązania usługi można wysłać wiadomości zwrotnie do klienta.  
+ Ten element konfiguracji jest używany z transportami, które nie zezwalają na natywną komunikację bezstronną, na przykład HTTP. Protokół TCP, w przeciwieństwie, umożliwia natywną komunikację bezstronną i nie wymaga użycia tego elementu powiązania dla usługi do wysyłania komunikatów z powrotem do klienta.  
   
- Klient musi ujawniać adres korespondencyjny upewnić się, skontaktuj się z pomocą i nawiązania połączenia. Ten adres klienta są dostarczane przez `clientBaseAddress` atrybutu. Należy pamiętać, że usługi Windows Communication Foundation (WCF) automatycznie generuje ClientBaseAddress Jeśli jeden nie jest jawnie ustawiona przez użytkownika.  
+ Klient musi uwidocznić adres usługi, aby nawiązać kontakt i nawiązać połączenie. Ten adres klienta jest dostarczany przez `clientBaseAddress` atrybut. Należy pamiętać, że Windows Communication Foundation (WCF) automatycznie generuje element ClientBaseAddress, jeśli nie został jawnie ustawiony przez użytkownika.  
   
 ## <a name="example"></a>Przykład  
   
@@ -58,7 +58,7 @@ Definiuje element powiązania, który jest używany, gdy klient musi ujawniać p
 - <xref:System.ServiceModel.Configuration.CompositeDuplexElement>
 - <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

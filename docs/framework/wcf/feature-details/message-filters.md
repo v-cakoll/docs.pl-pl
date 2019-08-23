@@ -4,37 +4,37 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-ms.openlocfilehash: fc4656a76894eb3a844bc9f2187847fd9eff0ffe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8de58b6935ee59fc8c787dfcf7445afcd0774b9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786001"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912699"
 ---
 # <a name="message-filters"></a>Filtry komunikatów
-Aby zaimplementować, routingu opartego na zawartości, usługa routingu korzysta z <xref:System.ServiceModel.Dispatcher.MessageFilter> implementacji, które sprawdzanie określonych sekcji wiadomości, takich jak adres, nazwę punktu końcowego lub określonych instrukcji języka XPath. Jeśli żaden z filtry komunikatów za pomocą [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] własnych potrzeb, możesz utworzyć niestandardowy filtr, tworząc nową metodę implementacji elementu bazowego <xref:System.ServiceModel.Dispatcher.MessageFilter> klasy.  
+W celu zaimplementowania routingu opartego na zawartości Usługa <xref:System.ServiceModel.Dispatcher.MessageFilter> routingu korzysta z implementacji, które sprawdzają konkretne sekcje komunikatu, takie jak adres, nazwa punktu końcowego lub określona instrukcja XPath. Jeśli żaden z filtrów [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] komunikatów nie spełnia wymagań, można utworzyć niestandardowy filtr, tworząc nową implementację klasy bazowej. <xref:System.ServiceModel.Dispatcher.MessageFilter>  
   
- Podczas konfigurowania usługi routingu, należy zdefiniować elementy filtru (<xref:System.ServiceModel.Routing.Configuration.FilterElement> obiektów) opisują typ **MessageFilter** i wszystkie pomocnicze dane wymagane do utworzenia filtru, takie jak wartości określonego ciągu wyszukiwania dla wiadomości. Należy pamiętać, że tylko tworzenie elementów filtr definiuje filtry jednego komunikatu. Aby używać filtrów do oceny i kierowanie komunikatów w postaci należy także zdefiniować tabelę filtru (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>).  
+ Podczas konfigurowania usługi routingu należy zdefiniować elementy filtru (<xref:System.ServiceModel.Routing.Configuration.FilterElement> obiekty) opisujące typ **MessageFilter** i wszystkie dane pomocnicze wymagane do utworzenia filtru, takie jak określone wartości ciągu do wyszukania w komunikacie. . Należy pamiętać, że tworzenie elementów filtru definiuje tylko pojedyncze filtry komunikatów; Aby użyć filtrów do obliczenia i trasy komunikatów, należy również zdefiniować tabelę filtrów (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>).  
   
- Każdy wpis w tabeli filtr odwołuje się element filtru i określa punkt końcowy klienta, który komunikat będą kierowane do komunikatu jest zgodny z filtrem. Filtr wpisów tabeli pozwalają również na Określ kolekcję punktów końcowych kopii zapasowej (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>), który definiuje listę punktów końcowych, które wiadomość zostanie przesłana do awarii transmisji podczas wysyłania do podstawowego punktu końcowego. Te punkty końcowe zostaną sprawdzone w kolejności określonej, aż któraś się powiedzie.  
+ Każdy wpis w tabeli filtrów odwołuje się do elementu Filter i określa punkt końcowy klienta, do którego zostanie rozesłany komunikat, jeśli komunikat jest zgodny z filtrem. Wpisy tabeli filtru umożliwiają również określenie kolekcji punktów końcowych kopii zapasowych (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>), która definiuje listę punktów końcowych, do których zostanie przesłany komunikat w przypadku niepowodzenia transmisji podczas wysyłania do podstawowego punktu końcowego. Te punkty końcowe zostaną ponowione w kolejności określonej do momentu sukcesu jednego.  
   
 ## <a name="message-filters"></a>Filtry komunikatów  
- Filtry komunikatów używane przez usługę Routing zawierają typowe funkcje wybór wiadomości, takie jak nazwa punktu końcowego, który wiadomość została wysłana do Akcja SOAP lub adresu lub prefiksu adresu, który została wysłana wiadomość do oceny. Filtry można również łączyć z `AND` warunku, dzięki czemu komunikaty tylko będą kierowane do punktu końcowego, jeśli oba filtry dopasuje komunikat o stanie. Można również utworzyć niestandardowe filtry, tworząc własną implementację <xref:System.ServiceModel.Dispatcher.MessageFilter>.  
+ Filtry komunikatów używane przez usługę routingu zapewniają wspólną funkcję wyboru komunikatów, takie jak ocenianie nazwy punktu końcowego, do którego wysłano wiadomość, akcję protokołu SOAP lub adres lub prefiks adresu, do którego wiadomość została wysłana. Filtry można również dołączać z `AND` warunkiem, tak aby komunikaty były kierowane tylko do punktu końcowego, jeśli wiadomość pasuje do obu filtrów. Możesz również utworzyć niestandardowe filtry, tworząc własną implementację programu <xref:System.ServiceModel.Dispatcher.MessageFilter>.  
   
- W poniższej tabeli wymieniono <xref:System.ServiceModel.Routing.Configuration.FilterType> używane przez usługę Routing klasy, która implementuje filtr szczegółowy komunikat o błędzie i wymagane <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A> parametrów.  
+ W poniższej tabeli wymieniono <xref:System.ServiceModel.Routing.Configuration.FilterType> używane przez usługę routingu, klasę implementującą konkretny filtr komunikatów i wymagane <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A> parametry.  
   
-|Typ filtru|Opis|Filtruj dane znaczenia|Przykład filtru|  
+|Typ filtru|Opis|Filtrowanie danych znaczenie|Przykładowy filtr|  
 |------------------|-----------------|-------------------------|--------------------|  
-|Akcja|Używa <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> klasę wiadomości zawierające określonej akcji.|Akcja do filtrowania.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
-|EndpointAddress|Używa <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> klasy, za pomocą <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` do dopasowania komunikaty zawierające określonego adresu.|Adres do filtrowania (w nagłówku To).|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
-|EndpointAddressPrefix|Używa <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> klasy, za pomocą <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` do dopasowania komunikaty zawierające prefiksu określonego adresu.|Adres do filtrowania przy użyciu najdłuższy zgodny prefiks.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
-|Oraz|Używa <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> klasę, która zawsze ocenia oba warunki przed zwróceniem.|danych filtru nie jest używany; Zamiast tego Filtr1 i filtr2 mają nazwy odpowiednie filtry komunikatów (również w tabeli), które powinny być **i**ed razem.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
-|Niestandardowe|Typ zdefiniowany przez użytkownika, która rozszerza <xref:System.ServiceModel.Dispatcher.MessageFilter> klasy i ma konstruktora biorąc ciągu.|Atrybut customtype — jest w pełni kwalifikowana nazwa typu klasy, aby utworzyć; danych filtru jest parametry do przekazania do konstruktora, podczas tworzenia filtru.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
-|EndpointName|Używa <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> klasę wiadomości na podstawie nazwy przybyły na punktu końcowego usługi.|Nazwa punktu końcowego usługi, na przykład: "serviceEndpoint1".  Powinno to być jeden z punktów końcowych dostępne w usłudze Routing.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
-|MatchAll|Używa <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> klasy. Ten filtr dopasowuje wartość do wszystkich nadchodzących wiadomości.|danych filtru nie jest używana. Ten filtr będzie zawsze zgodna wszystkie komunikaty.|\<filter name="matchAll1" filterType="MatchAll" />|  
-|XPath|Używa <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> klasy w celu dopasowania określonej kwerendy XPath w komunikacie.|Zapytanie XPath do użycia podczas dopasowywania komunikatów.|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
+|Akcja|<xref:System.ServiceModel.Dispatcher.ActionMessageFilter> Używa klasy do dopasowywania komunikatów zawierających określoną akcję.|Akcja do filtrowania.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
+|Elemencie|Używa klasy, z <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  aby dopasowaćkomunikatyzawierająceokreślonyadres.`true` <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>|Adres do filtrowania (w nagłówku do).|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
+|EndpointAddressPrefix|Używa klasy, z <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  aby dopasowaćkomunikatyzawierająceokreślonyprefiksadresu.`true` <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>|Adres do filtrowania przy użyciu najdłuższych pasujących prefiksów.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
+|Oraz|<xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> Używa klasy, która zawsze oblicza oba warunki przed zwróceniem.|Danych filtru nie jest używany; Zamiast tego Filter1 i Filter2 mają nazwy odpowiednich filtrów komunikatów (również w tabeli), które powinny być **i**Ed razem.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|Celnej|Typ zdefiniowany przez użytkownika, który rozszerza <xref:System.ServiceModel.Dispatcher.MessageFilter> klasę i ma konstruktora pobierającego ciąg.|Atrybut CustomType jest w pełni kwalifikowaną nazwą typu klasy do utworzenia; Danych filtru jest ciągiem, który ma zostać przekazany do konstruktora podczas tworzenia filtru.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
+|EndpointName|<xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> Używa klasy w celu dopasowania komunikatów na podstawie nazwy punktu końcowego usługi, w którym dotarły.|Nazwa punktu końcowego usługi, na przykład: "serviceEndpoint1".  Powinien to być jeden z punktów końcowych uwidocznionych w usłudze routingu.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
+|MatchAll|<xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> Używa klasy. Ten filtr dopasowuje wszystkie przychodzące komunikaty.|Danych filtru nie jest używany. Ten filtr będzie zawsze pasować do wszystkich komunikatów.|\<filter name="matchAll1" filterType="MatchAll" />|  
+|XPath|<xref:System.ServiceModel.Dispatcher.XPathMessageFilter> Używa klasy do dopasowania określonych zapytań XPath w komunikacie.|Zapytanie XPath, które ma być używane podczas dopasowywania komunikatów.|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
   
- W poniższym przykładzie zdefiniowano wpisy filtrów, korzystających z XPath, Nazwapunktukoncowego i PrefixEndpointAddress filtry wiadomości. W przykładzie pokazano również przy użyciu niestandardowego filtru dla wpisów RoundRobinFilter1 i RoundRobinFilter2.  
+ W poniższym przykładzie zdefiniowano wpisy filtru, które używają filtrów XPath, EndpointName i PrefixEndpointAddress. Ten przykład ilustruje także użycie filtru niestandardowego dla wpisów RoundRobinFilter1 i RoundRobinFilter2.  
   
 ```xml  
 <filters>  
@@ -54,12 +54,12 @@ Aby zaimplementować, routingu opartego na zawartości, usługa routingu korzyst
 ```  
   
 > [!NOTE]
->  Po prostu zdefiniowanie filtru nie powoduje wiadomości, które ma zostać obliczone dla filtru. Filtr muszą zostać dodane do tabeli filtr, który jest skojarzony z punktem końcowym usługi udostępniane przez usługę routingu.  
+> Po prostu Definiowanie filtru nie powoduje, że komunikaty są oceniane względem filtru. Filtr należy dodać do tabeli filtrów, która jest następnie skojarzona z punktem końcowym usługi udostępnianym przez usługę routingu.  
   
-### <a name="namespace-table"></a>Tabela Namespace  
- Korzystając z filtr XPath, dane filtru, który zawiera zapytanie XPath może stać się bardzo duże, ze względu na użycie przestrzeni nazw. Złagodzić ten problem usługa routingu umożliwia definiowanie własnych prefiksy przestrzeni nazw przy użyciu tabeli przestrzeni nazw.  
+### <a name="namespace-table"></a>Tabela przestrzeni nazw  
+ W przypadku korzystania z filtru XPath dane filtru zawierające zapytanie XPath mogą stać się bardzo duże ze względu na użycie przestrzeni nazw. Aby rozwiązać ten problem, usługa routingu zapewnia możliwość definiowania własnych prefiksów przestrzeni nazw za pomocą tabeli przestrzeni nazw.  
   
- Tabela nazw jest kolekcją <xref:System.ServiceModel.Routing.Configuration.NamespaceElement> obiektów, które określa prefiksy przestrzeni nazw dla popularnych przestrzeni nazw, który może służyć w wyrażenie XPath. Poniżej przedstawiono domyślne obszary nazw i przestrzeni nazw prefiksy, które są zawarte w tabeli przestrzeni nazw.  
+ Tabela przestrzeni nazw to kolekcja <xref:System.ServiceModel.Routing.Configuration.NamespaceElement> obiektów, która definiuje prefiksy przestrzeni nazw dla wspólnych przestrzeni nazw, które mogą być używane w XPath. Poniżej znajdują się domyślne przestrzenie nazw i prefiksy przestrzeni nazw, które są zawarte w tabeli przestrzeni nazw.  
   
 |Prefiks|Przestrzeń nazw|  
 |------------|---------------|  
@@ -71,7 +71,7 @@ Aby zaimplementować, routingu opartego na zawartości, usługa routingu korzyst
 |tempuri|`http://tempuri.org`|  
 |ser|`http://schemas.microsoft.com/2003/10/Serialization`|  
   
- Gdy wiadomo, że będziesz używać określonych przestrzeni nazw w zapytaniach XPath, możesz dodać go do tabeli przestrzeni nazw, wraz z prefiksem unikatową przestrzeń nazw i Użyj prefiksu w każdym zapytaniu XPath zamiast pełnego przestrzeni nazw. W poniższym przykładzie zdefiniowano prefiksu "niestandardowe" dla przestrzeni nazw `"http://my.custom.namespace"`, który jest następnie używany w zapytaniu XPath zawarte w danych filtru.  
+ Jeśli wiesz, że w zapytaniach XPath będziesz używać konkretnej przestrzeni nazw, możesz dodać ją do tabeli przestrzeni nazw wraz z unikatowym prefiksem przestrzeni nazw i użyć prefiksu w dowolnym zapytaniu XPath zamiast w całej przestrzeni nazw. Poniższy przykład definiuje prefiks "Custom" dla przestrzeni nazw `"http://my.custom.namespace"`, który jest następnie używany w zapytaniu XPath zawartym w danych filtru.  
   
 ```xml  
 <namespaceTable>  
@@ -82,8 +82,8 @@ Aby zaimplementować, routingu opartego na zawartości, usługa routingu korzyst
 </filters>  
 ```  
   
-## <a name="filter-tables"></a>Filtrowanie tabel  
- Gdy każdy element filtr definiuje logiczne porównanie, które mogą być stosowane do wiadomości, tabelę filtru zawiera skojarzenia między elementem filtru i docelowy punkt końcowy klienta. Tabela filtru jest nazywany kolekcją <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement> obiekty, które określają skojarzenie między filtru, punktu końcowego podstawowego docelowego i listę alternatywne punkty końcowe kopii zapasowej. Wpisów tabeli filtru umożliwiają również określić opcjonalne priorytet dla każdego warunku filtru. Poniższy przykład definiuje dwa filtry, a następnie definiuje tabelę filtru, który kojarzy każdy filtr z docelowy punkt końcowy.  
+## <a name="filter-tables"></a>Filtruj tabele  
+ Chociaż każdy element filtru definiuje logiczne porównanie, które można zastosować do komunikatu, tabela filtrów zawiera skojarzenie między elementem Filter i docelowym punktem końcowym klienta. Tabela filtrów to nazwana kolekcja <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement> obiektów, która definiuje skojarzenie między filtrem, głównym punktem końcowym i listą alternatywnych punktów końcowych kopii zapasowych. Wpisy tabeli filtru umożliwiają również określenie opcjonalnego priorytetu dla każdego warunku filtru. W poniższym przykładzie zdefiniowano dwa filtry, a następnie zdefiniowano tabelę filtru, która kojarzy każdy filtr z docelowym punktem końcowym.  
   
 ```xml  
 <routing>  
@@ -103,14 +103,14 @@ Aby zaimplementować, routingu opartego na zawartości, usługa routingu korzyst
 ```  
   
 ### <a name="filter-evaluation-priority"></a>Priorytet oceny filtru  
- Domyślnie wszystkie wpisy w tabeli filtru są oceniane jednocześnie, a komunikat Trwa obliczanie jest kierowany do punkty końcowe: skojarzone z każdego zgodnego wpisu filtru. Jeśli mają wiele filtrów `true`i wiadomości jest jednokierunkowa lub dupleks się komunikat multiemisji do punktów końcowych dla wszystkich zgodnych filtrów. Komunikaty "żądanie-odpowiedź" nie może być multiemisji, ponieważ mogą być zwracane tylko jedną odpowiedź do klienta.  
+ Domyślnie wszystkie wpisy w tabeli filtrów są oceniane jednocześnie, a oceniany komunikat jest kierowany do punktów końcowych skojarzonych z każdym pasującym wpisem filtru. W przypadku obliczenia `true`wielu filtrów, a komunikat jest jednokierunkowy lub dupleksowy, komunikat jest multiemisją dla punktów końcowych dla wszystkich zgodnych filtrów. Komunikaty żądanie-odpowiedź nie mogą być multiemisją, ponieważ do klienta można zwrócić tylko jedną odpowiedź.  
   
- Można zaimplementować bardziej złożonej logiki routingu, określając poziomy priorytetów dla każdego filtru; Usługa routingu najpierw sprawdza wszystkie filtry na najwyższym poziomie priorytetu. Jeśli komunikat dopasowana do filtru tego poziomu, żadnych filtrów o niższym priorytecie będą przetwarzane. Na przykład jednokierunkowej wiadomości przychodzące najpierw zostaną ocenione względem wszystkich filtrów o priorytecie 2. Komunikatu nie pasuje do żadnego filtru na tym poziomie priorytetu więc obok komunikatu jest porównywana z priorytetem 1 filtrów. Dwa filtry priorytet 1 zgodny komunikat, a ponieważ komunikat jednokierunkowy jest kierowany do obu docelowych punktów końcowych.  Ponieważ między filtrami o priorytecie 1 zostało znalezione dopasowanie, są obliczane żadnych filtrów priorytet 0.  
+ Bardziej złożoną logikę routingu można zaimplementować przez określenie poziomów priorytetów dla każdego filtru; Usługa routingu najpierw szacuje wszystkie filtry na najwyższym poziomie priorytetu. Jeśli komunikat jest zgodny z filtrem tego poziomu, nie są przetwarzane żadne filtry o niższym priorytecie. Na przykład przychodzące komunikaty jednokierunkowe są najpierw oceniane względem wszystkich filtrów o priorytecie 2. Komunikat nie jest zgodny z żadnym filtrem na tym poziomie priorytetu, dlatego następny komunikat jest porównywany z filtrami o priorytecie 1. Dwa filtry o priorytecie 1 pasują do komunikatu, ponieważ jest to komunikat jednokierunkowy, który jest kierowany do obu docelowych punktów końcowych.  Ponieważ znaleziono dopasowanie między filtrami o priorytecie 1, nie są oceniane żadne filtry o priorytecie 0.  
   
 > [!NOTE]
->  Jeśli nie określono priorytetu, jest używany domyślny priorytet 0.  
+> Jeśli priorytet nie zostanie określony, zostanie użyty domyślny priorytet 0.  
   
- W poniższym przykładzie zdefiniowano tabelę filtru, który określa priorytety 2, 1 i 0 dla filtrów, do których odwołuje się w tabeli.  
+ W poniższym przykładzie zdefiniowano tabelę filtru, która określa priorytety 2, 1 i 0 dla filtrów, do których odwołuje się tabela.  
   
 ```xml  
 <filterTables>  
@@ -127,13 +127,13 @@ Aby zaimplementować, routingu opartego na zawartości, usługa routingu korzyst
 </filterTables>  
 ```  
   
- W poprzednim przykładzie Jeśli obiekt XPathFilter dopasuje komunikat o stanie, będą kierowane roundingCalcEndpoint i żadne dodatkowe filtry w tabeli zostaną ocenione, ponieważ wszystkie pozostałe filtry są o niższym priorytecie. Jednak jeśli komunikat jest niezgodny obiekt XPathFilter go następnie ocenia się ze wszystkimi filtrami dalej niższego priorytetu, EndpointNameFilter i PrefixAddressFilter.  
+ W poprzednim przykładzie, jeśli komunikat jest zgodny z obiekt XPathFilter, zostanie on rozesłany do roundingCalcEndpoint i żadne dalsze filtry w tabeli nie zostaną ocenione, ponieważ wszystkie inne filtry mają niższy priorytet. Jeśli jednak wiadomość nie jest zgodna z obiekt XPathFilter, zostanie ona oceniona względem wszystkich filtrów o następnym niższym priorytecie, EndpointNameFilter i PrefixAddressFilter.  
   
 > [!NOTE]
->  Jeśli to możliwe, należy użyć filtrów wyłączne zamiast określania priorytet, ponieważ obliczanie priorytetu może spowodować obniżenie wydajności.  
+> Jeśli to możliwe, użyj filtrów wyłącznych zamiast określania priorytetu, ponieważ Ocena priorytetów może spowodować spadek wydajności.  
   
-### <a name="backup-lists"></a>Listy kopii zapasowej  
- Każdy filtr w tabeli filtru można opcjonalnie określić listy kopii zapasowych, który jest nazywany kolekcją punktów końcowych (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). Ta kolekcja zawiera uporządkowaną listę punktów końcowych, które wiadomości zostaną przekazane w przypadku powstania <xref:System.ServiceModel.CommunicationException> podczas wysyłania do podstawowego punktu końcowego określonego w <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A>. W poniższym przykładzie zdefiniowano listy kopii zapasowych o nazwie "backupServiceEndpoints", który zawiera dwa punkty końcowe.  
+### <a name="backup-lists"></a>Listy kopii zapasowych  
+ Każdy filtr w tabeli filtrów może opcjonalnie określić listę kopii zapasowych, która jest nazwaną kolekcją punktów końcowych (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). Ta kolekcja zawiera uporządkowaną listę punktów końcowych, do których zostanie przesłany komunikat w przypadku <xref:System.ServiceModel.CommunicationException> wysyłania do podstawowego punktu końcowego określonego w. <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A> W poniższym przykładzie zdefiniowano listę kopii zapasowych o nazwie "backupServiceEndpoints", która zawiera dwa punkty końcowe.  
   
 ```xml  
 <filterTables>  
@@ -149,4 +149,4 @@ Aby zaimplementować, routingu opartego na zawartości, usługa routingu korzyst
 </backupLists>  
 ```  
   
- W poprzednim przykładzie, jeśli wysłanie do podstawowego punktu końcowego "Miejsce docelowe" zakończy się niepowodzeniem, usługa routingu spróbuje wysyłane do każdego punktu końcowego w kolejności, w jakiej występują na liście, wysyłce backupServiceQueue i następnie wysłanie do alternateServiceQueue, jeśli Wyślij do backupServiceQueue kończy się niepowodzeniem. Jeśli wszystkie punkty końcowe kopii zapasowej zakończy się niepowodzeniem, zwracany jest błąd.
+ W poprzednim przykładzie, Jeśli wysyłanie do podstawowego punktu końcowego nie powiedzie się, usługa routingu podejmie próbę wysłania do każdego punktu końcowego w sekwencji, które są wyświetlane, po raz pierwszy wysyła do backupServiceQueue, a następnie wysyła do alternateServiceQueue, jeśli Wysyłanie do backupServiceQueue nie powiodło się. Jeśli wszystkie punkty końcowe kopii zapasowej zakończą się niepowodzeniem, zwracany jest błąd.

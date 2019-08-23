@@ -11,45 +11,45 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d858ef4c2f70c55b0a36e845f90d9a8e08f5e2d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e08cb1b3f4708b4314f0cd663f70fa10aaa1aded
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487826"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910686"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Używanie bibliotek pochodzących z częściowo zaufanego kodu
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  W tym temacie adresy zachowanie zestawy o silnych nazwach i ma zastosowanie tylko do [poziomu 1](../../../docs/framework/misc/security-transparent-code-level-1.md) zestawów. [Kod o przezroczystym poziomie bezpieczeństwa, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md) zestawów w programie .NET Framework 4 lub nowszym nie dotyczy silne nazwy. Aby uzyskać więcej informacji na temat zmian w systemie zabezpieczeń, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
+> Ten temat dotyczy zachowania zestawów o silnych nazwach i ma zastosowanie tylko do zestawów [poziomu 1](../../../docs/framework/misc/security-transparent-code-level-1.md) . Silne nazwy nie wpływają na zestawy [poziomu 2](../../../docs/framework/misc/security-transparent-code-level-2.md) w .NET Framework 4 lub nowszym. Aby uzyskać więcej informacji na temat zmian w systemie zabezpieczeń, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
   
- Aplikacje odbierające mniejsza niż pełne zaufanie od hosta lub piaskownicy nie są dozwolone do wywołania udostępnionego zarządzanych bibliotek, chyba że moduł zapisujący biblioteki specjalnie pozwala na ich za pośrednictwem <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu. W związku z tym autorzy aplikacji należy pamiętać, że niektóre biblioteki nie będą dostępne do nich z częściowo zaufanych kontekstu. Domyślnie, cały kod, który wykonuje w częściowym zaufaniu [piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) i nie znajduje się w listy zestawów pełnego zaufania jest częściowo zaufany. Jeśli nie powinien być wykonywany z częściowo zaufanych kontekstu lub być wywoływany przez kod częściowo zaufany kod, masz nie trzeba się troszczyć o informacje przedstawione w tej sekcji. Jednak jeśli piszesz kod, który musi współdziałać z częściowo zaufanego kodu lub nie działać z częściowo zaufanych kontekstu, należy rozważyć następujące czynniki:  
+ Aplikacje, które odbierają mniej niż pełne zaufanie z hosta lub piaskownicy, nie mogą wywoływać udostępnionych bibliotek zarządzanych, chyba że moduł zapisujący biblioteki jawnie zezwala im na <xref:System.Security.AllowPartiallyTrustedCallersAttribute> użycie atrybutu. W związku z tym autorzy aplikacji muszą mieć świadomość, że niektóre biblioteki nie będą dostępne dla nich z częściowo zaufanego kontekstu. Domyślnie cały kod, który jest wykonywany w [piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) z częściowym zaufaniem i nie znajduje się na liście zestawów pełnego zaufania, jest częściowo zaufany. Jeśli nie oczekujesz, że kod będzie wykonywany z częściowo zaufanego kontekstu lub że ma zostać wywołany przez częściowo zaufany kod, nie musisz mieć informacji o informacjach przedstawionych w tej sekcji. Jednak w przypadku pisania kodu, który musi współpracować z częściowo zaufanym kodem lub korzystać z częściowo zaufanego kontekstu, należy wziąć pod uwagę następujące czynniki:  
   
-- Biblioteki musi być podpisany silną nazwą, aby być współużytkowane przez wiele aplikacji. Silne nazwy Zezwalaj kodu mają być umieszczone w globalnej pamięci podręcznej lub dodać do listy pełnego zaufania piaskownicy <xref:System.AppDomain>, i pozwala użytkownikom sprawdzić, czy określonego fragmentu kodu mobilnego rzeczywiście pochodzi ze strony użytkownika.  
+- Biblioteki muszą być podpisane za pomocą silnej nazwy, aby można je było współużytkować przez wiele aplikacji. Silne nazwy umożliwiają umieszczanie kodu w globalnej pamięci podręcznej zestawów lub dodawane do listy pełnych relacji zaufania w trybie piaskownicy <xref:System.AppDomain>oraz umożliwiają klientom sprawdzenie, czy określony element kodu komórkowego rzeczywiście pochodzi od użytkownika.  
   
-- Domyślnie o silnej nazwie [poziomu 1](../../../docs/framework/misc/security-transparent-code-level-1.md) biblioteki udostępnione wykonać ukrytego [LinkDemand](../../../docs/framework/misc/link-demands.md) dla pełnego zaufania automatycznie, bez zapisywania biblioteki potrzeby podejmować żadnych działań.  
+- Domyślnie biblioteki udostępnione [poziomu 1](../../../docs/framework/misc/security-transparent-code-level-1.md) o silnej nazwie mają niejawny [LinkDemand](../../../docs/framework/misc/link-demands.md) dla pełnego zaufania, bez konieczności wykonywania jakichkolwiek czynności przez moduł zapisujący biblioteki.  
   
-- Jeśli obiekt wywołujący nie jest w pełni zaufany, ale nadal próbuje wywołać takie biblioteki, środowisko wykonawcze zgłasza <xref:System.Security.SecurityException> i element wywołujący nie ma zezwolenia na łącze do biblioteki.  
+- Jeśli obiekt wywołujący nie ma pełnego zaufania, ale nadal próbuje wywołać taką bibliotekę, środowisko uruchomieniowe zgłasza <xref:System.Security.SecurityException> a obiekt wywołujący nie może połączyć się z biblioteką.  
   
-- Aby wyłączyć automatyczne **LinkDemand** i zapobiec wyjątek z jest zgłaszana, możesz umieścić **AllowPartiallyTrustedCallersAttribute** atrybutu w zakresie zestaw wspólny Biblioteka. Ten atrybut umożliwia bibliotek do wywołania z częściowo zaufanego kodu zarządzanego.  
+- Aby wyłączyć automatyczne **LinkDemand** i zapobiec zgłaszaniu wyjątku, można umieścić atrybut **AllowPartiallyTrustedCallersAttribute** w zakresie zestawu biblioteki udostępnionej. Ten atrybut umożliwia wywoływanie bibliotek z częściowo zaufanego kodu zarządzanego.  
   
-- Częściowo zaufany kod, który uzyskuje dostęp do biblioteki, z tym atrybutem jest nadal podlega procesowi dodatkowe ograniczenia zdefiniowane przez <xref:System.AppDomain>.  
+- Częściowo zaufany kod, który ma przyznane dostęp do biblioteki z tym atrybutem nadal podlega dalszym ograniczeniom zdefiniowanym <xref:System.AppDomain>przez.  
   
-- Nie istnieje sposób programistyczny dla częściowo zaufanego kodu w celu wywołania biblioteki, która nie ma **AllowPartiallyTrustedCallersAttribute** atrybutu.  
+- Nie istnieje programistyczny sposób, aby częściowo zaufany kod wywoływał bibliotekę, która nie ma atrybutu **AllowPartiallyTrustedCallersAttribute** .  
   
- Bibliotek, które są prywatne z określoną aplikacją nie wymagają silnej nazwy lub **AllowPartiallyTrustedCallersAttribute** atrybutu i nie może być przywoływany przez potencjalnie złośliwy kod poza aplikacją. Taki kod jest chronione przed zamierzone lub przypadkowe nadużycie przez częściowo zaufany kod przenośny bez deweloper musi wykonywać żadnych dodatkowych czynności.  
+ Biblioteki, które są prywatne dla określonej aplikacji, nie wymagają silnej nazwy lub atrybutu **AllowPartiallyTrustedCallersAttribute** i nie mogą odwoływać się do potencjalnie złośliwego kodu poza aplikacją. Taki kod jest chroniony przed zamierzonym lub przypadkowym nadużyciem przez częściowo zaufany kod mobilny bez konieczności wykonywania dodatkowych czynności przez dewelopera.  
   
- Należy rozważyć jawne włączenie użycia przez częściowo zaufany kod dla następujących typów kodu:  
+ Należy rozważyć jawne włączenie korzystania przez częściowo zaufany kod dla następujących typów kodu:  
   
-- Kod, który był testowany przerwami dla luki w zabezpieczeniach i jest zgodne z wytycznymi opisany w [Secure wytycznych kodowania](../../../docs/standard/security/secure-coding-guidelines.md).  
+- Kod, który został pracujemy testowany pod kątem luk w zabezpieczeniach i jest zgodny z wytycznymi opisanymi w temacie [zasady bezpiecznego kodowania](../../standard/security/secure-coding-guidelines.md).  
   
-- Bibliotek o silnej nazwie do kodu, które są opracowane specjalnie dla scenariuszy częściowo zaufany.  
+- Biblioteki kodu o silnej nazwie, które są przeznaczone dla częściowo zaufanych scenariuszy.  
   
-- Wszystkie składniki (czy częściowo lub całkowicie zaufanych) podpisany silną nazwą, która zostanie wywołana przez kod, który jest pobierany z Internetu.  
+- Wszystkie składniki (częściowo lub w pełni zaufane) podpisane przy użyciu silnej nazwy, które będą wywoływane przez kod pobrany z Internetu.  
   
 > [!NOTE]
->  Niektóre klasy w bibliotece klas programu .NET Framework nie posiadają **AllowPartiallyTrustedCallersAttribute** atrybutu i nie może być wywoływany przez częściowo zaufany kod.  
+> Niektóre klasy w bibliotece klas .NET Framework nie mają atrybutu **AllowPartiallyTrustedCallersAttribute** i nie mogą być wywoływane przez częściowo zaufany kod.  
   
 ## <a name="see-also"></a>Zobacz także
 

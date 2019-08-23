@@ -2,43 +2,43 @@
 title: 'Instrukcje: eksportowanie metadanych ze skompilowanego kodu usługi za pomocą programu Svcutil.exe'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 40c684cbc1b14bf14d3ca23cbc044020e36b85f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b8ddbaf896ee4c6ea8b6f8e8ce7d0ecef28140ea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650233"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932571"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Instrukcje: eksportowanie metadanych ze skompilowanego kodu usługi za pomocą programu Svcutil.exe
-Svcutil.exe można wyeksportować metadane dotyczące usług, kontrakty i typów danych w skompilowanych zestawach w następujący sposób:  
+Svcutil. exe może eksportować metadane usług, kontraktów i typów danych w skompilowanych zestawach w następujący sposób:  
   
-- Aby wyeksportować metadane dla wszystkich skompilowany kontraktów usług zbiór zestawów przy użyciu Svcutil.exe, określ zestawy jako parametry wejściowe. Jest to zachowanie domyślne.  
+- Aby wyeksportować metadane dla wszystkich skompilowanych kontraktów usług dla zestawu zestawów przy użyciu Svcutil. exe, określ zestawy jako parametry wejściowe. Jest to zachowanie domyślne.  
   
-- Aby wyeksportować metadane usługi skompilowanych przy użyciu Svcutil.exe, należy określić zestaw usług lub zestawów jako parametry wejściowe. Należy użyć `/serviceName` opcję, aby wskazać nazwę konfiguracji usługi, którą chcesz wyeksportować. Svcutil.exe automatycznie ładuje plik konfiguracji dla określonego zestawu wykonywalnego.  
+- Aby wyeksportować metadane dla skompilowanej usługi przy użyciu programu Svcutil. exe, określ zestaw usług lub zestawy jako parametry wejściowe. Należy użyć `/serviceName` opcji, aby wskazać nazwę konfiguracji usługi, która ma zostać wyeksportowana. Svcutil. exe automatycznie ładuje plik konfiguracyjny dla określonego zestawu wykonywalnego.  
   
-- Aby wyeksportować wszystkie typy kontraktu danych w obrębie zbioru zestawów, należy użyć `/dataContractOnly` opcji.  
+- Aby wyeksportować wszystkie typy kontraktów danych w zestawie zestawów, użyj `/dataContractOnly` opcji.  
   
 > [!NOTE]
->  Użyj `/reference` możliwość określenia ścieżki do plików do żadnych zestawów zależnych.  
+> `/reference` Użyj opcji, aby określić ścieżki do wszystkich zestawów zależnych.  
   
-### <a name="to-export-metadata-for-compiled-service-contracts"></a>Aby wyeksportować metadane dla skompilowanych kontraktów usług  
+### <a name="to-export-metadata-for-compiled-service-contracts"></a>Aby wyeksportować metadane dla skompilowanych kontraktów usługi  
   
-1. Kompiluj swoje implementacji kontraktu usługi do co najmniej jeden libraries.1 klasy  
+1. Kompiluj implementacje kontraktu usługi do co najmniej jednej biblioteki klas. 1  
   
-2. Uruchom Svcutil.exe skompilowanych zestawów.  
+2. Uruchom Svcutil. exe na skompilowanych zestawach.  
   
     > [!NOTE]
-    >  Może być konieczne użycie `/reference` przełącznik, aby określić ścieżkę pliku, do wszelkich zestawów zależnych.  
+    > Może być konieczne użycie przełącznika, `/reference` aby określić ścieżkę pliku do wszystkich zestawów zależnych.  
   
     ```  
     svcutil.exe Contracts.dll  
     ```  
   
-### <a name="to-export-metadata-for-a-compiled-service"></a>Aby wyeksportować metadane dla skompilowanych usługi  
+### <a name="to-export-metadata-for-a-compiled-service"></a>Aby wyeksportować metadane dla skompilowanej usługi  
   
-1. Skompiluj implementacji usługi do zestawu pliku wykonywalnego.  
+1. Kompiluj implementację usługi do zestawu wykonywalnego.  
   
-2. Utwórz plik konfiguracji dla Twojego pliku wykonywalnego usługi i Dodaj konfigurację usługi.  
+2. Utwórz plik konfiguracji dla pliku wykonywalnego usługi i Dodaj konfigurację usługi.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -53,10 +53,10 @@ Svcutil.exe można wyeksportować metadane dotyczące usług, kontrakty i typów
     </configuration>  
     ```  
   
-3. Uruchom Svcutil.exe w pliku wykonywalnego usługi skompilowanych przy użyciu `/serviceName` przełącznika, aby określić nazwę konfiguracji usługi.  
+3. Uruchom program Svcutil. exe w skompilowanym pliku wykonywalnym `/serviceName` usługi przy użyciu przełącznika, aby określić nazwę konfiguracji usługi.  
   
     > [!NOTE]
-    >  Może być konieczne użycie `/reference` przełącznik, aby określić ścieżkę pliku, do wszelkich zestawów zależnych.  
+    > Może być konieczne użycie przełącznika, `/reference` aby określić ścieżkę pliku do wszystkich zestawów zależnych.  
   
     ```  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
@@ -64,19 +64,19 @@ Svcutil.exe można wyeksportować metadane dotyczące usług, kontrakty i typów
   
 ### <a name="to-export-metadata-for-compiled-data-contracts"></a>Aby wyeksportować metadane dla skompilowanych kontraktów danych  
   
-1. Skompiluj swoje implementacji kontraktu danych do co najmniej jedną bibliotekę klas.  
+1. Kompiluj implementacje kontraktu danych do co najmniej jednej biblioteki klas.  
   
-2. Uruchom Svcutil.exe w skompilowanych zestawach, za pomocą `/dataContract` przełącznika dla kontraktów danych powinny być generowane tylko metadane.  
+2. Uruchom program Svcutil. exe na skompilowanych zestawach `/dataContract` przy użyciu przełącznika, aby określić, że mają zostać wygenerowane tylko metadane dla kontraktów danych.  
   
     > [!NOTE]
-    >  Może być konieczne użycie `/reference` przełącznik, aby określić ścieżkę pliku, do wszelkich zestawów zależnych.  
+    > Może być konieczne użycie przełącznika, `/reference` aby określić ścieżkę pliku do wszystkich zestawów zależnych.  
   
     ```  
     svcutil.exe /dataContractOnly Contracts.dll  
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak można wygenerować metadane dotyczące konfiguracji i implementacji usługi simple.  
+ W poniższym przykładzie pokazano, jak generować metadane dla prostej implementacji usługi i konfiguracji.  
   
  Aby wyeksportować metadane dla kontraktu usługi.  
   
@@ -84,7 +84,7 @@ Svcutil.exe można wyeksportować metadane dotyczące usług, kontrakty i typów
 svcutil.exe Contracts.dll  
 ```  
   
- Aby wyeksportować metadane dla kontraktów danych.  
+ Eksportowanie metadanych dla kontraktów danych.  
   
 ```  
 svcutil.exe /dataContractOnly Contracts.dll  
@@ -96,7 +96,7 @@ svcutil.exe /dataContractOnly Contracts.dll
 svcutil.exe /serviceName:MyService Service.exe /reference:<path>/Contracts.dll  
 ```  
   
- `<path>` Jest ścieżką do Contracts.dll.  
+ `<path>` Jest to ścieżka do pliku Contracts. dll.  
   
 ```  
 // The following service contract and data contracts are compiled into   

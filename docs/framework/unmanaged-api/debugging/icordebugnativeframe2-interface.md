@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc664d308d4db3e97597d785eda159e32255fa54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 638ce7933ededf2ff7b03b1c5aed7f6bdbfebc6c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987847"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912791"
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2 — Interfejs
 Dostarcza metody testowania relacji podrzędnych i nadrzędnych ramek.  
@@ -30,24 +30,24 @@ Dostarcza metody testowania relacji podrzędnych i nadrzędnych ramek.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[IsChild, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|Określa, czy bieżące ramce ramki podrzędnej.|  
-|[IsMatchingParentFrame, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|Określa, czy ramki o określonym nadrzędny bieżącej ramki.|  
-|[GetStackParameterSize, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|Zwraca całkowity rozmiar wszystkich parametrów na stosie na x86 systemów operacyjnych.|  
+|[IsChild, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|Określa, czy bieżąca ramka jest ramką podrzędną.|  
+|[IsMatchingParentFrame, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|Określa, czy określona ramka jest elementem nadrzędnym bieżącej ramki.|  
+|[GetStackParameterSize, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|Zwraca skumulowany rozmiar parametrów na stosie w systemach operacyjnych x86.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten interfejs rozszerza logicznie interfejsu "icordebugnativeframe —".  
+ Ten interfejs logicznie rozszerza interfejs "ICorDebugNativeFrame".  
   
 > [!NOTE]
->  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
+> Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

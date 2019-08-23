@@ -13,40 +13,40 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 281cfa6507d293658e436a95a5ded0174154a13c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 080d05a27b9e0b6ad4ff52d67ef8d9209dc1c697
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674951"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927955"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Instrukcje: Odwołanie do zestawu o silnej nazwie
-Proces odwołania do typów lub zasoby znajdujące się zestawu z silną nazwą jest zazwyczaj niewidoczny. Istnieje możliwość odwołania w czasie kompilacji (wczesne powiązania) lub w czasie wykonywania.  
+Proces odwoływania się do typów lub zasobów w zestawie o silnej nazwie jest zwykle niewidoczny. Odwołanie można wykonać w czasie kompilacji (wczesne wiązanie) lub w czasie wykonywania.  
   
- Odwołanie kompilacji występuje, gdy w kompilatorze wskazujesz, że zestaw jawnie odwoływać się do innego zestawu. Gdy używasz odwołujące się do kompilacji, kompilator automatycznie pobiera klucz publiczny zestawu o silnej nazwie docelowych i umieszcza je w zestawu kompilowanego odwołanie do zestawu.  
+ Odwołanie w czasie kompilacji odbywa się po wskazaniu kompilatora, który zestaw jawnie odwołuje się do innego zestawu. W przypadku korzystania z odwołania w czasie kompilacji kompilator automatycznie pobiera klucz publiczny do określonego zestawu o silnej nazwie i umieszcza go w odwołaniu do zestawu, który jest kompilowany.  
   
 > [!NOTE]
->  Zestaw o silnej nazwie można używać tylko typów od innych zestawów o silnych nazwach. W przeciwnym razie zabezpieczeń zestawu o silnej nazwie może być narażone na ataki.  
+> Zestaw o silnej nazwie może używać tylko typów z innych zestawów o silnych nazwach. W przeciwnym razie zabezpieczenia zestawu o silnej nazwie byłyby naruszone.  
   
-### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>Kompilacji odwołać się do zestawu o silnej nazwie  
+### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>Aby wykonać odwołanie do zestawu o silnej nazwie w czasie kompilacji  
   
 1. W wierszu polecenia wpisz następujące polecenie:  
   
-     \<*polecenie kompilatora*> **/reference:**\<*nazwy zestawu*>  
+     \<*Kompilator polecenia*>  **/Reference:** \<*Nazwa zestawu*>  
   
-     W tym poleceniu *polecenia kompilatora* polecenia kompilatora dla języka, którego używasz, i *nazwy zestawu* to nazwa zestawu o silnej nazwie, do którego nastąpiło odwołanie. Umożliwia także inne opcje kompilatora, takich jak **/t** opcją w przypadku tworzenia zestawu biblioteki.  
+     W tym poleceniu *kompilator* jest poleceniem kompilatora dla używanego języka, a *Nazwa zestawu* to nazwa zestawu o silnej nazwie. Można również użyć innych opcji kompilatora, takich jak opcja **/t: Library** do tworzenia zestawu biblioteki.  
   
- Poniższy przykład tworzy zestaw o nazwie `myAssembly.dll` odwołuje się zestaw o silnej nazwie, o nazwie `myLibAssembly.dll` moduł kodu o nazwie `myAssembly.cs`.  
+ Poniższy przykład tworzy zestaw o nazwie `myAssembly.dll` , który odwołuje się do zestawu o silnej nazwie wywołanego `myLibAssembly.dll` z `myAssembly.cs`modułu kodu o nazwie.  
   
 ```  
 csc /t:library myAssembly.cs /reference:myLibAssembly.dll  
 ```  
   
-### <a name="to-make-a-run-time-reference-to-a-strong-named-assembly"></a>Zapewnienie środowiska wykonawczego odwołanie do zestawu z silną nazwą  
+### <a name="to-make-a-run-time-reference-to-a-strong-named-assembly"></a>Aby wprowadzić odwołanie w czasie wykonywania do zestawu o silnej nazwie  
   
-1. Po ustawieniu środowiska wykonawczego odwołanie do zestawu z silną nazwą (na przykład za pomocą <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> lub <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> metoda), należy użyć nazwy wyświetlania przywoływanego zestawu o silnej nazwie. Składnia Nazwa wyświetlana jest następująca:  
+1. Podczas wykonywania odwołania do zestawu o silnej nazwie (na przykład przy użyciu <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metody lub <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> ), należy użyć nazwy wyświetlanej zestawu o silnej nazwie. Składnia nazwy wyświetlanej jest następująca:  
   
-     \<*Nazwa zestawu*>**,** \< *numer wersji*>**,** \< *kultury*  > **,** \< *token klucza publicznego*>  
+     \<*Nazwa* zestawu,\< *numer wersji,* kultura, token klucza publicznego \<> \<>>>  
   
      Na przykład:  
   
@@ -54,21 +54,21 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
     myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
     ```  
   
-     W tym przykładzie `PublicKeyToken` jest szesnastkowe formą token klucza publicznego. Jeśli nie istnieje wartość kultury, należy użyć `Culture=neutral`.  
+     W tym przykładzie `PublicKeyToken` jest to szesnastkowa postać tokenu klucza publicznego. Jeśli nie ma żadnej wartości kulturowej, `Culture=neutral`Użyj.  
   
- Poniższy przykład kodu pokazuje, jak dzięki tym informacjom o <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metody.  
+ Poniższy przykład kodu pokazuje, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> jak używać tych informacji przy użyciu metody.  
   
  [!code-cpp[Assembly.Load1#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Assembly.Load1/CPP/load2.cpp#3)]
  [!code-csharp[Assembly.Load1#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.Load1/CS/load2.cs#3)]
  [!code-vb[Assembly.Load1#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.Load1/VB/load2.vb#3)]  
   
- Można wydrukować szesnastkowej klucz publiczny i token klucza publicznego dla określonego zestawu przy użyciu następujących [silnych nazw (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) polecenia:  
+ Można wydrukować format szesnastkowy klucza publicznego i tokenu klucza publicznego dla określonego zestawu za pomocą następującego polecenia [silnej nazwy (SN. exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) :  
   
- **SN - Tp \<**  *zestawu* **>**  
+ **SN — zestaw \< TP** **>**  
   
- Jeśli masz plik klucza publicznego, należy użyć następującego polecenia (należy zauważyć różnicę w przypadku opcji wiersza polecenia):  
+ Jeśli masz plik klucza publicznego, możesz użyć poniższego polecenia (należy zwrócić uwagę na różnice w przypadku opcji wiersza polecenia):  
   
- **SN - tp \<**  *pliku klucza publicznego* **>**  
+ **SN-TP \< —** *plik klucza publicznego* **>**  
   
 ## <a name="see-also"></a>Zobacz także
 

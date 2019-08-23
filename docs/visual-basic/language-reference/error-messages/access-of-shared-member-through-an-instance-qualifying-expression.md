@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-ms.openlocfilehash: 311f4c025072162e0cfb6b87587f8602d33fcd19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3174d463744303e8c90ed0b2e1a4d86ed08fbcfb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646867"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947697"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Dostęp członka udostępnionego, przez wystąpienie; wyrażenie kwalifikujące nie zostanie oszacowane
-Zmienna wystąpienia klasy lub struktury jest używana, aby uzyskać dostęp do `Shared` zmiennej, właściwość, procedura lub zdarzenia, zdefiniowany w tej klasy lub struktury. To ostrzeżenie może również wystąpić, jeśli zmienną instance umożliwia dostęp do niejawnie udostępnionego elementu członkowskiego klasy lub struktury, takiej jak stała wyliczenia, lub zagnieżdżona klasa lub Struktura.  
+Zmienna wystąpienia klasy lub struktury jest używana w celu uzyskania dostępu `Shared` do zmiennej, właściwości, procedury lub zdarzenia zdefiniowanego w tej klasie lub strukturze. To ostrzeżenie może również wystąpić, jeśli zmienna wystąpienia jest używana w celu uzyskania dostępu do niejawnie udostępnionej składowej klasy lub struktury, takiej jak stała lub Wyliczenie lub zagnieżdżona Klasa lub struktura.  
   
- Udostępnianie członka ma na celu tworzenie tylko jednej kopii tego elementu członkowskiego i udostępnić pojedynczej kopii każdego wystąpienia klasy lub struktury, w którym jest zdeklarowana. Jest ona zgodna z dostępu do tego celu `Shared` elementu członkowskiego za pośrednictwem nazwy klasy lub struktury, a nie za pomocą zmienna, która zawiera poszczególne wystąpienia tej klasy lub struktury.  
+ Celem udostępniania elementu członkowskiego jest utworzenie tylko jednej kopii tego elementu członkowskiego i udostępnienie tej pojedynczej kopii każdemu wystąpieniu klasy lub struktury, w której jest zadeklarowana. Jest to zgodne z tym celem w celu uzyskania `Shared` dostępu do członka za pomocą nazwy jego klasy lub struktury, a nie za pomocą zmiennej, która przechowuje pojedyncze wystąpienie tej klasy lub struktury.  
   
- Uzyskiwanie dostępu do `Shared` elementu członkowskiego przez zmienną instance, może uczynić kod trudniejszy do zrozumienia przez fakt, że składowa jest przesłaniania `Shared`. Ponadto, jeśli taki dostęp jest częścią wyrażenia wykonująca innych działań, takich jak `Function` procedury, która zwraca wystąpienie do udostępnionej składowej, Visual Basic pomija wyrażenie i innych akcji, w przeciwnym razie wykona.  
+ Uzyskiwanie dostępu do `Shared` elementuczłonkowskiegozapomocązmiennejwystąpieniamożeutrudnićzrozumieniekoduprzezzaciemnieniefaktu,żeelementczłonkowskijest.`Shared` Ponadto, jeśli taki dostęp jest częścią wyrażenia, które wykonuje inne czynności, takie jak `Function` procedura zwracająca wystąpienie udostępnionego elementu członkowskiego, Visual Basic pomija wyrażenie i wszelkie inne akcje, które w przeciwnym razie byłyby wykonywane.  
   
- Aby uzyskać więcej informacji i obejrzeć przykład, zobacz [Shared](../../../visual-basic/language-reference/modifiers/shared.md).  
+ Aby uzyskać więcej informacji i zapoznać się z przykładem, zobacz [Shared](../../../visual-basic/language-reference/modifiers/shared.md).  
   
- Domyślnie ta wiadomość jest ostrzeżenie. Aby uzyskać więcej informacji na temat ukrywania ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Domyślnie ta wiadomość jest ostrzeżenie. Aby uzyskać więcej informacji na temat ukrywania ostrzeżeń lub leczenia ostrzeżeń jako błędów, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identyfikator błędu:** BC42025  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Użyj nazwy klasy lub struktury, która definiuje `Shared` członka do niego dostęp, jak pokazano w poniższym przykładzie.  
+- Użyj nazwy klasy lub struktury, która definiuje `Shared` element członkowski, aby uzyskać do niego dostęp, jak pokazano w poniższym przykładzie.  
   
 ```vb  
 Public Class testClass  
@@ -53,7 +53,7 @@ End Module
 ```  
   
 > [!NOTE]
->  Być alert dotyczący skutków zakresu, jeśli dwa elementy programowania mają taką samą nazwę. W poprzednim przykładzie, jeśli zadeklarować wystąpienia przy użyciu `Dim testClass as testClass = Nothing`, kompilator traktuje wywołanie `testClass.sayHello()` po wystąpieniu dostępu metody przy użyciu nazwy klasy i bez ostrzeżenia.  
+> Alert dotyczący efektów zakresu, gdy dwa elementy programistyczne mają taką samą nazwę. W poprzednim przykładzie, Jeśli zadeklarujesz wystąpienie przy użyciu `Dim testClass as testClass = Nothing`, kompilator traktuje `testClass.sayHello()` wywołanie jako dostęp metody za pomocą nazwy klasy i nie występuje ostrzeżenie.  
   
 ## <a name="see-also"></a>Zobacz także
 

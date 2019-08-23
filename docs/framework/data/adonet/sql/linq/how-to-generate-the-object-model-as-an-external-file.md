@@ -2,28 +2,28 @@
 title: 'Instrukcje: Generowanie modelu obiektu jako zewnętrznego pliku'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 828e92903447b5c7cd3d7d27ed72bfe61d0dc6a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7451dfbaf85c1cbd4635ae0cce1219853a2b01a3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743293"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911938"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>Instrukcje: Generowanie modelu obiektu jako zewnętrznego pliku
-Jako alternatywę do mapowania na atrybutach można wygenerować modelu obiektu jako zewnętrznego pliku XML za pomocą narzędzia wiersza polecenia SQLMetal. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Za pomocą plik mapowania XML, zmniejszasz zaśmiecania w kodzie. Można również zmienić zachowanie przez zmodyfikowanie pliku zewnętrznego bez konieczności ponownego kompilowania plików binarnych aplikacji. Aby uzyskać więcej informacji, zobacz [mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+Alternatywą dla mapowania opartego na atrybutach jest generowanie modelu obiektu jako zewnętrznego pliku XML przy użyciu narzędzia wiersza polecenia SQLMetal. Aby uzyskać więcej informacji, zobacz [SQLMetal. exe (Narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Przy użyciu zewnętrznego pliku mapowania XML można zmniejszyć ilość bałaganu w kodzie. Możesz również zmienić zachowanie, modyfikując plik zewnętrzny bez ponownego kompilowania plików binarnych aplikacji. Aby uzyskać więcej informacji, zobacz [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 > [!NOTE]
->  Object Relational Designer nie obsługuje generowania pliku mapowanie zewnętrzne.  
+> Object Relational Designer nie obsługuje generowania pliku mapowania zewnętrznego.  
   
 ## <a name="example"></a>Przykład  
- Następujące polecenie generuje plik mapowania zewnętrznych z przykładowej bazy danych Northwind.  
+ Następujące polecenie generuje zewnętrzny plik mapowania z przykładowej bazy danych Northwind.  
   
 ```  
 sqlmetal /server:myserver /database:northwind /map:externalfile.xml  
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy fragment z pliku mapowanie zewnętrzne zawiera mapowania dla tabeli Klienci w bazie danych Northwind. Ten fragment został wygenerowany przez wykonanie SQLMetal z **/map** opcji.  
+ Poniższy fragment z zewnętrznego pliku mapowania przedstawia Mapowanie tabeli Customers w przykładowej bazie danych Northwind. Ten fragment został wygenerowany przez wykonanie SQLMetal z opcją **/map** .  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -52,4 +52,4 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 
 - [Tworzenie modelu obiektu](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Instrukcje: Generowanie modelu obiektu w języku Visual Basic lubC#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [Instrukcje: Generuj model obiektów w Visual Basic lubC#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

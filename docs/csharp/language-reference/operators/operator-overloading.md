@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 93e4845cab6735e74c711d720beeb06c8883a44b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 5fcf9c774592c0fbcdcca951ef99c1a2efa6f05e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566880"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922294"
 ---
 # <a name="operator-overloading-c-reference"></a>Przeciążanie operatora (C# odwołanie)
 

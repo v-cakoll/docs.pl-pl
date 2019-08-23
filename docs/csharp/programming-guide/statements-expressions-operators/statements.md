@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 4c3421f7165a0b1a3d1c3678fe28334fd8632472
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0ec741d085ca52d52999d2e10cf5f687cc885219
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588629"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921792"
 ---
 # <a name="statements-c-programming-guide"></a>Instrukcje (Przewodnik programowania w języku C#)
 Akcje podejmowane przez program są wyrażone w instrukcjach. Typowe akcje obejmują deklarowanie zmiennych, przypisywanie wartości, wywoływanie metod, zapętlenie za pomocą kolekcji i rozgałęzianie do jednego lub innego bloku kodu, w zależności od danego warunku. Kolejność, w której instrukcje są wykonywane w programie, nazywa się przepływem sterowania lub przepływu wykonania. Przepływ sterowania może się różnić przy każdym uruchomieniu programu, w zależności od tego, jak program reaguje na dane wejściowe w czasie wykonywania.  
@@ -81,17 +81,12 @@ W poniższych przykładach przedstawiono dwa zastosowania dla pustej instrukcji:
   
  [!code-csharp[csProgGuideStatements#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#22)]  
   
-## <a name="related-sections"></a>Sekcje pokrewne  
-  
-- [Słowa kluczowe instrukcji](../../language-reference/keywords/statement-keywords.md)  
-  
-- [Wyrażenia](./expressions.md)  
-  
-- [Operatory](./operators.md)  
-  
-## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+Aby uzyskać więcej informacji, zobacz sekcję [instrukcje](~/_csharplang/spec/statements.md) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
+- [Słowa kluczowe instrukcji](../../language-reference/keywords/statement-keywords.md)  
+- [Wyrażenia](expressions.md)  

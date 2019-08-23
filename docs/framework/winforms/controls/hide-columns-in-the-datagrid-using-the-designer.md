@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column hiding
 - data [Windows Forms], displaying
 ms.assetid: a81c38e6-2527-426a-bcb1-be691403be04
-ms.openlocfilehash: d502a89913e108254848151e9058ac6ae83a9638
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 35aa1cdeef919d4267cb27da79f183c4c52aefa2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039778"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916380"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Instrukcje: ukrywanie kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Czasami chcesz wyświetlić tylko niektóre kolumny, które są dostępne w kontrolce Windows Forms <xref:System.Windows.Forms.DataGridView> . Na przykład możesz chcieć wyświetlić kolumnę wynagrodzenia pracownika dla użytkowników z poświadczeniami zarządzania, jednocześnie ukrywając ją od innych użytkowników. Alternatywnie można powiązać formant ze źródłem danych zawierającym wiele kolumn, tylko niektóre elementy, które mają być wyświetlane. W takim przypadku zwykle usuniesz kolumny, które nie są wyświetlane, zamiast ukrywania. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie i usuwanie kolumn w kontrolce DataGridView Windows Forms przy użyciu narzędzia](add-and-remove-columns-in-the-datagrid-using-the-designer.md)Projektant.
@@ -28,7 +28,7 @@ Czasami chcesz wyświetlić tylko niektóre kolumny, które są dostępne w kont
 3. W siatce **Właściwości kolumny** Ustaw <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> właściwość na `false`.
 
     > [!NOTE]
-    >  Możesz również ukryć kolumnę podczas dodawania jej, czyszcząc pole wyboru **widoczny** w oknie dialogowym **Dodaj kolumnę** .
+    > Możesz również ukryć kolumnę podczas dodawania jej, czyszcząc pole wyboru **widoczny** w oknie dialogowym **Dodaj kolumnę** .
 
 ## <a name="see-also"></a>Zobacz także
 

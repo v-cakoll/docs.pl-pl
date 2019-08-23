@@ -7,40 +7,40 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: fa6486db483c004430e0e8ed75c75a6b25c05d6b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 561839138baf448db881e3bd72777bda7b7c65bb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613598"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941254"
 ---
 # <a name="endpoint-creation-overview"></a>Przegląd tworzenia punktów końcowych
-Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez *punktów końcowych* usługi. Punkty końcowe zapewniają klientom dostęp do funkcji, która oferuje usługi WCF. W tej sekcji opisuje strukturę punktu końcowego i opisano sposób definiowania punktu końcowego w konfiguracji i w kodzie.  
+Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się za pomocą *punktów końcowych* usługi. Punkty końcowe zapewniają klientom dostęp do funkcji oferowanych przez usługę WCF. W tej sekcji opisano strukturę punktu końcowego i przedstawiono sposób definiowania punktu końcowego w konfiguracji i w kodzie.  
   
 ## <a name="the-structure-of-an-endpoint"></a>Struktura punktu końcowego  
- Każdy punkt końcowy zawiera adres który wskazuje, gdzie można znaleźć punktu końcowego, powiązanie, które określa, jak klient może komunikować się z punktem końcowym i kontraktu, który identyfikuje dostępne metody.  
+ Każdy punkt końcowy zawiera adres wskazujący, gdzie znaleźć punkt końcowy, powiązanie, które określa, jak klient może komunikować się z punktem końcowym, oraz umowę, która identyfikuje dostępne metody.  
   
-- **Adres**. Adres jednoznacznie identyfikuje punkt końcowy i informuje o potencjalnych klientów, w którym znajduje się usługa. Jest reprezentowana w modelu obiektu programu WCF za <xref:System.ServiceModel.EndpointAddress> adresu, który zawiera jednolity identyfikator zasobów (URI) i właściwości adresu, które obejmują tożsamość, niektóre elementy sieci Web Services Description Language (WSDL) oraz zbiór opcjonalne nagłówki. Opcjonalne nagłówki zawierają dodatkowe szczegółowe informacje adresowania, aby zidentyfikować lub nawiązać kontakt z punktem końcowym. Aby uzyskać więcej informacji, zobacz [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+- **Adres**. Adres jednoznacznie identyfikuje punkt końcowy i informuje potencjalnych klientów, w których znajduje się usługa. Jest reprezentowana w modelu obiektów WCF przez <xref:System.ServiceModel.EndpointAddress> adres, który zawiera Uniform Resource Identifier (URI) i właściwości adresu, które obejmują tożsamość, niektóre elementy Web Services Description Language (WSDL) i kolekcję opcjonalną nagłówka. Opcjonalne nagłówki zawierają dodatkowe informacje o adresach, które identyfikują lub współpracują z punktem końcowym. Aby uzyskać więcej informacji, zobacz [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
-- **Powiązanie**. Powiązanie Określa, jak komunikować się z punktem końcowym. Powiązanie Określa, jak punkt końcowy komunikuje się z świat, w tym protokół transportu (na przykład, TCP lub HTTP), które kodowanie do użycia dla wiadomości (na przykład tekst lub dane binarne), a wymagania zabezpieczeń, które są niezbędne (dla przykład Secure Sockets Layer [SSL] lub zabezpieczeń wiadomości protokołu SOAP). Aby uzyskać więcej informacji, zobacz [przy użyciu powiązania do konfigurowania usług i klientów](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+- **Powiązanie**. Powiązanie określa sposób komunikacji z punktem końcowym. Powiązanie określa, w jaki sposób punkt końcowy komunikuje się z całym świecie, w tym który protokół transportowy do użycia (na przykład TCP lub HTTP), którego kodowanie ma być używane dla komunikatów (na przykład tekst lub binarny), a wymagania dotyczące zabezpieczeń są niezbędne (dla przykład SSL [SSL] lub zabezpieczenia komunikatów SOAP). Aby uzyskać więcej informacji, zobacz [using bindings to configure Services and clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
-- **Kontrakt usługi**. Kontrakt usługi opisano, jakie funkcje uwidacznia punkt końcowy, do klienta. Kontrakt określa operacje, które klient może wywołać, formularz wiadomości i typ parametrów wejściowych lub dane wymagane do wywołania operacji i rodzaju przetwarzania lub komunikat odpowiedzi, których można oczekiwać, że klient. Podstawowe wiadomości programu exchange wzorców (MEPs) odpowiadają trzy podstawowe typy kontraktów: datagramów (jednokierunkowe), żądanie/nietypizowana odpowiedź i dupleks (dwukierunkowe). Kontrakt usługi można również używać kontraktów danych i komunikatów wymaga konkretnych typów danych i formaty wiadomości, podczas którego uzyskiwany jest dostęp. Aby uzyskać więcej informacji na temat Definiowanie kontraktu usługi, zobacz [projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md). Należy pamiętać o tym, czy klient może być wymagane do implementowania kontraktu zdefiniowane przez usługę, o nazwie kontrakt wywołania zwrotnego do odbierania komunikatów z usługi w MEP dwukierunkowego. Aby uzyskać więcej informacji, zobacz [usługi dwukierunkowe](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+- **Kontrakt usługi**. Kontrakt usługi zawiera opis funkcji, które punkt końcowy uwidacznia dla klienta. Kontrakt określa operacje, które klient może wywołać, formę komunikatu oraz typ parametrów wejściowych lub danych wymaganych do wywołania operacji oraz rodzaj przetwarzania lub komunikatów odpowiedzi, których może oczekiwać klient. Trzy podstawowe typy kontraktów odnoszą się do podstawowych wzorców wymiany komunikatów (MEPs): datagram (jednokierunkowe), żądanie/odpowiedź i dupleks (dwukierunkowe). Kontrakt usługi może również korzystać z kontraktów danych i komunikatów w celu wymagania określonych typów danych i formatów komunikatów podczas uzyskiwania dostępu do nich. Aby uzyskać więcej informacji na temat sposobu definiowania kontraktu usługi, zobacz [Projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md). Należy pamiętać, że klient może być również wymagany do wdrożenia kontraktu zdefiniowanego przez usługę, zwanego kontraktem wywołania zwrotnego, aby odbierać komunikaty z usługi w trybie dupleksu unikatowy MEP. Aby uzyskać więcej informacji, zobacz [usługi dupleksowe](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
- Obowiązkowo przy użyciu kodu lub deklaratywne przy użyciu konfiguracji można określić punktu końcowego usługi. Jeśli nie określono żadnych punktów końcowych następnie środowisko wykonawcze zapewnia domyślne punkty końcowe, dodając jeden domyślny punkt końcowy dla każdego adresu podstawowego dla każdej umowy serwisowej implementowane przez usługę. Definiowanie punktów końcowych w kodzie zazwyczaj nie jest praktyczne ponieważ powiązań i adresów dla wdrożonej usługi są zazwyczaj inne niż używane, gdy usługa jest obecnie sporządzana. Ogólnie rzecz biorąc lepiej jest punkty końcowe usługi przy użyciu konfiguracji zamiast kodu. Zachowanie powiązania i adresowanie z kodu pozwala zmienić bez konieczności ponownego kompilowania i ponownego wdrażania aplikacji.  
+ Punkt końcowy usługi można określić samodzielnie za pomocą kodu lub deklaratywnie za pośrednictwem konfiguracji. Jeśli nie określono żadnych punktów końcowych, środowisko uruchomieniowe zapewnia domyślne punkty końcowe, dodając jeden domyślny punkt końcowy dla każdego adresu podstawowego dla każdego kontraktu usługi zaimplementowanego przez usługę. Definiowanie punktów końcowych w kodzie zazwyczaj nie jest praktyczne, ponieważ powiązania i adresy dla wdrożonej usługi są zwykle inne niż te używane podczas tworzenia usługi. Ogólnie rzecz biorąc, bardziej praktyczne jest zdefiniowanie punktów końcowych usługi przy użyciu konfiguracji zamiast kodu. Przechowywanie informacji o powiązaniach i adresowaniu poza kodem pozwala im zmieniać bez konieczności ponownego kompilowania i wdrażania aplikacji.  
   
 > [!NOTE]
->  Podczas dodawania punktu końcowego usługi, który wykonuje personifikacji, należy użyć jednej z <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> metody lub <xref:System.ServiceModel.Description.ContractDescription.GetContract%28System.Type%2CSystem.Type%29> metoda prawidłowo załadować umowy do nowej <xref:System.ServiceModel.Description.ServiceDescription> obiektu.  
+> Podczas dodawania punktu końcowego usługi, który wykonuje personifikację, należy użyć jednej z <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> metod <xref:System.ServiceModel.Description.ContractDescription.GetContract%28System.Type%2CSystem.Type%29> lub metody w celu poprawnego załadowania kontraktu do nowego <xref:System.ServiceModel.Description.ServiceDescription> obiektu.  
   
 ## <a name="defining-endpoints-in-code"></a>Definiowanie punktów końcowych w kodzie  
- Poniższy przykład ilustruje sposób określania punktu końcowego w kodzie za pomocą następujących czynności:  
+ Poniższy przykład ilustruje sposób określania punktu końcowego w kodzie przy użyciu następujących metod:  
   
-- Definiowanie kontraktu w celu `IEcho` typ usługi, który akceptuje nazwy i echa z odpowiedzią innego użytkownika "Hello \<name >!".  
+- Zdefiniuj kontrakt dla `IEcho` typu usługi, który akceptuje nazwę i echo kogoś z odpowiedzi "Hello \<Name >!".  
   
-- Implementowanie `Echo` usługi typu zdefiniowanego przez `IEcho` kontraktu.  
+- `IEcho` Implementowanie `Echo` usługi typu zdefiniowanej przez kontrakt.  
   
-- Określ adres punktu końcowego `http://localhost:8000/Echo` dla usługi.  
+- Określ adres `http://localhost:8000/Echo` punktu końcowego dla usługi.  
   
-- Konfigurowanie `Echo` usługi przy użyciu <xref:System.ServiceModel.WSHttpBinding> powiązania.  
+- `Echo` Skonfiguruj usługę <xref:System.ServiceModel.WSHttpBinding> przy użyciu powiązania.  
   
 ```csharp  
 Namespace Echo  
@@ -119,23 +119,23 @@ serviceHost.Open()
 ```  
   
 > [!NOTE]
->  Host usługi jest tworzona przy użyciu adres podstawowy, a następnie pozostałą część adresu, określany względem adresu podstawowego jest określone jako część punktu końcowego. Ten podział adres umożliwia wielu punktów końcowych zdefiniowanych w bardzo ułatwia usługi na hoście.  
+> Host usługi jest tworzony przy użyciu adresu podstawowego, a następnie pozostała część adresu względem adresu podstawowego jest określana jako część punktu końcowego. Takie partycjonowanie adresu pozwala na bardziej wygodne definiowanie wielu punktów końcowych dla usług na hoście.  
   
 > [!NOTE]
->  Właściwości <xref:System.ServiceModel.Description.ServiceDescription> w usłudze aplikacji nie mogą zostać zmodyfikowane subsequent do <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> metody <xref:System.ServiceModel.ServiceHostBase>. Niektóre elementy członkowskie, takie jak <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> właściwości i `AddServiceEndpoint` metod <xref:System.ServiceModel.ServiceHostBase> i <xref:System.ServiceModel.ServiceHost>, zgłosić wyjątek, jeśli zmodyfikowane poza tym punktem. Inne pozwala na ich modyfikować, ale wynik jest niezdefiniowany.  
+> Właściwości w aplikacji usługi nie mogą być modyfikowane po <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> metodzie <xref:System.ServiceModel.ServiceHostBase>. <xref:System.ServiceModel.Description.ServiceDescription> Niektóre elementy członkowskie, takie jak <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> Właściwość `AddServiceEndpoint` i metody w <xref:System.ServiceModel.ServiceHostBase> i <xref:System.ServiceModel.ServiceHost>, zgłaszają wyjątek, jeśli zostały zmodyfikowane po tym punkcie. Inne umożliwiają modyfikowanie ich, ale wynik jest niezdefiniowany.  
 >   
->  Podobnie, na komputerze klienckim <xref:System.ServiceModel.Description.ServiceEndpoint> wartości nie mogą zostać zmodyfikowane po wywołaniu <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> na <xref:System.ServiceModel.ChannelFactory>. <xref:System.ServiceModel.ChannelFactory.Credentials%2A> Właściwość zgłasza wyjątek, jeśli zmodyfikować ostatnie tego punktu. Inne wartości Opis klienta można zmodyfikować bez błędów, ale wynik jest niezdefiniowany.  
+>  Analogicznie, na kliencie <xref:System.ServiceModel.Description.ServiceEndpoint> wartości nie mogą być modyfikowane po <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> wywołaniu metody <xref:System.ServiceModel.ChannelFactory>. <xref:System.ServiceModel.ChannelFactory.Credentials%2A> Właściwość zgłasza wyjątek, jeśli został zmodyfikowany poza tym punktem. Inne wartości opisu klienta można modyfikować bez błędu, ale wynik jest niezdefiniowany.  
 >   
->  Czy usługi lub klienta, zalecane jest zmodyfikowanie opis przed wywołaniem <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>.  
+>  Niezależnie od tego, czy dla usługi lub klienta zaleca się zmodyfikowanie opisu przed wywołaniem <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>.  
   
 ## <a name="defining-endpoints-in-configuration"></a>Definiowanie punktów końcowych w konfiguracji  
- Podczas tworzenia aplikacji, często zachodzi potrzeba Odrocz decyzje przez administratora, który jest wdrożenie aplikacji. Na przykład często występuje będzie żadnej możliwość określenia, z wyprzedzeniem, jakie usługi, adresów (URI). Zamiast kodować adresu, jest bardziej pożądane, aby umożliwić administratorowi to zrobić po utworzeniu usługi. Ta elastyczność odbywa się za pośrednictwem konfiguracji. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md).  
+ Podczas tworzenia aplikacji często chcesz odroczyć decyzje administratora, który wdraża aplikację. Na przykład często nie ma możliwości znajomości informacji o adresie usługi (URI). Zamiast kodowania adresu, preferowane jest umożliwienie administratorowi wykonania tej czynności po utworzeniu usługi. Ta elastyczność jest realizowana przy użyciu konfiguracji. Aby uzyskać szczegółowe informacje, zobacz [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md).  
   
 > [!NOTE]
->  Użyj [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) z `/config:` *filename*`[,`*filename* `]` przejdź do Szybko twórz plików konfiguracyjnych.  
+> Użyj [Narzędzia metadanych ServiceModel (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) z przełącznikiem filename `/config:`nazwy*pliku* `]` ,`[,`aby szybko utworzyć pliki konfiguracyjne.  
   
-## <a name="using-default-endpoints"></a>Przy użyciu domyślnych punktów końcowych  
- Jeśli nie określono żadnych punktów końcowych w kodzie lub w konfiguracji następnie środowisko wykonawcze zapewnia domyślne punkty końcowe, dodając jeden domyślny punkt końcowy dla każdego adresu podstawowego dla każdej umowy serwisowej implementowane przez usługę. Adres podstawowy, można określić w kodzie lub w konfiguracji i domyślne punkty końcowe są dodawane, gdy <xref:System.ServiceModel.ICommunicationObject.Open> jest wywoływana w <xref:System.ServiceModel.ServiceHost>. W tym przykładzie jest tym samym przykładzie w poprzedniej sekcji, ale ponieważ nie określono żadnych punktów końcowych, domyślne punkty końcowe są dodawane.  
+## <a name="using-default-endpoints"></a>Używanie domyślnych punktów końcowych  
+ Jeśli w kodzie lub w konfiguracji nie określono żadnych punktów końcowych, środowisko uruchomieniowe zapewnia domyślne punkty końcowe, dodając jeden domyślny punkt końcowy dla każdego adresu podstawowego dla każdego kontraktu usługi zaimplementowanego przez usługę. Adres podstawowy może być określony w kodzie lub w konfiguracji, a domyślne punkty końcowe są dodawane, gdy <xref:System.ServiceModel.ICommunicationObject.Open> jest wywoływana <xref:System.ServiceModel.ServiceHost>na. Ten przykład jest taki sam jak w poprzedniej sekcji, ale ponieważ nie określono żadnych punktów końcowych, dodawane są domyślne punkty końcowe.  
   
 ```csharp  
 Namespace Echo  
@@ -196,7 +196,7 @@ Dim echoUri As Uri = New Uri("http://localhost:8000/")
 serviceHost.Open()  
 ```  
   
- Jeśli punkty końcowe są podane jawnie, nadal można dodać domyślnych punktów końcowych przez wywołanie metody <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> na <xref:System.ServiceModel.ServiceHost> przed wywołaniem <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, zobacz [uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Jeśli punkty końcowe są podane jawnie, można nadal dodawać domyślne punkty końcowe, wywołując <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> <xref:System.ServiceModel.ServiceHost> dla przed wywołaniem <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>metody. Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, zobacz [Uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

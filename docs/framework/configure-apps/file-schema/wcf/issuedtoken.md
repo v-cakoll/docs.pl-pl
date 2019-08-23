@@ -2,20 +2,20 @@
 title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: 83061b283c9430af7bcda9cbc832811fa805ed4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68e3a0802a10b14148188a81ee24ed901caa147f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756289"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925381"
 ---
 # <a name="issuedtoken"></a>\<issuedToken >
-Określa niestandardowy token używany do uwierzytelniania klienta do usługi.  
+Określa niestandardowy token używany do uwierzytelniania klienta w usłudze.  
   
  \<system.ServiceModel>  
-\<zachowania >  
-sekcja endpointBehaviors  
-\<zachowanie >  
+\<> zachowań  
+Sekcja endpointBehaviors  
+\<> zachowania  
 \<clientCredentials>  
 \<issuedToken >  
   
@@ -38,30 +38,30 @@ sekcja endpointBehaviors
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`cacheIssuedTokens`|Opcjonalny logiczny atrybut, który określa, czy tokeny są buforowane. Wartość domyślna to `true`.|  
-|`defaultKeyEntropyMode`|Atrybut opcjonalny ciąg, który określa, które losowe wartości (entropie) są używane dla operacji uzgadniania. Wartości obejmują `ClientEntropy`, `ServerEntropy`, i `CombinedEntropy`, wartość domyślna to `CombinedEntropy`. Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
-|`issuedTokenRenewalThresholdPercentage`|Atrybut opcjonalną liczbą całkowitą, który określa procent prawidłowego przedziału czasowego (dostarczonych przez emitenta tokenu) jaki może upłynąć, zanim token jest odnawiany. Są wartości z zakresu od 0 do 100. Wartość domyślna to 60%, która określa 60% upływu czasu, przed próbą odnowienia.|  
-|`issuerChannelBehaviors`|Opcjonalny atrybut, który określa zachowania kanału do użycia przy komunikacji z wystawcą.|  
-|`localIssuerChannelBehaviors`|Opcjonalny atrybut, który określa zachowania kanału do użycia przy komunikacji z lokalnym wystawcą.|  
-|`maxIssuedTokenCachingTime`|Opcjonalny atrybut Timespan określający czas trwania buforowania wystawionych tokenów są buforowane, gdy emitent tokenów (STS) określił czasu. Wartość domyślna to "10675199.02:48:05.4775807."|  
+|`cacheIssuedTokens`|Opcjonalny atrybut logiczny, który określa, czy tokeny są buforowane. Wartość domyślna to `true`.|  
+|`defaultKeyEntropyMode`|Opcjonalny atrybut ciągu, który określa, które losowe wartości (entropie) są używane dla operacji uzgadniania. Wartości to `ClientEntropy`, `ServerEntropy`i `CombinedEntropy`, wartość domyślna to `CombinedEntropy`. Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
+|`issuedTokenRenewalThresholdPercentage`|Opcjonalny atrybut Integer, który określa wartość procentową prawidłowego przedziału czasowego (dostarczonych przez wystawcę tokenu), która może upłynąć przed odnowieniem tokenu. Wartości to od 0 do 100. Wartość domyślna to 60, co oznacza, że 60% czasu kończy się przed próbą odnowienia.|  
+|`issuerChannelBehaviors`|Opcjonalny atrybut, który określa zachowania kanału do użycia podczas komunikacji z wystawcą.|  
+|`localIssuerChannelBehaviors`|Opcjonalny atrybut, który określa zachowania kanału do użycia podczas komunikowania się z lokalnym wystawcą.|  
+|`maxIssuedTokenCachingTime`|Opcjonalny atrybut TimeSpan, który określa czas, przez jaki wystawione tokeny są buforowane, gdy Wystawca tokenu (STS) nie określa czasu. Wartość domyślna to "10675199.02:48:05.4775807".|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<localIssuer >](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|Określa adres lokalnego wystawcy token i powiązania, używany do komunikacji z punktem końcowym.|  
-|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Określa zachowania punktu końcowego do użycia podczas nawiązywania kontaktu z wystawcy lokalnego.|  
+|[\<localIssuer >](localissuer.md)|Określa adres lokalnego wystawcy tokenu i powiązania używanego do komunikacji z punktem końcowym.|  
+|[\<issuerChannelBehaviors >](issuerchannelbehaviors-element.md)|Określa zachowania punktu końcowego, który ma być używany podczas kontaktowania się z lokalnym wystawcą.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Określa poświadczenia używane do uwierzytelniania klienta do usługi.|  
+|[\<clientCredentials>](clientcredentials.md)|Określa poświadczenia używane do uwierzytelniania klienta w usłudze.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wystawiony token jest używany, na przykład podczas uwierzytelniania za pomocą Secure Token Service (STS) w federacyjnym scenariuszu typu niestandardowych poświadczeń. Domyślnie token jest SAML token. Aby uzyskać więcej informacji, zobacz [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). i [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Wystawiony token jest niestandardowym typem poświadczeń używanym na przykład podczas uwierzytelniania przy użyciu usługi bezpiecznego tokenu (STS) w scenariuszu federacyjnym. Domyślnie token jest tokenem SAML. Aby uzyskać więcej informacji, zobacz [federacyjne i](../../../wcf/feature-details/federation-and-issued-tokens.md)wystawione tokeny. oraz [tokeny federacyjne i](../../../wcf/feature-details/federation-and-issued-tokens.md)wystawione.  
   
- Ta sekcja zawiera elementy służące do Konfigurowanie lokalnego wystawcy tokenów lub zachowania używane z usługi tokenu zabezpieczającego. Aby uzyskać instrukcje na temat konfigurowania klienta Użyj wystawcy lokalnego, zobacz [jak: Konfigurowanie lokalnego wystawcy](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ Ta sekcja zawiera elementy używane do konfigurowania lokalnego wystawcy tokenów lub zachowań używanych z usługą tokenu zabezpieczającego. Aby uzyskać instrukcje dotyczące konfigurowania klienta do korzystania z wystawcy lokalnego [, zobacz How to: Konfigurowanie lokalnego wystawcy](../../../wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -71,10 +71,10 @@ sekcja endpointBehaviors
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.IssuedToken%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential>
-- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)
-- [Instrukcje: Tworzenie klienta federacyjnego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Instrukcje: Konfigurowanie lokalnego wystawcy](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Zachowania zabezpieczeń](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Federacja i wystawione tokeny](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Zabezpieczanie klientów](../../../wcf/securing-clients.md)
+- [Instrukcje: Tworzenie klienta federacyjnego](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Instrukcje: Konfigurowanie lokalnego wystawcy](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Federacja i wystawione tokeny](../../../wcf/feature-details/federation-and-issued-tokens.md)

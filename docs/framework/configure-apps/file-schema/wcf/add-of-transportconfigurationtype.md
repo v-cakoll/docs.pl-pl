@@ -2,18 +2,18 @@
 title: <add> dla <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: c71a58b13e89bedb5eed24d784c82fb1525f7625
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 483ede53df13c896b88171910031dbe9793d66dc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701440"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920034"
 ---
-# <a name="add-of-transportconfigurationtype"></a>\<add> of \<transportConfigurationType>
-Ten element jest para klucza i wartości, który identyfikuje typ danego transportu.  
+# <a name="add-of-transportconfigurationtype"></a>\<Dodawanie > \<transportConfigurationType >
+Ten element jest parą klucz/wartość, która identyfikuje typ określonego transportu.  
   
  \<system.ServiceModel>  
-\<ServiceHostingEnvironment>  
+\<ServiceHostingEnvironment >  
 \<transportConfigurationTypes>  
 \<add>  
   
@@ -35,8 +35,8 @@ Ten element jest para klucza i wartości, który identyfikuje typ danego transpo
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|nazwa|Wymagany atrybut ciągu.<br /><br /> Zawiera klucz zdefiniowanych przez użytkownika, który unikatowo identyfikuje typ transportu.|  
-|transportConfigurationType|Ciąg, który zawiera typ, który implementuje określonego transportu.|  
+|nazwa|Wymagany atrybut ciągu.<br /><br /> Zawiera klucz zdefiniowany przez użytkownika, który jednoznacznie identyfikuje typ transportu.|  
+|transportConfigurationType|Ciąg, który zawiera typ implementujący określony transport.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -45,7 +45,7 @@ Ten element jest para klucza i wartości, który identyfikuje typ danego transpo
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Kolekcja typów implementujących określonego transportu.|  
+|[\<transportConfigurationTypes>](transportconfigurationtypes.md)|Kolekcja typów, które implementują określony transport.|  
   
 ## <a name="example"></a>Przykład  
   
@@ -63,4 +63,4 @@ Ten element jest para klucza i wartości, który identyfikuje typ danego transpo
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [Hosting](../../../wcf/feature-details/hosting.md)

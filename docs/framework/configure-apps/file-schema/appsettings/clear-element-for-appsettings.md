@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 5d4d96143dbd1db440de2247a7dc2f0c66f20403
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 5d5da531bff3a0e9e198ba9b5ab6cf2b52bf36b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301301"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921317"
 ---
-# <a name="clear-element-for-appsettings"></a>\<clear> element for \<appSettings>
+# <a name="clear-element-for-appsettings"></a>\<Wyczyść > element dla \<AppSettings >
 
-Czyści ustawień aplikacji niestandardowej.
+Czyści niestandardowe ustawienia aplikacji.
 
-[ **\<Konfiguracja >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+[ **\<> konfiguracji**](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>Składnia
@@ -40,7 +40,7 @@ Brak
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Zawiera ustawienia aplikacji niestandardowych, takich jak ścieżki do plików, adresy URL usługi sieci Web XML lub inne informacje konfiguracyjne aplikacji niestandardowych. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Zawiera niestandardowe ustawienia aplikacji, takie jak ścieżki plików, adresy URL usług sieci Web XML lub inne niestandardowe informacje o konfiguracji aplikacji. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
@@ -48,7 +48,7 @@ Brak
 
 ## <a name="example"></a>Przykład
 
-Jak wyczyścić niestandardowe ustawienia konfiguracji można znaleźć w poniższym przykładzie:
+Poniższy przykład pokazuje, jak wyczyścić niestandardowe ustawienia konfiguracji:
 
 ```xml
 <appSettings>
@@ -58,4 +58,4 @@ Jak wyczyścić niestandardowe ustawienia konfiguracji można znaleźć w poniż
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schemat pliku konfiguracji dla .NET Framework](../index.md)

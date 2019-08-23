@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: d522d004630dee942e24c39a936feae7dc957bd5
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 31b53837e24029fc7ff0b576d95c0213041a434e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300790"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927673"
 ---
-# <a name="configsections-element-for-configuration"></a>\<configSections >, element dla \<konfiguracji >
+# <a name="configsections-element-for-configuration"></a>\<configSections > elementu \<konfiguracji >
 
-Zawiera deklaracje sekcji i przestrzeni nazw konfiguracji.
+Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw.
 
-[ **\<Konfiguracja >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp; **\<configSections>**
+[ **\<> konfiguracji**](configuration-element.md)   
+&nbsp;&nbsp; **\<configSections >**
 
 ## <a name="attributes"></a>Atrybuty
 
@@ -31,24 +31,24 @@ Brak
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<Konfiguracja >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework. |
+| [ **\<> konfiguracji**](configuration-element.md) | Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<sekcja >** ](~/docs/framework/configure-apps/file-schema/section-element.md) | Zawiera deklarację sekcji konfiguracji. |
-| [ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Definiuje obszar nazw dla sekcji konfiguracji. |
-| [ **\<remove>** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Usuwa sekcję wstępnie zdefiniowanych lub grupy sekcji. |
-| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowanego sekcje i grupy sekcji. |
+| [ **\<sekcja >** ](section-element.md) | Zawiera deklarację sekcji konfiguracyjnej. |
+| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | Definiuje przestrzeń nazw dla sekcji konfiguracyjnych. |
+| [ **\<remove>** ](remove-element-for-configsections.md) | Usuwa wstępnie zdefiniowaną sekcję lub grupę sekcji. |
+| [ **\<clear>** ](clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji. |
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli ten element znajduje się w pliku konfiguracji, musi to być pierwszy element podrzędny elementu  **\<konfiguracji >** elementu.
+Jeśli ten element znajduje się w pliku konfiguracji, musi być pierwszym elementem  **\<** podrzędnym elementu Configuration >.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje jak zdefiniować sekcję konfiguracji i zdefiniować ustawienia dla tej sekcji:
+Poniższy przykład pokazuje, jak zdefiniować sekcję konfiguracyjną i zdefiniować ustawienia dla tej sekcji:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ Poniższy przykład pokazuje jak zdefiniować sekcję konfiguracji i zdefiniowa�
 
 ## <a name="configuration-file"></a>Plik konfiguracji
 
-Ten element może być użyty w pliku konfiguracyjnym aplikacji, plik konfiguracji komputera (*Machine.config*), a *Web.config* pliki, które nie są na poziomie katalogu aplikacji.
+Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schemat pliku konfiguracji dla .NET Framework](index.md)

@@ -10,26 +10,26 @@ helpviewer_keywords:
 - multimedia [WPF], controlling playback of media
 - media [WPF], controlling playback of
 ms.assetid: 6885a730-e054-4c16-8c1e-ffe17b1f7c32
-ms.openlocfilehash: bb7319fc7ccec0220cbd79a32d5d015f9f2422d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cde7c32b48dff3d6d054e700b2f95771ba3b3773
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984049"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930161"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Instrukcje: Sterowanie elementem MediaElement (odtwórz, pauza, zatrzymaj, głośność i szybkość)
-Poniższy przykład pokazuje, jak kontrolować odtwarzanie multimediów za pomocą <xref:System.Windows.Controls.MediaElement>. Ten przykład tworzy prostą media player, który umożliwia odtwarzanie, wstrzymywanie, zatrzymać i przejdź do i z powrotem na nośniku, a także dostosować współczynnik wielkość i szybkość.  
+Poniższy przykład pokazuje, <xref:System.Windows.Controls.MediaElement>jak sterować odtwarzaniem multimediów przy użyciu. W przykładzie tworzony jest prosty odtwarzacz multimedialny, który umożliwia odtwarzanie, wstrzymywanie, zatrzymywanie i pomijanie oraz przechodzenie do tyłu i z powrotem na nośniku, a także dostosowanie współczynnika głośności i szybkości.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod tworzy interfejsu użytkownika.  
+ Poniższy kod tworzy interfejs użytkownika.  
   
 > [!NOTE]
->  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> Właściwość <xref:System.Windows.Controls.MediaElement> musi być równa `Manual` aby można było interaktywnie zatrzymać, wstrzymać, a odtwarzanie nośnika.  
+> Właściwość musi być ustawiona na `Manual` , aby można było interaktywnie zatrzymać, wstrzymać i odtworzyć nośnik. <xref:System.Windows.Controls.MediaElement> <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>  
   
  [!code-xaml[MediaGallery_snip#MediaElementExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml#mediaelementexamplewholepage)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod implementuje funkcje przykładowe kontrolek interfejsu użytkownika. <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, I <xref:System.Windows.Controls.MediaElement.Stop%2A> metody są używane do odpowiednio odtwarzania, wstrzymać lub zatrzymać nośnika. Zmiana <xref:System.Windows.Controls.MediaElement.Position%2A> właściwość <xref:System.Windows.Controls.MediaElement> umożliwia pomijanie na nośniku. Na koniec <xref:System.Windows.Controls.MediaElement.Volume%2A> i <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> właściwości są używane, aby dostosować szybkość woluminu i odtwarzanie nośnika.  
+ Poniższy kod implementuje funkcjonalność przykładowych kontrolek interfejsu użytkownika. Metody <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, i<xref:System.Windows.Controls.MediaElement.Stop%2A> są używane odpowiednio do odtwarzania, wstrzymywania i zatrzymywania nośnika. <xref:System.Windows.Controls.MediaElement.Position%2A> Zmiana właściwości<xref:System.Windows.Controls.MediaElement> elementu umożliwia pominięcie na nośniku. Na <xref:System.Windows.Controls.MediaElement.Volume%2A> koniec właściwości i <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> służą do dostosowywania głośności i szybkości odtwarzania nośnika.  
   
  [!code-csharp[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snip/CSharp/MediaElementExample.xaml.cs#codebehindmediaelementexamplewholepage)]
  [!code-vb[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml.vb#codebehindmediaelementexamplewholepage)]  

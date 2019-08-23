@@ -2,20 +2,20 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: 7221f19dd131dbd60ef1a61625633d54dfdbe85a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1d776730053cd6af3c930a33e13582a8906c4d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769762"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940398"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
-Umożliwia zwykłego tekstu XML, kodowania wiadomości notacji obiektu JavaScript (JSON) i "nieprzetworzonej" zawartości binarnej Odczyt i zapis, gdy jest używana w powiązaniu usługi Windows Communication Foundation (WCF).  
+Umożliwia kodowanie komunikatów XML, JavaScript Object Notation (JSON) i "nieprzetworzony" zawartość binarną, która ma zostać odczytana i zapisywana w przypadku użycia w powiązaniu Windows Communication Foundation (WCF).  
   
  \<system.serviceModel>  
-\<powiązania >  
+\<> powiązań  
 \<customBinding>  
-\<Powiązanie >  
+\<> powiązania  
 \<webMessageEncoding>  
   
 ## <a name="syntax"></a>Składnia  
@@ -33,34 +33,34 @@ Umożliwia zwykłego tekstu XML, kodowania wiadomości notacji obiektu JavaScrip
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`maxReadPoolSize`|Liczba wiadomości, które można jednocześnie odczytać bez przydziału nowych czytników. Większe rozmiary pul powoduje, że system bardziej odporne na skoki działania kosztem większy zestaw roboczy. Wartość domyślna to 64 czytelnicy dla każdego z wewnętrznego koderów (tekst JSON i "pierwotne").<br /><br /> Zwiększa to liczba zużycie pamięci zwiększa, ale przygotowuje kodera radzenia sobie z gwałtownym wzrostem wzrosty komunikaty przychodzące, ponieważ jest w stanie używać czytelnicy z puli, które zostały już utworzone, zamiast tworzyć nowe.|  
-|`maxWritePoolSize`|Liczba wiadomości, które można jednocześnie wysłać bez przydziału nowych modułów zapisujących. Większe rozmiary pul powoduje, że system bardziej odporne na skoki działania kosztem większy zestaw roboczy. Wartość domyślna to 16 autorzy dla każdego z wewnętrznego koderów (tekst JSON i "pierwotne").<br /><br /> Zwiększa to liczba zużycie pamięci zwiększa, ale przygotowuje kodera radzenia sobie z gwałtownym wzrostem wzrosty komunikaty wychodzące, ponieważ jest w stanie używać składników zapisywania z puli, które zostały już utworzone, zamiast tworzyć nowe.|  
-|`writeEncoding`|Określa kodowanie do użycia w celu emisji komunikatów w powiązaniu zestawu znaków. Prawidłowe wartości to:<br /><br /> -   UnicodeFffeTextEncoding: Big Endian kodowanie Unicode.<br />-   Utf16TextEncoding: Kodowanie Unicode.<br />-   Utf8TextEncoding: 8-bitowego kodowania.<br /><br /> The default is Utf8TextEncoding. Ten atrybut jest typu <xref:System.Text.Encoding>.|  
+|`maxReadPoolSize`|Liczba wiadomości, które można jednocześnie odczytać bez przydziału nowych czytników. Większe rozmiary puli sprawiają, że system jest bardziej odporny na obciążenia, a koszt większym zestawem roboczym. Wartość domyślna to 64 czytników dla każdego kodera wewnętrznego (text, JSON i "RAW").<br /><br /> Zwiększenie tej liczby powoduje zwiększenie zużycia pamięci, ale przygotowuje koder do rozpatruje nagłe rozerwanie komunikatów przychodzących, ponieważ może używać czytelników z puli, która została już utworzona, zamiast tworzyć nowe.|  
+|`maxWritePoolSize`|Ilość komunikatów, które można jednocześnie wysłać bez przydziału nowych modułów zapisujących. Większe rozmiary puli sprawiają, że system jest bardziej odporny na obciążenia, a koszt większym zestawem roboczym. Wartość domyślna to 16 modułów zapisujących dla każdego kodera wewnętrznego (text, JSON i "RAW").<br /><br /> Zwiększenie tej liczby powoduje zwiększenie zużycia pamięci, ale przygotowuje koder do rozpatruje nagłe rozerwanie komunikatów wychodzących, ponieważ może korzystać z autorów z puli, która została już utworzona, zamiast tworzyć nowe.|  
+|`writeEncoding`|Określa kodowanie zestawu znaków, który ma być używany do emitowania komunikatów w powiązaniu. Prawidłowe wartości to:<br /><br /> - UnicodeFffeTextEncoding: Kodowanie Unicode big endian.<br />- Utf16TextEncoding: Kodowanie Unicode.<br />-   Utf8TextEncoding: kodowanie 8-bitowe.<br /><br /> Wartość domyślna to Utf8TextEncoding. Ten atrybut jest typu <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiuje ograniczenia złożoności wiadomości SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane dla tego wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiuje ograniczenia złożoności komunikatów protokołu SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane za pomocą tego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie funkcje powiązania niestandardowego powiązania.|  
+|[\<> powiązania](../../../misc/binding.md)|Definiuje wszystkie możliwości powiązań niestandardowego powiązania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Kodowanie jest procesem przekształcania wiadomość do sekwencji bajtów. Dekodowanie jest procesu. Procesy te wymagają specyfikację kodowania znaków.  
+ Kodowanie jest procesem przekształcania komunikatu w sekwencję bajtów. Dekodowanie jest procesem wycofywania. Procesy te wymagają specyfikacji kodowania znaków.  
   
- `webMessageEncoding` Elementu działa przez delegowanie do szeregu wewnętrzny koderów obsługi kodowania XML i JSON zwykłego tekstu które "" dane binarne. To delegowanie odbywa się przez koder komunikat złożony.  
+ `webMessageEncoding` Element działa przez delegowanie do serii koderów wewnętrznych w celu obsługi kodowania XML i JSON oraz "RAW" danych binarnych. To delegowanie odbywa się za pomocą złożonego kodera komunikatów.  
   
- Ten element powiązania i jego złożonego encoder, które są używane do kontrolowania, kodowania w scenariuszach, które nie korzystają z protokołu SOAP wiadomości, używane przez `webHttpBinding` elementu. Te scenariusze obejmują "Zwykłego starego kodu XML" (POX), technologii Representational State Transfer (REST), syndykacji naprawdę proste syndykacji (RSS) i Atom i asynchronicznego języka JavaScript i XML (technologia AJAX). Koder komunikatów złożonego nie obsługuje protokołu SOAP lub WS-Addressing.  
+ Ten element powiązania i jego koder złożony są używane do sterowania kodowaniem w scenariuszach, które nie korzystają z `webHttpBinding` komunikatów SOAP używanych przez element. Te scenariusze obejmują "zwykłe stare XML" (POX), przenoszenie stanu reprezentacji (REST), Really Simple Syndication (RSS) i Atom Syndication oraz asynchroniczne skrypty JavaScript i XML (AJAX). Koder komunikatu złożonego nie obsługuje protokołu SOAP ani WS-Addressing.  
   
- Można skonfigurować elementu powiązania z kodowaniem znaków zapisu przy użyciu `writeEncoding` atrybutu. Podane <xref:System.Text.Encoding> wartość określa zachowanie podczas zapisu w przypadkach, JSON i XML tekstową. Podczas odczytu wszelkie kodowanie prawidłowy komunikat i kodowanie tekstu w zrozumieniu.  
+ Element Binding można skonfigurować przy użyciu kodowania znaków zapisu za pomocą `writeEncoding` atrybutu. Podana <xref:System.Text.Encoding> wartość określa zachowanie przy zapisie dla przypadków JSON i tekstowych XML. W przypadku odczytu wszystkie prawidłowe kodowanie komunikatów i kodowanie tekstu są zrozumiałe.  
   
- `maxReadPoolSize` i `maxWritePoolSize` można również ustawić maksymalną liczbę czytników i składników zapisywania do przydzielenia, odpowiednio. Domyślnie są przydzielane 64 czytników i składników zapisywania 16.  
+ `maxReadPoolSize`i `maxWritePoolSize` można również użyć, aby ustawić maksymalną liczbę czytelników i autorów, które mają być odpowiednio przydzieloną. Domyślnie przydzielono 64 czytników i 16 składników zapisywania.  
   
- Domyślne ograniczenia złożoności również są ustawiane przy użyciu [ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) element, aby zapewnić ochronę przed klasą typu odmowa usługi (DOS) ataki taka próba blokując przetwarzania punktu końcowego za pomocą złożoności wiadomości zasoby.  
+ Domyślne ograniczenia dotyczące złożoności są również ustawiane za pomocą [ \<elementu readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) , aby chronić przed atakami klasy typu "odmowa usługi" (DOS), które próbują użyć złożoności komunikatów do powiązania zasobów przetwarzania punktów końcowych.  
   
 ## <a name="example"></a>Przykład  
   
@@ -77,9 +77,9 @@ Umożliwia zwykłego tekstu XML, kodowania wiadomości notacji obiektu JavaScrip
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
-- [Kodowanie komunikatu](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
-- [Wybieranie kodera komunikatów](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Kodowanie komunikatu](message-encoding.md)
+- [Wybieranie kodera komunikatów](../../../wcf/feature-details/choosing-a-message-encoder.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

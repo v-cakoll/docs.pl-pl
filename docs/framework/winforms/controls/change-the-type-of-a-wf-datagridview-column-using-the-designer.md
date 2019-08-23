@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-ms.openlocfilehash: f40ab6fe000f9104b10d5841f52eadf102a91a6b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: e0b0b01a3c6da0680a3ec5fcd591344e04658a37
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040479"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917622"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Instrukcje: zmienianie typu kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Czasami trzeba zmienić typ kolumny, która została już dodana do kontrolki Windows Forms <xref:System.Windows.Forms.DataGridView> . Na przykład możesz chcieć zmodyfikować typy niektórych kolumn, które są generowane automatycznie podczas wiązania kontrolki ze źródłem danych. Jest to przydatne, gdy wyświetlana tabela zawiera kolumny zawierające klucze obce do wierszy w powiązanej tabeli. W takim przypadku można zastąpić kolumny pól tekstowych, które wyświetlają te klucze obce z kolumnami pól kombi, które wyświetlają bardziej zrozumiałe wartości z powiązanej tabeli.
@@ -28,7 +28,7 @@ Czasami trzeba zmienić typ kolumny, która została już dodana do kontrolki Wi
 3. W siatce **Właściwości kolumny** Ustaw `ColumnType` właściwość na nowy typ kolumny.
 
     > [!NOTE]
-    >  `ColumnType` Właściwość jest właściwością czasu projektowania, która wskazuje klasę reprezentującą typ kolumny. Nie jest to rzeczywista Właściwość zdefiniowana w klasie Column.
+    > `ColumnType` Właściwość jest właściwością czasu projektowania, która wskazuje klasę reprezentującą typ kolumny. Nie jest to rzeczywista Właściwość zdefiniowana w klasie Column.
 
 ## <a name="see-also"></a>Zobacz także
 

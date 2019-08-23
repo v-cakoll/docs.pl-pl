@@ -9,28 +9,28 @@ helpviewer_keywords:
 - radial gradients [WPF], painting with
 - painting [WPF], with radial gradients
 ms.assetid: b5d0fc8a-8986-4796-b003-a75b41a48928
-ms.openlocfilehash: c3bcc11dea4b1f223f629415591ab03588881dde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5762ef1a1526ba6f004917c8a947e35ce731c86d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921836"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916100"
 ---
 # <a name="how-to-paint-an-area-with-a-radial-gradient"></a>Instrukcje: Malowanie obszaru gradientem promieniowym
-W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.RadialGradientBrush> klasy Maluj obszar gradientem promieniowym.  
+Ten przykład pokazuje, <xref:System.Windows.Media.RadialGradientBrush> jak używać klasy do malowania obszaru z gradientem promieniowym.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto <xref:System.Windows.Media.RadialGradientBrush> prostokąt gradientem promieniowym, które przechodzi z żółty czerwony na niebieski do Limonowozielony malowania.  
+ Poniższy przykład używa <xref:System.Windows.Media.RadialGradientBrush> do malowania prostokąta z gradientem promieniowym, który przechodzi z żółtej do czerwonego do zielonego koloru wapna.  
   
  [!code-csharp[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/RadialGradientBrushSnippet.cs#simpleradialgradientexamplewholepage)]
  [!code-vb[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/radialgradientbrushsnippet.vb#simpleradialgradientexamplewholepage)]
  [!code-xaml[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/RadialGradientBrushSnippet.xaml#simpleradialgradientexamplewholepage)]  
   
- Poniższa ilustracja przedstawia gradientu z poprzedniego przykładu. Podkreślono zatrzymuje gradientu.  
+ Na poniższej ilustracji przedstawiono gradient z poprzedniego przykładu. Ogranicznik gradientu został wyróżniony.  
   
- ![Ograniczniki gradientu w gradient promieniowy](./media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")  
+ ![Gradienty zatrzymane w gradiencie promieniowym](./media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")  
   
 > [!NOTE]
->  Przykłady w tym temacie na użytek w układzie współrzędnych domyślne ustawienie punktów kontrolnych. System współrzędnych domyślne są określane względem obwiedni: 0 oznacza wartość 0 procent obwiedni, a wartość 1 oznacza 100 procent obwiedni. Ten układ współrzędnych można zmienić, określając <xref:System.Windows.Media.GradientBrush.MappingMode%2A> właściwości na wartość <xref:System.Windows.Media.BrushMappingMode.Absolute>. Bezwzględnych współrzędnych jest względem obwiedni. Wartości są interpretowane bezpośrednio w przestrzeni lokalnej.  
+> W przykładach w tym temacie użyto domyślnego układu współrzędnych do ustawiania punktów kontrolnych. Domyślny system współrzędnych jest względny w stosunku do pola ograniczenia: wartość 0 oznacza 0 procent obwiedni, a 1 wskazuje 100 procent obwiedni. Można zmienić ten system współrzędnych przez ustawienie <xref:System.Windows.Media.GradientBrush.MappingMode%2A> właściwości na wartość. <xref:System.Windows.Media.BrushMappingMode.Absolute> Bezwzględny układ współrzędnych nie należy do obwiedni. Wartości są interpretowane bezpośrednio w miejscu lokalnym.  
   
- Dla dodatkowych <xref:System.Windows.Media.RadialGradientBrush> przykłady, zobacz [przykład pędzle](https://go.microsoft.com/fwlink/?LinkID=159973). Aby uzyskać więcej informacji na temat gradientów oraz inne rodzaje pędzle, zobacz [malowanie jednolitymi kolorami i gradientami — Przegląd](painting-with-solid-colors-and-gradients-overview.md).
+ Aby uzyskać <xref:System.Windows.Media.RadialGradientBrush> więcej przykładów, zobacz [przykład pędzli](https://go.microsoft.com/fwlink/?LinkID=159973). Aby uzyskać więcej informacji o gradientach i innych typach pędzli, zobacz [malowanie przy użyciu pełnych kolorów i gradientów przegląd](painting-with-solid-colors-and-gradients-overview.md).

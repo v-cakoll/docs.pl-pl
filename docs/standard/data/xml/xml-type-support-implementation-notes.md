@@ -5,47 +5,47 @@ ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73f786c8f1080d0046889958e8b3bd3165870569
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 817d48e15f3a1d370e1953ca9c9aa8e10baa7f29
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916033"
 ---
 # <a name="xml-type-support-implementation-notes"></a>Obsługiwane typy XML — uwagi dotyczące implementacji
-W tym temacie opisano niektóre szczegóły implementacji, które ma pod uwagę.  
+W tym temacie opisano niektóre szczegóły implementacji, które mają być świadome.  
   
-## <a name="list-mappings"></a>Lista mapowań  
- <xref:System.Collections.IList>, <xref:System.Collections.ICollection>, <xref:System.Collections.IEnumerable>, **Wpisz []**, i <xref:System.String> typów są używane do reprezentowania typów list języka (XSD) definicji schematu XML.  
+## <a name="list-mappings"></a>Mapowania list  
+ <xref:System.Collections.IList>, ,<xref:System.Collections.ICollection> <xref:System.String>,Typ **[]** , i typy są używane do reprezentowania typów list języka definicji schematu XML (XSD). <xref:System.Collections.IEnumerable>  
   
 ## <a name="union-mappings"></a>Mapowania Unii  
- Typy Unii są reprezentowane przy użyciu <xref:System.Xml.Schema.XmlAtomicValue> lub <xref:System.String> typu. Typ źródłowy lub docelowy typ w związku z tym zawsze musi być albo <xref:System.String> lub <xref:System.Xml.Schema.XmlAtomicValue>.  
+ Typy Unii są reprezentowane przy użyciu <xref:System.Xml.Schema.XmlAtomicValue> typu <xref:System.String> lub. W związku z tym typ źródłowy lub docelowy musi zawsze mieć wartość <xref:System.String> lub <xref:System.Xml.Schema.XmlAtomicValue>.  
   
- Jeśli <xref:System.Xml.Schema.XmlSchemaDatatype> obiekt reprezentuje typ listy Konwertuje obiekt ciągu wejściowego wartości do listy co najmniej jeden obiekt. Jeśli <xref:System.Xml.Schema.XmlSchemaDatatype> reprezentuje typ union, a następnie zostanie podjęta próba można przeanalizować wartości wejściowej jako typ elementu Członkowskiego Unii. Jeśli nie powiedzie się próba analizy konwersji jest podejmowana z następny element członkowski Unii i tak dalej aż do konwersji zakończy się pomyślnie lub nie ma żadnych typów elementu członkowskiego do wypróbowania, w którym to przypadku jest zgłaszany wyjątek.  
+ <xref:System.Xml.Schema.XmlSchemaDatatype> Jeśli obiekt reprezentuje typ listy, obiekt konwertuje wartość ciągu wejściowego na listę co najmniej jednego obiektu. <xref:System.Xml.Schema.XmlSchemaDatatype> Jeśli reprezentuje typ złożenia, podejmowana jest próba przeanalizowania wartości wejściowej jako typu elementu członkowskiego Unii. Jeśli próba przeanalizowania nie powiedzie się, konwersja zostanie podjęta przy użyciu następnego elementu członkowskiego Unii i tak dalej, aż do chwili, gdy konwersja zakończy się pomyślnie lub nie ma żadnych innych typów elementów członkowskich do wypróbowania. w takim przypadku wyjątek jest zgłaszany.  
   
-## <a name="differences-between-clr-and-xml-data-types"></a>Różnice między środowiska CLR i typów danych XML  
- Poniżej przedstawiono niektóre niezgodności, które mogą wystąpić między typy CLR i typów danych XML i jak są obsługiwane.  
-  
-> [!NOTE]
-> `xs` Prefiks jest zamapowana <https://www.w3.org/2001/XMLSchema> i identyfikator URI przestrzeni nazw.
-  
-### <a name="systemtimespan-and-xsduration"></a>Obiekt System.TimeSpan i DURATION  
- `xs:duration` Typu jest częściowo uporządkowanych w, istnieją pewne wartości czasu trwania, które różnią się ale równoważne. Oznacza to, że dla `xs:duration` typu wartością, taką jak 1 miesiąc (P1M) jest mniejszy niż 32 dni (P32D), przekracza 27 dni (P27D) i jest to równoważne z 28, 29 lub 30 dni.  
-  
- <xref:System.TimeSpan> Klasa nie obsługuje częściowe porządkowanie. Zamiast tego wybiera określoną liczbę dni w przypadku 1 rok i miesiąc; 365 dni lub 30 dni odpowiednio.  
-  
- Aby uzyskać więcej informacji na temat `xs:duration` typu, zobacz W3C [XML schematu część 2: Typy danych zalecenie](https://www.w3.org/TR/xmlschema-2/).
-  
-### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs: Time, typy daty gregoriańskiego i System.DateTime  
- Gdy `xs:time` wartość jest mapowany na <xref:System.DateTime> obiektu, <xref:System.DateTime.MinValue> pole jest używane do zainicjowania właściwości daty <xref:System.DateTime> obiektu (takich jak <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, i <xref:System.DateTime.Day%2A>) do najmniejszej możliwej <xref:System.DateTime> wartość.  
-  
- Podobnie, wystąpień `xs:gMonth`, `xs:gDay`, `xs:gYear`, `xs:gYearMonth` i `xs:gMonthDay` również są mapowane na <xref:System.DateTime> obiektu. Nieużywane właściwości <xref:System.DateTime> obiektu są inicjowane na wartość od <xref:System.DateTime.MinValue>.  
+## <a name="differences-between-clr-and-xml-data-types"></a>Różnice między typami danych CLR i XML  
+ Poniżej opisano niektóre niezgodności, które mogą wystąpić między typami CLR a typami danych XML i jak są obsługiwane.  
   
 > [!NOTE]
->  Nie można polegać na <xref:System.DateTime.Year%2A?displayProperty=nameWithType> wartości po wpisaniu zawartość jako `xs:gMonthDay`. <xref:System.DateTime.Year%2A?displayProperty=nameWithType> Ma zawsze wartość 1904 w tym przypadku.  
+> Prefiks jest mapowany <https://www.w3.org/2001/XMLSchema> na identyfikator URI i przestrzeń nazw. `xs`
   
-### <a name="xsanyuri-and-systemuri"></a>xs:anyURI i System.Uri  
- Jeśli wystąpienie `xs:anyURI` czy reprezentuje względny identyfikator URI, jest mapowane na <xref:System.Uri>, <xref:System.Uri> obiekt nie ma podstawowy identyfikator URI.  
+### <a name="systemtimespan-and-xsduration"></a>Wartość System. TimeSpan i xs: duration  
+ `xs:duration` Typ jest częściowo uporządkowany w tym, że istnieją pewne wartości czasu trwania, które są różne, ale równoważne. Oznacza to, że dla `xs:duration` wartości typu, takiej jak 1 miesiąc (P1M) jest mniejsza niż 32 dni (P32D), większa niż 27 dni (P27D) i równa 28, 29 lub 30 dni.  
+  
+ <xref:System.TimeSpan> Klasa nie obsługuje tego porządku częściowego. Zamiast tego wybiera określoną liczbę dni przez 1 rok i 1 miesiąc; odpowiednio 365 dni i 30 dni.  
+  
+ Aby uzyskać więcej informacji na `xs:duration` temat typu, zobacz część [2 W3C XML schematu: Zalecenie](https://www.w3.org/TR/xmlschema-2/)dotyczące typów danych.
+  
+### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>XS: godzina, typy dat gregoriańskich i system. DateTime  
+ <xref:System.DateTime> <xref:System.DateTime.Day%2A> <xref:System.DateTime.Year%2A> <xref:System.DateTime.Month%2A>Gdy wartość jest zmapowana <xref:System.DateTime> do obiektu, <xref:System.DateTime.MinValue> pole jest używane do inicjowania właściwości daty obiektu (takich jak, i) do najmniejszej możliwej `xs:time` <xref:System.DateTime> wartość.  
+  
+ Podobnie `xs:gMonth`wystąpienia `xs:gDay`, ,i`xs:gMonthDay`są również mapowane na<xref:System.DateTime> obiekt. `xs:gYear` `xs:gYearMonth` Nieużywane właściwości <xref:System.DateTime> obiektu są inicjowane do tych z <xref:System.DateTime.MinValue>.  
+  
+> [!NOTE]
+> Nie można polegać na <xref:System.DateTime.Year%2A?displayProperty=nameWithType> wartości, gdy zawartość jest wpisana jako `xs:gMonthDay`. <xref:System.DateTime.Year%2A?displayProperty=nameWithType> Wartość jest zawsze ustawiona na 1904 w tym przypadku.  
+  
+### <a name="xsanyuri-and-systemuri"></a>XS: anyURI i system. URI  
+ Gdy wystąpienie `xs:anyURI` reprezentujące względny identyfikator URI jest zamapowane <xref:System.Uri>na <xref:System.Uri> obiekt, nie ma podstawowego identyfikatora URI.  
   
 ## <a name="see-also"></a>Zobacz także
 

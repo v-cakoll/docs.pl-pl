@@ -2,21 +2,21 @@
 title: <security> dla <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: f1e166bec2254ed6d2c306eaccfa13e9fba1d70d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f84f6c0f9988dd2d07377bf694286922db9d8364
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670583"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936802"
 ---
-# <a name="security-of-basichttpbinding"></a>\<Zabezpieczenia > z \<basicHttpBinding >
-Definiuje możliwości zabezpieczeń [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
+# <a name="security-of-basichttpbinding"></a>\<zabezpieczenia > \<BasicHttpBinding >
+Definiuje możliwości [ \<zabezpieczeń > BasicHttpBinding](basichttpbinding.md).  
   
  \<system.ServiceModel>  
-\<powiązania >  
-\<basicHttpBinding>  
-\<Powiązanie >  
-\<security>  
+\<> powiązań  
+\<basicHttpBinding >  
+\<> powiązania  
+\<> zabezpieczeń  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,39 +31,39 @@ Definiuje możliwości zabezpieczeń [ \<basicHttpBinding >](../../../../../docs
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|tryb|Opcjonalna. Określa typ zabezpieczeń, która jest używana. Wartość domyślna to `None`. Ten atrybut jest typu <xref:System.ServiceModel.BasicHttpSecurityMode>.|  
+|tryb|Opcjonalny. Określa typ używanego zabezpieczenia. Wartość domyślna to `None`. Ten atrybut jest typu <xref:System.ServiceModel.BasicHttpSecurityMode>.|  
   
-## <a name="mode-attribute"></a>Tryb atrybutu  
+## <a name="mode-attribute"></a>Atrybut Mode  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Brak|— Liczba komunikatów nie są zabezpieczane podczas przesyłania.|  
-|Transport|Zabezpieczenia za pomocą transportu HTTPS. Komunikaty protokołu SOAP są chronione przy użyciu protokołu HTTPS. Usługa jest uwierzytelniany przez klienta za pomocą certyfikatu X.509 usługi. Klient jest uwierzytelniany przy użyciu właściwości ClientCredentialType o wartości dostarczone. Zobacz [ \<transportu >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md).|  
-|Komunikat|Zabezpieczenia korzystanie z zabezpieczeń komunikatów protokołu SOAP. Domyślnie treść jest zaszyfrowany i podpisany. Dla tego powiązania systemu wymaga podania certyfikatu serwera do klienta poza pasmem. Jedyne prawidłowe `ClientCredentialType` dla tego powiązania jest `Certificate`.|  
-|TransportWithMessageCredential|Uwierzytelnianie integralności, poufności i serwera są dostarczane przez zabezpieczeń transportu. Uwierzytelnianie klienta znajduje się za pomocą zabezpieczeń wiadomości protokołu SOAP. Ten tryb jest istotne, po użytkownik jest uwierzytelniany przy użyciu nazwy użytkownika/hasła istniejącego wdrożenia protokołu HTTP do zabezpieczania transferu komunikatów.|  
-|TransportCredentialOnly|Ten tryb nie zapewnia integralność komunikatów i poufność. Zapewnia uwierzytelnianie oparte na protokole http klienta. W tym trybie, należy używać ostrożnie. Należy używać w środowiskach, gdzie zabezpieczenia transportu jest świadczona w inny sposób (takich jak IPSec), a tylko uwierzytelnianie klientów jest świadczona przez infrastrukturę usługi WCF.|  
+|Brak|-Komunikaty nie są zabezpieczane podczas transferu.|  
+|Transportu|Zabezpieczenia są udostępniane przy użyciu protokołu HTTPS. Komunikaty protokołu SOAP są zabezpieczone przy użyciu protokołu HTTPS. Usługa jest uwierzytelniana na kliencie przy użyciu certyfikatu X. 509 usługi. Klient jest uwierzytelniany przy użyciu dostarczonego obiekt ClientCredentialtype. Zobacz transport [ >\<](transport-of-basichttpbinding.md).|  
+|Message|Zabezpieczenia są udostępniane przy użyciu zabezpieczeń komunikatów protokołu SOAP. Domyślnie treść jest zaszyfrowana i podpisana. W przypadku tego powiązania system wymaga, aby certyfikat serwera został dostarczony do klienta poza pasmem. Jedyna prawidłowa `ClientCredentialType` dla tego powiązania to `Certificate`.|  
+|TransportWithMessageCredential|Integralność, poufność i uwierzytelnianie serwera są udostępniane przez zabezpieczenia transportu. Uwierzytelnianie klienta jest zapewniane przez zabezpieczenia komunikatów protokołu SOAP. Ten tryb jest istotny, gdy użytkownik jest uwierzytelniany przy użyciu nazwy użytkownika/hasła i istnieje wdrożenie HTTP na potrzeby zabezpieczania transferu komunikatów.|  
+|TransportCredentialOnly|Ten tryb nie zapewnia integralności i poufności komunikatów. Zapewnia uwierzytelnianie klienta oparte na protokole HTTP. Ten tryb powinien być używany z zachowaniem ostrożności. Powinna być używana w środowiskach, w których zabezpieczenia transportu są dostarczane przy użyciu innych metod (takich jak IPSec) i tylko uwierzytelnianie klienta jest udostępniane przez infrastrukturę WCF.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)|Określa ustawienia zabezpieczenia transportu podstawowa usługa HTTP. Ten element odnosi się do <xref:System.ServiceModel.HttpTransportSecurity>.|  
-|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)|Definiuje ustawienia zabezpieczeń wiadomości dla podstawowa usługa HTTP. Ten element odnosi się do <xref:System.ServiceModel.BasicHttpMessageSecurity>.|  
+|[\<> transportu](transport-of-basichttpbinding.md)|Definiuje ustawienia zabezpieczeń transportu dla podstawowej usługi HTTP. Ten element odnosi się <xref:System.ServiceModel.HttpTransportSecurity>do.|  
+|[\<message>](message-of-basichttpbinding.md)|Definiuje ustawienia zabezpieczeń wiadomości dla podstawowej usługi HTTP. Ten element odnosi się <xref:System.ServiceModel.BasicHttpMessageSecurity>do.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|powiązanie|Element powiązania [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
+|powiązanie|Element Binding elementu [ \<BasicHttpBinding >](basichttpbinding.md).|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie komunikat protokołu SOAP nie jest zabezpieczony, a klient nie jest uwierzytelniony. Ten element umożliwia konfigurowanie dodatkowych ustawień zabezpieczeń dla `basicHttpBinding` elementu.  
+ Domyślnie komunikat protokołu SOAP nie jest zabezpieczony i klient nie jest uwierzytelniany. Ten element umożliwia skonfigurowanie dodatkowych ustawień zabezpieczeń dla `basicHttpBinding` elementu.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -71,9 +71,9 @@ Definiuje możliwości zabezpieczeń [ \<basicHttpBinding >](../../../../../docs
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>
 - <xref:System.ServiceModel.BasicHttpSecurity>
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Wybieranie typu poświadczeń](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Wybieranie typu poświadczeń](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<> powiązania](../../../misc/binding.md)

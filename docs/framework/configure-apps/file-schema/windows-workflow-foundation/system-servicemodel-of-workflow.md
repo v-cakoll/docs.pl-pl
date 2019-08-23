@@ -1,16 +1,16 @@
 ---
-title: < system.serviceModel > przepływu pracy
+title: < System. serviceModel > przepływu pracy
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 5580bf570c4c728b526bd62109b48c3ccc18943a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: faa8154c4d7ac5c6aa2f9f1707cf8f0d39eefad5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422886"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947367"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel > przepływu pracy
+# <a name="systemservicemodel-of-workflow"></a>\<> System. serviceModel przepływu pracy
 Ta sekcja konfiguracji zawiera wszystkie elementy konfiguracji przepływu pracy.  
   
 ## <a name="syntax"></a>Składnia  
@@ -101,11 +101,11 @@ Ta sekcja konfiguracji zawiera wszystkie elementy konfiguracji przepływu pracy.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowania >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|Ta sekcja definiuje **serviceBehaviors** kolekcji.  Każdy element w kolekcji definiuje zachowanie elementy używane przez usługi. Każdy element zachowanie jest określony przez jego unikatowy **nazwa** atrybutu.|  
-|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usługi przepływu pracy.<br /><br /> Aby uzyskać więcej informacji śledzenia przepływu pracy i jego konfiguracji, zobacz [przepływu pracy i śledzenie](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) i [Konfigurowanie śledzenia przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
+|[\<> zachowań](behaviors-of-workflow.md)|Ta sekcja definiuje kolekcję serviceBehaviors.  Każdy element w kolekcji definiuje zachowanie elementy używane przez usługi. Każdy element zachowania jest identyfikowany przez jego unikatowy atrybut **nazwy** .|  
+|[\<Śledzenie >](tracking.md)|Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usługi przepływu pracy.<br /><br /> Aby uzyskać więcej informacji na temat śledzenia przepływu pracy i jego konfiguracji, zobacz [śledzenie i śledzenie przepływów pracy](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) oraz [Konfigurowanie śledzenia dla przepływu pracy](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|\<Konfiguracja >|Element główny dla wszystkich elementów konfiguracji w PLiku konfiguracji PLatformy .NET.|
+|\<> konfiguracji|Element główny dla wszystkich elementów konfiguracji w PLiku konfiguracji PLatformy .NET.|

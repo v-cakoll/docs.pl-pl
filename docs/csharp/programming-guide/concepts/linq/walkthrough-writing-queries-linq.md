@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 9fa15f1506d2fb22ef6c693508a2cd045f920add
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9b6592405d3047c8663b48137aa5b1f0eb14bdb4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590896"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924109"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Przewodnik: Pisanie zapytań w języku C# (LINQ)
 W C# tym instruktażu przedstawiono funkcje języka, które są używane do pisania wyrażeń zapytań LINQ.  
@@ -20,7 +20,7 @@ W C# tym instruktażu przedstawiono funkcje języka, które są używane do pisa
 ## <a name="create-a-c-project"></a>Utwórz projekt C#  
   
 > [!NOTE]
->  Poniższe instrukcje dotyczą programu Visual Studio. Jeśli używasz innego środowiska programistycznego, Utwórz projekt konsoli z odwołaniem do elementu System. Core. dll i `using` dyrektywy <xref:System.Linq?displayProperty=nameWithType> dla przestrzeni nazw.  
+> Poniższe instrukcje dotyczą programu Visual Studio. Jeśli używasz innego środowiska programistycznego, Utwórz projekt konsoli z odwołaniem do elementu System. Core. dll i `using` dyrektywy <xref:System.Linq?displayProperty=nameWithType> dla przestrzeni nazw.  
   
 #### <a name="to-create-a-project-in-visual-studio"></a>Aby utworzyć projekt w programie Visual Studio  
   

@@ -5,45 +5,45 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: e5d66b49782d5f26b6d487e655aca6fbd6bdfb1a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92db9bdb209a542cc4fa269b35bfa98f8f20d2b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623863"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940089"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Instrukcje: Dynamiczne tworzenie bazy danych
-W składniku LINQ to SQL na model obiektów jest mapowany w relacyjnej bazie danych. Mapowanie jest włączane przy użyciu opartych na atrybutach mapowania lub pliku mapowania zewnętrznych do opisania struktury relacyjnej bazy danych. W obu przypadkach jest za mało informacji na temat relacyjnej bazy danych, możesz utworzyć nowe wystąpienie bazy danych przy użyciu <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metody.  
+W LINQ to SQL model obiektów jest mapowany do relacyjnej bazy danych. Mapowanie jest włączane przy użyciu mapowania opartego na atrybutach lub zewnętrznego pliku mapowania, aby opisać strukturę relacyjnej bazy danych. W obu scenariuszach jest wystarczająco dużo informacji o relacyjnej bazie danych, którą można utworzyć nowe wystąpienie bazy danych przy użyciu <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metody.  
   
- <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> Metoda tworzy replikę bazy danych, w jakim informacji zakodowane w modelu obiektów. Mapowanie plików i atrybuty z modelu obiektów może nie kodowania wszystkie informacje o strukturze istniejącej bazy danych. Informacji o mapowaniu nie reprezentują zawartości, funkcje zdefiniowane przez użytkownika, procedury składowane, wyzwalacze lub ograniczenia check. To zachowanie jest wystarczająca dla różnych baz danych.  
+ <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> Metoda tworzy replikę bazy danych tylko do zakresu informacji zakodowanych w modelu obiektów. Mapowanie plików i atrybutów z modelu obiektów może nie zakodować wszystkiego o strukturze istniejącej bazy danych. Informacje o mapowaniu nie reprezentują zawartości funkcji zdefiniowanych przez użytkownika, procedur składowanych, wyzwalaczy ani ograniczeń check. To zachowanie jest wystarczające dla różnych baz danych.  
   
- Możesz użyć <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metody w dowolnej liczbie scenariuszy, zwłaszcza, jeśli dostawca znanych danych, takich jak Microsoft SQL Server 2008 jest dostępny. Typowe scenariusze obejmują następujące czynności:  
+ <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> Metody można użyć w dowolnej liczbie scenariuszy, zwłaszcza jeśli znany dostawca danych, taki jak Microsoft SQL Server 2008 jest dostępny. Typowe scenariusze obejmują:  
   
 - Tworzysz aplikację, która automatycznie instaluje się w systemie klienta.  
   
-- Tworzysz aplikację kliencką, która wymaga lokalnej bazy danych można zapisać stanu offline.  
+- Tworzysz aplikację kliencką, która wymaga lokalnej bazy danych do zapisania stanu offline.  
   
- Można również użyć <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metody z programem SQL Server przy użyciu pliku MDF lub nazwę katalogu, w zależności od parametrów połączenia. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] używa parametrów połączenia Aby zdefiniować utworzenie bazy danych i bazy danych na serwer, który ma zostać utworzony.  
+ Można również użyć <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metody z SQL Server przy użyciu pliku. mdf lub nazwy wykazu, w zależności od parametrów połączenia. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]program używa parametrów połączenia w celu zdefiniowania bazy danych, która ma zostać utworzona, oraz na serwerze, na którym ma zostać utworzona baza danych.  
   
 > [!NOTE]
->  Możliwe, używaj zintegrowanych zabezpieczeń Windows do łączenia z bazą danych, dzięki czemu hasła nie są wymagane w parametrach połączenia.  
+> Jeśli to możliwe, Użyj zintegrowanych zabezpieczeń systemu Windows do łączenia się z bazą danych, tak aby hasła nie były wymagane w parametrach połączenia.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod zawiera przykład sposobu tworzenia nowej bazy danych o nazwie MyDVDs.mdf.  
+ Poniższy kod przedstawia przykład sposobu tworzenia nowej bazy danych o nazwie moje DVD. mdf.  
   
  [!code-csharp[DLinqSubmittingChanges#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#5)]
  [!code-vb[DLinqSubmittingChanges#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#5)]  
   
 ## <a name="example"></a>Przykład  
- Model obiektów umożliwia tworzenie bazy danych, wykonując następujące czynności:  
+ Aby utworzyć bazę danych, można użyć modelu obiektów, wykonując następujące czynności:  
   
  [!code-csharp[DLinqSubmittingChanges#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#6)]
  [!code-vb[DLinqSubmittingChanges#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#6)]  
   
 ## <a name="example"></a>Przykład  
- Podczas tworzenia aplikacji, które automatycznie instaluje się w systemie klienta, zobacz, czy baza danych już istnieje i upuść go przed utworzeniem nowej. <xref:System.Data.Linq.DataContext> Klasa udostępnia <xref:System.Data.Linq.DataContext.DatabaseExists%2A> i <xref:System.Data.Linq.DataContext.DeleteDatabase%2A> metody ułatwiające przeprowadzenie tego procesu.  
+ Podczas kompilowania aplikacji, która automatycznie instaluje się w systemie klienta, sprawdź, czy baza danych już istnieje i upuść ją przed utworzeniem nowej. Klasa zawiera metody<xref:System.Data.Linq.DataContext.DeleteDatabase%2A> i, które ułatwiają przetworzenie tego procesu. <xref:System.Data.Linq.DataContext.DatabaseExists%2A> <xref:System.Data.Linq.DataContext>  
   
- Poniższy przykład przedstawia jeden ze sposobów osiągnięcia tych metod może służyć do wdrożenia tego rozwiązania:  
+ W poniższym przykładzie pokazano jeden z metod, których można użyć do wdrożenia tego podejścia:  
   
  [!code-csharp[DLinqSubmittingChanges#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#7)]
  [!code-vb[DLinqSubmittingChanges#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#7)]  

@@ -16,43 +16,43 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a30f10e322961d52c1fa726d5fd81e4c710a5835
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d245afe2d34c06a5bb9ca39b1c0dd4924fadada
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699633"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911249"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool — Interfejs
-Udostępnia metody do uzyskiwania dostępu do puli wątków.  
+Zapewnia metody uzyskiwania dostępu do puli wątków.  
   
 > [!NOTE]
->  Ten interfejs jest zarezerwowana tylko do użytku wewnętrznego.  
+> Ten interfejs jest zarezerwowany wyłącznie do użytku wewnętrznego.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[CorRegisterWaitForSingleObject, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corregisterwaitforsingleobject-method.md)|Zarezerwowana tylko do użytku wewnętrznego.|  
-|[CorUnregisterWait, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corunregisterwait-method.md)|Zarezerwowana tylko do użytku wewnętrznego.|  
-|[CorQueueUserWorkItem, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md)|Zarezerwowana tylko do użytku wewnętrznego.|  
-|[CorCreateTimer, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcreatetimer-method.md)|Zarezerwowana tylko do użytku wewnętrznego.|  
-|[CorChangeTimer, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corchangetimer-method.md)|Zarezerwowana tylko do użytku wewnętrznego.|  
-|[CorDeleteTimer, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-cordeletetimer-method.md)|Zarezerwowana tylko do użytku wewnętrznego.|  
-|[CorBindIoCompletionCallback, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corbindiocompletioncallback-method.md)|Zarezerwowana tylko do użytku wewnętrznego.|  
-|[CorCallOrQueueUserWorkItem, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcallorqueueuserworkitem-method.md)|Zarezerwowana tylko do użytku wewnętrznego.|  
-|[CorSetMaxThreads, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md)|Zarezerwowana tylko do użytku wewnętrznego.|  
-|[CorGetMaxThreads, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetmaxthreads-method.md)|Zarezerwowana tylko do użytku wewnętrznego.|  
-|[CorGetAvailableThreads, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|Zarezerwowana tylko do użytku wewnętrznego.|  
+|[CorRegisterWaitForSingleObject, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corregisterwaitforsingleobject-method.md)|Zarezerwowane wyłącznie do użytku wewnętrznego.|  
+|[CorUnregisterWait, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corunregisterwait-method.md)|Zarezerwowane wyłącznie do użytku wewnętrznego.|  
+|[CorQueueUserWorkItem, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md)|Zarezerwowane wyłącznie do użytku wewnętrznego.|  
+|[CorCreateTimer, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcreatetimer-method.md)|Zarezerwowane wyłącznie do użytku wewnętrznego.|  
+|[CorChangeTimer, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corchangetimer-method.md)|Zarezerwowane wyłącznie do użytku wewnętrznego.|  
+|[CorDeleteTimer, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-cordeletetimer-method.md)|Zarezerwowane wyłącznie do użytku wewnętrznego.|  
+|[CorBindIoCompletionCallback, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corbindiocompletioncallback-method.md)|Zarezerwowane wyłącznie do użytku wewnętrznego.|  
+|[CorCallOrQueueUserWorkItem, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcallorqueueuserworkitem-method.md)|Zarezerwowane wyłącznie do użytku wewnętrznego.|  
+|[CorSetMaxThreads, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md)|Zarezerwowane wyłącznie do użytku wewnętrznego.|  
+|[CorGetMaxThreads, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetmaxthreads-method.md)|Zarezerwowane wyłącznie do użytku wewnętrznego.|  
+|[CorGetAvailableThreads, metoda](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|Zarezerwowane wyłącznie do użytku wewnętrznego.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówki** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

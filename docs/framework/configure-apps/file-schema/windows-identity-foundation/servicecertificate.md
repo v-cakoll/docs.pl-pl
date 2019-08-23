@@ -3,19 +3,19 @@ title: <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
-ms.openlocfilehash: 328d074f9edc5ddf871308a7e3d694bf94adea78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3aba5618855f7225dc8a427516eaa72b45f6e8b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793825"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942413"
 ---
-# <a name="servicecertificate"></a>\<serviceCertificate>
-Określa certyfikat X.509, który jest używany do szyfrowania i odszyfrowywania tokenów.  
+# <a name="servicecertificate"></a>\<> serviceCertificate
+Konfiguruje certyfikat X. 509, który jest używany do szyfrowania i odszyfrowywania tokenów.  
   
  \<system.identityModel.services>  
 \<federationConfiguration>  
-\<serviceCertificate>  
+\<> serviceCertificate  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,16 +38,16 @@ Określa certyfikat X.509, który jest używany do szyfrowania i odszyfrowywania
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<certificateReference >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatereference.md)|Określa ustawienia, które są używane do znalezienia i sprawdź poprawność certyfikatu X.509 w magazynie certyfikatów.|  
+|[\<certificateReference >](certificatereference.md)|Określa ustawienia, które są używane do znajdowania i weryfikowania certyfikatu X. 509 w magazynie certyfikatów.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Zawiera ustawienia, które skonfigurować <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) i <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
+|[\<federationConfiguration>](federationconfiguration.md)|Zawiera ustawienia, które konfigurują <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) <xref:System.IdentityModel.Services.SessionAuthenticationModule> i (sam).|  
   
 ## <a name="example"></a>Przykład  
- Następujący kody XML pokazuje użycie \<serviceCertificate > element. Kod XML jest pobierana z `CustomToken` próbki.  
+ Poniższy kod XML przedstawia użycie \<elementu serviceCertificate >. Kod XML jest pobierany z `CustomToken` przykładu.  
   
 ```xml  
 <serviceCertificate>  

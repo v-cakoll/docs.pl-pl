@@ -2,20 +2,20 @@
 title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 125baba917a49135aaa426df2cfa1a4dbe8ac1e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5cb64c54067ba695f67d86c0026db77ebbe7d5ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700913"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919050"
 ---
 # <a name="endpointdiscovery"></a>\<endpointDiscovery>
-Określa różne ustawienia odkrywania dla punktu końcowego, takie jak jego wykrywalność, zakresy i wszystkich jego rozszerzenia niestandardowe dla jego metadanych.  
+Określa różne ustawienia odnajdywania dla punktu końcowego, takie jak jego wykrywalność, zakresy i wszelkie niestandardowe rozszerzenia do swoich metadanych.  
   
 \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<endpointBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<endpointDiscovery>  
   
 ## <a name="syntax"></a>Składnia  
@@ -42,30 +42,30 @@ Określa różne ustawienia odkrywania dla punktu końcowego, takie jak jego wyk
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|Włączone|Wartość logiczna określająca czy odkrywanie jest włączone dla tego punktu końcowego. Wartość domyślna to `false`.|  
+|dostępny|Wartość logiczna określająca, czy wykrywalność jest włączona w tym punkcie końcowym. Wartość domyślna to `false`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zakresy >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Kolekcja zakres identyfikatorów URI dla punktu końcowego. Więcej niż jednego zakresu identyfikatorów URI może być skojarzony z jednym punktem końcowym.|  
-|[\<Rozszerzenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [z \<endpointDiscovery >]|Kolekcja elementów XML umożliwia określenie niestandardowych metadanych do opublikowania dla punktu końcowego.|  
-|\<types>|Kolekcja interfejsów do wyszukania.|  
+|[\<zakresy >](scopes.md)|Kolekcja identyfikatorów URI zakresu dla punktu końcowego. Więcej niż jeden identyfikator URI zakresu może być skojarzony z jednym punktem końcowym.|  
+|rozszerzenia > [z \<endpointDiscovery >] [ \<](extensions.md)|Kolekcja elementów XML, która umożliwia określenie niestandardowych metadanych do opublikowania dla punktu końcowego.|  
+|\<typy >|Kolekcja interfejsów do wyszukania.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
+|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
 |||  
   
 ## <a name="remarks"></a>Uwagi  
- Po dodaniu konfiguracji zachowanie punktu końcowego i za pomocą `enabled` ustawioną wartość atrybutu `true`, ten element konfiguracji umożliwia jego wykrywalność. Ponadto można użyć [ \<zakresy >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)element podrzędny do określania niestandardowy zakres identyfikatorów URI, który może służyć do filtrowania punktów końcowych usługi podczas zapytania, jak również [ \<rozszerzenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) element podrzędny do określania niestandardowych metadanych, które powinny być publikowane wraz ze standardowego wykrywalny metadanych (EPR, ContractTypeName, BindingName, zakresu i identyfikatorze ListenURI).  
+ Po dodaniu do konfiguracji zachowania punktu końcowego i z `enabled` atrybutem ustawionym na `true`, ten element konfiguracji umożliwia odnajdywanie. Ponadto można użyć [ \<zakresów >](scopes.md)elementu podrzędnego, aby określić niestandardowe identyfikatory URI, których można użyć do filtrowania punktów końcowych usługi podczas zapytania, a także [ \<rozszerzenia >](extensions.md) elementu podrzędnego, aby określić niestandardowe metadane, które powinny być publikowane wraz ze standardowym odnajdywaniem metadanych (EPR, ContractTypeName, BindingName, Scope i ListenURI).  
   
- Ten element konfiguracji jest zależny od [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element, który zapewnia kontrolę odnajdowanie w systemach z poziomu usługi. Oznacza to, że ustawienia tego elementu są ignorowane w przypadku [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) nie jest obecny w konfiguracji.  
+ Ten element konfiguracji jest zależny od [ \<elementu > servicediscovery](servicediscovery.md) , który zapewnia kontrolę poziomu usług odnajdowania. Oznacza to, że ustawienia tego elementu są ignorowane, [ \<](servicediscovery.md) Jeśli w konfiguracji nie ma > servicediscovery.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie konfiguracja określa filtrowania zakresów i metadane rozszerzenia do opublikowania dla punktu końcowego.  
+ Poniższy przykład konfiguracji określa zakresy filtrowania i metadane rozszerzenia do opublikowania dla punktu końcowego.  
   
 ```xml  
 <services>

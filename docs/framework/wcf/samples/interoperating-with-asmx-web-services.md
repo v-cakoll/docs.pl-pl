@@ -2,22 +2,22 @@
 title: Współdziałanie z usługami sieci Web ASMX
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: 327cb3f376ef37278d8ea58f32fdb8eeb7b67c51
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9689210a0e5d0e355ad384f66c6f19637a77a072
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989875"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929097"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>Współdziałanie z usługami sieci Web ASMX
-Niniejszy przykład pokazuje, jak zintegrować aplikacji klienckiej Windows Communication Foundation (WCF) z istniejącej usługi sieci Web ASMX.  
+Ten przykład pokazuje, jak zintegrować aplikację kliencką Windows Communication Foundation (WCF) z istniejącą usługą sieci Web ASMX.  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- W tym przykładzie składa się z konsoli programu klienckiego (.exe) i usługi biblioteki (.dll), hostowanej przez Internetowe usługi informacyjne (IIS). Usługa jest usługą sieci Web ASMX, implementujący kontrakt definiujący wzorzec komunikacji "żądanie-odpowiedź". Usługa udostępnia operacje matematyczne (`Add`, `Subtract`, `Multiply`, i `Divide`). Klient wysyła żądań synchronicznych operacji matematycznych i odpowiedzi usługi z wynikiem. Aktywność klienta jest widoczna w oknie konsoli.  
+ Ten przykład składa się z programu konsolowego klienta (exe) i biblioteki usług (. dll) hostowanej przez Internet Information Services (IIS). Usługa jest usługą sieci Web ASMX, która implementuje kontrakt definiujący wzorzec komunikacji z odpowiedzią na żądanie. Usługa udostępnia operacje matematyczne (`Add`, `Subtract`, `Multiply`i `Divide`). Klient wysyła żądania synchroniczne do operacji matematycznej, a usługa w odpowiedzi na wynik. Aktywność klienta jest widoczna w oknie konsoli.  
   
- Pokazano w poniższym przykładowym kodzie implementacji usługi sieci Web ASMX oblicza i zwraca odpowiedni wynik.  
+ Implementacja usługi sieci Web ASMX pokazana w poniższym przykładowym kodzie oblicza i zwraca odpowiedni wynik.  
   
 ```csharp  
 [WebService(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -46,15 +46,15 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- Zgodnie z konfiguracją, usługi mogą być wyświetlane w `http://localhost/servicemodelsamples/service.asmx` przez klienta na tym samym komputerze. Dla klientów na komputerach zdalnych w celu uzyskania dostępu do usługi należy określić w kwalifikowanej nazwy domeny zamiast nazwy localhost.  
+ Zgodnie z konfiguracją usługa może być dostępna `http://localhost/servicemodelsamples/service.asmx` przez klienta programu na tym samym komputerze. Aby klienci na komputerach zdalnych mogli uzyskać dostęp do usługi, należy określić kwalifikowaną nazwę domeny zamiast hosta lokalnego.  
   
- Komunikacja odbywa się za pośrednictwem klienta generowany przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Klient znajduje się w generatedClient.cs pliku. Usługa ASMX muszą być dostępne do generowania kodu serwera proxy, ponieważ jest używany do pobierania zaktualizowanych metadanych. Uruchom następujące polecenie w wierszu polecenia w katalogu klienta można wygenerować typizowanego serwera proxy.  
+ Komunikacja odbywa się za pomocą klienta wygenerowanego przez narzędzie do obsługi [metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Klient jest zawarty w pliku generatedClient.cs. Usługa ASMX musi być dostępna do wygenerowania kodu serwera proxy, ponieważ służy do pobierania zaktualizowanych metadanych. Uruchom następujące polecenie w wierszu polecenia w katalogu klienta, aby wygenerować serwer proxy z określonym typem.  
   
 ```  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedClient.cs  
 ```  
   
- Za pomocą wygenerowanego klienta, możesz uzyskać dostęp punktu końcowego usługi, należy skonfigurować odpowiedni adres i powiązanie. Jak usługa Klient korzysta z plikiem konfiguracyjnym (App.config) do określania punktu końcowego do komunikowania się z. Konfiguracja punktu końcowego klienta składa się z adresem bezwzględnym dla punktu końcowego usługi, powiązanie i umowy, jak pokazano w poniższym Przykładowa konfiguracja.  
+ Korzystając z wygenerowanego klienta, można uzyskać dostęp do punktu końcowego usługi przez skonfigurowanie odpowiedniego adresu i powiązania. Podobnie jak w przypadku usługi, klient używa pliku konfiguracji (App. config), aby określić punkt końcowy do komunikacji. Konfiguracja punktu końcowego klienta składa się z adresu bezwzględnego dla punktu końcowego usługi, powiązania i kontraktu, jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
 <client>  
@@ -65,7 +65,7 @@ svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samp
 </client>  
 ```  
   
- Implementacja klienta tworzy wystąpienie klasy wygenerowanego klienta. Wygenerowanego klienta mogą następnie służyć do komunikacji z usługą.  
+ Implementacja klienta tworzy wystąpienie wygenerowanego klienta. Wygenerowany klient może być następnie używany do komunikowania się z usługą.  
   
 ```csharp  
 // Create a client.  
@@ -103,7 +103,7 @@ Console.WriteLine("Press <ENTER> to terminate client.");
 Console.ReadLine();  
 ```  
   
- Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -114,19 +114,19 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  

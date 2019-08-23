@@ -1,5 +1,5 @@
 ---
-title: Projekcje zapytania (WCF Data Services)
+title: Projekcje zapytań (Usługi danych programu WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,60 +10,60 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 2e4c40d6c71a254d5f40ea42788608e10c5872a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44e99db2d75fcd8e84f91f0afc8da54ff6c3f707
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774624"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931167"
 ---
-# <a name="query-projections-wcf-data-services"></a>Projekcje zapytania (WCF Data Services)
+# <a name="query-projections-wcf-data-services"></a>Projekcje zapytań (Usługi danych programu WCF)
 
-Projekcja udostępnia mechanizm w [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] zmniejszenie ilości danych w źródle danych zwróconych przez zapytanie, określając, że zwracane są tylko niektóre właściwości jednostki w odpowiedzi. Aby uzyskać więcej informacji, zobacz [OData: Wybierz opcję zapytania systemu ($select)](https://go.microsoft.com/fwlink/?LinkId=186076).
+Projekcja udostępnia mechanizm w [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] celu zmniejszenia ilości danych w strumieniu informacyjnym zwracanym przez zapytanie przez określenie, że tylko niektóre właściwości jednostki są zwracane w odpowiedzi. Aby uzyskać więcej informacji, [zobacz OData: Wybierz opcję kwerendy systemowej ($select](https://go.microsoft.com/fwlink/?LinkId=186076)).
 
-W tym temacie opisano, jak zdefiniować projekcji zapytań, jakie wymagania są dostępne dla jednostki i typu innego niż jednostka, dzięki czemu aktualizuje przewidywane wyniki, tworzenie typów przewidywane i wymieniono kilka kwestii projekcji.
+W tym temacie opisano, jak zdefiniować projekcję zapytania, jakie są wymagania dotyczące jednostek i typów niezwiązanych z jednostkami, wprowadzać aktualizacje przewidywanych wyników, tworzyć projekcje typy i wymieniać niektóre zagadnienia dotyczące projekcji.
 
-## <a name="defining-a-query-projection"></a>Definiowanie projekcji zapytań
+## <a name="defining-a-query-projection"></a>Definiowanie projekcji zapytania
 
-Możesz dodać klauzulę projekcji do zapytania przy użyciu `$select` zapytania w identyfikatorze URI lub za pomocą [wybierz](~/docs/csharp/language-reference/keywords/select-clause.md) — klauzula ([wybierz](~/docs/visual-basic/language-reference/queries/select-clause.md) w języku Visual Basic) w zapytaniu programu LINQ. Zwrócone jednostki danych może być przekazywany do typy jednostek i typów innych niż jednostek na komputerze klienckim. Przykłady w tym temacie prezentują sposób użycia `select` klauzuli w zapytaniu LINQ.
+Do zapytania można dodać klauzulę projekcji przy użyciu `$select` opcji zapytania w identyfikatorze URI lub przy użyciu klauzuli [SELECT](../../../csharp/language-reference/keywords/select-clause.md) ([SELECT](../../../visual-basic/language-reference/queries/select-clause.md) in Visual Basic) w zapytaniu LINQ. Zwrócone dane jednostki mogą być rzutowane na typy jednostek lub typy niezwiązane z jednostką na kliencie. Przykłady w tym temacie przedstawiają sposób użycia `select` klauzuli w zapytaniu LINQ.
 
 > [!IMPORTANT]
-> Po zapisaniu aktualizacji, które zostały wprowadzone do typów przewidywanych w usłudze danych może dojść do utraty danych. Aby uzyskać więcej informacji, zobacz [zagadnienia projekcji](#considerations).
+> Utrata danych może wystąpić w usłudze danych podczas zapisywania aktualizacji, które zostały wprowadzone do przewidywanych typów. Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące projekcji](#considerations).
 
-## <a name="requirements-for-entity-and-non-entity-types"></a>Wymagania dotyczące jednostek i typów innych niż jednostek
+## <a name="requirements-for-entity-and-non-entity-types"></a>Wymagania dotyczące jednostek i typów niebędących jednostkami
 
-Typy jednostek musi mieć jedną lub więcej właściwości tożsamości, które tworzą klucz jednostki. Typy jednostek są definiowane na komputerach klienckich w jednej z następujących sposobów:
+Typy jednostek muszą mieć co najmniej jedną właściwość tożsamości, która składa się z klucza jednostki. Typy jednostek są zdefiniowane na klientach w jeden z następujących sposobów:
 
-- Stosując <xref:System.Data.Services.Common.DataServiceKeyAttribute> lub <xref:System.Data.Services.Common.DataServiceEntityAttribute> do typu.
+- Stosując <xref:System.Data.Services.Common.DataServiceKeyAttribute> lub<xref:System.Data.Services.Common.DataServiceEntityAttribute> do typu.
 
-- Jeśli typ ma właściwość o nazwie `ID`.
+- Gdy typ ma właściwość o nazwie `ID`.
 
-- Jeśli typ ma właściwość o nazwie *typu*`ID`, gdzie *typu* jest nazwą typu.
+- Gdy typ ma właściwość o nazwie`ID`Type, gdzie *Type* jest nazwą typu.
 
-Domyślnie gdy projekt wyników zapytania do typu zdefiniowanego po stronie klienta właściwości wymaganych w projekcji musi istnieć w typ klienta. Jednak po określeniu wartości `true` dla <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> właściwość <xref:System.Data.Services.Client.DataServiceContext>, właściwości określonych w projekcji nie muszą występować w typ klienta.
+Domyślnie podczas tworzenia projektu wyników zapytania do typu zdefiniowanego na kliencie właściwości wymagane w projekcji muszą istnieć w typie klienta. Jeśli jednak określisz wartość `true` <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> właściwości <xref:System.Data.Services.Client.DataServiceContext>, właściwości określone w projekcji nie są wymagane do wystąpienia w typie klienta.
 
-### <a name="making-updates-to-projected-results"></a>Wprowadzanie aktualizacji przewidywane wyniki
+### <a name="making-updates-to-projected-results"></a>Wprowadzanie aktualizacji rzutowanych wyników
 
-Gdy projekt wyników zapytania do typów jednostek na kliencie, <xref:System.Data.Services.Client.DataServiceContext> można śledzić tych obiektów za pomocą aktualizacji do wysłania do danych usługi, kiedy <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> metoda jest wywoływana. Jednak aktualizacje, które zostały wprowadzone dane przedstawione typu innego niż jednostka na kliencie nie można wysłać do usługi danych. Jest to spowodowane bez klucza do identyfikowania wystąpienia jednostki, usługi danych nie można zaktualizować prawidłowe jednostki w źródle danych. Typy non jednostek nie są dołączone do <xref:System.Data.Services.Client.DataServiceContext>.
+Podczas tworzenia projektu wyników zapytania w typach jednostek na kliencie <xref:System.Data.Services.Client.DataServiceContext> można śledzić te obiekty z aktualizacjami, które zostaną wysłane z powrotem do usługi danych <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> po wywołaniu metody. Jednak aktualizacje wprowadzane do danych rzutowanych na typy niebędące jednostkami na kliencie nie mogą być wysyłane z powrotem do usługi danych. Jest to spowodowane brakiem klucza do zidentyfikowania wystąpienia jednostki, ponieważ usługa danych nie może zaktualizować prawidłowej jednostki w źródle danych. Typy inne niż jednostki nie są dołączone do <xref:System.Data.Services.Client.DataServiceContext>elementu.
 
-W przypadku przynajmniej jednej właściwości zdefiniowane w usłudze danych typu jednostki, nie występują w typie klienta, w którym przewidywany jest jednostka wstawia nowe jednostki nie będzie zawierać te brakujące właściwości. W tym przypadku będzie aktualizacji, które zostały wprowadzone do istniejących jednostek **również** nie zawierają tych brakuje właściwości. Jeśli wartość istnieje dla takich właściwości, aktualizacji Ponadto resetuje ją na wartość domyślną dla właściwości, zgodnie z definicją w źródle danych.
+Gdy co najmniej jedna z właściwości typu jednostki zdefiniowanego w usłudze danych nie występuje w typie klienta, do którego jest rzutowana jednostka, wstawienia nowych jednostek nie będą zawierać tych brakujących właściwości. W takim przypadku aktualizacje wprowadzane do istniejących jednostek **również** nie będą zawierać tych brakujących właściwości. Gdy dla takiej właściwości istnieje wartość, aktualizacja resetuje ją do wartości domyślnej właściwości, zgodnie z definicją w źródle danych.
 
-### <a name="creating-projected-types"></a>Tworzenie typów przewidywany
+### <a name="creating-projected-types"></a>Tworzenie typów projekcji
 
-W poniższym przykładzie użyto anonimowe zapytania LINQ, która projektów związanych z adresem właściwości `Customers` typu w nowym `CustomerAddress` typ, który jest zdefiniowany na kliencie i jest określane jako typ jednostki:
+W poniższym przykładzie jest używane anonimowe zapytanie LINQ, które tworzy projekty właściwości `Customers` związanych z adresem typu w nowym `CustomerAddress` typie, który jest zdefiniowany na kliencie i jest przypisany jako typ jednostki:
 
 [!code-csharp[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#selectcustomeraddressspecific)]
 [!code-vb[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#selectcustomeraddressspecific)]
 
-W tym przykładzie wzór inicjatora obiektu jest używany do utworzenia nowego wystąpienia `CustomerAddress` typu zamiast wywoływania konstruktora. Konstruktory nie są obsługiwane podczas projekcji do typów jednostek, ale mogą być używane podczas projekcji do typu innego niż jednostka i anonimowe. Ponieważ `CustomerAddress` jest typem jednostki, zmiany mogą być wykonywane i wysyłane z powrotem do usługi danych.
+W tym przykładzie wzorzec inicjatora obiektów jest używany do utworzenia nowego wystąpienia `CustomerAddress` typu zamiast wywołania konstruktora. Konstruktory nie są obsługiwane podczas projekcji w typach jednostek, ale mogą być używane podczas projekcji do typów nienależących do jednostki i anonimowe. Ponieważ `CustomerAddress` jest typem jednostki, zmiany mogą być wprowadzane i wysyłane z powrotem do usługi danych.
 
-Ponadto dane z `Customer` typu jest rzutowany jako wystąpienia elementu `CustomerAddress` typu jednostki, a nie typu anonimowego. Projekcja do typów anonimowych jest obsługiwane, ale dane jest tylko do odczytu, ponieważ typy anonimowe są traktowane jako typu innego niż jednostka.
+Ponadto dane z `Customer` typu są rzutowane na wystąpienie `CustomerAddress` typu jednostki zamiast typu anonimowego. Obsługiwane są projekcje w typach anonimowych, ale dane są tylko do odczytu, ponieważ typy anonimowe są traktowane jako typy niebędące jednostkami.
 
-<xref:System.Data.Services.Client.MergeOption> Ustawienia <xref:System.Data.Services.Client.DataServiceContext> są używane do rozpoznawania tożsamości podczas projekcji zapytań. Oznacza to, że jeśli wystąpienie `Customer` typ już istnieje w <xref:System.Data.Services.Client.DataServiceContext>, wystąpienie `CustomerAddress` z tą samą tożsamością będą zgodne z reguły ustawione przez rozwiązanie tożsamości <xref:System.Data.Services.Client.MergeOption>
+<xref:System.Data.Services.Client.MergeOption> Ustawienia<xref:System.Data.Services.Client.DataServiceContext> są używane do rozpoznawania tożsamości podczas projekcji zapytania. Oznacza to, że jeśli wystąpienie `Customer` typu już istnieje <xref:System.Data.Services.Client.DataServiceContext>w, wystąpienie `CustomerAddress` o tej samej tożsamości będzie zgodne z regułami rozpoznawania tożsamości ustawionymi przez<xref:System.Data.Services.Client.MergeOption>
 
-Poniżej opisano zachowania podczas przedstawiania wyników na typy jednostek i innego niż jednostka:
+Poniżej opisano zachowania podczas projekcji wyników do jednostek i typów nienależących do jednostek:
 
-**Tworzenie nowego wystąpienia przewidywany przy użyciu inicjatorów**
+**Tworzenie nowego projektu wystąpienia przy użyciu inicjatorów**
 
 - Przykład:
 
@@ -72,49 +72,49 @@ Poniżej opisano zachowania podczas przedstawiania wyników na typy jednostek i 
 
 - Typ jednostki: Obsługiwane
 
-- Typ jednostki inne niż: Obsługiwane
+- Typ niebędący jednostką: Obsługiwane
 
-**Tworzenie nowego wystąpienia przewidywany za pomocą konstruktorów**
+**Tworzenie nowego projektu wystąpienia przy użyciu konstruktorów**
 
 - Przykład:
 
    [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithconstructor)]
    [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithconstructor)]
 
-- Typ jednostki: Element <xref:System.NotSupportedException> jest wywoływane.
+- Typ jednostki: <xref:System.NotSupportedException> Jest wywoływany.
 
-- Typ jednostki inne niż: Obsługiwane
+- Typ niebędący jednostką: Obsługiwane
 
-**Przy użyciu projekcji, aby przekształcić wartości właściwości**
+**Przekształcanie wartości właściwości przy użyciu projekcji**
 
 - Przykład:
 
    [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithtransform)]
    [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithtransform)]
 
-- Typ jednostki: Ta transformacja nie jest obsługiwana dla typów jednostek, ponieważ może to prowadzić do nieporozumień i potencjalnie zastąpienie danych w źródle danych, który należy do innej jednostki. Element <xref:System.NotSupportedException> jest wywoływane.
+- Typ jednostki: Ta transformacja nie jest obsługiwana w przypadku typów jednostek, ponieważ może to prowadzić do pomyłek i może zastępowanie danych w źródle danych, które należą do innej jednostki. <xref:System.NotSupportedException> Jest wywoływany.
 
-- Typ jednostki inne niż: Obsługiwane
+- Typ niebędący jednostką: Obsługiwane
 
 <a name="considerations"></a>
 
 ## <a name="projection-considerations"></a>Zagadnienia dotyczące projekcji
 
-Następujące dodatkowe kwestie podczas definiowania projekcji zapytań.
+Podczas definiowania projekcji zapytania należy stosować następujące zagadnienia dodatkowe.
 
-- Podczas definiowania niestandardowego źródła danych dla formatu Atom, należy się upewnić, że wszystkie właściwości jednostki, które mają niestandardowe mapowania zdefiniowane są uwzględniane w projekcji danych. Gdy właściwość zamapowanego jednostki nie jest uwzględniony w projekcji, może dojść do utraty danych. Aby uzyskać więcej informacji, zobacz [kanału informacyjnego dostosowywania](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).
+- Podczas definiowania niestandardowych kanałów informacyjnych dla formatu Atom należy upewnić się, że wszystkie właściwości jednostki, które mają zdefiniowane niestandardowe mapowania, są zawarte w projekcji. Gdy właściwość mapowanego obiektu nie jest uwzględniona w projekcji, może dojść do utraty danych. Aby uzyskać więcej informacji, zobacz temat [Dostosowywanie kanału informacyjnego](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).
 
-- Podczas wstawiania zostaną wprowadzone do przewidywanego typu, który nie zawiera wszystkich właściwości jednostki w modelu danych usługi danych, właściwości nie są uwzględnione w projekcji po stronie klienta są ustawione na wartości domyślne.
+- Gdy operacje wstawiania są wprowadzane do typu przewidywanego, który nie zawiera wszystkich właściwości jednostki w modelu danych usługi danych, właściwości, które nie są uwzględnione w projekcji na kliencie, są ustawiane na wartości domyślne.
 
-- Gdy aktualizacje zostaną wprowadzone do przewidywanego typu, który nie zawiera wszystkich właściwości jednostki w modelu danych usługi danych, istniejące wartości, które nie są uwzględnione w projekcji na kliencie zostaną zastąpione wartościami domyślnymi niezainicjowany.
+- Gdy aktualizacje są wprowadzane do typu przewidywanego, który nie zawiera wszystkich właściwości jednostki w modelu danych usługi danych, istniejące wartości, które nie są uwzględnione w projekcji na kliencie, zostaną zastąpione zainicjowanymi wartościami domyślnymi.
 
-- Podczas projekcji zawiera właściwość typu złożonego, należy ponownie całego obiektu złożonego.
+- Gdy projekcja zawiera złożoną właściwość, należy zwrócić cały obiekt złożony.
 
-- Podczas projekcji zawiera właściwość nawigacji, powiązane obiekty są ładowane niejawnie, bez konieczności <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metody. <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> Metoda do użycia w zapytaniu przewidywany jest nieobsługiwana.
+- Gdy projekcja zawiera właściwość nawigacji, powiązane obiekty są ładowane niejawnie bez konieczności wywoływania <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metody. <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> Metoda nie jest obsługiwana w zapytaniach rzutowanych.
 
-- Kwerend projekcji zapytań na komputerze klienckim są tłumaczone na użyj `$select` zapytania opcji w identyfikatorze URI żądania. Gdy zapytanie o projekcji jest wykonywane względem poprzedniej wersji [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , który nie obsługuje `$select` opcji zapytania zostanie zwrócony błąd. Przyczyną może też być podczas <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> z <xref:System.Data.Services.DataServiceBehavior> danych usługa jest ustawiona na wartość <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).
+- Zapytania o projekcje zapytań na kliencie są tłumaczone na użycie `$select` opcji zapytania w identyfikatorze URI żądania. Gdy zapytanie z projekcją jest wykonywane względem poprzedniej wersji [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , która nie `$select` obsługuje opcji zapytania, zwracany jest błąd. Taka sytuacja może mieć miejsce, <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> gdy <xref:System.Data.Services.DataServiceBehavior> dla usługi dla danych <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>ustawiono wartość. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).
 
-Aby uzyskać więcej informacji, zobacz [jak: Projekt wyników zapytania](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).
+Aby uzyskać więcej informacji, zobacz [jak: Wyniki](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)zapytania projektu.
 
 ## <a name="see-also"></a>Zobacz także
 

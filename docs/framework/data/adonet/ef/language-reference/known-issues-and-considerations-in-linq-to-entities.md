@@ -5,76 +5,76 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 66af3395d7ba7271323ad6461e8e1fb8c823a1c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662146"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913900"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Znane problemy i zagadnienia dotyczące składnika LINQ to Entities
-Ta sekcja zawiera informacje o znanych problemach, za pomocą LINQ do zapytań jednostki.  
+Ta sekcja zawiera informacje o znanych problemach dotyczących LINQ to Entities zapytań.  
   
-- [Nie można buforować LINQ zapytań](#LINQQueriesThatAreNotCached)  
+- [Zapytania LINQ, które nie mogą być buforowane](#LINQQueriesThatAreNotCached)  
   
-- [Kolejność utraty informacji](#OrderingInfoLost)  
+- [Utracone informacje o uporządkowaniu](#OrderingInfoLost)  
   
-- [Liczb całkowitych bez znaku, nie jest obsługiwane](#UnsignedIntsUnsupported)  
+- [Liczby całkowite bez znaku są nieobsługiwane](#UnsignedIntsUnsupported)  
   
-- [Błędy konwersji typu](#TypeConversionErrors)  
+- [Błędy konwersji typów](#TypeConversionErrors)  
   
-- [Odwoływanie się do zmiennych nieskalarnego nieobsługiwane](#RefNonScalarClosures)  
+- [Odwołania do zmiennych nieskalarnych nie są obsługiwane](#RefNonScalarClosures)  
   
-- [Zapytania zagnieżdżone może zakończyć się niepowodzeniem z programem SQL Server 2000](#NestedQueriesSQL2000)  
+- [Zapytania zagnieżdżone mogą zakończyć się niepowodzeniem z SQL Server 2000](#NestedQueriesSQL2000)  
   
-- [Wyświetlanie na typ anonimowy](#ProjectToAnonymousType)  
+- [Projekcja do typu anonimowego](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
-## <a name="linq-queries-that-cannot-be-cached"></a>Nie można buforować LINQ zapytań  
- Począwszy od programu .NET Framework 4.5, programu LINQ do jednostek zapytań są automatycznie buforowane. Jednak LINQ do zapytań jednostki, stosowane `Enumerable.Contains` operator z kolekcjami w pamięci nie są automatycznie buforowane. Również parametryzacja kolekcji w skompilowanych zapytań LINQ w pamięci nie jest dozwolone.  
+## <a name="linq-queries-that-cannot-be-cached"></a>Zapytania LINQ, które nie mogą być buforowane  
+ Począwszy od .NET Framework 4,5, zapytania LINQ to Entities są buforowane automatycznie. Jednak LINQ to Entities zapytania, które stosują `Enumerable.Contains` operator do kolekcji w pamięci, nie są automatycznie buforowane. Parametryzacja również kolekcje w pamięci w skompilowanych zapytaniach LINQ są niedozwolone.  
   
 <a name="OrderingInfoLost"></a>   
-## <a name="ordering-information-lost"></a>Kolejność utraty informacji  
- Projekcji kolumn do typu anonimowego spowoduje, że informacje o zamówieniach spowodować utratę niektórych kwerend, które są wykonywane względem bazy danych programu SQL Server 2005 ustawione na poziom zgodności, "80".  Operacja wykonywana, gdy nazwa kolumny, na liście klauzuli order by pasuje do nazwy kolumny w selektorze, jak pokazano w poniższym przykładzie:  
+## <a name="ordering-information-lost"></a>Utracone informacje o uporządkowaniu  
+ Projekcja kolumn na typ anonimowy spowoduje utratę informacji o uporządkowaniu w niektórych zapytaniach, które są wykonywane w odniesieniu do bazy danych SQL Server 2005 z ustawionym poziomem zgodności równym "80".  Dzieje się tak, gdy nazwa kolumny w liście order by jest zgodna z nazwą kolumny w selektorze, jak pokazano w następującym przykładzie:  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  
   
 <a name="UnsignedIntsUnsupported"></a>   
-## <a name="unsigned-integers-not-supported"></a>Liczb całkowitych bez znaku, nie jest obsługiwane  
- Określanie typu Liczba całkowita bez znaku w zapytaniu składnika LINQ to Entities jest nieobsługiwane, ponieważ [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] nie obsługuje liczb całkowitych bez znaku. Jeśli określisz liczbę całkowitą bez znaku, <xref:System.ArgumentException> zostanie zgłoszony wyjątek podczas translacji wyrażenie zapytania, jak pokazano w poniższym przykładzie. To przykładowe zapytania dla zamówienia o identyfikatorze 48000.  
+## <a name="unsigned-integers-not-supported"></a>Liczby całkowite bez znaku są nieobsługiwane  
+ Określanie typu liczby całkowitej bez znaku w zapytaniu LINQ to Entities nie jest obsługiwane, [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] ponieważ nie obsługuje liczb całkowitych bez znaku. Jeśli określisz liczbę całkowitą bez znaku, <xref:System.ArgumentException> podczas tłumaczenia wyrażenia zapytania zostanie zgłoszony wyjątek, jak pokazano w poniższym przykładzie. To przykładowe zapytanie dla zamówienia o IDENTYFIKATORze 48000.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
   
 <a name="TypeConversionErrors"></a>   
-## <a name="type-conversion-errors"></a>Błędy konwersji typu  
- W języku Visual Basic, gdy właściwość jest mapowana na kolumnę typu bit programu SQL Server o wartości 1 przy użyciu `CByte` funkcji <xref:System.Data.SqlClient.SqlException> jest zgłaszany z komunikatem "Błąd przepełnienia arytmetycznego". Następujące przykładowe kwerendy `Product.MakeFlag` kolumny w przykładowej bazy danych AdventureWorks i wyjątek jest zgłaszany, gdy wyniki zapytania jest powtarzana.  
+## <a name="type-conversion-errors"></a>Błędy konwersji typów  
+ W Visual Basic, gdy właściwość jest zamapowana do kolumny typu SQL Server bitowego o wartości 1 przy użyciu `CByte` funkcji <xref:System.Data.SqlClient.SqlException> , jest generowany z komunikatem "błąd przepełnienia arytmetycznego". Poniższy przykład wysyła zapytanie do `Product.MakeFlag` kolumny w przykładowej bazie danych AdventureWorks, a wyjątek jest zgłaszany, gdy wyniki zapytania są powtarzane.  
   
  [!code-vb[DP L2E Conceptual Examples#SBUDT544355](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt544355)]  
   
 <a name="RefNonScalarClosures"></a>   
-## <a name="referencing-non-scalar-variables-not-supported"></a>Odwoływanie się do zmiennych nieskalarnego nieobsługiwane  
- Odwoływanie się do zmiennych nieskalarnego, takich jak jednostki, w zapytaniu nie jest obsługiwane. Gdy jest wykonywana w przypadku takiego zapytania, <xref:System.NotSupportedException> wyjątek z informacją, że komunikat "nie można utworzyć stałej wartości typu `EntityType`. Tylko typy pierwotne ("takie jak Int32, String i Guid") są obsługiwane w tym kontekście."  
+## <a name="referencing-non-scalar-variables-not-supported"></a>Odwołania do zmiennych nieskalarnych nie są obsługiwane  
+ Odwoływanie się do zmiennych nieskalarnych, takich jak jednostka, w zapytaniu nie jest obsługiwane. Gdy takie zapytanie jest wykonywane, <xref:System.NotSupportedException> zostanie zgłoszony wyjątek z komunikatem informującym o tym, że nie można utworzyć stałej wartości typu. `EntityType` W tym kontekście są obsługiwane tylko typy pierwotne (takie jak Int32, String i GUID). "  
   
 > [!NOTE]
->  Odwoływanie się do kolekcji zmienne skalarne są obsługiwane.  
+> Obsługiwane jest odwołanie do kolekcji zmiennych skalarnych.  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt555877)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt555877)]  
   
 <a name="NestedQueriesSQL2000"></a>   
-## <a name="nested-queries-may-fail-with-sql-server-2000"></a>Zapytania zagnieżdżone może zakończyć się niepowodzeniem z programem SQL Server 2000  
- Za pomocą programu SQL Server 2000 jednostek zapytaniach składnika LINQ to może się niepowodzeniem, jeśli produkują zagnieżdżonych zapytań języka Transact-SQL, które są co najmniej trzech poziomów w głąb.  
+## <a name="nested-queries-may-fail-with-sql-server-2000"></a>Zapytania zagnieżdżone mogą zakończyć się niepowodzeniem z SQL Server 2000  
+ W przypadku SQL Server 2000 zapytania LINQ to Entities mogą zakończyć się niepowodzeniem, jeśli generują zagnieżdżone zapytania Transact-SQL, które są trzy lub więcej poziomów głębokości.  
   
 <a name="ProjectToAnonymousType"></a>   
-## <a name="projecting-to-an-anonymous-type"></a>Wyświetlanie na typ anonimowy  
- Jeśli zdefiniujesz swoją ścieżkę początkowego zapytania, aby dołączyć powiązane obiekty za pomocą <xref:System.Data.Objects.ObjectQuery%601.Include%2A> metody <xref:System.Data.Objects.ObjectQuery%601> i następnie za pomocą LINQ projektu zwracanych obiektów do typu anonimowego, obiekty w metodzie dołączania nie są uwzględnione w zapytaniu wyniki.  
+## <a name="projecting-to-an-anonymous-type"></a>Projekcja do typu anonimowego  
+ W przypadku zdefiniowania początkowej ścieżki zapytania w celu uwzględnienia pokrewnych <xref:System.Data.Objects.ObjectQuery%601.Include%2A> obiektów przy użyciu <xref:System.Data.Objects.ObjectQuery%601> metody w programie, a następnie użycie LINQ do zaprojektowania zwracanych obiektów do typu anonimowego, obiekty określone w metodzie include nie zostaną uwzględnione w zapytaniu uzyskane.  
   
  [!code-csharp[DP L2E Conceptual Examples#ProjToAnonType1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#projtoanontype1)]
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype1)]  
   
- Aby uzyskać powiązane obiekty, nie zwracane typy projektów do typu anonimowego.  
+ Aby uzyskać powiązane obiekty, nie należy projektować zwracanych typów do typu anonimowego.  
   
  [!code-csharp[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#projtoanontype2)]
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  

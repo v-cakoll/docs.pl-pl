@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
-ms.openlocfilehash: 03c6949d25497419a55f7baafa33d568817b8f27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e0a26436515e9b8d7597c7e39272e6ac77a110b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007438"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959493"
 ---
-# <a name="xmlreader-sample"></a><span data-ttu-id="973e3-102">Przykład klasy XmlReader</span><span class="sxs-lookup"><span data-stu-id="973e3-102">XmlReader Sample</span></span>
-<span data-ttu-id="973e3-103">Przykład klasy XmlReader pokazuje przetwarzania treści komunikatu przy użyciu <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="973e3-103">The XmlReader sample demonstrates the processing of a message body using an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="973e3-104">Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje usługę kalkulatora.</span><span class="sxs-lookup"><span data-stu-id="973e3-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which implements a calculator service.</span></span> <span data-ttu-id="973e3-105">Operacja dodatkowe usługi, `Sum`, dodano, który akceptuje komunikat, który zawiera tablicę wartości, aby dodawać razem.</span><span class="sxs-lookup"><span data-stu-id="973e3-105">An additional service operation, `Sum`, has been added that accepts a message that contains an array of values to add together.</span></span> <span data-ttu-id="973e3-106">Usługa odczytuje komunikat przy użyciu <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="973e3-106">The service reads the message using an <xref:System.Xml.XmlReader>.</span></span>  
+# <a name="xmlreader-sample"></a><span data-ttu-id="9ee8c-102">Przykład klasy XmlReader</span><span class="sxs-lookup"><span data-stu-id="9ee8c-102">XmlReader Sample</span></span>
+<span data-ttu-id="9ee8c-103">Przykład XmlReader ilustruje przetwarzanie treści komunikatu przy użyciu <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="9ee8c-103">The XmlReader sample demonstrates the processing of a message body using an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="9ee8c-104">Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje usługę Kalkulator.</span><span class="sxs-lookup"><span data-stu-id="9ee8c-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which implements a calculator service.</span></span> <span data-ttu-id="9ee8c-105">Dodano dodatkową operację `Sum`usługi, która akceptuje komunikat zawierający tablicę wartości do dodania razem.</span><span class="sxs-lookup"><span data-stu-id="9ee8c-105">An additional service operation, `Sum`, has been added that accepts a message that contains an array of values to add together.</span></span> <span data-ttu-id="9ee8c-106">Usługa odczytuje komunikat przy użyciu <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="9ee8c-106">The service reads the message using an <xref:System.Xml.XmlReader>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="973e3-107">Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.</span><span class="sxs-lookup"><span data-stu-id="973e3-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="9ee8c-107">Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.</span><span class="sxs-lookup"><span data-stu-id="9ee8c-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="973e3-108">Interfejs Kalkulator zawiera operacji usługi o nazwie `Sum` akceptujący <xref:System.ServiceModel.Channels.Message> parametru, jak pokazano w poniższym przykładowym kodzie.</span><span class="sxs-lookup"><span data-stu-id="973e3-108">The calculator interface includes a service operation named `Sum` that accepts a <xref:System.ServiceModel.Channels.Message> parameter, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="9ee8c-108">Interfejs kalkulatora zawiera operację usługi o nazwie `Sum` , która <xref:System.ServiceModel.Channels.Message> akceptuje parametr, jak pokazano w poniższym przykładowym kodzie.</span><span class="sxs-lookup"><span data-stu-id="9ee8c-108">The calculator interface includes a service operation named `Sum` that accepts a <xref:System.ServiceModel.Channels.Message> parameter, as shown in the following sample code.</span></span>  
   
 ```csharp
 public interface ICalculator  
@@ -35,7 +35,7 @@ public interface ICalculator
 }  
 ```  
   
- <span data-ttu-id="973e3-109">Klient uzyskuje dostęp do `Sum` najpierw tworząc tablicę wartości całkowitych, a następnie tworzenia komunikatu z tablicy, a następnie wywoływania `Sum` metody za pomocą utworzonego wiadomości, jak pokazano w poniższym przykładowym kodzie.</span><span class="sxs-lookup"><span data-stu-id="973e3-109">The client accesses `Sum` by first creating an array of integer values, then creating a message from the array, and then calling the `Sum` method using the created message, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="9ee8c-109">Klient uzyskuje dostęp `Sum` , najpierw tworząc tablicę wartości całkowitych, a następnie tworząc komunikat z tablicy, a następnie `Sum` wywołując metodę przy użyciu utworzonej wiadomości, jak pokazano w poniższym przykładowym kodzie.</span><span class="sxs-lookup"><span data-stu-id="9ee8c-109">The client accesses `Sum` by first creating an array of integer values, then creating a message from the array, and then calling the `Sum` method using the created message, as shown in the following sample code.</span></span>  
   
 ```csharp
 CalculatorClient client = new CalculatorClient();  
@@ -53,7 +53,7 @@ using (new OperationContextScope(client.InnerChannel))
 }  
 ```  
   
- <span data-ttu-id="973e3-110">W usłudze wykonania operacji usługi `Sum` uzyskuje dostęp do treści wiadomości przy użyciu <xref:System.Xml.XmlReader> obiekt do iterowania po wartościach do zsumowania.</span><span class="sxs-lookup"><span data-stu-id="973e3-110">In the service, the implementation of the service operation `Sum` accesses the message body using an <xref:System.Xml.XmlReader> object to iterate through the values to sum.</span></span> <span data-ttu-id="973e3-111"><xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> Metoda jest wywoływana, aby uzyskać dostęp do treści wiadomości, jak pokazano w poniższym przykładowym kodzie.</span><span class="sxs-lookup"><span data-stu-id="973e3-111">The <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> method is called to access the message body, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="9ee8c-110">W ramach usługi implementacja operacji `Sum` usługi uzyskuje dostęp do treści wiadomości <xref:System.Xml.XmlReader> za pomocą obiektu, aby wykonać iterację wartości do zsumowania.</span><span class="sxs-lookup"><span data-stu-id="9ee8c-110">In the service, the implementation of the service operation `Sum` accesses the message body using an <xref:System.Xml.XmlReader> object to iterate through the values to sum.</span></span> <span data-ttu-id="9ee8c-111"><xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> Metoda jest wywoływana w celu uzyskania dostępu do treści wiadomości, jak pokazano w poniższym przykładowym kodzie.</span><span class="sxs-lookup"><span data-stu-id="9ee8c-111">The <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> method is called to access the message body, as shown in the following sample code.</span></span>  
   
 ```csharp  
 public int Sum(Message message)  
@@ -80,7 +80,7 @@ public int Sum(Message message)
 }  
 ```  
   
- <span data-ttu-id="973e3-112">Po uruchomieniu przykładu, żądań i odpowiedzi operacji są wyświetlane w oknie konsoli klienta.</span><span class="sxs-lookup"><span data-stu-id="973e3-112">When you run the sample, the requests and responses of the operation are displayed in the client console window.</span></span> <span data-ttu-id="973e3-113">Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.</span><span class="sxs-lookup"><span data-stu-id="973e3-113">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="9ee8c-112">Po uruchomieniu przykładu żądania i odpowiedzi operacji są wyświetlane w oknie konsoli klienta.</span><span class="sxs-lookup"><span data-stu-id="9ee8c-112">When you run the sample, the requests and responses of the operation are displayed in the client console window.</span></span> <span data-ttu-id="9ee8c-113">Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.</span><span class="sxs-lookup"><span data-stu-id="9ee8c-113">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -92,19 +92,19 @@ Sum(1,2,3,4,5) = 15
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="973e3-114">Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej</span><span class="sxs-lookup"><span data-stu-id="973e3-114">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="9ee8c-114">Aby skonfigurować, skompilować i uruchomić przykład</span><span class="sxs-lookup"><span data-stu-id="9ee8c-114">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="973e3-115">Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="973e3-115">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="9ee8c-115">Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="9ee8c-115">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="973e3-116">Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="973e3-116">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2. <span data-ttu-id="9ee8c-116">Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="9ee8c-116">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="973e3-117">Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="973e3-117">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3. <span data-ttu-id="9ee8c-117">Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="9ee8c-117">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="973e3-118">Przykłady może już być zainstalowany na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="973e3-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="973e3-119">Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).</span><span class="sxs-lookup"><span data-stu-id="973e3-119">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="9ee8c-118">Przykłady mogą być już zainstalowane na komputerze.</span><span class="sxs-lookup"><span data-stu-id="9ee8c-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="9ee8c-119">Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).</span><span class="sxs-lookup"><span data-stu-id="9ee8c-119">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="973e3-120">Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów.</span><span class="sxs-lookup"><span data-stu-id="973e3-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="973e3-121">W tym przykładzie znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="973e3-121">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="9ee8c-120">Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady.</span><span class="sxs-lookup"><span data-stu-id="9ee8c-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="9ee8c-121">Ten przykład znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="9ee8c-121">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\XmlReader`  

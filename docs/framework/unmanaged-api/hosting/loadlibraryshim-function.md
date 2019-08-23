@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03bc5584d24efa790989f93426251f9f38e65904
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9ab44ce8f51620d83084d1dd16e98b2b310feb76
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768524"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968937"
 ---
-# <a name="loadlibraryshim-function"></a><span data-ttu-id="eb70c-102">LoadLibraryShim — Funkcja</span><span class="sxs-lookup"><span data-stu-id="eb70c-102">LoadLibraryShim Function</span></span>
-<span data-ttu-id="eb70c-103">Ładuje określoną wersję biblioteki dll, który znajduje się w pakiet redystrybucyjny programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="eb70c-103">Loads a specified version of a DLL that is included in the .NET Framework redistributable package.</span></span>  
+# <a name="loadlibraryshim-function"></a><span data-ttu-id="3b3c1-102">LoadLibraryShim — Funkcja</span><span class="sxs-lookup"><span data-stu-id="3b3c1-102">LoadLibraryShim Function</span></span>
+<span data-ttu-id="3b3c1-103">Ładuje określoną wersję biblioteki DLL dołączoną do pakietu redystrybucyjnego .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-103">Loads a specified version of a DLL that is included in the .NET Framework redistributable package.</span></span>  
   
- <span data-ttu-id="eb70c-104">Ta funkcja jest przestarzała w programie .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="eb70c-104">This function has been deprecated in the .NET Framework 4.</span></span> <span data-ttu-id="eb70c-105">Użyj [iclrruntimeinfo::LoadLibrary —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) metody zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="eb70c-105">Use the [ICLRRuntimeInfo::LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) method instead.</span></span>  
+ <span data-ttu-id="3b3c1-104">Ta funkcja jest przestarzała w .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-104">This function has been deprecated in the .NET Framework 4.</span></span> <span data-ttu-id="3b3c1-105">Zamiast tego użyj metody [ICLRRuntimeInfo:: LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) .</span><span class="sxs-lookup"><span data-stu-id="3b3c1-105">Use the [ICLRRuntimeInfo::LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eb70c-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="eb70c-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b3c1-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="3b3c1-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT LoadLibraryShim (  
@@ -40,40 +40,40 @@ HRESULT LoadLibraryShim (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="eb70c-107">Parametry</span><span class="sxs-lookup"><span data-stu-id="eb70c-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3b3c1-107">Parametry</span><span class="sxs-lookup"><span data-stu-id="3b3c1-107">Parameters</span></span>  
  `szDllName`  
- <span data-ttu-id="eb70c-108">[in] Ciąg zakończony zerem, który reprezentuje nazwę biblioteki DLL, należy załadować z biblioteki programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="eb70c-108">[in] A zero-terminated string that represents the name of the DLL to be loaded from the .NET Framework library.</span></span>  
+ <span data-ttu-id="3b3c1-108">podczas Ciąg zakończony zerem, który reprezentuje nazwę biblioteki DLL, która ma zostać załadowana z biblioteki .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-108">[in] A zero-terminated string that represents the name of the DLL to be loaded from the .NET Framework library.</span></span>  
   
  `szVersion`  
- <span data-ttu-id="eb70c-109">[in] Ciąg zakończony zerem, który reprezentuje wersję biblioteki DLL do załadowania.</span><span class="sxs-lookup"><span data-stu-id="eb70c-109">[in] A zero-terminated string that represents the version of the DLL to be loaded.</span></span> <span data-ttu-id="eb70c-110">Jeśli `szVersion` jest null, wersja wybrane do ładowania jest najnowsza wersja określonej biblioteki dll, która jest mniejsza niż w wersji 4.</span><span class="sxs-lookup"><span data-stu-id="eb70c-110">If `szVersion` is null, the version selected for loading is the latest version of the specified DLL that is less than version 4.</span></span> <span data-ttu-id="eb70c-111">Oznacza to, że wszystkie wersje, równa lub większa niż w wersji 4 są ignorowane w przypadku `szVersion` ma wartość null, a jeśli nie wersji mniejsze niż w wersji 4 jest zainstalowana, biblioteki DLL nie można załadować.</span><span class="sxs-lookup"><span data-stu-id="eb70c-111">That is, all versions equal to or greater than version 4 are ignored if `szVersion` is null, and if no version less than version 4 is installed, the DLL fails to load.</span></span> <span data-ttu-id="eb70c-112">To, aby upewnić się, że instalacja programu .NET Framework 4 nie ma wpływu na istniejące aplikacje lub składniki.</span><span class="sxs-lookup"><span data-stu-id="eb70c-112">This is to ensure that installation of the .NET Framework 4 does not affect pre-existing applications or components.</span></span> <span data-ttu-id="eb70c-113">Zobacz wpis [SxS In-Proc i migracji — Szybki Start](https://go.microsoft.com/fwlink/?LinkId=200329) w blogu zespołu programu CLR.</span><span class="sxs-lookup"><span data-stu-id="eb70c-113">See the entry [In-Proc SxS and Migration Quick Start](https://go.microsoft.com/fwlink/?LinkId=200329) in the CLR team blog.</span></span>  
+ <span data-ttu-id="3b3c1-109">podczas Ciąg zakończony zerem, który reprezentuje wersję biblioteki DLL, która ma zostać załadowana.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-109">[in] A zero-terminated string that represents the version of the DLL to be loaded.</span></span> <span data-ttu-id="3b3c1-110">Jeśli `szVersion` ma wartość null, wybrana wersja do załadowania to Najnowsza wersja określonej biblioteki DLL, która jest starsza niż wersja 4.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-110">If `szVersion` is null, the version selected for loading is the latest version of the specified DLL that is less than version 4.</span></span> <span data-ttu-id="3b3c1-111">Oznacza to, że wszystkie wersje, które są równe lub większe niż wersja 4 `szVersion` są ignorowane, jeśli ma wartość null, a jeśli nie jest zainstalowana wersja niższa niż 4, nie można załadować biblioteki DLL.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-111">That is, all versions equal to or greater than version 4 are ignored if `szVersion` is null, and if no version less than version 4 is installed, the DLL fails to load.</span></span> <span data-ttu-id="3b3c1-112">Ma to na celu zapewnienie, że instalacja .NET Framework 4 nie ma wpływu na istniejące aplikacje lub składniki.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-112">This is to ensure that installation of the .NET Framework 4 does not affect pre-existing applications or components.</span></span> <span data-ttu-id="3b3c1-113">Zapoznaj się z wpisem [w procesie SxS i szybki start migracji](https://go.microsoft.com/fwlink/?LinkId=200329) w blogu zespołu CLR.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-113">See the entry [In-Proc SxS and Migration Quick Start](https://go.microsoft.com/fwlink/?LinkId=200329) in the CLR team blog.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="eb70c-114">Zarezerwowane do użytku w przyszłości.</span><span class="sxs-lookup"><span data-stu-id="eb70c-114">Reserved for future use.</span></span>  
+ <span data-ttu-id="3b3c1-114">Zarezerwowane do użytku w przyszłości.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-114">Reserved for future use.</span></span>  
   
  `phModDll`  
- <span data-ttu-id="eb70c-115">[out] Wskaźnik do uchwytu modułu.</span><span class="sxs-lookup"><span data-stu-id="eb70c-115">[out] A pointer to the handle of the module.</span></span>  
+ <span data-ttu-id="3b3c1-115">określoną Wskaźnik do uchwytu modułu.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-115">[out] A pointer to the handle of the module.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="eb70c-116">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="eb70c-116">Return Value</span></span>  
- <span data-ttu-id="eb70c-117">Ta metoda zwraca standardowe kody błędów Component Object Model (COM), zgodnie z definicją w pliku WinError.h oprócz następujących wartości.</span><span class="sxs-lookup"><span data-stu-id="eb70c-117">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3b3c1-116">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="3b3c1-116">Return Value</span></span>  
+ <span data-ttu-id="3b3c1-117">Ta metoda zwraca kody błędów standardowego Component Object Model (COM), jak zdefiniowano w WinError. h, oprócz następujących wartości.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-117">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="eb70c-118">Kod powrotu</span><span class="sxs-lookup"><span data-stu-id="eb70c-118">Return code</span></span>|<span data-ttu-id="eb70c-119">Opis</span><span class="sxs-lookup"><span data-stu-id="eb70c-119">Description</span></span>|  
+|<span data-ttu-id="3b3c1-118">Kod powrotu</span><span class="sxs-lookup"><span data-stu-id="3b3c1-118">Return code</span></span>|<span data-ttu-id="3b3c1-119">Opis</span><span class="sxs-lookup"><span data-stu-id="3b3c1-119">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="eb70c-120">S_OK</span><span class="sxs-lookup"><span data-stu-id="eb70c-120">S_OK</span></span>|<span data-ttu-id="eb70c-121">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="eb70c-121">The method completed successfully.</span></span>|  
-|<span data-ttu-id="eb70c-122">CLR_E_SHIM_RUNTIMELOAD</span><span class="sxs-lookup"><span data-stu-id="eb70c-122">CLR_E_SHIM_RUNTIMELOAD</span></span>|<span data-ttu-id="eb70c-123">Trwa ładowanie `szDllName` wymaga ładowania, środowisko uruchomieniowe języka wspólnego (CLR) i wymaganej wersji środowiska CLR nie może zostać załadowany.</span><span class="sxs-lookup"><span data-stu-id="eb70c-123">Loading `szDllName` requires loading the common language runtime (CLR), and the necessary version of the CLR cannot be loaded.</span></span>|  
+|<span data-ttu-id="3b3c1-120">S_OK</span><span class="sxs-lookup"><span data-stu-id="3b3c1-120">S_OK</span></span>|<span data-ttu-id="3b3c1-121">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-121">The method completed successfully.</span></span>|  
+|<span data-ttu-id="3b3c1-122">CLR_E_SHIM_RUNTIMELOAD</span><span class="sxs-lookup"><span data-stu-id="3b3c1-122">CLR_E_SHIM_RUNTIMELOAD</span></span>|<span data-ttu-id="3b3c1-123">Ładowanie `szDllName` wymaga załadowania środowiska uruchomieniowego języka wspólnego (CLR) i niezbędna wersja środowiska CLR nie może zostać załadowana.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-123">Loading `szDllName` requires loading the common language runtime (CLR), and the necessary version of the CLR cannot be loaded.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="eb70c-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="eb70c-124">Remarks</span></span>  
- <span data-ttu-id="eb70c-125">Ta funkcja jest używana do ładowania bibliotek DLL, które znajdują się w pakiet redystrybucyjny programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="eb70c-125">This function is used to load DLLs that are included in the .NET Framework redistributable package.</span></span> <span data-ttu-id="eb70c-126">Nie ładuje dll wygenerowaną przez użytkowników.</span><span class="sxs-lookup"><span data-stu-id="eb70c-126">It does not load user-generated DLLs.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3b3c1-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3b3c1-124">Remarks</span></span>  
+ <span data-ttu-id="3b3c1-125">Ta funkcja służy do ładowania bibliotek DLL, które znajdują się w pakiecie redystrybucyjnym .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-125">This function is used to load DLLs that are included in the .NET Framework redistributable package.</span></span> <span data-ttu-id="3b3c1-126">Nie ładuje bibliotek DLL generowanych przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-126">It does not load user-generated DLLs.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="eb70c-127">Począwszy od programu .NET Framework w wersji 2.0, ładowanie Fusion.dll powoduje, że CLR do załadowania.</span><span class="sxs-lookup"><span data-stu-id="eb70c-127">Beginning with the .NET Framework version 2.0, loading Fusion.dll causes the CLR to be loaded.</span></span> <span data-ttu-id="eb70c-128">Jest to spowodowane funkcje w Fusion.dll są teraz otoki, którego implementacje są dostarczane przez środowisko uruchomieniowe.</span><span class="sxs-lookup"><span data-stu-id="eb70c-128">This is because the functions in Fusion.dll are now wrappers whose implementations are provided by the runtime.</span></span>  
+> <span data-ttu-id="3b3c1-127">Począwszy od .NET Framework w wersji 2,0, wczytywanie pliku Fusion. dll powoduje załadowanie środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-127">Beginning with the .NET Framework version 2.0, loading Fusion.dll causes the CLR to be loaded.</span></span> <span data-ttu-id="3b3c1-128">Jest to spowodowane tym, że funkcje w programie Fusion. dll są teraz otokami, których implementacje są udostępniane przez środowisko uruchomieniowe.</span><span class="sxs-lookup"><span data-stu-id="3b3c1-128">This is because the functions in Fusion.dll are now wrappers whose implementations are provided by the runtime.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eb70c-129">Wymagania</span><span class="sxs-lookup"><span data-stu-id="eb70c-129">Requirements</span></span>  
- <span data-ttu-id="eb70c-130">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eb70c-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3b3c1-129">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3b3c1-129">Requirements</span></span>  
+ <span data-ttu-id="3b3c1-130">**Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b3c1-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eb70c-131">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="eb70c-131">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3b3c1-131">**Nagłówki** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="3b3c1-131">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="eb70c-132">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb70c-132">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3b3c1-132">**.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b3c1-132">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb70c-133">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="eb70c-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3b3c1-133">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3b3c1-133">See also</span></span>
 
-- [<span data-ttu-id="eb70c-134">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="eb70c-134">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="3b3c1-134">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="3b3c1-134">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -11,67 +11,67 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-ms.openlocfilehash: 909ee7cbb7cd31cf213f305b23237cb69e295882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0b56ac66302f11c59c149197a84bb96691282a5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674652"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921014"
 ---
-# <a name="linkedconfiguration-element"></a><span data-ttu-id="e63b7-102">\<linkedConfiguration> element</span><span class="sxs-lookup"><span data-stu-id="e63b7-102">\<linkedConfiguration> element</span></span>
+# <a name="linkedconfiguration-element"></a><span data-ttu-id="e28e2-102">\<linkedConfiguration, element ></span><span class="sxs-lookup"><span data-stu-id="e28e2-102">\<linkedConfiguration> element</span></span>
 
-<span data-ttu-id="e63b7-103">Określa wymagający uwzględnienia plik konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="e63b7-103">Specifies a configuration file to include.</span></span>
+<span data-ttu-id="e28e2-103">Określa plik konfiguracji, który ma zostać uwzględniony.</span><span class="sxs-lookup"><span data-stu-id="e28e2-103">Specifies a configuration file to include.</span></span>
 
-<span data-ttu-id="e63b7-104">[ **\<Konfiguracja >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="e63b7-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="e63b7-105">&nbsp;&nbsp;[ **\<assemblybinding — >** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="e63b7-105">&nbsp;&nbsp;[**\<assemblyBinding>**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) </span></span>  
-<span data-ttu-id="e63b7-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration>**</span><span class="sxs-lookup"><span data-stu-id="e63b7-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**</span></span>
+<span data-ttu-id="e28e2-104">[ **\<> konfiguracji**](configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="e28e2-104">[**\<configuration>**](configuration-element.md) </span></span>  
+<span data-ttu-id="e28e2-105">&nbsp;&nbsp;[ **\<> zestawubinding**](assemblybinding-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="e28e2-105">&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-configuration.md) </span></span>  
+<span data-ttu-id="e28e2-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration>**</span><span class="sxs-lookup"><span data-stu-id="e28e2-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="e63b7-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="e63b7-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="e28e2-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="e28e2-107">Syntax</span></span>
 
 ```xml
 <linkedConfiguration href="URL of linked configuration file" />
 ```
 
-## <a name="attribute"></a><span data-ttu-id="e63b7-108">Atrybut</span><span class="sxs-lookup"><span data-stu-id="e63b7-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="e28e2-108">Atrybut</span><span class="sxs-lookup"><span data-stu-id="e28e2-108">Attribute</span></span>
 
-|           | <span data-ttu-id="e63b7-109">Opis</span><span class="sxs-lookup"><span data-stu-id="e63b7-109">Description</span></span> |
+|           | <span data-ttu-id="e28e2-109">Opis</span><span class="sxs-lookup"><span data-stu-id="e28e2-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="e63b7-110">**href**</span><span class="sxs-lookup"><span data-stu-id="e63b7-110">**href**</span></span>  | <span data-ttu-id="e63b7-111">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="e63b7-111">Required attribute.</span></span><br><br><span data-ttu-id="e63b7-112">Adres URL pliku konfiguracji, aby uwzględnić.</span><span class="sxs-lookup"><span data-stu-id="e63b7-112">The URL of the configuration file to include.</span></span> <span data-ttu-id="e63b7-113">Jedynym obsługiwanym formatem do **href** atrybut jest `file://`.</span><span class="sxs-lookup"><span data-stu-id="e63b7-113">The only format supported for the **href** attribute is `file://`.</span></span> <span data-ttu-id="e63b7-114">Obsługiwane są pliki lokalne i plików UNC.</span><span class="sxs-lookup"><span data-stu-id="e63b7-114">Local files and UNC files are supported.</span></span> |
+| <span data-ttu-id="e28e2-110">**Tag**</span><span class="sxs-lookup"><span data-stu-id="e28e2-110">**href**</span></span>  | <span data-ttu-id="e28e2-111">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="e28e2-111">Required attribute.</span></span><br><br><span data-ttu-id="e28e2-112">Adres URL pliku konfiguracji, który ma zostać uwzględniony.</span><span class="sxs-lookup"><span data-stu-id="e28e2-112">The URL of the configuration file to include.</span></span> <span data-ttu-id="e28e2-113">Jedynym formatem obsługiwanym przez atrybut **href** jest `file://`.</span><span class="sxs-lookup"><span data-stu-id="e28e2-113">The only format supported for the **href** attribute is `file://`.</span></span> <span data-ttu-id="e28e2-114">Obsługiwane są pliki lokalne i pliki UNC.</span><span class="sxs-lookup"><span data-stu-id="e28e2-114">Local files and UNC files are supported.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="e63b7-115">Element nadrzędny</span><span class="sxs-lookup"><span data-stu-id="e63b7-115">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="e28e2-115">Element nadrzędny</span><span class="sxs-lookup"><span data-stu-id="e28e2-115">Parent element</span></span>
 
-|     | <span data-ttu-id="e63b7-116">Opis</span><span class="sxs-lookup"><span data-stu-id="e63b7-116">Description</span></span> |
+|     | <span data-ttu-id="e28e2-116">Opis</span><span class="sxs-lookup"><span data-stu-id="e28e2-116">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="e63b7-117"> **\<assemblybinding — >** — Element</span><span class="sxs-lookup"><span data-stu-id="e63b7-117">**\<assemblyBinding>** Element</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | <span data-ttu-id="e63b7-118">Określa politykę powiązania zestawu na poziomie konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="e63b7-118">Specifies assembly binding policy at the configuration level.</span></span> |
+| [<span data-ttu-id="e28e2-117">assemblyBinding — element >  **\<** </span><span class="sxs-lookup"><span data-stu-id="e28e2-117">**\<assemblyBinding>** Element</span></span>](assemblybinding-element-for-configuration.md) | <span data-ttu-id="e28e2-118">Określa zasady powiązań zestawów na poziomie konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="e28e2-118">Specifies assembly binding policy at the configuration level.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="e63b7-119">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="e63b7-119">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="e28e2-119">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="e28e2-119">Child elements</span></span>
 
-<span data-ttu-id="e63b7-120">Brak</span><span class="sxs-lookup"><span data-stu-id="e63b7-120">None</span></span>
+<span data-ttu-id="e28e2-120">Brak</span><span class="sxs-lookup"><span data-stu-id="e28e2-120">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="e63b7-121">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e63b7-121">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="e28e2-121">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e28e2-121">Remarks</span></span>
 
-<span data-ttu-id="e63b7-122">**\<Linkedconfiguration — >** element upraszcza obsługę techniczną dla zestawów składników.</span><span class="sxs-lookup"><span data-stu-id="e63b7-122">The **\<linkedConfiguration>** element simplifies servicing for component assemblies.</span></span> <span data-ttu-id="e63b7-123">Co najmniej jednej aplikacji, użycie zestawu, który zawiera plik konfiguracji znajdujących się w lokalizacji, dobrze znanego, pliki konfiguracji aplikacji, które używają zestawu można użyć **\<linkedconfiguration — >** element, aby uwzględnić plik konfiguracji zestawu, a nie bezpośrednio w tym informacje o konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="e63b7-123">If one or more applications use an assembly that has a configuration file residing in a well-known location, the configuration files of the applications that use the assembly can use the **\<linkedConfiguration>** element to include the assembly configuration file, rather than including configuration information directly.</span></span> <span data-ttu-id="e63b7-124">Gdy zestaw składników jest obsługiwany, aktualizowanie wspólnego pliku konfiguracji informacje zaktualizowanej konfiguracji do wszystkich aplikacji korzystających z zestawu.</span><span class="sxs-lookup"><span data-stu-id="e63b7-124">When the component assembly is serviced, updating the common configuration file provides updated configuration information to all applications that use the assembly.</span></span>
+<span data-ttu-id="e28e2-122">**\<Linkedconfiguration — >** element upraszcza obsługę techniczną dla zestawów składników.</span><span class="sxs-lookup"><span data-stu-id="e28e2-122">The **\<linkedConfiguration>** element simplifies servicing for component assemblies.</span></span> <span data-ttu-id="e28e2-123">Co najmniej jednej aplikacji, użycie zestawu, który zawiera plik konfiguracji znajdujących się w lokalizacji, dobrze znanego, pliki konfiguracji aplikacji, które używają zestawu można użyć **\<linkedconfiguration — >** element, aby uwzględnić plik konfiguracji zestawu, a nie bezpośrednio w tym informacje o konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="e28e2-123">If one or more applications use an assembly that has a configuration file residing in a well-known location, the configuration files of the applications that use the assembly can use the **\<linkedConfiguration>** element to include the assembly configuration file, rather than including configuration information directly.</span></span> <span data-ttu-id="e28e2-124">Gdy zestaw składników jest serwisowany, aktualizacja wspólnego pliku konfiguracji zawiera zaktualizowane informacje o konfiguracji do wszystkich aplikacji, które korzystają z zestawu.</span><span class="sxs-lookup"><span data-stu-id="e28e2-124">When the component assembly is serviced, updating the common configuration file provides updated configuration information to all applications that use the assembly.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e63b7-125">**\<Linkedconfiguration — >** element nie jest obsługiwany w przypadku aplikacji o Windows side-by-side manifestów.</span><span class="sxs-lookup"><span data-stu-id="e63b7-125">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
+> <span data-ttu-id="e28e2-125">**\<Linkedconfiguration — >** element nie jest obsługiwany w przypadku aplikacji o Windows side-by-side manifestów.</span><span class="sxs-lookup"><span data-stu-id="e28e2-125">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
 
-<span data-ttu-id="e63b7-126">Użycie powiązane pliki konfiguracji decydują następujące reguły:</span><span class="sxs-lookup"><span data-stu-id="e63b7-126">The following rules govern the use of linked configuration files:</span></span>
+<span data-ttu-id="e28e2-126">Zastosowanie połączonych plików konfiguracji podlega następującym zasadom:</span><span class="sxs-lookup"><span data-stu-id="e28e2-126">The following rules govern the use of linked configuration files:</span></span>
 
-- <span data-ttu-id="e63b7-127">Ustawienia w plikach konfiguracyjnych uwzględnione tylko wpływa na zasady tworzenia powiązań modułu ładującego i są używane tylko przez moduł ładujący.</span><span class="sxs-lookup"><span data-stu-id="e63b7-127">The settings in included configuration files only affect loader binding policy and are used only by the loader.</span></span> <span data-ttu-id="e63b7-128">Pliki dołączone konfiguracji może mieć ustawienia inne niż powiązanie zasad, ale te ustawienia nie mają żadnego efektu.</span><span class="sxs-lookup"><span data-stu-id="e63b7-128">The included configuration files can have settings other than binding policies, but those settings don't have any effect.</span></span>
+- <span data-ttu-id="e28e2-127">Ustawienia w zawartych plikach konfiguracji mają wpływ tylko na zasady powiązań modułu ładującego i są używane tylko przez moduł ładujący.</span><span class="sxs-lookup"><span data-stu-id="e28e2-127">The settings in included configuration files only affect loader binding policy and are used only by the loader.</span></span> <span data-ttu-id="e28e2-128">Dołączone pliki konfiguracji mogą mieć ustawienia inne niż zasady powiązań, ale te ustawienia nie mają żadnego efektu.</span><span class="sxs-lookup"><span data-stu-id="e28e2-128">The included configuration files can have settings other than binding policies, but those settings don't have any effect.</span></span>
 
-- <span data-ttu-id="e63b7-129">Jedynym obsługiwanym formatem do `href` atrybut jest `file://`.</span><span class="sxs-lookup"><span data-stu-id="e63b7-129">The only format supported for the `href` attribute is `file://`.</span></span> <span data-ttu-id="e63b7-130">Obsługiwane są pliki lokalne i plików UNC.</span><span class="sxs-lookup"><span data-stu-id="e63b7-130">Local files and UNC files are supported.</span></span>
+- <span data-ttu-id="e28e2-129">Jedynym formatem obsługiwanym przez `href` atrybut jest. `file://`</span><span class="sxs-lookup"><span data-stu-id="e28e2-129">The only format supported for the `href` attribute is `file://`.</span></span> <span data-ttu-id="e28e2-130">Obsługiwane są pliki lokalne i pliki UNC.</span><span class="sxs-lookup"><span data-stu-id="e28e2-130">Local files and UNC files are supported.</span></span>
 
-- <span data-ttu-id="e63b7-131">Brak bez ograniczenia na liczbę połączonych konfiguracji każdego pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="e63b7-131">There is no constraint on the number of linked configurations per configuration file.</span></span>
+- <span data-ttu-id="e28e2-131">Brak ograniczeń liczby połączonych konfiguracji na plik konfiguracyjny.</span><span class="sxs-lookup"><span data-stu-id="e28e2-131">There is no constraint on the number of linked configurations per configuration file.</span></span>
 
-- <span data-ttu-id="e63b7-132">Wszystkie powiązane pliki konfiguracji są scalane w celu utworzenia jeden plik, podobne do zachowania `#include` dyrektywy języka C/C++.</span><span class="sxs-lookup"><span data-stu-id="e63b7-132">All linked configuration files are merged to form one file, similar to the behavior of the `#include` directive in C/C++.</span></span>
+- <span data-ttu-id="e28e2-132">Wszystkie połączone pliki konfiguracji są scalane w celu utworzenia jednego pliku, podobnie jak w przypadku `#include` zachowania dyrektywy w językuC++C/.</span><span class="sxs-lookup"><span data-stu-id="e28e2-132">All linked configuration files are merged to form one file, similar to the behavior of the `#include` directive in C/C++.</span></span>
 
-- <span data-ttu-id="e63b7-133">**\<Linkedconfiguration — >** element jest dozwolony tylko w plikach konfiguracji aplikacji; jest ignorowana w *Machine.config*.</span><span class="sxs-lookup"><span data-stu-id="e63b7-133">The **\<linkedConfiguration>** element is allowed only in application configuration files; it's ignored in *Machine.config*.</span></span>
+- <span data-ttu-id="e28e2-133">**\<Linkedconfiguration — >** element jest dozwolony tylko w plikach konfiguracji aplikacji; jest ignorowana w *Machine.config*.</span><span class="sxs-lookup"><span data-stu-id="e28e2-133">The **\<linkedConfiguration>** element is allowed only in application configuration files; it's ignored in *Machine.config*.</span></span>
 
-- <span data-ttu-id="e63b7-134">Odwołania cykliczne są wykrywane i zakończone.</span><span class="sxs-lookup"><span data-stu-id="e63b7-134">Circular references are detected and terminated.</span></span> <span data-ttu-id="e63b7-135">Oznacza to jeśli **\<linkedconfiguration — >** elementy szeregu plików konfiguracyjnych tworzą pętli, pętla jest wykrywany i zatrzymane.</span><span class="sxs-lookup"><span data-stu-id="e63b7-135">That is, if the **\<linkedConfiguration>** elements of a series of configuration files form a loop, the loop is detected and stopped.</span></span>
+- <span data-ttu-id="e28e2-134">Odwołania cykliczne są wykrywane i kończone.</span><span class="sxs-lookup"><span data-stu-id="e28e2-134">Circular references are detected and terminated.</span></span> <span data-ttu-id="e28e2-135">Oznacza to jeśli **\<linkedconfiguration — >** elementy szeregu plików konfiguracyjnych tworzą pętli, pętla jest wykrywany i zatrzymane.</span><span class="sxs-lookup"><span data-stu-id="e28e2-135">That is, if the **\<linkedConfiguration>** elements of a series of configuration files form a loop, the loop is detected and stopped.</span></span>
 
-## <a name="example"></a><span data-ttu-id="e63b7-136">Przykład</span><span class="sxs-lookup"><span data-stu-id="e63b7-136">Example</span></span>
+## <a name="example"></a><span data-ttu-id="e28e2-136">Przykład</span><span class="sxs-lookup"><span data-stu-id="e28e2-136">Example</span></span>
 
-<span data-ttu-id="e63b7-137">Poniższy przykład pokazuje, jak dołączyć plik konfiguracji z lokalnego dysku twardego:</span><span class="sxs-lookup"><span data-stu-id="e63b7-137">The following example shows how to include configuration file from the local hard disk:</span></span>
+<span data-ttu-id="e28e2-137">Poniższy przykład pokazuje, jak dołączyć plik konfiguracji z lokalnego dysku twardego:</span><span class="sxs-lookup"><span data-stu-id="e28e2-137">The following example shows how to include configuration file from the local hard disk:</span></span>
 
 ```xml
 <configuration>
@@ -81,7 +81,7 @@ ms.locfileid: "61674652"
 </configuration>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="e63b7-138">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e63b7-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e28e2-138">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e28e2-138">See also</span></span>
 
-- [<span data-ttu-id="e63b7-139"> **\<assemblybinding — >** — Element</span><span class="sxs-lookup"><span data-stu-id="e63b7-139">**\<assemblyBinding>** Element</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
-- [<span data-ttu-id="e63b7-140">Schemat pliku konfiguracji dla programu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="e63b7-140">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="e28e2-139">assemblyBinding — element >  **\<** </span><span class="sxs-lookup"><span data-stu-id="e28e2-139">**\<assemblyBinding>** Element</span></span>](assemblybinding-element-for-configuration.md)
+- [<span data-ttu-id="e28e2-140">Schemat pliku konfiguracji dla .NET Framework</span><span class="sxs-lookup"><span data-stu-id="e28e2-140">Configuration file schema for the .NET Framework</span></span>](index.md)

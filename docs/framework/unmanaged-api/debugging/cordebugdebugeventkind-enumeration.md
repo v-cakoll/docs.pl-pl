@@ -12,17 +12,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be8d860f508644e68bf69892a63e145e7ffd5b90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d2e01a5cf2b2aa25e91ebf0f8e3927858b12bea3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740242"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967572"
 ---
-# <a name="cordebugdebugeventkind-enumeration"></a><span data-ttu-id="9e0d1-102">Wyliczenie CorDebugDebugEventKind</span><span class="sxs-lookup"><span data-stu-id="9e0d1-102">CorDebugDebugEventKind Enumeration</span></span>
-<span data-ttu-id="9e0d1-103">Określa typ zdarzenia, o których informacje jest dekodowana przy [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="9e0d1-103">Indicates the type of event whose information is decoded by the [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) method.</span></span>  
+# <a name="cordebugdebugeventkind-enumeration"></a><span data-ttu-id="00021-102">Wyliczenie CorDebugDebugEventKind</span><span class="sxs-lookup"><span data-stu-id="00021-102">CorDebugDebugEventKind Enumeration</span></span>
+<span data-ttu-id="00021-103">Wskazuje typ zdarzenia, którego informacje są dekodowane przez metodę [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) .</span><span class="sxs-lookup"><span data-stu-id="00021-103">Indicates the type of event whose information is decoded by the [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9e0d1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9e0d1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="00021-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="00021-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorDebugDebugEventKind {  
@@ -35,32 +35,32 @@ typedef enum CorDebugDebugEventKind {
 } CorDebugRecordFormat;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="9e0d1-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="9e0d1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="00021-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="00021-105">Members</span></span>  
   
-|<span data-ttu-id="9e0d1-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="9e0d1-106">Member</span></span>|<span data-ttu-id="9e0d1-107">Opis</span><span class="sxs-lookup"><span data-stu-id="9e0d1-107">Description</span></span>|  
+|<span data-ttu-id="00021-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="00021-106">Member</span></span>|<span data-ttu-id="00021-107">Opis</span><span class="sxs-lookup"><span data-stu-id="00021-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_EVENT_KIND_MODULE_LOADED`|<span data-ttu-id="9e0d1-108">Moduł załadowane zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="9e0d1-108">A module load event.</span></span>|  
-|`DEBUG_EVENT_KIND_MODULE_UNLOADED`|<span data-ttu-id="9e0d1-109">To zdarzenie zwalnianie modułu.</span><span class="sxs-lookup"><span data-stu-id="9e0d1-109">A module unload event.</span></span>|  
-|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="9e0d1-110">Wyjątek pierwszego rzędu.</span><span class="sxs-lookup"><span data-stu-id="9e0d1-110">A first-chance exception.</span></span>|  
-|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="9e0d1-111">Wyjątku pierwszej szansy użytkownika.</span><span class="sxs-lookup"><span data-stu-id="9e0d1-111">A first-chance user exception.</span></span>|  
-|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="9e0d1-112">Wyjątek, dla którego `catch` istnieje program obsługi.</span><span class="sxs-lookup"><span data-stu-id="9e0d1-112">An exception for which a `catch` handler exists.</span></span>|  
-|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_UNHANDLED`|<span data-ttu-id="9e0d1-113">Nieobsługiwany wyjątek.</span><span class="sxs-lookup"><span data-stu-id="9e0d1-113">An unhandled exception.</span></span>|  
+|`DEBUG_EVENT_KIND_MODULE_LOADED`|<span data-ttu-id="00021-108">Zdarzenie ładowania modułu.</span><span class="sxs-lookup"><span data-stu-id="00021-108">A module load event.</span></span>|  
+|`DEBUG_EVENT_KIND_MODULE_UNLOADED`|<span data-ttu-id="00021-109">Zdarzenie Unload modułu.</span><span class="sxs-lookup"><span data-stu-id="00021-109">A module unload event.</span></span>|  
+|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="00021-110">Wyjątek pierwszej szansy.</span><span class="sxs-lookup"><span data-stu-id="00021-110">A first-chance exception.</span></span>|  
+|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="00021-111">Wyjątek użytkownika pierwszej szansy.</span><span class="sxs-lookup"><span data-stu-id="00021-111">A first-chance user exception.</span></span>|  
+|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="00021-112">Wyjątek, dla którego `catch` istnieje program obsługi.</span><span class="sxs-lookup"><span data-stu-id="00021-112">An exception for which a `catch` handler exists.</span></span>|  
+|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_UNHANDLED`|<span data-ttu-id="00021-113">Nieobsługiwany wyjątek.</span><span class="sxs-lookup"><span data-stu-id="00021-113">An unhandled exception.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9e0d1-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="9e0d1-114">Remarks</span></span>  
- <span data-ttu-id="9e0d1-115">Członek `CorDebugDebugEventKind` wyliczenia jest zwracany przez wywołanie metody [ICorDebugDebugEvent::GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="9e0d1-115">A member of the `CorDebugDebugEventKind` enumeration is returned by calling the [ICorDebugDebugEvent::GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="00021-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="00021-114">Remarks</span></span>  
+ <span data-ttu-id="00021-115">Element członkowski `CorDebugDebugEventKind` wyliczenia jest zwracany przez wywołanie metody [ICorDebugDebugEvent:: GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) .</span><span class="sxs-lookup"><span data-stu-id="00021-115">A member of the `CorDebugDebugEventKind` enumeration is returned by calling the [ICorDebugDebugEvent::GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) method.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9e0d1-116">To wyliczenie jest przeznaczona do użytku w .NET Native tylko w scenariuszach debugowania.</span><span class="sxs-lookup"><span data-stu-id="9e0d1-116">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
+> <span data-ttu-id="00021-116">To wyliczenie jest przeznaczone do użycia tylko w scenariuszach debugowania .NET Native.</span><span class="sxs-lookup"><span data-stu-id="00021-116">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9e0d1-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9e0d1-117">Requirements</span></span>  
- <span data-ttu-id="9e0d1-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9e0d1-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="00021-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="00021-117">Requirements</span></span>  
+ <span data-ttu-id="00021-118">**Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="00021-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9e0d1-119">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9e0d1-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="00021-119">**Nagłówki** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="00021-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9e0d1-120">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9e0d1-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="00021-120">**Biblioteki** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="00021-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9e0d1-121">**Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e0d1-121">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="00021-121">**.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="00021-121">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e0d1-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9e0d1-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="00021-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="00021-122">See also</span></span>
 
-- [<span data-ttu-id="9e0d1-123">Debugowanie, wyliczenia</span><span class="sxs-lookup"><span data-stu-id="9e0d1-123">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="00021-123">Debugowanie, wyliczenia</span><span class="sxs-lookup"><span data-stu-id="00021-123">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

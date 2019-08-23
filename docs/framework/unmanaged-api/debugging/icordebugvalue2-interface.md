@@ -16,38 +16,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6718bbfdb1825b9f01698d76deec3fab16cb2ac6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0925cf217afafe57abf82cf51a77b1992bad5152
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993690"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966830"
 ---
-# <a name="icordebugvalue2-interface"></a><span data-ttu-id="bd25c-102">ICorDebugValue2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="bd25c-102">ICorDebugValue2 Interface</span></span>
-<span data-ttu-id="bd25c-103">Umożliwia rozbudowanie interfejsu "ICorDebugValue", aby zapewnić obsługę dla obiektów "ICorDebugType".</span><span class="sxs-lookup"><span data-stu-id="bd25c-103">Extends the "ICorDebugValue" interface to provide support for "ICorDebugType" objects.</span></span>  
+# <a name="icordebugvalue2-interface"></a><span data-ttu-id="8e05e-102">ICorDebugValue2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="8e05e-102">ICorDebugValue2 Interface</span></span>
+<span data-ttu-id="8e05e-103">Rozszerza interfejs "ICorDebugValue", aby zapewnić obsługę obiektów "ICorDebugType".</span><span class="sxs-lookup"><span data-stu-id="8e05e-103">Extends the "ICorDebugValue" interface to provide support for "ICorDebugType" objects.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="bd25c-104">Metody</span><span class="sxs-lookup"><span data-stu-id="bd25c-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8e05e-104">Metody</span><span class="sxs-lookup"><span data-stu-id="8e05e-104">Methods</span></span>  
   
-|<span data-ttu-id="bd25c-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="bd25c-105">Method</span></span>|<span data-ttu-id="bd25c-106">Opis</span><span class="sxs-lookup"><span data-stu-id="bd25c-106">Description</span></span>|  
+|<span data-ttu-id="8e05e-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="8e05e-105">Method</span></span>|<span data-ttu-id="8e05e-106">Opis</span><span class="sxs-lookup"><span data-stu-id="8e05e-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="bd25c-107">GetExactType, metoda</span><span class="sxs-lookup"><span data-stu-id="bd25c-107">GetExactType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|<span data-ttu-id="bd25c-108">Pobiera wskaźnik interfejsu do `ICorDebugType` obiekt, który reprezentuje <xref:System.Type> tej wartości.</span><span class="sxs-lookup"><span data-stu-id="bd25c-108">Gets an interface pointer to an `ICorDebugType` object that represents the <xref:System.Type> of this value.</span></span>|  
+|[<span data-ttu-id="8e05e-107">GetExactType, metoda</span><span class="sxs-lookup"><span data-stu-id="8e05e-107">GetExactType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|<span data-ttu-id="8e05e-108">Pobiera wskaźnik interfejsu do `ICorDebugType` obiektu, który <xref:System.Type> reprezentuje tę wartość.</span><span class="sxs-lookup"><span data-stu-id="8e05e-108">Gets an interface pointer to an `ICorDebugType` object that represents the <xref:System.Type> of this value.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bd25c-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="bd25c-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8e05e-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="8e05e-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="bd25c-110">Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.</span><span class="sxs-lookup"><span data-stu-id="bd25c-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="8e05e-110">Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.</span><span class="sxs-lookup"><span data-stu-id="8e05e-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bd25c-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="bd25c-111">Requirements</span></span>  
- <span data-ttu-id="bd25c-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bd25c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8e05e-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8e05e-111">Requirements</span></span>  
+ <span data-ttu-id="8e05e-112">**Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8e05e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bd25c-113">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bd25c-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8e05e-113">**Nagłówki** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8e05e-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bd25c-114">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bd25c-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8e05e-114">**Biblioteki** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8e05e-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bd25c-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bd25c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8e05e-115">**.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8e05e-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bd25c-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bd25c-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8e05e-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8e05e-116">See also</span></span>
 
-- [<span data-ttu-id="bd25c-117">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="bd25c-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="8e05e-117">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="8e05e-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 
-- [<span data-ttu-id="bd25c-118">ICorDebugValue3, interfejs</span><span class="sxs-lookup"><span data-stu-id="bd25c-118">ICorDebugValue3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
+- [<span data-ttu-id="8e05e-118">ICorDebugValue3, interfejs</span><span class="sxs-lookup"><span data-stu-id="8e05e-118">ICorDebugValue3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)

@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 463c8e42e76a61eb0820c1af72c20d004161ad25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e1583ba8ecfa461958f96bea6cb2b9d3313349b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753975"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967283"
 ---
 # <a name="marshaling-mda"></a>przekazywanie międzyprocesowe (marshaling) MDA
-`marshaling` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy środowisko CLR konfiguruje organizowanie informacji dla parametru metody lub pola struktury. To zdarzenie MDA nie działa dla zestawów kompilowanego dokładnie na czas.  
+Asystent `marshaling` debugowania zarządzanego (MDA) jest uaktywniany, gdy środowisko CLR konfiguruje informacje kierujące dla parametru metody lub pola struktury. To zdarzenie MDA nie działa w przypadku zestawów skompilowanych w trybie JIT.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- MDA Wyświetla typ parametru lub pola w kontekstach zarządzanych i niezarządzanych i struktury lub metody z typem.  Oto przykład danych wyjściowych dla pola:  
+ MDA Wyświetla typ parametru lub pola w kontekstach zarządzanych i niezarządzanych, a także strukturę lub metodę zawierającą typ.  Poniżej znajduje się przykład danych wyjściowych dla pola:  
   
 ```  
 Marshaling from 'Char' to 'ANSI char'  
@@ -31,7 +31,7 @@ name="assembly!Namespace.Class::myChar
 ```  
   
 ## <a name="configuration"></a>Konfiguracja  
- Konfiguracja MDA pozwala zgłaszane na podstawie związane pola lub nazwy metod organizowania informacji o filtrze.  Poniższy przykład pokazuje użycie `methodFilter`, `fieldFilter`, i `match` elementy, aby określić filtry.  Ustawienie `name` atrybutu, aby znak gwiazdki (*) będą zgodne wszystko.  
+ Konfiguracja MDA umożliwia filtrowanie raportowanych informacji o kierowaniu na podstawie nazw pól lub metod.  W poniższym przykładzie pokazano użycie `methodFilter`, `fieldFilter`, i `match` elementów do określenia filtrów.  Ustawienie atrybutu na gwiazdkę (\*) będzie pasować do wszystkiego. `name`  
   
 ```xml  
 <mdaConfig>  

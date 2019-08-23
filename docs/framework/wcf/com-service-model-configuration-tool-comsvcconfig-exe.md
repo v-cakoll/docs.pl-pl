@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 6d0967355e64640e0fd5c81f04a5bf4f33c7b3f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89462d05b9da7fc63bda58955517bfa9f0c50ab9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608843"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964201"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>Narzędzie konfiguracji modelu usług COM+ (ComSvcConfig.exe)
-Narzędzie wiersza polecenia w konfiguracji modelu usług COM + (ComSvcConfig.exe) umożliwia skonfigurowanie interfejsów modelu COM + być udostępniane jako usługi sieci Web.  
+Narzędzie wiersza polecenia konfiguracji modelu usług COM+ (ComSvcConfig. exe) umożliwia konfigurowanie interfejsów COM+, które mają być udostępniane jako usługi sieci Web.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,42 +24,42 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Musisz być administratorem na komputerze lokalnym do użycia ComSvcConfig.exe.  
+> Aby użyć programu ComSvcConfig. exe, musisz być administratorem na komputerze lokalnym.  
   
  Narzędzie można znaleźć w następującej lokalizacji  
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
- Aby uzyskać więcej informacji na temat ComSvcConfig.exe zobacz [jak: Używanie narzędzia konfiguracji modelu usług COM +](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+ Aby uzyskać więcej informacji na temat programu ComSvcConfig. [exe, zobacz How to: Użyj narzędzia](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)konfiguracji modelu usług modelu com+.  
   
- W poniższej tabeli opisano tryby, które mogą być używane z ComSvcConfig.exe.  
-  
-|Opcja|Opis|  
-|------------|-----------------|  
-|`install`|Instaluje konfiguracji interfejsu COM + Service Model integration.<br /><br /> Skrócona forma `/i`.|  
-|`uninstall`|Odinstalowuje konfigurację interfejsu COM + z modelu usług integracji.<br /><br /> Skrócona forma `/u`.|  
-|`list`|Wyświetla informacje na temat składników mających interfejsy, które są skonfigurowane do integracji modelu usług i aplikacji COM +.<br /><br /> Skrócona forma `/l`.|  
-  
- W poniższej tabeli opisano flagi, które mogą być używane z ComSvcConfig.exe.  
+ W poniższej tabeli opisano tryby, które mogą być używane z ComSvcConfig. exe.  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|Określa aplikacji COM +, aby skonfigurować.<br /><br /> Skrócona forma `/a`.|  
-|`/contract:` \<*Identyfikator klasy* &#124; *ProgID* &#124; \*,*InterfaceID* &#124; *InterfaceName*    &#124; \*\>|Określa składnik COM + i interfejs, który zostanie skonfigurowany jako kontraktu usługi.<br /><br /> Skrócona forma `/c`.<br /><br /> Podczas gdy znak symbolu wieloznacznego (\*) mogą być używane podczas określenia nazwy składnika i interfejs zaleca się nie korzystać, ponieważ może uwidaczniać interfejsy, które nie ma do.|  
-|`/hosting:` \<*complus*  &#124; *was*\>|Określa, czy używać modelu COM + hosting trybu lub trybie hostingu w sieci Web.<br /><br /> Skrócona forma `/h`.<br /><br /> Za pomocą modelu COM + hosting trybu wymaga jawnego aktywacji aplikacji COM +. Korzystanie z sieci Web w trybie hostingu umożliwia aplikacji COM + automatycznie aktywowane jako wymagane. Jeśli aplikacja COM + jest aplikacja biblioteki, działa w procesie Internet Information Services (IIS). Aplikacja modelu COM + w przypadku aplikacji serwera, jest uruchamiany w procesie Dllhost.exe.|  
-|`/webSite:` \<*WebsiteName*\>|Określa witryny sieci Web do hostowania, gdy tryb hostingu w sieci Web jest używana (zobacz `/hosting` flagi).<br /><br /> Skrócona forma `/w`.<br /><br /> Jeśli ma witryny sieci Web jest określony, domyślna witryna sieci Web jest używana.|  
-|`/webDirectory:` \<*WebDirectoryName*\>|Określa katalog wirtualny dla hostingu stosowania hosting sieci Web (zobacz `/hosting` flagi).<br /><br /> Skrócona forma `/d`.|  
-|`/mex`|W domyślnej konfiguracji Usługa do obsługi klientów, które mają zostać pobrane definicję kontraktu usługi, dodaje punkt końcowy usługi wymiany metadanych (MEX).<br /><br /> Skrócona forma `/x`.|  
-|`/id`|Wyświetla aplikacji, składników i informacje o interfejsie jako identyfikatorów.<br /><br /> Skrócona forma `/k`.|  
-|`/nologo`|ComSvcConfig.exe uniemożliwia wyświetlanie logo jej.<br /><br /> Skrócona forma `/n`.|  
-|`/verbose`|Wyświetla wszystkie ostrzeżenia i tekst informacyjny, oprócz wszystkich wykrytych błędów.<br /><br /> Skrócona forma `/v`.|  
-|`/help`|Wyświetla komunikat o sposobie użycia.<br /><br /> Skrócona forma `/?`.|  
-|`/partial`|Generuje konfiguracji usługi, gdy określony interfejs zawiera podpisy metod, które mogą być udostępniane. Podczas inicjowania usługi zgodne metody są wyświetlane jako operacje na kontrakt usługi i metod niezgodnych są ignorowane i znajduje się poza kontraktu usługi.<br /><br /> Jeśli brakuje tej flagi, narzędzie nie wygeneruje konfiguracji usługi, gdy określony interfejs zawiera jedną lub więcej metod niezgodnych.|  
+|`install`|Instaluje konfigurację interfejsu COM+ dla integracji modelu usług.<br /><br /> Krótka `/i`forma.|  
+|`uninstall`|Odinstalowuje konfigurację interfejsu COM+ z integracji modelu usług.<br /><br /> Krótka `/u`forma.|  
+|`list`|Wyświetla listę informacji dotyczących aplikacji i składników modelu COM+ z interfejsami skonfigurowanymi do integracji z modelem usług.<br /><br /> Krótka `/l`forma.|  
+  
+ W poniższej tabeli opisano flagi, które mogą być używane z ComSvcConfig. exe.  
+  
+|Opcja|Opis|  
+|------------|-----------------|  
+|`/application:`&#124; Dbapplicationname \<\>|Określa aplikację COM+ do skonfigurowania.<br /><br /> Krótka `/a`forma.|  
+|`/contract:`&#124; &#124; &#124; Identyfikator&#124; ClassID, InterfaceID InterfaceName \* \<    \*\>|Określa składnik i interfejs modelu COM+, który zostanie skonfigurowany jako kontrakt dla usługi.<br /><br /> Krótka `/c`forma.<br /><br /> Chociaż symbol wieloznaczny\*() może być używany podczas określania nazw składników i interfejsów, zalecamy, aby nie używać go, ponieważ mogą ujawniać interfejsy, które nie zostały zamierzone.|  
+|`/hosting:` \<*complus*  &#124; *was*\>|Określa, czy ma być używany tryb hostingu modelu COM+ czy tryb hostingu w sieci Web.<br /><br /> Krótka `/h`forma.<br /><br /> Użycie trybu hostingu modelu COM+ wymaga jawnej aktywacji aplikacji modelu COM+. Użycie trybu hostingu w sieci Web umożliwia automatyczne Aktywowanie aplikacji COM+ w razie potrzeby. Jeśli aplikacja modelu COM+ jest aplikacją biblioteki, działa w procesie Internet Information Services (IIS). Jeśli aplikacja COM+ jest aplikacją serwerową, działa w procesie dllhost. exe.|  
+|`/webSite:`\< *Witryna* WebsiteName\>|Określa witrynę sieci Web do hostowania, gdy jest używany tryb hostingu w sieci `/hosting` Web (zobacz flagę).<br /><br /> Krótka `/w`forma.<br /><br /> Jeśli żadna witryna sieci Web nie zostanie określona, zostanie użyta domyślna witryna sieci Web.|  
+|`/webDirectory:`\< *Katalog WebDirectory*\>|Określa katalog wirtualny do hostowania, gdy jest używany hosting w sieci Web `/hosting` (zobacz flagę).<br /><br /> Krótka `/d`forma.|  
+|`/mex`|Dodaje punkt końcowy usługi wymiany metadanych (MEX) do domyślnej konfiguracji usługi w celu obsługi klientów, którzy chcą pobrać definicję kontraktu z usługi.<br /><br /> Krótka `/x`forma.|  
+|`/id`|Wyświetla informacje o aplikacji, składniku i interfejsie jako identyfikatory.<br /><br /> Krótka `/k`forma.|  
+|`/nologo`|Uniemożliwia programowi ComSvcConfig. exe wyświetlanie jego logo.<br /><br /> Krótka `/n`forma.|  
+|`/verbose`|Oprócz napotkanych błędów są wyprowadzane wszystkie ostrzeżenia lub tekst informacyjny.<br /><br /> Krótka `/v`forma.|  
+|`/help`|Wyświetla komunikat o użyciu.<br /><br /> Krótka `/?`forma.|  
+|`/partial`|Generuje konfigurację usługi, gdy określony interfejs zawiera jeden lub więcej podpisów metod, które mogą być uwidocznione. W czasie inicjalizacji usługi zgodne metody są wyświetlane jako operacje w kontrakcie usługi, a niezgodne metody są ignorowane i nie są obecne w kontrakcie usługi.<br /><br /> W przypadku braku tej flagi narzędzie nie generuje konfiguracji usługi, gdy określony interfejs zawiera co najmniej jedną niezgodną metodę.|  
   
 ## <a name="examples"></a>Przykłady  
   
 ### <a name="description"></a>Opis  
- W poniższym przykładzie dodano `IFinances` interfejsu `ItemOrders.IFinancial` składnika (z OnlineStore aplikacji COM +) do zestawu interfejsów, które są dostępne jako usługi sieci Web, przy użyciu trybu macierzystego modelu COM +. Wszystkie ostrzeżenia będą dane wyjściowe, oprócz wszystkich wykrytych błędów.  
+ Poniższy przykład dodaje `IFinances` Interfejs `ItemOrders.IFinancial` składnika (z aplikacji OnlineStore com+) do zestawu interfejsów, które są udostępniane jako usługi sieci Web, przy użyciu trybu hostingu modelu com+. Wszystkie ostrzeżenia będą dodatkowo wykrytymi błędami.  
   
 ### <a name="code"></a>Kod  
   
@@ -68,7 +68,7 @@ ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financia
 ```  
   
 ### <a name="description"></a>Opis  
- W poniższym przykładzie dodano `IStockLevels` interfejsu `ItemInventory.Warehouse` składnika (z OnlineWarehouse aplikacji COM +) do zestawu interfejsów, które są dostępne jako usługi sieci Web w trybie hostingu w sieci Web. Usługa sieci Web jest sieci Web hostowanych w katalogu wirtualnym OnlineWarehouse usług IIS.  
+ Poniższy przykład dodaje `IStockLevels` Interfejs `ItemInventory.Warehouse` składnika (z aplikacji OnlineWarehouse com+) do zestawu interfejsów, które są udostępniane jako usługi sieci Web, przy użyciu trybu hostingu w sieci Web. Usługa sieci Web jest hostowana w sieci Web w katalogu wirtualnym OnlineWarehouse usług IIS.  
   
 ### <a name="code"></a>Kod  
   
@@ -77,7 +77,7 @@ ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.W
 ```  
   
 ### <a name="description"></a>Opis  
- Poniższy przykład usuwa `IFinances` interfejsu `ItemOrders.Financial` składnika (z OnlineStore aplikacji COM +) z zestawu interfejsów, które są dostępne jako usługi sieci Web.  
+ Poniższy przykład usuwa `IFinances` Interfejs `ItemOrders.Financial` składnika (z aplikacji OnlineStore com+) z zestawu interfejsów, które są udostępniane jako usługi sieci Web.  
   
 ### <a name="code"></a>Kod  
   
@@ -86,7 +86,7 @@ ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Finan
 ```  
   
 ### <a name="description"></a>Opis  
- Na poniższych listach przykład aktualnie widoczne interfejsów modelu COM + hostowane, oraz odpowiedni adres i powiązanie uzyskać szczegółowe informacje, dla aplikacji OnlineStore COM +, na komputerze lokalnym.  
+ W poniższym przykładzie przedstawiono aktualnie uwidocznione interfejsy obsługiwane przez model COM+ oraz odpowiednie adresy i szczegóły dotyczące powiązań dla aplikacji OnlineStore COM+ na komputerze lokalnym.  
   
 ### <a name="code"></a>Kod  
   
@@ -96,4 +96,4 @@ ComSvcConfig.exe /list /application:OnlineStore /hosting:complus
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Używanie narzędzia konfiguracji modelu usług COM +](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+- [Instrukcje: Używanie narzędzia konfiguracji modelu usług modelu COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

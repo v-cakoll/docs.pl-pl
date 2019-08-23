@@ -6,33 +6,33 @@ helpviewer_keywords:
 - labels
 - LinkLabel control [Windows Forms]
 ms.assetid: 2028bbe3-ffe2-43e8-8ae3-dec759d2ecec
-ms.openlocfilehash: 0175a6551d7257d7d74df27ab4b927320b176dd7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a66eda1236a751daa87c67dae8311c9aaf71ae24
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61804668"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962559"
 ---
 # <a name="label-control-windows-forms"></a>Label — Formant (Formularze systemu Windows)
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripLabel> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.Label> kontroli. Możesz użyć <xref:System.Windows.Forms.ToolStripLabel> z innych nowych formantów, takich jak <xref:System.Windows.Forms.ToolStripDropDown>. Jednak <xref:System.Windows.Forms.Label> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.  
+> Formant zastępuje i dodaje funkcje <xref:System.Windows.Forms.Label> do kontrolki. <xref:System.Windows.Forms.ToolStripLabel> Możesz użyć <xref:System.Windows.Forms.ToolStripLabel> z innymi nowymi kontrolkami, takimi <xref:System.Windows.Forms.ToolStripDropDown>jak. Jednak w przypadku <xref:System.Windows.Forms.Label> wybrania tej opcji formant jest zachowywany w przypadku zgodności z poprzednimi wersjami i w przyszłości.  
   
- Windows Forms <xref:System.Windows.Forms.Label> formanty są używane do wyświetlania tekstu lub obrazów, które nie mogą być edytowane przez użytkownika. Służą one do identyfikowania obiektów w formularzu — podaj opis, jaki niektóre kontrolki będzie wykonywać na przykład po kliknięciu lub wyświetlić informacje w odpowiedzi na zdarzenie środowiska wykonawczego lub proces w aplikacji. Ponieważ <xref:System.Windows.Forms.Label> formant nie może otrzymać ostrości, może również służyć do tworzenia kluczy dostępu dla innych kontrolek.  
+ Kontrolki Windows Forms <xref:System.Windows.Forms.Label> są używane do wyświetlania tekstu lub obrazów, które nie mogą być edytowane przez użytkownika. Służą one do identyfikowania obiektów w formularzu — w celu udostępnienia opisu działania określonej kontrolki, na przykład, lub wyświetlenia informacji w odpowiedzi na zdarzenie lub proces w czasie wykonywania w aplikacji. <xref:System.Windows.Forms.Label> Ponieważ formant nie może odbierać fokusu, można go również użyć do tworzenia kluczy dostępu dla innych formantów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Label, kontrolka — omówienie](label-control-overview-windows-forms.md)  
- Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
+ Wyjaśnia, czym jest ta kontrolka i jej najważniejsze funkcje i właściwości.  
   
- [Instrukcje: Tworzenie klawiszy dostępu za pomocą formantów etykiet formularzy Windows](how-to-create-access-keys-with-windows-forms-label-controls.md)  
- W tym artykule opisano, jak zdefiniować klawisz dostępu dla innej kontrolki za pomocą etykiety.  
+ [Instrukcje: Tworzenie kluczy dostępu za pomocą kontrolek etykiet Windows Forms](how-to-create-access-keys-with-windows-forms-label-controls.md)  
+ Opisuje, w jaki sposób używać etykiety do definiowania klucza dostępu dla innej kontrolki.  
   
- [Instrukcje: Rozmiaru kontrolki Label formularzy Windows pasujący do jego zawartości](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
- W tym artykule wyjaśniono, dopasowywanie rozmiaru formantu etykiety dla jego podpisu.  
+ [Instrukcje: Dopasuj rozmiar kontrolki etykiety Windows Forms do jej zawartości](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
+ Wyjaśnia, jak dostosować rozmiar kontrolki etykieta do podpisu.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.Label>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.
+ Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.

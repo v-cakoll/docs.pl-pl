@@ -6,76 +6,76 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 49aacdc7db6bc9e8b951f69bcd880835bb9182f2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c2c1f468fba404768fe01e84260125843964fea0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654506"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949626"
 ---
 # <a name="configuring-system-provided-bindings"></a>Konfigurowanie powiązań dostarczanych przez system
-Powiązania określić mechanizm komunikacji w przypadku do punktu końcowego i określają, jak połączyć się z punktem końcowym. Powiązania składają się z elementów, które określają, jak kanałów Windows Communication Foundation (WCF) są warstwowe się zapewnienie funkcji na wymaganą komunikację. Powiązanie zawiera trzy rodzaje elementów:  
+Powiązania określają mechanizm komunikacji, który ma być używany podczas komunikacji z punktem końcowym i wskazujący, jak nawiązać połączenie z punktem końcowym. Powiązania składają się z elementów, które definiują sposób warstwowego kanałów Windows Communication Foundation (WCF) w celu zapewnienia wymaganych funkcji komunikacyjnych. Powiązanie zawiera trzy typy elementów:  
   
-- Elementy powiązania kanału protokołu, które określają zabezpieczeń, niezawodności, ustawieniach przepływu kontekstu lub protokołów zdefiniowanych przez użytkownika za pomocą wiadomości, które są wysyłane do punktu końcowego.  
+- Elementy powiązania kanału protokołu, które określają zabezpieczenia, niezawodność, ustawienia przepływu kontekstu lub protokoły zdefiniowane przez użytkownika do użycia z komunikatami wysyłanymi do punktu końcowego.  
   
-- Kanał elementy powiązania transportu, które określają podstawową transport protokół do użycia podczas wysyłania wiadomości do punktu końcowego, na przykład, TCP lub HTTP.  
+- Elementy powiązania kanału transportowego, które określają podstawowy protokół transportowy do użycia podczas wysyłania komunikatów do punktu końcowego, na przykład TCP lub HTTP.  
   
-- Elementy powiązania, które określają kodowanie o komunikacji sieciowej na potrzeby wiadomości, które są wysyłane do punktu końcowego, na przykład, text/XML, binarne, kodowania komunikatu lub komunikat transmisji optymalizacji mechanizm (MTOM).  
+- Elementy powiązania kodowania komunikatów, które określają kodowanie sieci, które mają być używane w przypadku komunikatów wysyłanych do punktu końcowego, na przykład Metoda Text/XML, binary lub mechanizm optymalizacji transmisji wiadomości (MTOM).  
   
- W tym temacie przedstawiono wszystkie powiązania dostarczane przez system Windows Communication Foundation (WCF). Jeśli nie spełnia żadnego z tych dokładnych wymaganiach dla aplikacji, można utworzyć powiązania za pomocą <xref:System.ServiceModel.Channels.CustomBinding> klasy. Aby uzyskać więcej informacji na temat tworzenia powiązań niestandardowych, zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md).  
-  
-> [!IMPORTANT]
->  Wybierz powiązanie z włączonymi zabezpieczeniami. Domyślnie wszystkie powiązania z wyjątkiem <xref:System.ServiceModel.BasicHttpBinding> powiązania ma włączoną obsługą zabezpieczeń. Jeśli nie zaznaczysz bezpiecznego powiązania lub wyłączyć zabezpieczenia, upewnij się, że Twoje wymiany sieci są chronione w inny sposób, na przykład w Centrum zabezpieczonych danych lub w sieci izolowanej.  
+ W tym temacie przedstawiono wszystkie powiązania Windows Communication Foundation udostępnione przez system. Jeśli żaden z tych elementów nie spełnia dokładnie wymagań aplikacji, można utworzyć powiązanie przy użyciu <xref:System.ServiceModel.Channels.CustomBinding> klasy. Aby uzyskać więcej informacji na temat tworzenia powiązań niestandardowych, zobacz [powiązania niestandardowe](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 > [!IMPORTANT]
->  Nie należy używać kontrakty dwukierunkowe powiązań, które nie obsługują zabezpieczeń lub mają zabezpieczeń wyłączona, chyba że exchange sieci jest zabezpieczony za pomocą innych środków.  
+> Wybierz powiązanie z włączonymi zabezpieczeniami. Domyślnie wszystkie powiązania, z wyjątkiem <xref:System.ServiceModel.BasicHttpBinding> powiązania, mają włączone zabezpieczenia. Jeśli nie wybierzesz bezpiecznego powiązania lub w przypadku wyłączenia zabezpieczeń, upewnij się, że wymiana sieci jest chroniona w inny sposób, na przykład w zabezpieczonym centrum danych lub w sieci izolowanej.  
+  
+> [!IMPORTANT]
+> Nie należy używać kontraktów dupleksowych z powiązaniami, które nie obsługują zabezpieczeń lub które mają wyłączone zabezpieczenia, chyba że wymiana sieciowa jest zabezpieczona za pomocą innych metod.  
   
 ## <a name="system-provided-bindings"></a>Wiązania dostarczane przez system  
- Następujące powiązania są dostarczane z programem WCF.  
+ Poniższe powiązania są dostarczane z usługą WCF.  
   
 |Wiązanie|Element konfiguracji|Opis|  
 |-------------|---------------------------|-----------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Powiązania, który nadaje się do komunikowania się z profilu WS-Basic zgodność usług sieci Web, na przykład usługi sieci Web platformy ASP.NET (ASMX)-na podstawie usług. To powiązanie korzysta z protokołu HTTP jako transportu i text/XML jako domyślne kodowanie komunikatu.|  
-|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Bezpieczne i interoperacyjne powiązanie odpowiednie dla kontraktów na usługę non-duplex.|  
-|<xref:System.ServiceModel.WS2007HttpBinding>|[\<ws2007HttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|Bezpieczne i interoperacyjne powiązanie, które zapewnia obsługę dla poprawnych wersji <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession>, i <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> elementów wiązania.|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie odpowiednie dla kontraktów usługi duplex lub komunikacji za pośrednictwem pośredników SOAP.|  
-|<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie obsługuje protokół WS-Federation, umożliwiając organizacjom, które znajdują się w Federacji, aby efektywnie uwierzytelnianie i autoryzowanie użytkowników.|  
-|<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie pochodzi od klasy <xref:System.ServiceModel.WS2007HttpBinding> i obsługuje federacyjnego zabezpieczenia.|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Bezpieczne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami między aplikacjami usług WCF.|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Bezpieczne, niezawodne i zoptymalizowane powiązanie odpowiednie dla komunikacji na maszynie między aplikacjami usług WCF.|  
-|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Zakolejkowane powiązanie, które jest odpowiednie dla komunikacji między komputerami między aplikacjami usług WCF.|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Wiązanie, która umożliwia komunikację bezpieczne, obejmujących wiele maszyn.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Wiązanie używane do konfigurowania punktów końcowych usługi sieci Web WCF, które są udostępniane za pośrednictwem żądania HTTP zamiast na wiadomości SOAP.|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Powiązanie, które jest odpowiednie dla komunikacji między komputerami między aplikacji WCF i istniejące usługi kolejkowania komunikatów (MSMQ) aplikacji.|  
+|<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Powiązanie odpowiednie do komunikacji z usługami sieci Web zgodnymi z profilem WS-Basic, na przykład usługi ASP.NET Web Services (ASMX). To powiązanie używa protokołu HTTP jako transportu i tekstu/XML jako domyślnego kodowania wiadomości.|  
+|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Bezpieczne i interoperacyjne powiązanie odpowiednie dla kontraktów usługi non-Duplex.|  
+|<xref:System.ServiceModel.WS2007HttpBinding>|[\<ws2007HttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|Bezpieczne i interoperacyjne powiązanie, które zapewnia obsługę prawidłowych wersji <xref:System.ServiceModel.WSHttpBinding.Security%2A>elementów, <xref:System.ServiceModel.ReliableSession>i <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> powiązań.|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie odpowiednie dla kontraktów usługi dupleksowej lub komunikacji za pośrednictwem pośredników SOAP.|  
+|<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie obsługujące protokół WS-Federation, umożliwiając organizacjom, które znajdują się w Federacji, wydajne uwierzytelnianie i Autoryzowanie użytkowników.|  
+|<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie, które wynika z <xref:System.ServiceModel.WS2007HttpBinding> i obsługuje zabezpieczenia federacyjne.|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Bezpieczne i zoptymalizowane powiązanie odpowiednie dla komunikacji między aplikacjami w aplikacjach WCF.|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Bezpieczne, niezawodne i zoptymalizowane powiązanie, które jest odpowiednie dla komunikacji na komputerze między aplikacjami WCF.|  
+|<xref:System.ServiceModel.NetMsmqBinding>|[\<> usługi Msmqbinding](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Umieszczone w kolejce powiązanie, które jest odpowiednie dla komunikacji między komputerami w aplikacjach WCF.|  
+|<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Powiązanie umożliwiające bezpieczną komunikację obejmującą wiele maszyn.|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Powiązanie używane do konfigurowania punktów końcowych dla usług sieci Web WCF, które są udostępniane za pośrednictwem żądań HTTP zamiast komunikatów protokołu SOAP.|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Powiązanie, które jest odpowiednie dla komunikacji między komputerami między aplikacją WCF a istniejącymi aplikacjami usługi kolejkowania komunikatów (znanymi także jako MSMQ).|  
   
-## <a name="binding-features"></a>Powiązanie funkcji  
- W następnej tabeli przedstawiono niektóre najważniejsze funkcje każdego powiązania dostarczane przez system, pod warunkiem. Powiązania znajdują się w pierwszej kolumnie, a informacje dotyczące funkcji są opisane w tabeli. Poniższa tabela zawiera klucz, wiązanie skrótów używanych. Aby wybrać powiązanie, określić kolumnę, która spełnia wszystkie funkcje wiersza, których potrzebujesz.  
+## <a name="binding-features"></a>Funkcje powiązań  
+ W następnej tabeli przedstawiono niektóre z najważniejszych funkcji, które zostały dostarczone przez poszczególne powiązania dostarczone przez system. Powiązania są wymienione w pierwszej kolumnie, a informacje dotyczące funkcji są opisane w tabeli. Poniższa tabela zawiera klucz dla użytych skrótów wiązania. Aby wybrać powiązanie, ustal, która kolumna spełnia wszystkie potrzebne funkcje wiersza.  
   
-|Wiązanie|Współdziałanie|Tryb zabezpieczeń (ustawienie domyślne)|Sesja<br /><br /> (Domyślnie)|Transakcje|Dupleks|  
+|Wiązanie|Współdziałanie|Tryb zabezpieczeń (wartość domyślna)|Sesja<br /><br /> (Domyślnie)|Transakcje|Dupleks|  
 |-------------|----------------------|----------------------------------|-----------------------------|------------------|------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|1.1 profilu podstawowego|(Brak), mieszane transportu, wiadomości,|Brak, (Brak)|(Brak)|n/d|  
-|<xref:System.ServiceModel.WSHttpBinding>|WS|Brak, Transport, (komunikat) mieszane|(Brak), Transport, niezawodnej sesji|Tak (Brak)|n/d|  
-|<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|Brak, Transport, (komunikat) mieszane|(Brak), Transport, niezawodnej sesji|Tak (Brak)|n/d|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|WS|Brak (komunikat)|(Niezawodnej sesji)|Tak (Brak)|Yes|  
-|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|Brak (komunikat) mieszane|(Brak), niezawodnej sesji|Tak (Brak)|Nie|  
-|<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|Brak (komunikat) mieszane|(Brak), niezawodnej sesji|Tak (Brak)|Nie|  
-|<xref:System.ServiceModel.NetTcpBinding>|.NET|Brak, (transportu), wiadomości,<br /><br /> Mieszane|Sesja niezawodna (transportu)|Tak (Brak)|Yes|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Brak,<br /><br /> (Transportu)|Brak (transportu)|Tak (Brak)|Tak|  
-|<xref:System.ServiceModel.NetMsmqBinding>|.NET|Brak, komunikat (transportu), zarówno|(Brak)|Tak (Brak)|Nie|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|Elementu równorzędnego|Mieszane None, komunikat (transportu)|(Brak)|(Brak)|Tak|  
-|<xref:System.ServiceModel.WebHttpBinding>|.Net|None, Transport, TransportCredentialOnly|(Brak)|(Brak)|n/d|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|Usługa MSMQ|Brak (transportu)|(Brak)|Tak (Brak)|n/d|  
+|<xref:System.ServiceModel.BasicHttpBinding>|Profil podstawowy 1,1|(Brak), transport, komunikat, mieszany|Brak, (brak)|Dawaj|n/d|  
+|<xref:System.ServiceModel.WSHttpBinding>|WS|Brak, transport, (wiadomość), mieszany|(Brak), transport, sesja niezawodna|(Brak), tak|n/d|  
+|<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|Brak, transport, (wiadomość), mieszany|(Brak), transport, sesja niezawodna|(Brak), tak|n/d|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|WS|Brak, (komunikat)|(Niezawodna sesja)|(Brak), tak|Tak|  
+|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|Brak, (komunikat), mieszany|(Brak), sesja niezawodna|(Brak), tak|Nie|  
+|<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|Brak, (komunikat), mieszany|(Brak), sesja niezawodna|(Brak), tak|Nie|  
+|<xref:System.ServiceModel.NetTcpBinding>|.NET|Brak, (transport), komunikat:<br /><br /> Mieszana|Niezawodna sesja, (transport)|(Brak), tak|Tak|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Dawaj<br /><br /> Transportu|Brak, (transport)|(Brak), tak|Tak|  
+|<xref:System.ServiceModel.NetMsmqBinding>|.NET|Brak, komunikat, (transport), oba|Dawaj|(Brak), tak|Nie|  
+|<xref:System.ServiceModel.NetPeerTcpBinding>|Równorzędn|Brak, komunikat, (transport), mieszany|Dawaj|Dawaj|Tak|  
+|<xref:System.ServiceModel.WebHttpBinding>|.Net|None, Transport, TransportCredentialOnly|Dawaj|Dawaj|n/d|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|Usługa MSMQ|Brak, (transport)|Dawaj|(Brak), tak|n/d|  
   
- W poniższej tabeli opisano funkcje w powyższej tabeli.  
+ W poniższej tabeli objaśniono funkcje Znalezione w poprzedniej tabeli.  
   
 |Funkcja|Opis|  
 |-------------|-----------------|  
-|Typ elementu|Nazwy protokołu lub technologii, z którym powiązanie zapewnia współdziałanie.|  
-|Zabezpieczenia|Określa, jak jest zabezpieczony kanał:<br /><br /> -Brak: Komunikat protokołu SOAP nie jest zabezpieczony, a klient nie jest uwierzytelniony.<br />-Transport: Wymagania dotyczące zabezpieczeń są spełnione w warstwie transportowej.<br />-Komunikat o błędzie: W warstwie komunikat spełnione są wymagania dotyczące zabezpieczeń.<br />-Mieszane: Ten tryb zabezpieczeń jest znany jako `TransportWithMessageCredentials`. Obsługuje on poświadczenia na poziomie komunikatu i wymagania dotyczące integralności i poufności informacji są spełnione przez warstwy transportowej.<br />-Zarówno: Używane są oba poziom i mechanizm transportu zabezpieczeniami na poziomie wiadomości. Ta możliwość jest unikatowy dla <xref:System.ServiceModel.NetMsmqBinding>.|  
-|Sesja|Określa, czy to powiązanie obsługuje kontraktów sesji.|  
-|Transakcje|Określa, czy włączono transakcji.|  
-|Dupleks|Określa, czy kontrakty dwukierunkowe są obsługiwane. Należy pamiętać, że ta funkcja wymaga obsługi sesji w powiązaniu.|  
-|Przesyłanie strumieniowe|Określa, czy wiadomości, przesyłania strumieniowego jest obsługiwane.|  
+|Typ współdziałania|Nazwa protokołu lub technologii, za pomocą których powiązanie zapewnia międzyoperacyjność.|  
+|Zabezpieczenia|Określa sposób zabezpieczania kanału:<br /><br /> Dawaj Komunikat protokołu SOAP nie jest zabezpieczony i klient nie jest uwierzytelniony.<br />Transportu Wymagania dotyczące zabezpieczeń są spełnione w warstwie transportowej.<br />Pojawi Wymagania dotyczące zabezpieczeń są spełnione w warstwie komunikatów.<br />Mieszana Ten tryb zabezpieczeń jest znany jako `TransportWithMessageCredentials`. Obsługuje ona poświadczenia na poziomie komunikatu, a wymagania dotyczące integralności i poufności są spełnione przez warstwę transportu.<br />Jedn Używane są zarówno zabezpieczenia na poziomie komunikatów, jak i na poziomie transportu. Ta możliwość jest unikatowa dla <xref:System.ServiceModel.NetMsmqBinding>.|  
+|Sesja|Określa, czy to powiązanie obsługuje kontrakty sesji.|  
+|Transakcje|Określa, czy transakcje są włączone.|  
+|Dupleks|Określa, czy są obsługiwane umowy dupleksowe. Uwaga Ta funkcja wymaga obsługi sesji w powiązaniu.|  
+|Przesyłanie strumieniowe|Określa, czy przesyłanie strumieniowe komunikatów jest obsługiwane.|  
   
 ## <a name="see-also"></a>Zobacz także
 

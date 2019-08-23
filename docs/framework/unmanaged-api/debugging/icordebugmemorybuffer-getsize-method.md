@@ -1,18 +1,18 @@
 ---
-title: Metoda ICorDebugMemoryBuffer::GetSize
+title: 'ICorDebugMemoryBuffer:: GetSize — metoda'
 ms.date: 03/30/2017
 ms.assetid: 9ffd5482-268e-4680-9fd1-bfb0b7d66450
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0db104dbfa61b836aa01b99be45725ed4c04c798
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1c88d389f80b4b3d811d95f65acd41f294d076b3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752783"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969076"
 ---
-# <a name="icordebugmemorybuffergetsize-method"></a>Metoda ICorDebugMemoryBuffer::GetSize
-Pobiera rozmiar bufora pamięci w bajtach.  
+# <a name="icordebugmemorybuffergetsize-method"></a>ICorDebugMemoryBuffer:: GetSize — metoda
+Pobiera rozmiar buforu pamięci w bajtach.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,21 +24,21 @@ HRESULT GetSize(
   
 ## <a name="parameters"></a>Parametry  
  `pcbBufferLength`  
- [out] Wskaźnik do rozmiaru bufora pamięci.  
+ określoną Wskaźnik do rozmiaru bufora pamięci.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

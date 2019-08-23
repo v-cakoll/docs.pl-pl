@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], hiding menu items in designer
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
-ms.openlocfilehash: 968d34a5f79d469ef62beaa8ac96742d73391b22
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 0e1cd7d1868adabd4d3eec9510f6ee567ba3867d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039743"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966613"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>Instrukcje: ukrywanie ToolStripMenuItems przy użyciu narzędzia Projektant
 Ukrywanie elementów menu to sposób sterowania interfejsem użytkownika aplikacji i ograniczania poleceń użytkownika. Często warto ukryć całe menu, gdy wszystkie elementy menu są niedostępne. Spowoduje to zmniejszenie liczby odniesień użytkownika. Ponadto możesz chcieć ukryć i wyłączyć menu lub element menu, ponieważ samo ukrywanie nie uniemożliwia użytkownikowi uzyskania dostępu do polecenia menu przy użyciu klawisza skrótu. Aby uzyskać więcej informacji na temat wyłączania [elementów menu, zobacz How to: Wyłącz kontrolki ToolStripMenuItems przy użyciu narzędzia](how-to-disable-toolstripmenuitems-using-the-designer.md)Projektant.
@@ -23,7 +23,7 @@ Ukrywanie elementów menu to sposób sterowania interfejsem użytkownika aplikac
      Ukrycie elementu menu najwyższego poziomu spowoduje również ukrycie wszystkich elementów menu w tym menu. Jeśli klikniesz pozycję inna niż w przypadku <xref:System.Windows.Forms.MenuStrip> `false`ustawienia <xref:System.Windows.Forms.ToolStripItem.Visible%2A> na, cały element menu najwyższego poziomu i jego elementy podmenu znikną z formularza, w ten sposób pokazujesz efekt czasu wykonywania akcji. Aby wyświetlić ukryty element menu najwyższego poziomu w czasie projektowania, kliknij na <xref:System.Windows.Forms.MenuStrip> pasku **składnika**, w menu **Konspekt dokumentu**lub u góry siatki właściwości.
 
 > [!NOTE]
->  W scenariuszu scalania nie będzie rzadko ukrywane całe menu poza menu podrzędnym wielu dokumentów (MDI).
+> W scenariuszu scalania nie będzie rzadko ukrywane całe menu poza menu podrzędnym wielu dokumentów (MDI).
 
 ## <a name="to-hide-a-submenu-item"></a>Aby ukryć element podmenu
 

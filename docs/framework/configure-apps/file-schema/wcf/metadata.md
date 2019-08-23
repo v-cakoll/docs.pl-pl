@@ -2,18 +2,18 @@
 title: <metadata>
 ms.date: 03/30/2017
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
-ms.openlocfilehash: c0c9848d073c799e1f97dd79b375848dfab71e99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4555dc9c2e0b783de2fb57e47c9aada0d69462e7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763909"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931304"
 ---
-# <a name="metadata"></a>\<metadata>
-Określa, jak metadane usługi mogą być przetwarzane.  
+# <a name="metadata"></a>\<> metadanych
+Określa sposób przetwarzania metadanych usługi.  
   
  \<system.ServiceModel>  
-\<client>  
+\<> klienta  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,14 +42,14 @@ Określa, jak metadane usługi mogą być przetwarzane.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<policyImporters>](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|Określa wszystkich importerów zasad sterujących importem potwierdzeń niestandardowych zasad dotyczących powiązań. Importer zasad służy do wyszukiwania niestandardowych asercji zasad dotyczących powiązań funkcji, jak również dołączyć element niestandardowego powiązania, który implementuje funkcje, których wymaga potwierdzenia.|  
-|[\<wsdlImporters>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|Określa importerów WSDL, które importują metadane Web Services Description Language (WSDL) 1.1 z załącznikami WS-Policy. WSDL importer umożliwia importowanie metadanych, a także przekształcać dane tej informacji do różnych klas, które reprezentują kontraktu i informacje o punkcie końcowym. Selektywnie można było zaimportować informacje o kontraktu i punktu końcowego i właściwości, które ujawnić błędy importowania i zaakceptuj dotyczą proces importowania i konwersji informacji o typie. Obsługuje ona również importowania informacje o powiązaniu i właściwości, które zapewniają dostęp do dokumentów zasad, dokumenty WSDL, rozszerzenia WSDL i dokumentów schematu XML.|  
+|[\<policyImporters >](policyimporters.md)|Określa wszystkich importerów zasad kontrolujących Importowanie potwierdzeń niestandardowych zasad dotyczących powiązań. Importer zasad jest używany do wyszukiwania potwierdzeń niestandardowych zasad dotyczących funkcji powiązania, a także do dołączania niestandardowego elementu powiązania, który implementuje funkcje wymagane przez potwierdzenie.|  
+|[\<wsdlImporters >](wsdlimporters.md)|Określa wszystkich importerów WSDL, którzy importują metadane Web Services Description Language (WSDL) 1,1 z załącznikami WS-Policy. Importer WSDL jest używany do importowania metadanych, a także konwertowania tych informacji na różne klasy, które reprezentują informacje o kontrakcie i punkcie końcowym. Umożliwia selektywne importowanie informacji o kontraktach i punktach końcowych oraz właściwości, które uwidaczniają błędy importu i akceptują informacje o typie odpowiednie dla procesu importu i konwersji. Obsługuje ona również importowanie informacji o powiązaniach i właściwości, które zapewniają dostęp do dowolnych dokumentów zasad, dokumentów WSDL, rozszerzeń WSDL i dokumentów schematu XML.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Klient >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|W sekcji klienta definiuje listę punktów końcowych, które klient może połączyć się z.|  
+|[\<> klienta](client.md)|Sekcja klienta definiuje listę punktów końcowych, z którymi klient może się połączyć.|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -58,5 +58,5 @@ Określa, jak metadane usługi mogą być przetwarzane.
 - <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>
 - <xref:System.ServiceModel.Description.MetadataImporter>
 - <xref:System.ServiceModel.Description.WsdlImporter>
-- [Konfiguracja klienta programu WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [Klienci](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [Konfiguracja klienta programu WCF](../../../wcf/feature-details/client-configuration.md)
+- [Klienci](../../../wcf/feature-details/clients.md)

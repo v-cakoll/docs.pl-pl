@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 440debe875a0d00d240849ba4b60b548f46e2c0e
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 937577f86ec854f5a458fe6067836a85a540695a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567049"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913803"
 ---
 # <a name="serialization-and-metadata"></a>Serializacja i metadane
 
@@ -39,7 +39,7 @@ Jeśli aplikacja serializować i deserializacji obiektów, może być konieczne 
   
 ### <a name="typeof-used-in-the-constructor"></a>wartość typeof użyta w konstruktorze
 
- W przypadku wywołania konstruktora tych klas serializacji i dołączenia C# operatora [typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) w wywołaniu metody **nie trzeba wykonywać żadnych dodatkowych czynności**. Na przykład w każdym z następujących wywołań konstruktora `typeof` klasy serializacji słowo kluczowe jest używane jako część wyrażenia przesłanego do konstruktora.  
+ W przypadku wywołania konstruktora tych klas serializacji i dołączenia C# operatora [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) w wywołaniu metody **nie trzeba wykonywać żadnych dodatkowych czynności**. Na przykład w każdym z następujących wywołań konstruktora `typeof` klasy serializacji słowo kluczowe jest używane jako część wyrażenia przesłanego do konstruktora.  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
@@ -47,7 +47,7 @@ Jeśli aplikacja serializować i deserializacji obiektów, może być konieczne 
   
 ### <a name="typeof-used-outside-the-constructor"></a>wartość typeof użyta poza konstruktorem
 
- Jeśli wywołasz konstruktora tych klas serializacji i użyjesz C# operatora [typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) poza wyrażeniem dostarczonym do <xref:System.Type> parametru konstruktora, jak w poniższym kodzie, kompilator .NET Native nie może rozpoznać typu:  
+ Jeśli wywołasz konstruktora tych klas serializacji i użyjesz C# operatora [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) poza wyrażeniem dostarczonym do <xref:System.Type> parametru konstruktora, jak w poniższym kodzie, kompilator .NET Native nie może rozpoznać typu:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   

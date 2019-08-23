@@ -13,49 +13,49 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: d270155fa1e6b61d8537096a07a4b93fa3b79b35
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: ae331ca9e3fd2aed654659e11434454874eff8fa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882199"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960430"
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Instrukcje: filtrowanie i sortowanie danych ADO.NET za pomocą składnika BindingSource formularzy systemu Windows
-Należy udostępnić sortowanie i filtrowanie możliwości <xref:System.Windows.Forms.BindingSource> kontrolować za pośrednictwem <xref:System.Windows.Forms.BindingSource.Sort%2A> i <xref:System.Windows.Forms.BindingSource.Filter%2A> właściwości. Można zastosować proste sortowania, jeśli bazowe źródło danych jest <xref:System.ComponentModel.IBindingList>, i można zastosować filtrowanie zaawansowane, sortowanie, gdy źródłem danych jest <xref:System.ComponentModel.IBindingListView>. <xref:System.Windows.Forms.BindingSource.Sort%2A> Właściwość wymaga standardowej składni ADO.NET: ciąg reprezentujący nazwę kolumny danych w źródle danych następuje `ASC` lub `DESC` do wskazania, czy lista powinny być sortowane w kolejności rosnącej lub malejącej. Możesz ustawić zaawansowane sortowania lub wiele kolumn, sortowanie, rozdzielając każda kolumna przecinka jako separatora. <xref:System.Windows.Forms.BindingSource.Filter%2A> Właściwość przyjmuje wyrażenia ciągu.  
+Można uwidocznić możliwości <xref:System.Windows.Forms.BindingSource> sortowania i filtrowania kontroli <xref:System.Windows.Forms.BindingSource.Sort%2A> za pomocą właściwości i <xref:System.Windows.Forms.BindingSource.Filter%2A> . Można zastosować proste sortowanie <xref:System.ComponentModel.IBindingList>, gdy bazowe źródło danych jest i można zastosować filtrowanie i zaawansowane sortowanie, gdy źródło danych <xref:System.ComponentModel.IBindingListView>jest. Właściwość wymaga standardowej składni ADO.NET: ciąg reprezentujący nazwę kolumny danych w źródle danych, `ASC` po której następuje lub `DESC` aby wskazać, czy lista powinna być posortowana w kolejności rosnącej czy malejącej. <xref:System.Windows.Forms.BindingSource.Sort%2A> Można ustawić zaawansowane sortowanie lub sortowanie z wieloma kolumnami, oddzielając poszczególne kolumny średnikami. <xref:System.Windows.Forms.BindingSource.Filter%2A> Właściwość przyjmuje wyrażenie ciągu.  
   
 > [!NOTE]
->  Przechowywanie poufnych informacji, takich jak hasła, w ciągu połączenia mogą wpływać na bezpieczeństwo aplikacji. Korzystanie z uwierzytelniania systemu Windows (znanego również jako zabezpieczenia zintegrowane) jest bezpieczniejszym sposobem na kontrolowanie dostępu do bazy danych. Aby uzyskać więcej informacji, zobacz [ochrony informacji o połączeniu](../../data/adonet/protecting-connection-information.md).  
+> Przechowywanie poufnych informacji, takich jak hasło, w ciągu połączenia może wpłynąć na bezpieczeństwo aplikacji. Korzystanie z uwierzytelniania systemu Windows (znanego również jako zabezpieczenia zintegrowane) jest bezpieczniejszym sposobem na kontrolowanie dostępu do bazy danych. Aby uzyskać więcej informacji, zobacz [Ochrona informacji o połączeniu](../../data/adonet/protecting-connection-information.md).  
   
-### <a name="to-filter-data-with-the-bindingsource"></a>Aby filtrować dane przy użyciu kontrolki BindingSource  
+### <a name="to-filter-data-with-the-bindingsource"></a>Aby odfiltrować dane za pomocą parametru BindingSource  
   
-- Ustaw <xref:System.Windows.Forms.BindingSource.Filter%2A> właściwości do wyrażenia, które chcesz.  
+- <xref:System.Windows.Forms.BindingSource.Filter%2A> Ustaw właściwość na wyrażenie, które chcesz.  
   
-     W poniższym przykładzie kodu wyrażenie jest nazwa kolumny, a następnie wartość, która ma kolumny.  
+     W poniższym przykładzie kodu wyrażenie jest nazwą kolumny, a następnie wartością, która ma być dla kolumny.  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#11)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#11)]  
   
-### <a name="to-sort-data-with-the-bindingsource"></a>Aby posortować dane przy użyciu kontrolki BindingSource  
+### <a name="to-sort-data-with-the-bindingsource"></a>Aby posortować dane za pomocą parametru BindingSource  
   
-1. Ustaw <xref:System.Windows.Forms.BindingSource.Sort%2A> właściwość na nazwę kolumny, która ma następuje `ASC` lub `DESC` do wskazania kolejności rosnącej lub malejącej.  
+1. Ustaw właściwość na nazwę kolumny, która ma `ASC` się pojawić, lub `DESC` aby wskazać kolejność rosnącą lub malejącą. <xref:System.Windows.Forms.BindingSource.Sort%2A>  
   
-2. Wiele kolumn należy oddzielić przecinkami.  
+2. Oddziel wiele kolumn przecinkami.  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#12)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#12)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod ładuje dane z tabeli Klienci w bazie danych Northwind do <xref:System.Windows.Forms.DataGridView> kontrolować, filtry i sortuje wyświetlanych danych.  
+ Poniższy przykład kodu ładuje dane z tabeli Customers przykładowej bazy danych Northwind do <xref:System.Windows.Forms.DataGridView> kontrolki, a następnie filtruje i sortuje wyświetlane dane.  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Aby uruchomić ten przykład, Wklej kod do formularza, który zawiera <xref:System.Windows.Forms.BindingSource> o nazwie `BindingSource1` i <xref:System.Windows.Forms.DataGridView> o nazwie `dataGridView1`. Obsługa <xref:System.Windows.Forms.Form.Load> zdarzenie w formularzu i wywołania `InitializeSortedFilteredBindingSource` w metodzie obsługi zdarzenia obciążenia.  
+ Aby uruchomić ten przykład, wklej <xref:System.Windows.Forms.BindingSource> kod w postaci zawierającej nazwę `BindingSource1` i <xref:System.Windows.Forms.DataGridView> nazwę `dataGridView1`. Obsłuż `InitializeSortedFilteredBindingSource` zdarzenie dla formularza i wywołania w metodzie obsługi zdarzeń ładowania. <xref:System.Windows.Forms.Form.Load>  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>
-- [Instrukcje: Zainstalować przykładowe bazy danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/8b6y4c7s(v=vs.120))
+- [Instrukcje: Instalowanie przykładowych baz danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/8b6y4c7s(v=vs.120))
 - [BindingSource, składnik](bindingsource-component.md)

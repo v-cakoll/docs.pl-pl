@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określić, który węzeł TreeView został kliknięty (formularze Windows)'
+title: 'Instrukcje: Określ, który węzeł TreeView został kliknięty (Windows Forms)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], determining node clicked
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
-ms.openlocfilehash: 71f13c7b160822c92475d4d03e923b40d4f0454d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab93158daf987e2f19516b8fb3abf80bfe79a12c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771049"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967343"
 ---
-# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Instrukcje: Określić, który węzeł TreeView został kliknięty (formularze Windows)
-Podczas pracy z formularzami Windows <xref:System.Windows.Forms.TreeView> kontrolki, często wykonywanego zadania ma na celu określenie węzeł, który został kliknięty i odpowiednio reagować.  
+# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Instrukcje: Określ, który węzeł TreeView został kliknięty (Windows Forms)
+Podczas pracy z kontrolką <xref:System.Windows.Forms.TreeView> Windows Forms, typowe zadanie polega na określeniu, który węzeł został kliknięty, i odpowiadać odpowiednio.  
   
-### <a name="to-determine-which-treeview-node-was-clicked"></a>Aby ustalić, który węzeł TreeView został kliknięty  
+### <a name="to-determine-which-treeview-node-was-clicked"></a>Aby określić, który węzeł TreeView został kliknięty  
   
-1. Użyj <xref:System.EventArgs> obiekt do zwrotu odwołanie do obiektu klikniętego węzła.  
+1. Użyj obiektu <xref:System.EventArgs> , aby zwrócić odwołanie do klikniętego obiektu węzła.  
   
-2. Określanie, który węzeł został kliknięty, sprawdzając <xref:System.Windows.Forms.TreeViewEventArgs> klasy, która zawiera dane związane ze zdarzeniem.  
+2. Ustal, który węzeł został kliknięty, <xref:System.Windows.Forms.TreeViewEventArgs> sprawdzając klasę, która zawiera dane związane ze zdarzeniem.  
   
     ```vb  
     Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, _  
@@ -56,7 +56,7 @@ Podczas pracy z formularzami Windows <xref:System.Windows.Forms.TreeView> kontro
     ```  
   
     > [!NOTE]
-    >  Alternatywnie, można użyć <xref:System.Windows.Forms.MouseEventArgs> z <xref:System.Windows.Forms.Control.MouseDown> lub <xref:System.Windows.Forms.Control.MouseUp> zdarzeń, aby uzyskać <xref:System.Drawing.Point.X%2A> i <xref:System.Drawing.Point.Y%2A> koordynować wartości <xref:System.Drawing.Point> gdzie wystąpiło kliknięcie. Następnie należy użyć <xref:System.Windows.Forms.TreeView> kontrolki <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> metodę pozwala ustalić, który węzeł został kliknięty.  
+    > Alternatywnie, <xref:System.Windows.Forms.MouseEventArgs> możesz użyć <xref:System.Windows.Forms.Control.MouseDown> zdarzenia <xref:System.Windows.Forms.Control.MouseUp> <xref:System.Drawing.Point.Y%2A> lub,<xref:System.Drawing.Point> Aby uzyskać wartości iwspółrzędnewmiejscu,wktórymnastąpiłokliknięcie.<xref:System.Drawing.Point.X%2A> Następnie użyj <xref:System.Windows.Forms.TreeView> <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> metody kontrolki, aby określić, który węzeł został kliknięty.  
   
 ## <a name="see-also"></a>Zobacz także
 

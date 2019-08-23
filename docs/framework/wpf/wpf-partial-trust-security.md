@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: b68148b08cf6b5f980bc09e497e845558ae882fb
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: c3ec6ca6feba975517a9f982bb58e4b061516a61
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567528"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962804"
 ---
 # <a name="wpf-partial-trust-security"></a>Zabezpieczenie częściowej relacji zaufania WPF
 <a name="introduction"></a>Ogólnie rzecz biorąc, aplikacje internetowe powinny być ograniczone przez bezpośredni dostęp do krytycznych zasobów systemowych, aby zapobiec złośliwym szkodom. Domyślnie języki skryptów HTML i po stronie klienta nie mogą uzyskać dostępu do krytycznych zasobów systemowych. Ponieważ aplikacje hostowane w przeglądarce Windows Presentation Foundation (WPF) mogą być uruchamiane z przeglądarki, powinny one być zgodne z podobnym zestawem ograniczeń. Aby wymusić te [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ograniczenia, należy zastosować zabezpieczenia dostępu kodu (CAS) i ClickOnce (zobacz temat [strategie zabezpieczeń WPF-platform Security](wpf-security-strategy-platform-security.md)). Domyślnie aplikacje hostowane w przeglądarce żądają zestawu uprawnień strefy Internetu, niezależnie od tego, czy są uruchamiane z Internetu, lokalnego intranetu, czy komputera lokalnego. Aplikacje działające z dowolnym elementem mniejszym niż pełny zestaw uprawnień są uznawane za działające z częściowym zaufaniem.  
@@ -87,7 +87,7 @@ ms.locfileid: "69567528"
 |Internet|Niepowodzenie z "zaufaniem nieudzielonym"|Podpisz element XBAP przy użyciu certyfikatu.|  
   
 > [!NOTE]
->  Zachowanie opisane w poprzedniej tabeli służy do pełnego zaufania XBAP, które nie są zgodne z zaufanym modelem wdrażania ClickOnce.  
+> Zachowanie opisane w poprzedniej tabeli służy do pełnego zaufania XBAP, które nie są zgodne z zaufanym modelem wdrażania ClickOnce.  
   
  Ogólnie rzecz biorąc, kod, który może przekroczyć dozwolone uprawnienia, prawdopodobnie będzie typowym kodem, który jest współużytkowany przez aplikacje autonomiczne i hostowane w przeglądarce. Urzędy [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] certyfikacji i oferują kilka technik zarządzania tym scenariuszem.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "69567528"
  Korzystanie z urzędów certyfikacji do sprawdzania uprawnień jest odpowiednią techniką w przypadku konieczności sprawdzenia poszczególnych uprawnień. Chociaż ta technika jest zależna od przechwytywania wyjątków w ramach normalnego przetwarzania, co nie jest ogólnie zalecane i może mieć problemy z wydajnością. Zamiast tego, jeśli [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] działa tylko w piaskownicy strefy internetowej, można <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> użyć właściwości, która zwraca wartość true dla [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>odróżnia tylko, czy aplikacja działa w przeglądarce, a nie zestaw uprawnień, z którymi aplikacja działa.  
+> <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>odróżnia tylko, czy aplikacja działa w przeglądarce, a nie zestaw uprawnień, z którymi aplikacja działa.  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>Zarządzanie uprawnieniami  
@@ -149,7 +149,7 @@ ms.locfileid: "69567528"
 |Przeglądarki sieci Web|Bezpieczne nawigowanie po ramce do kodu HTML|Tak|Tak|  
   
 > [!NOTE]
->  Operacje wycinania i wklejania są dozwolone tylko w częściowej relacji zaufania po zainicjowaniu użytkownika.  
+> Operacje wycinania i wklejania są dozwolone tylko w częściowej relacji zaufania po zainicjowaniu użytkownika.  
   
  Jeśli musisz zwiększyć uprawnienia, musisz zmienić ustawienia projektu i manifest aplikacji ClickOnce. Aby uzyskać więcej informacji, zobacz [Omówienie aplikacji w przeglądarce WPF XAML](./app-development/wpf-xaml-browser-applications-overview.md). Pomocne mogą być również następujące dokumenty.  
   

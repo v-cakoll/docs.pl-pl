@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 80973e16445079876e01c89f20b5ecbdca602eb8
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 818f36633575b248d92da475c462cc0f211fe969
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039727"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966538"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Instrukcje: tworzenie warstw obiektów na formularzach systemu Windows
 Podczas tworzenia złożonego interfejsu użytkownika lub pracy z formularzem interfejsu wielu dokumentów (MDI), często zajdzie potrzeba warstwy formantów i formularzy podrzędnych, aby utworzyć bardziej złożone interfejsy użytkownika. Aby przenieść i śledzić kontrolki i okna w kontekście grupy, można manipulować ich kolejnością z. *Porządek osi z* jest wizualną warstwą formantów w formularzu wzdłuż osi z (głębokości) formularza. Okno w górnej części porządku osi z nakładają się na wszystkie inne okna. Wszystkie inne okna nakładają się na okno w dolnej części porządku osi z.
@@ -47,7 +47,7 @@ Podczas tworzenia złożonego interfejsu użytkownika lub pracy z formularzem in
     ```
 
 > [!NOTE]
->  Windows Forms obsługuje *zawieranie kontrolek*. Zawieranie formantów obejmuje umieszczanie wielu kontrolek w obrębie zawierającej kontrolki, takich jak liczba <xref:System.Windows.Forms.RadioButton> kontrolek <xref:System.Windows.Forms.GroupBox> w kontrolce. Następnie można przyciągać warstwy do kontrolek zawierających. Przeniesienie pola grupy przenosi również kontrolki, ponieważ znajdują się w nim.
+> Windows Forms obsługuje *zawieranie kontrolek*. Zawieranie formantów obejmuje umieszczanie wielu kontrolek w obrębie zawierającej kontrolki, takich jak liczba <xref:System.Windows.Forms.RadioButton> kontrolek <xref:System.Windows.Forms.GroupBox> w kontrolce. Następnie można przyciągać warstwy do kontrolek zawierających. Przeniesienie pola grupy przenosi również kontrolki, ponieważ znajdują się w nim.
 
 ## <a name="see-also"></a>Zobacz także
 

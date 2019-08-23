@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 506cc3b86961ca22361d37d372bcac9632528cae
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0c4fc9645e43f23e340804b46bbe8a5faa19525d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602230"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922390"
 ---
 # <a name="class-c-reference"></a>class (odwołanie w C#)
 
@@ -62,7 +62,7 @@ Klasa może zawierać deklaracje następujących elementów członkowskich:
 
 - [Indeksatory](../../programming-guide/indexers/index.md)
 
-- [Operatory](../../programming-guide/statements-expressions-operators/operators.md)
+- [Operatory](../operators/index.md)
 
 - [Zdarzenia](../../programming-guide/events/index.md)
 

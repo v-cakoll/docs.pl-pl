@@ -8,26 +8,26 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: f2f36cc7fe59262e1e16b913e18daa7363240847
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a641b1e7565842a1edf6aeec88bdc37ee0786ab4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648047"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969119"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Definiowanie właściwości formantów formularzy systemu Windows
-Aby zapoznać się z omówieniem właściwości, zobacz [Przegląd właściwości](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Istnieje kilka istotnych kwestii, definiując właściwość:  
+Aby zapoznać się z omówieniem właściwości, zobacz [Omówienie właściwości](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Podczas definiowania właściwości należy wziąć pod uwagę kilka istotnych kwestii:  
   
-- Należy najpierw zastosować atrybutów do właściwości, jaką zdefiniujesz. Atrybuty określają, jak projektant powinien być wyświetlany właściwości. Aby uzyskać więcej informacji, zobacz [atrybuty czasu projektowania dla składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
+- Należy zastosować atrybuty do zdefiniowanych właściwości. Atrybuty określają sposób wyświetlania właściwości przez projektanta. Aby uzyskać szczegółowe informacje, zobacz [atrybuty czasu projektowania dla składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
-- Jeśli zmiana wartości właściwości dotyczy wyświetlania kontrolki, należy wywołać <xref:System.Windows.Forms.Control.Invalidate%2A> — metoda (dziedziczący kontroli nad <xref:System.Windows.Forms.Control>) z `set` metody dostępu. <xref:System.Windows.Forms.Control.Invalidate%2A> z kolei wywołuje <xref:System.Windows.Forms.Control.OnPaint%2A> metody, która odrysowuje formantu. Wiele wywołań <xref:System.Windows.Forms.Control.Invalidate%2A> powoduje, jednokrotnego wywołania <xref:System.Windows.Forms.Control.OnPaint%2A> w celu zwiększenia wydajności.  
+- Jeśli zmiana właściwości ma wpływ na wyświetlanie wizualizacji kontrolki, należy wywołać <xref:System.Windows.Forms.Control.Invalidate%2A> metodę (którą formant dziedziczy z <xref:System.Windows.Forms.Control>) z `set` metody dostępu. <xref:System.Windows.Forms.Control.Invalidate%2A>z kolei wywołuje <xref:System.Windows.Forms.Control.OnPaint%2A> metodę, która ponownie Rysuje formant. Wiele wywołań <xref:System.Windows.Forms.Control.Invalidate%2A> w wyniku pojedynczego wywołania do <xref:System.Windows.Forms.Control.OnPaint%2A> wydajności.  
   
-- Biblioteka klas .NET Framework zapewnia konwerterów typów standardowe typy danych, takich jak liczby całkowite, liczby dziesiętne, wartości logicznych i innych. Celem konwertera typów jest zwykle zapewniają wartość ciągu konwersja (dane ciągu na inne typy danych). Standardowe typy danych są skojarzone z konwertery typu domyślnego, które konwertują wartości do ciągów i ciągów na typy danych. Jeśli zdefiniowano właściwość niestandardową (oznacza to, niestandardowe) typu danych, należy zastosować atrybut określający konwertera typów do skojarzenia z tej właściwości. Atrybut umożliwia również skojarzyć niestandardowego edytora typów interfejsu użytkownika z właściwością. Edytor typów interfejsu użytkownika udostępnia interfejs użytkownika do edycji właściwości lub typu danych. Selektor kolorów jest przykład edytora typów interfejsu użytkownika. Przykłady atrybutów znajdują się na końcu tego tematu.  
+- Biblioteka klas .NET Framework udostępnia konwertery typów dla wspólnych typów danych, takich jak liczby całkowite, liczby dziesiętne, wartości logiczne i inne. Przeznaczenie konwertera typów zwykle zapewnia konwersję typu ciąg-do-wartości (od danych ciągu do innych typów danych). Typy wspólnych danych są skojarzone z domyślnymi konwerterami typów, które konwertują wartości na ciągi i ciągi do odpowiednich typów danych. W przypadku zdefiniowania właściwości, która jest niestandardowym typem danych (czyli niestandardowym), należy zastosować atrybut określający konwerter typów do skojarzenia z tą właściwością. Można również użyć atrybutu, aby skojarzyć niestandardowy Edytor typów interfejsu użytkownika z właściwością. Edytor typów interfejsu użytkownika udostępnia interfejs użytkowników do edycji właściwości lub typu danych. Selektor kolorów jest przykładem edytora typów interfejsu użytkownika. Przykłady atrybutów są podane na końcu tego tematu.  
   
     > [!NOTE]
-    >  Jeśli konwertera typów lub Edytor typów interfejsu użytkownika nie są dostępne dla właściwości niestandardowej, można zaimplementować jeden zgodnie z opisem w [rozszerzenie obsługi w czasie projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)).  
+    > Jeśli konwerter typu lub Edytor typów interfejsu użytkownika nie jest dostępny dla właściwości niestandardowej, można zaimplementować jedną zgodnie z opisem w temacie [rozszerzanie obsługi czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)).  
   
- Poniższy fragment kodu definiuje właściwość niestandardowa o nazwie `EndColor` dla formantu niestandardowego `FlashTrackBar`.  
+ Poniższy fragment kodu definiuje właściwość niestandardową o `EndColor` nazwie dla kontrolki `FlashTrackBar`niestandardowej.  
   
 ```vb  
 Public Class FlashTrackBar  
@@ -95,7 +95,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
- Poniższy fragment kodu tworzy skojarzenia między konwertera typów i Edytor typów interfejsu użytkownika za pomocą właściwości `Value`. W tym przypadku `Value` jest liczbą całkowitą, a ma konwertera typów domyślnego, ale <xref:System.ComponentModel.TypeConverterAttribute> atrybutu, dotyczy konwertera typów niestandardowych (`FlashTrackBarValueConverter`), który umożliwia projektanta Aby wyświetlić go jako procent. Edytor typów interfejsu użytkownika, `FlashTrackBarValueEditor`, umożliwia procent, które mają być wyświetlane wizualnie. Ten przykład pokazuje, że również konwertera typów lub editor określona przez <xref:System.ComponentModel.TypeConverterAttribute> lub <xref:System.ComponentModel.EditorAttribute> konwerter domyślne przesłonięcia atrybutów.  
+ Poniższy fragment kodu kojarzy konwerter typów i Edytor typów interfejsu użytkownika z właściwością `Value`. W tym przypadku `Value` jest to liczba całkowita i ma konwerter typu domyślnego, <xref:System.ComponentModel.TypeConverterAttribute> ale atrybut stosuje niestandardowy konwerter typów (`FlashTrackBarValueConverter`), który umożliwia projektantowi wyświetlenie go jako wartości procentowej. Edytor typów interfejsu użytkownika, `FlashTrackBarValueEditor`,, umożliwia wizualne Wyświetlanie wartości procentowej. Ten przykład pokazuje również, że konwerter typu lub Edytor określony przez <xref:System.ComponentModel.TypeConverterAttribute> atrybut lub <xref:System.ComponentModel.EditorAttribute> zastępuje domyślny konwerter.  
   
 ```vb  
 <Category("Flash"), _  

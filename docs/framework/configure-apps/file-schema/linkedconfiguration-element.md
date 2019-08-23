@@ -11,19 +11,19 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-ms.openlocfilehash: 909ee7cbb7cd31cf213f305b23237cb69e295882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0b56ac66302f11c59c149197a84bb96691282a5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674652"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921014"
 ---
-# <a name="linkedconfiguration-element"></a>\<linkedConfiguration> element
+# <a name="linkedconfiguration-element"></a>\<linkedConfiguration, element >
 
-Określa wymagający uwzględnienia plik konfiguracji.
+Określa plik konfiguracji, który ma zostać uwzględniony.
 
-[ **\<Konfiguracja >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<assemblybinding — >** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+[ **\<> konfiguracji**](configuration-element.md)   
+&nbsp;&nbsp;[ **\<> zestawubinding**](assemblybinding-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration>**
 
 ## <a name="syntax"></a>Składnia
@@ -36,13 +36,13 @@ Określa wymagający uwzględnienia plik konfiguracji.
 
 |           | Opis |
 | --------- | ----------- |
-| **href**  | Atrybut wymagany.<br><br>Adres URL pliku konfiguracji, aby uwzględnić. Jedynym obsługiwanym formatem do **href** atrybut jest `file://`. Obsługiwane są pliki lokalne i plików UNC. |
+| **Tag**  | Atrybut wymagany.<br><br>Adres URL pliku konfiguracji, który ma zostać uwzględniony. Jedynym formatem obsługiwanym przez atrybut **href** jest `file://`. Obsługiwane są pliki lokalne i pliki UNC. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<assemblybinding — >** — Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Określa politykę powiązania zestawu na poziomie konfiguracji. |
+| [assemblyBinding — element >  **\<** ](assemblybinding-element-for-configuration.md) | Określa zasady powiązań zestawów na poziomie konfiguracji. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
@@ -50,24 +50,24 @@ Brak
 
 ## <a name="remarks"></a>Uwagi
 
-**\<Linkedconfiguration — >** element upraszcza obsługę techniczną dla zestawów składników. Co najmniej jednej aplikacji, użycie zestawu, który zawiera plik konfiguracji znajdujących się w lokalizacji, dobrze znanego, pliki konfiguracji aplikacji, które używają zestawu można użyć **\<linkedconfiguration — >** element, aby uwzględnić plik konfiguracji zestawu, a nie bezpośrednio w tym informacje o konfiguracji. Gdy zestaw składników jest obsługiwany, aktualizowanie wspólnego pliku konfiguracji informacje zaktualizowanej konfiguracji do wszystkich aplikacji korzystających z zestawu.
+**\<Linkedconfiguration — >** element upraszcza obsługę techniczną dla zestawów składników. Co najmniej jednej aplikacji, użycie zestawu, który zawiera plik konfiguracji znajdujących się w lokalizacji, dobrze znanego, pliki konfiguracji aplikacji, które używają zestawu można użyć **\<linkedconfiguration — >** element, aby uwzględnić plik konfiguracji zestawu, a nie bezpośrednio w tym informacje o konfiguracji. Gdy zestaw składników jest serwisowany, aktualizacja wspólnego pliku konfiguracji zawiera zaktualizowane informacje o konfiguracji do wszystkich aplikacji, które korzystają z zestawu.
 
 > [!NOTE]
 > **\<Linkedconfiguration — >** element nie jest obsługiwany w przypadku aplikacji o Windows side-by-side manifestów.
 
-Użycie powiązane pliki konfiguracji decydują następujące reguły:
+Zastosowanie połączonych plików konfiguracji podlega następującym zasadom:
 
-- Ustawienia w plikach konfiguracyjnych uwzględnione tylko wpływa na zasady tworzenia powiązań modułu ładującego i są używane tylko przez moduł ładujący. Pliki dołączone konfiguracji może mieć ustawienia inne niż powiązanie zasad, ale te ustawienia nie mają żadnego efektu.
+- Ustawienia w zawartych plikach konfiguracji mają wpływ tylko na zasady powiązań modułu ładującego i są używane tylko przez moduł ładujący. Dołączone pliki konfiguracji mogą mieć ustawienia inne niż zasady powiązań, ale te ustawienia nie mają żadnego efektu.
 
-- Jedynym obsługiwanym formatem do `href` atrybut jest `file://`. Obsługiwane są pliki lokalne i plików UNC.
+- Jedynym formatem obsługiwanym przez `href` atrybut jest. `file://` Obsługiwane są pliki lokalne i pliki UNC.
 
-- Brak bez ograniczenia na liczbę połączonych konfiguracji każdego pliku konfiguracji.
+- Brak ograniczeń liczby połączonych konfiguracji na plik konfiguracyjny.
 
-- Wszystkie powiązane pliki konfiguracji są scalane w celu utworzenia jeden plik, podobne do zachowania `#include` dyrektywy języka C/C++.
+- Wszystkie połączone pliki konfiguracji są scalane w celu utworzenia jednego pliku, podobnie jak w przypadku `#include` zachowania dyrektywy w językuC++C/.
 
 - **\<Linkedconfiguration — >** element jest dozwolony tylko w plikach konfiguracji aplikacji; jest ignorowana w *Machine.config*.
 
-- Odwołania cykliczne są wykrywane i zakończone. Oznacza to jeśli **\<linkedconfiguration — >** elementy szeregu plików konfiguracyjnych tworzą pętli, pętla jest wykrywany i zatrzymane.
+- Odwołania cykliczne są wykrywane i kończone. Oznacza to jeśli **\<linkedconfiguration — >** elementy szeregu plików konfiguracyjnych tworzą pętli, pętla jest wykrywany i zatrzymane.
 
 ## <a name="example"></a>Przykład
 
@@ -83,5 +83,5 @@ Poniższy przykład pokazuje, jak dołączyć plik konfiguracji z lokalnego dysk
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ **\<assemblybinding — >** — Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
-- [Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [assemblyBinding — element >  **\<** ](assemblybinding-element-for-configuration.md)
+- [Schemat pliku konfiguracji dla .NET Framework](index.md)

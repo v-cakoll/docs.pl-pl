@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a983561f34bee96f5de1e05d608bff930c7ec8c0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5445fb223e34aa82d4b93032bb059093978f6bd1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750233"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910332"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>Metoda ICorDebugDataTarget2::CreateVirtualUnwinder
-Tworzy nowy unwinder stosu, który rozpoczyna się odwijanie od początkowego kontekstu, (które niekoniecznie liścia wątku).  
+Tworzy nowy wątek unwiatrer, który zaczyna odwracać od kontekstu początkowego (co nie musi być elementem liścia wątku).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -28,36 +28,36 @@ HRESULT CreateVirtualUnwinder(
   
 ## <a name="parameters"></a>Parametry  
  nativeThreadID  
- [in] Identyfikator wątku natywnych wątku, którego stosu, które ma być rozwinięty.  
+ podczas Identyfikator wątku natywnego wątku, którego stos ma być rozłożony.  
   
  contextFlags  
- [in] Flagi określające, części kontekstu, które są zdefiniowane w `initialContext`.  
+ podczas Flagi określające, w `initialContext`których częściach kontekstu są zdefiniowane.  
   
  cbContext  
- [in] Rozmiar `initialContext`.  
+ podczas Rozmiar `initialContext`.  
   
  initialContext  
- [in] Dane w kontekście.  
+ podczas Dane w kontekście.  
   
  ppUnwinder  
- [out] Wskaźnik na adres obiektu interfejsu ICorDebugVirtualUnwinder.  
+ określoną Wskaźnik do adresu obiektu interfejsu ICorDebugVirtualUnwinder.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli to się powiedzie. Inne `HRESULT` wskazuje błąd. Wszelkie niepowodzenia `HRESULT` odebranych przez mscordbi jest uważane za krytyczne i powoduje, że [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) metody, aby zwrócić `CORDBG_E_DATA_TARGET_ERROR`.  
+ `S_OK`w przypadku powodzenia. Wszystkie inne `HRESULT` wskazuje na błąd. Wszystkie błędy `HRESULT` odebrane przez mscordbi są uznawane za krytyczne [](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) i powodują zwrócenie `CORDBG_E_DATA_TARGET_ERROR`metod ICorDebug.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

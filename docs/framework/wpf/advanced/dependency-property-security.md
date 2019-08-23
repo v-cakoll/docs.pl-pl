@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: 2f9de32eb8637e58c17aba2309eed33dcfdd42a7
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d9dd9306980b80f7845c10e8c0ccb59f29821245
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400769"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940837"
 ---
 # <a name="dependency-property-security"></a>Zabezpieczenie właściwości zależności
 Właściwości zależności powinny być zwykle uznawane za właściwości publiczne. Charakter [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] systemu właściwości uniemożliwia możliwość podejmowania gwarancji bezpieczeństwa dotyczących wartości właściwości zależności.  
@@ -29,7 +29,7 @@ Właściwości zależności powinny być zwykle uznawane za właściwości publi
  Dla właściwości zależności niestandardowej można zarejestrować właściwość jako właściwość zależności tylko <xref:System.Windows.DependencyPropertyKey> do odczytu, co zapewnia efektywne środki uniemożliwiające ustawienie właściwości przez każdą osobę, która nie przechowuje odwołania do tej właściwości. Aby uzyskać więcej informacji, zobacz [właściwości zależności tylko do odczytu](read-only-dependency-properties.md).  
   
 > [!NOTE]
->  Deklarowanie <xref:System.Windows.DependencyProperty> pola identyfikatora Private nie jest zabronione i można go wykorzystać, aby zmniejszyć bezpośrednio uwidocznioną przestrzeń nazw klasy niestandardowej, ale taka właściwość nie powinna być traktowana jako "Private" w tym samym sensie jak w przypadku wspólnego języka definicje języka środowiska uruchomieniowego (CLR) definiują ten poziom dostępu z powodów opisanych w następnej sekcji.  
+> Deklarowanie <xref:System.Windows.DependencyProperty> pola identyfikatora Private nie jest zabronione i można go wykorzystać, aby zmniejszyć bezpośrednio uwidocznioną przestrzeń nazw klasy niestandardowej, ale taka właściwość nie powinna być traktowana jako "Private" w tym samym sensie jak w przypadku wspólnego języka definicje języka środowiska uruchomieniowego (CLR) definiują ten poziom dostępu z powodów opisanych w następnej sekcji.  
   
 <a name="PropertySystemExposure"></a>   
 ## <a name="property-system-exposure-of-dependency-properties"></a>Wyeksponowanie właściwości zależności przez system właściwości  

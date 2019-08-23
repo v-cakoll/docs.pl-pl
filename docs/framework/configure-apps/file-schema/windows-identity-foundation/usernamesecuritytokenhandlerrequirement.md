@@ -3,15 +3,15 @@ title: <userNameSecurityTokenHandlerRequirement>
 ms.date: 03/30/2017
 ms.assetid: 6ec3bac1-b014-49ae-843c-c54518cb709a
 author: BrucePerlerMS
-ms.openlocfilehash: 18769794da8528f085c567264827db5aa6b214f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fed8964e03b80e365fdc5eafd45b4fc372a6e352
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790458"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944250"
 ---
 # <a name="usernamesecuritytokenhandlerrequirement"></a>\<userNameSecurityTokenHandlerRequirement>
-Udostępnia konfigurację dla <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> klasy lub klas pochodnych.  
+Zapewnia konfigurację <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> klasy lub klas pochodnych.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -41,7 +41,7 @@ Udostępnia konfigurację dla <xref:System.IdentityModel.Services.Tokens.Members
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|membershipProviderName|Określa <xref:System.Web.Security.MembershipProvider> , powinny być używane przez programu obsługi tokenów zabezpieczających.|  
+|membershipProviderName|<xref:System.Web.Security.MembershipProvider> Określa, który ma być używany przez program obsługi tokenów zabezpieczających.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -50,10 +50,10 @@ Udostępnia konfigurację dla <xref:System.IdentityModel.Services.Tokens.Members
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Programu obsługi tokenów zabezpieczeń określone są dodawane do kolekcji programu obsługi tokenów.|  
+|[\<add>](add.md)|Dodaje określony program obsługi tokenów zabezpieczających do kolekcji obsługi tokenów.|  
   
 ## <a name="remarks"></a>Uwagi  
- `<userNameSecurityTokenHandlerRequirement>` Ustawia element <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> właściwości podczas <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> obiekt jest inicjowany z konfiguracji.  
+ Element ustawia właściwość, <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> gdy <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> obiekt jest inicjowany z konfiguracji. `<userNameSecurityTokenHandlerRequirement>`  
   
 ## <a name="example"></a>Przykład  
   

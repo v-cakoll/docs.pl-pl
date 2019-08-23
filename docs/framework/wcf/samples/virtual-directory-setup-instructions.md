@@ -2,193 +2,193 @@
 title: Instrukcje dotyczące konfigurowania katalogów wirtualnych
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: a30adb45883ad0803986a237e9ec1967d7f55ca8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f755fadf6bef2bdd58fd31f3460a143b8f52eddf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624226"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966743"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instrukcje dotyczące konfigurowania katalogów wirtualnych
-Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólnego katalogu wirtualnego o nazwie servicemodelsamples, który jest zamapowany na %SystemDrive%\inetpub\wwwroot\servicemodelsamples folder.  
+Przykłady Windows Communication Foundation (WCF) są przeznaczone do udostępniania wspólnego katalogu wirtualnego o nazwie servicemodelsamples, który jest mapowany do folderu%SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
 > [!NOTE]
->  Dysk % SystemDrive % jest zwykle C: i D:, w zależności od lokalizacji dysku, na którym zainstalowano usługi Internet Information Services (IIS).  
+> Dysk% SystemDrive% jest zwykle C: lub D:, w zależności od lokalizacji dysku, w której zainstalowano Internet Information Services (IIS).  
   
- Możesz uruchamiać pliki Setupvroot.bat i Cleanupvroot.bat z [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) można utworzyć katalogu wirtualnego. Jeśli wolisz ręcznie utworzyć katalogu wirtualnego, należy użyć poniższych procedur.  
+ Pliki Setupvroot. bat i cleanupvroot. bat można uruchomić z [procedury konfiguracji jednorazowej dla przykładów Windows Communication Foundation,](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) aby utworzyć katalog wirtualny. Jeśli wolisz ręcznie utworzyć katalog wirtualny, Użyj poniższych procedur.  
   
 ## <a name="procedures"></a>Procedury  
   
-#### <a name="to-create-a-virtual-directory-in-iis-70-or-75"></a>Można utworzyć katalogu wirtualnego w usługach IIS 7.0 lub 7.5  
+#### <a name="to-create-a-virtual-directory-in-iis-70-or-75"></a>Aby utworzyć katalog wirtualny w usługach IIS 7,0 lub 7,5  
   
-1. Z **Start** menu, kliknij przycisk **Uruchom**, a następnie wpisz **inetmgr** aby otworzyć przystawkę MMC usług Internet Information Services (IIS).  
+1. W menu **Start** kliknij polecenie **Uruchom**, a następnie wpisz **inetmgr** , aby otworzyć przystawkę MMC Internet Information Services (IIS).  
   
-2. W lewym okienku rozwiń węzeł z nazwą komputera, a następnie rozwiń **witryn** węzła.  
+2. W lewym okienku rozwiń węzeł nazwą komputera, a następnie rozwiń węzeł **Lokacje** .  
   
-3. Kliknij prawym przyciskiem myszy **domyślna witryna sieci Web**, a następnie wybierz pozycję **Add Application** otworzyć **okno Dodawanie aplikacji**.  
+3. Kliknij prawym przyciskiem myszy pozycję **Domyślna witryna sieci Web**, a następnie wybierz polecenie **Dodaj aplikację** , aby otworzyć **okno Dodawanie aplikacji**.  
   
-4. W oknie wpisz `servicemodelsamples` jako alias katalogu wirtualnego, który tworzysz.  
+4. W oknie wpisz `servicemodelsamples` jako alias tworzonego katalogu wirtualnego.  
   
-5. Utwórz następujący katalog: %SystemDrive%\inetpub\wwwroot\servicemodelsamples  
+5. Utwórz następujący katalog:%SystemDrive%\inetpub\wwwroot\servicemodelsamples  
   
-6. Ustaw ścieżkę fizyczną na % SystemDrive%\inetpub\wwwroot\servicemodelsamples.  Większość przykładów WCF skopiuj pliki wykonywalne usługi do tej lokalizacji podczas kompilowania.  
+6. Ustaw ścieżkę fizyczną na%SystemDrive%\inetpub\wwwroot\servicemodelsamples.  Większość przykładów WCF kopiuje pliki wykonywalne usługi do tej lokalizacji po skompilowaniu.  
   
-7. Kliknij przycisk **OK**. Aplikacja sieci Web został utworzony dla przykładów usługi WCF.  
-  
-    > [!NOTE]
-    >  To zadanie można wykonać tylko raz, ponieważ jest używany przez wszystkie przykłady WCF servicemodelsamples tej samej aplikacji sieci Web.  
+7. Kliknij przycisk **OK**. Aplikacja sieci Web jest teraz utworzona dla przykładów WCF.  
   
     > [!NOTE]
-    >  Na potrzeby tej dokumentacji termin `virtual directory` jest synonimem `Web application`.  
+    >  To zadanie należy wykonać tylko raz, ponieważ wszystkie przykłady WCF używają tej samej aplikacji sieci Web servicemodelsamples.  
   
-     Oprócz tworzenia katalogu wirtualnego, można również ustawić jej właściwości, aby umożliwić działanie usług WCF. Zobacz szczegóły poniżej.  
+    > [!NOTE]
+    >  Na potrzeby tej dokumentacji termin `virtual directory` jest równoznaczny z. `Web application`  
   
-#### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>Można utworzyć katalogu wirtualnego w IIS 5.1 i 6.0  
+     Oprócz tworzenia katalogu wirtualnego, należy również ustawić jego właściwości, aby umożliwić uruchamianie usług WCF. Aby uzyskać szczegółowe informacje, zobacz poniżej.  
   
-1. Otwórz okno wiersza polecenia i wpisz `start inetmgr` aby otworzyć przystawkę MMC usług Internet Information Services (IIS).  
+#### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>Aby utworzyć katalog wirtualny w usługach IIS 5,1 lub 6,0  
   
-2. W lewym okienku rozwiń węzeł z nazwą komputera, a następnie rozwiń **witryn sieci Web** węzła.  
+1. Otwórz okno wiersza polecenia i wpisz `start inetmgr` , aby otworzyć przystawkę MMC Internet Information Services (IIS).  
   
-3. Kliknij prawym przyciskiem myszy **domyślna witryna sieci Web** i wybierz **nowe, katalog wirtualny** aby otworzyć Kreatora tworzenia katalogów wirtualnych.  
+2. W lewym okienku rozwiń węzeł nazwą komputera, a następnie rozwiń węzeł **witryny sieci Web** .  
   
-4. W kreatorze, wpisz `servicemodelsamples` jako alias katalogu wirtualnego, który tworzysz.  
+3. Kliknij prawym przyciskiem myszy pozycję **Domyślna witryna sieci Web** i wybierz pozycję **Nowy, katalog wirtualny,** aby otworzyć Kreatora tworzenia katalogów wirtualnych.  
   
-5. Ustaw ścieżkę na % SystemDrive%\inetpub\wwwroot\servicemodelsamples. Większość przykładów WCF skopiuj pliki wykonywalne usługi do tej lokalizacji podczas kompilowania.  
+4. W Kreatorze wpisz `servicemodelsamples` jako alias tworzonego katalogu wirtualnego.  
+  
+5. Ustaw ścieżkę do%SystemDrive%\inetpub\wwwroot\servicemodelsamples. Większość przykładów WCF kopiuje pliki wykonywalne usługi do tej lokalizacji po skompilowaniu.  
   
 6. Kliknij przycisk **Dalej**.  
   
-7. Domyślnie wybrane są następujące pola wyboru:  
+7. Domyślnie są zaznaczone następujące pola wyboru:  
   
     - **Read**  
   
-    - **Uruchamianie skryptów (np. ASP)**  
+    - **Uruchamianie skryptów (takich jak ASP)**  
   
-8. Kliknij przycisk **dalej**, a następnie kliknij przycisk **Zakończ** aby zakończyć działanie kreatora.  
+8. Kliknij przycisk **dalej**, a następnie kliknij przycisk **Zakończ** , aby zakończyć pracę kreatora.  
   
     > [!NOTE]
-    >  To zadanie muszą być wykonywane tylko raz, ponieważ wszystkie przykłady WCF używają tego samego servicemodelsamples katalogu wirtualnego.  
+    >  To zadanie należy wykonać tylko raz, ponieważ wszystkie przykłady WCF używają tego samego katalogu wirtualnego ServiceModelSamples.  
   
-#### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Aby ustawić właściwości dodatkowych katalogu wirtualnego w usługach IIS 7.0 lub 7.5  
+#### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Aby ustawić dodatkowe właściwości katalogu wirtualnego w usługach IIS 7,0 lub 7,5  
   
-1. Kliknij węzeł servicemodelsamples. Wzdłuż dolnej części okna dwa widoki są wyświetlane. Wybierz **widoku funkcji** Jeśli nie została jeszcze wybrana.  
+1. Kliknij węzeł servicemodelsamples. W dolnej części okna wyświetlane są dwa widoki. Wybierz pozycję **funkcje widok** , jeśli nie została jeszcze wybrana.  
   
-2. Kliknij dwukrotnie pozycję **przeglądanie katalogów**.  
+2. Kliknij dwukrotnie wpis do **przeglądania katalogów**.  
   
-3. W okienku akcji wybierz **Włącz** opcji. Dzięki temu można uzyskać dostępu do katalogu, w katalogu za pomocą programu Internet Explorer, która pomaga podczas debugowania usługi.  
+3. W okienku Akcje wybierz opcję **Włącz** . Dzięki temu można uzyskać dostęp do katalogu katalogu przy użyciu programu Internet Explorer, który ułatwia debugowanie usługi.  
   
- Na koniec należy ustawić właściwości zabezpieczeń folderu servicemodelsamples, aby zezwalała na można uzyskać dostępu do innych osób. Zobacz szczegóły poniżej.  
+ Na koniec należy ustawić właściwości zabezpieczeń folderu servicemodelsamples, aby umożliwić dostęp innym osobom. Aby uzyskać szczegółowe informacje, zobacz poniżej.  
   
-#### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a>Aby ustawić właściwości dodatkowych katalogu wirtualnego w usługach IIS 5.1 i 6.0  
+#### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a>Aby ustawić dodatkowe właściwości katalogu wirtualnego w usługach IIS 5,1 lub 6,0  
   
-1. Kliknij prawym przyciskiem myszy węzeł servicemodelsamples, a następnie kliknij przycisk **właściwości**.  
+1. Kliknij prawym przyciskiem myszy węzeł servicemodelsamples, a następnie kliknij polecenie **Właściwości**.  
   
-2. Domyślnie wybrane są następujące pola wyboru:  
+2. Domyślnie są zaznaczone następujące pola wyboru:  
   
     - **Read**  
   
-    - **Rejestruj wizyty**  
+    - **Wizyty w dzienniku**  
   
     - **Indeksuj ten zasób**  
   
-3. Wybierz **przeglądanie katalogów** pole wyboru. Dzięki temu można uzyskać dostępu do katalogu, w katalogu za pomocą programu Internet Explorer, która pomaga podczas debugowania usługi.  
+3. Zaznacz pole wyboru **Przeglądanie katalogów** . Dzięki temu można uzyskać dostęp do katalogu katalogu przy użyciu programu Internet Explorer, który ułatwia debugowanie usługi.  
   
-#### <a name="to-set-security-properties-of-the-folder-in-iis-70-or-75"></a>Aby ustawić właściwości zabezpieczeń folderu w usługach IIS 7.0 lub 7.5  
+#### <a name="to-set-security-properties-of-the-folder-in-iis-70-or-75"></a>Aby ustawić właściwości zabezpieczeń folderu w usługach IIS 7,0 lub 7,5  
   
-1. Przejdź do % SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
+1. Przejdź do%SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
-2. Kliknij prawym przyciskiem myszy servicemodelsamples folder, a następnie kliknij przycisk **udziału** lub **udziału za pomocą**.  
+2. Kliknij prawym przyciskiem myszy folder servicemodelsamples, a następnie kliknij pozycję **Udostępnij** lub **Udostępnij**.  
   
-3. Kliknij strzałkę w dół po lewej stronie **Dodaj** przycisku.  
+3. Kliknij strzałkę w dół znajdującą się po lewej stronie przycisku **Dodaj** .  
   
-4. Wybierz **znaleźć** wpisu. **Wybieranie użytkowników lub grup** zostanie otwarte okno.  
+4. Wybierz pozycję **Znajdź** . Zostanie otwarte okno **Wybieranie użytkowników lub grup** .  
   
 5. Kliknij przycisk **zaawansowane**.  
   
-6. Kliknij przycisk **lokalizacje**. **Lokalizacje** jest teraz otwarte okno.  
+6. Kliknij pozycję **lokalizacje**. Okno **lokalizacje** jest teraz otwarte.  
   
-7. Zaznacz wpis dla komputera, używana. Należy wybrać komputer lokalny i nie wpis dla jak domeny, do których należą. Po wybraniu komputera, kliknij przycisk **OK**.  
+7. Wybierz wpis dla używanego komputera. Ważne jest, aby wybrać komputer lokalny, a nie wpis dla dowolnych domen lub sieci, które są wymienione na liście. Po wybraniu komputera kliknij przycisk **OK**.  
   
 8. Kliknij przycisk **Znajdź teraz**. Spowoduje to wypełnienie wyników wyszukiwania za pomocą obiektów skojarzonych z komputerem lokalnym.  
   
-9. Znajdź **IIS_IUSRS** wpis **Name (nazwa wyróżniająca względną)** kolumny. Wybierz odpowiedni wpis, a następnie kliknij przycisk **OK** Zamknij wyszukiwanie okno wyników.  
+9. Znajdź wpis **IIS_IUSRS** w kolumnie **Nazwa (względna nazwa wyróżniająca)** . Wybierz ten wpis, a następnie kliknij przycisk **OK** , aby zamknąć okno wyników wyszukiwania.  
   
-10. Kliknij przycisk **OK** zamknąć **Wybieranie użytkowników lub grup** okna.  
+10. Kliknij przycisk **OK** , aby zamknąć okno **Wybieranie użytkowników lub grup** .  
   
-11. Kliknij przycisk **udziału** aby utrwalić zmiany.  
+11. Kliknij przycisk **Udostępnij** , aby zachować zmiany.  
   
-12. Po zakończeniu zmiany, co pozwala na udostępnianie kliknij **gotowe** zamknąć **udostępniania plików** okna.  
+12. Po zakończeniu wprowadzania zmian w celu włączenia udostępniania kliknij przycisk **gotowe** , aby zamknąć okno **udostępnianie plików** .  
   
-#### <a name="to-set-security-properties-of-the-folder-in-iis-51-or-60"></a>Do ustawiania właściwości zabezpieczeń folderu usługi IIS 5.1 i 6.0  
+#### <a name="to-set-security-properties-of-the-folder-in-iis-51-or-60"></a>Aby ustawić właściwości zabezpieczeń folderu w usługach IIS 5,1 lub 6,0  
   
-1. Przejdź do % SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
+1. Przejdź do%SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
-2. Kliknij prawym przyciskiem myszy **servicemodelsamples** folder, a następnie kliknij przycisk **udostępnianie i zabezpieczenia.**  
+2. Kliknij prawym przyciskiem myszy folder **servicemodelsamples** , a następnie kliknij pozycję **udostępnianie i zabezpieczenia.**  
   
-3. Kliknij przycisk **zabezpieczeń** kartę.  
+3. Kliknij kartę **zabezpieczenia** .  
   
-4. Jeśli używasz usług IIS 6.0 w **nazwy grupy lub użytkownika** zaznacz pole wyboru czy **konta gościa Internet** znajduje się na liście.  
+4. Jeśli używasz usług IIS 6,0, w polu **nazwy grupy lub użytkownika** Sprawdź, czy na liście znajdują się **konta gościa internetowego** .  
   
-     Jeśli nie ma na liście:  
+     Jeśli nie ma go na liście:  
   
-    1. Kliknij przycisk **Start** a następnie kliknij przycisk **Panelu sterowania**.  
+    1. Kliknij przycisk **Start** , a następnie kliknij pozycję **Panel sterowania**.  
   
-    2. Jeśli nie widzisz **kont użytkowników** ikonę, kliknij przycisk **Przełącz do widoku kategorii**.  
+    2. Jeśli nie widzisz ikony **konta użytkowników** , kliknij przycisk **Przełącz do widoku kategorii**.  
   
-    3. Kliknij przycisk **kont użytkowników** ikony.  
+    3. Kliknij ikonę **konta użytkowników** .  
   
-    4. W obszarze "lub wybierz ikonę Panelu sterowania" kliknij **kont użytkowników**.  
+    4. W obszarze "lub wybierz ikonę panelu sterowania" kliknij pozycję **konta użytkowników**.  
   
-    5. W **kont użytkowników** okno dialogowe, kliknij przycisk **zaawansowane** kartę.  
+    5. W oknie dialogowym **konta użytkowników** kliknij kartę **Zaawansowane** .  
   
     6. Kliknij przycisk **zaawansowane**.  
   
-    7. W **lokalnych użytkowników i grup** okno dialogowe, kliknij, aby rozwinąć **użytkowników** folderu.  
+    7. W oknie dialogowym **lokalni użytkownicy i grupy** kliknij, aby rozwinąć folder **Users (Użytkownicy** ).  
   
-    8. W okienku po prawej stronie, kliknij dwukrotnie **konta gościa Internet**.  
+    8. W prawym okienku kliknij dwukrotnie pozycję **konto gościa internetowego**.  
   
-    9. W **właściwości** okno dialogowe, kopia nazwa używana jako konto gościa internetowego. Domyślnie nazwa zaczyna się od "USR_", po której następuje nazwa komputera.  
+    9. W oknie dialogowym **Właściwości** skopiuj nazwę używaną jako konto gościa internetowego. Domyślnie nazwa rozpoczyna się od ciągu "USR_", po którym następuje nazwa komputera.  
   
     10. Zamknij okno dialogowe **Właściwości** .  
   
-    11. Zamknij **lokalnych użytkowników i grup** okno dialogowe.  
+    11. Zamknij okno dialogowe **Użytkownicy i grupy lokalne** .  
   
-    12. Zamknij **kont użytkowników** okno dialogowe.  
+    12. Zamknij okno dialogowe **konta użytkowników** .  
   
-    13. Zamknij innych **kont użytkowników** okno dialogowe.  
+    13. Zamknij okno dialogowe inne **konta użytkowników** .  
   
-    14. W **servicemodelsamples właściwości** dialogowym **zabezpieczeń** kliknij pozycję **Dodaj**.  
+    14. W oknie dialogowym **Właściwości servicemodelsamples** na karcie **zabezpieczenia** kliknij przycisk **Dodaj**.  
   
-    15. Wpisz nazwę komputera, a następnie ukośnik odwrotny, a następnie wklej nazwę konta użytkownika Internet, na przykład myMachineName\\InternetGuestAccountName %  
+    15. Wpisz nazwę komputera, a następnie ukośnik odwrotny, a następnie wklej nazwę konta użytkownika internetowego, na przykład MojKomputer\\% InternetGuestAccountName%  
   
-    16. Kliknij przycisk **Sprawdź nazwy** do sprawdzenia poprawności operacji dodawania. Jeśli jest on prawidłowy, nazwa jest wpisany tylko wielkimi literami i jest podkreślony.  
+    16. Kliknij przycisk **Sprawdź nazwy** , aby zweryfikować dodanie. Jeśli jest to prawidłowe, nazwa jest w Wielkiej litery i jest podkreślona.  
   
-5. Dla usług IIS 6.0 również Sprawdź, czy Usługa sieciowa znajduje się w **nazwy grupy lub użytkownika** pole.  
+5. W przypadku usług IIS 6,0 Sprawdź, czy usługa sieciowa znajduje się w polu **nazwy grupy lub użytkownika** .  
   
-     Jeśli usługa sieciowa nie ma na liście:  
+     Jeśli usługa sieciowa nie jest wymieniona na liście:  
   
     1. Kliknij przycisk **Dodaj**.  
   
-    2. W **Wybieranie użytkowników lub grup** okno dialogowe, wpisz nazwę komputera, a następnie znakiem ukośnika odwrotnego.  
+    2. W oknie dialogowym **Wybieranie użytkowników lub grup** wpisz nazwę komputera, a następnie ukośnik odwrotny.  
   
-    3. Typ **usługi** po ukośniku odwrotnym (bez spacji).  
+    3. Wpisz **usługę** po ukośniku odwrotnym (bez spacji).  
   
     4. Kliknij przycisk **Sprawdź nazwy**.  
   
-    5. Jeśli zostaną znalezione wiele nazw, zaznacz **Usługa sieciowa** i kliknij przycisk **OK**.  
+    5. Jeśli zostanie znalezionych wiele nazw, wybierz pozycję **Usługa sieciowa** , a następnie kliknij przycisk **OK**.  
   
-    6. Kliknij przycisk **OK** zamknąć **Wybieranie użytkowników lub grup** okno dialogowe.  
+    6. Kliknij przycisk **OK** , aby zamknąć okno dialogowe **Wybieranie użytkowników lub grup** .  
   
-6. Jeśli usługi IIS 5.1 za pomocą Windows XP z dodatkiem SP2, sprawdź, liście zarówno konta gościa Internet, jak i ASPNET **nazwy grupy lub użytkownika** pole.  
+6. Jeśli używasz systemu Windows XP z dodatkiem SP2 z usługami IIS 5,1, sprawdź, czy w polu **nazwy grupy lub użytkownika** są wyświetlane zarówno konto gościa internetowego, jak i ASPNET.  
   
-     Należy pamiętać, że użytkownik ASPNET może być członkiem wbudowanej **użytkowników** grupy zabezpieczeń. Jeśli tak, a w przypadku **użytkowników** grupy znajduje się w oknie dialogowym, nie trzeba go dodać jako osobny element do listy dozwolonych użytkowników.  
+     Należy pamiętać, że użytkownik ASPNET może być członkiem wbudowanej grupy zabezpieczeń **Użytkownicy** . Jeśli tak, to jeśli w oknie dialogowym zostanie wyświetlona Grupa **Użytkownicy** , nie musisz dodawać jej jako osobnego elementu do listy dozwolonych użytkowników.  
   
-     Aby sprawdzić, czy ASPNET jest częścią **użytkowników** grupy zabezpieczeń:  
+     Aby sprawdzić, czy ASPNET jest częścią grupy zabezpieczeń **Użytkownicy** :  
   
-    1. Na **Start** menu, kliknij przycisk **Panelu sterowania**.  
+    1. W menu **Start** kliknij pozycję **Panel sterowania**.  
   
-    2. Kliknij przycisk **kont użytkowników** ikony.  
+    2. Kliknij ikonę **konta użytkowników** .  
   
-    3. W **grupy** kolumny, sprawdź, czy wartość **ASPNET** jest "Użytkownicy".  
+    3. W kolumnie **Grupa** Sprawdź, czy wartość **ASPNET** to "Users".  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -9,26 +9,26 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing rows
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
-ms.openlocfilehash: 1f6312f9ac8520b2131e1d2d7a7fb996aee6060e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0dba318e6aa35761f4e9471fdb13b65644747b57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651596"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966505"
 ---
 # <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>Instrukcje: użycie szablonu wiersza do dostosowania wierszy w kontrolce DataGridView formularzy systemu Windows
-<xref:System.Windows.Forms.DataGridView> Kontroli używa szablonu wiersza jako podstawy dla wszystkich wierszy, które są dodawane do formantu za pomocą powiązania danych lub po wywołaniu <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> metody bez określania istniejącego wiersza do użycia.  
+Kontrolka używa szablonu wiersza jako podstawy dla wszystkich wierszy, które dodaje do kontrolki przez powiązanie danych lub podczas <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> wywoływania metody bez określania istniejącego wiersza do użycia. <xref:System.Windows.Forms.DataGridView>  
   
- Szablon wiersza zapewnia większą kontrolę nad wyglądem i zachowaniem wierszy niż <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> zawiera właściwość. Za pomocą szablonu wiersza można ustawić dowolny <xref:System.Windows.Forms.DataGridViewRow> właściwości, w tym <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>.  
+ Szablon wiersza zapewnia większą kontrolę nad wyglądem i zachowaniem wierszy, niż <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> zapewnia właściwość. Za pomocą szablonu wiersza można ustawić wszystkie <xref:System.Windows.Forms.DataGridViewRow> właściwości, w tym. <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>  
   
- Istnieją sytuacje, w którym musi użycie szablonu wiersza do osiągnięcia określonej efekt. Na przykład, nie mogą być przechowywane informacje o wysokości wiersza <xref:System.Windows.Forms.DataGridViewCellStyle>, więc musisz można zmienić wysokość domyślna używana przez wszystkie wiersze, używając szablonu wiersza. Szablon wiersza jest przydatna podczas tworzenia własnych klas pochodnych <xref:System.Windows.Forms.DataGridViewRow> i chcesz, aby używany, gdy nowe wiersze są dodawane do formantu niestandardowego typu.  
+ Istnieją sytuacje, w których należy użyć szablonu wiersza do osiągnięcia określonego efektu. Na przykład informacje o wysokości wiersza nie mogą być przechowywane w <xref:System.Windows.Forms.DataGridViewCellStyle>, dlatego należy użyć szablonu wiersza, aby zmienić domyślną wysokość używaną przez wszystkie wiersze. Szablon wiersza jest również przydatny podczas tworzenia własnych klas pochodnych z <xref:System.Windows.Forms.DataGridViewRow> i chcesz, aby typ niestandardowy był używany podczas dodawania nowych wierszy do formantu.  
   
 > [!NOTE]
->  Szablon wiersza jest używana tylko wtedy, gdy zostaną dodane wiersze. Nie można zmienić istniejące wiersze, zmieniając szablonu wiersza.  
+> Szablon wiersza jest używany tylko po dodaniu wierszy. Nie można zmienić istniejących wierszy, zmieniając szablon wiersza.  
   
-### <a name="to-use-the-row-template"></a>Użycie szablonu wiersza  
+### <a name="to-use-the-row-template"></a>Aby użyć szablonu wiersza  
   
-- Ustawianie właściwości w obiekcie pobierane <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> właściwości.  
+- Ustaw właściwości obiektu pobranego ze <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> właściwości.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CPP/datagridviewrowtemplate.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CS/datagridviewrowtemplate.cs#1)]
@@ -37,9 +37,9 @@ ms.locfileid: "64651596"
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1`.  
+- Kontrolka o `dataGridView1`nazwie. <xref:System.Windows.Forms.DataGridView>  
   
-- Odwołuje się do <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
+- Odwołania do <xref:System?displayProperty=nameWithType>zestawów, <xref:System.Drawing?displayProperty=nameWithType>i. <xref:System.Windows.Forms?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Zobacz także
 

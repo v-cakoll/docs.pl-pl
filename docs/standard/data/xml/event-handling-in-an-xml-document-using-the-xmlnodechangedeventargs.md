@@ -8,29 +8,29 @@ dev_langs:
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c382b22825512000a906af8a865b6b7c5f4c73c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d26872fb97551e5392eb3f6a1a0825728046553
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966619"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965894"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Obsługa zdarzeń w dokumencie XML przy użyciu klasy XmlNodeChangedEventArgs
-**Klasy XmlNodeChangedEventArgs** hermetyzuje Argumenty przekazane do obsługi zdarzeń zarejestrowane na **XmlDocument** obiektu do obsługi zdarzeń. Zdarzenia i opis tego kiedy są one uruchamiane jest podana w poniższej tabeli.  
+**XmlNodeChangedEventArgs** hermetyzuje argumenty przekazane do programów obsługi zdarzeń zarejestrowanych w obiekcie XmlDocument na potrzeby obsługi zdarzeń. Zdarzenia i opis po ich uruchomieniu podano w poniższej tabeli.  
   
-|Zdarzenie|Wyzwolone|  
+|Zdarzenie|Uruchamiany|  
 |-----------|-----------|  
-|<xref:System.Xml.XmlDocument.NodeInserting>|Gdy węzeł należące do bieżącego dokumentu zostanie wstawiony do innego węzła.|  
-|<xref:System.Xml.XmlDocument.NodeInserted>|Gdy węzeł należące do bieżącego dokumentu został wstawiony do innego węzła.|  
-|<xref:System.Xml.XmlDocument.NodeRemoving>|Gdy węzeł należących do tego dokumentu zostanie usunięte z dokumentu.|  
-|<xref:System.Xml.XmlDocument.NodeRemoved>|Gdy węzeł należących do tego dokumentu został usunięty z jego elementu nadrzędnego.|  
-|<xref:System.Xml.XmlDocument.NodeChanging>|Wartość węzła po zostanie zmieniony.|  
-|<xref:System.Xml.XmlDocument.NodeChanged>|Jeśli zmieniono wartości węzła.|  
+|<xref:System.Xml.XmlDocument.NodeInserting>|Gdy węzeł należący do bieżącego dokumentu zostanie wstawiony do innego węzła.|  
+|<xref:System.Xml.XmlDocument.NodeInserted>|Gdy węzeł należący do bieżącego dokumentu został wstawiony do innego węzła.|  
+|<xref:System.Xml.XmlDocument.NodeRemoving>|Gdy węzeł należący do tego dokumentu zostanie usunięty z dokumentu.|  
+|<xref:System.Xml.XmlDocument.NodeRemoved>|Gdy węzeł należący do tego dokumentu został usunięty z jego elementu nadrzędnego.|  
+|<xref:System.Xml.XmlDocument.NodeChanging>|Gdy wartość węzła ma zostać zmieniona.|  
+|<xref:System.Xml.XmlDocument.NodeChanged>|Po zmianie wartości węzła.|  
   
 > [!NOTE]
->  Jeśli **XmlDataDocument** użycie pamięci jest w pełni zoptymalizowana do użytku **DataSet** magazynu **XmlDataDocument** mogą nie zgłaszać dowolnego zdarzenia wymienione powyżej, gdy zmiany zostaną wprowadzone do podstawowej **zestawu danych**. Jeśli potrzebujesz tych zdarzeń, musi przechodzić przez cały **XmlDocument** raz, aby nie jest w pełni zoptymalizowane pod kątem użycia pamięci.  
+> Jeśli użycie pamięci przez program **XmlDataDocument** jest w pełni zoptymalizowane pod kątem korzystania z magazynu **DataSet** , **XmlDataDocument** może nie zgłaszać żadnych zdarzeń wymienionych powyżej, gdy zmiany są wprowadzane do bazowego **zestawu danych**. Jeśli potrzebujesz tych zdarzeń, musisz przechodzenie całych **dokumentów XmlDocument** raz, aby użycie pamięci było w pełni zoptymalizowane.  
   
- Poniższy przykład kodu pokazuje, jak zdefiniować procedurę obsługi zdarzeń oraz sposób dodawania programu obsługi zdarzeń do zdarzenia.  
+ Poniższy przykład kodu przedstawia sposób definiowania programu obsługi zdarzeń oraz dodawania obsługi zdarzeń do zdarzenia.  
   
 ```vb  
 ' Attach the event handler, NodeInsertedHandler, to the NodeInserted  
@@ -73,9 +73,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- Niektóre operacje XML Document Object Model (DOM) są złożone operacje, które może spowodować wiele zdarzeń, które są wywoływane. Na przykład **AppendChild** może być też koniecznie Usuń węzeł dołączanie od jego poprzedniego elementu nadrzędnego. W takim przypadku zobaczysz **NodeRemoved** zdarzenia wywoływane po pierwsze, a następnie **NodeInserted** zdarzeń. Operacje, takie jak ustawienie **InnerXml** może spowodować wiele zdarzeń.  
+ Niektóre operacje w języku XML Document Object Model (DOM) to operacje złożone, które mogą powodować wyzwalanie wielu zdarzeń. Na przykład **AppendChild** może również mieć możliwość usunięcia węzła dołączanego z jego poprzedniego elementu nadrzędnego. W takim przypadku zobaczysz najpierw zdarzenie **NodeRemoved** , po którym następuje zdarzenie **NodeInserted** . Operacje, takie jak ustawienie **InnerXml** , mogą spowodować powstanie wielu zdarzeń.  
   
- W poniższym przykładzie kodu pokazano tworzenie obsługi zdarzeń i obsługa **NodeInserted** zdarzeń.  
+ Poniższy przykład kodu pokazuje Tworzenie programu obsługi zdarzeń i obsługę zdarzenia **NodeInserted** .  
   
 ```vb  
 Imports System  

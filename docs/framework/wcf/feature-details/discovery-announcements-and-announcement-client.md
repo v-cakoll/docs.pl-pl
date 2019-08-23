@@ -2,29 +2,29 @@
 title: Anonse odnajdywania i klient anonsów
 ms.date: 03/30/2017
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-ms.openlocfilehash: c32aca5e6deab01423d61c516ee924d00bc041ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74362343dc1fd5df6d1b91537f7fed5bc08f8fe0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856594"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968817"
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Anonse odnajdywania i klient anonsów
-Funkcja odnajdywania WCF umożliwia składniki, aby poinformować o ich dostępności. Jeśli skonfigurowana, aby to zrobić, to usługa wysyła Hello i Bye anonsów. Klientów ani innych składników można nasłuchiwać takich komunikatów Anons i wykonywania względem nich działań. Zapewnia to alternatywna metoda klientów pod uwagę usług. Ogłoszenie funkcji ma kilka zastosowań, na przykład, jeśli usług wprowadź, pozostaw sieci często anonsów może być lepszym niż w przypadku usługi wyszukiwania. Takie podejście zmniejsza ruch w sieci i klienta można zapoznać się obecności lub wyjścia usługę tak szybko, jak Anonse są odbierane.  
+Funkcja odnajdywania WCF umożliwia składnikom ogłaszanie ich dostępności. W przypadku skonfigurowania tej usługi usługa wysyła anonse Witaj i bye. Klienci lub inne składniki mogą nasłuchiwać takich komunikatów anonsu i wykonywać na nich działania. Zapewnia to alternatywną metodę dla klientów, którzy mają znać usługi. Funkcja anonsowania ma kilka zastosowania, na przykład jeśli usługi zmieniają i opuszczają sieć, anonse mogą być lepszym rozwiązaniem alternatywnym niż wyszukiwanie usług. W tym podejściu ruch sieciowy zostaje zredukowany, a klient może dowiedzieć się o obecności lub wyjściu usługi zaraz po odebraniu anonsów.  
   
 ## <a name="discovery-announcements"></a>Anonse odnajdywania  
- Gdy Usługa skonfigurowana dla anonsów łączy sieć i staje się wykrywalny, wysyła wiadomość powitania przedstawienie jej dostępność do nasłuchiwania klientów. Komunikat zawiera odnajdywanie pokrewne informacje dotyczące usługi, takie jak zmiana kontraktu adres punktu końcowego i skojarzone zakresy. Można określić, gdzie wysyłana jest wiadomość anonsu z <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> klasy. Jeśli punkt końcowy ogłoszenie jest <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> Hello i Bye są odpowiednio multiemisji lub jeśli punkt końcowy ogłoszenie jest emisji pojedynczej, komunikaty są wysyłane bezpośrednio do określonego punktu końcowego.  
+ Gdy Usługa skonfigurowana pod kątem anonsów dołącza do sieci i zostaje wykrywalna, wysyła komunikat powitalny informujący o jego dostępności do nasłuchiwania klientów. Komunikat zawiera informacje dotyczące odnajdywania usługi, takie jak jej kontrakt, adres punktu końcowego i skojarzone zakresy. Możesz określić miejsce, do którego wiadomość anonsu ma być <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> wysyłana z klasą. Jeśli punkt końcowy anonsu to <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> , powitanie i bye są odpowiednio multiemisje lub jeśli punkt końcowy anonsu jest emisją pojedynczą, komunikaty są wysyłane bezpośrednio do określonego punktu końcowego.  
   
 > [!NOTE]
->  Anonse są wysyłane, gdy host usługi otwiera i zamyka. Jeśli te wywołania kończy się prawidłowo komunikatów Anons nie może być wysłane z. Na przykład jeśli usługa błędów, a następnie komunikatów Anons Bye nie są wysyłane.  
+> Anonsy są wysyłane po otwarciu i zamknięciu hosta usługi. Jeśli te wywołania nie zakończą się prawidłowo, komunikat anonsu nie może zostać wysłany. Jeśli na przykład wystąpią błędy usługi, komunikat anonsu bye nie zostanie wysłany.  
   
 > [!TIP]
->  Możesz dostosować funkcje anons, co umożliwia wysyłanie anonsów, zawsze wtedy, gdy wybierzesz.  
+>  Możesz dostosować funkcje anonsowania, co pozwala na wysyłanie anonsów w każdym przypadku.  
   
- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] definiuje <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> i <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> jako standardowe punkty końcowe, aby umożliwić usług i klientów w celu łatwego wysyłania anonsów Hello i Bye.  
+ [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]<xref:System.ServiceModel.Discovery.AnnouncementEndpoint> definiuje i <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> jako standardowe punkty końcowe, które umożliwiają usługom i klientom łatwe wysyłanie anonsów Hello i bye.  
   
-### <a name="announcements-on-the-service"></a>Anonsy w usłudze  
- Aby skonfigurować usługę do wysyłania anonsów, Dodaj <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> z punktem końcowym anonsu. Poniższy przykład pokazuje, jak programowo dodać to zachowanie do hosta usługi. W tym przykładzie użyto `UdpAnnouncementEndpoint`, co oznacza, że anonse są multiemisji do lokalizacji określonej przez standardowy punkt końcowy.  
+### <a name="announcements-on-the-service"></a>Anonse w usłudze  
+ Aby skonfigurować usługę do wysyłania anonsów, Dodaj element <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> z punktem końcowym anonsu. Poniższy przykład pokazuje, jak programowo dodać to zachowanie do hosta usługi. W `UdpAnnouncementEndpoint`tym przykładzie użyto, co oznacza, że anonse są multiemisją do lokalizacji określonej przez standardowy punkt końcowy.  
   
 ```  
 ServiceDiscoveryBehavior serviceDiscoveryBehavior = new ServiceDiscoveryBehavior();
@@ -32,7 +32,7 @@ serviceDiscoveryBehavior.AnnouncementEndpoints.Add(new UdpAnnouncementEndpoint()
 serviceHost.Description.Behaviors.Add(serviceDiscoveryBehavior);
 ```  
   
- Zachowanie można skonfigurować w pliku konfiguracji, a także, jak pokazano w poniższym przykładzie.  
+ Zachowanie można skonfigurować również w pliku konfiguracji, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <services>
@@ -55,10 +55,10 @@ serviceHost.Description.Behaviors.Add(serviceDiscoveryBehavior);
 </behaviors>  
 ```  
   
- Powyższych przykładach skonfigurować usługę, aby automatycznie wysyłaj komunikaty anonsów. Możesz również wysłać komunikaty anonsów jawnie za pomocą <xref:System.ServiceModel.Discovery.AnnouncementClient> klasy.  
+ Powyższe przykłady umożliwiają skonfigurowanie usługi do automatycznego wysyłania komunikatów anonsu. Komunikaty anonsu można również jawnie wysyłać przy użyciu <xref:System.ServiceModel.Discovery.AnnouncementClient> klasy.  
   
-### <a name="announcements-on-the-client"></a>Ogłoszenia na komputerze klienckim  
- Aplikacja kliencka musi być hostem usługi ogłoszenie odpowiadanie na wiadomości powitania i Bye i subskrybowanie <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> i <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived> zdarzenia. W przykładzie poniżej pokazano, jak to zrobić.  
+### <a name="announcements-on-the-client"></a>Anonse na kliencie  
+ Aplikacja kliencka musi obsługiwać usługę anonsowania, aby odpowiedzieć na wiadomości Hello i bye oraz subskrybować <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> zdarzenia i. <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived> W przykładzie poniżej pokazano, jak to zrobić.  
   
 ```  
 // Create an AnnouncementService instance
@@ -80,7 +80,7 @@ using (ServiceHost announcementServiceHost = new ServiceHost(announcementService
 }  
 ```  
   
- Po odebraniu wiadomości powitania lub Bye dostęp można uzyskać metadanych odnajdywania punktu końcowego za pośrednictwem <xref:System.ServiceModel.Discovery.AnnouncementEventArgs> jak pokazano w poniższym przykładzie.  
+ Po odebraniu komunikatu powitanie lub bye można uzyskać dostęp do metadanych <xref:System.ServiceModel.Discovery.AnnouncementEventArgs> odnajdowania punktów końcowych, jak pokazano w poniższym przykładzie.  
   
 ```  
 static void OnOnlineEvent(object sender, AnnouncementEventArgs e)

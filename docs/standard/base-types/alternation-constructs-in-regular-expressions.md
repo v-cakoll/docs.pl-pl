@@ -18,12 +18,12 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 61f1b93d2f54923f0dfc4832a79fe35dc319d0f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 560597770d667cf8c7668bf2338ac4bac3eb192f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331752"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968575"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Konstrukcje alternacyjne w wyrażeniach regularnych
 <a name="top"></a>Konstrukcje warunkowe modyfikują wyrażenie regularne, aby umożliwić Dopasowanie warunkowe/lub lub. Platforma .NET obsługuje trzy konstrukcje warunkowe:  
@@ -71,16 +71,16 @@ ms.locfileid: "68331752"
 ## <a name="conditional-matching-with-an-expression"></a>Dopasowanie warunkowe z wyrażeniem  
  Ten element języka próbuje dopasować jeden z dwóch wzorców w zależności od tego, czy może on pasować do wzorca początkowego. Jego składnia to:  
   
- `(?(`*wyrażenie*  *tak* nie `)` `|``)`  
+ `(?(`*wyrażenie* *tak* nie `)` `|``)`  
   
  *wyrażenie* WHERE jest wzorcem początkowym, *tak* aby pasowało do wzorca, jeśli *wyrażenie* jest dopasowane, a *nie* jest opcjonalnym wzorcem do dopasowania, jeśli *wyrażenie* nie jest zgodne. Aparat wyrażeń regularnych traktuje *wyrażenie* jako potwierdzenie o zerowej szerokości; oznacza to, że aparat wyrażeń regularnych nie postępuje w strumieniu wejściowym po obliczeniu *wyrażenia*. W związku z tym konstrukcja ta jest równoważna następującym:  
   
- `(?(?=`*wyrażenie*  *tak* nie `)` `|``)`  
+ `(?(?=`*wyrażenie* *tak* nie `)` `|``)`  
   
  wyrażenie `(?=`Where`)` ma konstrukcję "Assertion" o zerowej szerokości. (Aby uzyskać więcej informacji, zobacz [grupowanie konstrukcji](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)). Ponieważ aparat wyrażeń regularnych interpretuje *wyrażenie* jako zakotwiczenie (potwierdzenie o zerowej szerokości), *wyrażenie* musi być potwierdzeniem o zerowej szerokości (Aby uzyskać więcej informacji, zobacz [kotwice](../../../docs/standard/base-types/anchors-in-regular-expressions.md)) lub Podwyrażenie, które jest również zawarte w *tak*. W przeciwnym razie nie można dopasować wzorca *tak* .  
   
 > [!NOTE]
->  Jeśli *wyrażenie*jest nazwaną lub numerowaną grupą przechwytywania, konstrukcja alternatywna jest interpretowana jako test przechwytywania. Aby uzyskać więcej informacji, zobacz następną sekcję, [Dopasowanie warunkowe na podstawie prawidłowej grupy przechwytywania](#Conditional_Group). Innymi słowy aparat wyrażeń regularnych nie próbuje dopasować przechwyconego podciągu, ale zamiast tego testuje obecność lub brak grupy.  
+> Jeśli *wyrażenie*jest nazwaną lub numerowaną grupą przechwytywania, konstrukcja alternatywna jest interpretowana jako test przechwytywania. Aby uzyskać więcej informacji, zobacz następną sekcję, [Dopasowanie warunkowe na podstawie prawidłowej grupy przechwytywania](#Conditional_Group). Innymi słowy aparat wyrażeń regularnych nie próbuje dopasować przechwyconego podciągu, ale zamiast tego testuje obecność lub brak grupy.  
   
  Poniższy przykład jest odmianą przykładu, który pojawia się w sekcji " [dopasowanie &#124; do wzorca" i](#Either_Or) . Używa dopasowania warunkowego, aby określić, czy pierwsze trzy znaki po granicy słowa są dwiema cyframi, po których następuje łącznik. Jeśli są, próbuje dopasować się do USA Numer identyfikacyjny pracodawcy (EIN). Jeśli nie, próbuje dopasować do USA Numer ubezpieczenia społecznego (SSN).  
   
@@ -103,11 +103,11 @@ ms.locfileid: "68331752"
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>Dopasowanie warunkowe oparte na prawidłowo przechwyconych grupach  
  Ten element języka próbuje dopasować jeden z dwóch wzorców w zależności od tego, czy jest on zgodny z określoną grupą przechwytywania. Jego składnia to:  
   
- `(?(`*Nazwa*  *tak* nie `)` `|``)`  
+ `(?(`*Nazwa* *tak* nie `)` `|``)`  
   
  lub  
   
- `(?(`*Liczba*  *tak* nie `)` `|``)`  
+ `(?(`*Liczba* *tak* nie `)` `|``)`  
   
  gdzie *name* to nazwa i *numer* jest liczbą grupy przechwytywania, *tak* jest wyrażenie do dopasowania, jeśli *Nazwa* lub *Liczba* ma dopasowanie, a wartość *nie* jest wyrażeniem opcjonalnym do dopasowania, jeśli nie.  
   

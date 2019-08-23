@@ -2,35 +2,35 @@
 title: Rozszerzanie śledzenia
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: c56f886857e8d391a243e3af4a13353f14116247
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cec7ddcdd75bf7601524c107597d0feb4af3103
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990148"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961443"
 ---
 # <a name="extending-tracing"></a>Rozszerzanie śledzenia
-Niniejszy przykład pokazuje, jak rozszerzyć funkcję śledzenia usług Windows Communication Foundation (WCF), pisząc dane śledzenia działań użytkownika w kodzie klienta i usługi. Dzięki temu użytkownikowi na tworzenie śledzenia działań i grupować dane śledzenia w logiczne jednostki pracy. Istnieje również możliwość skorelowania działania za pośrednictwem transfery (w obrębie tego samego punktu końcowego) i propagację (za pośrednictwem punktów końcowych). W tym przykładzie jest włączone śledzenie zarówno klient, jak i usługi. Aby uzyskać więcej informacji o tym, jak włączyć śledzenie w plikach konfiguracji klienta i usługi, zobacz [śledzenia i rejestrowania komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
+Ten przykład pokazuje, jak zwiększyć funkcję śledzenia Windows Communication Foundation (WCF), pisząc ślady aktywności zdefiniowane przez użytkownika w kodzie klienta i usługi. Dzięki temu użytkownik może tworzyć działania śledzenia i grupować ślady w logiczne jednostki pracy. Istnieje również możliwość skorelowania działań przez transfery (w tym samym punkcie końcowym) i propagacji (między punktami końcowymi). W tym przykładzie śledzenie jest włączone zarówno dla klienta, jak i dla usługi. Aby uzyskać więcej informacji na temat włączania śledzenia w plikach konfiguracji klienta i usługi, zobacz [śledzenie i rejestrowanie komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
   
  Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące konfiguracji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura konfiguracji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
-## <a name="tracing-and-activity-propagation"></a>Śledzenie i propagowania działań.  
- Śledzenie aktywności użytkownika zezwala użytkownikowi na tworzenie własnych śledzenia działań w ramach grupy danych śledzenia w logiczne jednostki pracy, korelować działania za pośrednictwem transferu i propagację i zmniejszyć koszty wydajności śledzenia WCF (na przykład miejsca na dysku, koszt pliku dziennika).  
+## <a name="tracing-and-activity-propagation"></a>Śledzenie i Propagacja działań  
+ Śledzenie aktywności zdefiniowane przez użytkownika umożliwia użytkownikowi tworzenie własnych działań śledzenia w celu grupowania śladów w logiczne jednostki pracy, skorelowanie działań za pomocą transferów i propagacji oraz zmniejszanie kosztów wydajności śledzenia WCF (na przykład koszt miejsca na dysku pliku dziennika).  
   
-### <a name="adding-custom-sources"></a>Dodawanie źródła niestandardowego  
- Ślady zdefiniowanych przez użytkownika można dodać do kodu zarówno klient, jak i usługi. Dodawanie źródła śledzenia do plików konfiguracji klienta lub usługę umożliwiają ślady te niestandardowe rejestrowane i wyświetlane w [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Poniższy kod przedstawia sposób dodawania źródła śledzenia zdefiniowanych przez użytkownika o nazwie `ServerCalculatorTraceSource` do pliku konfiguracji.  
+### <a name="adding-custom-sources"></a>Dodawanie źródeł niestandardowych  
+ Ślady zdefiniowane przez użytkownika mogą być dodawane do kodu klienta i usługi. Dodawanie źródeł śledzenia do plików konfiguracji klienta lub usługi pozwala na rejestrowanie tych niestandardowych śladów i wyświetlanie ich w narzędziu [Podgląd śledzenia usług (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Poniższy kod przedstawia sposób dodawania zdefiniowanego przez użytkownika źródła śledzenia o nazwie `ServerCalculatorTraceSource` do pliku konfiguracji.  
   
 ```xml  
 <system.diagnostics>  
@@ -67,11 +67,11 @@ Niniejszy przykład pokazuje, jak rozszerzyć funkcję śledzenia usług Windows
 ....  
 ```  
   
-### <a name="correlating-activities"></a>Korelowanie działań  
- Aby skorelować działania bezpośrednio w obrębie punktów końcowych, `propagateActivity` atrybutu musi być równa `true` w `System.ServiceModel` źródła śledzenia. Ponadto do propagowania ślady bez pośrednictwa usługi WCF działań, śledzenie aktywności ServiceModel musi być wyłączony. Można to zaobserwować w poniższym przykładzie kodu.  
+### <a name="correlating-activities"></a>Korelacja działań  
+ Aby skorelować działania bezpośrednio między punktami końcowymi `propagateActivity` , atrybut musi być ustawiony `true` na w `System.ServiceModel` źródle śledzenia. Ponadto w celu propagowania śladów bez przechodzenia przez działania programu WCF należy wyłączyć śledzenie działań elementu ServiceModel. Może to być widoczne w poniższym przykładzie kodu.  
   
 > [!NOTE]
->  Wyłączenie śledzenia działań ServiceModel nie jest taka sama jak o poziomie śledzenia, wskazywane przez `switchValue` właściwość ustawiona na wartość off.  
+> Wyłączenie śledzenia aktywności zestawu elementów nie jest takie samo jak w przypadku poziomu śledzenia, oznaczonego przez `switchValue` właściwość jako off.  
   
 ```xml  
 <system.diagnostics>  
@@ -85,17 +85,17 @@ Niniejszy przykład pokazuje, jak rozszerzyć funkcję śledzenia usług Windows
 </system.diagnostics>  
 ```  
   
-### <a name="lessening-performance-cost"></a>Zmniejszenie spadek wydajności  
- Ustawienie `ActivityTracing` na wyłączone w `System.ServiceModel` źródła śledzenia generuje plik śledzenia, który zawiera tylko działania użytkownika ślady, bez jakichkolwiek ślady działania elementu ServiceModel uwzględnione. Skutkuje to znacznie mniejszy rozmiar pliku dziennika. Jednak możliwość korelacji WCF przetwarzania śladów zostaną utracone.  
+### <a name="lessening-performance-cost"></a>Zmniejszanie kosztów wydajności  
+ Ustawienie `ActivityTracing` wyłączone`System.ServiceModel` w źródle śledzenia generuje plik śledzenia, który zawiera tylko ślady aktywności zdefiniowane przez użytkownika, bez dołączania żadnych śladów działania programu ServiceModel. Powoduje to zmniejszenie rozmiaru pliku dziennika. Jednak możliwość skorelowania śladów przetwarzania danych WCF zostanie utracona.  
   
-##### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+##### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Przykłady monitorowania oprogramowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

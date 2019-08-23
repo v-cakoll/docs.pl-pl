@@ -2,21 +2,21 @@
 title: <routing> dla <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: b7a9be18395ef8878900d754b5aa5afdeee0cff8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73a610056f94efe144705968eaf97c8314c1ae0d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783061"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934198"
 ---
-# <a name="routing-of-servicebehavior"></a>\<Routing > z \<serviceBehavior >
-Udostępnia wykonawczej usługa routingu umożliwia dynamiczne modyfikowanie konfiguracji routingu.  
+# <a name="routing-of-servicebehavior"></a>\<> \<routingu >
+Zapewnia dostęp do usługi routingu w czasie wykonywania w celu umożliwienia dynamicznej modyfikacji konfiguracji routingu.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
-\<Routing >  
+\<> zachowania  
+\<> routingu  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,9 +39,9 @@ Udostępnia wykonawczej usługa routingu umożliwia dynamiczne modyfikowanie kon
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|filterTable|Ciąg określający nazwę tabeli routingu, który zawiera filtry, które mogło zostać ocenione przez usługę routingu. Ta wartość musi odpowiadać `name` atrybutu [ \<filterTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md) element [ \<filterTables >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) sekcji.|  
-|routeOnHeaderOnly|Wartość logiczna określająca, czy filtr zbada zarówno treści komunikatu i nagłówka lub tylko nagłówek. Wartość domyślna to `true`.|  
-|soapProcessingEnabled|Wartość logiczna określająca, czy powinny być wykonywane przetwarzanie protokołu SOAP.|  
+|filterTable|Ciąg określający nazwę tabeli routingu zawierającej filtry, które mają być oceniane przez usługę routingu. Ta wartość musi być zgodna `name` z atrybutem [ \<>](filtertable.md) [ \<](filtertables.md) filtrowania elementu w sekcji > filterTables.|  
+|routeOnHeaderOnly|Wartość logiczna określająca, czy filtr będzie przebadał zarówno treść komunikatu, jak i nagłówek, czy tylko nagłówek. Wartość domyślna to `true`.|  
+|soapProcessingEnabled|Wartość logiczna określająca, czy należy wykonać przetwarzanie protokołu SOAP.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -50,9 +50,9 @@ Udostępnia wykonawczej usługa routingu umożliwia dynamiczne modyfikowanie kon
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
+|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Po dodaniu do konfiguracji zachowania usługi, ten element konfiguracji umożliwia routingu dla usługi. Możesz określić rzeczywistego tabeli routingu do użycia przez usługę, w tym elemencie.  
+ Po dodaniu do konfiguracji zachowania usługi, ten element konfiguracji włącza Routing dla usługi. Możesz określić rzeczywistą tabelę routingu, która ma być używana przez usługę w tym elemencie.  
   
- Korzystając z tej sekcji konfiguracji, można zmienić ustawienia routingu na bieżąco po zmianie deseń wdrożenia. W czasie wykonywania można zarejestrować rozszerzenia routingu z nowymi ustawieniami routingu i usługa routingu rozpocznie się za pomocą informacji zaktualizowanej konfiguracji dla nowych komunikatów i sesje, przy równoczesnym zachowaniu aktywne komunikaty/sesji przy użyciu dowolne reguły były w miejsce, w momencie rozpoczęcia pracy.  Daje możliwość robienia bezpiecznej sesji, odtwarzanie bez ponownej konfiguracji usługi routingu podczas wykonywania.  
+ Za pomocą tej sekcji konfiguracji można zmienić ustawienia routingu na bieżąco po zmianie wzorca wdrożenia. W środowisku uruchomieniowym można zarejestrować własne rozszerzenie routingu z nowymi ustawieniami routingu, a usługa routingu rozpocznie korzystanie z zaktualizowanych informacji o konfiguracji dla nowych komunikatów i sesji przy jednoczesnym pozostawieniu komunikatów/sesji w locie przy użyciu dowolnych reguł Umieść po rozpoczęciu pracy.  Umożliwia to bezpieczne dla sesji ponowne odtwarzanie usługi routingu podczas środowiska uruchomieniowego.  

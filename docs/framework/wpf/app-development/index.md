@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: a988baa64025dd9c188e367949c07d861413c197
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 519ff6f40ea303b64864683db222b55c6e5a23aa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817983"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964815"
 ---
 # <a name="application-development"></a>Projektowanie aplikacji
 <a name="introduction"></a>Windows Presentation Foundation (WPF) to struktura prezentacji, za pomocą której można opracowywać następujące typy aplikacji:  
   
-- Aplikacje autonomiczne (aplikacje [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] w stylu tradycyjnym skompilowane jako zestawy wykonywalne, które są instalowane i uruchamiane z komputera klienckiego).  
+- Aplikacje autonomiczne (tradycyjne style systemu Windows skompilowane jako zestawy wykonywalne, które są instalowane i uruchamiane z komputera klienckiego).  
   
 - [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](aplikacje złożone z stron nawigacyjnych, które są wbudowane jako zestawy wykonywalne i obsługiwane przez przeglądarki sieci Web, takie jak Microsoft Internet Explorer lub Mozilla Firefox).  
   
@@ -24,7 +24,7 @@ ms.locfileid: "68817983"
 - Biblioteki klas (zestawy niewykonywalne, które zawierają klasy wielokrotnego użytku).  
   
 > [!NOTE]
->  Korzystanie z typów WPF w usłudze systemu Windows jest zdecydowanie odradzane. Jeśli spróbujesz użyć tych funkcji w usłudze systemu Windows, mogą one nie zadziałały zgodnie z oczekiwaniami.  
+> Korzystanie z typów WPF w usłudze systemu Windows jest zdecydowanie odradzane. Jeśli spróbujesz użyć tych funkcji w usłudze systemu Windows, mogą one nie zadziałały zgodnie z oczekiwaniami.  
   
  Aby skompilować ten zestaw aplikacji, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementuje hosta usług. Ten temat zawiera omówienie tych usług i miejsca, w których można znaleźć więcej informacji.  
 

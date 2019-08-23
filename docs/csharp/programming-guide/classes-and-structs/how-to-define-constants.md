@@ -5,18 +5,18 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: 5ef5e3622840e69175163461a06f6b0de31231f9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ba5bc3d03dcaf5c8be94936a453a439670e8dc1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596888"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924489"
 ---
 # <a name="how-to-define-constants-in-c"></a>Instrukcje: Definiowanie stałych w języku C\#
 Stałe są polami, których wartości są ustawiane w czasie kompilacji i nigdy nie mogą być zmieniane. Użyj stałych, aby podać znaczące nazwy zamiast literałów liczbowych ("liczby magiczne") dla specjalnych wartości.  
   
 > [!NOTE]
->  W C# dyrektywie preprocesora [#define](../../language-reference/preprocessor-directives/preprocessor-define.md) nie można używać do definiowania stałych w sposób, który jest zazwyczaj używany w C i C++.  
+> W C# dyrektywie preprocesora [#define](../../language-reference/preprocessor-directives/preprocessor-define.md) nie można używać do definiowania stałych w sposób, który jest zazwyczaj używany w C i C++.  
   
  Aby zdefiniować stałe wartości typów całkowitych (`int`, `byte`, i tak dalej), użyj typu wyliczeniowego. Aby uzyskać więcej informacji, zobacz [Wyliczenie](../../language-reference/keywords/enum.md).  
   

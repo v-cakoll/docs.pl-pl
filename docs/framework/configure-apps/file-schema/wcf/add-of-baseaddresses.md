@@ -2,19 +2,19 @@
 title: <add> dla <baseAddresses>
 ms.date: 03/30/2017
 ms.assetid: 1bd7426f-5f4f-43fc-b8e9-de842219aa32
-ms.openlocfilehash: fbcb3a07bf40c96a4cd1b2ec87277b6fefdfb89d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a94c5144d907c26e6f5eef09b1a17b17eb6c9e0f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704456"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920219"
 ---
-# <a name="add-of-baseaddresses"></a>\<Dodaj > z \<baseAddresses >
-Reprezentuje element konfiguracji określający adres podstawowy, używany przez hosta usługi.  
+# <a name="add-of-baseaddresses"></a>\<Dodawanie > \<baseAddresses >
+Reprezentuje element konfiguracji, który określa adresy podstawowe używane przez hosta usługi.  
   
  \<system.ServiceModel>  
-\<client>  
-\<punkt końcowy >  
+\<> klienta  
+\<> punktu końcowego  
 \<host>  
 \<baseAddresses>  
 \<baseAddress>  
@@ -35,7 +35,7 @@ Reprezentuje element konfiguracji określający adres podstawowy, używany przez
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`baseAddress`|Ciąg, który określa adres bazowy używany przez hosta usługi.|  
+|`baseAddress`|Ciąg określający adres podstawowy używany przez hosta usługi.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -44,11 +44,11 @@ Reprezentuje element konfiguracji określający adres podstawowy, używany przez
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<baseAddresses>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|Kolekcja `baseAddress` elementów.|  
+|[\<baseAddresses>](baseaddresses.md)|Kolekcja `baseAddress` elementów.|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
 - <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>
-- [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [Hosting](../../../wcf/feature-details/hosting.md)

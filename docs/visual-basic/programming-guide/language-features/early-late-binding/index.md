@@ -13,32 +13,32 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
-ms.openlocfilehash: 20eb96d0d9f81ec9dfa359edf63a60f72a45aa01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d05322ba831aac6173ac9d7fa7f369a208b676d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973228"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965377"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Wczesne i późne wiązania (Visual Basic)
-Kompilator języka Visual Basic wykonuje w procesie zwanym `binding` gdy obiekt jest przypisany do zmiennej obiektu. Obiekt jest *z wczesnym wiązaniem* gdy jest przypisany do zmiennej zadeklarowany typ określonego obiektu. Wczesne obiektów powiązanych umożliwić kompilatorowi przydzielić pamięci i wykonywać inne optymalizacje, przed wykonaniem aplikacji. Na przykład poniższy fragment kodu deklaruje zmienną typu <xref:System.IO.FileStream>:  
+Kompilator Visual Basic wykonuje proces wywoływany `binding` , gdy obiekt jest przypisany do zmiennej obiektu. Obiekt jest *wczesnie powiązany* , gdy jest przypisany do zmiennej zadeklarowanej jako określonego typu obiektu. Obiekty wczesnych powiązań umożliwiają kompilatorowi przydzielanie pamięci i wykonywanie innych optymalizacji przed wykonaniem aplikacji. Na przykład poniższy fragment kodu deklaruje zmienną do typu <xref:System.IO.FileStream>:  
   
  [!code-vb[VbVbalrOOP#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#90)]  
   
- Ponieważ <xref:System.IO.FileStream> jest określonego typu obiektu, wystąpienie, przypisany do `FS` jest z wczesnym wiązaniem.  
+ Ponieważ <xref:System.IO.FileStream> jest określonym typem obiektu, wystąpienie przypisane do `FS` jest wczesnie powiązane.  
   
- Z drugiej strony, obiekt jest *Rozpoznanie późnego wiązania* gdy jest przypisany do zmiennej zadeklarowane jako typu `Object`. Obiekty tego typu może przechowują odwołania do dowolnego obiektu, ale nie ma wiele korzyści wynikające z wczesnym wiązaniem obiektów. Na przykład poniższy fragment kodu deklaruje zmienną obiektu obiektu zwróconego przez `CreateObject` funkcji:  
+ Z kolei obiekt jest późnie *powiązany* , gdy jest przypisany do zmiennej zadeklarowanej jako typu `Object`. Obiekty tego typu mogą zawierać odwołania do dowolnego obiektu, ale nie wiele zalet obiektów wczesnych powiązań. Na przykład poniższy fragment kodu deklaruje zmienną obiektu do przechowywania obiektu zwróconego przez `CreateObject` funkcję:  
   
  [!code-vb[VbVbalrOOP#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/LateBinding.vb#91)]  
   
-## <a name="advantages-of-early-binding"></a>Korzyści wynikające z wczesne powiązania  
- Obiekty wczesnym wiązaniem, jeśli to możliwe, należy użyć, ponieważ umożliwiają one kompilator udostępnia ważne optymalizacje, które bardziej wydajne aplikacje. Obiekty z wczesnym wiązaniem są znacznie szybsze niż obiektów z późnym wiązaniem i uczynić kod łatwiejszym do odczytywania i obsługa poprzez podanie dokładnie jakiego rodzaju obiektów są używane. Inną zaletą wczesne powiązania jest umożliwienie przydatne funkcje, takie jak uzupełnianie kodu automatyczne i dynamiczna pomoc ponieważ Visual Studio zintegrowane środowisko programistyczne (IDE) można określić dokładnie typ obiektu pracujesz w trakcie edycji Kod. Wczesne powiązania ogranicza liczby i ważności błędów czasu wykonywania, ponieważ umożliwia kompilatorowi raportowanie błędów, gdy program jest kompilowany.  
+## <a name="advantages-of-early-binding"></a>Zalety wczesnego wiązania  
+ Jeśli jest to możliwe, należy używać obiektów wczesnych powiązań, ponieważ umożliwiają kompilatorowi wykonywanie ważnych optymalizacji, które dają wydajniejsze aplikacje. Obiekty wczesnie powiązane są znacznie szybsze niż obiekty z późnym wiązaniem i ułatwiają odczytywanie i konserwowanie kodu przez poznanie tego, jakiego rodzaju obiekty są używane. Kolejną zaletą wczesnych powiązań jest umożliwienie korzystania z użytecznych funkcji, takich jak automatyczne uzupełnianie kodu i Pomoc dynamiczna, ponieważ zintegrowane środowisko programistyczne (IDE) programu Visual Studio może dokładnie określić typ obiektu, z którym pracujesz podczas edycji kodu. Wczesne powiązanie zmniejsza liczbę i ważność błędów czasu wykonywania, ponieważ umożliwia kompilatorowi raportowanie błędów podczas kompilowania programu.  
   
 > [!NOTE]
->  Rozpoznanie późnego wiązania należy używać tylko na dostęp do elementów członkowskich typu, które są zadeklarowane jako `Public`. Uzyskiwanie dostępu do elementów zadeklarowane jako `Friend` lub `Protected Friend` powoduje błąd w czasie wykonywania.  
+> Późne wiązanie może być używane tylko w celu uzyskania dostępu do elementów członkowskich `Public`typu, które są zadeklarowane jako. Uzyskiwanie dostępu do `Friend` składowych zadeklarowanych jako lub `Protected Friend` w wyniku błędu czasu wykonywania.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>
-- [Okres istnienia obiektów: Jak obiekty są tworzone i niszczone](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Okres istnienia obiektu: Jak obiekty są tworzone i niszczone](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: b5ad2280c832b62e043a1f65f082d5475697c38c
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: dfc1f023e9d1adce73a28f475f3796b4f7231ff8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545357"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960336"
 ---
 # <a name="packaging-fonts-with-applications"></a>Pakowanie czcionek z aplikacjami
 Ten temat zawiera omówienie sposobu tworzenia pakietów czcionek w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
   
 > [!NOTE]
->  Podobnie jak w przypadku większości typów oprogramowania, pliki czcionek są licencjonowane, a nie sprzedawane. Licencje, które regulują korzystanie z czcionek, różnią się od dostawcy do dostawcy, ale ogólnie w większości licencji, [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] w tym w odniesieniu do czcionek dostarczanych z aplikacjami i [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]nie zezwalają na Osadzanie czcionek w aplikacjach ani w inny sposób Ponowna dystrybucja. W związku z tym deweloper jest odpowiedzialny za zapewnienie, że masz wymagane prawa do licencji dla dowolnej czcionki osadzonej w aplikacji lub w inny sposób.  
+> Podobnie jak w przypadku większości typów oprogramowania, pliki czcionek są licencjonowane, a nie sprzedawane. Licencje, które regulują korzystanie z czcionek, różnią się od dostawcy do dostawcy, ale ogólnie w większości licencji, [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] w tym w odniesieniu do czcionek dostarczanych z aplikacjami i oknami, nie umożliwiają osadzania czcionek w aplikacjach ani w inny sposób Ponowna dystrybucja. W związku z tym deweloper jest odpowiedzialny za zapewnienie, że masz wymagane prawa do licencji dla dowolnej czcionki osadzonej w aplikacji lub w inny sposób.  
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Wprowadzenie do tworzenia pakietów czcionek  
@@ -81,7 +81,7 @@ Ten temat zawiera omówienie sposobu tworzenia pakietów czcionek w [!INCLUDE[TL
 ```  
   
 > [!NOTE]
->  Gdy dodajesz czcionki jako zasoby do aplikacji, upewnij się, że ustawiasz `<Resource>` element, a `<EmbeddedResource>` nie element w pliku projektu aplikacji. `<EmbeddedResource>` Element dla akcji kompilacji nie jest obsługiwany.  
+> Gdy dodajesz czcionki jako zasoby do aplikacji, upewnij się, że ustawiasz `<Resource>` element, a `<EmbeddedResource>` nie element w pliku projektu aplikacji. `<EmbeddedResource>` Element dla akcji kompilacji nie jest obsługiwany.  
   
  Poniższy przykład znacznika pokazuje, jak odwoływać się do zasobów czcionki aplikacji.  
   
@@ -152,7 +152,7 @@ Ten temat zawiera omówienie sposobu tworzenia pakietów czcionek w [!INCLUDE[TL
  [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
->  Ten zestaw SDK zawiera zestaw przykładowych czcionek OpenType, których można używać z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacjami. Czcionki są zdefiniowane w bibliotece tylko do zasobów. Aby uzyskać więcej informacji, zobacz [przykładowy pakiet czcionek OpenType](sample-opentype-font-pack.md).  
+> Ten zestaw SDK zawiera zestaw przykładowych czcionek OpenType, których można używać z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacjami. Czcionki są zdefiniowane w bibliotece tylko do zasobów. Aby uzyskać więcej informacji, zobacz [przykładowy pakiet czcionek OpenType](sample-opentype-font-pack.md).  
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>Ograniczenia dotyczące użycia czcionek  

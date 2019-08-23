@@ -8,59 +8,59 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11295f4b0d1a425fd3859c904b8ebc7830c64d1f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
-ms.translationtype: MT
+ms.openlocfilehash: 62d14b422ccaf963c5488498be430a0a9c4770c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815946"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928023"
 ---
 # <a name="64-bit-applications"></a>Aplikacje 64-bitowe
-Podczas kompilowania aplikacji można określić, że powinna działać w systemie operacyjnym Windows 64-bitowych jako natywną aplikację lub w emulatorze WOW64 (Windows 32-bit na Windows 64-bitowych). WOW64 jest środowiskiem zgodności, które umożliwia aplikacji 32-bitowy, do uruchomienia w systemie 64-bitowych. Emulator WOW64 znajduje się we wszystkich 64-bitowych wersjach systemu operacyjnego Windows.  
+Podczas kompilowania aplikacji można określić, że powinna być uruchamiana w systemie operacyjnym Windows 64-bitowym jako aplikacja natywna lub w emulatorze WOW64 (Windows 32-bit w systemie Windows 64-bit). Emulator WOW64 to środowisko zgodności, które umożliwia uruchamianie aplikacji 32-bitowych w systemie 64-bitowym. Emulator WOW64 jest uwzględniony we wszystkich 64-bitowych wersjach systemu operacyjnego Windows.  
   
-## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>Uruchamianie 32-bitowego. 64-bitowych aplikacji na Windows  
- Wszystkie aplikacje, które są oparte na .NET Framework 1.0 i 1.1, są traktowane jako aplikacje 32-bitowy na 64-bitowym systemie operacyjnym i są zawsze wykonywane w ramach WOW64 i 32-bitowe środowisko uruchomieniowe języka wspólnego (CLR). 32-bitowych aplikacji, które są oparte na programie .NET Framework 4 lub nowszy również uruchomić w emulatorze WOW64 na 64-bitowym.  
+## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>Uruchamianie 32-bitowe a 64-bitowe aplikacje w systemie Windows  
+ Wszystkie aplikacje, które są oparte na .NET Framework 1,0 lub 1,1 są traktowane jako aplikacje 32-bitowe w 64-bitowym systemie operacyjnym i są zawsze wykonywane w ramach emulatora WOW64 i 32-bitowego środowiska uruchomieniowego języka wspólnego (CLR). aplikacje 32-bitowe, które są oparte na .NET Framework 4 lub nowszych wersjach, również są uruchamiane w emulatorze WOW64 w systemach 64-bitowych.  
   
- Program Visual Studio instaluje 32-bitowej wersji środowiska CLR na x86 komputera i 32-bitowej wersji oraz odpowiednią wersję 64-bitowym CLR na komputerze Windows 64-bitowym. (Ponieważ program Visual Studio jest 32-bitowej aplikacji, podczas instalowania w systemie 64-bitowych, działa w emulatorze WOW64.)  
+ Program Visual Studio instaluje 32-bitową wersję środowiska CLR na komputerze z procesorem x86 oraz wersję 32-bitową i odpowiednią 64-bitową wersję środowiska CLR na komputerze z systemem 64-bitowym. (Ponieważ program Visual Studio jest aplikacją 32-bitową, gdy jest zainstalowana w systemie 64-bitowym, działa w emulatorze WOW64).  
   
 > [!NOTE]
->  Ze względu na projekt x86 emulacji i w podsystemie WOW64 dla rodziny procesorów Itanium, aplikacje są ograniczone do wykonania w jednym procesorze. Te czynniki zmniejszyć wydajność i skalowalność aplikacji .NET Framework 32-bitowych, działających w systemach opartych na procesorach Itanium. Zalecamy użycie programu .NET Framework 4, który obsługuje natywnych 64-bitowych systemów opartych na procesorze Itanium, w celu zwiększenia wydajności i skalowalności.  
+> Ze względu na sposób projektowania emulacji x86 i podsystemu WOW64 dla rodziny procesorów Itanium aplikacje są ograniczone do wykonywania na jednym procesorze. Czynniki te zmniejszają wydajność i skalowalność 32-.NET Framework bitowych aplikacji, które działają w systemach opartych na procesorze Itanium. Zalecamy używanie .NET Framework 4, który obejmuje natywną 64-bitową obsługę systemów opartych na procesorze Itanium w celu zwiększenia wydajności i skalowalności.  
   
- Domyślnie po uruchomieniu aplikacji zarządzanej 64-bitowym na 64-bitowym systemie operacyjnym Windows można utworzyć obiekt nie więcej niż 2 gigabajty (GB). Jednak w .NET Framework 4.5, możesz zwiększyć ten limit.  Aby uzyskać więcej informacji, zobacz [ \<gcAllowVeryLargeObjects > element](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
+ Domyślnie po uruchomieniu 64-bitowej aplikacji zarządzanej w 64-bitowym systemie operacyjnym Windows można utworzyć obiekt o wartości nie większej niż 2 gigabajty (GB). Jednak w .NET Framework 4,5 można zwiększyć ten limit.  Aby uzyskać więcej informacji, zobacz [ \<gcAllowVeryLargeObjects > elementu](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
   
- Wiele zestawów identycznie uruchomić zarówno 32-bitowe środowisko CLR, jak i 64-bitowe środowisko CLR. Jednak niektóre programy mogą zachowywać się różnie w zależności od środowiska CLR, jeśli zawierają one co najmniej jeden z następujących czynności:  
+ Wiele zestawów działa identycznie na 32-bitowym CLR i 64-bitowym środowisku CLR. Niektóre programy mogą jednak zachowywać się inaczej, w zależności od środowiska CLR, jeśli zawierają jedną lub więcej z następujących elementów:  
   
-- Struktury, które zawierają składowe, które zmiany rozmiaru, w zależności od platformy (na przykład dowolny typ wskaźnika).  
+- Struktury zawierające elementy członkowskie, które zmieniają rozmiar w zależności od platformy (na przykład dowolnego typu wskaźnika).  
   
-- Arytmetyczny wskaźnik, obejmującą stałych rozmiarach.  
+- Arytmetyczny wskaźnik obejmujący stałe rozmiary.  
   
-- Nieprawidłowa platforma wywołania lub deklaracji COM, które używają `Int32` dla dojścia, zamiast `IntPtr`.  
+- Nieprawidłowe wywołanie platformy lub deklaracje com, `Int32` które są używane do `IntPtr`obsługi zamiast.  
   
-- Kod, który rzutuje `IntPtr` do `Int32`.  
+- Kod, który jest `IntPtr` rzutowany na `Int32`.  
   
- Aby uzyskać więcej informacji na temat portów 32-bitowej aplikacji do uruchomienia w 64-bitowe środowisko CLR, zobacz [Migrowanie 32-bitowego kodu zarządzanego do 64-bitowej](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10)).  
+ Aby uzyskać więcej informacji na temat sposobu przenoszenia aplikacji 32-bitowej do uruchamiania na 64-bitowym CLR, zobacz [migrowanie 32-bitowego kodu zarządzanego do 64-bitowego](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10)).  
   
 ## <a name="general-64-bit-programming-information"></a>Ogólne informacje nt. programowania 64-bitowego  
- Ogólne informacje o programowaniu 64-bitowego na ten temat można znaleźć w następujących dokumentach:  
+ Aby uzyskać ogólne informacje na temat programowania 64-bitowego, zobacz następujące dokumenty:  
   
-- Aby uzyskać więcej informacji na temat 64-bitowej wersji środowiska CLR na 64-bitowym komputerze Windows zobacz [Centrum deweloperów .NET Framework](https://go.microsoft.com/fwlink/?LinkId=37079) w witrynie MSDN.  
+- Aby uzyskać więcej informacji na temat 64-bitowej wersji środowiska CLR na komputerze 64-bitowym z systemem Windows, zapoznaj się z [Centrum deweloperów .NET Framework](https://go.microsoft.com/fwlink/?LinkId=37079) w witrynie MSDN.  
   
-- W dokumentacji zestawu Windows SDK, zobacz [przewodnik programowania w Windows 64-bitowych](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
+- W dokumentacji Windows SDK zapoznaj się z [przewodnikiem programowania dla systemu Windows 64-bitowego](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
   
-- Aby uzyskać informacji dotyczących sposobu pobierania 64-bitowej wersji środowiska CLR, zobacz [.NET Framework Developer Center pobiera](https://go.microsoft.com/fwlink/?LinkId=50953) w witrynie MSDN.  
+- Aby uzyskać informacje na temat pobierania 64-bitowej wersji środowiska CLR, zobacz [.NET Framework do pobrania w centrum deweloperów](https://go.microsoft.com/fwlink/?LinkId=50953) w witrynie MSDN.  
   
-- Aby uzyskać informacji na temat obsługi programu Visual Studio do tworzenia aplikacji 64-bitowych, zobacz [obsługi programu Visual Studio IDE 64-bitowych](/visualstudio/ide/visual-studio-ide-64-bit-support).  
+- Aby uzyskać informacje o obsłudze programu Visual Studio do tworzenia aplikacji 64-bitowych, zobacz [Visual Studio IDE 64-bit support](/visualstudio/ide/visual-studio-ide-64-bit-support).  
   
 ## <a name="compiler-support-for-creating-64-bit-applications"></a>Obsługa kompilatora do tworzenia aplikacji 64-bitowych  
- Domyślnie, gdy używasz programu .NET Framework do tworzenia aplikacji na 32-bitowy lub 64-bitowy komputer, aplikacja zostanie uruchomiona na komputerze 64-bitowych, co aplikacja natywna (czyli nie w emulatorze WOW64). Poniższa tabela zawiera listę dokumentów, które wyjaśniają jak używać kompilatory programu Visual Studio do tworzenia aplikacji 64-bitowych, które będą uruchamiane jako natywny przez środowisko WOW64 lub obie.  
+ Domyślnie w przypadku używania .NET Framework do kompilowania aplikacji na komputerze 32-bitowym lub 64-bitowym aplikacja zostanie uruchomiona na komputerze 64-bitowym jako aplikacja natywna (czyli nie poniżej emulatora WOW64). W poniższej tabeli wymieniono dokumenty, które wyjaśniają, jak używać kompilatorów programu Visual Studio do tworzenia aplikacji 64-bitowych, które będą uruchamiane jako natywne w emulatorze WOW64.  
   
-|Kompilator|— Opcja kompilatora|  
+|Compiler|Opcja kompilatora|  
 |--------------|---------------------|  
-|Visual Basic|[/ platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
-|Visual C#|[/ platform (opcje kompilatora C#)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|Możesz utworzyć niezależne od platformy, aplikacje języka intermediate language (MSIL) firmy Microsoft przy użyciu **/CLR: Safe**. Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ zawiera kompilator osobne dla każdego 64-bitowym systemie operacyjnym. Aby uzyskać więcej informacji o tym, jak używać języka Visual C++ do tworzenia natywnych aplikacji działających na 64-bitowym systemie operacyjnym Windows, zobacz [programowanie 64-bitowe](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
+|Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual C#|[/platform (C# opcje kompilatora)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
+|Visual C++|Możesz tworzyć aplikacje platform-niezależny od, Microsoft pośredniego języka (MSIL) za pomocą **/CLR: Safe**. Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Wizualizacja C++ zawiera oddzielny kompilator dla każdego 64-bitowego systemu operacyjnego. Aby uzyskać więcej informacji na temat sposobu użycia C++ wizualizacji do tworzenia natywnych aplikacji działających w 64-bitowym systemie operacyjnym Windows, zobacz [64-bitowe programowanie](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Określanie stanu pliku .exe lub pliku .dll  
- Aby określić, czy pliku .exe lub pliku dll jest przeznaczona do uruchamiania tylko na danej platformie lub w emulatorze WOW64, użyj [CorFlags.exe (narzędzie konwersji CorFlags)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md) bez żadnych opcji. CorFlags.exe umożliwia również zmienić stan platformy pliku .exe lub .dll. Nagłówku CLR zestawu Visual Studio ma ustawiony numer wersji środowiska uruchomieniowego głównych do 2 i ustawiony numer wersji środowiska uruchomieniowego pomocnicza do 5. Aplikacje, które mają wersję pomocniczą środowiska uruchomieniowego, równa 0, są traktowane jako starsze aplikacje i są zawsze wykonywane w emulatorze WOW64.  
+ Aby określić, czy plik. exe lub plik DLL ma być uruchamiany tylko na określonej platformie, czy w emulatorze WOW64, użyj [CorFlags. exe (narzędzie konwersji CorFlags)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md) bez opcji. Można również użyć CorFlags. exe, aby zmienić stan platformy pliku. exe lub pliku dll. W nagłówku CLR zestawu programu Visual Studio jest ustawiony numer wersji głównej środowiska uruchomieniowego na 2, a dla dodatkowego numeru wersji środowiska uruchomieniowego ustawiono wartość 5. Aplikacje, które mają niewielką wersję środowiska uruchomieniowego ustawioną na 0, są traktowane jako starsze aplikacje i są zawsze wykonywane w emulatorze WOW64.  
   
- Aby programowo wykonywać zapytania, .exe lub .dll, aby zobaczyć, czy jest przeznaczona do uruchamiania tylko na danej platformie lub w emulatorze WOW64, należy użyć <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=nameWithType> metody.
+ Aby programowo zbadać plik exe lub dll w celu sprawdzenia, czy ma on być uruchamiany tylko na określonej platformie lub w emulatorze WOW64, użyj <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=nameWithType> metody.

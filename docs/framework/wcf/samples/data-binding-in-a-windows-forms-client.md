@@ -2,38 +2,38 @@
 title: Powiązanie danych w kliencie formularzy systemu Windows
 ms.date: 03/30/2017
 ms.assetid: a2a30b37-d6e2-4552-820e-e60b2bbe8829
-ms.openlocfilehash: 6ad71555148ed4f907483b677097e1f673373d87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a21721536542d2c338dfdad444e128087a18f57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990642"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953560"
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Powiązanie danych w kliencie formularzy systemu Windows
-Niniejszy przykład pokazuje jak powiązać dane zwracane przez usługę Windows Communication Foundation (WCF) w aplikacji Windows Forms.  
+Ten przykład pokazuje, jak powiązać dane zwrócone przez usługę Windows Communication Foundation (WCF) w aplikacji Windows Forms.  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego artykułu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego artykułu.  
   
- Niniejszy przykład pokazuje usługi, który implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź". Przykład składa się z klienta aplikacji Windows Forms (.exe), jak i usługi WCF hostowanej przez Internetowe usługi informacyjne (IIS).  
+ Ten przykład pokazuje usługę implementującą kontrakt, który definiuje wzorzec komunikacji z odpowiedzią na żądanie. Przykład składa się z klienta Windows Forms aplikacji (exe) i usługi WCF hostowanej przez Internet Information Services (IIS).  
   
- Kontrakt jest definiowany przez `IWeatherService` interfejs, który udostępnia operacji o nazwie `GetWeatherData`. Ta operacja przyjmuje tablicę miasta i zwraca tablicę `WeatherData` obiekty reprezentujące wysokim i niskim prognozowanych temperatury jako uczestnik w mieście.  
+ Kontrakt jest definiowany przez `IWeatherService` interfejs, który uwidacznia operację o nazwie. `GetWeatherData` Ta operacja akceptuje tablicę miast i zwraca tablicę `WeatherData` obiektów, która reprezentuje górną i niską prognozę dla miasta.  
   
- Powiązanie danych występuje na komputerze klienckim w aplikacji Windows Forms. Element `DataGridView` jest zdefiniowany w Windows Forms designer, która jest graficzną reprezentację danych. Pośrednik o nazwie `BindingSource` tworzona jest również. Źródło danych `BindingSource` jest ustawiona na tablicę danych zwróconych przez usługę. Celem `BindingSource` ma na celu dostarczenie warstwę pośredni między danymi i widoku danych. Wszystkie interakcje z danymi, takie jak przeglądanie, sortowanie, filtrowanie i aktualizowaniem odbywa się przy użyciu wywołań `BindingSource` składnika. Aby osiągnąć powiązania danych `DataGridView`, `datasource` z `DataGridView` zostanie następnie ustawiona `BindingSource` obiektu. Wszystkie dane zwrócone przez usługę WCF jest następnie wyświetlana graficznie użytkownika.  Za każdym razem, gdy użytkownik kliknie przycisk, zwrócone dane są automatycznie aktualizowane w powiązanych z danymi `DataGridView`.  
+ Powiązanie danych odbywa się na kliencie w aplikacji Windows Forms. A `DataGridView` jest zdefiniowany w projektancie Windows Forms, który jest graficzną reprezentacją danych. Tworzony jest również pośrednik o `BindingSource` nazwie. Źródło `BindingSource` danych jest ustawione na tablicę danych zwracaną przez usługę. Celem `BindingSource` jest zapewnienie warstwy pośredniej między danymi a widokiem danych. Wszystkie interakcje z danymi, takie jak nawigowanie, sortowanie, filtrowanie i aktualizowanie, są realizowane przy użyciu wywołań do `BindingSource` składnika. Aby wykonać powiązanie `DataGridView`danych z `BindingSource` obiektem `datasource` , `DataGridView` jest on następnie ustawiany dla obiektu. Wszystkie dane zwrócone przez usługę WCF są następnie wyświetlane graficznie dla użytkownika.  Za każdym razem, gdy użytkownik kliknie przycisk, zwrócone dane są automatycznie aktualizowane w powiązane `DataGridView`dane.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WindowsForms`  

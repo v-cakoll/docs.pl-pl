@@ -9,47 +9,47 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: f92b35757feed0dbe75394f183420780a1366ced
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 220b86c0de57e60036527bb49f2d8de46390a9ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661842"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929790"
 ---
 # <a name="how-to-validate-application-settings"></a>Instrukcje: Walidacja ustawień aplikacji
 
-W tym temacie pokazano, jak sprawdzanie poprawności ustawień aplikacji, zanim zostaną utrwalone.
+W tym temacie przedstawiono sposób sprawdzania poprawności ustawień aplikacji przed ich utrwaleniem.
 
-Ponieważ ustawienia aplikacji są silnie typizowane, masz niektóre pewność użytkowników nie można przypisać danych niepoprawny typ danego ustawienia. Jednak użytkownik nadal może podejmować prób do przypisania wartości do ustawienia, która wykracza poza dopuszczalne granice — na przykład, podając datę urodzenia, który występuje w przyszłości. <xref:System.Configuration.ApplicationSettingsBase>, klasą nadrzędną dla wszystkich klas ustawienia aplikacji, udostępnia cztery zdarzeń w celu włączenia takich sprawdzanie granic. Obsługa tych zdarzeń umieszcza wszystkie kod sprawdzania poprawności w jednej lokalizacji, a nie rozproszenie go w całym projekcie.
+Ponieważ ustawienia aplikacji mają silną wartość, masz pewność, że użytkownicy nie mogą przypisywać danych nieprawidłowego typu do danego ustawienia. Jednak użytkownik nadal może próbować przypisać wartość do ustawienia, które wykracza poza akceptowalne granice — na przykład dostarczając datę urodzenia, która występuje w przyszłości. <xref:System.Configuration.ApplicationSettingsBase>, Klasa nadrzędna wszystkich klas ustawień aplikacji udostępnia cztery zdarzenia umożliwiające sprawdzenie takich powiązań. Obsługa tych zdarzeń umieszcza cały kod weryfikacyjny w jednej lokalizacji, zamiast rozpraszać go w całym projekcie.
 
-Zdarzenie, którego używasz zależy, gdy trzeba sprawdzić poprawność ustawień, zgodnie z opisem w poniższej tabeli.
+Używane zdarzenie zależy od tego, kiedy trzeba zweryfikować ustawienia, zgodnie z opisem w poniższej tabeli.
 
-|Zdarzenie|Wystąpień i użycie|
+|Zdarzenie|Wystąpienie i użycie|
 |-----------|------------------------|
-|<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|Występuje po początkowym załadowaniu grupy właściwości ustawień.<br /><br /> To zdarzenie służy do sprawdzania poprawności wartości początkowe dla grupy całej właściwości, zanim zostaną użyte w aplikacji.|
-|<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|Występuje, zanim zostanie zmieniona wartość właściwości jednego ustawienia.<br /><br /> To zdarzenie służy do sprawdzania poprawności jedną właściwość, zanim zostanie on zmieniony. Jego jest udostępnienie natychmiastowej opinii do użytkowników w zakresie ich działania i opcje.|
-|<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|Występuje po zmianie wartości właściwości jednego ustawienia.<br /><br /> To zdarzenie służy do sprawdzania poprawności pojedynczej właściwości po zmodyfikowaniu. To zdarzenie jest rzadko używana do sprawdzania poprawności, chyba że proces sprawdzania poprawności długie, asynchronicznego jest wymagana.|
-|<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|Występuje, zanim grupy właściwości ustawienia są przechowywane.<br /><br /> To zdarzenie służy do sprawdzania poprawności wartości dla właściwości całej grupy, zanim zostaną utrwalone na dysku.|
+|<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|Występuje po początkowym załadowaniu grupy właściwości ustawień.<br /><br /> To zdarzenie służy do sprawdzania poprawności wartości początkowych dla całej grupy właściwości, zanim zostaną one użyte w aplikacji.|
+|<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|Występuje przed zmianą wartości właściwości Single Settings.<br /><br /> Użyj tego zdarzenia, aby sprawdzić poprawność pojedynczej właściwości przed jej zmianą. Może ona udostępniać użytkownikom natychmiastową opinię dotyczącą ich działań i wyborów.|
+|<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|Występuje po zmianie wartości właściwości Single Settings.<br /><br /> To zdarzenie służy do sprawdzania poprawności pojedynczej właściwości po jej zmianie. To zdarzenie jest rzadko używane do sprawdzania poprawności, chyba że jest wymagany proces asynchronicznej walidacji.|
+|<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|Występuje przed zapisaniem grupy właściwości ustawienia.<br /><br /> To zdarzenie służy do sprawdzania poprawności wartości dla całej grupy właściwości, zanim zostaną one utrwalone na dysku.|
 
-Zazwyczaj użytkownik nie będzie używać wszystkich tych zdarzeń w ramach tej samej aplikacji do celów sprawdzania poprawności. Na przykład często jest to możliwe spełnić wszystkie wymagania weryfikacji dzięki obsłudze tylko <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> zdarzeń.
+Zwykle nie będzie można używać wszystkich tych zdarzeń w ramach tej samej aplikacji na potrzeby sprawdzania poprawności. Na przykład często istnieje możliwość spełnienia wszystkich wymagań związanych z walidacją przez obsługę tylko <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> zdarzenia.
 
-Program obsługi zdarzeń zazwyczaj wykonuje jedną z następujących czynności w przypadku wykrycia nieprawidłową wartość:
+Program obsługi zdarzeń zazwyczaj wykonuje jedną z następujących akcji po wykryciu nieprawidłowej wartości:
 
-- Automatycznie dostarczy wartość wiadomo, że są poprawne, np. wartością domyślną.
+- Automatycznie dostarcza wartość znaną do poprawnego, na przykład wartość domyślną.
 
-- Ponownie wysyła zapytanie do użytkownika o kodzie serwera, aby uzyskać informacje.
+- Umożliwia ponowne zazapytanie użytkownika kodu serwera o informacje.
 
-- Zdarzenia wywoływane przed wykonaniem skojarzonych z nimi działań, takich jak <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> i <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, używa <xref:System.ComponentModel.CancelEventArgs> argumentu, aby anulować operację.
+- Dla zdarzeń wywoływanych przed skojarzonych z nimi akcjami <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> , <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>takimi jak <xref:System.ComponentModel.CancelEventArgs> i, używa argumentu, aby anulować operację.
 
-Aby uzyskać więcej informacji na temat obsługi zdarzeń, zobacz [Przegląd obsługi zdarzeń](../event-handlers-overview-windows-forms.md).
+Aby uzyskać więcej informacji na temat obsługi zdarzeń, zobacz [Omówienie obsługi zdarzeń](../event-handlers-overview-windows-forms.md).
 
-Poniższe procedury pokazują, jak testować prawidłową datę urodzenia za pomocą <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> lub <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> zdarzeń. Procedury przedstawione zostały napisane przy założeniu, że utworzono już ustawienia aplikacji; w tym przykładzie zostaną wykonane sprawdzanie ustawienie o nazwie granic `DateOfBirth`. Aby uzyskać więcej informacji na temat tworzenia ustawień, zobacz [jak: Tworzenie ustawień aplikacji](how-to-create-application-settings.md).
+W poniższych procedurach pokazano, jak sprawdzić poprawność daty urodzenia przy <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> użyciu <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> albo zdarzenia. Procedury zostały utworzone w ramach założeń, w których utworzono już ustawienia aplikacji; w tym przykładzie wykonamy sprawdzanie granic dla ustawienia o nazwie `DateOfBirth`. Aby uzyskać więcej informacji na temat tworzenia ustawień [, zobacz How to: Utwórz ustawienia](how-to-create-application-settings.md)aplikacji.
 
 ### <a name="to-obtain-the-application-settings-object"></a>Aby uzyskać obiekt ustawień aplikacji
 
-- Uzyskaj odwołanie do obiektu ustawień aplikacji (wystąpienia otoki), wykonując jedną z następujących elementów punktowanej:
+- Uzyskaj odwołanie do obiektu ustawień aplikacji (wystąpienie otoki), wykonując jedną z następujących pozycji:
 
-  - Jeśli utworzono ustawień za pomocą okna dialogowego Ustawienia aplikacji programu Visual Studio w **Edytor właściwości**, mogą pobrać obiekt ustawienia domyślne, które są generowane dla języka przy użyciu następującego wyrażenia.
+  - Jeśli ustawienia zostały utworzone za pomocą okna dialogowego Ustawienia aplikacji Visual Studio w **Edytorze właściwości**, można pobrać domyślny obiekt ustawień wygenerowany dla danego języka za pomocą następującego wyrażenia.
 
     ```csharp
     Configuration.Settings.Default
@@ -61,11 +61,11 @@ Poniższe procedury pokazują, jak testować prawidłową datę urodzenia za pom
 
     —lub—
 
-  - Jeśli jesteś programistą języka Visual Basic i utworzyć ustawienia aplikacji przy użyciu projektanta projektu, można pobrać ustawienia za pomocą [My.Settings — obiekt](~/docs/visual-basic/language-reference/objects/my-settings-object.md).
+  - Jeśli jesteś deweloperem Visual Basic i utworzysz ustawienia aplikacji przy użyciu projektanta projektu, możesz pobrać ustawienia za pomocą [obiektu My. Settings](../../../visual-basic/language-reference/objects/my-settings-object.md).
 
     —lub—
 
-  - W przypadku utworzenia ustawień przy pochodząca od <xref:System.Configuration.ApplicationSettingsBase> bezpośrednio, należy ręcznie utworzyć wystąpienia klasy.
+  - Jeśli ustawienia zostały utworzone przez <xref:System.Configuration.ApplicationSettingsBase> bezpośrednie wypróbowanie, należy ręcznie utworzyć wystąpienie klasy.
 
     ```csharp
     MyCustomSettings settings = new MyCustomSettings();
@@ -75,15 +75,15 @@ Poniższe procedury pokazują, jak testować prawidłową datę urodzenia za pom
     Dim Settings as New MyCustomSettings()
     ```
 
-Poniższe procedury zostały napisane w obszarze przy założeniu, że obiekt ustawień aplikacji uzyskano, wykonując ostatni element listy w tej procedurze.
+Następujące procedury zostały wprowadzone w ramach założenia, że obiekt ustawienia aplikacji został uzyskany przez wypełnienie ostatniego elementu punktowanego w tej procedurze.
 
-### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>Aby zweryfikować ustawienia aplikacji, zmieniając ustawienie
+### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>Aby sprawdzić poprawność ustawień aplikacji w przypadku zmiany ustawienia
 
-1. Jeśli jesteś C# dla deweloperów w formularza lub formantu `Load` zdarzeń, Dodaj program obsługi zdarzeń dla <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> zdarzeń.
+1. Jeśli jesteś C# deweloperem, w `Load` zdarzeniu formularza lub kontrolki Dodaj procedurę obsługi <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> zdarzeń dla zdarzenia.
 
     —lub—
 
-    Jeśli jesteś programistą języka Visual Basic, należy zadeklarować `Settings` przy użyciu zmiennej `WithEvents` — słowo kluczowe.
+    Jeśli jesteś deweloperem Visual Basic, należy zadeklarować `Settings` zmienną `WithEvents` za pomocą słowa kluczowego.
 
     ```csharp
     public void Form1_Load(Object sender, EventArgs e)
@@ -98,7 +98,7 @@ Poniższe procedury zostały napisane w obszarze przy założeniu, że obiekt us
     End Sub
     ```
 
-2. Definiowanie procedury obsługi zdarzeń, a następnie napisać kod wewnątrz niej, aby wykonać sprawdzanie na datę urodzenia granic.
+2. Zdefiniuj program obsługi zdarzeń i napisz kod wewnątrz niego, aby przeprowadzić sprawdzanie powiązane z datą urodzenia.
 
     ```csharp
     private void MyCustomSettings_SettingChanging(Object sender, SettingChangingEventArgs e)
@@ -125,9 +125,9 @@ Poniższe procedury zostały napisane w obszarze przy założeniu, że obiekt us
     End Sub
     ```
 
-### <a name="to-validate-application-settings-when-a-save-occurs"></a>Występuje, aby zweryfikować ustawienia aplikacji, podczas zapisywania
+### <a name="to-validate-application-settings-when-a-save-occurs"></a>Aby sprawdzić poprawność ustawień aplikacji po wystąpieniu zapisywania
 
-1. W formularzu lub kontrolki `Load` zdarzeń, Dodaj program obsługi zdarzeń dla <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> zdarzeń.
+1. W `Load` zdarzeniu formularza lub kontrolki Dodaj procedurę obsługi zdarzeń <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> dla zdarzenia.
 
     ```csharp
     public void Form1_Load(Object sender, EventArgs e)
@@ -142,7 +142,7 @@ Poniższe procedury zostały napisane w obszarze przy założeniu, że obiekt us
     End Sub
     ```
 
-2. Definiowanie procedury obsługi zdarzeń, a następnie napisać kod wewnątrz niej, aby wykonać sprawdzanie na datę urodzenia granic.
+2. Zdefiniuj program obsługi zdarzeń i napisz kod wewnątrz niego, aby przeprowadzić sprawdzanie powiązane z datą urodzenia.
 
     ```csharp
     private void MyCustomSettings_SettingsSaving(Object sender, SettingsSavingEventArgs e)
@@ -164,4 +164,4 @@ Poniższe procedury zostały napisane w obszarze przy założeniu, że obiekt us
 ## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](../creating-event-handlers-in-windows-forms.md)
-- [Instrukcje: Tworzenie ustawień aplikacji](how-to-create-application-settings.md)
+- [Instrukcje: Utwórz ustawienia aplikacji](how-to-create-application-settings.md)

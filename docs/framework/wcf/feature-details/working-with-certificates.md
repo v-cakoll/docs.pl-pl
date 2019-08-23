@@ -7,63 +7,63 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 55d78ed9bf839d66b3487f91d71d7a07a2123c5f
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: 706ba06e214448f63b13d1098f6f3664b2b61e76
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569553"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968640"
 ---
 # <a name="working-with-certificates"></a>Praca z certyfikatami
-Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrowe X.509 często są używane do uwierzytelniania klientów i serwerów, szyfrowania i cyfrowego podpisywania wiadomości. W tym temacie krótko opisano funkcje cyfrowego certyfikatu X.509 oraz sposobu ich używania w programie WCF i zawiera łącza do tematów, opisano te pojęcia dalsze lub które pokazują sposób wykonywania typowych zadań przy użyciu programu WCF i certyfikatów.  
+W przypadku zabezpieczeń programu Windows Communication Foundation (WCF), certyfikaty cyfrowe X. 509 są często używane do uwierzytelniania klientów i serwerów, szyfrowania i cyfrowego podpisywania wiadomości. W tym temacie krótko opisano funkcje certyfikatu cyfrowego X. 509 oraz sposób ich używania w programie WCF oraz linki do tematów, które wyjaśniają te koncepcje w dalszej części lub pokazują, jak wykonywać typowe zadania przy użyciu usług WCF i certyfikatów.  
   
- Krótko mówiąc, certyfikatu cyfrowego jest częścią *infrastruktury kluczy publicznych* (PKI), czyli system certyfikaty cyfrowe, urzędy certyfikacji i innych urzędów rejestracji, sprawdź, które uwierzytelniają Każdy biorącego udział w transakcji elektronicznej za pomocą kryptografii klucza publicznego. Urząd certyfikacji wystawia certyfikaty, a każdy certyfikat ma zestaw pól, które zawierają dane, takie jak *podmiotu* (jednostka dla których wystawiono certyfikat), dat ważności (gdy certyfikat jest ważny), wystawcy ( obiekt, który wystawił certyfikat), a klucz publiczny. W programie WCF, każda z tych właściwości jest przetwarzany jako <xref:System.IdentityModel.Claims.Claim>, a każde oświadczenie jest podzielona na dwa typy: tożsamości i po prawej stronie. Aby uzyskać więcej informacji na temat X.509 certyfikatów Zobacz [klucz publiczny certyfikatu X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Aby uzyskać więcej informacji na temat oświadczeniami i autoryzacją w usłudze WCF zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](managing-claims-and-authorization-with-the-identity-model.md). Aby uzyskać więcej informacji na temat wdrażania infrastruktury kluczy publicznych, zobacz [infrastruktura PKI przedsiębiorstwa z systemem Windows Server 2012 R2 usługi certyfikatów Active Directory](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/).  
+ W skrócie certyfikat cyfrowy jest częścią *infrastruktury kluczy publicznych* (PKI), która jest systemem certyfikatów cyfrowych, urzędów certyfikacji i innych urzędów rejestrowania, którzy weryfikują i uwierzytelniają okres ważności każdej ze stron uczestniczących w transakcja elektroniczna przy użyciu kryptografii klucza publicznego. Urząd certyfikacji wystawia certyfikaty i każdy certyfikat zawiera zestaw pól zawierających dane, takich jak *podmiot* (podmiot, dla którego wystawiony jest certyfikat), daty ważności (gdy certyfikat jest ważny), wystawca (jednostka, która wystawiła Certyfikat) i klucz publiczny. W programie WCF każda z tych właściwości jest przetwarzana jako <xref:System.IdentityModel.Claims.Claim>, a każde z nich jest dalej podzielone na dwa typy: Identity i Right. Aby uzyskać więcej informacji na temat certyfikatów X. 509, zobacz [Certyfikaty klucza publicznego x. 509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Aby uzyskać więcej informacji o oświadczeniach i autoryzacji w programie WCF, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](managing-claims-and-authorization-with-the-identity-model.md). Aby uzyskać więcej informacji o implementowaniu infrastruktury kluczy publicznych, zobacz [infrastruktura PKI przedsiębiorstwa z systemem Windows Server 2012 R2 Active Directory usług certyfikatów](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/).  
   
- Podstawową funkcją certyfikatu jest uwierzytelnianie tożsamość właściciela certyfikatu do innych osób. Certyfikat zawiera *klucza publicznego* właściciela, podczas gdy właściciela przechowuje klucz prywatny. Klucz publiczny może służyć do szyfrowania wiadomości wysyłane do właściciela certyfikatu. Tylko właściciel ma dostęp do klucza prywatnego, dlatego tylko właściciel może odszyfrować te komunikaty.  
+ Podstawową funkcją certyfikatu jest uwierzytelnianie tożsamości właściciela certyfikatu dla innych osób. Certyfikat zawiera *klucz publiczny* właściciela, podczas gdy właściciel zachowuje klucz prywatny. Klucz publiczny może służyć do szyfrowania wiadomości wysyłanych do właściciela certyfikatu. Tylko właściciel ma dostęp do klucza prywatnego, więc tylko właściciel może odszyfrować te komunikaty.  
   
- Certyfikaty muszą być wystawiane przez urząd certyfikacji, które są często wystawcy certyfikatów innych firm. Domenę Windows urzędu certyfikacji jest zainstalowana na które może służyć do wystawiania certyfikatów dla komputerów w domenie.  
+ Certyfikaty muszą być wystawiane przez urząd certyfikacji, który jest często wystawcą certyfikatów innych firm. W domenie systemu Windows jest uwzględniany urząd certyfikacji, którego można użyć do wystawiania certyfikatów dla komputerów w domenie.  
   
 ## <a name="viewing-certificates"></a>Wyświetlanie certyfikatów  
- Do pracy z certyfikatami, często jest to konieczne je wyświetlić i sprawdzić ich właściwości. Łatwo to zrobić za pomocą narzędzia przystawkę Microsoft Management Console (MMC). Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie certyfikatów za pomocą przystawki programu MMC](how-to-view-certificates-with-the-mmc-snap-in.md).  
+ Aby można było korzystać z certyfikatów, często konieczne jest ich wyświetlenie i sprawdzenie ich właściwości. Można to łatwo zrobić przy użyciu przystawki programu Microsoft Management Console (MMC). Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie certyfikatów z przystawką](how-to-view-certificates-with-the-mmc-snap-in.md)programu MMC.  
   
 ## <a name="certificate-stores"></a>Magazyny certyfikatów  
- Certyfikaty znajdują się w magazynach. Dwie lokalizacje magazynu głównych istnieją, które są podzielone na magazynach podrzędnych. Jeśli jesteś administratorem na komputerze, możesz wyświetlić obie magazynów głównych przy użyciu narzędzia przystawki programu MMC. Użytkownicy niebędący administratorami mogą wyświetlać tylko bieżącego magazynu użytkownika.  
+ Certyfikaty znajdują się w sklepach. Istnieją dwa główne lokalizacje magazynu, które są dalej podzielone na magazyny podrzędne. Jeśli jesteś administratorem na komputerze, możesz wyświetlić oba magazyny główne przy użyciu narzędzia MMC przystawka. Użytkownicy niebędący administratorami mogą wyświetlać tylko bieżący magazyn użytkowników.  
   
-- **Magazynu komputer lokalny**. Zawiera certyfikaty używane przez procesy maszyny, takich jak ASP.NET. Użyj tej lokalizacji można przechowywać certyfikaty uwierzytelniania serwera wobec klientów.  
+- **Magazyn komputera lokalnego**. Zawiera certyfikaty, do których uzyskuje dostęp procesy maszyny, takie jak ASP.NET. Ta lokalizacja służy do przechowywania certyfikatów uwierzytelniających serwer na klientach programu.  
   
-- **Bieżący magazyn użytkownika**. Interaktywne aplikacje zwykle umieść tutaj certyfikaty dla bieżącego użytkownika komputera. Jeśli tworzysz aplikację kliencką, to zwykle umieszczane są certyfikaty, które przeprowadzają uwierzytelnianie użytkownika do usługi.  
+- **Bieżący magazyn użytkownika**. Aplikacje interaktywne zwykle umieszczają tutaj certyfikaty dla bieżącego użytkownika komputera. W przypadku tworzenia aplikacji klienckiej zwykle umieszczane są certyfikaty uwierzytelniające użytkownika w usłudze.  
   
- Te dwa magazyny są podzielone na magazynach podrzędnych. Najważniejsze z nich podczas programowania, korzystając z usługi WCF obejmują:  
+ Te dwa magazyny są dalej podzielone na magazyny podrzędne. Najważniejszymi z nich podczas programowania przy użyciu programu WCF są:  
   
-- **Zaufane główne urzędy certyfikacji**. Certyfikaty można użyć w tym magazynie, aby utworzyć łańcuch certyfikatów, które można prześledzić do certyfikatu urzędu certyfikacji, w tym magazynie.  
+- **Zaufane główne urzędy certyfikacji**. Możesz użyć certyfikatów w tym magazynie do utworzenia łańcucha certyfikatów, które można wyśledzić z powrotem do certyfikatu urzędu certyfikacji w tym magazynie.  
   
     > [!IMPORTANT]
-    >  Komputerze lokalnym domyślnie ufa wszystkich certyfikatów, umieszczane w tym magazynie nawet, jeśli certyfikat nie pochodzi z zaufanego firm urzędu certyfikacji. Z tego powodu nie należy umieszczać żadnych certyfikatów do tego magazynu chyba, że w pełni ufasz wystawcy i konsekwencje.  
+    >  Komputer lokalny niejawnie ufa wszystkie certyfikaty znajdujące się w tym magazynie, nawet jeśli certyfikat nie pochodzi od zaufanego urzędu certyfikacji innej firmy. Z tego powodu nie należy umieszczać żadnych certyfikatów w tym magazynie, chyba że w pełni ufasz wystawcy i nie zrozumiesz konsekwencji.  
   
-- **Osobiste**. Ten magazyn jest używany dla certyfikatów skojarzonych z użytkownikiem komputerze. Zazwyczaj ten magazyn jest używany do certyfikatów wystawianych przez jeden z certyfikatów urzędów certyfikacji w magazynie zaufanych głównych urzędów certyfikacji. Alternatywnie tutaj certyfikat może być własnym wystawiony i zaufane przez aplikację.  
+- **Osobiste**. Ten magazyn jest używany w przypadku certyfikatów skojarzonych z użytkownikiem komputera. Zazwyczaj ten magazyn jest używany w przypadku certyfikatów wystawionych przez jeden z certyfikatów urzędu certyfikacji znajdujących się w magazynie zaufanych głównych urzędów certyfikacji. Certyfikat odnaleziony w tym miejscu może być również wystawiony i zaufany przez aplikację.  
   
- Aby uzyskać więcej informacji na temat magazynów certyfikatów Zobacz [magazynów certyfikatów](/windows/desktop/secauthn/certificate-stores).  
+ Aby uzyskać więcej informacji na temat magazynów certyfikatów, zobacz [magazyny certyfikatów](/windows/desktop/secauthn/certificate-stores).  
   
-### <a name="selecting-a-store"></a>Wybieranie Store  
- Wybieranie miejsce przechowywania certyfikatu zależy od sposobu i czasu uruchomienia usługi lub klienta. Obowiązują następujące reguły ogólne:  
+### <a name="selecting-a-store"></a>Wybieranie magazynu  
+ Wybór lokalizacji przechowywania certyfikatu zależy od tego, jak i kiedy uruchomiona jest usługa lub klient. Obowiązują następujące reguły ogólne:  
   
-- Jeśli usługa WCF jest hostowana w użyciu usługi Windows **komputera lokalnego** przechowywania. Należy pamiętać, że wymagane są uprawnienia administratora, aby zainstalować certyfikaty w magazynie komputera lokalnego.  
+- Jeśli usługa WCF jest hostowana w usłudze systemu Windows, użyj **lokalnego** magazynu maszynowego. Należy pamiętać, że uprawnienia administratora są wymagane do zainstalowania certyfikatów w magazynie komputera lokalnego.  
   
-- Jeśli usługi lub klienta jest aplikacja, która jest uruchamiana na koncie użytkownika, użyj **bieżącego użytkownika** przechowywania.  
+- Jeśli usługa lub klient jest aplikacją, która jest uruchamiana na koncie użytkownika, Użyj bieżącego magazynu **użytkownika** .  
   
-### <a name="accessing-stores"></a>Uzyskiwanie dostępu do magazynów  
- Magazyny są chronione przez listy kontroli dostępu (ACL), podobnie jak foldery na komputerze. Podczas tworzenia usługi hostowanej przez Internetowe usługi informacyjne (IIS), proces ASP.NET jest uruchamiany na koncie platformy ASP.NET. Konto musi mieć dostęp do magazynu który zawiera certyfikaty używane przez usługę. Każdy z magazynów głównych jest chroniony za pomocą domyślnej listy dostępu, ale listy mogą być modyfikowane. Jeśli utworzysz rolę oddzielne dostępu do magazynu, należy przyznać uprawnienia dostępu do tej roli. Aby dowiedzieć się, jak zmodyfikować listę dostępu za pomocą narzędzia WinHttpCertConfig.exe, zobacz [jak: Tworzenie certyfikatów tymczasowych do użycia podczas tworzenia](how-to-create-temporary-certificates-for-use-during-development.md). Aby uzyskać więcej informacji o korzystaniu z certyfikatów klienta z programem IIS, zobacz [sposób wywoływania usługi sieci Web przy użyciu certyfikatu klienta do uwierzytelniania w aplikacji internetowej ASP.NET](https://support.microsoft.com/en-us/help/901183/how-to-call-a-web-service-by-using-a-client-certificate-for-authentica).  
+### <a name="accessing-stores"></a>Uzyskiwanie dostępu do sklepów  
+ Magazyny są chronione przez listy kontroli dostępu (ACL), podobnie jak foldery na komputerze. Podczas tworzenia usługi hostowanej przez Internet Information Services (IIS) proces ASP.NET jest uruchamiany w ramach konta ASP.NET. To konto musi mieć dostęp do magazynu zawierającego certyfikaty używane przez usługę. Każdy z głównych magazynów jest chroniony przy użyciu domyślnej listy dostępu, ale listy można modyfikować. Jeśli utworzysz osobną rolę w celu uzyskania dostępu do magazynu, musisz udzielić uprawnienia dostępu do tej roli. Aby dowiedzieć się, jak zmodyfikować listę dostępu za pomocą narzędzia WinHttpCertConfig. exe, [zobacz How to: Tworzenie certyfikatów tymczasowych do użycia podczas opracowywania](how-to-create-temporary-certificates-for-use-during-development.md). Aby uzyskać więcej informacji o korzystaniu z certyfikatów klienta z usługami IIS, zobacz [jak wywołać usługę sieci Web przy użyciu certyfikatu klienta na potrzeby uwierzytelniania w aplikacji sieci web ASP.NET](https://support.microsoft.com/en-us/help/901183/how-to-call-a-web-service-by-using-a-client-certificate-for-authentica).  
   
-## <a name="chain-trust-and-certificate-authorities"></a>Łańcuch zaufania i urzędy certyfikacji  
- Certyfikaty są tworzone w hierarchii, w którym każdego indywidualnego certyfikatu jest połączony z urzędem certyfikacji, który wystawił ten certyfikat. Jest to łącze do certyfikatu urzędu certyfikacji. Urząd certyfikacji certyfikatu następnie łączy się z urzędem certyfikacji, który wystawił certyfikat oryginalnego urzędu certyfikacji. Ten proces jest powtarzany, aż do osiągnięcia certyfikat głównego urzędu certyfikacji. Certyfikat głównego urzędu certyfikacji jest dodatkowo z natury zaufanych.  
+## <a name="chain-trust-and-certificate-authorities"></a>Zaufanie łańcuchowe i urzędy certyfikacji  
+ Certyfikaty są tworzone w hierarchii, w której każdy pojedynczy certyfikat jest połączony z urzędem certyfikacji, który wystawił certyfikat. Ten link jest certyfikatem urzędu certyfikacji. Następnie certyfikat urzędu certyfikacji łączy się z urzędem certyfikacji, który wystawił certyfikat oryginalnego urzędu certyfikacji. Ten proces jest powtarzany do momentu osiągnięcia certyfikatu głównego urzędu certyfikacji. Certyfikat głównego urzędu certyfikacji jest zaufany.  
   
- Certyfikaty cyfrowe są używane do uwierzytelniania jednostki, opierając się na tej hierarchii, nazywany również *łańcuch zaufania*. Możesz wyświetlić łańcuch dowolny certyfikat za pomocą przystawki programu MMC przez dwukrotne kliknięcie każdego certyfikatu, a następnie klikając **ścieżka certyfikatu** kartę. Aby uzyskać więcej informacji o importowaniu łańcuchów certyfikatów dla urzędu certyfikacji, zobacz [jak: Określanie łańcucha certyfikatu urzędu certyfikacji certyfikatu służącego do weryfikowania podpisów](specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
+ Certyfikaty cyfrowe są używane do uwierzytelniania jednostki przy użyciu tej hierarchii, nazywanej również *łańcuchem zaufania*. Aby wyświetlić łańcuch certyfikatów za pomocą przystawki programu MMC, kliknij dwukrotnie dowolny certyfikat, a następnie kliknij kartę **ścieżka certyfikatu** . Aby uzyskać więcej informacji na temat importowania łańcuchów certyfikatów dla urzędu certyfikacji [, zobacz How to: Określ łańcuch certyfikatów urzędu certyfikacji używany do weryfikowania podpisów](specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
   
 > [!NOTE]
->  Wszelkie wystawcy, może być wyznaczony zaufanego głównego urzędu certyfikacji, umieszczając wystawcy certyfikatu w magazynie certyfikatów zaufanego głównego urzędu.  
+> Każdy wystawca może zostać wyznaczyć zaufany urząd główny przez umieszczenie certyfikatu wystawcy w magazynie certyfikatów zaufanego urzędu głównego.  
   
-### <a name="disabling-chain-trust"></a>Wyłączanie łańcuch zaufania  
- Podczas tworzenia nowej usługi, używasz certyfikatu, który nie jest wystawiony przez zaufany certyfikat główny lub sam certyfikat wystawiającego certyfikaty mogą nie być w magazynie zaufanych głównych urzędów certyfikacji. Wyłącznie do celów programowania można tymczasowo wyłączyć mechanizm, który sprawdza, czy łańcuch zaufania certyfikatu. Aby to zrobić, należy ustawić `CertificateValidationMode` właściwości albo `PeerTrust` lub `PeerOrChainTrust`. Albo tryb oznacza, że certyfikat może albo własnym wystawiony (relacja zaufania elementów równorzędnych) lub jej część całego łańcucha zaufania. Właściwość można ustawić na żadnym z następujących klas.  
+### <a name="disabling-chain-trust"></a>Wyłączanie zaufania łańcucha  
+ Podczas tworzenia nowej usługi może być używany certyfikat, który nie jest wystawiony przez zaufany certyfikat główny, lub sam certyfikat wystawiający może nie znajdować się w magazynie zaufanych głównych urzędów certyfikacji. Tylko do celów programistycznych można tymczasowo wyłączyć mechanizm, który sprawdza łańcuch zaufania dla certyfikatu. W tym celu należy ustawić `CertificateValidationMode` Właściwość `PeerTrust` na lub `PeerOrChainTrust`. Każdy tryb określa, że certyfikat może być wystawiony samodzielnie (relacja równorzędna) lub część łańcucha zaufania. Właściwość można ustawić dla dowolnej z następujących klas.  
   
 |Class|Właściwość|  
 |-----------|--------------|  
@@ -72,59 +72,59 @@ Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrow
 |<xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|  
 |<xref:System.ServiceModel.Security.IssuedTokenServiceCredential>|<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A?displayProperty=nameWithType>|  
   
- Można również ustawić właściwości, za pomocą konfiguracji. Następujące elementy są używane do określania tryb weryfikacji:  
+ Możesz również ustawić właściwość za pomocą konfiguracji. Następujące elementy są używane do określania trybu walidacji:  
   
-- [\<Uwierzytelnianie >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+- [\<> uwierzytelniania](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
 - [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
 - [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Uwierzytelnianie niestandardowe  
- `CertificateValidationMode` Właściwość umożliwia także dostosować sposób uwierzytelniania certyfikatów. Domyślnie ustawiono poziom `ChainTrust`. Aby użyć <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> wartości, należy także ustawić `CustomCertificateValidatorType` atrybutu do zestawu i typ używany do weryfikacji certyfikatu. Aby utworzyć niestandardowego modułu weryfikacji, musi dziedziczyć abstrakcyjnej <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy.  
+ `CertificateValidationMode` Właściwość umożliwia również dostosowanie sposobu uwierzytelniania certyfikatów. Domyślnie poziom jest ustawiony na `ChainTrust`. Aby użyć <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> wartości, należy również `CustomCertificateValidatorType` ustawić atrybut na zestaw i typ używany do walidacji certyfikatu. Aby utworzyć niestandardowy moduł sprawdzania poprawności, należy dziedziczyć z klasy <xref:System.IdentityModel.Selectors.X509CertificateValidator> abstrakcyjnej.  
   
- Podczas tworzenia niestandardowego wystawcy uwierzytelnienia, jest najważniejszą metodą, aby zastąpić <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> metody. Na przykład niestandardowe uwierzytelnianie Zobacz [moduł weryfikacji certyfikatów X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) próbki. Aby uzyskać więcej informacji, zobacz [niestandardowe poświadczenia i Walidacja poświadczeń](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
+ Podczas tworzenia niestandardowego wystawcy, najważniejszym sposobem przesłonięcia jest <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> Metoda. Aby zapoznać się z przykładem uwierzytelniania niestandardowego, zobacz przykład [modułu sprawdzania poprawności certyfikatu X. 509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) . Aby uzyskać więcej informacji, zobacz [Niestandardowe poświadczenia i sprawdzanie poprawności poświadczeń](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
-## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Za pomocą polecenia cmdlet programu PowerShell New-SelfSignedCertificate, aby zbudować łańcucha certyfikatów  
- Polecenia cmdlet programu PowerShell, New-SelfSignedCertificate tworzy certyfikaty X.509 i pary kluczy prywatnych klucza/publiczne. Można zapisać klucza prywatnego na dysku, a następnie użyć jej do wystawiania i Utwórz nowe certyfikaty, dlatego symulowania hierarchii certyfikatów połączonych. Polecenie cmdlet jest przeznaczona do użytku tylko jako pomoc podczas opracowywania usługi i nigdy nie powinien być używany do tworzenia certyfikatów, aby uzyskać rzeczywiste wdrożenie. Podczas tworzenia usługi WCF, wykonaj następujące kroki, aby utworzyć łańcuch zaufania za pomocą polecenia cmdlet New-SelfSignedCertificate.  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Tworzenie łańcucha certyfikatów przy użyciu polecenia cmdlet New-SelfSignedCertificate programu PowerShell  
+ Polecenie cmdlet New-SelfSignedCertificate programu PowerShell tworzy certyfikaty X. 509 oraz pary kluczy prywatnych/kluczy publicznych. Możesz zapisać klucz prywatny na dysku, a następnie użyć go do wystawienia i podpisania nowych certyfikatów, co symuluje hierarchię certyfikatów łańcucha. Polecenie cmdlet jest przeznaczone do użycia tylko jako pomoc podczas tworzenia usług i nigdy nie powinno być używane do tworzenia certyfikatów do rzeczywistego wdrożenia. Podczas tworzenia usługi WCF wykonaj następujące kroki, aby utworzyć łańcuch zaufania za pomocą polecenia cmdlet New-SelfSignedCertificate.  
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>Aby utworzyć łańcuch zaufania za pomocą polecenia cmdlet New-SelfSignedCertificate  
   
-1. Tworzenie tymczasowego certyfikat głównego urzędu certyfikacji (podpisem) przy użyciu polecenia cmdlet New-SelfSignedCertificate. Zapisz klucz prywatny do dysku.  
+1. Utwórz tymczasowy certyfikat głównego urzędu certyfikacji za pomocą polecenia cmdlet New-SelfSignedCertificate. Zapisz klucz prywatny na dysku.  
   
-2. Użyj nowego certyfikatu do wystawienia innego certyfikatu, który zawiera klucz publiczny.  
+2. Użyj nowego certyfikatu w celu wystawienia innego certyfikatu zawierającego klucz publiczny.  
   
-3. Zaimportuj certyfikat głównego urzędu certyfikacji do magazynu zaufanych głównych urzędów certyfikacji.  
+3. Zaimportuj certyfikat głównego urzędu do magazynu zaufanych głównych urzędów certyfikacji.  
   
-4. Aby uzyskać instrukcje krok po kroku, zobacz [jak: Tworzenie certyfikatów tymczasowych do użycia podczas tworzenia](how-to-create-temporary-certificates-for-use-during-development.md).  
+4. Aby uzyskać instrukcje krok po kroku, zobacz [How to: Tworzenie certyfikatów tymczasowych do użycia podczas opracowywania](how-to-create-temporary-certificates-for-use-during-development.md).  
   
-## <a name="which-certificate-to-use"></a>Który certyfikat do użycia?  
- Często zadawane pytania dotyczące certyfikatów są certyfikatu do użycia i dlaczego. Odpowiedź zależy od tego, czy programowania klienta lub usługę. Poniższe informacje zamieszczono ogólne wskazówki i nie jest wyczerpująca odpowiedzi na te pytania.  
+## <a name="which-certificate-to-use"></a>Którego certyfikatu użyć?  
+ Często zadawane pytania dotyczące certyfikatów to certyfikat, który ma być używany, i dlaczego. Odpowiedź zależy od tego, czy program ma być programowaniem klienta czy usługi. Poniższe informacje stanowią ogólne wytyczne i nie stanowią wyczerpującej odpowiedzi na te pytania.  
   
 ### <a name="service-certificates"></a>Certyfikaty usługi  
- Certyfikaty usługi mają główne zadanie uwierzytelniania serwera wobec klientów. Jednym z sprawdzania początkowego, gdy klient uwierzytelnia serwer jest porównanie wartości **podmiotu** pole do jednolity identyfikator zasobów (URI) używane do kontaktu z usługą: DNS oba muszą być zgodne. Na przykład, jeśli identyfikator URI usługi jest `http://www.contoso.com/endpoint/` , a następnie **podmiotu** pole musi zawierać także wartość `www.contoso.com`.  
+ Certyfikaty usługi mają podstawowe zadanie uwierzytelniania serwera na klientach programu. Jednym z początkowych testów, gdy klient uwierzytelnia serwer, to porównanie wartości pola podmiotu z Uniform Resource Identifier (URI) użytego do skontaktowania się z usługą: serwer DNS obu musi być zgodny. Na przykład, jeśli identyfikator URI usługi to `http://www.contoso.com/endpoint/` , pole **podmiotu** również musi zawierać wartość. `www.contoso.com`  
   
- Należy pamiętać, że pole może zawierać kilka wartości każdego prefiksem inicjowania, aby wskazać wartość. Najczęściej inicjowania jest "CN" dla nazwy pospolitej, na przykład `CN = www.contoso.com`. Istnieje również możliwość dla **podmiotu** pole to pole pozostanie puste, w którym to przypadku **alternatywna nazwa podmiotu** pole może zawierać **nazwy DNS** wartość.  
+ Należy zauważyć, że pole może zawierać kilka wartości, z których każda poprzedza inicjalizację, aby wskazać wartość. Najczęściej Inicjalizacja to "CN" dla nazwy pospolitej, na przykład `CN = www.contoso.com`. Możliwe jest również, aby pole **subject** było puste. w takim przypadku pole **Nazwa alternatywna podmiotu** może zawierać wartość **nazwy DNS** .  
   
- Należy również zauważyć wartość **przeznaczone do celów** pole certyfikatu powinien zawierać odpowiednią wartość, takie jak "Uwierzytelnianie serwera" lub "Uwierzytelnienie klienta".  
+ Należy również zwrócić uwagę, że wartość pola **zamierzone cele** certyfikatu powinna zawierać odpowiednią wartość, na przykład "uwierzytelnianie serwera" lub "Uwierzytelnianie klienta".  
   
 ### <a name="client-certificates"></a>Certyfikaty klienta  
- Certyfikaty klienta nie są zwykle wydawane przez urząd certyfikacji innych firm. Zamiast tego w bieżącej lokalizacji użytkownika w magazynie osobistym zazwyczaj zawiera certyfikaty, umieszczone tam przez urząd główny, z przeznaczeniem "Uwierzytelnienie klienta". Klient może używać takich certyfikatów, gdy jest wymagane uwierzytelnianie wzajemne.  
+ Certyfikaty klienta nie są zwykle wydawane przez urząd certyfikacji innej firmy. Zamiast tego magazyn osobisty bieżącej lokalizacji użytkownika zwykle zawiera certyfikaty znajdujące się w urzędzie głównym z zamierzonym celem "Uwierzytelnianie klienta". Klient może użyć takiego certyfikatu, gdy wymagane jest wzajemne uwierzytelnianie.  
   
-## <a name="online-revocation-and-offline-revocation"></a>Odwołań w trybie online i Offline odwołania  
+## <a name="online-revocation-and-offline-revocation"></a>Odwoływanie do trybu online i odwoływanie do trybu offline  
   
 ### <a name="certificate-validity"></a>Ważność certyfikatu  
- Każdy certyfikat jest prawidłowy tylko dla danego okresu czasu, o nazwie *okres ważności*. Okres ważności jest definiowany przez **ważny od** i **ważny do** pola certyfikatu X.509. Podczas uwierzytelniania certyfikat jest sprawdzany w celu ustalenia, czy certyfikat jest nadal w okresie ważności.  
+ Każdy certyfikat jest ważny tylko przez dany okres czasu, nazywany *okresem ważności*. Okres ważności jest definiowany przez prawidłowe wartości pól **od** i **ważny do** dla certyfikatu X. 509. Podczas uwierzytelniania certyfikat jest sprawdzany w celu ustalenia, czy certyfikat jest nadal w okresie ważności.  
   
 ### <a name="certificate-revocation-list"></a>Lista odwołania certyfikatów  
- W dowolnym momencie podczas okresu ważności urzędu certyfikacji można odwołać się do certyfikatu. To może wystąpić wiele powodów, takich jak naruszenia bezpieczeństwa klucza prywatnego certyfikatu.  
+ W dowolnym momencie w okresie ważności urząd certyfikacji może odwołać certyfikat. Może się to zdarzyć z wielu powodów, takich jak naruszenie klucza prywatnego certyfikatu.  
   
- W takiej sytuacji sieciowych, co do których jest elementem podrzędnym elementu odwołanego certyfikatu są również nieprawidłowe i nie są zaufane podczas uwierzytelniania procedury. Aby dowiedzieć się o certyfikatach, które zostaną odwołane, a data sygnaturami czasowymi publikuje Każdy wystawca *listy odwołania certyfikatów* (CRL). Lista może zostać sprawdzone za pomocą odwołań w trybie online lub offline odwołania, ustawiając `RevocationMode` lub `DefaultRevocationMode` właściwość następujące klasy do jednego z <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> wartości wyliczenia: <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>, <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>, <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> , a <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> klasy. Jest wartością domyślną dla wszystkich właściwości `Online`.  
+ W takim przypadku wszystkie łańcuchy, które są podrzędne od odwołanego certyfikatu, są również nieprawidłowe i nie są zaufane podczas procedur uwierzytelniania. Aby dowiedzieć się, które certyfikaty zostały odwołane, Każdy wystawca publikuje *listę odwołania certyfikatów* (CRL) z sygnaturą czasową i datą. Listę można sprawdzić za pomocą odwołania online lub odwoływania do trybu offline przez ustawienie `RevocationMode` właściwości `DefaultRevocationMode` lub następujących <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> klas na jedną z wartości wyliczenia: <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>,, <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> i <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> klasy. Wartość domyślna dla wszystkich właściwości to `Online`.  
   
- Można również ustawić tryb, w konfiguracji przy użyciu `revocationMode` zarówno atrybut [ \<uwierzytelniania >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (z [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)) i [ \<uwierzytelniania >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (z [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)).  
+ Można również ustawić tryb konfiguracji przy `revocationMode` użyciu atrybutu [ \<zarówno > uwierzytelniania](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) ( [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)w przypadku usługi serviceBehaviors >), jak i [ \<> uwierzytelniania](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) ( [ endpointBehaviors\<>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)).  
   
 ## <a name="the-setcertificate-method"></a>Metoda SetCertificate  
- W programie WCF często należy określić certyfikat lub zbiór certyfikaty usługi lub klient znajduje się na potrzeby uwierzytelniania, szyfrowania i cyfrowego podpisywania wiadomości. Można to zrobić programowo przy użyciu `SetCertificate` metoda różnych zajęciach, które reprezentują certyfikaty X.509. Następujące klasy użyj `SetCertificate` metodę, aby określić certyfikat.  
+ W programie WCF należy często określić certyfikat lub zestaw certyfikatów, których usługa lub klient ma używać do uwierzytelniania, szyfrowania lub cyfrowego podpisywania wiadomości. Można to zrobić programowo przy użyciu `SetCertificate` metody różnych klas, które reprezentują certyfikaty X. 509. Poniższe klasy używają `SetCertificate` metody do określania certyfikatu.  
   
 |Class|Metoda|  
 |-----------|------------|  
@@ -134,23 +134,23 @@ Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrow
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>|  
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A>|  
   
- `SetCertificate` Metoda działa poprzez podanie lokalizacji magazynu i Magazyn, typu "wyszukiwanie" (`x509FindType` parametru), który określa pole certyfikatu i wartość do znalezienia w polu. Na przykład, poniższy kod tworzy <xref:System.ServiceModel.ServiceHost> wystąpienia i ustawia certyfikat usługi, używany do uwierzytelniania usługi dla klientów z `SetCertificate` metody.  
+ Metoda działa przez wyznaczanie lokalizacji i magazynu magazynu, typu "Find" (`x509FindType` parametru), który określa pole certyfikatu oraz wartość do znalezienia w polu. `SetCertificate` Na przykład poniższy kod tworzy <xref:System.ServiceModel.ServiceHost> wystąpienie i ustawia certyfikat usługi używany do uwierzytelniania usługi na klientach `SetCertificate` przy użyciu metody.  
   
  [!code-csharp[c_WorkingWithCertificates#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_workingwithcertificates/cs/source.cs#1)]
  [!code-vb[c_WorkingWithCertificates#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_workingwithcertificates/vb/source.vb#1)]  
   
-### <a name="multiple-certificates-with-the-same-value"></a>Wiele certyfikatów z taką samą wartość  
- Magazyn może zawierać wiele certyfikatów o takiej samej nazwie podmiotu. Oznacza to, że jeśli użytkownik określi, że `x509FindType` jest <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName> lub <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectDistinguishedName>i więcej niż jeden certyfikat ma taką samą wartość, jest zgłaszany wyjątek, ponieważ nie istnieje sposób do odróżniania, który certyfikat jest wymagany. Można temu zaradzić, ustawiając `x509FindType` do <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>. Pole odcisk palca zawiera unikatową wartość, która może służyć do znalezienia określonego certyfikatu w magazynie. Jednak to ma swój własny wadą: Jeśli certyfikat jest odwołany lub odnowienia, `SetCertificate` metoda nie powiedzie się, ponieważ odcisk palca również został usunięty. Lub, jeśli certyfikat nie jest już prawidłowy, uwierzytelnianie nie powiedzie się. Sposób, aby rozwiązać ten problem, jest ustalenie `x590FindType` parametr <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByIssuerName> i określ nazwę wystawcy. Jeśli wymagana jest nie określonego wystawcę, można również ustawić jedną z innych <xref:System.Security.Cryptography.X509Certificates.X509FindType> wartości wyliczenia, takich jak <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByTimeValid>.  
+### <a name="multiple-certificates-with-the-same-value"></a>Wiele certyfikatów o tej samej wartości  
+ Magazyn może zawierać wiele certyfikatów o tej samej nazwie podmiotu. Oznacza to, że w `x509FindType` przypadku określenia, że element is <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName> lub <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectDistinguishedName>, i więcej niż jeden certyfikat ma taką samą wartość, wyjątek jest zgłaszany, ponieważ nie ma możliwości odróżnienia certyfikatu, który jest wymagany. Można to ograniczyć, ustawiając wartość `x509FindType` na. <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> Pole odcisk palca zawiera unikatową wartość, która może być używana do znajdowania określonego certyfikatu w magazynie. Jednak ma ona własne wady: Jeśli certyfikat zostanie odwołany lub odnowiony, `SetCertificate` Metoda nie powiedzie się, ponieważ odcisk palca również został usunięty. Lub jeśli certyfikat nie jest już ważny, uwierzytelnianie kończy się niepowodzeniem. Sposobem na ograniczenie tego problemu jest ustawienie `x590FindType` parametru na <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByIssuerName> i określenie nazwy wystawcy. Jeśli określony wystawca nie jest wymagany, można również ustawić jedną z innych <xref:System.Security.Cryptography.X509Certificates.X509FindType> wartości wyliczenia, takich jak. <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByTimeValid>  
   
 ## <a name="certificates-in-configuration"></a>Certyfikaty w konfiguracji  
- Certyfikaty można również ustawić za pomocą konfiguracji. Jeśli tworzysz usługę poświadczeń, takich jak certyfikaty, są określone w obszarze [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md). Podczas programowania klienta certyfikaty są określone w obszarze [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md).  
+ Można również ustawić certyfikaty przy użyciu opcji konfiguracja. Jeśli tworzysz usługę, poświadczenia, w tym certyfikaty, są określone w obszarze [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md). Podczas programowania klienta certyfikaty są określane w [ \<> endpointBehaviors](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md).  
   
-## <a name="mapping-a-certificate-to-a-user-account"></a>Mapowanie certyfikatu do konta użytkownika  
- Funkcja usług IIS i usługi Active Directory jest zdolność do mapowania certyfikatu na konto użytkownika Windows. Aby uzyskać więcej informacji na temat tej funkcji, zobacz [mapowania certyfikatów do kont użytkowników](https://go.microsoft.com/fwlink/?LinkId=88917).  
+## <a name="mapping-a-certificate-to-a-user-account"></a>Mapowanie certyfikatu na konto użytkownika  
+ Funkcją usług IIS i Active Directory jest możliwość mapowania certyfikatu na konto użytkownika systemu Windows. Aby uzyskać więcej informacji na temat tej funkcji, zobacz [Mapowanie certyfikatów na konta użytkowników](https://go.microsoft.com/fwlink/?LinkId=88917).  
   
- Aby uzyskać więcej informacji o używaniu mapowanie usługi Active Directory, zobacz [mapowania certyfikatów klientów przy użyciu mapowanie usługi katalogowej](https://go.microsoft.com/fwlink/?LinkId=88918).  
+ Aby uzyskać więcej informacji o korzystaniu z mapowania Active Directory, zobacz [Mapowanie certyfikatów klienta przy użyciu mapowania usługi katalogowej](https://go.microsoft.com/fwlink/?LinkId=88918).  
   
- Dzięki tej możliwości jest włączone, można ustawić <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> właściwość <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> klasy `true`. W konfiguracji, można ustawić `mapClientCertificateToWindowsAccount` atrybutu [ \<uwierzytelniania >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) elementu `true`, jak pokazano w poniższym kodzie.  
+ Po włączeniu tej funkcji można ustawić <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> Właściwość <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> klasy na `true`. W obszarze Konfiguracja można ustawić `mapClientCertificateToWindowsAccount` atrybut [ \<> uwierzytelniania](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) elementu `true`, jak pokazano w poniższym kodzie.  
   
 ```xml  
 <serviceBehaviors>  
@@ -164,11 +164,11 @@ Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrow
 </serviceBehaviors>  
 ```  
   
- Mapowania certyfikatu X.509 do tokenu, który reprezentuje konto użytkownika Windows uznaje podniesienie uprawnień, ponieważ po mapowane, tokenu Windows można użyć do uzyskania dostępu do chronionych zasobów. W związku z tym zasady domeny wymaga certyfikatu X.509, zachowanie zgodności z zasadami, jego przed mapowania. *SChannel* pakiet zabezpieczeń wymusza to wymaganie.  
+ Mapowanie certyfikatu X. 509 na token reprezentujący konto użytkownika systemu Windows jest uznawane za podniesienie uprawnień, ponieważ po zmapowaniu token systemu Windows może służyć do uzyskania dostępu do chronionych zasobów. Dlatego zasady domeny wymagają, aby certyfikat X. 509 był zgodny z zasadami przed mapowaniem. Pakiet zabezpieczeń *Schannel* wymusza to wymaganie.  
   
- Korzystając z [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] lub nowszej, WCF zapewnia certyfikat jest zgodny z zasad domeny, zanim jest mapowany do konta Windows.  
+ W przypadku [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] korzystania z programu lub nowszego usługa WCF gwarantuje, że certyfikat jest zgodny z zasadami domeny, zanim zostanie zmapowany na konto systemu Windows.  
   
- W pierwszej wersji programu WCF mapowanie odbywa się bez konsultacji zasady domeny. W związku z tym jest możliwe, że starsze aplikacje, które dawniej pracowałam podczas uruchamiania w pierwszej wersji zakończy się niepowodzeniem, jeśli mapowanie jest włączona, a certyfikat X.509 nie spełnia warunków zasady domeny.  
+ W pierwszej wersji programu WCF mapowanie jest wykonywane bez konsultacji z zasadami domeny. W związku z tym jest możliwe, że starsze aplikacje, które były używane podczas uruchamiania w pierwszej wersji, zakończą się niepowodzeniem, jeśli mapowanie jest włączone i certyfikat X. 509 nie spełnia zasad domeny.  
   
 ## <a name="see-also"></a>Zobacz także
 

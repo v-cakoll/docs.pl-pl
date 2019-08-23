@@ -9,55 +9,55 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: fe96e54e92c09cf65c312306214e4460550c685d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 20e2b0efbf40597049c515134f408927f18d5603
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626445"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956335"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Przewodnik: Deklarowanie i wywoływanie zdarzeń (Visual Basic)
-W tym instruktażu pokazano, jak deklarowanie i wywoływanie zdarzeń klasy o nazwie `Widget`. Po wykonaniu kroków, warto przeczytać temat Pomocnika [instruktażu: Obsługa zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), który pokazuje, jak używać zdarzeń z `Widget` obiektów, aby zapewnić informacje o stanie w aplikacji.  
+W tym instruktażu pokazano, jak zadeklarować i zgłosić zdarzenia dla `Widget`klasy o nazwie. Po wykonaniu kroków warto przeczytać temat pomocnika, [Przewodnik: Obsługa zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), które pokazują, jak używać zdarzeń z `Widget` obiektów w celu dostarczania informacji o stanie w aplikacji.  
   
-## <a name="the-widget-class"></a>Klasa elementu Widget  
- Przyjęto założenie, do momentu, w którym masz `Widget` klasy. Twoje `Widget` klasa zawiera metody, która może zająć dużo czasu wykonania i chcesz, aby aplikację, aby można było oferowane pewnego rodzaju zakończenia wskaźnika.  
+## <a name="the-widget-class"></a>Klasa widget  
+ Załóżmy dla momentu, gdy masz `Widget` klasę. Twoja `Widget` Klasa ma metodę, która może zająć dużo czasu, i chcesz, aby aplikacja mogła umieścić jakiś wskaźnik uzupełniania.  
   
- Oczywiście można dokonać `Widget` obiektu Wyświetla okno dialogowe procent ukończenia, ale następnie może być zapoznaniu się z tego okna dialogowego każdego projektu, w którym użyto `Widget` klasy. Dobre zasada konstrukcja obiektu funkcyjnego jest umożliwienie aplikacji, która używa na uchwyt obiektu interfejsu użytkownika — chyba że całego obiektu ma na celu zarządzanie pole formularza lub okna dialogowego.  
+ Oczywiście można sprawić `Widget` , aby obiekt pokazywał okno dialogowe z wartością procentową, ale w każdym projekcie, w którym została `Widget` użyta Klasa, zostało zablokowane. Dobrą zasadą projektowania obiektów jest umożliwienie aplikacji, która używa obiektu obsługującego interfejs użytkownika — chyba że cały cel obiektu ma zarządzać formularzem lub oknem dialogowym.  
   
- Celem `Widget` jest do innych zadań, aby go lepiej jest dodać `PercentDone` zdarzeń, dzięki czemu procedury, która wywołuje `Widget`jego metody obsługi, zdarzeń i wyświetlania stanu aktualizacji. `PercentDone` Zdarzenia może również udostępniać mechanizm anuluje zadanie.  
+ Celem `Widget` jest wykonywanie innych zadań, dlatego lepszym rozwiązaniem jest `PercentDone` dodanie zdarzenia i poinformowanie procedury, która wywołuje `Widget`metody obsługi tego zdarzenia i wyświetla aktualizacje stanu. `PercentDone` Zdarzenie może również dostarczyć mechanizm anulowania zadania.  
   
-#### <a name="to-build-the-code-example-for-this-topic"></a>Aby zbudować przykład kodu, w tym temacie  
+#### <a name="to-build-the-code-example-for-this-topic"></a>Aby skompilować przykład kodu dla tego tematu  
   
-1. Otwórz nowy projekt aplikacji Windows Visual Basic i Utwórz formularz o nazwie `Form1`.  
+1. Otwórz nowy projekt aplikacji Visual Basic systemu Windows i Utwórz formularz o nazwie `Form1`.  
   
-2. Dodawanie dwóch przycisków i etykiety w celu `Form1`.  
+2. Dodaj dwa przyciski i etykietę do `Form1`.  
   
-3. Nazwy obiektów, jak pokazano w poniższej tabeli.  
+3. Nazwij obiekty, jak pokazano w poniższej tabeli.  
   
     |Obiekt|Właściwość|Ustawienie|  
     |------------|--------------|-------------|  
-    |`Button1`|`Text`|Zadanie podrzędne uruchamiania|  
+    |`Button1`|`Text`|Uruchom zadanie|  
     |`Button2`|`Text`|Anuluj|  
     |`Label`|`(Name)`, `Text`|lblPercentDone, 0|  
   
-4. Na **projektu** menu, wybierz **Dodaj klasę** można dodać klasę o nazwie `Widget.vb` do projektu.  
+4. W menu **projekt** wybierz polecenie **Dodaj klasę** , aby dodać klasę o nazwie `Widget.vb` do projektu.  
   
-#### <a name="to-declare-an-event-for-the-widget-class"></a>Aby zadeklarować zdarzenia dla klasy elementu Widget  
+#### <a name="to-declare-an-event-for-the-widget-class"></a>Aby zadeklarować zdarzenie dla klasy widget  
   
-- Użyj `Event` — słowo kluczowe, aby zadeklarować zdarzenia w `Widget` klasy. Należy zauważyć, że zdarzenie może mieć `ByVal` i `ByRef` argumentów, jako `Widget`firmy `PercentDone` pokazuje zdarzenia:  
+- Użyj słowa `Event` kluczowego, aby zadeklarować zdarzenie `Widget` w klasie. Należy zauważyć, że zdarzenie może `ByVal` mieć `ByRef` i argumenty, `Widget`jako `PercentDone` zdarzenie:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   
- Gdy obiekt wywołujący odbiera `PercentDone` zdarzenia `Percent` argument zawiera procent wykonania zadania. `Cancel` Argument może być równa `True` anulować metodę, która wywołała zdarzenie.  
+ Gdy wywołujący obiekt odbiera `PercentDone` zdarzenie `Percent` , argument zawiera procent wykonanego zadania. Argument może być ustawiony na `True` , aby anulować metodę, która wywołała zdarzenie. `Cancel`  
   
 > [!NOTE]
->  Można zadeklarować argumenty zdarzenia, tak jak argumenty procedur z następującymi wyjątkami: Zdarzenia nie może mieć `Optional` lub `ParamArray` argumentów i zdarzenia nie mają zwracanych wartości.  
+> Argumenty zdarzeń można zadeklarować tak samo jak argumenty procedur, z następującymi wyjątkami: Zdarzenia nie mogą `Optional` mieć `ParamArray` argumentów lub, a zdarzenia nie mają zwracanych wartości.  
   
- `PercentDone` Wydarzenie jest podniesione przez `LongTask` metody `Widget` klasy. `LongTask` przyjmuje dwa argumenty: czas metody udaje się pracy, a minimalny interwał czasowy przed `LongTask` wstrzymuje działanie, aby podnieść `PercentDone` zdarzeń.  
+ Zdarzenie jest wywoływane `LongTask` przez metodę `Widget` klasy. `PercentDone` `LongTask`przyjmuje dwa argumenty: czas, który ma być wykonywany przez metodę, oraz minimalny interwał czasu przed `LongTask` zatrzymaniem `PercentDone` zdarzenia.  
   
 #### <a name="to-raise-the-percentdone-event"></a>Aby zgłosić zdarzenie PercentDone  
   
-1. Aby uprościć dostęp do `Timer` Dodaj właściwość używana przez tę klasę `Imports` instrukcji na górze sekcji deklaracji klasy modułu, powyżej `Class Widget` instrukcji.  
+1. Aby uprościć dostęp do `Timer` właściwości używanej przez tę klasę, `Imports` Dodaj instrukcję do górnej części sekcji deklaracji w module `Class Widget` klasy, powyżej instrukcji.  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
@@ -65,13 +65,13 @@ W tym instruktażu pokazano, jak deklarowanie i wywoływanie zdarzeń klasy o na
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
- Gdy Twoja aplikacja wywołuje `LongTask` metody `Widget` klasy wywołuje `PercentDone` zdarzeń co `MinimumInterval` sekund. Po powrocie z zdarzenia `LongTask` sprawdza, czy `Cancel` argumentów została ustawiona na `True`.  
+ Gdy aplikacja wywołuje `LongTask` metodę `Widget` , Klasa zgłasza `PercentDone` zdarzenie co `MinimumInterval` kilka sekund. Po powrocie zdarzenia program `LongTask` sprawdza, `Cancel` czy argument został ustawiony na `True`.  
   
- Kilka zastrzeżenia są niezbędne, w tym miejscu. Dla uproszczenia `LongTask` procedurze przyjęto założenie, wcześniej wiadomo jak długo potrwa zadania. Prawie nigdy nie jest to możliwe. Podzielenie zadania na fragmenty o rozmiarze nawet może być trudne, a często najistotniejszych dla użytkowników jest po prostu ilość czasu, jaki upływa zanim staną się wskazanie, że coś, co dzieje się.  
+ W tym miejscu należy wprowadzić kilka odrzutów. Dla uproszczenia w `LongTask` procedurze założono, że wiesz, jak długo zadanie będzie wykonywane. To prawie nigdy nie dotyczy. Dzielenie zadań na fragmenty nawet rozmiaru może być trudne, a często najważniejsze znaczenie dla użytkowników to po prostu ilość czasu, która jest przekazywana przed uzyskaniem wskazującego, że coś się dzieje.  
   
- W tym przykładzie może mieć wykrył innego wady. `Timer` Właściwość zwraca liczbę sekund, które upłynęły od północy; w związku z tym, aplikacja zablokowania, gdy zostanie uruchomiona po prostu wcześniejszą niż północ. Bardziej dokładnej podejście do pomiaru czasu przenoszące warunków ograniczających, takie jak to pod uwagę lub uniknąć je całkowicie, przy użyciu właściwości, takich jak `Now`.  
+ W tym przykładzie może zostać wykorzystana inna luka. `Timer` Właściwość zwraca liczbę sekund, które upłynęły od północy; w związku z tym aplikacja zostaje zablokowana, jeśli zostanie uruchomiona tuż przed północy. Bardziej staranne podejście do mierzenia czasu będzie miało wpływ na warunki graniczne, takie jak to, lub uniknąć ich całkowitego, przy `Now`użyciu właściwości, takich jak.  
   
- Teraz, gdy `Widget` klasy może wywoływać zdarzenia, można przenieść do poniższych wskazówek. [Przewodnik: Obsługa zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md) pokazuje sposób użycia `WithEvents` skojarzyć program obsługi zdarzeń za pomocą `PercentDone` zdarzeń.  
+ Teraz, gdy `Widget` Klasa może zgłaszać zdarzenia, możesz przejść do następnego przewodnika. [Przewodnik: Obsługa zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md) pokazuje `WithEvents` ,`PercentDone` jak używać do kojarzenia procedury obsługi zdarzeń ze zdarzeniem.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,12 +2,12 @@
 title: Opis zmian stanu
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 549620ee5317e68735b392ce35b73c92f2474eab
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363941"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963082"
 ---
 # <a name="understanding-state-changes"></a>Opis zmian stanu
 W tym temacie omówiono Stany i przejścia, które są dostępne dla kanałów, typy używane do struktury Stanów kanałów oraz sposób ich implementacji.  
@@ -58,7 +58,7 @@ Rysunek 2. Implementacja Communicationsobject automatu stanu Interfejs ICommunic
  <xref:System.ServiceModel.Channels.CommunicationObject>zawiera implementacje Abort, Zamknij i Otwórz. Zapewnia również metodę błędu, która powoduje przejście stanu do stanu błędu. Rysunek 2 przedstawia <xref:System.ServiceModel.ICommunicationObject> komputer stanu z każdym przejściem oznaczonym przez metodę, która powoduje, że (przejścia nieoznaczone jako są wykonywane wewnątrz implementacji metody, która spowodowała ostatnie przejście z etykietą).  
   
 > [!NOTE]
->  Wszystkie <xref:System.ServiceModel.Channels.CommunicationObject> implementacje stanu komunikacji pobiera/zestawy są zsynchronizowane z wątkiem.  
+> Wszystkie <xref:System.ServiceModel.Channels.CommunicationObject> implementacje stanu komunikacji pobiera/zestawy są zsynchronizowane z wątkiem.  
   
  Konstruktor  
   
@@ -142,7 +142,7 @@ Zastąp metodę OnAbort, aby zaimplementować niestandardową logikę zakończen
 |Otworzyć|Brak|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Zamykanie|Tak|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |Zamykanie|Nie|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|Zamknięte|Yes|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>w przypadku, gdy obiekt został zamknięty przez poprzednie i jawne wywołanie przerwania. W przypadku wywołania metody Close na obiekcie zostanie zgłoszony <xref:System.ObjectDisposedException?displayProperty=nameWithType> element.|  
+|Zamknięte|Tak|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>w przypadku, gdy obiekt został zamknięty przez poprzednie i jawne wywołanie przerwania. W przypadku wywołania metody Close na obiekcie zostanie zgłoszony <xref:System.ObjectDisposedException?displayProperty=nameWithType> element.|  
 |Zamknięte|Nie|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Faulted|Brak|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   

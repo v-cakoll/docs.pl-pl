@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: b9a43c5f5141e364ab9aac1cfdff577a8fb8a161
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 41a638afa93e605221d5ef8172e243b1c61676bf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486678"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941384"
 ---
-# <a name="systemweb-element-web-settings"></a>\<System.Web >, Element (ustawienia sieci Web)
-Zawiera informacje o sposobie zarządzania zachowanie całego procesu w warstwie hostingu platformy ASP.NET.  
+# <a name="systemweb-element-web-settings"></a>\<System. Web >, element (Ustawienia sieci Web)
+Zawiera informacje o sposobie zarządzania zachowaniem całego procesu przez warstwę hostingu ASP.NET.  
   
- \<Konfiguracja >  
-\<System.Web >, Element (ustawienia sieci Web)  
+ \<> konfiguracji  
+\<System. Web >, element (Ustawienia sieci Web)  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +38,19 @@ Zawiera informacje o sposobie zarządzania zachowanie całego procesu w warstwie
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Określa ustawienia konfiguracji dla pul aplikacji usług IIS w plikach aspnet.config.|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|Określa ustawienia konfiguracji dla pul aplikacji usług IIS w pliku aspnet. config.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Konfiguracja >](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Określa element główny w każdym pliku konfiguracji, który jest używany przez środowisko uruchomieniowe języka wspólnego i aplikacji programu .NET Framework.|  
+|[\<> konfiguracji](../configuration-element.md)|Określa element główny w każdym pliku konfiguracji, który jest używany przez środowisko uruchomieniowe języka wspólnego i aplikacje .NET Framework.|  
   
 ## <a name="remarks"></a>Uwagi  
- `system.web` Elementu i jego podrzędny `applicationPool` element zostały dodane do programu .NET Framework, począwszy od programu .NET Framework 3.5 z dodatkiem SP1. Po uruchomieniu usług IIS 7.0 lub nowsze wersje w trybie zintegrowanym tej kombinacji elementu umożliwia skonfigurowanie sposobu ASP.NET zarządza wątków i jak go umieszcza w kolejce żądań gdy ASP.NET jest hostowany w puli aplikacji usług IIS. Po uruchomieniu usług IIS 7.0 lub nowsze wersje w trybie klasycznym lub ISAPI, te ustawienia są ignorowane.  
+ Element i jego element podrzędny `applicationPool` zostały dodane do .NET Framework w ramach .NET Framework 3,5 SP1. `system.web` W przypadku uruchamiania usług IIS 7,0 lub nowszych w trybie zintegrowanym Ta kombinacja elementów umożliwia skonfigurowanie sposobu, w jaki program ASP.NET zarządza wątkami i w jaki sposób kolejki są wysyłane w puli aplikacji usług IIS. W przypadku uruchomienia usług IIS 7,0 lub nowszych w trybie klasycznym lub ISAPI te ustawienia zostaną zignorowane.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak skonfigurować sposób działania całego procesu ASP.NET w pliku konfigurację aspnet.config ASP.NET znajduje się w puli aplikacji IIS. W przykładzie założono, że uruchomieniu usług IIS w zintegrowany tryb i że aplikacja używa .NET Framework 3.5 z dodatkiem SP1 lub nowszym. To zachowanie nie występuje w wersjach programu .NET Framework wcześniejszych niż .NET Framework 3.5 SP1. Wartości w przykładzie są wartości domyślne.  
+ Poniższy przykład pokazuje, jak skonfigurować zachowanie ASP.NET całego procesu w pliku aspnet. config, gdy ASP.NET jest hostowany w puli aplikacji IIS. W przykładzie przyjęto założenie, że usługi IIS działają w trybie zintegrowanym i że aplikacja korzysta z .NET Framework 3,5 z dodatkiem SP1 lub nowszej wersji. To zachowanie nie występuje w wersjach .NET Framework starszych niż .NET Framework 3,5 SP1. Wartości w przykładzie są wartościami domyślnymi.  
   
 ```xml  
 <configuration>  
@@ -70,8 +70,8 @@ Zawiera informacje o sposobie zarządzania zachowanie całego procesu w warstwie
 |Przestrzeń nazw||  
 |Nazwa schematu||  
 |Plik walidacji||  
-|Może być pusta||  
+|Może być puste||  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [\<applicationPool >, Element (ustawienia sieci Web)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+- [\<applicationPool >, element (Ustawienia sieci Web)](applicationpool-element-web-settings.md)

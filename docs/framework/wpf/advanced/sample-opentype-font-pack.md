@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: e2b3dc3b95cf81a60494f7a02488067717938e97
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 76438b85a12d75efa0fc106a645fb592b3205fad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545228"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960970"
 ---
 # <a name="sample-opentype-font-pack"></a>Przykład pakietu czcionek OpenType
 Ten temat zawiera omówienie przykładowych czcionek OpenType, które są dystrybuowane z [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Przykładowe czcionki obsługują rozszerzone funkcje OpenType, które mogą być używane przez [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacje.  
@@ -38,11 +38,11 @@ Ten temat zawiera omówienie przykładowych czcionek OpenType, które są dystry
  Przykładowe czcionki są dostarczane w ramach licencji od firmy Ascend Corporation. Ascender to dostawca zaawansowanych produktów czcionek. Aby uzyskać licencję na rozszerzoną lub niestandardową wersję przykładowych czcionek, zobacz [witrynę sieci Web firmy Ascender](https://go.microsoft.com/fwlink/?LinkId=182627).  
   
 > [!NOTE]
->  Deweloperem jest odpowiedzialność za upewnienie się, że masz wymagane prawa licencji dla dowolnej czcionki osadzonej w aplikacji lub w inny sposób.  
+> Deweloperem jest odpowiedzialność za upewnienie się, że masz wymagane prawa licencji dla dowolnej czcionki osadzonej w aplikacji lub w inny sposób.  
   
 <a name="installing_the_fonts"></a>   
 ## <a name="installing-the-fonts"></a>Instalowanie czcionek  
- Możesz zainstalować przykładowe czcionki OpenType w katalogu czcionek domyślnych [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] , **\Windows\Fonts**. Za pomocą panelu sterowania czcionki Zainstaluj czcionki. Gdy te czcionki znajdują się na komputerze, są dostępne dla wszystkich aplikacji, które odwołują się do domyślnych [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] czcionek. Można wyświetlić reprezentatywny zestaw znaków w kilku rozmiarach czcionek, podwajając kliknięcie pliku z czcionką. Poniższy zrzut ekranu przedstawia plik z czcionką Lindsey, Linds. ttf.  
+ Możesz zainstalować przykładowe czcionki OpenType w domyślnym katalogu czcionek systemu Windows, **\Windows\Fonts**. Za pomocą panelu sterowania czcionki Zainstaluj czcionki. Gdy te czcionki znajdują się na komputerze, są dostępne dla wszystkich aplikacji, które odwołują się do domyślnych czcionek systemu Windows. Można wyświetlić reprezentatywny zestaw znaków w kilku rozmiarach czcionek, podwajając kliknięcie pliku z czcionką. Poniższy zrzut ekranu przedstawia plik z czcionką Lindsey, Linds. ttf.  
   
  ![Lindsey font &#40;OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 Wyświetlanie czcionki Lindsey  

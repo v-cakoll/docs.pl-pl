@@ -10,72 +10,72 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: d64e77b7fc6862eead3cb7e791b3a8f68ac52713
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 181248f69684860fd43648952ef4eb3cced1c0ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859732"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944634"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Instrukcje: Diagnozowanie problematycznych zadań drukowania
-Administratorzy sieci często pola skarg od użytkowników dotyczące zadania drukowania, które nie drukowania lub wydrukować powoli. Bogaty zestaw właściwości zadania drukowania, udostępniane w interfejsów API programu Microsoft .NET Framework umożliwiają wykonywanie szybkiej diagnostyki zdalnej zadań drukowania.  
+Administratorzy sieci często zgłaszają reklamacje użytkowników o zadaniach drukowania, które nie drukują się ani nie drukują powoli. Bogaty zestaw właściwości zadania drukowania uwidocznionych w interfejsach API platformy Microsoft .NET Framework zapewnia metodę wykonywania szybkiej zdalnej diagnostyki zadań drukowania.  
   
 ## <a name="example"></a>Przykład  
- Oto główne kroki tworzenia tego rodzaju narzędzia.  
+ Główne kroki tworzenia tego rodzaju narzędzi są następujące.  
   
-1. Zidentyfikuj zadania drukowania, które użytkownik jest skarżących o. Użytkownicy często nie można tego zrobić dokładnie. Może nie wiedzieć nazwy serwerów wydruku i drukarek. Może zawierać opis lokalizacji drukarki w terminologii innego, niż zostało użyte w ustawieniach jego <xref:System.Printing.PrintQueue.Location%2A> właściwości. W związku z tym jest to dobry pomysł, aby wygenerować listę użytkownika aktualnie przesłanych zadań. Jeśli istnieje więcej niż jeden, następnie komunikacji między określonym użytkownikiem a administrator systemu drukowania może służyć do punktu przyczepienia zadanie, które występują problemy. Poniżej znajdują się podkroki.  
+1. Zidentyfikuj zadanie drukowania, którego dotyczy użytkownik. Użytkownicy często nie mogą dokładnie wykonać tej czynności. Mogą nie znać nazw serwerów wydruku lub drukarek. Mogą oni opisać lokalizację drukarki w innej terminologii niż została użyta w celu ustawienia jej <xref:System.Printing.PrintQueue.Location%2A> właściwości. W związku z tym dobrym pomysłem jest wygenerowanie listy aktualnie przesłanych zadań użytkownika. Jeśli istnieje więcej niż jeden, wówczas komunikacja między użytkownikiem a administratorem systemu drukowania może być używana do lokalizowania zadania, które ma problemy. Poniżej przedstawiono podkroky.  
   
     1. Uzyskaj listę wszystkich serwerów wydruku.  
   
-    2. Pętla za pośrednictwem serwerów do wykonywania zapytań ich kolejek wydruku.  
+    2. Przepętlenie między serwerami w celu wykonywania zapytań w ich kolejkach wydruku.  
   
-    3. W ramach każdego przebiegu pętli serwera pętli wszystkich kolejek na serwerze do wykonywania zapytań swoich zadań  
+    3. W ramach każdego przebiegu pętli serwera pętla przez wszystkie kolejki serwera, aby wykonać zapytanie o swoje zadania  
   
-    4. W ramach każdego przebiegu pętli kolejki w pętli poprzez zadania, a następnie Zbierz informacje identyfikujące te, które zostały przesłane przez użytkownika wnioskujących.  
+    4. W ramach każdego przebiegu pętli kolejki, pętla przez zadania i gromadzenie informacji identyfikacyjnych o tych, które zostały przesłane przez użytkownika wnoszącego skargę.  
   
-2. W przypadku wykryto problematyczne zadanie drukowania, należy sprawdzić odpowiednie właściwości, aby zobaczyć, co może być problem. Na przykład jest zadanie w stanie błędu, lub czy drukarki obsługi kolejki przejdź do trybu offline przed zadania można wydrukować?  
+2. Po zidentyfikowaniu problematycznego zadania drukowania Przejrzyj odpowiednie właściwości, aby zobaczyć, co może być problemem. Na przykład, czy zadanie jest w stanie błędu, czy drukarka obsługuje kolejkę przejdź do trybu offline przed wydrukowaniem zadania?  
   
- Poniższy kod jest szereg przykładów kodu. Pierwszy przykład kodu zawiera pętlę za pośrednictwem kolejek wydruku. (Krok 1c powyżej). Zmienna `myPrintQueues` jest <xref:System.Printing.PrintQueueCollection> obiektu dla bieżącego serwera wydruku.  
+ Poniższy kod zawiera serie przykładów kodu. Pierwszy przykład kodu zawiera pętlę w kolejkach wydruku. (Krok 1c powyżej) `myPrintQueues` Zmienna<xref:System.Printing.PrintQueueCollection> jest obiektem bieżącego serwera wydruku.  
   
- Przykładowy kod, który rozpoczyna się od bieżącego obiektu kolejki wydruku z odświeżania <xref:System.Printing.PrintQueue.Refresh%2A?displayProperty=nameWithType>. Daje to gwarancję, że właściwości obiektu przedstawiać stanu drukarki fizycznej, który reprezentuje. Następnie aplikacja pobiera kolekcję zadań drukowania aktualnie w kolejce wydruku przy użyciu <xref:System.Printing.PrintQueue.GetPrintJobInfoCollection%2A>.  
+ Przykładowy kod rozpoczyna się od odświeżenia bieżącego obiektu kolejki wydruku <xref:System.Printing.PrintQueue.Refresh%2A?displayProperty=nameWithType>za pomocą. Gwarantuje to, że właściwości obiektu dokładnie przedstawiają stan reprezentowanej drukarki fizycznej. Następnie aplikacja pobiera kolekcję zadań drukowania w kolejce wydruku przy użyciu <xref:System.Printing.PrintQueue.GetPrintJobInfoCollection%2A>.  
   
- Następnie aplikacja pętli <xref:System.Printing.PrintSystemJobInfo> kolekcji, jak i porównuje <xref:System.Printing.PrintSystemJobInfo.Submitter%2A> właściwości z aliasem użytkownika wnioskujących. Jeśli są zgodne, aplikacja dodaje informacje identyfikacyjne o zadaniu parametry, które zostanie wyświetlone. ( `userName` i `jobList` zmienne są inicjowane we wcześniejszej części aplikacji.)  
+ Kolejna pętla aplikacji przez <xref:System.Printing.PrintSystemJobInfo> kolekcję i porównuje każdą <xref:System.Printing.PrintSystemJobInfo.Submitter%2A> właściwość z aliasem użytkownika wnoszącego skargę. Jeśli są one zgodne, aplikacja dodaje informacje identyfikacyjne dotyczące zadania do ciągu, który zostanie przedstawiony. `userName` (I `jobList` zmienne są inicjowane we wcześniejszej części aplikacji).  
   
  [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
  [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
  [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
   
- Następny przykład kodu przejmuje aplikację w kroku 2. (Zobacz powyżej). Wykryto problematyczne zadanie, a aplikacja wyświetla monit dotyczący informacje identyfikujące go. Z tej informacji tworzy <xref:System.Printing.PrintServer>, <xref:System.Printing.PrintQueue>, i <xref:System.Printing.PrintSystemJobInfo> obiektów.  
+ Następny przykład kodu wybiera aplikację w kroku 2. (Zobacz powyżej). Wykryto problematyczne zadanie, a aplikacja wyświetli komunikat z informacjami identyfikującymi ją. Z tych informacji są tworzone <xref:System.Printing.PrintServer>obiekty <xref:System.Printing.PrintQueue>, i <xref:System.Printing.PrintSystemJobInfo> .  
   
- Na tym etapie aplikacja zawiera rozgałęziona struktura odpowiadający sprawdzanie stanu zadania drukowania na dwa sposoby:  
+ W tym momencie aplikacja zawiera strukturę rozgałęzień odpowiadającą dwóm sposobom sprawdzania stanu zadania drukowania:  
   
-- Może odczytywać flagi o <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> właściwość, która jest typu <xref:System.Printing.PrintJobStatus>.  
+- Można odczytać flagi <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> właściwości, które są typu <xref:System.Printing.PrintJobStatus>.  
   
-- Można znaleźć każdej odpowiednie właściwości, takie jak <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> i <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
+- Każdą odpowiednią właściwość, taką jak <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> i. <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>  
   
- W tym przykładzie przedstawiono obie metody, dzięki czemu użytkownik został wcześniej zostanie wyświetlony monit, aby metody i odpowiedziała, zgłaszając "Y", jeśli użytkownik chce używać flagi o <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> właściwości. Poniżej znajdują się szczegółowe informacje o dwóch metod. Na koniec aplikacja używa metodę o nazwie **ReportQueueAndJobAvailability** Aby sporządzić raport na temat tego, czy zadanie może zostać zrealizowane o tej porze dnia. Metoda ta jest omówiona w [odnajdywanie czy drukowania zadania może być drukowane na ten pory dnia](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md).  
+ W tym przykładzie pokazano obie metody, dlatego użytkownik był wcześniej monitowany o metodę użycia i odpowiedział na "Y", jeśli chce użyć flag <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> właściwości. Szczegóły dwóch metod znajdują się poniżej. Na koniec aplikacja używa metody o nazwie **ReportQueueAndJobAvailability** , aby zgłosić, czy zadanie można wydrukować o tej porze dnia. Ta metoda została omówiona w sekcji [wykrywanie, czy zadanie drukowania można wydrukować o tej porze dnia](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md).  
   
  [!code-cpp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#identifyanddiagnoseproblematicjob)]
  [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
  [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
   
- Aby sprawdzić stan zadania drukowania, przy użyciu flagi o <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> właściwości, możesz sprawdzić każdy odpowiednie flagi, aby zobaczyć, jeśli jest ustawiony. Standardowy sposób, aby zobaczyć, jeśli jest ustawiony bit jeden zestaw flag bitowych jest do wykonywania operacji logicznych i przy użyciu zestawu flag jako jeden z operandów i Flaga jako drugiego. Ponieważ flagi, sama ma tylko jeden bit, ustaw wartości logicznej i jest to, że, co najwyżej ten sam bit jest ustawiony. Aby dowiedzieć się, czy jest lub nie, po prostu Porównaj wynik logicznej i przy użyciu flagi sam. Aby uzyskać więcej informacji, zobacz <xref:System.Printing.PrintJobStatus>, [& — Operator (C# odwołania)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-), i <xref:System.FlagsAttribute>.  
+ Aby sprawdzić stan zadania drukowania przy użyciu flag <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> właściwości, należy zaznaczyć każdą odpowiednią flagę, aby sprawdzić, czy została ustawiona. Standardowym sposobem, aby zobaczyć, czy jeden bit jest ustawiony w zestawie flag bitowych, jest wykonywanie operacji logicznej i z zestawem flag jako jednego operandu i flagą. Ponieważ sama flaga ma tylko jeden bit zestawu, wynik logiczny i to, co najwyżej, ten sam bit jest ustawiony. Aby dowiedzieć się, czy jest lub nie, po prostu Porównaj wynik logiczny i z flagą. Aby uzyskać więcej informacji, <xref:System.Printing.PrintJobStatus>Zobacz, [operator & (C# Reference)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)i. <xref:System.FlagsAttribute>  
   
- Dla każdego atrybutu, którego bit jest ustawiony kod zgłasza to do ekranu konsoli i czasami sugeruje sposób na odpowiedź. ( **HandlePausedJob** metodę, która jest wywoływana, jeśli zadania lub kolejki jest wstrzymana, omówiono poniżej.)  
+ Dla każdego atrybutu, którego bit jest ustawiony, kod raportuje ten element na ekranie konsoli i czasami sugeruje sposób odpowiedzi. (Metoda **HandlePausedJob** wywoływana w przypadku wstrzymania zadania lub kolejki jest omówiona poniżej).  
   
  [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobattributes)]
  [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobattributes)]
  [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobattributes)]  
   
- Aby sprawdzić stan zadania drukowania, przy użyciu oddzielnych właściwości, po prostu odczytywać każdej właściwości i, jeśli właściwość jest `true`raportu do ekranu konsoli i prawdopodobnie sugeruje sposób na odpowiedź. ( **HandlePausedJob** metodę, która jest wywoływana, jeśli zadania lub kolejki jest wstrzymana, omówiono poniżej.)  
+ Aby sprawdzić stan zadania drukowania przy użyciu osobnych właściwości, wystarczy odczytać każdą właściwość i, jeśli właściwość jest `true`, raport na ekranie konsoli i może sugerować sposób odpowiedzi. (Metoda **HandlePausedJob** wywoływana w przypadku wstrzymania zadania lub kolejki jest omówiona poniżej).  
   
  [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
  [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
  [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
   
- **HandlePausedJob** metoda umożliwia użytkownikowi aplikacji zdalnie wznawianie wstrzymanej prac. Ponieważ może to być powód, dlaczego został wstrzymany kolejki wydruku, metoda rozpoczyna się od monitowania do podjęcia decyzji użytkownika o tym, czy można je wznowić. Jeśli odpowiedź to "Y", a następnie <xref:System.Printing.PrintQueue.Resume%2A?displayProperty=nameWithType> metoda jest wywoływana.  
+ Metoda **HandlePausedJob** umożliwia użytkownikowi aplikacji zdalne wznawianie wstrzymanych zadań. Ze względu na to, że może istnieć dobry powód, dla którego kolejka wydruku została wstrzymana, Metoda rozpoczyna się, monitując o decyzję użytkownika o tym, czy wznowić ją. Jeśli odpowiedź ma wartość "Y", <xref:System.Printing.PrintQueue.Resume%2A?displayProperty=nameWithType> Metoda jest wywoływana.  
   
- Następnie użytkownik jest monitowany zdecydować, jeśli samo zadanie powinno wznowione, na wypadek, jest on wstrzymany niezależnie od kolejki wydruku. (Porównanie <xref:System.Printing.PrintQueue.IsPaused%2A?displayProperty=nameWithType> i <xref:System.Printing.PrintSystemJobInfo.IsPaused%2A?displayProperty=nameWithType>.) Jeśli padnie "Y", następnie <xref:System.Printing.PrintSystemJobInfo.Resume%2A?displayProperty=nameWithType> jest wywołany; w przeciwnym razie <xref:System.Printing.PrintSystemJobInfo.Cancel%2A> jest wywoływana.  
+ Następnie użytkownik jest monitowany o podjęcie decyzji o tym, czy zadanie powinno zostać wznowione, podobnie jak zostało wstrzymane niezależnie od kolejki wydruku. (Porównaj <xref:System.Printing.PrintQueue.IsPaused%2A?displayProperty=nameWithType> i <xref:System.Printing.PrintSystemJobInfo.IsPaused%2A?displayProperty=nameWithType>.) Jeśli odpowiedź jest "Y", <xref:System.Printing.PrintSystemJobInfo.Resume%2A?displayProperty=nameWithType> to jest wywoływana; w przeciwnym razie <xref:System.Printing.PrintSystemJobInfo.Cancel%2A> jest wywoływana.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#handlepausedjob)]
  [!code-csharp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#handlepausedjob)]
@@ -87,6 +87,6 @@ Administratorzy sieci często pola skarg od użytkowników dotyczące zadania dr
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& — Operator (C# odwołania)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
+- [Operator & (C# odwołanie)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [Dokumenty w WPF](documents-in-wpf.md)
 - [Przegląd drukowania](printing-overview.md)

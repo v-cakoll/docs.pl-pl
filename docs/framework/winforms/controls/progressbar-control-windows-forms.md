@@ -5,30 +5,30 @@ helpviewer_keywords:
 - progress controls
 - ProgressBar control [Windows Forms]
 ms.assetid: 5be6b642-e8a6-4565-8ebd-ae73c7b10dc9
-ms.openlocfilehash: 2ad6450e26777a4642f0b9c685c9f5e552b5fdc7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a941189eb8ca00de6fb2ef75cada5762c0bcc973
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012519"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968304"
 ---
 # <a name="progressbar-control-windows-forms"></a>ProgressBar — Formant (Formularze systemu Windows)
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripProgressBar> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.ProgressBar> kontrolować; jednak <xref:System.Windows.Forms.ProgressBar> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.  
+> Formant zastępuje i dodaje funkcję <xref:System.Windows.Forms.ProgressBar> do <xref:System.Windows.Forms.ProgressBar> kontrolki; jednak kontrolka jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli wybierzesz opcję. <xref:System.Windows.Forms.ToolStripProgressBar>  
   
- Formularze Windows <xref:System.Windows.Forms.ProgressBar> formant wskazuje postęp akcji, wyświetlając odpowiednią liczbę prostokąty ułożone w poziomym pasku. Po zakończeniu działania pasek jest wypełnione. Paski postępu są często używane, aby przyznać użytkownikowi wskazanie, jak długie czekać na ukończenie długotrwałego akcji — na przykład, gdy duże pliki są ładowane.  
+ Formant Windows Forms <xref:System.Windows.Forms.ProgressBar> wskazuje postęp akcji przez wyświetlenie odpowiedniej liczby prostokątów uporządkowanych na poziomym pasku. Po zakończeniu akcji pasek zostanie wypełniony. Paski postępu są często używane do nadania użytkownikowi informacji o tym, jak długo czekać na ukończenie długotrwałej akcji — na przykład podczas ładowania dużego pliku.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [ProgressBar, kontrolka — omówienie](progressbar-control-overview-windows-forms.md)  
- Ogólne pojęcia związane z <xref:System.Windows.Forms.ProgressBar> formant, który pozwala wyświetlić postęp operacji.  
+ Wprowadza ogólne koncepcje <xref:System.Windows.Forms.ProgressBar> kontrolki, co umożliwia graficzne wyświetlanie postępu operacji.  
   
- [Instrukcje: Ustawianie wartości wyświetlanej przez formant ProgressBar formularzy Windows](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
- W tym artykule omówiono szereg różnych sposobów, aby zwiększyć wartości wyświetlanej przez <xref:System.Windows.Forms.ProgressBar> kontroli.  
+ [Instrukcje: Ustaw wartość wyświetlaną przez formant Windows Forms ProgressBar](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
+ Omawia różne sposoby zwiększania wartości wyświetlanej przez <xref:System.Windows.Forms.ProgressBar> formant.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.ProgressBar>  
- Zawiera dodatkowe informacje na temat klasy i jej elementów członkowskich.  
+ Zawiera informacje referencyjne dotyczące klasy i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.
+ Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.

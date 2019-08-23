@@ -1,18 +1,18 @@
 ---
-title: Metoda ICorDebugSymbolProvider::GetMethodParameterSymbols
+title: 'ICorDebugSymbolProvider:: GetMethodParameterSymbols, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 58b7c0b9-f6ad-4b49-b92d-0e421cfd0ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d016007d09a06e923bef78fa8ead99e1e1ce9420
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 04262876db39dad93cf5904cdbb81b568fc22041
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771373"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957339"
 ---
-# <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>Metoda ICorDebugSymbolProvider::GetMethodParameterSymbols
-Pobiera symbole parametru metody podany wirtualny adres względny (RVA) tej metody.  
+# <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>ICorDebugSymbolProvider:: GetMethodParameterSymbols, Metoda
+Pobiera symbole parametrów metody z uwzględnieniem względnego adresu wirtualnego (RVA) tej metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -27,30 +27,30 @@ HRESULT GetMethodParameterSymbols(
   
 ## <a name="parameters"></a>Parametry  
  `nativeRVA`  
- [in] Natywne wirtualny adres względny metody.  
+ podczas Natywny względny adres wirtualny metody.  
   
  `cRequestedSymbols`  
- [in] Liczba symbole lokalne żądanie.  
+ podczas Liczba żądanych symboli lokalnych.  
   
  `pcFetchedSymbols`  
- [out] Wskaźnik do liczby symboli pobierane przez metodę.  
+ określoną Wskaźnik do liczby symboli pobranych przez metodę.  
   
  `pcFetchedSymbols`  
- [out] Wskaźnik do [ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md) tablicę, która zawiera symbole lokalne metody.  
+ określoną Wskaźnik do tablicy [ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md) zawierającej symbole lokalne metody.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

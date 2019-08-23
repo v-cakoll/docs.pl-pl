@@ -5,36 +5,36 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
-ms.openlocfilehash: d38965288884bb72e102d6ec09deca57296c9b0f
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: ebf630c08714a2e5162ba072f88b7fbdef7ca0f4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882019"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964060"
 ---
 # <a name="how-to-connect-to-a-database"></a>Instrukcje: Łączenie z bazą danych
-<xref:System.Data.Linq.DataContext> Jest głównym kanał za pomocą którego możesz nawiązać połączenie z bazą danych, pobieranie obiektów z niej i przesyłanie zmian do niej powrót po. Możesz użyć <xref:System.Data.Linq.DataContext> podobnie jak w przypadku ADO.NET <xref:System.Data.SqlClient.SqlConnection>. W rzeczywistości <xref:System.Data.Linq.DataContext> jest inicjowany za pomocą połączenia lub parametry połączenia, które dostarczasz. Aby uzyskać więcej informacji, zobacz [metody DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  
+<xref:System.Data.Linq.DataContext> Jest głównym kanałem, za pomocą którego nawiązujesz połączenie z bazą danych, pobierają z niej obiekty i przesyłamy zmiany z powrotem. Używasz tak samo jak w przypadku korzystania z ADO.NET <xref:System.Data.SqlClient.SqlConnection>. <xref:System.Data.Linq.DataContext> W rzeczywistości <xref:System.Data.Linq.DataContext> jest inicjowany z użyciem parametrów połączenia lub połączenia, które są dostarczane. Aby uzyskać więcej informacji, zobacz [metody DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  
   
- Celem <xref:System.Data.Linq.DataContext> jest do tłumaczenia żądań dla obiektów na zapytania SQL, które ma zostać wykonane w bazie danych, a następnie można złożyć obiektów poza wyniki. <xref:System.Data.Linq.DataContext> Umożliwia [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] poprzez implementację tego samego wzorca operatora jako standardowych operatorów zapytań, takich jak `Where` i `Select`.  
+ Celem <xref:System.Data.Linq.DataContext> jest przetłumaczenie żądań obiektów na zapytania SQL, które mają zostać wykonane względem bazy danych, a następnie do złożenia obiektów z wyników. Włącza przez implementację tego samego wzorca operatora jako standardowych operatorów zapytań, takich jak `Where` i `Select`. <xref:System.Data.Linq.DataContext> [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)]  
   
 > [!IMPORTANT]
->  Obsługa bezpiecznego połączenia jest najwyższej wagi. Aby uzyskać więcej informacji, zobacz [zabezpieczeń w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+> Utrzymywanie bezpiecznego połączenia ma najwyższy priorytet. Aby uzyskać więcej informacji, zobacz [zabezpieczenia w LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie <xref:System.Data.Linq.DataContext> służy do łączenia z przykładową bazą danych Northwind i pobierać wiersze klientów, których Miasto jest London.  
+ W poniższym przykładzie <xref:System.Data.Linq.DataContext> jest używany do nawiązywania połączenia z przykładową bazą danych Northwind oraz do pobierania wierszy klientów, których miasto jest Londyn.  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#1)]
  [!code-vb[DLinqCommunicatingWithDatabase#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#1)]  
   
- Każda tabela bazy danych jest przedstawiana jako `Table` kolekcję dostępnych za <xref:System.Data.Linq.DataContext.GetTable%2A> metody, za pomocą klasy jednostki, aby je zidentyfikować.  
+ Każda tabela bazy danych jest reprezentowana jako `Table` kolekcja dostępna w <xref:System.Data.Linq.DataContext.GetTable%2A> drodze metody, przy użyciu klasy Entity do jej identyfikacji.  
   
 ## <a name="example"></a>Przykład  
- Najlepszym rozwiązaniem jest do zadeklarowania silnie typizowaną <xref:System.Data.Linq.DataContext> zamiast polegania na podstawowa <xref:System.Data.Linq.DataContext> klasy i <xref:System.Data.Linq.DataContext.GetTable%2A> metody. Silnie typizowane <xref:System.Data.Linq.DataContext> deklaruje wszystkie `Table` kolekcji jako elementy członkowskie kontekstu, jak w poniższym przykładzie.  
+ Najlepszym rozwiązaniem jest zadeklarować silnie wpisaną <xref:System.Data.Linq.DataContext> zamiast polegania na klasie podstawowej <xref:System.Data.Linq.DataContext> i <xref:System.Data.Linq.DataContext.GetTable%2A> metodzie. Silnie wpisana <xref:System.Data.Linq.DataContext> liczba deklaruje wszystkie `Table` kolekcje jako elementy członkowskie kontekstu, jak w poniższym przykładzie.  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#2)]
  [!code-vb[DLinqCommunicatingWithDatabase#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#2)]  
   
- Następnie można wyrazić zapytania dla klientów z Londynu po prostu jako:  
+ Następnie można wyrazić zapytanie dla klientów z Londynie w sposób bardziej prosty jako:  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#5)]
  [!code-vb[DLinqCommunicatingWithDatabase#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#5)]  

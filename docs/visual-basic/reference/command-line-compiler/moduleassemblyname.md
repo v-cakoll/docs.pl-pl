@@ -6,15 +6,15 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 70cef109e4f2947fb4e38b9bfd19433257cce136
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 052d6937846df39bd94d532e1b63ebe522dbf6c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663513"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964673"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
-Określa nazwę zestawu, który będzie należeć tego modułu.  
+Określa nazwę zestawu, którego częścią ma być ten moduł.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,29 +26,29 @@ Określa nazwę zestawu, który będzie należeć tego modułu.
   
 |Termin|Definicja|  
 |---|---|  
-|`assembly_name`|Nazwa zestawu, który będzie należeć tego modułu.|  
+|`assembly_name`|Nazwa zestawu, którego częścią ma być ten moduł.|  
   
 ## <a name="remarks"></a>Uwagi  
- Procesy kompilatora `-moduleassemblyname` tylko wtedy, gdy opcja `-target:module` określono opcję. Powoduje to, że kompilator Utwórz moduł. Moduł, który został utworzony przez kompilator jest prawidłowy tylko w przypadku zestawu określony za pomocą `-moduleassemblyname` opcji. Jeśli umieścisz modułu w innym zestawie będzie pojawiają się błędy czasu wykonywania.  
+ Kompilator przetwarza `-moduleassemblyname` opcję tylko wtedy, `-target:module` gdy została określona opcja. Powoduje to, że kompilator tworzy moduł. Moduł utworzony przez kompilator jest prawidłowy tylko dla zestawu określonego przy użyciu `-moduleassemblyname` opcji. Jeśli umieścisz moduł w innym zestawie, wystąpią błędy w czasie wykonywania.  
   
- `-moduleassemblyname` Opcja jest potrzebna tylko wtedy, gdy spełnione są poniższe warunki:  
+ Ta `-moduleassemblyname` opcja jest wymagana tylko wtedy, gdy są spełnione następujące warunki:  
   
-- Typ danych w module musi mieć dostęp do `Friend` typu w zestawie odwołania.  
+- Typ danych w module wymaga dostępu do `Friend` typu w przywoływanym zestawie.  
   
-- Przywoływany zestaw przyznał prawa dostępu do zestawu friend do zestawu, do którego zostanie skompilowany moduł.  
+- Przywoływany zestaw ma udzielony dostęp do zestawu, do którego zostanie skompilowany moduł.  
   
- Aby uzyskać więcej informacji na temat tworzenia modułu, zobacz [/TARGET (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Aby uzyskać więcej informacji na temat przyjaznych zestawów, zobacz [przyjaznych zestawów](../../../standard/assembly/friend-assemblies.md).  
+ Aby uzyskać więcej informacji na temat tworzenia modułu, zobacz [/Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Aby uzyskać więcej informacji na temat znajomych zestawów, zobacz [zaprzyjaźnione zestawy](../../../standard/assembly/friend-assemblies.md).  
   
 > [!NOTE]
->  `-moduleassemblyname` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilacji z wiersza polecenia.  
+> `-moduleassemblyname` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio. jest ona dostępna tylko podczas kompilowania z wiersza polecenia.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Kompilacja zestawów wieloplikowych](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [Instrukcje: Kompilowanie zestawu wieloplikowego](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
-- [— Odwołanie (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [Zestawy w środowisku .NET](../../../standard/assembly/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

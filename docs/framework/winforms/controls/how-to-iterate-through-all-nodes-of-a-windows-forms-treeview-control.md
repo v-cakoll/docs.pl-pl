@@ -10,25 +10,25 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00a0f19803967f02795e3eade767786eecc1f4dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941092"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966550"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Instrukcje: iterowanie wszystkich węzłów kontrolki TreeView formularzy systemu Windows
-Czasami jest to przydatne sprawdzić każdy węzeł w formularzach Windows <xref:System.Windows.Forms.TreeView> kontroli w celu wykonywania pewnych obliczeń na podstawie wartości węzła. Tę operację można wykonać przy użyciu procedury cykliczne (cykliczne method in Class metoda C# i C++) który iteruje po każdym węźle w każdej kolekcji drzewa.  
+Czasami warto przeanalizować każdy węzeł w kontrolce Windows Forms <xref:System.Windows.Forms.TreeView> w celu wykonania obliczeń na wartościach węzła. Tę operację można wykonać przy użyciu procedury cyklicznej (Metoda cykliczna C# w C++i), która iteruje przez każdy węzeł w każdej kolekcji drzewa.  
   
- Każdy <xref:System.Windows.Forms.TreeNode> obiekt w widoku drzewa ma właściwości, które umożliwiają nawigowanie w widoku drzewa: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, i <xref:System.Windows.Forms.TreeNode.Parent%2A>. Wartość <xref:System.Windows.Forms.TreeNode.Parent%2A> właściwość ma węzła nadrzędnego bieżącego węzła. Węzły podrzędne bieżącego węzła, jeśli istnieją, są wyświetlane w jego <xref:System.Windows.Forms.TreeNode.Nodes%2A> właściwości. <xref:System.Windows.Forms.TreeView> Sama kontrolka ma <xref:System.Windows.Forms.TreeView.TopNode%2A> właściwość, która jest węzeł główny w widok całego drzewa.  
+ Każdy <xref:System.Windows.Forms.TreeNode> obiekt w widoku drzewa ma właściwości, których można użyć do nawigowania w widoku drzewa: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A> <xref:System.Windows.Forms.TreeNode.NextNode%2A> <xref:System.Windows.Forms.TreeNode.PrevNode%2A>,,, i <xref:System.Windows.Forms.TreeNode.Parent%2A>. Wartość <xref:System.Windows.Forms.TreeNode.Parent%2A> właściwości jest węzłem nadrzędnym bieżącego węzła. Węzły podrzędne bieżącego węzła, jeśli istnieją, są wyświetlane w jego <xref:System.Windows.Forms.TreeNode.Nodes%2A> właściwości. Sama kontrolka <xref:System.Windows.Forms.TreeView.TopNode%2A> ma właściwość, która jest węzłem głównym całego widoku drzewa. <xref:System.Windows.Forms.TreeView>  
   
-### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Aby Iterowanie wszystkich węzłów kontrolki TreeView  
+### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Aby wykonać iterację wszystkich węzłów kontrolki TreeView  
   
-1. Tworzenie procedury cykliczne (cykliczne method in Class metoda C# i C++), które testują każdego węzła.  
+1. Utwórz procedurę cykliczną (metodę C# rekursywną C++w i), która testuje każdy węzeł.  
   
-2. Wywołania tej procedury.  
+2. Wywołaj procedurę.  
   
-     Poniższy przykład pokazuje, jak drukowanie każdego <xref:System.Windows.Forms.TreeNode> obiektu <xref:System.Windows.Forms.TreeNode.Text%2A> właściwości:  
+     Poniższy przykład pokazuje, jak drukować <xref:System.Windows.Forms.TreeNode> <xref:System.Windows.Forms.TreeNode.Text%2A> właściwości poszczególnych obiektów:  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -126,4 +126,4 @@ Czasami jest to przydatne sprawdzić każdy węzeł w formularzach Windows <xref
 ## <a name="see-also"></a>Zobacz także
 
 - [TreeView, kontrolka](treeview-control-windows-forms.md)
-- [Procedury rekursywne](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
+- [Procedury rekursywne](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

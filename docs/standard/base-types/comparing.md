@@ -20,139 +20,139 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48331c1b62fa536b905f1288ebb1632f8da15615
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: dd5ec18147c074400457581618bacba11d9ee40a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053591"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963419"
 ---
 # <a name="comparing-strings-in-net"></a>Porównywanie ciągów w programie .NET
-.NET zapewnia kilka metod, aby porównać wartości ciągów. Poniższej tabeli wymieniono i opisano metody porównania wartości.  
+Platforma .NET udostępnia kilka metod porównywania wartości ciągów. W poniższej tabeli wymieniono i opisano metody porównywania wartości.  
   
 |Nazwa metody|Zastosowanie|  
 |-----------------|---------|  
-|<xref:System.String.Compare%2A?displayProperty=nameWithType>|Porównanie wartości dwóch ciągów. Zwraca wartość całkowitą.|  
-|<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|Porównuje dwa ciągi bez względu na lokalne kultury. Zwraca wartość całkowitą.|  
-|<xref:System.String.CompareTo%2A?displayProperty=nameWithType>|Porównuje bieżący obiekt ciągu do innego ciągu. Zwraca wartość całkowitą.|  
-|<xref:System.String.StartsWith%2A?displayProperty=nameWithType>|Określa, czy ciąg zaczyna się od ciągu przekazany. Zwraca wartość typu Boolean.|  
-|<xref:System.String.EndsWith%2A?displayProperty=nameWithType>|Określa, czy ciąg kończy się ciągiem przekazany. Zwraca wartość typu Boolean.|  
+|<xref:System.String.Compare%2A?displayProperty=nameWithType>|Porównuje wartości dwóch ciągów. Zwraca wartość całkowitą.|  
+|<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|Porównuje dwa ciągi bez względu na lokalną kulturę. Zwraca wartość całkowitą.|  
+|<xref:System.String.CompareTo%2A?displayProperty=nameWithType>|Porównuje bieżący obiekt ciągu z innym ciągiem. Zwraca wartość całkowitą.|  
+|<xref:System.String.StartsWith%2A?displayProperty=nameWithType>|Określa, czy ciąg rozpoczyna się ciągiem. Zwraca wartość typu Boolean.|  
+|<xref:System.String.EndsWith%2A?displayProperty=nameWithType>|Określa, czy ciąg jest zakończony ciągiem zakończonym ciągiem. Zwraca wartość typu Boolean.|  
 |<xref:System.String.Equals%2A?displayProperty=nameWithType>|Określa, czy dwa ciągi są takie same. Zwraca wartość typu Boolean.|  
-|<xref:System.String.IndexOf%2A?displayProperty=nameWithType>|Zwraca indeks znaku lub ciąg, zaczynając od początku ciągu, który sprawdzasz. Zwraca wartość całkowitą.|  
-|<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>|Zwraca indeks znaku lub ciąg, zaczynając od końca ciągu, który sprawdzasz. Zwraca wartość całkowitą.|  
+|<xref:System.String.IndexOf%2A?displayProperty=nameWithType>|Zwraca pozycję indeksu znaku lub ciągu, rozpoczynając od początku badanego ciągu. Zwraca wartość całkowitą.|  
+|<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>|Zwraca pozycję indeksu znaku lub ciągu, rozpoczynając od końca badanego ciągu. Zwraca wartość całkowitą.|  
   
 ## <a name="compare"></a>{1&gt;Compare&lt;1}  
- Statyczne <xref:System.String.Compare%2A?displayProperty=nameWithType> metoda zapewnia możliwość dokładnego porównywania dwóch ciągów. Ta metoda jest kulturalnie pamiętać. Ta funkcja służy do porównywania dwóch ciągów lub podciągów dwa ciągi. Ponadto przeciążenia są podane w tym zakresie lub zignorować wielkość liter i Wariancja kultury. W poniższej tabeli przedstawiono wartości całkowitych trzy, że ta metoda może zwrócić.  
+ Metoda statyczna <xref:System.String.Compare%2A?displayProperty=nameWithType> zapewnia dokładny sposób porównywania dwóch ciągów. Ta metoda ma świadomość kulturową. Ta funkcja służy do porównywania dwóch ciągów lub podciągów dwóch ciągów. Ponadto przeciążenia są zapewnione w odniesieniu do wielkości liter i wariancji kulturowej. W poniższej tabeli przedstawiono trzy wartości całkowite, które ta metoda może zwrócić.  
   
 |Wartość zwracana|Warunek|  
 |------------------|---------------|  
-|Ujemna liczba całkowita|Pierwszy ciąg poprzedza drugi ciąg w porządku sortowania.<br /><br /> —lub—<br /><br /> Pierwszy ciąg jest `null`.|  
-|0|Pierwszy ciąg, a drugi ciąg są równe.<br /><br /> —lub—<br /><br /> Oba ciągi są `null`.|  
-|Dodatnia liczba całkowita<br /><br /> —lub—<br /><br /> 1|Pierwszy ciąg jest zgodna drugi ciąg w porządku sortowania.<br /><br /> —lub—<br /><br /> Drugi ciąg jest `null`.|  
+|Ujemna liczba całkowita|Pierwszy ciąg poprzedza drugi ciąg w kolejności sortowania.<br /><br /> —lub—<br /><br /> Pierwszy ciąg to `null`.|  
+|0|Pierwszy ciąg i drugi ciąg są równe.<br /><br /> —lub—<br /><br /> Oba ciągi są `null`.|  
+|Dodatnia liczba całkowita<br /><br /> —lub—<br /><br /> 1|Pierwszy ciąg jest zgodny z drugim ciągiem w kolejności sortowania.<br /><br /> —lub—<br /><br /> Drugi ciąg znaków to `null`.|  
   
 > [!IMPORTANT]
->  <xref:System.String.Compare%2A?displayProperty=nameWithType> Metoda jest przeznaczona głównie do użytku podczas zamawiania lub sortowanie ciągów. Nie należy używać <xref:System.String.Compare%2A?displayProperty=nameWithType> metody do testowania pod kątem równości (oznacza to, aby jawnie szukać zwracana wartość wynosząca 0 przy użyciu nie ma znaczenia, czy jeden ciąg jest mniejsze lub większe niż ten drugi). Aby ustalić, czy dwa ciągi są równe, użyj <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> metody.  
+> <xref:System.String.Compare%2A?displayProperty=nameWithType> Metoda jest przeznaczona głównie do użycia podczas porządkowania i sortowania ciągów. Nie należy używać <xref:System.String.Compare%2A?displayProperty=nameWithType> metody do testowania pod kątem równości (oznacza to, że jawne szukanie zwracanej wartości 0 bez względu na to, czy jeden ciąg jest mniejszy od drugiego). Zamiast tego, aby określić, czy dwa ciągi są równe, <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> Użyj metody.  
   
- W poniższym przykładzie użyto <xref:System.String.Compare%2A?displayProperty=nameWithType> metodę pozwala ustalić wartości względne dwa ciągi.  
+ W poniższym przykładzie zastosowano <xref:System.String.Compare%2A?displayProperty=nameWithType> metodę, aby określić względne wartości dwóch ciągów.  
   
  [!code-cpp[Conceptual.String.BasicOps#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#6)]
  [!code-csharp[Conceptual.String.BasicOps#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#6)]
  [!code-vb[Conceptual.String.BasicOps#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#6)]  
   
- Ten przykład wyświetla `-1` do konsoli.  
+ Ten przykład jest `-1` wyświetlany w konsoli programu.  
   
- Powyższy przykład dotyczy wrażliwość na ustawienia kulturowe domyślnie. Aby wykonać porównania ciągów niewrażliwość na ustawienia kulturowe, użyj przeciążenia <xref:System.String.Compare%2A?displayProperty=nameWithType> metodę, która pozwala na określenie kultura używana przez dostarczenie *kultury* parametru. Aby uzyskać przykład, który demonstruje sposób używania <xref:System.String.Compare%2A?displayProperty=nameWithType> metodę w celu porównania niewrażliwość na ustawienia kulturowe, zobacz [wykonywanie niezależnych od kultury porównań ciągów](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ Poprzedni przykład jest domyślnie uwzględniany w kulturze. Aby wykonać Porównywanie ciągów niewrażliwych na kulturę, Użyj przeciążenia <xref:System.String.Compare%2A?displayProperty=nameWithType> metody, która pozwala określić kulturę do użycia przez dostarczenie parametru *kultury* . Aby zapoznać się z przykładem, który pokazuje <xref:System.String.Compare%2A?displayProperty=nameWithType> , jak używać metody do wykonywania porównania niewrażliwego na kulturę, zobacz [wykonywanie porównania ciągów](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)nieuwzględniających kulturowo.  
   
-## <a name="compareordinal"></a>Compareordinal —  
- <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> Metoda porównuje dwa obiekty ciągów bez uwzględniania lokalnego kultury. Wartości zwracane przez tę metodę są identyczne do wartości zwracanych przez **porównania** metoda w poprzedniej tabeli.  
+## <a name="compareordinal"></a>CompareOrdinal  
+ <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> Metoda porównuje dwa obiekty String bez rozważania lokalnej kultury. Wartości zwracane tej metody są identyczne z wartościami zwracanymi przez metodę **Compare** w poprzedniej tabeli.  
   
 > [!IMPORTANT]
->  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> Metoda jest przeznaczona głównie do użytku podczas zamawiania lub sortowanie ciągów. Nie należy używać <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> metody do testowania pod kątem równości (oznacza to, aby jawnie szukać zwracana wartość wynosząca 0 przy użyciu nie ma znaczenia, czy jeden ciąg jest mniejsze lub większe niż ten drugi). Aby ustalić, czy dwa ciągi są równe, użyj <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> metody.  
+> <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> Metoda jest przeznaczona głównie do użycia podczas porządkowania i sortowania ciągów. Nie należy używać <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> metody do testowania pod kątem równości (oznacza to, że jawne szukanie zwracanej wartości 0 bez względu na to, czy jeden ciąg jest mniejszy od drugiego). Zamiast tego, aby określić, czy dwa ciągi są równe, <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> Użyj metody.  
   
- W poniższym przykładzie użyto **compareordinal —** metodę, aby porównać wartości dwóch ciągów.  
+ W poniższym przykładzie zastosowano metodę **CompareOrdinal** w celu porównania wartości dwóch ciągów.  
   
  [!code-cpp[Conceptual.String.BasicOps#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#7)]
  [!code-csharp[Conceptual.String.BasicOps#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#7)]
  [!code-vb[Conceptual.String.BasicOps#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#7)]  
   
- Ten przykład wyświetla `-32` do konsoli.  
+ Ten przykład jest `-32` wyświetlany w konsoli programu.  
   
-## <a name="compareto"></a>Element compareTo  
- <xref:System.String.CompareTo%2A?displayProperty=nameWithType> Metoda porównuje ciąg, który hermetyzuje bieżący obiekt ciągu, do innego ciągu lub obiektu. Wartości zwracane przez tę metodę są identyczne do wartości zwracanych przez <xref:System.String.Compare%2A?displayProperty=nameWithType> metoda w poprzedniej tabeli.  
+## <a name="compareto"></a>CompareTo  
+ <xref:System.String.CompareTo%2A?displayProperty=nameWithType> Metoda porównuje ciąg, który bieżący obiekt ciągu hermetyzuje do innego ciągu lub obiektu. Wartości zwracane tej metody są identyczne z wartościami zwracanymi przez <xref:System.String.Compare%2A?displayProperty=nameWithType> metodę w poprzedniej tabeli.  
   
 > [!IMPORTANT]
->  <xref:System.String.CompareTo%2A?displayProperty=nameWithType> Metoda jest przeznaczona głównie do użytku podczas zamawiania lub sortowanie ciągów. Nie należy używać <xref:System.String.CompareTo%2A?displayProperty=nameWithType> metody do testowania pod kątem równości (oznacza to, aby jawnie szukać zwracana wartość wynosząca 0 przy użyciu nie ma znaczenia, czy jeden ciąg jest mniejsze lub większe niż ten drugi). Aby ustalić, czy dwa ciągi są równe, użyj <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> metody.  
+> <xref:System.String.CompareTo%2A?displayProperty=nameWithType> Metoda jest przeznaczona głównie do użycia podczas porządkowania i sortowania ciągów. Nie należy używać <xref:System.String.CompareTo%2A?displayProperty=nameWithType> metody do testowania pod kątem równości (oznacza to, że jawne szukanie zwracanej wartości 0 bez względu na to, czy jeden ciąg jest mniejszy od drugiego). Zamiast tego, aby określić, czy dwa ciągi są równe, <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> Użyj metody.  
   
- W poniższym przykładzie użyto <xref:System.String.CompareTo%2A?displayProperty=nameWithType> metodę, aby porównać `string1` obiekt `string2` obiektu.  
+ W poniższym przykładzie zastosowano <xref:System.String.CompareTo%2A?displayProperty=nameWithType> metodę, aby `string1` porównać obiekt z `string2` obiektem.  
   
  [!code-cpp[Conceptual.String.BasicOps#8](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#8)]
  [!code-csharp[Conceptual.String.BasicOps#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#8)]
  [!code-vb[Conceptual.String.BasicOps#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#8)]  
   
- Ten przykład wyświetla `-1` do konsoli.  
+ Ten przykład jest `-1` wyświetlany w konsoli programu.  
   
- Wszystkie przeciążenia <xref:System.String.CompareTo%2A?displayProperty=nameWithType> metody wykonywania uwzględniana kultura i wielkość liter, domyślnie. Nie przeciążenia tej metody są dostarczane, umożliwiają wykonywanie niezależnych od kultury porównanie. Czystości kodu zaleca się, że używasz **String.COMPARE —** metody zamiast tego określenia <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> dla operacji wrażliwych na kulturę lub <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> niezależnych od kultury operacji. Przykłady pokazujące, jak używać **String.COMPARE —** metodę w celu porównania wrażliwość na ustawienia kulturowe i niewrażliwość na ustawienia kulturowe, zobacz [wykonywanie niezależnych od kultury porównań ciągów](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ Wszystkie przeciążenia <xref:System.String.CompareTo%2A?displayProperty=nameWithType> metody domyślnie wykonują porównania uwzględniające kulturę i wielkość liter. Nie są dostarczane żadne przeciążenia tej metody, które umożliwiają wykonanie porównania niewrażliwego na kulturę. W przypadku przejrzystości kodu zalecamy użycie metody **String. Compare** , określając <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> dla operacji zależnych od kultury lub <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> dla operacji niewrażliwych na kulturę. Przykłady pokazujące, jak używać metody **String. Compare** do wykonywania porównań zarówno z uwzględnieniem kulturowym, jak i niewrażliwym na kulturę, można znaleźć w temacie [wykonywanie porównania ciągów bez uwzględniania kultury](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="equals"></a>Równa się  
- **String.Equals** metody można łatwo określić, czy dwa ciągi są takie same. Wielkość liter metoda zwraca **true** lub **false** wartość logiczną. Może służyć z istniejącej klasy, jak pokazano w następnym przykładzie. W poniższym przykładzie użyto **jest równa** metodę, aby określić, czy obiekt ciągu zawiera frazę "Hello World".  
+ Metoda **String. Equals** może łatwo określić, czy dwa ciągi są takie same. Ta metoda uwzględniania wielkości liter zwraca wartość logiczną **true** lub **false** . Można go użyć z istniejącej klasy, jak pokazano w następnym przykładzie. W poniższym przykładzie zastosowano metodę **Equals** , aby określić, czy obiekt String zawiera frazę "Hello World".  
   
  [!code-cpp[Conceptual.String.BasicOps#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#9)]
  [!code-csharp[Conceptual.String.BasicOps#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#9)]
  [!code-vb[Conceptual.String.BasicOps#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#9)]  
   
- Ten przykład wyświetla `True` do konsoli.  
+ Ten przykład jest `True` wyświetlany w konsoli programu.  
   
- Ta metoda również może służyć jako metoda statyczna. Poniższy przykład porównuje dwa obiekty ciągu przy użyciu metody statycznej.  
+ Tej metody można również użyć jako metody statycznej. Poniższy przykład porównuje dwa obiekty String przy użyciu metody statycznej.  
   
  [!code-cpp[Conceptual.String.BasicOps#10](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#10)]
  [!code-csharp[Conceptual.String.BasicOps#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#10)]
  [!code-vb[Conceptual.String.BasicOps#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#10)]  
   
- Ten przykład wyświetla `True` do konsoli.  
+ Ten przykład jest `True` wyświetlany w konsoli programu.  
   
 ## <a name="startswith-and-endswith"></a>StartsWith i EndsWith  
- Możesz użyć **String.StartsWith** metodę pozwala ustalić, czy obiekt ciągu rozpoczyna się od te same znaki, odnoszący się do innego ciągu. Wielkość liter metoda zwraca **true** Jeżeli bieżący obiekt ciąg rozpoczyna się od przekazany ciąg i **false** Jeśli tak nie jest. W poniższym przykładzie użyto tej metody, aby określić, jeśli obiekt ciągu rozpoczyna się ciągiem "Hello".  
+ Można użyć metody **String. StartsWith** , aby określić, czy obiekt String zaczyna się od tych samych znaków, które obejmują inny ciąg. Ta metoda uwzględniania wielkości liter zwraca **wartość true** , jeśli bieżący obiekt String zaczyna się od przekazaną ciągiem i **zwraca wartość false** , jeśli nie. Poniższy przykład używa tej metody w celu ustalenia, czy obiekt String zaczyna się od "Hello".  
   
  [!code-cpp[Conceptual.String.BasicOps#11](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#11)]
  [!code-csharp[Conceptual.String.BasicOps#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#11)]
  [!code-vb[Conceptual.String.BasicOps#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#11)]  
   
- Ten przykład wyświetla `True` do konsoli.  
+ Ten przykład jest `True` wyświetlany w konsoli programu.  
   
- **String.EndsWith** metoda porównuje przekazany ciąg znaków, znajdujące się na końcu bieżącego obiektu ciągu. Zwraca wartość logiczną. Poniższy przykład sprawdza koniec ciągu przy użyciu **EndsWith** metody.  
+ Metoda **String. EndsWith** porównuje przekazaną ciąg z znakami, które istnieją na końcu bieżącego obiektu ciągu. Zwraca również wartość logiczną. Poniższy przykład sprawdza koniec ciągu przy użyciu metody **EndsWith** .  
   
  [!code-cpp[Conceptual.String.BasicOps#12](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#12)]
  [!code-csharp[Conceptual.String.BasicOps#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#12)]
  [!code-vb[Conceptual.String.BasicOps#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#12)]  
   
- Ten przykład wyświetla `False` do konsoli.  
+ Ten przykład jest `False` wyświetlany w konsoli programu.  
   
 ## <a name="indexof-and-lastindexof"></a>IndexOf i LastIndexOf  
- Możesz użyć **String.IndexOf** metodę, aby określały położenie pierwszego wystąpienia określonego znaku w ciągu. Ta metoda jest wielkość liter rozpoczyna zliczanie od początku ciągu i zwraca pozycję znaku przekazany przy użyciu indeksu zaczynającego się od zera. Jeśli znak nie zostanie znaleziony, jest zwracana wartość -1.  
+ Można użyć metody **String. IndexOf** , aby określić pozycję pierwszego wystąpienia określonego znaku w ciągu. Ta metoda uwzględniająca wielkość liter rozpoczyna zliczanie od początku ciągu i zwraca pozycję podanego znaku przy użyciu indeksu rozpoczynającego się od zera. Jeśli nie można znaleźć znaku, zwracana jest wartość-1.  
   
- W poniższym przykładzie użyto **IndexOf** metodę wyszukiwania dla pierwszego wystąpienia "`l`" znak w ciągu.  
+ Poniższy przykład używa metody **IndexOf** w celu wyszukania pierwszego wystąpienia znaku "`l`" w ciągu.  
   
  [!code-cpp[Conceptual.String.BasicOps#13](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#13)]
  [!code-csharp[Conceptual.String.BasicOps#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#13)]
  [!code-vb[Conceptual.String.BasicOps#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#13)]  
   
- Ten przykład wyświetla `2` do konsoli.  
+ Ten przykład jest `2` wyświetlany w konsoli programu.  
   
- **String.LastIndexOf** metoda jest podobna do **String.IndexOf** metody, ale zwraca pozycję ostatniego wystąpienia określonego znaku w ciągu. Jest rozróżniana wielkość liter i korzysta z indeksu.  
+ Metoda **String. LastIndexOf** jest podobna do metody **String. IndexOf** , z tą różnicą, że zwraca pozycję ostatniego wystąpienia określonego znaku w ciągu. Jest uwzględniana wielkość liter i używa indeksu od zera.  
   
- W poniższym przykładzie użyto **LastIndexOf** metodę wyszukiwania dla ostatniego wystąpienia "`l`" znak w ciągu.  
+ Poniższy przykład używa metody **LastIndexOf** w celu wyszukania ostatniego wystąpienia znaku "`l`" w ciągu.  
   
  [!code-cpp[Conceptual.String.BasicOps#14](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#14)]
  [!code-csharp[Conceptual.String.BasicOps#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#14)]
  [!code-vb[Conceptual.String.BasicOps#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#14)]  
   
- Ten przykład wyświetla `9` do konsoli.  
+ Ten przykład jest `9` wyświetlany w konsoli programu.  
   
- Obie metody są przydatne, gdy jest używana w połączeniu z **String.Remove** metody. Można użyć dowolnego **IndexOf** lub **LastIndexOf** metody w celu pobrania położenie znaku, a następnie podaj tej pozycji, aby **Usuń** metody, aby usunąć znak lub słowo, które zaczyna się od znaku.  
+ Obie metody są przydatne, gdy są używane w połączeniu z metodą **String. Remove** . Można użyć metody **IndexOf** lub **LastIndexOf** , aby pobrać pozycję znaku, a następnie podać tę pozycję do metody **Remove** , aby usunąć znak lub wyraz zaczynający się od tego znaku.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)
 - [Wykonywanie niezależnych od kultury operacji na ciągach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
-- [Sortowanie wagi tabel (w przypadku platformy .NET, Windows)](https://www.microsoft.com/download/details.aspx?id=10921)
-- [Tabela elementów sortowanie domyślne Unicode (dla platformy .NET Core w systemie Linux i macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)
+- [Sortowanie tabel wag (dla platformy .NET w systemie Windows)](https://www.microsoft.com/download/details.aspx?id=10921)
+- [Domyślna tabela elementów sortowania Unicode (dla platformy .NET Core w systemie Linux i macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

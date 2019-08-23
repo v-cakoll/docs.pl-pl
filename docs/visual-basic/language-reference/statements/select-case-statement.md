@@ -21,15 +21,15 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-ms.openlocfilehash: f99db4f1dc224e5f75ee67ba94c3745f28438724
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 627318677270ba4ffa8ee430febea7ddf83bd245
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783893"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957644"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case — Instrukcja (Visual Basic)
-Uruchamia jedną lub kilka grup instrukcji w zależności od wartości wyrażenia.  
+Uruchamia jedną z kilku grup instrukcji w zależności od wartości wyrażenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,39 +46,39 @@ End Select
   
 |Termin|Definicja|  
 |---|---|  
-|`testexpression`|Wymagana. wyrażenie. Musi być jednym z typów podstawowych danych (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, i `UShort`).|  
-|`expressionlist`|Wymagane w `Case` instrukcji. Lista klauzule wyrażenia reprezentujących wartości dopasowanie `testexpression`. Wiele klauzul wyrażenia są oddzielone przecinkami. Każdej klauzuli może mieć jedną z następujących form:<br /><br /> -   *wyrażenie1* `To` *wyrażenie2*<br />-[ `Is` ] *OperatorPorównania* *wyrażenia*<br />-   *expression*<br /><br /> Użyj `To` — słowo kluczowe, aby określić granice zakresu dopasowania wartości `testexpression`. Wartość `expression1` musi być mniejsza niż wartość `expression2`.<br /><br /> Użyj `Is` — słowo kluczowe za pomocą operatora porównania (`=`, `<>`, `<`, `<=`, `>`, lub `>=`) można określić ograniczenie wartości dopasowanie `testexpression`. Jeśli `Is` — słowo kluczowe nie jest podany, jest automatycznie wstawiany przed *OperatorPorównania*.<br /><br /> Formularz, określając tylko `expression` jest traktowany jako w wyjątkowym przypadku okna `Is` tworzą gdzie *OperatorPorównania* jest znak równości (`=`). Ta forma jest oceniane jako `testexpression`  =  `expression`.<br /><br /> Wyrażenia w `expressionlist` mogą być dowolnego typu danych, pod warunkiem że są one niejawnie konwertowane na typ `testexpression` i odpowiednie `comparisonoperator` nadaje się do dwóch typów jest używany z.|  
-|`statements`|Opcjonalna. Jeden lub więcej następujących instrukcji `Case` wykonywania Jeśli `testexpression` pasuje do żadnej klauzuli w `expressionlist`.|  
-|`elsestatements`|Opcjonalna. Jeden lub więcej następujących instrukcji `Case Else` wykonywania Jeśli `testexpression` nie odpowiada żadnej klauzuli w `expressionlist` któregokolwiek z `Case` instrukcji.|  
-|`End Select`|Kończy definicję `Select`... `Case` konstrukcji.|  
+|`testexpression`|Wymagany. Wyrażenia. Należy oszacować do`Boolean`jednego z podstawowych typów danych (, `Decimal` `Double` `Byte` `Date` `Char` ,`SByte` ,`Short`,,,,,,,, `Integer` `Long` `Object` `Single`, ,`String` ,i`UShort`). `UInteger` `ULong`|  
+|`expressionlist`|Wymagane w `Case` instrukcji. Lista klauzul wyrażeń reprezentujących wartości dopasowania dla `testexpression`elementu. Wielokrotne klauzule wyrażenia są rozdzielone przecinkami. Każda klauzula może przyjmować jedną z następujących form:<br /><br /> -   *wyrażenie1* `To` *wyrażenie2*<br />-[ `Is` ] *wyrażenie* operatorporównania<br />-   *wyrażenia*<br /><br /> Użyj słowa `To` kluczowego, aby określić granice zakresu pasujących wartości dla `testexpression`. Wartość `expression1` musi być mniejsza lub równa `expression2`wartości.<br /><br /> `<` `<=` `<>` `>` `>=`Użyj słowa kluczowego z operatorem porównania`=`(,,,, lub), aby określić ograniczenie dla wartości dopasowania dla `testexpression`. `Is` Jeśli słowo kluczowe nie jest dostarczone, jest automatycznie wstawiane przed *operatorporównania.* `Is`<br /><br /> Formularz określający tylko `expression` jest traktowany jako specjalny przypadek formularza, `Is` gdzie *operatorporównania* jest znakiem równości (`=`). Ten formularz jest oceniany `testexpression`jako  =  `expression`.<br /><br /> Wyrażenia w `expressionlist` może być dowolnego typu danych, pod warunkiem, że są one niejawnie konwertowane na `testexpression` typ i są `comparisonoperator` odpowiednie dla dwóch typów, które są używane w.|  
+|`statements`|Opcjonalny. Co najmniej jedna instrukcja `Case` , która jest uruchamiana, jeśli `testexpression` pasuje `expressionlist`do dowolnej klauzuli w.|  
+|`elsestatements`|Opcjonalna. `Case Else` Co najmniej jedna instrukcja uruchamiana, jeśli `testexpression` nie jest `expressionlist` zgodna z żadną klauzulą w żadnej `Case` z instrukcji.|  
+|`End Select`|Kończy definicję `Select`... `Case` konstrukcja.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli `testexpression` pasuje do żadnej `Case` `expressionlist` klauzuli, instrukcje po `Case` instrukcji uruchomić maksymalnie do następnego `Case`, `Case Else`, lub `End Select` instrukcji. Następnie sterowanie przechodzi do instrukcji następującej `End Select`. Jeśli `testexpression` odpowiada `expressionlist` klauzuli w więcej niż jednym `Case` klauzuli tylko instrukcje po pierwsze dopasowanie są wykonywane.  
+ Jeśli `testexpression` dopasowuje `Case` dowolną `Case` `Case Else` `End Select` klauzulę, instrukcje po `Case` tej instrukcji są uruchamiane do następnej instrukcji,, lub. `expressionlist` Następnie kontrolka przechodzi do następującej `End Select`instrukcji. Jeśli `testexpression` jest zgodny `expressionlist` z klauzulą w więcej `Case` niż jednej klauzuli, tylko instrukcje po pierwszym uruchomieniu są wykonywane.  
   
- `Case Else` Instrukcja jest używane do wprowadzenia `elsestatements` do uruchomienia, jeśli nie zostanie znalezione dopasowanie między `testexpression` i `expressionlist` klauzuli w żadnym innym `Case` instrukcji. Chociaż nie jest to wymagane, to dobry pomysł, aby mieć `Case Else` instrukcji w swojej `Select Case` konstrukcji, aby obsłużyć nieprzewidziane `testexpression` wartości. Jeśli nie `Case` `expressionlist` pasuje do klauzuli `testexpression` i ma nie `Case Else` instrukcji, kontrola przechodzi do następujących instrukcji `End Select`.  
+ `testexpression` `elsestatements` `Case` `expressionlist` Instrukcja jest używana do wprowadzenia do uruchomienia, jeśli nie zostanie znalezione dopasowanie między klauzulą a klauzuli w żadnej z innych instrukcji. `Case Else` Chociaż nie jest to wymagane, dobrym pomysłem jest posiadanie `Case Else` instrukcji `Select Case` w konstrukcji do obsługi nieprzewidzianych `testexpression` wartości. Jeśli żadna `Case` klauzula nie `expressionlist` jest zgodna `testexpression` i nie `Case Else` ma żadnej instrukcji, kontrola przechodzi do następującej `End Select`instrukcji.  
   
- Można użyć wielu wyrażeń lub zakresów, które znajdują się w każdym `Case` klauzuli. Na przykład poniższy wiersz jest prawidłowy.  
+ W każdej `Case` klauzuli można używać wielu wyrażeń lub zakresów. Na przykład następujący wiersz jest prawidłowy.  
   
  `Case 1 To 4, 7 To 9, 11, 13, Is > maxNumber`  
   
 > [!NOTE]
->  `Is` Słowo kluczowe użyte w `Case` i `Case Else` instrukcji nie jest taka sama jak [operatora Is](../../../visual-basic/language-reference/operators/is-operator.md), używany do porównania odwołanie do obiektu.  
+> Słowo kluczowe używane `Case` w instrukcjach `Case Else` i nie jest takie samo jak [operator is](../../../visual-basic/language-reference/operators/is-operator.md), który jest używany do porównywania odwołań do obiektów. `Is`  
   
- Można określić zakresy i wiele wyrażeń dla ciągów znaków. W poniższym przykładzie `Case` dopasowuje dowolny ciąg, który jest dokładnie taka sama jak "apples", wartość z zakresu od "nuts" i "od początku" w kolejności alfabetycznej lub zawiera dokładnie tę samą wartość jak bieżąca wartość `testItem`.  
+ Można określić zakresy i wiele wyrażeń dla ciągów znaków. W poniższym przykładzie `Case` dopasowuje dowolny ciąg, który jest dokładnie równy "jabłek", ma wartość między "NUTS" i "zup" w kolejności alfabetycznej lub zawiera dokładną wartość taką samą jak bieżąca `testItem`wartość.  
   
  `Case "apples", "nuts" To "soup", testItem`  
   
- Ustawienie `Option Compare` mogą mieć wpływ na porównywania ciągów. W obszarze `Option Compare Text`, porównywane ciągi są "Apples" i "apples" jako równe, ale opcja `Option Compare Binary`, nie ma.  
+ Ustawienie `Option Compare` może mieć wpływ na porównania ciągów. W `Option Compare Text`obszarze ciągi "jabłka" i "jabłka" są porównywane jako równe, ale `Option Compare Binary`w obszarze nie są.  
   
 > [!NOTE]
->  A `Case` instrukcji z wieloma klauzulami może cechować się zachowanie nazywane *zwarcie*. Visual Basic ocenia klauzule od lewej do prawej, a jeśli jedną daje zgodna z `testexpression`, pozostałe klauzule nie są sprawdzane. Zwarcie może poprawić wydajność, ale mogą dawać nieoczekiwane wyniki, jeśli są oczekiwane każde wyrażenie w `expressionlist` ma zostać obliczone. Aby uzyskać więcej informacji na temat zwarcie, zobacz [wyrażeń logicznych](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).  
+> Instrukcja z wieloma klauzulami może wykazywać zachowanie znane jako *krótkie obwody.* `Case` Visual Basic oblicza klauzule od lewej do prawej, a jeśli jeden generuje dopasowanie z `testexpression`, pozostałe klauzule nie są oceniane. Krótkie obwody mogą zwiększyć wydajność, ale może generować nieoczekiwane wyniki, jeśli oczekuje się, że każde wyrażenie `expressionlist` w jest oceniane. Aby uzyskać więcej informacji na temat skracania obwodów, zobacz [wyrażenia logiczne](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).  
   
- Jeśli kod w `Case` lub `Case Else` blok instrukcji nie jest konieczne uruchamianie żadnych dodatkowych instrukcji w bloku, je zamknąć blok przy użyciu `Exit Select` instrukcji. Ten formant natychmiast przenosi do następujących instrukcji `End Select`.  
+ Jeśli kod w `Case` bloku instrukcji lub `Case Else` nie musi uruchamiać żadnych więcej instrukcji w bloku, może wyjść `Exit Select` z bloku przy użyciu instrukcji. Powoduje to natychmiastowe przeniesienie kontroli do poniższej `End Select`instrukcji.  
   
- `Select Case` konstrukcje mogą być zagnieżdżone. Każda zagnieżdżona `Select Case` konstrukcja musi mieć zgodną `End Select` instrukcji i musi być całkowicie zawarty w obrębie pojedynczego `Case` lub `Case Else` blok instrukcji zewnętrznego `Select Case` konstrukcji, w którym jest zagnieżdżony.  
+ `Select Case`konstrukcje mogą być zagnieżdżane. Każda konstrukcja `Select Case` zagnieżdżona musi mieć zgodną `End Select` instrukcję i musi być całkowicie zawarta `Case` w `Case Else` obrębie pojedynczego lub bloku instrukcji `Select Case` konstrukcji zewnętrznej, w ramach której jest zagnieżdżony.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `Select Case` konstrukcji do zapisania wiersz odpowiadający wartości zmiennej `number`. Drugi `Case` instrukcja zawiera wartość, która pasuje do bieżącej wartości `number`, więc instrukcję, która zapisuje "na od 6 do 8 (włącznie)" jest uruchamiana.  
+ Poniższy przykład używa `Select Case` konstrukcji, aby napisać linię odpowiadającą wartości zmiennej `number`. Druga `Case` instrukcja zawiera wartość, która pasuje do bieżącej `number`wartości, więc instrukcji, która zapisuje "od 6 do 8 włącznie".  
   
  [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  
   

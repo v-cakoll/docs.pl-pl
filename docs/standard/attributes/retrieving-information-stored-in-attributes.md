@@ -13,36 +13,36 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6939c215633be10e487f9cd5bd25856c0c611921
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 298ac8eae0a8b125ddf5f1ff35658f426f6b10aa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623673"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968582"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Pobieranie informacji przechowywanych w atrybutach
-Podczas pobierania atrybutów niestandardowych jest prostym procesem. Najpierw należy zadeklarować wystąpienia atrybutu, który ma zostać pobrane. Następnie należy użyć <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> metodę, aby zainicjować nowy atrybut, aby wartość atrybutu, który ma zostać pobrane. Po zainicjowaniu nowy atrybut, po prostu użyć jego właściwości w celu uzyskania wartości.  
+Pobieranie atrybutu niestandardowego jest procesem prostym. Najpierw Zadeklaruj wystąpienie atrybutu, który ma zostać pobrany. Następnie użyj <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> metody, aby zainicjować nowy atrybut do wartości atrybutu, który ma zostać pobrany. Po zainicjowaniu nowego atrybutu wystarczy użyć jego właściwości w celu uzyskania wartości.  
   
 > [!IMPORTANT]
->  W tym temacie opisano, jak można pobrać atrybutów dla kodu ładowane do kontekstu wykonywania. Aby pobrać atrybutów dla kodu ładowane do kontekstu reflection-only, należy użyć <xref:System.Reflection.CustomAttributeData> klasy, jak pokazano w [jak: Ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+> W tym temacie opisano sposób pobierania atrybutów dla kodu załadowanego do kontekstu wykonywania. Aby pobrać atrybuty dla kodu załadowanego do kontekstu tylko odbicie, należy użyć <xref:System.Reflection.CustomAttributeData> klasy, jak pokazano w [temacie How to: Załaduj zestawy do kontekstu](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)tylko odbicie.  
   
- W tej sekcji opisano następujące sposoby pobierania atrybutów:  
+ W tej sekcji opisano następujące metody pobierania atrybutów:  
   
-- [Trwa pobieranie jedno wystąpienie atrybutu](#cpconretrievingsingleinstanceofattribute)  
+- [Pobieranie pojedynczego wystąpienia atrybutu](#cpconretrievingsingleinstanceofattribute)  
   
-- [Trwa pobieranie wielu wystąpień zastosowany do tego samego zakresu](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
+- [Pobieranie wielu wystąpień atrybutu zastosowanych do tego samego zakresu](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
-- [Trwa pobieranie wielu wystąpień atrybutem zastosowanym do różnych zakresów](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+- [Pobieranie wielu wystąpień atrybutu zastosowanych do różnych zakresów](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>   
-## <a name="retrieving-a-single-instance-of-an-attribute"></a>Trwa pobieranie jedno wystąpienie atrybutu  
- W poniższym przykładzie `DeveloperAttribute` (opisanej w poprzedniej sekcji) jest stosowany do `MainApp` klasy na poziomie klasy. `GetAttribute` Metoda używa **metody GetCustomAttribute** można pobrać wartości przechowywane w `DeveloperAttribute` na poziomie klasy, przed wyświetleniem ich w konsoli.  
+## <a name="retrieving-a-single-instance-of-an-attribute"></a>Pobieranie pojedynczego wystąpienia atrybutu  
+ W poniższym przykładzie `DeveloperAttribute` (opisany w poprzedniej sekcji) jest stosowany `MainApp` do klasy na poziomie klasy. Metoda używa metody GetCustomAttribute do pobierania wartości przechowywanych `DeveloperAttribute` na poziomie klasy przed wyświetleniem ich w konsoli programu. `GetAttribute`  
   
  [!code-cpp[Conceptual.Attributes.Usage#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source3.cpp#18)]
  [!code-csharp[Conceptual.Attributes.Usage#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source3.cs#18)]
  [!code-vb[Conceptual.Attributes.Usage#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source3.vb#18)]  
   
- Ten program wyświetla następujący tekst podczas wykonywania.  
+ Ten program wyświetla następujący tekst po wykonaniu.  
   
 ```  
 The Name Attribute is: Joan Smith.  
@@ -50,39 +50,39 @@ The Level Attribute is: 42.
 The Reviewed Attribute is: True.  
 ```  
   
- Jeśli ten atrybut nie zostanie znaleziony, **metody GetCustomAttribute** inicjuje metodę `MyAttribute` ma wartość null. W tym przykładzie, sprawdza `MyAttribute` dla wystąpienia usługi i powiadamia użytkownika, jeśli atrybut nie zostanie znaleziony. Jeśli `DeveloperAttribute` nie znajduje się w zakresie klasy, zostanie wyświetlony następujący komunikat do konsoli.  
+ Jeśli atrybut nie zostanie znaleziony, Metoda GetCustomAttribute inicjuje `MyAttribute` wartość null. Ten przykład sprawdza `MyAttribute` dla takiego wystąpienia i powiadamia użytkownika, jeśli nie zostanie znaleziony żaden atrybut. Jeśli nie `DeveloperAttribute` zostanie znaleziony w zakresie klasy, w konsoli zostanie wyświetlony następujący komunikat.  
   
 ```  
 The attribute was not found.   
 ```  
   
- W tym przykładzie przyjęto założenie, że definicja atrybutu znajduje się w bieżącej przestrzeni nazw. Pamiętaj, aby zaimportować obszar nazw, w której znajduje się definicja atrybutu, jeśli nie znajduje się w bieżącej przestrzeni nazw.  
+ W tym przykładzie przyjęto założenie, że definicja atrybutu znajduje się w bieżącej przestrzeni nazw. Pamiętaj, aby zaimportować przestrzeń nazw, w której znajduje się Definicja atrybutu, jeśli nie znajduje się w bieżącej przestrzeni nazw.  
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>   
-## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>Trwa pobieranie wielu wystąpień zastosowany do tego samego zakresu  
- W poprzednim przykładzie klasę, aby sprawdzić i określonych atrybutów, można znaleźć są przekazywane do <xref:System.Attribute.GetCustomAttribute%2A>. Ten kod działa dobrze jeśli tylko jedno wystąpienie atrybutu jest stosowana na poziomie klasy. Jednakże, jeśli wiele wystąpień atrybutu są stosowane na tym samym poziomie klasy **metody GetCustomAttribute** metody nie uzyskać wszystkie informacje. W przypadkach, w której wiele wystąpień tego samego atrybutu są stosowane do tego samego zakresu, można użyć <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> umieścić wszystkie wystąpienia atrybutu do tablicy. Na przykład, jeśli dwa wystąpienia `DeveloperAttribute` są stosowane na poziomie klasy w tej samej klasy `GetAttribute` metoda można modyfikować, aby wyświetlić informacje znajdujące się w obu atrybutów. Pamiętaj, aby zastosować wiele atrybutów na tym samym poziomie atrybutu muszą być zdefiniowane przy użyciu **AllowMultiple** właściwością **true** w <xref:System.AttributeUsageAttribute>.  
+## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>Pobieranie wielu wystąpień atrybutu zastosowanych do tego samego zakresu  
+ W poprzednim przykładzie Klasa do sprawdzenia i określony atrybut do znalezienia są przenoszone do <xref:System.Attribute.GetCustomAttribute%2A>. Ten kod działa prawidłowo, gdy tylko jedno wystąpienie atrybutu jest stosowane na poziomie klasy. Jeśli jednak na tym samym poziomie klasy zastosowano wiele wystąpień atrybutu, Metoda GetCustomAttribute nie pobiera wszystkich informacji. W przypadkach, gdy wiele wystąpień tego samego atrybutu jest stosowanych do tego samego zakresu, można użyć <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> , aby umieścić wszystkie wystąpienia atrybutu w tablicy. Na przykład jeśli dwa wystąpienia `DeveloperAttribute` są stosowane na poziomie klasy tej samej klasy `GetAttribute` , można zmodyfikować metodę w celu wyświetlenia informacji znalezionych w obu atrybutach. Pamiętaj, aby zastosować wiele atrybutów na tym samym poziomie, atrybut musi być zdefiniowany za pomocą właściwości **AllowMultiple** ustawionej na **wartość true** w <xref:System.AttributeUsageAttribute>elemencie.  
   
- Poniższy przykład kodu pokazuje sposób użycia **getcustomattributes —** metodę, aby utworzyć tablicę, która odwołuje się do wszystkich wystąpień `DeveloperAttribute` w dowolnej podanej klasy. Wartości wszystkich atrybutów są następnie wyświetlane w konsoli.  
+ Poniższy przykład kodu pokazuje, jak za pomocą metody **GetCustomAttributes —** utworzyć tablicę, która odwołuje się do wszystkich `DeveloperAttribute` wystąpień w danej klasie. Wartości wszystkich atrybutów są następnie wyświetlane w konsoli programu.  
   
  [!code-cpp[Conceptual.Attributes.Usage#19](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source3.cpp#19)]
  [!code-csharp[Conceptual.Attributes.Usage#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source3.cs#19)]
  [!code-vb[Conceptual.Attributes.Usage#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source3.vb#19)]  
   
- Jeśli nie zostaną znalezione żadne atrybuty, ten kod ostrzega o tym użytkownika. W przeciwnym razie informacje zawarte w obu przypadkach `DeveloperAttribute` jest wyświetlana.  
+ Jeśli nie zostaną znalezione żadne atrybuty, ten kod zgłosi użytkownika. W przeciwnym razie wyświetlane są informacje zawarte w obu `DeveloperAttribute` wystąpieniach elementu.  
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>   
-## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>Trwa pobieranie wielu wystąpień atrybutem zastosowanym do różnych zakresów  
- <xref:System.Attribute.GetCustomAttributes%2A> i <xref:System.Attribute.GetCustomAttribute%2A> metody wyszukiwania całej klasy i nie zwraca wszystkich wystąpień atrybutu w tej klasie. Zamiast wyszukiwania tylko jeden określonej metody lub elementu członkowskiego w danym momencie. Jeśli posiadasz klasę za pomocą tego samego atrybutu, które są stosowane do każdego członka i chcesz pobrać wartości wszystkich atrybutów, które są stosowane do tych członków, należy podać co metoda lub elementu członkowskiego indywidualnie do **getcustomattributes —** i  **Metody GetCustomAttribute**.  
+## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>Pobieranie wielu wystąpień atrybutu zastosowanych do różnych zakresów  
+ Metody <xref:System.Attribute.GetCustomAttributes%2A> i<xref:System.Attribute.GetCustomAttribute%2A> nie przeszukują całej klasy i zwracają wszystkie wystąpienia atrybutu w tej klasie. Zamiast tego przeszukują tylko jedną określoną metodę lub element członkowski jednocześnie. Jeśli masz klasę z tym samym atrybutem, który jest zastosowany do każdego elementu członkowskiego i chcesz pobrać wartości we wszystkich atrybutach zastosowanych do tych elementów członkowskich, musisz dostarczyć każdą metodę lub element członkowski oddzielnie do **GetCustomAttributes —** i GetCustomAttribute.  
   
- Poniższy przykład kodu klasy jako parametr przyjmuje i wyszukuje `DeveloperAttribute` (zdefiniowanych wcześniej) na poziomie klasy, a na każdej poszczególne metody tej klasy.  
+ Poniższy przykład kodu przyjmuje klasę jako parametr i wyszukuje `DeveloperAttribute` (zdefiniowane wcześniej) na poziomie klasy i dla każdej indywidualnej metody tej klasy.  
   
  [!code-cpp[Conceptual.Attributes.Usage#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source3.cpp#20)]
  [!code-csharp[Conceptual.Attributes.Usage#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source3.cs#20)]
  [!code-vb[Conceptual.Attributes.Usage#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source3.vb#20)]  
   
- Jeśli nie wystąpienia `DeveloperAttribute` znajdują się na poziomie metody lub klasy, `GetAttribute` metoda powiadamia użytkownika, który nie znaleziono żadnych atrybutów i wyświetla nazwę metody lub klasy, która nie zawiera atrybutu. Jeśli atrybut zostanie znaleziony, `Name`, `Level`, i `Reviewed` pola są wyświetlane w konsoli.  
+ Jeśli żadne wystąpienia `DeveloperAttribute` programu nie zostaną znalezione na poziomie metody lub poziomie klasy `GetAttribute` , Metoda powiadamia użytkownika, że nie znaleziono żadnych atrybutów i wyświetla nazwę metody lub klasy, która nie zawiera atrybutu. Jeśli zostanie znaleziony `Name`atrybut, pola, `Level`i `Reviewed` są wyświetlane w konsoli programu.  
   
- Można użyć elementów członkowskich <xref:System.Type> klasy można pobrać pojedynczych metod i składowych w klasie sukces. W tym przykładzie najpierw zapytania **typu** obiektu, aby uzyskać informacje o atrybutach na poziomie klasy. Następnie używa <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> umieszcza wystąpienia wszystkich metod na tablicę <xref:System.Reflection.MemberInfo?displayProperty=nameWithType> obiektów, aby pobrać informacje o atrybutach na poziomie metody. Można również użyć <xref:System.Type.GetProperties%2A?displayProperty=nameWithType> metodę sprawdzania, czy atrybuty na poziomie właściwości lub <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType> pod kątem atrybuty na poziomie konstruktora.  
+ Można użyć elementów członkowskich <xref:System.Type> klasy, aby uzyskać poszczególne metody i składowe w pomyślnej klasie. Ten przykład najpierw wysyła zapytanie do obiektu **typu** w celu pobrania informacji o atrybucie dla poziomu klasy. Następnie używa <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> do umieszczania wystąpień wszystkich metod w <xref:System.Reflection.MemberInfo?displayProperty=nameWithType> tablicy obiektów w celu pobrania informacji o atrybucie dla poziomu metody. Można również użyć metody, <xref:System.Type.GetProperties%2A?displayProperty=nameWithType> aby sprawdzić atrybuty na poziomie właściwości lub <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType> sprawdzić atrybuty na poziomie konstruktora.  
   
 ## <a name="see-also"></a>Zobacz także
 

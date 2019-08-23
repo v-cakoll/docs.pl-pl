@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ccdc3777-b2c2-44e3-a627-abef8d79a555
-ms.openlocfilehash: dca917b3c12b0f9923cc9ea34a2568c412a09831
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39cf9270b08fce64590fef418bb428c5a781b0e9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033452"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963814"
 ---
 # <a name="return-the-first-element-in-a-sequence"></a>Zwracanie pierwszego elementu w sekwencji
-Użyj <xref:System.Linq.Enumerable.First%2A> operatora, aby powrócić do pierwszego elementu w sekwencji. Wysyła zapytanie, które używają <xref:System.Linq.Enumerable.First%2A> są wykonywane natychmiast.  
+<xref:System.Linq.Enumerable.First%2A> Użyj operatora, aby zwrócić pierwszy element w sekwencji. Zapytania, które <xref:System.Linq.Enumerable.First%2A> używają są wykonywane od razu.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje <xref:System.Linq.Enumerable.Last%2A> operatora.  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nie obsługuje <xref:System.Linq.Enumerable.Last%2A> operatora.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod wyszukuje pierwszy `Shipper` w tabeli:  
+ Poniższy kod umożliwia znalezienie pierwszego `Shipper` w tabeli:  
   
- Po uruchomieniu tego zapytania względem przykładowej bazy danych Northwind, wyniki są  
+ W przypadku uruchomienia tego zapytania względem przykładowej bazy danych Northwind wyniki są  
   
  `ID = 1, Company = Speedy Express`.  
   
@@ -29,9 +29,9 @@ Użyj <xref:System.Linq.Enumerable.First%2A> operatora, aby powrócić do pierws
  [!code-vb[DLinqQueryExamples#14](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#14)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod umożliwia znalezienie jednej `Customer` zawierający `CustomerID` BONAP.  
+ Poniższy kod umożliwia znalezienie pojedynczego `Customer` , który `CustomerID` ma BONAP.  
   
- Po uruchomieniu tego zapytania względem przykładowej bazy danych Northwind, wyniki są `ID = BONAP, Contact = Laurence Lebihan`.  
+ W przypadku uruchomienia tego zapytania względem przykładowej bazy danych Northwind wyniki są `ID = BONAP, Contact = Laurence Lebihan`następujące.  
   
  [!code-csharp[DLinqQueryExamples#15](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#15)]
  [!code-vb[DLinqQueryExamples#15](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#15)]  

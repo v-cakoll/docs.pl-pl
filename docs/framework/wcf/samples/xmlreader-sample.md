@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
-ms.openlocfilehash: 03c6949d25497419a55f7baafa33d568817b8f27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e0a26436515e9b8d7597c7e39272e6ac77a110b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007438"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959493"
 ---
 # <a name="xmlreader-sample"></a>Przykład klasy XmlReader
-Przykład klasy XmlReader pokazuje przetwarzania treści komunikatu przy użyciu <xref:System.Xml.XmlReader>. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje usługę kalkulatora. Operacja dodatkowe usługi, `Sum`, dodano, który akceptuje komunikat, który zawiera tablicę wartości, aby dodawać razem. Usługa odczytuje komunikat przy użyciu <xref:System.Xml.XmlReader>.  
+Przykład XmlReader ilustruje przetwarzanie treści komunikatu przy użyciu <xref:System.Xml.XmlReader>. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje usługę Kalkulator. Dodano dodatkową operację `Sum`usługi, która akceptuje komunikat zawierający tablicę wartości do dodania razem. Usługa odczytuje komunikat przy użyciu <xref:System.Xml.XmlReader>.  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Interfejs Kalkulator zawiera operacji usługi o nazwie `Sum` akceptujący <xref:System.ServiceModel.Channels.Message> parametru, jak pokazano w poniższym przykładowym kodzie.  
+ Interfejs kalkulatora zawiera operację usługi o nazwie `Sum` , która <xref:System.ServiceModel.Channels.Message> akceptuje parametr, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp
 public interface ICalculator  
@@ -35,7 +35,7 @@ public interface ICalculator
 }  
 ```  
   
- Klient uzyskuje dostęp do `Sum` najpierw tworząc tablicę wartości całkowitych, a następnie tworzenia komunikatu z tablicy, a następnie wywoływania `Sum` metody za pomocą utworzonego wiadomości, jak pokazano w poniższym przykładowym kodzie.  
+ Klient uzyskuje dostęp `Sum` , najpierw tworząc tablicę wartości całkowitych, a następnie tworząc komunikat z tablicy, a następnie `Sum` wywołując metodę przy użyciu utworzonej wiadomości, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp
 CalculatorClient client = new CalculatorClient();  
@@ -53,7 +53,7 @@ using (new OperationContextScope(client.InnerChannel))
 }  
 ```  
   
- W usłudze wykonania operacji usługi `Sum` uzyskuje dostęp do treści wiadomości przy użyciu <xref:System.Xml.XmlReader> obiekt do iterowania po wartościach do zsumowania. <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> Metoda jest wywoływana, aby uzyskać dostęp do treści wiadomości, jak pokazano w poniższym przykładowym kodzie.  
+ W ramach usługi implementacja operacji `Sum` usługi uzyskuje dostęp do treści wiadomości <xref:System.Xml.XmlReader> za pomocą obiektu, aby wykonać iterację wartości do zsumowania. <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> Metoda jest wywoływana w celu uzyskania dostępu do treści wiadomości, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp  
 public int Sum(Message message)  
@@ -80,7 +80,7 @@ public int Sum(Message message)
 }  
 ```  
   
- Po uruchomieniu przykładu, żądań i odpowiedzi operacji są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ Po uruchomieniu przykładu żądania i odpowiedzi operacji są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -92,19 +92,19 @@ Sum(1,2,3,4,5) = 15
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\XmlReader`  

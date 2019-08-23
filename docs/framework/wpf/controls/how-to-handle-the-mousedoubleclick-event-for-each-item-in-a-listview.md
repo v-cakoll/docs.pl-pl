@@ -7,30 +7,30 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
-ms.openlocfilehash: 443e5c620ef5bf240d3e317f0234aac0b29b456f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e51c810a2e1e4bf4157aa1311255c5547021b60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770997"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962062"
 ---
 # <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>Instrukcje: Obsługiwanie zdarzenia MouseDoubleClick dla każdego elementu w kontrolce ListView
-Aby obsłużyć zdarzenie dla elementu w <xref:System.Windows.Controls.ListView>, należy dodać program obsługi zdarzeń do każdego <xref:System.Windows.Controls.ListViewItem>. Gdy <xref:System.Windows.Controls.ListView> jest powiązana ze źródłem danych, możesz nie tworzą jawnie <xref:System.Windows.Controls.ListViewItem>, ale może obsłużyć zdarzenie dla każdego elementu, dodając <xref:System.Windows.EventSetter> ze stylem <xref:System.Windows.Controls.ListViewItem>.  
+Aby obsłużyć zdarzenie dla elementu w <xref:System.Windows.Controls.ListView>, należy dodać do każdego z nich <xref:System.Windows.Controls.ListViewItem>procedurę obsługi zdarzeń. Gdy jest powiązany ze źródłem danych, nie można jawnie <xref:System.Windows.Controls.ListViewItem>utworzyć, ale można obsłużyć zdarzenie dla <xref:System.Windows.EventSetter> każdego elementu, dodając do stylu <xref:System.Windows.Controls.ListViewItem>. <xref:System.Windows.Controls.ListView>  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład obejmuje tworzenie powiązanych z danymi <xref:System.Windows.Controls.ListView> i tworzy <xref:System.Windows.Style> dodać program obsługi zdarzeń do każdego <xref:System.Windows.Controls.ListViewItem>.  
+ Poniższy przykład tworzy powiązanie <xref:System.Windows.Controls.ListView> danych i <xref:System.Windows.Style> tworzy, aby dodać procedurę obsługi zdarzeń do każdego z nich <xref:System.Windows.Controls.ListViewItem>.  
   
  [!code-xaml[ListViewHowTos#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
 [!code-xaml[ListViewHowTos#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#5)]  
 [!code-xaml[ListViewHowTos#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
   
- Następujące uchwyty przykład <xref:System.Windows.Controls.Control.MouseDoubleClick> zdarzeń.  
+ Poniższy przykład obsługuje <xref:System.Windows.Controls.Control.MouseDoubleClick> zdarzenie.  
   
  [!code-csharp[ListViewHowTos#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml.cs#6)]
  [!code-vb[ListViewHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewHowTos/VisualBasic/Window1.xaml.vb#6)]  
   
 > [!NOTE]
->  Chociaż przeważnie można powiązać <xref:System.Windows.Controls.ListView> ze źródłem danych można użyć stylu, aby dodać program obsługi zdarzeń do każdego <xref:System.Windows.Controls.ListViewItem> w innych — powiązane z danymi <xref:System.Windows.Controls.ListView> niezależnie od tego, czy jawnie tworzyć <xref:System.Windows.Controls.ListViewItem>.  Aby uzyskać więcej informacji na temat jawnie i niejawnie utworzony <xref:System.Windows.Controls.ListViewItem> formantów, zobacz <xref:System.Windows.Controls.ItemsControl>.  
+> Chociaż <xref:System.Windows.Controls.ListView> jest to najczęstsze dla powiązania ze źródłem danych, można użyć stylu, aby dodać program obsługi zdarzeń do każdego z nich <xref:System.Windows.Controls.ListViewItem> w niezwiązanym <xref:System.Windows.Controls.ListView> z danymi <xref:System.Windows.Controls.ListViewItem>bez względu na to, czy jawnie utworzysz.  Aby uzyskać więcej informacji na temat formantów jawnie <xref:System.Windows.Controls.ListViewItem> i niejawnie <xref:System.Windows.Controls.ItemsControl>utworzonych, zobacz.  
   
 ## <a name="see-also"></a>Zobacz także
 

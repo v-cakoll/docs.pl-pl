@@ -5,21 +5,21 @@ helpviewer_keywords:
 - retrieving the DrawingGroup value of a Visual [WPF]
 - enumerating the contents of a Visual [WPF]
 ms.assetid: 2974ddb3-2997-4713-8fd2-e93d549c58a8
-ms.openlocfilehash: 4f0afc1075fe66c7f154fcef3cd883709db55316
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25aa0c3706005c1e16cedd7e06914db764545ebb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947475"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930070"
 ---
 # <a name="how-to-enumerate-drawing-content-of-a-visual"></a>Instrukcje: Wyliczanie zawartości rysowania wizualizacji
-<xref:System.Windows.Media.Drawing> Obiektu podaje modelu obiektu dla wyliczanie zawartości <xref:System.Windows.Media.Visual>.  
+Obiekt udostępnia model obiektów do wyliczania zawartości <xref:System.Windows.Media.Visual>. <xref:System.Windows.Media.Drawing>  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> metodę, która pobierze <xref:System.Windows.Media.DrawingGroup> wartość <xref:System.Windows.Media.Visual> i ją wyliczanie.  
+ W poniższym przykładzie zastosowano <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> metodę, aby <xref:System.Windows.Media.DrawingGroup> pobrać wartość <xref:System.Windows.Media.Visual> a i wyliczyć ją.  
   
 > [!NOTE]
->  Gdy wyliczają to zawartość wizualizacji, są pobierane <xref:System.Windows.Media.Drawing> obiektów i nie podstawowej reprezentacji danych renderowania jako lista instrukcji grafiki wektorowej. Aby uzyskać więcej informacji, zobacz [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md).  
+> Gdy wyliczasz zawartość wizualizacji, pobierasz <xref:System.Windows.Media.Drawing> obiekty, a nie źródłowa reprezentacja danych renderowania jako listę instrukcji grafiki wektorowej. Aby uzyskać więcej informacji, zobacz [Omówienie renderowania grafiki WPF](wpf-graphics-rendering-overview.md).  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   

@@ -2,20 +2,20 @@
 title: <policyImporter>
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: 81f38d2a163163ca7255ca546bbddbbb58fa3a1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 273bd0d5e68a661c639b82264b440b83d8127427
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783190"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933788"
 ---
 # <a name="policyimporter"></a>\<policyImporter>
-Określa importera zasad, który kontroluje importowanie niestandardowych asercji zasad dotyczących powiązań.  
+Określa importera zasad kontrolujących Importowanie potwierdzeń niestandardowych zasad dotyczących powiązań.  
   
  \<system.ServiceModel>  
-\<client>  
-\<metadata>  
-\<policyImporters>  
+\<> klienta  
+\<> metadanych  
+\<policyImporters >  
 \<policyImporter>  
   
 ## <a name="syntax"></a>Składnia  
@@ -44,10 +44,10 @@ Określa importera zasad, który kontroluje importowanie niestandardowych asercj
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<policyImporters>](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|Określa wszystkich importerów zasad sterujących importem potwierdzeń niestandardowych zasad dotyczących powiązań.|  
+|[\<policyImporters >](policyimporters.md)|Określa wszystkich importerów zasad kontrolujących Importowanie potwierdzeń niestandardowych zasad dotyczących powiązań.|  
   
 ## <a name="remarks"></a>Uwagi  
- Importer zasad służy do wyszukiwania niestandardowych asercji zasad dotyczących powiązań funkcji, jak również dołączyć element niestandardowego powiązania, który implementuje funkcje, których wymaga potwierdzenia.  
+ Importer zasad jest używany do wyszukiwania potwierdzeń niestandardowych zasad dotyczących funkcji powiązania, a także do dołączania niestandardowego elementu powiązania, który implementuje funkcje wymagane przez potwierdzenie.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -55,5 +55,5 @@ Określa importera zasad, który kontroluje importowanie niestandardowych asercj
 - <xref:System.ServiceModel.Configuration.PolicyImporterElement>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - <xref:System.ServiceModel.Description.MetadataImporter>
-- [Konfiguracja klienta programu WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [Klienci](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [Konfiguracja klienta programu WCF](../../../wcf/feature-details/client-configuration.md)
+- [Klienci](../../../wcf/feature-details/clients.md)

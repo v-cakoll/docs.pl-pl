@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 5fe464f2b79fa1f7b0674c049110d32f2ad32335
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545271"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944820"
 ---
 # <a name="panels-overview"></a>Przegląd Panele
 <xref:System.Windows.Controls.Panel>elementy to składniki kontrolujące renderowanie elementów — ich rozmiar i wymiary, ich położenie oraz układ zawartości podrzędnej. Zawiera wiele wstępnie zdefiniowanych <xref:System.Windows.Controls.Panel> elementów, a także możliwość konstruowania elementów niestandardowych <xref:System.Windows.Controls.Panel>. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]  
@@ -149,7 +149,7 @@ ms.locfileid: "69545271"
  Kolumny i wiersze zdefiniowane w ramach <xref:System.Windows.Controls.Grid> programu mogą korzystać z <xref:System.Windows.GridUnitType.Star> wielkości, aby w celu rozdzielenia pozostałego miejsca. Gdy <xref:System.Windows.GridUnitType.Star> jest wybrana jako wysokość lub szerokość wiersza lub kolumny, ta kolumna lub wiersz otrzymuje ważoną część pozostałego dostępnego miejsca. Jest to w przeciwieństwie <xref:System.Windows.GridUnitType.Auto>do, co spowoduje równomierne rozłożenie przestrzeni na podstawie rozmiaru zawartości w kolumnie lub wierszu. Ta wartość jest wyrażona `*` jako `2*` lub podczas [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]korzystania z. W pierwszym przypadku wiersz lub kolumna otrzyma jeden raz dostępne miejsce, w drugim przypadku, dwa razy itd. Łącząc tę technikę w celu proporcjonalnego rozproszenia miejsca <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> przy <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> użyciu wartości `Stretch` i, można podzielić na partycje obszar układu według wartości procentowej miejsca na ekranie. <xref:System.Windows.Controls.Grid>jest jedynym panelem układu, który może rozproszyć miejsce w ten sposób.  
   
 #### <a name="defining-and-using-a-grid"></a>Definiowanie i używanie siatki  
- Poniższy przykład ilustruje, jak utworzyć [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] podobny do, który znajduje się w oknie dialogowym uruchamiania dostępnym [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] w menu Start.  
+ Poniższy przykład ilustruje, jak utworzyć [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] podobny do, który znajduje się w oknie dialogowym uruchamiania dostępnym w menu Start systemu Windows.  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

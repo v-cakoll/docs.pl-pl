@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37f1f6055ec8fa68fe804780d2893d20c978e6bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 277b93267f0537c8e499a8d8f3b456c4396a975c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966340"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError — Interfejs
-Udostępnia mechanizm wywołania zwrotnego dla raportowania błędów podczas scalania metadanych.  
+Zapewnia mechanizm wywołania zwrotnego do raportowania błędów podczas scalania metadanych.  
   
 > [!NOTE]
->  `IMetaDataError` Interfejsu muszą być zaimplementowane przez klienta.  
+> `IMetaDataError` Interfejs musi być zaimplementowany przez klienta.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[OnError, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Zapewnia powiadomienie błędów występujących podczas scalania metadanych.|  
+|[OnError, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Zawiera powiadomienie o błędach występujących podczas scalania metadanych.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Nagłówki** Cor. h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Biblioteki** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

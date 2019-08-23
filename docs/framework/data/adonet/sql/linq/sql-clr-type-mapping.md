@@ -2,94 +2,94 @@
 title: Mapowania typów środowiska SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: d2ec70d014198299bd911b1a72ab8eb26c096ba9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0ac2c62388e554dad31beb54966fa2a4d5ffea2e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592472"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945026"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapowania typów środowiska SQL-CLR
-Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obiektów, które są jest wyrażone w wybranym języku programowania. Gdy aplikacja zostanie uruchomiona, LINQ to SQL tłumaczy języku zintegrowanym zapytania w modelu obiektów programu SQL i wysyła je do bazy danych do wykonania. Po powrocie z bazy danych wyników programu LINQ to SQL tłumaczy wyniki z powrotem do obiektów, które może pracować w języku użytkownika, programowania.  
+W LINQ to SQL model danych relacyjnej bazy danych jest mapowany na model obiektów, który jest wyrażony w wybranym języku programowania. Gdy aplikacja zostanie uruchomiona, LINQ to SQL przetłumaczy zapytania zintegrowane z językiem w modelu obiektów na SQL i wyśle je do bazy danych w celu wykonania. Gdy baza danych zwróci wyniki, LINQ to SQL przekształca wyniki z powrotem do obiektów, z których można korzystać w własnym języku programowania.  
   
- W celu tłumaczenia danych między model obiektu i bazy danych, *mapowania typów* musi być zdefiniowany. LINQ do SQL używa mapowania typów w celu dopasowania każdy typ środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego z określonym typem programu SQL Server. Można zdefiniować mapowanie typu i inne informacje dotyczące mapowania, takich jak bazy danych struktury i relacji między tabelami, wewnątrz modelu obiektów za pomocą mapowania opartych na atrybutach. Alternatywnie można określić informacje dotyczące mapowania poza model obiektów przy użyciu pliku mapowanie zewnętrzne. Aby uzyskać więcej informacji, zobacz [mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) i [mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+ Aby można było przetłumaczyć dane między modelem obiektów i bazą danych, należy zdefiniować *Mapowanie typu* . LINQ to SQL używa mapowania typu, aby dopasować każdy typ środowiska uruchomieniowego języka wspólnego (CLR) do określonego typu SQL Server. W modelu obiektów z mapowaniem opartym na atrybutach można definiować mapowania typów i inne informacje o mapowaniu, takie jak struktura bazy danych i relacje między tabelami. Alternatywnie możesz określić informacje o mapowaniu poza modelem obiektów z zewnętrznym plikiem mapowania. Aby uzyskać więcej informacji, zobacz [Mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) i [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
  W tym temacie omówiono następujące kwestie:  
   
-- [Domyślny typ mapowania](#DefaultTypeMapping)  
+- [Domyślne mapowanie typów](#DefaultTypeMapping)  
   
-- [Typ mapowania macierzy zachowania w czasie wykonywania](#BehaviorMatrix)  
+- [Macierz zachowań czasu wykonywania mapowania typów](#BehaviorMatrix)  
   
-- [Różnice zachowanie środowiska CLR i wykonywania instrukcji SQL.](#BehaviorDiffs)  
+- [Różnice w zachowaniu między środowiskiem CLR a wykonywaniem kodu SQL](#BehaviorDiffs)  
   
-- [Mapowanie wyliczenia](#EnumMapping)  
+- [Wyliczenie wyliczenia](#EnumMapping)  
   
-- [Mapowanie liczbowe](#NumericMapping)  
+- [Mapowanie numeryczne](#NumericMapping)  
   
-- [Tekst i mapowania XML](#TextMapping)  
+- [Mapowanie tekstu i XML](#TextMapping)  
   
-- [Data i godzina mapowania](#DateMapping)  
+- [Mapowanie daty i godziny](#DateMapping)  
   
 - [Mapowanie binarne](#BinaryMapping)  
   
-- [Różne mapowania](#MiscMapping)  
+- [Mapowanie różne](#MiscMapping)  
   
 <a name="DefaultTypeMapping"></a>   
-## <a name="default-type-mapping"></a>Domyślny typ mapowania  
- Można utworzyć modelu obiektów lub pliku mapowania zewnętrznych automatycznie Object Relational Designer (Projektant O/R) lub narzędzie wiersza polecenia SQLMetal. Domyślne mapowania typu tych narzędzi definiują, jakie typy CLR zostały wybrane do mapowania kolumn w bazie danych programu SQL Server. Aby uzyskać więcej informacji na temat używania tych narzędzi, zobacz [Tworzenie modelu obiektu](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md).  
+## <a name="default-type-mapping"></a>Domyślne mapowanie typów  
+ Można automatycznie utworzyć model obiektów lub zewnętrzny plik mapowania przy użyciu Object Relational Designer (Projektant O/R) lub narzędzia wiersza polecenia SQLMetal. Domyślne mapowania typów dla tych narzędzi definiują, które typy CLR są wybrane do mapowania na kolumny w bazie danych SQL Server. Aby uzyskać więcej informacji o korzystaniu z tych narzędzi, zobacz [Tworzenie modelu obiektów](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md).  
   
- Można również użyć <xref:System.Data.Linq.DataContext.CreateDatabase%2A> metodę, aby utworzyć bazę danych programu SQL Server na podstawie mapowania informacji w pliku mapowania zewnętrznych lub model obiektów. Mapowania typ domyślny dla <xref:System.Data.Linq.DataContext.CreateDatabase%2A> metodę zdefiniować typ serwera SQL, które kolumny są tworzone do mapowania środowiska CLR, typy w modelu obiektów. Aby uzyskać więcej informacji, zobacz [jak: Dynamiczne tworzenie bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
+ Można również użyć <xref:System.Data.Linq.DataContext.CreateDatabase%2A> metody, aby utworzyć bazę danych SQL Server na podstawie informacji o mapowaniu w modelu obiektów lub zewnętrznym pliku mapowania. Domyślne mapowania typu dla <xref:System.Data.Linq.DataContext.CreateDatabase%2A> metody definiują, który typ SQL Server kolumn jest tworzony w celu mapowania na typy CLR w modelu obiektów. Aby uzyskać więcej informacji, zobacz [jak: Dynamiczne tworzenie bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
   
 <a name="BehaviorMatrix"></a>   
-## <a name="type-mapping-run-time-behavior-matrix"></a>Typ mapowania macierzy zachowania w czasie wykonywania  
- Poniższy diagram przedstawia oczekiwanego zachowania mapowania określonego typu w czasie wykonywania, gdy dane są pobierane lub zapisywane w bazie danych. Z wyjątkiem serializacji LINQ to SQL nie obsługuje mapowania między żadnych danych CLR lub SQL Server, typy, które nie zostały określone w tej macierzy. Aby uzyskać więcej informacji na temat obsługi serializacji, zobacz [serializacji binarnej](#BinarySerialization).  
+## <a name="type-mapping-run-time-behavior-matrix"></a>Macierz zachowań czasu wykonywania mapowania typów  
+ Na poniższym diagramie przedstawiono oczekiwane zachowanie w czasie wykonywania mapowania określonego typu, gdy dane są pobierane lub zapisywane w bazie danych. Z wyjątkiem serializacji, LINQ to SQL nie obsługuje mapowania między dowolnymi typami danych CLR lub SQL Server, które nie są określone w tej macierzy. Aby uzyskać więcej informacji o obsłudze serializacji, zobacz [Serializacja binarna](#BinarySerialization).  
  
-![Program SQL Server do tabeli mapowania typu danych SQL CLR](media/sql-clr-type-mapping.png)
+![Tabela mapowania typu danych SQL CLR SQL Server](media/sql-clr-type-mapping.png)
 
 > [!NOTE]
->  Niektóre mapowania typu może spowodować wyjątki utraty danych lub przepełnienie podczas tłumaczenia do lub z bazy danych.  
+> Niektóre mapowania typów mogą spowodować przepełnienie lub wyjątki utraty danych podczas tłumaczenia do bazy danych lub z niej.  
   
-### <a name="custom-type-mapping"></a>Mapowanie niestandardowego typu  
- Za pomocą LINQ to SQL nie są ograniczone do domyślnego mapowania typu używane przez projektanta O/R SQLMetal i <xref:System.Data.Linq.DataContext.CreateDatabase%2A> metody. Mapowanie niestandardowego typu można utworzyć, jawnie określając je w pliku DBML. Następnie można użyć tego pliku DBML, można utworzyć pliku kod i mapowanie modelu obiektu. Aby uzyskać więcej informacji, zobacz [SQL CLR niestandardowy typ mapowania](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md).  
+### <a name="custom-type-mapping"></a>Niestandardowe Mapowanie typów  
+ W przypadku LINQ to SQL nie są ograniczone do domyślnych mapowań typów używanych przez projektanta O/R, SQLMetal i <xref:System.Data.Linq.DataContext.CreateDatabase%2A> metodę. Można utworzyć niestandardowe mapowania typów, jawnie określając je w pliku DBML. Następnie można użyć tego pliku DBML do utworzenia kodu modelu obiektu i pliku mapowania. Aby uzyskać więcej informacji, zobacz [niestandardowe mapowania typów SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md).  
   
 <a name="BehaviorDiffs"></a>   
-## <a name="behavior-differences-between-clr-and-sql-execution"></a>Różnice zachowanie środowiska CLR i wykonywania instrukcji SQL.  
- Ze względu na różnice w dokładności i wykonywania CLR i programu SQL Server możesz odbierać różne wyniki lub występują inne zachowanie w zależności od tego, gdzie wykonać obliczeń. Obliczenia wykonywane w składniku LINQ do zapytań SQL są faktycznie tłumaczone języka Transact-SQL i następnie wykonywane w bazie danych programu SQL Server. Obliczenia wykonywane poza LINQ do zapytań SQL są wykonywane w kontekście środowiska CLR.  
+## <a name="behavior-differences-between-clr-and-sql-execution"></a>Różnice w zachowaniu między środowiskiem CLR a wykonywaniem kodu SQL  
+ Ze względu na różnice między dokładnością i wykonywaniem między środowiskiem CLR a SQL Server, możesz otrzymać różne wyniki lub inne zachowanie w zależności od tego, gdzie wykonujesz obliczenia. Obliczenia wykonywane w zapytaniach LINQ to SQL są w rzeczywistości tłumaczone na Transact-SQL, a następnie wykonywane w bazie danych SQL Server. Obliczenia wykonywane poza zapytaniami LINQ to SQL są wykonywane w kontekście środowiska CLR.  
   
- Na przykład poniżej przedstawiono niektóre różnice w zachowaniu między CLR i programu SQL Server:  
+ Na przykład poniżej przedstawiono niektóre różnice w zachowaniu między środowiskiem CLR i SQL Server:  
   
-- Program SQL Server inaczej niż dane typu równoważne zamówień niektóre typy danych w CLR. Na przykład dane programu SQL Server typu `UNIQUEIDENTIFIER` są porządkowane inaczej niż dane typu CLR <xref:System.Guid?displayProperty=nameWithType>.  
+- SQL Server porządkuje niektóre typy danych inaczej niż dane typu równoważnego w środowisku CLR. Na przykład SQL Server dane typu `UNIQUEIDENTIFIER` są uporządkowane inaczej niż dane CLR typu. <xref:System.Guid?displayProperty=nameWithType>  
   
-- Program SQL Server obsługuje niektóre operacje porównania ciągu inaczej niż środowiska CLR. W programie SQL Server zachowanie porównania ciągu zależy od ustawienia sortowania na serwerze. Aby uzyskać więcej informacji, zobacz [Praca z ustawień sortowania](https://go.microsoft.com/fwlink/?LinkId=115330) w programie Microsoft SQL Server — książki Online.  
+- SQL Server obsługuje niektóre operacje porównywania ciągów inaczej niż środowisko CLR. W SQL Server zachowanie porównania ciągów zależy od ustawień sortowania na serwerze. Aby uzyskać więcej informacji, zobacz [Praca z sortowaniem](https://go.microsoft.com/fwlink/?LinkId=115330) w Microsoft SQL Server Books Online.  
   
-- Program SQL Server może zwracać różne wartości dla niektórych funkcji zamapowanego niż środowiska CLR. Na przykład równości funkcji różnią się, ponieważ program SQL Server uwzględnia dwa ciągi równy, jeśli różnią się odstępu; Środowisko CLR uważa musiały być równe.  
+- SQL Server mogą zwracać różne wartości dla niektórych funkcji mapowanych niż środowisko CLR. Na przykład funkcje równości będą się różnić, ponieważ SQL Server traktuje dwa ciągi, aby były równe, jeśli różnią się tylko znakami końcowymi. środowisko CLR uznaje, że nie jest równe.  
   
 <a name="EnumMapping"></a>   
-## <a name="enum-mapping"></a>Mapowanie wyliczenia  
- LINQ do SQL obsługuje mapowanie środowiska CLR <xref:System.Enum?displayProperty=nameWithType> typu do typów programu SQL Server na dwa sposoby:  
+## <a name="enum-mapping"></a>Wyliczenie wyliczenia  
+ LINQ to SQL obsługuje mapowanie typu CLR <xref:System.Enum?displayProperty=nameWithType> na typy SQL Server na dwa sposoby:  
   
-- Mapowanie na typy liczbowe języka SQL (`TINYINT`, `SMALLINT`, `INT`, `BIGINT`)  
+- Mapowanie na typy liczbowe SQL (`TINYINT`, `SMALLINT`, `INT` `BIGINT`,)  
   
-     Podczas mapowania CLR <xref:System.Enum?displayProperty=nameWithType> typu do typu numerycznego SQL, możesz zamapować wartość całkowitą bazowego środowiska CLR <xref:System.Enum?displayProperty=nameWithType> wartość kolumny bazy danych programu SQL Server. Na przykład jeśli <xref:System.Enum?displayProperty=nameWithType> o nazwie `DaysOfWeek` zawiera element o nazwie `Tue` ze źródłową wartością całkowitą 3, ten element członkowski jest mapowany na wartość 3 dla bazy danych.  
+     Podczas mapowania typu CLR <xref:System.Enum?displayProperty=nameWithType> na typ liczbowy SQL, można mapować podstawową wartość całkowitą środowiska CLR <xref:System.Enum?displayProperty=nameWithType> na wartość kolumny SQL Server bazy danych. Na przykład, jeśli <xref:System.Enum?displayProperty=nameWithType> nazwa `DaysOfWeek` zawiera element członkowski o nazwie `Tue` z podstawową wartością całkowitą wynoszącą 3, ten element członkowski jest mapowany na wartość bazy danych 3.  
   
-- Mapowania typów tekstu SQL (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`)  
+- Mapowanie na typy tekstu SQL (`CHAR`, `NCHAR`, `VARCHAR` `NVARCHAR`,)  
   
-     Podczas mapowania CLR <xref:System.Enum?displayProperty=nameWithType> typu do typu SQL, wartości bazy danych SQL jest mapowany do nazw środowiska CLR <xref:System.Enum?displayProperty=nameWithType> elementów członkowskich. Na przykład jeśli <xref:System.Enum?displayProperty=nameWithType> o nazwie `DaysOfWeek` zawiera element o nazwie `Tue` ze źródłową wartością całkowitą 3, ten element członkowski mapy do wartości bazy danych `Tue`.  
+     Podczas mapowania typu CLR <xref:System.Enum?displayProperty=nameWithType> na typ tekstu SQL wartość bazy danych SQL jest mapowana na nazwy elementów członkowskich środowiska CLR. <xref:System.Enum?displayProperty=nameWithType> Na przykład, <xref:System.Enum?displayProperty=nameWithType> Jeśli nazwa `DaysOfWeek` zawiera element członkowski o nazwie `Tue` z podstawową wartością całkowitą wynoszącą 3, `Tue`ten element członkowski jest mapowany na wartość bazy danych.  
   
 > [!NOTE]
->  Podczas mapowania typów tekstu SQL do CLR <xref:System.Enum?displayProperty=nameWithType>, zawierają tylko nazwy <xref:System.Enum> elementów członkowskich w mapowanej kolumny SQL. Inne wartości nie są obsługiwane w <xref:System.Enum>-mapowane na kolumny SQL.  
+> Podczas mapowania typów tekstu SQL na środowisko CLR <xref:System.Enum?displayProperty=nameWithType>należy uwzględnić tylko nazwy <xref:System.Enum> elementów członkowskich w mapowanej kolumnie SQL. Inne wartości nie są obsługiwane w <xref:System.Enum>zamapowanej kolumnie SQL.  
   
- Narzędzie wiersza polecenia O/R Designer i SQLMetal automatycznie nie można zamapować typu SQL do CLR <xref:System.Enum> klasy. To mapowanie należy skonfigurować jawnie, dostosowując do użytku przez projektanta O/R i SQLMetal za pomocą pliku DBML. Aby uzyskać więcej informacji na temat mapowania typu niestandardowego zobacz [niestandardowe mapowania typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md).  
+ Narzędzie wiersza polecenia Projektant O/R i SQLMetal nie może automatycznie zmapować typu SQL na klasę CLR <xref:System.Enum> . Należy jawnie skonfigurować to mapowanie, dostosowując plik DBML do użycia przez projektanta O/R i SQLMetal. Aby uzyskać więcej informacji na temat niestandardowego mapowania typów, zobacz [niestandardowe mapowania typów SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md).  
   
- Ponieważ kolumny SQL przeznaczonych do wyliczenia będzie tego samego typu co inne kolumny liczbowe i tekstowe; Narzędzia te nie rozpoznaje Twoje intencje i domyślne mapowanie zgodnie z opisem w następujących [liczbowych mapowania](#NumericMapping) i [tekstu i mapowania XML](#TextMapping) sekcje. Aby uzyskać więcej informacji na temat generowania kodu za pomocą pliku DBML zobacz [generowanie kodu w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+ Ponieważ kolumna SQL przeznaczona do wyliczenia będzie mieć taki sam typ jak inne kolumny liczbowe i tekstowe; Narzędzia te nie rozpoznają zamiaru i domyślnego mapowania zgodnie z opisem w poniższych sekcjach [Mapowanie liczbowe](#NumericMapping) i [tekst i XML](#TextMapping) . Aby uzyskać więcej informacji na temat generowania kodu przy użyciu pliku DBML, zobacz [generowanie kodu w LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
- <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> Metoda tworzy kolumny SQL typu liczbowego, aby zamapować CLR <xref:System.Enum?displayProperty=nameWithType> typu.  
+ Metoda tworzy kolumnę SQL typu liczbowego w celu mapowania typu CLR <xref:System.Enum?displayProperty=nameWithType>. <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>  
   
 <a name="NumericMapping"></a>   
-## <a name="numeric-mapping"></a>Mapowanie liczbowe  
- LINQ do SQL umożliwia mapowanie wielu CLR i programu SQL Server typów liczbowych. W poniższej tabeli przedstawiono typy CLR, że O/R Designer i SQLMetal wybrać podczas tworzenia modelu obiektów lub pliku mapowania zewnętrznych, na podstawie Twojej bazy danych.  
+## <a name="numeric-mapping"></a>Mapowanie numeryczne  
+ LINQ to SQL umożliwia mapowanie wielu typów CLR i SQL Server. W poniższej tabeli przedstawiono typy CLR, które Projektant O/R i SQLMetal wybiera podczas kompilowania modelu obiektów lub zewnętrznego pliku mapowania na podstawie bazy danych.  
   
-|Typ serwera SQL|Domyślne mapowanie typu środowiska CLR używane przez projektanta O/R i SQLMetal|  
+|Typ SQL Server|Domyślne mapowanie typu CLR używane przez projektanta O/R i SQLMetal|  
 |---------------------|-----------------------------------------------------------------|  
 |`BIT`|<xref:System.Boolean?displayProperty=nameWithType>|  
 |`TINYINT`|<xref:System.Int16?displayProperty=nameWithType>|  
@@ -102,9 +102,9 @@ Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obie
 |`REAL/FLOAT(24)`|<xref:System.Single?displayProperty=nameWithType>|  
 |`FLOAT/FLOAT(53)`|<xref:System.Double?displayProperty=nameWithType>|  
   
- W następnej tabeli przedstawiono domyślne mapowania typu, używany przez <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metodę, aby zdefiniować typy kolumn programu SQL są tworzone do mapowania na typy CLR zdefiniowane w modelu obiektu lub pliku mapowania zewnętrznych.  
+ W następnej tabeli przedstawiono domyślne mapowania typów używane przez <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metodę w celu zdefiniowania typu kolumn SQL do zamapowania na typy CLR zdefiniowane w modelu obiektów lub zewnętrznym pliku mapowania.  
   
-|Typ CLR|Typ serwera SQL domyślne używane przez <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Typ CLR|Domyślny typ SQL Server używany przez<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Boolean?displayProperty=nameWithType>|`BIT`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`TINYINT`|  
@@ -119,18 +119,18 @@ Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obie
 |<xref:System.Single?displayProperty=nameWithType>|`REAL`|  
 |<xref:System.Double?displayProperty=nameWithType>|`FLOAT`|  
   
- Istnieje wiele innych mapowaniach numeryczne, możesz wybrać, ale niektóre może spowodować przepełnienie lub dane utraty wyjątki podczas tłumaczenia do lub z bazy danych. Aby uzyskać więcej informacji, zobacz [Typ mapowania Uruchom czas zachowania macierzy](#BehaviorMatrix).  
+ Istnieje wiele innych mapowań numerycznych, które można wybrać, ale niektóre mogą spowodować przepełnienie lub wyjątki utraty danych podczas tłumaczenia do bazy danych lub z niej. Aby uzyskać więcej informacji, zobacz [macierze zachowania w czasie wykonywania mapowania typu](#BehaviorMatrix).  
   
-### <a name="decimal-and-money-types"></a>Dziesiętnego i typy pieniędzy  
- Domyślna dokładność programu SQL Server `DECIMAL` typu (18 cyfr dziesiętnych po lewej i prawej stronie przecinka dziesiętnego) jest znacznie mniejsza niż precyzja CLR <xref:System.Decimal?displayProperty=nameWithType> typ, który jest powiązany z, domyślnie. Może to spowodować utratę dokładności podczas zapisywania danych w bazie danych. Jednak po prostu przeciwieństwem może nastąpić, jeśli program SQL Server `DECIMAL` typ jest skonfigurowany z więcej niż 29 cyfr precyzji. Gdy serwer SQL `DECIMAL` typ został skonfigurowany z większą precyzję niż CLR <xref:System.Decimal?displayProperty=nameWithType>, może dojść do utraty precyzji podczas pobierania danych z bazy danych.  
+### <a name="decimal-and-money-types"></a>Typy dziesiętne i pieniężne  
+ Domyślna precyzja typu SQL Server `DECIMAL` (18 cyfr dziesiętnych po lewej i prawej stronie przecinka dziesiętnego) jest znacznie mniejsza niż precyzja typu CLR <xref:System.Decimal?displayProperty=nameWithType> , z którym jest domyślnie sparowana. Może to spowodować utratę dokładności podczas zapisywania danych w bazie danych. Jednak w przypadku, gdy typ SQL Server `DECIMAL` jest skonfigurowany z większą niż 29 cyfr. Jeśli typ SQL Server `DECIMAL` został skonfigurowany z większą dokładnością niż środowisko CLR <xref:System.Decimal?displayProperty=nameWithType>, podczas pobierania danych z bazy danych może wystąpić utrata dokładności.  
   
- SQL Server `MONEY` i `SMALLMONEY` typy, które również są skojarzone z CLR <xref:System.Decimal?displayProperty=nameWithType> wpisz domyślnie, ma dużo mniejsze dokładności, co może skutkować wyjątki utraty danych lub przepełnienie podczas zapisywania danych w bazie danych.  
+ SQL Server `MONEY` <xref:System.Decimal?displayProperty=nameWithType> i `SMALLMONEY` typy, które są również sparowane z typem CLR, mają znacznie mniejszą precyzję, co może spowodować przepełnienie lub wyjątki utraty danych podczas zapisywania danych w bazie danych.  
   
 <a name="TextMapping"></a>   
-## <a name="text-and-xml-mapping"></a>Tekst i mapowania XML  
- Dostępne są także wiele oparte na tekście oraz typy XML, które można zamapować za pomocą LINQ to SQL. W poniższej tabeli przedstawiono typy CLR, że O/R Designer i SQLMetal wybrać podczas tworzenia modelu obiektów lub pliku mapowania zewnętrznych, na podstawie Twojej bazy danych.  
+## <a name="text-and-xml-mapping"></a>Mapowanie tekstu i XML  
+ Istnieje również wiele typów tekstowych i XML, które można mapować przy użyciu LINQ to SQL. W poniższej tabeli przedstawiono typy CLR, które Projektant O/R i SQLMetal wybiera podczas kompilowania modelu obiektów lub zewnętrznego pliku mapowania na podstawie bazy danych.  
   
-|Typ serwera SQL|Domyślne mapowanie typu środowiska CLR używane przez projektanta O/R i SQLMetal|  
+|Typ SQL Server|Domyślne mapowanie typu CLR używane przez projektanta O/R i SQLMetal|  
 |---------------------|-----------------------------------------------------------------|  
 |`CHAR`|<xref:System.String?displayProperty=nameWithType>|  
 |`NCHAR`|<xref:System.String?displayProperty=nameWithType>|  
@@ -140,41 +140,41 @@ Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obie
 |`NTEXT`|<xref:System.String?displayProperty=nameWithType>|  
 |`XML`|<xref:System.Xml.Linq.XElement?displayProperty=nameWithType>|  
   
- W następnej tabeli przedstawiono domyślne mapowania typu, używany przez <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metodę, aby zdefiniować typy kolumn programu SQL są tworzone do mapowania na typy CLR zdefiniowane w modelu obiektu lub pliku mapowania zewnętrznych.  
+ W następnej tabeli przedstawiono domyślne mapowania typów używane przez <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metodę w celu zdefiniowania typu kolumn SQL do zamapowania na typy CLR zdefiniowane w modelu obiektów lub zewnętrznym pliku mapowania.  
   
-|Typ CLR|Typ serwera SQL domyślne używane przez <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Typ CLR|Domyślny typ SQL Server używany przez<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Char?displayProperty=nameWithType>|`NCHAR(1)`|  
 |<xref:System.String?displayProperty=nameWithType>|`NVARCHAR(4000)`|  
 |<xref:System.Char?displayProperty=nameWithType>[]|`NVARCHAR(4000)`|  
-|Implementowanie niestandardowego typu `Parse()` i `ToString()`|`NVARCHAR(MAX)`|  
+|Implementacja `Parse()` typu niestandardowego i`ToString()`|`NVARCHAR(MAX)`|  
   
- Istnieje wiele innych oparte na tekście i mapowania XML można wybrać, ale niektóre może spowodować przepełnienie lub dane utraty wyjątki podczas tłumaczenia do lub z bazy danych. Aby uzyskać więcej informacji, zobacz [Typ mapowania Uruchom czas zachowania macierzy](#BehaviorMatrix).  
+ Istnieje wiele innych mapowań tekstowych i XML, które można wybrać, ale niektóre mogą spowodować przepełnienie lub wyjątki utraty danych podczas tłumaczenia do bazy danych lub z niej. Aby uzyskać więcej informacji, zobacz [macierze zachowania w czasie wykonywania mapowania typu](#BehaviorMatrix).  
   
 ### <a name="xml-types"></a>Typy XML  
- SQL Server `XML` — typ danych jest dostępna, począwszy od programu Microsoft SQL Server 2005. SQL Server można mapować `XML` typ danych ma <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument>, lub <xref:System.String>. Jeśli kolumna przechowuje fragmenty XML, które nie można odczytać na <xref:System.Xml.Linq.XElement>, kolumna musi być zamapowany na <xref:System.String> w celu uniknięcia błędów czasu wykonywania. Fragmenty XML, które muszą być zamapowane na <xref:System.String> obejmują następujące elementy:  
+ SQL Server `XML` typ danych jest dostępny od Microsoft SQL Server 2005. Możesz zmapować SQL Server `XML` typ danych na <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument>, lub <xref:System.String>. Jeśli w kolumnie są przechowywane fragmenty XML, których nie można <xref:System.Xml.Linq.XElement>odczytać, należy <xref:System.String> zamapować kolumnę, aby uniknąć błędów w czasie wykonywania. Fragmenty XML, które muszą być mapowane <xref:System.String> , aby uwzględnić następujące elementy:  
   
 - Sekwencja elementów XML  
   
 - Atrybuty  
   
-- Publiczne identyfikatory (PI)  
+- Identyfikatory publiczne (PI)  
   
 - Komentarze  
   
- Mimo że można mapować <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XDocument> do programu SQL Server, jak pokazano na [macierzy zachowanie czas uruchomienia mapowania typu](#BehaviorMatrix), <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metoda nie ma domyślnego programu SQL Server typu mapowania dla tych typów.  
+ Chociaż można mapować <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XDocument> do SQL Server, jak pokazano w <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> [macierzy zachowania czasu wykonywania mapowania typów](#BehaviorMatrix), metoda nie ma domyślnego mapowania typu SQL Server dla tych typów.  
   
-### <a name="custom-types"></a>Niestandardowe typy  
- Jeśli klasa implementuje `Parse()` i `ToString()`, obiekt można mapować do dowolnego typu tekstu SQL (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`, `TEXT`, `NTEXT`, `XML`). Obiekt jest przechowywany w bazie danych, wysyłając wartość zwrócona przez obiekt `ToString()` w kolumnie zamapowanego bazy danych. Obiekt jest odtworzone, wywołując `Parse()` na ciąg zwracany przez bazę danych.  
+### <a name="custom-types"></a>Typy niestandardowe  
+ Jeśli `Parse()` Klasa implementuje i `ToString()`, można mapować obiekt na dowolny `TEXT``CHAR` `VARCHAR` `NTEXT` `NCHAR`typ tekstu SQL (, ,`XML`,,,,). `NVARCHAR` Obiekt jest przechowywany w bazie danych przez wysłanie wartości zwróconej przez `ToString()` do kolumny zamapowanej bazy danych. Obiekt jest tworzony przez wywołanie `Parse()` na ciągu zwracanego przez bazę danych.  
   
 > [!NOTE]
->  LINQ do SQL nie obsługuje serializacji przy użyciu <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>.  
+> LINQ to SQL nie obsługuje serializacji przy użyciu <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>.  
   
 <a name="DateMapping"></a>   
-## <a name="date-and-time-mapping"></a>Data i godzina mapowania  
- Za pomocą LINQ to SQL można mapować wielu typów daty i godziny programu SQL Server. W poniższej tabeli przedstawiono typy CLR, że O/R Designer i SQLMetal wybrać podczas tworzenia modelu obiektów lub pliku mapowania zewnętrznych, na podstawie Twojej bazy danych.  
+## <a name="date-and-time-mapping"></a>Mapowanie daty i godziny  
+ Za pomocą LINQ to SQL można mapować wiele SQL Server typów daty i godziny. W poniższej tabeli przedstawiono typy CLR, które Projektant O/R i SQLMetal wybiera podczas kompilowania modelu obiektów lub zewnętrznego pliku mapowania na podstawie bazy danych.  
   
-|Typ serwera SQL|Domyślne mapowanie typu środowiska CLR używane przez projektanta O/R i SQLMetal|  
+|Typ SQL Server|Domyślne mapowanie typu CLR używane przez projektanta O/R i SQLMetal|  
 |---------------------|-----------------------------------------------------------------|  
 |`SMALLDATETIME`|<xref:System.DateTime?displayProperty=nameWithType>|  
 |`DATETIME`|<xref:System.DateTime?displayProperty=nameWithType>|  
@@ -183,78 +183,78 @@ Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obie
 |`DATE`|<xref:System.DateTime?displayProperty=nameWithType>|  
 |`TIME`|<xref:System.TimeSpan?displayProperty=nameWithType>|  
   
- W następnej tabeli przedstawiono domyślne mapowania typu, używany przez <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metodę, aby zdefiniować typy kolumn programu SQL są tworzone do mapowania na typy CLR zdefiniowane w modelu obiektu lub pliku mapowania zewnętrznych.  
+ W następnej tabeli przedstawiono domyślne mapowania typów używane przez <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metodę w celu zdefiniowania typu kolumn SQL do zamapowania na typy CLR zdefiniowane w modelu obiektów lub zewnętrznym pliku mapowania.  
   
-|Typ CLR|Typ serwera SQL domyślne używane przez <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Typ CLR|Domyślny typ SQL Server używany przez<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|`DATETIME`|  
 |<xref:System.DateTimeOffset?displayProperty=nameWithType>|`DATETIMEOFFSET`|  
 |<xref:System.TimeSpan?displayProperty=nameWithType>|`TIME`|  
   
- Istnieje wiele innych daty i godziny mapowania możesz wybrać, ale niektóre może spowodować przepełnienie lub dane utraty wyjątki podczas tłumaczenia do lub z bazy danych. Aby uzyskać więcej informacji, zobacz [Typ mapowania Uruchom czas zachowania macierzy](#BehaviorMatrix).  
+ Istnieje wiele innych mapowań daty i godziny, które można wybrać, ale niektóre mogą spowodować przepełnienie lub wyjątki utraty danych podczas tłumaczenia do bazy danych lub z niej. Aby uzyskać więcej informacji, zobacz [macierze zachowania w czasie wykonywania mapowania typu](#BehaviorMatrix).  
   
 > [!NOTE]
->  Typy programu SQL Server `DATETIME2`, `DATETIMEOFFSET`, `DATE`, i `TIME` są dostępne, począwszy od programu Microsoft SQL Server 2008. LINQ do SQL obsługuje mapowanie na te nowe typy, począwszy od .NET Framework w wersji 3.5 z dodatkiem SP1.  
+> Typy `DATETIME2` `DATETIMEOFFSET`SQL Server ,,i`TIME` są dostępne począwszy od Microsoft SQL Server 2008. `DATE` LINQ to SQL obsługuje mapowanie na te nowe typy, zaczynając od .NET Framework wersji 3,5 SP1.  
   
 ### <a name="systemdatetime"></a>System.Datetime  
- Zakres i dokładność CLR <xref:System.DateTime?displayProperty=nameWithType> typu jest większy niż zakres i dokładność, programu SQL Server `DATETIME` typ, który jest domyślnym typem mapowanie <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metody. Aby zapobiec powstawaniu wyjątki związane z datami poza zakresem `DATETIME`, użyj `DATETIME2`, która jest dostępna, począwszy od programu Microsoft SQL Server 2008. `DATETIME2` może odnosić się zakres i dokładność CLR <xref:System.DateTime?displayProperty=nameWithType>.  
+ Zakres i precyzja typu CLR <xref:System.DateTime?displayProperty=nameWithType> są większe niż zakres i precyzja typu SQL Server `DATETIME` , który jest <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> domyślnym mapowaniem typu dla metody. Aby zapobiec wyjątkom związanym z datami poza zakresem `DATETIME`, użyj `DATETIME2`, który jest dostępny od Microsoft SQL Server 2008. `DATETIME2`może pasować do zakresu i dokładności środowiska CLR <xref:System.DateTime?displayProperty=nameWithType>.  
   
- Daty programu SQL Server nie ma żadnych koncepcji <xref:System.TimeZone>, funkcja, która graficznie jest obsługiwana w środowisku CLR. <xref:System.TimeZone> wartości są zapisywane jako bazy danych bez <xref:System.TimeZone> konwersji, niezależnie od tego, oryginalnym <xref:System.DateTimeKind> informacji. Gdy <xref:System.DateTime> wartości są pobierane z bazy danych, ich wartość jest załadowany, ponieważ jest w <xref:System.DateTime> z <xref:System.DateTimeKind> z <xref:System.DateTimeKind.Unspecified>. Aby uzyskać więcej informacji na temat obsługiwanych <xref:System.DateTime?displayProperty=nameWithType> metod, zobacz [metody System.DateTime](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
+ SQL Server daty nie mają koncepcji <xref:System.TimeZone>, funkcja, która jest w sposób bogaty obsługiwana w środowisku CLR. <xref:System.TimeZone>wartości są zapisywane jako do bazy danych bez <xref:System.TimeZone> konwersji, niezależnie od oryginalnych <xref:System.DateTimeKind> informacji. Gdy <xref:System.DateTime> wartości są pobierane z bazy danych, ich wartości są ładowane w postaci <xref:System.DateTime> do i z <xref:System.DateTimeKind>. <xref:System.DateTimeKind.Unspecified> Aby uzyskać więcej informacji na <xref:System.DateTime?displayProperty=nameWithType> temat obsługiwanych metod, zobacz [metody System. DateTime](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
- Microsoft SQL Server 2008 i .NET Framework 3.5 SP1 pozwalają na mapowanie środowiska CLR <xref:System.TimeSpan?displayProperty=nameWithType> typu do programu SQL Server `TIME` typu. Istnieje jednak duża różnica między zakresu, środowisko CLR <xref:System.TimeSpan?displayProperty=nameWithType> obsługuje i jakie programu SQL Server `TIME` wpisz obsługuje. Mapowania wartości mniejszej niż 0 lub większa od godziny 23:59:59.9999999 SQL `TIME` spowoduje wyjątki przepełnienia. Aby uzyskać więcej informacji, zobacz [metody System.TimeSpan](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md).  
+ Microsoft SQL Server 2008 i .NET Framework 3,5 SP1 umożliwiają mapowanie typu CLR <xref:System.TimeSpan?displayProperty=nameWithType> na typ SQL Server. `TIME` Istnieje jednak duża różnica między zakresem obsługiwanym przez środowisko CLR <xref:System.TimeSpan?displayProperty=nameWithType> a elementem obsługiwanym przez typ SQL Server. `TIME` Mapowanie wartości mniejszej niż 0 lub większej niż 23:59:59.9999999 godziny do bazy `TIME` danych SQL spowoduje przepełnienie wyjątków. Aby uzyskać więcej informacji, zobacz [metody System. TimeSpan](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md).  
   
- W programie Microsoft SQL Server 2000 i SQL Server 2005, nie można zamapować pola bazy danych do <xref:System.TimeSpan>. Jednak operacje na <xref:System.TimeSpan> są obsługiwane, ponieważ <xref:System.TimeSpan> wartości mogą być zwracane przez <xref:System.DateTime> odejmowania lub wprowadzane do wyrażenia jako zmienną literału lub powiązanej.  
+ W Microsoft SQL Server 2000 i SQL Server 2005 nie można mapować pól bazy danych na <xref:System.TimeSpan>. Jednak operacje na <xref:System.TimeSpan> są obsługiwane, ponieważ <xref:System.TimeSpan> wartości mogą być zwracane z <xref:System.DateTime> odejmowania lub wprowadzane do wyrażenia jako literału lub zmiennej powiązanej.  
   
 <a name="BinaryMapping"></a>   
 ## <a name="binary-mapping"></a>Mapowanie binarne  
- Istnieje wiele typów programu SQL Server, które można zamapować na typ CLR <xref:System.Data.Linq.Binary?displayProperty=nameWithType>. W poniższej tabeli przedstawiono typy programu SQL Server, które powodują O/R Designer i SQLMetal w celu określenia CLR <xref:System.Data.Linq.Binary?displayProperty=nameWithType> typu podczas tworzenia modelu obiektów lub pliku mapowania zewnętrznego na podstawie Twojej bazy danych.  
+ Istnieje wiele typów SQL Server, które można zamapować na typ <xref:System.Data.Linq.Binary?displayProperty=nameWithType>CLR. W poniższej tabeli przedstawiono typy SQL Server, które powodują, że Projektant O/R i SQLMetal definiują <xref:System.Data.Linq.Binary?displayProperty=nameWithType> typ CLR podczas kompilowania modelu obiektów lub zewnętrznego pliku mapowania na podstawie bazy danych.  
   
-|Typ serwera SQL|Domyślne mapowanie typu środowiska CLR używane przez projektanta O/R i SQLMetal|  
+|Typ SQL Server|Domyślne mapowanie typu CLR używane przez projektanta O/R i SQLMetal|  
 |---------------------|-----------------------------------------------------------------|  
 |`BINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(MAX)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
-|`VARBINARY(MAX)` za pomocą `FILESTREAM` atrybutu|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
+|`VARBINARY(MAX)``FILESTREAM` z atrybutem|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`IMAGE`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`TIMESTAMP`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
   
- W następnej tabeli przedstawiono domyślne mapowania typu, używany przez <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metodę, aby zdefiniować typy kolumn programu SQL są tworzone do mapowania na typy CLR zdefiniowane w modelu obiektu lub pliku mapowania zewnętrznych.  
+ W następnej tabeli przedstawiono domyślne mapowania typów używane przez <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metodę w celu zdefiniowania typu kolumn SQL do zamapowania na typy CLR zdefiniowane w modelu obiektów lub zewnętrznym pliku mapowania.  
   
-|Typ CLR|Typ serwera SQL domyślne używane przez <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Typ CLR|Domyślny typ SQL Server używany przez<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
 |<xref:System.Runtime.Serialization.ISerializable?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
   
- Istnieje wiele innych mapowaniach binarne, możesz wybrać, ale niektóre może spowodować przepełnienie lub dane utraty wyjątki podczas tłumaczenia do lub z bazy danych. Aby uzyskać więcej informacji, zobacz [Typ mapowania Uruchom czas zachowania macierzy](#BehaviorMatrix).  
+ Istnieje wiele innych mapowań binarnych, które można wybrać, ale niektóre mogą spowodować przepełnienie lub wyjątki utraty danych podczas tłumaczenia do bazy danych lub z niej. Aby uzyskać więcej informacji, zobacz [macierze zachowania w czasie wykonywania mapowania typu](#BehaviorMatrix).  
   
-### <a name="sql-server-filestream"></a>Program SQL Server FILESTREAM  
- `FILESTREAM` Atrybutu dla `VARBINARY(MAX)` kolumny jest dostępna, począwszy od programu Microsoft SQL Server 2008; można mapować do niego za pomocą LINQ to SQL, począwszy od .NET Framework w wersji 3.5 z dodatkiem SP1.  
+### <a name="sql-server-filestream"></a>SQL Server FILESTREAM  
+ Atrybut `FILESTREAM` dla`VARBINARY(MAX)` kolumn jest dostępny, zaczynając od Microsoft SQL Server 2008; można go mapować do LINQ to SQL, rozpoczynając od .NET Framework wersji 3,5 SP1.  
   
- Mimo że można mapować `VARBINARY(MAX)` kolumn z `FILESTREAM` atrybutu <xref:System.Data.Linq.Binary> obiektów <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metoda nie może automatycznie tworzyć kolumny z `FILESTREAM` atrybutu. Aby uzyskać więcej informacji na temat `FILESTREAM`, zobacz [Przegląd FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=115291) w programie Microsoft SQL Server — książki Online.  
+ Chociaż `VARBINARY(MAX)` można mapować `FILESTREAM` kolumny `FILESTREAM` z <xref:System.Data.Linq.Binary> atrybutemdoobiektów,metodaniemożeautomatycznietworzyćkolumnzatrybutem.<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> Aby uzyskać więcej informacji `FILESTREAM`na temat, zobacz [Omówienie usługi FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=115291) na Microsoft SQL Server Books Online.  
   
 <a name="BinarySerialization"></a>   
 ### <a name="binary-serialization"></a>Serializacja binarna  
- Jeśli klasa implementuje <xref:System.Runtime.Serialization.ISerializable> interfejsu, może wykonać serializację obiektu dla dowolnego pola binarne, SQL (`BINARY`, `VARBINARY`, `IMAGE`). Obiekt jest serializacji i deserializacji zgodnie z sposób, w jaki <xref:System.Runtime.Serialization.ISerializable> interfejs jest implementowany. Aby uzyskać więcej informacji, zobacz [serializacji binarnej](https://go.microsoft.com/fwlink/?LinkId=115581).  
+ Jeśli klasa implementuje <xref:System.Runtime.Serialization.ISerializable> interfejs, można serializować obiekt do dowolnego pola binarnego SQL (`BINARY`, `VARBINARY`, `IMAGE`). Obiekt jest serializowany i deserializowany zgodnie z <xref:System.Runtime.Serialization.ISerializable> zaimplementowanym interfejsem. Aby uzyskać więcej informacji, zobacz [Serializacja binarna](https://go.microsoft.com/fwlink/?LinkId=115581).  
   
 <a name="MiscMapping"></a>   
-## <a name="miscellaneous-mapping"></a>Różne mapowania  
- W poniższej tabeli przedstawiono domyślne mapowania typu dla niektórych dodatkowych typów, które nie zostały wymienione. W poniższej tabeli przedstawiono typy CLR, że O/R Designer i SQLMetal wybrać podczas tworzenia modelu obiektów lub pliku mapowania zewnętrznych, na podstawie Twojej bazy danych.  
+## <a name="miscellaneous-mapping"></a>Mapowanie różne  
+ W poniższej tabeli przedstawiono domyślne mapowania typów dla niektórych typów różnych, które nie zostały jeszcze wymienione. W poniższej tabeli przedstawiono typy CLR, które Projektant O/R i SQLMetal wybiera podczas kompilowania modelu obiektów lub zewnętrznego pliku mapowania na podstawie bazy danych.  
   
-|Typ serwera SQL|Domyślne mapowanie typu środowiska CLR używane przez projektanta O/R i SQLMetal|  
+|Typ SQL Server|Domyślne mapowanie typu CLR używane przez projektanta O/R i SQLMetal|  
 |---------------------|-----------------------------------------------------------------|  
 |`UNIQUEIDENTIFIER`|<xref:System.Guid?displayProperty=nameWithType>|  
 |`SQL_VARIANT`|<xref:System.Object?displayProperty=nameWithType>|  
   
- W następnej tabeli przedstawiono domyślne mapowania typu, używany przez <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metodę, aby zdefiniować typy kolumn programu SQL są tworzone do mapowania na typy CLR zdefiniowane w modelu obiektu lub pliku mapowania zewnętrznych.  
+ W następnej tabeli przedstawiono domyślne mapowania typów używane przez <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metodę w celu zdefiniowania typu kolumn SQL do zamapowania na typy CLR zdefiniowane w modelu obiektów lub zewnętrznym pliku mapowania.  
   
-|Typ CLR|Typ serwera SQL domyślne używane przez <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Typ CLR|Domyślny typ SQL Server używany przez<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Guid?displayProperty=nameWithType>|`UNIQUEIDENTIFIER`|  
 |<xref:System.Object?displayProperty=nameWithType>|`SQL_VARIANT`|  
   
- LINQ do SQL nie obsługuje innych mapowania typów dla tych różnych typów.  Aby uzyskać więcej informacji, zobacz [Typ mapowania Uruchom czas zachowania macierzy](#BehaviorMatrix).  
+ LINQ to SQL nie obsługuje żadnych innych mapowań typów dla tych typów różnych.  Aby uzyskać więcej informacji, zobacz [macierze zachowania w czasie wykonywania mapowania typu](#BehaviorMatrix).  
   
 ## <a name="see-also"></a>Zobacz także
 

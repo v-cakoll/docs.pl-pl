@@ -5,62 +5,62 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: cc2e25183649f6a95e7862520ccc5719f201277a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ddd6ebc6215ec17fa416fb0de8f81cf631365db
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774650"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936041"
 ---
 # <a name="how-to-call-custom-database-functions"></a>Instrukcje: Wywoływanie niestandardowych funkcji bazy danych
-W tym temacie opisano sposób wywołania funkcji niestandardowych, które są zdefiniowane w bazie danych z w ramach programu LINQ do zapytań jednostki.  
+W tym temacie opisano sposób wywoływania funkcji niestandardowych, które są zdefiniowane w bazie danych z zapytań LINQ to Entities.  
   
- Funkcje bazy danych, które są wywoływane z LINQ do zapytań jednostki są wykonywane w bazie danych. Wykonywanie funkcji w bazie danych może zwiększyć wydajność aplikacji.  
+ Funkcje bazy danych, które są wywoływane z zapytań LINQ to Entities są wykonywane w bazie danych programu. Wykonywanie funkcji w bazie danych może zwiększyć wydajność aplikacji.  
   
- Poniższa procedura zawiera WYSOKOPOZIOMOWY zarys wywoływania funkcji niestandardowej bazy danych. W poniższym przykładzie zapewnia więcej szczegółów na temat czynności opisane w procedurze.  
+ Poniższa procedura zawiera konspekt wysokiego poziomu służący do wywoływania niestandardowej funkcji bazy danych. Poniższy przykład zawiera bardziej szczegółowe informacje na temat kroków w procedurze.  
   
-### <a name="to-call-custom-functions-that-are-defined-in-the-database"></a>Aby wywołać funkcje niestandardowe, które są zdefiniowane w bazie danych  
+### <a name="to-call-custom-functions-that-are-defined-in-the-database"></a>Aby wywołać funkcje niestandardowe zdefiniowane w bazie danych  
   
-1. Tworzenie funkcji niestandardowej w bazie danych.  
+1. Utwórz funkcję niestandardową w bazie danych.  
   
-     Aby uzyskać więcej informacji na temat tworzenia funkcji niestandardowych w programie SQL Server, zobacz [CREATE FUNCTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=139871).  
+     Aby uzyskać więcej informacji na temat tworzenia funkcji niestandardowych w SQL Server, zobacz [CREATE FUNCTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=139871).  
   
-2. Deklarowanie funkcji w język definicji schematu magazynu (SSDL) pliku edmx. Nazwa funkcji musi być taka sama jak nazwa funkcji zadeklarowanych w bazie danych.  
+2. Zadeklaruj funkcję w języku definicji schematu magazynu (SSDL) pliku. edmx. Nazwa funkcji musi być taka sama jak nazwa funkcji zadeklarowanej w bazie danych.  
   
-     Aby uzyskać więcej informacji, zobacz [elementu — funkcja (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl).  
+     Aby uzyskać więcej informacji, zobacz [Funkcja element (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl).  
   
-3. Dodaj odpowiadającą im metodę do klasy w kodzie aplikacji i zastosować <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> metody należy pamiętać, że <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> i <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> parametry atrybutu jest nazwa przestrzeni nazw modelu koncepcyjnego i nazwą funkcji w treści koncepcyjnej model, odpowiednio. Funkcja rozpoznawania nazw dla programu LINQ jest uwzględniana wielkość liter.  
+3. Dodaj odpowiadającą metodę do klasy w kodzie aplikacji i Zastosuj <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> do metody należy zauważyć <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> , że parametry i <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> atrybutu są nazwą przestrzeni nazw modelu koncepcyjnego i nazwą funkcji w koncepcyjnej odpowiednio model. Rozpoznawanie nazw funkcji dla LINQ jest rozróżniana wielkość liter.  
   
-4. Wywołaj metodę w zapytaniu składnika LINQ to Entities.  
+4. Wywołaj metodę w kwerendzie LINQ to Entities.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak wywołać funkcję niestandardową bazę danych z w LINQ do kwerendy jednostek. W przykładzie użyto modelu szkoły. Aby uzyskać informacje na temat modelu szkoły, zobacz [tworzenie przykładowej bazy danych School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) i [generowania edmx School pliku](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  
+ W poniższym przykładzie pokazano, jak wywołać funkcję niestandardowej bazy danych z poziomu zapytania LINQ to Entities. W przykładzie zastosowano model szkoły. Aby uzyskać informacje o modelu szkoły, zobacz [Tworzenie przykładowej bazy danych szkoły](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) i [generowanie pliku szkoły. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  
   
- Poniższy kod dodaje `AvgStudentGrade` funkcji przykładowej bazy danych School.  
+ Poniższy kod dodaje `AvgStudentGrade` funkcję do przykładowej bazy danych szkoły.  
   
 > [!NOTE]
->  Kroki do wywoływania funkcji niestandardowej bazy danych są takie same, niezależnie od serwera bazy danych. Jednak kod poniżej dotyczy tworzenia funkcji w bazie danych programu SQL Server. Kod dla tworzenia niestandardowych funkcji na inne serwery baz danych mogą się różnić.  
+> Kroki wywołania niestandardowej bazy danych są takie same, niezależnie od serwera bazy danych. Jednak poniższy kod jest specyficzny dla tworzenia funkcji w bazie danych SQL Server. Kod służący do tworzenia funkcji niestandardowej na innych serwerach bazy danych może się różnić.  
   
  [!code-sql[DP L2E MapToDBFunction#1](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp l2e maptodbfunction/tsql/create_avgstudentgrade.sql#1)]  
   
 ## <a name="example"></a>Przykład  
- Następnie można zadeklarować funkcji w język definicji schematu magazynu (SSDL) pliku edmx. Poniższy kod deklaruje `AvgStudentGrade` funkcji w SSDL:  
+ Następnie zadeklaruj funkcję w języku definicji schematu magazynu (SSDL) pliku. edmx. Poniższy kod deklaruje `AvgStudentGrade` funkcję w SSDL:  
   
  [!code-xml[DP L2E MapToDBFunction#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e maptodbfunction/cs/school.edmx#2)]  
   
 ## <a name="example"></a>Przykład  
- Teraz Utwórz metodę i mapowany do funkcji zadeklarowanych w SSDL. Metoda następujące klasy jest mapowany na funkcję zdefiniowaną w SSDL (powyżej) przy użyciu <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Gdy ta metoda jest wywoływana, odpowiednich funkcji w bazie danych jest wykonywana.  
+ Teraz Utwórz metodę i zamapuj ją na funkcję zadeklarowaną w SSDL. Metoda w poniższej klasie jest zamapowana na funkcję zdefiniowaną w SSDL (powyżej) przy użyciu <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Gdy ta metoda jest wywoływana, odpowiednia funkcja w bazie danych jest wykonywana.  
   
  [!code-csharp[DP L2E MapToDBFunction#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e maptodbfunction/cs/program.cs#3)]
  [!code-vb[DP L2E MapToDBFunction#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#3)]  
   
 ## <a name="example"></a>Przykład  
- Na koniec Wywołaj metodę w zapytaniu składnika LINQ to Entities. Poniższy kod Wyświetla nazwiska uczniów i średni klas do konsoli:  
+ Na koniec Wywołaj metodę w kwerendzie LINQ to Entities. Poniższy kod wyświetla nazwisko uczniów i średnią ocenę w konsoli:  
   
  [!code-csharp[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e maptodbfunction/cs/program.cs#4)]
  [!code-vb[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Omówienie pliku edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Plik. edmx — Omówienie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

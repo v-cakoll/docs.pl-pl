@@ -10,24 +10,24 @@ helpviewer_keywords:
 ms.assetid: 983b4213-bddd-4a44-9262-cbe59186df4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 544ea0f89dfa518c2ef18bffe2609d72e6fdee70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 472304dff23e92620dd461e8bc43c3093431ddc4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638765"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962517"
 ---
 # <a name="how-to-create-and-execute-a-simple-plinq-query"></a>Instrukcje: Tworzenie i wykonywanie prostego zapytania PLINQ
-Poniższy przykład pokazuje, jak utworzyć proste zapytanie równoległe LINQ za pomocą <xref:System.Linq.ParallelEnumerable.AsParallel%2A> metody rozszerzenia w sekwencji źródłowej i wykonywania zapytania za pomocą <xref:System.Linq.ParallelEnumerable.ForAll%2A> metody.  
+Poniższy przykład pokazuje, jak utworzyć prostą równoległą kwerendę LINQ przy użyciu <xref:System.Linq.ParallelEnumerable.AsParallel%2A> metody rozszerzającej dla sekwencji źródłowej i wykonując zapytanie przy <xref:System.Linq.ParallelEnumerable.ForAll%2A> użyciu metody.  
   
 > [!NOTE]
->  Ta dokumentacja używa wyrażeń lambda do definiowania delegatów w PLINQ. Jeśli nie znasz wyrażeń lambda w języku C# lub Visual Basic, zobacz [wyrażeń Lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+> Ta dokumentacja używa wyrażeń lambda do definiowania delegatów w PLINQ. Jeśli nie znasz wyrażeń lambda w C# lub Visual Basic, zobacz [wyrażenia lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[PLINQ#11](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/create1.cs#11)]
  [!code-vb[PLINQ#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/create1.vb#11)]  
   
- W tym przykładzie przedstawiono podstawowy wzorzec do tworzenia i wykonywanie dowolnego zapytania równoległe LINQ, gdy kolejność sekwencji wynik nie jest istotna; Nieuporządkowana zapytania są zwykle szybsze niż uporządkowane zapytanie. Zapytanie partycji źródłowej na zadania, które są wykonywane asynchronicznie w wielu wątkach. Kolejność, w którym kończy się każde zadanie zależy nie tylko na ilość pracy zaangażowane na przetworzenie elementów w partycji, ale także na czynniki zewnętrzne, takie jak jak system operacyjny planuje każdego wątku. W tym przykładzie jest jedynie do zademonstrowania określonych użycia i może nie działać szybciej niż równoważna sekwencyjnego LINQ do kwerendy obiekty. Aby uzyskać więcej informacji na temat przyspieszenie zobacz [ogólne informacje o przyspieszeniach w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md). Aby uzyskać więcej informacji o tym, jak zachować kolejność elementów w zapytaniu, zobacz [jak: Kontrolka szeregowaniem w zapytaniu PLINQ](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md).  
+ W tym przykładzie przedstawiono podstawowy wzorzec tworzenia i wykonywania wszelkich równoległych zapytań LINQ, gdy kolejność sekwencji wyników nie jest ważna. zapytania nieuporządkowane są zwykle szybsze niż uporządkowane zapytania. Zapytanie dzieli źródło na zadania, które są wykonywane asynchronicznie na wielu wątkach. Kolejność, w której każde zadanie jest wykonywane, zależy nie tylko od ilości pracy związanej z przetwarzaniem elementów w partycji, ale również na zewnętrznych czynnikach, takich jak system operacyjny planuje każdy wątek. Ten przykład jest przeznaczony do zademonstrowania użycia i może nie działać szybciej niż równoważne LINQ to Objects sekwencyjne zapytanie. Aby uzyskać więcej informacji na temat przyspieszenie, zobacz [Opis przyspieszenie w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md). Aby uzyskać więcej informacji na temat sposobu zachowania kolejności elementów w zapytaniu, zobacz [How to: Kolejność kontroli w zapytaniu](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md)PLINQ.  
   
 ## <a name="see-also"></a>Zobacz także
 

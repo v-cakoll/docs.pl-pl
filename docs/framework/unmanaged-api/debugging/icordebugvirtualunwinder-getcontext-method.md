@@ -1,18 +1,18 @@
 ---
-title: Metoda ICorDebugVirtualUnwinder::GetContext
+title: 'ICorDebugVirtualUnwinder:: GetContext — Metoda'
 ms.date: 03/30/2017
 ms.assetid: fe502a76-3068-47e5-a0a0-85ccb72dfac3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8377c374ae71c45cf198446d66a5f9a235a2142f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a6a8be489ff2a99bb9da393577514b2442d50db8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775362"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967952"
 ---
-# <a name="icordebugvirtualunwindergetcontext-method"></a>Metoda ICorDebugVirtualUnwinder::GetContext
-Pobiera bieżący kontekst tego unwinder.  
+# <a name="icordebugvirtualunwindergetcontext-method"></a>ICorDebugVirtualUnwinder:: GetContext — Metoda
+Pobiera bieżący kontekst tego elementu unwiatrer.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -27,36 +27,36 @@ HRESULT GetContext(
   
 ## <a name="parameters"></a>Parametry  
  `contextFlags`  
- [in] Flagi określające, które części kontekstu do zwrócenia (zdefiniowanej w pliku WinNT.h).  
+ podczas Flagi określające, które części kontekstu mają być zwracane (zdefiniowane w WinNT. h).  
   
  `cbContextBuf`  
- [in] Liczba bajtów w `contextBuf`.  
+ podczas Liczba bajtów w `contextBuf`.  
   
  `contextSize`  
- [out] Wskaźnik do liczby bajtów rzeczywiście zapisanych na `contextBuf`.  
+ określoną Wskaźnik do liczby bajtów, które `contextBuf`są w rzeczywistości zapisywane.  
   
  `contextBuf`  
- [out] Tablica bajtów, która zawiera bieżący kontekst tego unwinder.  
+ określoną Tablica bajtów, która zawiera bieżący kontekst tego elementu unwiatrer.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wszelkie kończy się niepowodzeniem, wartość HRESULT odebranych przez mscordbi jest uważane za krytyczne i spowoduje, że icordebug — interfejsy API, aby zwrócić `CORDBG_E_DATA_TARGET_ERROR`.  
+ Wszystkie niepowodzenie wartości HRESULT otrzymanej przez mscordbi jest uznawane za krytyczne i spowoduje zwrócenie `CORDBG_E_DATA_TARGET_ERROR`interfejsów API ICorDebug.  
   
 ## <a name="remarks"></a>Uwagi  
- Ustaw wartość początkową `contextBuf` argument do buforu kontekstu zwracany przez wywołanie metody [ICorDebugStackWalk::GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) metody.  
+ Ustawiasz początkową wartość `contextBuf` argumentu dla buforu kontekstu zwracanego przez wywołanie metody [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) .  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
- Ponieważ odwijania maja tylko przywracanie w podzbiorze rejestrów, takich jak trwałej rejestruje tylko, kontekst może nie odpowiadają dokładnie stanu rejestru w momencie wywołania metody rzeczywistych.  
+ Ponieważ rozwinięcia może przywrócić tylko podzestaw rejestrów, takich jak tylko rejestry nielotne, kontekst może nie być dokładnie zgodny z stanem rejestru w chwili rzeczywistego wywołania metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

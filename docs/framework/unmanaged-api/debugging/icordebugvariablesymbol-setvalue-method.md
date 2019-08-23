@@ -1,18 +1,18 @@
 ---
-title: ICorDebugVariableSymbol::SetValue Method
+title: 'ICorDebugVariableSymbol:: SetValue — Metoda'
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5c1c77b92d94062206cf9eb38981f38ff2a1cad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5436f56d3dcad7de3df2296485b0a36e5b3cfd79
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775452"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967962"
 ---
-# <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol::SetValue Method
-Wartość tablicy bajtowej jest przypisywany do zmiennej.  
+# <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol:: SetValue — Metoda
+Przypisuje wartość tablicy bajtów do zmiennej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,36 +29,36 @@ HRESULT SetValue(
   
 ## <a name="parameters"></a>Parametry  
  `offset`  
- [in] Początkowe przesunięcie w zmiennej, w którym można ustawić wartości. Ten parametr jest używany podczas zapisywania do pola elementu członkowskiego w obiekcie.  
+ podczas Przesunięcie początkowe w zmiennej, w której ma zostać ustawiona wartość. Ten parametr jest używany podczas zapisywania do pól elementu członkowskiego w obiekcie.  
   
  `threadID`  
- [in] Identyfikator wątku wątku, którego kontekst muszą zostać zaktualizowane w celu odzwierciedlenia nowej wartości.  
+ podczas Identyfikator wątku, którego kontekst musi zostać zaktualizowany w celu odzwierciedlenia nowej wartości.  
   
  `cbContext`  
- [in] Rozmiar w bajtach kontekst wątku.  
+ podczas Rozmiar w bajtach kontekstu wątku.  
   
  `context`  
- [in] Kontekst wątku, używany do zapisywania wartości.  
+ podczas Kontekst wątku używany do zapisania wartości.  
   
  `cbValue`  
- [in] Rozmiar w bajtach `pValue` buforu.  
+ podczas Rozmiar w bajtach `pValue` buforu.  
   
  `pValue`  
- [in] Bufor, który zawiera wartość do ustawienia.  
+ podczas Bufor, który zawiera wartość do ustawienia.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

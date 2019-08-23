@@ -5,32 +5,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: 824d2a08ddd36317fcdb8caa1690decb2f9c432a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f31f24cfc18f2c56539fe2b4623d54fe77a27797
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039565"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950594"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Instrukcje: udostępnianie kanału informacyjnego w formatach Atom i RSS
-Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udostępnia kanał. W tym temacie omówiono sposób tworzenia usługi syndykacji, który udostępnia kanał, za pomocą RSS 2.0 i Atom 1.0. Ta usługa udostępnia jeden punkt końcowy, który może zwracać albo formacie syndykacji. Dla uproszczenia usługi używane w tym przykładzie jest samodzielnie hostowana. W środowisku produkcyjnym usługi tego typu może być hostowana w ramach usług IIS i WAS. Aby uzyskać więcej informacji o różnych technologii WCF opcji hostingu, zobacz [hostingu](../../../../docs/framework/wcf/feature-details/hosting.md).  
+Windows Communication Foundation (WCF) umożliwia utworzenie usługi, która uwidacznia zespolone źródło danych. W tym temacie omówiono sposób tworzenia usługi zespolonej, która uwidacznia zespolone źródło danych za pomocą Atom 1,0 i RSS 2,0. Ta usługa ujawnia jeden punkt końcowy, który może zwracać format zespolony. Dla uproszczenia Usługa używana w tym przykładzie jest samodzielna. W środowisku produkcyjnym usługi tego typu byłyby hostowane w usługach IIS lub WAS. Aby uzyskać więcej informacji na temat różnych opcji hostingu WCF, zobacz [hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
-### <a name="to-create-a-basic-syndication-service"></a>Aby utworzyć usługę syndykacji podstawowe  
+### <a name="to-create-a-basic-syndication-service"></a>Aby utworzyć podstawową usługę zespalania  
   
-1. Definiowanie kontraktu usługi przy użyciu interfejsu oznaczone <xref:System.ServiceModel.Web.WebGetAttribute> atrybutu. Każda operacja, która jest widoczna jako zespolonego źródła danych zwraca <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> obiektu. Należy pamiętać, parametry <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` Określa adres URL używany do wywoływania operacji tej usługi. Ciąg dla tego parametru zawiera literały i zmiennej w nawiasy klamrowe ({*format*}). Ta zmienna odnosi się do operacji usługi `format` parametru. Aby uzyskać więcej informacji, zobacz <xref:System.UriTemplate>. `BodyStyle` wpływa na sposób, które tej operacji usługa wysyła i odbiera komunikaty są zapisywane. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> Określa, czy dane wysyłane do i z tej operacji usługi nie są opakowane przez elementy XML zdefiniowane przez infrastrukturę. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
+1. Zdefiniuj kontrakt usługi przy użyciu interfejsu oznaczonego <xref:System.ServiceModel.Web.WebGetAttribute> atrybutem. Każda operacja, która jest udostępniana jako zespolone źródło <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> danych, zwraca obiekt. Zwróć uwagę na parametry <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate`Określa adres URL służący do wywoływania tej operacji usługi. Ciąg dla tego parametru zawiera literały i zmienną w nawiasach klamrowych ({*Format*}). Ta zmienna odpowiada `format` parametrowi operacji usługi. Aby uzyskać więcej informacji, zobacz <xref:System.UriTemplate>. `BodyStyle`wpływa na to, w jaki sposób wiadomości wysyłane i odbierane przez tę operację usługi są zapisywane. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare>Określa, że dane wysyłane do i z tej operacji usługi nie są opakowane przez zdefiniowane przez infrastrukturę elementy XML. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  Użyj <xref:System.ServiceModel.ServiceKnownTypeAttribute> Aby określić typy, które są zwracane przez operacje usług, w tym interfejsie.  
+    > Użyj, <xref:System.ServiceModel.ServiceKnownTypeAttribute> aby określić typy, które są zwracane przez operacje usługi w tym interfejsie.  
   
-2. Implementowanie kontraktu usługi.  
+2. Zaimplementuj kontrakt usługi.  
   
      [!code-csharp[htAtomRss#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#1)]
      [!code-vb[htAtomRss#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#1)]  
   
-3. Utwórz <xref:System.ServiceModel.Syndication.SyndicationFeed> obiektu, a następnie dodaj autora, kategoria i opis.  
+3. <xref:System.ServiceModel.Syndication.SyndicationFeed> Utwórz obiekt i Dodaj autora, kategorię i opis.  
   
      [!code-csharp[htAtomRss#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#2)]
      [!code-vb[htAtomRss#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#2)]  
@@ -40,47 +40,47 @@ Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udost�
      [!code-csharp[htAtomRss#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#3)]
      [!code-vb[htAtomRss#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#3)]  
   
-5. Dodaj <xref:System.ServiceModel.Syndication.SyndicationItem> obiektów w strumieniowym źródle danych.  
+5. <xref:System.ServiceModel.Syndication.SyndicationItem> Dodaj obiekty do źródła danych.  
   
      [!code-csharp[htAtomRss#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#4)]
      [!code-vb[htAtomRss#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#4)]  
   
-6. Użyj parametru formatu, aby zwrócić żądany format.  
+6. Użyj parametru format, aby zwrócić żądany format.  
   
      [!code-csharp[htAtomRss#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#5)]
      [!code-vb[htAtomRss#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#5)]  
   
-### <a name="to-host-the-service"></a>Do obsługi usługi  
+### <a name="to-host-the-service"></a>Aby hostować usługę  
   
-1. Tworzy obiekt <xref:System.ServiceModel.Web.WebServiceHost>. <xref:System.ServiceModel.Web.WebServiceHost> Klasy automatycznie dodaje punkt końcowy na adres podstawowy usługi, chyba że został określony w kodzie lub konfiguracji. W tym przykładzie Brak punktów końcowych są określane tak domyślny punkt końcowy jest uwidaczniany.  
+1. Tworzy obiekt <xref:System.ServiceModel.Web.WebServiceHost>. <xref:System.ServiceModel.Web.WebServiceHost> Klasa automatycznie dodaje punkt końcowy pod adresem podstawowym usługi, chyba że jest określony w kodzie lub konfiguracji. W tym przykładzie nie określono żadnych punktów końcowych, więc domyślny punkt końcowy jest ujawniany.  
   
      [!code-csharp[htAtomRss#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#6)]
      [!code-vb[htAtomRss#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#6)]  
   
-2. Otworzyć hosta usługi, załadować źródła danych z usługi, Wyświetl źródło i czekać, aż użytkownik na naciśnięcie klawisza ENTER.  
+2. Otwórz hosta usługi, Załaduj źródło danych z usługi, Wyświetl źródło i poczekaj na naciśnięcie klawisza ENTER przez użytkownika.  
   
      [!code-csharp[htAtomRss#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#8)]
      [!code-vb[htAtomRss#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#8)]  
   
-### <a name="to-call-getblog-with-an-http-get"></a>Aby wywołać GetBlog za pomocą żądania HTTP GET  
+### <a name="to-call-getblog-with-an-http-get"></a>Aby wywołać metodę getblog przy użyciu protokołu HTTP GET  
   
-1. Otwórz program Internet Explorer, wpisz następujący adres URL i naciśnij klawisz ENTER: `http://localhost:8000/BlogService/GetBlog`.
+1. Otwórz program Internet Explorer, wpisz następujący adres URL, a następnie naciśnij `http://localhost:8000/BlogService/GetBlog`klawisz ENTER:.
   
-     Adres URL zawiera adres podstawowy usługi (`http://localhost:8000/BlogService`), adres względny punktu końcowego, a operacja usługi do wywołania.  
+     Adres URL zawiera adres podstawowy usługi (`http://localhost:8000/BlogService`), adres względny punktu końcowego i operację usługi do wywołania.  
   
-### <a name="to-call-getblog-from-code"></a>Aby wywołać GetBlog() z kodu  
+### <a name="to-call-getblog-from-code"></a>Aby wywołać metodę getblog () z kodu  
   
-1. Utwórz <xref:System.Xml.XmlReader> z adresu podstawowego i metody, którą wywołujesz.  
+1. <xref:System.Xml.XmlReader> Utwórz z adresem podstawowym i metodą, którą wywołujesz.  
   
      [!code-csharp[htAtomRss#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/snippets.cs#9)]
      [!code-vb[htAtomRss#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/snippets.vb#9)]  
   
-2. Wywołaj statyczną <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29> metody, przekazując <xref:System.Xml.XmlReader> właśnie utworzony.  
+2. Wywołaj metodę <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29> statyczną, przekazując <xref:System.Xml.XmlReader> w właśnie utworzony sposób.  
   
      [!code-csharp[htAtomRss#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/snippets.cs#10)]
      [!code-vb[htAtomRss#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/snippets.vb#10)]  
   
-     To wywołanie operacji usługi i wypełnia nową <xref:System.ServiceModel.Syndication.SyndicationFeed> z elementem formatującym zwrócony przez operację usługi.  
+     Spowoduje to wywołanie operacji usługi i wypełnienie nowej <xref:System.ServiceModel.Syndication.SyndicationFeed> z programem formatującego zwróconym przez operację usługi.  
   
 3. Dostęp do obiektu źródła danych.  
   
@@ -88,12 +88,12 @@ Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udost�
      [!code-vb[htAtomRss#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/snippets.vb#11)]  
   
 ## <a name="example"></a>Przykład  
- Oto pełny kod dla tego przykładu.  
+ Poniżej znajduje się pełna lista kodów dla tego przykładu.  
   
  [!code-csharp[htAtomRss#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#12)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Podczas kompilowania w poprzednim kodzie, odwołać System.ServiceModel.dll i System.ServiceModel.Web.dll.  
+ Podczas kompilowania powyższego kodu odwołuje się do System. ServiceModel. dll i system. ServiceModel. Web. dll.  
   
 ## <a name="see-also"></a>Zobacz także
 

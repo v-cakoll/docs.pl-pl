@@ -3,15 +3,15 @@ title: <chunkedCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
-ms.openlocfilehash: d9c81d5de7bea343f0d67fa00037763fbae7b8c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3b4cf0d7c2748079af7a94534622b1dbadd3ab5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667343"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941890"
 ---
 # <a name="chunkedcookiehandler"></a>\<chunkedCookieHandler>
-Konfiguruje <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Ten element może być tylko obecne Jeśli `mode` atrybutu `<cookieHandler>` element to "Default" lub "Fragmentaryczne".  
+Konfiguruje <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Ten element może być obecny tylko wtedy, `mode` gdy atrybut `<cookieHandler>` elementu ma wartość "default" lub "fragmentaryczne".  
   
  \<system.identityModel.services>  
 \<federationConfiguration>  
@@ -38,7 +38,7 @@ Konfiguruje <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Ten eleme
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|chunkSize|Maksymalny rozmiar w znakach dane pliku cookie HTTP dla dowolnego jednego pliku cookie HTTP. Należy zachować ostrożność podczas dostosowywania rozmiaru fragmentu. Przeglądarki sieci Web mają różne limity dotyczące rozmiaru plików cookie i liczbę dozwolonych w każdej domenie. Na przykład pierwotną specyfikację Netscape określone limity: Łączna liczba plików cookie 300, 4096 bajtów na nagłówek cookie (w tym metadane i nie tylko wartości pliku cookie) i 20 plików cookie dla domeny. Wartość domyślna to 2000. Wymagana.|  
+|Rozmiaru fragmentu|Maksymalny rozmiar (w znakach) danych plików cookie protokołu HTTP dla dowolnego z plików cookie protokołu HTTP. Należy zachować ostrożność podczas dopasowywania rozmiaru fragmentu. Przeglądarki sieci Web mają różne limity rozmiaru plików cookie i liczby dozwolone dla poszczególnych domen. Na przykład oryginalna Specyfikacja Netscape zaznaczył te limity: 300 plików cookie łącznie, 4096 bajtów na nagłówek pliku cookie (w tym metadane, a nie tylko wartość cookie) oraz 20 plików cookie na domenę. Wartość domyślna to 2000. Wymagany.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -47,15 +47,15 @@ Konfiguruje <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Ten eleme
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Konfiguruje <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) używa na odczytywanie i zapisywanie plików cookie.|  
+|[\<cookieHandler>](cookiehandler.md)|Konfiguruje <xref:System.IdentityModel.Services.CookieHandler> <xref:System.IdentityModel.Services.SessionAuthenticationModule> , że program (sam) używa do odczytu i zapisu plików cookie.|  
   
 ## <a name="remarks"></a>Uwagi  
- Po określeniu <xref:System.IdentityModel.Services.ChunkedCookieHandler> , ustawiając `mode` atrybutu `<cookieHandler>` element "Default" lub "Fragmentaryczne", można określić rozmiar fragmentu, używającej obsługi plików cookie na odczytywanie i zapisywanie plików cookie, umieszczając `<chunkedCookieHandler>` element podrzędny i ustawienie jego `chunkSize` atrybutu. Jeśli `<chunkedCookieHandler>` element nie jest obecny, jest używany domyślny rozmiar fragmentu 2000 bajtów. Ten element nie może być określony, gdy `mode` atrybut jest ustawiony na "Niestandardowe".  
+ W przypadku określenia <xref:System.IdentityModel.Services.ChunkedCookieHandler> przez `mode` ustawienie atrybutu `<cookieHandler>` elementu na "domyślny" lub "podzielony" można określić rozmiar fragmentu, którego program obsługi plików cookie używa `<chunkedCookieHandler>` do odczytu i zapisu plików cookie, włączając element podrzędny i `chunkSize` Ustawianie atrybutu. `<chunkedCookieHandler>` Jeśli element nie jest obecny, używany jest domyślny rozmiar fragmentu wynoszący 2000 bajtów. Nie można określić tego elementu, `mode` gdy atrybut jest ustawiony na wartość "Custom".  
   
- `<chunkedCookieHandler>` Element jest reprezentowany przez <xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> klasy.  
+ Element jest reprezentowany <xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> przez klasę. `<chunkedCookieHandler>`  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład umożliwia skonfigurowanie plik cookie z podziałem program obsługi, który zapisuje pliki cookie we fragmentach 3000 bajtów.  
+ Poniższy przykład służy do konfigurowania programu obsługi plików cookie fragmentarycznego, który zapisuje pliki cookie w fragmentach 3000 bajtów.  
   
 ```xml  
 <cookieHandler mode="Chunked">  

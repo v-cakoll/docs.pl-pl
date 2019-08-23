@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 6bd597cd2719fb96b8633f724da46a76e416b454
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 019035247b1316eb236b025d4527c42bb6ef526c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817893"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962821"
 ---
 # <a name="security-wpf"></a>Zabezpieczenia (WPF)
 <a name="introduction"></a>Podczas opracowywania aplikacji autonomicznych i hostowanych przez program Windows Presentation Foundation (WPF) należy wziąć pod uwagę model zabezpieczeń. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Aplikacje autonomiczne są wykonywane z nieograniczonymi uprawnieniami (zestaw uprawnień CAS**FullTrust** ), niezależnie od tego, czy wdrożono przy użyciu Instalator Windows (. msi), XCOPY lub ClickOnce. Wdrożenie częściowego zaufania, autonomiczne aplikacje WPF za pomocą technologii ClickOnce nie jest obsługiwane. Jednak w pełni zaufane aplikacje hosta mogą utworzyć częściowe zaufanie <xref:System.AppDomain> przy użyciu modelu dodatku .NET Framework. Aby uzyskać więcej informacji, zobacz [Omówienie dodatków WPF](./app-development/wpf-add-ins-overview.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "68817893"
 |Kod aplikacji|Zasoby XAML, które mają skompilowany kod w tle.<br /><br /> —lub—<br /><br /> Pliki XAML, które są dodawane do projektu z typem kompilacji **strony**.|`pack://application:,,,/MyResourceFile``.xaml`|  
   
 > [!NOTE]
->  Aby uzyskać więcej informacji na temat plików danych aplikacji [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]i pakietu, zobacz artykuł w [aplikacji WPF, zawartość i pliki danych](./app-development/wpf-application-resource-content-and-data-files.md).  
+> Aby uzyskać więcej informacji na temat plików danych aplikacji [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]i pakietu, zobacz artykuł w [aplikacji WPF, zawartość i pliki danych](./app-development/wpf-application-resource-content-and-data-files.md).  
   
  Pliki tych typów zawartości mogą być przechodzenie przez użytkownika lub programowo:  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68817893"
      ![Zrzut ekranu przedstawiający okno dialogowe Ustawienia zabezpieczeń.](./media/security-wpf/windows-presentation-foundation-security-settings.png)  
   
 > [!NOTE]
->  Możesz również przejść do okna dialogowego Opcje internetowe w programie Internet Explorer. Kliknij pozycję **Narzędzia** , a następnie kliknij pozycję **Opcje internetowe**.  
+> Możesz również przejść do okna dialogowego Opcje internetowe w programie Internet Explorer. Kliknij pozycję **Narzędzia** , a następnie kliknij pozycję **Opcje internetowe**.  
   
  Począwszy od programu Windows Internet Explorer 7, dostępne są następujące ustawienia zabezpieczeń przeznaczone dla .NET Framework:  
   
@@ -151,7 +151,7 @@ ms.locfileid: "68817893"
  Kontrolka <xref:System.Windows.Controls.WebBrowser> WPF może służyć do hostowania zawartości sieci Web. Kontrolka <xref:System.Windows.Controls.WebBrowser> WPF otacza podstawową kontrolkę ActiveX WebBrowser. WPF zapewnia obsługę zabezpieczania aplikacji podczas używania kontrolki WPF <xref:System.Windows.Controls.WebBrowser> do hostowania niezaufanej zawartości sieci Web. Jednak niektóre funkcje zabezpieczeń muszą być stosowane bezpośrednio przez aplikacje korzystające z tej <xref:System.Windows.Controls.WebBrowser> kontrolki. Aby uzyskać więcej informacji na temat kontrolki ActiveX WebBrowser, zobacz [przeglądanie i samouczki kontrolki WebBrowser](https://go.microsoft.com/fwlink/?LinkId=179388).  
   
 > [!NOTE]
->  Ta sekcja ma zastosowanie również do <xref:System.Windows.Controls.Frame> kontrolki, ponieważ <xref:System.Windows.Controls.WebBrowser> używa ona do nawigowania do zawartości HTML.  
+> Ta sekcja ma zastosowanie również do <xref:System.Windows.Controls.Frame> kontrolki, ponieważ <xref:System.Windows.Controls.WebBrowser> używa ona do nawigowania do zawartości HTML.  
   
  Jeśli formant WPF <xref:System.Windows.Controls.WebBrowser> jest używany do hostowania niezaufanej zawartości sieci Web, aplikacja powinna używać częściowej relacji zaufania <xref:System.AppDomain> , aby pomóc w izolowaniu kodu aplikacji od potencjalnie złośliwego kodu skryptu HTML. Jest to szczególnie prawdziwe, jeśli aplikacja działa z hostowanym skryptem przy użyciu <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> metody <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> i właściwości. Aby uzyskać więcej informacji, zobacz [Omówienie dodatków WPF](./app-development/wpf-add-ins-overview.md).  
   
@@ -184,7 +184,7 @@ ms.locfileid: "68817893"
  Kontrolki funkcji są stosowane przez proces tworzenia wystąpienia obiektu ActiveX WebBrowser. W związku z tym, jeśli tworzysz aplikację autonomiczną, która może nawigować do niezaufanej zawartości, należy rozważyć włączenie dodatkowych kontroli funkcji.  
   
 > [!NOTE]
->  To zalecenie jest oparte na ogólnych zaleceniach dotyczących zabezpieczeń hosta MSHTML i SHDOCVW. Aby uzyskać więcej informacji, [Zobacz sekcję Często zadawane pytania dotyczące zabezpieczeń hosta MSHTML: Część I II](https://go.microsoft.com/fwlink/?LinkId=179396) i [zabezpieczenia hosta MSHTML — często zadawane pytania: Część II II](https://go.microsoft.com/fwlink/?LinkId=179415).  
+> To zalecenie jest oparte na ogólnych zaleceniach dotyczących zabezpieczeń hosta MSHTML i SHDOCVW. Aby uzyskać więcej informacji, [Zobacz sekcję Często zadawane pytania dotyczące zabezpieczeń hosta MSHTML: Część I II](https://go.microsoft.com/fwlink/?LinkId=179396) i [zabezpieczenia hosta MSHTML — często zadawane pytania: Część II II](https://go.microsoft.com/fwlink/?LinkId=179415).  
   
  W przypadku pliku wykonywalnego Rozważ włączenie następujących kontrolek funkcji przez ustawienie wartości rejestru na 1.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "68817893"
  Aplikacje XBAP działające w programie Internet Explorer również uzyskują dodatkowy poziom zabezpieczeń w porównaniu z normalnymi aplikacjami autonomicznymi. To dodatkowe zabezpieczenia wynika z faktu, że program Internet Explorer i w związku z tym Kontrolka ActiveX WebBrowser domyślnie [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] działa [!INCLUDE[win7](../../../includes/win7-md.md)]w trybie chronionym w systemach i. Aby uzyskać więcej informacji na temat trybu chronionego, zobacz [Opis i praca w trybie chronionym programu Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
   
 > [!NOTE]
->  Jeśli spróbujesz uruchomić aplikację XBAP, która zawiera formant WPF <xref:System.Windows.Controls.WebBrowser> w przeglądarce Firefox, <xref:System.Security.SecurityException> zostanie zgłoszony w strefie Internet. Jest to spowodowane zasadami zabezpieczeń WPF.  
+> Jeśli spróbujesz uruchomić aplikację XBAP, która zawiera formant WPF <xref:System.Windows.Controls.WebBrowser> w przeglądarce Firefox, <xref:System.Security.SecurityException> zostanie zgłoszony w strefie Internet. Jest to spowodowane zasadami zabezpieczeń WPF.  
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>Wyłączanie zestawów APTCA dla częściowo zaufanych aplikacji klienckich  
@@ -241,7 +241,7 @@ ms.locfileid: "68817893"
  Jeśli zestaw musi być wyłączony dla częściowo zaufanych aplikacji klienckich, można napisać aktualizację, która tworzy klucz rejestru i wartość.  
   
 > [!NOTE]
->  Nie ma to wpływu na podstawowe zestawy .NET Framework, ponieważ są one wymagane do uruchomienia aplikacji zarządzanych. Obsługa wyłączania zestawów APTCA jest przeznaczona głównie dla aplikacji innych firm.  
+> Nie ma to wpływu na podstawowe zestawy .NET Framework, ponieważ są one wymagane do uruchomienia aplikacji zarządzanych. Obsługa wyłączania zestawów APTCA jest przeznaczona głównie dla aplikacji innych firm.  
   
 <a name="LooseContentSandboxing"></a>   
 ## <a name="sandbox-behavior-for-loose-xaml-files"></a>Zachowanie piaskownicy dla luźnych plików XAML  
@@ -258,7 +258,7 @@ ms.locfileid: "68817893"
  W przypadku tego ustawienia zawartość zewnętrzna zostanie załadowana do procesu, który jest oddzielony od procesu, który obsługuje aplikację. Ten proces jest ograniczony do domyślnego zestawu uprawnień strefy internetowej, co skutecznie izoluje go od aplikacji hostingu i komputera klienckiego.  
   
 > [!NOTE]
->  Mimo że nawigacja do luźnych [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] plików z <xref:System.Windows.Navigation.NavigationWindow> lub <xref:System.Windows.Controls.Frame> do aplikacji autonomicznej jest implementowana na podstawie infrastruktury hostingu w przeglądarce WPF, obejmującej proces PresentationHost, poziom zabezpieczeń to nieco mniejsze niż w przypadku załadowania zawartości bezpośrednio w programie Internet Explorer [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] w [!INCLUDE[win7](../../../includes/win7-md.md)] systemach i (które nadal są w PresentationHost). Wynika to z faktu, że autonomiczna aplikacja WPF korzystająca z przeglądarki sieci Web nie zapewnia dodatkowej funkcji zabezpieczeń trybu chronionego programu Internet Explorer.  
+> Mimo że nawigacja do luźnych [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] plików z <xref:System.Windows.Navigation.NavigationWindow> lub <xref:System.Windows.Controls.Frame> do aplikacji autonomicznej jest implementowana na podstawie infrastruktury hostingu w przeglądarce WPF, obejmującej proces PresentationHost, poziom zabezpieczeń to nieco mniejsze niż w przypadku załadowania zawartości bezpośrednio w programie Internet Explorer [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] w [!INCLUDE[win7](../../../includes/win7-md.md)] systemach i (które nadal są w PresentationHost). Wynika to z faktu, że autonomiczna aplikacja WPF korzystająca z przeglądarki sieci Web nie zapewnia dodatkowej funkcji zabezpieczeń trybu chronionego programu Internet Explorer.  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Zasoby służące do opracowywania aplikacji WPF promujących zabezpieczenia  

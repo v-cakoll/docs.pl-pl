@@ -5,43 +5,43 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 5cbe6ce6e8e36fc9460295c454014d6f3fbf3983
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3340a0f455646357035b0999a12e78acb08c2572
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635117"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962642"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Zabezpieczenia transportu z uwierzytelnianiem podstawowym
-Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation (WCF) i klienta. Serwer musi mieć prawidłowy certyfikat X.509, który może służyć do Secure Sockets Layer (SSL), a klienci muszą ufać certyfikatowi serwera. Ponadto usługa sieci Web już implementacją protokołu SSL, który może służyć. Aby uzyskać więcej informacji dotyczących włączania uwierzytelniania podstawowego w Internet Information Services (IIS), zobacz <https://go.microsoft.com/fwlink/?LinkId=83822>.  
+Na poniższej ilustracji przedstawiono usługę i klienta Windows Communication Foundation (WCF). Serwer musi mieć prawidłowy certyfikat X. 509, który może być używany dla SSL (SSL), a klienci muszą ufać certyfikatowi serwera. Ponadto usługa sieci Web ma już implementację protokołu SSL, która może być używana. Aby uzyskać więcej informacji na temat włączania uwierzytelniania podstawowego na Internet Information Services (IIS <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>), zobacz.  
   
- ![Zrzut ekranu przedstawia zabezpieczenia transportu z uwierzytelnianiem podstawowym.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
+ ![Zrzut ekranu przedstawiający zabezpieczenia transportu z uwierzytelnianiem podstawowym.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
-|Cechy|Opis|  
+|Charakterystyk|Opis|  
 |--------------------|-----------------|  
-|Tryb zabezpieczeń|Transport|  
-|Współdziałanie|Za pomocą istniejących klientów usługi sieci Web i usług|  
-|Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak (za pomocą protokołu HTTPS)<br /><br /> Tak (za pomocą nazwy użytkownika i hasła)|  
-|Integralność|Yes|  
-|Poufność|Yes|  
-|Transport|HTTPS|  
+|Tryb zabezpieczeń|Transportu|  
+|Współdziałanie|Z istniejącymi usługami i klientami usług sieci Web|  
+|Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak (przy użyciu protokołu HTTPS)<br /><br /> Tak (za poorednictwem nazwy użytkownika/hasła)|  
+|Spójn|Tak|  
+|Poufne|Tak|  
+|Transportu|HTTPS|  
 |Wiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Usługa  
- Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+ Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wykonaj jedną z następujących czynności:  
   
-- Tworzenie autonomicznego usługi przy użyciu kodu bez konfiguracji.  
+- Tworzenie usługi autonomicznej przy użyciu kodu bez konfiguracji.  
   
-- Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.  
+- Utwórz usługę przy użyciu podanej konfiguracji, ale nie Definiuj żadnych punktów końcowych.  
   
 ### <a name="code"></a>Kod  
- Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, który korzysta z Windows domena nazwa użytkownika i hasło dla bezpieczeństwie transferu. Należy pamiętać, że usługa wymaga certyfikatu X.509 do uwierzytelniania klienta. Aby uzyskać więcej informacji, zobacz [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) i [jak: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, który używa nazwy użytkownika i hasła domeny systemu Windows do zabezpieczenia transferu. Należy pamiętać, że usługa wymaga certyfikatu X. 509 do uwierzytelnienia na kliencie. Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) i [instrukcje: Skonfiguruj port za pomocą certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)SSL.  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
 ## <a name="configuration"></a>Konfiguracja  
- Następujące konfiguruje usługę do używania uwierzytelniania podstawowego z zabezpieczeniami na poziomie transportu:  
+ Poniżej przedstawiono Konfigurowanie usługi do korzystania z uwierzytelniania podstawowego z zabezpieczeniami na poziomie transportu:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -72,19 +72,19 @@ Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation 
 ## <a name="client"></a>Klient  
   
 ### <a name="code"></a>Kod  
- Poniższy kod przedstawia kod klienta, który zawiera nazwę użytkownika i hasło. Należy pamiętać, że użytkownik musi podać prawidłowe Windows nazwy użytkownika i hasła. Kod, aby zwrócić nazwę użytkownika i hasło nie jest wyświetlane w tym miejscu. Zapytanie użytkownika o informacje, należy użyć okno dialogowe lub innego interfejsu.  
+ Poniższy kod przedstawia kod klienta, który zawiera nazwę użytkownika i hasło. Należy pamiętać, że użytkownik musi podać prawidłową nazwę użytkownika i hasło systemu Windows. Kod, który ma zwrócić nazwę użytkownika i hasło, nie jest tutaj wyświetlany. Użyj okna dialogowego lub innego interfejsu, aby wysłać zapytanie do użytkownika o informacje.  
   
 > [!NOTE]
->  Nazwa użytkownika i hasło można ustawić tylko przy użyciu kodu.  
+> Nazwę użytkownika i hasło można ustawić tylko przy użyciu kodu.  
   
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>Konfiguracja  
- Poniższy kod pokazuje konfigurację klienta.  
+ Poniższy kod przedstawia konfigurację klienta.  
   
 > [!NOTE]
->  Nie można użyć konfiguracji, aby ustawić nazwę użytkownika i hasło. Konfiguracji przedstawionej w tym miejscu musi zostać rozszerzony przy użyciu kodu, aby ustawić nazwę użytkownika i hasło.  
+> Nie można użyć konfiguracji w celu ustawienia nazwy użytkownika i hasła. Pokazana tutaj konfiguracja musi zostać uzupełniona przy użyciu kodu w celu ustawienia nazwy użytkownika i hasła.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -118,4 +118,4 @@ Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation 
 - [Instrukcje: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
-- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

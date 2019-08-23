@@ -8,12 +8,12 @@ helpviewer_keywords:
 - history [WPF], navigating back
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
-ms.openlocfilehash: 86590c2794339ac22cbc8ec5e11224736133e870
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 53b32e145390d7052262042c7a793699c163b373
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817974"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969353"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>Instrukcje: Poruszanie się wstecz w historii nawigacji
 Ten przykład ilustruje sposób nawigowania do wpisów w historii nawigacji wstecznej.  
@@ -29,4 +29,4 @@ Ten przykład ilustruje sposób nawigowania do wpisów w historii nawigacji wste
  **CanGoBack** i **GoBack** są implementowane <xref:System.Windows.Navigation.NavigationWindow>przez <xref:System.Windows.Controls.Frame>,, <xref:System.Windows.Navigation.NavigationService>i.  
   
 > [!NOTE]
->  Jeśli wywołasz **GoBack**i nie ma żadnych wpisów w historii nawigacji wstecznej, <xref:System.InvalidOperationException> zostanie zgłoszony.
+> Jeśli wywołasz **GoBack**i nie ma żadnych wpisów w historii nawigacji wstecznej, <xref:System.InvalidOperationException> zostanie zgłoszony.

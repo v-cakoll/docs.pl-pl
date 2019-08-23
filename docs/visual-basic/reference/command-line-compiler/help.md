@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: adfde0bd420ccb7af4c4872affe09e5f6cf47e71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 287a2ed3f54f85435a986d3a6ecd77f7009fb195
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051692"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938230"
 ---
 # <a name="-help---visual-basic"></a>-help, -? (Visual Basic)
 Wyświetla opcje kompilatora.  
@@ -28,13 +28,13 @@ Wyświetla opcje kompilatora.
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli ta opcja jest uwzględniony w kompilacji, nie plik wyjściowy został utworzony i odbywa się nie kompilacji.  
+ Jeśli ta opcja zostanie uwzględniona w kompilacji, żaden plik wyjściowy nie zostanie utworzony i nie będzie wykonywana żadna kompilacja.  
   
 > [!NOTE]
->  `-help` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia.  
+> `-help` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio. jest ona dostępna tylko podczas kompilowania z wiersza polecenia.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod wyświetla Pomoc w wierszu polecenia.  
+ Poniższy kod wyświetla pomoc w wierszu polecenia.  
   
 ```  
 vbc -help  
@@ -42,5 +42,5 @@ vbc -help
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

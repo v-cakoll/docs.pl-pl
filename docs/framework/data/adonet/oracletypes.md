@@ -2,27 +2,27 @@
 title: OracleTypes
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: eb45bc5b7bc317d04f5275afadbb1879117e3af0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2f3820a0a61241643894533cc431ecc88b58fcef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586941"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938889"
 ---
 # <a name="oracletypes"></a>OracleTypes
-.NET Framework Data Provider for Oracle obejmuje kilka struktur, które można użyć do pracy z typami danych Oracle. Obejmują one <xref:System.Data.OracleClient.OracleNumber> i <xref:System.Data.OracleClient.OracleString>.  
+.NET Framework Dostawca danych dla programu Oracle zawiera kilka struktur, których można użyć do pracy z typami danych Oracle. Obejmują <xref:System.Data.OracleClient.OracleNumber> one i <xref:System.Data.OracleClient.OracleString>.  
   
 > [!NOTE]
->  Aby uzyskać pełną listę tych struktur, zobacz <xref:System.Data.OracleClient>.  
+> Aby zapoznać się z pełną listą tych struktur <xref:System.Data.OracleClient>, zobacz.  
   
- W poniższych C# przykładach:  
+ Następujące C# przykłady:  
   
-- Tworzenie tabeli bazy danych Oracle i załaduj go z danymi.  
+- Utwórz tabelę Oracle i Załaduj ją z danymi.  
   
-- Użyj <xref:System.Data.OracleClient.OracleDataReader> do uzyskania dostępu do danych i korzystać z kilku <xref:System.Data.OracleClient.OracleType> struktur, aby wyświetlić dane.  
+- Użyj, <xref:System.Data.OracleClient.OracleType> Aby uzyskać dostęp do danych i użyć kilku struktur do wyświetlania danych. <xref:System.Data.OracleClient.OracleDataReader>  
   
-## <a name="creating-an-oracle-table"></a>Tworzenie tabeli programu Oracle  
- W tym przykładzie tworzy tabelę bazy danych Oracle i ładuje je z danymi. W tym przykładzie należy uruchomić przed uruchomieniem w następnym przykładzie.  
+## <a name="creating-an-oracle-table"></a>Tworzenie tabeli Oracle  
+ Ten przykład tworzy tabelę Oracle i ładuje ją z danymi. Ten przykład należy uruchomić przed uruchomieniem następnego przykładu.  
   
 ```csharp  
 public void Setup(string connectionString)  
@@ -51,8 +51,8 @@ public void Setup(string connectionString)
 }  
 ```  
   
-## <a name="retrieving-data-from-the-oracle-table"></a>Trwa pobieranie danych z tabeli bazy danych Oracle  
- W tym przykładzie użyto **Element OracleDataReader** dostępu do danych i wykorzystuje kilka **typu OracleType** struktur, aby wyświetlić dane.  
+## <a name="retrieving-data-from-the-oracle-table"></a>Pobieranie danych z tabeli Oracle  
+ Ten przykład używa **OracleDataReader** do uzyskiwania dostępu do danych i używa kilku struktur **OracleType** do wyświetlania danych.  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  
@@ -118,4 +118,4 @@ public void ReadOracleTypesExample(string connectionString)
 ## <a name="see-also"></a>Zobacz także
 
 - [Oracle i ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

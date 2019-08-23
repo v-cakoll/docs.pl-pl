@@ -5,32 +5,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-ms.openlocfilehash: 870142724321629d6dbeccd4118b814283901776
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f60bcdb02f61d39711115b07ba989229e39c28c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039133"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929132"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Instrukcje: publikowanie metadanych dla usługi przy użyciu kodu
-Jest to jedna z dwóch tematy porad, które mówią o Publikowanie metadanych dla usługi Windows Communication Foundation (WCF). Istnieją dwa sposoby, aby określić, jak usługa powinna Publikowanie metadanych, przy użyciu pliku konfiguracji i przy użyciu kodu. W tym temacie przedstawiono sposób Publikowanie metadanych dla usługi przy użyciu kodu.  
+Jest to jeden z dwóch tematów, które omawiają Publikowanie metadanych dla usługi Windows Communication Foundation (WCF). Istnieją dwa sposoby, aby określić, w jaki sposób usługa powinna publikować metadane przy użyciu pliku konfiguracji i przy użyciu kodu. W tym temacie przedstawiono sposób publikowania metadanych dla usługi przy użyciu kodu.  
   
 > [!CAUTION]
->  W tym temacie przedstawiono sposób Publikowanie metadanych w niezabezpieczony sposób. Dowolny klient może pobierać metadanych z usługi. Jeśli potrzebujesz usługi w celu publikowania metadanych w bezpieczny sposób. zobacz [niestandardowy bezpieczny punkt końcowy metadanych](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+>  W tym temacie przedstawiono sposób publikowania metadanych w niezabezpieczony sposób. Dowolny klient może pobrać metadane z usługi. Jeśli wymagasz, aby usługa opublikowała metadane w bezpieczny sposób. Zobacz [Niestandardowy bezpieczny punkt końcowy metadanych](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
- Aby uzyskać więcej informacji na temat publikowania metadanych w pliku konfiguracji, zobacz [jak: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md). Publikowanie metadanych zezwala klientom na pobieranie metadanych za pomocą ROZPOCZYNANIE transferu WS żądania lub żądania HTTP/GET przy użyciu `?wsdl` ciągu zapytania. Należy upewnić się, że działa kod, możesz utworzyć podstawowe usługi WCF. Podstawowa usługa Self-Hosted znajduje się w poniższym kodzie.  
+ Aby uzyskać więcej informacji na temat publikowania metadanych w pliku konfiguracji, [zobacz How to: Publikowanie metadanych dla usługi za pomocą pliku](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)konfiguracji. Publikowanie metadanych umożliwia klientom Pobieranie metadanych przy użyciu żądania GET WS-transfer lub żądania HTTP/GET przy użyciu `?wsdl` ciągu zapytania. Aby upewnić się, że kod działa, należy utworzyć podstawową usługę WCF. W poniższym kodzie znajduje się podstawowa usługa samodzielna.  
   
  [!code-csharp[htPublishMetadataCode#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#0)]
  [!code-vb[htPublishMetadataCode#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#0)]  
   
-### <a name="to-publish-metadata-in-code"></a>Publikowanie metadanych w kodzie  
+### <a name="to-publish-metadata-in-code"></a>Aby opublikować metadane w kodzie  
   
-1. W metodzie głównej aplikacji konsoli, należy utworzyć wystąpienie <xref:System.ServiceModel.ServiceHost> obiektu, przekazując typ usługi i adres podstawowy.  
+1. W ramach głównej metody aplikacji konsolowej Utwórz wystąpienie <xref:System.ServiceModel.ServiceHost> obiektu przez przekazanie go do typu usługi i adresu podstawowego.  
   
      [!code-csharp[htPublishMetadataCode#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#1)]
      [!code-vb[htPublishMetadataCode#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#1)]  
   
-2. Tworzenie bloku try bezpośrednio poniżej kodu w kroku 1, to przechwytuje wszystkie wyjątki, które Pobierz zgłaszany, gdy usługa jest uruchomiona.  
+2. Utwórz blok try bezpośrednio poniżej kodu dla kroku 1, który przechwytuje wszystkie wyjątki, które są zgłaszane podczas działania usługi.  
   
      [!code-csharp[htPublishMetadataCode#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#2)]
      [!code-vb[htPublishMetadataCode#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#2)]  
@@ -38,22 +38,22 @@ Jest to jedna z dwóch tematy porad, które mówią o Publikowanie metadanych dl
      [!code-csharp[htPublishMetadataCode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#3)]
      [!code-vb[htPublishMetadataCode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#3)]  
   
-3. Sprawdź, czy host usługi zawiera już <xref:System.ServiceModel.Description.ServiceMetadataBehavior>, jeśli nie, Utwórz nową <xref:System.ServiceModel.Description.ServiceMetadataBehavior> wystąpienia.  
+3. Sprawdź, czy host usługi zawiera <xref:System.ServiceModel.Description.ServiceMetadataBehavior>już, jeśli nie, Utwórz nowe <xref:System.ServiceModel.Description.ServiceMetadataBehavior> wystąpienie.  
   
      [!code-csharp[htPublishMetadataCode#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#4)]
      [!code-vb[htPublishMetadataCode#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#4)]  
   
-4. Ustaw <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> właściwości `true.`  
+4. <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> Ustaw właściwość na`true.`  
   
      [!code-csharp[htPublishMetadataCode#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#5)]
      [!code-vb[htPublishMetadataCode#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#5)]  
   
-5. <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Zawiera <xref:System.ServiceModel.Description.MetadataExporter> właściwości. <xref:System.ServiceModel.Description.MetadataExporter> Zawiera <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> właściwości. Ustaw wartość <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> właściwość <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A>. <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> Właściwość można ustawić <xref:System.ServiceModel.Description.PolicyVersion.Policy12%2A>. Po ustawieniu <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A> eksportu metadanych generuje informacje o zasadach z metadanymi, "jest zgodny do wersji 1.5 usługi WS-Policy. Po ustawieniu <xref:System.ServiceModel.Description.PolicyVersion.Policy12%2A> eksportu metadanych generuje informacje o zasadach, który jest zgodny z 1.2 WS-Policy.  
+5. <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Zawiera<xref:System.ServiceModel.Description.MetadataExporter> właściwość. <xref:System.ServiceModel.Description.MetadataExporter> Zawiera<xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> właściwość. Ustaw wartość <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> właściwości na <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A>. Właściwość można również ustawić na <xref:System.ServiceModel.Description.PolicyVersion.Policy12%2A>. <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> Po ustawieniu na <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A> wartość w polu Eksport metadanych są generowane informacje o zasadach z metadanymi, które są zgodne z usługą WS-Policy 1,5. Gdy jest ustawiony <xref:System.ServiceModel.Description.PolicyVersion.Policy12%2A> na eksport metadanych, są generowane informacje o zasadach, które są zgodne z usługą WS-Policy 1,2.  
   
      [!code-csharp[htPublishMetadataCode#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#6)]
      [!code-vb[htPublishMetadataCode#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#6)]  
   
-6. Dodaj <xref:System.ServiceModel.Description.ServiceMetadataBehavior> wystąpienie kolekcji zachowań hosta usługi.  
+6. <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Dodaj wystąpienie do kolekcji zachowań hosta usługi.  
   
      [!code-csharp[htPublishMetadataCode#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#7)]
      [!code-vb[htPublishMetadataCode#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#7)]  
@@ -63,25 +63,25 @@ Jest to jedna z dwóch tematy porad, które mówią o Publikowanie metadanych dl
      [!code-csharp[htPublishMetadataCode#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#8)]
      [!code-vb[htPublishMetadataCode#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#8)]  
   
-8. Dodawanie punktu końcowego aplikacji do hosta usługi.  
+8. Dodaj punkt końcowy aplikacji do hosta usługi.  
   
      [!code-csharp[htPublishMetadataCode#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#9)]
      [!code-vb[htPublishMetadataCode#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#9)]  
   
     > [!NOTE]
-    >  Jeśli nie dodasz żadnych punktów końcowych do usługi, środowiska uruchomieniowego dodaje domyślne punkty końcowe. W tym przykładzie ponieważ usługa ma <xref:System.ServiceModel.Description.ServiceMetadataBehavior> równa `true`, usługa ma Publikowanie metadanych włączone. Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, zobacz [uproszczona konfiguracja](../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    > Jeśli nie dodasz żadnych punktów końcowych do usługi, środowisko uruchomieniowe doda domyślne punkty końcowe. W tym przykładzie, ponieważ usługa ma <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ustawiony na `true`, usługa ma włączone metadane publikowania. Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, zobacz [Uproszczona konfiguracja](../../../../docs/framework/wcf/simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-9. Otworzyć hosta usługi i zaczekaj na połączenia przychodzące. Gdy użytkownik naciśnie klawisz ENTER, zamknij hosta usługi.  
+9. Otwórz hosta usługi i poczekaj na wywołania przychodzące. Gdy użytkownik naciśnie klawisz ENTER, Zamknij hosta usługi.  
   
      [!code-csharp[htPublishMetadataCode#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#10)]
      [!code-vb[htPublishMetadataCode#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#10)]  
   
-10. Skompiluj i uruchom aplikację konsolową.  
+10. Kompiluj i uruchom aplikację konsolową.  
   
-11. Aby przejść do podstawowego adresu usługi w programie Internet Explorer (http://localhost:8001/MetadataSample w tym przykładzie) i sprawdź, czy Publikowanie metadanych jest włączona. Powinien zostać wyświetlony strona sieci Web wyświetlany jest wyświetlany komunikat "Prostą usługę" u góry, a od razu poniżej "Utworzono usługę." W przeciwnym razie komunikat wyświetlany w górnej części strony wynikowy: "Publikowanie metadanych dla tej usługi jest obecnie wyłączona."  
+11. Użyj programu Internet Explorer, aby przejść do adresu podstawowego usługi (http://localhost:8001/MetadataSample w tym przykładzie) i sprawdzić, czy Publikowanie metadanych jest włączone. Powinna zostać wyświetlona strona sieci Web informująca o "prostej usłudze" u góry i bezpośrednio poniżej "została utworzona usługa". W przeciwnym razie zostanie wyświetlony komunikat w górnej części strony wyników: "Publikowanie metadanych dla tej usługi jest obecnie wyłączone".  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje implementację podstawowej usługi WCF, która umożliwia publikowanie metadanych dla usługi w kodzie.  
+ Poniższy przykład kodu przedstawia implementację podstawowej usługi WCF, która publikuje metadane dla usługi w kodzie.  
   
  [!code-csharp[htPublishMetadataCode#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#11)]
  [!code-vb[htPublishMetadataCode#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#11)]  
@@ -92,4 +92,4 @@ Jest to jedna z dwóch tematy porad, które mówią o Publikowanie metadanych dl
 - [Host samodzielny](../../../../docs/framework/wcf/samples/self-host.md)
 - [Przegląd architektury metadanych](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Używanie metadanych](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Instrukcje: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Instrukcje: Publikowanie metadanych dla usługi za pomocą pliku konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

@@ -2,27 +2,27 @@
 title: Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: a7d87e6014f26842c35b0d1bf5028682a4cf69e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: a2f1ef37914c932801699bb2f9c2323dd0408e7f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784322"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964966"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
-Windows 8 wprowadzono nowy typ aplikacji o nazwie aplikacje Windows Store. Te aplikacje są projektowane na podstawie interfejsem ekranie dotykowym. .NET framework 4.5 umożliwia aplikacji Windows Store do wywołania usługi WCF.  
+System Windows 8 wprowadza nowy typ aplikacji o nazwie aplikacje ze sklepu Windows. Te aplikacje są projektowane wokół interfejsu ekranu dotykowego. .NET Framework 4,5 umożliwia aplikacjom ze sklepu Windows wywoływanie usług WCF.  
   
-## <a name="wcf-support-in-windows-store-applications"></a>Obsługa usług WCF w aplikacjach Windows Store  
- Podzbiór funkcji WCF jest dostępne z poziomu aplikacji Windows Store, zobacz poniższe sekcje, aby uzyskać więcej informacji.  
+## <a name="wcf-support-in-windows-store-applications"></a>Obsługa platformy WCF w aplikacjach ze sklepu Windows  
+ Podzestaw funkcji WCF jest dostępny w aplikacji ze sklepu Windows. więcej informacji znajduje się w poniższych sekcjach.  
   
 > [!IMPORTANT]
->  Użyj syndykacji WinRT API zamiast te udostępniane przez usługi WCF. Aby uzyskać więcej informacji, zobacz [API syndykacji WinRT](https://go.microsoft.com/fwlink/?LinkId=236265)  
+> Użyj interfejsów API zespalania zamiast tych, które są udostępniane przez platformę WCF. Aby uzyskać więcej informacji, zobacz [interfejs API zespalania programu WinRT](https://go.microsoft.com/fwlink/?LinkId=236265)  
   
 > [!WARNING]
->  Aby dodać odwołanie do składnika środowiska wykonawczego Windows usługi sieci web przy użyciu Dodaj odwołanie do usługi nie jest obsługiwane.  
+>  Dodawanie odwołania do usługi sieci Web do składnika środowisko wykonawcze systemu Windows przy użyciu Dodaj odwołanie do usługi nie jest obsługiwane.  
   
 ### <a name="supported-bindings"></a>Obsługiwane powiązania  
- Następujące powiązaniami WCF są obsługiwane w Windows Store aplikacji:  
+ W aplikacjach ze sklepu Windows obsługiwane są następujące powiązania WCF:  
   
 1. <xref:System.ServiceModel.BasicHttpBinding>  
   
@@ -32,7 +32,7 @@ Windows 8 wprowadzono nowy typ aplikacji o nazwie aplikacje Windows Store. Te ap
   
 4. <xref:System.ServiceModel.Channels.CustomBinding>
   
- Następujące elementy powiązania są obsługiwane w programie Windows Store aplikacji  
+ Następujące elementy powiązania są obsługiwane w aplikacjach ze sklepu Windows  
   
 1. <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
@@ -52,19 +52,19 @@ Windows 8 wprowadzono nowy typ aplikacji o nazwie aplikacje Windows Store. Te ap
   
 9. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
- Obsługiwane są zarówno tekstowych i binarnych kodowania. Obsługiwane są wszystkie tryby transferu WCF. Aby uzyskać więcej informacji, zobacz [przesyłanie strumieniowe przesyłanie komunikatów](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).  
+ Obsługiwane są zarówno kodowanie tekstu, jak i binarne. Obsługiwane są wszystkie tryby transferu WCF. Aby uzyskać więcej informacji, zobacz [transfer komunikatów przesyłanych strumieniowo](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).  
   
 ### <a name="add-service-reference"></a>Dodaj odwołanie do usługi  
- Aby wywołać usługi WCF z aplikacji Windows Store, użyj funkcji Dodaj odwołanie do usługi Visual Studio 2012. Zauważysz kilka zmian w funkcji Dodaj odwołanie do usługi po zakończeniu w aplikacji Windows Store. Najpierw plik konfiguracji nie jest generowany. Aplikacje Windows Store nie należy używać plików konfiguracji, więc musi być skonfigurowany w kodzie. Ten kod konfiguracji można znaleźć w pliku References.cs generowane przez Dodaj odwołanie do usługi. Aby wyświetlić ten plik, koniecznie wybierz pozycję "Pokaż wszystkie pliki" w Eksploratorze rozwiązań. Plik zostanie umieszczony w odwołania do usług, a następnie Reference.svcmap węzły w projekcie. Wszystkie operacje wygenerowane dla usług WCF w aplikacji Windows Store jest asynchroniczne, za pomocą wzorca asynchronicznego opartego na zadaniach. Aby uzyskać więcej informacji, zobacz [zadań asynchronicznych - uprościć programowanie asynchroniczne przy użyciu zadania](https://msdn.microsoft.com/magazine/ff959203.aspx).  
+ Aby wywołać usługę WCF z poziomu aplikacji ze sklepu Windows, użyj funkcji Dodaj odwołanie do usługi programu Visual Studio 2012. Po wykonaniu tej czynności w aplikacji ze sklepu Windows zobaczysz kilka zmian w funkcji Dodaj odwołanie do usługi. Nie jest generowany pierwszy plik konfiguracji. Aplikacje ze sklepu Windows nie używają plików konfiguracji, dlatego muszą być skonfigurowane w kodzie. Ten kod konfiguracji można znaleźć w pliku References.cs generowanym przez Dodaj odwołanie do usługi. Aby wyświetlić ten plik, upewnij się, że wybrano opcję "Pokaż wszystkie pliki" w Eksploratorze rozwiązań. Plik będzie znajdował się w ramach odwołań do usługi, a następnie odwołuje się do węzłów. svcmap w ramach projektu. Wszystkie operacje wygenerowane dla usług WCF w ramach aplikacji ze sklepu Windows będą asynchroniczne za pomocą wzorca asynchronicznego opartego na zadaniach. Aby uzyskać więcej informacji, zobacz [zadania asynchroniczne — uproszczenie programowania asynchronicznego z zadaniami](https://msdn.microsoft.com/magazine/ff959203.aspx).  
   
- Ponieważ konfiguracji jest teraz generowany w kodzie, wszelkie zmiany wprowadzone w pliku Reference.cs zostaną zastąpione za każdym razem, gdy odwołanie do usługi jest aktualizowana. Aby rozwiązać ten problem kodu konfiguracji zostanie wygenerowany wewnątrz metody częściowej, można zaimplementować w klasie serwera proxy klienta. Metoda częściowa jest zadeklarowana w następujący sposób:  
+ Ponieważ konfiguracja jest teraz generowana w kodzie, wszelkie zmiany wprowadzone w pliku Reference.cs zostałyby zastępować za każdym razem, gdy odwołanie do usługi zostanie zaktualizowane. Aby wyeliminować tę sytuację, kod konfiguracji jest generowany w ramach metody częściowej, którą można zaimplementować w klasie proxy klienta. Metoda częściowa jest zadeklarowana w następujący sposób:  
   
 ```csharp  
 static partial void Configure(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint,  
             System.ServiceModel.Description.ClientCredentials clientCredentials);  
 ```  
   
- Następnie można zaimplementować tę metodę częściową i Zmień powiązanie lub punkt końcowy w klasie klienta serwera proxy w następujący sposób:  
+ Następnie można zaimplementować tę metodę częściową i zmienić powiązanie lub punkt końcowy w klasie proxy klienta w następujący sposób:  
   
 ```csharp  
 public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfClient.ServiceRefMultiEndpt.IService1>, MetroWcfClient.ServiceRefMultiEndpt.IService1  
@@ -95,7 +95,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 ```  
   
 ### <a name="serialization"></a>Serializacja  
- Następujące serializatory są obsługiwane w aplikacjach Windows Store:  
+ Następujące serializatory są obsługiwane w aplikacjach ze sklepu Windows:  
   
 1. DataContractSerializer  
   
@@ -104,11 +104,11 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 3. XmlSerializer  
   
 > [!WARNING]
->  XmlDictionaryWriter.Write(DateTime) teraz zapisuje obiekt daty/godziny jako ciąg.  
+>  Implementacja obiektu XmlDictionaryWriter. Write (DateTime) teraz zapisuje obiekt DateTime jako ciąg.  
   
 ### <a name="security"></a>Zabezpieczenia  
 
-Następujące tryby zabezpieczeń są obsługiwane w aplikacjach Windows Store:
+W aplikacjach ze sklepu Windows obsługiwane są następujące tryby zabezpieczeń:
   
 1. <xref:System.ServiceModel.SecurityMode.None>  
   
@@ -118,13 +118,13 @@ Następujące tryby zabezpieczeń są obsługiwane w aplikacjach Windows Store:
   
 4. <xref:System.ServiceModel.SecurityMode.Message>
   
-Następujące typy poświadczeń klienta są obsługiwane w aplikacjach Windows Store:
+Następujące typy poświadczeń klienta są obsługiwane w aplikacjach ze sklepu Windows:
   
 1. Brak  
   
 2. Podstawowy  
   
-3. Podsumowanie  
+3. Szyfrowane  
   
 4. Negotiate  
   
@@ -134,15 +134,15 @@ Następujące typy poświadczeń klienta są obsługiwane w aplikacjach Windows 
   
 7. Nazwa użytkownika (zabezpieczenia komunikatów)  
   
-8. Windows (zabezpieczenia transportu)  
+8. Windows (Transport Security)  
   
- Do uzyskania dostępu i wysyłać domyślne poświadczenia Windows przy użyciu aplikacji Windows Store, należy włączyć tę funkcję w pliku Package.appmanifest. Otwórz ten plik i wybierz kartę funkcji wybierz pozycję "Domyślne poświadczenia Windows". Umożliwia aplikacji łączenie się z zasobami w sieci intranet, które wymagają podania poświadczeń domeny.  
+ Aby aplikacje ze sklepu Windows mogły uzyskiwać dostęp do domyślnych poświadczeń systemu Windows i je wysyłać, należy włączyć tę funkcję w pliku Package. Appmanifest. Otwórz ten plik i wybierz kartę możliwości i wybierz pozycję "domyślne poświadczenia systemu Windows". Umożliwia to aplikacji łączenie się z zasobami intranetowymi, które wymagają poświadczeń domeny.  
   
 > [!IMPORTANT]
->  Aby aplikacje Windows Store, do nawiązywania połączeń między maszyny należy włączyć dostępna inna funkcja o nazwie "Strona główna/pracy sieci". To ustawienie jest również w pliku Package.appmanifest na karcie możliwości. Zaznacz pole wyboru głównej/pracy sieci. Dzięki temu aplikację, którą przychodzący i wychodzący dostęp do sieci użytkownika przez zaufanych miejsc, takich jak macierzystego i działają. Porty przychodzące krytyczne zawsze są blokowane. Aby uzyskać dostęp do usług w Internecie, należy również włączyć możliwości Internet (klient).  
+> Aby aplikacje ze sklepu Windows mogły wykonywać wywołania między maszynami, należy włączyć inną możliwość nazywaną "siecią domową/służbową". To ustawienie znajduje się również w pliku Package. Appmanifest na karcie możliwości. Wybierz pole wyboru Sieć domowa/Work. Zapewnia to aplikacji dostęp przychodzący i wychodzący do sieci zaufanych miejsc użytkownika, takich jak Home i Work. Przychodzące porty krytyczne są zawsze blokowane. Aby uzyskać dostęp do usług w Internecie, należy również włączyć funkcję internetową (klienta).  
   
 ### <a name="misc"></a>Różne  
- Użyj następujących klas jest obsługiwana dla Windows Store aplikacji:  
+ Użycie następujących klas jest obsługiwane w przypadku aplikacji ze sklepu Windows:  
   
 1. <xref:System.ServiceModel.ChannelFactory>  
   
@@ -150,14 +150,14 @@ Następujące typy poświadczeń klienta są obsługiwane w aplikacjach Windows 
   
 3. <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   
-### <a name="defining-service-contracts"></a>Definiowanie kontraktów usług  
- Firma Microsoft zaleca tylko Definiowanie operacji asynchronicznej usługi za pomocą wzorca asynchronicznego opartego na zadaniach. Dzięki temu aplikacje Windows Store nadal odpowiadać podczas wywoływania operacji usługi.  
+### <a name="defining-service-contracts"></a>Definiowanie kontraktów usługi  
+ Zalecamy tylko Definiowanie asynchronicznych operacji usługi przy użyciu wzorca asynchronicznego opartego na zadaniach. Dzięki temu aplikacje ze sklepu Windows pozostają w stanie reagować podczas wywoływania operacji usługi.  
   
 > [!WARNING]
->  Gdy żaden wyjątek zostanie zgłoszony, jeśli zdefiniujesz Operacja synchroniczna, zdecydowanie zaleca się definiować tylko operacji asynchronicznych.  
+>  Chociaż wyjątek nie zostanie wygenerowany, jeśli zdefiniujesz operację synchroniczną, zdecydowanie zaleca się tylko zdefiniowanie operacji asynchronicznych.  
   
-### <a name="calling-wcf-services-from-windows-store-applications"></a>Wywoływanie usługi WCF z aplikacji Windows Store  
- Jak wspomniano wcześniej cała konfiguracja musi odbywać się w kodzie w metodzie GetBindingForEndpoint w klasie, wygenerowany serwer proxy. Wywoływanie operacji usługi odbywa się taka sama jak wywołanie metody asynchronicznej wszelkie zadania, jak pokazano w poniższym fragmencie kodu.  
+### <a name="calling-wcf-services-from-windows-store-applications"></a>Wywoływanie usług WCF z aplikacji ze sklepu Windows  
+ Jak wspomniano wcześniej, przed całą konfiguracją należy wykonać w kodzie w metodzie GetBindingForEndpoint w wygenerowanej klasie proxy. Wywoływanie operacji usługi odbywa się tak samo jak wywołanie metody asynchronicznej opartej na zadaniach, jak pokazano w poniższym fragmencie kodu.  
   
 ```csharp  
 void async SomeMethod()  
@@ -172,13 +172,13 @@ void async SomeMethod()
 }  
 ```  
   
- Zwróć uwagę na async — słowo kluczowe dla metody, dzięki czemu wywołania asynchronicznego i słowo kluczowe await podczas wywoływania metody asynchronicznej.  
+ Zwróć uwagę na użycie słowa kluczowego Async na metodzie wywołującym wywołanie asynchroniczne i słowo kluczowe await podczas wywoływania metody asynchronicznej.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi WCF w blogu aplikacje Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
-- [Klienci WCF Windows Store i zabezpieczeń](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
-- [Aplikacje Windows Store i wywołań między maszyny](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
-- [Wywołanie usługi WCF wdrożonych na platformie Azure z aplikacji Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Blog usługi WCF w Sklepie Windows](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
+- [Klienci i zabezpieczenia sklepu Windows WCF](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
+- [Aplikacje ze sklepu Windows i wywołania między maszynami](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Wywoływanie usługi WCF wdrożonej na platformie Azure z aplikacji ze sklepu Windows](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
 - [Programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Powiązania](../../../../docs/framework/wcf/bindings.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05b1d80887186466044acdb088d7f45a386b37f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: eb16097ab5a452a554cc7dfe039db1858e46de00
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364030"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967201"
 ---
 # <a name="reflection-and-generic-types"></a>Odbicie i typy ogólne
 <a name="top"></a>Z punktu widzenia odbicia różnica między typem ogólnym i typem zwykłym polega na tym, że typ ogólny jest skojarzony z tym zestawem parametrów typu (jeśli jest to definicja typu ogólnego) lub argumentów typu (jeśli jest to typ skonstruowany). Metoda ogólna różni się od zwykłej metody w taki sam sposób.  
@@ -32,7 +32,7 @@ ms.locfileid: "68364030"
 - Parametry typu dla definicji typu ogólnego i definicji metod ogólnych są reprezentowane przez wystąpienia <xref:System.Type> klasy.  
   
     > [!NOTE]
-    >  Wiele właściwości i metod <xref:System.Type> ma inne zachowanie, <xref:System.Type> gdy obiekt reprezentuje parametr typu ogólnego. Te różnice opisano w tematach dotyczących właściwości i metod. Na przykład zobacz <xref:System.Type.IsAutoClass%2A> i <xref:System.Type.DeclaringType%2A>. Ponadto niektóre elementy członkowskie są prawidłowe tylko wtedy, gdy <xref:System.Type> obiekt reprezentuje parametr typu ogólnego. Na przykład, zobacz <xref:System.Type.GetGenericTypeDefinition%2A>.  
+    > Wiele właściwości i metod <xref:System.Type> ma inne zachowanie, <xref:System.Type> gdy obiekt reprezentuje parametr typu ogólnego. Te różnice opisano w tematach dotyczących właściwości i metod. Na przykład zobacz <xref:System.Type.IsAutoClass%2A> i <xref:System.Type.DeclaringType%2A>. Ponadto niektóre elementy członkowskie są prawidłowe tylko wtedy, gdy <xref:System.Type> obiekt reprezentuje parametr typu ogólnego. Na przykład, zobacz <xref:System.Type.GetGenericTypeDefinition%2A>.  
   
 - Jeśli wystąpienie <xref:System.Type> reprezentuje typ generyczny, zawiera tablicę typów reprezentujących parametry typu (dla definicji typu ogólnego) lub argumentów typu (dla konstruowanych typów). Ta sama wartość jest równa wystąpieniu <xref:System.Reflection.MethodInfo> klasy, która reprezentuje metodę rodzajową.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68364030"
   
  Przykładowy kod pokazujący metody omówione tutaj można znaleźć w temacie [How to: Sprawdzanie i Tworzenie wystąpień typów ogólnych za](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)pomocą odbicia.  
   
- W poniższej dyskusji założono znajomość terminologii ogólnych, takich jak różnica między parametrami typu a argumentami i otwartymi lub zamkniętymi typami skonstruowanymi. Aby uzyskać więcej informacji, zobacz [Ogólne](../../../docs/standard/generics/index.md).  
+ W poniższej dyskusji założono znajomość terminologii ogólnych, takich jak różnica między parametrami typu a argumentami i otwartymi lub zamkniętymi typami skonstruowanymi. Aby uzyskać więcej informacji, zobacz [Ogólne](../../standard/generics/index.md).  
   
  To omówienie obejmuje następujące sekcje:  
   
@@ -131,7 +131,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  <xref:System.Type.GenericParameterAttributes%2A> Właściwość<xref:System.Reflection.GenericParameterAttributes> Pobiera wartość wskazującą wariancję (kowariancję lub kontrawariancja) oraz specjalne ograniczenia parametru typu.  
   
 #### <a name="covariance-and-contravariance"></a>Kowariancja i kontrawariancja  
- Aby określić, czy parametr typu jest współvariant lub kontrawariantne, Zastosuj <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> maskę <xref:System.Reflection.GenericParameterAttributes> do wartości zwracanej przez <xref:System.Type.GenericParameterAttributes%2A> właściwość. Jeśli wynik to <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, parametr typu jest niezmienny. Zobacz [Kowariancja i kontrawariancja](../../../docs/standard/generics/covariance-and-contravariance.md).  
+ Aby określić, czy parametr typu jest współvariant lub kontrawariantne, Zastosuj <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> maskę <xref:System.Reflection.GenericParameterAttributes> do wartości zwracanej przez <xref:System.Type.GenericParameterAttributes%2A> właściwość. Jeśli wynik to <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, parametr typu jest niezmienny. Zobacz [Kowariancja i kontrawariancja](../../standard/generics/covariance-and-contravariance.md).  
   
 #### <a name="special-constraints"></a>Ograniczenia specjalne  
  Aby określić specjalne ograniczenia parametru typu, Zastosuj <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> maskę <xref:System.Reflection.GenericParameterAttributes> do wartości zwracanej przez <xref:System.Type.GenericParameterAttributes%2A> właściwość. Jeśli wynik to <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, nie ma żadnych specjalnych ograniczeń. Parametr typu może być ograniczony jako typ referencyjny, jako typ wartości niedopuszczający wartości null i mieć konstruktora bez parametrów.  
@@ -150,6 +150,6 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 |Tytuł|Opis|  
 |-----------|-----------------|  
 |[Instrukcje: Sprawdzanie i Tworzenie wystąpień typów ogólnych za pomocą odbicia](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|Pokazuje, jak używać właściwości i metod <xref:System.Type> i <xref:System.Reflection.MethodInfo> do badania typów ogólnych.|  
-|[Typy ogólne](../../../docs/standard/generics/index.md)|Opisuje funkcję generyczną i sposób jej obsługi w .NET Framework.|  
+|[Typy ogólne](../../standard/generics/index.md)|Opisuje funkcję generyczną i sposób jej obsługi w .NET Framework.|  
 |[Instrukcje: Definiowanie typu ogólnego przy użyciu emisji odbicia](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Pokazuje, jak używać emisji odbicia do generowania typów ogólnych w zestawach dynamicznych.|  
 |[Wyświetlanie informacji o typie](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Opisuje klasę i zawiera przykłady kodu, które ilustrują sposób użycia <xref:System.Type> z różnymi klasami odbicia w celu uzyskania informacji na temat konstruktorów, metod, pól, właściwości i zdarzeń. <xref:System.Type>|

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
-ms.openlocfilehash: 28eceaec72053d70885d54bc09179cff743ff71c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: aa497194fd4ac65f48773a45175333a1d862b453
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591437"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956071"
 ---
 # <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Instrukcje: udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource
-Dane mogą łatwo udostępniać w wielu formularzach za <xref:System.Windows.Forms.BindingSource> składnika. Na przykład można wyświetlić jeden formularz tylko do odczytu, który podsumowuje dane źródło danych i innym edytowalnego formularza, który zawiera szczegółowe informacje dotyczące aktualnie wybranego elementu w źródle danych. Ten przykład pokazuje, w tym scenariuszu.  
+Możesz łatwo udostępniać dane między formularzami przy użyciu <xref:System.Windows.Forms.BindingSource> składnika. Na przykład możesz chcieć wyświetlić jeden formularz tylko do odczytu, który podsumowuje dane źródła danych i inny formularz edytowalny, który zawiera szczegółowe informacje dotyczące aktualnie wybranego elementu w źródle danych. Ten przykład ilustruje ten scenariusz.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu demonstruje sposób udostępniania <xref:System.Windows.Forms.BindingSource> i jego danych powiązanych w wielu formularzach. W tym przykładzie wspólnie <xref:System.Windows.Forms.BindingSource> jest przekazywany do konstruktora formularza podrzędnego. Formularz podrzędny umożliwia użytkownikowi edytowanie danych dla aktualnie wybranego elementu w formularzu głównym.  
+ Poniższy przykład kodu demonstruje <xref:System.Windows.Forms.BindingSource> , jak udostępniać dane i powiązane z nią powiązania w formularzach. W tym przykładzie udostępniony <xref:System.Windows.Forms.BindingSource> jest przesyłany do konstruktora formularza podrzędnego. Formularz podrzędny umożliwia użytkownikowi edytowanie danych dla aktualnie wybranego elementu w formularzu głównym.  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.BindingSource.BindingComplete> Zdarzenie <xref:System.Windows.Forms.BindingSource> składnika odbywa się w przykładzie, aby upewnić się, że dwie formy pozostają zsynchronizowane. Aby uzyskać więcej informacji na temat przyczyn jest to zrobić, zobacz [jak: Upewnij się, wiele formantów powiązanych z tym samym źródłem danych pozostają zsynchronizowane](../multiple-controls-bound-to-data-source-synchronized.md).  
+> <xref:System.Windows.Forms.BindingSource.BindingComplete> Zdarzenie<xref:System.Windows.Forms.BindingSource> dla składnika jest obsługiwane w przykładzie, aby upewnić się, że dwa formularze pozostają zsynchronizowane. Aby uzyskać więcej informacji na temat tego, jak to [zrobić, zobacz How to: Upewnij się, że wiele kontrolek powiązanych z tym samym](../multiple-controls-bound-to-data-source-synchronized.md)źródłem danych pozostanie zsynchronizowane.  
   
  [!code-csharp[System.Windows.Forms.BindingSourceMultipleForms#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleForms/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.BindingSourceMultipleForms#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleForms/VB/Form1.vb#1)]  
@@ -32,10 +32,10 @@ Dane mogą łatwo udostępniać w wielu formularzach za <xref:System.Windows.For
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów systemu, przestrzeń nazw System.Windows.Forms, System.Drawing, dane systemowe i System.Xml.  
+- Odwołania do zestawów system, system. Windows. Forms, system. Drawing, system. Data i system. XML.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [BindingSource, składnik](bindingsource-component.md)
 - [Wiązanie danych formularzy Windows Forms](../windows-forms-data-binding.md)
-- [Instrukcje: Obsługa błędów i wyjątków występujących za powodu powiązania danych](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [Instrukcje: Obsługa błędów i wyjątków występujących podczas wiązania z danymi](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: e2755dc6db655a632685b45a7cfe600808eba2b6
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e0c8f52193639c067252878127ee95a0897b9582
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602287"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922442"
 ---
 # <a name="async-c-reference"></a>async (odwołanie w C#)
 
@@ -64,7 +64,7 @@ Aby uruchomić kod jako aplikację ze sklepu Windows:
 [!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
->  Aby uzyskać więcej informacji o zadaniach i kodzie, który jest wykonywany podczas oczekiwania na zadanie, zobacz [programowanie asynchroniczne z Async i await](../../programming-guide/concepts/async/index.md). Aby zapoznać się z pełnym przykładem WPF, który używa [podobnych elementów, zobacz Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)Async i await.  
+> Aby uzyskać więcej informacji o zadaniach i kodzie, który jest wykonywany podczas oczekiwania na zadanie, zobacz [programowanie asynchroniczne z Async i await](../../programming-guide/concepts/async/index.md). Aby zapoznać się z pełnym przykładem WPF, który używa [podobnych elementów, zobacz Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)Async i await.  
   
 ## <a name="return-types"></a>Typy zwracane  
 Metoda asynchroniczna może mieć następujące zwracane typy:

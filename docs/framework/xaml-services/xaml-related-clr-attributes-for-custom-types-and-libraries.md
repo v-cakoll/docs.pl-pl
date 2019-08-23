@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 2f907d097f52f13e733713d8ad68cc2390b051ed
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a264ec3fa1232a058a3bfbabbe8b84712cf87322
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364228"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956411"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Atrybuty CLR związane z XAML dla niestandardowych typów i bibliotek
 W tym temacie opisano atrybuty środowiska uruchomieniowego języka wspólnego (CLR), które są zdefiniowane przez .NET Framework usług XAML. Opisano w nim również inne atrybuty CLR, które są zdefiniowane w .NET Framework, które mają scenariusz związany z XAML dla aplikacji do zestawów lub typów. Przypisywanie zestawów, typów lub elementów członkowskich przy użyciu tych atrybutów CLR zapewnia informacje o systemie typów XAML powiązane z typami. Informacje są udostępniane każdemu konsumentowi języka XAML korzystającemu z usług .NET Framework XAML do przetwarzania strumienia węzłów XAML bezpośrednio lub za pośrednictwem dedykowanych czytników XAML i autorów XAML.  
@@ -266,7 +266,7 @@ W tym temacie opisano atrybuty środowiska uruchomieniowego języka wspólnego (
 - Obsługę języka XAML definiuje się w zestawie i masz <xref:System.Windows.Markup.XmlnsDefinitionAttribute> dla. `http://schemas.microsoft.com/winfx/2006/xaml` W takim przypadku zazwyczaj należy podwyższyć poziom prefiksu `x`.  
   
 > [!NOTE]
->  .NET Framework usługi XAML definiują również atrybut <xref:System.Windows.Markup.RootNamespaceAttribute>związany z XAML. Ten atrybut jest atrybutem poziomu zestawu na potrzeby obsługi systemu projektu i nie jest przeznaczony dla typów niestandardowych XAML.  
+> .NET Framework usługi XAML definiują również atrybut <xref:System.Windows.Markup.RootNamespaceAttribute>związany z XAML. Ten atrybut jest atrybutem poziomu zestawu na potrzeby obsługi systemu projektu i nie jest przeznaczony dla typów niestandardowych XAML.  
   
 ## <a name="see-also"></a>Zobacz także
 

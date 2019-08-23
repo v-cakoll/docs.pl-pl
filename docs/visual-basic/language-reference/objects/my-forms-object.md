@@ -1,5 +1,5 @@
 ---
-title: My.Forms — obiekt (Visual Basic)
+title: My. Forms — obiekt (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.Forms
@@ -7,50 +7,50 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: 4998097b910a504461a34af3cc159ddb1c74cc62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fa5c77dd12c98100e3d17fc473a6802180d1e32
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949321"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965983"
 ---
 # <a name="myforms-object"></a>My.Forms — Obiekt
-Udostępnia właściwości do uzyskiwania dostępu do wystąpienia każdego formularza Windows zadeklarowana w bieżącym projekcie.  
+Zawiera właściwości umożliwiające dostęp do wystąpienia każdego formularza systemu Windows zadeklarowanego w bieżącym projekcie.  
   
 ## <a name="remarks"></a>Uwagi  
- `My.Forms` Obiekt zawiera wystąpienie każdego formularza w bieżącym projekcie. Nazwa właściwości jest taka sama jak nazwa formularza, który uzyskuje dostęp do właściwości.   
+ `My.Forms` Obiekt zawiera wystąpienie każdego formularza w bieżącym projekcie. Nazwa właściwości jest taka sama jak nazwa formularza, do którego uzyskuje dostęp właściwość.   
   
- Możesz uzyskać dostęp przypominają zwykłe formularze `My.Forms` obiektu przy użyciu nazwy formularza, bez kwalifikacji. Nazwa właściwości jest taka sama jak nazwa typu formularza, to umożliwia dostęp do formularza tak, jakby był domyślnego wystąpienia. Na przykład `My.Forms.Form1.Show` jest odpowiednikiem `Form1.Show`.  
+ Dostęp do formularzy dostarczonych przez `My.Forms` obiekt można uzyskać przy użyciu nazwy formularza bez kwalifikacji. Ponieważ nazwa właściwości jest taka sama jak nazwa typu formularza, pozwala to na dostęp do formularza tak, jakby miał wystąpienie domyślne. Na przykład `My.Forms.Form1.Show` jest `Form1.Show`równoważne.  
   
- `My.Forms` Obiekt udostępnia tylko formularze, które są skojarzone z bieżącego projektu. Go nie zapewnia dostępu do formularzy zadeklarowane w przywoływanych bibliotekach DLL. Aby uzyskać dostęp do formularza, który zawiera biblioteki DLL, należy użyć kwalifikowana nazwa formularza zapisywane jako *Nazwa_pliku_dll*. *Nazwa_formularza*.  
+ `My.Forms` Obiekt uwidacznia tylko formularze skojarzone z bieżącym projektem. Nie zapewnia dostępu do formularzy zadeklarowanych w przywoływanych bibliotekach DLL. Aby uzyskać dostęp do formularza, który zapewnia Biblioteka DLL, należy użyć kwalifikowanej nazwy formularza, która jest zapisywana jako *nazwa_pliku_dll*. *FormatName*.  
   
- Możesz użyć <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> właściwości do pobrania zbiór wszystkich aplikacji, otwartych formularzy.  
+ Możesz użyć <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> właściwości, aby uzyskać kolekcję wszystkich otwartych formularzy aplikacji.  
   
- Obiekt i jego właściwości są dostępne tylko dla aplikacji Windows.  
+ Obiekt i jego właściwości są dostępne tylko dla aplikacji systemu Windows.  
   
 ## <a name="properties"></a>Właściwości  
- Każda właściwość `My.Forms` obiekt umożliwia dostęp do wystąpienia do formularza w bieżącym projekcie. Nazwa właściwości jest taka sama jak nazwa formularza, który uzyskuje dostęp do właściwości, a typ właściwości jest taka sama jak typ formularza.  
+ Każda właściwość `My.Forms` obiektu zapewnia dostęp do wystąpienia formularza w bieżącym projekcie. Nazwa właściwości jest taka sama jak nazwa formularza, do którego uzyskuje dostęp właściwość, a typ właściwości jest taki sam jak typ formularza.  
   
 > [!NOTE]
->  W przypadku kolizji nazw, nazwę właściwości, aby przejść do formularza jest *RootNamespace*_*Namespace*\_*Nazwa_formularza*. Na przykład, należy wziąć pod uwagę dwie formy o nazwie `Form1.`jednej z poniższych metod czy w głównej przestrzeni nazw `WindowsApplication1` w przestrzeni nazw `Namespace1`, dostęp do formularza przy użyciu `My.Forms.WindowsApplication1_Namespace1_Form1`.  
+> W przypadku kolizji nazw nazwa właściwości do uzyskiwania dostępu do formularza to *RootNamespace*_*NamespaceName*\_. Rozważmy na przykład dwa formularze o `Form1.`nazwie, jeśli jeden z tych formularzy znajduje się w `WindowsApplication1` głównej przestrzeni nazw i `Namespace1`w przestrzeni nazw, możesz uzyskać dostęp `My.Forms.WindowsApplication1_Namespace1_Form1`do tego formularza.  
   
- `My.Forms` Obiekt umożliwia dostęp do wystąpienia aplikacji formularza głównego, który został utworzony podczas uruchamiania. Dla wszystkich innych form `My.Forms` obiektu tworzy nowe wystąpienie formularza, jeśli jest dostępny i zapisuje go. Kolejne próby dostępu do tej właściwości zwracają tego wystąpienia formularza.  
+ `My.Forms` Obiekt umożliwia dostęp do wystąpienia głównego formularza aplikacji, który został utworzony podczas uruchamiania. W przypadku wszystkich innych formularzy `My.Forms` obiekt tworzy nowe wystąpienie formularza, gdy jest on dostępny i przechowuje je. Kolejne próby uzyskania dostępu do tej właściwości zwracają to wystąpienie formularza.  
   
- Można dysponować formularza, przypisując `Nothing` do właściwości dla formularza. Wywołania metody ustawiającej właściwość <xref:System.Windows.Forms.Form.Close%2A> metody formularza, a następnie przypisuje `Nothing` do przechowywanej wartości. Jeśli przypiszesz dowolnej wartości innych niż `Nothing` dla właściwości, metody ustawiającej zgłasza <xref:System.ArgumentException> wyjątku.  
+ Formularz można usunąć, przypisując `Nothing` do właściwości tego formularza. <xref:System.Windows.Forms.Form.Close%2A> Metoda ustawiająca właściwość wywołuje metodę formularza, a następnie przypisuje `Nothing` do przechowywanej wartości. Jeśli przypiszesz dowolną wartość inną `Nothing` niż właściwość, Metoda ustawiająca <xref:System.ArgumentException> zgłosi wyjątek.  
   
- Możesz sprawdzić, czy właściwość `My.Forms` obiekt przechowuje wystąpienia formularza za pomocą `Is` lub `IsNot` operatora. Aby sprawdzić, czy wartość właściwości można używać tych operatorów `Nothing`.  
+ Można sprawdzić, czy właściwość `My.Forms` obiektu przechowuje wystąpienie formularza przy `Is` użyciu operatora or `IsNot` . Można użyć tych operatorów do sprawdzenia, czy wartość właściwości jest `Nothing`.  
   
 > [!NOTE]
->  Zazwyczaj `Is` lub `IsNot` operator ma zostać odczytana wartość właściwości, które ma wykonać porównanie. Jednakże jeśli właściwość jest obecnie przechowuje `Nothing`, właściwość tworzy nowe wystąpienie formularza, a następnie zwraca tego wystąpienia. Jednak kompilator języka Visual Basic traktuje właściwości `My.Forms` obiektu inaczej i umożliwia `Is` lub `IsNot` operatora, aby sprawdzić stan właściwości bez zmieniania jego wartości.  
+> Zazwyczaj operator `IsNot` or musi odczytywać wartość właściwości w celu przeprowadzenia porównania. `Is` Jeśli jednak właściwość jest obecnie przechowywana `Nothing`, Właściwość tworzy nowe wystąpienie formularza, a następnie zwraca to wystąpienie. Jednak kompilator Visual Basic traktuje właściwości `My.Forms` obiektu inaczej i `Is` umożliwia operatorowi or `IsNot` sprawdzenie stanu właściwości bez zmiany jego wartości.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład umożliwia zmianę tytuł domyślnego `SidebarMenu` formularza.  
+ Ten przykład zmienia tytuł formularza domyślnego `SidebarMenu` .  
   
  [!code-vb[VbVbalrMyForms#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyForms/VB/Class1.vb#2)]  
   
- W tym przykładzie do pracy, projekt musi mieć formularz o nazwie `SidebarMenu`.  
+ Aby ten przykład działał, projekt musi mieć formularz o nazwie `SidebarMenu`.  
   
- Ten kod będzie działać tylko w projekcie aplikacji Windows.  
+ Ten kod będzie działał tylko w projekcie aplikacji systemu Windows.  
   
 ## <a name="requirements"></a>Wymagania  
   
@@ -58,10 +58,10 @@ Udostępnia właściwości do uzyskiwania dostępu do wystąpienia każdego form
   
 |Typ projektu|Dostępne|  
 |---|---|  
-|Aplikacja Windows|**Tak**|  
+|Aplikacja systemu Windows|**Tak**|  
 |Biblioteka klas|Nie|  
 |Aplikacja konsoli|Nie|  
-|Biblioteka formantów Windows|Nie|  
+|Biblioteka formantów systemu Windows|Nie|  
 |Biblioteka formantów sieci Web|Nie|  
 |Usługa systemu Windows|Nie|  
 |Witryna sieci Web|Nie|  

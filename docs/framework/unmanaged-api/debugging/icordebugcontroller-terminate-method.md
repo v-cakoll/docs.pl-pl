@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06c91a813a80af5cf09914ca134ac9935ed787c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ee1c30809567097e67b6b1e40f5534429d748abd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750070"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964370"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate — Metoda
-Kończy proces o określony kod zakończenia.  
+Kończy proces z określonym kodem zakończenia.  
   
 > [!NOTE]
->  Ta metoda jest otoką Win32 `TerminateProcess` funkcji. W związku z tym `Terminate` korzysta z kodem zakończenia w taki sam sposób Win32 `TerminateProcess` używa go w funkcji.  
+> Ta metoda jest otoką dla funkcji Win32 `TerminateProcess` . W tym `Terminate` celu program używa kodu zakończenia w taki sam sposób, w `TerminateProcess` jaki używa go funkcja Win32.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,21 +40,21 @@ HRESULT Terminate (
   
 ## <a name="parameters"></a>Parametry  
  `exitCode`  
- [in] Wartość liczbowa jest kod wyjścia. Prawidłowe wartości numeryczne są definiowane w Winbase.h.  
+ podczas Wartość liczbowa, która jest kodem zakończenia. Prawidłowe wartości liczbowe są zdefiniowane w Winbase. h.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli proces zostanie zatrzymany, kiedy `Terminate` jest wywoływana, ten proces należy kontynuować przy użyciu [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) metody tak, aby debuger odbiera potwierdzenie zakończenia za pośrednictwem [ ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) lub [ICorDebugManagedCallback::ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) wywołania zwrotnego.  
+ Jeśli proces zostanie zatrzymany po `Terminate` wywołaniu, proces powinien być kontynuowany przy użyciu metody [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) , aby debuger otrzymał potwierdzenie zakończenia za pośrednictwem [ICorDebugManagedCallback:: ExitProcess —](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) lub [ICorDebugManagedCallback:: ExitAppDomain —](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) , wywołanie zwrotne.  
   
 > [!NOTE]
->  Ta metoda nie jest zaimplementowana przez domenę aplikacji. Oznacza to, że nie jest zaimplementowana w <xref:System.AppDomain> poziom.  
+> Ta metoda nie jest implementowana przez domenę aplikacji. Oznacza to, że nie jest zaimplementowana <xref:System.AppDomain> na poziomie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także

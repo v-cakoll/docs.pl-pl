@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32a4f4f3735c8952cf1458c63655eb56a82fd18f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5c9f15a7ff30d5647338bf1954aca441b47281b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666434"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948738"
 ---
 # <a name="generics-in-net"></a>Typy ogólne w .NET
 
@@ -128,7 +128,7 @@ ms.locfileid: "69666434"
 - W Visual Basic, C#i C++, nie można utworzyć wystąpienia typu zagnieżdżonego, który jest ujęty w typ ogólny, chyba że typy zostały przypisane do parametrów typu wszystkich typów otaczających. Innym sposobem wymawiania tego jest to, że w odbiciu zagnieżdżony typ, który jest zdefiniowany przy użyciu tych języków, zawiera parametry typu dla wszystkich typów otaczających. Pozwala to na używanie parametrów typu otaczających typów, które mają być używane w definicjach elementów członkowskich typu zagnieżdżonego. Aby uzyskać więcej informacji, zobacz "typy zagnieżdżone" <xref:System.Type.MakeGenericType%2A>w temacie.  
   
     > [!NOTE]
-    >  Zagnieżdżony typ, który jest definiowany przez emitowanie kodu w zestawie dynamicznym lub przy użyciu [Ilasm. exe (ASEMBLER Il)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) , nie jest wymagany do uwzględnienia parametrów typu otaczających je typów; Jednakże, jeśli nie zawiera ich, parametry typu nie znajdują się w zakresie klasy zagnieżdżonej.  
+    > Zagnieżdżony typ, który jest definiowany przez emitowanie kodu w zestawie dynamicznym lub przy użyciu [Ilasm. exe (ASEMBLER Il)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) , nie jest wymagany do uwzględnienia parametrów typu otaczających je typów; Jednakże, jeśli nie zawiera ich, parametry typu nie znajdują się w zakresie klasy zagnieżdżonej.  
   
      Aby uzyskać więcej informacji, zobacz "typy zagnieżdżone" <xref:System.Type.MakeGenericType%2A>w temacie.  
   

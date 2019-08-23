@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 0477f68aaf67d4b29c491052999ff7784e736669
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 934efd707f2a52da5ba604139c8e4510aad4606b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009711"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964458"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Splitter — Informacje o formancie (Formularze systemu Windows)
 > [!IMPORTANT]
->  Mimo że <xref:System.Windows.Forms.SplitContainer> zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.Splitter> kontrolki z poprzednich wersji <xref:System.Windows.Forms.Splitter> został zachowany na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości wybranie opcji.  
+> Mimo <xref:System.Windows.Forms.SplitContainer> że program zamienia i dodaje funkcje <xref:System.Windows.Forms.Splitter> kontroli nad poprzednimi wersjami, <xref:System.Windows.Forms.Splitter> jest zachowywany w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości.  
   
- Windows Forms <xref:System.Windows.Forms.Splitter> formantów służą do zmiany rozmiaru zadokowanych formantów w czasie wykonywania. <xref:System.Windows.Forms.Splitter> Kontroli jest często używana w formularzach za pomocą formantów, które mają różne długości danych, aby zaprezentować, takich jak Eksplorator Windows, którego okienka danych zawierają informacje o różnych szerokościach w różnym czasie.  
+ Kontrolki Windows Forms <xref:System.Windows.Forms.Splitter> są używane do zmiany rozmiaru zadokowanych kontrolek w czasie wykonywania. <xref:System.Windows.Forms.Splitter> Kontrolka jest często używana w formularzach z kontrolkami, które mają różne długości danych, takich jak Eksplorator Windows, którego okienka danych zawierają informacje o różnych szerokościach w różnych godzinach.  
   
-## <a name="working-with-the-splitter-control"></a>Praca z Splitter — formant  
- Gdy użytkownik wskaże wskaźnik myszy na niezadokowane krawędzi kontrolki, która może zmienić rozmiar Splitter — formant, kursor zmienia jego wygląd, aby wskazać, że można zmienić rozmiar kontrolki. Za pomocą kontrolki rozdzielacz użytkownika można zmienić rozmiar zadokowany formant, który jest bezpośrednio przed. W związku z tym aby umożliwić użytkownikowi na zmienianie rozmiaru kontrolki zadokowany w czasie wykonywania, zadokować kontroli rozmiaru krawędzią kontenera, a następnie Zadokuj Splitter — formant do tej samej stronie tego kontenera.  
+## <a name="working-with-the-splitter-control"></a>Praca z kontrolką rozdzielacza  
+ Gdy użytkownik wskaże wskaźnik myszy w niezadokowanej krawędzi kontrolki, którą można zmienić rozmiar kontrolki rozdzielacza, wskaźnik zmieni swój wygląd, aby wskazać, że można zmienić rozmiar kontrolki. Przy użyciu kontrolki rozdzielacza użytkownik może zmienić rozmiar zadokowanego formantu, który jest bezpośrednio przed nim. W związku z tym, aby umożliwić użytkownikowi zmianę rozmiaru zadokowanej kontrolki w czasie wykonywania, Zadokuj kontrolkę, która ma zostać zmieniony na krawędź kontenera, a następnie Zadokuj kontrolkę rozdzielacza do tej samej krawędzi tego kontenera.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [Instrukcje: Dokowanie formantów na formularzach Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Instrukcje: Zadokuj kontrolki na Windows Forms](how-to-dock-controls-on-windows-forms.md)
 - [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: 440e583b55765d680ee72f8574f929e335e10cdb
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 75c3e5842447a8f0812d5a90d7157f7a6a496936
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590628"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962443"
 ---
 # <a name="-bugreport"></a>-bugreport
-Tworzy plik, który można użyć, gdy plik jest raport o usterce.  
+Tworzy plik, którego można użyć podczas tworzenia pliku raportu o usterce.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,35 +26,35 @@ Tworzy plik, który można użyć, gdy plik jest raport o usterce.
   
 |Termin|Definicja|  
 |---|---|  
-|`file`|Wymagana. Nazwa pliku, który będzie zawierał raport o usterce. Nazwę pliku należy ująć w znaki cudzysłowu (""), jeśli nazwa zawiera spację.|  
+|`file`|Wymagany. Nazwa pliku, który będzie zawierać raport o błędach. Nazwa pliku powinna być ujęta w cudzysłów (""), jeśli nazwa zawiera spację.|  
   
 ## <a name="remarks"></a>Uwagi  
- Poniższe informacje są dodawane do `file`:  
+ Następujące informacje są dodawane do `file`:  
   
-- Kopiowanie wszystkich plików kodu źródłowego w kompilacji.  
+- Kopia wszystkich plików kodu źródłowego w kompilacji.  
   
-- Lista opcji kompilatora, używane w kompilacji.  
+- Lista opcji kompilatora używanych w kompilacji.  
   
-- Informacje o wersji dotyczące kompilatora, środowisko uruchomieniowe języka wspólnego i systemu operacyjnego.  
+- Informacje o wersji dotyczące kompilatora, środowiska uruchomieniowego języka wspólnego i systemu operacyjnego.  
   
-- Kompilator dane wyjściowe, jeśli istnieje.  
+- Dane wyjściowe kompilatora, jeśli istnieją.  
   
-- Opis problemu, dla którego jest wyświetlany monit.  
+- Opis problemu, dla którego zostanie wyświetlony monit.  
   
-- Opis sposobu Twoim zdaniem ten problem należy ustalić, dla którego jest wyświetlany monit.  
+- Opis sposobu, w jaki sądzisz, że problem powinien zostać rozwiązany, dla którego zostanie wyświetlony monit.  
   
- Ponieważ kopiowanie wszystkich plików kodu źródłowego jest uwzględniony w `file`, może zajść potrzeba odtworzenia kodu (podejrzanych) wada najkrótszej program możliwe.  
+ Ze względu na to, że kopia wszystkich plików kodu źródłowego `file`jest uwzględniona w programie, można odtworzyć defekt kodu (podejrzane) w najkrótszym możliwym programie.  
   
 > [!IMPORTANT]
->  `-bugreport` Opcja tworzy plik, który zawiera potencjalnie poufne informacje. Obejmuje to bieżący czas, wersja kompilatora, wersja programu .NET Framework, wersja systemu operacyjnego, nazwę użytkownika, argumenty wiersza polecenia, z którymi kompilator zostało uruchomione, każdy kod źródłowy i binarną formę dowolnego przywoływanego zestawu. Ta opcja jest możliwy za pośrednictwem opcji wiersza polecenia w pliku Web.config dla kompilacji po stronie serwera w aplikacji ASP.NET. Aby tego uniknąć, należy zmodyfikować plik Machine.config, aby uniemożliwić użytkownikom kompilacji na serwerze.  
+> `-bugreport` Opcja tworzy plik, który zawiera potencjalnie poufne informacje. Obejmuje to bieżący czas, wersję kompilatora, wersję .NET Framework, wersję systemu operacyjnego, nazwę użytkownika, argumenty wiersza polecenia, za pomocą których kompilator został uruchomiony, wszystkie kod źródłowy oraz binarną postać dowolnego przywoływanego zestawu. Dostęp do tej opcji można uzyskać, określając opcje wiersza polecenia w pliku Web. config po stronie serwera dla kompilacji aplikacji ASP.NET. Aby tego uniknąć, należy zmodyfikować plik Machine. config, aby nie zezwalać użytkownikom na kompilowanie na serwerze.  
   
- Jeśli ta opcja jest używana z `-errorreport:prompt`, `-errorreport:queue`, lub `-errorreport:send`, i aplikacji wystąpi błąd wewnętrzny kompilatora, informacje zawarte w `file` są wysyłane do firmy Microsoft Corporation. Te informacje pomagają inżynierów firmy Microsoft, Zidentyfikuj przyczynę błędu i może poprawić kolejnej wersji programu Visual Basic. Domyślnie żadne informacje nie są wysyłane do firmy Microsoft. Jednakże, gdy kompilujesz aplikację za pomocą `-errorreport:queue`, która jest domyślnie włączone, aplikacja zbiera raporty o błędach. Następnie kiedy loguje administratora komputera, systemu raportowania błędów wyświetli okno wyskakujące z umożliwiająca administratorowi przesłać do firmy Microsoft raporty o wszelkich błędach, które od czasu logowania.  
+ Jeśli ta opcja jest używana z `-errorreport:prompt`, `-errorreport:queue`, lub `-errorreport:send`, a aplikacja napotkała wewnętrzny błąd kompilatora, informacje w programie `file` są wysyłane do firmy Microsoft Corporation. Te informacje ułatwią inżynierom firmy Microsoft Identyfikowanie przyczyny błędu i mogą pomóc w ulepszaniu kolejnej wersji Visual Basic. Domyślnie żadne informacje nie są wysyłane do firmy Microsoft. Jednak podczas kompilowania aplikacji przy użyciu `-errorreport:queue`, która jest domyślnie włączona, aplikacja zbiera raporty o błędach. Po zalogowaniu się administratora komputera w systemie raportowanie błędów zostanie wyświetlone okno podręczne, które umożliwi administratorowi przekazanie do firmy Microsoft wszelkich raportów o błędach, które wystąpiły od momentu zalogowania.  
   
 > [!NOTE]
->  `/bugreport` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilacji z wiersza polecenia.  
+> `/bugreport` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio. jest ona dostępna tylko podczas kompilowania z wiersza polecenia.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kompiluje `T2.vb` i umieszczenie wszystkich informacji usługi raportowania błędów w pliku `Problem.txt`.  
+ Poniższy przykład kompiluje `T2.vb` i umieszcza wszystkie informacje o raportowaniu błędów w pliku `Problem.txt`.  
   
 ```  
 vbc -bugreport:problem.txt t2.vb  
@@ -62,8 +62,8 @@ vbc -bugreport:problem.txt t2.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-Debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
 - [-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [trustLevel elementu dla securityPolicy (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))
+- [Element trustLevel dla securityPolicy (ASP.NET Schema Settings)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))

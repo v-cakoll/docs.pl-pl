@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3adeb57e853d26415c53b5ac2579f14187e45969
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5a71277c6e5183f855ef07a6fc3a20e29b06998f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658970"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920922"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> Element
 Definiuje jeden lub więcej przełączników używanych przez <xref:System.AppContext> klasę, aby zapewnić mechanizm rezygnacji dla nowych funkcji.  
@@ -138,7 +138,7 @@ Definiuje jeden lub więcej przełączników używanych przez <xref:System.AppCo
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Określa, czy puste sekwencje klawiszy w kluczach złożonych są ignorowane przez walidację schematu XSD. Aby uzyskać więcej informacji, [Zobacz Ograniczanie: Walidacja](../../../migration-guide/mitigation-xml-schema-validation.md)schematu XML.|.NET Framework 4.6|  
   
 > [!NOTE]
->  `AppContextSwitchOverrides` Zamiast dodawać elementy do pliku konfiguracji aplikacji, można również ustawić przełączniki programowo poprzez `static` wywołanie metody (in C#) lub `Shared` (w Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> .  
+> `AppContextSwitchOverrides` Zamiast dodawać elementy do pliku konfiguracji aplikacji, można również ustawić przełączniki programowo poprzez `static` wywołanie metody (in C#) lub `Shared` (w Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> .  
   
  Deweloperzy bibliotek mogą również definiować niestandardowe przełączniki, aby umożliwić wywołującym rezygnację ze zmienionych funkcji wprowadzonych w nowszych wersjach ich bibliotek. Aby uzyskać więcej informacji, zobacz <xref:System.AppContext> Klasa.  
   

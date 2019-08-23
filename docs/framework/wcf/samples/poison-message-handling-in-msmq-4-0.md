@@ -2,42 +2,42 @@
 title: Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 86d42e567d6d0f2b306d4def6746d32bfe7c6ab4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 88ce22c9376313db26a5cbe377bdc8aaee83c118
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664770"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965558"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
-Niniejszy przykład pokazuje sposób wykonywania skażonych komunikatów w usłudze. Ten przykład jest oparty na [dokonana transakcja powiązania usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki. W tym przykładzie użyto `netMsmqBinding`. Usługa jest aplikacji konsoli Self-Hosted umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.
+Ten przykład pokazuje, jak przeprowadzić obsługę skażonych komunikatów w usłudze. Ten przykład jest oparty na przykładowym [wiązaniem usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . Ten przykład używa `netMsmqBinding`. Usługa to samodzielna aplikacja konsolowa, która umożliwia obserwowanie usługi do odebrania komunikatów znajdujących się w kolejce.
 
- W komunikacie w kolejce klient komunikuje się z usługą przy użyciu kolejki. Mówiąc ściślej klient wysyła komunikaty do kolejki. Usługa odbiera komunikaty z kolejki. Usługi i klienta w związku z tym, nie musi być uruchomiona w tym samym czasie do komunikowania się za pomocą kolejki.
+ W kolejce komunikacja klient komunikuje się z usługą przy użyciu kolejki. Dokładniej, klient wysyła komunikaty do kolejki. Usługa odbiera komunikaty z kolejki. W związku z tym usługa i klient nie muszą być uruchomione w tym samym czasie w celu komunikowania się przy użyciu kolejki.
 
- Zarządzanie skażonymi komunikatami jest komunikat, który jest regularnie odczytany z kolejki, gdy usługa odczytanie komunikatu o nie może przetworzyć komunikatu i w związku z tym kończy się transakcji, w którym komunikat został odczytany. W takich przypadkach komunikat zostanie ponowiony ponownie. To może teoretycznie Przejdź w nieskończoność w przypadku problemu z komunikatem. Należy pamiętać, że to można tylko wówczas, gdy użycie transakcji do odczytu z kolejki i wywoływanie operacji usługi.
+ Trująca wiadomość jest komunikatem, który jest wielokrotnie odczytywany z kolejki, gdy usługa odczytująca wiadomość nie może przetworzyć komunikatu i w związku z tym kończy transakcję, w ramach której wiadomość jest odczytywana. W takich przypadkach komunikat zostanie ponowiony ponownie. Może to teoretycznie potrwać w razie wystąpienia problemu z komunikatem. Należy zauważyć, że może się to zdarzyć tylko w przypadku używania transakcji do odczytu z kolejki i wywołania operacji usługi.
 
- Na podstawie wersji usługi MSMQ, NetMsmqBinding obsługuje ograniczone wykrywania pełne wykrywanie skażonych komunikatów. Po komunikat został wykryty jako intoksykowane, a następnie mogą być obsługiwane na kilka sposobów. Ponownie na podstawie wersji usługi MSMQ, NetMsmqBinding obsługuje ograniczoną obsługę pełnej obsługi wiadomości.
+ Na podstawie wersji usługi MSMQ, usługa msmqbinding obsługuje ograniczone wykrywanie do pełnego wykrywania skażonych komunikatów. Po wykryciu komunikatu jako trującego można go obsłużyć na kilka sposobów. Ponownie na podstawie wersji usługi MSMQ, usługa msmqbinding obsługuje ograniczoną obsługę do pełnej obsługi skażonych komunikatów.
 
- W tym przykładzie pokazano ograniczone instrumenty skażone na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] platformy i pełne zarządzanie skażonymi urządzeń, dostępnym na [!INCLUDE[wv](../../../../includes/wv-md.md)]. W obu przykładach celem jest Przenieś skażonych komunikatów z kolejki do innej kolejki, które następnie mogą być obsługiwane przez usługę, zarządzanie skażonymi komunikatami.
+ Ten przykład ilustruje ograniczoną liczbę skażonych obiektów, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] które [!INCLUDE[wxp](../../../../includes/wxp-md.md)] są dostępne dla i na platformie i [!INCLUDE[wv](../../../../includes/wv-md.md)]pełnych trujących obiektów. W obu przykładach celem jest przeniesienie skażonego komunikatu z kolejki do innej kolejki, która następnie może być serwisowana przez trującą usługę komunikatów.
 
-## <a name="msmq-v40-poison-handling-sample"></a>Usługi MSMQ 4.0 Poison obsługi próbki
- W [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ zapewnia funkcji skażone kolejki podrzędnej, który może służyć do przechowywania skażonych komunikatów. W tym przykładzie przedstawiono najlepsze rozwiązanie polegające na obsłudze skażonych komunikatów za pomocą [!INCLUDE[wv](../../../../includes/wv-md.md)].
+## <a name="msmq-v40-poison-handling-sample"></a>Przykład obsługi trującej usługi MSMQ v 4.0
+ W [!INCLUDE[wv](../../../../includes/wv-md.md)]programie usługa MSMQ udostępnia funkcję podkolejki trującej, która może być używana do przechowywania skażonych komunikatów. Ten przykład pokazuje najlepsze rozwiązanie dotyczące postępowania z trującymi komunikatami [!INCLUDE[wv](../../../../includes/wv-md.md)]przy użyciu.
 
- Wykrywanie skażonych komunikatów w [!INCLUDE[wv](../../../../includes/wv-md.md)] jest dość złożone. Istnieją 3 właściwości, które pomagają wykrywania. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> Razy danej komunikatów jest ponownie odczytany z kolejki i wysłane do aplikacji w celu przetworzenia. Komunikat został odczytany z kolejki ponownie, gdy zostanie ono przełączone powrót do kolejki ponieważ nie można wysłać wiadomości do aplikacji lub aplikacji powoduje wycofanie transakcji w ramach operacji usługi. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> jest to liczba przypadków, gdy wiadomość zostaje przeniesiona do kolejki ponownych prób. Gdy <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> jest osiągnięty, wiadomość zostanie przeniesiona do kolejki ponownych prób. Właściwość <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> jest czas opóźnienia, po upływie którego wiadomość zostanie przeniesiona z kolejki ponawiania powrót do kolejki głównej. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> Zostaje zresetowana do 0. Komunikat zostanie podjęta próba ponownie. Jeśli wszystkie próby Przeczytaj komunikat nie powiodły się, komunikat jest oznaczony jako intoksykowane.
+ Wykrywanie skażonych komunikatów w [!INCLUDE[wv](../../../../includes/wv-md.md)] programie jest dość zaawansowane. Istnieją 3 właściwości, które pomagają w wykrywaniu. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> Jest to liczba przypadków, w których dany komunikat jest ponownie odczytywany z kolejki i wysyłany do aplikacji w celu przetworzenia. Komunikat jest ponownie odczytywany z kolejki, gdy zostanie przywrócony do kolejki, ponieważ nie można wysłać komunikatu do aplikacji lub aplikacja Wycofuje transakcję w operacji usługi. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>jest to liczba przenoszonych wiadomości do kolejki ponownych prób. Gdy <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> zostanie osiągnięty, wiadomość zostanie przeniesiona do kolejki ponownych prób. Właściwość <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> jest opóźnieniem, po którym komunikat jest przenoszony z kolejki ponownych prób z powrotem do kolejki głównej. Wartość <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> zostanie zresetowana do 0. Wiadomość zostanie ponowiona. Jeśli wszystkie próby odczytu komunikatu zakończyły się niepowodzeniem, komunikat jest oznaczony jako trujący.
 
- Gdy komunikat jest oznaczony jako intoksykowane, wiadomość została omówiona zgodnie z ustawieniami <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> wyliczenia. Zgodnie z możliwe wartości:
+ Gdy wiadomość zostanie oznaczona jako trująca, komunikat jest rozpatrywany zgodnie z ustawieniami <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> wyliczenia. Aby ponownie powtórzyć możliwe wartości:
 
-- Odporność (ustawienie domyślne): Aby błędów odbiornik, a także hosta usługi.
+- Błąd (domyślnie): Aby wypróbować odbiornik, a także hosta usługi.
 
-- Upuść: Można usunąć wiadomości.
+- Listy rozwijanej , Aby usunąć komunikat.
 
-- Przenieś: Przenoszenie wiadomości do podrzędnej kolejki Zarządzanie skażonymi komunikatami. Ta wartość jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Przenieś Aby przenieść komunikat do podkolejki trujących komunikatów. Ta wartość jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)]systemie.
 
-- Odrzuć: Aby odrzucić wiadomości, wysyła komunikat do kolejki utraconych wiadomości przez nadawcę. Ta wartość jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Oznacza Aby odrzucić komunikat, należy wysłać wiadomość z powrotem do kolejki utraconych wiadomości nadawcy. Ta wartość jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)]systemie.
 
- Przykład demonstruje użycie `Move` dyspozycja dla Zarządzanie skażonymi komunikatami. `Move` powoduje, że komunikat, aby przejść do skażone kolejki podrzędnej.
+ Przykład ilustruje użycie `Move` dyspozycji dla trującej wiadomości. `Move`powoduje, że komunikat jest przenoszony do podkolejki trującej.
 
- Umowa serwisowa jest `IOrderProcessor`, definiujący usługi jednokierunkowej, który jest odpowiedni do użytku z kolejki.
+ Kontrakt usługi to `IOrderProcessor`, który definiuje usługę jednokierunkową, która jest odpowiednia do użycia z kolejkami.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -48,7 +48,7 @@ public interface IOrderProcessor
 }
 ```
 
- Operacja usługi wyświetla komunikat informujący, że kolejność przetwarzania. Aby zademonstrować funkcje zarządzanie skażonymi komunikatami `SubmitPurchaseOrder` operacji usługi występuje wyjątek, można wycofać transakcji w losowych wywołania usługi. Powoduje to komunikatu powinna być umieszczona w kolejce. Po pewnym czasie komunikat jest oznaczana poison. Aby przenieść Zarządzanie skażonymi komunikatami skażone kolejki podrzędnej ustawieniu konfiguracji.
+ Operacja usługi wyświetla komunikat informujący o przetwarzaniu zamówienia. Aby zademonstrować działanie trującej wiadomości `SubmitPurchaseOrder` , operacja usługi zgłasza wyjątek, aby wycofać transakcję w losowym wywołaniu usługi. Powoduje to, że komunikat zostanie umieszczony w kolejce. Ostatecznie wiadomość jest oznaczona jako trująca. Konfiguracja jest ustawiona tak, aby przenieść skażony komunikat do podkolejki trującej.
 
 ```csharp
 // Service class that implements the service contract.
@@ -118,7 +118,7 @@ public class OrderProcessorService : IOrderProcessor
 }
 ```
 
- Konfiguracja usługi zawiera następujące właściwości Zarządzanie skażonymi komunikatami: `receiveRetryCount`, `maxRetryCycles`, `retryCycleDelay`, i `receiveErrorHandling` jak pokazano w następującym pliku konfiguracji.
+ Konfiguracja usługi zawiera następujące `receiveRetryCount`właściwości trujących komunikatów:, `maxRetryCycles`, `retryCycleDelay`i `receiveErrorHandling` , jak pokazano w następującym pliku konfiguracyjnym.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -154,12 +154,12 @@ public class OrderProcessorService : IOrderProcessor
 </configuration>
 ```
 
-## <a name="processing-messages-from-the-poison-message-queue"></a>Przetwarzanie komunikatów z kolejki Zarządzanie skażonymi komunikatami
- Usługa Zarządzanie skażonymi komunikatami odczytuje komunikaty z kolejki końcowego skażone wiadomości i przetwarza je.
+## <a name="processing-messages-from-the-poison-message-queue"></a>Przetwarzanie komunikatów z kolejki skażonych komunikatów
+ Usługa Trująca wiadomość odczytuje komunikaty z kolejki skażonych komunikatów i przetwarza je.
 
- Komunikaty w kolejce Zarządzanie skażonymi komunikatami to komunikaty, które są kierowane do usługi, która przetwarza komunikat, który może być inny niż punkt końcowy usługi Zarządzanie skażonymi komunikatami. W związku z tym gdy usługa Zarządzanie skażonymi komunikatami odczytuje komunikaty z kolejki, warstwy kanału WCF umożliwia znalezienie niezgodność punktów końcowych, a nie wysyła komunikat. W takich przypadkach komunikat jest skierowana do Usługa przetwarzania zamówień, ale są odbierane przez usługę Zarządzanie skażonymi komunikatami. Aby nadal odbierać wiadomości, nawet wtedy, gdy komunikat jest skierowana do innego punktu końcowego, należy można dodać `ServiceBehavior` adresy filtr, gdzie kryterium dopasowywania ma zgodny komunikat jest skierowana do dowolnego punktu końcowego usługi. Jest to wymagane do pomyślnie przetwarzania komunikatów, które odczytany z kolejki Zarządzanie skażonymi komunikatami.
+ Wiadomości w kolejce trujących komunikatów to komunikaty, które są rozkierowane do usługi przetwarzającej komunikat, co może się różnić od punktu końcowego trującej usługi komunikatów. W związku z tym, gdy usługa Trująca wiadomość odczytuje komunikaty z kolejki, warstwa kanału WCF znajdzie niezgodność w punktach końcowych i nie wysyła komunikatu. W takim przypadku komunikat jest kierowany do usługi przetwarzania zamówień, ale jest odbierany przez usługę trujących komunikatów. Aby nadal otrzymywać komunikat nawet wtedy, gdy wiadomość jest zakierowane do innego punktu końcowego, należy dodać `ServiceBehavior` do filtru, gdzie kryterium dopasowywania jest zgodne z dowolnymi punktami końcowymi, do których odnosi się komunikat. Jest to wymagane do pomyślnego przetworzenia komunikatów odczytywanych z kolejki skażonych komunikatów.
 
- Implementacji usługi Zarządzanie skażonymi komunikatami, sama jest bardzo podobny do implementacji usługi. On implementuje ten kontrakt i przetwarza zamówienia. Przykład kodu jest w następujący sposób.
+ Sama implementacja usługi trującej wiadomości jest podobna do implementacji usługi. Implementuje kontrakt i przetwarza zamówienia. Przykładowy kod jest następujący.
 
 ```csharp
 // Service class that implements the service contract.
@@ -206,10 +206,10 @@ public class OrderProcessorService : IOrderProcessor
     }
 ```
 
- W odróżnieniu od kolejności, usługa, która odczytuje komunikaty z kolejki kolejności przetwarzania Zarządzanie skażonymi komunikatami usługi odczytuje komunikaty z poison kolejki podrzędnej. Skażone kolejki jest kolejką podrzędnych kolejki głównej, nosi nazwę "poison" i jest generowany automatycznie przez usługę MSMQ. Aby uzyskać do niego dostęp, należy podać nazwę kolejki głównej, a następnie ";" i podrzędny nazwę kolejki, w tym przypadku — "skażone", jak pokazano w poniższym Przykładowa konfiguracja.
+ W przeciwieństwie do usługi przetwarzania zamówień, która odczytuje komunikaty z kolejki kolejności, usługa Trująca wiadomość odczytuje komunikaty z podkolejki trującej. Kolejka Trująca jest podkolejki kolejki głównej, nosi nazwę "Trująca" i jest generowana automatycznie przez usługę MSMQ. Aby uzyskać do niego dostęp, podaj nazwę kolejki głównej, po której następuje ";" i nazwę kolejki podrzędnej, w tym przypadku "trujące", jak pokazano w poniższej konfiguracji przykładowej.
 
 > [!NOTE]
->  W tym przykładzie dla usługi MSMQ w wersji 3.0 Nazwa kolejki skażone nie jest kolejką podrzędnych zamiast przenieśliśmy komunikat do kolejki.
+> W przykładzie dla MSMQ v 3.0 nazwa kolejki trującej nie jest kolejką podrzędną, a nie kolejkę, do której przeniesiono komunikat.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -229,9 +229,9 @@ public class OrderProcessorService : IOrderProcessor
 </configuration>
 ```
 
- Po uruchomieniu przykładu klienta, usług i zarządzanie skażonymi komunikatami usługi działań są wyświetlane w konsoli systemu windows. Możesz zobaczyć komunikaty odbierania usługi z klienta. Naciśnij klawisz ENTER w oknie konsoli, każdy zamknięcia usługi.
+ Po uruchomieniu przykładu działania usług Klient, usługa i Trująca wiadomość są wyświetlane w oknach konsoli. Możesz zobaczyć, że usługa odbiera komunikaty od klienta. Naciśnij klawisz ENTER w każdym oknie konsoli, aby zamknąć usługi.
 
- Usługa rozpoczyna się systemem, przetwarzania zamówień i losowo rozpoczyna się o zakończeniu przetwarzania. Jeśli komunikat wskazuje, że został przetworzony, kolejność, można uruchomić klienta ponownie, aby wysłać kolejną wiadomość, aż zobaczysz, że usługa rzeczywiście został zakończony wiadomość. Na podstawie skonfigurowanych ustawień skażone wiadomości zostanie podjęta próba raz do przetwarzania przed jego przeniesieniem do końcowego skażone kolejki.
+ Usługa uruchamia się, przetwarza zamówienia i losowo rozpoczyna przetwarzanie. Jeśli komunikat wskazuje, że przetworzył zamówienie, można ponownie uruchomić klienta, aby wysłać kolejny komunikat, dopóki usługa nie zakończyła się komunikatem. W oparciu o skonfigurowane ustawienia trujące komunikat jest podejmowany raz na potrzeby przetwarzania przed przeniesieniem go do końcowej kolejki trującej.
 
 ```
 The service is ready.
@@ -256,7 +256,7 @@ Processing Purchase Order: 5ef9a4fa-5a30-4175-b455-2fb1396095fa
 Aborting transaction, cannot process purchase order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 ```
 
- Uruchom usługę Zarządzanie skażonymi komunikatami, można odczytać uszkodzone kolejką komunikatu z kolejki skażone. W tym przykładzie Usługa Zarządzanie skażonymi komunikatami odczytuje komunikat i przetwarza je. Można zobaczyć, czy zamówienie zakupu, które zostały zakończone, a następnie intoksykowane jest odczytywany przez usługę Zarządzanie skażonymi komunikatami.
+ Uruchom usługę trującej wiadomości, aby odczytać trującą wiadomość z kolejki trującej. W tym przykładzie usługa Trująca wiadomość odczytuje komunikat i przetwarza go. Można zobaczyć, że zamówienie zakupu, które zostało zakończone i trujące jest odczytywane przez trującą usługę komunikatów.
 
 ```
 The service is ready.
@@ -271,31 +271,31 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
         Order status: Pending
 ```
 
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.
+2. Jeśli usługa jest uruchamiana po raz pierwszy, sprawdzi, czy kolejka jest obecna. Jeśli kolejka nie istnieje, usługa utworzy ją. Aby utworzyć kolejkę, można najpierw uruchomić tę usługę lub utworzyć ją za pośrednictwem Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w systemie Windows 2008.
 
-    1. Otwórz Menedżera serwera w programie Visual Studio 2012.
+    1. Otwórz Menedżer serwera w programie Visual Studio 2012.
 
-    2. Rozwiń **funkcji** kartę.
+    2. Rozwiń kartę **funkcje** .
 
-    3. Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.
+    3. Kliknij prawym przyciskiem myszy pozycję **prywatne kolejki komunikatów**, a następnie wybierz kolejno pozycje **Nowa**i **prywatne**.
 
-    4. Sprawdź **transakcyjna** pole.
+    4. Zaznacz pole **transakcyjne** .
 
     5. Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.
 
-3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4. Do uruchomienia przykładu w konfiguracji o jednym lub wielu komputera, należy zmienić nazwy kolejki, aby odzwierciedlić rzeczywiste nazwy hosta zamiast nazwy localhost i postępuj zgodnie z instrukcjami w [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, należy zmienić nazwy kolejek, aby odzwierciedlały rzeczywistą nazwę hosta zamiast hosta lokalnego i postępować zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
- Domyślnie `netMsmqBinding` powiązania transportu, zabezpieczeń jest włączone. Dwie właściwości `MsmqAuthenticationMode` i `MsmqProtectionLevel`, wspólnie określić typ zabezpieczeń transportu. Domyślnie, tryb uwierzytelniania jest ustawiony na `Windows` i poziom ochrony jest ustawiony na `Sign`. Dla usługi MSMQ zapewniać uwierzytelnianie i funkcji podpisywania należy do domeny. Po uruchomieniu tego przykładu na komputerze, który nie jest częścią domeny, zostanie wyświetlony następujący błąd: "Użytkownika wewnętrznego kolejkowania certyfikatu nie istnieje".
+ Domyślnie w przypadku `netMsmqBinding` transportu powiązań jest włączone zabezpieczenia. Dwie właściwości, `MsmqAuthenticationMode` a `MsmqProtectionLevel`także określają typ zabezpieczenia transportu. Domyślnie tryb uwierzytelniania jest ustawiony na `Windows` , a poziom ochrony jest ustawiony na. `Sign` Aby usługa MSMQ zapewniała funkcję uwierzytelniania i podpisywania, musi być częścią domeny. Jeśli ten przykład zostanie uruchomiony na komputerze, który nie jest częścią domeny, zostanie wyświetlony następujący błąd: "Wewnętrzny certyfikat usługi kolejkowania komunikatów użytkownika nie istnieje".
 
-#### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Do uruchomienia przykładu na komputer przyłączony do grupy roboczej
+#### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Aby uruchomić przykład na komputerze przyłączonym do grupy roboczej
 
-1. Jeśli komputer nie jest częścią domeny, należy wyłączyć zabezpieczenia transportu, ustawienie poziomu uwierzytelniania w trybie i ochrony `None` jak pokazano w poniższym Przykładowa konfiguracja:
+1. Jeśli komputer nie jest częścią domeny, Wyłącz zabezpieczenia transportu, ustawiając tryb uwierzytelniania i poziom `None` ochrony tak jak pokazano w poniższej konfiguracji przykładowej:
 
     ```xml
     <bindings>
@@ -307,20 +307,20 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     </bindings>
     ```
 
-     Upewnij się, że punkt końcowy jest skojarzony z powiązaniem przez ustawienie atrybutu bindingConfiguration punktu końcowego.
+     Upewnij się, że punkt końcowy jest skojarzony z powiązaniem, ustawiając atrybut bindingConfiguration punktu końcowego.
 
-2. Upewnij się, zmień konfigurację na PoisonMessageServer, serwera i klienta, przed uruchomieniem przykładu.
+2. Przed uruchomieniem przykładu należy zmienić konfigurację na PoisonMessageServer, serwerze i kliencie.
 
     > [!NOTE]
-    >  Ustawienie `security mode` do `None` jest odpowiednikiem ustawienia `MsmqAuthenticationMode`, `MsmqProtectionLevel`, i `Message` security `None`.  
+    >  `security mode` Ustawienieodpowiada`MsmqAuthenticationMode`ustawieniu ,`MsmqProtectionLevel` i`None`zabezpieczenia na. `Message` `None`  
   
-3. Aby Meta wymiany danych do pracy zarejestrujemy adres URL dla wiązania http. Wymaga to, że usługa jest uruchomiona w oknie wiersza polecenia z podwyższonym poziomem uprawnień. W przeciwnym razie użytkownik uzyska wyjątek, takich jak: `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
+3. Aby wymiana metadanych działała, rejestrujemy adres URL z powiązaniem HTTP. Wymaga to uruchomienia usługi w oknie polecenia z podwyższonym poziomem uprawnień. W przeciwnym razie zostanie wyświetlony wyjątek, taki jak `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`:.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`

@@ -4,38 +4,38 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b682d4b43ece406ee320d6d4f96ed5cda5f17c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6472f02cf2633d936252bfd2a8daa3ff711a4db8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650352"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967875"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Wyjątki środowiska uruchomieniowego w aplikacjach .NET Native
-Jest ważne przetestować kompilacji wydania aplikacji Universal Windows Platform na ich platformach docelowych, ponieważ konfiguracji debug i release całkowicie różnią się. Domyślnie korzysta z konfiguracji debugowania środowiska uruchomieniowego .NET Core do kompilowania aplikacji, ale konfiguracja wydania używa platformy .NET Native do kompilowania aplikacji do kodu macierzystego.  
+Ważne jest, aby przetestować kompilacje wydań aplikacji platforma uniwersalna systemu Windows na swoich platformach docelowych, ponieważ konfiguracje debugowania i wydań są całkowicie różne. Domyślnie Konfiguracja debugowania używa środowiska uruchomieniowego .NET Core do kompilowania aplikacji, ale konfiguracja wydania używa .NET Native do kompilowania aplikacji do kodu natywnego.  
   
 > [!IMPORTANT]
->  Aby uzyskać informacje w sprawach związanych z [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), i [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątki, które użytkownik może Podczas testowania wersji aplikacji, zobacz "krok 4: Ręcznie rozwiązać Brak metadanych: w [wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md) tematu, a także [odbicia i platforma .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) i [dyrektywy środowiska uruchomieniowego (rd.xml) odwołanie do pliku konfiguracji](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+> Aby uzyskać informacje na temat postępowania z wyjątkami [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)i [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) , które mogą wystąpić podczas testowania wersji aplikacji, zobacz sekcję "krok 4: Ręcznie Rozwiązuj brakujące metadane: w temacie [wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md) , a także informacje dotyczące [odbicia i .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) i [środowiska uruchomieniowego dyrektywy (RD. xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="debug-and-release-builds"></a>Kompilacje debugowania i wydania  
- Jeśli kompilacja debugowania jest wykonywana względem czasu wykonywania platformy .NET Core, nie został wcześniej skompilowany na kod natywny. To sprawia, że wszystkie usługi, zazwyczaj dostarczane przez środowisko uruchomieniowe dostępna dla aplikacji.  
+ Gdy Kompilacja debugowania jest wykonywana w środowisku uruchomieniowym .NET Core, nie została skompilowana do kodu natywnego. Dzięki temu wszystkie usługi zwykle dostarczane przez środowisko uruchomieniowe są dostępne dla Twojej aplikacji.  
   
- Z drugiej strony kompilację wydania kompiluje do kodu natywnego dla swojej platformy docelowe, usuwa większość zależności zewnętrznych środowisk uruchomieniowych i bibliotek i intensywnie optymalizuje kod, aby osiągnąć najwyższą wydajność.  
+ Z drugiej strony Kompilacja wydania kompiluje się do kodu natywnego dla platform docelowych, usuwa większość zależności od zewnętrznych środowisk uruchomieniowych i bibliotek i intensywnie optymalizuje kod pod kątem maksymalnej wydajności.  
   
- Podczas debugowania kompilacji wydania, które są kompilowane przy użyciu platformy .NET Native:  
+ Gdy debugujesz kompilacje wydań, które są kompilowane przy użyciu .NET Native:  
   
-- Możesz użyć platformy .NET Native aparat debugowania, który różni się od normalnych .NET, narzędzia debugowania.  
+- Używasz aparatu debugowania .NET Native, który różni się od normalnych narzędzi debugowania platformy .NET.  
   
-- Rozmiar plik wykonywalny zmniejsza się w miarę możliwości. Jednym ze sposobów .NET Native zmniejsza rozmiar pliku wykonywalnego jest znacznie przycinania komunikaty wyjątku środowiska uruchomieniowego, w temacie omówiono bardziej szczegółowo w [komunikaty o wyjątkach środowiska uruchomieniowego](#Messages) sekcji.  
+- Rozmiar pliku wykonywalnego jest krótszy, jak to możliwe. Jednym ze sposobów, który .NET Native zmniejsza rozmiar pliku wykonywalnego, jest znacznie przycinanie komunikatów o wyjątkach środowiska uruchomieniowego, temat opisany szczegółowo w sekcji [komunikaty o wyjątkach czasu wykonywania](#Messages) .  
   
-- Twój kod intensywnie jest zoptymalizowany. Oznacza to, że wbudowanie jest używana zawsze, gdy jest to możliwe. (Wbudowanie przenosi kod z procedur zewnętrznych do wywoływania procedury.)   Fakt, że .NET Native udostępnia wyspecjalizowane środowiska uruchomieniowego i implementuje agresywne wbudowanie wpływa na stos wywołań, który jest wyświetlany podczas debugowania.  Aby uzyskać więcej informacji, zobacz [stosu środowiska uruchomieniowego](#CallStack) sekcji.  
+- Kod jest silnie zoptymalizowany. Oznacza to, że użycie funkcji tworzenia konspektu jest zawsze możliwe. (Odkreślenie przenosi kod z procedur zewnętrznych do procedury wywołującej).   Fakt, że .NET Native zapewnia wyspecjalizowane środowisko uruchomieniowe i implementuje agresywne wywołanie funkcji, która jest wyświetlana podczas debugowania.  Aby uzyskać więcej informacji, zobacz sekcję [stosu wywołań środowiska uruchomieniowego](#CallStack) .  
   
 > [!NOTE]
->  Można kontrolować, czy debug i release kompilacje są kompilowane przy użyciu łańcucha narzędzi .NET Native przez zaznaczenie lub usunięcie zaznaczenia **kompilacji z łańcucha narzędzi .NET Native** pole.   Należy jednak pamiętać, że Store Windows zawsze zostanie skompilowany w wersję produkcyjną aplikacji przy użyciu platformy .NET Native łańcucha narzędzi.  
+> Można kontrolować, czy kompilacje i wersje kompilacji są kompilowane za pomocą łańcucha narzędzi .NET Native, zaznaczając lub usuwając zaznaczenie pola wyboru **Kompiluj z .NET Native** .   Należy jednak pamiętać, że Sklep Windows zawsze kompiluje wersję produkcyjną aplikacji za pomocą łańcucha narzędzi .NET Native.  
   
 <a name="Messages"></a>   
 ## <a name="runtime-exception-messages"></a>Komunikaty o wyjątkach środowiska uruchomieniowego  
- Aby zminimalizować rozmiar pliku wykonywalnego aplikacji, .NET Native nie obejmuje pełny tekst komunikaty o wyjątkach. W rezultacie wyjątki środowiska uruchomieniowego zgłoszony w wydawanych wersjach mogą nie wyświetlać pełny tekst komunikaty o wyjątkach. Zamiast tego tekstu może składać się podciągu wraz z linkiem do wykonania, aby uzyskać więcej informacji. Na przykład informacje o wyjątku może pojawić się jako:  
+ Aby zminimalizować rozmiar pliku wykonywalnego aplikacji, .NET Native nie zawiera pełnego tekstu komunikatów o wyjątkach. W związku z tym wyjątki środowiska uruchomieniowego zgłoszone w kompilacjach wydania mogą nie wyświetlać pełnego tekstu komunikatów o wyjątkach. Zamiast tego tekst może składać się z podciągu wraz z linkiem do kolejnych informacji. Na przykład informacje o wyjątku mogą wyglądać następująco:  
   
 ```  
 Exception thrown: '$16_System.AggregateException' in Unknown Module.  
@@ -45,7 +45,7 @@ Additional information: AggregateException_ctor_DefaultMessage
 If there is a handler for this exception, the program may be safely continued.  
 ```  
   
- Jeśli potrzebujesz komunikat o wyjątku pełną, należy uruchomić kompilację debugowania. Na przykład poprzednie informacje o wyjątku z kompilacji wydania może wyglądać następująco w kompilacji debugowania:  
+ Jeśli potrzebujesz pełnego komunikatu o wyjątku, zamiast tego Uruchom kompilację debugowania. Na przykład poprzednie informacje o wyjątku z kompilacji wydania mogą pojawić się w następujący sposób w kompilacji debugowania:  
   
 ```  
 Exception thrown: 'System.AggregateException' in NativeApp.exe.  
@@ -55,11 +55,11 @@ Additional information: Value does not fall within the expected range.
   
 <a name="CallStack"></a>   
 ## <a name="runtime-call-stack"></a>Stos wywołań środowiska uruchomieniowego  
- Ze względu na wbudowanie i inne optymalizacje stos wywołań, wyświetlany przez aplikację, skompilowany przez łańcuch narzędzi .NET Native nie mogą pomóc Ci celu jednoznacznego zidentyfikowania ścieżkę do wyjątku czasu wykonywania.  
+ Ze względu na niepodkreślanie i inne optymalizacje stos wywołań wyświetlany przez aplikację skompilowaną przez łańcuch narzędzi .NET Native może nie pomóc w jasno określić ścieżki do wyjątku czasu wykonywania.  
   
- Aby uzyskać pełny stos, należy zamiast tego należy uruchomić z kompilacji debugowania.  
+ Aby uzyskać pełny stos, zamiast tego Uruchom kompilację debugowania.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie aplikacji Universal Windows natywnych platformy .NET](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
+- [Debugowanie .NET Native uniwersalnych aplikacji systemu Windows](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
 - [Wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md)

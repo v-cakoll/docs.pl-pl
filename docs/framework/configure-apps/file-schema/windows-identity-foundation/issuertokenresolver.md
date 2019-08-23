@@ -3,15 +3,15 @@ title: <issuerTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-ms.openlocfilehash: 08082d2e6647f07f33df72ab79dac00c15a1cd1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da591940910b16d42ef8ab1a05c4b244dbe543f4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791615"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942629"
 ---
 # <a name="issuertokenresolver"></a>\<issuerTokenResolver>
-Rejestruje wystawcy program rozpoznawania tokenów, który jest używany przez programy obsługi w kolekcji programu obsługi tokenów. Program rozpoznawania tokenów wystawcy jest używany do rozpoznawania token podpisujący na przychodzące tokeny i komunikatów.  
+Rejestruje program rozpoznawania tokenów wystawcy, który jest używany przez programy obsługi w kolekcji obsługi tokenów. Program rozpoznawania tokenów wystawcy służy do rozpoznawania tokenu podpisywania w przypadku przychodzących tokenów i komunikatów.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -41,7 +41,7 @@ Rejestruje wystawcy program rozpoznawania tokenów, który jest używany przez p
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— typ|Określa typ program rozpoznawania tokenów wystawcy. Musi być albo <xref:System.IdentityModel.Tokens.IssuerTokenResolver> klasy lub typu, która pochodzi od klasy <xref:System.IdentityModel.Tokens.IssuerTokenResolver> klasy. Wymagana.|  
+|— typ|Określa typ programu rozpoznawania tokenów wystawcy. Musi być <xref:System.IdentityModel.Tokens.IssuerTokenResolver> klasą lub typem, który pochodzi <xref:System.IdentityModel.Tokens.IssuerTokenResolver> od klasy. Wymagana.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -50,18 +50,18 @@ Rejestruje wystawcy program rozpoznawania tokenów, który jest używany przez p
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Udostępnia konfigurację dla kolekcji zabezpieczeń programy obsługi tokenów.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Zapewnia konfigurację kolekcji programów obsługi tokenów zabezpieczających.|  
   
 ## <a name="remarks"></a>Uwagi  
- Program rozpoznawania tokenów wystawcy jest używany do rozpoznawania token podpisujący na przychodzące tokeny i komunikatów. Służy do pobierania materiałami kryptograficznymi, który służy do sprawdzania podpisu. Należy określić `type` atrybutu. Określony typ może być <xref:System.IdentityModel.Tokens.IssuerTokenResolver> lub typ niestandardowy, który pochodzi od klasy <xref:System.IdentityModel.Tokens.IssuerTokenResolver> klasy.  
+ Program rozpoznawania tokenów wystawcy służy do rozpoznawania tokenu podpisywania w przypadku przychodzących tokenów i komunikatów. Służy do pobierania materiału kryptograficznego, który jest używany do sprawdzania podpisu. Należy określić `type` atrybut. Określony typ może być albo <xref:System.IdentityModel.Tokens.IssuerTokenResolver> typem niestandardowym, który pochodzi <xref:System.IdentityModel.Tokens.IssuerTokenResolver> od klasy.  
   
- Niektóre programy obsługi tokenów umożliwiają określanie ustawień program rozpoznawania tokenów wystawcy w konfiguracji. Ustawienia dotyczące programu obsługi tokenów poszczególnych zastąpienia określonej w kolekcji programu obsługi tokenów zabezpieczeń.  
+ Niektóre programy obsługi tokenów umożliwiają określenie ustawień programu rozpoznawania tokenów wystawcy w konfiguracji. Ustawienia poszczególnych programów obsługi tokenów przesłaniają te określone w kolekcji obsługi tokenów zabezpieczających.  
   
 > [!NOTE]
->  Określanie `<issuerTokenResolver>` element jako element podrzędny [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elementu jest przestarzałe, ale nadal jest obsługiwany dla zgodności z poprzednimi wersjami. Ustawienia na `<securityTokenHandlerConfiguration>` elemencie przesłaniają akcje na `<identityConfiguration>` elementu.  
+> Określanie elementu jako elementu [ \<](identityconfiguration.md) podrzędnego elementu IdentityConfiguration > jest przestarzałe, ale nadal jest on obsługiwany w celu zapewnienia zgodności z poprzednimi wersjami. `<issuerTokenResolver>` Ustawienia w `<securityTokenHandlerConfiguration>` elemencie Przesłoń te elementy `<identityConfiguration>` w elemencie.  
   
 ## <a name="example"></a>Przykład  
- Następujący kody XML pokazuje konfigurację dla wystawcy program rozpoznawania tokenów opartego na klasę niestandardową, która pochodzi od klasy <xref:System.IdentityModel.Tokens.IssuerTokenResolver>. Program rozpoznawania tokenów przechowuje słownika par klucz odbiorców, który jest inicjowany z niestandardowy element konfiguracji (`<AddAudienceKeyPair>`) zdefiniowane dla klasy. Przesłonięć klasy <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> metody do przetworzenia tego elementu. Zastąpienie przedstawiono w poniższym przykładzie; jednak metod wywoływanych przez nią nie są wyświetlane w celu skrócenia programu. Aby uzyskać kompletny przykład, zobacz `CustomToken` próbki.  
+ W poniższym kodzie XML przedstawiono konfigurację programu rozpoznawania tokenów wystawcy opartą na niestandardowej klasie, która <xref:System.IdentityModel.Tokens.IssuerTokenResolver>pochodzi od. Program rozpoznawania tokenów obsługuje słownik par kluczy odbiorców, które są inicjowane z niestandardowego elementu konfiguracji (`<AddAudienceKeyPair>`) zdefiniowanego dla klasy. Klasa przesłania <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> metodę w celu przetworzenia tego elementu. Przesłonięcie pokazano w następującym przykładzie: jednak metody, które wywołuje, nie są wyświetlane dla zwięzłości. Aby uzyskać pełny przykład, zobacz `CustomToken` przykład.  
   
 ```xml  
 <issuerTokenResolver type="SimpleWebToken.CustomIssuerTokenResolver, SimpleWebToken">  

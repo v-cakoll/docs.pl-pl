@@ -2,18 +2,18 @@
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 3fc7828d399555f7c459f6dd067ce9a24b8998b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 170cae5b328c86073c1d8e7710bb19e98ab5688c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704066"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925880"
 ---
-# <a name="diagnostics"></a>\<Diagnostyka >
-`diagnostics` Element definiuje ustawienia używane przez administratora w czasie wykonywania inspekcji i kontroli.  
+# <a name="diagnostics"></a>\<> diagnostyki
+`diagnostics` Element definiuje ustawienia, które mogą być używane przez administratora na potrzeby inspekcji i kontroli w czasie wykonywania.  
   
  \<system.ServiceModel>  
-\<Diagnostyka >  
+\<> diagnostyki  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,24 +47,24 @@ ms.locfileid: "61704066"
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |etwProviderId|Ciąg określający identyfikator dostawcy śledzenia zdarzeń, który zapisuje zdarzenia do sesji ETW.|  
-|Liczniki wydajności|Określa, czy są włączone liczniki wydajności dla zestawu. Prawidłowe wartości to:<br /><br /> — Wyłączone: Liczniki wydajności są wyłączone.<br />-ServiceOnly: Tylko liczniki wydajności istotne dla tej usługi jest włączone.<br />— Wszystkie: Liczniki wydajności mogą być wyświetlane w czasie wykonywania.<br />— Wartość domyślna: _WCF_Admin wystąpienia licznika wydajności pojedynczego zostanie utworzony. To wystąpienie jest używane do włączenia zbierania danych METRYK dla używana przez infrastrukturę. Brak wartości liczników dla tego wystąpienia są aktualizowane, a w związku z tym pozostanie od zera. Jest wartością domyślną, jeśli konfiguracja nie jest obecny dla usługi WCF.|  
-|wmiProviderEnabled|Wartość logiczna określająca, czy włączony jest dostawca usługi WMI dla zestawu. Dostawca usługi WMI jest wymagana dla użytkownika w celu uzyskania dostępu do funkcji inspekcji i kontroli programu Windows Communication Foundation (WCF) w czasie wykonywania. Wartość domyślna to `false`.|  
+|Liczniki wydajności|Określa, czy są włączone liczniki wydajności dla zestawu. Prawidłowe wartości to<br /><br /> Logowanie Liczniki wydajności są wyłączone.<br />-Tylko Service: Włączono tylko liczniki wydajności odpowiednie dla tej usługi.<br />Całą Liczniki wydajności mogą być wyświetlane w czasie wykonywania.<br />Wartooć Tworzone jest pojedyncze wystąpienie licznika wydajności _WCF_Admin. To wystąpienie jest używane do włączania zbierania danych SQM używanych przez infrastrukturę. Żadna z wartości licznika dla tego wystąpienia nie jest aktualizowana i w związku z tym pozostanie równa zero. Jest to wartość domyślna, jeśli żadna konfiguracja nie jest obecna dla programu WCF.|  
+|wmiProviderEnabled|Wartość logiczna określająca, czy dostawca WMI dla zestawu jest włączony. Dostawca WMI jest wymagany, aby użytkownik mógł uzyskać dostęp do funkcji inspekcji i kontroli programu Windows Communication Foundation (WCF). Wartość domyślna to `false`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<endToEndTracing>](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Element konfiguracji, który umożliwia włączanie i wyłączanie różnych aspektów śledzenia end-to-end podczas uruchamiania aplikacji usługi.|  
-|[\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|W tym artykule opisano ustawienia rejestrowania komunikatów WCF.|  
+|[\<endToEndTracing >](endtoendtracing.md)|Element konfiguracji, który pozwala na włączenie i wyłączenie różnych aspektów śledzenia end-to-end podczas uruchamiania aplikacji usługi.|  
+|[\<messageLogging >](messagelogging.md)|Opisuje ustawienia rejestrowania komunikatów WCF.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|serviceModel|Element główny wszystkich elementów konfiguracji programu WCF.|  
+|Modelu|Element główny wszystkich elementów konfiguracji WCF.|  
   
 ## <a name="remarks"></a>Uwagi  
- `diagnostics` Sekcja definiuje ustawienia diagnostyki dla wszystkich usług znajdujących się w zestawie. Nie jest możliwe do definiowania ustawień diagnostycznych oddzielne na poziomie usługi, chyba że istnieje tylko jedna usługa w zestawie. Atrybuty są ustawione zgodnie z wymogami sekcji.  
+ `diagnostics` Sekcja definiuje ustawienia diagnostyki dla wszystkich usług znajdujących się w zestawie. Nie można definiować oddzielnych ustawień diagnostycznych na poziomie usługi, chyba że w zestawie znajduje się tylko jedna usługa. Atrybuty są ustawiane zgodnie z wymaganiami sekcji.  
   
 ## <a name="example"></a>Przykład  
   

@@ -1,20 +1,20 @@
 ---
-title: -codepage (Visual Basic)
+title: -CodePage (Visual Basic)
 ms.date: 03/09/2018
 helpviewer_keywords:
 - -codepage compiler option [Visual Basic]
 - codepage compiler option [Visual Basic]
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
-ms.openlocfilehash: fda75383435fdff718d1d50bc8583afc9858e7e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a5974a910303f847679f18c23e00cfaa00caa2c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944706"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962618"
 ---
-# <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
-Określa stronę kodową dla wszystkich plików kodu źródłowego w kompilacji.  
+# <a name="-codepage-visual-basic"></a>-CodePage (Visual Basic)
+Określa stronę kodową, która ma być używana dla wszystkich plików kodu źródłowego w kompilacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,16 +26,16 @@ Określa stronę kodową dla wszystkich plików kodu źródłowego w kompilacji.
   
 |Termin|Definicja|  
 |---|---|  
-|`id`|Wymagana. Kompilator używa strony kodowej, określony przez `id` interpretowanie kodowanie plików źródłowych.|  
+|`id`|Wymagane. Kompilator używa strony kodowej określonej przez `id` program, aby interpretować Kodowanie plików źródłowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aby skompilować kod źródłowy został zapisany ze specyficznym kodowaniem, można użyć `-codepage` można określić stronę kodową, która będzie używana. `-codepage` Opcja ma zastosowanie do wszystkich plików kodu źródłowego w kompilacji. Aby uzyskać więcej informacji, zobacz [kodowanie znaków na platformie .NET Framework](../../../standard/base-types/character-encoding.md).  
+ Aby skompilować kod źródłowy zapisany z określonym kodowaniem, możesz użyć `-codepage` , aby określić, która strona kodowa powinna być używana. `-codepage` Opcja ma zastosowanie do wszystkich plików kodu źródłowego w kompilacji. Aby uzyskać więcej informacji, zobacz [kodowanie znaków w .NET Framework](../../../standard/base-types/character-encoding.md).  
   
- `-codepage` Opcja nie jest potrzebna, jeśli zostały zapisane pliki kodu źródłowego, przy użyciu bieżącej strony kodowej ANSI, Unicode lub UTF-8 z podpisem. Program Visual Studio zapisuje wszystkie pliki kodu źródłowego za pomocą bieżącej strony kodowej ANSI domyślnie, chyba że użytkownik określi, inne kodowanie w **kodowanie** okno dialogowe. Program Visual Studio używa **kodowanie** okno dialogowe Otwieranie plików kodu źródłowego, zapisany z inną stronę kodową.  
+ `-codepage` Opcja nie jest wymagana, jeśli pliki kodu źródłowego zostały zapisane przy użyciu bieżącej strony kodowej ANSI, Unicode lub UTF-8 z podpisem. Program Visual Studio zapisuje wszystkie pliki kodu źródłowego z bieżącą stroną kodową ANSI domyślnie, chyba że użytkownik określi inne kodowanie w oknie dialogowym **kodowanie** . Program Visual Studio używa okna dialogowego **kodowanie** do otwierania plików kodu źródłowego zapisanych z inną stroną kodową.  
   
 > [!NOTE]
->  `-codepage` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia.  
+> `-codepage` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio. jest ona dostępna tylko podczas kompilowania z wiersza polecenia.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)

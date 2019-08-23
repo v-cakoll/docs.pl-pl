@@ -5,23 +5,23 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 259594858e96897cb377cde4104e17b748f902c4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 30e8619e70da46cb510fbe28ab2e8bcf27621e19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971808"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963298"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Wzorce formantów automatyzacji interfejsu użytkownika — omówienie
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
   
  W tym omówieniu [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] przedstawiono wzorce kontroli. Wzorce kontrolek umożliwiają kategoryzowanie i Uwidacznianie funkcjonalności formantu niezależnie od typu formantu lub wyglądu kontrolki.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]używa wzorców formantów do reprezentowania typowych zachowań kontroli. Na przykład możesz użyć wzorca kontrolki Invoke dla formantów, które mogą być wywoływane (takie jak przyciski) i wzorca kontrolki przewijania dla formantów, które mają paski przewijania (takie jak pola listy, widoki listy lub pola kombi). Ze względu na to, że każdy wzorzec kontrolki reprezentuje osobną funkcję, można łączyć je w celu opisania pełnego zestawu funkcji obsługiwanych przez daną kontrolkę.  
   
 > [!NOTE]
->  Formanty agregujące — skompilowane z kontrolkami podrzędnymi, które udostępniają [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] funkcje dla elementu nadrzędnego — powinny implementować wszystkie wzorce kontroli zwykle skojarzone z poszczególnymi kontrolkami podrzędnymi. Z kolei te same wzorce kontroli nie muszą być implementowane przez kontrolki podrzędne.  
+> Formanty agregujące — skompilowane z kontrolkami podrzędnymi, które udostępniają [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] funkcje dla elementu nadrzędnego — powinny implementować wszystkie wzorce kontroli zwykle skojarzone z poszczególnymi kontrolkami podrzędnymi. Z kolei te same wzorce kontroli nie muszą być implementowane przez kontrolki podrzędne.  
   
 <a name="uiautomation_control_pattern_includes"></a>   
 ## <a name="ui-automation-control-pattern-components"></a>Składniki wzorca kontrolki automatyzacji interfejsu użytkownika  

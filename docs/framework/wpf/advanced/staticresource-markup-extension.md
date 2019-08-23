@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-ms.openlocfilehash: 8319e451268152e95326c02027157db72df631b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7392be182aedeeebe6b7092f9868c1fabfaafcb7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981906"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963462"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource — Rozszerzenie znaczników
-Zawiera wartość dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] właściwości atrybutu przez wyszukanie odwołanie do zasobu już zdefiniowane. Zachowanie wyszukiwania dla tego zasobu jest odpowiednikiem wyszukiwanie czas ładowania, które będzie szukał zasoby, które zostały wcześniej załadowane z kodu znaczników bieżącego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stronie, a także innych źródłach aplikacji i wygeneruje tej wartości zasobów wartość właściwości w obiektach czasu wykonywania.  
+Udostępnia wartość dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atrybutu właściwości przez wyszukanie odwołania do już zdefiniowanego zasobu. Zachowanie wyszukiwania dla tego zasobu jest analogiczne do wyszukiwania w czasie ładowania, które będzie szukać zasobów, które zostały wcześniej załadowane z adiustacji bieżącej [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony, a także innych źródeł aplikacji, i spowoduje wygenerowanie tej wartości zasobu jako wartość właściwości w obiektach czasu wykonywania.  
   
 ## <a name="xaml-attribute-usage"></a>Użycie atrybutu języka XAML  
   
@@ -38,34 +38,34 @@ Zawiera wartość dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla
   
 |||  
 |-|-|  
-|`key`|Klucz dla żądanego zasobu. Ten klucz była początkowo przypisana przez [x: Key — dyrektywa](../../xaml-services/x-key-directive.md) zasób został utworzony w znaczniku, czy została podana jako `key` parametru podczas wywoływania <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> Jeśli zasób został utworzony w kodzie.|  
+|`key`|Klucz dla żądanego zasobu. Ten klucz został początkowo przypisany przez [dyrektywę x:Key](../../xaml-services/x-key-directive.md) , jeśli zasób został utworzony w znaczniku lub został dostarczony jako `key` parametr podczas wywoływania <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> , jeśli zasób został utworzony w kodzie.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!IMPORTANT]
->  A `StaticResource` nie wolno próbować do przodu odnieść się do zasobu, który jest zdefiniowany leksykalnie dalsze w ramach [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku. Takie próby nie jest obsługiwany, a nawet wtedy, gdy takiego odwołania nie powiódł się, próby odwołania do przodu pociągnie za sobą zmniejszenie wydajności czas ładowania podczas tabel skrótu wewnętrznego reprezentujące <xref:System.Windows.ResourceDictionary> są przeszukiwane. Aby uzyskać najlepsze wyniki należy dostosować kompozycji słownikach zasobów taki sposób, że można uniknąć odwołania w przód. Jeśli nie można uniknąć odwołania do przodu, użyj [dynamicresource — rozszerzenie znaczników](dynamicresource-markup-extension.md) zamiast tego.  
+> A `StaticResource` nie może próbować wykonać odwołania do przodu do zasobu, który jest bardziej leksykalny [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] w pliku. Próba wykonania tej operacji nie jest obsługiwana, a nawet jeśli takie odwołanie nie powiedzie się, próba odwołania do przodu spowoduje naliczenie opłat za czas ładowania podczas przeszukiwania wewnętrznych tablic <xref:System.Windows.ResourceDictionary> skrótów. Aby uzyskać najlepsze wyniki, dostosuj kompozycję słowników zasobów, aby można było uniknąć odwołań do przodu. Jeśli nie możesz uniknąć odwołania do przodu, zamiast tego użyj [rozszerzenia znacznika DynamicResource —](dynamicresource-markup-extension.md) .  
   
- Określony <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> powinien odpowiadać istniejącego zasobu, identyfikowany za pomocą [x: Key — dyrektywa](../../xaml-services/x-key-directive.md) niektórych w na poziomie strony, aplikacji, motywy dostępne kontrolki i zasoby zewnętrzne lub zasobów systemowych. Wyszukiwania zasobów odbywa się w tej kolejności. Aby uzyskać więcej informacji na temat zachowania wyszukiwania zasobów dla zasobów statycznych i dynamicznych, zobacz [zasoby XAML](xaml-resources.md).  
+ Określony <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> element powinien odpowiadać istniejącemu zasobowi, identyfikowanemu z [dyrektywą x:Key](../../xaml-services/x-key-directive.md) na pewnym poziomie na stronie, aplikacji, dostępnych motywów kontroli i zasobach zewnętrznych lub zasobów systemowych. Wyszukiwanie zasobów odbywa się w tej kolejności. Aby uzyskać więcej informacji o zachowaniu wyszukiwania zasobów dla zasobów statycznych i dynamicznych, zobacz [zasoby XAML](xaml-resources.md).  
   
- Klucz zasobu może być dowolnym ciągiem, zdefiniowane w [xamlname — gramatyka](../../xaml-services/xamlname-grammar.md). Klucz zasobu może być również inne typy obiektów, takich jak <xref:System.Type>. A <xref:System.Type> klucza ma podstawowe znaczenie dla jak można różne formanty, motywy, za pomocą klucza usługi stylu niejawnego. Aby uzyskać więcej informacji, zobacz [omówienie tworzenia kontrolek](../controls/control-authoring-overview.md).  
+ Klucz zasobu może być dowolnym ciągiem zdefiniowanym w [gramatycename języka XAML](../../xaml-services/xamlname-grammar.md). Klucz zasobu może być również innymi typami obiektów, takimi jak <xref:System.Type>. <xref:System.Type> Klucz ma podstawowe znaczenie dla kontrolek, które mogą być wzorowane przez motywy, za pomocą klucza stylu niejawnego. Aby uzyskać więcej informacji, zobacz temat [Tworzenie kontroli — przegląd](../controls/control-authoring-overview.md).  
   
- Deklaratywne alternatywnych metod odwołujące się do zasobu jest jako [dynamicresource — rozszerzenie znaczników](dynamicresource-markup-extension.md).  
+ Alternatywny sposób deklaratywny odwołujący się do zasobu to [rozszerzenie znacznika DynamicResource —](dynamicresource-markup-extension.md).  
   
- Składnią atrybutu jest składnia najczęściej używana z tym rozszerzeniem znacznika. Token ciągu podawany po `StaticResource` ciągu identyfikatora jest przypisany jako <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> wartości elementu bazowego <xref:System.Windows.StaticResourceExtension> rozszerzenie klasy.  
+ Składnią atrybutu jest składnia najczęściej używana z tym rozszerzeniem znacznika. Token ciągu podany po `StaticResource` ciągu identyfikatora jest przypisywany <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> jako wartość źródłowej <xref:System.Windows.StaticResourceExtension> klasy rozszerzenia.  
   
- `StaticResource` może służyć w składni obiektów. W tym przypadku określającą wartość <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> właściwość jest wymagana.  
+ `StaticResource`może być używany w składni elementu obiektu. W takim przypadku należy określić wartość <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> właściwości.  
   
- `StaticResource` można również użycie pełnego atrybut określający <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> właściwość jako właściwość = para wartości:  
+ `StaticResource`można go również użyć w pełnym użyciu atrybutu, który określa <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> właściwość jako pary właściwość = wartość:  
   
 ```xml  
 <object property="{StaticResource ResourceKey=key}" .../>  
 ```  
   
- Szczegółowe definicje są często przydatne w rozszerzeniach zawierających więcej niż jedną konfigurowalną właściwość albo gdy niektóre właściwości są opcjonalne. Ponieważ `StaticResource` ma tylko jedną konfigurowalną właściwość, która jest wymagana, użycie tych pełne nie są typowe.  
+ Szczegółowe definicje są często przydatne w rozszerzeniach zawierających więcej niż jedną konfigurowalną właściwość albo gdy niektóre właściwości są opcjonalne. Ponieważ `StaticResource` ma tylko jedną właściwość settable, która jest wymagana, to pełne użycie nie jest typowe.  
   
- W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementacji procesora obsługi dla tego rozszerzenia znacznika jest definiowana przez <xref:System.Windows.StaticResourceExtension> klasy.  
+ W implementacji procesora obsługa tego <xref:System.Windows.StaticResourceExtension> rozszerzenia znacznika jest definiowana przez klasę. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
- `StaticResource` jest rozszerzeniem znacznika. Rozszerzenia znaczników są zazwyczaj implementowane w sytuacji, gdy istnieje wymóg, aby wartości atrybutów były wyprowadzane w postaci innej niż wartości literałów lub nazwy programów obsługi, a wymóg ma charakter bardziej globalny niż zwykłe umieszczenie konwerterów typów w niektórych typach lub właściwościach. Wszystkie rozszerzenia znaczników w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Użyj {i} znaków w składni swoich atrybutów, które jest do Konwencja, za pomocą którego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora rozpoznaje, że rozszerzenie znacznika musi wykonać przetwarzanie atrybutu. Aby uzyskać więcej informacji, zobacz [rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md).  
+ `StaticResource`jest rozszerzeniem znaczników. Rozszerzenia znaczników są zazwyczaj implementowane w sytuacji, gdy istnieje wymóg, aby wartości atrybutów były wyprowadzane w postaci innej niż wartości literałów lub nazwy programów obsługi, a wymóg ma charakter bardziej globalny niż zwykłe umieszczenie konwerterów typów w niektórych typach lub właściwościach. Wszystkie rozszerzenia znaczników w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] używają znaków {i} w ich składni atrybutów, która jest konwencją, za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] której procesor rozpoznaje, że rozszerzenie znacznika musi przetworzyć atrybut. Aby uzyskać więcej informacji, zobacz [rozszerzenia znaczników i XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

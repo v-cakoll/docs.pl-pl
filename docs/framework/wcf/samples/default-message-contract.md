@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 267cdffdc532aaa2b31de835c31d23e93aca8c54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a9b6ddb67f914c2c1c228f3042152ef9582f7b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990343"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961787"
 ---
 # <a name="default-message-contract"></a>Domyślny kontrakt komunikatów
-Domyślny kontrakt komunikatów w przykładzie pokazano, usługi, w której niestandardowy komunikat zdefiniowany przez użytkownika jest przekazywany do i z operacji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej interfejs Kalkulator, co usługa wpisane. Zamiast poszczególnych usług operacjami dotyczącymi dodawania, odejmowania, mnożenia i dzielenia używane w [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), w tym przykładzie przekazuje niestandardowy komunikat, która zawiera argumenty operacji i operatora i zwraca wynik obliczeń arytmetycznych.  
+Domyślny przykład kontraktu komunikatu pokazuje usługę, w której do i z operacji usługi jest przesyłany niestandardowy komunikat zdefiniowany przez użytkownika. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje interfejs kalkulatora jako usługę o określonym typie. Zamiast poszczególnych operacji usługi do dodawania, odejmowania, mnożenia i dzielenia używanych w [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), ten przykład przekazuje komunikat niestandardowy, który zawiera operandy i operator, i zwraca wynik Obliczanie arytmetyczne.  
   
- Klient znajduje się program konsoli (.exe), a Usługa biblioteki (.dll) jest obsługiwana przez Internetowe usługi informacyjne (IIS). Aktywność klienta jest widoczna w oknie konsoli.  
+ Klient jest programem konsolowym (. exe), a Biblioteka usług (. dll) jest hostowana przez Internet Information Services (IIS). Aktywność klienta jest widoczna w oknie konsoli.  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- W usłudze operacji usługi pojedynczej jest zdefiniowany, która przyjmuje i zwraca niestandardowe komunikaty o typie `MyMessage`. Mimo że w tym przykładzie komunikatów żądań i odpowiedzi są tego samego typu, można oczywiście one kontraktów inny komunikat w razie potrzeby.  
+ W usłudze jest zdefiniowana jedna operacja usługi, która akceptuje i zwraca niestandardową wiadomość typu `MyMessage`. Mimo że w tym przykładzie komunikaty żądania i odpowiedzi są tego samego typu, w razie potrzeby mogą oczywiście być różne umowy dotyczące komunikatów.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -31,7 +31,7 @@ public interface ICalculator
 }  
 ```  
   
- Niestandardowy komunikat `MyMessage` zdefiniowanej w klasie, oznaczony za pomocą <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> i <xref:System.ServiceModel.MessageBodyMemberAttribute> atrybutów. Trzeci Konstruktor jest używany w tym przykładzie. Używanie kontraktów komunikatu można wykonywać pełną kontrolę nad komunikatu protokołu SOAP. W tym przykładzie <xref:System.ServiceModel.MessageHeaderAttribute> atrybut jest używany do umieszczenia `Operation` w nagłówku protokołu SOAP. Argumenty operacji `N1`, `N2` i `Result` są wyświetlane w treści protokołu SOAP, ponieważ mają one <xref:System.ServiceModel.MessageBodyMemberAttribute> zastosowany.  
+ Wiadomość `MyMessage` niestandardowa jest definiowana w klasie <xref:System.ServiceModel.MessageHeaderAttribute> z <xref:System.ServiceModel.MessageContractAttribute>adnotacjami i <xref:System.ServiceModel.MessageBodyMemberAttribute> atrybutami. Tylko trzeci Konstruktor jest używany w tym przykładzie. Używanie kontraktów komunikatów umożliwia pełną kontrolę nad komunikatem protokołu SOAP. W tym przykładzie <xref:System.ServiceModel.MessageHeaderAttribute> atrybut jest używany do umieszczania `Operation` w nagłówku protokołu SOAP. Operandy `N1`i <xref:System.ServiceModel.MessageBodyMemberAttribute> `N2` pojawiająsięwtreściprotokołuSOAP,ponieważmajązastosowaneatrybuty.`Result`  
   
 ```csharp
 [MessageContract]  
@@ -97,7 +97,7 @@ public class MyMessage
 }  
 ```  
   
- Klasa implementacji zawiera kod `Calculate` operacji usługi. `CalculateService` Klasy uzyskuje operandy i operator poza komunikatem żądania i tworzy komunikat odpowiedzi, zawierający wynik żądanego obliczenia, jak pokazano w poniższym przykładowym kodzie.  
+ Klasa implementacji zawiera kod dla `Calculate` operacji usługi. `CalculateService` Klasa uzyskuje operandy i operator z komunikatu żądania i tworzy komunikat odpowiedzi, który zawiera wynik żądanego obliczenia, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp
 // Service class which implements the service contract.  
@@ -131,13 +131,13 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- Wygenerowanego kodu klienta dla klienta został utworzony za pomocą [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzia. Narzędzie automatycznie tworzy typy kontraktu komunikatu, w kodzie wygenerowanego klienta, jeśli to konieczne. `/messageContract` Można określić opcji polecenia, aby wymusić generowania kontrakty komunikatów.  
+ Wygenerowany kod klienta dla klienta został utworzony za pomocą narzędzia [Svcutil. exe (narzędzie do przesyłania metadanych)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) . W razie potrzeby narzędzie automatycznie tworzy w kodzie wygenerowanym klienta typy kontraktów komunikatów. Opcja `/messageContract` polecenia może być określona, aby wymusić generowanie kontraktów komunikatów.  
   
 ```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- Następujący przykładowy kod przedstawia klienta przy użyciu `MyMessage` wiadomości.  
+ Następujący przykładowy kod demonstruje klienta korzystającego z `MyMessage` wiadomości.  
   
 ```csharp
 // Create a client with given client endpoint configuration  
@@ -155,7 +155,7 @@ MyMessage response = ((ICalculator)client).Calculate(request);
 Console.WriteLine("Add({0},{1}) = {2}", request.N1, request.N2, response.Result);  
 ```  
   
- Po uruchomieniu przykładu, obliczenia są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ Po uruchomieniu przykładu obliczenia są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -166,21 +166,21 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- W tym momencie komunikaty niestandardowe zdefiniowane przez użytkownika są spełnione między klientem a operacji usługi. Kontraktu komunikatu zdefiniowana, że argumenty operacji i wyniki były w treści komunikatu i że operatora w nagłówku komunikatu. Rejestrowanie komunikatów można skonfigurować do obserwowania strukturą wiadomości.  
+ W tym momencie niestandardowe komunikaty zdefiniowane przez użytkownika przechodzą między klientem a operacją usługi. Kontrakt komunikatu określił, że operandy i wyniki znajdowały się w treści wiadomości i że operator znajdował się w nagłówku komunikatu. Rejestrowanie komunikatów można skonfigurować tak, aby obserwować tę strukturę komunikatów.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  

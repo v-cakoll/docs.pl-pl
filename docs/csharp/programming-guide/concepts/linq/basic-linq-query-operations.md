@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: f4a990fae612f4135f5957a2222d672ff90bde2c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 013e1960e6c5721e0bd7ce6998848ddce15a4e4d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594897"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924391"
 ---
 # <a name="basic-linq-query-operations-c"></a>Podstawowe operacje zapytań LINQ (C#)
 Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeń zapytań i niektórych typowych rodzajów operacji wykonywanych w kwerendzie. Bardziej szczegółowe informacje znajdują się w następujących tematach:  
@@ -34,7 +34,7 @@ Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinq](~/includes/vbtec
  [Przewodnik: Pisanie zapytań wC#](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
->  Jeśli znasz już język zapytań, taki jak SQL lub XQuery, możesz pominąć większość tego tematu. Zapoznaj się z sekcją " [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] klauzula"wnastępnejsekcji,abydowiedziećsięwięcejokolejnościklauzulwwyrażeniachzapytań.`from`  
+> Jeśli znasz już język zapytań, taki jak SQL lub XQuery, możesz pominąć większość tego tematu. Zapoznaj się z sekcją " [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] klauzula"wnastępnejsekcji,abydowiedziećsięwięcejokolejnościklauzulwwyrażeniachzapytań.`from`  
   
 ## <a name="obtaining-a-data-source"></a>Uzyskanie źródła danych  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] W zapytaniu pierwszym krokiem jest określenie źródła danych. W C# przypadku większości języków programowania zmienna musi być zadeklarowana, zanim będzie mogła zostać użyta. `from` `cust``customers`W zapytaniu klauzula jest najpierw w celu wprowadzenia źródła danych () i *zmiennej zakresu* (). [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]  
@@ -44,7 +44,7 @@ Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinq](~/includes/vbtec
  Zmienna zakresu jest jak Zmienna iteracji w `foreach` pętli, z wyjątkiem tego, że w wyrażeniu zapytania nie ma rzeczywistej iteracji. Gdy zapytanie zostanie wykonane, zmienna zakresu będzie traktować jako odwołanie do każdego kolejnego elementu w `customers`. Ponieważ kompilator może wywnioskować typ `cust`, nie trzeba określać go jawnie. Dodatkowe zmienne zakresów można wprowadzać przez `let` klauzulę. Aby uzyskać więcej informacji, zobacz [klauzula Let](../../../language-reference/keywords/let-clause.md).  
   
 > [!NOTE]
->  W przypadku nieogólnych źródeł danych, takich <xref:System.Collections.ArrayList>jak, zmienna zakresu musi być jawnie wpisana. Aby uzyskać więcej informacji, zobacz [jak: Kwerenda ArrayList z klauzulą LINQC#(](./how-to-query-an-arraylist-with-linq.md) ) i [from](../../../language-reference/keywords/from-clause.md).  
+> W przypadku nieogólnych źródeł danych, takich <xref:System.Collections.ArrayList>jak, zmienna zakresu musi być jawnie wpisana. Aby uzyskać więcej informacji, zobacz [jak: Kwerenda ArrayList z klauzulą LINQC#(](./how-to-query-an-arraylist-with-linq.md) ) i [from](../../../language-reference/keywords/from-clause.md).  
   
 ## <a name="filtering"></a>Filtrowanie  
  Prawdopodobnie najbardziej typową operacją zapytania jest stosowanie filtru w postaci wyrażenia logicznego. Filtr powoduje, że zapytanie zwraca tylko te elementy, dla których wyrażenie ma wartość true. Wynik jest tworzony przy użyciu `where` klauzuli. Filtr w efekcie określa elementy, które mają zostać wykluczone z sekwencji źródłowej. W poniższym przykładzie zwracane są tylko te `customers` osoby, które mają adres w Londynie.  

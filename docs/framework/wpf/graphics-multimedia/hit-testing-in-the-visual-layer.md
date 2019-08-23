@@ -8,130 +8,130 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: a69e5922d2f66d295024149764c3836f9760b685
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92b7e8ffab001af4dba6c571fd06c64f2865b1e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591232"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962119"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Test trafienia w warstwie Visual
-Ten temat zawiera omówienie funkcji testowania trafień, dostarczone przez warstwy visual. Obsługa testowania trafień pozwala określić, czy wartość geometrii lub punkt mieści się w renderowanym zawartość <xref:System.Windows.Media.Visual>, dzięki czemu można zaimplementować zachowania interfejsu użytkownika, takie jak prostokąta zaznaczenia na wybranie wielu obiektów.  
+Ten temat zawiera omówienie funkcji testowania trafień zapewnianych przez warstwę wizualizacji. Obsługa testowania trafień pozwala określić, czy wartość geometrii lub punkt znajduje się w renderowanej zawartości a <xref:System.Windows.Media.Visual>, co pozwala na wdrożenie zachowań interfejsu użytkownika, takich jak prostokąt wyboru w celu zaznaczenia wielu obiektów.  
 
 <a name="hit_testing_scenarios"></a>   
-## <a name="hit-testing-scenarios"></a>Trafienia scenariuszy testowania  
- <xref:System.Windows.UIElement> Klasa udostępnia <xref:System.Windows.UIElement.InputHitTest%2A> metody, która pozwala na trafień Testuj pod względem elementu za pomocą podanej wartości współrzędnych. W wielu przypadkach <xref:System.Windows.UIElement.InputHitTest%2A> metoda zapewnia odpowiednich funkcji do testowania elementów wykonawczych trafień. Istnieje jednak kilka scenariuszy, w których użytkownik może być konieczne wdrożenie testowania trafień w warstwie visual.  
+## <a name="hit-testing-scenarios"></a>Scenariusze testowania trafień  
+ <xref:System.Windows.UIElement> Klasa<xref:System.Windows.UIElement.InputHitTest%2A> udostępnia metodę, która umożliwia trafienie testu względem elementu przy użyciu danej wartości współrzędnych. W wielu przypadkach <xref:System.Windows.UIElement.InputHitTest%2A> Metoda zapewnia odpowiednie funkcje do implementowania testowania trafień elementów. Istnieje jednak kilka scenariuszy, w których może być konieczne zaimplementowanie testowania trafień w warstwie wizualnej.  
   
-- Test przed non - trafienia<xref:System.Windows.UIElement> obiektów: Ma to zastosowanie, jeśli napotkasz testowania non -<xref:System.Windows.UIElement> obiekty, takie jak <xref:System.Windows.Media.DrawingVisual> lub obiektów graficznych.  
+- Testowanie trafień względem obiektów<xref:System.Windows.UIElement> nienależących do: Ma to zastosowanie, gdy trafisz test niebędący<xref:System.Windows.UIElement> obiektami, takimi jak <xref:System.Windows.Media.DrawingVisual> lub obiektami graficznymi.  
   
-- Test przy użyciu geometrii trafienia: Ma to zastosowanie, jeśli potrzebujesz test trafienia przy użyciu obiektów geometrii, a nie wartość współrzędnych punktu.  
+- Testowanie trafień przy użyciu geometrii: Ma to zastosowanie w przypadku konieczności testowania przy użyciu obiektu geometrycznego, a nie wartości współrzędnych punktu.  
   
-- Trafienia testowanie wielu obiektów: Ma to zastosowanie, gdy trzeba trafień Testuj pod względem wielu obiektów, takich jak nakładających się obiektów. Aby uzyskać wyniki dla wszystkich wizualizacji przecinające się geometrię lub punktu, nie tylko pierwszy z nich.  
+- Testowanie trafień dla wielu obiektów: Ma to zastosowanie, gdy konieczne jest przetestowanie na wielu obiektach, takich jak nakładające się obiekty. Możesz uzyskać wyniki dla wszystkich wizualizacji przecinających geometrię lub punkt, a nie tylko pierwszej.  
   
-- Ignorowanie <xref:System.Windows.UIElement> zasady testowania trafień: Ma to zastosowanie, gdy należy zignorować <xref:System.Windows.UIElement> trafień testowania zasad, które uwzględnia takie czynniki jak tego, czy element jest wyłączony lub niewidoczne.  
+- Ignorowanie zasad testowania trafień: <xref:System.Windows.UIElement> Ma to zastosowanie, gdy zachodzi potrzeba <xref:System.Windows.UIElement> ignorowania zasad testowania trafień, które uwzględniają takie czynniki jak to, czy element jest wyłączony czy niewidoczny.  
   
 > [!NOTE]
->  Aby uzyskać kompletny kod przykładowy pokazujący test trafienia w warstwie wizualizacji, zobacz [trafień za pomocą DrawingVisuals próbkę](https://go.microsoft.com/fwlink/?LinkID=159994) i [trafień testu z Win32 — współdziałanie](https://go.microsoft.com/fwlink/?LinkID=159995).  
+> Aby uzyskać kompletny przykładowy kod ilustrujący testowanie trafień na warstwie wizualizacji, zobacz [test trafień przy użyciu przykładu DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994) i [test trafień z funkcją międzyoperacyjności Win32](https://go.microsoft.com/fwlink/?LinkID=159995).  
   
 <a name="hit_testing_support"></a>   
 ## <a name="hit-testing-support"></a>Obsługa testowania trafień  
- Celem <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metody <xref:System.Windows.Media.VisualTreeHelper> klasy ma na celu określenie, czy wartość współrzędnych geometrii lub punkt znajduje się w renderowanej zawartości danego obiektu, takiego jak kontrolka lub element graficzny. Na przykład można użyć testowania trafień do określenia, czy kliknięcia w ramach prostokąt otaczający obiektu mieści się w geometrii okrąg. Można także Przesłoń domyślną implementację elementu testowania trafień do wykonywania obliczeń test trafień niestandardowy.  
+ Celem <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metod<xref:System.Windows.Media.VisualTreeHelper> w klasie jest określenie, czy wartość współrzędnej geometrii lub punktu znajduje się w wyrenderowanej zawartości danego obiektu, takiej jak kontrolka lub element graficzny. Na przykład można użyć testowania trafień, aby określić, czy kliknięcie myszy w granicach prostokąta obiektu znajduje się w geometrii okręgu. Możesz również zastąpić domyślną implementację testowania trafień, aby wykonać własne niestandardowe obliczenia testów trafień.  
   
- Poniższa ilustracja przedstawia relację między regionów innych niż prostokątne obiekt i jego prostokąt otaczający.  
+ Poniższa ilustracja przedstawia relację między regionem obiektu nieprostokątnego a jego prostokątem związanym.  
   
- ![Diagram of valid hit test region](./media/wcpsdk-mmgraphics-visuals-hittest-1.png "wcpsdk_mmgraphics_visuals_hittest_1")  
-Diagram przedstawiający region prawidłowe testu trafienia  
+ ![Diagram prawidłowego regionu testu trafień](./media/wcpsdk-mmgraphics-visuals-hittest-1.png "wcpsdk_mmgraphics_visuals_hittest_1")  
+Diagram prawidłowego regionu testu trafień  
   
 <a name="hit_testing_and_z-order"></a>   
-## <a name="hit-testing-and-z-order"></a>Testowanie trafień i porządek osi z  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Warstwy visual obsługuje testowania trafień względem wszystkich obiektów w ramach punktu lub geometrii, nie tylko najważniejsze obiekty. Wyniki są zwracane w porządku osi z. Jednak obiekt wizualny, który jest przekazywany jako parametr do <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> Metoda określa, które części drzewa wizualnego, który będzie wskazywać testu. Testuj pod względem całego drzewa wizualnego lub jakiejkolwiek jego części jest osiągalny.  
+## <a name="hit-testing-and-z-order"></a>Testowanie trafień i porządek osi Z  
+ Warstwa [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wizualizacji obsługuje testowanie trafień dla wszystkich obiektów w ramach punktu lub geometrii, a nie tylko z najwyższego obiektu. Wyniki są zwracane w kolejności z. Jednak obiekt wizualizacji, który jest przekazywany jako parametr do <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metody Określa, która część drzewa wizualnego ma zostać przetestowana. Test można trafić do całego drzewa wizualnego lub dowolnej jego części.  
   
- Na poniższej ilustracji obiekt circle znajduje się na szczycie kwadratu i trójkąt obiektów. Jeśli interesuje Cię tylko obiekt wizualny, którego wartość porządku osi jest umieszczony najwyżej testowania trafień, możesz ustawić wyliczenie visual testu trafienia do zwrócenia <xref:System.Windows.Media.HitTestResultBehavior.Stop> z <xref:System.Windows.Media.HitTestResultCallback> przestanie przechodzenie testu trafienia po pierwszym elementem.  
+ Na poniższej ilustracji obiekt Circle znajduje się na górze obydwu obiektów. Jeśli interesuje Cię tylko testowanie z trafieniem obiektu wizualizacji, którego wartość Order z jest największa, można ustawić Wyliczenie testów trafień wizualizacji, aby <xref:System.Windows.Media.HitTestResultBehavior.Stop> wrócić z <xref:System.Windows.Media.HitTestResultCallback> programu, aby zatrzymać przechodzenie testu trafień po pierwszym elemencie.  
   
- ![Diagram z&#45;kolejność drzewa wizualnego](./media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
-Diagram przedstawiający porządek drzewo wizualne  
+ ![Diagram porządku osi z&#45;drzewa wizualnego](./media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
+Diagram porządku osi z drzewa wizualnego  
   
- Aby wyliczyć wszystkich obiektów wizualnych pod określony punkt lub geometrii wrócić <xref:System.Windows.Media.HitTestResultBehavior.Continue> z <xref:System.Windows.Media.HitTestResultCallback>. Oznacza to, że mogą trafić testu dla obiektów wizualnych, które są pod innymi obiektami, nawet wtedy, gdy są one całkowicie zasłonięte. Zobacz przykładowy kod w sekcji "Przy użyciu trafień testu wyniki wywołania zwrotnego", aby uzyskać więcej informacji.  
+ Jeśli chcesz wyliczyć wszystkie obiekty wizualizacji w określonym punkcie lub geometrii, Wróć <xref:System.Windows.Media.HitTestResultBehavior.Continue> <xref:System.Windows.Media.HitTestResultCallback>z. Oznacza to, że można trafić test dla obiektów wizualnych, które znajdują się pod innymi obiektami, nawet jeśli są one całkowicie zasłonięte. Aby uzyskać więcej informacji, zobacz przykładowy kod w sekcji "Używanie Wyniki testów wywołania zwrotnego".  
   
 > [!NOTE]
->  Wizualne obiekt, który jest przezroczysty również mogą trafić testu.  
+> Obiekt wizualny, który jest przezroczysty, może również być test trafień.  
   
 <a name="using_default_hit_testing"></a>   
-## <a name="using-default-hit-testing"></a>Test trafienia przy użyciu domyślnego  
- Można zidentyfikować, czy punkt znajduje się w geometrię obiektu visual przy użyciu <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metodę, aby określić obiekt wizualny i punkt koordynować wartości na potrzeby testowania wstępnego. Parametr obiekt wizualny identyfikuje punkt początkowy w drzewie wizualnym wyszukiwania testu trafienia. Jeśli obiekt wizualny znajduje się w drzewie wizualnym, w których geometrii zawiera współrzędne, jest równa <xref:System.Windows.Media.HitTestResult.VisualHit%2A> właściwość <xref:System.Windows.Media.HitTestResult> obiektu. <xref:System.Windows.Media.HitTestResult> Jest następnie zwracany z <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metody. Jeśli punkt nie znajduje się za pomocą podrzędne drzewa wizualnego, testowania, są trafień <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> zwraca `null`.  
+## <a name="using-default-hit-testing"></a>Używanie domyślnego testowania trafień  
+ Można określić, czy punkt znajduje się w geometrii obiektu wizualizacji, przy użyciu <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metody, aby określić obiekt wizualizacji i wartość współrzędnych punktu do przetestowania. Parametr obiektu wizualnego identyfikuje punkt początkowy w drzewie wizualnym dla wyszukiwania testów trafień. Jeśli obiekt wizualny zostanie znaleziony w drzewie wizualnym, którego geometria zawiera współrzędną, jest ustawiona <xref:System.Windows.Media.HitTestResult.VisualHit%2A> na Właściwość <xref:System.Windows.Media.HitTestResult> obiektu. Następnie jest zwracany <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>zmetody. <xref:System.Windows.Media.HitTestResult> Jeśli punkt nie jest zawarty w poddrzewie wizualnym, które są testowane, <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> zwraca. `null`  
   
 > [!NOTE]
->  Trafień domyślnego badania zawsze zwraca najważniejsze obiekty w porządku osi z. Aby zidentyfikować wszystkie obiekty wizualne, nawet te, które mogą być całkowicie lub częściowo zasłonięte, należy użyć wywołania zwrotnego wynik testu trafienia.  
+> Domyślne testowanie trafień zawsze zwraca najbardziej górny obiekt w kolejności z. Aby zidentyfikować wszystkie obiekty wizualizacji, nawet te, które mogą być częściowo lub w całości ukrywane, użyj wywołania zwrotnego wynik testu trafień.  
   
- Wartość współrzędnych jako parametr punktu <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metoda ma względem współrzędnych obiekt wizualny trafisz testowanie. Na przykład, jeśli można zagnieżdżać zdefiniowanych obiektów wizualnych na (100, 100) przestrzeni współrzędnych obiektu nadrzędnego, kliknij przycisk testowania wizualizacji podrzędnych w (0, 0) jest odpowiednikiem trafień, testowanie w firmie (100, 100) w przestrzeni współrzędnych obiektu nadrzędnego.  
+ Wartość współrzędnej, która jest przekazywany jako parametr punktu dla <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metody, musi być względna względem przestrzeni współrzędnych obiektu wizualizacji, względem którego trafisz testowanie. Na przykład jeśli zagnieżdżonych obiektów wizualnych zdefiniowanych w (100, 100) w obszarze współrzędnych elementu nadrzędnego, trafij test wizualizacji podrzędnej (0, 0) jest odpowiednikiem testowania trafień (100, 100) w przestrzeni współrzędnych elementu nadrzędnego.  
   
- Poniższy kod przedstawia sposób konfigurowania obsługi zdarzeń myszy <xref:System.Windows.UIElement> obiekt, który służy do przechwytywania zdarzeń używane do testowania trafień.  
+ Poniższy kod pokazuje, jak skonfigurować programy obsługi zdarzeń myszy dla <xref:System.Windows.UIElement> obiektu, który jest używany do przechwytywania zdarzeń używanych do testowania trafień.  
   
  [!code-csharp[HitTestingOverview#100](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#100)]
  [!code-vb[HitTestingOverview#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#100)]  
   
-### <a name="how-the-visual-tree-affects-hit-testing"></a>Test trafienia wpływ drzewo wizualne  
- Począwszy od punktu w drzewie wizualnym określa obiekty, które są zwracane podczas wyliczania testu trafienia obiektów. W przypadku wielu obiektów, które mają być przeprowadzanie testu trafienia visual obiekt używany jako punktu wyjścia w drzewie wizualnym musi być nadrzędnej wspólnej dla wszystkich obiektów zainteresowania. Na przykład jeśli interesują Cię trafień testowania button element i rysowania visual na poniższym diagramie, trzeba ustawić punkt początkowy w drzewie wizualnym nadrzędnej wspólnej dla obu tych elementów. W tym przypadku element roboczy jest nadrzędnej wspólnej dla zarówno button element, jak i rysowania wizualizacji.  
+### <a name="how-the-visual-tree-affects-hit-testing"></a>Jak drzewo wizualne wpływa na testowanie trafień  
+ Punkt początkowy w drzewie wizualnym określa, które obiekty są zwracane podczas wyliczania testów trafień. Jeśli masz wiele obiektów do przetestowania, obiekt wizualizacji używany jako punkt początkowy w drzewie wizualnym musi być wspólnym elementem nadrzędnym wszystkich interesujących Cię obiektów. Na przykład, jeśli interesują Cię trafienia w przypadku testowania elementu Button i wizualizacji na poniższym diagramie, należy ustawić punkt początkowy w drzewie wizualnym do wspólnego elementu nadrzędnego obu. W tym przypadku element kanwy jest wspólnym elementem nadrzędnym obu elementów Button i wizualizacji rysunku.  
   
- ![Diagram of a visual tree hierarchy](./media/wcpsdk-mmgraphics-visuals-overview-01.gif "wcpsdk_mmgraphics_visuals_overview_01")  
+ ![Diagram hierarchii drzewa wizualnego](./media/wcpsdk-mmgraphics-visuals-overview-01.gif "wcpsdk_mmgraphics_visuals_overview_01")  
 Diagram hierarchii drzewa wizualnego  
   
 > [!NOTE]
->  <xref:System.Windows.UIElement.IsHitTestVisible%2A> Właściwości pobiera lub ustawia wartość deklarującą, czy <xref:System.Windows.UIElement>-pochodnego obiektu może być zwrócony jako wynik testu trafienia z niektórych części zrenderowanej zawartości. Dzięki temu można selektywnie zmieniać drzewa wizualnego, aby określić obiekty wizualne, które są zaangażowane w hit test.  
+> Właściwość pobiera lub ustawia wartość, która deklaruje, <xref:System.Windows.UIElement>czy obiekt pochodny może być zwracany jako wynik testu trafień z pewnej części zawartości renderowanej. <xref:System.Windows.UIElement.IsHitTestVisible%2A> Dzięki temu można wybiórczo zmienić drzewo wizualne, aby określić, które obiekty wizualne są uwzględnione w teście trafień.  
   
 <a name="using_a_hit_test_result_callback"></a>   
-## <a name="using-a-hit-test-result-callback"></a>Za pomocą wywołania zwrotnego wynik testu trafienia  
- Można wyliczyć wszystkich obiektów wizualnych w drzewie wizualnym, w których geometrii zawiera określoną wartość współrzędnych. Dzięki temu można zidentyfikować wszystkie obiekty wizualne, nawet tych, które mogą być całkowicie lub częściowo zasłonięte przez inne obiekty visual. Do wyliczenia obiektów wizualnych w użyciu drzewa wizualnego <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metody za pomocą funkcji wywołania zwrotnego testu trafienia. Funkcja wywołania zwrotnego test trafień jest wywoływane przez system, gdy współrzędnych podaną wartość jest zawarta w obiekt wizualny.  
+## <a name="using-a-hit-test-result-callback"></a>Używanie wywołania zwrotnego wyniku testu trafień  
+ Można wyliczyć wszystkie obiekty wizualizacji w drzewie wizualnym, których geometria zawiera określoną wartość współrzędnej. Pozwala to identyfikować wszystkie obiekty wizualizacji, nawet te, które mogą być częściowo lub w całości ukrywane przez inne obiekty wizualne. Aby wyliczyć obiekty wizualne w drzewie wizualnym, <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> Użyj metody z funkcją wywołania zwrotnego testu trafień. Funkcja wywołania zwrotnego testu trafień jest wywoływana przez system, gdy określona wartość współrzędnej jest zawarta w obiekcie wizualnym.  
   
- Podczas trafień badania wyliczenie wyników, nie należy wykonywać żadnych operacji, która modyfikuje drzewo wizualne. Dodawanie lub usuwanie obiektu z drzewa wizualnego, podczas gdy jej linia może spowodować nieprzewidywalne zachowanie. Można bezpiecznie modyfikować drzewa wizualnego po <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metoda zwraca. Możesz chcieć zapewnić struktury danych, takich jak <xref:System.Collections.ArrayList>, aby przechowywać wartości podczas wyliczania wyników testu trafienia.  
+ Podczas wyliczania wyników testów trafień nie należy wykonywać żadnej operacji modyfikującej drzewo wizualne. Dodanie lub usunięcie obiektu z drzewa wizualnego podczas jego przechodzenia może spowodować nieprzewidywalne zachowanie. Można bezpiecznie modyfikować drzewo wizualne po <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> powrocie metody. Warto podać strukturę danych, taką jak <xref:System.Collections.ArrayList>,, aby przechowywać wartości podczas wyliczania wyników testu trafień.  
   
  [!code-csharp[HitTestingOverview#101](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#101)]
  [!code-vb[HitTestingOverview#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#101)]  
   
- Metody wywołania zwrotnego test trafień Określa akcje, które wykonujesz w chwili zidentyfikowania hit test dla określonego obiektu visual w drzewie wizualnym. Po wykonaniu akcji, zwraca <xref:System.Windows.Media.HitTestResultBehavior> wartość, która określa, czy należy kontynuować wyliczania innych obiektów wizualnych, czy nie.  
+ Metoda wywołania zwrotnego testu trafień definiuje akcje wykonywane, gdy test trafień jest identyfikowany w określonym obiekcie wizualizacji w drzewie wizualnym. Po wykonaniu akcji zwracasz <xref:System.Windows.Media.HitTestResultBehavior> wartość określającą, czy kontynuować wyliczanie innych obiektów wizualnych, czy nie.  
   
  [!code-csharp[HitTestingOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[HitTestingOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#102)]  
   
 > [!NOTE]
->  Kolejność wyliczania obiektów wizualnych trafień jest według porządku osi z. Obiekt wizualny na poziomie najbardziej na wierzchu porządek jest pierwszy obiekt wyliczenia. Innych obiektów wizualnych wyliczany znajdują się w zmniejsza poziomu porządku osi z. Kolejność wyliczania odnosi się do renderowania kolejność elementów wizualnych.  
+> Kolejność wyliczania obiektów wizualnych trafień jest według kolejności z. Obiekt wizualizacji na poziomie najwyższego rzędu z jest pierwszym wyliczonym obiektem. Wszystkie inne obiekty wizualizacji są wyliczane na poziomie osi z. Ta kolejność wyliczania odpowiada kolejności renderowania wizualizacji.  
   
- Wyliczanie obiektów wizualnych w funkcji wywołania zwrotnego testu trafienia w dowolnym momencie można zatrzymać, zwracając <xref:System.Windows.Media.HitTestResultBehavior.Stop>.  
+ Można zatrzymać Wyliczanie obiektów wizualnych w dowolnym momencie w funkcji wywołania zwrotnego testu trafień, <xref:System.Windows.Media.HitTestResultBehavior.Stop>zwracając wartość.  
   
  [!code-csharp[HitTestingOverview#103](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#103)]
  [!code-vb[HitTestingOverview#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#103)]  
   
 <a name="using_a_hit_test_filter_callback"></a>   
-## <a name="using-a-hit-test-filter-callback"></a>Za pomocą zwrotnym filtra Hit Test  
- Filtr opcjonalne testu trafienia można użyć do ograniczenia obiektów, które są przekazywane do wyników testu trafienia. Dzięki temu można zignorować części drzewa wizualnego, że nie jesteś zainteresowany przetwarzania w wynikach testu trafienia. Aby zaimplementować filtr test trafień, definiowanie funkcji wywołania zwrotnego filtru test trafień i przekazać go jako wartość parametru, gdy wywołujesz <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metody.  
+## <a name="using-a-hit-test-filter-callback"></a>Używanie wywołania zwrotnego filtru testów trafień  
+ Można użyć opcjonalnego filtra testów trafień, aby ograniczyć obiekty, które są przesyłane do wyników testu trafień. Pozwala to na ignorowanie części drzewa wizualnego, które nie są zainteresowane przetwarzaniem w wynikach testu trafień. Aby zaimplementować filtr testów trafień, należy zdefiniować funkcję wywołania zwrotnego filtru testów trafień i przekazać ją jako wartość parametru podczas wywoływania <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metody.  
   
  [!code-csharp[HitTestingOverview#104](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#104)]
  [!code-vb[HitTestingOverview#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#104)]  
   
- Jeśli nie chcesz podać funkcji wywołania zwrotnego filtru opcjonalne test trafień, przekazać `null` wartość jako parametr dla <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metody.  
+ Jeśli nie chcesz podawać opcjonalnej funkcji wywołania zwrotnego filtru testów trafień, Przekaż `null` wartość jako parametr <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metody.  
   
  [!code-csharp[HitTestingOverview#105](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#105)]
  [!code-vb[HitTestingOverview#105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#105)]  
   
- ![Oczyszczanie drzewa wizualnego, za pomocą filtru testów trafienia](./media/filteredvisualtree-01.png "FilteredVisualTree_01")  
+ ![Oczyszczanie drzewa wizualnego przy użyciu filtru testów trafień](./media/filteredvisualtree-01.png "FilteredVisualTree_01")  
 Oczyszczanie drzewa wizualnego  
   
- Funkcja wywołania zwrotnego testu trafienia filtru można wyliczyć wszystkie wizualizacje renderowanych zawierającym współrzędne, które określisz. Jednakże można zignorować niektórych gałęzi drzewa wizualnego, że nie jesteś zainteresowany przetwarzania w funkcji wywołania zwrotnego wyników testu trafienia. Wartość zwracana funkcji wywołania zwrotnego filtr test trafień Określa, jakiego rodzaju akcji wyliczenie obiektów wizualnych powinno zająć. Na przykład, jeśli zwróci wartość <xref:System.Windows.Media.HitTestFilterBehavior.ContinueSkipSelfAndChildren>, możesz usunąć bieżący obiekt wizualny i jego elementy podrzędne z wyliczenia wyników testu trafienia. Oznacza to, czy funkcja wywołania zwrotnego wyników testu trafienia nie będą widzieć tych obiektów w wyliczeniu, jego. Widok drzewa obiektów czyszczenia zmniejsza ilość przetwarzania podczas wyliczania wyników testu trafienia — dostęp próbny. W poniższym przykładzie kodu filtr pomija etykiety i jego elementy podrzędne i naciśnij klawisz analiz, wszystkie inne elementy.  
+ Funkcja wywołania zwrotnego filtru testów trafień umożliwia wyliczenie wszystkich wizualizacji, których renderowana zawartość zawiera określone współrzędne. Można jednak zignorować pewne gałęzie drzewa wizualnego, które nie są zainteresowane przetwarzaniem w funkcji wywołania zwrotnego wyników testu trafień. Wartość zwracana funkcji wywołania zwrotnego filtru testów trafień określa typ akcji, która ma być Wyliczenie obiektów wizualnych. Na przykład, jeśli zwracasz wartość, <xref:System.Windows.Media.HitTestFilterBehavior.ContinueSkipSelfAndChildren>możesz usunąć bieżący obiekt wizualny i jego elementy podrzędne z wyliczenia wyników testów trafień. Oznacza to, że funkcja wywołania zwrotnego wyników testów trafień nie będzie widziała tych obiektów w jego wyliczeniu. Oczyszczanie drzewa wizualnego obiektów zmniejsza ilość przetwarzania w czasie wykonywania wyliczenia wyników testu trafień. W poniższym przykładzie kodu filtr pomija etykiety i ich elementy podrzędne i trafi wszystkie pozostałe.  
   
  [!code-csharp[HitTestingOverview#106](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#106)]
  [!code-vb[HitTestingOverview#106](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#106)]  
   
 > [!NOTE]
->  Wywołanie zwrotne filtr testu trafienia czasami zostanie wywołana w przypadkach, gdy wywołanie zwrotne wyników testu trafienia nie zostanie wywołana.  
+> Wywołanie zwrotne filtru testów trafień będzie czasami wywoływane w przypadkach, gdy wywołanie zwrotne wyników testu trafień nie jest wywoływane.  
   
 <a name="overriding_default_hit_testing"></a>   
-## <a name="overriding-default-hit-testing"></a>Zastępowanie domyślnego testowania trafień  
- Można zastąpić trafień domyślny obiekt wizualny obsługę testów poprzez zastąpienie <xref:System.Windows.Media.Visual.HitTestCore%2A> metody. Oznacza to, że po wywołaniu <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metody, implementacja zgodnym z przesłoniętą <xref:System.Windows.Media.Visual.HitTestCore%2A> jest wywoływana. Zastąpione metoda jest wywoływana, gdy hit test mieści się w prostokąt otaczający obiekt wizualny nawet wtedy, gdy współrzędnych znajduje się poza renderowanej zawartości obiekt wizualny.  
+## <a name="overriding-default-hit-testing"></a>Zastępowanie domyślnych testów trafień  
+ Można zastąpić domyślną obsługę testowania trafień obiektu wizualnego, zastępując <xref:System.Windows.Media.Visual.HitTestCore%2A> metodę. Oznacza to, że po wywołaniu <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metody, zastąpiona <xref:System.Windows.Media.Visual.HitTestCore%2A> implementacja jest wywoływana. Zastąpiona metoda jest wywoływana, gdy test trafień znajduje się w granicach obiektu wizualizacji, nawet jeśli Współrzędna znajduje się poza renderowaną zawartością obiektu wizualnego.  
   
  [!code-csharp[HitTestingOverview#107](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#107)]
  [!code-vb[HitTestingOverview#107](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#107)]  
   
- Mogą wystąpić sytuacje, gdy zachodzi potrzeba trafień Testuj pod względem prostokąt otaczający i renderowanej zawartości obiekt wizualny. Za pomocą `PointHitTestParameters` wartość parametru w swojej zastąpione <xref:System.Windows.Media.Visual.HitTestCore%2A> metoda jako parametr do metody podstawowej <xref:System.Windows.Media.Visual.HitTestCore%2A>, można wykonywać działania dotyczące trafienie prostokąt otaczający obiekt wizualny, a następnie wykonaj drugi test trafień dla renderowania zawartości obiekt wizualny.  
+ Mogą wystąpić sytuacje, w których chcesz trafić test względem prostokąta ograniczenia i renderowanej zawartości obiektu wizualnego. Używając `PointHitTestParameters` wartości parametru w zastąpionej <xref:System.Windows.Media.Visual.HitTestCore%2A> metodzie jako parametru do metody <xref:System.Windows.Media.Visual.HitTestCore%2A>bazowej, można wykonywać akcje na podstawie trafień prostokąta granicy obiektu wizualizacji, a następnie wykonać drugi test trafień względem renderowana zawartość obiektu wizualnego.  
   
  [!code-csharp[HitTestingOverview#108](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
  [!code-vb[HitTestingOverview#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
@@ -143,7 +143,7 @@ Oczyszczanie drzewa wizualnego
 - <xref:System.Windows.Media.HitTestResultCallback>
 - <xref:System.Windows.Media.HitTestFilterCallback>
 - <xref:System.Windows.UIElement.IsHitTestVisible%2A>
-- [Test trafienia przy użyciu przykładowych DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994)
-- [Hit Test przykład współdziałanie Win32](https://go.microsoft.com/fwlink/?LinkID=159995)
+- [Test trafień za pomocą przykładu DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994)
+- [Test trafień z próbką międzyoperacyjną Win32](https://go.microsoft.com/fwlink/?LinkID=159995)
 - [Przeprowadzanie testu trafienia geometrii w wizualizacji](how-to-hit-test-geometry-in-a-visual.md)
 - [Przeprowadzanie testu trafienia za pomocą kontenera hosta Win32](how-to-hit-test-using-a-win32-host-container.md)

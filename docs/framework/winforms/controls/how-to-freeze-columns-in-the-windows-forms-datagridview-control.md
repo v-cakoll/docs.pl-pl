@@ -9,26 +9,26 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: 12c73d7344bba3ca36169c2f46134876295dee00
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a83c5078d67be40fda2ae3382b8124594ee78103
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651746"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966660"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Instrukcje: blokowanie kolumn w kontrolce DataGridView formularzy systemu Windows
-Gdy użytkownicy wyświetlają dane wyświetlane w formularzach Windows <xref:System.Windows.Forms.DataGridView> kontrolki, czasami muszą odwoływać się do pojedynczej kolumny lub zestaw kolumn, często. Na przykład wyświetlając tabelę informacje o kliencie, który zawiera wiele kolumn, jest przydatne do wyświetlania nazwy klientów przez cały czas podczas włączania innych kolumn w celu przewiń poza regionem widoczne.  
+Gdy użytkownicy wyświetlają dane w kontrolce <xref:System.Windows.Forms.DataGridView> Windows Forms, czasami muszą odwoływać się do pojedynczej kolumny lub zestawu kolumn często. Na przykład podczas wyświetlania tabeli informacji o kliencie zawierającej wiele kolumn warto wyświetlić nazwę klienta przez cały czas, jednocześnie włączając inne kolumny przewijane poza widocznym regionem.  
   
- Aby uzyskać takie zachowanie, można zablokować kolumn w formancie. Po zablokowaniu kolumny, również są zablokowane wszystkie kolumny po lewej stronie (lub po jego prawej stronie skrypty języka od prawej do lewej). Zamrożone kolumny pozostaną w miejscu, a wszystkie pozostałe kolumny można przewijać.  
+ Aby osiągnąć takie zachowanie, można zablokować kolumny w kontrolce. Po zablokowaniu kolumny wszystkie kolumny po lewej stronie (lub po prawej stronie w skrypcie języka od prawej do lewej) również są zamrożone. Zablokowane kolumny pozostają na miejscu, gdy wszystkie inne kolumny można przewijać.  
   
 > [!NOTE]
->  Jeśli zmiany układu kolumn jest włączona, Zablokowane kolumny są traktowane jako różne od kolumny grupy. Użytkownicy mogą zmienić położenie kolumn w każdej grupie, ale kolumna nie może przenieść z jednej grupy do drugiego.  
+> W przypadku włączenia zmiany kolejności kolumn zablokowane kolumny są traktowane jako odrębne dla grupy z odblokowanych kolumn. Użytkownicy mogą zmieniać położenie kolumn w jednej grupie, ale nie mogą przenosić kolumn z jednej grupy do drugiej.  
   
- <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> Właściwość kolumny określa, czy kolumna jest zawsze widoczny w obrębie siatki.  
+ <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> Właściwość kolumny określa, czy kolumna jest zawsze widoczna w obrębie siatki.  
   
- Są obsługiwane dla tego zadania w programie Visual Studio.  Zobacz też [jak: Blokowanie kolumn w Windows Forms formantu DataGridView za pomocą projektanta](freeze-columns-in-the-datagrid-using-the-designer.md).  
+ To zadanie jest obsługiwane w programie Visual Studio.  Zapoznaj [się również z tematem: Zablokuj kolumny w kontrolce DataGridView Windows Forms przy](freeze-columns-in-the-datagrid-using-the-designer.md)użyciu narzędzia Projektant.  
   
-### <a name="to-freeze-a-column-programmatically"></a>Aby programowo Zablokuj kolumnę  
+### <a name="to-freeze-a-column-programmatically"></a>Aby programowo zablokować kolumnę  
   
 - Ustaw <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType> właściwość `true`.  
   
@@ -38,13 +38,13 @@ Gdy użytkownicy wyświetlają dane wyświetlane w formularzach Windows <xref:Sy
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1` zawierającą kolumnę o nazwie `AddToCartButton`.  
+- Kontrolka o `dataGridView1` nazwie, która zawiera kolumnę o nazwie `AddToCartButton`. <xref:System.Windows.Forms.DataGridView>  
   
-- Odwołuje się do <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
+- Odwołania do <xref:System?displayProperty=nameWithType> zestawów i <xref:System.Windows.Forms?displayProperty=nameWithType> .  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
 - [Podstawowe funkcje komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Instrukcje: Włączanie zmiany układu kolumn w kontrolce DataGridView formularzy Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: Włączanie zmiany kolejności kolumn w kontrolce DataGridView Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)

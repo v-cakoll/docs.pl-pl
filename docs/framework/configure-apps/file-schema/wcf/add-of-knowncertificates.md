@@ -2,22 +2,22 @@
 title: <add> dla <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-ms.openlocfilehash: 3eb5bf74f909e6036154b7f5f7c6181b09fefbff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 939718e8dacca2698b6f71a3bdc1262a5dc3ee20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704703"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926677"
 ---
-# <a name="add-of-knowncertificates"></a>\<Dodaj > z \<knownCertificates >
-Dodaje certyfikat X.509 do kolekcji znanych certyfikatów.  
+# <a name="add-of-knowncertificates"></a>\<Dodawanie > \<knownCertificates >
+Dodaje certyfikat X. 509 do kolekcji znanych certyfikatów.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<serviceCredentials>  
-\<issuedTokenAuthentication>  
+\<issuedTokenAuthentication >  
 \<knownCertificates >  
 \<add>  
   
@@ -39,34 +39,34 @@ Dodaje certyfikat X.509 do kolekcji znanych certyfikatów.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|findValue|ciąg. Wartość do wyszukania.|  
-|storeLocation|Wyliczenie. Jednym z dwóch lokalizacji przechowywania do wyszukiwania.|  
-|storeName|Wyliczenie. Jednym z systemów magazynowania do wyszukiwania.|  
-|x509FindType|Wyliczenie. Jedno z pól certyfikatu do wyszukiwania.|  
+|findValue|Parametry. Wartość do wyszukania.|  
+|storeLocation|Licznik. Jedna z dwóch lokalizacji przechowywania do przeszukania.|  
+|storeName|Licznik. Jeden z magazynów systemu do przeszukania.|  
+|x509FindType|Licznik. Jedno z pól certyfikatów do przeszukania.|  
   
-## <a name="findvalue-attribute"></a>findValue atrybutu  
-  
-|Wartość|Opis|  
-|-----------|-----------------|  
-|String|Wartość zależy od pola (określony przez atrybut X509FindType) wyszukiwany. Na przykład jeśli wyszukiwanie odcisku palca, wartość musi być ciągiem liczb szesnastkowych.|  
-  
-## <a name="x509findtype-attribute"></a>x509FindType Attribute  
+## <a name="findvalue-attribute"></a>findValue — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Wartości: FindByThumbprint FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|String|Wartość jest zależna od pola (określonego przez atrybut X509FindType), który jest przeszukiwany. Na przykład, jeśli szukasz odcisku palca, wartość musi być ciągiem liczb szesnastkowych.|  
   
-## <a name="storelocation-attribute"></a>storeLocation atrybutu  
+## <a name="x509findtype-attribute"></a>x509FindType — atrybut  
+  
+|Wartość|Opis|  
+|-----------|-----------------|  
+|Wyliczenie|Dostępne są następujące wartości: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+  
+## <a name="storelocation-attribute"></a>storeLocation — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |Wyliczenie|CurrentUser lub LocalMachine.|  
   
-## <a name="storename-attribute"></a>storeName atrybutu  
+## <a name="storename-attribute"></a>storeName — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Wartości: Książka adresowa, AuthRoot, urząd certyfikacji, niedozwolone mojej, główny, TrustedPeople i TrustedPublisher.|  
+|Wyliczenie|Dostępne są następujące wartości: AddressBook, AuthRoot, urząd certyfikacji, niedozwolone, my, root, TrustedPeople i TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -75,12 +75,12 @@ Dodaje certyfikat X.509 do kolekcji znanych certyfikatów.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)|Reprezentuje kolekcję certyfikatów X.509, które są dostarczane przez Usługa tokenu zabezpieczającego (STS) do weryfikacji tokenów zabezpieczających.|  
+|[\<knownCertificates >](knowncertificates.md)|Reprezentuje kolekcję certyfikatów X. 509, które są dostarczane przez usługę tokenu zabezpieczającego (STS) do sprawdzania poprawności tokenów zabezpieczających.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wystawiony token scenariusz ma trzy etapy. W pierwszym etapie klienta próby uzyskania dostępu do usługi jest określane *secure token service*. Usługa bezpiecznych tokenów następnie uwierzytelnia klienta, a następnie wystawia token, zazwyczaj token zabezpieczeń potwierdzenia Markup Language (SAML) klienta. Klient powraca do usługi przy użyciu tokenu. Usługa sprawdza, czy token dla danych, które umożliwia usłudze uwierzytelniania tokenu, a w związku z tym klientem. W celu uwierzytelnienia tokenu certyfikatu używa usługa bezpiecznych tokenów musi być znane, do usługi.  
+ Scenariusz wystawionego tokenu ma trzy etapy. Na pierwszym etapie klient próbujący uzyskać dostęp do usługi jest nazywany *usługą bezpiecznego tokenu*. Usługa Secure Tokens następnie uwierzytelnia klienta, a następnie wystawia klientowi token, zwykle tokena "Security Assertions Markup Language" (SAML). Klient następnie wraca do usługi przy użyciu tokenu. Usługa bada token dla danych, które umożliwiają usłudze uwierzytelnianie tokenu i w związku z tym klienta. Aby uwierzytelnić token, certyfikat, którego używa usługa bezpiecznego tokenu, musi być znany usłudze.  
   
- [ \<IssuedTokenAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) element jest repozytorium dla wszystkich certyfikatów usługa bezpiecznych tokenów. Aby dodać certyfikaty, należy użyć [ \<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md). Wstaw [ \<Dodaj > element \<knownCertificates > Element](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) dla każdego certyfikatu, jak pokazano w poniższym przykładzie.  
+ Element > IssuedTokenAuthentication jest repozytorium dla wszystkich takich certyfikatów usługi Secure Token Service. [ \<](issuedtokenauthentication-of-servicecredentials.md) Aby dodać certyfikaty, użyj [ \<> knownCertificates](knowncertificates.md). Wstaw element [> knownCertificates element \<> dla każdego certyfikatu, jak pokazano w poniższym przykładzie. \<](add-of-knowncertificates.md)  
   
 ```xml  
 <issuedTokenAuthentication>
@@ -93,9 +93,9 @@ Dodaje certyfikat X.509 do kolekcji znanych certyfikatów.
 </issuedTokenAuthentication>
 ```  
   
- Domyślnie certyfikaty musi pochodzić od usługa bezpiecznych tokenów. Te certyfikaty, upewnij się, że wiarygodnych tylko klienci "znane" Uzyskiwanie dostępu do usługi.  
+ Domyślnie certyfikaty muszą być uzyskiwane z usługi bezpiecznego tokenu. Te "znane" certyfikaty zapewniają dostęp do usługi tylko uprawnionym klientom.  
   
- Aby przejrzeć warunki wymagane do klienta, może zostać uwierzytelniony przez usługi federacyjnej, jak również więcej informacji na temat korzystania z tego elementu konfiguracji, zobacz [jak: Konfigurowanie poświadczeń usługi federacyjnej](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md). Aby uzyskać więcej informacji o scenariuszach obejmujących Federację, zobacz [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Aby sprawdzić warunki wymagane do uwierzytelnienia klienta przez usługę federacyjną, a także więcej informacji na temat korzystania z tego elementu konfiguracji, zobacz [How to: Skonfiguruj poświadczenia na usługa federacyjna](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md). Aby uzyskać więcej informacji na temat scenariuszy federacyjnych, zobacz [federacyjnego i](../../../wcf/feature-details/federation-and-issued-tokens.md)wystawione tokeny.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład dodaje certyfikat do repozytorium dla wszystkich certyfikatów usługi STS.  
@@ -126,8 +126,8 @@ Dodaje certyfikat X.509 do kolekcji znanych certyfikatów.
 - <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElementCollection>
 - <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>
 - <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>
-- [\<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)
-- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [\<knownCertificates >](knowncertificates.md)
+- [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md)
+- [Federacja i wystawione tokeny](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Instrukcje: Konfigurowanie poświadczeń na usługa federacyjna](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: bc2ca7a94ffb19f62f354bdfc3040490b57e2689
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66491099"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968546"
 ---
 # <a name="standard-timespan-format-strings"></a>Standardowe ciągi formatujące TimeSpan
 <a name="Top"></a>Ciąg formatu <xref:System.TimeSpan> standardowego używa pojedynczego specyfikatora formatu do definiowania tekstowej reprezentacji <xref:System.TimeSpan> wartości będącej wynikiem operacji formatowania. Dowolny ciąg formatu, który zawiera więcej niż jeden znak, w tym znak odstępu, jest interpretowany jako ciąg formatu niestandardowego <xref:System.TimeSpan> . Aby uzyskać więcej informacji, zobacz [Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
@@ -67,7 +67,7 @@ ms.locfileid: "66491099"
  W przeciwieństwie do specyfikatorów formatu "g" i "G", specyfikator formatu "c" nie jest uwzględniany w kulturze. Generuje ciąg reprezentujący <xref:System.TimeSpan> wartość, która jest niezmienna i która jest wspólna dla wszystkich poprzednich wersji .NET Framework przed .NET Framework 4. "c" jest domyślnym <xref:System.TimeSpan> ciągiem formatu <xref:System.TimeSpan.ToString?displayProperty=nameWithType> ; Metoda formatuje wartość przedziału czasu przy użyciu ciągu formatu "c".  
   
 > [!NOTE]
->  <xref:System.TimeSpan>obsługuje również ciągi formatu standardowego "t" i "T", które są takie same jak w przypadku standardowego ciągu formatu "c".  
+> <xref:System.TimeSpan>obsługuje również ciągi formatu standardowego "t" i "T", które są takie same jak w przypadku standardowego ciągu formatu "c".  
   
  Poniższy przykład tworzy wystąpienie dwóch <xref:System.TimeSpan> obiektów, używa ich do wykonywania operacji arytmetycznych i wyświetla wynik. W każdym przypadku używa formatowania złożonego do wyświetlania <xref:System.TimeSpan> wartości przy użyciu specyfikatora formatu "c".  
   

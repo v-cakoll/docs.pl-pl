@@ -2,12 +2,12 @@
 title: Wyrażenia — WF
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-ms.openlocfilehash: 092272db2f7979cf12917dfe35e116295db79bf3
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 93d437ae6d20f5d31d80ef3a40f409c589ae084e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868894"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962421"
 ---
 # <a name="expressions"></a>Wyrażenia
 Wyrażenie Windows Workflow Foundation (WF) to wszelkie działania zwracające wynik. Wszystkie działania wyrażeń są wyprowadzane <xref:System.Activities.Activity%601>pośrednio z, która <xref:System.Activities.OutArgument> zawiera właściwość <xref:System.Activities.Activity%601.Result%2A> o nazwie jako wartość zwracana działania. [!INCLUDE[wf1](../../../includes/wf1-md.md)]jest dostarczany z szerokim zakresem działań związanych z wyrażeniami <xref:System.Activities.Expressions.VariableValue%601> prostymi, takimi jak i <xref:System.Activities.Expressions.VariableReference%601>, które zapewniają dostęp do pojedynczej zmiennej przepływu pracy za <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> pośrednictwem działań operatora, do złożonych działań, takich jak i <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> tej oferty dostęp do pełnego zakresu Visual Basic języka w celu utworzenia wyniku. Dodatkowe działania dotyczące wyrażeń można tworzyć poprzez wyprowadzanie z <xref:System.Activities.CodeActivity%601> lub <xref:System.Activities.NativeActivity%601>.  
@@ -16,7 +16,7 @@ Wyrażenie Windows Workflow Foundation (WF) to wszelkie działania zwracające w
  Projektant przepływu pracy <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> używa <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> i dla wszystkich wyrażeń <xref:Microsoft.CSharp.Activities.CSharpValue%601> w projektach Visual Basic i i <xref:Microsoft.CSharp.Activities.CSharpReference%601> dla wyrażeń w C# projektach przepływu pracy.  
   
 > [!NOTE]
->  Obsługa C# wyrażeń w projektach przepływu pracy została wprowadzona w .NET Framework 4,5. Aby uzyskać więcej informacji, [ C# ](csharp-expressions.md)zobacz Expressions.  
+> Obsługa C# wyrażeń w projektach przepływu pracy została wprowadzona w .NET Framework 4,5. Aby uzyskać więcej informacji, [ C# ](csharp-expressions.md)zobacz Expressions.  
   
  Przepływy pracy utworzone przez projektanta są zapisywane w języku XAML, gdzie wyrażenia są ujęte w nawiasy kwadratowe, jak w poniższym przykładzie.  
   

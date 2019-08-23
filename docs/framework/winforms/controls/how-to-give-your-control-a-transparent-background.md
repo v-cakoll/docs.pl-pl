@@ -6,29 +6,29 @@ helpviewer_keywords:
 - custom controls [Windows Forms], transparent background
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
-ms.openlocfilehash: 8a03d9afec5340cd77af465c4470b7484b8926be
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a82807ea3873b2217d1f05f6c720c599ea79abdd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609702"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966636"
 ---
 # <a name="how-to-give-your-control-a-transparent-background"></a>Instrukcje: ustawienie przezroczystego tła kontrolki
-We wcześniejszych wersjach programu .NET Framework, formanty nie obsługuje ustawiania przezroczyste backcolors bez uprzedniego ustawienia <xref:System.Windows.Forms.Control.SetStyle%2A> metody w Konstruktorze formularzy. W bieżącej wersji framework, można ustawić kolor tła dla większości kontrolek na <xref:System.Drawing.Color.Transparent%2A> w **właściwości** okna w czasie projektowania lub w kodzie w Konstruktorze formularza.  
+We wcześniejszych wersjach .NET Framework, formanty nie obsługiwały ustawiania przezroczystych kolorów, <xref:System.Windows.Forms.Control.SetStyle%2A> bez uprzedniego ustawienia metody w konstruktorze formularzy. W bieżącej wersji platformy, kolor na większości formantów można ustawić na <xref:System.Drawing.Color.Transparent%2A> wartość w oknie **Właściwości** w czasie projektowania lub w kodzie w Konstruktorze formularza.  
   
 > [!NOTE]
->  Formanty formularzy Windows nie obsługują prawdziwa przejrzystość. Tło przezroczyste formantu Windows Forms jest malowane przez jego obiektu nadrzędnego.  
+> Formanty Windows Forms nie obsługują prawdziwej przejrzystości. Tło przezroczystego formantu Windows Forms jest rysowane przez jego element nadrzędny.  
   
 > [!NOTE]
->  <xref:System.Windows.Controls.Button> Formantu nie obsługuje przezroczysty kolor tła nawet wtedy, gdy <xref:System.Windows.Forms.ButtonBase.BackColor%2A> właściwość jest ustawiona na <xref:System.Drawing.Color.Transparent%2A>.  
+> Formant nie obsługuje przezroczystego koloru, <xref:System.Windows.Forms.ButtonBase.BackColor%2A> nawet gdy właściwość jest ustawiona na <xref:System.Drawing.Color.Transparent%2A>. <xref:System.Windows.Controls.Button>  
   
-### <a name="to-give-your-control-a-transparent-backcolor"></a>Aby zachować kontrolę przezroczysty kolor tła  
+### <a name="to-give-your-control-a-transparent-backcolor"></a>Aby nadać formantowi przezroczysty kolor  
   
-- W oknie dialogowym właściwości wybierz <xref:System.Windows.Forms.ButtonBase.BackColor%2A> właściwości i wartości <xref:System.Drawing.Color.Transparent%2A>  
+- W okno właściwości wybierz <xref:System.Windows.Forms.ButtonBase.BackColor%2A> Właściwość i ustaw ją na<xref:System.Drawing.Color.Transparent%2A>  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Drawing.Color.FromArgb%2A>
 - [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)
 - [Używanie zarządzanych klas grafiki](../advanced/using-managed-graphics-classes.md)
-- [Instrukcje: Rysowanie nieprzezroczystych i półprzezroczystych linii](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)
+- [Instrukcje: Rysuj nieprzezroczyste i półprzezroczyste linie](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)

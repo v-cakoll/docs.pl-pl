@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], preventing row addition or deletion
 ms.assetid: a17722bd-9400-41e6-8dcc-c9c151f0a749
-ms.openlocfilehash: 20f9b85dc48ccd634468d0fed000120723f8ee5c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: f47eb29bf9ae077555f352d10c667bac4ade9373
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038187"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968322"
 ---
 # <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control-using-the-designer"></a>Instrukcje: zapobieganie dodawaniu i usuwaniu rzędów do kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Czasami chcesz uniemożliwić użytkownikom wprowadzanie nowych wierszy danych lub usuwanie istniejących wierszy w <xref:System.Windows.Forms.DataGridView> kontrolce. Nowe wiersze są wprowadzane w specjalnym wierszu dla nowych rekordów w dolnej części formantu. Po wyłączeniu dodawania wierszy nie jest wyświetlany wiersz dla nowych rekordów. Następnie można sprawić, aby formant całkowicie tylko do odczytu przez wyłączenie usuwania wierszy i edytowanie komórek.
@@ -21,7 +21,7 @@ Czasami chcesz uniemożliwić użytkownikom wprowadzanie nowych wierszy danych l
 - Kliknij symbol taga inteligentnego (![tag inteligentny](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) w prawym górnym <xref:System.Windows.Forms.DataGridView> rogu kontrolki, a następnie wyczyść pola wyboru **Włącz Dodawanie** i **Włączanie usuwania** .
 
     > [!NOTE]
-    >  Aby formant można było całkowicie tylko do odczytu, usuń zaznaczenie pola wyboru **Włącz edycję** .
+    > Aby formant można było całkowicie tylko do odczytu, usuń zaznaczenie pola wyboru **Włącz edycję** .
 
 ## <a name="see-also"></a>Zobacz także
 

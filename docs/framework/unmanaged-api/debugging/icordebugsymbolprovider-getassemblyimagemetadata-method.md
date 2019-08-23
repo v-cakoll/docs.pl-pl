@@ -1,18 +1,18 @@
 ---
-title: Metoda ICorDebugSymbolProvider::GetAssemblyImageMetadata
+title: 'ICorDebugSymbolProvider:: GetAssemblyImageMetadata, Metoda'
 ms.date: 03/30/2017
 ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d96aa82e9fd8b651ab005cba4945f6977c1e3d3a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ad86c42d0f23de25fe0e5b9123a0dba3695d8d64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771504"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964657"
 ---
-# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>Metoda ICorDebugSymbolProvider::GetAssemblyImageMetadata
-Zwraca metadane z zestawu scalonych.  
+# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>ICorDebugSymbolProvider:: GetAssemblyImageMetadata, Metoda
+Zwraca metadane z scalonego zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,21 +24,21 @@ HRESULT GetAssemblyImageMetadata(
   
 ## <a name="parameters"></a>Parametry  
  `ppMemoryBuffer`  
- [out] Wskaźnik na adres [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) obiektu, który zawiera informacje o rozmiarze i adres metadanych zestawu scalonych.  
+ określoną Wskaźnik do adresu obiektu [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) , który zawiera informacje o rozmiarze i adresie metadanych scalonego zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 8ac7cee2f9959bc75df165d00d3a0a67e1dd9af0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b926214d3be7f5f57783a8599acf1bb1042f956
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982400"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944457"
 ---
 # <a name="error-statement"></a>Error — Instrukcja
-Symuluje wystąpieniu błędu.  
+Symuluje wystąpienie błędu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -28,7 +28,7 @@ Error errornumber
   
 ## <a name="parts"></a>Części  
  `errornumber`  
- Wymagana. Może być dowolnym prawidłowym numerem błędu.  
+ Wymagane. Może być dowolnym prawidłowym numerem błędu.  
   
 ## <a name="remarks"></a>Uwagi  
  Instrukcja `Error` jest obsługiwana dla zgodności z poprzednimi wersjami. W nowym kodzie, szczególnie w przypadku tworzenia obiektów, użyj metody `Raise` obiektu `Err`, aby generować błędy w czasie wykonywania.  
@@ -38,7 +38,7 @@ Error errornumber
 |Właściwość|Wartość|  
 |--------------|-----------|  
 |`Number`|Wartość określona jako argument `Error` instrukcji. Może być dowolnym prawidłowym numerem błędu.|  
-|`Source`|Nazwa bieżącego projektu języka Visual Basic.|  
+|`Source`|Nazwa bieżącego projektu Visual Basic.|  
 |`Description`|Wyrażenie ciągu odpowiadające zwracanej wartości funkcji `Error` dla podanej wartości `Number`, jeśli taki ciąg istnieje. Jeśli ciąg nie istnieje, wartość `Description` zawiera ciąg znaków o zerowej długości ("").|  
 |`HelpFile`|W pełni kwalifikowany dysk, ścieżka i nazwa pliku odpowiedniego pliku Pomocy języka Visual Basic.|  
 |`HelpContext`|Odpowiedni identyfikator kontekstu pomocy języka Visual Basic dla błędu odpowiadającego właściwości `Number`.|  
@@ -47,7 +47,7 @@ Error errornumber
  Jeśli nie istnieje program do obsługi błędów lub jeśli żaden nie jest włączony, zostaje utworzony i wyświetlony komunikat o błędzie zawierający informacje z właściwości obiektu `Err`.  
   
 > [!NOTE]
->  Niektóre aplikacje hosta Visual Basic nie mogą tworzyć obiektów. Informacje o tym, czy aplikacja hosta może tworzyć klasy i obiekty, znajdziesz w jej dokumentacji.  
+> Niektóre aplikacje hosta Visual Basic nie mogą tworzyć obiektów. Informacje o tym, czy aplikacja hosta może tworzyć klasy i obiekty, znajdziesz w jej dokumentacji.  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie instrukcja `Error` została użyta do wygenerowania błędu numer 11.  
@@ -58,9 +58,9 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Obszaru** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Zestaw:** Visual Basic Runtime Library (w pliku Microsoft.VisualBasic.dll)  
+ **Hamulc** Visual Basic Runtime Library (w pliku Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -3,15 +3,15 @@ title: <remove>
 ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
-ms.openlocfilehash: 17c4d4289cf90b66d52986c054d4807ecff2b3d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11aeed0277fc13cbd9a65232311bd575a4a81ff7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793890"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942581"
 ---
 # <a name="remove"></a>\<remove>
-Usuwa programu obsługi tokenów zabezpieczeń określone z kolekcji programu obsługi tokenów.  
+Usuwa określony program obsługi tokenów zabezpieczających z kolekcji obsługi tokenów.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -38,7 +38,7 @@ Usuwa programu obsługi tokenów zabezpieczeń określone z kolekcji programu ob
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— typ|Nazwa typu CLR programu obsługi tokenów do usunięcia. Aby uzyskać więcej informacji o sposobie określania `type` atrybutów, zobacz [odwołań do typu niestandardowego](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references). Wymagana.|  
+|— typ|Nazwa typu CLR programu obsługi tokenów, który ma zostać usunięty. Aby uzyskać więcej informacji na temat sposobu określania `type` atrybutu, zobacz [odwołania do typów niestandardowych](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references). Wymagane.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -47,10 +47,10 @@ Usuwa programu obsługi tokenów zabezpieczeń określone z kolekcji programu ob
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Określa kolekcję programy obsługi tokenów zabezpieczających, które są zarejestrowane z punktem końcowym.|  
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|Określa kolekcję programów obsługi tokenów zabezpieczających, które są zarejestrowane w punkcie końcowym.|  
   
 ## <a name="example"></a>Przykład  
- Następujący kody XML pokazuje użycie `<add>` i `<remove>` elementów, aby zastąpić domyślne sesji programu obsługi tokenów niestandardową sesję programu obsługi tokenów. Kod XML jest pobierana z `ClaimsAwareWebFarm` próbki.  
+ Poniższy kod XML pokazuje użycie `<add>` elementów i `<remove>` , aby zastąpić domyślną procedurę obsługi tokena sesji za pomocą procedury obsługi niestandardowego tokenu sesji. Kod XML jest pobierany z `ClaimsAwareWebFarm` przykładu.  
   
 ```xml  
 <securityTokenHandlers>  

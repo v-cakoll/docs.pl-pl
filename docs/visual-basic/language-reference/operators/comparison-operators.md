@@ -30,12 +30,12 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basic
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: 10558563b528ce0bae3f77f31a97a217018f455f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ddb07bdf5f67e281847082ba4487568e9ba3c9f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666825"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962229"
 ---
 # <a name="comparison-operators-visual-basic"></a>Operatory porównania (Visual Basic)
 Poniżej przedstawiono operatory porównania zdefiniowane w Visual Basic.
@@ -73,19 +73,19 @@ result = string Like pattern
  Wymagana. `Boolean` Wartość reprezentująca wynik porównania.
 
  `expression1`, `expression2`  
- Wymagana. Dowolne wyrażenie.
+ Wymagane. Dowolne wyrażenie.
 
  `comparisonoperator`  
- Wymagany. Dowolny operator porównania relacyjnego.
+ Wymagane. Dowolny operator porównania relacyjnego.
 
  `object1`, `object2`  
- Wymagany. Wszystkie nazwy obiektów odniesienia.
+ Wymagane. Wszystkie nazwy obiektów odniesienia.
 
  `string`  
- Wymagana. Dowolne `String` wyrażenie.
+ Wymagany. Dowolne `String` wyrażenie.
 
  `pattern`  
- Wymagany. Dowolne `String` wyrażenie lub zakres znaków.
+ Wymagane. Dowolne `String` wyrażenie lub zakres znaków.
 
 ## <a name="remarks"></a>Uwagi
  Poniższa tabela zawiera listę operatorów relacyjnych porównania i warunki, które określają, czy `result` jest `True` lub `False`.
@@ -100,7 +100,7 @@ result = string Like pattern
 |`<>`(Nie równa się)|`expression1` <> `expression2`|`expression1` = `expression2`|
 
 > [!NOTE]
->  [Operator =](../../../visual-basic/language-reference/operators/assignment-operator.md) jest również używany jako operator przypisania.
+> [Operator =](../../../visual-basic/language-reference/operators/assignment-operator.md) jest również używany jako operator przypisania.
 
  Operator, operator i`Like` operator mają określone funkcje porównania, które różnią się od operatorów w powyższej tabeli. `IsNot` `Is`
 

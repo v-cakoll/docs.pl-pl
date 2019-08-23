@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: f0510b9e3f31686e22532f21989cb95905522286
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a29efbc1b4d886afe4329df011b522e4d589e2ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879891"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949493"
 ---
 # <a name="connection-string-builders"></a>Konstruktorzy parametrów połączeń
-We wcześniejszych wersjach programu ADO.NET, Sprawdzanie parametrów połączenia przy użyciu wartości ciągu połączonych kompilacji nie wystąpił, tak, aby w czasie wykonywania, generowany jest niepoprawna — słowo kluczowe <xref:System.ArgumentException>. Różnej składni każdego dostawcy danych .NET Framework obsługiwane w przypadku słowa kluczowe parametrów połączenia, które wprowadzone tworzenia ciągów prawidłowe połączenie jest trudne, jeśli jest wykonywane ręcznie. Aby rozwiązać ten problem, ADO.NET w wersji 2.0 wprowadzono nowe Konstruktorzy parametrów połączeń dla każdego dostawcy danych .NET Framework. Każdy dostawca danych obejmuje połączenia silnie typizowane parametry konstruktora klasy dziedziczącej z klasy <xref:System.Data.Common.DbConnectionStringBuilder>. W poniższej tabeli wymieniono dostawcy danych .NET Framework i ich skojarzone z nimi połączenie parametry konstruktora klasy.  
+We wcześniejszych wersjach programu ADO.NET sprawdzanie czasu kompilacji parametrów połączenia z połączonymi wartościami ciągu nie zakończyło się, więc w czasie wykonywania, nieprawidłowe słowo kluczowe wygenerowało <xref:System.ArgumentException>. Każdy dostawca danych .NET Framework obsługuje inną składnię dla słów kluczowych parametrów połączenia, która sprawia, że prawidłowe parametry połączenia są trudne, jeśli zostały wykonane ręcznie. Aby rozwiązać ten problem, ADO.NET 2,0 wprowadził nowe konstruktory parametrów połączenia dla każdego dostawcy danych .NET Framework. Każdy dostawca danych zawiera klasę konstruktora parametrów połączenia o jednoznacznie określonym typie, która <xref:System.Data.Common.DbConnectionStringBuilder>dziedziczy z. Poniższa tabela zawiera listę dostawców danych .NET Framework i skojarzonych z nimi klas konstruktorów parametrów połączenia.  
   
 |Dostawca|Klasa ConnectionStringBuilder|  
 |--------------|-----------------------------------|  
@@ -22,12 +22,12 @@ We wcześniejszych wersjach programu ADO.NET, Sprawdzanie parametrów połączen
 |<xref:System.Data.Odbc>|<xref:System.Data.Odbc.OdbcConnectionStringBuilder?displayProperty=nameWithType>|  
 |<xref:System.Data.OracleClient>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=nameWithType>|  
   
-## <a name="connection-string-injection-attacks"></a>Ataki polegające na iniekcji ciąg połączenia  
- Ataku polegającego na iniekcji ciąg połączenia może wystąpić, gdy dynamiczne ciągów jest używany do tworzenia parametrów połączenia, które są oparte na danych wejściowych użytkownika. Jeśli ciąg nie jest tekst zweryfikowane i złośliwych lub znaków, nie zawiera wyjścia, osoba atakująca może potencjalnie uzyskać dostęp do poufnych danych lub innych zasobów na serwerze. Na przykład osoba atakująca może zainstalować ataku przez dostarczenie średnika i dołączanie dodatkowych wartości. Ciąg połączenia jest analizowany przy użyciu algorytmu "wins ostatnim miejscu", a szkodliwy danych wejściowych zostanie zastąpiony wartością uzasadnione.  
+## <a name="connection-string-injection-attacks"></a>Ataki przed iniekcją parametrów połączenia  
+ Atak polegający na iniekcji parametrów połączenia może wystąpić, gdy dynamiczne łączenie ciągów służy do tworzenia parametrów połączenia opartych na danych wejściowych użytkownika. Jeśli ciąg nie zostanie sprawdzony i złośliwy tekst lub znaki nie zostały zmienione, osoba atakująca może uzyskać dostęp do poufnych danych lub innych zasobów na serwerze. Na przykład osoba atakująca może zainstalować atak, dostarczając średnik i dołączając dodatkową wartość. Parametry połączenia są analizowane przy użyciu algorytmu "ostatni jeden WINS", a dane wejściowe nieszkodliwy jest zastępowany dla wiarygodnej wartości.  
   
- Konstruktor klasy ciąg połączenia są przeznaczone do wyeliminowania wątpliwości i ochrony przed błędy składniowe i luk w zabezpieczeniach. Zapewniają one, metody i właściwości odpowiadający pary znanych klucz/wartość, w dozwolonym przez każdego dostawcy danych. Każda klasa przechowuje stałej kolekcji synonimów i może dokonywać translacji z synonimem do odpowiedniego dobrze znaną nazwą klucza. Testy są wykonywane dla pary klucz/wartość prawidłowy, i zgłasza wyjątek, parę nieprawidłowy. Ponadto wprowadzonego wartości są obsługiwane w bezpieczny sposób.  
+ Klasy konstruktora parametrów połączenia zostały zaprojektowane w celu wyeliminowania wątpliwości i ochrony przed błędami składni i lukami w zabezpieczeniach. Udostępniają one metody i właściwości odpowiadające znanym par klucz/wartość dozwolonym przez każdego dostawcę danych. Każda klasa przechowuje stałe kolekcje synonimów i może przetłumaczyć ze synonimu na odpowiadającą mu dobrze znaną nazwę klucza. Testy są wykonywane dla prawidłowych par klucz/wartość i nieprawidłowa para zgłasza wyjątek. Ponadto wartości wstrzykiwane są obsługiwane w bezpieczny sposób.  
   
- W poniższym przykładzie pokazano sposób, w jaki <xref:System.Data.SqlClient.SqlConnectionStringBuilder> obsługuje wstawiono wartość dodatkowego `Initial Catalog` ustawienie.  
+ Poniższy przykład ilustruje, jak <xref:System.Data.SqlClient.SqlConnectionStringBuilder> obsługuje wstawioną dodatkową wartość `Initial Catalog` ustawienia.  
   
 ```vb  
 Dim builder As New System.Data.SqlClient.SqlConnectionStringBuilder  
@@ -46,23 +46,23 @@ builder["Initial Catalog"] = "AdventureWorks;NewValue=Bad";
 Console.WriteLine(builder.ConnectionString);  
 ```  
   
- Dane wyjściowe pokazują, że <xref:System.Data.SqlClient.SqlConnectionStringBuilder> poprawnej obsługi to przez zmianę znaczenia wartości dodatkowej w podwójnym cudzysłowie zamiast dołączenie jej do połączenia jako nową parę klucz wartość.  
+ Dane wyjściowe pokazują, że <xref:System.Data.SqlClient.SqlConnectionStringBuilder> prawidłowo obsługiwane przez anulowanie dodatkowej wartości w podwójnym cudzysłowie zamiast dołączania do parametrów połączenia jako nowej pary klucz/wartość.  
   
 ```  
 data source=(local);Integrated Security=True;  
 initial catalog="AdventureWorks;NewValue=Bad"  
 ```  
   
-## <a name="building-connection-strings-from-configuration-files"></a>Tworzenie parametrów połączenia z plików konfiguracji  
- Jeśli wcześniej wiadomo, niektóre elementy ciągu połączenia, mogą być przechowywane w pliku konfiguracji i pobierane w czasie wykonywania do konstruowania pełne parametry połączenia. Na przykład nazwą bazy danych może być znane z wyprzedzeniem, ale nie nazwę serwera. Można też użytkownika o podanie nazwy i hasła w czasie wykonywania bez możliwości wprowadzić inne wartości do parametrów połączenia.  
+## <a name="building-connection-strings-from-configuration-files"></a>Kompilowanie parametrów połączenia z plików konfiguracji  
+ Jeśli niektóre elementy parametrów połączenia są znane wcześniej, mogą być przechowywane w pliku konfiguracji i pobierane w czasie wykonywania w celu skonstruowania kompletnych parametrów połączenia. Na przykład nazwa bazy danych może być znana z wyprzedzeniem, ale nie z nazwą serwera. Może też być konieczne podanie przez użytkownika nazwy i hasła w czasie wykonywania bez możliwości wprowadzania innych wartości do parametrów połączenia.  
   
- Jedno z przeciążenia konstruktorów dla konstruktora parametrów połączenia wykorzystuje <xref:System.String> jako argument, co umożliwia podać ciąg połączenia częściowe, który można wykonać z danych wejściowych użytkownika. Parametry połączenia częściowe można przechowywane w pliku konfiguracji i pobierane w czasie wykonywania.  
+ Jeden z przeciążonych konstruktorów dla konstruktora parametrów połączenia przyjmuje <xref:System.String> jako argument, który umożliwia podawanie częściowych parametrów połączenia, które można następnie ukończyć z danych wejściowych użytkownika. Częściowe parametry połączenia mogą być przechowywane w pliku konfiguracji i pobierane w czasie wykonywania.  
   
 > [!NOTE]
->  <xref:System.Configuration> Przestrzeń nazw umożliwia programowy dostęp do plików konfiguracyjnych, które używają <xref:System.Web.Configuration.WebConfigurationManager> dla aplikacji sieci Web i <xref:System.Configuration.ConfigurationManager> dla aplikacji Windows. Aby uzyskać więcej informacji na temat pracy z parametrów połączenia i pliki konfiguracji, zobacz [parametry połączenia i pliki konfiguracyjne](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+> Przestrzeń nazw umożliwia programistyczny dostęp do plików konfiguracji, które <xref:System.Web.Configuration.WebConfigurationManager> używają aplikacji <xref:System.Configuration.ConfigurationManager> dla sieci Web i aplikacji dla systemu Windows. <xref:System.Configuration> Aby uzyskać więcej informacji na temat pracy z parametrami połączenia i plikami konfiguracji, zobacz [parametry połączeń i pliki konfiguracji](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
 ### <a name="example"></a>Przykład  
- W tym przykładzie przedstawiono pobieranie parametrów połączenia częściowe z pliku konfiguracji i jego ukończenia, ustawiając <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A>, i <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> właściwości <xref:System.Data.SqlClient.SqlConnectionStringBuilder>. Plik konfiguracji jest zdefiniowana w następujący sposób.  
+ W tym przykładzie <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>pokazano, jak pobrać częściowe parametry połączenia z pliku konfiguracji i zakończyć je przez ustawienie właściwości, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A> <xref:System.Data.SqlClient.SqlConnectionStringBuilder>, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> i. Plik konfiguracji jest definiowany w następujący sposób.  
   
 ```xml  
 <connectionStrings>  
@@ -74,7 +74,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
 ```  
   
 > [!NOTE]
->  Należy ustawić odwołanie `System.Configuration.dll` w projekcie kodu do uruchomienia.  
+> Aby kod mógł zostać uruchomiony, należy `System.Configuration.dll` ustawić odwołanie do elementu w projekcie.  
   
  [!code-csharp[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/CS/source.cs#1)]
  [!code-vb[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/VB/source.vb#1)]  
@@ -83,4 +83,4 @@ initial catalog="AdventureWorks;NewValue=Bad"
 
 - [Parametry połączeń](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Bezpieczeństwo danych i poufności informacji](../../../../docs/framework/data/adonet/privacy-and-data-security.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

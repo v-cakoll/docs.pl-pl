@@ -8,21 +8,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec65c75fcfd907097f1cd1e0d3092a547272a782
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906454"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933250"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Struktury oraz inne elementy programowania (Visual Basic)
-Struktury można użyć w połączeniu z tablicami, obiektów i procedur, a także ze sobą. Interakcje używać tej samej składni, ponieważ te elementy używane pojedynczo.  
+Można używać struktur w połączeniu z tablicami, obiektami i procedurami, a także ze sobą. Interakcje używają tej samej składni, w której te elementy używają pojedynczo.  
   
 > [!NOTE]
->  Nie można zainicjować elementy struktury w deklaracji struktury. Wartości można przypisać tylko do elementów w zmiennej, która została zadeklarowana jako typu struktury.  
+> Nie można zainicjować któregokolwiek z elementów struktury w deklaracji struktury. Wartości można przypisywać tylko do elementów zmiennej, która została zadeklarowana jako typu struktury.  
   
 ## <a name="structures-and-arrays"></a>Struktury i tablice  
- Struktura może zawierać tablicę jako co najmniej jeden z jego elementów. Ilustruje to poniższy przykład.  
+ Struktura może zawierać tablicę jako jeden lub kilka jej elementów. Ilustruje to poniższy przykład.  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- Możesz uzyskać dostęp do wartości tablicy w ramach struktury taki sam sposób, możesz uzyskać dostęp do właściwości w obiekcie. Ilustruje to poniższy przykład.  
+ Dostęp do wartości tablicy w strukturze jest taki sam jak w przypadku dostępu do właściwości obiektu. Ilustruje to poniższy przykład.  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -41,13 +41,13 @@ ReDim mySystem.diskDrives(3)
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- Można również zadeklarować tablicy struktur. Ilustruje to poniższy przykład.  
+ Można również zadeklarować tablicę struktur. Ilustruje to poniższy przykład.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- Postępuj zgodnie z tych samych zasad dostępu składniki tej architektury danych. Ilustruje to poniższy przykład.  
+ Aby uzyskać dostęp do składników tej architektury danych, należy przestrzegać tych samych reguł. Ilustruje to poniższy przykład.  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -56,7 +56,7 @@ allSystems(5).diskDrives(2) = "100M SCSI"
 ```  
   
 ## <a name="structures-and-objects"></a>Struktury i obiekty  
- Struktura może zawierać obiektu jako co najmniej jeden z jego elementów. Ilustruje to poniższy przykład.  
+ Struktura może zawierać obiekt jako jeden lub więcej elementów. Ilustruje to poniższy przykład.  
   
 ```vb  
 Protected Structure userInput  
@@ -66,10 +66,10 @@ Protected Structure userInput
 End Structure  
 ```  
   
- Klasa określonego obiektu należy używać w deklaracji, zamiast `Object`.  
+ Należy użyć określonej klasy obiektów w takiej deklaracji, a nie `Object`.  
   
 ## <a name="structures-and-procedures"></a>Struktury i procedury  
- Struktura można przekazać jako argument procedury. Ilustruje to poniższy przykład.  
+ Strukturę można przekazać jako argument procedury. Ilustruje to poniższy przykład.  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- Poprzedni przykład przekazuje strukturę *przez odwołanie*, co pozwala procedury zmodyfikować jego elementy, tak, aby zmiany zostały wprowadzone w wywoływanym kodzie. Jeśli chcesz chronić strukturę przed zmianami, przekazywać wg wartości.  
+ Powyższy przykład przekazuje strukturę *przez odwołanie*, co umożliwia wykonanie procedury modyfikacji jej elementów w celu wprowadzenia zmian w kodzie wywołującym. Jeśli chcesz chronić strukturę przed taką modyfikacją, przekaż ją przez wartość.  
   
- Możesz też zwrócić struktury z `Function` procedury. Ilustruje to poniższy przykład.  
+ Możesz również zwrócić strukturę z `Function` procedury. Ilustruje to poniższy przykład.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -96,7 +96,7 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## <a name="structures-within-structures"></a>Struktury w ramach struktury  
+## <a name="structures-within-structures"></a>Struktury w strukturach  
  Struktury mogą zawierać inne struktury. Ilustruje to poniższy przykład.  
   
 ```vb  
@@ -118,9 +118,9 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- Ta metoda umożliwia również hermetyzacji struktury zdefiniowany w jeden moduł w ramach struktury zdefiniowany w oddzielnym modułem.  
+ Tej techniki można również użyć do hermetyzacji struktury zdefiniowanej w jednym module w strukturze zdefiniowanej w innym module.  
   
- Struktury mogą zawierać inne struktury dowolnego głębokość.  
+ Struktury mogą zawierać inne struktury do arbitralnej głębokości.  
   
 ## <a name="see-also"></a>Zobacz także
 

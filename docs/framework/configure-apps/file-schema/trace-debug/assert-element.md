@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: 2f3823265e358976f970cdfa36772d2251894280
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ba781598542d271f41476b1a1e9d61faeb6ff74
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701362"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927183"
 ---
-# <a name="assert-element"></a>\<assert> Element
-Określa, czy należy wyświetlić okno komunikatu, gdy wywołujesz <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> metody; określa także nazwę pliku do zapisywania komunikatów.  
+# <a name="assert-element"></a>\<Element Assert >
+Określa, czy podczas wywoływania <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> metody ma być wyświetlane okno komunikatu, a także określa nazwę pliku, w którym mają zostać zapisane komunikaty.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.diagnostics>  
-\<assert>  
+\<> potwierdzenia  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,15 +35,15 @@ Określa, czy należy wyświetlić okno komunikatu, gdy wywołujesz <xref:System
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`assertuienabled`|Atrybut opcjonalny.<br /><br /> Określa, czy do wyświetlania komunikatu polu kiedy **Debug.Assert** daje w wyniku metody **false**.|  
-|`logfilename`|Atrybut opcjonalny.<br /><br /> Określa nazwę pliku do zapisu komunikatu if **Debug.Assert** daje w wyniku **false**.|  
+|`assertuienabled`|Atrybut opcjonalny.<br /><br /> Określa, czy ma być wyświetlane okno komunikatu, gdy metoda **Debug. Assert** zwraca **wartość false**.|  
+|`logfilename`|Atrybut opcjonalny.<br /><br /> Określa nazwę pliku, do którego ma zostać zapisany komunikat, jeśli **Debug. Assert** zwraca **wartość false**.|  
   
-## <a name="assertuienabled-attribute"></a>assertuienabled atrybutu  
+## <a name="assertuienabled-attribute"></a>AssertUiEnabled — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |`true`|Wyświetla okno komunikatu. Domyślnie włączone.|  
-|`false`|Wyświetla okno komunikatu.|  
+|`false`|Nie wyświetla okna komunikatu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -53,13 +53,13 @@ Określa, czy należy wyświetlić okno komunikatu, gdy wywołujesz <xref:System
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.|  
+|`system.diagnostics`|Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Oba atrybuty w  **\<asercja >** elementu są opcjonalne. Okna komunikatów można wyłączyć bez określania pliku, aby pisać wiadomości do lub można określić plik do zapisu komunikaty, które otrzymało, pozostawiając komunikatu pola włączone.  
+ Oba atrybuty w  **\<elemencie Assert >** są opcjonalne. Można wyłączyć okna komunikatów bez określania pliku, w którym mają zostać zapisane komunikaty, lub można określić plik, do którego mają być zapisane komunikaty, pozostawiając pola komunikatów włączone.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak wyłączyć wyświetlanie okien komunikatów podczas wywoływania **Debug.Assert** i pisania komunikatów do `c:\log.txt`.  
+ Poniższy przykład pokazuje, jak wyłączyć wyświetlanie okien komunikatów po wywołaniu **debugowania. Assert** i Zapisz wiadomości w `c:\log.txt`.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ Określa, czy należy wyświetlić okno komunikatu, gdy wywołujesz <xref:System
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Diagnostics.Debug>
-- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Schemat ustawień śledzenia i debugowania](index.md)

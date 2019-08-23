@@ -13,17 +13,17 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: ef579923ac2b9ea9905a60000d93f6bfc90ed5b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d095e3561cd346e6dbd99d1be7468f6ad5725a6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903022"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960454"
 ---
 # <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Instrukcje: ustawianie wcięć, wysunięć i akapitów punktowanych za pomocą kontrolki RichTextBox formularzy systemu Windows
-Formularze Windows <xref:System.Windows.Forms.RichTextBox> kontrolka ma wiele opcji formatowania tekstu, zostanie wyświetlony. Możesz sformatować zaznaczonych akapitów jako listy punktowane, ustawiając <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> właściwości. Można również użyć <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, i <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> właściwości, aby ustawić wcięcia akapitów względem lewej i prawej krawędzi formantu a lewą krawędzią innych wierszy tekstu.  
+Kontrolka <xref:System.Windows.Forms.RichTextBox> Windows Forms ma wiele opcji formatowania wyświetlanego tekstu. Można sformatować wybrane akapity jako listy punktowane przez ustawienie <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> właściwości. Można również użyć <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>właściwości,, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>i <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> , aby ustawić wcięcie akapitów względem lewej i prawej krawędzi kontrolki, a lewej krawędzi innych wierszy tekstu.  
   
-### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Aby sformatować akapitu jako listy punktowane  
+### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Aby sformatować akapit jako listę punktowaną  
   
 1. Ustaw <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> właściwość `true`.  
   
@@ -39,13 +39,13 @@ Formularze Windows <xref:System.Windows.Forms.RichTextBox> kontrolka ma wiele op
     richTextBox1->SelectionBullet = true;  
     ```  
   
-### <a name="to-indent-a-paragraph"></a>Wcięcia akapitu  
+### <a name="to-indent-a-paragraph"></a>Aby zwiększyć wcięcie akapitu  
   
-1. Ustaw <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> właściwości na liczbę całkowitą reprezentującą odległość w pikselach między lewą krawędzią kontrolki a lewą krawędzią tekstu.  
+1. <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> Ustaw właściwość na liczbę całkowitą reprezentującą odległość (w pikselach) między lewą krawędzią kontrolki a lewą krawędzią tekstu.  
   
-2. Ustaw <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> właściwości na liczbę całkowitą reprezentującą odległość w pikselach między lewą krawędzią pierwszy wiersz tekstu akapitu a lewą krawędzią kolejne wiersze, w tym samym akapicie. Wartość <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> właściwość ma zastosowanie tylko do wierszy w akapicie, które zostały opakowane poniżej pierwszego wiersza.  
+2. <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> Ustaw właściwość na liczbę całkowitą reprezentującą odległość (w pikselach) między lewą krawędzią pierwszego wiersza tekstu w akapicie a lewą krawędzią kolejnych wierszy w tym samym akapicie. Wartość <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> właściwości stosuje się tylko do wierszy w akapicie, które zostały opakowane poniżej pierwszego wiersza.  
   
-3. Ustaw <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> właściwości na liczbę całkowitą reprezentującą odległość w pikselach między prawą krawędzią kontrolki a prawej krawędzi tekstu.  
+3. <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> Ustaw właściwość na liczbę całkowitą reprezentującą odległość w pikselach między prawą krawędzią kontrolki a prawą krawędzią tekstu.  
   
     ```vb  
     RichTextBox1.SelectionIndent = 8  
@@ -66,7 +66,7 @@ Formularze Windows <xref:System.Windows.Forms.RichTextBox> kontrolka ma wiele op
     ```  
   
     > [!NOTE]
-    >  Te właściwości mają wpływ na wszystkie akapitów, zawierające zaznaczony tekst i tekst, który bezpośrednio po bieżącym punkcie wstawiania. Na przykład gdy użytkownik zaznacza słowo akapitu, a następnie dopasowuje wcięcie, nowe ustawienia zostaną zastosowane cały akapit, który zawiera słowo, a także wszelkie akapitów, następnie wprowadzone po akapitów. Aby dowiedzieć się, jak programowy wybór tekstu, zobacz <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
+    > Wszystkie te właściwości mają wpływ na wszystkie akapity, które zawierają zaznaczony tekst, a także tekst, który jest wpisywany po bieżącym punkcie wstawiania. Na przykład gdy użytkownik wybierze wyraz w akapicie, a następnie dostosowuje wcięcia, nowe ustawienia zostaną zastosowane do całego akapitu zawierającego ten wyraz, a także do każdego akapitu wprowadzonego po wybranym akapicie. Aby uzyskać informacje na temat programistycznego zaznaczania tekstu, zobacz <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
 ## <a name="see-also"></a>Zobacz także
 

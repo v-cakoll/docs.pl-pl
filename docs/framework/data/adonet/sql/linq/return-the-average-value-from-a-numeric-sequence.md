@@ -5,44 +5,44 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: eea1439337b29fee51c422238425491fc2345211
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 56fe777a3bca1e2b54b61d1586f78a2df4fb475f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037560"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963820"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>Zwracanie średniej wartości z sekwencji numerycznej
-<xref:System.Linq.Enumerable.Average%2A> Operator oblicza średnią sekwencję wartości liczbowych.  
+<xref:System.Linq.Enumerable.Average%2A> Operator oblicza średnią sekwencji wartości liczbowych.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Tłumaczenia `Average` liczby całkowitej wartości jest obliczany jako liczba całkowita, nie jako wartość o podwójnej precyzji.  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Tłumaczeniewartościcałkowitychjestobliczanejakoliczbacałkowita`Average` , nie jako Double.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zwraca średnią `Freight` wartości w `Orders` tabeli.  
+ Poniższy przykład zwraca średnią `Freight` wartości `Orders` w tabeli.  
   
- Wyniki z przykładowej bazy danych Northwind będą `78.2442`.  
+ Wyniki z przykładowej bazy danych Northwind byłyby `78.2442`.  
   
  [!code-csharp[DLinqQueryExamples#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#1)]
  [!code-vb[DLinqQueryExamples#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#1)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zwraca średnią cenę jednostkową wszystkich `Products` w `Products` tabeli.  
+ Poniższy przykład zwraca średnią cenę jednostkową wszystkich `Products` `Products` w tabeli.  
   
- Wyniki z przykładowej bazy danych Northwind będą `28.8663`.  
+ Wyniki z przykładowej bazy danych Northwind byłyby `28.8663`.  
   
  [!code-csharp[DLinqQueryExamples#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#2)]
  [!code-vb[DLinqQueryExamples#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#2)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `Average` operatora, aby znaleźć te `Products` których cena jednostkowa jest wyższa niż średnia cena jednostkowa kategorii, należy ona do. Przykład następnie wyświetla wyniki w grupach.  
+ Poniższy przykład używa operatora, `Average` aby znaleźć te `Products` , których cena jednostkowa jest wyższa niż średnia cena jednostkowa kategorii, do której należy. Przykład następnie wyświetla wyniki w grupach.  
   
- Należy pamiętać, że w tym przykładzie wymaga użycia `var` — słowo kluczowe w C#, ponieważ zwracany typ jest anonimowy.  
+ Należy zauważyć, że ten przykład wymaga użycia `var` słowa kluczowego w C#, ponieważ zwracany typ jest anonimowy.  
   
  [!code-csharp[DLinqQueryExamples#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#3)]
  [!code-vb[DLinqQueryExamples#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#3)]  
   
- Po uruchomieniu tego zapytania względem przykładowej bazy danych Northwind, wyniki powinien przypominać poniższe:  
+ W przypadku uruchomienia tego zapytania względem przykładowej bazy danych Northwind wyniki powinny wyglądać następująco:  
   
  `1`  
   

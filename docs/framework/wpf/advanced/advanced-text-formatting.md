@@ -9,87 +9,87 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: 0d3b44007524f502d8393d1dc1834142090a7a15
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 469c62691ff38a8c5a01bec3ddfd7b324bab7eca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238661"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969067"
 ---
 # <a name="advanced-text-formatting"></a>Zaawansowane formatowanie tekstu
-Windows Presentation Foundation (WPF) zapewnia niezawodny zestaw interfejsów API, w tym tekst w aplikacji. Układ i [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]interfejsów API, takich jak <xref:System.Windows.Controls.TextBlock>, najbardziej typowe i ogólne elementy prezentacji tekstu. Rysowanie interfejsów API, takich jak <xref:System.Windows.Media.GlyphRunDrawing> i <xref:System.Windows.Media.FormattedText>, pozwalają na rysunkach, w tym tekstu sformatowanego. Najbardziej zaawansowane poziom [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera tekst extensible formatowania aparatu do kontrolowania każdy aspekt prezentacji tekstu, takie jak zarządzanie magazynem tekstu, zarządzania formatowania tekstu, uruchom i zarządzania osadzonego obiektu.  
+Windows Presentation Foundation (WPF) oferuje niezawodny zestaw interfejsów API do dołączania tekstu w aplikacji. Układ i [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]interfejsy API, takie <xref:System.Windows.Controls.TextBlock>jak, zapewniają najpopularniejsze i ogólne elementy używane do prezentacji tekstowej. Rysowanie interfejsów API, takich <xref:System.Windows.Media.GlyphRunDrawing> jak <xref:System.Windows.Media.FormattedText>i, zapewnia metodę dołączenia tekstu sformatowanego na rysunku. Na najbardziej zaawansowanym poziomie program [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zapewnia rozszerzalny aparat formatowania tekstu do sterowania każdym aspektem prezentacji tekstowej, taki jak zarządzanie magazynem tekstu, zarządzanie formatowaniem tekstu i zarządzanie obiektami osadzonymi.  
   
- Ten temat zawiera wprowadzenie do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] formatowania tekstu. Koncentruje się ona na wdrożenie klienta i stosowanie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aparatu formatowania tekstu.  
+ Ten temat zawiera wprowadzenie do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] formatowania tekstu. Koncentruje się na implementacji klienta i korzystaniu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] z aparatu formatowania tekstu.  
   
 > [!NOTE]
->  Wszystkie przykłady kodu, w tym dokumencie znajdują się w [zaawansowane próbkę formatowania tekstu](https://go.microsoft.com/fwlink/?LinkID=159965).  
+> Wszystkie przykłady kodu w tym dokumencie można znaleźć w przykładowym [formacie tekstu zaawansowanego](https://go.microsoft.com/fwlink/?LinkID=159965).  
 
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- W tym temacie założono, że jesteś zaznajomiony z wyższym poziomie interfejsy API, używane do prezentacji tekstu. Większość scenariuszy użytkownika nie będzie wymagać zaawansowane interfejsy API omówione w tym temacie do formatowania tekstu. Aby zapoznać się z wprowadzeniem do tekstu różne interfejsy API, zobacz [dokumenty w WPF](documents-in-wpf.md).  
+ W tym temacie założono, że znasz interfejsy API wyższego poziomu używane do prezentacji tekstowej. Większość scenariuszy użytkownika nie wymaga zaawansowanych interfejsów API formatowania tekstu opisanych w tym temacie. Aby zapoznać się z wprowadzeniem do różnych interfejsów API tekstu, zobacz [dokumenty w WPF](documents-in-wpf.md).  
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>Zaawansowane formatowanie tekstu  
- Układ tekstu i [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kontrolki w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Podaj właściwości formatowania, które umożliwiają łatwe dołączanie tekstu sformatowanego w aplikacji. Te formanty zmieniają wiele właściwości do obsługi prezentacji tekstu, który zawiera jej krój czcionki, rozmiarze i kolorze. W zwykłych okolicznościach te kontrolki mogą obsługiwać Większość prezentacji tekstu w aplikacji. Jednak niektórych zaawansowanych scenariuszach wymagają kontroli magazynu tekstu, a także prezentację tekstu. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera tekst extensible formatowania aparatu do tego celu.  
+ Układ tekstu i [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kontrolki w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] programie udostępniają właściwości formatowania, które umożliwiają łatwe dołączanie sformatowanego tekstu do aplikacji. Te kontrolki uwidaczniają wiele właściwości, które obsługują prezentację tekstu, w tym jej krój, rozmiar i kolor. W normalnych warunkach te kontrolki mogą obsługiwać większość prezentacji tekstowej w aplikacji. Jednak niektóre zaawansowane scenariusze wymagają kontroli nad przechowywaniem tekstu oraz prezentacji tekstowej. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]zapewnia do tego celu aparat Extensible formating Text.  
   
- Zaawansowane funkcje do formatowania tekstu, znaleziono w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] składają się z tekstu formatowania aparatu, do przechowywania tekstu, tekst przebiegi i właściwości formatowania. Aparat do formatowania tekstu, <xref:System.Windows.Media.TextFormatting.TextFormatter>, tworzy wierszy tekstu ma być używany w prezentacji. Jest to osiągane przez inicjowanie proces formatowania wiersza i wywoływania elementu formatującego tekstu <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>. Element formatujący tekstu pobiera uruchomienia tekstu ze sklepu tekst, wywołując w sklepie <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> metody. <xref:System.Windows.Media.TextFormatting.TextRun> Obiekty są następnie utworzone w <xref:System.Windows.Media.TextFormatting.TextLine> obiektów przez program formatujący tekstu oraz aplikacji na potrzeby inspekcji lub wyświetlania.  
+ Zaawansowane funkcje formatowania tekstu, które są [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dostępne w programie, składają się z aparatu formatowania tekstu, magazynu tekstowego, tekstu i właściwości formatowania. Aparat formatowania tekstu, <xref:System.Windows.Media.TextFormatting.TextFormatter>tworzy wiersze tekstu, które mają być używane na potrzeby prezentacji. Jest to osiągane przez zainicjowanie procesu formatowania wiersza i wywołanie programu formatującego <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>tekstu. Program formatujący tekst pobiera przebiegi tekstowe z magazynu tekstu przez wywołanie <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> metody magazynu. Obiekty są następnie tworzone do <xref:System.Windows.Media.TextFormatting.TextLine> obiektów przez program formatujący tekst i nadawane aplikacji do inspekcji lub wyświetlania. <xref:System.Windows.Media.TextFormatting.TextRun>  
   
 <a name="section2"></a>   
-## <a name="using-the-text-formatter"></a>Przy użyciu elementu formatującego tekstu  
- <xref:System.Windows.Media.TextFormatting.TextFormatter> jest [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] formatowania tekstu aparatu i zapewnia usługi dotyczące formatowania i istotne wierszy tekstu. Element formatujący tekstu może obsługiwać różnych formatach znak i style i obejmuje obsługę układu tekstu międzynarodowe.  
+## <a name="using-the-text-formatter"></a>Korzystanie z programu formatującego tekstu  
+ <xref:System.Windows.Media.TextFormatting.TextFormatter>jest aparatem formatowania tekstu i udostępnia usługi do formatowania i przerywania wierszy tekstu. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Program formatujący tekst może obsługiwać różne formaty znaków tekstu i style akapitów, a także obsługuje międzynarodowy układ tekstu.  
   
- W przeciwieństwie do tradycyjnych tekstu interfejsu API <xref:System.Windows.Media.TextFormatting.TextFormatter> wchodzi w interakcję z klientem układu tekstu za pomocą zestawu metod wywołania zwrotnego. Wymaga od klienta zapewnienia tych metod w celu wykonania <xref:System.Windows.Media.TextFormatting.TextSource> klasy. Na poniższym diagramie przedstawiono interakcje układu tekstu między aplikacji klienckiej i <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
+ W <xref:System.Windows.Media.TextFormatting.TextFormatter> przeciwieństwie do tradycyjnego interfejsu API tekstu, współdziała z klientem układu tekstu za pomocą zestawu metod wywołania zwrotnego. Wymaga, aby klient dostarczał te metody w implementacji <xref:System.Windows.Media.TextFormatting.TextSource> klasy. Na poniższym diagramie przedstawiono interakcje układu tekstu między aplikacją kliencką i <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
- ![Diagram klienta układu tekstu i obiekt TextFormatter](./media/advanced-text-formatting/text-layout-textformatter-interaction.png)  
+ ![Diagram klienta układu tekstu i elementu textformatującego](./media/advanced-text-formatting/text-layout-textformatter-interaction.png)  
   
- Element formatujący tekstu służy do pobierania wierszy tekstu sformatowanego w sklepie tekst, który jest implementacją <xref:System.Windows.Media.TextFormatting.TextSource>. Jest to realizowane przez utworzenie wystąpienia programu formatującego tekstu przy użyciu <xref:System.Windows.Media.TextFormatting.TextFormatter.Create%2A> metody. Ta metoda tworzy wystąpienie elementu formatującego tekstu i ustawia maksymalny wiersza wartości szerokości i wysokości. Zaraz po utworzeniu wystąpienia programu formatującego tekstu procesu tworzenia wiersza została uruchomiona przez wywołanie metody <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> metody. <xref:System.Windows.Media.TextFormatting.TextFormatter> ponownie wywołuje źródłem tekstu można pobrać tekstu i formatowania parametrów dla przebiegów tekstu tworzące wiersza.  
+ Program formatujący tekst jest używany do pobierania wierszy tekstu sformatowanego z magazynu tekstu, który jest implementacją <xref:System.Windows.Media.TextFormatting.TextSource>programu. W tym celu należy najpierw utworzyć wystąpienie programu formatującego tekstu przy użyciu <xref:System.Windows.Media.TextFormatting.TextFormatter.Create%2A> metody. Ta metoda tworzy wystąpienie programu formatującego tekst i ustawia maksymalną wysokość i szerokość wiersza. Zaraz po utworzeniu wystąpienia programu formatującego tekstu proces tworzenia linii jest uruchamiany przez wywołanie <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> metody. <xref:System.Windows.Media.TextFormatting.TextFormatter>wywołuje z powrotem do źródła tekstu, aby pobrać parametry tekstu i formatowania dla przebiegów tekstu tworzących wiersz.  
   
- W poniższym przykładzie przedstawiono proces formatowania do przechowywania tekstu. <xref:System.Windows.Media.TextFormatting.TextFormatter> Obiekt jest używany do pobierania wierszy tekstu w sklepie tekstu i następnie go sformatuj wiersza tekstu do rysowania w <xref:System.Windows.Media.DrawingContext>.  
+ W poniższym przykładzie jest wyświetlany proces formatowania magazynu tekstu. Obiekt jest używany do pobierania wierszy tekstu z magazynu tekstowego, a następnie formatowania wiersza tekstu do rysowania <xref:System.Windows.Media.DrawingContext>w. <xref:System.Windows.Media.TextFormatting.TextFormatter>  
   
  [!code-csharp[TextFormatterExample#100](~/samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/Window1.xaml.cs#100)]
  [!code-vb[TextFormatterExample#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/Window1.xaml.vb#100)]  
   
 <a name="section3"></a>   
-## <a name="implementing-the-client-text-store"></a>Implementowanie Store tekstu klienta  
- Rozszerzając mechanizm formatowania tekstu, są wymagane do wdrożenia i zarządzać wszystkimi aspektami magazynu tekstu. Nie jest prostym zadaniem. Magazyn tekstu jest odpowiedzialny za śledzenie Uruchom właściwości, właściwości, obiekty osadzone i inne podobne zawartości tekstu. Udostępnia również program formatujący tekstu z poszczególnymi <xref:System.Windows.Media.TextFormatting.TextRun> obiekty, których używa program formatujący tekst w celu utworzenia <xref:System.Windows.Media.TextFormatting.TextLine> obiektów.  
+## <a name="implementing-the-client-text-store"></a>Implementowanie magazynu tekstowego klienta  
+ Po rozbudowaniu aparatu formatowania tekstu wymagane jest zaimplementowanie wszystkich aspektów magazynu tekstowego i zarządzanie nimi. To nie jest zadanie proste. Magazyn tekstowy jest odpowiedzialny za śledzenie właściwości przebiegu tekstu, właściwości akapitu, osadzonych obiektów i innej podobnej zawartości. Udostępnia również program formatujący tekst z poszczególnymi <xref:System.Windows.Media.TextFormatting.TextRun> obiektami, których program formatujący tekstu używa do tworzenia <xref:System.Windows.Media.TextFormatting.TextLine> obiektów.  
   
- Aby obsługiwać wirtualizację magazynu tekstu, w sklepie tekstu musi pochodzić od <xref:System.Windows.Media.TextFormatting.TextSource>. <xref:System.Windows.Media.TextFormatting.TextSource> definiuje metodę, używanych przez program formatujący tekstu można pobrać przebiegów tekst z magazynu tekstu. <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> jest używany w formatowaniu wiersza uruchamia metodę używaną przez program formatujący tekstu do pobierania tekstu. Wywołanie <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> wielokrotnie jest tworzone przez program formatujący tekstu, dopóki nie wystąpi jedno z następujących warunków:  
+ Do obsługi wirtualizacji magazynu tekstowego magazyn tekstu musi pochodzić od <xref:System.Windows.Media.TextFormatting.TextSource>. <xref:System.Windows.Media.TextFormatting.TextSource>definiuje metodę używaną przez program formatujący Text do pobierania tekstu z magazynu tekstowego. <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>to metoda używana przez program formatujący tekst do pobierania przebiegów tekstowych używanych w formatowaniu wierszy. Wywołanie <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> jest wielokrotnie wykonywane przez program formatujący tekst do momentu wystąpienia jednego z następujących warunków:  
   
-- A <xref:System.Windows.Media.TextFormatting.TextEndOfLine> lub podklasa jest zwracana.  
+- Zwracana <xref:System.Windows.Media.TextFormatting.TextEndOfLine> jest lub podklasa.  
   
-- Skumulowana szerokość uruchomienia tekstu przekracza szerokość linii maksymalnej określonej w wywołanie do utworzenia elementu formatującego tekstu lub wywołanie elementu formatującego tekstu <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> metody.  
+- Skumulowana szerokość przebiegów tekstu przekracza maksymalną szerokość linii określoną w wywołaniu, aby utworzyć program formatujący tekst lub wywołanie <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> metody programu formatującego tekstu.  
   
-- A [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] sekwencji nowy wiersz, takie jak "CF", "LF" lub "CRLF", jest zwracana.  
+- Zwracana jest sekwencja nowego wiersza, taka jak "CF", "LF" lub "CRLF". [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]  
   
 <a name="section4"></a>   
-## <a name="providing-text-runs"></a>Zapewnianie uruchomienia tekstu  
- Podstawowy proces formatowania tekstu jest interakcji między program formatujący tekstu i magazynem tekstu. Implementacja <xref:System.Windows.Media.TextFormatting.TextSource> zawiera element formatujący tekstu <xref:System.Windows.Media.TextFormatting.TextRun> obiektów i właściwości, za pomocą których można formatować tekst jest uruchamiany. Ta interakcja jest obsługiwany przez <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> metody, która jest wywoływana przez program formatujący tekstu.  
+## <a name="providing-text-runs"></a>Udostępnianie tekstu  
+ Podstawowym procesem formatowania tekstu jest interakcja między programem formatujący tekst i magazynem tekstu. Twoja implementacja programu <xref:System.Windows.Media.TextFormatting.TextSource> udostępnia <xref:System.Windows.Media.TextFormatting.TextRun> program formatujący tekst z obiektami i właściwościami, za pomocą których można formatować uruchomienia tekstu. Ta interakcja jest obsługiwana przez <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> metodę, która jest wywoływana przez program formatujący tekst.  
   
- W poniższej tabeli przedstawiono niektóre z wstępnie zdefiniowanego <xref:System.Windows.Media.TextFormatting.TextRun> obiektów.  
+ W poniższej tabeli przedstawiono niektóre ze wstępnie zdefiniowanych <xref:System.Windows.Media.TextFormatting.TextRun> obiektów.  
   
 |Typ TextRun|Użycie|  
 |------------------|-----------|  
-|<xref:System.Windows.Media.TextFormatting.TextCharacters>|Tekst wyspecjalizowane Uruchom używany do przekazania reprezentację symbole znaków tekstu elementu formatującego.|  
-|<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|Wyspecjalizowane tekstu Uruchom umożliwia dostarczanie zawartości, w których pomiaru, testowania trafień i rysowanie odbywa się w całości, takich jak przycisku lub obrazu w tekście.|  
-|<xref:System.Windows.Media.TextFormatting.TextEndOfLine>|Tekst wyspecjalizowane Uruchom używany do oznaczenia końca wiersza.|  
-|<xref:System.Windows.Media.TextFormatting.TextEndOfParagraph>|Tekst wyspecjalizowane Uruchom używany do oznaczenia końca akapitu.|  
-|<xref:System.Windows.Media.TextFormatting.TextEndOfSegment>|Tekst specjalistyczne, uruchom używany do oznaczania końca segmentu, takie jak do końca zakresu wpływ poprzedniej <xref:System.Windows.Media.TextFormatting.TextModifier> uruchomienia.|  
-|<xref:System.Windows.Media.TextFormatting.TextHidden>|Tekst wyspecjalizowane Uruchom używanych do oznaczania szereg ukrytych znaków.|  
-|<xref:System.Windows.Media.TextFormatting.TextModifier>|Tekst wyspecjalizowane Uruchom umożliwia modyfikowanie właściwości tekstu działa w swoim zakresie. Zakres obejmuje następny zgodny <xref:System.Windows.Media.TextFormatting.TextEndOfSegment> tekstu, uruchomić lub następnego <xref:System.Windows.Media.TextFormatting.TextEndOfParagraph>.|  
+|<xref:System.Windows.Media.TextFormatting.TextCharacters>|Wyspecjalizowane uruchomienie tekstu używane do przekazywania reprezentacji symboli znaków z powrotem do programu formatującego tekstu.|  
+|<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|Wyspecjalizowany przebieg tekstu służący do dostarczania zawartości, w której pomiary, testowanie trafień i Rysowanie odbywa się w całości, na przykład w postaci przycisku lub obrazu w tekście.|  
+|<xref:System.Windows.Media.TextFormatting.TextEndOfLine>|Wyspecjalizowane uruchomienie tekstu używane do oznaczania końca wiersza.|  
+|<xref:System.Windows.Media.TextFormatting.TextEndOfParagraph>|Wyspecjalizowany przebieg tekstowy używany do oznaczania końca akapitu.|  
+|<xref:System.Windows.Media.TextFormatting.TextEndOfSegment>|Wyspecjalizowany przebieg tekstowy używany do oznaczania końca segmentu, na przykład w celu zakończenia zakresu, na który miało wpływ <xref:System.Windows.Media.TextFormatting.TextModifier> poprzednie uruchomienie.|  
+|<xref:System.Windows.Media.TextFormatting.TextHidden>|Wyspecjalizowane uruchomienie tekstu używane do oznaczania zakresu znaków ukrytych.|  
+|<xref:System.Windows.Media.TextFormatting.TextModifier>|Wyspecjalizowany przebieg tekstu służący do modyfikowania właściwości tekstu jest w jego zakresie. Zakres wykracza do następnego pasującego <xref:System.Windows.Media.TextFormatting.TextEndOfSegment> przebiegu tekstu lub do następnego. <xref:System.Windows.Media.TextFormatting.TextEndOfParagraph>|  
   
- Dowolnej z predefiniowanych <xref:System.Windows.Media.TextFormatting.TextRun> może być podklasą klasy obiektów. Dzięki temu źródła tekstu zapewnienie uruchomienia programu formatującego tekstu z tekstem zawierających dane niestandardowe.  
+ Każdy ze wstępnie zdefiniowanych <xref:System.Windows.Media.TextFormatting.TextRun> obiektów może być podklasą. Dzięki temu Źródło tekstu będzie zawierać tekst programu formatującego z przebiegami tekstowymi, które zawierają dane niestandardowe.  
   
- W poniższym przykładzie pokazano <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> metody. Zwraca ten magazyn tekstu <xref:System.Windows.Media.TextFormatting.TextRun> obiektów, aby element formatujący tekstu do przetworzenia.  
+ Poniższy przykład ilustruje <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> metodę. Ten magazyn tekstowy zwraca <xref:System.Windows.Media.TextFormatting.TextRun> obiekty do programu formatującego tekstu do przetworzenia.  
   
  [!code-csharp[TextFormatterExample#101](~/samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/CustomTextSource.cs#101)]
  [!code-vb[TextFormatterExample#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/CustomTextSource.vb#101)]  
   
 > [!NOTE]
->  W tym przykładzie store tekstu udostępnia te same właściwości tekstu do całego tekstu. Zaawansowane tekst, który magazynów musi implementować własne zakresu zarządzania, aby zezwolić na poszczególnych znaków mieć różne właściwości.  
+> W tym przykładzie magazyn tekstu zapewnia te same właściwości tekstowe do całego tekstu. Zaawansowane magazyny tekstowe muszą implementować własne zarządzanie zakresami, aby umożliwić indywidualnym znakom różne właściwości.  
   
 <a name="section5"></a>   
 ## <a name="specifying-formatting-properties"></a>Określanie właściwości formatowania  
- <xref:System.Windows.Media.TextFormatting.TextRun> obiekty są formatowane przy użyciu właściwości udostępniane przez Magazyn tekstu. Te właściwości są dostępne w dwóch typów <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> i <xref:System.Windows.Media.TextFormatting.TextRunProperties>. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> takie jak obsługa akapitu (włącznie) właściwości <xref:System.Windows.TextAlignment> i <xref:System.Windows.FlowDirection>. <xref:System.Windows.Media.TextFormatting.TextRunProperties> właściwości, które mogą być różne dla każdego tekstu, uruchom w akapicie, takich jak Pędzel pierwszego planu <xref:System.Windows.Media.Typeface>i rozmiar czcionki. Aby zaimplementować niestandardowy akapitu i niestandardowego tekstu, uruchom typów właściwości, aplikacji, należy utworzyć klasy, które wynikają z <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> i <xref:System.Windows.Media.TextFormatting.TextRunProperties> odpowiednio.  
+ <xref:System.Windows.Media.TextFormatting.TextRun>obiekty są formatowane przy użyciu właściwości dostarczonych przez magazyn tekstu. Te właściwości są dostępne w dwóch typach <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> , <xref:System.Windows.Media.TextFormatting.TextRunProperties>a. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties>Obsługuj właściwości z uwzględnieniem akapitu <xref:System.Windows.FlowDirection>, takie jak <xref:System.Windows.TextAlignment> i. <xref:System.Windows.Media.TextFormatting.TextRunProperties>są właściwościami, które mogą być różne dla każdego tekstu w akapicie, takie jak Pędzel <xref:System.Windows.Media.Typeface>pierwszego planu, i rozmiar czcionki. Aby zaimplementować niestandardowe typy właściwości akapitu i niestandardowego tekstu, aplikacja musi utworzyć klasy, które pochodzą z <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> i <xref:System.Windows.Media.TextFormatting.TextRunProperties> odpowiednio.  
   
 ## <a name="see-also"></a>Zobacz także
 

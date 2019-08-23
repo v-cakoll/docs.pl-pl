@@ -1,5 +1,5 @@
 ---
-title: Kod o przezroczystym poziomie bezpieczeństwa, poziom 1
+title: Kod przezroczysty pod względem zabezpieczeń, poziom 1
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent
@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fd594ef1fea4c8723965ad483a5a124892bcf00
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4ca30448c24efc48be3d68c6b3fa03c949b72d1a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487870"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910708"
 ---
-# <a name="security-transparent-code-level-1"></a>Kod o przezroczystym poziomie bezpieczeństwa, poziom 1
+# <a name="security-transparent-code-level-1"></a>Kod przezroczysty pod względem zabezpieczeń, poziom 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Przezroczystość ułatwia deweloperom wpisywanie bezpieczniejsze biblioteki .NET Framework, które udostępniają funkcje częściowo zaufanego kodu. Poziom 1 przejrzystości wprowadzono w programie .NET Framework w wersji 2.0 i głównie była używana tylko w ramach firmy Microsoft. Począwszy od programu .NET Framework 4, można użyć [przezroczystości poziomu 2](../../../docs/framework/misc/security-transparent-code-level-2.md). Jednak poziom 1 przejrzystości została zatrzymana, dzięki czemu można zidentyfikować starszego kodu, który należy uruchomić przy użyciu starszych reguł zabezpieczeń.  
+ Przejrzystość ułatwia deweloperom pisanie bardziej bezpiecznych bibliotek .NET Framework, które uwidaczniają funkcjonalność do częściowo zaufanego kodu. Przejrzystość poziomu 1 została wprowadzona w .NET Framework w wersji 2,0 i była używana głównie tylko w firmie Microsoft. Począwszy od .NET Framework 4, można użyć przezroczystości [poziomu 2](../../../docs/framework/misc/security-transparent-code-level-2.md). Przejrzystość poziomu 1 została jednak zachowana, aby można było zidentyfikować starszy kod, który musi zostać uruchomiony przy użyciu wcześniejszych reguł zabezpieczeń.  
   
 > [!IMPORTANT]
->  Należy określić poziom 1 przejrzystości, zgodności. oznacza to, określ poziom 1 tylko dla kodu, który został opracowany z .NET Framework 3.5 lub starszym korzystającego z <xref:System.Security.AllowPartiallyTrustedCallersAttribute> lub nie używa modelu przezroczystości. Na przykład użyć poziomu przezroczystości 1 dla zestawów .NET Framework 2.0, które umożliwiają wywołania z częściowo zaufanych obiektów wywołujących (APTCA). Kod, który został opracowany dla programu .NET Framework 4 należy zawsze używać przezroczystości poziomu 2.  
+> Należy określić przezroczystość poziomu 1 w celu zapewnienia zgodności. oznacza to, że należy określić poziom 1 tylko dla kodu, który został opracowany z .NET Framework 3,5 lub wcześniejszym <xref:System.Security.AllowPartiallyTrustedCallersAttribute> , który używa lub nie używa modelu przezroczystości. Na przykład użyj przejrzystości poziomu 1 dla zestawów .NET Framework 2,0, które zezwalają na wywołania od częściowo zaufanych wywołujących (APTCA). W przypadku kodu opracowanego dla .NET Framework 4 zawsze używaj przejrzystości poziomu 2.  
   
  Ten temat zawiera następujące sekcje:  
   
@@ -36,71 +36,71 @@ ms.locfileid: "66487870"
   
 <a name="the_level_1_transparency_model"></a>   
 ## <a name="the-level-1-transparency-model"></a>Model przejrzystości poziomu 1  
- Gdy używasz poziom 1 przejrzystości, używany jest model zabezpieczeń, która oddziela kod do metody przezroczyste dla zabezpieczeń, zabezpieczenia bezpieczny krytyczny i krytyczne dla bezpieczeństwa.  
+ W przypadku korzystania z przejrzystości poziomu 1 jest używany model zabezpieczeń, który oddziela kod do metod zabezpieczeń-przezroczystych, zabezpieczeń-bezpiecznych i krytycznych dla zabezpieczeń.  
   
- Możesz oznaczyć całego zestawu, niektóre klasy w zestawie lub niektóre metody w klasie jako zabezpieczenia przejrzysty. Kod o przezroczystym poziomie bezpieczeństwa nie podniesienia uprawnień. Ograniczenie to ma trzy skutki:  
+ Można oznaczyć cały zestaw, niektóre klasy w zestawie lub niektóre metody klasy jako przezroczyste dla zabezpieczeń. Kod przezroczysty pod względem zabezpieczeń nie może podwyższyć poziomu uprawnień. To ograniczenie ma trzy konsekwencje:  
   
-- Nie można wykonać kod o przezroczystym poziomie bezpieczeństwa <xref:System.Security.Permissions.SecurityAction.Assert> akcji.  
+- Kod przezroczysty pod względem zabezpieczeń <xref:System.Security.Permissions.SecurityAction.Assert> nie może wykonać akcji.  
   
-- Wszelkie zapotrzebowania na łącza będą spełnione przez kod o przezroczystym poziomie bezpieczeństwa staje się pełnego żądania.  
+- Wszystkie żądania dotyczące linków, które byłyby spełnione przez kod przezroczysty dla zabezpieczeń, staną się pełnymi żądaniami.  
   
-- Niebezpieczny kod (nieweryfikowalnego), które muszą być wykonywane w kod o przezroczystym poziomie bezpieczeństwa powoduje pełnego żądania dla <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> uprawnienia zabezpieczeń.  
+- Dowolny niebezpieczny (niemożliwy do zweryfikowania) kod, który musi zostać wykonany w nieprzezroczystym kodzie zabezpieczeń <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> , powoduje pełny popyt na uprawnienia zabezpieczeń.  
   
- Te zasady są wymuszane podczas wykonywania przez środowisko uruchomieniowe języka wspólnego (CLR). Kod o przezroczystym poziomie bezpieczeństwa przekazuje wszystkie wymagania bezpieczeństwa kod, który ją wywołuje wywołujące. Żądania przepływać przez kod o przezroczystym poziomie bezpieczeństwa nie podniesienia uprawnień. Aplikacji niskiego zaufania wywołuje kod o przezroczystym poziomie bezpieczeństwa, powoduje, że zapotrzebowanie na wysokim poziomie uprawnień zapotrzebowanie przepływ niski zaufany kod i zakończyć się niepowodzeniem. Kod o przezroczystym poziomie bezpieczeństwa nie można zatrzymać żądania, ponieważ nie może wykonywać akcje potwierdzenia. Ten sam kod zabezpieczenia przejrzysty wywoływane z wyników pełni zaufany kod w pomyślnym żądanie.  
+ Te reguły są wymuszane podczas wykonywania przez środowisko uruchomieniowe języka wspólnego (CLR). Kod przezroczysty pod względem zabezpieczeń przekazuje wszystkie wymagania dotyczące zabezpieczeń kodu, który wywołuje z powrotem do jego wywoływania. Wymaga, aby przepływ przez kod przezroczysty pod względem zabezpieczeń nie mógł podwyższyć poziomu uprawnień. Jeśli aplikacja z niskim zaufaniem wywołuje kod przezroczysty z zabezpieczeniami i powoduje żądanie wysokiego poziomu uprawnień, żądanie zostanie przekazane z powrotem do kodu niskiego zaufania i nie powiedzie się. Kod przezroczysty pod względem zabezpieczeń nie może zatrzymać żądania, ponieważ nie może wykonać akcji potwierdzeń. Ten sam kod przezroczysty pod względem zabezpieczeń, który jest wywoływany z kodu pełnego zaufania, skutkuje pomyślnym zapotrzebowaniem.  
   
- Zabezpieczenia krytyczny jest przeciwieństwem zabezpieczenia przejrzysty. Kod zabezpieczenia krytyczny wykonuje z pełnym zaufaniem i mogą wykonywać wszystkie operacje uprzywilejowane. Kod zabezpieczenia bezpieczny krytyczny jest uprzywilejowanych kod, który znajduje się za pomocą inspekcji zabezpieczeń rozbudowane, aby upewnić się, że nie zezwala na częściowo zaufanych wywołań korzystać z zasobów, które nie mają uprawnień dostępu do.  
+ Krytyczne dla zabezpieczeń są przeciwieństwem przezroczystości zabezpieczeń. Kod krytyczny dla zabezpieczeń jest wykonywany z pełnym zaufaniem i może wykonywać wszystkie uprzywilejowane operacje. Bezpieczny-krytyczny kod jest uprzywilejowanym kodem, który został przeprowadzona przez kompleksową inspekcję zabezpieczeń, aby upewnić się, że nie zezwala częściowo zaufanym wywołującym na używanie zasobów, do których nie ma uprawnień dostępu.  
   
- Masz jawne stosowanie przezroczystości. Większość swój kod, który obsługuje do manipulowania danymi i logiki zazwyczaj może być oznaczona jako przezroczystym poziomie bezpieczeństwa, natomiast mniejsza ilość kodu, który wykonuje podniesienia uprawnień jest oznaczone jako krytyczne dla bezpieczeństwa lub zabezpieczenia bezpieczny krytyczny.  
+ Musisz jawnie zastosować przezroczystość. Większość kodu, który obsługuje manipulowanie danymi i logikę, może być zwykle oznaczona jako przezroczysty dla zabezpieczeń, podczas gdy mniejsza ilość kodu, która wykonuje podniesienie uprawnień, jest oznaczona jako krytyczna dla zabezpieczeń lub bezpieczna — zabezpieczenia krytyczne.  
   
 > [!IMPORTANT]
->  Poziom 1 przejrzystości jest ograniczone do zakresu zestawu; nie są wymuszane między zestawami. Poziom 1 przejrzystości był używany przede wszystkim w firmie Microsoft, do celów inspekcji zabezpieczeń. Krytyczne dla bezpieczeństwa typy i elementy członkowskie w zestawie poziom 1 jest możliwy przez kod o przezroczystym poziomie bezpieczeństwa w innych zestawach. Jest ważne, wykonywania zapotrzebowania na łącza pełnego zaufania do poziomu 1 krytyczne dla bezpieczeństwa typy i członków. Zabezpieczenia bezpieczny krytyczny typy i elementy członkowskie muszą również upewnij się, że obiekty wywołujące mają uprawnienia do chronionych zasobów, które są dostępne dla typu lub elementu członkowskiego.  
+> Przezroczystość poziomu 1 jest ograniczona do zakresu zestawu; nie jest wymuszany między zestawami. Przejrzystość poziomu 1 została głównie użyta w firmie Microsoft do celów inspekcji zabezpieczeń. Typy krytyczne pod względem zabezpieczeń i elementy członkowskie w zestawie poziomu 1 są dostępne przez kod przezroczysty dla zabezpieczeń w innych zestawach. Ważne jest, aby wykonać wymagania dotyczące linków w celu pełnego zaufania we wszystkich typach i elementach krytycznych zabezpieczeń na poziomie 1. Typy i składowe z bezpiecznymi zabezpieczeniami muszą także potwierdzić, że wywołujący mają uprawnienia do chronionych zasobów, do których dostęp jest uzyskiwany przez typ lub element członkowski.  
   
- Dla zgodności z poprzednimi wersjami z wcześniejszymi wersjami programu .NET Framework wszystkie elementy członkowskie, które nie posiadają adnotację, za pomocą atrybuty przezroczystości są uznawane za zabezpieczenia bezpieczny krytyczny. Wszystkie typy, które nie posiadają adnotację, są traktowane jako przezroczysty. Brak reguł analizy statycznej do sprawdzania poprawności przezroczystości. Dlatego może być konieczne Debugowanie błędów przezroczystości w czasie wykonywania.  
+ W celu zapewnienia zgodności z poprzednimi wersjami .NET Framework wszystkie elementy członkowskie, które nie są adnotacjami z atrybutami przezroczystości są uznawane za bezpieczne-krytyczne. Wszystkie typy, które nie są adnotacjami, są uważane za przezroczyste. Brak statycznych reguł analizy do zweryfikowania przejrzystości. W związku z tym może być konieczne Debugowanie błędów przezroczystości w czasie wykonywania.  
   
 <a name="transparency_attributes"></a>   
 ## <a name="transparency-attributes"></a>Atrybuty przezroczystości  
- W poniższej tabeli opisano trzy atrybuty, które umożliwiają dodawanie adnotacji do kodu przezroczystości.  
+ W poniższej tabeli opisano trzy atrybuty, które służą do dodawania adnotacji do kodu dla przezroczystości.  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|<xref:System.Security.SecurityTransparentAttribute>|Dozwolone tylko na poziomie zestawu. Określa wszystkie typy i elementy członkowskie w zestawie jako zabezpieczenia przejrzysty. Zestawu nie może zawierać dowolny kod zabezpieczenia krytyczny.|  
-|<xref:System.Security.SecurityCriticalAttribute>|Gdy jest używana na poziomie zestawu bez <xref:System.Security.SecurityCriticalAttribute.Scope%2A> właściwość identyfikuje cały kod w zestawie jako przezroczyste dla zabezpieczeń domyślnie, ale wskazuje, że zestaw może zawierać kod zabezpieczenia krytyczny.<br /><br /> W przypadku użycia tej opcji na poziomie klasy, identyfikuje klasy lub metody jako krytyczne dla bezpieczeństwa, ale nie składowych klasy. Aby wszystkie elementy członkowskie krytyczne dla bezpieczeństwa, ustaw <xref:System.Security.SecurityCriticalAttribute.Scope%2A> właściwość <xref:System.Security.SecurityCriticalScope.Everything>.<br /><br /> W przypadku użycia tej opcji na poziomie członka, ten atrybut dotyczy tylko tego członka.<br /><br /> Klasa lub członek identyfikowane jako krytyczne dla zabezpieczeń mogą wykonywać podniesienia uprawnień. **Ważne:**  Przezroczystości poziomu 1 krytyczne dla bezpieczeństwa typy i elementy członkowskie są traktowane jak zabezpieczenia bezpieczny krytyczny, gdy zostaną wywołane spoza zestawu. Należy chronić krytyczne dla bezpieczeństwa typy i elementy członkowskie z zapotrzebowania na łącza, aby uzyskać pełne zaufanie w celu uniknięcia nieautoryzowanych podniesienie uprawnień.|  
-|<xref:System.Security.SecuritySafeCriticalAttribute>|Określa kod zabezpieczenia krytyczny, który może zostać oceniony przez kod o przezroczystym poziomie bezpieczeństwa w zestawie. W przeciwnym razie kod o przezroczystym poziomie bezpieczeństwa nie można uzyskać dostępu prywatne lub wewnętrzne elementy członkowskie krytyczne dla zabezpieczeń z tego samego zestawu. Ten sposób wpłynąć na kod zabezpieczenia krytyczny i nieoczekiwany podniesienia uprawnień, umożliwiają. Kod zabezpieczenia bezpieczny krytyczny powinny zostać poddane inspekcji rygorystyczne. **Uwaga:**  Zabezpieczenia bezpieczny krytyczny typów i elementów członkowskich należy zweryfikować uprawnienia obiekty wywołujące do określenia, czy obiekt wywołujący ma uprawnienia dostępu do chronionych zasobów.|  
+|<xref:System.Security.SecurityTransparentAttribute>|Dozwolone tylko na poziomie zestawu. Identyfikuje wszystkie typy i składowe w zestawie jako przezroczyste dla zabezpieczeń. Zestaw nie może zawierać żadnego kodu krytycznego dla zabezpieczeń.|  
+|<xref:System.Security.SecurityCriticalAttribute>|Gdy jest używany na poziomie zestawu bez <xref:System.Security.SecurityCriticalAttribute.Scope%2A> właściwości, program identyfikuje cały kod w zestawie jako zabezpieczenia-przezroczysty domyślnie, ale wskazuje, że zestaw może zawierać kod krytyczny dla bezpieczeństwa.<br /><br /> Gdy jest używana na poziomie klasy, identyfikuje klasę lub metodę jako krytyczny dla zabezpieczeń, ale nie elementy członkowskie klasy. Aby wszystkie elementy członkowskie miały krytyczne znaczenie dla zabezpieczeń, należy <xref:System.Security.SecurityCriticalAttribute.Scope%2A> ustawić właściwość <xref:System.Security.SecurityCriticalScope.Everything>na.<br /><br /> Gdy jest używany na poziomie elementu członkowskiego, atrybut ma zastosowanie tylko do tego elementu członkowskiego.<br /><br /> Klasa lub element członkowski identyfikowany jako krytyczny dla zabezpieczeń może wykonywać podniesienia uprawnień. **Ważne:**  Na poziomie 1 przejrzystość typy i elementy członkowskie o kluczowym znaczeniu zabezpieczeń są traktowane jako bezpieczne-krytyczne dla bezpieczeństwa, gdy są wywoływane spoza zestawu. Aby uniknąć nieautoryzowanego podniesienia uprawnień, należy chronić typy i członków o kluczowym znaczeniu zabezpieczeń z użyciem żądania linku do pełnego zaufania.|  
+|<xref:System.Security.SecuritySafeCriticalAttribute>|Identyfikuje kod krytyczny dla zabezpieczeń, do którego można uzyskać dostęp za pomocą kodu przezroczystego dla zabezpieczeń w zestawie. W przeciwnym razie kod przezroczysty pod względem zabezpieczeń nie może uzyskać dostępu do prywatnych lub wewnętrznych składowych o kluczowym znaczeniu zabezpieczeń w tym samym zestawie. Mogłoby to mieć wpływ na kod krytyczny zabezpieczeń i spowodować nieoczekiwane podwyższenie poziomu uprawnień. Kod zabezpieczeń-bezpieczny-krytyczny powinien zostać poddany rygorystycznej inspekcji zabezpieczeń. **Uwaga:**  Typy i składowe z bezpiecznymi zabezpieczeniami muszą sprawdzać uprawnienia obiektów wywołujących w celu ustalenia, czy obiekt żądający ma uprawnienia dostępu do chronionych zasobów.|  
   
- <xref:System.Security.SecuritySafeCriticalAttribute> Atrybut umożliwia dostęp do krytycznych dla zabezpieczeń elementów członkowskich z tego samego zestawu kod zabezpieczenia przejrzysty. Jak podzielić na dwa zestawy, należy wziąć pod uwagę przezroczyste dla zabezpieczeń i krytyczne dla bezpieczeństwa kod w swoim zestawie. Kod o przezroczystym poziomie bezpieczeństwa, nie będzie można zobaczyć prywatne lub wewnętrzne elementy członkowskie kod zabezpieczenia krytyczny. Ponadto kod zabezpieczenia krytyczny ogólnie podlega inspekcji dostępu do jego interfejsu publicznego. Nie można oczekiwać stanie prywatne lub wewnętrzne dostępne spoza zestawu; Czy chcesz zachować stan samodzielnie. <xref:System.Security.SecuritySafeCriticalAttribute> Atrybut utrzymuje izolację stanu między kodem przezroczyste dla zabezpieczeń i krytyczne dla bezpieczeństwa, zapewniając możliwość przesłaniania izolację, gdy jest to konieczne. Kod o przezroczystym poziomie bezpieczeństwa nie można uzyskać dostępu prywatny lub wewnętrzny kod zabezpieczenia krytyczny, chyba że te elementy członkowskie zostały oznaczone <xref:System.Security.SecuritySafeCriticalAttribute>. Przed zastosowaniem <xref:System.Security.SecuritySafeCriticalAttribute>, inspekcji ten element członkowski, tak, jakby były publicznie widoczne.  
+ Ten <xref:System.Security.SecuritySafeCriticalAttribute> atrybut umożliwia nieprzezroczysty kod w celu uzyskania dostępu do elementów członkowskich o znaczeniu krytycznym w tym samym zestawie. Rozważ użycie kodu o kluczowym znaczeniu zabezpieczeń i zabezpieczeń w zestawie, który jest podzielony na dwa zestawy. Kod przezroczysty pod względem zabezpieczeń nie może zobaczyć prywatnych lub wewnętrznych elementów członkowskich kodu krytycznego dla zabezpieczeń. Ponadto kod krytyczny dla zabezpieczeń jest ogólnie objęty inspekcją w celu uzyskania dostępu do jego interfejsu publicznego. Nie oczekuje się, że stan prywatny lub wewnętrzny będzie dostępny poza zestawem; należy zachować stan izolowany. Ten <xref:System.Security.SecuritySafeCriticalAttribute> atrybut utrzymuje izolację stanu między kodem nieprzezroczystym i krytycznym dla zabezpieczeń, jednocześnie zapewniając możliwość przesłonięcia izolacji, gdy jest to konieczne. Kod przezroczysty pod względem zabezpieczeń nie może uzyskać dostępu do prywatnego lub wewnętrznego kodu krytycznego zabezpieczeń, chyba <xref:System.Security.SecuritySafeCriticalAttribute>że te elementy członkowskie zostały oznaczone za pomocą. Przed zastosowaniem <xref:System.Security.SecuritySafeCriticalAttribute>, Przeprowadź inspekcję tego elementu członkowskiego tak, jakby był on ujawniony publicznie.  
   
-### <a name="assembly-wide-annotation"></a>Adnotacja całego zestawu  
- W poniższej tabeli opisano efektów atrybutów zabezpieczeń na poziomie zestawu.  
+### <a name="assembly-wide-annotation"></a>Adnotacja w całej zestawie  
+ W poniższej tabeli opisano efekty używania atrybutów zabezpieczeń na poziomie zestawu.  
   
-|Atrybutu zestawu|Stan zestawu|  
+|Atrybut zestawu|Stan zestawu|  
 |------------------------|--------------------|  
-|Brak atrybutu w częściowo zaufanym zestawie|Wszystkie typy i elementy członkowskie są niewidoczne.|  
-|Nie atrybutu w zestawie całkowicie zaufanym (w globalnej pamięci podręcznej lub zidentyfikowane jako pełne zaufanie w `AppDomain`)|Wszystkie typy są niewidoczne, a wszystkie elementy członkowskie są zabezpieczenia bezpieczny krytyczny.|  
-|`SecurityTransparent`|Wszystkie typy i elementy członkowskie są niewidoczne.|  
-|`SecurityCritical(SecurityCriticalScope.Everything)`|Wszystkie typy i elementy członkowskie są krytyczne dla bezpieczeństwa.|  
-|`SecurityCritical`|Wartość domyślna to przezroczyste wszystkie kodu. Jednak poszczególne typy i składowe mogą mieć inne atrybuty.|  
+|Brak atrybutu dla częściowo zaufanego zestawu|Wszystkie typy i elementy członkowskie są przezroczyste.|  
+|Brak atrybutu w w pełni zaufanym zestawie (w globalnej pamięci podręcznej zestawów lub zidentyfikowanym jako `AppDomain`pełne zaufanie)|Wszystkie typy są przezroczyste i wszystkie elementy członkowskie są bezpieczne-krytyczne.|  
+|`SecurityTransparent`|Wszystkie typy i elementy członkowskie są przezroczyste.|  
+|`SecurityCritical(SecurityCriticalScope.Everything)`|Wszystkie typy i elementy członkowskie są krytyczne dla zabezpieczeń.|  
+|`SecurityCritical`|Wszystkie wartości domyślne kodu są przezroczyste. Jednak poszczególne typy i elementy członkowskie mogą mieć inne atrybuty.|  
   
 <a name="security_transparency_examples"></a>   
 ## <a name="security-transparency-examples"></a>Przykłady przezroczystości zabezpieczeń  
- Aby użyć zasady przejrzystości programu .NET Framework 2.0 (poziom 1 przejrzystości), należy użyć następujących adnotacji zestawu:  
+ Aby użyć reguł przezroczystości .NET Framework 2,0 (przezroczystość poziomu 1), użyj następującej adnotacji zestawu:  
   
 ```  
 [assembly: SecurityRules(SecurityRuleSet.Level1)]  
 ```  
   
- Chcąc przezroczystego wskazywać, że zestaw nie zawiera żadnego kodu krytycznego i nie podniesienia uprawnień w jakikolwiek sposób całego zestawu, należy jawnie dodać przezroczystości do zestawu za pomocą następującego atrybutu:  
+ Jeśli chcesz, aby cały zestaw był przezroczysty, aby wskazać, że zestaw nie zawiera kodu krytycznego i nie Podnieś poziomu uprawnień w dowolny sposób, można jawnie dodać przezroczystość do zestawu przy użyciu następującego atrybutu:  
   
 ```  
 [assembly: SecurityTransparent]  
 ```  
   
- Jeśli użytkownik chce mieszać krytycznych i przejrzysty kod z tego samego zestawu, Rozpocznij od oznaczenia zestawu z <xref:System.Security.SecurityCriticalAttribute> atrybutu, aby wskazać, że zestaw może zawierać kodu krytycznego w następujący sposób:  
+ Jeśli chcesz mieszać kod krytyczny i przezroczysty w tym samym zestawie, Zacznij od oznaczenia zestawu przy użyciu <xref:System.Security.SecurityCriticalAttribute> atrybutu, aby wskazać, że zestaw może zawierać kod krytyczny w następujący sposób:  
   
 ```  
 [assembly: SecurityCritical]  
 ```  
   
- Jeśli chcesz wykonywać działania krytyczne dla bezpieczeństwa kod, który będzie wykonywać krytyczne akcji z inną musi wyraźnie oznaczyć <xref:System.Security.SecurityCriticalAttribute> atrybutu, jak pokazano w poniższym przykładzie kodu:  
+ Jeśli chcesz wykonać akcje krytyczne dla zabezpieczeń, musisz jawnie oznaczyć kod, który wykona akcję krytyczną z innym <xref:System.Security.SecurityCriticalAttribute> atrybutem, jak pokazano w poniższym przykładzie kodu:  
   
 ```  
 [assembly: SecurityCritical]  
@@ -128,9 +128,9 @@ public class B
 }  
 ```  
   
- Powyższy kod jest przezroczysty z wyjątkiem `Critical` metody, która jest jawnie oznaczone jako krytyczne dla bezpieczeństwa. Przezroczystość jest ustawienie domyślne, nawet w przypadku poziomu zestawu <xref:System.Security.SecurityCriticalAttribute> atrybutu.  
+ Poprzedni kod jest przezroczysty z wyjątkiem `Critical` metody, która jest jawnie oznaczona jako krytyczna dla zabezpieczeń. Przezroczystość jest ustawieniem domyślnym, nawet z atrybutem na <xref:System.Security.SecurityCriticalAttribute> poziomie zestawu.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kod o przezroczystym poziomie bezpieczeństwa, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [Kod przezroczysty pod względem zabezpieczeń, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
 - [Zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md)

@@ -9,39 +9,39 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: fddb51bfe998c360ca418374b119ec12f25b0fad
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 92942066b5f08ada0154781ae54b5d8494944ca1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052296"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963475"
 ---
 # <a name="events-overview-windows-forms"></a>Formularze systemu Windows — przegląd zdarzeń
-Zdarzenie jest działaniem, które można odpowiedzieć lub "handle" w kodzie. Zdarzenia mogą być generowane przez działanie użytkownika, takie jak kliknięcie myszą lub naciśnięciu klawisza; w kodzie programu lub przez system.
+Zdarzenie jest akcją, na którą można odpowiedzieć lub "dojście" w kodzie. Zdarzenia mogą być generowane przez akcję użytkownika, taką jak kliknięcie myszą lub naciśnięcie klawisza. według kodu programu; lub przez system.
 
- Aplikacje oparte na zdarzeniach wykonać kod w odpowiedzi na zdarzenie. Każdy formularz i kontroli udostępnia wstępnie zdefiniowany zestaw zdarzeń, które można programować względem. Jeśli wystąpi jedno z tych zdarzeń, a kod w obsłudze skojarzone ze zdarzeniem, ten kod jest wywoływana.
+ Aplikacje oparte na zdarzeniach wykonują kod w odpowiedzi na zdarzenie. Każdy formularz i kontrola przedstawia wstępnie zdefiniowany zestaw zdarzeń, dla których można programować. Jeśli wystąpi jedno z tych zdarzeń i kod w skojarzonym programie obsługi zdarzeń, ten kod jest wywoływany.
 
- Typy zdarzeń wywołanych przez obiekt różnią się, ale wiele typów są wspólne dla większości kontrolek. Na przykład będzie obsługiwać większość obiektów <xref:System.Windows.Forms.Control.Click> zdarzeń. Jeśli użytkownik kliknie formularza, możesz pisać kod w postaci <xref:System.Windows.Forms.Control.Click> program obsługi zdarzeń jest wykonywane.
+ Typy zdarzeń wywoływanych przez obiekt różnią się, ale wiele typów jest wspólnych dla większości formantów. Na przykład większość obiektów będzie obsługiwać <xref:System.Windows.Forms.Control.Click> zdarzenie. Jeśli użytkownik kliknie formularz, zostanie wykonany kod w programie obsługi <xref:System.Windows.Forms.Control.Click> zdarzeń formularza.
 
 > [!NOTE]
->  Wiele zdarzenia występują w połączeniu z innymi zdarzeniami. Na przykład w trakcie właściwości <xref:System.Windows.Forms.Control.DoubleClick> zdarzeń mających miejsce, <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseUp>, i <xref:System.Windows.Forms.Control.Click> wystąpieniu zdarzenia.
+> Wiele zdarzeń występuje w połączeniu z innymi zdarzeniami. Na przykład w <xref:System.Windows.Forms.Control.DoubleClick> trakcie zdarzenia <xref:System.Windows.Forms.Control.MouseDown>wystąpią zdarzenia, <xref:System.Windows.Forms.Control.MouseUp>i <xref:System.Windows.Forms.Control.Click> .
 
- Aby uzyskać informacje o tym, jak podnieść i zużyć zdarzenie, zobacz [zdarzenia](../../standard/events/index.md).
+ Aby uzyskać informacje na temat sposobu zgłaszania i korzystania ze zdarzenia, zobacz [zdarzenia](../../standard/events/index.md).
 
-## <a name="delegates-and-their-role"></a>Delegaci i ich roli
- Obiekty delegowane są często używane w ramach platformy .NET do tworzenia mechanizmów obsługi zdarzeń klasy. Delegaty około równoważne do wskaźników funkcji, często używane w wizualizacji C++ i inne języki zorientowane obiektowo. W przeciwieństwie do wskaźników funkcji, obiekty delegowane są zorientowane obiektowo, bezpieczny i bezpieczne. Dodatkowo, gdy wskaźnik funkcji zawiera tylko odwołanie do określonej funkcji, delegata składa się z odwołaniem do obiektu, a odwołuje się do co najmniej jednej metody w obrębie obiektu.
+## <a name="delegates-and-their-role"></a>Delegaty i ich rola
+ Delegaty są klasami powszechnie używanymi w .NET Framework do kompilowania mechanizmów obsługi zdarzeń. Delegaty są w przybliżeniu równe wskaźnikom funkcji, często używanym w wizualizacjach C++ i innych językach zorientowanych obiektowo. W przeciwieństwie do wskaźników funkcji Delegaty są jednak zorientowane obiektowo, bezpieczne dla typów i bezpieczne. Ponadto, gdy wskaźnik funkcji zawiera tylko odwołanie do konkretnej funkcji, delegat składa się z odwołania do obiektu i odwołuje się do jednej lub więcej metod w obiekcie.
 
- Ten model zdarzeń wykorzystuje *delegatów* powiązać metod, które są używane do obsługi tych zdarzeń. Delegat umożliwia innych klas zarejestrować dla powiadomień o zdarzeniach, określając metody obsługi. Po wystąpieniu zdarzenia, delegat wywołuje powiązanej metody. Aby uzyskać więcej informacji na temat definiowania obiektów delegowanych, zobacz [zdarzenia](../../standard/events/index.md).
+ Ten model zdarzeń używa *delegatów* do wiązania zdarzeń z metodami, które są używane do ich obsługi. Delegat umożliwia innym klasom rejestrację w celu powiadomienia o zdarzeniu przez określenie metody obsługi. Gdy wystąpi zdarzenie, delegat wywołuje metodę powiązaną. Aby uzyskać więcej informacji o definiowaniu delegatów, zobacz [zdarzenia](../../standard/events/index.md).
 
- Może być powiązana delegatów, jedną metodę lub wiele metod, określane jako multiemisji. Podczas tworzenia obiektu delegowany dla zdarzenia, użytkownik (lub Windows), zazwyczaj należy utworzyć multiemisji zdarzeń. Rzadkie wyjątków może być zdarzenie, które powoduje określonej procedury (na przykład wyświetlanie okna dialogowego), która nie powtórzysz logicznie wiele razy na zdarzenie. Aby uzyskać informacje o sposobie tworzenia delegata multiemisji, zobacz [jak: Łączenie obiektów delegowanych (obiekty delegowane multiemisji)](~/docs/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).
+ Delegaty mogą być powiązane z pojedynczą metodą lub z wieloma metodami, nazywanymi multiemisją. Podczas tworzenia delegata dla zdarzenia (lub systemu Windows) zwykle tworzone jest zdarzenie multiemisji. Rzadki wyjątek może być zdarzeniem, które powoduje konkretną procedurę (na przykład wyświetlanie okna dialogowego), które nie powtarzają się wielokrotnie na zdarzenie. Aby uzyskać informacje o sposobach tworzenia delegata multiemisji, [zobacz How to: Połącz delegatów (delegatów](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)multiemisji).
 
- Delegat multiemisji utrzymuje listę wywołania metody, które jest powiązany z. Multiemisji delegować obsługuje <xref:System.Delegate.Combine%2A> metodę, aby dodać metodę do listy wywołań i <xref:System.Delegate.Remove%2A> metodę, aby go usunąć.
+ Delegat multiemisji utrzymuje listę wywołań metod, z którą jest powiązana. Delegat multiemisji obsługuje <xref:System.Delegate.Combine%2A> metodę dodawania metody do listy wywołań <xref:System.Delegate.Remove%2A> i metodę, aby ją usunąć.
 
- Gdy zdarzenie jest rejestrowane przez aplikację, kontrolka wywołuje zdarzenie, wywołując delegata dla tego zdarzenia. Delegat wywołuje z kolei powiązanej metody. W przypadku typowych (delegować multiemisji) delegata wywołuje każdego powiązanej metodę liście wywołania z kolei zapewniającą powiadomienie jeden do wielu. Ta strategia oznacza, że kontrolki nie trzeba utrzymywać listę obiektów docelowych dla powiadomień o zdarzeniach — delegat obsługuje wszystkie rejestracji i powiadomień.
+ Gdy zdarzenie jest rejestrowane przez aplikację, formant wywołuje zdarzenie, wywołując delegata dla tego zdarzenia. Delegat z kolei wywołuje metodę powiązaną. W najbardziej typowym przypadku (delegat multiemisji) delegat wywołuje każdą powiązaną metodę z listy wywołań, która zawiera powiadomienie jeden do wielu. Ta strategia oznacza, że formant nie musi obsługiwać listy obiektów docelowych dla powiadomienia o zdarzeniu — delegat obsługuje wszystkie rejestracje i powiadomienia.
 
- Delegatów umożliwia także wiele zdarzeń może być powiązane z tej samej metody, dzięki czemu powiadomienia wiele do jednego. Na przykład zdarzenie kliknięcia przycisku i zdarzenia menu — kliknij polecenie zarówno wywołać ten sam delegata, która następnie wywołuje jednej metody do obsługi tych oddzielnych zdarzeń w taki sam sposób.
+ Delegaty umożliwiają również powiązanie wielu zdarzeń z tą samą metodą, co pozwala na powiadomienie wiele-do-jednego. Na przykład zdarzenie kliknięcia przycisku i menu-polecenie-kliknięcie zdarzenia może wywoływać tego samego delegata, który następnie wywołuje pojedynczą metodę w celu obsługi tych oddzielnych zdarzeń w ten sam sposób.
 
- Mechanizm powiązania, używany przy użyciu delegatów jest elementem dynamicznym: Delegat może być powiązana, w czasie wykonywania do dowolnej metody, którego podpis jest zgodny z typem obsługi zdarzeń. Za pomocą tej funkcji można zdefiniować lub zmienić metodę powiązanej zależności od warunku i dynamicznie dołączyć program obsługi zdarzeń do formantu.
+ Mechanizm powiązań używany z delegatami jest dynamiczny: delegat może być powiązany w czasie wykonywania do dowolnej metody, której sygnatura jest zgodna z programem obsługi zdarzeń. Za pomocą tej funkcji można skonfigurować lub zmienić metodę powiązaną w zależności od warunku i dynamicznie dołączyć procedurę obsługi zdarzeń do kontrolki.
 
 ## <a name="see-also"></a>Zobacz także
 

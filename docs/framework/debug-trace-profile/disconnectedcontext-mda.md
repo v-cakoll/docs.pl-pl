@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d97ee808ef7d2a14902259c47227b787f0830fb
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1819fffaf2eccb6a26578eaf993100b8eca7c76e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629377"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966436"
 ---
 # <a name="disconnectedcontext-mda"></a>disconnectedContext MDA
 Asystent `disconnectedContext` debugowania zarządzanego (MDA) jest uaktywniany, gdy środowisko CLR próbuje przejść do odłączonego apartamentu lub kontekstu podczas obsługi żądania dotyczącego obiektu com.  
   
 ## <a name="symptoms"></a>Symptomy  
- Wywołania wywoływanej [otoki środowiska uruchomieniowego](../../../docs/standard/native-interop/runtime-callable-wrapper.md) (RCW) są dostarczane do źródłowego składnika COM w bieżącym elemencie Apartment lub Context, a nie na tym, w którym istnieją. Może to spowodować uszkodzenie lub utratę danych, jeśli składnik COM nie jest wielowątkowy, tak jak w przypadku składników jednowątkowego apartamentu (STA). Alternatywnie, jeśli otoka jest samodzielnym serwerem proxy, wywołanie może spowodować wyrzucanie <xref:System.Runtime.InteropServices.COMException> z wynikami HRESULT RPC_E_WRONG_THREAD.  
+ Wywołania wywoływanej [otoki środowiska uruchomieniowego](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) są dostarczane do źródłowego składnika COM w bieżącym elemencie Apartment lub Context, a nie na tym, w którym istnieją. Może to spowodować uszkodzenie lub utratę danych, jeśli składnik COM nie jest wielowątkowy, tak jak w przypadku składników jednowątkowego apartamentu (STA). Alternatywnie, jeśli otoka jest samodzielnym serwerem proxy, wywołanie może spowodować wyrzucanie <xref:System.Runtime.InteropServices.COMException> z wynikami HRESULT RPC_E_WRONG_THREAD.  
   
 ## <a name="cause"></a>Przyczyna  
  Obiekt OLE Apartment lub kontekst został zamknięty, gdy środowisko CLR podejmie próbę przejścia do niego. Jest to najczęściej spowodowane tym, że STA apartamentach jest zamykany zanim wszystkie składniki COM będące własnością elementu Apartment zostały całkowicie wydane, może się to zdarzyć w wyniku jawnego wywołania kodu użytkownika na otoki RCW lub gdy samo środowisko CLR operuje na składniku COM. na przykład gdy środowisko CLR zwalnia składnik COM, gdy skojarzona Otoka RCW została odtworzona.  

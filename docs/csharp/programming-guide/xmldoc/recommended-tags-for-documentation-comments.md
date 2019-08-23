@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: 4506402c85096ae0ae11b28ad03646c7fa215e5a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ac8629dacbb8c1fde1f55468e5d2aeaf78cfe017
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587815"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928026"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Znaczniki zalecane dla komentarzy do dokumentacji (Przewodnik programowania w języku C#)
 Kompilator przetwarza komentarze dokumentacji w kodzie i formatuje je jako XML w pliku, którego nazwa została określona w opcji wiersza polecenia **/doc.** C# Aby utworzyć ostateczną dokumentację opartą na pliku generowanym przez kompilator, można utworzyć niestandardowe narzędzie lub użyć narzędzia, takiego jak [DocFX](https://dotnet.github.io/docfx/) lub [Sandcastle](https://github.com/EWSoftware/SHFB).  
@@ -19,7 +19,7 @@ Kompilator przetwarza komentarze dokumentacji w kodzie i formatuje je jako XML w
  Tagi są przetwarzane na konstrukcjach kodu, takich jak typy i elementy członkowskie typu.  
   
 > [!NOTE]
->  Komentarzy do dokumentacji nie można zastosować do przestrzeni nazw.  
+> Komentarzy do dokumentacji nie można zastosować do przestrzeni nazw.  
   
  Kompilator będzie przetwarzać dowolny tag, który jest prawidłowym kodem XML. Poniższe Tagi zapewniają ogólnie używane funkcje w dokumentacji użytkownika.  
   

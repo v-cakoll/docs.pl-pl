@@ -1,17 +1,17 @@
 ---
 title: Funkcje zewnętrzne
-description: Dowiedz się więcej o F# Obsługa języków w programie wywoływanie funkcji w kodzie natywnym.
+description: Dowiedz się F# więcej o obsłudze języka dla wywoływania funkcji w kodzie natywnym.
 ms.date: 05/16/2016
-ms.openlocfilehash: 73e38d8942bfc8ddb3c51d126d7678e84903326b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3c8edaba25e07b6ca2c44a58c4b55dc98a13b4fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642035"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968730"
 ---
 # <a name="external-functions"></a>Funkcje zewnętrzne
 
-W tym temacie opisano F# Obsługa języków w programie wywoływanie funkcji w kodzie natywnym.
+W tym temacie F# opisano obsługę języka na potrzeby wywoływania funkcji w kodzie natywnym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -22,9 +22,9 @@ extern declaration
 
 ## <a name="remarks"></a>Uwagi
 
-W poprzedniej składni *argumenty* reprezentuje argumenty, które są dostarczane do `System.Runtime.InteropServices.DllImportAttribute` atrybutu. Pierwszy argument jest ciąg reprezentujący nazwę pliku dll, który zawiera tej funkcji bez rozszerzenie dll. Dodatkowe argumenty mogą być podawane dla każdej właściwości publicznej `System.Runtime.InteropServices.DllImportAttribute` klasę, takie jak konwencji wywoływania.
+W poprzedniej składni *argumenty* reprezentują argumenty, które są dostarczone do `System.Runtime.InteropServices.DllImportAttribute` atrybutu. Pierwszy argument jest ciągiem, który reprezentuje nazwę biblioteki DLL, która zawiera tę funkcję, bez rozszerzenia dll. Dodatkowe argumenty można dostarczyć dla którejkolwiek z właściwości `System.Runtime.InteropServices.DllImportAttribute` publicznych klasy, takich jak Konwencja wywoływania.
 
-Załóżmy, że masz natywne biblioteki DLL C++, który zawiera następujące wyeksportowanej funkcji.
+Załóżmy, że masz natywną C++ bibliotekę DLL, która zawiera następującą wyeksportowaną funkcję.
 
 ```cpp
 #include <stdio.h>
@@ -34,7 +34,7 @@ extern "C" void __declspec(dllexport) HelloWorld()
 }
 ```
 
-Możesz wywołać tę funkcję z F# przy użyciu następującego kodu.
+Można wywołać tę funkcję z F# programu przy użyciu następującego kodu.
 
 ```fsharp
 open System.Runtime.InteropServices
@@ -46,7 +46,7 @@ module InteropWithNative =
 InteropWithNative.HelloWorld()
 ```
 
-Współdziałanie z kodem natywnym nazywa się *wywołania platformy* funkcja środowiska CLR. Aby uzyskać więcej informacji, zobacz [współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md). Informacje przedstawione w tej sekcji ma zastosowanie do F#.
+Współdziałanie z kodem natywnym jest określane jako *wywołanie platformy* i jest funkcją środowiska CLR. Aby uzyskać więcej informacji, zobacz Współdziałanie [z kodem](../../../framework/interop/index.md)niezarządzanym. Informacje zawarte w tej sekcji dotyczą programu F#.
 
 ## <a name="see-also"></a>Zobacz także
 

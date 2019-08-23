@@ -2,21 +2,21 @@
 title: <transport> dla <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: 8dcd51cd248dbba3ccf60295cb1712167684328e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f78add5397644dc40bfd22f10bd84aa5c5eb29e6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788274"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923210"
 ---
-# <a name="transport-of-webhttpbinding"></a>\<transport > z \<webHttpBinding >
-Określa ustawienia zabezpieczenia na poziomie transportu dla punktu końcowego skonfigurowanego do odbierania żądań HTTP.  
+# <a name="transport-of-webhttpbinding"></a>\<Transport > elementu \<WebHttpBinding >
+Definiuje ustawienia zabezpieczeń na poziomie transportu dla punktu końcowego usługi skonfigurowanego do odbierania żądań HTTP.  
   
  \<system.ServiceModel>  
-\<powiązania >  
+\<> powiązań  
 \<webHttpBinding>  
-\<Powiązanie >  
-\<security>  
+\<> powiązania  
+\<> zabezpieczeń  
 \<transport>  
   
 ## <a name="syntax"></a>Składnia  
@@ -49,31 +49,31 @@ Określa ustawienia zabezpieczenia na poziomie transportu dla punktu końcowego 
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`clientCredentialType`|Określa poświadczenia używane do uwierzytelniania klienta do usługi. Ten atrybut jest typu <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|`proxyCredentialType`|Określa poświadczenia używane do uwierzytelniania klienta do domeny serwera proxy. Ten atrybut jest typu <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|`realm`|Ciąg, który określa obszar uwierzytelniania dla uwierzytelniania podstawowego lub szyfrowanego. Wartość domyślna to ciąg pusty.<br /><br /> Obszar uwierzytelniania co najmniej Określa nazwę hosta, który przeprowadza uwierzytelnianie. Można również określić zbiór użytkowników, które ma dostęp. Użytkownika można badać obszaru uwierzytelniania, aby upewnić się, co kilka możliwych nazw użytkowników i haseł może służyć.|  
-|`policyEnforcement`|To wyliczenie Określa, kiedy <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> powinny być wymuszane.<br /><br /> 1.  Nigdy nie — zasady nigdy nie są wymuszane (ochrony rozszerzonej jest wyłączone).<br />2.  WhenSupported — zasady są wymuszane tylko wtedy, gdy klient obsługuje ochrony rozszerzonej.<br />3.  Zawsze — zasady zawsze są wymuszane. Klienci, którzy nie obsługują ochrony rozszerzonej zakończy się niepowodzeniem do uwierzytelniania.|  
+|`clientCredentialType`|Określa poświadczenie używane do uwierzytelniania klienta w usłudze. Ten atrybut jest typu <xref:System.ServiceModel.HttpClientCredentialType>.|  
+|`proxyCredentialType`|Określa poświadczenie używane do uwierzytelniania klienta programu na serwerze proxy domeny. Ten atrybut jest typu <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|`realm`|Ciąg określający obszar uwierzytelniania dla uwierzytelniania szyfrowanego lub podstawowego. Wartość domyślna to pusty ciąg.<br /><br /> Obszar uwierzytelniania określa co najmniej nazwę hosta, który wykonuje uwierzytelnianie. Można również określić kolekcję użytkowników, którzy mają dostęp. Użytkownik może wysyłać zapytania do obszaru uwierzytelniania, aby upewnić się, że można użyć jednej z kilku nazw użytkowników i haseł.|  
+|`policyEnforcement`|To Wyliczenie określa, <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> Kiedy należy wymusić.<br /><br /> 1.  Nigdy — zasady nigdy nie są wymuszane (ochrona rozszerzona jest wyłączona).<br />2.  WhenSupported — zasady są wymuszane tylko wtedy, gdy klient obsługuje ochronę rozszerzoną.<br />3.  Zawsze — zasady są zawsze wymuszane. Klienci, którzy nie obsługują rozszerzonej ochrony, nie będą uwierzytelniani.|  
   
-## <a name="clientcredentialtype-attribute"></a>właściwości ClientCredentialType o wartości atrybutu  
-  
-|Wartość|Opis|  
-|-----------|-----------------|  
-|`None`|Zabezpieczenia są wyłączone.|  
-|`Basic`|Korzysta z uwierzytelniania podstawowego.|  
-|`Certificate`|Przy użyciu certyfikatów X.509 do uwierzytelniania klienta.|  
-|`Digest`|Uwierzytelnianie szyfrowane używa.|  
-|`Ntlm`|Korzysta z uwierzytelniania NTLM, jako rezerwowe z domeną systemu Windows.|  
-|`Windows`|Używa zintegrowanego uwierzytelniania Windows.|  
-  
-## <a name="proxycredentialtype-attribute"></a>proxyCredentialType atrybutu  
+## <a name="clientcredentialtype-attribute"></a>clientCredentialtype — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |`None`|Zabezpieczenia są wyłączone.|  
-|`Basic`|Korzysta z uwierzytelniania podstawowego.|  
-|`Digest`|Uwierzytelnianie szyfrowane używa.|  
-|`Ntlm`|Wykorzystuje NTLM jako rezerwowe z domeną systemu Windows.|  
-|`Windows`|Używa zintegrowanego uwierzytelniania Windows.|  
+|`Basic`|Używa uwierzytelniania podstawowego.|  
+|`Certificate`|Uwierzytelnia klienta za pomocą certyfikatów X. 509.|  
+|`Digest`|Używa uwierzytelniania szyfrowanego.|  
+|`Ntlm`|Używa uwierzytelniania NTLM jako rezerwy z domeną systemu Windows.|  
+|`Windows`|Używa zintegrowanego uwierzytelniania systemu Windows.|  
+  
+## <a name="proxycredentialtype-attribute"></a>proxyCredentialType — atrybut  
+  
+|Wartość|Opis|  
+|-----------|-----------------|  
+|`None`|Zabezpieczenia są wyłączone.|  
+|`Basic`|Używa uwierzytelniania podstawowego.|  
+|`Digest`|Używa uwierzytelniania szyfrowanego.|  
+|`Ntlm`|Używa protokołu NTLM jako rezerwy z domeną systemu Windows.|  
+|`Windows`|Używa zintegrowanego uwierzytelniania systemu Windows.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -82,7 +82,7 @@ Określa ustawienia zabezpieczenia na poziomie transportu dla punktu końcowego 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|Reprezentuje możliwości zabezpieczeń [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elementu.|  
+|[\<> zabezpieczeń](security-of-webhttpbinding.md)|Reprezentuje możliwości [ \<zabezpieczeń elementu > WSHttpBinding](wshttpbinding.md) .|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -90,9 +90,9 @@ Określa ustawienia zabezpieczenia na poziomie transportu dla punktu końcowego 
 - <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
-- [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<> powiązania](../../../misc/binding.md)
+- [Model programowania protokołu HTTP sieci Web w programie WCF](../../../wcf/feature-details/wcf-web-http-programming-model.md)

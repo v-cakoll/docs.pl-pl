@@ -5,44 +5,44 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: ac5817c5c1cfcf88be3f85836749eed53004dd43
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3080514d06119a2f1b621cff16056ac7577c30b3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591135"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966803"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Instrukcje: asynchroniczne wywoływanie operacji za pomocą fabryki kanałów
-W tym temacie opisano, jak klient może uzyskać dostęp do operacji usługi asynchronicznie podczas korzystania <xref:System.ServiceModel.ChannelFactory%601>— na podstawie aplikacji klienckiej. (Korzystając z <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> obiektu, aby wywołać usługę, można użyć oparte na zdarzeniach asynchronicznych wywoływania modelu. Aby uzyskać więcej informacji, zobacz [jak: Asynchroniczne wywoływanie operacji usługi](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Aby uzyskać więcej informacji na temat oparte na zdarzeniach asynchronicznych wywoływania modelu, zobacz [oparte na zdarzeniach asynchroniczny wzorzec (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
+W tym temacie opisano, w jaki sposób klient może uzyskiwać dostęp do operacji usługi <xref:System.ServiceModel.ChannelFactory%601>asynchronicznej podczas korzystania z aplikacji klienckiej opartej na. (W przypadku używania <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> obiektu do wywoływania usługi można użyć opartego na zdarzeniach asynchronicznego modelu wywoływania. Aby uzyskać więcej informacji, zobacz [jak: Asynchroniczne](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)wywoływanie operacji usługi. Aby uzyskać więcej informacji o asynchronicznym modelu wywoływania opartych na zdarzeniach, zobacz [asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
   
- Implementuje usługę, w tym temacie `ICalculator` interfejsu. Klient może asynchroniczne wywoływanie operacji w tym interfejsie, co oznacza, że operacje, takie jak `Add` są podzielone na dwie metody `BeginAdd` i `EndAdd`, pierwsza z nich inicjuje wywołanie i drugim z nich pobiera wyniki Po zakończeniu operacji. Przykład przedstawiający sposób implementowania operacji asynchronicznie w ramach usługi, zobacz [jak: Implementowanie asynchronicznej operacji usługi](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Aby uzyskać szczegółowe informacje o operacje synchroniczne i asynchroniczne, zobacz [synchroniczne i asynchroniczne operacje](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
+ Usługa w tym temacie implementuje `ICalculator` interfejs. Klient może wywoływać operacje w tym interfejsie asynchronicznie, co oznacza, że `Add` operacje takie jak są podzielone na `BeginAdd` dwie `EndAdd`metody, a pierwsza, która inicjuje wywołanie, a drugie, które pobiera wynik. Po zakończeniu operacji. Przykład przedstawiający sposób asynchronicznego implementowania operacji w usłudze można znaleźć w temacie [How to: Implementowanie asynchronicznej operacji](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)usługi. Aby uzyskać szczegółowe informacje na temat operacji synchronicznych i asynchronicznych, zobacz [Operacje synchroniczne i asynchroniczne](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
   
 ## <a name="procedure"></a>Procedura  
   
-#### <a name="to-call-wcf-service-operations-asynchronously"></a>Aby asynchroniczne wywoływanie operacji usługi WCF  
+#### <a name="to-call-wcf-service-operations-asynchronously"></a>Aby asynchronicznie wywoływać operacje usługi WCF  
   
-1. Uruchom [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzia z `/async` opcji, jak pokazano w poniższym poleceniu.  
+1. Uruchom narzędzie narzędzia [metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) z `/async` opcją, jak pokazano w poniższym poleceniu.  
   
     ```  
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a  
     ```  
   
-     Spowoduje to wygenerowanie klienta asynchroniczną wersję kontraktu usługi dla tej operacji.  
+     Spowoduje to wygenerowanie asynchronicznej wersji klienta kontraktu usługi dla operacji.  
   
-2. Utwórz funkcję wywołania zwrotnego wywoływana, gdy operacja asynchroniczna jest zakończona, jak pokazano w poniższym przykładowym kodzie.  
+2. Utwórz funkcję wywołania zwrotnego, która ma być wywoływana po zakończeniu operacji asynchronicznej, jak pokazano w poniższym przykładowym kodzie.  
   
      [!code-csharp[C_How_To_CF_Async#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/client.cs#2)]
      [!code-vb[C_How_To_CF_Async#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/client.vb#2)]  
   
-3. Aby uzyskać dostęp do operacji usługi asynchronicznie, należy utworzyć klienta i wywołania `Begin[Operation]` (na przykład `BeginAdd`) i określić funkcję wywołania zwrotnego, jak pokazano w poniższym przykładowym kodzie.  
+3. Aby uzyskać dostęp do operacji usługi asynchronicznej, Utwórz klienta i Wywołaj `Begin[Operation]` (na `BeginAdd`przykład) i określ funkcję wywołania zwrotnego, jak pokazano w poniższym przykładowym kodzie.  
   
      [!code-csharp[C_How_To_CF_Async#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/client.cs#3)]
      [!code-vb[C_How_To_CF_Async#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/client.vb#3)]  
   
-     Podczas wykonywania funkcji wywołania zwrotnego, gdy klient wywołuje `End<operation>` (na przykład `EndAdd`) można pobrać wyniku.  
+     Gdy funkcja wywołania zwrotnego jest wykonywana, klient `End<operation>` wywołuje (na `EndAdd`przykład), aby pobrać wynik.  
   
 ## <a name="example"></a>Przykład  
- Usługa, która jest używana z kodu klienta, który jest używany w poprzedniej procedurze implementuje `ICalculator` interfejsu, jak pokazano w poniższym kodzie. Na stronie usługi `Add` i `Subtract` operacji kontraktu jest wywołana synchronicznie przez Windows Communication Foundation (WCF) w czasie wykonywania, nawet jeśli poprzednie kroki klienta są wywoływane asynchronicznie na komputerze klienckim. `Multiply` i `Divide` operacje są używane do wywoływania usługi asynchronicznie po stronie usługi, nawet wtedy, gdy klient wywołuje je synchronicznie. W tym przykładzie <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> właściwość `true`. Ustawienie właściwości w połączeniu z implementacji wzorca asynchronicznego środowiska .NET Framework informuje o czasie wykonywania wywołania operacji asynchronicznie.  
+ Usługa, która jest używana z kodem klienta używanym w poprzedniej procedurze, implementuje `ICalculator` interfejs, jak pokazano w poniższym kodzie. Po stronie `Add` usługi i `Subtract` operacje kontraktu są wywoływane synchronicznie przez czas wykonywania Windows Communication Foundation (WCF), mimo że poprzednia procedura klienta jest wywoływana asynchronicznie na kliencie. Operacje `Multiply` i`Divide` są używane do wywołania usługi asynchronicznie po stronie usługi, nawet jeśli klient wywołuje je synchronicznie. Ten przykład ustawia <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> właściwość na `true`. To ustawienie właściwości, w połączeniu z implementacją wzorca asynchronicznego .NET Framework, informuje czas wykonywania, aby wywołać operację asynchronicznie.  
   
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  

@@ -14,25 +14,25 @@ helpviewer_keywords:
 - text boxes [Windows Forms], formatting text
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
-ms.openlocfilehash: a6fe5b30c457fae2d53c946092b214f492fe5e9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4919e94c23b1a67680ea0f360304ee0f75c7f425
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013273"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963222"
 ---
 # <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Instrukcje: ustawianie atrybutów czcionki dla kontrolki RichTextBox formularzy systemu Windows
-Formularze Windows <xref:System.Windows.Forms.RichTextBox> kontrolka ma wiele opcji formatowania tekstu, zostanie wyświetlony. Aby włączyć wybranych znaków pogrubienie, podkreślony lub kursywa, przy użyciu <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> właściwości. Ta właściwość umożliwia również zmienić rozmiar i krój czcionki wybranych znaków. <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> Właściwości umożliwia zmianę koloru zaznaczonych znaków.  
+Kontrolka <xref:System.Windows.Forms.RichTextBox> Windows Forms ma wiele opcji formatowania wyświetlanego tekstu. Można wybrać pogrubienie, podkreślenie lub kursywę przy użyciu <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> właściwości. Można także użyć tej właściwości, aby zmienić rozmiar i krój czcionki wybranych znaków. <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> Właściwość pozwala zmieniać kolor wybranych znaków.  
   
 ### <a name="to-change-the-appearance-of-characters"></a>Aby zmienić wygląd znaków  
   
-1. Ustaw <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> właściwość odpowiednią czcionkę.  
+1. <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> Ustaw właściwość na odpowiednią czcionkę.  
   
-     Aby umożliwić użytkownikom ustawić rodzinę czcionek, rozmiar i krój czcionki w aplikacji, zazwyczaj używasz <xref:System.Windows.Forms.FontDialog> składnika. Aby uzyskać przegląd, zobacz [— informacje o składniku FontDialog](fontdialog-component-overview-windows-forms.md).  
+     Aby umożliwić użytkownikom ustawianie rodziny czcionek, rozmiaru i kroju pisma w aplikacji, zazwyczaj używany jest <xref:System.Windows.Forms.FontDialog> składnik. Aby zapoznać się z omówieniem, zobacz [Omówienie składnika FontDialog](fontdialog-component-overview-windows-forms.md).  
   
-2. Ustaw <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> właściwość odpowiedni kolor.  
+2. <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> Ustaw właściwość na odpowiedni kolor.  
   
-     Aby umożliwić użytkownikom ustawić kolor w aplikacji, zazwyczaj używasz <xref:System.Windows.Forms.ColorDialog> składnika. Aby uzyskać przegląd, zobacz [ColorDialog, składnik — omówienie](colordialog-component-overview-windows-forms.md).  
+     Aby umożliwić użytkownikom ustawianie koloru w aplikacji, zazwyczaj używany jest <xref:System.Windows.Forms.ColorDialog> składnik. Aby zapoznać się z omówieniem, zobacz [Omówienie składnika ColorDialog](colordialog-component-overview-windows-forms.md).  
   
     ```vb  
     RichTextBox1.SelectionFont = New Font("Tahoma", 12, FontStyle.Bold)  
@@ -51,7 +51,7 @@ Formularze Windows <xref:System.Windows.Forms.RichTextBox> kontrolka ma wiele op
     ```  
   
     > [!NOTE]
-    >  Te właściwości mają wpływ tylko na zaznaczony tekst lub, jeśli nie wybrano tekstu, tekst jest wpisane w bieżącej lokalizacji punktu wstawiania. Aby uzyskać informacji na temat programowy wybór tekstu, zobacz <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
+    > Te właściwości mają wpływ tylko na zaznaczony tekst lub, jeśli nie wybrano tekstu, tekst, który jest wpisywany w bieżącej lokalizacji punktu wstawiania. Aby uzyskać informacje na temat wybierania tekstu programowo <xref:System.Windows.Forms.TextBoxBase.Select%2A>, zobacz.  
   
 ## <a name="see-also"></a>Zobacz także
 

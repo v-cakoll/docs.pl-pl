@@ -9,12 +9,12 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 2bbd81867b3c20d8ac16bdd79fcc9a3cc7bbb55c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 43bc3c40bfc0b0ce4c0b18683092faf8b67e1c04
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659686"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927693"
 ---
 # <a name="systemcodedom-element"></a>\<system.codedom> Element
 Określa ustawienia konfiguracji kompilatora dla dostępnych dostawców języka.  
@@ -56,7 +56,7 @@ Określa ustawienia konfiguracji kompilatora dla dostępnych dostawców języka.
  Deweloperzy i dostawcy kompilatora mogą dodać ustawienia konfiguracji do pliku konfiguracji komputera (Machine. config), aby uzyskać nową <xref:System.CodeDom.Compiler.CodeDomProvider> implementację. Użyj metody <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> , aby programowo wyliczyć zarówno domyślnych dostawców języka, jak i dostawców języka identyfikowanych przez ustawienia konfiguracji kompilatora na komputerze.  
   
 > [!NOTE]
->  W .NET Framework wersje 1,0 i 1,1 dostawcy języka domyślnego dostarczone przez .NET Framework są identyfikowane w [ \<elemencie > kompilatory](compilers-element.md) . W .NET Framework w wersji 2,0 dostawcy języka domyślnego nie są identyfikowane w [ \<kompilatorach >](compilers-element.md) elementu, ale można je <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> wyliczyć przy użyciu metody.  
+> W .NET Framework wersje 1,0 i 1,1 dostawcy języka domyślnego dostarczone przez .NET Framework są identyfikowane w [ \<elemencie > kompilatory](compilers-element.md) . W .NET Framework w wersji 2,0 dostawcy języka domyślnego nie są identyfikowane w [ \<kompilatorach >](compilers-element.md) elementu, ale można je <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> wyliczyć przy użyciu metody.  
   
 ## <a name="net-framework-versions-10-and-11"></a>.NET Framework wersje 1,0 i 1,1  
  Element [System. CodeDom > zawiera ustawienia konfiguracji kompilatora dla dostawców języka na komputerze. \<](system-codedom-element.md) Kompilator > element zawiera zero lub więcej [ \<elementów > kompilatora](compiler-element.md) . [ \<](compilers-element.md) Każdy element kompilatora > określa atrybuty konfiguracji kompilatora dla określonego dostawcy języka. [ \<](compiler-element.md)  

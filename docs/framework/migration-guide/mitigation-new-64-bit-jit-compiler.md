@@ -1,5 +1,5 @@
 ---
-title: 'Środki zaradcze: Nowy kompilator JIT 64-bitowych'
+title: Środki zaradcze Nowy 64-bitowy kompilator JIT
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compiler, 64-bit
@@ -8,51 +8,51 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22c98e41624abc931bd03e4ddea09ed55d0d3f39
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648483"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968522"
 ---
-# <a name="mitigation-new-64-bit-jit-compiler"></a>Środki zaradcze: Nowy kompilator JIT 64-bitowych
-Począwszy od programu .NET Framework 4.6, środowisko uruchomieniowe zawiera nowe 64-bitowego kompilatora JIT dla kompilacji just in time. Ta zmiana nie ma wpływu na kompilacji z 32-bitowego kompilatora JIT.  
+# <a name="mitigation-new-64-bit-jit-compiler"></a>Środki zaradcze Nowy 64-bitowy kompilator JIT
+Począwszy od .NET Framework 4,6, środowisko uruchomieniowe zawiera nowy, 64-bitowy kompilator JIT dla kompilacji just in Time. Ta zmiana nie ma wpływu na kompilację z 32-bitowym kompilatorem JIT.  
   
-## <a name="unexpected-behavior-or-exceptions"></a>Wyjątki lub nieoczekiwane zachowanie  
- W niektórych przypadkach kompilacji za pomocą nowego 64-bitowy kompilator JIT powoduje wyjątek czasu wykonywania, lub zachowanie, które nie zostanie wykryty podczas wykonywania kodu skompilowanego przez starsze 64-bitowego kompilatora JIT. Znane różnice są następujące:  
+## <a name="unexpected-behavior-or-exceptions"></a>Nieoczekiwane zachowanie lub wyjątki  
+ W niektórych przypadkach kompilacja z nowym 64-bitowym kompilatorem JIT powoduje wyjątek czasu wykonywania lub zachowanie, które nie jest zaobserwowane podczas wykonywania kodu skompilowanego przez starszy, 64-bitowy kompilator JIT. Znane różnice obejmują następujące elementy:  
   
 > [!IMPORTANT]
->  Rozwiązano wszystkich tych znanych problemów występujących w kompilator 64-bitowego wydania przy użyciu platformy .NET Framework 4.6.2. Większość ma również problem ten został rozwiązany w wersjach usługi programu .NET Framework 4.6 i 4.6.1, które są dołączone do aktualizacji Windows. Aby wyeliminować te problemy, zapewniając danej wersji systemu Windows jest aktualny, lub po uaktualnieniu do programu .NET Framework 4.6.2.  
+> Wszystkie znane problemy zostały rozwiązane w nowym kompilatorze 64-bitowym, który został wystawiony .NET Framework 4.6.2. Większość została również omówiona w wersjach usługi .NET Framework 4,6 i 4.6.1, które są dołączone do Windows Update. Te problemy można wyeliminować, upewniając się, że wersja systemu Windows jest aktualna, lub przez uaktualnienie do .NET Framework 4.6.2.  
   
-- W pewnych okolicznościach może zgłaszać operacja rozpakowania <xref:System.NullReferenceException> w kompilacjach wydania przy użyciu optymalizacji włączona.  
+- W pewnych warunkach operacja rozpakowywania może zgłosić <xref:System.NullReferenceException> kompilacje wydania z włączoną optymalizacją.  
   
-- W niektórych przypadkach może zgłaszać wykonywania kodu produkcyjnego w treści metody dużych <xref:System.StackOverflowException>.  
+- W niektórych przypadkach wykonanie kodu produkcyjnego w dużej treści metody może spowodować wygenerowanie <xref:System.StackOverflowException>.  
   
-- Pod pewnymi warunkami struktury przekazany do metody są traktowane jako typy odwołań, a nie typy wartości w wersji kompilacji. Jednym z przejawy tego problemu jest to, czy poszczególnych elementów w kolekcji są wyświetlane w nieoczekiwanej kolejności.  
+- W pewnych warunkach struktury przesłane do metody są traktowane jako typy referencyjne, a nie typy wartości w kompilacjach wydań. Jednym z manifestów tego problemu jest to, że poszczególne elementy w kolekcji pojawiają się w nieoczekiwanej kolejności.  
   
-- W pewnych okolicznościach porównanie <xref:System.UInt16> wartości za pomocą ich zestaw wysokobitowych jest nieprawidłowy, gdy Optymalizacja jest włączona.  
+- W pewnych warunkach porównanie <xref:System.UInt16> wartości z ich dużym zestawem bitowym jest nieprawidłowe, jeśli Optymalizacja jest włączona.  
   
-- Pod pewnymi warunkami, szczególnie podczas inicjowania tablicy wartości, inicjowanie pamięci przez <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=nameWithType> instrukcja IL może zainicjować pamięci o nieprawidłowej wartości. Może to spowodować w nieobsługiwany wyjątek lub nieprawidłowych danych wyjściowych.  
+- W określonych warunkach, szczególnie podczas inicjowania wartości tablicowych, Inicjalizacja pamięci <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=nameWithType> przez instrukcję Il może inicjować pamięć z nieprawidłową wartością. Może to spowodować nieobsługiwany wyjątek lub nieprawidłowe dane wyjściowe.  
   
-- W pewnych okolicznościach rzadkich test warunkowy bit może zwracać nieprawidłowe <xref:System.Boolean> wartość lub zgłosić wyjątek, jeśli są włączone optymalizacje kompilatora.  
+- W niektórych rzadkich warunkach alternatywny test bitowy może zwrócić niepoprawną <xref:System.Boolean> wartość lub zgłosić wyjątek, jeśli Optymalizacja kompilatora jest włączona.  
   
-- Pod pewnymi warunkami Jeśli `if` instrukcja jest używane do testowania dla warunku przed wejściem `try` bloku i wyjścia z `try` bloku, a tym samym stanie, które jest obliczane w `catch` lub `finally` bloku, Nowa Usuwa 64-bitowy kompilator JIT `if` warunku z `catch` lub `finally` zablokować, jeśli optymalizuje kod. W rezultacie kod wewnątrz `if` instrukcji w `catch` lub `finally` bezwarunkowo wykonaniu bloku.  
+- W pewnych warunkach, jeśli `if` instrukcja jest używana do testowania warunku przed `try` wprowadzeniem bloku i wyjścia z `try` bloku, `catch` a ten sam warunek jest obliczany w bloku lub `finally` , nowy 64-bitowy kompilator JIT usuwa `if` warunek `catch` z bloku lub `finally` , gdy optymalizuje kod. W związku z tym kod wewnątrz `if` instrukcji `catch` w bloku lub `finally` jest wykonywany bezwarunkowo.  
   
 <a name="General"></a>   
-## <a name="mitigation-of-known-issues"></a>Ograniczenie znane problemy  
- Jeśli wystąpią problemy z wymienionych powyżej, można je rozwiązać, wykonując następujące czynności:  
+## <a name="mitigation-of-known-issues"></a>Eliminowanie znanych problemów  
+ Jeśli napotkasz wymienione powyżej problemy, możesz je rozwiązać, wykonując jedną z następujących czynności:  
   
-- Uaktualnianie do programu .NET Framework 4.6.2. Kompilator 64-bitowych dołączone do programu .NET Framework 4.6.2 dotyczy każdego z tych znanych problemów.  
+- Uaktualnij do .NET Framework 4.6.2. Nowy kompilator 64-bitowy dołączony do .NET Framework 4.6.2 odnosi się do każdego z tych znanych problemów.  
   
-- Upewnij się, że Twoja wersja programu Windows bądź na bieżąco, uruchamiając Windows Update. Aktualizacje usług .NET Framework 4.6 i 4.6.1 dotyczą każdego z tych problemów, z wyjątkiem <xref:System.NullReferenceException> w operacja rozpakowania.  
+- Upewnij się, że wersja systemu Windows jest aktualna, uruchamiając Windows Update. Aktualizacje usługi dla .NET Framework 4,6 i 4.6.1 odnoszą się do każdego z tych problemów <xref:System.NullReferenceException> , z wyjątkiem w przypadku operacji rozpakowywania.  
   
-- Kompiluj przy użyciu starszych 64-bitowego kompilatora JIT. Zobacz [ograniczenia inne problemy z](#Other) sekcji, aby uzyskać więcej informacji na temat sposobu wykonania tego zadania.  
+- Kompiluj ze starszym 64-bitowym kompilatorem JIT. Więcej informacji o tym, jak to zrobić, znajduje się w sekcji [eliminowanie innych problemów](#Other) .  
   
 <a name="Other"></a>   
-## <a name="mitigation-of-other-issues"></a>Ograniczenie inne problemy  
- Jeśli występują inne różnice w zachowaniu między kodu skompilowanego za pomocą starszego kompilatora 64-bitowych i nowe 64-bitowy kompilator JIT lub debug i release wersje aplikacji, które przy użyciu nowego 64-bitowy kompilator JIT są kompilowane, można wykonaj następujące czynności Aby skompilować aplikację przy użyciu starszych 64-bitowy kompilator JIT:  
+## <a name="mitigation-of-other-issues"></a>Eliminowanie innych problemów  
+ Jeśli wystąpią inne różnice w zachowaniu kodu skompilowanego ze starszym kompilatorem 64-bitowym i nowym 64-bitowym kompilatorem JIT lub między wersjami Debug i Release aplikacji, które są kompilowane przy użyciu nowego, 64-bitowego kompilatora JIT, można wykonać następujące czynności Aby skompilować aplikację ze starszym 64-bitowym kompilatorem JIT:  
   
-- Na podstawie poszczególnych aplikacji można dodać [ \<useLegacyJit >](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) element do pliku konfiguracji aplikacji. Następujące wyłącza kompilacji za pomocą nowego 64-bitowy kompilator JIT i zamiast tego używa starszej wersji 64-bitowego kompilatora JIT.  
+- Dla poszczególnych aplikacji można dodać [ \<element useLegacyJit >](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) do pliku konfiguracji aplikacji. Następujące wyłączenie kompilacji z nowym 64-bitowym kompilatorem JIT, a zamiast tego używa starszego, 64-bitowego kompilatora JIT.  
   
     ```xml  
     <?xml version ="1.0"?>  
@@ -63,11 +63,11 @@ Począwszy od programu .NET Framework 4.6, środowisko uruchomieniowe zawiera no
     </configuration>  
     ```  
   
-- Na poszczególnych użytkowników, możesz dodać `REG_DWORD` wartość o nazwie `useLegacyJit` do `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` klucza rejestru. Wartość 1 umożliwia starszej wersji 64-bitowy kompilator JIT; wartość 0 wyłącza je i włącza nowe 64-bitowego kompilatora JIT.  
+- Dla poszczególnych użytkowników można dodać `REG_DWORD` wartość o nazwie `useLegacyJit` do `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` klucza rejestru. Wartość 1 powoduje włączenie starszego 64-bitowego kompilatora JIT; wartość 0 powoduje wyłączenie i włączenie nowego kompilatora 64-bitowego JIT.  
   
-- Na poszczególnych komputerach, można dodać `REG_DWORD` wartość o nazwie `useLegacyJit` do `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` klucza rejestru. Wartość 1 umożliwia starszej wersji 64-bitowy kompilator JIT; wartość 0 wyłącza je i włącza nowe 64-bitowego kompilatora JIT.  
+- Dla poszczególnych maszyn można dodać `REG_DWORD` wartość o nazwie `useLegacyJit` do `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` klucza rejestru. Wartość 1 powoduje włączenie starszego 64-bitowego kompilatora JIT; wartość 0 powoduje wyłączenie i włączenie nowego kompilatora 64-bitowego JIT.  
   
- Możesz również dać nam znać o problemie przez raportowanie błędów na [witryny Microsoft Connect](https://connect.microsoft.com/VisualStudio).  
+ Możesz również poinformować nas o problemie, zgłaszając usterkę w witrynie [Microsoft Connect](https://connect.microsoft.com/VisualStudio).  
   
 ## <a name="see-also"></a>Zobacz także
 

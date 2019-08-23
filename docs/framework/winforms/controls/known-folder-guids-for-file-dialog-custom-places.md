@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 09c51341a2b81c21804bcca3b244bbebdb7342b6
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758777"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962585"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>Identyfikatory GUID znanych folderów dla niestandardowych miejsc okna dialogowego plików
-Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] znany Folder, po dodaniu folderów <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji. Znane identyfikatory GUID Folder nie jest uwzględniana wielkość liter i są zdefiniowane w pliku KnownFolders.h w zestawie Windows SDK.  
+Za pomocą programu <xref:System.Guid> można [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] określić znany folder podczas dodawania folderów do <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji. W przypadku znanych identyfikatorów GUID folderów nie jest rozróżniana wielkość liter i są one zdefiniowane w pliku KnownFolders. h w Windows SDK.  
   
 > [!NOTE]
->  W niektórych przypadkach folderem znane dodane do <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> nie będą wyświetlane w **Ulubione łącza** obszaru. Na przykład jeśli określony Folder znane nie jest obecna na komputerze, na którym działa aplikacja, znany Folder nie jest wyświetlany.  
+> W niektórych przypadkach znany folder dodany do programu <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> nie będzie wyświetlany w obszarze **Ulubione łącza** . Na przykład jeśli określony znany folder nie istnieje na komputerze, na którym jest uruchomiona aplikacja, znany folder nie jest wyświetlany.  
   
 ## <a name="list-of-guids"></a>Lista identyfikatorów GUID  
- W poniższej tabeli wymieniono [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] znanych folderów i ich skojarzone <xref:System.Guid>.  
+ Poniższa tabela zawiera [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] listę znanych folderów i ich <xref:System.Guid>skojarzonych z nimi.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -58,10 +58,10 @@ Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../.
  CommonTemplates  
  B94237E7-57AC-4347-9151-B08C6C32D1F7  
   
- Komputer  
+ Computer  
  0AC0837C-BBF8-452A-850D-79D08E667CA7  
   
- Konflikt  
+ Kolizj  
  4BFEFB45-347D-4006-A5BE-AC0CB0567192  
   
  Połączenia  
@@ -70,10 +70,10 @@ Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../.
  Kontakty  
  56784854-C6CB-462B-8169-88E350ACB882  
   
- Panelu sterowania.  
+ ControlPanel  
  82A74AEB-AEB4-465C-A014-D097EE346D63  
   
- Pliki cookie  
+ Cookie  
  2B0F765D-C0E9-4171-908E-08A611B84FF6  
   
  Aplikacje klasyczne  
@@ -91,7 +91,7 @@ Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../.
  Czcionki  
  FD228CB7-AE11-4AE3-864C-16F3910AB8FE  
   
- Gry  
+ Zainstalowane  
  CAC52C1A-B53D-4EDC-92D7-6B2E8AC19434  
   
  GameTasks  
@@ -127,16 +127,16 @@ Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../.
  OriginalImages  
  2C36C0AA-5812-4B87-BFD0-4CD0DFB19B39  
   
- PhotoAlbums  
+ Albumy  
  69D2CF90-FC33-4FB7-9A0C-EBB0F0FCB43C  
   
- Obrazy  
+ Obrazki  
  33E28130-4E1E-4676-835A-98395C3BC3BB  
   
- Listy odtwarzania  
+ Wybrane  
  DE92C1C7-837F-4F69-A3BB-86E631204A23  
   
- Drukarki  
+ Drukarz  
  76FC4E2D-D6AD-4519-A663-37BD56068185  
   
  PrintHood  
@@ -193,7 +193,7 @@ Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../.
  PublicVideos  
  2400183A-6185-49FB-A2D8-4A392A602BA3  
   
- Szybkie uruchamianie  
+ Szybkiego uruchamiania  
  52A4F021-7B75-48A9-9F6B-4B87A210BC8F  
   
  Ostatnie  
@@ -223,10 +223,10 @@ Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../.
  SampleVideos  
  859EAD94-2E85-48AD-A71A-0969CB56A6CD  
   
- Zapisane gry  
+ SavedGames  
  4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4  
   
- savedSearches  
+ SavedSearches  
  7D1D3A04-DEBB-4115-95CF-2F29DA2920DA  
   
  SEARCH_CSC  
@@ -250,10 +250,10 @@ Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../.
  StartMenu  
  625B53C3-AB48-4EC1-BA1F-A1EF4146FC19  
   
- Uruchamianie  
+ Folderze  
  B97D20BB-F46A-4C97-BA10-5E3608430854  
   
- SyncManager  
+ Syncmanager  
  43668BF8-C14E-49B2-97C9-747784D784B7  
   
  SyncResults  
@@ -289,4 +289,4 @@ Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../.
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [Instrukcje: Dodawanie niestandardowego miejsca do okna dialogowego plików](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [Instrukcje: Dodawanie niestandardowego miejsca do okna dialogowego pliku](how-to-add-a-custom-place-to-a-file-dialog-box.md)

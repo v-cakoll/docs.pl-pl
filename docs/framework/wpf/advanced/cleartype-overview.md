@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 405d06a8da8ec5c428c1565bcd08236de0f1fa88
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 11019d564e7e658b745aec4254ad9a0c582b8416
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672058"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964932"
 ---
 # <a name="cleartype-overview"></a>ClearType — Przegląd
 Ten temat zawiera omówienie technologii Microsoft ClearType, która znajduje się w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -55,7 +55,7 @@ Tekst z wygładzaniem kierunku y w technologii ClearType
 ## <a name="hardware-acceleration"></a>Przyspieszenie sprzętowe  
  Technologia ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w systemie może wykorzystać przyspieszenie sprzętowe, aby zapewnić lepszą wydajność i zmniejszyć wymagania dotyczące obciążenia procesora i pamięci systemowej. Za pomocą programów do cieniowania pikseli i wideo karty graficznej technologia ClearType zapewnia szybsze renderowanie tekstu, szczególnie w przypadku używania animacji.  
   
- Technologia ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w programie nie modyfikuje ustawień technologii ClearType dla całego systemu. Wyłączenie technologii ClearType [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] programie ustawia funkcję antyaliasowania na tryb Skala szarości. Ponadto technologia ClearType w programie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nie modyfikuje ustawień [tunera ClearType PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
+ Technologia ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w programie nie modyfikuje ustawień technologii ClearType dla całego systemu. Wyłączenie technologii ClearType w systemie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Windows ustawia funkcję antyaliasowania na tryb Skala szarości. Ponadto technologia ClearType w programie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nie modyfikuje ustawień [tunera ClearType PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
   
  Jedną z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] decyzji projektowych dotyczących architektury jest to, że rozwiązanie niezależne pozwala lepiej obsługiwać monitory dpi o wyższej rozdzielczości, które stają się bardziej rozpowszechnione. Jest to wynikiem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nieobsługiwanego renderowania tekstu aliasów lub map bitowych w niektórych czcionkach wschodnioazjatyckich, ponieważ są one zależne od rozdzielczości.  
   

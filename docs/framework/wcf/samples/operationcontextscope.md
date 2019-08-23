@@ -2,23 +2,23 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 18dfcbbd84d04088026ca1016600fb0f6a4ce6c6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 89c0fc9cabc544a6a71333b7c6c78e2657cc6610
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424993"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965577"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
-Przykładowy element OperationContextScope pokazano sposób wysyłania dodatkowych informacji na temat wywołania usług Windows Communication Foundation (WCF) przy użyciu nagłówków. W tym przykładzie serwera i klienta są aplikacji konsoli.  
+Przykład OperationContextScope demonstruje sposób wysyłania dodatkowych informacji na temat wywołania Windows Communication Foundation (WCF) przy użyciu nagłówków. W tym przykładzie zarówno serwer, jak i klient są aplikacjami konsolowymi.  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- W przykładzie pokazano, jak klient może wysłać dodatkowe informacje jako <xref:System.ServiceModel.Channels.MessageHeader> przy użyciu <xref:System.ServiceModel.OperationContextScope>. <xref:System.ServiceModel.OperationContextScope> Obiekt jest tworzony przez zakresu go do kanału. Nagłówki, które muszą być przetłumaczone do zdalnej usługi mogą być dodawane do <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> kolekcji. Nagłówki dodane do tej kolekcji mogą być pobierane, uzyskując dostęp do usługi <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>. Jego wywołań za pośrednictwem różnych kanałów i następnie nagłówki dodane do klienta mają zastosowanie tylko do kanału, który został użyty do utworzenia <xref:System.ServiceModel.OperationContextScope>.  
+ W przykładzie pokazano, jak klient może wysyłać dodatkowe informacje <xref:System.ServiceModel.Channels.MessageHeader> za pomocą. <xref:System.ServiceModel.OperationContextScope> <xref:System.ServiceModel.OperationContextScope> Obiekt jest tworzony przez przeznaczanie go na kanał. Do <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> kolekcji można dodawać nagłówki, które muszą być tłumaczone do usługi zdalnej. Nagłówki dodane do tej kolekcji można pobrać w usłudze, uzyskując dostęp <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>do programu. Wywołania są wykonywane w wielu kanałach, a następnie nagłówki dodane do klienta dotyczą tylko kanału, który został użyty do utworzenia <xref:System.ServiceModel.OperationContextScope>.  
   
 ## <a name="messageheaderreader"></a>MessageHeaderReader  
- To jest usługa próbki, która otrzymuje komunikat z klienta i podejmuje próbę wyszukiwania nagłówka w <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> kolekcji. Klient przekazuje identyfikator GUID, który on wysyłany w nagłówku i pobiera niestandardowych nagłówków i, jeśli jest obecny, porównuje go z identyfikatorem GUID przekazany jako argument przez klienta.  
+ Jest to przykładowa usługa, która odbiera komunikat od klienta i próbuje wyszukać nagłówek w <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> kolekcji. Klient przekazuje identyfikator GUID, który został wysłany w nagłówku, a usługa pobiera niestandardowy nagłówek i, jeśli istnieje, porównuje go z identyfikatorem GUID przekazywanym jako argument przez klienta.  
   
 ```csharp
 public bool RetrieveHeader(string guid)  
@@ -55,7 +55,7 @@ public bool RetrieveHeader(string guid)
 ```  
   
 ## <a name="messageheaderclient"></a>MessageHeaderClient  
- Jest to implementacji klienta, który używa serwera proxy generowany przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do komunikowania się z usługi zdalnej. Najpierw tworzy dwa obiekty proxy `MessageHeaderReaderClient`.  
+ Jest to implementacja klienta, która używa serwera proxy wygenerowanego przez narzędzie do obsługi [metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do komunikowania się z usługą zdalną. Najpierw tworzy dwa obiekty proxy programu `MessageHeaderReaderClient`.  
   
 ```csharp
 //Create two clients to the remote service.  
@@ -63,7 +63,7 @@ MessageHeaderReaderClient client1 = new MessageHeaderReaderClient();
 MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();  
 ```  
   
- Klient następnie tworzy element OperationContextScope i jego zakresów `client1`. Dodaje <xref:System.ServiceModel.Channels.MessageHeader> do <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> i wywołuje jedno wywołanie na obu komputerach klienckich. Gwarantuje to, że nagłówek jest wysyłany tylko na `client1` a nie w systemie `client2` , sprawdzając wartość zwrotną z elementu `RetrieveHeader` wywołania.  
+ Następnie klient tworzy OperationContextScope i zakresy, do `client1`. Dodaje <xref:System.ServiceModel.Channels.MessageHeader> do<xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> i wywołuje jedno wywołanie na obu klientach. Zapewnia, że nagłówek jest wysyłany tylko w `client1` przypadku, gdy `client2` nie jest on włączony, sprawdzając wartość `RetrieveHeader` zwracaną z wywołania.  
   
 ```csharp
 using (new OperationContextScope(client1.InnerChannel))  
@@ -90,7 +90,7 @@ using (new OperationContextScope(client1.InnerChannel))
 }  
 ```  
   
- W tym przykładzie jest samodzielnie hostowana. Następujące przykładowe dane wyjściowe z działa aplikacja przykładowa została zapewniona:  
+ Ten przykład jest samodzielny. Dostępne są następujące przykładowe dane wyjściowe z uruchamiania przykładu:  
   
 ```console  
 Prompt> Service.exe  
@@ -113,19 +113,19 @@ Did server retrieve the header? : Actual: False, Expected: False
 Press <ENTER> to terminate client.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  

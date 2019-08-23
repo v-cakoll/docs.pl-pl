@@ -9,59 +9,59 @@ helpviewer_keywords:
 - custom controls [Windows Forms], keyboard events using code
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
-ms.openlocfilehash: 3ebe82fc18deba52fafe76da7ff85fb247446e46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f92b742c3f6feec72e5b3150204d7d984636281d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971239"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934095"
 ---
 # <a name="handling-user-input"></a>Obsługa danych wejściowych użytkownika
-W tym temacie opisano główne zdarzeń klawiatury oraz myszy dostarczone przez <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Podczas obsługi zdarzenia, autorzy kontrolki powinien przesłonić chronionego `On` *EventName* metody zamiast dołączając delegata do zdarzenia. Aby uzyskać przegląd zdarzeń, zobacz [Raising Events ze składnika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120)).  
+W tym temacie opisano główne zdarzenia klawiatury i myszy udostępniane przez <xref:System.Windows.Forms.Control?displayProperty=nameWithType>program. Podczas obsługi zdarzenia, autorzy kontroli powinny zastąpić `On`metodę *EventName* , zamiast dołączać delegata do zdarzenia. Aby zapoznać się z przeglądem zdarzeń, zobacz Wywoływanie [zdarzeń ze składnika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120)).  
   
 > [!NOTE]
->  Jeśli nie ma żadnych danych, skojarzone ze zdarzeniem, wystąpienie klasy bazowej <xref:System.EventArgs> jest przekazywany jako argument do `On` *EventName* metody.  
+> Jeśli żadne dane nie są skojarzone ze zdarzeniem, wystąpienie klasy <xref:System.EventArgs> bazowej jest przesyłane jako argument `On`do metody *EventName* .  
   
 ## <a name="keyboard-events"></a>Zdarzenia klawiatury  
- Typowe zdarzenia klawiatury, które może obsłużyć Twoją kontrolą są <xref:System.Windows.Forms.Control.KeyDown>, <xref:System.Windows.Forms.Control.KeyPress>, i <xref:System.Windows.Forms.Control.KeyUp>.  
+ Typowe zdarzenia klawiatury, które może obsłużyć formant <xref:System.Windows.Forms.Control.KeyDown>, <xref:System.Windows.Forms.Control.KeyPress>to, <xref:System.Windows.Forms.Control.KeyUp>i.  
   
-|Nazwa zdarzenia|Metody do przesłonięcia|Opis zdarzenia|  
+|Nazwa zdarzenia|Metoda przesłonięcia|Opis zdarzenia|  
 |----------------|------------------------|--------------------------|  
-|`KeyDown`|`void OnKeyDown(KeyEventArgs)`|Wywoływane, tylko gdy naciśnięcia klawisza.|  
-|`KeyPress`|`void OnKeyPress`<br /><br /> `(KeyPressEventArgs)`|Wywoływane za każdym razem, gdy zostanie naciśnięty klawisz. Jeśli klawisz jest wciśnięty, <xref:System.Windows.Forms.Control.KeyPress> zdarzenie jest zgłaszane w częstotliwość powtarzania zdefiniowane przez system operacyjny.|  
-|`KeyUp`|`void OnKeyUp(KeyEventArgs)`|Wywoływane po zwolnieniu klawisza.|  
+|`KeyDown`|`void OnKeyDown(KeyEventArgs)`|Uruchamiany tylko po pierwszym naciśnięciu klawisza.|  
+|`KeyPress`|`void OnKeyPress`<br /><br /> `(KeyPressEventArgs)`|Uruchamiany przy każdym naciśnięciu klawisza. Jeśli klucz jest wyłączony, <xref:System.Windows.Forms.Control.KeyPress> zdarzenie jest zgłaszane według częstotliwości powtarzania zdefiniowanej przez system operacyjny.|  
+|`KeyUp`|`void OnKeyUp(KeyEventArgs)`|Uruchamiany po wydaniu klucza.|  
   
 > [!NOTE]
->  Obsługa danych wprowadzonych z klawiatury jest znacznie bardziej skomplikowane niż zastępowanie zdarzenia w powyższej tabeli i wykracza poza zakres tego tematu. Aby uzyskać więcej informacji, zobacz [dane wejściowe użytkownika w formularzach Windows Forms](../user-input-in-windows-forms.md).  
+> Obsługa wprowadzania z klawiatury jest znacznie bardziej skomplikowane niż Przesłanianie zdarzeń w powyższej tabeli i wykracza poza zakres tego tematu. Aby uzyskać więcej informacji, zobacz [dane wejściowe użytkownika w Windows Forms](../user-input-in-windows-forms.md).  
   
 ## <a name="mouse-events"></a>Zdarzenia myszy  
- Zdarzenia myszy, które może obsłużyć Twoją kontrolą są <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseHover>, <xref:System.Windows.Forms.Control.MouseLeave>, <xref:System.Windows.Forms.Control.MouseMove>, i <xref:System.Windows.Forms.Control.MouseUp>.  
+ Zdarzenia myszy, które może obsłużyć formant <xref:System.Windows.Forms.Control.MouseDown> <xref:System.Windows.Forms.Control.MouseHover>, <xref:System.Windows.Forms.Control.MouseEnter> <xref:System.Windows.Forms.Control.MouseLeave> <xref:System.Windows.Forms.Control.MouseMove>to,,,, <xref:System.Windows.Forms.Control.MouseUp>i.  
   
-|Nazwa zdarzenia|Metody do przesłonięcia|Opis zdarzenia|  
+|Nazwa zdarzenia|Metoda przesłonięcia|Opis zdarzenia|  
 |----------------|------------------------|--------------------------|  
-|`MouseDown`|`void OnMouseDown(MouseEventArgs)`|Wywoływane, gdy przycisk myszy jest wciśnięty, gdy wskaźnik znajduje się nad formantem.|  
-|`MouseEnter`|`void OnMouseEnter(EventArgs)`|Wywoływane, gdy kursor po raz pierwszy najedzie z regionem danej kontrolki.|  
-|`MouseHover`|`void OnMouseHover(EventArgs)`|Wywoływane, gdy wskaźnik myszy nad formant.|  
-|`MouseLeave`|`void OnMouseLeave(EventArgs)`|Wywoływane po odsunięciu wskaźnika z regionem danej kontrolki.|  
-|`MouseMove`|`void OnMouseMove(MouseEventArgs)`|Wywoływane, gdy wskaźnik myszy jest przesuwany w regionie formantu.|  
-|`MouseUp`|`void OnMouseUp(MouseEventArgs)`|Wywoływane po zwolnieniu przycisku myszy, gdy wskaźnik znajduje się nad kontrolką lub odsunięcia kursora z regionem danej kontrolki.|  
+|`MouseDown`|`void OnMouseDown(MouseEventArgs)`|Uruchamiany po naciśnięciu przycisku myszy, gdy wskaźnik znajduje się nad kontrolką.|  
+|`MouseEnter`|`void OnMouseEnter(EventArgs)`|Uruchamiany, gdy wskaźnik wprowadzi pierwszy region kontrolki.|  
+|`MouseHover`|`void OnMouseHover(EventArgs)`|Uruchamiany, gdy wskaźnik myszy znajduje się nad kontrolką.|  
+|`MouseLeave`|`void OnMouseLeave(EventArgs)`|Uruchamiany, gdy wskaźnik opuści region kontrolki.|  
+|`MouseMove`|`void OnMouseMove(MouseEventArgs)`|Uruchamiany, gdy wskaźnik zostanie przesunięty w region formantu.|  
+|`MouseUp`|`void OnMouseUp(MouseEventArgs)`|Uruchamiany po udostępnieniu przycisku myszy, gdy wskaźnik znajduje się nad kontrolką lub wskaźnik opuszcza region kontrolki.|  
   
- Poniższy fragment kodu przedstawia przykład zastępowanie <xref:System.Windows.Forms.Control.MouseDown> zdarzeń.  
+ Poniższy fragment kodu przedstawia przykład zastępowania <xref:System.Windows.Forms.Control.MouseDown> zdarzenia.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#7)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#7)]  
   
- Poniższy fragment kodu przedstawia przykład zastępowanie <xref:System.Windows.Forms.Control.MouseMove> zdarzeń.  
+ Poniższy fragment kodu przedstawia przykład zastępowania <xref:System.Windows.Forms.Control.MouseMove> zdarzenia.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#8)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#8)]  
   
- Poniższy fragment kodu przedstawia przykład zastępowanie <xref:System.Windows.Forms.Control.MouseUp> zdarzeń.  
+ Poniższy fragment kodu przedstawia przykład zastępowania <xref:System.Windows.Forms.Control.MouseUp> zdarzenia.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#9)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#9)]  
   
- Dla pełnego kodu źródłowego dla `FlashTrackBar` przykładowe, zobacz [jak: Utwórz formant programu Windows Forms pokazującej postęp](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ Aby uzyskać pełny kod źródłowy dla `FlashTrackBar` przykładu, zobacz [How to: Utwórz formant Windows Forms, który pokazuje postęp](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

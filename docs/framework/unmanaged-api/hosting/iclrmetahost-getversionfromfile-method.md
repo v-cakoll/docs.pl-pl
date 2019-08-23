@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b17b36f66a9b8b78b16057ec37d3ee5f484f7ae2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd5d2e820bd1d733bb4ab968a89174124bc91357
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779761"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962940"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>ICLRMetaHost::GetVersionFromFile — Metoda
-Pobiera zestaw oryginalna wersja programu .NET Framework kompilacji (przechowywany w metadanych) podanej ścieżki pliku. Ta metoda zastępuje [getfileversion —](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) funkcji.  
+Pobiera oryginalną wersję kompilacji .NET Framework zestawu (przechowywaną w metadanych), uwzględniając ścieżkę pliku. Ta metoda zastępuje funkcję [GetFileVersion —](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,36 +39,36 @@ HRESULT GetVersionFromFile (
   
 ## <a name="parameters"></a>Parametry  
  `pwzFilePath`  
- [in] Ścieżka pliku kompletny zestaw.  
+ podczas Pełna ścieżka pliku zestawu.  
   
  `pwzbuffer`  
- [out] Wersja kompilacji programu .NET Framework, które są przechowywane w metadanych, w formacie "v*A*. *B*[. *X*] ". *A*, *B*, i *X* są liczby dziesiętne, które odpowiadają wersji głównej, pomocniczej wersji i numer kompilacji. Długość tego ciągu jest ograniczona do MAX_PATH.  
+ określoną Wersja kompilacji .NET Framework przechowywana w metadanych w formacie "v*A*. *B* [. *X*] ". *A*, *B*i *X* to liczby dziesiętne, które odpowiadają wersji głównej, wersji pomocniczej i numer kompilacji. Długość tego ciągu jest ograniczona do wartości MAX_PATH.  
   
 > [!NOTE]
->  Te dane wyjściowe odpowiada nazwę katalogu .NET Framework w wersji wyświetlaną w obszarze C:\Windows\Microsoft.NET\Framework.  
+> Dane wyjściowe są zgodne z nazwą katalogu dla .NET Framework wersji, ponieważ pojawia się w obszarze C:\Windows\Microsoft.NET\Framework.  
   
- Przykładowe wartości są "wartości v1.0.3705", "v1.1.4322" i "v2.0.50727" oraz "v4.0. *X*", gdzie *X* zależy od numeru kompilacji zainstalowane. Należy pamiętać, że jest wymagany prefiks "v".  
+ Przykładowe wartości to "v 1.0.3705", "v 1.1.4322", "v 2.0.50727" i "v 4.0. *X*", gdzie *x* zależy od zainstalowanego numeru kompilacji. Należy zauważyć, że prefiks "v" jest wymagany.  
   
  `pcchBuffer`  
- [out w] Rozmiar `pwzbuffer` w celu uniknięcia przepełnienia buforu.  
+ [in. out] Rozmiar `pwzbuffer` , aby uniknąć przekroczeń buforu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_POINTER|`pwzbuffer` lub `pcchBuffer` ma wartość null.|  
+|E_POINTER|`pwzbuffer`lub `pcchBuffer` ma wartość null.|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|Bufor jest za mały.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MetaHost.h  
+ **Nagłówki** MetaHost.h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

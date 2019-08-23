@@ -9,136 +9,136 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: bbbdca72cd1ac1bd77ad54fff8f7b683fb7dc850
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b62432d64393f4fb749af2e25c42e2e0161de219
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626832"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950746"
 ---
 # <a name="navigation-topologies-overview"></a>Przegląd Topologia nawigacji
-<a name="introduction"></a> W tym omówieniu przedstawiono wprowadzenie do topologii nawigacji w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Następnie opisano trzy popularne topologie nawigacji, z przykładami.  
+<a name="introduction"></a>To omówienie zawiera wprowadzenie do topologii nawigacji w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]programie. Trzy popularne topologie nawigacji wraz z przykładami zostały omówione w dalszej części.  
   
 > [!NOTE]
->  Przed odczytaniem w tym temacie, należy zapoznać się z pojęciem strukturyzowana Nawigacja w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] za pomocą funkcji strony. Aby uzyskać więcej informacji na temat obu tych tematów, zobacz [ze strukturą Przegląd Nawigacja](structured-navigation-overview.md).  
+> Przed przeczytaniem tego tematu należy zapoznać się z koncepcją nawigacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] strukturalnej przy użyciu funkcji strony. Aby uzyskać więcej informacji na temat obu tych tematów, zobacz [Omówienie nawigacji strukturalnej](structured-navigation-overview.md).  
   
  Ten temat zawiera następujące sekcje:  
   
 - [Topologie nawigacji](#Navigation_Topologies)  
   
-- [Topologie strukturyzowana Nawigacja](#Structured_Navigation_Topologies)  
+- [Topologie nawigacji strukturalnej](#Structured_Navigation_Topologies)  
   
-- [Nawigacja za pośrednictwem stały liniowa topologia](#Navigation_over_a_Fixed_Linear_Topology)  
+- [Nawigowanie po stałej topologii liniowej](#Navigation_over_a_Fixed_Linear_Topology)  
   
-- [Dynamicznej nawigacji nad stały hierarchiczna topologia](#Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology)  
+- [Dynamiczna Nawigacja w ramach stałej topologii hierarchicznej](#Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology)  
   
-- [Nawigacja w dynamicznie generowanym topologii](#Navigation_over_a_Dynamically_Generated_Topology)  
+- [Nawigacja w ramach dynamicznie generowanej topologii](#Navigation_over_a_Dynamically_Generated_Topology)  
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>Topologie nawigacji  
- W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], nawigacji zwykle składa się z stron (<xref:System.Windows.Controls.Page>) za pomocą hiperlinków (<xref:System.Windows.Documents.Hyperlink>), przejdź do innych stron, po kliknięciu. Stron, które są przejście, są identyfikowane przez [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] (zobacz [pakiet URI w WPF](pack-uris-in-wpf.md)). Należy wziąć pod uwagę następujące prosty przykład pokazujący hiperłącza, strony i [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]:  
+ W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]programie Nawigacja zwykle składa się ze<xref:System.Windows.Controls.Page>stron () za<xref:System.Windows.Documents.Hyperlink>pomocą hiperlinków (), które przeprowadzą do innych stron po kliknięciu. Strony, do których prowadzi przechodzenie, są [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] identyfikowane przez (zobacz [identyfikatory URI pakietu w WPF](pack-uris-in-wpf.md)). Rozważmy następujący prosty przykład pokazujący strony, hiperłącza i [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]:  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page2.xaml#page2)]  
   
- Te strony są rozmieszczane w *topologia nawigacji* której strukturę zależy od sposobu można nawigować między stronami. Ta topologia nawigacji w szczególności jest odpowiedni w przypadku prostych scenariuszy, chociaż nawigacji mogą wymagać bardziej złożonych topologii, niektóre z nich mogą być definiowane tylko gdy aplikacja jest uruchomiona.  
+ Te strony są rozmieszczone w *topologii nawigacyjnej* , której struktura jest określana w sposób, w jaki można przechodzić między stronami. Ta topologia nawigacji jest odpowiednia w prostych scenariuszach, chociaż Nawigacja może wymagać bardziej złożonych topologii, a niektóre z nich można zdefiniować tylko wtedy, gdy aplikacja jest uruchomiona.  
   
- W tym temacie opisano trzy popularne topologie nawigacji: *stała liniowa*, *stała hierarchiczna*, i *dynamicznie generowanym*. Każda topologia nawigacji przedstawiono przykład, który ma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] jak te, które przedstawiono na poniższej ilustracji:  
+ W tym temacie opisano trzy popularne topologie nawigacji: *stałe liniowe*, *stałe*, hierarchiczne i *dynamicznie generowane*. Każda topologia nawigacji jest przedstawiona przy użyciu przykładu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , który ma taki sam sposób jak ten, który jest przedstawiony na poniższym rysunku:  
   
- ![Strony zadania przy użyciu elementów danych i przycisków nawigacji.](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
+ ![Strony zadań z elementami danych i przyciskami nawigacji.](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
   
 <a name="Structured_Navigation_Topologies"></a>   
-## <a name="structured-navigation-topologies"></a>Topologie strukturyzowana Nawigacja  
- Istnieją dwa ogólne typy topologie nawigacji:  
+## <a name="structured-navigation-topologies"></a>Topologie nawigacji strukturalnej  
+ Istnieją dwa popularne typy topologii nawigacyjnej:  
   
-- **Stała topologia**: zdefiniowany w czasie kompilacji i nie zmienia się w czasie wykonywania. Naprawiono topologii są przydatne do nawigacji za pomocą stałych sekwencji stron w kolejności liniowy lub hierarchiczny.  
+- **Stała topologia**: zdefiniowana w czasie kompilacji i nie zmienia się w czasie wykonywania. Stałe topologie są przydatne do nawigacji przez stałą sekwencję stron w kolejności liniowej lub hierarchicznej.  
   
-- **Dynamiczne topologii**: zdefiniowany w czasie wykonywania, w oparciu o dane wejściowe, które są zbierane od użytkownika, aplikacji lub systemu. Dynamiczne topologii są przydatne, gdy strony można nawigować w różnych sekwencji.  
+- **Topologia dynamiczna**: zdefiniowana w czasie wykonywania na podstawie danych wejściowych zbieranych od użytkownika, aplikacji lub systemu. Topologie dynamiczne są przydatne, gdy strony można nawigować w różnych sekwencjach.  
   
- Chociaż istnieje możliwość utworzenia topologie nawigacji za pomocą stron, przykłady funkcji strony należy użyć w sytuacji, ponieważ zapewniają dodatkową pomoc, która upraszcza obsługę przekazywanie i zwracanie danych na stronach topologii.  
+ Chociaż istnieje możliwość tworzenia topologii nawigacji przy użyciu stron, przykłady używają funkcji strony, ponieważ zapewniają dodatkową pomoc techniczną, która upraszcza obsługę przekazywania i zwracania danych za pośrednictwem stron topologii.  
   
 <a name="Navigation_over_a_Fixed_Linear_Topology"></a>   
-## <a name="navigation-over-a-fixed-linear-topology"></a>Nawigacja za pośrednictwem stały liniowa topologia  
- Naprawiono liniowa topologia jest analogiczne do struktury kreatora, który ma co najmniej jednej strony kreatora, które są przejście w stałej kolejności. Na poniższej ilustracji przedstawiono ogólną strukturę i przepływ kreatora bez stały liniowa topologia:  
+## <a name="navigation-over-a-fixed-linear-topology"></a>Nawigowanie po stałej topologii liniowej  
+ Stała topologia liniowa jest analogiczna do struktury kreatora, która zawiera co najmniej jedną stronę kreatora, która jest używana w ustalonej kolejności. Na poniższej ilustracji przedstawiono strukturę i przepływ kreatora ze stałą topologią liniową:  
   
- ![Diagram, który pokazuje stały liniowa topologia.](./media/navigation-topologies-overview/navigation-topology-fixed-linear.png)  
+ ![Diagram przedstawiający stałą topologię liniową.](./media/navigation-topologies-overview/navigation-topology-fixed-linear.png)  
   
- Następujące typowe zachowania do nawigowania w stałym liniowa topologia:  
+ Typowe zachowania w przypadku nawigowania po ustalonej topologii liniowej obejmują następujące elementy:  
   
-- Przechodząc ze strony wywołania do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]— mniej <xref:System.Windows.Navigation.PageFunction%601>) nie jest wymagane, ponieważ wywołujący strony można bezpośrednio wywoływać pierwszej stronie kreatora. Przy użyciu strony uruchamiania, jednak można uprościć inicjowanie kreatora, szczególnie w przypadku, gdy inicjalizacja jest złożony.  
+- Nawigowanie ze strony wywołującej do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania (a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-less <xref:System.Windows.Navigation.PageFunction%601>) nie jest wymagana, ponieważ strona wywołująca może bezpośrednio wywołać pierwszą stronę kreatora. Za pomocą strony uruchamiania można jednak uprościć inicjowanie kreatora, szczególnie jeśli Inicjalizacja jest złożona.  
   
-- Użytkownicy mogą przejść między stronami, korzystając z tyłu i do przodu przycisków (lub hiperłącza).  
+- Użytkownicy mogą przechodzić między stronami przy użyciu przycisków Wstecz i dalej (lub hiperlinków).  
   
-- Użytkownicy mogą przejść między stronami przy użyciu arkusza.  
+- Użytkownicy mogą przechodzić między stronami przy użyciu dziennika.  
   
-- Użytkownikom można anulować kreatora z dowolnej strony kreatora, naciskając przycisk Anuluj.  
+- Użytkownicy mogą anulować pracę kreatora z dowolnej strony kreatora, naciskając przycisk Anuluj.  
   
 - Użytkownicy mogą zaakceptować kreatora na ostatniej stronie kreatora, naciskając przycisk Zakończ.  
   
-- Jeśli Kreator zostanie anulowane, Kreator zwraca odpowiedni wynik i nie zwraca żadnych danych.  
+- Jeśli Kreator zostanie anulowany, Kreator zwróci odpowiedni wynik i nie zwróci żadnych danych.  
   
-- Jeśli użytkownik zaakceptuje kreatora, Kreator zwraca odpowiedni wynik i zwraca dane zebrane.  
+- Jeśli użytkownik zaakceptuje kreatora, Kreator zwróci odpowiedni wynik i zwróci zebrane dane.  
   
-- Po ukończeniu pracy kreatora (zaakceptowane lub anulowane), stron, które obejmuje kreatora są usuwane z dziennika. Dzięki temu każde wystąpienie Kreatora izolowane, zapobiegając potencjalnych danych lub nieprawidłowości stanu.  
+- Po zakończeniu pracy kreatora (zaakceptowane lub anulowane) strony, które składają się Kreator, są usuwane z dziennika. Pozwala to na odizolowanie każdego wystąpienia kreatora, co pozwala uniknąć potencjalnych różnic danych lub stanu.  
   
 <a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>   
-## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>Dynamicznej nawigacji nad stały hierarchiczna topologia  
- W niektórych aplikacjach strony umożliwiają przechodzenie do co najmniej dwóch innych stron, jak pokazano na poniższej ilustracji: 
+## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>Dynamiczna Nawigacja w ramach stałej topologii hierarchicznej  
+ W niektórych aplikacjach strony umożliwiają nawigację do dwóch lub więcej stron, jak pokazano na poniższym rysunku: 
   
- ![Diagram przedstawiający strona, która można przejść do wielu stron.](./media/navigation-topologies-overview/navigation-topology-multiple-pages.png)  
+ ![Diagram pokazujący stronę, która może przechodzić do wielu stron.](./media/navigation-topologies-overview/navigation-topology-multiple-pages.png)  
   
- Ta struktura jest znany jako stały topologii hierarchicznej i sekwencji, w którym hierarchii, o ile jest często określana w czasie wykonywania przez użytkownika lub aplikacji. W czasie wykonywania każda strona w hierarchii, która umożliwia przechodzenie do co najmniej dwóch innych stron zbiera dane wymagane do określenia, które strony dla przejścia. Na poniższym rysunku przedstawiono jeden z kilku sekwencji nawigacji możliwe oparte na poprzedniej ilustracji:  
+ Ta struktura jest znana jako stała hierarchiczna topologia, a sekwencja, w której przechodzą hierarchie, jest często określana w czasie wykonywania przez aplikację lub użytkownika. W czasie wykonywania każda Strona w hierarchii, która umożliwia nawigowanie do dwóch lub więcej stron, zbiera dane wymagane do określenia, do której strony należy przejść. Na poniższej ilustracji przedstawiono jedną z kilku możliwych sekwencji nawigacji na podstawie poprzedniej ilustracji:  
   
- ![Diagram przedstawiający sekwencję nawigacji to możliwe.](./media/navigation-topologies-overview/navigation-topology-fixed-hierarchical.png)  
+ ![Diagram, który pokazuje możliwe sekwencję nawigacji.](./media/navigation-topologies-overview/navigation-topology-fixed-hierarchical.png)  
   
- Mimo że sekwencji, w którym są przejście stron w strukturze hierarchicznej stałej jest określana w czasie wykonywania, środowisko użytkownika jest taki sam jak środowiska użytkownika dla stałych liniowa topologia:  
+ Mimo że przechodzenie między stronami w stałej strukturze hierarchicznej jest określane w czasie wykonywania, środowisko użytkownika jest takie samo jak środowisko użytkownika dla stałej topologii liniowej:  
   
-- Przechodząc ze strony wywołania do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]— mniej <xref:System.Windows.Navigation.PageFunction%601>) nie jest wymagane, ponieważ wywołujący strony można bezpośrednio wywoływać pierwszej stronie kreatora. Przy użyciu strony uruchamiania, jednak można uprościć inicjowanie kreatora, szczególnie w przypadku, gdy inicjalizacja jest złożony.  
+- Nawigowanie ze strony wywołującej do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania (a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-less <xref:System.Windows.Navigation.PageFunction%601>) nie jest wymagana, ponieważ strona wywołująca może bezpośrednio wywołać pierwszą stronę kreatora. Za pomocą strony uruchamiania można jednak uprościć inicjowanie kreatora, szczególnie jeśli Inicjalizacja jest złożona.  
   
-- Użytkownicy mogą przejść między stronami, korzystając z tyłu i do przodu przycisków (lub hiperłącza).  
+- Użytkownicy mogą przechodzić między stronami przy użyciu przycisków Wstecz i dalej (lub hiperlinków).  
   
-- Użytkownicy mogą przejść między stronami przy użyciu arkusza.  
+- Użytkownicy mogą przechodzić między stronami przy użyciu dziennika.  
   
-- Użytkownicy mogą zmienić sekwencję nawigacji, jeśli ich poruszanie się wstecz arkusza.  
+- Użytkownicy mogą zmienić sekwencję nawigacji, jeśli nawigują ponownie w dzienniku.  
   
-- Użytkownikom można anulować kreatora z dowolnej strony kreatora, naciskając przycisk Anuluj.  
+- Użytkownicy mogą anulować pracę kreatora z dowolnej strony kreatora, naciskając przycisk Anuluj.  
   
 - Użytkownicy mogą zaakceptować kreatora na ostatniej stronie kreatora, naciskając przycisk Zakończ.  
   
-- Jeśli Kreator zostanie anulowane, Kreator zwraca odpowiedni wynik i nie zwraca żadnych danych.  
+- Jeśli Kreator zostanie anulowany, Kreator zwróci odpowiedni wynik i nie zwróci żadnych danych.  
   
-- Jeśli użytkownik zaakceptuje kreatora, Kreator zwraca odpowiedni wynik i zwraca dane zebrane.  
+- Jeśli użytkownik zaakceptuje kreatora, Kreator zwróci odpowiedni wynik i zwróci zebrane dane.  
   
-- Po ukończeniu pracy kreatora (zaakceptowane lub anulowane), stron, które obejmuje kreatora są usuwane z dziennika. Dzięki temu każde wystąpienie Kreatora izolowane, zapobiegając potencjalnych danych lub nieprawidłowości stanu.  
+- Po zakończeniu pracy kreatora (zaakceptowane lub anulowane) strony, które składają się Kreator, są usuwane z dziennika. Pozwala to na odizolowanie każdego wystąpienia kreatora, co pozwala uniknąć potencjalnych różnic danych lub stanu.  
   
 <a name="Navigation_over_a_Dynamically_Generated_Topology"></a>   
-## <a name="navigation-over-a-dynamically-generated-topology"></a>Nawigacja w dynamicznie generowanym topologii  
- W niektórych aplikacjach sekwencji, w którym są przejście, dwóch lub więcej stron można tylko można określić w czasie wykonywania przez użytkownika, aplikacji lub danych zewnętrznych. Na poniższym rysunku przedstawiono zestaw stron z sekwencją nieokreślonej nawigacji:  
+## <a name="navigation-over-a-dynamically-generated-topology"></a>Nawigacja w ramach dynamicznie generowanej topologii  
+ W niektórych aplikacjach sekwencja, w której są przechodź dwie lub więcej stron, można określić tylko w czasie wykonywania, niezależnie od tego, czy użytkownik, aplikacja lub dane zewnętrzne. Na poniższej ilustracji przedstawiono zestaw stron z nieokreśloną sekwencją nawigacji:  
   
- ![Zestaw stron z sekwencją nieokreślonej nawigacji.](./media/navigation-topologies-overview/navigation-topology-dynamically-generated.png)  
+ ![Zestaw stron z nieokreśloną sekwencją nawigacji.](./media/navigation-topologies-overview/navigation-topology-dynamically-generated.png)  
   
- Następny rysunek przedstawia sekwencję nawigacji, który został wybrany przez użytkownika w czasie wykonywania:  
+ Następny rysunek ilustruje sekwencję nawigacji, która została wybrana przez użytkownika w czasie wykonywania:  
   
- ![Diagram przedstawiający sekwencję nawigacji wybranej w czasie wykonywania.](./media/navigation-topologies-overview/navigation-topology-sequence-chosen-run-time.png)  
+ ![Diagram pokazujący sekwencję nawigacji wybraną w czasie wykonywania.](./media/navigation-topologies-overview/navigation-topology-sequence-chosen-run-time.png)  
   
- Sekwencję nawigacji jest określany jako dynamicznie generowanym topologii. Dla użytkownika jako przy użyciu innych topologie nawigacji środowisko użytkownika jest taka sama jak w przypadku poprzedniego topologii:  
+ Sekwencja nawigacji jest znana jako topologia generowana dynamicznie. Dla użytkownika, podobnie jak w przypadku innych topologii nawigacyjnej, środowisko użytkownika jest takie samo, jak w przypadku poprzednich topologii:  
   
-- Przechodząc ze strony wywołania do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]— mniej <xref:System.Windows.Navigation.PageFunction%601>) nie jest wymagane, ponieważ wywołujący strony można bezpośrednio wywoływać pierwszej stronie kreatora. Przy użyciu strony uruchamiania, jednak można uprościć inicjowanie kreatora, szczególnie w przypadku, gdy inicjalizacja jest złożony.  
+- Nawigowanie ze strony wywołującej do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania (a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-less <xref:System.Windows.Navigation.PageFunction%601>) nie jest wymagana, ponieważ strona wywołująca może bezpośrednio wywołać pierwszą stronę kreatora. Za pomocą strony uruchamiania można jednak uprościć inicjowanie kreatora, szczególnie jeśli Inicjalizacja jest złożona.  
   
-- Użytkownicy mogą przejść między stronami, korzystając z tyłu i do przodu przycisków (lub hiperłącza).  
+- Użytkownicy mogą przechodzić między stronami przy użyciu przycisków Wstecz i dalej (lub hiperlinków).  
   
-- Użytkownicy mogą przejść między stronami przy użyciu arkusza.  
+- Użytkownicy mogą przechodzić między stronami przy użyciu dziennika.  
   
-- Użytkownikom można anulować kreatora z dowolnej strony kreatora, naciskając przycisk Anuluj.  
+- Użytkownicy mogą anulować pracę kreatora z dowolnej strony kreatora, naciskając przycisk Anuluj.  
   
 - Użytkownicy mogą zaakceptować kreatora na ostatniej stronie kreatora, naciskając przycisk Zakończ.  
   
-- Jeśli Kreator zostanie anulowane, Kreator zwraca odpowiedni wynik i nie zwraca żadnych danych.  
+- Jeśli Kreator zostanie anulowany, Kreator zwróci odpowiedni wynik i nie zwróci żadnych danych.  
   
-- Jeśli użytkownik zaakceptuje kreatora, Kreator zwraca odpowiedni wynik i zwraca dane zebrane.  
+- Jeśli użytkownik zaakceptuje kreatora, Kreator zwróci odpowiedni wynik i zwróci zebrane dane.  
   
-- Po ukończeniu pracy kreatora (zaakceptowane lub anulowane), stron, które obejmuje kreatora są usuwane z dziennika. Dzięki temu każde wystąpienie Kreatora izolowane, zapobiegając potencjalnych danych lub nieprawidłowości stanu.  
+- Po zakończeniu pracy kreatora (zaakceptowane lub anulowane) strony, które składają się Kreator, są usuwane z dziennika. Pozwala to na odizolowanie każdego wystąpienia kreatora, co pozwala uniknąć potencjalnych różnic danych lub stanu.  
   
 ## <a name="see-also"></a>Zobacz także
 

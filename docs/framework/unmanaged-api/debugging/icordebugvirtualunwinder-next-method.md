@@ -1,18 +1,18 @@
 ---
-title: Metoda ICorDebugVirtualUnwinder::Next
+title: 'ICorDebugVirtualUnwinder:: Next — Metoda'
 ms.date: 03/30/2017
 ms.assetid: 790e0426-e5cd-49fd-a792-f8c8635d72fe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd12861b34d577a002fbf0cc8a7962b7bfc35fe1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20a3d4bac42731bc94ecef7a0756392c8c0882fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775343"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967920"
 ---
-# <a name="icordebugvirtualunwindernext-method"></a>Metoda ICorDebugVirtualUnwinder::Next
-Przechodzi do obiektu wywołującego kontekstu.  
+# <a name="icordebugvirtualunwindernext-method"></a>ICorDebugVirtualUnwinder:: Next — Metoda
+Przechodzi do kontekstu obiektu wywołującego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,24 +24,24 @@ HRESULT Next();
  Brak.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli rozwinięcie wystąpił pomyślnie, lub `CORDBG_S_AT_END_OF_STACK` Jeśli rozwinięcie nie można zakończyć, ponieważ nie ma żadnych więcej ramek.  
+ `S_OK`Jeśli operacja unwind zakończyła `CORDBG_S_AT_END_OF_STACK` się pomyślnie lub nie można ukończyć operacji unwindy, ponieważ nie ma więcej ramek.  
   
- Jeśli niepowodzenie, jest zwracana wartość HRESULT, icordebug — interfejsy API zwracają `CORDBG_E_DATA_TARGET_ERROR`.  
+ Jeśli zwracana jest niepowodzenie HRESULT, ICorDebug interfejsy API zostaną zwrócone `CORDBG_E_DATA_TARGET_ERROR`.  
   
 ## <a name="remarks"></a>Uwagi  
- Walker stosu należy upewnić się, że to sprawia, że postęp, to znaczy po pewnym czasie wywołania `Next` zwróci niepowodzenie HRESULT lub `CORDBG_S_AT_END_OF_STACK`. Zwracanie `S_OK` przez czas nieokreślony może spowodować nieskończoną pętlę.  
+ Analizator stosu powinien zapewnić, że postępuje postęp, tak że ostatecznie wywołanie `Next` zwróci błąd HRESULT lub. `CORDBG_S_AT_END_OF_STACK` Zwracanie `S_OK` nieokreślonych wartości może spowodować nieskończoną pętlę.  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

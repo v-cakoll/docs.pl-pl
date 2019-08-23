@@ -2,21 +2,21 @@
 title: <security> dla <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: fa31dda3274c9768694bdf5232f31554899e1d82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0996a98438dc344d96d640abced52ac99709adbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670524"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936673"
 ---
-# <a name="security-of-netnamedpipebinding"></a>\<Zabezpieczenia > z \<netNamedPipeBinding >
+# <a name="security-of-netnamedpipebinding"></a>\<zabezpieczenia > \<NetNamedPipeBinding >
 Definiuje ustawienia zabezpieczeń dla powiązania.  
   
  \<system.ServiceModel>  
-\<powiązania >  
+\<> powiązań  
 \<netNamedPipeBinding>  
-\<Powiązanie >  
-\<security>  
+\<> powiązania  
+\<> zabezpieczeń  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,19 +37,19 @@ Definiuje ustawienia zabezpieczeń dla powiązania.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|tryb|Określa typ zabezpieczeń, która jest stosowana do tego powiązania. Prawidłowe wartości są następujące:<br /><br /> -Brak: Powoduje to wyłączenie zabezpieczeń.<br />-Transport: Zabezpieczenia przy użyciu podstawowych zabezpieczeń transportu na podstawie. Istnieje możliwość kontrolować poziom ochrony w tym trybie.<br />— Wartość domyślna to transportu. Ten atrybut jest typu <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
+|tryb|Określa typ zabezpieczeń, które są stosowane do tego powiązania. Prawidłowe wartości to:<br /><br /> Dawaj Spowoduje to wyłączenie zabezpieczeń.<br />Transportu Zabezpieczenia są udostępniane przy użyciu podstawowych zabezpieczeń opartych na transportach. Istnieje możliwość kontrolowania poziomu ochrony w tym trybie.<br />— Wartość domyślna to transport. Ten atrybut jest typu <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|transport|Definiuje ustawienia zabezpieczeń dla transportu. Ten element jest typu <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>.|  
+|transport|Definiuje ustawienia zabezpieczeń transportu. Ten element jest typu <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|powiązanie|Element powiązania [ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).|  
+|powiązanie|Element Binding elementu [ \<NetNamedPipeBinding >](netnamedpipebinding.md).|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -57,9 +57,9 @@ Definiuje ustawienia zabezpieczeń dla powiązania.
 - <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Wybieranie typu poświadczeń](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Wybieranie typu poświadczeń](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<> powiązania](../../../misc/binding.md)

@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17ae74a430df4d4a4670c2390ce7b2ee25b67c7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033616"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938714"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Instrukcje: Używanie procedur składowanych, które przyjmują parametry
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapuje parametry wyjściowe można odwoływać się do parametrów, a dla typów wartości deklaruje parametr jako dopuszczającego wartość null.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]mapuje parametry wyjściowe do parametrów referencyjnych, a dla typów wartości deklaruje parametr jako wartość null.  
   
- Na przykład sposobu używania parametru wejściowego w zapytaniu, które zwraca zestawu wierszy zobacz [jak: Zwracane zestawy wierszy](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).  
+ Aby zapoznać się z przykładem użycia parametru wejściowego w zapytaniu, które zwraca zestaw wierszy, [zobacz How to: Zwróć zestawy wierszy](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przyjmuje jeden parametr wejściowy (identyfikator klienta) i zwraca wartość parametru wyjściowego (łączna sprzedaż dla tego klienta).  
+ Poniższy przykład przyjmuje jeden parametr wejściowy (identyfikator klienta) i zwraca parametr out (całkowita sprzedaż dla tego klienta).  
   
 ```  
 CREATE PROCEDURE [dbo].[CustOrderTotal]   
@@ -34,7 +34,7 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
  [!code-vb[DLinqSprox#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#2)]  
   
 ## <a name="example"></a>Przykład  
- Możesz wywołać tę procedurę składowaną w następujący sposób:  
+ Tę procedurę składowaną należy wywołać w następujący sposób:  
   
  [!code-csharp[DLinqSprox#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#3)]
  [!code-vb[DLinqSprox#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#3)]  
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [Procedury składowane](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Używanie typów dopuszczających wartości null](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [Typy wartości dopuszczających wartości null](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Używanie typów dopuszczających wartości null](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Typy wartości dopuszczających wartości null](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

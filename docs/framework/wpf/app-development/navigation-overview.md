@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 145c4e33bd601fa61750df56b949bda5d43cc372
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 574449f95ee9632d37f277d61806802457494df0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818002"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964590"
 ---
 # <a name="navigation-overview"></a>Przegląd Nawigacja
 
@@ -106,7 +106,7 @@ Tylko <xref:System.Windows.Controls.Page> znaczników jest przydatne do wyświet
 
 Aby umożliwić współdziałanie pliku znaczników i pliku związanego z kodem, wymagana jest następująca konfiguracja:
 
-- W znaczniku `Page` element musi `x:Class` zawierać atrybut. Po skompilowaniu aplikacji istnienie `x:Class` w pliku znaczników powoduje [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] utworzenie `partial` klasy, która pochodzi od <xref:System.Windows.Controls.Page> i ma nazwę, która jest określona przez `x:Class` atrybut. Wymaga to dodania [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] deklaracji przestrzeni nazw [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dla schematu ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Wygenerowana `partial` Klasa implementuje `InitializeComponent`, która jest wywoływana, aby zarejestrować zdarzenia i ustawić właściwości zaimplementowane w znaczniku.
+- W znaczniku `Page` element musi `x:Class` zawierać atrybut. Po skompilowaniu aplikacji `x:Class` istnienie w pliku znaczników powoduje, że program Microsoft Build Engine (MSBuild) `partial` tworzy klasę, która pochodzi od <xref:System.Windows.Controls.Page> i `x:Class` ma nazwę, która jest określona przez atrybut. Wymaga to dodania [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] deklaracji przestrzeni nazw [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dla schematu ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Wygenerowana `partial` Klasa implementuje `InitializeComponent`, która jest wywoływana, aby zarejestrować zdarzenia i ustawić właściwości zaimplementowane w znaczniku.
 
 - W kodzie, Klasa musi być `partial` klasą o tej samej nazwie, która jest określona `x:Class` przez atrybut w znaczniku i musi pochodzić od <xref:System.Windows.Controls.Page>. Pozwala to skojarzyć plik związany z kodem z `partial` klasą wygenerowaną dla pliku znaczników podczas kompilowania aplikacji (zobacz Kompilowanie [aplikacji WPF](building-a-wpf-application-wpf.md)).
 
@@ -123,7 +123,7 @@ Gdy masz, możesz <xref:System.Windows.Controls.Page>przejść do tego elementu.
 
 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]Wymagaj, aby pewna ilość infrastruktury aplikacji była hostowana w przeglądarce. W programie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Klasajestczęścią definicji aplikacji, która ustanawia wymaganą infrastrukturę aplikacji (zobacz [Omówienie zarządzania aplikacjami).](application-management-overview.md) <xref:System.Windows.Application>
 
-Definicja aplikacji jest zwykle implementowana przy użyciu znaczników i kodu, z plikiem znaczników skonfigurowanym jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `ApplicationDefinition` element. Poniżej znajduje się definicja aplikacji dla programu [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].
+Definicja aplikacji jest zwykle implementowana przy użyciu znaczników i kodu, z plikiem znaczników skonfigurowanym jako element MSBuild`ApplicationDefinition` . Poniżej znajduje się definicja aplikacji dla programu [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].
 
 [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
@@ -527,7 +527,7 @@ Aby przechowywać plik cookie między sesjami aplikacji, należy dodać do pliku
 
 *NAZWA* `=` *WARTOŚĆ*`; expires=DAY, DD-MMM-YYYY HH:MM:SS GMT`
 
-Plik cookie z datą wygaśnięcia jest przechowywany w folderze tymczasowych plików [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] internetowych bieżącej instalacji do momentu wygaśnięcia pliku cookie. Taki plik cookie jest znany jako *trwały plik cookie* , ponieważ utrzymuje się między sesjami aplikacji.
+Plik cookie z datą wygaśnięcia jest przechowywany w folderze tymczasowych plików internetowych instalacji systemu Windows do momentu wygaśnięcia pliku cookie. Taki plik cookie jest znany jako *trwały plik cookie* , ponieważ utrzymuje się między sesjami aplikacji.
 
 Można pobrać zarówno sesję, jak i trwałe pliki cookie <xref:System.Windows.Application.GetCookie%2A> , wywołując metodę, <xref:System.Uri> przekazując lokalizację, w której ustawiono <xref:System.Windows.Application.SetCookie%2A> plik cookie przy użyciu metody.
 

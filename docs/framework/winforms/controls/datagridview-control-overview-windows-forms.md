@@ -19,64 +19,64 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
-ms.openlocfilehash: 4db2a8b0e30a6bb3db0c5c629d868bc01dc15a8c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 992bf57642c955a87cd7675e0bbe7c52131e8039
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648078"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969150"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView — Informacje o formancie [Formularze systemu Windows]
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Formant zastępuje i dodaje funkcję <xref:System.Windows.Forms.DataGrid> do <xref:System.Windows.Forms.DataGrid> kontrolki; jednak kontrolka jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli wybierzesz opcję. <xref:System.Windows.Forms.DataGridView> Aby uzyskać więcej informacji, zobacz [różnice między kontrolkami DataGridView i DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki, może wyświetlić i edytować dane tabelaryczne z wielu różnych rodzajów źródeł danych.  
+ Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki można wyświetlać i edytować dane tabelaryczne z wielu różnych rodzajów źródeł danych.  
   
- Powiązanie danych z <xref:System.Windows.Forms.DataGridView> kontroli jest bardzo prosty i intuicyjny, a w wielu przypadkach jest proste i polega na ustawienie <xref:System.Windows.Forms.DataGridView.DataSource%2A> właściwości. Gdy powiąże się ze źródłem danych, który zawiera kilka list lub tabel, ustaw <xref:System.Windows.Forms.DataGridView.DataMember%2A> właściwość ciągu, który określa listy lub tabeli, aby powiązać.  
+ Powiązanie danych z <xref:System.Windows.Forms.DataGridView> formantem jest proste i intuicyjne, a w wielu przypadkach jest tak proste jak <xref:System.Windows.Forms.DataGridView.DataSource%2A> ustawienie właściwości. Po utworzeniu powiązania ze źródłem danych zawierającym wiele list lub tabel Ustaw <xref:System.Windows.Forms.DataGridView.DataMember%2A> właściwość na ciąg, który określa listę lub tabelę, z którą ma zostać utworzone powiązanie.  
   
- <xref:System.Windows.Forms.DataGridView> Kontroli obsługuje standardowe Windows Forms powiązanie modelu danych, więc powiąże wystąpień klas opisane na poniższej liście:  
+ <xref:System.Windows.Forms.DataGridView> Kontrolka obsługuje model powiązań danych w warstwie Standardowa Windows Forms, więc zostanie powiązana z wystąpieniami klas opisanymi na poniższej liście:  
   
-- Każda klasa implementująca <xref:System.Collections.IList> interfejsu, w tym tablice jednowymiarowe.  
+- Każda klasa implementująca <xref:System.Collections.IList> interfejs, w tym tablice jednowymiarowe.  
   
-- Każda klasa implementująca <xref:System.ComponentModel.IListSource> interfejsu, takich jak <xref:System.Data.DataTable> i <xref:System.Data.DataSet> klasy.  
+- Każda klasa implementująca <xref:System.ComponentModel.IListSource> interfejs, taka <xref:System.Data.DataTable> jak klasy i <xref:System.Data.DataSet> .  
   
-- Każda klasa implementująca <xref:System.ComponentModel.IBindingList> interfejsu, takich jak <xref:System.ComponentModel.BindingList%601> klasy.  
+- Każda klasa implementująca <xref:System.ComponentModel.IBindingList> interfejs, taka <xref:System.ComponentModel.BindingList%601> jak Klasa.  
   
-- Każda klasa implementująca <xref:System.ComponentModel.IBindingListView> interfejsu, takich jak <xref:System.Windows.Forms.BindingSource> klasy.  
+- Każda klasa implementująca <xref:System.ComponentModel.IBindingListView> interfejs, taka <xref:System.Windows.Forms.BindingSource> jak Klasa.  
   
- <xref:System.Windows.Forms.DataGridView> Kontrolka obsługuje powiązanie danych właściwości publicznych zwracanych przez te interfejsy obiektów lub kolekcji właściwości zwróconej przez <xref:System.ComponentModel.ICustomTypeDescriptor> interfejsu, jeśli wdrażane na zwracanych obiektów.  
+ Kontrolka obsługuje powiązanie danych z właściwościami publicznymi obiektów zwracanymi przez te interfejsy lub z kolekcją właściwości zwracaną <xref:System.ComponentModel.ICustomTypeDescriptor> przez interfejs, jeśli jest zaimplementowany dla zwracanych obiektów. <xref:System.Windows.Forms.DataGridView>  
   
- Zazwyczaj użytkownik zostanie z nim powiązane <xref:System.Windows.Forms.BindingSource> składnika i powiąż <xref:System.Windows.Forms.BindingSource> składnik do innego źródła danych lub go wypełnić przy użyciu obiektów biznesowych. <xref:System.Windows.Forms.BindingSource> Składnik to źródło danych preferowane, ponieważ można powiązać z wieloma różnymi źródłami danych i automatycznego rozwiązywania wielu problemów powiązanie danych. Aby uzyskać więcej informacji, zobacz [BindingSource, składnik](bindingsource-component.md).  
+ Zwykle powiązanie ze <xref:System.Windows.Forms.BindingSource> składnikiem i <xref:System.Windows.Forms.BindingSource> powiązanie składnika z innym źródłem danych lub wypełnienie go obiektami biznesowymi. <xref:System.Windows.Forms.BindingSource> Składnik jest preferowanym źródłem danych, ponieważ może być powiązany z wieloma różnymi źródłami danych i może automatycznie rozwiązywać wiele problemów z powiązaniem danych. Aby uzyskać więcej informacji, zobacz [Składnik BindingSource](bindingsource-component.md).  
   
- <xref:System.Windows.Forms.DataGridView> Formantu można używać w *niepowiązanych* trybie z nie źródłowy magazyn danych. Dla przykładu kodu, który używa niepowiązanych <xref:System.Windows.Forms.DataGridView> sterowania, zobacz [instruktażu: Tworzenie Windows niezwiązanego formantu DataGridView formularzy](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).  
+ Formant może być również używany w trybie niezwiązanym bez podstawowego magazynu danych. <xref:System.Windows.Forms.DataGridView> Aby zapoznać się z przykładem kodu korzystającym <xref:System.Windows.Forms.DataGridView> z niepowiązanej kontrolki, zobacz [Przewodnik: Tworzenie niepowiązanej kontrolki](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)DataGridView Windows Forms.  
   
- <xref:System.Windows.Forms.DataGridView> Formant jest wysoce konfigurowalne i rozszerzalny i udostępnia wiele właściwości, metod i zdarzeń, aby dostosować wygląd i zachowanie. Aplikacja Windows Forms do wyświetlania danych tabelarycznych, należy rozważyć użycie <xref:System.Windows.Forms.DataGridView> formant przed innymi (na przykład <xref:System.Windows.Forms.DataGrid>). W przypadku wyświetlania Mała kratka wartości tylko do odczytu lub Jeśli włączasz użytkownikowi edytowanie tabelę zawierającą miliony rekordów, <xref:System.Windows.Forms.DataGridView> kontroli pozwoli łatwo programowalne, zapewniający wydajną obsługę pamięci rozwiązanie.  
+ <xref:System.Windows.Forms.DataGridView> Formant jest wysoce konfigurowalny i rozszerzalny oraz zawiera wiele właściwości, metod i zdarzeń, aby dostosować jego wygląd i zachowanie. Jeśli chcesz, aby aplikacja Windows Forms wyświetlała dane tabelaryczne, rozważ użycie <xref:System.Windows.Forms.DataGridView> kontrolki przed innymi (na <xref:System.Windows.Forms.DataGrid>przykład). Jeśli jest wyświetlana Mała siatka wartości tylko do odczytu lub jeśli użytkownik chce edytować tabelę przy użyciu milionów rekordów, <xref:System.Windows.Forms.DataGridView> formant zapewni łatwo programowalne, wydajne rozwiązanie pamięci.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [DataGridView, kontrolka — podsumowanie technologii](datagridview-control-technology-summary-windows-forms.md)  
- Zawiera podsumowanie <xref:System.Windows.Forms.DataGridView> kontrolować pojęć i użytkowania powiązanych klas.  
+ Podsumowuje <xref:System.Windows.Forms.DataGridView> koncepcje kontroli i używa powiązanych klas.  
   
  [DataGridView, kontrolka — architektura](datagridview-control-architecture-windows-forms.md)  
- W tym artykule opisano architekturę <xref:System.Windows.Forms.DataGridView> kontrolki, wyjaśniające, jego typ struktury hierarchii i dziedziczenia.  
+ Opisuje architekturę <xref:System.Windows.Forms.DataGridView> kontrolki, wyjaśniając jej hierarchię typów i strukturę dziedziczenia.  
   
  [DataGridView, kontrolka — scenariusze](datagridview-control-scenarios-windows-forms.md)  
- W tym artykule opisano najbardziej typowych scenariuszy, w którym <xref:System.Windows.Forms.DataGridView> formanty są używane.  
+ Opisuje najpopularniejsze scenariusze, w których <xref:System.Windows.Forms.DataGridView> są używane formanty.  
   
  [DataGridView, kontrolka — katalog kodu](datagridview-control-code-directory-windows-forms.md)  
- Zawiera łącza do przykładów kodu w dokumentacji dotyczącej różnych <xref:System.Windows.Forms.DataGridView> zadania. Te przykłady są pogrupowane według typu zadania.  
+ Zawiera łącza do przykładów kodu w dokumentacji dotyczącej różnych <xref:System.Windows.Forms.DataGridView> zadań. Te przykłady są podzielone według typu zadania.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Typy kolumn w kontrolce DataGridView formularzy Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)  
- W tym artykule omówiono typy kolumn w formularzach Windows Forms <xref:System.Windows.Forms.DataGridView> kontrolkę służącą do wyświetlania informacji i zezwala użytkownikom na modyfikowanie lub dodawanie informacji.  
+ W tym artykule omówiono typy kolumn w <xref:System.Windows.Forms.DataGridView> kontrolce Windows Forms używane do wyświetlania informacji i Zezwalanie użytkownikom na modyfikowanie lub Dodawanie informacji.  
   
  [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)  
- Zawiera tematy, które opisują sposób wypełnienia kontrolki z danymi ręczny lub z zewnętrznego źródła danych.  
+ Zawiera tematy opisujące sposób wypełniania kontrolki danymi ręcznie lub z zewnętrznego źródła danych.  
   
  [Dostosowywanie kontrolki DataGridView formularzy Windows Forms](customizing-the-windows-forms-datagridview-control.md)  
- Zawiera tematy, które opisują niestandardowego rysowania <xref:System.Windows.Forms.DataGridView> komórek i wierszy oraz tworzenie pochodnych komórki, kolumny i typy wierszy.  
+ Zawiera tematy, które opisują <xref:System.Windows.Forms.DataGridView> niestandardowe komórki i wiersze rysowania, a także tworzą pochodne komórki, kolumny i typy wierszy.  
   
  [Dostrajanie wydajności w kontrolce DataGridView formularzy Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)  
- Zawiera tematy, które opisują sposób efektywnie wykorzystać formantu, aby uniknąć problemów z wydajnością podczas pracy z dużymi ilościami danych.  
+ Zawiera tematy opisujące sposób efektywnego używania kontrolki w celu uniknięcia problemów z wydajnością podczas pracy z dużymi ilościami danych.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -5,65 +5,65 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: 96b1e08a64a52affa89cda2506230e60fc337077
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2b7d6ac6022da793b90b5447062ceac82cc7290c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645764"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965201"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Aktualizowanie źródeł danych za pomocą elementów DataAdapter
-`Update` Metody <xref:System.Data.Common.DataAdapter> jest wywoływana, aby rozwiązać zmian z <xref:System.Data.DataSet> wstecz do źródła danych. `Update` Metody, takiej jak `Fill` metoda, przyjmuje jako argumenty wystąpienie `DataSet`oraz opcjonalny <xref:System.Data.DataTable> obiektu lub `DataTable` nazwy. `DataSet` Wystąpienie jest `DataSet` zawiera zmiany, które zostały wprowadzone, a `DataTable` Określa tabelę, z którego można pobrać zmiany. Jeśli nie `DataTable` jest określony, pierwszy `DataTable` w `DataSet` jest używany.  
+Metoda jest wywoływana ,<xref:System.Data.DataSet> aby rozwiązać zmiany z powrotem do źródła danych. `Update` <xref:System.Data.Common.DataAdapter> Metoda `Update` , taka `Fill` jak metoda, przyjmuje jako argumenty wystąpienia a `DataSet`i opcjonalnego <xref:System.Data.DataTable> obiektu lub `DataTable` nazwy. Wystąpienie to zawiera wprowadzone zmiany i `DataTable` identyfikuje tabelę, z której mają zostać pobrane zmiany. `DataSet` `DataSet` Jeśli nie `DataTable` jest określony, zostanie użyta pierwsza `DataSet` `DataTable` z.  
   
- Gdy wywołujesz `Update` metody `DataAdapter` analizuje zmiany, które zostały wprowadzone i uruchamia odpowiednie polecenie (INSERT, UPDATE lub DELETE). Gdy `DataAdapter` wykryje zmianę <xref:System.Data.DataRow>, używa ona <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, lub <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> przetworzyć zmiany. Dzięki temu można zmaksymalizować wydajność aplikacji ADO.NET, określając składni polecenia w czasie projektowania i, jeśli jest to możliwe przy użyciu procedur składowanych. Musisz jawnie ustawić polecenia przed wywołaniem `Update`. Jeśli `Update` nosi nazwę i odpowiednie polecenie nie istnieje dla określonej aktualizacji (na przykład nie `DeleteCommand` dla usuniętych wierszy), zgłaszany jest wyjątek.  
-  
-> [!NOTE]
->  Jeśli używasz procedur składowanych serwera SQL Server, aby edytować lub usunąć dane za pomocą `DataAdapter`, upewnij się, że nie używasz SET NOCOUNT ON w definicji procedury składowanej. Powoduje to, że liczba zmodyfikowanych wierszy zwracane jako zera, które `DataAdapter` interpretuje jako konflikt współbieżności. W takim przypadku <xref:System.Data.DBConcurrencyException> zostanie zgłoszony.  
-  
- Parametry polecenia może służyć do określenia wartości wejściowe i wyjściowe dla instrukcji SQL lub procedurę składowaną dla każdego wiersza zmodyfikowane w `DataSet`. Aby uzyskać więcej informacji, zobacz [parametry elementu DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
+ Po wywołaniu `Update` metody `DataAdapter` , analizuje wprowadzone zmiany i wykonuje odpowiednie polecenie (INSERT, Update lub Delete). <xref:System.Data.DataRow> <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>Gdy napotka zmiany, używa ,<xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> lub<xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A>doprzetwarzaniazmiany. `DataAdapter` Pozwala to zmaksymalizować wydajność aplikacji ADO.NET przez określenie składni polecenia w czasie projektowania i, jeśli to możliwe, za pomocą procedur składowanych. Należy jawnie ustawić polecenia przed wywołaniem `Update`. Jeśli `Update` jest wywoływana i odpowiednie polecenie nie istnieje dla określonej aktualizacji (na przykład nie `DeleteCommand` dla usuniętych wierszy), zgłaszany jest wyjątek.  
   
 > [!NOTE]
->  Należy zrozumieć różnicę między usuwanie wierszy w <xref:System.Data.DataTable> i usuwania wiersza. Gdy wywołujesz `Remove` lub `RemoveAt` metody wiersza jest usuwany natychmiast. Wszystkie odpowiednie wiersze ze źródła danych zaplecza nie zostaną zmienione, jeśli następnie przekażesz `DataTable` lub `DataSet` do `DataAdapter` i wywołać `Update`. Kiedy używasz `Delete` metody wiersz pozostaje w `DataTable` i jest oznaczony do usunięcia. Jeśli następnie przekażesz `DataTable` lub `DataSet` do `DataAdapter` i wywołać `Update`, odpowiedni wiersz w źródle danych zaplecza zostanie usunięty.  
+> Jeśli używasz SQL Server procedur składowanych do edytowania lub usuwania danych przy użyciu programu `DataAdapter`, upewnij się, że w definicji procedury składowanej nie używasz opcji SET NOCOUNT on. Powoduje to, że liczba zwracanych wierszy jest równa zero, `DataAdapter` która interpretuje jako konflikt współbieżności. W takim przypadku <xref:System.Data.DBConcurrencyException> zostanie zgłoszone zdarzenie.  
   
- Jeśli Twoje `DataTable` mapuje lub jest generowana z tabeli pojedynczej bazy danych, możesz korzystać z zalet <xref:System.Data.Common.DbCommandBuilder> obiektu w celu automatycznego generowania `DeleteCommand`, `InsertCommand`, i `UpdateCommand` obiektów dla `DataAdapter`. Aby uzyskać więcej informacji, zobacz [Generowanie poleceń za pomocą CommandBuilders](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+ Parametry polecenia mogą służyć do określania wartości wejściowych i wyjściowych dla instrukcji SQL lub procedury składowanej dla każdego zmodyfikowanego wiersza w `DataSet`. Aby uzyskać więcej informacji, zobacz [DataAdapter Parameters](../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   
-## <a name="using-updatedrowsource-to-map-values-to-a-dataset"></a>Mapuj wartości do zestawu danych przy użyciu przetwarzania wsadowego  
- Można kontrolować, jak wartości zwrócone ze źródła danych są mapowane z powrotem na `DataTable` następujące wywołanie do metody aktualizacji `DataAdapter`, za pomocą <xref:System.Data.Common.DbCommand.UpdatedRowSource%2A> właściwość <xref:System.Data.Common.DbCommand> obiektu. Ustawiając `UpdatedRowSource` jedną z właściwości <xref:System.Data.UpdateRowSource> wartości wyliczenia można kontrolować, czy parametry wyjściowe zwracane przez `DataAdapter` polecenia są ignorowane lub zastosowane do zmienionych wierszy w `DataSet`. Można również określić, czy pierwszy zwracane wiersza (jeśli istnieje) jest stosowany do zmienionego wiersza w `DataTable`.  
+> [!NOTE]
+> Ważne jest, aby zrozumieć różnicę między usunięciem wiersza w <xref:System.Data.DataTable> a i usunięciem wiersza. Gdy wywołasz `Remove` metodę lub `RemoveAt` , wiersz zostanie natychmiast usunięty. Nie wpłynie to na wszystkie odpowiadające im wiersze w `DataTable` źródle danych zaplecza, `DataAdapter` a następnie `DataSet` do wywołania `Update`i. Gdy używasz `Delete` metody, wiersz pozostaje `DataTable` w i jest oznaczony do usunięcia. Jeśli następnie przekażesz `DataTable` wywołanie `DataSet` lub`Update`do `DataAdapter` i, odpowiadający mu wiersz w źródle danych zaplecza zostanie usunięty.  
   
- W poniższej tabeli opisano różne wartości `UpdateRowSource` wyliczenie i ich wpływ na zachowanie polecenia używane z `DataAdapter`.  
+ `UpdateCommand` `DeleteCommand` <xref:System.Data.Common.DbCommandBuilder> `DataAdapter` `InsertCommand`Jeśli mapowania do lub są generowane na podstawie pojedynczej tabeli bazy danych, można skorzystać z obiektu, aby automatycznie generować obiekty, i. `DataTable` Aby uzyskać więcej informacji, zobacz [Generowanie poleceń z CommandBuilders](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
   
-|Wyliczenie przetwarzania wsadowego|Opis|  
+## <a name="using-updatedrowsource-to-map-values-to-a-dataset"></a>Mapowanie wartości do zestawu danych za pomocą UpdatedRowSource  
+ Można kontrolować sposób `DataAdapter`, w jaki wartości zwracane ze źródła danych są mapowane z powrotem do `DataTable` następującego wywołania metody Update w, <xref:System.Data.Common.DbCommand> przy użyciu <xref:System.Data.Common.DbCommand.UpdatedRowSource%2A> właściwości obiektu. Ustawiając `UpdatedRowSource` właściwość na jedną <xref:System.Data.UpdateRowSource> z wartości wyliczenia, można kontrolować, czy parametry `DataAdapter` wyjściowe zwracane przez polecenia są ignorowane `DataSet`czy stosowane do zmienionych wierszy w. Można również określić, czy pierwszy zwracany wiersz (jeśli istnieje) jest stosowany do zmienionego wiersza w `DataTable`.  
+  
+ W poniższej tabeli opisano różne wartości `UpdateRowSource` wyliczania i ich wpływ na zachowanie polecenia użytego `DataAdapter`z.  
+  
+|UpdatedRowSource, Wyliczenie|Opis|  
 |----------------------------------|-----------------|  
-|<xref:System.Data.UpdateRowSource.Both>|Pierwszy wiersz z zestawu wyników zwracanego i parametry wyjściowe można mapować do zmienionego wiersza w `DataSet`.|  
-|<xref:System.Data.UpdateRowSource.FirstReturnedRecord>|Tylko dane w pierwszym wierszu zestaw wyników zwrócony można mapować do zmienionego wiersza w `DataSet`.|  
-|<xref:System.Data.UpdateRowSource.None>|Wszystkie dane wyjściowe są parametry lub wiersze zestaw wyników zwrócony są ignorowane.|  
-|<xref:System.Data.UpdateRowSource.OutputParameters>|Tylko parametry wyjściowe można mapować do zmienionego wiersza w `DataSet`.|  
+|<xref:System.Data.UpdateRowSource.Both>|Zarówno parametry wyjściowe, jak i pierwszy wiersz zwracanego zestawu wyników mogą być zamapowane do zmienionego wiersza w `DataSet`.|  
+|<xref:System.Data.UpdateRowSource.FirstReturnedRecord>|Tylko dane z pierwszego wiersza zwróconego zestawu wyników mogą być mapowane do zmienionego wiersza w `DataSet`.|  
+|<xref:System.Data.UpdateRowSource.None>|Wszystkie parametry wyjściowe lub wiersze zwróconego zestawu wyników są ignorowane.|  
+|<xref:System.Data.UpdateRowSource.OutputParameters>|Tylko parametry wyjściowe mogą być mapowane do zmienionego wiersza w `DataSet`.|  
   
- `Update` Metoda rozpoznaje zmiany z powrotem do źródła danych; jednak inni klienci mogą zmodyfikowano dane w źródle danych od czasu ostatniego wypełniony `DataSet`. Aby odświeżyć swoje `DataSet` z bieżącymi danymi, użyj `DataAdapter` i `Fill` metody. Nowe wiersze, które zostaną dodane do tabeli, a następnie zaktualizowane informacje zostaną uwzględnione w istniejących wierszy. `Fill` Metoda określa, czy zostanie dodany nowy wiersz, czy istniejący wiersz zostaną zaktualizowane, sprawdzając wartości klucza podstawowego wierszy w `DataSet` i wierszy zwracanych przez `SelectCommand`. Jeśli `Fill` metoda napotka wartość klucza podstawowego dla wiersza w `DataSet` , które odpowiadają wartości klucza podstawowego z wiersza w wynikach zwróconych przez `SelectCommand`, aktualizuje istniejący wiersz z informacjami z wierszy zwróconych przez `SelectCommand`i ustawia <xref:System.Data.DataRow.RowState%2A> istniejącego wiersza, aby `Unchanged`. Jeśli wiersz zwrócony przez `SelectCommand` ma wartość klucza podstawowego, który nie pasuje do żadnej wartości klucza podstawowego wierszy w `DataSet`, `Fill` metoda dodaje nowy wiersz z `RowState` z `Unchanged`.  
+ Metoda rozwiązuje zmiany z powrotem do źródła danych, ale inni klienci mogą modyfikować dane w źródle danych od czasu ostatniego `DataSet`wypełnienia. `Update` Aby odświeżyć `DataSet` dane przy użyciu bieżących danych, `DataAdapter` Użyj `Fill` metody i. Nowe wiersze zostaną dodane do tabeli, a zaktualizowane informacje zostaną dołączone do istniejących wierszy. Metoda określa, czy nowy wiersz zostanie dodany, czy istniejący wiersz zostanie zaktualizowany poprzez sprawdzenie wartości klucza podstawowego wierszy `DataSet` w i wierszy zwracanych przez `SelectCommand`. `Fill` Jeśli metoda napotka wartość klucza podstawowego dla wiersza `DataSet` w, który dopasowuje wartość klucza podstawowego z wiersza w wynikach zwróconych przez `SelectCommand`, aktualizuje istniejący wiersz o informacje z wiersza zwróconego przez `Fill` `SelectCommand`i ustawia <xref:System.Data.DataRow.RowState%2A> istniejący wiersz na `Unchanged`. `SelectCommand` Jeśli wiersz zwrócony przez ma wartość klucza podstawowego, która nie pasuje do żadnej wartości klucza podstawowego wierszy `DataSet`w, `Fill` `Unchanged`Metoda dodaje nowy wiersz z `RowState` .  
   
 > [!NOTE]
->  Jeśli `SelectCommand` zwraca wyniki OUTER JOIN `DataAdapter` nie ustawi `PrimaryKey` wartości wynikowe `DataTable`. Należy zdefiniować `PrimaryKey` sobie, aby upewnić się, że zduplikowane wiersze są rozpoznawane prawidłowo. Aby uzyskać więcej informacji, zobacz [Definiowanie kluczy podstawowych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+> Jeśli zwraca wyniki sprzężenia zewnętrznego `DataAdapter` , nie ustawi `PrimaryKey` wartości wynikowej `DataTable`. `SelectCommand` Należy zdefiniować siebie, `PrimaryKey` aby upewnić się, że zduplikowane wiersze są poprawnie rozpoznawane. Aby uzyskać więcej informacji, zobacz [Definiowanie kluczy podstawowych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
   
- Aby obsłużyć wyjątki, które mogą wystąpić podczas wywoływania `Update` metody, można użyć `RowUpdated` zdarzenie, aby reagować na błędy aktualizacji wiersza w miarę ich występowania (zobacz [Obsługa zdarzeń elementu DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)), lub możesz ustawić `DataAdapter.ContinueUpdateOnError` do `true` przed wywołaniem `Update`i reagować na informacje o błędzie, przechowywane w `RowError` właściwości określonego wiersza po zakończeniu aktualizacji (zobacz [informacje o błędzie wiersza](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)).  
+ Aby obsłużyć wyjątki, które mogą wystąpić `Update` podczas wywoływania metody, można `RowUpdated` użyć zdarzenia w celu reagowania na błędy aktualizacji wierszy w miarę ich występowania (zobacz [Obsługa zdarzeń DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)) lub `DataAdapter.ContinueUpdateOnError` można `true` ustawić na przed Wywoływanie `Update`i reagowanie na informacje o błędzie przechowywane `RowError` we właściwości określonego wiersza po zakończeniu aktualizacji (zobacz [Informacje o błędzie wiersza](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)).  
   
- **Uwaga** wywoływania `AcceptChanges` na `DataSet`, `DataTable`, lub `DataRow` spowoduje, że wszystkie `Original` wartości `DataRow` zostaną zastąpione przy użyciu `Current` wartości `DataRow`. Jeśli wartości pól, które identyfikują wiersze jako unikatowy zostały zmodyfikowane po wywołaniu `AcceptChanges` `Original` wartości nie będzie już zgodny wartości w źródle danych. `AcceptChanges` jest wywoływana automatycznie dla każdego wiersza podczas wywoływania metody aktualizacji `DataAdapter`. Można zachować oryginalne wartości podczas wywoływania metody aktualizacji przez pierwsze ustawienie `AcceptChangesDuringUpdate` właściwość `DataAdapter` na wartość false lub przez tworzenie programu obsługi zdarzeń dla `RowUpdated` zdarzeń i ustawienie <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> do <xref:System.Data.UpdateStatus.SkipCurrentRow>. Aby uzyskać więcej informacji, zobacz [Scalanie zawartości elementu DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) i [Obsługa zdarzeń elementu DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ **Uwaga** `AcceptChanges` Wywołanieelementu`DataRow` `Current` `DataRow`,, lub spowoduje zastąpienie wszystkich`Original` wartości w celu zastąpienia wartościami dla. `DataTable` `DataSet` `DataRow` Jeśli wartości pól, które identyfikują wiersz jako unikatowy, zostały zmodyfikowane, po wywołaniu `AcceptChanges` `Original` wartości nie będą już zgodne z wartościami w źródle danych. `AcceptChanges`jest wywoływana automatycznie dla każdego wiersza w trakcie wywołania metody `DataAdapter`Update. Oryginalne wartości można zachować podczas wywołania metody Update, najpierw ustawiając `AcceptChangesDuringUpdate` Właściwość `DataAdapter` na false lub tworząc procedurę obsługi zdarzeń dla `RowUpdated` zdarzenia i ustawiając wartość <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> na <xref:System.Data.UpdateStatus.SkipCurrentRow>. Aby uzyskać więcej informacji, zobacz [scalanie zawartości zestawu danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) i [Obsługa zdarzeń DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższych przykładach pokazano, jak przeprowadzić aktualizacje zmodyfikowanych wierszy poprzez jawne ustawienie `UpdateCommand` z `DataAdapter` i wywoływania jego `Update` metody. Zwróć uwagę, że parametr określony w klauzuli WHERE aktualizacji instrukcji jest skonfigurowany do używania `Original` wartość `SourceColumn`. Jest to ważne, ponieważ `Current` wartości mogły zostać zmodyfikowane i może nie być zgodna wartość w źródle danych. `Original` Wartość jest wartością, który został użyty do wypełniania `DataTable` ze źródła danych.  
+ W poniższych przykładach pokazano, jak wykonać aktualizacje modyfikowanych wierszy, jawnie ustawiając `UpdateCommand` wartość `DataAdapter` a i wywołując jej `Update` metodę. Należy zauważyć, że parametr określony w klauzuli WHERE instrukcji Update jest ustawiony tak, aby używał `Original` wartości. `SourceColumn` Jest to ważne, ponieważ `Current` wartość mogła zostać zmodyfikowana i może nie być zgodna z wartością w źródle danych. Wartość jest wartością użytą do `DataTable` wypełnienia ze źródła danych. `Original`  
   
  [!code-csharp[DataWorks SqlClient.DataAdapterUpdate#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.DataAdapterUpdate/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.DataAdapterUpdate#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.DataAdapterUpdate/VB/source.vb#1)]  
   
-## <a name="autoincrement-columns"></a>Kolumn typu AutoIncrement  
- Tabele ze źródła danych ma kolumn o wartości auto, możesz wpisać kolumny w swojej `DataSet` albo przez zwrócenie wartości automatycznego przyrostu jako parametru wyjściowego procedury składowanej i mapowanie do kolumny w tabeli, zwracanie przez automatycznego przyrostu wartości w pierwszym wierszu zestawu zwrócone przez procedurę składowaną lub instrukcji SQL lub za pomocą wyników `RowUpdated` zdarzenia `DataAdapter` wykonywanie dodatkowych instrukcji SELECT. Aby uzyskać więcej informacji i obejrzeć przykład, zobacz [pobieranie tożsamości lub wartości automatycznych numerów](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
+## <a name="autoincrement-columns"></a>Kolumny AutoIncrement  
+ Jeśli tabele ze źródła danych zawierają autoprzyrostowe kolumny, można wypełnić kolumny w `DataSet` elemencie przez zwrócenie wartości autoprzyrostu jako parametru wyjściowego procedury składowanej i mapowania do kolumny w tabeli, zwracając element wartość AutoIncrement w pierwszym wierszu zestawu wyników zwrócone przez procedurę składowaną lub instrukcję SQL albo za pomocą `RowUpdated` zdarzenia `DataAdapter` do wykonania dodatkowej instrukcji SELECT. Aby uzyskać więcej informacji i zapoznać się z przykładem, zobacz [pobieranie tożsamości lub wartości AutoNumber](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
   
-## <a name="ordering-of-inserts-updates-and-deletes"></a>Kolejność wstawiania, aktualizacji i usuwania  
- W wielu sytuacjach, kolejność, w którym zmiany wprowadzone za pomocą `DataSet` są wysyłane do danych źródła jest ważne. Na przykład jeśli wartość klucza podstawowego dla istniejącego wiersza jest aktualizowana, a nowy wiersz został dodany z kluczem obcym nowe wartości klucza podstawowego, jest ważne, aby przetworzyć aktualizacji przed insert.  
+## <a name="ordering-of-inserts-updates-and-deletes"></a>Porządkowanie operacji wstawiania, aktualizacji i usuwania  
+ W wielu przypadkach kolejność, w jakiej zmiany wprowadzane przez `DataSet` program są wysyłane do źródła danych, jest ważna. Na przykład jeśli wartość klucza podstawowego dla istniejącego wiersza zostanie zaktualizowana, a nowy wiersz został dodany z nową wartością klucza podstawowego jako klucz obcy, ważne jest, aby przetworzyć aktualizację przed wstawieniem.  
   
- Możesz użyć `Select` metody `DataTable` do zwrócenia `DataRow` tablica, która odwołuje się tylko do wierszy z określonym `RowState`. Możesz następnie przekazać zwracanego `DataRow` tablicy do `Update` metody `DataAdapter` do przetworzenia zmodyfikowanych wierszy. Określając podzestawu wierszy, które mają być aktualizowane, można kontrolować kolejności przetwarzania wstawiania, aktualizacji i usuwania.  
+ Można użyć `Select` metody, `DataTable` aby zwrócić `DataRow` tablicę, która odwołuje się tylko do wierszy z konkretną `RowState`. Następnie można przekazać zwróconą `DataRow` tablicę `Update` do metody `DataAdapter` w celu przetworzenia zmodyfikowanych wierszy. Określając podzestaw wierszy do zaktualizowania, można kontrolować kolejność, w której przetwarzane są operacje INSERT, Update i usunięć.  
   
 ## <a name="example"></a>Przykład  
- Na przykład poniższy kod zapewnia, że usunięte wiersze w tabeli są przetwarzania pierwszego, a następnie zaktualizowane wiersze i wstawione wiersze.  
+ Na przykład poniższy kod gwarantuje, że usunięte wiersze tabeli są przetwarzane jako pierwsze, a następnie zaktualizowane wiersze, a następnie wstawione wiersze.  
   
 ```vb  
 Dim table As DataTable = dataSet.Tables("Customers")  
@@ -95,18 +95,18 @@ adapter.Update(table.Select(null, null,
 adapter.Update(table.Select(null, null, DataViewRowState.Added));  
 ```  
   
-## <a name="use-a-dataadapter-to-retrieve-and-update-data"></a>Użyj elementu DataAdapter pobierania i aktualizowania danych  
- Element DataAdapter służy do pobierania i aktualizowania danych.  
+## <a name="use-a-dataadapter-to-retrieve-and-update-data"></a>Pobieranie i aktualizowanie danych przy użyciu elementu DataAdapter  
+ Możesz użyć elementu DataAdapter, aby pobrać i zaktualizować dane.  
   
-- W przykładzie użyto DataAdapter.AcceptChangesDuringFill się klonowanie danych w bazie danych. Jeśli właściwość została ustawiona jako wartość false, metoda AcceptChanges nie jest wywoływana, gdy wypełnianie tabeli, a nowo dodane wiersze są traktowane jako wstawione wiersze. Tak w przykładzie użyto tych wierszy, aby wstawić nowe wiersze do bazy danych.  
+- Przykład używa DataAdapter. AcceptChangesDuringFill do klonowania danych w bazie danych. Jeśli właściwość jest ustawiona na wartość false, Metoda AcceptChanges nie jest wywoływana podczas wypełniania tabeli, a nowo dodane wiersze są traktowane jako wstawione wiersze. Dlatego przykład używa tych wierszy do wstawienia nowych wierszy do bazy danych.  
   
-- Przykłady używa DataAdapter.TableMappings do definiowania mapowanie między tabelą źródłową i DataTable.  
+- Przykłady używają klasy DataAdapter. TableMappings do definiowania mapowania między tabelą źródłową i DataTable.  
   
-- W przykładzie użyto DataAdapter.FillLoadOption, aby określić sposobu wypełniania elementu DataTable z obiekt DbDataReader. Podczas tworzenia elementu DataTable możesz tylko zapisywać dane z bazy danych bieżącej wersji lub wersji oryginalnej, ustawiając właściwość jako LoadOption.Upsert lub LoadOption.PreserveChanges.  
+- Przykład używa DataAdapter. FillLoadOption, aby określić, w jaki sposób karta wypełnia DataTable z elementu DbDataReader. Podczas tworzenia elementu DataTable można zapisać tylko dane z bazy danych do bieżącej wersji lub oryginalnej wersji, ustawiając właściwość jako LoadOption. upsert lub LoadOption. PreserveChanges.  
   
-- Próbka będzie również zaktualizować tabeli przy użyciu DbDataAdapter.UpdateBatchSize do wykonywania operacji wsadowych.  
+- Przykład spowoduje również zaktualizowanie tabeli przy użyciu DbDataAdapter. UpdateBatchSize do wykonywania operacji wsadowych.  
   
- Aby skompilować i uruchomić przykład, musisz utworzyć przykładowej bazy danych:  
+ Przed skompilowaniem i uruchomieniem przykładu należy utworzyć przykładową bazę danych:  
   
 ```sql
 USE [master]  
@@ -172,7 +172,7 @@ ALTER TABLE [dbo].[Course] CHECK CONSTRAINT [FK_Course_Department]
 GO  
 ```  
   
- Projekty języka C# i Visual Basic z tego przykładu kodu można znaleźć na [Developer Code Samples](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=How%20to%20use%20DataAdapter%20to%20retrieve%20and%20update%20data&f%5B1%5D).  
+ C#Visual Basic projekty z tym przykładem kodu można znaleźć na przykładach [kodu dewelopera](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=How%20to%20use%20DataAdapter%20to%20retrieve%20and%20update%20data&f%5B1%5D).  
   
 ```csharp
 using System;  
@@ -375,4 +375,4 @@ class Program {
 - [Metody AcceptChanges i RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
 - [Scalanie zawartości elementu DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
 - [Pobieranie tożsamości lub wartości automatycznych numerów](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

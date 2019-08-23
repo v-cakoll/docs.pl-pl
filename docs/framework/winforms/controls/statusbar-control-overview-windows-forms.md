@@ -7,26 +7,26 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], about StatusBar control
 - status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
-ms.openlocfilehash: 4e1816ef221641f5ad54fb429442ed43289b592a
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: bd58d4c70e3a3c88e57fe242957f669d1944fd71
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505426"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964433"
 ---
 # <a name="statusbar-control-overview-windows-forms"></a>StatusBar — Informacje o formancie [Formularze systemu Windows]
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip> i <xref:System.Windows.Forms.ToolStripStatusLabel> kontrolki Zastąp i dodawania funkcjonalności do <xref:System.Windows.Forms.StatusBar> i <xref:System.Windows.Forms.StatusBarPanel> kontroluje; jednak <xref:System.Windows.Forms.StatusBar> i <xref:System.Windows.Forms.StatusBarPanel> kontrolek zostaną zachowane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli możesz Wybierz.  
+> <xref:System.Windows.Forms.StatusBarPanel> <xref:System.Windows.Forms.StatusBarPanel> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBar> Formanty i zastępują i dodają funkcje do kontrolek i, natomiast kontrolki i są zachowywane w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości. <xref:System.Windows.Forms.StatusStrip> <xref:System.Windows.Forms.ToolStripStatusLabel> następnie.  
   
- Formularze Windows [StatusBar, kontrolka](statusbar-control-windows-forms.md) jest używana w formularzach jako obszar, zwykle są wyświetlane w dolnej części okna, w którym aplikacja może wyświetlać różne rodzaje informacji o stanie. <xref:System.Windows.Forms.StatusBar> Formanty mogą mieć paneli paska stanu na nich, które wyświetlania tekstu lub ikony wskazujące stan lub szeregu ikony w animacji, które wskazują, że proces działa; na przykład program Microsoft Word wskazująca, że dokument jest zapisywany.  
+ [Formant StatusBar](statusbar-control-windows-forms.md) Windows Forms jest używany w formularzach jako obszar, zwykle wyświetlany u dołu okna, w którym aplikacja może wyświetlać różne rodzaje informacji o stanie. <xref:System.Windows.Forms.StatusBar>w kontrolkach mogą znajdować się panele paska stanu, które wyświetlają tekst lub ikony wskazujące stan, lub serię ikon w animacji wskazującej, że proces działa. na przykład program Microsoft Word wskazuje, że dokument jest zapisywany.  
   
-## <a name="using-the-statusbar-control"></a>Używanie formantu StatusBar  
- Program Internet Explorer używa pasek stanu, aby wskazać adres URL strony, po najechaniu kursorem myszy nad hiperłącze. Microsoft Word zawiera informacje dotyczące Lokalizacja strony, Lokalizacja sekcji i edytowanie tryby, takie jak zastępowania i śledzenie; poprawek i Visual Studio używa pasek stanu, co zapewnia informacje kontekstowe, na przykład informujące sposoby manipulowania dokowalnych jako zadokowany lub przestawny.  
+## <a name="using-the-statusbar-control"></a>Korzystanie z formantu StatusBar  
+ Program Internet Explorer używa paska stanu, aby wskazać adres URL strony, gdy wskaźnik myszy przesuwa się nad hiperłączem. Program Microsoft Word zawiera informacje o lokalizacji strony, lokalizacji sekcji i trybach edycji, takich jak zastępowanie i śledzenie poprawek; Program Visual Studio używa paska stanu, aby podać informacje kontekstowe, na przykład poinformowanie o sposobie manipulowania oknami było dokować jako zadokowanych lub zmiennoprzecinkowych.  
   
- Jeden komunikat o można wyświetlić na pasku stanu, ustawiając <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> właściwości `false` (ustawienie domyślne) i ustawienie <xref:System.Windows.Forms.StatusBar.Text%2A> właściwości paska stanu w tekście, które mają być wyświetlane na pasku stanu. Na pasku stanu można podzielić paneli, aby wyświetlić więcej niż jeden typ informacji przez ustawienie <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> właściwości `true` i przy użyciu <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> metody <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
+ Na pasku stanu można wyświetlić jeden komunikat, ustawiając <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> właściwość na `false` <xref:System.Windows.Forms.StatusBar.Text%2A> wartość (domyślnie) i ustawiając właściwość paska stanu na tekst, który ma być wyświetlany na pasku stanu. Pasek stanu można podzielić na panele, aby wyświetlić więcej niż jeden typ <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> informacji przez ustawienie właściwości na `true` <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>i przy użyciu <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> metody.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Instrukcje: Określanie, które panelu w formancie StatusBar formularzy Windows został kliknięty](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Instrukcje: Określ, który panel w Windows Forms kontrolce StatusBar został kliknięty](determine-which-panel-wf-statusbar-control-was-clicked.md)

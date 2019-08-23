@@ -2,21 +2,21 @@
 title: <policyImporters>
 ms.date: 03/30/2017
 ms.assetid: f8267a6f-bc09-4ec1-9b26-9445f137f663
-ms.openlocfilehash: e30d4eb7cb58da02981d123aaad4d15d1dc41bd7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4125a351d4b0832c7c91362aa488370d01a60d65
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783186"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933768"
 ---
-# <a name="policyimporters"></a>\<policyImporters>
-Ten element konfiguracji określa wszystkich importerów zasad sterujących importem potwierdzeń niestandardowych zasad dotyczących powiązań. Każdy element podrzędny jest <`policyImporter`> używany do wyszukiwania niestandardowych asercji zasad dotyczących powiązań funkcji, jak również dołączyć element niestandardowego powiązania, który implementuje funkcje wymaga potwierdzenia.  
+# <a name="policyimporters"></a>\<policyImporters >
+Ten element konfiguracji określa wszystkich importerów zasad kontrolujących Importowanie potwierdzeń niestandardowych zasad dotyczących powiązań. Każdy element podrzędny to <`policyImporter`>, który służy do wyszukiwania niestandardowych zatwierdzeń zasad dotyczących funkcji powiązania, a także do dołączania niestandardowego elementu powiązania, który implementuje funkcje wymagane przez potwierdzenie.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>
 - <xref:System.ServiceModel.Description.MetadataImporter>
-- [\<policyImporter>](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporter.md)
-- [Konfiguracja klienta programu WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [Klienci](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [\<policyImporter >](policyimporter.md)
+- [Konfiguracja klienta programu WCF](../../../wcf/feature-details/client-configuration.md)
+- [Klienci](../../../wcf/feature-details/clients.md)

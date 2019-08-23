@@ -9,78 +9,78 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ea3bdea9c65b326953d16d7824114763ff4d017
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589863"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939409"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Weryfikowanie dokumentu XML w modelu DOM
-<xref:System.Xml.XmlDocument> Klasy XML w modelu DOM (Document Object) względem schematu XML definicji język (XSD) schematu lub dokumentu definicja typu (DTD) domyślnie weryfikują dane XML tylko sprawdza się, jest poprawnie sformułowany.  
+<xref:System.Xml.XmlDocument> Klasa nie sprawdza poprawności kodu XML w Document Object Model (dom) w odniesieniu do języka definicji schematu XML (XSD) lub definicji typu dokumentu (DTD) domyślnie; plik XML jest weryfikowany tylko tak, aby był poprawnie sformułowany.  
   
- Aby sprawdzić poprawność kodu XML w modelu DOM, można sprawdzić poprawność kodu XML zgodnie z ich załadowaniu do modelu DOM, przekazując, sprawdzanie poprawności schematu <xref:System.Xml.XmlReader> do <xref:System.Xml.XmlDocument.Load%2A> metody <xref:System.Xml.XmlDocument> klasy lub sprawdzania poprawności wcześniej niezweryfikowanych dokumentu XML w modelu DOM przy użyciu <xref:System.Xml.XmlDocument.Validate%2A> metody <xref:System.Xml.XmlDocument> klasy.  
+ Aby sprawdzić poprawność kodu XML w modelu dom, można sprawdzić poprawność kodu XML w miarę ich ładowania do modelu Dom przez <xref:System.Xml.XmlReader> przekazanie <xref:System.Xml.XmlDocument.Load%2A> walidacji schematu <xref:System.Xml.XmlDocument> do metody klasy lub zweryfikowanie poprzednio niezweryfikowanego dokumentu XML w modelu dom przy użyciu <xref:System.Xml.XmlDocument.Validate%2A> Metoda klasy.<xref:System.Xml.XmlDocument>  
   
-## <a name="validating-an-xml-document-as-it-is-loaded-into-the-dom"></a>Weryfikowanie dokumentu XML w postaci, w jakiej są ładowane do modelu DOM  
- <xref:System.Xml.XmlDocument> Klasy sprawdza poprawność danych XML, ponieważ został załadowany do modelu DOM, podczas sprawdzania poprawności <xref:System.Xml.XmlReader> jest przekazywany do <xref:System.Xml.XmlDocument.Load%2A> metody <xref:System.Xml.XmlDocument> klasy.  
+## <a name="validating-an-xml-document-as-it-is-loaded-into-the-dom"></a>Sprawdzanie poprawności dokumentu XML w trakcie jego ładowania do modelu DOM  
+ Klasa sprawdza poprawność danych XML w miarę ich ładowania do modelu dom, gdy Walidacja <xref:System.Xml.XmlReader> jest przenoszona <xref:System.Xml.XmlDocument.Load%2A> <xref:System.Xml.XmlDocument> do metody klasy. <xref:System.Xml.XmlDocument>  
   
- Po pomyślnej weryfikacji wartości domyślne schematu są stosowane wartości tekstowe są konwertowane na niepodzielne wartości zgodnie z potrzebami i informacje o typie jest skojarzone z elementami zweryfikowanych informacji. W rezultacie typizowanych danych XML zastępuje poprzednio bez typu danych XML.  
+ Po pomyślnej weryfikacji ustawienia domyślne schematu są stosowane, wartości tekstowe są konwertowane na wartości niepodzielne w razie potrzeby, a informacje o typie są skojarzone z zweryfikowanymi elementami informacji. W związku z tym wpisane dane XML zastępują poprzednio niewpisane dane XML.  
   
-### <a name="creating-an-xml-schema-validating-xmlreader"></a>Tworzenie pliku XML sprawdzanie poprawności schematu elementu XmlReader  
- Aby utworzyć XML schematu weryfikacji <xref:System.Xml.XmlReader>, wykonaj następujące kroki.  
+### <a name="creating-an-xml-schema-validating-xmlreader"></a>Tworzenie schematu XML — Walidacja elementu XmlReader  
+ Aby utworzyć sprawdzanie poprawności <xref:System.Xml.XmlReader>schematu XML, wykonaj następujące kroki.  
   
-1. Utworzyć nową <xref:System.Xml.XmlReaderSettings> wystąpienia.  
+1. Utwórz nowe <xref:System.Xml.XmlReaderSettings> wystąpienie.  
   
-2. Dodawanie schematu XML do <xref:System.Xml.XmlReaderSettings.Schemas%2A> właściwość <xref:System.Xml.XmlReaderSettings> wystąpienia.  
+2. Dodaj schemat XML do <xref:System.Xml.XmlReaderSettings.Schemas%2A> właściwości <xref:System.Xml.XmlReaderSettings> wystąpienia.  
   
-3. Określ `Schema` jako <xref:System.Xml.XmlReaderSettings.ValidationType%2A>.  
+3. `Schema` Określ<xref:System.Xml.XmlReaderSettings.ValidationType%2A>jako.  
   
-4. Opcjonalnie można określić <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> i <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> do obsługi schematu błędy i ostrzeżenia walidacji podczas sprawdzania poprawności.  
+4. Opcjonalnie można <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> określić i <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> a, aby obsługiwać błędy walidacji schematu i ostrzeżenia napotkane podczas walidacji.  
   
-5. Na koniec Przekaż <xref:System.Xml.XmlReaderSettings> obiekt <xref:System.Xml.XmlReader.Create%2A> metody <xref:System.Xml.XmlReader> klasy wraz z dokumentu XML, tworzenie, sprawdzanie poprawności schematu <xref:System.Xml.XmlReader>.  
+5. Na koniec przekazanie <xref:System.Xml.XmlReaderSettings> obiektu do <xref:System.Xml.XmlReader> <xref:System.Xml.XmlReader>metody klasy wraz z dokumentem XML, tworzenie walidacji schematu. <xref:System.Xml.XmlReader.Create%2A>  
   
 ### <a name="example"></a>Przykład  
- W przykładzie kodu, który następuje po sprawdzanie poprawności schematu <xref:System.Xml.XmlReader> sprawdza poprawność danych XML załadowane do modelu DOM. Nieprawidłowe zmiany zostaną wprowadzone do dokumentu XML i dokumentu jest następnie sprawdzony ponownie, powodując błędy sprawdzania poprawności schematu. Na koniec jeden z błędów jest usuwana, a następnie częściowo zweryfikowane części dokumentu XML.  
+ W poniższym przykładzie kodu, walidacja <xref:System.Xml.XmlReader> schematu sprawdza poprawność danych XML załadowanych do modelu DOM. Wprowadzono nieprawidłowe modyfikacje w dokumencie XML, a następnie dokument zostanie ponownie zweryfikowany, co spowoduje błędy walidacji schematu. Na koniec jeden z błędów zostanie poprawiony, a następnie część dokumentu XML jest częściowo zweryfikowana.  
   
  [!code-cpp[XmlDocumentValidation.Load#1](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlDocumentValidation.Load/CPP/XmlDocumentValidationExample.cpp#1)]
  [!code-csharp[XmlDocumentValidation.Load#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlDocumentValidation.Load/CS/XmlDocumentValidationExample.cs#1)]
  [!code-vb[XmlDocumentValidation.Load#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlDocumentValidation.Load/VB/XmlDocumentValidationExample.vb#1)]  
   
- Przykład przyjmuje `contosoBooks.xml` pliku jako dane wejściowe.  
+ Przykład pobiera `contosoBooks.xml` plik jako dane wejściowe.  
   
  [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
   
- Przykład pobiera również `contosoBooks.xsd` pliku jako dane wejściowe.  
+ Przykład pobiera `contosoBooks.xsd` również plik jako dane wejściowe.  
   
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
- Rozważ następujące opcje podczas sprawdzania poprawności danych XML, zgodnie z ich załadowaniu do modelu DOM.  
+ Podczas sprawdzania poprawności danych XML, które są ładowane do modelu DOM, należy wziąć pod uwagę następujące kwestie.  
   
-- W powyższym przykładzie <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> jest wywoływany przy każdym napotkaniu nieprawidłowego typu. Jeśli <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> nie jest ustawiony na temat weryfikacji <xref:System.Xml.XmlReader>, <xref:System.Xml.Schema.XmlSchemaValidationException> jest generowany, gdy <xref:System.Xml.XmlDocument.Load%2A> jest wywoływana, jeśli dowolny typ atrybutu lub elementu nie jest zgodny z odpowiedniego typu, określona w schemacie sprawdzania poprawności.  
+- W powyższym przykładzie <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> jest wywoływana przy każdym napotkaniu nieprawidłowego typu. Jeśli element <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> nie jest ustawiony w walidacji <xref:System.Xml.XmlReader>, <xref:System.Xml.Schema.XmlSchemaValidationException> jest zgłaszany, <xref:System.Xml.XmlDocument.Load%2A> gdy jest wywoływana, jeśli dowolny atrybut lub typ elementu nie jest zgodny z odpowiadającym mu typem określonym w schemacie walidacji.  
   
-- Podczas ładowania dokumentu XML do <xref:System.Xml.XmlDocument> obiektu za pomocą skojarzonego schematu, który definiuje wartości domyślne <xref:System.Xml.XmlDocument> traktuje te ustawienia domyślne tak, jakby były one wyświetlane w dokumencie XML. Oznacza to, że <xref:System.Xml.XmlReader.IsEmptyElement%2A> właściwość zawsze zwraca `false` element, który został przyjmujące wartości domyślne ze schematu. Nawet jeśli w dokumencie XML został on zapisany jako pusty element.  
+- Gdy dokument XML jest ładowany do <xref:System.Xml.XmlDocument> obiektu ze skojarzonym schematem, który definiuje wartości domyślne <xref:System.Xml.XmlDocument> , traktuje te wartości domyślne tak, jakby pojawiły się w dokumencie XML. Oznacza to, że <xref:System.Xml.XmlReader.IsEmptyElement%2A> Właściwość zawsze zwraca `false` dla elementu, który został domyślnie zwrócony ze schematu. Nawet jeśli w dokumencie XML, został on zapisany jako pusty element.  
   
 ## <a name="validating-an-xml-document-in-the-dom"></a>Weryfikowanie dokumentu XML w modelu DOM  
- <xref:System.Xml.XmlDocument.Validate%2A> Metody <xref:System.Xml.XmlDocument> klasy sprawdza poprawność danych XML załadowane w modelu DOM względem schematów w <xref:System.Xml.XmlDocument> obiektu <xref:System.Xml.XmlDocument.Schemas%2A> właściwości. Po pomyślnej weryfikacji wartości domyślne schematu są stosowane wartości tekstowe są konwertowane na niepodzielne wartości zgodnie z potrzebami i informacje o typie jest skojarzone z elementami zweryfikowanych informacji. W rezultacie typizowanych danych XML zastępuje poprzednio bez typu danych XML.  
+ Metoda klasy sprawdza poprawność danych XML załadowanych w modelu dom <xref:System.Xml.XmlDocument> względem <xref:System.Xml.XmlDocument.Schemas%2A> schematów we właściwości obiektu. <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlDocument.Validate%2A> Po pomyślnej weryfikacji ustawienia domyślne schematu są stosowane, wartości tekstowe są konwertowane na wartości niepodzielne w razie potrzeby, a informacje o typie są skojarzone z zweryfikowanymi elementami informacji. W związku z tym wpisane dane XML zastępują poprzednio niewpisane dane XML.  
   
- W poniższym przykładzie jest podobny do przykładu w "Sprawdzanie poprawności dokumentu jako go jest załadowana do modelu DOM języka XML" powyżej. W tym przykładzie dokumentu XML nie zostanie zweryfikowana podczas ładowania do modelu DOM, ale zamiast sprawdzania poprawności po ich załadowaniu do modelu DOM przy użyciu <xref:System.Xml.XmlDocument.Validate%2A> metody <xref:System.Xml.XmlDocument> klasy. <xref:System.Xml.XmlDocument.Validate%2A> Metoda sprawdza dokumentu XML względem schematów XML zawartych w <xref:System.Xml.XmlDocument.Schemas%2A> właściwość <xref:System.Xml.XmlDocument>. Nieprawidłowy następnie modyfikacje wprowadza do dokumentu XML i dokumentu jest następnie sprawdzony ponownie, powodując błędy sprawdzania poprawności schematu. Na koniec jeden z błędów jest usuwana, a następnie częściowo zweryfikowane części dokumentu XML.  
+ Poniższy przykład jest podobny do przykładu w "Walidacja dokumentu XML, gdy jest ładowany do modelu DOM" powyżej. W tym przykładzie dokument XML nie jest weryfikowany, ponieważ jest ładowany do modelu dom, ale nie jest sprawdzany po załadowaniu do modelu dom przy użyciu <xref:System.Xml.XmlDocument.Validate%2A> metody <xref:System.Xml.XmlDocument> klasy. Metoda sprawdza poprawność dokumentu XML względem schematów XML zawartych <xref:System.Xml.XmlDocument.Schemas%2A> we właściwości <xref:System.Xml.XmlDocument>. <xref:System.Xml.XmlDocument.Validate%2A> W dokumencie XML wprowadzono nieprawidłowe modyfikacje, a następnie dokument zostanie ponownie zweryfikowany, co spowoduje błędy walidacji schematu. Na koniec jeden z błędów zostanie poprawiony, a następnie część dokumentu XML jest częściowo zweryfikowana.  
   
  [!code-csharp[XmlDocumentValidation.Validate#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlDocumentValidation.Validate/CS/XmlDocumentValidationExample.cs#1)]
  [!code-vb[XmlDocumentValidation.Validate#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlDocumentValidation.Validate/VB/XmlDocumentValidationExample.vb#1)]  
   
- Pobiera przykład jako dane wejściowe `contosoBooks.xml` i `contosoBooks.xsd` plików, o której mowa w "Sprawdzanie poprawności dokumentu jako go jest załadowana do modelu DOM języka XML" powyżej.  
+ Przykład przyjmuje jako dane wejściowe `contosoBooks.xml` i `contosoBooks.xsd` pliki, do których odwołuje się "Walidacja dokumentu XML, gdy jest ładowany do modelu dom" powyżej.  
   
-## <a name="handling-validation-errors-and-warnings"></a>Obsługa błędy i ostrzeżenia walidacji  
- Błędy sprawdzania poprawności schematu XML są zgłaszane, gdy sprawdzanie poprawności danych XML załadowane w modelu DOM. Użytkownik jest powiadamiany o wszystkie błędy sprawdzania poprawności schematu, znaleziono podczas sprawdzania poprawności danych XML, gdy jest ładowany lub Sprawdzanie poprawności wcześniej niezweryfikowanych dokumentu XML.  
+## <a name="handling-validation-errors-and-warnings"></a>Obsługa błędów i ostrzeżeń walidacji  
+ Błędy walidacji schematu XML są raportowane podczas walidacji danych XML załadowanych w modelu DOM. Otrzymasz powiadomienie o wszystkich błędach walidacji schematu podczas walidacji danych XML w trakcie ich ładowania lub podczas weryfikowania poprzednio niezweryfikowanego dokumentu XML.  
   
- Błędy sprawdzania poprawności są obsługiwane przez <xref:System.Xml.Schema.ValidationEventHandler>. Jeśli <xref:System.Xml.Schema.ValidationEventHandler> został przypisany do <xref:System.Xml.XmlReaderSettings> wystąpienia lub przekazany do <xref:System.Xml.XmlDocument.Validate%2A> metody <xref:System.Xml.XmlDocument> klasy, <xref:System.Xml.Schema.ValidationEventHandler> będzie obsługiwać błędy sprawdzania poprawności; w przeciwnym razie <xref:System.Xml.Schema.XmlSchemaValidationException> jest wywoływane, gdy Weryfikacja schematu Napotkano błąd.  
+ Błędy sprawdzania poprawności są obsługiwane przez <xref:System.Xml.Schema.ValidationEventHandler>. Jeśli obiekt <xref:System.Xml.Schema.ValidationEventHandler> został przypisany <xref:System.Xml.XmlReaderSettings> do wystąpienia lub przeszedł <xref:System.Xml.XmlDocument> do <xref:System.Xml.XmlDocument.Validate%2A> metody <xref:System.Xml.Schema.XmlSchemaValidationException> klasy, <xref:System.Xml.Schema.ValidationEventHandler> będzie obsługiwać błędy walidacji schematu; w przeciwnym razie jest zgłaszany podczas walidacji schematu Wystąpił błąd.  
   
 > [!NOTE]
->  Dane XML są ładowane do modelu DOM, pomimo błędy sprawdzania poprawności schematu, chyba że Twoje <xref:System.Xml.Schema.ValidationEventHandler> zgłasza wyjątek, aby zatrzymać proces.  
+> Dane XML są ładowane do modelu dom pomimo błędów walidacji schematu, chyba <xref:System.Xml.Schema.ValidationEventHandler> że wywołuje wyjątek, aby zatrzymać proces.  
 >   
->  Ostrzeżenia sprawdzania poprawności schematu nie są wyświetlane, chyba że <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> określono flagę <xref:System.Xml.XmlReaderSettings> obiektu.  
+>  <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> Ostrzeżenia<xref:System.Xml.XmlReaderSettings> dotyczące walidacji schematu nie są zgłaszane, chyba że flaga zostanie określona dla obiektu.  
   
- Aby uzyskać przykłady ilustrujące <xref:System.Xml.Schema.ValidationEventHandler>, zobacz "Sprawdzanie poprawności dokumentu jako go jest załadowana do modelu DOM języka XML" i "Sprawdzanie poprawności dokumentu w modelu DOM języka XML" powyżej.  
+ Przykłady ilustrujące <xref:System.Xml.Schema.ValidationEventHandler>, zobacz "Walidacja dokumentu XML w trakcie jego ładowania do modelu dom" i "Walidacja dokumentu XML w modelu dom" powyżej.  
   
 ## <a name="see-also"></a>Zobacz także
 

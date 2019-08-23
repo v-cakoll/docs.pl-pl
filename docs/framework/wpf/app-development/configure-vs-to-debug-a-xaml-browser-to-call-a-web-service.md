@@ -8,57 +8,57 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: dcaabf9ecd47bc88095e92aa8ed28ad5f13fd1dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e41dd46e4ddbdcde6448c68b4f9fb2e073baca43
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757053"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958687"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>Instrukcje: Konfigurowanie w programie Visual Studio debugowania aplikacji przeglądarki XAML w celu wywoływania usługi internetowej
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] są uruchamiane w piaskownicy zabezpieczeń częściowego zaufania, który jest ograniczony do zestaw uprawnień strefy Internet. Ten zestaw uprawnień ogranicza wywołania usługi sieci Web, aby tylko usług, które znajdują się w sieci Web [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] aplikacji witryny pochodzenia. Gdy [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] debugowania z programu Visual Studio 2005, jednak nie wydaje się mieć tej samej lokacji, z którego pochodzą, sieci Web obsługi odwołań. Wyjątki zabezpieczeń powoduje, że wywoływane, gdy [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] próbuje wywołać usługę sieci Web. Jednak program Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] projektu można skonfigurować w celu symulowania o tej samej lokacji źródła jako usługę sieci Web wywoływanych przez nią podczas debugowania. Dzięki temu [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] bezpiecznie wywołać usługę sieci Web bez powodowania wyjątki zabezpieczeń.
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]Uruchom w obszarze piaskownicy zabezpieczeń częściowej relacji zaufania ograniczonego do zestawu stref internetowych uprawnień. Ten zestaw uprawnień ogranicza wywołania usługi sieci Web tylko do usług sieci Web, które znajdują [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] się w lokacji źródłowej aplikacji. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Gdy jest debugowany z programu Visual Studio 2005, chociaż nie jest uważany za taki sam, jak w przypadku usługi sieci Web, do której się odwołuje. Powoduje to, że wyjątki zabezpieczeń zostaną zgłoszone [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] podczas próby wywołania usługi sieci Web. Jednak projekt programu Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] można skonfigurować w taki sposób, aby symulacja była taka sama jak usługa sieci Web, która wywołuje podczas debugowania. Pozwala [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] to na bezpieczne Wywoływanie usługi sieci Web bez powodowania wyjątków zabezpieczeń.
 
 ## <a name="configuring-visual-studio"></a>Konfigurowanie programu Visual Studio
- Aby skonfigurować program Visual Studio 2005 do debugowania [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] który wywołuje usługę sieci Web:
+ Aby skonfigurować program Visual Studio 2005 do debugowania [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] , który wywołuje usługę sieci Web:
 
 1. Za pomocą projektu wybranego w **Eksploratora rozwiązań**na **projektu** menu, kliknij przycisk **właściwości**.
 
-2. W **projektanta projektu**, kliknij przycisk **debugowania** kartę.
+2. W **projektancie projektu**kliknij kartę **debugowanie** .
 
-3. W **Akcja uruchamiania** zaznacz **uruchomienia programu zewnętrznego** i wprowadź następujące czynności:
+3. W sekcji **Akcja początkowa** wybierz pozycję **Uruchom program zewnętrzny** , a następnie wprowadź następujące polecenie:
 
      `C:\WINDOWS\System32\PresentationHost.exe`
 
-4. W **opcje uruchamiania** sekcji, wprowadź następujące informacje w **argumenty wiersza polecenia** pola tekstowego:
+4. W sekcji **Opcje uruchamiania** wprowadź następujące polecenie w polu tekstowym **argumenty wiersza polecenia** :
 
      `-debug`  *Nazwa pliku*
 
-     *Filename* wartość **-debug** parametru jest nazwą pliku XBAP; na przykład:
+     Wartość *filename* parametru **-Debug** to plik. XBAP. na przykład:
 
      `-debug c:\example.xbap`
 
 > [!NOTE]
->  Jest to domyślna konfiguracja dla rozwiązania, które są tworzone za pomocą programu Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] szablonu projektu.
+> Jest to domyślna konfiguracja dla rozwiązań utworzonych przy użyciu szablonu projektu programu Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] .
 
 1. Za pomocą projektu wybranego w **Eksploratora rozwiązań**na **projektu** menu, kliknij przycisk **właściwości**.
 
-2. W **projektanta projektu**, kliknij przycisk **debugowania** kartę.
+2. W **projektancie projektu**kliknij kartę **debugowanie** .
 
-3. W **opcje uruchamiania** sekcji, Dodaj następujący parametr wiersza polecenia, aby **argumenty wiersza polecenia** pola tekstowego:
+3. W sekcji **Opcje uruchamiania** Dodaj następujący parametr wiersza polecenia do pola tekstowego **argumenty wiersza polecenia** :
 
      `-debugSecurityZoneURL`  *ADRES URL*
 
-     *Adresu URL* wartość **- debugSecurityZoneURL** parametr [!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)] lokalizacji, z którym chcesz przeprowadzić symulację jako witryna pochodzenia aplikacji.
+     Wartość *adresu URL* dla [!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)] parametru **-debugSecurityZoneURL** jest dla lokalizacji, która ma zostać symulowana jako witryna źródłowa aplikacji.
 
- Na przykład należy wziąć pod uwagę [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] używający usługi sieci Web z następującymi [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]:
+ Rozważmy na [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] przykład, że program korzysta z usługi sieci Web z następującymi [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]czynnościami:
 
  `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`
 
- Witryna pochodzenia [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] dla tej sieci Web service to:
+ Lokacja pochodzenia [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] dla tej usługi sieci Web:
 
  `http://services.msdn.microsoft.com`
 
- W związku z tym, pełne **- debugSecurityZoneURL** parametru wiersza polecenia, a wartość to:
+ W związku z tym parametr wiersza polecenia Complete **-debugSecurityZoneURL** ma wartość:
 
  `-debugSecurityZoneURL http://services.msdn.microsoft.com`
 

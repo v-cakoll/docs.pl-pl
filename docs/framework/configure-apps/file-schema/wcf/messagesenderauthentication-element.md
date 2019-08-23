@@ -2,24 +2,24 @@
 title: <messageSenderAuthentication>, element
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: 804c280bcdb0fecc87f71121b7d95b5fd0268de9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 1e63b6fa93e1abfa87c83da4b5d46f492c59b9bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423125"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931376"
 ---
-# <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication > element
-Określa opcje uwierzytelnienia dla nadawców wiadomości peer-to-peer.  
+# <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication, element >
+Określa opcje uwierzytelniania dla nadawców wiadomości równorzędnych.  
   
- Aby uzyskać więcej informacji na temat programowania peer-to-peer, zobacz [sieci Peer-to-Peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Aby uzyskać więcej informacji na temat programowania peer-to-peer, zobacz [sieci peer-to-](../../../wcf/feature-details/peer-to-peer-networking.md)peer.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<endpointBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<clientCredentials>  
-\<peer>  
+\<> elementów równorzędnych  
 \<messageSenderAuthentication>  
   
 ## <a name="syntax"></a>Składnia  
@@ -32,40 +32,40 @@ Określa opcje uwierzytelnienia dla nadawców wiadomości peer-to-peer.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`customCertificateValidatorType`|Typ i zestaw używany do walidacji typu niestandardowego. Ten atrybut musi być ustawiane podczas `certificateValidationMode` ustawiono `Custom`.|  
-|`certificateValidationMode`|Określa jeden z trzech trybów używanych do walidacji poświadczenia. Jeśli ustawiono `Custom`, a następnie `customCertificateValidator` musi również zostać dostarczony.|  
+|`customCertificateValidatorType`|Typ i zestaw używany do walidacji typu niestandardowego. Ten atrybut musi być ustawiony, `certificateValidationMode` gdy jest ustawiony `Custom`na.|  
+|`certificateValidationMode`|Określa jeden z trzech trybów używanych do walidacji poświadczeń. Jeśli jest ustawiona `Custom`na, należy `customCertificateValidator` również podać wartość.|  
 |`revocationMode`|Jeden z trybów użytych do sprawdzenia odwołanych list certyfikatów (CRL).|  
-|`trustedStoreLocation`|Jedną z dwóch lokalizacji magazynu systemu: `LocalMachine` lub `CurrentUser`. Ta wartość jest używana, gdy certyfikat usługi jest negocjowane do klienta. Sprawdzanie poprawności jest wykonywane względem **zaufane osoby** są przechowywane w lokalizacji określonego magazynu.|  
+|`trustedStoreLocation`|Jedna z dwóch lokalizacji magazynu systemowego: `LocalMachine` lub `CurrentUser`. Ta wartość jest używana podczas negocjowania certyfikatu usługi z klientem. Sprawdzanie poprawności jest wykonywane względem magazynu **osób zaufanych** w określonej lokalizacji magazynu.|  
   
-## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType Attribute  
-  
-|Wartość|Opis|  
-|-----------|-----------------|  
-|String|Opcjonalna. Określa nazwę typu i zestawu i inne dane, używana do znajdowania typu. Co najmniej nazwy przestrzeni nazw i typ są wymagane. Zawiera informacje opcjonalne: Nazwa zestawu, numer wersji, kulturę i token klucza publicznego.|  
-  
-## <a name="certificatevalidationmode-attribute"></a>tryb certificateValidationMode atrybutu  
+## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Opcjonalna. Jedną z następujących wartości: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`. Wartość domyślna to `ChainTrust`. Wartość domyślna to `ChainTrust`.<br /><br /> Aby uzyskać więcej informacji, zobacz [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|String|Opcjonalna. Określa nazwę typu i zestaw oraz inne dane używane do znajdowania typu. Minimalna nazwa przestrzeni nazw i typ są wymagane. Informacje opcjonalne obejmują: nazwę zestawu, numer wersji, kulturę i token klucza publicznego.|  
   
-## <a name="revocationmode-attribute"></a>revocationMode atrybutu  
-  
-|Wartość|Opis|  
-|-----------|-----------------|  
-|Wyliczenie|Jedną z następujących wartości: `NoCheck`, `Online`, `Offline`. Wartość domyślna to `Online`.<br /><br /> Aby uzyskać więcej informacji, zobacz [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
-  
-## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation atrybutu  
+## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Jedną z następujących wartości: `LocalMachine` lub `CurrentUser`. Wartość domyślna to `CurrentUser`. Jeśli aplikacja kliencka jest uruchomiona w ramach konta systemowego, a następnie certyfikatu wynosi zazwyczaj `LocalMachine`. Jeśli aplikacja kliencka jest uruchomiona w ramach konta użytkownika, a następnie certyfikat znajduje się zwykle w `CurrentUser`. Wartość domyślna to `CurrentUser`.|  
+|Wyliczenie|Opcjonalny. Jedna z następujących wartości: `None`, `PeerTrust`, `ChainTrust` `PeerOrChainTrust`,, `Custom`. Wartość domyślna to `ChainTrust`. Wartość domyślna to `ChainTrust`.<br /><br /> Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md).|  
+  
+## <a name="revocationmode-attribute"></a>Atrybut odwołania  
+  
+|Wartość|Opis|  
+|-----------|-----------------|  
+|Wyliczenie|Jedna z następujących wartości: `NoCheck`, `Online`, `Offline`. Wartość domyślna to `Online`.<br /><br /> Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md).|  
+  
+## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation — atrybut  
+  
+|Wartość|Opis|  
+|-----------|-----------------|  
+|Wyliczenie|Jedna z następujących wartości: `LocalMachine` lub. `CurrentUser` Wartość domyślna to `CurrentUser`. Jeśli aplikacja kliencka jest uruchomiona na koncie systemowym, zwykle `LocalMachine`jest to certyfikat. Jeśli aplikacja kliencka jest uruchomiona w ramach konta użytkownika, certyfikat zazwyczaj znajduje się w `CurrentUser`temacie. Wartość domyślna to `CurrentUser`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -74,13 +74,13 @@ Określa opcje uwierzytelnienia dla nadawców wiadomości peer-to-peer.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<elementu równorzędnego >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Określa poświadczenie używane do uwierzytelniania klienta do usługi elementu równorzędnego.|  
+|[\<> elementów równorzędnych](peer-of-clientcredentials-element.md)|Określa poświadczenie używane do uwierzytelniania klienta w usłudze równorzędnej.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element musi być skonfigurowany, jeśli wybrano opcję uwierzytelniania wiadomości. Dla kanałów danych wyjściowych, każdy komunikat jest podpisany przy użyciu certyfikatu dostarczonego przez [ \<certyfikatu >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md). Wszystkie komunikaty zanim dostarczane do aplikacji, są porównywane z poświadczeniami komunikatu przy użyciu modułu sprawdzania poprawności określonego przez `customCertificateValidatorType` atrybutu tego elementu. Moduł weryfikacji można zaakceptować lub odrzucić poświadczeń.  
+ Ten element musi być skonfigurowany, jeśli wybrano opcję Uwierzytelnianie wiadomości. W przypadku kanałów wyjściowych każdy komunikat jest podpisywany przy użyciu certyfikatu dostarczonego przez [ \<> certyfikatów](certificate-element.md). Wszystkie komunikaty, przed dostarczeniem do aplikacji, są sprawdzane pod kątem poświadczeń komunikatów przy użyciu modułu walidacji `customCertificateValidatorType` określonego przez atrybut tego elementu. Moduł sprawdzania poprawności może zaakceptować lub odrzucić poświadczenie.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod ustawia tryb walidacji nadawcy wiadomości `PeerOrChainTrust`.  
+ Poniższy kod ustawia tryb `PeerOrChainTrust`walidacji nadawcy wiadomości.  
   
 ```xml  
 <behaviors>
@@ -106,8 +106,8 @@ Określa opcje uwierzytelnienia dla nadawców wiadomości peer-to-peer.
 - <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.MessageSenderAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
-- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Sieci równorzędne](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [Uwierzytelnianie wiadomości z kanału równorzędnego](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Kanał elementu równorzędnego uwierzytelniania niestandardowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
-- [Zabezpieczanie aplikacji kanałów równorzędnych](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md)
+- [Sieci równorzędne](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [Uwierzytelnianie komunikatów kanału równorzędnego](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Uwierzytelnianie niestandardowe kanału równorzędnego](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Zabezpieczanie aplikacji kanałów równorzędnych](../../../wcf/feature-details/securing-peer-channel-applications.md)

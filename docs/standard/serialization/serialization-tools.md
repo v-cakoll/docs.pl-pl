@@ -2,18 +2,18 @@
 title: Narzędzia do serializacji
 ms.date: 03/30/2017
 ms.assetid: 593b675f-938c-44ff-807b-0ca9fea30103
-ms.openlocfilehash: af0ed0df0e99245d3dacd31280574c36415d2a1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8b362ec061dd7f9ad6e1547cbc70ece420adc72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778316"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960820"
 ---
 # <a name="serialization-tools"></a>Narzędzia do serializacji
 Ta sekcja zawiera szczegółowe informacje dotyczące narzędzia serializacji. Wszystkie narzędzia, które można uruchomić z wiersza polecenia.  
   
 > [!IMPORTANT]
->  Do poprawnego działania narzędzia programu .NET Framework trzeba zdefiniować zmienne środowiskowe ścieżki Include i Biblioteka prawidłowo. Ustaw zmienne środowiskowe uruchamiając SDKVars.bat, który znajduje się w \<SDK > \v2.0\Bin katalogu. SDKVars.bat muszą zostać wykonane w każdym powłoki poleceń.  
+> Do poprawnego działania narzędzia programu .NET Framework trzeba zdefiniować zmienne środowiskowe ścieżki Include i Biblioteka prawidłowo. Ustaw te zmienne środowiskowe, uruchamiając SDKVars. bat, który znajduje się \<w katalogu SDK > \v2.0\bin. SDKVars.bat muszą zostać wykonane w każdym powłoki poleceń.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   

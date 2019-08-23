@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: 8860f5d3ed7ee0c04d1e8afd7614f3f73b470808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55120e292ac2a2c822c5510563d1aa167ca921e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673709"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920455"
 ---
-# <a name="source-element"></a>\<source> Element
-Określa źródło śledzenia, który inicjuje komunikatów śledzenia.  
+# <a name="source-element"></a>\<źródłowy element >
+Określa źródło śledzenia, które inicjuje komunikaty śledzenia.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.diagnostics>  
-\<źródła >  
-\<source>  
+\<> źródeł  
+\<> źródłowa  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,29 +38,29 @@ Określa źródło śledzenia, który inicjuje komunikatów śledzenia.
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |`name`|Atrybut opcjonalny.<br /><br /> Określa nazwę źródła śledzenia.|  
-|`switchName`|Atrybut opcjonalny.<br /><br /> Określa nazwę wystąpienia przełącznika śledzenia w aplikacji. Jeśli przełącznik nie zostanie zidentyfikowany w `<switches>` elementu, a wartość określa poziom przełącznika.|  
-|`switchType`|Atrybut opcjonalny.<br /><br /> Określa typ o przełącznikiem śledzenia. Jeśli jest obecny, typ musi być prawidłową nazwą klasy i nie może być pustym ciągiem.|  
-|`extraAttribute`|Atrybut opcjonalny.<br /><br /> Określa wartość atrybutu specyficznymi dla źródła śledzenia identyfikowane przez <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> metodę dla tego źródła śledzenia.|  
+|`switchName`|Atrybut opcjonalny.<br /><br /> Określa nazwę wystąpienia przełącznika śledzenia w aplikacji. Jeśli przełącznik nie zostanie zidentyfikowany w `<switches>` elemencie, wartość określa poziom przełącznika.|  
+|`switchType`|Atrybut opcjonalny.<br /><br /> Określa typ przełącznika śledzenia. Jeśli jest obecny, typ musi być prawidłową nazwą klasy i nie może być pustym ciągiem.|  
+|`extraAttribute`|Atrybut opcjonalny.<br /><br /> Określa wartość dla atrybutu specyficznego dla źródła śledzenia identyfikowanego przez <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> metodę dla tego źródła śledzenia.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunikatów w postaci.|  
+|[\<> odbiorników](listeners-element-for-source.md)|Zawiera detektory, które zbierają, przechowują i rozsyłają komunikaty.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.|  
-|`sources`|Zawiera źródła śledzenia, które inicjują komunikatów śledzenia.|  
+|`system.diagnostics`|Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.|  
+|`sources`|Zawiera źródła śledzenia, które inicjują komunikaty śledzenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element może być użyty w pliku konfiguracji komputera (Machine.config) i pliku konfiguracji aplikacji.  
+ Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać `<source>` elementu do dodania źródła śledzenia `mySource` i ustaw poziom przełącznik źródła o nazwie `sourceSwitch`. Detektor śledzenia konsoli jest dodawany, który zapisuje informacje śledzenia do konsoli.  
+ Poniższy przykład pokazuje, jak użyć elementu, `<source>` aby dodać źródło `mySource` śledzenia i ustawić poziom dla przełącznika źródła o nazwie `sourceSwitch`. Dodano odbiornik śledzenia konsoli, który zapisuje informacje o śledzeniu do konsoli.  
   
 ```xml  
 <configuration>  
@@ -84,5 +84,5 @@ Określa źródło śledzenia, który inicjuje komunikatów śledzenia.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Przełączniki śledzenia](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Schemat ustawień śledzenia i debugowania](index.md)
+- [Przełączniki śledzenia](../../../debug-trace-profile/trace-switches.md)

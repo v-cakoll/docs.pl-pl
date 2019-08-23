@@ -7,77 +7,77 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 803709c97309f9766b6a441f5521cdcd7504862f
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3b8d84f8ea9cf8f94cb7a2b155c5d40c6de2979a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052500"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941694"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>Klasa MissingInteropDataException (architektura .NET Native)
-**Platforma .NET dla aplikacji Windows dla systemu Windows 10, tylko platforma .NET Native**  
+**Aplikacje .NET dla systemu Windows 10, tylko .NET Native**  
   
- Wyjątek, który jest zgłaszany, gdy ręcznego marshaling metoda jest wywoływana, ale metadanych dla typu nie zostanie odnaleziony przez analizę statyczną lub w pliku dyrektyw środowiska uruchomieniowego.  
+ Wyjątek, który jest generowany, gdy wywoływana jest metoda ręcznego kierowania, ale nie można odnaleźć metadanych dla typu przez analizę statyczną lub plik dyrektywy środowiska uruchomieniowego.  
   
- **Namespace:** System.Runtime.CompilerServices  
+ **Obszaru** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
->  `MissingInteropDataException` Klasa jest przeznaczona wyłącznie do użytku wewnętrznego przez łańcuch narzędzi .NET Native. Nie jest przeznaczony do użycia w kodzie innych firm, nie powinien obsługiwać wyjątek w kodzie aplikacji. Zamiast tego wyjątku można wyeliminować, dodając wpisów, aby Twoje [plik dyrektywy środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
+> `MissingInteropDataException` Klasa jest przeznaczona wyłącznie do użytku wewnętrznego w łańcuchu narzędzi .NET Native. Nie jest on przeznaczony do użycia w kodzie innej firmy ani nie powinien obsługiwać wyjątku w kodzie aplikacji. Zamiast tego należy wyeliminować wyjątek poprzez dodanie wpisów do [pliku dyrektywy środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
   
 ## <a name="syntax"></a>Składnia  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
  [!code-vb[ProjectN#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/projectn/vb/missinginteropdataexception_syntax1.vb#21)]  
   
- `MissingInteropDataException` Klasy ma następujące składowe:  
+ `MissingInteropDataException` Klasa ma następujących członków:  
   
 ## <a name="constructors"></a>Konstruktorów  
   
 |Konstruktor|Opis|  
 |-----------------|-----------------|  
-|`public MissingInteropDataException(String resourceId, Type pertinentType)`|Inicjuje nowe wystąpienie klasy `MissingInteropDataException` klasy za pomocą Identyfikatora dostarczane przez system komunikatu, który opisuje błąd i typu danych, których brakuje. Ten konstruktor jest do użytku wewnętrznego, tylko .NET Native łańcucha narzędzi.|  
+|`public MissingInteropDataException(String resourceId, Type pertinentType)`|Inicjuje nowe wystąpienie `MissingInteropDataException` klasy przy użyciu identyfikatora komunikatu dostarczonego przez system, który opisuje błąd i typ, którego dane są niedostępne. Ten konstruktor jest przeznaczony do użytku wewnętrznego tylko przez łańcuch narzędzi .NET Native.|  
   
 ## <a name="properties"></a>Właściwości  
   
 |Właściwość|Opis|  
 |--------------|-----------------|  
-|`public IDictionary Data { get; }`|Pobiera kolekcję par klucz/wartość, które zawierają dodatkowe informacje zdefiniowane przez użytkownika o wyjątku. (Dziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public string HelpLink { get; set; }`|Pobiera lub ustawia łącze, aby plik pomocy skojarzony z tym wyjątkiem. (Dziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public int HResult { get; protected set; }`|Pobiera lub ustawia `HRESULT`, który jest kodowany wartość liczbowa, która jest przypisana do określonego wyjątku. (Dziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public Exception InnerException { get; }`|Pobiera wyjątek, który spowodował bieżący wyjątek. (Dziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public string Message { get; }`|Pobiera komunikat, który opisuje bieżący wyjątek. (Dziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public Type MissingType { get; private set; }`|Pobiera lub ustawia typ danych, których nie istnieje.|  
-|`public string Source { get; set; }`|Pobiera lub ustawia nazwę aplikacji lub obiekt, który spowodował błąd. (Dziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public string StackTrace { get; }`|Pobiera reprezentację ciągu natychmiastowego ramek na stosie wywołań. (Dziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public MethodBase TargetSite { get; }`|Pobiera metodę, która zgłosiła wyjątek bieżący. (Dziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public IDictionary Data { get; }`|Pobiera kolekcję par klucz/wartość, które zawierają dodatkowe informacje zdefiniowane przez użytkownika dotyczące wyjątku. (Odziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public string HelpLink { get; set; }`|Pobiera lub ustawia link do pliku pomocy skojarzonego z tym wyjątkiem. (Odziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public int HResult { get; protected set; }`|Pobiera lub ustawia `HRESULT`wartość, która jest zakodowaną wartością liczbową, która jest przypisana do określonego wyjątku. (Odziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public Exception InnerException { get; }`|Pobiera wyjątek, który spowodował bieżący wyjątek. (Odziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public string Message { get; }`|Pobiera komunikat, który opisuje bieżący wyjątek. (Odziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public Type MissingType { get; private set; }`|Pobiera lub ustawia typ, którego brakuje danych.|  
+|`public string Source { get; set; }`|Pobiera lub ustawia nazwę aplikacji lub obiektu, który spowodował błąd. (Odziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public string StackTrace { get; }`|Pobiera ciąg reprezentujący bezpośrednie ramki w stosie wywołań. (Odziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public MethodBase TargetSite { get; }`|Pobiera metodę, która wywołała bieżący wyjątek. (Odziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|`public bool Equals(Object obj)`|Określa, czy określony obiekt jest równy bieżącemu obiektowi.  (Dziedziczone z <xref:System.Object>.)|  
-|`protected void Finalize()`|Umożliwia obiektu spróbuj zwolnić zasoby i wykonywać inne operacje oczyszczania, zanim go jest odzyskiwane przez wyrzucanie elementów bezużytecznych. (Dziedziczone z <xref:System.Object>.)|  
-|`public Exception GetBaseException()`|Zwraca wyjątek, który jest główną przyczynę jeden lub kilka kolejnych wyjątków. (Dziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public int GetHashCode()`|Zwraca wartość skrótu dla `MissingInteropDataException` wystąpienia.   (Dziedziczone z <xref:System.Object>.)|  
-|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|Zestawy <xref:System.Runtime.Serialization.SerializationInfo> obiektów z informacją o wyjątku.  (Dziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public Type GetType()`|Pobiera typ środowiska uruchomieniowego bieżącego wystąpienia. (Dziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`protected Object MemberwiseClone()`|Tworzy płytką kopię bieżącego obiektu. (Dziedziczone z <xref:System.Object>.)|  
-|`public string ToString()`|Zwraca reprezentację ciągu bieżącego wyjątku. (Dziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public bool Equals(Object obj)`|Określa, czy określony obiekt jest równy bieżącemu obiektowi.  (Odziedziczone z <xref:System.Object>.)|  
+|`protected void Finalize()`|Umożliwia obiektowi podjęcie próby zwolnienia zasobów i wykonywanie innych operacji czyszczenia przed odinstalowaniem ich przez wyrzucanie elementów bezużytecznych. (Odziedziczone z <xref:System.Object>.)|  
+|`public Exception GetBaseException()`|Zwraca wyjątek, który jest główną przyczyną jednego lub kilku kolejnych wyjątków. (Odziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public int GetHashCode()`|Zwraca kod skrótu dla `MissingInteropDataException` wystąpienia.   (Odziedziczone z <xref:System.Object>.)|  
+|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|<xref:System.Runtime.Serialization.SerializationInfo> Ustawia obiekt z informacjami o wyjątku.  (Odziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public Type GetType()`|Pobiera typ środowiska uruchomieniowego bieżącego wystąpienia. (Odziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`protected Object MemberwiseClone()`|Tworzy skróconą kopię bieżącego obiektu. (Odziedziczone z <xref:System.Object>.)|  
+|`public string ToString()`|Zwraca ciąg reprezentujący bieżący wyjątek. (Odziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
   
 ## <a name="events"></a>Zdarzenia  
   
 |Zdarzenie|Opis|  
 |-----------|-----------------|  
-|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Występuje, gdy wyjątek jest serializowana. Aby utworzyć obiekt stan wyjątku, który zawiera serializowane dane o wyjątku. (Dziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Występuje, gdy wyjątek jest serializowany w celu utworzenia obiektu stanu wyjątku, który zawiera serializowane dane dotyczące wyjątku. (Odziedziczone z <xref:System.Exception?displayProperty=nameWithType>.)|  
   
 ## <a name="usage-details"></a>Szczegóły użycia  
- `MissingInteropDataException` Wyjątek jest zgłaszany, gdy wywołanie metody do składnika modelu COM lub środowisko uruchomieniowe Windows nie można przeprowadzić pomyślnie, ponieważ informacje o typie nie jest dostępna.  
+ Wyjątek `MissingInteropDataException` jest zgłaszany, gdy wywołanie metody do składnika com lub środowisko wykonawcze systemu Windows nie może zostać wykonane pomyślnie, ponieważ informacje o typie są niedostępne.  
   
- Metadane, który jest dostępny do aplikacji w czasie wykonywania jest definiowany przez plik dyrektywy (Konfiguracja XML) środowiska uruchomieniowego, *. rd.xml. Aby zapobiec sytuacji, w której aplikacja zostanie zgłoszony wyjątek, należy zmodyfikować ten plik, aby zdefiniować metadane, które musi znajdować się w czasie wykonywania. Najczęściej, adres ten błąd, dodając `MarshalObject`, `MarshalDelegate`, lub `MarshalStructure` atrybutu do elementu odpowiedniego programu w pliku dyrektyw środowiska uruchomieniowego. Aby uzyskać informacje o formacie pliku, zobacz [dyrektywy środowiska uruchomieniowego (rd.xml) odwołanie do pliku konfiguracji](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ Metadane dostępne dla aplikacji w czasie wykonywania są zdefiniowane przez dyrektywy środowiska uruchomieniowego (XML Configuration), \*. Rd. XML. Aby zapobiec zgłaszaniu tego wyjątku przez aplikację, należy zmodyfikować ten plik w celu zdefiniowania metadanych, które muszą być obecne w czasie wykonywania. Najczęściej można rozwiązać ten problem, dodając `MarshalObject`atrybut, `MarshalDelegate`lub `MarshalStructure` do odpowiedniego elementu programu w pliku dyrektywy środowiska uruchomieniowego. Aby uzyskać informacje o formacie tego pliku, zobacz [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (RD. xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
->  Ponieważ ten wyjątek wskazuje, że metadane wymagane przez aplikację nie jest dostępna w czasie wykonywania, nie powinien obsługiwać tego wyjątku w `try` / `catch` bloku. Zamiast tego należy przyczynę wyjątku i wyeliminuj je, dodając odpowiedni wpis do pliku dyrektyw środowiska uruchomieniowego.  
+> Ponieważ ten wyjątek wskazuje, że metadane potrzebne przez aplikację nie są dostępne w czasie wykonywania, nie należy obsługiwać tego wyjątku w `try` / `catch` bloku. Zamiast tego należy zdiagnozować przyczynę wyjątku i wyeliminować go przez dodanie odpowiedniego wpisu do pliku dyrektywy środowiska uruchomieniowego.  
   
- `MissingInteropDataException` Klasa zawiera jeden element członkowski unikatowy, `MissingType` właściwości, który wskazuje na typ, którego metadanych jest wymagany w przypadku wywołania metody pomyślnie. Wszystkie pozostałe elementy członkowskie są dziedziczone z klasy bazowej <xref:System.Exception?displayProperty=nameWithType>.  
+ Klasa zawiera pojedynczy unikatowy element członkowski `MissingType` , właściwość, która wskazuje typ, którego metadane są zbędne dla pomyślnego wywołania metody. `MissingInteropDataException` Wszystkie pozostałe elementy członkowskie są dziedziczone z klasy podstawowej, <xref:System.Exception?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 

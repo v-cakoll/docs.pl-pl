@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bdb2035906b9383342201017b58d1d0050113b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d5709e4ef883ba2750f1efd0ae2e9a72f1cf43b0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754495"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967305"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>invalidOverlappedToPinvoke MDA
-`invalidOverlappedToPinvoke` Zarządzanego Asystenta debugowania (MDA) jest uaktywniany podczas nakładającego się wskaźnika, który nie został utworzony na stercie wyrzucania elementów bezużytecznych jest przekazywana do określonych funkcji systemu Win32.  
+Asystent `invalidOverlappedToPinvoke` debugowania zarządzanego (MDA) jest uaktywniany, gdy nakładający się wskaźnik, który nie został utworzony na stercie wyrzucania elementów bezużytecznych, jest przesyłany do określonych funkcji Win32.  
   
 > [!NOTE]
->  Domyślnie to zdarzenie MDA jest aktywowane tylko wtedy, gdy wywołanie platformy jest zdefiniowane w kodzie i usuwania błędów raportuje stan JustMyCode każdej metody. Debuger, który nie rozpoznaje JustMyCode (np. MDbg.exe bez rozszerzeń) nie aktywuje to zdarzenie MDA. Ten MDA może być włączony dla tych debugerów przy użyciu pliku konfiguracji i wyraźnych ustawień `justMyCode="false"` w. plik mda.config `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`).  
+> Domyślnie to zdarzenie MDA jest uaktywniane tylko wtedy, gdy wywołanie wywoływana przez platformę jest zdefiniowane w kodzie, a debuger raportuje stan JustMyCode każdej z tych metod. Debuger, który nie rozpoznaje JustMyCode (na przykład MDbg. exe bez rozszerzeń), nie aktywuje tego MDA. To zdarzenie MDA można włączyć dla tych debugerów przy użyciu pliku konfiguracji i jawnie wyraźnych `justMyCode="false"` w pliku `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`. MDA. config).  
   
 ## <a name="symptoms"></a>Symptomy  
- Awarie lub niewytłumaczalne uszkodzenia sterty.  
+ Awarie stosu lub niewyjaśnione uszkodzenia sterty.  
   
 ## <a name="cause"></a>Przyczyna  
- Niewłaściwy nachodzący wskaźnik, który nie został utworzony na stercie wyrzucania elementów bezużytecznych jest przekazywany do określonych funkcji systemu operacyjnego.  
+ Nakładający się wskaźnik, który nie został utworzony na stercie wyrzucania elementów bezużytecznych, jest przesyłany do określonych funkcji systemu operacyjnego.  
   
- W poniższej tabeli przedstawiono funkcje, że te zdarzenia mda.  
+ W poniższej tabeli przedstawiono funkcje, które są śledzone przez to zdarzenie MDA.  
   
 |Moduł|Funkcja|  
 |------------|--------------|  
@@ -49,16 +49,16 @@ ms.locfileid: "61754495"
 |WS2_32.dll|`WSARecvFrom`|  
 |MQRT.dll|`MQReceiveMessage`|  
   
- Potencjał uszkodzenie sterty jest wysoki jak na ten stan, ponieważ <xref:System.AppDomain> podejmowanie wywołania może zwolnić. Jeśli <xref:System.AppDomain> zwalnia, kod aplikacji spowoduje zwolnienie pamięci dla nakładającego się wskaźnika, powodując uszkodzenie po zakończeniu operacji lub kod wycieku pamięci, powodując trudności później.  
+ Prawdopodobieństwo uszkodzenia sterty jest wysokie dla tego warunku, <xref:System.AppDomain> ponieważ wywołanie może zostać zwolnione. <xref:System.AppDomain> Jeśli zwalnia, kod aplikacji zwalnia pamięć dla nakładającego się wskaźnika, powodując uszkodzenie po zakończeniu operacji lub kod przecieka pamięć, co spowoduje problemy później.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Użyj <xref:System.Threading.Overlapped> obiektu, wywołanie <xref:System.Threading.Overlapped.Pack%2A> metodę, aby uzyskać <xref:System.Threading.NativeOverlapped> struktury, który może być przekazywany do funkcji. Jeśli <xref:System.AppDomain> zwalnia, CLR czeka, aż zakończeniu operacji asynchronicznej przed zwolnieniem wskaźnika.  
+ Użyj obiektu, <xref:System.Threading.Overlapped.Pack%2A> wywołując metodę, aby uzyskać <xref:System.Threading.NativeOverlapped> strukturę, która może zostać przeniesiona do funkcji. <xref:System.Threading.Overlapped> <xref:System.AppDomain> Jeśli zwalnia, CLR czeka na zakończenie operacji asynchronicznej przed zwolnieniem wskaźnika.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie miało wpływu na środowisko CLR.  
+ To zdarzenie MDA nie ma wpływu na środowisko CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Oto przykład danych wyjściowych z tego MDA.  
+ Poniżej znajduje się przykład danych wyjściowych z tego MDA.  
   
  `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the Win32 function 'WriteFile' in module 'KERNEL32.DLL'. If the AppDomain is shut down, this can cause heap corruption when the async I/O completes. The best solution is to pass a NativeOverlapped structure retrieved from a call to System.Threading.Overlapped.Pack(). If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
   

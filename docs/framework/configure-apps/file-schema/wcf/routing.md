@@ -2,19 +2,19 @@
 title: <routing>
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: cc7c1a64f9481a7ab41cf35241ade04bd690dae0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c7e9cb1284ab55c8dd199d9fb47a223698814f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786389"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934125"
 ---
-# <a name="routing"></a>\<Routing >
+# <a name="routing"></a>\<> routingu
 
-Reprezentuje sekcję konfiguracji określającą zestaw filtrów routingu, które określają typ obiektu programu Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> używanego podczas oceniania wiadomości przychodzących, jak również routingu definiujące miejsce docelowe punktów końcowych do tabel wysyłanie komunikatów do gdy kryteria filtru.
+Reprezentuje sekcję konfiguracji określającą zestaw filtrów routingu, które określają typ Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> , który ma być używany podczas oceniania wiadomości przychodzących, a także tabele routingu, które definiują docelowe punkty końcowe Wysyłaj komunikaty do, gdy filtr jest zgodny.
 
-[**\<system.serviceModel>**](system-servicemodel.md)   
-&nbsp;&nbsp;**\<routing>**
+[ **\<system.serviceModel>** ](system-servicemodel.md)   
+&nbsp;&nbsp; **\<> routingu**
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,14 +52,14 @@ Brak
 
 |     | Opis |
 | --- | ----------- |
-| [**\<filters>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | Zawiera zestaw filtrów routingu, które określają typ MessageFilter Windows Communication Foundation (WCF), będzie ono używane podczas oceniania wiadomości przychodzących. |
-| [**\<filterTables>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) | Zawiera mapowania między filtrami i docelowymi punktami końcowymi, aby określić, który punkt końcowy do użycia podczas filtr dopasowuje wartość. |
+| [ **\<Filtry >** ](filters-of-routing.md) | Zawiera zestaw filtrów routingu, które określają typ Windows Communication Foundation (WCF), który będzie używany podczas oceniania wiadomości przychodzących. |
+| [ **\<filterTables>** ](filtertables.md) | Zawiera mapowania między filtrami routingu i docelowymi punktami końcowymi, aby określić, który punkt końcowy ma być używany, gdy filtr jest zgodny. |
 
 ### <a name="parent-elements"></a>Elementy nadrzędne
 
 |     | Opis |
 | --- | ----------- |
-| **\<system.ServiceModel>** | Element główny wszystkich elementów konfiguracji programu WCF. |
+| **\<system.ServiceModel>** | Element główny wszystkich elementów konfiguracji WCF. |
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -10,54 +10,54 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: 877df5139fd0e626cd2242e3790bc7100f6233aa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 84f0caace70f9877e84fdd01dc69216dc10fe485
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599331"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950577"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Instrukcje: tworzenie kontrolki formularzy systemu Windows pokazującego postęp
-Poniższy przykład kodu pokazuje kontrolkę niestandardową o nazwie `FlashTrackBar` można pokazać użytkownikowi, poziomu lub postęp aplikacji. Aby wizualnie przedstawić postęp używa gradientu.  
+Poniższy przykład kodu pokazuje kontrolkę niestandardową `FlashTrackBar` o nazwie, która może służyć do wyświetlania użytkownikowi poziomu lub postępu aplikacji. Używa gradientu do wizualnego reprezentowania postępu.  
   
- `FlashTrackBar` Kontroli ilustruje następujące pojęcia:  
+ `FlashTrackBar` Kontrolka ilustruje następujące koncepcje:  
   
 - Definiowanie właściwości niestandardowych.  
   
-- Definiowanie zdarzeń niestandardowych. (`FlashTrackBar` definiuje `ValueChanged` zdarzenia.)  
+- Definiowanie zdarzeń niestandardowych. `FlashTrackBar` (`ValueChanged` definiuje zdarzenie).  
   
-- Zastępowanie <xref:System.Windows.Forms.Control.OnPaint%2A> metodę, aby zapewnić logikę narysuj kontrolkę.  
+- Zastępowanie <xref:System.Windows.Forms.Control.OnPaint%2A> metody w celu zapewnienia logiki do rysowania kontrolki.  
   
-- Obliczenia obszar rysowania kontrolki przy użyciu jego <xref:System.Windows.Forms.Control.ClientRectangle%2A> właściwości. `FlashTrackBar` robi to jej `OptimizedInvalidate` metody.  
+- Obliczanie obszaru dostępnego do rysowania kontrolki przy użyciu jej <xref:System.Windows.Forms.Control.ClientRectangle%2A> właściwości. `FlashTrackBar`robi to w `OptimizedInvalidate` metodzie.  
   
-- Implementowanie serializacji lub stanów trwałych dla właściwości, gdy zostanie zmieniona w programie Windows Forms Designer. `FlashTrackBar` definiuje `ShouldSerializeStartColor` i `ShouldSerializeEndColor` metody serializacji jego `StartColor` i `EndColor` właściwości.  
+- Implementowanie serializacji lub trwałości dla właściwości w przypadku zmiany w Projektant formularzy systemu Windows. `FlashTrackBar`definiuje metody i `ShouldSerializeEndColor` dla serializowania właściwości `EndColor` i.`StartColor` `ShouldSerializeStartColor`  
   
  W poniższej tabeli przedstawiono właściwości niestandardowe zdefiniowane przez `FlashTrackBar`.  
   
 |Właściwość|Opis|  
 |--------------|-----------------|  
-|`AllowUserEdit`|Wskazuje, czy użytkownik może zmienić wartość pasek śledzenia flash, klikając i przeciągając je.|  
-|`EndColor`|Określa końcowy kolor pasek śledzenia.|  
-|`DarkenBy`|Określa stopień ciemniejszy tła względem gradientu pierwszego planu.|  
-|`Max`|Określa maksymalną wartość pasek śledzenia.|  
-|`Min`|Określa minimalną wartość pasek śledzenia.|  
-|`StartColor`|Określa kolor początkowy gradientu.|  
-|`ShowPercentage`|Wskazuje, czy ma być wyświetlane wartości procentowej nad gradientu.|  
-|`ShowValue`|Wskazuje, czy do wyświetlenia bieżącej wartości ciągu gradientu.|  
-|`ShowGradient`|Wskazuje, czy pasek śledzenia powinien być wyświetlany kolor gradientu przedstawiający bieżącą wartość.|  
-|-   `Value`|Określa bieżącą wartość pasek śledzenia.|  
+|`AllowUserEdit`|Wskazuje, czy użytkownik może zmienić wartość paska śledzenia Flash, klikając i przeciągając go.|  
+|`EndColor`|Określa kolor końcowy paska śledzenia.|  
+|`DarkenBy`|Określa, jak dużo przyciemnienie tła względem gradientu pierwszego planu.|  
+|`Max`|Określa maksymalną wartość paska śledzenia.|  
+|`Min`|Określa minimalną wartość paska śledzenia.|  
+|`StartColor`|Określa początkowy kolor gradientu.|  
+|`ShowPercentage`|Wskazuje, czy w gradiencie ma być wyświetlana wartość procentowa.|  
+|`ShowValue`|Wskazuje, czy bieżąca wartość ma być wyświetlana nad gradientem.|  
+|`ShowGradient`|Wskazuje, czy na pasku śledzenia powinien zostać wyświetlony gradient koloru przedstawiający bieżącą wartość.|  
+|-   `Value`|Określa bieżącą wartość paska śledzenia.|  
   
- W poniższej tabeli przedstawiono dodatkowe elementy członkowskie zdefiniowane przez `FlashTrackBar:` zdarzenie zmiany właściwości i metody, która wywołuje zdarzenie.  
+ W poniższej tabeli przedstawiono dodatkowe elementy członkowskie zdefiniowane `FlashTrackBar:` przez zdarzenie zmiany właściwości i metodę, która wywołuje zdarzenie.  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`ValueChanged`|Zdarzenie, które jest wywołane, gdy `Value` właściwości śledzenia zmian paska.|  
-|`OnValueChanged`|Metoda, która wywołuje `ValueChanged` zdarzeń.|  
+|`ValueChanged`|Zdarzenie wywoływane, gdy `Value` zostanie zmieniona właściwość paska śledzenia.|  
+|`OnValueChanged`|Metoda, która wywołuje `ValueChanged` zdarzenie.|  
   
 > [!NOTE]
->  `FlashTrackBar` używa <xref:System.EventArgs> klasę danych zdarzenia i <xref:System.EventHandler> dla delegata zdarzenia.  
+> `FlashTrackBar`używa klasy dla danych zdarzeń i <xref:System.EventHandler> dla delegata zdarzenia. <xref:System.EventArgs>  
   
- Do obsługi odpowiednich *EventName* zdarzenia, `FlashTrackBar` zastępuje następujących metod, która dziedziczy <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
+ Aby obsłużyć odpowiednie zdarzenia EventName `FlashTrackBar` , program zastępuje następujące metody, z <xref:System.Windows.Forms.Control?displayProperty=nameWithType>których dziedziczy:  
   
 - <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
@@ -69,7 +69,7 @@ Poniższy przykład kodu pokazuje kontrolkę niestandardową o nazwie `FlashTrac
   
 - <xref:System.Windows.Forms.Control.OnResize%2A>  
   
- Do obsługi odpowiedniej zdarzenia zmiany właściwości `FlashTrackBar` zastępuje następujących metod, która dziedziczy <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
+ Aby obsłużyć odpowiednie zdarzenia zmiany właściwości, `FlashTrackBar` program zastępuje następujące metody, z <xref:System.Windows.Forms.Control?displayProperty=nameWithType>których dziedziczy:  
   
 - <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   
@@ -78,7 +78,7 @@ Poniższy przykład kodu pokazuje kontrolkę niestandardową o nazwie `FlashTrac
 - <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
 ## <a name="example"></a>Przykład  
- `FlashTrackBar` Kontroli definiuje dwa edytory typu UI `FlashTrackBarValueEditor` i `FlashTrackBarDarkenByEditor`, które są wyświetlane w następujących fragmentów kodu. `HostApp` Klasy używa `FlashTrackBar` kontrolkę w formularzu Windows.  
+ Kontrolka definiuje dwa `FlashTrackBarValueEditor` edytory typów interfejsu użytkownika `FlashTrackBarDarkenByEditor`i, które są wyświetlane w poniższych listach kodu. `FlashTrackBar` `HostApp` Klasa`FlashTrackBar` używa kontrolki w formularzu systemu Windows.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#1)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#1)]  
@@ -94,5 +94,5 @@ Poniższy przykład kodu pokazuje kontrolkę niestandardową o nazwie `FlashTrac
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Rozszerzenie obsługi w czasie projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [Rozszerzanie obsługi czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Podstawowe informacje o opracowywaniu kontrolek formularzy Windows Forms](windows-forms-control-development-basics.md)

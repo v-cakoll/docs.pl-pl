@@ -2,20 +2,20 @@
 title: <serviceAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
-ms.openlocfilehash: 0940248364488bb38a329c5e461d72463c574e74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65488c34931f6d7c424ece58a4855e746ea455bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670381"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936412"
 ---
 # <a name="serviceauthenticationmanager"></a>\<serviceAuthenticationManager>
-Zawiera element konfiguracji przepływu pracy, który ustanawia na poziomie usługi ważności transmisji, wiadomości i przy jego uruchomieniu.  
+Zawiera element konfiguracji przepływu pracy, który ustala na poziomie usługi ważność transmisji, wiadomości lub nadawcy.  
   
 \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<serviceAuthenticationManager>  
   
 ## <a name="syntax"></a>Składnia  
@@ -37,7 +37,7 @@ Zawiera element konfiguracji przepływu pracy, który ustanawia na poziomie usł
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|serviceAuthenticationManagerType|Ciąg, który określa typ zasady uwierzytelniania dla bieżącego zachowania.|  
+|serviceAuthenticationManagerType|Ciąg określający typ zasad uwierzytelniania dla bieżącego zachowania.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -46,7 +46,7 @@ Zawiera element konfiguracji przepływu pracy, który ustanawia na poziomie usł
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
+|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
   
 ## <a name="see-also"></a>Zobacz także
 

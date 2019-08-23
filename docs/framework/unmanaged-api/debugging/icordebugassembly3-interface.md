@@ -4,36 +4,36 @@ ms.date: 03/30/2017
 ms.assetid: 17fc5d76-75a9-4933-83f0-594de7f973f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eecb135e034c3565e805ea776115579488b2a4d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca77360c36ff2cdce7ee47d5c3883dd824c6cef8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645464"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959327"
 ---
 # <a name="icordebugassembly3-interface"></a>Interfejs ICorDebugAssembly3
-Rozszerza logicznie icordebugassembly — interfejs w celu zapewnienia obsługi kontenerów zestawów i ich zestawy zawarte.  
+Logicznie rozszerza interfejs ICorDebugAssembly w celu zapewnienia obsługi zestawów kontenerów i zawartych w nich zestawów.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[EnumerateContainedAssemblies, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-enumeratecontainedassemblies-method.md)|Pobiera moduł wyliczający dla zestawów znajdujących się w tym zestawie.|  
-|[GetContainerAssembly, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-getcontainerassembly-method.md)|Zwraca zestaw kontenerów to `ICorDebugAssembly3` obiektu.|  
+|[EnumerateContainedAssemblies, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-enumeratecontainedassemblies-method.md)|Pobiera moduł wyliczający dla zestawów zawartych w tym zestawie.|  
+|[GetContainerAssembly, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-getcontainerassembly-method.md)|Zwraca zestaw kontenerów tego `ICorDebugAssembly3` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Interfejs jest tylko dostępne z architekturą .NET Native. Próba wywołania `QueryInterface` do pobrania wskaźnika interfejsu zwraca `E_NOINTERFACE` scenariuszach ICorDebug poza .NET Native.  
+> Interfejs jest dostępny tylko z .NET Native. Próba wywołania metody `QueryInterface` pobierającej wskaźnik interfejsu zwraca `E_NOINTERFACE` dla scenariuszy ICorDebug poza .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

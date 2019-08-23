@@ -2,25 +2,25 @@
 title: Składnia parametrów połączenia
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 4ec2b8a0a478f59ca66f8699e7846004a3a409cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b43dc780b8570bd671f6b5d9db14a0c98e822d8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583601"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949470"
 ---
 # <a name="connection-string-syntax"></a>Składnia parametrów połączenia
-Każdy dostawca danych .NET Framework ma `Connection` obiektu, który dziedziczy z <xref:System.Data.Common.DbConnection> oraz specyficzne dla dostawcy <xref:System.Data.Common.DbConnection.ConnectionString%2A> właściwości. Składnia ciągu połączenia określone dla każdego dostawcy jest udokumentowany w jego `ConnectionString` właściwości. W poniższej tabeli wymieniono dostawców cztery danych, które są zawarte w .NET Framework.  
+Każdy dostawca danych .NET Framework ma `Connection` obiekt, który dziedziczy z <xref:System.Data.Common.DbConnection> oraz Właściwość specyficzną <xref:System.Data.Common.DbConnection.ConnectionString%2A> dla dostawcy. Składnia określonych parametrów połączenia dla każdego dostawcy jest udokumentowana w swojej `ConnectionString` właściwości. Poniższa tabela zawiera listę czterech dostawców danych uwzględnionych w .NET Framework.  
   
-|Dostawca danych .NET framework|Opis|  
+|Dostawca danych .NET Framework|Opis|  
 |----------------------------------|-----------------|  
-|<xref:System.Data.SqlClient>|Zapewnia dostęp do danych programu Microsoft SQL Server. Aby uzyskać więcej informacji na temat składnia ciągu połączenia, zobacz <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.|  
-|<xref:System.Data.OleDb>|Zapewnia dostęp do danych dla źródeł danych uwidaczniane za pomocą OLE DB. Aby uzyskać więcej informacji na temat składnia ciągu połączenia, zobacz <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A>.|  
-|<xref:System.Data.Odbc>|Zapewnia dostęp do danych dla źródła danych dostępne za pośrednictwem sterownika ODBC. Aby uzyskać więcej informacji na temat składnia ciągu połączenia, zobacz <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A>.|  
-|<xref:System.Data.OracleClient>|Zapewnia dostęp do danych na oprogramowanie Oracle w wersji 8.1.7 lub nowszej. Aby uzyskać więcej informacji na temat składnia ciągu połączenia, zobacz <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.|  
+|<xref:System.Data.SqlClient>|Zapewnia dostęp do danych Microsoft SQL Server. Aby uzyskać więcej informacji na temat składni parametrów połączenia <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>, zobacz.|  
+|<xref:System.Data.OleDb>|Zapewnia dostęp do danych dla źródeł danych narażonych na korzystanie z OLE DB. Aby uzyskać więcej informacji na temat składni parametrów połączenia <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A>, zobacz.|  
+|<xref:System.Data.Odbc>|Zapewnia dostęp do danych dla źródeł danych narażonych na korzystanie z ODBC. Aby uzyskać więcej informacji na temat składni parametrów połączenia <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A>, zobacz.|  
+|<xref:System.Data.OracleClient>|Zapewnia dostęp do danych dla programu Oracle w wersji 8.1.7 lub nowszej. Aby uzyskać więcej informacji na temat składni parametrów połączenia <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>, zobacz.|  
   
 ## <a name="connection-string-builders"></a>Konstruktorzy parametrów połączeń  
- ADO.NET w wersji 2.0 wprowadzono następujące Konstruktorzy parametrów połączenia dla dostawcy danych .NET Framework.  
+ W ADO.NET 2,0 wprowadzono następujących konstruktorów parametrów połączenia dla dostawców danych .NET Framework.  
   
 - <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
   
@@ -30,10 +30,10 @@ Każdy dostawca danych .NET Framework ma `Connection` obiektu, który dziedziczy
   
 - <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
- Konstruktorzy parametrów połączeń pozwalają utworzyć parametry połączenia nieprawidłową składnię w czasie wykonywania, dzięki czemu nie trzeba ręcznie połączyć wartości ciągu połączenia w kodzie. Aby uzyskać więcej informacji, zobacz [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+ Konstruktory parametrów połączenia umożliwiają konstruowanie składniowo prawidłowych parametrów połączenia w czasie wykonywania, dzięki czemu nie trzeba ręcznie łączyć wartości parametrów połączenia w kodzie. Aby uzyskać więcej informacji, zobacz [konstruktory parametrów połączenia](../../../../docs/framework/data/adonet/connection-string-builders.md).  
 
 ## <a name="windows-authentication"></a>Uwierzytelnianie systemu Windows  
- Firma Microsoft zaleca używanie uwierzytelniania Windows (czasami określane jako *zintegrowane zabezpieczenia*) do łączenia ze źródłami danych, które go obsługują. Składnia zatrudnionych w parametrach połączenia jest zależna od dostawcy. W poniższej tabeli przedstawiono składnię uwierzytelniania Windows używana z dostawcy danych .NET Framework.  
+ Zalecamy używanie uwierzytelniania systemu Windows (nazywanego czasem *zabezpieczeniami zintegrowanymi*) do nawiązywania połączeń ze źródłami danych, które je obsługują. Składnia wykorzystywana w parametrach połączenia zależy od dostawcy. W poniższej tabeli przedstawiono składnię uwierzytelniania systemu Windows używaną z dostawcami danych .NET Framework.  
   
 |Dostawca|Składnia|  
 |--------------|------------|  
@@ -43,16 +43,16 @@ Każdy dostawca danych .NET Framework ma `Connection` obiektu, który dziedziczy
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  `Integrated Security=true` zgłasza wyjątek, gdy jest używane z `OleDb` dostawcy.  
+> `Integrated Security=true`zgłasza wyjątek, gdy jest `OleDb` używany z dostawcą.  
   
-## <a name="sqlclient-connection-strings"></a>Parametry połączeń klient SQL  
-Składnia <xref:System.Data.SqlClient.SqlConnection> ciąg połączenia jest udokumentowany w <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> właściwości. Możesz użyć <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> właściwość, aby pobrać lub ustawić parametry połączenia dla bazy danych programu SQL Server. Jeśli potrzebujesz nawiązać połączenia z wcześniejszej wersji programu SQL Server, należy użyć .NET Framework Data Provider for OLE DB (<xref:System.Data.OleDb>). Większość słów kluczowych ciągów połączenia również mapować do właściwości w <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
+## <a name="sqlclient-connection-strings"></a>Parametry połączenia SqlClient  
+Składnia <xref:System.Data.SqlClient.SqlConnection> parametrów połączenia jest udokumentowana <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> we właściwości. Za pomocą <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> właściwości można pobrać lub ustawić parametry połączenia dla bazy danych SQL Server. Jeśli musisz nawiązać połączenie z wcześniejszą wersją SQL Server, musisz użyć Dostawca danych .NET Framework dla OleDb (<xref:System.Data.OleDb>). Większość słów kluczowych parametrów połączenia jest <xref:System.Data.SqlClient.SqlConnectionStringBuilder>również mapowanych na właściwości w.  
 
 > [!IMPORTANT]
->  Ustawieniem domyślnym dla `Persist Security Info` słowo kluczowe jest `false`. Ustawienie `true` lub `yes` umożliwia informacje związane z zabezpieczeniami, w tym identyfikator użytkownika i hasło, które mają zostać uzyskane z połączenia po otwarciu połączenia. Zachowaj `Persist Security Info` równa `false` aby upewnić się, że niezaufanego źródła nie ma dostępu do informacji o parametrach połączenia poufnych.  
+> Ustawieniem `Persist Security Info` domyślnym słowa kluczowego jest `false`. Ustawienie go na `true` lub `yes` pozwala uzyskać informacje dotyczące zabezpieczeń, w tym identyfikator użytkownika i hasło, które zostaną uzyskane z połączenia po otwarciu połączenia. Ustaw wartość tak, aby upewnić się, że niezaufane źródło nie ma dostępu do poufnych informacji o parametrach połączenia. `false` `Persist Security Info`  
 
-### <a name="windows-authentication-with-sqlclient"></a>Uwierzytelnianie Windows za pomocą SqlClient 
- Każdy z poniższych form składni korzysta z uwierzytelniania Windows połączyć się z **AdventureWorks** bazy danych na serwerze lokalnym.  
+### <a name="windows-authentication-with-sqlclient"></a>Uwierzytelnianie systemu Windows za pomocą programu SqlClient 
+ Każda z poniższych form składni używa uwierzytelniania systemu Windows do łączenia się z bazą danych **AdventureWorks** na serwerze lokalnym.  
   
 ```  
 "Persist Security Info=False;Integrated Security=true;  
@@ -63,85 +63,85 @@ Składnia <xref:System.Data.SqlClient.SqlConnection> ciąg połączenia jest udo
     database=AdventureWorks;server=(local)"  
 ```  
   
-### <a name="sql-server-authentication-with-sqlclient"></a>Uwierzytelnianie programu SQL Server przy użyciu SqlClient   
- Uwierzytelnianie Windows jest preferowane w przypadku łączenia się z serwerem SQL. Jednak jeśli wymagane jest uwierzytelnianie programu SQL Server, należy użyć następującej składni, aby określić nazwę użytkownika i hasło. W tym przykładzie gwiazdka są używane do reprezentowania prawidłową nazwę użytkownika i hasło.  
+### <a name="sql-server-authentication-with-sqlclient"></a>Uwierzytelnianie SQL Server przy użyciu programu SqlClient   
+ Uwierzytelnianie systemu Windows jest preferowane w przypadku łączenia się z SQL Server. Jeśli jednak wymagane jest uwierzytelnianie SQL Server, użyj następującej składni, aby określić nazwę użytkownika i hasło. W tym przykładzie gwiazdki są używane do reprezentowania prawidłowej nazwy użytkownika i hasła.  
   
 ```  
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-Podczas łączenia się z bazą danych SQL Azure lub usługi Azure SQL Data Warehouse i udostępniania funkcji logowania w formacie `user@servername`, upewnij się, że `servername` wartości Nazwa logowania jest zgodna wartość podana dla `Server=`.
+Po nawiązaniu połączenia z Azure SQL Database lub Azure SQL Data Warehouse i podania nazwy logowania w formacie `user@servername`upewnij się, `servername` że wartość w polu Nazwa logowania jest zgodna z wartością podaną dla `Server=`.
 
 > [!NOTE]
->  Uwierzytelnianie Windows mają pierwszeństwo przed logowania programu SQL Server. Jeśli określisz zarówno zabezpieczenia zintegrowane = true, oraz nazwę użytkownika i hasło, nazwę użytkownika i hasło zostaną zignorowane i zostanie użyte uwierzytelnianie Windows.  
+> Uwierzytelnianie systemu Windows ma pierwszeństwo przed logowaniami SQL Server. Jeśli określisz zarówno zintegrowane zabezpieczenia = true jak i nazwę użytkownika i hasło, nazwa użytkownika i hasło zostaną zignorowane i zostanie użyte uwierzytelnianie systemu Windows.  
 
-### <a name="connect-to-a-named-instance-of-sql-server"></a>Łączenie się z nazwanym wystąpieniem programu SQL Server
-Aby nawiązać połączenie nazwane wystąpienie programu SQL Server, należy użyć *nazwa komputera\nazwa wystąpienia serwera* składni.  
+### <a name="connect-to-a-named-instance-of-sql-server"></a>Nawiązywanie połączenia z nazwanym wystąpieniem SQL Server
+Aby nawiązać połączenie z nazwanym wystąpieniem SQL Server, użyj składni *nazwy Nazwa serwera* .  
   
 ```  
 Data Source=MySqlServer\MSSQL1;"  
 ```  
  
-Można również ustawić <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> właściwość `SqlConnectionStringBuilder` do nazwy obiektu podczas kompilowania parametrów połączenia. <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> Właściwość <xref:System.Data.SqlClient.SqlConnection> obiekt jest tylko do odczytu.  
+Można również ustawić <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> Właściwość `SqlConnectionStringBuilder` na nazwę wystąpienia podczas kompilowania parametrów połączenia. <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> Właściwość<xref:System.Data.SqlClient.SqlConnection> obiektu jest tylko do odczytu.  
   
-### <a name="type-system-version-changes"></a>Zmiana wersji systemu typu  
- `Type System Version` — Słowo kluczowe w <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> określa reprezentację po stronie klienta typów programu SQL Server. Zobacz <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> Aby uzyskać więcej informacji na temat `Type System Version` — słowo kluczowe.  
+### <a name="type-system-version-changes"></a>Wpisz zmiany wersji systemu  
+ Słowo kluczowe w programie określa reprezentację typu SQL Server po stronie klienta. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> `Type System Version` Aby <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> uzyskać więcej informacji na temat `Type System Version` słowa kluczowego, zobacz.  
   
-## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Łączenie i dołączanie do programu SQL Server Express wystąpień użytkownika  
- Wystąpienia użytkownika są funkcją programu SQL Server Express. Umożliwiają one użytkownika w systemie najmniej uprzywilejowane konto lokalne Windows do dołączenia i korzystać z bazy danych programu SQL Server bez wymogu posiadania uprawnień administracyjnych. Wystąpienia użytkownika wykonuje się przy użyciu poświadczeń Windows użytkownika, nie jako usługa.  
+## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Łączenie i dołączanie do SQL Server Express wystąpień użytkownika  
+ Wystąpienia użytkownika są funkcją w SQL Server Express. Umożliwiają one użytkownikowi uruchomionemu na najniższych uprawnieniach lokalnych konta systemu Windows dołączenie i uruchomienie SQL Server bazy danych bez konieczności posiadania uprawnień administracyjnych. Wystąpienie użytkownika jest wykonywane z poświadczeniami systemu Windows użytkownika, a nie jako usługa.  
   
- Aby uzyskać więcej informacji na temat pracy z wystąpień użytkownika, zobacz [wystąpienia programu SQL Server Express użytkownika](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
+ Aby uzyskać więcej informacji na temat pracy z wystąpieniami użytkowników, zobacz [SQL Server Express wystąpień użytkownika](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
   
-## <a name="using-trustservercertificate"></a>Za pomocą TrustServerCertificate  
- `TrustServerCertificate` — Słowo kluczowe jest prawidłowa tylko wtedy, gdy nawiązywania połączenia z wystąpieniem programu SQL Server z prawidłowym certyfikatem. Gdy `TrustServerCertificate` ustawiono `true`, warstwy transportowej będą używać protokołu SSL do szyfrowania kanału i pominąć zalet łańcucha certyfikatów w celu zweryfikowania relacji zaufania.  
+## <a name="using-trustservercertificate"></a>Korzystanie z TrustServerCertificate  
+ `TrustServerCertificate` Słowo kluczowe jest prawidłowe tylko w przypadku nawiązywania połączenia z wystąpieniem SQL Server z prawidłowym certyfikatem. Gdy `TrustServerCertificate` jest ustawiona na `true`, warstwa transportu będzie używać protokołu SSL do szyfrowania kanału i pomijania pominięcia łańcucha certyfikatów w celu zweryfikowania zaufania.  
   
 ```  
 "TrustServerCertificate=true;"   
 ```  
   
 > [!NOTE]
->  Jeśli `TrustServerCertificate` ustawiono `true` i szyfrowanie jest włączone, poziom szyfrowania określonych na serwerze, który będzie używany nawet wtedy, gdy `Encrypt` ustawiono `false` w parametrach połączenia. Połączenie zakończy się niepowodzeniem, w przeciwnym razie.  
+> Jeśli `TrustServerCertificate` jest ustawiona na `true` , a szyfrowanie jest włączone, poziom szyfrowania określony na serwerze będzie używany `false` nawet wtedy, gdy `Encrypt` jest ustawiony na wartość w parametrach połączenia. W przeciwnym razie połączenie zakończy się niepowodzeniem.  
   
 ### <a name="enabling-encryption"></a>Włączanie szyfrowania  
- Aby włączyć szyfrowanie, gdy nie zainicjowano certyfikat na serwerze **Wymuszaj szyfrowanie protokołu** i **certyfikat serwera zaufania** opcje muszą być ustawione w programie SQL Server Configuration Manager. W tym przypadku szyfrowania będzie używany certyfikat serwera z podpisem własnym bez sprawdzania poprawności, jeśli został aprowizowany ma możliwe do zweryfikowania certyfikatu na serwerze.  
+ Aby włączyć szyfrowanie, gdy nie zainicjowano obsługi administracyjnej certyfikatu na serwerze, w SQL Server Configuration Manager należy ustawić opcje **szyfrowanie protokołu Force** i **certyfikat serwera zaufania** . W takim przypadku szyfrowanie będzie używać certyfikatu serwera z podpisem własnym bez sprawdzania poprawności, jeśli nie zainicjowano obsługi administracyjnej na serwerze żadnego certyfikatu zweryfikowanego.  
   
- Ustawienia aplikacji nie można zmniejszyć poziom zabezpieczeń skonfigurowana w programie SQL Server, ale Opcjonalnie można zwiększanie. Aplikacja może zażądać szyfrowania, ustawiając `TrustServerCertificate` i `Encrypt` słów kluczowych `true`, gwarantując, że szyfrowanie odbywa się nawet wtedy, gdy nie zainicjowano certyfikat serwera i **Wymuszaj szyfrowanie protokołu**  nie został skonfigurowany dla klienta. Jednak jeśli `TrustServerCertificate` nie jest włączone w konfiguracji klienta jest nadal wymagany certyfikat serwera elastycznie.  
+ Ustawienia aplikacji nie mogą zmniejszyć poziomu zabezpieczeń skonfigurowanych w SQL Server, ale można go opcjonalnie wzmocnić. Aplikacja `TrustServerCertificate` może zażądać szyfrowania przez ustawienie słów kluczowych i `Encrypt` na `true`, co gwarantuje, że szyfrowanie odbywa się, nawet jeśli certyfikat serwera nie został zainicjowany i wymuszone **szyfrowanie protokołu** nie skonfigurowano dla klienta. Jeśli `TrustServerCertificate` jednak program nie jest włączony w konfiguracji klienta, jest nadal wymagany certyfikat serwera aprowizacji.  
   
  W poniższej tabeli opisano wszystkie przypadki.  
   
-|Wymusić ustawienie klienta protokołu szyfrowania|Ustawienie klienta, certyfikat serwera zaufania|Szyfrowanie/Szyfrowanie dla atrybut parametrów połączenia danych|Atrybut parametrów połączenia certyfikat serwera zaufania|Wynik|  
+|Wymuś ustawienie klienta szyfrowania protokołu|Ustawienie klienta certyfikatu serwera zaufania|Szyfrowanie/używanie szyfrowania dla parametrów/atrybutu połączenia danych|Certyfikat serwera zaufania parametry/atrybut połączenia|Wynik|  
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
-|Nie|Brak|Nie (ustawienie domyślne)|Ignorowane|Szyfrowanie nie występuje.|  
-|Nie|Brak|Yes|Nie (ustawienie domyślne)|Szyfrowanie występuje tylko wtedy, gdy możliwe do zweryfikowania certyfikatu serwera, w przeciwnym razie próba połączenia nie powiedzie się.|  
-|Nie|Brak|Yes|Tak|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
-|Yes|Nie|Ignorowane|Ignorowane|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia kończy się niepowodzeniem.|  
-|Tak|Tak|Nie (ustawienie domyślne)|Ignorowane|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
-|Tak|Yes|Tak|Nie (ustawienie domyślne)|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia kończy się niepowodzeniem.|  
-|Tak|Yes|Yes|Tak|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
+|Nie|Brak|Nie (domyślnie)|Ignorowane|Nie są wykonywane żadne szyfrowanie.|  
+|Nie|Brak|Tak|Nie (domyślnie)|Szyfrowanie występuje tylko wtedy, gdy istnieje zweryfikowany certyfikat serwera, w przeciwnym razie próba połączenia nie powiedzie się.|  
+|Nie|Brak|Tak|Tak|Szyfrowanie zawsze występuje, ale może korzystać z certyfikatu serwera z podpisem własnym.|  
+|Tak|Nie|Ignorowane|Ignorowane|Szyfrowanie występuje tylko wtedy, gdy istnieje zweryfikowany certyfikat serwera; w przeciwnym razie próba połączenia nie powiedzie się.|  
+|Tak|Tak|Nie (domyślnie)|Ignorowane|Szyfrowanie zawsze występuje, ale może korzystać z certyfikatu serwera z podpisem własnym.|  
+|Tak|Yes|Tak|Nie (domyślnie)|Szyfrowanie występuje tylko wtedy, gdy istnieje zweryfikowany certyfikat serwera; w przeciwnym razie próba połączenia nie powiedzie się.|  
+|Tak|Yes|Yes|Tak|Szyfrowanie zawsze występuje, ale może korzystać z certyfikatu serwera z podpisem własnym.|  
   
- Aby uzyskać więcej informacji, zobacz [przy użyciu szyfrowania bez sprawdzania poprawności](/sql/relational-databases/native-client/features/using-encryption-without-validation).
+ Aby uzyskać więcej informacji, zobacz [używanie szyfrowania bez sprawdzania poprawności](/sql/relational-databases/native-client/features/using-encryption-without-validation).
   
 ## <a name="oledb-connection-strings"></a>Parametry połączenia OleDb  
- <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> Właściwość <xref:System.Data.OleDb.OleDbConnection> pozwala pobrać lub ustawić parametry połączenia dla źródła danych OLE DB, takie jak program Microsoft Access. Można również utworzyć `OleDb` parametry połączenia w czasie wykonywania za pomocą <xref:System.Data.OleDb.OleDbConnectionStringBuilder> klasy.  
+ <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> Właściwość a<xref:System.Data.OleDb.OleDbConnection> umożliwia pobieranie lub Ustawianie parametrów połączenia dla źródła danych OLE DB, takich jak Microsoft Access. Możesz również utworzyć `OleDb` parametry połączenia w czasie wykonywania przy <xref:System.Data.OleDb.OleDbConnectionStringBuilder> użyciu klasy.  
   
-### <a name="oledb-connection-string-syntax"></a>Składnia ciągu połączenia OleDb  
- Należy określić nazwę dostawcy <xref:System.Data.OleDb.OleDbConnection> parametry połączenia. Łączy następujące parametry połączenia bazy danych Microsoft Access za pomocą dostawcy Jet. Należy pamiętać, że `User ID` i `Password` słowa kluczowe są opcjonalne, jeśli baza danych jest niezabezpieczone (ustawienie domyślne).  
+### <a name="oledb-connection-string-syntax"></a>Składnia parametrów połączenia OleDb  
+ Należy określić nazwę dostawcy dla <xref:System.Data.OleDb.OleDbConnection> parametrów połączenia. Poniższe parametry połączenia nawiązują połączenie z bazą danych programu Microsoft Access za pomocą dostawcy Jet. Należy pamiętać, `User ID` że `Password` słowa kluczowe i są opcjonalne, jeśli baza danych jest niezabezpieczona (wartość domyślna).  
   
 ```   
 Provider=Microsoft.Jet.OLEDB.4.0; Data Source=d:\Northwind.mdb;User ID=Admin;Password=;   
 ```  
   
- Jeśli bazy danych Jet jest zabezpieczony za pomocą zabezpieczeń na poziomie użytkownika, należy podać lokalizację pliku (.mdw). Plik informacji o grupie roboczej jest używany do walidacji poświadczenia znajdujące się w ciągu połączenia.  
+ Jeśli baza danych programu Jet jest zabezpieczona przy użyciu zabezpieczeń na poziomie użytkownika, należy podać lokalizację pliku informacji o grupie roboczej (. mdw). Plik informacji o grupie roboczej służy do weryfikowania poświadczeń przedstawionych w parametrach połączenia.  
   
 ```  
 Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System Database=d:\NorthwindSystem.mdw;User ID=*****;Password=*****;  
 ```  
   
 > [!IMPORTANT]
->  Jest to możliwe, aby podać informacje o połączeniu dla **oledbconnection —** w plik Universal Data Link (UDL); jednak należy unikać sposób. Pliki UDL nie są szyfrowane, a następnie udostępnić informacje o parametrach połączenia w postaci zwykłego tekstu. Ponieważ plik UDL zewnętrznego zasobu opartych na plikach do aplikacji, nie może być chronione przy użyciu programu .NET Framework. Pliki UDL nie są obsługiwane dla **SqlClient**.  
+> Możliwe jest podanie informacji o połączeniu dla **OleDbConnection** w pliku Universal Data Link (UDL); należy jednak unikać tego. Pliki UDL nie są szyfrowane i ujawniają informacje o parametrach połączenia w postaci zwykłego tekstu. Ponieważ plik UDL jest zewnętrznym zasobem opartym na plikach dla aplikacji, nie może być zabezpieczony przy użyciu .NET Framework. Pliki UDL nie są obsługiwane w przypadku usługi **SqlClient**.  
   
-### <a name="using-datadirectory-to-connect-to-accessjet"></a>Aby nawiązać połączenie dostępu/Jet przy użyciu DataDirectory  
- `DataDirectory` nie jest dostępna wyłącznie dla `SqlClient`. Może również służyć za pomocą <xref:System.Data.OleDb> i <xref:System.Data.Odbc> dostawcy danych .NET. Poniższy przykład <xref:System.Data.OleDb.OleDbConnection> ciągu pokazuje składnię wymagane do nawiązania Northwind.mdb znajdujący się w folderze app_data aplikacji. Systemowej bazy danych (grupach) również są przechowywane w tej lokalizacji.  
+### <a name="using-datadirectory-to-connect-to-accessjet"></a>Używanie usługi DataDirectory do łączenia się z dostępem/aparatem Jet  
+ `DataDirectory`nie jest wyłączność `SqlClient`do. Może być również używany z <xref:System.Data.OleDb> dostawcami danych programu i <xref:System.Data.Odbc> .NET. Następujący przykładowy <xref:System.Data.OleDb.OleDbConnection> ciąg demonstruje składnię wymaganą do nawiązania połączenia z Northwind. mdb znajdującą się w folderze App_Data aplikacji. Systemowa baza danych (System. mdw) jest również przechowywana w tej lokalizacji.  
   
 ```  
 "Provider=Microsoft.Jet.OLEDB.4.0;  
@@ -150,52 +150,52 @@ Jet OLEDB:System Database=|DataDirectory|\System.mdw;"
 ```  
   
 > [!IMPORTANT]
->  Określanie lokalizacji systemowej bazy danych w parametrach połączenia nie jest wymagane, jeśli baza danych programu Access/Jet jest niezabezpieczona. Zabezpieczenia jest domyślnie wyłączona, za pomocą wszystkich użytkowników łączących się wbudowane użytkownika jako administratora przy użyciu pustego hasła. Nawet wtedy, gdy zabezpieczenia na poziomie użytkownika jest implementowana prawidłowo, bazy danych Jet pozostają narażone na ataki. W związku z tym przechowywanie poufnych informacji w bazie danych programu Access/Jet nie jest zalecana ze względu na słabe nieprzerwaną pracę jego schemat zabezpieczeń opartych na plikach.  
+> Określenie lokalizacji systemowej bazy danych w parametrach połączenia nie jest wymagane, jeśli baza danych dostępu/Jet jest niezabezpieczona. Zabezpieczenia są domyślnie wyłączone, gdy wszyscy użytkownicy nawiązują połączenie jako wbudowanego użytkownika administracyjnego z pustym hasłem. Nawet jeśli zabezpieczenia na poziomie użytkownika są poprawnie zaimplementowane, baza danych aparatu Jet pozostaje narażona na ataki. W związku z tym przechowywanie poufnych informacji w bazie danych dostępu/Jet nie jest zalecane ze względu na nieodłączną słabość schematu zabezpieczeń opartego na plikach.  
   
-### <a name="connecting-to-excel"></a>Nawiązywanie połączenia z programu Excel  
- Dostawca Microsoft Jet jest używany do łączenia się ze skoroszytem programu Excel. W poniższym ciągu połączenia `Extended Properties` — słowo kluczowe ustawia właściwości, które są specyficzne dla programu Excel. "HDR = Yes;" wskazuje, że pierwszy wiersz zawiera nazwy kolumn, nie dane, i "IMEX = 1;" sterownik zawsze przeczytać kolumn danych "mieszany —" jako tekst.  
+### <a name="connecting-to-excel"></a>Łączenie z programem Excel  
+ Dostawca Microsoft Jet jest używany do nawiązywania połączenia ze skoroszytem programu Excel. W poniższych parametrach `Extended Properties` połączenia słowo kluczowe ustawia właściwości specyficzne dla programu Excel. "HDR = tak;" wskazuje, że pierwszy wiersz zawiera nazwy kolumn, a nie dane i "IMEX = 1;" informuje sterownik, aby zawsze czytał kolumny danych "międzymieszanych" jako tekst.  
   
 ```  
 Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\MyExcel.xls;Extended Properties=""Excel 8.0;HDR=Yes;IMEX=1""  
 ```  
   
- Należy zauważyć, że wymagany znak cudzysłowu dla `Extended Properties` również muszą być ujęte w podwójny cudzysłów.  
+ Należy zauważyć, że znak podwójnego cudzysłowu `Extended Properties` wymagany dla elementu musi być również ujęty w znaki podwójnego cudzysłowu.  
   
-### <a name="data-shape-provider-connection-string-syntax"></a>Składnia ciągu połączenia dostawcy kształtu danych  
- Korzystanie z obu `Provider` i `Data Provider` słów kluczowych, gdy za pomocą dostawcy kształt danych firmy Microsoft. W poniższym przykładzie użyto dostawcy kształtu do łączenia z lokalnym wystąpieniem programu SQL Server.  
+### <a name="data-shape-provider-connection-string-syntax"></a>Składnia parametrów połączenia dostawcy kształtu danych  
+ Użyj słowa`Data Provider` kluczowego i,gdykorzystaszzdostawcykształtów`Provider` danych firmy Microsoft. Poniższy przykład używa dostawcy kształtu do łączenia się z lokalnym wystąpieniem SQL Server.  
   
 ```  
 "Provider=MSDataShape;Data Provider=SQLOLEDB;Data Source=(local);Initial Catalog=pubs;Integrated Security=SSPI;"   
 ```  
   
 ## <a name="odbc-connection-strings"></a>Parametry połączenia ODBC  
- <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> Właściwość <xref:System.Data.Odbc.OdbcConnection> pozwala pobrać lub ustawić parametry połączenia dla źródła danych OLE DB. Parametry połączenia ODBC są również obsługiwane przez <xref:System.Data.Odbc.OdbcConnectionStringBuilder>.  
+ <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> Właściwość a<xref:System.Data.Odbc.OdbcConnection> umożliwia pobieranie lub Ustawianie parametrów połączenia dla źródła danych OLE DB. Parametry połączenia ODBC są również obsługiwane przez <xref:System.Data.Odbc.OdbcConnectionStringBuilder>program.  
   
- Następujące parametry połączenia używa sterownika Microsoft tekstu.  
+ Poniższe parametry połączenia używają sterownika tekstowego firmy Microsoft.  
   
 ```  
 Driver={Microsoft Text Driver (*.txt; *.csv)};DBQ=d:\bin  
 ```  
   
-### <a name="using-datadirectory-to-connect-to-visual-foxpro"></a>Za pomocą DataDirectory nawiązać połączenia z programem Visual FoxPro  
- Następujące <xref:System.Data.Odbc.OdbcConnection> przykładowy ciąg połączenia, który demonstruje sposób użycia `DataDirectory` do łączenia się z plikiem programu Microsoft Visual FoxPro.  
+### <a name="using-datadirectory-to-connect-to-visual-foxpro"></a>Łączenie z programem Visual FoxPro przy użyciu usługi DataDirectory  
+ Poniższy <xref:System.Data.Odbc.OdbcConnection> przykład parametrów połączenia demonstruje użycie `DataDirectory` programu w celu nawiązania połączenia z plikiem programu Microsoft Visual FoxPro.  
   
 ```  
 "Driver={Microsoft Visual FoxPro Driver};  
 SourceDB=|DataDirectory|\MyData.DBC;SourceType=DBC;"  
 ```  
   
-## <a name="oracle-connection-strings"></a>Parametry połączenia bazy danych Oracle  
- <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> Właściwość <xref:System.Data.OracleClient.OracleConnection> pozwala pobrać lub ustawić parametry połączenia dla źródła danych OLE DB. Parametry połączenia bazy danych Oracle, są również obsługiwane przez <xref:System.Data.OracleClient.OracleConnectionStringBuilder> .  
+## <a name="oracle-connection-strings"></a>Parametry połączenia Oracle  
+ <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> Właściwość a<xref:System.Data.OracleClient.OracleConnection> umożliwia pobieranie lub Ustawianie parametrów połączenia dla źródła danych OLE DB. Parametry połączenia Oracle są również obsługiwane przez <xref:System.Data.OracleClient.OracleConnectionStringBuilder> program.  
   
 ```  
 Data Source=Oracle9i;User ID=*****;Password=*****;  
 ```  
   
- Aby uzyskać więcej informacji na temat składnia ciągu połączenia ODBC, zobacz <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.  
+ Aby uzyskać więcej informacji na temat składni parametrów połączenia ODBC <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>, zobacz.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Parametry połączeń](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Nawiązywanie połączenia ze źródłem danych](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

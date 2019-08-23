@@ -16,44 +16,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22c3a480e2b68377e300df1083b3178ee4e2d2a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a408995793caf879f8d5624ab727102c4859195
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969861"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959613"
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager — Interfejs
-Udostępnia metody, które umożliwiają hosta skojarzyć zestaw zadań z identyfikatorem i przyjazną nazwę.  
+Dostarcza metody, które umożliwiają hostowi kojarzenie zestawu zadań z identyfikatorem i przyjazną nazwą.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[BeginConnection, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)|Ustanawia nowego połączenia między hostem a debugera, aby skojarzyć zadania z identyfikatorem i przyjazną nazwę.|  
-|[EndConnection, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)|Usuwa skojarzenie między listę zadań i identyfikatora oraz przyjazną nazwę.|  
+|[BeginConnection, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)|Ustanawia nowe połączenie między hostem i debugerem w celu kojarzenia zadań z identyfikatorem i przyjazną nazwą.|  
+|[EndConnection, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)|Usuwa skojarzenie między listą zadań i identyfikatorem i przyjazną nazwą.|  
 |[GetDacl, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-getdacl-method.md)|Ta metoda nie jest zaimplementowana.|  
 |[IsDebuggerAttached, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-isdebuggerattached-method.md)|Pobiera wartość wskazującą, czy debuger jest dołączony do procesu.|  
-|[SetConnectionTasks, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|Kojarzy listę [iclrtask —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) wystąpień przy użyciu identyfikatora i przyjazną nazwę.|  
+|[SetConnectionTasks, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|Kojarzy listę wystąpień [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) z identyfikatorem i przyjazną nazwą.|  
 |[SetDacl, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setdacl-method.md)|Ta metoda nie jest zaimplementowana.|  
-|[SetSymbolReadingPolicy, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|Ustawia zasady do odczytywania plików bazy danych (PDB) programu. Zasady określają, czy informacje o numery wierszy i pliki są uwzględniane w stosy wywołań.|  
+|[SetSymbolReadingPolicy, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|Ustawia zasady odczytywania plików bazy danych programu (PDB). Zasady określają, czy informacje o numerach wierszy i plikach są zawarte w stosach wywołań.|  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas debugowania scenariuszy, host może być grupowania zadań zgodnie z własną logikę programistyczną. Na przykład grupowanie umożliwia deweloperem wyświetlić tylko zadania, które są wymagane przez interfejsy API dla deweloperów, zamiast zobaczyć zadanie, co zostało uruchomione w procesie. `ICLRDebugManager` Zezwalaj hostowi na zaimplementować ten rodzaj grupowania.  
+ W scenariuszach debugowania host może chcieć grupować zadania zgodnie z własną logiką programowania. Na przykład zgrupowanie zezwoli deweloperowi na wyświetlanie tylko zadań wymaganych przez interfejsy API dewelopera, a nie oglądanie wszystkich zadań uruchomionych w procesie. `ICLRDebugManager`zezwala hostowi na wdrożenie tego rodzaju grupowania.  
   
 > [!IMPORTANT]
->  Trzy `ICLRDebugManager` metod `BeginConnection`, `SetConnectionTasks` i `EndConnection`, są zależne od siebie nawzajem. One musi zostać wywołany w podanej kolejności, aby działać zgodnie z oczekiwaniami.  
+> Trzy `ICLRDebugManager` metody, `BeginConnection`, `SetConnectionTasks` i`EndConnection`, są zależne od siebie. Muszą być wywoływane w danej kolejności, aby działały zgodnie z oczekiwaniami.  
   
- Grupowanie i identyfikatory i przyjaznych nazw hosta, przypisuje do grupowania, nie mają znaczenia dla środowisko uruchomieniowe języka wspólnego (CLR). Środowisko CLR jedynie przekazuje informacje o wzdłuż do debugera.  
+ Grupowanie i identyfikatory oraz przyjazne nazwy przypisywane przez hosta do grupy nie mają znaczenia dla środowiska uruchomieniowego języka wspólnego (CLR). Środowisko CLR jedynie przekazuje informacje wraz z debugerem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówki** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

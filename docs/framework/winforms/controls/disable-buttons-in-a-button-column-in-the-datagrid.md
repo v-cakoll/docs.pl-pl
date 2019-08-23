@@ -9,20 +9,20 @@ helpviewer_keywords:
 - buttons [Windows Forms], disabling in button columns
 - DataGridView control [Windows Forms], disabling button cells
 ms.assetid: 5c344d01-013a-4a6b-8f8d-62ec9321d81e
-ms.openlocfilehash: 7d6223e4d75524044e701ea4cf34dcc7487ccd25
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b8bb503186e41c682b0685e4c9c4bf0bb3adcbe8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591785"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967397"
 ---
 # <a name="how-to-disable-buttons-in-a-button-column-in-the-windows-forms-datagridview-control"></a>Instrukcje: wyłączanie przycisków w kolumnie przycisków w kontrolce DataGridView formularzy systemu Windows
-<xref:System.Windows.Forms.DataGridView> Zawiera kontrolki <xref:System.Windows.Forms.DataGridViewButtonCell> klasy do wyświetlania komórki za pomocą interfejsu użytkownika (UI), jak przycisk. Jednak <xref:System.Windows.Forms.DataGridViewButtonCell> nie zapewnia możliwość wyłączenia wyglądu przycisku wyświetlane w komórce.  
+<xref:System.Windows.Forms.DataGridView> Formant<xref:System.Windows.Forms.DataGridViewButtonCell> zawiera klasę służącą do wyświetlania komórek z interfejsem użytkownika (UI), takim jak przycisk. Jednak program <xref:System.Windows.Forms.DataGridViewButtonCell> nie umożliwia wyłączenia wyglądu przycisku wyświetlanego w komórce.  
   
- Poniższy przykład kodu demonstruje sposób dostosowywania <xref:System.Windows.Forms.DataGridViewButtonCell> klasy, aby wyświetlić przyciski, który może znajdować się wyłączone. W przykładzie zdefiniowano nowy typ komórki `DataGridViewDisableButtonCell`, która jest pochodną <xref:System.Windows.Forms.DataGridViewButtonCell>. Ten typ komórki zawiera nową `Enabled` właściwość, która może być równa `false` do rysowania przycisk wyłączone w komórce. W przykładzie zdefiniowano też nowy typ kolumny, `DataGridViewDisableButtonColumn`, który wyświetla `DataGridViewDisableButtonCell` obiektów. Aby zademonstrować tego nową komórkę i kolumny typu, bieżąca wartość <xref:System.Windows.Forms.DataGridViewCheckBoxCell> w obiekcie nadrzędnym <xref:System.Windows.Forms.DataGridView> Określa, czy `Enabled` właściwość `DataGridViewDisableButtonCell` w tym samym wierszu jest `true` lub `false`.  
+ Poniższy przykład kodu demonstruje sposób dostosowywania <xref:System.Windows.Forms.DataGridViewButtonCell> klasy do wyświetlania przycisków, które mogą być wyświetlane jako wyłączone. W przykładzie zdefiniowano nowy typ `DataGridViewDisableButtonCell`komórki, który pochodzi od. <xref:System.Windows.Forms.DataGridViewButtonCell> Ten typ komórki zawiera nową `Enabled` właściwość, którą można `false` ustawić, aby narysować przycisk wyłączony w komórce. W przykładzie zdefiniowano również nowy typ `DataGridViewDisableButtonColumn`kolumny, który wyświetla `DataGridViewDisableButtonCell` obiekty. Aby pokazać tę nową komórkę i typ kolumny, bieżąca <xref:System.Windows.Forms.DataGridViewCheckBoxCell> wartość każdego w obiekcie nadrzędnym <xref:System.Windows.Forms.DataGridView> określa, `DataGridViewDisableButtonCell` czy `Enabled` właściwość w tym samym wierszu jest `true` lub `false`.  
   
 > [!NOTE]
->  Po utworzeniu klasy pochodnej z <xref:System.Windows.Forms.DataGridViewCell> lub <xref:System.Windows.Forms.DataGridViewColumn> i dodać nowe właściwości do klasy pochodnej, pamiętaj zastąpić `Clone` metodę, aby skopiować nowe właściwości podczas operacji klonowania. Należy także wywołać klasy bazowej `Clone` metody, aby właściwości klasy bazowej są kopiowane do nowej komórce lub kolumnie.  
+> Gdy pochodzą z <xref:System.Windows.Forms.DataGridViewCell> lub <xref:System.Windows.Forms.DataGridViewColumn> i dodajesz nowe właściwości do klasy pochodnej, pamiętaj, aby zastąpić `Clone` metodę, aby skopiować nowe właściwości podczas klonowania operacji. Należy również wywołać `Clone` metodę klasy bazowej, aby właściwości klasy bazowej były kopiowane do nowej komórki lub kolumny.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.Windows.Forms.DataGridView.DisabledButtons#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DisabledButtons/CS/form1.cs#0)]
@@ -31,7 +31,7 @@ ms.locfileid: "65591785"
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów systemu, System.Drawing, przestrzeń nazw System.Windows.Forms i System.Windows.Forms.VisualStyles.  
+- Odwołania do zestawów system, system. Drawing, system. Windows. Forms i system. Windows. Forms. VisualStyles.  
   
 ## <a name="see-also"></a>Zobacz także
 

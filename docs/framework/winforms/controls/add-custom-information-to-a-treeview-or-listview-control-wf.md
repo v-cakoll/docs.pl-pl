@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 5f51744878da526147dd742e98117e8e87c94e20
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: f588a00c430eb1ae1f0cdcde6b7dd22f0c8671c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052239"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956998"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Formularze systemu Windows)
-Można utworzyć pochodnej węzeł w formularzach Windows <xref:System.Windows.Forms.TreeView> formantu lub pochodny element w <xref:System.Windows.Forms.ListView> kontroli. Tworzenie wartości pochodnych umożliwia Dodaj dowolne pola, które są wymagane, a także niestandardowych metod i konstruktorów do ich obsługi. Jest jedno użycie tej funkcji można dołączyć obiektu klienta do każdego elementu węzła lub listy drzewa. Podane tutaj przykłady dotyczą <xref:System.Windows.Forms.TreeView> kontroli, ale to samo podejście pozwala <xref:System.Windows.Forms.ListView> kontroli.  
+Można utworzyć węzeł pochodny w formancie Windows Forms <xref:System.Windows.Forms.TreeView> lub element pochodny <xref:System.Windows.Forms.ListView> w formancie. Tworzenie wartości pochodnych pozwala na Dodawanie wymaganych pól, a także niestandardowych metod i konstruktorów do ich obsługi. Jednym z nich jest dołączenie obiektu klienta do każdego węzła drzewa lub elementu listy. Przykłady dotyczą <xref:System.Windows.Forms.TreeView> kontrolki, ale takie samo podejście może być używane <xref:System.Windows.Forms.ListView> dla kontrolki.  
   
-### <a name="to-derive-a-tree-node"></a>Aby uzyskać pochodny węzeł drzewa  
+### <a name="to-derive-a-tree-node"></a>Aby utworzyć węzeł drzewa  
   
-- Utwórz nową klasę węzła pochodną <xref:System.Windows.Forms.TreeNode> klasy, która zawiera pole niestandardowe do rejestrowania ścieżki do pliku.  
+- Utwórz nową klasę węzła, pochodzącą z <xref:System.Windows.Forms.TreeNode> klasy, która zawiera pole niestandardowe umożliwiające zarejestrowanie ścieżki pliku.  
   
     ```vb  
     Class myTreeNode  
@@ -68,11 +68,11 @@ Można utworzyć pochodnej węzeł w formularzach Windows <xref:System.Windows.F
     };  
     ```  
   
-### <a name="to-use-a-derived-tree-node"></a>Aby użyć węzła drzewa pochodne  
+### <a name="to-use-a-derived-tree-node"></a>Aby użyć węzła drzewa pochodnego  
   
-1. Nowy węzeł drzewa pochodnej służy jako parametr do wywołania funkcji.  
+1. Nowy węzeł drzewa pochodnego można użyć jako parametru do wywołania funkcji.  
   
-     W poniższym przykładzie ścieżka lokalizacji pliku tekstowego jest folder Moje dokumenty. Można to zrobić, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać tego katalogu. Ponadto pozwala to użytkownikom z poziomami dostępu minimalny system bezpiecznego uruchamiania aplikacji.  
+     W poniższym przykładzie ścieżką ustawioną dla lokalizacji pliku tekstowego jest folder Moje dokumenty. Można to zrobić, ponieważ większość komputerów z systemem operacyjnym Windows będzie zawierać ten katalog. Pozwala to również użytkownikom z minimalnymi poziomami dostępu do systemu w celu bezpiecznego uruchomienia aplikacji.  
   
     ```vb  
     ' You should replace the bold text file   
@@ -100,7 +100,7 @@ Można utworzyć pochodnej węzeł w formularzach Windows <xref:System.Windows.F
        "\\TextFile.txt")));  
     ```  
   
-2. Jeśli są przekazywane węzła drzewa, a ma <xref:System.Windows.Forms.TreeNode> klasy, musisz wykonać rzutowanie do klasy pochodnej. Rzutowanie jest jawna konwersja z jednego typu obiektu do drugiego. Aby uzyskać więcej informacji na temat rzutowania, zobacz [Konwersje jawne i niejawne](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [konwersje rzutowania i typ](~/docs/csharp/programming-guide/types/casting-and-type-conversions.md) (Visual C#), lub [Operator rzutowania: ()](/cpp/cpp/cast-operator-parens) () Wizualne C++).  
+2. Jeśli przeszedł węzeł drzewa i jest on typem <xref:System.Windows.Forms.TreeNode> klasy, należy wykonać rzutowanie na klasę pochodną. Rzutowanie jest jawną konwersją z jednego typu obiektu na inny. Aby uzyskać więcej informacji na temat rzutowania, zobacz [konwersje niejawne i jawne](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md) (wizualizacja C#) lub [operator rzutowania: ()](/cpp/cpp/cast-operator-parens) (wizualizacja C++).  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  

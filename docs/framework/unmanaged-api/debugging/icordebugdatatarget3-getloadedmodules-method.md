@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc62618c5872a2c3e3740be4c60ae02e386c1868
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 120b839b2b11c85f42bb1a0ae4701de0dea33879
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750029"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912822"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>ICorDebugDataTarget3::GetLoadedModules — metoda
-Pobiera listę modułów, które zostały załadowane do tej pory.  
+Pobiera listę modułów, które zostały wcześniej załadowane.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,27 +26,27 @@ HRESULT GetLoadedModules(
   
 ## <a name="parameters"></a>Parametry  
  `cRequestedModules`  
- [in] Liczba modułów, dla których jest wymagane informacje.  
+ podczas Liczba modułów, dla których żądane są informacje.  
   
  `pcFetchedModules`  
- [out] Wskaźnik do liczby modułów, o których informacje zwrócone.  
+ określoną Wskaźnik do liczby modułów, na których zwrócono informacje.  
   
  `pLoadedModules`  
- [out] Wskaźnik do tablicy [ICorDebugLoadedModule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md) obiektów, które zawierają informacje o załadowanych modułów.  
+ określoną Wskaźnik do tablicy obiektów [ICorDebugLoadedModule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md) , które zawierają informacje o załadowanych modułach.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

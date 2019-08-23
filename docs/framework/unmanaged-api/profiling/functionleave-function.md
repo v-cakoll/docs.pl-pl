@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80d82e26fe54c5422d1140bba84830879f0b5c2d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 238a5f19bd8cbd89a5537b2b9297bfa9e1f54613
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781285"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952871"
 ---
 # <a name="functionleave-function"></a>FunctionLeave — Funkcja
-Powiadamia program profilujący, że funkcja jest około, aby powrócić do obiektu wywołującego.  
+Powiadamia profiler, że funkcja ma zwrócić do obiektu wywołującego.  
   
 > [!NOTE]
->  `FunctionLeave` Funkcja jest przestarzała w programie .NET Framework 2.0. Nadal będzie działać, ale spowoduje naliczenie opłaty za spadek wydajności. Użyj [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) zamiast tego funkcji.  
+> `FunctionLeave` Funkcja jest przestarzała w .NET Framework 2,0. Będzie ona nadal działała, ale nastąpi spadek wydajności. Zamiast tego użyj funkcji [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,29 +39,29 @@ void __stdcall FunctionLeave (
   
 ## <a name="parameters"></a>Parametry  
  `funcID`  
- [in] Identyfikator funkcji, która zwraca.  
+ podczas Identyfikator zwracanej funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `FunctionLeave` Funkcji jest wywołanie zwrotne; należy go zaimplementować. Należy użyć implementacji `__declspec`(`naked`) atrybuty klasy magazynu.  
+ `FunctionLeave` Funkcja jest wywołaniem zwrotnym, należy ją zaimplementować. Implementacja musi używać `__declspec`atrybutu klasy magazynu`naked`().  
   
  Aparat wykonywania nie zapisuje żadnych rejestrów przed wywołaniem tej funkcji.  
   
-- Przy uruchamianiu musisz najpierw zapisać wszystkich rejestrów, z których korzysta Licencjobiorca, łącznie z programami znajdującymi się na jednostki zmiennoprzecinkowej (FPU).  
+- We wpisie należy zapisać wszystkie używane rejestry, w tym te w jednostce zmiennoprzecinkowej (FPU).  
   
-- Na zakończenie możesz przywrócić stosu, usuwanie, wyłączanie wszystkich parametrów, które zostały wypchnięte przez wywołującego.  
+- Po zakończeniu należy przywrócić stos, usuwanie wyłączyć wszystkie parametry, które zostały wypchnięte przez jego obiekt wywołujący.  
   
- Implementacja `FunctionLeave` nie powinny blokować, ponieważ zostanie opóźnione, wyrzucanie elementów bezużytecznych. Implementacja nie powinien podejmować wyrzucania elementów bezużytecznych, ponieważ stos może nie być w stanie przyjaznego dla kolekcji wyrzucania elementów. Jeśli próba zostanie podjęta wyrzucania elementów bezużytecznych, środowisko uruchomieniowe spowoduje zablokowanie aż do `FunctionLeave` zwraca.  
+ Implementacja `FunctionLeave` nie powinna być blokowana, ponieważ spowoduje opóźnienie wyrzucania elementów bezużytecznych. Implementacja nie powinna podejmować próby wyrzucania elementów bezużytecznych, ponieważ stos może nie znajdować się w stanie przyjaznym do wyrzucania elementów bezużytecznych. W przypadku próby wyrzucania elementów bezużytecznych środowisko uruchomieniowe `FunctionLeave` zostanie zablokowane do momentu powracania.  
   
- Ponadto `FunctionLeave` funkcji nie mogą wywoływać kodu zarządzanego lub w dowolnym Przyczyna sposób alokacji pamięci zarządzanej.  
+ `FunctionLeave` Ponadto funkcja nie może wywołać kodu zarządzanego lub w jakikolwiek sposób może spowodować alokację pamięci zarządzanej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl  
+ **Nagłówki** CorProf.idl  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** 1.1, 1.0  
+ **.NET Framework wersje:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e558d86fd4e012a6b88e0bcd05d58ecddc6cc20
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: dc8381f8059e37c6c520c2402289124a506188e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666268"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968414"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Synchronizowanie danych na potrzeby wielowątkowości
 
@@ -51,14 +51,14 @@ Platforma .NET udostępnia kilka strategii do synchronizowania dostępu do wyst�
  Oba Visual Basic i C# obsługują oznaczenie bloków kodu z określonym słowem kluczowym języka, `lock` C# `SyncLock` instrukcję w lub instrukcji w Visual Basic. Gdy kod jest wykonywany przez wątek, podejmowana jest próba uzyskania blokady. Jeśli blokada została już uzyskana przez inny wątek, bloki wątku do momentu udostępnienia blokady staną się dostępne. Gdy wątek opuszcza zsynchronizowany blok kodu, blokada zostaje wydana, niezależnie od tego, jak wątek opuszcza blok.  
   
 > [!NOTE]
->  <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> <xref:System.Threading.Monitor> Instrukcje i są`SyncLock` implementowane za pomocą i, dlatego inne metody można używać w połączeniu z nimi w zsynchronizowanym regionie. `lock`  
+> <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> <xref:System.Threading.Monitor> Instrukcje i są`SyncLock` implementowane za pomocą i, dlatego inne metody można używać w połączeniu z nimi w zsynchronizowanym regionie. `lock`  
   
  Możesz również dekorować metodę z <xref:System.Runtime.CompilerServices.MethodImplAttribute> <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType>wartością, która ma taki sam skutek jak użycie <xref:System.Threading.Monitor> lub jeden z słów kluczowych kompilatora, aby zablokować całą treść metody.  
   
  <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>może służyć do przerwania wątku poza operacje blokowania, takie jak oczekiwanie na dostęp do synchronizowanego regionu kodu. **Wątek. Interrupt** jest również używany do przerwania wątków, takich jak <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
->  Nie blokuj typu — `typeof(MyType)` to znaczy, w C#, `GetType(MyType)` w Visual Basic lub `MyType::typeid` w programie C++ — w celu ochrony `static` metod (`Shared` metod w Visual Basic). Zamiast tego użyj prywatnego obiektu statycznego. Podobnie nie należy używać `this` programu w programie`Me` C# (w Visual Basic) do blokowania metod wystąpienia. Zamiast tego użyj obiektu prywatnego. Klasę lub wystąpienie można zablokować za pomocą kodu innego niż własny, potencjalnie powodującego zakleszczenie lub problemy z wydajnością.  
+> Nie blokuj typu — `typeof(MyType)` to znaczy, w C#, `GetType(MyType)` w Visual Basic lub `MyType::typeid` w programie C++ — w celu ochrony `static` metod (`Shared` metod w Visual Basic). Zamiast tego użyj prywatnego obiektu statycznego. Podobnie nie należy używać `this` programu w programie`Me` C# (w Visual Basic) do blokowania metod wystąpienia. Zamiast tego użyj obiektu prywatnego. Klasę lub wystąpienie można zablokować za pomocą kodu innego niż własny, potencjalnie powodującego zakleszczenie lub problemy z wydajnością.  
   
 ### <a name="compiler-support"></a>Obsługa kompilatora  
  Obie Visual Basic i C# obsługują słowo kluczowe języka, które <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> używa <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> i do blokowania obiektu. Visual Basic obsługuje instrukcję [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) ; C# obsługuje instrukcję [Lock](../../csharp/language-reference/keywords/lock-statement.md) .  

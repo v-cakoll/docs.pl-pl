@@ -7,8 +7,6 @@
       href: expressions.md
     - name: Składowe z wyrażeniem w treści
       href: expression-bodied-members.md
-    - name: Operatory
-      href: operators.md
     - name: Funkcje anonimowe
       items:
         - name: Omówienie

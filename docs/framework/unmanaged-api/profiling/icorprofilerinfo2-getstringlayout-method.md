@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4d4efa7cb3bc98c54be2889855c3b756fdbf2847
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63ad2532240c9f18a00421281fae0d111dbfaec5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782247"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963789"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout — Metoda
-Pobiera informacje o układ obiektu ciągu. Ta metoda jest przestarzała w programie .NET Framework 4 i został zastąpiony przez [icorprofilerinfo3::getstringlayout2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) metody.  
+Pobiera informacje o układzie obiektu ciągu. Ta metoda jest przestarzała w .NET Framework 4 i jest zastępowana przez metodę [ICorProfilerInfo3:: GetStringLayout2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,36 +38,36 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>Parametry  
  `pBufferLengthOffset`  
- [out] Wskaźnik do przesunięcia lokalizacji względem `ObjectID` wskaźnika, który przechowuje długość ciągu. Długość jest przechowywany jako `DWORD`.  
+ określoną Wskaźnik do przesunięcia lokalizacji względem `ObjectID` wskaźnika, który przechowuje długość ciągu. Długość jest przechowywana jako `DWORD`.  
   
 > [!NOTE]
->  Ten parametr zwraca długość ciągu, nie długość buforu. Długość buforu nie jest już dostępna.  
+> Ten parametr zwraca długość samego ciągu, a nie długość buforu. Długość buforu nie jest już dostępna.  
   
  `PStringLengthOffset`  
- [out] Wskaźnik do przesunięcia lokalizacji względem `ObjectID` wskaźnika, która przechowuje długość ciągu, sam. Długość jest przechowywany jako `DWORD`.  
+ określoną Wskaźnik do przesunięcia lokalizacji względem `ObjectID` wskaźnika, w którym jest przechowywana długość ciągu. Długość jest przechowywana jako `DWORD`.  
   
  `pBufferOffset`  
- [out] Wskaźnik do przesunięcia buforu względem `ObjectID` wskaźnika, który przechowuje ciąg znaków dwubajtowych.  
+ określoną Wskaźnik do przesunięcia buforu względem `ObjectID` wskaźnika, który przechowuje ciąg znaków dwubajtowych.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetStringLayout` Metoda pobiera przesunięcia względem `ObjectID` wskaźnika, lokalizacji, w których przechowywane są następujące:  
+ Metoda pobiera przesunięcia, względem `ObjectID` wskaźnika, lokalizacji, w których są przechowywane następujące elementy: `GetStringLayout`  
   
 - Długość buforu ciągu.  
   
-- Długość ciągu, sam.  
+- Długość samego ciągu.  
   
-- Bufor, który zawiera rzeczywiste ciąg znaków dwubajtowych.  
+- Bufor, który zawiera rzeczywisty ciąg znaków dwubajtowych.  
   
- Ciągi mogą być zakończony znakiem null.  
+ Ciągi mogą być zakończone wartością null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówki** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

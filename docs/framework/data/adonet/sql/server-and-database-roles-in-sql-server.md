@@ -2,64 +2,64 @@
 title: Serwer i role bazy danych w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97ad04b1d081e5635104bdadb2d1a54402ffcca2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645971"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961105"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Serwer i role bazy danych w programie SQL Server
-Wszystkie wersje programu SQL Server przy użyciu opartej na rolach zabezpieczeń, dzięki czemu można przypisać uprawnienia do roli lub grupy użytkowników, a nie do poszczególnych użytkowników. Stałej i ról stałej bazy danych mają stały zestaw uprawnień przypisanych do nich.  
+Wszystkie wersje SQL Server korzystają z zabezpieczeń opartych na rolach, które umożliwiają przypisywanie uprawnień do roli lub grupy użytkowników, a nie do poszczególnych użytkowników. Stałe role serwera i stałych baz danych mają przypisane do nich stały zestaw uprawnień.  
   
-## <a name="fixed-server-roles"></a>Role serwera stałej  
- Stałej role mają stały zestaw uprawnień i zakres całego serwera. Są one przeznaczone do użytku w administrowanie serwerem programu SQL Server i nie można zmienić uprawnienia przypisane do nich. Logowania można przypisać do ról stałej bez konta użytkownika w bazie danych.  
+## <a name="fixed-server-roles"></a>Stałe role serwera  
+ Stałe role serwera mają stały zestaw uprawnień i zakres całego serwera. Są one przeznaczone do użytku w administrowaniu SQL Server i nie można zmienić przypisanych do nich uprawnień. Nazwy logowania można przypisywać do stałych ról serwera bez konieczności używania konta użytkownika w bazie danych.  
   
 > [!IMPORTANT]
->  `sysadmin` Stałej roli serwera obejmuje wszystkie inne role i ma nieograniczonego zakresu uprawnień. Nie należy dodawać podmiotów zabezpieczeń do tej roli, chyba że są wysoce zaufanym. `sysadmin` Członkowie roli są nieodwołalnej uprawnienia administracyjne na wszystkich zasobów i serwera bazy danych.  
+> `sysadmin` Stała rola serwera obejmuje wszystkie pozostałe role i ma nieograniczony zakres. Nie należy dodawać podmiotów zabezpieczeń do tej roli, chyba że są one wysoce zaufane. `sysadmin`Członkowie roli mają nieodwołalne uprawnienia administracyjne do wszystkich baz danych i zasobów serwera.  
   
- Dodawanie użytkowników do ról stałej, zachować ostrożność. Na przykład `bulkadmin` rola pozwala użytkownikom wstawić zawartość dowolnego pliku lokalnego do tabeli, które mogłyby zagrozić integralności danych. Zobacz dokumentację SQL Server — książki Online szczegółowy wykaz stałej role i uprawnienia.  
+ Być wybiórcze w przypadku dodawania użytkowników do stałych ról serwera. Na przykład `bulkadmin` rola umożliwia użytkownikom wstawianie zawartości dowolnego pliku lokalnego do tabeli, co może zagrozić integralności danych. Zobacz dokumentację SQL Server Books Online, aby uzyskać pełną listę stałych ról i uprawnień serwera.  
   
-## <a name="fixed-database-roles"></a>Ustalone role bazy danych  
- Ról stałej bazy danych mają wstępnie zdefiniowany zestaw uprawnień, które są przeznaczone do umożliwiają łatwe zarządzanie grupy uprawnień. Elementy członkowskie `db_owner` roli mogą wykonywać wszystkie działania konfiguracji i konserwacji na bazie danych.  
+## <a name="fixed-database-roles"></a>Stałe role bazy danych  
+ Stałe role bazy danych mają wstępnie zdefiniowany zestaw uprawnień, które zostały zaprojektowane tak, aby umożliwić łatwe zarządzanie grupami uprawnień. `db_owner` Członkowie roli mogą wykonywać wszystkie działania związane z konfiguracją i konserwacją w bazie danych.  
   
- Aby uzyskać więcej informacji na temat programu SQL Server, wstępnie zdefiniowanych ról, zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji na temat SQL Server wstępnie zdefiniowanych ról, zobacz następujące zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Ról na poziomie serwera](/sql/relational-databases/security/authentication-access/server-level-roles)|W tym artykule opisano stałej ról i uprawnień skojarzonych z nimi w programie SQL Server.|  
-|[Ról na poziomie bazy danych](/sql/relational-databases/security/authentication-access/database-level-roles)|Opis ról stałej bazy danych i uprawnień skojarzonych z nimi|  
+|[Role na poziomie serwera](/sql/relational-databases/security/authentication-access/server-level-roles)|Zawiera opis stałych ról serwera i skojarzonych z nimi uprawnień w SQL Server.|  
+|[Role na poziomie bazy danych](/sql/relational-databases/security/authentication-access/database-level-roles)|Opisuje stałe role bazy danych i skojarzone z nimi uprawnienia|  
   
-## <a name="database-roles-and-users"></a>Role bazy danych i użytkowników  
- Nazwy logowania muszą być zamapowane do kont użytkowników bazy danych w celu pracy z obiektami bazy danych. Bazy danych można następnie można dodać użytkowników do ról bazy danych, dziedziczenie żadnych zestawów uprawnień skojarzonych z tymi rolami. Mogą być przyznawane wszystkie uprawnienia.  
+## <a name="database-roles-and-users"></a>Role bazy danych i użytkownicy  
+ Aby można było korzystać z obiektów bazy danych, nazwy logowania muszą być mapowane na konta użytkowników bazy danych. Użytkowników bazy danych można następnie dodać do ról bazy danych, dziedziczących wszystkie zestawy uprawnień skojarzone z tymi rolami. Wszystkie uprawnienia można udzielić.  
   
- Należy również rozważyć `public` roli `dbo` konta użytkownika i `guest` konta podczas projektowania zabezpieczeń dla aplikacji.  
+ Podczas projektowania zabezpieczeń aplikacji należy `public` również wziąć pod `dbo` uwagę rolę, konto `guest` użytkownika i konto.  
   
-### <a name="the-public-role"></a>Roli publicznej  
- `public` Roli znajduje się w każdej bazie danych, która obejmuje systemowych baz danych. Nie można usunąć, i nie można dodać lub usunąć użytkowników z niego. Uprawnienia przyznane `public` roli są dziedziczone przez wszystkich użytkowników i ról, ponieważ należą one do `public` roli domyślnie. Udziel `public` tylko uprawnienia, aby wszyscy użytkownicy mają.  
+### <a name="the-public-role"></a>Rola publiczna  
+ `public` Rola jest zawarta w każdej bazie danych, która obejmuje systemowe bazy danych. Nie można go porzucić i nie można dodawać ani usuwać użytkowników. Uprawnienia przyznane `public` roli są dziedziczone przez wszystkich innych użytkowników i ról, ponieważ należą `public` do roli domyślnie. Przyznaj `public` tylko uprawnienia, które mają mieć wszyscy użytkownicy.  
   
-### <a name="the-dbo-user-account"></a>Właściciela konta użytkownika  
- `dbo`, Lub właściciel bazy danych, to konto użytkownika, który ma też dorozumianych uprawnienia do wykonywania wszystkich działań w bazie danych. Elementy członkowskie `sysadmin` stałej roli serwera są automatycznie mapowane na `dbo`.  
+### <a name="the-dbo-user-account"></a>Konto użytkownika dbo  
+ `dbo`Właścicielem bazy danych jest konto użytkownika, które ma implikowane uprawnienia do wykonywania wszystkich działań w bazie danych. Członkowie stałej roli serwera są automatycznie zamapowane na `dbo`. `sysadmin`  
   
 > [!NOTE]
->  `dbo` jest także nazwa schematu, zgodnie z opisem w [własność i oddzielenie schematu użytkownika w programie SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
+> `dbo`jest również nazwą schematu, zgodnie z opisem w sekcji [własność i separacja w schemacie użytkownika w SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
   
- `dbo` Konto użytkownika jest często mylić z `db_owner` stałej roli bazy danych. Zakres `db_owner` jest bazą danych; zakres `sysadmin` jest całego serwera. Członkostwo w grupie `db_owner` rola przyznaje `dbo` uprawnienia użytkownika.  
+ Konto użytkownika jest często mylone `db_owner` ze stałą rolą bazy danych. `dbo` Zakresem `db_owner` jest baza danych; `sysadmin` zakresem jest cały serwer. Członkostwo w `db_owner` roli nie `dbo` przyznaje uprawnień użytkownika.  
   
-### <a name="the-guest-user-account"></a>Konto użytkownika gościa  
- Po użytkownik został uwierzytelniony i mogą logować się do wystąpienia programu SQL Server, oddzielne konto użytkownika musi istnieć w każdej bazie danych, użytkownik będzie musiał uzyskać dostęp. Wymagania konta użytkownika w każdej bazie danych uniemożliwia użytkownikom łączenie się z wystąpieniem programu SQL Server i uzyskiwania dostępu do wszystkich baz danych na serwerze. Istnienie `guest` konta użytkownika w bazie danych zmierzone to wymaganie, umożliwiając logowania bez dostępu do bazy danych konta użytkownika bazy danych.  
+### <a name="the-guest-user-account"></a>Konto użytkownika-gościa  
+ Gdy użytkownik zostanie uwierzytelniony i będzie mógł zalogować się do wystąpienia SQL Server, do każdej bazy danych musi istnieć osobne konto użytkownika, do którego użytkownik ma dostęp. Wymaganie konta użytkownika w każdej bazie danych uniemożliwia użytkownikom nawiązywanie połączenia z wystąpieniem SQL Server i uzyskiwanie dostępu do wszystkich baz danych na serwerze. Istnienie `guest` konta użytkownika w bazie danych spowoduje obejście tego wymagania przez zezwolenie na logowanie bez konta użytkownika bazy danych w celu uzyskania dostępu do bazy danych.  
   
- `guest` Konto jest kontem wbudowanego we wszystkich wersjach programu SQL Server. Domyślnie jest wyłączona w nowych baz danych. Jeśli jest włączone, można to wyłączyć odwołując jego uprawnienia CONNECT przez wykonanie instrukcji języka Transact-SQL ODWOŁAĆ POŁĄCZYĆ z GOŚCIA.  
+ To `guest` konto jest wbudowane we wszystkich wersjach SQL Server. Domyślnie jest on wyłączony w nowych bazach danych. Jeśli ta funkcja jest włączona, można ją wyłączyć przez odwołanie się do jej uprawnienia Połącz przez wykonanie instrukcji ODWOŁYWANia połączenia języka Transact-SQL z poziomu GOŚCIa.  
   
 > [!IMPORTANT]
->  Unikaj używania `guest` konta; wszystkie nazwy logowania bez uprawnień do bazy danych uzyskać uprawnienia bazy danych do tego konta. Jeśli musisz użyć `guest` konto, przyznać jej minimalny poziom uprawnień.  
+> Unikaj korzystania `guest` z konta; wszystkie identyfikatory logowania bez własnych uprawnień bazy danych uzyskują uprawnienia bazy danych przyznane dla tego konta. Jeśli musisz użyć `guest` konta, udziel im minimalnych uprawnień.  
   
- Aby uzyskać więcej informacji na temat nazw logowania, użytkownicy i role programu SQL Server zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji na temat SQL Server logowania, użytkowników i ról, zobacz następujące zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Rozpoczęcie korzystania z uprawnień aparatu bazy danych](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Zawiera łącza do tematów opisujących podmiotów zabezpieczeń, ról, poświadczenia, obiektów zabezpieczanych i uprawnienia.|  
-|[Podmiotów zabezpieczeń](/sql/relational-databases/security/authentication-access/principals-database-engine)|W tym artykule opisano podmiotów zabezpieczeń i zawiera łącza do tematów, które opisują role serwera i bazy danych.|  
+|[Wprowadzenie z uprawnieniami aparatu bazy danych](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Zawiera łącza do tematów opisujących podmioty zabezpieczeń, role, poświadczenia, zabezpieczenia i uprawnienia.|  
+|[Podmiotów](/sql/relational-databases/security/authentication-access/principals-database-engine)|Opisuje podmioty zabezpieczeń i zawiera linki do tematów, które opisują role serwera i bazy danych.|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -68,4 +68,4 @@ Wszystkie wersje programu SQL Server przy użyciu opartej na rolach zabezpiecze�
 - [Uwierzytelnianie w programie SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [Własność i oddzielenie schematu użytkownika w programie SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
 - [Autoryzacja i uprawnienia w programie SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

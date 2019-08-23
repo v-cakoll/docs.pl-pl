@@ -20,17 +20,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aaa0e83de1b1c3e2ce436de04a36addef16c057
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e1104a98afb32dea687949e9c723124014c1e62
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758518"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925315"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess — Funkcja
 Zamyka bieżący proces niezarządzany.  
   
- Ta funkcja jest przestarzała w programie .NET Framework 4. Użyj [iclrmetahost::exitprocess —](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) metody zamiast tego.  
+ Ta funkcja jest przestarzała w .NET Framework 4. Zamiast tego użyj metody [ICLRMetaHost:: ExitProcess —](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,16 +47,16 @@ void STDMETHODCALLTYPE CorExitProcess (
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Począwszy od programu .NET Framework 4, `CorExitProcess` kończy działanie każdej wprowadzenie środowiska uruchomieniowego w procesie, a nie tylko środowiska uruchomieniowego, powiązana starszych interfejsów API.  
+> Począwszy od .NET Framework 4, `CorExitProcess` zamyka wszystkie uruchomione środowisko uruchomieniowe w procesie, a nie tylko środowisko uruchomieniowe, do którego zostały powiązane starsze interfejsy API.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówki** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteki** MSCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

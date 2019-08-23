@@ -9,60 +9,60 @@ dev_langs:
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 451893cf09b0d1ebdfb33d0020376aa35240b6d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8c8e1b0d9a79ff22f3194e86cd580f3a7e199b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669189"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962026"
 ---
 # <a name="building-xml-schemas"></a>Tworzenie schematów XML
-Klasy w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw mapowania do struktur, zdefiniowane w zaleceniem schematu XML World Wide Web Consortium (W3C) i może służyć do tworzenia XML schematów w pamięci.  
+Klasy w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw są mapowane na struktury zdefiniowane w organizacja World Wide Web Consortium (W3C) zalecenia schematu XML i mogą być używane do kompilowania schematów XML w pamięci.  
   
-## <a name="building-an-xml-schema"></a>Tworzenie schematu XML  
- W przykładach kodu, które należy wykonać interfejs API SOM jest używany do tworzenia klienta XML schematu w pamięci.  
+## <a name="building-an-xml-schema"></a>Kompilowanie schematu XML  
+ W poniższym przykładzie kodu model API SOM jest używany do kompilowania schematu XML klienta w pamięci.  
   
-### <a name="creating-element-and-attributes"></a>Tworzenie elementów i atrybutów  
- Przykłady kodu kompilacji klienta schematu od dołu do góry, tworzenie podrzędnych elementów, atrybutów i ich odpowiednie typy najpierw, a następnie elementów najwyższego poziomu.  
+### <a name="creating-element-and-attributes"></a>Tworzenie elementu i atrybutów  
+ Przykłady kodu kompilują schemat klienta od dołu, tworzą elementy podrzędne, atrybuty i odpowiadające im typy najpierw, a następnie elementy najwyższego poziomu.  
   
- W poniższym przykładzie kodu `FirstName` i `LastName` elementów, jak również `CustomerId` atrybut schematu klienta są tworzone przy użyciu <xref:System.Xml.Schema.XmlSchemaElement> i <xref:System.Xml.Schema.XmlSchemaAttribute> klasy SOM. Z wyjątkiem <xref:System.Xml.Schema.XmlSchemaElement.Name%2A> właściwości <xref:System.Xml.Schema.XmlSchemaElement> i <xref:System.Xml.Schema.XmlSchemaAttribute> klas, które odnoszą się do atrybutu "name" `<xs:element />` i `<xs:attribute />` elementów schematu XML, a wszystkie inne atrybuty dozwolona przez schemat (`defaultValue`, `fixedValue`, `form`i tak dalej) mają odpowiednie właściwości w <xref:System.Xml.Schema.XmlSchemaElement> i <xref:System.Xml.Schema.XmlSchemaAttribute> klasy.  
+ `FirstName` W poniższym przykładzie kodu elementy i `CustomerId` , a `LastName` także atrybut schematu klienta są tworzone przy użyciu <xref:System.Xml.Schema.XmlSchemaElement> klas i <xref:System.Xml.Schema.XmlSchemaAttribute> modelu Som. `<xs:attribute />` `<xs:element />` Oprócz właściwości i<xref:System.Xml.Schema.XmlSchemaElement> klasy<xref:System.Xml.Schema.XmlSchemaAttribute> , które odpowiadają atrybutowi "name" elementów i w schemacie XML, wszystkie inne atrybuty dozwolone przez schemat ( <xref:System.Xml.Schema.XmlSchemaElement.Name%2A> `defaultValue` <xref:System.Xml.Schema.XmlSchemaElement> <xref:System.Xml.Schema.XmlSchemaAttribute> , `fixedValue`, ,itakdalej)mająodpowiedniewłaściwości`form`w klasach i.  
   
  [!code-cpp[XmlSchemaCreateExample#2](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#2)]
  [!code-csharp[XmlSchemaCreateExample#2](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaCreateExample/CS/XmlSchemaCreateExample.cs#2)]
  [!code-vb[XmlSchemaCreateExample#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCreateExample/VB/XmlSchemaCreateExample.vb#2)]  
   
-### <a name="creating-schema-types"></a>Tworzenie typów schematu  
- Zawartość elementów i atrybutów jest definiowany przez ich typy. Do tworzenia elementów i atrybutów, których typy są jednym z typów wbudowanych schematu <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> właściwość <xref:System.Xml.Schema.XmlSchemaElement> lub <xref:System.Xml.Schema.XmlSchemaAttribute> klasy są konfigurowane przy użyciu odpowiedniego kwalifikowana nazwa typu wbudowanego przy użyciu <xref:System.Xml.XmlQualifiedName> klasy. Aby utworzyć typ zdefiniowany przez użytkownika, dla elementów i atrybutów, nowy typ proste lub złożone jest tworzony przy użyciu <xref:System.Xml.Schema.XmlSchemaSimpleType> lub <xref:System.Xml.Schema.XmlSchemaComplexType> klasy.  
+### <a name="creating-schema-types"></a>Tworzenie typów schematów  
+ Zawartość elementów i atrybutów jest definiowana przez ich typy. Aby utworzyć elementy i atrybuty, których typy są jednym z wbudowanych typów schematu <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> , właściwość <xref:System.Xml.Schema.XmlSchemaElement> lub <xref:System.Xml.Schema.XmlSchemaAttribute> klasy są ustawiane za pomocą odpowiedniej kwalifikowanej nazwy typu wbudowanego przy użyciu <xref:System.Xml.XmlQualifiedName> klasy. Aby utworzyć typ zdefiniowany przez użytkownika dla elementów i atrybutów, nowy typ prosty lub złożony jest tworzony przy użyciu <xref:System.Xml.Schema.XmlSchemaSimpleType> klasy or. <xref:System.Xml.Schema.XmlSchemaComplexType>  
   
 > [!NOTE]
->  Do tworzenia nienazwane prostych lub złożonych typów, które są anonimowe elementy podrzędne elementu lub atrybutu (dotyczy tylko proste typy dla atrybutów), ustaw <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> właściwość <xref:System.Xml.Schema.XmlSchemaElement> lub <xref:System.Xml.Schema.XmlSchemaAttribute> klasy bez nazwy typów prostych lub złożonych, zamiast <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> właściwość <xref:System.Xml.Schema.XmlSchemaElement> lub <xref:System.Xml.Schema.XmlSchemaAttribute> klasy.  
+> Aby utworzyć nienazwane proste lub złożone typy, które są anonimowymi elementami podrzędnymi elementu lub atrybutu (tylko proste typy są stosowane dla atrybutów) <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> , należy ustawić <xref:System.Xml.Schema.XmlSchemaElement> Właściwość <xref:System.Xml.Schema.XmlSchemaAttribute> lub klasy do typu prostego lub złożonego bez nazwy. <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> zamiast właściwości<xref:System.Xml.Schema.XmlSchemaElement> klasy or <xref:System.Xml.Schema.XmlSchemaAttribute> .  
   
- Schematów XML Zezwalaj na obu anonimowych i nazwanych proste typy pochodzić przez ograniczenia z innych typów prostych (wbudowane lub zdefiniowanych przez użytkownika) lub skonstruowany jako listy lub Unii innych typów prostych. <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> Klasa jest używana do tworzenia prostego typu przez ograniczenie możliwości wykonywania wbudowanej `xs:string` typu. Można również użyć <xref:System.Xml.Schema.XmlSchemaSimpleTypeList> lub <xref:System.Xml.Schema.XmlSchemaSimpleTypeUnion> klasy, aby utworzyć typy listy lub Unii. <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A?displayProperty=nameWithType> Właściwość wskazuje, czy jest ograniczenie prostego typu, listy lub Unii.  
+ Schematy XML zezwalają na wyprowadzanie anonimowych i nazwanych typów prostych przez ograniczenie z innych typów prostych (wbudowane lub zdefiniowane przez użytkownika) lub skonstruowane jako lista lub związek innych typów prostych. Klasa jest używana do tworzenia typu prostego przez ograniczenie wbudowanego `xs:string` typu. <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> Można również użyć <xref:System.Xml.Schema.XmlSchemaSimpleTypeList> klas lub <xref:System.Xml.Schema.XmlSchemaSimpleTypeUnion> do tworzenia typów list lub Unii. <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A?displayProperty=nameWithType> Właściwość określa, czy jest to proste ograniczenie typu, lista lub Unia.  
   
- W poniższym przykładzie kodu `FirstName` typ elementu to typ wbudowany `xs:string`, `LastName` typ elementu jest nazwane prosty typ, który jest ograniczeniem typu wbudowanego `xs:string`, za pomocą `MaxLength` wartość aspektu 20, a `CustomerId` typ atrybutu jest typu wbudowanego `xs:positiveInteger`. `Customer` Element jest anonimowy typ złożony, w których cząstką jest sekwencja z `FirstName` i `LastName` elementy i atrybuty, których zawiera `CustomerId` atrybutu.  
+ `FirstName` W poniższym przykładzie kodu typ elementu jest typem wbudowanym `LastName` `xs:string`, typ elementu jest nazwanym typem prostym, który jest ograniczeniem typu `xs:string`wbudowanego, z `MaxLength` wartością aspektu 20 i Typ atrybutu jest typem wbudowanym `xs:positiveInteger`. `CustomerId` Element to anonimowy typ złożony, którego cząstka jest sekwencją `FirstName` elementów i `LastName` i których atrybuty zawiera `CustomerId` atrybut. `Customer`  
   
 > [!NOTE]
->  Można również użyć <xref:System.Xml.Schema.XmlSchemaChoice> lub <xref:System.Xml.Schema.XmlSchemaAll> klasy jako cząstek typu złożonego do replikowania `<xs:choice />` lub `<xs:all />` semantyki.  
+> Można również użyć <xref:System.Xml.Schema.XmlSchemaChoice> klas lub <xref:System.Xml.Schema.XmlSchemaAll> jako cząsteczek typu złożonego do replikowania `<xs:choice />` lub `<xs:all />` semantyki.  
   
  [!code-cpp[XmlSchemaCreateExample#3](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#3)]
  [!code-csharp[XmlSchemaCreateExample#3](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaCreateExample/CS/XmlSchemaCreateExample.cs#3)]
  [!code-vb[XmlSchemaCreateExample#3](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCreateExample/VB/XmlSchemaCreateExample.vb#3)]  
   
-### <a name="creating-and-compiling-schemas"></a>Tworzenie i kompilowania schematów  
- W tym punkcie, elementy podrzędne i atrybuty, jako odpowiednie typy i najwyższego poziomu `Customer` element zostały utworzone przy użyciu interfejsu API SOM w pamięci. W poniższym przykładzie kodu elementu schematu jest tworzony przy użyciu <xref:System.Xml.Schema.XmlSchema> klasy, elementów najwyższego poziomu i typy są dodawane do niego przy użyciu <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> właściwości i pełne schematu jest skompilowana przy użyciu <xref:System.Xml.Schema.XmlSchemaSet> klasy i zapisywane w Konsola.  
+### <a name="creating-and-compiling-schemas"></a>Tworzenie i kompilowanie schematów  
+ W tym momencie elementy podrzędne i atrybuty, ich odpowiednie typy i element najwyższego poziomu `Customer` zostały utworzone w pamięci za pomocą interfejsu API modelu Som. W poniższym przykładzie kodu element schematu jest tworzony przy użyciu <xref:System.Xml.Schema.XmlSchema> klasy, elementy najwyższego poziomu i typy są dodawane do niego <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> przy użyciu właściwości, a kompletny <xref:System.Xml.Schema.XmlSchemaSet> schemat jest kompilowany przy użyciu klasy i zapisywana w konsoli.  
   
  [!code-cpp[XmlSchemaCreateExample#4](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#4)]
  [!code-csharp[XmlSchemaCreateExample#4](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaCreateExample/CS/XmlSchemaCreateExample.cs#4)]
  [!code-vb[XmlSchemaCreateExample#4](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCreateExample/VB/XmlSchemaCreateExample.vb#4)]  
   
- <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A?displayProperty=nameWithType> Metoda sprawdza poprawność schematu klienta względem reguły dla schematu XML i udostępnia właściwości po schema kompilacji.  
+ <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A?displayProperty=nameWithType> Metoda sprawdza poprawność schematu klienta względem reguł schematu XML i umożliwia dostęp do właściwości kompilacji po schemacie.  
   
 > [!NOTE]
->  Wszystkie właściwości po schema kompilacji w interfejsie API SOM różnią się od odniesienie-schema-weryfikacji — zestaw informacji.  
+> Wszystkie właściwości kompilacji po schemacie w interfejsie API modelu SOM różnią się w zależności od posprawdzonych.  
   
- <xref:System.Xml.Schema.ValidationEventHandler> Dodane do <xref:System.Xml.Schema.XmlSchemaSet> jest delegat, który wywołuje metodę wywołania zwrotnego `ValidationCallback` do obsługi schematu Walidacja ostrzeżeń i błędów.  
+ Dodanie do obiektu `ValidationCallback` jest delegatem, który wywołuje metodę wywołania zwrotnego w celu obsługi ostrzeżeń i błędów walidacji schematu. <xref:System.Xml.Schema.XmlSchemaSet> <xref:System.Xml.Schema.ValidationEventHandler>  
   
- Oto pełny przykład kodu i schematu klientów wyświetlony w konsoli.  
+ Poniżej znajduje się kompletny przykład kodu i schemat klienta zapisany w konsoli programu.  
   
  [!code-cpp[XmlSchemaCreateExample#1](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#1)]
  [!code-csharp[XmlSchemaCreateExample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaCreateExample/CS/XmlSchemaCreateExample.cs#1)]

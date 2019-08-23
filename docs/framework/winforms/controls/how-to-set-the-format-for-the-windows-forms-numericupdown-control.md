@@ -9,19 +9,19 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], formatting values
 - up-down controls [Windows Forms], formatting numeric values
 ms.assetid: fa7c5557-6bfb-45b2-975d-8887b23b0ba0
-ms.openlocfilehash: a5d8de6db8a0d6f62a082fc381a7b855eb948514
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6db7a1b2aeb7282c3ac827cb8319706ed348fc22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630611"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949160"
 ---
 # <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>Instrukcje: ustawienie formatu dla kontrolki NumericUpDown formularzy systemu Windows
-Można skonfigurować sposób wyświetlania wartości w formularzach Windows Forms <xref:System.Windows.Forms.NumericUpDown> kontroli. <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> Właściwość określa, ile pojawiają się po punkcie dziesiętnym; wartość domyślna to 0. <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> Właściwość określa, czy separator zostanie wstawione między co trzy cyfry dziesiętne; wartość domyślna to `false`. Formant może wyświetlić wartości w formacie szesnastkowym, zamiast formatu dziesiętnego, jeśli <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> właściwość jest ustawiona na `true`; wartość domyślna to `false`.  
+Można skonfigurować sposób wyświetlania wartości w kontrolce Windows Forms <xref:System.Windows.Forms.NumericUpDown> . Właściwość <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> określa, ile liczb pojawia się po przecinku dziesiętnym; wartość domyślna to 0. Właściwość <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> określa, czy separator zostanie wstawiony między każdą trzema cyframi dziesiętnymi; wartość domyślna `false`to. Kontrolka może wyświetlać wartości w formacie szesnastkowym, a nie dziesiętnym <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> , jeśli właściwość jest `true`ustawiona na; wartość `false`domyślna to.  
   
-### <a name="to-format-the-numeric-value"></a>Aby sformatować wartość numeryczną  
+### <a name="to-format-the-numeric-value"></a>Aby sformatować wartość liczbową  
   
-- Wyświetlanie wartości dziesiętnej, ustawiając <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> właściwości do liczby całkowitej, a ustawienie <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> właściwości `true` lub `false`.  
+- Wyświetl wartość dziesiętną <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> , ustawiając właściwość na liczbę całkowitą i <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> ustawiając właściwość na `true` lub `false`.  
   
     ```vb  
     NumericUpDown1.DecimalPlaces = 2  
@@ -40,7 +40,7 @@ Można skonfigurować sposób wyświetlania wartości w formularzach Windows For
   
      —lub—  
   
-- Wyświetlanie wartości szesnastkowych, ustawiając <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> właściwość `true`.  
+- Wyświetl wartość szesnastkową, ustawiając <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> właściwość na. `true`  
   
     ```vb  
     NumericUpDown1.Hexadecimal = True  
@@ -55,7 +55,7 @@ Można skonfigurować sposób wyświetlania wartości w formularzach Windows For
     ```  
   
     > [!NOTE]
-    >  Nawet jeśli wartość jest wyświetlana w postaci szesnastkowej, wszystkie testy wykonywania na <xref:System.Windows.Forms.NumericUpDown.Value%2A> właściwość testowania wartości dziesiętnej.  
+    > Nawet jeśli wartość jest wyświetlana w postaci szesnastkowej, wszystkie testy wykonywane na <xref:System.Windows.Forms.NumericUpDown.Value%2A> właściwości będą testowanie wartości dziesiętnej.  
   
 ## <a name="see-also"></a>Zobacz także
 

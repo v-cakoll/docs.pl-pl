@@ -1,5 +1,5 @@
 ---
-title: Metoda ICorProfilerInfo7::GetInMemorySymbolsLength
+title: 'ICorProfilerInfo7:: GetInMemorySymbolsLength, Metoda'
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo7.GetInMemorySymbolsLength
@@ -11,15 +11,15 @@ api_type:
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03c70b97e7af9fdc76c579c5940e2436232f6bc2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 157b0e215f8afa58cccb3d54a65baa9c307ba966
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748651"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955426"
 ---
-# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>Metoda ICorProfilerInfo7::GetInMemorySymbolsLength
-[Obsługiwane w programie .NET Framework 4.6.1 i nowszych wersjach]  
+# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7:: GetInMemorySymbolsLength, Metoda
+[Obsługiwane w .NET Framework 4.6.1 i nowszych wersjach]  
   
  Zwraca długość strumienia symboli w pamięci.  
   
@@ -34,30 +34,30 @@ HRESULT GetInMemorySymbolsLength(
   
 ## <a name="parameters"></a>Parametry  
  `moduleId`  
- [in] Identyfikator modułu, zawierająca strumień w pamięci.  
+ podczas Identyfikator modułu zawierającego strumień znajdujący się w pamięci.  
   
  pCountSymbolBytes  
- [out] Wskaźnik do `DWORD` wartość, gdy metoda zwróci wartość, zawiera długość strumienia w bajtach.  
+ określoną Wskaźnik do `DWORD` wartości, która, gdy zwraca metodę, zawiera długość strumienia w bajtach.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Metoda ta zwraca `S_OK` Jeśli długość strumienia pamięci można ustalić, nawet jeśli ma wartość zero (0).  
+ Metoda zwraca `S_OK` , jeśli długość strumienia pamięci można ustalić, nawet jeśli jest równa zero (0).  
   
- Metoda ta zwraca `CORPROF_E_MODULE_IS_DYNAMIC` Jeśli metoda został utworzony przy użyciu <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
+ Metoda zwraca `CORPROF_E_MODULE_IS_DYNAMIC` , jeśli metoda została utworzona przy użyciu <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli moduł zawiera symbole w pamięci, długość strumienia jest umieszczany w `pCountSymbolBytes`. Jeśli moduł nie ma symboli w pamięci, `*pCountSymbolBytes = 0`.  
+ Jeśli moduł zawiera symbole w pamięci, długość strumienia jest umieszczana w `pCountSymbolBytes`. Jeśli moduł nie zawiera symboli w pamięci, `*pCountSymbolBytes = 0`.  
   
 > [!NOTE]
->  Bieżąca implementacja nie obsługuje Reflection.Emit. Jeśli moduł został utworzony przy użyciu Reflection.Emit, metoda zwraca `CORPROF_E_MODULE_IS_DYNAMIC`.  
+> Bieżąca implementacja nie obsługuje odbicia. emisji. Jeśli moduł został utworzony przy użyciu odbicia. Emituj, metoda zwraca `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówki** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

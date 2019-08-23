@@ -1,18 +1,18 @@
 ---
-title: ICorDebugSymbolProvider::GetStaticFieldSymbols Method
+title: 'ICorDebugSymbolProvider:: GetStaticFieldSymbols, Metoda'
 ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9379a335130242918f6fe200eeda5e4c262fd020
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bd3442adf58250a423438666ec1092bab61958b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771312"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955534"
 ---
-# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider::GetStaticFieldSymbols Method
-Pobiera symbole pole statyczne, które odpowiadają podpisu elementu typespec.  
+# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider:: GetStaticFieldSymbols, Metoda
+Pobiera symbole pól statycznych, które odpowiadają sygnaturze elementu TypeSpec.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -28,33 +28,33 @@ HRESULT GetStaticFieldSymbols(
   
 ## <a name="parameters"></a>Parametry  
  `cbSignature`  
- [in] Liczba bajtów w `typeSig` tablicy.  
+ podczas Liczba bajtów w `typeSig` tablicy.  
   
  `typeSig`  
- [in] Tablica bajtów, która zawiera `typespec` podpisu.  
+ podczas Tablica bajtów, która zawiera `typespec` sygnaturę.  
   
  `cRequestedSymbols`  
- [in] Liczba symboli żądanie.  
+ podczas Żądana liczba symboli.  
   
  `pcFetchedSymbols`  
- [out] Wskaźnik do liczby symboli pobierane przez metodę.  
+ określoną Wskaźnik do liczby symboli pobranych przez metodę.  
   
  `pSymbols`  
- [out] Wskaźnik do [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) tablicy, który zawiera symbole żądane pole statyczne.  
+ określoną Wskaźnik do tablicy [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) , która zawiera żądane symbole pól statycznych.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

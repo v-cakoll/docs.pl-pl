@@ -9,34 +9,34 @@ helpviewer_keywords:
 - Image control [WPF]
 - rendering images [WPF]
 ms.assetid: 5b92e74b-1b56-4756-ac64-d5e9e08d9854
-ms.openlocfilehash: 967159894e25721bdf380f851712e91d76088f87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 164eee7c10d9e388c6e6ee695af479ca2d6974b3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696281"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958326"
 ---
 # <a name="how-to-use-the-image-element"></a>Instrukcje: Używanie elementu obrazu
-W tym przykładzie pokazano, jak dołączać obrazy do aplikacji przy użyciu <xref:System.Windows.Controls.Image> elementu.  
+Ten przykład pokazuje, <xref:System.Windows.Controls.Image> jak dołączać obrazy w aplikacji za pomocą elementu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak by renderować obraz 200 pikseli szerokości. W tym [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] przykład składni atrybutów i składnia znacznika właściwości, które są używane do definiowania obrazu. Aby uzyskać więcej informacji na temat składni atrybutów i składnia właściwości, zobacz [Przegląd właściwości zależności](../advanced/dependency-properties-overview.md). A <xref:System.Windows.Media.Imaging.BitmapImage> służy do definiowania danych źródłowych obrazu i jest jawnie zdefiniowany na przykład składni tagu właściwości. Ponadto <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> z <xref:System.Windows.Media.Imaging.BitmapImage> jest ustawiona na taką samą szerokość jako <xref:System.Windows.FrameworkElement.Width%2A> z <xref:System.Windows.Controls.Image>. Odbywa się, aby upewnić się, że minimalna ilość pamięci jest używany, renderowanie obrazu.  
+ Poniższy przykład pokazuje, jak renderować obraz 200 pikseli szerokości. W tym [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] przykładzie zarówno składnia atrybutu, jak i składnia tagów właściwości są używane do definiowania obrazu. Aby uzyskać więcej informacji na temat składni atrybutów i składni właściwości, zobacz [Omówienie właściwości zależności](../advanced/dependency-properties-overview.md). A <xref:System.Windows.Media.Imaging.BitmapImage> służy do definiowania danych źródłowych obrazu i jest jawnie zdefiniowany dla przykładu składni tagów właściwości. Ponadto <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.Controls.Image>ma ustawioną taką samą szerokość jak w. <xref:System.Windows.Media.Imaging.BitmapImage> W tym celu należy się upewnić, że minimalna ilość pamięci jest używana do renderowania obrazu.  
   
 > [!NOTE]
->  Ogólnie rzecz biorąc, jeśli chcesz określić rozmiar renderowanym obrazie, określ tylko <xref:System.Windows.FrameworkElement.Width%2A> lub <xref:System.Windows.FrameworkElement.Height%2A> , ale nie oba. Jeśli określono tylko jeden, jest zachowywany współczynnik proporcji obrazu. W przeciwnym razie obrazu nieoczekiwanie może występować w rozproszonym lub zawijać. Do kontrolowania obrazu użytkownika rozciąganie zachowanie, użyj <xref:System.Windows.Controls.Image.Stretch%2A> i <xref:System.Windows.Controls.Image.StretchDirection%2A> właściwości.  
+> Ogólnie rzecz biorąc, jeśli chcesz określić rozmiar renderowanego obrazu, określ tylko <xref:System.Windows.FrameworkElement.Width%2A> lub, <xref:System.Windows.FrameworkElement.Height%2A> ale nie oba. Jeśli określisz tylko jeden, współczynnik proporcji obrazu zostanie zachowany. W przeciwnym razie obraz może zostać nieoczekiwanie wyświetlony lub wyciągnięty. Aby kontrolować zachowanie rozciągania obrazu, użyj <xref:System.Windows.Controls.Image.Stretch%2A> właściwości i. <xref:System.Windows.Controls.Image.StretchDirection%2A>  
   
 > [!NOTE]
->  Po określeniu rozmiaru obrazu z oboma <xref:System.Windows.FrameworkElement.Width%2A> lub <xref:System.Windows.FrameworkElement.Height%2A>, należy także ustawić jedną <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> lub <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelHeight%2A> do tego samego odpowiedniego rozmiaru.  
+> <xref:System.Windows.FrameworkElement.Width%2A> Po określeniu rozmiaru obrazu przy użyciu albo lub <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelHeight%2A> należy również ustawić albo <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> na ten sam rozmiar.  
   
- <xref:System.Windows.Controls.Image.Stretch%2A> Właściwość określa, jak źródło obrazu jest rozciągany tak, aby wypełnić elementu obrazu. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Media.Stretch> wyliczenia.  
+ <xref:System.Windows.Controls.Image.Stretch%2A> Właściwość określa, w jaki sposób źródło obrazu jest rozciągane w celu wypełnienia elementu obrazu. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Media.Stretch> Wyliczenie.  
   
  [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak renderować obraz 200 pikseli przy użyciu kodu.  
+ Poniższy przykład pokazuje, jak renderować obraz 200 pikseli szerokości przy użyciu kodu.  
   
 > [!NOTE]
->  Ustawienie <xref:System.Windows.Media.Imaging.BitmapImage> właściwości musi odbywać się w obrębie <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> i <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> bloku.  
+> Ustawienia <xref:System.Windows.Media.Imaging.BitmapImage> właściwości muszą być wykonywane <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> w bloku i <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> .  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  

@@ -2,22 +2,22 @@
 title: <soapProcessing>
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 0bedcec1a87f8384a89f5e5931c18ccebe87f07e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 678b1f71ac15d3ad30df28cec5abbe403fb08c95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758018"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937050"
 ---
-# <a name="soapprocessing"></a>\<soapProcessing>
+# <a name="soapprocessing"></a>\<soapProcessing >
 
-Definiuje zachowanie punktu końcowego klienta, które są używane do organizowania wiadomości między typami inne powiązanie i wersje komunikatów.
+Definiuje zachowanie punktu końcowego klienta używane do organizowania komunikatów między różnymi typami powiązań i wersjami komunikatów.
 
-**\<system.ServiceModel>**   
-&nbsp;&nbsp;**\<behaviors>**   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<endpointBehaviors>**   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<behavior>**   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<soapProcessing>**
+**\<system.ServiceModel>**    
+&nbsp;&nbsp; **\<> zachowań**   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<endpointBehaviors>**    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> zachowania**   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<soapProcessing >**
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,7 +33,7 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
   
 |                   | Opis |
 | ----------------- | ----------- |
-| `processMessages` | Wartość logiczna określająca, czy komunikaty powinny być wprowadzane między wersjami komunikatu protokołu SOAP. |
+| `processMessages` | Wartość logiczna określająca, czy komunikaty powinny być organizowane między wersjami komunikatów SOAP. |
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -43,14 +43,14 @@ Brak
 
 |     | Opis |
 | --- | ----------- |
-| [**\<behavior>**](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) | Określa zachowanie punktu końcowego. |
+| [ **\<> zachowania**](behavior-of-endpointbehaviors.md) | Określa zachowanie punktu końcowego. |
 
 ## <a name="remarks"></a>Uwagi
 
-Przetwarzanie protokołu SOAP jest proces, w której wiadomości są konwertowane między wersjami wiadomości.
+Przetwarzanie protokołu SOAP to proces, w którym komunikaty są konwertowane między wersjami komunikatów.
 
-Usługa routingu Windows Communication Foundation (WCF) można przekonwertować komunikaty z jednego protokołu do innego. Jeśli wersje komunikatów przychodzących i wychodzących są różne, zostanie utworzony nowy komunikat poprawnej wersji. Przetwarzanie komunikatów z jednego <xref:System.ServiceModel.Channels.MessageVersion> do innego odbywa się przez utworzenie nowych wiadomości WCF, która zawiera część treści i odpowiednie nagłówki z przychodzących wiadomości WCF. Nagłówki specyficznych dla adresowania lub które są zrozumiałe na poziomie routera, nie są używane podczas tworzenia nowej wiadomości WCF, ponieważ te nagłówki są w innej wersji (w przypadku adresowania nagłówków) lub są przetwarzane jako część Komunikacja między klientem i router.
+Usługa routingu Windows Communication Foundation (WCF) umożliwia konwertowanie komunikatów z jednego protokołu na inny. Jeśli wersje wiadomości przychodzących i wychodzących są różne, zostanie utworzona nowa wiadomość o prawidłowej wersji. Przetwarzanie komunikatów z jednego <xref:System.ServiceModel.Channels.MessageVersion> do drugiego jest realizowane przez konstruowanie nowej wiadomości WCF zawierającej część treści i odpowiednich nagłówków z przychodzącego komunikatu WCF. Nagłówki, które są specyficzne dla adresowania lub które są zrozumiałe na poziomie routera, nie są używane podczas konstruowania nowej wiadomości WCF, ponieważ te nagłówki są w innej wersji (w przypadku nagłówków adresowania) lub zostały przetworzone w ramach Komunikacja między klientem a routerem.
 
-Czy nagłówek jest umieszczany w wiadomości wychodzących jest określany przez Określa, czy została ona oznaczona jako rozumieć przeszła przychodzący warstwy kanału. Nagłówki, które nie są zrozumiałe (takie jak niestandardowe nagłówki) nie są usuwane, a więc przekazać za pośrednictwem usługi routingu, są kopiowane do wiadomości wychodzących. Treść komunikatu jest kopiowane do wiadomości wychodzących. Komunikat zostanie przesłany limit ruchu wychodzącego kanału, w tym momencie wszystkie nagłówki i innych danych koperty określone na komunikat zostanie utworzona i dodać protokół/transportu.
+Określa, czy nagłówek jest umieszczony w wiadomości wychodzącej, czy jest oznaczony jako zrozumiały dla warstwy kanału przychodzącego. Nagłówki, które nie są zrozumiałe (takie jak nagłówki niestandardowe), nie są usuwane i dlatego są przekazywane przez usługę routingu przez kopiowaną do wiadomości wychodzącej. Treść wiadomości jest kopiowana do wiadomości wychodzącej. Komunikat jest następnie wysyłany do kanału wychodzącego, w którym wskazuje, że wszystkie nagłówki i inne dane koperty specyficzne dla tego protokołu komunikacyjnego/transportu zostaną utworzone i dodane.
 
-Tych kroków przetwarzania ma miejsce, gdy określona jest zachowanie przetwarzania protokołu SOAP. To [ \<soapProcessingExtension >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md) zachowanie jest zachowanie punktu końcowego, która jest stosowana do wszystkich punktów końcowych klienta (wychodzące), podczas uruchamiania usługi routingu. Domyślnie [ \<routingu >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) zachowanie tworzy i dołącza nowe [ \<soapProcessingExtension >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md) zachowania przy użyciu `processMessages` równa `true` dla każdego punkt końcowy klienta. Jeśli protokół, który usługa routingu nie zrozumieć, lub chcesz zastąpić domyślne zachowanie przetwarzania, możesz wyłączyć przetwarzania dla całej usługi routingu lub tylko dla konkretnego punktów końcowych protokołu SOAP.  Aby wyłączyć przetwarzania dla całej usługi routingu dla wszystkich punktów końcowych protokołu SOAP, ustaw `soapProcessing` atrybutu [ \<routingu >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) zachowanie `false`. Aby wyłączyć funkcję przetwarzania dla danego punktu końcowego protokołu SOAP, użyj tego zachowania i ustaw jego `processMessages` atrybutu `false`, następnie dołączyć to zachowanie punktu końcowego nie ma domyślnego przetwarzania kodu w.  Gdy [ \<routingu >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) zachowanie konfiguruje usługę routingu, zostanie pominięta, ponowne zastosowanie zachowanie punktu końcowego, ponieważ już istnieje.
+Takie kroki przetwarzania są wykonywane, gdy zostanie określone zachowanie przetwarzania protokołu SOAP. [ To\<soapProcessingExtension >](soapprocessing.md) jest zachowaniem punktu końcowego, który jest stosowany do wszystkich punktów końcowych klienta (wychodzących) podczas uruchamiania usługi routingu. Domyślnie zachowanie `processMessages` > [ routingutworzyidołączanowezachowaniesoapProcessingExtension>zustawieniemdlakażdegopunktukońcowegoklienta.\<](routing-of-servicebehavior.md) [ \<](soapprocessing.md) `true` Jeśli masz protokół, którego usługa routingu nie rozpoznaje, lub chcesz zastąpić domyślne zachowanie podczas przetwarzania, możesz wyłączyć przetwarzanie protokołu SOAP dla całej usługi routingu lub tylko dla określonych punktów końcowych.  Aby wyłączyć przetwarzanie protokołu SOAP dla całej usługi routingu we wszystkich punktach końcowych `soapProcessing` , ustaw atrybut [ \<zachowania > routingu](routing-of-servicebehavior.md) na `false`. Aby wyłączyć przetwarzanie protokołu SOAP dla określonego punktu końcowego, użyj tego zachowania i ustaw jego `processMessages` atrybut na `false`, a następnie Dołącz to zachowanie do punktu końcowego, którego domyślny kod przetwarzania nie ma być uruchamiany.  Gdy zachowanie [> routingupowodujeskonfigurowanieusługiroutingu,spowodujetopominięcieponownegozastosowaniazachowaniapunktukońcowegoodmomentu,gdyjużistnieje.\<](routing-of-servicebehavior.md)

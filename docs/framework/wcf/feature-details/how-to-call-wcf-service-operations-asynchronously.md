@@ -5,52 +5,52 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: aba41d707426f29c2bcd626dbbe13d16d9e1b1f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d075bfebf7b5cbd2b2ce031a1c3855a925405a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624513"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964032"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Instrukcje: Asynchroniczne wywoływanie operacji usługi WCF
-W tym temacie opisano, jak klient może uzyskać dostęp do operacji usługi asynchronicznie. Implementuje usługę, w tym temacie `ICalculator` interfejsu. Klient może asynchroniczne wywoływanie operacji w tym interfejsie przy użyciu oparte na zdarzeniach asynchronicznych wywoływania modelu. (Aby uzyskać więcej informacji na temat oparte na zdarzeniach asynchronicznych wywoływania modelu, zobacz [programowania wielowątkowe, za pomocą wzorca asynchronicznego opartego na zdarzeniach](https://go.microsoft.com/fwlink/?LinkId=248184)). Aby uzyskać przykład przedstawia sposób implementowania operacji asynchronicznie w ramach usługi, zobacz [jak: Implementowanie asynchronicznej operacji usługi](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Aby uzyskać więcej informacji na temat operacje synchroniczne i asynchroniczne, zobacz [synchroniczne i asynchroniczne operacje](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
+W tym temacie opisano, jak klient może asynchronicznie uzyskiwać dostęp do operacji usługi. Usługa w tym temacie implementuje `ICalculator` interfejs. Klient może wywoływać operacje w tym interfejsie asynchronicznie przy użyciu opartego na zdarzeniach asynchronicznego modelu wywoływania. (Aby uzyskać więcej informacji o asynchronicznym modelu wywoływania opartych na zdarzeniach, zobacz [programowanie wielowątkowe ze wzorcem asynchronicznym opartym](https://go.microsoft.com/fwlink/?LinkId=248184)na zdarzeniach). Aby zapoznać się z przykładem, który pokazuje, jak zaimplementować operację asynchronicznie w [usłudze, zobacz How to: Implementowanie asynchronicznej operacji](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)usługi. Aby uzyskać więcej informacji na temat operacji synchronicznych i asynchronicznych, zobacz [Operacje synchroniczne i asynchroniczne](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
   
 > [!NOTE]
->  Oparte na zdarzeniach asynchronicznych wywoływania modelu nie jest obsługiwane w przypadku korzystania <xref:System.ServiceModel.ChannelFactory%601>. Uzyskać informacji na temat wywołań asynchronicznych za pomocą <xref:System.ServiceModel.ChannelFactory%601>, zobacz [jak: Wywoływanie operacji asynchronicznie za pomocą fabryki kanałów](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
+> Asynchroniczny model wywoływania oparty na zdarzeniach nie jest obsługiwany w przypadku <xref:System.ServiceModel.ChannelFactory%601>korzystania z programu. Aby uzyskać informacje na temat wykonywania wywołań asynchronicznych przy [użyciu <xref:System.ServiceModel.ChannelFactory%601>, zobacz How to: Asynchroniczne wywoływanie operacji przy użyciu fabryki](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)kanałów.  
   
 ## <a name="procedure"></a>Procedura  
   
-#### <a name="to-call-wcf-service-operations-asynchronously"></a>Aby asynchroniczne wywoływanie operacji usługi WCF  
+#### <a name="to-call-wcf-service-operations-asynchronously"></a>Aby asynchronicznie wywoływać operacje usługi WCF  
   
-1. Uruchom [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzie zarówno `/async` i `/tcv:Version35` polecenia Opcje ze sobą, jak pokazano w poniższym poleceniu.  
+1. Uruchom narzędzie do [przesyłania metadanych modelu ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) za pomocą obu `/async` opcji poleceń `/tcv:Version35` i, jak pokazano w poniższym poleceniu.  
   
     ```  
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  
     ```  
   
-     Spowoduje to wygenerowanie, oprócz synchroniczne i standardowych opartych na delegacie operacji asynchronicznych, klasa klienta WCF, która zawiera:  
+     Spowoduje to wygenerowanie, oprócz synchronicznych i standardowych operacji asynchronicznych opartych na delegatach, klasy klienta WCF, która zawiera:  
   
-    - Dwa <`operationName` > `Async` operacje do użytku z programem oparte na zdarzeniach asynchronicznych wywoływania podejście. Na przykład:  
+    - Dwie <`operationName` > operacjidoużyciazpodejściemasynchronicznym`Async` wywołującym zdarzenia. Przykład:  
   
          [!code-csharp[EventAsync#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#1)]
          [!code-vb[EventAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#1)]  
   
-    - Ukończono operację zdarzenia w postaci <`operationName` > `Completed` do użytku z programem oparte na zdarzeniach asynchronicznych wywoływania podejście. Na przykład:  
+    - Zdarzenia ukończone w formularzu <`operationName` > `Completed` do użycia z podejściem asynchronicznym wywołującym zdarzenia. Przykład:  
   
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    - <xref:System.EventArgs?displayProperty=nameWithType> typy dla każdej operacji (w postaci <`operationName`>`CompletedEventArgs`) do użytku z programem oparte na zdarzeniach asynchronicznych wywoływania podejście. Na przykład:  
+    - <xref:System.EventArgs?displayProperty=nameWithType>typy dla każdej operacji (formularza <`operationName`>`CompletedEventArgs`) do użycia z podejściem asynchronicznym wywołującym zdarzenia. Na przykład:  
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  
   
-2. W aplikacji wywołującej Utwórz metody wywołania zwrotnego wywoływana, gdy operacja asynchroniczna jest zakończona, jak pokazano w poniższym przykładowym kodzie.  
+2. W aplikacji wywołującej Utwórz metodę wywołania zwrotnego, która ma być wywoływana po zakończeniu operacji asynchronicznej, jak pokazano w poniższym przykładowym kodzie.  
   
      [!code-csharp[EventAsync#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#4)]
      [!code-vb[EventAsync#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#4)]  
   
-3. Przed wywołaniem operacji, korzystają z ogólnego nowe <xref:System.EventHandler%601?displayProperty=nameWithType> typu <`operationName` > `EventArgs` dodać metodę procedury obsługi (utworzonym w poprzednim kroku) do <`operationName` > `Completed` zdarzeń. Następnie wywołaj <`operationName` > `Async` metody. Na przykład:  
+3. Przed wywołaniem operacji <xref:System.EventHandler%601?displayProperty=nameWithType> należy użyć nowego typu ogólnego <`operationName` > `EventArgs` , aby dodać metodę procedury obsługi (utworzoną w poprzednim kroku) do zdarzenia <`operationName`. > `Completed` Następnie Wywołaj metodę`operationName` <> `Async` . Na przykład:  
   
      [!code-csharp[EventAsync#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#5)]
      [!code-vb[EventAsync#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#5)]  
@@ -58,7 +58,7 @@ W tym temacie opisano, jak klient może uzyskać dostęp do operacji usługi asy
 ## <a name="example"></a>Przykład  
   
 > [!NOTE]
->  Dotyczących projektowania opartego na zdarzeniach modelu asynchronicznego stanu, że jeśli zwracana jest więcej niż jedną wartość, jedną wartość jest zwracana jako `Result` właściwości i inne są zwracane jako właściwości na <xref:System.EventArgs> obiektu. Jeden wynik tego jest to, że jeśli klient importuje metadane przy użyciu opcji oparte na zdarzeniach asynchronicznych polecenia, a operacja zwraca więcej niż jedną wartość, wartość domyślna <xref:System.EventArgs> zwraca jedną wartość jako `Result` właściwość i pozostałej właściwości <xref:System.EventArgs> obiektu. Jeśli chcesz otrzymywać obiekt komunikatu jako `Result` właściwości i mają zwracanych wartości, jak używać właściwości dla tego obiektu `/messageContract` opcja polecenia. Spowoduje to wygenerowanie sygnaturę, która zwraca komunikat odpowiedzi jako `Result` właściwość <xref:System.EventArgs> obiektu. Wszystkie wewnętrzne wartości zwracane są następnie właściwości obiektu komunikat odpowiedzi.  
+> Wskazówki dotyczące projektowania dla asynchronicznego stanu modelu opartego na zdarzeniach, które w przypadku zwrócenia więcej niż jednej wartości, jedna wartość jest zwracana `Result` jako właściwość, a pozostałe są zwracane jako właściwości <xref:System.EventArgs> w obiekcie. W związku z tym, jeśli klient Importuje metadane przy użyciu opcji poleceń asynchronicznych opartych na zdarzeniach, a operacja zwraca więcej niż jedną wartość, <xref:System.EventArgs> obiekt domyślny zwraca jedną wartość `Result` jako właściwość, a reszta jest <xref:System.EventArgs> właściwości obiektu. Jeśli chcesz otrzymać obiekt wiadomości jako `Result` Właściwość i mieć wartości zwracane jako właściwości dla tego obiektu, `/messageContract` Użyj opcji polecenia. Spowoduje to wygenerowanie sygnatury zwracającej komunikat odpowiedzi jako `Result` Właściwość <xref:System.EventArgs> obiektu. Wszystkie wewnętrzne wartości zwracane są następnie właściwościami obiektu komunikat odpowiedzi.  
   
  [!code-csharp[EventAsync#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#6)]
  [!code-vb[EventAsync#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#6)]  

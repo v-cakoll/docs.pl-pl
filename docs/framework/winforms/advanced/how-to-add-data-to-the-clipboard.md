@@ -8,43 +8,43 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 06ce64de5e2a6b4aa299b9ad9c41982b7c1924c7
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: d4afcd6ce942d1cd2286e3f393ce61436821bb3a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348276"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955123"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Instrukcje: Dodawanie danych do schowka
-<xref:System.Windows.Forms.Clipboard> Klasa zawiera metody, które służy do interakcji z funkcją Schowka systemu operacyjnego Windows. Wiele aplikacji używa Schowka jako tymczasowy repozytorium danych. Na przykład edytory użyć Schowka podczas operacji kopiowania i wklejania. Schowek jest również przydatne w przypadku przesyłania danych między aplikacjami na inny.  
+<xref:System.Windows.Forms.Clipboard> Klasa zawiera metody, których można użyć do współdziałania z funkcją Schowka systemu operacyjnego Windows. Wiele aplikacji używa Schowka jako tymczasowego repozytorium dla danych. Na przykład edytory tekstów używają schowka podczas operacji wycinania i wklejania. Schowek jest również przydatny do transferowania danych z jednej aplikacji do innej.  
   
- Po dodaniu danych do Schowka można określić format danych tak, aby inne aplikacje mogą rozpoznaje danych, jeśli używają tego formatu. Możesz również dodać dane do Schowka w wielu różnych formatach, aby zwiększyć liczbę inne aplikacje, które potencjalnie mogą używać danych.  
+ Po dodaniu danych do schowka można wskazać format danych, aby inne aplikacje mogły rozpoznać dane, jeśli mogą korzystać z tego formatu. Możesz również dodać dane do Schowka w wielu różnych formatach, aby zwiększyć liczbę innych aplikacji, które mogą potencjalnie korzystać z danych.  
   
- Format Schowka jest ciągiem, który identyfikuje format tak, aby skojarzone dane mogą być przywracane aplikacji korzystającej z tego formatu. <xref:System.Windows.Forms.DataFormats> Klasa udostępnia wstępnie zdefiniowany format nazw do użycia. Można również użyć własnych nazw formatu lub użyć typ obiektu jako jego format.  
+ Format schowka to ciąg identyfikujący format, dzięki czemu Aplikacja korzystająca z tego formatu może pobrać skojarzone dane. <xref:System.Windows.Forms.DataFormats> Klasa zawiera wstępnie zdefiniowane nazwy formatów do użycia. Możesz również użyć własnych nazw formatu lub użyć typu obiektu jako formatu.  
   
- Aby dodać dane do Schowka w jednej lub wielu formatów, należy użyć <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> metody. Dowolny obiekt można przekazać do tej metody, ale aby dodać dane w wielu formatach, należy najpierw dodać dane do oddzielny obiekt przeznaczony do pracy w wielu formatach. Zazwyczaj doda dane do <xref:System.Windows.Forms.DataObject>, ale można używać dowolnego typu, który implementuje <xref:System.Windows.Forms.IDataObject> interfejsu.  
+ Aby dodać dane do Schowka w jednym lub wielu formatach, użyj <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> metody. Można przekazać dowolny obiekt do tej metody, ale aby dodać dane w wielu formatach, należy najpierw dodać dane do oddzielnego obiektu zaprojektowanego do pracy z wieloma formatami. Zwykle dane zostaną dodane do <xref:System.Windows.Forms.DataObject>, ale można użyć dowolnego typu, który <xref:System.Windows.Forms.IDataObject> implementuje interfejs.  
   
- W programie .NET Framework 2.0 możesz dodać dane bezpośrednio do Schowka, korzystając z nowych metod, które mają ułatwić podstawowe zadania do Schowka. Podczas pracy z danymi w postaci jednej, wspólnej, np. tekstu, należy użyć tych metod.  
+ W .NET Framework 2,0 można dodać dane bezpośrednio do schowka przy użyciu nowych metod, które ułatwiają wykonywanie podstawowych zadań w Schowku. Te metody są używane podczas pracy z danymi w jednym, wspólnym formacie, takim jak tekst.  
   
 > [!NOTE]
->  Wszystkie aplikacje oparte na Windows Udostępnianie Schowka. W związku z tym zawartość mogą ulec zmianie po przełączeniu do innej aplikacji.  
+> Wszystkie aplikacje oparte na systemie Windows korzystają ze schowka. W związku z tym zawartość może ulec zmianie po przełączeniu do innej aplikacji.  
 >   
->  <xref:System.Windows.Forms.Clipboard> Klasy należy używać tylko w wątkach ustawiany w trybie Jednowątkowego apartamentu jednego wątku. Aby użyć tej klasy, upewnij się, że Twoje `Main` metoda jest oznaczona atrybutem <xref:System.STAThreadAttribute> atrybutu.  
+>  <xref:System.Windows.Forms.Clipboard> Klasy można używać tylko w wątkach ustawionych na tryb Single Thread Apartment (STA). Aby użyć tej klasy, należy się upewnić, że `Main` Metoda jest oznaczona <xref:System.STAThreadAttribute> przy użyciu atrybutu.  
 >   
->  Obiekt musi być możliwy do serializacji, aby mogła być umieść w Schowku. Aby typ był możliwy do serializacji, oznacz go za pomocą <xref:System.SerializableAttribute> atrybutu. Nie można serializować obiektu jest przekazywane do metody Schowka, metoda zakończy się niepowodzeniem bez zgłoszenia wyjątku. Aby uzyskać więcej informacji na temat serializacji, zobacz <xref:System.Runtime.Serialization>.  
+>  Obiekt musi być możliwy do serializacji, aby można go było umieścić w Schowku. Aby można było serializować typ, oznacz go <xref:System.SerializableAttribute> atrybutem. Jeśli przekazanie obiektu, którego nie można serializować, do metody Schowka, metoda zakończy się niepowodzeniem bez zgłaszania wyjątku. Aby uzyskać więcej informacji na temat serializacji <xref:System.Runtime.Serialization>, zobacz.  
   
-### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Aby dodać dane do Schowka w postaci jednej, wspólnej  
+### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Aby dodać dane do Schowka w jednym, wspólnym formacie  
   
-1. Użyj <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, lub <xref:System.Windows.Forms.Clipboard.SetText%2A> metody. Te metody są dostępne tylko w programie .NET Framework 2.0.  
+1. Użyj metody <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A> ,,<xref:System.Windows.Forms.Clipboard.SetImage%2A>lub .<xref:System.Windows.Forms.Clipboard.SetText%2A> <xref:System.Windows.Forms.Clipboard.SetAudio%2A> Te metody są dostępne tylko w .NET Framework 2,0.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
-### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>Aby dodać dane do Schowka w niestandardowym formacie  
+### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>Aby dodać dane do Schowka w formacie niestandardowym  
   
-1. Użyj <xref:System.Windows.Forms.Clipboard.SetData%2A> metodę o nazwie formatu niestandardowego. Ta metoda jest dostępny tylko w programie .NET Framework 2.0.  
+1. <xref:System.Windows.Forms.Clipboard.SetData%2A> Użyj metody z niestandardową nazwą formatu. Ta metoda jest dostępna tylko w .NET Framework 2,0.  
   
-     Można również użyć wstępnie zdefiniowany format nazwy <xref:System.Windows.Forms.Clipboard.SetData%2A> metody. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.DataFormats>.  
+     Można również użyć wstępnie zdefiniowanych nazw formatu przy użyciu <xref:System.Windows.Forms.Clipboard.SetData%2A> metody. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.DataFormats>.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
@@ -53,7 +53,7 @@ ms.locfileid: "67348276"
   
 ### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>Aby dodać dane do Schowka w wielu formatach  
   
-1. Użyj <xref:System.Windows.Forms.Clipboard.SetDataObject%2A?displayProperty=nameWithType> metody i przekaż <xref:System.Windows.Forms.DataObject> zawierający dane. Należy użyć tej metody do dodawania danych do Schowka w wersjach wcześniejszych niż .NET Framework 2.0.  
+1. Użyj metody i przekaż <xref:System.Windows.Forms.DataObject> , która zawiera dane. <xref:System.Windows.Forms.Clipboard.SetDataObject%2A?displayProperty=nameWithType> Ta metoda służy do dodawania danych do Schowka w wersjach wcześniejszych niż .NET Framework 2,0.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
@@ -63,4 +63,4 @@ ms.locfileid: "67348276"
 ## <a name="see-also"></a>Zobacz także
 
 - [Operacje przeciągania i upuszczania oraz obsługa schowka](drag-and-drop-operations-and-clipboard-support.md)
-- [Instrukcje: Pobieranie danych ze Schowka](how-to-retrieve-data-from-the-clipboard.md)
+- [Instrukcje: Pobieranie danych ze schowka](how-to-retrieve-data-from-the-clipboard.md)

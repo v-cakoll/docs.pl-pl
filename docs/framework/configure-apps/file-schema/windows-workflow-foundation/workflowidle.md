@@ -3,20 +3,20 @@ title: <workflowIdle>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: b2ef703c-3e01-4213-9d2e-c14c7dba94d2
-ms.openlocfilehash: 1dc186f5899935dab43c0d33894e659c4b19748c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 16a485b6d0ba2584cccd08a36506582fd3930f71
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201120"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947167"
 ---
 # <a name="workflowidle"></a>\<workflowIdle>
 Zachowanie usługi sterująca po zwolnione wystąpienia bezczynności przepływu pracy i utrwalone.  
   
 \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<workflowIdle>  
   
 ## <a name="syntax"></a>Składnia  
@@ -39,8 +39,8 @@ Zachowanie usługi sterująca po zwolnione wystąpienia bezczynności przepływu
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|timeToPersist|Wartość przedziału czasu, który określa czas trwania między czas przepływu pracy staje się bezczynności i jest trwały. Wartość domyślna to TimeSpan.MaxValue.<br /><br /> Czas trwania rozpoczyna upłynąć, gdy wystąpienie przepływu pracy staje się nieaktywna. Ten atrybut jest przydatna, jeśli chcesz utrwalić wystąpienia przepływu pracy agresywniej jednocześnie zachowując wystąpienie w pamięci tak długo, jak to możliwe. Ten atrybut jest tylko wtedy, gdy jej wartość jest mniejsza niż **timeToUnload** atrybutu. Jeśli jest większa, jest ignorowana. Jeśli ten atrybut upłynie przed wartość określoną przez **timeToUnload** atrybutu, trwałości przed należy ukończyć przepływ pracy zostanie zwolniony. Oznacza to, że operacja zwolnienia może być opóźniony, dopóki nie jest trwały przepływu pracy. Warstwa trwałości jest odpowiedzialny za obsługę dowolnego powtórzeń przejściowy błędów i tylko na błędy bez nieodwracalny zgłasza wyjątek wyjątków. Dlatego wyjątki zgłaszane w trwałości są traktowane jako krytyczny, a wystąpienie przepływu pracy zostało przerwane.|  
-|timeToUnload|Zakres czasu wartość, która określa czas trwania między czas przepływu pracy staje się bezczynności i jest zwalniana. Wartość domyślna to 1 minutę.<br /><br /> Zwalnianie przepływu pracy oznacza również utrwalone. Jeśli ten atrybut jest równa zero wystąpienie przepływu pracy jest trwały i zwolnione natychmiast po przepływ pracy staje się nieaktywna. Ustawienie tego atrybutu na TimeSpan.MaxValue skutecznie wyłącza operacja zwolnienia. Wystąpienia przepływu pracy bezczynności nigdy nie są usuwane.|  
+|timeToPersist|Wartość TimeSpan, która określa czas trwania między czasem, gdy przepływ pracy stanie się bezczynny i jest utrwalany. Wartość domyślna to TimeSpan. MaxValue.<br /><br /> Czas trwania rozpoczyna upłynąć, gdy wystąpienie przepływu pracy staje się nieaktywna. Ten atrybut jest przydatny, jeśli chcesz, aby wystąpienie przepływu pracy było bardziej agresywne i nadal utrzymywać wystąpienie w pamięci tak długo, jak to możliwe. Ten atrybut jest prawidłowy tylko wtedy, gdy jego wartość jest mniejsza niż atrybut **TimeToUnload** . Jeśli jest większa, jest ignorowana. Jeśli ten atrybut upłynie przed wartością określoną przez atrybut **TimeToUnload** , trwałość musi zostać zakończona przed odładowaniem przepływu pracy. Oznacza to, że operacja zwolnienia może zostać opóźniona, dopóki przepływ pracy nie zostanie utrwalony. Warstwa trwałości jest odpowiedzialny za obsługę dowolnego powtórzeń przejściowy błędów i tylko na błędy bez nieodwracalny zgłasza wyjątek wyjątków. Dlatego wyjątki zgłaszane w trwałości są traktowane jako krytyczny, a wystąpienie przepływu pracy zostało przerwane.|  
+|timeToUnload|Zakres czasu wartość, która określa czas trwania między czas przepływu pracy staje się bezczynności i jest zwalniana. Wartość domyślna to 1 minutę.<br /><br /> Zwalnianie przepływu pracy oznacza, że jest również utrwalone. Jeśli ten atrybut ma wartość zero, wystąpienie przepływu pracy jest utrwalane i zwalniane natychmiast po przejściu przepływu pracy w stan bezczynności. Ustawienie tego atrybutu na TimeSpan. MaxValue skutecznie wyłącza operację Zwolnij. Wystąpienia przepływu pracy bezczynności nigdy nie są usuwane.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -49,7 +49,7 @@ Zachowanie usługi sterująca po zwolnione wystąpienia bezczynności przepływu
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowanie > z \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Określa zachowanie elementu.|  
+|[\<zachowanie > w \<usłudze serviceBehaviors >](behavior-of-servicebehaviors-of-workflow.md)|Określa zachowanie elementu.|  
   
 ## <a name="see-also"></a>Zobacz także
 

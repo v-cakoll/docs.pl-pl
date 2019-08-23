@@ -8,12 +8,12 @@ helpviewer_keywords:
 - = operator [Visual Basic]
 - = assignment statements [Visual Basic]
 ms.assetid: 2dac2e49-86c8-42f8-80c1-458452fb5e29
-ms.openlocfilehash: ad74e3ebc947af4f36022be838b69df6ce24997a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d260dffb7175e9dddcbf9acb75415f5f973727e2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608280"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962014"
 ---
 # <a name="-operator-visual-basic"></a>= — Operator (Visual Basic)
 Przypisuje wartość do zmiennej lub właściwości.  
@@ -26,22 +26,22 @@ variableorproperty = value
   
 ## <a name="parts"></a>Części  
  `variableorproperty`  
- Jakakolwiek zmienna zapisu lub dowolnej właściwości.  
+ Dowolna zapisywalna zmienna lub Każda właściwość.  
   
  `value`  
- Wszelkie literał, — stała lub wyrażenie.  
+ Dowolny literał, stała lub wyrażenie.  
   
 ## <a name="remarks"></a>Uwagi  
- Element po lewej stronie znaku równości (`=`) może być prosta zmienna skalarne, właściwości lub elementu w tablicy. Zmiennej lub właściwości nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md). `=` Operator przypisuje wartość do zmiennej po prawej lub właściwość po lewej stronie.  
+ Element po lewej stronie znaku równości (`=`) może być prostą zmienną skalarną, właściwością lub elementem tablicy. Zmienna lub właściwość nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md). `=` Operator przypisuje wartość po prawej stronie do zmiennej lub właściwości po jej lewej stronie.  
   
 > [!NOTE]
->  `=` Operator jest również używany jako operator porównania. Aby uzyskać więcej informacji, zobacz [operatory porównania](../../../visual-basic/language-reference/operators/comparison-operators.md).  
+> `=` Operator jest również używany jako operator porównania. Aby uzyskać szczegółowe informacje, zobacz [Operatory porównania](../../../visual-basic/language-reference/operators/comparison-operators.md).  
   
 ## <a name="overloading"></a>Przeciążenie  
- `=` Operator może być przeciążona, tylko jako operator porównania relacyjnych, a nie jako operator przypisania. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ `=` Operator może być przeciążony tylko jako operator porównania relacyjnego, a nie jako operator przypisania. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano operator przypisania. Wartość po prawej stronie jest przypisywana do zmiennej po lewej stronie.  
+ Poniższy przykład demonstruje operator przypisania. Wartość po prawej stronie jest przypisana do zmiennej po lewej stronie.  
   
  [!code-vb[VbVbalrOperators#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#9)]  
   
@@ -51,7 +51,7 @@ variableorproperty = value
 - [*=, operator](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
 - [+=, operator](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
 - [-= — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
-- [/ = — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [Operator/= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
 - [\\= — Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [^=, operator](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
 - [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)

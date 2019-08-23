@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13f1b2c3e3e651cb6c25b966d778cb436967509e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6de6091b8970fde4a958148acf32dcefe1a6726
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629418"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946554"
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
 Kierowanie międzyoperacyjności operuje na regułach, które określają sposób, w jaki dane skojarzone z parametrami metod działają w miarę przekazywania między pamięcią zarządzaną i niezarządzaną. Te wbudowane reguły kontrolują takie działania kierujące jako przekształcenia typu danych, niezależnie od tego, czy wywoływany może zmienić dane przekazywane do niego, i zwrócić te zmiany do obiektu wywołującego, i w jakich okolicznościach Organizator zapewnia optymalizację wydajności.  
@@ -24,7 +24,7 @@ Kierowanie międzyoperacyjności operuje na regułach, które określają sposó
  W tej sekcji opisano domyślne właściwości behawioralne usługi organizowania międzyoperacyjnego. Przedstawia szczegółowe informacje na temat organizowania tablic, typów logicznych, typów znaków, delegatów, klas, obiektów, ciągów i struktur.  
   
 > [!NOTE]
->  Kierowanie typów ogólnych nie jest obsługiwane. Aby uzyskać więcej informacji, zobacz Współdziałanie [przy użyciu typów ogólnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
+> Kierowanie typów ogólnych nie jest obsługiwane. Aby uzyskać więcej informacji, zobacz Współdziałanie [przy użyciu typów ogólnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Zarządzanie pamięcią za pomocą Organizatora międzyoperacyjnego  
  Organizator międzyoperacyjny zawsze próbuje zwolnić pamięć przydzieloną przez kod niezarządzany. To zachowanie jest zgodne z regułami zarządzania pamięcią COM, ale różni się od reguł, C++które regulują natywną.  
@@ -117,7 +117,7 @@ interface DelegateTest : IDispatch {
 W tym przykładzie, gdy dwa Delegaty są organizowane jako <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType>, wynik `int` jest `int`i wskaźnikiem do. Ponieważ typy delegatów są organizowane, `int` w tym miejscu reprezentuje wskaźnik do typu void (`void*`), który jest adresem delegata w pamięci. Innymi słowy, ten wynik jest specyficzny dla 32-bitowych systemów Windows, ponieważ `int` w tym miejscu reprezentuje rozmiar wskaźnika funkcji.
 
 > [!NOTE]
->  Odwołanie do wskaźnika funkcji do zarządzanego delegata przechowywanego przez kod niezarządzany nie zapobiega występowaniu elementów bezużytecznych w zarządzanym obiekcie przez środowisko uruchomieniowe języka wspólnego.  
+> Odwołanie do wskaźnika funkcji do zarządzanego delegata przechowywanego przez kod niezarządzany nie zapobiega występowaniu elementów bezużytecznych w zarządzanym obiekcie przez środowisko uruchomieniowe języka wspólnego.  
   
  Na przykład następujący kod jest niepoprawny, `cb` ponieważ odwołanie do obiektu, `SetChangeHandler` do metody, nie utrzymuje `cb` aktywności poza cyklem życia `Test` metody. Gdy obiekt zostanie odrzucony, wskaźnik funkcji przeszedł do `SetChangeHandler` nie jest już prawidłowy. `cb`  
   
@@ -246,12 +246,12 @@ internal static class NativeMethods
  Typ wartości musi być przesyłany przez odwołanie, ponieważ niezarządzany interfejs API oczekuje na przekazanie `RECT` wskaźnika do funkcji. `Rect` Typ wartości jest przenoszona przez wartość, ponieważ niezarządzany interfejs API `POINT` oczekuje na przekazanie na stosie. `Point` Ta delikatna różnica jest bardzo ważna. Odwołania są przesyłane do niezarządzanego kodu jako wskaźniki. Wartości są przesyłane do kodu niezarządzanego na stosie.  
   
 > [!NOTE]
->  Gdy sformatowany typ jest zorganizowany jako struktura, dostępne są tylko pola należące do tego typu. Jeśli typ ma metody, właściwości lub zdarzenia, są one niedostępne z kodu niezarządzanego.  
+> Gdy sformatowany typ jest zorganizowany jako struktura, dostępne są tylko pola należące do tego typu. Jeśli typ ma metody, właściwości lub zdarzenia, są one niedostępne z kodu niezarządzanego.  
   
  Klasy mogą być również organizowane w kodzie niezarządzanym jako struktury w stylu C, pod warunkiem, że mają stały układ elementu członkowskiego. Informacje o układzie elementu członkowskiego klasy są również udostępniane z <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybutem. Główna różnica między typami wartości ze stałym układem i klasami ze stałym układem jest sposobem, w jaki są one organizowane do kodu niezarządzanego. Typy wartości są przekazywane przez wartość (na stosie) i w związku z tym wszystkie zmiany wprowadzone do elementów członkowskich typu przez wywoływany nie są widoczne dla obiektu wywołującego. Typy odwołań są przesyłane przez odwołanie (odwołanie do typu jest przesyłane na stosie); w związku z tym, wszystkie zmiany wprowadzone do elementów członkowskich typu danych kopiowalnych typu przez wywoływany przez obiekt wywołujący są widoczne dla obiektu dzwoniącego.  
   
 > [!NOTE]
->  Jeśli typ referencyjny składa się z typów innych niż danych kopiowalnych, konwersja jest wymagana dwukrotnie: pierwszy raz, gdy argument jest przenoszona do niezarządzanej strony, a drugi czas powrotu z wywołania. W związku z tym dodatkowymi kosztami parametry wejściowe/out muszą być jawnie stosowane do argumentu, jeśli obiekt wywołujący chce zobaczyć zmiany wprowadzone przez wywoływany element.  
+> Jeśli typ referencyjny składa się z typów innych niż danych kopiowalnych, konwersja jest wymagana dwukrotnie: pierwszy raz, gdy argument jest przenoszona do niezarządzanej strony, a drugi czas powrotu z wywołania. W związku z tym dodatkowymi kosztami parametry wejściowe/out muszą być jawnie stosowane do argumentu, jeśli obiekt wywołujący chce zobaczyć zmiany wprowadzone przez wywoływany element.  
   
  W poniższym przykładzie `SystemTime` Klasa ma sekwencyjny układ elementów członkowskich i może być przenoszona do funkcji **GetSystemTime** interfejsu API systemu Windows.  
   
@@ -351,7 +351,7 @@ interface _Graphics {
  Te same reguły służące do organizowania wartości i odwołań do wywołań wywołania platformy są używane podczas organizowania interfejsów COM. Na przykład, gdy wystąpienie `Point` typu wartości jest przesyłane z .NET Framework do modelu COM `Point` , wartość jest przenoszona przez wartości. Jeśli typ `Point` wartości jest przesyłany przez odwołanie, wskaźnik do elementu jest przesyłany na stosie. `Point` Organizator międzyoperacyjny nie obsługuje wyższych poziomów pośrednich (**punkt** \* \*) w dowolnym kierunku.  
   
 > [!NOTE]
->  Struktury z <xref:System.Runtime.InteropServices.LayoutKind> wartością wyliczenia ustawioną na wartość **Explicit** nie mogą być używane w międzyoperacyjności modelu COM, ponieważ eksportowana biblioteka typów nie może wyrazić jawnego układu.  
+> Struktury z <xref:System.Runtime.InteropServices.LayoutKind> wartością wyliczenia ustawioną na wartość **Explicit** nie mogą być używane w międzyoperacyjności modelu COM, ponieważ eksportowana biblioteka typów nie może wyrazić jawnego układu.  
   
 ### <a name="system-value-types"></a>Typy wartości systemu  
  <xref:System> Przestrzeń nazw ma kilka typów wartości, które reprezentują postać opakowaną typów pierwotnych środowiska uruchomieniowego. Na przykład struktura typu <xref:System.Int32?displayProperty=nameWithType> wartości reprezentuje opakowaną postać **ELEMENT_TYPE_I4**. Zamiast organizować te typy jako struktury, tak jak inne sformatowane typy, są organizowane w taki sam sposób, jak w przypadku typów pierwotnych. W związku z tym **System. Int32** jest zorganizowany jako **ELEMENT_TYPE_I4** zamiast struktury zawierającej pojedynczy element członkowski typu **Long**. Poniższa tabela zawiera listę typów wartości w przestrzeni nazw **systemu** , które są opakowane na typy pierwotne.  

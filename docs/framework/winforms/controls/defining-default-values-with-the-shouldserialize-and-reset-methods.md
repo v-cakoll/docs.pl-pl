@@ -8,26 +8,26 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 5c95272c672d9b35d61e2fca8cccdbc532ef6776
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 609fe4896a2b01b8a69ff8a3d0854c85ddbd6a26
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211304"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969095"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definiowanie wartości domyślnych za pomocą metod ShouldSerialize i Reset
-`ShouldSerialize` i `Reset` metodami Opcjonalnie możesz podać właściwość, jeśli właściwość nie ma wartości domyślnej proste. Jeśli właściwość ma wartość domyślną proste, należy zastosować <xref:System.ComponentModel.DefaultValueAttribute> i zamiast tego Podaj wartość domyślną do konstruktora klasy atrybutu. Jedną z tych mechanizmów zapewnia następujące funkcje w Projektancie:
+`ShouldSerialize`i `Reset` są opcjonalnymi metodami, które można podać dla właściwości, jeśli właściwość nie ma prostej wartości domyślnej. Jeśli właściwość ma prostą wartość domyślną, należy zastosować <xref:System.ComponentModel.DefaultValueAttribute> i podać wartość domyślną konstruktora klasy atrybutu. Każdy z tych mechanizmów włącza następujące funkcje w projektancie:
 
-- Właściwość zawiera oznaczenie wizualne w przeglądarce właściwości, jeśli został zmieniony z wartości domyślnej.
+- Właściwość zapewnia wizualizację wizualną w przeglądarce właściwości, jeśli została zmodyfikowana z wartości domyślnej.
 
-- Użytkownik może kliknąć prawym przyciskiem myszy we właściwości i wybierz **resetowania** można przywrócić właściwości do wartości domyślnej.
+- Użytkownik może kliknąć prawym przyciskiem myszy właściwość i wybrać polecenie **Zresetuj** , aby przywrócić wartość domyślną właściwości.
 
-- Projektant generuje kod bardziej wydajne.
+- Projektant generuje bardziej wydajny kod.
 
     > [!NOTE]
-    >  Zastosuj opcję <xref:System.ComponentModel.DefaultValueAttribute> lub podaj `Reset` *PropertyName* i `ShouldSerialize` *PropertyName* metody. Nie należy używać obu.
+    > Zastosuj <xref:System.ComponentModel.DefaultValueAttribute> albo podaj `Reset`metody *PropertyName* i `ShouldSerialize` *PropertyName* . Nie należy używać obu tych metod.
 
- `Reset` *PropertyName* metoda ustawia właściwość na wartość domyślną, jak pokazano na następujący fragment kodu.
+ Metoda PropertyName ustawia właściwość na wartość domyślną, jak pokazano w poniższym fragmencie kodu. `Reset`
 
 ```vb
 Public Sub ResetMyFont()
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```
 
 > [!NOTE]
->  Jeśli nie ma właściwości `Reset` metody, nie jest oznaczony atrybutem <xref:System.ComponentModel.DefaultValueAttribute>i nie ma wartości domyślnej podana w jego deklaracji `Reset` opcję dla tej właściwości jest wyłączona w menu skrótów **właściwości** okna Projektanta Windows Forms w programie Visual Studio.
+> Jeśli `Reset` właściwość nie ma metody, nie jest oznaczona <xref:System.ComponentModel.DefaultValueAttribute>i nie ma wartości domyślnej dostarczonej `Reset` w swojej deklaracji, opcja dla tej właściwości jest wyłączona w menu skrótów okna **Właściwości** Projektant formularzy systemu Windows w programie Visual Studio.
 
- Użyć projektantów, takich jak Visual Studio `ShouldSerialize` *PropertyName* metodę, aby sprawdzić, czy właściwość został zmieniony z wartości domyślnej i pisanie kodu w formularzu tylko wtedy, gdy właściwość ulegnie zmianie, co pozwala na bardziej efektywne kodu Generowanie. Na przykład:
+ Projektanci, takie jak Visual Studio, `ShouldSerialize`używają metody *PropertyName* , aby sprawdzić, czy właściwość została zmieniona z wartości domyślnej i napisać kod w formularzu tylko wtedy, gdy właściwość zostanie zmieniona, co pozwala na bardziej wydajne generowanie kodu. Na przykład:
 
 ```vb
 'Returns true if the font has changed; otherwise, returns false.
@@ -62,7 +62,7 @@ public bool ShouldSerializeMyFont() {
 }
 ```
 
- Pełny przykład kodu poniżej.
+ Poniższy przykład kodu.
 
 ```vb
 Option Explicit
@@ -141,7 +141,7 @@ public class MyControl : Control {
 }
 ```
 
- W tym przypadku, nawet wtedy, gdy wartość zmiennej prywatnej uzyskiwał dostęp do `MyFont` właściwość `null`, nie są wyświetlane w przeglądarce właściwości `null`; zamiast tego zostanie wyświetlony <xref:System.Windows.Forms.Control.Font%2A> właściwości elementu nadrzędnego, jeśli nie jest `null`, lub wartość domyślną <xref:System.Windows.Forms.Control.Font%2A> wartość zdefiniowana w <xref:System.Windows.Forms.Control>. Ten sposób wartością domyślną dla `MyFont` nie można po prostu ustawić i <xref:System.ComponentModel.DefaultValueAttribute> nie można zastosować do tej właściwości. Zamiast tego `ShouldSerialize` i `Reset` metody muszą zostać wdrożone dla `MyFont` właściwości.
+ W takim przypadku nawet wtedy, gdy wartość zmiennej prywatnej, do której uzyskuje `MyFont` dostęp Właściwość `null`, to przeglądarka właściwości nie jest wyświetlana `null`; zamiast tego wyświetla <xref:System.Windows.Forms.Control.Font%2A> właściwość elementu nadrzędnego, jeśli nie `null`, lub wartość domyślna <xref:System.Windows.Forms.Control.Font%2A> zdefiniowana w. <xref:System.Windows.Forms.Control> W ten sposób wartość domyślna `MyFont` dla nie może być ustawiona po prostu <xref:System.ComponentModel.DefaultValueAttribute> i nie można jej zastosować do tej właściwości. Zamiast tego, `ShouldSerialize` metody `Reset` i `MyFont` muszą być zaimplementowane dla właściwości.
 
 ## <a name="see-also"></a>Zobacz także
 

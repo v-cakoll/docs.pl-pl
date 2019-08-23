@@ -2,20 +2,20 @@
 title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 54a9833f56927568af711a103bd3831b767711e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a99edd3a62a40c2efbc63a166b8c0b0d124e8a72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788417"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936272"
 ---
 # <a name="servicediscovery"></a>\<serviceDiscovery>
-Określa wykrywalność usługi punktów końcowych.  
+Określa możliwość odnajdywania punktów końcowych usługi.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<serviceDiscovery>  
   
 ## <a name="syntax"></a>Składnia  
@@ -49,20 +49,20 @@ Określa wykrywalność usługi punktów końcowych.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|Kolekcja punktów końcowych anonsu. Ta sekcja umożliwia określenie punktów końcowych, używany do wysyłania wiadomości anonsów.|  
-|[\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|Kolekcja punktów końcowych odnajdywania. Ta sekcja umożliwia określenie punktów końcowych, na którym chcesz nasłuchiwać komunikatów odnajdywania.|  
+|[\<announcementEndpoint >](announcementendpoint.md)|Kolekcja punktów końcowych anonsów. Ta sekcja służy do określania punktów końcowych, które mają być używane do wysyłania komunikatów anonsu.|  
+|[\<discoveryEndpoint >](discoveryendpoint.md)|Kolekcja punktów końcowych odnajdywania. Użyj tej sekcji, aby określić punkty końcowe, w których mają być nasłuchiwani wiadomości odnajdowania.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
+|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Po dodaniu do konfiguracji zachowania usługi, ten element konfiguracji sprawia, że wszystkie punkty końcowe usługi wykrywalne. Można dodatkowo skonfigurować funkcji odnajdywania tych punktów końcowych przy użyciu [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) lub [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) elementów podrzędnych. Użyj [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) sekcji, aby skonfigurować anonsów, określając konfiguracji punktu końcowego na potrzeby wysyłania zawiadomienia dotyczące usługi (online/Hello i offline/Bye). Użyj [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) sekcji, aby ręcznie określić punkt końcowy do nasłuchiwania wiadomości odnajdywania.  
+ Po dodaniu do konfiguracji zachowania usługi, ten element konfiguracji udostępnia wszystkie punkty końcowe tej usługi. Można skonfigurować funkcje odnajdywania takich punktów końcowych za pomocą [ \<DiscoveryEndpoint >](discoveryendpoint.md) lub [ \<announcementEndpoint >](announcementendpoint.md) elementy podrzędne. Użyj sekcji announcementEndpoint >, aby skonfigurować anonse, określając konfigurację punktu końcowego, który ma być używany do wysyłania anonsów usługi (online/Hello i offline/bye). [ \<](announcementendpoint.md) Za pomocą sekcji [> DiscoveryEndpointręcznieOkreślpunktkońcowy,wktórymmająbyćnasłuchiwaniwiadomościodnajdowania.\<](discoveryendpoint.md)  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie konfiguracja Określa, że CalculatorService być wykrywalny i opcjonalnie określa punkt końcowy anonsu do użycia.  
+ Poniższy przykład konfiguracji określa, że CalculatorService ma być wykrywalny, i opcjonalnie określa punkt końcowy anonsu, który ma być używany.  
   
 ```xml  
 <services>

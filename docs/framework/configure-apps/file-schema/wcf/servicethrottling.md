@@ -2,20 +2,20 @@
 title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 995ff9979096757225c9241e977f86f755955945
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77ed5e91f09d9e658deeb7996baaca445b4e0c90
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758109"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937105"
 ---
 # <a name="servicethrottling"></a>\<serviceThrottling>
 Określa mechanizm ograniczania przepustowości usługi Windows Communication Foundation (WCF).  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<serviceThrottling>  
   
 ## <a name="syntax"></a>Składnia  
@@ -33,9 +33,9 @@ Określa mechanizm ograniczania przepustowości usługi Windows Communication Fo
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|maxConcurrentCalls|Dodatnia liczba całkowita, która ogranicza liczbę wiadomości, które aktualnie przetworzyć w <xref:System.ServiceModel.ServiceHost>. Wywołania poza limitem zostaną umieszczone w kolejce. Ustawienie tej wartości na 0 jest równoważna z ustawieniem dla niego wartości Int32.MaxValue. Wartość domyślna to 16 * liczba procesorów.|  
-|maxConcurrentInstances|Dodatnia liczba całkowita, która ogranicza liczbę <xref:System.ServiceModel.InstanceContext> obiekty, które są wykonywane w tym samym czasie między <xref:System.ServiceModel.ServiceHost>. Żądania utworzenia dodatkowych wystąpień są umieszczane w kolejce i ukończone, gdy miejsce poniżej limitu staje się dostępna. Wartość domyślna to suma maxConcurrentSessions i MaxConcurrentCalls|  
-|maxConcurrentSessions|Dodatnia liczba całkowita, która ogranicza liczbę sesji <xref:System.ServiceModel.ServiceHost> akceptowanych przez obiekt.<br /><br /> Usługa będzie akceptować połączeń poza limitem, ale tylko kanały poniżej limitu są aktywne (komunikaty są odczytywane z kanału). Ustawienie tej wartości na 0 jest równoważna z ustawieniem dla niego wartości Int32.MaxValue. Wartość domyślna to 100 * Liczba procesorów.|  
+|maxConcurrentCalls|Dodatnia liczba całkowita, która ogranicza liczbę komunikatów przetwarzanych obecnie w <xref:System.ServiceModel.ServiceHost>ramach. Wywołania przekraczające limit są umieszczane w kolejce. Ustawienie tej wartości na 0 jest równoznaczne z ustawieniem wartość Int32. MaxValue. Wartość domyślna to 16 * liczba procesorów.|  
+|maxConcurrentInstances|Dodatnia liczba całkowita, która ogranicza liczbę <xref:System.ServiceModel.InstanceContext> obiektów, które są wykonywane jednocześnie w czasie <xref:System.ServiceModel.ServiceHost>. Żądania utworzenia dodatkowych wystąpień są umieszczane w kolejce i uzupełniane, gdy zostanie udostępnione miejsce poniżej limitu. Wartość domyślna to suma wartości maxConcurrentSessions i MaxConcurrentCalls|  
+|maxConcurrentSessions|Dodatnia liczba całkowita, która ogranicza liczbę sesji akceptowanych przez <xref:System.ServiceModel.ServiceHost> obiekt.<br /><br /> Usługa będzie akceptować połączenia o przekroczeniu limitu, ale tylko kanały poniżej limitu są aktywne (komunikaty są odczytywane z kanału). Ustawienie tej wartości na 0 jest równoznaczne z ustawieniem wartość Int32. MaxValue. Wartość domyślna to 100 * liczba procesorów.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -44,15 +44,15 @@ Określa mechanizm ograniczania przepustowości usługi Windows Communication Fo
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
+|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Formanty ograniczania przepływności ogranicza liczbę równoczesnych wywołań, wystąpienia lub sesji, aby uniknąć nadmiernego zużycia zasobów.  
+ Kontrolki ograniczania nakładają limity liczby współbieżnych wywołań, wystąpień lub sesji, aby zapobiec nadmiernemu zużyciu zasobów.  
   
- Śledzenia są zapisywane, za każdym razem, gdy zostanie osiągnięty wartości atrybutów. Pierwszy śledzenia są zapisywane jako ostrzeżenie.  
+ Ślad jest zapisywana za każdym razem, gdy wartość atrybutu zostanie osiągnięta. Pierwszy ślad jest zapisywana jako ostrzeżenie.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie konfiguracja Określa, że usługa ogranicza maksymalny współbieżnych wywołań 2 i maksymalnej liczby równoczesnych wystąpień do 10. Aby uzyskać szczegółowy przykład uruchomieniem tego przykładu, zobacz [ograniczania](../../../../../docs/framework/wcf/samples/throttling.md).  
+ Poniższy przykład konfiguracji określa, że usługa ogranicza maksymalną liczbę współbieżnych wywołań do 2, a maksymalna liczba równoczesnych wystąpień do 10. Aby zapoznać się z szczegółowym przykładem uruchamiania tego przykładu, zobacz [ograniczanie przepustowości](../../../wcf/samples/throttling.md).  
   
 ```xml  
 <behaviors>
@@ -72,4 +72,4 @@ Określa mechanizm ograniczania przepustowości usługi Windows Communication Fo
 
 - <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
 - <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>
-- [Używanie elementu ServiceThrottlingBehavior do kontrolowania wydajności programu WCF](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)
+- [Używanie elementu ServiceThrottlingBehavior do kontrolowania wydajności programu WCF](../../../wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

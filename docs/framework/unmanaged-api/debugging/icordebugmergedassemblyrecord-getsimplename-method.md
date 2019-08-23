@@ -1,17 +1,17 @@
 ---
-title: ICorDebugMergedAssemblyRecord::GetSimpleName Method
+title: 'ICorDebugMergedAssemblyRecord:: getsimplename — Metoda'
 ms.date: 03/30/2017
 ms.assetid: bc3410f6-ebca-4bca-9b45-fc38c74fa9cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3df84fa7c316d3cd0c97b79478159a5a97ad1e64
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f3256a1a50b66be74561bfc992380669a4495dde
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762361"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939987"
 ---
-# <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>ICorDebugMergedAssemblyRecord::GetSimpleName Method
+# <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>ICorDebugMergedAssemblyRecord:: getsimplename — Metoda
 Pobiera prostą nazwę zestawu.  
   
 ## <a name="syntax"></a>Składnia  
@@ -26,28 +26,28 @@ HRESULT GetSimpleName(
   
 ## <a name="parameters"></a>Parametry  
  `cchName`  
- [in] Liczba znaków w `szName` buforu.  
+ podczas Liczba znaków w `szName` buforze.  
   
  `pcchName`  
- [out] Wskaźnik do liczby znaków rzeczywiście zapisanych na `szName` buforu.  
+ określoną Wskaźnik do liczby znaków rzeczywiście zapisywana `szName` w buforze.  
   
  `szName`  
  Wskaźnik do tablicy znaków.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda pobiera prostą nazwę zestawu (na przykład "System.Collections"), bez rozszerzenia pliku, wersji, kulturę i token klucza publicznego. Odnosi się do <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> właściwości w kodzie zarządzanym.  
+ Ta metoda pobiera prostą nazwę zestawu (na przykład "System. Collections") bez rozszerzenia pliku, wersji, kultury lub tokenu klucza publicznego. Odpowiada <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> właściwości w kodzie zarządzanym.  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

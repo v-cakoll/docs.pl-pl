@@ -2,44 +2,44 @@
 title: Mapowanie typu danych w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 4e85db4732da664848cee2ef48f9a880a86fef18
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: ddb3c1c5551336ace66bab53af3beb83b6cd2d34
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583764"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950399"
 ---
 # <a name="data-type-mappings-in-adonet"></a>Mapowanie typu danych w ADO.NET
-.NET Framework jest oparty na wspólny system typów definiuje, jak typy są deklarowane, używane i zarządzane w środowisku uruchomieniowym. Składa się z typami wartości i typami odwołań, które wynikają z <xref:System.Object> typ podstawowy. Podczas pracy ze źródłem danych, typ danych jest wnioskowany z dostawcy danych, jeśli nie jest jawnie określona. Na przykład <xref:System.Data.DataSet> obiektu jest niezależna od wszelkich określonego źródła danych. Dane w `DataSet` jest pobierany ze źródła danych, a zmiany są utrwalane w źródle danych przy użyciu `DataAdapter`. Oznacza to, że w przypadku `DataAdapter` wypełnia <xref:System.Data.DataTable> w `DataSet` wartościami ze źródła danych, wynikowy typy danych kolumn w `DataTable` są typów programu .NET Framework, zamiast typów specyficzne dla dostawcy danych .NET Framework, Służy do połączenia ze źródłem danych.  
+.NET Framework opiera się na wspólnym typie systemu, który definiuje, w jaki sposób typy są zadeklarowane, używane i zarządzane w czasie wykonywania. Składa się z obu typów wartości i typów referencyjnych, które pochodzą z <xref:System.Object> typu podstawowego. Podczas pracy ze źródłem danych typ danych jest wnioskowany od dostawcy danych, jeśli nie został jawnie określony. Na przykład <xref:System.Data.DataSet> obiekt jest niezależny od określonego źródła danych. Dane z `DataAdapter`programu sąpobieranezeźródładanych,azmianysąutrwalanewźródle`DataSet` danych przy użyciu. Oznacza to, że podczas `DataAdapter` wypełniania a `DataSet` <xref:System.Data.DataTable> w wartości z wartościami ze źródła danych, `DataTable` wyniki typów danych kolumn w są .NET Framework typy, a nie typy specyficzne dla dostawcy danych .NET Framework, który służy do nawiązywania połączenia ze źródłem danych.  
   
- Podobnie, gdy `DataReader` zwraca wartość z zakresu od źródła danych, wartość wynikowa znajduje się w zmiennej lokalnej, która ma typ .NET Framework. Dla obu `Fill` operacji `DataAdapter` i `Get` metody `DataReader`, typ .NET Framework jest wnioskowany z wartości zwracanej z dostawcy danych .NET Framework.  
+ Podobnie, gdy `DataReader` zwraca wartość ze źródła danych, wynikowa wartość jest przechowywana w zmiennej lokalnej, która ma typ .NET Framework. `Fill` Dla operacji `DataAdapter` i`Get` metod ,typ.NETFrameworkjestwywnioskowanynapodstawiewartościzwróconejprzezdostawcędanych.NETFramework.`DataReader`  
   
- Zamiast polegania na typ danych wykrywany, możesz użyć metody typizowane metody dostępu `DataReader` Jeśli znasz już określonego typu wartości zwracanych. Metody dostępu wpisane zapewnić lepszą wydajność, zwracając wartość jako określonego typu .NET Framework, co eliminuje potrzebę stosowania dodatkowy typ konwersji.  
+ Zamiast polegać na wywnioskowanym typie danych, można użyć typów metod dostępu typu w `DataReader` przypadku, gdy wiadomo, że określony typ zwracanej wartości. Wpisywane metody dostępu zapewniają lepszą wydajność, zwracając wartość jako określony typ .NET Framework, co eliminuje konieczność stosowania dodatkowej konwersji typu.  
   
 > [!NOTE]
->  Wartości null dla typów danych dostawcy danych .NET Framework są reprezentowane przez `DBNull.Value`.  
+> Wartości null dla typów danych .NET Framework dostawcy danych są reprezentowane przez `DBNull.Value`.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Mapowanie typu danych serwera SQL](../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- Wyświetla wywnioskować mapowanie typu danych i danych metody dostępu dla <xref:System.Data.SqlClient>.  
+ Wyświetla listę odroczonych mapowań typu danych i metod dostępu do danych <xref:System.Data.SqlClient>dla programu.  
   
  [Mapowanie typu danych OLE DB](../../../../docs/framework/data/adonet/ole-db-data-type-mappings.md)  
- Wyświetla wywnioskować mapowanie typu danych i danych metody dostępu dla <xref:System.Data.OleDb>.  
+ Wyświetla listę odroczonych mapowań typu danych i metod dostępu do danych <xref:System.Data.OleDb>dla programu.  
   
  [Mapowanie typu danych ODBC](../../../../docs/framework/data/adonet/odbc-data-type-mappings.md)  
- Wyświetla wywnioskować mapowanie typu danych i danych metody dostępu dla <xref:System.Data.Odbc>.  
+ Wyświetla listę odroczonych mapowań typu danych i metod dostępu do danych <xref:System.Data.Odbc>dla programu.  
   
  [Mapowanie typu danych Oracle](../../../../docs/framework/data/adonet/oracle-data-type-mappings.md)  
- Wyświetla wywnioskować mapowanie typu danych i danych metody dostępu dla <xref:System.Data.OracleClient>.  
+ Wyświetla listę odroczonych mapowań typu danych i metod dostępu do danych <xref:System.Data.OracleClient>dla programu.  
   
  [Liczby zmiennoprzecinkowe](../../../../docs/framework/data/adonet/floating-point-numbers.md)  
- W tym artykule opisano problemy, które deweloperzy często występują podczas pracy z liczb zmiennoprzecinkowych.  
+ Opisuje problemy, które deweloperzy często napotykają podczas pracy z liczbami zmiennoprzecinkowymi.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Typy danych programu SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [Konfigurowanie parametrów i typów danych parametrów](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Pobieranie informacji o schemacie bazy danych](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [System typu wspólnego](../../../../docs/standard/base-types/common-type-system.md)
+- [System typu wspólnego](../../../standard/base-types/common-type-system.md)
 - [Konwertowanie typów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/t8s7t9bf(v=vs.90))
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

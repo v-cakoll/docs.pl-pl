@@ -2,40 +2,40 @@
 title: Mapowanie zewnętrzne
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 0b6ced31f5534bd040917ecc5d241d54d9bee95f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70372473eb2de5d3c4751e237e7beb66315b690e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619712"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950328"
 ---
 # <a name="external-mapping"></a>Mapowanie zewnętrzne
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje *mapowanie zewnętrzne*, za pomocą którego używasz oddzielnego pliku XML, aby określić mapowanie między modelu danych, bazy danych i modelu obiektu procesu. Korzyści wynikające z używania pliku mapowanie zewnętrzne są następujące:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]obsługuje *Mapowanie zewnętrzne*, proces, za pomocą którego używany jest osobny plik XML do określenia mapowania między modelem danych bazy danych i modelem obiektu. Zalety korzystania z zewnętrznego pliku mapowania są następujące:  
   
-- Poza swój kod aplikacji, należy dysponować mapowania kodu. Takie podejście zmniejsza nieładu w kodzie aplikacji.  
+- Kod mapowania można zachować poza kodem aplikacji. Takie podejście zmniejsza czytelność kodu aplikacji.  
   
-- Można traktować plik mapowania zewnętrznych podobny do tego pliku konfiguracji. Na przykład należy zaktualizować, jak aplikacja zachowuje się po wysyłania plików binarnych, po prostu zastępowaniu pliku mapowania zewnętrznych.  
+- Plik mapowania zewnętrznego można traktować jako plik konfiguracji. Można na przykład zaktualizować działanie aplikacji po dostarczeniu plików binarnych przez zamienienie pliku mapowania zewnętrznego.  
   
 ## <a name="requirements"></a>Wymagania  
- Plik mapowania musi być plikiem formatu XML, a plik musi przeprowadzić walidacji względem [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pliku (XSD) definicji schematu.  
+ Plik mapowania musi być plikiem XML, a plik musi być zweryfikowany względem [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pliku definicji schematu (XSD).  
   
  Mają zastosowanie następujące zasady:  
   
 - Plik mapowania musi być plikiem XML.  
   
-- Plik mapowania XML musi być prawidłowy względem pliku definicji schematu XML. Aby uzyskać więcej informacji, zobacz [jak: Weryfikacja DBML i zewnętrznych plików mapowania](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+- Plik mapowania XML musi być prawidłowy względem pliku definicji schematu XML. Aby uzyskać więcej informacji, zobacz [jak: Sprawdź poprawność DBML i](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)zewnętrznych plików mapowania.  
   
-- Mapowanie zewnętrzne zastępuje mapowanie oparte na atrybutach. Oznacza to, kiedy używasz mapowanie zewnętrzne źródło do utworzenia <xref:System.Data.Linq.DataContext>, <xref:System.Data.Linq.DataContext> ignoruje wszystkie atrybuty mapowania, które zostały utworzone w klasach. To zachowanie ma wartość true, czy klasa znajduje się w pliku mapowania zewnętrznych.  
+- Mapowanie zewnętrzne zastępuje mapowanie oparte na atrybutach. Innymi słowy, jeśli używasz zewnętrznego źródła mapowania do tworzenia <xref:System.Data.Linq.DataContext> <xref:System.Data.Linq.DataContext> , ignoruje wszystkie atrybuty mapowania, które zostały utworzone dla klas. To zachowanie jest prawdziwe, niezależnie od tego, czy Klasa jest uwzględniona w zewnętrznym pliku mapowania.  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje użycie hybrydowego dwa podejścia mapowanie (oparte na atrybutach i zewnętrznych).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nie obsługuje użycia hybrydowego dwóch metod mapowania (opartych na atrybutach i zewnętrznych).  
   
 ## <a name="xml-schema-definition-file"></a>Plik definicji schematu XML  
- Mapowanie zewnętrzne w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] musi być prawidłowy względem następujących definicji schematu XML.  
+ Mapowanie zewnętrzne w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] programie musi być prawidłowe względem następującej definicji schematu XML.  
   
- Rozróżnia ten plik definicji schematu z pliku definicji schematu, który służy do sprawdzania poprawności za pomocą pliku DBML. Aby uzyskać więcej informacji, zobacz [generowanie kodu w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
+ Odróżnij ten plik definicji schematu od pliku definicji schematu, który jest używany do walidacji pliku DBML. Aby uzyskać więcej informacji, zobacz [generowanie kodu w LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
->  Użytkowników usługi Visual Studio również znaleźć tego pliku XSD w oknie dialogowym schematów XML jako "LinqToSqlMapping.xsd". Aby użyć tego pliku poprawnie dotyczące weryfikacji pliku mapowania zewnętrznych, zobacz [jak: Weryfikacja DBML i zewnętrznych plików mapowania](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+> Użytkownicy programu Visual Studio również znajdą ten plik XSD w oknie dialogowym schematy XML jako "LinqToSqlMapping. xsd". Aby prawidłowo użyć tego pliku do walidacji pliku mapowania zewnętrznego, zobacz [How to: Sprawdź poprawność DBML i](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)zewnętrznych plików mapowania.  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -145,4 +145,4 @@ elementFormDefault="qualified" >
 
 - [Generowanie kodu w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Instrukcje: Generowanie modelu obiektu jako zewnętrznego pliku](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Instrukcje: Generuj model obiektów jako plik zewnętrzny](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

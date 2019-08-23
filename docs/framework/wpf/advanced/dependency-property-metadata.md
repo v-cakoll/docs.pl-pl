@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 800bf80e5ba3e697c122bcf4b1bc0f302357d087
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 154a2543c62de545e8b2df711d6ad51989d0689d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401628"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964850"
 ---
 # <a name="dependency-property-metadata"></a>Metadane zależności właściwości
 System [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] właściwości zawiera system raportowania metadanych, który wykracza poza to, co może być raportowane przez właściwość za pomocą odbicia lub ogólnych charakterystyk środowiska uruchomieniowego języka wspólnego (CLR). Metadane dla właściwości zależności można również przypisać jednoznacznie przez klasę, która definiuje właściwość zależności, można zmienić, gdy właściwość zależności jest dodawana do innej klasy i może być przesłonięta przez wszystkie klasy pochodne, które dziedziczą Właściwość zależności od definicji klasy podstawowej.  
@@ -38,7 +38,7 @@ System [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-m
  Następnie <xref:System.Windows.PropertyMetadata> Klasa pochodzi od, aby zapewnić bardziej szczegółowe metadane dla przegród architektury, takich jak klasy na poziomie WPF Framework. <xref:System.Windows.UIPropertyMetadata>dodaje raportowanie animacji i <xref:System.Windows.FrameworkPropertyMetadata> udostępnia właściwości na poziomie platformy WPF wymienione w poprzedniej sekcji. Po zarejestrowaniu właściwości zależności można je zarejestrować w tych <xref:System.Windows.PropertyMetadata> klasach pochodnych. Po zbadaniu metadanych typ podstawowy <xref:System.Windows.PropertyMetadata> może być potencjalnie rzutowany na klasy pochodne, aby można było sprawdzić bardziej szczegółowe właściwości.  
   
 > [!NOTE]
->  Cechy właściwości, które można określić w programie <xref:System.Windows.FrameworkPropertyMetadata> , są czasami określane jako "flags" w tej dokumentacji. Podczas tworzenia nowych wystąpień metadanych do użycia w rejestracjach właściwości zależności lub zastąpień metadanych należy określić te wartości przy użyciu wyliczenia <xref:System.Windows.FrameworkPropertyMetadataOptions> flagwise, a następnie podać możliwe połączone wartości wyliczenia do <xref:System.Windows.FrameworkPropertyMetadata> Konstruktor. Jednak po skonstruowaniu te właściwości opcji są ujawniane w ramach <xref:System.Windows.FrameworkPropertyMetadata> jako seria właściwości logicznych, a nie od konstruowania wartości wyliczenia. Właściwości logiczne umożliwiają sprawdzanie każdego warunku, a nie wymaganie zastosowania maski do wartości wyliczenia flagwise w celu uzyskania interesujących Cię informacji. Konstruktor używa połączonej <xref:System.Windows.FrameworkPropertyMetadataOptions> wartości, aby zachować rozsądną długość podpisu konstruktora, natomiast rzeczywiste skonstruowane metadane uwidaczniają dyskretne właściwości, aby wykonywać zapytania o metadane bardziej intuicyjne.  
+> Cechy właściwości, które można określić w programie <xref:System.Windows.FrameworkPropertyMetadata> , są czasami określane jako "flags" w tej dokumentacji. Podczas tworzenia nowych wystąpień metadanych do użycia w rejestracjach właściwości zależności lub zastąpień metadanych należy określić te wartości przy użyciu wyliczenia <xref:System.Windows.FrameworkPropertyMetadataOptions> flagwise, a następnie podać możliwe połączone wartości wyliczenia do <xref:System.Windows.FrameworkPropertyMetadata> Konstruktor. Jednak po skonstruowaniu te właściwości opcji są ujawniane w ramach <xref:System.Windows.FrameworkPropertyMetadata> jako seria właściwości logicznych, a nie od konstruowania wartości wyliczenia. Właściwości logiczne umożliwiają sprawdzanie każdego warunku, a nie wymaganie zastosowania maski do wartości wyliczenia flagwise w celu uzyskania interesujących Cię informacji. Konstruktor używa połączonej <xref:System.Windows.FrameworkPropertyMetadataOptions> wartości, aby zachować rozsądną długość podpisu konstruktora, natomiast rzeczywiste skonstruowane metadane uwidaczniają dyskretne właściwości, aby wykonywać zapytania o metadane bardziej intuicyjne.  
   
 <a name="override_or_subclass"></a>   
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>Kiedy należy przesłonić metadane, kiedy należy utworzyć klasę  
@@ -78,7 +78,7 @@ System [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-m
  W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]programie dołączone właściwości są implementowane jako właściwości zależności. Oznacza to, że mają także metadane właściwości, które poszczególne klasy mogą przesłonić. Zagadnienia dotyczące określania dołączonej właściwości w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programie mają zwykle <xref:System.Windows.DependencyObject> ustawioną właściwość dołączoną. W związku z <xref:System.Windows.DependencyObject> tym każda klasa pochodna może zastąpić metadane dla każdej dołączonej właściwości, ponieważ może być ustawiona w wystąpieniu klasy. Można przesłonić wartości domyślne, wywołania zwrotne lub właściwości raportowania charakterystyki poziomu platformy WPF. Jeśli dołączona właściwość jest ustawiona w wystąpieniu klasy, stosowane są te charakterystyki metadanych właściwości zastępujące. Na przykład można przesłonić wartość domyślną, w taki sposób, aby wartość zastąpienia była raportowana jako wartość właściwości dołączonej w wystąpieniach klasy, za każdym razem, gdy właściwość nie jest ustawiona w inny sposób.  
   
 > [!NOTE]
->  <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> Właściwość nie jest istotna dla dołączonych właściwości.  
+> <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> Właściwość nie jest istotna dla dołączonych właściwości.  
   
 <a name="dp_add_owner"></a>   
 ### <a name="adding-a-class-as-an-owner-of-an-existing-dependency-property"></a>Dodawanie klasy jako właściciela istniejącej właściwości zależności  

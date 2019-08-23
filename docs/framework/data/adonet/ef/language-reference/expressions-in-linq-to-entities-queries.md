@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: 0b77fc4c2a7c7df6efc9f4d8ce4001c39250ab94
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 383339241194c56d0c3178f538f2ac08b2f1b437
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539900"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950390"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>Wyrażenia w zapytaniach składnika LINQ to Entities
-Wyrażenie jest fragment kodu, które może przyjąć jedną wartość, obiektu, metody lub przestrzeni nazw. Wyrażenia może zawierać wartości literału, wywołanie metody, operatora i argumentów lub prostą nazwą. Proste nazwy mogą być nazwa zmiennej, składowej typu, parametru metody, przestrzeń nazw lub typu. Wyrażenia można używać operatorów, które z kolei inne wyrażenia używane jako parametry lub metoda wywołuje metodę, której parametry są z kolei inne wywołania metody. W związku z tym w bardzo złożone wyrażenia może wynosić od prostego.  
+Wyrażenie to fragment kodu, który może zostać oceniony jako pojedyncza wartość, obiekt, metoda lub przestrzeń nazw. Wyrażenia mogą zawierać wartość literału, wywołanie metody, operator i jego operandy albo prostą nazwę. Proste nazwy mogą być nazwą zmiennej, składową, parametrem metody, przestrzenią nazw lub typem. Wyrażenia mogą używać operatorów, które z kolei używają innych wyrażeń jako parametrów lub wywołania metody, których parametry są z kolei inne wywołania metody. W związku z tym wyrażenia mogą być różne od prostych do bardzo złożonych.  
   
- W zapytaniach składnika LINQ to Entities, wyrażeń może zawierać czymkolwiek dozwolonym przez typów w ramach <xref:System.Linq.Expressions> przestrzeń nazw, w tym wyrażenia lambda. Wyrażenia, które może służyć w składniku LINQ do zapytań jednostki są podzbiorem wyrażeń, które mogą być używane do wykonywania zapytań [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  Wyrażenia, które są dostępne w ramach zapytania względem [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] są ograniczone do operacji obsługiwanych przez `ObjectQuery<T>` i źródle danych.  
+ W zapytaniach LINQ to Entities wyrażenia mogą zawierać dowolne elementy dozwolone przez typy w <xref:System.Linq.Expressions> przestrzeni nazw, w tym wyrażenia lambda. Wyrażenia, które mogą być używane w zapytaniach LINQ to Entities są nadzbiorem wyrażeń, których można użyć do wykonywania [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]zapytań względem.  Wyrażenia, które są częścią zapytań, [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] są ograniczone do operacji obsługiwanych przez `ObjectQuery<T>` i bazowe źródło danych.  
   
- W poniższym przykładzie porównanie w `Where` klauzuli to wyrażenie:  
+ W poniższym przykładzie porównanie w `Where` klauzuli jest wyrażeniem:  
   
  [!code-csharp[DP L2E Conceptual Examples#WhereExpression](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#whereexpression)]
  [!code-vb[DP L2E Conceptual Examples#WhereExpression](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#whereexpression)]  
   
 > [!NOTE]
->  Tworzy określonego języka, takich jak C# `unchecked`, nie mają znaczenia w składniku LINQ to Entities.  
+> Określone konstrukcje języka, takie jak C# `unchecked`, nie mają znaczenia w LINQ to Entities.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wyrażenia stałe](../../../../../../docs/framework/data/adonet/ef/language-reference/constant-expressions.md)  
@@ -34,7 +34,7 @@ Wyrażenie jest fragment kodu, które może przyjąć jedną wartość, obiektu,
   
  [Wyrażenia inicjowania](../../../../../../docs/framework/data/adonet/ef/language-reference/initialization-expressions.md)  
   
- [Relacje, właściwości nawigacji i kluczy obcych](/ef/ef6/fundamentals/relationships)  
+ [Relacje, właściwości nawigacji i klucze obce](/ef/ef6/fundamentals/relationships)  
   
 ## <a name="see-also"></a>Zobacz także
 

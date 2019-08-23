@@ -11,39 +11,39 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 630b0c48def77449f426b287a26f95af7cfb930e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36cf71529b1f81c27881638d788117222c37171d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936633"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955881"
 ---
 # <a name="new-operator-visual-basic"></a>New — Operator (Visual Basic)
-Wprowadza `New` klauzulę, aby utworzyć nowe wystąpienie obiektu określa ograniczenie konstruktora dla parametru typu lub identyfikuje `Sub` procedury jak konstruktora klasy.  
+Wprowadza klauzulę do utworzenia nowego wystąpienia obiektu, określa ograniczenie konstruktora dla parametru typu lub `Sub` identyfikuje procedurę jako konstruktora klasy. `New`  
   
 ## <a name="remarks"></a>Uwagi  
- W deklaracji lub instrukcji przypisania `New` klauzula musi określać zdefiniowana klasa, z którego można utworzyć wystąpienia. Oznacza to, że klasa musi ujawniać jeden lub więcej konstruktorów, które mogą uzyskiwać dostęp do kodu wywołującego.  
+ W deklaracji lub przypisaniu `New` klauzula musi określać zdefiniowaną klasę, z której można utworzyć wystąpienie. Oznacza to, że klasa musi uwidaczniać jeden lub więcej konstruktorów, do których kod wywołujący może uzyskać dostęp.  
   
- Możesz użyć `New` klauzuli w instrukcji deklaracji lub instrukcji przypisania. Po uruchomieniu instrukcja wywołuje odpowiedniego konstruktora określonej klasy, przekazując dowolne argumenty, które zostały wprowadzone. Poniższy przykład przedstawia to przez utworzenie wystąpienia `Customer` klasy, która ma dwa konstruktory: jedną, która nie przyjmuje żadnych parametrów, a ta, która przyjmuje jako parametr ciągu.  
+ Można użyć `New` klauzuli w instrukcji deklaracji lub instrukcji przypisania. Po uruchomieniu instrukcji wywołuje odpowiedni Konstruktor określonej klasy, przekazując wszystkie podane argumenty. Poniższy przykład ilustruje to przez utworzenie wystąpień `Customer` klasy, która ma dwa konstruktory, jeden, który nie przyjmuje parametrów i jeden, który pobiera parametr ciągu.  
   
  [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]  
   
- Ponieważ tablice są klasami, `New` można utworzyć nowego wystąpienia tablicy, jak pokazano w poniższych przykładach.  
+ Ponieważ tablice są klasami `New` , można utworzyć nowe wystąpienie tablicy, jak pokazano w poniższych przykładach.  
   
  [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]  
   
- Środowisko uruchomieniowe języka wspólnego (CLR) zgłasza <xref:System.OutOfMemoryException> błąd, jeśli ma za mało pamięci do utworzenia nowego wystąpienia.  
+ Środowisko uruchomieniowe języka wspólnego (CLR) zgłasza <xref:System.OutOfMemoryException> błąd, jeśli nie ma wystarczającej ilości pamięci do utworzenia nowego wystąpienia.  
   
 > [!NOTE]
->  `New` Słowo kluczowe jest również używane w liście parametrów typu do określenia, czy podany typ należy ujawnić dostępny konstruktora bez parametrów. Aby uzyskać więcej informacji na temat parametrów typu i ograniczeń, zobacz [lista typów](../../../visual-basic/language-reference/statements/type-list.md).  
+> `New` Słowo kluczowe jest również używane na listach parametrów typu, aby określić, że dostarczony typ musi uwidaczniać dostępny Konstruktor bez parametrów. Aby uzyskać więcej informacji o parametrach typu i ograniczeniach, zobacz [list typów](../../../visual-basic/language-reference/statements/type-list.md).  
   
- Aby utworzyć procedurę konstruktora dla klasy, ustaw nazwę `Sub` procedury, aby `New` — słowo kluczowe. Aby uzyskać więcej informacji, zobacz [okres istnienia obiektów: Jak obiekty są tworzone i niszczone](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+ Aby utworzyć procedurę konstruktora dla klasy, należy ustawić nazwę `Sub` procedury `New` dla słowa kluczowego. Aby uzyskać więcej informacji, [Zobacz okres istnienia obiektu: Jak obiekty są tworzone i niszczone](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
  Słowa kluczowego `New` można używać w następujących kontekstach:  
   
  [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [z](../../../visual-basic/language-reference/statements/of-clause.md)  
+ [Z](../../../visual-basic/language-reference/statements/of-clause.md)  
   
  [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
@@ -53,4 +53,4 @@ Wprowadza `New` klauzulę, aby utworzyć nowe wystąpienie obiektu określa ogra
 - [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
 - [Lista typów](../../../visual-basic/language-reference/statements/type-list.md)
 - [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Okres istnienia obiektów: Jak obiekty są tworzone i niszczone](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Okres istnienia obiektu: Jak obiekty są tworzone i niszczone](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

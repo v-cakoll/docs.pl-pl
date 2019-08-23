@@ -3,15 +3,15 @@ title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 678e5c705181c55257b1ddb853690ada60ecd17a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793838"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942458"
 ---
 # <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
-Określa kolekcję programy obsługi tokenów zabezpieczających, które są zarejestrowane z punktem końcowym.  
+Określa kolekcję programów obsługi tokenów zabezpieczających, które są zarejestrowane w punkcie końcowym.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -35,26 +35,26 @@ Określa kolekcję programy obsługi tokenów zabezpieczających, które są zar
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|nazwa|Określa nazwę kolekcji programu obsługi tokenów. Jedynymi wartościami, które są rozpoznawane przez platformę, są "funkcję ActAs" i "OnBehalfOf". Jeśli nie określono kolekcji programu obsługi tokenów przy użyciu jednej z tych nazw, kolekcji będą używane podczas przetwarzania ActAs lub OnBehalfOf odpowiednio tokenów.|  
+|nazwa|Określa nazwę kolekcji obsługi tokenów. Jedyne wartości rozpoznawane przez platformę to "ActAs" i "OnBehalfOf". Jeśli kolekcje obsługi tokenów są określone przy użyciu jednej z tych nazw, kolekcja zostanie użyta podczas przetwarzania tokenów ActAs lub OnBehalfOf.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Dodaje programu obsługi tokenów zabezpieczających do kolekcji programu obsługi tokenów.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|Czyści wszystkie programy obsługi tokenów zabezpieczających z kolekcji programu obsługi tokenów.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)|Usuwa programu obsługi tokenów zabezpieczających z kolekcji programu obsługi tokenów.|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Udostępnia konfigurację dla kolekcji programy obsługi tokenów.|  
+|[\<add>](add.md)|Dodaje procedurę obsługi tokenów zabezpieczających do kolekcji obsługi tokenów.|  
+|[\<Wyczyść >](clear.md)|Czyści wszystkie programy obsługi tokenów zabezpieczających z kolekcji obsługi tokenów.|  
+|[\<remove>](remove.md)|Usuwa procedurę obsługi tokenu zabezpieczającego z kolekcji obsługi tokenów.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Zapewnia konfigurację kolekcji programów obsługi tokenów.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usługi.|  
+|[\<identityConfiguration>](identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usług.|  
   
 ## <a name="remarks"></a>Uwagi  
- W konfiguracji usługi, można określić jeden lub więcej kolekcji o nazwie programy obsługi tokenów zabezpieczających. Można określić nazwę dla kolekcji za pomocą `name` atrybutu. Tylko nazwy, które obsługuje platformę są "funkcję ActAs" i "OnBehalfOf". Jeśli istnieją programy obsługi w tych kolekcjach, są one używane przez usługę tokenu zabezpieczającego (STS) zamiast obsługi domyślne podczas przetwarzania `ActAs` i `OnBehalfOf` tokenów.  
+ W konfiguracji usługi można określić co najmniej jedną nazwę kolekcji programów obsługi tokenów zabezpieczających. Możesz określić nazwę kolekcji przy użyciu `name` atrybutu. Jedyne nazwy obsługiwane przez platformę to "ActAs" i "OnBehalfOf". Jeśli w tych kolekcjach istnieją programy obsługi, są one używane przez usługę tokenu zabezpieczającego (STS) zamiast domyślnych programów obsługi podczas przetwarzania `ActAs` i `OnBehalfOf` tokenów.  
   
- Domyślnie kolekcja jest wypełniana przy użyciu następujące typy programów obsługi: <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, i <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>. Można zmodyfikować kolekcji za pomocą `<add>`, `<remove>`, i `<clear>` elementów. Należy się upewnić, że tylko jednego obsługi określonego typu istnieje w kolekcji. Na przykład w przypadku klasy wyprowadzonej obsługi z <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> albo klasy programu obsługi lub <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> może zostać skonfigurowana w jednej kolekcji, ale nie oba.  
+ Domyślnie <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>kolekcja jest wypełniana następującymi typami obsługi:, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler> <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler> <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>,,,, i <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>. Kolekcję można modyfikować za pomocą `<add>`elementów, `<remove>`i `<clear>` . Musisz się upewnić, że w kolekcji istnieje tylko jedna procedura obsługi określonego typu. Na przykład, jeśli pochodna jest procedura obsługi z <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> klasy, program obsługi <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> lub może być skonfigurowany w pojedynczej kolekcji, ale nie w obu tych przypadkach.  
   
- Użyj `<securityTokenHandlerConfiguration>` elementu, aby określić ustawienia konfiguracji dla programów obsługi w kolekcji. Określony przez ten element zastępują ustawienia określone w usłudze za pośrednictwem [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elementu. Niektóre procedury obsługi (w tym niektóre typy wbudowane programów obsługi) może obsługiwać dodatkowej konfiguracji za pomocą elementu podrzędnego `<add>` elementu. Ustawienia określone na program obsługi zastąpić równoważnym ustawień określonych w kolekcji lub usługi.
+ Użyj elementu `<securityTokenHandlerConfiguration>` , aby określić ustawienia konfiguracji dla programów obsługi w kolekcji. Ustawienia określone za pomocą tego elementu zastępują te określone w usłudze za pomocą [ \<elementu IdentityConfiguration >](identityconfiguration.md) . Niektóre programy obsługi (w tym kilka wbudowanych typów obsługi) mogą obsługiwać dodatkową konfigurację za pomocą elementu `<add>` podrzędnego elementu. Ustawienia określone w ustawieniach przesłonięcia programu obsługi określone w kolekcji lub usłudze.

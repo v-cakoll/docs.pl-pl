@@ -3,15 +3,15 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 276f552767897729bf58c6a803669f39c96f09e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 57a1513f6de7f7bd9ea441b6cbc3db6a06d76fc2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790471"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940259"
 ---
 # <a name="wsfederation"></a>\<wsFederation>
-Udostępnia konfigurację dla <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
+Zapewnia konfigurację <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> programu (WSFAM).  
   
 \<system.identityModel.services>  
 \<federationConfiguration>  
@@ -50,22 +50,22 @@ Udostępnia konfigurację dla <xref:System.IdentityModel.Services.WSFederationAu
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|Element authenticationType|Identyfikator URI, który określa typ uwierzytelniania. Ustawia parametr wauth żądanie logowania usługi WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że parametr wauth nie jest uwzględniony w żądaniu.|  
-|aktualność|Żądany maksymalny wiek żądań uwierzytelniania, w ciągu kilku minut. Ustawia parametr wfresh żądanie logowania usługi WS-Federation. Opcjonalna. Wartością domyślną jest zero. Opcjonalna. **Ostrzeżenie:**  W kolejnej wersji programu .NET Framework 4.5 `freshness` atrybut będzie mieć typ `xs:string` i jego wartość domyślna będzie `null`.|  
-|homeRealm|Obszar macierzysty dostawcy tożsamości (IdP) do użycia na potrzeby uwierzytelniania. Ustawia parametr Wh żądanie logowania usługi WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że parametr Wh nie jest uwzględniony w żądaniu.|  
-|issuer|Identyfikator URI zamierzony wystawcy tokenów. Ustawia podstawowy adres URL protokołu WS-Federation logowania żądania i żądania wylogowania wymagane.|  
-|persistentCookiesOnPassiveRedirects|Określa, czy trwałe pliki cookie są wydawane na uwierzytelnianie. Opcjonalna. Wartość domyślna to "false", pliki cookie nie są wydawane.|  
-|passiveRedirectEnabled|Określa, czy WSFAM jest włączone automatyczne przekierowywanie nieautoryzowanych żądań do usługi STS. Opcjonalna. Wartość domyślna to "true", automatycznie przekierowany nieautoryzowanych żądań.|  
-|Zasady|Adres URL, który określa lokalizację odpowiednich zasad do użycia w odpowiedzi na żądania logowania. Wartość domyślna to ciąg pusty. Ustawia parametr wp żądanie logowania usługi WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że parametr wp nie jest uwzględniony w żądaniu.|  
-|obszar|Identyfikator URI żądania obszaru. (Identyfikator URI, który identyfikuje uzależnionej (RP) do usługi tokenu zabezpieczającego (STS).) Ustawia parametr żądania wtrealm logowania usługi WS-Federation żądania. Wymagana.|  
-|Odpowiedz|Adres URL, który określa adres, w którym chcesz otrzymywać odpowiedzi z Usługa tokenu zabezpieczającego (STS) aplikacji jednostki uzależnionej (RP). Ustawia parametr wreply żądanie logowania usługi WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że parametr wreply nie jest uwzględniony w żądaniu.|  
-|Żądanie|Żądanie wystawiania tokenu. Ustawia parametr wreq żądanie logowania usługi WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że parametr wreq nie jest uwzględniony w żądaniu. Z tym wreq lub parametr wreqptr żądania oznacza, że Usługa STS wie, jakiego rodzaju token do wystawiania.|  
-|requestPtr|Adres URL, który określa lokalizację żądania wystawiania tokenu. Ustawia parametr wreqptr żądania. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że parametr wreqptr nie jest uwzględniony w żądaniu. Z tym wreq lub parametr wreqptr żądania oznacza, że Usługa STS wie, jakiego rodzaju token do wystawiania.|  
-|requireHttps|Określa, czy komunikacja z usługi tokenu zabezpieczającego (STS) musi używać protokołu HTTPS. Opcjonalna. Wartość domyślna to "true", należy użyć protokołu HTTPS.|  
-|zasób|Identyfikator URI, który identyfikuje zasób, którego uzyskiwany jest dostęp, podmiotu zależnego (RP) do do usługi tokenu zabezpieczającego (STS). Opcjonalna. Ustawia parametr wres żądanie logowania usługi WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że parametr wres nie jest uwzględniony w żądaniu. **Uwaga:** wres jest parametrem starszej wersji. Określ `realm` atrybutu, aby zamiast tego użyj parametru wtrealm.|  
-|signInQueryString|Udostępnia punkt rozszerzeń, aby określić parametry zapytań aplikacji zdefiniowanej w adresie URL żądania logowania usługi WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że żadne dodatkowe parametry powinny być uwzględnione w żądaniu. Parametry są określane jako fragment ciągu zapytania za pomocą następującej postaci: `"param1=value1&param2=value2&param3=value3"` i tak dalej. **Uwaga:**  W pliku konfiguracji "&" znak w ciągu zapytania musi być określona za pomocą jego odwołania do jednostki `&`.|  
-|signOutQueryString|Udostępnia punkt rozszerzeń, aby określić parametry zapytań aplikacji zdefiniowanej w adresie URL żądania logowania usługi WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że żadne dodatkowe parametry powinny być uwzględnione w żądaniu. Parametry są określane jako fragment ciągu zapytania za pomocą następującej postaci: `"param1=value1&param2=value2&param3=value3"` i tak dalej. **Uwaga:**  W pliku konfiguracji "&" znak w ciągu zapytania musi być określona za pomocą jego odwołania do jednostki `&`.|  
-|signOutReply|Określa adres URL, do którego klient powinien być przekierowany przez usługę tokenu zabezpieczającego (STS) podczas wyrejestrowywania za pośrednictwem protokołu WS-Federation passive. Ustawia parametr wreply żądania wylogowania protokołu WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że żadne dodatkowe parametry powinny być uwzględnione w żądaniu.|  
+|authenticationType|Identyfikator URI, który określa typ uwierzytelniania. Ustawia parametr wauth żądania logowania protokołu WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że parametr wauth nie jest uwzględniony w żądaniu.|  
+|świeżości|Żądany maksymalny wiek żądań uwierzytelniania (w minutach). Ustawia parametr wfresh żądania logowania protokołu WS-Federation. Opcjonalny. Wartością domyślną jest zero. Opcjonalna. **Wyświetlania**  W następnej wersji .NET Framework 4,5 `freshness` atrybut będzie typu `xs:string` , a `null`jego wartość domyślna to.|  
+|homeRealm|Obszar macierzysty dostawcy tożsamości (dostawcy tożsamości), który ma być używany do uwierzytelniania. Ustawia parametr "wh" logowania do usługi WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że parametr Wh nie jest uwzględniony w żądaniu.|  
+|issuer|Identyfikator URI wystawcy zamierzonego tokenu. Ustawia podstawowy adres URL żądań logowania do usługi WS-Federation i wymagane żądania wylogowania.|  
+|persistentCookiesOnPassiveRedirects|Określa, czy trwałe pliki cookie są wydawane przy uwierzytelnianiu. Opcjonalny. Wartość domyślna to "false". pliki cookie nie są wystawiane.|  
+|passiveRedirectEnabled|Określa, czy WSFAM jest włączona, aby automatycznie przekierować nieautoryzowane żądania do usługi STS. Opcjonalna. Wartość domyślna to "true", nieautoryzowane żądania są automatycznie przekierowywane.|  
+|zasad|Adres URL określający lokalizację odpowiednich zasad do użycia w żądaniach logowania. Wartość domyślna to pusty ciąg. Ustawia parametr WP żądania logowania protokołu WS-Federation. Opcjonalny. Wartość domyślna to pusty ciąg, który określa, że parametr WP nie jest uwzględniony w żądaniu.|  
+|obszarów|Identyfikator URI obszaru żądającego. (Identyfikator URI, który identyfikuje jednostkę uzależnioną (RP) do usługi tokenu zabezpieczającego (STS). Ustawia parametr żądania logowania do usługi WS-Federation wtrealm. Wymagana.|  
+|przesyła|Adres URL identyfikujący adres, pod którym aplikacja jednostki uzależnionej (RP) chce otrzymywać odpowiedzi z usługi tokenu zabezpieczającego (STS). Ustawia parametr wreply żądania logowania protokołu WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że parametr wreply nie jest uwzględniony w żądaniu.|  
+|request|Żądanie wystawienia tokenu. Ustawia parametr wreq żądania logowania protokołu WS-Federation. Opcjonalny. Wartość domyślna to pusty ciąg, który określa, że parametr wreq nie jest uwzględniony w żądaniu. W przypadku nieuwzględnienia parametru wreq lub wreqptr w żądaniu oznacza, że usługa STS wie, jakiego rodzaju tokenu należy wystawić.|  
+|requestPtr|Adres URL, który określa lokalizację żądania wystawiania tokenu. Ustawia parametr wreqptr żądania. Opcjonalny. Wartość domyślna to pusty ciąg, który określa, że parametr wreqptr nie jest uwzględniony w żądaniu. W przypadku nieuwzględnienia parametru wreq lub wreqptr w żądaniu oznacza, że usługa STS wie, jakiego rodzaju tokenu należy wystawić.|  
+|requireHttps|Określa, czy komunikacja z usługą tokenu zabezpieczającego (STS) musi korzystać z protokołu HTTPS. Opcjonalny. Wartość domyślna to "true", należy użyć protokołu HTTPS.|  
+|zasób|Identyfikator URI, który identyfikuje dostęp do zasobu, jednostki uzależnionej (RP) do usługi tokenu zabezpieczającego (STS). Opcjonalny. Ustawia parametr wres żądania logowania protokołu WS-Federation. Opcjonalny. Wartość domyślna to pusty ciąg, który określa, że parametr wres nie jest uwzględniony w żądaniu. **Uwaga:** wres jest starszym parametrem. `realm` Określ atrybut, aby zamiast tego użyć parametru wtrealm.|  
+|signInQueryString|Udostępnia punkt rozszerzalności, aby określić parametry zapytania zdefiniowane przez aplikację w adresie URL żądania logowania za pomocą protokołu WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że żadne dodatkowe parametry nie powinny być zawarte w żądaniu. Parametry są określone jako fragment ciągu zapytania przy użyciu następującej formy: `"param1=value1&param2=value2&param3=value3"` i tak dalej. **Uwaga:**  W pliku konfiguracji znak "&" w ciągu zapytania musi być określony za pomocą odwołania `&`do jednostki.|  
+|signOutQueryString|Udostępnia punkt rozszerzalności, aby określić parametry zapytania zdefiniowane przez aplikację w adresie URL żądania logowania za pomocą protokołu WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że żadne dodatkowe parametry nie powinny być zawarte w żądaniu. Parametry są określone jako fragment ciągu zapytania przy użyciu następującej formy: `"param1=value1&param2=value2&param3=value3"` i tak dalej. **Uwaga:**  W pliku konfiguracji znak "&" w ciągu zapytania musi być określony za pomocą odwołania `&`do jednostki.|  
+|signOutReply|Określa adres URL, do którego klient powinien zostać przekierowany przez usługę tokenu zabezpieczającego (STS) podczas wylogowywania pasywnego za pomocą protokołu WS-Federation. Ustawia parametr wreply w żądaniu wylogowania usługi WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że żadne dodatkowe parametry nie powinny być zawarte w żądaniu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -74,18 +74,18 @@ Udostępnia konfigurację dla <xref:System.IdentityModel.Services.WSFederationAu
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Zawiera ustawienia, które skonfigurować <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) i <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
+|[\<federationConfiguration>](federationconfiguration.md)|Zawiera ustawienia, które konfigurują <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) <xref:System.IdentityModel.Services.SessionAuthenticationModule> i (sam).|  
   
 ## <a name="remarks"></a>Uwagi  
- Możesz użyć `<wsFederation>` elementu, aby skonfigurować domyślne ustawienia parametru WS-Federation i domyślne zachowanie dla WSFAM. Zdefiniowane w obszarze ustawienia parametru WS-Federation `<wsFederation>` element ustawiony równoważne właściwości udostępnianych przez <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> klasy. Te właściwości pozostają takie same dla każdego żądania, wystawiony przez WSFAM. Parametry protokołu WS-Federation można zmieniać dynamicznie podczas przetwarzania przez dodanie obsługi zdarzeń dla zdarzenia udostępnianych przez WSFAM; żądania na przykład <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> zdarzeń. Aby uzyskać więcej informacji, zobacz dokumentację dla <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> klasy.  
+ Można użyć elementu, `<wsFederation>` aby skonfigurować domyślne ustawienia parametrów protokołu WS-Federation i domyślne zachowanie dla WSFAM. Ustawienia parametrów protokołu WS-Federation zdefiniowane w `<wsFederation>` obszarze zestaw elementów równoważne właściwości udostępniane <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> przez klasę. Te właściwości pozostają takie same dla każdego żądania wystawionego przez WSFAM. Parametry protokołu WS-Federation można zmienić dynamicznie podczas przetwarzania żądania przez dodanie obsługi zdarzeń dla zdarzeń uwidocznionych przez WSFAM; na przykład <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> zdarzenie. Aby uzyskać więcej informacji, zobacz dokumentację <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> klasy.  
   
- `<wsFederation>` Element jest reprezentowany przez <xref:System.IdentityModel.Services.Configuration.WSFederationElement> klasy. Sam obiekt konfiguracji jest reprezentowany przez <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> klasy. Pojedynczy <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> wystąpienia jest ustawiona na <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> obiekt, który jest dostępny za pośrednictwem <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> właściwości i udostępnia konfigurację dla WSFAM.  
+ Element jest reprezentowany <xref:System.IdentityModel.Services.Configuration.WSFederationElement> przez klasę. `<wsFederation>` Sam obiekt konfiguracji jest reprezentowany przez <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> klasę. Pojedyncze <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> wystąpienie jest ustawione <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> na obiekcie <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> , do którego dostęp jest uzyskiwany za pomocą właściwości i zawiera konfigurację dla WSFAM.  
   
 ## <a name="example"></a>Przykład  
- Pokazano w poniższym XML `<wsFederation>` element, który określa ustawienia dla WSFAM.  
+ Poniższy kod XML przedstawia `<wsFederation>` element określający ustawienia dla WSFAM.  
   
 > [!WARNING]
->  W tym przykładzie WSFAM nie jest wymagany do używania protokołu HTTPS. Jest to spowodowane `requireHttps` atrybutu na `<wsFederation>` ustawiono element `false`. To ustawienie nie jest zalecane dla większości środowisk produkcyjnych, ponieważ może on stwarzać zagrożenie bezpieczeństwa.  
+>  W tym przykładzie WSFAM nie jest wymagana do korzystania z protokołu HTTPS. Jest to spowodowane tym `requireHttps` , że atrybut `<wsFederation>` w elemencie jest `false`ustawiony. To ustawienie nie jest zalecane w przypadku większości środowisk produkcyjnych, ponieważ może stanowić zagrożenie bezpieczeństwa.  
   
 ```xml
 <wsFederation passiveRedirectEnabled="true"   

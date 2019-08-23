@@ -8,20 +8,20 @@ helpviewer_keywords:
 - controlling clocks interactively [WPF]
 - clocks [WPF], controlling interactively
 ms.assetid: d0b520e0-2f18-4cef-977f-2909e709548a
-ms.openlocfilehash: 05989b6a03e03fb5723a70c9c36d5e32f9117049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d18f395974750a6b85458f636a27f6101e7978f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947241"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951335"
 ---
 # <a name="how-to-interactively-control-a-clock"></a>Instrukcje: Interakcyjne sterowanie zegarem
-A <xref:System.Windows.Media.Animation.Clock> obiektu <xref:System.Windows.Media.Animation.ClockController> Właściwość pozwala interaktywnie Uruchom, wstrzymać, wznowić, wyszukiwanie, przejdź zegar okresu wypełnienia i zatrzymać zegara. Tylko zegara głównego drzewa chronometrażu mogą być kontrolowane interaktywnie.  
+Właściwość<xref:System.Windows.Media.Animation.ClockController>obiektupozwala interaktywnie uruchamiać, wstrzymywać, wznawiać, poszukiwać, przełączać do jego okresu wypełniania i <xref:System.Windows.Media.Animation.Clock> zatrzymywać zegar. Tylko zegar główny drzewa chronometrażu może być interaktywnie kontrolowany.  
   
 > [!NOTE]
->  Istnieją inne sposoby, aby interaktywnie animacji kontrolki niewymagających współpracować bezpośrednio z zegary: Możesz również użyć scenorysów. Scenorysy są obsługiwane zarówno w przypadku znaczników, jak i kod. Aby uzyskać przykład, zobacz [animować właściwość przy użyciu scenorysu](how-to-animate-a-property-by-using-a-storyboard.md) lub [Przegląd animacja](animation-overview.md).  
+> Istnieją inne sposoby interaktywnej kontroli animacji, które nie wymagają bezpośredniej pracy z zegarami: można również użyć scenorysów. Scenorysy są obsługiwane zarówno w znacznikach, jak i w kodzie. Aby zapoznać się z przykładem, zobacz [Animuj Właściwość za pomocą scenorysu](how-to-animate-a-property-by-using-a-storyboard.md) lub [Przegląd animacji](animation-overview.md).  
   
- W poniższym przykładzie kilka przyciski są używane do interaktywnie kontrolować zegar animacji.  
+ W poniższym przykładzie kilka przycisków służy do interaktywnego sterowania zegarem animacji.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMClockControllerExample](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ClockControllerExample.cs#graphicsmmclockcontrollerexample)]

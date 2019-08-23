@@ -6,115 +6,115 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 7dec86c724479fde78fcb2e2881dce40b1bf747a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877102"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957193"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Przewodnik: Tworzenie dostępnej aplikacji bazującej na systemie Windows
 
-Tworzenie dostępnej aplikacji ma skutki dla firmy ważne. Wiele rządy mieć ułatwień dostępu przepisami lub ustaleniami dotyczącymi oprogramowania zakupionego. Logo Certified for Windows zawiera wymagania dotyczące ułatwień dostępu. Szacowany mieszkańcy 30 mln Stanów Zjednoczonych samodzielnie, wiele potencjalnych klientów, są zagrożone dostępność oprogramowania.
+Tworzenie dostępnej aplikacji ma istotne znaczenie biznesowe. Wiele rządów ma regulacje dotyczące ułatwień dostępu do zakupu oprogramowania. Logo certyfikowane dla systemu Windows zawiera wymagania dotyczące ułatwień dostępu. W przypadku, gdy wszyscy potencjalni klienci mają wpływ na 30 000 000y, mogą oni uzyskać dostęp do oprogramowania.
 
-Ten przewodnik pozwala sprostać pięć wymagania dotyczące ułatwień dostępu, logo Certified for Windows. Zgodnie z tymi wymaganiami dostępnej aplikacji wykonują następujące czynności:
+Ten przewodnik dotyczy pięciu wymagań dotyczących ułatwień dostępu dla logo certyfikowane dla systemu Windows. Zgodnie z tymi wymaganiami dostępna aplikacja będzie:
 
-- Obsługuje rozmiar panelu sterowania, kolory, czcionki i wprowadź ustawienia. Pasek menu, pasek tytułu, obramowania i pasek stanu będzie wszystkie rozmiar się po użytkownik zmienia ustawienia Panelu sterowania. Nie dodatkowe zmiany do kontrolki lub kodu są wymagane w tej aplikacji.
+- Obsługa rozmiaru panelu sterowania, koloru, czcionki i ustawień wejściowych. Pasek menu, pasek tytułu, obramowania i pasek stanu będą wszystkie zmiany rozmiaru, gdy użytkownik zmieni ustawienia panelu sterowania. W tej aplikacji nie są wymagane żadne dodatkowe zmiany w kontrolkach lub kodzie.
 
-- Obsługa trybu wysokiego kontrastu.
+- Duży kontrast tryb obsługi.
 
-- Podaj udokumentowanego klawiatury dostęp do wszystkich funkcji.
+- Zapewnianie udokumentowanego dostępu klawiaturowego do wszystkich funkcji.
 
-- Udostępnianie lokalizacji fokus klawiatury ModelID.
+- Uwidocznij lokalizację fokusu klawiatury wizualnie i programowo.
 
-- Należy unikać przekazywania ważnych informacji za pomocą dźwięku samodzielnie.
+- Unikaj samodzielnego przekazywania ważnych informacji.
 
-Aby uzyskać więcej informacji, zobacz [zasoby do projektowania dostępnych aplikacji](/visualstudio/ide/reference/resources-for-designing-accessible-applications).
+Aby uzyskać więcej informacji, zobacz [zasoby dotyczące projektowania dostępnych aplikacji](/visualstudio/ide/reference/resources-for-designing-accessible-applications).
 
-Aby uzyskać informacje dotyczące obsługi różnych układów klawiatury, zobacz [najlepsze rozwiązania dotyczące tworzenia aplikacji gotowych](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).
+Aby uzyskać informacje na temat obsługi różnych układów klawiatury, zobacz [najlepsze rozwiązania dotyczące tworzenia aplikacji gotowych do użytku](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).
 
 ## <a name="creating-the-project"></a>Tworzenie projektu
 
-Ten poradnik tworzy interfejsu użytkownika dla aplikacji, która przyjmuje pizza zamówienia. Składa się z <xref:System.Windows.Forms.TextBox> dla nazwy klienta <xref:System.Windows.Forms.RadioButton> grupy, aby wybrać rozmiar pizza <xref:System.Windows.Forms.CheckedListBox> służąca do wybierania toppings, dwie kontrolki przycisku etykietą, kolejność i Anuluj i Menu przy użyciu polecenia Exit.
+W tym instruktażu tworzony jest interfejs użytkownika dla aplikacji, która przyjmuje zamówienia Pizza. Składa się z <xref:System.Windows.Forms.TextBox> nazwy klienta <xref:System.Windows.Forms.RadioButton> , grupy w celu wybrania rozmiaru Pizza, a <xref:System.Windows.Forms.CheckedListBox> do wybrania toppings, dwóch kontrolek z etykietą kolejność i Anuluj oraz menu z poleceniem Exit.
 
-Użytkownik wprowadza nazwę klienta, rozmiar pizza i toppings żądanego. Gdy użytkownik kliknie przycisk Zamówienie, podsumowanie kolejności i jego kosztów są wyświetlane w oknie komunikatu i formanty są wyczyszczone i jest gotowa do następnej kolejności. Gdy użytkownik kliknie przycisk Anuluj, formanty są wyczyszczone i jest gotowa do następnej kolejności. Gdy użytkownik kliknie element menu zakończenia, zamyka program.
+Użytkownik wprowadza nazwę klienta, rozmiar Pizza i żądany toppings. Gdy użytkownik kliknie przycisk zamówienie, w oknie komunikatu zostanie wyświetlone podsumowanie zamówienia i jego koszt, a kontrolki są wyczyszczone i gotowe do kolejnej kolejności. Gdy użytkownik kliknie przycisk Anuluj, formanty są wyczyszczone i gotowe do kolejnej kolejności. Gdy użytkownik kliknie element menu Zakończ, program zostanie zamknięty.
 
-Szczególnym w tym przewodniku nie jest w kodzie system zamówień sprzedaży detalicznej, ale dostępność interfejsu użytkownika. Instruktaż demonstruje funkcje ułatwień dostępu kilka często używanych formantów, w tym przycisków, przyciski radiowe, pola tekstowe i etykiety.
+Nacisk tego instruktażu nie jest kodem dla systemu zamówień sprzedaży detalicznej, ale umożliwia dostęp do interfejsu użytkownika. W przewodniku przedstawiono funkcje ułatwień dostępu kilku często używanych kontrolek, w tym przyciski, przyciski radiowe, pola tekstowe i etykiety.
 
 #### <a name="to-begin-making-the-application"></a>Aby rozpocząć tworzenie aplikacji
 
-- Utwórz nową aplikację Windows w języku Visual Basic lub Visual C#. Nadaj projektowi nazwę **PizzaOrder**. (Aby uzyskać szczegółowe informacje, zobacz [tworzenie nowych rozwiązań i projektów](/visualstudio/ide/creating-solutions-and-projects).)
+- Utwórz nową aplikację systemu Windows w Visual Basic lub wizualizacji C#. Nazwij projekt **PizzaOrder**. (Aby uzyskać szczegółowe informacje [, zobacz Tworzenie nowych rozwiązań i projektów](/visualstudio/ide/creating-solutions-and-projects)).
 
-## <a name="adding-the-controls-to-the-form"></a>Dodawanie formantów do formularza
+## <a name="adding-the-controls-to-the-form"></a>Dodawanie kontrolek do formularza
 
-Podczas dodawania formantów do formularza, należy pamiętać, poniższe wskazówki umożliwiają dostępnej aplikacji:
+Podczas dodawania kontrolek do formularza należy wziąć pod uwagę następujące wytyczne, aby udostępnić dostępną aplikację:
 
-- Ustaw <xref:System.Windows.Forms.Control.AccessibleDescription%2A> i <xref:System.Windows.Forms.Control.AccessibleName%2A> właściwości. W tym przykładzie domyślne ustawienie dla <xref:System.Windows.Forms.Control.AccessibleRole%2A> jest wystarczająca. Aby uzyskać więcej informacji na temat właściwości ułatwień dostępu, zobacz [dostarczanie informacji o ułatwieniach dostępu dla formantów w formularzu Windows](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).
+- Ustaw właściwości <xref:System.Windows.Forms.Control.AccessibleName%2A>i. <xref:System.Windows.Forms.Control.AccessibleDescription%2A> W tym przykładzie domyślnym ustawieniem <xref:System.Windows.Forms.Control.AccessibleRole%2A> jest wystarczające. Aby uzyskać więcej informacji na temat właściwości ułatwień dostępu, zobacz temat [zapewnianie informacji o ułatwieniach dostępu dla kontrolek w formularzu systemu Windows](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).
 
-- Ustaw rozmiar czcionki do 10 punktów i większych.
+- Ustaw rozmiar czcionki na 10 punktów lub większy.
 
   > [!NOTE]
-  > Jeśli ustawisz rozmiar czcionki w formularzu do 10 podczas uruchamiania, wszystkie kontrolki, następnie dodawane do formularza będzie miał rozmiar czcionki, 10.
+  > Jeśli ustawisz rozmiar czcionki formularza na 10 po rozpoczęciu, wówczas wszystkie kontrolki dodane do formularza będą mieć rozmiar czcionki 10.
 
-- Upewnij się, że wszystkie kontrolki etykiety, która opisuje kontrolki TextBox bezpośrednio poprzedza formant pola tekstowego w kolejności tabulacji.
+- Upewnij się, że każda kontrolka etykieta opisująca kontrolkę TextBox bezpośrednio poprzedza formant TextBox w kolejności tabulacji.
 
-- Dodaj klucz dostępu, korzystając ze znaku "&", do <xref:System.Windows.Forms.Control.Text%2A> dowolną kontrolkę, użytkownik może chcieć przejść do właściwości.
+- Dodaj klucz dostępu, używając znaku "&", do <xref:System.Windows.Forms.Control.Text%2A> właściwości każdej kontrolki, do której użytkownik może chcieć przejść.
 
-- Dodaj klucz dostępu, korzystając ze znaku "&", do <xref:System.Windows.Forms.Control.Text%2A> właściwość etykiety, który poprzedza formant, który użytkownik może chcieć przejść do. Ustawić etykiety <xref:System.Windows.Forms.Label.UseMnemonic%2A> właściwości `true`, dzięki czemu fokus jest ustawiony do następnej kontrolki w kolejności tabulacji, gdy użytkownik naciśnie klawisz dostępu.
+- Dodaj klucz dostępu przy użyciu znaku "&" do <xref:System.Windows.Forms.Control.Text%2A> właściwości etykiety, która poprzedza kontrolkę, do której użytkownik może chcieć przejść. Ustaw <xref:System.Windows.Forms.Label.UseMnemonic%2A> Właściwość Labels na `true`, tak aby fokus został ustawiony na następną kontrolkę w kolejności tabulacji, gdy użytkownik naciśnie klawisz dostępu.
 
 - Dodaj klucze dostępu do wszystkich elementów menu.
 
-#### <a name="to-make-your-windows-application-accessible"></a>Aby udostępnić aplikację Windows
+#### <a name="to-make-your-windows-application-accessible"></a>Aby udostępnić aplikację systemu Windows
 
-- Dodaj formanty do formularza, a następnie ustaw właściwości, zgodnie z poniższym opisem. Zobacz obraz na koniec tabeli dla modeli rozmieszczanie formantów w formularzu.
+- Dodaj kontrolki do formularza i ustaw właściwości zgodnie z poniższym opisem. Zapoznaj się z obrazem na końcu tabeli, aby zapoznać się z modelem jak rozmieścić kontrolki w formularzu.
 
    |Obiekt|Właściwość|Wartość|
    |------------|--------------|-----------|
-   |Formularz Form1|AccessibleDescription|Formularz zamówienia|
+   |Formularz|AccessibleDescription|Formularz zamówienia|
    ||AccessibleName|Formularz zamówienia|
    ||Rozmiar czcionki|10|
-   ||Tekst|Formularz zamówienia pizza|
-   |PictureBox|Nazwa|logo|
-   ||AccessibleDescription|Wycinek pizza|
+   ||Tekst|Formularz zamówienia Pizza|
+   |Elemencie|Nazwa|logo|
+   ||AccessibleDescription|Wycinek elementu Pizza|
    ||AccessibleName|Logo firmy|
-   ||Obraz|Wszystkie ikony lub mapy bitowej|
+   ||Obraz|Dowolna ikona lub mapa bitowa|
    |Etykieta|Nazwa|companyLabel|
    ||Tekst|Dobre Pizza|
    ||TabIndex|1|
    ||AccessibleDescription|Nazwa firmy|
    ||AccessibleName|Nazwa firmy|
-   ||Backcolor|Niebieski|
-   ||ForeColor|Żółty|
+   ||BackColor|Niebieski|
+   ||ForeColor|Kryje|
    ||Rozmiar czcionki|18|
    |Etykieta|Nazwa|customerLabel|
-   ||Tekst|& Nazwa|
+   ||Tekst|Nazwa &|
    ||TabIndex|2|
    ||AccessibleDescription|Etykieta nazwy klienta|
    ||AccessibleName|Etykieta nazwy klienta|
    ||UseMnemonic|Prawda|
    |TextBox|Nazwa|customerName|
-   ||Tekst|(Brak)|
+   ||Tekst|dawaj|
    ||TabIndex|3|
    ||AccessibleDescription|Nazwa klienta|
    ||AccessibleName|Nazwa klienta|
    |GroupBox|Nazwa|sizeOptions|
-   ||AccessibleDescription|Opcje rozmiaru pizza|
-   ||AccessibleName|Opcje rozmiaru pizza|
-   ||Tekst|Rozmiar pizza|
+   ||AccessibleDescription|Opcje rozmiaru Pizza|
+   ||AccessibleName|Opcje rozmiaru Pizza|
+   ||Tekst|Rozmiar Pizza|
    ||TabIndex|4|
    |RadioButton|Nazwa|smallPizza|
-   ||Tekst|& małe $6.00|
+   ||Tekst|& mała $6,00|
    ||Zaznaczone|Prawda|
    ||TabIndex|0|
-   ||AccessibleDescription|Małe pizza|
-   ||AccessibleName|Małe pizza|
+   ||AccessibleDescription|Mały Pizza|
+   ||AccessibleName|Mały Pizza|
    |RadioButton|Nazwa|largePizza|
-   ||Tekst|& dużych 10,00 zł|
+   ||Tekst|& duże $10,00|
    ||TabIndex|1|
-   ||AccessibleDescription|Duże pizza|
-   ||AccessibleName|Duże pizza|
+   ||AccessibleDescription|Duże Pizza|
+   ||AccessibleName|Duże Pizza|
    |Etykieta|Nazwa|toppingsLabel|
-   ||Tekst|& toppings ($0,75 każdy)|
+   ||Tekst|& toppings ($0,75)|
    ||TabIndex|5|
    ||AccessibleDescription|Etykieta toppings|
    ||AccessibleName|Etykieta toppings|
@@ -123,46 +123,46 @@ Podczas dodawania formantów do formularza, należy pamiętać, poniższe wskaz�
    ||TabIndex|6|
    ||AccessibleDescription|Dostępne toppings|
    ||AccessibleName|Dostępne toppings|
-   ||Elementy|Pepperoni, produkcji kiełbas, grzyby|
+   ||Elementy|Pepperoni, kiełbasy, grzyby|
    |Przycisk|Nazwa|kolejność|
-   ||Tekst|& kolejność|
+   ||Tekst|Kolejność &|
    ||TabIndex|7|
-   ||AccessibleDescription|Łączna liczba kolejności|
-   ||AccessibleName|Zamówienia|
+   ||AccessibleDescription|Suma zamówienia|
+   ||AccessibleName|Suma zamówień|
    |Przycisk|Nazwa|Anuluj|
    ||Tekst|& Anuluj|
    ||TabIndex|8|
    ||AccessibleDescription|Anulowanie zamówienia|
-   ||AccessibleName|Anulowanie zamówienia|
+   ||AccessibleName|Anuluj zamówienie|
    |MainMenu|Nazwa|theMainMenu|
-   |Element MenuItem|Nazwa|fileCommands|
-   ||Tekst|&File|
-   |Element MenuItem|Nazwa|exitApp|
-   ||Tekst|Za & kończ|
+   |MenuItem|Nazwa|fileCommands|
+   ||Tekst|Plik &|
+   |MenuItem|Nazwa|exitApp|
+   ||Tekst|E & kończ|
 
-   Formularz będzie wyglądać podobnie do następującego:
+   Formularz będzie wyglądać podobnie jak na poniższym obrazie:
 
-   ![Formularz kolejności pizza z pola tekstowego, a rozmiar i toppings wybór nazwy.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
+   ![Formularz zamówienia Pizza z nazwą pola tekstowego oraz rozmiarem i toppings zaznaczeniem.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
 
-## <a name="supporting-high-contrast-mode"></a>Obsługa trybu wysokiego kontrastu
+## <a name="supporting-high-contrast-mode"></a>Tryb obsługi duży kontrast
 
-Trybu wysokiego kontrastu jest ustawienie systemu Windows, który poprawia czytelność przy użyciu kontrastujących i rozmiary czcionek, które są przydatne dla użytkowników niedowidzących. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Właściwość została podana w celu ustalenia, czy ustawiono trybu wysokiego kontrastu.
+Tryb duży kontrast to ustawienie systemu Windows, które zwiększa czytelność przy użyciu kolorów kontrastu i rozmiarów czcionek, które są korzystne dla użytkowników niedowidzących. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Właściwość jest dostarczana, aby określić, czy tryb duży kontrast jest ustawiony.
 
-Jeśli jest SystemInformation.HighContrast `true`, aplikacja powinna:
+Jeśli SystemInformation. HighContrast ma `true`wartość, aplikacja powinna:
 
 - Wyświetlanie wszystkich elementów interfejsu użytkownika przy użyciu schematu kolorów systemu
 
-- Przekazuje za pomocą wizualnych lub dźwięk wszystkie informacje, które jest przekazywane przez kolor. Na przykład jeśli elementy konkretnej listy są wyróżnione za pomocą czerwonego czcionki, można również dodasz pogrubioną czcionką, tak, aby użytkownik miał cue-color, że elementy są wyróżnione.
+- Przekazuj podpowiedzi wizualne lub dźwiękowe informacje, które są przekazywane przez kolor. Na przykład, jeśli konkretne elementy listy są wyróżnione przy użyciu czerwonej czcionki, można również dodać pogrubienie do czcionki, aby użytkownik miał niekolorową sygnalizację, że elementy są wyróżnione.
 
-- Pomiń wszelkie obrazy i wzorce pod tekstem
+- Pomiń wszystkie obrazy lub wzorce w tle tekstu
 
-Aplikacja powinna sprawdzać, czy ustawienie <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> podczas uruchamiania aplikacji i odpowiedzieć na zdarzenie systemowe <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>. <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> Zdarzenie jest wywoływane zawsze wtedy, gdy wartość <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> zmiany.
+Aplikacja powinna sprawdzić ustawienie <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> podczas uruchamiania aplikacji i reagować na zdarzenie <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>systemowe. Zdarzenie jest zgłaszane przy każdej <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> wartości zmiany. <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>
 
-W naszej aplikacji jest jedynym elementem, który nie używa ustawień systemowych dla koloru `lblCompanyName`. <xref:System.Drawing.SystemColors> Klasa jest używana, aby zmienić ustawienia koloru etykiety na kolory systemowe wybrane przez użytkownika.
+W naszej aplikacji jedynym elementem, który nie korzysta z ustawień systemowych dla koloru jest `lblCompanyName`. <xref:System.Drawing.SystemColors> Klasa służy do zmiany ustawień koloru etykiety na kolory systemu wybrane przez użytkownika.
 
-#### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>Aby włączyć tryb dużego kontrastu w skutecznym sposobem
+#### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>Aby włączyć tryb duży kontrast w skuteczny sposób
 
-1. Utwórz metodę, aby ustawić kolory, etykiety kolory systemowe.
+1. Utwórz metodę, aby ustawić kolory etykiety na kolory systemowe.
 
     ```vb
     ' Visual Basic
@@ -194,7 +194,7 @@ W naszej aplikacji jest jedynym elementem, który nie używa ustawień systemowy
     }
     ```
 
-2. Wywołaj `SetColorScheme` procedury w Konstruktorze formularza (`Public Sub New()` w języku Visual Basic i `public class Form1` w elemencie wizualnym C#). Aby uzyskać dostęp do konstruktora w języku Visual Basic, konieczne będzie rozwiń region etykietą **kod wygenerowany przez projektanta formularzy Windows**.
+2. Wywołaj`Public Sub New()` `public class Form1` C#procedurę w konstruktorze formularzy (w Visual Basic i w wizualizacji). `SetColorScheme` Aby uzyskać dostęp do konstruktora w Visual Basic, należy rozwinąć region o nazwie **kod wygenerowany przez projektanta formularzy systemu Windows**.
 
     ```vb
     ' Visual Basic
@@ -214,7 +214,7 @@ W naszej aplikacji jest jedynym elementem, który nie używa ustawień systemowy
     }
     ```
 
-3. Utwórz procedurę zdarzenia z odpowiednim podpisem, aby odpowiedzieć na <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> zdarzeń.
+3. Utwórz procedurę zdarzenia z odpowiednim podpisem, aby odpowiedzieć na <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> zdarzenie.
 
     ```vb
     ' Visual Basic
@@ -233,7 +233,7 @@ W naszej aplikacji jest jedynym elementem, który nie używa ustawień systemowy
     }
     ```
 
-4. Dodaj kod konstruktora formularza po wywołaniu `InitializeComponents`, żeby podpiąć procedury zdarzenia zdarzeń systemu. Ta metoda wywołuje `SetColorScheme` procedury.
+4. Dodaj kod do konstruktora formularzy po wywołaniu do `InitializeComponents`, aby podłączyć procedurę zdarzenia do zdarzenia systemowego. Ta metoda wywołuje `SetColorScheme` procedurę.
 
     ```vb
     ' Visual Basic
@@ -258,10 +258,10 @@ W naszej aplikacji jest jedynym elementem, który nie używa ustawień systemowy
     }
     ```
 
-5. Dodaj kod do formularza <xref:System.Windows.Forms.Control.Dispose%2A> metoda przed wywołaniem do <xref:System.Windows.Forms.Control.Dispose%2A> metody klasy bazowej, aby zwolnić zdarzenia po zamknięciu aplikacji. Aby uzyskać dostęp do <xref:System.Windows.Forms.Control.Dispose%2A> metoda w języku Visual Basic, konieczne będzie rozwiń region, kod generowany przez projektanta formularzy Windows etykietą.
+5. Dodaj kod do metody formularza <xref:System.Windows.Forms.Control.Dispose%2A> przed wywołaniem <xref:System.Windows.Forms.Control.Dispose%2A> metody klasy bazowej, aby zwolnić zdarzenie po zamknięciu aplikacji. Aby uzyskać dostęp <xref:System.Windows.Forms.Control.Dispose%2A> do metody w Visual Basic, należy rozwinąć region o nazwie kod wygenerowany przez projektanta formularzy systemu Windows.
 
     > [!NOTE]
-    > Kod zdarzenia system działa wątku oddzielnie od głównej aplikacji. Jeśli zdarzenie nie jest zwolniony, kod, który można dołączyć do zdarzenia będzie działać po zamknięciu programu.
+    > Kod zdarzenia systemowego uruchamia wątek oddzielony od głównej aplikacji. Jeśli nie zwolnisz zdarzenia, kod, który zostanie poddany do zdarzenia, zostanie uruchomiony nawet po zamknięciu programu.
 
     ```vb
     ' Visual Basic
@@ -297,38 +297,38 @@ W naszej aplikacji jest jedynym elementem, który nie używa ustawień systemowy
 
 6. Naciśnij klawisz F5, aby uruchomić aplikację.
 
-## <a name="conveying-important-information-by-means-other-than-sound"></a>Przekazywania ważnych informacji przy użyciu metod innych niż dźwięku
+## <a name="conveying-important-information-by-means-other-than-sound"></a>Przekazywanie ważnych informacji przy użyciu metody innej niż dźwięk
 
-W tej aplikacji żadne informacje jest przekazywany za pomocą samodzielnie dźwięku. Jeśli używasz dźwięk w aplikacji należy dostarczać informacji za pomocą innych środków także.
+W tej aplikacji żadne informacje nie są przekazywane przez sam dźwięk. Jeśli używasz dźwięku w aplikacji, należy również podać informacje o innych sposobach.
 
-#### <a name="to-supply-information-by-some-other-means-than-sound"></a>Aby podać informacje w inny sposób niż dźwięku
+#### <a name="to-supply-information-by-some-other-means-than-sound"></a>Aby podać informacje w inny sposób niż dźwięk
 
-1. Należy na pasku tytułu flash przy użyciu funkcji Windows API FlashWindow. Na przykład sposób wywołania funkcji Windows API zobacz [instruktażu: Wywoływanie Windows API](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
+1. Zmień pasek tytułu na Flash przy użyciu funkcji interfejsu API systemu Windows FlashWindow. Aby zapoznać się z przykładem sposobu wywoływania funkcji interfejsu API systemu [Windows, zobacz Przewodnik: Wywoływanie interfejsów](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)API systemu Windows.
 
     > [!NOTE]
-    > Użytkownik może korzystać z usługi Windows WartownikDźwięków włączone, co spowoduje również okna flash odtwarzania dźwięki systemu za pomocą wbudowanych głośników komputera.
+    > Użytkownik może mieć włączoną usługę Windows WartownikDźwięków, co spowoduje również, że okno zostanie wybłyskowe, gdy dźwięki systemu są odtwarzane za pomocą wbudowanego głośnika komputera.
 
-2. Wyświetlania ważnych informacji w kompaktowym niemodalnym oknie, dzięki czemu użytkownik może odpowiedzieć na.
+2. Wyświetl ważne informacje w oknie niemodalnym, aby użytkownik mógł je odpowiedzieć.
 
-3. Wyświetla okno komunikatu, który uzyskuje fokus klawiatury. Należy unikać tej metody, gdy użytkownik może wpisać.
+3. Wyświetla okno komunikatu, które uzyskuje fokus klawiatury. Należy unikać tej metody, gdy użytkownik może pisać.
 
-4. Wyświetl wskaźnik stanu w obszarze stanu powiadomień paska zadań. Aby uzyskać więcej informacji, zobacz [dodawanie ikon aplikacji do paska zadań za pomocą składnika NotifyIcon formularzy Windows](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).
+4. Wyświetl wskaźnik stanu w obszarze powiadomień o stanie na pasku zadań. Aby uzyskać szczegółowe informacje, zobacz [Dodawanie ikon aplikacji do paska zadań ze składnikiem Windows Forms NotifyIcon](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).
 
 ## <a name="testing-the-application"></a>Testowanie aplikacji
 
-Przed wdrożeniem aplikacji, należy przetestować funkcje ułatwień dostępu, które zostały zaimplementowane.
+Przed wdrożeniem aplikacji należy przetestować funkcje ułatwień dostępu, które zostały zaimplementowane.
 
 #### <a name="to-test-accessibility-features"></a>Aby przetestować funkcje ułatwień dostępu
 
-1. Aby przetestować dostęp za pomocą klawiatury, odłącz myszy, a następnie przejdź do interfejsu użytkownika dla każdej funkcji, za pomocą klawiatury. Upewnij się, że wszystkie zadania można wykonać za pomocą klawiatury, tylko.
+1. Aby przetestować dostęp do klawiatury, odłącz mysz i przejdź do interfejsu użytkownika dla każdej funkcji przy użyciu tylko klawiatury. Upewnij się, że wszystkie zadania mogą być wykonywane tylko przy użyciu klawiatury.
 
-2. Aby przetestować obsługę dużego kontrastu, wybierz ikonę aplet Opcje ułatwień dostępu w Panelu sterowania. Kliknij kartę ekran, a następnie zaznacz pole wyboru Użyj o wysokim kontraście. Przejdź do wszystkich elementów interfejsu użytkownika, aby upewnić się, że odzwierciedlenie zmiany kolorów i czcionek. Ponadto upewnij się, obrazów lub wzorców rysowane pod tekstem zostaną pominięte.
+2. Aby przetestować obsługę duży kontrast, wybierz ikonę Opcje ułatwień dostępu w panelu sterowania. Kliknij kartę Wyświetlanie, a następnie zaznacz pole wyboru Użyj duży kontrast. Przejdź przez wszystkie elementy interfejsu użytkownika, aby upewnić się, że zmiany koloru i czcionki są odzwierciedlone. Upewnij się również, że obrazy lub wzorce rysowane w tle tekstu są pomijane.
 
     > [!NOTE]
-    > Windows NT 4 nie ma ikony opcji ułatwień dostępu w Panelu sterowania. W związku z tym tę procedurę dla zmiany ustawienia SystemInformation.HighContrast nie działa w Windows NT 4.
+    > W systemie Windows NT 4 nie ma ikony Opcje ułatwień dostępu w panelu sterowania. W rezultacie ta procedura zmiany ustawienia SystemInformation. HighContrast nie działa w systemie Windows NT 4.
 
-3. Inne narzędzia są łatwo dostępne dla testów dostępności aplikacji.
+3. Inne narzędzia są łatwo dostępne do testowania dostępności aplikacji.
 
-4. Aby przetestować udostępnianie fokus klawiatury, uruchom program Lupa. (Aby go otworzyć, kliknij przycisk **Start** menu wskaż **programy**, wskaż polecenie **Akcesoria**, wskaż **ułatwień dostępu**, a następnie kliknij przycisk  **Program Lupa**). Przejdź interfejsu użytkownika przy użyciu przełączania klawiatury i myszy. Upewnij się poprawnie w systemie śledzenia wszystkich nawigacji **Lupa**.
+4. Aby przetestować Uwidacznianie fokusu klawiatury, uruchom program Lupa. (Aby otworzyć, kliknij menu **Start** , wskaż pozycję **programy**, wskaż pozycję **akcesoria**, wskaż pozycję **ułatwienia dostępu**, a następnie kliknij pozycję **Lupa**). Przejdź do interfejsu użytkownika, używając klawisza Tab i myszy. Upewnij się, że cała nawigacja jest prawidłowo śledzona w programie **Lupa**.
 
-5. Aby przetestować uwidaczniającą elementów na ekranie, uruchom Sprawdź, a następnie użyj myszy i klawisz TAB, aby dotrzeć do każdego elementu. Upewnij się, że informacje znajdujące się w polach Nazwa, stan, rola, lokalizacji i wartość okna Sprawdź zrozumiały dla użytkownika dla każdego obiektu w interfejsie użytkownika.
+5. Aby przetestować Uwidacznianie elementów ekranu, uruchom inspekcję i użyj zarówno myszy, jak i klawisza TAB, aby dotrzeć do każdego elementu. Upewnij się, że informacje prezentowane w polach Nazwa, stan, rola, lokalizacja i wartość okna inspekcji są zrozumiałe dla użytkownika dla każdego obiektu w interfejsie użytkownika.

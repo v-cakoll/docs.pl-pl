@@ -8,18 +8,18 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 88bc4212-3f4e-4bac-bae0-faef31944b71
-ms.openlocfilehash: 559c2c3f13aa92f5d4e27504e37fd886334e69bf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac9b20d1fd3356941b75df686b2556b3c3c4f179
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033062"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914426"
 ---
 # <a name="ui-automation-providers-for-managed-code-how-to-topics"></a>Dostawcy automatyzacji interfejsu użytkownika do kodu zarządzanego — Tematy porad
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
   
- Ta sekcja zawiera przykłady kodu, które pokazują zadania na piśmie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] dostawców na potrzeby [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elementów.  
+ Ta sekcja zawiera przykłady kodu, które demonstrują zadania [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] w przypadku [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] pisania dostawców dla elementów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Udostępnianie dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  

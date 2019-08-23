@@ -10,27 +10,27 @@ helpviewer_keywords:
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6605fa1923dc4fdaf4f12a7c8fc7c1e344673b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8dbad5da42f5ed4e03751534a3a183615a9757cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925375"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960023"
 ---
 # <a name="foreground-and-background-threads"></a>Wątki pierwszego planu i tła
-Wątek jest wątku w tle lub wątku na pierwszym planie. Wątków w tle są takie same, wątki pierwszoplanowe z jednym wyjątkiem: wątku w tle nie przechowuje zarządzanym środowisku wykonywania uruchomiona. Gdy wszystkie wątki pierwszoplanowe zostały zatrzymane w ramach procesu zarządzanego (gdzie plik .exe jest zarządzanym zestawem), system zatrzymuje wszystkich wątków w tle i zamyka.  
+Zarządzany wątek jest wątkiem w tle lub wątkiem pierwszego planu. Wątki w tle są takie same jak wątki pierwszego planu z jednym wyjątkiem: wątek w tle nie utrzymuje uruchomionego środowiska wykonywania zarządzanego. Po zatrzymaniu wszystkich wątków pierwszego planu w procesie zarządzanym (gdzie plik exe jest zestawem zarządzanym) system zatrzymuje wszystkie wątki w tle i zamyka.  
   
 > [!NOTE]
->  Środowisko uruchomieniowe zatrzymania wątku w tle, ponieważ trwa zamykanie procesu, jest zgłaszany żaden wyjątek w wątku. Jednak gdy wątki są zatrzymane, ponieważ <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> metoda zwalnia domeny aplikacji <xref:System.Threading.ThreadAbortException> jest zgłaszany w wątki pierwszego planu i tła.  
+> Gdy środowisko uruchomieniowe zatrzyma wątek w tle, ponieważ trwa zamykanie procesu, w wątku nie jest zgłaszany żaden wyjątek. Jeśli jednak wątki są zatrzymane <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> <xref:System.Threading.ThreadAbortException> , ponieważ metoda zwalnia domenę aplikacji, jest zgłaszany zarówno w wątku na pierwszym planie, jak i w tle.  
   
- Użyj <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType> właściwości, aby określić, czy wątek jest tło lub wątku na pierwszym planie lub zmienić jego stan. Wątek, który można zmienić na wątku w tle w dowolnym momencie przez ustawienie jego <xref:System.Threading.Thread.IsBackground%2A> właściwość `true`.  
+ Użyj właściwości <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType> , aby określić, czy wątek jest wątkiem w tle, czy na pierwszym planie czy zmienić jego stan. Wątek można w dowolnym momencie zmienić na wątek w tle przez ustawienie jego <xref:System.Threading.Thread.IsBackground%2A> właściwości na. `true`  
   
 > [!IMPORTANT]
->  Pierwszy plan lub tło stan wątku nie ma wpływu na wynik nieobsługiwany wyjątek w wątku. W programie .NET Framework 2.0 nieobsługiwanego wyjątku w wątki pierwszego planu i tła powoduje zakończenia aplikacji. Zobacz [wyjątki w zarządzanych wątkach](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
+> Stan pierwszego planu lub tła wątku nie wpływa na wynik nieobsługiwanego wyjątku w wątku. W .NET Framework w wersji 2,0, nieobsłużony wyjątek w wątkach na pierwszym planie lub w tle powoduje zakończenie działania aplikacji. Zobacz [wyjątki w zarządzanych wątkach](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
   
- Wątki, które należą do puli wątków zarządzanych (oznacza to, wątki, których <xref:System.Threading.Thread.IsThreadPoolThread%2A> właściwość `true`) są wątków w tle. Wszystkie wątki, które wprowadzać środowiska wykonawczego zarządzanych z niezarządzanego kodu są oznaczone jako wątków w tle. Wszystkie wątki, generowane przez tworzenie i uruchamianie nowego <xref:System.Threading.Thread> obiektu są przez domyślne, wątki pierwszego planu.  
+ Wątki należące do puli wątków zarządzanych (czyli wątki, których <xref:System.Threading.Thread.IsThreadPoolThread%2A> właściwość jest `true`) są wątkami w tle. Wszystkie wątki, które wprowadzają zarządzane środowisko wykonawcze z kodu niezarządzanego, są oznaczane jako wątki w tle. Wszystkie wątki wygenerowane przez tworzenie i uruchamianie nowego <xref:System.Threading.Thread> obiektu są domyślnie wątki pierwszego planu.  
   
- Jeśli używasz wątku monitorować działania, takie jak połączenia z gniazdem, ustawić jej <xref:System.Threading.Thread.IsBackground%2A> właściwość `true` tak, aby wątek nie uniemożliwia zakończenie procesu.  
+ Jeśli użyjesz wątku do monitorowania działania, takiego jak połączenie gniazda, ustaw jego <xref:System.Threading.Thread.IsBackground%2A> właściwość na `true` tak, aby wątek nie uniemożliwił przerwania procesu.  
   
 ## <a name="see-also"></a>Zobacz także
 

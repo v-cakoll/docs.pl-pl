@@ -2,27 +2,27 @@
 title: Konfigurowanie usługi współużytkowania portów Net.TCP
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: dbc27f0f15be41c5384d8a1f73f0226c3f0f83ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: c5dc80391ec5f655fadd31c59eef76015b9965d8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040186"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949616"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Konfigurowanie usługi współużytkowania portów Net.TCP
-Użyj transportu Net.TCP własnym obsługiwanych usług można kontrolować kilka ustawień zaawansowanych, takich jak `ListenBacklog` i `MaxPendingAccepts`, które sterują zachowaniem bazowego gniazda TCP, używana do komunikacji sieciowej. Jednak te ustawienia dla każdego gniazda stosowane tylko wtedy na poziomie powiązania Jeśli powiązania transportu wyłączył możliwość współużytkowania portów, co jest domyślnie włączona.  
+Samoobsługowe usługi korzystające z transportu net. TCP mogą kontrolować kilka ustawień zaawansowanych, takich jak `ListenBacklog` i `MaxPendingAccepts`, które określają zachowanie bazowego gniazda TCP używanego do komunikacji sieciowej. Jednak te ustawienia dla każdego gniazda są stosowane tylko na poziomie powiązania, Jeśli powiązanie transportowe ma wyłączone Udostępnianie portów, które jest domyślnie włączone.  
   
- Po powiązaniu net.tcp umożliwia udostępnianie portów (przez ustawienie `portSharingEnabled =true` na element powiązania transportu), niejawnie zezwala procesie zewnętrznym (czyli SMSvcHost.exe, który hostuje usługi udostępniania portów Net.TCP) do zarządzania gniazda TCP w jej imieniu. Na przykład korzystając z protokołu TCP, należy określić:  
+ Gdy powiązanie net. TCP włącza Udostępnianie portów (przez ustawienie `portSharingEnabled =true` elementu powiązania transportu), niejawnie zezwala na proces zewnętrzny (tj. SMSvcHost. exe, który hostuje usługę udostępniania portów Net. TCP) do zarządzania gniazdem TCP w jego imieniu. Na przykład w przypadku używania protokołu TCP należy określić:  
   
 ```xml  
 <tcpTransport portSharingEnabled="true"  />  
 ```  
   
- Po skonfigurowaniu w ten sposób wszystkie ustawienia gniazda określonego dla elementu powiązania transportu usługi są ignorowane na rzecz ustawień gniazda określonego przez SMSvcHost.exe.  
+ Po skonfigurowaniu w ten sposób wszystkie ustawienia gniazda określone w elemencie powiązania transportowego usługi są ignorowane na korzyść ustawień gniazda określonych przez SMSvcHost. exe.  
   
- Aby skonfigurować SMSvcHost.exe, Utwórz plik konfiguracyjny XML o nazwie pliku konfiguracyjnego SmSvcHost.exe.config i umieść go w tym samym katalogu fizycznego SMSvcHost.exe plik wykonywalny (na przykład C:\Windows\Microsoft.NET\Framework\v4.5).  
+ Aby skonfigurować SMSvcHost. exe, Utwórz plik konfiguracji XML o nazwie SmSvcHost. exe. config i umieść go w tym samym katalogu fizycznym, co plik wykonywalny SMSvcHost. exe (na przykład C:\Windows\Microsoft.NET\Framework\v4.5).  
   
- W poniższym przykładzie pokazano próbkę pliku konfiguracyjnego SMSvcHost.exe.config, używając ustawień domyślnych dla wszystkich wartości można skonfigurować określone jawnie.  
+ Poniższy przykład ilustruje przykład SMSvcHost. exe. config z domyślnymi ustawieniami wszystkich konfigurowalnych wartości jawnie.  
   
 ```xml  
 <configuration>  
@@ -48,18 +48,18 @@ Użyj transportu Net.TCP własnym obsługiwanych usług można kontrolować kilk
 </configuration>  
 ```  
   
-## <a name="when-to-modify-smsvchostexeconfig"></a>Podczas modyfikowania pliku konfiguracyjnego SMSvcHost.exe.config  
- Ogólnie rzecz biorąc należy zachować ostrożność podczas modyfikowania zawartości pliku pliku konfiguracyjnego SMSvcHost.exe.config, ponieważ wszystkie ustawienia konfiguracji określone w tym pliku mają wpływ na wszystkie usługi na komputerze, który używa usługi udostępniania portów Net.TCP. Obejmuje to aplikacje [!INCLUDE[wv](../../../../includes/wv-md.md)] korzystające z funkcji aktywacji TCP Windows Process Activation Service (WAS).  
+## <a name="when-to-modify-smsvchostexeconfig"></a>Kiedy należy zmodyfikować plik SMSvcHost. exe. config  
+ Ogólnie rzecz biorąc należy zachować ostrożność przy modyfikowaniu zawartości pliku SMSvcHost. exe. config, ponieważ wszystkie ustawienia konfiguracji określone w tym pliku mają wpływ na wszystkie usługi na komputerze, który używa usługi udostępniania portów Net. TCP. Obejmuje to aplikacje [!INCLUDE[wv](../../../../includes/wv-md.md)] , które korzystają z funkcji aktywacji TCP usługi aktywacji procesów systemu Windows (was).  
   
- Jednak czasami trzeba zmienić konfigurację domyślną dla usługi udostępniania portów Net.TCP. Na przykład, wartość domyślna dla `maxPendingAccepts` wynosi 4 * liczba procesorów. Serwery obsługujące dużej liczby usług korzystających z współużytkowania portów może zwiększyć tę wartość, aby osiągnąć maksymalną przepustowość. Wartością domyślną dla `maxPendingConnections` wynosi 100. Należy rozważyć zwiększenie tej wartości również, jeśli istnieje wielu klientów jednocześnie wywoływania usługi, a usługa odrzuca połączenia klientów.  
+ Czasami jednak może zajść potrzeba zmiany konfiguracji domyślnej dla usługi udostępniania portów Net. TCP. Na przykład wartość `maxPendingAccepts` domyślna to 4 * liczba procesorów. Serwery obsługujące dużą liczbę usług korzystających z udostępniania portów mogą zwiększyć tę wartość, aby osiągnąć maksymalną przepływność. Wartość `maxPendingConnections` domyślna to 100. Należy rozważyć zwiększenie tej wartości także wtedy, gdy istnieje wielu współbieżnych klientów wywołujących usługę, a usługa porzuca połączenia klientów.  
   
- Pliku konfiguracyjnego SMSvcHost.exe.config zawiera także informacje o tożsamości, które mogą używać procesu współużytkowania portów. Gdy proces, który nawiązuje połączenie z port udostępnianej usługi do korzystania z tych udostępnionych TCP port, tożsamość procesu nawiązywania połączenia z procesu jest sprawdzana względem listę tożsamości, które zezwala użytkowania współużytkowania portów. Te tożsamości są określane jako identyfikatory zabezpieczeń (SID) w \<allowAccounts > sekcja pliku pliku konfiguracyjnego SMSvcHost.exe.config. Domyślnie uprawnienia do korzystania z usługi udostępniania portów zostanie ustanowione konta systemowe (Usługa lokalna, system lokalny i Usługa sieciowa) oraz członków grupy Administratorzy. Aplikacji, które umożliwiają procesu uruchomionego w innej tożsamości (na przykład, tożsamość użytkownika) do połączenia z współużytkowania portów należy jawnie dodać odpowiedni identyfikator SID do pliku konfiguracyjnego SMSvcHost.exe.config (te zmiany nie są stosowane do procesu SMSvc.exe ponownego uruchomienia).  
+ SMSvcHost. exe. config zawiera również informacje o tożsamościach procesów, które mogą korzystać z usługi udostępniania portów. Gdy proces nawiązuje połączenie z usługą udostępniania portów w celu korzystania ze współużytkowanego portu TCP, tożsamość procesu łączącego jest sprawdzana pod kątem listy tożsamości, które mogą korzystać z usługi udostępniania portów. Te tożsamości są określone jako identyfikatory zabezpieczeń (SID) w \<sekcji allowAccounts > pliku SMSvcHost. exe. config. Domyślnie uprawnienia do korzystania z usługi udostępniania portów są przyznawane kontom systemowym (LocalService, LocalSystem i NetworkService), a także członkami grupy Administratorzy. Aplikacje, które zezwalają na proces uruchomiony jako inna tożsamość (na przykład tożsamość użytkownika) w celu nawiązania połączenia z usługą udostępniania portów, muszą jawnie dodać odpowiedni identyfikator SID do pliku SMSvcHost. exe. config (te zmiany nie są stosowane, dopóki proces SMSvc. exe nie będzie uruchomione ponownie).  
   
 > [!NOTE]
->  Na [!INCLUDE[wv](../../../../includes/wv-md.md)] systemów z (Kontrola konta) włączone, lokalnych użytkowników wymagane podniesione uprawnienia, nawet jeśli ich konto jest członkiem grupy Administratorzy. Aby umożliwić użytkownikom tych użytkowania port udostępnianej usługi bez podniesienia uprawnień, identyfikator SID użytkownika (lub identyfikatora SID grupy, w którym użytkownik jest członkiem), które muszą zostać jawnie dodane do \<allowAccounts > części pliku konfiguracyjnego SMSvcHost.exe.config.  
+> W [!INCLUDE[wv](../../../../includes/wv-md.md)] systemach z włączoną funkcją kontroli konta użytkownika (UAC) Użytkownicy lokalni wymagają podwyższonego poziomu uprawnień nawet wtedy, gdy ich konto jest członkiem grupy Administratorzy. Aby umożliwić tym użytkownikom korzystanie z usługi udostępniania portów bez podniesienia uprawnień, identyfikator SID użytkownika (lub identyfikator SID grupy, w której użytkownik jest członkiem) musi zostać jawnie dodany do \<sekcji allowAccounts > pliku SMSvcHost. exe. config.  
   
 > [!WARNING]
->  Domyślny plik pliku konfiguracyjnego SMSvcHost.exe.config określa niestandardowy `etwProviderId` zapobiegające śledzenie SMSvcHost.exe od wchodzenia w konflikt ze śledzenia usługi.  
+>  Domyślny plik SMSvcHost. exe. config określa niestandardową `etwProviderId` , aby zapobiec zakłócaniu śledzenia przez program SMSvcHost. exe.  
   
 ## <a name="see-also"></a>Zobacz także
 

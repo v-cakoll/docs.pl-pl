@@ -1,5 +1,5 @@
 ---
-title: '&amp; — Operator (Visual Basic)'
+title: '&amp;Operator (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.&
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-ms.openlocfilehash: dd85363447e9b405241d608550d9484b4760a739
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d387b2dfdbb3fefe357364f7b2a3dde155cbd489
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778589"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968353"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp; — Operator (Visual Basic)
-Tworzy połączenie ciągów dwóch wyrażeń.  
+# <a name="amp-operator-visual-basic"></a>&amp;Operator (Visual Basic)
+Generuje łączenie ciągów dwóch wyrażeń.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -28,27 +28,27 @@ result = expression1 & expression2
   
 ## <a name="parts"></a>Części  
  `result`  
- Wymagana. Wszelkie `String` lub `Object` zmiennej.  
+ Wymagane. Any `String` lub`Object` Variable.  
   
  `expression1`  
- Wymagana. Dowolne wyrażenie z typem danych, która rozszerza się na `String`.  
+ Wymagany. Każde wyrażenie z typem danych, który jest poszerzany `String`do.  
   
  `expression2`  
- Wymagana. Dowolne wyrażenie z typem danych, która rozszerza się na `String`.  
+ Wymagana. Każde wyrażenie z typem danych, który jest poszerzany `String`do.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli typ danych `expression1` lub `expression2` nie `String` , ale rozszerza się na `String`, jest konwertowany na `String`. Jeśli jeden z typów danych nie mogą zostać poszerzone do `String`, kompilator generuje błąd.  
+ `expression1` Jeśli typ `String`danych lub `expression2` nie `String` jest, ale jest rozszerzony do `String`, jest konwertowany na. Jeśli jeden z typów danych nie jest rozszerzony do `String`, kompilator generuje błąd.  
   
- Typ danych `result` jest `String`. Jeśli jeden lub oba wyrażenia mają [nic](../../../visual-basic/language-reference/nothing.md) lub mieć wartość <xref:System.DBNull.Value?displayProperty=nameWithType>, będą one traktowane jako ciąg znaków o wartości "".  
-  
-> [!NOTE]
->  `&` Operator może być *przeciążone*, co oznacza, że klasy lub struktury można ponownie zdefiniować jej zachowanie, gdy argument operacji ma typ tej klasy lub struktury. Jeśli kod używa tego operatora dla klasy lub struktury, upewnij się, że rozumiesz jej zachowanie zmieniony. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Typ `result` danych to `String`. Jeśli co najmniej jedno wyrażenie zwróci wartość [Nothing lub nie](../../../visual-basic/language-reference/nothing.md) ma wartości <xref:System.DBNull.Value?displayProperty=nameWithType>, są traktowane jako ciąg o wartości "".  
   
 > [!NOTE]
->  Handlowe "i" (&) znak może również służyć do identyfikowania zmienne jako typ `Long`. Aby uzyskać więcej informacji, zobacz [znaki typu](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
+> Operator może być przeciążony, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. `&` Jeśli Twój kod używa tego operatora dla takiej klasy lub struktury, pamiętaj o tym, aby zrozumieć jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+  
+> [!NOTE]
+> Znak handlowego "i" (&) może również służyć do identyfikowania zmiennych `Long`jako typów. Aby uzyskać więcej informacji, zobacz [Type characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `&` operatora, aby wymusić ciągów. Wynik jest wartością ciągu reprezentujący łączenie ciąg dwóch argumentów.  
+ W tym przykładzie używa `&` operatora w celu wymuszenia łączenia ciągów. Wynikiem jest wartość ciągu reprezentująca połączenie dwóch operandów ciągu.  
   
  [!code-vb[VbVbalrOperators#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#2)]  
   
@@ -56,6 +56,6 @@ result = expression1 & expression2
 
 - [&=, operator](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
 - [Operatory łączenia](../../../visual-basic/language-reference/operators/concatenation-operators.md)
-- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Operatory łączenia w języku Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Operatory łączenia w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

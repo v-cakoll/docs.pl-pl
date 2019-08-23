@@ -4,117 +4,117 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 297a951e4678e05da73193133bd6050360b041ff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 481e0983a40bb551d08894ea32f76f332b8fe5a3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587354"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943139"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań
-Zachowania umożliwiają modyfikowanie zachowania domyślnego i dodać niestandardowych rozszerzeń, które Inspekcja i sprawdź poprawność konfiguracji usługi lub modyfikowanie zachowania w czasie wykonywania w aplikacji klienta i usługi Windows Communication Foundation (WCF). W tym temacie opisano interfejsów zachowanie, jak je wdrożyć i jak je dodać do opisu usługi (w aplikacji usługi) lub punktu końcowego (w aplikacji klienckiej) programowo, albo w pliku konfiguracji. Aby uzyskać więcej informacji na temat za pomocą zachowań dostarczane przez system, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) i [Określanie zachowania środowiska uruchomieniowego klienta](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
+Zachowania umożliwiają modyfikowanie zachowania domyślnego i Dodawanie rozszerzeń niestandardowych, które sprawdzają i weryfikują konfigurację usługi lub modyfikują zachowanie środowiska uruchomieniowego w aplikacjach klienckich i usług Windows Communication Foundation (WCF). W tym temacie opisano interfejsy zachowań, sposób ich implementacji oraz sposób ich dodawania do opisu usługi (w aplikacji usługi) lub punktu końcowego (w aplikacji klienckiej) programowo lub w pliku konfiguracji. Aby uzyskać więcej informacji o używaniu zachowań dostarczonych przez system, zobacz [Określanie zachowania usługi w czasie wykonywania](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) i [Określanie zachowania klienta w czasie wykonywania](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>Zachowania  
- Zachowanie typy są dodawane do usługi lub obiektów opis punktu końcowego usługi (na usługi lub klienta, odpowiednio) przed tymi obiektami są używane przez Windows Communication Foundation (WCF) do tworzenia środowiska uruchomieniowego, które wykonuje usługi WCF lub klienta programu WCF. Wywołanego tych zachowań w procesie tworzenia środowiska uruchomieniowego są następnie uzyskać dostęp do środowiska uruchomieniowego właściwości i metod, które modyfikują tworzony przez adresy kontraktu, powiązania i środowiska uruchomieniowego.  
+ Typy zachowań są dodawane do obiektów opisu punktu końcowego usługi lub usługi (odpowiednio do usługi lub klienta) przed użyciem tych obiektów przez Windows Communication Foundation (WCF), aby utworzyć środowisko uruchomieniowe, które wykonuje usługę WCF lub klienta WCF. Gdy te zachowania są wywoływane podczas procesu konstruowania środowiska uruchomieniowego, są w stanie uzyskać dostęp do właściwości i metod środowiska uruchomieniowego, które modyfikują środowisko uruchomieniowe skonstruowane przez kontrakt, powiązania i adresy.  
   
-### <a name="behavior-methods"></a>Zachowanie metody  
- Ma wszystkie zachowania `AddBindingParameters` metody `ApplyDispatchBehavior` metody `Validate` metody i `ApplyClientBehavior` metody z jednym wyjątkiem: Ponieważ <xref:System.ServiceModel.Description.IServiceBehavior> nie można wykonać na kliencie nie implementuje on `ApplyClientBehavior`.  
+### <a name="behavior-methods"></a>Metody zachowań  
+ Wszystkie zachowania mają `AddBindingParameters` metodę `ApplyDispatchBehavior` , metodę, `Validate` metodę i `ApplyClientBehavior` metodę z jednym wyjątkiem: Ponieważ <xref:System.ServiceModel.Description.IServiceBehavior> nie można wykonać w kliencie, nie implementuje `ApplyClientBehavior`.  
   
-- Użyj `AddBindingParameters` metodę, aby zmodyfikować lub dodać niestandardowe obiekty na kolekcję powiązań niestandardowych mającej dostęp do własnego użytku, gdy środowisko uruchomieniowe jest konstruowany. Na przykład, to w jaki sposób są określone wymagania dotyczące ochrony, który mają wpływ na sposób kanał został opracowany, ale nie są znane przez dewelopera kanału.  
+- `AddBindingParameters` Użyj metody, aby zmodyfikować lub dodać obiekty niestandardowe do kolekcji, do której niestandardowe powiązania mogą uzyskać dostęp do ich użycia podczas konstruowania środowiska uruchomieniowego. Na przykład, w jaki sposób określono wymagania dotyczące ochrony, które mają wpływ na sposób kompilowania kanału, ale nie są znane przez dewelopera kanału.  
   
-- Użyj `Validate` metody badania opis drzewa i odpowiedni obiekt środowiska uruchomieniowego, aby upewnić się, że jest zgodny z pewne określone kryteria.  
+- `Validate` Użyj metody, aby sprawdzić drzewo opisu i odpowiedni obiekt środowiska uruchomieniowego, aby upewnić się, że jest on zgodny z określonym zestawem kryteriów.  
   
-- Użyj `ApplyDispatchBehavior` i `ApplyClientBehavior` metody do sprawdzenia opis drzewa i modyfikowania środowiska uruchomieniowego dla określonego zakresu na usługi lub klienta. Można także wstawić także obiekty rozszerzeń.  
+- Użyj metod `ApplyClientBehavior` i, aby przejrzeć drzewo opis i zmodyfikować środowisko uruchomieniowe dla określonego zakresu w usłudze lub kliencie. `ApplyDispatchBehavior` Można także również wstawiać obiekty rozszerzeń.  
   
     > [!NOTE]
-    >  Drzewo opis znajduje się w tych metod, ale jest do zbadania tylko. W przypadku modyfikowania drzewa opis zachowanie jest niezdefiniowane.  
+    > Chociaż drzewo opisu jest dostępne w tych metodach, jest przeznaczone tylko do celów badawczych. Jeśli drzewo opisów jest modyfikowane, zachowanie jest niezdefiniowane.  
   
- Właściwości można modyfikować i interfejsy dostosowania, które można zaimplementować są dostępne za pośrednictwem klasy środowiska wykonawczego usługi i klienta. Typy usług są <xref:System.ServiceModel.Dispatcher.DispatchRuntime> i <xref:System.ServiceModel.Dispatcher.DispatchOperation> klasy. Typy klientów są <xref:System.ServiceModel.Dispatcher.ClientRuntime> i <xref:System.ServiceModel.Dispatcher.ClientOperation> klasy. <xref:System.ServiceModel.Dispatcher.ClientRuntime> i <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klasy są punkty wejścia rozszerzalności, dostęp do właściwości dla całej klienta oraz obejmujących całą usługę środowiska uruchomieniowego i rozszerzenia kolekcji, odpowiednio. Podobnie <xref:System.ServiceModel.Dispatcher.ClientOperation> i <xref:System.ServiceModel.Dispatcher.DispatchOperation> klasy ujawnić operacji klienta, właściwości środowiska uruchomieniowego operacji usług i rozszerzenia kolekcji, odpowiednio. Możliwe, jednak dostęp do szerszego zakresu środowiska uruchomieniowego obiektów z operacji środowiska uruchomieniowego obiektów i na odwrót, jeśli muszą być.  
+ Właściwości, które można modyfikować, oraz interfejsy dostosowywania, które można zaimplementować, są dostępne za pomocą klas środowiska uruchomieniowego usługi i klienta. Typy usług są <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klasami i <xref:System.ServiceModel.Dispatcher.DispatchOperation> . Typy klientów są <xref:System.ServiceModel.Dispatcher.ClientRuntime> klasami i <xref:System.ServiceModel.Dispatcher.ClientOperation> . Klasy <xref:System.ServiceModel.Dispatcher.ClientRuntime> i<xref:System.ServiceModel.Dispatcher.DispatchRuntime> to punkty wejścia rozszerzalności umożliwiające dostęp odpowiednio do właściwości środowiska uruchomieniowego i kolekcji rozszerzeń dla całego klienta i usługi. Podobnie klasy i <xref:System.ServiceModel.Dispatcher.ClientOperation> <xref:System.ServiceModel.Dispatcher.DispatchOperation> właściwości środowiska uruchomieniowego operacji usługi i kolekcji rozszerzeń są odpowiednio uwidaczniane. Można jednak uzyskać dostęp do szerszego obiektu środowiska uruchomieniowego w zakresie z obiektu środowiska uruchomieniowego operacji i odwrotnie, jeśli jest to konieczne.  
   
 > [!NOTE]
->  Omówienie środowiska uruchomieniowego, właściwości i typy rozszerzeń, których można użyć, aby zmienić zachowanie wykonywania klienta, zobacz [rozszerzanie klientów](../../../../docs/framework/wcf/extending/extending-clients.md). Omówienie środowiska uruchomieniowego, właściwości i typy rozszerzeń, które można użyć, aby zmodyfikować zachowanie wykonania dyspozytora usługi, zobacz [rozszerzanie dyspozytorów](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
+> Aby zapoznać się z omówieniem właściwości środowiska uruchomieniowego i typów rozszerzeń, których można użyć w celu zmodyfikowania zachowania klienta, zobacz [Rozszerzanie klientów](../../../../docs/framework/wcf/extending/extending-clients.md). Omówienie właściwości środowiska uruchomieniowego i typów rozszerzeń, których można użyć w celu zmodyfikowania zachowania wykonywania dyspozytora usługi, znajdziesz w [](../../../../docs/framework/wcf/extending/extending-dispatchers.md)temacie rozszerzanie elementów wysyłających.  
   
- Większość użytkowników usługi WCF nie wchodzą w interakcje ze środowiskiem uruchomieniowym bezpośrednio; Zamiast tego użyć core programowania modelu konstrukcji, takich jak punkty końcowe, kontrakty, powiązania, adresów i zachowanie atrybuty klasy lub zachowania w plikach konfiguracji. Te konstrukcje tworzą *drzewa opis*, czyli pełną specyfikację tworzenia środowiska uruchomieniowego pod kątem obsługi usługi lub klienta opisanego przez drzewo opis.  
+ Większość użytkowników programu WCF nie współdziała bezpośrednio ze środowiskiem uruchomieniowym. zamiast nich używają podstawowych konstrukcji programistycznych, takich jak punkty końcowe, kontrakty, powiązania, adresy i atrybuty zachowań dla klas lub zachowań w plikach konfiguracyjnych. Te konstrukcje składają się na *drzewo opisów*, która stanowi kompletną specyfikację konstruowania środowiska uruchomieniowego w celu obsługi usługi lub klienta opisanego przez drzewo opisu.  
   
- Istnieją cztery rodzaje zachowań w programie WCF:  
+ W programie WCF istnieją cztery rodzaje zachowań:  
   
-- Usługa zachowania (<xref:System.ServiceModel.Description.IServiceBehavior> typy) umożliwiają dostosowanie środowiska uruchomieniowego całej usługi, w tym <xref:System.ServiceModel.ServiceHostBase>.  
+- Zachowania usługi (<xref:System.ServiceModel.Description.IServiceBehavior> typy) umożliwiają dostosowanie całego środowiska uruchomieniowego usługi, w <xref:System.ServiceModel.ServiceHostBase>tym.  
   
-- Zachowań punktu końcowego (<xref:System.ServiceModel.Description.IEndpointBehavior> typy) umożliwiają dostosowanie punkty końcowe usługi i ich skojarzone <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> obiektów.  
+- Zachowania punktów końcowych (<xref:System.ServiceModel.Description.IEndpointBehavior> typy) umożliwiają dostosowanie punktów końcowych usługi i skojarzonych <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> z nimi obiektów.  
   
-- Kontrakt zachowania (<xref:System.ServiceModel.Description.IContractBehavior> typy) umożliwiają dostosowanie zarówno <xref:System.ServiceModel.Dispatcher.ClientRuntime> i <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klas w aplikacji klienta i usługi, odpowiednio.  
+- Zachowania kontraktowe<xref:System.ServiceModel.Description.IContractBehavior> (typy) umożliwiają dostosowanie <xref:System.ServiceModel.Dispatcher.ClientRuntime> zarówno klas i <xref:System.ServiceModel.Dispatcher.DispatchRuntime> w aplikacjach klientów, jak i usług.  
   
-- Operacja zachowania (<xref:System.ServiceModel.Description.IOperationBehavior> typy) umożliwiają dostosowanie <xref:System.ServiceModel.Dispatcher.ClientOperation> i <xref:System.ServiceModel.Dispatcher.DispatchOperation> klasy ponownie na kliencie i usługi.  
+- Zachowania operacji (<xref:System.ServiceModel.Description.IOperationBehavior> typy) umożliwiają ponowne dostosowanie <xref:System.ServiceModel.Dispatcher.ClientOperation> klas i <xref:System.ServiceModel.Dispatcher.DispatchOperation> , w przypadku klienta i usługi.  
   
- Można dodać te zachowania do różnych obiektów, opis, implementując atrybuty niestandardowe, za pomocą plików konfiguracji aplikacji, lub bezpośrednio przez dodanie ich do kolekcji zachowań w obiekcie odpowiedni opis. Muszą jednak być dodane do opisu usługi lub obiektu opis punktu końcowego usługi przed wywołaniem <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> na <xref:System.ServiceModel.ServiceHost> lub <xref:System.ServiceModel.ChannelFactory%601>.  
+ Można dodać te zachowania do różnych obiektów opisu przez zaimplementowanie atrybutów niestandardowych, używanie plików konfiguracji aplikacji lub bezpośrednio przez dodanie ich do kolekcji zachowań na odpowiednim obiekcie opisu. Należy jednak dodać do opisu usługi lub obiektu opisu punktu końcowego usługi przed wywołaniem <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> <xref:System.ServiceModel.ServiceHost> lub <xref:System.ServiceModel.ChannelFactory%601>.  
   
-### <a name="behavior-scopes"></a>Zachowanie zakresów  
- Istnieją cztery typy zachowanie, z których każdy odnosi się do określonego zakresu dostęp do środowiska uruchomieniowego.  
+### <a name="behavior-scopes"></a>Zakresy zachowań  
+ Istnieją cztery typy zachowań, z których każdy odpowiada konkretnemu zakresowi dostępu do środowiska uruchomieniowego.  
   
-#### <a name="service-behaviors"></a>Zachowania usług  
- Zachowania usług, które implementują <xref:System.ServiceModel.Description.IServiceBehavior>, są podstawowym mechanizmem za pomocą którego możesz zmodyfikować środowisko uruchomieniowe całą usługę. Istnieją trzy mechanizmy dodawania zachowania usługi z usługą.  
+#### <a name="service-behaviors"></a>Zachowania usługi  
+ Zachowania usługi, które implementują <xref:System.ServiceModel.Description.IServiceBehavior>, są podstawowym mechanizmem, za pomocą którego można modyfikować całe środowisko uruchomieniowe usługi. Istnieją trzy mechanizmy dodawania zachowań usługi do usługi.  
   
-1. Za pomocą atrybutu dla klasy usługi.  Gdy <xref:System.ServiceModel.ServiceHost> jest konstruowany <xref:System.ServiceModel.ServiceHost> implementacja używa odbicia, aby odnaleźć zestaw atrybutów w typie usługi. Jeśli którekolwiek z tych atrybutów są implementacje <xref:System.ServiceModel.Description.IServiceBehavior>, są one dodawane do kolekcji zachowań na <xref:System.ServiceModel.Description.ServiceDescription>. Dzięki temu te zachowania, aby wziąć udział w konstrukcji usługi czasu wykonywania.  
+1. Użycie atrybutu w klasie usługi.  Gdy jest konstruowany <xref:System.ServiceModel.ServiceHost> , implementacja używa odbicia w celu odnalezienia zestawu atrybutów dla typu usługi. <xref:System.ServiceModel.ServiceHost> Jeśli którykolwiek z tych atrybutów jest implementacją <xref:System.ServiceModel.Description.IServiceBehavior>programu, są one dodawane do kolekcji zachowań w <xref:System.ServiceModel.Description.ServiceDescription>systemie. Dzięki temu te zachowania mogą uczestniczyć w konstruowaniu czasu wykonywania usługi.  
   
-2. Programowe Dodawanie zachowania do kolekcji zachowań na <xref:System.ServiceModel.Description.ServiceDescription>. Można to zrobić, z następującymi wierszami kodu:  
+2. Programistyczne Dodawanie zachowania do kolekcji zachowań w <xref:System.ServiceModel.Description.ServiceDescription>. Można to osiągnąć przy użyciu następujących wierszy kodu:  
   
     ```csharp
     ServiceHost host = new ServiceHost(/* Parameters */);  
     host.Description.Behaviors.Add(/* Service Behavior */);  
     ```  
   
-3. Implementowanie niestandardowego <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> rozszerzający konfiguracji. To umożliwia zachowanie usługi z plików konfiguracji aplikacji.  
+3. Implementacja niestandardowa <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> , która rozszerza konfigurację. Umożliwia to korzystanie z zachowania usługi z plików konfiguracji aplikacji.  
   
- Przykłady usługi zachowań w programie WCF <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybutu <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>i <xref:System.ServiceModel.Description.ServiceMetadataBehavior> zachowanie.  
+ Przykłady zachowań usługi w programie WCF obejmują <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybut <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>, i <xref:System.ServiceModel.Description.ServiceMetadataBehavior> zachowanie.  
   
-#### <a name="contract-behaviors"></a>Zachowania kontraktu  
- Kontrakt zachowań, które implementują <xref:System.ServiceModel.Description.IContractBehavior> interfejsu, służą do rozszerzania środowiska uruchomieniowego klienta i usługi dla kontraktu.  
+#### <a name="contract-behaviors"></a>Zachowania kontraktów  
+ Zachowania kontraktowe, które implementują <xref:System.ServiceModel.Description.IContractBehavior> interfejs, służą do rozbudowania środowiska wykonawczego klienta i usługi w ramach kontraktu.  
   
- Istnieją dwa mechanizmy Dodawanie zachowań Umowa na umowę.  Pierwszy mechanizm polega na utworzeniu atrybutu niestandardowego, który ma być używany w interfejsie kontraktu. Kiedy interfejsu kontraktu jest przekazywana do obu <xref:System.ServiceModel.ServiceHost> lub <xref:System.ServiceModel.ChannelFactory%601>, WCF sprawdza atrybutów w interfejsie. Jeśli jakiekolwiek atrybuty stanowią implementacje <xref:System.ServiceModel.Description.IContractBehavior>, te są dodawane do kolekcji zachowań na <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> utworzone dla tego interfejsu.  
+ Istnieją dwa mechanizmy dodawania zachowań kontraktu do kontraktu.  Pierwszy mechanizm polega na utworzeniu atrybutu niestandardowego, który będzie używany w interfejsie kontraktu. Gdy interfejs kontraktu jest przenoszona do programu <xref:System.ServiceModel.ServiceHost> lub a <xref:System.ServiceModel.ChannelFactory%601>, WCF bada atrybuty interfejsu. Jeśli atrybuty są implementacjami programu <xref:System.ServiceModel.Description.IContractBehavior>, są one dodawane do kolekcji zachowań <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> na utworzonej dla tego interfejsu.  
   
- Możesz również wdrożyć <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType> atrybutu zachowanie niestandardowe kontraktu. W takim przypadku zachowanie wynosi po zastosowaniu do:  
+ Można również zaimplementować <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType> w atrybucie zachowanie niestandardowej kontraktu. W takim przypadku zachowanie jest następujące w przypadku zastosowania do:  
   
- •Podstawowy interfejsu kontraktu. W takim przypadku zachowanie jest stosowany do wszystkich zamówień tego typu w dowolnym punkcie końcowym i WCF ignoruje wartość <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> właściwości.  
+ • Interfejs kontraktu. W takim przypadku zachowanie jest stosowane do wszystkich kontraktów tego typu w dowolnym punkcie końcowym, a WCF ignoruje wartość <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> właściwości.  
   
- Klasa usługi •podstawowy. W takim przypadku zachowanie jest stosowane tylko do punktów końcowych kontrakt jest wartością <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> właściwości.  
+ • Klasa usługi. W takim przypadku zachowanie jest stosowane tylko do punktów końcowych, których kontrakt jest wartością <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> właściwości.  
   
- Klasa wywołania zwrotnego •podstawowy. W takim przypadku zachowanie jest stosowany do punktu końcowego dwukierunkowego klienta i WCF ignoruje wartość <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> właściwości.  
+ • Klasa wywołania zwrotnego. W takim przypadku zachowanie jest stosowane do punktu końcowego klienta dupleksowego i WCF ignoruje wartość <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> właściwości.  
   
- Drugi mechanizm jest dodanie zachowania do kolekcji zachowań na <xref:System.ServiceModel.Description.ContractDescription>.  
+ Drugim mechanizmem jest dodanie zachowania do kolekcji zachowań w <xref:System.ServiceModel.Description.ContractDescription>.  
   
- Przykłady zamówienia zachowania w programie WCF <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> atrybutu. Aby uzyskać więcej informacji i obejrzeć przykład zobacz temat referencyjny.  
+ Przykłady zachowań kontraktu w programie WCF obejmują <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> atrybut. Więcej informacji i przykład można znaleźć w temacie Reference.  
   
-#### <a name="endpoint-behaviors"></a>Zachowań punktu końcowego  
- Zachowań punktu końcowego, które implementują <xref:System.ServiceModel.Description.IEndpointBehavior>, są podstawowym mechanizmem za pomocą którego można zmodyfikować całej usługi lub klienta wykonawczego dla określonego punktu końcowego.  
+#### <a name="endpoint-behaviors"></a>Zachowania punktu końcowego  
+ Zachowania punktu końcowego, które <xref:System.ServiceModel.Description.IEndpointBehavior>implementują, są podstawowym mechanizmem, za pomocą którego można modyfikować cały czas wykonywania usługi lub klienta dla określonego punktu końcowego.  
   
- Istnieją dwa mechanizmy dodawania zachowań punktu końcowego usługi.  
+ Istnieją dwa mechanizmy dodawania do usługi zachowań punktów końcowych.  
   
-1. Dodawanie zachowania do <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> właściwości.  
+1. Dodaj zachowanie do <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> właściwości.  
   
-2. Implementowanie niestandardowego <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> rozszerzający konfiguracji.  
+2. Implementowanie niestandardowego <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> , który rozszerza konfigurację.  
   
- Aby uzyskać więcej informacji i obejrzeć przykład zobacz temat referencyjny.  
+ Więcej informacji i przykład można znaleźć w temacie Reference.  
   
-#### <a name="operation-behaviors"></a>Operacja zachowania  
- Operacja zachowań, które implementują <xref:System.ServiceModel.Description.IOperationBehavior> interfejsu, służą do rozszerzania obsługi klienta i usługi dla każdej operacji.  
+#### <a name="operation-behaviors"></a>Zachowania operacji  
+ Zachowania operacji, które implementują <xref:System.ServiceModel.Description.IOperationBehavior> interfejs, służą do rozszerania zarówno klienta, jak i usługi środowiska uruchomieniowego dla każdej operacji.  
   
- Istnieją dwa mechanizmy dodawania zachowania operacji z operacją. Pierwszy mechanizm polega na utworzeniu atrybutu niestandardowego, który ma być używany w metodzie, który modeluje operacji. Po dodaniu operacji do jednej <xref:System.ServiceModel.ServiceHost> lub <xref:System.ServiceModel.ChannelFactory>, WCF, dodaje dowolne <xref:System.ServiceModel.Description.IOperationBehavior> atrybuty do kolekcji zachowań na <xref:System.ServiceModel.Description.OperationDescription> utworzone dla tej operacji.  
+ Istnieją dwa mechanizmy dodawania zachowań operacji do operacji. Pierwszy mechanizm polega na utworzeniu atrybutu niestandardowego, który będzie używany w metodzie, która modeluje operację. Gdy operacja jest <xref:System.ServiceModel.ServiceHost> dodawana do albo a <xref:System.ServiceModel.ChannelFactory>, WCF dodaje wszelkie <xref:System.ServiceModel.Description.IOperationBehavior> atrybuty do kolekcji zachowań na <xref:System.ServiceModel.Description.OperationDescription> utworzonej dla tej operacji.  
   
- Drugi mechanizm jest przez bezpośrednie dodanie zachowania kolekcji zachowań na skonstruowany <xref:System.ServiceModel.Description.OperationDescription>.  
+ Drugim mechanizmem jest bezpośrednie dodanie zachowania do kolekcji zachowań na skonstruowanej <xref:System.ServiceModel.Description.OperationDescription>.  
   
- Przykłady operacji zachowań w programie WCF <xref:System.ServiceModel.OperationBehaviorAttribute> i <xref:System.ServiceModel.TransactionFlowAttribute>.  
+ Przykłady zachowań operacji w programie WCF obejmują <xref:System.ServiceModel.OperationBehaviorAttribute> <xref:System.ServiceModel.TransactionFlowAttribute>i.  
   
- Aby uzyskać więcej informacji i obejrzeć przykład zobacz temat referencyjny.  
+ Więcej informacji i przykład można znaleźć w temacie Reference.  
   
-### <a name="using-configuration-to-create-behaviors"></a>Za pomocą konfiguracji do tworzenia zachowań  
- Usługi i punktu końcowego i kontrakt zachowania może przez przeznaczone do można określić w kodzie lub za pomocą atrybutów, a można skonfigurować tylko zachowania usługi i punktu końcowego przy użyciu aplikacji lub pliki konfiguracji sieci Web. Udostępnianie zachowania za pomocą atrybutów pozwala deweloperom na określenie zachowania w czasie kompilacji, który nie może zostać dodane, usunięte lub zmodyfikowany w czasie wykonywania. Często jest to odpowiednie dla zachowania, które zawsze są wymagane do poprawnego działania usługi (na przykład transakcji powiązanych z parametrami <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> atrybutu). Udostępnianie zachowania za pomocą konfiguracji umożliwia deweloperom pozostawić specyfikacji i konfiguracji tych zachowań do tych, którzy wdrażają usługi. Jest to odpowiednie dla zachowania, które są opcjonalne składniki lub inna konfiguracja charakterystyczne dla wdrożenia, takie jak czy metadanych jest uwidaczniany dla usługi lub konfiguracji określonego autoryzacji dla usługi.  
+### <a name="using-configuration-to-create-behaviors"></a>Używanie konfiguracji do tworzenia zachowań  
+ Zachowanie usługi i punktu końcowego oraz kontrakty mogą być przeznaczone do określenia w kodzie lub przy użyciu atrybutów; można skonfigurować tylko zachowania usługi i punktu końcowego za pomocą aplikacji lub plików konfiguracji sieci Web. Uwidacznianie zachowań przy użyciu atrybutów pozwala deweloperom określić zachowanie w czasie kompilacji, którego nie można dodać, usunąć ani zmodyfikować w czasie wykonywania. Jest to często odpowiednie dla zachowań, które są zawsze wymagane do poprawnego działania usługi (na przykład parametrów związanych z transakcjami do <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> atrybutu). Udostępnianie zachowań przy użyciu konfiguracji pozwala deweloperom na pozostawienie specyfikacji i konfiguracji tych zachowań dla użytkowników, którzy wdrażają usługę. Jest to odpowiednie dla zachowań, które są opcjonalnymi składnikami lub inną konfigurację specyficzną dla wdrożenia, na przykład czy metadane są uwidocznione dla usługi lub określonej konfiguracji autoryzacji dla usługi.  
   
 > [!NOTE]
->  Można także użyć zachowań, które obsługują konfigurację, aby wymusić zasady aplikacji firmy przez wstawianie je do pliku machine.config w konfiguracji i blokowanie tych elementów. Aby uzyskać opis i obejrzeć przykład, zobacz [jak: Blokowanie punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+> Można również użyć zachowań, które obsługują konfigurację, aby wymusić zasady aplikacji firmowych, wstawiając je do pliku konfiguracji Machine. config i blokując te elementy w dół. Aby uzyskać opis i przykład, zobacz [How to: Zablokuj punkty końcowe w](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)przedsiębiorstwie.  
   
- Aby udostępnić za pomocą konfiguracji zachowanie, deweloper musi utworzyć klasę pochodną z <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> , a następnie zarejestruj tego rozszerzenia z konfiguracją.  
+ Aby uwidocznić zachowanie przy użyciu konfiguracji, Deweloper musi utworzyć klasę <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> pochodną, a następnie zarejestrować to rozszerzenie w konfiguracji.  
   
- Poniższy kod przedstawia przykład sposobu <xref:System.ServiceModel.Description.IEndpointBehavior> implementuje <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>:  
+ Poniższy przykład kodu pokazuje, <xref:System.ServiceModel.Description.IEndpointBehavior> jak implementuje: <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>  
   
 ```csharp
 // BehaviorExtensionElement members  
@@ -129,7 +129,7 @@ protected override object CreateBehavior()
 }  
 ```  
   
- Aby system konfiguracji można załadować niestandardowej <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, musi być zarejestrowana jako rozszerzenie. Poniższy przykład kodu pokazuje poprzedni zachowanie punktu końcowego w pliku konfiguracji:  
+ Aby system konfiguracji ładował niestandardowy <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, musi być zarejestrowany jako rozszerzenie. Poniższy przykład kodu pokazuje plik konfiguracji dla poprzedniego zachowania punktu końcowego:  
   
 ```xml  
 <configuration>  
@@ -181,12 +181,12 @@ protected override object CreateBehavior()
 </configuration>  
 ```  
   
- Gdzie `Microsoft.WCF.Documentation.EndpointBehaviorMessageInspector` jest typ rozszerzenia zachowania i `HostApplication` to nazwa zestawu, do którego został wcześniej skompilowany tej klasy.  
+ Gdzie `Microsoft.WCF.Documentation.EndpointBehaviorMessageInspector` jest typem rozszerzenia zachowania i `HostApplication` jest nazwą zestawu, do którego została skompilowana Ta klasa.  
   
-### <a name="evaluation-order"></a>Kolejność obliczania  
- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> i <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> są zobowiązani do tworzenia środowiska uruchomieniowego z modelu programowania i opis. Zachowań, jak opisano wcześniej, Współtworzenie tworzących proces na usługi, punkt końcowy, kontrakt i operacji.  
+### <a name="evaluation-order"></a>Kolejność oceny  
+ <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> Isąodpowiedzialnezatworzenieśrodowiskauruchomieniowegoz<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> modelu programowania i opisu. Zachowania, jak opisano wcześniej, przyczyniają się do tego procesu kompilacji w ramach usługi, punktu końcowego, kontraktu i operacji.  
   
- <xref:System.ServiceModel.ServiceHost> Stosuje zachowań w następującej kolejności:  
+ <xref:System.ServiceModel.ServiceHost> Stosuje zachowania w następującej kolejności:  
   
 1. Usługa  
   
@@ -196,9 +196,9 @@ protected override object CreateBehavior()
   
 4. Operacja  
   
- W dowolnej kolekcji zachowań kolejność nie jest gwarantowana.  
+ W ramach dowolnej kolekcji zachowań nie jest gwarantowane zamówienie.  
   
- <xref:System.ServiceModel.ChannelFactory%601> Stosuje zachowań w następującej kolejności:  
+ <xref:System.ServiceModel.ChannelFactory%601> Stosuje zachowania w następującej kolejności:  
   
 1. Kontrakt  
   
@@ -206,22 +206,22 @@ protected override object CreateBehavior()
   
 3. Operacja  
   
- W dowolnej kolekcji zachowań, ponownie, nie kolejność jest zachowywana.  
+ W ramach jakiejkolwiek kolekcji zachowań ponownie nie zagwarantowana jest żadna kolejność.  
   
-### <a name="adding-behaviors-programmatically"></a>Programowe Dodawanie zachowań  
- Właściwości <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> w usłudze aplikacji nie mogą zostać zmodyfikowane subsequent do <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType> metody <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>. Niektóre elementy członkowskie, takich jak <xref:System.ServiceModel.ServiceHostBase.Credentials%2A?displayProperty=nameWithType> właściwości i `AddServiceEndpoint` metod <xref:System.ServiceModel.ServiceHostBase> i <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>, zgłosić wyjątek, jeśli zmodyfikowane poza tym punktem. Inne pozwala na ich modyfikować, ale wynik jest niezdefiniowany.  
+### <a name="adding-behaviors-programmatically"></a>Programistyczne Dodawanie zachowań  
+ Właściwości w aplikacji usługi nie mogą być modyfikowane po <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType> metodzie <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>. <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> Niektóre elementy członkowskie, takie <xref:System.ServiceModel.ServiceHostBase.Credentials%2A?displayProperty=nameWithType> jak Właściwość `AddServiceEndpoint` i metody w <xref:System.ServiceModel.ServiceHostBase> i <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>, zgłaszają wyjątek, jeśli zostały zmodyfikowane po tym punkcie. Inne umożliwiają modyfikowanie ich, ale wynik jest niezdefiniowany.  
   
- Podobnie, na komputerze klienckim <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> wartości nie mogą zostać zmodyfikowane po wywołaniu <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> na <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>. <xref:System.ServiceModel.ChannelFactory.Credentials%2A?displayProperty=nameWithType> Właściwość zgłasza wyjątek, jeśli zmodyfikowane poza ten punkt, ale inne wartości Opis klienta można zmodyfikować bez błędów. Jednakże, wynik jest niezdefiniowane.  
+ Analogicznie, na kliencie <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> wartości nie mogą być modyfikowane po <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> wywołaniu metody <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>. <xref:System.ServiceModel.ChannelFactory.Credentials%2A?displayProperty=nameWithType> Właściwość zgłasza wyjątek, jeśli został zmodyfikowany przez ten punkt, ale inne wartości opisu klienta można modyfikować bez błędu. Jednak wynik jest niezdefiniowany.  
   
- Czy usługi lub klienta, zalecane jest zmodyfikowanie opis przed wywołaniem <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType>.  
+ Niezależnie od tego, czy dla usługi lub klienta zaleca się zmodyfikowanie opisu przed wywołaniem <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType>.  
   
 ### <a name="inheritance-rules-for-behavior-attributes"></a>Reguły dziedziczenia dla atrybutów zachowania  
- Wszystkie cztery rodzaje zachowania można wypełnić przy użyciu atrybutów — zachowania usług i zachowania kontraktu. Ponieważ zdefiniowanych atrybutów w zarządzanych obiektów i elementów członkowskich i zarządzanych obiektów i elementów członkowskich obsługują dziedziczenia, jest konieczne jest określenie, jak atrybutów zachowania działają w kontekście dziedziczenia.  
+ Wszystkie cztery typy zachowań można wypełnić przy użyciu atrybutów — zachowania usługi i zachowania umowy. Ponieważ atrybuty są zdefiniowane dla obiektów zarządzanych i elementów członkowskich, a obiekty zarządzane i członkowie obsługują dziedziczenie, należy zdefiniować sposób działania atrybutów zachowania w kontekście dziedziczenia.  
   
- Na wysokim poziomie reguła jest, że dla określonego zakresu (na przykład usługi, umowy lub operacji), wszystkie atrybuty zachowanie w hierarchii dziedziczenia dla tego zakresu są stosowane. Jeśli istnieją dwa atrybuty zachowanie tego samego typu, jest używany tylko najczęściej stosowanego typu pochodnego.  
+ Na wysokim poziomie reguła dotyczy określonego zakresu (na przykład usługi, kontraktu lub operacji), ale stosowane są wszystkie atrybuty zachowań w hierarchii dziedziczenia dla tego zakresu. Jeśli istnieją dwa atrybuty zachowań tego samego typu, używany jest tylko typ pochodny.  
   
-#### <a name="service-behaviors"></a>Zachowania usług  
- Dla klasy danej usługi wszystkie atrybuty zachowanie usługi dla tej klasy, a także na elementy nadrzędne tej klasy są stosowane. Jeśli ten sam typ atrybutu jest stosowana w wielu miejscach w hierarchii dziedziczenia, jest używany najczęściej stosowanego typu pochodnego.  
+#### <a name="service-behaviors"></a>Zachowania usługi  
+ Dla danej klasy usługi są stosowane wszystkie atrybuty zachowania usługi dla tej klasy oraz obiekty nadrzędne tej klasy. Jeśli ten sam typ atrybutu jest stosowany w wielu miejscach w hierarchii dziedziczenia, zostanie użyty typ najbardziej pochodny.  
   
 ```csharp  
 [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple)]  
@@ -233,12 +233,12 @@ public class A { /* … */ }
 public class B : A { /* … */}  
 ```  
   
- Na przykład w przypadku poprzedniego usługa B kończy <xref:System.ServiceModel.InstanceContextMode> z <xref:System.ServiceModel.InstanceContextMode.Single>, <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> tryb <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>, a <xref:System.ServiceModel.ConcurrencyMode> z <xref:System.ServiceModel.ConcurrencyMode.Single>. <xref:System.ServiceModel.ConcurrencyMode> Jest <xref:System.ServiceModel.ConcurrencyMode.Single>, ponieważ <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybut w usłudze B jest "bardziej pochodnego" niż na usługi A.  
+ Na przykład w poprzednim przypadku usługa B zostaje <xref:System.ServiceModel.InstanceContextMode> zakończona z <xref:System.ServiceModel.InstanceContextMode.Single>, <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> trybem <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>i <xref:System.ServiceModel.ConcurrencyMode> z <xref:System.ServiceModel.ConcurrencyMode.Single>. <xref:System.ServiceModel.ConcurrencyMode> Jest ,<xref:System.ServiceModel.ConcurrencyMode.Single>ponieważ atrybutwusłudzeBjestw"bardziej<xref:System.ServiceModel.ServiceBehaviorAttribute> pochodny" niż w usłudze A.  
   
-#### <a name="contract-behaviors"></a>Zachowania kontraktu  
- Dla danego kontraktu wszystkie umowy atrybutów zachowania na interfejs, które są stosowane na elementów nadrzędnych tego interfejsu. Jeśli ten sam typ atrybutu jest stosowana w wielu miejscach w hierarchii dziedziczenia, jest używany najczęściej stosowanego typu pochodnego.  
+#### <a name="contract-behaviors"></a>Zachowania kontraktów  
+ Dla danego kontraktu są stosowane wszystkie atrybuty zachowań kontraktu w tym interfejsie i w obiektach nadrzędnych tego interfejsu. Jeśli ten sam typ atrybutu jest stosowany w wielu miejscach w hierarchii dziedziczenia, zostanie użyty typ najbardziej pochodny.  
   
-#### <a name="operation-behaviors"></a>Operacja zachowania  
- Jeśli danej operacji nie zastępuje istniejące abstrakcyjny ani wirtualnych operacji, mają zastosowanie reguły nie dziedziczenia.  
+#### <a name="operation-behaviors"></a>Zachowania operacji  
+ Jeśli dana operacja nie przesłania istniejącej operacji abstrakcyjnej lub wirtualnej, nie są stosowane żadne reguły dziedziczenia.  
   
- Jeśli operacja zastąpić istniejącej operacji, a następnie wszystkie atrybuty zachowanie operacji na tę operację i elementy nadrzędne danej operacji, zostaną zastosowane.  Jeśli ten sam typ atrybutu jest stosowana w wielu miejscach w hierarchii dziedziczenia, jest używany najczęściej stosowanego typu pochodnego.
+ Jeśli operacja zastąpi istniejącą operację, zostaną zastosowane wszystkie atrybuty zachowania operacji dla tej operacji i dla elementów nadrzędnych tej operacji.  Jeśli ten sam typ atrybutu jest stosowany w wielu miejscach w hierarchii dziedziczenia, zostanie użyty typ najbardziej pochodny.

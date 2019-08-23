@@ -6,183 +6,183 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: f0d5ecccdd48da2799e3299406f219a10f47e84d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1194a8e340504ce02c0a5daec7074fc34d962f3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768618"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951639"
 ---
 # <a name="wcf-security-terminology"></a>Terminologia dotycząca zabezpieczeń programu WCF
-Niektóre z terminologią używaną podczas omawiania zabezpieczeń mogą być nieznane. Ten temat zawiera krótkie objaśnienia niektóre pojęcia dotyczące zabezpieczeń, ale nie mają na celu dostarczenie pełną dokumentację dla każdego elementu.  
+Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być nieznane. Ten temat zawiera krótkie objaśnienia niektórych warunków zabezpieczeń, ale nie stanowi wyczerpującej dokumentacji dla każdego elementu.  
   
- Aby uzyskać więcej informacji na temat pojęć używanych w dokumentacji usług Windows Communication Foundation (WCF), zobacz [podstawowe pojęcia programu Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Aby uzyskać więcej informacji na temat terminów używanych w dokumentacji Windows Communication Foundation (WCF), zobacz [podstawowe pojęcia dotyczące Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
- listy kontroli dostępu (ACL)  
- Lista zabezpieczenia mają zastosowanie do obiektu. (Obiekt może być plik, proces, zdarzenia lub wszystko inne potrzeby deskryptora zabezpieczeń). Wpis na liście ACL jest wpisu kontroli dostępu (ACE). Istnieją dwa typy list kontroli dostępu: poufne i systemu.  
+ Lista kontroli dostępu (ACL)  
+ Lista ochrony zabezpieczeń odnoszących się do obiektu. (Obiekt może być plikiem, procesem, zdarzeniem lub coś innego mającego deskryptor zabezpieczeń). Wpis na liście ACL to wpis kontroli dostępu (ACE). Istnieją dwa typy list ACL: uznaniowe i systemowe.  
   
  uwierzytelnianie  
- Proces sprawdzania, czy użytkownika, komputera, usługi lub procesu jest tym, za co się podaje.  
+ Proces sprawdzania, czy użytkownik, komputer, usługa lub proces to osoba lub jej oświadczenia.  
   
  autoryzacja  
- Czynność kontroli dostępu i uprawnień do zasobu. Na przykład umożliwiając użytkownikom jednej grupy do odczytu pliku, ale dzięki czemu tylko elementów członkowskich innej grupy, aby zmienić plik.  
+ Czynność kontrolowania dostępu i praw do zasobu. Na przykład umożliwienie członkom jednej grupy odczytanie pliku, ale zezwolenie tylko członkom innej grupy na zmianę pliku.  
   
  certyfikat urzędu certyfikacji  
- Identyfikuje urzędu certyfikacji, który wystawia certyfikaty uwierzytelniania serwera i klienta do serwerów i klientów, którzy żądać tych certyfikatów. Ponieważ zawiera klucz publiczny używany w podpisach cyfrowych, ona też nazywa się *certyfikat podpisu*. Jeśli urząd certyfikacji jest urzędem głównym, certyfikat urzędu certyfikacji może być określone jako *certyfikat główny*. Czasami nazywane *certyfikatu witryny*.  
+ Identyfikuje urząd certyfikacji, który wystawia certyfikaty uwierzytelniania serwera i klienta do serwerów i klientów żądających tych certyfikatów. Ponieważ zawiera klucz publiczny używany w podpisach cyfrowych, jest również określany jako *certyfikat sygnatury*. Jeśli urząd certyfikacji jest urzędem głównym, certyfikat urzędu certyfikacji może być określany jako *certyfikat główny*. Czasami nazywane także certyfikatem *lokacji*.  
   
- Hierarchii urzędów certyfikacji  
- Hierarchii urzędów certyfikacji zawiera wiele urzędów certyfikacji. Jest zorganizowany tak, aby każdego urzędu certyfikacji jest certyfikowany przez inny urząd certyfikacji w wyższym poziomie hierarchii do góry hierarchii, znany także jako *główny urząd*, zostanie osiągnięty.  
+ Hierarchia urzędu certyfikacji  
+ Hierarchia urzędu certyfikacji zawiera wiele urzędów certyfikacji. Jest on zorganizowany tak, aby każdy urząd certyfikacji był certyfikowany przez inny urząd certyfikacji na wyższym poziomie hierarchii do momentu osiągnięcia górnej części hierarchii, znanej również jako *urząd główny*.  
   
  certificate  
- Cyfrowo podpisaną deklaracją, który zawiera informacje o jednostce i klucz publiczny podmiotu, w związku z tym razem powiązanie tych dwóch rodzajów informacji. Certyfikat jest wystawiony przez zaufany urząd organizacji (lub jednostek) o nazwie to program certyfikacji, po urzędowi wykryła, że jednostka jest tożsamości jest.  
+ Podpisane cyfrowo oświadczenie zawierające informacje o jednostce i kluczu publicznym jednostki, w ten sposób powiązać te dwa informacje razem. Certyfikat jest wystawiany przez zaufaną organizację (lub jednostkę), nazywaną urzędem certyfikacji, po sprawdzeniu przez urząd, że jest on widoczny.  
   
- Certyfikaty mogą zawierać różne typy danych. Na przykład certyfikat X.509 zawiera formatu certyfikatu, numer seryjny certyfikatu, a algorytm użyty do podpisania certyfikatu, nazwa urzędu certyfikacji, który wystawił certyfikat, nazwa i klucz publiczny podmiotu żądanie certyfikatu i podpisu urzędu certyfikacji.  
+ Certyfikaty mogą zawierać różne typy danych. Na przykład certyfikat X. 509 zawiera format certyfikatu, numer seryjny certyfikatu, algorytm używany do podpisywania certyfikatu, nazwę urzędu certyfikacji, który wystawił certyfikat, nazwę i klucz publiczny jednostki żądającej certyfikatu i podpis urzędu certyfikacji.  
   
  Magazyn certyfikatów  
- Zazwyczaj są przechowywane magazynie trwałym, w którym certyfikaty, certyfikat list odwołania (CRL), a listy zaufania certyfikatów (CTL). Jest to możliwe, jednak, aby utworzyć i otworzyć magazynu certyfikatów wyłącznie w pamięci podczas pracy z certyfikatami, które nie powinny być umieszczane w magazynie trwałym.  
+ Zwykle magazyn trwały, w którym są przechowywane certyfikaty, listy odwołania certyfikatów (CRL) i listy zaufania certyfikatów (CTL). Istnieje jednak możliwość tworzenia i otwierania magazynu certyfikatów wyłącznie w pamięci podczas pracy z certyfikatami, które nie muszą być umieszczane w magazynie trwałym.  
   
- oświadczenia  
- Informacje przekazywane z jednej jednostki do innej używane do ustalenia tożsamości nadawcy. Na przykład nazwę użytkownika i token hasła lub certyfikatu X.509.  
+ claims  
+ Informacje przesyłane z jednej jednostki do innej używanej do ustanowienia tożsamości nadawcy. Na przykład nazwa użytkownika i token hasła lub certyfikat X. 509.  
   
  certyfikat klienta  
- Odnosi się do certyfikatu używany do uwierzytelniania klientów, na przykład podczas uwierzytelniania w przeglądarce sieci Web na serwerze sieci Web. Gdy klient przeglądarki sieci Web próbuje uzyskać dostęp do zabezpieczonej serwera sieci Web, klient wysyła swojego certyfikatu do serwera, aby umożliwić go w celu zweryfikowania tożsamości klienta.  
+ Odnosi się do certyfikatu używanego do uwierzytelniania klienta, takiego jak uwierzytelnianie przeglądarki sieci Web na serwerze sieci Web. Gdy klient przeglądarki sieci Web próbuje uzyskać dostęp do zabezpieczonego serwera sieci Web, klient wysyła swój certyfikat do serwera, aby umożliwić mu zweryfikowanie tożsamości klienta.  
   
- Poświadczenia  
- Dane logowania, które używa podmiotu zabezpieczeń w celu ustanowienia jego tożsamość, takie jak hasła lub biletu protokołu Kerberos został poprzednio uwierzytelniony. Poświadczenia są używane do kontrolowania dostępu do zasobów.  
+ uwierzytelniające  
+ Wcześniej uwierzytelnione dane logowania używane przez podmiot zabezpieczeń do ustalenia własnej tożsamości, takie jak hasło, lub biletu protokołu Kerberos. Poświadczenia służą do kontrolowania dostępu do zasobów.  
   
- Wytrawiony danych  
- Typ zawartości danych zdefiniowane przez klucza kryptograficznego publiczny standard (PKCS) #7 składający się z dowolnego typu danych, a także skrót wiadomości (podsumowanie) zawartości.  
+ dane szyfrowane  
+ Typ zawartości danych zdefiniowany przez #7 kryptograficzny (Public Key Cryptographic standard), który składa się z dowolnego typu danych oraz skrótu wiadomości (Digest) zawartości.  
   
- Podpis cyfrowy  
- Dane, które wiąże tożsamość nadawcy informacje są wysyłane. Podpis cyfrowy może być powiązany z dowolnej wiadomości, plik lub innymi informacjami lub przekazywane oddzielnie. Podpisy cyfrowe są używane w środowiskach publicznych kluczy i świadczenia usług uwierzytelniania i integralności.  
+ podpis cyfrowy  
+ Dane wiążące tożsamość nadawcy z wysyłanymi informacjami. Podpis cyfrowy może być powiązany z dowolnym komunikatem, plikiem lub innymi informacjami zakodowanymi cyfrowo lub przesyłane osobno. Podpisy cyfrowe są używane w środowiskach kluczy publicznych i zapewniają usługi uwierzytelniania i integralności.  
   
  encoding  
- Proces Przekształcanie danych w strumieniu usługi bits. Kodowanie jest częścią procesu serializacji, który konwertuje dane do strumienia z nich i zera.  
+ Proces przekształcania danych do strumienia bitów. Kodowanie jest częścią procesu serializacji, który konwertuje dane na strumień tych i zer.  
   
- pary kluczy do programu Exchange  
- Parą kluczy publiczny/prywatny używany do szyfrowania kluczy sesji, tak aby można je bezpiecznie przechowywane i wymiany z innymi użytkownikami.  
+ para kluczy wymiany  
+ Para kluczy publiczny/prywatny służąca do szyfrowania kluczy sesji, dzięki czemu mogą być bezpiecznie przechowywane i wymieniane z innymi użytkownikami.  
   
  hash  
- Wartość numeryczna stałym rozmiarze uzyskany przez zastosowanie funkcji matematycznych (patrz algorytmem wyznaczania wartości skrótu) do dowolnej ilości danych. Dane obejmują zazwyczaj danych losowych, znane jako *jednorazowego*. Usługa i klient współtworzyć poprawni exchange spowodują wzrost złożoności wyniku. Wynik jest również nazywany *skrót wiadomości*. Wysyłanie wartość skrótu jest bezpieczniejszy niż wysyłanie poufnych danych, takich jak hasła, nawet, jeśli hasło jest szyfrowane. Skrót nadawcy i odbiorcy należy uzgodnić algorytmu wyznaczania wartości skrótu i poprawni tak, aby po otrzymaniu, można sprawdzić skrótu.  
+ Wartość liczbowa o stałym rozmiarze uzyskana przez zastosowanie funkcji matematycznej (zobacz algorytm mieszania) do dowolnej ilości danych. Dane zazwyczaj zawierają dane losowe, znane jako identyfikator *jednorazowy*. Zarówno usługa, jak i klient tworzą program Exchange identyfikatorów jednorazowych, aby zwiększyć złożoność wyniku. Wynik jest również znany jako *skrót wiadomości*. Wysyłanie wartości skrótu jest bezpieczniejsze niż wysyłanie poufnych danych, takich jak hasło, nawet jeśli hasło jest szyfrowane. Nadawca i odbiorca skrótu muszą wyrazić zgodę na algorytm wyznaczania wartości skrótu i identyfikatorów jednorazowych, tak aby po otrzymaniu można było zweryfikować skrót.  
   
- Algorytm wyznaczania wartości skrótu  
- Algorytm używany do uzyskiwania wartości mieszania danych, takich jak wiadomości lub klucz sesji. Typowe algorytmy wyznaczania wartości skrótu to MD2, MD4, MD5 i SHA-1.  
+ algorytm wyznaczania wartości skrótu  
+ Algorytm używany do tworzenia wartości skrótu dla pewnego fragmentu danych, na przykład wiadomości lub klucza sesji. Typowe algorytmy wyznaczania wartości skrótu to MD2, MD4, MD5 i SHA-1.  
   
  Protokół Kerberos  
- Protokół, który definiuje sposób interakcji klientów z usługą uwierzytelniania sieci. Klient uzyskać bilety z Centrum dystrybucji kluczy (KDC) protokołu Kerberos i prezentować te bilety do serwerów, gdy nawiązywane są połączenia. Bilety protokołu Kerberos reprezentują poświadczenia sieci klienta.  
+ Protokół, który definiuje sposób, w jaki klienci współdziałają z usługą uwierzytelniania sieciowego. Klienci uzyskują bilety z centrum dystrybucji kluczy protokołu Kerberos (KDC) i przedstawią te bilety serwerowi w przypadku nawiązywania połączeń. Bilety protokołu Kerberos reprezentują poświadczenia sieciowe klienta.  
   
  Urząd zabezpieczeń lokalnych (LSA)  
- Chroniony podsystem, który uwierzytelnia użytkowników i loguje się do systemu lokalnego. LSA udostępnia również informacje dotyczące wszystkich aspektów zabezpieczeń lokalnych w systemie, nazywane zbiorczo zasady zabezpieczeń lokalnych systemu.  
+ Chroniony podsystem służący do uwierzytelniania i rejestrowania użytkowników w systemie lokalnym. Urząd LSA utrzymuje również informacje o wszystkich aspektach zabezpieczeń lokalnych w systemie, które są określane zbiorczo jako zasady zabezpieczeń lokalnych systemu.  
   
  Negotiate  
- Dostawca obsługi zabezpieczeń (SSP) działającego jako warstwy aplikacji między interfejs obsługuje dostawca zabezpieczeń (SSPI) i udostępnieniem. Gdy aplikacja wywoła SSPI zalogować się do sieci, można określić SSP, aby przetworzyć żądanie. Jeśli aplikacja Określa `Negotiate`, `Negotiate` analizuje żądania i odpowiedzi wybiera najlepsze SSP obsłużyć żądania na podstawie zasad zabezpieczeń skonfigurowane przez klienta.  
+ Dostawca obsługi zabezpieczeń (SSP), który działa jako warstwa aplikacji między interfejsem dostawcy obsługi zabezpieczeń (SSPI) a innym dostawców SSP. Gdy aplikacja wywołuje interfejs SSPI w celu zalogowania się do sieci, może określić dostawcę SSP, aby przetworzyć żądanie. Jeśli aplikacja jest `Negotiate`określana `Negotiate` , analizuje żądanie i wybiera najlepszą dostawcę SSP do obsługi żądania zgodnie z zasadami zabezpieczeń skonfigurowanymi przez klienta.  
   
- Identyfikator jednorazowy  
- Wartość losowo generowany używane w celu pokonania ataków "oparte na metodzie powtórzeń".  
+ nonce  
+ Generowana losowo wartość służąca do pokonania ataków "Replay".  
   
- Niemożność wyparcia  
- Zdolność do identyfikacji użytkowników, którzy wykonali pewnych działań, w związku z tym irrefutably przeciwdziałanie wszelkie próby Odmów odpowiedzialności przez użytkownika. Na przykład system będą mogli zalogować się identyfikator użytkownika w każdym przypadku, gdy plik zostanie usunięty.  
+ niemożność wyparcia  
+ Możliwość identyfikowania użytkowników, którzy wykonali pewne działania, a tym samym irrefutablyą wszelkie próby odmowy odpowiedzialności przez użytkownika. Na przykład system może rejestrować identyfikator użytkownika za każdym razem, gdy plik zostanie usunięty.  
   
  Standard kryptografii klucza publicznego (PKCS)  
- Specyfikacje wydzielana w celu przyspieszenia wdrażania kryptografii klucza publicznego RSA Data Security, Inc. we współpracy z programistami systemów zabezpieczeń na całym świecie.  
+ Specyfikacje opracowane przez firmę RSA Data Security, Inc. we współpracy z deweloperami bezpiecznych systemów na całym świecie w celu przyspieszenia wdrożenia kryptografii klucza publicznego.  
   
  PKCS #7  
- Standard składni wiadomości kryptograficznych. Ogólna składnia dla danych, do których kryptografii mogą być stosowane, takich jak podpisów cyfrowych i szyfrowania. Umożliwia także składnię do rozpowszechniania certyfikatów i list odwołania certyfikatów i innych atrybutów wiadomości, takich jak sygnatury czasowe, komunikat o.  
+ Standard składni wiadomości kryptograficznych. Ogólna składnia danych, do których można zastosować kryptografię, na przykład podpisy cyfrowe i szyfrowanie. Zawiera również składnię rozpowszechniania certyfikatów lub list odwołania certyfikatów oraz inne atrybuty komunikatów, takie jak sygnatury czasowe, do wiadomości.  
   
- zwykły tekst  
- Komunikat, który nie jest zaszyfrowany. Wiadomości w postaci zwykłego tekstu są czasami określane jako *jako zwykły tekst* wiadomości.  
+ formacie  
+ Komunikat, który nie jest szyfrowany. Wiadomości w postaci zwykłego tekstu są czasami określane jako wiadomości ze *zwykłym tekstem* .  
   
- uprawnienie  
- Prawa użytkownika do wykonywania różnych operacji związanych z systemem, takie jak zamykania systemu, ładowanie sterowniki urządzeń lub zmieniając czas systemowy. Token dostępu użytkownika zawiera listę uprawnień, czy użytkownik lub przez użytkownika grupy wstrzymania.  
+ kont  
+ Prawo użytkownika do wykonywania różnych operacji związanych z systemem, takich jak zamykanie systemu, ładowanie sterowników urządzeń lub zmiana czasu systemowego. Token dostępu użytkownika zawiera listę uprawnień, które są przechowywane przez użytkownika lub grupy użytkowników.  
   
  klucz prywatny  
- Tajne połowie używany w algorytmie klucz publiczny z pary kluczy. Klucze prywatne są zazwyczaj używane do szyfrowania symetrycznego klucza sesji, cyfrowego podpisywania wiadomości lub odszyfrować wiadomości, które zostały zaszyfrowane przy użyciu odpowiedniego klucza publicznego. Zobacz też "klucz publiczny."  
+ Tajna połowa pary kluczy używana w algorytmie klucza publicznego. Klucze prywatne są zwykle używane do szyfrowania symetrycznego klucza sesji, cyfrowego podpisywania wiadomości lub odszyfrowywania wiadomości, która została zaszyfrowana przy użyciu odpowiedniego klucza publicznego. Zobacz również "klucz publiczny".  
   
  proces  
- Kontekst zabezpieczeń, w którym działa aplikacja. Zazwyczaj kontekst zabezpieczeń jest skojarzona z użytkownikiem, więc wszystkie aplikacje uruchomione w ramach danego procesu na uprawnienia i uprawnienia użytkownika będącego właścicielem.  
+ Kontekst zabezpieczeń, w którym działa aplikacja. Zazwyczaj kontekst zabezpieczeń jest skojarzony z użytkownikiem, więc wszystkie aplikacje działające w ramach danego procesu przyjmują uprawnienia i uprawnienia użytkownika będącego właścicielem.  
   
- pary kluczy publiczny/prywatny  
- Zestaw kluczami kryptograficznymi używanymi dla kryptografii klucza publicznego. Dla każdego użytkownika dostawcy usług kryptograficznych (CSP) zazwyczaj obsługuje dwie pary kluczy publiczny/prywatny: pary kluczy programu exchange i pary kluczy podpisu cyfrowego. Pary kluczy są przechowywane z sesji do sesji.  
+ para kluczy publiczny/prywatny  
+ Zestaw kluczy kryptograficznych używanych na potrzeby kryptografii klucza publicznego. Dla każdego użytkownika dostawca usług kryptograficznych (CSP) zwykle utrzymuje dwie pary kluczy publicznych/prywatnych: parę kluczy wymiany i pary kluczy podpisu cyfrowego. Obie pary kluczy są utrzymywane z sesji na sesję.  
   
  klucz publiczny  
- Klucz kryptograficzny zazwyczaj używane do odszyfrowywania klucza sesji lub podpis cyfrowy. Klucz publiczny można również zaszyfrować wiadomości, gwarantując, że tylko osoby z odpowiedniego klucza prywatnego może odszyfrować komunikatu.  
+ Klucz kryptograficzny jest zazwyczaj używany podczas odszyfrowywania klucza sesji lub podpisu cyfrowego. Klucza publicznego można także użyć do zaszyfrowania komunikatu, gwarantując, że tylko osoba z odpowiednim kluczem prywatnym może odszyfrować komunikat.  
   
  szyfrowanie klucza publicznego  
- Szyfrowanie, który używa pary kluczy, jeden klucz szyfrowania danych i drugi klucz do odszyfrowania danych. Z kolei algorytmów szyfrowania symetrycznego, które korzystają z jednego klucza do szyfrowania i odszyfrowywania. W praktyce kryptografii klucza publicznego jest zazwyczaj używany do ochrony klucza sesji, który używa algorytmu szyfrowania symetrycznego. W tym przypadku klucz publiczny jest używany do szyfrowania klucza sesji, który z kolei używane do szyfrowania niektórych danych, a klucz prywatny jest używany do odszyfrowywania. Oprócz ochrony kluczy sesji, kryptografii klucza publicznego mogą również cyfrowe podpisywanie komunikat (przy użyciu klucza prywatnego) i sprawdzić poprawności podpisu (przy użyciu klucza publicznego).  
+ Szyfrowanie, które używa pary kluczy, jednego klucza do szyfrowania danych i drugiego klucza w celu odszyfrowania danych. W przeciwieństwie do algorytmów szyfrowania symetrycznego, które używają tego samego klucza do szyfrowania i odszyfrowywania. W tym przypadku Kryptografia klucza publicznego jest zwykle używana do ochrony klucza sesji używany algorytm szyfrowania symetrycznego. W takim przypadku klucz publiczny jest używany do szyfrowania klucza sesji, który z kolei został użyty do szyfrowania danych, a klucz prywatny jest używany do odszyfrowywania. Oprócz ochrony kluczy sesji Kryptografia klucza publicznego może również służyć do cyfrowego podpisywania wiadomości (przy użyciu klucza prywatnego) i weryfikowania podpisu (przy użyciu klucza publicznego).  
   
- infrastruktury kluczy publicznych (PKI)  
- Infrastruktury, zapewniając zintegrowany zestaw usług i narzędzi administracyjnych do tworzenia, wdrażania i zarządzania aplikacjami klucza publicznego.  
+ infrastruktura kluczy publicznych (PKI)  
+ Infrastruktura dostarczająca zintegrowany zestaw usług i narzędzi administracyjnych służących do tworzenia i wdrażania aplikacji i zarządzania nimi.  
   
- odrzucenie  
- Możliwość błędnie Odmów wykonanie akcji podczas innych podmiotów użytkownik nie może potwierdzić inaczej. Na przykład użytkownik, który usuwa plik, i kto pomyślnie odmowy, zrobił.  
+ rzuca  
+ Zdolność użytkownika do fałszywych odmowy wykonywania akcji, podczas gdy inne strony nie mogą udowodnić inaczej. Na przykład użytkownik, który usunął plik i który może pomyślnie odmówić wykonania.  
   
- główny urząd certyfikacji  
- Urząd certyfikacji, w górnej części hierarchii urzędów certyfikacji. Główny urząd certyfikacji poświadcza urzędów certyfikacji na następnym poziomie hierarchii.  
+ urząd główny  
+ Urząd certyfikacji w górnej części hierarchii urzędu certyfikacji. Urząd główny poświadcza urzędy certyfikacji na następnym poziomie hierarchii.  
   
- Secure Hash Algorithm (SHA)  
- Algorytm wyznaczania wartości skrótu, który generuje skrót wiadomości. Za pomocą podpisów cyfrowych algorytm (DSA) w Digital Signature Standard (DSS), między innymi używany jest algorytm SHA. Istnieją cztery różne typy SHA: SHA-1, SHA-256, SHA-384 i SHA-512. SHA-1 generuje 160-bitowy skrót wiadomości. Algorytm SHA-256, SHA-384 i SHA-512 generować 256-bitowego, 384-bitowy i 512-bitowy, komunikatów skróty służące odpowiednio. Agent kondycji systemu został opracowany przez instytut National Institute of Standards and Technology (NIST) oraz przez National Security Agency (NSA).  
+ Algorytm bezpiecznego wyznaczania wartości skrótu (SHA)  
+ Algorytm wyznaczania wartości skrótu, który generuje skrót wiadomości. SHA jest używany z algorytmem podpisu cyfrowego (DSA) w standardzie sygnatury cyfrowej (DSS) w innych miejscach. Istnieją cztery odmiany SHA: SHA-1, SHA-256, SHA-384 i SHA-512. Algorytm SHA-1 generuje 160-bitowy skrót wiadomości. Algorytm SHA-256, SHA-384 i SHA-512 generują odpowiednio skróty 256-bitowe, 384 i 512. Algorytm SHA został opracowany przez Narodowy Instytut standardów i technologii (NIST) oraz przez Agencję Bezpieczeństwa Narodowego.  
   
- Secure Sockets Layer (SSL)  
- Protokół komunikacji sieciowej bezpiecznej, korzystając z technologii kluczy publicznych i wpisu tajnego.  
+ SSL (SSL)  
+ Protokół zabezpieczania komunikacji sieciowej przy użyciu kombinacji technologii publicznego i tajnego klucza.  
   
  kontekst zabezpieczeń  
- Atrybuty zabezpieczeń lub reguły, działających w danej chwili. Na przykład: bieżący użytkownik zalogowany na komputerze lub osobistego numeru identyfikacyjnego wprowadzonej przez użytkownika karty inteligentnej. Dla interfejsu SSPI kontekst zabezpieczeń jest struktura nieprzezroczyste danych, która zawiera dane zabezpieczeń, które są odpowiednie do połączenia, np. klucza sesji lub wskazywać na czas trwania sesji.  
+ Atrybuty lub reguły zabezpieczeń, które są obecnie obowiązujące. Na przykład bieżący użytkownik zalogowany na komputerze lub osobisty numer identyfikacyjny wprowadzony przez użytkownika karty inteligentnej. W przypadku interfejsu SSPI kontekst zabezpieczeń jest nieprzezroczystą strukturą danych, która zawiera dane zabezpieczeń odpowiednie dla połączenia, takie jak klucz sesji lub wskazanie czasu trwania sesji.  
   
  podmiot zabezpieczeń  
- Jednostka rozpoznawane przez system zabezpieczeń. Podmiotów zabezpieczeń mogą obejmować użytkowników ludzi, a także autonomicznego procesów.  
+ Jednostka rozpoznawana przez system zabezpieczeń. Podmioty zabezpieczeń mogą obejmować zarówno użytkowników ludzkich, jak i autonomiczne procesy.  
   
  Dostawca obsługi zabezpieczeń (SSP)  
- Biblioteka dołączana dynamicznie (DLL), która implementuje interfejs SSPI, udostępniając co najmniej jeden pakiet zabezpieczeń do aplikacji. Każdy pakiet zabezpieczeń zawiera mapowania między wywołania funkcji SSPI aplikacji i funkcji na model zabezpieczeń rzeczywiste. Pakiety zabezpieczeń obsługuje protokoły zabezpieczeń, takie jak uwierzytelnianie Kerberos i Microsoft LAN Manager (LanMan).  
+ Biblioteka dołączana dynamicznie (DLL) implementująca interfejs SSPI przez udostępnienie co najmniej jednego pakietu zabezpieczeń dla aplikacji. Każdy pakiet zabezpieczeń zawiera mapowania między wywołaniami funkcji interfejsu SSPI aplikacji a rzeczywistymi funkcjami modelu zabezpieczeń. Pakiety zabezpieczeń obsługują protokoły zabezpieczeń, takie jak uwierzytelnianie Kerberos i Microsoft LAN Manager (LanMan).  
   
  Interfejs dostawcy obsługi zabezpieczeń (SSPI)  
- Wspólny interfejs między aplikacjami na poziomie transportu, takich jak Microsoft zdalnego wywołania procedury (RPC) i dostawców zabezpieczeń, takich jak Windows rozproszone zabezpieczeń. Interfejs SSPI pozwala aplikacjom transportu wywołać jedną z kilku dostawców zabezpieczeń, aby uzyskać uwierzytelnionego połączenia. Te wywołania nie wymagają obszerną wiedzę na temat szczegółów protokołu zabezpieczeń.  
+ Wspólny interfejs między aplikacjami na poziomie transportu, takimi jak zdalne wywoływanie procedur (RPC) firmy Microsoft, oraz dostawcy zabezpieczeń, takie jak zabezpieczenia rozproszone systemu Windows. Interfejs SSPI umożliwia aplikacji transportowej wywoływanie jednego z kilku dostawców zabezpieczeń w celu uzyskania uwierzytelnionego połączenia. Te wywołania nie wymagają obszernej znajomości szczegółowych informacji o protokole zabezpieczeń.  
   
  Usługa tokenu zabezpieczającego  
- Usługi zaprojektowane do wystawiania i zarządzania nimi tokenów zabezpieczających niestandardowe (wystawionych tokenów) w scenariuszu wielofunkcyjnych. Tokeny niestandardowe są zazwyczaj tokenów zabezpieczeń potwierdzenia Markup Language (SAML), które zawierają niestandardowe poświadczenia.  
+ Usługi przeznaczone do wystawiania niestandardowych tokenów zabezpieczeń (wystawionych tokenów) i zarządzania nimi w scenariuszu wielousługowym. Tokeny niestandardowe to zazwyczaj tokeny języka SAML (Security Assertions Markup Language), które zawierają poświadczenia niestandardowe.  
   
  certyfikat serwera  
- Odnosi się do certyfikatu używany do uwierzytelniania serwera, na przykład podczas uwierzytelniania serwera sieci Web w przeglądarce internetowej. Gdy klient przeglądarki sieci Web próbuje uzyskać dostęp do zabezpieczonej serwera sieci Web, serwer wysyła swój certyfikat w przeglądarce, aby umożliwić go w celu zweryfikowania tożsamości serwera.  
+ Odnosi się do certyfikatu używanego do uwierzytelniania serwera, takiego jak uwierzytelnianie serwera sieci Web w przeglądarce internetowej. Gdy klient przeglądarki sieci Web próbuje uzyskać dostęp do zabezpieczonego serwera sieci Web, serwer wysyła swój certyfikat do przeglądarki, aby umożliwić mu zweryfikowanie tożsamości serwera.  
   
- Sesji  
- Wymiana komunikatów w ramach ochrony pojedynczy materiału klucza. Na przykład sesji SSL Użyj jednego klucza do wysyłania wielu komunikatów i z powrotem w ramach tego klucza.  
+ obrad  
+ Wymiana komunikatów w ramach ochrony jednego fragmentu materiału klucza. Na przykład sesje SSL używają jednego klucza do wysyłania wielu wiadomości z powrotem i w dół w ramach tego klucza.  
   
  klucz sesji  
- Losowo generowany klucz, który jest używany jeden raz, a następnie zostaje odrzucone. Sesji są klucze symetryczne (używany do szyfrowania i odszyfrowywania). Są one wysyłane z wiadomością chronione przez szyfrowanie przy użyciu klucza publicznego z zamierzonym odbiorcą. Klucz sesji składa się z około 40 do 2000 bitów liczbę losową.  
+ Losowo wygenerowany klucz, który jest używany raz, a następnie odrzucony. Klucze sesji są symetryczne (używane do szyfrowania i odszyfrowywania). Są one wysyłane z wiadomością chronioną przez szyfrowanie za pomocą klucza publicznego od zamierzonego odbiorcy. Klucz sesji składa się z losowej liczby około 40 do 2 000 bitów.  
   
  dodatkowe poświadczenia  
- Użyj poświadczeń dla podczas uwierzytelniania do domeny zabezpieczeń obcego podmiotu zabezpieczeń.  
+ Poświadczenia do użycia podczas uwierzytelniania podmiotu zabezpieczeń w obcych domenach zabezpieczeń.  
   
  szyfrowanie symetryczne  
- Szyfrowanie, który korzysta z jednego klucza do szyfrowania i odszyfrowywania. Szyfrowania symetrycznego jest preferowana w przypadku szyfrowania dużych ilości danych. To niektóre z najczęściej algorytmów szyfrowania symetrycznego RC2, RC4 i Data Encryption Standard (DES).  
+ Szyfrowanie używające jednego klucza do szyfrowania i odszyfrowywania. Szyfrowanie symetryczne jest preferowane w przypadku szyfrowania dużych ilości danych. Niektóre z bardziej popularnych algorytmów szyfrowania symetrycznego to RC2, RC4 i Data Encryption Standard (DES).  
   
- Zobacz też "szyfrowanie kluczem publicznym."  
+ Zobacz też "szyfrowanie klucza publicznego".  
   
- Klucz symetryczny  
- Pojedynczy klucz używany do szyfrowania i odszyfrowywania. Klucze sesji są zazwyczaj symetryczne.  
+ klucz symetryczny  
+ Pojedynczy klucz używany do szyfrowania i odszyfrowywania. Klucze sesji są zwykle symetryczne.  
   
- Token (token dostępu)  
- Token dostępu zawiera informacje dotyczące zabezpieczeń dla sesji logowania. System tworzy token dostępu, gdy użytkownik loguje się, a każdy proces wykonywany w imieniu użytkownika ma kopię tokenu. Token identyfikuje użytkownika, grupy użytkowników i uprawnień użytkownika. System używa tokenu do kontrolowania dostępu do zabezpieczanych obiektów oraz do sterowania użytkownikowi możliwość wykonywania różnych operacji związanych z systemu na komputerze lokalnym. Istnieją dwa rodzaje tokenów dostępu podstawowego i personifikacji.  
+ token (token dostępu)  
+ Token dostępu zawiera informacje o zabezpieczeniach dla sesji logowania. System tworzy token dostępu podczas logowania użytkownika, a każdy proces wykonywany w imieniu użytkownika ma kopię tokenu. Token identyfikuje użytkownika, grupy użytkowników i uprawnienia użytkownika. System używa tokenu, aby kontrolować dostęp do zabezpieczanych obiektów i kontrolować zdolność użytkownika do wykonywania różnych operacji związanych z systemem na komputerze lokalnym. Istnieją dwa rodzaje tokenów dostępu, podstawowe i personifikacja.  
   
  Warstwa transportu  
- Warstwa sieci, która jest odpowiedzialny za obie jakości usług i dokładne dostarczania informacji. Wśród zadań wykonywanych w tej warstwie to wykrywanie błędów i korekty.  
+ Warstwa sieci, która jest odpowiedzialna za jakość usługi i dokładne dostarczanie informacji. Między zadaniami wykonywanymi w tej warstwie są wykrywanie i Korekcja błędów.  
   
- Lista zaufania (listy zaufania certyfikatów lub listę zaufania certyfikatów)  
- Wstępnie zdefiniowanej listy elementów, które zostały podpisane przez zaufane jednostki. Lista CTL może być dowolna, takich jak lista skrótów certyfikatów lub Podaj listę nazw plików. Wszystkie elementy na liście są uwierzytelniane (zatwierdzone) przez jednostkę podpisywania.  
+ Lista zaufania (Lista zaufania certyfikatów lub CTL)  
+ Wstępnie zdefiniowana lista elementów, które zostały podpisane przez zaufaną jednostkę. Lista CTL może mieć dowolną wartość, na przykład listę skrótów certyfikatów lub listę nazw plików. Wszystkie elementy na liście są uwierzytelniane (zatwierdzone) przez jednostkę podpisującą.  
   
  Dostawca zaufania  
- Oprogramowanie, które decyduje, czy dany plik jest zaufany. Ta decyzja opiera się na certyfikat skojarzony z plikiem.  
+ Oprogramowanie, które decyduje o tym, czy dany plik jest zaufany. Ta decyzja jest oparta na certyfikacie skojarzonym z plikiem.  
   
  główna nazwa użytkownika (UPN)  
- Nazwa konta użytkownika (czasami określane jako *nazwa logowania użytkownika*) i nazwa domeny identyfikującej domenę, w którym znajduje się konto użytkownika. Jest to standardowy używana do logowania do domeny Windows. Format to: someone@example.com (podobnie jak adres e-mail).  
+ Nazwa konta użytkownika (czasem określana jako *Nazwa logowania użytkownika*) i nazwa domeny identyfikującej domenę, w której znajduje się konto użytkownika. Jest to standardowe użycie logowania do domeny systemu Windows. Format to: someone@example.com (jak w przypadku adresu e-mail).  
   
 > [!NOTE]
->  Oprócz standardowych formularza nazwy UPN WCF akceptuje nazwy UPN w postaci niskiego poziomu, na przykład cohowinery.com\someone.  
+> Oprócz standardowego formularza UPN, WCF akceptuje UPN w formularzu niskiego poziomu, na przykład cohowinery. com\someone.  
   
- X.509  
- Międzynarodowo standard dla certyfikatów definiujący ich wymagane elementy.  
+ X. 509  
+ Międzynarodowy, uznawany w międzynarodowym Standard dla certyfikatów, który definiuje ich wymagane części.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Podstawowe pojęcia programu Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

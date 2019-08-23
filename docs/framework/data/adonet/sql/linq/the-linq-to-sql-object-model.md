@@ -5,80 +5,80 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: de3fc8b23bd132179fc7fb67d29010552138e3ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6518e4edeccdd533487f717122ba6832f13436a3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742823"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947065"
 ---
 # <a name="the-linq-to-sql-object-model"></a>Model obiektu LINQ to SQL
-W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], na model obiektów wyrażony w języku programowania, który jest mapowany na model danych relacyjnej bazy danych. Operacje na danych, następnie są przeprowadzane zgodnie z modelem obiektów.  
+W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]programie model obiektów wyrażony w języku programowania dewelopera jest mapowany na model danych relacyjnej bazy danych. Operacje na danych są następnie wykonywane zgodnie z modelem obiektów.  
   
- W tym scenariuszu nie wydaje polecenia bazy danych (na przykład `INSERT`) w bazie danych. Zamiast tego zmienić wartości i wykonywanie metod w modelu obiektu. Gdy chcesz wykonać zapytanie w bazie danych lub zmienia się, Wyślij [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy żądania na prawidłowe polecenia SQL, a następnie wysyła te polecenia w bazie danych.  
+ W tym scenariuszu do bazy danych nie są obsługiwane polecenia bazy danych programu `INSERT`(na przykład). Zamiast tego należy zmienić wartości i wykonać metody w modelu obiektów. Gdy chcesz wysyłać zapytania do bazy danych lub wysłać zmiany, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przetłumaczy żądania na poprawne polecenia SQL i wyśle te polecenia do bazy danych.  
   
- ![Zrzut ekranu pokazujący Model obiektu Linq.](./media/the-linq-to-sql-object-model/linq-object-model-two-tier.png)  
+ ![Zrzut ekranu pokazujący model obiektów LINQ.](./media/the-linq-to-sql-object-model/linq-object-model-two-tier.png)  
   
- Większość podstawowych elementów w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektów i ich związek z elementów w modelu opartego na danych relacyjnych, które są podsumowane w poniższej tabeli:  
+ Najbardziej podstawowe elementy w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektów i ich relacje z elementami w modelu danych relacyjnych są podsumowane w poniższej tabeli:  
   
-|LINQ to SQL Model obiektów|Dane relacyjne modelu|  
+|LINQ to SQL model obiektów|Relacyjny model danych|  
 |------------------------------|---------------------------|  
 |Klasa jednostki|tabela|  
 |Składowa klasy|Kolumna|  
-|Skojarzenie|Klucz obcy relacji|  
+|Skojarzenie|Relacja klucza obcego|  
 |Metoda|Procedura składowana lub funkcja|  
   
 > [!NOTE]
->  Poniższe opisy przyjęto założenie, że masz podstawową wiedzę na temat modelu opartego na danych relacyjnych i reguł.  
+> W poniższych opisach przyjęto założenie, że masz podstawową wiedzę na temat relacyjnego modelu danych i reguł.  
   
 ## <a name="linq-to-sql-entity-classes-and-database-tables"></a>LINQ to SQL klas jednostek i tabel bazy danych  
- W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], tabeli bazy danych jest reprezentowany przez *Klasa jednostki*. Klasa jednostki przypomina innej klasy, które można tworzyć z tą różnicą, że możesz dodawać adnotacje do klasy za pomocą specjalnych informacje, które kojarzy klasy z tabeli bazy danych. Wprowadź tę adnotację, dodając atrybut niestandardowy (<xref:System.Data.Linq.Mapping.TableAttribute>) do swojej deklaracji klasy, jak w poniższym przykładzie:  
+ W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]programie tabela bazy danych jest reprezentowana przez *klasę Entity*. Klasa jednostki jest taka sama jak jakakolwiek inna Klasa, którą można utworzyć, z wyjątkiem dodawania adnotacji do klasy przy użyciu specjalnych informacji, które kojarzą klasę z tabelą bazy danych. Tę adnotację można utworzyć, dodając atrybut niestandardowy<xref:System.Data.Linq.Mapping.TableAttribute>() do deklaracji klasy, jak w poniższym przykładzie:  
   
 ### <a name="example"></a>Przykład  
  [!code-csharp[DLinqObjectModel#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/Program.cs#1)]
  [!code-vb[DLinqObjectModel#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/Module1.vb#1)]  
   
- Tylko wystąpienia klasy zadeklarowane jako tabele (to znaczy klas jednostek) można zapisać w bazie danych.  
+ Tylko wystąpienia klas zadeklarowanych jako tabele (czyli klasy jednostek) można zapisać w bazie danych.  
   
- Aby uzyskać więcej informacji, zobacz sekcję atrybutów tabeli [mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Aby uzyskać więcej informacji, zobacz sekcję atrybut tabeli [mapowania opartego na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
-## <a name="linq-to-sql-class-members-and-database-columns"></a>LINQ to SQL składowych klasy i kolumny bazy danych  
- Oprócz kojarzenie klas z tabel, należy wyznaczyć pól lub właściwości do reprezentowania kolumny bazy danych. W tym celu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] definiuje <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, jak w poniższym przykładzie:  
+## <a name="linq-to-sql-class-members-and-database-columns"></a>Elementy członkowskie klasy LINQ to SQL i kolumny bazy danych  
+ Oprócz kojarzenia klas z tabelami należy wyznaczyć pola lub właściwości do reprezentowania kolumn bazy danych. W tym celu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute> definiuje atrybut, jak w poniższym przykładzie:  
   
 ### <a name="example"></a>Przykład  
  [!code-csharp[DLinqObjectModel#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/Program.cs#2)]
  [!code-vb[DLinqObjectModel#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/Module1.vb#2)]  
   
- Tylko pola i właściwości zamapowanych do kolumn są utrwalone lub pobierane z bazy danych. Te nie zadeklarowane jako kolumny będą traktowane jako przejściowe części logiki aplikacji.  
+ Tylko pola i właściwości zamapowane do kolumn są utrwalane lub pobierane z bazy danych. Te, które nie są zadeklarowane jako kolumny, są uznawane za przejściowe części logiki aplikacji.  
   
- <xref:System.Data.Linq.Mapping.ColumnAttribute> Atrybut ma wiele właściwości, których można użyć, aby dostosować te elementy członkowskie, które reprezentują kolumn (na przykład wyznaczanie członka jako kolumna klucza podstawowego). Aby uzyskać więcej informacji, zobacz sekcję atrybut kolumny [mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Ten <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybut ma różne właściwości, których można użyć do dostosowania tych elementów członkowskich, które reprezentują kolumny (na przykład wyznaczanie elementu członkowskiego jako kolumny klucza podstawowego). Aby uzyskać więcej informacji, zobacz sekcję atrybut kolumny [mapowania opartego na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
-## <a name="linq-to-sql-associations-and-database-foreign-key-relationships"></a>LINQ to SQL skojarzenia i relacje klucza obcego bazy danych  
- W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], reprezentuje skojarzenia bazy danych (np. klucza obcego relacji klucza podstawowego), stosując <xref:System.Data.Linq.Mapping.AssociationAttribute> atrybutu. W poniższym segment kodu `Order` klasa zawiera `Customer` właściwość, która ma <xref:System.Data.Linq.Mapping.AssociationAttribute> atrybutu. Ta właściwość i jego atrybut zapewniają `Order` klasy relację z `Customer` klasy.  
+## <a name="linq-to-sql-associations-and-database-foreign-key-relationships"></a>Powiązania LINQ to SQL i relacje klucza obcego bazy danych  
+ W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]programie reprezentowane są <xref:System.Data.Linq.Mapping.AssociationAttribute> skojarzenia bazy danych (takie jak klucz obcy z relacjami klucza podstawowego) przez zastosowanie atrybutu. W poniższym segmencie kodu `Order` Klasa `Customer` zawiera właściwość, która ma <xref:System.Data.Linq.Mapping.AssociationAttribute> atrybut. Ta właściwość i jej atrybut zapewniają `Order` klasę z relacją `Customer` do klasy.  
   
- Poniższy kod przedstawia przykład `Customer` właściwość `Order` klasy.  
+ Poniższy przykład kodu pokazuje `Customer` Właściwość `Order` z klasy.  
   
 ### <a name="example"></a>Przykład  
  [!code-csharp[DLinqObjectModel#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#3)]
  [!code-vb[DLinqObjectModel#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#3)]  
   
- Aby uzyskać więcej informacji, zobacz sekcję atrybut skojarzenia [mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Aby uzyskać więcej informacji, zobacz sekcję atrybut skojarzenia w [mapowaniu opartym na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
-## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>Procedury składowane programu LINQ to SQL metody i bazy danych  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje procedur przechowywanych i funkcji zdefiniowanych przez użytkownika. W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], mapowanie tych abstrakcje zdefiniowane bazy danych na obiekty klienta tak, aby mogli je w silnie typizowany sposób z poziomu kodu klienta. Podpisy metod przypominają możliwie jak najbliżej sygnatury procedury składowane i funkcje zdefiniowane w bazie danych. Technologia IntelliSense można użyć tych metod odnajdywania.  
+## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>Metody LINQ to SQL i procedury składowane bazy danych  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]obsługuje procedury składowane i funkcje zdefiniowane przez użytkownika. W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]programie należy mapować te abstrakcyjne zdefiniowane dla bazy danych na obiekty klienckie, aby można było uzyskać do nich dostęp w jednoznacznie określonym sposób z kodu klienta. Sygnatury metod przypominają możliwie najbliżej sygnatury procedur i funkcji zdefiniowanych w bazie danych. Aby poznać te metody, można użyć funkcji IntelliSense.  
   
- Oznacza to zestaw wyników zwrócony przez wywołanie procedury zmapowanego jest silnie typizowaną kolekcją.  
+ Zestaw wyników zwracany przez wywołanie procedury mapowanej jest kolekcją silną.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapowania procedur przechowywanych i funkcji do metod przy użyciu <xref:System.Data.Linq.Mapping.FunctionAttribute> i <xref:System.Data.Linq.Mapping.ParameterAttribute> atrybutów. Metody reprezentująca procedur składowanych różnią się od tych, które stanowią funkcje zdefiniowane przez użytkownika przez <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> właściwości. Jeśli ta właściwość jest ustawiona `false` (ustawienie domyślne), metoda reprezentuje procedury składowanej. Jeśli jest równa `true`, metoda reprezentuje funkcji bazy danych.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]mapuje procedury składowane i funkcje do metod przy <xref:System.Data.Linq.Mapping.FunctionAttribute> użyciu <xref:System.Data.Linq.Mapping.ParameterAttribute> atrybutów i. Metody reprezentujące procedury składowane różnią się od tych, <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> które reprezentują funkcje zdefiniowane przez użytkownika przez właściwość. Jeśli ta właściwość jest ustawiona na `false` (wartość domyślna), Metoda reprezentuje procedurę składowaną. Jeśli jest ustawiona na `true`, Metoda reprezentuje funkcję bazy danych.  
   
 > [!NOTE]
->  Jeśli używasz programu Visual Studio można użyć Object Relational Designer, aby utworzyć metody mapowany do procedur przechowywanych i funkcji zdefiniowanych przez użytkownika.  
+> Jeśli używasz programu Visual Studio, możesz użyć Object Relational Designer, aby utworzyć metody zamapowane na procedury składowane i funkcje zdefiniowane przez użytkownika.  
   
 ### <a name="example"></a>Przykład  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]
  [!code-vb[DLinqObjectModel#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#4)]  
   
- Aby uzyskać więcej informacji, zobacz sekcje atrybut funkcji, przechowywane procedury atrybut i atrybut Parameter [mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) i [procedur składowanych](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
+ Aby uzyskać więcej informacji, zobacz sekcję atrybut funkcji, atrybut procedury składowanej i atrybuty parametrów dotyczące mapowań i [procedur składowanych](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md) [opartych na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) .  
   
 ## <a name="see-also"></a>Zobacz także
 

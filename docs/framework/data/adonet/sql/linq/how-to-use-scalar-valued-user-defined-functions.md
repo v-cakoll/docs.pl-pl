@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-ms.openlocfilehash: ffb24468c81cb4ec9f41645f8888c2c4ba021609
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d757e3c37f347014eb2ef90b4e61ddd205dd012
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033582"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938668"
 ---
 # <a name="how-to-use-scalar-valued-user-defined-functions"></a>Instrukcje: Używanie funkcji skalarnej zdefiniowanej przez użytkownika
-Można mapować metoda klienta zdefiniowana w klasie funkcji zdefiniowanych przez użytkownika przy użyciu <xref:System.Data.Linq.Mapping.FunctionAttribute> atrybutu. Należy pamiętać, że treść metody tworzy wyrażenie, które przechwytuje celem wywołania metody i przekazuje to wyrażenie do <xref:System.Data.Linq.DataContext> w celu tłumaczenia i wykonania.  
+Można zmapować metodę klienta zdefiniowaną w klasie do funkcji zdefiniowanej przez użytkownika przy użyciu <xref:System.Data.Linq.Mapping.FunctionAttribute> atrybutu. Należy zauważyć, że treść metody konstruuje wyrażenie, które przechwytuje zamiar wywołania metody i przekazuje to wyrażenie do <xref:System.Data.Linq.DataContext> translacji i wykonywania.  
   
 > [!NOTE]
->  Bezpośrednie jest wykonywany tylko wtedy, gdy funkcja jest wywoływana poza zapytania. Aby uzyskać więcej informacji, zobacz [jak: Wywoływanie wbudowanych funkcji zdefiniowanych przez użytkownika](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md).  
+> Bezpośrednie wykonanie odbywa się tylko wtedy, gdy funkcja jest wywoływana poza zapytaniem. Aby uzyskać więcej informacji, zobacz [jak: Wywołaj wbudowane](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)funkcje zdefiniowane przez użytkownika.  
   
 ## <a name="example"></a>Przykład  
- Następujący kod SQL stanowi funkcji skalarnej zdefiniowanej przez użytkownika `ReverseCustName()`.  
+ Poniższy kod SQL przedstawia funkcję `ReverseCustName()`skalarną zdefiniowaną przez użytkownika.  
   
 ```  
 CREATE FUNCTION ReverseCustName(@string varchar(100))  
@@ -32,7 +32,7 @@ BEGIN
 END  
 ```  
   
- Mapującej metodę klienta dla tego kodu podobny do następującego:  
+ Należy zmapować metodę klienta, na przykład następujące dla tego kodu:  
   
  [!code-csharp[DLinqUDFS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/northwind-tfunc.cs#3)]
  [!code-vb[DLinqUDFS#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/northwind-tfunc.vb#3)]  

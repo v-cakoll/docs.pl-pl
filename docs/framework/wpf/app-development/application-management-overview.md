@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 448c212e4afe547dc6342b000fe06d5340db112c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818008"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958740"
 ---
 # <a name="application-management-overview"></a>Przegląd Zarządzanie aplikacjami
 Wszystkie aplikacje korzystają ze wspólnego zestawu funkcji, które dotyczą implementacji i zarządzania aplikacjami. Ten temat zawiera omówienie funkcji w <xref:System.Windows.Application> klasie służącej do tworzenia aplikacji i zarządzania nimi.  
@@ -74,7 +74,7 @@ Wszystkie aplikacje korzystają ze wspólnego zestawu funkcji, które dotyczą i
 - W kodzie, Klasa musi być `partial` klasą o tej samej nazwie, która jest określona `x:Class` przez atrybut w znaczniku i musi pochodzić od <xref:System.Windows.Application>. Pozwala to skojarzyć plik związany z kodem z `partial` klasą wygenerowaną dla pliku znaczników podczas kompilowania aplikacji (zobacz Kompilowanie [aplikacji WPF](building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
->  Gdy tworzysz nowy projekt aplikacji WPF lub projekt aplikacji przeglądarki WPF przy użyciu programu Visual Studio, definicja aplikacji jest domyślnie uwzględniana i jest definiowana przy użyciu znaczników i kodu.  
+> Gdy tworzysz nowy projekt aplikacji WPF lub projekt aplikacji przeglądarki WPF przy użyciu programu Visual Studio, definicja aplikacji jest domyślnie uwzględniana i jest definiowana przy użyciu znaczników i kodu.  
   
  Ten kod jest minimalnym wymaganym do zaimplementowania definicji aplikacji. Jednak przed rozpoczęciem kompilowania i uruchamiania aplikacji należy wprowadzić dodatkową konfigurację programu MSBuild do definicji aplikacji.  
   
@@ -148,7 +148,7 @@ Wszystkie aplikacje korzystają ze wspólnego zestawu funkcji, które dotyczą i
  [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
   
 > [!NOTE]
->  Pierwszy <xref:System.Windows.Window> do utworzenia wystąpienia w aplikacji autonomicznej jest domyślnie głównym oknem aplikacji. Ten <xref:System.Windows.Window> obiekt jest przywoływany <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> przez właściwość. Wartość <xref:System.Windows.Application.MainWindow%2A> właściwości można zmienić programowo, jeśli inne okno niż pierwsze <xref:System.Windows.Window> wystąpienie jest oknem głównym.  
+> Pierwszy <xref:System.Windows.Window> do utworzenia wystąpienia w aplikacji autonomicznej jest domyślnie głównym oknem aplikacji. Ten <xref:System.Windows.Window> obiekt jest przywoływany <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> przez właściwość. Wartość <xref:System.Windows.Application.MainWindow%2A> właściwości można zmienić programowo, jeśli inne okno niż pierwsze <xref:System.Windows.Window> wystąpienie jest oknem głównym.  
   
  Po pierwszym uruchomieniu programu XBAP najprawdopodobniej przejdziesz do <xref:System.Windows.Controls.Page>. Jest to pokazane w poniższym kodzie.  
   
@@ -170,7 +170,7 @@ Wszystkie aplikacje korzystają ze wspólnego zestawu funkcji, które dotyczą i
  Ten znacznik ma ten sam skutek jak poprzedni kod otwierania okna.  
   
 > [!NOTE]
->  Aby uzyskać więcej informacji na temat nawigacji, zobacz [Omówienie nawigacji](navigation-overview.md).  
+> Aby uzyskać więcej informacji na temat nawigacji, zobacz [Omówienie nawigacji](navigation-overview.md).  
   
  Musisz obsłużyć zdarzenie <xref:System.Windows.Application.Startup> , aby otworzyć plik <xref:System.Windows.Window> , jeśli trzeba utworzyć wystąpienie go przy użyciu konstruktora bez parametrów lub należy ustawić jego właściwości lub zasubskrybować jego zdarzenia przed wyświetleniem go lub trzeba przetworzyć dowolne argumenty wiersza polecenia dostarczone, gdy aplikacja została uruchomiona.  
   
@@ -219,7 +219,7 @@ Wszystkie aplikacje korzystają ze wspólnego zestawu funkcji, które dotyczą i
  <xref:System.Windows.Window> Można również aktywować i dezaktywować. Zobacz <xref:System.Windows.Window.Activated?displayProperty=nameWithType> i <xref:System.Windows.Window.Deactivated?displayProperty=nameWithType> , aby uzyskać więcej informacji.  
   
 > [!NOTE]
->  Nie <xref:System.Windows.Application.Activated?displayProperty=nameWithType> są <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> one ani wywoływane dla aplikacji XBAP.  
+> Nie <xref:System.Windows.Application.Activated?displayProperty=nameWithType> są <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> one ani wywoływane dla aplikacji XBAP.  
   
 <a name="Application_Shutdown"></a>   
 ### <a name="application-shutdown"></a>Zamykanie aplikacji  
@@ -236,7 +236,7 @@ Wszystkie aplikacje korzystają ze wspólnego zestawu funkcji, które dotyczą i
  Aby ułatwić zarządzanie zamknięciem aplikacji, <xref:System.Windows.Application> program <xref:System.Windows.Application.Shutdown%2A> udostępnia metodę, <xref:System.Windows.Application.ShutdownMode%2A> Właściwość oraz <xref:System.Windows.Application.SessionEnding> zdarzenia i <xref:System.Windows.Application.Exit> .  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A>można wywołać tylko z aplikacji, które mają <xref:System.Security.Permissions.UIPermission>. Autonomiczne aplikacje WPF zawsze mają to uprawnienie. Jednak aplikacje XBAP działające w obszarze izolowanie zabezpieczeń strefa Internet częściowo ufają nie.  
+> <xref:System.Windows.Application.Shutdown%2A>można wywołać tylko z aplikacji, które mają <xref:System.Security.Permissions.UIPermission>. Autonomiczne aplikacje WPF zawsze mają to uprawnienie. Jednak aplikacje XBAP działające w obszarze izolowanie zabezpieczeń strefa Internet częściowo ufają nie.  
   
 #### <a name="shutdown-mode"></a>Tryb zamykania  
  Większość aplikacji jest zamykana po zamknięciu wszystkich okien lub zamknięciu okna głównego. Czasami jednak inne warunki specyficzne dla aplikacji mogą określić, kiedy aplikacja jest zamykana. Możesz określić warunki, w których aplikacja zostanie ZAMKNIĘTA, ustawiając <xref:System.Windows.Application.ShutdownMode%2A> jedną z następujących <xref:System.Windows.ShutdownMode> wartości wyliczenia:  
@@ -254,7 +254,7 @@ Wszystkie aplikacje korzystają ze wspólnego zestawu funkcji, które dotyczą i
  Jeśli istnieją warunki zamknięcia specyficzne dla aplikacji, należy ustawić na <xref:System.Windows.Application.ShutdownMode%2A> <xref:System.Windows.ShutdownMode.OnExplicitShutdown>wartość. W takim przypadku jest odpowiedzialny za zamknięcie aplikacji przez jawne wywołanie <xref:System.Windows.Application.Shutdown%2A> metody. w przeciwnym razie aplikacja będzie działać nawet wtedy, gdy wszystkie okna są zamknięte. Należy zauważyć <xref:System.Windows.Application.Shutdown%2A> , że jest wywoływana niejawnie, <xref:System.Windows.ShutdownMode.OnLastWindowClose> <xref:System.Windows.Application.ShutdownMode%2A> gdy <xref:System.Windows.ShutdownMode.OnMainWindowClose>jest albo lub.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A>można ustawić z elementu XBAP, ale jest on ignorowany; Program XBAP jest zawsze zamykany, gdy zostanie odsunięty z przeglądarki lub w przypadku zamknięcia przeglądarki obsługującej aplikację XBAP. Aby uzyskać więcej informacji, zobacz [Omówienie nawigacji](navigation-overview.md).  
+> <xref:System.Windows.Application.ShutdownMode%2A>można ustawić z elementu XBAP, ale jest on ignorowany; Program XBAP jest zawsze zamykany, gdy zostanie odsunięty z przeglądarki lub w przypadku zamknięcia przeglądarki obsługującej aplikację XBAP. Aby uzyskać więcej informacji, zobacz [Omówienie nawigacji](navigation-overview.md).  
   
 #### <a name="session-ending"></a>Zakończenie sesji  
  Warunki zamknięcia, które są opisane przez <xref:System.Windows.Application.ShutdownMode%2A> właściwość, są specyficzne dla aplikacji. W niektórych przypadkach aplikacja może zostać zamknięta w wyniku zewnętrznego stanu. Najbardziej typowym warunkiem zewnętrznym jest sytuacja, w której użytkownik skończy sesję systemu Windows przez wykonanie następujących czynności:  
@@ -277,7 +277,7 @@ Wszystkie aplikacje korzystają ze wspólnego zestawu funkcji, które dotyczą i
  W tym przykładzie kod sprawdza <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> właściwość, aby określić, jak kończy się sesja systemu Windows. Używa tej wartości, aby wyświetlić komunikat z potwierdzeniem dla użytkownika. Jeśli użytkownik nie chce, aby sesja była zakończona, kod ustawia <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> , aby `true` uniemożliwić zakończenie sesji systemu Windows.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding>nie jest wywoływany dla aplikacji XBAP.
+> <xref:System.Windows.Application.SessionEnding>nie jest wywoływany dla aplikacji XBAP.
 
 #### <a name="exit"></a>Zakończ  
  Gdy aplikacja zostanie ZAMKNIĘTA, może być konieczne przeprowadzenie ostatecznego przetwarzania, takiego jak utrwalanie stanu aplikacji. W takich sytuacjach można obsłużyć <xref:System.Windows.Application.Exit> zdarzenie, `App_Exit` ponieważ procedura obsługi zdarzeń w poniższym przykładzie. Jest on zdefiniowany jako program obsługi zdarzeń w pliku *App. XAML* . Jego implementacja została wyróżniona w plikach *App.XAML.cs* i *Application. XAML. vb* .
@@ -301,7 +301,7 @@ Wszystkie aplikacje korzystają ze wspólnego zestawu funkcji, które dotyczą i
  Aplikacje są najczęściej uruchamiane przez system operacyjny w odpowiedzi na żądanie użytkownika. Jednak aplikacja może być uruchamiana przez inną aplikację w celu wykonania określonego zadania. Gdy uruchomiona aplikacja zostanie ZAMKNIĘTA, uruchamianie aplikacji może chcieć znać warunek, pod którym uruchomiona aplikacja została zamknięta. W takich sytuacjach system Windows umożliwia aplikacjom zwracanie kodu zakończenia aplikacji przy zamykaniu. Domyślnie aplikacje WPF zwracają wartość kodu zakończenia 0.  
   
 > [!NOTE]
->  Podczas debugowania z programu Visual Studio kod wyjścia aplikacji jest wyświetlany w oknie **danych wyjściowych** , gdy aplikacja zostanie ZAMKNIĘTA, w komunikacie podobnym do poniższego:  
+> Podczas debugowania z programu Visual Studio kod wyjścia aplikacji jest wyświetlany w oknie **danych wyjściowych** , gdy aplikacja zostanie ZAMKNIĘTA, w komunikacie podobnym do poniższego:  
 >   
 >  `The program '[5340] AWPFApp.vshost.exe: Managed' has exited with code 0 (0x0).`  
 >   
@@ -315,7 +315,7 @@ Wszystkie aplikacje korzystają ze wspólnego zestawu funkcji, które dotyczą i
  Możesz wykryć wartość kodu zakończenia i zmienić ją, obsługując <xref:System.Windows.Application.Exit> zdarzenie. Przeszedł procedurę <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> obsługi <xref:System.Windows.Application.Exit> zdarzeń, którazapewniadostępdokoduzakończenia<xref:System.Windows.ExitEventArgs> z właściwością. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Application.Exit>.  
   
 > [!NOTE]
->  Możesz ustawić kod zakończenia zarówno w aplikacji autonomicznej, jak i w aplikacjach XBAP. Jednak wartość kodu zakończenia jest ignorowana dla aplikacji XBAP.  
+> Możesz ustawić kod zakończenia zarówno w aplikacji autonomicznej, jak i w aplikacjach XBAP. Jednak wartość kodu zakończenia jest ignorowana dla aplikacji XBAP.  
   
 <a name="Unhandled_Exceptions"></a>   
 ### <a name="unhandled-exceptions"></a>Nieobsłużone wyjątki  

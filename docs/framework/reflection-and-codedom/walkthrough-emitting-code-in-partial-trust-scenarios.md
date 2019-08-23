@@ -16,192 +16,192 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5aca9d3eae3f566e02e7bf3dae4ac971b8fae5c0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742464"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956638"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Przewodnik: Emitowanie kodu w scenariuszach częściowo zaufanych
-Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub częściowej relacji zaufania, ale niektóre funkcje wymagają specjalnych uprawnień w kodzie częściowo zaufanym. Ponadto emisji odbicia posiada funkcję, anonimowo obsługiwane metody dynamiczne, który jest przeznaczony do użycia z częściowej relacji zaufania, jak również przezroczyste dla zabezpieczeń zestawów.  
+Emisja odbicia używa tego samego interfejsu API w pełnej lub częściowej relacji zaufania, ale niektóre funkcje wymagają specjalnych uprawnień w częściowo zaufanym kodzie. Ponadto emitowanie odbicia ma funkcję, anonimowo hostowane metody dynamiczne, która jest przeznaczona do użycia z częściowym zaufaniem i przez zestawy przezroczyste dla zabezpieczeń.  
   
 > [!NOTE]
->  Przed programem .NET Framework 3.5 wymagany kod emisji <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> flagi. To uprawnienie jest zawarte domyślnie w `FullTrust` i `Intranet` zestawy nazwanych uprawnień, ale nie w `Internet` zestaw uprawnień. W związku z tym, biblioteka może być używana w częściowej relacji zaufania tylko wtedy, gdy miała <xref:System.Security.SecurityCriticalAttribute> atrybut i również wykonała <xref:System.Security.PermissionSet.Assert%2A> metodę <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Takie biblioteki wymagają weryfikacji zabezpieczeń zachowania ostrożność, ponieważ kodowanie błędów może spowodować luki w zabezpieczeniach. .NET Framework 3.5 umożliwia kod był emitowany w scenariuszach częściowej relacji zaufania bez wydawania żadnych wymogów bezpieczeństwa, ponieważ generowanie kodu nie jest z natury uprzywilejowaną operacją. Oznacza to, że wygenerowany kod nie ma więcej uprawnień niż zestaw, który emituje go. Dzięki temu biblioteki, które emitują kod zabezpieczenia przejrzysty i usuwa potrzebę zapewnienia <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, dzięki czemu bezpieczna biblioteka nie wymaga takiego przeglądu względem zabezpieczeń.  
+> Przed .NET Framework 3,5, emitując kod wymagany <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> z flagą. To uprawnienie jest uwzględniane domyślnie w `FullTrust` zestawach uprawnień i `Intranet` nazwanych `Internet` , ale nie w zestawie uprawnień. Z tego względu biblioteka może być używana z częściowej relacji zaufania tylko wtedy <xref:System.Security.SecurityCriticalAttribute> , gdy ma atrybut, <xref:System.Security.PermissionSet.Assert%2A> a także <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>wykonał metodę dla. Takie biblioteki wymagają starannej oceny zabezpieczeń, ponieważ błędy kodowania mogą spowodować powstanie luk w zabezpieczeniach. .NET Framework 3,5 umożliwia emitowanie kodu w scenariuszach częściowej relacji zaufania bez wydawania żadnych wymagań dotyczących zabezpieczeń, ponieważ generowanie kodu nie jest z założenia uprzywilejowanej operacji. Oznacza to, że wygenerowany kod nie ma więcej uprawnień niż zestaw, który emituje go. Pozwala to na używanie bibliotek, które emitują kod w celu zabezpieczenia i eliminuje konieczność <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>potwierdzenia, dzięki czemu pisanie bezpiecznej biblioteki nie wymaga takiego dokładnego przeglądu zabezpieczeń.  
   
  W instruktażu przedstawiono następujące zagadnienia:  
   
-- [Definiowanie prostych piaskownic dla badania częściowo zaufanego kodu](#Setting_up).  
+- [Konfigurowanie prostej piaskownicy do testowania częściowo zaufanego kodu](#Setting_up).  
   
     > [!IMPORTANT]
-    >  Jest to prosty sposób do eksperymentowania z kodem w częściowej relacji zaufania. Aby uruchomić kod, który rzeczywiście pochodzi z niezaufanych lokalizacji, zobacz [jak: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+    >  Jest to prosty sposób na eksperymentowanie z kodem w częściowej relacji zaufania. Aby uruchomić kod, który rzeczywiście pochodzi z niezaufanych lokalizacji, zobacz [How to: Uruchom częściowo zaufany kod w piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
-- [Uruchamianie kodu w aplikacji częściowo zaufanych domen](#Running_code).  
+- [Uruchamianie kodu w domenach częściowo zaufanych aplikacji](#Running_code).  
   
-- [Aby użyć anonimowo obsługiwanych metod dynamicznych do emisji i wykonania kodu w częściowej relacji zaufania](#Using_methods).  
+- [Używanie anonimowo obsługiwanych metod dynamicznych do emisji i wykonywania kodu w częściowej relacji zaufania](#Using_methods).  
   
- Aby uzyskać więcej informacji na temat emisji kodu w scenariuszach częściowej relacji zaufania, zobacz [problemy z zabezpieczeniami w emisji odbicia](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).  
+ Aby uzyskać więcej informacji na temat emitowania kodu w scenariuszach częściowej relacji zaufania, zobacz [problemy z zabezpieczeniami w emisji odbicia](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).  
   
- Aby uzyskać pełną listę kodów pokazanych w tych procedurach, zobacz [sekcji z przykładowym](#Example) na końcu tego przewodnika.  
+ Aby zapoznać się z pełną listą kodu podanego w tych procedurach, zobacz [sekcję przykład](#Example) na końcu tego przewodnika.  
   
 <a name="Setting_up"></a>   
-## <a name="setting-up-partially-trusted-locations"></a>Definiowanie częściowo zaufanej lokalizacji  
- Dwie następujące procedury przedstawiają sposób ustawiania lokalizacji, z których można sprawdzić kod z częściowej relacji zaufania.  
+## <a name="setting-up-partially-trusted-locations"></a>Konfigurowanie częściowo zaufanych lokalizacji  
+ Poniższe dwie procedury pokazują, jak skonfigurować lokalizacje, z których można testować kod z częściowym zaufaniem.  
   
-- Pierwsza procedura pokazuje, jak utworzyć domenę aplikacji w trybie piaskownicy, w którym kod ma udzielone uprawnienia Internet.  
+- W pierwszej procedurze pokazano, jak utworzyć domenę aplikacji w trybie piaskownicy, w której kod otrzymuje uprawnienia internetowe.  
   
-- Druga procedura pokazuje, jak dodać <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagi do domeny aplikacji częściowo zaufanej, aby umożliwić dostęp do prywatnych danych w zestawach zaufania równej lub mniejszej.  
+- Druga procedura pokazuje, jak dodać <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagę do domeny częściowo zaufanej aplikacji, aby umożliwić dostęp do prywatnych danych w zestawach równorzędnych lub mniej zaufania.  
   
 ### <a name="creating-sandboxed-application-domains"></a>Tworzenie domen aplikacji w trybie piaskownicy  
- Aby utworzyć domenę aplikacji, w której Twoje zestawy są uruchamiane z częściowej relacji zaufania, należy określić zestaw uprawnień przyznawanych zestawów za pomocą <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> przeciążenia metody tworzenia domeny aplikacji. Najprostszym sposobem określenia przyznanego zestawu jest pobranie nazwanego zestawu z zasad zabezpieczeń.  
+ Aby utworzyć domenę aplikacji, w której zestawy działają z częściowym zaufaniem, należy określić zestaw uprawnień, które mają zostać przyznane zestawom przy użyciu <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> przeciążenia metody do tworzenia domeny aplikacji. Najprostszym sposobem określenia zestawu przydzielenia jest pobranie nazwanego zestawu uprawnień z zasad zabezpieczeń.  
   
- Poniższa procedura tworzy domenę aplikacji w trybie piaskownicy, która uruchamia kod z częściowej relacji zaufania, aby przetestować scenariusze, w których emitowany kod może uzyskać dostęp tylko publiczne składowe typów publicznych. Dalsza procedura pokazuje sposób dodawania <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>, aby przetestować scenariusze, w których emitowany kod może uzyskać dostęp do typów niepublicznych w zestawach, którym nadano uprawnienia równe lub mniejsze.  
+ Poniższa procedura służy do tworzenia domeny aplikacji w trybie piaskownicy, która uruchamia kod z częściowym zaufaniem, do testowania scenariuszy, w których emitowany kod może uzyskać dostęp tylko do publicznych składowych typów publicznych. Kolejna procedura pokazuje, jak dodać <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>, do scenariuszy testowych, w których emitowany kod może uzyskać dostęp do niepublicznych typów i elementów członkowskich w zestawach, które mają przyznane równe lub mniejsze uprawnienia.  
   
 #### <a name="to-create-an-application-domain-with-partial-trust"></a>Aby utworzyć domenę aplikacji z częściowym zaufaniem  
   
-1. Utwórz zestaw uprawnień do przydzielenia do zestawów w domenie aplikacji w trybie piaskownicy. W tym przypadku jest używany zestaw uprawnień strefy Internet.  
+1. Utwórz zestaw uprawnień do przydzielenia do zestawów w domenie aplikacji w trybie piaskownicy. W takim przypadku używany jest zestaw uprawnień strefy Internet.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#2)]
      [!code-vb[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#2)]  
   
-2. Utwórz <xref:System.AppDomainSetup> obiekt, aby zainicjować domenę aplikacji ze ścieżką do aplikacji.  
+2. <xref:System.AppDomainSetup> Utwórz obiekt, aby zainicjować domenę aplikacji przy użyciu ścieżki aplikacji.  
   
     > [!IMPORTANT]
-    >  Dla uproszczenia ten przykład kodu używa bieżącego folderu. Aby uruchomić kod, który rzeczywiście pochodzi z Internetu, używaj oddzielnego folderu dla niezaufanego kodu zgodnie z opisem w [jak: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+    >  Dla uproszczenia ten przykład kodu używa bieżącego folderu. Aby uruchomić kod, który rzeczywiście pochodzi z Internetu, użyj oddzielnego folderu dla niezaufanego kodu, zgodnie z opisem w [temacie How to: Uruchom częściowo zaufany kod w piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
   
-3. Utwórz domenę aplikacji, określając informacje o konfiguracji domeny aplikacji i przydziel zestaw dla wszystkich zestawów, które są wykonywane w domenie aplikacji.  
+3. Utwórz domenę aplikacji, określając informacje o konfiguracji domeny aplikacji i przypisz dla wszystkich zestawów, które są wykonywane w domenie aplikacji.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
   
-     Ostatni parametr <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> przeciążenia metody umożliwia określenie zestawu zestawów, które mają być udzielone pełne zaufanie, a nie zestaw uprawnień w domenie aplikacji. Nie masz Określ zestawy .NET Framework, które Twoja aplikacja używa, ponieważ te zestawy znajdują się w globalnej pamięci podręcznej. Zestawy w globalnej pamięci podręcznej są zawsze w pełni zaufane. Ten parametr służy do określenia zestawu o silnych nazwach, które nie znajdują się w globalnej pamięci podręcznej.  
+     Ostatni parametr <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> przeciążenia metody umożliwia określenie zestawu zestawów, które mają zostać przyznane pełne zaufanie, a nie z zestawem uprawnień domeny aplikacji. Nie trzeba określać zestawów .NET Framework używanych przez aplikację, ponieważ te zestawy znajdują się w globalnej pamięci podręcznej zestawów. Zestawy w globalnej pamięci podręcznej zestawów są zawsze w pełni zaufane. Można użyć tego parametru, aby określić zestawy o silnych nazwach, które nie znajdują się w globalnej pamięci podręcznej zestawów.  
   
-### <a name="adding-restrictedmemberaccess-to-sandboxed-domains"></a>Dodawanie RestrictedMemberAccess do domeny w trybie piaskownicy  
- Aplikacje hosta mogą umożliwić anonimowo obsługiwane metody dynamiczne mają mieć dostęp do prywatnych danych w zestawach posiadających poziomy zaufania równe lub mniejsze niż poziom zaufania zestawu, który emituje kod. Aby włączyć taką możliwość ograniczenia pominięcia testów widoczności usługi just-in-time (JIT), aplikacji hosta dodaje <xref:System.Security.Permissions.ReflectionPermission> obiekt z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagi (RMA) do zestawu dotacji.  
+### <a name="adding-restrictedmemberaccess-to-sandboxed-domains"></a>Dodawanie RestrictedMemberAccess do domen w trybie piaskownicy  
+ Aplikacje hosta mogą zezwalać anonimowo hostowanym metodom dynamicznym na dostęp do prywatnych danych w zestawach, które mają poziomy zaufania równe lub mniejsze niż poziom zaufania zestawu, który emituje kod. Aby umożliwić tę ograniczoną możliwość pomijania sprawdzania widoczności just-in-Time (JIT), aplikacja hosta dodaje <xref:System.Security.Permissions.ReflectionPermission> obiekt <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> z flagą (autoryzacji) do zestawu dotacji.  
   
- Na przykład host może udzielić uprawnień internetowych aplikacji internetowej i RMA, dzięki czemu aplikacja internetowa może emitować Kod, który uzyskuje dostęp do danych prywatnych w swoich własnych zestawach. Ponieważ dostęp jest ograniczony do zestawów równego lub mniejszego zaufania, aplikacja internetowa nie dostępu do elementów członkowskich całkowicie zaufanych zestawów, takich jak zestawy .NET Framework.  
+ Na przykład host może udzielić dostępu do Internetu przez aplikacje internetowe i AUTORYZACJa, aby aplikacja internetowa mogła emitować kod, który uzyskuje dostęp do danych prywatnych w własnych zestawach. Ponieważ dostęp jest ograniczony do zestawów o równej lub mniejszej relacji zaufania, aplikacja internetowa nie może uzyskać dostępu do członków w pełni zaufanych zestawów, takich jak zestawy .NET Framework.  
   
 > [!NOTE]
->  Aby zapobiec podniesienie uprawnień, informacje stosu do montażu emitującego jest dołączana w przypadku anonimowo obsługiwane metody dynamiczne są zbudowane. Gdy metoda jest wywoływana, informacja stosu jest sprawdzana. W efekcie anonimowo obsługiwana metoda dynamiczna, która jest wywoływana z całkowicie zaufanego kodu jest nadal ograniczona do poziomu zaufania emitujące zgromadzenia.  
+> Aby zapobiec podwyższeniu poziomu uprawnień, informacje stosu dotyczące zestawu emitującego są uwzględniane w przypadku skonstruowania anonimowo obsługiwanych metod dynamicznych. Gdy wywoływana jest metoda, informacje stosu są sprawdzane. W rezultacie anonimowo obsługiwana metoda dynamiczna wywoływana z w pełni zaufanego kodu jest nadal ograniczona do poziomu zaufania wyemitowanego zestawu.  
   
-#### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Aby utworzyć domenę aplikacji z częściowym zaufaniem plus RMA  
+#### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Aby utworzyć domenę aplikacji z częściowym zaufaniem i opcją autoryzacji  
   
-1. Utwórz nową <xref:System.Security.Permissions.ReflectionPermission> obiekt z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) i użyj <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> metodę, aby dodać uprawnienie do zestawu dotacji.  
+1. Utwórz nowy <xref:System.Security.Permissions.ReflectionPermission> obiekt <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> z <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> flagą (autoryzacji) i użyj metody, aby dodać uprawnienie do zestawu dotacji.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#7)]
      [!code-vb[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#7)]  
   
-     <xref:System.Security.PermissionSet.AddPermission%2A> Metoda dodaje uprawnienie do przyznanego zestawu, jeśli nie jest już włączona. Jeśli uprawnienie jest już uwzględniony w przydzielonym zestawie, określone flagi są dodawane do istniejącego uprawnienia.  
+     <xref:System.Security.PermissionSet.AddPermission%2A> Metoda dodaje uprawnienie do zestawu dotacji, jeśli nie została jeszcze uwzględniona. Jeśli uprawnienie jest już zawarte w zestawie uprawnień, określone flagi są dodawane do istniejącego uprawnienia.  
   
     > [!NOTE]
-    >  RMA jest funkcją anonimowo obsługiwanych metod dynamicznych. W przypadku zwykłych metod dynamicznych Pomiń sprawdzanie widoczności JIT, emitowany kod wymaga pełnego zaufania.  
+    > Funkcja autoryzacji jest funkcją anonimowo obsługiwanych metod dynamicznych. Gdy zwykłe metody dynamiczne pomijają sprawdzanie widoczności JIT, emitowany kod wymaga pełnego zaufania.  
   
-2. Utwórz domenę aplikacji, określając informacje o konfiguracji domeny aplikacji i przydziel zestawu.  
+2. Utwórz domenę aplikacji, określając informacje o konfiguracji domeny aplikacji i Przydziel zestaw.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#8)]
      [!code-vb[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#8)]  
   
 <a name="Running_code"></a>   
-## <a name="running-code-in-sandboxed-application-domains"></a>Uruchamianie kodu w trybie piaskownicy aplikacji domen  
- Poniższa procedura wyjaśnia, jak definiować klasy przy użyciu metod, które mogą być wykonywane w domenie aplikacji, jak utworzyć wystąpienia klasy w domenie i jak wykonać jej metody.  
+## <a name="running-code-in-sandboxed-application-domains"></a>Uruchamianie kodu w domenach aplikacji w trybie piaskownicy  
+ Poniższa procedura wyjaśnia, jak zdefiniować klasę przy użyciu metod, które mogą być wykonywane w domenie aplikacji, jak utworzyć wystąpienie klasy w domenie i jak wykonać metody.  
   
 #### <a name="to-define-and-execute-a-method-in-an-application-domain"></a>Aby zdefiniować i wykonać metodę w domenie aplikacji  
   
-1. Definiowanie klasy, która jest pochodną <xref:System.MarshalByRefObject>. Dzięki temu można utworzyć wystąpienia klasy w innych domenach aplikacji i wykonywać metody wywołań poza granice domeny aplikacji. Klasa w tym przykładzie ma nazwę `Worker`.  
+1. Zdefiniuj klasę, która dziedziczy z <xref:System.MarshalByRefObject>. Pozwala to na tworzenie wystąpień klasy w innych domenach aplikacji i wykonywanie wywołań metod między granicami domeny aplikacji. Klasa w tym przykładzie nosi nazwę `Worker`.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#10)]
      [!code-vb[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#10)]  
   
-2. Zdefiniuj metodę publiczną, która zawiera kod, który chcesz wykonać. W tym przykładzie kod emituje prostą metodę dynamiczną, tworzy delegata, aby wykonać metodę i wywołuje delegata.  
+2. Zdefiniuj metodę publiczną, która zawiera kod, który chcesz wykonać. W tym przykładzie kod emituje prostą metodę dynamiczną, tworzy delegata do wykonania metody i wywołuje delegata.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#11)]
      [!code-vb[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#11)]  
   
-3. W programie głównym Uzyskaj nazwę wyświetlaną zestawu. Ta nazwa jest używana podczas tworzenia wystąpienia elementu `Worker` klasy w domenie aplikacji w trybie piaskownicy.  
+3. W programie głównym Pobierz nazwę wyświetlaną zestawu. Ta nazwa jest używana podczas tworzenia wystąpień `Worker` klasy w domenie aplikacji w trybie piaskownicy.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#14)]
      [!code-vb[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#14)]  
   
-4. W programie głównym Utwórz domenę aplikacji w trybie piaskownicy, zgodnie z opisem w [pierwszej procedury](#Setting_up) w tym przewodniku. Nie trzeba dodawać żadnych uprawnień do `Internet` zestawu uprawnień, ponieważ `SimpleEmitDemo` metoda wykorzystuje tylko metody publiczne.  
+4. W programie głównym Utwórz domenę aplikacji w trybie piaskownicy, zgodnie z opisem w [pierwszej procedurze](#Setting_up) w tym instruktażu. Nie trzeba dodawać żadnych uprawnień do `Internet` zestawu uprawnień, `SimpleEmitDemo` ponieważ metoda korzysta wyłącznie z metod publicznych.  
   
-5. W programie głównym Utwórz wystąpienie obiektu `Worker` klasy w domenie aplikacji w trybie piaskownicy.  
+5. W programie głównym Utwórz wystąpienie `Worker` klasy w domenie aplikacji w trybie piaskownicy.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#12)]
      [!code-vb[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#12)]  
   
-     <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> Metoda tworzy obiekt w docelowej domenie aplikacji i zwraca serwer proxy, który może służyć do wywołania właściwości i metod obiektu.  
+     <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> Metoda tworzy obiekt w domenie aplikacji docelowej i zwraca serwer proxy, który może służyć do wywoływania właściwości i metod obiektu.  
   
     > [!NOTE]
-    >  Jeśli używasz tego kodu w programie Visual Studio, należy zmienić nazwę klasy, aby uwzględnić przestrzeń nazw. Domyślnie przestrzeń nazw jest nazwą projektu. Na przykład jeśli projekt to "PartialTrust", nazwa klasy musi być "PartialTrust.Worker".  
+    > Jeśli używasz tego kodu w programie Visual Studio, musisz zmienić nazwę klasy, aby uwzględnić przestrzeń nazw. Domyślnie przestrzeń nazw jest nazwą projektu. Na przykład, jeśli projekt jest "PartialTrust", nazwa klasy musi być "PartialTrust. Worker".  
   
-6. Dodaj kod, aby wywołać `SimpleEmitDemo` metody. Wywołanie jest organizowane przez granicę domeny aplikacji, a kod jest wykonywany w domenie aplikacji w trybie piaskownicy.  
+6. Dodaj kod, aby wywołać `SimpleEmitDemo` metodę. Wywołanie jest organizowane między granicami domeny aplikacji, a kod jest wykonywany w domenie aplikacji w trybie piaskownicy.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#13)]
      [!code-vb[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#13)]  
   
 <a name="Using_methods"></a>   
-## <a name="using-anonymously-hosted-dynamic-methods"></a>Aby użyć anonimowo obsługiwanych metod dynamicznych  
- Anonimowo obsługiwane metody dynamiczne są związane z przezroczystym zestawu, który jest udostępniany przez system. Dlatego, zawierają kod jest przezroczysty. Zwykłe metody dynamiczne, z drugiej strony, muszą być skojarzone z istniejącym modułem (czy bezpośrednio określone lub wywnioskowane na podstawie skojarzonego typu) i poziomu zabezpieczeń z tego modułu.  
+## <a name="using-anonymously-hosted-dynamic-methods"></a>Używanie anonimowo obsługiwanych metod dynamicznych  
+ Anonimowo hostowane metody dynamiczne są skojarzone z przezroczystym zestawem, który jest dostarczany przez system. W związku z tym, kod, który zawiera, jest przezroczysty. Zwykłe metody dynamiczne, z drugiej strony, muszą być skojarzone z istniejącym modułem (bezpośrednio określić lub wywnioskowane ze skojarzonego typu) i przyjmować swój poziom zabezpieczeń z tego modułu.  
   
 > [!NOTE]
->  Jedynym sposobem, aby skojarzyć metodę dynamiczną z zestawem, który zapewnia hosting anonimowo jest użycie konstruktorów, które są opisane w poniższej procedurze. Nie można jawnie określić modułu w zestawie hostingu anonimowo.  
+> Jedynym sposobem skojarzenia metody dynamicznej z zestawem, który zapewnia hosting anonimowy, jest użycie konstruktorów, które są opisane w poniższej procedurze. Nie można jawnie określić modułu w zestawie hostingu anonimowe.  
   
- Zwykłe metody dynamiczne mają dostęp do wewnętrznych członków modułu, z którymi są skojarzone z lub do prywatnych składowych typów, które są skojarzone. Ponieważ anonimowo obsługiwane metody dynamiczne są odizolowane od innego kodu, nie mają dostępu do prywatnych danych. Jednak mają ograniczone zdolności do pominięcia testów widoczności JIT w celu uzyskania dostępu do prywatnych danych. Ta możliwość jest ograniczona do zestawów, które mają poziomy zaufania równe lub mniejsze niż poziom zaufania zestawu, który emituje kod.  
+ Zwykłe metody dynamiczne mają dostęp do wewnętrznych elementów członkowskich modułu, do których są skojarzone, lub do prywatnych składowych typu, z którym są skojarzone. Anonimowo hostowane metody dynamiczne są odizolowane od innych kodów, ale nie mają dostępu do prywatnych danych. Jednak mają ograniczoną możliwość pomijania kontroli widoczności JIT w celu uzyskania dostępu do prywatnych danych. Ta możliwość jest ograniczona do zestawów, które mają poziomy zaufania równe lub mniejsze niż poziom zaufania zestawu, który emituje kod.  
   
- Aby zapobiec podniesienie uprawnień, informacje stosu do montażu emitującego jest dołączana w przypadku anonimowo obsługiwane metody dynamiczne są zbudowane. Gdy metoda jest wywoływana, informacja stosu jest sprawdzana. Anonimowo obsługiwana metoda dynamiczna, która jest wywoływana z całkowicie zaufanego kodu jest nadal ograniczona do poziomu zaufania zestawu, do którego została wyemitowana.  
+ Aby zapobiec podwyższeniu poziomu uprawnień, informacje stosu dotyczące zestawu emitującego są uwzględniane w przypadku skonstruowania anonimowo obsługiwanych metod dynamicznych. Gdy wywoływana jest metoda, informacje stosu są sprawdzane. Anonimowo obsługiwana metoda dynamiczna wywoływana z w pełni zaufanego kodu jest nadal ograniczona do poziomu zaufania zestawu, który emituje go.  
   
 #### <a name="to-use-anonymously-hosted-dynamic-methods"></a>Aby użyć anonimowo obsługiwanych metod dynamicznych  
   
-- Utwórz anonimowo obsługiwaną metodę dynamiczną za pomocą konstruktora, który nie określa skojarzonego modułu lub typu.  
+- Utwórz anonimowo obsługiwaną metodę dynamiczną, używając konstruktora, który nie określa skojarzonego modułu lub typu.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#15)]
      [!code-vb[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#15)]  
   
-     Jeśli anonimowo obsługiwana metoda dynamiczna używa tylko typy i metody publiczne, nie wymaga ograniczonego dostępu elementu członkowskiego i trzeba pomijać kontroli widoczność JIT.  
+     Jeśli anonimowo obsługiwana metoda dynamiczna używa tylko typów publicznych i metod, nie wymaga ograniczonego dostępu do składowych i nie musi pomijać kontroli widoczności JIT.  
   
-     Żadne specjalne ustawienia nie są wymagane do emitowania metody dynamicznej, ale emitowany kod wymaga uprawnień, które są wymagane przez typy i metody, które są używane. Na przykład, jeżeli emitowany kod wywołuje metodę, która uzyskuje dostęp do pliku, wymaga on <xref:System.Security.Permissions.FileIOPermission>. Jeśli poziom zaufania nie ma tego uprawnienia, wyjątek zabezpieczeń jest zgłaszany, gdy emitowany kod jest wykonywany. Kod przedstawiony tutaj emituje metodę dynamiczną, która używa tylko <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> metody. W związku z tym kod może być wykonywany z częściowo zaufanych lokalizacji.  
+     Do emisji metody dynamicznej nie są wymagane żadne specjalne uprawnienia, ale emitowany kod wymaga uprawnień wymaganych przez używane typy i metody. Na przykład, jeśli emitowany kod wywołuje metodę, która uzyskuje dostęp do pliku, wymaga <xref:System.Security.Permissions.FileIOPermission>. Jeśli poziom zaufania nie obejmuje tego uprawnienia, podczas wykonywania emitowanego kodu zostanie wygenerowany wyjątek zabezpieczeń. Kod wyświetlany tutaj emituje metodę dynamiczną, która korzysta tylko z <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> metody. W związku z tym kod może być wykonywany z częściowo zaufanych lokalizacji.  
   
-- Alternatywnie Utwórz anonimowo obsługiwaną metodę dynamiczną z ograniczoną możliwością pominięcia testów widoczności JIT, za pomocą <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> Konstruktor i określając `true` dla `restrictedSkipVisibility` parametru.  
+- Alternatywnie można utworzyć anonimowo obsługiwaną metodę dynamiczną z ograniczoną możliwością pomijania sprawdzania widoczności JIT przy użyciu <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> konstruktora i określania `true` dla `restrictedSkipVisibility` parametru.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     Ograniczenie jest takie, że anonimowo obsługiwana metoda dynamiczna dostęp do prywatnych danych tylko w zestawach z poziomów zaufania równe lub mniejsze niż poziom zaufania emitowanego zgromadzenia. Na przykład jeśli metoda dynamiczna jest wykonywana z zaufanie do Internetu, jego dostęp do prywatnych danych w innych zestawach, które są również wykonywane z zaufaniem do Internetu, ale nie można uzyskać dostępu prywatnych danych zestawów programu .NET Framework. Zestawy .NET framework są zainstalowane w globalnej pamięci podręcznej i są zawsze w pełni zaufane.  
+     Ograniczenie polega na tym, że anonimowo obsługiwana metoda dynamiczna może uzyskać dostęp do prywatnych danych tylko w zestawach z poziomami zaufania równymi lub mniejszymi niż poziom zaufania wyemitowanego zestawu. Na przykład jeśli metoda dynamiczna jest wykonywana z zaufaniem internetowym, może uzyskać dostęp do prywatnych danych w innych zestawach, które są również wykonywane z zaufaniem internetowym, ale nie mogą uzyskać dostępu do prywatnych danych zestawów .NET Framework. Zestawy .NET Framework są zainstalowane w globalnej pamięci podręcznej zestawów i są zawsze w pełni zaufane.  
   
-     Anonimowo obsługiwane metody dynamiczne mogą skorzystać z ograniczonej możliwości, aby pominąć kontrole widoczność JIT tylko wtedy, gdy aplikacja hosta udziela <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagi. Żądanie tego uprawnienia następuje po wywołaniu metody.  
-  
-    > [!NOTE]
-    >  Wywołaj informacje stosu dla uwzględnionego zestawu emitującego jest uwzględniony, podczas konstruowania metody dynamicznej. Dlatego przed uprawnieniami emitującymi Zgromadzenie a nie zestaw, który wywołuje metodę składa się zapotrzebowanie. Zapobiega to emitowany kod zostanie wykonywany z podwyższonym poziomem uprawnień.  
-  
-     [Pełny przykład kodu](#Example) na końcu tego instruktażu pokazano użycie i ograniczenia członków ograniczonego dostępu. Jego `Worker` klasa zawiera metodę, która może utworzyć anonimowo obsługiwane metody dynamiczne z lub bez ograniczonych możliwości pominięcia testów widoczności, a w przykładzie przedstawiono wynik wykonywania tej metody w domenach aplikacji, które mają różne poziomy zaufania.  
+     Anonimowo hostowane metody dynamiczne mogą korzystać z tej ograniczonej zdolności do pomijania sprawdzania widoczności JIT tylko wtedy, <xref:System.Security.Permissions.ReflectionPermission> gdy aplikacja <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> hosta udzieli z flagą. Żądanie dotyczące tego uprawnienia jest wykonywane, gdy wywoływana jest metoda.  
   
     > [!NOTE]
-    >  Ograniczona zdolność do pominięcia widoczności kontroli jest funkcją anonimowo obsługiwanych metod dynamicznych. W przypadku zwykłych metod dynamicznych Pomiń sprawdzanie widoczności JIT, muszą otrzymać pełne zaufanie.  
+    > Informacje stosu wywołań dla zestawu emitującego są uwzględniane podczas konstruowania metody dynamicznej. W związku z tym żądanie jest wykonywane względem uprawnień do emitowania zestawu zamiast zestawu, który wywołuje metodę. Zapobiega to wykonywaniu emitowanego kodu z podniesionymi uprawnieniami.  
+  
+     [Pełny przykładowy kod](#Example) na końcu tego instruktażu ilustruje użycie i ograniczenia dostępu do ograniczonego elementu członkowskiego. Jego `Worker` Klasa zawiera metodę, która może tworzyć anonimowo hostowane metody dynamiczne z ograniczoną możliwością lub bez ograniczenia, aby pominąć sprawdzanie widoczności, a przykład pokazuje wynik wykonania tej metody w domenach aplikacji, które mają różne poziomy zaufania.  
+  
+    > [!NOTE]
+    > Ograniczona możliwość pominięcia kontroli widoczności jest funkcją anonimowo obsługiwanych metod dynamicznych. Gdy zwykłe metody dynamiczne pomijają sprawdzanie widoczności JIT, muszą mieć przyznane pełne zaufanie.  
   
 <a name="Example"></a>   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Poniższy przykład kodu demonstruje użycie <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> flagi, aby umożliwić anonimowo obsługiwanych metod dynamicznych, aby pominąć kontrole widoczność JIT, ale tylko wtedy, gdy docelowy element członkowski jest na równym lub mniejszym poziomie zaufania niż zestaw, który emituje kod.  
+ Poniższy przykład kodu demonstruje użycie <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> flagi, aby umożliwić anonimowo hostowane metody dynamiczne, aby pominąć sprawdzanie widoczności JIT, ale tylko wtedy, gdy docelowy element członkowski jest na równym lub niższym poziomie zaufania niż zestaw, który emituje kod.  
   
- W przykładzie zdefiniowano `Worker` klasy, które mogą być organizowane poza granice domeny aplikacji. Klasa ma dwa `AccessPrivateMethod` przeciążenia metody, które emitują i wykonują metody dynamiczne. Pierwsze przeciążenie emituje metodę dynamiczną, który wywołuje prywatną `PrivateMethod` metody `Worker` klasy i, to może emitować metodę dynamiczną z lub bez kontroli widoczności JIT. Drugie przeciążenie emituje metodę dynamiczną, która uzyskuje dostęp do `internal` właściwości (`Friend` właściwość w języku Visual Basic) z <xref:System.String> klasy.  
+ W przykładzie zdefiniowano `Worker` klasę, która może być organizowana między granicami domeny aplikacji. Klasa ma dwa `AccessPrivateMethod` przeciążenia metod, które emitują i wykonują metody dynamiczne. Pierwsze Przeciążenie emituje metodę dynamiczną, która wywołuje metodę `PrivateMethod` `Worker` prywatną klasy i może emitować metodę dynamiczną z lub bez kontroli widoczności JIT. Drugie Przeciążenie emituje metodę dynamiczną, która uzyskuje dostęp `internal` do właściwości`Friend` (właściwości <xref:System.String> w Visual Basic) klasy.  
   
- W przykładzie użyto metody pomocnika, aby utworzyć przydzielony zestaw ograniczony do `Internet` uprawnień, a następnie tworzy domenę aplikacji za pomocą <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> przeciążenia metody, aby określić, że cały kod, który wykonuje w domenie używa tego zestawu dotacji. Przykład tworzy wystąpienie `Worker` klasy w domenie aplikacji i wykonuje `AccessPrivateMethod` metodę dwa razy.  
+ W przykładzie użyto metody pomocnika do utworzenia zestawu dotacji ograniczonego do `Internet` uprawnień, a następnie tworzenia domeny aplikacji <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> przy użyciu przeciążenia metody, aby określić, że cały kod, który jest wykonywany w domenie używa tego zestawu dotacji. Przykład tworzy wystąpienie `Worker` klasy w domenie aplikacji i `AccessPrivateMethod` wykonuje metodę dwa razy.  
   
-- Po raz pierwszy `AccessPrivateMethod` metoda jest wykonywana, sprawdzanie widoczności JIT są wymuszane. Metoda dynamiczna zawodzi, gdy jest wywoływana, ponieważ kontrole widoczność JIT uniemożliwiają dostęp do metody prywatnej.  
+- Podczas pierwszego wykonywania `AccessPrivateMethod` metody są wymuszane sprawdzanie widoczności JIT. Metoda dynamiczna kończy się niepowodzeniem, gdy jest wywoływana, ponieważ sprawdzanie widoczności JIT uniemożliwia uzyskanie dostępu do prywatnej metody.  
   
-- Po raz drugi `AccessPrivateMethod` metoda jest wykonywana, sprawdzanie widoczności JIT jest pomijane. Metoda dynamiczna zawodzi, gdy jest ona kompilowana, ponieważ `Internet` przyznania zestaw nie przyznaje wystarczających uprawnień, aby pominąć kontrolę widoczności.  
+- Podczas `AccessPrivateMethod` gdy metoda jest wykonywana, sprawdzanie widoczności JIT jest pomijane. Metoda dynamiczna kończy się niepowodzeniem podczas kompilowania, `Internet` ponieważ zestaw uprawnień nie przyznaje wystarczających uprawnień, aby pominąć sprawdzanie widoczności.  
   
- W przykładzie dodano <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> do przyznania zestaw. Przykład tworzy następnie drugą domenę, określając, że cały kod, który wykonuje w domenie ma udzielone uprawnienia w nowym przydzielonym zestawie. Przykład tworzy wystąpienie `Worker` klasy w domenie nowej aplikacji i wykonuje oba przeciążenia `AccessPrivateMethod` metody.  
+ Przykład dodaje <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> do zestawu dotacji. W przykładzie zostanie utworzona druga domena, określając, że wszystkie kody wykonywane w domenie uzyskują uprawnienia w nowym zestawie dotacji. Przykład tworzy wystąpienie `Worker` klasy w nowej domenie aplikacji i wykonuje oba przeciążenia `AccessPrivateMethod` metody.  
   
-- Pierwsze przeciążenie `AccessPrivateMethod` metody jest wykonywane i sprawdzenie widoczność JIT jest pomijane. Metoda dynamiczna kompiluje i wykonuje z powodzeniem, ponieważ zestaw, który emituje kod jest taki sam, jak zestaw, który zawiera metodę prywatną. W związku z tym poziomy zaufania są równe. Jeśli aplikacja, która zawiera `Worker` klasa miała kilka zestawów, ten sam proces powiedzie się dla każdego z tych zestawów, ponieważ wszystkie będą one będą na tym samym poziomie zaufania.  
+- Pierwsze Przeciążenie `AccessPrivateMethod` metody jest wykonywane i sprawdzanie widoczności JIT jest pomijane. Metoda dynamiczna kompiluje się i wykonuje pomyślnie, ponieważ zestaw, który emituje kod, jest taki sam jak zestaw, który zawiera metodę prywatną. W związku z tym poziomy zaufania są równe. Jeśli aplikacja, która zawiera `Worker` klasę ma kilka zestawów, ten sam proces zakończy się powodzeniem dla każdego z tych zestawów, ponieważ wszyscy będą mieli na tym samym poziomie zaufania.  
   
-- Drugie przeciążenie `AccessPrivateMethod` metody jest wykonywane i ponowne sprawdzenie widoczność JIT jest pomijane. Tym razem dynamiczna metoda nie działa, gdy jest ona kompilowana, ponieważ próbuje uzyskać dostęp do `internal` `FirstChar` właściwość <xref:System.String> klasy. Zestaw, który zawiera <xref:System.String> klasy jest w pełni zaufany. Dlatego jest na wyższym poziomie zaufania niż zestaw, który emituje kod.  
+- Drugie Przeciążenie `AccessPrivateMethod` metody jest wykonywane i ponowne sprawdzanie widoczności JIT jest pomijane. Tym razem metoda dynamiczna kończy się niepowodzeniem podczas kompilowania, ponieważ próbuje uzyskać `internal` dostęp `FirstChar` do właściwości <xref:System.String> klasy. Zestaw zawierający <xref:System.String> klasę jest w pełni zaufany. W związku z tym jest na wyższym poziomie zaufania niż zestaw, który emituje kod.  
   
- Porównanie to pokazuje jak <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> włącza częściowo zaufany kod, aby pominąć widoczność sprawdza, czy innego częściowo zaufanego kodu bez narażania bezpieczeństwa zaufanego kodu.  
+ To porównanie pokazuje, <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> jak program częściowo zaufany kod pomija sprawdzanie widoczności dla innego kodu częściowo zaufanego bez naruszania zabezpieczeń zaufanego kodu.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[HowToEmitCodeInPartialTrust#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#1)]
@@ -209,7 +209,7 @@ Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub części
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
-- Jeśli tworzysz ten przykład kodu w programie Visual Studio, należy zmienić nazwę klasy, aby uwzględnić przestrzeń nazw, jeśli przekazujesz go do <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> metody. Domyślnie przestrzeń nazw jest nazwą projektu. Na przykład jeśli projekt to "PartialTrust", nazwa klasy musi być "PartialTrust.Worker".  
+- W przypadku kompilowania tego przykładu kodu w programie Visual Studio należy zmienić nazwę klasy, aby uwzględnić przestrzeń nazw podczas przekazywania jej do <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> metody. Domyślnie przestrzeń nazw jest nazwą projektu. Na przykład, jeśli projekt jest "PartialTrust", nazwa klasy musi być "PartialTrust. Worker".  
   
 ## <a name="see-also"></a>Zobacz także
 

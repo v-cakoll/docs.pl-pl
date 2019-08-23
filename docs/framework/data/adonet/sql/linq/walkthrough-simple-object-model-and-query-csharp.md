@@ -2,12 +2,12 @@
 title: 'Przewodnik: Prosty model obiektu i zapytanie (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 43092eb7490d5629f1ababac1d8f8b3aff94299b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4661dffa037504d9157f30af12d4308a4d7644a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971866"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946920"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Przewodnik: Prosty model obiektu i zapytanie (C#)
 
@@ -117,7 +117,7 @@ Deklarujemy również, `Table<Customer>` aby pełnić rolę logicznej, wpisanej 
 
 ## <a name="creating-a-simple-query"></a>Tworzenie prostego zapytania
 
-W tym kroku utworzysz zapytanie, aby sprawdzić, którzy klienci w tabeli Klienci bazy danych znajdują się w Londynie. Kod zapytania w tym kroku tylko opisuje zapytanie. Nie wykonuje go. Takie podejście jest znane jako *odroczone wykonanie*. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQC#()](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
+W tym kroku utworzysz zapytanie, aby sprawdzić, którzy klienci w tabeli Klienci bazy danych znajdują się w Londynie. Kod zapytania w tym kroku tylko opisuje zapytanie. Nie wykonuje go. Takie podejście jest znane jako *odroczone wykonanie*. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQC#()](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
 Utworzysz również dane wyjściowe dziennika w celu wyświetlenia poleceń SQL, które [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generują. Ta funkcja rejestrowania (która korzysta <xref:System.Data.Linq.DataContext.Log%2A>z programu) jest przydatna podczas debugowania, a przy określaniu, że polecenia wysyłane do bazy danych dokładnie reprezentują zapytanie.
 
@@ -140,7 +140,7 @@ W tym kroku rzeczywiście wykonujesz zapytanie. Wyrażenia zapytania utworzone w
 2. Naciśnij klawisz F5, aby debugować aplikację.
 
     > [!NOTE]
-    >  Jeśli aplikacja generuje błąd w czasie wykonywania, zobacz sekcję Rozwiązywanie problemów w temacie [uczenie się według przewodników](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).
+    > Jeśli aplikacja generuje błąd w czasie wykonywania, zobacz sekcję Rozwiązywanie problemów w temacie [uczenie się według przewodników](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).
 
      Wyniki zapytania w oknie konsoli powinny wyglądać następująco:
 

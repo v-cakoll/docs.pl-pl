@@ -2,18 +2,18 @@
 title: Zmienianie poziomów współużytkowania pamięci podręcznej dla działań wysyłania
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: ac4f2e4fe85d6b243999add6bda65f4fb202f79c
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 587440bd343513aeff51f1ed0947573fbe612f22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363840"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952589"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Zmienianie poziomów współużytkowania pamięci podręcznej dla działań wysyłania
 Rozszerzenie umożliwia dostosowanie poziomów udostępniania pamięci podręcznej, ustawień pamięci podręcznej fabryki kanałów oraz ustawień pamięci podręcznej kanału dla przepływów pracy, które wysyłają komunikaty do punktów <xref:System.ServiceModel.Activities.Send> końcowych usługi przy użyciu działań związanych z obsługą komunikatów. <xref:System.ServiceModel.Activities.SendMessageChannelCache> Te przepływy pracy są zwykle przepływy pracy klienta, ale mogą być również usługi przepływu pracy, które znajdują się w <xref:System.ServiceModel.WorkflowServiceHost>. Pamięć podręczna fabryki kanałów zawiera <xref:System.ServiceModel.ChannelFactory%601> buforowane obiekty. Pamięć podręczna kanału zawiera buforowane kanały.  
   
 > [!NOTE]
->  Przepływy pracy <xref:System.ServiceModel.Activities.Send> mogą wysyłać komunikaty lub parametry za pomocą działań związanych z wiadomościami. Środowisko uruchomieniowe przepływu pracy dodaje fabryki kanałów do pamięci podręcznej, która <xref:System.ServiceModel.Channels.IRequestChannel> tworzy kanały typu w <xref:System.ServiceModel.Activities.ReceiveReply> przypadku używania działania <xref:System.ServiceModel.Activities.Send> z <xref:System.ServiceModel.Activities.Send> działaniem, <xref:System.ServiceModel.Channels.IOutputChannel> a kiedy tylko używa działania (nie <xref:System.ServiceModel.Activities.ReceiveReply>).  
+> Przepływy pracy <xref:System.ServiceModel.Activities.Send> mogą wysyłać komunikaty lub parametry za pomocą działań związanych z wiadomościami. Środowisko uruchomieniowe przepływu pracy dodaje fabryki kanałów do pamięci podręcznej, która <xref:System.ServiceModel.Channels.IRequestChannel> tworzy kanały typu w <xref:System.ServiceModel.Activities.ReceiveReply> przypadku używania działania <xref:System.ServiceModel.Activities.Send> z <xref:System.ServiceModel.Activities.Send> działaniem, <xref:System.ServiceModel.Channels.IOutputChannel> a kiedy tylko używa działania (nie <xref:System.ServiceModel.Activities.ReceiveReply>).  
   
 ## <a name="the-cache-sharing-levels"></a>Poziomy udostępniania pamięci podręcznej  
  Domyślnie, w przepływie pracy hostowanym przez <xref:System.ServiceModel.WorkflowServiceHost> pamięć podręczną używaną przez <xref:System.ServiceModel.Activities.Send> działania obsługi komunikatów jest współużytkowany przez <xref:System.ServiceModel.WorkflowServiceHost> wszystkie wystąpienia przepływu pracy w (buforowanie na poziomie hosta). Klient przepływu pracy, który nie jest obsługiwany przez <xref:System.ServiceModel.WorkflowServiceHost>, pamięci podręcznej jest dostępna tylko dla wystąpienia przepływu pracy (buforowanie poziomie wystąpienia). Pamięć podręczna jest dostępna tylko <xref:System.ServiceModel.Activities.Send> dla działań, które nie korzystają z punktów końcowych zdefiniowanych w konfiguracji, chyba że jest włączone bezpieczne buforowanie.  

@@ -11,40 +11,40 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-ms.openlocfilehash: 163ec17f3ea96744290c54a73054ab132f842127
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43507ac8e9b5843e8fa9496737a3d77b3a425a7f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647654"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963768"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
-Określa, że właściwości mogą być zapisywane, ale nie do odczytu.  
+Określa, że właściwość może być zapisywana, ale nie do odczytu.  
   
 ## <a name="remarks"></a>Uwagi  
   
-## <a name="rules"></a>reguły  
- **Kontekst deklaracji.** Możesz użyć `WriteOnly` tylko na poziomie modułu. Oznacza to, że kontekst deklaracji `WriteOnly` właściwość musi być klasy, struktury lub modułu i nie może być plikiem źródłowym, przestrzeń nazw lub procedury.  
+## <a name="rules"></a>Przepisy  
+ **Kontekst deklaracji.** Można używać `WriteOnly` tylko na poziomie modułu. Oznacza to, że kontekst `WriteOnly` deklaracji właściwości musi być klasą, strukturą lub modułem, i nie może być plikiem źródłowym, przestrzenią nazw ani procedurą.  
   
- Można zadeklarować właściwości jako `WriteOnly`, ale nie zmienną.  
+ Właściwość można zadeklarować jako `WriteOnly`, ale nie zmienną.  
   
-## <a name="when-to-use-writeonly"></a>Kiedy należy używać WriteOnly  
- Czasami kod konsumencki, aby można było ustawić wartość, ale nie zobaczyć, jakie go. Na przykład dane poufne, takie jak numer rejestracji społecznościowych lub hasła, muszą być chronione przed dostępem przez dowolny składnik, który nie ustawiony. W takich przypadkach można użyć `WriteOnly` właściwość można ustawić wartości.  
+## <a name="when-to-use-writeonly"></a>Kiedy używać WriteOnly  
+ Czasami kod zużywający ma mieć możliwość ustawienia wartości, ale nie Odkryj, co to jest. Na przykład dane poufne, takie jak numer rejestracji społecznościowej lub hasło, muszą być chronione przed dostępem przez dowolny składnik, który go nie ustawił. W takich przypadkach można użyć `WriteOnly` właściwości, aby ustawić wartość.  
   
 > [!IMPORTANT]
->  Podczas definiowania i stosowania `WriteOnly` właściwość, należy wziąć pod uwagę następujące dodatkowe środki zabezpieczające:  
+> Podczas definiowania i używania `WriteOnly` właściwości należy wziąć pod uwagę następujące dodatkowe środki ochronne:  
   
-- **Zastępowanie.** Jeśli właściwość jest składową klasy, zezwalała na domyślnie [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), a nie deklaruj `Overridable` lub `MustOverride`. Uniemożliwia to wprowadzanie niepożądany dostęp za pomocą zastąpienia przez klasę pochodną.  
+- **Zastępuje.** Jeśli właściwość jest członkiem klasy, zezwól jej na wartość domyślną [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)i nie deklaruj `Overridable` ani. `MustOverride` Zapobiega to niepożądanemu dostępowi klasy pochodnej przez przesłonięcie.  
   
-- **Poziom dostępu.** Jeśli przytrzymasz właściwości poufnych danych w jednej lub więcej zmiennych je zadeklarować [prywatnej](../../../visual-basic/language-reference/modifiers/private.md) tak, aby żadnego innego kodu można uzyskiwać do nich dostęp.  
+- **Poziom dostępu.** Jeśli przechowujesz poufne dane właściwości w co najmniej jednej zmiennej, zadeklaruj je jako [prywatne](../../../visual-basic/language-reference/modifiers/private.md) , aby żaden inny kod nie mógł uzyskać do nich dostępu.  
   
-- **Encryption.** Store wszystkie poufne dane w postaci zaszyfrowanej, a nie w postaci zwykłego tekstu. Jeśli złośliwy kod w jakiś sposób uzyskuje dostęp do tego obszaru pamięci, jest trudniejsze użyć danych. Szyfrowanie jest również przydatne, jeśli to konieczne do serializowania danych poufnych.  
+- **Szyfrowania.** Przechowuj wszystkie poufne dane w postaci zaszyfrowanej, a nie w postaci zwykłego tekstu. Jeśli złośliwy kod w jakiś sposób uzyskuje dostęp do tego obszaru pamięci, trudno jest wykorzystać dane. Szyfrowanie jest również przydatne, jeśli jest konieczne do serializacji poufnych danych.  
   
-- **Resetowanie.** Klasy, struktury lub modułu definiowania właściwość zostanie przerwany, zresetowanie danych poufnych do wartości domyślnych lub inne wartości bez znaczenia. Zapewnia dodatkową ochronę, gdy ten obszar pamięci jest zwalniana dla ogólnego dostępu.  
+- **Resetowanie.** Gdy Klasa, struktura lub moduł definiujący właściwość jest przerywana, zresetuj dane poufne do wartości domyślnych lub innych wartości bez znaczenia. Zapewnia to dodatkową ochronę, gdy ten obszar pamięci jest bezpłatny do uzyskania dostępu ogólnego.  
   
-- **Trwałość.** Nie są zachowywane poufnych danych, na przykład na dysku, jeśli można go uniknąć. Ponadto nie wpisuj poufnych danych do Schowka.  
+- **Trwałość.** Nie Utrwalaj poufnych danych, na przykład na dysku, jeśli można je uniknąć. Ponadto nie należy zapisywać poufnych danych w Schowku.  
   
- `WriteOnly` Modyfikatora można używać w tym kontekście:  
+ `WriteOnly` Modyfikator może być używany w tym kontekście:  
   
  [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   

@@ -5,48 +5,48 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 263ec73af7f4a6f52c4570e17cd140b6afb53601
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd64531116b1588683c2f5c8964e78e41e371ecf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637837"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955339"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Zabezpieczenia komunikatów ze wzajemnymi certyfikatami
-Następujący scenariusz pokazuje usługi Windows Communication Foundation (WCF), a klient zabezpieczone przy użyciu trybu zabezpieczenia wiadomości. Klient i usługa są uwierzytelniane przy użyciu certyfikatów.  
+W poniższym scenariuszu przedstawiono usługę Windows Communication Foundation (WCF) i klient zabezpieczony przy użyciu trybu zabezpieczeń wiadomości. Klient i usługa są uwierzytelniani przy użyciu certyfikatów.  
   
- Ten scenariusz jest współpracujący, ponieważ używa ona WS-Security za pomocą tokenu profilu certyfikatu X.509.  
+ Ten scenariusz jest interoperacyjny, ponieważ używa protokołu WS-Security z profilem tokenu certyfikatu X. 509.  
   
 > [!NOTE]
->  W tym scenariuszu nie przeprowadza negocjowanie certyfikatu usługi. Certyfikatu usługi musi być podana klientowi wyprzedzeniem o wszelkich komunikacji. Certyfikat serwera można rozpowszechniać za pomocą aplikacji lub udostępniane w ramach komunikacji poza pasmem.  
+> Ten scenariusz nie wykonuje negocjacji certyfikatu usługi. Certyfikat usługi musi zostać udostępniony klient z wyprzedzeniem o każdej komunikacji. Certyfikat serwera może być dystrybuowany z aplikacją lub udostępniany w ramach komunikacji poza pasmem.  
   
- ![Zabezpieczenia ze wzajemnymi certyfikatami wiadomości](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
+ ![Zabezpieczenia komunikatów przy użyciu certyfikatów wzajemnych](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
-|Cechy|Opis|  
+|Charakterystyk|Opis|  
 |--------------------|-----------------|  
 |Tryb zabezpieczeń|Message|  
-|Współdziałanie|Tak, za pomocą WS-Security i tokenu profilu certyfikatu X.509, zgodne klientów i usług.|  
+|Współdziałanie|Tak, przy użyciu protokołu WS-Security i X. 509, zgodne z profilem tokeny certyfikatu i usługi.|  
 |Uwierzytelnianie|Wzajemne uwierzytelnianie serwera i klienta.|  
-|Integralność|Tak|  
-|Poufność|Tak|  
-|Transport|HTTP|  
+|Spójn|Tak|  
+|Poufne|Tak|  
+|Transportu|HTTP|  
 |Wiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Usługa  
- Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+ Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wykonaj jedną z następujących czynności:  
   
-- Tworzenie autonomicznego usługi przy użyciu kodu bez konfiguracji.  
+- Tworzenie usługi autonomicznej przy użyciu kodu bez konfiguracji.  
   
-- Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.  
+- Utwórz usługę przy użyciu podanej konfiguracji, ale nie Definiuj żadnych punktów końcowych.  
   
 ### <a name="code"></a>Kod  
- Ilustruje poniższy kod tworzy punkt końcowy usługi, która używa zabezpieczenia wiadomości. Usługa wymaga certyfikatów do samodzielnego uwierzytelnienia.  
+ Poniższy kod przedstawia tworzenie punktu końcowego usługi, który korzysta z zabezpieczeń komunikatów. Usługa wymaga certyfikatu do samodzielnego uwierzytelnienia.  
   
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
 ### <a name="configuration"></a>Konfiguracja  
- Następująca konfiguracja może służyć zamiast kodu do tworzenia tej samej usługi.  
+ Aby utworzyć tę samą usługę, można użyć następującej konfiguracji zamiast kodu.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -91,23 +91,23 @@ Następujący scenariusz pokazuje usługi Windows Communication Foundation (WCF)
 ```  
   
 ## <a name="client"></a>Klient  
- Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+ Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wykonaj jedną z następujących czynności:  
   
-- Tworzenie klienta autonomicznego przy użyciu kodu (i kodu klienta).  
+- Utwórz klienta autonomicznego przy użyciu kodu (i kodu klienta).  
   
-- Tworzenie klienta, który nie definiuje żadnych adresy punktów końcowych. Zamiast tego należy użyć konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Na przykład:  
+- Utwórz klienta, który nie definiuje żadnych adresów punktów końcowych. Zamiast tego należy użyć konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Na przykład:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Kod  
- Poniższy kod tworzy klienta. Tryb zabezpieczeń jest ustawiony na komunikat i typu poświadczeń klienta jest ustawiona na certyfikacie.  
+ Poniższy kod tworzy klienta. Tryb zabezpieczeń jest ustawiony na wartość komunikat, a dla opcji Typ poświadczeń klienta ustawiono wartość certyfikat.  
   
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>Konfiguracja  
- Następujące konfiguruje klienta. Należy określić certyfikat klienta przy użyciu [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Ponadto certyfikat usługi jest określony, przy użyciu [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
+ Poniżej konfiguruje klienta. Certyfikat klienta musi być określony przy użyciu [ \<> ClientCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Ponadto certyfikat usługi jest określany przy użyciu [ \<> defaultCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -161,5 +161,5 @@ Następujący scenariusz pokazuje usługi Windows Communication Foundation (WCF)
 ## <a name="see-also"></a>Zobacz także
 
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
-- [Instrukcje: Tworzenie i instalowanie certyfikatów tymczasowych programu WCF dla zabezpieczeń transportu podczas programowania](https://go.microsoft.com/fwlink/?LinkId=244264)
+- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Instrukcje: Tworzenie i instalowanie certyfikatów tymczasowych w programie WCF na potrzeby zabezpieczeń transportu podczas opracowywania](https://go.microsoft.com/fwlink/?LinkId=244264)

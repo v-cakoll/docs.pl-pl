@@ -2,21 +2,21 @@
 title: <entries>
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: 5561cf61cef2258ec61bd32770538add1c69f5c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 610ba29ec98f4b1f2a9b1db3542bcb3aefb46457
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704209"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925650"
 ---
-# <a name="entries"></a>\<entries>
-Wpis routingu, który zawiera mapowania między filtrami i docelowymi punktami końcowymi, aby wysyłać komunikaty do kiedy filtr dopasowuje wartość.  
+# <a name="entries"></a>\<> wpisów
+Wpis routingu zawierający mapowania między filtrami routingu i docelowymi punktami końcowymi, do których mają być wysyłane komunikaty, gdy filtr jest zgodny.  
   
  \<system.serviceModel>  
-\<Routing >  
-\<routingTables>  
-\<Tabela >  
-\<entries>  
+\<> routingu  
+\<routingTables >  
+\<> tabeli  
+\<> wpisów  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,13 +45,13 @@ Wpis routingu, który zawiera mapowania między filtrami i docelowymi punktami k
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Filtry >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Mapuje punkt końcowy klienta, który został uprzednio zdefiniowany filtr. Komunikaty pasujących do tego filtru będą wysyłane do tego miejsca docelowego.|  
+|[\<Filtry >](filters-of-routing.md)|Mapuje filtr do punktu końcowego klienta, który został wcześniej zdefiniowany. Komunikaty pasujące do tego filtru zostaną wysłane do tego miejsca docelowego.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Sekcja konfiguracji, który zawiera tabelę routingu.|  
+|[\<> routingu](routing.md)|Sekcja konfiguracji, która zawiera tabelę routingu.|  
   
 ## <a name="see-also"></a>Zobacz także
 

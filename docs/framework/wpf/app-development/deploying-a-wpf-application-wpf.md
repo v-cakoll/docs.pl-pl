@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 16a0436accfb031ddd0bb413e519d80e550786b4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: cfb617fde514c93596d52b0ca70da39c6e5be301
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972268"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958645"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Wdrażanie aplikacji WPF (WPF)
-Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zostać wdrożone. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]a .NET Framework zawierają kilka technologii wdrażania. Technologia wdrażania, która jest używana do wdrażania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, zależy od typu aplikacji. Ten temat zawiera krótkie omówienie poszczególnych technologii wdrażania oraz sposób ich użycia w połączeniu z wymaganiami dotyczącymi wdrożenia poszczególnych [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] typów aplikacji.  
+Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zostać wdrożone. Systemy Windows i .NET Framework zawierają kilka technologii wdrażania. Technologia wdrażania, która jest używana do wdrażania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, zależy od typu aplikacji. Ten temat zawiera krótkie omówienie poszczególnych technologii wdrażania oraz sposób ich użycia w połączeniu z wymaganiami dotyczącymi wdrożenia poszczególnych [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] typów aplikacji.  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Technologie wdrażania  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].NET Framework obejmuje kilka technologii wdrażania, w tym:  
+ Systemy Windows i .NET Framework zawierają kilka technologii wdrażania, w tym:  
   
 - Wdrażanie polecenia XCopy.  
   
@@ -39,7 +39,7 @@ Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zost
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Instalator Windows  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]umożliwia pakowanie aplikacji jako samodzielnych plików wykonywalnych, które mogą być łatwo dystrybuowane do klientów i uruchamiane. Ponadto program [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] jest instalowany z [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] programem i umożliwia integrację z pulpitem, menu Start i panelami sterowania programy.  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]umożliwia pakowanie aplikacji jako samodzielnych plików wykonywalnych, które mogą być łatwo dystrybuowane do klientów i uruchamiane. Ponadto program [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] jest instalowany z systemem Windows i umożliwia integrację z pulpitem, menu Start oraz z panelem sterowania programy.  
   
  [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]upraszcza instalację i odinstalowywanie aplikacji, ale nie udostępnia obiektów do zapewnienia aktualności zainstalowanych aplikacji z punktu widzenia wersji systemu.  
   
@@ -96,7 +96,7 @@ Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zost
 - *ApplicationName*. exe. manifest: Manifest aplikacji.  
   
 > [!NOTE]
->  Aby uzyskać więcej informacji na temat wdrażania i manifestów aplikacji, zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  
+> Aby uzyskać więcej informacji na temat wdrażania i manifestów aplikacji, zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  
   
  Te pliki są tworzone podczas [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kompilowania. Aby uzyskać więcej informacji, zobacz [jak: Utwórz nowy projekt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))aplikacji w przeglądarce WPF. Podobnie jak w przypadku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron ze [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] znakiem, są zwykle publikowane na serwerze sieci Web i wyświetlane przy użyciu przeglądarki Internet Explorer.  
   

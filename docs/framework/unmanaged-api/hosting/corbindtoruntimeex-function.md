@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84e4c70c973fb19be6800d2cbaf76ea137f58b28
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88f31ae29efee9b353c2dcc679724db73da5444e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767956"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969414"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx — Funkcja
-Włącza niezarządzane hosty do załadowania środowisko uruchomieniowe języka wspólnego (CLR) do procesu. [CorBindToRuntime —](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) i `CorBindToRuntimeEx` funkcje wykonują tę samą operację, ale `CorBindToRuntimeEx` funkcja pozwala na ustawienie flagi, aby określić zachowanie środowiska CLR.  
+Umożliwia niezarządzanym hostom ładowanie środowiska uruchomieniowego języka wspólnego (CLR) do procesu. [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) i `CorBindToRuntimeEx` funkcje wykonują tę samą `CorBindToRuntimeEx` operację, ale funkcja pozwala ustawić flagi, aby określić zachowanie środowiska CLR.  
   
- Ta funkcja jest przestarzała w programie .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
- Ta funkcja pobiera zestaw parametrów, zezwalających na hoście, wykonaj następujące czynności:  
+ Ta funkcja przyjmuje zestaw parametrów, które umożliwiają hostowi wykonywanie następujących czynności:  
   
-- Określ wersję środowiska uruchomieniowego, które będą ładowane.  
+- Określ wersję środowiska uruchomieniowego, która zostanie załadowana.  
   
-- Wskazuje, czy serwer lub stacja robocza kompilacji powinny być załadowane.  
+- Wskaż, czy należy załadować kompilację serwera lub stacji roboczej.  
   
-- Kontrolowanie, czy współbieżne wyrzucanie elementów bezużytecznych lub niewspółbieżnym wyrzucaniem elementów bezużytecznych jest wykonywane.  
+- Określ, czy współbieżne odzyskiwanie pamięci lub niewspółbieżne wyrzucanie elementów bezużytecznych zostało wykonane.  
   
 > [!NOTE]
->  Współbieżne wyrzucanie elementów bezużytecznych nie jest obsługiwana w aplikacjach działających w emulatorze WOW64 x86 emulatora w systemach 64-bitowych, które implementują architekturę Intel Itanium (wcześniej noszącą nazwę IA-64). Aby uzyskać więcej informacji o używaniu WOW64 w 64-bitowych systemach Windows, zobacz [uruchomiona 32-bitowych aplikacji](/windows/desktop/WinProg64/running-32-bit-applications).  
+> Współbieżne wyrzucanie elementów bezużytecznych nie jest obsługiwane w aplikacjach uruchamiających emulator WOW64 x86 w systemach 64-bitowych, które implementują architekturę Intel Itanium (dawniej zwane IA-64). Aby uzyskać więcej informacji na temat korzystania z emulatora WOW64 w systemach 64-bitowych systemu Windows, zobacz [Uruchamianie aplikacji 32-bitowych](/windows/desktop/WinProg64/running-32-bit-applications).  
   
-- Kontrolowanie, czy zestawy są ładowane jako niezależne od domeny.  
+- Określ, czy zestawy są ładowane jako niezależne od domeny.  
   
-- Wskaźnik interfejsu do uzyskania [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) można ustawić dodatkowe opcje dotyczące konfigurowania wystąpienia środowiska CLR, przed jej ponownym uruchomieniu.  
+- Uzyskaj wskaźnik interfejsu do [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) , który może służyć do ustawiania dodatkowych opcji konfigurowania wystąpienia środowiska CLR przed jego uruchomieniem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -59,21 +59,21 @@ HRESULT CorBindToRuntimeEx (
   
 ## <a name="parameters"></a>Parametry  
  `pwszVersion`  
- [in] Ciąg opisujący wersję środowiska CLR chcesz załadować.  
+ podczas Ciąg opisujący wersję środowiska CLR, które chcesz załadować.  
   
- Numer wersji w programie .NET Framework składa się z czterech części oddzielonych kropkami: *główna.pomocnicza.kompilacja.poprawka*. Ciąg przekazany jako `pwszVersion` musi zaczynać się od znaków "v", następuje pierwsze trzy części numeru wersji (na przykład "v1.0.1529").  
+ Numer wersji w .NET Framework składa się z czterech części oddzielonych kropkami: *główna. pomocnicza. kompilacja. poprawka*. Ciąg przeszedł jako `pwszVersion` musi rozpoczynać się od znaku "v", po którym następuje pierwsze trzy części numeru wersji (na przykład "v 1.0.1529").  
   
- Niektóre wersje środowiska CLR są instalowane z deklaracji zasad, która określa zgodność z poprzednimi wersjami środowiska CLR. Domyślnie, uruchomienie podkładki programowej ocenia `pwszVersion` wobec deklaracji i obciążeń najnowszej wersji środowiska uruchomieniowego, jest zgodny z żądaną wersją. Host może wymusić podkładkę, aby pominąć zasady oceny i załadować dokładną wersję określoną w `pwszVersion` , przekazując wartość `STARTUP_LOADER_SAFEMODE` dla `startupFlags` parametru, zgodnie z poniższym opisem.  
+ Niektóre wersje środowiska CLR są instalowane z instrukcją zasad, która określa zgodność z poprzednimi wersjami środowiska CLR. Domyślnie podkładka uruchamiania szacuje `pwszVersion` się przed instrukcjami zasad i ładuje najnowszą wersję środowiska uruchomieniowego, która jest zgodna z żądaną wersją. Host może zmusić podkładkę do pominięcia oceny zasad i załadować dokładną wersję `pwszVersion` określoną w przez przekazanie `STARTUP_LOADER_SAFEMODE` wartości `startupFlags` parametru, zgodnie z poniższym opisem.  
   
- Jeśli obiekt wywołujący określa wartość null w przypadku `pwszVersion`, `CorBindToRuntimeEx` identyfikuje zestaw zainstalowanego środowiska uruchomieniowe, których numery wersji są niższe niż w środowisku uruchomieniowym .NET Framework 4 i ładuje najnowszą wersję środowiska uruchomieniowego z tego zbioru. Nie będzie on ładować .NET Framework 4 lub nowszy, a kończy się niepowodzeniem, jeśli zainstalowano nie wcześniejszej wersji. Należy zauważyć, że przekazywanie wartości null daje hosta bez kontroli nad tym, którzy wersja środowiska uruchomieniowego jest załadowana. Mimo że takie podejście może być odpowiedni w niektórych scenariuszach, zdecydowanie zaleca się że host podać do załadowania określonej wersji.  
+ Jeśli obiekt wywołujący określa wartość `pwszVersion`null `CorBindToRuntimeEx` dla programu, program zidentyfikuje zestaw zainstalowanych środowisk uruchomieniowych, których numery wersji są mniejsze niż środowisko uruchomieniowe .NET Framework 4 i ładuje najnowszą wersję środowiska uruchomieniowego z tego zestawu. Nie ładuje .NET Framework 4 lub nowszego i kończy się niepowodzeniem, jeśli nie jest zainstalowana wcześniejsza wersja. Należy pamiętać, że przekazanie wartości null powoduje, że host nie kontroluje, która wersja środowiska uruchomieniowego jest załadowana. Chociaż takie podejście może być odpowiednie w niektórych scenariuszach, zdecydowanie zaleca się, aby Host dostarczał określoną wersję do załadowania.  
   
  `pwszBuildFlavor`  
- [in] Ciąg, który określa, czy ładować serwer czy stację roboczą kompilacji środowiska CLR. Prawidłowe wartości to `svr` i `wks`. Server kompilacji jest zoptymalizowany, aby móc korzystać z wielu procesorów do wyrzucania elementów bezużytecznych, a stacja robocza kompilacji jest zoptymalizowany dla aplikacji klienckich działających na komputerze jednoprocesorowym.  
+ podczas Ciąg określający, czy załadować serwer lub kompilację stacji roboczej środowiska CLR. Prawidłowe wartości to `svr` i `wks`. Kompilacja serwera jest zoptymalizowana pod kątem wykorzystania wielu procesorów na potrzeby wyrzucania elementów bezużytecznych, a kompilacja stacji roboczej jest zoptymalizowana pod kątem aplikacji klienckich uruchomionych na komputerze z jednym procesorem.  
   
- Jeśli `pwszBuildFlavor` jest ustawiona na wartość null, stacja robocza kompilacji jest ładowany. Podczas uruchamiania na komputerze jednoprocesorowym, stacja robocza kompilacji będzie zawsze ładowana, nawet jeśli `pwszBuildFlavor` ustawiono `svr`. Jednak jeśli `pwszBuildFlavor` ustawiono `svr` i współbieżne wyrzucanie elementów bezużytecznych zostało określone (zobacz opis `startupFlags` parametru), ładowana jest kompilacja serwera.  
+ Jeśli `pwszBuildFlavor` jest ustawiona na wartość null, kompilacja stacji roboczej zostanie załadowana. W przypadku uruchamiania na komputerze z jednym procesorem kompilacja stacji roboczej jest zawsze ładowana, nawet `pwszBuildFlavor` jeśli jest ustawiona `svr`na. Jeśli `pwszBuildFlavor` jednak jest ustawiona na `svr` i zostanie określone współbieżne wyrzucanie elementów bezużytecznych ( `startupFlags` Zobacz opis parametru), kompilacja serwera zostanie załadowana.  
   
  `startupFlags`  
- [in] Kombinacja wartości [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) wyliczenia. Te flagi kontrolować współbieżne wyrzucanie elementów bezużytecznych, kodem domeny neutralnej i zachowaniem `pwszVersion` parametru. Wartość domyślna to pojedyncza domena, jeśli flaga nie jest ustawiona. Następujące wartości są prawidłowe:  
+ podczas Kombinacja wartości wyliczenia [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) . Flagi te kontrolują współbieżne wyrzucanie elementów bezużytecznych, kod neutralny `pwszVersion` przez domenę i zachowanie parametru. Wartość domyślna to pojedyncza domena, jeśli flaga nie jest ustawiona. Następujące wartości są prawidłowe:  
   
 - `STARTUP_CONCURRENT_GC`  
   
@@ -101,43 +101,43 @@ HRESULT CorBindToRuntimeEx (
   
 - `STARTUP_ALWAYSFLOW_IMPERSONATION`  
   
- Aby uzyskać opis tych flag, zobacz [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) wyliczenia.  
+ Opisy tych flag można znaleźć w opisie [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) .  
   
  `rclsid`  
- [in] `CLSID` z koklas, która implementuje [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) lub [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interfejsu. Obsługiwane wartości to CLSID_CorRuntimeHost lub CLSID_CLRRuntimeHost.  
+ podczas Klasy coclass implementującej interfejs ICorRuntimeHost lub [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) . [](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) `CLSID` Obsługiwane wartości to CLSID_CorRuntimeHost lub CLSID_CLRRuntimeHost.  
   
  `riid`  
- [in] `IID` Żądanego interfejsu z `rclsid`. Obsługiwane wartości to IID_ICorRuntimeHost lub IID_ICLRRuntimeHost.  
+ podczas Żądany interfejs z `rclsid`. `IID` Obsługiwane wartości to IID_ICorRuntimeHost lub IID_ICLRRuntimeHost.  
   
  `ppv`  
- [out] Wskaźnik interfejsu zwrócone do `riid`.  
+ określoną Zwrócony wskaźnik interfejsu do `riid`.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli `pwszVersion` Określa wersję środowiska uruchomieniowego, który nie istnieje, `CorBindToRuntimeEx` zwraca wartość HRESULT CLR_E_SHIM_RUNTIMELOAD.  
+ Jeśli `pwszVersion` określa wersję środowiska uruchomieniowego, która nie istnieje `CorBindToRuntimeEx` , zwraca wartość HRESULT równą CLR_E_SHIM_RUNTIMELOAD.  
   
-## <a name="execution-context-and-flow-of-windows-identity"></a>Kontekstu wykonywania i przepływ tożsamości Windows  
- W wersji 1 CLR <xref:System.Security.Principal.WindowsIdentity> obiektu nie przepływać przez punkty asynchroniczne, takie jak nowe wątki, pul wątków lub czasomierza wywołania zwrotne. W wersji 2.0 środowisko CLR <xref:System.Threading.ExecutionContext> obiektu otacza pewne informacje o aktualnie wykonywany wątek i przepływy go między kiedykolwiek asynchronicznego, ale nie granice domeny aplikacji. Podobnie <xref:System.Security.Principal.WindowsIdentity> obiektu również odbywa się za pośrednictwem dowolnego punktu asynchronicznego. W związku z tym bieżący personifikacji w wątku, ewentualnie przepływów zbyt.  
+## <a name="execution-context-and-flow-of-windows-identity"></a>Kontekst wykonywania i przepływ tożsamości systemu Windows  
+ W wersji 1 środowiska CLR <xref:System.Security.Principal.WindowsIdentity> obiekt nie przepływa między punktami asynchronicznymi, takimi jak nowe wątki, pule wątków lub wywołania zwrotne czasomierza. W wersji 2,0 środowiska CLR <xref:System.Threading.ExecutionContext> Obiekt otacza pewne informacje o aktualnie wykonywanym wątku i przepływa go w dowolnym punkcie asynchronicznym, ale nie między granicami domeny aplikacji. Podobnie obiekt jest <xref:System.Security.Principal.WindowsIdentity> również przepływny w każdym punkcie asynchronicznym. W związku z tym bieżąca personifikacja w wątku, jeśli istnieje, również przepływów.  
   
- Można zmienić przepływ na dwa sposoby:  
+ Przepływ można zmienić na dwa sposoby:  
   
-1. Modyfikując <xref:System.Threading.ExecutionContext> ustawienia, aby wstrzymać przepływ na podstawie na wątek (zobacz <xref:System.Threading.ExecutionContext.SuppressFlow%2A>, <xref:System.Security.SecurityContext.SuppressFlow%2A>, i <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A> metody).  
+1. Modyfikując <xref:System.Threading.ExecutionContext> ustawienia <xref:System.Threading.ExecutionContext.SuppressFlow%2A>, aby pominąć przepływ dla poszczególnych wątków (Zobacz metody, <xref:System.Security.SecurityContext.SuppressFlow%2A>, i <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A> ).  
   
-2. Po zmianie procesu domyślny tryb na tryb zgodności w wersji 1, gdzie <xref:System.Security.Principal.WindowsIdentity> nie przepływ obiektu w dowolnym momencie asynchronicznego niezależnie od wartości <xref:System.Threading.ExecutionContext> ustawień w bieżącym wątku. Jak zmienić domyślny tryb, zależy od tego, czy używać zarządzanego pliku wykonywalnego lub niezarządzanego interfejsu hostingu do ładowania CLR:  
+2. Poprzez zmianę trybu domyślnego procesu na tryb zgodności w wersji 1, gdzie <xref:System.Security.Principal.WindowsIdentity> obiekt nie jest przepływem w żadnym punkcie asynchronicznym, niezależnie <xref:System.Threading.ExecutionContext> od ustawień w bieżącym wątku. Sposób zmiany trybu domyślnego zależy od tego, czy do załadowania środowiska CLR jest używany zarządzany plik wykonywalny, czy niezarządzany interfejs hostingu:  
   
-    1. Dla zarządzanych plików wykonywalnych, należy ustawić `enabled` atrybutu [ \<legacyimpersonationpolicy — >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) elementu `true`.  
+    1. W przypadku zarządzanych plików wykonywalnych należy ustawić `enabled` atrybut [ \<legacyImpersonationPolicy elementu](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) `true`>.  
   
-    2. W przypadku niezarządzane interfejsy hostingu, skonfigurować `STARTUP_LEGACY_IMPERSONATION` znacznik w `startupFlags` parametru podczas wywoływania `CorBindToRuntimeEx` funkcji.  
+    2. W przypadku niezarządzanych interfejsów hostingu Ustaw `STARTUP_LEGACY_IMPERSONATION` flagę `startupFlags` w parametrze podczas wywoływania `CorBindToRuntimeEx` funkcji.  
   
-     Tryb zgodności w wersji 1 ma zastosowanie do całego procesu i wszystkie domeny aplikacji w procesie.  
+     Tryb zgodności w wersji 1 dotyczy całego procesu i wszystkich domen aplikacji w procesie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówki** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteki** MSCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

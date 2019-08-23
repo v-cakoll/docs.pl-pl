@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ccc45482f691d9950c641ef126a657052a280e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05900f55885f8f3a4c470d6842c42d0fc3e0171e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987704"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957456"
 ---
 # <a name="icordebugprocess3-interface"></a>ICorDebugProcess3 — Interfejs
 Steruje niestandardowymi powiadomieniami debugera.  
@@ -30,22 +30,22 @@ Steruje niestandardowymi powiadomieniami debugera.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[SetEnableCustomNotification, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Włącza i wyłącza niestandardowymi powiadomieniami debugera określonego typu.|  
+|[SetEnableCustomNotification, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Włącza i wyłącza niestandardowe powiadomienia debugera określonego typu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten interfejs rozszerza logicznie ICorDebugProcess i ICorDebugProcess2 interfejsów.  
+ Ten interfejs logicznie rozszerza interfejsy ICorDebugProcess i ICorDebugProcess2.  
   
 > [!NOTE]
->  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
+> Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

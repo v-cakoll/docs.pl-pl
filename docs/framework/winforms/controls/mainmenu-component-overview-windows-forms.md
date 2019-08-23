@@ -8,21 +8,21 @@ helpviewer_keywords:
 - MainMenu control [Windows Forms], about MainMenu control
 - menus
 ms.assetid: b41cc5a3-cc59-4996-aa3c-8dd9c17d3c90
-ms.openlocfilehash: da1b76a7019f364e7463a8345aa80d9a9bd6089e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe46683faee13bad951d5a7185aad8a687c290ef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012792"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952136"
 ---
 # <a name="mainmenu-component-overview-windows-forms"></a>MainMenu — Informacje o składniku (Formularze systemu Windows)
 > [!IMPORTANT]
->  Mimo że <xref:System.Windows.Forms.MenuStrip> i <xref:System.Windows.Forms.ContextMenuStrip> Zastąp i dodawania funkcjonalności do <xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu> kontrolki z poprzednich wersji <xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu> zostaną zachowane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.  
+> <xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.MainMenu> Chociaż i Zastąp<xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu> Dodaj funkcje do kontrolekwcześniejszychwersjiisąonezachowywanewceluzapewnieniazgodnościzpoprzednimiwersjamiiwprzyszłości,jeśliwybierzeszopcję.<xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.ContextMenuStrip>  
   
- Formularze Windows <xref:System.Windows.Forms.MainMenu> składnika pojawi się menu w czasie wykonywania. Wszystkie podmenu menu głównego i poszczególne elementy są <xref:System.Windows.Forms.MenuItem> obiektów.  
+ Składnik Windows Forms <xref:System.Windows.Forms.MainMenu> wyświetla menu w czasie wykonywania. Wszystkie podmenu menu głównego i poszczególnych elementów są <xref:System.Windows.Forms.MenuItem> obiektami.  
   
 ## <a name="key-properties"></a>Właściwości klucza  
- Element menu może być wyznaczony jako element domyślny, ustawiając <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> właściwość `true`. Element domyślny jest wyświetlany czcionką pogrubioną po kliknięciu menu. Element menu <xref:System.Windows.Forms.MenuItem.Checked%2A> właściwości `true` lub `false`oraz wskazuje, czy element menu jest zaznaczone. Element menu <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> właściwość dostosowuje wyglądu wybranego elementu: Jeśli <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> ustawiono `true`, przycisk radiowy pojawia się obok elementu; Jeśli <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> jest ustawiona na `false`, pojawia się znacznik wyboru obok elementu.  
+ Element menu można wyznaczyć jako element domyślny przez ustawienie <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> właściwości na. `true` Element domyślny jest wyświetlany pogrubiony tekst po kliknięciu menu. <xref:System.Windows.Forms.MenuItem.Checked%2A> Właściwość elementu menu ma wartość `true` lub `false`, i wskazuje, czy element menu jest zaznaczony. <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> Właściwość elementu menu dostosowuje wygląd wybranego elementu: Jeśli <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> jest ustawiona na `true`, obok elementu pojawia się przycisk radiowy. Jeśli <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> jest ustawiona na `false`, obok elementu pojawia się znacznik wyboru.  
   
 ## <a name="see-also"></a>Zobacz także
 

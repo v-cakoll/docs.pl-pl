@@ -4,43 +4,43 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 1200875baf39c5fdff613cfd21d4027cd5d8df1b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7f9a02bc650f54338dfcb1d3f41397e745483430
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606051"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959536"
 ---
 # <a name="securing-clients"></a>Zabezpieczanie klientów [WCF]
-W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotyczące zabezpieczeń dla klientów. Oznacza to, że usługa określa jakie tryb zabezpieczeń do użycia i określa, czy klient musi podać poświadczenia. Zabezpieczanie klienta, w związku z tym, proces jest prosty: metadane uzyskane z usługi (jeśli jest publikowany) oraz tworzyć klienta. Metadane określa sposób konfigurowania klienta. Jeśli usługa wymaga, że klient podać poświadczenia, należy uzyskać poświadczenia, która pasuje do wymagań. W tym temacie omówiono proces bardziej szczegółowo. Aby uzyskać więcej informacji na temat tworzenia usługi bezpiecznego zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  
+W programie Windows Communication Foundation (WCF) usługa wymusza wymagania dotyczące zabezpieczeń dla klientów. Oznacza to, że usługa określa tryb zabezpieczeń, który ma być używany, oraz czy klient musi podać poświadczenie. W związku z tym proces zabezpieczania klienta jest prosty: Użyj metadanych uzyskanych z usługi (jeśli jest publikowany) i skompiluj klienta. Metadane określają sposób konfigurowania klienta programu. Jeśli usługa wymaga podania poświadczeń przez klienta, należy uzyskać poświadczenia spełniające wymagania. W tym temacie omówiono proces bardziej szczegółowo. Aby uzyskać więcej informacji na temat tworzenia bezpiecznej usługi, zobacz [Zabezpieczanie usług](../../../docs/framework/wcf/securing-services.md).  
   
-## <a name="the-service-specifies-security"></a>Usługa określa zabezpieczeń  
- Domyślnie powiązaniami WCF zabezpieczeń funkcje są włączone. (Wyjątek stanowi <xref:System.ServiceModel.BasicHttpBinding>.) W związku z tym jeśli usługa została utworzona przy użyciu usługi WCF, istnieje duże prawdopodobieństwo, że wdroży zabezpieczeń, aby zapewnić uwierzytelnianie, poufności i integralności. W takim przypadku metadanych, które zapewnia usługa poinformuje, co wymaga nawiązać bezpieczny kanał komunikacyjny. Jeśli metadane usługi nie ma żadnych wymagań dotyczących zabezpieczeń, nie ma możliwości celu nałożenia zabezpieczeń systemu, takich jak Secure Sockets Layer (SSL) przy użyciu protokołu HTTP, w usłudze. Jeśli jednak usługa wymaga klienta podać poświadczenia, następnie dewelopera klienta, wdrażania lub administrator musisz podać rzeczywiste poświadczenia, który będzie używany przez klienta do samodzielnego uwierzytelnienia usługi.  
+## <a name="the-service-specifies-security"></a>Usługa określa zabezpieczenia  
+ Domyślnie powiązania WCF mają włączone funkcje zabezpieczeń. (Wyjątek to <xref:System.ServiceModel.BasicHttpBinding>.) W związku z tym, jeśli usługa została utworzona przy użyciu programu WCF, istnieje możliwość, że Zaimplementuj zabezpieczenia, aby zapewnić uwierzytelnianie, poufność i integralność. W takim przypadku metadane udostępniane przez usługę będą wskazywać, czego potrzebuje do ustanowienia bezpiecznego kanału komunikacyjnego. Jeśli metadane usługi nie obejmują żadnych wymagań dotyczących zabezpieczeń, nie ma możliwości narzucenia schematu zabezpieczeń, takiego jak SSL (SSL) przez protokół HTTP, w usłudze. Jeśli jednak usługa wymaga od klienta podania poświadczeń, deweloper klienta, program wdrażania lub administrator musi podać rzeczywiste poświadczenia, które będą używane przez klienta do samodzielnego uwierzytelnienia w usłudze.  
   
 ## <a name="obtaining-metadata"></a>Uzyskiwanie metadanych  
- Podczas tworzenia klienta, pierwszym krokiem jest można uzyskać metadanych dla usługi, który klient komunikuje się z. Można to zrobić na dwa sposoby. Po pierwsze, jeśli usługa publikuje punkt końcowy metadanych programu exchange (MEX) lub sprawia, że jego metadane dostępne za pośrednictwem protokołu HTTP lub HTTPS, możesz pobrać przy użyciu metadanych [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), które zarówno generuje pliki kodu dla klienta, jak również w pliku konfiguracji. (Aby uzyskać więcej informacji na temat korzystania z narzędzia, zobacz [uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Jeśli usługa nie publikuje do punktu końcowego MEX i również nie powoduje jego metadane dostępne za pośrednictwem protokołu HTTP lub HTTPS, możesz skontaktować się twórcą usługi dla dokumentacji, która opisuje wymagania dotyczące zabezpieczeń i metadanych.  
+ Podczas tworzenia klienta pierwszy krok polega na uzyskaniu metadanych dla usługi, z którą komunikuje się klient. Można to zrobić na dwa sposoby. Po pierwsze, jeśli usługa publikuje punkt końcowy wymiany metadanych (MEX) lub udostępni metadane za pośrednictwem protokołu HTTP lub HTTPS, można pobrać metadane za pomocą narzędzia do obsługi [metadanych ServiceModel (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), które generuje pliki kodu dla klienta. również plik konfiguracji. (Aby uzyskać więcej informacji na temat korzystania z tego narzędzia, zobacz [Uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)). Jeśli usługa nie publikuje punktu końcowego MEX i nie udostępnia swoich metadanych za pośrednictwem protokołu HTTP lub HTTPS, należy skontaktować się z twórcą usługi w celu uzyskania dokumentacji opisującej wymagania dotyczące zabezpieczeń i metadanych.  
   
 > [!IMPORTANT]
->  Zalecane jest, że metadane pochodzą z zaufanego źródła i że nie zostać zmodyfikowany. Metadane pobrany przy użyciu protokołu HTTP są wysyłane w postaci zwykłego tekstu i może zostać zmieniony. Jeśli usługa używa <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> i <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> właściwości, użyj adresu URL, twórcy usługi dostarczane do pobierania danych przy użyciu protokołu HTTPS.  
+> Zaleca się, aby metadane pochodzą z zaufanego źródła i nie zostały naruszone. Metadane pobrane przy użyciu protokołu HTTP są wysyłane w postaci zwykłego tekstu i mogą być modyfikowane przez program. Jeśli usługa używa <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> właściwości i <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> , użyj adresu URL dostarczonego przez twórcę usługi, aby pobrać dane przy użyciu protokołu HTTPS.  
   
-## <a name="validating-security"></a>Sprawdzanie zabezpieczeń  
- Metadane źródła można podzielić na dwie szerokie kategorie: zaufanie do źródła i źródeł niezaufanych. Jeśli ufasz źródła i zostały pobrane kod klienta i inne metadane z tego źródła bezpiecznego punktu końcowego MEX, a następnie można skompilować klienta, dostarczyć prawidłowe poświadczenia, a jego uruchomienie z nie innych problemów.  
+## <a name="validating-security"></a>Sprawdzanie poprawności zabezpieczeń  
+ Źródła metadanych można podzielić na dwie szerokie Kategorie: źródła zaufania i źródła niezaufane. Jeśli ufasz źródłu i pobrano kod klienta oraz inne metadane z bezpiecznego elementu końcowego MEX tego źródła, można skompilować klienta, dostarczyć go z prawidłowymi poświadczeniami i uruchomić go bez żadnych innych problemów.  
   
- Jednak gdy użytkownik wybierze opcję Pobierz klienta i metadane ze źródła, który znasz trochę o upewnij się sprawdzić poprawność środki bezpieczeństwa, używanych przez kod. Na przykład należy po prostu tworzysz klienta, który wysyła informacji osobistych lub finansowych do usługi, chyba że usługa wymaga poufności i integralności (co najmniej). Właściciel usługi powinien ufać w zakresie, w jakim chcesz ujawniać informacje takie, ponieważ takie informacje będą widoczne dla niego.  
+ Jeśli jednak zdecydujesz się pobrać klienta i metadane z nieznanego źródła, pamiętaj o sprawdzeniu, czy miary zabezpieczeń są używane w kodzie. Na przykład nie można po prostu utworzyć klienta wysyłającego informacje osobiste lub finansowe do usługi, chyba że usługa wymaga poufności i integralności (co najmniej). Należy zaufać właścicielowi usługi w zakresie, w jakim użytkownik chce ujawnić takie informacje, ponieważ takie informacje będą widoczne dla niego.  
   
- Zgodnie z zasadą w związku z tym, korzystając z kodu i metadanych z niezaufanego źródła, sprawdź kod i metadanych, aby upewnić się, że spełnia on poziom zabezpieczeń, która jest wymagana.  
+ W związku z tym w przypadku używania kodu i metadanych z niezaufanego źródła Sprawdź kod i metadane, aby upewnić się, że spełnia on wymagany poziom zabezpieczeń.  
   
 ## <a name="setting-a-client-credential"></a>Ustawianie poświadczeń klienta  
- Ustawianie poświadczeń klienta na komputerze klienckim składa się z dwóch kroków:  
+ Ustawienie poświadczeń klienta na kliencie składa się z dwóch kroków:  
   
-1. Określić *typu poświadczeń klienta* usługa wymaga. Jest to realizowane za pomocą jednej z dwóch metod. Po pierwsze, w przypadku dokumentacji z twórcą usługi go określić poświadczeń klienta wymaga usługi typu (jeśli istnieje). Po drugie Jeśli masz tylko plik konfiguracji, które są generowane przez narzędzia Svcutil.exe, można sprawdzić poszczególnych powiązań, aby ustalić, jaki typ poświadczeń jest wymagany.  
+1. Określ *Typ poświadczeń klienta* wymagany przez usługę. Jest to realizowane przez jedną z dwóch metod. Najpierw w przypadku posiadania dokumentacji od twórcy usługi należy określić typ poświadczeń klienta (jeśli istnieje) wymagana przez usługę. Po drugie, jeśli masz tylko plik konfiguracyjny wygenerowany przez narzędzie Svcutil. exe, możesz sprawdzić poszczególne powiązania, aby określić, jaki typ poświadczeń jest wymagany.  
   
-2. Określ poświadczenie rzeczywistym klientem. Poświadczenia klienta faktycznie jest nazywany *wartości poświadczeń klienta* odróżniający go od typu. Na przykład, jeśli typ poświadczeń klienta Określa certyfikat, musisz podać certyfikat X.509 wystawiony przez urząd certyfikacji usługi relacji zaufania.  
+2. Określ rzeczywiste poświadczenie klienta. Rzeczywiste poświadczenie klienta nazywa się *wartością poświadczenia klienta* , aby odróżnić ją od typu. Na przykład, jeśli typ poświadczeń klienta określa certyfikat, należy podać certyfikat X. 509 wystawiony przez urząd certyfikacji, którym ufają usługi.  
   
 ### <a name="determining-the-client-credential-type"></a>Określanie typu poświadczeń klienta  
- W przypadku konfiguracji narzędzia Svcutil.exe wygenerowanych plików, sprawdź [ \<powiązania >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sekcji, aby określić, jakiego typu poświadczeń klienta jest wymagany. W ramach tej sekcji są elementy wiązania, które określają wymagania w zakresie zabezpieczeń. W szczególności sprawdź \<zabezpieczeń > Element każdego powiązania. Ten element zawiera `mode` atrybut, który można ustawić jedną z trzech wartości (`Message`, `Transport`, lub `TransportWithMessageCredential`). Wartość atrybutu określa tryb, a tryb Określa, które z elementów podrzędnych ma znaczenie.  
+ Jeśli masz plik konfiguracyjny narzędzia Svcutil. exe, zapoznaj się z sekcją [ \<powiązań >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) , aby określić, jaki typ poświadczeń klienta jest wymagany. W sekcji znajdują się elementy wiążące, które określają wymagania dotyczące zabezpieczeń. W celu przeanalizowania \<elementu > zabezpieczeń każdego powiązania. Ten element zawiera `mode` atrybut, który można ustawić na jedną z trzech możliwych wartości (`Message`, `Transport`lub `TransportWithMessageCredential`). Wartość atrybutu określa tryb, a tryb określa, który z elementów podrzędnych jest znaczący.  
   
- `<security>` Element może zawierać albo `<transport>` lub `<message>` elementu lub obu. Istotny element jest odpowiedni tryb zabezpieczeń. Na przykład, poniższy kod określa, czy tryb zabezpieczeń jest `"Message"`i klienta, typ dla poświadczeń `<message>` element jest `"Certificate"`. W tym przypadku `<transport>` elementu można zignorować. Jednak `<message>` element określa, czy należy podać certyfikat X.509.  
+ Element może zawierać `<transport>` element lub `<message>` albo oba te elementy. `<security>` Istotny element to ten, który jest zgodny z trybem zabezpieczeń. Na przykład poniższy kod określa, że tryb zabezpieczeń to `"Message"`, a typ poświadczeń klienta `<message>` dla elementu to `"Certificate"`. W takim przypadku `<transport>` element może być ignorowany. `<message>` Jednak element określa, że należy podać certyfikat X. 509.  
 
 ```xml  
 <wsHttpBinding>  
@@ -57,7 +57,7 @@ W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotycząc
 </wsHttpBinding>  
 ```  
 
- Należy pamiętać, że jeśli `clientCredentialType` ma ustawioną wartość atrybutu `"Windows"`, jak pokazano w poniższym przykładzie, nie trzeba podawać wartości rzeczywiste poświadczenia. Jest to spowodowane zintegrowanych zabezpieczeń Windows zawiera rzeczywiste poświadczenia (tokenu protokołu Kerberos) osobie, która jest uruchomiony klient.  
+ Należy pamiętać, że `clientCredentialType` Jeśli atrybut jest ustawiony `"Windows"`na, jak pokazano w poniższym przykładzie, nie trzeba podawać rzeczywistej wartości poświadczeń. Wynika to z faktu, że zintegrowane zabezpieczenia systemu Windows zapewniają rzeczywiste poświadczenie (token Kerberos) osoby, która korzysta z klienta programu.  
   
 ```xml  
 <security mode="Message">  
@@ -66,30 +66,30 @@ W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotycząc
 </security>  
 ```  
   
-### <a name="setting-the-client-credential-value"></a>Ustawienie wartości poświadczeń klienta  
- Jeśli okaże się, że klient musi podać poświadczenia, użyj odpowiedniej metody w celu skonfigurowania klienta. Na przykład, aby ustawić certyfikat klienta, użyj <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> metody.  
+### <a name="setting-the-client-credential-value"></a>Ustawianie wartości poświadczeń klienta  
+ Jeśli okaże się, że klient musi podać poświadczenia, użyj odpowiedniej metody w celu skonfigurowania klienta. Na przykład aby ustawić certyfikat klienta, należy użyć <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> metody.  
   
- Używany typ poświadczeń jest certyfikatu X.509. Możesz podać poświadczenia na dwa sposoby:  
+ Typową poświadczeniem jest certyfikat X. 509. Poświadczenie można podać na dwa sposoby:  
   
-- Programując w kodzie klienta (przy użyciu `SetCertificate` metody).  
+- Poprzez programowanie w kodzie klienta (za pomocą `SetCertificate` metody).  
   
- Dodając [ \<zachowania >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) sekcję pliku konfiguracji dla klienta i za pomocą `clientCredentials` — element (pokazana poniżej).  
+ `clientCredentials` [ Dodanie\<zachowań >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) sekcji pliku konfiguracji klienta i użycie elementu (pokazanego poniżej).  
   
-#### <a name="setting-a-clientcredentials-value-in-code"></a>Ustawienie \<clientCredentials > wartość w kodzie  
- Aby ustawić [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) wartości w kodzie, należy przejść do <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> właściwość <xref:System.ServiceModel.ClientBase%601> klasy. Zwraca właściwość <xref:System.ServiceModel.Description.ClientCredentials> obiekt, który zezwala na dostęp do różnych typów poświadczeń, jak pokazano w poniższej tabeli.  
+#### <a name="setting-a-clientcredentials-value-in-code"></a>Ustawianie wartości \<elementu ClientCredentials > w kodzie  
+ Aby ustawić obiekt [ \<ClientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) wartość w kodzie, należy uzyskać dostęp <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> do właściwości <xref:System.ServiceModel.ClientBase%601> klasy. Właściwość zwraca <xref:System.ServiceModel.Description.ClientCredentials> obiekt, który umożliwia dostęp do różnych typów poświadczeń, jak pokazano w poniższej tabeli.  
   
 |Właściwość ClientCredential|Opis|Uwagi|  
 |-------------------------------|-----------------|-----------|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|Zwraca <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|Reprezentuje certyfikat X.509 dostarczonych przez klienta do samodzielnego uwierzytelnienia usługi.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Zwraca <xref:System.ServiceModel.Security.HttpDigestClientCredential>|Reprezentuje poświadczeń usługi HTTP digest. Poświadczenie jest skrót nazwy użytkownika i hasła.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|Zwraca <xref:System.ServiceModel.Security.IssuedTokenClientCredential>|Reprezentuje token zabezpieczeń niestandardowych, wystawiony przez usługę tokenu zabezpieczającego, często używane w scenariuszach federacji.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|Zwraca <xref:System.ServiceModel.Security.PeerCredential>|Reprezentuje poświadczenia elementu równorzędnego dla udziału w siatki elementów równorzędnych w domenie Windows.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|Zwraca <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>|Reprezentuje certyfikat X.509, udostępniane przez usługę w negocjacji poza pasmem.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|Zwraca <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>|Reprezentuje parę nazwa i hasło użytkownika.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|Zwraca <xref:System.ServiceModel.Security.WindowsClientCredential>|Reprezentuje poświadczeń klienta Windows (poświadczenia protokołu Kerberos). Właściwości klasy są tylko do odczytu.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|Zwraca wartość<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|Reprezentuje certyfikat X. 509 dostarczony przez klienta w celu samodzielnego uwierzytelnienia w usłudze.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Zwraca wartość<xref:System.ServiceModel.Security.HttpDigestClientCredential>|Reprezentuje poświadczenie protokołu HTTP digest. Poświadczenie jest skrótem nazwy użytkownika i hasła.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|Zwraca wartość<xref:System.ServiceModel.Security.IssuedTokenClientCredential>|Reprezentuje niestandardowy token zabezpieczający wystawiony przez usługę tokenu zabezpieczającego, powszechnie używany w scenariuszach federacyjnych.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|Zwraca wartość<xref:System.ServiceModel.Security.PeerCredential>|Reprezentuje poświadczenie elementu równorzędnego dla udziału w sieci równorzędnej w domenie systemu Windows.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|Zwraca wartość<xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>|Reprezentuje certyfikat X. 509 dostarczony przez usługę w ramach negocjacji poza pasmem.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|Zwraca wartość<xref:System.ServiceModel.Security.UserNamePasswordClientCredential>|Reprezentuje parę nazwa użytkownika i hasło.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|Zwraca wartość<xref:System.ServiceModel.Security.WindowsClientCredential>|Reprezentuje poświadczenie klienta systemu Windows (poświadczenie protokołu Kerberos). Właściwości klasy są tylko do odczytu.|  
   
-#### <a name="setting-a-clientcredentials-value-in-configuration"></a>Ustawienie \<clientCredentials > z wartości w konfiguracji  
- Określone wartości poświadczeń za pomocą zachowanie punktu końcowego jako elementy podrzędne [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementu. Element używany jest zależna od typu poświadczeń klienta. Na przykład w poniższym przykładzie pokazano konfigurację, aby ustawić certyfikat X.509 przy użyciu <[\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
+#### <a name="setting-a-clientcredentials-value-in-configuration"></a>Ustawianie wartości \<elementu ClientCredentials > w konfiguracji  
+ Wartości poświadczeń są określane przy użyciu zachowania punktu końcowego jako elementów [ \<](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) podrzędnych elementu ClientCredentials >. Używany element zależy od typu poświadczeń klienta. Na przykład poniższy przykład pokazuje konfigurację służącą do ustawiania certyfikatu X. 509 przy użyciu[\<> < ClientCertificate](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
   
 ```xml  
 <configuration>  
@@ -107,7 +107,7 @@ W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotycząc
 </configuration>  
 ```  
   
- Aby ustawić konfigurację poświadczeń klienta, należy dodać [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) element do pliku konfiguracji. Ponadto element dodano zachowania muszą zostać połączone do punktu końcowego usługi za pomocą `behaviorConfiguration` atrybutu [ \<punktu końcowego > z \<klienta >](../configure-apps/file-schema/wcf/endpoint-of-client.md) elementu, jak pokazano w poniższym przykładzie. Wartość `behaviorConfiguration` atrybutu musi odpowiadać wartości zachowania `name` atrybutu.  
+ Aby ustawić poświadczenie klienta w konfiguracji, Dodaj [ \<element endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) do pliku konfiguracji. Ponadto dodanie elementu zachowania musi być powiązane z punktem końcowym usługi przy użyciu `behaviorConfiguration` atrybutu [ \<punktu końcowego > \<elementu klienta >](../configure-apps/file-schema/wcf/endpoint-of-client.md) , jak pokazano w poniższym przykładzie. Wartość `behaviorConfiguration` atrybutu musi być zgodna z wartością atrybutu Behavior `name` .  
 
 ```xml
 <configuration>
@@ -124,12 +124,12 @@ W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotycząc
 ```
   
 > [!NOTE]
->  Niektóre wartości poświadczeń klienta nie może być zestaw za pomocą plików konfiguracji aplikacji, na przykład, nazwę użytkownika i hasła, lub Windows użytkownika i wartości haseł. Wartości tych poświadczeń można określić tylko w przypadku kodu.  
+> Niektórych wartości poświadczeń klienta nie można ustawić przy użyciu plików konfiguracji aplikacji, na przykład nazwy użytkownika i hasła lub wartości użytkownika i hasła systemu Windows. Takie wartości poświadczeń można określić tylko w kodzie.  
   
- Aby uzyskać więcej informacji na temat ustawiania poświadczeń klienta, zobacz [jak: Określanie wartości poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Aby uzyskać więcej informacji na temat ustawiania poświadczeń klienta, [zobacz How to: Określ wartości](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)poświadczeń klienta.  
   
 > [!NOTE]
->  `ClientCredentialType` jest ignorowany, kiedy `SecurityMode` ustawiono `"TransportWithMessageCredential",` jak pokazano w poniższym Przykładowa konfiguracja.  
+> `ClientCredentialType`jest ignorowany `SecurityMode` , gdy jest `"TransportWithMessageCredential",` ustawiona na tak, jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
 <wsHttpBinding>  
@@ -151,10 +151,10 @@ W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotycząc
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [\<powiązania >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+- [\<> powiązań](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
 - [Narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
 - [Zabezpieczanie usług](../../../docs/framework/wcf/securing-services.md)
 - [Uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [Instrukcje: Określanie wartości poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Instrukcje: Określ wartości poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Instrukcje: Określanie typu poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [Instrukcje: Określ typ poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

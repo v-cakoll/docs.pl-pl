@@ -2,26 +2,26 @@
 title: System.TimeSpan Methods
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: dd693a64550293d6894e1d2abc3f651a53fc17fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec27f8f17a6709efef1a8230b521778095ae1257
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917439"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947093"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan, metody
-Element członkowski obsługę <xref:System.TimeSpan?displayProperty=nameWithType> zależy od wersji .NET Framework i programu Microsoft SQL Server, którego używasz.  
+Obsługa elementów członkowskich <xref:System.TimeSpan?displayProperty=nameWithType> znacznie zależy od wersji .NET Framework i Microsoft SQL Server, z których korzystasz.  
   
- Gdy metoda, operator lub właściwość nie jest obsługiwany; oznacza to, że LINQ to SQL nie może tłumaczyć elementu członkowskiego do wykonania w programie SQL Server. Nadal można użyć tych elementów członkowskich w kodzie. Muszą one jednak obliczane, przed zapytania jest tłumaczony języka Transact-SQL lub po wyniki zostały pobrane z bazy danych.  
+ Gdy metoda, operator lub właściwość jest nieobsługiwana; oznacza to, że LINQ to SQL nie może przetłumaczyć elementu członkowskiego na wykonanie na SQL Server. Nadal możesz korzystać z tych elementów członkowskich w kodzie. Jednak muszą być oceniane przed przekazaniem zapytania do języka Transact-SQL lub po pobraniu wyników z bazy danych.  
   
-## <a name="previous-limitations"></a>Ograniczenia dotyczące poprzedniego  
- Korzystając z programu LINQ to SQL z wersjami programu .NET Framework wcześniejszych niż .NET Framework 3.5 z dodatkiem SP1, nie można zamapować pola bazy danych programu SQL Server do <xref:System.TimeSpan?displayProperty=nameWithType>. Jednak operacje na <xref:System.TimeSpan> są obsługiwane, ponieważ <xref:System.TimeSpan> wartości mogą być zwracane przez <xref:System.DateTime> odejmowania lub wprowadzane do wyrażenia jako zmienną literału lub powiązanej.  
+## <a name="previous-limitations"></a>Poprzednie ograniczenia  
+ W przypadku korzystania z LINQ to SQL z wersjami .NET Framework przed .NET Framework 3,5 SP1 nie można mapować SQL Server pól bazy danych na <xref:System.TimeSpan?displayProperty=nameWithType>. Jednak operacje na <xref:System.TimeSpan> są obsługiwane, ponieważ <xref:System.TimeSpan> wartości mogą być zwracane z <xref:System.DateTime> odejmowania lub wprowadzane do wyrażenia jako literału lub zmiennej powiązanej.  
   
-## <a name="supported-systemtimespan-member-support"></a>Obsługiwane obsługi elementu członkowskiego System.TimeSpan
+## <a name="supported-systemtimespan-member-support"></a>Obsługiwane wsparcie składowej system. TimeSpan
 
- Następujące LINQ to SQL obsługiwanych metod, operatorów i właściwości są dostępne do użycia w Twojej zapytania LINQ to SQL. Po mapowane w modelu obiektu lub pliku mapowania zewnętrznych, LINQ to SQL pozwala wywołać wiele <xref:System.TimeSpan?displayProperty=nameWithType> członków wewnątrz Twojego zapytania LINQ to SQL.  
+ Poniższe LINQ to SQL-obsługiwane metody, operatory i właściwości są dostępne do użycia w zapytaniach LINQ to SQL. Po zmapowaniu w modelu obiektów lub zewnętrznym pliku mapowania LINQ to SQL umożliwia wywoływanie wielu <xref:System.TimeSpan?displayProperty=nameWithType> elementów członkowskich wewnątrz zapytań LINQ to SQL.  
   
-|Obsługiwane <xref:System.TimeSpan> metody|Obsługiwane <xref:System.TimeSpan> operatorów|Obsługiwane <xref:System.TimeSpan> właściwości|  
+|Obsługiwane <xref:System.TimeSpan> metody|Obsługiwane <xref:System.TimeSpan> operatory|Obsługiwane <xref:System.TimeSpan> właściwości|  
 |------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.TimeSpan.Compare%2A>|<xref:System.TimeSpan.op_Equality%2A>|<xref:System.TimeSpan.Days%2A>|  
 |<xref:System.TimeSpan.CompareTo%28System.TimeSpan%29>|<xref:System.TimeSpan.op_GreaterThan%2A>|<xref:System.TimeSpan.Hours%2A>|  
@@ -31,10 +31,10 @@ Element członkowski obsługę <xref:System.TimeSpan?displayProperty=nameWithTyp
 ||<xref:System.TimeSpan.op_LessThanOrEqual%2A>|<xref:System.TimeSpan.MinValue>|  
   
 > [!NOTE]
->  Możliwość mapowania <xref:System.TimeSpan?displayProperty=nameWithType> SQL `TIME` kolumny za pomocą LINQ to SQL wymaga .NET Framework 3.5 SP1 i nowszych. SQL `TIME` — typ danych jest tylko dostępne w programie Microsoft SQL Server 2008 i nie tylko.  
+> Możliwość mapowania <xref:System.TimeSpan?displayProperty=nameWithType> do kolumny SQL `TIME` z LINQ to SQL wymaga .NET Framework 3,5 z dodatkiem SP1 i poza nią. Typ danych `TIME` SQL jest dostępny tylko w Microsoft SQL Server 2008 i więcej.  
   
 ### <a name="addition-and-subtraction"></a>Dodawanie i odejmowanie  
- Chociaż środowisko CLR <xref:System.TimeSpan?displayProperty=nameWithType> typ obsługuje dodawanie i odejmowanie, SQL `TIME` nie ma typu. W związku z tym Twoje zapytania LINQ to SQL będzie generować błędy, jeśli one próba Dodawanie i odejmowanie, gdy są mapowane do bazy danych SQL `TIME` typu. Możesz znaleźć inne zagadnienia dotyczące pracy z SQL typów daty i godziny w [mapowanie typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ Chociaż typ CLR <xref:System.TimeSpan?displayProperty=nameWithType> obsługuje dodawanie i odejmowanie, typ SQL `TIME` nie jest. W związku z tym zapytania LINQ to SQL generują błędy, jeśli spróbują Dodawanie i odejmowanie, gdy są one mapowane na typ SQL `TIME` . Inne zagadnienia dotyczące pracy z typami dat i godzin SQL można znaleźć w [mapowaniu typu SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

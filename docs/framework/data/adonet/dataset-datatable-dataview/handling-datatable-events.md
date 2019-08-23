@@ -5,76 +5,76 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034310"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953269"
 ---
 # <a name="handling-datatable-events"></a>Obsługa zdarzeń elementu DataTable
-<xref:System.Data.DataTable> Obiekt zawiera szereg zdarzeń, które mogą być przetwarzane przez aplikację. W poniższej tabeli opisano `DataTable` zdarzenia.  
+<xref:System.Data.DataTable> Obiekt zawiera serię zdarzeń, które mogą być przetwarzane przez aplikację. W poniższej tabeli opisano `DataTable` zdarzenia.  
   
 |Zdarzenie|Opis|  
 |-----------|-----------------|  
-|<xref:System.Data.DataTable.Initialized>|Występuje po <xref:System.Data.DataTable.EndInit%2A> metoda `DataTable` jest wywoływana. To zdarzenie jest przeznaczony głównie do obsługi scenariuszy w czasie projektowania.|  
-|<xref:System.Data.DataTable.ColumnChanged>|Występuje po wartości po pomyślnej zmianie w <xref:System.Data.DataColumn>.|  
-|<xref:System.Data.DataTable.ColumnChanging>|Występuje, gdy wartość została przesłana do `DataColumn`.|  
-|<xref:System.Data.DataTable.RowChanged>|Występuje po `DataColumn` wartość lub <xref:System.Data.DataRow.RowState%2A> z <xref:System.Data.DataRow> w `DataTable` zostało pomyślnie zmienione.|  
-|<xref:System.Data.DataTable.RowChanging>|Występuje, gdy zmiana została przesłana do `DataColumn` wartość lub `RowState` z `DataRow` w `DataTable`.|  
-|<xref:System.Data.DataTable.RowDeleted>|Występuje po `DataRow` w `DataTable` została oznaczona jako `Deleted`.|  
-|<xref:System.Data.DataTable.RowDeleting>|Występuje przed `DataRow` w `DataTable` jest oznaczony jako `Deleted`.|  
-|<xref:System.Data.DataTable.TableCleared>|Występuje po wywołaniu <xref:System.Data.DataTable.Clear%2A> metody `DataTable` został pomyślnie wyczyszczony co `DataRow`.|  
-|<xref:System.Data.DataTable.TableClearing>|Występuje po `Clear` metoda jest wywoływana, lecz przed `Clear` rozpoczęciu operacji.|  
-|<xref:System.Data.DataTable.TableNewRow>|Występuje po nową `DataRow` jest tworzony przez wywołanie `NewRow` metody `DataTable`.|  
-|<xref:System.ComponentModel.MarshalByValueComponent.Disposed>|Występuje, gdy `DataTable` jest `Disposed`. Odziedziczone po <xref:System.ComponentModel.MarshalByValueComponent>.|  
+|<xref:System.Data.DataTable.Initialized>|Występuje po <xref:System.Data.DataTable.EndInit%2A> wywołaniu metody `DataTable` klasy. To zdarzenie jest przeznaczone głównie do obsługi scenariuszy czasu projektowania.|  
+|<xref:System.Data.DataTable.ColumnChanged>|Występuje po pomyślnej zmianie wartości w <xref:System.Data.DataColumn>.|  
+|<xref:System.Data.DataTable.ColumnChanging>|Występuje, gdy wartość zostanie przesłana dla elementu `DataColumn`.|  
+|<xref:System.Data.DataTable.RowChanged>|Występuje po `DataColumn` pomyślnym zmianie <xref:System.Data.DataRow.RowState%2A> wartości lub <xref:System.Data.DataRow> elementu w `DataTable` .|  
+|<xref:System.Data.DataTable.RowChanging>|Występuje, gdy `DataColumn` została przesłana zmiana dotycząca wartości `RowState` lub z `DataRow` w `DataTable`.|  
+|<xref:System.Data.DataTable.RowDeleted>|Występuje po oznaczeniu `DataRow` elementu `DataTable` w elemencie jako `Deleted`.|  
+|<xref:System.Data.DataTable.RowDeleting>|Występuje przed oznaczeniem `DataRow` `DataTable` elementu w `Deleted`.|  
+|<xref:System.Data.DataTable.TableCleared>|Występuje po pomyślnym wyczyszczeniu <xref:System.Data.DataTable.Clear%2A> `DataRow`wywołania metody `DataTable` .|  
+|<xref:System.Data.DataTable.TableClearing>|Występuje po wywołaniu `Clear` metody, ale `Clear` przed rozpoczęciem operacji.|  
+|<xref:System.Data.DataTable.TableNewRow>|Występuje po utworzeniu nowej `DataRow` przez wywołanie `NewRow` metody `DataTable`.|  
+|<xref:System.ComponentModel.MarshalByValueComponent.Disposed>|Występuje, `DataTable` gdy jest `Disposed`. Dziedziczone z <xref:System.ComponentModel.MarshalByValueComponent>.|  
   
 > [!NOTE]
->  Większość operacji, dodać lub usunąć wiersze, które nie wywołuj `ColumnChanged` i `ColumnChanging` zdarzenia. Jednak `ReadXml` wywoływanie metody `ColumnChanged` i `ColumnChanging` zdarzeń, chyba że `XmlReadMode` jest ustawiona na `DiffGram` lub została ustawiona na `Auto` po dokumentu XML odczytywanych `DiffGram`.  
+> Większość operacji, które dodają lub usuwają wiersze, `ColumnChanged` nie `ColumnChanging` powodują zdarzeń i. `ColumnChanged` `ColumnChanging` `Auto` `DiffGram` `DiffGram`Jednak metoda wykonuje podnoszenie`XmlReadMode` i zdarzenia, chyba że jest ustawiona na lub jest ustawiona na, gdy dokument XML jest odczytywany. `ReadXml`  
   
 > [!WARNING]
->  Może spowodować uszkodzenie danych, jeśli data zostanie zmodyfikowany w `DataSet` z którego `RowChanged` zdarzenie jest wywoływane. Żaden wyjątek nie zostanie wygenerowany, jeśli wystąpi takie uszkodzenie danych.  
+>  Uszkodzenie danych może wystąpić, `DataSet` `RowChanged` Jeśli dane są modyfikowane w przypadku, gdy zdarzenie jest zgłaszane. Wyjątek nie zostanie zgłoszony, jeśli wystąpi takie uszkodzenie danych.  
   
-## <a name="additional-related-events"></a>Dodatkowe zdarzenia pokrewne  
- <xref:System.Data.DataTable.Constraints%2A> Przechowuje właściwości <xref:System.Data.ConstraintCollection> wystąpienia. <xref:System.Data.ConstraintCollection> Klasy ujawnia <xref:System.Data.ConstraintCollection.CollectionChanged> zdarzeń. To zdarzenie jest uruchamiana, gdy dodane, zmodyfikowane lub usunięte z ograniczenie `ConstraintCollection`.  
+## <a name="additional-related-events"></a>Dodatkowe powiązane zdarzenia  
+ <xref:System.Data.DataTable.Constraints%2A> Właściwość<xref:System.Data.ConstraintCollection> przechowuje wystąpienie. <xref:System.Data.ConstraintCollection> Klasa<xref:System.Data.ConstraintCollection.CollectionChanged> ujawnia zdarzenie. To zdarzenie jest wyzwalane, gdy ograniczenie zostanie dodane, zmodyfikowane lub usunięte z `ConstraintCollection`.  
   
- <xref:System.Data.DataTable.Columns%2A> Przechowuje właściwości <xref:System.Data.DataColumnCollection> wystąpienia. `DataColumnCollection` Klasy ujawnia <xref:System.Data.DataColumnCollection.CollectionChanged> zdarzeń. To zdarzenie jest uruchamiany, gdy `DataColumn` dodane, zmodyfikowane lub usunięte z `DataColumnCollection`. Modyfikacje, które powodują wyzwolenie zdarzenia obejmują zmiany nazwy, typu, wyrażenie lub porządkowym kolumny.  
+ <xref:System.Data.DataTable.Columns%2A> Właściwość<xref:System.Data.DataColumnCollection> przechowuje wystąpienie. `DataColumnCollection` Klasa<xref:System.Data.DataColumnCollection.CollectionChanged> ujawnia zdarzenie. To zdarzenie jest wyzwalane `DataColumn` , gdy element jest dodawany, modyfikowany lub `DataColumnCollection`usuwany z. Modyfikacje, które powodują pożar zdarzenia, obejmują zmiany nazwy, typu, wyrażenia lub liczby porządkowej kolumny.  
   
- <xref:System.Data.DataSet.Tables%2A> Właściwość <xref:System.Data.DataSet> przechowuje <xref:System.Data.DataTableCollection> wystąpienia. `DataTableCollection` Klasa udostępnia zarówno `CollectionChanged` i `CollectionChanging` zdarzeń. Wyzwolenie tych zdarzeń, gdy `DataTable` jest dodane lub usunięte z `DataSet`.  
+ <xref:System.Data.DataSet.Tables%2A> Właściwość obiektu<xref:System.Data.DataTableCollection> zawiera wystąpienie. <xref:System.Data.DataSet> Klasa uwidacznia `CollectionChanging` zarówno zdarzenie `CollectionChanged` `DataTableCollection` , jak i. Te zdarzenia `DataTable` są wyzwalane po dodaniu lub usunięciu `DataSet`z.  
   
- Zmienia się na `DataRows` można również wyzwalać zdarzenia dla skojarzonego <xref:System.Data.DataView>. `DataView` Klasy ujawnia <xref:System.Data.DataView.ListChanged> zdarzeń, który jest uruchamiany, gdy `DataColumn` zmiany wartości lub podczas zmiany kompozycji i kolejność sortowania widoku. <xref:System.Data.DataRowView> Klasy ujawnia <xref:System.Data.DataRowView.PropertyChanged> zdarzenia, które są generowane, gdy skojarzony `DataColumn` wartość zmienia się.  
+ Zmiany w `DataRows` usłudze mogą również wyzwalać zdarzenia dla <xref:System.Data.DataView>skojarzonego elementu. `DataView` Klasa uwidacznia`DataColumn` zdarzenie, które jest wyzwalane, gdy wartość ulegnie zmianie lub gdy zmieni się kompozycja lub porządek sortowania widoku. <xref:System.Data.DataView.ListChanged> Klasa uwidacznia zdarzenie, które jest wyzwalane, gdy `DataColumn` zostanie zmieniona skojarzona wartość. <xref:System.Data.DataRowView.PropertyChanged> <xref:System.Data.DataRowView>  
   
 ## <a name="sequence-of-operations"></a>Sekwencja operacji  
- Oto sekwencja operacji, które występują podczas `DataRow` dodane, zmodyfikowane lub usunięte:  
+ Oto sekwencja operacji, które wystąpiły po `DataRow` dodaniu, zmodyfikowaniu lub usunięciu:  
   
-1. Utwórz rekord proponowanych i zastosować zmiany.  
+1. Utwórz proponowany rekord i Zastosuj wszelkie zmiany.  
   
-2. Sprawdź ograniczenia w kolumnach-expression.  
+2. Ograniczenia check dla kolumn niebędących wyrażeniami wyrażeń.  
   
-3. Wywoływanie `RowChanging` lub `RowDeleting` zdarzeń, jeśli ma to zastosowanie.  
+3. Zgłoś odpowiednie zdarzenia `RowDeleting`lub. `RowChanging`  
   
-4. Ustaw proponowany rekord bieżącego rekordu.  
+4. Ustaw proponowany rekord jako bieżący rekord.  
   
-5. Zaktualizuj wszystkie indeksy.  
+5. Aktualizowanie wszystkich skojarzonych indeksów.  
   
-6. Wywoływanie `ListChanged` skojarzone zdarzenia dla `DataView` obiektów i `PropertyChanged` skojarzone zdarzenia dla `DataRowView` obiektów.  
+6. Zgłoś `ListChanged` zdarzenia dla skojarzonych `DataView` obiektów i `PropertyChanged` zdarzeń dla skojarzonych `DataRowView` obiektów.  
   
-7. Należy ocenić wszystkie kolumny wyrażenia, ale opóźnienie sprawdzanie żadnych ograniczeń na tych kolumnach.  
+7. Oceń wszystkie kolumny wyrażeń, ale Opóźnij sprawdzanie ograniczeń dotyczących tych kolumn.  
   
-8. Wywoływanie `ListChanged` skojarzone zdarzenia dla `DataView` obiektów i `PropertyChanged` skojarzone zdarzenia dla `DataRowView` obiektów wpływ ocen kolumnę wyrażenia.  
+8. Wywołaj `ListChanged` zdarzenia dla `DataView` skojarzonych obiektów `PropertyChanged` i zdarzeń dla `DataRowView` skojarzonych obiektów, na które mają wpływ oceny kolumn wyrażeń.  
   
-9. Wywoływanie `RowChanged` lub `RowDeleted` zdarzeń, jeśli ma to zastosowanie.  
+9. `RowChanged` Podnieś `RowDeleted` lub zgłoś odpowiednie zdarzenia.  
   
-10. Sprawdź ograniczenia dotyczące wyrażeń kolumn.  
+10. Ograniczenia check dla kolumn wyrażeń.  
   
 > [!NOTE]
->  Zmiany kolumn wyrażeń nigdy nie zgłaszać `DataTable` zdarzenia. Zmiany kolumn wyrażeń tylko zgłosić `DataView` i `DataRowView` zdarzenia. Kolumny wyrażeń może być zależny od wielu innych kolumn i mogą być obliczane wielokrotnie podczas jednego `DataRow` operacji. Każdej oceny wyrażenia wywołuje zdarzenia i jeden `DataRow` operacji można podnieść wielu `ListChanged` i `PropertyChanged` zdarzenia w przypadku kolumn wyrażeń one dotyczą, prawdopodobnie w tym wiele zdarzeń dla tej samej kolumny w wyrażeniu.  
+> Zmiany w kolumnach wyrażeń nigdy nie `DataTable` powodują zdarzeń. Zmiany w kolumnach wyrażeń powodują `DataView` podnoszenie `DataRowView` i zdarzenia. Kolumny wyrażeń mogą mieć zależności dla wielu innych kolumn i mogą być oceniane wiele razy podczas jednej `DataRow` operacji. Każde obliczenie wyrażenia wywołuje zdarzenia, a pojedyncza `DataRow` operacja może spowodować wygenerowanie `PropertyChanged` wielu `ListChanged` i zdarzeń w przypadku, gdy dotyczy kolumn wyrażeń, może także uwzględniać wiele zdarzeń dla tej samej kolumny wyrażenia.  
   
 > [!WARNING]
->  Nie zgłaszają wyjątków <xref:System.NullReferenceException> w ramach `RowChanged` programu obsługi zdarzeń. Jeśli <xref:System.NullReferenceException> zostanie zgłoszony w obrębie `RowChanged` zdarzenia `DataTable`, a następnie `DataTable` zostanie uszkodzony.  
+>  Nie <xref:System.NullReferenceException> zgłaszaj `RowChanged` w ramach procedury obsługi zdarzeń. Jeśli jest zgłaszany `RowChanged` w ramach zdarzenia `DataTable`, `DataTable` zostanie uszkodzona. <xref:System.NullReferenceException>  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób tworzenia procedury obsługi zdarzeń dla `RowChanged`, `RowChanging`, `RowDeleted`, `RowDeleting`, `ColumnChanged`, `ColumnChanging`, `TableNewRow`, `TableCleared`, i `TableClearing` zdarzenia. Każdy program obsługi zdarzeń wyświetla dane wyjściowe w oknie konsoli po jego wyzwoleniu.  
+ Poniższy `RowChanged`przykład ilustruje sposób tworzenia obsługi zdarzeń dla zdarzeń `ColumnChanged` `RowDeleting` `RowDeleted` `RowChanging` ,`ColumnChanging`,,,,,, i `TableClearing`. `TableNewRow` `TableCleared` Każdy program obsługi zdarzeń wyświetla dane wyjściowe w oknie konsoli, gdy jest on uruchamiany.  
   
  [!code-csharp[DataWorks DataTable.Events#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTable.Events/CS/source.cs#1)]
  [!code-vb[DataWorks DataTable.Events#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTable.Events/VB/source.vb#1)]  
@@ -84,4 +84,4 @@ ms.locfileid: "62034310"
 - [Operowanie danymi w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [Obsługa zdarzeń elementu DataAdapter](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
 - [Obsługa zdarzeń elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

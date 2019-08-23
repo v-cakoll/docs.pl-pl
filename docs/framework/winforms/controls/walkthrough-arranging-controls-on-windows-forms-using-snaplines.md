@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 3ce6c250fadbb56b341d5e8dec3a9cb9d28940fe
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 8ac1ba6b8121aabea3c992ca5b943f231fc19ce2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040255"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950069"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Przewodnik: rozmieszczanie kontrolek w formularzach systemu Windows za pomocą linii przyciągania
 Precyzyjne rozmieszczenie kontrolek w formularzu jest wysokim priorytetem dla wielu aplikacji. Projektant formularzy systemu Windows zapewnia wiele narzędzi do układu. Jedną z najważniejszych <xref:System.Windows.Forms.Design.Behavior.SnapLine> funkcji jest funkcja.
@@ -87,7 +87,7 @@ Precyzyjne rozmieszczenie kontrolek w formularzu jest wysokim priorytetem dla wi
 1. Zaznacz jedną z <xref:System.Windows.Forms.Button> formantów i przenieś ją blisko prawej krawędzi formularza do momentu pojawienia się snapline. Odległość snapline od prawej krawędzi to suma <xref:System.Windows.Forms.Control.Margin%2A> właściwości kontrolki i wartości <xref:System.Windows.Forms.Control.Padding%2A> właściwości formularza.
 
 > [!NOTE]
->  Jeśli <xref:System.Windows.Forms.Control.Padding%2A> właściwość formularza jest ustawiona na 0, 0, 0, 0, Projektant formularzy systemu Windows daje formę <xref:System.Windows.Forms.Control.Padding%2A> cieniowanie wartości 9, 9, 9, 9. Aby zastąpić to zachowanie, przypisz wartość inną niż 0, 0, 0, 0.
+> Jeśli <xref:System.Windows.Forms.Control.Padding%2A> właściwość formularza jest ustawiona na 0, 0, 0, 0, Projektant formularzy systemu Windows daje formę <xref:System.Windows.Forms.Control.Padding%2A> cieniowanie wartości 9, 9, 9, 9. Aby zastąpić to zachowanie, przypisz wartość inną niż 0, 0, 0, 0.
 
 1. Zmień wartość <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.Control.Margin%2A> właściwości kontrolki, rozszerzając <xref:System.Windows.Forms.Control.Margin%2A> <xref:System.Windows.Forms.Padding.All%2A> wpis w oknie **Właściwości** i ustawiając właściwość na 0. Aby uzyskać szczegółowe informacje [, zobacz Przewodnik: Określanie układu formantów Windows Forms z uzupełnieniem, marginesami i właściwością](windows-forms-controls-padding-autosize.md)AutoSize.
 

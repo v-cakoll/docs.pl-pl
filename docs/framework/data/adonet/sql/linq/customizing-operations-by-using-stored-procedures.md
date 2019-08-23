@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-ms.openlocfilehash: d9f8d15b46f6e5575bd206bf572ffda0365e58f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08cc8aedac545ffa5648034119fc2267c860d499
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743553"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963292"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>Dostosowywanie operacji przy użyciu procedur składowanych
-Procedury składowane reprezentują Typowym rozwiązaniem w przypadku zastępowania domyślnego zachowania. W przykładach w tym temacie przedstawiono sposób korzystania generowane metody otoki dla procedur przechowywanych i jak można wywoływać procedury składowane bezpośrednio.  
+Procedury składowane reprezentują typowe podejście do zastępowania zachowania domyślnego. W przykładach w tym temacie pokazano, jak można użyć wygenerowanych otok metod dla procedur składowanych oraz jak można wywołać procedury składowane bezpośrednio.  
   
- Jeśli używasz programu Visual Studio umożliwia Object Relational Designer przypisywanie procedur składowanych do wykonywania operacji wstawienia, aktualizacje i usunięcia.  
+ Jeśli używasz programu Visual Studio, możesz użyć Object Relational Designer, aby przypisać procedury składowane do wykonywania operacji wstawiania, aktualizacji i usuwania.  
   
 > [!NOTE]
->  Aby odczytać wartości z powrotem wygenerowanych w bazie danych, należy użyć parametrów wyjściowych w przechowywanych procedur. Jeśli nie możesz użyć parametrów wyjściowych, zapisu przesłonięcia implementację metody częściowej, zamiast polegania na generowane przez Object Relational Designer. Elementy członkowskie wygenerowanych w bazie danych wartości musi być ustawione na odpowiednie wartości po `INSERT` lub `UPDATE` operacje zostały pomyślnie ukończone. Aby uzyskać więcej informacji, zobacz [obowiązki dewelopera w zastępowanie domyślne zachowanie](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  
+> Aby odczytać wartości z wygenerowanej bazy danych, użyj parametrów wyjściowych w procedurach składowanych. Jeśli nie możesz użyć parametrów wyjściowych, Zapisz implementację metody częściowej zamiast zastępowania zastąpień generowanych przez Object Relational Designer. Elementy członkowskie zamapowane do wartości generowanych przez bazę danych muszą być ustawione `INSERT` na `UPDATE` odpowiednie wartości po pomyślnym zakończeniu operacji lub. Aby uzyskać więcej informacji, zobacz [obowiązki dewelopera w celu przesłania domyślnego zachowania](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- W poniższym przykładzie przyjęto założenie, że `Northwind` klasy zawiera dwie metody do wywołania procedur składowanych, które są używane do zastąpienia w klasie pochodnej.  
+ W poniższym przykładzie Załóżmy, że `Northwind` Klasa zawiera dwie metody wywołania procedur składowanych, które są używane dla zastąpień w klasie pochodnej.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[DLinqOverrideDefaultSproc#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/northwind.cs#1)]
@@ -32,7 +32,7 @@ Procedury składowane reprezentują Typowym rozwiązaniem w przypadku zastępowa
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Następujące klasy są używane do przesłonięcia.  
+ W poniższej klasie są wykorzystywane te metody przesłonięcia.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[DLinqOverrideDefaultSproc#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/northwind.cs#2)]
@@ -41,7 +41,7 @@ Procedury składowane reprezentują Typowym rozwiązaniem w przypadku zastępowa
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Możesz użyć `NorthwindThroughSprocs` dokładnie tak jak w przypadku `Northwnd`.  
+ Możesz użyć `NorthwindThroughSprocs` dokładnie tak, jak `Northwnd`chcesz.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[DLinqOverrideDefaultSproc#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/Program.cs#3)]

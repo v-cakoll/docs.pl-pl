@@ -10,65 +10,65 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: ee38caedc5d5a29d2221d6e5a6bf6cf74617bf8c
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 859dc75169e443d07361951692a428507886fa2e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859720"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947810"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Instrukcje: Wykrywanie, czy zadanie drukowania może zostać zrealizowane o tej porze dnia
-Kolejki wydruku nie zawsze są dostępne 24 godziny na dobę. Mają one właściwości czasu rozpoczęcia i zakończenia, które można ustawić, aby były niedostępne w pewnych porach dnia. Ta funkcja może być używana na przykład, aby zarezerwować drukarki do wyłącznego użytku określony dział po 17: 00. Takim wydziale musi innej kolejki drukarki niż innych działów obsługi użycia. Kolejka dla innych działów będzie miał ustawienie będzie niedostępna po 17: 00, podczas gdy kolejka dla działu favored mógł zostać ustawiony jako dostępny przez cały czas.  
+Kolejki wydruku nie są zawsze dostępne przez 24 godziny dziennie. Mają właściwości czasu rozpoczęcia i zakończenia, które można ustawić w taki sposób, aby były niedostępne o określonych porach dnia. Ta funkcja może być używana na przykład w celu zarezerwowania drukarki do wyłącznego użycia pewnego działu po 5 P.M.. Ten dział będzie miał inną kolejkę obsługującą drukarki niż inne firmy. Kolejka dla innych działów zostanie ustawiona jako niedostępna po 5 godzinach, podczas gdy kolejka dla danego działu ma być dostępna przez cały czas.  
   
- Ponadto można ustawić zadania drukowania, samodzielnie do druku tylko w obrębie określonego zakresu czasu.  
+ Ponadto zadania drukowania można ustawić tak, aby można było drukować tylko w określonym zakresie czasu.  
   
- <xref:System.Printing.PrintQueue> i <xref:System.Printing.PrintSystemJobInfo> klasy widoczne w interfejsów API programu Microsoft .NET Framework zapewniają środki do zdalnego sprawdzanie, czy dane zadanie drukowania może drukować na danej kolejki w danej chwili.  
+ Klasy <xref:System.Printing.PrintQueue> i<xref:System.Printing.PrintSystemJobInfo> udostępniane w interfejsach API Microsoft .NET Framework umożliwiają zdalne sprawdzanie, czy dane zadanie drukowania można wydrukować w danej kolejce w bieżącej chwili.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono przykład diagnozować problemy z zadaniem drukowania.  
+ Poniższy przykład to przykład, który może zdiagnozować problemy z zadaniem drukowania.  
   
  Istnieją dwa główne kroki dla tego rodzaju funkcji w następujący sposób.  
   
-1. Odczyt <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> i <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> właściwości <xref:System.Printing.PrintQueue> do ustalenia, czy bieżący czas jest między nimi.  
+1. Zapoznaj się <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> z właściwościami <xref:System.Printing.PrintQueue>i, aby określić, czy bieżący czas jest między nimi. <xref:System.Printing.PrintQueue.StartTimeOfDay%2A>  
   
-2. Odczyt <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> i <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> właściwości <xref:System.Printing.PrintSystemJobInfo> do ustalenia, czy bieżący czas jest między nimi.  
+2. Zapoznaj się <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> z właściwościami <xref:System.Printing.PrintSystemJobInfo>i, aby określić, czy bieżący czas jest między nimi. <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A>  
   
- Ale komplikacji wynikać z faktu, że te właściwości są <xref:System.DateTime> obiektów. Zamiast tego są one <xref:System.Int32> obiektów, które express godzinę jako liczbę minut, które upłynęły od północy. Ponadto to nie jest o północy w bieżącej strefie czasowej, ale o północy czasu UTC (Coordinated Universal Time).  
+ Jednak komplikacje wynikają z faktu, że te <xref:System.DateTime> właściwości nie są obiektami. Zamiast tego są <xref:System.Int32> to obiekty, które wyrażają czas dnia jako liczbę minut od północy. Ponadto nie jest to północ w bieżącej strefie czasowej, ale północy czasu UTC (uniwersalny czas koordynowany).  
   
- Pierwszy przykład kodu przedstawia metody statycznej **ReportQueueAndJobAvailability**, która jest przekazywana <xref:System.Printing.PrintSystemJobInfo> i wywołuje metody pomocnika, aby ustalić, czy zadania można wydrukować w danym momencie i, jeśli nie, kiedy można wydrukować. Należy zauważyć, że <xref:System.Printing.PrintQueue> nie zostanie przekazany do metody. Jest to spowodowane <xref:System.Printing.PrintSystemJobInfo> zawiera odwołanie do kolejki w jego <xref:System.Printing.PrintSystemJobInfo.HostingPrintQueue%2A> właściwości.  
+ Pierwszy przykład kodu przedstawia metodę statyczną **ReportQueueAndJobAvailability**, która jest przenoszona <xref:System.Printing.PrintSystemJobInfo> i wywołuje metody pomocnika, aby określić, czy zadanie może drukować w bieżącym czasie, a jeśli nie, kiedy może drukować. Zwróć uwagę, <xref:System.Printing.PrintQueue> że nie jest przekazywany do metody. Wynika to z faktu, że <xref:System.Printing.PrintSystemJobInfo> zawiera odwołanie do kolejki <xref:System.Printing.PrintSystemJobInfo.HostingPrintQueue%2A> we właściwości.  
   
- Podrzędny metody obejmują przeciążone **ReportAvailabilityAtThisTime** metodę, która może zająć jedną <xref:System.Printing.PrintQueue> lub <xref:System.Printing.PrintSystemJobInfo> jako parametr. Istnieje również **TimeConverter.ConvertToLocalHumanReadableTime**. Wszystkie te metody zostały podane poniżej.  
+ Metody podrzędne zawierają przeciążoną metodę **ReportAvailabilityAtThisTime** , która może przyjmować <xref:System.Printing.PrintQueue> albo albo <xref:System.Printing.PrintSystemJobInfo> jako parametr. Istnieje również element **TimeConverter. ConvertToLocalHumanReadableTime**. Wszystkie te metody zostały omówione poniżej.  
   
- **ReportQueueAndJobAvailability** metoda rozpoczyna się od sprawdzenia, aby sprawdzić, czy kolejka lub zadanie drukowania jest niedostępny w tej chwili. Jeśli którąś z tych funkcji jest niedostępny, następnie sprawdza, czy sprawdzić, czy kolejka niedostępny. Jeśli nie jest dostępna, metoda zgłasza, ten fakt i czasu, gdy kolejka stanie się ponownie dostępne. Następnie sprawdza zadania i jeśli jest niedostępna, raportuje następnym razem gdy span ją podczas drukowania. Na koniec metody raporty Najwcześniejsza godzina, kiedy zadanie można wydrukować. Jest to po następujące dwa razy.  
+ Metoda **ReportQueueAndJobAvailability** rozpoczyna się od sprawdzenia, czy kolejka lub zadanie drukowania jest w tej chwili niedostępne. Jeśli jedna z nich jest niedostępna, sprawdza, czy kolejka jest niedostępna. Jeśli nie jest dostępny, metoda zgłasza ten fakt i czas, kiedy kolejka znów stanie się dostępna. Następnie sprawdza to zadanie i jeśli jest niedostępne, będzie zgłaszać następny przedział czasu, gdy będzie mógł drukować. Na koniec Metoda raportuje najwcześniejszą godzinę, kiedy zadanie może drukować. Jest to późniejsze dwa razy.  
   
-- Czas, kiedy kolejki wydruku obok jest dostępny.  
+- Czas, w którym kolejka wydruku jest dalej dostępna.  
   
-- Czas, kiedy zadanie drukowania obok jest dostępny.  
+- Godzina, o której zadanie drukowania jest dalej dostępne.  
   
- Podczas zgłaszania porach dnia, <xref:System.DateTime.ToShortTimeString%2A> metoda również jest wywoływana, ponieważ ta metoda powoduje pominięcie lat, miesięcy i dni z danych wyjściowych. Nie można ograniczyć dostępności kolejki wydruku lub zadania drukowania do konkretnego lat, miesięcy i dni.  
+ Przy raportowaniu czasów dziennie <xref:System.DateTime.ToShortTimeString%2A> Metoda jest również wywoływana, ponieważ ta metoda pomija lata, miesiące i dni z danych wyjściowych. Nie można ograniczyć dostępności kolejki wydruku lub zadania drukowania do określonych lat, miesięcy i dni.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#reportqueueandjobavailability)]
  [!code-csharp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#reportqueueandjobavailability)]
  [!code-vb[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#reportqueueandjobavailability)]  
   
- Dwa przeciążenia **ReportAvailabilityAtThisTime** metody są identyczne, z wyjątkiem typu przekazany do nich tylko <xref:System.Printing.PrintQueue> wersji znajduje się poniżej.  
+ Dwa przeciążenia metody **ReportAvailabilityAtThisTime** są identyczne, z wyjątkiem typu przekazywanego do nich, dlatego tylko <xref:System.Printing.PrintQueue> wersja jest przedstawiona poniżej.  
   
 > [!NOTE]
->  Fakt, że te metody są identyczne, z wyjątkiem typu wywołuje pytanie, dlaczego przykład nie powoduje utworzenia metody ogólnej **ReportAvailabilityAtThisTime\<T >** . Przyczyną jest to, że taka metoda musi zostać ograniczone do klasy, która ma **StartTimeOfDay** i **UntilTimeOfDay** właściwości, które wywołuje metodę, ale metody ogólnej tylko można ograniczyć do klasy i jedyna klasa wspólna dla obu <xref:System.Printing.PrintQueue> i <xref:System.Printing.PrintSystemJobInfo> jest drzewo dziedziczenia <xref:System.Printing.PrintSystemObject> którego nie ma takiego właściwości.  
+> Fakt, że metody są identyczne z wyjątkiem typu, podnosi pytanie dlaczego przykład nie tworzy metody generycznej **\<ReportAvailabilityAtThisTime T >** . Powodem jest to, że taka metoda musi być ograniczona do klasy, która ma właściwości **StartTimeOfDay** i **UntilTimeOfDay** , które wywołuje metoda, ale metoda generyczna może być ograniczona tylko do jednej klasy, a jedyna klasa wspólna dla obu tych elementów <xref:System.Printing.PrintQueue> i<xref:System.Printing.PrintSystemJobInfo>wdrzewie dziedziczenianie<xref:System.Printing.PrintSystemObject> ma takich właściwości.  
   
- **ReportAvailabilityAtThisTime** — metoda (przedstawiony w poniższym przykładzie kodu), który rozpoczyna się od inicjowania <xref:System.Boolean> zmienną wartownik `true`. Urządzenie zostanie zresetowane do `false`, jeśli kolejka jest niedostępna.  
+ Metoda **ReportAvailabilityAtThisTime** (przedstawiona w poniższym przykładzie kodu) rozpoczyna się od inicjowania <xref:System.Boolean> zmiennej wskaźnikowej `true`do. Zostanie ona zresetowana do `false`, jeśli kolejka nie jest dostępna.  
   
- Następnie metoda sprawdza, czy początek "dopiero wtedy, gdy" razy są identyczne. Jeśli są one kolejki są zawsze dostępne, dlatego metoda ta zwraca `true`.  
+ Następnie metoda sprawdza, czy godziny rozpoczęcia i "until" są identyczne. Jeśli są, kolejka jest zawsze dostępna, więc metoda zwraca `true`.  
   
- Jeśli kolejka nie jest dostępny przez cały czas, metoda jest używana statyczna <xref:System.DateTime.UtcNow%2A> właściwości, aby uzyskać bieżącą godzinę jako <xref:System.DateTime> obiektu. (Nie potrzebujemy czasu lokalnego ponieważ <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> i <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> właściwości znajdują się w czasie UTC.)  
+ Jeśli kolejka nie jest dostępna przez cały czas, metoda używa właściwości statycznej <xref:System.DateTime.UtcNow%2A> do pobrania bieżącego czasu <xref:System.DateTime> jako obiektu. (Czas lokalny nie jest wymagany, <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> ponieważ właściwości i <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> są same w czasie UTC).  
   
- Te dwie właściwości nie są jednak <xref:System.DateTime> obiektów. Są one <xref:System.Int32>s może przedstawiać czas jako liczba minut po UTC północy. Dlatego musimy przekonwertować naszych <xref:System.DateTime> obiektu minut po północy. Gdy zostanie to zrobione, metoda po prostu sprawdza, aby zobaczyć, czy "teraz" jest od początku kolejki i "godziny, zestawy wartownik na wartość false, jeśli"teraz"nie jest między dwiema wartościami godziny i zwraca wartownik do".  
+ Jednak te dwie właściwości nie <xref:System.DateTime> są obiektami. Są <xref:System.Int32>one wyrażane jako liczba minut po godzinie-czasu UTC. Dlatego musimy przekonwertować <xref:System.DateTime> obiekt na kilka minut — po północy. Gdy to zrobisz, metoda po prostu sprawdza, czy "teraz" jest między początkiem kolejki i "do" czasu, ustawia wskaźnik na wartość false, jeśli "teraz" nie jest między dwa razy i zwraca wskaźnik kontrolny.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#printqueuestartuntil)]
  [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
  [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
- **TimeConverter.ConvertToLocalHumanReadableTime** — metoda (przedstawiony w poniższym przykładzie kodu) nie używa żadnych metod wprowadzone w programie Microsoft .NET Framework, więc dyskusję jest krótki. Metoda ma zadanie podwójna konwersja: musi podjąć całkowitą wyrażanie minut po północy i przekonwertować go na czas czytelny dla człowieka i musi przekonwertować to konto na czas lokalny. Jest to osiągane przez utworzenie <xref:System.DateTime> obiektu, który jest ustawiony na północy czasu UTC, a następnie go używa <xref:System.DateTime.AddMinutes%2A> metody w celu dodania minut, które zostały przekazane do metody. Spowoduje to zwrócenie nowego <xref:System.DateTime> wyrażanie pierwotny czas, który został przekazany do metody. <xref:System.DateTime.ToLocalTime%2A> Metoda następnie konwertuje to na czas lokalny.  
+ Metoda **TimeConverter. ConvertToLocalHumanReadableTime** (przedstawiona w poniższym przykładzie kodu) nie używa żadnych metod wprowadzonych w Microsoft .NET Framework, więc dyskusja jest krótka. Metoda ma podwójne zadanie konwersji: musi przyjmować liczbę całkowitą wyrażaną w minutach — po północy i przekonwertuj ją na czas do odczytu przez człowieka i musi ją przekonwertować na czas lokalny. Osiąga to, tworząc <xref:System.DateTime> najpierw obiekt, który jest ustawiony na północ czasu UTC, a następnie <xref:System.DateTime.AddMinutes%2A> używa metody, aby dodać minuty, które zostały przesłane do metody. Spowoduje to zwrócenie nowego <xref:System.DateTime> , wyjściowego czasu, który został przekazano do metody. Metoda <xref:System.DateTime.ToLocalTime%2A> następnie konwertuje tę wartość na czas lokalny.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
  [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]

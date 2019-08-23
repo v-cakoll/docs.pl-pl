@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 26a1df8829a9b6398876658bdb5697ab3e6f87c8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 08e6458f0a14b78c6d05f706afa710931d60094a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666453"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948798"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kowariancja i kontrawariancja w typach ogólnych
 <a name="top"></a>Kowariancja i kontrawariancja są terminami, które odwołują się do możliwości użycia bardziej pochodnej typu (bardziej szczegółowe) lub mniej pochodnego typu (mniej specyficznego) niż pierwotnie określony. Parametry typu ogólnego obsługują kowariancję i kontrawariancję, aby umożliwić większą elastyczność przypisywania i używania typów ogólnych. W kontekście systemu typów kowariancja, kontrawariancja i inwariancja mają następujące definicje. Przykłady zakładają klasę bazową o `Base` nazwie i klasę pochodną `Derived`o nazwie.  
@@ -110,7 +110,7 @@ ms.locfileid: "69666453"
  W .NET Framework 4, `Func` delegatów generycznych, takich jak <xref:System.Func%602>, mają typy zwracające współwarianty i typy parametrów kontrawariantne. <xref:System.Action%602>Delegaty `Action` ogólne, takie jak, mają typy parametrów kontrawariantne. Oznacza to, że Delegaty mogą być przypisywane do zmiennych, które mają bardziej pochodne typy parametrów i (w przypadku `Func` delegatów ogólnych) mniej pochodne typy zwracane.  
   
 > [!NOTE]
->  Ostatni parametr `Func` typu ogólnego delegatów ogólnych określa typ wartości zwracanej w sygnaturze delegata. Jest to współwariant (`out` słowo kluczowe), natomiast inne parametry typu ogólnego to kontrawariantne (`in` słowo kluczowe).  
+> Ostatni parametr `Func` typu ogólnego delegatów ogólnych określa typ wartości zwracanej w sygnaturze delegata. Jest to współwariant (`out` słowo kluczowe), natomiast inne parametry typu ogólnego to kontrawariantne (`in` słowo kluczowe).  
   
  Ilustruje to poniższy kod. Pierwszy fragment kodu definiuje klasę o nazwie `Base`, klasę o nazwie `Derived` , która dziedziczy `Base`, i inną klasę z `static` metodą (`Shared` w Visual Basic) o nazwie `MyMethod`. Metoda przyjmuje wystąpienie klasy `Base` i zwraca `Derived`wystąpienie. (Jeśli argument jest wystąpieniem `Derived`, `MyMethod` zwraca go; jeśli `Base`argument jest wystąpieniem, `MyMethod` zwraca nowe wystąpienie `Derived`.) W `Main()`programie przykład tworzy `Func<Base, Derived>` wystąpienie (`Func(Of Base, Derived)` w Visual Basic) reprezentujące `MyMethod`i zapisuje je w zmiennej `f1`.  
   
@@ -149,12 +149,12 @@ ms.locfileid: "69666453"
  Począwszy od .NET Framework 4 Visual Basic i C# zawiera słowa kluczowe, które umożliwiają oznaczenie parametrów typu ogólnego interfejsów i delegatów jako współvariant lub kontrawariantne.  
   
 > [!NOTE]
->  Począwszy od programu .NET Framework 2.0 środowisko uruchomieniowe języka wspólnego obsługuje adnotacje dotyczące wariancji w parametrach typu ogólnego. Przed .NET Framework 4, jedynym sposobem zdefiniowania klasy generycznej, która ma te adnotacje, jest użycie języka pośredniego firmy Microsoft (MSIL), przez skompilowanie klasy z [Ilasm. exe (ASEMBLER Il)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) lub przez emitowanie jej w zestawie dynamicznym.  
+> Począwszy od programu .NET Framework 2.0 środowisko uruchomieniowe języka wspólnego obsługuje adnotacje dotyczące wariancji w parametrach typu ogólnego. Przed .NET Framework 4, jedynym sposobem zdefiniowania klasy generycznej, która ma te adnotacje, jest użycie języka pośredniego firmy Microsoft (MSIL), przez skompilowanie klasy z [Ilasm. exe (ASEMBLER Il)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) lub przez emitowanie jej w zestawie dynamicznym.  
   
  Wartość parametru typu współwariantowego jest oznaczona za `out` pomocą słowa`Out` kluczowego (słowo `+` kluczowe w Visual Basic, dla [asemblera MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md)). Kowariantnego parametru typu można użyć jako wartości zwracanej metody, która należy do interfejsu, lub typu zwracanego delegata. Kowariantnego parametru typu nie można użyć jako ograniczenia typu ogólnego dla metod interfejsu.  
   
 > [!NOTE]
->  Jeśli metoda interfejsu ma parametr, który jest typem ogólnym delegatów, kowariantny parametr typu dla typu interfejsu może być używany w celu określenia kontrawariantnego parametru typu dla typu delegata.  
+> Jeśli metoda interfejsu ma parametr, który jest typem ogólnym delegatów, kowariantny parametr typu dla typu interfejsu może być używany w celu określenia kontrawariantnego parametru typu dla typu delegata.  
   
  Kontrawariantne parametr typu jest oznaczany `in` słowem kluczowym (`In` słowo kluczowe w `-` Visual Basic, dla [asemblera MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md)). Kontrawariantnego parametru typu można użyć jako typu parametru metody, która należy do interfejsu, lub typu parametru delegata. Kontrawariantnego parametru typu można użyć jako ograniczenia typu ogólnego dla metody interfejsu.  
   

@@ -9,41 +9,41 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: f8b653b941c5959036256cde097a41f8c6251c7a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0df649c4be50e9cadd51258c89137b68b4ffe22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601226"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963198"
 ---
 # <a name="decision-structures-visual-basic"></a>Struktury decyzji (Visual Basic)
-Visual Basic umożliwia warunki badania i wykonywać różne operacje, w zależności od wyników tego testu. Możesz sprawdzić warunku jest wartość true lub false dla różnych wartości wyrażenia lub różne wyjątki generowane, gdy wykonać serię instrukcji.  
+Visual Basic umożliwia testowanie warunków i wykonywanie różnych operacji w zależności od wyników tego testu. Możesz sprawdzić, czy dla warunku określono wartość PRAWDA lub FAŁSZ, dla różnych wartości wyrażenia lub dla różnych wyjątków generowanych podczas wykonywania serii instrukcji.  
   
- Poniższa ilustracja przedstawia strukturę decyzji, które sprawdza, czy warunek jest spełniony i wykonują różne akcje zależnie od tego, czy jest wartość PRAWDA lub FAŁSZ.  
+ Na poniższej ilustracji przedstawiono strukturę decyzyjną, która sprawdza, czy jest spełniony warunek, i wykonuje różne akcje w zależności od tego, czy jest to prawda czy fałsz.  
   
- ![Schemat blokowy If... Następnie... Budowa else.](./media/decision-structures/if-then-else-construction.gif)  
+ ![Wykres przepływu dla elementu IF... Następnie... Else.](./media/decision-structures/if-then-else-construction.gif)  
   
-## <a name="ifthenelse-construction"></a>If...Then...Else Construction  
- `If...Then...Else` konstrukcje umożliwiają testowanie dla co najmniej jeden warunek i uruchomić jedną lub więcej instrukcji w zależności od każdego warunku. Można przetestować warunki i akcje w następujący sposób:  
+## <a name="ifthenelse-construction"></a>If... Następnie... Else — konstrukcja  
+ `If...Then...Else`Konstrukcje umożliwiają przetestowanie pod kątem jednego lub kilku warunków i uruchomienie jednej lub kilku instrukcji w zależności od poszczególnych warunków. Można testować warunki i podejmować działania w następujący sposób:  
   
-- Uruchomić jedną lub więcej instrukcji, jeśli warunek jest `True`  
+- Uruchom jedną lub więcej instrukcji, jeśli warunek jest`True`  
   
-- Uruchomić jedną lub więcej instrukcji, jeśli warunek jest `False`  
+- Uruchom jedną lub więcej instrukcji, jeśli warunek jest`False`  
   
-- Uruchamianie niektórych instrukcji, jeśli warunek jest `True` i innym osobom, gdy jest `False`  
+- Uruchom niektóre instrukcje, jeśli warunek jest `True` i inne, jeśli jest`False`  
   
-- Dodatkowe warunki badania, w przypadku warunku wstępnego `False`  
+- Przetestuj dodatkowy warunek, jeśli poprzedni warunek jest`False`  
   
- Struktura kontrolki, która oferuje wszystkie powyższe możliwości jest [Jeśli... Następnie... Else — instrukcja](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Można użyć wersji jednowierszowego, jeśli masz tylko jeden test i jednej instrukcji do uruchomienia. W przypadku bardziej złożonego zestawu warunków i akcji można użyć wersji wielu linii.  
+ Struktura formantów, która oferuje wszystkie te możliwości, to [Jeśli... Następnie... Else — instrukcja](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Możesz użyć pojedynczej wersji, jeśli masz tylko jeden test i jedną instrukcję do uruchomienia. Jeśli masz bardziej skomplikowany zestaw warunków i akcji, możesz użyć wersji wielowierszowej.  
   
-## <a name="selectcase-construction"></a>Wybierz... Konstrukcja wielkości liter  
- `Select...Case` Konstrukcja umożliwia ocena wyrażenia jeden raz i uruchomić różne zestawy instrukcji, w oparciu o różne możliwe wartości. Aby uzyskać więcej informacji, zobacz [wybierz... Case — instrukcja](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
+## <a name="selectcase-construction"></a>Wybierz... Konstrukcja przypadku  
+ `Select...Case` Konstrukcja pozwala oszacować wyrażenie jeden raz i uruchamiać różne zestawy instrukcji na podstawie różnych możliwych wartości. Aby uzyskać więcej informacji, zobacz [SELECT... Case — instrukcja](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
-## <a name="trycatchfinally-construction"></a>Try... CATCH... Na koniec konstrukcji  
- `Try...Catch...Finally` konstrukcje umożliwiają uruchamianie zbiór instrukcji w środowisku, w którym zachowuje kontrolki, jeśli dowolny z zestawienia powoduje wyjątek. Możesz wykonywać różne akcje dla różnych wyjątków. Opcjonalnie można określić bloku kodu, który jest uruchamiany przed zakończeniem pracy całego `Try...Catch...Finally` konstrukcji, niezależnie od tego, co występuje. Aby uzyskać więcej informacji, zobacz [spróbuj... CATCH... Na koniec instrukcji](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+## <a name="trycatchfinally-construction"></a>Spróbuj... Catch... Na końcu konstrukcja  
+ `Try...Catch...Finally`Konstrukcje umożliwiają uruchomienie zestawu instrukcji w środowisku, które zachowuje kontrolę, jeśli którykolwiek z instrukcji powoduje wyjątek. Dla różnych wyjątków można wykonać różne działania. Opcjonalnie można określić blok kodu, który jest uruchamiany przed wyjściem z całego `Try...Catch...Finally` konstruowania, niezależnie od tego, co się dzieje. Aby uzyskać więcej informacji, zobacz [try... Catch... Finally — instrukcja](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 > [!NOTE]
->  Dla wielu struktur sterowania po kliknięciu słowem kluczowym wszystkich słów kluczowych w strukturze, zostały wyróżnione. Na przykład po kliknięciu `If` w `If...Then...Else` budowy, wszystkie wystąpienia elementu `If`, `Then`, `ElseIf`, `Else`, i `End If` w konstrukcji są wyróżnione. Aby przejść do następnego lub poprzedniego wyróżnionego słów kluczowych, naciśnij klawisz Strzałka CTRL + SHIFT + Strzałka w dół lub CTRL + SHIFT + Strzałka w górę Strzałka.  
+> W przypadku wielu struktur kontroli po kliknięciu słowa kluczowego, zostaną wyróżnione wszystkie słowa kluczowe w strukturze. `If` Na przykład po kliknięciu `If...Then...Else` w konstrukcji `Then` `End If` wszystkie wystąpienia elementów `If`, ,,iwkonstrukcjisąwyróżnione.`Else` `ElseIf` Aby przejść do następnego lub poprzedniego wyróżnionego słowa kluczowego, naciśnij klawisze CTRL + SHIFT + Strzałka w dół lub CTRL + SHIFT + Strzałka w górę.  
   
 ## <a name="see-also"></a>Zobacz także
 

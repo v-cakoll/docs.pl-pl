@@ -2,20 +2,20 @@
 title: <filterTable>
 ms.date: 03/30/2017
 ms.assetid: e9f05441-3ad1-49b9-a267-71724aa094b4
-ms.openlocfilehash: 4e5c7d56e35afe3001f4c70064adbfef7702c720
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9e64e667befb70d617574b2a03c3e6bebb2a143
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673215"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925601"
 ---
 # <a name="filtertable"></a>\<filterTable>
-Reprezentuje tabelę routingu, który zawiera listę filtrów do oszacowania wiadomości i punktu końcowego klienta do wyznaczania tras, jeśli filtr zwróci wartość true.  
+Reprezentuje tabelę routingu zawierającą listę filtrów służących do szacowania komunikatów oraz punkt końcowy klienta, do którego mają być kierowane komunikaty, jeśli filtr ma wartość true.  
   
  \<system.serviceModel>  
-\<Routing >  
-\<routingTables>  
-\<Tabela >  
+\<> routingu  
+\<routingTables >  
+\<> tabeli  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,19 +41,19 @@ Reprezentuje tabelę routingu, który zawiera listę filtrów do oszacowania wia
   
 |Element|Opis|  
 |-------------|-----------------|  
-|nazwa|Ciąg, który zawiera unikatową nazwę tego elementu konfiguracji.|  
+|nazwa|Ciąg zawierający unikatową nazwę tego elementu konfiguracji.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Filtry >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Mapowania między filtrami i docelowymi punktami końcowymi, aby wysyłać komunikaty do kiedy filtr dopasowuje wartość.|  
+|[\<Filtry >](filters-of-routing.md)|Mapowania między filtrami routingu i docelowymi punktami końcowymi do wysyłania komunikatów, gdy filtr jest zgodny.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Sekcja konfiguracji, który zawiera tabele routingu.|  
+|[\<> routingu](routing.md)|Sekcja konfiguracji, która zawiera tabele routingu.|  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401439"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944681"
 ---
 # <a name="binding-sources-overview"></a>Przegląd Wiązanie źródeł
 W powiązaniu danych obiekt źródłowy powiązania odwołuje się do obiektu, z którego pochodzą dane. W tym temacie omówiono typy obiektów, których można użyć jako źródła powiązań.  
@@ -76,7 +76,7 @@ W powiązaniu danych obiekt źródłowy powiązania odwołuje się do obiektu, z
 |------------------------------------------------|-----------------------------|-----------------------------|------------------|------------------|-------------------------|-------------------------|  
 |**Poziom zaufania**|**Pełne zaufanie**|**Częściowe zaufanie**|**Pełne zaufanie**|**Częściowe zaufanie**|**Pełne zaufanie**|**Częściowe zaufanie**|  
 |Klasa publiczna|Tak|Yes|Yes|Yes|Yes|Tak|  
-|Klasa niepubliczna|Tak|Nie|Yes|Nie|Yes|Yes|  
+|Klasa niepubliczna|Tak|Nie|Yes|Nie|Yes|Tak|  
   
  W tej tabeli opisano następujące ważne punkty dotyczące wymagań dotyczących uprawnień w powiązaniu danych:  
   
@@ -88,7 +88,7 @@ W powiązaniu danych obiekt źródłowy powiązania odwołuje się do obiektu, z
   
  Wymagania dotyczące uprawnień dla [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] powiązania są podobne. W piaskownicy częściowej relacji zaufania <xref:System.Windows.Data.XmlDataProvider> kończy się niepowodzeniem, gdy nie ma uprawnień dostępu do określonych danych.  
   
- Obiekty z typem anonimowym są wewnętrzne. Można powiązać z właściwościami typów anonimowych tylko w przypadku uruchamiania w trybie pełnego zaufania. Aby uzyskać więcej informacji na temat typów anonimowych, zobacz [Typy anonimowe (C# Przewodnik programowania)](~/docs/csharp/programming-guide/classes-and-structs/anonymous-types.md) lub [Typy anonimowe (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic).  
+ Obiekty z typem anonimowym są wewnętrzne. Można powiązać z właściwościami typów anonimowych tylko w przypadku uruchamiania w trybie pełnego zaufania. Aby uzyskać więcej informacji na temat typów anonimowych, zobacz [Typy anonimowe (C# Przewodnik programowania)](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) lub [Typy anonimowe (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic).  
   
  Aby uzyskać więcej informacji o zabezpieczeniach częściowej relacji zaufania, zobacz informacje o [zabezpieczeniach częściowej relacji zaufania WPF](../wpf-partial-trust-security.md).  
   

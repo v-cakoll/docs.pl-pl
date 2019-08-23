@@ -13,66 +13,66 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: ad3a4af2474ace61bbf35ea1357a2a6037af039a
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 45ef0b5920e43300e047d363149ea10a7833477b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506234"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912230"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pędzle i wypełnione kształty w GDI+
-Kształt zamknięty, takich jak prostokąta lub elipsy, składa się z konturem i wewnętrzne. Konspekt jest rysowany przy użyciu pióra i wewnętrznych jest wypełniany pędzla. GDI + dostarcza kilka klas, pędzla do wypełniania wnętrza kształty zamknięte: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, i <xref:System.Drawing.Drawing2D.PathGradientBrush>. Wszystkie te klasy dziedziczy <xref:System.Drawing.Brush> klasy. Na poniższej ilustracji pokazuje prostokąt wypełnione pędzla i elipsy wypełnione przy użyciu kreskowania pędzla.  
+Kształt zamknięty, taki jak prostokąt lub Elipsa, składa się z konspektu i wnętrza. Konspekt jest rysowany piórem, a wnętrze jest wypełnione pędzlem. Interfejs GDI+ zapewnia kilka klas pędzla do wypełniania wnętrza zamkniętych <xref:System.Drawing.SolidBrush>kształtów <xref:System.Drawing.Drawing2D.HatchBrush>: <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>,, <xref:System.Drawing.Drawing2D.PathGradientBrush>i. Wszystkie te klasy dziedziczą z <xref:System.Drawing.Brush> klasy. Na poniższej ilustracji przedstawiono prostokąt wypełniony pędzlem Solid i elipsą wypełnioną pędzlem.  
   
  ![Wypełnione kształty](./media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
-## <a name="solid-brushes"></a>Stałe pędzli  
- Do wypełnienia kształtu zamkniętego, potrzebne jest wystąpienie <xref:System.Drawing.Graphics> klasy i <xref:System.Drawing.Brush>. Wystąpienie <xref:System.Drawing.Graphics> klasa dostarcza metody, takie jak <xref:System.Drawing.Graphics.FillRectangle%2A> i <xref:System.Drawing.Graphics.FillEllipse%2A>i <xref:System.Drawing.Brush> przechowuje atrybuty wypełnienia, takich jak kolor lub deseń. <xref:System.Drawing.Brush> Jest przekazywany jako argumenty do metody fill. Poniższy przykład kodu pokazuje sposób wypełniania elipsę jednolitym kolorem czerwonym.  
+## <a name="solid-brushes"></a>Pełne pędzle  
+ Aby wypełnić zamknięty kształt, potrzebujesz wystąpienia <xref:System.Drawing.Graphics> klasy <xref:System.Drawing.Brush>i. Wystąpienie <xref:System.Drawing.Graphics> klasy zawiera metody, takie jak <xref:System.Drawing.Graphics.FillRectangle%2A> i <xref:System.Drawing.Graphics.FillEllipse%2A>, oraz <xref:System.Drawing.Brush> atrybuty przechowywane wypełnienia, takie jak Color i Pattern. <xref:System.Drawing.Brush> Jest przenoszona jako jeden z argumentów metody Fill. Poniższy przykład kodu pokazuje, jak wypełnić elipsę wypełnionym czerwonym kolorem.  
   
  [!code-csharp[LinesCurvesAndShapes#121](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#121)]
  [!code-vb[LinesCurvesAndShapes#121](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#121)]  
   
 > [!NOTE]
->  W powyższym przykładzie Pędzel, jest typu <xref:System.Drawing.SolidBrush>, który dziedziczy z <xref:System.Drawing.Brush>.  
+> W poprzednim przykładzie Pędzel jest typu <xref:System.Drawing.SolidBrush>, który dziedziczy z. <xref:System.Drawing.Brush>  
   
-## <a name="hatch-brushes"></a>Pędzlami ze stylem kreskowania  
- Po wypełnieniu kształtu przy użyciu kreskowania pędzla, można określić kolor pierwszego planu, kolor tła i Styl kreskowania. Kolor pierwszego planu jest kolor kreskowaniu.  
+## <a name="hatch-brushes"></a>Pędzle kreskowania  
+ Po wypełnieniu kształtu pędzlem kreskowym należy określić kolor pierwszego planu, kolor tła i styl kreskowania. Kolor pierwszego planu jest kolorem wylęgu.  
   
  [!code-csharp[LinesCurvesAndShapes#122](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- GDI + zawiera więcej niż 50 Styl kreskowania; są trzy style pokazano na poniższej ilustracji <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, i <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
+ Interfejs GDI+ zapewnia więcej niż 50 stylów kreskowania; trzy style pokazane na poniższej ilustracji <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal> <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>:, i <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
   
  ![Wypełnione kształty](./media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
-## <a name="texture-brushes"></a>Pędzle z fakturą  
- Pędzlem tekstury można wypełnianie kształtów wzorem przechowywany w mapie bitowej. Załóżmy na przykład, poniższy obraz jest przechowywany w pliku dysku o nazwie `MyTexture.bmp`.  
+## <a name="texture-brushes"></a>Pędzle tekstury  
+ Pędzel tekstury umożliwia wypełnienie kształtu wzorcem przechowywanym w mapie bitowej. Załóżmy na przykład, że następujący obraz jest przechowywany w pliku dysku o nazwie `MyTexture.bmp`.  
   
  ![Wypełniony kształt](./media/aboutgdip02-art19.gif "Aboutgdip02_Art19")  
   
- Poniższy przykład kodu pokazuje, jak wypełnić elipsy, powtarzając zdjęcie na `MyTexture.bmp`.  
+ Poniższy przykład kodu pokazuje, jak wypełnić wielokropek przez powtórzenie obrazu przechowywanego w `MyTexture.bmp`.  
   
  [!code-csharp[LinesCurvesAndShapes#123](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#123)]
  [!code-vb[LinesCurvesAndShapes#123](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#123)]  
   
- Poniższa ilustracja przedstawia wypełnioną elipsę.  
+ Na poniższej ilustracji przedstawiono wypełnioną elipsę.  
   
  ![Wypełniony kształt](./media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
-## <a name="gradient-brushes"></a>Pędzle gradientów  
- GDI + zawiera dwa rodzaje pędzle gradientów: liniowej i ścieżkę. Pędzel gradientów liniowych służy do wypełnienia kształtu zmienia stopniowo podczas przenoszenia między kształtu w poziomie, w pionie lub po przekątnej kolorem. Poniższy przykład kodu pokazuje sposób wypełniania elipsę z poziomy pędzla gradientu, który zmienia się pomiędzy niebieski zielony, po przeniesieniu od lewej krawędzi elipsy do prawej krawędzi.  
+## <a name="gradient-brushes"></a>Pędzle gradientowe  
+ Interfejs GDI+ zapewnia dwa rodzaje pędzli gradientu: liniowe i ścieżki. Można użyć gradientowego pędzla, aby wypełnić kształt kolorem, który zmienia się stopniowo w miarę poruszania się w obrębie kształtu w poziomie, w pionie lub ukośnie. Poniższy przykład kodu pokazuje, jak wypełnić elipsę w poziomym pędzlu gradientu, który zmienia się z niebieski na zielony podczas przesuwania od lewej krawędzi elipsy do prawej krawędzi.  
   
  [!code-csharp[LinesCurvesAndShapes#124](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  
   
- Poniższa ilustracja przedstawia wypełnioną elipsę.  
+ Na poniższej ilustracji przedstawiono wypełnioną elipsę.  
   
  ![Wypełniony kształt](./media/aboutgdip02-art21.gif "AboutGdip02_Art21")  
   
- Pędzel gradientu ścieżki można skonfigurować tak, aby zmienić kolor w czasie poruszania się w Centrum w kierunku krawędzi kształtu.  
+ Pędzel gradientu ścieżki można skonfigurować tak, aby zmieniał kolor podczas przenoszenia z środka kształtu do krawędzi.  
   
  ![Wypełniony kształt](./media/aboutgdip02-art22.gif "AboutGdip02_Art22")  
   
- Pędzle gradientów ścieżki są bardzo elastyczne. Pędzel gradientów, używany do wypełniania trójkąt następujące zmiany ilustracji stopniowo z red w środku do każdego z trzech różnych kolorów w wierzchołków.  
+ Pędzle gradientowe ścieżki są dość elastyczne. Pędzel gradientu używany do wypełnienia trójkąta na poniższej ilustracji zmienia się stopniowo z czerwonego w środku do każdego z trzech różnych kolorów na wierzchołkach.  
   
  ![Wypełniony kształt](./media/aboutgdip02-art23.gif "AboutGdip02_Art23")  
   
@@ -83,5 +83,5 @@ Kształt zamknięty, takich jak prostokąta lub elipsy, składa się z konturem 
 - <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
 - [Linie, krzywe i kształty](lines-curves-and-shapes.md)
-- [Instrukcje: Rysuj wypełniony prostokąt w formularzu Windows](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
-- [Instrukcje: Rysuj wypełnioną elipsę w formularzu Windows](how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+- [Instrukcje: Rysowanie wypełnionego prostokąta w formularzu systemu Windows](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [Instrukcje: Rysowanie wypełnionej elipsy w formularzu systemu Windows](how-to-draw-a-filled-ellipse-on-a-windows-form.md)

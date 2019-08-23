@@ -2,23 +2,23 @@
 title: System.DateTimeOffset Methods
 ms.date: 03/30/2017
 ms.assetid: 25b3e5c0-7603-4a70-b3e5-2149e3da69a2
-ms.openlocfilehash: 288a0d99feecdeccc0d215ec3c14ec31bb3ccb54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a638a4fcc156727f734ff480a18b9997bc9d2e34
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876905"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959085"
 ---
 # <a name="systemdatetimeoffset-methods"></a>System.DateTimeOffset, metody
-Gdy mapowane w modelu obiektu lub pliku mapowania zewnętrznych, LINQ to SQL pozwala wywoływać większość <xref:System.DateTimeOffset?displayProperty=nameWithType> metody, operatorów i właściwości z LINQ do zapytań SQL.  
+Po zmapowaniu w modelu obiektów lub zewnętrznym pliku mapowania LINQ to SQL umożliwia wywoływanie większości <xref:System.DateTimeOffset?displayProperty=nameWithType> metod, operatorów i właściwości z zapytań LINQ to SQL.  
   
- Jedyne metody, które nie są obsługiwane są te odziedziczone z <xref:System.Object?displayProperty=nameWithType> , nie mają sensu w kontekście LINQ do zapytań SQL, takich jak: `Finalize`, `GetHashCode`, `GetType`, i `MemberwiseClone`. Te metody nie są obsługiwane, ponieważ LINQ to SQL nie może ich tłumaczyć do wykonania w programie SQL Server.  
+ <xref:System.Object?displayProperty=nameWithType> Jedyne metody nie są obsługiwane przez te, które nie mają sensu w kontekście zapytań LINQ to SQL, takich jak: `Finalize`, `GetHashCode`, `GetType`i `MemberwiseClone`. Te metody nie są obsługiwane, ponieważ LINQ to SQL nie można ich przetłumaczyć na SQL Server.  
   
 > [!NOTE]
->  Środowisko uruchomieniowe języka wspólnego (CLR) <xref:System.DateTimeOffset?displayProperty=nameWithType> struktury i możliwości w celu zamapowania go do bazy danych SQL `DATETIMEOFFSET` kolumny za pomocą LINQ to SQL, wymaga platformy .NET Framework 3.5 z dodatkiem SP1 lub nowszych. SQL `DATETIMEOFFSET` kolumny dostępną tylko w programie Microsoft SQL Server 2008 i nie tylko.  
+> Struktura środowiska uruchomieniowego języka wspólnego ( <xref:System.DateTimeOffset?displayProperty=nameWithType> CLR) i możliwość mapowania jej do kolumny SQL `DATETIMEOFFSET` z LINQ to SQL wymaga .NET Framework 3,5 z dodatkiem SP1 lub nowszych. Kolumna SQL `DATETIMEOFFSET` jest dostępna tylko w Microsoft SQL Server 2008 i poza nią.  
   
-## <a name="sqlmethods-date-and-time-methods"></a>SQLMethods daty i godziny metody  
- Oprócz metod oferowane przez <xref:System.DateTimeOffset> struktury, LINQ to SQL oferuje metody wymienione w poniższej tabeli z <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> klasy do pracy z datą i godziną.  
+## <a name="sqlmethods-date-and-time-methods"></a>Metody SqlMethods i Time  
+ Oprócz metod oferowanych przez <xref:System.DateTimeOffset> strukturę LINQ to SQL oferują metody wymienione w poniższej tabeli <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> z klasy do pracy z datą i godziną.  
   
 ||||  
 |-|-|-|  

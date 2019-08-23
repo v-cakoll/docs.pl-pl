@@ -1,5 +1,5 @@
 ---
-title: Aktualizacja usługi danych (WCF Data Services)
+title: Aktualizowanie usługi danych (Usługi danych programu WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,38 +8,38 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 4b351b2a69d2829b67c80839f3257fa8e218b55d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f65e3775c260eedc1d76f209d5cb76524d61b939
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660635"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953214"
 ---
-# <a name="updating-the-data-service-wcf-data-services"></a>Aktualizacja usługi danych (WCF Data Services)
-Kiedy używasz [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienckiej z [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych, biblioteka tłumaczy wpisy w źródle danych do wystąpień klas usługi danych klienta. Tych klas usługi danych są śledzone za pomocą <xref:System.Data.Services.Client.DataServiceContext> do której <xref:System.Data.Services.Client.DataServiceQuery%601> należy. Klient śledzi zmiany jednostki, które możesz zgłaszać za pomocą metod na <xref:System.Data.Services.Client.DataServiceContext>. Te metody umożliwiają klienta śledzić dodanych i usuniętych jednostek, a także zmiany wprowadzone do wartości właściwości lub relacji między wystąpieniami jednostki. Zmiany śledzone są wysyłane do usługi danych jako operacje oparte na protokole REST, po wywołaniu <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> metody.  
+# <a name="updating-the-data-service-wcf-data-services"></a>Aktualizowanie usługi danych (Usługi danych programu WCF)
+W przypadku korzystania [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] z biblioteki klienckiej do [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] korzystania z kanału informacyjnego Biblioteka tłumaczy wpisy w strumieniu na wystąpienia klas usługi danych klienta. Te klasy usługi danych są śledzone przy użyciu <xref:System.Data.Services.Client.DataServiceContext> , do <xref:System.Data.Services.Client.DataServiceQuery%601> którego należy. Klient śledzi zmiany w jednostkach, które są zgłaszane przy użyciu metod <xref:System.Data.Services.Client.DataServiceContext>w. Te metody umożliwiają klientowi śledzenie dodanych i usuniętych jednostek, a także zmiany wartości właściwości lub relacje między wystąpieniami jednostek. Te śledzone zmiany są wysyłane z powrotem do usługi danych jako operacje oparte na interfejsie REST podczas <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> wywoływania metody.  
   
 > [!NOTE]
->  Jeśli używasz wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> danych można powiązać formanty, zmiany wprowadzone do danych z powiązanej kontrolki są automatycznie zgłaszane <xref:System.Data.Services.Client.DataServiceContext>. Aby uzyskać więcej informacji, zobacz [powiązanie danych z kontrolkami](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  
+> W przypadku użycia wystąpienia programu <xref:System.Data.Services.Client.DataServiceCollection%601> w celu powiązania danych z kontrolkami zmiany wprowadzone do danych w formancie powiązanym są automatycznie raportowane <xref:System.Data.Services.Client.DataServiceContext>do. Aby uzyskać więcej informacji, zobacz [Powiązywanie danych z kontrolkami](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  
   
-## <a name="adding-modifying-and-changing-entities"></a>Dodawanie, modyfikowanie i zmianę jednostki  
- Zastosowania **Dodaj odwołanie do usługi** w programie Visual Studio można dodać odwołania do okna dialogowego [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych, ma wynikowy klas usługi danych klienta każdego statycznego *Utwórz* metodę przyjmującą jeden parametr dla każdej właściwości niedopuszczającej jednostki. Ta metoda służy do tworzenia wystąpienia obiektu typu klasy, jak w poniższym przykładzie:  
+## <a name="adding-modifying-and-changing-entities"></a>Dodawanie, modyfikowanie i zmiana jednostek  
+ W przypadku dodania odwołania do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych przy użyciu okna dialogowego Dodaj odwołanie do usługi w programie Visual Studio, w przypadku utworzonych klas usługi dane klienta każda z nich ma metodę static *Create* , która przyjmuje jeden parametr dla każdej właściwości jednostki, która nie dopuszcza wartości null . Tej metody można użyć do tworzenia wystąpień klas typu jednostki, jak w poniższym przykładzie:  
   
  [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#createnewproduct)]
  [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#createnewproduct)]  
   
- Aby dodać wystąpienia jednostki, należy wywołać odpowiednie *AddTo* metody <xref:System.Data.Services.Client.DataServiceContext> klasy generowanej przez **Dodaj odwołanie do usługi** okno dialogowe, jak w poniższym przykładzie:  
+ Aby dodać wystąpienie jednostki, wywołaj odpowiednią metodę *AddTo* w <xref:System.Data.Services.Client.DataServiceContext> klasie wygenerowanej przez okno dialogowe **Dodaj odwołanie do usługi** , jak w poniższym przykładzie:  
   
  [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addproductspecific)]
  [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addproductspecific)]  
   
- Spowoduje to dodanie obiektu do kontekstu i do zestawu jednostek poprawne. Można również wywołać <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, ale zamiast tego musisz podać nazwę zestawu jednostek. Jeśli dodano określona jednostka ma jeden lub więcej relacje z innymi obiektami, można użyć <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> metody lub użyj jednego z poprzednich metod, a także jawne zdefiniowanie tych łączy. Te operacje są omówione w dalszej części tego tematu.  
+ Spowoduje to dodanie obiektu do kontekstu i do poprawnego zestawu jednostek. Można również wywołać metodę <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, ale zamiast tego należy podać nazwę zestawu jednostek. Jeśli dodana jednostka ma jedną lub więcej relacji z innymi jednostkami, można użyć <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> metody lub użyć jednej z powyższych metod, a także jawnie zdefiniować te linki. Te operacje zostały omówione w dalszej części tego tematu.  
   
- Aby zmodyfikować istniejące wystąpienie jednostki, pierwsze zapytanie dla danej jednostki, wprowadź żądane zmiany do jego właściwości, a następnie wywołaj <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> metody <xref:System.Data.Services.Client.DataServiceContext> do wskazania biblioteki klienckiej, która wymaga wysłania aktualizacji dla tego obiektu, jak pokazano w Poniższy przykład:  
+ Aby zmodyfikować istniejące wystąpienie jednostki, pierwsze zapytanie dla tej jednostki, wprowadź odpowiednie zmiany w jego właściwościach, a następnie Wywołaj <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> metodę <xref:System.Data.Services.Client.DataServiceContext> w celu wskazania do biblioteki klienta, którą potrzebuje do wysłania aktualizacji dla tego obiektu, jak pokazano w temacie. Poniższy przykład:  
   
  [!code-csharp[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#modifycustomerspecific)]
  [!code-vb[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#modifycustomerspecific)]  
   
- Aby usunąć wystąpienie jednostki, wywołaj <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> metody <xref:System.Data.Services.Client.DataServiceContext>, jak pokazano w poniższym przykładzie:  
+ Aby usunąć wystąpienie jednostki, wywołaj <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> metodę <xref:System.Data.Services.Client.DataServiceContext>w, jak pokazano w następującym przykładzie:  
   
  [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#deleteproductspecific)]
  [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#deleteproductspecific)]  
@@ -47,51 +47,51 @@ Kiedy używasz [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibli
  Aby uzyskać więcej informacji, zobacz [jak: Dodawanie, modyfikowanie i usuwanie jednostek](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md).  
   
 ## <a name="attaching-entities"></a>Dołączanie jednostek  
- Biblioteka klienta umożliwia zapisanie aktualizacje wprowadzone do jednostki bez wykonywanie zapytania Załaduj jednostkę do <xref:System.Data.Services.Client.DataServiceContext>. Użyj <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> metodę, aby dołączyć istniejący obiekt do określonego zestawu jednostek w <xref:System.Data.Services.Client.DataServiceContext>. Następnie można zmodyfikować obiekt i zapisać zmiany do usługi danych. W poniższym przykładzie obiekt klienta, który został zmieniony jest dołączony do kontekstu i następnie <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> jest wywoływana, aby oznaczyć przyłączonego obiektu jako <xref:System.Data.Services.Client.EntityStates.Modified> przed <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> nosi nazwę:  
+ Biblioteka klienta umożliwia zapisywanie aktualizacji dokonanych w jednostce bez uprzedniego wykonania zapytania w celu załadowania jednostki do programu <xref:System.Data.Services.Client.DataServiceContext>. Użyj metody <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> , aby dołączyć istniejący obiekt do określonego zestawu jednostek <xref:System.Data.Services.Client.DataServiceContext>w. Następnie można zmodyfikować obiekt i zapisać zmiany w usłudze danych. W poniższym przykładzie obiekt klienta, który został zmieniony, jest dołączony do kontekstu, a następnie <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> jest wywoływana w celu oznaczenia dołączonego obiektu, tak jak <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> <xref:System.Data.Services.Client.EntityStates.Modified> wcześniej, jest wywoływana:  
   
  [!code-csharp[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#attachobjectspecific)]
  [!code-vb[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#attachobjectspecific)]  
   
- Podczas podłączania obiektów obowiązują następujące zastrzeżenia:  
+ Podczas dołączania obiektów stosowane są następujące zagadnienia:  
   
-- Obiekt jest dołączony w <xref:System.Data.Services.Client.EntityStates.Unchanged> stanu.  
+- Obiekt jest podłączony w <xref:System.Data.Services.Client.EntityStates.Unchanged> stanie.  
   
-- Gdy obiekt jest dołączony, obiekty, które są powiązane z przyłączonego obiektu nie są również dołączone.  
+- Po dołączeniu obiektu obiekty powiązane z dołączonym obiektem nie są także dołączone.  
   
-- Nie można dołączyć obiektu, jeśli jednostka jest już śledzony przez kontekst.  
+- Nie można dołączyć obiektu, jeśli jednostka jest już śledzona przez kontekst.  
   
-- <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> Przeciążenia metody, która przyjmuje `etag` parametr jest używany podczas dołączania do obiektu jednostki, przedstawiający otrzymany wraz z wartością tagu eTag. Ta wartość elementu eTag jest następnie użytych do sprawdzenia współbieżności po zapisaniu zmian przyłączonego obiektu.  
+- Przeciążenie metody, które pobiera parametr, jest używany podczas dołączania obiektu jednostki, który został odebrany wraz z wartością ETag. `etag` <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> Ta wartość eTag jest następnie używana do sprawdzania współbieżności po zapisaniu zmian w dołączonym obiekcie.  
   
- Aby uzyskać więcej informacji, zobacz [jak: Dołączanie istniejącej jednostki do obiektu DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Dołącz istniejącą jednostkę do obiekcie DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md).  
   
-## <a name="creating-and-modifying-relationship-links"></a>Tworzenie i modyfikowanie relacji łączy  
- Po dodaniu nowej jednostki przy użyciu <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> metody lub odpowiednie *AddTo* metody <xref:System.Data.Services.Client.DataServiceContext> klasy, która **Dodaj odwołanie do usługi** okna dialogowego generuje żadnych relacji między nimi i powiązanych jednostek nie są automatycznie definiowane.  
+## <a name="creating-and-modifying-relationship-links"></a>Tworzenie i modyfikowanie linków relacji  
+ <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> Po dodaniu nowej jednostki przy użyciu metody lub odpowiedniej metody <xref:System.Data.Services.Client.DataServiceContext> AddTo klasy generowanej przez okno dialogowe **Dodaj odwołanie do usługi** wszystkie relacje między nową jednostką a powiązanymi jednostkami są nie zdefiniowane automatycznie.  
   
- Można tworzyć i zmieniać relacje między wystąpieniami jednostki i biblioteki klienta odzwierciedlenia tych zmian w usłudze data service. Relacje między jednostkami są definiowane jako skojarzeń w modelu i <xref:System.Data.Services.Client.DataServiceContext> śledzi każdej relacji jako obiekt łącza w kontekście. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] udostępnia następujące metody w <xref:System.Data.Services.Client.DataServiceContext> klasy w celu tworzenia, modyfikowania i usuwania tych linków:  
+ Można tworzyć i zmieniać relacje między wystąpieniami jednostek, a ich Biblioteka kliencka odzwierciedla te zmiany w usłudze danych. Relacje między jednostkami są zdefiniowane jako skojarzenia w modelu i <xref:System.Data.Services.Client.DataServiceContext> śledzi każdą relację jako obiekt łącza w kontekście. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Program udostępnia następujące metody <xref:System.Data.Services.Client.DataServiceContext> klasy do tworzenia, modyfikowania i usuwania tych linków:  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|Tworzy nowe łącze między dwoma obiektami powiązanej jednostki. Wywołanie tej metody jest równoważne z wywoływaniem <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> i <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> Aby utworzyć nowy obiekt i zdefiniować relację do istniejącego obiektu.|  
-|<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|Tworzy nowe łącze między dwoma obiektami powiązanej jednostki.|  
-|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Aktualizuje istniejące łącze między dwoma obiektami powiązanej jednostki. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> Umożliwia również usuwać łącza z kardynalnością zero lub jeden do jeden (`0..1:1`) i jeden do jednego (`1:1`). Można to zrobić, ustawiając powiązany obiekt `null`.|  
-|<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|Oznacza łącze, które służy do śledzenia kontekstu do usunięcia podczas <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> metoda jest wywoływana. Metoda ta jest używana, gdy usuniesz powiązanego obiektu lub zmienić relację, najpierw usuwania łącze do istniejącego obiektu, a następnie dodając łącze do nowego obiektu pokrewnego.|  
-|<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|Powiadamia o kontekście istniejącego łącza między dwa obiekty jednostki. Kontekst założono, że ta relacja już istnieje w usłudze data i nie podejmuje próby utworzenia linku po wywołaniu <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> metody. Użyj tej metody, gdy dołączanie obiektów do kontekstu i musisz również dołączyć łącza między tymi dwoma. Jeśli definiujesz nowe relacje, należy w zamian użyć <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>.|  
-|<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|Zatrzymuje śledzenia określonego linku w kontekście. Ta metoda służy do usuwania jeden do wielu (`*:*`) relacji. W przypadku relacji powiązania z kardynalnością jednego, zamiast tego należy użyć <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>.|  
+|<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|Tworzy nowy link między dwoma powiązanymi obiektami jednostek. Wywołanie tej metody jest równoważne wywołaniu <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> i <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> zarówno do tworzenia nowego obiektu, jak i definiowania relacji z istniejącym obiektem.|  
+|<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|Tworzy nowy link między dwoma powiązanymi obiektami jednostek.|  
+|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Aktualizuje istniejące łącze między dwoma powiązanymi obiektami jednostek. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>służy również do usuwania linków z kardynalnością zero-lub-jeden-do-jednego (`0..1:1`) i jeden-do-jednego (`1:1`). Można to zrobić przez ustawienie powiązanego obiektu na `null`.|  
+|<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|Oznacza link, który jest śledzony przez kontekst do usunięcia, <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> gdy wywoływana jest metoda. Tej metody należy użyć w przypadku usunięcia powiązanego obiektu lub zmiany relacji przez usunięcie łącza do istniejącego obiektu, a następnie dodanie linku do nowego powiązanego obiektu.|  
+|<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|Powiadamia kontekst istniejącego łącza między dwoma obiektami jednostek. W kontekście przyjęto założenie, że ta relacja już istnieje w usłudze danych i nie próbuje utworzyć łącza po wywołaniu <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> metody. Użyj tej metody, gdy dołączysz obiekty do kontekstu i chcesz również dołączyć łącze między nimi. W przypadku definiowania nowej relacji należy zamiast niej używać <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>.|  
+|<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|Wyłącza śledzenie określonego linku w kontekście. Ta metoda służy do usuwania relacji jeden-do-wielu (`*:*`). W przypadku linków relacji z kardynalnością jednego należy zamiast tego użyć <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>.|  
   
- Poniższy przykład pokazuje, jak używać <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> metodę, aby dodać nowy `Order_Detail` , jest powiązany z istniejącego `Orders` jednostki. Ponieważ nowe `Order_Details` obiektu jest teraz śledzone przez <xref:System.Data.Services.Client.DataServiceContext>, relacji dodanego `Order_Details` obiektu do istniejących `Products` jednostka została zdefiniowana przez wywołanie metody <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> metody:  
+ Poniższy przykład pokazuje, <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> jak użyć metody, aby dodać nową `Order_Detail` , która jest powiązana z istniejącą `Orders` jednostką. Ponieważ `Order_Details` nowy obiekt jest teraz śledzony `Order_Details` <xref:System.Data.Services.Client.DataServiceContext>przez, relacja dodanego obiektu do istniejącej `Products` jednostki jest definiowana przez wywołanie <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> metody:  
   
  [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addorderdetailtoorderspecific)]
  [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addorderdetailtoorderspecific)]  
   
- Gdy <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> Metoda określa łącza, które muszą zostać utworzone w usługi danych, aby te łącza, które zostaną uwzględnione w obiektach, które znajdują się w kontekście, należy również ustawić właściwości nawigacji na samych obiektach. W poprzednim przykładzie należy ustawić właściwości nawigacji w następujący sposób:  
+ <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> Chociaż metoda definiuje linki, które muszą zostać utworzone w usłudze danych w celu odzwierciedlenia tych linków w obiektach, które znajdują się w kontekście, należy również ustawić właściwości nawigacji dla obiektów. W poprzednim przykładzie należy ustawić właściwości nawigacji w następujący sposób:  
   
  [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#setnavprops)]
  [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#setnavprops)]  
   
- Aby uzyskać więcej informacji, zobacz [jak: Definiowanie relacji jednostek](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Zdefiniuj relacje między](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)jednostkami.  
   
 ## <a name="saving-changes"></a>Zapisywanie zmian  
- Zmiany są śledzone w <xref:System.Data.Services.Client.DataServiceContext> wystąpienia, ale nie natychmiast wysyłane do serwera. Po zakończeniu wymagane zmiany dla określonego działania wywołać <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> przesłać wszystkie zmiany do usługi danych. Aby uzyskać więcej informacji, zobacz [zarządzanie kontekstem usługi danych](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md). Można również zapisać zmiany asynchronicznie przy użyciu <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> i <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> metody. Aby uzyskać więcej informacji, zobacz [operacji asynchronicznych](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
+ Zmiany są śledzone w <xref:System.Data.Services.Client.DataServiceContext> wystąpieniu, ale nie są natychmiast wysyłane do serwera. Po zakończeniu pracy z wymaganymi zmianami dotyczącymi określonego działania Wywołaj <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> polecenie Prześlij wszystkie zmiany do usługi danych. Aby uzyskać więcej informacji, zobacz [zarządzanie kontekstem usługi danych](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md). Można także zapisywać zmiany asynchronicznie przy użyciu <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> metod i. <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> Aby uzyskać więcej informacji, zobacz [operacje asynchroniczne](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

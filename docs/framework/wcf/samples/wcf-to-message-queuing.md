@@ -2,17 +2,17 @@
 title: Wysyłanie komunikatów z usługi WCF do usługi kolejkowania komunikatów
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: e0c4fa3e3f475b2d0996885d8eda91faabc9ba93
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 083e652a0924ffed272387a4974ec600073cef2f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625789"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966724"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Wysyłanie komunikatów z usługi WCF do usługi kolejkowania komunikatów
-Niniejszy przykład pokazuje, jak aplikacja Windows Communication Foundation (WCF) może także wysłać komunikat do aplikacji usługi kolejkowania komunikatów (MSMQ). Usługa jest aplikacji konsoli Self-Hosted umożliwia obserwowanie usługi odbieranie wiadomości w kolejce. Usługa i klient nie musi być uruchomiona w tym samym czasie.
+Ten przykład pokazuje, jak aplikacja Windows Communication Foundation (WCF) może wysłać komunikat do aplikacji usługi kolejkowania komunikatów (MSMQ). Usługa to samodzielna aplikacja konsolowa, która umożliwia obserwowanie usługi do odebrania komunikatów znajdujących się w kolejce. Usługa i klient nie muszą być uruchomione w tym samym czasie.
 
- Ta usługa odbiera komunikaty z kolejki i przetwarza zamówienia. Usługa tworzy kolejkę transakcyjną i konfiguruje program obsługi komunikatów odebranego komunikatu, jak pokazano w poniższym przykładowym kodzie.
+ Usługa odbiera komunikaty z kolejki i przetwarza je. Usługa tworzy kolejkę transakcyjną i konfiguruje komunikat z obsługą wiadomości, jak pokazano w poniższym przykładowym kodzie.
 
 ```csharp
 static void Main(string[] args)
@@ -32,7 +32,7 @@ static void Main(string[] args)
 }
 ```
 
- Gdy wiadomość zostaje odebrana w kolejce, program obsługi komunikatów `ProcessOrder` zostanie wywołana.
+ Po odebraniu komunikatu w kolejce zostanie wywołana procedura obsługi `ProcessOrder` komunikatów.
 
 ```csharp
 public static void ProcessOrder(Object source,
@@ -61,9 +61,9 @@ public static void ProcessOrder(Object source,
 }
 ```
 
- Wyodrębnia usługi `ProcessOrder` treść komunikatu z usługi MSMQ i przetworzy to zamówienie.
+ Usługa wyodrębnia `ProcessOrder` z treści wiadomości MSMQ i przetwarza kolejność.
 
- Nazwa kolejki usługi MSMQ jest określony w sekcji appSettings pliku konfiguracji, jak pokazano w poniższym Przykładowa konfiguracja.
+ Nazwa kolejki MSMQ jest określona w sekcji appSettings w pliku konfiguracji, jak pokazano w poniższej konfiguracji przykładowej.
 
 ```xml
 <appSettings>
@@ -72,9 +72,9 @@ public static void ProcessOrder(Object source,
 ```
 
 > [!NOTE]
->  Nazwa kolejki używa pojedynczego znaku kropki (.) dla komputera lokalnego i separatory ukośnik odwrotny w ścieżce.
+> Nazwa kolejki używa kropki (.) dla komputera lokalnego i separatorów ukośników odwrotnych.
 
- Klient tworzy zamówienie zakupu i przesyła zamówienia zakupu w zakresie transakcji, jak pokazano w poniższym przykładowym kodzie.
+ Klient tworzy zamówienie zakupu i przesyła zamówienie zakupu w zakresie transakcji, jak pokazano w poniższym przykładowym kodzie.
 
 ```csharp
 // Create the purchase order
@@ -96,9 +96,9 @@ Console.WriteLine("Order has been submitted:{0}", po);
 client.Close();
 ```
 
- Klient używa niestandardowego klienta w prawidłowej kolejności do wysyłania wiadomości usługi MSMQ do kolejki. Ponieważ aplikacja, która odbiera i przetwarza komunikat jest aplikacją usługi MSMQ, a nie aplikacji WCF, istnieje nie niejawne Umowa serwisowa między dwiema aplikacjami. Dlatego nie można utworzyć serwera proxy, korzystając z narzędzia Svcutil.exe w tym scenariuszu.
+ Klient używa niestandardowego klienta w usłudze w celu wysłania komunikatu MSMQ do kolejki. Ponieważ aplikacja, która odbiera i przetwarza komunikat, jest aplikacją usługi MSMQ, a nie aplikacją WCF, nie istnieje niejawna Umowa serwisowa między tymi dwiema aplikacjami. Dlatego nie można utworzyć serwera proxy za pomocą narzędzia Svcutil. exe w tym scenariuszu.
 
- Klient niestandardowy jest zasadniczo taki sam dla wszystkich aplikacji WCF, które używają `MsmqIntegration` powiązania do wysyłania wiadomości. W odróżnieniu od innych klientów nie obejmuje szereg operacji usługi. Jest tylko operacja komunikatu przesyłania.
+ Klient niestandardowy jest zasadniczo taki sam dla wszystkich aplikacji WCF, które używają `MsmqIntegration` powiązania do wysyłania komunikatów. W przeciwieństwie do innych klientów, nie obejmuje ona zakresu operacji usługi. Jest to tylko operacja przesyłania wiadomości.
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -127,53 +127,53 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 }
 ```
 
- Po uruchomieniu przykładu, działania klienta i usługi są wyświetlane w oknach konsoli usługi i klienta. Możesz zobaczyć komunikaty odbierania usługi z klienta. Naciśnij klawisz ENTER każdego okna konsoli, aby zamknąć usługę i klienta. Należy zauważyć, że ponieważ kolejkowania wiadomości jest używany, klient i usługa musi być uruchomiona w tym samym czasie. Na przykład można uruchomić klienta, zamknij go, a następnie uruchom usługi i nadal będzie ona otrzymywać jego wiadomości.
+ Po uruchomieniu przykładu działania klienta i usługi są wyświetlane zarówno w systemie, jak i w oknach konsoli klienta. Możesz zobaczyć, że usługa odbiera komunikaty od klienta. Naciśnij klawisz ENTER w każdym oknie konsoli, aby zamknąć usługę i klienta. Należy pamiętać, że ponieważ usługa kolejkowania jest w użyciu, klient i usługi nie muszą działać w tym samym czasie. Na przykład można uruchomić klienta programu, zamknąć go, a następnie uruchomić usługę i nadal otrzymywać wiadomości.
 
 > [!NOTE]
->  Ten przykładowy skrypt wymaga instalacji usługi kolejkowania komunikatów. Zapoznaj się z instrukcjami instalacji w [usługi kolejkowania komunikatów](https://go.microsoft.com/fwlink/?LinkId=94968).  
+> Ten przykład wymaga instalacji usługi kolejkowania komunikatów. Zapoznaj się z instrukcjami dotyczącymi instalacji w usłudze [kolejkowania komunikatów](https://go.microsoft.com/fwlink/?LinkId=94968).  
   
 ### <a name="to-setup-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.  
+2. Jeśli usługa jest uruchamiana po raz pierwszy, sprawdzi, czy kolejka jest obecna. Jeśli kolejka nie istnieje, usługa utworzy ją. Aby utworzyć kolejkę, można najpierw uruchomić tę usługę lub utworzyć ją za pośrednictwem Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w systemie Windows 2008.  
   
-    1. Otwórz Menedżera serwera w programie Visual Studio 2012.  
+    1. Otwórz Menedżer serwera w programie Visual Studio 2012.  
   
-    2. Rozwiń **funkcji** kartę.  
+    2. Rozwiń kartę **funkcje** .  
   
-    3. Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.  
+    3. Kliknij prawym przyciskiem myszy pozycję **prywatne kolejki komunikatów**, a następnie wybierz kolejno pozycje **Nowa**i **prywatne**.  
   
-    4. Sprawdź **transakcyjna** pole.  
+    4. Zaznacz pole **transakcyjne** .  
   
     5. Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.  
   
-3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Do uruchomienia przykładu w konfiguracji o jednym komputerze, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Aby uruchomić przykład w konfiguracji pojedynczego komputera, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-### <a name="to-run-the-sample-across-computers"></a>Do uruchomienia przykładu na komputerach  
+### <a name="to-run-the-sample-across-computers"></a>Aby uruchomić przykład na wielu komputerach  
   
-1. Skopiuj pliki programu usługi z folderu \service\bin\ w folderze specyficzny dla języka na komputerze usługi.  
+1. Skopiuj pliki programu Service Files z folderu \service\bin\, w obszarze folder specyficzny dla języka, do komputera usługi.  
   
-2. Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerze klienckim.  
+2. Skopiuj pliki programu klienckiego z folderu \client\bin\, w obszarze folder specyficzny dla języka, do komputera klienckiego.  
   
-3. W pliku Client.exe.config, Zmień adres punktu końcowego klienta do określania nazwy komputera usługi, a nie ".".  
+3. W pliku Client. exe. config zmień adres punktu końcowego klienta, aby określić nazwę komputera usługi zamiast ".".  
   
-4. Na komputerze usługi Service.exe należy uruchomić z wiersza polecenia.  
+4. Na komputerze usługi Uruchom polecenie Service. exe z wiersza polecenia.  
   
-5. Na komputerze klienckim należy uruchomić Client.exe z poziomu wiersza polecenia.  
+5. Na komputerze klienckim uruchom program Client. exe z wiersza polecenia.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [Usługa kolejkowania komunikatów](https://go.microsoft.com/fwlink/?LinkId=94968)
+- [Instrukcje: Wymiana komunikatów z punktami końcowymi WCF i aplikacjami usługi kolejkowania komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Kolejkowanie komunikatów](https://go.microsoft.com/fwlink/?LinkId=94968)

@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d75412394ce42f786da88f3d334853b99f266aca
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 9674e4d3f465cd3bad55a32d0a13136e6cff974d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567189"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946376"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Konsolidator zestawów)
 
 Assembly Linker (konsolidator zestawów) generuje plik zawierający manifest zestawu z co najmniej jednego pliku, który jest modułem lub plikiem zasobów. Moduł jest plikiem języka pośredniego (IL), który nie zawiera manifestu zestawu.
 
 > [!NOTE]
-> Począwszy od programu Visual Studio 2008, kompilatory C# i Visual Basic automatycznie osadzają manifest Win32 w zestawie. Aby uzyskać więcej informacji, zobacz [/WIN32MANIFESTC# (opcje kompilatora)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
+> Począwszy od programu Visual Studio 2008, kompilatory C# i Visual Basic automatycznie osadzają manifest Win32 w zestawie. Aby uzyskać więcej informacji, zobacz [/WIN32MANIFESTC# (opcje kompilatora)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
 
 To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
@@ -41,7 +41,7 @@ Można określić co najmniej jedną z poniższych czynności `sources`.
 | ------ | ----------- |
 |`file`[,`target`]|Kopiuje zawartość `file` (moduł) do nazwy pliku określonej przez `target`. Po skopiowaniu, *Al. exe* kompiluje `target` do zestawu.|
 |**/embed [resource]:** `file`[,`name`[,`private`]]|Osadza zasób określony przez `file` w obrazie zawierającym manifest zestawu; *Al. exe* kopiuje zawartość `file` do przenośnego obrazu wykonywalnego (PE).<br /><br /> `name` Parametr jest wewnętrznym identyfikatorem zasobu. Domyślnie zasoby w zestawie są publiczne (widoczne dla innych zestawów). Określenie `private` powoduje, że zasób nie jest widoczny dla innych zestawów.<br /><br /> Jeśli `file` jest .NET Framework utworzony plik zasobów, na przykład przez [Generator plików zasobów (*Resgen. exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) lub w środowisku deweloperskim, dostęp do niego można uzyskać za pomocą elementów członkowskich w. <xref:System.Resources> Aby uzyskać więcej informacji, zobacz <xref:System.Resources.ResourceManager>. W przypadku wszystkich innych zasobów należy użyć `GetManifestResource`* metod w programie <xref:System.Reflection.Assembly> , aby uzyskać dostęp do zasobu w czasie wykonywania.<br /><br /> Jeśli tylko pliki zasobów są przekazywane do *Al. exe*, plik wyjściowy jest zestawem zasobów satelity.|
-|**/link [resource]:** `file`[,`name`[,`target`[,`private`]]]|Łączy plik zasobów z zestawem. Zasób określony przez `file` program jest częścią zestawu; plik nie jest kopiowany. `file` Parametr może być w dowolnym formacie pliku. Można na przykład określić natywną bibliotekę DLL jako `file` parametr. W ten sposób natywna biblioteka DLL stanie się częścią zestawu, będzie mogła zostać zainstalowana w globalnej pamięci podręcznej zestawów i będzie można uzyskać do niej dostęp z kodu zarządzanego w zestawie. Można to również zrobić przy użyciu opcji kompilatora **/linkresource** . Aby uzyskać więcej informacji, zobacz [/linkresourceC# (opcje kompilatora)](~/docs/csharp/language-reference/compiler-options/linkresource-compiler-option.md).<br /><br /> `name` Parametr jest wewnętrznym identyfikatorem zasobu. Parametr określa ścieżkę i nazwę pliku, do którego `file` *Al. exe* kopiuje *.* `target` Po skopiowaniu, *Al. exe* kompiluje `target` do zestawu. Domyślnie zasoby w zestawie są publiczne (widoczne dla innych zestawów). Określenie `private` powoduje, że zasób nie jest widoczny dla innych zestawów.<br /><br /> Jeśli `file` jest .NET Framework utworzony plik zasobów, na przykład przez generator plików zasobów (*Resgen. exe*) lub w środowisku deweloperskim, dostęp do niego można uzyskać <xref:System.Resources> za pomocą elementów członkowskich w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz <xref:System.Resources.ResourceManager>. W przypadku wszystkich innych zasobów należy użyć `GetManifestResource` * metod <xref:System.Reflection.Assembly> w klasie, aby uzyskać dostęp do zasobu w czasie wykonywania.<br /><br /> Jeśli tylko pliki zasobów są przekazywane do *Al. exe*, plik wyjściowy jest zestawem zasobów satelity.|
+|**/link [resource]:** `file`[,`name`[,`target`[,`private`]]]|Łączy plik zasobów z zestawem. Zasób określony przez `file` program jest częścią zestawu; plik nie jest kopiowany. `file` Parametr może być w dowolnym formacie pliku. Można na przykład określić natywną bibliotekę DLL jako `file` parametr. W ten sposób natywna biblioteka DLL stanie się częścią zestawu, będzie mogła zostać zainstalowana w globalnej pamięci podręcznej zestawów i będzie można uzyskać do niej dostęp z kodu zarządzanego w zestawie. Można to również zrobić przy użyciu opcji kompilatora **/linkresource** . Aby uzyskać więcej informacji, zobacz [/linkresourceC# (opcje kompilatora)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md).<br /><br /> `name` Parametr jest wewnętrznym identyfikatorem zasobu. Parametr określa ścieżkę i nazwę pliku, do którego `file` *Al. exe* kopiuje *.* `target` Po skopiowaniu, *Al. exe* kompiluje `target` do zestawu. Domyślnie zasoby w zestawie są publiczne (widoczne dla innych zestawów). Określenie `private` powoduje, że zasób nie jest widoczny dla innych zestawów.<br /><br /> Jeśli `file` jest .NET Framework utworzony plik zasobów, na przykład przez generator plików zasobów (*Resgen. exe*) lub w środowisku deweloperskim, dostęp do niego można uzyskać <xref:System.Resources> za pomocą elementów członkowskich w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz <xref:System.Resources.ResourceManager>. W przypadku wszystkich innych zasobów należy użyć `GetManifestResource` * metod <xref:System.Reflection.Assembly> w klasie, aby uzyskać dostęp do zasobu w czasie wykonywania.<br /><br /> Jeśli tylko pliki zasobów są przekazywane do *Al. exe*, plik wyjściowy jest zestawem zasobów satelity.|
 
 Można określić następujące elementy `options`: należy określić wartość **/out**.
 

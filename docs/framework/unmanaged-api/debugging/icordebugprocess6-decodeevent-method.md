@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 1453bc0c-6e0d-4d5a-b176-22607f8a3e6c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30df2d4a958b82a5a877b5d3efe5936f6498433b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f81c513447b7c63fb16ff20ae6f83c3e6ef359b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736459"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964039"
 ---
 # <a name="icordebugprocess6decodeevent-method"></a>Metoda ICorDebugProcess6::DecodeEvent
-Dekoduje zdarzenia debugowania zarządzanego, które zostały hermetyzowane w ładunku zdarzenia debugowania specjalnie przygotowane natywnych wyjątek.  
+Dekoduje zarządzane zdarzenia debugowania, które zostały hermetyzowane w ładunku specjalnie spreparowanych zdarzeń debugowania wyjątku natywnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,36 +29,36 @@ HRESULT DecodeEvent(
   
 ## <a name="parameters"></a>Parametry  
  `pRecord`  
- [in] Wskaźnik do tablicy typu byte ze zdarzenia debugowania natywnych wyjątek zawierającą informacje o zdarzeniu debugowania zarządzanego.  
+ podczas Wskaźnik do tablicy bajtów z natywnego zdarzenia debugowania wyjątku, który zawiera informacje o zarządzanym zdarzeniu debugowania.  
   
  `countBytes`  
- [in] Liczba elementów w `pRecord` tablicy bajtów.  
+ podczas Liczba elementów w `pRecord` tablicy bajtów.  
   
  `format`  
- [in] A [CorDebugRecordFormat](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md) składowej wyliczenia, która określa format zdarzenia debugowania niezarządzanego.  
+ podczas Element członkowski wyliczenia [CorDebugRecordFormat](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md) , który określa format niezarządzanego zdarzenia debugowania.  
   
  `dwFlags`  
- [in] Pole bitowe, która jest zależna od architektury docelowej oraz określa dodatkowe informacje na temat zdarzeń debugowania. Dla systemów Windows, może być członkiem [CorDebugDecodeEventFlagsWindows](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md) wyliczenia.  
+ podczas Pole bitowe, które zależy od architektury docelowej i określające dodatkowe informacje o zdarzeniu debugowania. W przypadku systemów Windows może być elementem członkowskim wyliczenia [CorDebugDecodeEventFlagsWindows](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md) .  
   
  `dwThreadId`  
- [in] Identyfikator systemu operacyjnego wątku, na którym wystąpił wyjątek.  
+ podczas Identyfikator systemu operacyjnego wątku, w którym został zgłoszony wyjątek.  
   
  `ppEvent`  
- [out] Wskaźnik na adres [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) obiekt, który reprezentuje zdarzenie zdekodowany debugowania zarządzanego.  
+ określoną Wskaźnik do adresu obiektu [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) , który reprezentuje zdekodowane zdarzenie debugowania zarządzane.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

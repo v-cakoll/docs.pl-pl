@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 02a86ea8d8d6b481044d6ca25d29df7edd2c73ee
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a5254de07029e53dd6b72bd2c096c38525a661b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401692"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958706"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Kompilowanie aplikacji WPF (WPF)
 
@@ -24,7 +24,7 @@ Aplikacje Windows Presentation Foundation (WPF) mogą być kompilowane jako .NET
 
 Aplikację WPF można skompilować w następujący sposób:
 
-- Wiersz polecenia. Aplikacja musi zawierać tylko kod (bez XAML) i plik definicji aplikacji. Aby uzyskać więcej informacji, zobacz [wiersza polecenia kompilowanego za pomocą pliku CSC. exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) lub [Kompilowanie z poziomu wiersza polecenia (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
+- Wiersz polecenia. Aplikacja musi zawierać tylko kod (bez XAML) i plik definicji aplikacji. Aby uzyskać więcej informacji, zobacz [wiersza polecenia kompilowanego za pomocą pliku CSC. exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) lub [Kompilowanie z poziomu wiersza polecenia (Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
 
 - Microsoft Build Engine (MSBuild). Oprócz kodu i plików XAML, aplikacja musi zawierać plik projektu programu MSBuild. Aby uzyskać więcej informacji, zobacz "MSBuild".
 
@@ -42,7 +42,7 @@ Po skompilowaniu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-m
 
 ### <a name="pre-build-initializations"></a>Inicjalizacje przed kompilacją
 
-Przed kompilacją [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] określa lokalizację ważnych narzędzi i bibliotek, w tym następujące:
+Przed skompilowaniem program MSBuild określa lokalizację ważnych narzędzi i bibliotek, w tym następujące elementy:
 
 - .NET Framework.
 
@@ -52,7 +52,7 @@ Przed kompilacją [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-
 
 - Właściwość ścieżek wyszukiwania zestawu.
 
-Pierwszą lokalizacją, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] w której wyszukiwane są zestawy, jest katalog zestawu\\odwołania (%PROGRAMFILES%\Reference Assemblies\Microsoft\Framework\v3.0). W tym kroku proces kompilacji inicjuje również różne właściwości i grupy elementów oraz wykonuje wymagane czynności czyszczące.
+Pierwszą lokalizacją, w której program MSBuild wyszukuje zestawy, jest katalogiem zestawu\\odwołania (%PROGRAMFILES%\Reference Assemblies\Microsoft\Framework\v3.0). W tym kroku proces kompilacji inicjuje również różne właściwości i grupy elementów oraz wykonuje wymagane czynności czyszczące.
 
 <a name="Resolving_references"></a>
 
@@ -108,7 +108,7 @@ Public Sub InitializeComponent() _
 End Sub
 ```
 
-Domyślnie kompilacja znaczników jest uruchamiana w taki sam <xref:System.AppDomain> [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] sposób, jak aparat. Zapewnia to znaczący wzrost wydajności. Takie zachowanie może być przełączane za `AlwaysCompileMarkupFilesInSeparateDomain` pomocą właściwości. Zaletą jest zwolnienie wszystkich zestawów referencyjnych przez zwolnienie oddzielenia <xref:System.AppDomain>.
+Domyślnie kompilacja znaczników jest uruchamiana w taki sam <xref:System.AppDomain> sposób, jak aparat MSBuild. Zapewnia to znaczący wzrost wydajności. Takie zachowanie może być przełączane za `AlwaysCompileMarkupFilesInSeparateDomain` pomocą właściwości. Zaletą jest zwolnienie wszystkich zestawów referencyjnych przez zwolnienie oddzielenia <xref:System.AppDomain>.
 
 <a name="Pass_2_of_Markup_Compilation"></a>
 

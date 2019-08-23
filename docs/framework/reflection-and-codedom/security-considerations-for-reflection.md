@@ -12,105 +12,105 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a581cc17859f7f4e0215017bfc405eae3cc15e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660892"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956706"
 ---
 # <a name="security-considerations-for-reflection"></a>Zagadnienia dotyczące zabezpieczeń dla odbicia
 
-Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członkowskich i dostęp do elementów członkowskich (czyli do wywołania metod i konstruktorów do pobierania i ustawiania właściwości wartości, dodawanie i usuwanie programów obsługi zdarzeń i tak dalej). Użycie odbicia w celu uzyskania informacji na temat typów i elementów członkowskich nie jest ograniczona. Cały kod może używać odbicia do wykonywania następujących zadań:
+Odbicie zapewnia możliwość uzyskiwania informacji o typach i elementach członkowskich, a także do uzyskiwania dostępu do elementów członkowskich (czyli do wywoływania metod i konstruktorów, pobierania i ustawiania wartości właściwości, dodawania i usuwania programów obsługi zdarzeń itd.). Użycie odbicia w celu uzyskania informacji o typach i elementach członkowskich nie jest ograniczone. Cały kod może użyć odbicia, aby wykonać następujące zadania:
 
-- Wyliczanie typów i elementów członkowskich i zbadaj ich metadanych.
+- Wyliczanie typów i elementów członkowskich oraz badanie ich metadanych.
 
-- Wyliczanie i badania zestawów i modułów.
+- Wyliczanie i sprawdzanie zestawów i modułów.
 
-Z drugiej strony, przy użyciu odbicia do dostępu do elementów członkowskich, podlega ograniczeniom. Począwszy od programu .NET Framework 4, tylko przez zaufany kod umożliwia odbicia dostęp do elementów członkowskich zabezpieczenia krytyczny. Ponadto tylko zaufanego kodu można użyć odbicia do połączenia niepubliczne elementy członkowskie, które nie będą dostępne dla kodu skompilowanego. Na koniec kod, który używa odbicia na uzyskiwanie dostępu do członka bezpieczny krytyczny musi mieć uprawnienia, niezależnie od wymagań bezpieczny krytyczny element członkowski, po prostu, podobnie jak w przypadku skompilowany kod.
+Użycie odbicia w celu uzyskania dostępu do członków, z kolei podlega ograniczeniom. Począwszy od .NET Framework 4, tylko zaufany kod może używać odbicia w celu uzyskania dostępu do elementów członkowskich o znaczeniu krytycznym. Ponadto tylko zaufany kod może używać odbicia w celu uzyskania dostępu do niepublicznych elementów członkowskich, które nie są bezpośrednio dostępne dla skompilowanego kodu. Na koniec kod, który używa odbicia w celu uzyskania dostępu do elementu członkowskiego o krytycznym znaczeniu, musi mieć wszelkie uprawnienia do bezpiecznego krytycznego zapotrzebowania elementu członkowskiego, podobnie jak w przypadku skompilowanego kodu.
 
-Z zastrzeżeniem odpowiednie uprawnienia kod może użyć odbicia przeprowadzić następujące rodzaje dostępu:
+Z zastrzeżeniem niepotrzebnych uprawnień, kod może użyć odbicia, aby wykonać następujące rodzaje dostępu:
 
-- Dostęp do publicznych składowych, które nie są krytyczne dla bezpieczeństwa.
+- Dostęp do publicznych elementów członkowskich, które nie są krytyczne dla zabezpieczeń.
 
-- Członkowie niepubliczni dostępu, które będą dostępne dla kodzie skompilowanym, jeśli te elementy członkowskie nie są krytyczne dla bezpieczeństwa. Przykłady takich niepubliczne elementy członkowskie:
+- Dostęp do niepublicznych elementów członkowskich, które byłyby dostępne dla skompilowanego kodu, jeśli te elementy członkowskie nie są krytyczne dla zabezpieczeń. Przykłady takich niepublicznych członków obejmują:
 
-  - Chronione składowe klas bazowych kodu wywołującego. (W odbiciu, to nazywa się dostęp na poziomie rodziny.)
+  - Chronione elementy członkowskie klas bazowych kodu wywołującego. (W odbiciu jest to nazywane dostępem na poziomie rodziny).
 
-  - `internal` elementy członkowskie (`Friend` elementów członkowskich w języku Visual Basic) w zestawie wywołującego kodu. (W odbiciu, to nazywa się dostęp na poziomie zestawu.)
+  - `internal`elementy członkowskie`Friend` (elementy członkowskie w Visual Basic) w zestawie kodu wywołującego. (W odbiciu jest to określane jako dostęp na poziomie zestawu).
 
-  - Prywatnych składowych innych wystąpień klasy, która zawiera kod wywołujący.
+  - Prywatne elementy członkowskie innych wystąpień klasy, które zawierają kod wywołujący.
 
-Na przykład kod uruchomiony w domenie aplikacji w trybie piaskownicy jest ograniczona do dostępu opisanego na tej liście, chyba, że domena aplikacji przyznaje dodatkowe uprawnienia.
+Na przykład kod, który jest uruchamiany w domenie aplikacji w trybie piaskownicy, jest ograniczony do dostępu opisanego na tej liście, chyba że domena aplikacji przyznaje dodatkowe uprawnienia.
 
-Począwszy od .NET Framework 2.0 z dodatkiem Service Pack 1, próby uzyskania dostępu do elementów członkowskich, które są zwykle niedostępne generuje zapotrzebowanie na zestaw uprawnień obiektu docelowego wynosząca <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi. Kod, który jest uruchomiony z pełnym zaufaniem (na przykład, kod w aplikacji, który jest uruchamiany z wiersza polecenia) zawsze może spełnić te uprawnienia. (To jest zastrzeżeniem ograniczeń podczas uzyskiwania dostępu do elementów członkowskich zabezpieczenia krytyczny, zgodnie z opisem w dalszej części tego artykułu).
+Począwszy od .NET Framework 2,0 z dodatkiem Service Pack 1 próba uzyskania dostępu do elementów członkowskich, które są normalnie niedostępne, generuje żądanie dla zestawu przyznania obiektu docelowego Plus <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> z flagą. Kod działający z pełnym zaufaniem (na przykład kod w aplikacji uruchamianej z wiersza polecenia) może zawsze spełniać te uprawnienia. (Jest to uzależnione od ograniczeń w uzyskiwaniu dostępu do elementów członkowskich o znaczeniu krytycznym, zgodnie z opisem w dalszej części tego artykułu).
 
-Opcjonalnie można przyznać domeny aplikacji w trybie piaskownicy <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> Flaga, zgodnie z opisem w sekcji [uzyskiwania dostępu do elementów członkowskich, są zwykle niedostępne](#accessingNormallyInaccessible), w dalszej części tego artykułu.
+Opcjonalnie domena aplikacji w trybie piaskownicy może być <xref:System.Security.Permissions.ReflectionPermission> udzielana <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> z flagą, zgodnie z opisem w sekcji [Uzyskiwanie dostępu do elementów członkowskich, które są normalnie niedostępne](#accessingNormallyInaccessible), w dalszej części tego artykułu.
 
 <a name="accessingSecurityCritical"></a>
 
-## <a name="accessing-security-critical-members"></a>Uzyskiwanie dostępu do elementów krytycznych dla zabezpieczeń
+## <a name="accessing-security-critical-members"></a>Uzyskiwanie dostępu do elementów członkowskich o znaczeniu krytycznym
 
-Element członkowski jest krytyczne dla bezpieczeństwa, jeśli ma ona <xref:System.Security.SecurityCriticalAttribute>, jeśli należy do typu, który ma <xref:System.Security.SecurityCriticalAttribute>, lub jeśli znajduje się w zestawie zabezpieczenia krytyczny. Począwszy od programu .NET Framework 4, zasady dostępu do zabezpieczenia krytyczny elementów członkowskich są następujące:
+Składowa ma krytyczne znaczenie dla zabezpieczeń <xref:System.Security.SecurityCriticalAttribute>, jeśli ma, jeśli należy do typu, który <xref:System.Security.SecurityCriticalAttribute>ma, lub jeśli znajduje się w zestawie o krytycznym poziomie zabezpieczeń. Począwszy od .NET Framework 4, reguły uzyskiwania dostępu do elementów członkowskich o znaczeniu krytycznym są następujące:
 
-- Przezroczysty kod nie można użyć odbicia dostęp do elementów członkowskich zabezpieczenia krytyczny, nawet jeśli kod jest w pełni zaufany. A <xref:System.MethodAccessException>, <xref:System.FieldAccessException>, lub <xref:System.TypeAccessException> zgłaszany.
+- Kod przezroczysty nie może używać odbicia w celu uzyskania dostępu do elementów członkowskich o znaczeniu krytycznym, nawet jeśli kod jest w pełni zaufany. A <xref:System.MethodAccessException>, <xref:System.FieldAccessException>, lub<xref:System.TypeAccessException> jest generowany.
 
-- Kod, który został uruchomiony z częściowej relacji zaufania jest traktowane jako przezroczyste.
+- Kod działający z częściowym zaufaniem jest traktowany jako przezroczysty.
 
-Te zasady są takie same, czy dostępne bezpośrednio przez skompilowany kod zabezpieczenia krytyczny elementu członkowskiego lub uzyskiwać dostęp przy użyciu odbicia.
+Te reguły są takie same, niezależnie od tego, czy dostęp do elementu członkowskiego o krytycznym znaczeniu jest uzyskiwany bezpośrednio przez skompilowany kod lub do którego można uzyskać dostęp przy użyciu
 
-Kod aplikacji, uruchamianego z wiersza polecenia jest uruchamiany z pełnym zaufaniem. Tak długo, jak nie jest oznaczony jako przezroczysty, ona używać odbicia na dostęp do elementów członkowskich zabezpieczenia krytyczny. Po uruchomieniu ten sam kod z częściowej relacji zaufania (na przykład w domenie aplikacji w trybie piaskownicy) poziom zaufania zestawu Określa, czy można uzyskać dostęp do kod zabezpieczenia krytyczny: Jeśli zestaw ma silną nazwę i jest zainstalowany w globalnej pamięci podręcznej, jest zaufanym zestawie i wywołując elementy członkowskie krytyczne dla bezpieczeństwa. Jeśli nie jest zaufany, staje się przezroczyste nawet, jeśli nie została oznaczona jako przezroczysty, a nie może uzyskać dostępu członków zabezpieczenia krytyczny.
+Kod aplikacji uruchamiany z wiersza polecenia jest uruchamiany z pełnym zaufaniem. O ile nie jest oznaczona jako przezroczysta, może użyć odbicia w celu uzyskania dostępu do elementów członkowskich o znaczeniu krytycznym. Gdy ten sam kod jest uruchamiany z częściowym zaufaniem (na przykład w domenie aplikacji w trybie piaskownicy), poziom zaufania zestawu określa, czy może on uzyskać dostęp do kodu krytycznego dla zabezpieczeń: Jeśli zestaw ma silną nazwę i jest zainstalowany w globalnej pamięci podręcznej zestawów, jest to zaufany zestaw i może wywoływać członków o znaczeniu krytycznym. Jeśli nie jest zaufana, jego stan zmieni się na przezroczysty, mimo że nie został oznaczony jako przezroczysty i nie może uzyskać dostępu do elementów członkowskich o znaczeniu krytycznym.
 
-Aby uzyskać więcej informacji na temat modelu zabezpieczeń w programie .NET Framework 4, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).
+Aby uzyskać więcej informacji na temat modelu zabezpieczeń w .NET Framework 4, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).
 
-## <a name="reflection-and-transparency"></a>Odbicia i przejrzystości
+## <a name="reflection-and-transparency"></a>Odbicie i przezroczystość
 
-Środowisko uruchomieniowe języka wspólnego, począwszy od programu .NET Framework 4, określa poziom przezroczystości typu lub elementu członkowskiego z kilkoma czynnikami, w tym poziom zaufania zestawu i poziom zaufania domeny aplikacji. Odbicie umożliwia <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Type.IsSecuritySafeCritical%2A>, i <xref:System.Type.IsSecurityTransparent%2A> właściwości, aby umożliwić odnajdowanie poziom przezroczystości typu. W poniższej tabeli przedstawiono prawidłowe kombinacje tych właściwości.
+Począwszy od .NET Framework 4, środowisko uruchomieniowe języka wspólnego określa poziom przezroczystości typu lub składowej z kilku czynników, w tym poziom zaufania zestawu i poziom zaufania domeny aplikacji. Odbicie zawiera <xref:System.Type.IsSecurityCritical%2A>właściwości <xref:System.Type.IsSecuritySafeCritical%2A>, i <xref:System.Type.IsSecurityTransparent%2A> umożliwiające odnajdywanie poziomu przezroczystości typu. W poniższej tabeli przedstawiono prawidłowe kombinacje tych właściwości.
 
 |Poziom zabezpieczeń|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
 |Krytyczny|`true`|`false`|`false`|
-|Safe-critical|`true`|`true`|`false`|
+|Bezpieczny-krytyczny|`true`|`true`|`false`|
 |Przezroczyste|`false`|`false`|`true`|
 
-Korzystanie z tych właściwości jest znacznie prostsze niż badanie adnotacje zabezpieczeń zestawu i jego typów, sprawdzania bieżącego poziomu zaufania i próby zduplikowania reguł w środowisku uruchomieniowym. Na przykład ten sam typ może być zabezpieczenia krytyczny po jej uruchomieniu z wiersza polecenia lub przezroczyste dla zabezpieczeń, po uruchomieniu w domenie aplikacji w trybie piaskownicy.
+Korzystanie z tych właściwości jest znacznie prostsze niż badanie adnotacji zabezpieczeń zestawu i jego typów, sprawdzanie bieżącego poziomu zaufania i próba duplikowania reguł środowiska uruchomieniowego. Na przykład ten sam typ może być krytyczny dla zabezpieczeń, gdy jest uruchamiany z wiersza polecenia lub jest przezroczysty dla zabezpieczeń, gdy jest uruchamiany w domenie aplikacji w trybie piaskownicy.
 
-Istnieją podobne właściwości na <xref:System.Reflection.MethodBase>, <xref:System.Reflection.FieldInfo>, <xref:System.Reflection.Emit.TypeBuilder>, <xref:System.Reflection.Emit.MethodBuilder>, i <xref:System.Reflection.Emit.DynamicMethod> klasy. (Inne odbicia i odbicia abstrakcje emisji, atrybuty zabezpieczeń są stosowane do skojarzonego metod, na przykład w przypadku właściwości, które są stosowane do metody dostępu właściwości).
+<xref:System.Reflection.MethodBase>Istnieją podobne właściwości w klasach <xref:System.Reflection.Emit.TypeBuilder>, <xref:System.Reflection.FieldInfo> <xref:System.Reflection.Emit.MethodBuilder>,, i <xref:System.Reflection.Emit.DynamicMethod> . (W przypadku innych abstrakcji emisji odbicia i odbicia, atrybuty zabezpieczeń są stosowane do skojarzonych metod, na przykład w przypadku właściwości, które są stosowane do dostępu do właściwości).
 
 <a name="accessingNormallyInaccessible"></a>
 
-## <a name="accessing-members-that-are-normally-inaccessible"></a>Uzyskiwanie dostępu do elementów członkowskich, które są zwykle niedostępne.
+## <a name="accessing-members-that-are-normally-inaccessible"></a>Uzyskiwanie dostępu do elementów członkowskich, które są zwykle niedostępne
 
-Użycie odbicia w celu wywołania elementów członkowskich, które są niedostępne, zgodnie z regułami dostępność środowiska uruchomieniowego języka wspólnego, kod musi otrzymać jeden dwa uprawnienia:
+Aby użyć odbicia do wyzwolenia elementów członkowskich, które są niedostępne zgodnie z regułami dostępności środowiska uruchomieniowego języka wspólnego, kod musi mieć przyznany jeden z dwóch uprawnień:
 
-- Aby umożliwić kodu do wywołania dowolnego niepubliczna składowa: kod musi mieć przyznane <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi.
+- Aby umożliwić <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> programowi Code wywoływanie niepublicznego elementu członkowskiego: kod musi być udzielony z flagą.
 
   > [!NOTE]
-  > Domyślnie zasady zabezpieczeń nie zezwala na tego uprawnienia, aby kod, który pochodzi z Internetu. To uprawnienie nigdy nie może być przyznany do kodu, który pochodzi z Internetu.
+  > Domyślnie zasady zabezpieczeń odmówią tego uprawnienia do kodu pochodzącego z Internetu. To uprawnienie nigdy nie powinno być udzielane kodowi pochodzącemu z Internetu.
 
-- Zezwalaj na kod do wywołania dowolnego niepubliczna składowa tak długo, jak zestaw uprawnień zestawu, który zawiera wywołanego elementu członkowskiego jest taka sama jak lub być podzbiorem wartości, zestaw uprawnień w zestawie, który zawiera wywoływanie kodu: Twój kod musi mieć przyznane <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagi.
+- Aby umożliwić programowi Code wywoływanie niepublicznego elementu członkowskiego, o ile zestaw uprawnień zestawu, który zawiera wywołany element członkowski, jest taki sam jak lub podzbiór, zestaw przyznany zestaw, który zawiera kod wywołujący: Kod musi być udzielony <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> z flagą.
 
-Załóżmy na przykład, można przyznać domeny aplikacji oraz uprawnienia Internet <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Flaga, a następnie uruchom aplikację internetową za pomocą dwóch zestawów, A i B.
+Załóżmy na przykład, że przyznano uprawnienia internetowe do domeny aplikacji oraz <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagę, a następnie uruchomisz aplikację internetową z dwoma zestawami, a i B.
 
-- Zestaw A umożliwia odbicia dostęp do prywatnych elementów członkowskich zestawu B, ponieważ zestaw uprawnień zestaw B nie zawiera żadnych uprawnień, które nie udzielono A.
+- Zestaw A może używać odbicia w celu uzyskania dostępu do prywatnych składowych zestawu B, ponieważ zestaw przypisań zestawu B nie zawiera żadnych uprawnień, których nie udzielono.
 
-- Zestaw, A nie można używać odbicia dostęp do prywatnych składowych zestawów .NET Framework, takich jak mscorlib.dll, ponieważ jest w pełni zaufany mscorlib.dll i dlatego ma uprawnienia, które nie zostały przyznane do zestawu A. Element <xref:System.MemberAccessException> jest zgłaszany, gdy zabezpieczenia dostępu kodu przedstawiono stosu w czasie wykonywania.
+- Zestaw A nie może używać odbicia w celu uzyskania dostępu do prywatnych elementów członkowskich zestawów .NET Framework, takich jak mscorlib. dll, ponieważ biblioteka mscorlib. dll jest w pełni zaufana i w związku z tym ma uprawnienia, które nie zostały przyznane do zestawu A. Występuje <xref:System.MemberAccessException> , gdy zabezpieczenia dostępu kodu przechodzą stos w czasie wykonywania.
 
 ## <a name="serialization"></a>Serializacja
 
-Do serializacji <xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> Flaga umożliwia pobieranie i ustawianie elementów członkowskich typów możliwych do serializacji, niezależnie od tego, w ułatwienia dostępu. To uprawnienie umożliwia kodu odnaleźć i zmienić prywatnego stanu wystąpienia. (Oprócz trwa odpowiednich uprawnień, należy określić typ [oznaczone](../../../docs/standard/attributes/applying-attributes.md) jako możliwy do serializacji w metadanych.)
+Dla serializacji, <xref:System.Security.Permissions.SecurityPermission> <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> z flagą, umożliwia pobieranie i ustawianie elementów członkowskich typu możliwego do serializacji, niezależnie od ułatwień dostępu. To uprawnienie umożliwia kod w celu odnalezienia i zmiany stanu prywatnego wystąpienia. (Oprócz przyznania odpowiednich uprawnień, typ musi być [oznaczony](../../standard/attributes/applying-attributes.md) jako możliwy do serializacji w metadanych).
 
-## <a name="parameters-of-type-methodinfo"></a>Parametry MethodInfo — typ
+## <a name="parameters-of-type-methodinfo"></a>Parametry typu MethodInfo
 
-Należy unikać pisania publiczne elementy członkowskie, które trwają <xref:System.Reflection.MethodInfo> parametrów, szczególnie w przypadku zaufanego kodu. Takie elementy Członkowskie mogą być bardziej podatne na złośliwego kodu. Na przykład, należy wziąć pod uwagę publicznej składowej w wysoce zaufanym kodem, który przyjmuje <xref:System.Reflection.MethodInfo> parametru. Przyjęto założenie, że publiczny członek pośrednio wywołuje <xref:System.Reflection.MethodBase.Invoke%2A> metody na podany parametr. Jeśli publicznej składowej nie przeprowadza kontroli niezbędnych uprawnień, wywołanie <xref:System.Reflection.MethodBase.Invoke%2A> metody zawsze powiedzie się, ponieważ system zabezpieczeń określa, czy obiekt wywołujący jest wysoce zaufane. Nawet jeśli złośliwy kod nie ma uprawnień do bezpośrednio wywołać metody, jego nadal należy więc pośrednio przez wywołanie metody publicznej składowej.
+Unikaj pisania publicznych elementów członkowskich <xref:System.Reflection.MethodInfo> , które pobierają parametry, szczególnie w przypadku kodu zaufanego. Takie składowe mogą być bardziej podatne na złośliwy kod. Rozważmy na przykład publiczną składową w wysoce zaufanym kodzie, <xref:System.Reflection.MethodInfo> który pobiera parametr. Załóżmy, że publiczna składowa pośrednio wywołuje <xref:System.Reflection.MethodBase.Invoke%2A> metodę dla podanego parametru. Jeśli publiczny element członkowski nie wykonuje wymaganych kontroli uprawnień, wywołanie <xref:System.Reflection.MethodBase.Invoke%2A> metody zawsze powiedzie się, ponieważ system zabezpieczeń określa, że obiekt wywołujący jest wysoce zaufany. Nawet jeśli złośliwy kod nie ma uprawnień do bezpośredniego wywoływania metody, można to zrobić pośrednio przez wywołanie publicznego elementu członkowskiego.
 
 ## <a name="version-information"></a>Informacje o wersji
 
-- Począwszy od programu .NET Framework 4, kod przezroczysty nie można użyć odbicia dostęp do elementów członkowskich zabezpieczenia krytyczny.
+- Począwszy od .NET Framework 4 przezroczysty kod nie może używać odbicia w celu uzyskania dostępu do elementów członkowskich o znaczeniu krytycznym.
 
-- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Flaga został wprowadzony w programie .NET Framework 2.0 z dodatkiem Service Pack 1. Wcześniejszych wersjach programu .NET Framework wymagają <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi dla kodu, który używa odbicia, aby dostęp do elementów członkowskich niepublicznych. Jest to uprawnienia, które nigdy nie może być przyznany elementowi częściowo zaufanego kodu.
+- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Flaga została wprowadzona w .NET Framework 2,0 z dodatkiem Service Pack 1. Wcześniejsze wersje .NET Framework wymagają <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi kodu, która używa odbicia w celu uzyskania dostępu do niepublicznych elementów członkowskich. Jest to uprawnienie, które nigdy nie powinno zostać przyznane do częściowo zaufanego kodu.
 
-- Począwszy od programu .NET Framework 2.0, przy użyciu odbicia w celu uzyskania informacji na temat niepublicznych typy i elementy członkowskie nie wymaga żadnych uprawnień. We wcześniejszych wersjach <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> flaga jest wymagana.
+- Począwszy od .NET Framework 2,0, używanie odbicia w celu uzyskania informacji na temat typów niepublicznych i członków nie wymaga żadnych uprawnień. We wcześniejszych wersjach, <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> z flagą jest wymagane.
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -121,5 +121,5 @@ Należy unikać pisania publiczne elementy członkowskie, które trwają <xref:S
 - [Zabezpieczenia dostępu kodu](../../../docs/framework/misc/code-access-security.md)
 - [Problemy związane z zabezpieczeniami w emisji odbicia](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [Wyświetlanie informacji o typie](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [Stosowanie atrybutów](../../../docs/standard/attributes/applying-attributes.md)
+- [Stosowanie atrybutów](../../standard/attributes/applying-attributes.md)
 - [Uzyskiwanie dostępu do atrybutów niestandardowych](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

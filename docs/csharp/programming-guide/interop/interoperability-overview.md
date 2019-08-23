@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 0414166cb4d101b9f2654824b3c5ce4b9689deff
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1342711ca17b0d2bf5122f4c749514e3b96c9ad7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588960"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921819"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Przegląd współdziałania (Przewodnik programowania w języku C#)
 W temacie opisano metody umożliwiające włączenie współdziałania kodu C# zarządzanego i kodu niezarządzanego.  
@@ -25,7 +25,7 @@ W temacie opisano metody umożliwiające włączenie współdziałania kodu C# z
  Aby uzyskać więcej informacji, zobacz Korzystanie z niezarządzanych [funkcji DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md) i [instrukcje: Użyj wywołania platformy, aby odtworzyć plik](./how-to-use-platform-invoke-to-play-a-wave-file.md)Wave.  
   
 > [!NOTE]
->  [Środowisko uruchomieniowe języka wspólnego](../../../standard/clr.md) (CLR) zarządza dostępem do zasobów systemowych. Wywoływanie niezarządzanego kodu, który znajduje się poza środowiskiem CLR, pomija ten mechanizm zabezpieczeń i w związku z tym stanowi zagrożenie bezpieczeństwa. Na przykład kod niezarządzany może wywoływać zasoby bezpośrednio w kodzie niezarządzanym, pomijając mechanizmy zabezpieczeń środowiska CLR. Aby uzyskać więcej informacji, zobacz [zabezpieczenia w programie .NET](../../../standard/security/index.md).  
+> [Środowisko uruchomieniowe języka wspólnego](../../../standard/clr.md) (CLR) zarządza dostępem do zasobów systemowych. Wywoływanie niezarządzanego kodu, który znajduje się poza środowiskiem CLR, pomija ten mechanizm zabezpieczeń i w związku z tym stanowi zagrożenie bezpieczeństwa. Na przykład kod niezarządzany może wywoływać zasoby bezpośrednio w kodzie niezarządzanym, pomijając mechanizmy zabezpieczeń środowiska CLR. Aby uzyskać więcej informacji, zobacz [zabezpieczenia w programie .NET](../../../standard/security/index.md).  
   
 ## <a name="c-interop"></a>międzyoperacyjność C++  
  Można użyć C++ międzyoperacyjności, znanego również jako tylko działa (IJW), aby otoczyć klasę C++ natywną, tak aby mogła być używana przez kod, który został C# utworzony w lub innym języku .NET Framework. W tym celu napiszesz C++ kod w celu zawinięcia NATYWNEJ biblioteki DLL lub składnika com. W przeciwieństwie do innych języków .NET Framework C++ Wizualizacja zapewnia obsługę współdziałania, która umożliwia zlokalizowany kod zarządzany i niezarządzany w tej samej aplikacji, a nawet w tym samym pliku. Następnie można skompilować C++ kod przy użyciu przełącznika kompilatora **/CLR** w celu utworzenia zestawu zarządzanego. Na koniec Dodaj odwołanie do zestawu w C# projekcie i użyj opakowanych obiektów tak samo jak w przypadku innych zarządzanych klas.  

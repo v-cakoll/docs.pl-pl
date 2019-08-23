@@ -1,5 +1,5 @@
 ---
-title: RaiseEvent — instrukcja (Visual Basic)
+title: RaiseEvent — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.RaiseEventMethod
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: 5d8fd6adf33c992341324e07bcd2ad12986bbdf2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee52b4adf893ea0926c4016fcb6a89d0010ee6ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783971"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957779"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent — Instrukcja
-Wyzwala zdarzenie zadeklarowane na poziomie modułu w obrębie klasy, formularza lub dokumentu.  
+Wyzwala zdarzenie zadeklarowane na poziomie modułu w klasie, formularzu lub dokumencie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -28,52 +28,52 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="parts"></a>Części  
  `eventname`  
- Wymagana. Nazwa zdarzenia w celu wyzwolenia.  
+ Wymagane. Nazwa zdarzenia do wyzwolenia.  
   
  `argumentlist`  
- Opcjonalna. Rozdzielana przecinkami lista zmiennych, tablic lub wyrażenia. `argumentlist` Argument musi być ujęta w nawiasy. Jeśli nie ma żadnych argumentów, nawiasy musi zostać pominięty.  
+ Opcjonalny. Rozdzielana przecinkami lista zmiennych, tablic lub wyrażeń. `argumentlist` Argument musi być ujęty w nawiasy. Jeśli nie ma żadnych argumentów, nawiasy muszą być pominięte.  
   
 ## <a name="remarks"></a>Uwagi  
- Wymagane `eventname` jest zadeklarowany Nazwa zdarzenia w module. Jest zgodna z zmiennej konwencje nazewnictwa języka Visual Basic.  
+ Wymagana `eventname` jest nazwą zdarzenia zadeklarowanego w module. Następuje Visual Basic konwencji nazewnictwa zmiennych.  
   
- Jeśli nie została zadeklarowana zdarzenia w module, w którym jest uruchamiany, wystąpi błąd. Poniższy fragment kodu ilustruje deklaracji zdarzenia i procedury, w którym zdarzenie jest wywoływane.  
+ Jeśli zdarzenie nie zostało zadeklarowane w module, w którym jest wywoływany, wystąpi błąd. Poniższy fragment kodu ilustruje deklarację zdarzenia i procedurę, w której zdarzenie jest zgłaszane.  
   
  [!code-vb[VbVbalrEvents#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#37)]  
   
- Nie można użyć `RaiseEvent` aby wywołać zdarzenia, które nie są jawnie zadeklarowane w module. Na przykład dziedziczą wszystkie formularze <xref:System.Windows.Forms.Control.Click> zdarzenie z <xref:System.Windows.Forms.Form?displayProperty=nameWithType>, nie może zostać wywołane, za pomocą `RaiseEvent` w postaci pochodnych. Jeśli zadeklarujesz `Click` zdarzenia w module formularza zasłania jego własnej formularza <xref:System.Windows.Forms.Control.Click> zdarzeń. Nadal można wywołać formularza <xref:System.Windows.Forms.Control.Click> zdarzeń przez wywołanie metody <xref:System.Windows.Forms.Control.OnClick%2A> metody.  
+ Nie można użyć `RaiseEvent` do wywołania zdarzeń, które nie są jawnie zadeklarowane w module. Na przykład wszystkie formularze dziedziczą <xref:System.Windows.Forms.Control.Click> zdarzenie z <xref:System.Windows.Forms.Form?displayProperty=nameWithType>, ale nie mogą być zgłaszane przy `RaiseEvent` użyciu w formularzu pochodnym. Jeśli zadeklarujesz `Click` zdarzenie w module formularza, zasłania ono własne <xref:System.Windows.Forms.Control.Click> wydarzenie formularza. Nadal można wywołać <xref:System.Windows.Forms.Control.Click> zdarzenie formularza, <xref:System.Windows.Forms.Control.OnClick%2A> wywołując metodę.  
   
- Domyślnie zdarzenia, zdefiniowany w języku Visual Basic zgłasza swoich programów obsługi zdarzeń w kolejności, że nawiązywane są połączenia. Ponieważ zdarzenia może mieć `ByRef` parametrów procesu, który łączy z opóźnieniem może pojawić się parametry, które zostały zmienione przez wcześniejsze procedury obsługi zdarzeń. Po wykonaniu procedury obsługi zdarzeń, formant zostaje zwrócony do podprocedury, który spowodował zdarzenie.  
-  
-> [!NOTE]
->  Udostępnione innym zdarzenia nie powinien być wywoływany w ramach konstruktora klasy, w którym są one zgłoszone. Mimo że takie zdarzenia nie powodują błędy czasu wykonywania, ich może nie być przechwycony przez program obsługi skojarzone ze zdarzeniem. Użyj `Shared` modyfikator, aby utworzyć udostępniony zdarzenie, jeśli musisz wywołać zdarzenie z konstruktora.  
+ Domyślnie zdarzenie zdefiniowane w Visual Basic wywołuje obsługę zdarzeń w kolejności, w jakiej są nawiązywane połączenia. Ponieważ zdarzenia mogą mieć `ByRef` parametry, proces, który nawiązuje połączenie, może odbierać parametry, które zostały zmienione przez wcześniejszą procedurę obsługi zdarzeń. Po wykonaniu obsługi zdarzeń sterowanie jest zwracane do procedury podrzędnej, która wywołała zdarzenie.  
   
 > [!NOTE]
->  Możesz zmienić domyślne zachowanie zdarzenia, definiując zdarzenia niestandardowego. W przypadku zdarzeń niestandardowych instrukcja `RaiseEvent` wywołuje metodę dostępu zdarzenia `RaiseEvent`. Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz artykuł [Instrukcja Event](../../../visual-basic/language-reference/statements/event-statement.md)  
+> Nie można podwyższyć poziomu zdarzeń nieudostępnionych w konstruktorze klasy, w której są zadeklarowane. Chociaż takie zdarzenia nie powodują błędów w czasie wykonywania, mogą one nie zostać przechwycone przez skojarzone programy obsługi zdarzeń. Użyj modyfikatora, `Shared` aby utworzyć zdarzenie udostępnione, jeśli trzeba zgłosić zdarzenie z konstruktora.  
+  
+> [!NOTE]
+> Domyślne zachowanie zdarzeń można zmienić przez zdefiniowanie niestandardowego zdarzenia. W przypadku zdarzeń niestandardowych instrukcja `RaiseEvent` wywołuje metodę dostępu zdarzenia `RaiseEvent`. Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz artykuł [Instrukcja Event](../../../visual-basic/language-reference/statements/event-statement.md)  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto zdarzeń odliczanie sekund od 10 do 0. Kod ilustruje kilka powiązanych zdarzeń do metod, właściwości i instrukcji, w tym `RaiseEvent` instrukcji.  
+ Poniższy przykład używa zdarzeń do zliczenia w dół sekund od 10 do 0. Kod ilustruje kilka metod, właściwości i instrukcji związanych ze zdarzeniami, w tym `RaiseEvent` instrukcji.  
   
- Klasa, która wywołuje zdarzenie, jest źródłem zdarzeń i metody, które przetwarzają zdarzenia są procedury obsługi zdarzeń. Źródło zdarzenia może mieć wielu obsług do zdarzeń, które generuje. Jeśli klasa wywołuje zdarzenie, że zdarzenie jest zgłaszane w każdej klasy, który został wybrany do obsługi zdarzeń dla tego wystąpienia obiektu.  
+ Klasa, która wywołuje zdarzenie, jest źródłem zdarzenia, a metody, które przetwarzają zdarzenie, są procedurami obsługi zdarzeń. Źródło zdarzenia może mieć wiele programów obsługi dla generowanych zdarzeń. Gdy Klasa zgłasza zdarzenie, to zdarzenie jest zgłaszane dla każdej klasy, która została wybrana do obsługi zdarzeń dla tego wystąpienia obiektu.  
   
- W przykładzie użyto również formularza (`Form1`) za pomocą przycisku (`Button1`) i pole tekstowe (`TextBox1`). Po kliknięciu przycisku, pierwszego pola tekstowego wyświetla odliczania od 10 do 0 sekund. Po upływie pełnoetatowi (10 sekund), pierwszego pola tekstowego wyświetla "Gotowe".  
+ W przykładzie używa się również formularza (`Form1`) z przyciskiem (`Button1`) i polem tekstowym (`TextBox1`). Po kliknięciu przycisku, pierwsze pole tekstowe Wyświetla odliczanie od 10 do 0 sekund. Gdy upłynął pełny czas (10 sekund), pierwsze pole tekstowe wyświetla "gotowe".  
   
- Kod `Form1` określa stany początkowych i końcowych formularza. Zawiera on również kod wykonywany, gdy zdarzenia są wywoływane.  
+ Kod `Form1` określający początkowe i końcowe Stany formularza. Zawiera również kod wykonywany, gdy zdarzenia są zgłaszane.  
   
- Aby użyć tego przykładu, otwórz nowy projekt aplikacji Windows, Dodaj przycisk o nazwie `Button1` i pole tekstowe o nazwie `TextBox1` w formularzu głównym o nazwie `Form1`. Następnie kliknij prawym przyciskiem myszy formularz i kliknij przycisk **Wyświetl kod** można otworzyć edytora kodu.  
+ Aby użyć tego przykładu, Otwórz nowy projekt aplikacji systemu Windows, Dodaj przycisk o `Button1` nazwie i pole tekstowe o `TextBox1` nazwie do formularza głównego o nazwie `Form1`. Następnie kliknij prawym przyciskiem myszy formularz i kliknij polecenie **Wyświetl kod** , aby otworzyć Edytor kodu.  
   
- Dodaj `WithEvents` zmiennej do sekcji deklaracji `Form1` klasy.  
+ Dodaj zmienną do sekcji `Form1` deklaracji klasy. `WithEvents`  
   
  [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Przykład  
- Dodaj następujący kod do kodu `Form1`. Zamień zduplikowane procedur, które mogą występować, takich jak `Form_Load`, lub `Button_Click`.  
+ Dodaj następujący kod do kodu dla `Form1`. Zastąp wszystkie zduplikowane procedury, takie jak `Form_Load`lub. `Button_Click`  
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
- Naciśnij klawisz F5, aby uruchomić poprzedniego przykładu, a następnie kliknij przycisk **Start**. Pierwsze pole tekstowe rozpoczyna odliczanie sekund. Po upływie pełnoetatowi (10 sekund), pierwszego pola tekstowego wyświetla "Gotowe".  
+ Naciśnij klawisz F5, aby uruchomić poprzedni przykład, a następnie kliknij przycisk zatytułowany **Uruchom**. Pierwsze pole tekstowe zaczyna przeliczać sekundy w dół. Gdy upłynął pełny czas (10 sekund), pierwsze pole tekstowe wyświetla "gotowe".  
   
 > [!NOTE]
->  `My.Application.DoEvents` Metody nie przetwarza zdarzeń w taki sam sposób jak formularz. Aby zezwolić na formularzu do obsługi zdarzeń bezpośrednio, możesz użyć wielowątkowości. Aby uzyskać więcej informacji, zobacz [zarządzana wątkowość](../../../standard/threading/index.md).  
+> `My.Application.DoEvents` Metoda nie przetwarza zdarzeń w taki sam sposób jak w przypadku formularza. Aby umożliwić bezpośrednie obsługiwanie zdarzeń przez formularz, można użyć wielowątkowości. Aby uzyskać więcej informacji, zobacz sekcję [zarządzane wątki](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

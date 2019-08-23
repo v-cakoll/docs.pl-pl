@@ -16,42 +16,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb3aca0713b8b11bdfaa23bf33c8e1a0b302e272
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b25c47e101ad0fb8e8cbdbb2718a41c9be6c0c22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606540"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931982"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum, interfejs
 
-Służy jako abstrakcyjny interfejs podstawowy dla wyliczenia, które są używane przez aplikację do debugowania.  
+Służy jako abstrakcyjny interfejs podstawowy dla modułów wyliczających, które są używane przez aplikację do debugowania.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Clone, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Tworzy kopię `ICorDebugEnum` obiektu.|  
+|[Clone, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Tworzy kopię tego `ICorDebugEnum` obiektu.|  
 |[GetCount, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Pobiera liczbę elementów w wyliczeniu.|  
 |[Reset, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Przenosi kursor do początku wyliczenia.|  
-|[Skip, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Przesuwa kursor do przodu w wyliczeniu przez określoną liczbę elementów.|  
+|[Skip, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Przenosi kursor do przodu w wyliczeniu o określoną liczbę elementów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Następujące moduły wyliczające pochodzić od `ICorDebugEnum`:  
+ Następujące moduły wyliczające pochodzą z `ICorDebugEnum`:  
   
-- "ICorDebugAppDomainEnum"  
+- ICorDebugAppDomainEnum  
   
-- Icordebugassemblyenum "—"  
+- ICorDebugAssemblyEnum  
   
 - [ICorDebugBlockingObjectEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
   
-- Icordebugbreakpointenum "—"  
+- ICorDebugBreakpointEnum  
   
-- Icordebugchainenum "—"  
+- ICorDebugChainEnum  
   
-- "ICorDebugCodeEnum"  
+- ICorDebugCodeEnum  
   
-- "ICorDebugErrorInfoEnum"  
+- ICorDebugErrorInfoEnum  
   
 - [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
   
@@ -65,33 +65,33 @@ Służy jako abstrakcyjny interfejs podstawowy dla wyliczenia, które są używa
   
 - [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
   
-- Icordebugmoduleenum "—"  
+- ICorDebugModuleEnum  
   
-- "ICorDebugObjectEnum"  
+- ICorDebugObjectEnum  
   
-- "ICorDebugProcessEnum"  
+- ICorDebugProcessEnum  
   
-- "ICorDebugStepperEnum"  
+- ICorDebugStepperEnum  
   
-- "ICorDebugThreadEnum"  
+- ICorDebugThreadEnum  
   
-- "ICorDebugTypeEnum"  
+- ICorDebugTypeEnum  
   
-- "ICorDebugValueEnum"  
+- ICorDebugValueEnum  
   
 - [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
   
 > [!NOTE]
->  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
+> Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

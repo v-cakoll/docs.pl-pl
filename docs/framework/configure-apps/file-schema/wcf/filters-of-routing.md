@@ -2,20 +2,20 @@
 title: <filters> dla <routing>
 ms.date: 03/30/2017
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-ms.openlocfilehash: 8b2c735a19c4cece16dcb77e3ec548eb2d39ec18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba60958ad33b46b40285f3f70001273bb3af3a63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701037"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925618"
 ---
-# <a name="filters-of-routing"></a>\<Filtry > z \<routingu >
+# <a name="filters-of-routing"></a>\<Filtry > \<routingu >
 
-Reprezentuje sekcję konfiguracji określającą zestaw filtrów routingu, które określają typ obiektu programu Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> używanego podczas oceniania wiadomości przychodzących.
+Reprezentuje sekcję konfiguracji określającą zestaw filtrów routingu, które określają typ Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> , który ma być używany podczas oceniania wiadomości przychodzących.
 
-[**\<system.serviceModel>**](system-servicemodel.md)   
-&nbsp;&nbsp;[**\<routing>**](routing.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Filtry >**
+[ **\<system.serviceModel>** ](system-servicemodel.md)   
+&nbsp;&nbsp;[ **\<> routingu**](routing.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Filtry >**
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,13 +44,13 @@ Brak
 
 |     | Opis |
 | --- | ----------- |
-| [**\<filter>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Zawiera filtr routingu, który określa typ programu Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> będą używane podczas oceniania wiadomości przychodzących. |
+| [ **\<Filtr >** ](filter.md) | Zawiera filtr routingu, który określa typ Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> , który będzie używany podczas oceniania wiadomości przychodzących. |
 
 ### <a name="parent-elements"></a>Elementy nadrzędne
 
 |     | Opis |
 | --- | ----------- |
-| [**\<routing>**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Reprezentuje sekcję konfiguracji określającą zestaw filtrów routingu, które określają typ obiektu programu Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> używanego podczas oceniania wiadomości przychodzących, jak również routingu definiujące miejsce docelowe punktów końcowych do tabel wysyłanie komunikatów do gdy kryteria filtru. |
+| [ **\<> routingu**](routing.md) | Reprezentuje sekcję konfiguracji określającą zestaw filtrów routingu, które określają typ Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> , który ma być używany podczas oceniania wiadomości przychodzących, a także tabele routingu, które definiują docelowe punkty końcowe Wysyłaj komunikaty do, gdy filtr jest zgodny. |
 
 ## <a name="see-also"></a>Zobacz także
 

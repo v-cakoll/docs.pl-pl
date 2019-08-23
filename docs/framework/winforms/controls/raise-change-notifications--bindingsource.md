@@ -13,23 +13,23 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], using with BindingSource
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7fa2cf51-c09f-4375-adf0-e36c5617f099
-ms.openlocfilehash: 6a622e64076d2ed2a073dc0f0e55204d1767cfd7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7dc640f272226da650a63b1a3434822d21053b48
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591824"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968284"
 ---
 # <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>Instrukcje: wywoływanie powiadomień o zmianie za pomocą składnika BindingSource i interfejsu INotifyPropertyChanged
-<xref:System.Windows.Forms.BindingSource> Składnika automatycznie wykryje zmiany w źródle danych, gdy typ zawarte w implementuje źródło danych <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu i zgłasza <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> zdarzenia po zmianie wartości właściwości. Jest to przydatne, ponieważ formanty powiązane z <xref:System.Windows.Forms.BindingSource> następnie automatycznie aktualizuje jak zmiana wartości źródła danych.  
+Składnik automatycznie wykryje zmiany w źródle danych, gdy typ zawarty w źródle danych <xref:System.ComponentModel.INotifyPropertyChanged> implementuje interfejs i zgłasza <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> zdarzenia, gdy wartość właściwości zostanie zmieniona. <xref:System.Windows.Forms.BindingSource> Jest to przydatne, ponieważ formanty powiązane z <xref:System.Windows.Forms.BindingSource> , zostaną następnie automatycznie zaktualizowane w miarę zmiany wartości źródła danych.  
   
 > [!NOTE]
->  Jeśli dane źródłowe implementuje <xref:System.ComponentModel.INotifyPropertyChanged> i wykonywania operacji asynchronicznych, nie powinna dokonywać zmian w źródle danych w wątku tła. Zamiast tego należy odczytać danych z wątku w tle i scalania danych na liście w wątku interfejsu użytkownika.  
+> Jeśli źródło danych implementuje <xref:System.ComponentModel.INotifyPropertyChanged> i wykonujesz operacje asynchroniczne, nie należy wprowadzać zmian w źródle danych w wątku w tle. Zamiast tego należy odczytywać dane w wątku w tle i scalać dane do listy w wątku interfejsu użytkownika.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu demonstruje proste wdrażanie <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu. Pokazuje także sposób, w jaki <xref:System.Windows.Forms.BindingSource> automatycznie przekazuje zmian źródła danych do granicy decyduje o <xref:System.Windows.Forms.BindingSource> jest powiązany z listy <xref:System.ComponentModel.INotifyPropertyChanged> typu.  
+ Poniższy przykład kodu demonstruje prostą implementację <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu. Pokazuje również, <xref:System.Windows.Forms.BindingSource> jak automatycznie przekazuje źródło danych do kontrolki powiązanej, <xref:System.Windows.Forms.BindingSource> gdy jest powiązany <xref:System.ComponentModel.INotifyPropertyChanged> z listą typu.  
   
- Jeśli używasz `CallerMemberName` atrybutu wywołania `NotifyPropertyChanged` metody nie trzeba określić nazwę właściwości jako argument ciągu. Aby uzyskać więcej informacji, zobacz [informacje o wywołującym (C#)](../../../csharp/programming-guide/concepts/caller-information.md) lub [informacje o wywołującym (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md).  
+ Jeśli używasz `CallerMemberName` atrybutu, wywołania `NotifyPropertyChanged` do metody nie muszą określać nazwy właściwości jako argumentu ciągu. Aby uzyskać więcej informacji, zobacz [Informacje oC#wywołującym ()](../../../csharp/programming-guide/concepts/caller-information.md) lub [Informacje o wywołującym (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
  [!code-csharp[System.ComponentModel.IPropertyChangeExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/CS/Form1.cs#1)]
  [!code-vb[System.ComponentModel.IPropertyChangeExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/VB/Form1.vb#1)]  
@@ -37,10 +37,10 @@ ms.locfileid: "65591824"
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów systemu, dane systemowe i System.Drawing oraz przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów system, system. Data, system. Drawing i system. Windows. Forms.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ComponentModel.INotifyPropertyChanged>
 - [BindingSource, składnik](bindingsource-component.md)
-- [Instrukcje: Wywoływanie powiadomień o zmianie za BindingSource Resetitem](how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md)
+- [Instrukcje: Zgłoś powiadomienia o zmianie za pomocą metody BindingSource ResetItem](how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md)

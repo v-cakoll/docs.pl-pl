@@ -14,15 +14,15 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 2737d9494fb4cd2f0cfaec4da1bca69003c6bad7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3635d52532789133a345d9a9228efae869c8c223
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753747"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945617"
 ---
 # <a name="comments-in-code-visual-basic"></a>Komentarze w kodzie (Visual Basic)
-Czytając przykłady kodu, często napotykasz symbol komentarza (`'`). Ten symbol informuje kompilator języka Visual Basic, aby zignorować tekst następujący, lub *komentarz*. Komentarze to krótkie notatki wyjaśniające, dodane do kodu, aby ułatwić życie innym osobom, które go czytają.  
+Podczas odczytywania przykładów kodu często występuje symbol komentarza (`'`). Ten symbol nakazuje kompilatorowi Visual Basic ignorowanie tekstu po nim lub *komentarz*. Komentarze to krótkie notatki wyjaśniające, dodane do kodu, aby ułatwić życie innym osobom, które go czytają.  
   
  Dobrą praktyką programowania jest rozpoczynanie wszystkich procedur od krótkiego komentarza, który opisuje charakterystykę funkcjonalną procedury (co dana procedura robi). Korzysta z tego i sam programista, i wszyscy inni, którzy czytają kod. Szczegóły dotyczące implementacji (jak procedura coś robi) należy oddzielić od komentarzy opisujących charakterystyki funkcjonalne. Gdy w opisie dołączasz szczegóły dotyczące implementacji, pamiętaj, aby je zaktualizować, gdy aktualizujesz funkcję.  
   
@@ -35,7 +35,7 @@ Czytając przykłady kodu, często napotykasz symbol komentarza (`'`). Ten symbo
  [!code-vb[VbVbcnConventions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#17)]  
   
 ## <a name="commenting-guidelines"></a>Wytyczne komentowania  
- Poniższa tabela zawiera ogólne wytyczne na temat tego, jakie rodzaje komentarzy mogą poprzedzać sekcję kodu. Są to propozycje; Visual Basic nie wymusza zasad dodawania komentarzy. Pisz to, co się najlepiej sprawdza, zarówno dla ciebie, jak i dla każdego, kto czyta twój kod.  
+ Poniższa tabela zawiera ogólne wytyczne na temat tego, jakie rodzaje komentarzy mogą poprzedzać sekcję kodu. Są to sugestie: Visual Basic nie wymusza reguł dodawania komentarzy. Pisz to, co się najlepiej sprawdza, zarówno dla ciebie, jak i dla każdego, kto czyta twój kod.  
   
 |||  
 |---|---|  
@@ -54,15 +54,15 @@ Czytając przykłady kodu, często napotykasz symbol komentarza (`'`). Ten symbo
   
 - Komentarze nie mogą występować w tym samym wierszu, jeśli jest on kontynuowany w następnym.  
   
- Można dodawać lub usuwać symbole komentarza dla bloku kodu, zaznaczając jeden lub więcej wierszy kodu i wybierając **komentarz** (![przycisk komentarza Visual Basic w programie Visual Studio.](./media/comments-in-code/visual-basic-comment-button.gif)) i **Usuń komentarz**  (![Przycisk Usuń komentarz z Visual Basic w programie Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) przyciski na **Edytuj** paska narzędzi.  
+ Możesz dodawać lub usuwać symbole komentarzy dla bloku kodu, wybierając jeden lub więcej wierszy kodu i wybierając **komentarz** ![(przycisk Visual Basic komentarz](./media/comments-in-code/visual-basic-comment-button.gif)w Visual Studio) i Usuń **komentarz** (![Wizualizacja Przycisk usuwania komentarza podstawowego w programie Visual Studio. ) przyciski na pasku narzędzi **Edycja.** ](./media/comments-in-code/visual-basic-uncomment-button.gif)  
   
 > [!NOTE]
->  Można również dodawać komentarze do kodu, poprzedzając tekst między znakami dwóch `REM` — słowo kluczowe. Jednak `'` symboli i **komentarz**/**Odkomentuj** przyciski są łatwiejsze w użyciu i wymagają mniej miejsca i pamięci.  
+> Możesz również dodać komentarze do kodu, poprzedzając tekst `REM` słowem kluczowym. Jednak symbole i **Komentarze komentarzy**/są łatwiejsze do użycia i wymagają mniej miejsca i pamięci. `'`  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Podstawowe Intuicji - dokumentowanie kodu przy użyciu komentarzy XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
-- [Instrukcje: Tworzenie dokumentacji XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Podstawowe intuicji — dokumentowanie kodu z komentarzami XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
+- [Instrukcje: Utwórz dokumentację XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)
 - [Konwencje dotyczące struktury programów i kodu](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [REM, instrukcja](../../../visual-basic/language-reference/statements/rem-statement.md)

@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 786094bc426066b45fd1a214950ec1e030f0b731
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1b0b947b97eac52e06626d2ed6d47bb9700147
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880077"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949461"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Parametry połączenia i pliki konfiguracji
-Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do problemów konserwacji i luk w zabezpieczeniach. Parametry połączenia nieszyfrowanego kompilowane do kodu źródłowego aplikacji można przeglądać za pomocą [Ildasm.exe (dezasembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) narzędzia. Ponadto jeśli nigdy nie zmieni się parametry połączenia, aplikacji musi być ponownie kompilowana. Z tego względu zalecamy przechowywanie parametrów połączenia w pliku konfiguracji aplikacji.  
+Osadzanie parametrów połączenia w kodzie aplikacji może prowadzić do luk w zabezpieczeniach i problemów z konserwacją. Nieszyfrowane parametry połączenia skompilowane w kodzie źródłowym aplikacji można wyświetlić za pomocą narzędzia [Ildasm. exe (Il dezasembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) . Ponadto w przypadku zmiany parametrów połączenia należy ponownie skompilować aplikację. Z tego powodu zalecamy przechowywanie parametrów połączenia w pliku konfiguracyjnym aplikacji.  
   
 ## <a name="working-with-application-configuration-files"></a>Praca z plikami konfiguracji aplikacji  
- Pliki konfiguracyjne aplikacji zawierają ustawienia, które są specyficzne dla określonej aplikacji. Na przykład aplikacja ASP.NET może mieć jedną lub więcej **web.config** plików i aplikacji Windows może mieć opcjonalną **app.config** pliku. Pliki konfiguracji udostępniać typowe elementy, chociaż nazwę i lokalizację pliku konfiguracji różnią się w zależności od aplikacji hosta.  
+ Pliki konfiguracji aplikacji zawierają ustawienia specyficzne dla określonej aplikacji. Na przykład aplikacja ASP.NET może mieć jeden lub więcej plików **Web. config** , a aplikacja systemu Windows może mieć opcjonalny plik **App. config** . Pliki konfiguracji współużytkują wspólne elementy, chociaż nazwa i lokalizacja pliku konfiguracji różnią się w zależności od hosta aplikacji.  
   
-### <a name="the-connectionstrings-section"></a>ConnectionStrings sekcji  
- Parametry połączenia mogą być przechowywane jako pary klucz/wartość w **connectionStrings** części **konfiguracji** element pliku konfiguracji aplikacji. Elementy podrzędne zawierają **Dodaj**, **wyczyść**, i **Usuń**.  
+### <a name="the-connectionstrings-section"></a>Sekcja connectionStrings  
+ Parametry połączenia mogą być przechowywane jako pary klucz/wartość w sekcji **connectionStrings** elementu **konfiguracji** w pliku konfiguracyjnym aplikacji. Elementy podrzędne obejmują **Dodawanie**, **czyszczenie**i **usuwanie**.  
   
- Poniższy fragment plik konfiguracji pokazuje schematu i składni, do przechowywania parametrów połączenia. **Nazwa** atrybut jest nazwą, która zapewnia do unikatowego identyfikowania parametry połączenia, dzięki czemu mogą być pobierane w czasie wykonywania. **ProviderName** to niezmienna Nazwa dostawcy danych .NET Framework, który jest zarejestrowany w pliku machine.config.  
+ Poniższy fragment pliku konfiguracji ilustruje schemat i składnię przechowywania parametrów połączenia. Atrybut **name** jest udostępnianą nazwą, aby jednoznacznie identyfikować parametry połączenia, aby można było ją pobrać w czasie wykonywania. **ProviderName** jest niezmienną nazwą dostawcy danych .NET Framework, która jest zarejestrowana w pliku Machine. config.  
   
 ```xml  
 <?xml version='1.0' encoding='utf-8'?>  
@@ -36,12 +36,12 @@ Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do pr
 ```  
   
 > [!NOTE]
->  Możesz zapisać części ciągu połączenia w pliku konfiguracji i używać <xref:System.Data.Common.DbConnectionStringBuilder> klasy do jego wykonania w czasie wykonywania. Jest to przydatne w scenariuszach, w których nie znasz elementy ciągu połączenia wcześniej, lub gdy nie chcesz zapisać poufnych informacji w pliku konfiguracji. Aby uzyskać więcej informacji, zobacz [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+> Możesz zapisać część parametrów połączenia w pliku konfiguracji i użyć <xref:System.Data.Common.DbConnectionStringBuilder> klasy, aby ukończyć ją w czasie wykonywania. Jest to przydatne w scenariuszach, w których nie są znane elementy parametrów połączenia przed czasem, lub jeśli nie chcesz zapisywać poufnych informacji w pliku konfiguracyjnym. Aby uzyskać więcej informacji, zobacz [konstruktory parametrów połączenia](../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
-### <a name="using-external-configuration-files"></a>Za pomocą plików konfiguracji zewnętrznego  
- Konfiguracja zewnętrzna pliki są oddzielne pliki, które zawierają fragmenty składające się z jednej sekcji pliku konfiguracji. Plik konfiguracyjny zewnętrznych następnie odwołuje się to główny plik konfiguracji. Przechowywanie **connectionStrings** sekcji w pliku fizycznie oddzielnymi jest przydatne w sytuacjach, w której parametry połączenia można edytować po wdrożeniu aplikacji. Na przykład standardowe zachowanie programu ASP.NET jest ponowne uruchomienie domenę aplikacji, gdy zmodyfikowane pliki konfiguracyjne, które powoduje utratę informacji o stanie. Modyfikowanie pliku konfiguracji zewnętrznego nie spowoduje jednak ponowne uruchomienie aplikacji. Pliki konfiguracji zewnętrznych nie są ograniczone do platformy ASP.NET; one może również przez aplikacje Windows. Ponadto zabezpieczenia dostępu do pliku i uprawnienia może służyć do ograniczania dostępu do plików zewnętrznych konfiguracji. Praca z plikami konfiguracji zewnętrznych w czasie wykonywania jest niewidoczna i wymaga bez kodowania.  
+### <a name="using-external-configuration-files"></a>Używanie zewnętrznych plików konfiguracji  
+ Zewnętrzne pliki konfiguracji to oddzielne pliki, które zawierają fragment pliku konfiguracji składający się z jednej sekcji. Plik konfiguracji zewnętrznej jest następnie przywoływany przez główny plik konfiguracji. Przechowywanie sekcji **connectionStrings** w fizycznie osobnym pliku jest przydatne w sytuacjach, w których parametry połączenia mogą być edytowane po wdrożeniu aplikacji. Na przykład standardowe zachowanie ASP.NET polega na ponownym uruchomieniu domeny aplikacji po zmodyfikowaniu plików konfiguracji, co spowoduje utratę informacji o stanie. Jednak modyfikowanie zewnętrznego pliku konfiguracji nie powoduje ponownego uruchomienia aplikacji. Zewnętrzne pliki konfiguracji nie są ograniczone do ASP.NET; mogą być również używane przez aplikacje systemu Windows. Ponadto zabezpieczenia dostępu do plików i uprawnienia mogą służyć do ograniczania dostępu do zewnętrznych plików konfiguracji. Praca z zewnętrznymi plikami konfiguracji w czasie wykonywania jest niewidoczna i nie wymaga specjalnego kodowania.  
   
- Aby przechowywać parametry połączenia w pliku konfiguracji zewnętrznej, należy utworzyć oddzielny plik, zawierający tylko **connectionStrings** sekcji. Nie dołączaj żadnych dodatkowych elementów, sekcji lub atrybutów. Ten przykład przedstawia składnię plik konfiguracji zewnętrznego.  
+ Aby przechowywać parametry połączenia w zewnętrznym pliku konfiguracji, należy utworzyć oddzielny plik, który zawiera tylko sekcję **connectionStrings** . Nie dołączaj żadnych dodatkowych elementów, sekcji lub atrybutów. Ten przykład pokazuje składnię zewnętrznego pliku konfiguracji.  
   
 ```xml  
 <connectionStrings>  
@@ -51,7 +51,7 @@ Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do pr
 </connectionStrings>  
 ```  
   
- W pliku konfiguracji aplikacji głównej, użyj **configSource** atrybutu, aby określić w pełni kwalifikowaną nazwę i lokalizację pliku zewnętrznego. W tym przykładzie odwołuje się do pliku zewnętrznego konfiguracji o nazwie `connections.config`.  
+ W pliku konfiguracji aplikacji głównej należy użyć atrybutu **configSource** , aby określić w pełni kwalifikowaną nazwę i lokalizację pliku zewnętrznego. Ten przykład odnosi się do zewnętrznego pliku konfiguracji `connections.config`o nazwie.  
   
 ```xml  
 <?xml version='1.0' encoding='utf-8'?>  
@@ -61,50 +61,50 @@ Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do pr
 ```  
   
 ## <a name="retrieving-connection-strings-at-run-time"></a>Pobieranie parametrów połączenia w czasie wykonywania  
- .NET Framework 2.0 wprowadzono nowe klasy w <xref:System.Configuration> przestrzeni nazw w celu uproszczenia podczas pobierania parametrów połączenia z plików konfiguracji w czasie wykonywania. Według nazwy lub nazwa dostawcy, można programowo pobrać parametry połączenia.  
+ W .NET Framework 2,0 wprowadzono nowe klasy w <xref:System.Configuration> przestrzeni nazw, aby uprościć pobieranie parametrów połączenia z plików konfiguracji w czasie wykonywania. Można programowo pobrać parametry połączenia według nazwy lub nazwy dostawcy.  
   
 > [!NOTE]
->  **Machine.config** plik zawiera także **connectionStrings** sekcję, która zawiera parametry połączenia używane przez program Visual Studio. Podczas pobierania parametrów połączenia, nazwa dostawcy z **app.config** pliku w aplikacji Windows, parametry połączenia w **machine.config** uzyskiwanie pierwszezaładowane,anastępniepozycje**app.config**. Dodawanie **wyczyść** natychmiast po **connectionStrings** elementu usuwa wszystkie odziedziczone odwołania ze struktury danych w pamięci, tak aby tylko parametry połączenia zdefiniowane w lokalnym **app.config** pliku są traktowane jako.  
+> Plik **Machine. config** zawiera również sekcję **connectionStrings** , która zawiera parametry połączenia używane przez program Visual Studio. Podczas pobierania parametrów połączenia według nazwy dostawcy z pliku **App. config** w aplikacji systemu Windows, w pierwszej kolejności zostaną załadowane parametry połączenia w **Machine. config** , a następnie wpisy w **pliku App. config**. Dodanie **Clear** zaraz po elemencie **connectionStrings** usuwa wszystkie Odziedziczone odwołania ze struktury danych w pamięci, dzięki czemu są brane pod uwagę tylko parametry połączenia zdefiniowane w lokalnym pliku **App. config** .  
   
-### <a name="working-with-the-configuration-classes"></a>Praca z klas konfiguracji  
- Począwszy od programu .NET Framework 2.0, <xref:System.Configuration.ConfigurationManager> jest używany podczas pracy z plikami konfiguracji na komputerze lokalnym, zastępując przestarzałego <xref:System.Configuration.ConfigurationSettings>. <xref:System.Web.Configuration.WebConfigurationManager> Służy do pracy z plikami konfiguracji platformy ASP.NET. Jest przeznaczona do pracy z plikami konfiguracji na serwerze sieci Web i umożliwia dostęp programistyczny do sekcji w pliku konfiguracji, takich jak **system.web**.  
+### <a name="working-with-the-configuration-classes"></a>Praca z klasami konfiguracji  
+ Począwszy od .NET Framework 2,0, <xref:System.Configuration.ConfigurationManager> jest używany podczas pracy z plikami konfiguracyjnymi na komputerze lokalnym, zastępując <xref:System.Configuration.ConfigurationSettings>przestarzałe. <xref:System.Web.Configuration.WebConfigurationManager>służy do pracy z plikami konfiguracji ASP.NET. Jest przeznaczony do pracy z plikami konfiguracyjnymi na serwerze sieci Web i umożliwia programowy dostęp do sekcji pliku konfiguracji, takich jak **System. Web**.  
   
 > [!NOTE]
->  Uzyskiwanie dostępu do plików konfiguracji w czasie wykonywania wymaga udzielanie uprawnień do obiektu wywołującego wymagane uprawnienia zależą od typu aplikacji, pliku konfiguracji i lokalizacji. Aby uzyskać więcej informacji, zobacz [przy użyciu klas konfiguracji](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100)) i <xref:System.Web.Configuration.WebConfigurationManager> dla aplikacji ASP.NET i <xref:System.Configuration.ConfigurationManager> dla aplikacji Windows.  
+> Uzyskiwanie dostępu do plików konfiguracji w czasie wykonywania wymaga udzielenia uprawnień dla obiektu wywołującego; wymagane uprawnienia są zależne od typu aplikacji, pliku konfiguracji i lokalizacji. Aby uzyskać więcej informacji, zobacz [Korzystanie z klas konfiguracji](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100)) i <xref:System.Web.Configuration.WebConfigurationManager> aplikacji ASP.NET oraz <xref:System.Configuration.ConfigurationManager> dla aplikacji systemu Windows.  
   
- Możesz użyć <xref:System.Configuration.ConnectionStringSettingsCollection> można pobrać parametry połączenia z plików konfiguracji aplikacji. Zawiera on zbiór <xref:System.Configuration.ConnectionStringSettings> obiektów, z których każdy reprezentuje jeden wpis **connectionStrings** sekcji. Jego właściwości są mapowane na atrybuty ciągu połączenia, dzięki czemu możesz pobrać parametry połączenia, określając nazwę lub nazwę dostawcy.  
+ Możesz użyć, <xref:System.Configuration.ConnectionStringSettingsCollection> aby pobrać parametry połączenia z plików konfiguracji aplikacji. Zawiera kolekcję <xref:System.Configuration.ConnectionStringSettings> obiektów, z których każdy reprezentuje pojedynczy wpis w sekcji **connectionStrings** . Jego właściwości są mapowane na atrybuty parametrów połączenia, co pozwala na pobranie parametrów połączenia przez określenie nazwy lub nazwy dostawcy.  
   
 |Właściwość|Opis|  
 |--------------|-----------------|  
-|<xref:System.Configuration.ConnectionStringSettings.Name%2A>|Nazwa parametrów połączenia. Mapuje **nazwa** atrybutu.|  
-|<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|Nazwa FQDN dostawcy. Mapuje **providerName** atrybutu.|  
-|<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|Parametry połączenia. Mapuje **connectionString** atrybutu.|  
+|<xref:System.Configuration.ConnectionStringSettings.Name%2A>|Nazwa parametrów połączenia. Mapuje do atrybutu **name** .|  
+|<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|W pełni kwalifikowana nazwa dostawcy. Mapuje na atrybut ProviderName.|  
+|<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|Parametry połączenia. Mapuje do atrybutu **ConnectionString** .|  
   
 ### <a name="example-listing-all-connection-strings"></a>Przykład: Wyświetlanie listy wszystkich parametrów połączenia  
- Ten przykład wykonuje iterację przez <xref:System.Configuration.ConnectionStringSettingsCollection> i wyświetla <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>, i <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> właściwości w oknie konsoli.  
+ Ten przykład wykonuje iterację przez <xref:System.Configuration.ConnectionStringSettingsCollection> i <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>wyświetla właściwości, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>, i <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> w oknie konsoli.  
   
 > [!NOTE]
->  System.Configuration.dll nie są objęte wszystkich typów projektów i może być konieczne Ustaw odwołanie do niej, aby można było używać klas konfiguracji. Nazwę i lokalizację pliku konfiguracji określonej aplikacji jest zależna od typu aplikacji i proces hostingu.  
+> Element System. Configuration. dll nie jest uwzględniony we wszystkich typach projektów i może być konieczne ustawienie dla niego odwołania w celu użycia klas konfiguracji. Nazwa i lokalizacja określonego pliku konfiguracyjnego aplikacji różnią się w zależności od typu aplikacji i procesu hostingu.  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-name"></a>Przykład: Pobieranie parametrów połączenia o nazwie  
- W tym przykładzie pokazano, jak pobrać parametry połączenia z pliku konfiguracji, określając jej nazwę. Ten kod tworzy <xref:System.Configuration.ConnectionStringSettings> obiektem, dostarczony parametr danych wejściowych do dopasowania <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> nazwy. Jeśli nie pasującej nazwie zostanie znaleziony, funkcja zwraca `null` (`Nothing` w języku Visual Basic).  
+### <a name="example-retrieving-a-connection-string-by-name"></a>Przykład: Pobieranie parametrów połączenia według nazwy  
+ W tym przykładzie pokazano, jak pobrać parametry połączenia z pliku konfiguracji, określając jego nazwę. Kod tworzy <xref:System.Configuration.ConnectionStringSettings> obiekt pasujący <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> do podanego parametru wejściowego do nazwy. Jeśli nie zostanie znaleziona zgodna nazwa, funkcja zwróci `null` wartość`Nothing` (w Visual Basic).  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-provider-name"></a>Przykład: Pobieranie parametrów połączenia, nazwa dostawcy  
- W tym przykładzie pokazano, jak pobrać parametry połączenia, określając nazwę dostawcy we wszystkich kulturach w formacie *System.Data.ProviderName*. Kod wykonuje iterację przez <xref:System.Configuration.ConnectionStringSettingsCollection> i zwraca ciąg połączenia dla pierwszego <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> znaleziono. Jeśli nazwa dostawcy nie zostanie znaleziony, funkcja zwraca `null` (`Nothing` w języku Visual Basic).  
+### <a name="example-retrieving-a-connection-string-by-provider-name"></a>Przykład: Pobieranie parametrów połączenia według nazwy dostawcy  
+ W tym przykładzie pokazano, jak pobrać parametry połączenia przez określenie niezmiennej nazwy dostawcy w formacie *System. Data. ProviderName*. Kod wykonuje iterację <xref:System.Configuration.ConnectionStringSettingsCollection> i zwraca parametry połączenia dla pierwszego <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> znalezionego elementu. Jeśli nazwa dostawcy nie zostanie znaleziona, funkcja zwróci wartość `null` (`Nothing` w Visual Basic).  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
-## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>Szyfrowanie przy użyciu sekcji pliku konfiguracji chronionych konfiguracji  
- ASP.NET 2.0 wprowadzono nową funkcję o nazwie *chronione konfiguracji*, która umożliwia szyfrowanie poufnych informacji w pliku konfiguracji. Mimo że przeznaczony głównie dla platformy ASP.NET, konfiguracji chronionych można również zaszyfrować sekcji pliku konfiguracji w aplikacji Windows. Aby uzyskać szczegółowy opis możliwości konfiguracji chronionych, zobacz [szyfrowania informacji przy użyciu chronione Konfiguracja](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
+## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>Szyfrowanie sekcji pliku konfiguracji przy użyciu konfiguracji chronionej  
+ W ASP.NET 2,0 wprowadzono nową funkcję o nazwie *chroniona konfiguracja*, która umożliwia szyfrowanie poufnych informacji w pliku konfiguracji. Mimo że program przeznaczony głównie do ASP.NET, konfiguracja chroniona może być również używana do szyfrowania sekcji plików konfiguracyjnych w aplikacjach systemu Windows. Aby uzyskać szczegółowy opis możliwości konfiguracji chronionych, zobacz [szyfrowanie informacji o konfiguracji za pomocą konfiguracji chronionej](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
- Następujący plik konfiguracji fragment przedstawia **connectionStrings** sekcji po został zaszyfrowany. **ConfigProtectionProvider** określa dostawcę konfiguracji chronionych, używany do szyfrowania i odszyfrowywania parametry połączenia. **Element EncryptedData** sekcja zawiera zaszyfrowanego tekstu.  
+ Poniższy fragment pliku konfiguracji przedstawia sekcję **connectionStrings** po jej zaszyfrowaniu. **ConfigProtectionProvider** określa chronionego dostawcę konfiguracji używany do szyfrowania i odszyfrowywania parametrów połączenia. Sekcja **EncryptedData** zawiera tekst szyfru.  
   
 ```xml  
 <connectionStrings configProtectionProvider="DataProtectionConfigurationProvider">  
@@ -116,10 +116,10 @@ Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do pr
 </connectionStrings>  
 ```  
   
- Po pobraniu zaszyfrowanego połączenia w czasie wykonywania programu .NET Framework używa określonego dostawcy do odszyfrowania **element CipherValue** i udostępnić je do aplikacji. Nie ma potrzeby pisania dodatkowego kodu do zarządzania procesem odszyfrowywanie.  
+ Gdy szyfrowane parametry połączenia są pobierane w czasie wykonywania, .NET Framework używa określonego dostawcy do odszyfrowania **CipherValue** i udostępnienia aplikacji. Nie trzeba pisać żadnego dodatkowego kodu w celu zarządzania procesem odszyfrowywania.  
   
-### <a name="protected-configuration-providers"></a>Dostawcy konfiguracji chronionych  
- Dostawcy konfiguracji chronionych są zarejestrowane w usłudze **configProtectedData** części **machine.config** pliku na komputerze lokalnym, jak pokazano w poniższy fragment przedstawia dwa chronione dostawcy konfiguracji dostarczone z programem .NET Framework. Aby zwiększyć czytelność zostały obcięte pokazanych tu wartości.  
+### <a name="protected-configuration-providers"></a>Dostawcy konfiguracji chronionej  
+ Dostawcy chronionej konfiguracji są zarejestrowani w sekcji **configProtectedData** pliku **Machine. config** na komputerze lokalnym, jak pokazano w poniższym fragmencie, który pokazuje dwóch chronionych dostawców konfiguracji dostarczonych z programem .NET Framework. Podane tutaj wartości zostały obcięte na potrzeby czytelności.  
   
 ```xml  
 <configProtectedData defaultProvider="RsaProtectedConfigurationProvider">  
@@ -132,48 +132,48 @@ Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do pr
 </configProtectedData>  
 ```  
   
- Możesz skonfigurować dostawców dodatkowej konfiguracji chronionych przez dodanie ich do **machine.config** pliku. Możesz również utworzyć własnego dostawcę konfiguracji chronionych przez dziedziczenie z <xref:System.Configuration.ProtectedConfigurationProvider> abstrakcyjna klasa bazowa. W poniższej tabeli opisano pliki dwóch konfiguracji dołączone do programu .NET Framework.  
+ Dodatkowe chronione dostawcy konfiguracji można skonfigurować przez dodanie ich do pliku **Machine. config** . Możesz również utworzyć własnego dostawcę konfiguracji chronionej przez dziedziczenie z <xref:System.Configuration.ProtectedConfigurationProvider> abstrakcyjnej klasy podstawowej. W poniższej tabeli opisano dwa pliki konfiguracji dołączone do .NET Framework.  
   
 |Dostawca|Opis|  
 |--------------|-----------------|  
-|<xref:System.Configuration.RsaProtectedConfigurationProvider>|Używa algorytmu szyfrowania RSA do szyfrowania i odszyfrowywania danych. Algorytm RSA może służyć do szyfrowanie kluczem publicznym i podpisy cyfrowe. Jest także znana jako "klucz publiczny" lub szyfrowanie asymetryczne ponieważ wykorzystuje on dwa różne klucze. Możesz użyć [narzędzie rejestracji programu ASP.NET usług IIS (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) do szyfrowania sekcji w pliku Web.config i zarządzać kluczami szyfrowania. ASP.NET odszyfrowuje plik konfiguracyjny podczas przetwarzania pliku. Tożsamość aplikacji ASP.NET musi mieć dostęp do odczytu do klucza szyfrowania, który jest używany do szyfrowania i odszyfrowywania zaszyfrowanych sekcje.|  
-|<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Używa interfejsu API ochrony danych Windows (DPAPI) do szyfrowania sekcji konfiguracji. Używa wbudowanych usług kryptograficznych Windows i mogą być skonfigurowane dla ochrony specyficzny dla komputera lub konta — specyficzne dla użytkownika. Ochrona specyficzny dla komputera jest przydatne w przypadku wielu aplikacji na tym samym serwerze, który muszą udostępniać informacje. Ochrona konta — specyficzne dla użytkownika może być stosowana z usługami, które działają z określona tożsamość użytkownika, takie jak udostępnione Środowisko hostingu. Każda aplikacja uruchamiana osobne tożsamości, która ogranicza dostęp do zasobów, takich jak pliki i bazy danych.|  
+|<xref:System.Configuration.RsaProtectedConfigurationProvider>|Szyfruje i odszyfrowuje dane przy użyciu algorytmu szyfrowania RSA. Algorytmu RSA można używać zarówno w przypadku szyfrowania klucza publicznego, jak i podpisów cyfrowych. Jest on również znany jako "klucz publiczny" lub asymetryczne szyfrowanie, ponieważ wykorzystuje dwa różne klucze. Za pomocą [narzędzia rejestracji programu ASP.NET IIS (Aspnet_regiis. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) można szyfrować sekcje w pliku Web. config i zarządzać kluczami szyfrowania. ASP.NET odszyfrowuje plik konfiguracji podczas przetwarzania pliku. Tożsamość aplikacji ASP.NET musi mieć dostęp do odczytu do klucza szyfrowania używanego do szyfrowania i odszyfrowywania zaszyfrowanych sekcji.|  
+|<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Program używa interfejsu API ochrony danych systemu Windows (DPAPI) do szyfrowania sekcji konfiguracyjnych. Używa wbudowanej usługi kryptograficznej systemu Windows i można ją skonfigurować dla ochrony specyficznej dla komputera lub użytkownika. Ochrona specyficzna dla maszyn jest przydatna w przypadku wielu aplikacji na tym samym serwerze, które muszą udostępniać informacje. Ochrona specyficzna dla konta użytkownika może być używana z usługami, które działają z określoną tożsamością użytkownika, taką jak udostępnione środowisko hostingu. Każda aplikacja działa w ramach oddzielnej tożsamości, która ogranicza dostęp do zasobów, takich jak pliki i bazy danych.|  
   
- Obaj dostawcy oferują silnego szyfrowania danych. Jednakże jeśli planujesz użyć tego samego pliku konfiguracji zaszyfrowane na wielu serwerach, np. kolektywu serwerów sieci Web, tylko <xref:System.Configuration.RsaProtectedConfigurationProvider> umożliwia eksportowanie kluczy szyfrowania używany do szyfrowania danych i zaimportuj je na innym serwerze. Aby uzyskać więcej informacji, zobacz [importowanie i eksportowanie chronione Konfiguracja RSA kontenery kluczy](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
+ Obaj dostawcy oferują silne szyfrowanie danych. Jeśli jednak planujesz używać tego samego zaszyfrowanego pliku konfiguracji na wielu serwerach, takich jak Farma sieci Web, tylko <xref:System.Configuration.RsaProtectedConfigurationProvider> program umożliwia eksportowanie kluczy szyfrowania używanych do szyfrowania danych i importowanie ich na inny serwer. Aby uzyskać więcej informacji, zobacz [Importowanie i eksportowanie kontenerów kluczy RSA konfiguracji chronionej](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
   
-### <a name="using-the-configuration-classes"></a>Przy użyciu klas konfiguracji  
- <xref:System.Configuration> Przestrzeń nazwy udostępnia klasy do pracy z ustawieniami konfiguracji programowo. <xref:System.Configuration.ConfigurationManager> Klasy zapewnia dostęp do plików konfiguracji komputera, aplikacji i użytkownika. Jeśli tworzysz aplikację ASP.NET, możesz użyć <xref:System.Web.Configuration.WebConfigurationManager> klasy, która zawiera te same funkcje, podczas umożliwiającego dostęp do ustawień, które są unikatowe dla aplikacji ASP.NET, takich jak znajdują się w  **\< System.Web >**.  
-  
-> [!NOTE]
->  <xref:System.Security.Cryptography> Przestrzeń nazw zawiera klasy, które zapewniają dodatkowe opcje dotyczące szyfrowania i odszyfrowywania danych. Korzystając z tych klas, w razie potrzeby usługi kryptograficzne, które nie są dostępne za pośrednictwem chronioną konfiguracji. Niektóre z tych klas są otoki dla niezarządzanych CryptoAPI firmy Microsoft, a inne wyłącznie zarządzanej implementacji. Aby uzyskać więcej informacji, zobacz [usługi kryptograficzne](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90)).  
-  
-### <a name="appconfig-example"></a>Przykład pliku App.config  
- W tym przykładzie pokazano, jak przełączać szyfrowania **connectionStrings** sekcji **app.config** pliku dla aplikacji Windows. W tym przykładzie nazwa aplikacji jako argument, na przykład "MyApplication.exe" przyjmowane przez procedurę. **App.config** plik zostanie następnie zaszyfrowana i kopiowane do folderu, który zawiera plik wykonywalny pod nazwą "MyApplication.exe.config".  
+### <a name="using-the-configuration-classes"></a>Korzystanie z klas konfiguracji  
+ <xref:System.Configuration> Przestrzeń nazw zawiera klasy do programistycznego działania z ustawieniami konfiguracji. <xref:System.Configuration.ConfigurationManager> Klasa zapewnia dostęp do plików konfiguracji komputera, aplikacji i użytkownika. W przypadku tworzenia aplikacji ASP.NET można użyć <xref:System.Web.Configuration.WebConfigurationManager> klasy, która zapewnia te same funkcje, a także umożliwia dostęp do ustawień unikatowych dla aplikacji ASP.NET, takich jak te znajdujące się w **\<> System. Web**.  
   
 > [!NOTE]
->  Parametry połączenia odszyfrować je mogą tylko na komputerze, na którym został zaszyfrowany.  
+> <xref:System.Security.Cryptography> Przestrzeń nazw zawiera klasy, które udostępniają dodatkowe opcje szyfrowania i odszyfrowywania danych. Użyj tych klas, jeśli są wymagane usługi kryptograficzne, które nie są dostępne przy użyciu konfiguracji chronionej. Niektóre z tych klas są otokami dla niezarządzanego interfejsu CryptoAPI firmy Microsoft, podczas gdy inne są całkowicie zarządzane. Aby uzyskać więcej informacji, zobacz [usługi kryptograficzne](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90)).  
   
- Kod używa <xref:System.Configuration.ConfigurationManager.OpenExeConfiguration%2A> metodę, aby otworzyć **app.config** plik do edycji, a <xref:System.Configuration.ConfigurationManager.GetSection%2A> metoda zwraca **connectionStrings** sekcji. Kodzie następnie sprawdza <xref:System.Configuration.SectionInformation.IsProtected%2A> właściwość, wywoływania <xref:System.Configuration.SectionInformation.ProtectSection%2A> do szyfrowania w sekcji, jeśli nie jest zaszyfrowany. <xref:System.Configuration.SectionInformation.UnprotectSection%2A> Metoda jest wywoływana w celu odszyfrowania w sekcji. <xref:System.Configuration.Configuration.Save%2A> Metoda wykonuje operację i zapisuje zmiany.  
+### <a name="appconfig-example"></a>Przykład pliku App. config  
+ W tym przykładzie pokazano, jak przełączyć szyfrowanie sekcji **connectionStrings** w pliku **App. config** dla aplikacji systemu Windows. W tym przykładzie procedura przyjmuje nazwę aplikacji jako argument, na przykład "aplikacja. exe". Plik **App. config** będzie następnie szyfrowany i kopiowany do folderu, który zawiera plik wykonywalny pod nazwą "WebApplication. exe. config".  
   
 > [!NOTE]
->  Należy ustawić odwołanie `System.Configuration.dll` w projekcie kodu do uruchomienia.  
+> Parametry połączenia można odszyfrować tylko na komputerze, na którym został zaszyfrowany.  
+  
+ Kod używa <xref:System.Configuration.ConfigurationManager.OpenExeConfiguration%2A> metody do otwierania pliku **App. config** do <xref:System.Configuration.ConfigurationManager.GetSection%2A> edycji, a metoda zwraca sekcję **connectionStrings** . Następnie kod sprawdza <xref:System.Configuration.SectionInformation.IsProtected%2A> właściwość, <xref:System.Configuration.SectionInformation.ProtectSection%2A> wywołując, aby zaszyfrować sekcję, jeśli nie jest zaszyfrowana. <xref:System.Configuration.SectionInformation.UnprotectSection%2A> Metoda jest wywoływana w celu odszyfrowania sekcji. <xref:System.Configuration.Configuration.Save%2A> Metoda wykonuje operację i zapisuje zmiany.  
+  
+> [!NOTE]
+> Aby kod mógł zostać uruchomiony, `System.Configuration.dll` należy ustawić odwołanie do elementu w projekcie.  
   
  [!code-csharp[DataWorks ConnectionStrings.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStrings.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStrings.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStrings.Encrypt/VB/source.vb#1)]  
   
-### <a name="webconfig-example"></a>Przykład pliku Web.config  
- W tym przykładzie użyto <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> metody `WebConfigurationManager`. Należy pamiętać, że w takim przypadku można podać ścieżkę względną do **Web.config** plików przy użyciu tyldy. Kod wymaga odwołania do `System.Web.Configuration` klasy.  
+### <a name="webconfig-example"></a>Przykład pliku Web. config  
+ W tym przykładzie zastosowano <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> metodę. `WebConfigurationManager` Należy zauważyć, że w takim przypadku można podać ścieżkę względną do pliku **Web. config** przy użyciu tyldy. Kod wymaga odwołania do `System.Web.Configuration` klasy.  
   
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Aby uzyskać więcej informacji na temat zabezpieczania aplikacji ASP.NET, zobacz [witryn sieci web ASP.NET Zabezpieczanie](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
+ Aby uzyskać więcej informacji na temat zabezpieczania aplikacji ASP.NET, zobacz [zabezpieczanie ASP.NET witryn sieci Web](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Przy użyciu klas konfiguracji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
+- [Korzystanie z klas konfiguracji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
 - [Konfigurowanie aplikacji](../../../../docs/framework/configure-apps/index.md)
-- [Administrowanie witryną sieci Web platformy ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Administrowanie witryną sieci Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

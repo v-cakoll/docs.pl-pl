@@ -2,38 +2,38 @@
 title: 'Instrukcje: Generowanie modelu i mapowania plików za pomocą EdmGen.exe'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: f5781b49817054923cbbbf4d52205b9280ea131a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 37234d8f0631ea11ea0d9c7d4e8f027a7266814e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64632207"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958454"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Instrukcje: Generowanie modelu i mapowania plików za pomocą EdmGen.exe
-W tym temacie przedstawiono sposób użycia narzędzia Generator EDM (EdmGen.exe), aby wygenerować następujących plików, w oparciu o bazę danych School:  
+W tym temacie przedstawiono sposób użycia narzędzia Generator EDM (EdmGen. exe) w celu wygenerowania następujących plików na podstawie szkolnej bazy danych:  
   
-- Model koncepcyjny (plik .csdl).  
+- Model koncepcyjny (plik. csdl).  
   
-- Model magazynu (ssdl pliku).  
+- Model magazynu (plik. ssdl).  
   
-- Mapowanie między modelami koncepcyjne i magazynu (pliku MSL albo identyfikatorem).  
+- Mapowanie między modelami koncepcyjnymi i magazynowymi (plik. MSL).  
   
-- Kod warstwy obiektu w języku Visual Basic lub C#.  
+- Kod warstwy obiektu w Visual Basic lub C#.  
   
 - Wyświetl pliki.  
   
- Narzędzie EdmGen.exe używa /mode:FullGeneration do generowania plików wymienionych powyżej. Aby uzyskać więcej informacji na temat poleceń EdmGen.exe zobacz [Generator EDM (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).  
+ Narzędzie EdmGen. exe używa/Mode: trybu FullGeneration do generowania plików wymienionych powyżej. Aby uzyskać więcej informacji na temat poleceń EdmGen. exe, zobacz [generator modelu EDM (EdmGen. exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).  
   
- Jeśli Generowanie modelu i mapowania plików za pomocą EdmGen.exe nadal należy skonfigurować projektu programu Visual Studio do używania [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Aby uzyskać więcej informacji, zobacz [jak: Ręczne konfigurowanie projektu programu Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).  
+ Jeśli używasz programu EdmGen. exe do generowania modelu i plików mapowania, nadal musisz skonfigurować projekt programu Visual Studio tak, aby korzystał z programu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Aby uzyskać więcej informacji, zobacz [jak: Ręcznie skonfiguruj projekt](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))Entity Framework.  
   
 > [!NOTE]
->  Model koncepcyjny generowane przez EdmGen.exe obejmuje wszystkie obiekty w bazie danych. Jeśli chcesz wygenerować modelu koncepcyjnego, która obejmuje tylko konkretne obiekty, należy użyć Kreator modelu Entity Data Model. Aby uzyskać więcej informacji, zobacz [jak: Użyj Kreatora modelu danych jednostki](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
+> Model koncepcyjny wygenerowany przez EdmGen. exe zawiera wszystkie obiekty w bazie danych. Jeśli chcesz wygenerować model koncepcyjny, który zawiera tylko określone obiekty, użyj Kreatora Entity Data Model. Aby uzyskać więcej informacji, zobacz [jak: Użyj kreatora](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))Entity Data Model.  
   
-### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a>Generowanie modelu szkoły w projekcie języka Visual Basic, za pomocą EdmGen.exe  
+### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a>Aby wygenerować model szkoły dla projektu Visual Basic przy użyciu programu EdmGen. exe  
   
-1. Utwórz bazę danych School. Aby uzyskać więcej informacji, zobacz [tworzenie przykładowej bazy danych School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).  
+1. Utwórz bazę danych szkoły. Aby uzyskać więcej informacji, zobacz [Tworzenie przykładowej bazy danych szkoły](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).  
   
-2. W wierszu polecenia Uruchom następujące polecenie bez podziałów wiersza:  
+2. W wierszu polecenia wykonaj następujące polecenie bez podziałów wierszy:  
   
     ```  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:fullgeneration   
@@ -41,11 +41,11 @@ W tym temacie przedstawiono sposób użycia narzędzia Generator EDM (EdmGen.exe
     /project:School /entitycontainer:SchoolEntities /namespace:SchoolModel /language:VB  
     ```  
   
-### <a name="to-generate-the-school-model-for-a-c-project-using-edmgenexe"></a>Generowanie modelu School projekt C# za pomocą EdmGen.exe  
+### <a name="to-generate-the-school-model-for-a-c-project-using-edmgenexe"></a>Aby wygenerować model szkoły dla C# projektu przy użyciu programu EdmGen. exe  
   
-1. Utwórz bazę danych School. Aby uzyskać więcej informacji, zobacz [tworzenie przykładowej bazy danych School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).  
+1. Utwórz bazę danych szkoły. Aby uzyskać więcej informacji, zobacz [Tworzenie przykładowej bazy danych szkoły](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).  
   
-2. W wierszu polecenia Uruchom następujące polecenie bez podziałów wiersza:  
+2. W wierszu polecenia wykonaj następujące polecenie bez podziałów wierszy:  
   
     ```  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:fullgeneration   
@@ -56,7 +56,7 @@ W tym temacie przedstawiono sposób użycia narzędzia Generator EDM (EdmGen.exe
 ## <a name="see-also"></a>Zobacz także
 
 - [Modelowanie i mapowanie](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
-- [Instrukcje: Ręczne konfigurowanie projektu programu Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
-- [Instrukcje: Wstępnie wygenerować widoków, aby poprawić wydajność zapytań](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
-- [Narzędzia do modelu danych jednostki ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Instrukcje: Walidacja modelu i mapowania plików za pomocą EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+- [Instrukcje: Ręcznie skonfiguruj projekt Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
+- [Instrukcje: Wstępnie Generuj widoki, aby zwiększyć wydajność zapytań](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
+- [Narzędzia Entity Data Model ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Instrukcje: Sprawdzanie poprawności modelu i plików mapowania przy użyciu programu EdmGen. exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)

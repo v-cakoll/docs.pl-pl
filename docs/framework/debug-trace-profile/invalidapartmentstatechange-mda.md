@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a7be97ef3184c6836cd67e47b4e9383214f1b5f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7ff68ce5f612255f41ce3a7c6f2526c3a340cfcd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629411"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967316"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
 Asystent `invalidApartmentStateChange` debugowania zarządzanego (MDS) jest uaktywniany z jednego z dwóch problemów:  
@@ -31,7 +31,7 @@ Asystent `invalidApartmentStateChange` debugowania zarządzanego (MDS) jest uakt
   
 - Stan apartamentu COM wątku nie jest żądaniem. Może to spowodować, że serwery proxy mają być używane dla składników COM, które mają model wątkowości inny niż bieżący. To z kolei może spowodować, <xref:System.InvalidCastException> że w przypadku wywoływania obiektu com za pomocą interfejsów, które nie są skonfigurowane do organizowania między różnymi komórkami.  
   
-- Stan apartamentu COM wątku jest inny niż oczekiwano. Może to spowodować <xref:System.Runtime.InteropServices.COMException> wynik HRESULT of RPC_E_WRONG_THREAD, a także <xref:System.InvalidCastException> podczas wykonywania wywołań dla otoki (RCW) [środowiska uruchomieniowego](../../../docs/standard/native-interop/runtime-callable-wrapper.md) . Może to spowodować, że pewne składniki COM jednowątkowego są dostępne jednocześnie przez wiele wątków, co może prowadzić do uszkodzenia lub utraty danych.  
+- Stan apartamentu COM wątku jest inny niż oczekiwano. Może to spowodować <xref:System.Runtime.InteropServices.COMException> wynik HRESULT of RPC_E_WRONG_THREAD, a także <xref:System.InvalidCastException> podczas wykonywania wywołań dla otoki (RCW) [środowiska uruchomieniowego](../../standard/native-interop/runtime-callable-wrapper.md) . Może to spowodować, że pewne składniki COM jednowątkowego są dostępne jednocześnie przez wiele wątków, co może prowadzić do uszkodzenia lub utraty danych.  
   
 ## <a name="cause"></a>Przyczyna  
   

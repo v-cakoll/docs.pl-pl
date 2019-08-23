@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: c424f7884dd7242152bda1b16943f6489194299f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2b98f24da7f13ae752f248eb8f26c75c1d47a824
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589983"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923952"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Instrukcje: Odczytaj z pliku tekstowego (C# Przewodnik programowania)
 Ten przykład odczytuje zawartość pliku tekstowego przy użyciu metod <xref:System.IO.File.ReadAllText%2A> statycznych i <xref:System.IO.File.ReadAllLines%2A> z <xref:System.IO.File?displayProperty=nameWithType> klasy.  
@@ -23,7 +23,7 @@ Ten przykład odczytuje zawartość pliku tekstowego przy użyciu metod <xref:Sy
  Przykład użycia <xref:System.IO.StreamReader>programu można znaleźć w temacie [How to: Odczytaj plik tekstowy jeden wiersz jednocześnie](./how-to-read-a-text-file-one-line-at-a-time.md).  
   
 > [!NOTE]
->  Pliki, które są używane w tym przykładzie, są tworzone w temacie [How to: Zapisz w pliku](./how-to-write-to-a-text-file.md)tekstowym.  
+> Pliki, które są używane w tym przykładzie, są tworzone w temacie [How to: Zapisz w pliku](./how-to-write-to-a-text-file.md)tekstowym.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csFilesandFolders#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#4)]  

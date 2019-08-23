@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6663b4875fc2c3698b612a4958140ba199ea2669
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c27732de448e19c4227062706c7a7d73c98e5f19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631921"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966878"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Udoskonalanie debugowania za pomocą atrybutów wyświetlania debugera
 
-Atrybutów wyświetlania debugera umożliwia deweloperowi typu, który określa się oraz zrozumiał najlepiej zachowanie środowiska uruchomieniowego tego typu, można również określić, jakie tego typu będzie wyglądać po wyświetleniu go w debugerze. Ponadto debuger wyświetlić atrybuty, które zapewniają `Target` właściwość może zostać zastosowana na poziomie zestawu przez użytkowników bez znajomości kodu źródłowego. <xref:System.Diagnostics.DebuggerDisplayAttribute> Atrybut kontroluje sposób wyświetlania typu lub elementu członkowskiego w oknach zmiennych debugera. <xref:System.Diagnostics.DebuggerBrowsableAttribute> Atrybut określa, czy i jak pole lub właściwość jest wyświetlana w oknach zmiennych debugera. <xref:System.Diagnostics.DebuggerTypeProxyAttribute> Atrybut określa typu zastępczego lub serwera proxy dla typu i zmienia sposób typu jest wyświetlana w oknach debugera. Po wyświetleniu zmiennej, która ma serwer proxy lub typu zastępczego oznacza serwera proxy oryginalnego typu w okna debugera. W oknie zmiennych debugera zostaną wyświetlone tylko publiczne składowe typ serwera proxy. Prywatne elementy członkowskie nie są wyświetlane.  
+Atrybuty wyświetlania debugera umożliwiają deweloperom typu, którzy określają i najlepiej rozumieją zachowanie środowiska uruchomieniowego tego typu, aby określić, jaki typ będzie wyglądać, gdy zostanie on wyświetlony w debugerze. Dodatkowo debuger wyświetla atrybuty, które udostępniają `Target` właściwość, można stosować na poziomie zestawu przez użytkowników bez znajomości kodu źródłowego. Ten <xref:System.Diagnostics.DebuggerDisplayAttribute> atrybut określa sposób wyświetlania typu lub elementu członkowskiego w oknach zmiennych debugera. Ten <xref:System.Diagnostics.DebuggerBrowsableAttribute> atrybut określa, czy i w jaki sposób pole lub właściwość są wyświetlane w oknach zmiennych debugera. <xref:System.Diagnostics.DebuggerTypeProxyAttribute> Atrybut określa typ substytutu lub serwer proxy dla typu i zmienia sposób wyświetlania typu w oknach debugera. Podczas wyświetlania zmiennej, która ma serwer proxy lub typ zastępczy, serwer proxy znajduje się dla oryginalnego typu w oknie wyświetlania debugera. W oknie zmienna debugera są wyświetlane tylko publiczne elementy członkowskie typu serwera proxy. Prywatne elementy członkowskie nie są wyświetlane.  
   
-## <a name="using-the-debuggerdisplayattribute"></a>Za pomocą debuggerdisplayattribute —  
+## <a name="using-the-debuggerdisplayattribute"></a>Korzystanie z DebuggerDisplayAttribute —  
 
-<xref:System.Diagnostics.DebuggerDisplayAttribute.%23ctor%2A> Konstruktor ma jeden argument: ciąg, który ma być wyświetlana w kolumnie wartość dla wystąpienia typu. Ten ciąg może zawierać nawiasy klamrowe ({i}). Tekst w parę nawiasów klamrowych jest oceniane jako wyrażenie. Na przykład, poniższy kod C# powoduje "liczba = 4" będzie wyświetlana po wybraniu znak plus (+), aby rozwinąć debugera dla wystąpienia `MyHashtable`.  
+<xref:System.Diagnostics.DebuggerDisplayAttribute.%23ctor%2A> Konstruktor ma jeden argument: ciąg, który ma być wyświetlany w kolumnie wartości dla wystąpień typu. Ten ciąg może zawierać nawiasy klamrowe ({i}). Tekst w parze nawiasów klamrowych jest obliczany jako wyrażenie. Na przykład poniższy C# kod powoduje, że wartość "Count = 4" będzie wyświetlana po wybraniu znaku plus (+), aby rozwinąć debuger wyświetlany dla wystąpienia `MyHashtable`.  
 
 ```csharp
 [DebuggerDisplay("Count = {count}")]
@@ -38,37 +38,37 @@ class MyHashtable
 }
 ```
 
-Atrybuty stosowane do właściwości, do którego odwołuje się wyrażenie nie są przetwarzane. Dla kompilatora C# ogólnego wyrażenia jest dozwolone, który ma niejawne dostęp tylko do tego odwołania dla bieżącego wystąpienia typu docelowego. Wyrażenie jest ograniczona. Brak dostępu do aliasów, zmienne lokalne lub wskaźniki. W kodzie języka C#, można użyć wyrażenia ogólnych między nawiasy klamrowe, które ma niejawne dostęp do `this` wskaźnik dla bieżącego wystąpienia na typ docelowy.
+Atrybuty zastosowane do właściwości, do których odwołuje się wyrażenie, nie są przetwarzane. W przypadku C# kompilatora jest dozwolone wyrażenie ogólne, które ma tylko niejawny dostęp do tego odwołania dla bieżącego wystąpienia typu docelowego. Wyrażenie jest ograniczone; nie ma dostępu do aliasów, zmiennych lokalnych ani wskaźników. W C# kodzie można użyć wyrażenia ogólnego między nawiasami klamrowymi, które mają niejawny dostęp do `this` wskaźnika dla bieżącego wystąpienia tylko typu docelowego.
 
-Na przykład, jeśli obiekt C# została zastąpiona `ToString()`, debuger wywoła zastępowania i wyświetlić jego wynik zamiast standardowego `{<typeName>}.` Thus, jeśli zastępowano `ToString()`, nie trzeba używać <xref:System.Diagnostics.DebuggerDisplayAttribute>. Jeśli używasz zarówno <xref:System.Diagnostics.DebuggerDisplayAttribute> atrybut ma pierwszeństwo przed `ToString()` zastąpienia.
+Na przykład C# Jeśli obiekt został zastąpiony `ToString()`, debuger wywoła przesłonięcie i pokaże wynik zamiast standardowego `{<typeName>}.` , w związku z tym, jeśli został zastąpiony `ToString()`, nie trzeba używać <xref:System.Diagnostics.DebuggerDisplayAttribute>. Jeśli używasz obu tych metod, <xref:System.Diagnostics.DebuggerDisplayAttribute> atrybut ma pierwszeństwo przed `ToString()` przesłonięciem.
 
-## <a name="using-the-debuggerbrowsableattribute"></a>Za pomocą debuggerbrowsableattribute —
- Zastosuj <xref:System.Diagnostics.DebuggerBrowsableAttribute> pola lub właściwości w celu określenia, jak pole lub właściwość ma być wyświetlana w oknie debugera. Konstruktor dla tego atrybutu ma jedną z <xref:System.Diagnostics.DebuggerBrowsableState> wartości wyliczenia, które określa jedno z następujących stanów:
+## <a name="using-the-debuggerbrowsableattribute"></a>Korzystanie z DebuggerBrowsableAttribute
+ <xref:System.Diagnostics.DebuggerBrowsableAttribute> Zastosuj do pola lub właściwości, aby określić, w jaki sposób pole lub właściwość mają być wyświetlane w oknie debugera. Konstruktor dla tego atrybutu przyjmuje jedną z <xref:System.Diagnostics.DebuggerBrowsableState> wartości wyliczenia, która określa jeden z następujących stanów:
 
-- <xref:System.Diagnostics.DebuggerBrowsableState.Never> Wskazuje, że element członkowski nie jest wyświetlany w oknie dane.  Na przykład za pomocą tej wartości dla <xref:System.Diagnostics.DebuggerBrowsableAttribute> na pole usuwa pole z hierarchii; pole nie jest wyświetlane po rozwinięciu typ otaczający, klikając znak plus (+) dla wystąpienia typu.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Never>wskazuje, że element członkowski nie jest wyświetlany w oknie dane.  Na przykład użycie tej wartości dla <xref:System.Diagnostics.DebuggerBrowsableAttribute> pola w polu usuwa pole z hierarchii; pole nie jest wyświetlane po rozwinięciu typu otaczającego przez kliknięcie znaku plus (+) dla wystąpienia typu.
 
-- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> Wskazuje, że element członkowski jest wyświetlane, ale nie jest domyślnie rozwinięte.  Jest to zachowanie domyślne.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed>wskazuje, że element członkowski jest wyświetlany, ale nie jest domyślnie rozwinięty.  Jest to zachowanie domyślne.
 
-- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> Wskazuje, że ten element członkowski nie jest wyświetlana, ale obiekty składowe są wyświetlane w przypadku tablicy lub kolekcji.
+- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden>wskazuje, że sama składowa nie jest wyświetlana, ale jego obiekty składowe są wyświetlane, jeśli jest tablicą lub kolekcją.
 
 > [!NOTE]
->  <xref:System.Diagnostics.DebuggerBrowsableAttribute> Nie jest obsługiwana przez program Visual Basic w programie .NET Framework 2.0.
+> Program <xref:System.Diagnostics.DebuggerBrowsableAttribute> nie jest obsługiwany przez Visual Basic w .NET Framework wersja 2,0.
 
-Poniższy przykład kodu pokazuje użycie <xref:System.Diagnostics.DebuggerBrowsableAttribute> zapobiegające właściwość postępując znajdujących się w oknie Debugowanie dla tej klasy.
+Poniższy przykład kodu pokazuje użycie elementu, <xref:System.Diagnostics.DebuggerBrowsableAttribute> aby zapobiec wyświetlaniu właściwości, która nie jest wyświetlana w oknie debugowania dla klasy.
 
 ```csharp
 [DebuggerBrowsable(DebuggerBrowsableState.Never)]
 public static string y = "Test String";
 ```
 
-## <a name="using-the-debuggertypeproxy"></a>Za pomocą DebuggerTypeProxy
- Użyj <xref:System.Diagnostics.DebuggerTypeProxyAttribute> atrybutu, gdy trzeba znacznie i całkowicie zmienić widok debugowania typu, ale nie zmienianie samego typu. <xref:System.Diagnostics.DebuggerTypeProxyAttribute> Atrybut jest używany do określenia wyświetlania serwera proxy dla typu, co zatem programistą, aby dostosować widok dla danego typu.  Ten atrybut, takie jak <xref:System.Diagnostics.DebuggerDisplayAttribute>, może służyć na poziomie zestawu, w którym to przypadku <xref:System.Diagnostics.DebuggerTypeProxyAttribute.Target%2A> właściwość określa typ, dla której będzie używany serwer proxy. Zalecane użycie jest, że ten atrybut określa prywatnej typu zagnieżdżonego, występujący w przypadku typu jest stosowany.  Ewaluatora wyrażeń, aby obsługuje typ osoby przeglądające sprawdza dla tego atrybutu, gdy typem jest wyświetlana. Jeśli ten atrybut zostanie znaleziony, Ewaluator wyrażeń zastępuje wyświetlaną typ serwera proxy dla typu, który jest stosowany.
+## <a name="using-the-debuggertypeproxy"></a>Korzystanie z DebuggerTypeProxy
+ Użyj atrybutu <xref:System.Diagnostics.DebuggerTypeProxyAttribute> , gdy trzeba znacząco i w sposób istotny zmienić widok debugowania typu, ale nie zmieniać samego typu. Ten <xref:System.Diagnostics.DebuggerTypeProxyAttribute> atrybut służy do określania serwera proxy dla typu, co umożliwia deweloperom Dostosowywanie widoku dla tego typu.  Ten atrybut, podobnie jak <xref:System.Diagnostics.DebuggerDisplayAttribute>, może być używany na poziomie zestawu, w tym <xref:System.Diagnostics.DebuggerTypeProxyAttribute.Target%2A> przypadku Właściwość określa typ, dla którego zostanie użyty serwer proxy. Zalecane użycie polega na tym, że ten atrybut określa prywatny Typ zagnieżdżony, który występuje w typie, do którego zastosowano atrybut.  Ewaluatora wyrażeń, które obsługują osoby przeglądające typy sprawdzają ten atrybut, gdy zostanie wyświetlony typ. Jeśli atrybut zostanie znaleziony, ewaluatora wyrażeń zastępuje typ wyświetlanego serwera proxy dla typu, do którego zastosowano atrybut.
 
- Gdy <xref:System.Diagnostics.DebuggerTypeProxyAttribute> jest obecny, w oknie zmiennych debugera, zostaną wyświetlone tylko publiczne składowe typ serwera proxy. Prywatne elementy członkowskie nie są wyświetlane. Zachowanie okna danych nie jest zmieniany przy użyciu funkcji widoków rozszerzonych atrybutów.
+ <xref:System.Diagnostics.DebuggerTypeProxyAttribute> Gdy jest obecny, w oknie zmienna debugera są wyświetlane tylko publiczne elementy członkowskie typu serwera proxy. Prywatne elementy członkowskie nie są wyświetlane. Zachowanie okna dane nie jest zmieniane przez widoki z rozszerzonymi atrybutami.
 
- Aby uniknąć spadku wydajności niepotrzebne, atrybutów wyświetlania serwera proxy nie zostały przetworzone, dopóki obiekt jest rozwinięta, przez użytkownika, klikając znak plus (+) obok typu w oknie danych lub przez zastosowanie <xref:System.Diagnostics.DebuggerBrowsableAttribute> atrybut. W związku z tym zaleca się, że żadne atrybuty można zastosować do typu ekranu. Atrybuty można i powinny być stosowane w ramach organu typ wyświetlania.
+ Aby uniknąć niepotrzebnych kar z wydajnością, atrybuty wyświetlanego serwera proxy nie są przetwarzane do momentu, gdy obiekt nie zostanie rozwinięty, przez kliknięcie przez użytkownika kliknięcia znaku plusa (+) obok typu w oknie danych lub przez aplikację <xref:System.Diagnostics.DebuggerBrowsableAttribute> przypisane. Dlatego zaleca się, aby nie stosować atrybutów do typu wyświetlanego. Atrybuty mogą i powinny być stosowane w treści typu wyświetlania.
 
- Poniższy przykład kodu pokazuje użycie <xref:System.Diagnostics.DebuggerTypeProxyAttribute> do określania typu ma być używany jako serwer proxy wyświetlania debugera.
+ Poniższy przykład kodu pokazuje użycie, <xref:System.Diagnostics.DebuggerTypeProxyAttribute> aby określić typ, który ma być używany jako serwer proxy wyświetlania debugera.
 
 ```csharp
 [DebuggerTypeProxy(typeof(HashtableDebugView))]
@@ -97,7 +97,7 @@ class MyHashtable : Hashtable
 
 ### <a name="description"></a>Opis
 
-Poniższy przykład kodu mogą być wyświetlane w programie Visual Studio, aby zobaczyć wyniki zastosowania <xref:System.Diagnostics.DebuggerDisplayAttribute>, <xref:System.Diagnostics.DebuggerBrowsableAttribute>, i <xref:System.Diagnostics.DebuggerTypeProxyAttribute> atrybutów.
+Poniższy przykład kodu można wyświetlić w programie Visual Studio, aby zobaczyć wyniki zastosowania <xref:System.Diagnostics.DebuggerDisplayAttribute>atrybutów, <xref:System.Diagnostics.DebuggerBrowsableAttribute>i <xref:System.Diagnostics.DebuggerTypeProxyAttribute> .
 
 ### <a name="code"></a>Kod
 

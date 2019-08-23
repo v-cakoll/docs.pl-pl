@@ -2,18 +2,18 @@
 title: <endToEndTracing>
 ms.date: 03/30/2017
 ms.assetid: 5034f5de-bb60-4157-9ad4-58aaade094e0
-ms.openlocfilehash: 266b33e9b0386d0346a86ba8bd82cc65def4f0c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b23728451a051f21ad3863b9a29e6290c3c837a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673059"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919011"
 ---
 # <a name="endtoendtracing"></a>\<endToEndTracing >
-Element konfiguracji, który umożliwia włączanie i wyłączanie różnych aspektów śledzenia end-to-end podczas uruchamiania aplikacji usługi.  
+Element konfiguracji, który pozwala na włączenie i wyłączenie różnych aspektów śledzenia end-to-end podczas uruchamiania aplikacji usługi.  
   
  \<system.ServiceModel>  
-\<diagnostyczne >  
+\<> diagnostyki  
 \<endToEndTracing >  
   
 ## <a name="syntax"></a>Składnia  
@@ -35,8 +35,8 @@ Element konfiguracji, który umożliwia włączanie i wyłączanie różnych asp
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`activityTracing`|Wartość logiczna określająca, czy czynność śledzenia jest włączona.|  
-|`messageFlowTracing`|Wartość logiczna określająca, czy jest włączone śledzenie przepływu wiadomości.|  
+|`activityTracing`|Wartość logiczna określająca, czy włączone jest śledzenie aktywności.|  
+|`messageFlowTracing`|Wartość logiczna określająca, czy włączone jest śledzenie przepływu wiadomości.|  
 |`propagateActivity`|Wartość logiczna określająca, czy propagowany atrybut jest ustawiony na wartość true.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -46,7 +46,7 @@ Element konfiguracji, który umożliwia włączanie i wyłączanie różnych asp
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Diagnostyka >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|Definiuje ustawienia WCF dla środowiska uruchomieniowego kontroli i kontroli dla administratora.|  
+|[\<> diagnostyki](diagnostics.md)|Definiuje ustawienia WCF na potrzeby inspekcji i kontroli środowiska uruchomieniowego dla administratora.|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -54,4 +54,4 @@ Element konfiguracji, który umożliwia włączanie i wyłączanie różnych asp
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.EndToEndTracing%2A>
 - <xref:System.ServiceModel.Configuration.EndToEndTracingElement>
-- [Kompleksowe śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+- [Kompleksowe śledzenie](../../../wcf/diagnostics/tracing/end-to-end-tracing.md)

@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 959cb541013ca0a26557e849874dbb329489d855
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b2e8e636915b3921fcd727fc78a3fb18fc69104
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749531"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959040"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime — Metoda
-Powiadamia hosta, że aktualnie wykonywane zadanie zostanie pozostaw środowisko uruchomieniowe języka wspólnego (CLR), a następnie wprowadź kod niezarządzany.  
+Powiadamia hosta, że aktualnie wykonywane zadanie ma opuścić środowisko uruchomieniowe języka wspólnego (CLR) i wprowadzić kod niezarządzany.  
   
 > [!IMPORTANT]
->  Do odpowiedniego wywołania [ihosttaskmanager::enterruntime —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md) powiadamia hosta, że aktualnie wykonywane zadanie ponownego wprowadzania kodu zarządzanego.  
+> Odpowiednie wywołanie [IHostTaskManager:: EnterRuntime —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md) powiadamia hosta, że aktualnie wykonywane zadanie ponownie wprowadza kod zarządzany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,40 +40,40 @@ HRESULT LeaveRuntime (
   
 ## <a name="parameters"></a>Parametry  
  `target`  
- [in] Adres w ramach zamapowanego przenośny plik wykonywalny niezarządzanej funkcji do wywołania.  
+ podczas Adres w mapowanym przenośnym pliku wykonywalnym funkcji niezarządzanej, która ma zostać wywołana.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime` pomyślnie zwrócił.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Nie ma wystarczającej ilości pamięci jest dostępny w celu zakończenia żądanej alokacji.|  
+|S_OK|`LeaveRuntime`pomyślnie zwrócono.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Za mało dostępnej pamięci, aby zakończyć żądaną alokację.|  
   
 ## <a name="remarks"></a>Uwagi  
- Może być zagnieżdżona sekwencji wywołań do i z kodem niezarządzanym. Na przykład poniższa lista zawiera hipotetyczny sytuacji, w którym Sekwencja wywołań `LeaveRuntime`, [ihosttaskmanager::reverseenterruntime —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [ihosttaskmanager::reverseleaveruntime —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), i `IHostTaskManager::EnterRuntime` Zezwalaj hostowi na określenie zagnieżdżonych warstw.  
+ Sekwencje wywołań do i z kodu niezarządzanego mogą być zagnieżdżane. Na przykład na poniższej `LeaveRuntime`liście opisano hipotetyczną sytuację, w której sekwencja wywołań do, [IHostTaskManager:: ReverseEnterRuntime —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), i `IHostTaskManager::EnterRuntime` umożliwia hostowi Zidentyfikuj zagnieżdżone warstwy.  
   
-|Akcja|Odpowiedniego wywołania metody|  
+|Akcja|Odpowiednie wywołanie metody|  
 |------------|-------------------------------|  
-|Wywołaj niezarządzanej funkcji w języku C za pomocą platformy zarządzane wywołania pliku wykonywalnego języka Visual Basic.|`IHostTaskManager::LeaveRuntime`|  
-|Niezarządzanej funkcji C wywołuje metodę w zarządzanej biblioteki DLL, napisany w C#.|`IHostTaskManager::ReverseEnterRuntime`|  
-|Zarządzany C# funkcja wywołuje innej niezarządzanej funkcji w języku C, również przy użyciu platformy wywołania.|`IHostTaskManager::LeaveRuntime`|  
-|Druga funkcja niezarządzanych zwraca wykonanie do C# funkcji.|`IHostTaskManager::EnterRuntime`|  
-|C# Funkcja zwraca wykonanie do pierwszej funkcji niezarządzanych.|`IHostTaskManager::ReverseLeaveRuntime`|  
-|Pierwszy niezarządzanej funkcji zwraca wykonanie do programu Visual Basic.|`IHostTaskManager::EnterRuntime`|  
+|Zarządzany Visual Basic plik wykonywalny wywołuje niezarządzaną funkcję zapisaną w C przy użyciu wywołania platformy.|`IHostTaskManager::LeaveRuntime`|  
+|Niezarządzana funkcja C wywołuje metodę w zarządzanej bibliotece DLL, C#która jest zapisywana.|`IHostTaskManager::ReverseEnterRuntime`|  
+|Funkcja zarządza C# wywołuje inną niezarządzaną funkcję zapisaną w języku C, również przy użyciu wywołania platformy.|`IHostTaskManager::LeaveRuntime`|  
+|Druga niezarządzana funkcja zwraca wykonanie do C# funkcji.|`IHostTaskManager::EnterRuntime`|  
+|C# Funkcja zwraca wykonanie do pierwszej niezarządzanej funkcji.|`IHostTaskManager::ReverseLeaveRuntime`|  
+|Pierwsza niezarządzana funkcja zwraca wykonanie do programu Visual Basic.|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówki** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

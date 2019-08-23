@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6d1f2bd903124773eaa20581f013bb41cf9cf99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 18fd8fdf9bcfa20b686ad1f04cd8dcc3b1c26de2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771489"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964643"
 ---
 # <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange Method
-Pobiera adres początkowy metody i biorąc względnych adresów wirtualnych (RVA) w metodzie.  
+Pobiera adres początkowy i rozmiar metody z przyznanym adresem wirtualnym (RVA) w metodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,27 +26,27 @@ HRESULT GetCodeRange(
   
 ## <a name="parameters"></a>Parametry  
  `codeRva`  
- [in] Wirtualny adres względny (RVA) w metodzie.  
+ podczas Względny adres wirtualny (RVA) w metodzie.  
   
  `pCodeStartAddress`  
- [out] Wskaźnik do adres początkowy metody.  
+ określoną Wskaźnik na adres początkowy metody.  
   
  `pCodeSize`  
- Wskaźnik do rozmiaru kodu — metoda (liczba bajtów kodu metody).  
+ Wskaźnik do rozmiaru kodu metody (liczba bajtów kodu metody).  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

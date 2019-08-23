@@ -4,80 +4,80 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 0946e123e10fbad7357c9be356287e5e87b271d2
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: f67a8b2977e84e24654b4b65c0cdd03bcbcb1b20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486940"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968834"
 ---
 # <a name="denial-of-service"></a>Odmowa usługi
-Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie można przetworzyć wiadomości lub są przetwarzane bardzo wolno.  
+Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że komunikaty nie mogą być przetwarzane lub są przetwarzane bardzo wolno.  
   
-## <a name="excess-memory-consumption"></a>Użycie nadmierną ilość pamięci  
- Problem może wystąpić, gdy wczytywanie dokumentu XML z dużą liczbą unikatowych nazw lokalnych, przestrzenie nazw i prefiksy. Jeśli używasz klasy, która pochodzi od klasy <xref:System.Xml.XmlReader>, można wywołać <xref:System.Xml.XmlReader.LocalName%2A>, <xref:System.Xml.XmlReader.Prefix%2A> lub <xref:System.Xml.XmlReader.NamespaceURI%2A> właściwości dla każdego elementu zwróconym ciągu zostanie dodany do <xref:System.Xml.NameTable>. Kolekcja posiadaniu <xref:System.Xml.NameTable> nigdy nie zmniejsza rozmiar, tworzenia wirtualnej "przeciek pamięci" uchwytów ciągu.  
+## <a name="excess-memory-consumption"></a>Nadmierne użycie pamięci  
+ Podczas odczytywania dokumentu XML o dużej liczbie unikatowych nazw lokalnych, przestrzeni nazw lub prefiksów może wystąpić problem. Jeśli używasz klasy, która <xref:System.Xml.XmlReader>pochodzi od, i wywoływana <xref:System.Xml.XmlReader.LocalName%2A> <xref:System.Xml.XmlReader.Prefix%2A> jest właściwość lub <xref:System.Xml.XmlReader.NamespaceURI%2A> <xref:System.Xml.NameTable>dla każdego elementu, zwracany ciąg zostanie dodany do. Kolekcja utrzymywana przez <xref:System.Xml.NameTable> nigdy nie zmniejsza rozmiar, tworząc wirtualny "wyciek pamięci" uchwytów ciągów.  
   
  Środki zaradcze obejmują:  
   
-- Pochodzi od <xref:System.Xml.NameTable> klasy i wymuszanie przydziałów maksymalny rozmiar. (Nie może uniemożliwić korzystanie z <xref:System.Xml.NameTable> lub przełączyć <xref:System.Xml.NameTable> gdy jest pełny.)  
+- Pochodny od <xref:System.Xml.NameTable> klasy i wymuszanie maksymalnego przydziału rozmiaru. (Nie można zapobiec użyciu <xref:System.Xml.NameTable> lub przełączać, <xref:System.Xml.NameTable> gdy jest on pełny).  
   
-- Unikaj używania właściwości wymienionych — zamiast tego użyj <xref:System.Xml.XmlReader.MoveToAttribute%2A> metody z <xref:System.Xml.XmlReader.IsStartElement%2A> metody w miarę możliwości; tych metod nie zwracać ciągi i dlatego uniknąć problemu przepełnienie <xref:System.Xml.NameTable> kolekcji.  
+- Należy unikać używania powyższych właściwości i zamiast tego używać <xref:System.Xml.XmlReader.MoveToAttribute%2A> metody z metodą <xref:System.Xml.XmlReader.IsStartElement%2A> , jeśli jest to możliwe; metody te nie zwracają ciągów i w ten sposób uniknąć problemu przepełniania <xref:System.Xml.NameTable> kolekcji.  
   
-## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>Złośliwy klient wysyła żądania nadmierne licencji usługi  
- Złośliwego klienta bombards usługi za pomocą żądania nadmierne licencji, może spowodować serwer do użycia zbyt dużej ilości pamięci.  
+## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>Złośliwy klient wysyła nadmierne żądania licencji do usługi  
+ Jeśli złośliwy klient bombards usługę przy użyciu zbyt dużej liczby żądań licencji, może to spowodować, że serwer użyje nadmiernej ilości pamięci.  
   
- Środki zaradcze: Użyj następujących właściwości <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> klasy:  
+ Środki zaradcze Użyj następujących właściwości <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> klasy:  
   
-- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: Określa maksymalną liczbę ograniczone czasowo `SecurityContextToken`s, który serwer buforuje po `SPNego` lub `SSL` negocjacji.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: określa maksymalną liczbę powiązanych `SecurityContextToken`przekroczeń czasu, po upływie `SPNego` których serwer przeprowadzi pamięć `SSL` podręczną lub negocjacje.  
   
-- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: Określa okres istnienia `SecurityContextTokens` , problemy z serwera następujące `SPNego` lub `SSL` negocjacji. Pamięci podręczne serwera `SecurityContextToken`s, w tym okresie czasu.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: określa okres istnienia `SecurityContextTokens` `SPNego` problemów z serwerem lub `SSL` negocjowania przez serwer. Serwer buforuje `SecurityContextToken`s przez ten okres czasu.  
   
-- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: Określa maksymalną liczbę bezpiecznych konwersacji, które są ustalane na serwerze, ale żadne komunikaty aplikacji przetworzonych. Ten limit przydziału uniemożliwia klientom po ustanawianie bezpiecznej konwersacji na usługę, co powoduje usługi do zarządzania stanem na klienta, ale nigdy z nich korzystać.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: określa maksymalną liczbę bezpiecznych konwersacji, które są ustanowione na serwerze, ale dla których nie przetworzono komunikatów aplikacji. Ten limit przydziału uniemożliwia klientom ustanawianie bezpiecznych konwersacji w usłudze, co powoduje, że usługa zachowuje stan na klienta, ale nigdy nie korzysta z nich.  
   
-- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: Określa maksymalny czas, usługa utrzymuje bezpiecznej konwersacji aktywność bez otrzymania komunikatu aplikacji od klienta na potrzeby konwersacji. Ten limit przydziału uniemożliwia klientom po ustanawianie bezpiecznej konwersacji na usługę, co powoduje usługi do zarządzania stanem na klienta, ale nigdy z nich korzystać.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: określa maksymalny czas, w którym usługa utrzymuje bezpieczną konwersację, bez otrzymywania komunikatu aplikacji z klienta dla konwersacji. Ten limit przydziału uniemożliwia klientom ustanawianie bezpiecznych konwersacji w usłudze, co powoduje, że usługa zachowuje stan na klienta, ale nigdy nie korzysta z nich.  
   
-## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding lub podwójne powiązań niestandardowych wymagają uwierzytelniania klienta  
- Domyślnie <xref:System.ServiceModel.WSDualHttpBinding> ma włączoną obsługą zabezpieczeń. Możliwe jest, że jeśli uwierzytelnianie klienta jest jednak wyłączona przez ustawienie <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> właściwości <xref:System.ServiceModel.MessageCredentialType.None>, złośliwy użytkownik może spowodować "odmowa usługi" w usłudze trzeci. Taka sytuacja może wystąpić, ponieważ złośliwego klienta można kierować usługi by wysłać strumień komunikatów do innych usług.  
+## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding lub podwójne powiązania niestandardowe wymagają uwierzytelniania klienta  
+ Domyślnie <xref:System.ServiceModel.WSDualHttpBinding> funkcja ma włączone zabezpieczenia. Jeśli jednak uwierzytelnianie klienta zostanie wyłączone przez ustawienie <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> właściwości na <xref:System.ServiceModel.MessageCredentialType.None>, złośliwy użytkownik może spowodować atak typu "odmowa usługi" w trzeciej usłudze. Może to być spowodowane tym, że złośliwy klient może skierować usługę do wysłania strumienia komunikatów do trzeciej usługi.  
   
- Aby temu zaradzić, nie należy ustawiać właściwości na `None`. Również należy pamiętać o tej możliwości podczas tworzenia niestandardowego powiązania, który ma wzorca dwóch komunikatów.  
+ Aby rozwiązać ten problem, nie ustawiaj właściwości na `None`. Należy również pamiętać o tej możliwości podczas tworzenia niestandardowego powiązania, które ma podwójny wzorzec wiadomości.  
   
-## <a name="auditing-event-log-can-be-filled"></a>Dziennik zdarzeń inspekcji mogą być wypełnione  
- Jeśli złośliwy użytkownik rozumie, że inspekcja jest włączona, że atakujący może wysłać nieprawidłowe komunikaty, które powodują wpisy inspekcji są zapisywane. Jeśli wprowadzono w dzienniku inspekcji w ten sposób, inspekcji systemu nie powiedzie się.  
+## <a name="auditing-event-log-can-be-filled"></a>Dziennik zdarzeń inspekcji może być wypełniony  
+ Jeśli złośliwy użytkownik rozumie, że inspekcja jest włączona, osoba atakująca może wysłać nieprawidłowe komunikaty, które powodują zapisanie wpisów inspekcji. Jeśli dziennik inspekcji zostanie wypełniony w ten sposób, system inspekcji zakończy się niepowodzeniem.  
   
- Aby rozwiązać ten problem, należy ustawić <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> właściwość `true` i używać właściwości podglądu zdarzeń w celu sterowania zachowaniem inspekcji. Aby uzyskać więcej informacji na temat wyświetlania i zarządzania dziennikami zdarzeń za pomocą Podglądu zdarzeń, zobacz [Podgląd zdarzeń](https://go.microsoft.com/fwlink/?LinkId=186123). Aby uzyskać więcej informacji, zobacz [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Aby rozwiązać ten problem, ustaw <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> właściwość na `true` i Użyj właściwości Podgląd zdarzeń, aby kontrolować zachowanie inspekcji. Aby uzyskać więcej informacji na temat używania Podgląd zdarzeń do wyświetlania dzienników zdarzeń i zarządzania nimi, zobacz [Podgląd zdarzeń](https://go.microsoft.com/fwlink/?LinkId=186123). Aby uzyskać więcej informacji, [](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)zobacz Inspekcja.  
   
-## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Nieprawidłowy implementacje IAuthorizationPolicy może spowodować, że usługa przestanie odpowiadać  
- Wywoływanie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> metodę, uszkodzony wykonania <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interfejs może spowodować, że usługa przestanie odpowiadać.  
+## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Nieprawidłowe implementacje interfejsu IAuthorizationPolicy mogą spowodować, że usługa przestanie odpowiadać  
+ Wywołanie metody w wadliwej implementacji <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interfejsu może spowodować, że usługa przestanie odpowiadać. <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>  
   
- Środki zaradcze: Użyj tylko przez zaufany kod. Oznacza to, należy użyć tylko kod, który został zapisany i przetestowane, lub który pochodzi z zaufanego dostawcę. Nie zezwalaj na niezaufane rozszerzenia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> być podłączony do kodu bez ukończenia brany pod uwagę. Dotyczy to wszystkich rozszerzeń używanych w implementacji usługi. Usługi WCF nie powoduje żadnych rozróżnienia między kodu aplikacji i obce kod, który jest podłączony przy użyciu punkty rozszerzeń.  
+ Środki zaradcze Używaj tylko zaufanego kodu. Oznacza to, że należy używać tylko kodu, który został zapisany i przetestowany lub który pochodzi od zaufanego dostawcy. Nie Zezwalaj na Podłączanie niezaufanych <xref:System.IdentityModel.Policy.IAuthorizationPolicy> rozszerzeń do kodu bez uwzględniania ich. Dotyczy to wszystkich rozszerzeń używanych w implementacji usługi. W programie WCF nie są wprowadzane żadne różnice między kodem aplikacji a kodem obcym, który jest podłączony przy użyciu punktów rozszerzalności.  
   
-## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Rozmiar tokenu maksymalny protokołu Kerberos może być konieczne zmiany rozmiaru  
- Jeśli klient należy do wielu grup (około 900, mimo że rzeczywista liczba różni się zależnie od grup), problem może wystąpić, gdy blok nagłówka komunikatu przekracza 64 kilobajtów. W takim przypadku można zwiększyć maksymalny rozmiar tokenu protokołu Kerberos, zgodnie z opisem w artykule firmy Microsoft Support "[uwierzytelniania protokołu Kerberos programu Internet Explorer zakończy się niepowodzeniem ze względu na niewystarczający bufor, nawiązywanie połączeń z usług IIS](https://go.microsoft.com/fwlink/?LinkId=89176)." Konieczne może również zwiększyć maksymalny rozmiar wiadomości WCF do obsługi większych tokenu protokołu Kerberos.  
+## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Maksymalny rozmiar tokenu protokołu Kerberos może wymagać zmiany rozmiaru  
+ Jeśli klient należy do dużej liczby grup (około 900, chociaż rzeczywista liczba różni się w zależności od grup), problem może wystąpić, gdy blok nagłówka komunikatu przekracza 64 kilobajty. W takim przypadku można zwiększyć maksymalny rozmiar tokenu Kerberos, zgodnie z opisem w artykule pomoc techniczna firmy Microsoft "[uwierzytelnianie Kerberos w programie Internet Explorer nie działa z powodu niewystarczającego buforu łączącego się z usługami IIS](https://go.microsoft.com/fwlink/?LinkId=89176)". Może być również konieczne zwiększenie maksymalnego rozmiaru komunikatów WCF w celu uwzględnienia większego tokenu Kerberos.  
   
-## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>Wyniki automatycznej rejestracji w wielu certyfikatów o takiej samej nazwie podmiotu dla maszyny  
- *Autorejestrowania* to możliwość [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] można automatycznie zarejestrować użytkowników i komputerów pod kątem certyfikatów. Gdy komputer znajduje się w domenie z włączoną funkcją, certyfikat X.509 z przeznaczeniem uwierzytelniania klienta jest automatycznie tworzony i wstawiony w magazynie certyfikatów osobistych komputera lokalnego, zawsze wtedy, gdy nowy komputer jest dołączony do sieć. Jednak autorejestrowania używa tej samej nazwie podmiotu dla wszystkich certyfikatów, które tworzy się w pamięci podręcznej.  
+## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>Autorejestrowanie powoduje, że wiele certyfikatów ma tę samą nazwę podmiotu dla komputera  
+ Funkcja autorejestrowania jest funkcją [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] , aby automatycznie rejestrować użytkowników i komputery dla certyfikatów. Gdy komputer znajduje się w domenie z włączoną funkcją, certyfikat X. 509 z zamierzonym celem uwierzytelniania klienta zostanie automatycznie utworzony i wstawiony do magazynu certyfikatów osobistych komputera lokalnego za każdym razem, gdy nowy komputer jest przyłączony do NFS. Jednak funkcja autorejestrowania używa tej samej nazwy podmiotu dla wszystkich certyfikatów tworzonych w pamięci podręcznej.  
   
- Wpływ jest, czy może zakończyć się niepowodzeniem usług WCF można otworzyć w domenach z automatycznej rejestracji. Dzieje się tak, ponieważ domyślne kryteria wyszukiwania poświadczeń X.509 usługi mogą być niejednoznaczne, ponieważ istnieje wiele certyfikatów z w pełni kwalifikowanej nazwy systemu nazw domen (DNS, Domain Name System) komputera. Jeden certyfikat pochodzi autorejestrowania; druga może być certyfikat wystawiony samodzielnie.  
+ Ma to wpływ na to, że usługi WCF mogą nie być otwierane w domenach z autorejestrowaniem. Dzieje się tak dlatego, że domyślne kryteria wyszukiwania poświadczeń X. 509 usługi mogą być niejednoznaczne, ponieważ istnieje wiele certyfikatów z w pełni kwalifikowaną nazwą systemu nazw domen (DNS) na komputerze. Jeden certyfikat pochodzi z autorejestrowania; drugi może być certyfikatem wystawionym przez siebie.  
   
- Aby rozwiązać ten problem, należy odwoływać się do dokładnie certyfikatu do użycia przy użyciu bardziej precyzyjne kryterium wyszukiwania na [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Na przykład użyć <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> opcji, a następnie określ certyfikat przez jego unikatowy odcisk palca (skrót).  
+ Aby rozwiązać ten problem, należy odwołać się do dokładnego certyfikatu do użycia przy użyciu dokładniejszego kryterium wyszukiwania dla [ \<> ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Na przykład użyj <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> opcji i Określ certyfikat przy użyciu unikatowego odcisku palca (hash).  
   
- Aby uzyskać więcej informacji na temat funkcji automatycznej rejestracji zobacz [autorejestrowanie certyfikatów w systemie Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=95166).  
+ Aby uzyskać więcej informacji na temat funkcji autorejestrowania, zobacz [autorejestrowanie certyfikatów w systemie Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=95166).  
   
-## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Ostatni wielu nazwy alternatywnej podmiotu używane na potrzeby autoryzacji  
- W rzadkich przypadkach, kiedy certyfikat X.509 zawiera wiele nazwy alternatywnej podmiotu i autoryzacji, za pomocą alternatywnej nazwy podmiotu, autoryzacja może zakończyć się niepowodzeniem.  
+## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Ostatnia z wielu alternatywnych nazw podmiotów używanych do autoryzacji  
+ W rzadkich przypadkach, gdy certyfikat X. 509 zawiera wiele alternatywnych nazw podmiotu i Użytkownik autoryzuje przy użyciu alternatywnej nazwy podmiotu, autoryzacja może zakończyć się niepowodzeniem.  
   
-## <a name="protect-configuration-files-with-acls"></a>Ochrona plików konfiguracji przy użyciu list kontroli dostępu  
- Możesz określić wymaganych i opcjonalnych oświadczeń w kod i pliki konfiguracyjne dla CardSpace wystawionych tokenów. Skutkuje to odpowiednie elementy, które są emitowane w `RequestSecurityToken` wiadomości, które są wysyłane do zabezpieczenia tokenu usługi. Osoba atakująca można modyfikować kodu lub konfiguracji, aby usunąć wymaganego lub opcjonalnego roszczenia, potencjalnie wprowadzenie usługę tokenu zabezpieczającego, aby wystawić tokenu, który nie zezwala na dostęp do usługi docelowej.  
+## <a name="protect-configuration-files-with-acls"></a>Ochrona plików konfiguracji przy użyciu list ACL  
+ Można określić wymagane i opcjonalne oświadczenia w kodzie i plikach konfiguracji dla tokenów wystawionych przez CardSpace. Powoduje to odpowiednie elementy, które są emitowane `RequestSecurityToken` w komunikatach wysyłanych do usługi tokenu zabezpieczającego. Osoba atakująca może zmodyfikować kod lub konfigurację w celu usunięcia wymaganych lub opcjonalnych oświadczeń, co może spowodować, że usługa tokenu zabezpieczającego wystawia token, który nie zezwala na dostęp do usługi docelowej.  
   
- Aby uniknąć: Wymaga dostępu do komputera, zmodyfikuj plik konfiguracji. Użyj kontroli dostępu do pliku listy (kontroli dostępu ACL) do zabezpieczenia plików konfiguracyjnych. Usługi WCF wymaga kodu w katalogu aplikacji lub w globalnej pamięci podręcznej zanim umożliwi taki kod, aby go załadować z konfiguracji. Użyj listy ACL katalogu, aby zabezpieczyć katalogi.  
+ Aby wyeliminować: Wymagaj dostępu do komputera w celu zmodyfikowania pliku konfiguracji. Użyj list kontroli dostępu do plików (ACL) do zabezpieczania plików konfiguracji. Program WCF wymaga, aby kod znajdował się w katalogu aplikacji lub w globalnej pamięci podręcznej zestawów, zanim zezwoli na załadowanie tego kodu z konfiguracji. Użyj list ACL katalogów do zabezpieczania katalogów.  
   
-## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Osiągnięto maksymalną liczbę bezpiecznej sesji dla usługi  
- Jeśli klient został pomyślnie uwierzytelniony przez usługę bezpiecznego ustanowiono połączenie z usługą, Usługa przechowuje informacje o sesji, dopóki klient go anuluje lub ważności sesji. Każdy ustanowienie sesji zmniejsza limit maksymalnej liczby aktywnych sesji jednoczesnych, za pomocą usługi. Po osiągnięciu tego limitu klientów, które próbują utworzyć nową sesję przy użyciu tej usługi są odrzucane, dopóki jedna lub więcej aktywne sesje wygaśnie lub zostanie anulowane przez klienta. Klient może mieć wiele sesji przy użyciu usługi, a limit liczony w każdej z nich tymi sesjami.  
+## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Osiągnięto maksymalną liczbę zabezpieczonych sesji dla usługi  
+ W przypadku pomyślnego uwierzytelnienia klienta przez usługę i ustanowienia bezpiecznej sesji z usługą Usługa śledzi sesję do momentu jej anulowania przez klienta lub wygaśnięcia sesji. Każdy ustanowiony licznik sesji odnoszący się do limitu maksymalnej liczby aktywnych sesji jednoczesnych z usługą. Po osiągnięciu tego limitu klienci próbujący utworzyć nową sesję z tą usługą są odrzucani do momentu wygaśnięcia co najmniej jednej aktywnej sesji lub anulowania jej przez klienta. Klient może mieć wiele sesji z usługą, a każda z nich jest liczona do limitu.  
   
 > [!NOTE]
->  Gdy używasz stanowych sesji, nie ma zastosowania poprzednim akapicie. Aby uzyskać więcej informacji o sesjach stanowe, zobacz [jak: Utwórz kontekst zabezpieczeń tokenu dla bezpiecznej sesji](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+> W przypadku korzystania z sesji stanowych poprzedni akapit nie ma zastosowania. Aby uzyskać więcej informacji na temat sesji stanowych, zobacz [How to: Utwórz token kontekstu zabezpieczeń dla bezpiecznej sesji](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
- Aby rozwiązać ten problem, należy ustawić, ustawiając limit maksymalnej liczby aktywnych sesji, a maksymalny okres istnienia sesji <xref:System.ServiceModel.Channels.SecurityBindingElement> właściwość <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy.  
+ Aby rozwiązać ten problem, należy ustawić limit maksymalnej liczby aktywnych sesji i maksymalny okres istnienia sesji przez ustawienie <xref:System.ServiceModel.Channels.SecurityBindingElement> właściwości <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy.  
   
 ## <a name="see-also"></a>Zobacz także
 

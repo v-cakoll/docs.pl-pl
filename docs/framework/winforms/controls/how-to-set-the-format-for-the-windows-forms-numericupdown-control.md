@@ -9,19 +9,19 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], formatting values
 - up-down controls [Windows Forms], formatting numeric values
 ms.assetid: fa7c5557-6bfb-45b2-975d-8887b23b0ba0
-ms.openlocfilehash: a5d8de6db8a0d6f62a082fc381a7b855eb948514
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6db7a1b2aeb7282c3ac827cb8319706ed348fc22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630611"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949160"
 ---
-# <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a><span data-ttu-id="d02ed-102">Instrukcje: ustawienie formatu dla kontrolki NumericUpDown formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="d02ed-102">How to: Set the Format for the Windows Forms NumericUpDown Control</span></span>
-<span data-ttu-id="d02ed-103">Można skonfigurować sposób wyświetlania wartości w formularzach Windows Forms <xref:System.Windows.Forms.NumericUpDown> kontroli.</span><span class="sxs-lookup"><span data-stu-id="d02ed-103">You can configure how values are displayed in the Windows Forms <xref:System.Windows.Forms.NumericUpDown> control.</span></span> <span data-ttu-id="d02ed-104"><xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> Właściwość określa, ile pojawiają się po punkcie dziesiętnym; wartość domyślna to 0.</span><span class="sxs-lookup"><span data-stu-id="d02ed-104">The <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> property determines how many numbers appear after the decimal point; the default is 0.</span></span> <span data-ttu-id="d02ed-105"><xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> Właściwość określa, czy separator zostanie wstawione między co trzy cyfry dziesiętne; wartość domyślna to `false`.</span><span class="sxs-lookup"><span data-stu-id="d02ed-105">The <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> property determines whether a separator will be inserted between every three decimal digits; the default is `false`.</span></span> <span data-ttu-id="d02ed-106">Formant może wyświetlić wartości w formacie szesnastkowym, zamiast formatu dziesiętnego, jeśli <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> właściwość jest ustawiona na `true`; wartość domyślna to `false`.</span><span class="sxs-lookup"><span data-stu-id="d02ed-106">The control can display values in hexadecimal instead of decimal format, if the <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> property is set to `true`; the default is `false`.</span></span>  
+# <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a><span data-ttu-id="1ca70-102">Instrukcje: ustawienie formatu dla kontrolki NumericUpDown formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="1ca70-102">How to: Set the Format for the Windows Forms NumericUpDown Control</span></span>
+<span data-ttu-id="1ca70-103">Można skonfigurować sposób wyświetlania wartości w kontrolce Windows Forms <xref:System.Windows.Forms.NumericUpDown> .</span><span class="sxs-lookup"><span data-stu-id="1ca70-103">You can configure how values are displayed in the Windows Forms <xref:System.Windows.Forms.NumericUpDown> control.</span></span> <span data-ttu-id="1ca70-104">Właściwość <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> określa, ile liczb pojawia się po przecinku dziesiętnym; wartość domyślna to 0.</span><span class="sxs-lookup"><span data-stu-id="1ca70-104">The <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> property determines how many numbers appear after the decimal point; the default is 0.</span></span> <span data-ttu-id="1ca70-105">Właściwość <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> określa, czy separator zostanie wstawiony między każdą trzema cyframi dziesiętnymi; wartość domyślna `false`to.</span><span class="sxs-lookup"><span data-stu-id="1ca70-105">The <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> property determines whether a separator will be inserted between every three decimal digits; the default is `false`.</span></span> <span data-ttu-id="1ca70-106">Kontrolka może wyświetlać wartości w formacie szesnastkowym, a nie dziesiętnym <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> , jeśli właściwość jest `true`ustawiona na; wartość `false`domyślna to.</span><span class="sxs-lookup"><span data-stu-id="1ca70-106">The control can display values in hexadecimal instead of decimal format, if the <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> property is set to `true`; the default is `false`.</span></span>  
   
-### <a name="to-format-the-numeric-value"></a><span data-ttu-id="d02ed-107">Aby sformatować wartość numeryczną</span><span class="sxs-lookup"><span data-stu-id="d02ed-107">To format the numeric value</span></span>  
+### <a name="to-format-the-numeric-value"></a><span data-ttu-id="1ca70-107">Aby sformatować wartość liczbową</span><span class="sxs-lookup"><span data-stu-id="1ca70-107">To format the numeric value</span></span>  
   
-- <span data-ttu-id="d02ed-108">Wyświetlanie wartości dziesiętnej, ustawiając <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> właściwości do liczby całkowitej, a ustawienie <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> właściwości `true` lub `false`.</span><span class="sxs-lookup"><span data-stu-id="d02ed-108">Display a decimal value by setting the <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> property to an integer and setting the <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> property to `true` or `false`.</span></span>  
+- <span data-ttu-id="1ca70-108">Wyświetl wartość dziesiętną <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> , ustawiając właściwość na liczbę całkowitą i <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> ustawiając właściwość na `true` lub `false`.</span><span class="sxs-lookup"><span data-stu-id="1ca70-108">Display a decimal value by setting the <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> property to an integer and setting the <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> property to `true` or `false`.</span></span>  
   
     ```vb  
     NumericUpDown1.DecimalPlaces = 2  
@@ -38,9 +38,9 @@ ms.locfileid: "64630611"
     numericUpDown1->ThousandsSeparator = true;  
     ```  
   
-     <span data-ttu-id="d02ed-109">—lub—</span><span class="sxs-lookup"><span data-stu-id="d02ed-109">-or-</span></span>  
+     <span data-ttu-id="1ca70-109">—lub—</span><span class="sxs-lookup"><span data-stu-id="1ca70-109">-or-</span></span>  
   
-- <span data-ttu-id="d02ed-110">Wyświetlanie wartości szesnastkowych, ustawiając <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> właściwość `true`.</span><span class="sxs-lookup"><span data-stu-id="d02ed-110">Display a hexadecimal value by setting the <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> property to `true`.</span></span>  
+- <span data-ttu-id="1ca70-110">Wyświetl wartość szesnastkową, ustawiając <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> właściwość na. `true`</span><span class="sxs-lookup"><span data-stu-id="1ca70-110">Display a hexadecimal value by setting the <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> property to `true`.</span></span>  
   
     ```vb  
     NumericUpDown1.Hexadecimal = True  
@@ -55,10 +55,10 @@ ms.locfileid: "64630611"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="d02ed-111">Nawet jeśli wartość jest wyświetlana w postaci szesnastkowej, wszystkie testy wykonywania na <xref:System.Windows.Forms.NumericUpDown.Value%2A> właściwość testowania wartości dziesiętnej.</span><span class="sxs-lookup"><span data-stu-id="d02ed-111">Even if the value is displayed on the form as hexadecimal, any tests you perform on the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property will be testing its decimal value.</span></span>  
+    > <span data-ttu-id="1ca70-111">Nawet jeśli wartość jest wyświetlana w postaci szesnastkowej, wszystkie testy wykonywane na <xref:System.Windows.Forms.NumericUpDown.Value%2A> właściwości będą testowanie wartości dziesiętnej.</span><span class="sxs-lookup"><span data-stu-id="1ca70-111">Even if the value is displayed on the form as hexadecimal, any tests you perform on the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property will be testing its decimal value.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d02ed-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d02ed-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ca70-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1ca70-112">See also</span></span>
 
 - <xref:System.Windows.Forms.NumericUpDown>
-- [<span data-ttu-id="d02ed-113">NumericUpDown, kontrolka</span><span class="sxs-lookup"><span data-stu-id="d02ed-113">NumericUpDown Control</span></span>](numericupdown-control-windows-forms.md)
-- [<span data-ttu-id="d02ed-114">NumericUpDown, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="d02ed-114">NumericUpDown Control Overview</span></span>](numericupdown-control-overview-windows-forms.md)
+- [<span data-ttu-id="1ca70-113">NumericUpDown, kontrolka</span><span class="sxs-lookup"><span data-stu-id="1ca70-113">NumericUpDown Control</span></span>](numericupdown-control-windows-forms.md)
+- [<span data-ttu-id="1ca70-114">NumericUpDown, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="1ca70-114">NumericUpDown Control Overview</span></span>](numericupdown-control-overview-windows-forms.md)

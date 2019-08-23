@@ -12,35 +12,35 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: 80d6734945324f3f517b256051486273f6b687ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a617038ec51d98c62b6cf7e3c124c8af01305bac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783855"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957620"
 ---
-# <a name="stop-statement-visual-basic"></a><span data-ttu-id="0f7f0-102">Stop — Instrukcja (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0f7f0-102">Stop Statement (Visual Basic)</span></span>
-<span data-ttu-id="0f7f0-103">Wstrzymuje wykonywanie.</span><span class="sxs-lookup"><span data-stu-id="0f7f0-103">Suspends execution.</span></span>  
+# <a name="stop-statement-visual-basic"></a><span data-ttu-id="62393-102">Stop — Instrukcja (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="62393-102">Stop Statement (Visual Basic)</span></span>
+<span data-ttu-id="62393-103">Wstrzymuje wykonywanie.</span><span class="sxs-lookup"><span data-stu-id="62393-103">Suspends execution.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0f7f0-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0f7f0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="62393-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="62393-104">Syntax</span></span>  
   
 ```  
 Stop  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="0f7f0-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0f7f0-105">Remarks</span></span>  
- <span data-ttu-id="0f7f0-106">Instrukcję `Stop` można umieścić w dowolnym miejscu procedur, aby wstrzymać ich wykonanie.</span><span class="sxs-lookup"><span data-stu-id="0f7f0-106">You can place `Stop` statements anywhere in procedures to suspend execution.</span></span> <span data-ttu-id="0f7f0-107">Użycie instrukcji `Stop` przypomina ustawienie punktu przerwania w kodzie.</span><span class="sxs-lookup"><span data-stu-id="0f7f0-107">Using the `Stop` statement is similar to setting a breakpoint in the code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="62393-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="62393-105">Remarks</span></span>  
+ <span data-ttu-id="62393-106">Instrukcję `Stop` można umieścić w dowolnym miejscu procedur, aby wstrzymać ich wykonanie.</span><span class="sxs-lookup"><span data-stu-id="62393-106">You can place `Stop` statements anywhere in procedures to suspend execution.</span></span> <span data-ttu-id="62393-107">Użycie instrukcji `Stop` przypomina ustawienie punktu przerwania w kodzie.</span><span class="sxs-lookup"><span data-stu-id="62393-107">Using the `Stop` statement is similar to setting a breakpoint in the code.</span></span>  
   
- <span data-ttu-id="0f7f0-108">Instrukcja `Stop` wstrzymuje wykonywanie, ale w przeciwieństwie do `End` nie zamyka żadnych plików ani nie czyści żadnych zmiennych — chyba że występuje w skompilowanym pliku wykonywalnym (.exe).</span><span class="sxs-lookup"><span data-stu-id="0f7f0-108">The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.</span></span>  
+ <span data-ttu-id="62393-108">Instrukcja `Stop` wstrzymuje wykonywanie, ale w przeciwieństwie do `End` nie zamyka żadnych plików ani nie czyści żadnych zmiennych — chyba że występuje w skompilowanym pliku wykonywalnym (.exe).</span><span class="sxs-lookup"><span data-stu-id="62393-108">The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0f7f0-109">Jeśli instrukcja `Stop` występuje w kodzie, który działa poza zintegrowanym środowiskiem programistycznym (IDE), wywoływany jest debuger.</span><span class="sxs-lookup"><span data-stu-id="0f7f0-109">If the `Stop` statement is encountered in code that is running outside of the integrated development environment (IDE), the debugger is invoked.</span></span> <span data-ttu-id="0f7f0-110">Stanie się tak niezależnie od tego, czy kod został skompilowany w trybie debugowania, czy wersji wdrożeniowej.</span><span class="sxs-lookup"><span data-stu-id="0f7f0-110">This is true regardless of whether the code was compiled in debug or retail mode.</span></span>  
+> <span data-ttu-id="62393-109">Jeśli instrukcja `Stop` występuje w kodzie, który działa poza zintegrowanym środowiskiem programistycznym (IDE), wywoływany jest debuger.</span><span class="sxs-lookup"><span data-stu-id="62393-109">If the `Stop` statement is encountered in code that is running outside of the integrated development environment (IDE), the debugger is invoked.</span></span> <span data-ttu-id="62393-110">Stanie się tak niezależnie od tego, czy kod został skompilowany w trybie debugowania, czy wersji wdrożeniowej.</span><span class="sxs-lookup"><span data-stu-id="62393-110">This is true regardless of whether the code was compiled in debug or retail mode.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0f7f0-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="0f7f0-111">Example</span></span>  
- <span data-ttu-id="0f7f0-112">W tym przykładzie użyto instrukcji `Stop`, aby wstrzymać wykonanie każdej iteracji w pętli `For...Next`.</span><span class="sxs-lookup"><span data-stu-id="0f7f0-112">This example uses the `Stop` statement to suspend execution for each iteration through the `For...Next` loop.</span></span>  
+## <a name="example"></a><span data-ttu-id="62393-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="62393-111">Example</span></span>  
+ <span data-ttu-id="62393-112">W tym przykładzie użyto instrukcji `Stop`, aby wstrzymać wykonanie każdej iteracji w pętli `For...Next`.</span><span class="sxs-lookup"><span data-stu-id="62393-112">This example uses the `Stop` statement to suspend execution for each iteration through the `For...Next` loop.</span></span>  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   
-## <a name="see-also"></a><span data-ttu-id="0f7f0-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0f7f0-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62393-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="62393-113">See also</span></span>
 
-- [<span data-ttu-id="0f7f0-114">Instrukcja End</span><span class="sxs-lookup"><span data-stu-id="0f7f0-114">End Statement</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)
+- [<span data-ttu-id="62393-114">Instrukcja End</span><span class="sxs-lookup"><span data-stu-id="62393-114">End Statement</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)

@@ -4,35 +4,35 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, mouse input
 ms.assetid: 743c2f3c-219e-4a52-b6b8-2657096a2da6
-ms.openlocfilehash: 3b4e9eff3f5c4c032e75ded0913ce2cc6051498d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91bbf61029d52cf1d434136ee72ef389ca499ebc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800740"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949898"
 ---
-# <a name="mouse-input-in-a-windows-forms-application"></a><span data-ttu-id="98b80-102">Wprowadzanie za pomocą myszy w aplikacjach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="98b80-102">Mouse Input in a Windows Forms Application</span></span>
-<span data-ttu-id="98b80-103">Windows Forms zawiera szereg zdarzeń myszy i obsługę kursory myszy dostosowane, przechwytywanie myszy i zachowanie przeciągnij i upuść.</span><span class="sxs-lookup"><span data-stu-id="98b80-103">Windows Forms includes a variety of mouse events and additional support for customized mouse cursors, mouse capture, and drag-and-drop behavior.</span></span>  
+# <a name="mouse-input-in-a-windows-forms-application"></a><span data-ttu-id="c0ba6-102">Wprowadzanie za pomocą myszy w aplikacjach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c0ba6-102">Mouse Input in a Windows Forms Application</span></span>
+<span data-ttu-id="c0ba6-103">Windows Forms obejmuje różnorodne zdarzenia myszy i dodatkową obsługę niestandardowych kursorów myszy, przechwytywania myszy oraz zachowania przeciągania i upuszczania.</span><span class="sxs-lookup"><span data-stu-id="c0ba6-103">Windows Forms includes a variety of mouse events and additional support for customized mouse cursors, mouse capture, and drag-and-drop behavior.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="98b80-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="98b80-104">In This Section</span></span>  
- [<span data-ttu-id="98b80-105">Działanie myszy w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="98b80-105">How Mouse Input Works in Windows Forms</span></span>](how-mouse-input-works-in-windows-forms.md)  
- <span data-ttu-id="98b80-106">Informacje na temat myszy zdarzenia i jak uzyskać bieżące informacje i ustawień systemowych dla przycisku myszy.</span><span class="sxs-lookup"><span data-stu-id="98b80-106">Provides information about the mouse events and how to get current information and system settings for the mouse.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="c0ba6-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="c0ba6-104">In This Section</span></span>  
+ [<span data-ttu-id="c0ba6-105">Działanie myszy w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c0ba6-105">How Mouse Input Works in Windows Forms</span></span>](how-mouse-input-works-in-windows-forms.md)  
+ <span data-ttu-id="c0ba6-106">Zawiera informacje o zdarzeniach myszy i sposobach pobierania bieżących informacji i ustawień systemowych dla myszy.</span><span class="sxs-lookup"><span data-stu-id="c0ba6-106">Provides information about the mouse events and how to get current information and system settings for the mouse.</span></span>  
   
- [<span data-ttu-id="98b80-107">Zdarzenia myszy w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="98b80-107">Mouse Events in Windows Forms</span></span>](mouse-events-in-windows-forms.md)  
- <span data-ttu-id="98b80-108">Dostarcza informacji na temat kolejności, w których zdarzenia myszy zachodzą i jak zdarzenia myszy są wywoływane w ramach określonych kontrolek.</span><span class="sxs-lookup"><span data-stu-id="98b80-108">Provides information about the order in which the mouse events occur and how the mouse events are raised within specific controls.</span></span>  
+ [<span data-ttu-id="c0ba6-107">Zdarzenia myszy w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c0ba6-107">Mouse Events in Windows Forms</span></span>](mouse-events-in-windows-forms.md)  
+ <span data-ttu-id="c0ba6-108">Zawiera informacje o kolejności występowania zdarzeń myszy oraz o tym, jak zdarzenia myszy są wywoływane w określonych kontrolkach.</span><span class="sxs-lookup"><span data-stu-id="c0ba6-108">Provides information about the order in which the mouse events occur and how the mouse events are raised within specific controls.</span></span>  
   
- [<span data-ttu-id="98b80-109">Instrukcje: Rozróżnianie między kliknięciami a dwukrotnymi kliknięciami</span><span class="sxs-lookup"><span data-stu-id="98b80-109">How to: Distinguish Between Clicks and Double-Clicks</span></span>](how-to-distinguish-between-clicks-and-double-clicks.md)  
- <span data-ttu-id="98b80-110">Pokazuje, jak używać jednego, a następnie dwukrotnie klika, aby rozpocząć działania niezgodne.</span><span class="sxs-lookup"><span data-stu-id="98b80-110">Demonstrates how to use single and double clicks to initiate incompatible actions.</span></span>  
+ [<span data-ttu-id="c0ba6-109">Instrukcje: Rozróżnianie między kliknięciami a dwukrotnymi kliknięciami</span><span class="sxs-lookup"><span data-stu-id="c0ba6-109">How to: Distinguish Between Clicks and Double-Clicks</span></span>](how-to-distinguish-between-clicks-and-double-clicks.md)  
+ <span data-ttu-id="c0ba6-110">Pokazuje, jak używać pojedynczej i podwójnej kliknięć, aby inicjować niezgodne akcje.</span><span class="sxs-lookup"><span data-stu-id="c0ba6-110">Demonstrates how to use single and double clicks to initiate incompatible actions.</span></span>  
   
- [<span data-ttu-id="98b80-111">Wskaźniki myszy w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="98b80-111">Mouse Pointers in Windows Forms</span></span>](mouse-pointers-in-windows-forms.md)  
- <span data-ttu-id="98b80-112">W tym artykule opisano, jak zmienić kursora myszy.</span><span class="sxs-lookup"><span data-stu-id="98b80-112">Describes how to change the mouse cursor.</span></span>  
+ [<span data-ttu-id="c0ba6-111">Wskaźniki myszy w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c0ba6-111">Mouse Pointers in Windows Forms</span></span>](mouse-pointers-in-windows-forms.md)  
+ <span data-ttu-id="c0ba6-112">Opisuje sposób zmiany kursora myszy.</span><span class="sxs-lookup"><span data-stu-id="c0ba6-112">Describes how to change the mouse cursor.</span></span>  
   
- [<span data-ttu-id="98b80-113">Przechwytywanie myszy w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="98b80-113">Mouse Capture in Windows Forms</span></span>](mouse-capture-in-windows-forms.md)  
- <span data-ttu-id="98b80-114">W tym artykule opisano, jak przechwytywać myszą kontrolki.</span><span class="sxs-lookup"><span data-stu-id="98b80-114">Describes how a control can capture the mouse.</span></span>  
+ [<span data-ttu-id="c0ba6-113">Przechwytywanie myszy w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c0ba6-113">Mouse Capture in Windows Forms</span></span>](mouse-capture-in-windows-forms.md)  
+ <span data-ttu-id="c0ba6-114">Opisuje, w jaki sposób formant może przechwycić mysz.</span><span class="sxs-lookup"><span data-stu-id="c0ba6-114">Describes how a control can capture the mouse.</span></span>  
   
- [<span data-ttu-id="98b80-115">Funkcjonalność przeciągania i upuszczania w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="98b80-115">Drag-and-Drop Functionality in Windows Forms</span></span>](drag-and-drop-functionality-in-windows-forms.md)  
- <span data-ttu-id="98b80-116">W tym artykule opisano, jak zaimplementować zachowanie przeciągnij i upuść.</span><span class="sxs-lookup"><span data-stu-id="98b80-116">Describes how to implement drag-and-drop behavior.</span></span>  
+ [<span data-ttu-id="c0ba6-115">Funkcjonalność przeciągania i upuszczania w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c0ba6-115">Drag-and-Drop Functionality in Windows Forms</span></span>](drag-and-drop-functionality-in-windows-forms.md)  
+ <span data-ttu-id="c0ba6-116">Opisuje, jak zaimplementować zachowanie metody przeciągania i upuszczania.</span><span class="sxs-lookup"><span data-stu-id="c0ba6-116">Describes how to implement drag-and-drop behavior.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="98b80-117">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="98b80-117">Related Sections</span></span>  
- [<span data-ttu-id="98b80-118">Uzyskiwanie dostępu do myszy</span><span class="sxs-lookup"><span data-stu-id="98b80-118">Accessing the Mouse</span></span>](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
- <span data-ttu-id="98b80-119">Wyświetla listę tematów do uzyskiwania dostępu do myszy w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="98b80-119">Lists topics for accessing the mouse using Visual Basic.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="c0ba6-117">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="c0ba6-117">Related Sections</span></span>  
+ [<span data-ttu-id="c0ba6-118">Uzyskiwanie dostępu do myszy</span><span class="sxs-lookup"><span data-stu-id="c0ba6-118">Accessing the Mouse</span></span>](../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
+ <span data-ttu-id="c0ba6-119">Wyświetla listę tematów do uzyskiwania dostępu do myszy przy użyciu Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c0ba6-119">Lists topics for accessing the mouse using Visual Basic.</span></span>

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88b7b2093ecb2c601e57eca32e25c21e91641281
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 622b6c523adfb7bae2fc38826152ef69709568cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753471"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931076"
 ---
-# <a name="ihostsyncmanagercreatecrst-method"></a><span data-ttu-id="8c377-102">IHostSyncManager::CreateCrst — Metoda</span><span class="sxs-lookup"><span data-stu-id="8c377-102">IHostSyncManager::CreateCrst Method</span></span>
-<span data-ttu-id="8c377-103">Tworzy obiekt sekcję krytyczną synchronizacji.</span><span class="sxs-lookup"><span data-stu-id="8c377-103">Creates a critical section object for synchronization.</span></span>  
+# <a name="ihostsyncmanagercreatecrst-method"></a><span data-ttu-id="20cbb-102">IHostSyncManager::CreateCrst — Metoda</span><span class="sxs-lookup"><span data-stu-id="20cbb-102">IHostSyncManager::CreateCrst Method</span></span>
+<span data-ttu-id="20cbb-103">Tworzy obiekt sekcji krytycznej do synchronizacji.</span><span class="sxs-lookup"><span data-stu-id="20cbb-103">Creates a critical section object for synchronization.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c377-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8c377-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="20cbb-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="20cbb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateCrst (  
@@ -35,39 +35,39 @@ HRESULT CreateCrst (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8c377-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="8c377-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="20cbb-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="20cbb-105">Parameters</span></span>  
  `ppCrst`  
- <span data-ttu-id="8c377-106">[out] Wskaźnik na adres [ihostcrst —](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) wystąpienia implementowane przez hosta lub wartość null, jeśli nie można utworzyć sekcję krytyczną.</span><span class="sxs-lookup"><span data-stu-id="8c377-106">[out] A pointer to the address of an [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instance implemented by the host, or null if the critical section could not be created.</span></span>  
+ <span data-ttu-id="20cbb-106">określoną Wskaźnik do adresu wystąpienia [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) zaimplementowanego przez hosta lub wartość null, jeśli nie można utworzyć sekcji krytycznej.</span><span class="sxs-lookup"><span data-stu-id="20cbb-106">[out] A pointer to the address of an [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instance implemented by the host, or null if the critical section could not be created.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8c377-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="8c377-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="20cbb-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="20cbb-107">Return Value</span></span>  
   
-|<span data-ttu-id="8c377-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8c377-108">HRESULT</span></span>|<span data-ttu-id="8c377-109">Opis</span><span class="sxs-lookup"><span data-stu-id="8c377-109">Description</span></span>|  
+|<span data-ttu-id="20cbb-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="20cbb-108">HRESULT</span></span>|<span data-ttu-id="20cbb-109">Opis</span><span class="sxs-lookup"><span data-stu-id="20cbb-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="8c377-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="8c377-110">S_OK</span></span>|<span data-ttu-id="8c377-111">`CreateCrst` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="8c377-111">`CreateCrst` returned successfully.</span></span>|  
-|<span data-ttu-id="8c377-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="8c377-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="8c377-113">Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="8c377-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="8c377-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="8c377-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="8c377-115">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="8c377-115">The call timed out.</span></span>|  
-|<span data-ttu-id="8c377-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="8c377-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="8c377-117">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="8c377-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="8c377-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="8c377-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="8c377-119">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="8c377-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="8c377-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="8c377-120">E_FAIL</span></span>|<span data-ttu-id="8c377-121">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="8c377-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="8c377-122">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="8c377-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="8c377-123">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="8c377-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="8c377-124">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="8c377-124">E_OUTOFMEMORY</span></span>|<span data-ttu-id="8c377-125">Nie ma wystarczającej ilości dostępnej pamięci na utworzyć żądany sekcję krytyczną.</span><span class="sxs-lookup"><span data-stu-id="8c377-125">Not enough memory was available to create the requested critical section.</span></span>|  
+|<span data-ttu-id="20cbb-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="20cbb-110">S_OK</span></span>|<span data-ttu-id="20cbb-111">`CreateCrst`pomyślnie zwrócono.</span><span class="sxs-lookup"><span data-stu-id="20cbb-111">`CreateCrst` returned successfully.</span></span>|  
+|<span data-ttu-id="20cbb-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="20cbb-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="20cbb-113">Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="20cbb-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="20cbb-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="20cbb-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="20cbb-115">Upłynął limit czasu połączenia.</span><span class="sxs-lookup"><span data-stu-id="20cbb-115">The call timed out.</span></span>|  
+|<span data-ttu-id="20cbb-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="20cbb-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="20cbb-117">Obiekt wywołujący nie jest właocicielem blokady.</span><span class="sxs-lookup"><span data-stu-id="20cbb-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="20cbb-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="20cbb-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="20cbb-119">Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.</span><span class="sxs-lookup"><span data-stu-id="20cbb-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="20cbb-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="20cbb-120">E_FAIL</span></span>|<span data-ttu-id="20cbb-121">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="20cbb-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="20cbb-122">Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie.</span><span class="sxs-lookup"><span data-stu-id="20cbb-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="20cbb-123">Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="20cbb-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="20cbb-124">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="20cbb-124">E_OUTOFMEMORY</span></span>|<span data-ttu-id="20cbb-125">Za mało dostępnej pamięci, aby utworzyć żądaną sekcję krytyczną.</span><span class="sxs-lookup"><span data-stu-id="20cbb-125">Not enough memory was available to create the requested critical section.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8c377-126">Uwagi</span><span class="sxs-lookup"><span data-stu-id="8c377-126">Remarks</span></span>  
- <span data-ttu-id="8c377-127">Obiekty sekcję krytyczną zapewniają podobne do dostarczony przez obiekt mutex synchronizacji z tą różnicą, że sekcje krytyczne mogą korzystać tylko wątki pojedynczego procesu.</span><span class="sxs-lookup"><span data-stu-id="8c377-127">Critical section objects provide synchronization similar to that provided by a mutex object, except that critical sections can be used only by the threads of a single process.</span></span> <span data-ttu-id="8c377-128">`CreateCrst` odzwierciedla Win32 `InitializeCriticalSection` funkcji.</span><span class="sxs-lookup"><span data-stu-id="8c377-128">`CreateCrst` mirrors the Win32 `InitializeCriticalSection` function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="20cbb-126">Uwagi</span><span class="sxs-lookup"><span data-stu-id="20cbb-126">Remarks</span></span>  
+ <span data-ttu-id="20cbb-127">Obiekty sekcji krytycznej zapewniają synchronizację podobną do tej, która jest dostarczana przez obiekt mutex, z tą różnicą, że sekcje krytyczne mogą być używane tylko przez wątki pojedynczego procesu.</span><span class="sxs-lookup"><span data-stu-id="20cbb-127">Critical section objects provide synchronization similar to that provided by a mutex object, except that critical sections can be used only by the threads of a single process.</span></span> <span data-ttu-id="20cbb-128">`CreateCrst`odzwierciedla funkcję Win32 `InitializeCriticalSection` .</span><span class="sxs-lookup"><span data-stu-id="20cbb-128">`CreateCrst` mirrors the Win32 `InitializeCriticalSection` function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8c377-129">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8c377-129">Requirements</span></span>  
- <span data-ttu-id="8c377-130">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8c377-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="20cbb-129">Wymagania</span><span class="sxs-lookup"><span data-stu-id="20cbb-129">Requirements</span></span>  
+ <span data-ttu-id="20cbb-130">**Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="20cbb-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8c377-131">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8c377-131">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="20cbb-131">**Nagłówki** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="20cbb-131">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="8c377-132">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8c377-132">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="20cbb-132">**Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="20cbb-132">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8c377-133">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c377-133">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="20cbb-133">**.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20cbb-133">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8c377-134">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8c377-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20cbb-134">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="20cbb-134">See also</span></span>
 
-- [<span data-ttu-id="8c377-135">ICLRSyncManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="8c377-135">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="8c377-136">IHostCrst, interfejs</span><span class="sxs-lookup"><span data-stu-id="8c377-136">IHostCrst Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
-- [<span data-ttu-id="8c377-137">IHostSyncManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="8c377-137">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
-- [<span data-ttu-id="8c377-138">IHostSemaphore, interfejs</span><span class="sxs-lookup"><span data-stu-id="8c377-138">IHostSemaphore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [<span data-ttu-id="8c377-139">Muteksy</span><span class="sxs-lookup"><span data-stu-id="8c377-139">Mutexes</span></span>](../../../../docs/standard/threading/mutexes.md)
-- [<span data-ttu-id="8c377-140">Semaphore i SemaphoreSlim</span><span class="sxs-lookup"><span data-stu-id="8c377-140">Semaphore and SemaphoreSlim</span></span>](../../../../docs/standard/threading/semaphore-and-semaphoreslim.md)
+- [<span data-ttu-id="20cbb-135">ICLRSyncManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="20cbb-135">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="20cbb-136">IHostCrst, interfejs</span><span class="sxs-lookup"><span data-stu-id="20cbb-136">IHostCrst Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
+- [<span data-ttu-id="20cbb-137">IHostSyncManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="20cbb-137">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="20cbb-138">IHostSemaphore, interfejs</span><span class="sxs-lookup"><span data-stu-id="20cbb-138">IHostSemaphore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
+- [<span data-ttu-id="20cbb-139">Muteksy</span><span class="sxs-lookup"><span data-stu-id="20cbb-139">Mutexes</span></span>](../../../standard/threading/mutexes.md)
+- [<span data-ttu-id="20cbb-140">Semaphore i SemaphoreSlim</span><span class="sxs-lookup"><span data-stu-id="20cbb-140">Semaphore and SemaphoreSlim</span></span>](../../../standard/threading/semaphore-and-semaphoreslim.md)

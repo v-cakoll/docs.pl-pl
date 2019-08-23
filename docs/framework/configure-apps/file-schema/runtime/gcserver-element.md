@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61b4076a72dbc17ffc800a1a8d37a22d1435e02b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 19ebad32ad8c7018b910a3d230f43031008dcdc7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663679"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927383"
 ---
 # <a name="gcserver-element"></a>\<gcServer, element >
 Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia odzyskiwanie pamięci serwera.  
@@ -65,7 +65,7 @@ Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia odzyskiwan
  Tego elementu można używać tylko w pliku konfiguracji aplikacji; jest on ignorowany, jeśli znajduje się w pliku konfiguracji komputera.  
   
 > [!NOTE]
->  W .NET Framework 4 i starszych wersjach współbieżne wyrzucanie elementów bezużytecznych nie jest dostępne po włączeniu odzyskiwania pamięci serwera. Począwszy od .NET Framework 4,5, wyrzucanie elementów bezużytecznych serwera jest współbieżne. Aby użyć niewspółbieżnego wyrzucania elementów bezużytecznych serwera `true` , ustaw `<gcServer>` element na i [ \<gcConcurrent > elementu.](gcconcurrent-element.md) `false`  
+> W .NET Framework 4 i starszych wersjach współbieżne wyrzucanie elementów bezużytecznych nie jest dostępne po włączeniu odzyskiwania pamięci serwera. Począwszy od .NET Framework 4,5, wyrzucanie elementów bezużytecznych serwera jest współbieżne. Aby użyć niewspółbieżnego wyrzucania elementów bezużytecznych serwera `true` , ustaw `<gcServer>` element na i [ \<gcConcurrent > elementu.](gcconcurrent-element.md) `false`  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład umożliwia wyrzucanie elementów bezużytecznych na serwerze.  

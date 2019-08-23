@@ -2,23 +2,23 @@
 title: Odwołania do obiektów
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: 2a2da82d913d43aa9bc3ccfeb9f1f1eda12b0562
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ac8eba44168befae92bef30a054c00d997cc54b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008062"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965598"
 ---
 # <a name="object-references"></a>Odwołania do obiektów
-W tym przykładzie przedstawiono sposób przekazywania obiektów według odwołania między serwerem a klientem. Zastosowań przykładowe symulowane *sieci społecznościowych*. Sieci społecznościowej składa się z `Person` klasę, która zawiera listy znajomych, w których każdy friend jest wystąpieniem `Person` klasy z listy znajomych. Spowoduje to utworzenie grafu obiektów. Usługa udostępnia operacje w tych sieciach społecznościowych.  
+Ten przykład ilustruje sposób przekazywania obiektów przez odwołania między serwerem a klientem. Przykład używa symulowanych *sieci społecznościowych*. Sieć społecznościowa składa się `Person` z klasy, która zawiera listę znajomych, w których każdy zaprzyjaźniony jest wystąpieniem `Person` klasy, z własną listą znajomych. Spowoduje to utworzenie grafu obiektów. Usługa ujawnia operacje w tych sieciach społecznościowych.  
   
- W tym przykładzie usługa jest hostowana przez Internetowe usługi informacyjne (IIS), a klient to aplikacja konsoli (.exe).  
+ W tym przykładzie usługa jest hostowana przez Internet Information Services (IIS), a klient jest aplikacją konsolową (. exe).  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 ## <a name="service"></a>Usługa  
- `Person` Klasa ma <xref:System.Runtime.Serialization.DataContractAttribute> zastosowany, za pomocą <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> pola `true` do deklarowania go jako typu odwołania. Wszystkie właściwości mają <xref:System.Runtime.Serialization.DataMemberAttribute> zastosowany.  
+ Klasa ma zastosowany<xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> atrybut ,`true` z polem ustawionym na Zadeklaruj go jako typ referencyjny. <xref:System.Runtime.Serialization.DataContractAttribute> `Person` Wszystkie właściwości mają <xref:System.Runtime.Serialization.DataMemberAttribute> zastosowany atrybut.  
   
 ```csharp
 [DataContract(IsReference=true)]  
@@ -51,7 +51,7 @@ public class Person
 }  
 ```  
   
- `GetPeopleInNetwork` Operacja przyjmuje parametr typu `Person` i zwraca wszystkie osoby w sieci; oznacza to, że wszystkie osoby w `friends` listy, przyjazne znajomych i tak dalej, bez duplikatów.  
+ Operacja przyjmuje parametr typu `Person` i zwraca wszystkie osoby w sieci, czyli `friends` wszystkie osoby znajdujące się na liście, znajomych zaprzyjaźnionych i tak dalej, bez duplikatów. `GetPeopleInNetwork`  
   
 ```csharp
 public List<Person> GetPeopleInNetwork(Person p)  
@@ -63,7 +63,7 @@ public List<Person> GetPeopleInNetwork(Person p)
 }  
 ```  
   
- `GetMutualFriends` Operacja przyjmuje parametr typu `Person` i zwraca wszystkich znajomych na liście, mających tę osobę w ich `friends` listy.  
+ Operacja przyjmuje parametr typu `Person` i zwraca wszystkich znajomych z listy, którzy `friends` posiadają również tę osobę na liście. `GetMutualFriends`  
   
 ```csharp
 public List<Person> GetMutualFriends(Person p)  
@@ -78,7 +78,7 @@ public List<Person> GetMutualFriends(Person p)
 }  
 ```  
   
- `GetCommonFriends` Operacja pobiera listę typów `Person`. Lista powinna mieć dwie `Person` obiektów w nim. Operacja zwraca listę `Person` obiekty, które znajdują się w `friends` wykaz obu `Person` obiekty na liście wejściowej.  
+ Operacja przyjmuje listę typu `Person`. `GetCommonFriends` Lista powinna zawierać dwa `Person` obiekty. Operacja zwraca listę `Person` obiektów, które znajdują się `friends` na listach `Person` obiektów na liście wejściowej.  
   
 ```csharp
 public List<Person> GetCommonFriends(List<Person> people)  
@@ -92,24 +92,24 @@ public List<Person> GetCommonFriends(List<Person> people)
 ```  
   
 ## <a name="client"></a>Klient  
- Serwer proxy klienta jest tworzony przy użyciu **Dodaj odwołanie do usługi** funkcji programu Visual Studio.  
+ Serwer proxy klienta jest tworzony przy użyciu funkcji **Dodaj odwołanie do usługi** programu Visual Studio.  
   
- Sieci społecznościowych, która składa się z pięciu `Person` obiekty są tworzone. Klient wywołuje każdą z trzech metod w usłudze.  
+ Zostanie utworzona sieć społecznościowa składająca `Person` się z pięciu obiektów. Klient wywołuje każdą z trzech metod w usłudze.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   

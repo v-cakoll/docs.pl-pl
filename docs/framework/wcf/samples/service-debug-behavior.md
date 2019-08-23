@@ -2,22 +2,22 @@
 title: Zachowanie debugowania usług
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
-ms.openlocfilehash: 2f2eefb01e66efddea05116f640a60defe78de1b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75c53d567e3f16310f9623b416279decb6bee541
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664721"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964557"
 ---
 # <a name="service-debug-behavior"></a>Zachowanie debugowania usług
-Niniejszy przykład pokazuje, jak można skonfigurować ustawienia zachowanie debugowania usług. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontraktu usługi. W tym przykładzie jawnie definiuje zachowanie debugowania usług w pliku konfiguracji. Ponadto możesz obowiązkowo w kodzie.  
+Ten przykład pokazuje, jak można skonfigurować ustawienia zachowania debugowania usługi. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontrakt usługi. Ten przykład jawnie definiuje zachowanie debugowania usługi w pliku konfiguracji. Można go również wykonać bezwzględnie w kodzie.  
   
- W tym przykładzie klient to aplikacja konsoli (.exe), a usługa jest hostowana przez Internetowe usługi informacyjne (IIS).  
+ W tym przykładzie klient jest aplikacją konsolową (. exe), a usługa jest hostowana przez Internet Information Services (IIS).  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Plik Web.config dla serwera definiuje zachowanie debugowania usług, aby włączyć stronę pomocy i obsługi wyjątków, jak pokazano w następującym przykładzie.  
+ Plik Web. config dla serwera definiuje zachowanie debugowania usługi, aby włączyć stronę pomocy i obsługę wyjątków, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <behaviors>  
@@ -31,30 +31,30 @@ Niniejszy przykład pokazuje, jak można skonfigurować ustawienia zachowanie de
 </behaviors>  
 ```  
   
- [\<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) jest elementem konfiguracji, który umożliwia zmianę właściwości zachowanie debugowania usług. Użytkownik może modyfikować tego zachowania do osiągnięcia następujących czynności:  
+ > serviceDebug to element konfiguracji, który umożliwia zmianę właściwości zachowania debugowania usługi. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) Użytkownik może zmodyfikować to zachowanie, aby osiągnąć następujące czynności:  
   
-- Dzięki temu zwracanej każdy wyjątek, który jest zgłaszany przez kod aplikacji, nawet jeśli wyjątek nie jest zadeklarowany za pomocą usługi <xref:System.ServiceModel.FaultContractAttribute>. Odbywa się przez ustawienie `includeExceptionDetailInFaults` do `true`. To ustawienie jest przydatne podczas debugowania przypadków, gdy serwer jest zgłaszanie nieoczekiwany wyjątek.  
+- Dzięki temu usługa zwróci wyjątek, który jest generowany przez kod aplikacji, nawet jeśli wyjątek nie został zadeklarowany przy użyciu <xref:System.ServiceModel.FaultContractAttribute>. Jest to wykonywane przez ustawienie `includeExceptionDetailInFaults`. `true` To ustawienie jest przydatne w przypadku debugowania, gdy serwer zgłasza nieoczekiwany wyjątek.  
   
     > [!IMPORTANT]
-    >  Nie jest bezpieczne, aby włączyć to ustawienie w środowisku produkcyjnym. Serwer nieoczekiwany wyjątek może mieć pewne informacje, które nie są przeznaczone dla klienta i dlatego ustawienie `includeExceptionDetailsInFaults` do `true` może prowadzić do przecieków informacji.  
+    >  Włączenie tego ustawienia w środowisku produkcyjnym nie jest bezpieczne. Nieoczekiwany wyjątek serwera może mieć pewne informacje, które nie są przeznaczone dla klienta i dlatego `includeExceptionDetailsInFaults` ustawienie `true` może spowodować przeciek informacji.  
   
-- [ \<ServiceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) również pozwala użytkownikowi na włączanie lub wyłączanie strony pomocy. Każda usługa Opcjonalnie można ujawnić stronę pomocy, który zawiera informacje dotyczące usługi, w tym punkt końcowy, aby uzyskać WSDL usługi. To może być włączona `httpHelpPageEnabled` do `true`. Dzięki temu strony pomocy do zwrócenia na żądanie GET do podstawowego adresu usługi. Ten adres można zmienić przez ustawienie innego atrybutu `httpHelpPageUrl`. Umożliwia to bezpieczne przy użyciu protokołu HTTPS zamiast protokołu HTTP. Można to zrobić, ustawiając `httpsHelpPageEnabled` i `httpsHelpPageUrl`.  
+- > ServiceDebug umożliwia także użytkownikowi włączenie lub wyłączenie strony pomocy. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) Każda usługa może opcjonalnie uwidocznić stronę pomocy, która zawiera informacje o usłudze, w tym punkt końcowy do pobrania WSDL dla usługi. Można to włączyć, ustawiając wartość `httpHelpPageEnabled`. `true` Dzięki temu strona pomocy ma zostać zwrócona do żądania GET na adres podstawowy usługi. Aby zmienić ten adres, należy ustawić inny atrybut `httpHelpPageUrl`. Można to zabezpieczyć przy użyciu protokołu HTTPS zamiast protokołu HTTP. Można to zrobić przez ustawienie `httpsHelpPageEnabled` i. `httpsHelpPageUrl`  
   
- Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Pierwsze trzy operacje (dodawania, odejmowania i mnożenia) musi zakończyć się sukcesem. Ostatnia operacja ("dzielenie") kończy się niepowodzeniem z dzielenia przez zero wyjątek.  
+ Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Pierwsze trzy operacje (Dodaj, Odejmij i pomnóż) muszą się powieść. Ostatnia operacja ("dzielenie") kończy się niepowodzeniem z wyjątkiem dzielenia przez zero.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\ServiceDebug`  

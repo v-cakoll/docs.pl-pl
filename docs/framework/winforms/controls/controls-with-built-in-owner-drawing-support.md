@@ -8,45 +8,45 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: c053c14bb06d1bb28c7b7e6652ccc6e41af9c4e5
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: f0d4b99f9ee0134fc7334a941dd5ef4fd7ba3df3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170604"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930193"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Formanty z wbudowaną obsługą rysowania przez właściciela
-Rysowanie w formularzach Windows, który jest znany także jako rysowanie niestandardowe, przez właściciela to technika zmiany wyglądu niektórych kontrolek.  
+Rysowanie przez właściciela w Windows Forms, który jest również znany jako rysunek niestandardowy, jest techniką zmiany wyglądu wizualizacji niektórych kontrolek.  
   
 > [!NOTE]
->  Słowo "control", w tym temacie stosuje się do określenia klasy, które wynikają z poziomu <xref:System.Windows.Forms.Control> lub <xref:System.ComponentModel.Component>.  
+> Słowo "Control" w tym temacie służy do oznaczania klas, które pochodzą z albo <xref:System.Windows.Forms.Control> lub <xref:System.ComponentModel.Component>.  
   
- Zazwyczaj Windows obsługuje malowania automatycznie przy użyciu ustawień właściwości, takie jak <xref:System.Windows.Forms.Control.BackColor%2A> w celu określenia wyglądu formantu. Za pomocą Rysowanie przez właściciela możesz przejąć proces rysowania zmiana elementami wyglądu, które nie są dostępne za pomocą właściwości. Na przykład wiele kontrolek umożliwiają ustawianie koloru tekstu, która jest wyświetlana, ale są ograniczone do pojedynczego koloru. Rysowanie przez właściciela umożliwia wykonywanie takich czynności, jak wyświetlić część tekstu w czarny i części w kolorze czerwonym.  
+ Zwykle system Windows automatycznie obsługuje malowanie przy użyciu ustawień właściwości, <xref:System.Windows.Forms.Control.BackColor%2A> takich jak w celu określenia wyglądu kontrolki. Przy użyciu rysowania przez właściciela można przetworzyć proces malowania, zmieniając elementy wyglądu, które nie są dostępne za pomocą właściwości. Na przykład wiele kontrolek pozwala ustawić kolor wyświetlanego tekstu, ale jest ograniczony do jednego koloru. Rysowanie przez właściciela umożliwia wykonywanie takich czynności jak wyświetlanie części tekstu w kolorze czarnym i w kolorze czerwonym.  
   
- W praktyce Rysowanie przez właściciela jest podobny do rysowania grafiki w formularzu. Na przykład można użyć metod graficznych w obsłudze w formularzu <xref:System.Windows.Forms.Control.Paint> zdarzenie, aby emulować `ListBox` kontroli, ale musi napisać własny kod do obsługi wszystkich interakcji z użytkownikiem. Za pomocą Rysowanie przez właściciela formant używa kodu, aby narysować jego zawartość, ale w przeciwnym razie zachowuje wszystkie jego funkcje wewnętrzne. Narysuj każdy element w kontrolce lub dostosować niektóre aspekty każdego elementu, a domyślny wygląd innych aspektów każdego elementu, można użyć metody grafiki.  
+ W tym temacie rysowanie właściciela jest podobne do rysowania grafiki w formularzu. Na przykład można użyć metod graficznych w programie obsługi dla <xref:System.Windows.Forms.Control.Paint> zdarzenia formularza do emulowania `ListBox` kontrolki, ale trzeba napisać własny kod, aby obsłużyć wszystkie interakcje z użytkownikiem. Przy użyciu rysowania przez właściciela formant używa kodu do rysowania jego zawartości, ale w przeciwnym razie zachowuje wszystkie jego funkcje wewnętrzne. Możesz użyć metod graficznych, aby narysować każdy element w kontrolce lub dostosować niektóre aspekty każdego elementu przy użyciu domyślnego wyglądu dla innych aspektów każdego elementu.  
   
-## <a name="owner-drawing-in-windows-forms-controls"></a>Rysowanie właściciela w Windows Forms kontrolek  
- Aby wykonać właściciela rysowania formantów, które go obsługują, będzie zwykle ustawić jedną właściwość i obsługę zdarzeń co najmniej jeden.  
+## <a name="owner-drawing-in-windows-forms-controls"></a>Rysowanie przez właściciela w kontrolkach Windows Forms  
+ Aby wykonać rysowanie przez właściciela w kontrolkach, które go obsługują, zwykle ustawiana jest jedna właściwość i obsłużą jedno lub więcej zdarzeń.  
   
- Większość formanty Rysowanie przez właściciela tej pomocy technicznej mają `OwnerDraw` lub `DrawMode` właściwość, która wskazuje, czy kontrolka zgłosi jego zdarzenia związane z rysowaniem lub zdarzenia podczas jego samego do malowania.  
+ Większość formantów, które obsługują rysowanie właściciela, `OwnerDraw` ma `DrawMode` właściwość lub, która wskazuje, czy kontrolka będzie zgłaszać zdarzenia związane z rysunkiem, czy zdarzenia, gdy malują się one w sobie.  
   
- Formanty, które nie mają `OwnerDraw` lub `DrawMode` właściwość zawierać `DataGridView` formant, który udostępnia zdarzenia rysowania, które automatycznie są wykonywane, i `ToolStrip` formant, który jest rysowany przy użyciu klasy renderowania zewnętrznego, który ma swój własny zdarzenia związane z rysowaniem.  
+ Kontrolki, które nie mają `OwnerDraw` właściwości `DrawMode` lub zawierają `DataGridView` kontrolkę, która umożliwia `ToolStrip` rysowanie zdarzeń, które są wykonywane automatycznie, i kontrolki, która jest rysowana przy użyciu zewnętrznej klasy renderowania, która ma własne zdarzenia związane ze rysowaniem.  
   
- Istnieją różne rodzaje zdarzenia rysowania, ale występuje typowych zdarzeń rysowania, aby narysować pojedynczy element w kontrolce. Program obsługi zdarzeń odbierze `EventArgs` obiekt, który zawiera informacje na temat elementu, rysowania i narzędzi można użyć do rysowania. Na przykład, ten obiekt zawiera zazwyczaj numer indeksu elementu w obrębie swojej kolekcji nadrzędnej <xref:System.Drawing.Rectangle> oznacza, że dla wybranego elementu wyświetlone granice, a <xref:System.Drawing.Graphics> obiekt do wywoływania metod malowania. Niektóre zdarzenia `EventArgs` obiekt zawiera dodatkowe informacje na temat elementu a metody wywołujące do malowania niektóre aspekty elementu domyślnie, np. tło lub prostokąt fokusu.  
+ Istnieje wiele różnych rodzajów zdarzeń rysowania, ale w celu narysowania pojedynczego elementu wewnątrz kontrolki występuje typowe zdarzenie rysowania. Program obsługi zdarzeń odbiera `EventArgs` obiekt, który zawiera informacje o rysowanym elemencie i narzędziach, których można użyć do narysowania. Na przykład ten obiekt zwykle zawiera numer indeksu elementu w obrębie jego kolekcji nadrzędnej, <xref:System.Drawing.Rectangle> który wskazuje granice wyświetlania elementu <xref:System.Drawing.Graphics> i obiekt do wywoływania metod malowania. W przypadku niektórych zdarzeń `EventArgs` obiekt zawiera dodatkowe informacje na temat elementu i metod, które można wywołać w celu malowania niektórych aspektów elementu domyślnie, takich jak tło lub prostokąt fokusu.  
   
- Aby utworzyć formant wielokrotnego użytku, który zawiera dostosowania rysowanych przez właściciela, Utwórz nową klasę pochodzącą od klasy kontrolki, która obsługuje Rysowanie przez właściciela. Zamiast obsługi zdarzenia rysowania, należy uwzględnić swój kod rysowania przez właściciela odpowiednie zastąpienia `On` *EventName* metodę lub metody w nowej klasie. Upewnij się, że wywołanie klasy bazowej `On` *EventName* metodę lub metody w tym przypadku tak, aby użytkownicy kontrolki można obsługiwać zdarzenia rysowania przez właściciela i zapewnia dodatkowe możliwości dostosowania.  
+ Aby utworzyć kontrolkę wielokrotnego użytku, która zawiera dostosowania rysowane przez właściciela, Utwórz nową klasę pochodzącą z klasy kontrolki obsługującej rysowanie przez właściciela. Zamiast obsłużyć zdarzenia rysowania, Uwzględnij swój kod rysowania przez właściciela w zastąpieniach `On`dla odpowiedniej metody lub metod *EventName* w nowej klasie. Upewnij się, że w tym przypadku wywoływana `On`jest metoda lub metody klasy bazowej, tak aby użytkownicy Twojej kontrolki mogli obsłużyć zdarzenia rysowania przez właściciela i zapewnić dodatkowe dostosowanie.  
   
- Następujące formy Windows kontrolki Rysowanie we wszystkich wersjach programu .NET Framework przez właściciela pomocy technicznej:  
+ Następujące kontrolki Windows Forms obsługują rysowanie właściciela we wszystkich wersjach .NET Framework:  
   
 - <xref:System.Windows.Forms.ListBox>  
   
 - <xref:System.Windows.Forms.ComboBox>  
   
-- <xref:System.Windows.Forms.MenuItem> (używane przez <xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu>)  
+- <xref:System.Windows.Forms.MenuItem>(używane przez <xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu>)  
   
 - <xref:System.Windows.Forms.TabControl>  
   
- Następujące elementy sterujące obsługują rysowanie tylko w programie .NET Framework 2.0 przez właściciela:  
+ Poniższe kontrolki obsługują rysowanie właściciela tylko w .NET Framework 2,0:  
   
 - <xref:System.Windows.Forms.ToolTip>  
   
@@ -54,25 +54,25 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
   
 - <xref:System.Windows.Forms.TreeView>  
   
- Następujące elementy sterujące obsługują rysowanie przez właściciela i są nowością w programie .NET Framework 2.0:  
+ Poniższe kontrolki obsługują rysowanie właściciela i są nowe w .NET Framework 2,0:  
   
 - <xref:System.Windows.Forms.DataGridView>  
   
 - <xref:System.Windows.Forms.ToolStrip>  
   
- Poniższe sekcje zawierają dodatkowe szczegóły dla każdego z tych kontrolek.  
+ Poniższe sekcje zawierają dodatkowe szczegóły dla każdej z tych kontrolek.  
   
-### <a name="listbox-and-combobox-controls"></a>Pola listy i kontrolki ComboBox  
- <xref:System.Windows.Forms.ListBox> i <xref:System.Windows.Forms.ComboBox> formanty umożliwiają narysuj poszczególnych elementów w kontrolce, wszystko w jedno rozwiązanie lub w różnych rozmiarach.  
+### <a name="listbox-and-combobox-controls"></a>ListBox i ComboBox — formanty  
+ Formanty <xref:System.Windows.Forms.ListBox> i<xref:System.Windows.Forms.ComboBox> umożliwiają rysowanie poszczególnych elementów w formancie albo w jednym rozmiarze, albo w różnych rozmiarach.  
   
 > [!NOTE]
->  Mimo że <xref:System.Windows.Forms.CheckedListBox> kontroli jest tworzony na podstawie <xref:System.Windows.Forms.ListBox> control, nie obsługuje ona Rysowanie przez właściciela.  
+> Chociaż formant pochodzi <xref:System.Windows.Forms.ListBox> od kontrolki, nie obsługuje rysowania przez właściciela. <xref:System.Windows.Forms.CheckedListBox>  
   
- Aby narysować każdego elementu w taki sam rozmiar, ustaw `DrawMode` właściwości <xref:System.Windows.Forms.DrawMode.OwnerDrawFixed> i obsługiwać `DrawItem` zdarzeń.  
+ Aby narysować każdy element o takim samym rozmiarze, `DrawMode` należy ustawić <xref:System.Windows.Forms.DrawMode.OwnerDrawFixed> właściwość na i `DrawItem` obsłużyć zdarzenie.  
   
- Aby narysować każdego elementu przy użyciu innego rozmiaru, należy ustawić `DrawMode` właściwości <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable> i obsługiwać oba modele `MeasureItem` i `DrawItem` zdarzenia. `MeasureItem` Zdarzeń umożliwia wskazanie rozmiaru elementu przed `DrawItem` wystąpi zdarzenie dla tego elementu.  
+ Aby narysować każdy element przy użyciu innego rozmiaru, należy `DrawMode` ustawić właściwość <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable> na `DrawItem` i obsłużyć zarówno `MeasureItem` zdarzenie, jak i. Zdarzenie umożliwia wskazanie rozmiaru elementu `DrawItem` przed wystąpieniem zdarzenia dla tego elementu. `MeasureItem`  
   
- Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy:  
+ Aby uzyskać więcej informacji, w tym przykłady kodu, zobacz następujące tematy:  
   
 - <xref:System.Windows.Forms.ListBox.DrawMode%2A?displayProperty=nameWithType>  
   
@@ -86,14 +86,14 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
   
 - <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
-- [Instrukcje: Tworzenie tekstu o zmiennym rozmiarze w formancie ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+- [Instrukcje: Tworzenie tekstu o zmiennym rozmiarze w kontrolce ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
-### <a name="menuitem-component"></a>Składnik element MenuItem  
- <xref:System.Windows.Forms.MenuItem> Składnika reprezentuje pojedynczy element menu w <xref:System.Windows.Forms.MainMenu> lub <xref:System.Windows.Forms.ContextMenu> składnika.  
+### <a name="menuitem-component"></a>MenuItem, składnik  
+ Składnik reprezentuje pojedynczy element menu <xref:System.Windows.Forms.MainMenu> w składniku lub <xref:System.Windows.Forms.ContextMenu>. <xref:System.Windows.Forms.MenuItem>  
   
- Aby narysować <xref:System.Windows.Forms.MenuItem>ustaw jego `OwnerDraw` właściwości `true` i obsługiwać jego `DrawItem` zdarzeń. Aby dostosować rozmiar elementu menu przed `DrawItem` wystąpi zdarzenie obsługi elementu `MeasureItem` zdarzeń.  
+ Aby narysować <xref:System.Windows.Forms.MenuItem>, ustaw jej `OwnerDraw` właściwość na `true` i obsługuj jej `DrawItem` zdarzenie. Aby dostosować rozmiar elementu menu przed `DrawItem` wystąpieniem zdarzenia, należy obsłużyć `MeasureItem` zdarzenie elementu.  
   
- Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy odniesienia:  
+ Aby uzyskać więcej informacji, w tym przykłady kodu, zobacz następujące tematy dotyczące odwołań:  
   
 - <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A?displayProperty=nameWithType>  
   
@@ -102,22 +102,22 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
 - <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
   
 ### <a name="tabcontrol-control"></a>TabControl — Formant  
- <xref:System.Windows.Forms.TabControl> Control umożliwia rysowanie poszczególnych kart w formancie. Rysowanie przez właściciela ma wpływ na kartach. <xref:System.Windows.Forms.TabPage> nie wpływają na zawartość.  
+ <xref:System.Windows.Forms.TabControl> Kontrolka umożliwia rysowanie poszczególnych kart w formancie. Rysowanie właściciela dotyczy tylko kart; <xref:System.Windows.Forms.TabPage> zawartość nie jest modyfikowana.  
   
- Aby narysować każda karta w <xref:System.Windows.Forms.TabControl>ustaw `DrawMode` właściwości <xref:System.Windows.Forms.TabDrawMode.OwnerDrawFixed> i obsługiwać `DrawItem` zdarzeń. To zdarzenie występuje jeden raz dla każdej karty, tylko wtedy, gdy karta jest widoczny w kontrolce.  
+ Aby narysować każdą kartę w <xref:System.Windows.Forms.TabControl>, należy `DrawMode` ustawić `DrawItem` właściwość na <xref:System.Windows.Forms.TabDrawMode.OwnerDrawFixed> i obsłużyć zdarzenie. To zdarzenie występuje raz dla każdej karty tylko wtedy, gdy karta jest widoczna w formancie.  
   
- Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy odniesienia:  
+ Aby uzyskać więcej informacji, w tym przykłady kodu, zobacz następujące tematy dotyczące odwołań:  
   
 - <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=nameWithType>  
   
 - <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
   
 ### <a name="tooltip-component"></a>ToolTip — Składnik  
- <xref:System.Windows.Forms.ToolTip> Składnika umożliwia rysowania całego etykietki narzędzia, gdy jest on wyświetlany.  
+ <xref:System.Windows.Forms.ToolTip> Składnik umożliwia narysowanie całej etykietki narzędzia, gdy zostanie ona wyświetlona.  
   
- Aby narysować <xref:System.Windows.Forms.ToolTip>ustaw jego `OwnerDraw` właściwości `true` i obsługiwać jego `Draw` zdarzeń. Aby dostosować rozmiar <xref:System.Windows.Forms.ToolTip> przed `Draw` wystąpi zdarzenie, obsługi `Popup` zdarzeń i ustaw <xref:System.Windows.Forms.PopupEventArgs.ToolTipSize%2A> właściwość w obsłudze zdarzeń.  
+ Aby narysować <xref:System.Windows.Forms.ToolTip>, ustaw jej `OwnerDraw` właściwość na `true` i obsługuj jej `Draw` zdarzenie. Aby <xref:System.Windows.Forms.ToolTip> dostosować rozmiar `Draw` przed wystąpieniem `Popup` zdarzenia, należy obsłużyć zdarzenie i ustawić <xref:System.Windows.Forms.PopupEventArgs.ToolTipSize%2A> właściwość w programie obsługi zdarzeń.  
   
- Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy odniesienia:  
+ Aby uzyskać więcej informacji, w tym przykłady kodu, zobacz następujące tematy dotyczące odwołań:  
   
 - <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType>  
   
@@ -126,15 +126,15 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
 - <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
   
 ### <a name="listview-control"></a>ListView — Formant  
- <xref:System.Windows.Forms.ListView> Control umożliwia rysowanie pojedynczych elementów podrzędnych i nagłówków kolumn w formancie.  
+ <xref:System.Windows.Forms.ListView> Kontrolka umożliwia rysowanie poszczególnych elementów, podelementów i nagłówków kolumn w kontrolce.  
   
- Aby włączyć Rysowanie w kontrolce przez właściciela, ustaw `OwnerDraw` właściwość `true`.  
+ Aby włączyć rysowanie właściciela w kontrolce, ustaw `OwnerDraw` właściwość na. `true`  
   
- Aby narysować każdy element w kontrolce, obsługi `DrawItem` zdarzeń.  
+ Aby narysować każdy element w kontrolce, obsłużyć `DrawItem` zdarzenie.  
   
- Aby narysować każdej podpozycji lub nagłówek kolumny w kontrolce po <xref:System.Windows.Forms.ListView.View%2A> właściwość jest ustawiona na <xref:System.Windows.Forms.View.Details>, obsługi `DrawSubItem` i `DrawColumnHeader` zdarzenia.  
+ Aby narysować każdy nagłówek podelementu lub kolumny w kontrolce, gdy <xref:System.Windows.Forms.ListView.View%2A> właściwość jest ustawiona na `DrawSubItem` <xref:System.Windows.Forms.View.Details>, `DrawColumnHeader` obsłużyć zdarzenia i.  
   
- Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy odniesienia:  
+ Aby uzyskać więcej informacji, w tym przykłady kodu, zobacz następujące tematy dotyczące odwołań:  
   
 - <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType>  
   
@@ -145,26 +145,26 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
 - <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
   
 ### <a name="treeview-control"></a>TreeView — Formant  
- <xref:System.Windows.Forms.TreeView> Control umożliwia rysowanie poszczególnych węzłów w formancie.  
+ <xref:System.Windows.Forms.TreeView> Kontrolka umożliwia rysowanie poszczególnych węzłów w formancie.  
   
- Aby narysować tylko tekstu wyświetlanego w każdym węźle, należy ustawić `DrawMode` właściwości <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawText> i obsługiwać `DrawNode` zdarzenie ma zostać narysowany tekst.  
+ Aby narysować tylko tekst wyświetlany w każdym węźle, należy ustawić `DrawMode` właściwość na <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawText> i obsłużyć `DrawNode` zdarzenie do narysowania tekstu.  
   
- Aby narysować wszystkie elementy w każdym węźle, należy ustawić `DrawMode` właściwości <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll> i obsługiwać `DrawNode` zdarzenie, aby rysować elementy, niezależnie od tego potrzebujesz, takie jak tekst, ikony, pola wyboru, plus lub minus znaków i linie, łączenie węzłów.  
+ Aby narysować wszystkie elementy każdego węzła, należy ustawić `DrawMode` właściwość na <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll> i obsłużyć zdarzenie, aby rysować elementy, które są `DrawNode` potrzebne, takie jak tekst, ikony, pola wyboru, znaki plus i minus i linie łączące węzły.  
   
- Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy odniesienia:  
+ Aby uzyskać więcej informacji, w tym przykłady kodu, zobacz następujące tematy dotyczące odwołań:  
   
 - <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType>  
   
 - <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
   
 ### <a name="datagridview-control"></a>DataGridView — Formant  
- <xref:System.Windows.Forms.DataGridView> Control umożliwia rysowanie pojedynczych komórek i wierszy w formancie.  
+ <xref:System.Windows.Forms.DataGridView> Kontrolka umożliwia rysowanie pojedynczych komórek i wierszy w formancie.  
   
- Aby narysować pojedyncze komórki, obsługi `CellPainting` zdarzeń.  
+ Aby narysować pojedyncze komórki, obsłuż `CellPainting` zdarzenie.  
   
- Aby narysować poszczególne wiersze lub elementy wierszy, obsługiwać jeden lub oba `RowPrePaint` i `RowPostPaint` zdarzenia. `RowPrePaint` Wystąpi zdarzenie przed komórki w wierszu są rysowane i `RowPostPaint` zdarzenie występuje po komórki są rysowane. Może obsługiwać obu zdarzeń i `CellPainting` zdarzenia rysowania tła wiersza, pojedyncze komórki i pierwszego planu wiersz oddzielnie, lub może zapewnić specjalnego dostosowania, w którym ich potrzebują i użyj domyślnego wyświetlania innych elementów wiersza.  
+ Aby narysować pojedyncze wiersze lub elementy wierszy, należy obsłużyć jedno lub `RowPrePaint` oba `RowPostPaint` zdarzenia i. Zdarzenie występuje przed narysowaniem komórek w wierszu, `RowPostPaint` a zdarzenie występuje po narysowaniu komórek. `RowPrePaint` Można obsługiwać zarówno zdarzenia, jak i `CellPainting` zdarzenia w celu oddzielenia tła wierszy, poszczególnych komórek i pierwszego planu wiersza, lub można podać konkretne dostosowania, gdy są potrzebne, i użyć domyślnego wyświetlania dla innych elementów wiersza.  
   
- Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy:  
+ Aby uzyskać więcej informacji, w tym przykłady kodu, zobacz następujące tematy:  
   
 - <xref:System.Windows.Forms.DataGridView.CellPainting>  
   
@@ -172,22 +172,22 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
   
 - <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
-- [Instrukcje: Dostosowywanie wyglądu komórek w kontrolce DataGridView formularzy Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
+- [Instrukcje: Dostosowywanie wyglądu komórek w kontrolce DataGridView Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
-- [Instrukcje: Dostosowywanie wyglądu wierszy w kontrolce DataGridView formularzy Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
+- [Instrukcje: Dostosuj wygląd wierszy w kontrolce DataGridView Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip — Formant  
- <xref:System.Windows.Forms.ToolStrip> i formanty pochodne umożliwiają dostosowanie każdego aspektu wyglądu ich.  
+ <xref:System.Windows.Forms.ToolStrip>formanty pochodne umożliwiają dostosowanie dowolnego aspektu ich wyglądu.  
   
- Zapewnienie niestandardowe renderowanie <xref:System.Windows.Forms.ToolStrip> formanty, ustawić `Renderer` właściwość <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripManager>, <xref:System.Windows.Forms.ToolStripPanel>, lub <xref:System.Windows.Forms.ToolStripContentPanel> do `ToolStripRenderer` obiektu i obsługi co najmniej jeden z wielu zdarzeń rysowania, dostarczone przez `ToolStripRenderer` klasy. Także ustawić `Renderer` właściwości wystąpienia klasy własną pochodną `ToolStripRenderer`, <xref:System.Windows.Forms.ToolStripProfessionalRenderer>, lub <xref:System.Windows.Forms.ToolStripSystemRenderer> , który implementuje lub przesłania określonych `On` *EventName* metody.  
+ Aby zapewnić niestandardowe renderowanie <xref:System.Windows.Forms.ToolStrip> formantów, należy `Renderer` ustawić właściwość <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripManager>, <xref:System.Windows.Forms.ToolStripPanel>, lub <xref:System.Windows.Forms.ToolStripContentPanel> na `ToolStripRenderer` obiekt i obsłużyć co najmniej jedno z wielu zdarzeń rysowania dostarczonych przez `ToolStripRenderer` Klasa. Alternatywnie `Renderer` można ustawić właściwość na wystąpienie klasy pochodzącej od `ToolStripRenderer`, <xref:System.Windows.Forms.ToolStripProfessionalRenderer>lub <xref:System.Windows.Forms.ToolStripSystemRenderer> implementujące lub zastępujące określone `On`metody *EventName* .  
   
- Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy:  
+ Aby uzyskać więcej informacji, w tym przykłady kodu, zobacz następujące tematy:  
   
 - <xref:System.Windows.Forms.ToolStripRenderer>  
   
-- [Instrukcje: Tworzenie i ustawienie niestandardowego modułu renderowania dla formantu ToolStrip w formularzach Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+- [Instrukcje: Tworzenie i Ustawianie niestandardowego modułu renderowania dla formantu ToolStrip w Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
-- [Instrukcje: Rysowanie niestandardowego formantu ToolStrip](how-to-custom-draw-a-toolstrip-control.md)  
+- [Instrukcje: Niestandardowe Rysowanie kontrolki ToolStrip](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

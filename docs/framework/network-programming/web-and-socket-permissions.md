@@ -15,25 +15,25 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: 78ad06107155408b2aca854a8251c21a24c6577a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbb4e5d7171c50c06f55706df90240ffa205ee73
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788092"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967621"
 ---
 # <a name="web-and-socket-permissions"></a>Internet i uprawnienia gniazd
-Zabezpieczenia internetowe dla aplikacji za pomocą <xref:System.Net> przestrzeni nazw są dostarczane przez <xref:System.Net.WebPermission> i <xref:System.Net.SocketPermission> klasy. **WebPermission** klasy kontrolki aplikacji bezpośrednio do dane żądania z identyfikatora URI lub do obsługi identyfikatora URI z Internetem. **SocketPermission** klasy aplikacji w prawo, aby użyć kontrolki <xref:System.Net.Sockets.Socket> akceptować dane na port lokalny lub skontaktuj się z urządzeniami zdalnymi przy użyciu protokołu transportowego poziomu innego adresu, oparte na hoście, a numer portu i protokół Transport gniazda.  
+Zabezpieczenia internetowe dla aplikacji korzystających <xref:System.Net> z przestrzeni nazw są udostępniane <xref:System.Net.WebPermission> przez <xref:System.Net.SocketPermission> klasy i. Klasa **uprawnień** sieci Web kontroluje prawo aplikacji do żądania danych od identyfikatora URI lub do połączenia z Internetem za pomocą identyfikatora URI. Klasa **SocketPermission** kontroluje prawo aplikacji do użycia <xref:System.Net.Sockets.Socket> do akceptowania danych na porcie lokalnym lub kontaktowania się z urządzeniami zdalnymi przy użyciu protokołu transportowego na innym adresie, na podstawie hosta, numeru portu i protokołu transportowego używając.  
   
- Klasa uprawnień, których używasz, zależy od danego typu aplikacji. Aplikacje, które używają <xref:System.Net.WebRequest> i jego elementy podrzędne należy używać **WebPermission** klasy, aby zarządzać uprawnieniami. Skorzystaj z aplikacji, które używają dostęp na poziomie gniazd **SocketPermission** klasy, aby zarządzać uprawnieniami.  
+ Której klasy uprawnień używasz, zależy od typu aplikacji. Aplikacje, które <xref:System.Net.WebRequest> używają i ich elementów podrzędnych, powinny używać klasy webpermissions do zarządzania uprawnieniami. Aplikacje korzystające z dostępu na poziomie gniazda powinny używać klasy **SocketPermission** do zarządzania uprawnieniami.  
   
- **WebPermission** i **SocketPermission** zdefiniować dwa uprawnienia: Zaakceptuj i Połącz z. Zaakceptuj nadaje aplikacji prawa do odpowiedzi na połączenia przychodzące z innej strony. Połącz przyznaje uprawnienia do nawiązania połączenia do innej strony aplikacji.  
+ **WebPermission** i **SocketPermission** definiują dwa uprawnienia: Zaakceptuj i Połącz. Zaakceptuj przyznaje aplikacji prawo do odpowiedzi na połączenie przychodzące od innej strony. Connect przyznaje aplikacji prawo do zainicjowania połączenia z inną stroną.  
   
- Dla **SocketPermission** wystąpień, Zaakceptuj oznacza, że aplikacja może akceptować połączeń przychodzących w lokalnym transportu adres; Łączenie oznacza, że aplikacja może nawiązać niektóre adres transportu (lokalnej lub zdalnej).  
+ W przypadku wystąpień **SocketPermission** Akceptuj oznacza, że aplikacja może akceptować połączenia przychodzące na lokalnym adresie transportu; Łączenie oznacza, że aplikacja może połączyć się z niektórym (lub lokalnym) adresem transportowym.  
   
- Dla **WebPermission** wystąpień, Zaakceptuj oznacza, że aplikację można wyeksportować identyfikatora URI w wartości clientauthtrustmode **WebPermission** na świecie; Łączenie oznacza, że aplikacja może uzyskiwać dostęp do tego identyfikatora URI (czy jest zdalny czy lokalny).  
+ W przypadku wystąpień z **uprawnieniami WebPermission** Zaakceptuj oznacza, że aplikacja może eksportować identyfikator URI kontrolowany przez **uprawnienie WebPermission** na świecie; połączenie oznacza, że aplikacja może uzyskać dostęp do tego identyfikatora URI (niezależnie od tego, czy jest to zdalne czy lokalne).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczenia](../../../docs/standard/security/index.md)
+- [Zabezpieczenia](../../standard/security/index.md)
 - [Zabezpieczenia w programowaniu sieciowym](../../../docs/framework/network-programming/security-in-network-programming.md)

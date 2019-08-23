@@ -1,47 +1,47 @@
 ---
-title: Anulowanie zadań asynchronicznych po upływie określonego czasu (Visual Basic)
+title: Anulowanie zadań asynchronicznych po upływie czasu (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: 2f3fee4909338155ed4b8917fd1de46984614908
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 636e8ffc86ce2849d563094bb780943f57d9cfa4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613457"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958134"
 ---
-# <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>Anulowanie zadań asynchronicznych po upływie określonego czasu (Visual Basic)
-Możesz anulować operację asynchroniczną po upływie pewnego czasu za pomocą <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> metody, jeśli nie chcesz czekać na zakończenie operacji. Ta metoda planuje anulowanie skojarzonych zadań, które nie są ukończone przed upływem czasu, który jest wyznaczone przez `CancelAfter` wyrażenia.  
+# <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>Anulowanie zadań asynchronicznych po upływie czasu (Visual Basic)
+Istnieje możliwość anulowania operacji asynchronicznej po upływie okresu czasu przy użyciu <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> metody, jeśli nie chcesz czekać na zakończenie operacji. Ta metoda służy do planowania anulowania wszystkich skojarzonych zadań, które nie zostały ukończone w okresie wyznaczonym przez `CancelAfter` wyrażenie.  
   
- Ten przykład dodaje do kodu utworzonego w [anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) można pobrać listy witryn sieci Web i wyświetlającym długość zawartości każdej z nich.  
+ Ten przykład dodaje do kodu, który został opracowany w wyniku [anulowania zadania asynchronicznego lub listy zadań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) , aby pobrać listę witryn sieci Web i wyświetlić długość zawartości każdej z nich.  
   
 > [!NOTE]
->  Aby uruchomić przykłady, jest posiadanie programu Visual Studio 2012 lub nowszy i program .NET Framework 4.5 lub nowszy jest zainstalowany na tym komputerze.  
+> Aby uruchomić przykłady, musisz mieć zainstalowany program Visual Studio 2012 lub nowszy oraz .NET Framework 4,5 lub nowszy na komputerze.  
   
 ## <a name="downloading-the-example"></a>Pobieranie przykładu  
- Można pobrać pełny projekt Windows Presentation Foundation (WPF) z [próbka asynchroniczna: Poprawnie Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) a następnie wykonaj poniższe kroki.  
+ Możesz pobrać kompletny projekt Windows Presentation Foundation (WPF) z [próbki asynchronicznej: Dostosuj aplikację](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) , a następnie wykonaj poniższe kroki.  
   
-1. Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
+1. Dekompresuj pobrany plik, a następnie uruchom program Visual Studio.  
   
-2. Na pasku menu wybierz **pliku**, **Otwórz**, **projekt/rozwiązanie**.  
+2. Na pasku menu wybierz **plik**, **Otwórz**, **projekt/rozwiązanie**.  
   
-3. W **Otwórz projekt** okno dialogowe, otwórz folder, który zawiera przykładowy kod, który został zdekompresowany, a następnie otwórz plik rozwiązania (.sln) dla AsyncFineTuningVB.  
+3. W oknie dialogowym **Otwórz projekt** Otwórz folder, w którym znajduje się przykładowy kod, który został zdekompresowany, a następnie otwórz plik rozwiązania (. sln) dla AsyncFineTuningVB.  
   
-4. W **Eksploratora rozwiązań**, otwórz menu skrótów dla **CancelAfterTime** projektu, a następnie wybierz **Ustaw jako projekt startowy**.  
+4. W **Eksplorator rozwiązań**Otwórz menu skrótów dla projektu **CancelAfterTime** , a następnie wybierz polecenie **Ustaw jako projekt startowy**.  
   
 5. Wybierz klawisz F5, aby uruchomić projekt.  
   
-     Wybierz klawisze Ctrl + F5, aby uruchomić projekt bez debugowania go.  
+     Naciśnij klawisze CTRL + F5, aby uruchomić projekt bez debugowania.  
   
-6. Uruchom program kilka razy, aby sprawdzić, czy dane wyjściowe są pokazywane dla wszystkich witryn sieci Web, witryn sieci Web lub niektórych witryn sieci web.  
+6. Uruchom program kilka razy, aby sprawdzić, czy dane wyjściowe mogą zawierać dane wyjściowe dla wszystkich witryn sieci Web, braku witryn internetowych lub niektórych witryn internetowych.  
   
- Jeśli nie chcesz wczytać projekt, można przejrzeć plik MainWindow.xaml.vb na końcu tego tematu.  
+ Jeśli nie chcesz pobierać projektu, możesz przejrzeć plik MainWindow. XAML. vb na końcu tego tematu.  
   
-## <a name="building-the-example"></a>Budowanie przykładu  
- W przykładzie w tym temacie dodaje do projektu utworzonego w [anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) umożliwiający anulowanie listy zadań. W przykładzie użyto tego samego interfejsu użytkownika, mimo że **anulować** przycisk nie jest używany jawnie.  
+## <a name="building-the-example"></a>Kompilowanie przykładu  
+ Przykład w tym temacie dodaje do projektu, który został opracowany w [wyniku anulowania zadania asynchronicznego lub listy zadań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) , aby anulować listę zadań. W przykładzie użyto tego samego interfejsu użytkownika, chociaż przycisk **Anuluj** nie jest używany jawnie.  
   
- Aby zbudować przykład samodzielnie, krok po kroku, postępuj zgodnie z instrukcjami w sekcji "Pobieranie przykładu", ale wybierając **CancelAListOfTasks** jako **projekt startowy**. Dodaj zmiany w tym temacie do tego projektu.  
+ Aby zbudować przykład samodzielnie, krok po kroku, postępuj zgodnie z instrukcjami w sekcji Pobieranie przykładu, ale wybierz **CancelAListOfTasks** jako **projekt startowy**. Dodaj zmiany w tym temacie do tego projektu.  
   
- Aby określić maksymalny czas, zanim zadania są oznaczane jako anulowane, należy dodać wywołanie `CancelAfter` do `startButton_Click`, jak pokazano w poniższym przykładzie. Dodatek jest oznaczony gwiazdkami.  
+ Aby określić maksymalny czas, po jakim zadania są oznaczane jako anulowane, należy dodać `CancelAfter` wywołanie `startButton_Click`do, jak pokazano w poniższym przykładzie. Dodanie jest oznaczone gwiazdkami.  
   
 ```vb  
 Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -71,7 +71,7 @@ Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub  
 ```  
   
- Uruchom program kilka razy, aby sprawdzić, czy dane wyjściowe są pokazywane dla wszystkich witryn sieci Web, witryn sieci Web lub niektórych witryn sieci web. Poniższe dane wyjściowe są przykładowe.  
+ Uruchom program kilka razy, aby sprawdzić, czy dane wyjściowe mogą zawierać dane wyjściowe dla wszystkich witryn sieci Web, braku witryn internetowych lub niektórych witryn internetowych. Oto przykład danych wyjściowych.  
   
 ```  
 Length of the downloaded string: 35990.  
@@ -84,11 +84,11 @@ Downloads canceled.
 ```  
   
 ## <a name="complete-example"></a>Kompletny przykład  
- Poniższy kod jest pełnym tekstem pliku MainWindow.xaml.vb dla przykładu. Gwiazdki oznaczają elementy, które zostały dodane w tym przykładzie.  
+ Poniższy kod jest pełnym tekstem pliku MainWindow. XAML. vb dla przykładu. Gwiazdki oznaczają elementy, które zostały dodane do tego przykładu.  
   
- Należy zauważyć, że musisz dodać odwołanie do <xref:System.Net.Http>.  
+ Należy zauważyć, że należy dodać odwołanie do <xref:System.Net.Http>.  
   
- Można ściągnąć projekt z [próbka asynchroniczna: Dostrajania aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Możesz pobrać projekt z [przykładu asynchronicznego: Dostosuj aplikację](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -194,5 +194,5 @@ End Class
 - [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
-- [Dostrajanie aplikacji Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Próbka asynchroniczna: Dostrajanie aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Dostrajanie aplikacji asynchronicznej (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Przykład asynchroniczny: Dostrajanie aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

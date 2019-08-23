@@ -2,18 +2,18 @@
 title: Ochrona komunikatów za pomocą zabezpieczeń transportu
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: a8a7e9422679927636ae2dc9b6a2ab34202ee74c
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: b0507590914e2e8cda7e5e599914a9e3d7b0acd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331520"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911705"
 ---
 # <a name="securing-messages-using-transport-security"></a>Ochrona komunikatów za pomocą zabezpieczeń transportu
 W tej sekcji omówiono zabezpieczenia transportu usługi kolejkowania komunikatów (MSMQ), których można użyć do zabezpieczenia komunikatów wysyłanych do kolejki.  
   
 > [!NOTE]
->  Przed przeczytaniem z tego tematu zaleca się zapoznanie się z [pojęciami dotyczącymi zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
+> Przed przeczytaniem z tego tematu zaleca się zapoznanie się z [pojęciami dotyczącymi zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
  Poniższa ilustracja przedstawia model koncepcyjny komunikacji kolejkowanej przy użyciu Windows Communication Foundation (WCF). Ta ilustracja i terminologia są używane w celu wyjaśnienia pojęć związanych z zabezpieczeniami transportu.  
   
@@ -53,7 +53,7 @@ W tej sekcji omówiono zabezpieczenia transportu usługi kolejkowania komunikat�
  Wybór korzystania z zabezpieczeń systemu Windows wymaga integracji Active Directory. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>jest domyślnym trybem zabezpieczeń transportu. Po ustawieniu tej opcji kanał WCF dołącza identyfikator SID systemu Windows do wiadomości MSMQ i używa certyfikatu wewnętrznego uzyskanego z Active Directory. Usługa MSMQ używa tego certyfikatu wewnętrznego do zabezpieczenia wiadomości. Menedżer kolejki odbioru używa Active Directory do wyszukiwania i znajdowania zgodnego certyfikatu w celu uwierzytelnienia klienta i sprawdza, czy identyfikator SID również jest zgodny z klientem programu. Ten krok uwierzytelniania jest wykonywany, jeśli certyfikat wewnętrznie wygenerowany w przypadku `WindowsDomain` trybu uwierzytelniania lub zewnętrznie wygenerowany w `Certificate` przypadku trybu uwierzytelniania jest dołączony do komunikatu, nawet jeśli kolejka docelowa jest Nie oznaczono jako wymagające uwierzytelniania.  
   
 > [!NOTE]
->  Podczas tworzenia kolejki można oznaczyć kolejkę jako kolejkę uwierzytelnioną, aby wskazać, że kolejka wymaga uwierzytelniania komunikatów wysyłanych przez klienta do kolejki. Dzięki temu w kolejce nie są akceptowane nieuwierzytelnione komunikaty.  
+> Podczas tworzenia kolejki można oznaczyć kolejkę jako kolejkę uwierzytelnioną, aby wskazać, że kolejka wymaga uwierzytelniania komunikatów wysyłanych przez klienta do kolejki. Dzięki temu w kolejce nie są akceptowane nieuwierzytelnione komunikaty.  
   
  Identyfikator SID dołączony do wiadomości jest również używany do sprawdzania listy ACL kolejki docelowej, aby upewnić się, że klient ma uprawnienia do wysyłania komunikatów do kolejki.  
   
@@ -76,13 +76,13 @@ W tej sekcji omówiono zabezpieczenia transportu usługi kolejkowania komunikat�
  Oprócz podpisywania wiadomości komunikat usługi MSMQ jest szyfrowany przy użyciu klucza publicznego certyfikatu uzyskanego z Active Directory należącego do Menedżera kolejki odbioru, który hostuje kolejkę docelową. Menedżer kolejki wysyłania gwarantuje, że komunikat MSMQ jest szyfrowany podczas przesyłania. Menedżer kolejki odbioru odszyfrowuje komunikat usługi MSMQ przy użyciu klucza prywatnego jego certyfikatu wewnętrznego i zapisuje komunikat w kolejce (jeśli jest uwierzytelniany i autoryzowany) w postaci zwykłego tekstu.  
   
 > [!NOTE]
->  Aby zaszyfrować komunikat, wymagany jest Active Directory dostęp (`UseActiveDirectory` <xref:System.ServiceModel.NetMsmqBinding> właściwość musi być ustawiona na `true`) i może być używana z obydwoma <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> i <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
+> Aby zaszyfrować komunikat, wymagany jest Active Directory dostęp (`UseActiveDirectory` <xref:System.ServiceModel.NetMsmqBinding> właściwość musi być ustawiona na `true`) i może być używana z obydwoma <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> i <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
   
 #### <a name="none-protection-level"></a>Brak poziomu ochrony  
  Jest to implikowane, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> gdy jest ustawiony <xref:System.Net.Security.ProtectionLevel.None>na. Nie może to być prawidłowa wartość dla żadnych innych trybów uwierzytelniania.  
   
 > [!NOTE]
->  Jeśli komunikat usługi MSMQ jest podpisany, usługa MSMQ sprawdza, czy komunikat jest podpisany za pomocą dołączonego certyfikatu (wewnętrznego lub zewnętrznego) niezależnie od stanu kolejki, czyli kolejki uwierzytelnionej.  
+> Jeśli komunikat usługi MSMQ jest podpisany, usługa MSMQ sprawdza, czy komunikat jest podpisany za pomocą dołączonego certyfikatu (wewnętrznego lub zewnętrznego) niezależnie od stanu kolejki, czyli kolejki uwierzytelnionej.  
   
 ### <a name="msmq-encryption-algorithm"></a>Algorytm szyfrowania usługi MSMQ  
  Algorytm szyfrowania określa algorytm używany do szyfrowania wiadomości MSMQ w sieci. Ta właściwość jest używana tylko wtedy <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> , gdy jest <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>ustawiona na.  

@@ -2,36 +2,36 @@
 title: Przykład tabeli UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
-ms.openlocfilehash: 004f02ac1399af093d541bc81fb74f51516fe91e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 174c0035adb0b38ddb18f79f9cc4d76d3db46b74
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962914"
 ---
 # <a name="uritemplate-table-sample"></a>Przykład tabeli UriTemplate
-<xref:System.UriTemplateTable> Klasa udostępnia struktury tabeli asocjacyjnych słownika podobne do pracy z zestawem `UriTemplate` wystąpień. Określone Uniform Resource Identifier (URI) może zostać dopasowany efektywnie wszystkie szablony w tabeli i mogą być pobierane dane skojarzone z dopasowany szablon.  
+Klasa zawiera strukturę tabeli asocjacyjnej, która umożliwia pracę z `UriTemplate` zestawem wystąpień. <xref:System.UriTemplateTable> Określone identyfikatory URI (Uniform Resource Identifier) można efektywnie dopasować do wszystkich szablonów w tabeli, a dane skojarzone z pasującym szablonem mogą zostać pobrane.  
   
- Niniejszy przykład pokazuje następujące kluczowe pojęcia związane z `UriTemplateTable` klasy:  
+ Ten przykład ilustruje następujące kluczowe pojęcia związane `UriTemplateTable` z klasą:  
   
-- Składnia podczas tworzenia wystąpienia `UriTemplateTable`.  
+- Składnia dla tworzenia wystąpienia `UriTemplateTable`.  
   
-- Wypełnianie `UriTemplateTable` zestaw par klucz/wartość.  
+- Wypełnianie `UriTemplateTable` z zestawem par klucz/wartość.  
   
-- Dopasowywanie Release candidate URI względem tabeli przy użyciu <xref:System.UriTemplateTable.MatchSingle%2A>.  
+- Dopasowanie identyfikatora URI kandydata do tabeli przy <xref:System.UriTemplateTable.MatchSingle%2A>użyciu.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplateTable`  
   

@@ -2,32 +2,32 @@
 title: Konfigurowanie własnej aplikacji
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
-ms.openlocfilehash: 9a1365bb567c552fb087e67a10e48fe0bc2da873
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e096f4b64ada8b142e8b82c8877eec7f1b84637c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652036"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939811"
 ---
 # <a name="configuring-your-application"></a>Konfigurowanie własnej aplikacji
-Windows Communication Foundation (WCF) używa systemu konfiguracji platformy .NET i pozwala na skonfigurowanie usługi w zakresie maszyn i aplikacji.  
+Windows Communication Foundation (WCF) korzysta z systemu konfiguracji platformy .NET i umożliwia konfigurowanie usług zarówno w zakresie komputera, jak i aplikacji.  
   
- Ustawienia konfiguracji zdefiniowane przez architekturę WCF znajdują się w `<system.serviceModel>` grupy sekcji. Aby uzyskać więcej informacji o sposobie konfigurowania usługi WCF zobacz następujące tematy:  
+ Ustawienia konfiguracji zdefiniowane przez funkcję WCF znajdują się `<system.serviceModel>` w grupie sekcji. Więcej informacji o sposobie konfigurowania usługi WCF znajduje się w następujących tematach:  
   
 - [Konfigurowanie usług](../../../../docs/framework/wcf/configuring-services.md)  
   
 - [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
   
- Ustawienia zdefiniowane przez aplikację konfiguracje są definiowane w `<appSettings>` grupy sekcji. Aby uzyskać więcej informacji o ustawieniach aplikacji w plikach konfiguracji .NET, zobacz [ \<appSettings >](https://go.microsoft.com/fwlink/?LinkId=95159).  
+ Ustawienia konfiguracji zdefiniowane przez aplikację są zdefiniowane w `<appSettings>` grupie sekcji. Aby uzyskać więcej informacji na temat ustawień aplikacji w plikach konfiguracji platformy .NET, zobacz [ \<AppSettings >](https://go.microsoft.com/fwlink/?LinkId=95159).  
   
-## <a name="using-the-configuration-editor"></a>Za pomocą edytora konfiguracji  
- WCF [narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) umożliwia administratorom i deweloperom tworzenie i modyfikowanie ustawień konfiguracji dla usług WCF za pomocą graficznego interfejsu użytkownika. Za pomocą tego narzędzia można zarządzać ustawieniami dla wiązania WCF, zachowań, usług i diagnostyki, bez konieczności bezpośredniego edytowania pliki konfiguracji XML.  
+## <a name="using-the-configuration-editor"></a>Korzystanie z edytora konfiguracji  
+ [Narzędzie Edytor konfiguracji WCF (SvcConfigEditor. exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) umożliwia administratorom i deweloperom tworzenie i modyfikowanie ustawień konfiguracji usług WCF przy użyciu graficznego interfejsu użytkownika. Za pomocą tego narzędzia można zarządzać ustawieniami powiązań programu WCF, zachowań, usług i diagnostyki bez bezpośredniego edytowania plików konfiguracji XML.  
   
-## <a name="editing-configuration-files-in-visual-studio"></a>Edycja plików konfiguracji w programie Visual Studio  
- Aby edytować plik konfiguracji projektu usługi WCF w programie Visual Studio, kliknij prawym przyciskiem myszy w **Eksploratora rozwiązań** i wybierz polecenie **Edycja konfiguracji usługi WCF** element menu kontekstowego. Spowoduje to uruchomienie [narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
+## <a name="editing-configuration-files-in-visual-studio"></a>Edytowanie plików konfiguracji w programie Visual Studio  
+ Aby edytować plik konfiguracji projektu usługi WCF w programie Visual Studio, kliknij prawym przyciskiem myszy w **Eksplorator rozwiązań** i wybierz pozycję **Edytuj kontekst konfiguracji WCF** . Spowoduje to uruchomienie [Narzędzia Edytora konfiguracji (SvcConfigEditor. exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
   
 > [!NOTE]
->  Jeśli edytujesz plik konfiguracji projektu usługi sieci Web WCF w programie Visual Studio, klikając go prawym przyciskiem myszy **Eksploratora rozwiązań**, zwróć uwagę, że **Edycja konfiguracji usługi WCF** brakuje w menu kontekstowym. Aby obejść ten problem, kliknij przycisk **narzędzia** menu i wybrać **Edytor konfiguracji usługi WCF**. Po tym, kliknij prawym przyciskiem myszy plik konfiguracji i używać **Edycja konfiguracji usługi WCF** element menu kontekstowego.  
+> Jeśli edytujesz plik konfiguracyjny projektu usługi sieci Web WCF w programie Visual Studio, klikając go prawym przyciskiem myszy w **Eksplorator rozwiązań**, Zauważ, że brakuje elementu menu kontekstowego **konfiguracji WCF** . Aby obejść ten problem, kliknij menu **Narzędzia** , a następnie wybierz pozycję **Edytor konfiguracji usługi WCF**. Następnie możesz kliknąć prawym przyciskiem myszy plik konfiguracyjny i użyć elementu menu kontekstowego **edytowania konfiguracji WCF** .  
   
 ## <a name="see-also"></a>Zobacz także
 

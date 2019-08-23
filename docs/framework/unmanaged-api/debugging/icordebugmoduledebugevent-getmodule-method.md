@@ -1,18 +1,18 @@
 ---
-title: Metoda ICorDebugModuleDebugEvent::GetModule
+title: 'ICorDebugModuleDebugEvent:: GetModule — Metoda'
 ms.date: 03/30/2017
 ms.assetid: b1141c35-4253-4e34-b3e4-ed406a9dea4f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: debf2e9dd08f6a35801932b22fbd985e7299b79f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e68fab11a881854ae4c3fe073f73150694d31ae5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764349"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965110"
 ---
-# <a name="icordebugmoduledebugeventgetmodule-method"></a>Metoda ICorDebugModuleDebugEvent::GetModule
-Pobiera scalonych moduł, który został właśnie załadowany lub usunięty z pamięci.  
+# <a name="icordebugmoduledebugeventgetmodule-method"></a>ICorDebugModuleDebugEvent:: GetModule — Metoda
+Pobiera scalony moduł, który został właśnie załadowany lub zwolniony.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,22 +24,22 @@ HRESULT GetModule(
   
 ## <a name="parameters"></a>Parametry  
  `ppModule`  
- [out] Wskaźnik na adres ICorDebugModule obiekt, który reprezentuje scalonych moduł, który właśnie został załadowany lub zwolnione.  
+ określoną Wskaźnik do adresu obiektu ICorDebugModule, który reprezentuje scalony moduł, który został właśnie załadowany lub zwolniony.  
   
 ## <a name="remarks"></a>Uwagi  
- Możesz wywołać [GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) metodę, aby ustalić, czy moduł został załadowany lub zwolnione.  
+ Można wywołać metodę [GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) , aby określić, czy moduł został załadowany, czy zwolniony.  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

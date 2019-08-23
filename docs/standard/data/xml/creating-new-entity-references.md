@@ -5,22 +5,22 @@ ms.technology: dotnet-standard
 ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67fdbcdbff64bcd91c80fbeaec0c41982b68d98f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d8d4e9e1e2dfd9882504c935912bcf235608485
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934505"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965896"
 ---
 # <a name="creating-new-entity-references"></a>Tworzenie nowych odwołań do jednostek
-**CreateEntityReference** metoda tworzy nowy **XmlEntityReference** węzła. XML Document Object Model (DOM) sprawdza, jeśli został już zadeklarowany nazwa jednostki, do którego nastąpiło odwołanie. Jeśli tak, węzły podrzędne **XmlEntityReference** węzłów są kopiowane z węzła deklaracji entity. W przypadku deklaracja nie jednostki, który odpowiada pusty węzeł tekstowy jest dołączony jako tylko element podrzędny węzła odwołanie do jednostki. Ponieważ węzły podrzędne **XmlEntityReference** węzła to kopie innych węzłów, tych węzłów podrzędnych są przeznaczone tylko do odczytu i nie może być modyfikowany.  
+Metoda "XmlEntityReference" tworzy nowy węzeł XmlEntityReference. Document Object Model XML (DOM) sprawdza, czy nazwa jednostki, do której odwołuje się odwołanie, została już zadeklarowana. Jeśli ma, węzły podrzędne węzła XmlEntityReference są kopiowane z węzła deklaracji jednostki. Jeśli nie ma deklaracji jednostki zgodnej, pusty węzeł tekstowy jest dołączany jako jedyny element podrzędny węzła odwołania do jednostki. Ponieważ węzły podrzędne węzła XmlEntityReference są kopiami innych węzłów, te węzły podrzędne są tylko do odczytu i nie można ich modyfikować.  
   
- Jeśli węzły są kopiowane, w zakresie punkcie odwołania do jednostki może powstać przestrzeni nazw. Ta przestrzeń nazw ma wpływ na konfigurację węzłów elementów lub atrybutów generowane.  
+ Po skopiowaniu węzłów może istnieć przestrzeń nazw w zakresie w punkcie odwołania do jednostki. Ta przestrzeń nazw ma wpływ na konfigurację wszystkich wygenerowanych węzłów elementów lub atrybutów.  
   
 > [!NOTE]
->  Model DOM dodaje węzły podrzędne **EntityReference** tylko po wstawieniu **EntityReference** węzeł w dokumencie. Nowo utworzony **EntityReference** węzły mają bez węzłów podrzędnych.  
+> DOM dodaje węzły podrzędne do obiektu **EntityReference** tylko wtedy, gdy wstawisz węzeł **EntityReference** do dokumentu. Nowo utworzone węzły **EntityReference** nie mają węzłów podrzędnych.  
   
- Mimo że **XmlDataDocument** klasy pochodnej jest **XmlDocument**, **XmlDataDocument** nie obsługuje tworzenia odwołań do jednostek. Jest to spowodowane **EntityReference** elementy podrzędne są przeznaczone tylko do odczytu. Elementy podrzędne **EntityReference** węzła może obejmować więcej niż jednym regionie. W tym przypadku część wiersz skojarzony region, który zawiera część **EntityReference** będą tylko do odczytu.  
+ Mimo że **XmlDataDocument** jest klasą pochodną XmlDocument, **XmlDataDocument** nie obsługuje tworzenia odwołań do jednostek. Dzieje się tak, ponieważ elementy podrzędne **EntityReference** są tylko do odczytu. Elementy podrzędne węzła **EntityReference** mogą obejmować więcej niż jeden region. W takim przypadku część wiersza skojarzona z regionem zawierającym część obiektu **EntityReference** będzie tylko do odczytu.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,15 +2,15 @@
 title: Architektura syndykacji
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: 18719c1a6ece24008cc97f36278e3ea8d3355393
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f93c7a11ed37e411fc584c8de16f141336c7f43
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606227"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952643"
 ---
 # <a name="architecture-of-syndication"></a>Architektura syndykacji
-Syndykacja interfejs API umożliwiający niezależny od formatu model programowania, który umożliwia syndykowany zawartość do zapisania się do sieci w różnych formatach. Abstrakcyjny model danych zawiera następujące klasy:  
+Interfejs API zespalania został zaprojektowany z myślą o udostępnianiu modelu programowania neutralnego za pomocą formatu, który umożliwia zapisywanie w sieci zespolonej zawartości w różnych formatach. Abstrakcyjny model danych składa się z następujących klas:  
   
 - <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
@@ -22,60 +22,60 @@ Syndykacja interfejs API umożliwiający niezależny od formatu model programowa
   
 - <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
- W ramach tych zajęć mapować ściśle konstrukcje specyfikacją Atom 1.0, mimo że niektóre nazwy są różne.  
+ Te klasy są mapowane blisko konstrukcji zdefiniowanych w specyfikacji Atom 1,0, chociaż niektóre nazwy są różne.  
   
- W Windows Communication Foundation (WCF), zespolone kanały informacyjne są modelowane jako inny rodzaj operacji usługi, jeden typ zwracany w przypadku jednej z klas pochodnych <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Pobieranie kanału informacyjnego ma formę wymianę komunikatów żądań i odpowiedzi. Klient wysyła żądanie do usługi i odpowiada. Komunikat żądania ma wartość protokołu infrastruktury (na przykład pierwotne HTTP), a komunikat odpowiedzi zawiera ładunek, który składa się z często rozpoznawanych syndykacji formatu (RSS 2.0 i Atom 1.0). Usługi, które implementują te wymianę komunikatów są określane jako usługi syndykacji.  
+ W Windows Communication Foundation (WCF) źródła zespolone są modelowane jako inny typ operacji usługi, jedną z nich, w której typ zwracany jest jedną z klas <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>pochodnych. Pobieranie źródła danych jest modelowane jako wymiana komunikatów z żądaniem odpowiedzi. Klient wysyła żądanie do usługi, a usługa odpowiada. Komunikat żądania jest ustawiany za pośrednictwem protokołu infrastruktury (na przykład RAW HTTP), a komunikat odpowiedzi zawiera ładunek, który składa się z powszechnie zrozumiałego formatu zespalania (RSS 2,0 lub Atom 1,0). Usługi, które implementują te wymiany komunikatów, są określane jako usługi zespolone.  
   
- Kontrakt usługi syndykacji składa się z zestawu działań, które zwraca wystąpienie <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> klasy. W poniższym przykładzie pokazano deklaracji interfejsu usługi syndykacji.  
+ Kontrakt usługi zespolonej składa się z zestawu operacji zwracających wystąpienie <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> klasy. Poniższy przykład ilustruje deklarację interfejsu dla usługi zespolonej.  
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Syndykacja informacji o pomocy technicznej jest oparty na modelu programowania REST programu WCF, która definiuje <xref:System.ServiceModel.WebHttpBinding> powiązania, który jest używany w połączeniu z <xref:System.ServiceModel.Description.WebHttpBehavior> udostępnić źródła danych jako usługi. Aby uzyskać więcej informacji o modelu programowania REST programu WCF, zobacz [Programming Overview modelu WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Obsługa zespalania jest oparta na modelu programowania REST WCF, który definiuje <xref:System.ServiceModel.WebHttpBinding> powiązanie, które jest używane w połączeniu z usługą <xref:System.ServiceModel.Description.WebHttpBehavior> w celu udostępnienia kanałów informacyjnych jako usług. Aby uzyskać więcej informacji o modelu programowania REST WCF, zobacz [Omówienie modelu programowania HTTP sieci Web](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)w programie WCF.  
   
 > [!NOTE]
->  Specyfikacja Atom 1.0 umożliwia ułamków sekund, należy określić w jednym z jej konstrukcji daty. Podczas serializacji i deserializacji implementacji WCF ignoruje ułamków sekund.  
+> Specyfikacja Atom 1,0 umożliwia określenie ułamków sekund w którymkolwiek z jego konstrukcji daty. Podczas serializacji i deserializacji implementacji programu WCF ignoruje ułamki sekund.  
   
 ## <a name="object-model"></a>Model obiektów  
- Model obiektów dla syndykacji składa się z grup klas w poniższych tabelach.  
+ Model obiektów dla zespalania składa się z grup klas w poniższych tabelach.  
   
- Formatowanie klasy:  
-  
-|Class|Opis|  
-|-----------|-----------------|  
-|<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>|Klasa, która wykonuje serializację <xref:System.ServiceModel.Syndication.SyndicationFeed> wystąpienia do formatu Atom 1.0.|  
-|<xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601>|Klasa, która wykonuje serializację <xref:System.ServiceModel.Syndication.SyndicationFeed> klas pochodnych do formatu Atom 1.0.|  
-|<xref:System.ServiceModel.Syndication.Atom10ItemFormatter>|Klasa, która wykonuje serializację <xref:System.ServiceModel.Syndication.SyndicationItem> wystąpienia do formatu Atom 1.0.|  
-|<xref:System.ServiceModel.Syndication.Atom10ItemFormatter%601>|Klasa, która wykonuje serializację <xref:System.ServiceModel.Syndication.SyndicationItem> klas pochodnych do formatu Atom 1.0.|  
-|<xref:System.ServiceModel.Syndication.Rss20FeedFormatter>|Klasa, która wykonuje serializację <xref:System.ServiceModel.Syndication.SyndicationFeed> wystąpienia do formatu RSS 2.0.|  
-|<xref:System.ServiceModel.Syndication.Rss20FeedFormatter%601>|Klasa, która wykonuje serializację <xref:System.ServiceModel.Syndication.SyndicationFeed> klas pochodnych do formatu RSS 2.0.|  
-|<xref:System.ServiceModel.Syndication.Rss20ItemFormatter>|Klasa, która wykonuje serializację <xref:System.ServiceModel.Syndication.SyndicationItem> wystąpienia do formatu RSS 2.0.|  
-|<xref:System.ServiceModel.Syndication.Rss20ItemFormatter%601>|Klasa, która wykonuje serializację <xref:System.ServiceModel.Syndication.SyndicationItem> klas pochodnych do formatu RSS 2.0.|  
-  
- Klasy modelu obiektu:  
+ Klasy formatowania:  
   
 |Class|Opis|  
 |-----------|-----------------|  
-|<xref:System.ServiceModel.Syndication.SyndicationCategory>|Klasa, która reprezentuje kategorię Kanał informacyjny syndykacji.|  
-|<xref:System.ServiceModel.Syndication.SyndicationContent>|Klasa bazowa reprezentuje zawartość syndykacji.|  
-|<xref:System.ServiceModel.Syndication.SyndicationElementExtension>|Klasa, która reprezentuje rozszerzenie element syndykacji.|  
+|<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>|Klasa, która serializować <xref:System.ServiceModel.Syndication.SyndicationFeed> wystąpienie do formatu Atom 1,0.|  
+|<xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601>|Klasa, która serializować <xref:System.ServiceModel.Syndication.SyndicationFeed> klasy pochodne do formatu Atom 1,0.|  
+|<xref:System.ServiceModel.Syndication.Atom10ItemFormatter>|Klasa, która serializować <xref:System.ServiceModel.Syndication.SyndicationItem> wystąpienie do formatu Atom 1,0.|  
+|<xref:System.ServiceModel.Syndication.Atom10ItemFormatter%601>|Klasa, która serializować <xref:System.ServiceModel.Syndication.SyndicationItem> klasy pochodne do formatu Atom 1,0.|  
+|<xref:System.ServiceModel.Syndication.Rss20FeedFormatter>|Klasa, która serializować <xref:System.ServiceModel.Syndication.SyndicationFeed> wystąpienie do formatu RSS 2,0.|  
+|<xref:System.ServiceModel.Syndication.Rss20FeedFormatter%601>|Klasa, która serializować <xref:System.ServiceModel.Syndication.SyndicationFeed> klasy pochodne do formatu RSS 2,0.|  
+|<xref:System.ServiceModel.Syndication.Rss20ItemFormatter>|Klasa, która serializować <xref:System.ServiceModel.Syndication.SyndicationItem> wystąpienie do formatu RSS 2,0.|  
+|<xref:System.ServiceModel.Syndication.Rss20ItemFormatter%601>|Klasa, która serializować <xref:System.ServiceModel.Syndication.SyndicationItem> klasy pochodne do formatu RSS 2,0.|  
+  
+ Klasy modelu obiektów:  
+  
+|Class|Opis|  
+|-----------|-----------------|  
+|<xref:System.ServiceModel.Syndication.SyndicationCategory>|Klasa, która reprezentuje kategorię źródła zespolonego.|  
+|<xref:System.ServiceModel.Syndication.SyndicationContent>|Klasa bazowa, która reprezentuje zawartość zespoloną.|  
+|<xref:System.ServiceModel.Syndication.SyndicationElementExtension>|Klasa, która reprezentuje rozszerzenie elementu zespolonego.|  
 |<xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection>|Kolekcja <xref:System.ServiceModel.Syndication.SyndicationElementExtension> obiektów.|  
-|<xref:System.ServiceModel.Syndication.SyndicationFeed>|Klasa, która reprezentuje obiekt źródła najwyższego poziomu.|  
+|<xref:System.ServiceModel.Syndication.SyndicationFeed>|Klasa, która reprezentuje obiekt kanału informacyjnego najwyższego poziomu.|  
 |<xref:System.ServiceModel.Syndication.SyndicationItem>|Klasa, która reprezentuje element kanału informacyjnego.|  
-|<xref:System.ServiceModel.Syndication.SyndicationLink>|Klasa, która reprezentuje łącze w zespolonego źródła danych lub element.|  
-|<xref:System.ServiceModel.Syndication.SyndicationPerson>|Klasa, która reprezentuje konstrukcja osoby Atom.|  
-|<xref:System.ServiceModel.Syndication.SyndicationVersions>|Klasa, która reprezentuje protokołów obsługiwanych syndykacji.|  
-|<xref:System.ServiceModel.Syndication.TextSyndicationContent>|Klasa, która reprezentuje dowolny <xref:System.ServiceModel.Syndication.SyndicationItem> zawartości ma być wyświetlany użytkownikowi końcowemu.|  
-|<xref:System.ServiceModel.Syndication.TextSyndicationContentKind>|Wyliczenie reprezentuje różne rodzaje tekstu syndykacja informacji o zawartości obsługiwane.|  
-|<xref:System.ServiceModel.Syndication.UrlSyndicationContent>|Klasa, która reprezentuje syndykacji zawartość, która składa się z adresu URL do innego zasobu.|  
-|<xref:System.ServiceModel.Syndication.XmlSyndicationContent>|Klasa, która reprezentuje zawartość syndykacji, która nie ma być wyświetlany w przeglądarce.|  
+|<xref:System.ServiceModel.Syndication.SyndicationLink>|Klasa, która reprezentuje łącze w ramach zespolonego źródła danych lub elementu.|  
+|<xref:System.ServiceModel.Syndication.SyndicationPerson>|Klasa, która reprezentuje konstrukcję osoby atomowej.|  
+|<xref:System.ServiceModel.Syndication.SyndicationVersions>|Klasa, która reprezentuje obsługiwane wersje protokołu zespolonego.|  
+|<xref:System.ServiceModel.Syndication.TextSyndicationContent>|Klasa, która reprezentuje <xref:System.ServiceModel.Syndication.SyndicationItem> zawartość, która będzie wyświetlana użytkownikowi końcowemu.|  
+|<xref:System.ServiceModel.Syndication.TextSyndicationContentKind>|Wyliczenie, które reprezentuje różne typy obsługiwanej zawartości zespolonej.|  
+|<xref:System.ServiceModel.Syndication.UrlSyndicationContent>|Klasa, która reprezentuje zawartość zespoloną, która składa się z adresu URL innego zasobu.|  
+|<xref:System.ServiceModel.Syndication.XmlSyndicationContent>|Klasa reprezentująca zawartość zespoloną, która nie ma być wyświetlana w przeglądarce.|  
   
- Abstrakcje danych podstawowych w modelu obiektów są źródła danych i elementów, które odpowiadają <xref:System.ServiceModel.Syndication.SyndicationFeed> i <xref:System.ServiceModel.Syndication.SyndicationItem> klasy. Źródło danych udostępnia niektóre metadane poziomie źródła danych (na przykład, tytuł, opis i autor), lokalizację do przechowywania nieznane rozszerzenia oraz zestaw elementów, które tworzą pozostałej części źródła informacji o zawartości. Elementu udostępnia niektóre metadane poziomie elementu (na przykład, Title, Summary i PublicationDate), lokalizację do przechowywania nieznane rozszerzenia i zawartość elementu, który zawiera resztę zawartość informacji elementu. Abstrakcje podstawowe źródło danych i elementów są obsługiwane przez dodatkowych klas reprezentujących typowe konstrukcje danych, do którego odwołuje się do specyfikacji Atom 1.0 i RSS.  
+ Podstawowe abstrakcje danych w modelu obiektów to źródła i elementy, które odpowiadają <xref:System.ServiceModel.Syndication.SyndicationFeed> klasom i. <xref:System.ServiceModel.Syndication.SyndicationItem> Kanał informacyjny ujawnia niektóre metadane na poziomie kanału informacyjnego (na przykład tytuł, opis i autor), lokalizację do przechowywania nieznanych rozszerzeń oraz zestaw elementów, które tworzą resztę zawartości informacji kanału informacyjnego. Element udostępnia metadane na poziomie elementu (na przykład tytuł, podsumowanie i PublicationDate), lokalizację do przechowywania nieznanych rozszerzeń i element zawartości, który zawiera resztę zawartości informacji o elemencie. Podstawowe abstrakcje kanału informacyjnego i elementu są obsługiwane przez dodatkowe klasy, które reprezentują wspólne konstrukcje danych, do których odwołuje się Specyfikacja Atom 1,0 i RSS.  
   
- Informacje w wystąpieniu źródła danych można przekonwertować na wiele formatów XML. Proces konwersji do i z pliku XML jest zarządzana przez <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> klasy. Ta klasa jest abstrakcyjna; konkretne implementacje są dostarczane dla Atom 1.0 i RSS 2.0 <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> i <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>. Aby używać klasy pochodne źródła danych, należy użyć <xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601> lub <xref:System.ServiceModel.Syndication.Rss20FeedFormatter%601> zgodnie z ich pozwalają na określenie klasy pochodnej źródła danych. Aby użyć klasy pochodnej elementu należy użyć <xref:System.ServiceModel.Syndication.Atom10ItemFormatter%601> lub <xref:System.ServiceModel.Syndication.Rss20ItemFormatter%601> jako pozwala użytkownikowi na określenie klasy pochodnej elementu trzecim może pochodzić zapewniali własną implementację <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> do obsługi syndykacji różnych formatów.  
+ Informacje zawarte w wystąpieniu źródła danych mogą być konwertowane na różne formaty XML. Proces konwersji do i z XML jest zarządzany przez <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> klasę. Ta klasa jest abstrakcyjna; konkretne implementacje są dostępne dla Atom 1,0 i RSS 2,0 <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> i <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>. Aby skorzystać z klas pochodnego źródła danych <xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601> , <xref:System.ServiceModel.Syndication.Rss20FeedFormatter%601> należy użyć lub, aby określić pochodną klasę kanału informacyjnego. Aby można było użyć pochodnych klas elementów <xref:System.ServiceModel.Syndication.Atom10ItemFormatter%601> , <xref:System.ServiceModel.Syndication.Rss20ItemFormatter%601> Użyj lub, gdy umożliwiają określenie pochodnej klasy Item trzecich, można <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> utworzyć własną implementację, aby obsługiwać różne formaty zespolone.  
   
 ## <a name="extensibility"></a>Rozszerzalność  
   
-- Kluczową cechą protokołów syndykacji jest rozszerzalności. RSS 2.0 i Atom 1.0 umożliwiają dodawanie atrybuty i elementy do zespolone kanały informacyjne, które nie są zdefiniowane w specyfikacji. Model programowania syndykacji programu WCF zapewnia dwa sposoby pracy z atrybutami niestandardowymi i rozszerzenia: wyprowadzanie nową klasę i typowaniem luźnym dostępu. Aby uzyskać więcej informacji, zobacz [rozszerzalność syndykacji](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+- Kluczową funkcją protokołów zespalania jest rozszerzalność. Protokoły Atom 1,0 i RSS 2,0 umożliwiają dodawanie atrybutów i elementów do źródeł zespolonych, które nie są zdefiniowane w specyfikacjach. Model programowania zespolonego WCF zapewnia dwa sposoby pracy z atrybutami i rozszerzeniami niestandardowymi: wyprowadzanie nowej klasy i swobodnego dostępu do nich. Aby uzyskać więcej informacji, zobacz [rozszerzalność zespalania](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

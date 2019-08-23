@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96d38abad37f9460230164de784a1258e7e937a4
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 29fbe951b955c97e39ebaf80885729a45c1a3fd7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663722"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927395"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> Element
 Określa, czy funkcja kończąca PerfCounter. dll używa ustawienia rejestru CategoryOptions w aplikacji .NET Framework w wersji 1,1, aby określić, czy ładować dane liczników wydajności z pamięci współdzielonej określonej dla kategorii, czy z pamięci globalnej.  
@@ -62,7 +62,7 @@ enabled="true|false"/>
  W celu zapewnienia zgodności z poprzednimi wersjami .NET Framework 4 funkcja kończąca PerfCounter. dll nie sprawdza wpisu rejestru CategoryOptions w przypadku uruchamiania w aplikacji .NET Framework 1,1. Po prostu używa globalnej pamięci współdzielonej, podobnie jak .NET Framework 1,1 funkcja kończąca PerfCounter. dll. Można jednak wydać polecenie .NET Framework 4 funkcja kończąca PerfCounter. dll, aby sprawdzić ustawienie rejestru przez włączenie `<forcePerformanceCounterUniqueSharedMemoryReads>` elementu.  
   
 > [!NOTE]
->  `<forcePerformanceCounterUniqueSharedMemoryReads>` Włączenie elementu nie gwarantuje, że zostanie użyta udostępniona pamięć określona w kategorii. Ustawienie "Enabled `true` " powoduje tylko, że funkcja kończąca PerfCounter. dll odwołuje się do ustawienia rejestru CategoryOptions. Ustawieniem domyślnym dla CategoryOptions jest użycie pamięci współużytkowanej określonej dla kategorii; można jednak zmienić CategoryOptions, aby wskazać, że powinna być używana globalna pamięć współdzielona.  
+> `<forcePerformanceCounterUniqueSharedMemoryReads>` Włączenie elementu nie gwarantuje, że zostanie użyta udostępniona pamięć określona w kategorii. Ustawienie "Enabled `true` " powoduje tylko, że funkcja kończąca PerfCounter. dll odwołuje się do ustawienia rejestru CategoryOptions. Ustawieniem domyślnym dla CategoryOptions jest użycie pamięci współużytkowanej określonej dla kategorii; można jednak zmienić CategoryOptions, aby wskazać, że powinna być używana globalna pamięć współdzielona.  
   
  Klucz rejestru zawierający ustawienie CategoryOptions jest HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\< CategoryName \Performance.\> Domyślnie CategoryOptions jest ustawiana na 3, która instruuje funkcja kończąca PerfCounter. dll, aby użyć udostępnionej pamięci określonej dla kategorii. Jeśli wartość CategoryOptions jest równa 0, funkcja kończąca PerfCounter. dll używa globalnej pamięci współdzielonej. Dane wystąpienia będą ponownie używane tylko wtedy, gdy nazwa tworzonego wystąpienia jest identyczna z ponownie używanym wystąpieniem. Wszystkie wersje będą mogły zapisywać w kategorii. Jeśli CategoryOptions jest ustawiona na 1, używana jest globalna pamięć współdzielona, ale dane wystąpienia mogą być ponownie używane, jeśli nazwa kategorii ma taką samą długość jak kategoria używana ponownie.  
   

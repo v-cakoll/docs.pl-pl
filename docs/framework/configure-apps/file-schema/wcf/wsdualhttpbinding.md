@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-ms.openlocfilehash: 6b44f63d20e0e2ed0d2486003b15a932ba939f55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fd758258a34fd63882c3d06b49cbe53bd2d105d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670238"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915124"
 ---
 # <a name="wsdualhttpbinding"></a>\<wsDualHttpBinding >
-Definiuje bezpieczne, niezawodne i interoperacyjne powiązanie, które jest odpowiednie dla kontraktów usługi duplex lub komunikacji za pośrednictwem pośredników SOAP.  
+Definiuje bezpieczne, niezawodne i interoperacyjne powiązanie, które jest odpowiednie dla kontraktów usługi dupleksowej lub komunikacji za pośrednictwem pośredników SOAP.  
   
  \<system.ServiceModel>  
-\<powiązania >  
+\<> powiązań  
 \<wsDualHttpBinding >  
   
 ## <a name="syntax"></a>Składnia  
@@ -54,48 +54,48 @@ Definiuje bezpieczne, niezawodne i interoperacyjne powiązanie, które jest odpo
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|bypassProxyOnLocal|Wartość logiczna, która wskazuje, czy pominąć serwer proxy dla adresów lokalnych. Wartość domyślna to `false`.|  
-|clientBaseAddress|Identyfikator URI, który ustawia adres podstawowy, który klient nasłuchuje komunikatów odpowiedzi z usługi. Jeśli zostanie określony, ten adres (plus na channelGUID) jest używany do nasłuchiwania. Jeśli wartość nie jest określony, adres bazowy klienta jest generowany w sposób specyficznych dla transportu. Wartość domyślna to `null`.|  
-|closeTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na zakończenie operacji zamknięcia. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
-|hostnameComparisonMode|Określa tryb porównywania nazwy hosta HTTP używany do analizowania identyfikatorów URI. Ten atrybut jest typu <xref:System.ServiceModel.HostNameComparisonMode>, która wskazuje, czy nazwa hosta jest używana w celu dotarcia do usługi podczas dopasowywania identyfikatora URI. Wartość domyślna to <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, który ignoruje hostname dopasowania.|  
-|maxBufferPoolSize|Liczba całkowita określająca maksymalny rozmiar puli buforów dla tego powiązania. Wartość domyślna to 524,288 bajtów (512 * 1024). Wiele części programu Windows Communication Foundation (WCF) za pomocą buforów. Tworzenie i niszczenie buforów za każdym razem, gdy są one używane jest kosztowne, a także jest kosztowne wyrzucania elementów bezużytecznych dla buforów. Dzięki pulom buforu zająć buforu z puli, go używać i przywrócić go do puli, gdy wszystko będzie gotowe. Ten sposób unika się obciążenie tworzeniem i likwidowaniem buforów.|  
-|maxReceivedMessageSize|Dodatnia liczba całkowita, która określa maksymalny rozmiar komunikatu, w bajtach, włącznie z nagłówkami, które może zostać odebrany w kanale skonfigurowany tym wiązaniem. Nadawca wiadomości przekroczenie tego limitu zostanie wyświetlony błąd protokołu SOAP. Należy określić odbiorcę porzuca wiadomość i tworzy wpis zdarzenia w dzienniku śledzenia. Wartość domyślna to 65536.|  
-|messageEncoding|Definiuje encoder umożliwia kodowanie wiadomości. Prawidłowe wartości są następujące:<br /><br /> -Tekst: Za pomocą kodera komunikatów tekstu.<br />-Mtom: Za pomocą kodera komunikatów transmisji organizacji mechanizm 1.0 (MTOM).<br />— Wartość domyślna to Text.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.WSMessageEncoding>.|  
-|nazwa|Ciąg, który zawiera nazwę konfiguracji powiązania. Wartość ta powinna być unikatowy, ponieważ jest używany jako identyfikator dla wiązania. Począwszy od [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], powiązania i zachowania nie muszą mieć nazwę. Aby uzyskać więcej informacji o domyślnej konfiguracji i powiązania pustego oraz zachowań, zobacz [uproszczona konfiguracja](../../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
-|openTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na zakończenie operacji Otwórz. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
-|proxyAddress|Identyfikator URI, który określa adres serwera proxy HTTP. Jeśli `useDefaultWebProxy` jest `true`, to ustawienie musi być `null`. Wartość domyślna to `null`.|  
-|receiveTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na ukończenie operacji odbierania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
-|sendTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na ukończenie operacji wysyłania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
-|textEncoding|Określa kodowanie do użycia dla emisji komunikatów w powiązaniu zestawu znaków. Prawidłowe wartości są następujące:<br /><br /> -BigEndianUnicode: Unicode BigEndian kodowania.<br />-Unicode: 16-bitowego kodowania.<br />-   UTF8: 8-bitowego kodowania<br /><br /> Wartość domyślna to UTF8. Ten atrybut jest typu <xref:System.Text.Encoding>.|  
-|transactionFlow|Wartość logiczna określająca, czy powiązanie obsługuje płynące WS-transakcji. Wartość domyślna to `false`.|  
-|useDefaultWebProxy|Wartość logiczna wskazująca, czy jest używany serwer proxy HTTP systemu skonfigurowany automatycznie. Adres serwera proxy musi być `null` (czyli nie ustawiono) Jeśli ten atrybut jest `true`. Wartość domyślna to `true`.|  
+|bypassProxyOnLocal|Wartość logiczna wskazująca, czy pominąć serwer proxy dla adresów lokalnych. Wartość domyślna to `false`.|  
+|clientBaseAddress|Identyfikator URI, który ustawia adres bazowy, do którego klient nasłuchuje komunikatów odpowiedzi z usługi. Jeśli ta wartość jest określona, ten adres (plus channelGUID) jest używany do nasłuchiwania. Jeśli wartość nie jest określona, adres podstawowy klienta jest generowany w sposób specyficzny dla transportu. Wartość domyślna to `null`.|  
+|closeTimeout|<xref:System.TimeSpan> Wartość określająca interwał czasu podanego do ukończenia operacji zamknięcia. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
+|hostnameComparisonMode|Określa tryb porównania nazw hostów HTTP używany do analizowania identyfikatorów URI. Ten atrybut jest typu <xref:System.ServiceModel.HostNameComparisonMode>, który wskazuje, czy nazwa hosta jest używana do uzyskiwania dostępu do usługi podczas dopasowywania identyfikatora URI. Wartość domyślna to <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, co powoduje ignorowanie nazwy hosta w dopasowaniu.|  
+|maxBufferPoolSize|Liczba całkowita określająca maksymalny rozmiar puli buforów dla tego powiązania. Wartość domyślna to 524 288 bajtów (512 * 1024). Wiele części Windows Communication Foundation (WCF) używa buforów. Tworzenie i niszczenie buforów za każdym razem, gdy są używane, jest kosztowne i wyrzucanie elementów bezużytecznych dla buforów jest również kosztowne. W przypadku pul buforów można pobrać bufor z puli, użyć go i zwrócić do puli po zakończeniu. W ten sposób nie ma konieczności narzutu na tworzenie i niszczenie buforów.|  
+|maxReceivedMessageSize|Dodatnia liczba całkowita, która określa maksymalny rozmiar wiadomości (w bajtach), w tym nagłówki, które można odbierać w kanale skonfigurowanym dla tego powiązania. Nadawca komunikatu przekraczającego ten limit otrzyma błąd protokołu SOAP. Odbiorca odrzuca komunikat i tworzy wpis zdarzenia w dzienniku śledzenia. Wartość domyślna to 65536.|  
+|messageEncoding|Definiuje koder używany do kodowania wiadomości. Prawidłowe wartości to:<br /><br /> Opis Użyj kodera wiadomości tekstowych.<br />MTOM Użyj mechanizmu organizacji przesyłania komunikatów 1,0 (MTOM) kodera.<br />-Wartość domyślna to Text.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.WSMessageEncoding>.|  
+|nazwa|Ciąg zawierający nazwę konfiguracji powiązania. Ta wartość powinna być unikatowa, ponieważ jest używana jako identyfikacja dla powiązania. Począwszy od [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], powiązania i zachowania nie muszą mieć nazwy. Aby uzyskać więcej informacji na temat konfiguracji domyślnej i powiązań pustego i zachowań, zobacz [Uproszczona konfiguracja](../../../wcf/simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|openTimeout|<xref:System.TimeSpan> Wartość, która określa przedział czasu podanego na zakończenie operacji otwarcia. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
+|proxyAddress|Identyfikator URI, który określa adres serwera proxy HTTP. Jeśli `useDefaultWebProxy` `null`jest `true`, to ustawienie musi być. Wartość domyślna to `null`.|  
+|receiveTimeout|<xref:System.TimeSpan> Wartość określająca interwał czasu podanego do ukończenia operacji odbioru. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
+|sendTimeout|<xref:System.TimeSpan> Wartość określająca interwał czasu podanego do ukończenia operacji wysyłania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
+|TextEncoding|Ustawia kodowanie zestawu znaków, który ma być używany do emitowania komunikatów w powiązaniu. Prawidłowe wartości to:<br /><br /> - BigEndianUnicode: Kodowanie Unicode BigEndian.<br />Unicode kodowanie 16-bitowe.<br />-   UTF8: kodowanie 8-bitowe<br /><br /> Wartość domyślna to UTF8. Ten atrybut jest typu <xref:System.Text.Encoding>.|  
+|transactionFlow|Wartość logiczna określająca, czy powiązanie obsługuje przepływy WS-Transactions. Wartość domyślna to `false`.|  
+|useDefaultWebProxy|Wartość logiczna wskazująca, czy jest używany konfigurowany przez system serwer proxy HTTP. Jeśli ten atrybut ma `null` `true`wartość, adres serwera proxy musi mieć wartość (czyli nie jest ustawiony). Wartość domyślna to `true`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsdualhttpbinding.md)|Definiuje ustawienia zabezpieczeń dla wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement>.|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiuje ograniczenia złożoności wiadomości SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane dla tego wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Określa, jeśli niezawodnej sesji są ustanawiane między punktami końcowymi kanału.|  
+|[\<> zabezpieczeń](security-of-wsdualhttpbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement>.|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiuje ograniczenia złożoności komunikatów protokołu SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane za pomocą tego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Określa, czy niezawodne sesje są nawiązywane między punktami końcowymi kanałów.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<powiązania >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Ten element przetrzymuje kolekcję powiązań standardowych i niestandardowych.|  
+|[\<> powiązań](bindings.md)|Ten element zawiera kolekcję powiązań standardowych i niestandardowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- `WSDualHttpBinding` Obsługę tych samych protokołów usług sieci Web jako `WSHttpBinding`, ale do użytku z programem kontrakty dwukierunkowe. `WSDualHttpBinding` obsługuje zabezpieczenia protokołu SOAP i tylko wymaga niezawodną obsługę komunikatów. To powiązanie wymaga, że klient ma publiczny identyfikator URI, który udostępnia punkt końcowy wywołania zwrotnego dla usługi. To jest świadczona przez `clientBaseAddress` atrybutu. Podwójna powiązania udostępnia adres IP klienta do usługi. Klienta należy użyć zabezpieczeń, aby upewnić się, że tylko nawiązuje połączenie z usługi ona relacje zaufania.  
+ Zapewnia taką samą obsługę protokołów usługi sieci Web `WSHttpBinding`jak, ale w przypadku kontraktów dupleksowych. `WSDualHttpBinding` `WSDualHttpBinding`obsługuje tylko zabezpieczenia protokołu SOAP i wymaga niezawodnej obsługi komunikatów. To powiązanie wymaga, aby klient miał publiczny identyfikator URI, który udostępnia punkt końcowy wywołania zwrotnego dla usługi. Jest to zapewniane przez `clientBaseAddress` atrybut. Podwójne powiązanie uwidacznia adres IP klienta w usłudze. Klient powinien korzystać z zabezpieczeń, aby upewnić się, że tylko nawiązuje połączenie z usługami, które ufają.  
   
- To powiązanie może służyć do niezawodnie komunikować się za pośrednictwem pośredników SOAP jeden lub więcej.  
+ To powiązanie może służyć do niezawodnego komunikowania się przez jeden lub więcej pośredników SOAP.  
   
- Domyślnie to powiązanie generuje stosu środowiska uruchomieniowego za pomocą WS-ReliableMessaging zapewniający niezawodność, WS-Security dla zabezpieczenia wiadomości i każde uwierzytelnienie, HTTP do dostarczania wiadomości i kodowanie komunikatu Text/XML.  
+ Domyślnie to powiązanie generuje stos środowiska uruchomieniowego z protokołem WS-ReliableMessaging w celu zapewnienia niezawodności, protokołu WS-Security na potrzeby zabezpieczeń i uwierzytelniania wiadomości, protokołu HTTP na potrzeby dostarczania komunikatów oraz kodowania wiadomości tekstowych/XML.  
   
 ## <a name="example"></a>Przykład  
   
@@ -135,7 +135,7 @@ Definiuje bezpieczne, niezawodne i interoperacyjne powiązanie, które jest odpo
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 - <xref:System.ServiceModel.Configuration.WSDualHttpBindingElement>
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<> powiązania](../../../misc/binding.md)

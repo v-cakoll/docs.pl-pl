@@ -2,21 +2,21 @@
 title: <dispatcherSynchronization>
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
-ms.openlocfilehash: 6be9752e8102a5d4db4fed31aae8ff6d56fdd24e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7336c9f7d8a117f9a9bfd338e47941eeb648fa51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673410"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925846"
 ---
 # <a name="dispatchersynchronization"></a>\<dispatcherSynchronization>
   
-Określa zachowanie punktu końcowego, które włącza usługę wysłać odpowiedzi asynchronicznie.  
+Określa zachowanie punktu końcowego, które umożliwia usłudze wysyłanie odpowiedzi asynchronicznie.  
   
 \<system.serviceModel>  
-\<zachowania >  
+\<> zachowań  
 \<endpointBehaviors>  
-\<zachowanie >  
+\<> zachowania  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,8 +37,8 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 | Atrybut               | Opis       |
 | ----------------------- | ----------------- |
-| asynchronousSendEnabled | Wartość logiczna określająca czy zachowanie przesyłu asynchronicznego jest włączone. |
-| `maxPendingReceives`    | Liczba całkowita, która określa liczbę równoczesnych pobrań, które mogą być wystawiane na kanale.<br /><br /> Tę wartość należy skonfigurować tylko wtedy, gdy zachowanie ograniczania przepływności usługi zostało poprawnie skonfigurowane. |
+| asynchronousSendEnabled | Wartość logiczna określająca, czy jest włączone asynchroniczne wysyłanie. |
+| `maxPendingReceives`    | Liczba całkowita określająca liczbę współbieżnych odbiorów, które mogą być wystawiane w kanale.<br /><br /> Ta wartość powinna być skonfigurowana tylko po poprawnym skonfigurowaniu zachowania ograniczania usługi. |
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -48,7 +48,7 @@ Brak.
 
 | Element | Opis |  
 | ------- | ----------- |  
-| [\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie punktu końcowego. |
+| [\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zachowanie punktu końcowego. |
 
 ## <a name="see-also"></a>Zobacz także
 

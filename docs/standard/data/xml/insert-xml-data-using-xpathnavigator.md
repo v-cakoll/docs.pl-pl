@@ -9,25 +9,25 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647913"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966955"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Wstawianie danych XML przy użyciu klasy XPathNavigator
-<xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia zestaw metod, które służy do wstawiania element równorzędny, podrzędne i węzłów atrybutu w dokumencie XML. Aby można było używać tych metod <xref:System.Xml.XPath.XPathNavigator> obiekt musi być niemożliwa, czyli jego <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> właściwość musi być `true`.  
+<xref:System.Xml.XPath.XPathNavigator> Klasa zawiera zestaw metod służących do wstawiania węzłów równorzędnych, podrzędnych i atrybutów w dokumencie XML. Aby można było korzystać z tych metod, <xref:System.Xml.XPath.XPathNavigator> obiekt musi być edytowalny, oznacza to, <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> że jego właściwość `true`musi być.  
   
- <xref:System.Xml.XPath.XPathNavigator> obiekty, które można edytować dokumentu XML są tworzone przez <xref:System.Xml.XmlDocument.CreateNavigator%2A> metody <xref:System.Xml.XmlDocument> klasy. <xref:System.Xml.XPath.XPathNavigator> obiekty utworzone przez <xref:System.Xml.XPath.XPathDocument> klasy są przeznaczone tylko do odczytu i dowolne próba należy użyć metod edycji <xref:System.Xml.XPath.XPathNavigator> obiekt utworzony przez <xref:System.Xml.XPath.XPathDocument> skutkuje obiektu <xref:System.NotSupportedException>.  
+ <xref:System.Xml.XPath.XPathNavigator>obiekty, które mogą edytować dokument XML, są tworzone przy <xref:System.Xml.XmlDocument.CreateNavigator%2A> użyciu metody <xref:System.Xml.XmlDocument> klasy. <xref:System.Xml.XPath.XPathNavigator>obiekty utworzone przez <xref:System.Xml.XPath.XPathDocument> klasę są tylko do odczytu, a każda próba użycia metod <xref:System.Xml.XPath.XPathNavigator> edycji obiektu utworzonego przez <xref:System.Xml.XPath.XPathDocument> obiekt daje w wyniku <xref:System.NotSupportedException>.  
   
- Aby uzyskać więcej informacji o tworzeniu edytowalne <xref:System.Xml.XPath.XPathNavigator> obiekty, zobacz [odczytywania danych XML przy użyciu klas XPathDocument i XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
+ Aby uzyskać więcej informacji na temat <xref:System.Xml.XPath.XPathNavigator> tworzenia edytowalnych obiektów, zobacz [odczytywanie danych XML przy użyciu XPathDocument i XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
   
 ## <a name="inserting-nodes"></a>Wstawianie węzłów  
- <xref:System.Xml.XPath.XPathNavigator> Klasa dostarcza metody, aby wstawić element równorzędny, podrzędne i węzłów atrybutu w dokumencie XML. Te metody umożliwiają wstawianie węzłów i atrybuty w różnych lokalizacjach w odniesieniu do bieżącego położenia obiektu <xref:System.Xml.XPath.XPathNavigator> obiektu i są opisane w poniższych sekcjach.  
+ <xref:System.Xml.XPath.XPathNavigator> Klasa zawiera metody umożliwiające Wstawianie węzłów równorzędnych, podrzędnych i atrybutów w dokumencie XML. Te metody umożliwiają wstawianie węzłów i atrybutów w różnych lokalizacjach w odniesieniu do bieżącego położenia <xref:System.Xml.XPath.XPathNavigator> obiektu i są opisane w poniższych sekcjach.  
   
-### <a name="inserting-sibling-nodes"></a>Wstawianie węzłów elementów równorzędnych  
- <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia następujące metody, aby wstawić węzłów elementów równorzędnych.  
+### <a name="inserting-sibling-nodes"></a>Wstawianie węzłów równorzędnych  
+ <xref:System.Xml.XPath.XPathNavigator> Klasa zawiera następujące metody wstawiania węzłów równorzędnych.  
   
 - <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
   
@@ -37,26 +37,26 @@ ms.locfileid: "64647913"
   
 - <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
   
- Te metody insert węzłów elementów równorzędnych, przed i po węźle <xref:System.Xml.XPath.XPathNavigator> obiektu jest obecnie ustawiony na.  
+ Te metody wstawiają węzły równorzędne przed i po węźle <xref:System.Xml.XPath.XPathNavigator> , w którym jest obecnie umieszczony obiekt.  
   
- <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A> i <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A> metody są przeciążone i zaakceptuj `string`, <xref:System.Xml.XmlReader> obiektu lub <xref:System.Xml.XPath.XPathNavigator> obiekt, który zawiera węzeł równorzędny do dodania jako parametry. Obie metody zwracają również <xref:System.Xml.XmlWriter> obiekt używany do wstawienia węzłów elementów równorzędnych.  
+ <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XmlReader> Metody <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A> i <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A> sąprzeciążoneiakceptują,obiektlubobiektzawierającywęzeł`string`równorzędny, aby dodać jako parametry. Obie metody zwracają <xref:System.Xml.XmlWriter> również obiekt używany do wstawiania węzłów elementów równorzędnych.  
   
- <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A> i <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A> metody Wstaw węzeł równorzędne jednym przed i po węźle <xref:System.Xml.XPath.XPathNavigator> obiekt znajduje się obecnie na temat korzystania z prefiks przestrzeni nazw, lokalna nazwa, identyfikator URI przestrzeni nazw i wartości określonej jako parametry.  
+ Metody <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A> <xref:System.Xml.XPath.XPathNavigator> i <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A> wstawiają pojedynczy węzeł równorzędny przed i po węźle, w którym aktualnie znajduje się obiekt, przy użyciu prefiksu przestrzeni nazw, nazwy lokalnej, identyfikatora URI przestrzeni nazw i wartości określonej jako parametry.  
   
- W poniższym przykładzie nowej `pages` element jest wstawiany przed `price` pierwszy element podrzędny `book` element `contosoBooks.xml` pliku.  
+ `pages` W poniższym przykładzie nowy element jest wstawiany `price` przed elementem podrzędnym pierwszego `book` elementu w `contosoBooks.xml` pliku.  
   
  [!code-cpp[XPathNavigatorMethods#19](../../../../samples/snippets/cpp/VS_Snippets_Data/XPathNavigatorMethods/CPP/xpathnavigatormethods.cpp#19)]
  [!code-csharp[XPathNavigatorMethods#19](../../../../samples/snippets/csharp/VS_Snippets_Data/XPathNavigatorMethods/CS/xpathnavigatormethods.cs#19)]
  [!code-vb[XPathNavigatorMethods#19](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XPathNavigatorMethods/VB/xpathnavigatormethods.vb#19)]  
   
- Przykład przyjmuje `contosoBooks.xml` pliku jako dane wejściowe.  
+ Przykład pobiera `contosoBooks.xml` plik jako dane wejściowe.  
   
  [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
   
- Aby uzyskać więcej informacji na temat <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A> i <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A> metod, zobacz <xref:System.Xml.XPath.XPathNavigator> klasy dokumentację referencyjną.  
+ Więcej <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>informacji o metodach <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A> , <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>i <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A> znajduje się w <xref:System.Xml.XPath.XPathNavigator> dokumentacji dotyczącej klasy.  
   
 ### <a name="inserting-child-nodes"></a>Wstawianie węzłów podrzędnych  
- <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia następujące metody, aby wstawić węzłów podrzędnych.  
+ <xref:System.Xml.XPath.XPathNavigator> Klasa zawiera następujące metody wstawiania węzłów podrzędnych.  
   
 - <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
   
@@ -66,53 +66,53 @@ ms.locfileid: "64647913"
   
 - <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
   
- Te metody dołączyć i Dodaj węzły podrzędne końca i początku listy węzłów podrzędnych węzła <xref:System.Xml.XPath.XPathNavigator> obiektu jest obecnie ustawiony na.  
+ Te metody dołączą i dołączają węzły podrzędne do końca i początku listy węzłów podrzędnych w węźle <xref:System.Xml.XPath.XPathNavigator> , w którym znajduje się obiekt.  
   
- Takie jak metody w sekcji "Wstawianie węzłów elementów równorzędnych" <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A> i <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> akceptować metod `string`, <xref:System.Xml.XmlReader> obiektu lub <xref:System.Xml.XPath.XPathNavigator> obiekt, który zawiera węzeł podrzędny do dodania jako parametry. Obie metody zwracają również <xref:System.Xml.XmlWriter> obiekt używany do wstawienia węzłów podrzędnych.  
+ Podobnie jak metody w sekcji "Wstawianie węzłów <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A> równorzędnych", a <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> metody akceptują `string`, <xref:System.Xml.XmlReader> obiekt lub <xref:System.Xml.XPath.XPathNavigator> obiekt zawierający węzeł podrzędny, aby dodać jako parametry. Obie metody zwracają <xref:System.Xml.XmlWriter> również obiekt używany do wstawiania węzłów podrzędnych.  
   
- Metody w sekcji "Wstawianie węzłów elementów równorzędnych" się także podobać <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A> i <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A> metody Wstawianie pojedynczy element podrzędny węzła do końca i początku listy węzłów podrzędnych węzła <xref:System.Xml.XPath.XPathNavigator> obiekt znajduje się obecnie na temat korzystania z Prefiks przestrzeni nazw, lokalna nazwa, identyfikator URI przestrzeni nazw i wartości określonej jako parametry.  
+ Podobnie jak w przypadku metod w sekcji <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A> "Wstawianie węzłów równorzędnych" i <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A> metody wstawiania pojedynczego węzła podrzędnego do końca i początku listy <xref:System.Xml.XPath.XPathNavigator> węzłów podrzędnych węzła obiekt jest obecnie umieszczony przy użyciu prefiks przestrzeni nazw, nazwa lokalna, identyfikator URI przestrzeni nazw oraz wartość określona jako parametry.  
   
- W poniższym przykładzie nowy `pages` elementu podrzędnego jest dołączany do listy elementów podrzędnych pierwszego `book` element `contosoBooks.xml` pliku.  
+ W poniższym przykładzie nowy `pages` element podrzędny jest dołączany do listy elementów podrzędnych pierwszego `book` elementu w `contosoBooks.xml` pliku.  
   
  [!code-cpp[XPathNavigatorMethods#2](../../../../samples/snippets/cpp/VS_Snippets_Data/XPathNavigatorMethods/CPP/xpathnavigatormethods.cpp#2)]
  [!code-csharp[XPathNavigatorMethods#2](../../../../samples/snippets/csharp/VS_Snippets_Data/XPathNavigatorMethods/CS/xpathnavigatormethods.cs#2)]
  [!code-vb[XPathNavigatorMethods#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XPathNavigatorMethods/VB/xpathnavigatormethods.vb#2)]  
   
- Przykład przyjmuje `contosoBooks.xml` pliku jako dane wejściowe.  
+ Przykład pobiera `contosoBooks.xml` plik jako dane wejściowe.  
   
  [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
   
- Aby uzyskać więcej informacji na temat <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A> i <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A> metod, zobacz <xref:System.Xml.XPath.XPathNavigator> klasy dokumentację referencyjną.  
+ Więcej <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>informacji o metodach <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A> , <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>i <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A> znajduje się w <xref:System.Xml.XPath.XPathNavigator> dokumentacji dotyczącej klasy.  
   
-### <a name="inserting-attribute-nodes"></a>Wstawianie węzłów atrybutu  
- <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia następujące metody, aby wstawić węzłów atrybutu.  
+### <a name="inserting-attribute-nodes"></a>Wstawianie węzłów atrybutów  
+ <xref:System.Xml.XPath.XPathNavigator> Klasa zawiera następujące metody wstawiania węzłów atrybutów.  
   
 - <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
   
 - <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
   
- Te metody insert węzłów atrybutu w węźle element <xref:System.Xml.XPath.XPathNavigator> obiektu jest obecnie ustawiony na. <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> Metoda tworzy węzeł atrybutu na węzeł elementu <xref:System.Xml.XPath.XPathNavigator> obiekt znajduje się obecnie na temat korzystania z prefiks przestrzeni nazw, lokalna nazwa, identyfikator URI przestrzeni nazw i wartości określonej jako parametry. <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> Metoda zwraca <xref:System.Xml.XmlWriter> obiekt używany do wstawienia węzłów atrybutu.  
+ Te metody wstawiają węzły atrybutów w węźle elementu, <xref:System.Xml.XPath.XPathNavigator> w którym obiekt jest obecnie umieszczony. Metoda tworzy węzeł atrybutu w <xref:System.Xml.XPath.XPathNavigator> węźle elementu obiekt jest obecnie umieszczony przy użyciu prefiksu przestrzeni nazw, nazwy lokalnej, identyfikatora URI przestrzeni nazw i wartości określonej jako parametry. <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> Metoda<xref:System.Xml.XmlWriter> zwraca obiekt używany do wstawiania węzłów atrybutów.  
   
- W poniższym przykładzie nowy `discount` i `currency` atrybuty są tworzone na `price` pierwszy element podrzędny `book` element `contosoBooks.xml` plików przy użyciu <xref:System.Xml.XmlWriter> obiekt zwracany z <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> Metoda.  
+ W `discount` poniższym przykładzie nowe i `currency` `price` atrybuty są tworzone w elemencie `contosoBooks.xml` podrzędnym pierwszego `book` elementu w pliku przy użyciu <xref:System.Xml.XmlWriter> obiektu zwróconego z <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> Method.  
   
  [!code-cpp[XPathNavigatorMethods#8](../../../../samples/snippets/cpp/VS_Snippets_Data/XPathNavigatorMethods/CPP/xpathnavigatormethods.cpp#8)]
  [!code-csharp[XPathNavigatorMethods#8](../../../../samples/snippets/csharp/VS_Snippets_Data/XPathNavigatorMethods/CS/xpathnavigatormethods.cs#8)]
  [!code-vb[XPathNavigatorMethods#8](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XPathNavigatorMethods/VB/xpathnavigatormethods.vb#8)]  
   
- Przykład przyjmuje `contosoBooks.xml` pliku jako dane wejściowe.  
+ Przykład pobiera `contosoBooks.xml` plik jako dane wejściowe.  
   
  [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
   
- Aby uzyskać więcej informacji na temat <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> i <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> metod, zobacz <xref:System.Xml.XPath.XPathNavigator> klasy dokumentację referencyjną.  
+ Więcej informacji o <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> metodach i <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> znajduje się <xref:System.Xml.XPath.XPathNavigator> w dokumentacji dotyczącej klas.  
   
 ## <a name="copying-nodes"></a>Kopiowanie węzłów  
- W niektórych przypadkach można wypełnić dokumentu XML z zawartością z innego dokumentu XML. Zarówno <xref:System.Xml.XPath.XPathNavigator> klasy i <xref:System.Xml.XmlWriter> klasy można skopiować węzłów <xref:System.Xml.XmlDocument> obiektu z istniejącego <xref:System.Xml.XmlReader> obiektu lub <xref:System.Xml.XPath.XPathNavigator> obiektu.  
+ W niektórych przypadkach może być konieczne wypełnienie dokumentu XML zawartością z innego dokumentu XML. <xref:System.Xml.XmlReader> <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XmlDocument> Zarówno Klasa, jak i Klasamogąkopiowaćwęzłydoobiektuzistniejącegoobiektulubobiektu.<xref:System.Xml.XmlWriter> <xref:System.Xml.XPath.XPathNavigator>  
   
- <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A> i <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A> metody <xref:System.Xml.XPath.XPathNavigator> klasy wszystkie mają przeciążenia, które mogą akceptować <xref:System.Xml.XPath.XPathNavigator> obiektu lub <xref:System.Xml.XmlReader> obiektu jako parametr.  
+ <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A> Metody,<xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> ,<xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>i <xref:System.Xml.XmlReader> klasyAllmająprzeciążenia,któremogąakceptowaćobiektlubobiektjakoparametr.<xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A> <xref:System.Xml.XPath.XPathNavigator>  
   
- <xref:System.Xml.XmlWriter.WriteNode%2A> Metody <xref:System.Xml.XmlWriter> klasa ma przeciążenia, które mogą akceptować <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlReader>, lub <xref:System.Xml.XPath.XPathNavigator> obiektu.  
+ <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XmlReader>Metoda klasy ma przeciążenia, które mogą akceptować obiekt ,,lub.<xref:System.Xml.XmlNode> <xref:System.Xml.XmlWriter> <xref:System.Xml.XmlWriter.WriteNode%2A>  
   
- Poniższy przykład kopiuje wszystkie `book` elementy z jednego dokumentu.  
+ Poniższy przykład kopiuje wszystkie `book` elementy z jednego dokumentu do drugiego.  
   
 ```vb  
 Dim document As XmlDocument = New XmlDocument()  
@@ -151,25 +151,25 @@ document.Save("newBooks.xml");
 ```  
   
 ## <a name="inserting-values"></a>Wstawianie wartości  
- <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> i <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> metody do wstawienia wartości dla węzła do <xref:System.Xml.XmlDocument> obiektu.  
+ Klasa zawiera metody<xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> i,<xref:System.Xml.XmlDocument> które umożliwiają wstawianie wartości dla węzła do obiektu. <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> <xref:System.Xml.XPath.XPathNavigator>  
   
-### <a name="inserting-untyped-values"></a>Wstawianie wartości bez typu  
- <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> Metoda po prostu wstawia nietypizowane `string` wartość przekazywana jako parametr jako wartość węzła <xref:System.Xml.XPath.XPathNavigator> obiektu jest obecnie ustawiony na. Wartość jest wstawiany bez dowolnego typu lub bez weryfikacji, nowa wartość jest nieprawidłowa według typu węzła, jeśli informacje schematu są dostępne.  
+### <a name="inserting-untyped-values"></a>Wstawianie wartości niewpisanych  
+ Metoda po prostu wstawia `string` wartość bez typu jako parametr jako wartość węzła, na którym <xref:System.Xml.XPath.XPathNavigator> znajduje się obiekt. <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> Wartość jest wstawiana bez żadnego typu lub bez weryfikowania, czy nowa wartość jest prawidłowa zgodnie z typem węzła, jeśli dostępne są informacje o schemacie.  
   
- W poniższym przykładzie <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> metody używane do aktualizowania wszystkich `price` elementów w `contosoBooks.xml` pliku.  
+ W poniższym przykładzie <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> Metoda jest używana do aktualizowania wszystkich `price` elementów w `contosoBooks.xml` pliku.  
   
  [!code-cpp[XPathNavigatorMethods#47](../../../../samples/snippets/cpp/VS_Snippets_Data/XPathNavigatorMethods/CPP/xpathnavigatormethods.cpp#47)]
  [!code-csharp[XPathNavigatorMethods#47](../../../../samples/snippets/csharp/VS_Snippets_Data/XPathNavigatorMethods/CS/xpathnavigatormethods.cs#47)]
  [!code-vb[XPathNavigatorMethods#47](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XPathNavigatorMethods/VB/xpathnavigatormethods.vb#47)]  
   
- Przykład przyjmuje `contosoBooks.xml` pliku jako dane wejściowe.  
+ Przykład pobiera `contosoBooks.xml` plik jako dane wejściowe.  
   
  [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
   
-### <a name="inserting-typed-values"></a>Wstawianie wartości Typizowane  
- Gdy typ węzła jest schematu XML W3C prosty typ, nowej wartości, które są wstawiane przez <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> metody jest sprawdzana względem aspekty typu prostego, zanim ma wartość. Jeśli nowa wartość nie jest nieprawidłowa według typu węzła (na przykład ustawienie wartości `-1` w elemencie o typie `xs:positiveInteger`), powoduje wyjątek.  
+### <a name="inserting-typed-values"></a>Wstawianie wpisanych wartości  
+ Gdy typ węzła jest typem prostym schematu XML W3C, Nowa wartość wstawiona przez <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> metodę jest sprawdzana względem aspektów typu prostego przed ustawieniem wartości. Jeśli nowa wartość jest nieprawidłowa w zależności od typu węzła (na przykład ustawienie wartości `-1` w elemencie, którego typem jest `xs:positiveInteger`), powoduje wyjątek.  
   
- Poniższy przykład podejmie próbę Zmień wartość właściwości `price` element pierwszego `book` element `contosoBooks.xml` plik <xref:System.DateTime> wartość. Ponieważ typ schematu XML `price` element jest zdefiniowany jako `xs:decimal` w `contosoBooks.xsd` pliki, powoduje to wyjątek.  
+ Poniższy przykład próbuje `price` zmienić wartość elementu pierwszego `book` elementu <xref:System.DateTime> w `contosoBooks.xml` pliku na wartość. Ponieważ typ `price` schematu XML elementu jest zdefiniowany jako `xs:decimal` w `contosoBooks.xsd` plikach, spowoduje to wyjątek.  
   
 ```vb  
 Dim settings As XmlReaderSettings = New XmlReaderSettings()  
@@ -207,77 +207,77 @@ navigator.MoveToChild("price", "http://www.contoso.com/books");
 navigator.SetTypedValue(DateTime.Now);  
 ```  
   
- Przykład przyjmuje `contosoBooks.xml` pliku jako dane wejściowe.  
+ Przykład pobiera `contosoBooks.xml` plik jako dane wejściowe.  
   
  [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
   
- Przykład pobiera również `contosoBooks.xsd` jako dane wejściowe.  
+ Przykład pobiera `contosoBooks.xsd` również jako dane wejściowe.  
   
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
-## <a name="the-innerxml-and-outerxml-properties"></a>Właściwości OuterXml i elementu  
- <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> i <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> właściwości <xref:System.Xml.XPath.XPathNavigator> klasy zmienić węzłów znaczniki XML <xref:System.Xml.XPath.XPathNavigator> obiektu jest obecnie ustawiony na.  
+## <a name="the-innerxml-and-outerxml-properties"></a>Właściwości InnerXml i OuterXml  
+ Właściwości <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> i<xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> klasy zmieniają znaczniki XML w węzłach, w których obiektjestobecnieumieszczony.<xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XPath.XPathNavigator>  
   
- <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> Zmienia właściwość znaczników XML węzłów podrzędnych <xref:System.Xml.XPath.XPathNavigator> przeanalizowany zawartość XML danego obiektu aktualnie jest ustawiony na `string`. Podobnie <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> zmienia właściwość znaczników XML węzłów podrzędnych <xref:System.Xml.XPath.XPathNavigator> obiektu aktualnie jest ustawiony na oraz bieżącego węzła.  
+ Właściwość zmienia znaczniki XML <xref:System.Xml.XPath.XPathNavigator> węzłów podrzędnych obiekt jest obecnie umieszczony w przeanalizowanej zawartości danego kodu XML `string`. <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> Podobnie <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> właściwość zmienia znaczniki XML <xref:System.Xml.XPath.XPathNavigator> węzłów podrzędnych, w których obiekt jest obecnie umieszczony, a także bieżący węzeł.  
   
- Oprócz metod opisanych w tym temacie <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> i <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> właściwości może służyć do wstawienia wartości i węzły w dokumencie XML. Aby uzyskać więcej informacji o korzystaniu z <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> i <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> właściwości, aby wstawić węzłów i wartości, zobacz [modyfikowanie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md) tematu.  
+ Poza metodami opisanymi w tym temacie, <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> właściwości i <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> mogą służyć do wstawiania węzłów i wartości w dokumencie XML. Aby uzyskać więcej informacji na temat <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> używania <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> właściwości i do wstawiania węzłów i wartości, zobacz temat [modyfikowanie danych XML przy użyciu elementu XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md) .  
   
-## <a name="namespace-and-xmllang-conflicts"></a>Namespace i konfliktów XML: lang  
- Niektóre konflikty związane z zakresu przestrzeni nazw i `xml:lang` deklaracje mogą wystąpić podczas wstawiania danych XML przy użyciu <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A> i <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> metody <xref:System.Xml.XPath.XPathNavigator> klasy, które umożliwiają wykorzystywanie <xref:System.Xml.XmlReader>obiektów jako parametrów.  
+## <a name="namespace-and-xmllang-conflicts"></a>Przestrzeń nazw i XML: konflikty lang  
+ Niektóre konflikty związane z zakresem przestrzeni nazw `xml:lang` i deklaracji mogą wystąpić podczas wstawiania danych XML <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>przy użyciu <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>metod <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A> , <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> i metody <xref:System.Xml.XPath.XPathNavigator> klasy, która przyjmuje <xref:System.Xml.XmlReader>obiekty jako parametry.  
   
- Poniżej przedstawiono możliwe przestrzeń nazw powoduje konflikt.  
+ Poniżej wymieniono potencjalne konflikty przestrzeni nazw.  
   
-- W przypadku przestrzeni nazw w zakresie w ramach <xref:System.Xml.XmlReader> obiektu kontekstu, w którym długości prefiksu do mapowania identyfikatora URI przestrzeni nazw nie znajduje się w <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu, nowe deklaracji przestrzeni nazw jest dodawany do nowo wstawionej węzła.  
+- Jeśli w kontekście <xref:System.Xml.XmlReader> obiektu znajduje się przestrzeń nazw, w której prefiks do mapowania identyfikatora URI przestrzeni nazw nie znajduje się <xref:System.Xml.XPath.XPathNavigator> w kontekście obiektu, zostanie dodana nowa Deklaracja przestrzeni nazw do nowo wstawionego węzła.  
   
-- Jeśli ten sam identyfikator URI przestrzeni nazw jest w zakresie w obu <xref:System.Xml.XmlReader> obiektu kontekstu i <xref:System.Xml.XPath.XPathNavigator> obiektu kontekstu, ale ma inny prefiks mapowane w obu kontekstach, nowe deklaracji przestrzeni nazw jest dodawany do nowo wstawionej węzła, z prefiksem i pobierane z identyfikatora URI obszaru nazw <xref:System.Xml.XmlReader> obiektu.  
+- Jeśli ten sam identyfikator URI przestrzeni nazw znajduje się w zakresie zarówno <xref:System.Xml.XmlReader> w kontekście obiektu, <xref:System.Xml.XPath.XPathNavigator> jak i kontekście obiektu, ale ma inny prefiks mapowany na niego w obu kontekstach, Nowa deklaracja przestrzeni nazw jest dodawana do nowo wstawionego węzła, z prefiksem i identyfikator URI przestrzeni nazw pobrany <xref:System.Xml.XmlReader> z obiektu.  
   
-- Jeśli ten sam prefiks przestrzeni nazw jest w zakresie w obu <xref:System.Xml.XmlReader> obiektu kontekstu i <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu, ale ma inny identyfikator URI przestrzeni nazw jest mapowany do niego w obu kontekstów, deklarację przestrzeni nazw nowych zostaje dodany do węzła nowo wstawionej który ponownie deklaruje tego prefiksu z przestrzenią nazw identyfikatora URI z <xref:System.Xml.XmlReader> obiektu.  
+- Jeśli ten sam prefiks przestrzeni nazw znajduje się w zakresie zarówno <xref:System.Xml.XmlReader> w kontekście obiektu, <xref:System.Xml.XPath.XPathNavigator> jak i kontekście obiektu, ale ma inny identyfikator URI przestrzeni nazw mapowany do niego w obu kontekstach, Nowa deklaracja przestrzeni nazw jest dodawana do nowo wstawionego węzła, który redeklaruje ten prefiks przy użyciu identyfikatora URI przestrzeni nazw <xref:System.Xml.XmlReader> pobranego z obiektu.  
   
-- Jeśli prefiks, a także identyfikator URI przestrzeni nazw w obu <xref:System.Xml.XmlReader> obiektu kontekstu i <xref:System.Xml.XPath.XPathNavigator> obiektu kontekstu jest taka sama, nie nowe deklaracja przestrzeni nazw jest dodawana do nowo wstawionej węzła.  
+- Jeśli prefiks <xref:System.Xml.XmlReader> <xref:System.Xml.XPath.XPathNavigator> oraz identyfikator URI przestrzeni nazw w kontekście obiektu i kontekście obiektu są takie same, do nowo wstawionego węzła nie zostanie dodana żadna Nowa deklaracja przestrzeni nazw.  
   
 > [!NOTE]
->  Powyższy opis dotyczy także deklaracje przestrzeni nazw z pustym `string` jako prefiksu (na przykład deklarację domyślnej przestrzeni nazw).  
+> Powyższy opis dotyczy również deklaracji przestrzeni nazw z pustym `string` prefiksem (na przykład deklaracji domyślnej przestrzeni nazw).  
   
- Poniżej przedstawiono możliwe `xml:lang` konflikty.  
+ Możliwe `xml:lang` są następujące konflikty.  
   
-- W przypadku `xml:lang` atrybutu w zakresie w <xref:System.Xml.XmlReader> kontekst obiektu, ale nie <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu `xml:lang` atrybut, którego wartość jest pobierana z <xref:System.Xml.XmlReader> obiekt jest dodawany do nowo wstawionej węzła.  
+- Jeśli `xml:lang` istnieje atrybut w zakresie <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XmlReader> w kontekście obiektu, ale nie w kontekście obiektu, `xml:lang` atrybut, którego wartość jest pobierana z <xref:System.Xml.XmlReader> obiektu jest dodawany do nowo wstawionego węzła.  
   
-- W przypadku `xml:lang` atrybutu w zakresie w obu <xref:System.Xml.XmlReader> obiektu kontekstu i <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu, ale każdy ma inną wartość `xml:lang` atrybut, którego wartość jest pobierana z <xref:System.Xml.XmlReader> obiekt jest dodawany do węzeł nowo wstawione.  
+- Jeśli `xml:lang` istnieje atrybut w zakresie <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XmlReader> zarówno w kontekście obiektu, jak i kontekście obiektu, `xml:lang` ale każdy z nich ma inną wartość, atrybut, którego wartość jest pobierana z <xref:System.Xml.XmlReader> obiektu jest dodawany do nowo wstawiony węzeł.  
   
-- W przypadku `xml:lang` atrybutu w zakresie w obu <xref:System.Xml.XmlReader> obiektu kontekstu i <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu, ale każdy z taką samą wartość żadnego nowego `xml:lang` na nowo wstawionej węzła jest dodawany atrybut.  
+- Jeśli istnieje `xml:lang` atrybut w zakresie <xref:System.Xml.XmlReader> zarówno w kontekście <xref:System.Xml.XPath.XPathNavigator> obiektu, jak i kontekstu obiektu, ale każdy z tą samą wartością, żaden nowy `xml:lang` atrybut nie zostanie dodany do nowo wstawionego węzła.  
   
-- W przypadku `xml:lang` atrybutu w zakresie w <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu, ale nie istnieje w <xref:System.Xml.XmlReader> obiektu kontekstu, nie `xml:lang` atrybutu jest dodawany do nowo wstawionej węzła.  
+- Jeśli istnieje `xml:lang` atrybut w zakresie <xref:System.Xml.XPath.XPathNavigator> w kontekście obiektu, <xref:System.Xml.XmlReader> ale żaden istniejący w kontekście obiektu nie `xml:lang` zostanie dodany do nowo wstawionego węzła.  
   
-## <a name="inserting-nodes-with-xmlwriter"></a>Wstawianie węzłów za pomocą XmlWriter  
- Są przeciążone metody używane do wstawiania węzłów podrzędnych i atrybutów rodzeństwa opisane w sekcji "Wstawianie węzłów i Values". <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> i <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> metody <xref:System.Xml.XPath.XPathNavigator> klasy zwrócenia <xref:System.Xml.XmlWriter> obiektu służy do wstawiania węzłów.  
+## <a name="inserting-nodes-with-xmlwriter"></a>Wstawianie węzłów z XmlWriter  
+ Metody służące do wstawiania elementów równorzędnych, podrzędnych i atrybutów, które opisano w sekcji "Wstawianie węzłów i wartości" są przeciążone. <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>Metody ,<xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, iklasy<xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> zwracają obiektużywany<xref:System.Xml.XmlWriter> do wstawiania węzłów. <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A> <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> <xref:System.Xml.XPath.XPathNavigator>  
   
-### <a name="unsupported-xmlwriter-methods"></a>Nieobsługiwany parametr XmlWriter metody  
- Nie wszystkie metody używane do zapisywania dokumentów XML za pomocą informacji <xref:System.Xml.XmlWriter> klasy są obsługiwane przez <xref:System.Xml.XPath.XPathNavigator> klasy z powodu różnic między modelu danych XPath i Document Object Model (DOM).  
+### <a name="unsupported-xmlwriter-methods"></a>Nieobsługiwane metody XmlWriter  
+ Nie wszystkie metody służące do zapisywania informacji w dokumencie XML przy użyciu <xref:System.Xml.XmlWriter> klasy są obsługiwane <xref:System.Xml.XPath.XPathNavigator> przez klasę z powodu różnic między modelem danych XPath a Document Object Model (dom).  
   
- W poniższej tabeli opisano <xref:System.Xml.XmlWriter> nie są obsługiwane przez metody klasy <xref:System.Xml.XPath.XPathNavigator> klasy.  
+ W poniższej tabeli opisano <xref:System.Xml.XmlWriter> metody klasy, które nie są <xref:System.Xml.XPath.XPathNavigator> obsługiwane przez klasę.  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|<xref:System.Xml.XmlWriter.WriteEntityRef%2A>|Zgłasza <xref:System.NotSupportedException> wyjątku.|  
-|<xref:System.Xml.XmlWriter.WriteDocType%2A>|Ignorowane na poziomie głównym i zgłasza <xref:System.NotSupportedException> wyjątek, jeśli wywołano na dowolnym poziomie, w dokumencie XML.|  
-|<xref:System.Xml.XmlWriter.WriteCData%2A>|Traktowane jako wywołanie <xref:System.Xml.XmlWriter.WriteString%2A> metodę równoważne znak lub znaki.|  
-|<xref:System.Xml.XmlWriter.WriteCharEntity%2A>|Traktowane jako wywołanie <xref:System.Xml.XmlWriter.WriteString%2A> metodę równoważne znak lub znaki.|  
-|<xref:System.Xml.XmlWriter.WriteSurrogateCharEntity%2A>|Traktowane jako wywołanie <xref:System.Xml.XmlWriter.WriteString%2A> metodę równoważne znak lub znaki.|  
+|<xref:System.Xml.XmlWriter.WriteEntityRef%2A>|<xref:System.NotSupportedException> Zgłasza wyjątek.|  
+|<xref:System.Xml.XmlWriter.WriteDocType%2A>|Ignorowany na poziomie głównym i zgłasza wyjątek <xref:System.NotSupportedException> , jeśli jest wywoływana na dowolnym innym poziomie dokumentu XML.|  
+|<xref:System.Xml.XmlWriter.WriteCData%2A>|Traktowane jako wywołanie <xref:System.Xml.XmlWriter.WriteString%2A> metody dla równoważnego znaku lub znaków.|  
+|<xref:System.Xml.XmlWriter.WriteCharEntity%2A>|Traktowane jako wywołanie <xref:System.Xml.XmlWriter.WriteString%2A> metody dla równoważnego znaku lub znaków.|  
+|<xref:System.Xml.XmlWriter.WriteSurrogateCharEntity%2A>|Traktowane jako wywołanie <xref:System.Xml.XmlWriter.WriteString%2A> metody dla równoważnego znaku lub znaków.|  
   
- Aby uzyskać więcej informacji na temat <xref:System.Xml.XmlWriter> klasy, zobacz <xref:System.Xml.XmlWriter> klasy dokumentację referencyjną.  
+ Więcej informacji o <xref:System.Xml.XmlWriter> klasie można znaleźć w <xref:System.Xml.XmlWriter> dokumentacji dotyczącej klas.  
   
 ### <a name="multiple-xmlwriter-objects"></a>Wiele obiektów XmlWriter  
- Użytkownik może mieć wielu <xref:System.Xml.XPath.XPathNavigator> obiekty, które wskazuje do różnych części pliku XML dokumentu z co najmniej jeden open <xref:System.Xml.XmlWriter> obiektów. Wiele <xref:System.Xml.XmlWriter> obiekty są dozwolone i obsługiwane w scenariuszach apartamentem.  
+ Istnieje możliwość, że wiele <xref:System.Xml.XPath.XPathNavigator> obiektów wskazuje różne części dokumentu XML z co najmniej jednym otwartym <xref:System.Xml.XmlWriter> obiektem. Wiele <xref:System.Xml.XmlWriter> obiektów jest dozwolonych i obsługiwanych w scenariuszach wielowątkowych.  
   
- Poniżej przedstawiono ważne uwagi, które należy wziąć pod uwagę przy użyciu wielu <xref:System.Xml.XmlWriter> obiektów.  
+ Poniżej znajdują się ważne uwagi, które należy wziąć <xref:System.Xml.XmlWriter> pod uwagę podczas korzystania z wielu obiektów.  
   
-- Fragmenty XML, napisane przez <xref:System.Xml.XmlWriter> obiekty są dodawane do pliku XML dokumentu, gdy <xref:System.Xml.XmlWriter.Close%2A> metoda każdego <xref:System.Xml.XmlWriter> nosi nazwę obiektu. Do tego momentu <xref:System.Xml.XmlWriter> obiekt zapisuje odłączonego fragmentu. Jeśli operacja jest wykonywana na dokumencie XML, wszystkie fragmenty są zapisywane przez <xref:System.Xml.XmlWriter> obiekt przed <xref:System.Xml.XmlWriter.Close%2A> została wywołana, nie ulegają zmianom.  
+- Fragmenty XML zapisywane przez <xref:System.Xml.XmlWriter> obiekty są dodawane do dokumentu XML, <xref:System.Xml.XmlWriter.Close%2A> gdy wywoływana jest metoda każdego <xref:System.Xml.XmlWriter> obiektu. Do tego <xref:System.Xml.XmlWriter> momentu obiekt zapisuje odłączony fragment. Jeśli operacja jest wykonywana na dokumencie XML, nie ma to wpływ na wszystkie fragmenty, <xref:System.Xml.XmlWriter> które są zapisywane przez <xref:System.Xml.XmlWriter.Close%2A> obiekt przed wywołaniem.  
   
-- W przypadku otwartą <xref:System.Xml.XmlWriter> obiektu w określonej poddrzewo XML i że poddrzewo zostanie usunięty, <xref:System.Xml.XmlWriter> obiekt nadal może dodawać do poddrzewa. Poddrzewo staje się po prostu usuniętych fragmentu.  
+- Jeśli istnieje otwarty <xref:System.Xml.XmlWriter> obiekt w określonym poddrzewie XML i że poddrzewo zostanie usunięte <xref:System.Xml.XmlWriter> , obiekt może nadal dodawać do poddrzewa. Poddrzewo po prostu zostaje usuniętym fragmentem.  
   
-- Jeśli wiele <xref:System.Xml.XmlWriter> obiektów są otwarte w tym samym punkcie w dokumencie XML, są dodawane do dokumentu XML w kolejności, w którym <xref:System.Xml.XmlWriter> obiekty zostały zamknięte, nie w kolejności, w jakiej zostały otwarte.  
+- Jeśli wiele <xref:System.Xml.XmlWriter> obiektów jest otwartych w tym samym punkcie dokumentu XML, są one dodawane do dokumentu XML w kolejności, w <xref:System.Xml.XmlWriter> której obiekty są zamknięte, a nie w kolejności, w jakiej zostały otwarte.  
   
- Poniższy przykład tworzy <xref:System.Xml.XmlDocument> obiekt, tworzy <xref:System.Xml.XPath.XPathNavigator> obiektu, a następnie używa <xref:System.Xml.XmlWriter> obiektu zwróconego przez <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> metodą tworzenia struktury pierwszej książki w `books.xml` pliku. Przykład następnie zapisuje ją jako `book.xml` pliku.  
+ Poniższy przykład <xref:System.Xml.XmlDocument> tworzy obiekt, <xref:System.Xml.XmlWriter> <xref:System.Xml.XPath.XPathNavigator> tworzy obiekt, a następnie używa obiektu zwróconego przez <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> `books.xml` metodę w celu utworzenia struktury pierwszej książki w pliku. Przykład zapisuje go jako `book.xml` plik.  
   
 ```vb  
 Dim document As XmlDocument = New XmlDocument()  
@@ -328,7 +328,7 @@ document.Save("book.xml");
 ```  
   
 ## <a name="saving-an-xml-document"></a>Zapisywanie dokumentu XML  
- Zapisywanie zmian <xref:System.Xml.XmlDocument> obiektu jako wynik metod opisanych w tym temacie odbywa się przy użyciu metody <xref:System.Xml.XmlDocument> klasy. Aby uzyskać więcej informacji na temat zapisywania zmian <xref:System.Xml.XmlDocument> obiektu, zobacz [zapisywania i zapisywania dokumentu](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
+ Zapisywanie zmian wprowadzonych <xref:System.Xml.XmlDocument> w obiekcie w wyniku metod opisanych w tym temacie jest wykonywane przy użyciu metod <xref:System.Xml.XmlDocument> klasy. Aby uzyskać więcej informacji na temat zapisywania zmian wprowadzonych w <xref:System.Xml.XmlDocument> obiekcie, zobacz [Zapisywanie i pisanie dokumentu](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

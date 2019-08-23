@@ -11,36 +11,36 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-ms.openlocfilehash: 7e68bb2f6a3bff0a0a5ff7f8011c2642c141eaf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebeca5f933eac4da2bf3d4f300866fd2ff52b32a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593448"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917673"
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Instrukcje: zmienianie stylów obramowania i linii siatki w kontrolce DataGridView formularzy systemu Windows
-Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki, można dostosować wygląd obramowania formantu i linie siatki, aby ulepszyć środowisko użytkownika. Możesz zmodyfikować kolor linii siatki i styl obramowania kontrolki, oprócz style obramowania komórek w kontrolce. Można także zastosować inną komórkę style obramowania dla zwykłych komórek, komórki nagłówka wiersza i komórki nagłówka kolumny.  
+Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki można dostosować wygląd obramowania i linii siatki kontrolki w celu ulepszenia środowiska użytkownika. Oprócz stylów obramowania komórek w kontrolce, można zmodyfikować kolor linii siatki i styl obramowania kontrolki. Można również zastosować różne style obramowania komórek dla zwykłych komórek, komórek nagłówka wiersza i komórek nagłówka kolumny.  
   
 > [!NOTE]
->  Kolor linii siatki jest używany tylko z <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>, <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>, i <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> wartości <xref:System.Windows.Forms.DataGridViewCellBorderStyle> wyliczenie i <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> wartość <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> wyliczenia. Wartości te wyliczenia Użyj kolorów, określona przez system operacyjny. Ponadto, jeżeli style wizualne są włączone w systemach Windows i z rodziny Windows Server 2003 za pośrednictwem <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> metody <xref:System.Windows.Forms.DataGridView.GridColor%2A> nie jest używana wartość właściwości.  
+> Kolor linii siatki jest używany tylko z <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single> <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>wartościami <xref:System.Windows.Forms.DataGridViewCellBorderStyle> wyliczenia i <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> wartością <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> wyliczenia. Pozostałe wartości tych wyliczeń używają kolorów określonych przez system operacyjny. Ponadto, gdy style wizualizacji są włączone w systemie Windows XP i w rodzinie systemu Windows Server <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 2003 za pomocą <xref:System.Windows.Forms.DataGridView.GridColor%2A> metody, wartość właściwości nie jest używana.  
   
-### <a name="to-change-the-gridline-color-programmatically"></a>Aby programowo zmienić kolor linii siatki  
+### <a name="to-change-the-gridline-color-programmatically"></a>Aby zmienić kolor linii siatki programowo  
   
-- Ustaw <xref:System.Windows.Forms.DataGridView.GridColor%2A> właściwości.  
+- <xref:System.Windows.Forms.DataGridView.GridColor%2A> Ustaw właściwość.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#031)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#031)]  
   
-### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>Aby zmienić styl obramowania formantu DataGridView całego programowe  
+### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>Aby zmienić styl obramowania całego formantu DataGridView  
   
-- Ustaw <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> jedną z właściwości <xref:System.Windows.Forms.BorderStyle> wartości wyliczenia.  
+- Ustaw właściwość na jedną z wartości <xref:System.Windows.Forms.BorderStyle> wyliczenia. <xref:System.Windows.Forms.DataGridView.BorderStyle%2A>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#032](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#032)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#032](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#032)]  
   
-### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>Aby programowo zmienić styl komórek DataGridView  
+### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>Aby programowo zmienić style obramowania dla komórek DataGridView  
   
-- Ustaw <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>, i <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> właściwości.  
+- Ustaw właściwości <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>i <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> .  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#033)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#033)]  
@@ -52,9 +52,9 @@ Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki, można dostosowa�
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1`.  
+- Kontrolka o `dataGridView1`nazwie. <xref:System.Windows.Forms.DataGridView>  
   
-- Odwołuje się do <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, i <xref:System.Drawing?displayProperty=nameWithType> zestawów.  
+- Odwołania do <xref:System?displayProperty=nameWithType>zestawów, <xref:System.Windows.Forms?displayProperty=nameWithType>i. <xref:System.Drawing?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Zobacz także
 

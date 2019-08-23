@@ -11,105 +11,105 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: 71b71dc992497fda25a5e9453affc7bea98141d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 106da550fc6e6c50bc40e103e1f855059a9ffa9c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651555"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950095"
 ---
 # <a name="varieties-of-custom-controls"></a>Różne typy formantów niestandardowych
-Za pomocą programu .NET Framework można opracowanie i wdrożenie nowych kontrolek. Możesz rozszerzyć funkcjonalność formantu użytkownika z dobrze znanych również jako istniejących kontrolek poprzez dziedziczenie. Można także napisać niestandardowe formanty, które narysowania swoje własne.  
+Za pomocą .NET Framework można opracowywać i implementować nowe kontrolki. Można zwiększyć funkcjonalność znanego formantu użytkownika, a także istniejące kontrolki przez dziedziczenie. Możesz również pisać niestandardowe kontrolki, które wykonują własne malowanie.  
   
- Przy wyborze rozwiązania, który rodzaj kontrolki, aby utworzyć może być mylące. W tym temacie wyróżniono różnice spośród różnych rodzajów formantów, z którego może dziedziczyć i udostępnia informacje o tym, jak wybrać określonego rodzaju formantu w projekcie.  
+ Wybór rodzaju kontrolki do utworzenia może być mylący. W tym temacie przedstawiono różnice między różnymi rodzajami formantów, z których można dziedziczyć, oraz informacje na temat sposobu wybierania określonego rodzaju kontroli dla projektu.  
   
 > [!NOTE]
->  Aby dowiedzieć się, jak tworzenie kontrolki do użycia w formularzach sieci Web, zobacz [tworzenia formanty serwera ASP.NET niestandardowe](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
+> Aby uzyskać informacje na temat tworzenia kontrolki do użycia w formularzach sieci Web, zobacz [Tworzenie niestandardowych kontrolek serwera ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
   
-## <a name="base-control-class"></a>Klasy bazowej  
- <xref:System.Windows.Forms.Control> Klasa jest klasą bazową dla formantów Windows Forms. Zapewnia infrastruktury wymaganej do wizualizacji do wyświetlenia w aplikacjach Windows Forms.  
+## <a name="base-control-class"></a>Podstawowa klasa kontroli  
+ <xref:System.Windows.Forms.Control> Klasa jest klasą bazową dla formantów Windows Forms. Zapewnia infrastrukturę wymaganą do wyświetlania wizualizacji w aplikacjach Windows Forms.  
   
- <xref:System.Windows.Forms.Control> Klasa wykonuje następujące zadania w celu zapewnienia wizualizacji w aplikacjach Windows Forms do wyświetlenia:  
+ <xref:System.Windows.Forms.Control> Klasa wykonuje następujące zadania w celu zapewnienia wyświetlania wizualizacji w aplikacjach Windows Forms:  
   
-- Przedstawia uchwyt okna.  
+- Uwidacznia uchwyt okna.  
   
-- Zarządza routing komunikatów.  
+- Zarządza routingiem komunikatów.  
   
-- Udostępnia myszy i zdarzeń klawiatury oraz wiele innych zdarzeń interfejsu użytkownika.  
+- Udostępnia zdarzenia myszy i klawiatury oraz wiele innych zdarzeń interfejsu użytkownika.  
   
-- Oferuje funkcje zaawansowane układu.  
+- Udostępnia zaawansowane funkcje układu.  
   
-- Zawiera wiele właściwości specyficzne dla wizualizacji do wyświetlenia, takie jak <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, i <xref:System.Windows.Forms.Control.Width%2A>.  
+- Zawiera wiele właściwości specyficznych dla wyświetlania wizualizacji, <xref:System.Windows.Forms.Control.ForeColor%2A>takich <xref:System.Windows.Forms.Control.BackColor%2A>jak <xref:System.Windows.Forms.Control.Height%2A>,, <xref:System.Windows.Forms.Control.Width%2A>, i.  
   
-- Zapewnia bezpieczeństwo i obsługa wątkowości niezbędne dla formantu Windows Forms jako formant ActiveX Microsoft®.  
+- Zapewnia obsługę funkcji zabezpieczeń i wątkowości, która jest niezbędna do działania formantu Windows Forms jako formantu® ActiveX programu Microsoft®.  
   
- Ponieważ tak wiele infrastruktury jest dostarczany przez klasę bazową, jest stosunkowo łatwa do opracowywania własnych kontrolek Windows Forms.  
+ Ze względu na to, że większość infrastruktury jest dostarczana przez klasę bazową, jest stosunkowo łatwa do opracowania własnych formantów Windows Forms.  
   
-## <a name="kinds-of-controls"></a>Rodzaje formantów  
- Formularze Windows obsługuje trzy typy kontrolek użytkownika: *złożonego*, *rozszerzonej*, i *niestandardowe*. W poniższych sekcjach opisano każdy rodzaj kontrolki i podać zalecenia dotyczące wybierania typu do użycia w swoich projektach.  
+## <a name="kinds-of-controls"></a>Rodzaje kontrolek  
+ Windows Forms obsługuje trzy rodzaje kontrolek zdefiniowanych przez użytkownika: *złożone*, *rozszerzone*i *niestandardowe*. W poniższych sekcjach opisano każdy rodzaj kontroli i zawarto zalecenia dotyczące wybierania rodzaju do użycia w projektach.  
   
 ### <a name="composite-controls"></a>Formanty złożone  
- Kontrolki złożonej to zbiór kontrolek Windows Forms w wspólnym kontenerem. Ten rodzaj kontroli jest czasami nazywane *kontrolki użytkownika*. Zawartych w nim formantów są nazywane *formanty składników*.  
+ Formant złożony jest kolekcją formantów Windows Forms hermetyzowanych w wspólnym kontenerze. Tego rodzaju kontrolka jest czasami nazywana *kontrolką użytkownika*. Zawarte kontrolki są nazywane *kontrolkami elementów*.  
   
- Kontrolki złożonej zawiera wszystkie funkcje nieprzerwaną pracę związany z każdą z zawartych w nim formantów Windows Forms i umożliwia selektywne udostępnianie i wiązania ich właściwości. Kontrolki złożonej także dużym stopniem domyślnie za pomocą klawiatury funkcji z nie dodatkowe postanowiło ze strony użytkownika.  
+ Kontrolka złożona zawiera wszystkie funkcje, które są skojarzone z poszczególnymi kontrolkami Windows Forms, i umożliwia selektywne Uwidacznianie i wiązanie ich właściwości. Złożona kontrolka zawiera również dużą liczbę domyślnych funkcji obsługi klawiatury bez dodatkowych nakładów programistycznych.  
   
- Na przykład kontrolek złożonych można przystosować do wyświetlania danych adres klienta z bazy danych. Ten formant może obejmować <xref:System.Windows.Forms.DataGridView> sterowania do wyświetlania pól bazy danych <xref:System.Windows.Forms.BindingSource> do obsługi powiązania ze źródłem danych i <xref:System.Windows.Forms.BindingNavigator> kontrolki przechodzenia między rekordami. Można selektywnie ujawnić właściwości powiązań danych i może spakować i ponownie użyć kontrolki całego od aplikacji. Na przykład tego typu złożonego formantu zobacz [jak: Stosowanie atrybutów w kontrolkach formularzy Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md).  
+ Na przykład można skompilować formant złożony, aby wyświetlić dane adresowe klienta z bazy danych. Ta kontrolka może zawierać <xref:System.Windows.Forms.DataGridView> kontrolkę wyświetlającą pola bazy danych <xref:System.Windows.Forms.BindingSource> , w celu obsługi powiązania ze źródłem <xref:System.Windows.Forms.BindingNavigator> danych, a także kontrolę nad rekordami. Można wybiórczo uwidocznić właściwości powiązania danych i można spakować i ponownie użyć całej kontrolki z aplikacji do aplikacji. Aby zapoznać się z przykładem tego rodzaju formantu złożonego [, zobacz How to: Zastosuj atrybuty w kontrolkach](how-to-apply-attributes-in-windows-forms-controls.md)Windows Forms.  
   
- Tworzenie kontrolki złożonej, pochodzi od <xref:System.Windows.Forms.UserControl> klasy. <xref:System.Windows.Forms.UserControl> Klasy bazowej zapewnia routing klawiatury dla podrzędnych kontrolki i umożliwia formanty podrzędne do działania w formie grupy. Aby uzyskać więcej informacji, zobacz [opracowywanie złożonej kontrolki formularzy Windows](developing-a-composite-windows-forms-control.md).  
+ W celu utworzenia formantu złożonego pochodnego od <xref:System.Windows.Forms.UserControl> klasy. Klasa <xref:System.Windows.Forms.UserControl> bazowa zapewnia Routing klawiatury dla formantów podrzędnych i umożliwia kontrolom podrzędnym działanie jako grupę. Aby uzyskać więcej informacji, zobacz [Tworzenie złożonego formantu Windows Forms](developing-a-composite-windows-forms-control.md).  
   
  **Zalecenie**  
   
- Dziedzicz <xref:System.Windows.Forms.UserControl> klasy, jeśli:  
+ Dziedzicz z klasy <xref:System.Windows.Forms.UserControl> , jeśli:  
   
-- Chcesz połączyć funkcje kilka kontrolek Windows Forms w pojedynczą jednostkę wielokrotnego użytku.  
+- Chcesz połączyć funkcje kilku Windows Forms formantów w jedną jednostkę wielokrotnego użytku.  
   
 ### <a name="extended-controls"></a>Formanty rozszerzone  
- Odziedziczoną kontrolkę może pochodzić z dowolnego istniejącego formantu Windows Forms. W tym podejściu zachowania wszystkich funkcji nieprzerwaną pracę formantu Windows Forms i następnie rozszerzyć tę funkcję, dodając niestandardowe właściwości, metody lub innych funkcji. Po wybraniu tej opcji można zastąpić logikę malowania kontroli podstawowej i następnie rozszerzyć interfejs użytkownika, zmieniając jego wygląd.  
+ Można utworzyć formant dziedziczony z dowolnej istniejącej kontrolki Windows Forms. Korzystając z tej metody, można zachować wszystkie nieodłączne funkcje formantu Windows Forms, a następnie zwiększyć tę funkcjonalność przez dodanie niestandardowych właściwości, metod lub innych funkcji. Za pomocą tej opcji można przesłonić logikę malowania formantu podstawowego, a następnie zwiększyć jej wygląd.  
   
- Na przykład można utworzyć formant pochodzące z <xref:System.Windows.Forms.Button> formant, który śledzi, ile razy użytkownik kliknął go.  
+ Na przykład można utworzyć kontrolkę pochodzącą od <xref:System.Windows.Forms.Button> kontrolki, która śledzi liczbę razy kliknięcia przez użytkownika.  
   
- W niektórych kontrolek, można również dodać niestandardowe wygląd graficznego interfejsu użytkownika kontrolki przez zastąpienie <xref:System.Windows.Forms.Control.OnPaint%2A> metody klasy bazowej. Dla rozszerzonego przycisku, umożliwiający śledzenie kliknięć, możesz zastąpić <xref:System.Windows.Forms.Control.OnPaint%2A> metodę, aby wywoływać implementację podstawową <xref:System.Windows.Forms.Control.OnPaint%2A>, a następnie narysuj kliknij liczbę w jeden z rogów <xref:System.Windows.Forms.Button> obszaru klienckiego kontrolki.  
+ W niektórych kontrolkach można również dodać niestandardowy wygląd do graficznego interfejsu użytkownika formantu przez zastąpienie <xref:System.Windows.Forms.Control.OnPaint%2A> metody klasy bazowej. W przypadku przycisku rozszerzonego, który śledzi kliknięcia, można zastąpić <xref:System.Windows.Forms.Control.OnPaint%2A> metodę, aby wywołać podstawową <xref:System.Windows.Forms.Control.OnPaint%2A>implementację, a następnie narysować liczbę kliknięć <xref:System.Windows.Forms.Button> w jednym rogu obszaru klienckiego kontrolki.  
   
  **Zalecenie**  
   
- Dziedziczenie z kontrolki formularzy Windows Forms, jeśli:  
+ Dziedzicz z kontrolki Windows Forms, jeśli:  
   
-- Większość funkcji, których potrzebujesz już jest identyczna z istniejącej kontrolki Windows Forms.  
+- Większość potrzebnych funkcji jest już identyczna z istniejącą kontrolką Windows Forms.  
   
-- Nie ma potrzeby niestandardowych graficznego interfejsu użytkownika lub projektowania nowy graficzny interfejs użytkownika do istniejącego formantu.  
+- Nie potrzebujesz niestandardowego graficznego interfejsu użytkownika lub chcesz zaprojektować nowy graficzny interfejs użytkownika dla istniejącej kontrolki.  
   
 ### <a name="custom-controls"></a>Formanty niestandardowe  
- Innym sposobem, aby utworzyć formant jest utworzenie jednego z początku przez dziedziczenie z <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control> Klasy zawiera wszystkie podstawowe funkcje wymagane przez formanty, mysz i klawiatura, obsługa zdarzeń, w tym, ale funkcje specyficzne dla formantu lub interfejsu graficznego.  
+ Innym sposobem, aby utworzyć formant, jest utworzenie go znacznie od początku przez dziedziczenie z <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control> Klasa zawiera wszystkie podstawowe funkcje wymagane przez kontrolki, w tym zdarzenia dotyczące myszy i klawiatury, ale nie konkretne funkcje kontroli ani interfejs graficzny.  
   
- Tworzenie formantu przez dziedziczenie z <xref:System.Windows.Forms.Control> klasy wymaga znacznie więcej myślenia i nakładu pracy niż dziedziczenie z <xref:System.Windows.Forms.UserControl> lub istniejącej kontrolki Windows Forms. Ponieważ implementację stopniem pozostanie dla Ciebie, formant może mieć większą elastyczność niż formantu złożonego lub rozszerzone i dostosować kontrolki do własnych potrzeb dokładne.  
+ Tworzenie kontrolki przez dziedziczenie z <xref:System.Windows.Forms.Control> klasy wymaga znacznie większej liczby myśli i wysiłku niż dziedziczenie z <xref:System.Windows.Forms.UserControl> lub istniejącej kontrolki Windows Forms. Ze względu na to, że jest to świetna okazja do wdrożenia, formant może mieć większą elastyczność niż w przypadku kontroli złożonej lub rozszerzonej i można dostosować swój formant do swoich potrzeb.  
   
- Aby zaimplementować formant niestandardowy, należy napisać kod dla <xref:System.Windows.Forms.Control.OnPaint%2A> zdarzenia kontroli, jak również żadnego kodu właściwe dla funkcji, potrzebujesz. Możesz również zastąpić <xref:System.Windows.Forms.Control.WndProc%2A> metody i obsługują komunikaty systemu windows bezpośrednio. Jest to najbardziej wydajnymi procesorami sposób, aby utworzyć kontrolkę, ale aby efektywnie korzystać z tej techniki, należy zapoznać się z Microsoft Win32 API®.  
+ Aby zaimplementować kontrolkę niestandardową, należy napisać kod dla <xref:System.Windows.Forms.Control.OnPaint%2A> zdarzenia kontrolki, a także dowolny kod specyficzny dla funkcji. Możesz również zastąpić <xref:System.Windows.Forms.Control.WndProc%2A> metodę i bezpośrednio obsłużyć komunikaty systemu Windows. Jest to najbardziej wydajny sposób tworzenia kontrolek, ale aby efektywnie korzystać z tej techniki, należy zapoznać się z interfejsem API programu Microsoft Win32®.  
   
- Przykład formantu niestandardowego jest formantem zegara powielającą wygląd i zachowanie zegar analogowy. Malowanie niestandardowych jest wywoływane w celu spowodować ręce zegar przenoszone w odpowiedzi na <xref:System.Windows.Forms.Timer.Tick> zdarzenia z wewnętrznego <xref:System.Windows.Forms.Timer> składnika. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie kontrolki formularzy Windows proste](how-to-develop-a-simple-windows-forms-control.md).  
+ Przykładem kontrolki niestandardowej jest kontrolka zegara, która duplikuje wygląd i zachowanie zegara analogowego. Nastąpi Odrysowanie niestandardowe, aby spowodować, że zegar zostanie przesunięty <xref:System.Windows.Forms.Timer.Tick> w odpowiedzi na zdarzenia <xref:System.Windows.Forms.Timer> z wewnętrznego składnika. Aby uzyskać więcej informacji, zobacz [jak: Opracowywanie prostej kontrolki](how-to-develop-a-simple-windows-forms-control.md)Windows Forms.  
   
  **Zalecenie**  
   
- Dziedzicz <xref:System.Windows.Forms.Control> klasy, jeśli:  
+ Dziedzicz z klasy <xref:System.Windows.Forms.Control> , jeśli:  
   
-- Chcesz zapewnić niestandardowy graficzną reprezentację kontrolki.  
+- Chcesz zapewnić niestandardową reprezentację formantu.  
   
-- Musisz zaimplementować niestandardowy funkcji, która nie jest dostępna za pośrednictwem standardowych kontrolek.  
+- Musisz zaimplementować niestandardowe funkcje, które nie są dostępne za poorednictwem formantów standardowych.  
   
 ### <a name="activex-controls"></a>Kontrolki ActiveX  
- Mimo że infrastruktura formularzy Windows została zoptymalizowana do kontrolek Windows Forms hosta, ale nadal używać kontrolki ActiveX. Są obsługiwane dla tego zadania w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie kontrolek ActiveX do formularzy Windows Forms](how-to-add-activex-controls-to-windows-forms.md).  
+ Mimo że Windows Forms infrastruktura została zoptymalizowana pod kątem hostowania Windows Forms formantów, nadal można używać kontrolek ActiveX. To zadanie jest obsługiwane w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [jak: Dodaj kontrolki ActiveX do](how-to-add-activex-controls-to-windows-forms.md)Windows Forms.  
   
-### <a name="windowless-controls"></a>Od kontrolek bez okien  
- Obsługa technologii ActiveX the Microsoft Visual Basic® 6.0and *niepowiązanej z oknami* kontrolki. Od kontrolek bez okien nie są obsługiwane w formularzach Windows Forms.  
+### <a name="windowless-controls"></a>Kontrolki bez okien  
+ Technologie Microsoft Visual Basic® 6.0 i ActiveX obsługują kontrolki *bez okien* . Kontrolki bez okien nie są obsługiwane w Windows Forms.  
   
-## <a name="custom-design-experience"></a>W obsłudze środowisku projektowania niestandardowego  
- Jeśli musisz zaimplementować niestandardowy środowiska czasu projektowania można tworzyć własne projektanta. W przypadku złożonych kontrolek pochodną klasę niestandardową projektanta z <xref:System.Windows.Forms.Design.ParentControlDesigner> lub <xref:System.Windows.Forms.Design.DocumentDesigner> klasy. W przypadku rozszerzonego i niestandardowych kontrolek pochodzić projektanta klasę niestandardową z <xref:System.Windows.Forms.Design.ControlDesigner> klasy.  
+## <a name="custom-design-experience"></a>Niestandardowe środowisko projektowe  
+ Jeśli zachodzi potrzeba zaimplementowania niestandardowego środowiska czasu projektowania, można utworzyć własnego projektanta. W przypadku kontrolek złożonych należy utworzyć niestandardową klasę <xref:System.Windows.Forms.Design.ParentControlDesigner> projektanta z <xref:System.Windows.Forms.Design.DocumentDesigner> lub klas. W przypadku kontrolek rozszerzonych i niestandardowych należy utworzyć niestandardową <xref:System.Windows.Forms.Design.ControlDesigner> klasę projektanta z klasy.  
   
- Użyj <xref:System.ComponentModel.DesignerAttribute> do powiązania kontrolki z projektanta. Aby uzyskać więcej informacji, zobacz [rozszerzenie obsługi w czasie projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) i [jak: Tworzenie formantu formularzy Windows wykorzystującego funkcje czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).  
+ Użyj, <xref:System.ComponentModel.DesignerAttribute> aby skojarzyć swój formant z projektantem. Aby uzyskać więcej informacji, zobacz [rozszerzanie obsługi czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) i [instrukcje: Utwórz formant Windows Forms, który korzysta z funkcji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))czasu projektowania.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)
-- [Instrukcje: Tworzenie kontrolki formularzy Windows prosty](how-to-develop-a-simple-windows-forms-control.md)
+- [Instrukcje: Opracowywanie prostej kontrolki Windows Forms](how-to-develop-a-simple-windows-forms-control.md)
 - [Opracowywanie złożonej kontrolki formularzy Windows Forms](developing-a-composite-windows-forms-control.md)
-- [Rozszerzenie obsługi w czasie projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [Instrukcje: Tworzenie formantu formularzy Windows wykorzystującego funkcje czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [Rozszerzanie obsługi czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [Instrukcje: Utwórz formant Windows Forms, który korzysta z funkcji czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

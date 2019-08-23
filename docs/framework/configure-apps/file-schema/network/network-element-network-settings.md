@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 40d89f7bd7a1f4a38a1c4030a86405e09c497899
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ee60b990bc749dbb9c5d0e7426c57e9392ddf9d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659314"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920975"
 ---
 # <a name="network-element-network-settings"></a>\<Network >, element (Ustawienia sieci)
 Konfiguruje opcje sieci dla serwera zewnętrznego protokołu SMTP (Simple Mail Transport Protocol).  
@@ -70,7 +70,7 @@ Konfiguruje opcje sieci dla serwera zewnętrznego protokołu SMTP (Simple Mail T
  Możesz również użyć uwierzytelniania podstawowego (nazwy użytkownika i hasła), aby uwierzytelnić się na serwerze SMTP. Aby użyć tej opcji, należy określić prawidłową nazwę użytkownika i hasło dla określonego serwera SMTP.  
   
 > [!NOTE]
->  Uwierzytelnianie podstawowe wysyła `userName` wartości i `password` do nieszyfrowanego serwera. Każdy może monitorować ruch sieciowy i używać ich do łączenia się z serwerem. Należy rozważyć użycie bezpieczniejszego mechanizmu uwierzytelniania, takiego jak Kerberos lub NT LAN Manager (NTLM). Jeśli `defaultCredentials` jest `true`, zostanie użyta wartość Kerberos lub NTLM, jeśli serwer obsługuje te protokoły.  
+> Uwierzytelnianie podstawowe wysyła `userName` wartości i `password` do nieszyfrowanego serwera. Każdy może monitorować ruch sieciowy i używać ich do łączenia się z serwerem. Należy rozważyć użycie bezpieczniejszego mechanizmu uwierzytelniania, takiego jak Kerberos lub NT LAN Manager (NTLM). Jeśli `defaultCredentials` jest `true`, zostanie użyta wartość Kerberos lub NTLM, jeśli serwer obsługuje te protokoły.  
   
  Opcje uwierzytelniania podstawowego i domyślne poświadczenia sieciowe wzajemnie się wykluczają; Jeśli ustawisz `defaultCredentials` `true` i określisz nazwę użytkownika i hasło, zostanie użyte domyślne poświadczenia sieci, a podstawowe dane uwierzytelniania zostaną zignorowane.  
   

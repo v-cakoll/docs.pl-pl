@@ -9,92 +9,92 @@ helpviewer_keywords:
 - user controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-ms.openlocfilehash: 641a6c1c99169c6836c33b3e84b2ae02aba298d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11c3d9d6e7faa4741365316339d38f9fda69d059
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972240"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965709"
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>Opracowywanie formantów formularzy systemu Windows w czasie projektowania
-Dla autorów kontroli programu .NET Framework zapewnia wiele technologii do tworzenia kontrolki. Autorzy nie są już ograniczony do projektowania formanty złożone, które działają jako kolekcję istniejących kontrolek. Poprzez dziedziczenie można utworzyć własne kontrolki z istniejących kontrolek złożonych lub istniejących kontrolek Windows Forms. Istnieje również możliwość projektowania własnych kontrolek, które implementują niestandardowe malowania. Te opcje umożliwiają dużą elastyczność w projekcie i funkcjonalność interfejsu wizualnego. Aby móc korzystać z tych funkcji, należy zapoznać się z koncepcjami opartej na obiektach.  
+W przypadku autorów kontroli .NET Framework zapewnia mnóstwo technologii tworzenia kontroli. Autorzy nie są już ograniczeni do projektowania kontrolek złożonych, które działają jako kolekcja istniejących kontrolek. Za pomocą dziedziczenia można tworzyć własne kontrolki z istniejących wcześniej kontrolek złożonych lub wcześniej istniejących kontrolek Windows Forms. Możesz również projektować własne kontrolki implementujące niestandardowe malowanie. Te opcje umożliwiają znaczną elastyczność projektowania i funkcjonalności interfejsu wizualizacji. Aby skorzystać z tych funkcji, należy zapoznać się z pojęciami programistycznymi opartymi na obiektach.  
   
 > [!NOTE]
->  Nie jest konieczne dogłębną wiedzę na temat dziedziczenia, ale może okazać się przydatne do odwoływania się do [podstawowe informacje o dziedziczeniu (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+> Nie jest konieczne dokładne zrozumienie dziedziczenia, ale może się okazać, że warto odnieść się do podstawowych informacji dotyczących [dziedziczenia (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- Jeśli chcesz utworzyć niestandardowe formanty do użycia w formularzach sieci Web, zobacz artykuł [tworzenie niestandardowe formanty serwera ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
+ Jeśli chcesz utworzyć niestandardowe kontrolki do użycia w formularzach sieci Web, zobacz [Tworzenie niestandardowych kontrolek serwera ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przewodnik: Tworzenie formantu złożonego za pomocą Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- Przedstawia sposób tworzenia prostego formantu złożonego w języku Visual Basic.  
+ [Przewodnik: Tworzenie złożonego formantu z Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+ Pokazuje, jak utworzyć prosty formant złożony w Visual Basic.  
   
- [Przewodnik: Tworzenie formantu złożonego za pomocą Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- Przedstawia sposób tworzenia prostego formantu złożonego w języku C#.  
+ [Przewodnik: Tworzenie formantu złożonego za pomocą wizualizacjiC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ Pokazuje, jak utworzyć prosty formant złożony w C#.  
   
- [Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms za pomocą Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
- Przedstawia sposób tworzenia prostego formantu Windows Forms za pomocą dziedziczenia w języku Visual Basic.  
+ [Przewodnik: Dziedziczenie z kontrolki Windows Forms z Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ Pokazuje, jak utworzyć prostą kontrolkę Windows Forms przy użyciu dziedziczenia w programie Visual Basic.  
   
- [Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms za pomocą Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
- Przedstawia sposób tworzenia prostego formantu Windows Forms za pomocą dziedziczenia w języku C#.  
+ [Przewodnik: Dziedziczenie z kontrolki Windows Forms za pomocą wizualizacjiC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ Pokazuje, jak utworzyć prostą kontrolkę Windows Forms przy użyciu C#dziedziczenia w programie.  
   
- [Przewodnik: Wykonywania typowych zadań przy użyciu inteligentnych tagów w Windows Forms, formanty](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
- Pokazuje, jak korzystać z funkcji tagu inteligentnego kontrolek Windows Forms.  
+ [Przewodnik: Wykonywanie typowych zadań przy użyciu tagów inteligentnych w kontrolkach Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+ Pokazuje, jak używać funkcji tagów inteligentnych w kontrolkach Windows Forms.  
   
- [Przewodnik: Serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
- Ilustruje sposób używania <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> atrybutu do serializacji kolekcji.  
+ [Przewodnik: Serializacja kolekcji typów standardowych z za pomocą DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
+ Pokazuje, <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> jak używać atrybutu do serializacji kolekcji.  
   
- [Przewodnik: Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
- Pokazuje, jak można debugować zachowania formantu Windows Forms w czasie projektowania.  
+ [Przewodnik: Debugowanie niestandardowych kontrolek Windows Forms w czasie projektowania](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ Pokazuje, jak debugować zachowanie formantu Windows Forms w czasie projektowania.  
   
- [Przewodnik: Tworzenie kontrolki formularzy Windows wykorzystującego funkcje czasu projektowania w programie Visual Studio](creating-a-wf-control-design-time-features.md)  
- Pokazuje, jak ściśle zintegrowane formantu złożonego w środowisku projektowym.  
+ [Przewodnik: Tworzenie kontrolki Windows Forms, która wykorzystuje funkcje czasu projektowania programu Visual Studio](creating-a-wf-control-design-time-features.md)  
+ Pokazuje ścisłą integrację złożonego formantu ze środowiskiem projektowym.  
   
- [Instrukcje: Tworzenie kontrolek dla formularzy Windows Forms](how-to-author-controls-for-windows-forms.md)  
- Zawiera omówienie zagadnienia dotyczące implementacji formantu Windows Forms.  
+ [Instrukcje: Kontrolki autora dla Windows Forms](how-to-author-controls-for-windows-forms.md)  
+ Zawiera omówienie zagadnień związanych z implementacją kontrolki Windows Forms.  
   
- [Instrukcje: Formanty złożone autora](how-to-author-composite-controls.md)  
+ [Instrukcje: Tworzenie złożonych kontrolek](how-to-author-composite-controls.md)  
  Pokazuje, jak utworzyć formant przez dziedziczenie z kontrolki złożonej.  
   
- [Instrukcje: Dziedziczenie z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)  
- Zawiera omówienie procedury tworzenia kontrolek złożonych.  
+ [Instrukcje: Dziedzicz z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)  
+ Zawiera przegląd procedury tworzenia złożonego formantu.  
   
- [Instrukcje: Dziedzicz Windows istniejących formantów formularzy](how-to-inherit-from-existing-windows-forms-controls.md)  
- Pokazuje, jak tworzenie formantu rozszerzonego przez dziedziczenie z <xref:System.Windows.Forms.Button> kontrolować klasy.  
+ [Instrukcje: Dziedzicz z istniejących kontrolek Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)  
+ Pokazuje, jak utworzyć formant rozszerzony przez dziedziczenie z <xref:System.Windows.Forms.Button> klasy kontrolek.  
   
- [Instrukcje: Dziedziczenie z klasy formantów](how-to-inherit-from-the-control-class.md)  
- Omówienie Tworzenie formantu rozszerzonego.  
+ [Instrukcje: Dziedzicz z klasy kontrolki](how-to-inherit-from-the-control-class.md)  
+ Zawiera omówienie tworzenia rozszerzonej kontroli.  
   
- [Instrukcje: Wyrównywanie formantu z krawędziami formularzy w czasie projektowania](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
- Ilustruje sposób używania <xref:System.Windows.Forms.Control.Dock%2A> właściwość wyrównywanie formantu do krawędzi formularza zajmuje.  
+ [Instrukcje: Wyrównywanie kontrolki do krawędzi formularzy w czasie projektowania](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+ Pokazuje, w jaki sposób <xref:System.Windows.Forms.Control.Dock%2A> używać właściwości, aby wyrównać formant do krawędzi formularza, który on zajmowan.  
   
- [Instrukcje: Wyświetlanie kontroli w wybierz elementy przybornika — okno dialogowe](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- Zawiera procedury dotyczące instalowania formantu, aby była ona wyświetlana w **Dostosowywanie przybornika** okno dialogowe.  
+ [Instrukcje: Wyświetlanie kontrolki w oknie dialogowym Wybierz elementy przybornika](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+ Pokazuje procedurę instalowania kontrolki tak, aby była widoczna w oknie dialogowym **Dostosowywanie przybornika** .  
   
- [Instrukcje: Dostarczanie mapy bitowej przybornika dla formantu](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
- Ilustruje sposób używania <xref:System.Drawing.ToolboxBitmapAttribute> Aby wyświetlić ikonę obok niestandardową kontrolkę w **przybornika**.  
+ [Instrukcje: Udostępnianie mapy bitowej przybornika dla kontrolki](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
+ Pokazuje, <xref:System.Drawing.ToolboxBitmapAttribute> jak używać do wyświetlania ikony obok kontrolki niestandardowej w **przyborniku**.  
   
- [Instrukcje: Testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
- Ilustruje sposób używania **UserControl — kontener testu** się testowanie zachowania formantu złożonego.  
+ [Instrukcje: Testowanie zachowania elementu UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ Pokazuje, jak używać obiektu **UserControl Test Container** do testowania zachowania złożonego formantu.  
   
  [Błędy czasu projektowania w narzędziu Projektant dla formularzy Windows Forms](design-time-errors-in-the-windows-forms-designer.md)  
- Wyjaśnia znaczenie i użyj listy błędów projektowania, który pojawia się w programie Microsoft Visual Studio, gdy nie może załadować projektanta Windows Forms.  
+ Wyjaśnia znaczenie i użycie Lista błędów czasu projektowania, które pojawiają się w Microsoft Visual Studio w przypadku niepowodzenia załadowania projektanta Windows Forms.  
   
  [Rozwiązywanie problemów związanych z kontrolkami oraz tworzeniem składników](troubleshooting-control-and-component-authoring.md)  
  Pokazuje, jak diagnozować i rozwiązywać typowe problemy, które mogą wystąpić podczas tworzenia niestandardowego składnika lub kontrolki.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.Control?displayProperty=nameWithType>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
  <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)  
- W tym artykule omówiono sposób tworzenia Kontrolki niestandardowe za pomocą programu .NET Framework.  
+ W tym artykule omówiono sposób tworzenia własnych niestandardowych kontrolek przy użyciu .NET Framework.  
   
  [Niezależność od języka i składniki niezależne od języka](../../../standard/language-independence-and-language-independent-components.md)  
- Wprowadza wykonywalnych języka wspólnego upraszcza tworzenie i używanie składników. Ważnym aspektem uproszczenie to jest rozszerzone możliwości współdziałania między składnikami napisanymi przy użyciu różnych języków programowania. Common Language Specification (CLS) umożliwia tworzenie, narzędzia i składniki, które działają z wielu języków programowania.  
+ Wprowadza środowisko uruchomieniowe języka wspólnego, które jest przeznaczone do uproszczenia tworzenia i używania składników. Ważnym aspektem tego uproszczenia jest ulepszona współpraca między składnikami zapisanymi przy użyciu różnych języków programowania. Common Language Specification (CLS) umożliwia tworzenie narzędzi i składników, które współpracują z wieloma językami programowania.  
   
  [Przewodnik: Automatyczne zapełnianie przybornika składnikami niestandardowymi](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- Opisuje sposób włączania usługi składnika lub kontrolki, które mają być wyświetlane w **Dostosowywanie przybornika** okno dialogowe.
+ Opisuje sposób włączania wyświetlania składnika lub kontrolki w oknie dialogowym **Dostosowywanie przybornika** .

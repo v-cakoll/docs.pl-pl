@@ -24,27 +24,27 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: a8f5c6f6aba9ec4ad627fcd4d3b3caaff810ee72
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 28a06139275f63571d9528d075946d97a19c9f3c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456202"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912878"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurowanie aplikacji za pomocą plików konfiguracji
-.NET Framework, za pomocą plików konfiguracji zapewnia deweloperom i administratorom kontrolę i elastyczność nad aplikacjami sposób uruchamiania. Pliki konfiguracji to pliki XML, które można zmieniać w razie potrzeby. Administrator może kontrolować, mogą uzyskiwać dostęp do których chronionych zasobów aplikacji, których wersji zestawów aplikacja będzie używać i gdzie znajdują się zdalne aplikacje i obiekty. Deweloperzy mogą umieścić ustawienia w plikach konfiguracyjnych, eliminując konieczność rekompilacji aplikacji za każdym razem, gdy zmieni się ustawienie. W tej sekcji opisano, co może być skonfigurowane i dlaczego Konfigurowanie aplikacji mogą być przydatne.  
+.NET Framework, za pomocą plików konfiguracji, oferuje deweloperom i administratorom kontrolę i elastyczność nad sposobem uruchamiania aplikacji. Pliki konfiguracji to pliki XML, które można zmieniać w razie potrzeby. Administrator może kontrolować, do których chronionych zasobów aplikacja może uzyskać dostęp, które wersje zestawów będą używane przez aplikację, oraz miejsce, w którym znajdują się aplikacje zdalne i obiekty. Deweloperzy mogą umieszczać ustawienia w plikach konfiguracji, eliminując konieczność ponownego kompilowania aplikacji za każdym razem, gdy zmieni się ustawienie. W tej sekcji opisano, co można skonfigurować i dlaczego Konfigurowanie aplikacji może być przydatne.  
   
 > [!NOTE]
->  Kod zarządzany, można użyć klas w <xref:System.Configuration> przestrzeni nazw w celu odczytywania ustawień z plików konfiguracji, ale nie do zapisania ustawień do tych plików.  
+> Kod zarządzany może używać klas w <xref:System.Configuration> przestrzeni nazw do odczytywania ustawień z plików konfiguracji, ale nie do zapisywania ustawień w tych plikach.  
   
  W tym temacie opisano składnię plików konfiguracji i podano informacje o trzech typach plików konfiguracji: komputera, aplikacji i zabezpieczeń.  
   
 ## <a name="configuration-file-format"></a>Format pliku konfiguracji  
- Pliki konfiguracji zawierają elementy, które są logicznymi strukturami danych określającymi informacje o konfiguracji. Do oznaczania początku i końca elementu w pliku konfiguracji służą tagi. Na przykład `<runtime>` element składa się z `<runtime>` *elementy podrzędne*`</runtime>`. Pusty element może być zapisana jako `<runtime/>` lub `<runtime></runtime>`.  
+ Pliki konfiguracji zawierają elementy, które są logicznymi strukturami danych określającymi informacje o konfiguracji. Do oznaczania początku i końca elementu w pliku konfiguracji służą tagi. Na przykład `<runtime>` element składa się z `<runtime>` *elementów*`</runtime>`podrzędnych. Pusty element zostanie zapisany jako `<runtime/>` lub. `<runtime></runtime>`  
   
  Podobnie jak w przypadku wszystkich plików XML, w składni plików konfiguracji jest uwzględniana wielkość liter.  
   
- Ustawienia konfiguracji są określane przy użyciu wstępnie zdefiniowanych atrybutów, które są parami nazwa/wartość umieszczonymi wewnątrz tagu początkowego elementu. W poniższym przykładzie określono dwa atrybuty (`version` i `href`) dla `<codeBase>` element, który określa, gdzie środowisko uruchomieniowe może zlokalizować zestaw (Aby uzyskać więcej informacji, zobacz [Określanie lokalizacji zestawu](../../../docs/framework/configure-apps/specify-assembly-location.md)).  
+ Ustawienia konfiguracji są określane przy użyciu wstępnie zdefiniowanych atrybutów, które są parami nazwa/wartość umieszczonymi wewnątrz tagu początkowego elementu. W poniższym przykładzie określono dwa atrybuty (`version` i `href`) dla `<codeBase>` elementu, który określa, gdzie środowisko uruchomieniowe może zlokalizować zestaw (Aby uzyskać więcej informacji, zobacz [Określanie lokalizacji zestawu](specify-assembly-location.md)).  
   
 ```xml  
 <codeBase version="2.0.0.0"  
@@ -52,14 +52,14 @@ ms.locfileid: "66456202"
 ```  
   
 ## <a name="machine-configuration-files"></a>Pliki konfiguracji komputera  
- Plik konfiguracji komputera — Machine.config — zawiera ustawienia, które są stosowane do całego komputera. Ten plik znajduje się w folderze %*ścieżka instalacji środowiska uruchomieniowego*%\Config katalogu. Plik Machine.config zawiera ustawienia konfiguracji dla komputera, zestawu powiązania wbudowanych [kanałów komunikacji zdalnej](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))i platformy ASP.NET.  
+ Plik konfiguracji komputera — Machine.config — zawiera ustawienia, które są stosowane do całego komputera. Ten plik znajduje się w katalogu% \ config*instalacji systemu plików wykonywalnych*. Machine. config zawiera ustawienia konfiguracji dla powiązań zestawów dla całej maszyny, wbudowanych [kanałów komunikacji zdalnej](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))i ASP.NET.  
   
- System konfiguracji najpierw przeszukuje plik konfiguracji dla [  **\<appSettings >** elementu](~/docs/framework/configure-apps/file-schema/appsettings/index.md) i innych sekcji konfiguracji, które może zdefiniować Deweloper. Następnie przeszukuje plik konfiguracji aplikacji. Aby zachować możliwość zarządzania plikiem konfiguracji komputera, najlepiej jest umieścić te ustawienia w pliku konfiguracji aplikacji. Jednak umieszczenie tych ustawień w pliku konfiguracji komputera może sprawić, że system będzie łatwiejszy w utrzymaniu. Na przykład, jeśli zarówno aplikacja kliencka, jak i serwerowa, używa składnika innej firmy, łatwiej jest umieścić ustawienia dla tego składnika w jednym miejscu. W tym przypadku plik konfiguracji komputera jest właściwym miejscem dla tych ustawień, ponieważ dzięki temu te same ustawienia nie znajdują się w dwóch różnych plikach.  
+ System konfiguracji najpierw wyszukuje w pliku konfiguracyjnym komputera plik [  **\<AppSettings >** ](./file-schema/appsettings/index.md) i inne sekcje konfiguracyjne, które może zdefiniować Deweloper. Następnie przeszukuje plik konfiguracji aplikacji. Aby zachować możliwość zarządzania plikiem konfiguracji komputera, najlepiej jest umieścić te ustawienia w pliku konfiguracji aplikacji. Jednak umieszczenie tych ustawień w pliku konfiguracji komputera może sprawić, że system będzie łatwiejszy w utrzymaniu. Na przykład, jeśli zarówno aplikacja kliencka, jak i serwerowa, używa składnika innej firmy, łatwiej jest umieścić ustawienia dla tego składnika w jednym miejscu. W tym przypadku plik konfiguracji komputera jest właściwym miejscem dla tych ustawień, ponieważ dzięki temu te same ustawienia nie znajdują się w dwóch różnych plikach.  
   
 > [!NOTE]
->  Wdrażanie aplikacji za pomocą polecenia XCOPY nie spowoduje skopiowania ustawień z pliku konfiguracji komputera.  
+> Wdrażanie aplikacji za pomocą polecenia XCOPY nie spowoduje skopiowania ustawień z pliku konfiguracji komputera.  
   
- Aby uzyskać więcej informacji o tym, jak środowisko uruchomieniowe języka wspólnego używa pliku konfiguracji komputera dla powiązań zestawów, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Aby uzyskać więcej informacji na temat sposobu, w jaki środowisko uruchomieniowe języka wspólnego używa pliku konfiguracji komputera do powiązania zestawu, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](../deployment/how-the-runtime-locates-assemblies.md).  
   
 ## <a name="application-configuration-files"></a>Pliki konfiguracji aplikacji  
  Plik konfiguracji aplikacji zawiera ustawienia specyficzne dla danej aplikacji. Ten plik zawiera ustawienia konfiguracji odczytywane przez środowisko uruchomieniowe języka wspólnego (takie jak zasady tworzenia powiązań zestawów, obiekty usług zdalnych itd.), i ustawienia, które może odczytać aplikacja.  
@@ -70,61 +70,61 @@ ms.locfileid: "66456202"
   
      Te aplikacje mają dwa pliki konfiguracji: źródłowy plik konfiguracji, który deweloper modyfikuje podczas prac projektowych, oraz plik wyjściowy, który jest dystrybuowany wraz z aplikacją.  
   
-     Podczas pracy w programie Visual Studio należy umieścić źródłowy plik konfiguracji aplikacji w katalogu projektu i ustaw jego **Kopiuj do katalogu wyjściowego** właściwości **zawsze Kopiuj** lub **Kopiuj Jeśli nowszy** . Nazwa pliku konfiguracji składa się z nazwy aplikacji i rozszerzenia config. Na przykład aplikacja o nazwie MojaAplikacja.exe będzie mieć źródłowy plik konfiguracji o nazwie MojaAplikacja.exe.config.  
+     Podczas opracowywania w programie Visual Studio Umieść plik konfiguracji źródłowej dla swojej aplikacji w katalogu projektu i ustaw jego właściwość **copy na katalog wyjściowy** na wartość **Kopiuj zawsze** lub **Kopiuj, jeśli nowszy**. Nazwa pliku konfiguracji składa się z nazwy aplikacji i rozszerzenia config. Na przykład aplikacja o nazwie MojaAplikacja.exe będzie mieć źródłowy plik konfiguracji o nazwie MojaAplikacja.exe.config.  
   
-     Program Visual Studio automatycznie kopiuje źródłowy plik konfiguracji do katalogu, w którym znajduje się skompilowany zestaw, w celu utworzenia wyjściowego pliku konfiguracji, który będzie wdrażany wraz z aplikacją. W niektórych przypadkach program Visual Studio może zmodyfikować wyjściowy plik konfiguracji; Aby uzyskać więcej informacji, zobacz [przekierowanie wersji zestawu na poziomie aplikacji](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) części [Redirecting Assembly Versions](../../../docs/framework/configure-apps/redirect-assembly-versions.md) artykułu.  
+     Program Visual Studio automatycznie kopiuje źródłowy plik konfiguracji do katalogu, w którym znajduje się skompilowany zestaw, w celu utworzenia wyjściowego pliku konfiguracji, który będzie wdrażany wraz z aplikacją. W niektórych przypadkach program Visual Studio może zmodyfikować wyjściowy plik konfiguracji; Aby uzyskać więcej informacji, zobacz [przekierowywanie wersji zestawu w sekcji poziom aplikacji](redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) artykułu [przekierowywanie wersji zestawu](redirect-assembly-versions.md) .  
   
 - Aplikacja obsługiwana w programie ASP.NET.  
   
-     Aby uzyskać więcej informacji na temat plików konfiguracyjnych programu ASP.NET, zobacz [ustawienia konfiguracji programu ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
+     Aby uzyskać więcej informacji na temat plików konfiguracji ASP.NET, zobacz [ASP.NET ustawienia konfiguracji](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
   
 - Aplikacja obsługiwana w programie Internet Explorer.  
   
-     Jeśli aplikacja obsługiwana w programie Internet Explorer ma plik konfiguracji, lokalizacja tego pliku jest określona w `<link>` tagu przy użyciu następującej składni:  
+     Jeśli aplikacja hostowana w programie Internet Explorer ma plik konfiguracji, lokalizacja tego pliku jest określona w `<link>` tagu o następującej składni:  
   
-     \<link rel="*ConfigurationFileName*" href="*location*">  
+     \<link rel = "*ConfigurationFileName*" href = "*Location*" >  
   
-     W tym tagu `location` jest adres URL do pliku konfiguracji. Ta wartość określa podstawę aplikacji. Plik konfiguracji musi znajdować się w tej samej witrynie sieci web, co aplikacja.  
+     W tym tagu `location` jest to adres URL pliku konfiguracji. Ta wartość określa podstawę aplikacji. Plik konfiguracji musi znajdować się w tej samej witrynie sieci web, co aplikacja.  
   
 ## <a name="security-configuration-files"></a>Pliki konfiguracji zabezpieczeń  
- Pliki konfiguracji zabezpieczeń zawierają informacje dotyczące hierarchii grup kodu i zestawów uprawnień skojarzonych z poziomem zasad. Zdecydowanie zalecamy użycie [narzędzie zasad zabezpieczenia dostępu kodu (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) do modyfikowania zasad zabezpieczeń, aby upewnić się, że zasady zmiany nie spowodują uszkodzenia plików konfiguracji zabezpieczeń.  
+ Pliki konfiguracji zabezpieczeń zawierają informacje dotyczące hierarchii grup kodu i zestawów uprawnień skojarzonych z poziomem zasad. Zdecydowanie zalecamy użycie [narzędzia zasad zabezpieczeń dostępu kodu (Caspol. exe)](../tools/caspol-exe-code-access-security-policy-tool.md) w celu zmodyfikowania zasad zabezpieczeń, aby upewnić się, że zmiany zasad nie uszkadzają plików konfiguracji zabezpieczeń.  
   
 > [!NOTE]
->  Począwszy od programu .NET Framework 4, pliki konfiguracji zabezpieczeń występują tylko wtedy, gdy zmieniono zasady zabezpieczeń.  
+> Począwszy od .NET Framework 4, pliki konfiguracji zabezpieczeń są obecne tylko w przypadku zmiany zasad zabezpieczeń.  
   
  Pliki konfiguracji zabezpieczeń znajdują się w następujących lokalizacjach:  
   
-- Plik konfiguracji zasad przedsiębiorstwa: %*runtime-install-path*%\Config\Enterprisesec.config  
+- Plik konfiguracji zasad przedsiębiorstwa:%*Runtime-Install-Path*% \ Config\Enterprisesec.config  
   
-- Plik konfiguracji zasad komputera: %*runtime-install-path*%\Config\Security.config  
+- Plik konfiguracji zasad komputera:%*Runtime-Install-Path*% \ Config\Security.config  
   
-- Plik konfiguracji zasad użytkownika: %USERPROFILE%\Application aplikacji\microsoft\clr security config\v*xx.xx*\Security.config  
+- Plik konfiguracji zasad użytkownika:%USERPROFILE%\Application data\Microsoft\CLR Security config\v*XX. XX*\Security.config  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Lokalizowanie zestawów za pomocą DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
- Opisuje sposób skierowania czasu, aby użyć zmiennej środowiskowej DEVPATH podczas wyszukiwania dla zestawów.  
+ [Instrukcje: Lokalizowanie zestawów za pomocą DEVPATH](how-to-locate-assemblies-by-using-devpath.md)  
+ Opisuje sposób kierowania środowiska uruchomieniowego do używania zmiennej środowiskowej DEVPATH podczas wyszukiwania zestawów.  
   
- [Przekierowywanie wersji zestawu](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
- W tym artykule opisano, jak określić lokalizację zestawu i której wersji zestawu użyć.  
+ [Przekierowywanie wersji zestawu](redirect-assembly-versions.md)  
+ Opisuje sposób określania lokalizacji zestawu i wersji zestawu, który ma być używany.  
   
- [Określanie lokalizacji zestawu](../../../docs/framework/configure-apps/specify-assembly-location.md)  
- Opisuje sposób określenia, gdzie środowisko wykonawcze powinno poszukać zestawu.  
+ [Określanie lokalizacji zestawu](specify-assembly-location.md)  
+ Opisuje, jak określić, gdzie środowisko uruchomieniowe ma szukać zestawu.  
   
- [Konfigurowanie klas kryptografii](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- Opisuje sposób mapowania nazwy algorytmu na klasy kryptografii i identyfikator obiektu na algorytm kryptograficzny.  
+ [Konfigurowanie klas kryptografii](configure-cryptography-classes.md)  
+ Opisuje sposób mapowania nazwy algorytmu na klasę kryptograficzną i identyfikator obiektu na algorytm kryptografii.  
   
- [Instrukcje: Tworzenie zasad wydawcy](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
- Opisuje, kiedy i jak należy dodać plik zasad wydawcy, aby określić zestaw przekierowania i podstawowe ustawienia kodu.  
+ [Instrukcje: Tworzenie zasad wydawcy](how-to-create-a-publisher-policy.md)  
+ Opisuje, kiedy i w jaki sposób należy dodać plik zasad wydawcy, aby określić przekierowania zestawu i ustawienia podstawowe kodu.  
   
- [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md)  
- W tym artykule opisano hierarchię schematów dla uruchamiania, środowisko uruchomieniowe, sieci i innych rodzajów ustawień konfiguracji.  
+ [Schemat pliku konfiguracji](./file-schema/index.md)  
+ Opisuje hierarchię schematów dla uruchamiania, środowiska uruchomieniowego, sieci i innych typów ustawień konfiguracji.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md)
-- [Określanie lokalizacji zestawu](../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [Przekierowywanie wersji zestawu](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
-- [Administrowanie witryną sieci Web platformy ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [Schemat pliku konfiguracji](./file-schema/index.md)
+- [Określanie lokalizacji zestawu](specify-assembly-location.md)
+- [Przekierowywanie wersji zestawu](redirect-assembly-versions.md)
+- [Administrowanie witryną sieci Web ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [Zarządzanie zasadami zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
-- [Caspol.exe (narzędzie zasad zabezpieczeń dostępu do kodu)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
-- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Caspol.exe (narzędzie zasad zabezpieczeń dostępu do kodu)](../tools/caspol-exe-code-access-security-policy-tool.md)
+- [Zestawy w środowisku uruchomieniowym CLR](../app-domains/assemblies-in-the-common-language-runtime.md)

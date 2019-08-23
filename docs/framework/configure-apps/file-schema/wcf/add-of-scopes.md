@@ -2,20 +2,20 @@
 title: <add> dla <scopes>
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: c29e47f688118e34fbdb4deb396c930d478f0582
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b190cb72e21d47bdc62aab2daba0f6eea1ee04ac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673605"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926627"
 ---
-# <a name="add-of-scopes"></a>\<Dodaj > z \<zakresy >
-Dodaje niestandardowy zakres Uri, który może służyć do filtrowania punktów końcowych usługi podczas zapytania.  
+# <a name="add-of-scopes"></a>\<Dodaj > \<zakresów >
+Dodaje niestandardowy identyfikator URI zakresu, którego można użyć do filtrowania punktów końcowych usługi podczas zapytania.  
   
 \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<endpointBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<endpointDiscovery>  
 \<zakresy >  
 \<add>  
@@ -43,7 +43,7 @@ Dodaje niestandardowy zakres Uri, który może służyć do filtrowania punktów
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|zakres|Identyfikator URI zawierający zakres informacji dla punktu końcowego, który może być użyty w dopasowaniu kryteriów dla znajdowanej usługi.|  
+|zakres|Identyfikator URI zawierający zakres informacji dla punktu końcowego, który może być używany w kryterium dopasowywania do znajdowania usług.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -52,7 +52,7 @@ Dodaje niestandardowy zakres Uri, który może służyć do filtrowania punktów
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zakresy >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Zawiera kolekcję elementów konfiguracji określającą niestandardowy zakres identyfikatorów URI, który może służyć do filtrowania punktów końcowych usługi podczas zapytania.|  
+|[\<zakresy >](scopes.md)|Zawiera kolekcję elementów konfiguracji, które określają niestandardowe identyfikatory URI, których można użyć do filtrowania punktów końcowych usługi podczas zapytania.|  
   
 ## <a name="see-also"></a>Zobacz także
 

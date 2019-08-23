@@ -8,25 +8,25 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic]
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
-ms.openlocfilehash: b9dee0fc876c6e7a02d085db7db4bf1c5dd2c68d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fc5d1afd9e9723e6b3c58e100b0519ef8fdfab4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053915"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968363"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
-Określa, że parametr procedury przyjmuje opcjonalną tablicę elementów określonego typu. `ParamArray` może służyć tylko na ostatni parametr listę parametrów.  
+Określa, że parametr procedury przyjmuje opcjonalną tablicę elementów określonego typu. `ParamArray`może być używany tylko dla ostatniego parametru listy parametrów.  
   
 ## <a name="remarks"></a>Uwagi  
- `ParamArray` można przekazać dowolną liczbę argumentów do procedury. A `ParamArray` parametr zawsze jest zadeklarowany za pomocą [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).  
+ `ParamArray`umożliwia przekazanie dowolnej liczby argumentów do procedury. Parametr jest zawsze deklarowany przy użyciu [ByVal.](../../../visual-basic/language-reference/modifiers/byval.md) `ParamArray`  
   
- Możesz podać jeden lub więcej argumentów do `ParamArray` , przekazując tablicę odpowiednie dane typu parametru, rozdzielaną przecinkami listę wartości lub nic w ogóle. Aby uzyskać szczegółowe informacje, zobacz "Podczas wywoływania ParamArray" w [Parameter — tablice](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
+ Można podać jeden lub więcej argumentów do `ParamArray` parametru, przekazując tablicę odpowiedniego typu danych, rozdzielaną przecinkami listę wartości lub nic wcale. Aby uzyskać szczegółowe informacje, zobacz "wywoływanie ParamArray" w [tablicach parametrów](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   
 > [!IMPORTANT]
->  Zawsze, gdy użytkownik poradzić sobie z tablicy, które mogą być duże przez czas nieokreślony, istnieje ryzyko przekroczenia niektórych wewnętrznych wydajności aplikacji. Jeśli zdecydujesz się zaakceptować tablicy parametrów z kodu wywołującego, należy przetestować jego długość i podejmie stosowne działania, jeśli jest zbyt duży dla swojej aplikacji.  
+> Za każdym razem, gdy zajmujesz się tablicą, która może być nienieskończona, istnieje ryzyko, że zachodzi taka Wewnętrzna pojemność aplikacji. Jeśli zaakceptujesz tablicę parametrów z kodu wywołującego, należy przetestować jego długość i wykonać odpowiednie czynności, jeśli jest ono zbyt duże dla aplikacji.  
   
- `ParamArray` Modyfikator mogą być używane w tych kontekstach:  
+ `ParamArray` Modyfikator może być używany w tych kontekstach:  
   
  [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
   

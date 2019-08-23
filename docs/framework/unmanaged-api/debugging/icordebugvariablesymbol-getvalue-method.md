@@ -1,18 +1,18 @@
 ---
-title: Metoda ICorDebugVariableSymbol::GetValue
+title: 'ICorDebugVariableSymbol:: GetValue — Metoda'
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed88c8ff78006c14bdee51ba6f95aaaedd66cf41
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b72b9dbeff6aa06a132dc7ec3ddd9477553c4c2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774831"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967991"
 ---
-# <a name="icordebugvariablesymbolgetvalue-method"></a>Metoda ICorDebugVariableSymbol::GetValue
-Pobiera wartość zmiennej w postaci tablicy bajtów.  
+# <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol:: GetValue — Metoda
+Pobiera wartość zmiennej jako tablicę bajtów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,36 +29,36 @@ HRESULT GetValue(
   
 ## <a name="parameters"></a>Parametry  
  `offset`  
- [in] Początkowe przesunięcie w zmiennej, z którego ma zostać odczytana wartość. Ten parametr jest używany podczas odczytywania pola elementu członkowskiego w obiekcie.  
+ podczas Przesunięcie początkowe w zmiennej, z której ma zostać odczytana wartość. Ten parametr jest używany podczas odczytywania pól elementu członkowskiego w obiekcie.  
   
  `cbContext`  
- [in] Rozmiar w bajtach `context` argumentu.  
+ podczas Rozmiar w bajtach `context` argumentu.  
   
  `context`  
- [in] Kontekst wątku, używane do odczytywania wartości.  
+ podczas Kontekst wątku używany do odczytywania wartości.  
   
  `cbValue`  
- [in] Rozmiar w bajtach `pValue` buforu.  
+ podczas Rozmiar w bajtach `pValue` buforu.  
   
  `pcbValue`  
- [out] Liczba bajtów rzeczywiście zapisanych na `pValue` buforu.  
+ określoną Liczba bajtów rzeczywiście zapisywana `pValue` w buforze.  
   
  `pValue`  
- [out] Tablica bajtów, która zawiera wartość zmiennej.  
+ określoną Tablica bajtów, która zawiera wartość zmiennej.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

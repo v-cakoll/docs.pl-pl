@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: eb254503f5ce2240a03179da693c66f7ada876be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666764"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918301"
 ---
 # <a name="layout"></a>Układ
 W tym temacie opisano system układu Windows Presentation Foundation (WPF). Zrozumienie, w jaki sposób i kiedy nastąpi Obliczanie układu, jest niezbędne do tworzenia interfejsów użytkownika w WPF.  
@@ -89,7 +89,7 @@ W tym temacie opisano system układu Windows Presentation Foundation (WPF). Zroz
  Na <xref:System.Windows.FrameworkElement> koniec`constraintSize`przetwarzane są właściwości Framework, które mają wpływ na wartość. Te właściwości zazwyczaj opisują charakterystykę wielkości bazowego <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement.Height%2A>na przykład, <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.Margin%2A>,, i <xref:System.Windows.FrameworkElement.Style%2A>. Każda z tych właściwości może zmienić miejsce, które jest niezbędne do wyświetlenia elementu. <xref:System.Windows.FrameworkElement.MeasureOverride%2A>jest następnie wywoływana za `constraintSize` pomocą jako parametru.  
   
 > [!NOTE]
->  Istnieje różnica między <xref:System.Windows.FrameworkElement.Height%2A> właściwościami <xref:System.Windows.FrameworkElement.ActualHeight%2A> i <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.ActualWidth%2A>i. Na przykład <xref:System.Windows.FrameworkElement.ActualHeight%2A> właściwość jest wartością obliczaną na podstawie innych danych wejściowych wysokości i systemu układu. Wartość jest ustawiana przez system układu w oparciu o rzeczywiste przebieg renderingu i dlatego może być nieco opóźnione za ustawioną wartością właściwości, <xref:System.Windows.FrameworkElement.Height%2A>na przykład, które są podstawą zmiany danych wejściowych.  
+> Istnieje różnica między <xref:System.Windows.FrameworkElement.Height%2A> właściwościami <xref:System.Windows.FrameworkElement.ActualHeight%2A> i <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.ActualWidth%2A>i. Na przykład <xref:System.Windows.FrameworkElement.ActualHeight%2A> właściwość jest wartością obliczaną na podstawie innych danych wejściowych wysokości i systemu układu. Wartość jest ustawiana przez system układu w oparciu o rzeczywiste przebieg renderingu i dlatego może być nieco opóźnione za ustawioną wartością właściwości, <xref:System.Windows.FrameworkElement.Height%2A>na przykład, które są podstawą zmiany danych wejściowych.  
 >   
 >  Ponieważ <xref:System.Windows.FrameworkElement.ActualHeight%2A> jest wartością obliczaną, należy pamiętać, że może być wiele lub przyrostowo raportowane zmiany w tym wyniku różne operacje wykonywane przez system układu. System układu może obliczać wymaganą przestrzeń miary dla elementów podrzędnych, ograniczeń przez element nadrzędny i tak dalej.  
   

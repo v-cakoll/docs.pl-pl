@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 7af01bda05b113be02261051421a91bdea776851
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 91369392f33f2a86a7a4cb5ffb3faa668c113348
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644568"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965411"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>Literał komentarza XML (Visual Basic)
-Literał reprezentujący <xref:System.Xml.Linq.XComment> obiektu.  
+Literał reprezentujący <xref:System.Xml.Linq.XComment> obiekt.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,29 +29,29 @@ Literał reprezentujący <xref:System.Xml.Linq.XComment> obiektu.
   
 |Termin|Definicja|  
 |---|---|  
-|`<!--`|Wymagana. Oznacza początek komentarza XML.|  
-|`content`|Wymagana. Tekst wyświetlany w komentarzu XML. Nie może zawierać szereg dwa łączniki (-) ani kończyć się łącznikiem przylegające do tagu zamykającego.|  
-|`-->`|Wymagana. Oznacza koniec komentarza XML.|  
+|`<!--`|Wymagane. Oznacza początek komentarza XML.|  
+|`content`|Wymagana. Tekst, który ma być wyświetlany w komentarzu XML. Nie może zawierać serii dwóch łączników (--) ani kończyć się łącznikiem przylegającym do taga zamykającego.|  
+|`-->`|Wymagany. Oznacza koniec komentarza XML.|  
   
 ## <a name="return-value"></a>Wartość zwracana  
- <xref:System.Xml.Linq.XComment> Obiektu.  
+ <xref:System.Xml.Linq.XComment> Obiekt.  
   
 ## <a name="remarks"></a>Uwagi  
- Literały komentarza XML nie zawierają treści dokumentu; zawierają informacje o tym dokumencie. Sekcja komentarz XML kończy się za pomocą sekwencji "-->". Oznacza to następujące kwestie:  
+ Literały komentarza XML nie zawierają zawartości dokumentu; zawierają one informacje o dokumencie. Sekcja komentarza XML jest zakończona sekwencją "-->". Oznacza to następujące kwestie:  
   
-- Nie można użyć wyrażenia osadzone w komentarzu XML literału, ponieważ ograniczniki osadzone wyrażenia są prawidłowa zawartość komentarza XML.  
+- Nie można użyć wyrażenia osadzonego w literale komentarza XML, ponieważ ogranicznik wyrażenia osadzonego są prawidłową zawartością komentarza XML.  
   
-- Sekcje komentarza XML nie mogą być zagnieżdżone, ponieważ `content` nie może zawierać wartość "-->".  
+- Sekcje komentarza XML nie mogą być zagnieżdżane, ponieważ `content` nie mogą zawierać wartości "-->".  
   
- Literał komentarza XML można przypisać do zmiennej lub literał elementu XML można dołączyć go.  
+ Do zmiennej można przypisać literał komentarza XML lub dodać go do literału elementu XML.  
   
 > [!NOTE]
->  Literał XML może obejmować wiele wierszy, bez używania znaków kontynuacji wiersza. Ta funkcja pozwala na kopiowanie zawartości z dokumentu XML i wklej go bezpośrednio w programie Visual Basic.  
+> Literał XML może obejmować wiele wierszy bez używania znaków kontynuacji wiersza. Ta funkcja umożliwia skopiowanie zawartości z dokumentu XML i wklejenie jej bezpośrednio do programu Visual Basic.  
   
- Kompilator Visual Basic konwertuje literał komentarza XML do wywołania <xref:System.Xml.Linq.XComment.%23ctor%2A> konstruktora.  
+ Kompilator Visual Basic konwertuje literał komentarza XML na wywołanie <xref:System.Xml.Linq.XComment.%23ctor%2A> konstruktora.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy zawierający tekst komentarza XML "To jest komentarz".  
+ Poniższy przykład tworzy komentarz XML zawierający tekst "to jest komentarz".  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   
@@ -60,4 +60,4 @@ Literał reprezentujący <xref:System.Xml.Linq.XComment> obiektu.
 - <xref:System.Xml.Linq.XComment>
 - [Literał elementu XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
 - [Literały XML](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Tworzenie XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Tworzenie kodu XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

@@ -3,15 +3,15 @@ title: <tokenReplayDetection>
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-ms.openlocfilehash: 4deeb1d84f2621adb7ff1b649a505138b6856ec1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e2159a73ca79fc362a8138eea95dbd173dafb11
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790497"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944296"
 ---
 # <a name="tokenreplaydetection"></a>\<tokenReplayDetection>
-Włącza wykrywanie powtórzeń tokenów i określa czas wygaśnięcia tokenów.  
+Włącza wykrywanie powtarzania tokenów i określa czas wygaśnięcia tokenów.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -38,8 +38,8 @@ Włącza wykrywanie powtórzeń tokenów i określa czas wygaśnięcia tokenów.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|Włączone|Wartość, która określa, czy jest włączone wykrywanie powtórzeń tokenów; "true", aby umożliwić token wykrywania powtarzania.|  
-|expirationPeriod|Element <xref:System.TimeSpan> , który określa maksymalną ilość czasu, zanim element zostanie uznane za wygasłe i usuwane z pamięci podręcznej.  Aby uzyskać więcej informacji o sposobie określania <xref:System.TimeSpan> wartości, zobacz [wartościach Timespan](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
+|dostępny|Wartość określająca, czy jest włączone wykrywanie powtarzania tokenów; wartość "true" w celu włączenia wykrywania powtarzania tokenu.|  
+|expirationPeriod|A <xref:System.TimeSpan> , która określa maksymalny czas, po upływie którego element zostanie uznany za wygasły i usunięty z pamięci podręcznej.  Aby uzyskać więcej informacji na temat sposobu <xref:System.TimeSpan> określania wartości, zobacz [wartości TimeSpan](../windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -48,10 +48,10 @@ Włącza wykrywanie powtórzeń tokenów i określa czas wygaśnięcia tokenów.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usługi.|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Udostępnia konfigurację dla kolekcji zabezpieczeń programy obsługi tokenów.|  
+|[\<identityConfiguration>](identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usług.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Zapewnia konfigurację kolekcji programów obsługi tokenów zabezpieczających.|  
   
 ## <a name="remarks"></a>Uwagi  
- A `<tokenReplayDetection>` element może być określony na poziomie usługi w ramach `<identityConfiguration>` element lub na poziomie kolekcji programu obsługi tokenów zabezpieczeń w ramach `<securityTokenHandlerConfiguration>` elementu. Ustawienia w kolekcji programu obsługi tokenów zastępują ustawienia określone w usłudze.  
+ Element można określić na poziomie usługi `<identityConfiguration>` pod elementem lub na poziomie kolekcji `<securityTokenHandlerConfiguration>` programu obsługi tokenów zabezpieczających w ramach elementu. `<tokenReplayDetection>` Ustawienia w kolekcji obsługi tokenów zastępują te określone w usłudze.  
   
- Typ pamięci podręcznej powtórzeń tokenów jest określany przez [ \<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) elementu.
+ Typ pamięci podręcznej powtarzania tokenów jest określany przez [ \<element > tokenReplayCache](tokenreplaycache.md) .

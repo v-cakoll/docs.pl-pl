@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 8db9f2051a0401e01f233f9c959e015eb657bdac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401429"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965474"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Instrukcje: Tworzenie i wiązanie z elementem ObservableCollection
 Ten przykład pokazuje, jak utworzyć i powiązać z kolekcją, która dziedziczy z <xref:System.Collections.ObjectModel.ObservableCollection%601> klasy, która jest klasą kolekcji, która dostarcza powiadomienia, gdy elementy zostaną dodane lub usunięte.  
@@ -136,7 +136,7 @@ End Class
  Definicja `NameItemTemplate` nie jest wyświetlana w tym miejscu.  
   
 > [!NOTE]
->  Obiekty w kolekcji muszą spełniać wymagania opisane w [Przegląd źródeł powiązań](binding-sources-overview.md). W szczególności, jeśli używasz programu <xref:System.Windows.Data.BindingMode.OneWay> lub <xref:System.Windows.Data.BindingMode.TwoWay> (na [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] przykład chcesz, aby aktualizacja właściwości źródła była możliwa dynamicznie), należy zaimplementować odpowiedni mechanizm powiadamiania o zmianach właściwości, taki jak <xref:System.ComponentModel.INotifyPropertyChanged>interfejs.  
+> Obiekty w kolekcji muszą spełniać wymagania opisane w [Przegląd źródeł powiązań](binding-sources-overview.md). W szczególności, jeśli używasz programu <xref:System.Windows.Data.BindingMode.OneWay> lub <xref:System.Windows.Data.BindingMode.TwoWay> (na [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] przykład chcesz, aby aktualizacja właściwości źródła była możliwa dynamicznie), należy zaimplementować odpowiedni mechanizm powiadamiania o zmianach właściwości, taki jak <xref:System.ComponentModel.INotifyPropertyChanged>interfejs.  
   
  Aby uzyskać więcej informacji, zobacz sekcję Powiązywanie z kolekcjami w temacie [powiązanie danych — omówienie](data-binding-overview.md).  
   

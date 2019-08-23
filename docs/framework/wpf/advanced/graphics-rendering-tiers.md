@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: fa59621aaf73922af957961af5401170c2872aa9
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9da519f8d258673498f45a425c13863437cac597
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972346"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937518"
 ---
 # <a name="graphics-rendering-tiers"></a>Poziomy zmiany grafiki
 Warstwa renderowania definiuje poziom graficznej możliwości sprzętowej i wydajności dla urządzenia, na którym działa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacja.  
@@ -48,7 +48,7 @@ Warstwa renderowania definiuje poziom graficznej możliwości sprzętowej i wyda
 ### <a name="rendering-tier-1-and-rendering-tier-2"></a>Renderowanie warstwy 1 i warstwy renderowania 2  
   
 > [!NOTE]
->  Począwszy od .NET Framework 4, warstwa renderowania 1 została ponownie zdefiniowana w taki sposób, aby obejmowała tylko sprzęt graficzny obsługujący program DirectX 9,0 lub nowszy. Sprzęt graficzny obsługujący program DirectX 7 lub 8 jest teraz zdefiniowany jako warstwa renderowania 0.  
+> Począwszy od .NET Framework 4, warstwa renderowania 1 została ponownie zdefiniowana w taki sposób, aby obejmowała tylko sprzęt graficzny obsługujący program DirectX 9,0 lub nowszy. Sprzęt graficzny obsługujący program DirectX 7 lub 8 jest teraz zdefiniowany jako warstwa renderowania 0.  
   
  Wartość warstwy renderowania 1 lub 2 oznacza, że większość funkcji graficznych programu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] będzie używać przyspieszania sprzętowego, jeśli wymagane zasoby systemowe są dostępne i nie zostały wyczerpane. Odnosi się to do wersji DirectX, która jest większa lub równa 9,0.  
   
@@ -105,7 +105,7 @@ Warstwa renderowania definiuje poziom graficznej możliwości sprzętowej i wyda
 |**Wymagane ustawienie daty sterownika wideo**|Określa, czy system wyłącza przyspieszenie sprzętowe dla sterowników wydanych przed listopad 2004.|  
 |**Użyj opcji rasteryzatora odwołań**|Określa, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] czy powinien być używany Rasteryzacja odwołania.|  
   
- Dostęp do tych ustawień można uzyskać za pomocą dowolnego narzędzia konfiguracji zewnętrznej, które wie, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jak odwoływać się do ustawień rejestru. Te ustawienia można również utworzyć lub zmodyfikować, uzyskując dostęp do wartości bezpośrednio przy użyciu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] edytora rejestru. Aby uzyskać więcej informacji, zobacz [Ustawienia rejestru renderowania grafiki](../graphics-multimedia/graphics-rendering-registry-settings.md).  
+ Dostęp do tych ustawień można uzyskać za pomocą dowolnego narzędzia konfiguracji zewnętrznej, które wie, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jak odwoływać się do ustawień rejestru. Te ustawienia można również utworzyć lub zmodyfikować, uzyskując dostęp do wartości bezpośrednio przy użyciu Edytora rejestru systemu Windows. Aby uzyskać więcej informacji, zobacz [Ustawienia rejestru renderowania grafiki](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>narzędzia profilowania wydajności WPF  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia pakiet narzędzi profilowania wydajności, które umożliwiają analizowanie zachowania aplikacji w czasie wykonywania i Określanie typów optymalizacji wydajności, które można zastosować. W poniższej tabeli wymieniono narzędzia profilowania wydajności, które znajdują się w narzędziu Windows SDK, zestaw wydajności WPF:  

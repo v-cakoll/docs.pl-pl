@@ -2,59 +2,59 @@
 title: Blokada zabezpieczeń PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 83c100459ca5cf522b9040a807008e66e1a5c9d8
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 16e7c564373eaf241b500c0e3de40ee8fb38f05a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425421"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964606"
 ---
 # <a name="pii-security-lockdown"></a>Blokada zabezpieczeń PII
-W tym przykładzie pokazano, jak kontrolować kilka funkcji związanych z zabezpieczeniami usługi Windows Communication Foundation (WCF) przez:  
+Ten przykład pokazuje, jak kontrolować kilka funkcji związanych z zabezpieczeniami usługi Windows Communication Foundation (WCF) przez:  
   
 - Szyfrowanie poufnych informacji w pliku konfiguracji usługi.  
   
-- Blokowanie elementów w pliku konfiguracji, tak, aby zagnieżdżone podkatalogów usługi nie może przesłonić ustawienia.  
+- Blokowanie elementów w pliku konfiguracji, aby zagnieżdżone podkatalogi usługi nie można zastąpić ustawień.  
   
-- Kontrolowanie logowania z osobiście identyfikowalne dane osobowe w dziennikach śledzenia i wiadomości.  
+- Kontrolowanie rejestrowania danych osobowych (dane osobowe) w dziennikach śledzenia i komunikatów.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
-## <a name="discussion"></a>Dyskusja  
- Każda z tych funkcji może być używane razem lub osobno do sterowania aspektami zabezpieczeń usługi. Nie jest wyczerpujący zabezpieczaniem usługi WCF.  
+## <a name="discussion"></a>Dyskusji  
+ Każda z tych funkcji może być używana osobno lub razem w celu kontrolowania aspektów zabezpieczeń usługi. Nie jest to ostateczny Przewodnik dotyczący zabezpieczania usługi WCF.  
   
- Pliki konfiguracji .NET Framework mogą zawierać poufne informacje, takie jak parametry połączenia z bazami danych. W scenariuszach hostowanych w sieci Web, współdzielonych może być pożądane, aby zaszyfrować te informacje w pliku konfiguracji dla usługi tak, aby dane zawarte w pliku konfiguracji jest odporna na zwykłych wyświetlania. .NET framework 2.0 i nowszych ma możliwość szyfrowania części pliku konfiguracji, za pomocą aplikacji Windows Data Protection programowania interfejsu (DPAPI) lub dostawcy usług kryptograficznych RSA. Umożliwia ona szyfrowanie aspnet_regiis.exe przy użyciu interfejsu DPAPI lub RSA wybierz części pliku konfiguracji.  
+ Pliki konfiguracji .NET Framework mogą zawierać informacje poufne, takie jak parametry połączenia do łączenia się z bazami danych. W udostępnionych scenariuszach hostowanych w sieci Web może być pożądane zaszyfrowanie tych informacji w pliku konfiguracji usługi, dzięki czemu dane zawarte w pliku konfiguracyjnym są odporne na wyświetlanie. .NET Framework 2,0 i nowsze mogą szyfrować fragmenty pliku konfiguracji przy użyciu interfejsu programowania aplikacji ochrony danych (DPAPI) systemu Windows lub dostawcy usług kryptograficznych RSA. Narzędzie Aspnet_regiis. exe korzystające z interfejsu DPAPI lub RSA może szyfrować wybrane fragmenty pliku konfiguracji.  
   
- W scenariuszach hostowanych w sieci Web jest możliwość usługi w podkatalogach innych usług. Semantyczne podczas określania wartości konfiguracji domyślnej umożliwia pliki konfiguracyjne w katalogach zagnieżdżone, aby zastąpić wartości konfiguracji w katalogu nadrzędnym. W niektórych sytuacjach może to być niepożądane różnych powodów. Konfiguracja obsługuje usługi WCF, blokowanie wartości konfiguracji, tak, aby zagnieżdżone konfiguracji generuje wyjątki, gdy zagnieżdżony usługa jest uruchomiona, przy użyciu przesłonić wartości konfiguracji.  
+ W scenariuszach hostowanych w sieci Web można korzystać z usług w podkatalogach innych usług. Domyślna semantyka do określania wartości konfiguracyjnych zezwala na pliki konfiguracyjne w katalogach zagnieżdżonych w celu zastąpienia wartości konfiguracji w katalogu nadrzędnym. W niektórych sytuacjach może to być niepożądane z różnych powodów. Konfiguracja usługi WCF obsługuje blokowanie wartości konfiguracyjnych, dzięki czemu konfiguracja zagnieżdżona generuje wyjątki, gdy usługa zagnieżdżona jest uruchamiana przy użyciu zastąpionych wartości konfiguracyjnych.  
   
- W tym przykładzie pokazano, jak do sterowania rejestrowaniem z znanych osobiście identyfikowalne dane osobowe w dziennikach śledzenia i wiadomości, takich jak nazwa użytkownika i hasło. Domyślnie rejestrowanie znane też danych osobowych jest wyłączone, jednak w niektórych sytuacjach rejestrowania danych osobowych może być istotne w debugowaniu aplikacji. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Ponadto w tym przykładzie użyto śledzenie i rejestrowanie komunikatów. Aby uzyskać więcej informacji, zobacz [śledzenia i rejestrowania komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) próbki.  
+ Ten przykład pokazuje, jak sterować rejestrowaniem znanych danych osobowych użytkownika w dziennikach śledzenia i komunikatów, takich jak nazwa użytkownika i hasło. Domyślnie rejestrowanie znanego elementu dane OSOBowe jest wyłączone, jednak w niektórych sytuacjach rejestrowanie się w charakterze dane OSOBowe może być ważne podczas debugowania aplikacji. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Ponadto ten przykład używa śledzenia i rejestrowania komunikatów. Aby uzyskać więcej informacji, zobacz [śledzenie i rejestrowanie komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) .  
   
-## <a name="encrypting-configuration-file-elements"></a>Szyfrowanie elementy pliku konfiguracji  
- Ze względów bezpieczeństwa we współużytkowanym środowisku hostingu w sieci Web może być pożądane, aby zaszyfrować niektórych elementów konfiguracji, takich jak parametry połączenia bazy danych, które mogą zawierać poufne informacje. Element konfiguracji, może być zaszyfrowany za pomocą narzędzia aspnet_regiis.exe znaleziony w folderze .NET Framework, na przykład % WINDIR%\Microsoft.NET\Framework\v4.0.20728.  
+## <a name="encrypting-configuration-file-elements"></a>Szyfrowanie elementów pliku konfiguracji  
+ Ze względów bezpieczeństwa w udostępnianym środowisku hostingu sieci Web może być pożądane zaszyfrowanie niektórych elementów konfiguracji, takich jak parametry połączenia bazy danych, które mogą zawierać informacje poufne. Element konfiguracji można zaszyfrować za pomocą narzędzia Aspnet_regiis. exe dostępnego w folderze .NET Framework, na przykład%WINDIR%\Microsoft.NET\Framework\v4.0.20728.  
   
-#### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Aby zaszyfrować wartości w sekcji appSettings w pliku Web.config dla przykładu  
+#### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Aby zaszyfrować wartości w sekcji appSettings w pliku Web. config dla przykładu  
   
-1. Otwórz wiersz polecenia przy użyciu Start -> Uruchom... Wpisz `cmd` i kliknij przycisk **OK**.  
+1. Otwórz wiersz polecenia, korzystając z uruchamiania > Uruchom.... Wpisz, a następnie kliknij przycisk **OK.** `cmd`  
   
-2. Przejdź do bieżącego katalogu .NET Framework, wydając polecenie: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
+2. Przejdź do bieżącego katalogu .NET Framework, wydając następujące polecenie: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
   
-3. Szyfrowanie ustawienia konfiguracji appSettings w folderze Web.config przy wykonaniu poniższego polecenia: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
+3. Zaszyfruj ustawienia konfiguracji appSettings w folderze Web. config, wydając następujące polecenie: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
- Więcej informacji o szyfrowaniu sekcje pliki konfiguracji można znaleźć, przeczytaj instrukcje na interfejsie DPAPI w konfiguracji platformy ASP.NET ([tworzenie zabezpieczanie aplikacji ASP.NET: Uwierzytelniania, autoryzacji i bezpieczna komunikacja](https://go.microsoft.com/fwlink/?LinkId=95137)) i porad na RSA w konfiguracji platformy ASP.NET ([How to: Szyfrowanie sekcji konfiguracyjnych w programie ASP.NET 2.0 przy użyciu RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
+ Więcej informacji o szyfrowaniu części plików konfiguracji można znaleźć, odczytując instrukcje dotyczące interfejsu DPAPI w konfiguracji ASP.NET ([tworzenie bezpiecznych aplikacji ASP.NET: Uwierzytelnianie, autoryzacja i Bezpieczna komunikacja](https://go.microsoft.com/fwlink/?LinkId=95137)oraz informacje na temat uwierzytelniania RSA w konfiguracji ASP.NET ([instrukcje: Szyfruj sekcje konfiguracyjne w ASP.NET 2,0 przy](https://go.microsoft.com/fwlink/?LinkId=95138)użyciu RSA).  
   
-## <a name="locking-configuration-file-elements"></a>Blokujące elementy pliku konfiguracji  
- W scenariuszach hostowanych w sieci Web jest możliwość usługi w podkatalogach usług. W takich przypadkach wartości konfiguracji dla usługi w podkatalogu są obliczane, sprawdzając wartości w pliku Machine.config i kolejno scalanie z wszelkich plikach Web.config w katalogi nadrzędne przenoszenia w dół drzewa katalogów i na koniec scalania Plik Web.config w katalogu, który zawiera usługi. Domyślne zachowanie dla większości elementów konfiguracji jest umożliwienie plików konfiguracji w podkatalogach do zastąpienie wartości ustawionych w katalogi nadrzędne. W niektórych sytuacjach może być pożądane, aby uniemożliwić pliki konfiguracyjne w podkatalogach zastąpienie wartości ustawionych w konfiguracji katalogu nadrzędnego.  
+## <a name="locking-configuration-file-elements"></a>Blokowanie elementów pliku konfiguracji  
+ W scenariuszach hostowanych w sieci Web możliwe jest posiadanie usług w podkatalogach usług. W takich sytuacjach wartości konfiguracyjne usługi w podkatalogu są obliczane przez badanie wartości w pliku Machine. config i ponowne scalanie z dowolnym plikami Web. config w katalogach nadrzędnych, przenosząc drzewo katalogów i wreszcie scalając Plik Web. config w katalogu zawierającym usługę. Domyślne zachowanie większości elementów konfiguracji polega na umożliwieniu plików konfiguracji w podkatalogach w celu zastąpienia wartości ustawionych w katalogach nadrzędnych. W niektórych sytuacjach może być wskazane, aby zapobiec zastępowaniu plików konfiguracji w podkatalogach przed zastępowaniem wartości ustawionych w konfiguracji katalogu nadrzędnego.  
   
- .NET Framework umożliwia zablokowanie elementy pliku konfiguracji, tak, aby konfiguracje, które zastępują elementy konfiguracji zablokowane zgłaszają wyjątki czasu wykonywania.  
+ .NET Framework umożliwia zablokowanie elementów pliku konfiguracji, aby konfiguracje, które przesłaniają zablokowane elementy konfiguracji, zgłaszają wyjątki w czasie wykonywania.  
   
- Element konfiguracji można zablokować, określając `lockItem` atrybutu dla węzła w pliku konfiguracji, na przykład, aby zablokować węzła CalculatorServiceBehavior w pliku konfiguracji usługi Kalkulator w zagnieżdżone pliki konfiguracji Nie można można użyć zmiany zachowania następującą konfigurację.  
+ Element konfiguracji można zablokować przez określenie `lockItem` atrybutu dla węzła w pliku konfiguracji, na przykład, aby zablokować węzeł CalculatorServiceBehavior w pliku konfiguracji, tak aby usługi kalkulatora w zagnieżdżonych plikach konfiguracji nie można zmienić zachowania, można użyć poniższej konfiguracji.  
   
 ```xml  
 <configuration>  
@@ -71,12 +71,12 @@ W tym przykładzie pokazano, jak kontrolować kilka funkcji związanych z zabezp
 </configuration>  
 ```  
   
- Blokowanie elementów konfiguracji, może być bardziej szczegółowe. Lista elementów, które można określić jako wartość `lockElements` zablokować zestaw elementów w obrębie kolekcji elementów podrzędnych. Lista atrybutów, można określić jako wartość `lockAttributes` zablokować zestaw atrybutów w obrębie elementu. Można zablokować cały zbiór elementów lub atrybutów z wyjątkiem określonej listy, określając `lockAllElementsExcept` lub `lockAllAttributesExcept` atrybutów w węźle.  
+ Blokowanie elementów konfiguracji może być bardziej szczegółowe. Lista elementów może być określona jako wartość `lockElements` w celu zablokowania zestawu elementów w kolekcji elementów podrzędnych. Listę atrybutów można określić jako wartość `lockAttributes` w celu zablokowania zestawu atrybutów w obrębie elementu. Cała kolekcja elementów lub atrybutów można zablokować z wyjątkiem określonej listy przez określenie `lockAllElementsExcept` atrybutów lub `lockAllAttributesExcept` w węźle.  
   
-## <a name="pii-logging-configuration"></a>Konfiguracja rejestrowania danych osobowych  
- Rejestrowanie danych osobowych jest kontrolowane przez dwa przełączniki: ustawienie komputera znajduje się w pliku Machine.config, który umożliwia akceptowanie lub odrzucanie rejestrowanie dane osobowe i ustawienia aplikacji, umożliwiający administrator aplikacji włączyć rejestrowanie danych osobowych dla każdego administratora komputera Źródło w pliku Web.config lub App.config.  
+## <a name="pii-logging-configuration"></a>Konfiguracja rejestrowania dane OSOBowe  
+ Rejestrowanie dane OSOBowe są kontrolowane przez dwa przełączniki: ustawienie na poziomie całego komputera w pliku Machine. config pozwala administratorowi komputera zezwolić na logowanie się lub odmówić rejestrowania dane OSOBowe oraz ustawienia aplikacji, które umożliwiają administratorowi aplikacji przełączanie rejestrowania elementów osobowych dla każdej z nich Źródło w pliku Web. config lub App. config.  
   
- Ustawienia komputera jest kontrolowany przez ustawienie `enableLoggingKnownPii` do `true` lub `false`w `machineSettings` elementu w pliku Machine.config. Na przykład poniżej umożliwia aplikacji włączyć rejestrowanie danych osobowych.  
+ Ustawienie na poziomie całego komputera jest kontrolowane przez ustawienie `enableLoggingKnownPii` do `true` lub `false`, w `machineSettings` elemencie pliku Machine. config. Na przykład następujące polecenie umożliwia aplikacjom włączenie rejestrowania danych osobowych.  
   
 ```xml  
 <configuration>  
@@ -87,11 +87,11 @@ W tym przykładzie pokazano, jak kontrolować kilka funkcji związanych z zabezp
 ```  
   
 > [!NOTE]
->  Plik Machine.config zawiera domyślna lokalizacja: % WINDIR%\Microsoft.NET\Framework\v2.0.50727\CONFIG.  
+> Plik Machine. config ma domyślną lokalizację:%WINDIR%\Microsoft.NET\Framework\v2.0.50727\CONFIG.  
   
- Jeśli `enableLoggingKnownPii` atrybut nie jest obecny w pliku Machine.config, rejestrowanie danych osobowych jest niedozwolone.  
+ `enableLoggingKnownPii` Jeśli atrybut nie jest obecny w pliku Machine. config, rejestrowanie dane osobowe nie jest dozwolone.  
   
- Włączanie rejestrowania dla aplikacji odbywa się przez ustawienie właściwości PII `logKnownPii` atrybut elementu źródłowego do `true` lub `false` w pliku Web.config lub App.config. Na przykład poniżej umożliwia rejestrowanie danych osobowych dotyczących rejestrowania śledzenia i rejestrowania komunikatów.  
+ Włączanie rejestrowania danych osobowych dla aplikacji jest wykonywane przez ustawienie `logKnownPii` atrybutu elementu źródłowego na `true` lub `false` w pliku Web. config lub App. config. Na przykład następujące umożliwia rejestrowanie danych osobowych zarówno w przypadku rejestrowania komunikatów, jak i rejestrowania śledzenia.  
   
 ```xml  
 <configuration>  
@@ -112,36 +112,36 @@ W tym przykładzie pokazano, jak kontrolować kilka funkcji związanych z zabezp
 </configuration>  
 ```  
   
- Jeśli `logKnownPii` atrybut nie jest określony, a następnie dane osobowe nie jest zalogowany.  
+ Jeśli atrybut `logKnownPii` nie jest określony, dane osobowe nie są rejestrowane.  
   
- Dane osobowe tylko jest rejestrowane, jeśli obie `enableLoggingKnownPii` ustawiono `true`, i `logKnownPii` ustawiono `true`.  
+ Dane osobowe są rejestrowane tylko `enableLoggingKnownPii` wtedy, gdy `true`oba są `logKnownPii` ustawione na i `true`są ustawione na.  
   
 > [!NOTE]
->  System.Diagnostics ignoruje wszystkie atrybuty wszystkich źródeł, z wyjątkiem pierwszej wymienione w pliku konfiguracji. Dodawanie `logKnownPii` atrybut do drugiego źródła w pliku konfiguracji nie ma znaczenia.  
+> System. Diagnostics ignoruje wszystkie atrybuty we wszystkich źródłach z wyjątkiem pierwszego z nich wymienionych w pliku konfiguracji. `logKnownPii` Dodanie atrybutu do drugiego źródła w pliku konfiguracji nie ma żadnego skutku.  
   
 > [!IMPORTANT]
->  Aby uruchomić ten przykład obejmuje ręcznej modyfikacji pliku Machine.config. Należy uważać podczas modyfikujących Machine.config niepoprawne wartości lub nieprawidłowa składnia może uniemożliwiać uruchomienia wszystkich aplikacji .NET Framework.  
+>  Do uruchomienia tego przykładu zawarto ręczną modyfikację pliku Machine. config. Należy zachować ostrożność podczas modyfikowania pliku Machine. config, ponieważ nieprawidłowe wartości lub Składnia mogą uniemożliwić uruchamianie wszystkich aplikacji .NET Framework.  
   
- Istnieje również możliwość szyfrowania przy użyciu interfejsu DPAPI i RSA elementy pliku konfiguracji. Aby uzyskać więcej informacji zobacz następujące linki:  
+ Istnieje również możliwość szyfrowania elementów plików konfiguracji przy użyciu funkcji DPAPI i RSA. Aby uzyskać więcej informacji, zobacz następujące linki:  
   
-- [Tworzenie aplikacji ASP.NET bezpiecznego: Uwierzytelniania, autoryzacji i bezpiecznej komunikacji](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [Tworzenie bezpiecznych aplikacji ASP.NET: Uwierzytelnianie, autoryzacja i Bezpieczna komunikacja](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
-- [Instrukcje: Szyfrowanie sekcji konfiguracyjnych w programie ASP.NET 2.0 przy użyciu RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [Instrukcje: Szyfruj sekcje konfiguracyjne w ASP.NET 2,0 przy użyciu RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Edytowanie pliku Machine.config można ustawić `enableLoggingKnownPii` atrybutu `true`, dodając węzły nadrzędne, jeśli to konieczne.  
+2. Edytuj plik Machine. config, aby `enableLoggingKnownPii` ustawić atrybut `true`na, dodając węzły nadrzędne w razie potrzeby.  
   
-3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-#### <a name="to-clean-up-the-sample"></a>Aby wyczyścić próbki  
+#### <a name="to-clean-up-the-sample"></a>Aby oczyścić przykład  
   
-1. Edytowanie pliku Machine.config można ustawić `enableLoggingKnownPii` atrybutu `false`.  
+1. Edytuj plik Machine. config, aby `enableLoggingKnownPii` ustawić atrybut `false`na.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Przykłady monitorowania oprogramowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

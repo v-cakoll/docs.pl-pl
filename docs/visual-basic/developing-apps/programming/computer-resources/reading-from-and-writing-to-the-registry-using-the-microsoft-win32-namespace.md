@@ -4,38 +4,38 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
-ms.openlocfilehash: a4a2e857e90dda640588cd05396922f55d0bd573
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: bf0d6ae329c5a09986a4a7bf641fe6820387ff22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589357"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916556"
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Odczytywanie z oraz zapisywanie do rejestru za pomocą przestrzeni nazw Microsoft.Win32 (Visual Basic)
-Mimo że `My.Computer.Registry` powinna obejmować potrzeb podstawowe, gdy Programowanie w odniesieniu do rejestru, można również użyć <xref:Microsoft.Win32.Registry> i <xref:Microsoft.Win32.RegistryKey> klas w <xref:Microsoft.Win32> przestrzeni nazw programu .NET Framework.  
+Chociaż `My.Computer.Registry` należy uwzględnić podstawowe potrzeby podczas programowania w rejestrze, można również <xref:Microsoft.Win32.Registry> użyć klas i <xref:Microsoft.Win32.RegistryKey> w <xref:Microsoft.Win32> przestrzeni nazw .NET Framework.  
   
-## <a name="keys-in-the-registry-class"></a>Klucze rejestru klasy  
- <xref:Microsoft.Win32.Registry> Klasa zapewnia kluczy rejestru podstawowej, które mogą być używane do dostępu podklucze i wartości. Klawisze podstawowej są tylko do odczytu. Poniższej tabeli wymieniono i opisano klucze siedem udostępnianych przez <xref:Microsoft.Win32.Registry> klasy.  
+## <a name="keys-in-the-registry-class"></a>Klucze w klasie rejestru  
+ <xref:Microsoft.Win32.Registry> Klasa dostarcza podstawowe klucze rejestru, których można użyć w celu uzyskania dostępu do podkluczy i ich wartości. Same klucze podstawowe są tylko do odczytu. W poniższej tabeli wymieniono i opisano siedem kluczy uwidacznianych przez <xref:Microsoft.Win32.Registry> klasę.  
   
 |**Key**|**Opis**|  
 |-------------|---------------------|  
-|<xref:Microsoft.Win32.Registry.ClassesRoot>|Definiuje typy dokumentów i właściwości skojarzone z tych typów.|  
-|<xref:Microsoft.Win32.Registry.CurrentConfig>|Zawiera informacje o konfiguracji sprzętu, który nie jest specyficzne dla użytkownika.|  
-|<xref:Microsoft.Win32.Registry.CurrentUser>|Zawiera informacje o bieżącym preferencje użytkownika, takie jak zmienne środowiskowe.|  
-|<xref:Microsoft.Win32.Registry.DynData>|Zawiera dane rejestru dynamicznych, takie jak używanej przez sterowniki urządzeń wirtualnych.|  
-|<xref:Microsoft.Win32.Registry.LocalMachine>|Zawiera pięć podkluczy (sprzętu, SAM, zabezpieczeń, oprogramowania i systemu) używane do przechowywania danych konfiguracji na komputerze lokalnym.|  
-|<xref:Microsoft.Win32.Registry.PerformanceData>|Zawiera informacje o wydajności dla składników oprogramowania.|  
-|<xref:Microsoft.Win32.Registry.Users>|Zawiera informacje o domyślnych preferencji użytkownika.|  
+|<xref:Microsoft.Win32.Registry.ClassesRoot>|Definiuje typy dokumentów i właściwości skojarzone z tymi typami.|  
+|<xref:Microsoft.Win32.Registry.CurrentConfig>|Zawiera informacje o konfiguracji sprzętu, które nie są specyficzne dla użytkownika.|  
+|<xref:Microsoft.Win32.Registry.CurrentUser>|Zawiera informacje o bieżących preferencjach użytkownika, takich jak zmienne środowiskowe.|  
+|<xref:Microsoft.Win32.Registry.DynData>|Zawiera dynamiczne dane rejestru, takie jak używane przez sterowniki urządzeń wirtualnych.|  
+|<xref:Microsoft.Win32.Registry.LocalMachine>|Zawiera pięć podkluczy (sprzęt, SAM, zabezpieczenia, oprogramowanie i system) przechowujących dane konfiguracji dla komputera lokalnego.|  
+|<xref:Microsoft.Win32.Registry.PerformanceData>|Zawiera informacje o wydajności składników oprogramowania.|  
+|<xref:Microsoft.Win32.Registry.Users>|Zawiera informacje o domyślnych preferencjach użytkownika.|  
   
 > [!IMPORTANT]
->  Bezpieczniej jest do zapisywania danych z bieżącym użytkownikiem (<xref:Microsoft.Win32.Registry.CurrentUser>) niż na komputerze lokalnym (<xref:Microsoft.Win32.Registry.LocalMachine>). Warunek, który jest zwykle określane jako "tureckie" występuje, gdy tworzysz klucz został wcześniej utworzony przez inną, potencjalnie złośliwego procesu. Aby temu zapobiec, należy użyć metody, takie jak <xref:Microsoft.Win32.RegistryKey.GetValue%2A>, która zwraca `Nothing` Jeśli klucz jeszcze nie istnieje.  
+> Bardziej bezpieczne jest zapisanie danych do bieżącego użytkownika (<xref:Microsoft.Win32.Registry.CurrentUser>) niż na komputerze lokalnym (<xref:Microsoft.Win32.Registry.LocalMachine>). Warunek, który jest zwykle określany jako "squatting", występuje, gdy tworzony klucz został wcześniej utworzony przez inny, prawdopodobnie złośliwy, proces. Aby tego uniknąć, należy użyć metody, takiej jak <xref:Microsoft.Win32.RegistryKey.GetValue%2A>, która zwraca `Nothing` , jeśli klucz jeszcze nie istnieje.  
   
 ## <a name="reading-a-value-from-the-registry"></a>Odczytywanie wartości z rejestru  
- Poniższy kod przedstawia sposób odczytywania ciągu z HKEY_CURRENT_USER.  
+ Poniższy kod ilustruje sposób odczytywania ciągu z HKEY_CURRENT_USER.  
   
  [!code-vb[VbResourceTasks#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#20)]  
   
- Poniższy kod odczytuje przyrostów, a następnie zapisuje ciąg do HKEY_CURRENT_USER.  
+ Poniższy kod odczytuje, zwiększa, a następnie zapisuje ciąg do HKEY_CURRENT_USER.  
   
  [!code-vb[VbResourceTasks#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#21)]  
   

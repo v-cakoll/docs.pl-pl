@@ -2,90 +2,90 @@
 title: Nauka przez przewodniki
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: e6b5f77d6d918ae1402074c9c3037ccadec8ac02
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f1061842343d7a700d3af5da5fdc6aec2f79396d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743033"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929211"
 ---
 # <a name="learning-by-walkthroughs"></a>Nauka przez przewodniki
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentacja zawiera wskazówki dotyczące kilku. W tym temacie rozwiązuje problemy ogólne wskazówki (w tym Rozwiązywanie problemów) i zawiera łącza do kilku klasy podstawowej wskazówki umożliwiające uzyskiwanie informacji o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentacja zawiera kilka przewodników. Ten temat dotyczy niektórych ogólnych problemów z instruktażem (w tym rozwiązywania problemów) i zawiera linki do kilku przewodników dotyczących [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]poziomu wejścia do uczenia się.  
   
 > [!NOTE]
->  Przewodniki w tej sekcji wprowadzenie do udostępnienia do kodu podstawowego, który obsługuje [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologii. W praktyce rzeczywiste będzie zazwyczaj przy użyciu projektów Object Relational Designer i Windows Forms z [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji. Dokumentacja O/R Designer zapewnia wskazówki i przykłady w tym celu.  
+> Instruktaże w tej sekcji wprowadzenie uwidaczniają kod podstawowy, który obsługuje [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologię. W rzeczywistej obsłużeniu zwykle projekty Object Relational Designer i Windows Forms do implementowania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji. Dokumentacja projektanta O/R zawiera przykłady i instruktaże do tego celu.  
   
-## <a name="getting-started-walkthroughs"></a>Wprowadzenie — wskazówki  
- Kilka wskazówki są dostępne w tej sekcji. Te przewodniki są oparte na przykładowej bazy danych Northwind i przedstawić [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] funkcji tempie delikatnie minimalnej złożoności.  
+## <a name="getting-started-walkthroughs"></a>Instruktaże Wprowadzenie  
+ W tej sekcji są dostępne kilka instruktaży. Te przewodniki są oparte na przykładowej bazie danych Northwind i stanowią [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] łagodne tempo z minimalnymi złożonością.  
   
- Typowy postęp do wykonania będzie następujący:  
+ Typowy postęp powinien być następujący:  
   
-|Cel|Visual Basic|C#|  
+|Jakim|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|Utwórz klasę jednostki i wykonania prostego zapytania.|[Przewodnik: Prosty Model obiektu i zapytanie (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Przewodnik: Prosty Model obiektu i zapytanie (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|Dodaj klasę sekundy, a następnie wykonaj bardziej złożonego zapytania.<br /><br /> (Wymaga zakończenia poprzednim przewodniku).|[Przewodnik: Wykonywanie zapytań w relacjach (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Przewodnik: Wykonywanie zapytań w relacjach (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|Dodawanie, zmienianie i usuwać elementy w bazie danych.|[Przewodnik: Manipulowanie danymi (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Przewodnik: Manipulowanie danymi (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Używanie procedur składowanych.|[Przewodnik: Przy użyciu wyłącznie procedur składowanych (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Przewodnik: Przy użyciu wyłącznie procedur składowanych (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|Utwórz klasę jednostki i wykonaj proste zapytanie.|[Przewodnik: Prosty model obiektu i zapytanie (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Przewodnik: Prosty model obiektu i zapytanie (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
+|Dodaj drugą klasę i wykonaj bardziej skomplikowaną kwerendę.<br /><br /> (Wymaga zakończenia poprzedniego przewodnika).|[Przewodnik: Wykonywanie zapytań w relacjach (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Przewodnik: Wykonywanie zapytań w relacjachC#()](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
+|Dodawanie, zmienianie i usuwanie elementów w bazie danych.|[Przewodnik: Manipulowanie danymi (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Przewodnik: Manipulowanie danymi (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
+|Użyj procedur składowanych.|[Przewodnik: Używanie tylko procedur składowanych (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Przewodnik: Używanie tylko procedur składowanychC#()](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>Ogólne  
- Poniższe informacje ogólnie rzecz biorąc odnoszą się do tych przewodników:  
+ Poniższe informacje dotyczą następujących przewodników:  
   
-- Środowisko: Każdy [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Instruktaż korzysta z programu Visual Studio jako jego zintegrowanego środowiska programistycznego (IDE).  
+- Naturalne Każdy [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Przewodnik używa programu Visual Studio jako zintegrowanego środowiska programistycznego (IDE).  
   
-- Aparaty SQL: Te przewodniki są zapisywane do zaimplementowania za pomocą programu SQL Server Express. Jeśli nie masz programu SQL Server Express, można pobrać bezpłatnie. Aby uzyskać więcej informacji, zobacz [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- Aparaty SQL: Te instruktaże są zapisywane do wdrożenia przy użyciu SQL Server Express. Jeśli nie masz SQL Server Express, możesz pobrać bezpłatnie. Aby uzyskać więcej informacji, zobacz [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
-    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wskazówki dotyczące Użyj nazwy pliku jako parametry połączenia. Po prostu określenie nazwy pliku jest wygodne, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapewnia użytkownikom programu SQL Server Express. Zawsze należy zwrócić uwagę na problemy z zabezpieczeniami. Aby uzyskać więcej informacji, zobacz [zabezpieczeń w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+    > [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Instruktaże używają nazwy pliku jako parametrów połączenia. Po prostu określenie nazwy pliku jest wygodą, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] która zapewnia użytkownikom SQL Server Express. Zawsze należy zwrócić uwagę na problemy z zabezpieczeniami. Aby uzyskać więcej informacji, zobacz [zabezpieczenia w LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wskazówki dotyczące zwykle wymagają przykładowej bazy danych Northwind. Aby uzyskać więcej informacji, zobacz [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Instruktaże wymagają zwykle przykładowej bazy danych Northwind. Aby uzyskać więcej informacji, zobacz [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
-- Polecenia menu, widocznych na wskazówki i okien dialogowych mogą różnić się od tych opisanych w pomocy, w zależności od ustawień aktywnych lub wersji programu Visual Studio. Aby zmienić swoje ustawienia, kliknij przycisk **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+- Okna dialogowe i polecenia menu wyświetlane w przewodnikach mogą różnić się od tych opisanych w pomocy, w zależności od ustawień aktywnych lub wersji programu Visual Studio. Aby zmienić ustawienia, kliknij przycisk **Importuj i Eksportuj ustawienia** w menu **Narzędzia** . Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-- Aby uzyskać wskazówki dotyczące scenariuszy wielowarstwowych serwer musi znajdować się na komputerze, który różni się od komputerze deweloperskim, a musi mieć odpowiednie uprawnienia dostępu do serwera.  
+- W przypadku przewodników związanych z wielowarstwowymi scenariuszami serwer musi znajdować się na komputerze, który jest odrębny od komputera deweloperskiego, a użytkownik musi mieć odpowiednie uprawnienia dostępu do serwera.  
   
-- Nazwa klasy, która zazwyczaj reprezentuje tabeli zamówienia w bazie danych Northwind jest `[Order]`. Anulowanie jest wymagane, ponieważ `Order` jest słowem kluczowym w języku Visual Basic.  
+- Nazwa klasy, która zwykle reprezentuje tabelę Orders w przykładowej bazie danych Northwind, to `[Order]`. Ucieczki jest wymagane, ponieważ `Order` jest słowem kluczowym w Visual Basic.  
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
- Mogą wystąpić błędy czasu wykonywania, ponieważ nie masz wystarczających uprawnień dostępu do baz danych używanych w tych przewodników. Zobacz poniższe kroki, aby pomóc w rozwiązaniu typowych problemów.  
+ Błędy w czasie wykonywania mogą wystąpić, ponieważ nie masz wystarczających uprawnień, aby uzyskać dostęp do baz danych używanych w tych przewodnikach. Zapoznaj się z poniższymi krokami, aby pomóc w rozwiązaniu najbardziej typowych problemów.  
   
-### <a name="log-on-issues"></a>Problemy dotyczące logowania  
- Aplikację może podjąć próbę dostępu do bazy danych za pomocą logowania bazy danych, które nie są akceptowane.  
+### <a name="log-on-issues"></a>Problemy z logowaniem  
+ Aplikacja może próbować uzyskać dostęp do bazy danych za pomocą logowania do bazy danych, której nie akceptuje.  
   
-##### <a name="to-verify-or-change-the-database-log-on"></a>Aby sprawdzić lub zmienić bazy danych logowania  
+##### <a name="to-verify-or-change-the-database-log-on"></a>Aby sprawdzić lub zmienić logowanie do bazy danych  
   
-1. Na Windows **Start** menu wskaż **wszystkie programy**, **Microsoft SQL Server 2005**, wskaż polecenie **narzędzia konfiguracji**, a następnie kliknij przycisk **Menedżera konfiguracji SQL Server**.  
+1. W menu **Start** systemu Windows wskaż **wszystkie programy**, **Microsoft SQL Server 2005**, wskaż **Narzędzia konfiguracji**, a następnie kliknij **SQL Server Configuration Manager**.  
   
-2. W okienku po lewej stronie **Menedżera konfiguracji SQL Server**, kliknij przycisk **usług SQL Server 2005**.  
+2. W lewym okienku **Configuration Manager SQL Server**kliknij pozycję **SQL Server 2005 Services**.  
   
-3. W okienku po prawej stronie kliknij prawym przyciskiem myszy **programu SQL Server (SQLEXPRESS)** , a następnie kliknij przycisk **właściwości**.  
+3. W prawym okienku kliknij prawym przyciskiem myszy pozycję **SQL Server (SQLExpress)** , a następnie kliknij pozycję **Właściwości**.  
   
-4. Kliknij przycisk **logowanie** kartę i sprawdź, jak chcesz zalogować się do serwera.  
+4. Kliknij kartę **Logowanie** i sprawdź, jak próbujesz się zalogować na serwerze.  
   
-     W większości przypadków **systemu lokalnego** działa.  
+     W większości przypadków działa **System lokalny** .  
   
-     Jeśli wprowadzisz zmiany, kliknij przycisk **ponowne uruchomienie** ponownie uruchomić usługę.  
+     Jeśli wprowadzisz zmiany, kliknij przycisk **Uruchom ponownie** , aby ponownie uruchomić usługę.  
   
-### <a name="protocols"></a>Protokoły  
- Czasami protokołów wybrano prawidłowo aplikacji dostęp do bazy danych. Na przykład **potoków nazwanych** protokołu, który jest wymagany do instrukcji [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], nie jest domyślnie włączona.  
+### <a name="protocols"></a>Protokołów  
+ Czasami protokoły mogą nie być poprawnie ustawione dla aplikacji w celu uzyskania dostępu do bazy danych. Na przykład protokół **nazwanych potoków** , który jest wymagany dla przewodników w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], nie jest domyślnie włączony.  
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>Aby włączyć protokół nazwanych potoków  
   
-1. W okienku po lewej stronie **Menedżera konfiguracji SQL Server**, rozwiń węzeł **konfiguracja sieci programu SQL Server 2005**, a następnie kliknij przycisk **protokoły dla SQLEXPRESS**.  
+1. W lewym okienku **Configuration Manager SQL Server**rozwiń węzeł **konfiguracja sieci w SQL Server 2005**, a następnie kliknij pozycję **Protokoły dla programu SQLExpress**.  
   
-2. Upewnij się, że w okienku po prawej stronie **potoków nazwanych** jest włączony protokół. Jeśli nie, kliknij prawym przyciskiem myszy **nazwane potoki** a następnie kliknij przycisk **Włącz**.  
+2. Upewnij się, że w okienku po prawej stronie jest włączony protokół nazwanych potoków. Jeśli tak nie jest, kliknij prawym przyciskiem myszy pozycję **nazwy potoki** , a następnie kliknij pozycję **Włącz**.  
   
-     Trzeba będzie zatrzymać i ponownie uruchomić usługę. Wykonaj kroki opisane w następnym bloku.  
+     Trzeba będzie zatrzymać i ponownie uruchomić usługę. Postępuj zgodnie z instrukcjami w następnym bloku.  
   
-### <a name="stopping-and-restarting-the-service"></a>Zatrzymywanie i ponowne uruchomienie usługi  
- Należy zatrzymać i ponownie uruchomić usługi, zanim zmiany zostały wprowadzone.  
+### <a name="stopping-and-restarting-the-service"></a>Zatrzymywanie i ponowne uruchamianie usługi  
+ Aby zmiany zaczęły obowiązywać, należy zatrzymać i ponownie uruchomić usługi.  
   
-##### <a name="to-stop-and-restart-the-service"></a>Aby zatrzymać i ponownie uruchom usługę  
+##### <a name="to-stop-and-restart-the-service"></a>Aby zatrzymać i ponownie uruchomić usługę  
   
-1. W okienku po lewej stronie **Menedżera konfiguracji SQL Server**, kliknij przycisk **usług SQL Server 2005**.  
+1. W lewym okienku **Configuration Manager SQL Server**kliknij pozycję **SQL Server 2005 Services**.  
   
-2. W okienku po prawej stronie kliknij prawym przyciskiem myszy **programu SQL Server (SQLEXPRESS)** , a następnie kliknij przycisk **zatrzymać**.  
+2. W prawym okienku kliknij prawym przyciskiem myszy pozycję **SQL Server (SQLExpress)** , a następnie kliknij przycisk **Zatrzymaj**.  
   
-3. Kliknij prawym przyciskiem myszy **programu SQL Server (SQLEXPRESS)** , a następnie kliknij przycisk **ponowne uruchomienie**.  
+3. Kliknij prawym przyciskiem myszy pozycję **SQL Server (SQLExpress)** , a następnie kliknij pozycję **Uruchom ponownie**.  
   
 ## <a name="see-also"></a>Zobacz także
 

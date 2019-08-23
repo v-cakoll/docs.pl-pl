@@ -7,80 +7,80 @@ helpviewer_keywords:
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6a20a2e678c10157fed7da6f5de9f3ffee0c9ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f427e2260fb26be7db0a29c47f38a3cb32dd34e9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705548"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921430"
 ---
 # <a name="programming-with-assemblies"></a>Programowanie za pomocą zestawów
-Zestawy są blokami konstrukcyjnymi .NET Framework; tworzą one podstawową jednostką wdrażania, kontroli wersji, ponownego użycia, określania zakresu aktywacji i uprawnień zabezpieczeń. Zestaw zawiera środowisko uruchomieniowe języka wspólnego informacje potrzebne do należy pamiętać o implementacji typu. Jest to kolekcja typów i zasobów, które zostały opracowane w celu współpracują ze sobą i tworzą jednostkę logiczną funkcji. Do środowiska uruchomieniowego typem nie istnieje poza kontekstem zestawu.  
+Zestawy są blokami konstrukcyjnymi .NET Framework; tworzą one podstawową jednostkę wdrożenia, kontrolę wersji, ponowne użycie, zakres aktywacji i uprawnienia zabezpieczeń. Zestaw udostępnia środowisko uruchomieniowe języka wspólnego z informacjami, które muszą być świadome implementacji typów. Jest to Kolekcja typów i zasobów, które są tworzone w celu współdziałania i tworzą logiczną jednostkę funkcjonalności. Dla środowiska uruchomieniowego typ nie istnieje poza kontekstem zestawu.  
   
- W tej sekcji opisano sposób tworzenia modułów, tworzenie zestawów z modułów, utworzyć parę kluczy i podpisać zestaw silną nazwą i Instalowanie zestawu w globalnej pamięci podręcznej. Ponadto w tej sekcji opisano sposób używania [MSIL Disassembler (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Aby wyświetlić dane manifestu zestawu.  
+ W tej sekcji opisano sposób tworzenia modułów, tworzenia zestawów z modułów, tworzenia pary kluczy i podpisywania zestawu o silnej nazwie, a następnie instalowania zestawu w globalnej pamięci podręcznej zestawów. Ponadto w tej sekcji opisano sposób używania [Dezasembler MSIL (Ildasm. exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) do wyświetlania informacji manifestu zestawu.  
   
 > [!NOTE]
->  Począwszy od programu .NET Framework w wersji 2.0 środowisko uruchomieniowe nie załaduje zestawu, który został skompilowany przy użyciu wersji programu .NET Framework, który ma wyższy numer wersji niż obecnie załadowanym środowiskiem uruchomieniowym. Dotyczy to kombinacja składniki główny i pomocniczy numer wersji.  
+> Począwszy od .NET Framework w wersji 2,0 środowisko uruchomieniowe nie załaduje zestawu, który został skompilowany przy użyciu wersji .NET Framework, która ma wyższy numer wersji niż aktualnie załadowane środowisko uruchomieniowe. Dotyczy to kombinacji głównych i pomocniczych składników numeru wersji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)  
- Zawiera omówienie pojedynczego pliku i wieloplikowe zestawy.  
+ Zawiera omówienie zestawów jednoplikowych i wieloplikowych.  
   
  [Nazwy zestawów](../../../docs/framework/app-domains/assembly-names.md)  
- Omówienie zestawów nazewnictwa.  
+ Zawiera omówienie nazewnictwa zestawów.  
   
- [Instrukcje: Określić w pełni kwalifikowanej nazwy zestawu](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
- W tym artykule opisano, jak określić w pełni kwalifikowana nazwa zestawu.  
+ [Instrukcje: Określanie w pełni kwalifikowanej nazwy zestawu](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+ Opisuje sposób określania w pełni kwalifikowanej nazwy zestawu.  
   
  [Uruchamianie aplikacji intranetowych w trybie pełnego zaufania](../../../docs/framework/app-domains/running-intranet-applications-in-full-trust.md)  
- Opisuje sposób określania zasad zabezpieczeń w starszej wersji dla zestawów pełnego zaufania w udziale sieci intranet.  
+ Opisuje sposób określania starszych zasad zabezpieczeń dla zestawów pełnego zaufania w udziale intranetowym.  
   
  [Lokalizacja zestawu](../../../docs/framework/app-domains/assembly-location.md)  
- Zawiera omówienie gdzie umieścić zestawy.  
+ Zawiera omówienie lokalizacji lokalizowania zestawów.  
   
- [Instrukcje: Kompilacja zestawów pojedynczego pliku](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
- W tym artykule opisano sposób tworzenia zestawu pojedynczego pliku.  
+ [Instrukcje: Kompilowanie zestawu jednoplikowego](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
+ Opisuje sposób tworzenia zestawu jednoplikowego.  
   
  [Zestawy wieloplikowe](../../../docs/framework/app-domains/multifile-assemblies.md)  
- W tym artykule opisano tworzenie zespołów wieloplikowych przyczyny.  
+ Opisuje przyczyny tworzenia zestawów wieloplikowych.  
   
- [Instrukcje: Kompilacja zestawów wieloplikowych](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
- W tym artykule opisano, jak utworzyć zestaw wieloplikowy.  
+ [Instrukcje: Kompilowanie zestawu wieloplikowego](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+ Opisuje sposób tworzenia zestawu wieloplikowego.  
   
  [Ustawienie atrybutów zestawu](../../../docs/framework/app-domains/set-assembly-attributes.md)  
- Zawiera opis atrybutów zestawu i sposobu ich ustawiania.  
+ Opisuje atrybuty zestawu i sposób ich ustawiania.  
   
  [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- W tym artykule opisano, jak i dlaczego należy podpisać zestaw silną nazwą i zawiera tematy Pomocy.  
+ Opisuje, jak i dlaczego podpisać zestaw za pomocą silnej nazwy i zawiera tematy porad.  
   
  [Opóźnione podpisywanie zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md)  
- W tym artykule opisano sposób Opóźnij podpisanie zestawu.  
+ Opisuje, jak opóźnić podpisywanie zestawu.  
   
  [Praca z zestawami i globalną pamięcią podręczną zestawów](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- W tym artykule opisano, jak i dlaczego dodawania zestawów do globalnej pamięci podręcznej i zawiera tematy Pomocy.  
+ Opisuje, jak i dlaczego należy dodać zestawy do globalnej pamięci podręcznej zestawów i zawiera tematy porad.  
   
- [Instrukcje: Wyświetlanie zawartości zestawu](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- Opisuje sposób używania MSIL Disassembler (Ildasm.exe), aby wyświetlić zawartość zestawu.  
+ [Instrukcje: Wyświetl zawartość zestawu](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ Opisuje sposób używania Dezasembler MSIL (Ildasm. exe) do wyświetlania zawartości zestawu.  
   
  [Przekazywanie dalej typu w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/type-forwarding-in-the-common-language-runtime.md)  
- Opisuje sposób używania przekazywanie dalej typu na przeniesienie typu do innego zestawu bez przerywania istniejących aplikacji.  
+ Opisuje, jak używać przekazywania typów do przenoszenia typu do innego zestawu bez przerywania istniejących aplikacji.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Reflection.Assembly>  
  Klasa .NET Framework, która reprezentuje zestaw.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Instrukcje: Uzyskiwanie informacji dotyczących elementu członkowskiego typów i z zestawu](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
- W tym artykule opisano, jak programowo uzyskać typ i inne informacje z zestawu.  
+ [Instrukcje: Uzyskiwanie informacji o typie i elemencie członkowskim z zestawu](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ Opisuje, w jaki sposób programowo uzyskać typ i inne informacje z zestawu.  
   
  [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- Zawiera omówienie pojęć dotyczących języka wspólnego zestawów środowiska uruchomieniowego.  
+ Zawiera omówienie pojęć dotyczących zestawów środowiska uruchomieniowego języka wspólnego.  
   
  [Przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md)  
- Zawiera omówienie powiązania zestawu oraz o <xref:System.Reflection.AssemblyVersionAttribute> i <xref:System.Reflection.AssemblyInformationalVersionAttribute> atrybutów.  
+ Zawiera omówienie powiązań zestawów i <xref:System.Reflection.AssemblyVersionAttribute> atrybutów i. <xref:System.Reflection.AssemblyInformationalVersionAttribute>  
   
  [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- W tym artykule opisano, jak środowisko wykonawcze określa, które zestawu do używania w celu spełnienia żądania powiązania.  
+ Opisuje, jak środowisko uruchomieniowe określa, który zestaw ma być używany do realizacji żądania powiązania.  
   
  [Odbicie](../../../docs/framework/reflection-and-codedom/reflection.md)  
- Opisuje sposób używania **odbicia** klasy, aby uzyskać informacje o zestawie.
+ Opisuje sposób użycia klasy **odbicia** w celu uzyskania informacji o zestawie.

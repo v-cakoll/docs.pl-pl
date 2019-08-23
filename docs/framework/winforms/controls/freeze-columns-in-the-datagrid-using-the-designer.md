@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column freezing
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-ms.openlocfilehash: d38c8d73bc70e7e521b476ca78c8f102d003c538
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 7ebdf7a1598ac3cd61005ae607e5bfbe7cb49059
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040334"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933719"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Instrukcje: blokowanie kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Gdy użytkownicy wyświetlają dane w kontrolce <xref:System.Windows.Forms.DataGridView> Windows Forms, czasami muszą odwoływać się do pojedynczej kolumny lub zestawu kolumn często. Na przykład podczas wyświetlania tabeli informacji o kliencie, która zawiera wiele kolumn, warto wyświetlić nazwę klienta przez cały czas, jednocześnie włączając inne kolumny przewijane poza widocznym regionem.
@@ -30,7 +30,7 @@ Gdy użytkownicy wyświetlają dane w kontrolce <xref:System.Windows.Forms.DataG
 3. W siatce **Właściwości kolumny** Ustaw <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> właściwość na `true`.
 
     > [!NOTE]
-    >  Można także zablokować kolumnę podczas dodawania, zaznaczając pole **zablokowane** w oknie dialogowym **Dodaj kolumnę** .
+    > Można także zablokować kolumnę podczas dodawania, zaznaczając pole **zablokowane** w oknie dialogowym **Dodaj kolumnę** .
 
 ## <a name="see-also"></a>Zobacz także
 

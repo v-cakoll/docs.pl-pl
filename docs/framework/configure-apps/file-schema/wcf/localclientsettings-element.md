@@ -2,21 +2,21 @@
 title: <localClientSettings>, element
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: c5caf183e37edda6efc79ec81f1628180379fd46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7331105582a4a48b7edd8cd4f6a691771b0b8ff
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765781"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930799"
 ---
 # <a name="localclientsettings-element"></a>\<localClientSettings> element
-Określa ustawienia zabezpieczenia lokalnego klienta dla tego powiązania.  
+Określa ustawienia zabezpieczeń lokalnego klienta dla tego powiązania.  
   
  \<system.serviceModel>  
-\<powiązania >  
+\<> powiązań  
 \<customBinding>  
-\<Powiązanie >  
-\<security>  
+\<> powiązania  
+\<> zabezpieczeń  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,16 +44,16 @@ Określa ustawienia zabezpieczenia lokalnego klienta dla tego powiązania.
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |`cacheCookies`|Wartość logiczna określająca, czy włączone jest buforowanie plików cookie. Wartość domyślna to `false`.|  
-|`cookieRenewalThresholdPercentage`|Liczba całkowita określająca maksymalny procent plików cookie, które mogą być odnawiane. Wartość ta powinna być się w zakresie od 0 do 100 włącznie. Domyślna wartość to 90.|  
-|`detectReplays`|Wartość logiczna, która określa, czy ataki metodą kanał są wykrywane i automatycznie uwzględnione. Wartość domyślna to `false`.|  
-|`maxClockSkew`|A <xref:System.TimeSpan> określający maksymalną różnicę czasu między zegarami systemowymi dwóch uczestników komunikacji. Wartość domyślna to "00: 05:00".<br /><br /> W przypadku tę wartość ustawiono domyślną, odbiornik akceptuje komunikaty, w których sygnatury czasowe w czasie wysyłania się do 5 minut później, lub wcześniej niż czas wiadomość została odebrana. Wiadomości, które nie są przekazywane do testu czas wysłania są odrzucane. To ustawienie jest używane w połączeniu z `replayWindow` atrybutu.|  
-|`maxCookieCachingTime`|Element <xref:System.TimeSpan> , który określa maksymalny czas istnienia plików cookie. Wartość domyślna to "10675199.02:48:05.4775807".|  
-|`reconnectTransportOnFailure`|Wartość logiczna określająca, czy połączenia za pomocą usługi WS-Reliable messaging podejmie próbę ponownego połączenia po błędów transportu. Wartość domyślna to `true`, co oznacza, że nieskończonej prób ponownego połączenia są próby. Cykl jest dzielony przez limit czasu braku aktywności, co powoduje zgłoszenie wyjątku, gdy nie można ich połączyć kanału.|  
-|`replayCacheSize`|Dodatnia liczba całkowita określająca liczbę buforowanych identyfikatorów jednorazowych używanych do wykrywania powtórzeń. W przypadku przekroczenia tego limitu najstarsza identyfikator jednorazowy jest usuwany, a nowy identyfikator jednorazowy jest tworzona dla nowej wiadomości. Wartość domyślna wynosi 500 000.|  
-|`replayWindow`|Element <xref:System.TimeSpan> , który określa czas, w której poszczególne komunikatów są poprawni.<br /><br /> Po tym czasie nie będą akceptowane wiadomością wysłaną za pomocą tego samego identyfikatora jednorazowego, wysyłane przed. Ten atrybut jest używany w połączeniu z `maxClockSkew` atrybutu, aby zapobiec włamania. Osoba atakująca może oparte na metodzie powtórzeń komunikat po wygaśnięciu okna powtarzania. Ten komunikat, jednak będą się kończyć niepowodzeniem `maxClockSkew` testu, która odrzuca wiadomości z sygnaturami czasowymi czas wysłania, aż określony czas później lub wcześniejszy niż czas wiadomość została odebrana.|  
-|`sessionKeyRenewalInterval`|Element <xref:System.TimeSpan> , który określa czas, po upływie którego inicjator odnowi klucz sesji zabezpieczeń. Wartość domyślna to "10: 00:00".|  
-|`sessionKeyRolloverInterval`|A <xref:System.TimeSpan> określający przedział czasu poprzedniego klucza sesji obowiązuje w wiadomościach przychodzących podczas odnawiania klucza. Wartość domyślna to "00: 05:00".<br /><br /> Podczas odnawiania klucza klient i serwer muszą zawsze wysyłania komunikatów przy użyciu najnowszych dostępnych klucza. Obie strony będzie akceptować komunikaty przychodzące zabezpieczony za pomocą klucza poprzedniej sesji, do momentu wygaśnięcia podczas przerzucania.|  
-|`timestampValidityDuration`|Dodatnią <xref:System.TimeSpan> , który określa czas, w którym sygnatura czasowa jest poprawna. Wartość domyślna to "00: 15:00".|  
+|`cookieRenewalThresholdPercentage`|Liczba całkowita określająca maksymalny procent plików cookie, które mogą być odnawiane. Ta wartość powinna należeć do zakresu od 0 do 100 włącznie. Wartość domyślna to 90.|  
+|`detectReplays`|Wartość logiczna określająca, czy ataki powtarzające się na kanał są wykrywane i rozwiązywane automatycznie. Wartość domyślna to `false`.|  
+|`maxClockSkew`|A <xref:System.TimeSpan> , która określa maksymalną różnicę czasu między zegarami systemowymi dwóch osób komunikujących się. Wartość domyślna to "00:05:00".<br /><br /> Gdy ta wartość jest ustawiona domyślnie, odbiorca akceptuje komunikaty o sygnaturach czasowych czasu wysłania do 5 minut później lub wcześniej od momentu odebrania komunikatu. Komunikaty, które nie przeszły testu czasu wysłania, są odrzucane. To ustawienie jest używane w połączeniu z `replayWindow` atrybutem.|  
+|`maxCookieCachingTime`|A <xref:System.TimeSpan> określa maksymalny okres istnienia plików cookie. Wartość domyślna to "10675199.02:48:05.4775807".|  
+|`reconnectTransportOnFailure`|Wartość logiczna określająca, czy połączenia korzystające z protokołu WS-niezawodny będą podejmować próby ponownego nawiązania połączenia po awariach transportu. Wartość domyślna to `true`, co oznacza, że podjęto próbę nieograniczonej próby ponownego nawiązania połączenia. Cykl jest przerwany przez limit czasu braku aktywności, który powoduje, że kanał zgłasza wyjątek, gdy nie można ponownie nawiązać połączenia.|  
+|`replayCacheSize`|Dodatnia liczba całkowita określająca liczbę buforowanych identyfikatorów jednorazowych używanych do wykrywania powtórzeń. W przypadku przekroczenia tego limitu najstarszy identyfikator jednorazowy zostanie usunięty i dla nowej wiadomości zostanie utworzony nowy identyfikator jednorazowy. Wartość domyślna to 500000.|  
+|`replayWindow`|A <xref:System.TimeSpan> , który określa czas, w którym poszczególne wiadomości identyfikatorów jednorazowych są prawidłowe.<br /><br /> Po tym czasie zostanie wysłany komunikat z tym samym identyfikatorem jednorazowym, który został wysłany wcześniej, nie zostanie zaakceptowany. Ten atrybut jest używany w połączeniu z `maxClockSkew` atrybutem w celu zapobiegania atakom metodą powtórzeń. Osoba atakująca może odtworzyć komunikat po wygaśnięciu okna powtarzania. Jednak ten komunikat `maxClockSkew` przetestuje niepowodzenie testu, który odrzuca komunikaty z sygnaturami czasowymi czasu wysłania do określonego czasu później lub wcześniej od momentu odebrania komunikatu.|  
+|`sessionKeyRenewalInterval`|A <xref:System.TimeSpan> , który określa czas, po którym inicjator odnowi klucz dla sesji zabezpieczeń. Wartość domyślna to "10:00:00".|  
+|`sessionKeyRolloverInterval`|A <xref:System.TimeSpan> określa przedział czasu, w którym poprzedni klucz sesji jest ważny w przypadku komunikatów przychodzących podczas odnawiania klucza. Wartość domyślna to "00:05:00".<br /><br /> Podczas odnawiania klucza klient i serwer muszą zawsze wysyłać komunikaty przy użyciu najbardziej aktualnego dostępnego klucza. Obie strony będą akceptować wiadomości przychodzące zabezpieczone przy użyciu poprzedniego klucza sesji do momentu wygaśnięcia czasu przerzucania.|  
+|`timestampValidityDuration`|Wartość dodatnia <xref:System.TimeSpan> określająca czas ważności sygnatury czasowej. Wartość domyślna to "00:15:00".|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -62,11 +62,11 @@ Określa ustawienia zabezpieczenia lokalnego klienta dla tego powiązania.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Określa opcje zabezpieczeń dla niestandardowego powiązania.|  
-|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Określa wartości domyślne używane do inicjowania usługi bezpiecznej konwersacji.|  
+|[\<> zabezpieczeń](security-of-custombinding.md)|Określa opcje zabezpieczeń dla niestandardowego powiązania.|  
+|[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Określa wartości domyślne używane do inicjowania usługi bezpiecznej konwersacji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ustawienia są lokalne w tym sensie, że nie są one ustawienia pochodzące z zasad zabezpieczeń usługi.  
+ Ustawienia są lokalne w sensie, że nie są ustawieniami pochodzącymi z zasad zabezpieczeń usługi.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -75,9 +75,9 @@ Określa ustawienia zabezpieczenia lokalnego klienta dla tego powiązania.
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Zabezpieczenia powiązania niestandardowego](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [Instrukcje: Tworzenie niestandardowego powiązania przy użyciu elementu SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Zabezpieczenia powiązania niestandardowego](../../../wcf/samples/custom-binding-security.md)

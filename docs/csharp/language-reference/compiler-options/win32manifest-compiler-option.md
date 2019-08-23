@@ -8,12 +8,12 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-ms.openlocfilehash: 5fc8a89faaa7fac3413000afdf94b6a96b23ab6d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 24677b145974af03e6ddcac1b9bab5907ab70c7b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606263"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924675"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-WIN32MANIFEST (C# opcje kompilatora)
 Użyj opcji **-WIN32MANIFEST** , aby określić zdefiniowany przez użytkownika plik manifestu aplikacji Win32, który ma zostać osadzony w przenośnym pliku wykonywalnym (PE) projektu.  
@@ -32,7 +32,7 @@ Użyj opcji **-WIN32MANIFEST** , aby określić zdefiniowany przez użytkownika 
  Domyślnie kompilator wizualny C# osadzi manifest aplikacji, który określa żądany poziom wykonywania "jako Źródło". Tworzy manifest w tym samym folderze, w którym jest skompilowany plik wykonywalny, zazwyczaj folder bin\Debug lub bin\Release w przypadku korzystania z programu Visual Studio. Jeśli chcesz podać niestandardowy manifest, na przykład aby określić żądany poziom wykonywania "najwyższe dostępne" lub "wymaga administratora", Użyj tej opcji, aby określić nazwę pliku.  
   
 > [!NOTE]
->  Ta opcja i opcja [-win32res — (C# opcje kompilatora)](./win32res-compiler-option.md) wzajemnie się wykluczają. Jeśli spróbujesz użyć obu opcji w tym samym wierszu polecenia, zostanie wyświetlony błąd kompilacji.  
+> Ta opcja i opcja [-win32res — (C# opcje kompilatora)](./win32res-compiler-option.md) wzajemnie się wykluczają. Jeśli spróbujesz użyć obu opcji w tym samym wierszu polecenia, zostanie wyświetlony błąd kompilacji.  
   
  Aplikacja, która nie ma manifestu aplikacji, która określa żądany poziom wykonania, będzie podlegała wirtualizacji plików/rejestru w ramach funkcji kontroli konta użytkownika w systemie Windows. Aby uzyskać więcej informacji, zobacz [Kontrola konta użytkownika](/windows/access-protection/user-account-control/user-account-control-overview).  
   
@@ -50,7 +50,7 @@ Użyj opcji **-WIN32MANIFEST** , aby określić zdefiniowany przez użytkownika 
  W poniższym przykładzie pokazano domyślny manifest wstawiany przez kompilator wizualny C# do środowiska PE.  
   
 > [!NOTE]
->  Kompilator wstawia w kodzie XML standardową nazwę aplikacji "moja aplikacja. aplikacja". Jest to obejście, aby umożliwić uruchamianie aplikacji w systemie Windows Server 2003 z dodatkiem Service Pack 3.  
+> Kompilator wstawia w kodzie XML standardową nazwę aplikacji "moja aplikacja. aplikacja". Jest to obejście, aby umożliwić uruchamianie aplikacji w systemie Windows Server 2003 z dodatkiem Service Pack 3.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  

@@ -4,25 +4,25 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 137459acc275629bb4608218772ae969e3fcf99a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: a5be728cbeb0c3378bb35765787b299167069f57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052694"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910622"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Przykład: Obsługa wyjątków podczas wiązania danych
 > [!NOTE]
->  W tym temacie odnosi się do platformy .NET Native Developer Preview, czyli wstępnej wersji oprogramowania. Możesz pobrać podglądu [witryny sieci Web Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (wymaga rejestracji).  
+> Ten temat dotyczy wersji zapoznawczej programu .NET Native Developer, która jest oprogramowaniem w wersji wstępnej. Wersję zapoznawczą można pobrać z [witryny sieci Web Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (wymaga rejestracji).  
   
- Poniższy przykład pokazuje, jak rozwiązać [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) wyjątek, który jest zgłaszany, gdy aplikacja skompilowana przy użyciu platformy .NET Native łańcucha narzędzi próbuje powiązanie danych. Poniżej przedstawiono informacje o wyjątku:  
+ Poniższy przykład pokazuje, jak rozpoznać wyjątek [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) , który jest generowany, gdy aplikacja skompilowana za pomocą łańcucha narzędzi .NET Native próbuje powiązać dane. Oto informacje o wyjątku:  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
 App.ViewModels.MainPageVM  
 ```  
   
- Oto skojarzone stosu:  
+ Oto skojarzony stos wywołań:  
   
 ```  
 Reflection::Execution::ReflectionDomainSetupImplementation.CreateNonInvokabilityException+0x238  
@@ -38,26 +38,26 @@ Windows_UI_Xaml!DirectUI::PropertyAccessPathStep::GetValue+0x31
 Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113  
 ```  
   
-## <a name="what-was-the-app-doing"></a>Została aplikacja działania?  
- Podstawową stosu, ramek z <xref:Windows.UI.Xaml?displayProperty=nameWithType> przestrzeni nazw wskazują, że aparat renderowania XAML została uruchomiona.   Korzystanie z <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> metoda wskazuje oparty na odbiciu wyszukiwania wartości właściwości w typie, którego metadanych został usunięty.  
+## <a name="what-was-the-app-doing"></a>Co to jest aplikacja?  
+ W podstawowym stosie ramki z <xref:Windows.UI.Xaml?displayProperty=nameWithType> przestrzeni nazw wskazują, że aparat renderowania XAML był uruchomiony.   Użycie <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> metody wskazuje na podstawie odbicia wartość właściwości w typie, którego metadane zostały usunięte.  
   
- Pierwszym krokiem w dostarczaniu dyrektywy metadanych byłoby dodać `serialize` metadanych dla typu, aby jego właściwości są wszystkie dostępne:  
+ Pierwszym krokiem w dostarczaniu dyrektywy metadanych byłoby dodanie `serialize` metadanych dla tego typu, aby jego właściwości były dostępne:  
   
 ```xml  
 <Type Name="App.ViewModels.MainPageVM" Serialize="Required Public" />  
 ```  
   
-## <a name="is-this-an-isolated-case"></a>Jest to przypadek w izolowanym?  
- W tym scenariuszu, jeśli wiązanie danych ma niekompletne metadane dla jednego `ViewModel`, może ono innym, zbyt.  Jeśli kod jest umieszczonymi w taki sposób, że modeli widoków aplikacji są w `App.ViewModels` przestrzeni nazw, można użyć bardziej ogólnych dyrektyw środowiska uruchomieniowego:  
+## <a name="is-this-an-isolated-case"></a>Czy to jest izolowany przypadek?  
+ W tym scenariuszu, Jeśli powiązanie danych ma niekompletne metadane `ViewModel`dla jednej z nich, może być również dla innych.  Jeśli kod jest strukturalny w sposób, w którym wszystkie modele widoku aplikacji znajdują się w `App.ViewModels` przestrzeni nazw, można użyć bardziej ogólnej dyrektywy środowiska uruchomieniowego:  
   
 ```xml  
 <Namespace Name="App.ViewModels " Serialize="Required Public" />  
 ```  
   
-## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>Można dopasować kod nie używać odbicia?  
- Wiązanie danych jest intensywnie korzystających z odbicia, zmiany kodu, aby uniknąć odbicie nie jest możliwe.  
+## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>Czy kod można napisać ponownie, aby nie używać odbicia?  
+ Ponieważ powiązanie danych jest intensywnym odbiciem, zmiana kodu, aby uniknąć odbicia, nie jest możliwe.  
   
- Istnieją sposoby określania `ViewModel` do strony XAML, dzięki czemu można skojarzyć łańcucha narzędzi właściwości powiązania przy użyciu poprawnego typu w czas kompilacji i zachować metadane bez przy użyciu dyrektyw środowiska uruchomieniowego.  Na przykład, można zastosować <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> atrybutu dla właściwości. To powoduje, że kompilator XAML do generowania informacji wymaganych wyszukiwania i pozwala uniknąć konieczności dyrektyw środowiska uruchomieniowego, w pliku Default.rd.xml.  
+ Istnieją jednak sposoby określania `ViewModel` na stronie XAML, dzięki czemu łańcuch narzędzi może kojarzyć powiązania właściwości z poprawnym typem w czasie kompilacji i zachować metadane bez użycia dyrektywy środowiska uruchomieniowego.  Na przykład można zastosować <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> atrybut we właściwościach. Powoduje to wygenerowanie wymaganych informacji wyszukiwania przez kompilator XAML i uniknięcie wymagania dyrektywy środowiska uruchomieniowego w pliku default. Rd. XML.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cc02c1f69235403e2f5df28168e17a70f183682
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 626aa53740839df0b47a876b3e82814a63ffd82d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762413"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936853"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKeyToken Method
-Pobiera klucz publiczny zestawu token.  
+Pobiera token klucza publicznego zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,28 +26,28 @@ HRESULT GetPublicKeyToken(
   
 ## <a name="parameters"></a>Parametry  
  `cbPublicKeyToken`  
- [in] Maksymalna liczba bajtów w `pbPublicKeyToken` tablicy.  
+ podczas Maksymalna liczba bajtów w `pbPublicKeyToken` tablicy.  
   
  `pcbPublicKeyToken`  
- [out] Wskaźnik do rzeczywista liczba bajtów zapisanych na `pbPublicKeyToken` tablicy.  
+ określoną Wskaźnik do rzeczywistej liczby bajtów zapisanych do `pbPublicKeyToken` tablicy.  
   
  `pbPublicKeyToken`  
- [out] Wskaźnik do tablicy typu byte, który zawiera token klucza publicznego zestawu.  
+ określoną Wskaźnik do tablicy bajtów zawierającej token klucza publicznego zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
- Token klucza publicznego zestawu jest ostatnich ośmiu bajtów skrótu SHA1 swojego klucza publicznego.  
+ Token klucza publicznego zestawu to ostatnie osiem bajtów skrótu SHA1 klucza publicznego.  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

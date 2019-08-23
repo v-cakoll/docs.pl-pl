@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e599696b75ed1a0186276dfa47baef2cdf9d7097
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e61ae55673cbf745ea4c637c5206efe41d8ab276
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629398"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946676"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Instrukcje: Rejestrowanie podstawowych zestawów międzyoperacyjnych
 
-Klasy mogą być organizowane tylko przez międzyoperacyjność modelu COM i są zawsze organizowane jako interfejsy. W niektórych przypadkach interfejs używany do organizowania klasy jest nazywany interfejsem klasy. Aby uzyskać informacje na temat przesłaniania interfejsu klasy przy użyciu wybranego interfejsu, zobacz Wywoływanie [otoki com](../../../docs/standard/native-interop/com-callable-wrapper.md).
+Klasy mogą być organizowane tylko przez międzyoperacyjność modelu COM i są zawsze organizowane jako interfejsy. W niektórych przypadkach interfejs używany do organizowania klasy jest nazywany interfejsem klasy. Aby uzyskać informacje na temat przesłaniania interfejsu klasy przy użyciu wybranego interfejsu, zobacz Wywoływanie [otoki com](../../standard/native-interop/com-callable-wrapper.md).
 
  Chociaż wszyscy deweloperzy, którzy chcą korzystać z typów COM z aplikacji .NET Framework mogą generować zestaw międzyoperacyjny, spowoduje to utworzenie problemu. Za każdym razem, gdy deweloper importuje i podpisuje bibliotekę typów modelu COM, ten deweloper tworzy zestaw unikatowych typów, które są niezgodne z tymi importowanymi i podpisanymi przez innego dewelopera. Rozwiązanie tego problemu niezgodności w przypadku tego typu jest przeznaczone dla każdego dewelopera, aby uzyskać określony przez dostawcę i podpisany podstawowy zestaw międzyoperacyjny.
 

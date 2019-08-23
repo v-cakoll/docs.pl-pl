@@ -4,59 +4,59 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: aa3d428d311fd954d092c3859cf8ad273e8a5c1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 234c8a1f57af4030186afd48f727621713531b17
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613814"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915539"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework
-Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych aplikacji .NET Framework lub aplikacje, które przetwarzają dużą ilość danych, takie jak pliki lub bazy danych. Te wskazówki pochodzą ponowne napisanie kompilatory C# i Visual Basic w kodzie zarządzanym, a w tym artykule przedstawiono kilka przykładów rzeczywistych z kompilatorem C#. 
+Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych .NET Framework aplikacji lub aplikacji, które przetwarzają duże ilości danych, takich jak pliki lub bazy danych. Te porady pochodzą z ponownego zapisywania kompilatorów C# i Visual Basic w kodzie zarządzanym, a ten artykuł zawiera kilka rzeczywistych przykładów z C# kompilatora. 
   
- Program .NET Framework jest wysoce wydajna, do tworzenia aplikacji. Zaawansowane i bezpieczne, a bogaty zbiór bibliotek należy wysoce rozwijającemu tworzenia aplikacji. Jednak doskonałym produktywne pochodzi odpowiedzialności. Powinny korzystaj z możliwości programu .NET Framework, ale należy przygotować do dostrajania wydajności kodu, gdy potrzebne. 
+ .NET Framework jest wysoce wydajny w przypadku kompilowania aplikacji. Zaawansowane i bezpieczne języki oraz bogate kolekcje bibliotek sprawiają, że tworzenie aplikacji jest wysoce rozwijającemu. Jednak dzięki doskonałej produktywności spoczywa odpowiedzialność. Należy używać wszystkich możliwości .NET Framework, ale należy przygotować się do dostrajania wydajności kodu, jeśli jest to konieczne. 
   
-## <a name="why-the-new-compiler-performance-applies-to-your-app"></a>Dlaczego nowe wydajne kompilatora ma zastosowanie do aplikacji  
- Zespół platformy kompilatora .NET ("Roslyn") rewrote języka C# i Kompilatory języka Visual Basic w zarządzany kod, aby podać nowe interfejsy API do modelowania i analizowanie kodu, narzędzia do tworzenia i włączania znacznie bardziej rozbudowane, kod środowiska w programie Visual Studio. Ponowne napisanie kompilatorów i programu Visual Studio do tworzenia środowiska na nowych kompilatory ujawniło szczegółowe informacje o wydajności przydatne, które mają zastosowanie do wszystkich dużych aplikacji .NET Framework lub dowolną aplikację, która przetwarza dużą ilość danych. Nie musisz wiedzieć o kompilatory, aby móc korzystać z szczegółowych informacji i przykłady z kompilatorem C#. 
+## <a name="why-the-new-compiler-performance-applies-to-your-app"></a>Dlaczego Nowa wydajność kompilatora ma zastosowanie do aplikacji  
+ Zespół .NET Compiler Platform ("Roslyn") zapisał w kodzie C# zarządzanym i Visual Basic kompilatory w celu udostępnienia nowych interfejsów API do modelowania i analizowania kodu, tworzenia narzędzi i włączania znacznie bogatszych rozwiązań obsługujących kod w programie Visual Studio. Przepisanie kompilatorów i Tworzenie środowiska programu Visual Studio na nowych kompilatorach ujawniło przydatny wgląd w dane dotyczące wydajności, które mają zastosowanie do dowolnej dużej aplikacji .NET Framework lub dowolnej aplikacji, która przetwarza dużą ilość danych. Nie musisz wiedzieć o kompilatorach, aby skorzystać z szczegółowych informacji i przykładów z C# kompilatora. 
   
- Visual Studio używa kompilatora interfejsów API do tworzenia wszystkie funkcje IntelliSense, które lubią użytkowników, takie jak zygzaki kolorowanie identyfikatorów i słów kluczowych, uzupełniania składni, błędy, parametr porad, problemów z kodem, i działania kodu. Program Visual Studio zapewnia tę pomoc podczas deweloperów są wpisywania i zmienianie ich kod i programu Visual Studio musi nadal odpowiadać, gdy kompilator stale modeluje kod, który deweloperzy edycji. 
+ Program Visual Studio korzysta z interfejsów API kompilatora do kompilowania wszystkich funkcji IntelliSense, które są miłość przez użytkowników, takich jak kolorowanie identyfikatorów i słów kluczowych, listy uzupełniania składni, zygzaki dla błędów, wskazówki dotyczące parametrów, problemy z kodem i akcje związane z kodem. Program Visual Studio udostępnia tę pomoc podczas wpisywania i zmieniania kodu przez deweloperów, a program Visual Studio musi przestać odpowiadać, gdy kompilator ciągle modeluje deweloperów kodu. 
   
- Gdy użytkownikom końcowym interakcję z aplikacją, ich powinien odpowiadać. Wpisywanie lub obsługi polecenia nigdy nie powinien być blokowany. Pomoc powinny się pojawiać, szybko lub zrezygnować, jeśli użytkownik nadal, wpisując. Aplikację należy unikać blokowania wątku interfejsu użytkownika z długich obliczeń, które aplikacji wydawać się wolne. 
+ Gdy użytkownicy końcowi współpracują z aplikacją, spodziewają się, że odpowiadają. Wpisywanie lub obsługa poleceń nie powinna być nigdy blokowana. Pomoc powinna być wyświetlona szybko lub w przypadku, gdy użytkownik kontynuuje wpisywanie. Aplikacja powinna unikać blokowania wątku interfejsu użytkownika z długimi obliczeniami, które sprawiają, że aplikacja jest powolna. 
   
- Aby uzyskać więcej informacji na temat kompilatory Roslyn zobacz [zestawu SDK platformy kompilatora .NET](../../csharp/roslyn-sdk/index.md).
+ Aby uzyskać więcej informacji na temat kompilatorów Roslyn, zobacz [zestaw SDK .NET compiler platform](../../csharp/roslyn-sdk/index.md).
   
-## <a name="just-the-facts"></a>Po prostu fakty  
- Należy wziąć pod uwagę następujące fakty podczas dostosowywania wydajności i tworzenie szybko reagujących aplikacji .NET Framework. 
+## <a name="just-the-facts"></a>Tylko fakty  
+ Te fakty należy wziąć pod uwagę podczas dostrajania wydajności i tworzenia odpowiedzi .NET Framework aplikacji. 
   
-### <a name="fact-1-dont-prematurely-optimize"></a>Fakt 1: Przedwczesne nie Optymalizuj  
- Pisanie kodu, który jest bardziej złożona, nie musi to być naliczane konserwacji, debugowania i wygładzanie kosztów. Doświadczeni programiści mają opanujesz intuicyjny sposób rozwiązywania problemów kodowania i napisać kod, bardziej wydajne. Jednak mogą czasami przedwcześnie optymalizacji ich kodu. Na przykład używają tabeli mieszania podczas prostej tablicy może wystarczyć lub używanie buforowania skomplikowane, że dochodzi do wycieku pamięci, a nie po prostu ponowne obliczanie wartości. Nawet jeśli jesteś programistą środowisko, możesz testowanie wydajności i Analizuj swój kod, gdy znajdziesz problemy. 
+### <a name="fact-1-dont-prematurely-optimize"></a>Fakt 1: Nie Optymalizuj przedwcześnie  
+ Pisanie kodu, który jest bardziej skomplikowany niż musi być związane z konserwacją, debugowaniem i polerowaniem. Doświadczeni programiści mają intuicyjny opanujesz sposobu rozwiązywania problemów z kodowaniem i pisania bardziej wydajnego kodu. Jednak czasami w sposób przedwcześnie optymalizuje swój kod. Na przykład korzystają one z tabeli skrótów, gdy prosta tablica wystarcza, lub użyj skomplikowanej pamięci podręcznej, która może wyciekać pamięć, a nie po prostu reobliczaniu wartości. Nawet jeśli jesteś programistą, należy przetestować wydajność i analizować kod, gdy znajdziesz problemy. 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Fakt 2: Jeśli użytkownik nie notuje, jesteś zgadywania  
- Profile i pomiarów nie znajdować się. Profile dowiesz się, czy Procesor jest w pełni załadowane lub tego, czy w przypadku zablokowania na We/Wy dysku. Profile wyświetla komunikat informujący o tym, jakiego rodzaju i jak ilość pamięci alokowaniu i czy your CPU zużywa dużo czasu w [wyrzucania elementów bezużytecznych](../../../docs/standard/garbage-collection/index.md) (GC). 
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Fakt 2: Jeśli nie mierzy się, nastąpi odgadnięcie  
+ Profile i pomiary nie znajdują się. Profile pokazują, czy procesor CPU jest w pełni załadowany, czy też jest blokowany na dyskach we/wy. Profile informują o rodzaju i ilości pamięci, która jest przydzielana, oraz o tym, czy procesor CPU poświęca dużo czasu na wyrzucanie [elementów](../../standard/garbage-collection/index.md) bezużytecznych (GC). 
   
- Należy ustawić środowiska lub scenariuszy celami wydajności dla klientów w aplikacji i pisania testów do pomiaru wydajności. Badanie niepowodzenie testów, stosując metodę wykładniczej: aby ułatwiają, hipotezę, co może być problem, użyj profilów i testowanie Twojej hipotezę z eksperymentu lub zmiany kodu. Wraz z upływem czasu z regularnych testowania, należy ustanowić pomiarów wydajności bazowego, dzięki czemu można izolować zmiany, które powodują regresji wydajności. Zbliża się wydajność pracy, w sposób rygorystyczne, będzie uniknąć marnowania czasu za pomocą aktualizacji kodu, które nie są potrzebne. 
+ Należy ustawić cele wydajnościowe najważniejszych środowisk klienta lub scenariuszy w aplikacji oraz testy zapisu w celu mierzenia wydajności. Zbadaj nieudane testy, stosując metodę naukową: Użyj profilów, aby Ci pomóc, hypothesize się, co może być problemem, i przetestuj hipotezę przy użyciu eksperymentu lub zmiany kodu. Ustalaj bazowe pomiary wydajności w czasie z regularnym testowaniem, dzięki czemu można izolować zmiany powodujące wydajność regresji. Dzięki podejściu wydajności w rygorystyczny sposób można uniknąć marnowania czasu z niepotrzebnymi aktualizacjami kodu. 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>Fakt 3: Dobre narzędzia sprawiają, że wszystkie różnicy  
- Dobre narzędzia pozwalają szybko przejść do szczegółów największych problemów z wydajnością (procesor CPU, pamięć lub dysk) i pomoc, możesz znaleźć kod, który powoduje, że te wąskich gardeł. Microsoft dostarczany szeroką gamą narzędzi wydajności, takich jak [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) i [narzędzia PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
+### <a name="fact-3-good-tools-make-all-the-difference"></a>Fakt 3: Dobre narzędzia sprawiają, że wszystkie różnice  
+ Dobre narzędzia pozwalają szybko przechodzić do największych problemów z wydajnością (procesor CPU, pamięć lub dysk) i pomóc w znalezieniu kodu, który powoduje te wąskie gardła. Firma Microsoft dostarcza różnorodne narzędzia do oceny wydajności, takie jak [program Visual Studio profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) i [Narzędzia PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
- Narzędzia PerfView jest bezpłatne i niezwykle wydajne narzędzia, która pozwala skupić się na szczegółowe zagadnienia, takie jak We/Wy dysku, zdarzenia odzyskiwania pamięci i pamięci. Można przechwycić związane z wydajnością [Event Tracing for Windows](../../../docs/framework/wcf/samples/etw-tracing.md) zdarzeń (ETW) i widok prosty sposób na aplikację, na proces, na stosie i na informacje o wątku. Narzędzia PerfView pokazuje, ile i jakiego rodzaju pamięci są przydzielane aplikację, i które funkcji lub wywołanie stosów Współtworzenie ile alokacji pamięci. Aby uzyskać więcej informacji, zobacz zaawansowane tematy pomocy, pokazy i filmy wideo, włączone za pomocą narzędzia (takie jak [samouczki narzędzia PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) w witrynie Channel 9). 
+ Narzędzia PerfView to bezpłatne i wszechstronne narzędzie, które ułatwia skoncentrowanie się na szczegółowych problemach, takich jak we/wy dysku, zdarzenia GC i pamięć. Można przechwytywać zdarzenia [śledzenia zdarzeń dotyczące wydajności dla systemu Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) i łatwo przeglądać dla każdej aplikacji, na jeden proces, na stos i informacje o wątkach. Narzędzia PerfView pokazuje, jak dużo i jakiego rodzaju pamięci przydziela aplikacja oraz które funkcje lub stosy wywołań przyczyniają się do przydzielenia pamięci. Aby uzyskać szczegółowe informacje, zobacz temat rozbudowane tematy pomocy, pokazy i filmy wideo dołączone do narzędzia (na przykład [samouczki narzędzia PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) w witrynie Channel 9). 
   
-### <a name="fact-4-its-all-about-allocations"></a>Fakt 4: Przede wszystkim chodzi o alokacji  
- Może się wydawać, że tworzenie szybko reagujących aplikacji .NET Framework to przede wszystkim algorytmy, takie jak za pomocą szybkiego sortowania zamiast sortowania bąbelków, ale nie jest to wymagane. Największe czynnikiem tworzenia szybko reagujących aplikacji jest alokacji pamięci, szczególnie w przypadku, gdy Twoja aplikacja jest bardzo duża lub przetwarza duże ilości danych. 
+### <a name="fact-4-its-all-about-allocations"></a>Fakt 4: Wszystkie przydziały  
+ Możesz zastanowić się nad tworzeniem aplikacji, która odpowiada .NET Framework wszystkim algorytmom, na przykład przy użyciu szybkiego sortowania zamiast sortowania bąbelkowego, ale nie jest to przypadek. Największym czynnikiem podczas tworzenia aplikacji, która odpowiada, jest przydzielanie pamięci, zwłaszcza gdy aplikacja jest bardzo duża lub przetwarza duże ilości danych. 
   
- Prawie wszystko, co środowisk pracy, aby tworzyć odpowiednie środowisko IDE, za pomocą kompilatora nowe interfejsy API związane z unikanie alokacji i zarządzanie nimi strategii buforowania. Ślady narzędzia PerfView Pokaż wydajność nowych Kompilatory języka C# i Visual Basic jest rzadko powiązana procesora CPU. Kompilatory mogą być operacji We/Wy powiązany podczas odczytywania setki tysięcy lub milionów wierszy kodu, podczas odczytywania metadanych, lub emitowania wygenerowanego kodu. Opóźnienia wątku interfejsu użytkownika są prawie wszystkich z powodu wyrzucania elementów bezużytecznych. .NET Framework GC jest ona dostrojona o wysokiej wydajności i wykonuje znaczną część swojej pracy, jednocześnie, gdy kod aplikacji jest wykonywany. Jednak możesz wyzwolić kosztowne pojedynczą alokację [gen2](../../../docs/standard/garbage-collection/fundamentals.md) kolekcji, zatrzymanie wszystkich wątków. 
+ Prawie wszystkie prace do tworzenia odpowiedzi na środowisko IDE dzięki nowym interfejsom API kompilatora, które mają na celu uniknięcie alokacji i zarządzania strategiami buforowania. Ślady narzędzia PerfView pokazują, że wydajność nowych C# i kompilatorów Visual Basic jest rzadko związana z procesorem CPU. Kompilatory mogą być powiązane we/wy w przypadku odczytywania setek tysięcy lub milionów wierszy kodu, odczytywania metadanych lub emitowania wygenerowanego kodu. Opóźnienia wątku interfejsu użytkownika są niemal wszystkie ze względu na wyrzucanie elementów bezużytecznych. .NET Framework GC jest wysoce dostrojony do wydajności i wykonuje wiele zadań jednocześnie podczas wykonywania kodu aplikacji. Jednak pojedyncze alokacje mogą wyzwalać kosztowną kolekcję [Gen2](../../standard/garbage-collection/fundamentals.md) , zatrzymując wszystkie wątki. 
   
-## <a name="common-allocations-and-examples"></a>Typowe alokacji i przykłady  
- Przykładowe wyrażenia w tej sekcji zostały ukryte alokacje są niewielkie. Jednak w przypadku dużych aplikacji wykonuje wyrażeń kilka razy, mogą oni powoduje, że kilkuset megabajtów, nawet gigabajtów alokacji. Na przykład co minutę testów, które symulowane dewelopera wpisywania w edytorze gigabajtów pamięci przydzielonych i prowadzone zespołu wydajności, aby skoncentrować się na wpisywanie scenariuszy. 
+## <a name="common-allocations-and-examples"></a>Typowe alokacje i przykłady  
+ W przykładowych wyrażeniach w tej sekcji znajdują się ukryte przydziały, które są wyświetlane jako małe. Jeśli jednak duża aplikacja wykonuje wyrażenia wystarczająco długo, może to spowodować setki megabajtów, nawet gigabajtów przydziałów. Na przykład testy jednominutowe, które symulują wpisywanie przez dewelopera w edytorze przydzieloną gigabajty pamięci i doprowadziły do skoncentrowania się zespołu wydajności w przypadku wpisywania scenariuszy. 
   
 ### <a name="boxing"></a>Boxing  
- [Konwersja boxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md) występuje, gdy wartość typy, które zwykle na żywo na stosie lub dane struktury są zapakowane w obiekt. Oznacza to przydzielić obiektu w celu przechowywania danych, a następnie zwraca wskaźnik do obiektu. .NET Framework czasami pola wartości, ponieważ podpis metody lub typu lokalizacji magazynu. Zawijanie typu wartości w alokacji pamięci powoduje, że obiekt. Wiele operacji pakowania może współtworzyć zawartość w megabajtach lub gigabajtach alokacji do swojej aplikacji, co oznacza, że aplikacji spowoduje, że więcej wykazów globalnych. .NET Framework i Kompilatory języka uniknąć pakowania, gdy jest to możliwe, ale czasami występuje, jeśli co najmniej oczekuje. 
+ [Opakowanie](../../csharp/programming-guide/types/boxing-and-unboxing.md) występuje, gdy typy wartości, które zwykle znajdują się na stosie lub w strukturach danych, są zawijane w obiekcie. Oznacza to, że przydzielasz obiekt do przechowywania danych, a następnie zwracasz wskaźnik do obiektu. .NET Framework czasami pola wartości ze względu na podpis metody lub typu lokalizacji magazynu. Otoka typu wartości w obiekcie powoduje alokację pamięci. Wiele operacji pakowania może współtworzyć megabajty lub gigabajty alokacji dla aplikacji, co oznacza, że aplikacja spowoduje więcej operacje odzyskiwania pamięci. .NET Framework i kompilatory języka unikają pakowania, gdy jest to możliwe, ale czasami zdarza się, gdy jest to konieczne. 
   
- Aby zobaczyć pakowania w PerfView, otwórz śledzenia i przyjrzyj się stosy alokacji sterty GC w swojej aplikacji, nazwa procesu (Pamiętaj, że narzędzia PerfView raport dotyczący wszystkich procesów). Jeśli widzisz typów, takich jak <xref:System.Int32?displayProperty=nameWithType> i <xref:System.Char?displayProperty=nameWithType> w ramach przydziałów, czy konwersja boxing typów wartości. Wybranie jednego z następujących typów zostaną wyświetlone stosy i funkcje, w których są ramce. 
+ Aby zobaczyć opakowanie w narzędzia PerfView, Otwórz ślad i sprawdź stosy alokacji sterty GC pod nazwą procesu aplikacji (Pamiętaj, narzędzia PerfView raporty dotyczące wszystkich procesów). Jeśli widzisz typy takie <xref:System.Int32?displayProperty=nameWithType> jak <xref:System.Char?displayProperty=nameWithType> i w obszarze alokacje, nastąpi wypakowywanie typów wartości. Wybranie jednego z tych typów spowoduje wyświetlenie stosów i funkcji, w których są one opakowane. 
   
- **Przykład 1: ciąg metody i wartości argumentów typu**  
+ **Przykład 1: metody ciągów i argumenty typu wartości**  
   
- Ten przykładowy kod przedstawia potencjalnie niepotrzebnych i nadmierne opakowania:  
+ Ten przykładowy kod ilustruje potencjalnie niepotrzebne i nadmierne opakowanie:  
   
 ```csharp  
 public class Logger  
@@ -74,29 +74,29 @@ public class BoxingExample
 }  
 ```  
   
- Ten kod zawiera funkcje rejestrowania, dzięki czemu aplikacja może wywołać `Log` często może działać milionów razy. Problem jest wywołanie `string.Format` jest rozpoznawana jako <xref:System.String.Format%28System.String%2CSystem.Object%2CSystem.Object%29> przeciążenia. 
+ Ten kod udostępnia funkcje rejestrowania, dzięki czemu aplikacja może często wywoływać `Log` funkcję, co może być miliony razy. Problem polega na tym, że wywołanie `string.Format` jest rozpoznawane <xref:System.String.Format%28System.String%2CSystem.Object%2CSystem.Object%29> jako Przeciążenie. 
   
- To przeciążenie wymaga programu .NET Framework do pola `int` wartości na obiekty w celu przekazania ich wywołanie tej metody. Częściowe obejście polega na wywołanie `id.ToString()` i `size.ToString()` i Przekaż wszystkie ciągi, (które są obiektami) do `string.Format` wywołania. Wywoływanie `ToString()` przydzielić ciągu, jednak, że alokacji zostanie obsłużony mimo to w `string.Format`. 
+ To Przeciążenie wymaga .NET Framework do `int` umieszczania wartości w obiektach, aby przekazać je do tego wywołania metody. Częściowa poprawka polega na wywołaniu `id.ToString()` i `size.ToString()` przejściu wszystkich ciągów (które `string.Format` są obiektami) do wywołania. Wywołanie `ToString()` przydzieli ciąg, ale ta alokacja będzie nadal w `string.Format`obrębie. 
   
- Należy rozważyć oznacza w tym podstawowe wywołanie `string.Format` jest po prostu ciągów, dzięki czemu może napisać ten kod:  
+ Można wziąć pod uwagę, że to podstawowe `string.Format` wywołanie jest tylko ciąg łączenia, więc można napisać ten kod zamiast:  
   
 ```csharp  
 var s = id.ToString() + ':' + size.ToString();  
 ```  
   
- Jednak ten wiersz kodu wprowadza alokacji pakowanie, ponieważ kompiluje, aby <xref:System.String.Concat%28System.Object%2CSystem.Object%2CSystem.Object%29>. .NET Framework należy polu znak literału do wywołania `Concat`  
+ Jednak ten wiersz kodu wprowadza alokację opakowania, ponieważ kompiluje się do <xref:System.String.Concat%28System.Object%2CSystem.Object%2CSystem.Object%29>. .NET Framework musi mieć pole literału znakowego do wywołania`Concat`  
   
- **Na przykład rozwiązać 1**  
+ **Poprawka na przykład 1**  
   
- Pełne poprawka jest proste. Wystarczy zastąpić literał znakowy z ciągiem literału, którą jest naliczana nie pakowanie, ponieważ ciągi są już obiektami:  
+ Pełna poprawka jest prosta. Po prostu Zastąp literał znakowy literałem ciągu, który nie jest używany, ponieważ ciągi są już obiektami:  
   
 ```csharp  
 var s = id.ToString() + ":" + size.ToString();  
 ```  
   
- **Przykład 2: wyliczenia pakowania**  
+ **Przykład 2: opakowanie enum**  
   
- W tym przykładzie była odpowiedzialna za ogromna ilość alokacji w nowych Kompilatory języka C# i Visual Basic z powodu często są używane typy wyliczeniowe, szczególnie w przypadku operacji wyszukiwania w słowniku. 
+ Ten przykład był odpowiedzialny za ogromną ilość przydziału w nowych C# i Visual Basic kompilatorach ze względu na częste korzystanie z typów wyliczeniowych, szczególnie w operacjach wyszukiwania słownika. 
   
 ```csharp  
 public enum Color  
@@ -115,26 +115,26 @@ public class BoxingExample
 }  
 ```  
   
- Ten problem jest bardzo subtelne. Narzędzia PerfView będzie Zgłoś to jako <xref:System.Enum.GetHashCode> pakowanie, ponieważ metody pól bazowego reprezentacja na typ wyliczenia ze względów implementacji. Jeśli wygląda ściśle znajduje się w PerfView, może zostać wyświetlony dwóch alokacje pakowania dla każdego wywołania <xref:System.Enum.GetHashCode>. Kompilator powoduje wstawienie jednego, a .NET Framework drugiego. 
+ Ten problem jest bardzo delikatny. Narzędzia PerfView mógłby zgłosić ten fakt <xref:System.Enum.GetHashCode> jako opakowanie, ponieważ metoda pola przedstawia podstawową reprezentację typu wyliczenia, ze względów związanych z implementacją. Jeśli szukasz blisko w narzędzia PerfView, mogą zostać wyświetlone dwa przydziały dla każdego wywołania <xref:System.Enum.GetHashCode>. Kompilator wstawia jeden, a .NET Framework wstawia pozostałe. 
   
- **Na przykład rozwiązać 2**  
+ **Poprawka na przykład 2**  
   
- Łatwo można uniknąć zarówno alokacje przez rzutowanie do podstawowej reprezentacji przed wywołaniem <xref:System.Enum.GetHashCode>:  
+ Można łatwo uniknąć obydwu przydziałów przez rzutowanie na podstawową reprezentację przed wywołaniem <xref:System.Enum.GetHashCode>:  
   
 ```csharp  
 ((int)color).GetHashCode()  
 ```  
   
- Jest innym źródłem wspólnej pakowania na typy wyliczeniowe <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> metody. Argumentu przekazanego do <xref:System.Enum.HasFlag%28System.Enum%29> musi zostać opakowany. W większości przypadków zastępowania wywołań do <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> bitowe testu jest prostszy i zwolnić alokacji. 
+ Innym wspólnym źródłem opakowania w typach wyliczeniowych jest <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> Metoda. Argument przeszedł do <xref:System.Enum.HasFlag%28System.Enum%29> musi być opakowany. W większości przypadków zastępowanie wywołań <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> z testem bitowym jest prostsze i bezpłatne. 
   
- Pamiętać pierwszy fakt wydajności (czyli nie przedwcześnie Optymalizacja) i nie należy uruchamiać ponowne napisanie kodu w ten sposób. Należy pamiętać o tych kosztów pakowania, ale tylko po profilowania aplikacji i znajdowanie punktów aktywnych zmian w kodzie. 
+ Zachowaj pierwszy fakt wydajności (to oznacza, że nie jest przedwcześnie zoptymalizowany) i nie rozpoczynaj ponownego zapisywania całego kodu w ten sposób. Zapoznaj się z tymi kosztami opakowania, ale Zmień kod tylko po przeprowadzeniu profilowania aplikacji i znalezieniu aktywnych miejsc. 
   
 ### <a name="strings"></a>Ciągi  
- Działań na ciągach są niektóre z największych sprawcami dla alokacji i są one często wyświetlane w PerfView w alokacjach pięć. Programy używać parametrów dla serializacji JSON i interfejsów API REST. Ciągi jako programowe stałe służy do współpracy z systemami, gdy nie można używać typów wyliczeń. Gdy usługi profilowania wskazuje, czy ciągi są wysoce wpływających na wydajność, poszukaj wywołania <xref:System.String> metody takie jak <xref:System.String.Format%2A>, <xref:System.String.Concat%2A>, <xref:System.String.Split%2A>, <xref:System.String.Join%2A>, <xref:System.String.Substring%2A>i tak dalej. Za pomocą <xref:System.Text.StringBuilder> Aby uniknąć kosztów tworzenie jednego ciągu z wielu fragmentów pomaga, ale nawet przydzielanie <xref:System.Text.StringBuilder> obiektu może stać się wąskim gardłem, potrzebne do zarządzania. 
+ Manipulowanie ciągami to niektóre największe culprits dla przydziałów i często są one wyświetlane w narzędzia PerfView w pierwszych pięciu alokacjach. Programy używają ciągów do serializacji, JSON i interfejsów API REST. Można używać ciągów jako stałych programistycznych do współdziałania z systemami, gdy nie można używać typów wyliczeniowych. Gdy profilowanie pokazuje <xref:System.String> , że ciągi mają wysoce wpływ na wydajność, należy poszukać wywołań metod, takich jak <xref:System.String.Join%2A> <xref:System.String.Format%2A>, <xref:System.String.Substring%2A> <xref:System.String.Concat%2A> <xref:System.String.Split%2A>,,, i tak dalej. Użycie <xref:System.Text.StringBuilder> usługi pozwala uniknąć ponoszenia kosztów tworzenia jednego ciągu z wielu kawałków, ale nawet przydzielenie <xref:System.Text.StringBuilder> obiektu może stać się wąskim gardłem, który trzeba zarządzać. 
   
  **Przykład 3: operacje na ciągach**  
   
- Kompilator języka C# nie ten kod, który zapisuje tekst sformatowany komentarza dokumentacji XML:  
+ C# Kompilator miał ten kod, który zapisuje tekst sformatowanego komentarza dokumentu XML:  
   
 ```csharp  
 public void WriteFormattedDocComment(string text)  
@@ -161,19 +161,19 @@ public void WriteFormattedDocComment(string text)
     else { /* ... */ }  
 ```  
   
- Aby zobaczyć, że ten kod wykonuje wiele manipulowanie ciągami. Kod używa metody biblioteki do podziału wierszy w oddzielnych ciągi, można przycięcia biały znak, aby sprawdzić, czy argument `text` jest komentarz dokumentacji XML i wyodrębnianie podciągów z wierszy. 
+ Można zobaczyć, że ten kod wykonuje wiele operacji manipulowania ciągiem. Kod używa metod biblioteki do dzielenia wierszy na osobne ciągi, do przycinania białego znaku, aby sprawdzić, czy `text` argument jest komentarzem dokumentacji XML i wyodrębnić podciągi z wierszy. 
   
- W pierwszym wierszu wewnątrz `WriteFormattedDocComment`, `text.Split` wywołanie za każdym razem, gdy jest on nazywany przydziela nowe trzy elementowej tablicy jako argument. Kompilator musi emitują kod, aby przydzielić każdorazowo tej tablicy. To, ponieważ kompilator nie wie, jeśli <xref:System.String.Split%2A> przechowuje tablicy gdzieś gdzie tablicy mogą zostać zmodyfikowane przez inny kod, który będzie wpływać na nowsze wywołania `WriteFormattedDocComment`. Wywołanie <xref:System.String.Split%2A> również przydziela ciąg dla każdego wiersza w `text` i przydziela innej pamięci do wykonania tej operacji. 
+ W pierwszym wierszu wewnątrz `WriteFormattedDocComment` `text.Split` , wywołanie przydziela nową tablicę trzech elementów jako argument przy każdym wywołaniu. Kompilator musi emitować kod, aby przydzielić tę tablicę za każdym razem. Dzieje się tak, ponieważ kompilator nie wie <xref:System.String.Split%2A> , czy przechowuje tablicę w miejscu, w którym tablica może być modyfikowana przez inny kod, co `WriteFormattedDocComment`wpłynie na późniejsze wywołania do. Wywołanie w celu <xref:System.String.Split%2A> przydzielania również ciągu dla każdego wiersza w `text` i przydziela inne pamięci do wykonania operacji. 
   
- `WriteFormattedDocComment` ma trzy wywołania <xref:System.String.TrimStart%2A> metody. Dwa znajdują się w wewnętrznej pętli, które zduplikowane pracy i przydziałów. Zapewnienie liczy co gorsza, wywołanie <xref:System.String.TrimStart%2A> metody bez argumentów przydziela pusta tablica (dla `params` parametr) oprócz wynikowy ciąg. 
+ `WriteFormattedDocComment`ma trzy wywołania <xref:System.String.TrimStart%2A> metody. Dwa znajdują się w wewnętrznych pętlach, które duplikują zadania i przydziały. Aby przyczynić się do gorszenia <xref:System.String.TrimStart%2A> , wywołanie metody bez argumentów przypisuje pustą tablicę ( `params` dla parametru) oprócz wyniku ciągu. 
   
- Ponadto występuje po wywołaniu <xref:System.String.Substring%2A> metody, która zwykle przydziela nowy ciąg. 
+ Na koniec istnieje wywołanie <xref:System.String.Substring%2A> metody, która zwykle przypisuje nowy ciąg. 
   
- **Na przykład rozwiązać 3**  
+ **Poprawka na przykład 3**  
   
- W przeciwieństwie do wcześniejszych przykładach drobnych modyfikacji nie może rozwiązać tych przydziałów. Musisz cofnijmy, Przyjrzyj się problem i podejście do inaczej. Na przykład, można zauważyć, że argument `WriteFormattedDocComment()` jest ciągiem, który zawiera wszystkie informacje, które wymaga metody, dzięki czemu kod może zrobić więcej indeksowania, zamiast przydzielać wiele ciągi częściowe. 
+ W przeciwieństwie do wcześniejszych przykładów, małe edycje nie mogą naprawić tych przydziałów. Należy wykonać krok po kroku, przyjrzeć się problemowi i zastosować go inaczej. Na przykład można zauważyć, że argument `WriteFormattedDocComment()` jest ciągiem, który zawiera wszystkie informacje, których potrzebuje Metoda, więc kod może przetworzyć więcej indeksowania zamiast alokowania wiele ciągów częściowych. 
   
- Kompilator wydajności zespołu rozwiązywane tych przydziałów za pomocą kodu w następujący sposób:  
+ Zespół wydajności kompilatora wszystkie te przydziały z kodem podobnym do poniższego:  
   
 ```csharp  
 private int IndexOfFirstNonWhiteSpaceChar(string text, int start) {  
@@ -195,11 +195,11 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc... 
 ```  
   
- Pierwsza wersja `WriteFormattedDocComment()` przydzielone tablicę, kilku podciągów i podciągu przycięcia wraz z pustą `params` tablicy. Również sprawdzane dla "/ / /". Poprawiony kod wykorzystuje tylko indeksowania i przydziela nothing. Znajduje pierwszy znak, który nie jest biały znak, a następnie sprawdza, czy znak po znaku aby zobaczyć, czy ciąg rozpoczyna się od "/ / /". Nowy kod używa `IndexOfFirstNonWhiteSpaceChar` zamiast <xref:System.String.TrimStart%2A> do zwrócenia pierwszego indeksu (po wskaźniku początkową), w którym występuje znak inny niż biały. Poprawka nie została ukończona, ale możesz dowiedzieć się, jak można zastosować poprawki podobne pełne rozwiązanie. Dzięki zastosowaniu tej metody w całym kodzie, można usunąć wszystkie alokacje w `WriteFormattedDocComment()`. 
+ Pierwsza wersja `WriteFormattedDocComment()` przydzieloną tablicę, kilka podciągów i przycięty podciąg wraz z pustą `params` tablicą. Sprawdzana jest również wartość "///". Poprawiony kod używa tylko indeksowania i alokuje Nothing. Znajduje pierwszy znak, który nie jest biały, a następnie sprawdza znak według znaku, aby zobaczyć, czy ciąg rozpoczyna się od "///". Nowy kod używa `IndexOfFirstNonWhiteSpaceChar` <xref:System.String.TrimStart%2A> zamiast nie zwracać pierwszego indeksu (po określonym indeksie początkowym), w którym występuje znak niebędący odstępem. Naprawa nie została ukończona, ale możesz zobaczyć, jak zastosować podobne poprawki do kompletnego rozwiązania. Stosując to podejście w całym kodzie, można usunąć wszystkie alokacje w `WriteFormattedDocComment()`. 
   
  **Przykład 4: StringBuilder**  
   
- W tym przykładzie użyto <xref:System.Text.StringBuilder> obiektu. Poniższa funkcja generuje Pełna nazwa typu dla typów ogólnych:  
+ W <xref:System.Text.StringBuilder> tym przykładzie używa obiektu. Następująca funkcja generuje pełną nazwę typu dla typów ogólnych:  
   
 ```csharp  
 public class Example  
@@ -225,11 +225,11 @@ public class Example
 }  
 ```  
   
- Fokus znajduje się w wierszu, który tworzy nową <xref:System.Text.StringBuilder> wystąpienia. Kod powoduje, że przydział `sb.ToString()` i wewnętrzne alokacje w ramach <xref:System.Text.StringBuilder> implementacji, ale nie można kontrolować te alokacji, jeśli chcesz, aby wynikowy ciąg. 
+ Fokus znajduje się w wierszu, który tworzy nowe <xref:System.Text.StringBuilder> wystąpienie. Kod powoduje alokację `sb.ToString()` i wewnętrzne przydziały <xref:System.Text.StringBuilder> w ramach implementacji, ale nie można kontrolować tych alokacji, jeśli chcesz uzyskać wynik ciągu. 
   
- **Na przykład rozwiązać 4**  
+ **Poprawka na przykład 4**  
   
- Aby naprawić `StringBuilder` obiekt alokacji; obiektu w pamięci podręcznej. Buforowanie nawet pojedyncze wystąpienie, które mogą uzyskać wyrzucać może znacznie poprawić wydajność. Jest to funkcja nową metodę implementacji, pomijając cały kod, z wyjątkiem nowej linii imię i nazwisko:  
+ Aby naprawić `StringBuilder` alokację obiektu, przebuforuj obiekt. Nawet buforowanie pojedynczego wystąpienia, które może zostać wywołane, może znacząco poprawić wydajność. Jest to nowa implementacja funkcji, pomijając cały kod z wyjątkiem nowych i ostatnich wierszy:  
   
 ```csharp  
 // Constructs a name like "MyType<T1, T2, T3>"  
@@ -241,7 +241,7 @@ public string GenerateFullTypeName(string name, int arity)
 }  
 ```  
   
- Kluczowe elementy są nowe `AcquireBuilder()` i `GetStringAndReleaseBuilder()` funkcje:  
+ Najważniejsze części to nowe `AcquireBuilder()` i `GetStringAndReleaseBuilder()` funkcje:  
   
 ```csharp  
 [ThreadStatic]  
@@ -267,20 +267,20 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
 }  
 ```  
   
- Ponieważ kompilatory nowe korzystają z wątków, tych implementacji użyć pola statyczne wątku (<xref:System.ThreadStaticAttribute> atrybutu) do pamięci podręcznej <xref:System.Text.StringBuilder>, i prawdopodobnie można uniknąć `ThreadStatic` deklaracji. Pola statyczne wątku przechowuje unikatową wartość dla każdego wątku, który jest wykonywany ten kod. 
+ Ponieważ nowe kompilatory używają wątków, te implementacje używają pola statycznego wątku (<xref:System.ThreadStaticAttribute> atrybutu) do <xref:System.Text.StringBuilder>buforowania i prawdopodobnie można forgo `ThreadStatic` deklarację. Pole statyczne wątku przechowuje unikatową wartość dla każdego wątku, który wykonuje ten kod. 
   
- `AcquireBuilder()` Zwraca buforowane <xref:System.Text.StringBuilder> wystąpienia, jeśli istnieje, po ich czyszczenie i ustawienie pola lub pamięci podręcznej na wartość null. W przeciwnym razie `AcquireBuilder()` tworzy nowe wystąpienie i zwraca go, pozostawiając pole lub pamięci podręcznej zestawu o wartości null. 
+ `AcquireBuilder()`Zwraca buforowane <xref:System.Text.StringBuilder> wystąpienie, jeśli istnieje, po jego wyczyszczeniu i ustawieniu pola lub pamięci podręcznej na wartość null. W przeciwnym razie tworzy nowe wystąpienie i zwraca je, pozostawiając pole lub pamięć podręczną ustawioną na wartość null. `AcquireBuilder()` 
   
- Gdy ukończysz pracę z <xref:System.Text.StringBuilder> , należy wywołać `GetStringAndReleaseBuilder()` można pobrać wynik ciągu, Zapisz <xref:System.Text.StringBuilder> wystąpienia w polu lub pamięci podręcznej, a następnie zwraca wynik. Jest możliwe do wykonania, ponownie wprowadź ten kod i utworzyć wiele <xref:System.Text.StringBuilder> obiektów (chociaż, rzadko wykonywane). Zapisuje kodu tylko ostatnia wydana <xref:System.Text.StringBuilder> wystąpienia do późniejszego użycia. Ten prosty strategii buforowania znacząco zmniejszyć alokacji w nowych kompilatory. Części środowiska .NET Framework i programu MSBuild ("MSBuild") użyć podobne techniki, aby zwiększyć wydajność. 
+ Gdy wszystko będzie gotowe <xref:System.Text.StringBuilder> , należy wywołać `GetStringAndReleaseBuilder()` , aby uzyskać wynik <xref:System.Text.StringBuilder> ciągu, zapisać wystąpienie w polu lub w pamięci podręcznej, a następnie zwrócić wynik. Można wykonać ponowne wprowadzenie tego kodu i utworzyć wiele <xref:System.Text.StringBuilder> obiektów (chociaż zdarza się to rzadko). Kod zapisuje tylko ostatnio wydane <xref:System.Text.StringBuilder> wystąpienie do późniejszego użycia. Ta prosta strategia buforowania znacznie zmniejsza alokacje w nowych kompilatorach. Części .NET Framework i MSBuild ("MSBuild") używają podobnej metody w celu zwiększenia wydajności. 
   
- Ten prosty strategii buforowania działa zgodnie z projektu dobre pamięci podręcznej, ponieważ ma ona limit rozmiaru. Istnieje jednak więcej kodu teraz niż w oryginalnym, co oznacza więcej kosztów konserwacji. Należy przyjąć strategii buforowania, tylko wtedy, gdy wykryto problemy z wydajnością, narzędzia PerfView wykazało, że <xref:System.Text.StringBuilder> są znaczące współautora. 
+ Ta prosta strategia buforowania jest zgodna z dobrym projektem pamięci podręcznej, ponieważ ma limit rozmiaru. Jednak więcej kodu jest teraz niż w oryginalnym, co oznacza więcej kosztów konserwacji. Strategię buforowania należy zastosować tylko wtedy, gdy znaleziono problem z wydajnością, a narzędzia PerfView wykazało, <xref:System.Text.StringBuilder> że alokacje są istotnym współautorem. 
   
-### <a name="linq-and-lambdas"></a>LINQ i wyrażeń lambda  
-Language-Integrated Query (LINQ), w połączeniu z wyrażenia lambda jest przykładem funkcji produktywności. Jednak jego użycia może mieć znaczący wpływ na wydajność wraz z upływem czasu i może się okazać, że trzeba poprawić kod.
+### <a name="linq-and-lambdas"></a>LINQ i lambda  
+W połączeniu z wyrażeniami lambda jest przykładem funkcji produktywności (LINQ, Language-Integrated Query). Jednak jego użycie może mieć znaczny wpływ na wydajność w miarę upływu czasu i może być konieczne ponowne napisanie kodu.
   
- **Przykład 5: Wyrażenia lambda, lista\<T >, a IEnumerable\<T >**  
+ **Przykład 5: Wyrażenia lambda, listy\<T > i IEnumerable\<t >**  
   
- W tym przykładzie użyto [LINQ i funkcjonalności stylu kodu](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) można znaleźć symbolu w modelu kompilatora podany ciąg nazwy:  
+ W tym przykładzie używa [kodu LINQ i języka stylu funkcjonalności](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) , aby znaleźć symbol w modelu kompilatora, przy użyciu ciągu nazwy:  
   
 ```csharp  
 class Symbol {  
@@ -297,14 +297,14 @@ class Compiler {
 }  
 ```  
   
- Nowy kompilator i środowisk IDE zbudowane na nim wywołania `FindMatchingSymbol()` bardzo często i są kilka ukryte alokacji w tej funkcji nawet jednego wiersza kodu. Aby zbadać te przydziały, najpierw podzielić funkcji nawet jednego wiersza kodu dwa wiersze:  
+ Nowy kompilator i środowiska IDE, które są oparte na wywołaniu `FindMatchingSymbol()` IT bardzo często, i istnieje kilka ukrytych alokacji w jednym wierszu kodu tej funkcji. Aby przejrzeć te przydziały, najpierw Podziel pojedynczy wiersz kodu funkcji na dwa wiersze:  
   
 ```csharp  
 Func<Symbol, bool> predicate = s => s.Name == name;  
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- W pierwszym wierszu [wyrażenia lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [zamyka za pośrednictwem](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) zmienna lokalna `name`. Oznacza to, że oprócz przydzielanie obiektu dla [delegować](~/docs/csharp/language-reference/keywords/delegate.md) , `predicate` przechowuje, kod przydziela klasy statycznej, aby pomieścić środowisko, które przechwytuje wartość `name`. Kompilator generuje kod, jak pokazano poniżej:  
+ W pierwszym wierszu [wyrażenie](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` lambda jest [zamykane](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) na zmiennej `name`lokalnej. Oznacza to, że oprócz przydzielenia obiektu delegata, [](../../csharp/language-reference/keywords/delegate.md) który `predicate` przechowuje, kod przydziela klasę statyczną do przechowywania środowiska, które `name`przechwytuje wartość. Kompilator generuje kod podobny do następującego:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -322,9 +322,9 @@ Lambda1Environment l = new Lambda1Environment() { capturedName = name };
 var predicate = new Func<Symbol, bool>(l.Evaluate);  
 ```  
   
- Dwa `new` alokacje (jeden dla klasy środowiska) i jeden dla delegata jawne są teraz. 
+ Dwa `new` alokacje (jeden dla klasy środowiska i jeden dla delegata) są teraz jawne. 
   
- Teraz sprawdźmy wywołanie `FirstOrDefault`. Ta metoda rozszerzenia na <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> typu jest zbyt naliczana alokacji. Ponieważ `FirstOrDefault` przyjmuje <xref:System.Collections.Generic.IEnumerable%601> obiektu jako pierwszego argumentu, można rozwinąć wywołanie następujący kod (uproszczony nieco dla dyskusji):  
+ Teraz przyjrzyj się `FirstOrDefault`wywołaniu. Ta metoda <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> rozszerzania typu powoduje również alokację. `FirstOrDefault` Ponieważ<xref:System.Collections.Generic.IEnumerable%601> przyjmuje obiekt jako pierwszy argument, można rozszerzyć wywołanie do następującego kodu (uproszczony bit na potrzeby dyskusji):  
   
 ```csharp  
 // Expanded return symbols.FirstOrDefault(predicate) ... 
@@ -338,13 +338,13 @@ var predicate = new Func<Symbol, bool>(l.Evaluate);
      return default(Symbol);  
 ```  
   
- `symbols` Zmienna ma typ <xref:System.Collections.Generic.List%601>. <xref:System.Collections.Generic.List%601> Kolekcji typ implementuje <xref:System.Collections.Generic.IEnumerable%601> i sprytnie definiuje moduł wyliczający (<xref:System.Collections.Generic.IEnumerator%601> interfejsu) który <xref:System.Collections.Generic.List%601> implementuje z `struct`. Przy użyciu struktury zamiast klasy oznacza, że zwykle należy unikać Alokacje sterty, które z kolei może mieć wpływ na wydajność odzyskiwania pamięci zbierania danych. Moduły wyliczające są zwykle używane w języku `foreach` pętli, która używa struktury modułu wyliczającego, ponieważ jest on zwracany w stosie wywołań. Zwiększanie wskaźnika stosu wywołań, aby zwolnić miejsce dla obiektu nie wpływa na tak jak w alokacji sterty GC. 
+ Zmienna ma typ <xref:System.Collections.Generic.List%601>. `symbols` <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.Generic.IEnumerator%601> `struct`Typ kolekcji implementuje i Cleverly definiuje<xref:System.Collections.Generic.List%601> moduł wyliczający (interfejs) implementujący za pomocą. <xref:System.Collections.Generic.List%601> Użycie struktury zamiast klasy oznacza zwykle uniknięcie przydziałów sterty, co z kolei może wpłynąć na wydajność odzyskiwania pamięci. Moduły wyliczające są zwykle używane z `foreach` pętlą języka, która używa struktury modułu wyliczającego, gdy zostanie zwrócona na stosie wywołań. Zwiększenie wskaźnika stosu wywołań w celu zapewnienia pokoju dla obiektu nie ma wpływu na sposób alokacji sterty. 
   
- W przypadku rozwiniętym okienku `FirstOrDefault` wywołaniu, kod musi wywołać `GetEnumerator()` na <xref:System.Collections.Generic.IEnumerable%601>. Przypisywanie `symbols` do `enumerable` zmiennej typu `IEnumerable<Symbol>` utraci informacje faktyczny obiekt <xref:System.Collections.Generic.List%601>. Oznacza to, że gdy kod pobiera moduł wyliczający z `enumerable.GetEnumerator()`, ma pola zwróconej struktury, aby przypisać je do programu .NET Framework `enumerator` zmiennej. 
+ W przypadku wywołania rozszerzonego `FirstOrDefault` kod musi wywołać `GetEnumerator()` na <xref:System.Collections.Generic.IEnumerable%601>. Przypisanie `symbols` <xref:System.Collections.Generic.List%601>do zmiennej typu `IEnumerable<Symbol>` powoduje utratę informacji, które są rzeczywistym obiektem. `enumerable` Oznacza to, że gdy kod pobiera moduł wyliczający z `enumerable.GetEnumerator()`, .NET Framework musi mieć pole zwróconej struktury, aby przypisać go `enumerator` do zmiennej. 
   
- **Na przykład rozwiązać 5**  
+ **Poprawka na przykład 5**  
   
- Obejście polega na edycji `FindMatchingSymbol` następująco, zastępując sześć wierszy kodu, które są nadal zwięzły, łatwe do odczytania i zinterpretowania i łatwa w obsłudze jego nawet jednego wiersza kodu:  
+ Poprawkę należy wykonać `FindMatchingSymbol` w następujący sposób, zamieniając swój pojedynczy wiersz kodu na sześć wierszy kodu, które są nadal zwięzłe, czytelne i zrozumiałe oraz łatwe w obsłudze:  
   
 ```csharp  
 public Symbol FindMatchingSymbol(string name)  
@@ -358,15 +358,15 @@ public Symbol FindMatchingSymbol(string name)
     }  
 ```  
   
- Ten kod nie korzysta z metod rozszerzeń LINQ, wyrażenia lambda lub moduły wyliczające i wiąże się nie alokacji. Istnieją nie alokacji, ponieważ kompilator może być wyświetlana `symbols` kolekcja jest <xref:System.Collections.Generic.List%601> i może powiązać wynikowy modułu wyliczającego (struktury) do zmiennej lokalnej przy użyciu właściwego typu, aby uniknąć pakowania. Oryginalna wersja tej funkcji został świetny przykład wszechstronnym możliwościom języka C# i efektywność programu .NET Framework. Ta wersja nowe i bardziej wydajne zachowuje tych klas bez dodawania żadnych złożonego kodu do konserwowania. 
+ Ten kod nie używa metod rozszerzeń LINQ, wyrażeń lambda ani modułów wyliczających i nie ma żadnych przydziałów. Nie ma żadnych alokacji, ponieważ kompilator może zobaczyć, że `symbols` kolekcja <xref:System.Collections.Generic.List%601> jest i może powiązać powstający moduł wyliczający (strukturę) ze zmienną lokalną z właściwym typem, aby uniknąć napakowywania. Oryginalną wersją tej funkcji była doskonały Przykładowa moc C# i produktywność .NET Framework. Ta nowa i wydajniejsza wersja zachowuje te cechy bez dodawania kodu złożonego do obsługi. 
   
-### <a name="async-method-caching"></a>Buforowanie metody asynchronicznej  
+### <a name="async-method-caching"></a>Buforowanie metod asynchronicznych  
 
-W kolejnym przykładzie pokazano powszechny problem podczas próby użycia pamięci podręcznej powoduje [async](../../csharp/programming-guide/concepts/async/index.md) metody.
+W następnym przykładzie przedstawiono typowy problem występujący podczas próby użycia zbuforowanych wyników w metodzie [asynchronicznej](../../csharp/programming-guide/concepts/async/index.md) .
   
  **Przykład 6: buforowanie w metodach asynchronicznych**  
   
- Funkcje środowiska IDE programu Visual Studio, zbudowany na nowej Kompilatory języka C# i Visual Basic często pobrać drzewa składni i kompilatorów zachować za pomocą async czyniąc programu Visual Studio dynamiczny. Poniżej przedstawiono pierwszą wersję kodu, który może zapisać, można pobrać drzewa składni:  
+ Funkcje środowiska IDE programu Visual Studio oparte na nowych C# i Visual Basic kompilatorach często pobierają drzewa składniowe, a kompilatory używają Async w celu zapewnienia, że program Visual Studio reaguje. Oto pierwsza wersja kodu, którą można napisać, aby uzyskać drzewo składni:  
   
 ```csharp  
 class SyntaxTree { /*...*/ }  
@@ -386,9 +386,9 @@ class Compilation { /*...*/
 }  
 ```  
   
- Widać, że wywołanie `GetSyntaxTreeAsync()` tworzy `Parser`, analizuje kod, a następnie zwraca <xref:System.Threading.Tasks.Task> obiektu `Task<SyntaxTree>`. Przydzielanie jest kosztowne część `Parser` wystąpienie i analizy kodu. Funkcja zwraca <xref:System.Threading.Tasks.Task> tak, aby obiekty wywołujące mogą await pracy analizy i bezpłatnie przez wątek interfejsu użytkownika, aby reagować na dane wejściowe użytkownika. 
+ Można zobaczyć, że wywoływanie `GetSyntaxTreeAsync()` tworzy wystąpienia a `Parser`, analizuje kod <xref:System.Threading.Tasks.Task> , a następnie zwraca obiekt, `Task<SyntaxTree>`. Kosztowna część przydziela `Parser` wystąpienie i analizuje kod. Funkcja zwraca obiekt <xref:System.Threading.Tasks.Task> , aby wywołujący mogą oczekiwać na przeanalizowanie i zwolnić wątek interfejsu użytkownika, aby odpowiadał na dane wejściowe użytkownika. 
   
- Kilka funkcji programu Visual Studio może próbować uzyskać tym samym drzewie składni, dzięki czemu można napisać następujący kod do Zbuforuj wynik analizy, aby oszczędzić czas i alokacje. Jednak ten kod powoduje alokację:  
+ Kilka funkcji programu Visual Studio może próbować uzyskać to samo drzewo składni, więc można napisać następujący kod w celu przetworzenia pamięci podręcznej wynik analizy w celu zaoszczędzenia czasu i alokacji. Jednak ten kod wiąże się z alokacją:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -408,11 +408,11 @@ class Compilation { /*...*/
 }  
 ```  
   
- Możesz zobaczyć, że nowy kod za pomocą pamięci podręcznej ma `SyntaxTree` pole o nazwie `cachedResult`. Gdy to pole ma wartość null, `GetSyntaxTreeAsync()` wykonuje pracę i zapisuje wynik w pamięci podręcznej. `GetSyntaxTreeAsync()` Zwraca `SyntaxTree` obiektu. Ten problem występuje wtedy, gdy masz `async` — funkcja typu `Task<SyntaxTree>`, i zwracanie wartości typu `SyntaxTree`, kompilator generuje kod do przydzielania zadań do przechowywania wyników (przy użyciu `Task<SyntaxTree>.FromResult()`). Zadanie jest oznaczone jako ukończone, a wynik jest natychmiast dostępna. W kodzie dla nowych kompilatorów <xref:System.Threading.Tasks.Task> obiektów, które już zakończono wystąpił tak często oznacza naprawiania tych przydziałów zwiększona szybkość reakcji znacznie. 
+ Zobaczysz, że nowy kod z buforowaniem ma `SyntaxTree` pole o `cachedResult`nazwie. Gdy to pole ma wartość null `GetSyntaxTreeAsync()` , program wykonuje i zapisuje wynik w pamięci podręcznej. `GetSyntaxTreeAsync()``SyntaxTree` zwraca obiekt. Problem polega na `async` tym, że jeśli masz funkcję typu `Task<SyntaxTree>`i zwracasz wartość typu `SyntaxTree`, kompilator emituje kod w celu przydzielenia zadania do przechowywania wyniku (przy użyciu `Task<SyntaxTree>.FromResult()`). Zadanie jest oznaczane jako ukończone, a wynik jest natychmiast dostępny. W kodzie dla nowych kompilatorów obiekty, które <xref:System.Threading.Tasks.Task> zostały już wykonane, były tak często, że te przydziały znacznie poprawiają czas odpowiedzi. 
   
- **Na przykład rozwiązać 6**  
+ **Poprawka na przykład 6**  
   
- Aby usunąć ukończoną <xref:System.Threading.Tasks.Task> alokacji, można buforować obiekt zadania z wynikiem zakończone:  
+ Aby usunąć kompletną <xref:System.Threading.Tasks.Task> alokację, można buforować obiekt zadania z wynikiem ukończenia:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -434,39 +434,39 @@ class Compilation { /*...*/
 }  
 ```  
   
- Ten kod zmienia typ `cachedResult` do `Task<SyntaxTree>` i stosuje `async` funkcja pomocnicza, która zawiera oryginalny kod z `GetSyntaxTreeAsync()`. `GetSyntaxTreeAsync()` używa teraz [null operatora łączącego](../../csharp/language-reference/operators/null-coalescing-operator.md) do zwrócenia `cachedResult` Jeśli nie ma wartości null. Jeśli `cachedResult` ma wartość null, następnie `GetSyntaxTreeAsync()` wywołania `GetSyntaxTreeUncachedAsync()` i zapisuje wynik w pamięci podręcznej. Należy zauważyć, że `GetSyntaxTreeAsync()` nie await wywołanie `GetSyntaxTreeUncachedAsync()` jako kod normalny. Nie używa await oznacza że w przypadku `GetSyntaxTreeUncachedAsync()` zwraca jego <xref:System.Threading.Tasks.Task> obiektu `GetSyntaxTreeAsync()` natychmiast zwraca <xref:System.Threading.Tasks.Task>. Teraz jest buforowany wynik <xref:System.Threading.Tasks.Task>, więc nie ma żadnych alokacji do zwrócenia wyniku pamięci podręcznej. 
+ Ten kod zmienia `cachedResult` typ do `Task<SyntaxTree>` i `async` korzysta z funkcji pomocnika, która zawiera oryginalny kod z `GetSyntaxTreeAsync()`. `GetSyntaxTreeAsync()`teraz używa [operatora łączenia wartości null](../../csharp/language-reference/operators/null-coalescing-operator.md) do zwrócenia `cachedResult` , jeśli nie ma wartości null. Jeśli `cachedResult` ma wartość null `GetSyntaxTreeAsync()` , wywołuje `GetSyntaxTreeUncachedAsync()` i buforuje wynik. Zwróć uwagę `GetSyntaxTreeAsync()` , że nie oczekujemy `GetSyntaxTreeUncachedAsync()` , że wywołanie jako kod normalnie będzie się powtarzać. Nie przy użyciu oczekiwania oznacza, `GetSyntaxTreeUncachedAsync()` że gdy <xref:System.Threading.Tasks.Task> zwraca swój `GetSyntaxTreeAsync()` <xref:System.Threading.Tasks.Task>obiekt, natychmiast zwraca. Teraz buforowany wynik to a <xref:System.Threading.Tasks.Task>, więc nie ma żadnych alokacji, aby zwrócić zbuforowany wynik. 
   
 ### <a name="additional-considerations"></a>Dodatkowe zagadnienia  
- Poniżej przedstawiono kilka więcej punktów o potencjalnych problemach w dużych aplikacji lub aplikacji, które przetwarzają dużą ilość danych. 
+ Poniżej przedstawiono kilka dodatkowych kwestii dotyczących potencjalnych problemów z dużymi aplikacjami lub aplikacjami, które przetwarzają wiele danych. 
   
- **słowniki**  
+ **Słownik**  
   
- Słowniki są używane w wielu programach w ubiquitously i mimo że słowniki są bardzo wygodny i wydajny założenia. Jednak często służą one niewłaściwie. W Visual Studio i nowe kompilatory analizy pokazuje, że wiele słowników zawiera pojedynczy element lub były puste. Pusta <xref:System.Collections.Generic.Dictionary%602> ma dziesięć pola i zajmuje 48 bajtów na stosie na x86 maszyny. Słowniki to idealne rozwiązanie w przypadku, gdy będziesz potrzebować mapowanie lub asocjacyjnych struktury danych z wyszukiwanie w czasie stałym. Jednak jeśli masz tylko kilka elementów, możesz tracić dużo miejsca za pomocą słownika. Zamiast tego, na przykład, można wielokrotnie poszukać za pośrednictwem `List<KeyValuePair\<K,V>>`, po prostu tak szybko. Jeśli używasz słownik tylko do załadować je z danymi, a następnie zapoznaj się z niego (bardzo typowy wzorzec) posortowaną tablicę przy użyciu wyszukiwania N(log(N)) może być prawie jako szybkiego działania, w zależności od liczby elementów, których używasz. 
+ Słowniki są powszechnie używane w wielu programach, a słowniki są bardzo wygodne i najbardziej wydajne. Jednak są one często używane w sposób niewłaściwy. W programie Visual Studio i w nowych kompilatorach analiza pokazuje, że wiele słowników zawiera pojedynczy element lub był pusty. Pusta <xref:System.Collections.Generic.Dictionary%602> ma dziesięć pól i zajmuje 48 bajtów na stercie na komputerze z procesorem x86. Słowniki są doskonałe, gdy potrzebne jest mapowanie lub kojarzenie struktury danych z wyszukiwaniem w czasie stałym. Niemniej jednak, jeśli masz tylko kilka elementów, możesz użyć słownika. Zamiast tego można na przykład zajrzeć przez `List<KeyValuePair\<K,V>>`, tak jak szybko. Jeśli używasz słownika tylko do ładowania danych z danymi, a następnie od niego odczytasz (bardzo powszechny wzorzec), za pomocą posortowanej tablicy z wyszukiwaniem N (log (N)) może być niemal równie szybka, w zależności od liczby używanych elementów. 
   
- **Klas lub struktur**  
+ **Klasy a struktury**  
   
- W sposób bezpieczny klas i struktur Obejmij kosztem klasycznego miejsca/godziny dostosowywania aplikacji. Klasy pociągnąć za sobą 12-bajtowy obciążenie x86 komputera, nawet jeśli mają one żadnych pól, ale są one niedrogie w celu przejścia wokół, ponieważ tylko pobiera wskaźnik do odwoływania się do wystąpienia klasy. Struktury pociągnąć za sobą nie alokacji sterty, jeśli nie są one zapakowany, ale podczas przekazywania dużych struktury jako argumenty funkcji lub zwracania wartości zajmuje trochę czasu procesora CPU niepodzielne skopiować wszystkie składowe danych struktury. Zwróć uwagę na wielokrotnego wywołania do właściwości, które zwracają struktur i wartości właściwości w zmiennej lokalnej, aby uniknąć nadmiernego kopiowania danych w pamięci podręcznej. 
+ W ten sposób klasy i struktury zapewniają klasyczną przestrzeń czasową/kompromis do dostrajania aplikacji. Klasy składają się z 12 bajtów na komputerze z procesorem x86, nawet jeśli nie mają żadnych pól, ale są niedrogi do obejścia, ponieważ przyjmuje tylko wskaźnik odwołujący się do wystąpienia klasy. Struktury nie ponoszą żadnych alokacji sterty, jeśli nie są opakowane, ale w przypadku przekazywania dużych struktur jako argumentów funkcji lub wartości zwracanych przez procesor czas procesora w celu niepodzielnego kopiowania wszystkich elementów członkowskich danych struktur. Obejrzyj powtarzające się wywołania właściwości, które zwracają struktury, i Buforuj wartość właściwości w zmiennej lokalnej, aby uniknąć nadmiernego kopiowania danych. 
   
- **Caches**  
+ **Pamięci podręcznych**  
   
- Typowe wydajności jest do wyników z pamięci podręcznej. Jednak bez zasad zakończenia lub usuwania rozmiar pamięci podręcznej może być przeciek pamięci. Podczas przetwarzania dużych ilości danych, jeśli przytrzymasz dużej ilości pamięci w pamięci podręcznej, można wywołać wyrzucanie elementów bezużytecznych zastąpić korzyści wynikające z Twojej wyszukiwań w pamięci podręcznej. 
+ Częstą lewę z wydajnością jest buforowanie wyników. Jednak pamięć podręczna bez zasad limitu rozmiaru lub usuwania może być przeciekiem pamięci. W przypadku przetwarzania dużych ilości danych, jeśli w pamięci podręcznej znajduje się dużo pamięci, można spowodować wyrzucanie elementów bezużytecznych w celu zastąpienia korzyści z buforowanych wyszukiwań. 
   
- W tym artykule omówiono, jak należy pamiętać o objawy wąskich gardeł wydajności, które mogą wpływać na czas reakcji aplikacji, szczególnie w przypadku dużych systemów i systemów, które przetwarzają duże ilości danych. Typowe sprawcami obejmują pakowania, działań na ciągach, LINQ i lambda, buforowania w metodach asynchronicznych, buforowanie bez rozmiar limit lub usuwania zasad, nieodpowiednie użycie słowniki i przekazywanie wokół struktury. Należy pamiętać, cztery fakty dostrojenia aplikacji:  
+ W tym artykule omówiono, jak należy wiedzieć, jak należy pamiętać o problemach z wąskim gardła wydajności, które mogą wpływać na czas odpowiedzi aplikacji, szczególnie w przypadku dużych systemów i systemów, które przetwarzają duże ilości danych. Typowe culprits obejmują pakowanie, manipulowanie ciągami, LINQ i lambda, buforowanie w metodach asynchronicznych, buforowanie bez limitu rozmiaru lub zasad usuwania, nieodpowiednie użycie słowników i przekazywanie wokół struktur. Weź pod uwagę cztery fakty dotyczące dostrajania aplikacji:  
   
-- Nie przedwcześnie Optymalizuj — produktywności i dostrajanie aplikacji, gdy zauważać problemy. 
+- Nie przeprowadzaj przedwcześnie optymalizacji — Zwiększ produktywność i Dostosuj swoją aplikację w przypadku problemów. 
   
-- Profile nie leży — jesteś zgadywania, jeśli nie pomiarowego. 
+- Profile nie znajdują się — nastąpi odpuszczenie, że nie są mierzone pomiary. 
   
-- Dobre narzędzia zależy od — Pobierz narzędzia PerfView i wypróbuj jej działanie. 
+- Dobre narzędzia sprawiają, że wszystkie różnice — Pobieranie narzędzia PerfView i wypróbowanie. 
   
-- To wszystko o alokacji — oznacza to, gdzie zespół platformy kompilatora poświęcony większość czasu poprawę wydajności nowych kompilatory. 
+- Wszystkie przydziały — w przypadku, gdy zespół platform kompilator poświęca większość czasu na zwiększenie wydajności nowych kompilatorów. 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Film wideo: prezentacja części tego tematu](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
+- [Wideo przedstawiające prezentację tego tematu](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [Profilowanie wydajności — przewodnik dla początkujących](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Wydajność](../../../docs/framework/performance/index.md)
-- [Wskazówki dotyczące wydajności .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
-- [Channel 9 samouczki narzędzia PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)
-- [Zestaw SDK platformy kompilatora .NET](../../csharp/roslyn-sdk/index.md)
-- [repozytorium DotNet/roslyn w witrynie GitHub](https://github.com/dotnet/roslyn)
+- [Porady dotyczące wydajności .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
+- [Samouczki narzędzia PerfView kanału 9](https://channel9.msdn.com/Series/PerfView-Tutorial)
+- [Zestaw SDK .NET Compiler Platform](../../csharp/roslyn-sdk/index.md)
+- [repozytorium dotnet/Roslyn w witrynie GitHub](https://github.com/dotnet/roslyn)

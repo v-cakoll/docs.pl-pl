@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 170cc4a42eda0b54d1e252104a702e008af7a336
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671823"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963531"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error — Instrukcja (Visual Basic)
 Włącza procedurę obsługi błędów i określa lokalizację procedury w ramach procedury; można również użyć, aby wyłączyć procedurę obsługi błędu. `On Error` Instrukcja jest używana w obsłudze błędów bez struktury i może być używana zamiast strukturalnej obsługi wyjątków. [Strukturalna obsługa wyjątków](../../../standard/exceptions/index.md) jest wbudowana w platformę .NET, jest zwykle wydajniejsza i dlatego jest zalecana w przypadku obsługi błędów środowiska uruchomieniowego w aplikacji.
@@ -35,7 +35,7 @@ Włącza procedurę obsługi błędów i określa lokalizację procedury w ramac
  Bez obsługi błędów lub obsługi wyjątków, wystąpi błąd w czasie wykonywania, który jest krytyczny: wyświetlany jest komunikat o błędzie, a wykonywanie jest zatrzymywane.
 
 > [!NOTE]
->  Słowo kluczowe jest również używane w [instrukcji Error](../../../visual-basic/language-reference/statements/error-statement.md), która jest obsługiwana w celu zapewnienia zgodności z poprzednimi wersjami. `Error`
+> Słowo kluczowe jest również używane w [instrukcji Error](../../../visual-basic/language-reference/statements/error-statement.md), która jest obsługiwana w celu zapewnienia zgodności z poprzednimi wersjami. `Error`
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,7 +55,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="remarks"></a>Uwagi
 
 > [!NOTE]
->  Zalecamy używanie obsługi wyjątków strukturalnych w kodzie wszędzie tam, gdzie to możliwe, zamiast używania obsługi wyjątków niestrukturalnych i `On Error` instrukcji. Aby uzyskać więcej informacji, zobacz [try... Catch... Finally — instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
+> Zalecamy używanie obsługi wyjątków strukturalnych w kodzie wszędzie tam, gdzie to możliwe, zamiast używania obsługi wyjątków niestrukturalnych i `On Error` instrukcji. Aby uzyskać więcej informacji, zobacz [try... Catch... Finally — instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
 
  Procedura obsługi błędów "Enabled" jest taka, która jest włączona przez `On Error` instrukcję. Procedura obsługi błędów "Active" jest włączoną obsługą, która jest w trakcie obsługi błędu.
 
@@ -66,7 +66,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  Za każdym razem, gdy program obsługi błędów przekazuje kontrolę z powrotem do procedury wywołującej, ta procedura jest bieżącą procedurą. Gdy błąd zostanie obsłużony przez procedurę obsługi błędów w procedurze, wykonanie jest wznawiane w bieżącej procedurze w punkcie wydzielonym przez `Resume` instrukcję.
   
 > [!NOTE]
->  Procedura obsługi błędu nie `Sub` jest procedurą `Function` ani procedurą. Jest to sekcja kodu oznaczona przez etykietę wiersza lub numer wiersza.
+> Procedura obsługi błędu nie `Sub` jest procedurą `Function` ani procedurą. Jest to sekcja kodu oznaczona przez etykietę wiersza lub numer wiersza.
   
 ## <a name="number-property"></a>Number — właściwość
  Procedury obsługi błędów są zależne od wartości `Number` właściwości obiektu, `Err` aby określić przyczynę błędu. Procedura powinna testować lub zapisywać odpowiednie wartości właściwości w `Err` obiekcie przed wystąpieniem innego błędu lub przed wykonaniem procedury, która może spowodować wystąpienie błędu. Wartości właściwości w `Err` obiekcie odzwierciedlają tylko ostatni błąd. Komunikat o błędzie skojarzony z `Err.Number` jest zawarty w `Err.Description`.  
@@ -82,7 +82,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  `On Error Resume Next`powoduje, że wykonanie instrukcji kontynuuje się bezpośrednio po instrukcji, która spowodowała błąd czasu wykonywania, lub instrukcji zaraz po ostatnim wywołaniu procedury zawierającej `On Error Resume Next` instrukcję. Ta instrukcja umożliwia kontynuowanie wykonywania pomimo błędu czasu wykonywania. Można umieścić procedurę obsługi błędów, w której wystąpił błąd, zamiast przenoszenia kontroli do innej lokalizacji w ramach procedury. Instrukcja stanie się nieaktywna, gdy wywoływana jest inna procedura, więc należy `On Error Resume Next` wykonać instrukcję w każdej nazwie procedury, jeśli chcesz, aby Wbudowana obsługa błędów w tej procedurze. `On Error Resume Next`
   
 > [!NOTE]
->  Konstrukcja może być preferowana w `On Error GoTo` przypadku obsługi błędów generowanych podczas uzyskiwania dostępu do innych obiektów. `On Error Resume Next` `Err` Po każdej interakcji z obiektem jest usuwana niejednoznaczność informacji o obiekcie, do którego miał dostęp kod. Możesz mieć pewność, który obiekt został umieszczony w `Err.Number`kodzie błędu, a także który obiekt pierwotnie wygenerował błąd (obiekt określony w `Err.Source`).
+> Konstrukcja może być preferowana w `On Error GoTo` przypadku obsługi błędów generowanych podczas uzyskiwania dostępu do innych obiektów. `On Error Resume Next` `Err` Po każdej interakcji z obiektem jest usuwana niejednoznaczność informacji o obiekcie, do którego miał dostęp kod. Możesz mieć pewność, który obiekt został umieszczony w `Err.Number`kodzie błędu, a także który obiekt pierwotnie wygenerował błąd (obiekt określony w `Err.Source`).
 
 ## <a name="on-error-goto-0"></a>W przypadku błędu GoTo 0
  `On Error GoTo 0`wyłącza obsługę błędów w bieżącej procedurze. Nie określa wiersz 0 jako początku kodu obsługi błędu, nawet jeśli procedura zawiera numer 1. `On Error GoTo 0` Bez instrukcji procedura obsługi błędów jest automatycznie wyłączona, gdy procedura zostanie zakończona.

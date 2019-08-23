@@ -2,20 +2,20 @@
 title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 91eafa46aa73b5e6d359fcbe48f098f9f8a4d0f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 032139b714aa11079c7ee8610c332e404b3981ac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644319"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918998"
 ---
-# <a name="exposedmethod"></a>\<exposedMethod>
-Reprezentuje metodę COM +, która jest widoczna gdy interfejs składnika COM + jest widoczny jako usługi sieci Web.  
+# <a name="exposedmethod"></a>\<exposedMethod >
+Reprezentuje metodę COM+, która jest uwidaczniana, gdy interfejs składnika modelu COM+ jest udostępniany jako usługa sieci Web.  
   
  \<system.ServiceModel>  
 \<comContracts>  
-\<comContract>  
-\<metody >  
+\<comContract >  
+\<Metody >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,7 +36,7 @@ Reprezentuje metodę COM +, która jest widoczna gdy interfejs składnika COM + 
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|nazwa|Ciąg, który zawiera metodę COM +, która jest widoczna gdy interfejs składnika COM + jest widoczny jako usługi sieci Web.|  
+|nazwa|Ciąg, który zawiera metodę COM+, która jest uwidaczniana, gdy interfejs składnika modelu COM+ jest ujawniony jako usługa sieci Web.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -45,16 +45,16 @@ Reprezentuje metodę COM +, która jest widoczna gdy interfejs składnika COM + 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<exposedMethods>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethods.md)|Kolekcja [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elementów.|  
+|[\<exposedMethods >](exposedmethods.md)|Kolekcja elementów exposedMethod >. [ \<](exposedmethod.md)|  
   
 ## <a name="remarks"></a>Uwagi  
- COM + integracja narzędzie konfiguracji (ComSvcConfig.exe) może służyć do dodawania konkretnych metod z interfejsem COM żeby pojawiły się na kontrakt usługi wygenerowany.  
+ Narzędzie konfiguracji integracji modelu COM+ (ComSvcConfig. exe) może służyć do dodawania określonych metod z interfejsu COM, które mają być wyświetlane w wygenerowanym kontrakcie usługi.  
   
- Na przykład służy następujące polecenie do dodania trzy metody o nazwie z `IFinances` interfejsu COM na `ItemOrders`. Składnik finansowych umową serwisową wygenerowany.  
+ Na przykład można użyć poniższego polecenia, aby dodać trzy nazwane metody z `IFinances` interfejsu com `ItemOrders`na. Składnik finansowy do wygenerowanego kontraktu usługi.  
   
  `ComSvcConfig.exe /i /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{TransferFunds,AddFunds,RemoveFunds} /hosting:complus`  
   
- Po uruchomieniu również ComSvcConfig.exe, następnie generuje następujące kontraktu usługi, wyświetlanie listy opisanych powyżej metod jako [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elementów.  
+ Po uruchomieniu również programu ComSvcConfig. exe program generuje następujący kontrakt usługi, zawierający wymienione wcześniej metody jako [ \<elementy exposedMethod >](exposedmethod.md) .  
   
 ```xml  
 <comContract contractType="{C551FBA9-E3AA-4272-8C2A-84BD8D290AC7}"
@@ -66,12 +66,12 @@ Reprezentuje metodę COM +, która jest widoczna gdy interfejs składnika COM + 
 </comContract>
 ```  
   
- Podczas inicjowania usługi, środowisko uruchomieniowe spróbuje go wygenerować kontraktu usługi odzwierciedlający za pośrednictwem i dodając tylko te metody, które są uwzględnione na liście [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elementów. Śledzenie jest tworzony dla każdej metody interfejsu, który nie znajduje się na kontrakt usługi.  
+ W czasie inicjalizacji usługi środowisko uruchomieniowe próbuje wygenerować kontrakt usługi przez odzwierciedlenie i dodanie tylko metod uwzględnionych na liście [ \<elementów exposedMethod >](exposedmethod.md) . Ślad jest generowany dla każdej metody interfejsu, która nie jest uwzględniona w kontrakcie usługi.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Configuration.ComMethodElementCollection>
 - <xref:System.ServiceModel.Configuration.ComMethodElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [Współdziałanie z aplikacjami COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Instrukcje: Konfigurowanie ustawień usługi COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [Współdziałanie z aplikacjami COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Instrukcje: Konfigurowanie ustawień usługi COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

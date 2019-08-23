@@ -7,25 +7,25 @@ helpviewer_keywords:
 - spin button control [Windows Forms], about spin button
 - DomainUpDown control [Windows Forms], about DomainUpDown control
 ms.assetid: 3f40f9c1-20ad-4331-b9b5-b0127eb36eb3
-ms.openlocfilehash: bfe3e7239f77c6f1a0d9bb46a96c704653b43364
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fda542204e2b41dd1d729d2b940c6f38a5812ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972071"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965300"
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>DomainUpDown — Informacje o formancie [Formularze systemu Windows]
-Formularze Windows <xref:System.Windows.Forms.DomainUpDown> formant jest zasadniczo kombinacji pola tekstowego, a parę przycisków przenoszenia w górę lub w dół na liście. Kontrolka Wyświetla i ustawia ciąg tekstowy z listy dostępnych opcji. Użytkownik może wybrać ciąg przez kliknięcie przycisków, aby przejść na liście w górę i w dół, przez naciśnięcie klawiszy strzałek w górę i w dół lub wpisując ciąg, który pasuje do elementu na liście. Jedno możliwe użycie tej kontrolki jest służąca do wybierania elementów z alfabetycznie posortowaną listę nazw.  
+Formant Windows Forms <xref:System.Windows.Forms.DomainUpDown> jest zasadniczo połączeniem pola tekstowego i pary przycisków do przesuwania w górę lub w dół na liście. Kontrolka wyświetla i ustawia ciąg tekstowy z listy wyborów. Użytkownik może wybrać ciąg, klikając przyciski w górę i w dół, aby przejść przez listę, naciskając klawisze strzałek w górę i w dół lub wpisując ciąg, który pasuje do elementu na liście. Jednym z możliwych użycia dla tej kontrolki jest wybranie elementów z listy alfabetycznie posortowanej.  
   
 > [!NOTE]
->  Aby posortować listę, należy ustawić <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> właściwość `true`.  
+> Aby posortować listę, ustaw <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> właściwość na. `true`  
   
- Funkcja ta kontrolka jest bardzo podobne do pola listy lub pola kombi, ale zajmuje on bardzo mało miejsca.  
+ Funkcja tego formantu jest bardzo podobna do pola listy lub pola kombi, ale zajmuje bardzo mało miejsca.  
   
 ## <a name="key-properties"></a>Właściwości klucza  
- Kluczowe właściwości kontrolki są <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, i <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>. <xref:System.Windows.Forms.DomainUpDown.Items%2A> Właściwość zawiera listę obiektów, których wartości tekstowe są wyświetlane w formancie. Jeśli <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> ustawiono `false`, formant automatycznie wykonuje tekstu, że użytkownik wpisuje i dopasowuje je do wartości na liście. Jeśli <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> ustawiono `true`, przewijania po ostatnim elemencie spowoduje przejście do pierwszego elementu na liście i na odwrót. Metody klucza kontrolki są <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> i <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.  
+ Właściwości klucza kontrolki to <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, i <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>. <xref:System.Windows.Forms.DomainUpDown.Items%2A> Właściwość zawiera listę obiektów, których wartości tekstowe są wyświetlane w kontrolce. Jeśli <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> jest ustawiona na `false`, formant automatycznie uzupełnia tekst, który jest typem użytkownika i dopasowuje go do wartości na liście. Jeśli <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> jest ustawiona na `true`, przewijanie do ostatniego elementu spowoduje przejście do pierwszego elementu na liście i na odwrót. Kluczowymi metodami formantu są <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> i. <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>  
   
- Ta kontrolka wyświetla tylko ciągi tekstowe. Jeśli chcesz, aby formant, który wyświetla wartości liczbowe, użyj <xref:System.Windows.Forms.NumericUpDown> kontroli. Aby uzyskać więcej informacji, zobacz [— informacje o formancie NumericUpDown](numericupdown-control-overview-windows-forms.md).  
+ Ta kontrolka wyświetla tylko ciągi tekstowe. Jeśli chcesz, aby kontrolka, która wyświetla wartości liczbowe, <xref:System.Windows.Forms.NumericUpDown> używała kontrolki. Aby uzyskać więcej informacji, zobacz [NumericUpDown Control — Omówienie](numericupdown-control-overview-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

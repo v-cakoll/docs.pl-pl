@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 29cf4e03c1e4f91cd4390b84dd62c07268fe0189
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 5c29899846e7210c02b6bcc2b677b05581a5c6b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364319"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939707"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Rozszerzenia znaczników dla przeglądu XAML
 Rozszerzenia znaczników są techniką języka XAML do uzyskiwania wartości, która nie jest elementem pierwotnym ani określonym typem XAML. W przypadku użycia atrybutów rozszerzenia znaczników używają znanej sekwencji znaków otwierającego nawiasu `{` klamrowego, aby wprowadzić zakres rozszerzenia znacznika i zamykającego `}` nawiasu klamrowego. Korzystając z .NET Framework usług XAML, można użyć niektórych wstępnie zdefiniowanych rozszerzeń znaczników języka XAML z zestawu System. XAML. Można również utworzyć podklasę <xref:System.Windows.Markup.MarkupExtension> z klasy, zdefiniowanej w pliku System. XAML i zdefiniować własne rozszerzenia znaczników. Lub można użyć rozszerzeń znaczników zdefiniowanych przez określoną strukturę, jeśli już odwołujesz się do tej struktury.  
@@ -22,7 +22,7 @@ Rozszerzenia znaczników są techniką języka XAML do uzyskiwania wartości, kt
  Kilka rozszerzeń znaczników jest implementowanych przez .NET Framework usług XAML dla obsługi języka XAML. Te rozszerzenia znaczników odpowiadają części specyfikacji języka XAML jako języka. Są one zazwyczaj identyfikowane przez `x:` prefiks w składni, jak pokazano w typowym użyciu. Implementacje usług XAML .NET Framework dla tych elementów języka XAML wszystkie pochodzą od <xref:System.Windows.Markup.MarkupExtension> klasy bazowej.  
   
 > [!NOTE]
->  `x:` Prefiks jest używany dla typowego mapowania przestrzeni nazw XAML w przestrzeni nazw języka XAML, w elemencie głównym produkcji XAML. Na przykład szablon projektu i strony programu Visual Studio dla różnych określonych platform inicjują plik XAML przy użyciu tego `x:` mapowania. Można wybrać inny token prefiksu w ramach własnego mapowania przestrzeni nazw XAML, ale ta dokumentacja będzie zależeć od `x:` domyślnego mapowania jako środka do identyfikacji tych jednostek, które są zdefiniowanej częścią przestrzeni nazw XAML języka XAML, w przeciwieństwie do domyślna przestrzeń nazw języka XAML określonej struktury lub inne przestrzenie nazw CLR lub XML.  
+> `x:` Prefiks jest używany dla typowego mapowania przestrzeni nazw XAML w przestrzeni nazw języka XAML, w elemencie głównym produkcji XAML. Na przykład szablon projektu i strony programu Visual Studio dla różnych określonych platform inicjują plik XAML przy użyciu tego `x:` mapowania. Można wybrać inny token prefiksu w ramach własnego mapowania przestrzeni nazw XAML, ale ta dokumentacja będzie zależeć od `x:` domyślnego mapowania jako środka do identyfikacji tych jednostek, które są zdefiniowanej częścią przestrzeni nazw XAML języka XAML, w przeciwieństwie do domyślna przestrzeń nazw języka XAML określonej struktury lub inne przestrzenie nazw CLR lub XML.  
   
 ### <a name="xtype"></a>X:Type —  
  `x:Type`<xref:System.Type> dostarcza obiekt dla nazwanego typu. Ta funkcja jest używana najczęściej w przypadku mechanizmów odroczenia, które używają podstawowego typu CLR i wyprowadzania typu jako moniker lub identyfikator grupowania. Przykładem są style i szablony WPF oraz ich `TargetType` użycie właściwości. Aby uzyskać więcej informacji, zobacz [X:Type — Markup Extension](x-type-markup-extension.md).  

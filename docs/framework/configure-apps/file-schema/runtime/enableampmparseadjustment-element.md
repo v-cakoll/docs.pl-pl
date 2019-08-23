@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a62bd3507c14e42798c903ae51edb0187e666c8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 46cf37ee800c05eb7fe12e8491ad3b2130c3a04d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663765"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920821"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment, element >
 Określa, czy metody analizowania dat i godzin używają dopasowanego zestawu reguł do analizowania ciągów dat zawierających dzień, miesiąc, godzinę i oznaczenie AM/PM.  
@@ -68,7 +68,7 @@ Określa, czy metody analizowania dat i godzin używają dopasowanego zestawu re
  <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType> <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> Element nie ma wpływu <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>na metody,, i. `<EnableAmPmParseAdjustment>`  
   
 > [!IMPORTANT]
->  W przypadku platformy .NET Core i .NET Native dostosowane reguły analizowania AM/PM są domyślnie włączone.  
+> W przypadku platformy .NET Core i .NET Native dostosowane reguły analizowania AM/PM są domyślnie włączone.  
   
  Jeśli reguła dopasowania analizy nie jest włączona, Pierwsza cyfra ciągu jest interpretowana jako godzina zegara 12-godzinnego, a pozostała część ciągu z wyjątkiem oznaczenia AM/PM jest ignorowana. Data i godzina zwrócone przez metodę analizy składa się z bieżącej daty i godziny wyekstrahowanej z ciągu daty.  
   

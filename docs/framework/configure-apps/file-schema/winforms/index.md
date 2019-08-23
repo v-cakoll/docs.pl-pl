@@ -4,17 +4,17 @@ ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbb2c4157ba702182056c98c959a60569e8c3d1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e76e11ef8bb39d72cb16655c948354bc326e75bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786415"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913088"
 ---
 # <a name="windows-forms-configuration-section"></a>Sekcja konfiguracji programu Windows Forms
-Ustawienia konfiguracji formularze Windows umożliwiają aplikacji Windows Forms, do przechowywania i pobierania informacji o aplikacji dostosowane ustawienia, takie jak obsługa wielu monitorów, obsługa wysokiej rozdzielczości DPI i inne wstępnie zdefiniowane ustawienia konfiguracji.
+Windows Forms ustawienia konfiguracji umożliwiają aplikacji Windows Forms przechowywanie i pobieranie informacji o niestandardowych ustawieniach aplikacji, takich jak obsługa wielomonitorów, obsługa wysokiej rozdzielczości DPI i inne wstępnie zdefiniowane ustawienia konfiguracji.
 
-Ustawienia konfiguracji aplikacji Windows Forms są przechowywane w pliku konfiguracyjnym aplikacji `System.Windows.Forms.ApplicationConfigurationSection` elementu.
+Ustawienia konfiguracji aplikacji Windows Forms są przechowywane w pliku `System.Windows.Forms.ApplicationConfigurationSection` konfiguracji aplikacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,21 +38,21 @@ Brak.
 
 Element  |Opis |
 ---------|---------|
-[`<add>`](../../../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md) | Dodaje klucz Ustawienia konfiguracji z określoną wartością |
+[`<add>`](windows-forms-add-configuration-element.md) | Dodaje klucz ustawienia konfiguracji z określoną wartością |
 
 ### <a name="parent-elements"></a>Elementy nadrzędne
 
 Element  |Opis |
 ---------|---------|
-[\<Konfiguracja >](../configuration-element.md) | Element główny w każdym pliku konfiguracji używane przez środowisko uruchomieniowe języka wspólnego i Windows Forms aplikacji |
+[\<> konfiguracji](../configuration-element.md) | Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje Windows Forms |
 
 ## <a name="remarks"></a>Uwagi
 
-Począwszy od .NET Framework 4.7 `<System.Windows.Forms.ApplicationConfigurationSection>` elementu umożliwia skonfigurowanie aplikacji Windows Forms, aby wykorzystać funkcje dodane w najnowszych wersjach programu .NET Framework. 
+Począwszy od .NET Framework 4,7, `<System.Windows.Forms.ApplicationConfigurationSection>` element pozwala konfigurować aplikacje Windows Forms, aby korzystać z funkcji dodanych w ostatnich wersjach .NET Framework. 
 
-`<System.Windows.Forms.ApplicationConfigurationSection>` Element może zawierać co najmniej jedną podrzędną [ `<add>` ](../../../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md) elementów, z których każdy definiuje ustawienia konfiguracji.
+Element może zawierać jeden lub więcej elementów podrzędnych [`<add>`](windows-forms-add-configuration-element.md) , z których każda definiuje określone ustawienie konfiguracji. `<System.Windows.Forms.ApplicationConfigurationSection>`
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Schemat pliku konfiguracji](../index.md)
-- [Obsługa wysokiej rozdzielczości w formularzach Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+- [Obsługa wysokiej rozdzielczości DPI w Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md)

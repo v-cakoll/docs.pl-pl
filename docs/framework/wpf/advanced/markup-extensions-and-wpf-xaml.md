@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: 25f6cbbc1df8a4a2b4ad9025b2381d26153e4b66
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: f0eb4a90b09f49ced45fa8453356e1d6fb3b4af1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364441"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965277"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Rozszerzenia znacznikowania i WPF XAML
 W tym temacie przedstawiono koncepcję rozszerzeń znaczników dla języka XAML, w tym ich reguły składni, przeznaczenie i model obiektów klasy, które są na siebie zależne. Rozszerzenia znaczników są ogólną cechą języka XAML i implementacją platformy .NET usług XAML. W tym temacie szczegółowo opisano rozszerzenia znaczników do użycia w języku XAML WPF.  
@@ -50,7 +50,7 @@ W tym temacie przedstawiono koncepcję rozszerzeń znaczników dla języka XAML,
 - `x:Array`zapewnia obsługę tworzenia ogólnych tablic w składni języka XAML, w przypadkach, gdy obsługa kolekcji dostarczonych przez elementy bazowe WPF i modele kontroli nie jest świadomie używana. Aby uzyskać szczegółowe informacje, zobacz [X:Array Markup Extension](../../xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
->  `x:` Prefiks jest używany dla typowego mapowania przestrzeni nazw XAML języka XAML, w elemencie głównym pliku XAML lub produkcji. Na przykład szablony programu Visual Studio dla aplikacji WPF inicjują plik XAML przy użyciu tego `x:` mapowania. Można wybrać inny token prefiksu we własnym mapowaniu przestrzeni nazw XAML, ale ta dokumentacja będzie zależeć od domyślnego `x:` mapowania jako metody identyfikacji tych jednostek, które są zdefiniowanej częścią przestrzeni nazw XAML dla języka XAML, w przeciwieństwie do do domyślnej przestrzeni nazw WPF lub innych przestrzeni nazw XAML niezwiązanych z konkretną strukturą.  
+> `x:` Prefiks jest używany dla typowego mapowania przestrzeni nazw XAML języka XAML, w elemencie głównym pliku XAML lub produkcji. Na przykład szablony programu Visual Studio dla aplikacji WPF inicjują plik XAML przy użyciu tego `x:` mapowania. Można wybrać inny token prefiksu we własnym mapowaniu przestrzeni nazw XAML, ale ta dokumentacja będzie zależeć od domyślnego `x:` mapowania jako metody identyfikacji tych jednostek, które są zdefiniowanej częścią przestrzeni nazw XAML dla języka XAML, w przeciwieństwie do do domyślnej przestrzeni nazw WPF lub innych przestrzeni nazw XAML niezwiązanych z konkretną strukturą.  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>Rozszerzenia znaczników specyficzne dla WPF  
@@ -71,7 +71,7 @@ W tym temacie przedstawiono koncepcję rozszerzeń znaczników dla języka XAML,
 - `ComponentResourceKey`i `ThemeDictionary` obsługują aspekty wyszukiwania zasobów, szczególnie w przypadku zasobów i motywów, które są spakowane z kontrolkami niestandardowymi. Aby uzyskać więcej informacji, zobacz [ComponentResourceKey Markup Extension](componentresourcekey-markup-extension.md), [ThemeDictionary — Markup Extension](themedictionary-markup-extension.md)lub [Authoring Control Overview](../controls/control-authoring-overview.md).  
   
 <a name="StarExtension"></a>   
-## <a name="extension-classes"></a>\* Klasy rozszerzeń  
+## <a name="extension-classes"></a>\*Klasy rozszerzeń  
  W przypadku ogólnego języka XAML i rozszerzeń znaczników specyficznych dla platformy WPF zachowanie każdego rozszerzenia znacznika jest identyfikowane dla procesora XAML za pośrednictwem `*Extension` klasy, która pochodzi z <xref:System.Windows.Markup.MarkupExtension>i <xref:System.Windows.Markup.StaticExtension.ProvideValue%2A> zapewnia implementację Method. Ta metoda dla każdego rozszerzenia zapewnia obiekt, który jest zwracany, gdy rozszerzenie znacznika jest oceniane. Zwrócony obiekt jest zwykle oceniany na podstawie różnych tokenów ciągów, które są przesyłane do rozszerzenia znacznika.  
   
  Na przykład <xref:System.Windows.StaticResourceExtension> Klasa zawiera implementację rzeczywistego wyszukiwania zasobów, dzięki czemu jego <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> implementacja zwraca żądany obiekt, z danymi wejściowymi tej konkretnej implementacji jest ciąg, który jest używany do Zapoznaj się z zasobem `x:Key`. Większość tych szczegółów implementacji jest nieważna, jeśli używasz istniejącego rozszerzenia znaczników.  
@@ -88,7 +88,7 @@ W tym temacie przedstawiono koncepcję rozszerzeń znaczników dla języka XAML,
 - Jeśli pojedyncze tokeny oddzielone nie zawierają żadnych znaków równości, każdy token jest traktowany jako argument konstruktora. Każdy parametr konstruktora musi być określony jako typ oczekiwany przez ten podpis, a w odpowiedniej kolejności oczekiwanej przez ten podpis.  
   
     > [!NOTE]
-    >  Procesor XAML musi wywoływać konstruktora, który jest zgodny z liczbą argumentów liczby par. Z tego powodu w przypadku implementowania niestandardowego rozszerzenia znaczników nie należy podawać wielu konstruktorów o tej samej liczbie argumentów. Zachowanie w przypadku działania procesora XAML, jeśli istnieje więcej niż jedna ścieżka konstruktora rozszerzenia znacznika o tej samej liczbie parametrów, ale należy oczekiwać, że procesor XAML może zgłosić wyjątek w przypadku użycia, jeśli ta sytuacja istnieje w Definicje typu rozszerzenia znaczników.  
+    > Procesor XAML musi wywoływać konstruktora, który jest zgodny z liczbą argumentów liczby par. Z tego powodu w przypadku implementowania niestandardowego rozszerzenia znaczników nie należy podawać wielu konstruktorów o tej samej liczbie argumentów. Zachowanie w przypadku działania procesora XAML, jeśli istnieje więcej niż jedna ścieżka konstruktora rozszerzenia znacznika o tej samej liczbie parametrów, ale należy oczekiwać, że procesor XAML może zgłosić wyjątek w przypadku użycia, jeśli ta sytuacja istnieje w Definicje typu rozszerzenia znaczników.  
   
 - Jeśli pojedyncze tokeny oddzielające zawierają znak równości, wówczas procesor XAML najpierw wywołuje konstruktora bez parametrów dla rozszerzenia znaczników. Następnie każda para nazwa = wartość jest interpretowana jako nazwa właściwości, która istnieje w rozszerzeniu znacznika i wartość, która ma zostać przypisana do tej właściwości.  
   

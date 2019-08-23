@@ -5,38 +5,38 @@ helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: dc0071d1fddf99bd712ebe8aea5c61bbc3522f93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2fdb8003365841a4eef298eb853765dd3bc4587d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921215"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916531"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>Bezpieczeństwo i rejestr (Visual Basic)
-Ta strona zawiera omówienie ryzyko związane z przechowywaniem danych w rejestrze.  
+Na tej stronie omówiono implikacje zabezpieczeń przechowywania danych w rejestrze.  
   
 ## <a name="permissions"></a>Uprawnienia  
- Nie jest bezpieczne przechowywanie wpisów tajnych, takich jak hasła, w rejestrze jako zwykłego tekstu, nawet jeśli klucz rejestru jest chroniony przez listy kontroli dostępu (listy kontroli dostępu).  
+ Nie jest bezpieczne przechowywanie wpisów tajnych, takich jak hasła, w rejestrze w postaci zwykłego tekstu, nawet jeśli klucz rejestru jest chroniony przez listy ACL (listy kontroli dostępu).  
   
- Praca z rejestru może naruszyć bezpieczeństwo, zezwalając na niewłaściwe dostęp do zasobów systemowych lub informacje chronione. Aby korzystać z tych właściwości, konieczne jest posiadanie Odczyt i zapis z <xref:System.Security.Permissions.RegistryPermissionAccess> wyliczenia, które kontrolują dostęp do zmiennych rejestru. Każdy kod z pełnym zaufaniem (w ramach domyślnych zasad zabezpieczeń, to każdy kod zainstalowana na lokalnym dysku twardym użytkownika) ma niezbędne uprawnienia dostępu do rejestru. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Permissions.RegistryPermission> klasy.  
+ Praca z rejestrem może naruszyć bezpieczeństwo przez umożliwienie nieodpowiedniego dostępu do zasobów systemowych lub chronionych informacji. Aby użyć tych właściwości, musisz mieć uprawnienia do odczytu i zapisu z <xref:System.Security.Permissions.RegistryPermissionAccess> wyliczenia, które kontroluje dostęp do zmiennych rejestru. Każdy kod z pełnym zaufaniem (w ramach domyślnych zasad zabezpieczeń) jest to każdy kod zainstalowany na lokalnym dysku twardym użytkownika, który ma odpowiednie uprawnienia dostępu do rejestru. Aby uzyskać więcej informacji, <xref:System.Security.Permissions.RegistryPermission> zobacz Klasa.  
   
- Zmienne rejestru nie powinien być przechowywany w lokalizacji pamięci gdzie kodu bez <xref:System.Security.Permissions.RegistryPermission> mają do nich dostęp. Podobnie podczas nadawania uprawnień należy przyznać minimalne uprawnienia, które trzeba wykonać zadanie.  
+ Zmienne rejestru nie powinny być przechowywane w lokalizacjach pamięci, w <xref:System.Security.Permissions.RegistryPermission> których kod nie może uzyskać do nich dostępu. Podobnie, podczas udzielania uprawnień należy przyznać minimalnych uprawnień niezbędnych do wykonania zadania.  
   
- Uprawnienia dostępu do wartości są definiowane przez <xref:System.Security.Permissions.RegistryPermissionAccess> wyliczenia. W poniższej tabeli przedstawiono jej członków.  
+ Wartości dostępu do uprawnień rejestru są definiowane przez <xref:System.Security.Permissions.RegistryPermissionAccess> Wyliczenie. Poniższa tabela zawiera szczegółowe informacje o jej elementach członkowskich.  
   
 |Wartość|Dostęp do zmiennych rejestru|  
 |-----------|----------------------------------|  
-|`AllAccess`|Tworzenia, odczytu i zapis|  
+|`AllAccess`|Tworzenie, odczytywanie i zapisywanie|  
 |`Create`|Create|  
 |`NoAccess`|Brak dostępu|  
 |`Read`|Odczyt|  
 |`Write`|Write|  
   
 ## <a name="checking-values-in-registry-keys"></a>Sprawdzanie wartości w kluczach rejestru  
- Kiedy tworzysz wartość rejestru, musisz zdecydować, co należy zrobić, jeśli ta wartość już istnieje. Inny proces, fałszywy, być może już utworzył wartość i masz do niego dostęp. Dane są umieszczane w wartości rejestru, dane są dostępne dla innego procesu. Aby tego uniknąć, należy użyć `GetValue` metody. Zwraca `Nothing` Jeśli klucz jeszcze nie istnieje.  
+ Podczas tworzenia wartości rejestru należy zdecydować, co należy zrobić, jeśli ta wartość już istnieje. Inny proces, prawdopodobnie złośliwy, mógł już utworzyć wartość i uzyskać do niej dostęp. Po umieszczeniu danych w wartości rejestru, dane są dostępne dla drugiego procesu. Aby tego uniknąć, należy użyć `GetValue` metody. Zwraca `Nothing` , jeśli klucz jeszcze nie istnieje.  
   
 > [!IMPORTANT]
->  Podczas odczytywania rejestru z aplikacji sieci Web, tożsamość bieżącego użytkownika zależy od uwierzytelniania i personifikacji zaimplementowane w aplikacji sieci Web.  
+> Podczas odczytywania rejestru z aplikacji sieci Web tożsamość bieżącego użytkownika zależy od uwierzytelniania i personifikacji zaimplementowanego w aplikacji sieci Web.  
   
 ## <a name="see-also"></a>Zobacz także
 

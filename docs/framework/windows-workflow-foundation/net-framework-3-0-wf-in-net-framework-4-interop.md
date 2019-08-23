@@ -2,18 +2,18 @@
 title: Używanie działań WF programu .NET Framework 3.0 w .NET Framework 4 przy użyciu działań Interop
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: baca65da29fd0b18bd61f9b79ce82429faaed432
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 3e7382b25e68c1b01bd11e015b9864ae32f25f9b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364136"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965955"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Używanie działań WF programu .NET Framework 3.0 w .NET Framework 4 przy użyciu działań Interop
 Działanie to działanie (WF 4,5), [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] które otacza działanie (WF3,5)wramachprzepływupracy.[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Interop> Działanie WF 3 może być jednym działaniem typu liść lub całym drzewem działań. Wykonanie (włącznie z anulowaniem i obsługą wyjątków) i trwałość [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] działania występuje w kontekście [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] wykonywanego wystąpienia przepływu pracy.  
   
 > [!NOTE]
->  Działanie nie pojawia się w przyborniku projektanta przepływów pracy, chyba że projekt przepływu pracy ma ustawione ustawienie **platformy docelowej** na **.NET Framework 4,5.** <xref:System.Activities.Statements.Interop>  
+> Działanie nie pojawia się w przyborniku projektanta przepływów pracy, chyba że projekt przepływu pracy ma ustawione ustawienie **platformy docelowej** na **.NET Framework 4,5.** <xref:System.Activities.Statements.Interop>  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Kryteria używania działania WF 3 z działaniem międzyoperacyjnym  
  Aby działanie WF 3 zostało pomyślnie wykonane w ramach <xref:System.Activities.Statements.Interop> działania, muszą zostać spełnione następujące kryteria:  

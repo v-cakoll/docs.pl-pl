@@ -2,12 +2,12 @@
 title: Klasyfikacja standardowych operatorów zapytań według sposobu wykonywania (C#)
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: 82058e0baf2a253f8594b1af27c99eb6909bae96
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594764"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924292"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Klasyfikacja standardowych operatorów zapytań według sposobu wykonywania (C#)
 Implementacje LINQ to Objects standardowych metod operatora zapytania są wykonywane na jednym z dwóch głównych sposobów: natychmiastowe lub odroczone. Operatory zapytań, które korzystają z odroczonego wykonania, można dodatkowo podzielić na dwie kategorie: streaming i bez przesyłania strumieniowego. Jeśli wiesz, jak są wykonywane różne operatory zapytań, może to pomóc w zrozumieniu wyników uzyskanych z danego zapytania. Jest to szczególnie prawdziwe w przypadku zmiany źródła danych lub tworzenia zapytania na podstawie innego zapytania. Ten temat klasyfikuje standardowe operatory zapytań zgodnie z ich sposobem wykonania.  
@@ -32,7 +32,7 @@ Implementacje LINQ to Objects standardowych metod operatora zapytania są wykony
  Poniższa tabela klasyfikuje każdą standardową metodę operatora zapytań zgodnie z jej metodą wykonywania.  
   
 > [!NOTE]
->  Jeśli operator jest oznaczony w dwóch kolumnach, dwie sekwencje wejściowe są uwzględniane w operacji, a każda sekwencja jest szacowana inaczej. W takich przypadkach zawsze jest to pierwsza sekwencja na liście parametrów, która jest oceniana w sposób odroczony, przesyłany strumieniowo.  
+> Jeśli operator jest oznaczony w dwóch kolumnach, dwie sekwencje wejściowe są uwzględniane w operacji, a każda sekwencja jest szacowana inaczej. W takich przypadkach zawsze jest to pierwsza sekwencja na liście parametrów, która jest oceniana w sposób odroczony, przesyłany strumieniowo.  
   
 |Standardowy operator zapytań|Typ zwracany|Natychmiastowe wykonanie|Wykonywanie odroczonego przesyłania strumieniowego|Odroczone wykonywanie bez przesyłania strumieniowego|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  

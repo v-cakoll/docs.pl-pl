@@ -1,40 +1,40 @@
 ---
-title: Klasyfikacja standardowych operatorów zapytań w oparciu o sposób działania (Visual Basic)
+title: Klasyfikacja standardowych operatorów zapytań według sposobu wykonywania (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: 6331ad0994e121d2d7007c9999f3a684b83efe6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e89c58707b4980b208395cce67434a6e5efa5d22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021768"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939266"
 ---
-# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Klasyfikacja standardowych operatorów zapytań w oparciu o sposób działania (Visual Basic)
-LINQ do obiektów implementacje metod standardowych operatorów zapytań wykonania w jednym z dwa główne sposoby: odejścia. Operatory zapytań, które używają odroczonego wykonania można dodatkowo podzielić na dwie kategorie: przesyłanie strumieniowe i obsługiwane strumieniowo. Jeśli wiesz, jak wykonać operatory inne zapytanie, jego może ułatwić zrozumienie wyników, które otrzymasz od określonego zapytania. Jest to szczególnie istotne, jeśli zmienia się ze źródłem danych lub jeśli tworzysz kwerendy na podstawie innego zapytania. W tym temacie klasyfikuje standardowych operatorów zapytań zgodnie z ich sposób działania.  
+# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Klasyfikacja standardowych operatorów zapytań według sposobu wykonywania (Visual Basic)
+Implementacje LINQ to Objects standardowych metod operatora zapytania są wykonywane na jednym z dwóch głównych sposobów: natychmiastowe lub odroczone. Operatory zapytań, które korzystają z odroczonego wykonania, można dodatkowo podzielić na dwie kategorie: streaming i bez przesyłania strumieniowego. Jeśli wiesz, jak są wykonywane różne operatory zapytań, może to pomóc w zrozumieniu wyników uzyskanych z danego zapytania. Jest to szczególnie prawdziwe w przypadku zmiany źródła danych lub tworzenia zapytania na podstawie innego zapytania. Ten temat klasyfikuje standardowe operatory zapytań zgodnie z ich sposobem wykonania.  
   
-## <a name="manners-of-execution"></a>Sposobów wykonania  
+## <a name="manners-of-execution"></a>Sposób wykonywania  
   
 ### <a name="immediate"></a>Natychmiastowe  
- Natychmiastowe wykonanie oznacza, że źródło danych jest do odczytu, a operacja jest wykonywana w punkcie w kodzie, którym zadeklarowano zapytania. Wszystkie standardowe operatory zapytań, które zwracają wynik pojedynczy, wyliczalny wykonywane natychmiast.  
+ Natychmiastowe wykonanie oznacza, że źródło danych jest odczytywane i operacja jest wykonywana w punkcie w kodzie, w którym jest zadeklarowane zapytanie. Wszystkie standardowe operatory zapytań, które zwracają pojedynczy, nieprzeliczalny wynik wykonania.  
   
 ### <a name="deferred"></a>Odroczone  
- Wykonanie odroczone oznacza to, czy operacja nie jest wykonywane w punkcie w kodzie którym zadeklarowano zapytania. Operacja jest wykonywana tylko wtedy, gdy zmienna zapytania są wyliczane na przykład za pomocą `For Each` instrukcji. Oznacza to, że wyników wykonywania zapytania zależy od zawartości źródła danych, gdy zapytanie jest wykonywane, a nie gdy zdefiniowano zapytanie. Jeśli zmienna zapytania są wyliczane wiele razy, wyniki mogą się różnić z każdym razem, gdy. Prawie wszystkie standardowe operatory zapytań o zwracanym typie <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Linq.IOrderedEnumerable%601> w sposób odroczone.  
+ Wykonanie odroczone oznacza, że operacja nie jest wykonywana w punkcie w kodzie, w którym jest zadeklarowane zapytanie. Operacja jest wykonywana tylko wtedy, gdy zmienna zapytania jest wyliczana, na przykład za pomocą `For Each` instrukcji. Oznacza to, że wyniki wykonywania zapytania zależą od zawartości źródła danych, gdy zapytanie jest wykonywane, a nie po zdefiniowaniu zapytania. Jeśli zmienna zapytania jest wyliczana wiele razy, wyniki mogą się różnić za każdym razem. Prawie wszystkie standardowe operatory zapytań, których typ zwracany jest <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Linq.IOrderedEnumerable%601> wykonywany w sposób odroczony.  
   
- Operatorów zapytań, które używają odroczonego wykonania mogą być dodatkowo klasyfikowane jako przesyłania strumieniowego lub -streaming.  
+ Operatory zapytań, które korzystają z odroczonego wykonania, można dodatkowo klasyfikować jako strumieniowe lub niestrumieniowe.  
   
 #### <a name="streaming"></a>Przesyłanie strumieniowe  
- Operatory przesyłania strumieniowego jest konieczne odczytywać wszystkie dane źródłowego, przed dają one elementy. W czasie wykonywania przesyłania strumieniowego operator wykonuje jego działania dla każdego elementu źródłowego podczas odczytu i daje w wyniku elementu, jeśli jest to odpowiednie. Operator przesyłania strumieniowego w dalszym ciągu odczytywać elementy źródłowe, dopóki nie może wygenerować elementu wynik. Oznacza to, że więcej niż jeden element źródłowy może przeczytać do wyprodukowania jednego elementu wynik.  
+ Operatory przesyłania strumieniowego nie muszą odczytywać wszystkich danych źródłowych przed ich zwróceniem. Podczas wykonywania operator przesyłania strumieniowego wykonuje swoją operację na każdym elemencie źródłowym w miarę odczytu i dostarcza element, jeśli jest to konieczne. Operator przesyłania strumieniowego kontynuuje odczytywanie elementów źródłowych do momentu wygenerowania elementu wynik. Oznacza to, że więcej niż jeden element źródłowy może być odczytany w celu utworzenia jednego elementu wynik.  
   
-#### <a name="non-streaming"></a>Obsługiwane strumieniowo  
- Operatory nie obsługiwane strumieniowo nie musi odczytywać wszystkie dane źródłowego, przed dają one elementu wynik. Operacje, takie jak sortowania i grupowania należą do tej kategorii. W czasie wykonywania operatory obsługiwane strumieniowo zapytań odczytywać wszystkie dane źródłowego, umieść struktury danych, do operacji i uzyskanie wynikowe elementy.  
+#### <a name="non-streaming"></a>Bez przesyłania strumieniowego  
+ Operatory niestrumieniowe muszą odczytywać wszystkie dane źródłowe, zanim będą mogły dać element wynik. Operacje, takie jak sortowanie lub grupowanie, znajdują się w tej kategorii. W czasie wykonywania operatory zapytań bez przesyłania strumieniowego odczytują wszystkie dane źródłowe, umieszczają je w strukturze danych, wykonują operację i dają elementy wyników.  
   
 ## <a name="classification-table"></a>Tabela klasyfikacji  
- Poniższa tabela klasyfikuje każdej metody standardowej kwerendy operatora, zgodnie z jego metody wykonywania.  
+ Poniższa tabela klasyfikuje każdą standardową metodę operatora zapytań zgodnie z jej metodą wykonywania.  
   
 > [!NOTE]
->  Jeśli operator jest oznaczony w dwóch kolumnach, dwóch sekwencji wejściowych biorących udział w operacji, a każda sekwencja jest obliczane inaczej. W takich przypadkach jest zawsze pierwszej sekwencji na liście parametrów, które jest obliczane w odroczonego, przesyłanie strumieniowe sposób.  
+> Jeśli operator jest oznaczony w dwóch kolumnach, dwie sekwencje wejściowe są uwzględniane w operacji, a każda sekwencja jest szacowana inaczej. W takich przypadkach zawsze jest to pierwsza sekwencja na liście parametrów, która jest oceniana w sposób odroczony, przesyłany strumieniowo.  
   
-|Standardowego operatora zapytania|Typ zwracany|Natychmiastowe wykonanie|Wykonanie odroczone przesyłania strumieniowego|Odroczone obsługiwane strumieniowo wykonywania|  
+|Standardowy operator zapytań|Typ zwracany|Natychmiastowe wykonanie|Wykonywanie odroczonego przesyłania strumieniowego|Odroczone wykonywanie bez przesyłania strumieniowego|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
 |<xref:System.Linq.Enumerable.Aggregate%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.All%2A>|<xref:System.Boolean>|X|||  
@@ -80,7 +80,7 @@ LINQ do obiektów implementacje metod standardowych operatorów zapytań wykonan
 <xref:System.Linq.Enumerable.TakeWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.ThenBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
 |<xref:System.Linq.Enumerable.ThenByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.ToArray%2A>|Tablica TSource|X|||  
+|<xref:System.Linq.Enumerable.ToArray%2A>|TSource — tablica|X|||  
 |<xref:System.Linq.Enumerable.ToDictionary%2A>|<xref:System.Collections.Generic.Dictionary%602>|X|||  
 |<xref:System.Linq.Enumerable.ToList%2A>|<xref:System.Collections.Generic.IList%601>|X|||  
 |<xref:System.Linq.Enumerable.ToLookup%2A>|<xref:System.Linq.ILookup%602>|X|||  
@@ -90,6 +90,6 @@ LINQ do obiektów implementacje metod standardowych operatorów zapytań wykonan
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Linq.Enumerable>
-- [Omówienie operatorów standardowej kwerendy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Składnia wyrażeń dla standardowych operatorów zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [Standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Składnia wyrażenia zapytania dla standardowych operatorów zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

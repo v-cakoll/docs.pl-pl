@@ -3,19 +3,19 @@ title: <claimsAuthorizationManager>
 ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
-ms.openlocfilehash: 59d47eda97e97629408ece12a1d1dfbe804feb3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74ca031f7017d51adaa7a71593f537b64abbeae6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667317"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942890"
 ---
-# <a name="claimsauthorizationmanager"></a>\<claimsAuthorizationManager>
+# <a name="claimsauthorizationmanager"></a>\<Składnika ClaimsAuthorizationManager >
 Rejestruje Menedżera autoryzacji oświadczeń dla oświadczeń przychodzących.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<claimsAuthorizationManager>  
+\<Składnika ClaimsAuthorizationManager >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,27 +36,27 @@ Rejestruje Menedżera autoryzacji oświadczeń dla oświadczeń przychodzących.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— typ|Typ niestandardowy, który pochodzi od klasy <xref:System.Security.Claims.ClaimsAuthorizationManager> klasy. Aby uzyskać więcej informacji o sposobie określania `type` atrybutów, zobacz [odwołań do typu niestandardowego](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
+|— typ|Typ niestandardowy, który pochodzi od <xref:System.Security.Claims.ClaimsAuthorizationManager> klasy. Aby uzyskać więcej informacji na temat sposobu określania `type` atrybutu, zobacz [odwołania do typów niestandardowych](../windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
- W przypadku nie `type` atrybut, lub jeśli `type` atrybutu odwołania <xref:System.Security.Claims.ClaimsAuthenticationManager> klasy `<claimsAuthorizationManager>` element nie ma elementów podrzędnych; jednak klasy pochodne klasy <xref:System.Security.Claims.ClaimsAuthorizationManager> można zdefiniować podrzędne elementy konfiguracji.  
+ Jeśli `type` nie ma atrybutu lub <xref:System.Security.Claims.ClaimsAuthenticationManager> `type` Jeśli atrybut `<claimsAuthorizationManager>` odwołuje się do klasy, element nie przyjmuje elementów podrzędnych, jednak klasy pochodne <xref:System.Security.Claims.ClaimsAuthorizationManager> mogą definiować podrzędne elementy konfiguracji.  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usługi.|  
+|[\<identityConfiguration>](identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usług.|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślne zachowanie, dostępne za pośrednictwem <xref:System.Security.Claims.ClaimsAuthorizationManager> klasy zawsze autoryzuje oświadczenia przychodzące. Jeśli nie `type` atrybut jest określony lub jeśli `type` Określa atrybut <xref:System.Security.Claims.ClaimsAuthorizationManager> klasy `<claimsAuthorizationManager>` element nie ma elementów podrzędnych. Można określić `type` pochodną klasy atrybutu, aby zarejestrować typ <xref:System.Security.Claims.ClaimsAuthorizationManager> klasę, aby wdrożyć niestandardowe zachowanie. Klasy pochodne mogą obsługiwać konfiguracji za pomocą elementów podrzędnych `<claimsAuthorizationManager>` elementu przez zastąpienie <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> metodę obsługującą te elementy. Projektant klasy zależy od schematu zdefiniowane dla elementów podrzędnych.  
+ Domyślne zachowanie udostępniane przez <xref:System.Security.Claims.ClaimsAuthorizationManager> klasę zawsze autoryzuje oświadczenia przychodzące. Jeśli nie `type` określono atrybutu lub `type` Jeśli atrybut `<claimsAuthorizationManager>` określa <xref:System.Security.Claims.ClaimsAuthorizationManager> klasę, element nie przyjmuje elementów podrzędnych. Możesz określić atrybut, `type` aby zarejestrować typ pochodny klasy, <xref:System.Security.Claims.ClaimsAuthorizationManager> aby zaimplementować zachowanie niestandardowe. Klasy pochodne mogą obsługiwać konfigurację za pomocą elementów `<claimsAuthorizationManager>` podrzędnych elementu przez <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> zastąpienie metody do obsługi tych elementów. Schemat zdefiniowany dla elementów podrzędnych jest projektantem klasy.  
   
 > [!IMPORTANT]
->  Korzystając z <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> lub <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> klasy w celu zapewnienia kontroli dostępu opartej na oświadczeniach, w kodzie, konfiguracja tożsamości, która odwołuje się do niej `<federationConfiguration>` element konfiguruje Menedżera autoryzacji oświadczeń i zasady, które jest używane do utworzenia decyzji dotyczących autoryzacji. Ta zasada obowiązuje, nawet w scenariuszach, które nie są pasywnym scenariusze sieci Web, na przykład aplikacji Windows Communication Foundation (WCF) lub aplikacji, która nie jest oparte na sieci Web. Jeśli aplikacja nie jest pasywnym aplikacji sieci Web, `<claimsAuthorizationManager>` — element (i jego zasady elementów podrzędnych, a jeśli jest obecna) konfiguracji odwołania tożsamości są tylko ustawienia zastosowane. Wszystkie inne ustawienia są ignorowane. Aby uzyskać więcej informacji, zobacz [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) elementu.  
+> W przypadku użycia <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> lub klasy w celu zapewnienia kontroli dostępu opartej na oświadczeniach w kodzie Konfiguracja tożsamości `<federationConfiguration>` , do której odwołuje się element, konfiguruje Menedżera autoryzacji oświadczeń i zasady, które są używane do wykonania decyzje dotyczące autoryzacji. Dotyczy to nawet scenariuszy, które nie są pasywnymi scenariuszami sieci Web, na przykład aplikacji Windows Communication Foundation (WCF) lub aplikacji, które nie są oparte na sieci Web. Jeśli aplikacja nie jest pasywną aplikacją sieci Web, `<claimsAuthorizationManager>` element (i jego elementy zasad podrzędnych, jeśli istnieją) przywoływanej konfiguracji tożsamości są jedynymi stosowanymi ustawieniami. Wszystkie inne ustawienia są ignorowane. Aby uzyskać więcej informacji, zobacz [ \<federationConfiguration >](federationconfiguration.md) elementu.  
   
- Element ten ustawia <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> właściwości.  
+ Ten element ustawia <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> właściwość.  
   
 ## <a name="example"></a>Przykład  
- Następujący kod XML przedstawia konfigurację do autoryzacji oświadczeń manager, który implementuje zasady składa się z pary Akcja zasobu, z których każdy Określa logiczną kombinacji oświadczeń, których obiekt żądający musi posiadać do wykonania akcji w zasobie. Kod, który implementuje Menedżera autoryzacji oświadczeń stanie przy użyciu tych zasad można znaleźć w `ClaimsBasedAuthorization` próbki.  
+ W poniższym kodzie XML przedstawiono konfigurację Menedżera autoryzacji oświadczeń, który implementuje zasady składające się z par akcji zasobów, z których każda określa logiczne kombinacje oświadczeń, które obiekt żądający musi dysponować, aby wykonać akcję dla zasobu. Kod implementujący Menedżera autoryzacji oświadczeń, który może korzystać z tych zasad, `ClaimsBasedAuthorization` można znaleźć w przykładzie.  
   
 ```xml  
 <system.identityModel>  

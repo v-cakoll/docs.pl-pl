@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 04ffc6c8c35d20032bc4093940ee3be1246dc5f0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9936d56582afd160bf3464d18efd3acf47c7af60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597030"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924496"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizatory (C# Przewodnik programowania)
 Finalizatory (nazywane również destruktorami) służą do wykonywania wszelkich niezbędnych ostatecznych oczyszczeniów, gdy wystąpienie klasy jest zbierane przez moduł wyrzucania elementów bezużytecznych.  
@@ -56,7 +56,7 @@ protected override void Finalize()
  Oznacza to, że `Finalize` Metoda jest wywoływana cyklicznie dla wszystkich wystąpień w łańcuchu dziedziczenia, od najbardziej pochodnego do najmniej pochodnego.  
   
 > [!NOTE]
->  Nie należy używać pustych finalizatorów. Gdy Klasa zawiera finalizator, w `Finalize` kolejce zostaje utworzony wpis. Gdy finalizator jest wywoływany, Moduł wyrzucania elementów bezużytecznych jest wywoływany w celu przetworzenia kolejki. Pusty finalizator powoduje jedynie niepotrzebną utratę wydajności.  
+> Nie należy używać pustych finalizatorów. Gdy Klasa zawiera finalizator, w `Finalize` kolejce zostaje utworzony wpis. Gdy finalizator jest wywoływany, Moduł wyrzucania elementów bezużytecznych jest wywoływany w celu przetworzenia kolejki. Pusty finalizator powoduje jedynie niepotrzebną utratę wydajności.  
   
  Programista nie ma kontroli nad tym, gdy finalizator jest wywoływany, ponieważ jest określany przez moduł wyrzucania elementów bezużytecznych. Moduł wyrzucania elementów bezużytecznych sprawdza obiekty, które nie są już używane przez aplikację. Jeśli uzna, że obiekt kwalifikuje się do finalizacji, wywołuje finalizator (jeśli istnieje) i ponownie przejmuje pamięć używaną do przechowywania obiektu. 
  

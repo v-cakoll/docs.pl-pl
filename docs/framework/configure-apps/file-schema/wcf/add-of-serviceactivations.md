@@ -2,16 +2,16 @@
 title: <add> dla <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: 2a3ba6d41059a480fe610254c0407df16d149e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929773fcb6b6a3ee5c75aa970147277d9dbe7b45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701466"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920030"
 ---
-# <a name="add-of-serviceactivations"></a>\<Dodaj > z \<serviceActivations >
+# <a name="add-of-serviceactivations"></a>\<Dodaj >ę \<ServiceActivations >
 
-Element konfiguracji, który pozwala zdefiniować ustawienia Aktywacja usług wirtualnych mapowane odpowiadają typom usług Windows Communication Foundation (WCF). Dzięki temu można aktywować usługi hostowane w WAS / IIS bez pliku .svc.
+Element konfiguracji, który pozwala zdefiniować ustawienia aktywacji usługi wirtualnej, które są mapowane na typy usług Windows Communication Foundation (WCF). Dzięki temu można aktywować usługi hostowane w usłudze WAS lub IIS bez pliku SVC.
 
 \<system.ServiceModel>\
 \<serviceHostingEnvironment>
@@ -35,9 +35,9 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|Fabryka|Ciąg, który określa nazwę typu CLR fabryki, która generuje element aktywacji usługi.|
-|usługa|Typ ServiceType, który implementuje usługę (pełna kwalifikowana nazwa typu lub krótki Typename (jeśli znajduje się w folderze App_Code).|
-|relativeAddress|Adres względny w bieżącej aplikacji usług IIS — na przykład "Service.svc". W wersji 4.0 WCF tego adresu względnego musi zawierać rozszerzenia znanych plików (.svc .xamlx...). Nie pliku fizycznego musi istnieć dla relativeUrl|
+|indywidual|Ciąg określający nazwę typu CLR fabryki, która generuje element aktywacji usługi.|
+|usługa|Typ, który implementuje usługę (pełna kwalifikowana nazwa typu lub krótki typ TypeName (gdy jest umieszczony w folderze App_Code).|
+|relativeAddress|Adres względny w bieżącej aplikacji usług IIS — na przykład "Service. svc". W programie WCF 4,0 ten adres względny musi zawierać jedno z znanych rozszerzeń plików (. svc,. xamlx,...). Brak pliku fizycznego dla relativeUrl|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -47,11 +47,11 @@ Brak.
 
 |Element|Opis|
 |-------------|-----------------|
-|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Sekcja konfiguracji, który opisuje ustawienia aktywacji.|
+|[\<serviceHostingEnvironment>](servicehostingenvironment.md)|Sekcja konfiguracji opisująca ustawienia aktywacji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Poniższy przykład pokazuje, jak skonfigurować ustawienia aktywacji w pliku web.config.
+Poniższy przykład pokazuje, jak skonfigurować ustawienia aktywacji w pliku Web. config.
 
 ```xml
 <configuration>
@@ -65,11 +65,11 @@ Poniższy przykład pokazuje, jak skonfigurować ustawienia aktywacji w pliku we
 </configuration>
 ```
 
-Za pomocą tej konfiguracji, możesz aktywować GreetingService bez użycia pliku .svc.
+Korzystając z tej konfiguracji, można aktywować GreetingService bez użycia pliku SVC.
 
-Należy pamiętać, że `<serviceHostingEnvironment>` jest konfiguracji na poziomie aplikacji. Musisz umieszczać `web.config` zawierający konfigurację w katalogu głównym aplikacji wirtualnej. Ponadto `serviceHostingEnvironment` to sekcja dziedziczne machineToApplication. Jeśli zarejestrujesz jednej usługi w katalogu głównym maszyny do każdej usługi w aplikacji będą dziedziczyć tę usługę.
+Należy pamiętać `<serviceHostingEnvironment>` , że jest to konfiguracja poziomu aplikacji. Należy umieścić `web.config` zawiera konfigurację w katalogu głównym aplikacji wirtualnej. Ponadto `serviceHostingEnvironment` jest sekcją dziedziczną machineToApplication. Po zarejestrowaniu pojedynczej usługi w katalogu głównym maszyny każda usługa w aplikacji będzie dziedziczyć tę usługę.
 
-Aktywacja oparta na konfiguracji obsługuje aktywacji za pośrednictwem protokołu http i innych niż http. Wymaga rozszerzenia w relativeAddress, czyli .svc xoml oraz .xamlx. Własne rozszerzenia można zamapować na buildProviders wie, który następnie umożliwi Aktywuj usługę za pośrednictwem dowolnego rozszerzenia. Po konfliktu `<serviceActivations>` sekcji zastępuje .svc rejestracji.
+Aktywacja oparta na konfiguracji obsługuje aktywację za pośrednictwem protokołu HTTP i innego niż http. Wymaga rozszerzeń w relativeAddress, tzn. svc, xoml lub. xamlx. Możesz zmapować własne rozszerzenia na buildProviders, które następnie umożliwią aktywację usługi w dowolnym rozszerzeniu. W `<serviceActivations>` przypadku konfliktu sekcja zastępuje rejestracje SVC.
 
 ## <a name="see-also"></a>Zobacz także
 

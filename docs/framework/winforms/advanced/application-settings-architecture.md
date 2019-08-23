@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: b5d5a4456bef925cd8093fe9c696145aff83660e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c3858cfab59b63761f43f6b3eaad9bf8ca4c1dbc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039417"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916694"
 ---
 # <a name="application-settings-architecture"></a>Architektura ustawień aplikacji
 W tym temacie opisano sposób działania architektury ustawień aplikacji oraz omówiono zaawansowane funkcje architektury, takie jak pogrupowane ustawienia i klucze ustawień.
@@ -142,7 +142,7 @@ W tym temacie opisano sposób działania architektury ustawień aplikacji oraz o
  Dostawca może być wywoływany z wielu wątków jednocześnie, ale zawsze będzie zapisywać w tej samej lokalizacji magazynu; w związku z tym Architektura ustawień aplikacji będzie kiedykolwiek tworzyć wystąpienie tylko jednego wystąpienia klasy dostawcy.
 
 > [!IMPORTANT]
->  Należy upewnić się, że dostawca jest bezpieczny dla wątków i zezwala tylko jednemu wątkowi na zapisywanie w plikach konfiguracji.
+> Należy upewnić się, że dostawca jest bezpieczny dla wątków i zezwala tylko jednemu wątkowi na zapisywanie w plikach konfiguracji.
 
  Dostawca nie musi obsługiwać wszystkich <xref:System.Configuration?displayProperty=nameWithType> atrybutów ustawień zdefiniowanych w przestrzeni nazw, chociaż musi mieć minimalną pomoc techniczną <xref:System.Configuration.ApplicationScopedSettingAttribute> i <xref:System.Configuration.UserScopedSettingAttribute>, i powinien również obsługiwać <xref:System.Configuration.DefaultSettingValueAttribute>. Dla tych atrybutów, które nie są obsługiwane, dostawca powinien po prostu kończyć się niepowodzeniem bez powiadomienia; nie powinna zgłosić wyjątku. Jeśli jednak Klasa Settings używa nieprawidłowej kombinacji atrybutów, takie jak zastosowanie <xref:System.Configuration.ApplicationScopedSettingAttribute> i <xref:System.Configuration.UserScopedSettingAttribute> do tego samego ustawienia — dostawca powinien zgłosić wyjątek i zakończyć operację.
 

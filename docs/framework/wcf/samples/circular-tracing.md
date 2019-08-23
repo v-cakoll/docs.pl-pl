@@ -2,28 +2,28 @@
 title: Śledzenie cykliczne
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
-ms.openlocfilehash: cd1a0c85dd42a7f064e75c7efdacb9ea46ef445d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4934061243f098c96aaeadddad100860c363445e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002415"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950937"
 ---
 # <a name="circular-tracing"></a>Śledzenie cykliczne
-Niniejszy przykład pokazuje implementację odbiornik śledzenia cyklicznego buforu. Typowy scenariusz dla usług produkcyjnych jest usług, które są dostępne przez długi czas i mieć włączone na niskim poziomie rejestrowanie śledzenia. Te usługi to zajmować dużo miejsca na dysku. Podczas rozwiązywania problemów z usługą, najnowsze dane w dzienniku śledzenia dotyczy rozwiązywanie problemów. Niniejszy przykład pokazuje implementację odbiornik śledzenia cyklicznego buforu, w którym tylko najbardziej aktualne dane śledzenia są przechowywane na dysku do skonfigurowanej ilości danych. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i zawiera odbiornik śledzenia niestandardowych.  
+Ten przykład pokazuje implementację odbiornika cyklicznego śledzenia buforów. Typowym scenariuszem dla usług produkcyjnych jest posiadanie usług dostępnych przez długi czas i włączenie rejestrowania śledzenia na niskim poziomie. Te usługi zużywają dużo miejsca na dysku. W przypadku rozwiązywania problemów z usługą najnowsze dane w dzienniku śledzenia są istotne do rozwiązywania problemu. Ten przykład pokazuje implementację detektora cyklicznego śledzenia bufora, w którym tylko najnowsze ślady są przechowywane na dysku do konfigurowalnej ilości danych. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i zawiera odbiornik niestandardowego śledzenia.  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- W tym przykładzie przyjęto założenie, że czytelnik zna [śledzenia i rejestrowania komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) przykładowe i po ich przeczytaniu w dokumentacji dostarczonej [śledzenia i rejestrowania komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) próbki.  
+ W tym przykładzie założono, że znasz przykład [śledzenia i rejestrowania komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) oraz Przeczytaj dokumentację dotyczącą śledzenia i przykładowego [rejestrowania komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) .  
   
-## <a name="circular-buffer-trace-listener"></a>Odbiornik śledzenia cyklicznego buforu  
- Koncepcja za wdrożenia okrągły odbiornik śledzenia bufora ma dwa pliki, które każdy przechowywać do połowy dane dziennika całkowita żądanego śledzenia. Odbiornik tworzy jeden plik i zapisuje do tego pliku, dopóki nie zostanie osiągnięty limit połowę rozmiaru danych, w tym momencie przełączenie do drugiego pliku. Gdy odbiornik osiągnie limit dla drugiego pliku — zastępuje pierwszego pliku przy użyciu nowych danych śledzenia.  
+## <a name="circular-buffer-trace-listener"></a>Odbiornik cyklicznego śledzenia buforu  
+ Koncepcja w odróżnieniu od implementacji detektora śledzenia cyklicznego buforu ma dwa pliki, które mogą przechowywać do połowy łącznej liczby żądanych danych dziennika śledzenia. Odbiornik tworzy jeden plik i zapisuje je do tego pliku do momentu, aż osiągnie limit o połowie rozmiaru danych, w którym wskazuje na drugi plik. Gdy odbiornik osiągnie limit dla drugiego pliku — zastępuje pierwszy plik nowym śladem.  
   
- Tego odbiornika jest pochodną `XmlWriteTraceListener` i umożliwia dzienniki aby je przeglądać za pomocą [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Podczas próby wyświetlić dzienniki, dwa pliki dziennika można łatwo odtwarzane, otwierając oba pliki dziennika w tym samym czasie w narzędziu przeglądarki danych śledzenia usługi. Narzędzie przeglądarki danych śledzenia usługi automatycznie zajmie się sortowanie śladów, aby były wyświetlane w odpowiedniej kolejności.  
+ Ten odbiornik pochodzi z `XmlWriteTraceListener` i umożliwia wyświetlanie dzienników za pomocą [narzędzia Podgląd śledzenia usług (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Podczas próby wyświetlenia dzienników te dwa pliki dziennika można łatwo połączyć przez otwarcie obu plików dziennika w tym samym czasie w narzędziu Podgląd śledzenia usługi. Narzędzie Podgląd śledzenia usług automatycznie zajmuje się sortowaniem śladów, tak aby były wyświetlane w odpowiedniej kolejności.  
   
 ## <a name="configuration"></a>Konfiguracja  
- Usługę można skonfigurować do użycia odbiornik śledzenia cyklicznego buforu, dodając następujący kod dla elementów źródła i odbiornika. Maksymalny rozmiar pliku jest określany przez ustawienie `maxFileSizeKB` atrybut w konfiguracji odbiornika śledzenia cykliczne. Jest to zaprezentowane w poniższym kodzie.  
+ Usługę można skonfigurować tak, aby korzystała z detektora śledzenia cyklicznego buforu przez dodanie następującego kodu dla odbiornika i elementów źródłowych. Maksymalny rozmiar pliku jest określony przez ustawienie `maxFileSizeKB` atrybutu w konfiguracji detektora cyklicznego śledzenia. Przedstawiono to w poniższym kodzie.  
   
 ```xml  
 <system.diagnostics>  
@@ -42,23 +42,23 @@ Niniejszy przykład pokazuje implementację odbiornik śledzenia cyklicznego buf
 </system.diagnostics>  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Pamiętaj, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Przykłady monitorowania oprogramowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -9,32 +9,32 @@ helpviewer_keywords:
 - accessing embedded objects
 - UI Automation, accessing embedded objects
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
-ms.openlocfilehash: 07223b9e48905b0952e37a6acdb703f584d166d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83e54da5fdb75e3da44009ec700102d6bd7ae5e9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032381"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937963"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>Uzyskiwanie dostępu do obiektów osadzonych przy użyciu automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
   
- W tym temacie przedstawiono sposób [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] może służyć do udostępnienia obiektów osadzonych w zawartości kontrolki tekstu.  
+ W tym temacie pokazano [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] , jak można użyć programu w celu uwidocznienia obiektów osadzonych w zawartości kontrolki tekstu.  
   
 > [!NOTE]
->  Może zawierać obiekty osadzone, obrazy, hiperłącza, przyciski, tabel lub kontrolki ActiveX.  
+> Obiekty osadzone mogą zawierać obrazy, hiperłącza, przyciski, tabele lub kontrolki ActiveX.  
   
- Osadzone obiekty są traktowane jako elementy podrzędne [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawcy tekstu. Dzięki temu można uwidocznić za pośrednictwem tej samej struktury drzewa automatyzacji interfejsu użytkownika, jak wszystkie inne [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elementów. Funkcje, z kolei jest dostępna za pośrednictwem wzorców kontrolek, zwykle wymagane przez obiekty osadzone typu formantu (na przykład, ponieważ hiperłącza są oparte na tekście zostanie obsługują <xref:System.Windows.Automation.TextPattern>).  
+ Obiekty osadzone są uważane za elementy [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] podrzędne dostawcy tekstu. Pozwala to na uwidocznienie ich za pomocą tej samej struktury drzewa automatyzacji interfejsu użytkownika co [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] wszystkie inne elementy. Z kolei funkcje są udostępniane za pośrednictwem wzorców formantów zwykle wymaganych przez typ formantu osadzone obiekty (na przykład, ponieważ hiperłącza są obsługiwane <xref:System.Windows.Automation.TextPattern>na podstawie tekstu).  
   
- ![Obiekty osadzone w kontenerze tekstu. ](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
-Przykładowy dokument z zawartości tekstowej ("czy wiesz?" ...) dwa obiekty i osadzone (obraz whale i hiperłącze tekstowe), używany jako obiekt docelowy dla przykładów kodu.  
+ ![Obiekty osadzone w kontenerze tekstu.](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
+Przykładowy dokument z zawartością tekstową ("Czy wiesz?" ...) i dwa osadzone obiekty (obraz Whale i Hiperłącze tekstowe) używane jako element docelowy dla przykładów kodu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje, jak pobrać kolekcję obiektów osadzonych z poziomu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawcy tekstu. Dla dokumentu próbki, podane we wstępie dwa obiekty będzie zwracany (element obrazu i element tekstowy).  
+ Poniższy przykład kodu demonstruje sposób pobierania kolekcji obiektów osadzonych z poziomu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawcy tekstu. W przypadku przykładowego dokumentu dostarczonego we wprowadzeniu zostaną zwrócone dwa obiekty (element obrazu i element tekstowy).  
   
 > [!NOTE]
->  Element obrazu musi zawierać część wewnętrzne tekstu skojarzonych z nim, opisujący obrazu, zazwyczaj w jego <xref:System.Windows.Automation.AutomationElement.NameProperty> (na przykład "niebieski whale."). Jednak po uzyskaniu zakres tekstu, obejmujące obiekt obrazu obrazu ani ten tekst opisu jest zwracany w strumieniu tekstu.  
+> Do elementu obrazu powinien być skojarzony jakiś wewnętrzny tekst, który zawiera opis obrazu, zazwyczaj w jego <xref:System.Windows.Automation.AutomationElement.NameProperty> (na przykład "niebieska Whale."). Jednak gdy zostanie uzyskany zakres tekstu obejmujący obiekt obrazu, w strumieniu tekstowym nie jest zwracany ani obraz, ani ten tekst opisujący.  
   
 [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
 [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
@@ -44,10 +44,10 @@ Przykładowy dokument z zawartości tekstowej ("czy wiesz?" ...) dwa obiekty i o
 [!code-vb[FindText#GetChildren](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#getchildren)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu demonstruje sposób uzyskiwania zakres tekstu z obiektu osadzonego w ramach [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawcy tekstu. Zakres tekstu, pobierane jest pustego zakresu, gdzie następuje początkowy punkt końcowy "... Ocean. (miejsca) "i końcowej punktu końcowego poprzedza zamknięcia". "reprezentujący osadzone hiperłącze (jak to przedstawiono obrazu dostarczonego we wstępie). Nawet jeśli jest to pustego zakresu, nie uważa się zakres wymiaru degeneracji ponieważ ma zakres od zera.  
+ Poniższy przykład kodu demonstruje, jak uzyskać zakres tekstu z osadzonego obiektu w ramach [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawcy tekstu. Pobrany zakres tekstu jest pustym zakresem, w którym znajduje się początkowy punkt końcowy "... utworzeniu. (Space) ", a końcowy koniec poprzedza nawias". "reprezentujący osadzone hiperłącze (jak pokazano w obrazie podanym we wprowadzeniu). Mimo że jest to pusty zakres, nie jest uważany za wygenerowanego zakresu, ponieważ jego zakres jest różny od zera.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.TextPattern> można pobrać oparte na tekście osadzony obiekt na przykład hiperłącze. jednak pomocniczy <xref:System.Windows.Automation.TextPattern> musi pochodzić z osadzonego obiektu do udostępnienia pełną funkcjonalność.  
+> <xref:System.Windows.Automation.TextPattern>może pobrać obiekt osadzony tekstowy, taki jak hiperlink; jednak pomocniczy <xref:System.Windows.Automation.TextPattern> należy uzyskać z osadzonego obiektu, aby uwidocznić jego pełną funkcjonalność.  
   
  [!code-csharp[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#getrangefromchild)]
  [!code-vb[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATextPattern_snip/VisualBasic/SearchWindow.vb#getrangefromchild)]  

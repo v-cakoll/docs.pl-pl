@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
-ms.openlocfilehash: 803357f9ae97eee2cbbf5e777dbc1210ded26ab2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29e9ac5b95b62ef2a4467bf41484c3740d550abd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670134"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964946"
 ---
 # <a name="sql-xml-column-values"></a>Wartości kolumny SQL XML
-SQL Server obsługuje `xml` typu danych i deweloperzy mogą pobrać zestawów wyników, w tym tego typu przy użyciu standardowego zachowania <xref:System.Data.SqlClient.SqlCommand> klasy. `xml` Kolumn mogą być pobierane, tak samo, jak wszystkie kolumny są pobierane (w <xref:System.Data.SqlClient.SqlDataReader>, na przykład), ale jeśli chcesz pracować nad otrzymaną zawartością kolumny w formacie XML, należy użyć <xref:System.Xml.XmlReader>.  
+SQL Server obsługuje `xml` typ danych, a deweloperzy mogą pobierać zestawy wyników, w tym typ, przy użyciu standardowego zachowania <xref:System.Data.SqlClient.SqlCommand> klasy. Kolumnę można pobrać tylko w przypadku pobrania dowolnej kolumny ( <xref:System.Data.SqlClient.SqlDataReader>na przykład), ale jeśli chcesz korzystać z zawartości kolumny jako XML <xref:System.Xml.XmlReader>, musisz użyć. `xml`  
   
 ## <a name="example"></a>Przykład  
- Następującej aplikacji konsoli wybiera dwa wiersze, zawierających `xml` kolumny z **Sales.Store** tabelę **AdventureWorks** bazy danych do <xref:System.Data.SqlClient.SqlDataReader> wystąpienia. Dla każdego wiersza wartości `xml` kolumny są odczytywane przy użyciu <xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A> metody <xref:System.Data.SqlClient.SqlDataReader>. Wartość jest przechowywana w <xref:System.Xml.XmlReader>. Należy zauważyć, że należy użyć <xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A> zamiast <xref:System.Data.IDataRecord.GetValue%2A> metody, jeśli chcesz ustawić zawartość <xref:System.Data.SqlTypes.SqlXml> zmiennej; <xref:System.Data.IDataRecord.GetValue%2A> zwraca wartość `xml` kolumny jako ciąg.  
+ Poniższa Aplikacja konsolowa wybiera dwa wiersze, z których `xml` każda zawiera kolumnę, z tabeli **Sales. Store** w bazie danych **AdventureWorks** do <xref:System.Data.SqlClient.SqlDataReader> wystąpienia. Dla każdego wiersza wartość `xml` kolumny jest odczytywana <xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A> przy użyciu metody <xref:System.Data.SqlClient.SqlDataReader>. Wartość jest przechowywana w <xref:System.Xml.XmlReader>. Należy pamiętać, że należy <xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A> użyć zamiast <xref:System.Data.IDataRecord.GetValue%2A> metody, jeśli chcesz <xref:System.Data.SqlTypes.SqlXml> ustawić zawartość na zmienną; <xref:System.Data.IDataRecord.GetValue%2A> zwraca wartość`xml` kolumny jako ciąg.  
   
 > [!NOTE]
->  **AdventureWorks** przykładowej bazy danych nie jest instalowany domyślnie podczas instalowania programu SQL Server. Można go zainstalować, uruchamiając Instalatora programu SQL Server.  
+> Przykładowa baza danych **AdventureWorks** nie jest instalowana domyślnie podczas instalowania SQL Server. Można go zainstalować, uruchamiając Instalatora SQL Server.  
   
  [!code-csharp[DataWorks SqlClient.GetXmlDataReader#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetXmlDataReader/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetXmlDataReader#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetXmlDataReader/VB/source.vb#1)]  
@@ -28,4 +28,4 @@ SQL Server obsługuje `xml` typu danych i deweloperzy mogą pobrać zestawów wy
 
 - <xref:System.Data.SqlTypes.SqlXml>
 - [Dane XML w programie SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

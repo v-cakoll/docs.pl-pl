@@ -9,15 +9,15 @@ helpviewer_keywords:
 - RemoveHandler keyword [Visual Basic]
 - RemoveHandler statement [Visual Basic]
 ms.assetid: 647cd825-e877-4910-b4f1-8d168beebe6a
-ms.openlocfilehash: 8a9dc5874629c1687318496bd7c4016eb318c25a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a839a7d05d05066f6c0f774a683c8fc83c19643
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783942"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957722"
 ---
 # <a name="removehandler-statement"></a>RemoveHandler — Instrukcja
-Usuwa skojarzenie między zdarzeniem, a program obsługi zdarzeń.  
+Usuwa skojarzenie między zdarzeniem a programem obsługi zdarzeń.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,14 +29,14 @@ RemoveHandler event, AddressOf eventhandler
   
 |Termin|Definicja|  
 |---|---|  
-|`event`|Nazwa przetwarzanego zdarzenia.|  
-|`eventhandler`|Nazwa procedury obecnie obsługi zdarzenia.|  
+|`event`|Nazwa obsługiwanego zdarzenia.|  
+|`eventhandler`|Nazwa procedury, która obecnie obsługuje zdarzenie.|  
   
 ## <a name="remarks"></a>Uwagi  
- `AddHandler` i `RemoveHandler` instrukcje umożliwiają uruchamianie i zatrzymywanie obsługi zdarzeń dla określonego zdarzenia w dowolnym momencie podczas wykonywania programu.  
+ Instrukcje `AddHandler` i`RemoveHandler` umożliwiają uruchamianie i zatrzymywanie obsługi zdarzeń dla określonego zdarzenia w dowolnym momencie podczas wykonywania programu.  
   
 > [!NOTE]
->  W przypadku zdarzeń niestandardowych instrukcja `RemoveHandler` wywołuje metodę dostępu zdarzenia `RemoveHandler`. Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz artykuł [Instrukcja Event](../../../visual-basic/language-reference/statements/event-statement.md)  
+> W przypadku zdarzeń niestandardowych instrukcja `RemoveHandler` wywołuje metodę dostępu zdarzenia `RemoveHandler`. Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz artykuł [Instrukcja Event](../../../visual-basic/language-reference/statements/event-statement.md)  
   
 ## <a name="example"></a>Przykład  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  

@@ -2,28 +2,28 @@
 title: Kodowanie komunikatu
 ms.date: 03/30/2017
 ms.assetid: f30ee941-aca9-4c67-82a5-421568496f07
-ms.openlocfilehash: 7fb0d4a994eaf1497841691eb76261329a48599d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e5a71095ba62e0e2e6592c8b7b83b67602ef7e7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768995"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931598"
 ---
 # <a name="message-encoding"></a>Kodowanie komunikatu
-Kodowanie jest procesem przekształcania zestawu znaków Unicode do sekwencji bajtów. Dekodowanie jest procesu. Windows Communication Foundation (WCF) obejmuje trzy typy kodowania dla protokołu SOAP wiadomości: Tekst pliku binarnego i mechanizmu optymalizacji transmisji wiadomości (MTOM).  
+Kodowanie jest procesem przekształcania zestawu znaków Unicode w sekwencję bajtów. Dekodowanie jest procesem wycofywania. Windows Communication Foundation (WCF) zawiera trzy typy kodowania dla komunikatów SOAP: Mechanizm optymalizacji tekstu, binarny i przesyłania komunikatów (MTOM).  
   
- `binaryMessageEncoding` Sekcji konfiguracji określa znak kodowanie i wersjonowanie wiadomości używanych dla wiadomości XML na podstawie pliku binarnego. Koder komunikatu binarnego koduje komunikatów Windows Communication Foundation (WCF) w pliku binarnego podczas transmisji. Podczas tego kodowania skutkuje bardzo szybkie transmisję wiadomości, współdziałanie oparte na WS-* standardów zostaną utracone.  
+ Sekcja `binaryMessageEncoding` konfiguracji określa kodowanie znaków i przechowywanie wersji komunikatów używanych w przypadku binarnych komunikatów XML. Koder komunikatów binarnych koduje wiadomości Windows Communication Foundation (WCF) w postaci binarnej w sieci. Chociaż to kodowanie skutkuje bardzo szybką transmisją komunikatów, współpraca oparta na standardach protokołu WS-* zostanie utracona.  
   
- `mtomMessageEncoding` Sekcji konfiguracji określa znak kodowanie i wersjonowanie wiadomości używanych dla wiadomości przy użyciu kodowania komunikatu transmisji optymalizacji mechanizm (MTOM). (MTOM) to technologia wydajne przekazywania danych binarnych w komunikatach usługi Windows Communication Foundation (WCF). Koder MTOM próbuje zachować równowagę pomiędzy współdziałania i wydajność. Kodowanie MTOM przesyła większość kodu XML w postaci tekstowej, ale optymalizuje dużych bloków danych binarnych, przekazywania ich jako — jest bez konwersji na tekst.  
+ Sekcja `mtomMessageEncoding` konfiguracji określa kodowanie znaków i przechowywanie wersji komunikatów używanych dla wiadomości za pomocą kodowania mechanizmu optymalizacji transmisji wiadomości (MTOM). (MTOM) to wydajna technologia przesyłania danych binarnych w wiadomościach Windows Communication Foundation (WCF). Koder MTOM próbuje zrównoważyć równowagę między wydajnością i współdziałaniem. Kodowanie MTOM przesyła większość XML w postaci tekstowej, ale optymalizuje duże bloki danych binarnych przez przesłanie ich bez konwersji do tekstu.  
   
- `textMessageEncoding` Sekcji konfiguracji określa koder tekstu, używany do tworzenia opartych na tekst wiadomości na łączu. Komunikaty generowane przez ten koder nadają się dla protokołu WS-* na podstawie międzyoperacyjności. Klient usługi sieci Web lub usługa sieci Web zazwyczaj może zrozumieć tekstowych XML. Jednak przesyłania dużych bloków danych binarnych jako tekst jest najmniej efektywną metodę kodowania wiadomości XML  
+ Sekcja `textMessageEncoding` konfiguracji określa koder tekstowy służący do tworzenia komunikatów tekstowych w sieci. Komunikaty generowane przez ten koder są odpowiednie dla międzyoperacyjności opartego na protokole WS-*. Usługa sieci Web lub klient usługi sieci Web może ogólnie zrozumieć tekst XML. Jednak przesyłanie dużych bloków danych binarnych jako tekstu jest najmniejszą efektywną metodą kodowania komunikatów XML  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Wybieranie kodera komunikatów](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [Wybieranie kodera komunikatów](../../../wcf/feature-details/choosing-a-message-encoder.md)

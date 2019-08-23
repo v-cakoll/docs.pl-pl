@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: c7559a95099608ea462c838591ddb43e18d8f80c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 120733873a7ea29303fe7f82c4c324d411532897
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301236"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921204"
 ---
 # <a name="configuration-sections-schema"></a>Schemat sekcji konfiguracji
 
-Schemat sekcji konfiguracji zawiera elementy, które definiują ustawienia niestandardowe w plikach konfiguracji. Aby uzyskać ogólne informacje na temat plików konfiguracyjnych i schematów, zobacz [schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md).
+Schemat sekcji konfiguracji zawiera elementy, które definiują ustawienia niestandardowe w plikach konfiguracji. Aby uzyskać ogólne informacje o plikach i schematach konfiguracji, zobacz [Schemat pliku konfiguracji dla .NET Framework](index.md).
 
-[ **\<Konfiguracja >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-[ **\<clear>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md)   
-[ **\<remove>** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md)   
-[ **\<sekcja >** ](~/docs/framework/configure-apps/file-schema/section-element.md)   
-[ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
+[ **\<> konfiguracji**](configuration-element.md)   
+[ **\<configSections >** ](configsections-element-for-configuration.md)   
+[ **\<clear>** ](clear-element-for-configsections.md)   
+[ **\<remove>** ](remove-element-for-configsections.md)   
+[ **\<sekcja >** ](section-element.md)   
+[ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md)
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<Wyczyść >** dla  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowanego sekcje i grupy sekcji. |
-| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowanego sekcje i grupy sekcji. |
-| [ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Zawiera deklaracje sekcji i przestrzeni nazw konfiguracji. |
-| [ **\<Usuń >** dla  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Usuwa sekcję wstępnie zdefiniowanych lub grupy sekcji. |
-| [ **\<sekcja >** dla  **\<configSections >** i  **\<sectionGroup >** ](~/docs/framework/configure-apps/file-schema/section-element.md) | Zawiera deklarację sekcji konfiguracji. |
-| [ **\<sectionGroup >** dla  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Definiuje obszar nazw dla sekcji konfiguracji. |
+| [Wyczyść > dla  **\<**  **configSections>\<** ](clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji. |
+| [ **\<clear>** ](clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji. |
+| [ **\<configSections >** ](configsections-element-for-configuration.md) | Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw. |
+| [Usuń > dla  **\<**  **configSections>\<** ](remove-element-for-configsections.md) | Usuwa wstępnie zdefiniowaną sekcję lub grupę sekcji. |
+| [sekcja > **dla >configSectionsi\<** **> \<**  **\<** ](section-element.md) | Zawiera deklarację sekcji konfiguracyjnej. |
+| [> w sekcji elementu  **\<**  **\<configSections >** ](sectiongroup-element-for-configsections.md) | Definiuje przestrzeń nazw dla sekcji konfiguracyjnych. |

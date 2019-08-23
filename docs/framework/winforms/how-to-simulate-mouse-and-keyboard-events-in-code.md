@@ -12,41 +12,41 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 1d2e837ec13e6a0b507d004cd75c2f77ae0008dc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 13ed0e5268f8bcfe2a504040803f3f96909657eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583405"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964265"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Instrukcje: Symulowanie zdarzeń myszy i klawiatury w kodzie
-Windows Forms zapewnia kilka opcji symulowania programowo, myszy i klawiatury. Ten temat zawiera omówienie tych opcji.  
+Windows Forms oferuje kilka opcji programistycznego symulowania danych wejściowych myszy i klawiatury. Ten temat zawiera omówienie tych opcji.  
   
-## <a name="simulating-mouse-input"></a>Symulowanie wejście myszy  
- Najlepszym sposobem Symulowanie zdarzeń myszy jest wywołać `On` *EventName* metody, która wywołuje zdarzenia myszy, które chcesz zasymulować. Ta opcja jest zwykle jest możliwe tylko w kontrolkach niestandardowych i formularzy, ponieważ metody, wywoływanie zdarzeń, które są chronione i nie są dostępne poza formularz lub formant. Na przykład poniższe kroki ilustrują zasymulować, klikając prawym przyciskiem myszy w kodzie.  
+## <a name="simulating-mouse-input"></a>Symulowanie danych wejściowych myszy  
+ Najlepszym sposobem symulowania zdarzeń myszy jest wywołanie `On`metody *EventName* , która wywołuje zdarzenie myszy, które ma zostać symulowane. Ta opcja jest zazwyczaj możliwa tylko w kontrolkach niestandardowych i formularzach, ponieważ metody, które powodują wygenerowanie zdarzeń, są chronione i nie można uzyskać do nich dostępu poza formantem lub formularzem. Na przykład poniższe kroki ilustrują sposób symulowania kliknięcia prawego przycisku myszy w kodzie.  
   
-#### <a name="to-programmatically-click-the-right-mouse-button"></a>Aby programowo kliknij prawym przyciskiem myszy  
+#### <a name="to-programmatically-click-the-right-mouse-button"></a>Aby programowo kliknąć prawym przyciskiem myszy  
   
-1. Tworzenie <xref:System.Windows.Forms.MouseEventArgs> którego <xref:System.Windows.Forms.MouseEventArgs.Button%2A> właściwość jest ustawiona na <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> wartość.  
+1. Utwórz <xref:System.Windows.Forms.MouseEventArgs> Właściwość,<xref:System.Windows.Forms.MouseEventArgs.Button%2A> której właściwości jest ustawiona na wartość.<xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType>  
   
-2. Wywołaj <xref:System.Windows.Forms.Control.OnMouseClick%2A> metody, w tym <xref:System.Windows.Forms.MouseEventArgs> jako argument.  
+2. Wywołaj <xref:System.Windows.Forms.MouseEventArgs> metodę, używając jako argumentu. <xref:System.Windows.Forms.Control.OnMouseClick%2A>  
   
- Aby uzyskać więcej informacji na temat kontrolek niestandardowych, zobacz [tworzenia kontrolek Windows Forms w czasie projektowania](./controls/developing-windows-forms-controls-at-design-time.md).  
+ Aby uzyskać więcej informacji na temat kontrolek niestandardowych, zobacz [Opracowywanie formantów Windows Forms w czasie projektowania](./controls/developing-windows-forms-controls-at-design-time.md).  
   
- Istnieją inne sposoby, aby symulować wprowadzanie za pomocą myszy. Na przykład programowo ustawić właściwości formantu, który reprezentuje stan, który jest zwykle ustawiana tylko za pomocą myszy dane wejściowe (takie jak <xref:System.Windows.Forms.CheckBox.Checked%2A> właściwość <xref:System.Windows.Forms.CheckBox> kontroli), lub możesz bezpośrednio wywołać delegata, który jest dołączony do zdarzenia należy Czy chcesz symulować.  
+ Istnieją inne sposoby symulowania danych wejściowych myszy. Można na przykład programowo ustawić właściwość kontrolki reprezentującą stan, który jest zazwyczaj ustawiany za pomocą myszy <xref:System.Windows.Forms.CheckBox.Checked%2A> , na przykład właściwość <xref:System.Windows.Forms.CheckBox> kontrolki, lub bezpośrednio wywołać delegata, który jest dołączony do zdarzenia, które chcesz symulować.  
   
-## <a name="simulating-keyboard-input"></a>Symulowanie danych wprowadzonych z klawiatury  
- Mimo że można symulować danych wprowadzonych z klawiatury, za pomocą strategii omówione powyżej na myszy dane wejściowe, Windows Forms zapewnia również <xref:System.Windows.Forms.SendKeys> klasy wysyłania naciśnięcia klawiszy do aktywnej aplikacji.  
+## <a name="simulating-keyboard-input"></a>Symulowanie danych wejściowych z klawiatury  
+ Chociaż można symulować dane wejściowe z klawiatury przy użyciu strategii omówionych powyżej dla danych wejściowych myszy, Windows Forms udostępnia <xref:System.Windows.Forms.SendKeys> również klasę do wysyłania naciśnięć klawiszy do aktywnej aplikacji.  
   
 > [!CAUTION]
->  Jeśli aplikacja jest przeznaczona do użytku międzynarodowe, z różnymi rodzajami klawiatury i korzystanie z <xref:System.Windows.Forms.SendKeys.Send%2A?displayProperty=nameWithType> może przynieść nieprzewidywalne rezultaty i należy ich unikać.  
+>  Jeśli aplikacja jest przeznaczona do użytku międzynarodowego z różnymi klawiaturami, użycie <xref:System.Windows.Forms.SendKeys.Send%2A?displayProperty=nameWithType> może dać nieprzewidywalne wyniki i należy je unikać.  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.SendKeys> Klasy zostało zaktualizowane dla środowiska .NET Framework 3.0 umożliwić jego użycia w aplikacjach, które są uruchamiane w systemie Windows Vista. Zwiększonych zabezpieczeń systemu Windows Vista (znane jako Kontrola konta użytkownika lub funkcji Kontrola konta użytkownika) zapobiega poprzedniej implementacji działać zgodnie z oczekiwaniami.  
+> <xref:System.Windows.Forms.SendKeys> Klasa została zaktualizowana dla .NET Framework 3,0, aby umożliwić jej używanie w aplikacjach uruchamianych w systemie Windows Vista. Ulepszone zabezpieczenia systemu Windows Vista (nazywanego kontrolą konta użytkownika lub UAC) uniemożliwiają działanie poprzedniej implementacji zgodnie z oczekiwaniami.  
 >   
->  <xref:System.Windows.Forms.SendKeys> Klasy jest podatna na problemy dotyczące synchronizacji, które miały niektórzy deweloperzy w celu obejścia. Zaktualizowanej implementacji są nadal podatne na problemy dotyczące synchronizacji, ale jest teraz nieco szybszy i mogą wymagać zmian w rozwiązania. <xref:System.Windows.Forms.SendKeys> Klasy spróbuje najpierw użyć poprzedniej implementacji, a jeśli ono zawiedzie, korzysta z nowej implementacji. W rezultacie <xref:System.Windows.Forms.SendKeys> klasy może zachowywać się inaczej w różnych systemach operacyjnych. Ponadto, jeśli <xref:System.Windows.Forms.SendKeys> klasa korzysta z nowej implementacji <xref:System.Windows.Forms.SendKeys.SendWait%2A> metoda nie będzie czekać komunikaty mają być przetwarzane, gdy są one wysyłane do innego procesu.  
+>  <xref:System.Windows.Forms.SendKeys> Klasa jest podatna na problemy z chronometrażem, w przypadku których niektórzy deweloperzy musieli obejść. Zaktualizowana implementacja jest nadal podatna na problemy z chronometrażem, ale jest nieco szybsza i może wymagać wprowadzenia zmian w obejść. <xref:System.Windows.Forms.SendKeys> Klasa spróbuje najpierw użyć poprzedniej implementacji, a jeśli to się nie powiedzie, użyje nowej implementacji. W związku z tym Klasa <xref:System.Windows.Forms.SendKeys> może zachowywać się inaczej w różnych systemach operacyjnych. Ponadto, gdy <xref:System.Windows.Forms.SendKeys> Klasa używa nowej implementacji <xref:System.Windows.Forms.SendKeys.SendWait%2A> , metoda nie będzie czekać na przetwarzanie komunikatów, gdy są wysyłane do innego procesu.  
 >   
->  Jeśli aplikacja zależy od spójne zachowanie niezależnie od systemu operacyjnego, możesz wymusić <xref:System.Windows.Forms.SendKeys> klasy, aby korzystać z nowej implementacji, dodając następujące ustawienie aplikacji do pliku app.config.  
+>  Jeśli aplikacja korzysta ze spójności spójnej niezależnie od systemu operacyjnego, można wymusić <xref:System.Windows.Forms.SendKeys> , aby Klasa korzystała z nowej implementacji, dodając do pliku App. config następujące ustawienie aplikacji.  
 >   
 >  `<appSettings>`  
 >   
@@ -54,29 +54,29 @@ Windows Forms zapewnia kilka opcji symulowania programowo, myszy i klawiatury. T
 >   
 >  `</appSettings>`  
 >   
->  Aby wymusić <xref:System.Windows.Forms.SendKeys> klasy, aby użyć poprzedniego wdrożenia, należy użyć wartości `"JournalHook"` zamiast tego.  
+>  Aby wymusić <xref:System.Windows.Forms.SendKeys> użycie poprzedniej implementacji przez klasę, Użyj zamiast niej `"JournalHook"` wartości.  
   
-#### <a name="to-send-a-keystroke-to-the-same-application"></a>Aby wysłać naciśnięcia klawiszy do tej samej aplikacji  
+#### <a name="to-send-a-keystroke-to-the-same-application"></a>Aby wysłać naciśnięcie klawisza do tej samej aplikacji  
   
-1. Wywołaj <xref:System.Windows.Forms.SendKeys.Send%2A> lub <xref:System.Windows.Forms.SendKeys.SendWait%2A> metody <xref:System.Windows.Forms.SendKeys> klasy. Określony naciśnięć klawiszy zostanie odebrana przez aktywną kontrolkę w aplikacji. Poniższy przykład kodu wykorzystuje <xref:System.Windows.Forms.SendKeys.Send%2A> zasymulować, naciskając klawisz ENTER, gdy użytkownik kliknie dwukrotnie powierzchnia formularza. W tym przykładzie założono <xref:System.Windows.Forms.Form> za pomocą jednego <xref:System.Windows.Forms.Button> kontrolkę, która ma indeks 0.  
+1. Wywoływanie metody <xref:System.Windows.Forms.SendKeys.SendWait%2A> <xref:System.Windows.Forms.SendKeys.Send%2A> lub klasy.<xref:System.Windows.Forms.SendKeys> Określone nacionięcia klawiszy zostaną odebrane przez aktywną kontrolę aplikacji. Poniższy przykład kodu używa <xref:System.Windows.Forms.SendKeys.Send%2A> do symulowania naciskania klawisza ENTER, gdy użytkownik kliknie dwukrotnie powierzchnię formularza. <xref:System.Windows.Forms.Form> W tym przykładzie przyjęto założenie <xref:System.Windows.Forms.Button> , że z pojedynczym formantem ma indeks karty równy 0.  
   
      [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
      [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
      [!code-vb[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#10)]  
   
-#### <a name="to-send-a-keystroke-to-a-different-application"></a>Aby wysłać naciśnięcia klawiszy do innej aplikacji  
+#### <a name="to-send-a-keystroke-to-a-different-application"></a>Aby wysłać naciśnięcie klawisza do innej aplikacji  
   
-1. Aktywuj okna aplikacji, która będzie odbierać naciśnięcia klawiszy, a następnie wywołaj <xref:System.Windows.Forms.SendKeys.Send%2A> lub <xref:System.Windows.Forms.SendKeys.SendWait%2A> metody. Ponieważ nie istnieje metoda zarządzanych do aktywowania innej aplikacji, musi być wymusić skoncentrować się na inne aplikacje natywne metodami Windows. Następująca platforma używa przykładowy kod wywołana w celu wywołania `FindWindow` i `SetForegroundWindow` metody w celu aktywowania Kalkulator okna aplikacji, a następnie wywołania <xref:System.Windows.Forms.SendKeys.SendWait%2A> wydawania szereg obliczeń aplikacja Kalkulator.  
+1. Aktywuj okno aplikacji, które będzie odbierać naciśnięcia klawiszy, a następnie Wywołaj <xref:System.Windows.Forms.SendKeys.Send%2A> metodę lub. <xref:System.Windows.Forms.SendKeys.SendWait%2A> Ponieważ nie ma metody zarządzanej w celu aktywowania innej aplikacji, należy użyć natywnych metod systemu Windows, aby wymusić skupienie się na innych aplikacjach. Poniższy przykład kodu używa wywołania platformy, aby wywołać `FindWindow` metody i `SetForegroundWindow` uaktywnić okno aplikacji kalkulatora, a następnie wywołuje <xref:System.Windows.Forms.SendKeys.SendWait%2A> , aby wystawić serię obliczeń w aplikacji Kalkulator.  
   
     > [!NOTE]
-    >  Poprawne parametry `FindWindow` wywołań, który lokalizuje aplikacja Kalkulator różnią się zależnie od używanej wersji systemu Windows.  Poniższy kod umożliwia znalezienie aplikacja Kalkulator na [!INCLUDE[win7](../../../includes/win7-md.md)]. Na [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], zmień wartość pierwszego parametru "SciCalc". Spy ++ narzędzia, dołączonego do programu Visual Studio, można użyć do określenia poprawnych parametrów.  
+    > Poprawne parametry `FindWindow` wywołania służącego do lokalizowania aplikacji kalkulatora różnią się w zależności od używanej wersji systemu Windows.  Poniższy kod umożliwia znalezienie aplikacji kalkulatora na [!INCLUDE[win7](../../../includes/win7-md.md)]. W [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]systemie Zmień pierwszy parametr na "SciCalc". Aby określić poprawne parametry, można użyć narzędzia Spy + + dołączonego do programu Visual Studio.  
   
      [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
      [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
      [!code-vb[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#5)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu jest kompletna aplikacja w poprzednich przykładach kodu.  
+ Poniższy przykład kodu jest kompletną aplikacją dla poprzedniego przykładu kodu.  
   
  [!code-cpp[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#0)]
  [!code-csharp[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#0)]
@@ -85,7 +85,7 @@ Windows Forms zapewnia kilka opcji symulowania programowo, myszy i klawiatury. T
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów system, system. Drawing i system. Windows. Forms.  
   
 ## <a name="see-also"></a>Zobacz także
 

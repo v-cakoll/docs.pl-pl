@@ -8,52 +8,52 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: 97c651dbcc657fbab0706c9a959bd0031c0fe343
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12c88db49dc7723fc269195e7d174bfa822c64d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778628"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963760"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
-Reprezentuje wartość domyślną każdego typu danych. Dla typów odwołań, wartość domyślna to `null` odwołania. Dla typów wartości wartość domyślna zależy od tego, czy typ wartości ma wartość null.  
+Reprezentuje wartość domyślną każdego typu danych. W przypadku typów referencyjnych wartością domyślną jest `null` odwołanie. W przypadku typów wartości wartość domyślna zależy od tego, czy typ wartości dopuszcza wartość null.  
   
 > [!NOTE]
->  W przypadku typów wartości niedopuszczającym wartości `Nothing` w języku Visual Basic różni się od `null` w C#. W języku Visual Basic, jeśli zostanie ustawiona zmienna typu wartości niedopuszczającym wartości do `Nothing`, zmienna jest ustawiana na wartość domyślną dla deklarowanym typem. W C#, jeśli przypiszesz zmienną typu wartości niedopuszczającym wartości do `null`, wystąpi błąd kompilacji.  
+> W przypadku typów wartości niedopuszczających `Nothing` wartości null, w `null` Visual Basic C#różni się od elementu w. W Visual Basic, jeśli ustawisz zmienną typu wartości, która nie dopuszcza wartości null do `Nothing`, zmienna jest ustawiona na wartość domyślną dla zadeklarowanego typu. W C#programie, Jeśli przypiszesz zmienną typu wartości niedopuszczające wartości null `null`do, wystąpi błąd w czasie kompilacji.  
   
 ## <a name="remarks"></a>Uwagi  
- `Nothing` reprezentuje wartość domyślną typu danych. Wartość domyślna zależy od tego, czy zmienna jest typem wartości lub typem referencyjnym.  
+ `Nothing`reprezentuje wartość domyślną typu danych. Wartość domyślna zależy od tego, czy zmienna jest typu wartości lub typu odwołania.  
   
- Zmienna *typu wartości* bezpośrednio zawiera wartość. Typy wartości obejmują wszystkie typy danych liczbowych, `Boolean`, `Char`, `Date`, wszystkie struktury i wszystkie wyliczenia. Zmienna *odwołania do typu* przechowuje odwołania do wystąpienia obiektu w pamięci. Typy odwołań zawierają klasy, tablice, delegaty i ciągi. Aby uzyskać więcej informacji, zobacz [typy wartości i odwołań](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+ Zmienna *typu wartości* bezpośrednio zawiera jej wartość. Typy wartości obejmują wszystkie typy danych liczbowych `Boolean`, `Char` `Date`,,, wszystkie struktury i wszystkie wyliczenia. Zmienna *typu referencyjnego* przechowuje odwołanie do wystąpienia obiektu w pamięci. Typy odwołań obejmują klasy, tablice, Delegaty i ciągi. Aby uzyskać więcej informacji, zobacz [typy wartości i typy odwołań](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
- Jeśli zmienna jest wartość typu, zachowanie `Nothing` zależy od tego, czy zmienna jest typu danych dopuszczających wartość null. Do reprezentowania typem wartościowym, Dodaj `?` modyfikator do nazwy typu. Przypisywanie `Nothing` dopuszcza wartości null zmiennej ustawia wartość `null`. Aby uzyskać więcej informacji i przykładów, zobacz [typów wartości dopuszczających wartości zerowe](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).  
+ Jeśli zmienna ma typ wartości, zachowanie `Nothing` jest zależne od tego, czy zmienna ma typ danych dopuszczający wartości null. Aby reprezentować typ wartości null, Dodaj `?` modyfikator do nazwy typu. Przypisanie `Nothing` do zmiennej dopuszczanej do wartości null ustawia `null`wartość na. Aby uzyskać więcej informacji i przykładów, zobacz [dopuszczanie typów wartości null](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).  
   
- Jeśli zmienna jest typem wartości, która nie jest dopuszczalna, przypisując `Nothing` do ustawia ją na wartość domyślną dla deklarowanym typem. Jeśli ten typ zawiera składowe zmiennych, są gotowi do wartości domyślnych. W poniższym przykładzie pokazano to w przypadku typów skalarnych.  
+ Jeśli zmienna ma typ wartości, który nie dopuszcza wartości null, przypisanie `Nothing` do niego ustawia wartość domyślną dla zadeklarowanego typu. Jeśli ten typ zawiera zmienne składowe, są one ustawione na wartości domyślne. Poniższy przykład ilustruje tę wartość dla typów skalarnych.  
   
  [!code-vb[VbVbalrKeywords#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class2.vb#7)]  
   
- Jeśli zmienna jest typem referencyjnym, przypisując `Nothing` do zmiennej ustawia ją na `null` odwołanie do zmiennej typu. Zmienna, która jest równa `null` odwołania nie jest skojarzony z żadnym obiektem. Poniższy przykład przedstawia to.  
+ Jeśli zmienna jest typu referencyjnego, przypisanie `Nothing` do zmiennej ustawia ją `null` na odwołanie do typu zmiennej. Zmienna, która jest ustawiona na `null` odwołanie, nie jest skojarzona z żadnym obiektem. Poniższy przykład ilustruje to.  
   
  [!code-vb[VbVbalrKeywords#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class3.vb#8)]  
   
- Podczas sprawdzania, czy odwołanie (lub typ dopuszczający wartość null wartości) zmienna jest `null`, nie używaj `= Nothing` lub `<> Nothing`. Zawsze używaj `Is Nothing` lub `IsNot Nothing`.  
+ Podczas sprawdzania, czy zmienna odwołania (lub typ wartości null) ma `null`wartość, nie używaj `= Nothing` ani `<> Nothing`. Zawsze używaj `Is Nothing` lub `IsNot Nothing`.  
   
- Ciągi w języku Visual Basic, równa się pustym ciągiem `Nothing`. W związku z tym `"" = Nothing` ma wartość true.  
+ W przypadku ciągów w Visual Basic pusty ciąg równa `Nothing`się. W związku `"" = Nothing` z tym, ma wartość true.  
   
- W poniższym przykładzie pokazano porównania, które używają `Is` i `IsNot` operatorów.  
+ W poniższym przykładzie przedstawiono porównania `Is` wykorzystujące operatory i. `IsNot`  
   
  [!code-vb[VbVbalrKeywords#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class4.vb#9)]  
   
- Jeśli zmienna jest zadeklarowana bez użycia `As` klauzuli i ustaw ją na `Nothing`, zmienna posiada typ `Object`. Na przykład `Dim something = Nothing`. Występuje błąd kompilacji, w tym przypadku podczas `Option Strict` znajduje się na i `Option Infer` jest wyłączona.  
+ Jeśli deklarujesz zmienną bez użycia `As` klauzuli i ustawisz ją na `Nothing`, `Object`zmienna ma typ. Przykładem jest `Dim something = Nothing`. W takim przypadku występuje błąd czasu kompilacji, gdy `Option Strict` jest on włączony i `Option Infer` jest wyłączony.  
   
- Po przypisaniu `Nothing` zmienną obiektu nie jest już odwołuje się do dowolnego wystąpienia obiektu. Jeśli zmienna wcześniej odnosił się do wystąpienia, ustawieniem dla niego `Nothing` nie kończy samego wystąpienia. Wystąpienie zostanie zakończony i skojarzone z nią zasoby pamięci są zwalniane, tylko wtedy, gdy moduł odśmiecania pamięci (GC) wykrywa żadnych aktywnych odwołań pozostałe.  
+ Przypisanie `Nothing` do zmiennej obiektu nie odwołuje się już do żadnego wystąpienia obiektu. Jeśli zmienna była wcześniej nazywana wystąpieniem, ustawienie go na `Nothing` nie kończy działanie samego wystąpienia. Wystąpienie zostanie przerwane, a zasoby pamięci i systemu skojarzone z nim zostaną wydane dopiero po wykryciu przez moduł wyrzucania elementów bezużytecznych, że nie ma aktywnych odwołań.  
   
- `Nothing` różni się od <xref:System.DBNull> obiektu, który reprezentuje niezainicjowanej wariantu lub kolumny nieistniejącej bazy danych.  
+ `Nothing`różni się <xref:System.DBNull> od obiektu, który reprezentuje niezainicjowany wariant lub nieistniejącą kolumnę bazy danych.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Dim, instrukcja](../../visual-basic/language-reference/statements/dim-statement.md)
-- [Okres istnienia obiektów: Jak obiekty są tworzone i niszczone](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Okres istnienia obiektu: Jak obiekty są tworzone i niszczone](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Okres istnienia w Visual Basic](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Is, operator](../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot, operator](../../visual-basic/language-reference/operators/isnot-operator.md)

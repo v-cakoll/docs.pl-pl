@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: e6848c47-ee5d-401a-89a5-50b5eed40f30
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 525c8332d2884415ccf883dae03866776510f354
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 882e92c6c8cb6e638ca299ed4c43b9da8f4bf235
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650170"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923329"
 ---
 # <a name="matching-nodes-using-xpathnavigator"></a>Dopasowywanie węzłów przy użyciu klasy XPathNavigator
-<xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia <xref:System.Xml.XPath.XPathNavigator.Matches%2A> metodę pozwala ustalić, czy węzeł odpowiada wyrażenie XPath. <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Metoda przyjmuje wyrażenia XPath jako dane wejściowe i zwraca <xref:System.Boolean> oznacza to, czy bieżący węzeł odpowiada danemu wyrażeniu XPath lub podane skompilowanych <xref:System.Xml.XPath.XPathExpression> obiektu.  
+Klasa zapewnia metodę, <xref:System.Xml.XPath.XPathNavigator.Matches%2A> aby określić, czy węzeł dopasowuje wyrażenie XPath. <xref:System.Xml.XPath.XPathNavigator> Metoda przyjmuje wyrażenie XPath jako dane wejściowe i <xref:System.Boolean> zwraca wartość wskazującą, czy bieżący węzeł odpowiada danemu wyrażeniu XPath lub podanemu skompilowanemu <xref:System.Xml.XPath.XPathExpression> obiektowi. <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
   
-## <a name="matching-nodes"></a>Dopasowywanie węzłów  
- <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Metoda zwraca `true` Jeśli wyrażenia XPath określonych pasuje do bieżącego węzła. Na przykład w poniższym przykładzie kodu <xref:System.Xml.XPath.XPathNavigator.Matches%2A> metoda zwróci `true` Jeśli bieżącego węzła jest elementem `b`, a element `b` ma atrybut `c`.  
+## <a name="matching-nodes"></a>Zgodne węzły  
+ <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Metoda zwraca`true` Jeśli bieżący węzeł pasuje do określonego wyrażenia XPath. Na <xref:System.Xml.XPath.XPathNavigator.Matches%2A> przykład w poniższym przykładzie kodu Metoda `true` zwróci wartość, jeśli bieżącym węzłem jest element `b`, a element `b` ma atrybut `c`.  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Metoda nie zmienia stanu <xref:System.Xml.XPath.XPathNavigator>.  
+> Metoda nie zmienia stanu <xref:System.Xml.XPath.XPathNavigator>. <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
   
 ```vb  
 Dim document as XPathDocument = New XPathDocument("input.xml")  

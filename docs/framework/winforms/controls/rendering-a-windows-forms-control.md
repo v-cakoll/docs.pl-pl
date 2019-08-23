@@ -10,30 +10,30 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: 76506e504fdaca83fee502111dbadab5cb41d9b9
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: b24fbefac0dcfb666e25ad1d1726ef2cf8a5d84e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506178"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968272"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Renderowanie formantu formularzy systemu Windows
-Renderowanie odnosi się do procesu tworzenia wizualnej reprezentacji na ekranie użytkownika. Formularze Windows używa interfejsu GDI (nowe Windows biblioteki graficznej) do renderowania. Klasy zarządzane, umożliwiające dostęp do interfejsu GDI znajdują się w <xref:System.Drawing?displayProperty=nameWithType> przestrzeni nazw i jego podobszary nazw.  
+Renderowanie odnosi się do procesu tworzenia reprezentacji wizualizacji na ekranie użytkownika. Windows Forms używa interfejsu GDI (nowej biblioteki grafiki systemu Windows) do renderowania. Zarządzane klasy, które zapewniają dostęp do interfejsu GDI, znajdują się w <xref:System.Drawing?displayProperty=nameWithType> przestrzeni nazw i jej podobszarach nazw.  
   
- Renderowanie kontrolki obejmuje następujące elementy:  
+ Następujące elementy są objęte renderowaniem kontroli:  
   
-- Rysowanie funkcje zapewniane przez klasę bazową <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+- Funkcje rysowania udostępniane przez klasę <xref:System.Windows.Forms.Control?displayProperty=nameWithType>bazową.  
   
-- Elementy podstawowe biblioteki graficzne interfejsu GDI.  
+- Najważniejsze elementy biblioteki grafiki GDI.  
   
-- Geometria obszaru rysowania.  
+- Geometria regionu rysowania.  
   
-- Procedura zwalnianie zasobów graficznych.  
+- Procedura zwalniania zasobów graficznych.  
   
-## <a name="drawing-functionality-provided-by-control"></a>Rysowanie funkcje udostępniane przez kontrolkę  
- Klasa bazowa <xref:System.Windows.Forms.Control> udostępnia funkcje rysowania za pośrednictwem jego <xref:System.Windows.Forms.Control.Paint> zdarzeń. Kontrolki wywołuje <xref:System.Windows.Forms.Control.Paint> zdarzenie zawsze wtedy, gdy trzeba ją zaktualizować jego wyświetlania. Aby uzyskać więcej informacji o zdarzeniach w .NET Framework, zobacz [Handling and Raising Events](../../../standard/events/index.md).  
+## <a name="drawing-functionality-provided-by-control"></a>Funkcje rysowania zapewniane przez kontrolę  
+ Klasa <xref:System.Windows.Forms.Control> bazowa udostępnia funkcje rysowania za pomocą swojego <xref:System.Windows.Forms.Control.Paint> zdarzenia. Kontrolka wywołuje zdarzenie <xref:System.Windows.Forms.Control.Paint> za każdym razem, gdy musi zaktualizować jego wyświetlanie. Aby uzyskać więcej informacji na temat zdarzeń w .NET Framework, zobacz [Obsługa i](../../../standard/events/index.md)wywoływanie zdarzeń.  
   
- Dane zdarzenia klasy dla <xref:System.Windows.Forms.Control.Paint> zdarzenia <xref:System.Windows.Forms.PaintEventArgs>, przechowuje dane potrzebne do rysowania kontrolki — dojścia do obiektu grafiki i obiekt prostokąt, który reprezentuje region, aby narysować w. Te obiekty są wyświetlane w pogrubieniem w poniższy fragment kodu.  
+ Klasa danych zdarzenia dla <xref:System.Windows.Forms.Control.Paint> zdarzenia, <xref:System.Windows.Forms.PaintEventArgs>zawiera dane, które są konieczne do rysowania kontrolki — uchwytu do obiektu grafiki i obiektu prostokąta, który reprezentuje region do rysowania. Te obiekty są pokazane pogrubioną czcionką w poniższym fragmencie kodu.  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -61,9 +61,9 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics> jest zarządzany klasa, która hermetyzuje funkcjonalność rysowania, zgodnie z opisem w dyskusji GDI w dalszej części tego tematu. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Jest wystąpieniem <xref:System.Drawing.Rectangle> struktury i definiuje dostępne obszaru, w którym można narysować kontrolkę. Można obliczyć dewelopera kontrolek <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> przy użyciu <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwość kontrolki, zgodnie z opisem w dyskusji geometrii w dalszej części tego tematu.  
+ <xref:System.Drawing.Graphics>jest klasą zarządzaną, która hermetyzuje funkcje rysowania, zgodnie z opisem w omówieniu GDI w dalszej części tego tematu. Jest wystąpieniem <xref:System.Drawing.Rectangle> struktury i definiuje dostępny obszar, w którym formant może być rysowany. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Deweloper kontroli może obliczyć <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> przy użyciu właściwości kontrolki, zgodnie z opisem w omówieniu geometrii w dalszej części tego tematu.  
   
- Kontrolki musisz podać logiki renderowania przez zastąpienie <xref:System.Windows.Forms.Control.OnPaint%2A> metodę, która dziedziczy <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A> uzyskuje dostęp do obiektów grafiki i prostokąt można narysować w za pośrednictwem <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> i <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwości <xref:System.Windows.Forms.PaintEventArgs> wystąpienia przekazane do niego.  
+ Kontrolka musi zapewniać logikę renderowania przez <xref:System.Windows.Forms.Control.OnPaint%2A> zastąpienie metody, z <xref:System.Windows.Forms.Control>której dziedziczy. <xref:System.Windows.Forms.Control.OnPaint%2A>uzyskuje dostęp do obiektu graficznego oraz prostokąta do rysowania przy użyciu <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> i właściwości <xref:System.Windows.Forms.PaintEventArgs> wystąpienia, do którego została przeniesiona.  
   
 ```vb  
 Protected Overridable Sub OnPaint(pe As PaintEventArgs)  
@@ -73,12 +73,12 @@ Protected Overridable Sub OnPaint(pe As PaintEventArgs)
 protected virtual void OnPaint(PaintEventArgs pe);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaint%2A> Metody podstawowej <xref:System.Windows.Forms.Control> klasa nie implementuje żadnych funkcji rysowania, ale jedynie wywołuje delegatów zdarzeń, które są zarejestrowane w usłudze <xref:System.Windows.Forms.Control.Paint> zdarzeń. Gdy zastąpisz <xref:System.Windows.Forms.Control.OnPaint%2A>, zazwyczaj należy wywołać <xref:System.Windows.Forms.Control.OnPaint%2A> otrzymywać metody klasy bazowej, która jest zarejestrowana delegatów <xref:System.Windows.Forms.Control.Paint> zdarzeń. Jednak formantów, które ich całej powierzchni rysowania nie powinien wywołać klasy bazowej <xref:System.Windows.Forms.Control.OnPaint%2A>, ponieważ wprowadza migotania. Na przykład zastępowanie <xref:System.Windows.Forms.Control.OnPaint%2A> zdarzeń, zobacz [jak: Utwórz formant programu Windows Forms pokazującej postęp](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ Metoda klasy bazowej <xref:System.Windows.Forms.Control> nie implementuje żadnych funkcji rysowania, ale tylko wywołuje delegatów zdarzeń zarejestrowanych w <xref:System.Windows.Forms.Control.Paint> zdarzeniu. <xref:System.Windows.Forms.Control.OnPaint%2A> Podczas przesłonięcia <xref:System.Windows.Forms.Control.OnPaint%2A>należy zwykle <xref:System.Windows.Forms.Control.OnPaint%2A> wywołać metodę klasy bazowej, tak aby zarejestrowane Delegaty otrzymywały <xref:System.Windows.Forms.Control.Paint> zdarzenie. Jednak kontrolki, które malują całą powierzchnię nie należy wywoływać klasy <xref:System.Windows.Forms.Control.OnPaint%2A>bazowej, ponieważ wprowadzają migotanie. Przykład zastępowania <xref:System.Windows.Forms.Control.OnPaint%2A> zdarzenia można znaleźć w [temacie How to: Utwórz formant Windows Forms, który pokazuje postęp](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 > [!NOTE]
->  Nie wywołać <xref:System.Windows.Forms.Control.OnPaint%2A> bezpośrednio z kontroli nad; zamiast tego należy wywołać <xref:System.Windows.Forms.Control.Invalidate%2A> — metoda (odziedziczone <xref:System.Windows.Forms.Control>) lub innej metody, która wywołuje <xref:System.Windows.Forms.Control.Invalidate%2A>. <xref:System.Windows.Forms.Control.Invalidate%2A> Metoda z kolei wywołuje <xref:System.Windows.Forms.Control.OnPaint%2A>. <xref:System.Windows.Forms.Control.Invalidate%2A> Jest przeciążona metoda i, w zależności od argumentów przekazana do <xref:System.Windows.Forms.Control.Invalidate%2A> `e`, formant odrysowuje niektóre lub wszystkie z jej obszaru ekranu.  
+> Nie wywołuj <xref:System.Windows.Forms.Control.OnPaint%2A> bezpośrednio z formantu; zamiast tego <xref:System.Windows.Forms.Control.Invalidate%2A> Wywołaj metodę (Odziedziczone z <xref:System.Windows.Forms.Control>) lub inną metodę, która wywołuje <xref:System.Windows.Forms.Control.Invalidate%2A>. Metoda z kolei wywołuje <xref:System.Windows.Forms.Control.OnPaint%2A>metodę. <xref:System.Windows.Forms.Control.Invalidate%2A> Metoda jest przeciążona i, w zależności od argumentów dostarczonych do <xref:System.Windows.Forms.Control.Invalidate%2A> `e`, formant ponownie rysuje część lub cały jego obszar ekranu. <xref:System.Windows.Forms.Control.Invalidate%2A>  
   
- Podstawa <xref:System.Windows.Forms.Control> klasa definiuje innej metody, które są przydatne do rysowania — <xref:System.Windows.Forms.Control.OnPaintBackground%2A> metody.  
+ Klasa bazowa <xref:System.Windows.Forms.Control> definiuje inną metodę, która jest przydatna do rysowania <xref:System.Windows.Forms.Control.OnPaintBackground%2A> — Metoda.  
   
 ```vb  
 Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)  
@@ -88,25 +88,25 @@ Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)
 protected virtual void OnPaintBackground(PaintEventArgs pevent);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaintBackground%2A> Malowanie tła (i tym samym kształt) okna i gwarantuje szybkiego działania, podczas <xref:System.Windows.Forms.Control.OnPaint%2A> malowanie szczegółowe informacje i może być wolniejsze, ponieważ paint poszczególnych żądań są połączone w jedną <xref:System.Windows.Forms.Control.Paint> zdarzenia, które obejmuje wszystkie obszary, które muszą być narysowany ponownie. Należy wywołać <xref:System.Windows.Forms.Control.OnPaintBackground%2A> Jeśli na przykład chcemy narysować gradientów tła kontrolki.  
+ <xref:System.Windows.Forms.Control.OnPaintBackground%2A>maluje tło (a tym samym kształt) okna i gwarantuje szybkie przewinięcie szczegółów i może być wolniejsze, <xref:System.Windows.Forms.Control.OnPaint%2A> ponieważ poszczególne żądania programu Paint są łączone w jedno <xref:System.Windows.Forms.Control.Paint> zdarzenie, które obejmuje wszystkie obszary, które muszą być narysowany ponownie. Możesz chcieć wywołać <xref:System.Windows.Forms.Control.OnPaintBackground%2A> polecenie IF, na przykład, aby narysować kolorowe tło dla kontrolki.  
   
- Gdy <xref:System.Windows.Forms.Control.OnPaintBackground%2A> ma nomenklaturę zdarzenia podobne i ma ten sam argument co `OnPaint` metody <xref:System.Windows.Forms.Control.OnPaintBackground%2A> nie jest metodą true zdarzeń. Istnieje nie `PaintBackground` zdarzeń i <xref:System.Windows.Forms.Control.OnPaintBackground%2A> nie wywoła delegatów zdarzeń. Podczas zastępowania <xref:System.Windows.Forms.Control.OnPaintBackground%2A> metody, klasy pochodnej nie jest wymagane do wywołania <xref:System.Windows.Forms.Control.OnPaintBackground%2A> metody klasy bazowej.  
+ Chociaż <xref:System.Windows.Forms.Control.OnPaintBackground%2A> ma nomenklaturę przypominającą zdarzenia i przyjmuje ten sam argument `OnPaint` co metoda, <xref:System.Windows.Forms.Control.OnPaintBackground%2A> nie jest to prawdziwa Metoda zdarzenia. Nie ma <xref:System.Windows.Forms.Control.OnPaintBackground%2A> zdarzenia i nie wywołuje delegatów zdarzeń. `PaintBackground` Podczas zastępowania <xref:System.Windows.Forms.Control.OnPaintBackground%2A> metody Klasa pochodna nie jest wymagana do <xref:System.Windows.Forms.Control.OnPaintBackground%2A> wywołania metody jej klasy bazowej.  
   
-## <a name="gdi-basics"></a>Podstawy interfejsu GDI +  
- <xref:System.Drawing.Graphics> Klasa zawiera metody służące do rysowania różnych kształtów, np. okręgi, trójkąty, łuki i wielokropek, a także metody do wyświetlania tekstu. <xref:System.Drawing?displayProperty=nameWithType> Przestrzeni nazw i jego podobszary nazw zawierają klasy, które hermetyzują elementów graficznych, takich jak kształty (okręgów, prostokąty, łuki i inne), kolory, czcionki, pędzli i tak dalej. Aby uzyskać więcej informacji na temat interfejsu GDI, zobacz [używanie zarządzanych klas grafiki](../advanced/using-managed-graphics-classes.md). Podstawowe informacje o GDI są także opisane w [jak: Utwórz formant programu Windows Forms pokazującej postęp](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+## <a name="gdi-basics"></a>Podstawowe informacje o GDI+  
+ <xref:System.Drawing.Graphics> Klasa udostępnia metody rysowania różnych kształtów, takich jak koła, Trójkąty, łuki i elipsy, a także metody wyświetlania tekstu. <xref:System.Drawing?displayProperty=nameWithType> Przestrzeń nazw i jej podobszar nazw zawierają klasy, które hermetyzują elementy graficzne, takie jak kształty (okręgi, prostokąty, łuki i inne), kolory, czcionki, pędzle i tak dalej. Aby uzyskać więcej informacji na temat interfejsu GDI, zobacz [Używanie zarządzanych klas graficznych](../advanced/using-managed-graphics-classes.md). Podstawowe [informacje o usłudze GDI są również opisane w temacie How to: Utwórz formant Windows Forms, który pokazuje postęp](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
-## <a name="geometry-of-the-drawing-region"></a>Geometria obszaru rysowania  
- <xref:System.Windows.Forms.Control.ClientRectangle%2A> Właściwości formantu określa prostokątny obszar, dostępna dla kontrolki na ekranie użytkownika, gdy <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwość <xref:System.Windows.Forms.PaintEventArgs> określa obszar, który faktycznie jest malowane. (Należy pamiętać, że malowanie odbywa się w <xref:System.Windows.Forms.Control.Paint> metody zdarzeń, która przyjmuje <xref:System.Windows.Forms.PaintEventArgs> wystąpienie jako argument). Formant może być konieczne malowanie tylko część jej dostępnych obszarów tak jak w przypadku gdy niewielki fragment zmiany wyświetlania kontrolki. W takiej sytuacji dewelopera kontrolek obliczyć rzeczywiste prostokąt można narysować w i przekazać go do <xref:System.Windows.Forms.Control.Invalidate%2A>. Przeciążone wersje <xref:System.Windows.Forms.Control.Invalidate%2A> o <xref:System.Drawing.Rectangle> lub <xref:System.Drawing.Region> jako argument Użyj tego argumentu, aby wygenerować <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwość <xref:System.Windows.Forms.PaintEventArgs>.  
+## <a name="geometry-of-the-drawing-region"></a>Geometria regionu rysowania  
+ Właściwość kontrolki określa prostokątny region dostępny dla formantu na ekranie użytkownika, <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> podczas gdy właściwość <xref:System.Windows.Forms.PaintEventArgs> określa obszar, który jest rzeczywiście malowany. <xref:System.Windows.Forms.Control.ClientRectangle%2A> (Należy pamiętać, że malowanie jest <xref:System.Windows.Forms.Control.Paint> wykonywane w metodzie zdarzenia <xref:System.Windows.Forms.PaintEventArgs> , która przyjmuje wystąpienie jako argument). Kontrolka może być konieczna do malowania tylko częścią dostępnego obszaru, tak jak w przypadku, gdy mała sekcja ekranu kontrolki jest zmieniana. W takich sytuacjach deweloper kontroli musi obliczyć rzeczywisty prostokąt, aby narysować i przekazać do <xref:System.Windows.Forms.Control.Invalidate%2A>. <xref:System.Windows.Forms.Control.Invalidate%2A> Przeciążone wersje <xref:System.Windows.Forms.PaintEventArgs>, które <xref:System.Drawing.Rectangle> przyjmują lub <xref:System.Drawing.Region> jako argument używają tego argumentu do generowania <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwości.  
   
- Poniższy kod fragment przedstawia sposób, w jaki `FlashTrackBar` kontrolki niestandardowej oblicza prostokątny obszar, aby narysować w. `client` Wskazuje zmienną <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwości. Aby uzyskać pełny przykład, zobacz [jak: Utwórz formant programu Windows Forms pokazującej postęp](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ Poniższy fragment kodu przedstawia sposób, `FlashTrackBar` w jaki formant niestandardowy oblicza prostokątny obszar do rysowania. `client` Zmienna oznacza<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwość. Pełny przykład można znaleźć w temacie [How to: Utwórz formant Windows Forms, który pokazuje postęp](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#6)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#6)]  
   
 ## <a name="freeing-graphics-resources"></a>Zwalnianie zasobów graficznych  
- Obiekty graficzne są kosztowne, ponieważ używają zasobów systemowych. Takie obiekty zawierają wystąpień <xref:System.Drawing.Graphics?displayProperty=nameWithType> klasy, a także wystąpienia <xref:System.Drawing.Brush?displayProperty=nameWithType>, <xref:System.Drawing.Pen?displayProperty=nameWithType>i innych klas grafiki. Jest ważne, utwórz zasób grafiki, tylko wtedy, gdy go potrzebujesz i zwolnij go szybko po zakończeniu, korzystania z niego. W przypadku utworzenia typu, który implementuje <xref:System.IDisposable> interfejsu, wywołać jej <xref:System.IDisposable.Dispose%2A> metoda po zakończeniu z nim w celu zwolnienie zasobów.  
+ Obiekty graficzne są kosztowne, ponieważ korzystają z zasobów systemowych. Takie obiekty obejmują wystąpienia <xref:System.Drawing.Graphics?displayProperty=nameWithType> klasy, a także <xref:System.Drawing.Brush?displayProperty=nameWithType>wystąpienia, <xref:System.Drawing.Pen?displayProperty=nameWithType>i innych klas graficznych. Ważne jest, aby utworzyć zasób grafiki tylko wtedy, gdy jest potrzebny, i wydać go wkrótce po zakończeniu korzystania z niego. Jeśli tworzysz typ, który implementuje <xref:System.IDisposable> interfejs, wywołaj jego <xref:System.IDisposable.Dispose%2A> metodę po zakończeniu pracy z nim w celu zwolnienia zasobów.  
   
- Poniższy kod fragment przedstawia sposób, w jaki `FlashTrackBar` formant niestandardowy, tworzy i zwalnia <xref:System.Drawing.Brush> zasobów. Aby uzyskać pełnego kodu źródłowego, zobacz [jak: Utwórz formant programu Windows Forms pokazującej postęp](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ Poniższy fragment kodu przedstawia sposób, w `FlashTrackBar` jaki formant niestandardowy tworzy i <xref:System.Drawing.Brush> zwalnia zasób. Aby uzyskać pełny kod źródłowy, zobacz [How to: Utwórz formant Windows Forms, który pokazuje postęp](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#5)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#5)]  
@@ -119,4 +119,4 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Utwórz formant programu Windows Forms pokazującej postęp](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Instrukcje: Tworzenie kontrolki Windows Forms, która pokazuje postęp](how-to-create-a-windows-forms-control-that-shows-progress.md)

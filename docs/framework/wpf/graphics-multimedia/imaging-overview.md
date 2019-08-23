@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 6d3dce5c8a34257f8509f239ece4bae3efa02b84
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 13d5ea2735a799332edd8e552198de0f2b970dad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545366"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914101"
 ---
 # <a name="imaging-overview"></a>Przegląd Obrazowanie
 Ten temat zawiera wprowadzenie do programu [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]umożliwia deweloperom wyświetlanie, przekształcanie i formatowanie obrazów.  
@@ -99,7 +99,7 @@ Ten temat zawiera wprowadzenie do programu [!INCLUDE[TLA#tla_wic](../../../../in
  Poniższy przykład pokazuje, jak renderować obraz 200 pikseli szerokości przy użyciu kodu.  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Imaging.BitmapImage><xref:System.ComponentModel.ISupportInitialize> implementuje interfejs, aby zoptymalizować inicjalizację dla wielu właściwości. Zmiany właściwości mogą wystąpić tylko podczas inicjowania obiektu. Wywołanie <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> do sygnału o rozpoczęciu inicjalizacji i <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> zasygnalizowaniu, że Inicjowanie zostało zakończone. Po zainicjowaniu zmiany właściwości zostaną zignorowane.  
+> <xref:System.Windows.Media.Imaging.BitmapImage><xref:System.ComponentModel.ISupportInitialize> implementuje interfejs, aby zoptymalizować inicjalizację dla wielu właściwości. Zmiany właściwości mogą wystąpić tylko podczas inicjowania obiektu. Wywołanie <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> do sygnału o rozpoczęciu inicjalizacji i <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> zasygnalizowaniu, że Inicjowanie zostało zakończone. Po zainicjowaniu zmiany właściwości zostaną zignorowane.  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
@@ -185,7 +185,7 @@ Pędzle obrazu mogą wypełniać kształty, kontrolki, tekst i nie tylko
  Przykład interfejsu API rozszerzalności można znaleźć w przykładowym [kodeku Win32](https://go.microsoft.com/fwlink/?LinkID=160052). Ten przykład pokazuje, jak utworzyć dekoder i koder dla niestandardowego formatu obrazu.  
   
 > [!NOTE]
->  Koder-dekoder musi być cyfrowo podpisany, aby system mógł go rozpoznać.  
+> Koder-dekoder musi być cyfrowo podpisany, aby system mógł go rozpoznać.  
   
 ## <a name="see-also"></a>Zobacz także
 

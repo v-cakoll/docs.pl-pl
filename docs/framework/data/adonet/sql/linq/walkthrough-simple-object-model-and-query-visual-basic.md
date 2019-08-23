@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: a7d278dd424fbb3167a30d627379f78d0c65476f
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: e0840adba62e10640ef16908db6b57519191f7f7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971784"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946784"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Przewodnik: Prosty model obiektu i zapytanie (Visual Basic)
 
@@ -121,7 +121,7 @@ Deklarujemy również, `Table(Of Customer)` aby pełnić rolę logicznej, wpisan
 
 ## <a name="creating-a-simple-query"></a>Tworzenie prostego zapytania
 
-W tym kroku utworzysz zapytanie, aby sprawdzić, którzy klienci w tabeli Klienci bazy danych znajdują się w Londynie. Kod zapytania w tym kroku tylko opisuje zapytanie. Nie wykonuje go. Takie podejście jest znane jako *odroczone wykonanie*. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQC#()](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
+W tym kroku utworzysz zapytanie, aby sprawdzić, którzy klienci w tabeli Klienci bazy danych znajdują się w Londynie. Kod zapytania w tym kroku tylko opisuje zapytanie. Nie wykonuje go. Takie podejście jest znane jako *odroczone wykonanie*. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQC#()](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
 Utworzysz również dane wyjściowe dziennika w celu wyświetlenia poleceń SQL, które [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generują. Ta funkcja rejestrowania (która korzysta <xref:System.Data.Linq.DataContext.Log%2A>z programu) jest przydatna podczas debugowania, a przy określaniu, że polecenia wysyłane do bazy danych dokładnie reprezentują zapytanie.
 

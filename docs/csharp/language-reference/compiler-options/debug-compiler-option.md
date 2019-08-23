@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: 7ffa939d94d0e7aabe07ee85422c4b9b740d7cdc
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69603066"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922511"
 ---
 # <a name="-debug-c-compiler-options"></a>-Debug (C# opcje kompilatora)
 Opcja **-Debug** powoduje, że kompilator generuje informacje o debugowaniu i umieszcza je w pliku wyjściowym lub plikach.  
@@ -38,7 +38,7 @@ Opcja **-Debug** powoduje, że kompilator generuje informacje o debugowaniu i um
  Jeśli używasz **-Debug: Full**, pamiętaj, że występuje pewien wpływ na szybkość i rozmiar kodu zoptymalizowanego pod kątem JIT oraz niewielki wpływ na jakość kodu z **-Debug: Full**. Zalecamy **debugowanie: pdbonly** lub brak pliku PDB do generowania kodu wydania.  
   
 > [!NOTE]
->  Jedna różnica między **debugowaniem: pdbonly** i **-Debug: Full** to the **-Debug: Full** kompilator emituje <xref:System.Diagnostics.DebuggableAttribute>, który jest używany do informowania kompilatora JIT, że dostępne są informacje debugowania. W związku z tym zostanie wyświetlony komunikat o błędzie, jeśli kod <xref:System.Diagnostics.DebuggableAttribute> zawiera wartość false, jeśli używasz **-Debug: Full**.  
+> Jedna różnica między **debugowaniem: pdbonly** i **-Debug: Full** to the **-Debug: Full** kompilator emituje <xref:System.Diagnostics.DebuggableAttribute>, który jest używany do informowania kompilatora JIT, że dostępne są informacje debugowania. W związku z tym zostanie wyświetlony komunikat o błędzie, jeśli kod <xref:System.Diagnostics.DebuggableAttribute> zawiera wartość false, jeśli używasz **-Debug: Full**.  
   
  Aby uzyskać więcej informacji na temat konfigurowania wydajności debugowania aplikacji, zobacz [ułatwianie debugowania obrazu](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   

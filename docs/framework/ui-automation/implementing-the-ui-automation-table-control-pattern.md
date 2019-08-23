@@ -6,45 +6,45 @@ helpviewer_keywords:
 - control patterns, Table
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-ms.openlocfilehash: d66e65b340ceb9cbfe95d9f0d6ff82e84d33487f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0852e904414ac4af6777b9476b4b6ad504a09ef3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649471"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935706"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>Implementacja wzorca formantu tabeli automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
   
- W tym temacie przedstawiono wskazówki i konwencje dotyczące implementowania <xref:System.Windows.Automation.Provider.ITableProvider>, wraz z informacjami dotyczącymi właściwości, metody i zdarzenia. Łącza do dodatkowe informacje są wyświetlane na końcu przeglądu.  
+ W tym temacie przedstawiono wskazówki i konwencje <xref:System.Windows.Automation.Provider.ITableProvider>dotyczące wdrażania, w tym informacje o właściwościach, metodach i zdarzeniach. Linki do dodatkowych odwołań znajdują się na końcu przeglądu.  
   
- <xref:System.Windows.Automation.TablePattern> — Wzorzec kontrolki jest używana do obsługi formantów, które działają jak kontenery dla kolekcji elementów podrzędnych. Elementy podrzędne tego elementu musi implementować <xref:System.Windows.Automation.Provider.ITableItemProvider> i zorganizowane w dwuwymiarowej logiczne współrzędnych być przechodni według wierszy i kolumn. Ten wzorzec kontroli jest odpowiednikiem <xref:System.Windows.Automation.Provider.IGridProvider>, za pomocą rozróżnienie, że kontrolnych Implementowanie <xref:System.Windows.Automation.Provider.ITableProvider> również musi ujawniać relację nagłówek kolumny i/lub wiersza dla każdego elementu podrzędnego. Przykłady formantów, które implementują wzorzec tej kontrolki, zobacz [kontroli wzorzec mapowania dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ Wzorzec <xref:System.Windows.Automation.TablePattern> kontrolki służy do obsługi kontrolek, które działają jako kontenery dla kolekcji elementów podrzędnych. Elementy podrzędne tego elementu muszą implementować <xref:System.Windows.Automation.Provider.ITableItemProvider> i być zorganizowane w dwuwymiarowej logicznej układzie współrzędnych, który może być przesunięty przez wiersz i kolumnę. Ten wzorzec kontrolki jest analogiczny do <xref:System.Windows.Automation.Provider.IGridProvider>, z rozróżnieniem, że jakakolwiek kontrolka implementująca <xref:System.Windows.Automation.Provider.ITableProvider> musi także uwidaczniać relację nagłówka kolumny i/lub wiersza dla każdego elementu podrzędnego. Aby zapoznać się z przykładami formantów implementujących ten wzorzec kontrolek, zobacz [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
- Jeśli implementacja wzorca kontrolki tabeli, należy zwrócić uwagę następujących wytycznych i konwencje:  
+## <a name="implementation-guidelines-and-conventions"></a>Wytyczne i konwencje dotyczące implementacji  
+ Podczas implementowania wzorca kontroli tabeli należy zwrócić uwagę na następujące wytyczne i konwencje:  
   
-- Dostęp do zawartości poszczególnych komórek jest dwuwymiarowy współrzędnych logicznych lub tablicy, dostarczone przez wymagane wykonania współbieżnych <xref:System.Windows.Automation.Provider.IGridProvider>.  
+- Dostęp do zawartości poszczególnych komórek odbywa się za pomocą dwuwymiarowego układu współrzędnych lub tablicy udostępnionej przez wymaganą współbieżną <xref:System.Windows.Automation.Provider.IGridProvider>implementację.  
   
-- Nagłówek kolumny lub wiersza mogą być zawarte w obiekcie tabeli lub być obiekt oddzielny nagłówek, który jest skojarzony z obiektem tabeli.  
+- Nagłówek kolumny lub wiersza może być zawarty w obiekcie tabeli lub być osobnym obiektem nagłówkowym skojarzonym z obiektem tabeli.  
   
-- Nagłówki kolumn i wierszy może obejmować zarówno podstawowego nagłówka, jak również wszelkie nagłówki pomocniczych.  
+- Nagłówki kolumn i wierszy mogą zawierać zarówno nagłówek podstawowy, jak i nagłówki pomocnicze.  
   
 > [!NOTE]
->  Takie podejście staje się widoczna w [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] arkusza kalkulacyjnego, gdzie został zdefiniowany przez użytkownika kolumny "Imię". Ta kolumna zawiera teraz dwa nagłówki — nagłówek "Imię" zdefiniowany przez użytkownika i oznaczenie alfanumeryczne dla tej kolumny przypisany przez aplikację.  
+> Pojęcie to jest [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] widoczne w arkuszu kalkulacyjnym, w którym użytkownik zdefiniował kolumnę "imię Name". Ta kolumna ma teraz dwa nagłówki — nagłówek "First Name" zdefiniowany przez użytkownika i alfanumeryczne oznaczenie tej kolumny przypisanej przez aplikację.  
   
-- Zobacz [implementacja wzorca kontrolki siatki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) siatki powiązanych funkcji.  
+- Zobacz [Implementacja wzorca kontrolki siatki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) dla powiązanych funkcji siatki.  
   
- ![Tabela, z elementami complex — nagłówek. ](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
-Przykład tabeli z nagłówkami kolumn złożonych  
+ ![Tabela ze złożonymi elementami nagłówka.](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
+Przykład tabeli z złożonymi nagłówkami kolumn  
   
- ![Tabela z niejednoznaczną właściwością RowOrColumnMajor. ](../../../docs/framework/ui-automation/media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
+ ![Tabela z niejednoznaczną właściwością RowOrColumnMajor.](../../../docs/framework/ui-automation/media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
 Przykład tabeli z niejednoznaczną właściwością RowOrColumnMajor  
   
 <a name="Required_Members_for_ITableProvider"></a>   
-## <a name="required-members-for-itableprovider"></a>Wymagane elementy ITableProvider  
- Poniższe właściwości i metod są wymagane dla interfejsu ITableProvider.  
+## <a name="required-members-for-itableprovider"></a>Wymagane elementy członkowskie dla ITableProvider  
+ Dla interfejsu ITableProvider są wymagane następujące właściwości i metody.  
   
 |Wymagane elementy członkowskie|Typ elementu członkowskiego|Uwagi|  
 |----------------------|-----------------|-----------|  
@@ -52,11 +52,11 @@ Przykład tabeli z niejednoznaczną właściwością RowOrColumnMajor
 |<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Metoda|Brak|  
 |<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Metoda|Brak|  
   
- Ten wzorzec formantu nie ma żadnych skojarzonych zdarzeń.  
+ Ten wzorzec kontrolki nie ma skojarzonych zdarzeń.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Wyjątki  
- Ten wzorzec kontroli ma skojarzone generują żadnych wyjątków.  
+ Ten wzorzec kontrolki nie ma żadnych skojarzonych wyjątków.  
   
 ## <a name="see-also"></a>Zobacz także
 

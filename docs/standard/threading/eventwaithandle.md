@@ -10,57 +10,57 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc2ed1a450921452dee894caeb52c477d501b573
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9c90a3bd272b54d2884d013e62123dd67d836e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926359"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960052"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
-<xref:System.Threading.EventWaitHandle> Klasa umożliwia wątków do komunikowania się ze sobą przez Sygnalizowanie i Oczekiwanie na sygnałów. Uchwyty oczekiwania na zdarzenie (zwaną także po prostu zdarzenia) są dojścia oczekiwania, które mogą być sygnalizowane, aby zwolnić jeden lub więcej wątków oczekujących. Po zasygnalizowania, dojścia oczekiwania jest resetowany, ręcznie lub automatycznie. <xref:System.Threading.EventWaitHandle> Klasa może reprezentować albo lokalnym zdarzeniem dojście oczekiwania (zdarzenie lokalne) lub zdarzeń o nazwie system poczekaj uchwytu (o nazwie zdarzenie lub systemu, widoczne dla wszystkich procesów).  
+<xref:System.Threading.EventWaitHandle> Klasa pozwala wątkom komunikować się ze sobą przez sygnalizowanie i przez oczekiwanie na sygnały. Dojścia do oczekiwania zdarzeń (nazywane również tylko zdarzeniami) są dojściami oczekiwania, które mogą być sygnalizowane, aby zwolnić jeden lub więcej oczekujących wątków. Po zasygnalizowaniu dojście do oczekiwania na zdarzenie jest resetowane ręcznie lub automatycznie. <xref:System.Threading.EventWaitHandle> Klasa może reprezentować albo lokalne dojście oczekiwania na zdarzenie (zdarzenie lokalne) lub nazwanego uchwytu oczekiwania zdarzenia systemu (nazwanego zdarzenia lub zdarzenia systemowe, widoczne dla wszystkich procesów).  
   
 > [!NOTE]
->  Uchwyty oczekiwania na zdarzenie nie są .NET [zdarzenia](../events/index.md). Zaangażowanych bez delegatów i procedury obsługi zdarzeń. Słowo "zdarzenie" służy do opisywania ich ponieważ one mieć tradycyjnie zostało określone jako zdarzenia systemu operacyjnego, a czynność sygnalizowanie dojście oczekiwania wskazuje wątków oczekujących wystąpienia zdarzenia.  
+> Uchwyty oczekiwania zdarzeń nie są [zdarzeniami](../events/index.md)platformy .NET. Brak obiektów delegowanych lub programów obsługi zdarzeń. Słowo "Event" służy do opisywania ich, ponieważ tradycyjnie nazywa się zdarzeniami systemu operacyjnego, a ponieważ czynność sygnalizująca dojście oczekiwania wskazuje na oczekujące wątki, które wystąpiły zdarzenie.  
   
- Zarówno uchwyty oczekiwania na zdarzenie lokalnych i nazwanych używać obiektów synchronizacji systemu, które są chronione przez <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> otoki, aby upewnić się, że zasoby są zwalniane. Możesz użyć <xref:System.Threading.WaitHandle.Dispose%2A> metody, aby zwolnić zasoby, natychmiast po zakończeniu korzystania z obiektu.  
+ Lokalne i nazwane zdarzenia czekają na używanie obiektów synchronizacji systemu, które są chronione przez <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> otoki, aby upewnić się, że zasoby zostały wydane. Możesz użyć metody, <xref:System.Threading.WaitHandle.Dispose%2A> aby zwolnić zasoby natychmiast po zakończeniu korzystania z obiektu.  
   
-## <a name="event-wait-handles-that-reset-automatically"></a>Uchwyty oczekiwania na zdarzenie, które automatycznie resetować  
- Utwórz zdarzenie zresetowaniu automatycznym, określając <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> po utworzeniu <xref:System.Threading.EventWaitHandle> obiektu. Jak sugeruje jej nazwa, to zdarzenie synchronizacji automatycznie po resetuje sygnalizowane po przy zwalnianiu pojedynczego wątku oczekiwania. Zasygnalizowania zdarzenia przez wywołanie jego <xref:System.Threading.EventWaitHandle.Set%2A> metody.  
+## <a name="event-wait-handles-that-reset-automatically"></a>Uchwyty oczekiwania zdarzeń, które są resetowane automatycznie  
+ Można utworzyć automatyczne Resetowanie zdarzenia, określając <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> podczas <xref:System.Threading.EventWaitHandle> tworzenia obiektu. Ponieważ jego nazwa oznacza, to zdarzenie synchronizacji jest resetowane automatycznie po zasygnalizowaniu, po zwolnieniu pojedynczego wątku oczekującego. Sygnalizowanie zdarzenia przez wywołanie <xref:System.Threading.EventWaitHandle.Set%2A> metody.  
   
- Automatyczne resetowanie zdarzenia zwykle są używane do zapewnienia wyłącznego dostępu do zasobu dla pojedynczego wątku w danym momencie. Wątek żąda zasobu, wywołując <xref:System.Threading.WaitHandle.WaitOne%2A> metody. Jeśli nie z innego wątku organizuje dojście oczekiwania, metoda zwraca `true` i Wątek wywołujący ma kontrolę nad zasobem.  
+ Zdarzenia automatycznego resetowania są zwykle używane do zapewniania wyłącznego dostępu do zasobu dla pojedynczego wątku w danym momencie. Wątek żąda zasobu przez wywołanie <xref:System.Threading.WaitHandle.WaitOne%2A> metody. Jeśli żaden inny wątek nie utrzymuje dojścia oczekiwania, metoda zwraca `true` i wątek wywołujący ma kontrolę nad zasobem.  
   
 > [!IMPORTANT]
->  Podobnie jak w przypadku wszystkich mechanizmów synchronizacji, należy zadbać o wszystkie ścieżki kodu oczekiwania przed uzyskaniem dostępu do chronionego zasobu na dojście oczekiwania odpowiednie. Synchronizacja wątku jest wspólne.  
+> Podobnie jak w przypadku wszystkich mechanizmów synchronizacji, przed uzyskaniem dostępu do chronionego zasobu należy upewnić się, że wszystkie ścieżki kodu oczekują na odpowiednie dojście oczekiwania. Synchronizacja wątków jest spółdzielnią.  
   
- Jeśli zdarzenie resetu automatycznego jest sygnalizowane, gdy nie ma wątków oczekujących, pozostaje sygnałowego aż wątek próby poczekaj na nim. Zdarzenie zwalnia wątku, a od razu resetuje, blokuje kolejnych wątków.  
+ Jeśli automatyczne resetowanie zostanie sygnalizowane, gdy żaden wątek nie oczekuje, pozostaje zasygnalizowani do momentu, gdy wątki spróbuje go zaczekać. Zdarzenie zwalnia wątek i natychmiast resetuje, blokując kolejne wątki.  
   
-## <a name="event-wait-handles-that-reset-manually"></a>Uchwyty oczekiwania na zdarzenie, które ręcznie zresetować  
- Utwórz zdarzenie resetowania ręcznego, określając <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> po utworzeniu <xref:System.Threading.EventWaitHandle> obiektu. Jak sugeruje jej nazwa, to zdarzenie synchronizacji muszą zostać zresetowane ręcznie po ma zostały zasygnalizowane. Dopóki zostanie zresetowane, przez wywołanie jego <xref:System.Threading.EventWaitHandle.Reset%2A> metody, wątki, które oczekiwania na dojście zdarzenia bezzwłocznie ją kontynuować bez blokowania.  
+## <a name="event-wait-handles-that-reset-manually"></a>Uchwyty oczekiwania zdarzeń resetowania ręcznie  
+ Zdarzenie resetowania ręcznego można utworzyć, określając <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> podczas <xref:System.Threading.EventWaitHandle> tworzenia obiektu. Ponieważ jego nazwa to oznacza, to zdarzenie synchronizacji należy zresetować ręcznie po zasygnalizowaniu. Dopóki nie zostanie zresetowane, wywołując jego <xref:System.Threading.EventWaitHandle.Reset%2A> metodę, wątki, które czekają na obsługę zdarzeń, przejdą natychmiast bez blokowania.  
   
- Działania zdarzenia, takie jak bramy corral resetowania ręcznego. Gdy zdarzenie nie jest sygnalizowane, zablokować wątki, które czekać na nim, takie jak konie w corral. Gdy zdarzenie jest sygnalizowane, przez wywołanie jego <xref:System.Threading.EventWaitHandle.Set%2A> metody wszystkich wątków oczekujących są bezpłatne kontynuować. Zdarzenie pozostaje sygnałowego aż do jego <xref:System.Threading.EventWaitHandle.Reset%2A> metoda jest wywoływana. To sprawia, że zdarzenie resetowania ręcznego idealny sposób, aby wstrzymać wątków, które musisz poczekać, aż jeden wątek kończy zadanie.  
+ Zdarzenie resetowania ręcznego działa jak Brama Corral. Gdy zdarzenie nie jest sygnalizowane, wątki czekające na blok IT, takie jak konie w Corral. Po zasygnalizowaniu zdarzenia przez wywołanie jego <xref:System.Threading.EventWaitHandle.Set%2A> metody wszystkie oczekujące wątki można wykonać bezpłatnie. Zdarzenie pozostanie sygnalizowane do momentu <xref:System.Threading.EventWaitHandle.Reset%2A> wywołania metody. Powoduje to, że zdarzenie resetowania ręcznego jest idealnym sposobem przechowywania wątków, które muszą czekać, aż jeden wątek zakończy zadanie.  
   
- Podobnie jak konie opuszczania corral zajmuje trochę czasu wydana wątków do zaplanowania przez system operacyjny i wznowić wykonywanie. Jeśli <xref:System.Threading.EventWaitHandle.Reset%2A> metoda zostaje wywołana zanim wszystkie wątki zostały ponownie uruchomiono jego wykonywanie, ponownie zablokować pozostałych wątków. Które wznawianie wątków i który blok wątków zależy od losowe czynników, takich jak obciążenia w systemie, liczba wątków oczekuje dla harmonogramu i tak dalej. To nie jest problemem, jeśli wątek, który sygnalizuje zdarzenie kończy się po sygnalizowania, który jest najczęstszym wzorcem użycia. Jeśli chcesz, aby wątek, który sygnalizowane zdarzenie, aby po rozpoczęciu nowego zadania oczekiwania, które zostały wznowione wątków, należy zablokować dopóki wszystkie wątki oczekiwania zostały wznowione. W przeciwnym razie ma wyścigu i zachowanie kodu jest nieprzewidywalne.  
+ Podobnie jak konie opuszczające Corral, czas potrzebny na zaplanowanie opublikowanych wątków przez system operacyjny i wznowienie wykonywania. <xref:System.Threading.EventWaitHandle.Reset%2A> Jeśli metoda jest wywoływana przed wznowieniem wykonywania wszystkich wątków, pozostałe wątki są ponownie blokowane. Które wątki są wznawiane i które wątki są zależne od losowych czynników, takich jak obciążenie systemu, liczba wątków oczekujących na harmonogram itd. Nie jest to problem, jeśli wątek, który sygnalizuje zakończenie zdarzenia po zasygnalizowaniu, jest najbardziej typowym wzorcem użycia. Jeśli chcesz, aby wątek zgłosił zdarzenie, aby rozpocząć nowe zadanie po wznowieniu wszystkich oczekujących wątków, należy je zablokować do momentu wznowienia wszystkich oczekujących wątków. W przeciwnym razie masz sytuację wyścigu, a zachowanie kodu jest nieprzewidywalne.  
   
-## <a name="features-common-to-automatic-and-manual-events"></a>Typowe funkcje do automatycznego i ręcznego zdarzeń  
- Zazwyczaj jeden lub więcej wątków zablokowane na <xref:System.Threading.EventWaitHandle> do momentu odblokowania wątek wywołuje <xref:System.Threading.EventWaitHandle.Set%2A> metody, która uwalnia jeden z wątków oczekujących (w przypadku zdarzeń zresetowaniu automatycznym) lub wszystkie z nich (w przypadku ręcznego resetowania zdarzenia). Wątek może sygnał <xref:System.Threading.EventWaitHandle> a następnie zablokować, jako operację niepodzielną, przez wywołanie statycznego <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType> metody.  
+## <a name="features-common-to-automatic-and-manual-events"></a>Funkcje wspólne dla zdarzeń automatycznych i ręcznych  
+ Zwykle co najmniej jeden wątek jest blokowany na bloku <xref:System.Threading.EventWaitHandle> , dopóki nie jest to blok odblokowany <xref:System.Threading.EventWaitHandle.Set%2A> wywoływanie metody, która zwalnia jeden z oczekujących wątków (w przypadku zdarzeń resetowania automatycznego) lub wszystkich (w przypadku zdarzeń resetowania ręcznego). Wątek może sygnalizować <xref:System.Threading.EventWaitHandle> , a następnie blokować na nim, jako operację niepodzielną, wywołując metodę statyczną <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType> .  
   
- <xref:System.Threading.EventWaitHandle> obiekty mogą być używane z statycznej <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> i <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> metody. Ponieważ <xref:System.Threading.EventWaitHandle> i <xref:System.Threading.Mutex> obu klas pochodzić od <xref:System.Threading.WaitHandle>, można użyć obu klas przy użyciu tych metod.  
+ <xref:System.Threading.EventWaitHandle>obiekty mogą być używane z metodami <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> statycznymi i <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> . Ponieważ klasy <xref:System.Threading.Mutex> <xref:System.Threading.WaitHandle>i pochodzą z, można użyć obu klas z tymi metodami. <xref:System.Threading.EventWaitHandle>  
   
-### <a name="named-events"></a>Zdarzenia o nazwie  
- System operacyjny Windows umożliwia uchwyty oczekiwania na zdarzenie mieć nazwy. Zdarzenia nazwanego jest całego systemu. Oznacza to, że po utworzeniu zdarzenia nazwanego jest widoczny dla wszystkich wątków we wszystkich procesów. W związku z tym o nazwie zdarzenia mogą służyć do synchronizowania działania procesów, a także wątków.  
+### <a name="named-events"></a>Nazwane zdarzenia  
+ System operacyjny Windows zezwala na korzystanie z nazw uchwytów oczekiwania na zdarzenia. Nazwane zdarzenie to system Wide. Oznacza to, że po utworzeniu nazwanego zdarzenia jest ono widoczne dla wszystkich wątków we wszystkich procesach. W ten sposób nazwane zdarzenia mogą służyć do synchronizowania działań procesów oraz wątków.  
   
- Możesz utworzyć <xref:System.Threading.EventWaitHandle> obiekt, który reprezentuje zdarzenie o nazwie system przy użyciu jednego z konstruktorów, które określa nazwę zdarzenia.  
-  
-> [!NOTE]
->  Ponieważ zdarzenia o nazwie całego systemu, istnieje możliwość wielu <xref:System.Threading.EventWaitHandle> obiekty reprezentujące takie same nazwanego zdarzenia. Każdorazowo wywołać konstruktora, lub <xref:System.Threading.EventWaitHandle.OpenExisting%2A> metodę, nowe <xref:System.Threading.EventWaitHandle> obiekt zostanie utworzony. Określenie tej samej nazwie wielokrotnie tworzy wiele obiektów, które reprezentują te same zdarzenia nazwanego.  
-  
- Jest zachowanie ostrożności przy użyciu nazwę events. Ponieważ są one całego systemu, inny proces, który używa tej samej nazwie może zablokować wątki nieoczekiwanie. Złośliwy kod, wykonania na tym samym komputerze może wykorzystać tę podstawę ataku typu "odmowa usługi".  
-  
- Umożliwia kontrolę dostępu, aby chronić <xref:System.Threading.EventWaitHandle> obiekt, który najlepiej reprezentuje zdarzenia nazwanego, za pomocą konstruktora, który określa <xref:System.Security.AccessControl.EventWaitHandleSecurity> obiektu. Można również stosować przy użyciu zabezpieczeń kontroli dostępu <xref:System.Threading.EventWaitHandle.SetAccessControl%2A> metody, ale pozostawia oknem lukę między czas dojście oczekiwania zdarzeń jest tworzona i jest chroniony. Ochrona zdarzenia przy użyciu kontroli dostępu zabezpieczeń zapobiega złośliwe ataki, ale nie rozwiązuje problemu Kolizje nazw niezamierzone.  
+ Można utworzyć <xref:System.Threading.EventWaitHandle> obiekt, który reprezentuje nazwane zdarzenie systemowe przy użyciu jednego z konstruktorów, które określają nazwę zdarzenia.  
   
 > [!NOTE]
->  W odróżnieniu od <xref:System.Threading.EventWaitHandle> klasy, klasy pochodne <xref:System.Threading.AutoResetEvent> i <xref:System.Threading.ManualResetEvent> można tylko lokalne reprezentują uchwyty oczekiwania. Nie stanowią one zdarzenia systemowe nazwanych.  
+> Ze względu na to, że nazwane zdarzenia są systemem szerokim, istnieje możliwość, że wiele <xref:System.Threading.EventWaitHandle> obiektów reprezentuje to samo nazwane zdarzenie. Za każdym razem, gdy wywołujesz konstruktora lub <xref:System.Threading.EventWaitHandle.OpenExisting%2A> metodę, tworzony jest <xref:System.Threading.EventWaitHandle> nowy obiekt. Wielokrotne określenie tej samej nazwy powoduje utworzenie wielu obiektów reprezentujących to samo nazwane zdarzenie.  
+  
+ Należy zachować ostrożność przy użyciu nazwanych zdarzeń. Ponieważ są one całego systemu, inny proces, który używa tej samej nazwy, może blokować nieoczekiwane wątki. Złośliwy kod wykonywany na tym samym komputerze może być używany jako podstawa ataku typu "odmowa usługi".  
+  
+ Zabezpieczenia kontroli dostępu umożliwiają ochronę <xref:System.Threading.EventWaitHandle> obiektu, który reprezentuje nazwane zdarzenie, najlepiej przy użyciu konstruktora, który <xref:System.Security.AccessControl.EventWaitHandleSecurity> określa obiekt. Możesz również zastosować zabezpieczenia kontroli dostępu przy użyciu <xref:System.Threading.EventWaitHandle.SetAccessControl%2A> metody, ale powoduje to pozostawienie okna luk w zabezpieczeniach między momentem utworzenia uchwytu oczekiwania na zdarzenie i czasu, gdy jest on chroniony. Ochrona zdarzeń z zabezpieczeniami kontroli dostępu pomaga zapobiegać złośliwym atakom, ale nie rozwiązuje problemu przypadkowych kolizji nazw.  
+  
+> [!NOTE]
+> W przeciwieństwie <xref:System.Threading.EventWaitHandle> do klasy, klasy <xref:System.Threading.AutoResetEvent> pochodne i <xref:System.Threading.ManualResetEvent> mogą reprezentować tylko lokalne dojścia oczekiwania. Nie mogą reprezentować nazwanych zdarzeń systemowych.  
   
 ## <a name="see-also"></a>Zobacz także
 

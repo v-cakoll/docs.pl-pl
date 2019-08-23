@@ -7,25 +7,25 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: b37b00cfbeee10f217d1dbe1c754c50b65e31de9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf5b55eb01a31106fcc7cb0d79212416ab0c898d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625864"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913045"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Instrukcje: Tworzenie zasad wydawcy
-Dostawcy zestawów mogą stanu, aplikacje powinny używać nowszej wersji zestawu, dołączając plik zasad wydawcy w z uaktualnionych zestawu. Plik zasad wydawcy określa przekierowanie zestawu i podstawowe ustawienia kodu i ma taki sam format jak plik konfiguracji aplikacji. Plik zasad wydawcy jest skompilowany w zestawie i umieszczone w globalnej pamięci podręcznej.  
+Dostawcy zestawów mogą określać, że aplikacje powinny korzystać z nowszej wersji zestawu, dołączając plik zasad wydawcy z uaktualnionym zestawem. Plik zasad wydawcy określa przekierowania zestawu i ustawienia podstawowe kodu, a także używa tego samego formatu co plik konfiguracyjny aplikacji. Plik zasad wydawcy jest kompilowany do zestawu i umieszczany w globalnej pamięci podręcznej zestawów.  
   
- Istnieją trzy kroki związane z tworzeniem zasad wydawcy:  
+ Tworzenie zasad wydawcy obejmuje trzy kroki:  
   
 1. Utwórz plik zasad wydawcy.  
   
 2. Utwórz zestaw zasad wydawcy.  
   
-3. Dodaj zestaw zasad wydawcy do globalnej pamięci podręcznej.  
+3. Dodaj zestaw zasad wydawcy do globalnej pamięci podręcznej zestawów.  
   
- Schemat dla zasad wydawcy jest opisana w [Redirecting Assembly Versions](../../../docs/framework/configure-apps/redirect-assembly-versions.md). W poniższym przykładzie pokazano wydawcy pliku zasad, który przekierowuje jedną wersję `myAssembly` do innego.  
+ Schemat zasad wydawcy został opisany w temacie [przekierowywanie wersji zestawu](redirect-assembly-versions.md). Poniższy przykład pokazuje plik zasad wydawcy, który przekierowuje jedną wersję programu `myAssembly` do innej.  
   
 ```xml  
 <configuration>  
@@ -44,67 +44,67 @@ Dostawcy zestawów mogą stanu, aplikacje powinny używać nowszej wersji zestaw
 </configuration>  
 ```  
   
- Aby dowiedzieć się, jak określić bazy kodu, zobacz [Określanie lokalizacji zestawu](../../../docs/framework/configure-apps/specify-assembly-location.md).  
+ Aby dowiedzieć się, jak określić bazę kodu, zobacz [Określanie lokalizacji zestawu](specify-assembly-location.md).  
   
-## <a name="creating-the-publisher-policy-assembly"></a>Tworzenie zestaw zasad wydawcy  
- Użyj [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) można utworzyć zestawu zasad wydawcy.  
+## <a name="creating-the-publisher-policy-assembly"></a>Tworzenie zestawu zasad wydawcy  
+ Użyj [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md) , aby utworzyć zestaw zasad wydawcy.  
   
 #### <a name="to-create-a-publisher-policy-assembly"></a>Aby utworzyć zestaw zasad wydawcy  
   
-1. Wpisz następujące polecenie w wierszu polecenia:  
+1. W wierszu polecenia wpisz następujące polecenie:  
   
-     **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
+     **Al/link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
      W tym poleceniu:  
   
-    - *PublisherPolicyFile* argument jest nazwą plik zasad wydawcy.  
+    - Argument *publisherPolicyFile* jest nazwą pliku zasad wydawcy.  
   
-    - *PublisherPolicyAssemblyFile* argument jest nazwą zestaw zasad wydawcy, która wynika z tego polecenia. Nazwy pliku zestawu musi być zgodny z formatem:  
+    - Argument *publisherPolicyAssemblyFile* jest nazwą zestawu zasad wydawcy, który jest wynikiem tego polecenia. Nazwa pliku zestawu musi być zgodna z formatem:  
   
          **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
-    - *KeyPairFile* argument jest nazwą pliku zawierającego parę kluczy. Musisz zarejestrować zestaw i zestaw zasad wydawcy z tej samej pary kluczy.  
+    - Argument *keyPairFile* jest nazwą pliku zawierającego parę kluczy. Należy podpisać zestaw i zestaw zasad wydawcy z tą samą parą kluczy.  
   
-    - *ProcessorArchitecture* argument określa platformy docelowej zestawu specyficznych dla procesora.  
+    - Argument *processorArchitecture* identyfikuje platformę objętą przez zestaw specyficzny dla procesora.  
   
         > [!NOTE]
-        >  Pozwalają objąć architektury określonemu procesorowi jest nowa w .NET Framework w wersji 2.0.  
+        >  Możliwość kierowania określonej architektury procesora jest nowa w .NET Framework w wersji 2,0.  
   
-     Następujące polecenie tworzy zestaw zasad wydawcy, o nazwie `policy.1.0.myAssembly` z plik zasad wydawcy o nazwie `pub.config`, przypisuje silnej nazwy zestawu, używając pary kluczy w `sgKey.snk` pliku i określa, że zestaw jest przeznaczony dla x86 Architektura procesora.  
+     Następujące polecenie tworzy zestaw zasad wydawcy o `policy.1.0.myAssembly` nazwie z pliku zasad wydawcy o nazwie `pub.config`, przypisuje silną nazwę do zestawu przy użyciu pary kluczy w `sgKey.snk` pliku i określa, że zestaw jest przeznaczony dla architektury x86 Architektura procesora.  
   
     ```  
     al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86  
     ```  
   
-     Zestaw zasad wydawcy muszą być zgodne zestawu, który ma zastosowanie do architektury procesora. W związku z tym jeśli zestaw ma <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> wartość <xref:System.Reflection.ProcessorArchitecture.MSIL>, zestaw zasad wydawcy dla tego zestawu musi zostać utworzona z `/platform:anycpu`. Należy podać oddzielny zestaw zasad wydawcy dla każdego zestawu specyficznych dla procesora.  
+     Zestaw zasad wydawcy musi być zgodny z architekturą procesora zestawu, którego dotyczy. W takim przypadku, jeśli zestaw ma <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> <xref:System.Reflection.ProcessorArchitecture.MSIL>wartość, zestaw zasad wydawcy dla tego zestawu musi być utworzony przy użyciu `/platform:anycpu`. Należy podać osobny zestaw zasad wydawcy dla każdego zestawu specyficznego dla procesora.  
   
-     Konsekwencji tej zasady jest, aby zmienić architektury procesora dla zestawu, należy zmienić mniejszym lub większym stopniu część numeru wersji, dzięki czemu można dostarczyć nowy zestaw zasad wydawcy przy użyciu poprawnej architektury procesora. Stary zestaw zasad wydawcy nie może obsłużyć zestawu, gdy zestaw ma architekturę inny procesor.  
+     Wynikiem tej reguły jest zmiana architektury procesora dla zestawu, dlatego należy zmienić składnik główny lub pomocniczy numeru wersji, aby można było dostarczyć nowy zestaw zasad wydawcy z poprawną architekturą procesora. Stary zestaw zasad wydawcy nie może obtworzyć zestawu, gdy zestaw ma inną architekturę procesora.  
   
-     Inny konsekwencją jest, że konsolidator w wersji 2.0 nie można utworzyć zestaw zasad wydawcy, do zestawu skompilowanego we wcześniejszych wersjach programu .NET Framework, ponieważ określa on zawsze architektury procesora.  
+     Inna konsekwencja polega na tym, że konsolidator w wersji 2,0 nie może zostać użyty do utworzenia zestawu zasad wydawcy dla zestawu skompilowanego przy użyciu wcześniejszych wersji .NET Framework, ponieważ zawsze określa architekturę procesora.  
   
-## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Dodawanie zestaw zasad wydawcy do globalnej pamięci podręcznej  
- Użyj [narzędzia Globalna pamięć podręczna zestawów (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) można dodać zestaw zasad wydawcy do globalnej pamięci podręcznej.  
+## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Dodawanie zestawu zasad wydawcy do globalnej pamięci podręcznej zestawów  
+ Użyj [Narzędzia globalnej pamięci podręcznej zestawów (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md) , aby dodać zestaw zasad wydawcy do globalnej pamięci podręcznej zestawów.  
   
-#### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Aby dodać zestaw zasad wydawcy do globalnej pamięci podręcznej  
+#### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Aby dodać zestaw zasad wydawcy do globalnej pamięci podręcznej zestawów  
   
-1. Wpisz następujące polecenie w wierszu polecenia:  
+1. W wierszu polecenia wpisz następujące polecenie:  
   
      **gacutil /i**  *publisherPolicyAssemblyFile*  
   
-     Następujące polecenie dodaje `policy.1.0.myAssembly.dll` do globalnej pamięci podręcznej.  
+     Następujące polecenie dodaje `policy.1.0.myAssembly.dll` do globalnej pamięci podręcznej zestawów.  
   
     ```  
     gacutil /i policy.1.0.myAssembly.dll  
     ```  
   
     > [!IMPORTANT]
-    >  Nie można dodać zestaw zasad wydawcy do globalnej pamięci podręcznej, chyba że oryginalny plik zasad wydawcy znajduje się w tym samym katalogu co zestaw.  
+    >  Zestawu zasad wydawcy nie można dodać do globalnej pamięci podręcznej zestawów, chyba że oryginalny plik zasad wydawcy znajduje się w tym samym katalogu, w którym znajduje się zestaw.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)
-- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Konfigurowanie aplikacji za pomocą plików konfiguracji](../../../docs/framework/configure-apps/index.md)
-- [Schemat ustawień środowiska uruchomieniowego](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md)
-- [Przekierowywanie wersji zestawu](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Programowanie za pomocą zestawów](../app-domains/programming-with-assemblies.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../deployment/how-the-runtime-locates-assemblies.md)
+- [Konfigurowanie aplikacji przy użyciu plików konfiguracji](index.md)
+- [Schemat ustawień środowiska uruchomieniowego](./file-schema/runtime/index.md)
+- [Schemat pliku konfiguracji](./file-schema/index.md)
+- [Przekierowywanie wersji zestawu](redirect-assembly-versions.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: 0fd8de9af00aa861d92c8c201ef89545e108c790
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 99c18bd5b779845d52831b4a9591eaf4d5e5530b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659238"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920965"
 ---
 # <a name="remove-element-for-bypasslist-network-settings"></a>\<Usuń element > dla BypassList (Ustawienia sieci)
 
@@ -61,7 +61,7 @@ Brak.
 
 Wartość `address` atrybutu powinna być wyrażeniem regularnym opisującym zestaw adresów IP lub nazw hostów.
 
-Aby uzyskać więcej informacji na temat wyrażeń regularnych, zobacz. [.NET Framework wyrażeń regularnych](../../../../../docs/standard/base-types/regular-expressions.md).
+Aby uzyskać więcej informacji na temat wyrażeń regularnych, zobacz. [.NET Framework wyrażeń regularnych](../../../../standard/base-types/regular-expressions.md).
 
 ## <a name="configuration-files"></a>Pliki konfiguracji
 

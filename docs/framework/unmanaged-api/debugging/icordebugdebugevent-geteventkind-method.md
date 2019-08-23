@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: c37aaceb-c948-46bd-a943-08be4cbb76f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdbc320e13e0cb140f5ef7aa63b878b43ca0189b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a87dda8d8a263df1989a685d94c5163212f41382
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750052"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911338"
 ---
 # <a name="icordebugdebugeventgeteventkind-method"></a>Metoda ICorDebugDebugEvent::GetEventKind
-Wskazuje rodzaj zdarzeń, to `ICorDebugDebugEvent` obiekt reprezentuje.  
+Wskazuje, jaki rodzaj zdarzenia reprezentuje `ICorDebugDebugEvent` ten obiekt.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,22 +24,22 @@ HRESULT GetEventKind(
   
 ## <a name="parameters"></a>Parametry  
  pDebugEventKind  
- Wskaźnik do [CorDebugDebugEventKind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) składowej wyliczenia, która określa typ zdarzenia.  
+ Wskaźnik do elementu członkowskiego wyliczenia [CorDebugDebugEventKind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) , który wskazuje typ zdarzenia.  
   
 ## <a name="remarks"></a>Uwagi  
- Na podstawie wartości z `pDebugEventKind`, można wywołać `QueryInterface` uzyskanie bardziej precyzyjne interfejsu zdarzenia debugowania, która zawiera dane dodatkowe.  
+ Na podstawie wartości `pDebugEventKind`, można wywołać `QueryInterface` , aby uzyskać dokładniejszy interfejs zdarzenia debugowania, który zawiera dodatkowe dane.  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,20 +2,20 @@
 title: <comContracts>
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-ms.openlocfilehash: 47a7d862cf85254f88373d582169ff421be2b5b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d061d48374a8745dc61e1ca156e4fcbbccee5ef7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673293"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919477"
 ---
 # <a name="comcontracts"></a>\<comContracts>
-`comContracts` Sekcja konfiguracji zawiera elementy, które pozwalają określić różne właściwości kontraktu usługi integracji COM +.  
+Sekcja `comContracts` konfiguracji zawiera elementy, które pozwalają określić różne właściwości kontraktu usługi integracji modelu com+.  
   
-## <a name="specifying-namespace-and-contract"></a>Określanie Namespace i umowy  
- Kontrakty usług integracji modelu COM + są obecnie ograniczone do `http://tempuri.org` przestrzeni nazw i Nazwa kontraktu jest tworzony na podstawie obsługi interfejsu COM. Można jednak określić alternatywne przy użyciu `comContracts` sekcji w pliku konfiguracji.  
+## <a name="specifying-namespace-and-contract"></a>Określanie przestrzeni nazw i kontraktu  
+ Kontrakty usługi integracji modelu COM+ są obecnie ograniczone `http://tempuri.org` do przestrzeni nazw, a nazwa kontraktu pochodzi od pomocniczego interfejsu com. Można jednak określić alternatywy przy użyciu `comContracts` sekcji w pliku konfiguracji.  
   
- Na przykład można użyć następującej konfiguracji do określenia nazwy przestrzeni nazw i kontrakt kontraktu usługi, a także opcję, aby wymusić użycie na powiązaniach sesyjnych.  
+ Można na przykład użyć poniższej konfiguracji, aby określić przestrzeń nazw i nazwę kontraktu dla kontraktu usługi, a także opcję wymuszać użycie na powiązaniach sesji.  
   
 ```xml  
 <comContracts>
@@ -27,19 +27,19 @@ ms.locfileid: "61673293"
 </comContracts>
 ```  
   
- Podczas inicjowania usługi określonych przestrzeni nazw i nazwy kontraktów są stosowane do opisów wygenerowanego usługi.  
+ Po zainicjowaniu usługi określone nazwy obszarów nazw i kontraktów są stosowane do opisów wygenerowanych usług.  
   
- Ta sekcja jest pusta, inicjowanie usługi zastosowanie domyślnej nazwy przestrzeni nazw i umowy z pomocniczych identyfikatora interfejsu COM  
+ Gdy ta sekcja jest pusta, Inicjalizacja usługi stosuje domyślną przestrzeń nazw i nazwę kontraktu pobraną z pomocniczego identyfikatora interfejsu COM.  
   
- Ponadto można użyć [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elementu, aby określić metody COM +, które są udostępniane, gdy interfejs składnika COM + jest widoczny jako usługi sieci Web. Można również użyć [ \<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md) Aby określić typy stałe używane w integracji. Na koniec można użyć [ \<userDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md) element, aby uwzględnić użytkowników zdefiniowanych typów (UDT), które mają być uwzględniane w kontrakcie usługi.  
+ Ponadto można użyć [ \<elementu exposedMethod >](exposedmethod.md) , aby określić metody modelu COM+, które są dostępne, gdy interfejs składnika modelu com+ jest uwidoczniony jako usługa sieci Web. Można również użyć [ \<> persistableTypes](persistabletypes.md) do określenia typów trwałych używanych w ramach integracji. Na koniec można użyć [ \<elementu userDefinedType >](userdefinedtype.md) , aby uwzględnić typy zdefiniowane przez użytkownika (UDT), które mają być uwzględnione w kontrakcie usługi.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
-- [\<exposedMethod>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)
-- [\<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)
-- [\<userDefinedType>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)
-- [\<comContract>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontract.md)
-- [Współdziałanie z aplikacjami COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Instrukcje: Konfigurowanie ustawień usługi COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<exposedMethod >](exposedmethod.md)
+- [\<persistableTypes >](persistabletypes.md)
+- [\<userDefinedType>](userdefinedtype.md)
+- [\<comContract>](comcontract.md)
+- [Współdziałanie z aplikacjami COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Instrukcje: Konfigurowanie ustawień usługi COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

@@ -2,21 +2,21 @@
 title: Podstawowy przykład
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 1ceee6dd11b59ab9b43797ca8b1fd80c232fc8ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d227b3ac64108901b8280ac7887adc30b0fab13e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002641"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915449"
 ---
 # <a name="basic-sample"></a>Podstawowy przykład
-Niniejszy przykład pokazuje, jak usługa stał się wykrywalny i jak wyszukiwanie i wywoływać odnajdywanej usługi. W tym przykładzie składa się z dwóch projektów: usługi i klienta.
+Ten przykład pokazuje, jak umożliwić odnajdywanie usługi i wyszukiwanie i wywoływanie usługi wykrywalnej. Ten przykład składa się z dwóch projektów: Service i Client.
 
 > [!NOTE]
->  W tym przykładzie implementuje odnajdywania w kodzie.  Dla przykładu, który implementuje odnajdywania w konfiguracji, zobacz [konfiguracji](../../../../docs/framework/wcf/samples/configuration-sample.md).  
+> Ten przykład implementuje odnajdywanie w kodzie.  Aby uzyskać przykład, który implementuje odnajdywanie w konfiguracji, zobacz [Konfiguracja](../../../../docs/framework/wcf/samples/configuration-sample.md).  
   
 ## <a name="service"></a>Usługa  
- Jest to implementacja usługi prosty kalkulator. Odnajdywanie związane z kodem znajduje się w `Main` gdzie <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> jest dodawany do hosta usługi i <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> jest dodawany, jak pokazano w poniższym kodzie.  
+ To jest prosta implementacja usługi kalkulatora. Kod powiązany z odnajdywaniem można znaleźć w `Main` <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> miejscu, w którym jest dodawany do hosta usługi i <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> jest dodawany, jak pokazano w poniższym kodzie.  
   
 ```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))  
@@ -34,7 +34,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 ```  
   
 ## <a name="client"></a>Klient  
- Klient używa <xref:System.ServiceModel.Discovery.DynamicEndpoint> do lokalizowania usługi. <xref:System.ServiceModel.Discovery.DynamicEndpoint>, Standardowy punkt końcowy jest rozpoznawany jako punkt końcowy usługi po otwarciu klienta. W tym przypadku <xref:System.ServiceModel.Discovery.DynamicEndpoint> szuka usługi, w oparciu kontraktu usługi. <xref:System.ServiceModel.Discovery.DynamicEndpoint> Przeprowadza wyszukiwanie ciągu <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> domyślnie. Gdy klient zlokalizuje punkt końcowy usługi, klient łączy się z tej usługi za pośrednictwem określonego powiązania.  
+ Klient używa programu <xref:System.ServiceModel.Discovery.DynamicEndpoint> w celu zlokalizowania usługi. <xref:System.ServiceModel.Discovery.DynamicEndpoint>Standardowy punkt końcowy rozwiązuje punkt końcowy usługi podczas otwierania klienta. W tym przypadku <xref:System.ServiceModel.Discovery.DynamicEndpoint> szuka usługi na podstawie kontraktu usługi. Domyślnie wykonuje wyszukiwanie w przeszukiwaniu <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>. <xref:System.ServiceModel.Discovery.DynamicEndpoint> Po znalezieniu punktu końcowego usługi klient nawiązuje połączenie z tą usługą względem określonego powiązania.  
   
 ```csharp  
 public static void Main()  
@@ -44,7 +44,7 @@ public static void Main()
 }              
 ```  
   
- Klient definiuje metodę o nazwie `InvokeCalculatorService` , który używa <xref:System.ServiceModel.Discovery.DiscoveryClient> klasy w celu wyszukiwania usług. <xref:System.ServiceModel.Discovery.DynamicEndpoint> Dziedziczy <xref:System.ServiceModel.Description.ServiceEndpoint>, dzięki czemu mogą być przekazywane do `InvokeCalculatorService` metody. Następnie w przykładzie <xref:System.ServiceModel.Discovery.DynamicEndpoint> do utworzenia wystąpienia `CalculatorServiceClient` i wywołuje różne operacje usługi kalkulatora.  
+ Klient definiuje metodę o nazwie `InvokeCalculatorService` , która <xref:System.ServiceModel.Discovery.DiscoveryClient> używa klasy do wyszukiwania usług. Dziedziczy z <xref:System.ServiceModel.Description.ServiceEndpoint>, więc`InvokeCalculatorService` można go przesłać do metody. <xref:System.ServiceModel.Discovery.DynamicEndpoint> Ten przykład używa <xref:System.ServiceModel.Discovery.DynamicEndpoint> do tworzenia `CalculatorServiceClient` wystąpienia i wywołuje różne operacje usługi Kalkulator.  
   
 ```csharp  
 static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)  
@@ -82,21 +82,21 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1. W tym przykładzie użyto punktów końcowych HTTP i aby uruchomić ten przykład, muszą zostać dodane odpowiednie listy ACL adresu URL. Aby uzyskać więcej informacji, zobacz [Konfigurowanie protokołów HTTP i HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). Wykonując następujące polecenie w podwyższonym poziomem uprawnień, należy dodać odpowiednie listy ACL. Można zastąpić Twoja domena i nazwa użytkownika o wprowadzenie następujących argumentów, jeśli polecenie nie działa, ponieważ jest. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Ten przykład korzysta z punktów końcowych HTTP i do uruchomienia tego przykładu należy dodać prawidłowe listy ACL adresów URL. Aby uzyskać więcej informacji, zobacz [Konfigurowanie protokołów HTTP i https](https://go.microsoft.com/fwlink/?LinkId=70353). Wykonanie następującego polecenia z podwyższonym poziomem uprawnień powinno spowodować dodanie odpowiednich list ACL. Można zastąpić domenę i nazwę użytkownika dla następujących argumentów, jeśli polecenie nie działa zgodnie z oczekiwaniami. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2. Za pomocą programu Visual Studio 2012, otwórz Basic.sln i stworzyć próbkę.  
+2. Za pomocą programu Visual Studio 2012 Otwórz podstawową. sln i skompiluj przykład.  
   
-3. Uruchom aplikację service.exe.  
+3. Uruchom aplikację Service. exe.  
   
-4. Po uruchomieniu usługi, uruchom client.exe.  
+4. Po uruchomieniu usługi Uruchom program Client. exe.  
   
-5. Sprawdź, czy klient mógł znaleźć tę usługę, nie wiedząc o tym adresu.  
+5. Zwróć uwagę, że klient mógł znaleźć usługę bez znajomości jej adresu.  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`  

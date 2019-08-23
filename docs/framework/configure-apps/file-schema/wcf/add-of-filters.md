@@ -2,19 +2,19 @@
 title: <add> dla <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7975bea1435abdb77528628e7b96c65a72cbbc2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704547"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926698"
 ---
-# <a name="add-of-filters"></a>\<Dodaj > z \<Filtry >
-Filtr XPath określa rodzaj rejestrowanych wiadomości.  
+# <a name="add-of-filters"></a>\<Dodawanie > \<filtrów >
+Filtr XPath określa rodzaj wiadomości do zarejestrowania.  
   
  \<system.ServiceModel>  
-\<diagnostyczne >  
-\<messageLogging>  
+\<> diagnostyki  
+\<messageLogging >  
 \<Filtry >  
 \<add>  
   
@@ -33,7 +33,7 @@ Filtr XPath określa rodzaj rejestrowanych wiadomości.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|filtr|Ciąg określający zapytanie na dokumencie XML, który jest zdefiniowany przez wyrażenie XPath 1.0. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.|  
+|filtr|Ciąg określający zapytanie na dokumencie XML zdefiniowanym przez wyrażenie XPath 1,0. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -42,19 +42,19 @@ Filtr XPath określa rodzaj rejestrowanych wiadomości.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Filtry >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Zawiera kolekcję filtrów XPath używane do kontrolowania, jakiego rodzaju komunikat jest rejestrowany.|  
+|[\<Filtry >](filters.md)|Zawiera kolekcję filtrów XPath używanych do kontroli rodzaju rejestrowanych komunikatów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Filtry są stosowane tylko w przypadku warstwy transportu, określonej przez `logMessagesAtTransportLevel` jest `true`. Rejestrowanie komunikatów poziomu i źle sformułowane usługi nie dotyczy filtrów.  
+ Filtry są stosowane tylko w warstwie transportowej, określonej `logMessagesAtTransportLevel` przez `true`is. Filtry nie wpływają na poziom usług i źle sformułowane rejestrowanie komunikatów.  
   
- Aby dodać filtr do kolekcji, należy użyć `add` — słowo kluczowe. Po zdefiniowaniu co najmniej jeden filtr tylko komunikatów spełniających co najmniej jeden z filtrów są rejestrowane. Jeśli nie zdefiniowano żadnego filtru, wszystkie komunikaty przechodzi przez.  
+ Aby dodać filtr do kolekcji, użyj `add` słowa kluczowego. Jeśli zdefiniowano co najmniej jeden filtr, rejestrowane są tylko komunikaty zgodne z co najmniej jednym filtrem. Jeśli żaden filtr nie jest zdefiniowany, wszystkie komunikaty są przekazywane.  
   
- Filtry obsługuje pełnej składni XPath i są stosowane w kolejności, w jakiej znajdują się w pliku konfiguracji. Nieprawidłowy filtr powoduje wyjątek konfiguracji.  
+ Filtry obsługują pełną składnię XPath i są stosowane w kolejności, w której pojawiają się w pliku konfiguracji. Składnia nieprawidłowego filtru powoduje wyjątek w konfiguracji.  
   
- Oto przykład sposobu konfigurowania filtru, który rejestruje tylko komunikaty, które mają sekcję nagłówek SOAP.  
+ Poniżej przedstawiono przykład sposobu konfigurowania filtru, który rejestruje tylko komunikaty, które mają sekcję nagłówka SOAP.  
   
 ## <a name="example"></a>Przykład  
- Oto przykład sposobu konfigurowania filtru, który rejestruje tylko komunikaty, które mają sekcję nagłówek SOAP.  
+ Poniżej przedstawiono przykład sposobu konfigurowania filtru, który rejestruje tylko komunikaty, które mają sekcję nagłówka SOAP.  
   
 ```xml  
 <messageLogging logEntireMessage="true"
@@ -79,5 +79,5 @@ Filtr XPath określa rodzaj rejestrowanych wiadomości.
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
 - <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
-- [Konfigurowanie rejestrowania komunikatów](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
-- [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [Konfigurowanie rejestrowania komunikatów](../../../wcf/diagnostics/configuring-message-logging.md)
+- [\<messageLogging >](messagelogging.md)

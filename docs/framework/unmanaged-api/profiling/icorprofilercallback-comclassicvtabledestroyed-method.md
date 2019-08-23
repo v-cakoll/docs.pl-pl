@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8043ae8a3d384ab0936ae96e39174a7afc80a636
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f74e06ea4cb4d7a8eace8c7852f487bbdcbcd875
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776211"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964628"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed — Metoda
-Powiadamia program profilujący jest niszczone wartości międzyoperacyjne COM vtable.  
+Powiadamia profiler o zniszczeniu międzyoperacyjności modelu COM Interop.  
   
 > [!NOTE]
->  To wywołanie zwrotne najprawdopodobniej nigdy nie występują, ponieważ zniszczenie tablic metod wirtualnych odbywa się bardzo blisko zamknięcia.  
+> To wywołanie zwrotne prawdopodobnie nigdy nie wystąpi, ponieważ zniszczenie tablic wirtualnych występuje bardzo blisko zamknięcia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,27 +41,27 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="parameters"></a>Parametry  
  `wrappedClassId`  
- [in] Identyfikator klasy, dla którego utworzono ten vtable.  
+ podczas Identyfikator klasy, dla której utworzono tę tablicę.  
   
  `implementedIID`  
- [in] Identyfikator interfejsu zaimplementowany przez klasę. Ta wartość może być NULL, jeśli interfejs jest tylko wewnętrzna.  
+ podczas Identyfikator interfejsu zaimplementowanego przez klasę. Ta wartość może być RÓWNa NULL, jeśli interfejs jest tylko wewnętrzny.  
   
  `pVTable`  
- [in] Wskaźnik do początku vtable.  
+ podczas Wskaźnik do początku elementu tablicowego.  
   
 ## <a name="remarks"></a>Uwagi  
- Program profilujący nie powinna blokować w jego implementacja tej metody, ponieważ stos może nie być w stanie umożliwiającym wyrzucania elementów bezużytecznych, a w związku z tym nie można włączyć preemptive wyrzucania elementów bezużytecznych. Jeśli program profilujący blokuje tutaj i wyrzucania elementów bezużytecznych jest podejmowana próba, środowisko uruchomieniowe spowoduje zablokowanie, dopóki nie zwróci to wywołanie zwrotne.  
+ Profiler nie powinien blokować swojej implementacji tej metody, ponieważ stos może nie znajdować się w stanie, który zezwala na wyrzucanie elementów bezużytecznych i dlatego nie można włączyć zastępujący elementów bezużytecznych. Jeśli profiler blokuje tutaj i zostanie podjęta próba wyrzucania elementów bezużytecznych, środowisko uruchomieniowe zostanie zablokowane do momentu wywołania zwrotnego.  
   
- Implementacja tej metody program profilujący nie powinien wywoływać wywołanie kodu zarządzanego lub w dowolnym Przyczyna sposób alokacji pamięci zarządzane.  
+ Implementacja profilera nie powinna być wywoływana w kodzie zarządzanym lub w jakikolwiek sposób spowodować alokację pamięci zarządzanej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówki** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

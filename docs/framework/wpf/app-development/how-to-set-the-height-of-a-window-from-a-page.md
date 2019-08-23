@@ -6,20 +6,20 @@ helpviewer_keywords:
 - pages [WPF], setting window height from
 - height of window [WPF], setting from a page
 ms.assetid: 4e4488ff-ab5c-4ee9-81a4-e1addb55c5cc
-ms.openlocfilehash: c99ea134478635f368b71443f43e4d8f772cb5aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1041af88241011b51c96d7b61423344a32b25ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007331"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940797"
 ---
 # <a name="how-to-set-the-height-of-a-window-from-a-page"></a>Instrukcje: Ustawianie wysokości okna z poziomu strony
-Ten przykład ilustruje sposób ustawiania wysokości okna z <xref:System.Windows.Controls.Page>.  
+W tym przykładzie pokazano, jak ustawić wysokość okna z <xref:System.Windows.Controls.Page>.  
   
 ## <a name="example"></a>Przykład  
- A <xref:System.Windows.Controls.Page> wysokość okna hosta można ustawić, ustawiając <xref:System.Windows.Controls.Page.WindowHeight%2A>. Ta właściwość umożliwia <xref:System.Windows.Controls.Page> nie mają jawnych wiedzy o typie okna, który ją obsługuje.  
+ A <xref:System.Windows.Controls.Page> może ustawić wysokość okna hosta według ustawienia <xref:System.Windows.Controls.Page.WindowHeight%2A>. Ta właściwość umożliwia <xref:System.Windows.Controls.Page> niejawną wiedzę o typie okna, które obsługuje.  
   
 > [!NOTE]
->  Aby ustawić wysokość okna przy użyciu <xref:System.Windows.Controls.Page.WindowHeight%2A>, <xref:System.Windows.Controls.Page> musi być elementem podrzędnym okna.  
+> Aby ustawić wysokość okna przy użyciu <xref:System.Windows.Controls.Page.WindowHeight%2A> <xref:System.Windows.Controls.Page> , musi być elementem podrzędnym okna.  
   
  [!code-xaml[HOWTONavigationSnippets#SetPageWindowHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/SetWindowHeightPage.xaml#setpagewindowheightxaml)]

@@ -5,30 +5,30 @@ helpviewer_keywords:
 - data binding [WPF], getting binding objects from bound target properties
 - properties [WPF], getting binding objects from
 ms.assetid: 87974c5f-136b-4de7-b07d-9285b62ab123
-ms.openlocfilehash: 7c7392bc11af57b2e9f27e2302f36efb59d40e9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7aacc2145ffe98ec7b58afb3b2e3dca151ef0ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933409"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965433"
 ---
 # <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>Instrukcje: Pobieranie obiektu wiążącego z powiązanej własności docelowej
-W tym przykładzie pokazano, jak uzyskać obiekt wiążący z właściwością target powiązanych z danymi.  
+Ten przykład pokazuje, jak uzyskać obiekt powiązania z właściwości docelowej powiązanej z danymi.  
   
 ## <a name="example"></a>Przykład  
- Można wykonać następujące polecenie, aby pobrać <xref:System.Windows.Data.Binding> obiektu:  
+ Aby pobrać obiekt, <xref:System.Windows.Data.Binding> można wykonać następujące czynności:  
   
  [!code-csharp[BindValidation#GetBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml.cs#getbinding)]  
   
 > [!NOTE]
->  Należy określić właściwość zależności dla powiązania, który ma, ponieważ istnieje możliwość, że więcej niż jednej właściwości obiektu docelowego jest używanie powiązania danych.  
+> Należy określić właściwość zależności dla powiązania, ponieważ jest możliwe, że więcej niż jedna właściwość obiektu docelowego używa powiązania danych.  
   
- Alternatywnie, możesz uzyskać <xref:System.Windows.Data.BindingExpression> , a następnie wartość <xref:System.Windows.Data.BindingExpression.ParentBinding%2A> właściwości.  
+ Alternatywnie możesz uzyskać <xref:System.Windows.Data.BindingExpression> wartość <xref:System.Windows.Data.BindingExpression.ParentBinding%2A> właściwości, a następnie ją pobrać.  
   
- Aby uzyskać kompletny przykład zobacz [powiązania przykładowych weryfikacji](https://go.microsoft.com/fwlink/?LinkID=159972).  
+ Aby zapoznać się z kompletnym przykładem, zobacz [przykładowe sprawdzanie poprawności powiązań](https://go.microsoft.com/fwlink/?LinkID=159972).  
   
 > [!NOTE]
->  Jeśli Twoje powiązanie <xref:System.Windows.Data.MultiBinding>, użyj <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>. Jeśli jest <xref:System.Windows.Data.PriorityBinding>, użyj <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>. Jeśli masz pewności, czy właściwość docelowa jest powiązany, za pomocą <xref:System.Windows.Data.Binding>, <xref:System.Windows.Data.MultiBinding>, lub <xref:System.Windows.Data.PriorityBinding>, możesz użyć <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A>.  
+> Jeśli powiązanie to <xref:System.Windows.Data.MultiBinding>, użyj <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>. Jeśli jest <xref:System.Windows.Data.PriorityBinding>, użyj <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>. Jeśli nie masz pewności, czy właściwość docelowa jest powiązana <xref:System.Windows.Data.Binding>przy użyciu <xref:System.Windows.Data.MultiBinding>, a lub <xref:System.Windows.Data.PriorityBinding>a, możesz użyć <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A>.  
   
 ## <a name="see-also"></a>Zobacz także
 

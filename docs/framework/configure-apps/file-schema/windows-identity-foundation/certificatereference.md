@@ -3,20 +3,20 @@ title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: c7dc9cfff15e70eff0086cfd98a19f3360ab8bb0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: da8ea128466457409334cd0b4ee3246a923f969a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423026"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941930"
 ---
-# <a name="certificatereference"></a>\<certificateReference>
-Określa ustawienia, które są używane do znalezienia i sprawdź poprawność certyfikatu X.509 w magazynie certyfikatów.  
+# <a name="certificatereference"></a>\<certificateReference >
+Określa ustawienia, które są używane do znajdowania i weryfikowania certyfikatu X. 509 w magazynie certyfikatów.  
   
  \<system.identityModel.services>  
 \<federationConfiguration>  
-\<serviceCertificate>  
-\<certificateReference>  
+\<> serviceCertificate  
+\<certificateReference >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,11 +43,11 @@ Określa ustawienia, które są używane do znalezienia i sprawdź poprawność 
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|storeName|Nazwa magazynu certyfikatu X.509. Wartość domyślna to "Moje". Opcjonalna.|  
-|storeLocation|A <xref:System.Security.Cryptography.X509Certificates.StoreLocation> wartość, która określa lokalizację magazynu certyfikatu X.509. Wartość domyślna to "LocalMachine". Opcjonalna.|  
-|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType> Wartość, która określa typ wyszukiwania, który ma zostać wykonana. Wartość domyślna to "FindBySubjectDistinguishedName". Opcjonalna.|  
-|findValue|Wartość do wyszukania w magazynie certyfikatów X.509. Opcjonalna.|  
-|isChainIncluded|Określa, czy powinna być sprawdzana za pomocą łańcucha certyfikatów. Wartość domyślna to "true"; Sprawdzanie poprawności jest wykonywane przy użyciu łańcucha certyfikatów. Opcjonalna.|  
+|storeName|Nazwa magazynu certyfikatów X. 509. Wartość domyślna to "my". Opcjonalny.|  
+|storeLocation|<xref:System.Security.Cryptography.X509Certificates.StoreLocation> Wartość, która określa lokalizację magazynu certyfikatów X. 509. Wartość domyślna to "LocalMachine". Opcjonalny.|  
+|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType> Wartość określająca typ wyszukiwania, które ma zostać wykonane. Wartość domyślna to "FindBySubjectDistinguishedName". Opcjonalna.|  
+|findValue|Wartość do wyszukania w magazynie certyfikatów X. 509. Opcjonalny.|  
+|isChainIncluded|Określa, czy należy przeprowadzić walidację przy użyciu łańcucha certyfikatów. Wartość domyślna to "true"; Walidacja jest przeprowadzana przy użyciu łańcucha certyfikatów. Opcjonalna.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -56,7 +56,7 @@ Określa ustawienia, które są używane do znalezienia i sprawdź poprawność 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Umożliwia skonfigurowanie certyfikatu, który jest używany do szyfrowania i odszyfrowywania tokenów.|  
+|[\<> serviceCertificate](servicecertificate.md)|Konfiguruje certyfikat używany do szyfrowania i odszyfrowywania tokenów.|  
   
 ## <a name="remarks"></a>Uwagi  
- `<certificateReference>` Element określa ustawienia, które są używane do znalezienia i sprawdź poprawność certyfikatu X.509 w magazynie certyfikatów. Gdy jest określony jako element podrzędny elementu `<serviceCertificate>` elementu, określa lokalizację i weryfikacja ustawienia certyfikatu X.509, który jest używany do szyfrowania i odszyfrowywania tokenów. `<certificateReference>` Element jest reprezentowany przez <xref:System.ServiceModel.Configuration.CertificateReferenceElement> klasy.
+ `<certificateReference>` Element określa ustawienia, które są używane do znajdowania i weryfikowania certyfikatu X. 509 w magazynie certyfikatów. Gdy jest określony jako element `<serviceCertificate>` podrzędny elementu, określa lokalizację i ustawienia weryfikacji certyfikatu X. 509, który jest używany do szyfrowania i odszyfrowywania tokenów. Element jest reprezentowany <xref:System.ServiceModel.Configuration.CertificateReferenceElement> przez klasę. `<certificateReference>`

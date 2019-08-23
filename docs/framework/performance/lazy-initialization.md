@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef3105844ee61607bbc85332a76611c91a4198a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 1c13445b8b7c72d1c66efe5a9db3aaa027001ecf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364049"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943818"
 ---
 # <a name="lazy-initialization"></a>Inicjalizacja z opóźnieniem
-*Inicjalizacja* z opóźnieniem obiektu oznacza, że jego tworzenie jest odroczone do czasu jego pierwszego użycia. (W tym temacie warunki inicjalizacji  z opóźnieniem i *utworzenia wystąpienia* z opóźnieniem są równoznaczne). Inicjalizacja z opóźnieniem służy głównie do poprawy wydajności, unikania obliczeń wasteful i zmniejszania wymagań dotyczących pamięci programu. Są to najczęstsze scenariusze:  
+*Inicjalizacja* z opóźnieniem obiektu oznacza, że jego tworzenie jest odroczone do czasu jego pierwszego użycia. (W tym temacie warunki inicjalizacji z opóźnieniem i *utworzenia wystąpienia* z opóźnieniem są równoznaczne). Inicjalizacja z opóźnieniem służy głównie do poprawy wydajności, unikania obliczeń wasteful i zmniejszania wymagań dotyczących pamięci programu. Są to najczęstsze scenariusze:  
   
 - Gdy masz obiekt, który jest kosztowny do utworzenia i program może go nie używać. Załóżmy na przykład, że masz w pamięci `Customer` obiekt, który `Orders` ma właściwość, która `Order` zawiera dużą tablicę obiektów, która ma zostać zainicjowana, wymaga połączenia z bazą danych. Jeśli użytkownik nigdy nie monituje o wyświetlenie zamówień lub użycie danych w obliczeniach, nie istnieje powód, aby użyć pamięci systemowej lub cykle obliczeniowe do jego utworzenia. Za pomocą `Lazy<Orders>` do deklarowania `Orders` obiektu do inicjowania z opóźnieniem można uniknąć marnowania zasobów systemowych, gdy obiekt nie jest używany.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68364049"
  Domyślnie <xref:System.Lazy%601> obiekty są bezpieczne wątkowo. Oznacza to, że jeśli Konstruktor nie określi rodzaju bezpieczeństwa wątków, <xref:System.Lazy%601> tworzone obiekty są bezpieczne wątkowo. W scenariuszach wielowątkowych pierwszy wątek uzyskuje dostęp <xref:System.Lazy%601.Value%2A> do właściwości obiektu bezpiecznego <xref:System.Lazy%601> wątkowo inicjuje go dla wszystkich kolejnych operacji dostępu we wszystkich wątkach, a wszystkie wątki współużytkują te same dane. W związku z tym nie ma znaczenia, który wątek inicjuje obiekt, a warunki wyścigu są niegroźne.  
   
 > [!NOTE]
->  Tę spójność można zwiększyć do warunków błędów przy użyciu buforowania wyjątków. Aby uzyskać więcej informacji, zobacz następną sekcję [wyjątki w odniesieniu do obiektów z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects).  
+> Tę spójność można zwiększyć do warunków błędów przy użyciu buforowania wyjątków. Aby uzyskać więcej informacji, zobacz następną sekcję [wyjątki w odniesieniu do obiektów z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects).  
   
  Poniższy przykład pokazuje, że to samo `Lazy<int>` wystąpienie ma tę samą wartość dla trzech oddzielnych wątków.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "68364049"
  Buforowanie wyjątków jest włączane w przypadku użycia <xref:System.Lazy%601?displayProperty=nameWithType> dowolnego konstruktora, który przyjmuje metodę inicjującą (`valueFactory` parametr); na przykład jest on `Lazy(T)(Func(T))`włączony w przypadku użycia konstruktora. Jeśli Konstruktor pobiera <xref:System.Threading.LazyThreadSafetyMode> również wartość (`mode` parametr), określ <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> lub <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Określenie metody inicjującej umożliwia buforowanie wyjątków dla tych dwóch trybów. Metoda inicjacji może być bardzo prosta. Na przykład może wywołać konstruktora bez parametrów `T`dla: `new Lazy<Contents>(() => new Contents(), mode)` w C#, lub `New Lazy(Of Contents)(Function() New Contents())` w Visual Basic. Jeśli używasz <xref:System.Lazy%601?displayProperty=nameWithType> konstruktora, który nie określa metody inicjacji, wyjątki, które są zgłaszane przez konstruktora bez parametrów dla `T` nie są buforowane. Aby uzyskać więcej informacji, zobacz <xref:System.Threading.LazyThreadSafetyMode> Wyliczenie.  
   
 > [!NOTE]
->  Jeśli <xref:System.Lazy%601> utworzysz obiekt <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> `false` `isThreadSafe` <xref:System.Lazy%601> z`mode` parametrem konstruktora ustawionym na lub parametrem konstruktora ustawionym na, musisz uzyskać dostęp do obiektu z pojedynczego wątku lub podać własny synchronizacji. Dotyczy to wszystkich aspektów obiektu, w tym buforowania wyjątków.  
+> Jeśli <xref:System.Lazy%601> utworzysz obiekt <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> `false` `isThreadSafe` <xref:System.Lazy%601> z`mode` parametrem konstruktora ustawionym na lub parametrem konstruktora ustawionym na, musisz uzyskać dostęp do obiektu z pojedynczego wątku lub podać własny synchronizacji. Dotyczy to wszystkich aspektów obiektu, w tym buforowania wyjątków.  
   
  Jak wskazano w poprzedniej sekcji, <xref:System.Lazy%601> obiekty utworzone przez określanie <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType> wyjątków traktują się inaczej. W <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>przypadku wielu wątków może konkurować, aby <xref:System.Lazy%601> zainicjować wystąpienie. W takim przypadku wyjątki nie są buforowane, a próby uzyskania dostępu <xref:System.Lazy%601.Value%2A> do właściwości mogą być kontynuowane do momentu pomyślnego inicjalizacji.  
   
@@ -101,9 +101,9 @@ ms.locfileid: "68364049"
 |Konstruktor|Tryb bezpieczny wątku|Używa metody inicjującej|Wyjątki są buforowane|  
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Opóźnione (T) ()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Nie|Nie|  
-|Opóźniony (T) (Func (T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Tak|Yes|  
+|Opóźniony (T) (Func (T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Tak|Tak|  
 |Opóźniony (T) (wartość logiczna)|`True`(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Nie|Nie|  
-|Opóźniony (T) (Func (T), wartość logiczna)|`True`(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Tak|Yes|  
+|Opóźniony (T) (Func (T), wartość logiczna)|`True`(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Tak|Tak|  
 |Lazy(T)(LazyThreadSafetyMode)|Określony przez użytkownika|Nie|Nie|  
 |Opóźniony (T) (Func (T), LazyThreadSafetyMode)|Określony przez użytkownika|Tak|Nie, jeśli użytkownik <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>określi; w przeciwnym razie, tak.|  
   
@@ -140,7 +140,7 @@ ms.locfileid: "68364049"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Zmienne lokalne wątku równolegle. dla i ForEach  
- W przypadku użycia <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody lub <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> metody do iteracji równolegle ze źródłami danych można użyć przeciążenia, które mają wbudowaną obsługę danych wątku lokalnego. W tych metodach można uzyskać dostęp do zasobów lokalnych przy użyciu lokalnych delegatów do tworzenia, uzyskiwania dostępu i czyszczenia danych. Aby uzyskać więcej informacji, zobacz [jak: Napisz Parallel. for — pętla ze zmiennymi](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) lokalnymi wątku i [instrukcje: Napisz równoległą pętlę. ForEach ze zmiennymi](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)lokalnymi partycji.  
+ W przypadku użycia <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody lub <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> metody do iteracji równolegle ze źródłami danych można użyć przeciążenia, które mają wbudowaną obsługę danych wątku lokalnego. W tych metodach można uzyskać dostęp do zasobów lokalnych przy użyciu lokalnych delegatów do tworzenia, uzyskiwania dostępu i czyszczenia danych. Aby uzyskać więcej informacji, zobacz [jak: Napisz Parallel. for — pętla ze zmiennymi](../../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) lokalnymi wątku i [instrukcje: Napisz równoległą pętlę. ForEach ze zmiennymi](../../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)lokalnymi partycji.  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Korzystanie z inicjowania z opóźnieniem dla scenariuszy o niskim obciążeniu  
  W scenariuszach, w których konieczne jest zainicjowanie dużej liczby obiektów z opóźnieniem, można zdecydować, że opakowanie każdego obiektu <xref:System.Lazy%601> w wymaga zbyt dużej ilości pamięci lub zbyt wielu zasobów obliczeniowych. Można też mieć rygorystyczne wymagania dotyczące sposobu, w jaki jest ujawniane Inicjowanie z opóźnieniem. W takich `static` przypadkach można użyć metod (`Shared` w <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> Visual Basic) klasy do opóźnionego inicjowania każdego <xref:System.Lazy%601>obiektu bez zawijania go w wystąpieniu.  
@@ -154,7 +154,7 @@ ms.locfileid: "68364049"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zarządzana wątkowość — podstawy](../../../docs/standard/threading/managed-threading-basics.md)
-- [Wątki i wątkowość](../../../docs/standard/threading/threads-and-threading.md)
-- [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Zarządzana wątkowość — podstawy](../../standard/threading/managed-threading-basics.md)
+- [Wątki i wątkowość](../../standard/threading/threads-and-threading.md)
+- [Biblioteka zadań równoległych (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
 - [Instrukcje: Wykonaj opóźnione inicjowanie obiektów](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

@@ -2,37 +2,37 @@
 title: Moduł weryfikacji nazwy użytkownika i hasła
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 16e5f854dbe76150945145c0ce81d0d5fa4ac0d0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b02533641785b24019f10a3c224b09e252cbb2ef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421824"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966786"
 ---
 # <a name="user-name-password-validator"></a>Moduł weryfikacji nazwy użytkownika i hasła
-Ten przykład demonstruje sposób implementacji niestandardowego modułu weryfikacji UserNamePassword. Jest to przydatne w przypadkach, gdy żadna z wbudowanych tryby weryfikacji UserNamePassword jest odpowiednia dla wymagań aplikacji; na przykład, gdy pary nazwy użytkownika/hasła są przechowywane w niektórych magazynu zewnętrznego, takie jak bazy danych. Niniejszy przykład pokazuje usługi, która ma niestandardowy moduł sprawdzania poprawności, który sprawdza, czy są dostępne dwie pary określonej nazwy użytkownika i hasła. Klient używa pary nazwa użytkownika i hasło do uwierzytelniania w usłudze.
+Ten przykład pokazuje, jak wdrożyć niestandardowy moduł sprawdzania poprawności UserNamePassword. Jest to przydatne w przypadkach, gdy żaden z wbudowanych trybów weryfikacji UserNamePassword nie jest odpowiedni dla wymagań aplikacji. na przykład, gdy pary username i Password są przechowywane w niektórych magazynach zewnętrznych, takich jak baza danych. Ten przykład pokazuje usługę, która ma niestandardowy moduł sprawdzania poprawności, który sprawdza dwie konkretne pary nazw użytkownika/hasła. Klient używa pary nazwa użytkownika/hasło do uwierzytelniania w usłudze.
 
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
 > [!NOTE]
->  Ponieważ każdy można skonstruować poświadczenie nazwy użytkownika, który używa pary nazwy użytkownika/hasła, które akceptuje niestandardowego modułu weryfikacji, usługa jest mniej bezpieczna niż domyślne zachowanie dostarczane przez standardowy moduł sprawdzania poprawności UserNamePassword. Standardowa weryfikacji UserNamePassword próbuje zamapować pary podanej nazwy użytkownika i hasła do konta Windows i niepowodzenia uwierzytelniania, jeśli to mapowanie nie powiedzie się. Niestandardowe, które UserNamePassword modułu sprawdzania poprawności, w tym przykładzie nie mogą być używane w kodzie produkcyjnym, jest tylko w celach ilustracyjnych.
+> Ponieważ każda osoba może utworzyć poświadczenia nazwy użytkownika, która używa par username/Password, które akceptuje niestandardowy moduł walidacji, usługa jest mniej bezpieczna niż domyślne zachowanie udostępniane przez standardowy moduł UserNamePassword. Standardowy moduł sprawdzania poprawności UserNamePassword próbuje zmapować podanej pary nazwa użytkownika/hasło na konto systemu Windows i niepowodzenie uwierzytelniania w przypadku niepowodzenia tego mapowania. Niestandardowego modułu sprawdzania UserNamePassword w tym przykładzie nie można używać w kodzie produkcyjnym, tylko do celów informacyjnych.
 
- W podsumowaniu Niniejszy przykład pokazuje, jak:
+ W podsumowaniu ten przykład pokazuje, jak:
 
-- Klient może zostać uwierzytelniony przy użyciu tokenu nazwy użytkownika.
+- Klienta można uwierzytelnić przy użyciu tokenu nazwy użytkownika.
 
-- Serwer sprawdza poprawność poświadczeń klienta przed niestandardowy element UserNamePasswordValidator i jak Propagacja niestandardowe usterek z logikę weryfikacji nazwy użytkownika i hasła do klienta.
+- Serwer sprawdza poprawność poświadczeń klienta względem niestandardowego UserNamePasswordValidator i sposób propagowania błędów niestandardowych z logiki weryfikacji nazwy użytkownika i hasła do klienta.
 
-- Serwer jest uwierzytelniany przy użyciu certyfikatu X.509 serwera.
+- Serwer jest uwierzytelniany przy użyciu certyfikatu X. 509 serwera.
 
- Usługa udostępnia jeden punkt końcowy do komunikacji z usługą zdefiniowane przy użyciu pliku konfiguracji App.config. Punkt końcowy składa się z adresu, powiązanie i kontrakt. Powiązanie jest skonfigurowane przy użyciu standardowego `wsHttpBinding` , domyślnie korzysta z uwierzytelniania usługi WS-Security i nazwy użytkownika. Określa zachowanie usługi `Custom` tryb weryfikacji pary nazwy użytkownika/hasła klienta wraz z typu klasy modułu sprawdzania poprawności. Zachowanie określa również, certyfikat serwera przy użyciu `serviceCertificate` elementu. Certyfikat serwera musi zawierać taką samą wartość `SubjectName` jako `findValue` w [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+ Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, zdefiniowany przy użyciu pliku konfiguracji, App. config. Punkt końcowy składa się z adresu, powiązania i kontraktu. Powiązanie jest skonfigurowane ze standardem `wsHttpBinding` , który domyślnie używa uwierzytelniania WS-Security i username. Zachowanie usługi określa `Custom` tryb weryfikacji par nazwy użytkownika/hasła klienta wraz z typem klasy modułu walidacji. Zachowanie określa również certyfikat serwera za pomocą `serviceCertificate` elementu. Certyfikat serwera musi zawierać taką samą wartość `SubjectName` `findValue` jak w [ \<> serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
 ```xml
 <system.serviceModel>
@@ -88,7 +88,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego modułu weryfik
 </system.serviceModel>
 ```
 
- Konfiguracja punktu końcowego klienta składa się z nazwy konfiguracji adresu bezwzględnego dla punktu końcowego usługi, powiązanie i zamówienia. Klient powiązanie skonfigurowano odpowiedni tryb i wiadomości `clientCredentialType`.
+ Konfiguracja punktu końcowego klienta składa się z nazwy konfiguracji, adresu bezwzględnego dla punktu końcowego usługi, powiązania i kontraktu. Powiązanie klienta jest skonfigurowane z odpowiednim trybem i komunikatem `clientCredentialType`.
 
 ```xml
 <system.serviceModel>
@@ -137,7 +137,7 @@ address="http://localhost:8001/servicemodelsamples/service/username"
   </system.serviceModel>
 ```
 
- Implementacja klienta monituje użytkownika o podanie nazwy użytkownika i hasła.
+ Implementacja klienta prosi użytkownika o podanie nazwy użytkownika i hasła.
 
 ```
 // Get the username and password
@@ -197,7 +197,7 @@ try
 }
 ```
 
- Ta próbka używa niestandardowych UserNamePasswordValidator do weryfikowania nazwy użytkownika/hasła pary. Implementuje próbki `CustomUserNamePasswordValidator`, pochodzącej z <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>. Zobacz dokumentację <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> Aby uzyskać więcej informacji. Implementuje w tym przykładzie niestandardowego modułu sprawdzania poprawności `Validate` metodę, aby zaakceptować dwie pary określonej nazwy użytkownika/hasła, jak pokazano w poniższym kodzie.
+ Ten przykład używa niestandardowego UserNamePasswordValidator do sprawdzania poprawności par nazw i haseł. Przykład implementuje `CustomUserNamePasswordValidator`, pochodny od <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>. <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> Aby uzyskać więcej informacji, zobacz dokumentację. Ten konkretny niestandardowy przykład modułu sprawdzania poprawności `Validate` implementuje metodę, aby akceptować dwie konkretne pary nazwy użytkownika/hasła, jak pokazano w poniższym kodzie.
 
 ```
 public class CustomUserNameValidator : UserNamePasswordValidator
@@ -222,14 +222,14 @@ public class CustomUserNameValidator : UserNamePasswordValidator
  }
 ```
 
- Po wdrożeniu modułu sprawdzania poprawności jest w kodzie usługi hosta usługi muszą zostać powiadomieni o wystąpieniu weryfikacji do użycia. Odbywa się przy użyciu następującego kodu.
+ Po wdrożeniu modułu sprawdzania poprawności w kodzie usługi Host usługi musi zostać poinformowany o wystąpieniu modułu sprawdzania poprawności, które ma być używane. Jest to realizowane przy użyciu następującego kodu.
 
 ```
 serviceHost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;
 serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator = new CustomUserNamePasswordValidator();
 ```
 
- Lub można zrobić to samo w konfiguracji w następujący sposób.
+ Można też wykonać tę czynność w konfiguracji w następujący sposób.
 
 ```xml
 <behaviors>
@@ -247,16 +247,16 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 </behaviors>
 ```
 
- Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Klient pomyślnie należy wywołać wszystkich metod. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.
+ Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Klient powinien pomyślnie wywołać wszystkie metody. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.
 
-## <a name="setup-batch-file"></a>Instalacyjny plik wsadowy
- Plik wsadowy Setup.bat jest dołączone do tego przykładu umożliwia skonfigurowanie serwera za pomocą odpowiednich certyfikatów do uruchomienia aplikacji własnego wymagającego zabezpieczenia oparte na certyfikatach serwera. Ten plik wsadowy muszą zostać zmodyfikowane, działają na maszynach lub działać w przypadku hostowanych samodzielnie.
+## <a name="setup-batch-file"></a>Plik wsadowy konfiguracji
+ Plik wsadowy Setup. bat dołączony do tego przykładu umożliwia skonfigurowanie serwera z odpowiednimi certyfikatami w celu uruchomienia aplikacji samohostowanej wymagającej zabezpieczeń opartych na certyfikatach serwera. Ten plik wsadowy należy zmodyfikować, aby mógł działać na różnych maszynach lub działać w niezależnym przypadku.
 
- Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki czemu można modyfikować do uruchomienia w odpowiedniej konfiguracji.
+ Poniżej przedstawiono krótkie omówienie różnych sekcji plików wsadowych, dzięki czemu można je zmodyfikować tak, aby były uruchamiane w odpowiedniej konfiguracji.
 
 - Tworzenie certyfikatu serwera:
 
-     Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany. % Zmienna % nazwa_serwera Określa nazwę serwera. Zmieniać tej zmiennej do określenia nazwy serwera. Wartość domyślna to hosta lokalnego.
+     Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat serwera do użycia. Zmienna% nazwa_serwera% określa nazwę serwera. Zmień tę zmienną, aby określić własną nazwę serwera. Wartość domyślna to localhost.
 
     ```
     echo ************
@@ -268,9 +268,9 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-- Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta:
+- Instalowanie certyfikatu serwera w magazynie zaufanych certyfikatów klienta:
 
-     Przechowywać następujące wiersze w Setup.bat jest kopia pliku wsadowego certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony firmy Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.
+     Następujące wiersze w pliku wsadowym Setup. bat kopiują certyfikat serwera do magazynu zaufanych osób klienta. Ten krok jest wymagany, ponieważ certyfikaty wygenerowane przez Makecert. exe nie są niejawnie zaufane przez system klienta. Jeśli masz już certyfikat, który znajduje się w zaufanym certyfikacie głównym klienta — na przykład certyfikat wystawiony przez firmę Microsoft — ten krok zapełniania magazynu certyfikatów klienta z certyfikatem serwera nie jest wymagany.
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
@@ -278,45 +278,45 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i skompilować przykład
 
-1. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+1. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-2. Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, użyj poniższych instrukcji.
+2. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, należy wykonać poniższe instrukcje.
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>Aby uruchomić przykład na tym samym komputerze
 
-1. Uruchom Setup.bat jest z poziomu folderu instalacji przykładowej w wierszu polecenia programu Visual Studio 2012. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.
+1. Uruchom setup. bat z przykładowego folderu instalacyjnego w wierszu polecenia programu Visual Studio 2012. Spowoduje to zainstalowanie wszystkich certyfikatów wymaganych do uruchomienia przykładu.
 
     > [!NOTE]
-    >  Plik wsadowy Setup.bat jest przeznaczony do uruchamiania z programu Visual Studio 2012 wiersz polecenia. Ustaw w Visual Studio 2012 Command Prompt punkty do katalogu, który zawiera pliki wykonywalne wymagane przez skrypt Setup.bat jest zmiennej środowiskowej PATH.  
+    >  Plik wsadowy Setup. bat został zaprojektowany do uruchamiania z wiersza polecenia programu Visual Studio 2012. Zmienna środowiskowa PATH ustawiona w wierszu polecenia programu Visual Studio 2012 wskazuje katalog zawierający pliki wykonywalne wymagane przez skrypt Setup. bat.  
   
-2. Uruchom Service.exe z service\bin.  
+2. Uruchom usługę Service. exe z service\bin.  
   
-3. Uruchom Client.exe z \client\bin. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.  
+3. Uruchamianie programu Client. exe z \client\bin. Aktywność klienta jest wyświetlana w aplikacji konsoli klienta.  
   
-4. Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Jeśli klient i usługa nie mogą się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-run-the-sample-across-machines"></a>Do uruchomienia przykładu na komputerach  
+#### <a name="to-run-the-sample-across-machines"></a>Aby uruchomić przykład na wielu maszynach  
   
-1. Utwórz katalog na komputerze usługi na potrzeby pliki binarne usługi.  
+1. Utwórz katalog na komputerze usługi dla plików binarnych usługi.  
   
-2. Skopiuj pliki programu usługi katalogu usługi na komputerze usługi. Także skopiować pliki Setup.bat i Cleanup.bat maszyną usługi.  
+2. Skopiuj program Service Files do katalogu usługi na komputerze usługi. Skopiuj także pliki Setup. bat i Oczyść. bat do maszyny usługi.  
   
-3. Wymagany jest certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Plik konfiguracji serwera należy zaktualizować w celu odzwierciedlenia tej nowej nazwy certyfikatu.  
+3. Potrzebny jest certyfikat serwera z nazwą podmiotu zawierającą w pełni kwalifikowaną nazwę domeny komputera. Plik konfiguracji dla serwera musi zostać zaktualizowany w celu odzwierciedlenia tej nowej nazwy certyfikatu.  
   
-4. Skopiuj certyfikat serwera w magazynie CurrentUser TrustedPeople klienta. Należy to zrobić tylko wtedy, gdy certyfikat serwera nie jest wystawiony przez zaufanego wystawcy.  
+4. Skopiuj certyfikat serwera do magazynu CurrentUser-TrustedPeople klienta. Należy to zrobić tylko wtedy, gdy certyfikat serwera nie zostanie wystawiony przez zaufanego wystawcy.  
   
-5. W pliku App.config na maszynie usługi Zmień wartość z adresu podstawowego, aby określić nazwę maszyny w pełni kwalifikowana zamiast nazwy localhost.  
+5. W pliku App. config na komputerze usługi Zmień wartość adresu podstawowego, aby określić w pełni kwalifikowaną nazwę komputera zamiast hosta lokalnego.  
   
-6. Na komputerze usługi uruchom Service.exe z okna wiersza polecenia.  
+6. Na komputerze usługi Uruchom program Service. exe w oknie wiersza polecenia.  
   
-7. Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerze klienckim.  
+7. Skopiuj pliki programu klienckiego z folderu \client\bin\, w obszarze folder specyficzny dla języka, do komputera klienckiego.  
   
-8. W pliku Client.exe.config na komputerze klienckim należy zmienić wartość adresu punktu końcowego, aby dopasować nowy adres usługi.  
+8. W pliku Client. exe. config na komputerze klienckim Zmień wartość adresu punktu końcowego, aby odpowiadała nowemu adresowi usługi.  
   
-9. Na komputerze klienckim należy uruchomić Client.exe z okna wiersza polecenia.  
+9. Na komputerze klienckim uruchom program Client. exe w oknie wiersza polecenia.  
   
-10. Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. Jeśli klient i usługa nie mogą się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
+#### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić po przykładzie  
   
-1. Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa. Spowoduje to usunięcie certyfikatu serwera z magazynu certyfikatów.  
+1. Uruchom Oczyść. bat w folderze Samples po zakończeniu uruchamiania przykładu. Spowoduje to usunięcie certyfikatu serwera z magazynu certyfikatów.  

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: ff00151d7aaba27faeee1c9d315cac0c8afc0b0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a587a132446a5f5d74b2d534b1ca3b93ccca1480
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933756"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928992"
 ---
 # <a name="how-to-serialize-an-object"></a>Instrukcje: serializowanie obiektu
-Do serializacji obiektu, należy najpierw utworzyć obiekt, który ma być serializowany i ustaw jego właściwości publiczne oraz pól. W tym celu należy określić transportu format, w którym strumień XML mają być przechowywane jako strumień lub jako PLik. Na przykład, jeśli strumień XML musi być zapisany w postaci stałe, Utwórz <xref:System.IO.FileStream> obiektu.  
+Do serializacji obiektu, należy najpierw utworzyć obiekt, który ma być serializowany i ustaw jego właściwości publiczne oraz pól. W tym celu należy określić transportu format, w którym strumień XML mają być przechowywane jako strumień lub jako PLik. Na przykład, jeśli strumień XML musi być zapisany w postaci trwałej, Utwórz <xref:System.IO.FileStream> obiekt.  
   
 > [!NOTE]
->  Aby uzyskać więcej przykładów serializacji XML, zobacz [przykłady serializacji XML](../../../docs/standard/serialization/examples-of-xml-serialization.md).  
+> Aby uzyskać więcej przykładów serializacji XML, zobacz [przykłady serializacji XML](../../../docs/standard/serialization/examples-of-xml-serialization.md).  
   
 ### <a name="to-serialize-an-object"></a>Do serializacji obiektu  
   
@@ -53,4 +53,4 @@ Do serializacji obiektu, należy najpierw utworzyć obiekt, który ma być seria
 ## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Instrukcje: Deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

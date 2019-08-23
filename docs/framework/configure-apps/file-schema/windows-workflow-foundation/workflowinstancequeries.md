@@ -3,17 +3,17 @@ title: <workflowInstanceQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4fe7ce85-cf9a-4dbf-a8f7-bc9b1fc2fe35
-ms.openlocfilehash: fc92b030e8f6643a856446142842c492db703253
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0a32e6ee22cdf984e64c1b8fa16836c4c56d0380
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624792"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932737"
 ---
 # <a name="workflowinstancequeries"></a>\<workflowInstanceQueries>
-Reprezentuje kolekcję elementów konfiguracji, które śledzenie zmian cyklu życia wystąpienia przepływu pracy, takich jak zdarzenia uruchomiona lub ukończone.  
+Reprezentuje kolekcję elementów konfiguracji, które śledzą zmiany cyklu życia wystąpienia przepływu pracy, takie jak zdarzenie uruchomione lub ukończone.  
   
- Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz [profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ Aby uzyskać więcej informacji o śledzeniu zapytań profilowych, zobacz [śledzenie profilów](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
 \<Śledzenie >  
@@ -49,13 +49,13 @@ Reprezentuje kolekcję elementów konfiguracji, które śledzenie zmian cyklu ż
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Zapytanie, które jest używane do śledzenia zmian cyklem życia wystąpienia przepływu pracy.|  
+|[\<workflowInstanceQuery>](workflowinstancequery.md)|Zapytanie, które jest używane do śledzenia zmian cyklem życia wystąpienia przepływu pracy.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<przepływ pracy >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Element konfiguracji, który zawiera wszystkie zapytania dotyczące określonego przepływu pracy identyfikowane przez **activityDefinitionId** właściwości.|  
+|[\<przepływ pracy >](workflow.md)|Element konfiguracji, który zawiera wszystkie zapytania dla określonego przepływu pracy identyfikowanego przez właściwość **activityDefinitionId** .|  
   
 ## <a name="remarks"></a>Uwagi  
  <xref:System.Activities.Tracking.WorkflowInstanceQuery> Jest używana do subskrybowania następujących <xref:System.Activities.Tracking.TrackingRecord> obiektów:  
@@ -87,5 +87,5 @@ Reprezentuje kolekcję elementów konfiguracji, które śledzenie zmian cyklu ż
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Kontrola i śledzenie przepływu pracy](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profile śledzenia](../../../windows-workflow-foundation/tracking-profiles.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: 90768a0c816e790138ba60bd24afee242e41e652
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 06355c64d36d2688ef027c1940688d4c87e51ec8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860285"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964798"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource — Rozszerzenie znaczników
-Zawiera wartość dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] właściwości atrybutu przez tę wartość jako odwołanie do zasobu zdefiniowanego opóźnienie. Zachowanie wyszukiwania dla tego zasobu jest analogiczne do wyszukiwania w czasie wykonywania.  
+Udostępnia wartość dowolnych [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atrybutów właściwości przez odroczenie tej wartości jako odwołania do zdefiniowanego zasobu. Zachowanie wyszukiwania dla tego zasobu jest analogiczne do wyszukiwania w czasie wykonywania.  
   
 ## <a name="xaml-attribute-usage"></a>Użycie atrybutu języka XAML  
   
@@ -38,39 +38,39 @@ Zawiera wartość dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla
   
 |||  
 |-|-|  
-|`key`|Klucz dla żądanego zasobu. Ten klucz była początkowo przypisana przez [x: Key — dyrektywa](../../xaml-services/x-key-directive.md) zasób został utworzony w znaczniku, czy została podana jako `key` parametru podczas wywoływania <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> Jeśli zasób został utworzony w kodzie.|  
+|`key`|Klucz dla żądanego zasobu. Ten klucz został początkowo przypisany przez [dyrektywę x:Key](../../xaml-services/x-key-directive.md) , jeśli zasób został utworzony w znaczniku lub został dostarczony jako `key` parametr podczas wywoływania <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> , jeśli zasób został utworzony w kodzie.|  
   
 ## <a name="remarks"></a>Uwagi  
- A `DynamicResource` spowoduje to utworzenie tymczasowego wyrażenie podczas początkowej kompilacji i związku z tym Odrocz wyszukiwania dla zasobów, dopóki wartość faktycznie wymagane w celu utworzenia obiektu żądanego zasobu. Może to być potencjalnie po [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strona została załadowana. Wartość zasobu zostanie znaleziony, na podstawie klucza wyszukiwania względem wszystkich słowniki zasobów aktywne, począwszy od bieżącego zakresu strony i zostanie zastąpiony wyrażenia symbolu zastępczego z kompilacji.  
+ Obiekt `DynamicResource` utworzy wyrażenie tymczasowe podczas początkowej kompilacji i w ten sposób opóźnia Wyszukiwanie zasobów do momentu, gdy żądana wartość zasobu jest wymagana w celu skonstruowania obiektu. Może to być możliwe po [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] załadowaniu strony. Wartość zasobu zostanie znaleziona na podstawie wyszukiwania kluczy względem wszystkich aktywnych słowników zasobów, zaczynając od bieżącego zakresu strony i jest zastępowana dla wyrażenia symbolu zastępczego z kompilacji.  
   
 > [!IMPORTANT]
->  Pod względem następstwo właściwości `DynamicResource` wyrażenie jest odpowiednikiem sytuację, w której stosowana jest odwołanie do zasobu dynamicznych. Jeśli ustawisz wartości lokalnej dla właściwości, która miała wcześniej `DynamicResource` wyrażenia jako wartości lokalnej `DynamicResource` zostało całkowicie usunięte. Aby uzyskać więcej informacji, zobacz [następstwo wartości właściwości](dependency-property-value-precedence.md).  
+> W obszarze pierwszeństwo właściwości zależności `DynamicResource` wyrażenie jest równoznaczne z pozycją, w której jest stosowane dynamiczne odwołanie do zasobów. `DynamicResource` W`DynamicResource` przypadku ustawienia wartości lokalnej dla właściwości, która wcześniej zawierała wyrażenie jako wartość lokalną, zostaje całkowicie usunięty. Aby uzyskać szczegółowe informacje, zobacz [pierwszeństwo wartości właściwości zależności](dependency-property-value-precedence.md).  
   
- Niektórych scenariuszy dostępu do zasobów są szczególnie odpowiednie dla `DynamicResource` w przeciwieństwie do [staticresource — rozszerzenie znaczników](staticresource-markup-extension.md). Zobacz [zasoby XAML](xaml-resources.md) omówienie względnych zalet i wpływ na wydajność `DynamicResource` i `StaticResource`.  
+ Niektóre scenariusze dostępu do zasobów są szczególnie odpowiednie `DynamicResource` dla, w przeciwieństwie do [rozszerzenia znacznika StaticResource](staticresource-markup-extension.md). Zobacz [zasoby XAML](xaml-resources.md) , aby poznać informacje o względnych wartościach i skutkach `DynamicResource` wydajności `StaticResource`i.  
   
- Określony <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> powinien odpowiadać ustalany na podstawie istniejącego zasobu [x: Key — dyrektywa](../../xaml-services/x-key-directive.md) niektórych w na poziomie strony, aplikacji, motywy dostępne kontrolki i zasoby zewnętrzne lub zasobów systemowych i wyszukiwania zasobów będzie miało miejsce w tej kolejności. Aby uzyskać więcej informacji na temat wyszukiwania zasobów dla zasobów statycznych i dynamicznych, zobacz [zasoby XAML](xaml-resources.md).  
+ Określony <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> element powinien odpowiadać istniejącemu zasobowi określonemu przez [dyrektywę x:Key](../../xaml-services/x-key-directive.md) na pewnym poziomie na stronie, aplikacji, dostępnych kompozycjach kontroli i zasobach zewnętrznych lub zasobów systemowych, a wyszukiwanie zasobów zostanie wykonane w tej kolejności. Aby uzyskać więcej informacji na temat wyszukiwania zasobów dla zasobów statycznych i dynamicznych, zobacz [zasoby XAML](xaml-resources.md).  
   
- Klucz zasobu może być dowolnym ciągiem, zdefiniowane w [xamlname — gramatyka](../../xaml-services/xamlname-grammar.md). Klucz zasobu może być również inne typy obiektów, takich jak <xref:System.Type>. A <xref:System.Type> klucza ma podstawowe znaczenie dla jak formanty mogą być ich styl, kompozycje. Aby uzyskać więcej informacji, zobacz [omówienie tworzenia kontrolek](../controls/control-authoring-overview.md).  
+ Klucz zasobu może być dowolnym ciągiem zdefiniowanym w [gramatycename języka XAML](../../xaml-services/xamlname-grammar.md). Klucz zasobu może być również innymi typami obiektów, takimi jak <xref:System.Type>. <xref:System.Type> Klucz ma podstawowe znaczenie dla formantów, które mogą być wzorowane na podstawie motywów. Aby uzyskać więcej informacji, zobacz temat [Tworzenie kontroli — przegląd](../controls/control-authoring-overview.md).  
   
- Wartości interfejsów API na potrzeby wyszukiwania zasobów, takich jak <xref:System.Windows.FrameworkElement.FindResource%2A>, wykonaj tę samą logikę wyszukiwania zasobów jako używaną przez `DynamicResource`.  
+ Interfejsy API do wyszukiwania wartości zasobów, <xref:System.Windows.FrameworkElement.FindResource%2A>na przykład, postępuj zgodnie z tą samą logiką wyszukiwania zasobów, która jest używana przez `DynamicResource`program.  
   
- Deklaratywne alternatywnych metod odwołujące się do zasobu jest jako [staticresource — rozszerzenie znaczników](staticresource-markup-extension.md).  
+ Alternatywny sposób deklaratywny odwołujący się do zasobu to [rozszerzenie znacznika StaticResource](staticresource-markup-extension.md).  
   
- Składnią atrybutu jest składnia najczęściej używana z tym rozszerzeniem znacznika. Token ciągu podawany po `DynamicResource` ciągu identyfikatora jest przypisany jako <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> wartości elementu bazowego <xref:System.Windows.DynamicResourceExtension> rozszerzenie klasy.  
+ Składnią atrybutu jest składnia najczęściej używana z tym rozszerzeniem znacznika. Token ciągu podany po `DynamicResource` ciągu identyfikatora jest przypisywany <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> jako wartość źródłowej <xref:System.Windows.DynamicResourceExtension> klasy rozszerzenia.  
   
- `DynamicResource` może służyć w składni obiektów. W tym przypadku określającą wartość <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> właściwość jest wymagana.  
+ `DynamicResource`może być używany w składni elementu obiektu. W takim przypadku należy określić wartość <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> właściwości.  
   
- `DynamicResource` można również użycie pełnego atrybut określający <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> właściwość jako właściwość = para wartości:  
+ `DynamicResource`można go również użyć w pełnym użyciu atrybutu, który określa <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> właściwość jako pary właściwość = wartość:  
   
 ```xml  
 <object property="{DynamicResource ResourceKey=key}" .../>  
 ```  
   
- Szczegółowe definicje są często przydatne w rozszerzeniach zawierających więcej niż jedną konfigurowalną właściwość albo gdy niektóre właściwości są opcjonalne. Ponieważ `DynamicResource` ma tylko jedną konfigurowalną właściwość, która jest wymagana, użycie tych pełne nie są typowe.  
+ Szczegółowe definicje są często przydatne w rozszerzeniach zawierających więcej niż jedną konfigurowalną właściwość albo gdy niektóre właściwości są opcjonalne. Ponieważ `DynamicResource` ma tylko jedną właściwość settable, która jest wymagana, to pełne użycie nie jest typowe.  
   
- W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementacji procesora obsługi dla tego rozszerzenia znacznika jest definiowana przez <xref:System.Windows.DynamicResourceExtension> klasy.  
+ W implementacji procesora obsługa tego <xref:System.Windows.DynamicResourceExtension> rozszerzenia znacznika jest definiowana przez klasę. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
- `DynamicResource` jest rozszerzeniem znacznika. Rozszerzenia znaczników są zazwyczaj implementowane w sytuacji, gdy istnieje wymóg, aby wartości atrybutów były wyprowadzane w postaci innej niż wartości literałów lub nazwy programów obsługi, a wymóg ma charakter bardziej globalny niż zwykłe umieszczenie konwerterów typów w niektórych typach lub właściwościach. Wszystkie rozszerzenia znaczników w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Użyj {i} znaków w składni swoich atrybutów, które jest do Konwencja, za pomocą którego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora rozpoznaje, że rozszerzenie znacznika musi wykonać przetwarzanie atrybutu. Aby uzyskać więcej informacji, zobacz [rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md).  
+ `DynamicResource`jest rozszerzeniem znaczników. Rozszerzenia znaczników są zazwyczaj implementowane w sytuacji, gdy istnieje wymóg, aby wartości atrybutów były wyprowadzane w postaci innej niż wartości literałów lub nazwy programów obsługi, a wymóg ma charakter bardziej globalny niż zwykłe umieszczenie konwerterów typów w niektórych typach lub właściwościach. Wszystkie rozszerzenia znaczników w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] używają znaków {i} w ich składni atrybutów, która jest konwencją, za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] której procesor rozpoznaje, że rozszerzenie znacznika musi przetworzyć atrybut. Aby uzyskać więcej informacji, zobacz [rozszerzenia znaczników i XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

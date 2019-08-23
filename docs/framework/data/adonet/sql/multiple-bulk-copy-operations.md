@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5ad12f94-7459-4a93-a421-4160d1a90715
-ms.openlocfilehash: 405a82c625853d242ca68088ffdf81b6bcd7c518
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ee0fdbfc167c819942d8282aca56b7c5168fd87
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922217"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946855"
 ---
 # <a name="multiple-bulk-copy-operations"></a>Wiele operacji kopiowania zbiorczego
-Można wykonać wiele operacji kopiowania zbiorczego przy użyciu pojedynczego wystąpienia <xref:System.Data.SqlClient.SqlBulkCopy> klasy. Jeśli zmienisz parametry operacji między kopii (na przykład nazwa tabeli docelowej), należy zaktualizować je przed kolejnych wywołań do któregokolwiek elementu **WriteToServer** metody, jak pokazano w poniższym przykładzie. Chyba że jawnie zmieniona wartości wszystkich właściwości pozostają takie same, jakie były na poprzedniej operacji kopiowania zbiorczego dla danego wystąpienia.  
+Można wykonywać wiele operacji kopiowania zbiorczego przy użyciu jednego wystąpienia <xref:System.Data.SqlClient.SqlBulkCopy> klasy. Jeśli parametry operacji zmieniają się między kopiami (na przykład nazwę tabeli docelowej), należy je zaktualizować przed kolejnymi wywołaniami dowolnej metody **WriteToServer** , jak pokazano w poniższym przykładzie. O ile nie zmieniono jawnie, wszystkie wartości właściwości pozostają takie same, jak w poprzedniej operacji kopiowania zbiorczego dla danego wystąpienia.  
   
 > [!NOTE]
->  Wykonując wiele operacji kopiowania zbiorczego przy użyciu tego samego wystąpienia <xref:System.Data.SqlClient.SqlBulkCopy> jest zazwyczaj bardziej efektywne niż przy użyciu oddzielnego wystąpienia dla każdej operacji.  
+> Wykonywanie wielu operacji kopiowania zbiorczego przy użyciu tego samego <xref:System.Data.SqlClient.SqlBulkCopy> wystąpienia jest zwykle wydajniejsze niż używanie osobnego wystąpienia dla każdej operacji.  
   
- Należy wykonać kilka operacji kopiowania zbiorczego, korzystając z tych samych <xref:System.Data.SqlClient.SqlBulkCopy> obiektu, nie ma żadnych ograniczeń, czy informacje o źródłowej lub docelowej jest taki sam lub inne w przypadku każdej operacji. Jednak upewnij się, że informacji o skojarzeniu kolumny są ustawione właściwie każdorazowo, gdy zapisu na serwerze.  
+ Jeśli wykonujesz kilka operacji kopiowania zbiorczego przy użyciu <xref:System.Data.SqlClient.SqlBulkCopy> tego samego obiektu, nie ma żadnych ograniczeń dotyczących tego, czy informacje źródłowe i docelowe są równe lub różnią się w poszczególnych operacjach. Należy jednak upewnić się, że informacje o skojarzeniach kolumn są prawidłowo ustawiane za każdym razem, gdy piszesz na serwerze.  
   
 > [!IMPORTANT]
->  W tym przykładzie nie będzie działać, chyba że utworzonego tabelami pracy zgodnie z opisem w [Konfiguracja przykładu kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zademonstrowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze użyj instrukcji Transact-SQL `INSERT … SELECT` instrukcję, aby skopiować dane.  
+> Ten przykład nie zostanie uruchomiony, jeśli nie utworzono tabel roboczych, zgodnie z opisem w [przykładowej konfiguracji kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany w celu przedstawienia składni tylko za pomocą **SqlBulkCopy** . Jeśli tabele źródłowe i docelowe znajdują się w tym samym wystąpieniu SQL Server, łatwiej i szybciej można używać instrukcji języka Transact-SQL `INSERT … SELECT` do kopiowania danych.  
   
  [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingOrdersDetails#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingOrdersDetails/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.ColumnMappingOrdersDetails#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingOrdersDetails/VB/source.vb#1)]  
@@ -29,4 +29,4 @@ Można wykonać wiele operacji kopiowania zbiorczego przy użyciu pojedynczego w
 ## <a name="see-also"></a>Zobacz także
 
 - [Operacje kopiowania masowego w programie SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

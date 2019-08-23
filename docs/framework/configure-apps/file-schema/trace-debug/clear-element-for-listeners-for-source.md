@@ -1,5 +1,5 @@
 ---
-title: <clear> Element <listeners> dla <source>
+title: <clear>Element dla <listeners> elementu<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 63d3bb272fcdbee2c59b0569c85f8183cdac8666
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 768d51a74b4c31d1250d2f5d6517f760f886e0a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673788"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920554"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<Wyczyść >, Element dla \<odbiorników > dla \<źródła >
-Czyści `Listeners` kolekcję dla źródła śledzenia.  
+# <a name="clear-element-for-listeners-for-source"></a>\<Wyczyść > element dla \<odbiorników > \<dla źródła >
+`Listeners` Czyści kolekcję dla źródła śledzenia.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.diagnostics>  
-\<źródła >  
-\<source>  
-\<listeners>  
+\<> źródeł  
+\<> źródłowa  
+\<> odbiorników  
 \<clear>  
   
 ## <a name="syntax"></a>Składnia  
@@ -44,19 +44,19 @@ Czyści `Listeners` kolekcję dla źródła śledzenia.
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.|  
-|`sources`|Zawiera źródła śledzenia, które inicjują komunikatów śledzenia.|  
-|`source`|Określa źródło śledzenia, który inicjuje komunikatów śledzenia.|  
-|`listeners`|Określa obiektów nasłuchujących zbierać, przechowywać i kierowanie komunikatów w postaci.|  
+|`system.diagnostics`|Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.|  
+|`sources`|Zawiera źródła śledzenia, które inicjują komunikaty śledzenia.|  
+|`source`|Określa źródło śledzenia, które inicjuje komunikaty śledzenia.|  
+|`listeners`|Określa detektory, które zbierają, przechowują i rozsyłają komunikaty.|  
   
 ## <a name="remarks"></a>Uwagi  
- `<clear>` Elementu usuwa wszystkie odbiorniki z `Listeners` kolekcję dla źródła śledzenia, łącznie z <xref:System.Diagnostics.DefaultTraceListener>. Możesz użyć `<clear>` element przed użyciem `<add>` elementu, aby mieć pewność, istnieją nie aktywne odbiorniki w kolekcji.  
+ Element usuwa wszystkie odbiorniki `Listeners` z kolekcji dla źródła śledzenia, włącznie z <xref:System.Diagnostics.DefaultTraceListener>. `<clear>` Możesz użyć `<clear>` elementu przed użyciem elementu, `<add>` aby mieć pewność, że w kolekcji nie ma żadnych innych aktywnych odbiorników.  
   
 ## <a name="configuration-file"></a>Plik konfiguracji  
- Ten element może być użyty w pliku konfiguracji komputera (Machine.config) i pliku konfiguracji aplikacji.  
+ Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać `<clear>` element przed użyciem `<add>` elementy do dodania odbiorniki `console` i `textListener` do `Listeners` kolekcji dla źródła śledzenia `TraceSourceApp`.  
+ Poniższy przykład pokazuje, `<clear>` jak używać elementu przed `<add>` użyciem elementów, aby dodać detektory `console` oraz `textListener` do `Listeners` kolekcji dla źródła `TraceSourceApp`śledzenia.  
   
 ```xml  
 <configuration>  
@@ -88,5 +88,5 @@ Czyści `Listeners` kolekcję dla źródła śledzenia.
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Obiekty nasłuchujące śledzenie](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Schemat ustawień śledzenia i debugowania](index.md)
+- [Obiekty nasłuchujące śledzenie](../../../debug-trace-profile/trace-listeners.md)

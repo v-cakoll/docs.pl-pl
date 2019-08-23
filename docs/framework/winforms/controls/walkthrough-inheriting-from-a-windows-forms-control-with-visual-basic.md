@@ -10,12 +10,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: 0891b64fdb26953ab90f3da931f04513ac9e8bcf
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 378d7b0c67791e6c48e9859e0546594df3ccc85e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040212"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931006"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Przewodnik: dziedziczenie z kontrolki formularzy systemu Windows z Visual Basic
 Za pomocą Visual Basic można tworzyć zaawansowane niestandardowe kontrolki przez *dziedziczenie*. Za pomocą dziedziczenia można tworzyć kontrolki, które zachowują wszystkie nieodłączne funkcje standardowych formantów Windows Forms, ale również zawierają funkcje niestandardowe. W tym instruktażu utworzysz prostą dziedziczoną kontrolkę o nazwie `ValueButton`. Ten przycisk dziedziczy funkcje ze standardowego formantu Windows Forms <xref:System.Windows.Forms.Button> i uwidacznia właściwość niestandardową o nazwie. `ButtonValue`
@@ -29,7 +29,7 @@ Za pomocą Visual Basic można tworzyć zaawansowane niestandardowe kontrolki pr
 
 2. Wybierz szablon projektu **Biblioteka formantów Windows Forms** z listy projektów Visual Basic i wpisz `ValueButtonLib` w polu **Nazwa** .
 
-     Nazwa projektu, `ValueButtonLib`, również jest domyślnie przypisana do głównej przestrzeni nazw. Główna przestrzeń nazw służy do kwalifikowania nazw składników w zestawie. Na przykład jeśli dwa zestawy dostarczają składniki o nazwie `ValueButton`, można `ValueButton` określić składnik przy użyciu `ValueButtonLib.ValueButton`. Aby uzyskać więcej informacji, zobacz [przestrzenie nazw w Visual Basic](~/docs/visual-basic/programming-guide/program-structure/namespaces.md).
+     Nazwa projektu, `ValueButtonLib`, również jest domyślnie przypisana do głównej przestrzeni nazw. Główna przestrzeń nazw służy do kwalifikowania nazw składników w zestawie. Na przykład jeśli dwa zestawy dostarczają składniki o nazwie `ValueButton`, można `ValueButton` określić składnik przy użyciu `ValueButtonLib.ValueButton`. Aby uzyskać więcej informacji, zobacz [przestrzenie nazw w Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).
 
 3. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **UserControl1. vb**, a następnie wybierz polecenie **Zmień nazwę** z menu skrótów. Zmień nazwę pliku na `ValueButton.vb`. Kliknij przycisk **tak** po wyświetleniu monitu, jeśli chcesz zmienić nazwę wszystkich odwołań do elementu kodu "UserControl1".
 
@@ -46,7 +46,7 @@ Za pomocą Visual Basic można tworzyć zaawansowane niestandardowe kontrolki pr
      Należy zauważyć, że projektant wizualny nie jest już dostępny. <xref:System.Windows.Forms.Button> Ponieważ kontrolka wykonuje własne malowanie, nie można modyfikować jej wyglądu w projektancie. Jego reprezentacja wizualna będzie dokładnie taka sama jak Klasa, która dziedziczy z (czyli), <xref:System.Windows.Forms.Button>chyba że zostanie zmodyfikowana w kodzie.
 
 > [!NOTE]
->  Można nadal dodawać składniki, które nie mają elementów interfejsu użytkownika, do powierzchni projektowej.
+> Można nadal dodawać składniki, które nie mają elementów interfejsu użytkownika, do powierzchni projektowej.
 
 ## <a name="adding-a-property-to-your-inherited-control"></a>Dodawanie właściwości do kontrolki dziedziczonej
  Jednym z możliwych użycia dziedziczonych kontrolek Windows Forms jest tworzenie formantów, które są identyczne w wyglądzie i zachowaniu (wygląd i działanie) w standardowych kontrolkach Windows Forms, ale uwidaczniają właściwości niestandardowe. W tej sekcji dodasz właściwość o nazwie `ButtonValue` do kontrolki.
@@ -148,4 +148,4 @@ Za pomocą Visual Basic można tworzyć zaawansowane niestandardowe kontrolki pr
 - [Przewodnik: Tworzenie złożonego formantu z Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
 - [Instrukcje: Wyświetlanie kontrolki w oknie dialogowym Wybierz elementy przybornika](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)
-- [Podstawowe informacje o dziedziczeniu (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Podstawowe informacje o dziedziczeniu (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

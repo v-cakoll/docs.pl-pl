@@ -5,32 +5,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: cb41cfc8dbab5dc8285ee756de27a4ba83f6309a
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
-ms.translationtype: MT
+ms.openlocfilehash: 345b5028ccc5c24bd60cf7ecbd2610b27f44b8b9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487729"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968683"
 ---
 # <a name="transport-security-overview"></a>Przegląd zabezpieczeń transportu
-Mechanizmy zabezpieczeń transportu w Windows Communication Foundation (WCF) zależy od tego, powiązania i transport używane. Na przykład w przypadku korzystania z <xref:System.ServiceModel.WSHttpBinding> klasy, transport, jest protokół HTTP i zabezpieczanie transportu przy użyciu podstawowego mechanizmu jest Secure Sockets Layer (SSL) przy użyciu protokołu HTTP, często nazywane protokołu HTTPS. W tym temacie opisano mechanizmy zabezpieczeń transportu głównych używanych w WCF powiązania dostarczane przez system.  
+Mechanizmy zabezpieczeń transportu w programie Windows Communication Foundation (WCF) zależą od powiązań i używanego transportu. Na przykład w przypadku korzystania z <xref:System.ServiceModel.WSHttpBinding> klasy transport jest http, a podstawowym mechanizmem zabezpieczania transportu jest SSL (SSL) za pośrednictwem protokołu HTTP, powszechnie nazywanego https. W tym temacie omówiono główne mechanizmy zabezpieczeń transportu używane w powiązaniach dostarczonych przez system w systemie WCF.  
   
 > [!NOTE]
->  Stosowania zabezpieczeń SSL za pomocą programu .NET Framework 3.5 lub nowszy klient WCF używa certyfikatów pośrednich w magazynie certyfikatów i certyfikaty pośrednie odebranych podczas negocjacji w protokole SSL do przeprowadzania weryfikacji łańcucha certyfikatu usługi certyfikat. .NET framework 3.0 używa tylko certyfikaty pośrednie zainstalowany w lokalnym magazynie certyfikatów.  
+> Gdy zabezpieczenia SSL są używane z .NET Framework 3,5 i nowsze, klient WCF używa zarówno certyfikatów pośrednich w magazynie certyfikatów, jak i certyfikatów pośrednich odebranych podczas negocjowania protokołu SSL w celu przeprowadzenia walidacji łańcucha certyfikatów w usłudze certyfikatu. .NET Framework 3,0 używa tylko certyfikatów pośrednich zainstalowanych w lokalnym magazynie certyfikatów.  
   
 > [!WARNING]
->  W przypadku zabezpieczeń transportu <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> właściwości mogą zostać nadpisane. Aby zapobiec tego zestawu występuje <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> do <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> to zachowanie usługi, które mogą zostać ustawione na opisu usługi.  
+>  W przypadku korzystania z <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> zabezpieczeń transportu właściwość może być zastępowana. Aby tego uniknąć, <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> należy ustawić na. <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType> <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>to zachowanie usługi, które można ustawić w opisie usługi.  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
- Domyślnie <xref:System.ServiceModel.BasicHttpBinding> klasa nie zapewnia zabezpieczeń. To powiązanie jest współdziałania w ramach zaprojektowana pod kątem dostawcy usług sieci Web, które nie implementują zabezpieczeń. Jednakże, możesz włączyć zabezpieczeń przez ustawienie <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> właściwość do dowolnej wartości za wyjątkiem <xref:System.ServiceModel.BasicHttpSecurityMode.None>. Aby włączyć zabezpieczenia transportu, ustaw właściwość na <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
+ Domyślnie <xref:System.ServiceModel.BasicHttpBinding> Klasa nie zapewnia zabezpieczeń. To powiązanie jest przeznaczone do współdziałania z dostawcami usług sieci Web, które nie implementują zabezpieczeń. Można jednak włączyć zabezpieczenia, ustawiając <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> właściwość na dowolną wartość z wyjątkiem. <xref:System.ServiceModel.BasicHttpSecurityMode.None> Aby włączyć zabezpieczenia transportu, ustaw właściwość na <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
   
 ### <a name="interoperation-with-iis"></a>Współdziałanie z usługami IIS  
- <xref:System.ServiceModel.BasicHttpBinding> Klasy jest używany głównie pod kątem współdziałania z istniejących usług sieci Web i znajdują się wiele z tych usług Internet Information Services (IIS). W związku z tym zabezpieczenia transportu dla tego powiązania jest przeznaczona dla bezproblemowe współdziałanie z witryny usług IIS. Jest to realizowane przez ustawianie trybu zabezpieczeń <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> , a następnie ustawiając typu poświadczeń klienta. Wartości typu poświadczeń odpowiadają mechanizmów zabezpieczeń katalogu usług IIS. Poniższy kod przedstawia sposób ustawiania, i Ustaw typ poświadczeń Windows. Jeśli klienta i serwera znajdują się w tej samej domenie Windows, można użyć tej konfiguracji.  
+ <xref:System.ServiceModel.BasicHttpBinding> Klasa jest używana głównie do współpracy z istniejącymi usługami sieci Web, a wiele z tych usług jest hostowanych przez Internet Information Services (IIS). W związku z tym zabezpieczenia transportu dla tego powiązania są przeznaczone do bezproblemowego współdziałania z witrynami usług IIS. W tym celu <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> należy ustawić tryb zabezpieczeń, a następnie ustawić typ poświadczeń klienta. Wartości typu poświadczeń odpowiadają funkcjom zabezpieczeń katalogu usług IIS. Poniższy kod przedstawia ustawiony tryb i typ poświadczeń ustawiony na Windows. Tej konfiguracji można użyć, gdy zarówno klient, jak i serwer znajdują się w tej samej domenie systemu Windows.  
   
  [!code-csharp[c_ProgrammingSecurity#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#10)] 
  [!code-vb[c_ProgrammingSecurity#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#10)]  
   
- Lub w konfiguracji:  
+ Lub w obszarze Konfiguracja:  
   
 ```xml  
 <bindings>  
@@ -44,56 +44,56 @@ Mechanizmy zabezpieczeń transportu w Windows Communication Foundation (WCF) zal
 </bindings>  
 ```  
   
- W poniższych sekcjach omówiono innego typu poświadczeń klienta.  
+ W poniższych sekcjach omówiono inne typy poświadczeń klienta.  
   
 #### <a name="basic"></a>Podstawowy  
- Odpowiada to podstawowa metoda uwierzytelniania w usługach IIS. Podczas korzystania z tego trybu serwera IIS muszą być skonfigurowane przy użyciu Windows kont użytkowników i odpowiednie uprawnienia systemu plików NTFS. Aby uzyskać więcej informacji na temat usług IIS 6.0, zobacz [umożliwiające uwierzytelnianie podstawowe i konfigurowanie nazwy obszaru](https://go.microsoft.com/fwlink/?LinkId=88592). Aby uzyskać więcej informacji na temat usług IIS 7.0, zobacz [skonfigurować uwierzytelnianie podstawowe (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10)).  
+ Odnosi się to do metody uwierzytelniania podstawowego w usługach IIS. W przypadku korzystania z tego trybu serwer IIS musi być skonfigurowany przy użyciu kont użytkowników systemu Windows i odpowiednich uprawnień systemu plików NTFS. Aby uzyskać więcej informacji na temat usług IIS 6,0, zobacz [Włączanie uwierzytelniania podstawowego i Konfigurowanie nazwy obszaru](https://go.microsoft.com/fwlink/?LinkId=88592). Aby uzyskać więcej informacji na temat usług IIS 7,0, zobacz [Konfigurowanie uwierzytelniania podstawowego (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10)).  
   
-#### <a name="certificate"></a>Certyfikat  
- Usługi IIS zawiera opcję, aby wymagać od klientów, zaloguj się przy użyciu certyfikatu. Ta funkcja umożliwia także usługi IIS do mapowania certyfikatu klienta na konto Windows. Aby uzyskać więcej informacji na temat usług IIS 6.0, zobacz [Włączanie certyfikatów klientów w usługach IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88594). Aby uzyskać więcej informacji na temat usług IIS 7.0, zobacz [Konfigurowanie certyfikatów serwera w usługach IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
+#### <a name="certificate"></a>Certyfikatu  
+ Usługi IIS mają opcję, aby wymagać od klientów zalogowania się przy użyciu certyfikatu. Ta funkcja umożliwia także programowi IIS Zamapowanie certyfikatu klienta na konto systemu Windows. Aby uzyskać więcej informacji na temat usług IIS 6,0, zobacz [Włączanie certyfikatów klienta w usługach IIS 6,0](https://go.microsoft.com/fwlink/?LinkId=88594). Aby uzyskać więcej informacji na temat usług IIS 7,0, zobacz [Konfigurowanie certyfikatów serwera w usługach IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
   
-#### <a name="digest"></a>Podsumowanie  
- Uwierzytelnianie szyfrowane jest podobny do uwierzytelniania podstawowego, ale daje możliwość wysyłania poświadczeń jako skrót, a nie w postaci zwykłego tekstu. Aby uzyskać więcej informacji na temat usług IIS 6.0, zobacz [uwierzytelnianie szyfrowane w usługach IIS 6.0](https://go.microsoft.com/fwlink/?LinkID=88443). Aby uzyskać więcej informacji na temat usług IIS 7.0, zobacz [skonfigurować uwierzytelnianie szyfrowane (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754104(v=ws.10)).  
+#### <a name="digest"></a>Szyfrowane  
+ Uwierzytelnianie szyfrowane jest podobne do uwierzytelniania podstawowego, ale oferuje zalety wysyłania poświadczeń jako skrótu, a nie zwykłego tekstu. Aby uzyskać więcej informacji na temat usług IIS 6,0, zobacz [uwierzytelnianie szyfrowane w usługach iis 6,0](https://go.microsoft.com/fwlink/?LinkID=88443). Aby uzyskać więcej informacji na temat usług IIS 7,0, zobacz [Konfigurowanie uwierzytelniania szyfrowanego (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754104(v=ws.10)).  
   
 #### <a name="windows"></a>Windows  
- Odpowiada to zintegrowane uwierzytelnianie Windows w usługach IIS. Po ustawieniu tej wartości, serwer również powinien istnieć w domenie Windows, która używa protokołu Kerberos w jako kontrolera domeny. Jeśli serwer nie znajduje się w domenie z kopią zapasową protokołu Kerberos, czy system protokołu Kerberos nie powiedzie się, można użyć wartości NT LAN Manager (NTLM) opisano w następnej sekcji. Aby uzyskać więcej informacji na temat usług IIS 6.0, zobacz [zintegrowane uwierzytelnianie Windows w usługach IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88597). Aby uzyskać więcej informacji na temat usług IIS 7.0, zobacz [Konfigurowanie certyfikatów serwera w usługach IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
+ Odnosi się to do zintegrowanego uwierzytelniania systemu Windows w usługach IIS. W przypadku ustawienia tej wartości serwer powinien również istnieć w domenie systemu Windows, która używa protokołu Kerberos jako kontrolera domeny. Jeśli serwer nie znajduje się w domenie z zabezpieczeniami opartymi na protokole Kerberos lub w przypadku awarii systemu Kerberos, można użyć wartości z programu NT LAN Manager (NTLM) opisanej w następnej sekcji. Aby uzyskać więcej informacji na temat usług IIS 6,0, zobacz [zintegrowane uwierzytelnianie systemu Windows w usługach iis 6,0](https://go.microsoft.com/fwlink/?LinkId=88597). Aby uzyskać więcej informacji na temat usług IIS 7,0, zobacz [Konfigurowanie certyfikatów serwera w usługach IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
   
 #### <a name="ntlm"></a>NTLM  
- Dzięki temu serwerowi używany do uwierzytelniania NTLM, jeśli protokół Kerberos nie powiedzie się. Aby uzyskać więcej informacji na temat konfigurowania usług IIS w usługach IIS 6.0, zobacz [wymuszenie uwierzytelniania NTLM](https://go.microsoft.com/fwlink/?LinkId=88598). W przypadku usług IIS 7.0 uwierzytelnianie Windows obejmuje uwierzytelniania NTLM. Aby uzyskać więcej informacji, zobacz [Konfigurowanie certyfikatów serwera w usługach IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
+ Pozwala to serwerowi na uwierzytelnianie przy użyciu protokołu NTLM w przypadku niepowodzenia. Aby uzyskać więcej informacji na temat konfigurowania usług IIS w usługach IIS 6,0, zobacz wymuszanie [uwierzytelniania NTLM](https://go.microsoft.com/fwlink/?LinkId=88598). W przypadku usług IIS 7,0 uwierzytelnianie systemu Windows obejmuje uwierzytelnianie NTLM. Aby uzyskać więcej informacji, zobacz [Konfigurowanie certyfikatów serwera w usługach IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding> Klasa jest przeznaczona dla współdziałanie z usługami, które implementują WS-* specyfikacji. Zabezpieczenia transportu dla tego powiązania jest Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP lub HTTPS. Aby utworzyć aplikację WCF, która używa protokołu SSL, należy użyć usług IIS do hostowania aplikacji. Można również w przypadku tworzenia własnego aplikacji, należy użyć narzędzia HttpCfg.exe powiązać certyfikat X.509 z określonego portu, na komputerze. Numer portu jest określony jako część aplikacji WCF jako adresu punktu końcowego. Podczas korzystania z trybu transportu adres punktu końcowego musi zawierać nazwę protokołu HTTPS lub zostanie zgłoszony wyjątek w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ <xref:System.ServiceModel.WSHttpBinding> Klasa została zaprojektowana do współdziałania z usługami, które implementują specyfikacje WS-*. Zabezpieczenia transportu dla tego powiązania są SSL (SSL) za pośrednictwem protokołu HTTP lub HTTPS. Aby utworzyć aplikację WCF, która używa protokołu SSL, Użyj usług IIS do hostowania aplikacji. Alternatywnie, jeśli tworzysz aplikację samoobsługową, użyj narzędzia HttpCfg. exe, aby powiązać certyfikat X. 509 z określonym portem na komputerze. Numer portu jest określony jako część aplikacji WCF jako adres punktu końcowego. W przypadku korzystania z trybu transportu adres punktu końcowego musi zawierać protokół HTTPS lub wyjątek w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
- Uwierzytelnianie klienta, można ustawić <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> właściwość <xref:System.ServiceModel.HttpTransportSecurity> klasy do jednego z <xref:System.ServiceModel.HttpClientCredentialType> wartości wyliczenia. Wartości wyliczenia są takie same jak typy poświadczeń klienta dla <xref:System.ServiceModel.BasicHttpBinding> i mają być obsługiwana za pomocą usług IIS.  
+ Dla opcji uwierzytelnianie klienta Ustaw <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> Właściwość <xref:System.ServiceModel.HttpTransportSecurity> <xref:System.ServiceModel.HttpClientCredentialType> klasy na jedną z wartości wyliczenia. Wartości wyliczenia są identyczne z typami poświadczeń klienta dla i są <xref:System.ServiceModel.BasicHttpBinding> przeznaczone do obsługi usług IIS.  
   
- Wiązanie używane z typu poświadczeń klienta systemu Windows można znaleźć w poniższym przykładzie.  
+ Poniższy przykład pokazuje powiązanie używane z typem poświadczeń klienta systemu Windows.  
   
  [!code-csharp[c_ProgrammingSecurity#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#11)]
  [!code-vb[c_ProgrammingSecurity#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#11)]  
   
 ## <a name="wsdualhttpbinding"></a>WSDualHttpBinding  
- To powiązanie zapewnia tylko wiadomości na poziomie zabezpieczeń, nie transportu do poziomu zabezpieczeń.  
+ To powiązanie zapewnia tylko zabezpieczenia na poziomie komunikatów, a nie zabezpieczenia na poziomie transportu.  
   
 ## <a name="nettcpbinding"></a>NetTcpBinding  
- <xref:System.ServiceModel.NetTcpBinding> Klasa używa protokołu TCP dla transportu wiadomości. Dla trybu transportu zabezpieczenia dzięki wdrożeniu zabezpieczeń TLS (Transport Layer) za pośrednictwem protokołu TCP. Implementacja protokołu TLS są udostępniane przez system operacyjny.  
+ <xref:System.ServiceModel.NetTcpBinding> Klasa używa protokołu TCP do transportu komunikatów. Zabezpieczenia związane z trybem transportu są udostępniane przez implementację Transport Layer Security (TLS) przez TCP. Implementacja protokołu TLS jest dostarczana przez system operacyjny.  
   
- Typ poświadczeń klienta można również określić, ustawiając <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A> właściwość <xref:System.ServiceModel.TcpTransportSecurity> klasy do jednego z <xref:System.ServiceModel.TcpClientCredentialType> wartości, jak pokazano w poniższym kodzie.  
+ Możesz również określić typ poświadczeń klienta, ustawiając <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A> Właściwość <xref:System.ServiceModel.TcpTransportSecurity> <xref:System.ServiceModel.TcpClientCredentialType> klasy na jedną z wartości, jak pokazano w poniższym kodzie.  
   
  [!code-csharp[c_ProgrammingSecurity#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#12)]
  [!code-vb[c_ProgrammingSecurity#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#12)]  
   
 #### <a name="client"></a>Klient  
- Na komputerze klienckim, należy określić certyfikatu za pomocą <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> metody <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> klasy.  
+ Na kliencie należy określić certyfikat przy użyciu <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> metody <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> klasy.  
   
 > [!NOTE]
->  Jeśli używasz zabezpieczeń Windows certyfikat nie jest wymagane.  
+> Jeśli używasz zabezpieczeń systemu Windows, certyfikat nie jest wymagany.  
   
- W poniższym kodzie użyto odcisk palca certyfikatu, który unikatowo identyfikuje go. Aby uzyskać więcej informacji na temat certyfikatów, zobacz [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Poniższy kod używa odcisku palca certyfikatu, który jednoznacznie identyfikuje go. Aby uzyskać więcej informacji o certyfikatach, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  [!code-csharp[c_ProgrammingSecurity#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#13)]
  [!code-vb[c_ProgrammingSecurity#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#13)]  
   
- Alternatywnie, Określ certyfikat w konfiguracji klienta przy użyciu [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) element w sekcji zachowania.  
+ Alternatywnie można określić certyfikat w konfiguracji klienta przy użyciu [ \<elementu ClientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) w sekcji Behaviors.  
   
 ```xml  
 <behaviors>  
@@ -109,16 +109,16 @@ Mechanizmy zabezpieczeń transportu w Windows Communication Foundation (WCF) zal
 ```  
   
 ## <a name="netnamedpipebinding"></a>NetNamedPipeBinding  
- <xref:System.ServiceModel.NetNamedPipeBinding> Klasa jest przeznaczona dla efektywnego należącymi do tej komunikacji; oznacza to, że dla procesy uruchomione na tym samym komputerze, mimo że kanały nazwanego potoku można tworzyć między dwoma komputerami w tej samej sieci. To powiązanie zawiera tylko zabezpieczenia na poziomie transportu. Podczas tworzenia aplikacji za pomocą tego powiązania, adresy punktów końcowych musi zawierać "net.pipe" jako protokół adresu punktu końcowego.  
+ <xref:System.ServiceModel.NetNamedPipeBinding> Klasa została zaprojektowana w celu wydajnej komunikacji wewnątrz maszyny, czyli w przypadku procesów uruchomionych na tym samym komputerze, chociaż kanały nazwanego potoku można utworzyć między dwoma komputerami w tej samej sieci. To powiązanie zapewnia tylko zabezpieczenia na poziomie transportu. Podczas tworzenia aplikacji korzystających z tego powiązania adresy punktów końcowych muszą zawierać wartość "net. Pipe" jako protokół adresu punktu końcowego.  
   
 ## <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
- Korzystając z zabezpieczeń transportu, używa tego powiązania SSL za pośrednictwem protokołu HTTP, znane jako protokołu HTTPS z wystawiony token (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>). Aby uzyskać więcej informacji na temat aplikacji federacyjnych zobacz [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ W przypadku korzystania z zabezpieczeń transportu to powiązanie używa protokołu SSL przez protokół HTTP, znanego jako HTTPS z<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>wystawionym tokenem (). Aby uzyskać więcej informacji na temat aplikacji federacyjnych, zobacz [federacyjne i](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)wystawione tokeny.  
   
 ## <a name="netpeertcpbinding"></a>NetPeerTcpBinding  
- <xref:System.ServiceModel.NetPeerTcpBinding> Klasa jest bezpiecznym transportem, który jest przeznaczony dla skutecznej komunikacji przy użyciu funkcji sieci peer-to-peer. Wskazane przez nazwę klasy i powiązanie TCP jest protokół. Gdy tryb zabezpieczeń Transport powiązanie implementuje protokołu TLS za pośrednictwem protokołu TCP. Aby uzyskać więcej informacji na temat funkcji peer-to-peer, zobacz [sieci Peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ <xref:System.ServiceModel.NetPeerTcpBinding> Klasa jest bezpiecznym transportem, który jest przeznaczony do wydajnej komunikacji przy użyciu funkcji sieci równorzędnej. Jak wskazano nazwa klasy i powiązania, TCP to protokół. Gdy tryb zabezpieczeń jest ustawiony na transport, powiązanie implementuje protokół TLS przez TCP. Aby uzyskać więcej informacji na temat funkcji peer-to-peer, zobacz [sieci peer-to-](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)peer.  
   
-## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding i NetMsmqBinding  
- Wyczerpujące omówienie transportu zabezpieczeń za pomocą usługi kolejkowania komunikatów (nazywanymi wcześniej MSMQ), zobacz [Zabezpieczanie komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
+## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding i Msmqbinding  
+ Aby zapoznać się ze wszystkimi zabezpieczeniami transportu za pomocą usługi kolejkowania komunikatów (wcześniej nazywanej MSMQ), zobacz [Zabezpieczanie komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

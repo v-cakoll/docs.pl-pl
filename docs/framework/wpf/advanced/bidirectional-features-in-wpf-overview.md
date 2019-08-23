@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: d2b35a50d9d09bffd69ae8b8217d6e778ce66ea0
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: b009c2503c7cbf6aca847fc7318135842a060f69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796403"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965039"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Przegląd Dwukierunkowe funkcje WPF
 W przeciwieństwie do żadnej innej platformy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deweloperskiej program oferuje wiele funkcji, które obsługują szybkie opracowywanie zawartości dwukierunkowej, na przykład mieszane od lewej do prawej i od prawej do lewej w tym samym dokumencie. W tym samym czasie program [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tworzy doskonałe środowisko dla użytkowników, którzy wymagają funkcji dwukierunkowych, takich jak arabski i hebrajski.  
@@ -154,9 +154,9 @@ W przeciwieństwie do żadnej innej platformy [!INCLUDE[TLA2#tla_winclient](../.
   
 <a name="NumberSubstitution"></a>   
 ## <a name="number-substitution"></a>Podstawianie numerów  
- Historycznie [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ma obsługiwane podstawianie numerów, umożliwiając reprezentację różnych kształtów kultury dla tych samych cyfr przy jednoczesnym zachowaniu wewnętrznego magazynu tych cyfr w różnych ustawieniach regionalnych, na przykład liczby są przechowywane w ich dobrze znane wartości szesnastkowe, 0x40, 0x41, ale wyświetlane zgodnie z wybranym językiem.  
+ W przeszłości system Windows obsługuje podstawianie numerów, umożliwiając reprezentację różnych kształtów kulturowych dla tych samych cyfr przy jednoczesnym zachowaniu wewnętrznego magazynu tych cyfr dla różnych ustawień regionalnych, na przykład liczby są przechowywane w ich dobrze znane wartości szesnastkowe, 0x40, 0x41, ale wyświetlane zgodnie z wybranym językiem.  
   
- Dzięki temu aplikacje mogą przetwarzać wartości liczbowe bez konieczności konwertowania ich z jednego języka na inny, na przykład użytkownik może otworzyć [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] arkusz kalkulacyjny w zlokalizowanym języku arabskim [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i zobaczyć cyfry w języku arabskim, ale otworzyć go w wersja [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Europejska i zobacz Europejski reprezentacja tych samych numerów. Jest to również konieczne w przypadku innych symboli, takich jak separatory przecinki i symbol procentu, ponieważ zazwyczaj towarzyszą one numerom w tym samym dokumencie.  
+ Dzięki temu aplikacje mogą przetwarzać wartości liczbowe bez konieczności konwertowania ich z jednego języka na inny, na przykład użytkownik może otworzyć [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] arkusz kalkulacyjny w zlokalizowanych oknach arabskich i zobaczyć liczby w kształcie arabskim, ale otworzyć go w Europejska wersja systemu Windows i zobacz Europejski reprezentacja tych samych numerów. Jest to również konieczne w przypadku innych symboli, takich jak separatory przecinki i symbol procentu, ponieważ zazwyczaj towarzyszą one numerom w tym samym dokumencie.  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]kontynuuje te same tradycje i dodaje do niej dalszą pomoc techniczną, która umożliwia większą kontrolę nad tym, kiedy i jak są używane podstawienia. Chociaż ta funkcja jest zaprojektowana dla dowolnego języka, jest szczególnie przydatna w przypadku zawartości dwukierunkowej, gdzie kształtowanie cyfr dla określonego języka zwykle jest wyzwaniem dla deweloperów aplikacji z powodu różnych kultur, w których aplikacja może być uruchomiona.  
   
@@ -190,7 +190,7 @@ W przeciwieństwie do żadnej innej platformy [!INCLUDE[TLA2#tla_winclient](../.
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: Liczby są renderowane przy użyciu tradycyjnych cyfr dla kultury liczbowej. W przypadku większości kultur jest to taka sama jak <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>. <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> Jednak wyniki w postaci cyfr łacińskich niektórych kultur arabskich, podczas gdy ta wartość powoduje cyfry arabskie dla wszystkich kultur arabskich.  
   
- Co oznaczają te wartości dla wielokierunkowego programisty zawartości? W większości przypadków deweloper może potrzebować tylko do <xref:System.Windows.FlowDirection> definiowania i języka każdego elementu tekstowego <xref:System.Windows.Media.NumberSubstitution> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , na przykład `Language="ar-SA"` , a logika wymaga wyświetlania liczb zgodnie z poprawnymi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. W poniższym przykładzie pokazano, jak używać numerów arabskich i angielskich [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w aplikacji uruchomionej w arabskiej wersji [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]programu.  
+ Co oznaczają te wartości dla wielokierunkowego programisty zawartości? W większości przypadków deweloper może potrzebować tylko do <xref:System.Windows.FlowDirection> definiowania i języka każdego elementu tekstowego <xref:System.Windows.Media.NumberSubstitution> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , na przykład `Language="ar-SA"` , a logika wymaga wyświetlania liczb zgodnie z poprawnymi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. W poniższym przykładzie pokazano, jak używać numerów arabskich i angielskich [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w aplikacji uruchomionej w arabskiej wersji systemu Windows.  
   
  [!code-xaml[Numbers#Numbers](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
   

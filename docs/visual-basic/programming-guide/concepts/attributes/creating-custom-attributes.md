@@ -2,15 +2,15 @@
 title: Tworzenie atrybutów niestandardowych (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 90e8e9b9a3fa8e0b488f41d035b017d6113213b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4b55f92466fde47011937d08c946c9c75ca07b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903555"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966331"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>Tworzenie atrybutów niestandardowych (Visual Basic)
-Można utworzyć własne niestandardowe atrybuty, definiując klasę atrybutów klasy, która pochodzi bezpośrednio lub pośrednio z <xref:System.Attribute>, co sprawia, że identyfikowanie definicji atrybutów w metadanych jest łatwe i szybkie. Załóżmy, że chcesz typy tag o nazwie programisty, który napisał typu. Można zdefiniować niestandardowy `Author` klasy atrybutu:  
+Można utworzyć własne atrybuty niestandardowe przez zdefiniowanie klasy atrybutów, klasy, która dziedziczy bezpośrednio lub pośrednio z, co <xref:System.Attribute>sprawia, że definicje atrybutów i są łatwe w użyciu w metadanych. Załóżmy, że chcesz oznakować typy nazwą programisty, który zapisał typ. Można zdefiniować klasę niestandardowego `Author` atrybutu:  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.Class Or   
@@ -26,9 +26,9 @@ Public Class Author
 End Class  
 ```  
   
- Nazwa klasy jest nazwą atrybutu `Author`. Jest pochodną `System.Attribute`, więc jest klasą atrybutu niestandardowego. Parametry Konstruktora są parametry pozycyjne atrybutu niestandardowego. W tym przykładzie `name` jest parametr pozycyjne. Właściwości lub pola publiczne odczytu / zapisu czy nazwanych parametrów. W tym przypadku `version` tylko nosi nazwę parametru. Zwróć uwagę na użycie `AttributeUsage` atrybutu, aby wprowadzić `Author` atrybut jest prawidłowy tylko w klasie i `Structure` deklaracji.  
+ Nazwa klasy jest nazwą atrybutu, `Author`. Jest ona pochodną `System.Attribute`, więc jest klasą atrybutów niestandardowych. Parametry konstruktora są parametrami pozycyjnymi atrybutu niestandardowego. W tym przykładzie `name` jest parametrem pozycyjnym. Wszystkie publiczne pola do odczytu i zapisu są nazwanymi parametrami. W tym przypadku `version` jest jedynym nazwanym parametrem. Zwróć uwagę na użycie `AttributeUsage` atrybutu, aby `Author` atrybut był prawidłowy tylko dla klasy i `Structure` deklaracji.  
   
- Można użyć tego nowego atrybutu w następujący sposób:  
+ Tego nowego atrybutu można użyć w następujący sposób:  
   
 ```vb  
 <Author("P. Ackerman", Version:=1.1)>   
@@ -37,7 +37,7 @@ Class SampleClass
 End Class  
 ```  
   
- `AttributeUsage` został nazwany parametr `AllowMultiple`, dzięki którym możesz ustawić atrybutu niestandardowego jednorazowych lub multiuse —. W poniższym przykładzie kodu multiuse — atrybut jest tworzony.  
+ `AttributeUsage`ma nazwany parametr `AllowMultiple`, za pomocą którego można wykonać pojedyncze użycie lub Multiuse atrybutu niestandardowego. W poniższym przykładzie kodu tworzony jest atrybut Multiuse.  
   
 ```vb  
 ' multiuse attribute  
@@ -48,7 +48,7 @@ Public Class Author
     Inherits System.Attribute  
 ```  
   
- W poniższym przykładzie kodu wiele atrybutów tego samego typu są stosowane do klasy.  
+ W poniższym przykładzie kodu do klasy są stosowane wiele atrybutów tego samego typu.  
   
 ```vb  
 <Author("P. Ackerman", Version:=1.1),   
@@ -60,12 +60,12 @@ End Class
 ```  
   
 > [!NOTE]
->  Jeśli atrybut klasy zawiera właściwości, ta właściwość musi być odczytu i zapisu.  
+> Jeśli Klasa atrybutu zawiera właściwość, ta właściwość musi mieć wartość Read-Write.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Reflection>
-- [Przewodnik programowania w języku Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Przewodnik programowania Visual Basic](../../../../visual-basic/programming-guide/index.md)
 - [Wpisywanie atrybutów niestandardowych](../../../../standard/attributes/writing-custom-attributes.md)
 - [Odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [Atrybuty (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)

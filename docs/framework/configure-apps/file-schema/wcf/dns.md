@@ -2,19 +2,19 @@
 title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: 26b45b17ecd7bbd3fffb5d03553834ec22eedc62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35d33fd4d174c8e4ccdaaf1ac33884663340e16a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700933"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919125"
 ---
 # <a name="dns"></a>\<dns>
-Określa oczekiwaną tożsamość serwera. Ta tożsamość jest nieprawidłowa dla X509 tryb uwierzytelniania certyfikatu, jeśli certyfikat serwera zawiera DNS z taką samą wartość. Ma również zastosowanie do tryb uwierzytelniania Windows, jeśli nazwa SPN ma taką samą wartość.  
+Określa oczekiwaną tożsamość serwera. Ta tożsamość jest prawidłowa dla trybu uwierzytelniania certyfikatu x509, jeśli certyfikat serwera zawiera system DNS o tej samej wartości. Obowiązuje również w przypadku trybu uwierzytelniania systemu Windows, jeśli nazwa SPN ma taką samą wartość.  
   
- Aby uzyskać więcej informacji na temat ustawienia wartości elementu, zobacz [uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Aby uzyskać więcej informacji na temat ustawiania wartości elementu, zobacz [tożsamość usługi i uwierzytelnianie](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
- \<identity>  
+ \<> tożsamości  
 \<dns>  
   
 ## <a name="syntax"></a>Składnia  
@@ -30,7 +30,7 @@ Określa oczekiwaną tożsamość serwera. Ta tożsamość jest nieprawidłowa d
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|value|DNS certyfikatu. Serwer DNS jest standardowym protokołem używanym do lokalizacji komputerów w sieci opartych na protokole IP. Użytkownikom można zapamiętać nazw wyświetlanych, takich jak <https://go.microsoft.com/fwlink/?prd=10929> lub [ https://go.microsoft.com/fwlink/?LinkID=96165 ](https://go.microsoft.com/fwlink/?LinkID=96165), na podstawie liczby adresów, takich jak 207.46.131.137 było łatwiejsze.|  
+|value|Serwer DNS certyfikatu. DNS to standardowy branżowy protokół używany do lokalizowania komputerów w sieci opartej na protokole IP. Użytkownicy mogą pamiętać nazwy wyświetlane, takie jak <https://go.microsoft.com/fwlink/?prd=10929> lub [https://go.microsoft.com/fwlink/?LinkID=96165](https://go.microsoft.com/fwlink/?LinkID=96165), łatwiejsze niż adresy oparte na liczbie, takie jak 207.46.131.137.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -39,10 +39,10 @@ Określa oczekiwaną tożsamość serwera. Ta tożsamość jest nieprawidłowa d
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Określa tożsamość usługi, aby zostać uwierzytelnionym przez klienta.|  
+|[\<> tożsamości](identity.md)|Określa tożsamość usługi do uwierzytelnienia przez klienta.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod konfiguracji określa certyfikat X.509, który jest używany do uwierzytelniania serwera DNS.  
+ Poniższy kod konfiguracji określa DNS certyfikatu X. 509, który jest używany do uwierzytelniania serwera.  
   
 ```xml  
 <identity>
@@ -56,5 +56,5 @@ Określa oczekiwaną tożsamość serwera. Ta tożsamość jest nieprawidłowa d
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.DnsEndpointIdentity>
-- [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Uwierzytelnianie i tożsamość usług](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<> tożsamości](identity.md)

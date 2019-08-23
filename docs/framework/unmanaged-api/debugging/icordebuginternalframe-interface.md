@@ -16,36 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f16b4628215bee2410708edeb337b41fbdc0311
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9764cdcd07a09f5192a8f43b9baa5be40305c40b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946383"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910168"
 ---
 # <a name="icordebuginternalframe-interface"></a>ICorDebugInternalFrame, interfejs
 
-Reprezentuje ramkę wewnętrznego środowiska uruchomieniowego na stosie. Ten interfejs jest podklasą icordebugframe — interfejs.  
+Reprezentuje wewnętrzną ramkę środowiska uruchomieniowego na stosie. Ten interfejs jest podklasą interfejsu ICorDebugFrame.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetFrameType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|Pobiera typ tej ramki wewnętrznego.|  
+|[GetFrameType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|Pobiera typ tej wewnętrznej ramki.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
+> Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,66 +2,66 @@
 title: Korzystanie z zabezpieczeń komunikatów
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: cf014c8aa972c45140a523573b9806996062b40f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ba8923d23140bb951a4993739ec267ad6f6a4c4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991033"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911777"
 ---
 # <a name="securing-messages-using-message-security"></a>Korzystanie z zabezpieczeń komunikatów
-W tej sekcji omówiono zabezpieczenie wiadomości WCF w przypadku korzystania z <xref:System.ServiceModel.NetMsmqBinding>.  
+W tej części omówiono zabezpieczenia komunikatów WCF podczas <xref:System.ServiceModel.NetMsmqBinding>korzystania z programu.  
   
 > [!NOTE]
->  Przed odczytaniem za pośrednictwem tego tematu, zaleca się przeczytanie [pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
+> Przed przeczytaniem z tego tematu zaleca się zapoznanie się z [pojęciami dotyczącymi zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
- Następująca ilustracja przedstawia model koncepcyjny umieszczonych w kolejce komunikacji przy użyciu usługi WCF. Ta ilustracja i terminologii służą do wyjaśnienia  
+ Poniższa ilustracja przedstawia model koncepcyjny komunikacji kolejkowanej przy użyciu programu WCF. Ta ilustracja i terminologia są używane do wyjaśnienia  
   
- transport pojęcia dotyczące zabezpieczeń.  
+ zagadnienia dotyczące zabezpieczeń transportu.  
   
- ![Diagram aplikacji w kolejce](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "rozproszonych kolejka rysunek")  
+ ![Diagram aplikacji] znajdujących się w kolejce (../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Rozproszona-queueed-Figure")  
   
- Podczas wysyłania komunikatów z obsługą kolejek przy użyciu usługi WCF, wiadomości WCF jest dołączony jako treść komunikatu usługi kolejkowania komunikatów (MSMQ). Gdy zabezpieczenia transportu zabezpiecza całą MSMQ wiadomość, komunikat (lub protokołu SOAP) zabezpieczeń zabezpiecza tylko treści wiadomości usługi MSMQ.  
+ Podczas wysyłania komunikatów umieszczonych w kolejce przy użyciu programu WCF komunikat WCF jest dołączany jako treść komunikatu usługi kolejkowania komunikatów (MSMQ). Chociaż zabezpieczenia transportu zabezpieczają cały komunikat MSMQ, zabezpieczenia komunikatów (lub SOAP) zabezpieczają tylko treść wiadomości MSMQ.  
   
- Kluczowe pojęcia zabezpieczeń wiadomości jest, że klient zabezpiecza wiadomości dla aplikacji odbierającej (usługa), w przeciwieństwie do zabezpieczenia transportu, w której klient zabezpiecza komunikat do kolejki docelowej. W efekcie MSMQ odgrywa bez części, gdy zabezpieczenie wiadomości WCF, korzystanie z zabezpieczeń komunikatów.  
+ Najważniejszym pojęciem zabezpieczeń komunikatów jest, że klient zabezpieczy komunikat dla aplikacji odbiorczej (usługi), w przeciwieństwie do zabezpieczeń transportu, gdy klient zabezpieczy komunikat dla kolejki docelowej. W związku z tym usługa MSMQ nie pełni żadnej części podczas zabezpieczania wiadomości WCF przy użyciu zabezpieczeń komunikatów.  
   
- Zabezpieczenie wiadomości WCF dodaje nagłówki zabezpieczeń wiadomości WCF, które integrują się z istniejącymi infrastrukturami zabezpieczeń, takie jak certyfikat lub protokołu Kerberos.  
+ Funkcja zabezpieczenia komunikatów WCF dodaje nagłówki zabezpieczeń do wiadomości WCF, która integruje się z istniejącymi infrastrukturami zabezpieczeń, takimi jak certyfikat lub protokół Kerberos.  
   
-## <a name="message-credential-type"></a>Typ poświadczeń komunikatu  
- Korzystanie z zabezpieczeń komunikatów, usługi i klienta może powodować poświadczeń w celu uwierzytelnienia każdego innego. Zabezpieczenia komunikatów można wybrać, ustawiając <xref:System.ServiceModel.NetMsmqBinding.Security%2A> tryb `Message` lub `Both` (oznacza to, użyj zarówno z zabezpieczeń transportu i zabezpieczenia komunikatów).  
+## <a name="message-credential-type"></a>Typ poświadczeń wiadomości  
+ Korzystając z zabezpieczeń komunikatów, usługa i klient mogą przedstawić poświadczenia do wzajemnego uwierzytelniania. Możesz wybrać opcję Zabezpieczenia komunikatów, ustawiając <xref:System.ServiceModel.NetMsmqBinding.Security%2A> tryb na `Message` lub `Both` (to oznacza, że są używane zabezpieczenia transportu i zabezpieczenia komunikatów).  
   
- Można użyć usługa <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> właściwości, aby sprawdzić poświadczenia używane do uwierzytelniania klienta. To umożliwia także do dalszego sprawdzania autoryzacji, usługa zdecyduje się na implementacji.  
+ Usługa może użyć <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> właściwości, aby sprawdzić poświadczenie używane do uwierzytelniania klienta. Można go również użyć do dalszej kontroli autoryzacji, którą usługa wybiera do wdrożenia.  
   
- W tej sekcji opisano typy innego poświadczenia i jak z nich korzystać w przypadku kolejek.  
+ W tej sekcji objaśniono różne typy poświadczeń i sposoby ich używania z kolejkami.  
   
-### <a name="certificate"></a>Certyfikat  
- Typ poświadczeń certyfikatu używa certyfikatu X.509 do identyfikowania usługi i klienta.  
+### <a name="certificate"></a>Certyfikatu  
+ Typ poświadczeń certyfikatu używa certyfikatu X. 509, aby zidentyfikować usługę i klienta.  
   
- W typowym scenariuszu, klient i usługa są prawidłowy certyfikat wystawiony przez zaufany urząd certyfikacji. Następnie połączenie zostanie nawiązane, klient uwierzytelnia ważności usługę za pomocą certyfikatu usługi, aby określić, czy można ufać w niej usługi. Podobnie usługa korzysta z certyfikatu klienta można zweryfikować relacji zaufania klienta.  
+ W typowym scenariuszu klient i usługa otrzymują prawidłowy certyfikat przez zaufany urząd certyfikacji. Następnie połączenie zostanie nawiązane, a klient uwierzytelnia ważność usługi przy użyciu certyfikatu usługi, aby zdecydować, czy może ufać usłudze. Podobnie usługa używa certyfikatu klienta do sprawdzania poprawności zaufania klienta.  
   
- Ze względu na charakter odłączonego kolejek, klient i usługa może nie być online w tym samym czasie. W efekcie klienta i usługi muszą wymienić certyfikaty poza pasmem. W szczególności klienta, na podstawie zawierający certyfikat usługi, (które można powiązać do urzędu certyfikacji) w magazynie zaufanych muszą ufać, to podczas komunikacji z usługą poprawne. W przypadku uwierzytelniania klienta, używane przez usługę certyfikatu X.509, dołączone do wiadomości pasuje go za pomocą certyfikatu w magazynie w celu sprawdzenia autentyczności klienta. Ponownie certyfikatu muszą być powiązane do urzędu certyfikacji.  
+ Ze względu na rozłączoną naturę kolejek, klient i usługa nie mogą być w trybie online w tym samym czasie. W związku z tym klient i usługa muszą wymieniać certyfikaty poza pasmem. W szczególności klient z tytułu posiadania certyfikatu usługi (który może być łańcuchem do urzędu certyfikacji) w swoim zaufanym magazynie, musi ufać, że komunikuje się z poprawną usługą. Aby można było uwierzytelniać klienta, usługa używa certyfikatu X. 509 dołączonego do wiadomości w celu dopasowania go do certyfikatu w magazynie w celu zweryfikowania autentyczności klienta. Ponownie certyfikat musi być łańcuchem do urzędu certyfikacji.  
   
- Na komputerze z systemem Windows certyfikaty są przechowywane w różnych typów magazynów. Aby uzyskać więcej informacji na temat różnych sklepach zobacz [magazyny certyfikatów](https://go.microsoft.com/fwlink/?LinkId=87787).  
+ Na komputerze z systemem Windows certyfikaty są przechowywane w kilku rodzajach magazynów. Aby uzyskać więcej informacji na temat różnych magazynów, zobacz [magazyny certyfikatów](https://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>Windows  
- Typ poświadczeń komunikatu Windows używa protokołu Kerberos.  
+ Typ poświadczeń komunikatu systemu Windows używa protokołu Kerberos.  
   
- Protokół Kerberos jest mechanizmem zabezpieczeń, który uwierzytelnia użytkowników w domenie i umożliwia uwierzytelnionym użytkownikom ustanowienia bezpiecznego kontekstów z innymi jednostkami w domenie.  
+ Protokół Kerberos jest mechanizmem zabezpieczeń, który uwierzytelnia użytkowników w domenie i zezwala uwierzytelnionym użytkownikom na ustanawianie bezpiecznych kontekstów z innymi jednostkami w domenie.  
   
- Problem z używaniem protokołu Kerberos do komunikacji z obsługą kolejek są stosunkowo krótkotrwałe biletów, które zawierają tożsamości klienta, który rozdziela Centrum dystrybucji kluczy (KDC). A *okres istnienia* jest skojarzony z biletu protokołu Kerberos, który wskazuje na prawidłowość--ticket. Jako takie biorąc pod uwagę duże opóźnienie, nie można się upewnić, że token jest ciągle ważny dla usługi, która uwierzytelnia klientów.  
+ Problem z korzystaniem z protokołu Kerberos na potrzeby komunikacji w kolejce polega na tym, że bilety zawierające tożsamość klienta dystrybuowaną przez centrum dystrybucji kluczy (KDC) są stosunkowo krótko. *Okres istnienia* jest skojarzony z biletem protokołu Kerberos, który wskazuje na ważność biletu. W związku z tym duże opóźnienie nie można mieć pewności, że token jest nadal ważny dla usługi, która uwierzytelnia klienta.  
   
- Należy pamiętać, że podczas korzystania z tego typu poświadczeń, usługa musi być uruchomiona w ramach konta usługi.  
+ Należy pamiętać, że w przypadku korzystania z tego typu poświadczeń usługa musi być uruchomiona w ramach konta usługi.  
   
- Protokół Kerberos jest używany domyślnie podczas wybierania poświadczeniami komunikatu. Aby uzyskać więcej informacji, zobacz [Eksplorowanie protokołu Kerberos, protokół rozproszonych zabezpieczeń na platformie Windows 2000](https://go.microsoft.com/fwlink/?LinkId=87790).  
+ Protokół Kerberos jest używany domyślnie podczas wybierania poświadczeń wiadomości. Aby uzyskać więcej informacji, zobacz [Eksplorowanie protokołu Kerberos, protokół dla zabezpieczeń rozproszonych w systemie Windows 2000](https://go.microsoft.com/fwlink/?LinkId=87790).  
   
-### <a name="username-password"></a>Hasło nazwy użytkownika  
- Używanie tej właściwości, umożliwia uwierzytelnienie klienta na serwerze przy użyciu hasła nazwy użytkownika w nagłówku zabezpieczenia wiadomości.  
+### <a name="username-password"></a>Hasło użytkownika  
+ Korzystając z tej właściwości, klient może uwierzytelniać się na serwerze przy użyciu hasła użytkownika w nagłówku zabezpieczeń wiadomości.  
   
 ### <a name="issuedtoken"></a>IssuedToken  
- Klient może używać usługi tokenów zabezpieczeń można wystawić tokenu, który może następnie być dołączony do wiadomości dla usługi do uwierzytelniania klienta.  
+ Klient może użyć usługi tokenu zabezpieczającego, aby wystawić token, który następnie może zostać dołączony do wiadomości dla usługi w celu uwierzytelnienia klienta.  
   
-## <a name="using-transport-and-message-security"></a>Za pomocą transportu i zabezpieczeń komunikatów  
- Korzystając z zabezpieczeń transportu i zabezpieczeń wiadomości, certyfikat używany do zabezpieczenia wiadomości, zarówno na poziomie transportu i protokołu SOAP wiadomości musi być taka sama.  
+## <a name="using-transport-and-message-security"></a>Korzystanie z usługi transport i zabezpieczenia komunikatów  
+ W przypadku korzystania z zabezpieczeń transportu i zabezpieczeń komunikatów certyfikat używany do zabezpieczenia komunikatu zarówno w transportie, jak i na poziomie komunikatu protokołu SOAP musi być taki sam.  
   
 ## <a name="see-also"></a>Zobacz także
 

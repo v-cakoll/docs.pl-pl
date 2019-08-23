@@ -2,22 +2,22 @@
 title: Usługa AJAX korzystająca z typów złożonych — przykład
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: cde7e48d0f0c44d68266d60399ac197d322a42cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98d33c250be31ac43eef6d76ade997a30af87090
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002888"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923693"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>Usługa AJAX korzystająca z typów złożonych — przykład
-W tym przykładzie pokazano, jak używać usług Windows Communication Foundation (WCF) do tworzenia usługi ASP.NET asynchronicznych w języku JavaScript i XML (technologia AJAX), który tworzy wystąpienia typów złożonych i wysyła je między usługą i klienta jako JavaScript Object Notation (JSON). Usługa AJAX dostęp przy użyciu kodu JavaScript w kliencie przeglądarki sieci Web. W tym przykładzie opiera się na [podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) próbki.  
+Ten przykład pokazuje, jak używać Windows Communication Foundation (WCF) do tworzenia asynchronicznej usługi JavaScript i XML (AJAX), która tworzy wystąpienia typów złożonych i wysyła je między usługą a klientem jako JavaScript Object Notation (JSON). Dostęp do usługi AJAX można uzyskać za pomocą kodu JavaScript z klienta przeglądarki sieci Web. Ten przykład kompiluje się na [podstawowym przykładzie usługi AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) .  
   
- Obsługa technologii AJAX w programie WCF jest zoptymalizowany do użytku z programem ASP.NET AJAX za pośrednictwem <xref:System.Web.UI.ScriptManager> kontroli. Przykład przy użyciu usługi WCF przy użyciu rozszerzeń ASP.NET AJAX, zobacz [przykłady AJAX](ajax.md).  
+ Obsługa technologii AJAX w programie WCF jest zoptymalizowana pod kątem użycia z <xref:System.Web.UI.ScriptManager> ASP.NET AJAX przez formant. Aby zapoznać się z przykładem użycia programu WCF z ASP.NET AJAX, zobacz [przykłady AJAX](ajax.md).  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Usługa w poniższym przykładzie jest usługi WCF nie kodu specyficznego dla technologii AJAX. Ponieważ <xref:System.ServiceModel.Web.WebGetAttribute> atrybut nie ma zastosowania, czasownik HTTP domyślnej ("POST") jest używany. Usługa ma jedną operację `DoMath`, która zwraca typ złożony, o nazwie `MathResult`. Typ złożony jest typu kontraktu danych w warstwie standardowa, co obejmuje również nie kodu specyficznego dla technologii AJAX.  
+ Usługa w poniższym przykładzie jest usługą WCF bez kodu specyficznego dla technologii AJAX. <xref:System.ServiceModel.Web.WebGetAttribute> Ponieważ atrybut nie jest stosowany, zostanie użyte domyślne zlecenie http ("post"). Usługa ma jedną operację, `DoMath`która zwraca typ złożony o nazwie. `MathResult` Typ złożony jest standardowym typem kontraktu danych, który również nie zawiera kodu specyficznego dla AJAX.  
 
 ```csharp
 [DataContract]  
@@ -34,11 +34,11 @@ public class MathResult
 }  
 ```
 
- Tworzenie punktu końcowego AJAX w usłudze przy użyciu <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>— podobnie jak w przykładzie podstawowa usługa AJAX.  
+ Utwórz punkt końcowy AJAX w usłudze przy użyciu programu <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, podobnie jak w przypadku przykładowej podstawowej usługi AJAX.  
   
- Klient ComplexTypeClientPage.aspx strony sieci Web zawiera kod ASP.NET i JavaScript, aby wywołać usługę, gdy użytkownik kliknie **wykonać obliczenie** przycisk na stronie. Kod, aby wywołać usługę tworzy treść kodu JSON i wysyła je za pomocą metody POST protokołu HTTP, podobnie jak [AJAX usługi za pomocą żądania HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) próbki.  
+ Strona sieci Web klienta ComplexTypeClientPage. aspx zawiera kod ASP.NET i JavaScript służący do wywoływania usługi, gdy użytkownik kliknie przycisk **wykonaj obliczenia** na stronie. Kod do wywołania usługi konstruuje treść JSON i wysyła go przy użyciu polecenia HTTP POST, podobnie jak w przypadku [usługi AJAX używającej przykładowego protokołu HTTP Post](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) .  
   
- Po pomyślnym wywołania usługi uzyskujesz dostęp do członków poszczególnych danych (`sum`, `difference`, `product` i `quotient`) w JavaScript wynikowy obiekt.  
+ Po pomyślnym wywołaniu usługi można uzyskać dostęp do poszczególnych elementów członkowskich danych (`sum` `product` , `difference`i `quotient`) w wyniku obiektu JavaScript.  
 
 ```javascript
 function onSuccess(mathResult){  
@@ -49,20 +49,20 @@ function onSuccess(mathResult){
 }  
 ```
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Skompiluj rozwiązanie ComplexTypeAjaxService.sln, zgodnie z opisem w [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Skompiluj rozwiązanie ComplexTypeAjaxService. sln zgodnie z opisem w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Przejdź do `http://localhost/ServiceModelSamples/ComplexTypeClientPage.aspx` (nie należy otwierać ComplexTypeClientPage.aspx w przeglądarce z katalogu projektu).  
+3. Przejdź do `http://localhost/ServiceModelSamples/ComplexTypeClientPage.aspx` (nie otwieraj ComplexTypeClientPage. aspx w przeglądarce z katalogu projektu).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ComplexTypeAjaxService`  
   

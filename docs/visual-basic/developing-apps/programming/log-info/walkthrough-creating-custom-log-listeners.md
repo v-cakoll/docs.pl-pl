@@ -1,113 +1,113 @@
 ---
-title: Tworzenie odbiorników logu niestandardowego (Visual Basic)
+title: Tworzenie odbiorników dziennika niestandardowego (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 90135074a4d34ea73743faffb2531305fcb326fb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593330"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965260"
 ---
-# <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Przewodnik: Tworzenie odbiorników logu niestandardowego (Visual Basic)
-W tym instruktażu pokazano, jak tworzenie odbiorników logu niestandardowego i jest skonfigurowana do nasłuchiwania z danymi wyjściowymi `My.Application.Log` obiektu.  
+# <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Przewodnik: Tworzenie odbiorników dziennika niestandardowego (Visual Basic)
+W tym instruktażu pokazano, jak utworzyć odbiornik dziennika niestandardowego i skonfigurować go do nasłuchiwania danych wyjściowych `My.Application.Log` obiektu.  
   
 ## <a name="getting-started"></a>Wprowadzenie  
- Odbiorniki logu musi dziedziczyć <xref:System.Diagnostics.TraceListener> klasy.  
+ Odbiorniki dzienników muszą dziedziczyć <xref:System.Diagnostics.TraceListener> z klasy.  
   
 #### <a name="to-create-the-listener"></a>Aby utworzyć odbiornik  
   
-- W aplikacji, należy utworzyć klasę o nazwie `SimpleListener` tej, która dziedziczy <xref:System.Diagnostics.TraceListener>.  
+- W aplikacji Utwórz klasę o nazwie `SimpleListener` , która dziedziczy z. <xref:System.Diagnostics.TraceListener>  
   
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]  
   
-     <xref:System.Diagnostics.TraceListener.Write%2A> i <xref:System.Diagnostics.TraceListener.WriteLine%2A> wywołania metody, wymagane przez klasę bazową `MsgBox` wyświetlić ich dane wejściowe.  
+     Metody <xref:System.Diagnostics.TraceListener.Write%2A> `MsgBox` i <xref:System.Diagnostics.TraceListener.WriteLine%2A> , wymagane przez klasę bazową, wywołują, aby wyświetlić ich dane wejściowe.  
   
-     <xref:System.Security.Permissions.HostProtectionAttribute> Atrybut jest stosowany do <xref:System.Diagnostics.TraceListener.Write%2A> i <xref:System.Diagnostics.TraceListener.WriteLine%2A> metody, aby ich atrybutów pasują do metod klasy bazowej. <xref:System.Security.Permissions.HostProtectionAttribute> Atrybut umożliwia hosta, który jest uruchamiany kod w celu określenia, czy kod przedstawia synchronizacji ochrony hosta.  
+     Ten atrybut jest stosowany <xref:System.Diagnostics.TraceListener.Write%2A> do metod i <xref:System.Diagnostics.TraceListener.WriteLine%2A> , tak aby ich atrybuty pasowały do metod klasy bazowej. <xref:System.Security.Permissions.HostProtectionAttribute> Ten <xref:System.Security.Permissions.HostProtectionAttribute> atrybut zezwala na hosta, na którym jest uruchamiany kod, aby określić, że kod uwidacznia synchronizację z ochroną hosta.  
   
     > [!NOTE]
-    >  <xref:System.Security.Permissions.HostProtectionAttribute> Atrybut obowiązuje tylko w przypadku niezarządzanych aplikacji, które hostują środowisko uruchomieniowe języka wspólnego i implementują ochrony hosta, takie jak SQL Server.  
+    > Ten <xref:System.Security.Permissions.HostProtectionAttribute> atrybut obowiązuje tylko w przypadku niezarządzanych aplikacji obsługujących środowisko uruchomieniowe języka wspólnego i implementujących ochronę hosta, takich jak SQL Server.  
   
- Aby upewnić się, że `My.Application.Log` korzysta z odbiornikiem dziennika należy jednoznacznie nazwę zestawu, który zawiera Twoje odbiornika dziennika.  
+ Aby zapewnić, `My.Application.Log` że program korzysta z odbiornika dzienników, należy silnie nawiązać nazwę zestawu, który zawiera odbiornik dzienników.  
   
- Następna procedura oferuje kilka prostych kroków tworzenia zestawu o silnej nazwie odbiornika dziennika. Aby uzyskać więcej informacji, zobacz [tworzenie i zestawy Using Strong-Named](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ Kolejna procedura zawiera kilka prostych kroków służących do tworzenia silnie nazwanego zestawu detektora dzienników. Aby uzyskać więcej informacji, zobacz [Tworzenie i używanie zestawów o silnej nazwie](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md).  
   
-#### <a name="to-strongly-name-the-log-listener-assembly"></a>Zdecydowanie nazwy zestawu odbiornika dziennika  
+#### <a name="to-strongly-name-the-log-listener-assembly"></a>Aby silnie nawiązać nazwę zestawu odbiornika dzienników  
   
-1. Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, wybierz **właściwości**.   
+1. Zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** wybierz polecenie **Właściwości**.   
   
-2. Kliknij przycisk **podpisywanie** kartę.  
+2. Kliknij kartę podpisywanie.  
   
-3. Wybierz **Podpisz zestaw** pole.  
+3. Zaznacz pole **podpisz zestaw** .  
   
-4. Wybierz  **\<nowy >** z **wybierz plik klucza o silnej nazwie** listy rozwijanej.  
+4. Wybierz pozycję  **\<Nowy >** z listy rozwijanej **Wybierz plik klucza o silnej nazwie** .  
   
-     **Utwórz klucz silnej nazwy** zostanie otwarte okno dialogowe.  
+     Zostanie otwarte okno dialogowe **Tworzenie klucza silnej nazwy** .  
   
-5. Podaj nazwę pliku klucza w **nazwę pliku klucza** pole.  
+5. Podaj nazwę pliku klucza w polu **Nazwa pliku klucza** .  
   
-6. Wprowadź hasło w **wprowadź hasło** i **Potwierdź hasło** pola.  
+6. Wprowadź hasło w polach **Wprowadź hasło** i **Potwierdź hasło** .  
   
 7. Kliknij przycisk **OK**.  
   
-8. Ponownie skompiluj aplikację.  
+8. Skompiluj ponownie aplikację.  
   
-## <a name="adding-the-listener"></a>Dodanie detektora  
- Teraz, że zestaw ma silną nazwą, należy określić silną nazwę odbiornika tak, aby `My.Application.Log` korzysta z odbiornikiem dziennika.  
+## <a name="adding-the-listener"></a>Dodawanie odbiornika  
+ Teraz, gdy zestaw ma silną nazwę, należy określić silną nazwę odbiornika, aby `My.Application.Log` używała odbiornika dzienników.  
   
- Format typu o silnej nazwie jest w następujący sposób.  
+ Format silnie nazwanego typu jest następujący.  
   
- \<Nazwa typu >, \<Nazwa zestawu >, \<numer wersji >, \<kultury >, \<silnej nazwy >  
+ \<Nazwa typu >, \<nazwa zestawu >, \<numer wersji >, \<kultura >, \<silna nazwa >  
   
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>Aby określić silną nazwę odbiornika  
   
-- Poniższy kod przedstawia sposób określić nazwę typu o silnej nazwie `SimpleListener`.  
+- Poniższy kod pokazuje, jak określić silną nazwę typu dla `SimpleListener`.  
   
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]  
   
-     Silnej nazwy typu zależy od projektu.  
+     Silna nazwa typu zależy od projektu.  
   
- Za pomocą silnej nazwy, można dodawać przez odbiornik `My.Application.Log` kolekcji odbiornika dziennika.  
+ Za pomocą silnej nazwy można dodać odbiornik do `My.Application.Log` kolekcji detektorów dzienników.  
   
-#### <a name="to-add-the-listener-to-myapplicationlog"></a>Aby dodać odbiornika do My.Application.Log  
+#### <a name="to-add-the-listener-to-myapplicationlog"></a>Aby dodać odbiornik do My. Application. log  
   
-1. Kliknij prawym przyciskiem myszy w pliku app.config w **Eksploratora rozwiązań** i wybierz polecenie **Otwórz**.  
+1. Kliknij prawym przyciskiem myszy plik App. config w **Eksplorator rozwiązań** i wybierz polecenie **Otwórz**.  
   
      —lub—  
   
-     W przypadku pliku app.config:  
+     Jeśli istnieje plik App. config:  
   
-    1. Na **projektu** menu, wybierz **Dodaj nowy element**.  
+    1. W menu **projekt** wybierz polecenie **Dodaj nowy element**.  
   
-    2. Z **Dodaj nowy element** okna dialogowego wybierz **pliku konfiguracji aplikacji**.  
+    2. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik konfiguracji aplikacji**.  
   
     3. Kliknij przycisk **Dodaj**.  
   
-2. Znajdź `<listeners>` sekcji w `<source>` sekcji z `name` atrybutu "DefaultSource" znajdujący się w `<sources>` sekcji. `<sources>` Sekcji znajduje się w `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.  
+2. Znajdź sekcję w sekcji z `name` atrybutem "DefaultSource", który znajduje się w sekcji.`<sources>` `<source>` `<listeners>` Sekcja znajduje się `<system.diagnostics>` w sekcji w sekcji najwyższego poziomu `<configuration>`. `<sources>`  
   
-3. Dodaj ten element, aby `<listeners>` sekcji:  
+3. Dodaj ten element do `<listeners>` sekcji:  
   
     ```xml  
     <add name="SimpleLog" />  
     ```  
   
-4. Znajdź `<sharedListeners>` sekcji w `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.  
+4. `<sharedListeners>` Znajdź sekcję `<system.diagnostics>` w sekcji, w sekcji najwyższego poziomu `<configuration>` .  
   
-5. Dodaj ten element, do którego `<sharedListeners>` sekcji:  
+5. Dodaj ten element do tej `<sharedListeners>` sekcji:  
   
     ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  
     ```  
   
-     Zmień wartość właściwości `SimpleLogStrongName` silną nazwę odbiornika.  
+     Zmień wartość `SimpleLogStrongName` tak, aby była silną nazwą odbiornika.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Instrukcje: Rejestruje wyjątki](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Instrukcje: Zapisywanie wiadomości rejestru](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Przewodnik: Zmienianie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Instrukcje: Wyjątki dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Instrukcje: Zapisuj komunikaty dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Przewodnik: Zmienianie, gdzie my. Application. Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

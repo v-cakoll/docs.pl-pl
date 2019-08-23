@@ -10,40 +10,40 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 18681935d0380f9be3970fdb5d17ffb089152f59
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e30267c8aa11ce97b3b3064ff0954378dab57af
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802547"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959800"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 Określa, że co najmniej jeden zadeklarowany element programistyczny jest dostępny tylko w obrębie zestawu, który zawiera jego deklarację.  
   
 ## <a name="remarks"></a>Uwagi  
- W wielu przypadkach chcesz elementów, takich jak klasy i struktury, który będzie używany przez cały zespół nie tylko przez składnik, który je deklaruje programowania. Jednak nie można ich udostępnienie przez kod poza zestaw (na przykład, jeśli aplikacja jest zastrzeżone). Jeśli chcesz ograniczyć dostęp do elementu w ten sposób, trzeba je zadeklarować, za pomocą `Friend` modyfikator.  
+ W wielu przypadkach elementy programowania, takie jak klasy i struktury, mają być używane przez cały zestaw, nie tylko przez składnik, który deklaruje je. Jednak użytkownik może nie chcieć uzyskiwać dostępu przez kod poza zestawem (na przykład jeśli aplikacja jest zastrzeżona). Jeśli chcesz ograniczyć dostęp do elementu w ten sposób, możesz go zadeklarować za pomocą `Friend` modyfikatora.  
   
- Kod w innych klas, struktur i modułów, które są kompilowane do tej samej zestawu można uzyskać dostęp do wszystkich `Friend` elementów w tym zestawie.  
+ Kod w innych klasach, strukturach i modułach, które są kompilowane do tego samego zestawu, `Friend` mogą uzyskać dostęp do wszystkich elementów w tym zestawie.  
   
- `Friend` dostęp do często jest preferowany poziom dla elementów programowania aplikacji, a `Friend` jest dostęp do domyślnej na poziomie interfejsu, modułu, klasy lub struktury.  
+ `Friend`dostęp jest często preferowanym poziomem dla elementów programistycznych aplikacji i `Friend` jest domyślnym poziomem dostępu do interfejsu, modułu, klasy lub struktury.  
   
- Możesz użyć `Friend` tylko na poziomie modułu, interfejsu lub przestrzeni nazw. W związku z tym, kontekst deklaracji dla `Friend` element musi być plikiem źródłowym, przestrzeni nazw, interfejs, modułu, klasy lub struktury; nie może być procedurą.  
+ Można używać `Friend` tylko na poziomie modułu, interfejsu lub przestrzeni nazw. W związku z tym kontekst deklaracji dla `Friend` elementu musi być plikiem źródłowym, przestrzenią nazw, interfejsem, modułem, klasą lub strukturą. nie może to być procedura.  
 
 > [!NOTE]
-> Można również użyć [Protected Friend](protected-friend.md) modyfikator dostępu, co sprawia, że element członkowski klasy jest dostępny w obrębie tej klasy z klas pochodnych i z tego samego zestawu, w którym klasa jest zdefiniowana. Aby ograniczyć dostęp do elementu członkowskiego w w swojej klasie i klasach pochodnych tego samego zestawu, należy użyć [Private Protected](private-protected.md) modyfikator dostępu.
+> Można również użyć modyfikatora [Protected Friend](protected-friend.md) Access, który sprawia, że element członkowski klasy jest dostępny z tej klasy, z klas pochodnych i z tego samego zestawu, w którym jest zdefiniowana Klasa. Aby ograniczyć dostęp do elementu członkowskiego z poziomu jego klasy i z klas pochodnych w tym samym zestawie, należy użyć modyfikatora [Private Protected](private-protected.md) Access.
 
- Porównanie `Friend` , a druga modyfikatorach dostępu, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Aby uzyskać porównanie `Friend` i inne Modyfikatory dostępu, zobacz [poziomy dostępu w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
->  Można określić, czy innego zestawu jest zestawu friend, co pozwala na dostęp do wszystkich typów i elementów członkowskich, które są oznaczone jako `Friend`. Aby uzyskać więcej informacji, zobacz [przyjaznych zestawów](../../../standard/assembly/friend-assemblies.md).  
+> Można określić, że inny zestaw jest zestawem zaprzyjaźnionym, który umożliwia mu dostęp do wszystkich typów i elementów członkowskich, które `Friend`są oznaczone jako. Aby uzyskać więcej informacji, zobacz [zaprzyjaźnione zestawy](../../../standard/assembly/friend-assemblies.md).  
   
 ## <a name="example"></a>Przykład  
- Następujące klasy używa `Friend` modyfikator, aby zezwolić na inne elementy programowania, w ramach tego samego zestawu dostęp do niektórych elementów członkowskich.  
+ Poniższa klasa używa modyfikatora, `Friend` aby zezwolić innym elementom programistycznym w tym samym zestawie na dostęp do niektórych elementów członkowskich.  
   
  [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>Użycie  
- Możesz użyć `Friend` modyfikator w tych kontekstach:  
+ `Friend` Modyfikatora można użyć w tych kontekstach:  
   
  [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -79,7 +79,7 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny jest dost�
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](./private-protected.md)
 - [Protected Friend](./protected-friend.md)
-- [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Poziomy dostępu w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Procedury](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

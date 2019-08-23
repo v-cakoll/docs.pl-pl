@@ -5,57 +5,57 @@ ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 383cfbe72d89f4360692f002a7104f7ae0bc0bdc
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 0a6c2ea2fe2f02dc1897cb1348f4c2585b730036
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170862"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924968"
 ---
 # <a name="outputs-from-an-xsltransform"></a>Dane wyjściowe klasy XslTransform
-Ponieważ arkusze stylów można określić przy użyciu formatu danych wyjściowych `<xsl:output>` instrukcję, określając `method` atrybutu w poniższej tabeli opisano format danych wyjściowych jest, gdy <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoda służy do zapisywania danych wyjściowych i format danych wyjściowych zadeklarowany jako <xref:System.IO.Stream> lub <xref:System.IO.TextWriter>.  
+Ponieważ arkusze stylów mogą określić format danych wyjściowych przy `<xsl:output>` użyciu instrukcji `method` z atrybutem, w poniższej tabeli opisano, w jaki <xref:System.Xml.Xsl.XslTransform.Transform%2A> sposób format danych wyjściowych jest używany do pisania danych wyjściowych, a format danych wyjściowych to zadeklarowane jako <xref:System.IO.Stream> lub <xref:System.IO.TextWriter>.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w programie .NET Framework 2.0. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
+> <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w .NET Framework 2,0. Można wykonać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- Ponieważ arkusze stylów można określić przy użyciu formatu danych wyjściowych `<xsl:output>` instrukcję, określając `method` atrybutu w poniższej tabeli opisano format danych wyjściowych jest, gdy <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoda służy do zapisywania danych wyjściowych i format danych wyjściowych zadeklarowany jako <xref:System.IO.Stream> lub <xref:System.IO.TextWriter>. W poniższej tabeli opisano, co się stanie, gdy typ danych wyjściowych jest deklarowana przez <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody w połączeniu z użyciem `<xsl:output>` instrukcji:  
+ Ponieważ arkusze stylów mogą określić format danych wyjściowych przy `<xsl:output>` użyciu instrukcji `method` z atrybutem, w poniższej tabeli opisano, w jaki <xref:System.Xml.Xsl.XslTransform.Transform%2A> sposób format danych wyjściowych jest używany do pisania danych wyjściowych, a format danych wyjściowych to zadeklarowane jako <xref:System.IO.Stream> lub <xref:System.IO.TextWriter>. W poniższej tabeli opisano, <xref:System.Xml.Xsl.XslTransform.Transform%2A> co się dzieje, gdy typ danych wyjściowych jest zadeklarowany przez metodę w połączeniu z użyciem `<xsl:output>` instrukcji:  
   
-|\<Metoda: output = > atrybut|Format wyników|  
+|\<xsl: output — Metoda = > atrybut|Format wyniku|  
 |-----------------------------------------|-------------------|  
 |method="xml"|XML|  
 |method="html"|HTML|  
 |method="text"|Tekst|  
   
 > [!NOTE]
->  Uwaga: `<xsl:output>` Instrukcji jest ignorowana, gdy dane wyjściowe <xref:System.Xml.Xsl.XslTransform.Transform%2A> metodą jest <xref:System.Xml.XmlReader> lub <xref:System.Xml.XmlWriter>.  
+> Uwaga: Instrukcja jest ignorowana, jeśli dane wyjściowe <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody są <xref:System.Xml.XmlReader> lub <xref:System.Xml.XmlWriter>. `<xsl:output>`  
   
- Następujące atrybuty są obsługiwane podczas <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoda danych wyjściowych jest <xref:System.IO.Stream> lub <xref:System.IO.TextWriter>:  
+ Następujące atrybuty są obsługiwane, <xref:System.Xml.Xsl.XslTransform.Transform%2A> gdy wynikiem metody <xref:System.IO.Stream> jest lub <xref:System.IO.TextWriter>:  
   
 - encoding*  
   
-- omit-xml-declaration  
+- Pomiń deklarację XML  
   
 - niezależne  
   
-- doctype-public  
+- DOCTYPE — publiczny  
   
-- doctype-system  
+- DOCTYPE — system  
   
-- cdata-section-elements  
+- CDATA-elementy sekcji  
   
-- Zwiększ wcięcie  
+- wyświetlane  
   
     > [!NOTE]
-    >  \* kodowania. atrybut jest ignorowany podczas <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoda wysyła dane wyjściowe do <xref:System.IO.TextWriter>. Właściwość kodowania <xref:System.IO.TextWriter> zamian jest używana.  
+    > \*Atrybut Encoding jest ignorowany, gdy <xref:System.Xml.Xsl.XslTransform.Transform%2A> Metoda wysyła dane wyjściowe <xref:System.IO.TextWriter>do. Właściwość Encoding w <xref:System.IO.TextWriter> jest używana w zamian. 
   
- Następujący atrybut jest ignorowany podczas <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoda danych wyjściowych jest <xref:System.IO.Stream>:  
+ Następujący atrybut jest ignorowany, <xref:System.Xml.Xsl.XslTransform.Transform%2A> gdy wyjście metody <xref:System.IO.Stream>jest:  
   
-- Wersja: wersja jest zawsze 1.0  
+- Wersja: wersja jest zawsze 1,0  
   
 - Typ nośnika: typ nośnika  
   
-## <a name="escaping-special-characters"></a>Znaki specjalne wyjścia  
- `<xsl:text disable-output-escaping>` Tag jest używany do wskazania, czy znaki specjalne, należy wstawić do postaci XML (na przykład za pomocą `<&lt>` zamiast `"<"` symbol) lub po lewej stronie w obecnym stanie. `disable-output-escaping` Atrybut jest ignorowany podczas przekształcania w <xref:System.Xml.XmlReader> lub <xref:System.Xml.XmlWriter> obiektu i nie ma wpływu na znaki specjalne.  
+## <a name="escaping-special-characters"></a>Znaki specjalne ucieczki  
+ Tag służy do wskazywania, czy znaki specjalne muszą być wyprowadzane do formularza XML (na przykład przy użyciu `<&lt>` zamiast `"<"` symbolu) lub pozostawione w stanie obecne. `<xsl:text disable-output-escaping>` Atrybut jest ignorowany podczas przekształcania <xref:System.Xml.XmlReader> do obiektu lub <xref:System.Xml.XmlWriter> i nie ma wpływu na znaki specjalne. `disable-output-escaping`  
   
 ## <a name="see-also"></a>Zobacz także
 

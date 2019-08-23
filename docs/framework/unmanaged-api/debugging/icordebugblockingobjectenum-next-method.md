@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fd82418da26ab0cd32b007b4613d588dfa695eb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e94e4da0eea06ce9cc0110002b1def9e4dd4989
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745293"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939144"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next — Metoda
-Pobiera określoną liczbę [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) obiektów z wyliczenia, zaczynając od bieżącej pozycji.  
+Pobiera określoną liczbę obiektów [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) z wyliczenia, rozpoczynając od bieżącego położenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,13 +38,13 @@ HRESULT Next([in] ULONG  celt,
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- [in] Liczba obiektów do pobrania.  
+ podczas Liczba obiektów do pobrania.  
   
  `values`  
- [out] Tablica wskaźników do [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) obiektów.  
+ określoną Tablica wskaźników do obiektów [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) .  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby obiektów, które zostały pobrane.  
+ określoną Wskaźnik do liczby obiektów, które zostały pobrane.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Ta metoda zwraca następujące specyficzne wyniki HRESULT.  
@@ -52,24 +52,24 @@ HRESULT Next([in] ULONG  celt,
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|S_FALSE|`pceltFetched` nie równa się `celt`.|  
+|S_FALSE|`pceltFetched`nie równa `celt`się.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda funkcje, takie jak typowe wyliczający COM.  
+ Ta metoda działa jak typowy moduł wyliczający COM.  
   
- Wartości tablicy wejściowej musi wynosić co najmniej o rozmiarze `celt`. Tablica będzie wypełniona albo następnym `celt` wartości w wyliczeniu lub wszystkie pozostałe wartości w przypadku mniej niż `celt` pozostają. Po powrocie z tej metody `pceltFetched` zostaną wypełnione przy użyciu wartości, które zostały pobrane. Jeśli `values` zawiera nieprawidłowe wskaźniki lub punkty do buforu, który jest mniejszy niż `celt`, lub jeśli `pceltFetched` jest nieprawidłowego wskaźnika, wynik jest niezdefiniowany.  
+ Wartości tablicy wejściowej muszą mieć rozmiar `celt`co najmniej. Tablica zostanie uzupełniona na następne `celt` wartości w wyliczeniu lub wszystkie pozostałe wartości, jeśli `celt` nie pozostaną. Gdy ta metoda zostanie zwrócona, `pceltFetched` zostanie wypełniona liczba pobieranych wartości. Jeśli `values` zawiera nieprawidłowe wskaźniki lub wskazuje bufor, który jest mniejszy niż `celt`lub jeśli `pceltFetched` jest nieprawidłowym wskaźnikiem, wynik jest niezdefiniowany.  
   
 > [!NOTE]
->  Mimo że [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) struktury nie muszą zostać zwolnione, interfejs "ICorDebugValue" wewnątrz niej muszą zostać zwolnione.  
+> Mimo że struktura [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) nie musi zostać wydana, należy wydać interfejs "ICorDebugValue" wewnątrz niego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

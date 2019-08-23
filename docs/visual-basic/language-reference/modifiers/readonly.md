@@ -10,33 +10,33 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: 1a486d0fadce8135fe01d9eecd611081c986bfae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01c441576cb4247933c053f2043296733f99fdeb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647688"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965419"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
-Określa, że zmiennej lub właściwości mogą być odczytywane, ale nie jest zapisywany.  
+Określa, że zmienna lub właściwość może być odczytana, ale nie zapisywana.  
   
 ## <a name="remarks"></a>Uwagi  
   
-## <a name="rules"></a>reguły  
+## <a name="rules"></a>Przepisy  
   
-- **Kontekst deklaracji.** Możesz użyć `ReadOnly` tylko na poziomie modułu. Oznacza to, że kontekst deklaracji `ReadOnly` elementu musi być klasy, struktury lub modułu, a nie może być plikiem źródłowym, przestrzeń nazw lub procedury.  
+- **Kontekst deklaracji.** Można używać `ReadOnly` tylko na poziomie modułu. Oznacza to, że kontekst deklaracji dla `ReadOnly` elementu musi być klasą, strukturą lub modułem, i nie może być plikiem źródłowym, przestrzenią nazw ani procedurą.  
   
-- **Modyfikatory połączone.** Nie można określić `ReadOnly` wraz z `Static` w tej samej deklaracji.  
+- **Połączone modyfikatory.** Nie można określić `ReadOnly` razem z `Static` w tej samej deklaracji.  
   
-- **Przypisywanie wartości.** Korzystanie z kodu `ReadOnly` właściwości nie można ustawić jej wartość. Jednak kod, który ma dostęp do podstawowej magazynu można przypisać lub zmień wartość w dowolnym momencie.  
+- **Przypisywanie wartości.** Kod zużywający `ReadOnly` właściwość nie może mieć ustawionej wartości. Jednak kod, który ma dostęp do magazynu bazowego, może przypisywać lub zmieniać wartość w dowolnym momencie.  
   
-     Można przypisać wartości do `ReadOnly` zmiennych, tylko w jego deklaracji lub w konstruktorze klasy lub struktury, w którym jest zdefiniowany.  
+     Można przypisać wartość do `ReadOnly` zmiennej tylko w swojej deklaracji lub w konstruktorze klasy lub struktury, w której jest zdefiniowana.  
   
-## <a name="when-to-use-a-readonly-variable"></a>Kiedy należy używać zmiennej tylko do odczytu  
- Istnieją sytuacje, w których nie można użyć [instrukcja Const](../../../visual-basic/language-reference/statements/const-statement.md) zadeklarować i przypisać wartość stałą. Na przykład `Const` instrukcji, nie może zaakceptować typu danych, którą chcesz przypisać lub mogą być gotowy do obliczenia wartości w czasie kompilacji z wyrażeniem stałym. Możesz nawet nie wiedzieć, wartość w czasie kompilacji. W takich przypadkach można użyć `ReadOnly` zmienną do przechowywania wartości stałej.  
+## <a name="when-to-use-a-readonly-variable"></a>Kiedy używać zmiennej tylko do odczytu  
+ Istnieją sytuacje, w których nie można użyć [instrukcji const](../../../visual-basic/language-reference/statements/const-statement.md) do zadeklarowania i przypisania wartości stałej. Na przykład `Const` instrukcja może nie akceptować typu danych, który chcesz przypisać, lub nie można obliczyć wartości w czasie kompilacji przy użyciu wyrażenia stałej. Wartość w czasie kompilacji może nie być jeszcze znana. W takich przypadkach można użyć `ReadOnly` zmiennej do przechowywania wartości stałej.  
   
 > [!IMPORTANT]
->  Jeśli typ danych zmiennej jest typem referencyjnym, takich jak tablica lub wystąpienia klasy, jej członków można zmienić, nawet jeśli sama zmienna jest `ReadOnly`. Ilustruje to poniższy przykład.  
+> Jeśli typ danych zmiennej jest typem referencyjnym, takim jak tablica lub wystąpienie klasy, jego elementy członkowskie można zmienić, nawet jeśli sama zmienna jest `ReadOnly`. Ilustruje to poniższy przykład.  
   
  `ReadOnly characterArray() As Char = {"x"c, "y"c, "z"c}`  
   
@@ -46,16 +46,16 @@ Określa, że zmiennej lub właściwości mogą być odczytywane, ale nie jest z
   
  `End Sub`  
   
- Podczas inicjowania tablicy, wskazywana przez `characterArray()` przechowuje "x", "y" i "z". Ponieważ zmienna `characterArray` jest `ReadOnly`, jego wartość nie można zmienić po jego zainicjowaniu; będącego, nowej tablicy nie można przypisać do niej. Można jednak zmienić wartości co najmniej jednego elementy członkowskie tablicy. Po wywołaniu do procedury `changeArrayElement`, tablicy wskazywany przez `characterArray()` przechowuje "x", "M" i "z".  
+ Po zainicjowaniu tablica wskazywana przez `characterArray()` zawiera wartości "x", "y" i "z". Ponieważ zmienna `characterArray` to `ReadOnly`, nie można zmienić jej wartości, gdy jest ona zainicjowana; oznacza to, że nie można przypisać do niej nowej tablicy. Można jednak zmienić wartości co najmniej jednego elementu członkowskiego tablicy. Po wywołaniu procedury `changeArrayElement`tablica wskazywana przez `characterArray()` posiada "x", "M" i "z".  
   
- Należy pamiętać, że jest to podobne do deklarowania parametr procedury, aby być [ByVal](../../../visual-basic/language-reference/modifiers/byval.md), które uniemożliwia zmianę z samym argumentem wywoływania procedury, ale pozwala zmienić jej członków.  
+ Należy zauważyć, że jest to podobne do deklarowania parametru procedury jako [ByVal](../../../visual-basic/language-reference/modifiers/byval.md), co uniemożliwia procedury zmiany argumentu wywołującego, ale pozwala na zmianę jego elementów członkowskich.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie zdefiniowano `ReadOnly` właściwości daty, na którym został zatrudniony pracownika. Magazyny klasy wartość wewnętrznie jako `Private` zmiennej, a tylko kod wewnątrz klasy może zmienić tę wartość. Jednak właściwość jest `Public`, i wszelki kod, który mogą uzyskiwać dostęp do tej klasy może być odczytana właściwość.  
+ W poniższym przykładzie zdefiniowano `ReadOnly` właściwość dla daty zatrudnienia pracownika. Klasa przechowuje wartość właściwości wewnętrznie jako `Private` zmienną i tylko kod wewnątrz klasy może zmienić tę wartość. Jednak właściwość jest `Public`, a każdy kod, który może uzyskać dostęp do klasy, może odczytać właściwość.  
   
  [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]  
   
- `ReadOnly` Modyfikator mogą być używane w tych kontekstach:  
+ `ReadOnly` Modyfikator może być używany w tych kontekstach:  
   
  [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

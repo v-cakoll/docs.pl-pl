@@ -2,21 +2,21 @@
 title: <transport> dla <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: a6d3dd2c24e90bdcdc6520e62dcc1dbe7ce797f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e76d0962ea7b4714ef6ca1f9d4c4c3e23df5b6f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788352"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934669"
 ---
-# <a name="transport-of-netnamedpipebinding"></a>\<transport > z \<netNamedPipeBinding >
-Określa ustawienia zabezpieczenia transportu nazwanego potoku.  
+# <a name="transport-of-netnamedpipebinding"></a>\<Transport > \<NetNamedPipeBinding >
+Definiuje ustawienia zabezpieczeń transportu dla nazwanego potoku.  
   
  \<system.ServiceModel>  
-\<powiązania >  
+\<> powiązań  
 \<netNamedPipeBinding>  
-\<Powiązanie >  
-\<security>  
+\<> powiązania  
+\<> zabezpieczeń  
 \<transport>  
   
 ## <a name="syntax"></a>Składnia  
@@ -38,7 +38,7 @@ Określa ustawienia zabezpieczenia transportu nazwanego potoku.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|protectionLevel|Definiuje poziom ochrony nazwanego potoku. Podpisywania wiadomości zmniejsza ryzyko związane z innej naruszeniu komunikat, gdy są przesyłane. Szyfrowanie zapewnia ochronę poufności poziom danych, podczas transportu. Prawidłowe wartości są następujące:<br /><br /> -Brak: Brak ochrony.<br />— Logowanie: Komunikaty są podpisane.<br />-EncryptAndSign: Komunikaty są szyfrowane i podpisany.<br /><br /> Wartość domyślna to EncryptAndSign.|  
+|protectionLevel|Definiuje poziom ochrony nazwanego potoku. Komunikaty podpisywania zmniejszają ryzyko naruszenia przez osobę trzecią komunikatu podczas jego przesyłania. Szyfrowanie zapewnia prywatność na poziomie danych podczas transportu. Prawidłowe wartości to:<br /><br /> Dawaj Brak ochrony.<br />Zapis Komunikaty są podpisane.<br />EncryptAndSign Komunikaty są szyfrowane i podpisane.<br /><br /> Wartość domyślna to EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -47,7 +47,7 @@ Określa ustawienia zabezpieczenia transportu nazwanego potoku.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania.|  
+|[\<> zabezpieczeń](security-of-netnamedpipebinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania.|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -55,8 +55,8 @@ Określa ustawienia zabezpieczenia transportu nazwanego potoku.
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<> powiązania](../../../misc/binding.md)

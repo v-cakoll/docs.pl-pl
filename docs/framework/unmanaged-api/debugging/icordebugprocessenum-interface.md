@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3651a4be94fa624d0dd6ab64b8c3f8169945de0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81653c69353b60d7287240505f53b26552c21774
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987626"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960993"
 ---
 # <a name="icordebugprocessenum-interface"></a>ICorDebugProcessEnum, interfejs
 Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugProcess.  
@@ -30,21 +30,21 @@ Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugProcess.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|Pobiera określoną liczbę `ICorDebugProcess` wystąpień z wyliczenia, zaczynając od bieżącej pozycji.|  
+|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|Pobiera określoną liczbę `ICorDebugProcess` wystąpień z wyliczenia, rozpoczynając od bieżącego położenia.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
+> Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

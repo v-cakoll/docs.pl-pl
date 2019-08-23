@@ -11,15 +11,15 @@ helpviewer_keywords:
 - forms [Windows Forms], sounds
 - examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
-ms.openlocfilehash: 0aa01f600873dd8853e1c33d5443448835e11455
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a72f88c05fb21c11864058ffbe81c1957525375
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913435"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966509"
 ---
 # <a name="how-to-play-a-beep-from-a-windows-form"></a>Instrukcje: odtwarzanie sygnału dźwiękowego z formularza systemu Windows
-W tym przykładzie odtwarza sygnał dźwiękowy w czasie wykonywania.  
+Ten przykład odtwarza sygnał dźwiękowy w czasie wykonywania.  
   
 ## <a name="example"></a>Przykład  
   
@@ -37,14 +37,14 @@ public void onePing()
 ```  
   
 > [!NOTE]
->  Dźwięk w C# przykładowy kod jest określany przez <xref:System.Media.SystemSounds.Beep%2A> dźwięku ustawienia systemowego. Aby uzyskać więcej informacji, zobacz <xref:System.Media.SystemSounds>.  
+> Dźwięk odtwarzany w przykładzie C# kodu jest określany na <xref:System.Media.SystemSounds.Beep%2A> podstawie ustawienia dźwięku systemowego. Aby uzyskać więcej informacji, zobacz <xref:System.Media.SystemSounds>.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Aby uzyskać C#, w tym przykładzie wymaga odwołania do <xref:System.Media?displayProperty=nameWithType> przestrzeni nazw.  
+ W C#przypadku, ten przykład wymaga odwołania do <xref:System.Media?displayProperty=nameWithType> przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:Microsoft.VisualBasic.Interaction.Beep%2A>
 - <xref:System.Media.SoundPlayer>
-- [Instrukcje: Odtwarzanie dźwięku systemowego za pomocą formularza Windows](how-to-play-a-system-sound-from-a-windows-form.md)
-- [Instrukcje: Odtwarzanie dźwięku za pomocą formularza Windows](how-to-play-a-sound-from-a-windows-form.md)
+- [Instrukcje: Odtwórz dźwięk systemowy z formularza systemu Windows](how-to-play-a-system-sound-from-a-windows-form.md)
+- [Instrukcje: Odtwórz dźwięk z formularza systemu Windows](how-to-play-a-sound-from-a-windows-form.md)

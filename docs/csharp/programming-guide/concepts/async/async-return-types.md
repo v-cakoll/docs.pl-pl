@@ -2,12 +2,12 @@
 title: Asynchroniczne typy zwracane (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: f9ec8c9dc9e51fa3256f8bbd523c7945efe866e0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f40592038ce16173e6dced5e8bcb914cfeb1b1f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595770"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922039"
 ---
 # <a name="async-return-types-c"></a>Asynchroniczne typy zwracane (C#)
 Metody asynchroniczne mogą mieć następujące typy zwracane:
@@ -36,7 +36,7 @@ Gdy `GetLeisureHours` jest wywoływana z w wyrażeniu await `ShowTodaysInfo` w m
 Można lepiej zrozumieć `GetLeisureHours` `await`, jak to się dzieje, oddzielając wywołanie od aplikacji, jak pokazano w poniższym kodzie. Wywołanie metody `GetLeisureHours` , która nie jest bezpośrednio oczekiwane `Task<int>`, zwraca, jak oczekiwano od deklaracji metody. Zadanie jest przypisane do `integerTask` zmiennej w przykładzie. Ponieważ `integerTask` jest,zawiera<xref:System.Threading.Tasks.Task%601.Result> właściwość typu `TResult`. <xref:System.Threading.Tasks.Task%601> W tym przypadku `TResult` reprezentuje typ Integer. Gdy `await` jest stosowany do `integerTask`, wyrażenie await oblicza `integerTask`zawartość <xref:System.Threading.Tasks.Task%601.Result%2A> właściwości. Wartość jest przypisana do `ret` zmiennej.  
   
 > [!IMPORTANT]
->  <xref:System.Threading.Tasks.Task%601.Result%2A> Właściwość jest właściwością blokującą. Jeśli spróbujesz uzyskać dostęp do niego przed ukończeniem zadania, wątek, który jest obecnie aktywny, jest blokowany do momentu zakończenia zadania, a wartość jest dostępna. W większości przypadków należy uzyskać dostęp do wartości przy użyciu `await` zamiast bezpośrednio uzyskać dostęp do właściwości. <br/> W poprzednim przykładzie pobrano wartość <xref:System.Threading.Tasks.Task%601.Result%2A> właściwości w celu zablokowania wątku głównego, tak `ShowTodaysInfo` aby Metoda mogła zakończyć wykonywanie przed zakończeniem działania aplikacji.  
+> <xref:System.Threading.Tasks.Task%601.Result%2A> Właściwość jest właściwością blokującą. Jeśli spróbujesz uzyskać dostęp do niego przed ukończeniem zadania, wątek, który jest obecnie aktywny, jest blokowany do momentu zakończenia zadania, a wartość jest dostępna. W większości przypadków należy uzyskać dostęp do wartości przy użyciu `await` zamiast bezpośrednio uzyskać dostęp do właściwości. <br/> W poprzednim przykładzie pobrano wartość <xref:System.Threading.Tasks.Task%601.Result%2A> właściwości w celu zablokowania wątku głównego, tak `ShowTodaysInfo` aby Metoda mogła zakończyć wykonywanie przed zakończeniem działania aplikacji.  
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   

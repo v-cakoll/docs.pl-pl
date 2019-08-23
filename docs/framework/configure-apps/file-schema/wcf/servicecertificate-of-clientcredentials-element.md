@@ -1,23 +1,23 @@
 ---
-title: <serviceCertificate> z <clientCredentials> — Element
+title: <serviceCertificate><clientCredentials> elementu
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-ms.openlocfilehash: 4fe196ef8737c7abde939e36c2bb7afd5a0d86b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3013d0f7efd3014892cf6400447d708809c5fcd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670303"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936340"
 ---
-# <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate > z \<clientCredentials > Element
-Określa certyfikat używany podczas uwierzytelniania usługi dla klienta.  
+# <a name="servicecertificate-of-clientcredentials-element"></a>\<> serviceCertificate obiektu \<ClientCredentials > elementu
+Określa certyfikat, który ma być używany podczas uwierzytelniania usługi dla klienta.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<endpointBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<clientCredentials>  
-\<serviceCertificate>  
+\<> serviceCertificate  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,20 +35,20 @@ Określa certyfikat używany podczas uwierzytelniania usługi dla klienta.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<defaultCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)|Określa certyfikat X.509, który ma być używany gdy usługa lub STS nie zapewnia go poprzez protokół negocjacji.|  
-|[\<scopedCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|Reprezentuje kolekcję certyfikatów X.509 dostarczonych przez określone usługi (w zakresie) do uwierzytelniania. Ta kolekcja jest zazwyczaj pozwala ustalić certyfikaty usługi usługi tokenu zabezpieczeń w federacyjnym scenariuszu.|  
-|[\<Uwierzytelnianie >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)|Określa zachowania uwierzytelnienia dla certyfikatów usługi używanych przez klienta.|  
+|[\<defaultCertificate>](defaultcertificate-element.md)|Określa certyfikat X. 509, który ma być używany, gdy usługa lub STS nie zapewnia go za pośrednictwem protokołu negocjacji.|  
+|[\<scopedCertificates >](scopedcertificates-element.md)|Reprezentuje kolekcję certyfikatów X. 509 dostarczonych przez określone usługi (w zakresie) do uwierzytelniania. Ta kolekcja jest zwykle używana do określania certyfikatów usługi dla usług tokenów zabezpieczających w scenariuszu federacyjnym.|  
+|[\<> uwierzytelniania](authentication-of-servicecertificate-element.md)|Określa zachowania uwierzytelniania dla certyfikatów usługi używanych przez klienta programu.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Określa poświadczenia używane przez klienta do samodzielnego uwierzytelnienia usługi.|  
+|[\<clientCredentials>](clientcredentials.md)|Określa poświadczenia używane przez klienta do samodzielnego uwierzytelnienia w usłudze.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element konfiguracji określa ustawienia używane przez klienta, aby zweryfikować certyfikat przedstawiony przez usługę za pomocą uwierzytelniania protokołu SSL. Zawiera ona także dowolny certyfikat dla usługi, która jest jawnie skonfigurowany na komputerze klienckim na potrzeby szyfrowania wiadomości w usłudze korzystanie z zabezpieczeń komunikatów.  
+ Ten element konfiguracji określa ustawienia używane przez klienta do weryfikowania certyfikatu przedstawionego przez usługę przy użyciu uwierzytelniania SSL. Zawiera również certyfikat dla usługi, która jest jawnie skonfigurowana na kliencie do szyfrowania komunikatów w usłudze przy użyciu zabezpieczeń komunikatów.  
   
- Atrybuty `serviceCertificate` elementu są takie same atrybuty [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
+ Atrybuty `serviceCertificate` elementu są identyczne z atrybutami [ \<ClientCertificate >](clientcertificate-of-clientcredentials-element.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -58,7 +58,7 @@ Określa certyfikat używany podczas uwierzytelniania usługi dla klienta.
 - <xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
-- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)
-- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Zachowania zabezpieczeń](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Zabezpieczanie klientów](../../../wcf/securing-clients.md)
+- [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)

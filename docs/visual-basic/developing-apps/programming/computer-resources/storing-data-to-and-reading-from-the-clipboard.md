@@ -1,5 +1,5 @@
 ---
-title: Zapisywanie danych i odczytywania ze Schowka (Visual Basic)
+title: Przechowywanie danych i odczytywanie ich ze schowka (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
@@ -9,69 +9,69 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-ms.openlocfilehash: 19d0fcafb76c40a00939de59968dfaf2e6bd683c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7693f6b5dc74e17686cd7d2667f32adbde9df80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921306"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916520"
 ---
-# <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Zapisywanie danych i odczytywania ze Schowka (Visual Basic)
-Schowek może służyć do przechowywania danych, takich jak tekst i obrazy. Ponieważ Schowek jest współużytkowany przez wszystkie aktywne procesy, może służyć do przesyłania danych między nimi. `My.Computer.Clipboard` Pozwala łatwo uzyskiwać dostęp do Schowka, a także odczytywanie i zapisywanie do niego.  
+# <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Przechowywanie danych i odczytywanie ich ze schowka (Visual Basic)
+Schowek może służyć do przechowywania danych, takich jak tekst i obrazy. Ze względu na to, że Schowek jest współużytkowany przez wszystkie aktywne procesy, można go użyć do transferowania danych między nimi. `My.Computer.Clipboard` Obiekt umożliwia łatwe uzyskiwanie dostępu do schowka oraz odczytywanie i zapisywanie w nim.  
   
-## <a name="reading-from-the-clipboard"></a>Odczytywanie ze Schowka  
- Użyj <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A> metodę w celu odczytania tekstu w Schowku. Poniższy kod odczytuje tekst i wyświetla go w oknie komunikatu. Musi to być tekst są przechowywane w Schowku, na przykład by działała poprawnie.  
+## <a name="reading-from-the-clipboard"></a>Odczytywanie ze schowka  
+ Użyj metody <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A> , aby odczytać tekst w Schowku. Poniższy kod odczytuje tekst i wyświetla go w oknie komunikatu. Aby przykład mógł działać poprawnie, musi być zapisany tekst w Schowku.  
   
  [!code-vb[VbVbcnMyClipboard#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#4)]  
   
- Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu, znajduje się w **aplikacji z formularzem Windows > Schowka**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
+ Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu znajduje się w **Windows Forms aplikacje > schowka**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
   
- Użyj <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> metodę, aby pobrać obraz ze Schowka. W tym przykładzie sprawdza, czy obraz w Schowku przed ich pobraniem i przypisywanie jej do `PictureBox1`.  
+ Użyj metody <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> , aby pobrać obraz ze schowka. Ten przykład sprawdza, czy w schowku znajduje się obraz przed pobraniem go i przypisanie do programu `PictureBox1`.  
   
  [!code-vb[VbResourceTasks#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#16)]  
   
- Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu, znajduje się w **aplikacji z formularzem Windows > Schowka**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
+ Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu znajduje się w **Windows Forms aplikacje > schowka**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
   
- Elementy umieszczane w Schowku zostanie utrzymany, nawet w przypadku, po zamknięciu aplikacji.  
+ Elementy umieszczone w schowku będą przechowywane nawet po zamknięciu aplikacji.  
   
-## <a name="determining-the-type-of-file-stored-in-the-clipboard"></a>Określanie typu plików przechowywanych w Schowku  
- Dane w Schowku może potrwać szereg różnych formularzy, takich jak tekst, plik dźwiękowy lub obrazu. Aby ustalić, jakiego rodzaju plik znajduje się na Schowka, możesz używać metod takich jak <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A>, i <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A>. <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> Metody można użyć, jeśli ma format niestandardowy, który chcesz sprawdzić.  
+## <a name="determining-the-type-of-file-stored-in-the-clipboard"></a>Określanie typu pliku przechowywanego w schowku  
+ Dane w schowku mogą przyjmować różne formy, takie jak tekst, plik dźwiękowy lub obraz. Aby określić, jakie sortowanie plików znajduje się w schowku, możesz <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>użyć metod takich jak <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>,, i <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A>. Metody <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> można użyć, jeśli masz format niestandardowy, który chcesz sprawdzić.  
   
- Użyj `ContainsImage` funkcję, aby określić, czy dane zawarte w Schowku jest obrazem. Poniższy kod sprawdza, czy dane są obrazu, a następnie odpowiednio raporty.  
+ Użyj funkcji `ContainsImage` , aby określić, czy dane zawarte w schowku są obrazem. Poniższy kod sprawdza, czy dane są odpowiednio obrazem i raportami.  
   
  [!code-vb[VbResourceTasks#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#13)]  
   
-## <a name="clearing-the-clipboard"></a>Wyczyszczenie Schowka  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear%2A> Metoda czyści Schowka. Ponieważ Schowek jest współużytkowany przez inne procesy, czyszczenie może mieć wpływ na tych procesów.  
+## <a name="clearing-the-clipboard"></a>Czyszczenie schowka  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear%2A> Metoda czyści schowek. Ze względu na to, że Schowek jest współużytkowany przez inne procesy, jego czyszczenie może mieć wpływ na te procesy.  
   
- Poniższy kod przedstawia sposób użycia `Clear` metody.  
+ Poniższy kod ilustruje sposób używania `Clear` metody.  
   
  [!code-vb[VbVbcnMyClipboard#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#3)]  
   
-## <a name="writing-to-the-clipboard"></a>Zapisywanie do Schowka  
- Użyj <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText%2A> metodę, aby wpisać tekst do Schowka. Poniższy kod zapisuje ciąg "To jest testowany ciąg" do Schowka.  
+## <a name="writing-to-the-clipboard"></a>Zapisywanie w schowku  
+ Użyj metody <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText%2A> , aby zapisać tekst do Schowka. Poniższy kod zapisuje ciąg "to jest ciąg testowy" do Schowka.  
   
  [!code-vb[VbVbcnMyClipboard#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#1)]  
   
- `SetText` Metoda może akceptować parametr formatu, który zawiera typ <xref:System.Windows.Forms.TextDataFormat>. Poniższy kod zapisuje ciąg "To jest testowany ciąg" do Schowka jako tekst w formacie RTF.  
+ Metoda może przyjmować parametr formatu, który zawiera <xref:System.Windows.Forms.TextDataFormat>typ. `SetText` Poniższy kod zapisuje ciąg "to jest ciąg testowy" do Schowka jako tekst RTF.  
   
  [!code-vb[VbVbcnMyClipboard#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#2)]  
   
- Użyj <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> metodę, aby zapisywać dane do Schowka. Ten przykład Przepisuje `DataObject` `dataChunk` do Schowka w niestandardowy formacie `specialFormat`.  
+ Użyj metody <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> , aby zapisać dane do Schowka. Ten przykład zapisuje `DataObject` `dataChunk` do Schowka w formacie `specialFormat`niestandardowym.  
   
  [!code-vb[VbVbcnMyClipboard#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#7)]  
   
- Użyj <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetAudio%2A> metodę, aby zapisać dane audio do Schowka. Ten przykład tworzy tablicę bajtów `musicReader`, odczytuje plik `cool.wav` do niego, a następnie zapisuje je do Schowka.  
+ Użyj metody <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetAudio%2A> , aby zapisać dane audio w Schowku. Ten przykład tworzy tablicę `musicReader`bajtową, odczytuje do niej plik `cool.wav` , a następnie zapisuje ją w Schowku.  
   
  [!code-vb[VbResourceTasks#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#5)]  
   
 > [!IMPORTANT]
->  Ponieważ inni użytkownicy mogą uzyskać dostępu do Schowka, nie należy używać go do przechowywania poufne informacje, takie jak hasła lub poufnych danych.  
+> Ze względu na to, że można uzyskać dostęp do schowka przez innych użytkowników, nie należy używać go do przechowywania poufnych informacji, takich jak hasła lub dane poufne.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>
 - <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>
 - <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>
-- [Instrukcje: Odczytywanie danych o obiektach z pliku XML](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
-- [Instrukcje: Zapisywania obiektów danych do pliku XML](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [Instrukcje: Odczytywanie danych obiektu z pliku XML](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
+- [Instrukcje: Zapisz dane obiektu w pliku XML](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)

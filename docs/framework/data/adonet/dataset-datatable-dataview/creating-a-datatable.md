@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: 272976d3c581d3e8a5860ba5cf3f9695ca370d8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b56d2f8cd46f3184f1001c8bd6a70dbfc4968968
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034414"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937031"
 ---
 # <a name="creating-a-datatable"></a>Tworzenie elementu DataTable
-A <xref:System.Data.DataTable>, która reprezentuje jedną tabelę danych relacyjnych w pamięci, mogą być tworzone i używane niezależnie lub mogą być używane przez inne obiekty .NET Framework najczęściej jako członek <xref:System.Data.DataSet>.  
+A <xref:System.Data.DataTable>, który reprezentuje jedną tabelę danych relacyjnych w pamięci, może być tworzony i używany niezależnie lub może być używany przez inne obiekty .NET Framework, najczęściej jako element członkowski <xref:System.Data.DataSet>.  
   
- Możesz utworzyć **DataTable** , używając odpowiedniego obiektu **DataTable** konstruktora. Możesz dodać go do **DataSet** przy użyciu **Dodaj** metodę, aby dodać go do **DataTable** obiektu **tabel** kolekcji.  
+ Obiekt **DataTable** można utworzyć przy użyciu odpowiedniego konstruktora **DataTable** . Możesz dodać go do **zestawu danych** za pomocą metody **Add** , aby dodać go do kolekcji **tabel** obiektu **DataTable** .  
   
- Można również utworzyć **DataTable** obiektów w ramach **DataSet** przy użyciu **wypełnienia** lub **FillSchema** metody  **Element DataAdapter** obiektu, albo z wstępnie zdefiniowanych lub wywnioskowane uprawnienie XML przy użyciu schematu **ReadXml**, **ReadXmlSchema**, lub **InferXmlSchema** metody **zestawu danych**. Należy pamiętać, że po dodaniu **DataTable** jako członek **tabel** kolekcji jednego **DataSet**, nie można dodać go do kolekcji tabel innych **Zestawu danych**.  
+ Można również tworzyć obiekty **DataTable** w ramach **zestawu danych** przy użyciu metod **Fill** lub **FillSchema** obiektu **DataAdapter** lub ze wstępnie zdefiniowanego lub wywnioskowanego schematu XML przy użyciu **ReadXml**, **ReadXmlSchema** lub **InferXmlSchema** metody **zestawu danych**. Należy pamiętać, że po dodaniu **DataTable** jako członka kolekcji **tabel** jednego **zestawu danych**nie można dodać go do kolekcji tabel innego **zestawu danych**.  
   
- Kiedy należy najpierw utworzyć **DataTable**, nie ma schematu (struktury). Aby zdefiniować schemat tabeli, należy utworzyć i dodać <xref:System.Data.DataColumn> obiekty do **kolumn** kolekcji tabeli. Można również zdefiniować kolumna klucza podstawowego dla tabeli i utworzyć i dodać **ograniczenie** obiekty do **ograniczenia** kolekcji tabeli. Po zdefiniowaniu schematu dla **DataTable**, można dodać wiersze danych do tabeli przez dodanie **DataRow** obiekty do **wierszy** kolekcji tabeli.  
+ Podczas pierwszej tworzenia **elementu DataTable**nie ma schematu (czyli struktury). Aby zdefiniować schemat tabeli, należy utworzyć i dodać <xref:System.Data.DataColumn> obiekty do kolekcji **kolumn** tabeli. Istnieje również możliwość zdefiniowania kolumny klucza podstawowego dla tabeli oraz utworzenia i dodania obiektów **ograniczeń** do kolekcji **ograniczenia** tabeli. Po zdefiniowaniu schematu dla **elementu DataTable**można dodać wiersze danych do tabeli przez dodanie obiektów **DataRow** do kolekcji **Rows** tabeli.  
   
- Nie należy podać wartość <xref:System.Data.DataTable.TableName%2A> właściwości po utworzeniu **DataTable**; można określić właściwości w innym czasie, lub możesz pozostawić je puste. Jednak podczas dodawania tabeli bez **TableName** wartość **DataSet**, tabela zostanie podana przyrostowe domyślną nazwę tabeli*N*, począwszy od Table0 "tabeli".  
+ Nie trzeba podawać wartości <xref:System.Data.DataTable.TableName%2A> właściwości podczas tworzenia **elementu DataTable**; można określić właściwość w innym czasie lub pozostawić ją pustą. Jednak po dodaniu tabeli bez wartości TableName do **zestawu danych**w tabeli zostanie nadana przyrostowa domyślna nazwa tabeli*N*, rozpoczynając od "Tabela" dla TABLE0.  
   
 > [!NOTE]
->  Firma Microsoft zaleca, aby unikać "Tabela*N*" konwencji nazewnictwa, gdy użytkownik poda **TableName** wartości, ponieważ nazwa podasz może spowodować konflikt z istniejącą nazwą tabeli domyślne w **zestawu danych** . Jeśli podana nazwa już istnieje, zostanie zgłoszony wyjątek.  
+> Zalecamy uniknięcie konwencji nazewnictwa "Table*N*" w przypadku podania wartości **TableName** , ponieważ wprowadzona nazwa może powodować konflikt z istniejącą domyślną nazwą tabeli w **zestawie danych**. Jeśli podana nazwa już istnieje, zgłaszany jest wyjątek.  
   
- Poniższy przykład tworzy wystąpienie **DataTable** obiektu i przypisuje mu nazwę "Klientów."  
+ Poniższy przykład tworzy wystąpienie obiektu **DataTable** i przypisuje mu nazwę "Customers".  
   
 ```vb  
 Dim workTable as DataTable = New DataTable("Customers")  
@@ -36,7 +36,7 @@ Dim workTable as DataTable = New DataTable("Customers")
 DataTable workTable = new DataTable("Customers");  
 ```  
   
- Poniższy przykład tworzy wystąpienie **DataTable** przez dodanie jej do **tabel** zbiór **zestawu danych**.  
+ Poniższy przykład tworzy wystąpienie **elementu DataTable** przez dodanie go do kolekcji **Tables** **zestawu danych**.  
   
 ```vb  
 Dim customers As DataSet = New DataSet  
@@ -57,4 +57,4 @@ DataTable customersTable = customers.Tables.Add("CustomersTable");
 - [Wypełnianie zestawu danych z elementu DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
 - [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
 - [Ładowanie informacji o schemacie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

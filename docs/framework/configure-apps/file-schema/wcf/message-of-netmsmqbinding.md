@@ -2,16 +2,16 @@
 title: <message> dla <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: c623b7daf1e91c9c1800b9653525cd51b1087506
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b163dcb08e9656e3bde9c7fbb71fa1c92c9957ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768956"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931514"
 ---
-# <a name="message-of-netmsmqbinding"></a>\<komunikat > z \<netMsmqBinding >
+# <a name="message-of-netmsmqbinding"></a>\<> \<komunikatu usługi msmqbinding >
 
-Definiuje ustawienia zabezpieczeń wiadomości protokołu SOAP w tym `netMsmqBinding` powiązania.
+Definiuje ustawienia zabezpieczeń wiadomości protokołu SOAP dla tego `netMsmqBinding` powiązania.
 
 ```xml
 <system.ServiceModel>
@@ -43,8 +43,8 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|algorithmSuite|Ustawia komunikat algorytmów szyfrowania i klucz wrap, które są używane do uzyskania zabezpieczenia oparte na komunikatu dla komunikatów wysyłanych za pośrednictwem transportu MSMQ.<br /><br /> Wartość domyślna to `Aes256`. Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|
-|clientCredentialType|Określa typ poświadczenia do użycia podczas przeprowadzania uwierzytelniania klienta dla wiadomości wysłanych przez usługę transportową MSMQ. Prawidłowe wartości są następujące:<br /><br /> -Brak: Dzięki usłudze na współdziałanie z anonimowych klientów. Usługa ani klient wymaga poświadczeń.<br />-Windows: Dzięki temu wymiany protokołu SOAP i znajdować się w kontekście uwierzytelnionych poświadczeń Windows. To jest zawsze przeprowadza uwierzytelnianie za pomocą protokołu Kerberos.<br />— Nazwa użytkownika: Dzięki temu usługi wymagać który uwierzytelnienia klienta przy użyciu poświadczeń UserName. Poświadczenia w takim przypadku należy także określić przy użyciu `clientCredentials` zachowanie **Uwaga:**  Windows Communication Foundation (WCF) nie obsługuje wysyłanie skrótu hasła lub wyprowadzanie kluczy przy użyciu hasła i rozpoczęcie używania te klucze dla zabezpieczenia wiadomości. Usługi WCF wymusza w związku z tym, że programu exchange jest zabezpieczone, korzystając z poświadczeń UserName. Ten tryb wymaga określenia certyfikatu usługi na po stronie klienta za pomocą `clientCredential` zachowanie i `serviceCertificate`. <br /><br /> -Certyfikat: Dzięki temu usługi wymagać który uwierzytelnienia klienta za pomocą certyfikatu. Poświadczeń klienta w tym przypadku musi być określona za pomocą `clientCredentials` zachowanie. Poświadczenia usługi w tym przypadku należy także określić przy użyciu `clientCredentials` zachowanie, określając `serviceCertificate`.<br />-CardSpace: Dzięki temu usługi wymagać, za pomocą CardSpace uwierzytelnienia klienta. `serviceCertificate` Musi być obsługiwana w `clientCredential` zachowanie.<br /><br /> Wartość domyślna to `Windows`. Ten atrybut jest typu <xref:System.ServiceModel.MessageCredentialType>.|
+|algorithmSuite|Ustawia szyfrowanie komunikatów i algorytmy zawijania kluczy, które są używane do uzyskania zabezpieczeń opartych na komunikatach wysyłanych za pośrednictwem transportu MSMQ.<br /><br /> Wartość domyślna to `Aes256`. Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|
+|clientCredentialType|Określa typ poświadczeń, które mają być używane podczas uwierzytelniania klienta dla wiadomości wysyłanych za pośrednictwem transportu MSMQ. Prawidłowe wartości to:<br /><br /> Dawaj Dzięki temu usługa może korzystać z anonimowych klientów. Żadna usługa ani klient nie wymagają podania poświadczeń.<br />Systemy Dzięki temu wymiana protokołu SOAP będzie odbywać się w ramach uwierzytelnionego kontekstu poświadczeń systemu Windows. Jest to zawsze wykonywane uwierzytelnianie oparte na protokole Kerberos.<br />Uż Dzięki temu usługa musi wymagać uwierzytelnienia klienta przy użyciu poświadczeń nazwy użytkownika. Poświadczenie w tym przypadku należy określić przy użyciu `clientCredentials` zachowania **ostrożności:**  Windows Communication Foundation (WCF) nie obsługuje wysyłania skrótu hasła ani wyprowadzania kluczy przy użyciu hasła i używania tych kluczy do zabezpieczenia komunikatów. W związku z tym WCF wymusza, aby program Exchange był zabezpieczony przy użyciu poświadczeń nazwy użytkownika. Ten tryb wymaga, aby certyfikat usługi był określony po stronie klienta przy użyciu `clientCredential` zachowań i `serviceCertificate`. <br /><br /> Certyfikatu Dzięki temu usługa musi wymagać uwierzytelnienia klienta przy użyciu certyfikatu. Poświadczenia klienta w tym przypadku należy określić przy użyciu `clientCredentials` zachowania. Poświadczenia usługi w tym przypadku należy określić przy użyciu `clientCredentials` zachowania przez `serviceCertificate`określenie.<br />CardSpace Dzięki temu usługa musi wymagać uwierzytelnienia klienta przy użyciu programu CardSpace. W zachowaniu `serviceCertificate` musi być obsługiwana `clientCredential` obsługa administracyjna.<br /><br /> Wartość domyślna to `Windows`. Ten atrybut jest typu <xref:System.ServiceModel.MessageCredentialType>.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -54,7 +54,7 @@ Brak
 
 |Element|Opis|
 |-------------|-----------------|
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania.|
+|[\<> zabezpieczeń](security-of-netmsmqbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania.|
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -62,9 +62,9 @@ Brak
 - <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Message%2A>
 - <xref:System.ServiceModel.NetMsmqSecurity.Message%2A>
 - <xref:System.ServiceModel.MessageSecurityOverMsmq>
-- [Kolejki programu WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+- [Kolejki programu WCF](../../../wcf/feature-details/queues-in-wcf.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<> powiązania](../../../misc/binding.md)

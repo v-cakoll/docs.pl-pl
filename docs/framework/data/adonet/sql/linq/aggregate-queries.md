@@ -2,50 +2,50 @@
 title: Zapytania zagregowane
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: 8a3dd4b80ee8bb09dc0b5a06b6fa603f4b74fdf8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b7b38306903313825056c02fc3c3fb8c98e07e17
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610157"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964122"
 ---
 # <a name="aggregate-queries"></a>Zapytania zagregowane
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje `Average`, `Count`, `Max`, `Min`, i `Sum` operatorów agregacji. Należy zwrócić uwagę na następujące cechy operatory agregacji w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]`Average`obsługuje operatory, `Count`, `Max`, `Min`i agregacji.`Sum` Zwróć uwagę na następujące cechy agregacji operatorów [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]w:  
   
-- Zapytania zagregowane są wykonywane natychmiast.  
+- Zapytania agregujące są wykonywane natychmiastowo.  
   
-     Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+     Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQC#()](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
-- Zapytania zagregowane zwykle zwracają liczbę zamiast kolekcji.  
+- Zapytania agregujące zwykle zwracają liczbę zamiast kolekcji.  
   
      Aby uzyskać więcej informacji, zobacz [operacje agregacji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120)).  
   
-- Nie można wywołać wartości zagregowanych dla typów anonimowych.  
+- Nie można wywoływać agregacji dla typów anonimowych.  
   
- W przykładach w następujących tematach pochodzi z przykładowej bazy danych Northwind. Aby uzyskać więcej informacji, zobacz [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Przykłady w poniższych tematach pochodzą z przykładowej bazy danych Northwind. Aby uzyskać więcej informacji, zobacz [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Zwracanie średniej wartości z sekwencji numerycznej](../../../../../../docs/framework/data/adonet/sql/linq/return-the-average-value-from-a-numeric-sequence.md)  
- Pokazuje sposób użycia <xref:System.Linq.Enumerable.Average%2A> operatora.  
+ Pokazuje, <xref:System.Linq.Enumerable.Average%2A> jak używać operatora.  
   
  [Licznik liczby elementów w sekwencji](../../../../../../docs/framework/data/adonet/sql/linq/count-the-number-of-elements-in-a-sequence.md)  
- Pokazuje sposób użycia <xref:System.Linq.Enumerable.Count%2A> operatora.  
+ Pokazuje, <xref:System.Linq.Enumerable.Count%2A> jak używać operatora.  
   
  [Odnajdywanie wartości maksymalnej w sekwencji numerycznej](../../../../../../docs/framework/data/adonet/sql/linq/find-the-maximum-value-in-a-numeric-sequence.md)  
- Pokazuje sposób użycia <xref:System.Linq.Enumerable.Max%2A> operatora.  
+ Pokazuje, <xref:System.Linq.Enumerable.Max%2A> jak używać operatora.  
   
  [Odnajdywanie wartości minimalnej w sekwencji numerycznej](../../../../../../docs/framework/data/adonet/sql/linq/find-the-minimum-value-in-a-numeric-sequence.md)  
- Pokazuje sposób użycia <xref:System.Linq.Enumerable.Min%2A> operatora.  
+ Pokazuje, <xref:System.Linq.Enumerable.Min%2A> jak używać operatora.  
   
  [Obliczanie sumy wartości w sekwencji numerycznej](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)  
- Pokazuje sposób użycia <xref:System.Linq.Enumerable.Sum%2A> operatora.  
+ Pokazuje, <xref:System.Linq.Enumerable.Sum%2A> jak używać operatora.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Przykłady zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- Zawiera łącza do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytania w języku Visual Basic i C#.  
+ Oferuje linki do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytań w Visual Basic i C#.  
   
  [Pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- Zawiera łącza do tematów, które opisują pojęć dotyczących projektowania [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] zapytania w programie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ Zawiera łącza do tematów objaśniających koncepcje projektowania [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] zapytań w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]programie.  
   
- [Wprowadzenie do zapytań LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
- Wyjaśnia, jak działa zapytania w [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].
+ [Wprowadzenie do zapytań LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ Wyjaśnia, w [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]jaki sposób zapytania działają.

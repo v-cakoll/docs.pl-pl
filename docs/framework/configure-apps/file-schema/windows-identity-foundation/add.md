@@ -3,15 +3,15 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 34643d10ef1ed2e87152e5013634e62859e0594e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9505970c1fd7fcdfe62d3c6ef58f5d653fab4106
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791771"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941993"
 ---
 # <a name="add"></a>\<add>
-Programu obsługi tokenów zabezpieczeń określone są dodawane do kolekcji programu obsługi tokenów.  
+Dodaje określony program obsługi tokenów zabezpieczających do kolekcji obsługi tokenów.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -40,25 +40,25 @@ Programu obsługi tokenów zabezpieczeń określone są dodawane do kolekcji pro
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— typ|Nazwa typu CLR programu obsługi tokenów do dodania. Aby uzyskać więcej informacji o sposobie określania `type` atrybutów, zobacz [odwołań do typu niestandardowego](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references).|  
+|— typ|Nazwa typu CLR programu obsługi tokenów, który ma zostać dodany. Aby uzyskać więcej informacji na temat sposobu określania `type` atrybutu, zobacz [odwołania do typów niestandardowych](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<samlSecurityTokenRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|Udostępnia konfigurację dla <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> klasy <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> klasy lub klasy pochodnej z jednego z tych klas.|  
-|[\<sessionTokenRequirement >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessiontokenrequirement.md)|Udostępnia konfigurację dla <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> klasy lub klas pochodnych.|  
-|[\<userNameSecurityTokenHandlerRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/usernamesecuritytokenhandlerrequirement.md)|Udostępnia konfigurację dla <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> klasy lub klas pochodnych.|  
-|[\<x509SecurityTokenHandlerRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/x509securitytokenhandlerrequirement.md)|Udostępnia konfigurację opcjonalne dla <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> klasy lub klas pochodnych.|  
+|[\<samlSecurityTokenRequirement>](samlsecuritytokenrequirement.md)|Zapewnia konfigurację <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> klasy <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> , klasy lub klasy pochodnej jednej z tych klas.|  
+|[\<sessionTokenRequirement >](sessiontokenrequirement.md)|Zapewnia konfigurację <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> klasy lub klas pochodnych.|  
+|[\<userNameSecurityTokenHandlerRequirement>](usernamesecuritytokenhandlerrequirement.md)|Zapewnia konfigurację <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> klasy lub klas pochodnych.|  
+|[\<x509SecurityTokenHandlerRequirement>](x509securitytokenhandlerrequirement.md)|Zapewnia opcjonalną konfigurację <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> klasy lub klas pochodnych.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Określa kolekcję programy obsługi tokenów zabezpieczających, które są zarejestrowane z punktem końcowym.|  
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|Określa kolekcję programów obsługi tokenów zabezpieczających, które są zarejestrowane w punkcie końcowym.|  
   
 ## <a name="remarks"></a>Uwagi  
- `<add>` Elementu może potrwać element pojedynczy element podrzędny, który określa konfigurację dla programu obsługi tokenów. To zależy od tego, czy klasa programu obsługi, do których odwołuje się za pośrednictwem `type` atrybutu `<add>` elementu obsługuje tę funkcję. Klasy programu obsługi tokenów, które zapewnia tej funkcji należy ujawnić konstruktora przyjmującego <xref:System.Xml.XmlElement> obiektu.  
+ `<add>` Element może przyjmować jeden element podrzędny, który określa konfigurację programu obsługi tokenów. Jest to zależne od tego, czy Klasa obsługi, `type` do której odwołuje się atrybut `<add>` elementu, zapewnia obsługę tej funkcji. Klasy obsługi tokenów, które udostępniają tę funkcję, muszą uwidaczniać <xref:System.Xml.XmlElement> Konstruktor, który pobiera obiekt.  
   
 ```  
 public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHandler  
@@ -69,15 +69,15 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
 }  
 ```  
   
- Niektóre z wbudowanych rozwiązań zabezpieczeń klasy programu obsługi tokenów zapewnienia tej funkcji. Te klasy są <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, i <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>.  
+ Niektóre wbudowane klasy procedury obsługi tokenów zabezpieczających zapewniają tę funkcję. Te klasy to <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> ,<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>,, i<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>. <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>  
   
 > [!IMPORTANT]
->  Kolekcja programu obsługi tokenów może zawierać tylko pojedynczy program obsługi każdego typu. Oznacza to, na przykład, że chcesz dodać program obsługi, który jest tworzony na podstawie <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> klasy do kolekcji, należy najpierw usunąć <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, która ma domyślnie z kolekcji. Możesz użyć [ \<Usuń >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md) element, aby usunąć pojedynczy program obsługi z kolekcji lub użyj [ \<Wyczyść >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md) elementu do usunięcia całej obsługi z kolekcji.  
+> Kolekcja obsługi tokenów może zawierać tylko jedną procedurę obsługi dla danego typu. Oznacza to, na przykład, że jeśli chcesz dodać program obsługi, który pochodzi od <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> klasy do kolekcji, musisz najpierw <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>usunąć element, który jest domyślnie obecny, z kolekcji. Można użyć elementu [ \<Remove >](remove.md) , aby usunąć pojedynczą procedurę obsługi z kolekcji lub użyć elementu [ \<Clear >](clear.md) , aby usunąć wszystkie programy obsługi z kolekcji.  
   
- Ustawienia określone na program obsługi zastąpić równoważnym ustawienia określone w kolekcji programu obsługi tokenów w węźle [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) elementu, a określone na poziomie usługi w obszarze [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elementu.  
+ Ustawienia określone w ustawieniach przesłonięcia programu obsługi określone w kolekcji obsługi tokenów w [ \<elemencie securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md) i określonych na poziomie usługi w ramach [ \< identityConfiguration >](identityconfiguration.md) elementu.  
   
 ## <a name="example"></a>Przykład  
- Następujący kody XML pokazuje użycie `<add>` i `<remove>` elementów, aby zastąpić domyślne sesji programu obsługi tokenów niestandardową sesję programu obsługi tokenów. Kod XML jest pobierana z `ClaimsAwareWebFarm` próbki.  
+ Poniższy kod XML pokazuje użycie `<add>` elementów i `<remove>` , aby zastąpić domyślną procedurę obsługi tokena sesji za pomocą procedury obsługi niestandardowego tokenu sesji. Kod XML jest pobierany z `ClaimsAwareWebFarm` przykładu.  
   
 ```xml  
 <securityTokenHandlers>  

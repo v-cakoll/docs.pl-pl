@@ -11,33 +11,33 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 18d9b93b78d3ed588eafa48831448983ccd61fe8
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3245caa3b7f001ecd68f30b8d30437ec26074a1a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053506"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914961"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Instrukcje: zapisywanie plików za pomocą składnika SaveFileDialog
-<xref:System.Windows.Forms.SaveFileDialog> Składnik umożliwia użytkownikom Przeglądaj system plików i wybierz pliki do zapisania. Okno dialogowe zwraca ścieżkę i nazwę pliku, który został wybrany przez użytkownika w oknie dialogowym. Jednak należy napisać kod, aby faktycznie zapisywać pliki na dysku.  
+<xref:System.Windows.Forms.SaveFileDialog> Składnik umożliwia użytkownikom przeglądanie systemu plików i wybieranie plików do zapisania. Okno dialogowe zwraca ścieżkę i nazwę pliku, który użytkownik wybrał w oknie dialogowym. Jednak należy napisać kod, aby faktycznie zapisywać pliki na dysku.  
   
-### <a name="to-save-a-file-using-the-savefiledialog-component"></a>Aby zapisać plik za pomocą składnika SaveFileDialog  
+### <a name="to-save-a-file-using-the-savefiledialog-component"></a>Aby zapisać plik przy użyciu składnika SaveFileDialog  
   
-- Wyświetlanie **Zapisz plik** okno dialogowe i wywołania metody można zapisać pliku wybrana przez użytkownika.  
+- Wyświetl okno dialogowe **Zapisz plik** i Wywołaj metodę, aby zapisać plik wybrany przez użytkownika.  
   
-     Użyj <xref:System.Windows.Forms.SaveFileDialog> składnika <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> metodę, aby zapisać plik. Ta metoda umożliwia <xref:System.IO.Stream> można zapisywać do obiektu.  
+     Użyj <xref:System.Windows.Forms.SaveFileDialog> metody<xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> składnika, aby zapisać plik. Ta metoda daje <xref:System.IO.Stream> obiekt, do którego można pisać.  
   
-     W poniższym przykładzie użyto <xref:System.Windows.Forms.DialogResult> właściwości można odczytać nazwy pliku, a <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> metodę, aby zapisać plik. <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> Metoda daje strumień do zapisania pliku.  
+     W poniższym przykładzie zastosowano <xref:System.Windows.Forms.DialogResult> właściwość w celu pobrania nazwy pliku <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> i metody zapisania pliku. <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> Metoda umożliwia utworzenie strumienia, w którym ma zostać zapisany plik.  
   
-     W poniższym przykładzie występuje <xref:System.Windows.Forms.Button> formant z obrazem, który został do niej przypisany. Po kliknięciu przycisku, <xref:System.Windows.Forms.SaveFileDialog> składnik jest utworzone za pomocą filtru, który umożliwia plików obraz typu GIF, JPEG i BMP. Wybranie pliku tego typu w oknie dialogowym Zapisz plik jest zapisywany obraz przycisku.  
+     W poniższym przykładzie istnieje <xref:System.Windows.Forms.Button> formant z przydzielonym obrazem. Kliknięcie tego przycisku powoduje <xref:System.Windows.Forms.SaveFileDialog> wystąpienie składnika z filtrem umożliwiającym używanie plików typu. gif, JPEG i BMP. Jeśli w oknie dialogowym Zapisz plik zostanie wybrany plik tego typu, obraz przycisku zostanie zapisany.  
   
     > [!IMPORTANT]
-    >  Do pobierania lub ustawiania <xref:System.Windows.Forms.FileDialog.FileName%2A> właściwości zestawu wymaga poziom uprawnień przyznanych <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> klasy. Jeśli używasz w kontekście częściowego zaufania, proces może zgłosić wyjątek ze względu na niewystarczające uprawnienia. Aby uzyskać więcej informacji, zobacz [podstawy zabezpieczeń dostępu kodu](../../misc/code-access-security-basics.md).  
+    >  Aby uzyskać lub ustawić <xref:System.Windows.Forms.FileDialog.FileName%2A> właściwość, zestaw wymaga poziomu uprawnień przyznany <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> przez klasę. Jeśli używasz w kontekście częściowego zaufania, proces może zgłosić wyjątek z powodu niewystarczających uprawnień. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../misc/code-access-security-basics.md).  
   
-     W przykładzie założono, formularz ma <xref:System.Windows.Forms.Button> sterować za pomocą jego <xref:System.Windows.Forms.ButtonBase.Image%2A> właściwość do pliku obraz typu GIF, JPEG lub bmp.  
+     W przykładzie założono, że formularz <xref:System.Windows.Forms.Button> ma kontrolkę <xref:System.Windows.Forms.ButtonBase.Image%2A> z właściwością ustawioną na plik typu. gif, JPEG lub BMP.  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.FileDialog> Klasy <xref:System.Windows.Forms.FileDialog.FilterIndex%2A> właściwości (, z powodu dziedziczenia, czyli części <xref:System.Windows.Forms.SaveFileDialog> klasy) używa indeksu liczonego od jednego. Jest to ważne, jeśli piszesz kod, aby zapisać dane w określonym formacie (na przykład zapisanie pliku w postaci zwykłego tekstu w porównaniu z formatu binarnego). Ta właściwość zostanie udostępniona w poniższym przykładzie.  
+    > Właściwość klasy (która z powodu dziedziczenia <xref:System.Windows.Forms.SaveFileDialog> , jest częścią klasy) używa indeksu jednego. <xref:System.Windows.Forms.FileDialog> <xref:System.Windows.Forms.FileDialog.FilterIndex%2A> Jest to ważne w przypadku pisania kodu w celu zapisania danych w określonym formacie (na przykład zapisanie pliku w formacie zwykłego tekstu a binarny). Ta właściwość jest proponowana w poniższym przykładzie.  
   
     ```vb  
     Private Sub Button2_Click(ByVal sender As System.Object, _  
@@ -161,7 +161,7 @@ ms.locfileid: "66053506"
        }  
     ```  
   
-     (Visual C# i wizualna C++) Umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Wizualizacje C# i C++wizualizacje) Umieść poniższy kod w Konstruktorze formularza, aby zarejestrować procedurę obsługi zdarzeń.  
   
     ```csharp  
     this.button2.Click += new System.EventHandler(this.button2_Click);  
@@ -172,10 +172,10 @@ ms.locfileid: "66053506"
        System::EventHandler(this, &Form1::button2_Click);  
     ```  
   
-     Aby uzyskać więcej informacji na temat pisania strumieni plików, zobacz <xref:System.IO.FileStream.BeginWrite%2A> i <xref:System.IO.FileStream.Write%2A>.  
+     Aby uzyskać więcej informacji na temat pisania strumieni plików <xref:System.IO.FileStream.BeginWrite%2A> , <xref:System.IO.FileStream.Write%2A>Zobacz i.  
   
     > [!NOTE]
-    >  Niektóre kontrolki, takie jak <xref:System.Windows.Forms.RichTextBox> sterowania, ma możliwość zapisywania plików. Aby uzyskać więcej informacji, zobacz sekcję "Savefiledialog — składnik" artykułu technicznego bibliotece MSDN Online [Essential kodu dla Windows okna dialogowe w formularzach](https://go.microsoft.com/fwlink/?LinkID=102575).  
+    > Niektóre kontrolki, takie jak <xref:System.Windows.Forms.RichTextBox> kontrolka, mogą zapisywać pliki. Aby uzyskać więcej informacji, zobacz sekcję "składnik SaveFileDialog" w artykule technicznym Biblioteka MSDN Online Library — [zasadniczy kod dla Windows Forms okien](https://go.microsoft.com/fwlink/?LinkID=102575)dialogowych.  
   
 ## <a name="see-also"></a>Zobacz także
 

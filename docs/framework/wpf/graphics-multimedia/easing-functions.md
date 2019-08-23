@@ -15,106 +15,106 @@ helpviewer_keywords:
 - easing functions [WPF], customizing
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-ms.openlocfilehash: a74142b8d8ee3a68daa9966e3f20f3b8e3becb72
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 72118711dfd40ad8c665157e09f01c60085db903
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615401"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965729"
 ---
 # <a name="easing-functions"></a>Zwalnianie funkcji
-Funkcji easingu umożliwiają zastosowanie niestandardowych wzory matematyczne do animacji. Na przykład może być obiekt realistycznie Odbijanie lub zachowują się tak, jakby był na platformy spring. Można użyć kluczowych klatek lub nawet od/do/przez animacji, które znajdują się obliczyć przybliżoną te skutki, ale zająć znaczną ilość pracy, a następnie animacji będzie mniej dokładnie niż przy użyciu formuły matematyczne.  
+Funkcje krzywych napięcia umożliwiają stosowanie niestandardowych formuł matematycznych do animacji. Na przykład, możesz chcieć, aby obiekt mógł odbijać lub zachowywać się tak, jakby był on sprężyną. Możesz użyć klatek kluczowych lub nawet z/do/przez animacje, aby przybliżyć te efekty, ale zajmiemy się znaczną ilością pracy, a animacja byłaby mniej dokładna niż użycie formuły matematycznej.  
   
- Oprócz tworzenia własnych niestandardowych funkcji sterowania tempem zmian przez dziedziczenie z <xref:System.Windows.Media.Animation.EasingFunctionBase>, używasz jednej z kilku funkcji sterowania tempem zmian dostarczane przez środowisko uruchomieniowe do tworzenia efektów wspólnej.  
+ Oprócz tworzenia własnej niestandardowej funkcji napięcia przez dziedziczenie z <xref:System.Windows.Media.Animation.EasingFunctionBase>, można użyć jednej z kilku funkcji sterowania zapewnianego przez środowisko uruchomieniowe w celu utworzenia typowych efektów.  
   
-- <xref:System.Windows.Media.Animation.BackEase>: Wycofuje nieco ruchu animacji, zanim rozpocznie się animować w wskazanej ścieżce.  
+- <xref:System.Windows.Media.Animation.BackEase>: Wycofuje ruch animacji nieco przed rozpoczęciem animacji w wskazanej ścieżce.  
   
 - <xref:System.Windows.Media.Animation.BounceEase>: Tworzy efekt odbijania.  
   
-- <xref:System.Windows.Media.Animation.CircleEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu funkcji cykliczne.  
+- <xref:System.Windows.Media.Animation.CircleEase>: Tworzy animację, która przyspiesza i/lub chwyci przy użyciu funkcji cyklicznej.  
   
-- <xref:System.Windows.Media.Animation.CubicEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>3</sup>.  
+- <xref:System.Windows.Media.Animation.CubicEase>: Tworzy animację, która przyspiesza i/lub chwyci przy użyciu formuły *f*(*t*) = *t*<sup>3</sup>.  
   
-- <xref:System.Windows.Media.Animation.ElasticEase>: Tworzy animacji podobny platformy spring Densytometr i z powrotem do momentu zakończenia rest.  
+- <xref:System.Windows.Media.Animation.ElasticEase>: Tworzy animację, która przypomina sprężynę z powrotem i do przodu, aż do momentu zapełnienia.  
   
-- <xref:System.Windows.Media.Animation.ExponentialEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu wykładniczego formuły.  
+- <xref:System.Windows.Media.Animation.ExponentialEase>: Tworzy animację, która przyspiesza i/lub chwyci przy użyciu formuły wykładniczej.  
   
-- <xref:System.Windows.Media.Animation.PowerEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>p</sup> gdzie p jest równa <xref:System.Windows.Media.Animation.PowerEase.Power%2A>właściwości.  
+- <xref:System.Windows.Media.Animation.PowerEase>: Tworzy animację, która przyspiesza i/lub chwyci przy użyciu formuły *f*(*t*) = *t*<sup>p</sup> , <xref:System.Windows.Media.Animation.PowerEase.Power%2A> gdzie p jest równe właściwości.  
   
-- <xref:System.Windows.Media.Animation.QuadraticEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>2</sup>.  
+- <xref:System.Windows.Media.Animation.QuadraticEase>: Tworzy animację, która przyspiesza i/lub chwyci przy użyciu formuły *f*(*t*) = *t*<sup>2</sup>.  
   
-- <xref:System.Windows.Media.Animation.QuarticEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>4</sup>.  
+- <xref:System.Windows.Media.Animation.QuarticEase>: Tworzy animację, która przyspiesza i/lub chwyci przy użyciu formuły *f*(*t*) = *t*<sup>4</sup>.  
   
-- <xref:System.Windows.Media.Animation.QuinticEase>: Utworzyć animację, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>5</sup>.  
+- <xref:System.Windows.Media.Animation.QuinticEase>: Utwórz animację, która przyspiesza i/lub chwyci przy użyciu formuły *f*(*t*) = *t*<sup>5</sup>.  
   
-- <xref:System.Windows.Media.Animation.SineEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły sinus.  
+- <xref:System.Windows.Media.Animation.SineEase>: Tworzy animację, która przyspiesza i/lub chwyci przy użyciu formuły sinusa.  
   
- Aby zastosować funkcję przyspieszania do animacji, należy użyć `EasingFunction` właściwość animacji określać funkcję przyspieszania do zastosowania do animacji. Następujący przykład dotyczy <xref:System.Windows.Media.Animation.BounceEase> funkcja do przyspieszania <xref:System.Windows.Media.Animation.DoubleAnimation> utworzyć efekt odbijania.  
+ Aby zastosować funkcję krzywej napięcia do animacji, użyj `EasingFunction` właściwości animacji Określ funkcję krzywych napięcia, która ma zostać zastosowana do animacji. Poniższy przykład stosuje <xref:System.Windows.Media.Animation.BounceEase> funkcję krzywej napięcia do, <xref:System.Windows.Media.Animation.DoubleAnimation> aby utworzyć efekt odbijania.  
   
  [!code-xaml[BounceEase_snippet#BounceEase](~/samples/snippets/csharp/VS_Snippets_Wpf/bounceease_snippet/CS/window1.xaml#bounceease)]  
   
- W poprzednim przykładzie zastosowano funkcję sterowania tempem zmian do od/do/przez animację. Tych funkcji sterowania tempem zmian można dotyczą również Animacja kluczowych klatek. Poniższy przykład pokazuje, jak za pomocą klatek kluczowych skojarzonych z nimi funkcje easingu utworzyć animację prostokąt, który kontraktów w górę, spowalnia, a następnie rozwija stawki rabatowe (tak, jakby objętych) i następnie odbija zostać zatrzymane.  
+ W poprzednim przykładzie funkcja napięcia została zastosowana do animacji z/do/przez. Można również zastosować te funkcje napięcia do animacji klatek kluczowych. Poniższy przykład pokazuje, jak używać klatek kluczowych z funkcją krzywych napięcia skojarzonych z nimi w celu utworzenia animacji prostokąta, który zawiera kontrakty w górę, spowalnia działanie, a następnie rozwija w dół (w przypadku spadku), a następnie odbija do zatrzymania.  
   
  [!code-xaml[EasingFunctionDoubleKeyFrame_snippet#EasingFunctionDoubleKeyFrame](~/samples/snippets/csharp/VS_Snippets_Wpf/easingfunctiondoublekeyframe_snippet/CS/window1.xaml#easingfunctiondoublekeyframe)]  
   
- Możesz użyć <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> właściwości do zmiany funkcji sterowania tempem zmian zachowania, oznacza to zmienić, jak interpolacji animacji. Istnieją trzy możliwe wartości, możesz nadać dla <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
+ Można użyć <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> właściwości, aby zmienić sposób zachowania funkcji krzywej napięcia, czyli zmienić sposób interpolacji animacji. Dostępne są trzy możliwe wartości <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
   
-- <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: Interpolacja następuje formuły matematyczne skojarzone z funkcji sterowania tempem zmian.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: Interpolacja następuje po formule matematycznej skojarzonej z funkcją krzywych napięcia.  
   
-- <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: Interpolacja poniżej 100% interpolacji minus dane wyjściowe formuły skojarzone z funkcji sterowania tempem zmian.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: Interpolacja następuje po 100% interpolacji minus wynik formuły skojarzonej z funkcją krzywej napięcia.  
   
-- <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Zastosowań interpolacji <xref:System.Windows.Media.Animation.EasingMode.EaseIn> w pierwszej połowie animacji i <xref:System.Windows.Media.Animation.EasingMode.EaseOut> przez drugą połowę.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Interpolacja stosuje <xref:System.Windows.Media.Animation.EasingMode.EaseIn> się w pierwszej połowie animacji, a <xref:System.Windows.Media.Animation.EasingMode.EaseOut> druga połowa.  
   
- Poniższe wykresy pokazują różne wartości <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> gdzie *f*(*x*) reprezentuje postęp animacji i *t* reprezentuje czas.  
+ Poniższe wykresy przedstawiają różne wartości <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> , gdzie *f*(*x*) reprezentuje postęp animacji, a czas .  
   
  <xref:System.Windows.Media.Animation.BackEase>  
   
- ![Wykresy obiektu BackEase w trybie. ](./media/backease-graph.png "BackEase_Graph")  
+ ![Wykresy] krzywych napięcia (./media/backease-graph.png "BackEase_Graph")  
   
  <xref:System.Windows.Media.Animation.BounceEase>  
   
- ![Wykresy obiektu BounceEase w trybie. ](./media/bounceease-graph.png "BounceEase_Graph")  
+ ![Wykresy krzywych napięcia BounceEase.](./media/bounceease-graph.png "BounceEase_Graph")  
   
  <xref:System.Windows.Media.Animation.CircleEase>  
   
- ![Wykresy obiektu CircleEase w trybie. ](./media/circleease-graph.png "CircleEase_Graph")  
+ ![Wykresy krzywych napięcia CircleEase.](./media/circleease-graph.png "CircleEase_Graph")  
   
  <xref:System.Windows.Media.Animation.CubicEase>  
   
- ![Wykresy obiektu CubicEase w trybie. ](./media/cubicease-graph.png "CubicEase_Graph")  
+ ![Wykresy krzywych napięcia CubicEase.](./media/cubicease-graph.png "CubicEase_Graph")  
   
  <xref:System.Windows.Media.Animation.ElasticEase>  
   
- ![Obiekt ElasticEase wykresów dla różnych trybów EasingMode. ](./media/elasticease-graph.png "ElasticEase_Graph")  
+ ![ElasticEase z wykresami różnych easingmodes.](./media/elasticease-graph.png "ElasticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.ExponentialEase>  
   
- ![Obiekt ExponentialEase wykresy dla różnych trybów EasingMode. ](./media/exponentialease-graph.png "ExponentialEase_Graph")  
+ ![ExponentialEase wykresy różnych easingmodesów.](./media/exponentialease-graph.png "ExponentialEase_Graph")  
   
  <xref:System.Windows.Media.Animation.PowerEase>  
   
- ![Obiekt QuarticEase wykresów dla różnych trybów EasingMode. ](./media/quarticease-graph.png "QuarticEase_Graph")  
+ ![QuarticEase z wykresami różnych easingmodes.](./media/quarticease-graph.png "QuarticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.QuadraticEase>  
   
- ![Obiekt QuadraticEase wykresów dla różnych trybów EasingMode](./media/quadraticease-graph.png "QuadraticEase_Graph")  
+ ![QuadraticEase z wykresami różnych easingmodes](./media/quadraticease-graph.png "QuadraticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.QuarticEase>  
   
- ![Obiekt QuarticEase wykresów dla różnych trybów EasingMode. ](./media/quarticease-graph.png "QuarticEase_Graph")  
+ ![QuarticEase z wykresami różnych easingmodes.](./media/quarticease-graph.png "QuarticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.QuinticEase>  
   
- ![Obiekt QuinticEase wykresów dla różnych trybów EasingMode. ](./media/quinticease-graph.png "QuinticEase_Graph")  
+ ![QuinticEase z wykresami różnych easingmodes.](./media/quinticease-graph.png "QuinticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.SineEase>  
   
- ![SineEase dla różnych wartości obiektu](./media/sineease-graph.png "SineEase_Graph")  
+ ![SineEase dla różnych wartości napięciamode](./media/sineease-graph.png "SineEase_Graph")  
   
 > [!NOTE]
->  Możesz użyć <xref:System.Windows.Media.Animation.PowerEase> takie samo zachowanie, jak utworzyć <xref:System.Windows.Media.Animation.CubicEase>, <xref:System.Windows.Media.Animation.QuadraticEase>, <xref:System.Windows.Media.Animation.QuarticEase>, i <xref:System.Windows.Media.Animation.QuinticEase> przy użyciu <xref:System.Windows.Media.Animation.PowerEase.Power%2A> właściwości. Na przykład, jeśli chcesz użyć <xref:System.Windows.Media.Animation.PowerEase> do podstawienia w <xref:System.Windows.Media.Animation.CubicEase>, określ <xref:System.Windows.Media.Animation.PowerEase.Power%2A> wartość 3.  
+> Można <xref:System.Windows.Media.Animation.PowerEase> użyć, aby utworzyć takie samo zachowanie jak <xref:System.Windows.Media.Animation.CubicEase>, <xref:System.Windows.Media.Animation.QuadraticEase> <xref:System.Windows.Media.Animation.QuarticEase>, i <xref:System.Windows.Media.Animation.QuinticEase> przy użyciu <xref:System.Windows.Media.Animation.PowerEase.Power%2A> właściwości. Na przykład, jeśli chcesz użyć <xref:System.Windows.Media.Animation.PowerEase> do podstawiania dla <xref:System.Windows.Media.Animation.CubicEase>, określ <xref:System.Windows.Media.Animation.PowerEase.Power%2A> wartość 3.  
   
- Oprócz używania funkcji easingu zawarte w czasie wykonywania, można utworzyć własne niestandardowe funkcje sterowania tempem zmian przez dziedziczenie z <xref:System.Windows.Media.Animation.EasingFunctionBase>. Poniższy przykład przedstawia sposób tworzenia prostej niestandardowych funkcji sterowania tempem zmian. Można dodać własną logiką matematyczne do zachowania funkcji sterowania tempem zmian przez zastąpienie <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> metody.   
+ Oprócz korzystania z funkcji krzywych napięcia zawartych w czasie wykonywania, można utworzyć własne niestandardowe funkcje napięcia, dziedzicząc z <xref:System.Windows.Media.Animation.EasingFunctionBase>. Poniższy przykład ilustruje sposób tworzenia prostej niestandardowej funkcji napięcia. Można dodać własną logikę matematyczną do zachowania funkcji krzywych napięcia, zastępując <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> metodę.   
   
  [!code-csharp[CustomEasingFunction#CustomEasingFunction](~/samples/snippets/csharp/VS_Snippets_Wpf/customeasingfunction/csharp/customlog10easingfunction.cs#customeasingfunction)]
  [!code-vb[CustomEasingFunction#CustomEasingFunction](~/samples/snippets/visualbasic/VS_Snippets_Wpf/customeasingfunction/visualbasic/customlog10easingfunction.vb#customeasingfunction)]

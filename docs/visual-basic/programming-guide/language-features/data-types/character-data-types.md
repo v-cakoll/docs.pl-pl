@@ -8,36 +8,36 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-ms.openlocfilehash: 14085172a8f9f9d60af0495a36dd4ba7592213fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d29e8771d61c04cf35aa71b5ba7fbba0d308c730
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907234"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965678"
 ---
 # <a name="character-data-types-visual-basic"></a>Znaki — Typy danych (Visual Basic)
-Visual Basic oferuje *typ danych znakowych* radzenia sobie z drukowania i zawiera znaki. Gdy oba postępowania ze znakami Unicode `Char` zawiera pojedynczy znak, natomiast `String` zawiera nieokreśloną liczbę znaków.  
+Visual Basic zawiera *typy danych znakowych* , które umożliwiają rozproszenie i drukowalne znaki. Chociaż obydwie zajmują się znakami `Char` Unicode, przechowuje pojedynczy `String` znak, a zawiera nieokreśloną liczbę znaków.  
   
- Dla tabeli, która wyświetla porównania side-by-side typy danych Visual Basic, zobacz [typy danych](../../../../visual-basic/language-reference/data-types/index.md).  
+ W przypadku tabeli wyświetlającej porównanie obok Visual Basic typów danych, zobacz [typy danych](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="char-type"></a>CHAR — typ  
- `Char` Typ danych jest jednym dwóch-bajtowych wartości znakowych Unicode (16-bitowy). Jeśli zmienna przechowuje zawsze dokładnie jeden znak, Zadeklaruj go jako `Char`. Na przykład:  
+## <a name="char-type"></a>Typ char  
+ Typ `Char` danych to pojedynczy dwubajtowy znak Unicode (16-bitowy). Jeśli zmienna zawsze przechowuje dokładnie jeden znak, zadeklaruj go jako `Char`. Przykład:  
   
  [!code-vb[VbVbalrCharTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#1)]
   
- Każdej możliwej wartości w `Char` lub `String` zmienna jest *punktem kodu*, lub kod znaku w zestawie znaków Unicode. Znaki Unicode obejmują podstawowy zestaw znaków ASCII, różne inne litery alfabetu, akcentów, symbole walut, ułamki, znaki diakrytyczne i symbole matematyczne i technicznych.  
+ Każda możliwa wartość w `Char` zmiennej or `String` jest *punktem kodu*lub kodem znaku w zestawie znaków Unicode. Znaki Unicode obejmują podstawowy zestaw znaków ASCII, różne litery alfabetu, akcenty, symbole waluty, ułamki, znaki diakrytyczne i symbole matematyczne i techniczne.  
   
 > [!NOTE]
->  Zestaw znaków Unicode rezerwy kod wskazuje D800 za pośrednictwem DFFF (55296 za pośrednictwem 55551 dziesiętna) dla *zastępczych par*, które wymagają dwóch wartości 16-bitowych reprezentuje punkt kodu jednego. A `Char` zmiennej nie może utrzymywać para zastępcza i `String` używa dwóch pozycji do przechowywania tych pary.  
+> Zestaw znaków Unicode rezerwuje punkty kodu D800 przez DFFF (55296 do 55551 dziesiętnych) dla *par surogatów*, które wymagają wartości 2 16-bitowych do reprezentowania pojedynczego punktu kodu. Zmienna nie może zawierać pary zastępczej `String` i używa dwóch pozycji do przechowywania takiej pary. `Char`  
   
- Aby uzyskać więcej informacji, zobacz [Char — typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md).  
+ Aby uzyskać więcej informacji, zobacz [char Data Type](../../../../visual-basic/language-reference/data-types/char-data-type.md).  
   
-## <a name="string-type"></a>String — typ  
- `String` — Typ danych to sekwencja zero lub więcej znaków Unicode (16-bitowy) dwóch bajtów. Jeśli zmienna może zawierać dowolną liczbę znaków, Zadeklaruj go jako `String`. Na przykład:  
+## <a name="string-type"></a>Typ ciągu  
+ Typ `String` danych jest sekwencją zero lub więcej dwubajtowych (16-bitowych) znaków Unicode. Jeśli zmienna może zawierać nieokreśloną liczbę znaków, zadeklaruj ją jako `String`. Na przykład:  
   
  [!code-vb[VbVbalrCharTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#2)]
   
- Aby uzyskać więcej informacji, zobacz [String — typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
+ Aby uzyskać więcej informacji, zobacz [Typ danych ciągu](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -45,6 +45,6 @@ Visual Basic oferuje *typ danych znakowych* radzenia sobie z drukowania i zawier
 - [Złożone typy danych](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Konwersje typów w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

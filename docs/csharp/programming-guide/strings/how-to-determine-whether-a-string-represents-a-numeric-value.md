@@ -7,12 +7,12 @@ helpviewer_keywords:
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: d3253dced5f2f1fe04c76b46a6b360b24aabb43e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 831f0fc83c8a7066b40d64e4765a312b8b4847bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588506"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921784"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Instrukcje: Określanie, czy ciąg reprezentuje wartość liczbową (C# Przewodnik programowania)
 Aby określić, czy ciąg jest prawidłową reprezentacją określonego typu liczbowego, należy użyć statycznej `TryParse` metody, która jest implementowana przez wszystkie pierwotne typy liczbowe, a także typy takie jak <xref:System.DateTime> i <xref:System.Net.IPAddress>. Poniższy przykład pokazuje, jak ustalić, czy "108" jest prawidłową [int](../../language-reference/builtin-types/integral-numeric-types.md).  
@@ -26,7 +26,7 @@ bool result = int.TryParse(s, out i); //i now = 108
  Jeśli ciąg zawiera znaki nienumeryczne lub wartość liczbowa jest za duża lub za mała dla określonego typu, `TryParse` zwraca wartość false i ustawia parametr out na wartość zero. W przeciwnym razie zwraca wartość true i ustawia parametr out na wartość liczbową ciągu.  
   
 > [!NOTE]
->  Ciąg może zawierać tylko znaki numeryczne i nadal nie jest prawidłowy dla typu, którego `TryParse` Metoda jest używana. Na przykład "256" nie jest prawidłową wartością dla `byte` , ale jest prawidłowy dla. `int` "98,6" nie jest prawidłową wartością dla `int` , ale jest prawidłowy. `decimal`  
+> Ciąg może zawierać tylko znaki numeryczne i nadal nie jest prawidłowy dla typu, którego `TryParse` Metoda jest używana. Na przykład "256" nie jest prawidłową wartością dla `byte` , ale jest prawidłowy dla. `int` "98,6" nie jest prawidłową wartością dla `int` , ale jest prawidłowy. `decimal`  
   
 ## <a name="example"></a>Przykład  
  W poniższych przykładach pokazano `TryParse` `long`, jak używać z reprezentacjami ciągów wartości `decimal` , `byte`, i.  

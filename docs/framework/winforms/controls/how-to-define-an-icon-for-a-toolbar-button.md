@@ -13,30 +13,30 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 2c1c3d8529662c1e1f1a3d28e3853d31f5d940ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b85f734a5f8b31531cfe48f87681d98304db09b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054279"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929630"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Instrukcje: określanie ikony dla przycisku ToolBar
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.ToolBar> kontrolować; jednak <xref:System.Windows.Forms.ToolBar> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.  
+> Formant zastępuje i dodaje funkcję <xref:System.Windows.Forms.ToolBar> do <xref:System.Windows.Forms.ToolBar> kontrolki; jednak kontrolka jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli wybierzesz opcję. <xref:System.Windows.Forms.ToolStrip>  
   
- <xref:System.Windows.Forms.ToolBar> przyciski będą mogli wyświetlać ikony w ich obrębie, ułatwiający identyfikację przez użytkowników. Jest to realizowane poprzez dodawanie obrazów do [składnika ImageList](imagelist-component-windows-forms.md) składnik, a następnie kojarząc <xref:System.Windows.Forms.ImageList> składnika za pomocą <xref:System.Windows.Forms.ToolBar> kontroli.  
+ <xref:System.Windows.Forms.ToolBar>przyciski mogą wyświetlać w nich ikony umożliwiające łatwą identyfikację użytkowników. Jest to realizowane poprzez dodanie obrazów do składnika [składnika ImageList](imagelist-component-windows-forms.md) , a następnie skojarzenie <xref:System.Windows.Forms.ImageList> składnika z <xref:System.Windows.Forms.ToolBar> kontrolką.  
   
-### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Aby programowo ustawić ikony dla przycisku kontrolki toolbar  
+### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Aby programowo ustawić ikonę dla przycisku paska narzędzi  
   
-1. W procedurze tworzenia wystąpienia <xref:System.Windows.Forms.ImageList> składnika i <xref:System.Windows.Forms.ToolBar> kontroli.  
+1. W procedurze Utwórz wystąpienie <xref:System.Windows.Forms.ImageList> składnika <xref:System.Windows.Forms.ToolBar> i kontrolki.  
   
-2. W tej samej procedury Przypisz obraz <xref:System.Windows.Forms.ImageList> składnika.  
+2. W tej samej procedurze Przypisz obraz do <xref:System.Windows.Forms.ImageList> składnika.  
   
-3. W tej samej procedury, należy przypisać <xref:System.Windows.Forms.ImageList> kontrolę <xref:System.Windows.Forms.ToolBar> kontroli i przypisać <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> właściwości poszczególnych przyciski.  
+3. W tej samej procedurze Przypisz <xref:System.Windows.Forms.ImageList> formant <xref:System.Windows.Forms.ToolBar> do kontrolki i przypisz <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> Właściwość poszczególnych przycisków paska narzędzi.  
   
-     W poniższym przykładzie kodu ścieżkę zestawu dla lokalizacji obrazu jest **Moje dokumenty** folderu. Jest to wykonywane, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać tego katalogu. Ponadto pozwala to użytkownikom z poziomami dostępu minimalny system bezpiecznego uruchamiania aplikacji. W poniższym przykładzie przyjęto założenie, formularz z <xref:System.Windows.Forms.PictureBox> formant został już dodany.  
+     W poniższym przykładzie kodu ścieżką ustawioną dla lokalizacji obrazu jest folder **Moje dokumenty** . Dzieje się tak, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać ten katalog. Pozwala to również użytkownikom z minimalnymi poziomami dostępu do systemu w celu bezpiecznego uruchomienia aplikacji. W poniższym przykładzie założono, że formularz <xref:System.Windows.Forms.PictureBox> z kontrolką został już dodany.  
   
-     Czynności opisane powyżej należy sporządzić pisemne kod podobny do wyświetlone poniżej.  
+     Wykonując powyższe kroki, należy napisać kod podobny do przedstawionego poniżej.  
   
     ```vb  
     Public Sub InitializeMyToolBar()  
@@ -118,6 +118,6 @@ ms.locfileid: "62054279"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Instrukcje: Wyzwalacz zdarzenia Menu dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Instrukcje: Zdarzenia menu wyzwalacza dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar, kontrolka](toolbar-control-windows-forms.md)
 - [ImageList, składnik](imagelist-component-windows-forms.md)

@@ -16,47 +16,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5904083be66d4bd6dc69729bebc28db8a800e77
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31ecea4857dabc55e8acd3c22a025895a686efcd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948684"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931092"
 ---
 # <a name="icordebugprocess5-interface"></a>ICorDebugProcess5 — Interfejs
-Rozszerza icordebugprocess — interfejs do obsługi dostępu do zarządzanej sterty, do dostarczania informacji dotyczących wyrzucania elementów bezużytecznych obiektów zarządzanych, a do określenia, czy debuger wczytuje obrazy z pamięci podręcznej obrazów natywnych lokalnej aplikacji.  
+Rozszerza interfejs ICorDebugProcess w celu obsługi dostępu do sterty zarządzanej w celu zapewnienia informacji na temat wyrzucania elementów bezużytecznych obiektów zarządzanych oraz do określenia, czy debuger ładuje obrazy z lokalnej pamięci podręcznej obrazów natywnych aplikacji.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[EnableNGENPolicy, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)|Ustawia wartość określającą, jak aplikacja ładuje obrazy natywne podczas uruchamiania w debugerze zarządzanych.|  
-|[EnumerateGCReferences, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)|Pobiera moduł wyliczający dla wszystkich obiektów, które mają być jesdnostką zbierającą śmieci w procesie.|  
-|[EnumerateHandles, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)|Pobiera moduł wyliczający dla obiektu uchwytów w procesie.|  
-|[EnumerateHeap, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md)|Pobiera moduł wyliczający dla obiektów na stosie zarządzanym.|  
+|[EnableNGENPolicy, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)|Ustawia wartość określającą sposób ładowania obrazów natywnych przez aplikację podczas działania w ramach zarządzanego debugera.|  
+|[EnumerateGCReferences, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)|Pobiera moduł wyliczający dla wszystkich obiektów, które mają być zbierane jako elementy bezużyteczne w procesie.|  
+|[EnumerateHandles, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)|Pobiera moduł wyliczający dla dojść do obiektów w procesie.|  
+|[EnumerateHeap, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md)|Pobiera moduł wyliczający dla obiektów na zarządzanym stosie.|  
 |[EnumerateHeapRegions, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md)|Pobiera moduł wyliczający dla regionów zarządzanego stosu.|  
-|[GetArrayLayout, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md)|Pobiera informacje o układ tablicy w pamięci.|  
-|[GetGCHeapInformation, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)|Pobiera wskaźnik do [cor_heapinfo —](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) strukturę, która zawiera informacje o obiektach, które mają być jesdnostką zbierającą śmieci na stosie zarządzanym.|  
-|[GetObject, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md)|Pobiera wskaźnik do obiektu w zarządzanym stosie.|  
-|[GetTypeFields, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md)|Pobiera wskaźnik do tablicy, która zawiera informacje o polach typu na podstawie jego identyfikatora typu.|  
-|[GetTypeForTypeID, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md)|Pobiera obiekt typu, który zawiera informacje dotyczące obiektu, w oparciu o ich identyfikatory typów.|  
-|[GetTypeID, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypeid-method.md)|Pobiera identyfikator typu obiektu pod podanym adresem.|  
-|[GetTypeLayout, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypelayout-method.md)|Pobiera informacje o układ obiektu w pamięci na podstawie jego identyfikatora typu.|  
+|[GetArrayLayout, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md)|Pobiera informacje o układzie tablicy w pamięci.|  
+|[GetGCHeapInformation, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)|Pobiera wskaźnik do struktury [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) , która zawiera informacje o obiektach, które mają być odzyskiwane na zarządzanym stosie.|  
+|[GetObject, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md)|Pobiera wskaźnik do obiektu na zarządzanym stosie.|  
+|[GetTypeFields, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md)|Pobiera wskaźnik do tablicy zawierającej informacje o polu dla typu na podstawie jego identyfikatora typu.|  
+|[GetTypeForTypeID, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md)|Pobiera obiekt typu, który zawiera informacje o obiekcie w oparciu o jego identyfikatory typów.|  
+|[GetTypeID, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypeid-method.md)|Pobiera identyfikator typu dla obiektu pod określonym adresem.|  
+|[GetTypeLayout, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypelayout-method.md)|Pobiera informacje o układzie obiektu w pamięci na podstawie jego identyfikatora typu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten interfejs rozszerza logicznie ICorDebugProcess, ICorDebugProcess2, i [icordebugprocess3 —](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md) interfejsów.  
+ Ten interfejs logicznie rozszerza interfejsy ICorDebugProcess, ICorDebugProcess2 i [ICorDebugProcess3](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md) .  
   
 > [!NOTE]
->  Ten interfejs może być wywoływany zdalnie z innego komputera lub od innego procesu.  
+> Ten interfejs nie obsługuje wywoływania zdalnego, z innego komputera lub z innego procesu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

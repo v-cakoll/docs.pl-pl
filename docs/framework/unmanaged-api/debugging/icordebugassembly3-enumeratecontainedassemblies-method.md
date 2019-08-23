@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05c4e2a5c16f11f80cc8356a65b746eab81a3899
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9120119056fda3f16b4a0bf8bad839b74463d633
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744397"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959342"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a>Metoda ICorDebugAssembly3::EnumerateContainedAssemblies
-Pobiera moduł wyliczający dla zestawów znajdujących się w tym zestawie.  
+Pobiera moduł wyliczający dla zestawów zawartych w tym zestawie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,25 +24,25 @@ HRESULT EnumerateContainedAssemblies(
   
 ## <a name="parameters"></a>Parametry  
  `ppAssemblies`  
- [out] Wskaźnik na adres icordebugassemblyenum — interfejs obiekt modułu wyliczającego.  
+ określoną Wskaźnik do adresu obiektu interfejsu ICorDebugAssemblyEnum, który jest modułem wyliczającym.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli ten `ICorDebugAssembly3` obiekt to kontener, a w przeciwnym razie `S_FALSE`, i wyliczenia jest pusty.  
+ `S_OK`Jeśli ten `ICorDebugAssembly3` obiekt jest kontenerem; `S_FALSE`w przeciwnym razie, a Wyliczenie jest puste.  
   
 ## <a name="remarks"></a>Uwagi  
- Symbole są wymagane do wyliczenia zawarte zestawów. Jeśli nie są obecne, metoda zwraca `S_FALSE`, i jest dostępne nie prawidłowym modułem wyliczającym.  
+ Symbole są konieczne do wyliczenia zawartych zestawów. Jeśli ich nie ma, metoda zwraca `S_FALSE`i nie podano prawidłowego modułu wyliczającego.  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

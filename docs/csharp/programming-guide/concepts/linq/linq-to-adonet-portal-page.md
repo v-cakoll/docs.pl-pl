@@ -2,18 +2,18 @@
 title: LINQ to ADO.NET (Portal Page)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: 06102acfb5fc9c70bc7b0d8e42f1f7603447306a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3bea3dffb98f0745947e4a672f70df5010bc2824
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591963"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924266"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (Portal Page)
 LINQ to ADO.NET umożliwia wykonywanie zapytań dotyczących dowolnego wyliczalnego obiektu w ADO.NET przy użyciu [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] modelu programowania.  
   
 > [!NOTE]
->  Dokumentacja LINQ to ADO.NET znajduje się w sekcji ADO.NET zestawu .NET Framework SDK: [LINQ i ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).  
+> Dokumentacja LINQ to ADO.NET znajduje się w sekcji ADO.NET zestawu .NET Framework SDK: [LINQ i ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).  
   
  Istnieją trzy oddzielne technologie ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] : LINQ to DataSet, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]i LINQ to Entities. LINQ to DataSet zapewnia bogatsze i zoptymalizowane zapytania dotyczące programu <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] umożliwia bezpośrednie wykonywanie zapytań do SQL Server schematów bazy danych, a LINQ to Entities umożliwia wykonywanie zapytań do Entity Data Model.  
   

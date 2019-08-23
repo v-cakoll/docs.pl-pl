@@ -10,31 +10,31 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: 9e8dc2ee2773b26a7bfef1da209399a8b49de9ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cefc590bb3011b282392504a78ac5c393c58493e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624126"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965693"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider — Informacje o składniku (Formularze systemu Windows)
-Formularze Windows [HelpProvider](helpprovider-component-windows-forms.md) składnik jest używany do kojarzenia pomocy HTML 1.x pliku pomocy (plik chm z HTML Help Workshop, lub do pliku .htm) za pomocą aplikacji Windows. Możesz podać pomoc na wiele sposobów:  
+Windows Forms składnik [HelpProvider —](helpprovider-component-windows-forms.md) służy do kojarzenia pliku pomocy HTML pomocy 1. x (plik. chm, utworzony za pomocą programu HTML Help Workshop lub pliku. htm) z aplikacją systemu Windows. Możesz zapewnić pomoc na różne sposoby:  
   
-- Podaj pomocy kontekstowej dla kontrolek na formularzach Windows Forms.  
+- Zapewnianie pomocy kontekstowej dla formantów na Windows Forms.  
   
-- Zapewniają pomoc kontekstowa w szczególności okno dialogowe lub określonych kontrolek w oknie dialogowym.  
+- Zapewnianie pomocy kontekstowej w konkretnym oknie dialogowym lub określonych kontrolkach w oknie dialogowym.  
   
-- Otwórz plik pomocy do określonych obszarów, takich jak strony głównej w spisie treści, indeksu lub funkcję wyszukiwania.  
+- Otwórz plik pomocy do określonych obszarów, takich jak Strona główna spisu treści, indeks lub funkcja wyszukiwania.  
   
-## <a name="using-the-help-provider"></a>Za pomocą dostawcy pomocy  
- Dodawanie <xref:System.Windows.Forms.HelpProvider> składnik do formularza Windows umożliwia inne kontrolki na formularzu, należy udostępnić właściwości pomocy <xref:System.Windows.Forms.HelpProvider> składnika. Dzięki temu można zapewnić pomoc dla formantów w formularzu Windows. Można skojarzyć z pliku Pomocy <xref:System.Windows.Forms.HelpProvider> za pomocą składnika <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> właściwości. Należy określić typ pomocy udostępniane przez wywołanie metody <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> i podając wartość z zakresu od <xref:System.Windows.Forms.HelpNavigator> wyliczenie dla określonego formantu. Podasz — słowo kluczowe lub tematu pomocy, wywołując <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> metody.  
+## <a name="using-the-help-provider"></a>Korzystanie z dostawcy pomocy  
+ Dodanie składnika do formularza systemu Windows umożliwia innym kontrolom w formularzu uwidocznienie właściwości <xref:System.Windows.Forms.HelpProvider> pomocy składnika. <xref:System.Windows.Forms.HelpProvider> Dzięki temu można zapewnić pomoc dla kontrolek w formularzu systemu Windows. Można skojarzyć plik pomocy ze <xref:System.Windows.Forms.HelpProvider> składnikiem <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> za pomocą właściwości. Należy określić typ pomocy zapewnianej przez wywoływanie <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> i podanie wartości <xref:System.Windows.Forms.HelpNavigator> z wyliczenia dla określonej kontrolki. Podajesz słowo kluczowe lub temat pomocy, wywołując <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> metodę.  
   
- Opcjonalnie, aby skojarzyć określony ciąg pomocy z inną kontrolką, należy użyć <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> metody. Ciąg, który należy powiązać z kontrolki przy użyciu tej metody jest wyświetlany w oknie podręcznym, gdy użytkownik naciśnie klawisz F1, gdy kontrolka jest ustawiony fokus.  
+ Opcjonalnie, aby skojarzyć określony ciąg pomocy z inną kontrolką, użyj <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> metody. Ciąg, który można skojarzyć z kontrolką przy użyciu tej metody jest wyświetlany w oknie podręcznym, gdy użytkownik naciśnie klawisz F1, gdy kontrolka ma fokus.  
   
- Jeśli <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> nie został ustawiony, należy użyć <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> zapewnienie tekst pomocy. Jeśli ustawisz zarówno <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> i ciąg pomocy na podstawie pomocy <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> mają wyższy priorytet.  
+ Jeśli <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> nie została ustawiona, należy użyć <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> , aby podać tekst pomocy. Jeśli ustawiono oba <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> parametry i ciąg pomocy, pierwszeństwo <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> ma pomoc na podstawie.  
   
 > [!NOTE]
->  Mogą wystąpić problemy przy użyciu ścieżki względnej, określając ścieżkę do pliku pomocy w <xref:System.Windows.Forms.Help.ShowHelp%2A> metody lub <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> właściwość <xref:System.Windows.Forms.HelpProvider> kontroli. Jako takie Pamiętaj określić plik pomocy za pomocą ścieżki bezwzględnej.  
+> Podczas określania ścieżki do pliku pomocy w <xref:System.Windows.Forms.Help.ShowHelp%2A> metodzie lub <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> właściwości <xref:System.Windows.Forms.HelpProvider> formantu mogą wystąpić problemy przy użyciu ścieżki względnej. W związku z tym Pamiętaj o określeniu pliku pomocy za pomocą bezwzględnej ścieżki pliku.  
   
 ## <a name="see-also"></a>Zobacz także
 

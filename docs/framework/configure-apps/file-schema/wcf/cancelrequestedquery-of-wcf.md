@@ -1,23 +1,23 @@
 ---
-title: <cancelRequestedQuery> w WCF
+title: <cancelRequestedQuery>programu WCF
 ms.date: 03/30/2017
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-ms.openlocfilehash: bd6157e63761efa954744ab08ea6c66535def514
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7952520edbf799e5fab6864e50962c6ec2860928
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673365"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919646"
 ---
-# <a name="cancelrequestedquery-of-wcf"></a>\<cancelRequestedQuery > w WCF
+# <a name="cancelrequestedquery-of-wcf"></a>\<cancelRequestedQuery > WCF
 
 Reprezentuje zapytanie, które jest używane do śledzenia żądań, aby anulować działanie podrzędne przez działanie nadrzędne. Zapytanie jest niezbędne do uczestnika śledzenia do subskrybowania Anuluj żądanie rekordu obiektów.  
   
-Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz [profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
+Aby uzyskać więcej informacji na temat śledzenia kwerend profilu, zobacz [śledzenie profilów](../../../windows-workflow-foundation/tracking-profiles.md).
   
 \<system.serviceModel>  
 \<Śledzenie >  
-\<profiles>  
+\<> profilów  
 \<trackingProfile>  
 \<przepływ pracy >  
 \<cancelRequestedQueries>  
@@ -65,5 +65,5 @@ Brak.
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CancelRequestedQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CancelRequestedQuery?displayProperty=nameWithType>
-- [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Kontrola i śledzenie przepływu pracy](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profile śledzenia](../../../windows-workflow-foundation/tracking-profiles.md)

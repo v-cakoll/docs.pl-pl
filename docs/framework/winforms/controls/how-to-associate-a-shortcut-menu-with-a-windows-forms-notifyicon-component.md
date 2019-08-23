@@ -10,46 +10,46 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: f2a086cc25eb6996b2643742a887bccf481916d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf5602d0526fdd97f0cc14382339095a793f13c3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010946"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922767"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Instrukcje: kojarzenie menu skrótów za pomocą składnika NotifyIcon formularzy systemu Windows
 > [!NOTE]
->  Mimo że <xref:System.Windows.Forms.MenuStrip> i <xref:System.Windows.Forms.ContextMenuStrip> Zastąp i dodawania funkcjonalności do <xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu> kontrolki z poprzednich wersji <xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu> zostaną zachowane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.  
+> <xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.MainMenu> Chociaż i Zastąp<xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu> Dodaj funkcje do kontrolekwcześniejszychwersjiisąonezachowywanewceluzapewnieniazgodnościzpoprzednimiwersjamiiwprzyszłości,jeśliwybierzeszopcję.<xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.ContextMenuStrip>  
   
- <xref:System.Windows.Forms.NotifyIcon> Składnika Wyświetla ikonę w obszarze stanu powiadomień paska zadań. Aplikacje umożliwiają najczęściej, kliknij prawym przyciskiem myszy tę ikonę, aby wysyłać polecenia do aplikacji, którą reprezentuje. Kojarząc <xref:System.Windows.Forms.ContextMenu> składnika za pomocą <xref:System.Windows.Forms.NotifyIcon> składnik, można dodać tę funkcjonalność do aplikacji.  
+ <xref:System.Windows.Forms.NotifyIcon> Składnik wyświetla ikonę w obszarze powiadomień o stanie na pasku zadań. Zwykle aplikacje umożliwiają kliknięcie prawym przyciskiem myszy tej ikony, aby wysłać polecenia do aplikacji, którą reprezentuje. Kojarząc <xref:System.Windows.Forms.ContextMenu> składnik <xref:System.Windows.Forms.NotifyIcon> ze składnikiem, możesz dodać tę funkcję do aplikacji.  
   
 > [!NOTE]
->  Jeśli chcesz, aby aplikacja minimalizowanie przy uruchamianiu podczas wyświetlania wystąpienia <xref:System.Windows.Forms.NotifyIcon> składnika na pasku zadań, ustaw dla formularza głównego <xref:System.Windows.Forms.Form.WindowState%2A> właściwości <xref:System.Windows.Forms.FormWindowState.Minimized> i upewnij się, <xref:System.Windows.Forms.NotifyIcon> składnika <xref:System.Windows.Forms.NotifyIcon.Visible%2A> właściwości ustawiono `true`.  
+> Jeśli chcesz, aby aplikacja była zminimalizowana przy uruchamianiu <xref:System.Windows.Forms.NotifyIcon> podczas wyświetlania wystąpienia składnika na pasku zadań, ustaw <xref:System.Windows.Forms.Form.WindowState%2A> właściwość formularza głównego <xref:System.Windows.Forms.NotifyIcon> na <xref:System.Windows.Forms.FormWindowState.Minimized> i upewnij się, że <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Właściwość składnika jest ustawiony na `true`.  
   
-### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>Aby skojarzyć menu skrótów za pomocą składnika NotifyIcon w czasie projektowania  
+### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>Aby skojarzyć menu skrótów ze składnikiem NotifyIcon w czasie projektowania  
   
-1. Dodaj <xref:System.Windows.Forms.NotifyIcon> składnika do formularza i ustawić ważne właściwości, takie jak <xref:System.Windows.Forms.NotifyIcon.Icon%2A> i <xref:System.Windows.Forms.NotifyIcon.Visible%2A> właściwości.  
+1. Dodaj składnik do formularza i Ustaw ważne właściwości, takie <xref:System.Windows.Forms.NotifyIcon.Icon%2A> jak właściwości i <xref:System.Windows.Forms.NotifyIcon.Visible%2A>. <xref:System.Windows.Forms.NotifyIcon>  
   
-     Aby uzyskać więcej informacji, zobacz [jak: Dodawanie ikon aplikacji do paska zadań z Windows składnika NotifyIcon formularzy](app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+     Aby uzyskać więcej informacji, zobacz [jak: Dodaj ikony aplikacji do paska zadań przy użyciu składnika](app-icons-to-the-taskbar-with-wf-notifyicon.md)Windows Forms NotifyIcon.  
   
-2. Dodaj <xref:System.Windows.Forms.ContextMenu> składnika do formularza Windows.  
+2. <xref:System.Windows.Forms.ContextMenu> Dodaj składnik do formularza systemu Windows.  
   
-     Dodawanie elementów menu do menu skrótów, reprezentujący polecenia, które chcesz udostępnić w czasie wykonywania. Jest to również dobry moment, aby dodać menu rozszerzeń do tych elementów menu, takie jak klucze dostępu.  
+     Dodaj elementy menu do menu skrótów reprezentujących polecenia, które mają być dostępne w czasie wykonywania. Jest to również dobry moment na dodanie ulepszeń menu do tych elementów menu, takich jak klucze dostępu.  
   
-3. Ustaw <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> właściwość <xref:System.Windows.Forms.NotifyIcon> składnika do menu skrótów, który został dodany.  
+3. <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> Ustaw właściwość <xref:System.Windows.Forms.NotifyIcon> składnika na dodane menu skrótów.  
   
-     Z tym zestawem właściwości menu skrótów pojawi się po kliknięciu ikony na pasku zadań.  
+     Po wybraniu tej właściwości menu skrótów będzie wyświetlane po kliknięciu ikony na pasku zadań.  
   
-### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>Aby programowo kojarzenie menu skrótów za pomocą składnika NotifyIcon  
+### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>Aby skojarzyć menu skrótów ze składnikiem NotifyIcon programowo  
   
-1. Utwórz wystąpienie obiektu <xref:System.Windows.Forms.NotifyIcon> klasy i <xref:System.Windows.Forms.ContextMenu> klasy za pomocą niezależnie od ustawienia jego właściwości są niezbędne w celu zastosowania (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> i <xref:System.Windows.Forms.NotifyIcon.Visible%2A> właściwości <xref:System.Windows.Forms.NotifyIcon> składnik, elementy menu dla <xref:System.Windows.Forms.ContextMenu> składnik).  
+1. Utwórz wystąpienie <xref:System.Windows.Forms.NotifyIcon> klasy <xref:System.Windows.Forms.NotifyIcon> <xref:System.Windows.Forms.NotifyIcon.Icon%2A> <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.NotifyIcon.Visible%2A> i klasy, z dowolnym ustawieniem właściwości, które są niezbędne dla aplikacji (i właściwości składnika, elementów menu dla <xref:System.Windows.Forms.ContextMenu> składnik).  
   
-2. Ustaw <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> właściwość <xref:System.Windows.Forms.NotifyIcon> składnika do menu skrótów, który został dodany.  
+2. <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> Ustaw właściwość <xref:System.Windows.Forms.NotifyIcon> składnika na dodane menu skrótów.  
   
-     Z tym zestawem właściwości menu skrótów pojawi się po kliknięciu ikony na pasku zadań.  
+     Po wybraniu tej właściwości menu skrótów będzie wyświetlane po kliknięciu ikony na pasku zadań.  
   
     > [!NOTE]
-    >  Poniższy przykład kodu tworzy strukturę podstawowego menu. Należy dostosować opcje menu do tych, które mieści się aplikacja, którą tworzysz. Ponadto, można napisać kod obsługujący <xref:System.Windows.Forms.MenuItem.Click> zdarzenia dla tych elementów menu.  
+    > Poniższy przykład kodu tworzy podstawową strukturę menu. Musisz dostosować opcje menu do tych, które pasują do opracowywanej aplikacji. Ponadto należy napisać kod, aby obsłużyć <xref:System.Windows.Forms.MenuItem.Click> zdarzenia dla tych elementów menu.  
   
     ```vb  
     Public ContextMenu1 As New ContextMenu  
@@ -119,7 +119,7 @@ public:
 ```  
   
 > [!NOTE]
->  Należy zainicjować `notifyIcon1` i `contextMenu1,` co można zrobić, umieszczając następujące instrukcje w Konstruktorze formularza:  
+> Musisz zainicjować `notifyIcon1` i `contextMenu1,` które można wykonać, dołączając następujące instrukcje w Konstruktorze formularza:  
   
 ```cpp  
 notifyIcon1 = gcnew System::Windows::Forms::NotifyIcon();  
@@ -130,6 +130,6 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Instrukcje: Dodawanie ikon aplikacji do paska zadań za pomocą składnika NotifyIcon formularzy Windows](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [Instrukcje: Dodawanie ikon aplikacji do paska zadań za pomocą składnika Windows Forms NotifyIcon](app-icons-to-the-taskbar-with-wf-notifyicon.md)
 - [NotifyIcon, składnik](notifyicon-component-windows-forms.md)
 - [NotifyIcon, składnik — omówienie](notifyicon-component-overview-windows-forms.md)

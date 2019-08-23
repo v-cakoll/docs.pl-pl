@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab9feaa1c46a45471395fd4c6158490a24882a65
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1848db96b8f466f617c58f0fdd879ffe3b2022bd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489363"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927249"
 ---
-# <a name="supportportability-element"></a>\<supportPortability> Element
-Określa, czy aplikacja może odwołać się tego samego zestawu w dwóch różnych implementacjach systemu .NET Framework, wyłączając zachowania domyślne, które traktuje zestawy za równorzędne do celów przenoszenia aplikacji.  
+# <a name="supportportability-element"></a>\<Tag supportportability, element >
+Określa, że aplikacja może odwoływać się do tego samego zestawu w dwóch różnych implementacjach .NET Framework, przez wyłączenie domyślnego zachowania, które traktuje zestawy jako równoważne do celów przenośności aplikacji.  
   
- \<Konfiguracja > Element  
-\<środowisko uruchomieniowe > Element  
-\<assemblybinding — > Element  
-\<supportPortability> Element  
+ \<> elementu konfiguracji  
+\<Element > środowiska uruchomieniowego  
+\<assemblyBinding — element >  
+\<Tag supportportability, element >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,15 +35,15 @@ Określa, czy aplikacja może odwołać się tego samego zestawu w dwóch różn
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|PKT|Atrybut wymagany.<br /><br /> Określa publiczny klucz tokena dotkniętego zestawu jako ciąg.|  
-|Włączone|Atrybut opcjonalny.<br /><br /> Określa, czy obsługa przenoszenia między implementacjami określonego zestawu .NET Framework powinien być włączony.|  
+|PKT|Atrybut wymagany.<br /><br /> Określa token klucza publicznego zestawu, którego to dotyczy, jako ciąg znaków.|  
+|dostępny|Atrybut opcjonalny.<br /><br /> Określa, czy obsługa przenośności między implementacjami określonego zestawu .NET Framework powinna być włączona.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|true|Włącz obsługę przenoszenia między implementacjami określonego zestawu .NET Framework. Domyślnie włączone.|  
-|false|Wyłącz obsługę przenoszenia między implementacjami określonego zestawu .NET Framework. Umożliwia aplikacjom odwołanie się do wielu implementacjach określonego zestawu.|  
+|true|Włącz obsługę przenośności między implementacjami określonego zestawu .NET Framework. Domyślnie włączone.|  
+|false|Wyłącz obsługę przenośności między implementacjami określonego zestawu .NET Framework. Dzięki temu aplikacja może mieć odwołania do wielu implementacji określonego zestawu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -57,15 +57,15 @@ Określa, czy aplikacja może odwołać się tego samego zestawu w dwóch różn
 |`assemblyBinding`|Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Począwszy od programu .NET Framework 4, obsługa jest dostarczana automatycznie dla aplikacji, które mogą użyć jednego z dwóch wdrożeń systemu .NET Framework, na przykład implementacji .NET Framework lub .NET Framework do wdrożenia dodatku Silverlight. Dwie implementacje określonego zestawu .NET Framework są postrzegane jako równoważne przez binder zestawu. W niektórych scenariuszach ta funkcja przenoszenia aplikacji powoduje problemy. W tych scenariuszach `<supportPortability>` element może być użyty, aby wyłączyć funkcję.  
+ Począwszy od .NET Framework 4, pomoc techniczna jest świadczona automatycznie dla aplikacji, które mogą korzystać z jednej z dwóch implementacji .NET Framework, na przykład implementacji .NET Framework lub .NET Framework dla implementacji Silverlight. Dwie implementacje określonego zestawu .NET Framework są uważane za równoważne przez spinacz zestawu. W kilku scenariuszach ta funkcja przenośności aplikacji powoduje problemy. W tych scenariuszach `<supportPortability>` element może być używany do wyłączania tej funkcji.  
   
- Taki scenariusz jest to zespół, który ma odniesienia zarówno wykonania .NET Framework, jak i programu .NET Framework dla wdrożenia dodatku Silverlight ze szczególnym odniesieniem zespołu. Na przykład projektant XAML, napisany w Windows Presentation Foundation (WPF) może być konieczne odwołać zarówno implementacje pulpitu WPF dla interfejsu użytkownika projektanta i podzbiór WPF, który znajduje się w implementacji programu Silverlight. Domyślnie oddzielne odwołania spowodują błąd kompilatora, ponieważ powiązanie zestawu widzi dwa zestawy jako równoważne. Ten element wyłącza domyślne zachowanie i pozwala kompilacja osiągnąć sukces.  
+ Taki scenariusz jest zestawem, który musi odwoływać się zarówno do implementacji .NET Framework, jak i .NET Framework do implementacji Silverlight dla określonego zestawu odwołania. Na przykład Projektant XAML zapisany w Windows Presentation Foundation (WPF) może potrzebować odwoływać się zarówno do implementacji pulpitu WPF, interfejsu użytkownika projektanta, jak i podzbioru WPF, który jest zawarty w implementacji Silverlight. Domyślnie oddzielne odwołania powodują wystąpienie błędu kompilatora, ponieważ powiązanie zestawu widzi dwa zestawy jako równoważne. Ten element wyłącza zachowanie domyślne i zezwala na pomyślne Kompilowanie.  
   
 > [!IMPORTANT]
->  Aby kompilator mógł przekazać informacje do logiki związanej z zestawem wykonywalnych języka wspólnego, należy użyć `/appconfig` opcję kompilatora, aby określić lokalizację pliku app.config, który zawiera ten element.  
+> Aby kompilator przeszedł informacje do logiki wiązania zestawu środowiska uruchomieniowego języka wspólnego, należy użyć `/appconfig` opcji kompilatora, aby określić lokalizację pliku App. config, który zawiera ten element.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład umożliwia aplikacjom odwołanie się do wdrożenia programu .NET Framework i .NET Framework do wdrożenia dodatku Silverlight dowolnego zestawu .NET Framework, która znajduje się w obu implementacjach. `/appconfig` — Opcja kompilatora musi służyć do określania lokalizacji tego pliku app.config.  
+ Poniższy przykład umożliwia aplikacji odwoływanie się do implementacji .NET Framework i .NET Framework dla implementacji Silverlight dowolnego zestawu .NET Framework, który istnieje w obu implementacjach. Aby określić lokalizację pliku App. config, należy użyć opcji kompilatora.`/appconfig`  
   
 ```xml  
 <configuration>  
@@ -80,5 +80,5 @@ Określa, czy aplikacja może odwołać się tego samego zestawu w dwóch różn
   
 ## <a name="see-also"></a>Zobacz także
 
-- [/ AppConfig (opcje kompilatora C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [Przegląd ujednolicenia zestawów programu .NET framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
+- [/AppConfig (C# opcje kompilatora)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [Przegląd dezjednoczenia zestawu .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

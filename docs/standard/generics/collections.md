@@ -13,38 +13,38 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa6cd032ecf3a35c1dc32d9907218c9b6efd4bcc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b0de14fd5d576774ed1605784f5f0c6b0fae2c8c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592264"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948926"
 ---
 # <a name="generic-collections-in-net"></a>Kolekcje ogólne w .NET
 
- Biblioteka klas .NET oferuje pewną liczbę klasy kolekcji rodzajowej w <xref:System.Collections.Generic> i <xref:System.Collections.ObjectModel> przestrzeni nazw. Aby uzyskać szczegółowe informacje o tych klas, zobacz [powszechnie używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md).  
+ Biblioteka klas .NET zawiera wiele ogólnych klas kolekcji w <xref:System.Collections.Generic> przestrzeniach nazw i. <xref:System.Collections.ObjectModel> Aby uzyskać bardziej szczegółowe informacje o tych klasach, zobacz [powszechnie używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md).  
   
 ### <a name="systemcollectionsgeneric"></a>System.Collections.Generic  
- Wiele typy generyczne kolekcji jest bezpośrednie analogs nierodzajowymi typów. <xref:System.Collections.Generic.Dictionary%602> jest ogólny wersją <xref:System.Collections.Hashtable>; używa ona ogólnych struktury <xref:System.Collections.Generic.KeyValuePair%602> wyliczenia zamiast <xref:System.Collections.DictionaryEntry>.  
+ Wiele typów kolekcji ogólnej to bezpośrednie analogowe typy nieogólne. <xref:System.Collections.Generic.Dictionary%602>jest wersją <xref:System.Collections.Hashtable>ogólną; używa struktury <xref:System.Collections.Generic.KeyValuePair%602> ogólnej do wyliczenia zamiast <xref:System.Collections.DictionaryEntry>.  
   
- <xref:System.Collections.Generic.List%601> jest ogólny wersją <xref:System.Collections.ArrayList>. Występują ogólne <xref:System.Collections.Generic.Queue%601> i <xref:System.Collections.Generic.Stack%601> klasy, które odpowiadają nierodzajowymi wersji.  
+ <xref:System.Collections.Generic.List%601>to ogólna wersja programu <xref:System.Collections.ArrayList>. Istnieją ogólne <xref:System.Collections.Generic.Queue%601> i <xref:System.Collections.Generic.Stack%601> klasy, które odpowiadają nieogólnym wersji.  
   
- Istnieją wersje rodzajowymi i nierodzajowymi <xref:System.Collections.Generic.SortedList%602>. Obie wersje są hybrydy słownik i listy. <xref:System.Collections.Generic.SortedDictionary%602> Klasy generycznej jest słownikiem czysty i nie ma odpowiednika nierodzajowymi.  
+ Istnieją podstawowe i nieogólne wersje programu <xref:System.Collections.Generic.SortedList%602>. Obie wersje są hybrydowymi słownikiem i listą. Klasa <xref:System.Collections.Generic.SortedDictionary%602> generyczna jest czystym słownikiem i nie ma własnego odpowiednika.  
   
- <xref:System.Collections.Generic.LinkedList%601> Klasy generycznej jest true połączonej listy. Go nie ma odpowiednika nierodzajowymi.  
+ Klasa <xref:System.Collections.Generic.LinkedList%601> ogólna jest połączoną listą rzeczywistą. Nie ma żadnego nieogólnego odpowiednika.  
   
 ### <a name="systemcollectionsobjectmodel"></a>System.Collections.ObjectModel  
- <xref:System.Collections.ObjectModel.Collection%601> Klasy ogólnej udostępnia klasę bazową dla wyprowadzanie własne typy generyczne kolekcji. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> Klasa udostępnia prosty sposób utworzyć kolekcję tylko do odczytu z dowolnego typu, który implementuje <xref:System.Collections.Generic.IList%601> interfejs generyczny. <xref:System.Collections.ObjectModel.KeyedCollection%602> Ogólnej klasy zapewnia sposób przechowywania obiektów, które zawierają własne klucze.  
+ Klasa <xref:System.Collections.ObjectModel.Collection%601> generyczna zapewnia klasę bazową do wyprowadzania własnych typów kolekcji ogólnej. Klasa zapewnia łatwy sposób tworzenia kolekcji tylko do odczytu z dowolnego typu, który <xref:System.Collections.Generic.IList%601> implementuje interfejs generyczny. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> Klasa <xref:System.Collections.ObjectModel.KeyedCollection%602> generyczna zapewnia sposób przechowywania obiektów, które zawierają własne klucze.  
   
 ## <a name="other-generic-types"></a>Inne typy ogólne  
- <xref:System.Nullable%601> Struktura ogólna pozwala na używanie typów wartości, tak, jakby można przypisać `null`. Może to być przydatne podczas pracy z zapytań bazy danych, gdzie może być Brak pól, które zawierają typy wartości. Parametr typu ogólnego może być dowolnego typu wartości.  
+ Struktura ogólna pozwala używać typów wartości, tak jakby mogły być przypisane `null`. <xref:System.Nullable%601> Może to być przydatne podczas pracy z kwerendami bazy danych, gdzie nie można zawierać pól zawierających typy wartości. Parametr typu generycznego może być dowolnym typem wartości.  
   
 > [!NOTE]
->  W języku C# i Visual Basic nie jest konieczne użycie <xref:System.Nullable%601> jawnie, ponieważ język ma składnię dla typów dopuszczających wartości null. Zobacz [typów dopuszczających wartości zerowe (C# Programming Guide)](../../csharp/programming-guide/nullable-types/index.md) i [typy o wartości Zerowalnej (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md). 
+> W C# i Visual Basic nie jest konieczne jawne użycie <xref:System.Nullable%601> , ponieważ język ma składnię dla typów dopuszczających wartość null. Zobacz [Typy dopuszczająceC# wartości null (Przewodnik programowania)](../../csharp/programming-guide/nullable-types/index.md) i [typy wartości null (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md). 
   
- <xref:System.ArraySegment%601> Struktura ogólna zapewnia sposób ograniczyć zakres elementów w tablicy jednowymiarowo, zaczynający się od zera w dowolnego typu. Parametr typu ogólnego jest typ elementów w tablicy.  
+ Struktura <xref:System.ArraySegment%601> ogólna umożliwia rozgraniczenie zakresu elementów w jednowymiarowej tablicy dowolnego typu. Parametr typu ogólnego to typ elementów tablicy.  
   
- <xref:System.EventHandler%601> Delegat ogólny eliminuje potrzebę deklarowania typu delegata obsługi zdarzeń, jeśli zdarzenie jest zgodny ze wzorcem obsługi zdarzeń, używane przez program .NET Framework. Załóżmy, że utworzono `MyEventArgs` klasy pochodzące z <xref:System.EventArgs>, do przechowywania danych dla zdarzenia. Następnie można zadeklarować zdarzenia w następujący sposób:  
+ Delegat <xref:System.EventHandler%601> ogólny eliminuje konieczność deklarowania typu delegata do obsługi zdarzeń, jeśli zdarzenie jest zgodne z wzorcem obsługi zdarzeń używanym przez .NET Framework. Załóżmy na przykład, że utworzono `MyEventArgs` klasę pochodną z <xref:System.EventArgs>, aby przechowywać dane dla zdarzenia. Następnie można zadeklarować zdarzenie w następujący sposób:  
   
  [!code-cpp[Conceptual.Generics.Overview#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]

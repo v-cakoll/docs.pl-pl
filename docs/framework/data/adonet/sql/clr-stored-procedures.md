@@ -2,30 +2,30 @@
 title: Procedury składowane CLR
 ms.date: 03/30/2017
 ms.assetid: fd7eea9b-218a-4988-8c9a-8abcc6031c66
-ms.openlocfilehash: 9b31d93c1ebc0af9aa8e41b3a4c328af62da7e23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c02efa3f0a91d176b626761335bd2d5a2b96b966
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878334"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917960"
 ---
 # <a name="clr-stored-procedures"></a>Procedury składowane CLR
-Procedury składowane są procedury, które nie mogą być używane w wyrażenia skalarne. One zwrócenia jej klientowi wyniki tabelaryczne i komunikaty, wywołaj języka definicji danych (DDL) i instrukcje języka (DML) manipulacji danych i zwracać parametry wyjściowe.  
+Procedury składowane są procedurami, których nie można używać w wyrażeniach skalarnych. Mogą zwracać wyniki tabelaryczne i komunikaty do klienta, wywoływać instrukcje języka definicji danych (DDL) i języka manipulowania danymi oraz zwracać parametry wyjściowe.  
   
 > [!NOTE]
->  Microsoft Visual Basic nie obsługuje parametrów wyjściowych w taki sam sposób, który Microsoft Visual C# wykonuje. Należy określić, Przekaż parametr według odwołania, a następnie zastosować \<Out() > atrybut do reprezentowania parametr wyjściowy, co przedstawiono poniżej:  
+> Firma Microsoft Visual Basic nie obsługuje parametrów wyjściowych w taki sam sposób, jak C# w przypadku programu Microsoft Visual. Należy określić, aby przekazać parametr przez odwołanie i zastosować \<atrybut out () > do reprezentowania parametru wyjściowego, tak jak w poniższym:  
   
 ```vb
 Public Shared Sub ExecuteToClient( <Out()> ByRef number As Integer)  
 ```
   
-Aby uzyskać szczegółowe informacje, zobacz wersję [dokumentacji programu SQL Server](/sql) dla wersji programu SQL Server jest używany.
+Aby uzyskać szczegółowe informacje, zobacz wersję [dokumentacji SQL Server](/sql) dla używanej wersji SQL Server.
   
- **Dokumentacja programu SQL Server**
+ **Dokumentacja SQL Server**
 
 1. [Procedury składowane CLR](https://go.microsoft.com/fwlink/?LinkId=115400)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie obiekty programu SQL Server 2005 w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6s0s2at1(v=vs.90))
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Tworzenie obiektów SQL Server 2005 w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6s0s2at1(v=vs.90))
+- [ADO.NET dostawcy zarządzani i centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,24 +13,24 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 31ae91958dbc02a2f64945af896b4a2408224d05
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 430b7f573b115c21b9e2fa87f0ace74205717285
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624035"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925119"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Instrukcje: dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy systemu Windows
-Formularze Windows <xref:System.Windows.Forms.ImageList> składnika zwykle jest wypełniana przy użyciu obrazów, zanim zostanie skojarzona z kontrolką. Jednak można dodawać i usuwać obrazów po skojarzeniu listy obrazów z formantem przez użytkownika.  
+Składnik Windows Forms <xref:System.Windows.Forms.ImageList> jest zwykle wypełniany obrazami przed skojarzeniem z kontrolką. Można jednak dodawać i usuwać obrazy po skojarzeniu listy obrazów z kontrolką.  
   
 > [!NOTE]
->  Po usunięciu obrazów, upewnij się, że <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> właściwość żadnych skojarzonych formantów jest nadal ważny.  
+> Po usunięciu obrazów Sprawdź, czy <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> Właściwość wszystkich skojarzonych kontrolek jest nadal ważna.  
   
 ### <a name="to-add-images-programmatically"></a>Aby programowo dodać obrazy  
   
-- Użyj <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> metoda listy obrazów <xref:System.Windows.Forms.ImageList.Images%2A> właściwości.  
+- <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> Użyj metody <xref:System.Windows.Forms.ImageList.Images%2A> właściwości lista obrazów.  
   
-     W poniższym przykładzie kodu ścieżkę zestawu dla lokalizacji obrazu jest **Moje dokumenty** folderu. Ta lokalizacja jest używana, ponieważ można założyć, że większość komputerów, na których jest uruchomiony system operacyjny Windows będzie zawierać tego folderu. Wybranie tej lokalizacji umożliwia również użytkowników, którzy mają minimalny system poziomów dostępu więcej bezpiecznego uruchamiania aplikacji. Poniższy przykład kodu wymaga formularza z <xref:System.Windows.Forms.ImageList> formant został już dodany.  
+     W poniższym przykładzie kodu ścieżką ustawioną dla lokalizacji obrazu jest folder **Moje dokumenty** . Ta lokalizacja jest używana, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać ten folder. Wybranie tej lokalizacji pozwala także użytkownikom, którzy mają minimalny poziom dostępu do systemu, bezpieczniejsze uruchamianie aplikacji. Poniższy przykład kodu wymaga, aby formularz z <xref:System.Windows.Forms.ImageList> kontrolką został już dodany.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -74,11 +74,11 @@ Formularze Windows <xref:System.Windows.Forms.ImageList> składnika zwykle jest 
        }  
     ```  
   
-### <a name="to-add-images-with-a-key-value"></a>Aby dodać obrazy z wartością klucza.  
+### <a name="to-add-images-with-a-key-value"></a>, Aby dodać obrazy z wartością klucza.  
   
-- Użyj jednej z <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> metody listy obrazów <xref:System.Windows.Forms.ImageList.Images%2A> właściwość, która przyjmuje wartość klucza.  
+- Użyj jednej z <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> metod <xref:System.Windows.Forms.ImageList.Images%2A> właściwości list obrazu, która przyjmuje wartość klucza.  
   
-     W poniższym przykładzie kodu ścieżkę zestawu dla lokalizacji obrazu jest **Moje dokumenty** folderu. Ta lokalizacja jest używana, ponieważ można założyć, że większość komputerów, na których jest uruchomiony system operacyjny Windows będzie zawierać tego folderu. Wybranie tej lokalizacji umożliwia również użytkowników, którzy mają minimalny system poziomów dostępu więcej bezpiecznego uruchamiania aplikacji. Poniższy przykład kodu wymaga formularza z <xref:System.Windows.Forms.ImageList> formant został już dodany.  
+     W poniższym przykładzie kodu ścieżką ustawioną dla lokalizacji obrazu jest folder **Moje dokumenty** . Ta lokalizacja jest używana, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać ten folder. Wybranie tej lokalizacji pozwala także użytkownikom, którzy mają minimalny poziom dostępu do systemu, bezpieczniejsze uruchamianie aplikacji. Poniższy przykład kodu wymaga, aby formularz z <xref:System.Windows.Forms.ImageList> kontrolką został już dodany.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -107,11 +107,11 @@ public void addImage()
   
 ### <a name="to-remove-all-images-programmatically"></a>Aby programowo usunąć wszystkie obrazy  
   
-- Użyj <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> metodę, aby usunąć pojedynczy obraz  
+- <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> Używanie metody do usuwania pojedynczego obrazu  
   
-     , - lub -  
+     ,-lub-  
   
-     Użyj <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> metodę, aby wyczyścić wszystkie obrazy z listy obrazów.  
+     Użyj metody <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> , aby wyczyścić wszystkie obrazy z listy obrazów.  
   
     ```vb  
     ' Removes the first image in the image list  
@@ -129,7 +129,7 @@ imageList1.Images.Clear();
   
 ### <a name="to-remove-images-by-key"></a>Aby usunąć obrazy według klucza  
   
-- Użyj <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> metodę, aby usunąć pojedynczy obraz za pomocą klucza.  
+- <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> Użyj metody, aby usunąć pojedynczy obraz według swojego klucza.  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  

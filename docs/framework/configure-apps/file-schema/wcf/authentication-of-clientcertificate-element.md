@@ -1,24 +1,24 @@
 ---
-title: <authentication> z <clientCertificate> — Element
+title: <authentication><clientCertificate> elementu
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 2cbc850331dc6bf76c352f975fda834a309564c6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 4a7fee3bd8441a9612e954160397cc56aca163d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423239"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926513"
 ---
-# <a name="authentication-of-clientcertificate-element"></a>\<Uwierzytelnianie > z \<clientCertificate > Element
-Określa zachowania uwierzytelnienia dla certyfikatów klienta używanych przez usługę.  
+# <a name="authentication-of-clientcertificate-element"></a>\<> uwierzytelniania dla \<elementu ClientCertificate >
+Określa zachowania uwierzytelniania dla certyfikatów klienta używanych przez usługę.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<serviceCredentials>  
 \<clientCertificate>  
-\<authentication>  
+\<> uwierzytelniania  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,42 +32,42 @@ Określa zachowania uwierzytelnienia dla certyfikatów klienta używanych przez 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|customCertificateValidatorType|Opcjonalny ciąg. Typ i zestaw używany do walidacji typu niestandardowego. Ten atrybut musi być ustawiane podczas `certificateValidationMode` ustawiono `Custom`.|  
-|certificateValidationMode|Opcjonalne wyliczenie. Określa jeden z trybów używanych do walidacji poświadczenia. Ten atrybut jest <xref:System.ServiceModel.Security.X509CertificateValidationMode> typu. Jeśli ustawiono <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>, a następnie `customCertificateValidator` musi również zostać dostarczony. Wartość domyślna to <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType>.|  
-|includeWindowsGroups|Opcjonalny atrybut typu wartość logiczna. Określa, jeśli grupy Windows znajdują się w kontekście zabezpieczeń. Ustawienie tego atrybutu na `true` ma wpływ na wydajność, ponieważ powoduje ona rozszerzenia całej grupy. Ustaw ten atrybut na `false` Jeśli potrzebujesz nawiązać listy grup należy użytkownik.|  
-|mapClientCertificateToWindowsAccount|Wartość logiczna. Określa, czy klienta mogą być mapowane do tożsamości Windows przy użyciu certyfikatu. Usługi Active Directory musi być włączona w tym celu.|  
-|revocationMode|Opcjonalne wyliczenie. Jeden z trybów użytych do sprawdzenia odwołanych list certyfikatów (RCL). Wartość domyślna to `Online`. Ta wartość jest ignorowana, gdy za pomocą zabezpieczeń transportu HTTP.|  
-|trustedStoreLocation|Opcjonalne wyliczenie. Jedną z dwóch lokalizacji magazynu systemu: `LocalMachine` lub `CurrentUser`. Ta wartość jest używana, gdy certyfikat usługi jest negocjowane do klienta. Sprawdzanie poprawności jest wykonywane względem **zaufane osoby** są przechowywane w lokalizacji określonego magazynu. Wartość domyślna to `CurrentUser`.|  
+|customCertificateValidatorType|Opcjonalny ciąg. Typ i zestaw używany do walidacji typu niestandardowego. Ten atrybut musi być ustawiony, `certificateValidationMode` gdy jest ustawiony `Custom`na.|  
+|certificateValidationMode|Opcjonalne Wyliczenie. Określa jeden z trybów używanych do walidacji poświadczeń. Ten atrybut jest <xref:System.ServiceModel.Security.X509CertificateValidationMode> typu. Jeśli jest ustawiona <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>na, należy `customCertificateValidator` również podać wartość. Wartość domyślna to <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType>.|  
+|includeWindowsGroups|Opcjonalna wartość logiczna. Określa, czy grupy systemu Windows znajdują się w kontekście zabezpieczeń. Ustawienie tego atrybutu na `true` ma wpływ na wydajność, ponieważ powoduje pełne rozszerzanie grupy. Ustaw ten atrybut na `false` , jeśli nie ma potrzeby ustanawiania listy grup, do których należy użytkownik.|  
+|mapClientCertificateToWindowsAccount|Typu. Określa, czy klient może być zamapowany na tożsamość systemu Windows przy użyciu certyfikatu. Aby to zrobić, należy włączyć Active Directory.|  
+|odwołaniemode|Opcjonalne Wyliczenie. Jeden z trybów użytych do sprawdzenia odwołanych list certyfikatów (RCL). Wartość domyślna to `Online`. Ta wartość jest ignorowana w przypadku korzystania z zabezpieczeń transportu HTTP.|  
+|trustedStoreLocation|Opcjonalne Wyliczenie. Jedna z dwóch lokalizacji magazynu systemowego: `LocalMachine` lub `CurrentUser`. Ta wartość jest używana podczas negocjowania certyfikatu usługi z klientem. Sprawdzanie poprawności jest wykonywane względem magazynu **osób zaufanych** w określonej lokalizacji magazynu. Wartość domyślna to `CurrentUser`.|  
   
-## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType Attribute  
-  
-|Wartość|Opis|  
-|-----------|-----------------|  
-|String|Określa nazwę typu i zestawu i inne dane, używana do znajdowania typu.|  
-  
-## <a name="certificatevalidationmode-attribute"></a>tryb certificateValidationMode atrybutu  
+## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Jeden z następujących wartości: Brak zaufania elementów równorzędnych, ChainTrust, PeerOrChainTrust, niestandardowe.<br /><br /> Aby uzyskać więcej informacji, zobacz [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|String|Określa nazwę typu i zestaw oraz inne dane używane do znajdowania typu.|  
   
-## <a name="revocationmode-attribute"></a>revocationMode atrybutu  
-  
-|Wartość|Opis|  
-|-----------|-----------------|  
-|Wyliczenie|Jeden z następujących wartości: NoCheck, Online, Offline. Aby uzyskać więcej informacji, zobacz [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
-  
-## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation atrybutu  
+## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Jedną z następujących wartości: `LocalMachine` lub `CurrentUser`. Wartość domyślna to `CurrentUser`. Jeśli aplikacja kliencka jest uruchomiona w ramach konta systemowego, a następnie certyfikatu wynosi zazwyczaj `LocalMachine`. Jeśli aplikacja kliencka jest uruchomiona w ramach konta użytkownika, a następnie certyfikat znajduje się zwykle w `CurrentUser`.|  
+|Wyliczenie|Jedna z następujących wartości: None, zaufania elementów równorzędnych, ChainTrust, PeerOrChainTrust, Custom.<br /><br /> Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md).|  
+  
+## <a name="revocationmode-attribute"></a>Atrybut odwołania  
+  
+|Wartość|Opis|  
+|-----------|-----------------|  
+|Wyliczenie|Jedna z następujących wartości: NOCHECK, online, offline. Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md).|  
+  
+## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation — atrybut  
+  
+|Wartość|Opis|  
+|-----------|-----------------|  
+|Wyliczenie|Jedna z następujących wartości: `LocalMachine` lub. `CurrentUser` Wartość domyślna to `CurrentUser`. Jeśli aplikacja kliencka jest uruchomiona na koncie systemowym, zwykle `LocalMachine`jest to certyfikat. Jeśli aplikacja kliencka jest uruchomiona w ramach konta użytkownika, certyfikat zazwyczaj znajduje się w `CurrentUser`temacie.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -76,15 +76,15 @@ Określa zachowania uwierzytelnienia dla certyfikatów klienta używanych przez 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<clientCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|Definiuje certyfikat X.509 używany do uwierzytelniania klienta do usługi.|  
+|[\<> clientCertificate](clientcertificate-of-servicecredentials.md)|Definiuje certyfikat X. 509 używany do uwierzytelniania klienta w usłudze.|  
   
 ## <a name="remarks"></a>Uwagi  
- `<authentication>` Element odpowiada <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> klasy. Pozwala dostosować sposób uwierzytelniania klientów. Możesz ustawić `certificateValidationMode` atrybutu `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust`, lub `Custom`. Domyślnie ustawiono poziom `ChainTrust`, która określa, że każdy certyfikat musi zostać znaleziony w hierarchii certyfikatów kończy się rozszerzeniem *główny urząd* w górnej części łańcucha. Jest to najbezpieczniejsza opcja Tryb. Można również ustawić wartość, `PeerOrChainTrust`, która określa, że własnym wystawionych certyfikatów (relacja zaufania elementów równorzędnych) są akceptowane oraz certyfikaty, które znajdują się w zaufanym łańcuchem. Ta wartość jest używana podczas opracowywania i debugowania klientów i usług, ponieważ własnym wystawionych certyfikatów nie należy zakupić od zaufanego urzędu. Podczas wdrażania klienta, użyj `ChainTrust` jest wartość.  
+ Element odnosi się do <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> klasy. `<authentication>` Umożliwia dostosowanie sposobu uwierzytelniania klientów. Można ustawić `certificateValidationMode` atrybut na `None`, `ChainTrust`, `PeerOrChainTrust`, ,`PeerTrust`lub .`Custom` Domyślnie poziom jest ustawiony na `ChainTrust`, który określa, że każdy certyfikat musi znajdować się w hierarchii certyfikatów kończących się w urzędzie *głównym* w górnej części łańcucha. Jest to najbardziej bezpieczny tryb. Można również ustawić wartość na `PeerOrChainTrust`, która określa, że certyfikaty samodzielne (relacja równorzędna) są akceptowane, a także certyfikaty, które znajdują się w zaufanym łańcuchu. Ta wartość jest używana podczas tworzenia i debugowania klientów i usług, ponieważ certyfikaty wystawione przez siebie nie muszą zostać zakupione z zaufanego urzędu. Podczas wdrażania klienta należy zamiast tego użyć `ChainTrust` wartości.  
   
- Można również ustawić wartość, `Custom`. Po ustawieniu `Custom` wartości, należy także ustawić `customCertificateValidatorType` atrybutu do zestawu i typ używany do weryfikacji certyfikatu. Aby utworzyć własny niestandardowy moduł sprawdzania poprawności, musi dziedziczyć abstrakcyjnej <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ Możesz również ustawić wartość na `Custom`. W przypadku ustawienia `Custom` wartości należy również `customCertificateValidatorType` ustawić atrybut na zestaw i typ używany do weryfikacji certyfikatu. Aby utworzyć własny niestandardowy moduł sprawdzania poprawności, należy dziedziczyć z klasy <xref:System.IdentityModel.Selectors.X509CertificateValidator> abstrakcyjnej. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji](../../../wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)certyfikatów.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod określa certyfikat X.509 i typu niestandardowego sprawdzania poprawności w `<authentication>` elementu.  
+ Poniższy kod określa certyfikat X. 509 i niestandardowy typ walidacji w `<authentication>` elemencie.  
   
 ```xml  
 <serviceBehaviors>
@@ -111,6 +111,6 @@ Określa zachowania uwierzytelnienia dla certyfikatów klienta używanych przez 
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>
 - <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>
-- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Instrukcje: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
-- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Zachowania zabezpieczeń](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Instrukcje: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów](../../../wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md)

@@ -1,17 +1,17 @@
 ---
-title: ICorDebugMergedAssemblyRecord::GetPublicKey Method
+title: 'ICorDebugMergedAssemblyRecord:: GetPublicKey, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7540a87b007656ad3363576f835a89846d287ed1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e08b1edcef3e93caa82be3a4342c6a0264734bea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752729"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940021"
 ---
-# <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKey Method
+# <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>ICorDebugMergedAssemblyRecord:: GetPublicKey, Metoda
 Pobiera klucz publiczny zestawu.  
   
 ## <a name="syntax"></a>Składnia  
@@ -25,27 +25,27 @@ HRESULT GetPublicKey(
   
 ## <a name="parameters"></a>Parametry  
  `cbPublicKey`  
- [in] Maksymalna liczba bajtów w `pbPublicKey` tablicy.  
+ podczas Maksymalna liczba bajtów w `pbPublicKey` tablicy.  
   
  `pcbPublicKey`  
- [out] Wskaźnik do rzeczywista liczba bajtów zapisanych na `pbPublicKey` tablicy.  
+ określoną Wskaźnik do rzeczywistej liczby bajtów zapisanych do `pbPublicKey` tablicy.  
   
  `pbPublicKey`  
- [out] Wskaźnik do tablicy typu byte, który zawiera klucz publiczny zestawu.  
+ określoną Wskaźnik do tablicy bajtów zawierającej klucz publiczny zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z architekturą .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

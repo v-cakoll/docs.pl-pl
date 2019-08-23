@@ -2,12 +2,12 @@
 title: Obsługa obiektów POCO
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: 8f65f6d2131941d02c773f61f70084059293187c
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 90b55362c1958ea5677e3bc0cdca906bb3af6b3d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363095"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965554"
 ---
 # <a name="poco-support"></a>Obsługa obiektów POCO
 Ten przykład pokazuje obsługę serializacji dla nieoznaczonych typów; oznacza to, że typy, do których nie zastosowano atrybutów serializacji, czasami określane jako zwykły typ obiektów CLR (POCO). <xref:System.Runtime.Serialization.DataContractSerializer> Wnioskuje o umowę danych dla wszystkich publicznych nieoznaczonych typów, które mają konstruktora bez parametrów. Kontrakty danych umożliwiają przekazywanie danych strukturalnych do i z usług. Aby uzyskać więcej informacji na temat typów nieoznaczonych, zobacz typy możliwe do [serializacji](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
@@ -17,7 +17,7 @@ Ten przykład pokazuje obsługę serializacji dla nieoznaczonych typów; oznacza
  Usługa jest hostowana przez Internet Information Services (IIS), a klient jest aplikacją konsolową (. exe).  
   
 > [!NOTE]
->  Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
  Klasa jest używana `ServiceContract`w. `ComplexNumber` Typ nie ma atrybutów <xref:System.Runtime.Serialization.DataMemberAttribute> i, jak pokazano w poniższym przykładowym kodzie. <xref:System.Runtime.Serialization.DataContractAttribute> `ComplexNumber` Domyślnie wszystkie właściwości publiczne i pola są serializowane.  
   

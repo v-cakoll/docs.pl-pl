@@ -9,22 +9,22 @@ helpviewer_keywords:
 - adding Custom Place to dialog box
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-ms.openlocfilehash: 129ebed6d0a2b075020e635c8463536f97629d2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 824c948fafd0a0995ad261389414d2d79918c8a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624108"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916347"
 ---
 # <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Instrukcje: dodawanie niestandardowego miejsca do okna dialogowego obsługi plików
-Wartość domyślna otworzyć i zapisać okien dialogowych na [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] ma obszar po lewej stronie okna dialogowego pod tytułem **Ulubione łącza**. Ten obszar nosi nazwę niestandardowych miejsc. <xref:System.Windows.Forms.OpenFileDialog> i <xref:System.Windows.Forms.SaveFileDialog> klasy umożliwiają dodanie folderów do <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji.  
+Domyślne okna dialogowe Otwórz i Zapisz w [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] programie mają obszar po lewej stronie okna dialogowego z tytułami **ulubionych linków**. Ten obszar jest nazywany miejscami niestandardowymi. Klasy <xref:System.Windows.Forms.OpenFileDialog> <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> i <xref:System.Windows.Forms.SaveFileDialog> umożliwiają dodawanie folderów do kolekcji.  
   
 > [!NOTE]
->  Aby custom place do okna pojawiają się w <xref:System.Windows.Forms.OpenFileDialog> lub <xref:System.Windows.Forms.SaveFileDialog>, <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> właściwość musi być równa `true` (ustawienie domyślne).  
+> Aby miejsce <xref:System.Windows.Forms.OpenFileDialog> niestandardowe pojawiło się w lub <xref:System.Windows.Forms.SaveFileDialog>, <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> właściwość musi być ustawiona na `true` (wartość domyślna).  
   
-### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a>Aby Dodawanie niestandardowego miejsca do okna dialogowego obsługi plików  
+### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a>Aby dodać niestandardowe miejsce do okna dialogowego pliku  
   
-- Dodaj ścieżkę identyfikatora GUID znanych folderów lub <xref:System.Windows.Forms.FileDialogCustomPlace> obiekt <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji okna dialogowego.  
+- Dodaj ścieżkę, identyfikator GUID znanego folderu lub <xref:System.Windows.Forms.FileDialogCustomPlace> obiekt <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> do kolekcji okna dialogowego.  
   
      Poniższy przykład kodu pokazuje, jak dodać ścieżkę:  
   

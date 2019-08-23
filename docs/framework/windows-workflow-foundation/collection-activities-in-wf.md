@@ -1,31 +1,31 @@
 ---
-title: Działania związane ze zbieraniem w WF
+title: Działania zbierania w WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b14d6f8bdebd349467004a8fa950927f848d0f21
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945980"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935456"
 ---
-# <a name="collection-activities-in-wf"></a>Działania związane ze zbieraniem w WF
-Działania związane ze zbieraniem służą do pracy z obiektami kolekcji w przepływie pracy. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] ma działania dostarczane przez system, dodawanie i usuwanie elementów z kolekcji, testowanie pod kątem istnienia elementu w kolekcji i wyczyścić kolekcję. `ExistsInCollection` i `RemoveFromCollection` mają <xref:System.Activities.OutArgument%601> typu <xref:System.Boolean>, która wskazuje wynik.  
+# <a name="collection-activities-in-wf"></a>Działania zbierania w WF
+Działania zbierania są używane do pracy z obiektami kolekcji w przepływie pracy. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]zawiera działania dostarczone przez system do dodawania i usuwania elementów z kolekcji, testowania pod kątem istnienia elementu w kolekcji i czyszczenia kolekcji. `ExistsInCollection`i `RemoveFromCollection` majątyp<xref:System.Boolean>,którywskazujewynik. <xref:System.Activities.OutArgument%601>  
   
 > [!IMPORTANT]
->  Jeśli działanie kolekcji jest wykonywane przed ustawieniem podstawowego obiektu kolekcji <xref:System.InvalidOperationException> jest generowany, a działanie.  
+> Jeśli działanie kolekcji zostanie wykonane przed ustawieniem bazowego obiektu kolekcji, zostanie <xref:System.InvalidOperationException> zgłoszony komunikat i błędy działania.  
   
-## <a name="collection-activities"></a>Działania związane ze zbieraniem  
+## <a name="collection-activities"></a>Działania zbierania  
   
 |||  
 |-|-|  
 |<xref:System.Activities.Statements.AddToCollection%601>|Dodaje element do określonej kolekcji.|  
 |<xref:System.Activities.Statements.ClearCollection%601>|Czyści wszystkie elementy z określonej kolekcji.|  
-|<xref:System.Activities.Statements.ExistsInCollection%601>|Zwraca `true` Jeśli element istnieje w kolekcji.|  
-|<xref:System.Activities.Statements.RemoveFromCollection%601>|Usuwa element z określonej kolekcji i zwraca `true` Jeśli element został pomyślnie usunięty.|  
+|<xref:System.Activities.Statements.ExistsInCollection%601>|Zwraca `true` czy element istnieje w kolekcji.|  
+|<xref:System.Activities.Statements.RemoveFromCollection%601>|Usuwa element z określonej kolekcji i zwraca `true` czy element został pomyślnie usunięty.|  
   
-## <a name="using-collection-activities"></a>Używanie działań kolekcji  
- Poniższy przykład kodu pokazuje, jak wchodzić w interakcje z kolekcją deklarowany jako zmienna przepływu pracy. Kolekcja używana jest <xref:System.Collections.Generic.List%601> z <xref:System.String> obiektów o nazwie `fruitList`.  
+## <a name="using-collection-activities"></a>Korzystanie z działań kolekcji  
+ Poniższy przykład kodu demonstruje sposób korzystania z kolekcji zadeklarowanej jako zmienna przepływu pracy. Użyta kolekcja to <xref:System.Collections.Generic.List%601> <xref:System.String> obiekty o nazwie `fruitList`.  
   
 ```csharp  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -225,7 +225,7 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
- Powyższe przykłady kodu można również utworzyć przy użyciu <xref:Microsoft.CSharp.Activities.CSharpValue%601> zamiast <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
+ Powyższe przykłady kodu można również utworzyć przy użyciu <xref:Microsoft.CSharp.Activities.CSharpValue%601> zamiast<xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
   
 ```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  

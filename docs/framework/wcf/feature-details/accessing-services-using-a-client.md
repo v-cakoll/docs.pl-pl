@@ -5,100 +5,100 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 9a38ec444c51560cab48db1b39ae331f728fba30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0923fa70907a4846924395483c86e541cd88f284
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635669"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964978"
 ---
 # <a name="accessing-services-using-a-client"></a>Uzyskiwanie dostępu do usług za pomocą klienta
-Aplikacje klienckie należy utworzyć, konfigurowanie i komunikować się z usługami za pomocą obiektów klienta lub kanału WCF. [Przegląd klienta programu WCF](../../../../docs/framework/wcf/wcf-client-overview.md) temat zawiera omówienie obiektów i kroki związane z tworzeniem podstawowych obiektów klienta i kanału i korzystanie z nich.  
+Aplikacje klienckie muszą tworzyć, konfigurować i używać obiektów klienta lub kanału WCF w celu komunikowania się z usługami. Temat [Omówienie klienta WCF](../../../../docs/framework/wcf/wcf-client-overview.md) zawiera omówienie obiektów i kroków związanych z tworzeniem podstawowych obiektów klienta i kanałów oraz ich używania.  
   
- Ten temat zawiera szczegółowe informacje na temat niektórych problemów z klientem, aplikacje i obiekty klienta i kanału, które mogą być użyteczne, w zależności od danego scenariusza.  
+ Ten temat zawiera szczegółowe informacje dotyczące niektórych problemów dotyczących aplikacji klienckich oraz obiektów klienta i kanałów, które mogą być przydatne w zależności od danego scenariusza.  
   
 ## <a name="overview"></a>Omówienie  
- W tym temacie opisano zachowanie oraz zagadnienia odnoszące się do:  
+ W tym temacie opisano zachowanie i problemy związane z:  
   
 - Okresy istnienia kanału i sesji.  
   
 - Obsługa wyjątków.  
   
-- Problemy z blokowaniem opis.  
+- Omówienie problemów z blokowaniem.  
   
-- Inicjowanie kanałów interaktywnie.  
+- Interaktywna Inicjalizacja kanałów.  
   
-### <a name="channel-and-session-lifetimes"></a>Kanał i okresy istnienia sesji  
- Aplikacje Windows Communication Foundation (WCF) zawiera dwie kategorie kanałów, datagram i sessionful.  
+### <a name="channel-and-session-lifetimes"></a>Okresy istnienia kanału i sesji  
+ Aplikacje Windows Communication Foundation (WCF) zawierają dwie kategorie kanałów, datagram i sesję.  
   
- A *datagram* kanał jest kanału, w którym nieskorelowane są wszystkie komunikaty. Kanał datagram w przypadku niepowodzenia operacji wejściowych lub wyjściowych, następnej operacji jest zwykle nie mają wpływu i mogą być używane ponownie ten sam kanał. W związku z tym kanały datagram zwykle nie błędów.  
+ Kanał datagramu to kanał, w którym wszystkie komunikaty są nieskorelowane. Jeśli operacja wejścia lub wyjścia kończy się niepowodzeniem w kanale datagramu, następna operacja jest zwykle niezależna i można ponownie użyć tego samego kanału. Z tego powodu kanały datagramów zazwyczaj nie są błędne.  
   
- *Sessionful* kanałów, są jednak kanałów za pomocą połączenia z punktem końcowym. Wiadomości w sesji na jednej stronie są zawsze powiązane z tej samej sesji z drugiej strony. Ponadto zarówno uczestników sesji musi wyrazić zgodę, w ramach danej sesji zostały uznane za pomyślne zostały spełnione wymagania swojej rozmowy. Jeśli nie zgadzasz się, może być błędów kanału sesji.  
+ Kanały *sesji* są jednak kanały z połączeniem z innym punktem końcowym. Komunikaty w sesji po jednej stronie są zawsze skorelowane z tą samą sesją po drugiej stronie. Ponadto obydwie Uczestnicy sesji muszą wyrazić zgodę na spełnienie wymagań związanych z konwersacją dla danej sesji. Jeśli użytkownicy nie będą mogli wyrazić zgody, może wystąpić błąd w kanale sesji.  
   
- Otwórz klientów jawnie lub niejawnie, wywołując pierwszą operacją.  
+ Otwórz klientów jawnie lub niejawnie, wywołując pierwszą operację.  
   
 > [!NOTE]
->  Próby wykrycia jawnie uszkodzoną kanały sesji nie jest zazwyczaj przydatne, ponieważ po wyświetleniu powiadomienia są zależne od implementacji sesji. Na przykład ponieważ <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> (z niezawodnej sesji wyłączone) wydobywa informacje dotyczące sesji połączenia protokołu TCP, jeśli słuchania <xref:System.ServiceModel.ICommunicationObject.Faulted?displayProperty=nameWithType> zdarzenia usługi lub klienta, prawdopodobnie szybko otrzymywać powiadomienia w przypadku awarii sieci. Ale niezawodnej sesji (ustanowione przez powiązań, w którym <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> jest włączona) są przeznaczone do usług sieciowych o małym rozmiarze błędy związane. Jeśli sesja można ustanowić w rozsądnym czasie, tego samego powiązania — skonfigurowane dotyczące sesji niezawodnych — nie może być błędów do momentu przerwania kontynuowane przez dłuższy czas.  
+> Próba jawnego wykrywania nieprawidłowych kanałów sesji nie jest zazwyczaj użyteczna, ponieważ powiadomienie jest zależne od implementacji sesji. Na przykład, ponieważ <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> (za pomocą niezawodnej sesji wyłączone) wyświetla sesję połączenia TCP, w przypadku nasłuchiwania <xref:System.ServiceModel.ICommunicationObject.Faulted?displayProperty=nameWithType> zdarzenia w usłudze lub klienta, który prawdopodobnie zostanie natychmiast powiadomiony w przypadku awarii sieci. Jednak niezawodne sesje (ustanowione przez powiązania, w których <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> włączono) są przeznaczone do izolowania usług z małych awarii sieci. Jeśli sesja może zostać ponownie ustanowiona w rozsądnym czasie, to to samo powiązanie — skonfigurowane dla sesji niezawodnych — może nie powodować błędów do momentu kontynuowania przez dłuższy okres czasu.  
   
- Domyślnie, większość powiązania dostarczane przez system, (które udostępnianie kanałów w warstwie aplikacji) używają sesji, ale <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> nie. Aby uzyskać więcej informacji, zobacz [przy użyciu sesji](../../../../docs/framework/wcf/using-sessions.md).  
+ Większość powiązań dostarczonych przez system (które uwidaczniają kanały do warstwy aplikacji) domyślnie używa sesji, ale <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> nie jest. Aby uzyskać więcej informacji, zobacz [Korzystanie z sesji](../../../../docs/framework/wcf/using-sessions.md).  
   
-### <a name="the-proper-use-of-sessions"></a>Prawidłowego użycia sesji  
- Sesje umożliwiają exchange cały komunikat zostało ukończone, a obie strony uznawany za pomyślny. Zalecane jest, że aplikacja wywołująca Otwórz kanał, jej używać i zamknij kanał wewnątrz bloku try jeden. Jeśli kanał sesji jest otwarty, a <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> metoda jest wywoływana jeden raz, to wywołanie zwraca pomyślnie, a następnie sesja zakończyła się pomyślnie. Pomyślne w tym przypadku oznacza, że wszystkie dostarczania gwarantuje określone powiązanie zostały spełnione, a druga strona nie wywołał <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> na kanale przed wywołaniem <xref:System.ServiceModel.ICommunicationObject.Close%2A>.  
+### <a name="the-proper-use-of-sessions"></a>Odpowiednie użycie sesji  
+ Sesje zapewniają sposób, aby wiedzieć, czy cała wymiana komunikatów została ukończona, oraz czy obie strony uznały się pomyślnie. Zaleca się, aby aplikacja wywołująca otworzyła kanał, używać jej i zamknąć kanał wewnątrz jednego bloku try. Jeśli kanał sesji jest otwarty, a <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> Metoda jest wywoływana jednokrotnie, a wywołanie zwrotne powiodło się, sesja zakończyła się pomyślnie. Pomyślne w tym przypadku oznacza, że wszystkie dostawy gwarantują spełnienie określonego powiązania, a druga strona nie wywołuje <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> kanału przed wywołaniem. <xref:System.ServiceModel.ICommunicationObject.Close%2A>  
   
- W poniższej sekcji przedstawiono przykład tej metody klienta.  
+ W poniższej sekcji przedstawiono przykład tego podejścia klienta.  
   
 ### <a name="handling-exceptions"></a>Obsługa wyjątków  
- Obsługa wyjątków w aplikacjach klienckich jest bardzo proste. Jeśli kanał jest otwarty, używane i zamknięte wewnątrz bloku try, następnie konwersacji zakończyła się pomyślnie, chyba że zgłaszany jest wyjątek. Zwykle jeśli wyjątek jest zgłaszany konwersacji został przerwany.  
+ Obsługa wyjątków w aplikacjach klienckich jest prosta. Jeśli kanał jest otwarty, używany i zamknięty wewnątrz bloku try, Konwersacja zakończyła się powodzeniem, chyba że zostanie zgłoszony wyjątek. Zazwyczaj Jeśli wystąpi wyjątek, konwersacja jest przerywana.  
   
 > [!NOTE]
->  Korzystanie z `using` — instrukcja (`Using` w języku Visual Basic) nie jest zalecane. Jest to spowodowane koniec `using` instrukcji może spowodować, że wyjątki, które może maskować innych wyjątków, musisz wiedzieć o. Aby uzyskać więcej informacji, zobacz [Użyj Zamknij i Abort, aby zwolnić zasoby klienta WCF](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md).  
+> Nie zaleca się używania`Using` instrukcji(wVisualBasic).`using` Wynika to z faktu, że `using` koniec instrukcji może spowodować wyjątki, które mogą być maskowanymi innymi wyjątkami, które mogą być potrzebne. Aby uzyskać więcej informacji, zobacz [Korzystanie z funkcji Close i Abort w celu zwolnienia zasobów klienta WCF](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md).  
   
- Poniższy przykład kodu pokazuje wzorzec opartej na zalecanym kliencie za pomocą bloku try/catch i nie `using` instrukcji.  
+ Poniższy przykład kodu przedstawia zalecany wzorzec klienta przy użyciu bloku try/catch, a nie `using` instrukcji.  
   
  [!code-csharp[FaultContractAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
 > [!NOTE]
->  Wartości <xref:System.ServiceModel.ICommunicationObject.State%2A?displayProperty=nameWithType> właściwość sytuacja wyścigu i nie jest zalecane w celu ustalenia, czy do ponownego użycia lub zamknięcia kanału.  
+> Sprawdzanie wartości <xref:System.ServiceModel.ICommunicationObject.State%2A?displayProperty=nameWithType> właściwości jest warunkiem wyścigu i nie jest zalecane, aby określić, czy należy ponownie użyć lub zamknąć kanał.  
   
- Kanały datagram nigdy nie błędów, nawet jeśli wyjątek występuje po zamknięciu. Ponadto klientów-duplex, którzy nie próbę uwierzytelnienia przy użyciu bezpiecznej konwersacji zazwyczaj generują <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>. Jednak jeśli dwukierunkowego klienta przy użyciu bezpiecznej konwersacji nie powiedzie się uwierzytelnianie, klient odbierze <xref:System.TimeoutException?displayProperty=nameWithType> zamiast tego.  
+ Kanały datagramów nigdy nie wystąpią nawet wtedy, gdy wyjątki występują po zamknięciu. Ponadto klienci niebędący w trybie dupleksu, którzy nie mogą uwierzytelnić się przy użyciu <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>bezpiecznej konwersacji zwykle generują. Jeśli jednak uwierzytelnianie dupleksowe za pomocą bezpiecznej konwersacji nie powiedzie się, klient otrzyma <xref:System.TimeoutException?displayProperty=nameWithType> zamiast.  
   
- Aby uzyskać bardziej szczegółowe informacje na temat pracy przy użyciu informacji o błędzie na poziomie aplikacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Oczekiwane wyjątki](../../../../docs/framework/wcf/samples/expected-exceptions.md) opisuje oczekiwane wyjątki i pokazuje, jak je obsłużyć. Aby uzyskać więcej informacji na temat obsługi błędów podczas tworzenia kanałów, zobacz [obsługi wyjątków i błędów](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
+ Aby uzyskać więcej informacji na temat pracy z informacjami o błędach na poziomie aplikacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Oczekiwane wyjątki](../../../../docs/framework/wcf/samples/expected-exceptions.md) opisują oczekiwane wyjątki i pokazują, jak je obsłużyć. Aby uzyskać więcej informacji o sposobie obsługi błędów podczas tworzenia kanałów, zobacz [Obsługa wyjątków i błędów](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
   
-### <a name="client-blocking-and-performance"></a>Blokowanie klienta i wydajności  
- Kiedy aplikacja synchronicznie wywołuje operacja żądanie odpowiedź, bloków klienta, dopóki nie zostanie odebrana wartość zwracaną lub wyjątek (takie jak <xref:System.TimeoutException?displayProperty=nameWithType>) jest zgłaszany. To zachowanie jest podobne do zachowania lokalnego. Gdy aplikacja wywołuje synchronicznie operacji na obiekt klienta WCF lub kanał, klient nie zwraca do momentu warstwy kanału można zapisywać dane z siecią lub dopóki nie zostanie zgłoszony wyjątek. I podczas wymiany komunikatów jednokierunkowe (określone przez oznaczenie operację, używając <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> równa `true`) ułatwia niektórzy klienci zwiększyć szybkość reakcji, jednokierunkowe operacje można również zablokować, zależnie od powiązania i jakie komunikaty zostały już wysyłane. Operacje jednokierunkowe są tylko o wymianie wiadomości, nie ma więcej i nie mniejszy. Aby uzyskać więcej informacji, zobacz [usług One-Way](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
+### <a name="client-blocking-and-performance"></a>Blokowanie i wydajność klienta  
+ Gdy aplikacja synchronicznie wywołuje operację żądanie-odpowiedź, zostaje zablokowana przez klienta do momentu otrzymania wartości zwracanej lub wyjątek (na <xref:System.TimeoutException?displayProperty=nameWithType>przykład). Takie zachowanie jest podobne do zachowania lokalnego. Gdy aplikacja synchronicznie wywołuje operację na obiekcie klienta lub kanale programu WCF, klient nie zwraca do momentu, gdy warstwa kanału nie będzie mogła zapisywać danych w sieci ani nie zostanie zgłoszony wyjątek. Natomiast wzorzec wymiany komunikatów jednokierunkowych (określony przez oznaczenie operacji z <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> ustawioną na `true`) może spowodować, że niektórzy klienci przestaną odpowiadać, operacje jednokierunkowe mogą również blokować, w zależności od powiązania i jakie komunikaty zostały już wysłana. Operacje jednokierunkowe dotyczą tylko wymiany komunikatów, nie są jeszcze mniejsze. Aby uzyskać więcej informacji, zobacz jednokierunkowe [usługi](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
   
- Dużej ilości danych na fragmenty może spowalniać klienta przetwarzania niezależnie od tego, jakie wymiany komunikatów. Aby zrozumieć sposób obsługi tych problemów, zobacz [duże ilości danych i przesyłanie strumieniowe](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
+ Duże fragmenty danych mogą spowalniać przetwarzanie klienta niezależnie od tego, jaki jest wzorzec wymiany komunikatów. Aby zrozumieć, jak obsłużyć te problemy, zobacz artykuł [duże ilości danych i przesyłanie strumieniowe](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
- Jeśli aplikacja musi kontynuować pracę podczas kończenia operacji, należy utworzyć pary metod asynchronicznych na interfejsie kontraktu usługi, który implementuje klienta WCF. W tym celu najłatwiej używać `/async` Włącz [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Aby uzyskać przykład, zobacz [jak: Asynchroniczne wywoływanie operacji usługi](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Jeśli aplikacja musi wykonywać większą pracę podczas kończenia operacji, należy utworzyć parę metod asynchronicznych w interfejsie kontraktu usługi, który implementuje klient WCF. Najprostszym sposobem jest użycie `/async` przełącznika w narzędziu narzędzia [metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Aby zapoznać się z przykładem, zobacz [How to: Asynchroniczne](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)wywoływanie operacji usługi.  
   
- Aby uzyskać więcej informacji na temat zwiększa wydajność klienta, zobacz [aplikacje klienckie warstwy środkowej](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
+ Aby uzyskać więcej informacji o zwiększaniu wydajności klienta, zobacz [aplikacje klienckie warstwy środkowej](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
   
-### <a name="enabling-the-user-to-select-credentials-dynamically"></a>Włączanie użytkownikowi na wybranie dynamicznie poświadczeń  
- <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> Interfejs umożliwia aplikacji wyświetlanie interfejsu użytkownika, który umożliwia użytkownikowi wybranie poświadczeń za pomocą których kanał jest tworzony, przed rozpoczęciem czasomierzy limitu czasu.  
+### <a name="enabling-the-user-to-select-credentials-dynamically"></a>Umożliwienie użytkownikowi dynamicznego wybierania poświadczeń  
+ <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> Interfejs umożliwia aplikacjom wyświetlanie interfejsu użytkownika, który umożliwia użytkownikowi wybranie poświadczeń, za pomocą których kanał jest tworzony przed rozpoczęciem czasomierzy limitu czasu.  
   
- Deweloperzy aplikacji mogą udostępnić użytkowania wstawiono <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> na dwa sposoby. Aplikacja kliencka może wywołać albo <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (lub wersja asynchroniczna) przed otwierania kanału ( *jawne* podejście) lub wywołać pierwszą operacją ( *niejawne*podejście).  
+ Deweloperzy aplikacji mogą korzystać z wstawionego <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> na dwa sposoby. Aplikacja kliencka może wywołać jedną <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (lub wersję asynchroniczną) przed otwarciem kanału ( *jawne* podejście) lub wywołać pierwszą operację (niejawne podejście ).  
   
- Jeśli w sposób niejawny, aplikacja musi wywołać pierwszą operacją na <xref:System.ServiceModel.ClientBase%601> lub <xref:System.ServiceModel.IClientChannel> rozszerzenia. Jeśli wywoływanych przez nią coś innego niż pierwszą operacją, zwracany jest wyjątek.  
+ W przypadku użycia podejścia niejawnego aplikacja musi wywołać pierwszą operację na <xref:System.ServiceModel.ClientBase%601> rozszerzeniu lub. <xref:System.ServiceModel.IClientChannel> Jeśli wywołuje coś innego niż pierwsza operacja, zgłaszany jest wyjątek.  
   
- Jeśli przy użyciu podejścia jawne, aplikacja musi wykonać następujące kroki w kolejności:  
+ W przypadku użycia jawnego podejścia aplikacja musi wykonać następujące kroki w kolejności:  
   
-1. Wywołaj opcję <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (lub asynchronicznej wersji).  
+1. Wywołaj <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> jedną <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> lub (lub wersję asynchroniczną).  
   
-2. Po zwróceniu mieć inicjatory, wywołaj albo <xref:System.ServiceModel.ICommunicationObject.Open%2A> metody <xref:System.ServiceModel.IClientChannel> obiektu lub na <xref:System.ServiceModel.IClientChannel> obiekt zwracany z <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> właściwości.  
+2. Gdy inicjatory zostały <xref:System.ServiceModel.ICommunicationObject.Open%2A> zwrócone, należy wywołać metodę <xref:System.ServiceModel.IClientChannel> dla obiektu lub <xref:System.ServiceModel.IClientChannel> obiektu zwróconego z <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> właściwości.  
   
-3. Wywoływanie operacji.  
+3. Wywołania operacji.  
   
- Zaleca się, że aplikacje wysokiej jakości kontrolowania procesu interfejsu użytkownika przez przyjęcie podejścia jawnego.  
+ Zaleca się, aby aplikacje z jakością produkcyjną kontrolować proces interfejsu użytkownika, przyjmując jawne podejście.  
   
- Aplikacje, które używają podejście niejawne wywołania inicjatory interfejsu użytkownika, ale jeśli użytkownik aplikacji nie odpowiedział w określonym przedziale czasu wysyłania powiązania, wyjątek jest generowany, gdy zwraca interfejs użytkownika.  
+ Aplikacje korzystające z niejawnej metody wywołują inicjatory interfejsu użytkownika, ale jeśli użytkownik aplikacji nie odpowie w okresie limitu czasu wysyłania powiązania, zostanie wygenerowany wyjątek, gdy interfejs użytkownika zwróci wartość.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Usługi dwukierunkowe](../../../../docs/framework/wcf/feature-details/duplex-services.md)
-- [Instrukcje: Uzyskiwanie dostępu do usług za pomocą jednokierunkowego i kontraktów "żądanie odpowiedź"](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Instrukcje: Dostęp do usług za pomocą kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Instrukcje: Dostęp do programu WSE 3.0 usługi](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [Instrukcje: Używanie elementu ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Instrukcje: Dostęp do usług za pomocą kontraktów jednokierunkowych i odpowiedzi na żądanie](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Instrukcje: Dostęp do usług za pomocą kontraktu dupleksowego](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Instrukcje: Dostęp do usługi WSE 3,0](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Instrukcje: Korzystanie z elementu ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
 - [Instrukcje: Asynchroniczne wywoływanie operacji usługi](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
 - [Aplikacje klienckie warstwy środkowej](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

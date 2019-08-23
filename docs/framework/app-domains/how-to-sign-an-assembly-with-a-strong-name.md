@@ -13,44 +13,44 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 458b18ad34cfff6ab136408ab8e8b2e7953b35cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0b109ec82d139e3b3eb321c90d5f41dd1eae216f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593563"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927932"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Instrukcje: Podpisywanie zestawu silną nazwą
 Istnieje kilka metod podpisywania zestawu za pomocą silnej nazwy:  
   
-- Za pomocą **podpisywanie** kartę w projekcie **właściwości** okno dialogowe w programie Visual Studio. Jest to najprostsza i najwygodniejsza metoda podpisywania zestawów za pomocą silnych nazw.  
+- Za pomocą karty podpisywanie w oknie dialogowym **Właściwości** projektu w programie Visual Studio. Jest to najprostsza i najwygodniejsza metoda podpisywania zestawów za pomocą silnych nazw.  
   
-- Za pomocą [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) połączyć moduł kodu programu .NET Framework (plik netmodule) z plikiem klucza.  
+- Za pomocą [konsolidatora zestawu (Al. exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) do łączenia modułu kodu .NET Framework (plik. module) z plikiem klucza.  
   
-- Przy użyciu atrybutów zestawu w celu wstawienia informacji o silnej nazwie do kodu. Można użyć dowolnego <xref:System.Reflection.AssemblyKeyFileAttribute> lub <xref:System.Reflection.AssemblyKeyNameAttribute> atrybut, w zależności od tego, w którym znajduje się plik klucza do użycia.  
+- Przy użyciu atrybutów zestawu w celu wstawienia informacji o silnej nazwie do kodu. Możesz użyć <xref:System.Reflection.AssemblyKeyFileAttribute> <xref:System.Reflection.AssemblyKeyNameAttribute> albo atrybutu, w zależności od tego, gdzie znajduje się plik klucza, który ma być używany.  
   
 - Przy użyciu opcji kompilatora.  
   
- Aby podpisać zestaw za pomocą silnej nazwy, trzeba mieć parę kluczy kryptograficznych. Aby uzyskać więcej informacji o tworzeniu pary kluczy, zobacz [jak: Tworzenie pary kluczy publiczny prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
+ Aby podpisać zestaw za pomocą silnej nazwy, trzeba mieć parę kluczy kryptograficznych. Aby uzyskać więcej informacji na temat tworzenia pary kluczy, [zobacz How to: Utwórz parę](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)kluczy publiczny-prywatny.  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Aby utworzyć i podpisać zestaw za pomocą silnej nazwą przy użyciu programu Visual Studio  
   
-1. W **Eksploratora rozwiązań**, otwórz menu skrótów dla projektu, a następnie wybierz **właściwości**.  
+1. W **Eksplorator rozwiązań**Otwórz menu skrótów dla projektu, a następnie wybierz **Właściwości**.  
   
-2. Wybierz **podpisywanie** kartę.  
+2. Wybierz kartę podpisywanie.  
   
-3. Wybierz **Podpisz zestaw** pole.  
+3. Zaznacz pole **podpisz zestaw** .  
   
-4. W **wybierz plik klucza o silnej nazwie** wybierz  **\<Przeglądaj … >**, a następnie przejdź do pliku klucza. Aby utworzyć nowy plik klucza, wybierz  **\<nowy... >** i wprowadź jego nazwę w **Utwórz klucz silnej nazwy** okno dialogowe.  
+4. W polu **Wybierz plik klucza o silnej nazwie** wybierz  **\<Przeglądaj... >** , a następnie przejdź do pliku klucza. Aby utworzyć nowy plik klucza, wybierz  **\<pozycję Nowy... >** i wprowadź jej nazwę w oknie dialogowym **Tworzenie klucza silnej nazwy** .  
   
 > [!NOTE]
->  W celu [opóźnienie podpisywania zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md), wybierz plik klucza publicznego.  
+> Aby opóźnić [podpisywanie zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md), wybierz plik klucza publicznego.  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Aby utworzyć i podpisać zestaw za pomocą silnej nazwy przy użyciu programu Assembly Linker  
   
-- W [wiersz polecenia programisty dla programu Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), wpisz następujące polecenie:  
+- W [wiersz polecenia dla deweloperów dla programu Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md)wpisz następujące polecenie:  
   
-     **Al** **/out:**\<*assemblyName*> *\<Nazwa_modułu >* **/KeyFile:** \<  *keyfileName*>  
+     **Al** **/out:** \<AssemblyNameModuleName> > **/KeyFile**:filename\< *\<* >  
   
      gdzie:  
   
@@ -58,29 +58,29 @@ Istnieje kilka metod podpisywania zestawu za pomocą silnej nazwy:
      Nazwa zestawu podpisanego za pomocą silnej nazwy (plik dll lub exe), który zostanie wyemitowany przez program Assembly Linker.  
   
      *moduleName*  
-     Nazwa modułu kodu programu .NET Framework (plik netmodule) zawierającego co najmniej jeden typ. Plik netmodule można utworzyć, kompilując kod z `/target:module` przełącznika w języku C# lub Visual Basic.  
+     Nazwa modułu kodu programu .NET Framework (plik netmodule) zawierającego co najmniej jeden typ. Można utworzyć plik. module, kompilując kod z `/target:module` przełącznikiem w C# lub Visual Basic.  
   
      *keyfileName*  
      Nazwa kontenera lub pliku zawierającego parę kluczy. Program Assembly Linker interpretuje ścieżkę względną w odniesieniu do bieżącego katalogu.  
   
- Poniższy przykład podpisuje zestaw `MyAssembly.dll` za pomocą silnej nazwy przy użyciu pliku klucza `sgKey.snk`.  
+ Poniższy przykład podpisuje zestaw `MyAssembly.dll` silną nazwą przy użyciu pliku `sgKey.snk`klucza.  
   
 ```  
 al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk  
 ```  
   
- Aby uzyskać więcej informacji o tym narzędziu, zobacz [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md).  
+ Aby uzyskać więcej informacji na temat tego narzędzia, zobacz [konsolidator zestawu](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   
 #### <a name="to-sign-an-assembly-with-a-strong-name-by-using-attributes"></a>Aby podpisać zestaw za pomocą silnej nazwy przy użyciu atrybutów  
   
-1. Dodaj <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> lub <xref:System.Reflection.AssemblyKeyNameAttribute> atrybutu do pliku kodu źródłowego i określ nazwę pliku lub kontener, który zawiera pary kluczy do użycia podczas podpisywania zestawu o silnej nazwie.  
+1. Dodaj atrybut <xref:System.Reflection.AssemblyKeyNameAttribute> or do pliku kodu źródłowego i określ nazwę pliku lub kontenera, który zawiera parę kluczy do użycia podczas podpisywania zestawu o silnej nazwie. <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType>  
   
 2. Skompiluj w normalny sposób plik kodu źródłowego.  
   
 > [!NOTE]
->  Kompilatory C# i Visual Basic generuje ostrzeżeń kompilatora (odpowiednio CS1699 i BC41008, odpowiednio) gdy napotkają <xref:System.Reflection.AssemblyKeyFileAttribute> lub <xref:System.Reflection.AssemblyKeyNameAttribute> atrybutu w kodzie źródłowym. Można zignorować te ostrzeżenia.  
+> Kompilatory C# i Visual Basic nie generują ostrzeżeń kompilatora (odpowiednio CS1699 i BC41008), gdy napotkają <xref:System.Reflection.AssemblyKeyFileAttribute> atrybut <xref:System.Reflection.AssemblyKeyNameAttribute> lub w kodzie źródłowym. Można zignorować te ostrzeżenia.  
   
- W poniższym przykładzie użyto <xref:System.Reflection.AssemblyKeyFileAttribute> atrybutu z plikiem klucza o nazwie `keyfile.snk`, który znajduje się w katalogu, w którym jest kompilowany zestaw.  
+ W poniższym przykładzie jest używany <xref:System.Reflection.AssemblyKeyFileAttribute> atrybut z plikiem klucza o nazwie `keyfile.snk`, który znajduje się w katalogu, w którym skompilowano zestaw.  
   
  [!code-cpp[AssemblyName_KeyPair#21](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/keyfileattrib.cpp#21)]
  [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)]
@@ -90,11 +90,11 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 ### <a name="to-sign-an-assembly-with-a-strong-name-by-using-the-compiler"></a>Aby podpisać zestaw za pomocą silnej nazwy przy użyciu kompilatora  
   
-- Kompiluj z pliku kodu źródłowego lub plików za pomocą `/keyfile` lub `/delaysign` — opcja kompilatora w języku C# i Visual Basic lub `/KEYFILE` lub `/DELAYSIGN` — opcja konsolidatora w języku C++. Po nazwie opcji dodaj średnik, a następnie nazwę pliku klucza. W przypadku używania kompilatorów wiersza polecenia można skopiować plik klucza do katalogu, który zawiera pliki kodu źródłowego.  
+- Kompiluj plik lub `/keyfile` pliki kodu źródłowego z opcją kompilatora lub `/delaysign` w C# Visual Basic `/KEYFILE` `/DELAYSIGN` lub opcję konsolidatora w. C++ Po nazwie opcji dodaj średnik, a następnie nazwę pliku klucza. W przypadku używania kompilatorów wiersza polecenia można skopiować plik klucza do katalogu, który zawiera pliki kodu źródłowego.  
   
-     Aby uzyskać informacje na temat opóźnionego podpisywania, zobacz [opóźnienie podpisywania zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md).  
+     Aby uzyskać informacje o opóźnieniu podpisywania, zobacz [opóźnienie podpisywania zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md).  
   
-     Poniższy przykład używa kompilatora C# i podpisuje zestaw `UtilityLibrary.dll` za pomocą silnej nazwy przy użyciu pliku klucza `sgKey.snk`.  
+     W poniższym przykładzie użyto C# kompilatora i podpisuje zestaw `UtilityLibrary.dll` silną nazwą przy użyciu pliku `sgKey.snk`klucza.  
   
     ```  
     csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
@@ -103,7 +103,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 ## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [Instrukcje: Tworzenie pary kluczy publiczny prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Instrukcje: Tworzenie pary kluczy publiczny-prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Opóźnione podpisywanie zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md)
 - [Zarządzanie podpisywaniem zestawu i manifestu](/visualstudio/ide/managing-assembly-and-manifest-signing)

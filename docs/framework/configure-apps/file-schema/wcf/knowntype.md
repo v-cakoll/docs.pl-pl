@@ -2,21 +2,21 @@
 title: <knownType>
 ms.date: 03/30/2017
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
-ms.openlocfilehash: 4d3dd9042951ffb46b8e0a3f7bb7bcdee23fd58b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0794314cfcb87df00d66b6832356fb130787eba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760691"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928869"
 ---
-# <a name="knowntype"></a>\<Element knownType >
-Określa typ, który ma być używany przez <xref:System.Runtime.Serialization.DataContractSerializer> podczas deserializacji. Element określa "znany typ" zwracanym przez pole lub właściwość "type zadeklarowany". Aby uzyskać więcej informacji, zobacz [znane typy kontraktu danych](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+# <a name="knowntype"></a>\<> knownType
+Określa typ, który ma być używany <xref:System.Runtime.Serialization.DataContractSerializer> przez program podczas deserializacji. Element określa "znany typ", który jest zwracany przez pole lub właściwość "zadeklarowanego typu". Aby uzyskać więcej informacji, zobacz [znane typy kontraktu danych](../../../wcf/feature-details/data-contract-known-types.md).  
   
  \<system.runtime.serialization>  
 \<dataContractSerializer>  
-\<declaredTypes > Element  
-\<Dodaj > z \<declaredTypes >  
-\<knownType> Element  
+\<declaredTypes, element >  
+\<Dodawanie > \<declaredTypes >  
+\<Element > knownType  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,24 +37,24 @@ Określa typ, który ma być używany przez <xref:System.Runtime.Serialization.D
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— typ|Określa typ (włącznie z przestrzenią nazw), nazwę zestawu, wersji, kulturę i token klucza publicznego.|  
+|— typ|Określa typ (w tym przestrzeń nazw), nazwę zestawu, wersję, kulturę i token klucza publicznego.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Parametr >](../../../../../docs/framework/configure-apps/file-schema/wcf/parameter.md)|Określa indeks parametru, gdy deklarowany typ jest typem ogólnym.|  
+|[\<> parametru](parameter.md)|Określa indeks parametru, gdy zadeklarowany typ jest typem ogólnym.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|Dodaje deklarowany typ do kolekcji typów zadeklarowane.|  
+|[\<add>](add-of-declaredtypes-element.md)|Dodaje zadeklarowany typ do kolekcji zadeklarowanych typów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji na temat znanych typów, zobacz [znane typy kontraktu danych](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) i <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Aby uzyskać więcej informacji na temat znanych typów, zobacz [znane typy kontraktu danych](../../../wcf/feature-details/data-contract-known-types.md) i <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- Zobacz [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) na przykład przy użyciu tego elementu.  
+ Zobacz [ \<> DataContractSerializer](datacontractserializer-element.md) , aby zapoznać się z przykładem użycia tego elementu.  
   
 ## <a name="example"></a>Przykład  
   
@@ -72,6 +72,6 @@ Określa typ, który ma być używany przez <xref:System.Runtime.Serialization.D
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Znane typy kontraktów danych](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
-- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+- [Znane typy kontraktów danych](../../../wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer>](datacontractserializer-element.md)
+- [\<add>](add-of-declaredtypes-element.md)

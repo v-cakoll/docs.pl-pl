@@ -2,23 +2,23 @@
 title: <certificate> dla <peer>
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
-ms.openlocfilehash: 5fdcb94e0c252d0bf5c215c08d44061bfe09a537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72128aca1321f3adc4c99ce0e3a47489b1640e31
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673397"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919600"
 ---
-# <a name="certificate-of-peer"></a>\<certyfikat > z \<elementu równorzędnego >
+# <a name="certificate-of-peer"></a>\<> certyfikatów > \<równorzędnego
 Określa certyfikat używany przez element równorzędny.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<serviceBehaviors>  
-\<zachowanie >  
+\<> zachowania  
 \<serviceCredentials>  
-\<peer>  
-\<certificate>  
+\<> elementów równorzędnych  
+\<> certyfikatów  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,10 +36,10 @@ Określa certyfikat używany przez element równorzędny.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`findValue`|Ciąg, który zawiera wartość do wyszukania w magazynie certyfikatów X.509. Typ zawartych w atrybucie musi spełniać wymagania określonego `x509FindType`. Wartość domyślna to ciąg pusty.|  
-|`storeLocation`|Określa lokalizację magazynu certyfikatu X.509, którego klient używa do walidacji certyfikatu węzła równorzędnego. Prawidłowe wartości są następujące:<br /><br /> -LocalMachine: Magazyn certyfikatów przypisany do komputera lokalnego.<br />-CurrentUser: Magazyn certyfikatów przypisany do bieżącego użytkownika.<br /><br /> Wartość domyślna to LocalMachine.|  
-|`storeName`|Określa nazwę magazynu certyfikatu X.509 do otwarcia. Prawidłowe wartości są następujące:<br /><br /> — Książka adresowa: Magazyn certyfikatów dla innych użytkowników.<br />-AuthRoot: Magazyn certyfikatów dla urzędów certyfikacji innych firm (CAs).<br />-Urząd certyfikacji: Magazyn certyfikatów dla certyfikatów pośrednich urzędów certyfikacji.<br />-Niedozwolone: Magazyn certyfikatów dla odwołanych certyfikatów.<br />-Mój: Magazyn certyfikatów dla certyfikatów osobistych.<br />-Katalog główny: Magazyn certyfikatów zaufanych głównych urzędów certyfikacji (CA).<br />-TrustedPeople: Magazyn certyfikatów dla bezpośrednio zaufanych osób i zasobów.<br />-TrustedPublisher: Magazyn certyfikatów dla bezpośrednio zaufanych wydawców.<br /><br /> Wartość domyślna to Mój.|  
-|`X509FindType`|Określa typ wyszukania X.509 w celu wykonania. Prawidłowe wartości są następujące:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> Typ zawarty w `findValue` atrybut musi spełniać wymagania określonego `X509FindType`.<br /><br /> Wartość domyślna to FindBySubjectDistinguishedName.|  
+|`findValue`|Ciąg, który zawiera wartość do wyszukania w magazynie certyfikatów X. 509. Typ zawarty w atrybucie musi spełniać wymagania określone `x509FindType`. Wartość domyślna to pusty ciąg.|  
+|`storeLocation`|Określa lokalizację magazynu certyfikatów X. 509, którego klient używa do weryfikacji certyfikatu elementu równorzędnego. Prawidłowe wartości to:<br /><br /> -LocalMachine: Magazyn certyfikatów przypisany do komputera lokalnego.<br />-CurrentUser: Magazyn certyfikatów przypisany do bieżącego użytkownika.<br /><br /> Wartość domyślna to LocalMachine.|  
+|`storeName`|Określa nazwę magazynu certyfikatu X. 509 do otwarcia. Prawidłowe wartości to:<br /><br /> - AddressBook: Magazyn certyfikatów dla innych użytkowników.<br />AuthRoot Magazyn certyfikatów dla urzędów certyfikacji innych firm.<br />Urząd certyfikacji Magazyn certyfikatów dla pośrednich urzędów certyfikacji (CA).<br />Niedozwolone Magazyn certyfikatów dla odwołanych certyfikatów.<br />Komputer Magazyn certyfikatów dla certyfikatów osobistych.<br />Pierwiastek Magazyn certyfikatów dla zaufanych głównych urzędów certyfikacji (CA).<br />TrustedPeople Magazyn certyfikatów dla bezpośrednio zaufanych osób i zasobów.<br />- TrustedPublisher: Magazyn certyfikatów dla wydawców bezpośrednio zaufanych.<br /><br /> Wartość domyślna to my.|  
+|`X509FindType`|Określa typ wyszukiwania X. 509, który ma zostać wykonany. Prawidłowe wartości to:<br /><br /> - FindByThumbPrint<br />- FindBySubjectName<br />- FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />- FindBySerialNumber<br />- FindByTimeValid<br />- FindByTimeNotYetValid<br />- FindByTemplateName<br />- FindByApplicationPolicy<br />- FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />- FindBySubjectKeyIdentifier<br /><br /> Typ zawarty w `findValue` atrybucie musi spełniać wymagania określone `X509FindType`.<br /><br /> Wartość domyślna to FindBySubjectDistinguishedName.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -48,12 +48,12 @@ Określa certyfikat używany przez element równorzędny.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<elementu równorzędnego >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Określa bieżące poświadczenia dla węzła równorzędnego.|  
+|[\<> elementów równorzędnych](peer-of-servicecredentials.md)|Określa bieżące poświadczenia dla węzła równorzędnego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element konfiguracji zawiera `X509Certificate2` wystąpienie używane podczas uwierzytelniania sąsiadów w siatki elementów równorzędnych.  
+ Ten element konfiguracji zawiera `X509Certificate2` wystąpienie używane podczas uwierzytelniania sąsiadów w sieci równorzędnej.  
   
- Aby uzyskać więcej informacji na temat programowania peer-to-peer, zobacz [sieci Peer-to-Peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Aby uzyskać więcej informacji na temat programowania peer-to-peer, zobacz [sieci peer-to-](../../../wcf/feature-details/peer-to-peer-networking.md)peer.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -62,9 +62,9 @@ Określa certyfikat używany przez element równorzędny.
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>
 - <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>
 - <xref:System.ServiceModel.Security.PeerCredential>
-- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Sieci równorzędne](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [Uwierzytelnianie wiadomości z kanału równorzędnego](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Kanał elementu równorzędnego uwierzytelniania niestandardowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
-- [Zabezpieczanie aplikacji kanałów równorzędnych](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md)
+- [Sieci równorzędne](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [Uwierzytelnianie komunikatów kanału równorzędnego](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Uwierzytelnianie niestandardowe kanału równorzędnego](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Zabezpieczanie aplikacji kanałów równorzędnych](../../../wcf/feature-details/securing-peer-channel-applications.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)

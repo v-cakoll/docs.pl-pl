@@ -10,25 +10,25 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: cc364f3609f8041378b0b03b8e1bc8f312fade18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 55e30744f57364fb37c9fde5b6bade6bab60fa26
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319914"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925093"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy systemu Windows
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Formant zastępuje i dodaje funkcję <xref:System.Windows.Forms.DataGrid> do <xref:System.Windows.Forms.DataGrid> kontrolki; jednak kontrolka jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli wybierzesz opcję. <xref:System.Windows.Forms.DataGridView> Aby uzyskać więcej informacji, zobacz [różnice między kontrolkami DataGridView i DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Można wyświetlić dane w formularzach Windows Forms <xref:System.Windows.Forms.DataGrid> formantu w tabelach i kolumnach, tworząc **Element DataGridTableStyle** obiektów oraz dodać je do **GridTableStylesCollection** obiektu, który jest dostępne za pośrednictwem <xref:System.Windows.Forms.DataGrid> kontrolki **TableStyles** właściwości. Każdy styl tabeli Wyświetla zawartość tabeli niezależnie od danych jest określona w **Element DataGridTableStyle** obiektu **MappingName** właściwości. Domyślnie styl tabeli za pomocą nie style kolumny określone wyświetli wszystkie kolumny w tabeli danych. Można ograniczyć, które kolumny z tabeli są wyświetlane, dodając **DataGridColumnStyle** obiekty do **kolekcji GridColumnStylesCollection** obiektu, który jest dostępny za pośrednictwem  **GridColumnStyles** właściwości każdego **Element DataGridTableStyle** obiektu.  
+ Dane można wyświetlić w kontrolce Windows Forms <xref:System.Windows.Forms.DataGrid> w tabelach i kolumnach, tworząc obiekty **Element DataGridTableStyle** i dodając je do obiektu **GridTableStylesCollection** <xref:System.Windows.Forms.DataGrid> , który jest dostępny za pomocą kontrolki Właściwość **TableStyles** . Każdy styl tabeli wyświetla zawartość dowolnej tabeli danych, która jest określona we właściwości MappingName obiektu **Element DataGridTableStyle** . Domyślnie styl tabeli bez określonych stylów kolumn będzie wyświetlał wszystkie kolumny w tej tabeli danych. Można ograniczyć, które kolumny z tabeli pojawiają się przez dodanie obiektów **DataGridColumnStyle** do obiektu **GridColumnStylesCollection** , do którego dostęp jest uzyskiwany za pośrednictwem właściwości **GridColumnStyles** każdego **Element DataGridTableStyle** Stream.  
   
-### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>Aby programowo dodać tabel i kolumn z elementem DataGrid  
+### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>Aby programowo dodać tabelę i kolumnę do składnika DataGrid  
   
-1. Aby wyświetlić dane w tabeli, najpierw musisz powiązać <xref:System.Windows.Forms.DataGrid> kontrolki do zestawu danych. Aby uzyskać więcej informacji, zobacz [jak: Powiązywanie formantu DataGrid formularzy Windows ze źródłem danych](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+1. Aby wyświetlić dane w tabeli, należy najpierw powiązać <xref:System.Windows.Forms.DataGrid> formant z zestawem danych. Aby uzyskać więcej informacji, zobacz [jak: Powiąż formant DataGrid Windows Forms ze źródłem](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)danych.  
   
     > [!CAUTION]
-    >  Podczas określania programowo Style kolumn, Zawsze twórz **DataGridColumnStyle** obiektów i dodaj je do **kolekcji GridColumnStylesCollection** obiektu przed dodaniem  **Element DataGridTableStyle** obiekty do **GridTableStylesCollection** obiektu. Po dodaniu pustą **Element DataGridTableStyle** obiektu do kolekcji, **DataGridColumnStyle** obiekty są generowane automatycznie. W związku z tym, zostanie zgłoszony wyjątek, Jeśli spróbujesz dodać nowe **DataGridColumnStyle** obiekty ze zduplikowanymi **MappingName** wartości **kolekcji GridColumnStylesCollection**obiektu.  
+    >  Podczas programowego określania stylów kolumn, zawsze twórz obiekty **DataGridColumnStyle** i Dodaj je do obiektu **GridColumnStylesCollection** przed dodaniem obiektów **Element DataGridTableStyle** do  **Obiekt GridTableStylesCollection** . Po dodaniu pustego obiektu **Element DataGridTableStyle** do kolekcji, obiekty **DataGridColumnStyle** są generowane automatycznie. W związku z tym, zostanie zgłoszony wyjątek, jeśli spróbujesz dodać nowe obiekty **DataGridColumnStyle** ze zduplikowanymi wartościami **mapowanianame** do obiektu **GridColumnStylesCollection** .  
   
 2. Zadeklaruj nowy styl tabeli i ustaw jego nazwę mapowania.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "59319914"
     ts1->MappingName = S"Customers";  
     ```  
   
-3. Zadeklaruj nowy styl kolumny i ustaw jego nazwę mapowania i inne właściwości.  
+3. Zadeklaruj nowy styl kolumny i ustaw jego nazwę mapowania oraz inne właściwości.  
   
     ```vb  
     Dim myDataCol As New DataGridBoolColumn()  
@@ -67,7 +67,7 @@ ms.locfileid: "59319914"
     myDataCol->MappingName = "Current";  
     ```  
   
-4. Wywołaj **Dodaj** metody **kolekcji GridColumnStylesCollection** obiekt, aby dodać kolumnę do styl tabeli  
+4. Wywołaj metodę **Add** obiektu **GridColumnStylesCollection** , aby dodać kolumnę do stylu tabeli  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -81,7 +81,7 @@ ms.locfileid: "59319914"
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5. Wywołaj **Dodaj** metody **GridTableStylesCollection** obiekt do dodania styl tabeli do siatki danych.  
+5. Wywołaj metodę **Add** obiektu **GridTableStylesCollection** , aby dodać styl tabeli do siatki danych.  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  
@@ -98,4 +98,4 @@ ms.locfileid: "59319914"
 ## <a name="see-also"></a>Zobacz także
 
 - [DataGrid, kontrolka](datagrid-control-windows-forms.md)
-- [Instrukcje: Usuń lub ukrywanie kolumn w kontrolce DataGrid formularzy Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Instrukcje: Usuwanie lub ukrywanie kolumn w kontrolce DataGrid Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

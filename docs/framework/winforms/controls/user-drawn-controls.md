@@ -9,27 +9,27 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: bd7ce150e4dc0ecfe53f92ec8b557459f1e14e3a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50036f5bef323368b4970a080ca7a70cf94252d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651565"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966485"
 ---
 # <a name="user-drawn-controls"></a>Formanty rysowane przez użytkownika
-.NET Framework umożliwia łatwe tworzenie własnych kontrolek. Można utworzyć kontrolkę użytkownika, który jest zestaw standardowych kontrolek powiązane przez kod, lub można zaprojektować kontrolki od podstaw w górę. Dziedziczenie umożliwia nawet utworzyć formant, który dziedziczy istniejący formant i dodać do jej nieodłączne funkcjonalność. Niezależnie od podejścia, możesz użyć programu .NET Framework zapewnia funkcje do rysowania niestandardowy interfejs graficzny dla dowolnego formantu, który tworzysz.  
+.NET Framework zapewnia możliwość łatwego tworzenia własnych kontrolek. Można utworzyć kontrolkę użytkownika, która jest zestawem standardowych kontrolek powiązanych ze sobą za pomocą kodu lub można zaprojektować własny formant od podstaw. Można nawet użyć dziedziczenia, aby utworzyć kontrolkę, która dziedziczy z istniejącej kontrolki i dodaje do jej funkcjonalności. Niezależnie od tego, z jakich sposobów korzystasz, .NET Framework zapewnia funkcjonalność do rysowania niestandardowego interfejsu graficznego dla każdej tworzonego formantu.  
   
- Malowanie kontrolki odbywa się przez wykonywanie kodu w formancie <xref:System.Windows.Forms.Control.OnPaint%2A> metody. Pojedynczy argument <xref:System.Windows.Forms.Control.OnPaint%2A> metodą jest <xref:System.Windows.Forms.PaintEventArgs> obiektu, który zawiera wszystkie informacje i funkcje wymagane do renderowania kontrolki. <xref:System.Windows.Forms.PaintEventArgs> Zapewnia jako właściwości dwa obiekty jednostki, które będą używane w czasie renderowania kontrolki:  
+ Malowanie kontrolki odbywa się przez wykonanie kodu w <xref:System.Windows.Forms.Control.OnPaint%2A> metodzie formantu. Pojedynczy argument <xref:System.Windows.Forms.Control.OnPaint%2A> metody <xref:System.Windows.Forms.PaintEventArgs> jest obiektem, który zawiera wszystkie informacje i funkcje wymagane do renderowania formantu. <xref:System.Windows.Forms.PaintEventArgs> Zapewnia jako właściwości dwa obiekty główne, które będą używane podczas renderowania kontrolki:  
   
-- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Obiekt - prostokąt, który reprezentuje część kontrolki, z którego będą pobierane. Może to być całą formantu lub część formantu w zależności od tego, jak kontrolka jest rysowana.  
+- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>Object — prostokąt, który reprezentuje część kontrolki, która zostanie narysowana. Może to być cała kontrolka lub część kontrolki w zależności od sposobu rysowania kontrolki.  
   
-- <xref:System.Drawing.Graphics> Obiekt - hermetyzuje kilka zorientowane na grafiki obiektów i metod, które udostępniają funkcje, które są niezbędne narysować swoją kontrolkę.  
+- <xref:System.Drawing.Graphics>Object — hermetyzuje kilka obiektów i metod zorientowanych na grafiki, które zapewniają funkcje niezbędne do narysowania kontrolki.  
   
- Aby uzyskać więcej informacji na temat <xref:System.Drawing.Graphics> obiektu oraz sposób jej stosowania, patrz [jak: Tworzenie obiektów graficznych do rysowania](../advanced/how-to-create-graphics-objects-for-drawing.md).  
+ Aby uzyskać więcej informacji na <xref:System.Drawing.Graphics> temat obiektu i sposobu jego użycia, zobacz [How to: Utwórz obiekty graficzne do rysowania](../advanced/how-to-create-graphics-objects-for-drawing.md).  
   
- <xref:System.Windows.Forms.Control.OnPaint%2A> Zdarzenie jest wywoływane zawsze wtedy, gdy kontrolka jest rysowana lub odświeżane na ekranie i <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> obiekt reprezentuje prostokąt, w którym odbędzie się malowania. Jeśli kontrolka całego musi zostać odświeżona, <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> będzie reprezentować rozmiar całego formantu. Jeśli tylko część formantu musi zostać odświeżona, jednak <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> obiektu będzie reprezentować region, który ma być narysowany ponownie. Przykładem takiej sytuacji będzie, gdy formant został częściowo zasłonięte przez inny formant lub formularzy w interfejsie użytkownika.  
+ Zdarzenie jest wyzwalane za każdym razem, gdy kontrolka jest rysowana lub odświeżana na <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> ekranie, a obiekt reprezentuje prostokąt, w którym nastąpi malowanie. <xref:System.Windows.Forms.Control.OnPaint%2A> Jeśli cała kontrolka musi zostać odświeżona, <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> będzie reprezentować rozmiar całej kontrolki. Jeśli jednak <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> tylko część kontrolki wymaga odświeżenia, obiekt będzie reprezentował tylko region, który musi zostać narysowany ponownie. Przykładem takiego przypadku może być, gdy kontrolka została częściowo zasłonięta przez inny formant lub formularz w interfejsie użytkownika.  
   
- Gdy dziedziczenie z <xref:System.Windows.Forms.Control> klasy, konieczne jest przesłonięcie <xref:System.Windows.Forms.Control.OnPaint%2A> metody i podać kod renderowania grafiki w ciągu. Jeśli chcesz podać niestandardowy interfejs graficzny umożliwiający kontrolkę użytkownika lub kontrolkę, która jest dziedziczone, możesz także to zrobić przez zastąpienie <xref:System.Windows.Forms.Control.OnPaint%2A> metody. Poniżej przedstawiono przykład:  
+ W przypadku dziedziczenia z <xref:System.Windows.Forms.Control> klasy należy <xref:System.Windows.Forms.Control.OnPaint%2A> zastąpić metodę i udostępnić kod renderowania grafiki w obrębie. Jeśli chcesz dostarczyć niestandardowy interfejs graficzny do kontrolki użytkownika lub dziedziczonej kontrolki, możesz to zrobić, zastępując <xref:System.Windows.Forms.Control.OnPaint%2A> metodę. Poniżej przedstawiono przykład:  
   
 ```vb  
 Protected Overrides Sub OnPaint(ByVal e As PaintEventArgs)  
@@ -60,9 +60,9 @@ protected override void OnPaint(PaintEventArgs e)
 }  
 ```  
   
- Poprzedni przykład przedstawia sposób renderowania formantu za pomocą bardzo prosty graficzną reprezentację. Wywołuje <xref:System.Windows.Forms.Control.OnPaint%2A> metody klasy bazowej, tworzy <xref:System.Drawing.Pen> obiektu za pomocą którego do rysowania, a na koniec rysuje na wielokropek w prostokącie określona przez <xref:System.Windows.Forms.Control.Location%2A> i <xref:System.Windows.Forms.Control.Size%2A> formantu. Mimo że większość kodu renderowania będzie znacznie bardziej skomplikowane niż to, w tym przykładzie pokazano użycie <xref:System.Drawing.Graphics> obiektów znajdujących się w obrębie <xref:System.Windows.Forms.PaintEventArgs> obiektu. Należy pamiętać, że jeśli dziedziczą z klasy, która już zawiera graficzną reprezentację, takie jak <xref:System.Windows.Forms.UserControl> lub <xref:System.Windows.Forms.Button>i nie chcesz zintegrować tę reprezentację Twojego renderowanie, nie należy wywołać klasy bazowej <xref:System.Windows.Forms.Control.OnPaint%2A> Metoda.  
+ W poprzednim przykładzie pokazano, jak renderować formant z bardzo prostą reprezentacją graficzną. Wywołuje <xref:System.Windows.Forms.Control.OnPaint%2A> metodę klasy bazowej, <xref:System.Drawing.Pen> tworzy obiekt, z którym należy narysować, i na koniec Rysuje elipsę w prostokącie określonym przez <xref:System.Windows.Forms.Control.Location%2A> i <xref:System.Windows.Forms.Control.Size%2A> kontrolkę. Chociaż większość kodu renderowania będzie znacznie bardziej skomplikowana niż ta, ten przykład demonstruje użycie <xref:System.Drawing.Graphics> obiektu zawartego <xref:System.Windows.Forms.PaintEventArgs> w obiekcie. Należy pamiętać, że jeśli dziedziczą z klasy, która ma już reprezentację graficzną, taką <xref:System.Windows.Forms.UserControl> jak <xref:System.Windows.Forms.Button>lub, i nie chcesz dołączać tej reprezentacji do renderowania, nie należy <xref:System.Windows.Forms.Control.OnPaint%2A> wywoływać klasy bazowej Method.  
   
- Kod w <xref:System.Windows.Forms.Control.OnPaint%2A> metody kontroli nad będą wykonywane podczas pierwszych rysowania kontrolki i zawsze wtedy, gdy jest on odświeżany. Aby upewnić się, że formant jest odświeżana, za każdym razem, gdy zmiany jego rozmiaru, Dodaj następujący wiersz do konstruktora kontrolki:  
+ Kod w <xref:System.Windows.Forms.Control.OnPaint%2A> metodzie formantu będzie wykonywany, gdy kontrolka zostanie narysowana po raz pierwszy, i za każdym razem, gdy zostanie odświeżony. Aby upewnić się, że formant jest ponownie rysowany przy każdej zmianie rozmiaru, Dodaj następujący wiersz do konstruktora formantu:  
   
 ```vb  
 SetStyle(ControlStyles.ResizeRedraw, True)  
@@ -73,7 +73,7 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 ```  
   
 > [!NOTE]
->  Użyj <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> właściwości, aby zaimplementować formant prostokątny.  
+> Użyj właściwości <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> , aby zaimplementować kontrolkę nieprostokątną.  
   
 ## <a name="see-also"></a>Zobacz także
 

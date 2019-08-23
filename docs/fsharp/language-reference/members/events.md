@@ -2,12 +2,12 @@
 title: Zdarzenia
 description: Dowiedz F# się, jak zdarzenia umożliwiają kojarzenie wywołań funkcji z akcjami użytkownika, które są ważne w programowaniu graficznego interfejsu użytkownika.
 ms.date: 05/16/2016
-ms.openlocfilehash: eed2caff569638ea5aa972a000dfa71a3b64f60b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7c3f16204b762609323fc2bcdc05f80e85a298e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627568"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917277"
 ---
 # <a name="events"></a>Zdarzenia
 
@@ -175,7 +175,7 @@ Application.Run(appForm)
 ## <a name="see-also"></a>Zobacz także
 
 - [Elementy członkowskie](index.md)
-- [Obsługa i wywoływanie zdarzeń](../../../../docs/standard/events/index.md)
+- [Obsługa i wywoływanie zdarzeń](../../../standard/events/index.md)
 - [Wyrażenia lambda: słowo kluczowe `fun`](../functions/lambda-expressions-the-fun-keyword.md)
 - [Control. Event — Moduł](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control.&#60;eventObject&#62; — Klasa](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)

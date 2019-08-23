@@ -2,19 +2,19 @@
 title: <persistableType>
 ms.date: 03/30/2017
 ms.assetid: e5425fe6-523a-4076-aab4-2c2515b1d830
-ms.openlocfilehash: 939a29e90ee21e94ccb78842d6f7224e9a6288d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcfd338e289b5151688724f0e84b6878707d32be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783321"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933834"
 ---
-# <a name="persistabletype"></a>\<persistableType>
-Określa typy stałe.  
+# <a name="persistabletype"></a>\<persistableType >
+Określa wszystkie typy, które są trwałe.  
   
  \<system.ServiceModel>  
 \<comContracts>  
-\<comContract>  
+\<comContract >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,8 +40,8 @@ Określa typy stałe.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|identyfikator|Wymagany atrybut, który zawiera ciąg, który określa unikatowy identyfikator typu stałe.|  
-|nazwa|Opcjonalny atrybut, który zawiera ciąg określający nazwę typu stałe.|  
+|identyfikator|Wymagany atrybut, który zawiera ciąg, który określa unikatowy identyfikator dla typu trwałego.|  
+|nazwa|Opcjonalny atrybut, który zawiera ciąg określający nazwę typu, który jest trwały.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -50,12 +50,12 @@ Określa typy stałe.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)|Kolekcja `persistableType` elementów.|  
+|[\<persistableTypes >](persistabletypes.md)|Kolekcja `persistableType` elementów.|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Configuration.ComPersistableTypeElementCollection>
 - <xref:System.ServiceModel.Configuration.ComPersistableTypeElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [Współdziałanie z aplikacjami COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Instrukcje: Konfigurowanie ustawień usługi COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [Współdziałanie z aplikacjami COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Instrukcje: Konfigurowanie ustawień usługi COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

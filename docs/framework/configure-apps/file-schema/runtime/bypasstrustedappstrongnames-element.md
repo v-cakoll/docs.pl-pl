@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aac7079d941e6774ca6c00fbece8ff72fbf3f0e1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 92873277b4b25e4c1c5981628187078ac7cb5704
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663874"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920890"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> Element
 Określa, czy pomijać weryfikację silnych nazw w zestawach pełnego zaufania, które są ładowane do pełnego zaufania <xref:System.AppDomain>.  
@@ -70,7 +70,7 @@ Określa, czy pomijać weryfikację silnych nazw w zestawach pełnego zaufania, 
 - Nie jest podpisany z opóźnieniem.  
   
 > [!NOTE]
->  Jeśli funkcja pomijania została wyłączona dla wszystkich aplikacji na komputerze przy użyciu klucza rejestru, to ustawienie tego pliku konfiguracji nie ma żadnego wpływu. Aby uzyskać więcej informacji, zobacz [jak: Wyłącz funkcję](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)pomijania silnej nazwy.  
+> Jeśli funkcja pomijania została wyłączona dla wszystkich aplikacji na komputerze przy użyciu klucza rejestru, to ustawienie tego pliku konfiguracji nie ma żadnego wpływu. Aby uzyskać więcej informacji, zobacz [jak: Wyłącz funkcję](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)pomijania silnej nazwy.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak określić zachowanie, które sprawdza podpis silnej nazwy w zestawach pełnego zaufania.  

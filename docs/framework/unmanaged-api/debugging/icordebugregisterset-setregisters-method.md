@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 472e92e4e7a69c437c66cc9f221ab357292c345e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 200ea1b9c046b8743699a549c07c0baaf285be39
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769596"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965034"
 ---
 # <a name="icordebugregistersetsetregisters-method"></a>ICorDebugRegisterSet::SetRegisters — Metoda
-`SetRegisters` nie jest zaimplementowana w .NET Framework w wersji 2.0. Nie wywołuj tej metody.  
+`SetRegisters`nie jest zaimplementowany w .NET Framework w wersji 2,0. Nie wywołuj tej metody.  
   
 > [!NOTE]
->  Używać operacji wyższego poziomu, takich jak [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) lub [ICorDebugNativeFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md).  
+> Użyj operacji wyższego poziomu, takich jak [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) lub [ICorDebugNativeFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,13 +41,13 @@ HRESULT SetRegisters (
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówki** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** 1.1, 1.0  
+ **.NET Framework wersje:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -11,46 +11,46 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 7beae9bb886c7c79d4d97375887bfecb0c2a40c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 670746a1b964a85bc5136d976d831c6848466797
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792161"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930985"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>Przewodnik: aktualizowanie informacji na pasku stanu w czasie wykonywania
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip> i <xref:System.Windows.Forms.ToolStripStatusLabel> kontrolki Zastąp i dodawania funkcjonalności do <xref:System.Windows.Forms.StatusBar> i <xref:System.Windows.Forms.StatusBarPanel> kontroluje; jednak <xref:System.Windows.Forms.StatusBar> i <xref:System.Windows.Forms.StatusBarPanel> kontrolek zostaną zachowane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli możesz Wybierz.  
+> <xref:System.Windows.Forms.StatusBarPanel> <xref:System.Windows.Forms.StatusBarPanel> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBar> Formanty i zastępują i dodają funkcje do kontrolek i, natomiast kontrolki i są zachowywane w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości. <xref:System.Windows.Forms.StatusStrip> <xref:System.Windows.Forms.ToolStripStatusLabel> następnie.  
   
- Często program będzie wywoływać parametr dla aktualizacji zawartości paneli paska stanu dynamicznie w czasie wykonywania, na podstawie zmian do stanu aplikacji lub innych interakcji z użytkownikiem. Jest to często stosowaną metodą sygnał użytkownikom włączenie kluczy, takie jak włączony klawisz CAPS LOCK, NUM LOCK lub SCROLL LOCK lub podaj datę lub zegara jako odwołanie wygodne.  
+ Często program będzie wywoływał, aby zaktualizować zawartość paneli paska stanu dynamicznie w czasie wykonywania, na podstawie zmian stanu aplikacji lub innej interakcji z użytkownikiem. Jest to typowy sposób, aby sygnalizować użytkownikom, że klucze takie jak Caps Lock, NUM LOCK lub SCROLL LOCK są włączone, lub podać datę lub zegar jako wygodne odwołanie.  
   
- W poniższym przykładzie użyjesz wystąpienie <xref:System.Windows.Forms.StatusBarPanel> klasy do hostowania zegara.  
+ W poniższym przykładzie zostanie użyte wystąpienie <xref:System.Windows.Forms.StatusBarPanel> klasy do hostowania zegara.  
   
-### <a name="to-get-the-status-bar-ready-for-updating"></a>Aby uzyskać gotowe do aktualizacji paska stanu  
+### <a name="to-get-the-status-bar-ready-for-updating"></a>Aby wyświetlić pasek stanu gotowy do aktualizacji  
   
-1. Tworzenie nowego formularza Windows.  
+1. Utwórz nowy formularz systemu Windows.  
   
-2. Dodaj <xref:System.Windows.Forms.StatusBar> formantu do formularza. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md).  
+2. <xref:System.Windows.Forms.StatusBar> Dodaj kontrolkę do formularza. Aby uzyskać szczegółowe informacje [, zobacz How to: Dodaj formanty do Windows Forms](how-to-add-controls-to-windows-forms.md).  
   
-3. Dodawanie panelu pasek stanu, aby Twoje <xref:System.Windows.Forms.StatusBar> kontroli. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie paneli do kontrolki StatusBar](how-to-add-panels-to-a-statusbar-control.md).  
+3. Dodaj panel paska stanu do <xref:System.Windows.Forms.StatusBar> kontrolki. Aby uzyskać szczegółowe informacje [, zobacz How to: Dodaj panele do kontrolki](how-to-add-panels-to-a-statusbar-control.md)StatusBar.  
   
-4. Aby uzyskać <xref:System.Windows.Forms.StatusBar> formant został dodany do formularza, ustaw <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> właściwość `true`.  
+4. Dla kontrolki dodanej do formularza <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> ustaw właściwość na `true`. <xref:System.Windows.Forms.StatusBar>  
   
-5. Dodawanie formularzy Windows <xref:System.Windows.Forms.Timer> składnika do formularza.  
+5. Dodaj składnik Windows Forms <xref:System.Windows.Forms.Timer> do formularza.  
   
     > [!NOTE]
-    >  Formularze Windows <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> składnik jest przeznaczony dla środowiska Windows Forms. Jeśli potrzebujesz czasomierza, która jest odpowiednia w środowisku serwera, zobacz [wprowadzenie do serwerowych czasomierzy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
+    > Składnik Windows Forms <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> jest przeznaczony dla środowiska Windows Forms. Jeśli potrzebujesz czasomierza odpowiedniego dla środowiska serwera, zobacz [wprowadzenie do czasomierzy oparte na serwerze](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
 6. Ustaw <xref:System.Windows.Forms.Timer.Enabled%2A> właściwość `true`.  
   
-7. Ustaw <xref:System.Windows.Forms.Timer.Interval%2A> właściwość <xref:System.Windows.Forms.Timer> na 30000.  
+7. <xref:System.Windows.Forms.Timer.Interval%2A> Ustaw właściwość <xref:System.Windows.Forms.Timer> na 30000.  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.Timer.Interval%2A> Właściwość <xref:System.Windows.Forms.Timer> składnika jest ustawiony na 30 sekund (30 000 milisekund), aby upewnić się, że dokładnego czasu jest odzwierciedlana w czasie wyświetlane.  
+    > <xref:System.Windows.Forms.Timer.Interval%2A> Właściwość<xref:System.Windows.Forms.Timer> składnika jest ustawiana na 30 sekund (30 000 milisekund), aby mieć pewność, że dokładny czas zostanie odzwierciedlony w wyświetlonym czasie.  
   
-### <a name="to-implement-the-timer-to-update-the-status-bar"></a>Aby zaimplementować czasomierza do aktualizacji paska stanu  
+### <a name="to-implement-the-timer-to-update-the-status-bar"></a>Aby zaimplementować czasomierz w celu zaktualizowania paska stanu  
   
-1. Wstaw następujący kod do programu obsługi zdarzeń z <xref:System.Windows.Forms.Timer> składnik do aktualizacji na panelu <xref:System.Windows.Forms.StatusBar> kontroli.  
+1. Wstaw następujący kod do procedury obsługi <xref:System.Windows.Forms.Timer> zdarzeń składnika, aby zaktualizować panel <xref:System.Windows.Forms.StatusBar> kontrolki.  
   
     ```vb  
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick  
@@ -75,19 +75,19 @@ ms.locfileid: "61792161"
       }  
     ```  
   
-     W tym momencie można przystąpić do uruchomienia aplikacji i obserwuj zegara działa w panelu pasek stanu.  
+     W tym momencie można przystąpić do uruchamiania aplikacji i obserwować zegar uruchomiony w panelu pasek stanu.  
   
 ### <a name="to-test-the-application"></a>Aby przetestować aplikację  
   
-1. Debugowanie aplikacji, a następnie naciśnij klawisz F5, aby go uruchomić. Aby uzyskać szczegółowe informacje o debugowaniu, zobacz [debugowania w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
+1. Debuguj aplikację i naciśnij klawisz F5, aby ją uruchomić. Aby uzyskać szczegółowe informacje o debugowaniu, zobacz [debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
   
     > [!NOTE]
-    >  Potrwa około 30 sekund w przypadku zegara pojawią się w pasku stanu. To jest uzyskanie czas najdokładniejszych możliwe. Z drugiej strony, aby zegar pojawić się wcześniej, można zmniejszyć wartość <xref:System.Windows.Forms.Timer.Interval%2A> właściwości ustawionej w kroku 7 w poprzedniej procedurze.  
+    > Zegar będzie wyświetlany na pasku stanu przez około 30 sekund. Jest to najlepszy możliwy czas. Z drugiej strony, aby zegar pojawił się wcześniej, można zmniejszyć wartość <xref:System.Windows.Forms.Timer.Interval%2A> właściwości ustawionej w kroku 7 w poprzedniej procedurze.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Instrukcje: Dodawanie paneli do formantu StatusBar](how-to-add-panels-to-a-statusbar-control.md)
-- [Instrukcje: Określanie, które panelu w formancie StatusBar formularzy Windows został kliknięty](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Instrukcje: Dodawanie paneli do kontrolki StatusBar](how-to-add-panels-to-a-statusbar-control.md)
+- [Instrukcje: Określ, który panel w Windows Forms kontrolce StatusBar został kliknięty](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar, kontrolka — omówienie](statusbar-control-overview-windows-forms.md)

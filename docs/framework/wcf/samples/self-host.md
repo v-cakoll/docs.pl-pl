@@ -5,20 +5,20 @@ helpviewer_keywords:
 - Self hosted service
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
-ms.openlocfilehash: c95ba40d606470f97d32d05b25c9588ed71cdc79
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26a2cc6e7e4a023915f2e63009aa1570528cedf8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007932"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964572"
 ---
 # <a name="self-host"></a>Host samodzielny
-Niniejszy przykład pokazuje, jak zaimplementować własnym hostowanej usługi w aplikacji konsoli. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Plik konfiguracji usługi, została zmieniona z pliku Web.config na pliku App.config i zmodyfikowana, aby skonfigurować adres podstawowy, który korzysta z hosta. Kod źródłowy usługi została zmodyfikowana, aby zaimplementować statycznego `Main` funkcja, która tworzy i otwiera hosta usługi, który zawiera skonfigurowany adres podstawowy. Implementacja usługi została zmodyfikowana, aby zapisywać dane wyjściowe do konsoli dla każdej operacji. Klient został zostały zmodyfikowane, z wyjątkiem konfigurowania adresu właściwego punktu końcowego usługi.  
+Ten przykład pokazuje, jak wdrożyć usługę samoobsługową w aplikacji konsolowej. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Zmieniono nazwę pliku konfiguracji usługi z Web. config na App. config i zmodyfikowano, aby skonfigurować adres podstawowy używany przez hosta. Kod źródłowy usługi został zmodyfikowany w celu zaimplementowania funkcji `Main` statycznej, która tworzy i otwiera hosta usługi, który udostępnia skonfigurowany adres podstawowy. Implementacja usługi została zmodyfikowana w celu zapisania danych wyjściowych w konsoli dla każdej operacji. Klient został niezmodyfikowany, z wyjątkiem konfigurowania poprawnego adresu punktu końcowego usługi.  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Przykład implementuje statycznych funkcji main, aby utworzyć <xref:System.ServiceModel.ServiceHost> dla danego `CalculatorService` typ, jak pokazano w poniższym przykładowym kodzie.  
+ Przykład implementuje statyczną funkcję Main, aby utworzyć <xref:System.ServiceModel.ServiceHost> dla danego `CalculatorService` typu, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp
 // Host the service within this EXE console application.  
@@ -41,7 +41,7 @@ public static void Main()
 }  
 ```  
   
- Gdy usługa jest obsługiwana w Internet Information Services (IIS) lub Windows Process Activation Service (WAS), adres podstawowy usługi jest zapewniana przez środowisko hostingu. W przypadku Self-Hosted należy określić adres bazowy samodzielnie. Odbywa się przy użyciu `add` element, element podrzędny elementu [ \<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md), element podrzędny elementu [ \<host >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md), element podrzędny elementu [ \<usługi > ](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) jak pokazano w poniższym Przykładowa konfiguracja.  
+ Gdy usługa jest hostowana w usłudze Internet Information Services (IIS) lub w usłudze aktywacji procesów systemu Windows (WAS), adres podstawowy usługi jest dostarczany przez środowisko hostingu. W przypadku samodzielnego udostępniania należy samodzielnie określić adres podstawowy. Odbywa się to za pomocą `add` elementu, elementu [ \<podrzędnego baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md), [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) elementu podrzędnego [ \<> hosta](../../../../docs/framework/configure-apps/file-schema/wcf/host.md), elementu podrzędnego > usługi, jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
 <service   
@@ -56,25 +56,25 @@ public static void Main()
 </service>  
 ```  
   
- Po uruchomieniu przykładu, operację żądania i odpowiedzi są wyświetlane w oknach konsoli usługi i klienta. Naciśnij klawisz ENTER każdego okna konsoli, aby zamknąć usługę i klienta.  
+ Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane zarówno w systemie, jak i w oknach konsoli klienta. Naciśnij klawisz ENTER w każdym oknie konsoli, aby zamknąć usługę i klienta.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\SelfHost`  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykłady trwałości i hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Przykłady hostingu i trwałości usługi AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

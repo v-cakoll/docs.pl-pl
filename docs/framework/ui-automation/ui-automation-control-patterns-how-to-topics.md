@@ -7,18 +7,18 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-ms.openlocfilehash: dc77d3798c9a79b5becf28e55c9f7e3be23eb352
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fea9bf959a0537ead01f27bbeb43874d0e5408df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982686"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953096"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika — Tematy porad
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
   
- Ta sekcja zawiera szczegółowe informacje na temat implementowania wzorców kontrolek.  
+ Ta sekcja zawiera szczegółowe informacje dotyczące implementowania wzorców kontrolek.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Udostępnianie zawartości tabel za pomocą automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  

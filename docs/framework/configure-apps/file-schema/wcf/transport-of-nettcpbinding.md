@@ -2,21 +2,21 @@
 title: <transport> dla <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 97139b6bea21e4d908c06f5210e54756865d3c46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 265b68e058919d1d5c5f1dbcfb1419b57be9aeab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788313"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915548"
 ---
-# <a name="transport-of-nettcpbinding"></a>\<transport > z \<netTcpBinding >
-Określa typ zabezpieczenia na poziomie wiadomości dotyczące punkty końcowe skonfigurowane za pomocą [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
+# <a name="transport-of-nettcpbinding"></a>\<Transport > \<NetTcpBinding >
+Definiuje typ wymagań dotyczących zabezpieczeń na poziomie komunikatów dla punktu końcowego skonfigurowanego przy użyciu [ \<> NetTcpBinding](nettcpbinding.md).  
   
  \<system.ServiceModel>  
-\<powiązania >  
+\<> powiązań  
 \<netTcpBinding>  
-\<Powiązanie >  
-\<security>  
+\<> powiązania  
+\<> zabezpieczeń  
 \<transport>  
   
 ## <a name="syntax"></a>Składnia  
@@ -40,32 +40,32 @@ Określa typ zabezpieczenia na poziomie wiadomości dotyczące punkty końcowe s
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|clientCredentialType|Opcjonalna. Określa typ poświadczeń ma być używany podczas uwierzytelniania klientów za pomocą zabezpieczeń transportu.<br /><br /> — Wartość domyślna to `Windows`.<br />— Ten atrybut jest typu <xref:System.ServiceModel.TcpClientCredentialType>.|  
-|protectionLevel|Opcjonalna. Definiuje zabezpieczenia na poziomie warstwy transportowej TCP. Podpisywania wiadomości zmniejsza ryzyko związane z innej naruszeniu komunikat, gdy są przesyłane. Szyfrowanie zapewnia ochronę poufności poziom danych, podczas transportu.<br /><br /> Wartość domyślna to `EncryptAndSign`.|  
-|sslProtocols|Wartość flagi wyliczenia SslProtocols określająca SslProtocols, które są obsługiwane. Wartość domyślna to protokołu Tls&#124;Tls11&#124;Tls12.|  
-|policyEnforcement|To wyliczenie Określa, kiedy <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> powinny być wymuszane.<br /><br /> 1.  Nigdy nie — zasady nigdy nie są wymuszane (ochrony rozszerzonej jest wyłączone).<br />2.  WhenSupported — zasady są wymuszane tylko wtedy, gdy klient obsługuje ochrony rozszerzonej.<br />3.  Zawsze — zasady zawsze są wymuszane. Klienci, którzy nie obsługują ochrony rozszerzonej zakończy się niepowodzeniem do uwierzytelniania.|  
+|clientCredentialType|Opcjonalna. Określa typ poświadczeń, które mają być używane podczas uwierzytelniania klienta przy użyciu zabezpieczeń transportu.<br /><br /> — Wartość domyślna to `Windows`.<br />-Ten atrybut jest typu <xref:System.ServiceModel.TcpClientCredentialType>.|  
+|protectionLevel|Opcjonalny. Definiuje zabezpieczenia na poziomie transportu TCP. Komunikaty podpisywania zmniejszają ryzyko naruszenia przez osobę trzecią komunikatu podczas jego przesyłania. Szyfrowanie zapewnia prywatność na poziomie danych podczas transportu.<br /><br /> Wartość domyślna to `EncryptAndSign`.|  
+|SslProtocols określająca|Wartość flagi wyliczenia SslProtocols określająca, która określa, które SslProtocols określająca są obsługiwane. Wartość domyślna to TLS&#124;Tls11&#124;Tls12.|  
+|policyEnforcement|To Wyliczenie określa, <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> Kiedy należy wymusić.<br /><br /> 1.  Nigdy — zasady nigdy nie są wymuszane (ochrona rozszerzona jest wyłączona).<br />2.  WhenSupported — zasady są wymuszane tylko wtedy, gdy klient obsługuje ochronę rozszerzoną.<br />3.  Zawsze — zasady są zawsze wymuszane. Klienci, którzy nie obsługują rozszerzonej ochrony, nie będą uwierzytelniani.|  
   
-## <a name="clientcredentialtype-attribute"></a>właściwości ClientCredentialType o wartości atrybutu  
+## <a name="clientcredentialtype-attribute"></a>clientCredentialtype — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Brak|Klient jest anonimowy. Wymaga certyfikatu usługi.|  
-|Windows|Określa Windows uwierzytelniania klienta przy użyciu negocjacji SP (negocjacji protokołu Kerberos).|  
-|Certyfikat|Klient jest uwierzytelniany przy użyciu certyfikatu. Ten wymaga negocjacji w protokole SSL i wymaga certyfikatu usługi.|  
+|Brak|Klient jest anonimowy. Wymaga to certyfikatu dla usługi.|  
+|Windows|Określa uwierzytelnianie systemu Windows klienta przy użyciu negocjacji SP (negocjowanie protokołu Kerberos).|  
+|Certyfikatu|Klient jest uwierzytelniany przy użyciu certyfikatu. Powoduje to użycie negocjacji protokołu SSL i wymaga certyfikatu dla usługi.|  
   
-## <a name="protectionlevel-attribute"></a>protectionLevel atrybutu  
+## <a name="protectionlevel-attribute"></a>protectionLevel — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |Brak|Brak ochrony.|  
-|Logowanie|Komunikaty są podpisane.|  
-|EncryptAndSign|— Liczba komunikatów jest zaszyfrowany i podpisany.|  
+|Zapis|Komunikaty są podpisane.|  
+|EncryptAndSign|— Komunikaty są szyfrowane i podpisane.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -74,10 +74,10 @@ Określa typ zabezpieczenia na poziomie wiadomości dotyczące punkty końcowe s
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Określa możliwości zabezpieczeń [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
+|[\<> zabezpieczeń](security-of-nettcpbinding.md)|Określa możliwości [ \<zabezpieczeń > NetTcpBinding](nettcpbinding.md).|  
   
 ## <a name="remarks"></a>Uwagi  
- Za pomocą zabezpieczeń transportu integralności i poufności komunikatu protokołu SOAP, jak i do wzajemnego uwierzytelniania. Zaznaczenie tego trybu zabezpieczeń w powiązaniu ze stosu kanał jest skonfigurowany przy użyciu bezpiecznym transportem i komunikaty protokołu SOAP są zabezpieczone za pomocą zabezpieczeń transportu, takich jak Windows (Negotiate) lub protokołu SSL, za pośrednictwem protokołu TCP.  
+ Zabezpieczenia transportu umożliwiają integralność i poufność komunikatu protokołu SOAP oraz uwierzytelnianie wzajemne. Jeśli w powiązaniu wybrano ten tryb zabezpieczeń, stos kanału zostanie skonfigurowany przy użyciu bezpiecznego transportu, a komunikaty protokołu SOAP są zabezpieczone za pomocą zabezpieczeń transportu, takich jak Windows (Negotiate) lub SSL przez TCP.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -85,8 +85,8 @@ Określa typ zabezpieczenia na poziomie wiadomości dotyczące punkty końcowe s
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<> powiązania](../../../misc/binding.md)

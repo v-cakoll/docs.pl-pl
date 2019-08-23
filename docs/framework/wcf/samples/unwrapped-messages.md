@@ -2,15 +2,15 @@
 title: Nieopakowane komunikaty
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: 161f38e474534d5a0e522817c4bd64925bb4cac6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fc535a9d7126fa1a6e41fad474b204cf0036c62
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007633"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951498"
 ---
 # <a name="unwrapped-messages"></a>Nieopakowane komunikaty
-Niniejszy przykład pokazuje nieopakowane komunikaty. Domyślnie treść komunikatu jest sformatowany w taki sposób, że zostaną opakowane parametrów do operacji usługi. Następujące przykładowe pokazuje `Add` komunikat żądania do `ICalculator` usługi w trybie opakowana.  
+Ten przykład pokazuje nieopakowane komunikaty. Domyślnie treść komunikatu jest formatowana w taki sposób, że parametry operacji usługi są opakowane. Poniższy przykład pokazuje `Add` komunikat żądania `ICalculator` do usługi w trybie opakowanym.  
   
 ```xml  
 <s:Envelope   
@@ -28,7 +28,7 @@ Niniejszy przykład pokazuje nieopakowane komunikaty. Domyślnie treść komunik
 </s:Envelope>  
 ```  
   
- `<Add>` Opakowuje element w treści komunikatu `n1` i `n2` parametrów. Natomiast poniższy przykład pokazuje równoważne komunikatu w trybie odkodowany.  
+ Element w treści wiadomości otacza `n1` parametry i `n2`. `<Add>` Z kolei Poniższy przykład pokazuje odpowiedni komunikat w trybie nieopakowanym.  
   
 ```xml  
 <s:Envelope   
@@ -45,12 +45,12 @@ Niniejszy przykład pokazuje nieopakowane komunikaty. Domyślnie treść komunik
 </MessageLogTraceRecord>  
 ```  
   
- Nieopakowane wiadomości nie jest zawijany `n1` i `n2` parametrów w elemencie zawierającego, są one bezpośrednie elementy podrzędne elementu treści protokołu soap.  
+ Nieopakowany komunikat nie otacza `n1` parametrów i `n2` w elemencie zawierającym, są bezpośrednimi elementami podrzędnymi elementu treści protokołu SOAP.  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- W tym przykładzie tworzona jest wiadomość nieopakowanych, stosując <xref:System.ServiceModel.MessageContractAttribute> typem parametru operacji usługi i typ zwracanej wartości, jak pokazano w poniższym przykładowym kodzie.  
+ W tym przykładzie nieopakowany komunikat jest tworzony przez zastosowanie <xref:System.ServiceModel.MessageContractAttribute> do typu parametru operacji usługi i typu wartości zwracanej, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -89,25 +89,25 @@ public class ResponseMessage
 }  
 ```  
   
- Aby umożliwić wyświetlanie komunikatów wysyłanych i odbieranych, w tym przykładzie użyto śledzenia. Ponadto <xref:System.ServiceModel.WSHttpBinding> została skonfigurowana bez zabezpieczeń w celu zmniejszenia liczby wiadomości, które rejestruje.  
+ Aby umożliwić wyświetlanie wysyłanych i odbieranych komunikatów, ten przykład używa śledzenia. Ponadto program <xref:System.ServiceModel.WSHttpBinding> został skonfigurowany bez zabezpieczeń, aby zmniejszyć liczbę komunikatów, które rejestruje.  
   
- Wynikowy dziennika śledzenia (c:\logs\Message.log) mogą być wyświetlane za pomocą [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Zaznacz, aby wyświetlić zawartość wiadomości **wiadomości** zarówno po lewej stronie, jak i prawego okienka narzędzi przeglądarki danych śledzenia usługi. Dzienniki śledzenia w tym przykładzie są skonfigurowane do wygenerowania w folderze C:\LOGS. Utwórz ten folder przed uruchomieniem przykładu i przyznać użytkownikowi uprawnienia do tego katalogu zapisu usługi sieciowej.  
+ Wynikowy dziennik śledzenia (c:\logs\Message.log) można wyświetlić za pomocą [narzędzia Podgląd śledzenia usług (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Aby wyświetlić zawartość wiadomości, wybierz pozycję **komunikaty** w lewym okienku narzędzia Podgląd śledzenia usługi. Dzienniki śledzenia w tym przykładzie są skonfigurowane tak, aby były generowane w folderze C:\LOGS. Utwórz ten folder przed uruchomieniem przykładu i nadaj użytkownikowi uprawnienia do zapisu w tym katalogu.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Utwórz katalog C:\LOGS rejestrowanie komunikatów. Przyznać użytkownikowi uprawnienia do tego katalogu zapisu usługi sieciowej.  
+2. Utwórz katalog C:\LOGS na potrzeby rejestrowania komunikatów. Nadaj użytkownikom uprawnienia do zapisu w tym katalogu.  
   
-3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  

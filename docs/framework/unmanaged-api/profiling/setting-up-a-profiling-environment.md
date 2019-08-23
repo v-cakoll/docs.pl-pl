@@ -12,68 +12,68 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 33762e08192fae379f3cd249f50cc544e1c89b5a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e6c87a408b348cb6ecc7a3f6afa7060a1568a37
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775740"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966115"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Konfigurowanie środowiska profilowania
 > [!NOTE]
->  Były istotne zmiany do profilowania w programie .NET Framework 4.  
+> W .NET Framework 4 wprowadzono istotne zmiany profilowania.  
   
- Po rozpoczęciu procesu zarządzanego (aplikacji lub usługi), ładuje środowisko uruchomieniowe języka wspólnego (CLR). Po zainicjowaniu środowiska CLR, ocenia ono następujące dwie zmienne środowiskowe do określania, czy proces należy się połączyć program profilujący:  
+ Gdy uruchamiany jest proces zarządzany (aplikacja lub usługa), ładuje on środowisko uruchomieniowe języka wspólnego (CLR). Po zainicjowaniu środowiska CLR program oblicza następujące dwie zmienne środowiskowe, aby zdecydować, czy proces powinien łączyć się z profilerem:  
   
-- COR_ENABLE_PROFILING: Środowisko CLR łączy do profilera tylko wtedy, gdy ta zmienna środowiskowa istnieje i jest ustawiona na 1.  
+- COR_ENABLE_PROFILING: Środowisko CLR nawiązuje połączenie z profilerem tylko wtedy, gdy ta zmienna środowiskowa istnieje i ma ustawioną wartość 1.  
   
-- COR_PROFILER: Jeśli COR_ENABLE_PROFILING sprawdzać przebiegów, CLR łączy się z programem profilującym, które ma identyfikator CLSID lub ProgID, które muszą być uprzednio przechowywane w rejestrze. Zmienna środowiskowa COR_PROFILER jest zdefiniowana jako ciąg znaków, jak pokazano w poniższych dwóch przykładach.  
+- COR_PROFILER: Jeśli sprawdzanie COR_ENABLE_PROFILING przebiega, środowisko CLR łączy się z profilerem, który ma ten identyfikator CLSID lub ProgID, który musi być zapisany wcześniej w rejestrze. Zmienna środowiskowa COR_PROFILER jest definiowana jako ciąg, jak pokazano w poniższych dwóch przykładach.  
   
     ```cpp  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
     set COR_PROFILER="MyProfiler"  
     ```  
   
- Aby profilować aplikację CLR, należy ustawić zmienne środowiskowe COR_ENABLE_PROFILING i COR_PROFILER przed uruchomieniem aplikacji. Również należy się upewnić, że profiler DLL jest zarejestrowany.  
+ Aby profilować aplikację CLR, należy ustawić zmienne środowiskowe COR_ENABLE_PROFILING i COR_PROFILER przed uruchomieniem aplikacji. Należy również upewnić się, że plik DLL profilera jest zarejestrowany.  
   
 > [!NOTE]
->  Począwszy od programu .NET Framework 4, profilowania nie trzeba być zarejestrowane.  
+> Począwszy od .NET Framework 4, nie musi być zarejestrowany.  
   
 > [!NOTE]
->  Aby użyć .NET Framework w wersji 2.0, 3.0 i 3.5 profilowania w .NET Framework 4 i nowsze wersje, należy ustawić zmiennej środowiskowej COMPLUS_ProfAPI_ProfilerCompatibilitySetting.  
+> Aby użyć .NET Framework w wersji 2,0, 3,0 i 3,5 do prekoderów w .NET Framework 4 i nowszych wersjach, należy ustawić zmienną środowiskową COMPLUS_ProfAPI_ProfilerCompatibilitySetting.  
   
-## <a name="environment-variable-scope"></a>Zakres zmiennej środowiskowej.  
- Jak ustawić zmienne środowiskowe COR_ENABLE_PROFILING i COR_PROFILER określa zakres wpływu. Można ustawić te zmienne na jeden z następujących sposobów:  
+## <a name="environment-variable-scope"></a>Zakres zmiennej środowiskowej  
+ Sposób ustawiania zmiennych środowiskowych COR_ENABLE_PROFILING i COR_PROFILER określi swój zakres wpływu. Można ustawić te zmienne w jeden z następujących sposobów:  
   
-- Jeśli ustawisz zmienne w [icordebug::CreateProcess —](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) wywołanie, będą one dotyczyć tylko aplikacji, które są uruchomione w czasie. (Będą one również dotyczyć innych aplikacji, uruchomione przez tę aplikację, dziedziczy środowisko.)  
+- Jeśli ustawisz zmienne w wywołaniu [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) , zostaną one zastosowane tylko do aplikacji, która jest uruchomiona w danym momencie. (Zostaną one również zastosowane do innych aplikacji uruchomionych przez aplikację, która dziedziczy środowisko).  
   
-- Jeśli ustawisz zmienne w oknie wiersza polecenia, będą one dotyczyć wszystkich aplikacji, które są uruchamiane z tego okna.  
+- Jeśli ustawisz zmienne w oknie wiersza polecenia, zostaną one zastosowane do wszystkich aplikacji, które są uruchamiane z tego okna.  
   
-- Jeśli ustawisz zmienne na poziomie użytkownika, będą one dotyczyć wszystkich aplikacji, które są uruchamiane przy użyciu Eksploratora plików. Okno wiersza polecenia otwarte po ustawieniu zmiennych będzie miało te właściwości środowiska i dlatego będzie każda aplikacja uruchamiana z tego okna. Aby ustawić zmienne środowiskowe na poziomie użytkownika, kliknij prawym przyciskiem myszy **Mój komputer**, kliknij przycisk **właściwości**, kliknij przycisk **zaawansowane** kliknij pozycję **środowiska Zmienne**i Dodaj zmienne do **zmienne użytkownika** listy.  
+- Jeśli ustawisz zmienne na poziomie użytkownika, zostaną one zastosowane do wszystkich aplikacji, które zaczynają się od Eksploratora plików. Okno wiersza polecenia otwarte po ustawieniu zmiennych będzie miało te ustawienia środowiska, a więc każda aplikacja uruchamiana z tego okna. Aby ustawić zmienne środowiskowe na poziomie użytkownika, kliknij prawym przyciskiem myszy pozycję **mój komputer**, kliknij pozycję **Właściwości**, kliknij kartę **Zaawansowane** , kliknij przycisk **zmienne środowiskowe**i Dodaj zmienne do listy **zmiennych użytkownika** .  
   
-- Jeśli ustawisz zmienne na poziomie komputera, będą one dotyczyć wszystkich aplikacji, które są uruchomione na tym komputerze. Okno wiersza polecenia, które można otworzyć na tym komputerze będzie miało te właściwości środowiska i będzie więc każda aplikacja uruchamiana z tego okna. Oznacza to, że każdy proces zarządzany na tym komputerze rozpoczyna się od swojego programu profilującego. Aby ustawić zmienne środowiskowe na poziomie komputera, kliknij prawym przyciskiem myszy **Mój komputer**, kliknij przycisk **właściwości**, kliknij przycisk **zaawansowane** kliknij pozycję **środowiska Zmienne**, Dodaj zmienne do **zmiennych systemowych** listy, a następnie ponownie uruchom komputer. Po ponownym uruchomieniu komputera, zmienne będą dostępne systemowo.  
+- Jeśli ustawisz zmienne na poziomie komputera, zostaną one zastosowane do wszystkich aplikacji uruchomionych na tym komputerze. Okno wiersza polecenia otwarte na tym komputerze będzie miało te ustawienia środowiska, a więc każda aplikacja uruchamiana z tego okna. Oznacza to, że każdy proces zarządzany na tym komputerze zacznie od profilera. Aby ustawić zmienne środowiskowe na poziomie komputera, kliknij prawym przyciskiem myszy pozycję **mój komputer**, kliknij pozycję **Właściwości**, kliknij kartę **Zaawansowane** , kliknij przycisk **zmienne środowiskowe**, Dodaj zmienne do listy **zmienne systemowe** , a następnie Uruchom ponownie komputer. Po ponownym uruchomieniu zmienne będą dostępne dla całego systemu.  
   
- Czy profilowanie usługi Windows, należy ponownie uruchomić komputer po ustawieniu zmiennych środowiskowych i zarejestrowaniu programu profilującego DLL. Aby uzyskać więcej informacji dotyczących tych rozważań, zobacz sekcję [profilowanie usługi Windows](#windows_service).  
+ W przypadku profilowania usługi systemu Windows należy ponownie uruchomić komputer po ustawieniu zmiennych środowiskowych i zarejestrowaniu biblioteki DLL profilera. Aby uzyskać więcej informacji na temat tych zagadnień, zobacz sekcję [profilowanie usługi systemu Windows](#windows_service).  
   
 ## <a name="additional-considerations"></a>Dodatkowe zagadnienia  
   
-- Implementuje klasy programu profilującego [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) i [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) interfejsów. W programie .NET Framework 2.0, program profilujący musi zaimplementować `ICorProfilerCallback2`. Jeśli nie, `ICorProfilerCallback2` nie zostanie załadowany.  
+- Klasa profilera implementuje interfejsy [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) i [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) . W .NET Framework w wersji 2,0, profiler musi implementować `ICorProfilerCallback2`. Jeśli nie, `ICorProfilerCallback2` nie zostanie załadowany.  
   
-- Tylko jeden profiler można profilować proces w tym samym czasie w danym środowisku. Można zarejestrować dwa różne profilowania w różnych środowiskach, ale każdy musi profilować oddzielnych procesach. Program profilujący musi zostać wdrożony jako serwera COM DLL, która jest mapowana do tej samej przestrzeni adresowej jako proces, która jest profilowana w procesie. Oznacza to, że profiler jest uruchamiany w procesie. .NET Framework nie obsługuje żadnego rodzaju serwera COM. Na przykład jeśli program profilujący chce monitorować aplikacje z komputera zdalnego, jego musi implementować agentów kolektora na każdym komputerze. Agenci będą grupowały wyniki i przekazywały je do centralnego komputera zbierania danych.  
+- Tylko jeden profiler może jednocześnie profilować proces w danym środowisku. W różnych środowiskach można rejestrować dwa różne, ale muszą one profilować oddzielne procesy. Profiler musi być zaimplementowany jako biblioteka DLL serwera COM w procesie, która jest mapowana na tę samą przestrzeń adresową co proces, który jest profilowany. Oznacza to, że profiler jest uruchamiany w procesie. .NET Framework nie obsługuje żadnego innego typu serwera COM. Na przykład, jeśli profiler chce monitorować aplikacje z komputera zdalnego, musi zaimplementować agentów modułu zbierającego na każdym komputerze. Ci agenci będą przekazywać wyniki wsadowe i komunikować się z centralnym komputerem zbierania danych.  
   
-- Ponieważ program profilujący jest obiektem COM, który jest tworzony w procesie, każda profilowana aplikacja posiada własną kopię programu profilującego. Dlatego wystąpienie pojedynczego profilera nie ma obsługi danych z wielu aplikacji. Jednak trzeba będzie dodać logikę do programu profilującego rejestrowania kodu, aby zapobiec pliku dziennika zastępuje z innych aplikacji profilowanych.  
+- Ponieważ Profiler jest obiektem COM, który jest tworzony w procesie, każda profilowana aplikacja będzie miała własną kopię profilera. W związku z tym pojedyncze wystąpienie profilera nie musi obsługiwać danych z wielu aplikacji. Należy jednak dodać logikę do kodu rejestrowania profilera, aby zapobiec zastępowaniu pliku dziennika z innych profilowanych aplikacji.  
   
-## <a name="initializing-the-profiler"></a>Inicjowanie Profiler  
- Gdy oba zmiennej środowiskowej zostały wykryte, CLR tworzy instancję programu profilującego w sposób podobny do COM `CoCreateInstance` funkcji. Program profilujący nie jest załadowany poprzez bezpośrednie wywołanie `CoCreateInstance`. W związku z tym, wywołanie `CoInitialize`, które wymaga utworzenia modelu wątku, jest unikane. Środowisko CLR następnie wywołuje [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) metodę w programie profiler. Podpis tej metody jest następujący.  
+## <a name="initializing-the-profiler"></a>Inicjowanie profilera  
+ Gdy obie zmienne środowiskowe sprawdzają przebieg, środowisko CLR tworzy wystąpienie profilera w podobny sposób do funkcji com `CoCreateInstance` . Profiler nie jest ładowany przez bezpośrednie wywołanie do `CoCreateInstance`. W związku z `CoInitialize`tym, należy wywołać metodę, która wymaga ustawienia modelu wątkowości. Środowisko CLR następnie wywołuje metodę [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) w profilera. Sygnatura tej metody jest następująca.  
   
 ```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
- Program profilujący musi wykonać zapytanie `pICorProfilerInfoUnk` dla [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) lub [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) interfejsu wskaźnika i zapisać go tak, aby go zażądać więcej informacji później podczas profilowania.  
+ Profiler musi zbadać `pICorProfilerInfoUnk` wskaźnik interfejsu [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) lub [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) i zapisać go, aby można było zażądać dalszych informacji później podczas profilowania.  
   
 ## <a name="setting-event-notifications"></a>Ustawianie powiadomień o zdarzeniach  
- Następnie program profilujący wywołuje [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) metodę, aby określić, którymi kategoriami powiadomień jest zainteresowany. Na przykład jeśli program profilujący zajmuje się tylko wprowadzeniem funkcji i pozostawia powiadomienia i powiadomienia dotyczące odzyskiwania pamięci, określa poniższe.  
+ Profiler wywołuje następnie metodę [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) , aby określić, które kategorie powiadomień interesują. Na przykład, jeśli Profiler jest interesujący tylko funkcja wprowadzanie i pozostawianie powiadomień i powiadomień o wyrzucaniu elementów bezużytecznych, określa następujące kwestie.  
   
 ```cpp  
 ICorProfilerInfo* pInfo;  
@@ -81,19 +81,19 @@ pICorProfilerInfoUnk->QueryInterface(IID_ICorProfilerInfo, (void**)&pInfo);
 pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)  
 ```  
   
- Ustawiając maskę powiadomień w ten sposób, program profilujący może ograniczyć powiadomienia, które otrzyma. To podejście pozwala użytkownikowi na tworzenie prostego lub specjalnego narzędzia profiler. Zmniejsza to także czas CPU, który zostałby zmarnowany na wysyłanie powiadomień, które program profilujący po prostu zignoruje.  
+ Ustawiając maskę powiadomień w ten sposób, profiler może ograniczyć liczbę otrzymywanych powiadomień. Takie podejście ułatwia użytkownikowi tworzenie prostego lub specjalnego profilera. Skraca to również czas procesora, który mógłby być tracony przez program Profiler.  
   
- Niektóre zdarzenia programu profilującego są niezmienne. Oznacza to, że jak tylko te zdarzenia zostaną ustawione `ICorProfilerCallback::Initialize` wywołanie zwrotne, nie można jej wyłączyć i nowe zdarzenia nie może być włączona. Próby zmiany niezmiennego zdarzenia będą skutkować `ICorProfilerInfo::SetEventMask` zwracanie HRESULT nie powiodło się.  
+ Niektóre zdarzenia profilera są niezmienne. Oznacza to, że zaraz po ustawieniu tych zdarzeń w `ICorProfilerCallback::Initialize` wywołaniu zwrotnym nie można ich wyłączyć i nie można włączyć nowych zdarzeń. Próby zmiany niezmiennego zdarzenia spowodują `ICorProfilerInfo::SetEventMask` zwrócenie wyniku zakończonego niepowodzeniem.  
   
 <a name="windows_service"></a>   
-## <a name="profiling-a-windows-service"></a>Profilowanie usługi Windows  
- Profilowanie usługi Windows jest podobne do profilowania typowych aplikacji środowiska wykonawczego języka. Obie operacje profilowania są włączone za pomocą zmiennych środowiskowych. Ponieważ usługa Windows jest uruchamiana, gdy system operacyjny zostanie uruchomiony, zmienne środowiskowe omówione wcześniej w tym temacie muszą już być obecne i ustawione na wartości wymagane przed uruchomieniem systemu. Ponadto profilowanie DLL musi być już zarejestrowany w systemie.  
+## <a name="profiling-a-windows-service"></a>Profilowanie usługi systemu Windows  
+ Profilowanie usługi systemu Windows przypomina Profilowanie aplikacji środowiska uruchomieniowego języka wspólnego. Obie operacje profilowania są włączane za poorednictwem zmiennych środowiskowych. Ponieważ usługa systemu Windows jest uruchamiana podczas uruchamiania systemu operacyjnego, zmienne środowiskowe omówione wcześniej w tym temacie muszą być już obecne i ustawione na wartości wymagane przed uruchomieniem systemu. Ponadto biblioteka DLL profilowania musi być już zarejestrowana w systemie.  
   
- Po ustawieniu zmiennych środowiskowych COR_ENABLE_PROFILING i COR_PROFILER i zarejestrowaniu programu profilującego DLL, dzięki czemu usługa Windows mogła wykryć te zmiany należy ponownie uruchomić komputer docelowy.  
+ Po ustawieniu zmiennych środowiskowych COR_ENABLE_PROFILING i COR_PROFILER i zarejestrowaniu biblioteki DLL profilera należy ponownie uruchomić komputer docelowy, aby usługa systemu Windows mogła wykryć te zmiany.  
   
- Należy pamiętać, że zmiany te umożliwią profilowanie na podstawie całego systemu. Aby zapobiec każda zarządzana aplikacja kolejno poddawanego profilowaniu unika, należy usunąć zmienne środowiskowe systemu po ponownym uruchomieniu komputera docelowego.  
+ Należy pamiętać, że te zmiany spowodują profilowanie na podstawie całego systemu. Aby zapobiec przetwarzaniu przez każdą aplikację zarządzaną, która następnie jest uruchamiana, należy usunąć systemowe zmienne środowiskowe po ponownym uruchomieniu komputera docelowego.  
   
- Technika ta prowadzi do każdego procesu CLR profilowany. Program profilujący powinien dodać logikę do jej [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) wywołania zwrotnego do wykrywania, czy bieżący proces jest przedmiotem zainteresowania. Jeśli nie jest dostępne, program profilujący może zawieść wywołanie zwrotne bez przeprowadzenia inicjalizacji.  
+ Ta technika prowadzi również do każdego procesu CLR, w którym zawarto pliki. Profiler powinien dodać logikę do jej [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) wywołania zwrotnego w celu wykrycia, czy bieżący proces jest interesujący. Jeśli tak nie jest, profiler może zakończyć wywołanie zwrotne bez wykonywania inicjalizacji.  
   
 ## <a name="see-also"></a>Zobacz także
 

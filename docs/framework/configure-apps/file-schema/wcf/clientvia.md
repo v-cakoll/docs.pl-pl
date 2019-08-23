@@ -2,21 +2,21 @@
 title: <clientVia>
 ms.date: 03/30/2017
 ms.assetid: c27ee94e-babd-459b-9574-2a6d67d11314
-ms.openlocfilehash: b8864760c1700cd785922b922346204d194f56cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b12a882d942555a24c145b243d2cea764ba106b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673631"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919504"
 ---
-# <a name="clientvia"></a>\<clientVia>
+# <a name="clientvia"></a>\<clientVia >
 Określa identyfikator URI, dla którego należy utworzyć kanał transportu. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Description.ClientViaBehavior>.  
   
  \<system.ServiceModel>  
-\<zachowania >  
+\<> zachowań  
 \<endpointBehaviors>  
-\<zachowanie >  
-\<clientVia>  
+\<> zachowania  
+\<clientVia >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,7 +31,7 @@ Określa identyfikator URI, dla którego należy utworzyć kanał transportu. Ab
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`viaUri`|Ciąg, który określa identyfikator URI wskazujący trasę wyznaczoną dla wiadomości.|  
+|`viaUri`|Ciąg określający identyfikator URI, który wskazuje trasę, którą powinien wykonać komunikat.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -40,7 +40,7 @@ Określa identyfikator URI, dla którego należy utworzyć kanał transportu. Ab
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie punktu końcowego.|  
+|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zachowanie punktu końcowego.|  
   
 ## <a name="see-also"></a>Zobacz także
 

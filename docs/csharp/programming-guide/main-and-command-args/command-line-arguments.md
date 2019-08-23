@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 3264be0ae6159563ae19ac8aeb1bf3dc90ac68df
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 345840ad45add21c6088abd0fb45e2e591b7df21
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588940"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923886"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumenty wiersza poleceń (Przewodnik programowania w języku C#)
 Argumenty do `Main` metody można wysłać, definiując metodę w jeden z następujących sposobów:  
@@ -20,7 +20,7 @@ Argumenty do `Main` metody można wysłać, definiując metodę w jeden z nastę
  [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]  
   
 > [!NOTE]
->  Aby włączyć argumenty wiersza polecenia w `Main` metodzie w aplikacji Windows Forms, należy ręcznie zmodyfikować `Main` sygnaturę w program.cs. Kod wygenerowany przez projektanta Windows Forms tworzy `Main` bez parametru wejściowego. Można również użyć <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> lub <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> , aby uzyskać dostęp do argumentów wiersza polecenia z dowolnego punktu w konsoli lub aplikacji systemu Windows.  
+> Aby włączyć argumenty wiersza polecenia w `Main` metodzie w aplikacji Windows Forms, należy ręcznie zmodyfikować `Main` sygnaturę w program.cs. Kod wygenerowany przez projektanta Windows Forms tworzy `Main` bez parametru wejściowego. Można również użyć <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> lub <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> , aby uzyskać dostęp do argumentów wiersza polecenia z dowolnego punktu w konsoli lub aplikacji systemu Windows.  
   
  Parametr `Main` metody<xref:System.String> jest tablicą, która reprezentuje argumenty wiersza polecenia. Zwykle określasz, czy argumenty istnieją przez testowanie `Length` właściwości, na przykład:  
   
@@ -70,7 +70,7 @@ long num = Convert.ToInt64(s);
 5. To polecenie tworzy następujące dane wyjściowe:`The factorial of 3 is 6.`  
   
 > [!NOTE]
->  Podczas uruchamiania aplikacji w programie Visual Studio, można określić argumenty wiersza polecenia na [stronie debugowania, Projektant projektu](/visualstudio/ide/reference/debug-page-project-designer).  
+> Podczas uruchamiania aplikacji w programie Visual Studio, można określić argumenty wiersza polecenia na [stronie debugowania, Projektant projektu](/visualstudio/ide/reference/debug-page-project-designer).  
   
  Aby uzyskać więcej przykładów użycia argumentów wiersza polecenia, zobacz [How to: Tworzenie i używanie zestawów przy użyciu wiersza](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)polecenia.  
   

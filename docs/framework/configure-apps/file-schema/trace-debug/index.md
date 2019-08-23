@@ -11,45 +11,45 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-ms.openlocfilehash: 79054ba450dcab1a18562aaadd71b9171896c1e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 037d08b33e9aa6a64d236b36ebcf821b604b03df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701401"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927120"
 ---
 # <a name="trace-and-debug-settings-schema"></a>Schemat ustawień śledzenia i debugowania
-Ustawienia śledzenia i debugowania, określ obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.  
+Ustawienia śledzenia i debugowania określają detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.  
   
- W poniższej tabeli opisano funkcje każdego elementu ustawienia śledzenia i debugowania.  
+ W poniższej tabeli opisano funkcję każdego elementu ustawień śledzenia i debugowania.  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Dodaje odbiornik do `Listeners` kolekcję dla źródła śledzenia.|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Dodaje odbiornik do `Listeners` kolekcji.|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-sharedlisteners.md)|Dodaje odbiornik do `sharedListeners` kolekcji.|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|Określa poziom, którego ustawiono przełącznikiem śledzenia.|  
-|[\<asercja >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|Określa, czy należy wyświetlić okno komunikatu, gdy wywołujesz <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> metody; określa także nazwę pliku do zapisywania komunikatów.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Czyści `Listeners` kolekcję dla źródła śledzenia.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|Czyści `Listeners` kolekcji na potrzeby śledzenia.|  
-|[\<Filtr >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|Dodaje filtr do odbiornika w `Listeners` kolekcję dla źródła śledzenia.|  
-|[\<Filtr >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|Dodaje filtr do odbiornika w `Listeners` kolekcji na potrzeby śledzenia.|  
-|[\<Filtr >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|Dodaje filtr do odbiornika w `sharedListeners` kolekcji.|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Określa detektory `Listeners` kolekcję dla źródła śledzenia.|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Określa detektory `Listeners` kolekcji na potrzeby śledzenia.|  
-|[\<liczniki wydajności >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|Określa rozmiar pamięci globalnej współużytkowane przez liczniki wydajności.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|Usuwa odbiornik z `Listeners` kolekcji na potrzeby śledzenia.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Usuwa odbiornik z `Listeners` kolekcję dla źródła śledzenia.|  
-|[\<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|Zawiera dowolnego źródła i elementu śledzenia można odwoływać się do obiektów nasłuchujących.|  
-|[\<źródła >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|Zawiera źródła śledzenia, które inicjują komunikatów śledzenia.|  
-|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Określa źródło śledzenia, który inicjuje komunikatów śledzenia.|  
-|[\<przełączniki >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|Zawiera przełączniki śledzenia i poziomu, gdzie są ustawione przełączniki śledzenia.|  
-|[\<system.diagnostics>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.|  
-|[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunikatów śledzenia.|  
+|[\<add>](add-element-for-listeners-for-source.md)|Dodaje odbiornik do `Listeners` kolekcji dla źródła śledzenia.|  
+|[\<add>](add-element-for-listeners-for-trace.md)|Dodaje odbiornik do `Listeners` kolekcji.|  
+|[\<add>](add-element-for-sharedlisteners.md)|Dodaje odbiornik do `sharedListeners` kolekcji.|  
+|[\<add>](add-element-for-switches.md)|Określa poziom, w którym jest ustawiony przełącznik śledzenia.|  
+|[\<> potwierdzenia](assert-element.md)|Określa, czy podczas wywoływania <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> metody ma być wyświetlane okno komunikatu, a także określa nazwę pliku, w którym mają zostać zapisane komunikaty.|  
+|[\<Wyczyść >](clear-element-for-listeners-for-source.md)|`Listeners` Czyści kolekcję dla źródła śledzenia.|  
+|[\<Wyczyść >](clear-element-for-listeners-for-trace.md)|`Listeners` Czyści kolekcję do śledzenia.|  
+|[\<Filtr >](filter-element-for-add-for-listeners-for-source.md)|Dodaje filtr do odbiornika w `Listeners` kolekcji dla źródła śledzenia.|  
+|[\<Filtr >](filter-element-for-add-for-listeners-for-trace.md)|Dodaje filtr do odbiornika w `Listeners` kolekcji w celu śledzenia.|  
+|[\<Filtr >](filter-element-for-add-for-sharedlisteners.md)|Dodaje filtr do odbiornika w `sharedListeners` kolekcji.|  
+|[\<> odbiorników](listeners-element-for-source.md)|Określa detektory dla `Listeners` kolekcji dla źródła śledzenia.|  
+|[\<> odbiorników](listeners-element-for-trace.md)|Określa detektory `Listeners` dla kolekcji do śledzenia.|  
+|[\<Liczniki wydajności >](performancecounters-element.md)|Określa rozmiar pamięci globalnej udostępnionej przez liczniki wydajności.|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|Usuwa odbiornik z `Listeners` kolekcji na potrzeby śledzenia.|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|Usuwa odbiornik z `Listeners` kolekcji dla źródła śledzenia.|  
+|[\<sharedListeners >](sharedlisteners-element.md)|Zawiera detektory, do których może odwoływać się każdy element źródłowy lub Trace.|  
+|[\<> źródeł](sources-element.md)|Zawiera źródła śledzenia, które inicjują komunikaty śledzenia.|  
+|[\<> źródłowa](source-element.md)|Określa źródło śledzenia, które inicjuje komunikaty śledzenia.|  
+|[\<Przełączniki >](switches-element.md)|Zawiera przełączniki śledzenia i poziom, w którym są ustawione przełączniki śledzenia.|  
+|[\<system.diagnostics>](system-diagnostics-element.md)|Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.|  
+|[\<trace>](trace-element.md)|Zawiera detektory, które zbierają, przechowują i rozsyłają komunikaty śledzenia.|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.Debug>
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat pliku konfiguracji](../index.md)

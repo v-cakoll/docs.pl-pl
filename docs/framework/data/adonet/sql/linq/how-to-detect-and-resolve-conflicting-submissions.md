@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 91e27206-01fb-4c7a-8afc-1383a6ac5067
-ms.openlocfilehash: 606231449263f1c26596ca8606a88053c6aded8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff33196f83e2c0d8d759e4ffc3fb7442e8ba0e3b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877282"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940096"
 ---
 # <a name="how-to-detect-and-resolve-conflicting-submissions"></a>Instrukcje: Wykrywanie i rozwiązywanie powodujących konflikt przesłań
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] udostępnia wiele zasobów do wykrywania i rozwiązywania konfliktów, które wynikają z wieloma użytkownikami zmian w bazie danych. Aby uzyskać więcej informacji, zobacz [jak: Zarządzanie konfliktami zmian](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]oferuje wiele zasobów do wykrywania i rozwiązywania konfliktów, które pochodzą od zmian wielu użytkowników w bazie danych. Aby uzyskać więcej informacji, zobacz [jak: Zarządzanie konfliktami](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)zmian.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono `try` / `catch` blok, który przechwytuje <xref:System.Data.Linq.ChangeConflictException> wyjątku. Informacje o wszystkich konfliktów jednostki i elementu członkowskiego jest wyświetlany w oknie konsoli.  
+ Poniższy `try` przykład pokazuje / <xref:System.Data.Linq.ChangeConflictException> blok, który przechwytuje wyjątek. `catch` Informacje o jednostkach i elementach członkowskich dla każdego konfliktu są wyświetlane w oknie konsoli.  
   
 > [!NOTE]
->  Musi zawierać `using System.Reflection` — dyrektywa (`Imports System.Reflection` w języku Visual Basic) do obsługi pobierania informacji. Aby uzyskać więcej informacji, zobacz <xref:System.Reflection>.  
+> Musisz dołączyć `using System.Reflection` dyrektywę (`Imports System.Reflection` w Visual Basic) do obsługi pobierania informacji. Aby uzyskać więcej informacji, zobacz <xref:System.Reflection>.  
   
  [!code-csharp[DLinqSubmittingChanges#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#2)]
  [!code-vb[DLinqSubmittingChanges#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#2)]  

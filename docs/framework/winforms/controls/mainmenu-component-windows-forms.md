@@ -4,26 +4,26 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-ms.openlocfilehash: 9e692f17dea3af1f7d5f5ccc3ae844b47c64f80a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f177ee397b0641645d55de9e805543a68fa75672
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012787"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952123"
 ---
 # <a name="mainmenu-component-windows-forms"></a>MainMenu — Składnik (Formularze systemu Windows)
 > [!NOTE]
->  Mimo że `MenuStrip` i `ContextMenuStrip` Zastąp i dodawania funkcjonalności do `MainMenu` i <xref:System.Windows.Forms.ContextMenu> kontrolki z poprzednich wersji `MainMenu` i <xref:System.Windows.Forms.ContextMenu> zostaną zachowane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.  
+> `MenuStrip` `MainMenu` Chociaż i Zastąp`MainMenu` i <xref:System.Windows.Forms.ContextMenu> Dodaj funkcje do kontrolekwcześniejszychwersjiisąonezachowywanewceluzapewnieniazgodnościzpoprzednimiwersjamiiwprzyszłości,jeśliwybierzeszopcję.<xref:System.Windows.Forms.ContextMenu> `ContextMenuStrip`  
   
- Formularze Windows `MainMenu` składnika pojawi się menu w czasie wykonywania.  
+ Składnik Windows Forms `MainMenu` wyświetla menu w czasie wykonywania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [MainMenu, składnik — omówienie](mainmenu-component-overview-windows-forms.md)  
- Wyjaśnia, co to jest ten składnik i jego kluczowych funkcji i właściwości.  
+ Wyjaśnia, czym jest ten składnik i jego najważniejsze funkcje i właściwości.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.MainMenu>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
 ## <a name="see-also"></a>Zobacz także
 

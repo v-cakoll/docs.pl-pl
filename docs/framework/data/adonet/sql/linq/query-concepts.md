@@ -2,35 +2,35 @@
 title: Pojęcia dotyczące zapytań
 ms.date: 03/30/2017
 ms.assetid: 9a125749-ccb5-49d5-999d-d2db7171d74d
-ms.openlocfilehash: 62af37399cda5220c429fae2d9ab619989050b00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be564ae6fe6dc887b77ea4ae213d56d11f309369
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767523"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938556"
 ---
 # <a name="query-concepts"></a>Pojęcia dotyczące zapytań
-W tej sekcji opisano kluczowe pojęcia związane z projektowanie [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] zapytania w programie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+W tej sekcji opisano najważniejsze pojęcia dotyczące [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] projektowania zapytań [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]w programie.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Zapytania LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-queries.md)  
- Odwołuje się do ogólnego [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] tematów oraz wyjaśniono elementy specyficzne dla [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ Odwołuje się [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] do ogólnych tematów i objaśnia elementy charakterystyczne dla. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]  
   
  [Wykonywanie zapytań w relacjach](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)  
- Opis sposobu użycia skojarzeń w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektów.  
+ Wyjaśnia, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jak używać skojarzeń w modelu obiektów.  
   
  [Zdalne a lokalne wykonanie](../../../../../../docs/framework/data/adonet/sql/linq/remote-vs-local-execution.md)  
- Wyjaśnia, jak określić, gdzie zapytanie wykonana.  
+ Wyjaśnia, jak określić, w jaki sposób ma zostać wykonane zapytanie.  
   
  [Odroczone a bezpośrednie ładowanie](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)  
- Opisuje sposób określenia, kiedy są ładowane powiązanych obiektów.  
+ Opisuje sposób określania, kiedy są załadowane powiązane obiekty.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Przewodnik programowania](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
- Zawiera łącza do tematów, które opisują [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologii.  
+ Zawiera łącza do tematów, które opisują [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologię.  
   
  [Tożsamość obiektu](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  Wyjaśnia pojęcie tożsamości obiektu w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Wprowadzenie do zapytań LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
- Wprowadzenie do operacje zapytań w [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].
+ [Wprowadzenie do zapytań LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ Zawiera wprowadzenie do wykonywania zapytań w programie [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].

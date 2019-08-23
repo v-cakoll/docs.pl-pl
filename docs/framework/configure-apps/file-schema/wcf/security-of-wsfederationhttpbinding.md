@@ -2,21 +2,21 @@
 title: <security> dla <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: 75e3910473a353c2ef110106c34b4e92c018b51c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 875ce7d548d59f32465da817e9e956217f346f60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670420"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936540"
 ---
-# <a name="security-of-wsfederationhttpbinding"></a>\<Zabezpieczenia > z \<wsFederationHttpBinding >
-Definiuje ustawienia zabezpieczeń [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+# <a name="security-of-wsfederationhttpbinding"></a>\<zabezpieczenia > \<WSFederationHttpBinding >
+Definiuje ustawienia [ \<zabezpieczeń > WSFederationHttpBinding](wsfederationhttpbinding.md).  
   
  \<system.ServiceModel>  
-\<powiązania >  
-\<wsFederatedBinding>  
-\<Powiązanie >  
-\<security>  
+\<> powiązań  
+\<wsFederatedBinding >  
+\<> powiązania  
+\<> zabezpieczeń  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -85,27 +85,27 @@ Definiuje ustawienia zabezpieczeń [ \<wsFederationHttpBinding >](../../../../..
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|Tryb|Opcjonalna. Określa typ zabezpieczeń, która jest stosowana. Wartość domyślna to `Message`. Ten atrybut jest typu <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
+|Tryb|Opcjonalna. Określa typ stosowanego zabezpieczenia. Wartość domyślna to `Message`. Ten atrybut jest typu <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
   
-## <a name="mode-attribute"></a>Tryb atrybutu  
+## <a name="mode-attribute"></a>Atrybut Mode  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Brak|Komunikat protokołu SOAP nie jest bezpieczne podczas przesyłania.|  
-|Komunikat|Integralność, poufności, uwierzytelnianie serwera i uwierzytelnianie klienta znajdują się korzystanie z zabezpieczeń komunikatów protokołu SOAP. Domyślnie treść jest zaszyfrowany i podpisany. Usługa musi zostać skonfigurowane przy użyciu certyfikatu. Uwierzytelnianie klienta jest oparty na token wystawiony przez usługę tokenu zabezpieczającego klienta|  
-|TransportWithMessageCredential|Integralność, poufności i serwerem uwierzytelniania są dostarczane przez protokół HTTPS. Usługa musi zostać skonfigurowane przy użyciu certyfikatu. Uwierzytelnianie klienta znajduje się za pomocą zabezpieczeń wiadomości protokołu SOAP i opiera się na token wystawiony do klienta przez usługę tokenu zabezpieczającego.|  
+|Brak|Komunikat protokołu SOAP nie jest zabezpieczony podczas transferu.|  
+|Message|Integralność, poufność, uwierzytelnianie serwera i uwierzytelnianie klienta są udostępniane przy użyciu zabezpieczeń komunikatów protokołu SOAP. Domyślnie treść jest zaszyfrowana i podpisana. Usługa musi być skonfigurowana przy użyciu certyfikatu. Uwierzytelnianie klienta opiera się na tokenie wystawionym dla klienta przez usługę tokenu zabezpieczającego|  
+|TransportWithMessageCredential|Uwierzytelnianie za pomocą protokołu HTTPS zapewnia integralność, poufność i serwer. Usługa musi być skonfigurowana przy użyciu certyfikatu. Uwierzytelnianie klienta jest zapewniane przez zabezpieczenia komunikatów protokołu SOAP i opiera się na tokenie wystawionym dla klienta przez usługę tokenu zabezpieczającego.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|Definiuje ustawienia zabezpieczeń na poziomie komunikatu. Ten element jest typu <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
+|[\<message>](message-element-of-wsfederationhttpbinding.md)|Definiuje ustawienia zabezpieczeń na poziomie wiadomości. Ten element jest typu <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie możliwości wiązania [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
+|[\<> powiązania](../../../misc/binding.md)|Definiuje wszystkie możliwości [ \<powiązań WSDualHttpBinding >](wsdualhttpbinding.md).|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -113,10 +113,10 @@ Definiuje ustawienia zabezpieczeń [ \<wsFederationHttpBinding >](../../../../..
 - <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>
-- [Instrukcje: Tworzenie elementu WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Wybieranie typu poświadczeń](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+- [Instrukcje: Utwórz WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Wybieranie typu poświadczeń](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<> powiązania](../../../misc/binding.md)

@@ -1,5 +1,5 @@
 ---
-title: Metoda ICorProfilerCallback7::ModuleInMemorySymbolsUpdated
+title: 'ICorProfilerCallback7:: ModuleInMemorySymbolsUpdated, Metoda'
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerCallback7.ModuleInMemorySymbolsUpdated
@@ -11,17 +11,17 @@ api_type:
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a6e00d55157046679ee1de0a7ff8e2764c1e357
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 860ecde22dead112a42b6ac868e34f0e9cd3531d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758053"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916199"
 ---
-# <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>Metoda ICorProfilerCallback7::ModuleInMemorySymbolsUpdated
-[Obsługiwane w programie .NET Framework 4.6.1 i nowszych wersjach]  
+# <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7:: ModuleInMemorySymbolsUpdated, Metoda
+[Obsługiwane w .NET Framework 4.6.1 i nowszych wersjach]  
   
- Powiadamia program profilujący, zawsze wtedy, gdy strumień symbol skojarzone z modułem w pamięci zostanie zaktualizowany.  
+ Powiadamia profiler za każdym razem, gdy zostanie zaktualizowany strumień symboli skojarzony z modułem w pamięci.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,25 +32,25 @@ HRESULT ModuleInMemorySymbolsUpdated(
 ```  
   
 ## <a name="parameters"></a>Parametry  
- [in] `moduleId`  
- Identyfikator modułu w pamięci, w której symbol strumień zostanie zaktualizowany.  
+ podczas`moduleId`  
+ Identyfikator modułu w pamięci, którego strumień symboli został zaktualizowany.  
   
 ## <a name="remarks"></a>Uwagi  
- To wywołanie zwrotne jest kontrolowany przez ustawienie [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) flagi maski zdarzenia podczas wywoływania [ICorProfilerCallback5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) metody.  
+ To wywołanie zwrotne jest kontrolowane przez ustawienie flagi maski zdarzeń [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) podczas wywoływania metody [ICorProfilerCallback5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) .  
   
 > [!NOTE]
->  To zdarzenie nie jest inicjowane dla symboli niejawnie utworzone lub zmodyfikowane za pośrednictwem <xref:System.Reflection.Emit> interfejsów API.  
+> To zdarzenie nie jest obecnie wywoływane dla symboli niejawnie utworzonych lub zmodyfikowanych za pośrednictwem <xref:System.Reflection.Emit> interfejsów API.  
   
- Nawet gdy symbole znajdują się na początku w wywołaniu do jednego z przeciążeń zarządzaną <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> metody, które obejmuje `rawSymbolStore` argument określający symbole dla zestawu, środowisko uruchomieniowe nie może faktycznie kojarzyć dane symboliczne przy użyciu modułu do momentu po [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) wystąpiło wywołanie zwrotne. To zdarzenie zawiera nowsze możliwość zbierania symbole dla tych modułów.  
+ Nawet jeśli symbole są dostarczane z góry w wywołaniu jednego z przeciążeń metod zarządzanych <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> , które `rawSymbolStore` zawierają argument, aby określić symbole dla zestawu, środowisko uruchomieniowe może w rzeczywistości nie skojarzyć danych symbolicznych z modułem do momentu wystąpienia wywołania zwrotnego [ModuleLoadFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) . To zdarzenie umożliwia późniejsze zbieranie symboli dla takich modułów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówki** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteki** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET Framework wersje:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

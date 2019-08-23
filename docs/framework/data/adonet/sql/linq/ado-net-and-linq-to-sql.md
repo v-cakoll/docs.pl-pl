@@ -5,59 +5,59 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 6a6e057b45c1305a889ce4ed915b437a29ab2794
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: b47a46f9fd9ef3ef1935fa7a88c2e60fe80db09d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662066"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964132"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET i LINQ to SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest częścią rodziny ADO.NET technologii. Opiera się na usługach dostarczonych przez model dostawcy ADO.NET. W związku z tym możesz mieszać [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kodu z istniejącymi aplikacjami ADO.NET i przeprowadzić migrację bieżącego rozwiązania ADO.NET [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Następująca ilustracja przedstawia ogólny widok relacji.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]jest częścią ADO.NETej technologii. Jest on oparty na usługach oferowanych przez model dostawcy ADO.NET. W związku z tym [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] możesz mieszać kod z istniejącymi aplikacjami ADO.NET i migrować bieżące [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]rozwiązania ADO.NET do programu. Poniższa ilustracja przedstawia ogólny widok relacji.  
   
  ![LINQ to SQL i ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")  
   
 ## <a name="connections"></a>Połączenia  
- Możesz podać istniejącego połączenia ADO.NET, tworząc [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.DataContext>. Wszystkie operacje na <xref:System.Data.Linq.DataContext> (w tym zapytań), użyj tego podano połączenia. Jeśli połączenie jest już otwarty, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pozostawi je się po zakończeniu pracy z nim.  
+ Podczas tworzenia programu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.DataContext>można podać istniejące połączenie usługi ADO.NET. Wszystkie operacje związane z <xref:System.Data.Linq.DataContext> (łącznie z zapytaniami) używają tego podanego połączenia. Jeśli połączenie jest już otwarte, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pozostawia je po zakończeniu pracy.  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#4)]
  [!code-vb[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#4)]  
   
- Zawsze możesz uzyskiwać dostęp do połączenia i zamknij go samodzielnie za pomocą <xref:System.Data.Linq.DataContext.Connection%2A> właściwości, tak jak w poniższym kodzie:  
+ Zawsze możesz uzyskać dostęp do połączenia i zamknąć go samodzielnie przy użyciu <xref:System.Data.Linq.DataContext.Connection%2A> właściwości, jak w poniższym kodzie:  
   
  [!code-csharp[DLinqAdoNet#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#1)]
  [!code-vb[DLinqAdoNet#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#1)]  
   
 ## <a name="transactions"></a>Transakcje  
- Możesz podać swoje <xref:System.Data.Linq.DataContext> przy użyciu własnych transakcji bazy danych w przypadku aplikacji już zainicjował transakcji Twojej <xref:System.Data.Linq.DataContext> zaangażować.  
+ Możesz podać swoją <xref:System.Data.Linq.DataContext> własną transakcję bazy danych, gdy aplikacja już zainicjowała transakcję i <xref:System.Data.Linq.DataContext> chcesz, aby była ona używana.  
   
- Preferowaną metodą działania transakcji za pomocą programu .NET Framework jest użycie <xref:System.Transactions.TransactionScope> obiektu. Za pomocą tego podejścia, możesz wprowadzać transakcji rozproszonych, który działa wobec obsługiwanych baz danych i innych menedżerów zasobów rezydentnego. Zakresy transakcji wymaga niewielkiej ilości zasobów, aby rozpocząć. One przełącza się do transakcje rozproszone tylko wtedy, gdy wiele połączeń w zakresie transakcji.  
+ Preferowaną metodą wykonywania transakcji z .NET Framework jest użycie <xref:System.Transactions.TransactionScope> obiektu. Korzystając z tej metody, można tworzyć transakcje rozproszone, które działają między bazami danych i innymi menedżerami zasobów zamieszkałymi w pamięci. Zakresy transakcji wymagają kilku zasobów do uruchomienia. Promują się one tylko do transakcji rozproszonych, tylko gdy istnieje wiele połączeń w ramach transakcji.  
   
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  
   
- Nie można użyć tej metody dla wszystkich baz danych. Na przykład połączeń klient SQL nie można podwyższyć poziomu transakcji systemu, gdy działa na serwerze SQL Server 2000. Zamiast tego automatycznie współdziała on do transakcji rozproszonych, pełna zawsze wtedy, gdy widzi, używany zakres transakcji.  
+ Nie można użyć tej metody dla wszystkich baz danych. Na przykład połączenie SqlClient nie może podwyższyć poziomu transakcji systemowych, gdy działa na serwerze SQL Server 2000. Zamiast tego automatycznie rejestrowana jest pełna, rozproszona transakcja, gdy widzi ona zakres transakcji, który jest używany.  
   
-## <a name="direct-sql-commands"></a>Polecenia SQL bezpośrednie  
- Czasami mogą wystąpić sytuacje gdzie zdolność <xref:System.Data.Linq.DataContext> mają być odczytane lub Prześlij zmiany jest niewystarczająca dla specjalne zadanie, które chcesz wykonać. W takiej sytuacji można użyć <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> metody do wysyłania poleceń SQL w bazie danych i konwertowania wyników zapytania do obiektów.  
+## <a name="direct-sql-commands"></a>Bezpośrednie polecenia SQL  
+ Czasami można napotkać sytuacje, w których możliwość <xref:System.Data.Linq.DataContext> wykonywania zapytań lub przesyłania zmian jest niewystarczająca dla wyspecjalizowanego zadania, które chcesz wykonać. W takich przypadkach można użyć <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> metody do wydawania poleceń SQL do bazy danych i przekonwertowania wyników zapytania na obiekty.  
   
- Na przykład, załóżmy, że dane dla `Customer` klasy jest rozłożona się powyżej dwóch tabel (serwer customer1 i customer2). Następujące zapytanie zwraca sekwencję `Customer` obiektów:  
+ Załóżmy na przykład, że dane dla `Customer` klasy są rozłożone na dwie tabele (customer1 i Customer2). Następujące zapytanie zwraca sekwencję `Customer` obiektów:  
   
  [!code-csharp[DLinqAdoNet#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#3)]
  [!code-vb[DLinqAdoNet#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#3)]  
   
- Tak długo, jak nazwy kolumn w wyniki tabelaryczne dopasować kolumny właściwości swojej klasy jednostki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tworzy obiekty z dowolnego zapytania SQL.  
+ Tak długo, jak nazwy kolumn w wynikach tabelarycznych są zgodne z właściwościami kolumny klasy Entity [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , program tworzy obiekty z dowolnego zapytania SQL.  
   
 ### <a name="parameters"></a>Parametry  
- <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> Metoda przyjmuje parametrów. Poniższy kod wykonuje zapytanie parametryczne:  
+ <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> Metoda przyjmuje parametry. Poniższy kod wykonuje zapytanie parametryczne:  
   
  [!code-csharp[DlinqAdoNet#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#4)]
  [!code-vb[DlinqAdoNet#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#4)]  
   
 > [!NOTE]
->  Parametry są wyrażone w tekst zapytania przy użyciu takiej samej notacji nawiasów posługują się `Console.WriteLine()` i `String.Format()`. `String.Format()` pobiera ciąg zapytania, podaj i zastępuje takich jak parametry nawiasów klamrowych, przy użyciu nazwy parametrów wygenerowanego `@p0`, `@p1` ..., `@p(n)`.  
+> Parametry są wyrażane w tekście zapytania przy użyciu tej samej notacji klamrowej `Console.WriteLine()` używanej przez i `String.Format()`. `String.Format()`Pobiera ciąg zapytania, który jest udostępniany i zastępuje parametry klamrowe z wygenerowanymi nazwami parametrów, `@p0`takimi jak, `@p1` . `@p(n)`..,.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Instrukcje: Ponowne użycie połączenia między poleceniem ADO.NET a DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+- [Instrukcje: Ponowne użycie połączenia między poleceniem ADO.NET a elementem DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

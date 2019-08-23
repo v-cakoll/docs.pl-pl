@@ -2,57 +2,57 @@
 title: 'Transport: Współdziałanie protokołu TCP z usługami WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 5ad1f2e55bf0dab2736bbc95933d12be43dddd76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b73f9ef93ebfabf2b1c39363bd64785e2892956
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617343"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941030"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: Współdziałanie protokołu TCP z usługami WSE 3.0
-Przykładowe programu WSE 3.0 protokołu TCP współdziałanie transportu demonstruje sposób implementacji dwukierunkowego sesji TCP jako niestandardowy transportu Windows Communication Foundation (WCF). Ilustruje też, jak można użyć rozszerzalności warstwy kanału do interfejsu przez sieć z istniejącymi systemami wdrożone. Poniższe kroki pokazują jak utworzyć niestandardowe transport WCF:  
+Przykład transportu współdziałania TCP w programie WSE 3,0 demonstruje sposób implementacji sesji dwustronnej TCP jako transportu niestandardowego Windows Communication Foundation (WCF). Przedstawiono w nim również, jak można użyć rozszerzalności warstwy kanału do interfejsu przez sieć z istniejącymi wdrożonymi systemami. Poniższe kroki pokazują, jak utworzyć niestandardowy transport WCF:  
   
-1. Począwszy od gniazda TCP, utworzyć klienta i serwera implementacje <xref:System.ServiceModel.Channels.IDuplexSessionChannel> używające ramek DIME aby odróżnić granice wiadomości.  
+1. Rozpoczynając od gniazda TCP, Utwórz implementacje <xref:System.ServiceModel.Channels.IDuplexSessionChannel> klienta i serwera, które używają ramki Dime do odróżnić granic komunikatów.  
   
-2. Tworzenie fabryki kanałów, łączy się z usługą programu WSE TCP, która wysyła komunikaty ramce przez klienta <xref:System.ServiceModel.Channels.IDuplexSessionChannel>s.  
+2. Utwórz fabrykę kanałów, która łączy się z usługą WSE TCP i wysyła komunikaty z ramkami za <xref:System.ServiceModel.Channels.IDuplexSessionChannel>pośrednictwem klienta s.  
   
-3. Utwórz odbiornik kanału, aby zaakceptować połączenia przychodzące TCP i tworzyć kanały.  
+3. Utwórz odbiornik kanału, aby akceptować przychodzące połączenia TCP i generować odpowiednie kanały.  
   
-4. Upewnij się, że wszystkie wyjątki dotyczące sieci są znormalizowane zgodnie z odpowiedniej klasy pochodnej z <xref:System.ServiceModel.CommunicationException>.  
+4. Upewnij się, że wszystkie wyjątki specyficzne dla sieci są znormalizowane do odpowiedniej klasy <xref:System.ServiceModel.CommunicationException>pochodnej.  
   
-5. Dodaj element powiązania, który dodaje niestandardowy transportu do stosu kanału. Aby uzyskać więcej informacji zobacz [Dodawanie elementu powiązania].  
+5. Dodaj element powiązania, który dodaje niestandardowy transport do stosu kanału. Aby uzyskać więcej informacji, zobacz [Dodawanie elementu powiązania].  
   
 ## <a name="creating-iduplexsessionchannel"></a>Tworzenie IDuplexSessionChannel  
- Pierwszym krokiem podczas pisania transportu współdziałania programu WSE 3.0 protokołu TCP jest utworzenie implementacji klasy <xref:System.ServiceModel.Channels.IDuplexSessionChannel> w górnej części <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` pochodzi od klasy <xref:System.ServiceModel.Channels.ChannelBase>. Logika wysyłania wiadomości zawiera dwie główne części: (1) kodowanie wiadomości w bajtach i (2) ramek tych bajtów i wysyłając przesyłania.  
+ Pierwszym krokiem w przypadku transportu współdziałania TCP w <xref:System.ServiceModel.Channels.IDuplexSessionChannel> systemie WSE 3,0 jest utworzenie implementacji na podstawie. <xref:System.Net.Sockets.Socket> `WseTcpDuplexSessionChannel`pochodzi od <xref:System.ServiceModel.Channels.ChannelBase>. Logika wysyłania wiadomości składa się z dwóch głównych elementów: (1) Kodowanie komunikatu do bajtów i (2) umieszczanie tych bajtów i wysyłanie ich do sieci.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
  `WriteData(encodedBytes);`  
   
- Ponadto blokady jest pobierana w celu wywołania Send() zachowania gwarancji w kolejności IDuplexSessionChannel i tak, aby wywołania do gniazda podstawowej są poprawnie synchronizowane.  
+ Ponadto jest wykonywana blokada, dzięki czemu wywołania Send () zachowują gwarancję IDuplexSessionChannel w kolejności i tak, aby wywołania bazowego gniazda były prawidłowo synchronizowane.  
   
- `WseTcpDuplexSessionChannel` używa <xref:System.ServiceModel.Channels.MessageEncoder> do tłumaczenia <xref:System.ServiceModel.Channels.Message> do i z byte []. Ponieważ jest on transportu `WseTcpDuplexSessionChannel` jest również odpowiedzialny za stosowanie adresów zdalnych, której skonfigurowano kanał. `EncodeMessage` hermetyzuje logikę tej konwersji.  
+ `WseTcpDuplexSessionChannel`używa do tłumaczenia typu <xref:System.ServiceModel.Channels.Message> do i z bajtu []. <xref:System.ServiceModel.Channels.MessageEncoder> Ponieważ jest to transport, `WseTcpDuplexSessionChannel` jest również odpowiedzialny za zastosowanie zdalnego adresu, z którym kanał został skonfigurowany. `EncodeMessage`hermetyzuje logikę dla tej konwersji.  
   
  `this.RemoteAddress.ApplyTo(message);`  
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- Gdy <xref:System.ServiceModel.Channels.Message> jest zakodowany w bajtach, muszą być przekazywane w sieci. Wymaga to systemu do definiowania granice wiadomości. Programu WSE 3.0 korzysta z wersji [DIME](https://go.microsoft.com/fwlink/?LinkId=94999) jako protokół ramek. `WriteData` hermetyzuje logikę ramek do opakowania byte [] do zestawu rekordów DIME.  
+ Gdy program <xref:System.ServiceModel.Channels.Message> zostanie zakodowany w bajtach, musi być przesyłany w sieci. Wymaga to systemu do definiowania granic komunikatów. WSE 3,0 używa wersji [Dime](https://go.microsoft.com/fwlink/?LinkId=94999) jako protokołu szkieletu. `WriteData`hermetyzuje logikę ramek, aby otoczyć bajt [] do zestawu rekordów DIME.  
   
- Logika do odbierania wiadomości jest bardzo podobne. Złożoność głównego jest obsługa fakt, że gniazdo odczyt może zwrócić mniej bajtów niż zażądano. Aby otrzymać komunikat, `WseTcpDuplexSessionChannel` odczytuje bajtów wyłączone podczas transmisji, dekoduje ramek DIME, a następnie używa <xref:System.ServiceModel.Channels.MessageEncoder> Włączanie byte [] do <xref:System.ServiceModel.Channels.Message>.  
+ Logika wysyłania komunikatów jest bardzo podobna. Główna złożoność obsługuje fakt, że odczyt gniazda może zwrócić mniejszą liczbę bajtów niż zażądano. Aby odebrać komunikat, program `WseTcpDuplexSessionChannel` odczytuje bajty z sieci, dekoduje ramkę Dime, a następnie <xref:System.ServiceModel.Channels.MessageEncoder> używa w celu wyłączania <xref:System.ServiceModel.Channels.Message>bajtu [] do.  
   
- Podstawa `WseTcpDuplexSessionChannel` przyjęto założenie, że będzie ona otrzymywać połączone gniazdo. Klasa bazowa obsługuje zamykania gniazda. Istnieją trzy miejsca, z gniazda zamknięcia:  
+ Podstawą `WseTcpDuplexSessionChannel` jest założenie, że odbierze połączone gniazdo. Klasa bazowa obsługuje zamknięcie gniazda. Istnieją trzy miejsca, w których interfejs ma zamknięcie gniazda:  
   
-- OnAbort — Zamknij ungracefully gniazda (Zamknij twardych).  
+- OnAbort — Zamknij gniazdo niebezpiecznie (twarde).  
   
-- Na [Begin] Zamknij — Zamknij gniazda bez problemu zmieniała (Zamknij nietrwałego).  
+- Na [BEGIN] Zamknij--zamykaj gniazdo w sposób łagodny (zamknięcie miękkie).  
   
-- sesji. CloseOutputSession — Zamknij strumień danych wychodzących (Zamknij połowa).  
+- obrad. Wywołaniu metody CloseOutputSession — Zamknij strumień danych wychodzących (połowa Close).  
   
 ## <a name="channel-factory"></a>Fabryka kanałów  
- Następnym krokiem w pisaniu warstwy transportowej TCP jest utworzenie implementacji klasy <xref:System.ServiceModel.Channels.IChannelFactory> kanałów klienta.  
+ Następnym krokiem podczas pisania transportu TCP jest utworzenie implementacji <xref:System.ServiceModel.Channels.IChannelFactory> dla kanałów klienta.  
   
-- `WseTcpChannelFactory` pochodzi od klasy <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Jest fabrykę, która zastępuje `OnCreateChannel` można tworzyć kanały klientów.  
+- `WseTcpChannelFactory`pochodzi od <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Jest to fabryka, która zastępuje `OnCreateChannel` generowanie kanałów klientów.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -62,11 +62,11 @@ Przykładowe programu WSE 3.0 protokołu TCP współdziałanie transportu demons
   
  `}`  
   
-- `ClientWseTcpDuplexSessionChannel` dodaje logikę do podstawy `WseTcpDuplexSessionChannel` nawiązać połączenia z serwerem TCP na `channel.Open` czasu. Nazwa hosta jest najpierw rozpoznać adres IP, jak pokazano w poniższym kodzie.  
+- `ClientWseTcpDuplexSessionChannel`dodaje logikę do podstawy `WseTcpDuplexSessionChannel` , aby połączyć się z serwerem TCP `channel.Open` w czasie. Najpierw nazwa hosta jest rozpoznawana jako adres IP, jak pokazano w poniższym kodzie.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
-- Następnie nazwa hosta jest podłączony do pierwszy dostępny adres IP w pętli, jak pokazano w poniższym kodzie.  
+- Następnie nazwa hosta jest połączona z pierwszym dostępnym adresem IP w pętli, jak pokazano w poniższym kodzie.  
   
  `IPAddress address = hostEntry.AddressList[i];`  
   
@@ -74,12 +74,12 @@ Przykładowe programu WSE 3.0 protokołu TCP współdziałanie transportu demons
   
  `socket.Connect(new IPEndPoint(address, port));`  
   
-- W ramach umowy kanału, wszelkie specyficznego dla domeny wyjątki są opakowane, takich jak `SocketException` w <xref:System.ServiceModel.CommunicationException>.  
+- W ramach kontraktu kanału wszystkie wyjątki specyficzne dla domeny są opakowane, `SocketException` na przykład w. <xref:System.ServiceModel.CommunicationException>  
   
 ## <a name="channel-listener"></a>Odbiornik kanału  
- Następnym krokiem w pisaniu warstwy transportowej TCP jest utworzenie implementacji klasy <xref:System.ServiceModel.Channels.IChannelListener> do akceptowania kanałach serwera.  
+ Następnym krokiem podczas pisania transportu TCP jest utworzenie implementacji <xref:System.ServiceModel.Channels.IChannelListener> dla akceptowania kanałów serwera.  
   
-- `WseTcpChannelListener` pochodzi od klasy <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > i zastąpienia podczas otwierania [Begin] i [Begin] Zamknij, aby kontrolować okres istnienia jego gniazdo. Na zdarzenia gniazdo jest tworzona do nasłuchiwania IP_ANY. Implementacje bardziej zaawansowanych można utworzyć drugi gniazda do nasłuchiwania protokołu IPv6, jak również. Można również zezwolić adresu IP, należy określić w nazwie hosta.  
+- `WseTcpChannelListener`pochodzi od <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > i zastąpień na [BEGIN] Otwórz i na [BEGIN] Zamknij, aby sterować okresem istnienia gniazda nasłuchiwania. W obszarze OnOpen gniazdo jest tworzone w celu nasłuchiwania na IP_ANY. Bardziej zaawansowane implementacje mogą również utworzyć drugie gniazdo do nasłuchiwania na protokole IPv6. Mogą również zezwalać na określenie adresu IP w nazwie hosta.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -89,12 +89,12 @@ Przykładowe programu WSE 3.0 protokołu TCP współdziałanie transportu demons
   
  `this.listenSocket.Listen(10);`  
   
- Po zaakceptowaniu nowe gniazdo kanał firmowy serwer jest inicjowany z tego gniazda. Wszystkie dane wejściowe i wyjściowe został już zaimplementowany w klasie bazowej, więc ten kanał jest odpowiedzialny za inicjowanie gniazda.  
+ Po zaakceptowaniu nowego gniazda kanał serwera jest inicjowany za pomocą tego gniazda. Wszystkie dane wejściowe i wyjściowe są już zaimplementowane w klasie bazowej, więc ten kanał jest odpowiedzialny za Inicjowanie gniazda.  
   
 ## <a name="adding-a-binding-element"></a>Dodawanie elementu powiązania  
- Teraz, gdy są kompilowane fabryk i kanałów, muszą być widoczne do środowiska uruchomieniowego ServiceModel za pośrednictwem powiązania. Powiązanie to kolekcja elementów wiązania, który reprezentuje stos komunikacji skojarzone z adresem usługi. Każdy element w stosie jest reprezentowany przez element powiązania.  
+ Teraz, gdy fabryki i kanały są kompilowane, muszą one być uwidocznione w środowisku uruchomieniowym ServiceModel za pomocą powiązania. Powiązanie to kolekcja elementów powiązania, które reprezentują stos komunikacji skojarzony z adresem usługi. Każdy element w stosie jest reprezentowany przez element powiązania.  
   
- W tym przykładzie jest element powiązania `WseTcpTransportBindingElement`, która jest pochodną <xref:System.ServiceModel.Channels.TransportBindingElement>. Obsługuje ona <xref:System.ServiceModel.Channels.IDuplexSessionChannel> i zastępuje następujące metody do tworzenia fabryk skojarzony z powiązaniem naszych.  
+ W przykładzie element Binding ma wartość `WseTcpTransportBindingElement`, która pochodzi od. <xref:System.ServiceModel.Channels.TransportBindingElement> Obsługuje <xref:System.ServiceModel.Channels.IDuplexSessionChannel> i zastępuje następujące metody tworzenia fabryk skojarzonych z naszymi powiązaniami.  
   
  `public IChannelFactory<TChannel> BuildChannelFactory<TChannel>(BindingContext context)`  
   
@@ -112,12 +112,12 @@ Przykładowe programu WSE 3.0 protokołu TCP współdziałanie transportu demons
   
  `}`  
   
- Zawiera również członków do klonowania `BindingElement` i zwracanie tym schemacie (wse.tcp).  
+ Zawiera również elementy członkowskie do klonowania `BindingElement` i zwracania naszego schematu (WSE. TCP).  
   
-## <a name="the-wse-tcp-test-console"></a>TCP z usługami WSE konsoli testów  
- Za pomocą transportu ten przykładowy kod testu jest dostępna w TestCode.cs. Poniższe instrukcje przedstawiają sposób konfigurowania programu WSE `TcpSyncStockService` próbki.  
+## <a name="the-wse-tcp-test-console"></a>Konsola testowa TCP WSE  
+ Kod testowy służący do korzystania z tego przykładowego transportu jest dostępny w TestCode.cs. Poniższe instrukcje przedstawiają sposób konfigurowania przykładu WSE `TcpSyncStockService` .  
   
- Kod testu, tworzy niestandardowego powiązania, który używa kodowanie MTOM i `WseTcpTransport` transportu. Konfiguruje również wersja adresowania mogła być jako zgodność z usługami WSE 3.0, jak pokazano w poniższym kodzie.  
+ Kod testu tworzy niestandardowe powiązanie, które używa MTOM jako kodowania i `WseTcpTransport` jako transportu. Konfiguruje również AddressingVersion, aby była zgodna z WSE 3,0, jak pokazano w poniższym kodzie.  
   
  `CustomBinding binding = new CustomBinding();`  
   
@@ -129,9 +129,9 @@ Przykładowe programu WSE 3.0 protokołu TCP współdziałanie transportu demons
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- Składa się z dwóch testów — jeden test konfiguruje klient z typowaniem przy użyciu kodu wygenerowanego z usługami WSE 3.0 WSDL. Drugi test używa programu WCF jako klient i serwer, wysyłając komunikaty bezpośrednio na kanale interfejsów API.  
+ Składa się z dwóch testów — jeden test konfiguruje klienta z określonym typem przy użyciu kodu wygenerowanego na podstawie języka WSDL WSE 3,0. Drugi test używa programu WCF jako klienta i serwera przez wysyłanie komunikatów bezpośrednio na podstawie interfejsów API kanału.  
   
- Podczas uruchamiania przykładu, należy się następujące dane wyjściowe.  
+ Podczas uruchamiania przykładu, oczekiwane są następujące dane wyjściowe.  
   
  Klient:  
   
@@ -157,7 +157,7 @@ Received Body: to me.
 Press enter.  
 ```  
   
- Serwer:  
+ Server  
   
 ```  
 Listening for messages at soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
@@ -170,27 +170,27 @@ Symbols:
         CONTOSO  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Aby uruchomić ten przykład, konieczne jest posiadanie programu WSE 3.0 i WSE `TcpSyncStockService` przykładowe zainstalowane. Możesz pobrać [programu WSE 3.0 z witryny MSDN](https://go.microsoft.com/fwlink/?LinkId=95000).  
+1. Aby uruchomić ten przykład, należy mieć zainstalowaną przykład WSE 3,0 `TcpSyncStockService` i WSE. [WSE 3,0 można pobrać z witryny MSDN](https://go.microsoft.com/fwlink/?LinkId=95000).  
   
 > [!NOTE]
->  Ponieważ programu WSE 3.0 nie jest obsługiwany na [!INCLUDE[lserver](../../../../includes/lserver-md.md)], nie można zainstalować ani uruchomić `TcpSyncStockService` przykład w tym systemie operacyjnym.  
+> Ponieważ WSE 3,0 nie jest obsługiwana w [!INCLUDE[lserver](../../../../includes/lserver-md.md)]programie, nie można zainstalować ani `TcpSyncStockService` uruchomić przykładu w tym systemie operacyjnym.  
   
-1. Po zainstalowaniu `TcpSyncStockService` przykładowy, wykonaj następujące czynności:  
+1. Po zainstalowaniu `TcpSyncStockService` przykładu należy wykonać następujące czynności:  
   
-    1. Otwórz `TcpSyncStockService` w programie Visual Studio (Uwaga zainstalowania przykładowej TcpSyncStockService z usługami WSE 3.0. Nie jest częścią tego przykładu kodu).  
+    1. `TcpSyncStockService` Otwórz w programie Visual Studio (należy zauważyć, że przykład TcpSyncStockService jest instalowany z WSE 3,0. Nie jest częścią tego przykładowego kodu).  
   
     2. Ustaw projekt StockService jako projekt startowy.  
   
-    3. Otwórz StockService.cs w projekcie StockService i komentarz dla atrybutu [zasady] na `StockService` klasy. Powoduje to wyłączenie zabezpieczeń z próbki. Gdy WCF może współpracować z usługami WSE 3.0 bezpieczne punkty końcowe, zabezpieczeń jest wyłączona, aby zachować ten przykład koncentruje się na niestandardowej warstwy transportowej TCP.  
+    3. Otwórz StockService.cs w projekcie StockService i Dodaj komentarz do atrybutu [Policy] w `StockService` klasie. Spowoduje to wyłączenie zabezpieczeń z przykładu. Chociaż WCF może współdziałać z bezpiecznymi punktami końcowymi WSE 3,0, zabezpieczenia są wyłączone, aby ten przykład był skoncentrowany na niestandardowym transportie TCP.  
   
-    4. Naciśnij klawisz F5, aby rozpocząć `TcpSyncStockService`. Usługa jest uruchamiana w nowym oknie konsoli.  
+    4. Naciśnij klawisz F5, aby `TcpSyncStockService`uruchomić. Usługa jest uruchamiana w nowym oknie konsoli.  
   
-    5. Otwórz w tym przykładzie transportu TCP w programie Visual Studio.  
+    5. Otwórz ten przykład transportu TCP w programie Visual Studio.  
   
-    6. Aktualizacja zmiennej "Nazwa hosta" w TestCode.cs do dopasowania uruchomiona Nazwa maszyny `TcpSyncStockService`.  
+    6. Zaktualizuj zmienną "hostname" w TestCode.cs, aby odpowiadała nazwie komputera z uruchomionym programem `TcpSyncStockService`.  
   
-    7. Naciśnij klawisz F5, aby uruchomić przykład transportu TCP.  
+    7. Naciśnij klawisz F5, aby uruchomić próbkę transportu TCP.  
   
-    8. Klient testowy transportu TCP rozpoczyna się w nowej konsoli. Klient żąda giełdowych z usługi i następnie wyświetla wyniki w oknie swojej konsoli.  
+    8. Klient testowy transportu TCP uruchamia się w nowej konsoli. Klient żąda notowań giełdowych z usługi, a następnie wyświetla wyniki w oknie konsoli.  

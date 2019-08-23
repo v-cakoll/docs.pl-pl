@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bd74460c7d5d077686c723936d140b07ac21dd0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f16a2bbd2470b4aec9e95ab67ccb0e736c4c6d02
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663394"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920687"
 ---
 # <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode> Element
 
@@ -64,7 +64,7 @@ Brak.
 
 Począwszy od .NET Framework 4, <xref:System.TimeSpan?displayProperty=nameWithType> struktura <xref:System.IFormattable> implementuje interfejs i obsługuje operacje formatowania przy użyciu standardowych i niestandardowych ciągów formatu. Jeśli metoda analizy napotka nieobsługiwany specyfikator formatu lub ciąg formatu, zgłasza <xref:System.FormatException>.
 
-W poprzednich wersjach .NET Framework <xref:System.TimeSpan> struktura nie została zaimplementowana <xref:System.IFormattable> i nie obsługuje ciągów formatu. Jednak w przypadku wielu programistów założono, że program <xref:System.TimeSpan> obsługiwał zestaw ciągów formatu i użył ich w [operacjach formatowania złożonego](../../../../../docs/standard/base-types/composite-formatting.md) z metodami takimi <xref:System.String.Format%2A?displayProperty=nameWithType>jak. Zwykle, jeśli typ implementuje <xref:System.IFormattable> i obsługuje ciągi formatowania, wywołania metod formatowania z nieobsługiwanymi ciągami formatu zwykle <xref:System.FormatException>generują. Jednak ponieważ <xref:System.TimeSpan> nie została zaimplementowana <xref:System.IFormattable>, środowisko uruchomieniowe zignorował <xref:System.TimeSpan.ToString?displayProperty=nameWithType> ciąg formatu i zamiast niego nazywa metodę. Oznacza to, że chociaż ciągi formatu nie miały wpływu na operację formatowania, ich obecność nie spowodowało <xref:System.FormatException>.
+W poprzednich wersjach .NET Framework <xref:System.TimeSpan> struktura nie została zaimplementowana <xref:System.IFormattable> i nie obsługuje ciągów formatu. Jednak w przypadku wielu programistów założono, że program <xref:System.TimeSpan> obsługiwał zestaw ciągów formatu i użył ich w [operacjach formatowania złożonego](../../../../standard/base-types/composite-formatting.md) z metodami takimi <xref:System.String.Format%2A?displayProperty=nameWithType>jak. Zwykle, jeśli typ implementuje <xref:System.IFormattable> i obsługuje ciągi formatowania, wywołania metod formatowania z nieobsługiwanymi ciągami formatu zwykle <xref:System.FormatException>generują. Jednak ponieważ <xref:System.TimeSpan> nie została zaimplementowana <xref:System.IFormattable>, środowisko uruchomieniowe zignorował <xref:System.TimeSpan.ToString?displayProperty=nameWithType> ciąg formatu i zamiast niego nazywa metodę. Oznacza to, że chociaż ciągi formatu nie miały wpływu na operację formatowania, ich obecność nie spowodowało <xref:System.FormatException>.
 
 W przypadkach, w których starszy kod przekazuje metodę formatowania złożonego i nieprawidłowy ciąg formatu, a ten kod nie może zostać ponownie skompilowany, można użyć `<TimeSpan_LegacyFormatMode>` elementu, aby przywrócić starsze <xref:System.TimeSpan> zachowanie. Po `enabled` ustawieniu atrybutu tego elementu na `true`, Metoda formatowania złożonego <xref:System.TimeSpan.ToString?displayProperty=nameWithType> powoduje wywołanie zamiast <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>i <xref:System.FormatException> nie jest generowane.
 

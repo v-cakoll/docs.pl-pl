@@ -2,21 +2,21 @@
 title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: 70f7452a22ae08d6eccd7d3644bdc8df45087ae0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: dd81821c74678cae8602458fe796a72bf5d379e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423187"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919558"
 ---
 # <a name="channelpoolsettings"></a>\<channelPoolSettings>
-Określa ustawienia puli kanału dla niestandardowego powiązania.  
+Określa ustawienia puli kanałów dla niestandardowego powiązania.  
   
  \<system.serviceModel>  
-\<powiązania >  
+\<> powiązań  
 \<customBinding>  
-\<Powiązanie >  
-\<oneWay>  
+\<> powiązania  
+\<> oneWay  
 \<channelPoolSettings>  
   
 ## <a name="syntax"></a>Składnia  
@@ -34,9 +34,9 @@ Określa ustawienia puli kanału dla niestandardowego powiązania.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`idleTimeout`|Dodatnią <xref:System.TimeSpan> , który określa maksymalny czas kanałów w puli może być bezczynne, zanim zostanie rozłączone. Wartość domyślna to 00:02:00.|  
-|`leaseTimeout`|Element <xref:System.TimeSpan> , który określa przedział czasu, po którym kanał, gdy zwrócony do puli, jest zamknięty. Wartość domyślna to 00:10:00.|  
-|`maxOutboundChannelsPerEndpoint`|Dodatnia liczba całkowita, określająca maksymalną liczbę kanałów, które mogą być przechowywane w puli dla każdego zdalnego punktu końcowego. Wartość domyślna wynosi 10.|  
+|`idleTimeout`|Wartość dodatnia <xref:System.TimeSpan> , która określa maksymalny czas bezczynności kanałów w puli przed rozłączeniem. Wartość domyślna to 00:02:00.|  
+|`leaseTimeout`|A <xref:System.TimeSpan> , który określa przedział czasu, po którym kanał, gdy jest zwracany do puli, jest zamknięty. Wartość domyślna to 00:10:00.|  
+|`maxOutboundChannelsPerEndpoint`|Dodatnia liczba całkowita, która określa maksymalną liczbę kanałów, które mogą być przechowywane w puli dla każdego zdalnego punktu końcowego. Wartość domyślna to 10.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -45,18 +45,18 @@ Określa ustawienia puli kanału dla niestandardowego powiązania.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|Umożliwia routing pakietów dla niestandardowego powiązania.|  
+|[\<> oneWay](oneway.md)|Włącza routing pakietów dla niestandardowego powiązania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Przydziały są używane jako mechanizm zasady zapobiegające zużycia zasobów. Mogą zapobiegać atakom typu odmowa usługi (DOS), które są złośliwe lub przypadkowe. Podczas ustawiania przydziałów kanału w niestandardowym kanale, użyj tego elementu.  
+ Przydziały są używane jako mechanizm zasad, aby zapobiec zużyciu nadmiernych zasobów. Uniemożliwiają one ataki typu "odmowa usługi" (DOS), które są złośliwe lub niezamierzone. Użyj tego elementu, gdy ustawiasz limity przydziału kanałów w niestandardowym kanale.  
   
- `ChannelPoolSettings` Określa trzy przydziały:  
+ `ChannelPoolSettings`określa trzy przydziały:  
   
-- `idleTimeout` Przydziału służy do ograniczenie liczby ataków typu odmowa usługi (DOS) na serwerze, które zależą od zajmowania zasobów przez dłuższy czas. Na komputerze klienckim ustawienie poprawną wartość może zwiększyć niezawodność nawiązywania połączenia z usługą. Wartość domyślna jest oparta na konserwatywnie skromną alokacji zasobów. Nadaje się do środowiska deweloperskiego i scenariusze małych instalacji. Administratorzy usług należy przejrzeć wartość, czy instalacja zaczyna brakować zasobów, czy połączenia są ograniczeni pomimo dostępność dodatkowych zasobów.  
+- `idleTimeout` Przydział służy do zapobiegania atakom typu "odmowa usługi" (DOS) na serwerze, który polega na rozdzieleniu zasobów przez dłuższy czas. Ustawienie poprawnej wartości na kliencie może zwiększyć niezawodność połączenia z usługą. Wartość domyślna jest oparta na nieumiarkowanie niedostatecznej alokacji zasobów. Jest to odpowiednie dla środowiska programistycznego i małych scenariuszy instalacji. Administratorzy usługi powinni sprawdzić wartość w przypadku braku zasobów w ramach instalacji lub w przypadku ograniczonej liczby połączeń poza dostępnością dodatkowych zasobów.  
   
-- `leaseTimeout` Przydziału służy do integracji z modułami równoważenia obciążenia i zwiększając niezawodność. Wartość domyślna jest oparta na zachowawcze alokacji zasobów. Nadaje się do środowiska deweloperskiego i scenariusze małych instalacji. Administratorzy usług należy przejrzeć wartość, czy instalacja zaczyna brakować zasobów, czy połączenia są ograniczeni pomimo dostępność dodatkowych zasobów.  
+- `leaseTimeout` Przydział służy do integracji z usługami równoważenia obciążenia i zwiększania niezawodności. Wartość domyślna jest określana na podstawie ostrożnej alokacji zasobów. Jest to odpowiednie dla środowiska programistycznego i małych scenariuszy instalacji. Administratorzy usługi powinni sprawdzić wartość w przypadku braku zasobów w ramach instalacji lub w przypadku ograniczonej liczby połączeń poza dostępnością dodatkowych zasobów.  
   
-- `maxOutboundChannelsPerEndpoint` Przydziału Ustawia limity pamięci podręcznej serwera i klienta i jest używana w celu zwiększenia niezawodności. Wartość domyślna jest oparta na konserwatywnie skromną alokacji zasobów, który nadaje się do środowiska deweloperskiego i scenariusze instalacji małych. Administratorzy usług należy przejrzeć wartość, czy instalacja zaczyna brakować zasobów, czy połączenia są ograniczeni pomimo dostępność dodatkowych zasobów.  
+- Limity `maxOutboundChannelsPerEndpoint` przydziału są ustawiane w pamięci podręcznej zarówno na serwerze, jak i na kliencie i są używane w celu zwiększenia niezawodności. Wartość domyślna jest oparta na niewielkiej ilości alokacji zasobów, która jest odpowiednia dla środowiska programistycznego i małych scenariuszy instalacji. Administratorzy usługi powinni sprawdzić wartość w przypadku braku zasobów w ramach instalacji lub w przypadku ograniczonej liczby połączeń poza dostępnością dodatkowych zasobów.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -65,8 +65,8 @@ Określa ustawienia puli kanału dla niestandardowego powiązania.
 - <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>
 - <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [\<> oneWay](oneway.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

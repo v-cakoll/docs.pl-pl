@@ -5,39 +5,39 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-ms.openlocfilehash: 0f1b6cf27101c2a7f55757b72b56b2291198404d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dff5642b2490cd3935dba3b3d04cd62082249c32
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767549"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915726"
 ---
 # <a name="object-identity"></a>Tożsamość obiektu
-Obiekty w środowisku uruchomieniowym mają unikatowych tożsamości. Dwie zmienne odwołujące się do tego samego obiektu faktycznie dotyczą tego samego wystąpienia obiektu. Ze względu na fakt ten zmiany wprowadzone za pomocą ścieżki za pomocą jednej zmiennej są natychmiast widoczne przez innych.  
+Obiekty w środowisku uruchomieniowym mają unikatowe tożsamości. Dwie zmienne, które odwołują się do tego samego obiektu, faktycznie odwołują się do tego samego wystąpienia obiektu. Ze względu na ten fakt zmiany wprowadzane w drodze ścieżki za pomocą jednej zmiennej są natychmiast widoczne w innym.  
   
- Wiersze w tabeli relacyjnej bazy danych nie mają unikatowych tożsamości. Ponieważ każdy wiersz ma unikatowy klucz podstawowy, żadne dwa wiersze udostępnić taką samą wartość klucza. Jednak ten fakt ogranicza tylko zawartość tabeli bazy danych.  
+ Wiersze w tabeli relacyjnej bazy danych nie mają unikatowych tożsamości. Ponieważ każdy wiersz ma unikatowy klucz podstawowy, żadne dwa wiersze nie mają tej samej wartości klucza. Jednak ten fakt ogranicza tylko zawartość tabeli bazy danych.  
   
- W rzeczywistości w większości przypadków przekazywane dane z bazy danych, a także do innej warstwy, w której aplikacja działa z nim. Jest to model, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje. Dane zaimportowane z bazy danych jako wiersze, użytkownik nie czy dwa wiersze, które reprezentują te same dane faktycznie odnoszą się do tych samych wystąpieniach wiersza. Po wykonaniu zapytania dotyczącego określonego odbiorcy dwa razy, uzyskasz dwa wiersze danych. Każdy wiersz zawiera te same informacje.  
+ W rzeczywistości dane są najczęściej przenoszone z bazy danych programu i do innej warstwy, w której działa aplikacja. Jest to model, który [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje. Gdy dane są wyłączane z bazy danych jako wiersze, nie oczekuje się, że dwa wiersze reprezentujące te same dane odpowiadają tym samym wystąpieniem wiersza. Jeśli kwerenda dotyczy określonego klienta dwa razy, otrzymujesz dwa wiersze danych. Każdy wiersz zawiera te same informacje.  
   
- Przy użyciu obiektów oczekujesz, że coś, co jest bardzo różnią się. Należy oczekiwać, że jeśli poprosisz <xref:System.Data.Linq.DataContext> dla tych samych informacji cyklicznie, w rzeczywistości uzyskasz tego samego wystąpienia obiektu. To zachowanie jest oczekiwane, ponieważ obiekty mają specjalne znaczenie dla twojej aplikacji, a Twoim oczekiwaniom zachowują się jak obiekty. Możesz je zaprojektowany jako hierarchie lub wykresów. Spodziewasz się, pobrać je jako takie, a nie otrzymywać liczne replikowanych wystąpień, po prostu, ponieważ zażądano samo więcej niż jeden raz.  
+ Z obiektami, których oczekuje coś bardzo się różni. Należy się spodziewać, że jeśli <xref:System.Data.Linq.DataContext> podasz te same informacje wielokrotnie, spowoduje to nadanie tego samego wystąpienia obiektu. To zachowanie jest oczekiwane, ponieważ obiekty mają specjalne znaczenie dla aplikacji i oczekiwano ich zachowania, jak obiekty. Zaprojektowano je jako hierarchie lub wykresy. Należy się spodziewać, że zostaną one pobrane jako takie i nie będą otrzymywać wielu zreplikowanych wystąpień tylko dlatego, że zażądano tego samego elementu co więcej niż jeden raz.  
   
- W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Data.Linq.DataContext> zarządza tożsamość obiektu. Przy każdym pobraniu nowy wiersz z bazy danych wiersz jest zalogowany za pomocą klucza podstawowego tabeli tożsamości, a następnie tworzony jest nowy obiekt. Przy każdym pobraniu tym samym wierszu, oryginalne wystąpienie obiektu jest przekazywane ponownie do aplikacji. W ten sposób <xref:System.Data.Linq.DataContext> wykonuje translację koncepcji tożsamości widziany przez bazę danych (klucze podstawowe) na koncepcji tożsamości widzianych przez język (czyli wystąpienia). Aplikacja widoczny jest tylko obiekt w stanie, aby najpierw został pobrany. Nowe dane, jeśli są różne, zostaną odrzucone. Aby uzyskać więcej informacji, zobacz [pobieranie obiektów z pamięci podręcznej tożsamości](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).  
+ W programie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]zarządzatożsamościąobiektu <xref:System.Data.Linq.DataContext> . Za każdym razem, gdy pobierasz nowy wiersz z bazy danych, wiersz jest rejestrowany w tabeli tożsamości według jego klucza podstawowego i tworzony jest nowy obiekt. Po każdym pobraniu tego samego wiersza wystąpienie oryginalnego obiektu zostanie przekazane do aplikacji. W ten sposób <xref:System.Data.Linq.DataContext> tłumaczy koncepcję tożsamości widzianą przez bazę danych (czyli klucze podstawowe) do koncepcji tożsamości widocznej dla języka (czyli wystąpień). Aplikacja widzi tylko obiekt w stanie, w którym został po raz pierwszy pobrany. Nowe dane, jeśli są inne, są odrzucane. Aby uzyskać więcej informacji, zobacz [pobieranie obiektów z pamięci podręcznej tożsamości](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] używa tego podejścia do zarządzania integralności obiektów lokalnych w celu obsługi optymistycznej aktualizacji. Ponieważ tylko zmiany, które wystąpiły po na początku tworzenia obiektu tych wykonywanych przez aplikację, celem aplikacji jest wyczyszczone. Jeśli zmiany przez stronę poza miały miejsce w międzyczasie, są identyfikowane w czasie `SubmitChanges()` jest wywoływana.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]używa tego podejścia do zarządzania integralnością obiektów lokalnych w celu obsługi aktualizacji optymistycznych. Ze względu na to, że jedyne zmiany, które wystąpiły po utworzeniu obiektu po raz pierwszy, są wykonywane przez aplikację, zamiar aplikacji jest wyczyszczone. Jeśli zmiany dokonane przez stronę zewnętrzną wystąpiły w tymczasowym czasie, są one identyfikowane w momencie `SubmitChanges()` wywołania.  
   
 > [!NOTE]
->  Jeśli żądany obiekt przez zapytanie jest łatwa do zidentyfikowania jako jeden już pobrane, jest wykonywane bez określenia zapytania. Tabela tożsamości działa jako pamięć podręczną wszystkich pobrane wcześniej obiektów.  
+> Jeśli obiekt żądany przez zapytanie jest łatwo do zidentyfikowania, ponieważ został już pobrany, żadne zapytanie nie jest wykonywane. Tabela tożsamości działa jako pamięć podręczna wszystkich wcześniej pobranych obiektów.  
   
 ## <a name="examples"></a>Przykłady  
   
-### <a name="object-caching-example-1"></a>Obiekt buforowania przykład 1  
- W tym przykładzie Jeśli wykonania tego samego zapytania dwa razy, zostanie wyświetlony odwołanie do tego samego obiektu w pamięci każdym razem.  
+### <a name="object-caching-example-1"></a>Przykład buforowania obiektu 1  
+ W tym przykładzie, jeśli wykonujesz to samo zapytanie dwa razy, otrzymujesz odwołanie do tego samego obiektu w pamięci za każdym razem.  
   
  [!code-csharp[DLinqObjectIdentity#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectIdentity/cs/Program.cs#1)]
  [!code-vb[DLinqObjectIdentity#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectIdentity/vb/Module1.vb#1)]  
   
-### <a name="object-caching-example-2"></a>Obiekt buforowania przykład 2  
- W tym przykładzie Jeśli wykonać różne zapytania, które zwracają ten sam wiersz z bazy danych, zostanie wyświetlony odwołanie do tego samego obiektu w pamięci każdym.  
+### <a name="object-caching-example-2"></a>Przykład buforowania obiektów 2  
+ W tym przykładzie, jeśli wykonujesz inne zapytania, które zwracają ten sam wiersz z bazy danych, w każdym momencie otrzymujesz odwołanie do tego samego obiektu w pamięci.  
   
  [!code-csharp[DLinqObjectIdentity#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectIdentity/cs/Program.cs#2)]
  [!code-vb[DLinqObjectIdentity#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectIdentity/vb/Module1.vb#2)]  

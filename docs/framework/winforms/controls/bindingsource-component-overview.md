@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 9c9c9fb574b9f3e687b2d8d5c4606bfb66ebfa64
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: bd1b38b434f9932a575745d7a1761ff18b009115
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364453"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917811"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource — Informacje o składniku
 <xref:System.Windows.Forms.BindingSource> Składnik został zaprojektowany, aby uprościć proces powiązań formantów do bazowego źródła danych. <xref:System.Windows.Forms.BindingSource> Składnik działa jako kanał i źródło danych dla innych formantów do powiązania. Zapewnia abstrakcję połączenia danych formularza podczas przekazywania poleceń do podstawowej listy danych. Ponadto można dodać bezpośrednio do niego dane, tak aby sam składnik funkcjonuje jako źródło danych.  
@@ -25,7 +25,7 @@ ms.locfileid: "68364453"
  ![Architektura powiązania źródła i danych](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
   
 > [!NOTE]
->  W czasie projektowania niektóre akcje, takie jak przeciąganie tabeli bazy danych z okna danych do pustego formularza, spowodują utworzenie <xref:System.Windows.Forms.BindingSource> składnika, powiązanie go z źródłowym źródłem danych i dodanie kontrolek obsługujących dane w jednej operacji. Zapoznaj [się również z kontrolkami Windows Forms powiązań z danymi w programie Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio).  
+> W czasie projektowania niektóre akcje, takie jak przeciąganie tabeli bazy danych z okna danych do pustego formularza, spowodują utworzenie <xref:System.Windows.Forms.BindingSource> składnika, powiązanie go z źródłowym źródłem danych i dodanie kontrolek obsługujących dane w jednej operacji. Zapoznaj [się również z kontrolkami Windows Forms powiązań z danymi w programie Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio).  
   
 ## <a name="bindingsource-component-as-a-data-source"></a>BindingSource — składnik jako źródło danych  
  Jeśli zaczniesz dodawać elementy do <xref:System.Windows.Forms.BindingSource> składnika bez wcześniejszego określenia listy, z którą chcesz powiązać, składnik będzie działał jak źródło danych w stylu listy i akceptuje te dodane elementy.  

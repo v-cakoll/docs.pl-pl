@@ -10,16 +10,16 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: a59223bfbe9506aa0028933d55b74e24d5595c32
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9f6c82144031cb2bf4824985b8211453bb7f51ea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629551"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959166"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automatyzacja interfejsu użytkownika a skalowanie ekranu
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]umożliwia użytkownikom zmianę ustawienia punktów na cal (dpi), tak aby większość [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elementów na ekranie była większa. Chociaż ta funkcja była dostępna w programie [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], we wcześniejszych wersjach skalowanie musiało zostać zaimplementowane przez aplikacje. W [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]programie Menedżer okien pulpitu wykonuje domyślne skalowanie dla wszystkich aplikacji, które nie obsługują własnego skalowania. Aplikacje klienckie automatyzacji interfejsu użytkownika muszą korzystać z tej funkcji w ramach konta.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68629551"
  W efekcie, gdy użytkownik ustawia współczynnik skalowania na 120 DPI, poziom pionowy lub poziomy na ekranie będzie większy o 25%. Wszystkie wymiary są odpowiednio skalowane. Przesunięcie okna aplikacji od górnej i lewej krawędzi ekranu zwiększa się o 25%. Jeśli skalowanie aplikacji jest włączone i aplikacja nie obsługuje rozdzielczości DPI, rozmiar okna zwiększa się w tej samej proporcji wraz z przesunięciami i rozmiarem wszystkich [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementów, które zawiera.  
   
 > [!NOTE]
->  Domyślnie Menedżer DWM nie wykonuje skalowania dla aplikacji nieobsługujących rozdzielczości DPI, gdy użytkownik ustawia wartość DPI na 120, ale wykonuje ją, gdy dla dpi zostanie ustawiona niestandardowa wartości 144 lub wyższej. Jednak użytkownik może zastąpić zachowanie domyślne.  
+> Domyślnie Menedżer DWM nie wykonuje skalowania dla aplikacji nieobsługujących rozdzielczości DPI, gdy użytkownik ustawia wartość DPI na 120, ale wykonuje ją, gdy dla dpi zostanie ustawiona niestandardowa wartości 144 lub wyższej. Jednak użytkownik może zastąpić zachowanie domyślne.  
   
  Skalowanie ekranu tworzy nowe wyzwania dla aplikacji, które są zainteresowane w dowolny sposób z współrzędnymi ekranu. Na ekranie znajdują się teraz dwa systemy współrzędnych: fizyczne i logiczne. Współrzędne fizyczne punktu to rzeczywiste przesunięcie (w pikselach) od lewego górnego rogu pochodzenia. Współrzędne logiczne są przesunięciami, tak jak gdyby same piksele były skalowane.  
   

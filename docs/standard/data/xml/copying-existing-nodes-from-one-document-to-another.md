@@ -5,40 +5,40 @@ ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 744c97e8728d0a65bff8e7bb7a7dbb298afe1800
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e08c86ebdd71746520085844de5743692e84640e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934553"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965928"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Kopiowanie istniejących węzłów z jednego dokumentu do innego
-**ImportNode** metoda to mechanizm, za pomocą którego węzła lub poddrzewo w całym węźle jest kopiowany z jednego **XmlDocument** do innego. Węzeł zwracana z wywołania jest kopią węzeł w dokumencie źródłowym, w tym wartości atrybutów, nazwa węzła, typ węzła i wszystkich atrybutów związane z przestrzeni nazw, takie jak prefiks, lokalna nazwa i identyfikator (URI nazw). Dokument źródłowy nie jest zmieniany. Po zaimportowaniu węzeł nadal trzeba dodać je do drzewa za pomocą jednej z metod służy do wstawiania węzłów.  
+Metoda **ImportNode** jest mechanizmem, za pomocą którego jest kopiowany węzeł lub całe poddrzewo węzła z jednego **dokumentu XmlDocument** do innego. Węzeł zwrócony z wywołania to kopia węzła z dokumentu źródłowego, w tym wartości atrybutów, nazwa węzła, typ węzła i wszystkie atrybuty powiązane z przestrzenią nazw, takie jak prefiks, nazwa lokalna i przestrzeń nazw Uniform Resource Identifier (URI). Dokument źródłowy nie jest zmieniany. Po zaimportowaniu węzła nadal trzeba dodać go do drzewa przy użyciu jednej z metod używanych do wstawiania węzłów.  
   
- Gdy węzeł jest dołączony do jej nowy dokument, nowy dokument jest właścicielem węzła. Przyczyną jest to, czy każdy węzeł podczas tworzenia ma będącej właścicielem dokumentu, nawet jeśli węzły są tworzone we fragmentach oddzielny dokument. To jest to wymagane XML Document Object Model (DOM) i są wymuszane przez projekt tworzenia fabryki na **XmlDocument** klasy. Na przykład **CreateElement**, jest to jedyny sposób, aby utworzyć nowe węzły.  
+ Gdy węzeł zostanie dołączony do nowego dokumentu, nowy dokument jest właścicielem węzła. Przyczyną jest to, że każdy węzeł, gdy został utworzony, ma dokument będącego właścicielem, nawet jeśli węzły są tworzone w oddzielnych fragmentach dokumentu. Jest to wymaganie Document Object Model XML (DOM) i jest wymuszane przez projekt tworzenia fabryki w klasie XmlDocument . Na przykład, **CreateElement**, jest jedynym sposobem tworzenia nowych węzłów.  
   
- W zależności od typu węzła importowanych węzła i wartość *głębokiego* parametru, dodatkowe informacje są kopiowane odpowiednio. Ta metoda próbuje duplikatów zachowanie oczekiwane, jeśli fragment kodu XML lub źródła HTML został skopiowany z jednego dokumentu do innego, księgowość fakt, że dla formatu XML dwa dokumenty może mieć definicji typu z innego dokumentu (pliki DTD).  
+ W zależności od typu węzła zaimportowanego węzła i wartości parametru głębokiego, dodatkowe informacje są kopiowane stosownie do potrzeb. Ta metoda próbuje zdublować zachowanie w przypadku, gdy fragment kodu XML lub HTML został skopiowany z jednego dokumentu do drugiego, a księgowanie dla faktu, że dla języka XML, dwa dokumenty mogą mieć różne definicje typu dokumentu (DTD).  
   
  W poniższej tabeli opisano określone zachowanie dla każdego typu węzła, który można zaimportować.  
   
-|Typ węzła|*głębokie* parametr ma wartość true|*głębokie* parametr ma wartość false|  
+|Typ węzła|parametr głębokiego ma wartość true|parametr głębokiego ma wartość false|  
 |---------------|------------------------------|-------------------------------|  
-|XmlAttribute|<xref:System.Xml.XmlAttribute.Specified%2A> Ustawiono **true** na XmlAttribute. Elementy podrzędne źródło **XmlAttribute** rekursywnie zaimportowany i wynikowy węzły są odbierane w celu utworzenia odpowiedniego poddrzewo.|*Głębokiego* parametru nie ma zastosowania do **XmlAttribute** węzłów, ponieważ zawierają one ich węzłów podrzędnych z nimi po zaimportowaniu.|  
-|XmlCDataSection|Kopiuje węzła, w tym jego danych.|Kopiuje węzła, w tym jego danych.|  
-|XmlComment|Kopiuje węzła, w tym jego danych.|Kopiuje węzła, w tym jego danych.|  
-|XmlDocumentFragment|Elementy podrzędne węzła źródłowego są rekursywnie zaimportowany i wynikowy węzły ponownie w celu utworzenia odpowiednich poddrzewa.|Pusta **XmlDocumentFragment** zostanie utworzony.|  
-|XmlDocumentType|Kopiuje węzła, w tym jego data.*|Kopiuje węzła, w tym jego data.*|  
-|XmlElement|Elementy podrzędne elementu źródłowego są rekursywnie zaimportowany i wynikowy węzły ponownie w celu utworzenia odpowiednich poddrzewa. **Uwaga:**  Atrybuty domyślne nie są kopiowane. Jeśli dokument, zostaną zaimportowane do definiuje atrybutów domyślnych dla tej nazwy elementu, te są przypisywane.|Określony atrybut węzłów elementu źródłowego są importowane i generowane **XmlAttribute** węzły są dołączone do nowego elementu. Węzły podrzędne nie są kopiowane. **Uwaga:**  Atrybuty domyślne nie są kopiowane. Jeśli dokument, zostaną zaimportowane do definiuje atrybutów domyślnych dla tej nazwy elementu, te są przypisywane.|  
-|XmlEntityReference|Ponieważ dokumentów źródłowych i docelowych może mieć jednostki zdefiniowanych inaczej, ta metoda tylko kopiuje **XmlEntityReference** węzła. Tekst zastępczy nie jest włączony. Jeśli plik docelowy zawiera jednostki zdefiniowane, jego wartość zostanie przypisany.|Ponieważ dokumentów źródłowych i docelowych może mieć jednostki zdefiniowanych inaczej, ta metoda tylko kopiuje **XmlEntityReference** węzła. Tekst zastępczy nie jest włączony. Jeśli plik docelowy zawiera jednostki zdefiniowane, jego wartość zostanie przypisany.|  
-|XmlProcessingInstruction|Kopiuje wartości docelowej i danych z zaimportowanych węzła.|Kopiuje wartości docelowej i danych z zaimportowanych węzła.|  
-|XmlText|Kopiuje węzła, w tym jego danych.|Kopiuje węzła, w tym jego danych.|  
-|XmlSignificantWhitespace|Kopiuje węzła, w tym jego danych.|Kopiuje węzła, w tym jego danych.|  
-|XmlWhitespace|Kopiuje węzła, w tym jego danych.|Kopiuje węzła, w tym jego danych.|  
-|XmlDeclaration|Kopiuje wartości docelowej i danych z zaimportowanych węzła.|Kopiuje wartości docelowej i danych z zaimportowanych węzła.|  
-|Inne typy węzłów|Nie można zaimportować te typy węzłów.|Nie można zaimportować te typy węzłów.|  
+|XmlAttribute|Wartość jest równa true dla elementu XmlAttribute. <xref:System.Xml.XmlAttribute.Specified%2A> Elementy podrzędne źródłowego elementu **XmlAttribute** są zaimportowane cyklicznie, a utworzone węzły w celu utworzenia odpowiedniego poddrzewa.|Parametr *głębokiego* nie ma zastosowania do węzłów **XmlAttribute** , ponieważ zawsze są one umieszczane w węzłach podrzędnych podczas importowania.|  
+|XmlCDataSection|Kopiuje węzeł, w tym jego dane.|Kopiuje węzeł, w tym jego dane.|  
+|XmlComment|Kopiuje węzeł, w tym jego dane.|Kopiuje węzeł, w tym jego dane.|  
+|XmlDocumentFragment|Elementy podrzędne węzła źródłowego są zaimportowane cyklicznie, a utworzone węzły w celu utworzenia odpowiedniego poddrzewa.|Zostanie utworzony pusty **XmlDocumentFragment** .|  
+|Element XmlDocumentType|Kopiuje węzeł, w tym jego dane. *|Kopiuje węzeł, w tym jego dane. *|  
+|XmlElement|Elementy podrzędne elementu źródłowego są zaimportowane cyklicznie, a utworzone węzły w celu utworzenia odpowiedniego poddrzewa. **Uwaga:**  Atrybuty domyślne nie są kopiowane. Jeśli dokument importowany do definiuje atrybuty domyślne dla tej nazwy elementu, są one przypisane.|Wybrane węzły atrybutów elementu źródłowego są importowane, a wygenerowane węzły **XmlAttribute** są dołączone do nowego elementu. Węzły podrzędne nie są kopiowane. **Uwaga:**  Atrybuty domyślne nie są kopiowane. Jeśli dokument importowany do definiuje atrybuty domyślne dla tej nazwy elementu, są one przypisane.|  
+|XmlEntityReference|Ponieważ dokumenty źródłowe i docelowe mogą mieć różne jednostki, ta metoda kopiuje tylko węzeł XmlEntityReference . Tekst zastępczy nie jest uwzględniany. Jeśli dokument docelowy ma zdefiniowaną jednostkę, jego wartość jest przypisana.|Ponieważ dokumenty źródłowe i docelowe mogą mieć różne jednostki, ta metoda kopiuje tylko węzeł XmlEntityReference . Tekst zastępczy nie jest uwzględniany. Jeśli dokument docelowy ma zdefiniowaną jednostkę, jego wartość jest przypisana.|  
+|XmlProcessingInstruction|Kopiuje wartość docelową i dane z importowanego węzła.|Kopiuje wartość docelową i dane z importowanego węzła.|  
+|XmlText|Kopiuje węzeł, w tym jego dane.|Kopiuje węzeł, w tym jego dane.|  
+|XmlSignificantWhitespace|Kopiuje węzeł, w tym jego dane.|Kopiuje węzeł, w tym jego dane.|  
+|XmlWhitespace|Kopiuje węzeł, w tym jego dane.|Kopiuje węzeł, w tym jego dane.|  
+|XmlDeclaration|Kopiuje wartość docelową i dane z importowanego węzła.|Kopiuje wartość docelową i dane z importowanego węzła.|  
+|Wszystkie inne typy węzłów|Nie można zaimportować tych typów węzłów.|Nie można zaimportować tych typów węzłów.|  
   
 > [!NOTE]
->  Mimo że można zaimportować węzłów typu dokumentu, dokument może mieć tylko jeden typ. Po zaimportowaniu typ dokumentu przed wstawieniem do drzewa, musisz upewnić się, że istnieje więc żaden typ dokumentu w dokumencie. Aby uzyskać informacje na temat usuwania węzłów, zobacz [usuwanie węzłów, zawartości i wartości z dokumentu XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).  
+> Chociaż węzły DocumentType można zaimportować, dokument może mieć tylko jeden DocumentType. Dlatego po zaimportowaniu typu dokumentu przed wstawieniem go do drzewa musisz upewnić się, że dokument nie zawiera żadnego typu dokumentu. Aby uzyskać informacje na temat usuwania węzłów, zobacz [usuwanie węzłów, zawartości i wartości z dokumentu XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

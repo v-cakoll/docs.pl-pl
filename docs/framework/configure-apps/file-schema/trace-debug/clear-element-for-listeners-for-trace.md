@@ -1,5 +1,5 @@
 ---
-title: <clear> Element <listeners> dla <trace>
+title: <clear>Element dla <listeners> elementu<trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/clear
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-ms.openlocfilehash: 97b18f9d6baa618b0f535955b232e2119c758b11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9816ba0f8e4ddd4c38537eb4e014a4240ff20407
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701323"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927170"
 ---
-# <a name="clear-element-for-listeners-for-trace"></a>\<clear> Element for \<listeners> for \<trace>
-Czyści `Listeners` kolekcji na potrzeby śledzenia.  
+# <a name="clear-element-for-listeners-for-trace"></a>\<Wyczyść element > dla \<odbiorników \<> śledzenia >
+`Listeners` Czyści kolekcję do śledzenia.  
   
- \<Konfiguracja >  
+ \<> konfiguracji  
 \<system.diagnostics>  
-\<trace>  
-\<listeners>  
+\<> śledzenia  
+\<> odbiorników  
 \<clear>  
   
 ## <a name="syntax"></a>Składnia  
@@ -43,22 +43,22 @@ Czyści `Listeners` kolekcji na potrzeby śledzenia.
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.|  
-|`trace`|Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunikatów śledzenia.|  
-|`listeners`|Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunikatów w postaci. Odbiorniki bezpośrednie dane wyjściowe śledzenia do odpowiedniego obiektu docelowego.|  
+|`system.diagnostics`|Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.|  
+|`trace`|Zawiera detektory, które zbierają, przechowują i rozsyłają komunikaty śledzenia.|  
+|`listeners`|Zawiera detektory, które zbierają, przechowują i rozsyłają komunikaty. Odbiorniki kierują dane wyjściowe śledzenia do odpowiedniego obiektu docelowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- `<clear>` Elementu usuwa wszystkie odbiorniki z `Listeners` kolekcji na potrzeby śledzenia. Możesz użyć `<clear>` element przed użyciem `<add>` elementu, aby mieć pewność, istnieją nie aktywne odbiorniki w kolekcji.  
+ Element usuwa wszystkie odbiorniki `Listeners` z kolekcji w celu śledzenia. `<clear>` Możesz użyć `<clear>` elementu przed użyciem elementu, `<add>` aby mieć pewność, że w kolekcji nie ma żadnych innych aktywnych odbiorników.  
   
- Możesz wyczyścić `Listeners` kolekcji programowo przez wywołanie metody <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> metody <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> właściwości (`System.Diagnostics.Trace.Listeners.Clear()`).  
+ Możesz wyczyścić `Listeners` kolekcję programowo, <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> wywołując metodę we <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> właściwości (`System.Diagnostics.Trace.Listeners.Clear()`).  
   
- Ten element może być użyty w pliku konfiguracji komputera (Machine.config) i pliku konfiguracji aplikacji.  
+ Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
   
 > [!NOTE]
->  `<clear>` Usuwa element <xref:System.Diagnostics.DefaultTraceListener> z `Listeners` kolekcji, zmiany zachowania <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, i <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> metody. Wywoływanie `Assert` lub `Fail` metoda zwykle powoduje wyświetlanie okna komunikatu. Jednak okno komunikatu nie jest wyświetlana Jeśli <xref:System.Diagnostics.DefaultTraceListener> nie znajduje się w `Listeners` kolekcji.  
+> `<clear>` Element usuwa<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> z kolekcji`Listeners`, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>zmieniając zachowanie metod<xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>,,i. <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.DefaultTraceListener> Wywołanie metody `Fail` lub zwykle powoduje wyświetlenie okna komunikatu. `Assert` Jednak okno komunikatu nie jest wyświetlane, jeśli <xref:System.Diagnostics.DefaultTraceListener> nie znajduje się `Listeners` w kolekcji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać `<clear>` element przed użyciem `<add>` elementu do dodania odbiornika `console` do `Listeners` kolekcji na potrzeby śledzenia.  
+ Poniższy przykład pokazuje `<clear>` , jak używać elementu przed użyciem elementu, `<add>` aby `Listeners` dodać odbiornik `console` do kolekcji w celu śledzenia.  
   
 ```xml  
 <configuration>  
@@ -83,6 +83,6 @@ Czyści `Listeners` kolekcji na potrzeby śledzenia.
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
 - <xref:System.Diagnostics.TraceSource>
-- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)
-- [Obiekty nasłuchujące śledzenie](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Schemat ustawień śledzenia i debugowania](index.md)
+- [\<remove>](remove-element-for-listeners-for-trace.md)
+- [Obiekty nasłuchujące śledzenie](../../../debug-trace-profile/trace-listeners.md)

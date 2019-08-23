@@ -12,24 +12,24 @@ helpviewer_keywords:
 - icons [Windows Forms], setting for TreeView control
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
-ms.openlocfilehash: c7c801242c7d5958cce9826a5f60d13a0b257add
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 451f9ab2b35ad1fbbe9401dacbc8aab44e302701
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348053"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909809"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Instrukcje: ustawienie ikon dla kontrolki TreeView formularzy systemu Windows
-Formularze Windows <xref:System.Windows.Forms.TreeView> formant może wyświetlać ikony obok każdego węzła. Ikony są pozycjonowane natychmiastowego po lewej stronie tekstu węzła. Aby wyświetlić te ikony, należy skojarzyć widok drzewa z <xref:System.Windows.Forms.ImageList> kontroli. Aby uzyskać więcej informacji na temat list obrazów, zobacz [składnika ImageList](imagelist-component-windows-forms.md) i [jak: Dodawanie lub usuwanie obrazów za pomocą Windows składnika ImageList formularzy](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
+Kontrolka <xref:System.Windows.Forms.TreeView> Windows Forms może wyświetlać ikony obok każdego węzła. Ikony są umieszczane bezpośrednio po lewej stronie tekstu węzła. Aby wyświetlić te ikony, należy skojarzyć widok drzewa z <xref:System.Windows.Forms.ImageList> kontrolką. Aby uzyskać więcej informacji na temat list obrazów, zobacz [składnik ImageList](imagelist-component-windows-forms.md) i [instrukcje: Dodawanie lub usuwanie obrazów za pomocą składnika](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)ImageList Windows Forms.  
   
 > [!NOTE]
->  Usterki programu Microsoft .NET Framework w wersji 1.1 zapobiega wyświetlaniu w obrazów <xref:System.Windows.Forms.TreeView> węzłów, gdy Twoja aplikacja wywołuje <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>. Aby obejść ten problem, należy wywołać <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> w swojej `Main` metoda natychmiast po wywołaniu <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>. Ten problem został rozwiązany w programie .NET Framework 2.0.  
+> Usterka w programie Microsoft .NET Framework w wersji 1,1 uniemożliwia wyświetlanie obrazów <xref:System.Windows.Forms.TreeView> w węzłach, gdy <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>aplikacja jest wywoływana. Aby obejść ten błąd, wywołaj <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> `Main` metodę natychmiast po wywołaniu <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>. Ta usterka została naprawiona w .NET Framework 2,0.  
   
 ### <a name="to-display-images-in-a-tree-view"></a>Aby wyświetlić obrazy w widoku drzewa  
   
-1. Ustaw <xref:System.Windows.Forms.TreeView> kontrolki <xref:System.Windows.Forms.TreeView.ImageList%2A> właściwości do istniejących <xref:System.Windows.Forms.ImageList> kontrolki, które chcesz użyć.  
+1. <xref:System.Windows.Forms.TreeView> Ustaw Właściwość<xref:System.Windows.Forms.TreeView.ImageList%2A> kontrolki na istniejącą <xref:System.Windows.Forms.ImageList> kontrolkę, której chcesz użyć.  
   
-     Te właściwości można ustawić w projektancie w oknie właściwości lub w kodzie.  
+     Te właściwości można ustawić w projektancie przy użyciu okno Właściwości lub w kodzie.  
   
     ```vb  
     TreeView1.ImageList = ImageList1  
@@ -43,9 +43,9 @@ Formularze Windows <xref:System.Windows.Forms.TreeView> formant może wyświetla
     treeView1->ImageList = imageList1;  
     ```  
   
-2. Ustaw węzeł <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> i <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> właściwości. <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> Właściwość określa obraz wyświetlany dla stanów normalne i rozwiniętego węzła i <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> właściwość określa obraz wyświetlany dla wybranego stanu węzła.  
+2. Ustaw właściwości węzła <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> i <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> . Właściwość określa obraz wyświetlany dla Stanów normalne i rozwinięte węzła, <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> a właściwość określa obraz wyświetlany dla wybranego stanu węzła. <xref:System.Windows.Forms.TreeNode.ImageIndex%2A>  
   
-     Te właściwości można ustawić w kodzie lub w obrębie elementu TreeNode Editor. Aby otworzyć Edytor TreeNode, kliknij przycisk oznaczony wielokropkiem ( ![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) obok pozycji <xref:System.Windows.Forms.TreeView.Nodes%2A> właściwości w oknie dialogowym właściwości.  
+     Te właściwości można ustawić w kodzie lub w edytorze TreeNode. Aby otworzyć Edytor TreeNode, kliknij przycisk wielokropka ( ![przycisk wielokropka (...) w okno właściwości programu Visual](./media/visual-studio-ellipsis-button.png)Studio) obok <xref:System.Windows.Forms.TreeView.Nodes%2A> właściwości okno właściwości.  
   
     ```vb  
     ' (Assumes that ImageList1 contains at least two images and  
@@ -71,7 +71,7 @@ Formularze Windows <xref:System.Windows.Forms.TreeView> formant może wyświetla
 ## <a name="see-also"></a>Zobacz także
 
 - [TreeView, kontrolka — omówienie](treeview-control-overview-windows-forms.md)
-- [Instrukcje: Dodawanie i usuwanie węzłów za pomocą kontrolki TreeView formularzy Windows](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [Instrukcje: Iterowanie wszystkich węzłów kontrolki TreeView formularzy Windows](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [Instrukcje: Określanie, który węzeł TreeView został kliknięty](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [Instrukcje: Dodawanie niestandardowych informacji do TreeView lub ListView — formant (formularze Windows)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Instrukcje: Dodawanie i usuwanie węzłów za pomocą kontrolki TreeView Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Instrukcje: Wykonaj iterację wszystkich węzłów kontrolki Windows Forms TreeView](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [Instrukcje: Określ, który węzeł TreeView został kliknięty](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [Instrukcje: Dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

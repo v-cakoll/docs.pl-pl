@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Umieszczanie cudzysłowu w ciągu (Windows Forms)'
+title: 'Instrukcje: Wprowadź cudzysłowy w ciągu (Windows Forms)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 0148f9fde9d69bb1605776f1ab617079be96b59e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 20828f75eeae9df33fcc22d8558b26a8a1ab2bdc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053464"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910433"
 ---
-# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Instrukcje: Umieszczanie cudzysłowu w ciągu (Windows Forms)
-Czasami możesz chcieć umieścić znaki cudzysłowu ("") w ciągu tekstowym. Na przykład:  
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Instrukcje: Wprowadź cudzysłowy w ciągu (Windows Forms)
+Czasami warto umieścić znaki cudzysłowu ("") w ciągu tekstu. Przykład:  
   
- Ona twierdzi "Oferującego Traktuj!"  
+ "Nie zawarto".  
   
- Alternatywnie, można również użyć <xref:Microsoft.VisualBasic.ControlChars.Quote> pola jako stała.  
+ Alternatywnie można również użyć <xref:Microsoft.VisualBasic.ControlChars.Quote> pola jako stałej.  
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Aby umieścić znaki cudzysłowu w ciągu w kodzie  
   
-1. W języku Visual Basic należy wstawić dwa znaki cudzysłowu w wierszu jako osadzonego znaku cudzysłowu. W wizualizacji C# i wizualna C++, Wstaw sekwencja unikowa \\"jako osadzonego znak cudzysłowu. Na przykład utworzyć poprzedniego parametry, należy użyć następującego kodu.  
+1. W Visual Basic Wstaw dwa cudzysłowy w wierszu jako osadzony znak cudzysłowu. W wizualizacjach C# i C++wizualizacji Wstaw sekwencję \\ucieczki "jako osadzony znak cudzysłowu. Na przykład, aby utworzyć poprzedni ciąg, użyj poniższego kodu.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +50,7 @@ Czasami możesz chcieć umieścić znaki cudzysłowu ("") w ciągu tekstowym. Na
   
      —lub—  
   
-2. Wstaw znak ASCII lub Unicode dla znaku cudzysłowu. W języku Visual Basic należy użyć znaku ASCII (34). W elemencie wizualnym C#, należy użyć znaku Unicode (\u0022).  
+2. Wstaw znak ASCII lub Unicode dla znaku cudzysłowu. W Visual Basic Użyj znaku ASCII (34). W wizualizacji C#Użyj znaku Unicode (\u0022).  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -65,11 +65,11 @@ Czasami możesz chcieć umieścić znaki cudzysłowu ("") w ciągu tekstowym. Na
     ```  
   
     > [!NOTE]
-    >  W tym przykładzie nie można użyć \u0022, ponieważ nie można użyć nazwy znaki uniwersalne, opisująca do znaku w podstawowym zestawie znaków. W przeciwnym razie zostanie wyświetlony C3851. Aby uzyskać więcej informacji, zobacz [błąd kompilatora C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
+    > W tym przykładzie nie można użyć \u0022, ponieważ nie można użyć uniwersalnej nazwy znaku, która określa znak w podstawowym zestawie znaków. W przeciwnym razie utworzysz C3851. Aby uzyskać więcej informacji, zobacz [błąd kompilatora C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
      —lub—  
   
-3. Można również zdefiniować stałą znaku i używać jej w razie potrzeby.  
+3. Możesz również zdefiniować stałą dla znaku i użyć go w razie potrzeby.  
   
     ```vb  
     Const quote As String = """"  
@@ -93,9 +93,9 @@ Czasami możesz chcieć umieścić znaki cudzysłowu ("") w ciągu tekstowym. Na
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
 - [TextBox, kontrolka — omówienie](textbox-control-overview-windows-forms.md)
-- [Instrukcje: Kontrolowanie punktu wstawiania w formancie TextBox formularzy Windows](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Instrukcje: Tworzenie pola tekstowego hasła za pomocą kontrolki TextBox formularzy Windows](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Instrukcje: Kontrolowanie punktu wstawiania w kontrolce TextBox Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Instrukcje: Tworzenie pola tekstowego hasła za pomocą kontrolki TextBox Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [Instrukcje: Tworzenie pola tekstowego tylko do odczytu](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Instrukcje: Zaznaczanie tekstu w formancie TextBox formularzy Windows](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Instrukcje: Wyświetlanie wielu wierszy w formancie TextBox formularzy Windows](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Instrukcje: Zaznacz tekst w kontrolce TextBox Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Instrukcje: Wyświetl wiele wierszy w kontrolce TextBox Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox, kontrolka](textbox-control-windows-forms.md)

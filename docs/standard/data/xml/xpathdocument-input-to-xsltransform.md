@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: 7d1bbe8b-ed43-4e62-a5ba-d602d244f4ae
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: beefaffa0365efbb808fd15c1253027e4d5b09a1
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 3c7c8f6739fc5132af2c8cf1af2c111d51565db0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170915"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923300"
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a>Dane wejściowe obiektu XPathDocument klasy XslTransform
-<xref:System.Xml.XPath.XPathDocument> Jest tylko do odczytu pamięci podręcznej, przetwarzanie dokumentów za pomocą <xref:System.Xml.Xsl.XslTransform>. Przypomina strukturę do XML Document Object Model (DOM), ale go jest wysoce zoptymalizowane pod kątem rozszerzalny język arkusza stylów przetwarzania przekształcenia (XSLT) i model danych XML Path Language (XPath) przy użyciu funkcji optymalizacji XPath na <xref:System.Xml.XPath.XPathNavigator>.  
+Jest pamięcią podręczną tylko do odczytu, na potrzeby przetwarzania <xref:System.Xml.Xsl.XslTransform>dokumentów przy użyciu programu. <xref:System.Xml.XPath.XPathDocument> Jest on strukturalnie podobny do Document Object Model XML (DOM), ale jest wysoce zoptymalizowany dla przetwarzania Extensible Stylesheet Language for Transformations (XSLT) i modelu danych XML Path Language (XPath) przy użyciu funkcji optymalizacji XPath na <xref:System.Xml.XPath.XPathNavigator>.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w programie .NET Framework 2.0. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
+> <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w .NET Framework 2,0. Można wykonać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
  Poniższy przykład kodu tworzy <xref:System.Xml.XPath.XPathDocument> jako dane wejściowe do przekształcenia.  
   

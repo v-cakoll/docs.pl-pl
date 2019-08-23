@@ -1,48 +1,48 @@
 ---
-title: 'Instrukcje: Zapisywanie informacji zdarzeniach w pliku tekstowym (Visual Basic)'
+title: 'Instrukcje: Zapisz informacje o zdarzeniu w pliku tekstowym (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs [Visual Studio], writing event information
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: f9abf99a06437f08c65eca69e54760e44a217023
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a34b57eb0a22dcf206456775cdd5817431292e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665753"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956825"
 ---
-# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Instrukcje: Zapisywanie informacji zdarzeniach w pliku tekstowym (Visual Basic)
-Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informacji o zdarzeniach występujących w aplikacji. W tym przykładzie pokazano, jak używać `My.Application.Log.WriteEntry` metodę, aby rejestrować informacje śledzenia do pliku dziennika.  
+# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Instrukcje: Zapisz informacje o zdarzeniu w pliku tekstowym (Visual Basic)
+Za pomocą `My.Application.Log` obiektów i `My.Log` można rejestrować informacje o zdarzeniach występujących w aplikacji. Ten przykład pokazuje, `My.Application.Log.WriteEntry` jak używać metody do rejestrowania informacji o śledzeniu w pliku dziennika.  
   
-### <a name="to-add-and-configure-the-file-log-listener"></a>Aby dodać i skonfigurować odbiornika dziennika plików  
+### <a name="to-add-and-configure-the-file-log-listener"></a>Aby dodać i skonfigurować odbiornik dziennika plików  
   
-1. Kliknij prawym przyciskiem myszy pliku app.config w **Eksploratora rozwiązań** i wybierz polecenie **Otwórz**.  
+1. Kliknij prawym przyciskiem myszy plik App. config w **Eksplorator rozwiązań** i wybierz polecenie **Otwórz**.  
   
      \- lub —  
   
-     Jeśli nie ma żadnego pliku app.config:  
+     Jeśli nie ma pliku App. config:  
   
-    1. Na **projektu** menu, wybierz **Dodaj nowy element**.  
+    1. W menu **projekt** wybierz polecenie **Dodaj nowy element**.  
   
-    2. Z **Dodaj nowy element** okna dialogowego wybierz **pliku konfiguracji aplikacji**.  
+    2. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik konfiguracji aplikacji**.  
   
     3. Kliknij przycisk **Dodaj**.  
   
-2. Znajdź `<listeners>` sekcji w pliku konfiguracyjnym aplikacji.  
+2. `<listeners>` Znajdź sekcję w pliku konfiguracyjnym aplikacji.  
   
-     Znajdziesz \<odbiorników > sekcji \<źródło > sekcji atrybut name "DefaultSource", który jest zagnieżdżony w \<system.diagnostics > sekcji, która jest zagnieżdżony w najwyższegopoziomu\<konfiguracji > sekcji.  
+     W sekcji > \< \<źródłowej znajdują się > detektory z atrybutem Name "DefaultSource", który jest zagnieżdżony w sekcji System. Diagnostics >, która jest zagnieżdżona w obszarze najwyższego poziomu \< \<sekcja > konfiguracji.  
   
-3. Dodaj ten element, do którego `<listeners>` sekcji:  
+3. Dodaj ten element do tej `<listeners>` sekcji:  
   
     ```xml  
     <add name="FileLogListener" />  
     ```  
   
-4. Znajdź `<sharedListeners>` sekcji `<system.diagnostics>` sekcji zagnieżdżone najwyższego poziomu `<configuration>` sekcji.  
+4. Znajdź sekcję w sekcji zagnieżdżoną w sekcji najwyższego poziomu `<configuration>`. `<system.diagnostics>` `<sharedListeners>`  
   
-5. Dodaj ten element, do którego `<sharedListeners>` sekcji:  
+5. Dodaj ten element do tej `<sharedListeners>` sekcji:  
   
     ```xml  
     <add name="FileLogListener"   
@@ -54,16 +54,16 @@ Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informac
         customlocation="c:\temp\" />  
     ```  
   
-     Zmień wartość właściwości `customlocation` atrybutu do katalogu dziennika.  
+     Zmień wartość `customlocation` atrybutu na katalog dziennika.  
   
     > [!NOTE]
-    >  Aby ustawić wartość właściwości odbiornika, użyj atrybutu, który ma taką samą nazwę jak właściwości, za pomocą wszystkie znaki w małą nazwie. Na przykład `location` i `customlocation` atrybuty ustawione wartości <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> i <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> właściwości.  
+    > Aby ustawić wartość właściwości odbiornika, Użyj atrybutu, który ma taką samą nazwę jak właściwość, z wszystkimi literami w nazwie małymi literami. Na przykład `location` atrybuty <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> i `customlocation` ustawiają wartości właściwości i. <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A>  
   
-### <a name="to-write-event-information-to-the-file-log"></a>Można zapisać informacji o zdarzeniach do pliku dziennika  
+### <a name="to-write-event-information-to-the-file-log"></a>Aby zapisać informacje o zdarzeniu w dzienniku plików  
   
-- Użyj `My.Application.Log.WriteEntry` lub `My.Application.Log.WriteException` metody, aby zapisać informacje o dzienniku plików. Aby uzyskać więcej informacji, zobacz [jak: Zapisywanie wiadomości rejestru](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) i [jak: Rejestrowania wyjątków](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
+- Użyj metody `My.Application.Log.WriteException` lub, aby zapisać informacje w dzienniku plików. `My.Application.Log.WriteEntry` Aby uzyskać więcej informacji, zobacz [jak: Zapisuj komunikaty](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) dziennika i [instrukcje: Wyjątki](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)dzienników.  
   
-     Po skonfigurowaniu odbiornika plik dziennika dla zestawu, odbiera wszystkie komunikaty powodujące `My.Application.Log` zapisuje z tego zestawu.  
+     Po skonfigurowaniu odbiornika dziennika plików dla zestawu otrzymuje on wszystkie komunikaty, które `My.Application.Log` zapisują z tego zestawu.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -71,4 +71,4 @@ Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informac
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Instrukcje: Rejestruje wyjątki](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Instrukcje: Wyjątki dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)

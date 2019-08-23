@@ -2,21 +2,21 @@
 title: <useManagedPresentation>
 ms.date: 03/30/2017
 ms.assetid: 17a0dd77-af54-41db-a9d0-4b17ff42878f
-ms.openlocfilehash: eedf0ce6cf75b8fb56daf98f2005e66162ce10d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e67cc316b8747ee785055ceb4f954988fa82a44c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769853"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940617"
 ---
-# <a name="usemanagedpresentation"></a>\<useManagedPresentation>
-Element powiązania, używany do komunikacji z usługi tokenów zabezpieczeń CardSpace obsługującego profil CardSpace WS-Trust. Ten element nie ma atrybutu i ma jako pustego przełącznika.  
+# <a name="usemanagedpresentation"></a>\<useManagedPresentation >
+Element powiązania używany do komunikowania się z usługą tokenu zabezpieczającego CardSpace obsługującą profil CardSpace usługi WS-Trust. Ten element nie ma atrybutu i jest obecny jako pusty przełącznik.  
   
  \<system.serviceModel>  
-\<powiązania >  
+\<> powiązań  
 \<customBinding>  
-\<Powiązanie >  
-\<useManagedPresentation>  
+\<> powiązania  
+\<useManagedPresentation >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,17 +37,17 @@ Element powiązania, używany do komunikacji z usługi tokenów zabezpieczeń Ca
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie funkcje powiązania niestandardowego powiązania.|  
+|[\<> powiązania](../../../misc/binding.md)|Definiuje wszystkie możliwości powiązań niestandardowego powiązania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element jest używany przez dostawcę tożsamości do wyrażenia w zasadach fakt, że obsługuje ona profil CardSpace WS-Trust. Dostawcy tożsamości, których publikowanie asercję zasad powinno być możliwe do tokenów problem, w oparciu o ten profil CardSpace.  
+ Ten element jest używany przez dostawcę tożsamości do wyrażenia w jego zasadom faktu, że obsługuje profil CardSpace usługi WS-Trust. Dostawcy tożsamości, którzy publikują takie potwierdzenie zasad, powinni mieć możliwość wystawiania tokenów opartych na tym profilu programu CardSpace.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Configuration.UseManagedPresentationElement>
 - <xref:System.ServiceModel.Channels.UseManagedPresentationBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
-- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Powiązania](../../../wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7dd6829e-79a5-4480-9023-9e588cb0bf2e
-ms.openlocfilehash: fae1513e7a7ead98318d907b220b7510758c9ffe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d63b0b2c7d513d9f4db526b88a7c4e852637343
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037612"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928632"
 ---
 # <a name="how-to-retrieve-member-conflict-information"></a>Instrukcje: Pobieranie informacji o konflikcie elementu członkowskiego
-Możesz użyć <xref:System.Data.Linq.MemberChangeConflict> klasy do pobrania informacji o poszczególnych elementów członkowskich w konflikcie. W tym samym kontekście możesz podać niestandardową obsługę konfliktu dla dowolnego elementu członkowskiego. Aby uzyskać więcej informacji, zobacz [optymistycznej współbieżności: Omówienie](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+Za pomocą <xref:System.Data.Linq.MemberChangeConflict> klasy można pobrać informacje o konflikcie poszczególnych członków. W tym samym kontekście można zapewnić niestandardową obsługę konfliktu dla każdego elementu członkowskiego. Aby uzyskać więcej informacji, [Zobacz optymistyczne współbieżność: Przegląd](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod wykonuje iterację przez <xref:System.Data.Linq.ObjectChangeConflict> obiektów. Dla każdego obiektu, następnie iteruje <xref:System.Data.Linq.MemberChangeConflict> obiektów.  
+ Poniższy kod wykonuje iterację <xref:System.Data.Linq.ObjectChangeConflict> obiektów. Dla każdego obiektu, następnie iteruje za pomocą <xref:System.Data.Linq.MemberChangeConflict> obiektów.  
   
 > [!NOTE]
->  Obejmują <xref:System.Reflection> zapewnić <xref:System.Data.Linq.MemberChangeConflict.Member%2A> informacji.  
+> Uwzględnij <xref:System.Reflection> , aby podać <xref:System.Data.Linq.MemberChangeConflict.Member%2A> informacje.  
   
  [!code-csharp[System.Data.Linq.MemberChangeConflict#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.memberchangeconflict/cs/program.cs#1)]
  [!code-vb[System.Data.Linq.MemberChangeConflict#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.memberchangeconflict/vb/module1.vb#1)]  

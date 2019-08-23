@@ -7,48 +7,48 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: f67733b89d2bde652449e2338362868fdb84bcf3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9a00fcd53211dd126c0e9203d6d577959b971e70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592941"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922907"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce FlowLayoutPanel
-<xref:System.Windows.Forms.FlowLayoutPanel> Kontrolować obsługuje <xref:System.Windows.Forms.Control.Anchor%2A> i <xref:System.Windows.Forms.Control.Dock%2A> właściwości w jego formantów podrzędnych.  
+Kontrolka obsługuje właściwości <xref:System.Windows.Forms.Control.Dock%2A> i w jego kontrolkach podrzędnych. <xref:System.Windows.Forms.Control.Anchor%2A> <xref:System.Windows.Forms.FlowLayoutPanel>  
   
-### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Aby zakotwiczenie i dokowanie formantów podrzędnych w formancie FlowLayoutPanel  
+### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Aby zakotwiczyć i zadokować kontrolki podrzędne w kontrolce FlowLayoutPanel  
   
-1. Utwórz <xref:System.Windows.Forms.FlowLayoutPanel> kontrolkę w formularzu.  
+1. <xref:System.Windows.Forms.FlowLayoutPanel> Utwórz kontrolkę w formularzu.  
   
-2. Ustaw <xref:System.Windows.Forms.Control.Width%2A> z <xref:System.Windows.Forms.FlowLayoutPanel> kontrolę **300**i ustaw jego <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> do <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+2. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> <xref:System.Windows.Forms.FlowDirection.TopDown>Ustaw wartość kontrolkina300,anastępnieustawjejwartośćna.<xref:System.Windows.Forms.FlowLayoutPanel> <xref:System.Windows.Forms.Control.Width%2A>  
   
-3. Utworzyć dwa <xref:System.Windows.Forms.Button> kontroluje i umieść je w <xref:System.Windows.Forms.FlowLayoutPanel> kontroli.  
+3. Utwórz dwie <xref:System.Windows.Forms.Button> kontrolki i umieść je <xref:System.Windows.Forms.FlowLayoutPanel> w kontrolce.  
   
-4. Ustaw <xref:System.Windows.Forms.Control.Width%2A> pierwszego przycisku, aby **200**.  
+4. Ustaw wartość pierwszego przycisku na 200. <xref:System.Windows.Forms.Control.Width%2A>  
   
-5. Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwość drugi przycisk, który <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. Ustaw właściwość drugiego przycisku na <xref:System.Windows.Forms.DockStyle.Fill>. <xref:System.Windows.Forms.Control.Dock%2A>  
   
     > [!NOTE]
-    >  Drugi przycisk zakłada taką samą szerokość jako pierwszy przycisk. Nie rozciągnąć na szerokość <xref:System.Windows.Forms.FlowLayoutPanel> kontroli.  
+    > Drugi przycisk przyjmuje taką samą szerokość jak pierwszy przycisk. Nie rozciąga się na szerokość <xref:System.Windows.Forms.FlowLayoutPanel> kontrolki.  
   
-6. Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwość drugi przycisk, który `None`. To powoduje, że przycisk założył, jego oryginalna szerokość.  
+6. Ustaw właściwość drugiego przycisku na `None`. <xref:System.Windows.Forms.Control.Dock%2A> Spowoduje to, że przycisk przyjmie oryginalną szerokość.  
   
-7. Ustaw <xref:System.Windows.Forms.Control.Anchor%2A> właściwość drugi przycisk, który `Left, Right`.  
+7. Ustaw właściwość drugiego przycisku na `Left, Right`. <xref:System.Windows.Forms.Control.Anchor%2A>  
   
     > [!IMPORTANT]
-    >  Drugi przycisk zakłada taką samą szerokość jako pierwszy przycisk. Nie rozciągnąć na szerokość <xref:System.Windows.Forms.FlowLayoutPanel> kontroli. To ogólne reguły dla Zakotwiczanie i dokowanie w <xref:System.Windows.Forms.FlowLayoutPanel> kontrolki: w kierunkach pionowy przepływu <xref:System.Windows.Forms.FlowLayoutPanel> kontroli oblicza szerokość kolumny dorozumianych z najszerszej kontrolki podrzędnej w kolumnie. Wszystkie kontrolki w tej kolumnie, za pomocą <xref:System.Windows.Forms.Control.Anchor%2A> lub <xref:System.Windows.Forms.Control.Dock%2A> właściwości są wyrównane, czy rozciągnięte do mieści się w tej kolumnie dorozumianych. Zachowanie działa w podobny sposób jak w poziomie przepływu kierunkach. <xref:System.Windows.Forms.FlowLayoutPanel> Kontroli oblicza wysokość wiersza dorozumianych od najwyższego kontrolki podrzędnej w wierszu i wszystkich kontrolek podrzędnych zadokowany lub zakotwiczone w tym wierszu są wyrównane lub dopasowana dorozumianych wiersza.  
+    >  Drugi przycisk przyjmuje taką samą szerokość jak pierwszy przycisk. Nie rozciąga się na szerokość <xref:System.Windows.Forms.FlowLayoutPanel> kontrolki. Jest to ogólna reguła zakotwiczenia i dokowania w <xref:System.Windows.Forms.FlowLayoutPanel> kontrolce: dla pionowych kierunków <xref:System.Windows.Forms.FlowLayoutPanel> przepływu kontrolka oblicza szerokość kolumny implikowanej z najszerszej kontrolki podrzędnej w kolumnie. Wszystkie inne kontrolki w tej kolumnie <xref:System.Windows.Forms.Control.Anchor%2A> z <xref:System.Windows.Forms.Control.Dock%2A> lub właściwości są wyrównane lub rozciągane w celu dopasowania do tej kolumny implikowanej. Zachowanie działa podobnie do poziomych kierunków przepływu. <xref:System.Windows.Forms.FlowLayoutPanel> Kontrolka oblicza wysokość implikowanego wiersza z najwyższego poziomu kontrolki podrzędnej w wierszu, a wszystkie kontrolki podrzędne zadokowane lub zakotwiczone w tym wierszu są wyrównane lub skalowane, aby dopasować implikowany wiersz.  
   
 ## <a name="example"></a>Przykład  
- Na poniższej ilustracji przedstawiono cztery przyciski, które są zakotwiczone zadokowane względem niebieski przycisk w <xref:System.Windows.Forms.FlowLayoutPanel>. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> Jest <xref:System.Windows.Forms.FlowDirection.LeftToRight>.  
+ Na poniższej ilustracji przedstawiono cztery przyciski zakotwiczone i zadokowane względem niebieskiego przycisku w <xref:System.Windows.Forms.FlowLayoutPanel>. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> Ma<xref:System.Windows.Forms.FlowDirection.LeftToRight>wartość.  
   
- ![FlowLayoutPanel anchoring](./media/net-flpanchorexp.gif "NET_FLPanchorExp")  
+ ![Zakotwiczenie FlowLayoutPanel](./media/net-flpanchorexp.gif "NET_FLPanchorExp")  
   
- Na poniższej ilustracji przedstawiono cztery przyciski, które są zakotwiczone zadokowane względem niebieski przycisk w <xref:System.Windows.Forms.FlowLayoutPanel>. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> Jest <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+ Na poniższej ilustracji przedstawiono cztery przyciski zakotwiczone i zadokowane względem niebieskiego przycisku w <xref:System.Windows.Forms.FlowLayoutPanel>. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> Ma<xref:System.Windows.Forms.FlowDirection.TopDown>wartość.  
   
- ![Formantu FlowLayoutPanel](./media/vs-flpanchor2.gif "VS_FLPanchor2")  
+ ![Zakotwiczenie FlowLayoutPanel](./media/vs-flpanchor2.gif "VS_FLPanchor2")  
   
- Poniższy przykład kodu demonstruje różne <xref:System.Windows.Forms.Control.Anchor%2A> wartości właściwości <xref:System.Windows.Forms.Button> w kontrolce <xref:System.Windows.Forms.FlowLayoutPanel> kontroli.  
+ Poniższy przykład kodu demonstruje różne <xref:System.Windows.Forms.Control.Anchor%2A> wartości <xref:System.Windows.Forms.Button> właściwości kontrolki w <xref:System.Windows.Forms.FlowLayoutPanel> kontrolce.  
   
  [!code-csharp[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/CS/FlpAnchorExampleForm.cs#1)]
  [!code-vb[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/VB/FlpAnchorExampleForm.vb#1)]  
@@ -56,7 +56,7 @@ ms.locfileid: "65592941"
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów systemu, dane systemowe i System.Drawing oraz przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów system, system. Data, system. Drawing i system. Windows. Forms.  
   
 ## <a name="see-also"></a>Zobacz także
 
